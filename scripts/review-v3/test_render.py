@@ -747,6 +747,16 @@ def test_rows_waiting_on_the_author_and_rows_with_no_unblock_are_never_silent():
     text = render.render_terminal(q)
     assert "1 waiting on the author" in text and "waiting on the author (1):" in text and "sent back 2026-09-10" in text
     assert "[re-run the failed checks]  --rerun-checks 4" in text and "     2  " not in text.split("waiting on the author (1)")[0]
+    # an approved row parks beside the sent-back one, saying which it was
+    appr = row(q, 3)
+    appr["waiting_on_author"] = True
+    appr["reasons"].append("approved:2026-09-28")
+    html = render.render_board(q)
+    assert 'data-pr="3"' not in html and "approved 2026-09-28" in html and "<b>2</b><span>waiting on the author</span>" in html
+    assert "approved 2026-09-28" in render.render_terminal(q)
+    t = render.chip_title("approved:2026-09-28")
+    assert "Its author merges it" in t and "2026-09-28" in t
+    appr["waiting_on_author"] = False
     stuck["actions"] = []
     assert "blocked: mergeable:dirty (no action available)" in render.render_terminal(q)
 

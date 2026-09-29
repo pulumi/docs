@@ -145,7 +145,7 @@ A PR whose requested reviewer is a human who isn't you is waiting on them, not o
 
 ## Waiting on the author
 
-A PR you already sent back — your changes-requested review is the latest word, and nothing has been pushed since — is waiting on its author, not on you. Those rows wear `sent-back:<date>` and collapse into a second compact list under the first: the PR, its title, the author and the date you asked, the age, and a ✗ for red CI or a ⚠ for a conflict. Your own changes-requested review is never a blocker: the approval you would post supersedes it. The row returns to the groups when a commit lands; `--include-handed-off` brings it back now if you need to act on it.
+A PR you already sent back — your changes-requested review is the latest word, and nothing has been pushed since — is waiting on its author, not on you. Those rows wear `sent-back:<date>` and collapse into a second compact list under the first: the PR, its title, the author and the date you asked, the age, and a ✗ for red CI or a ⚠ for a conflict. Your own changes-requested review is never a blocker: the approval you would post supersedes it. A PR you approved for a human author — `--stamp` approves those without merging — parks in the same list with `approved:<date>`, since the merge is theirs to do; a bot PR you approved stays on the board, because `act.py` merges those. Either row returns to the groups when a commit lands; `--include-handed-off` brings it back now if you need to act on it.
 
 ## What is not on the board
 

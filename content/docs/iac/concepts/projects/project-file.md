@@ -102,9 +102,29 @@ This option can be set to `mypy` or `pyright`. (For additional type checkers, fi
 
 `packages` is a map of package names to either `package add` arguments or structured package declarations. It specifies the packages that the program uses. The command `pulumi install` installs these packages and generates the corresponding SDKs for them.
 
+#### How packages get here
+
+You rarely write this section by hand. When you run [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/), Pulumi generates a [local SDK](/docs/iac/guides/building-extending/packages/local-sdks/) for the package in your program's language and records the package here. That covers packages that don't publish an SDK to a language package manager, such as:
+
+- [Terraform and OpenTofu providers](/docs/iac/concepts/providers/any-terraform-provider/) consumed through the Any Terraform Provider
+- [Terraform modules](/docs/integrations/terraform/modules/)
+- [Components shared from a Git repository or a local directory](/docs/iac/guides/building-extending/packages/source-based-plugin/#distribution)
+
+Packages that do publish an SDK, such as `@pulumi/aws` on npm or `pulumi-aws` on PyPI, are installed with your language's package manager and don't appear here. For more on the difference, see [Consuming packages](/docs/iac/concepts/packages/#consuming-packages).
+
+Commit `Pulumi.yaml` to source control. When a teammate or CI job checks out the project, [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) reads this section and regenerates each local SDK, so everyone builds against the same package versions. To upgrade a package, re-run `pulumi package add` with the new version. See [Updating local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/#updating-local-sdks).
+
 #### String shorthand
 
-Each package value can be a plain string in the same format as the argument to [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/), for example `"aws@6.0.0"`. The string is split on `@` into a source and optional version.
+Each package value can be a plain string in the same format as the argument to `pulumi package add`, for example `"aws@6.0.0"`. The string is split on `@` into a source and optional version. `pulumi package add` writes this form whenever a package needs no parameters (unless every existing entry already uses the structured form), as with a component added from a Git repository or a local directory:
+
+```yaml
+packages:
+  # Added with: pulumi package add https://github.com/my-org/static-page@v1.0.0
+  static-page: https://github.com/my-org/static-page@v1.0.0
+  # Added with: pulumi package add ./components/networking
+  networking: ./components/networking
+```
 
 #### Structured declarations
 
@@ -117,6 +137,33 @@ A package value can also be an object with the following properties:
 | `parameters` | List<string> | No | No | A list of parameters for the `source` package. |
 | `checksums` | Map<string, string> | No | No | A map of `os-arch` keys (e.g., `linux-x64`) to checksums used to validate downloaded plugins. |
 | `pluginDownloadURL` | string | No | No | The server to download the plugin from, if a custom download location is needed. |
+
+`pulumi package add` writes the structured form when a package takes parameters. For example, this is how a Terraform provider looks after `pulumi package add terraform-provider hashicorp/random 3.7.1`:
+
+```yaml
+packages:
+  random:
+    source: terraform-provider
+    version: 1.4.0  # Version of Pulumi's terraform-provider package
+    parameters:
+      - hashicorp/random
+      - 3.7.1  # Version of the hashicorp/random Terraform provider
+```
+
+The entry has two versions because two things are versioned independently. See [Specifying a version](/docs/iac/concepts/providers/any-terraform-provider/#specifying-a-version).
+
+A Terraform module added with `pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2` is recorded the same way, with the module address and version as parameters:
+
+```yaml
+packages:
+  s3-bucket:
+    source: hcl
+    version: 0.13.0
+    parameters:
+      - module
+      - terraform-aws-modules/s3-bucket/aws
+      - 4.1.2
+```
 
 ### `config` options
 
@@ -234,6 +281,15 @@ description: An example project with all attributes
 author: Your Name
 website: https://example.com
 license: Apache-2.0
+packages:
+  static-page: https://github.com/my-org/static-page@v1.0.0
+  random:
+    source: terraform-provider
+    version: 1.4.0
+    parameters:
+      - hashicorp/random
+      - 3.7.1
+    pluginDownloadURL: https://plugins.example.com/
 main: example-project/
 stackConfigDir: config/
 backend:

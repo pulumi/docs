@@ -55,7 +55,10 @@ preflight ignores it: the approval about to post supersedes it). The row
 carries `sent-back:<date>` and, when the head has not moved since that
 review and the author can answer it, `waiting_on_author: true` with every
 decision button removed — it is the author's turn, and the board groups
-those rows the way it groups handed-off ones. My own PR (`author:self`)
+those rows the way it groups handed-off ones. The approver's own approval
+does the same on a human-authored PR (`approved:<date>`): `--stamp`
+approves those without merging, so with no push since, the merge is the
+author's move, not the approver's. My own PR (`author:self`)
 gets no stamp or send-back either, since GitHub rejects both (422); it
 routes to the lane team and points at `/address-review`.
 
@@ -139,6 +142,7 @@ REASON_CODES = {
     "warnings": "⚠️ reviewer-check rows still open on the brief (legacy: low-confidence)",
     "outstanding": "🚨/❓ rows still open on the author card",
     "sent-back": "the approver's own changes-requested review, by date; not a blocker (the approval supersedes it). With no push since, the row waits on the author",
+    "approved": "the approver's own approval, by date. On a human-authored PR with no push since, the row waits on the author to merge",
     "unblock": "refused:<why>: act.py will not push to this head (dependabot, a generated-docs regen, a fork), so the conflict is the author's to resolve",
     "stances": "the brief lists editorial stances (blocks only with --strict-stances)",
     "mergeable": "GitHub mergeable_state when not clean/blocked",
@@ -553,6 +557,28 @@ def lanes_for_owner(spec: str | None, config: routing.Config, me: list[str]) -> 
     return {d for d, cell in config.matrix.items() if role in (cell.get("mechanical"), cell.get("substantive"))}
 
 
+def _own_latest_review(pr: dict, approver: str | None) -> dict | None:
+    """The approver's latest APPROVED / CHANGES_REQUESTED / DISMISSED review,
+    or None. A DISMISSED record clears whatever came before it."""
+    me = norm_login(approver) if approver else ""
+    if not me:
+        return None
+    latest = None
+    for r in sorted(pr.get("reviews") or [], key=lambda r: r.get("submitted_at") or ""):
+        if (r.get("user_type") or "") == "Bot" or r.get("state") in ("COMMENTED", "PENDING"):
+            continue
+        if norm_login(r.get("user")) == me:
+            latest = r
+    return latest
+
+
+def _own_review_record(pr: dict, review: dict) -> dict:
+    head = (pr.get("head") or {}).get("sha") or ""
+    cid = review.get("commit_id") or None
+    return {"at": (review.get("submitted_at") or "")[:10] or "unknown", "by": review.get("user") or "",
+            "commit_id": cid, "head_moved": bool(cid and head and cid != head)}
+
+
 def own_send_back(pr: dict, approver: str | None) -> dict | None:
     """The approver's own changes-requested review, when it is their latest
     review on the PR: `{at: YYYY-MM-DD, by, commit_id, head_moved}`. It is
@@ -562,21 +588,22 @@ def own_send_back(pr: dict, approver: str | None) -> dict | None:
     whether the author has pushed since. A queue whose reviews carry no
     `commit_id` (an older collect) reads as not moved, so a second send-back
     is never offered on a guess."""
-    me = norm_login(approver) if approver else ""
-    if not me:
-        return None
-    latest = None
-    for r in sorted(pr.get("reviews") or [], key=lambda r: r.get("submitted_at") or ""):
-        if (r.get("user_type") or "") == "Bot" or r.get("state") in ("COMMENTED", "PENDING"):
-            continue
-        if norm_login(r.get("user")) == me:
-            latest = r  # a DISMISSED record clears an earlier CHANGES_REQUESTED
+    latest = _own_latest_review(pr, approver)
     if not latest or latest.get("state") != "CHANGES_REQUESTED":
         return None
-    head = (pr.get("head") or {}).get("sha") or ""
-    cid = latest.get("commit_id") or None
-    return {"at": (latest.get("submitted_at") or "")[:10] or "unknown", "by": latest.get("user") or "",
-            "commit_id": cid, "head_moved": bool(cid and head and cid != head)}
+    return _own_review_record(pr, latest)
+
+
+def own_approval(pr: dict, approver: str | None) -> dict | None:
+    """The approver's own approval, when it is their latest review on the
+    PR: the same `{at, by, commit_id, head_moved}` shape as `own_send_back`.
+    A human-authored PR that `--stamp` approved without merging stays open
+    for its author to merge; with no push since, there is nothing left for
+    the approver to decide, so the row waits on the author."""
+    latest = _own_latest_review(pr, approver)
+    if not latest or latest.get("state") != "APPROVED":
+        return None
+    return _own_review_record(pr, latest)
 
 
 def unblock_refusal(pr: dict) -> str | None:
@@ -760,6 +787,15 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if sent:
         reasons.append(f"sent-back:{sent['at']}")
         waiting = revisable and not author_self and not sent["head_moved"]
+    # -- my own approval. A human author merges their own PR, so once I have
+    # approved this head the next move is theirs. A bot row is different:
+    # act.py merges those, so an approved-but-open bot row is still mine.
+    approved = own_approval(pr, ctx.get("approver"))
+    pr["approved"] = approved
+    if approved:
+        reasons.append(f"approved:{approved['at']}")
+        if author.get("type") != "bot" and not author_self and not approved["head_moved"]:
+            waiting = True
 
     def send_back(label: str, reason: str | None = None):
         """The author's turn, said once per row. A generated row has no
@@ -896,6 +932,8 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
             # button that addresses it, and it parks the row with them.
             add_action({"id": "route", "label": f"ask @{user} to re-review", "cmd": f"--route {n}:@{user}", "targets": [f"@{user}"]})
         elif state == "APPROVED":
+            if me and norm_login(user) == me:
+                continue  # mine: `approved:` above
             reasons.append(f"merging-over:approved-by:{user}")
 
     # -- shape

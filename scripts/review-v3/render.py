@@ -62,7 +62,7 @@ HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
 PRIMARY_CODES = ("warnings", "outstanding", "cluster", "directional", "duplicate", "mergeable", "checks",
                  "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate",
-                 "sent-back", "unblock")
+                 "sent-back", "approved", "unblock")
 # Whole codes (not families) that change what you'd click: `author:self`
 # takes the stamp and the send-back off the row, where `author:internal` is
 # background.
@@ -330,6 +330,9 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
         elif code == "sent-back":
             text = (f"You already sent this PR back on {detail or 'an earlier run'} and nothing has been pushed since, so it "
                     "is waiting on its author, not on you. It returns to the board when a new commit lands.")
+        elif code == "approved":
+            text = (f"You approved this PR on {detail or 'an earlier run'}. Its author merges it, so while nothing has been "
+                    "pushed since, it is waiting on them, not on you. It returns to the board when a new commit lands.")
         elif code == "unblock":
             why = detail.partition(":")[2].replace("-", " ") if first == "refused" else detail.replace("-", " ")
             if why == "conflict":
@@ -991,8 +994,8 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
                 'nothing here changes it. Whatever moves it happens on GitHub or on the branch by hand.">no action available</span>'
                 if no_action(pr) else "")
         if pr.get("waiting_on_author"):
-            when = sent_back_on(pr)
-            tail = (f' <span class="v v-dim" title="You sent this PR back{" on " + esc(when) if when else ""} and nothing has been '
+            verb, when = waiting_why(pr)
+            tail = (f' <span class="v v-dim" title="You {verb} this PR{" on " + esc(when) if when else ""} and nothing has been '
                     'pushed since, so its buttons are off: it is the author\'s turn, not yours.">waiting on the author</span>')
         body.append(f'<div class="jbox stop"><div class="q">Blocked: {esc(", ".join(pr.get("blockers") or []) or "no blocker named")}{tail}</div></div>')
     body.append(action_bar(pr, queue, expanded=expanded))
@@ -1315,6 +1318,16 @@ def sent_back_on(p: dict) -> str:
     return next((r.partition(":")[2] for r in p.get("reasons") or [] if r.startswith("sent-back:")), "")
 
 
+def waiting_why(p: dict) -> tuple[str, str]:
+    """Why a `waiting_on_author` row is the author's move, as (verb, date):
+    ("sent back", …) off `sent-back:<date>`, else ("approved", …) off
+    `approved:<date>` — a human author merges what you approved."""
+    when = sent_back_on(p)
+    if when:
+        return "sent back", when
+    return "approved", next((r.partition(":")[2] for r in p.get("reasons") or [] if r.startswith("approved:")), "")
+
+
 def _waiting_items(queue: dict, rows: list[dict], who_of) -> str:
     items = []
     for p in rows:
@@ -1342,23 +1355,23 @@ def waiting_html(prs: list[dict], queue: dict | None = None) -> str:
 
 def waiting_on_author_html(prs: list[dict], queue: dict | None = None) -> str:
     """The compact 'waiting on the author' list: rows the approver already
-    sent back (`waiting_on_author`, with a `sent-back:<date>` chip) and
-    nothing has been pushed since. Same shape as the handed-off list: who
+    sent back (`sent-back:<date>`) or approved for a human author to merge
+    (`approved:<date>`), with nothing pushed since. Same shape as the handed-off list: who
     it waits on is the author, and the date is when you asked."""
     queue = queue or {"repo": "pulumi/docs"}
     rows = [p for p in prs if p.get("waiting_on_author") and not p.get("handed_off")]
     if not rows:
         return ""
-    rows.sort(key=lambda p: (sent_back_on(p), -_age_days(p)))
+    rows.sort(key=lambda p: (waiting_why(p)[1], -_age_days(p)))
 
     def who(p: dict) -> str:
         login = (p.get("author") or {}).get("login") or "author"
-        when = sent_back_on(p)
-        return f"@{login} · sent back {when}" if when else f"@{login} · sent back"
+        verb, when = waiting_why(p)
+        return f"@{login} · {verb} {when}" if when else f"@{login} · {verb}"
 
     items = _waiting_items(queue, rows, who)
     return (f'<section class="waiting"><div class="sec-head"><h2>Waiting on the author</h2><span class="count">{len(rows)}</span>'
-            '<span class="note">you sent these back and nothing has been pushed since · ✗ red CI · ⚠ conflict · '
+            '<span class="note">you sent these back, or approved them for their author to merge, and nothing has been pushed since · ✗ red CI · ⚠ conflict · '
             'they return to the groups above when a commit lands; render with --include-handed-off to act on one now</span></div>'
             '<ul>' + items + "</ul></section>")
 
@@ -1380,7 +1393,7 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
                   f'<b>{counts["handed-off"]}</b><span>waiting on others</span></div>')
     on_author = sum(1 for p in all_prs if p.get("waiting_on_author") and not p.get("handed_off"))
     if on_author:
-        tally += (f'<div class="t-dim" title="PRs you already sent back to their author, with nothing pushed since. They are waiting '
+        tally += (f'<div class="t-dim" title="PRs you already sent back to their author, or approved for them to merge, with nothing pushed since. They are waiting '
                   f'on the author, so they are listed at the foot of the page instead of taking a row.">'
                   f'<b>{on_author}</b><span>waiting on the author</span></div>')
     stuck = sum(1 for p in prs if no_action(p))
@@ -1553,9 +1566,9 @@ def render_terminal(queue: dict, n: int | None = None, width: int = 110, include
     if on_author and not include_handed_off and n is None:
         lines += ["", f"waiting on the author ({len(on_author)}):"]
         for p in on_author:
-            when = sent_back_on(p)
+            verb, when = waiting_why(p)
             lines.append(f"  #{p['number']} {(p.get('title') or '')[:60]:<60} @{(p.get('author') or {}).get('login') or '?'}"
-                         f" sent back {when or '?'} {_age_days(p)}d{_wait_flag(p)}")
+                         f" {verb} {when or '?'} {_age_days(p)}d{_wait_flag(p)}")
     stamps = [a["cmd"].split()[1] for p in prs for a in p.get("actions") or [] if a["id"] == "stamp" and p.get("verdict") == "stamp"]
     if stamps:
         lines += ["", f"$ /pr-review --act --stamp {','.join(stamps)}"]
@@ -1579,7 +1592,7 @@ a{color:var(--accent)}
 .mast{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:22px}
 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
 h1{font-size:clamp(26px,4.6vw,40px);font-weight:800;letter-spacing:-.022em;line-height:1.05}
-.dek{color:var(--ink-2);max-width:72ch;margin:10px 0 0;font-size:15.5px}
+.dek{color:var(--ink-2);max-width:72ch;margin:10px 0 0;font-size:15.5px;text-wrap:pretty}
 .tally{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
 .tally div{flex:1 1 120px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:10px 14px;box-shadow:var(--shadow)}
 .tally b{display:block;font-family:Archivo,sans-serif;font-size:28px;font-weight:700;line-height:1.1}
