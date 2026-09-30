@@ -127,7 +127,7 @@ For more about joining organizations, see [Joining an organization](/docs/admini
 
 ### How can I delete my Pulumi account?
 
-You can delete your personal account from your account settings in [Pulumi Cloud](https://app.pulumi.com/signin).
+You can delete your personal account from your [account settings](https://app.pulumi.com/user/account/settings) in Pulumi Cloud. The **Delete account** button is at the bottom of that page. This is a permanent operation and cannot be undone.
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
 
