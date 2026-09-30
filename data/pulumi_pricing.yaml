@@ -412,6 +412,14 @@ categories:
         name: GitHub Enterprise Server support
         available_from: enterprise
 
+      # A separate id from github-enterprise-server, even though ghe.com uses the
+      # same setup, so the two can be gated independently.
+      - id: github-enterprise-cloud-data-residency
+        name: GitHub Enterprise Cloud with data residency support
+        link: /docs/integrations/version-control/github-app/#github-enterprise-cloud-with-data-residency
+        tooltip: For GitHub Enterprise Cloud enterprises on a ghe.com subdomain. GitHub Enterprise Cloud on github.com works with the standard GitHub integration in every edition.
+        available_from: enterprise
+
       - id: customer-managed-runners
         name: Customer-managed deployment runners
         link: /docs/deployments/concepts/customer-managed-runners/
