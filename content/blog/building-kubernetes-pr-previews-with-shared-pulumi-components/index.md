@@ -1,6 +1,6 @@
 ---
 title: "Building Kubernetes PR Previews with Shared Pulumi Components"
-date: 2026-09-24
+date: 2026-10-01
 draft: false
 allow_long_title: true
 feature_image: feature.png
@@ -14,6 +14,31 @@ tags:
     - python
     - best-practices
 category: best-practices
+resource_links:
+    - type: documentation
+      url: /docs/iac/concepts/components/
+      text: "Learn more about Pulumi components"
+      icon: cube
+    - type: documentation
+      url: /docs/iac/guides/building-extending/components/when-to-build-a-component/
+      text: "Learn when to build a component"
+      icon: compass
+    - type: documentation
+      url: /docs/iac/guides/building-extending/components/build-a-component/
+      text: "Build a Pulumi component"
+      icon: wrench
+    - type: documentation
+      url: /docs/iac/concepts/stacks/
+      text: "Explore Pulumi stacks"
+      icon: stack
+    - type: documentation
+      url: /docs/deployments/concepts/review-stacks/
+      text: "Automate previews with Review Stacks"
+      icon: git-pull-request
+    - type: documentation
+      url: /docs/get-started/
+      text: "Get started with Pulumi"
+      icon: rocket-launch
 ---
 
 On my team, Dev, Stage, Prod, and pull-request preview environments each have their own Pulumi stack while sharing the same code path. PR stacks are short-lived; the other stacks are long-lived. This post shows a component pattern for those different lifecycles and some lessons from operating PR previews at scale.
@@ -159,9 +184,9 @@ The same composition runs in Dev, Stage, Prod, and PR stacks with different conf
 
 Dev, Stage, and Prod are persistent stacks. Each PR has a separate, disposable stack. Our CI and cleanup workflow follows three stages for PR stacks:
 
-1. **Create:** When a PR is opened, select or initialize its stack and run `pulumi up` with that PR's image. Publish the resulting URL for reviewers once application readiness and routing checks pass.
-2. **Update:** On a new commit, run `pulumi up` on the **same** stack with the new image reference. Stable resource names and unchanged inputs let Pulumi plan the appropriate update; always review the preview because other changed inputs can still cause replacements.
-3. **Reconcile and remove:** A scheduled job compares PR stacks with source-control state. Once a PR is closed and any configured grace period has passed, the job destroys its stack, removes the empty stack record, and retries failed cleanup on a later run.
+1. Create: When a PR is opened, select or initialize its stack and run `pulumi up` with that PR's image. Publish the resulting URL for reviewers once application readiness and routing checks pass.
+1. Update: On a new commit, run `pulumi up` on the same stack with the new image reference. Stable resource names and unchanged inputs let Pulumi plan the appropriate update; always review the preview because other changed inputs can still cause replacements.
+1. Reconcile and remove: A scheduled job compares PR stacks with source-control state. Once a PR is closed and any configured grace period has passed, the job destroys its stack, removes the empty stack record, and retries failed cleanup on a later run.
 
 For a stack selected for teardown, the normal path is:
 
@@ -176,7 +201,7 @@ The scheduled pass matters even if CI tries to delete a preview as soon as its P
 
 ## Plan for overlapping updates and cleanup failures
 
-Fast follow-up commits can start two updates against one PR stack. We encountered stack-operation conflicts while building this workflow. CI can serialize updates **per PR stack** while allowing different PR stacks to deploy in parallel. If a job is interrupted, check the active operation and stack state before retrying.
+Fast follow-up commits can start two updates against one PR stack. We encountered stack-operation conflicts while building this workflow. CI can serialize updates per PR stack while allowing different PR stacks to deploy in parallel. If a job is interrupted, check the active operation and stack state before retrying.
 
 Cleanup has its own edge cases. A resource may have been changed or removed outside Pulumi, leaving stack state out of sync with Kubernetes. [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) can reconcile that state before another destroy attempt. A failed destroy should be retried, with resource deletion verified when the provider cannot confirm it.
 
@@ -184,10 +209,8 @@ The scheduled cleanup job provides another chance if a PR-close event, CI job, o
 
 ## Measure the outcome
 
-We deploy **hundreds of PR environments each day**. From the start of `pulumi up` to an application that is ready and reachable through its preview URL, deployment takes **about four minutes on average**. That includes deploying the Kubernetes resources, application readiness, and routing. **Container image build time is excluded**; the image is available before this measurement starts.
+We deploy hundreds of PR environments each day. From the start of `pulumi up` to an application that is ready and reachable through its preview URL, deployment takes about four minutes on average. That includes deploying the Kubernetes resources, application readiness, and routing. Container image build time is excluded; the image is available before this measurement starts.
 
 At that volume, cleanup cannot depend on someone noticing an abandoned environment. A scheduled pass makes it part of the normal workflow and gives failures a clear path to retry.
 
 One code path and separate stacks keep Dev, Stage, Prod, and PR environments consistent while giving each its own lifecycle. The `StackInstance` and `K8Instance` example makes the ownership boundary visible: the stack owns shared namespace resources, and each service owns its deployment and routing. For PR environments, that boundary works alongside repeatable updates and scheduled cleanup.
-
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
