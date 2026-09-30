@@ -63,7 +63,7 @@ It's been a weirdly great time to be building software. We've never had so many 
 
 Almost immediately we were able to whip up some test agentic workflows that were making real, live decisions about infrastructure. If you're not familiar with [TypeSafe's Jev](https://docs.typesafe.ai/introduction), it comes with a powerful set of AI primitives that let your apps, agents, and workflows make decisions based on context.
 
-![Diagram of Jev's decision-making primitives: confidence scoring, multiple choice, and yes/no (noul) questions](jev-primitives.png)
+![Diagram of Jev's decision-making primitives: confidence scoring, multiple choice, and yes/no (noul) questions](jev-decisions.png)
 
 *Jev's decision-making primitives are the perfect complement to agentic work.*
 
