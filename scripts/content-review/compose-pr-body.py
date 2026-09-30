@@ -293,10 +293,10 @@ HUMAN_REVIEW_NOTICE = (
     "glow-up PRs and no automation approves them; triage requests the approver "
     "team `.github/review-routing.yml` routes this page to. Every claim on an "
     "edited line was checked before this PR opened (see **Pre-verification**). "
-    "If the pre-merge review still blocks, the glow-up autofix (where enabled) "
-    "makes one pass at each finding and hands anything it can't settle to that "
-    "team. Adjudicate the Backlog executed / Backlog declined tables below and "
-    "merge manually."
+    "If the pre-merge review still blocks, the bot takes one pass at resolving "
+    "the blocking findings (when glow-up autofix is enabled). Beyond that, a "
+    "human takes the PR through the review process: adjudicate the Backlog "
+    "executed / Backlog declined tables below and merge manually."
 )
 
 # The receipts placeholder. The workflow replaces the whole section after the
