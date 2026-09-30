@@ -77,7 +77,7 @@ const config = {
     enableWaf: stackConfig.getBoolean("enableWaf") || false,
 
     // wafRateLimit is the maximum number of requests per 5-minute window per IP before WAF blocks.
-    wafRateLimit: stackConfig.getNumber("wafRateLimit") || 500,
+    wafRateLimit: stackConfig.getNumber("wafRateLimit") || 5000,
 
     // enableSupportForm toggles the /api/support endpoint backing the support-request
     // form at /support/new/ (see supportForm.ts), which files submissions as Intercom
@@ -188,7 +188,9 @@ if (config.enableWaf) {
         }, {
             name: "rate-limit-per-ip",
             priority: 1,
-            action: { block: {} },
+            // A 429 isn't in customErrorResponses, so a rate-limit block stays visible
+            // instead of being rewritten into the 404 page like a 403 would be.
+            action: { block: { customResponse: { responseCode: 429 } } },
             statement: {
                 rateBasedStatement: {
                     limit: config.wafRateLimit,
