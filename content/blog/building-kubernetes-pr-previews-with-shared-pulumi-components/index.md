@@ -28,10 +28,6 @@ resource_links:
       text: "Build a Pulumi component"
       icon: wrench
     - type: documentation
-      url: /docs/iac/concepts/stacks/
-      text: "Explore Pulumi stacks"
-      icon: stack
-    - type: documentation
       url: /docs/deployments/concepts/review-stacks/
       text: "Automate previews with Review Stacks"
       icon: git-pull-request
