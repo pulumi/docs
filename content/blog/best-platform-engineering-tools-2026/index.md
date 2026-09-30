@@ -1,6 +1,6 @@
 ---
 title: "Best Platform Engineering Tools in 2026"
-date: 2026-09-11
+date: 2026-09-30
 draft: false
 meta_desc: "Compare 10 platform engineering tools for 2026 on one question: how much of your golden path do you build yourself, and how much do you buy?"
 feature_image: feature.png
