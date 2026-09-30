@@ -9,6 +9,16 @@ DEST=./static-prebuilt/docs/reference/pkg/java
 rm -rf "$DEST"
 cp -r "$SRC" "$DEST"
 
+# --- SEO/AEO head metadata post-pass --------------------------------------
+# The stock Javadoc doclet has no editable theme template in this repo, so
+# the fix runs as a post-process over the already-copied HTML instead of a
+# template change, the same approach scripts/run_typedoc.sh takes for the
+# Node.js SDK reference.
+echo "Injecting SEO head metadata (canonical, per-page description, JSON-LD)"
+python3 "$(dirname "$0")/javadoc_seo_postprocess.py" \
+    "$DEST" \
+    "https://www.pulumi.com/docs/reference/pkg/java"
+
 cat > static-prebuilt/docs/reference/pkg/java/search.js <<"EOF"
 /*
  * Copyright (c) 2015, 2018, Oracle and/or its affiliates. All rights reserved.
