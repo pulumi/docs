@@ -3,6 +3,7 @@ title: "Building Kubernetes PR Previews with Shared Pulumi Components"
 date: 2026-09-24
 draft: false
 allow_long_title: true
+feature_image: feature.png
 meta_desc: "A StackInstance and K8Instance pattern for separate Dev, Stage, Prod, and PR stacks, with lessons from operating PR previews at scale."
 authors:
     - sangharsh-agarwal
@@ -12,26 +13,26 @@ tags:
     - preview-environments
     - python
     - best-practices
-category: tutorials
+category: best-practices
 ---
 
 On my team, Dev, Stage, Prod, and pull-request preview environments each have their own Pulumi stack while sharing the same code path. PR stacks are short-lived; the other stacks are long-lived. This post shows a component pattern for those different lifecycles and some lessons from operating PR previews at scale.
 
 <!--more-->
 
-Our implementation uses a shared `Instance(pulumi.ComponentResource)` class. The example below separates its stack-level and service-level responsibilities into two components to make the pattern easier to follow. It uses example resource names and assumes a cluster, ingress controller, and routing are already in place.
+Our implementation uses a shared [component resource](/docs/iac/concepts/components/). The example below separates its stack-level and service-level responsibilities into two components to make the pattern easier to follow. It uses example resource names and assumes a cluster, ingress controller, and routing are already in place.
 
 ## The problem is the whole lifecycle
 
-A namespace gives a PR a place to run, but it does not answer who creates the deployment and Service, how reviewers find the preview, or what removes those resources after the PR closes. A separate PR-only implementation would also need to track changes to the longer-lived environments. Separate stacks give each environment its own state and lifecycle; the shared component keeps resource declarations consistent.
+A Kubernetes namespace gives a PR a place to run, but it does not answer who creates the deployment and Service, how reviewers find the preview, or what removes those resources after the PR closes. A PR-only implementation would drift from the longer-lived environments, since every change would have to be mirrored in two places. Separate stacks give each environment its own state and lifecycle; the shared component keeps resource declarations consistent.
 
-There is also a boundary question: a preview may use shared infrastructure such as a cluster, container registry, or database server. Deleting its stack must not delete those shared resources. Database isolation, access controls, and network policy need to be designed for the actual application and cluster; a Kubernetes namespace alone does not provide them.
+There is also a boundary question: a preview may use shared infrastructure such as a cluster, container registry, or database server. Deleting its stack must not delete those shared resources. Database isolation, access controls, and network policy need to be designed for the actual application and cluster; a namespace alone does not provide them.
 
-The useful unit of ownership is therefore *one environment's managed resources*, with its dependencies kept explicit. The PR's stack owns disposable resources; Dev, Stage, and Prod stacks instantiate the same component with different settings.
+So each stack should own only *its own environment's resources* — the ones it's safe to create and tear down — and take the shared infrastructure it depends on as an explicit input rather than creating it. A PR's stack owns only those disposable resources; the Dev, Stage, and Prod stacks run the same component with different configuration.
 
 ## Compose stack-level and service-level components
 
-A Pulumi [stack](/docs/iac/concepts/stacks/) runs a program with its own configuration and state. Dev, Stage, Prod, and each PR have separate stacks but use the same code. In this example, `StackInstance` owns the namespace and image pull Secret; each `K8Instance` owns the resources for one microservice. This decomposition illustrates the ownership pattern without reproducing our internal code.
+A Pulumi [stack](/docs/iac/concepts/stacks/) runs a program with its own configuration and state. Dev, Stage, Prod, and each PR have separate stacks but use the same code. In this example, `StackInstance` owns the namespace and image pull Secret; each `K8Instance` owns the resources for one microservice.
 
 ```python
 import pulumi
