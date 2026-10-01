@@ -18,26 +18,26 @@ social:
     bluesky:
 ---
 
-**TL;DR: we are releasing a new major version of the Google Cloud provider. To migrate, ask Neo or your coding agent to run the Pulumi `provider-upgrade` skill ([how to use it](#use-an-agent-to-assist-with-your-upgrade)) or follow the [v10 migration guide](https://www.pulumi.com/registry/packages/gcp/how-to-guides/10-0-migration/).**
+**TL;DR: we are releasing a new major version of the Google Cloud provider. To migrate, ask Neo or your coding agent to run the Pulumi `provider-upgrade` skill ([how to use it](#use-an-agent-to-assist-with-your-upgrade)) or follow the [v10 migration guide](/registry/packages/gcp/how-to-guides/10-0-migration/).**
 
-We are happy to announce the next major version of the Pulumi Google Cloud provider. This release is based on the new [v8 major version of terraform-provider-google](https://github.com/hashicorp/terraform-provider-google/releases/tag/v8.0.0) (see also the [upstream v8 upgrade guide](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/guides/version_8_upgrade)). It ships with a [migration guide](https://www.pulumi.com/registry/packages/gcp/how-to-guides/10-0-migration/) that covers every breaking change in depth.
+We are happy to announce the next major version of the Pulumi Google Cloud provider. This release is based on the new [v8 major version of terraform-provider-google](https://github.com/hashicorp/terraform-provider-google/releases/tag/v8.0.0) (see also the [upstream v8 upgrade guide](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/guides/version_8_upgrade)). It ships with a [migration guide](/registry/packages/gcp/how-to-guides/10-0-migration/) that covers every breaking change in depth.
 
 <!--more-->
 
 Here are a few links to help you get started if you are new to Pulumi:
 
-- [Getting Started](https://www.pulumi.com/docs/iac/get-started/gcp/): a guided walkthrough for creating your first project
-- [Setup & Install](https://www.pulumi.com/registry/packages/gcp/installation-configuration/): how to install the Google Cloud provider
-- [How-to guides](https://www.pulumi.com/registry/packages/gcp/how-to-guides/): how to provision specific resources with the Google Cloud provider
-- [Pulumi Neo](https://www.pulumi.com/product/neo/): ask Pulumi Neo to help you with your project
+- [Getting Started](/docs/iac/get-started/gcp/): a guided walkthrough for creating your first project
+- [Setup & Install](/registry/packages/gcp/installation-configuration/): how to install the Google Cloud provider
+- [How-to guides](/registry/packages/gcp/how-to-guides/): how to provision specific resources with the Google Cloud provider
+- [Pulumi Neo](/product/neo/): ask Pulumi Neo to help you with your project
 
 ### Upgrading
 
-The [migration guide](https://www.pulumi.com/registry/packages/gcp/how-to-guides/10-0-migration/) accounts for every resource, type and function that changed in the new version. For the most popular resources, it gives a description of the change, a risk and impact section, a way to check whether you are affected, and step by step migration snippets for each language.
+The [migration guide](/registry/packages/gcp/how-to-guides/10-0-migration/) accounts for every resource, type and function that changed in the new version. For the most popular resources, it gives a description of the change, a risk and impact section, a way to check whether you are affected, and step by step migration snippets for each language.
 
 ### Use an agent to assist with your upgrade
 
-We have taught the `provider-upgrade` skill in [Pulumi Agent Skills](https://www.pulumi.com/blog/pulumi-agent-skills/) about every v10 breaking change. You can use it from [Pulumi Neo](https://www.pulumi.com/docs/ai/neo/) or from any popular coding agent. Before it bumps the provider, it scans your stack and code for the changes that affect you, and it stops to ask before anything that would replace or delete live infrastructure. Then it upgrades the dependency, runs `pulumi preview` until the diff is explained, and leaves `pulumi up` to you.
+We have taught the `provider-upgrade` skill in [Pulumi Agent Skills](/blog/pulumi-agent-skills/) about every v10 breaking change. You can use it from [Pulumi Neo](/docs/ai/neo/) or from any popular coding agent. Before it bumps the provider, it scans your stack and code for the changes that affect you, and it stops to ask before anything that would replace or delete live infrastructure. Then it upgrades the dependency, runs `pulumi preview` until the diff is explained, and leaves `pulumi up` to you.
 
 <!-- TODO(Neo): the Neo prompt, plus screenshots of the prompt, the plan and the resulting pull request, following the v9 post. Needs pulumi/agent-skills#65 merged. -->
 
@@ -70,9 +70,9 @@ Then ask Pi to upgrade the provider to v10, or trigger the skill with `/skill:pr
 
 ### Why upgrade
 
-Moving to the latest version means you keep getting the latest updates from Google Cloud. GCP is covered by our [provider support policy](https://www.pulumi.com/docs/support/provider-support-policy/): with this release, v9 receives security updates for up to 12 months, while new features and upstream updates land only in v10.
+Moving to the latest version means you keep getting the latest updates from Google Cloud. GCP is covered by our [provider support policy](/docs/support/provider-support-policy/): with this release, v9 receives security updates for up to 12 months, while new features and upstream updates land only in v10.
 
-Staying on the latest version also means you keep getting new features. Google Cloud offers capabilities you will not find on other clouds, such as TPUs, accelerators Google designed for training and serving AI models. For example, here is how you could create a [Cloud TPU v6e (Trillium)](https://docs.cloud.google.com/tpu/docs/v6e) slice with the new major version, using [`gcp.tpu.V2Vm`](https://www.pulumi.com/registry/packages/gcp/api-docs/tpu/v2vm/):
+Staying on the latest version also means you keep getting new features. Google Cloud offers capabilities you will not find on other clouds, such as TPUs, accelerators Google designed for training and serving AI models. For example, here is how you could create a [Cloud TPU v6e (Trillium)](https://docs.cloud.google.com/tpu/docs/v6e) slice with the new major version, using [`gcp.tpu.V2Vm`](/registry/packages/gcp/api-docs/tpu/v2vm/):
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -289,6 +289,6 @@ outputs:
 
 {{< /chooser >}}
 
-Vertex AI keeps growing too. Since v9.0.0 the provider has added [Agent Engine](https://www.pulumi.com/registry/packages/gcp/api-docs/vertex/aireasoningengine/) and [Model Garden](https://www.pulumi.com/registry/packages/gcp/api-docs/vertex/aimodelgardenenablemodel/) resources. New in v10, `gcp.vertex.AiRagCorpus` brings Vertex AI RAG Engine under Pulumi: declare the corpus that grounds your Gemini applications in your own documents, with its embedding model and vector store, in the same program as the rest of your infrastructure. Its registry page ([aiRagCorpus](https://www.pulumi.com/registry/packages/gcp/api-docs/vertex/airagcorpus/)) goes live with v10.
+Vertex AI keeps growing too. Since v9.0.0 the provider has added [Agent Engine](/registry/packages/gcp/api-docs/vertex/aireasoningengine/) and [Model Garden](/registry/packages/gcp/api-docs/vertex/aimodelgardenenablemodel/) resources. New in v10, `gcp.vertex.AiRagCorpus` brings Vertex AI RAG Engine under Pulumi: declare the corpus that grounds your Gemini applications in your own documents, with its embedding model and vector store, in the same program as the rest of your infrastructure. Its registry page ([aiRagCorpus](/registry/packages/gcp/api-docs/vertex/airagcorpus/)) goes live with v10.
 
-You can find more about this release in the [v10 release notes](https://github.com/pulumi/pulumi-gcp/releases/tag/v10.0.0). We hope your transition goes smoothly, and as always we are happy to hear your feedback in our [Community Slack](https://slack.pulumi.com/) or through [support](https://www.pulumi.com/support/) if you are a paying Pulumi customer. Happy hacking!
+You can find more about this release in the [v10 release notes](https://github.com/pulumi/pulumi-gcp/releases/tag/v10.0.0). We hope your transition goes smoothly, and as always we are happy to hear your feedback in our [Community Slack](https://slack.pulumi.com/) or through [support](/support/) if you are a paying Pulumi customer. Happy hacking!
