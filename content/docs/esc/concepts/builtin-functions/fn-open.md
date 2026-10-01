@@ -36,7 +36,7 @@ fn::open::name: inputs
 
 | Property    | Type         | Description                                                       |
 |-------------|--------------|-------------------------------------------------------------------|
-| `name`      | string       | The name of the provider to open.
+| `provider`  | string       | The name of the provider to open. In the short form, the name is part of the function key (`fn::open::name`) and this key is omitted.
 | `inputs`    | any          | The inputs to the provider. The exact type is provider-dependent.
 
 ### Returns
