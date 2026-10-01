@@ -38,7 +38,7 @@ resource_links:
       icon: rocket-launch
 ---
 
-At Adobe, my team develops a microservices application on Kubernetes, with hundreds of PRs opened each day. To let engineers test and review those changes in isolation before they're merged, we give every pull request its own ephemeral environment.
+My team develops a microservices application on Kubernetes, with hundreds of PRs opened each day. To let engineers test and review those changes in isolation before they're merged, we give every pull request its own ephemeral environment.
 
 We use Pulumi to define those short-lived PR environments from a [component resource](/docs/iac/concepts/components/) that's shared with our long-lived Dev, Stage, Prod environments. Each PR gets its own Pulumi stack and Kubernetes namespace, which we tear down once the PR is merged or closed.
 
