@@ -690,6 +690,6 @@ Commercial support is available at
 </html>
 ```
 
-Now that you have successfully updated your stack, you'll destroy the resources.
+Now that you have successfully updated your stack, you'll wrap your NGINX deployment into an infrastructure abstraction.
 
 {{< get-started-stepper >}}
