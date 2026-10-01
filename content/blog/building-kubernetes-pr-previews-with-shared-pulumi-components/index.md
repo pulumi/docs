@@ -11,6 +11,7 @@ tags:
     - pulumi
     - kubernetes
     - preview-environments
+    - ephemeral-environments
     - python
     - best-practices
 category: best-practices
