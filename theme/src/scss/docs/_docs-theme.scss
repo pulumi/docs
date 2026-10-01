@@ -232,6 +232,17 @@ html[data-theme="dark"] body.section-docs {
                 border-color: color-mix(in oklch, var(--color-violet-300) 40%, transparent);
             }
         }
+
+        // Override only `background-color`; the `background` shorthand would
+        // wipe the line-accent image.
+        [data-nav-promo] {
+            background-color: color-mix(in oklch, var(--color-violet-300) 10%, transparent);
+
+            &:hover,
+            &:focus-visible {
+                background-color: color-mix(in oklch, var(--color-violet-300) 20%, transparent);
+            }
+        }
     }
 
     // Footer CTA band (footer/cta.html) — a near-white lavender in light mode;

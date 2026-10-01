@@ -96,18 +96,15 @@ items:
             track: header-engineers-releases
 
   - label: For enterprises
+    wide: true
     sections:
-      - items:
+      - columns: 2
+        items:
           - label: Enterprise solutions
             href: /enterprise/
             description: Security, compliance, and support for teams
             icon: buildings
             track: header-enterprise-solutions
-          - label: Agentic infrastructure
-            href: /whitepapers/agentic-infrastructure-operating-model/
-            description: The path to agents operating your infrastructure at scale
-            icon: path
-            track: header-enterprise-agentic-infrastructure
           - label: Customers
             href: /customers/
             description: Get a glimpse of who's using Pulumi and hear their stories
@@ -128,6 +125,13 @@ items:
             description: Talk to our team about your needs
             icon: chat-circle
             track: header-enterprise-contact
+          - label: The agentic infrastructure operating model
+            href: /whitepapers/agentic-infrastructure-operating-model/
+            description: The path to agents operating your infrastructure at scale
+            icon: path
+            overline: Whitepaper
+            promo: true
+            track: header-enterprise-agentic-infrastructure
 
   - { label: Docs,     href: /docs/,     track: header-docs }
   - { label: Registry, href: /registry/, track: header-registry }
