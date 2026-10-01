@@ -863,3 +863,25 @@ def test_the_two_ways_to_fix_a_stuck_row_put_each_other_out():
     assert 'data-kind="decision"' in ask
     assert "clearExclusive" in html
     assert "--ask-fix 18" in render.render_terminal(q)
+
+
+def test_a_blocked_row_shows_the_findings_holding_it():
+    """A row blocked on open findings shows them under the blocker. Every way
+    out it offers -- send back, close, ask @claude to fix them, fix it
+    yourself -- is a decision about those findings, so the board has to say
+    what they are, as the terminal already does."""
+    q = run([stampable(18, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="pulumi-bot", author_type="User",
+                       files=[_file("content/docs/f.md", ["x"], ["o"])]),
+             stampable(19, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       files=[_file("content/docs/g.md", ["x"], ["o"])])], cfg=cfg(me=["docs"]))
+    html = render.render_board(q)
+    for n in (18, 19):
+        assert row(q, n)["verdict"] == "blocked"
+        r = html.split(f'data-pr="{n}" data-verdict="blocked"')[1].split('<div class="mrow')[0]
+        assert "Blocked: outstanding:3" in r and '<div class="jbox pending">' in r, r
+        assert r.index("Blocked: outstanding:3") < r.index("The esc CLI defaults to JSON output")
+        assert "3 open findings holding this row." in r and "nobody has ruled on yet" not in r
+    gen = html.split('data-pr="18" data-verdict="blocked"')[1].split('<div class="mrow')[0]
+    person = html.split('data-pr="19" data-verdict="blocked"')[1].split('<div class="mrow')[0]
+    assert "No author will answer them here" in gen and "No author will answer them here" not in person
+    assert "the author&#x27;s to answer" in person
