@@ -20,29 +20,28 @@
   is denominated in Pulumi Credits (1 credit = $1) drawn from one shared pool,
   and the monthly base buys the first tranche of it:
 
-      iacCredits = iacUnit === "hour"
+      iacCredits = unit === "hour"
                      ? iac_resources * iac_resource_hour
                      : iac_resources <= included_resources
                        ? iac_resources * (included_credits / included_resources)
                        : included_credits
                          + (iac_resources - included_resources) * iac_resource_month
       credits    = iacCredits
-                   + secrets    * esc_secret_month
+                   + secrets    * esc_secret_<unit>
                    + minutes    * workflow_minute
                    + neoMTokens * neo_tokens_per_million
-                   + insights   * insights_resource_month
+                   + insights   * insights_resource_<unit>
       monthly    = base_usd + max(0, credits - included_credits)
 
-  Every meter but IaC resources is priced for a whole month, unconditionally.
-  Discovered resources are also really billed by the hour, so a resource that
-  exists for only part of the month costs proportionally less, but there is
-  deliberately no utilization control for them: it would be a slider nearly
-  every reader leaves where it starts. IaC resources gets the one exception,
-  because the comparison table already states its rate both ways — see the
-  comment on the /mo-/hr toggle below. Selecting /hr re-prices only that one
-  meter's contribution, so `credits` becomes a genuine mix of an hourly and
-  several monthly figures; the toggle doesn't touch anything else in the
-  formula above.
+  IaC resources, ESC secrets, and discovered resources are really billed by the
+  hour, so a resource that exists for only part of the month costs
+  proportionally less, but there is deliberately no utilization control: it
+  would be a slider nearly every reader leaves where it starts. What there is
+  instead is one /mo-/hr toggle in the header — see the comment on it below —
+  because the comparison table already states each of those three rates both
+  ways. Selecting /hr re-prices those three meters' contributions; workflow
+  minutes and Neo tokens are billed per use rather than per unit of time, so
+  they have no hourly form and the toggle doesn't touch them.
 
   The monthly (non-hourly) IaC branch is what makes the cards true: it prices
   the opening tranche of resources low enough that $40 covers 500 and $400
@@ -74,9 +73,9 @@
 {{- range $e := $px.editions -}}
   {{- with index $calc.editions $e.id -}}
     {{- $ce := . -}}
-    {{- range $k := slice "base_usd" "included_credits" "included_resources" "iac_resource_month" "iac_resource_hour" "esc_secret_month" "insights_resource_month" -}}
+    {{- range $k := slice "base_usd" "included_credits" "included_resources" "iac_resource_month" "iac_resource_hour" "esc_secret_month" "esc_secret_hour" "insights_resource_month" "insights_resource_hour" -}}
       {{- if not (index $ce $k) -}}
-        {{- errorf "%s: calculator.editions.%s.%s is missing or zero. Every calculator edition needs all seven." $where $e.id $k -}}
+        {{- errorf "%s: calculator.editions.%s.%s is missing or zero. Every calculator edition needs all nine." $where $e.id $k -}}
       {{- end -}}
     {{- end -}}
     {{- $calcEditions = $calcEditions | append (dict "id" $e.id "name" $e.name "base_usd" $ce.base_usd "included_credits" $ce.included_credits) -}}
@@ -166,11 +165,26 @@
                      interleaved between the labels would break its first/last-child
                      rounding, and `peer-checked` uses a general sibling combinator that
                      would light up every later segment. */}}
-                <div role="group" aria-label="Edition" class="btn-group shrink-0">
-                    {{ range $i, $e := $calcEditions }}
-                    <button type="button" data-calc-edition="{{ $e.id }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
-                            class="btn btn-sm btn-outline text-sm aria-pressed:border-gray-500 aria-pressed:bg-gray-100">{{ $e.name }}</button>
-                    {{ end }}
+                <div class="flex flex-wrap items-center gap-3">
+                    {{/* The one rate-unit switch for every time-billed meter (IaC
+                         resources, ESC secrets, discovered resources), which the
+                         comparison table already states both ways ("$0.00025/hour",
+                         "$0.1825/month" as its subtext). It sits up here beside the
+                         edition toggle rather than under any one meter because it
+                         applies to all of them at once. Workflow minutes and Neo
+                         tokens are billed per use, so their rates don't change. */}}
+                    <div role="group" aria-label="Rate unit" class="btn-group shrink-0">
+                        <button type="button" data-calc-rate-unit="month" aria-pressed="true"
+                                class="btn btn-sm btn-outline text-sm aria-pressed:border-gray-500 aria-pressed:bg-gray-100">/mo</button>
+                        <button type="button" data-calc-rate-unit="hour" aria-pressed="false"
+                                class="btn btn-sm btn-outline text-sm aria-pressed:border-gray-500 aria-pressed:bg-gray-100">/hr</button>
+                    </div>
+                    <div role="group" aria-label="Edition" class="btn-group shrink-0">
+                        {{ range $i, $e := $calcEditions }}
+                        <button type="button" data-calc-edition="{{ $e.id }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
+                                class="btn btn-sm btn-outline text-sm aria-pressed:border-gray-500 aria-pressed:bg-gray-100">{{ $e.name }}</button>
+                        {{ end }}
+                    </div>
                 </div>
             </div>
 
@@ -220,25 +234,6 @@
                         <span class="text-xs text-gray-500 tabular-nums" data-calc-rate></span>
                     </div>
                 </div>
-                {{ if eq $m.id "iac_resources" }}
-                {{/* IaC resources is the one line item the comparison table already
-                     states both ways ("$0.00025/hour", "$0.1825/month" as its
-                     subtext), so this is the one meter the estimator lets a reader
-                     flip to its hourly figure. Flipping it re-prices this meter's
-                     contribution to the credits total at the flat hourly rate too —
-                     every other meter (secrets, workflow minutes, Neo tokens,
-                     discovered resources) stays priced by the month regardless, so
-                     the total becomes a genuine mix of an hourly and several
-                     monthly figures once /hr is selected. */}}
-                <div class="flex justify-end -mt-1">
-                    <div role="group" aria-label="Rate unit" class="btn-group">
-                        <button type="button" class="btn btn-xs btn-outline aria-pressed:border-gray-500 aria-pressed:bg-gray-100"
-                                data-calc-rate-unit="month" aria-pressed="true">/mo</button>
-                        <button type="button" class="btn btn-xs btn-outline aria-pressed:border-gray-500 aria-pressed:bg-gray-100"
-                                data-calc-rate-unit="hour" aria-pressed="false">/hr</button>
-                    </div>
-                </div>
-                {{ end }}
                 {{/* A position on the curve, not the meter's value — the TS module
                      converts between the two and writes the result into the number
                      input above. It also sets the starting position, so this renders
