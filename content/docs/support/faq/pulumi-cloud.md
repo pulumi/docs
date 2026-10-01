@@ -204,7 +204,8 @@ To discuss that, [contact us](/contact/).
   and PCI DSS,
   [SCIM](/docs/administration/guides/scim/) user and group sync, unlimited
   custom policy packs, policy remediation, GitHub Enterprise Server support,
-  and unlimited custom roles.
+  GitHub Enterprise Cloud with data residency support, and unlimited custom
+  roles.
 
 For a feature-by-feature comparison, see the [pricing page](/pricing/).
 

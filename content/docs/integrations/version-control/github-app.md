@@ -65,6 +65,14 @@ Mapping a single GitHub organization to multiple Pulumi organizations requires c
 
 Only one GitHub Enterprise Server integration is supported per Pulumi organization.
 
+GitHub Enterprise Cloud hosted on github.com doesn't need this setup. It uses the standard Pulumi GitHub app described above, which works in every edition.
+
+#### GitHub Enterprise Cloud with data residency
+
+{{< pulumi-cloud "github-enterprise-cloud-data-residency" />}}
+
+GitHub Enterprise Cloud with data residency, where your enterprise is on a `ghe.com` subdomain, uses the same customer-configured GitHub App setup as GitHub Enterprise Server, not the standard Pulumi GitHub app.
+
 ### Individual user authentication for GitHub Enterprise Server
 
 {{< pulumi-cloud "github-enterprise-server" />}}
