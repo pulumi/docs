@@ -233,8 +233,6 @@ html[data-theme="dark"] body.section-docs {
             }
         }
 
-        // Override only `background-color`; the `background` shorthand would
-        // wipe the line-accent image.
         [data-nav-promo] {
             background-color: color-mix(in oklch, var(--color-violet-300) 10%, transparent);
 

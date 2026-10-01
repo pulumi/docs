@@ -14,14 +14,17 @@
   {{ if $isMobile }}data-nav-sheet-close{{ end }}
   {{ if $item.promo }}data-nav-promo{{ end }}
   {{ with $item.track }}data-track="{{ . }}"{{ end }}
-  class="group flex rounded-md outline-none transition-all focus-visible:ring-3 focus-visible:ring-violet-400/50 {{ if $item.promo }}h-full flex-col justify-end bg-violet-50 bg-lines-top-right bg-no-repeat bg-right-top bg-[length:220px_auto] p-5 hover:bg-violet-100 focus-visible:bg-violet-100{{ else }}flex-row items-start gap-3 p-3 hover:bg-violet-50 focus-visible:bg-violet-50{{ end }}">
-  {{ if not $item.promo }}
+  class="group flex rounded-md outline-none transition-all focus-visible:ring-3 focus-visible:ring-violet-400/50 {{ if $item.promo }}relative h-full flex-col justify-end overflow-hidden bg-violet-50 p-5 hover:bg-violet-100 focus-visible:bg-violet-100{{ else }}flex-row items-start gap-3 p-3 hover:bg-violet-50 focus-visible:bg-violet-50{{ end }}">
+  {{ if $item.promo }}
+    <span aria-hidden="true"
+      class="absolute inset-0 bg-lines-top-right bg-no-repeat bg-right-top bg-[length:220px_auto] opacity-50"></span>
+  {{ else }}
     <span aria-hidden="true"
       class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-md border border-gray-200 group-hover:border-violet-200 text-violet-700">
       {{ partial "icon.html" (dict "name" $item.icon "weight" (default "regular" $item.iconWeight) "class" "size-6") }}
     </span>
   {{ end }}
-  <span class="flex min-w-0 flex-col {{ if $item.promo }}gap-1{{ else }}gap-0.5{{ end }}">
+  <span class="flex min-w-0 flex-col {{ if $item.promo }}relative gap-1 {{ if $isMobile }}max-w-[65%]{{ end }}{{ else }}gap-0.5{{ end }}">
     {{ with $item.overline }}
       <span class="font-mono text-[0.625rem] leading-none uppercase tracking-wider text-violet-700">{{ . }}</span>
     {{ end }}
