@@ -4,7 +4,7 @@ date: 2026-10-01
 draft: false
 allow_long_title: true
 feature_image: feature.png
-meta_desc: "A StackInstance and K8Instance pattern for separate Dev, Stage, Prod, and PR stacks, with lessons from operating PR previews at scale."
+meta_desc: "A pattern for ephemeral PR preview environments alongside persistent Dev, Stage, and Prod stacks, with lessons from operating them at scale."
 authors:
     - sangharsh-agarwal
 tags:
@@ -37,23 +37,33 @@ resource_links:
       icon: rocket-launch
 ---
 
-On my team, Dev, Stage, Prod, and pull-request preview environments each have their own Pulumi stack while sharing the same code path. PR stacks are short-lived; the other stacks are long-lived. This post shows a component pattern for those different lifecycles and some lessons from operating PR previews at scale.
+At Adobe, my team develops a microservices application on Kubernetes, with hundreds of PRs opened each day. To let engineers test and review those changes in isolation before they're merged, we give every pull request its own ephemeral environment.
+
+We use Pulumi to define those short-lived PR environments from a [component resource](/docs/iac/concepts/components/) that's shared with our long-lived Dev, Stage, Prod environments. Each PR gets its own Pulumi stack and Kubernetes namespace, which we tear down once the PR is merged or closed.
+
+In this post, I'll walk through how we've implemented this pattern and what we've learned from running it at scale.
 
 <!--more-->
 
-Our implementation uses a shared [component resource](/docs/iac/concepts/components/). The example below separates its stack-level and service-level responsibilities into two components to make the pattern easier to follow. It uses example resource names and assumes a cluster, ingress controller, and routing are already in place.
+{{% notes %}}
+We use a self-managed Pulumi backend, so we manage the end-to-end lifecycle of PR environments ourselves. Pulumi Cloud users can instead use [review stacks](/docs/deployments/concepts/review-stacks/) to automate the lifecycle of ephemeral environments tied to pull requests.
+{{% /notes %}}
 
-## The problem is the whole lifecycle
+## How our ephemeral environments work
 
-A Kubernetes namespace gives a PR a place to run, but it does not answer who creates the deployment and Service, how reviewers find the preview, or what removes those resources after the PR closes. A PR-only implementation would drift from the longer-lived environments, since every change would have to be mirrored in two places. Separate stacks give each environment its own state and lifecycle; the shared component keeps resource declarations consistent.
+A Kubernetes namespace gives each PR its own place to run, but to get to a working preview environment we need to do quite a bit on top of that. We still need to deploy the application into that namespace, make it reachable to reviewers, update it as new commits arrive, and remove it when the PR closes. And while a namespace separates the Kubernetes resources for each preview, things like database isolation, access controls, and network policies depend on the application and cluster.
 
-There is also a boundary question: a preview may use shared infrastructure such as a cluster, container registry, or database server. Deleting its stack must not delete those shared resources. Database isolation, access controls, and network policy need to be designed for the actual application and cluster; a namespace alone does not provide them.
+Pulumi gives us a way to define these environments once while managing each one independently. Dev, Stage, Prod, and each PR run the same Pulumi program in separate stacks. The program defines the infrastructure for an environment, while each stack maintains its own configuration and state. For each PR, our CI creates or updates its Pulumi stack as new commits arrive, then destroys it when the PR closes.
 
-So each stack should own only *its own environment's resources* — the ones it's safe to create and tear down — and take the shared infrastructure it depends on as an explicit input rather than creating it. A PR's stack owns only those disposable resources; the Dev, Stage, and Prod stacks run the same component with different configuration.
+## Defining the environment
 
-## Compose stack-level and service-level components
+Our implementation uses a single custom Pulumi component, but for the simplified example below, we’ve split it into two components to make the pattern easier to follow.
 
-A Pulumi [stack](/docs/iac/concepts/stacks/) runs a program with its own configuration and state. Dev, Stage, Prod, and each PR have separate stacks but use the same code. In this example, `StackInstance` owns the namespace and image pull Secret; each `K8Instance` owns the resources for one microservice.
+* `StackInstance` represents one environment, whether that’s Dev, Stage, Prod, or a PR preview. It creates a namespace within our existing Kubernetes cluster, along with resources shared by the services in that environment, including the Secret used to pull images from the container registry.
+
+* `K8Instance` represents one microservice within that environment. It creates the Kubernetes resources needed to run the service and make it reachable through its preview URL, including a Deployment, Service, and Ingress. Each `K8Instance` uses the namespace and image pull `Secret` created by `StackInstance`, so an environment can contain multiple microservices without each one recreating those shared resources.
+
+The following example assumes that shared infrastructure such as the Kubernetes cluster, ingress controller, and routing is already in place:
 
 ```python
 import pulumi
@@ -159,54 +169,49 @@ pulumi.export("namespace", stack.namespace_name)
 pulumi.export("web_url", web.url)
 ```
 
-For example, a PR stack might receive `namespace=pr-1042` and `webHost=pr-1042.preview.example.com`. Dev, Stage, and Prod stacks receive their own namespace, host, image, and registry configuration. Each stack runs the same program and creates the same component types. The `web` service shown here is one `K8Instance`; the program can instantiate additional `K8Instance` components for other microservices.
+For a PR environment, we might configure the stack with a namespace such as `pr-1042`, a host such as `pr-1042.preview.example.com`, and the container image built for that PR. Dev, Stage, and Prod use the same program and components with configuration for their own environments. Our example creates the namespace as part of `StackInstance`, but if the namespace already exists outside the stack, we’d pass it into the component instead of creating another one.
 
-The image pull Secret comes from Pulumi secret configuration. The example omits application secrets, ingress-specific settings, DNS, and TLS. The exported URL is an address; CI checks that the application is ready before sharing it with reviewers. Where a namespace is already managed outside the stack, pass it into the component instead of creating another one.
+Because we destroy the entire PR stack when the PR closes, it should only own resources that are safe to delete with the preview. Shared, long-lived infrastructure stays outside the stack and is passed in where the environment needs it.
 
-## Keep ownership aligned with lifetime
+## Managing the PR lifecycle
 
-The division follows the resources' lifetimes:
+Our CI and cleanup workflow follows three stages for PR stacks:
 
-| Component | Resources it owns | Lifetime |
-| --- | --- | --- |
-| `StackInstance` | Namespace and resources shared by services in that namespace, such as an image pull Secret | The environment's stack |
-| `K8Instance` | One microservice's Deployment, Service, and routing resources | A child of that environment's stack |
+* **Create**: When a PR is opened, CI creates a Pulumi stack for the preview and runs `pulumi up` to deploy the environment. Pulumi creates the Ingress for the configured preview URL and exports that URL so CI can retrieve it. Once the application is ready and reachable, CI shares the URL with reviewers.
 
-The program creates one `StackInstance`, then a `K8Instance` for each microservice. Each service receives the namespace and shared image pull Secret from the stack-level component. That way, several services can use the Secret without each declaring its own copy.
+* **Update**: When a new commit is pushed, CI runs `pulumi up` on the same stack with the new container image, updating the existing preview environment to reflect the latest version of the PR. Because `pulumi up` reconciles the entire stack, we review the preview after each update to make sure everything is working as expected.
 
-The same composition runs in Dev, Stage, Prod, and PR stacks with different configuration. Destroying a PR stack removes its managed namespace and service resources; the shared cluster and other stacks have separate lifecycles.
+* **Reconcile and remove**: A scheduled job compares the PR stacks with the current state of their corresponding pull requests. Once a PR is closed and any configured grace period has passed, the job destroys the stack’s resources and removes the empty stack record. (The grace period can give reviewers a little time before the environment disappears.)
 
-## Give each stack the right lifecycle
-
-Dev, Stage, and Prod are persistent stacks. Each PR has a separate, disposable stack. Our CI and cleanup workflow follows three stages for PR stacks:
-
-1. Create: When a PR is opened, select or initialize its stack and run `pulumi up` with that PR's image. Publish the resulting URL for reviewers once application readiness and routing checks pass.
-1. Update: On a new commit, run `pulumi up` on the same stack with the new image reference. Stable resource names and unchanged inputs let Pulumi plan the appropriate update; always review the preview because other changed inputs can still cause replacements.
-1. Reconcile and remove: A scheduled job compares PR stacks with source-control state. Once a PR is closed and any configured grace period has passed, the job destroys its stack, removes the empty stack record, and retries failed cleanup on a later run.
-
-For a stack selected for teardown, the normal path is:
+To tear down a PR stack, we run:
 
 ```bash
 pulumi destroy --stack pr-1042 --yes
 pulumi stack rm pr-1042 --yes
 ```
 
-Run `stack rm` after a successful destroy. Pulumi's [`destroy`](/docs/iac/cli/commands/pulumi_destroy/) removes managed resources but leaves the stack record unless it is removed separately.
+`pulumi destroy` removes the resources managed by the stack, but leaves the stack record in place. We run `pulumi stack rm` only after the destroy succeeds.
 
 The scheduled pass matters even if CI tries to delete a preview as soon as its PR closes. Webhooks and jobs can fail; reconciliation gives missed deletions another chance. The grace period is a team decision, not a universal constant.
 
-## Plan for overlapping updates and cleanup failures
+## Lessons from running PR previews at scale
 
-Fast follow-up commits can start two updates against one PR stack. We encountered stack-operation conflicts while building this workflow. CI can serialize updates per PR stack while allowing different PR stacks to deploy in parallel. If a job is interrupted, check the active operation and stack state before retrying.
+From running hundreds of PR environments per day, we’ve learned a few things about keeping them reliable.
 
-Cleanup has its own edge cases. A resource may have been changed or removed outside Pulumi, leaving stack state out of sync with Kubernetes. [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) can reconcile that state before another destroy attempt. A failed destroy should be retried, with resource deletion verified when the provider cannot confirm it.
+### Serialize updates to the same PR stack
 
-The scheduled cleanup job provides another chance if a PR-close event, CI job, or first destroy attempt fails. This matters more as the number of PR stacks grows.
+Developers sometimes push several commits to a PR in quick succession, which can cause two CI jobs to try to update the same Pulumi stack at once. We encountered stack operation conflicts when this happened.
 
-## Measure the outcome
+We now serialize updates for each PR stack, while still allowing different PR stacks to update in parallel. If a CI job is interrupted, we also check the stack for an active operation before starting another update.
 
-We deploy hundreds of PR environments each day. From the start of `pulumi up` to an application that is ready and reachable through its preview URL, deployment takes about four minutes on average. That includes deploying the Kubernetes resources, application readiness, and routing. Container image build time is excluded; the image is available before this measurement starts.
+### Build cleanup to recover from failures
 
-At that volume, cleanup cannot depend on someone noticing an abandoned environment. A scheduled pass makes it part of the normal workflow and gives failures a clear path to retry.
+Cleanup failures can leave behind orphaned PR environments, which become more of a problem as the number of PR stacks grows. Even if CI tries to remove an environment when its PR closes, jobs and webhooks can fail. We run a scheduled reconciliation job to compare existing PR stacks with the current state of their pull requests and retry cleanup for environments that should no longer exist.
 
-One code path and separate stacks keep Dev, Stage, Prod, and PR environments consistent while giving each its own lifecycle. The `StackInstance` and `K8Instance` example makes the ownership boundary visible: the stack owns shared namespace resources, and each service owns its deployment and routing. For PR environments, that boundary works alongside repeatable updates and scheduled cleanup.
+Cleanup also needs to account for infrastructure drift. If a resource has been changed or removed outside Pulumi, the stack state may no longer match what’s actually running in Kubernetes. If that causes a destroy to fail, we run `pulumi refresh` to reconcile the state before retrying. We also verify that resources have actually been deleted when the provider can’t confirm their removal.
+
+## The result
+
+On average, it takes about four minutes from the start of `pulumi up` until the PR environment is ready and reachable at its preview URL. That includes deploying the Kubernetes resources, waiting for the application to become ready, and configuring routing (the container image is built beforehand).
+
+This approach lets us use the same Pulumi program and components for PR previews as we do for Dev, Stage, and Prod, while giving each environment its own configuration, state, and lifecycle. It keeps the infrastructure consistent across environments without requiring us to maintain a separate implementation for PR previews.
