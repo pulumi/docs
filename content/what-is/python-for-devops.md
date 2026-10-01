@@ -6,27 +6,6 @@ type: what-is
 date: 2021-09-27T08:46:43-07:00
 page_title: "Python for DevOps"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 authors: ["pablo-seibelt"]
 ---
 
@@ -142,7 +121,7 @@ Python is a first-class language for Pulumi, supported on par with TypeScript, G
 * **Crosswalk for AWS.** Higher-level abstractions for common AWS patterns wrapped in idiomatic Python.
 * **Unit testing with mocks.** Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) replace cloud calls with canned responses so pytest runs in milliseconds.
 * **Automation API.** The [automation API](/docs/iac/concepts/automation-api/) lets you call Pulumi from inside another Python application. Build self-service portals, CLIs, or CI jobs that drive `pulumi up` programmatically.
-* **Pulumi policies in Python.** Write [policy as code](/docs/discovery-governance/policy/) in the same language as your infrastructure.
+* **Pulumi policies in Python.** Write [policy as code](/docs/discovery-governance/concepts/policy-as-code/) in the same language as your infrastructure.
 * **Pulumi ESC for secrets.** [Pulumi ESC](/product/secrets-management/) pulls secrets at runtime into Python programs, CI jobs, and applications.
 
 [Get started with Pulumi and Python](/docs/get-started/) to provision cloud infrastructure with the language your team is already using.
@@ -167,7 +146,7 @@ Pick the language your team writes most of its other code in. Both are first-cla
 
 ### How do you test Python IaC?
 
-Use pytest and Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) for unit tests, run a static scanner like Checkov against the rendered output, run [Pulumi policies](/docs/discovery-governance/policy/) in CI, and use the [automation API](/docs/iac/concepts/automation-api/) to spin up ephemeral stacks for integration tests.
+Use pytest and Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) for unit tests, run a static scanner like Checkov against the rendered output, run [Pulumi policies](/docs/discovery-governance/concepts/policy-as-code/) in CI, and use the [automation API](/docs/iac/concepts/automation-api/) to spin up ephemeral stacks for integration tests.
 
 ### What's MLOps and how does it relate to DevOps?
 

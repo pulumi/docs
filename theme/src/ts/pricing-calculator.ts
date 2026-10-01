@@ -109,7 +109,7 @@ const usdRate = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
     minimumFractionDigits: 2,
-    maximumFractionDigits: 4,
+    maximumFractionDigits: 5,
 });
 
 // Hourly rates run an order of magnitude smaller than monthly ones (down to

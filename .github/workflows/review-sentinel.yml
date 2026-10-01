@@ -20,10 +20,7 @@ name: Sentinel
 # gate's answer: pushes and label changes (pull_request_target), approvals
 # and dismissals (pull_request_review — required checks do NOT re-run on
 # review events by themselves, this wiring is why the sentinel notices), and
-# both review lanes finishing (workflow_run). /resolve dispatches are
-# covered by pull_request_target's `labeled`? No — the resolve workflow's
-# comment PATCH fires no PR event, so review-resolve.yml pokes this
-# workflow via workflow_dispatch when it applies dispositions.
+# both review lanes finishing (workflow_run).
 #
 # Rollout switch — the repo variable REVIEW_V3_SENTINEL is tri-state:
 #   unset    → DARK. The job never runs, no check-run is posted, and the
@@ -31,7 +28,11 @@ name: Sentinel
 #              is the state the workflow file merges in (Phase 0/1): merging
 #              must change nothing a contributor can see.
 #   'report' → report-only (Phase 2). The check concludes `neutral` with
-#              the real verdict in the summary ("REPORT-ONLY — would be: …").
+#              the real verdict in its title and summary ("Preview — would be:
+#              …"), and the pinned status comment is maintained on EVERY PR it
+#              evaluates, leading with a banner that says it blocks nothing
+#              yet and that it soon will. Report-only is a visible dry run on
+#              purpose: the surface only gets tested if the readers do.
 #   '1'      → enforcing (Phase 4): real conclusions, made required by the
 #              ruleset.
 # Every comparison is written against a literal on purpose — `vars.X != '0'`
@@ -54,7 +55,16 @@ on:
   pull_request_target:
     types: [opened, ready_for_review, synchronize, reopened, labeled, unlabeled]
   pull_request_review:
-    types: [submitted, dismissed]
+    # `edited` matters: G5 reads `sentinel:oversized-ack` out of the approving
+    # review's BODY, so the natural human sequence — approve, see the red gate
+    # explaining the magic string, edit the review to add it — fired no event
+    # at all. The gate stayed red on a PR that satisfied it, and an oversized
+    # PR is exactly the one you do not want re-pushed to shake an event loose.
+    # Narrowed in the job `if:` below: only an APPROVING review's edit can
+    # move a gate, and editing a typo in your own COMMENTED review is the
+    # common case. Unnarrowed it ran the whole job -- checkout alone is 20s
+    # to 3m40s -- for something that provably changes nothing.
+    types: [submitted, dismissed, edited]
   workflow_run:
     workflows: ["Pre-merge Review (main)", "Pre-merge Review (update-review)"]
     types: [completed]
@@ -91,9 +101,30 @@ env:
 
 jobs:
   sentinel:
-    # Label events re-evaluate only for the labels the evaluator reads
-    # (waive, oversized, trivial, prose-flagged); every other label change
-    # cannot move a gate. Keep this list in step with sentinel.py.
+    # No `name:`. The job shows up as "sentinel" beside the "Sentinel"
+    # check-run it publishes, and /pr-review (act.py `_is_sentinel`,
+    # analyze.py) filters both by that name: a display name here would count
+    # the job as an ordinary pending check and stall every stamp preflight.
+    # Label events re-evaluate only for the labels the evaluator reads; every
+    # other label change cannot move a gate. Keep this list in step with
+    # sentinel.py — a label the evaluator reads but this list omits still
+    # works, but only on the NEXT event. `sentinel:preview` used to be in
+    # exactly that position: the lanes that applied it labelled the PR just
+    # after opening it, so the `opened` run predated the label and the
+    # preview comment waited for a later event. That label is retired
+    # (2026-09-21) — report-only now writes the comment on every PR — which
+    # deletes the failure mode rather than working around it.
+    #
+    # `automation/merge` is read through the CONFIG rather than a constant in
+    # sentinel.py (`not_governed.author_label_pairs`), which is why it was
+    # missed — and it flips the verdict hardest of all: present ⇒ success
+    # with no gates evaluated. Its lane applies it *after* opening the PR
+    # and then arms auto-merge, so the Sentinel stayed red on a bot regen
+    # nobody pushes to and auto-merge never completed.
+    #
+    # `test_label_event_filter_covers_every_label_the_evaluator_reads`
+    # derives this list from the evaluator's constants and review-routing.yml
+    # rather than restating it, so a further label cannot go missing the same way.
     if: |
       (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1') &&
       (github.event_name != 'pull_request_target' ||
@@ -101,7 +132,11 @@ jobs:
        github.event.label.name == 'review:waived' ||
        github.event.label.name == 'review:oversized' ||
        github.event.label.name == 'review:trivial' ||
-       github.event.label.name == 'review:prose-flagged')
+       github.event.label.name == 'review:prose-flagged' ||
+       github.event.label.name == 'automation/merge') &&
+      (github.event_name != 'pull_request_review' ||
+       github.event.action != 'edited' ||
+       github.event.review.state == 'approved')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -109,16 +144,40 @@ jobs:
         id: pr
         env:
           EVENT_PR: ${{ github.event.pull_request.number }}
-          RUN_PR: ${{ github.event.workflow_run.pull_requests[0].number }}
+          # `workflow_run.pull_requests[]` is only this run's PR when the
+          # upstream run was itself a pull_request event at that PR's head.
+          # The review lanes' dispatched and chained runs execute on master,
+          # and GitHub fills their `pull_requests` with whatever old PRs point
+          # at master — here #2 and #71. Every such Sentinel run evaluated
+          # pulumi/docs#2 (a 622-file PR from 2017), 500'd on it twice
+          # (runs 35875114067, 35913662488 → `422 No commit found for SHA:`),
+          # and posted a status comment on it. Those lanes poke the Sentinel
+          # with the right PR number themselves; this path is only for the
+          # genuine pull_request case.
+          RUN_PR: ${{ github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.pull_requests[0].head.sha == github.event.workflow_run.head_sha && github.event.workflow_run.pull_requests[0].number || '' }}
           INPUT_PR: ${{ inputs.pr_number }}
         run: |
+          set -uo pipefail
           PR="${EVENT_PR:-${RUN_PR:-${INPUT_PR:-}}}"
-          if [ -z "$PR" ]; then
-            echo "No PR number resolvable from this event; nothing to evaluate."
-            echo "pr=" >> "$GITHUB_OUTPUT"
-          else
-            echo "pr=$PR" >> "$GITHUB_OUTPUT"
-          fi
+          # INPUT_PR is free text from workflow_dispatch, and this value is
+          # interpolated into later `run:` blocks as ${{ steps.pr.outputs.pr }}.
+          # Dispatching needs write access so this is defence in depth, not a
+          # fork vector — but an unvalidated value here is both a shell
+          # injection and, via `=` or a newline, a way to forge other step
+          # outputs through GITHUB_OUTPUT. Digits only.
+          case "$PR" in
+            '')
+              echo "No PR number resolvable from this event; nothing to evaluate."
+              echo "pr=" >> "$GITHUB_OUTPUT"
+              ;;
+            *[!0-9]*)
+              echo "::error::PR number is not numeric: refusing to evaluate."
+              echo "pr=" >> "$GITHUB_OUTPUT"
+              ;;
+            *)
+              echo "pr=$PR" >> "$GITHUB_OUTPUT"
+              ;;
+          esac
 
       - name: Fetch secrets from ESC
         # continue-on-error: sentinel.py treats a missing/failing team-read
@@ -171,18 +230,21 @@ jobs:
         id: verdict
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Org-scoped token for the team-membership endpoint only — the
-          # default GITHUB_TOKEN cannot read org team membership. sentinel.py
-          # treats lookup failures as action_required, never as "not a
-          # member", so a missing/expired token degrades loud, not wrong.
+          # Org-scoped token for the two membership endpoints G3 reads —
+          # org team membership, and (for `approval.admins_satisfy`) the
+          # approver's effective repo permission, which wants push access.
+          # The default GITHUB_TOKEN can do neither. sentinel.py treats
+          # lookup failures as action_required, never as "not a member", so
+          # a missing/expired token degrades loud, not wrong.
           GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
         run: |
           # --status-comment is passed unconditionally on purpose: the
-          # evaluator decides whether to actually write. Enforcing mode
-          # always maintains the pinned comment; report-only mode does so
-          # only for a PR someone labelled `sentinel:preview`, so the dry
-          # run stays invisible to contributors who didn't opt in.
+          # evaluator maintains the pinned comment in both modes, on every PR
+          # it evaluates. In report-only mode the comment leads with a
+          # preview banner ("not blocking your merge … will be enforced"),
+          # which is what makes a repo-wide dry run safe. --update-strip
+          # stays enforcing-only: that one edits the author card.
           ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}"
                 --status-comment)
           if [ "$REPORT_ONLY" = "true" ]; then
@@ -211,6 +273,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # A verdict with no head SHA is an evaluation that could not read
+          # the PR at all (sentinel.py's SentinelDataError path). Posting it
+          # is a guaranteed `422 No commit found for SHA:` that reads as a
+          # publish bug; say what actually happened instead.
+          if [ -z "$(jq -r '.head_sha // ""' verdict.json)" ]; then
+            echo "::error::The Sentinel could not read PR #${{ steps.pr.outputs.pr }} (see the Evaluate step); no check-run to publish. Re-run this job."
+            exit 1
+          fi
           jq --arg run_id "${{ github.run_id }}" \
              '{name: "Sentinel", head_sha: .head_sha, status: "completed",
                conclusion: .conclusion, external_id: $run_id,

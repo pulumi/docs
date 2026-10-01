@@ -117,9 +117,9 @@ The most common way to run Pulumi in CI/CD follows a [trunk-based development mo
 - `.github/workflows/pr.yml` runs `pulumi preview` on every pull request, surfacing the proposed changes for review.
 - `.github/workflows/main.yml` runs `pulumi up` when changes land — to staging on a push to `main`, and to production on a `release-*` tag.
 
-Both files check out the repository, set up your program's language, install dependencies, and then invoke `pulumi/actions`. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only the language setup and dependency-install steps differ between languages:
+Both files check out the repository and then invoke `pulumi/actions`. TypeScript, Python, and Go set up a language runtime and install dependencies first; C# and Java set up a runtime and let the Pulumi run restore dependencies; Pulumi HCL needs neither. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only those setup and install steps differ between languages:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -466,6 +466,69 @@ jobs:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+Pulumi HCL has no language runtime to set up and no dependencies to install, so the job is a checkout and the action, nothing else. Commit the `sdks/` descriptors `pulumi install` writes alongside your `.tf` files; the runner then resolves providers from them and downloads the plugins on demand.
+
+```yaml
+# .github/workflows/pr.yml
+name: Pulumi preview
+on:
+  pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pulumi/actions@v7
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+```yaml
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'release-*'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Push to main: deploy to the staging environment.
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/main'
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
+      # Release tag: promote to production.
+      - name: Deploy to production
+        if: startsWith(github.ref, 'refs/tags/release-')
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/production
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 The `pulumi/actions` step runs Pulumi non-interactively, so `pulumi up` applies changes without a confirmation prompt. For Java and C#, the language runtime resolves and builds dependencies as part of the Pulumi run, so no separate install step is needed.
@@ -585,7 +648,7 @@ The cache key includes a hash of your dependency manifest so the cache is rebuil
 
 ## Control concurrent runs
 
-When pull requests stack up or commits land faster than a workflow finishes, runs accumulate. [Concurrency groups](https://docs.github.com/actions/using-jobs/using-concurrency) bound how many run at once.
+When pull requests stack up or commits land faster than a workflow finishes, runs accumulate. [Concurrency groups](https://docs.github.com/actions/using-jobs/using-concurrency) bound how many run at once. Letting two runs reach the same stack at once causes one to fail with an [update conflict](/docs/iac/operations/troubleshooting/update-conflicts/), so a concurrency group on your deployment jobs is worth setting up before you hit one.
 
 For **pull request previews**, key the group to the pull request and cancel superseded runs so reviewers always see the result of the latest commit:
 

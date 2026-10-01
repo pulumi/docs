@@ -19,10 +19,8 @@ command the board composed, which is why a plan names its PRs one by one:
                      PRs merge; a human-authored PR is approved only unless
                      --merge-humans (authors merge their own PRs).
                      `N:merge` / `N:no-merge` overrides that default for one
-                     PR, so a mixed batch stays a single command. Approving
-                     first posts one `/resolve F<n> <disposition>: <why>` per
-                     judged finding, so the review records the call instead of
-                     the merge walking over it. Repeatable; values accumulate.
+                     PR, so a mixed batch stays a single command. Repeatable;
+                     values accumulate.
   --route N:@user|team   request review and post the row's defects (reason
                      codes + judgments) as one comment. Repeatable, and the
                      same PR may appear more than once: `--route N:@a --route
@@ -51,6 +49,14 @@ command the board composed, which is why a plan names its PRs one by one:
                      the send-back for a workflow-authored PR, which has no
                      author to answer a review. Repeatable; `--superseded-by
                      N:M` scopes M to one of several closes.
+  --ask-fix N        comment `@claude fix <ids> #update-review`, naming the
+                     row's open findings: the second way out of a PR whose
+                     author will never answer its review. `/address-review`
+                     is the interactive one -- you walk the findings and push
+                     the fixes yourself; this hands the same list to the
+                     agent already watching the PR and asks it to refresh the
+                     review after. One comment, no push, so unlike the
+                     handoff it batches with everything else.
   --refresh N        post `@claude <reason> #update-review`.
   --rerun N          post `@claude <reason> #new-review` (fresh review from scratch).
   --rerun-checks N   re-run the failed jobs of the head's workflow runs (the
@@ -122,6 +128,12 @@ REASON_KINDS = ("request-changes", "refresh", "rerun", "close")
 SENTINEL_CHECK = "sentinel"
 SENTINEL_WAIT_S = 90
 SENTINEL_POLL_S = 10
+# A conflicted --unblock used to fail into the run's stdout and nowhere else:
+# nothing was written, so the next collect saw the same `mergeable:dirty` and
+# the board offered the same "merge base & retry" button, forever. The marker
+# carries the head the merge was attempted against, so collect can tell a
+# conflict that still stands from one a later push already settled.
+UNBLOCK_CONFLICT_MARKER = "<!-- PR_REVIEW_UNBLOCK_CONFLICT -->"
 
 
 class ActError(Exception):
@@ -326,8 +338,8 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
 
     def stamp_step(n: int, mode: str | None, *, force: bool, chain: str | None = None) -> Step:
         """The one code path for approving a row: --stamp and --chain both
-        come through here, so the chain gets the resolves and the plan-time
-        blocker check the stamp has."""
+        come through here, so the chain gets the plan-time blocker check the
+        stamp has."""
         pr = pr_of(n)
         if pr.get("verdict") != "stamp" and not force:
             raise ActError(f"#{n} is {pr.get('verdict')}, not stamp — pass --force to approve as-is ({', '.join(pr.get('reasons') or [])})")
@@ -342,12 +354,12 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
         else:
             merge = not args.no_merge and (is_bot or args.merge_humans)
         note = args.approve_note or ""
-        s = step("stamp", n, merge=merge, note=note, resolves=resolve_lines(pr),
+        s = step("stamp", n, merge=merge, note=note,
                  body=approval_body(author.get("type") or "bot", author.get("etiquette_trust") or "high", note))
         if chain:
             s.args["chain"] = chain
         if merge:
-            open_ids = unanswered_blockers(pr.get("review") or {}, s.args["resolves"])
+            open_ids = unanswered_blockers(pr.get("review") or {})
             if open_ids:
                 raise ActError(refuse_merge_over_findings(n, open_ids))
             s.note = ""
@@ -386,7 +398,7 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
         pr = pr_of(n)
         if not ask_lines(pr) and n not in scoped_reasons and not bare_reasons:
             raise ActError(f"--request-changes {n}: nothing to send back — no open findings on the row, "
-                           f"every judged finding is already resolved, and no --reason {n}=\"…\" says why")
+                           f"no judgment carries an ask, and no --reason {n}=\"…\" says why")
         if not can_revise(pr) and not args.force:
             login = (pr.get("author") or {}).get("login") or "the author"
             raise ActError(f"--request-changes {n}: @{login} is a workflow, not an author — it will never read the review. "
@@ -438,6 +450,12 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
                               supersede_comment=with_footer(f"Supersedes #{n}, closed as a duplicate.")))
         else:
             steps.append(step("close", n, superseded_by=None, reason=None))
+    for n in _listed(args.ask_fix):
+        pr = pr_of(n)
+        items = ask_fix_items(pr)
+        if not items:
+            raise ActError(f"--ask-fix {n}: no open findings to name — nothing to ask for")
+        steps.append(step("ask-fix", n, items=items))
     for n in _listed(args.refresh):
         pr = pr_of(n)
         steps.append(step("refresh", n, reason=next((r for r in pr.get("reasons") or [] if r.startswith("review:")), "the review is stale")))
@@ -453,7 +471,7 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
     for n in _listed(args.deploy):
         steps.append(step("deploy", n))
     if not steps:
-        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --refresh / --rerun / --rerun-checks / --render / --deploy")
+        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --ask-fix / --refresh / --rerun / --rerun-checks / --render / --deploy")
     steps = _dedupe(steps)
     _assign_reasons(steps, by, scoped_reasons, bare_reasons)
     for s in steps:
@@ -506,6 +524,8 @@ def _render_bodies(s: Step, pr: dict) -> None:
         s.args["body"] = request_changes_body(pr, s.args.get("reason") or "")
     elif s.kind == "close" and not s.args.get("superseded_by"):
         s.args["comment"] = with_footer(s.args["reason"])
+    elif s.kind == "ask-fix":
+        s.args["comment"] = ask_fix_body(pr, s.args["items"])
     elif s.kind == "refresh":
         s.args["comment"] = with_footer(f"@claude {s.args['reason']} #update-review")
     elif s.kind == "rerun":
@@ -530,8 +550,6 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
         if s.kind == "stamp":
             lines.append(f"     preflight: open, head == {head}, mergeable_state ∈ {STAMP_STATES}, checks green (Sentinel aside), "
                          "no changes-requested by anyone else" + (", no unanswered 🚨 finding" if s.args.get("merge") else ""))
-            for r in s.args.get("resolves") or []:
-                lines.append(f"     comment: {r[:110]}")
             lines.append(f"     POST review APPROVE: \"{s.args.get('body') or approval_body(s.author_type, note=s.args.get('note', ''))}\"")
             if s.args.get("merge"):
                 lines.append(f"     wait for the Sentinel check (≤{SENTINEL_WAIT_S}s), then PUT merge (squash)")
@@ -573,6 +591,10 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
                 lines.append(f"     comment on #{s.pr}:")
                 lines += _indent(s.args["comment"])
                 lines.append(f"     PATCH #{s.pr} state=closed")
+        elif s.kind == "ask-fix":
+            lines.append(f"     preflight: open, head == {head}")
+            lines.append(f"     comment on #{s.pr} ({len(s.args['items'])} finding(s); one comment, nothing pushed):")
+            lines += _indent(s.args["comment"])
         elif s.kind in ("refresh", "rerun"):
             lines.append(f"     preflight: open, head == {head}")
             lines.append(f"     comment: {_body_head({'body': s.args['comment']})} (+ footer)"
@@ -745,8 +767,6 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
         # Re-read the review cards, not the queue's copy of them: a review can
         # land or re-render between the plan and this moment without moving the
         # head, so a row that planned clean can arrive here with open findings.
-        # The step's own `/resolve` lines post seconds from now and the card
-        # will not have caught up, so they count as answered here.
         try:
             author_c, brief_c, _ = collect.find_review_comments(gh.issue_comments(s.pr))
         except GhError as e:
@@ -765,7 +785,7 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
             if review.get("counts_shortfall"):
                 return False, ("the review's own tally declares more findings than its sections parsed into "
                                f"({review['counts_shortfall']}) — not merging over a review that arrived incomplete"), detail
-            open_ids = unanswered_blockers(review, s.args.get("resolves") or [])
+            open_ids = unanswered_blockers(review)
             if open_ids:
                 return False, f"{len(open_ids)} unanswered blocking finding(s) on the review: {', '.join(open_ids)}", detail
     return True, "ok", detail
@@ -800,7 +820,7 @@ def open_items(pr: dict) -> list[dict]:
 def ask_lines(pr: dict) -> list[str]:
     """The row's open items as line-anchored bullets: the judgments when the
     judge step ran, else the findings still open on the card. A judgment the
-    approver already resolved (`RESOLVABLE`) has nothing for the author to do,
+    approver already decided (`RESOLVABLE`) has nothing for the author to do,
     so it rides along only when it carries an explicit `ask`: its `decision`
     is the approver's question, and posting it would invite the author to
     change what the approver decided to leave alone. A finding the judge
@@ -830,7 +850,7 @@ def request_changes_body(pr: dict, note: str = "") -> str:
     issues, no filler; the bot variant names the issue and what to change.
     A judgment's `ask` is the author-facing sentence; `decision` (the
     question the approver answered) stands in when there is no `ask`, except
-    on a judgment the approver already resolved (see `ask_lines`). The
+    on a judgment the approver already decided (see `ask_lines`). The
     `note` is the approver's rationale and never leaves the board. Open
     findings fill in when the judge step didn't run on the row."""
     lines = []
@@ -851,7 +871,7 @@ def _defect_comment(pr: dict, target: str) -> str:
     # Only what a reviewer acts on. The queue's own proxies (desc:, brief:,
     # blog:, cluster:, review:) are noise to anyone who isn't running it.
     defects = [r for r in pr.get("reasons") or [] if r.split(":")[0] in
-               ("warnings", "outstanding", "self-accepted", "directional", "duplicate", "merging-over")]
+               ("warnings", "outstanding", "directional", "duplicate", "merging-over")]
     if defects:
         lines.append("")
         lines.append("What the queue flagged:")
@@ -898,7 +918,7 @@ def execute(plan_: Plan, gh: GhClient, git: Git | None = None, *, queue: dict | 
                 ok, msg = _fix(gh, git or Git(repo_root), s, dry_run=dry_run)
             elif s.kind == "close":
                 ok, msg = _close(gh, s)
-            elif s.kind in ("refresh", "rerun"):
+            elif s.kind in ("ask-fix", "refresh", "rerun"):
                 ok, msg = _mention(gh, s)
             elif s.kind == "rerun-checks":
                 ok, msg = _rerun_checks(gh, s)
@@ -929,31 +949,21 @@ def _already_approved(reviews: list[dict], me: str, head: str) -> bool:
 
 
 def _stamp(gh: GhClient, s: Step, *, dry_run: bool = False, sleep=time.sleep) -> tuple[bool, str, bool]:
-    """(ok, message, merged). A stamp that failed partway — the resolves and
-    the approval posted, the merge refused — is picked up where it stopped on
-    a re-run: what this login already posted on the PR is not posted again."""
+    """(ok, message, merged). A stamp that failed partway — the approval
+    posted, the merge refused — is picked up where it stopped on a re-run:
+    an approval this login already posted at this head is not posted again."""
     ok, msg, detail = preflight(gh, s)
     if not ok:
         return False, f"preflight refused: {msg}", False
     head = (detail.get("head") or {}).get("sha") or s.expect_head
     me = norm_login(gh.me())
     skipped = []
-    # Record the calls before approving, so the review's own state says why
-    # each finding is closed instead of the merge silently walking over it.
-    resolves = s.args.get("resolves") or []
-    if resolves:
-        body = with_footer("\n".join(resolves))
-        if _already_commented(gh.issue_comments(s.pr), me, body):
-            skipped.append("resolves already posted")
-        else:
-            gh.comment(s.pr, body)
     approval = s.args.get("body") or approval_body(s.author_type, "high", s.args.get("note", ""))
     if _already_approved(gh.reviews(s.pr), me, head):
         skipped.append("already approved at this head")
     else:
         gh.create_review(s.pr, "APPROVE", approval)
-    tail = f" ({len(resolves)} finding{'s' if len(resolves) != 1 else ''} resolved)" if resolves else ""
-    tail += f" [{'; '.join(skipped)}]" if skipped else ""
+    tail = f" [{'; '.join(skipped)}]" if skipped else ""
     if not s.args.get("merge"):
         return True, "approved (not merged)" + tail, False
     if dry_run:
@@ -966,69 +976,79 @@ def _stamp(gh: GhClient, s: Step, *, dry_run: bool = False, sleep=time.sleep) ->
     return True, "approved and squash-merged" + tail, True
 
 
-RESOLVE_ID_RE = re.compile(r"/resolve\s+(\S+)")
-
-
-def unanswered_blockers(review: dict, resolves: list[str]) -> list[str]:
-    """Blocking findings on the review with no answer — neither a disposition
-    already recorded on the card, nor a `/resolve` this step is about to post.
+def unanswered_blockers(review: dict) -> list[str]:
+    """Blocking findings on the review with no answer recorded on the card.
 
     This is the bar `/pr-review` merges against, and it is deliberately not
     something --force reaches. A judge row's other gates (size, shape:infra, a
     human author) are an approver's call to make; an open 🚨 is the review
-    still waiting on an answer, and squash-merging past it destroys the only
-    chance to give one. Every way out leaves a record: push a fix, judge the
-    row so the stamp posts `/resolve <id> <disposition>: <why>`, or send it
-    back.
-
-    A legacy (v2) row has no `/resolve` lane at all, so `resolve_lines()`
-    returns nothing for it and an open 🚨 there can only be answered by
-    fixing it or refreshing the review — which is correct: there is no
-    machine-readable disposition to write.
+    still waiting on the author, and squash-merging past it destroys the
+    only chance to hear from them. The author answers — a fix, or
+    `@claude <why> #update-review` — and the approver's judgments never
+    stand in for that.
     """
-    answered = {m.group(1) for r in resolves if (m := RESOLVE_ID_RE.match(r))}
     return [i["id"] for i in review.get("items") or []
-            if i.get("blocking") and not i.get("disposition") and i["id"] not in answered]
+            if i.get("blocking") and not i.get("disposition")]
 
 
 def refuse_merge_over_findings(n: int, open_ids: list[str]) -> str:
-    """There is no flag that turns this off, deliberately. Merging anyway is a
-    disposition — `/resolve <id> accepted: <why>` — which records the reason
-    against the finding it answers, where the next reader will find it. A
-    label or a --force would record nothing."""
+    """There is no flag that turns this off, deliberately. A finding the
+    author won't answer goes back to them; a real emergency is
+    `review:waived`, the Sentinel's logged break-glass."""
     return (f"#{n} has {len(open_ids)} unanswered blocking review finding(s): {', '.join(open_ids)}. "
             f"Merging would walk over the review, and --force does not cover this. "
-            f"Answer them first: push a fix, judge the row so the stamp posts "
-            f"`/resolve <id> <disposition>: <why>` (`accepted: <why>` is how you merge anyway), "
-            f"or `--request-changes {n}` to send it back. "
+            f"The author answers them (a fix, or `@claude <why> #update-review`): "
+            f"`--request-changes {n}` sends it back, or `--ask-fix {n}` / `--close {n}` on a PR a workflow opened. "
             f"To approve without merging, `--stamp {n}:no-merge`.")
 
 
-RESOLVABLE = ("fixed", "refuted", "accepted", "not-applicable")  # `deferred` goes back to the author instead
+RESOLVABLE = ("fixed", "refuted", "accepted", "not-applicable")  # the approver's call is made; `deferred` is the author's
 FINDING_ID_RE = re.compile(r"F\d+")
 
 
-def resolve_lines(pr: dict) -> list[str]:
-    """One `/resolve F<n> <disposition>: <why>` per judged finding, which is
-    how approving a row answers the review instead of merging over it. Only
-    real `F<n>` ids on a v3 card: a triage-prose question has no finding to
-    answer, and `deferred` is the author's, not ours. The `why` is the
-    judgment's `note` — the recorded rationale, public by design. Its
-    `decision` is the question the approver answered, never an answer, so a
-    judgment with no note posts nothing rather than a question."""
-    if (pr.get("review") or {}).get("surface") != "v3":
-        return []
-    out = []
-    for j in pr.get("judgments") or []:
-        fid = (j.get("finding_id") or "").strip()
-        disp = j.get("disposition")
-        if not FINDING_ID_RE.fullmatch(fid) or disp not in RESOLVABLE:
-            continue
-        why = " ".join((j.get("note") or "").split())
-        if not why:
-            continue
-        out.append(f"/resolve {fid} {disp}: {why}")
-    return out
+def ask_fix_items(pr: dict) -> list[dict]:
+    """The open findings an `@claude fix …` mention should name.
+
+    The review's own open rows: no disposition, and never a style or
+    pre-existing one. Those two buckets are marked optional by the review
+    itself, and a mention that asked for them would turn "take it or leave
+    it" into a push."""
+    review = pr.get("review") or {}
+    items = review.get("items") or []
+    out = [{"id": (i.get("id") or "").strip(), "summary": (i.get("summary") or "").strip()}
+           for i in items
+           if not i.get("disposition") and i.get("bucket") not in ("style", "pre-existing", "preexisting")]
+    if review.get("surface") == "v3":
+        # On a v3 card the ⚠️ rows live in the brief, not in `items`.
+        disposed = {i["id"] for i in items if i.get("disposition")}
+        seen = {o["id"] for o in out}
+        out += [{"id": w["id"], "summary": (w.get("body") or "").strip()}
+                for w in review.get("warning_rows") or []
+                if w.get("id") and w["id"] not in disposed and w["id"] not in seen]
+    return [o for o in out if o["id"]]
+
+
+def _and_join(parts: list[str]) -> str:
+    if len(parts) <= 1:
+        return parts[0] if parts else ""
+    if len(parts) == 2:
+        return f"{parts[0]} and {parts[1]}"
+    return ", ".join(parts[:-1]) + f" and {parts[-1]}"
+
+
+def ask_fix_body(pr: dict, items: list[dict]) -> str:
+    """`@claude fix F1 and F3 #update-review`, then what each id is.
+
+    The ids go on the mention line because that is the instruction; the
+    summaries follow it so a person scrolling the thread can read what was
+    asked for without opening the card. One mention does both halves -- fix,
+    then re-review -- which is what the pipeline's `#update-review` is for."""
+    ids = _and_join([i["id"] for i in items])
+    lines = [f"@claude fix {ids} #update-review", ""]
+    for i in items:
+        summary = " ".join((i["summary"] or "").split())
+        lines.append(f"- **{i['id']}**" + (f" — {summary[:200]}{'…' if len(summary) > 200 else ''}" if summary else ""))
+    return with_footer("\n".join(lines))
 
 
 def _route(gh: GhClient, s: Step) -> tuple[bool, str]:
@@ -1088,7 +1108,9 @@ def _mention(gh: GhClient, s: Step) -> tuple[bool, str]:
     if not ok:
         return False, f"preflight refused: {msg}"
     gh.comment(s.pr, s.args["comment"])
-    return True, "refresh requested" if s.kind == "refresh" else "fresh review requested"
+    return True, {"refresh": "refresh requested",
+                  "ask-fix": f"asked @claude to fix {len(s.args.get('items') or [])} finding(s) and refresh the review",
+                  }.get(s.kind, "fresh review requested")
 
 
 def _deploy(gh: GhClient, s: Step) -> tuple[bool, str]:
@@ -1126,9 +1148,42 @@ def _unblock(gh: GhClient, git: Git, s: Step, *, dry_run: bool = False) -> tuple
             wt.push(s.branch)
             return True, "merged origin/master into the head branch and pushed"
         conflicts = wt.conflicted_files()
+        _report_unblock_conflict(gh, s, conflicts)
         return False, "conflicts need a human: " + ", ".join(conflicts[:8])
     finally:
         git.remove_worktree(wt)  # a conflicted or half-done merge goes with it
+
+
+def unblock_conflict_body(head: str, base: str, conflicts: list[str]) -> str:
+    """What act.py leaves on the PR when the base merge stops on conflicts.
+
+    The files, and the head it was tried against, so the next board render
+    can see that this conflict is still the current one rather than a
+    settled one -- and so the approver who pressed the button finds out
+    somewhere other than the terminal they have already closed."""
+    files = "\n".join(f"- `{f}`" for f in conflicts[:20])
+    more = f"\n- …and {len(conflicts) - 20} more" if len(conflicts) > 20 else ""
+    return with_footer(
+        f"{UNBLOCK_CONFLICT_MARKER}\n"
+        f"Tried to merge `{base}` into this branch from `/pr-review` and stopped on conflicts, so nothing was "
+        f"pushed. The merge is aborted, not half-applied — the branch is exactly as it was at `{head[:7]}`.\n\n"
+        f"Conflicted file{'s' if len(conflicts) != 1 else ''}:\n\n{files}{more}\n\n"
+        f"Resolving these needs someone who can say which side wins, so `/pr-review` will not offer the base "
+        f"merge again while `{head[:7]}` is the head. Merge `{base}` in by hand, or push any commit that settles "
+        f"it, and the button comes back.")
+
+
+def _report_unblock_conflict(gh: GhClient, s: Step, conflicts: list[str]) -> None:
+    """Best-effort: the conflict report must never turn a failed merge into a
+    raised exception, because the merge failing is the thing worth telling."""
+    if not conflicts:
+        return
+    body = unblock_conflict_body(s.expect_head, s.args.get("base") or "master", conflicts)
+    try:
+        if not _already_commented(gh.issue_comments(s.pr), norm_login(gh.me()), body):
+            gh.comment(s.pr, body)
+    except (GhError, OSError):
+        pass
 
 
 def _fix(gh: GhClient, git: Git, s: Step, *, dry_run: bool = False) -> tuple[bool, str]:
@@ -1257,6 +1312,9 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--close", type=int, action="append", help="close N (repeatable)")
     ap.add_argument("--superseded-by", action="append", metavar="M | N:M",
                     help="M with exactly one --close, or N:M to say which close (repeatable)")
+    ap.add_argument("--ask-fix", type=int, action="append", dest="ask_fix", metavar="N",
+                    help="comment `@claude fix <ids> #update-review`: ask the PR-side agent to fix the row's open "
+                         "findings and refresh the review, instead of running /address-review yourself")
     ap.add_argument("--refresh", type=int, action="append")
     ap.add_argument("--rerun", type=int, action="append", help="post `@claude <reason> #new-review`: a fresh review from scratch")
     ap.add_argument("--rerun-checks", type=int, action="append", help="re-run the failed jobs of the head's workflow runs")

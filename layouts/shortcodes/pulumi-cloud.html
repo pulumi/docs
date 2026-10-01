@@ -29,6 +29,19 @@
   That renders the availability sentence and then the prose, in one violet box,
   for a marker that needs a qualifier.
 
+  When a section covers something broadly and only one option in it is gated,
+  "This feature is…" is ambiguous. Pass "named" as a second argument to lead
+  with the feature's name from data/pulumi_pricing.yaml instead:
+
+      ## Customer-managed deployment runner pools
+      {{< pulumi-cloud "customer-managed-runners" "named" />}}
+                → "Customer-managed deployment runners is a Pulumi Cloud
+                   feature available in the Enterprise edition."
+
+  The name comes from data/pulumi_pricing.yaml, which is the source of truth
+  for feature names. Make the page's prose use that name, rather than
+  renaming the feature in the data file to match a docs page.
+
   Inner content with no feature renders the prose alone, no availability
   sentence — which is the form for a cross-product pointer: "the page teaches
   the open-source way, and there is a Pulumi Cloud product that solves the same
@@ -48,13 +61,18 @@
   {{- errorf `pulumi-cloud takes a positional feature id, not named parameters (in %s). Write {{< pulumi-cloud "rbac" />}}.` .Page.File.Path -}}
 {{- end -}}
 {{- $feature := .Get 0 -}}
+{{- $mode := .Get 1 | default "" -}}
+{{- if and $mode (ne $mode "named") -}}
+  {{- errorf `pulumi-cloud's only second argument is "named" (in %s), got %q. Write {{< pulumi-cloud "rbac" "named" />}}.` .Page.File.Path $mode -}}
+{{- end -}}
+{{- $named := eq $mode "named" -}}
 {{- $inner := "" -}}
 {{- with .Inner }}{{ $inner = . | markdownify }}{{ end -}}
 {{- /* Inner-only means the author is writing orientation prose, so skip the
        generated availability sentence; anything else states availability. */ -}}
 {{- $body := "" -}}
 {{- if or $feature (not $inner) -}}
-  {{- $body = partial "cloud-availability-body.html" (dict "feature" $feature "where" .Page.File.Path) | markdownify -}}
+  {{- $body = partial "cloud-availability-body.html" (dict "feature" $feature "named" $named "where" .Page.File.Path) | markdownify -}}
 {{- end -}}
 {{- /* With both parts, `markdownify` has already unwrapped each single
        paragraph, so concatenating them raw would run the availability sentence

@@ -1,0 +1,57 @@
+<!-- CLAUDE_REVIEW 1/1 -->
+<!-- CLAUDE_REVIEW_AUTHOR -->
+<!-- CLAUDE_REVIEW_HEAD 49a63afe9075c80f228277429c9416de8b43ce55 -->
+## Author action guide v1 — 1 item needs an answer
+
+_This PR retires the `sentinel:preview` opt-in label and makes the Sentinel's pinned gate-status comment appear on every PR in report-only mode, behind a "preview — not blocking yet" banner; the review checked the Python and workflow changes for behavior gaps and confirmed no stale references to the retired label remain._
+
+### 🚨 Fix or disagree
+
+| ID | Where | Finding |
+|---|---|---|
+| **F?** | `scripts/review-v3/sentinel.py` L779 | Draft PRs are the one case the new "every PR gets the banner" invariant misses: the draft branch returns before `_stamp_report_only()` runs, so `would_be` stays empty and `render_status_comment()` renders the comment with the plain heading and no preview banner. Because report-only now writes the comment unconditionally, a draft PR gets a bare "Sentinel — merge gate status" comment that never says it is a preview. Call `_stamp_report_only()` on the draft verdict too (or skip the status comment for drafts). |
+
+### ❓ Questions for you
+
+_No open questions for you._
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<!-- REVIEW_STATE {"findings":{},"high_water":0,"schema":1} -->
+<!-- The block above stores dispositions only; a finding ID absent from it is OPEN. Machines parse the JSON block, not this note. -->
+
+<sub>Review v1 · updated 2026-09-21T21:51:26Z · head commit 49a63af</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+### How to answer
+
+Every 🚨 and ❓ item above needs one of these before merge:
+
+1. **Fix it** — push the change. If your push lines up with the flagged lines, this card shows a 🔄 banner within a minute and then refreshes itself. No banner? Comment:
+
+   ```text
+   @claude I pushed a fix for F1 #update-review
+   ```
+
+1. **Disagree with it** — say which item and why; the review re-checks with your input:
+
+   ```text
+   @claude F2: <your reasoning — e.g. where the figure comes from> #update-review
+   ```
+
+   Either way your answer counts: the review marks the item resolved, or keeps it with a 🛡️ note for your human reviewer to weigh — it stops blocking merge in both cases.
+
+1. **Accept it as-is** — you own the PR; a one-line reason is a valid answer, and your reviewer sees it beside the finding:
+
+   ```text
+   @claude F2: accepting as-is — <your reason> #update-review
+   ```
+
+   To accept every open item at once: `@claude accepting all open items — <reason> #update-review`.
+
+The `#update-review` hashtag matters — it routes your reply to this review, and (besides pushing a fix) **it is the only reply that unblocks merge**. A bare `@claude` gets you ad-hoc help and leaves this card — and the merge block — untouched.
+
+Please don't edit, hide, or delete this comment — it is the review's record. Full mechanics: [CONTRIBUTING.md §AI-assisted contributions](https://github.com/pulumi/docs/blob/master/CONTRIBUTING.md#ai-assisted-contributions).

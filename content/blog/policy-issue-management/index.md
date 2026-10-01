@@ -19,7 +19,7 @@ category: product
 
 For platform and security teams, enabling robust cloud scanning often creates a new problem: an unmanageable firehose of policy alerts. Identifying a violation is only the first step. Without a system to manage the lifecycle of these findings, teams are quickly overwhelmed, leading to prioritization paralysis and a perpetually growing backlog.
 
-The **[Policy Findings](https://www.pulumi.com/docs/insights/policy/policy-findings/)** hub in Pulumi Cloud is the solution to this alert fatigue. It's a purpose-built, collaborative workspace that turns a noisy list of violations into organized, actionable tasks. The hub brings clarity and structure to the compliance process, guiding teams from initial discovery to a verified fix.
+The **[Policy Findings](https://www.pulumi.com/docs/discovery-governance/policy/policy-findings/)** hub in Pulumi Cloud is the solution to this alert fatigue. It's a purpose-built, collaborative workspace that turns a noisy list of violations into organized, actionable tasks. The hub brings clarity and structure to the compliance process, guiding teams from initial discovery to a verified fix.
 
 <!--more-->
 
@@ -70,7 +70,7 @@ This new experience is now available. Navigate to the **Policies > Findings** ta
 **Ready to try these features?**
 
 * [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) and start a Neo task  
-* [Read the Get Started guide](/docs/insights/policy/get-started/) to manage compliance across your cloud infrastructure
+* [Read the Get Started guide](/docs/discovery-governance/policy/get-started/) to manage compliance across your cloud infrastructure
 * [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
 
-For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/insights/policy/).
+For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/discovery-governance/policy/).

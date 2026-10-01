@@ -1,6 +1,7 @@
 ---
 title_tag: "Pulumi vs. AWS CDK"
 faq_schema: true
+show_updated_date: true
 authors: ["joe-duffy"]
 meta_desc: "Compare Pulumi and AWS CDK: language support, multi-cloud coverage, state, secrets, policy, and migration paths. Neutral, side-by-side, with adoption guidance."
 title: AWS CDK
@@ -20,6 +21,7 @@ aliases:
 - /docs/concepts/vs/cloud-template-transpilers/
 - /docs/iac/concepts/vs/cloud-template-transpilers/
 - /docs/iac/comparisons/cloud-template-transpilers/
+- /docs/iac/comparisons/cdk-vs-terraform/
 ---
 
 Pulumi and [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) are both infrastructure as code tools that let you author cloud resources in general-purpose programming languages. They differ in how programs are turned into provisioned infrastructure: Pulumi runs programs directly through its own deployment engine and supports any cloud or SaaS platform through the [Pulumi Registry](/registry/), while AWS CDK transpiles programs into [AWS CloudFormation](/docs/iac/comparisons/cloudformation/) templates that the AWS CloudFormation service deploys, and supports AWS only.
@@ -45,12 +47,14 @@ AWS Cloud Development Kit (CDK) is an AWS-maintained framework, released in 2018
 | Transpiled to another format? | No — programs run directly in their host language | Yes — programs are synthesized into CloudFormation templates and an [AWS Cloud Assembly](https://docs.aws.amazon.com/cdk/v2/guide/apps.html#apps_cloud_assembly) |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | Managed by the CloudFormation service inside the AWS account; no user-accessible state file |
 | Secrets management | [Encrypted in transit and at rest](/docs/iac/concepts/secrets/) in the state file by default, with per-stack encryption keys; pluggable KMS providers (AWS KMS, Azure Key Vault, Google Cloud KMS, HashiCorp Vault) | No built-in secrets primitive; sensitive values are typically passed via [`NoEcho` parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) or [dynamic references](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html) to AWS Secrets Manager or SSM Parameter Store |
+| Preview changes | [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) computes a resource-level diff directly from the program | [`cdk diff`](https://docs.aws.amazon.com/cdk/v2/guide/ref-cli-cmd-diff.html) synthesizes the app, then compares the resulting template against the deployed CloudFormation stack |
+| Testing | [Unit tests](/docs/iac/guides/testing/unit/) in the language's own test frameworks (such as Jest, pytest, or Go's `testing` package) with mocked resource calls, plus [integration tests](/docs/iac/guides/testing/integration/) against deployed stacks | Unit tests with the [`assertions` module](https://docs.aws.amazon.com/cdk/v2/guide/testing.html), which assert against the synthesized CloudFormation template |
 | Execution model | Local CLI, programmatic via [Automation API](/docs/iac/concepts/automation-api/), or remote runs in [Pulumi Deployments](/docs/deployments/) | `cdk deploy` invokes the AWS CloudFormation service; can also run through AWS CodePipeline or any CI/CD tool that wraps the CDK CLI |
 | Rollback on failed operation | Failed updates leave the stack in a partially-updated state; subsequent `pulumi up` runs reconcile toward the desired state, and you can roll forward by reverting program code | [Automatic stack rollback](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-rollback-triggers.html) on failed create or update; configurable rollback triggers and `DisableRollback` for debugging |
 | Programmatic API for tools and platforms | [Automation API](/docs/iac/concepts/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | No embeddable SDK; orchestration goes through the CDK CLI, the AWS CLI, AWS SDKs, or the CloudFormation API |
 | Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers (npm, PyPI, NuGet, Maven, Go modules); and the [Pulumi Registry](/registry/) for publicly available packages | [Constructs](https://docs.aws.amazon.com/cdk/v2/guide/constructs.html) — reusable abstractions built on the [constructs](https://github.com/aws/constructs) library and published to language-specific package managers; the [Construct Hub](https://constructs.dev/) indexes public constructs |
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | [Resource import](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) through a CloudFormation change set, with a hand-authored CDK wrapper around the imported resources |
-| Policy as code | [Pulumi Policies](/docs/discovery-governance/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, PCI DSS, and NIST | [CloudFormation Hooks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/hooks.html) (authored in Java, Python, or TypeScript and registered with the CloudFormation Registry) and [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html) for policy-as-code rules |
+| Policy as code | [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) for compliance frameworks like CIS, PCI DSS, and NIST | [CloudFormation Hooks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/hooks.html) (authored in Java, Python, or TypeScript and registered with the CloudFormation Registry) and [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html) for policy-as-code rules |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | The CDK framework is [Apache License 2.0](https://github.com/aws/aws-cdk/blob/main/LICENSE); the CloudFormation deployment engine it depends on is a closed-source AWS service |
 | Commercial option | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) | None — CDK is part of AWS and has no separate commercial tier |
 
@@ -78,7 +82,7 @@ Pulumi treats secrets as a first-class primitive. Values marked as secrets are e
 
 ### Policy as code
 
-[Pulumi Policies](/docs/discovery-governance/policy/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, PCI DSS, HITRUST, NIST), so teams don't have to author and maintain those rules themselves. CDK inherits CloudFormation's policy options: [CloudFormation Hooks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/hooks.html), which run pre-provisioning checks authored in Java, Python, or TypeScript and registered with the CloudFormation Registry, and [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html), an open-source CLI for evaluating templates against rules.
+[Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) for common compliance frameworks (CIS, PCI DSS, HITRUST, NIST), so teams don't have to author and maintain those rules themselves. CDK inherits CloudFormation's policy options: [CloudFormation Hooks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/hooks.html), which run pre-provisioning checks authored in Java, Python, or TypeScript and registered with the CloudFormation Registry, and [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html), an open-source CLI for evaluating templates against rules.
 
 ### Modularity and reuse
 
@@ -100,7 +104,7 @@ The [Automation API](/docs/iac/concepts/automation-api/) lets a host application
 
 **Choose AWS CDK when** you:
 
-1. Provision only AWS resources and want to stay within AWS-managed tooling (CloudFormation, AWS CLI, AWS SDKs, AWS CodePipeline) end to end.
+1. Provision only AWS resources and want to stay within AWS-managed tooling (CloudFormation, AWS CLI, AWS SDKs, AWS CodePipeline) end to end, including CDK-specific integrations such as [CDK Pipelines](https://docs.aws.amazon.com/cdk/v2/guide/cdk-pipeline.html) and local testing of CDK apps with the [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/using-cdk.html).
 1. Depend on CloudFormation-specific features such as automatic stack rollback on failure, [Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html) integration, or [StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) for multi-account deployments.
 1. Have an existing investment in CDK constructs, custom resources, and team expertise that you don't want to migrate.
 
@@ -156,5 +160,4 @@ Yes. [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the sta
 - [Pulumi vs. AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
 - [Pulumi vs. CDKTF](/docs/iac/comparisons/cdktf/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
-- [CDK vs. Terraform vs. Pulumi](/docs/iac/comparisons/cdk-vs-terraform/)
 - [Migrating from AWS CDK to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/)

@@ -96,7 +96,7 @@ The framing I keep coming back to goes like this. An agent shouldn't call `pulum
 
 Real governance lives outside the prompt. "Please don't delete production" is a wish written into a system prompt, not an enforced control. And when an agent overrides your intent to do what it thought you meant, it's behaving exactly the way the technology was designed to behave.
 
-[Pulumi Policies](/docs/insights/policy/) is the answer the IaC community landed on years ago: policy as code, written in a real programming language, evaluated deterministically at preview and update time. Disallow production RDS deletions. Require encryption at rest. Block S3 buckets with public ACLs. An agent running through Pulumi hits those gates whether it "wants" to or not, because the gates live in the pipeline and not in the prompt. This is the pillar most teams underweight, and it's the first one most auditors ask about.
+[Pulumi Policies](/docs/discovery-governance/policy/) is the answer the IaC community landed on years ago: policy as code, written in a real programming language, evaluated deterministically at preview and update time. Disallow production RDS deletions. Require encryption at rest. Block S3 buckets with public ACLs. An agent running through Pulumi hits those gates whether it "wants" to or not, because the gates live in the pipeline and not in the prompt. This is the pillar most teams underweight, and it's the first one most auditors ask about.
 
 ### 5. An audit trail
 

@@ -15,8 +15,20 @@ on:
     - cron: '43 12 * * *'
     # Afternoon rebuild for hour-granular dates — 4:23 PM Eastern
     - cron: '23 20 * * *'
-  workflow_dispatch: null
   # Allows manual triggering of the workflow
+  workflow_dispatch:
+    inputs:
+      allow_out_of_order_publish:
+        description: >-
+          Publish even if a newer deploy already published. This is the rollback
+          escape hatch for scripts/check-publish-ordering.js, which normally refuses
+          to move the live origin backwards. You do NOT need this to roll back by
+          reverting and pushing -- a revert is a new commit in a newer run, and
+          publishes normally. A new dispatch at an older ref also publishes normally,
+          since it is the newest run; check this only if another run may publish
+          while this one waits its turn.
+        type: boolean
+        default: false
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: read # This is required for actions/checkout
@@ -75,7 +87,9 @@ jobs:
         run: |
           S5CMD_VERSION="2.3.0"
           S5CMD_SHA256="de0fdbfa3aceae55e069ba81a0fc17b2026567637603734a387b2fca06c299b4"
-          curl -fsSL -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
           echo "${S5CMD_SHA256}  /tmp/s5cmd.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin s5cmd -f /tmp/s5cmd.tar.gz
           rm /tmp/s5cmd.tar.gz
@@ -84,7 +98,9 @@ jobs:
         run: |
           VALE_VERSION="3.14.1"
           VALE_SHA256="ff2b49ffaa9dcd246fd5008f03ff67746d2790b75bf4d3657e2fb9530fb96db3"
-          curl -fsSL -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
           echo "${VALE_SHA256}  /tmp/vale.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin vale -f /tmp/vale.tar.gz
           rm /tmp/vale.tar.gz
@@ -157,6 +173,10 @@ jobs:
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  steps.esc-secrets.outputs.ALGOLIA_APP_ADMIN_KEY }}
           NODE_OPTIONS: "--max_old_space_size=8192"
+          # Empty for push and schedule; the string "true"/"false" for a dispatch.
+          # scripts/check-publish-ordering.js only treats recognizably affirmative
+          # values as on, so the unchecked box and the absent input both mean off.
+          ALLOW_OUT_OF_ORDER_PUBLISH: ${{ inputs.allow_out_of_order_publish }}
 
       # Duration guardrail: the July 2026 regression sat unnoticed for three
       # weeks because nothing watched build time. Warn in Slack when a

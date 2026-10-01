@@ -18,7 +18,7 @@ pulumi_cloud_feature: scim
 
 This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.
 
-For the capabilities and attributes Pulumi's SCIM implementation supports, see [Pulumi Cloud & SCIM](/docs/administration/guides/scim/#capabilities).
+For the capabilities and attributes Pulumi's SCIM implementation supports, see [SCIM provisioning](/docs/administration/concepts/scim/#capabilities).
 
 ## Prerequisites
 
@@ -83,7 +83,7 @@ Be sure to check the *Include in SAML assertion* checkbox for each of the added 
 Optionally, you can override the default value for *scimusername* and use the `Macro` setting. For example, `{firstname}{lastname}` as per [OneLogin Macros](https://onelogin.service-now.com/kb_view_customer.do?sysparm_article=KB0010609)
 
 {{% notes type="warning" %}}
-Whatever value you choose for *scimusername*, it must stay stable for the lifetime of the account. Pulumi usernames are immutable, so an update that changes *scimusername* for an existing user fails. See [Usernames cannot change](/docs/administration/guides/scim/#usernames-cannot-change).
+Whatever value you choose for *scimusername*, it must stay stable for the lifetime of the account. Pulumi usernames are immutable, so an update that changes *scimusername* for an existing user fails. See [Usernames cannot change](/docs/administration/concepts/scim/#usernames-cannot-change).
 {{% /notes %}}
 
 Select **Save** to save the application settings.

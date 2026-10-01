@@ -53,7 +53,7 @@ By default (or when `schema_type: auto`), the system automatically determines th
 
 ```
 - section: product → SoftwareApplication
-- section: case-studies → TechArticle
+- section: customers → TechArticle
 ```
 
 ### 4. Smart Fallbacks

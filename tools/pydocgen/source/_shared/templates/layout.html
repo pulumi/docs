@@ -1,0 +1,26 @@
+{# Shared template override for the Pulumi Python SDK reference docs
+   (pulumi, pulumi_policy, pulumi_esc_sdk). Adds a page-specific meta
+   description and an APIReference JSON-LD block; see seo_meta.py for how
+   those context values are computed. Canonical is left entirely to
+   sphinx_rtd_theme's own layout.html + html_baseurl (already correct
+   under dirhtml; do not add a second canonical here). #}
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% if seo_meta_description %}
+  <meta name="description" content="{{ seo_meta_description|e }}" />
+  {% endif %}
+  {% if seo_jsonld %}
+  <script type="application/ld+json">
+{{ seo_jsonld|safe }}
+  </script>
+  {% endif %}
+{% endblock %}
+
+{# When seo_page_title is set, it already names the package (e.g. "pulumi
+   -- Pulumi SDK Python API reference"), so titlesuffix is dropped here to
+   avoid repeating the brand name twice in one <title>. #}
+{% block htmltitle %}
+  <title>{% if seo_page_title %}{{ seo_page_title|e }}{% else %}{{ title|striptags|e }}{{ titlesuffix }}{% endif %}</title>
+{% endblock %}

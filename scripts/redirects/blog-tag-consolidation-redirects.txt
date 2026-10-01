@@ -1,0 +1,5 @@
+# Blog tags consolidated into the current-vocabulary tag. The legacy tag was removed from post
+# frontmatter, so Hugo no longer generates its term page. Tag term pages are noindexed site-wide
+# (layouts/partials/taxonomy-indexable.html), so this is a courtesy for stray external links
+# rather than SEO recovery.
+blog/tag/crossguard/index.html|/blog/tag/policy-as-code/

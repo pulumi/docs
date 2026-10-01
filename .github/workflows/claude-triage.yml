@@ -12,7 +12,10 @@ name: Pre-merge Review (triage)
 # lying). The synchronize pass skips everything but the label delta: no
 # review:triaging churn, no Haiku/Vale prose check (an existing
 # review:prose-flagged is carried forward, not reconciled away), no prose
-# comment, no reviewer routing (assignments are sticky from open).
+# comment, and no RE-request of a team already asked (assignments are sticky
+# from open). It does request a team the live paths now require that has
+# never been asked on this PR — see the routing step for why that is not the
+# same thing as a re-request.
 # review-state staleness on push is still claude-code-review.yml's
 # mark-stale job, unchanged. It does NOT run on reopen — reopening is
 # usually administrative; the explicit `@claude #new-review` path is the
@@ -49,7 +52,10 @@ jobs:
     # (the worker opens them ready when the re-lint passes — falling back to
     # draft only on lint failure — so triage fires on the non-draft `opened`
     # event). They flow through the normal triage → review chain instead of
-    # being force-dispatched.
+    # being force-dispatched. fix/broken-links-* (the broken-link fixer) and
+    # vale/brand-sync-* (the weekly brand-guide sync) get the same treatment:
+    # both open ready when their validation passes, and a ready PR that
+    # triage skips never requests a review team, so it sits unnoticed.
     #
     # The synchronize (label-delta) pass is Phase 3 of the v3 rollout and is
     # gated on REVIEW_V3_ROUTING: with the variable unset a push changes no
@@ -59,7 +65,8 @@ jobs:
       && github.event.pull_request.user.login != 'dependabot[bot]'
       && (github.event.pull_request.user.login != 'pulumi-bot'
           || startsWith(github.event.pull_request.head.ref, 'content-review/')
-          || startsWith(github.event.pull_request.head.ref, 'fix/broken-links-'))
+          || startsWith(github.event.pull_request.head.ref, 'fix/broken-links-')
+          || startsWith(github.event.pull_request.head.ref, 'vale/brand-sync-'))
       && (github.event.action != 'synchronize' || vars.REVIEW_V3_ROUTING == '1')
 
     concurrency:
@@ -71,6 +78,7 @@ jobs:
       contents: read
       pull-requests: write
       id-token: write
+      actions: write # re-evaluate the Sentinel after a label it reads changes
 
     steps:
       # Surface "triage is running" as visible label state from workflow
@@ -198,12 +206,18 @@ jobs:
           PR: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
           EVENT_ACTION: ${{ github.event.action }}
+          SENTINEL_MODE: ${{ vars.REVIEW_V3_SENTINEL }}
         run: |
           set -euo pipefail
 
           # 1. Gather PR state.
           PR_DATA=$(gh pr view "$PR" --repo "$REPO" \
-            --json title,body,author,files,labels,additions,deletions,commits,isDraft)
+            --json title,body,author,files,labels,additions,deletions,commits,isDraft,changedFiles)
+          # `gh pr view --json files` is one 100-file GraphQL page; swap in the
+          # paginated REST list. Never via argv: a ~1,000-file list overflows
+          # MAX_ARG_STRLEN (see with-pr-files.sh).
+          PR_DATA=$(printf '%s' "$PR_DATA" \
+            | bash .claude/commands/docs-review/scripts/with-pr-files.sh --repo "$REPO" --pr "$PR")
           # 100KB diff cap. The
           # classifier doesn't need every byte to detect frontmatter /
           # link / code-block / version-claim signals.
@@ -304,6 +318,17 @@ jobs:
           elif [[ "$FRONTMATTER_ONLY" == "true" ]]; then
             TARGET["review:frontmatter-only"]=1
           fi
+          # The file-count axis only became reachable with the paginated
+          # file list. On a push, a PR that isn't already labelled is flagged
+          # by the line axis alone, as before: newly flagging an open PR by
+          # its file count would skip G1/G2 and turn G5 red on a PR reviewed
+          # and approved under the normal gates. Open / ready / reopen use
+          # both axes.
+          if [[ "$OVERSIZED" == "true" && "$EVENT_ACTION" == "synchronize" ]] \
+             && [[ "$(echo "$CLASS" | jq -r '.oversized_by_lines // false')" != "true" ]] \
+             && ! echo "$PR_DATA" | jq -e '.labels[] | select(.name == "review:oversized")' >/dev/null; then
+            OVERSIZED=false
+          fi
           [[ "$OVERSIZED" == "true" ]] && TARGET["review:oversized"]=1
           # Prose concerns flag — applies to either trivial or
           # frontmatter-only when EITHER the Haiku spelling/grammar check
@@ -363,6 +388,24 @@ jobs:
           fi
           if (( ${#ARGS[@]} > 0 )); then
             gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}" || true
+          fi
+          # 7b. The Sentinel reads review:oversized and review:trivial, and
+          # listens for their `labeled` events -- but a GITHUB_TOKEN label
+          # write fires none. Its `opened` run beat this label on #21936, so
+          # G5 said "not oversized" beside the label for good. The label is
+          # the Sentinel's source of truth (a size computed there would flip
+          # PRs already reviewed and approved under the normal gates), so
+          # triage re-evaluates it whenever that label moves.
+          # (review:oversized is re-added on every run -- see step 5 -- so
+          # "moved" means it wasn't on the PR before this run.)
+          MOVED=""
+          [[ " ${ADD_LIST[*]:-} ${REMOVE_LIST[*]:-} " == *" review:trivial "* ]] && MOVED=1
+          if [[ "$OVERSIZED" == "true" ]] \
+             && ! echo "$PR_DATA" | jq -e '.labels[] | select(.name == "review:oversized")' >/dev/null; then
+            MOVED=1
+          fi
+          if [[ -n "$MOVED" && ( "$SENTINEL_MODE" == "report" || "$SENTINEL_MODE" == "1" ) ]]; then
+            gh workflow run review-sentinel.yml --repo "$REPO" -f pr_number="$PR" || true
           fi
 
           # 8. Prose-check advisory comment.
@@ -427,7 +470,7 @@ jobs:
           if [[ "$OVERSIZED" == "true" ]]; then
               PR_ADDITIONS=$(echo "$PR_DATA" | jq -r '.additions')
               PR_DELETIONS=$(echo "$PR_DATA" | jq -r '.deletions')
-              PR_FILES=$(echo "$PR_DATA" | jq -r '.files | length')
+              PR_FILES=$(echo "$PR_DATA" | jq -r '.changedFiles // (.files | length)')
               BODY=$(cat <<EOF
           <!-- TRIAGE_OVERSIZED -->
           📦 **Oversized PR** — this diff (+$PR_ADDITIONS/−$PR_DELETIONS across $PR_FILES files) exceeds the automated review budget, so the Claude review is skipped (\`review:oversized\`).
@@ -435,9 +478,7 @@ jobs:
           A diff this size is usually mostly generated output, which an automated line-review can't finish (and wouldn't add value to). What works better:
 
           - Split the hand-written source (scripts, workflows, layouts, templates) into its own PR — that PR gets a normal full review.
-          - Have a human spot-check a sample of the generated output here.
-
-          \`@claude #new-review\` still force-runs a full review, but on a diff this size it will likely hit the job timeout.
+          - Have a human review this PR by hand, assisted by their own AI subscription seat (for example, Claude Code running \`/docs-review\` locally against this PR). A local session has no job timeout, so it can focus on the hand-written source and spot-check a sample of the generated output.
           EOF
           )
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
@@ -452,40 +493,41 @@ jobs:
           echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY oversized=$OVERSIZED prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT vale-concerns=$VALE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
 
       # v3 reviewer routing (Phase 3, flag-gated): resolve the approval
-      # matrix from live paths and request the lane team(s) once, at open /
-      # ready — never on synchronize; assignments are sticky by design (a
-      # re-request on every push is the notification noise v3 removes).
-      # Requesting an already-requested team is a no-op, so the draft →
-      # ready → draft → ready dance stays quiet. continue-on-error: routing
-      # is an assist — the Sentinel enforces the matrix regardless of
-      # whether the request landed.
-      # A TEAM review request is not a repo-scoped operation: the
-      # requested_reviewers endpoint has to resolve `org/slug` against the
-      # org, and the default GITHUB_TOKEN can't — it fails the same way the
-      # Sentinel's team-membership reads do without PULUMI_BOT_TOKEN. Mint
-      # the org-scoped token here so the request below can actually land;
-      # reading the PR and its diff stays on GITHUB_TOKEN. continue-on-error
-      # because routing is an assist: no token degrades to "requested
-      # nobody", which is where the repo was before this step existed, and
-      # the Sentinel enforces the matrix either way.
-      - name: Fetch ESC secrets (org-scoped routing token)
+      # matrix from live paths and request each lane team that has never
+      # been asked on this PR.
+      #
+      # "Never been asked" is the whole rule, and it is not the same as
+      # "not currently requested". Assignments stay sticky — a team that
+      # reviewed (GitHub drops it from requested_reviewers when it does), or
+      # that a human deliberately un-requested, is never re-pinged, because
+      # a re-request on every push is the notification noise v3 exists to
+      # remove. What the ever-requested test adds is the case that rule used
+      # to miss: this step ran only at open / ready, while the Sentinel
+      # resolves required roles from LIVE paths on every evaluation
+      # (including synchronize). So a push that WIDENED the path set — a
+      # docs PR that grows a `layouts/` file, say — introduced a required
+      # approver that nobody was ever told about. Under enforcement that is
+      # an author blocked by a team that was never pinged, with nothing on
+      # the PR saying so. A first request for a newly-required team is not a
+      # re-request; it is the notification that was missing.
+      #
+      # The test is the timeline's `review_requested` events, not the PR's
+      # current `requested_teams`, precisely so an answered or withdrawn
+      # request still counts as asked.
+      #
+      # continue-on-error: routing is an assist — the Sentinel enforces the
+      # matrix regardless of whether the request landed.
+      # Which teams still need asking. GITHUB_TOKEN only: reading the PR,
+      # its diff and its timeline needs no org scope, and keeping this step
+      # token-free is what lets the ESC fetch below be conditional.
+      - name: Resolve lane reviewers to request
+        id: route
         if: >-
           vars.REVIEW_V3_ROUTING == '1'
-          && github.event.action != 'synchronize'
-          && steps.check-access.outputs.has_write_access == 'true'
-        id: esc-secrets
-        continue-on-error: true
-        uses: pulumi/esc-action@v3
-
-      - name: Request lane reviewers (v3 routing)
-        if: >-
-          vars.REVIEW_V3_ROUTING == '1'
-          && github.event.action != 'synchronize'
           && steps.check-access.outputs.has_write_access == 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TEAM_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
         run: |
@@ -493,22 +535,106 @@ jobs:
           PR_DATA_FILE=$(mktemp)
           DIFF_FILE=$(mktemp)
           trap 'rm -f "$PR_DATA_FILE" "$DIFF_FILE"' EXIT
-          gh pr view "$PR" --repo "$REPO" \
-            --json files,additions,deletions > "$PR_DATA_FILE"
+          # Paginated file list — see the classification step (100-file cap).
+          gh pr view "$PR" --repo "$REPO" --json files,additions,deletions,changedFiles \
+            | bash .claude/commands/docs-review/scripts/with-pr-files.sh --repo "$REPO" --pr "$PR" \
+            > "$PR_DATA_FILE"
           gh pr diff "$PR" --repo "$REPO" | head -c 100000 > "$DIFF_FILE" || true
           ROUTE=$(python3 scripts/review-v3/route-pr.py \
             --pr-data "$PR_DATA_FILE" --diff "$DIFF_FILE")
           echo "$ROUTE" | jq -c '{roles, teams, mechanical, staging_evidence_required}'
           TEAMS=$(echo "$ROUTE" | jq -r '.teams[]')
           if [ -z "$TEAMS" ]; then
-            echo "routing: no approver team required (mechanical or unrouted) — requesting nobody"
+            echo "routing: no approver team required — requesting nobody"
+            echo "pending=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if [ -z "${TEAM_TOKEN:-}" ]; then
-            echo "::warning::routing: no org-scoped token (ESC fetch failed); team review requests need one. Would have requested: $(echo "$TEAMS" | paste -sd, -)"
+
+          # Every team ever review-requested on this PR, by bare slug. The
+          # timeline is the right source: `requested_teams` on the PR is
+          # current state, and GitHub removes a team from it the moment a
+          # member reviews, so a team that already answered would look
+          # un-asked and get re-pinged on the next push.
+          #
+          # A FAILED read is not an empty read, and conflating them is a real
+          # hazard now that this runs on every push: an empty ASKED makes
+          # every required team look never-asked, so one transient 500 or a
+          # rate limit re-requests all of them -- the exact notification
+          # spam the ever-asked test exists to prevent, on a loop.
+          #
+          # The old line was `... 2>/dev/null | sort -u || true`. `|| true` is
+          # what discarded gh's status; `2>/dev/null` threw away the reason.
+          # (`pipefail` is set at the top of this step, so the pipe itself was
+          # never the problem -- it propagates gh's failure fine. Worth saying
+          # because the pipeline-status rule is the tempting explanation and
+          # it is the wrong one here.) So: test the status instead of
+          # discarding it, and when the read fails request nobody. Routing is
+          # an assist and the Sentinel enforces the matrix either way, so
+          # silence is the safe degradation; the next push retries.
+          if ! ASKED=$(gh api --paginate "repos/$REPO/issues/$PR/timeline" \
+                         --jq '.[] | select(.event == "review_requested") | .requested_team.slug // empty' \
+                       | sort -u); then
+            echo "::warning::routing: could not read the timeline for $REPO#$PR, so 'already asked' is unknowable. Requesting nobody rather than re-pinging every required team ($(echo "$TEAMS" | tr '\n' ',' | sed 's/,$//')). The next push retries."
+            echo "pending=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          echo "routing: teams ever requested on this PR: ${ASKED:-none}"
+
+          PENDING=""
           for team in $TEAMS; do
+            slug="${team##*/}"
+            if printf '%s\n' "$ASKED" | grep -qxF "$slug"; then
+              echo "routing: $team already asked on this PR — leaving it sticky"
+            else
+              PENDING="$PENDING $team"
+            fi
+          done
+          PENDING="${PENDING# }"
+
+          if [ -z "$PENDING" ]; then
+            echo "routing: every required team has already been asked — nothing to do"
+          fi
+          echo "pending=$PENDING" >> "$GITHUB_OUTPUT"
+
+      # A TEAM review request is not a repo-scoped operation: the
+      # requested_reviewers endpoint has to resolve `org/slug` against the
+      # org, and the default GITHUB_TOKEN can't — it fails the same way the
+      # Sentinel's team-membership reads do without PULUMI_BOT_TOKEN.
+      #
+      # Gated on there being something to request. This is an OIDC exchange
+      # plus a CLI download, and after the first request `pending` is empty
+      # on essentially every later push — which, since this lane lost its
+      # `synchronize` exclusion, is now most of the runs. continue-on-error
+      # because routing is an assist: no token degrades to "requested
+      # nobody", which is where the repo was before this step existed, and
+      # the Sentinel enforces the matrix either way.
+      - name: Fetch ESC secrets (org-scoped routing token)
+        if: >-
+          vars.REVIEW_V3_ROUTING == '1'
+          && steps.check-access.outputs.has_write_access == 'true'
+          && steps.route.outputs.pending != ''
+        id: esc-secrets
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Request lane reviewers (v3 routing)
+        if: >-
+          vars.REVIEW_V3_ROUTING == '1'
+          && steps.check-access.outputs.has_write_access == 'true'
+          && steps.route.outputs.pending != ''
+        continue-on-error: true
+        env:
+          TEAM_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          PENDING: ${{ steps.route.outputs.pending }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if [ -z "${TEAM_TOKEN:-}" ]; then
+            echo "::warning::routing: no org-scoped token (ESC fetch failed); team review requests need one. Would have requested: $(echo "$PENDING" | tr ' ' ',')"
+            exit 0
+          fi
+          for team in $PENDING; do
             GH_TOKEN="$TEAM_TOKEN" gh pr edit "$PR" --repo "$REPO" --add-reviewer "$team" \
               && echo "routing: requested $team" \
               || echo "::warning::routing: could not request $team (team missing, or it has no access to $REPO)"

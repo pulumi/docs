@@ -18,10 +18,6 @@ iac:
     parent: iac-guides-building-extending
     identifier: iac-guides-providers
     weight: 3
-  - name: Using Existing Tools
-    parent: iac-guides-building-extending
-    identifier: iac-guides-using-existing-tools
-    weight: 4
   - name: Migrating from...
     parent: iac-guides-migration
     identifier: iac-guides-migration-from
@@ -190,11 +186,6 @@ iac:
     weight: 2
     parent: iac-cli-commands
 
-  - name: watch
-    url: /docs/iac/cli/commands/pulumi_watch/
-    weight: 2
-    parent: iac-cli-commands
-
   - name: whoami
     url: /docs/iac/cli/commands/pulumi_whoami/
     weight: 2
@@ -300,10 +291,11 @@ reference:
     weight: 8
 
 # -------------------------------------
-# Policies Menu Section Headers (Discovery & governance)
+# Discovery & governance
 # -------------------------------------
 discovery-governance:
-  - name: Integrations
-    parent: insights-policy
-    identifier: integrations
-    weight: 50
+  - name: pulumi policy CLI ↗
+    parent: dg-reference
+    url: /docs/iac/cli/commands/pulumi_policy/
+    identifier: dg-reference-policy-cli
+    weight: 10

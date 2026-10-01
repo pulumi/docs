@@ -229,12 +229,47 @@ Only required if using GitLab as the backing identity provider for your organiza
 | GITHUB_OAUTH_ENDPOINT         | Used for GitHub API calls.                                                                                                                                                                                                                             |
 | PULUMI_DATABASE_USER_NAME     | Name of the database user the Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                     |
 | PULUMI_DATABASE_USER_PASSWORD | Password of the database user the Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                 |
+| PULUMI_CORS_ALLOWED_ORIGINS   | Comma-separated list of browser origins allowed to call the API cross-origin, each written as `<scheme>://<host>[:<port>]` with no path and no default port (`https://pulumiconsole.acmecorp.com`, not `https://pulumiconsole.acmecorp.com:443`). Two keywords are accepted: `*` allows every origin, and `localhost` allows any `http` or `https` origin on a loopback host regardless of port. Default is `*`, which will answer every cross-origin request. Set it to the origin of your Console (the `PULUMI_CONSOLE_DOMAIN` value with its scheme) to reject other sites' browser requests; add further entries only for other web apps you run that call the API from a browser. Requests that carry no `Origin` header, such as the `pulumi` CLI and server-to-server callers, are unaffected. Each rejected request is logged as `CORS origin mismatch` and counted by the `cors.origin_mismatch` metric. |
+| PULUMI_CORS_ENFORCE           | When `false`, requests whose `Origin` is not in `PULUMI_CORS_ALLOWED_ORIGINS` are still logged and counted but are answered as if the list were `*`. Use it to audit a candidate allowlist without affecting users, then unset it (or set `true`, the default) to enforce. |
 | PULUMI_DISABLE_EMAIL_LOGIN    | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/components/console#email-identity) for the Console.   |
 | PULUMI_DISABLE_EMAIL_SIGNUP   | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/components/console#email-identity) for the Console. |
+| PULUMI_DISABLE_SSRF_PROTECTION | Comma-separated list of features whose SSRF protection is switched off: `ESC`, `AGENTS_BYOK`, `OIDC_ISSUER`, `VCS`, `WEBHOOKS`. Unset by default, which keeps the protection on for every feature. See [SSRF protection](#ssrf-protection). |
+| PULUMI_DISABLE_ESC_SSRF_PROTECTION | Deprecated. When `true`, treated as `ESC` in `PULUMI_DISABLE_SSRF_PROTECTION`. Use `PULUMI_DISABLE_SSRF_PROTECTION=ESC` instead. |
 | PULUMI_PASSKEY_CEREMONY_KEY   | Signs the state token that links a passkey registration or sign-in attempt's start and finish steps. Must be the standard-base64 encoding of exactly 32 random bytes (44 characters including padding); generate one with `openssl rand -base64 32`. The API service validates this at startup and fails to boot if the value is the wrong length or isn't valid base64. Leaving it unset disables the passkey routes entirely. Passkeys are also gated by a platform-level setting outside this variable's control, so if the routes still return 404 once this is set, contact Pulumi support to confirm passkeys are enabled for your deployment. Rotating the key invalidates any passkey ceremony in progress (each has a five-minute window to complete), but does not affect passkeys your users have already registered. |
 | RECAPTCHA_SECRET_KEY          | Used for password reset requests by users. [Create a Cloudflare Turnstile Widget](https://www.cloudflare.com/application-services/products/turnstile/) to generate the `Secret Key`. See also [Console Component](/docs/administration/self-hosting/components/console#environment-variables-for-identities).                                                                                          |
 | SAML_CERTIFICATE_PUBLIC_KEY   | Public key used by the IdP to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY](/docs/administration/self-hosting/saml-sso/).                                                                                |
 | SAML_CERTIFICATE_PRIVATE_KEY  | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY](/docs/administration/self-hosting/saml-sso/).                                                                                       |
+
+## SSRF protection
+
+To protect against server-side request forgery (SSRF), the API service refuses outbound requests to URLs that users supply when the destination resolves to a loopback, private, link-local, carrier-grade NAT (RFC 6598), or other reserved address. This includes the cloud metadata endpoint `169.254.169.254`. The address is checked when the connection is made, so a hostname that resolves to a public address when it's saved and to a private one later is still refused.
+
+If a feature needs to reach a service on the same host or private network as your installation, such as a secret store that a Pulumi ESC provider reads from, switch the protection off for that feature only by listing it in `PULUMI_DISABLE_SSRF_PROTECTION`. Names are case-insensitive and unknown names are ignored with a warning in the API service logs.
+
+| Scope         | Outbound requests it covers                                                                                                  |
+|---------------|------------------------------------------------------------------------------------------------------------------------------|
+| `ESC`         | Pulumi ESC providers and rotators that call a URL you configure: Vault, Infisical, Terraform state, GitHub login, and external providers and rotators. |
+| `AGENTS_BYOK` | Pulumi Neo requests to a [custom model provider](/docs/ai/neo/model-providers/).                                             |
+| `OIDC_ISSUER` | Registering an OIDC issuer and fetching its signing keys. |
+| `VCS`         | Refreshing a member's GitHub Enterprise Server token when [individual user authentication](/docs/integrations/version-control/github-app/#individual-user-authentication-for-github-enterprise-server) is enabled. |
+| `WEBHOOKS`    | Webhook delivery. |
+
+For example, to let ESC providers and Neo reach services on your private network:
+
+```bash
+PULUMI_DISABLE_SSRF_PROTECTION=ESC,AGENTS_BYOK
+```
+
+The API service logs a warning once for each scope that is switched off. `PULUMI_DISABLE_ESC_SSRF_PROTECTION=true` is still honored as `ESC`, but it's deprecated and no longer switches off the protection for any other feature.
+
+### Outbound proxies
+
+Requests covered by SSRF protection honor the standard `HTTPS_PROXY`, `HTTP_PROXY`, and `NO_PROXY` environment variables. The proxy itself may be on a private address. The API service checks the destination before handing the request to the proxy, so a blocked destination never reaches the proxy, and a request sent directly to the proxy's own address is refused.
+
+Two limitations apply when a proxy is configured:
+
+* The API service must be able to resolve the destination's hostname itself. If only the proxy can resolve external names, protected requests fail. Switch off the protection for the affected feature if that applies to your network.
+* The proxy resolves the hostname again after the API service has checked it. To guard against DNS rebinding behind a proxy, restrict private destinations with an egress policy on the proxy.
 
 ## TLS Environment Variables
 
@@ -505,6 +540,18 @@ In order to enable the [Pulumi IDP Registry](/docs/idp/concepts/private-registry
 |-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PULUMI_REGISTRY_PUBLIC_BLOB_STORAGE_ENDPOINT  | The storage endpoint for persisting public registry artifacts. The value takes the format: `azblob://<blob-container>`.                                                                                                    |
 | PULUMI_REGISTRY_PRIVATE_BLOB_STORAGE_ENDPOINT  | The storage endpoint for persisting private registry artifacts. The value takes the format: `azblob://<blob-container>`.                                                                                                    |
+
+## Terraform state backend
+
+To let Terraform and OpenTofu use your self-hosted Pulumi Cloud as a [state backend](/docs/integrations/terraform/state-backend/), set the following environment variable on the API service:
+
+| Variable Name     | Description |
+|-------------------|-------------|
+| PULUMI_TFE_DOMAIN | The domain that serves the Terraform-compatible API, for example `tf.pulumiapi.acmecorp.com`. When unset, the Terraform-compatible API is disabled and its routes aren't registered. |
+
+Point the DNS record for this domain at the same host that serves `PULUMI_API_DOMAIN`. A separate domain keeps the Terraform-compatible API distinct from the Pulumi API, but it isn't required: you can set `PULUMI_TFE_DOMAIN` to the same value as `PULUMI_API_DOMAIN` if you don't want a second DNS record.
+
+In the Terraform or OpenTofu configuration, the `terraform login` or `tofu login` command, and the `TF_TOKEN_*` variable name, use the `PULUMI_TFE_DOMAIN` value wherever the [state backend guide](/docs/integrations/terraform/state-backend/) uses `tf.pulumi.com`.
 
 ## Operations guide
 

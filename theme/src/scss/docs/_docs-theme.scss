@@ -634,7 +634,7 @@ html[data-theme="dark"] body.section-docs {
     //     solid violet-950 surface + Min Dark syntax colors otherwise come from
     //     _code.scss / _chroma.scss. The border shorthand also restores width/style
     //     the unlayered `*` reset (color-only) can't touch. -------------------
-    pre:not(.mermaid),
+    pre:not(.mermaid, .copy-prompt *),
     .chroma,
     .bg {
         background-color: color-mix(in srgb, var(--color-violet-950) 50%, transparent);
@@ -647,7 +647,7 @@ html[data-theme="dark"] body.section-docs {
         background: color-mix(in srgb, var(--color-violet-950) 50%, transparent);
     }
 
-    pre:not(.mermaid, pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *) {
+    pre:not(.mermaid, pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *, .copy-prompt *) {
         border: 1px solid var(--chrome-border);
     }
 

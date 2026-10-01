@@ -162,7 +162,7 @@ Enterprise, [contact sales](/contact/?form=sales) for a contract.
 These legacy plans are separate from the current Pro edition.
 They are retired and don't include newer capabilities
 such as [Pulumi Deployments](/docs/deployments/),
-[Pulumi Discovery](/docs/discovery-governance/discovery/), and [Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
+[Pulumi Discovery](/docs/discovery-governance/concepts/discovery/), and [Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
 current edition. If now isn't the right time for your team, we're happy to honor
 your existing terms.
 
@@ -204,7 +204,8 @@ To discuss that, [contact us](/contact/).
   and PCI DSS,
   [SCIM](/docs/administration/guides/scim/) user and group sync, unlimited
   custom policy packs, policy remediation, GitHub Enterprise Server support,
-  and unlimited custom roles.
+  GitHub Enterprise Cloud with data residency support, and unlimited custom
+  roles.
 
 For a feature-by-feature comparison, see the [pricing page](/pricing/).
 

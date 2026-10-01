@@ -14,14 +14,14 @@ aliases:
   - /docs/esc/concepts/providers/login/oidc-setup/aws/
 ---
 
-This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with AWS. OIDC in AWS uses a web identity provider to assume an IAM role. Access to the IAM role is authorized using a trust policy that validates the contents of the OIDC token issued by the Pulumi Cloud.
+This guide walks through the steps to configure Pulumi to use OpenID Connect to authenticate with AWS. OIDC in AWS uses a web identity provider to assume an IAM role. Access to the IAM role is authorized using a trust policy that validates the contents of the OIDC token issued by the Pulumi Cloud.
 
 ## Prerequisites
 
-* You must have sufficient AWS IAM privileges to create identity providers and IAM roles.
+* You must have AWS IAM privileges to create identity providers and IAM roles.
 
 {{< notes type="warning" >}}
-Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
+This guide provides step-by-step instructions based on the official provider documentation, which is subject to change. For the most current and precise information, always refer to the [official AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
 {{< /notes >}}
 
 ## Automated setup with the Pulumi CLI
@@ -45,7 +45,7 @@ Reach for the manual steps below instead when you already have an OIDC identity 
 3. For the **Provider URL**, provide the following URL: `https://api.pulumi.com/oidc`
 4. For the **Audience** field, the value is the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`). Then select **Add provider**.
   {{< notes type="info" >}}
-  For the `default` project, the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
+  For the `default` project, the audience uses only the Pulumi organization name. This prevents regressions for legacy environments.
   {{< /notes >}}
 
 ## Configure the IAM role
@@ -65,7 +65,7 @@ Once you have created the identity provider, you will see a notification at the 
 
 Next, select the **trust relationships** tab, which is where the trust policy of the role is defined.
 
-```bash
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -90,7 +90,7 @@ Next, select the **trust relationships** tab, which is where the trust policy of
 
 This definition allows any Pulumi ESC environment in your organization to assume this role. The `sub` condition uses a wildcard to permit any environment within your org. You can make the policy more granular by restricting access to a specific environment. For more detailed configuration, see [Custom token claim](/docs/esc/guides/configuring-oidc/#custom-token-claim).
 
-Before you log out of the AWS console, make sure to make a note of your role’s ARN value as you will need it in the next step.
+Before you log out of the AWS console, make sure to make a note of your role's ARN value as you will need it in the next step.
 
 ## Configure ESC for OIDC
 
@@ -118,7 +118,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
     ```
 
 6. Replace `<your-oidc-iam-role-arn>` with the value from the previous steps.
-7. Click **Save**.
+7. Select **Save**.
 
 You can validate that your configuration is working by running the [`pulumi env open`](/docs/iac/cli/commands/pulumi_env_open/) command of the [Pulumi CLI](/docs/install/):
 
@@ -128,7 +128,7 @@ pulumi env open <your-org>/<your-project>/<your-environment>
 
 Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` with the values of your Pulumi organization, project, and environment file respectively. You should see output similar to the following:
 
-```bash
+```json
 {
   "aws": {
     "login": {
@@ -178,6 +178,6 @@ The OIDC subject claim for this environment would be `pulumi:environments:pulumi
 
 {{< notes type="info" >}}
 
-If you are integrating Pulumi ESC with Pulumi IaC, the default subject identifier of the environment will be `pulumi:environments:org:contoso:env:<yaml>`.  The literal value of `<yaml>` need to be used and will be the same for all environments. Hence, for best security practices we recommend using `subjectAttributes`. If you want to set environment level or even granular permissions in your trust policy, then we recommend using `subjectAttributes` property.
+If you are integrating Pulumi ESC with Pulumi IaC, the default subject identifier of the environment is `pulumi:environments:org:contoso:env:<yaml>`. The literal value `<yaml>` is what you must use, and it is the same for all environments. To set environment-level or more granular permissions in your trust policy, use the `subjectAttributes` property instead.
 
 {{< /notes >}}

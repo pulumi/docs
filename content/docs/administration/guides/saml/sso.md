@@ -78,9 +78,9 @@ Pulumi only accepts stable and persistent identifiers for users. Identity provid
 **Important:** Once your name ID format is configured and your users have started to use SSO, **DO NOT** change the name identifier. That will prevent your users from being able to sign in.
 {{% /notes %}}
 
-## Session Lifetime
+## Session lifetime
 
-Most identity providers support configuring the lifetime of the SAML session by passing the optional `SessionNotOnAfter` attribute in the `AuthnStatement` element in the SAML assertion. Refer to your identity provider for guidance on how to set this attribute.
+Most identity providers support configuring the lifetime of the SAML session by passing the optional `SessionNotOnOrAfter` attribute in the `AuthnStatement` element in the SAML assertion. Refer to your identity provider for guidance on how to set this attribute.
 
 Example of the `AuthnStatement` element with session lifetime configured:
 
@@ -88,7 +88,7 @@ Example of the `AuthnStatement` element with session lifetime configured:
 <saml:AuthnStatement AuthnInstant="2023-05-23T00:49:39Z" SessionNotOnOrAfter="2023-05-23T10:49:39Z" SessionIndex="...">
 ```
 
-If `SessionNotOnAfter` isn't specified, then Pulumi Cloud will use the default session lifetime of 12 hours.
+If `SessionNotOnOrAfter` isn't specified, then Pulumi Cloud will use the default session lifetime of 12 hours.
 
 ## SAML admin
 

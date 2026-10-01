@@ -30,7 +30,7 @@ Pulumi Cloud is available for unlimited free usage, has a free tier for teams an
 
 Pulumi Cloud’s architecture allows your cloud credentials to remain on your client. This when combined with features like identity integration and secrets management, addresses many pressing security concerns, and can mean that using the service is even more secure than managing infrastructure as code state on your own.
 
-The service enables integration with your chosen identity provider — such as GitHub, GitLab, Atlassian, Okta, Azure ActiveDirectory or [any SAML/SSO provider](/docs/administration/access-identity/saml/) — and provides a complete visual history of who changed what infrastructure and when, very similar to what GitHub offers for code commits. It also makes it easier to see and control what’s going on in your team with organizations, role-based access controls and policy enforcement. It enables rich workflows via webhooks and gives users the ability to deploy either with the click of a button or straight out of a git repo.
+The service enables integration with your chosen identity provider — such as GitHub, GitLab, Atlassian, Okta, Azure ActiveDirectory or [any SAML/SSO provider](/docs/administration/guides/saml/) — and provides a complete visual history of who changed what infrastructure and when, very similar to what GitHub offers for code commits. It also makes it easier to see and control what’s going on in your team with organizations, role-based access controls and policy enforcement. It enables rich workflows via webhooks and gives users the ability to deploy either with the click of a button or straight out of a git repo.
 
 You can get a better sense of what functionality is available in the Pulumi Cloud by [reading this overview page](/product/). Although the Pulumi Cloud is trusted by many Global 2000 companies, is regularly audited by outside firms for well-architected and security best practices, and is SOC 2 Type II compliant, there is also a [self-hosted edition available that can be run anywhere](/product/self-hosted/).
 
@@ -40,7 +40,7 @@ A benefit of using general-purpose languages is that we get to test our code. Mo
 
 Testing can come in many different forms, including unit tests, property tests and integration tests. The following table summarizes the differences between the three approaches:
 
-|                                | [**Unit Tests**](/docs/iac/guides/testing/unit/)    | [**Property Tests**](/docs/insights/policy/policy-packs/authoring/)  | [**Integration Tests**](/docs/iac/guides/testing/integration/)  |
+|                                | [**Unit Tests**](/docs/iac/guides/testing/unit/)    | [**Property Tests**](/docs/discovery-governance/policy/policy-packs/authoring/)  | [**Integration Tests**](/docs/iac/guides/testing/integration/)  |
 |--------------------------------|---------------|---------|----------|
 | Provision real infrastructure  | No            | Yes     | Yes      |
 | Require the Pulumi CLI         | No            | Yes     | Yes      |
@@ -50,7 +50,7 @@ Testing can come in many different forms, including unit tests, property tests a
 
 First is basic unit testing which, thanks to using regular programming languages, can be done in the usual way. For instance, the built-in Python and Go test frameworks “just work,” and as do popular third-party frameworks like Mocha (for JavaScript), NUnit (for .NET), JUnit (for Java), and so on. This can be good at ensuring a function that computes CIDR blocks, for instance, is correct. Testing infrastructure itself is a bit more involved, simply because many properties for resources aren’t known a priori until a deployment is done. But when combined with Pulumi Cloud’s infrastructure mocking framework, it’s possible to test infrastructure topologies and properties too. [Read more about testing](/docs/iac/guides/testing/unit/).
 
-Next are assertions. The idea behind this is to embed assertions within your actual program, so that unexpected situations are caught immediately. This can be associated with any program state, including the resources themselves. [Read more about assertions](/docs/insights/policy/policy-packs/authoring/).
+Next are assertions. The idea behind this is to embed assertions within your actual program, so that unexpected situations are caught immediately. This can be associated with any program state, including the resources themselves. [Read more about assertions](/docs/discovery-governance/policy/policy-packs/authoring/).
 
 Next up is integration testing. For Infrastructure as Code, the typical meaning of an integration test is to spin up a dedicated stack solely for purposes of testing, often referred to as an “ephemeral stack.” Because Pulumi Cloud makes it easy to create independent, isolated copies of your infrastructure, thanks to the projects and stack model, these workflows are surprisingly easy to achieve. This can then be integrated into your typical testing processes, whether those are run by hand or automated as part of your CI/CD process. It’s common to spin up an ephemeral stack whose lifetime is tied to a single pull request, for instance, to validate that the changes being proposed are correct: It is created (and tested) when the pull request is opened, updated (and tested) anytime a new push to it is made and destroyed when it’s closed. [Read more about integration testing and ephemeral stack techniques](/docs/iac/guides/testing/integration/).
 
@@ -72,7 +72,7 @@ If we violate a policy, we get an error (for mandatory checks) or warning (for a
 
 This might be “boring” from an engineer’s point of view but tends to be very important for an organization, especially for folks who are building out a platform team.
 
-A benefit of using the Pulumi Cloud is that you can manage and enforce policies across the entire organization without individual engineers needing to even know how to run them. To learn more about policy as code, [refer to the user guide for CrossGuard](/docs/insights/policy/), Pulumi’s policy as code.
+A benefit of using the Pulumi Cloud is that you can manage and enforce policies across the entire organization without individual engineers needing to even know how to run them. To learn more about policy as code, [refer to the user guide for CrossGuard](/docs/discovery-governance/policy/), Pulumi’s policy as code.
 
 ## Deploying Your Infrastructure as Code Continuously
 

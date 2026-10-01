@@ -107,7 +107,7 @@ Teams:
 
 **Definition:** Customer success narratives — who they are, what problem they had, how Pulumi solved it, with quotes and metrics.
 
-- **Lives at:** `content/case-studies/`
+- **Lives at:** `content/customers/`
 - **Owns:** Marketing
 - **Contributes:** Sales/CS (customer relationships), Community Eng
 - **Consumes:** Buyers seeking social proof
@@ -166,7 +166,7 @@ Teams:
 | Reference | Exhaustive lookup material | `content/docs/reference/`, generated CLI docs | Docs + Eng/Product | Eng/Product | Practitioners |
 | Topics | Adjacent, industry-relevant educational content ("what is X") | `content/what-is/` | Marketing | Docs, Community Eng | Learners, evaluators |
 | Blog posts | Point-in-time posts; historical | `content/blog/` | Marketing | Everyone | Community |
-| Case studies | Customer success stories | `content/case-studies/` | Marketing | Sales/CS, Community Eng | Buyers |
+| Customers | The customer registry and their case studies | `content/customers/` | Marketing | Sales/CS, Community Eng | Buyers |
 | Product/campaign pages | Pages that sell | `content/product/`, `solutions/`, `gads/`, … | Marketing | Eng/Product, Docs | Evaluators, buyers |
 | Events & workshops | Registration/recap pages | `content/events/` | Marketing + Community Eng | — | Community, prospects |
 | Releases & changelog | Dated record of what shipped | `content/releases/` | Marketing | Eng/Product, Docs | Existing and prospective users |

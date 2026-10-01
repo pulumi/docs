@@ -15,18 +15,8 @@ unlisted: false
 # to fill out the form before viewing.
 gated: false
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
 # The event type (workshop, webinar, talk).
 event_type: talk
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: "cloud-engineering-summit-2021-build-panel"
 
 # The content of the hero section.
 # URL for embedding a URL for ungated events.
@@ -46,8 +36,7 @@ presenters:
     - name: Ellen Körbes
       role: Head of Product, Tilt
     - name: Rizel Scarlett
-      role: Junior Developer Advocate, Github
+      role: Junior Developer Advocate, GitHub
     - name: Paul Czarkowski
       role: Managed OpenShift Black Belt, Red Hat
-
 ---

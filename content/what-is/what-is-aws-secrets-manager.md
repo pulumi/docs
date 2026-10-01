@@ -117,7 +117,7 @@ That's why it's worth managing Secrets Manager through your infrastructure code 
 
 - **Streamlined infrastructure management with IaC**: Learn about [deploying and managing AWS Secrets Manager secrets](/registry/packages/aws/api-docs/secretsmanager/secret/) as well as other AWS resources using Pulumi's infrastructure as code capabilities. Pulumi enables you to define and provision your cloud infrastructure using familiar programming languages, integrating the management of secrets directly into your IaC workflows. Discover how to integrate AWS Secrets Manager into your broader cloud infrastructure with Pulumi by exploring [Pulumi's AWS Provider documentation](/registry/packages/aws/). Below are some examples of how to create an AWS Secrets Manager secret in a number of supported programming languages:
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -231,6 +231,26 @@ class MyStack : Stack
 
     [Output]
     public Output<string> SecretId { get; set; }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+# Create a secret
+resource "aws_secretsmanager_secret" "secret" {}
+
+# Store a new secret version
+resource "aws_secretsmanager_secret_version" "secret_version" {
+  secret_id     = aws_secretsmanager_secret.secret.id
+  secret_string = "mysecret"
+}
+
+# Export secret ID (in this case the ARN)
+output "secret_id" {
+  value = aws_secretsmanager_secret.secret.id
 }
 ```
 

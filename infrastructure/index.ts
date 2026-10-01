@@ -77,7 +77,7 @@ const config = {
     enableWaf: stackConfig.getBoolean("enableWaf") || false,
 
     // wafRateLimit is the maximum number of requests per 5-minute window per IP before WAF blocks.
-    wafRateLimit: stackConfig.getNumber("wafRateLimit") || 500,
+    wafRateLimit: stackConfig.getNumber("wafRateLimit") || 5000,
 
     // enableSupportForm toggles the /api/support endpoint backing the support-request
     // form at /support/new/ (see supportForm.ts), which files submissions as Intercom
@@ -188,7 +188,9 @@ if (config.enableWaf) {
         }, {
             name: "rate-limit-per-ip",
             priority: 1,
-            action: { block: {} },
+            // A 429 isn't in customErrorResponses, so a rate-limit block stays visible
+            // instead of being rewritten into the 404 page like a 403 would be.
+            action: { block: { customResponse: { responseCode: 429 } } },
             statement: {
                 rateBasedStatement: {
                     limit: config.wafRateLimit,
@@ -972,6 +974,27 @@ if (config.registryStack) {
         }
     );
     registryBehaviors.push(
+        // Registry hashed CSS/JS bundles (e.g. /registry/css/bundle-registry.push-<sha>.css)
+        // get a fresh filename on every deploy, so they're safe to cache immutably
+        // for a year. Must come BEFORE "/registry*" below so this more specific
+        // pattern matches first; otherwise the broader pattern's 30-minute cache
+        // policy and default (non-immutable) response headers would win.
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/registry/css/bundle-registry.*.css",
+            cachePolicyId: oneYearCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/registry/js/bundle-registry.*.js",
+            cachePolicyId: oneYearCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
         {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,

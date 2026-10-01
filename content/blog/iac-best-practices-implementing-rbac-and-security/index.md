@@ -30,7 +30,7 @@ So far, you've read about how Zephyr started out with a single project and a sin
 
 You can review the reasons for this structure in the post on [best practices for structuring Pulumi projects](/blog/iac-best-practices-structuring-pulumi-projects/). One of the reasons listed in the third Zephyr blog post was security:
 
-> ...security is a factor that affects how projects and stacks should be structured. In Zephyr's case, the ability for one team to affect another team's resources was present when everything was a single project. With multiple projects, Zephyr can use stack permissions and role-based access control (RBAC) in [Pulumi Cloud](/product/pulumi-cloud/) to appropriately control _who_ can affect _what_.
+> ...security is a factor that affects how projects and stacks should be structured. In Zephyr's case, the ability for one team to affect another team's resources was present when everything was a single project. With multiple projects, Zephyr can use stack permissions and role-based access control (RBAC) in [Pulumi Cloud](/product/) to appropriately control _who_ can affect _what_.
 
 The last part of that quote---the part about being able to "appropriately control _who_ can affect _what_"---is another way of describing what's known as [the principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're unfamiliar with this term, we recommend following the link and getting more information, because the principle of least privilege stands at the core of all the recommended practices you'll read in this post.
 

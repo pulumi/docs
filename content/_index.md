@@ -19,79 +19,21 @@ sections:
     anchor: hero
     hero_animation: agent-loop
 
-  - type: logo_carousel
+  - type: logo_grid
     title: Trusted by over 4,000 innovative companies
     logos:
-      - name: bmw
-        link: /case-studies/
-      - name: snowflake
-        link: /case-studies/
-      - name: nvidia
-        link: /case-studies/
-      - name: moderna
-        link: /case-studies/
-      - name: docker
-        link: /case-studies/
-      - name: unity
-        link: /case-studies/
-      - name: supabase
-        link: /case-studies/
-      - name: typesafe-ai
-        link: /case-studies/
-      - name: pydantic
-        link: /case-studies/
-      - name: ae-networks
-        link: /case-studies/
-      - name: deloitte
-        link: /case-studies/
-      - name: stokespace
-        link: /case-studies/
-      - name: univision
-        link: /case-studies/
-      - name: washington-trust
-        link: /case-studies/
-      - name: kyruus
-        link: /case-studies/
-      - name: modular-ai
-        link: /case-studies/
-      - name: korber
-        link: /case-studies/
-      - name: lemonade
-        link: /case-studies/
-      - name: pinecone
-        link: /case-studies/
-      - name: ware2go
-        link: /case-studies/
-      - name: nubank
-        link: /case-studies/
-      - name: mindbody
-        link: /case-studies/
-      - name: fenergo
-        link: /case-studies/
-      - name: webflow
-        link: /case-studies/
-      - name: bluenile
-        link: /case-studies/
-      - name: dutchie
-        link: /case-studies/
-      - name: panther-labs
-        link: /case-studies/
-      - name: materialize
-        link: /case-studies/
-      - name: altana
-        link: /case-studies/
-      - name: mercedes-benz
-        link: /case-studies/
-      - name: bt
-        link: /case-studies/
-      - name: portx
-        link: /case-studies/
-      - name: tivityhealth
-        link: /case-studies/
-      - name: starburst
-        link: /case-studies/
-      - name: linktree
-        link: /case-studies/
+      - snowflake
+      - nvidia
+      - bmw
+      - mercedes-benz
+      - atlassian
+      - unity
+      - docker
+      - typesafe-ai
+      - supabase
+      - midjourney
+      - pydantic
+      - moderna
     anchor: logos
 
   - type: feature_split
@@ -121,8 +63,7 @@ sections:
     quote: Pulumi helped our team to ship a new product faster. We needed one tool to set up and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively.
     author: Justin Fitzhugh
     title: VP of Cloud Platform Engineering
-    company: Snowflake
-    logo: logos/customers/snowflake.svg
+    customer: snowflake
     anchor: testimonial
 
   - type: card_grid
@@ -170,7 +111,7 @@ sections:
     title: Trusted by 4,000+ innovative companies
     description: See how engineering teams use Pulumi to ship infrastructure faster, improve security, and reduce cloud complexity.
     cta_text: Read our customer stories
-    cta_link: /case-studies/
+    cta_link: /customers/
     cards:
       - slug: bmw
         size: half

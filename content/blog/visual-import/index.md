@@ -27,7 +27,7 @@ Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn 
 
 Pulumi is excited to announce the release of **Visual Import**, a new feature that transforms the way platform teams onboard existing cloud infrastructure into Pulumi. With Visual Import, you can discover unmanaged cloud resources across your organization, organize them into logical units, and instantly generate high-quality Pulumi code—with AI enhancements built in.
 
-Visual Import is now available for all Team, Enterprise and Business Critical customers with [Pulumi Insights](/docs/insights/) enabled.
+Visual Import is now available for all Team, Enterprise and Business Critical customers with [Pulumi Insights](/docs/discovery-governance/) enabled.
 
 ## Modern Infrastructure, Codified Faster
 
@@ -35,7 +35,7 @@ One of the biggest challenges platform teams face when adopting infrastructure a
 
 Instead of manually digging through consoles and writing boilerplate code by hand, Visual Import enables teams to:
 
-* **Discover** all cloud resources—across any number of accounts—via [Pulumi Insights](/docs/insights/).
+* **Discover** all cloud resources—across any number of accounts—via [Pulumi Insights](/docs/discovery-governance/).
 * **Select** and group resources into meaningful stacks, services, or projects.
 * **Generate** production-ready Pulumi code in your language of choice.
 * **Enhance** that code using Pulumi Copilot, which refines formatting, naming, references, and documentation.
@@ -53,7 +53,7 @@ Visual Import is a guided three-step workflow within the Pulumi Cloud console:
 
 ![Visual Import Code Generation](visual-import.png)
 
-Throughout the workflow, you maintain full control. Select what you need, tweak it as required, and integrate on your terms.  You can find full documentation and usage details in the [Visual Import docs](/docs/insights/discovery/visual-import/).
+Throughout the workflow, you maintain full control. Select what you need, tweak it as required, and integrate on your terms.  You can find full documentation and usage details in the [Visual Import docs](/docs/discovery-governance/discovery/visual-import/).
 
 ## Key Benefits
 
@@ -83,7 +83,7 @@ And with built-in support for dependency analysis and cross-account visibility, 
 
 ### Leverage the Full Power of Pulumi Cloud
 
-Once resources are in code, you can take full advantage of Pulumi Cloud's full suite of features: define and enforce policies with CrossGuard, gain visibility into your entire infrastructure through [Pulumi Insights](/docs/insights/), manage state with [ESC's secrets management](/docs/esc/get-started/), and automate workflows through [Pulumi Deployments](/docs/deployments/concepts/). Together, these features turn your infrastructure into a governed, observable, and continuously deployable system built for modern cloud operations.
+Once resources are in code, you can take full advantage of Pulumi Cloud's full suite of features: define and enforce policies with CrossGuard, gain visibility into your entire infrastructure through [Pulumi Insights](/docs/discovery-governance/), manage state with [ESC's secrets management](/docs/esc/get-started/), and automate workflows through [Pulumi Deployments](/docs/deployments/concepts/). Together, these features turn your infrastructure into a governed, observable, and continuously deployable system built for modern cloud operations.
 
 ## Try It Today
 

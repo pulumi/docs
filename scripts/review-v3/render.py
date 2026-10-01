@@ -60,9 +60,9 @@ BUCKET_LABEL = {
 }
 HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
-PRIMARY_CODES = ("warnings", "outstanding", "self-accepted", "cluster", "directional", "duplicate", "mergeable", "checks",
+PRIMARY_CODES = ("warnings", "outstanding", "cluster", "directional", "duplicate", "mergeable", "checks",
                  "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate",
-                 "sent-back", "unblock")
+                 "sent-back", "approved", "unblock")
 # Whole codes (not families) that change what you'd click: `author:self`
 # takes the stamp and the send-back off the row, where `author:internal` is
 # background.
@@ -72,14 +72,13 @@ PRIMARY_VALUES = ("author:self",)
 # chip's title for anyone grepping the queue.
 CHIP_LABEL = {
     "author:self": "your own PR",
-    "gate:none": "no team approval needed",
     "gate:any-team": "any team can approve this",
     "link-fixes:mine": "link-only sweep: yours",
     "route:no-team": "team missing, routing to a person",
     "route:team-unverified": "team not verifiable from here",
 }
-ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "rerun-checks": "stop", "close": "stop",
-                "fix": "", "render": "", "deploy": ""}
+ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "rerun-checks": "stop", "close": "stop", "ask-fix": "hold",
+                "chain": "go", "consolidate": "hold", "fix": "", "render": "", "deploy": ""}
 INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
 # A row takes one decision (what happens to the PR) and any number of side
 # actions (things done on the way). The board's toggles enforce that: lighting
@@ -227,7 +226,6 @@ ROUTE_STATE_HELP = {
 SIMPLE_HELP = {
     "scrutiny:heightened": "The diff looks AI-written, so this row can never be a plain stamp however clean it looks.",
     "stances:present": "The review recorded editorial judgement calls it made. They only block with --strict-stances.",
-    "gate:none": "The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it and the row is yours to take.",
     "gate:any-team": "Every changed line differs only in a link, and the routing config lets ANY review team approve one of those: checking a retargeted link needs a careful reader, not a particular lane's reader. So this row is yours to take, and the merge gate agrees.",
     "link-fixes:mine": "YOUR SETTING, not a fact about the PR: link_fixes: mine in ~/.pr-review.yml makes a link-only diff yours to approve whatever lane it belongs to, because a lane owner's review buys nothing on a link swap. Set link_fixes: route and this row would go to its lane owner instead.",
     "blog:new-post": "This PR adds a new blog post, which is never a stamp: somebody reads a new post before it ships.",
@@ -235,7 +233,6 @@ SIMPLE_HELP = {
     "not-governed": "The Sentinel merge gate does not apply to this PR.",
     "draft": "A draft PR. It only appears because you asked for it by number.",
     "trust:membership-unreadable": "The token could not read org membership, so the author is treated as external and gets the stricter treatment.",
-    "self-accepted": "A finding on this PR was marked answered by the PR's own author. Their call on their own work, so the queue does not count it as answered.",
 }
 
 
@@ -282,18 +279,11 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
             ids = detail.partition(":")[2]
             text = (f"{n} reviewer-check finding{'s' if n != '1' else ''} the review raised and nobody has answered"
                     + (f" ({ids})" if ids else "") + ". They do not block a merge, but they are unanswered.")
-        elif code == "outstanding" and first == "judged":
-            ids = detail.partition(":")[2]
-            text = ("Blocking findings the judge step has answered"
-                    + (f" ({ids})" if ids else "") + ": approving this row posts their /resolve lines before it merges, "
-                    "so they no longer hold it. Change a call to deferred and the row goes back to blocked.")
         elif code == "outstanding":
             n = first or "Some"
             ids = detail.partition(":")[2]
             text = (f"{n} blocking finding{'s' if n != '1' else ''} still open on the author card"
-                    + (f" ({ids})" if ids else "") + ". Answer or refute them before this merges.")
-        elif code == "self-accepted":
-            text = f"{detail} was marked answered by the PR's own author, so the queue does not count it as answered."
+                    + (f" ({ids})" if ids else "") + ". The author answers them — a fix, or @claude #update-review — before this merges.")
         elif code == "cluster":
             cid = first
             rest = detail.partition(":")[2]
@@ -337,15 +327,21 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
             text = (f"{who} has already requested changes on this PR; that has to be settled before it merges."
                     if kind == "changes-requested" else
                     f"{who} has already approved this PR, so your approval is not the first.")
-        elif code == "gate":
-            text = SIMPLE_HELP["gate:none"]
         elif code == "sent-back":
             text = (f"You already sent this PR back on {detail or 'an earlier run'} and nothing has been pushed since, so it "
                     "is waiting on its author, not on you. It returns to the board when a new commit lands.")
+        elif code == "approved":
+            text = (f"You approved this PR on {detail or 'an earlier run'}. Its author merges it, so while nothing has been "
+                    "pushed since, it is waiting on them, not on you. It returns to the board when a new commit lands.")
         elif code == "unblock":
             why = detail.partition(":")[2].replace("-", " ") if first == "refused" else detail.replace("-", " ")
-            text = (f"The queue looked for a mechanical unblock on this row and could not offer one: {why or 'no unblock applies'}. "
-                    "Whatever moves this PR has to happen on GitHub or on the branch by hand.")
+            if why == "conflict":
+                text = ("The base merge was already tried on this head and stopped on conflicts; act.py reported the "
+                        "conflicted files on the PR rather than resolving them blind. Offering the button again would "
+                        "just re-run the same merge, so it is withheld until a push settles the conflict.")
+            else:
+                text = (f"The queue looked for a mechanical unblock on this row and could not offer one: {why or 'no unblock applies'}. "
+                        "Whatever moves this PR has to happen on GitHub or on the branch by hand.")
         if text is None and first:
             # A known code carrying an unexpected value: say what is known
             # rather than rendering a bare chip with nothing behind it. The
@@ -410,7 +406,7 @@ VERDICT_HELP = {
     "blocked": "Nothing you can do here until something else moves. The box below names the blocker.",
 }
 ACTION_HELP = {
-    "stamp": "Approve this PR, recording a /resolve comment for each judged finding first.",
+    "stamp": "Approve this PR.",
     "stamp-merge": "Approve and squash-merge, even though the author is a person and would normally merge their own PR.",
     "stamp-no-merge": "Approve without merging, leaving the merge to someone else.",
     "request-changes": "Post a changes-requested review built from this row's findings and label it needs-author-response. Nothing merges; the author's turn.",
@@ -419,6 +415,9 @@ ACTION_HELP = {
               "yourself or ask Claude on the PR instead."),
     "route": "Request a review from the lane's owner and post what the queue flagged as a comment. Nothing merges, and the row moves to 'waiting on others'.",
     "unblock": "Merge master into this branch as a merge commit and push, so it stops conflicting. A conflicted merge is aborted and reported, never resolved blind.",
+    "ask-fix": ("Comment `@claude fix <ids> #update-review` on the PR, naming this row's open findings, so the agent "
+                "watching the PR fixes them and refreshes the review. The batched alternative to running "
+                "/address-review yourself: one comment, no push from here, and it rides in the command below."),
     "refresh": "Ask the existing review to update itself against the current head (@claude #update-review).",
     "rerun": "Throw the current review away and run a fresh one from scratch (@claude #new-review).",
     "rerun-checks": "Re-run the failed jobs of the head commit's workflow runs (the newest failed run per workflow), without a push, for a CI failure that looks flaky. A red commit status has no run to re-run, and the step says so. Nothing merges, and the review is not touched.",
@@ -433,7 +432,7 @@ ACTION_HELP = {
 def action_help(pr: dict, action: dict) -> str:
     """What this button does to this PR, in a sentence. A stamp says whether
     it merges, because that is the part a label can only hint at."""
-    base = ACTION_HELP.get(action.get("id"), "")
+    base = action.get("help") or ACTION_HELP.get(action.get("id"), "")
     if action.get("id", "").startswith("stamp") and action["id"] != "stamp-no-merge":
         merges = ":merge" in action.get("cmd", "") or (action["id"] == "stamp" and merges_on_stamp_row(pr))
         base += " Squash-merges it." if merges else " Does not merge it: that is the author's to do."
@@ -502,13 +501,13 @@ def diffq(j: dict, *, open_: bool = True) -> str:
 
 
 # The badge answers "why doesn't this finding stop the merge?", in the
-# reader's terms, and the title says what approving the row does about it.
-# Nothing here is the author speaking: the PR's author has not answered.
+# reader's terms. It is the approver's own call, kept on the board: nothing
+# is posted for it, and it never answers a finding on the author's behalf.
 DISPOSITION_BADGE = {
-    "fixed": ("go", "already fixed", "The diff already addresses this finding. Approving records it as fixed."),
-    "refuted": ("go", "not a real issue", "The review got this one wrong. Approving posts `/resolve <id> refuted` with the reason below, and the finding closes."),
-    "accepted": ("go", "fair, not blocking", "The finding stands but is not worth holding the PR for. Approving posts `/resolve <id> accepted` with the reason below."),
-    "not-applicable": ("go", "doesn't apply", "The finding does not apply to this PR. Approving posts `/resolve <id> not-applicable` with the reason below."),
+    "fixed": ("go", "already fixed", "The diff already addresses this finding."),
+    "refuted": ("go", "not a real issue", "The review got this one wrong."),
+    "accepted": ("go", "fair, not blocking", "The finding stands but is not worth holding the PR for."),
+    "not-applicable": ("go", "doesn't apply", "The finding does not apply to this PR."),
     "deferred": ("hold", "needs the author", "Not yours to fix. Use the row's send-back button and this becomes the author's to answer."),
 }
 DEFERRED_NO_AUTHOR = ("hold", "no author to ask",
@@ -529,11 +528,8 @@ def judgment_footer(pr: dict) -> str:
     if not js:
         return ""
     held = [j for j in js if j.get("disposition") == "deferred"]
-    resolved = [j for j in js if j.get("disposition") in ("fixed", "refuted", "accepted", "not-applicable")]
     sends_back = any(a.get("id") == "request-changes" for a in pr.get("actions") or [])
     bits = []
-    if resolved:
-        bits.append(f"Approving the row records {'these calls' if len(resolved) != 1 else 'this call'} on the PR, one `/resolve` comment each, then merges if the button says merge.")
     if held:
         bits.append(("Sending it back" if sends_back else "Closing it out")
                     + f" hands {'the ones' if len(held) != 1 else 'the one'} marked "
@@ -865,7 +861,7 @@ def pending_judgment(queue: dict, pr: dict) -> str:
         # Nothing open on the review, but the row still needs a call. Say what
         # is asking for one instead of implying findings nobody can see.
         why = next((r for r in pr.get("reasons") or []
-                    if r.split(":")[0] in ("review", "scrutiny", "blog", "size", "shape", "self-accepted",
+                    if r.split(":")[0] in ("review", "scrutiny", "blog", "size", "shape",
                                            "directional", "duplicate", "desc", "brief", "merging-over")), None)
         because = chip_title(why).rsplit(" (", 1)[0] if why else "The queue could not clear every stamp gate on this row."
         skipped = why_no_review(pr) if (why or "").startswith("review:absent") else ""
@@ -915,27 +911,53 @@ def action_bar(pr: dict, queue: dict, *, expanded: bool = False) -> str:
     # colored by what it does; everything else stays grey on the left.
     rec = pr.get("recommended")
     primary = next((a for a in actions if a["id"] == rec), None) or (actions[0] if actions else None)
+    # The chain is an approval too -- the same one, through the same gates,
+    # plus the unblock of the next link -- so on a chain lead it outranks a
+    # bare "approve" recommendation for the coloured slot.
+    chain = next((a for a in actions if a["id"] == "chain"), None)
+    if chain and (primary is None or primary["id"].startswith("stamp")):
+        primary = chain
     btns = [f'<a class="btn" href="{esc(pr_url(queue, pr["number"]))}" title="Open this pull request on GitHub, in a new tab.">open PR</a>']
     # A handoff is not an `act.py` fragment and never joins the --act
     # command: it is a separate, interactive run, composed on its own line
     # at the foot of the page. It is a toggle like everything else here, so
     # the page stays a worksheet.
     for h in pr.get("handoffs") or []:
-        btns.append(f'<button class="btn hand" data-run="{esc(h["run"])}" data-pr="{pr["number"]}" '
+        btns.append(f'<button class="btn hand" data-run="{esc(h["run"])}" data-pr="{pr["number"]}"{exclusive_attr(h)} '
                     f'title="{esc(h.get("why") or "")}" aria-pressed="false">{esc(h["label"])}</button>')
     for a in actions:
         if a is primary:
             continue
-        btns.append(f'<button class="btn" data-cmd="{esc(scope_reasons(a["cmd"]))}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}" '
+        btns.append(f'<button class="btn" data-cmd="{esc(scope_reasons(a["cmd"]))}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}"{covers_attr(a)}{exclusive_attr(a)} '
                     f'title="{esc(action_help(pr, a))}" aria-pressed="false">{esc(a["label"])}</button>')
     if primary:
         # A stamp row starts with its stamp selected: the composed command
         # merges every stampable row unless the approver deselects one.
         selected = " sel" if (primary["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
         btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(scope_reasons(primary["cmd"]))}" data-pr="{pr["number"]}" '
-                    f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" '
+                    f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}"{covers_attr(primary)}{exclusive_attr(primary)} '
                     f'title="{esc(action_help(pr, primary))}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
     return '<div class="acts">' + "".join(btns) + "</div>"
+
+
+def exclusive_attr(action: dict) -> str:
+    """Two buttons that do the same job by different means belong to one
+    exclusive group, and lighting either puts the other out. "fix it
+    yourself" and "ask @claude to fix them" are the pair: the first is an
+    interactive run on your machine, the second a comment in the batch, and
+    picking both would ask for the same fixes twice. The handoff is not a
+    decision, so `clearRow` alone cannot pair them."""
+    group = action.get("exclusive")
+    return f' data-exclusive="{esc(group)}"' if group else ""
+
+
+def covers_attr(action: dict) -> str:
+    """A chain button acts on a second row (the next link gets master
+    merged in), so it says which: the script marks that row as covered
+    while the button is lit, and puts the button out if a decision is
+    picked there instead."""
+    covers = action.get("covers") or []
+    return f' data-covers="{esc(",".join(str(n) for n in covers))}"' if covers else ""
 
 
 def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
@@ -972,8 +994,8 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
                 'nothing here changes it. Whatever moves it happens on GitHub or on the branch by hand.">no action available</span>'
                 if no_action(pr) else "")
         if pr.get("waiting_on_author"):
-            when = sent_back_on(pr)
-            tail = (f' <span class="v v-dim" title="You sent this PR back{" on " + esc(when) if when else ""} and nothing has been '
+            verb, when = waiting_why(pr)
+            tail = (f' <span class="v v-dim" title="You {verb} this PR{" on " + esc(when) if when else ""} and nothing has been '
                     'pushed since, so its buttons are off: it is the author\'s turn, not yours.">waiting on the author</span>')
         body.append(f'<div class="jbox stop"><div class="q">Blocked: {esc(", ".join(pr.get("blockers") or []) or "no blocker named")}{tail}</div></div>')
     body.append(action_bar(pr, queue, expanded=expanded))
@@ -1101,27 +1123,23 @@ HELP_SECTIONS = [
     ("The four verdicts", [
         "One per PR. It says what kind of move the row needs, not how good the PR is — and it is not the row order: rows sit in PR number order inside their group.",
         "<b>stamp</b> — passed every gate: current review, no open findings, green CI, no collisions, your lane, small enough.",
-        "<b>judge</b> — one thing needs a person: an open finding, a new blog post, a diff over your size cap.",
+        "<b>judge</b> — one thing needs a person: an open finding, a new blog post, a diff over your size cap, a collision with another PR.",
         "<b>route</b> — not your lane per the routing matrix. Ask the owning team, or approve anyway.",
         "<b>blocked</b> — nothing to do until something else moves: an open 🚨 finding, a conflict, red CI, a stale or running review, someone else's changes requested. A row with no unblock says <i>no action available</i>.",
-    ]),
-    ("Do next", [
-        "Each card states a fact naming its PRs, says what pressing the button does, and then presses those rows' buttons for you.",
-        "A card is a shortcut for the rows, not a separate instruction: pick a different decision on one of its PRs and the card goes out, so the command can never contradict itself.",
-        "Three states, not two. The tally on the button (<b>2/3</b>) is how many of its rows still hold its decision; dashed and amber means some of them do and some don't. Press it again to take them all back.",
-        "No card ever offers an approval somebody had to read for. <b>Approve the set</b> is the mechanically stampable rows only; a judged row keeps its decision on its own row, beside the findings behind it.",
-        "<b>Start the chain</b> approves and merges the first PR of a collision cluster, then merges master into the next so it can follow. One link per run — and only where the collision is the only thing holding the lead back. Otherwise the card names what else is, and you decide it on the row.",
     ]),
     ("A row", [
         "Chips are the reasons for the verdict; the ones that change what you'd click stay out, the rest fold behind <b>why</b>. Hover any chip for a sentence explaining it.",
         "One decision per row (approve, send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks). Side actions like <i>apply fixes</i> ride along with it, and only decisions count toward the progress line.",
+        "Every decision is on its row, next to the evidence for it. There is no batch strip: the stampable rows arrive already selected, and everything else is one button on the row it concerns.",
+        "A collision cluster's move sits on the row it belongs to. <b>approve &amp; merge, then unblock #N</b> is on the chain's lead, and only where the collision is the one thing holding it back: it merges the lead through the stamp gates, then merges master into #N so it can follow, so it marks #N <i>covered</i> while it is lit. <b>ask … for one consolidated PR</b> is on the newest of a bot's overlapping sweeps.",
         "<b>your own PR</b> has no approve or send-back button: route it, and answer its findings with <code>/address-review</code>. A PR you already sent back waits under <i>Waiting on the author</i> until a commit lands.",
         "<b>fix it yourself</b> (amber, dashed) is on a PR a workflow opened that still has open findings: nobody will ever answer its review, so this is the way out that isn't closing it. It composes <code>/address-review N</code> on its own line above the command — an interactive run, never part of the batch.",
+        "<b>ask @claude to fix them</b> is the same row's other way out: one comment naming the open findings (<code>@claude fix F1 and F3 #update-review</code>) that asks the agent already on the PR to fix them and re-review. It is a write, so it rides in the <code>--act</code> command like everything else. The two are alternatives — lighting either puts the other out.",
         "The button says whether approving merges: a bot row leads with <i>approve &amp; merge</i>, a person's row with <i>approve, no merge</i>, because merging their PR is their call.",
     ]),
     ("Judgment badges", [
         "A badge says why a finding does not stop the merge. It is never the author's answer: nobody has answered anything here.",
-        "<b>not a real issue</b>, <b>fair, not blocking</b> and <b>doesn't apply</b> are recorded on the PR as <code>/resolve</code> comments when you approve the row, before it merges.",
+        "<b>not a real issue</b>, <b>fair, not blocking</b> and <b>doesn't apply</b> are your own calls, kept on the board. Nothing is posted for them, and they never answer a blocking finding: those are the author's, so a row with one stays blocked.",
         "<b>needs the author</b> goes back with the send-back button; <b>no author to ask</b> means a workflow opened the PR, so a send-back would go unread — fix the branch yourself, ask Claude on the PR, or close it out and let the lane re-queue the page.",
     ]),
     ("Where a row came from", [
@@ -1186,56 +1204,6 @@ def help_html() -> str:
             '<div class="helpgrid">' + "".join(out) + "</div></details>")
 
 
-def card_extra(d: dict) -> str:
-    """The part of a card's command that no row button carries, which is all
-    a lit card adds to the composed command: its rows say the rest. A card
-    with no targets (a chain's `--chain C1`, a consolidation's request) is
-    its whole command and claims its rows instead; a card that presses row
-    buttons and also claims a row carries an unblock for the claimed one;
-    every other card is exactly its rows."""
-    if not d.get("targets"):
-        return d.get("cmd") or ""
-    return " ".join(f"--unblock {n}" for n in d.get("claims") or [])
-
-
-def do_next_html(queue: dict) -> str:
-    """The opening: one sentence and one button per move, most leverage
-    first. Nothing else on the page competes with it for the first look."""
-    cards = queue.get("do_next") or []
-    if not cards:
-        return ""
-    out = []
-    for i, d in enumerate(cards, 1):
-        cls = ACTION_CLASS.get(d["kind"], "") or ("hold" if d["kind"] == "consolidate" else "route" if d["kind"] == "chain" else "")
-        # `targets` are the row buttons this card presses; `claims` are rows it
-        # covers without a row button of its own (a chain, a consolidation).
-        data = ""
-        # A target goes through `scope_reasons` exactly as the row button it
-        # names does, or the two command strings differ by a `--reason` and
-        # the card can never find its own row.
-        targets = {k: scope_reasons(v) for k, v in (d.get("targets") or {}).items()}
-        if targets:
-            data += f' data-targets="{esc(json.dumps(targets, sort_keys=True))}"'
-        if d.get("lead"):
-            data += f' data-lead="{esc(str(d["lead"]))}"'
-        if d.get("claims"):
-            data += f' data-claims="{esc(",".join(str(n) for n in d["claims"]))}"'
-        if d.get("cmd") and card_extra(d):
-            data += f' data-extra="{esc(scope_reasons(card_extra(d)))}"'
-        tip = d.get("does") or ACTION_HELP.get(d["kind"], "")
-        # The tally on a batch card: how many of the rows it names currently
-        # carry its decision. A card that is out because one row was decided
-        # differently used to look exactly like a card nobody had touched.
-        cnt = f'<span class="cnt" data-total="{len(targets)}">{len(targets)}/{len(targets)}</span>' if len(targets) > 1 else ""
-        btn = (f'<button class="btn p p-{esc(cls)}" data-cmd="{esc(scope_reasons(d["cmd"]))}" data-pr="next{i}"{data} '
-               f'title="{esc(tip)}" aria-pressed="false">{esc(d["label"])}{cnt}</button>'
-               if d.get("cmd") else "")
-        does = f'<span class="does">{esc(d["does"])}</span>' if d.get("does") else ""
-        out.append(f'<li class="next {esc(cls)}"><span class="n">{i}</span>'
-                   f'<span class="say">{esc(d["say"])}{does}</span>{btn}</li>')
-    return f'<section class="donext"><div class="sec-head"><h2>Do next</h2><span class="count">{len(cards)}</span></div><ol>' + "".join(out) + "</ol></section>"
-
-
 def filter_bar(queue: dict) -> str:
     prs = queue.get("prs") or []
     owners = sorted({owner_label(p) for p in prs})
@@ -1296,10 +1264,10 @@ def filter_bar(queue: dict) -> str:
 
 def group_rows(prs: list[dict]) -> list[tuple[str, str, list[dict]]]:
     """Grouped owner -> domain, and inside a group strictly by PR number,
-    ascending. Verdict is on the row, in the tally, on a filter chip and in
-    the Do-next cards; sorting by it as well only meant that finding #21598
-    on the page required knowing its verdict first. A number is the one
-    thing about a row you always already have."""
+    ascending. Verdict is on the row, in the tally and on a filter chip;
+    sorting by it as well only meant that finding #21598 on the page
+    required knowing its verdict first. A number is the one thing about a
+    row you always already have."""
     groups: dict[tuple[str, str], list[dict]] = {}
     for p in prs:
         key = (owner_label(p), ", ".join(p.get("domains") or []) or "other")
@@ -1350,6 +1318,16 @@ def sent_back_on(p: dict) -> str:
     return next((r.partition(":")[2] for r in p.get("reasons") or [] if r.startswith("sent-back:")), "")
 
 
+def waiting_why(p: dict) -> tuple[str, str]:
+    """Why a `waiting_on_author` row is the author's move, as (verb, date):
+    ("sent back", …) off `sent-back:<date>`, else ("approved", …) off
+    `approved:<date>` — a human author merges what you approved."""
+    when = sent_back_on(p)
+    if when:
+        return "sent back", when
+    return "approved", next((r.partition(":")[2] for r in p.get("reasons") or [] if r.startswith("approved:")), "")
+
+
 def _waiting_items(queue: dict, rows: list[dict], who_of) -> str:
     items = []
     for p in rows:
@@ -1377,23 +1355,23 @@ def waiting_html(prs: list[dict], queue: dict | None = None) -> str:
 
 def waiting_on_author_html(prs: list[dict], queue: dict | None = None) -> str:
     """The compact 'waiting on the author' list: rows the approver already
-    sent back (`waiting_on_author`, with a `sent-back:<date>` chip) and
-    nothing has been pushed since. Same shape as the handed-off list: who
+    sent back (`sent-back:<date>`) or approved for a human author to merge
+    (`approved:<date>`), with nothing pushed since. Same shape as the handed-off list: who
     it waits on is the author, and the date is when you asked."""
     queue = queue or {"repo": "pulumi/docs"}
     rows = [p for p in prs if p.get("waiting_on_author") and not p.get("handed_off")]
     if not rows:
         return ""
-    rows.sort(key=lambda p: (sent_back_on(p), -_age_days(p)))
+    rows.sort(key=lambda p: (waiting_why(p)[1], -_age_days(p)))
 
     def who(p: dict) -> str:
         login = (p.get("author") or {}).get("login") or "author"
-        when = sent_back_on(p)
-        return f"@{login} · sent back {when}" if when else f"@{login} · sent back"
+        verb, when = waiting_why(p)
+        return f"@{login} · {verb} {when}" if when else f"@{login} · {verb}"
 
     items = _waiting_items(queue, rows, who)
     return (f'<section class="waiting"><div class="sec-head"><h2>Waiting on the author</h2><span class="count">{len(rows)}</span>'
-            '<span class="note">you sent these back and nothing has been pushed since · ✗ red CI · ⚠ conflict · '
+            '<span class="note">you sent these back, or approved them for their author to merge, and nothing has been pushed since · ✗ red CI · ⚠ conflict · '
             'they return to the groups above when a commit lands; render with --include-handed-off to act on one now</span></div>'
             '<ul>' + items + "</ul></section>")
 
@@ -1415,7 +1393,7 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
                   f'<b>{counts["handed-off"]}</b><span>waiting on others</span></div>')
     on_author = sum(1 for p in all_prs if p.get("waiting_on_author") and not p.get("handed_off"))
     if on_author:
-        tally += (f'<div class="t-dim" title="PRs you already sent back to their author, with nothing pushed since. They are waiting '
+        tally += (f'<div class="t-dim" title="PRs you already sent back to their author, or approved for them to merge, with nothing pushed since. They are waiting '
                   f'on the author, so they are listed at the foot of the page instead of taking a row.">'
                   f'<b>{on_author}</b><span>waiting on the author</span></div>')
     stuck = sum(1 for p in prs if no_action(p))
@@ -1429,8 +1407,8 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         style=STYLE,
         eyebrow=header_line(queue),
         h1="PR review queue",
-        dek=esc(f"{len(prs)} open PRs, one verdict each (stamp / judge / route / blocked), grouped by owner and domain and listed in PR number order. Stamp rows start selected; every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding says why it does not stop the merge; the author has not answered anything here."),
-        tally=f'<div class="tally">{tally}</div>' + help_html() + '<div class="progress" id="progress"></div>' + do_next_html(queue),
+        dek=esc(f"{len(prs)} open PRs, one verdict each (stamp / judge / route / blocked), grouped by owner and domain and listed in PR number order. Stamp rows start selected; every other decision is a button on the row it concerns, and every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding is your own call on it: it stays on the board, is never posted, and never answers a blocking finding for the author."),
+        tally=f'<div class="tally">{tally}</div>' + help_html() + '<div class="progress" id="progress"></div>',
         filters=filter_bar({**queue, "prs": prs}),
         clusters="",
         body=("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + clusters_html(queue)
@@ -1551,7 +1529,7 @@ def render_terminal(queue: dict, n: int | None = None, width: int = 110, include
                 lines += _wrap(f"[{h['label']}]  $ {h['run']}  (an interactive run, not part of --act)", width, sub, sub + "    ")
     cards = queue.get("do_next") or [] if n is None else []
     if cards:
-        lines += ["", "do next (each card is the row buttons it names, pressed together):"]
+        lines += ["", "do next (the row actions above, batched into one command each):"]
         for i, d in enumerate(cards, 1):
             lines += _wrap(d.get("say") or "", width, f"  {i}. ", "     ")
             if d.get("does"):
@@ -1588,9 +1566,9 @@ def render_terminal(queue: dict, n: int | None = None, width: int = 110, include
     if on_author and not include_handed_off and n is None:
         lines += ["", f"waiting on the author ({len(on_author)}):"]
         for p in on_author:
-            when = sent_back_on(p)
+            verb, when = waiting_why(p)
             lines.append(f"  #{p['number']} {(p.get('title') or '')[:60]:<60} @{(p.get('author') or {}).get('login') or '?'}"
-                         f" sent back {when or '?'} {_age_days(p)}d{_wait_flag(p)}")
+                         f" {verb} {when or '?'} {_age_days(p)}d{_wait_flag(p)}")
     stamps = [a["cmd"].split()[1] for p in prs for a in p.get("actions") or [] if a["id"] == "stamp" and p.get("verdict") == "stamp"]
     if stamps:
         lines += ["", f"$ /pr-review --act --stamp {','.join(stamps)}"]
@@ -1614,7 +1592,7 @@ a{color:var(--accent)}
 .mast{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:22px}
 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
 h1{font-size:clamp(26px,4.6vw,40px);font-weight:800;letter-spacing:-.022em;line-height:1.05}
-.dek{color:var(--ink-2);max-width:72ch;margin:10px 0 0;font-size:15.5px}
+.dek{color:var(--ink-2);max-width:72ch;margin:10px 0 0;font-size:15.5px;text-wrap:pretty}
 .tally{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
 .tally div{flex:1 1 120px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:10px 14px;box-shadow:var(--shadow)}
 .tally b{display:block;font-family:Archivo,sans-serif;font-size:28px;font-weight:700;line-height:1.1}
@@ -1644,7 +1622,7 @@ button.pr.rowfold{cursor:pointer;color:var(--ink-3);font-weight:500;font-size:11
 .meta{font-size:12.5px;color:var(--ink-3);margin-bottom:4px}.meta span{margin-right:10px}.meta .age{font-family:"IBM Plex Mono",monospace;font-size:11px;margin-right:0}.meta .age.old{color:var(--hold)}
 .chips{display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 6px}
 .chip{font-size:10.5px;border:1px solid var(--line-2);border-radius:2px;padding:1px 6px;color:var(--ink-2);background:var(--surface-2);white-space:nowrap}
-.chip.r-collision,.chip.r-directional,.chip.r-duplicate,.chip.r-self-accepted,.chip.r-checks,.chip.r-mergeable{border-color:var(--stop);color:var(--stop)}
+.chip.r-collision,.chip.r-directional,.chip.r-duplicate,.chip.r-checks,.chip.r-mergeable{border-color:var(--stop);color:var(--stop)}
 .empty{margin:1rem 0;color:var(--ink-2);font-size:.95rem}.empty .btn{margin-left:.5rem}
 .chip.r-warnings,.chip.r-outstanding,.chip.r-scrutiny,.chip.r-blog,.chip.r-size,.chip.r-shape,.chip.r-review{border-color:var(--hold);color:var(--hold)}
 .chip.r-route{border-color:var(--route);color:var(--route)}
@@ -1669,15 +1647,7 @@ details.help[open]>summary{border-bottom:1px solid var(--line)}
 .helpgrid h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);margin:0 0 4px}
 .helpgrid ul{margin:0;padding-left:16px}
 .helpgrid li{font-size:13px;color:var(--ink-2);margin:3px 0;line-height:1.45}
-.donext{margin:6px 0 18px;background:var(--surface);border:1px solid var(--line-2);border-radius:4px;padding:12px 16px;box-shadow:var(--shadow)}
-.donext ol{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
-.donext .next{display:flex;gap:12px;align-items:center;padding:8px 10px;border-left:3px solid var(--line-2);background:var(--surface-2);border-radius:3px}
-.donext .next.hold{border-left-color:var(--hold)}.donext .next.route{border-left-color:var(--route)}.donext .next.go{border-left-color:var(--go)}.donext .next.stop{border-left-color:var(--stop)}
-.donext .n{font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:var(--ink-3);width:18px}
-.donext .say{flex:1;font-size:14px;color:var(--ink)}
-.donext .does{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px}
 .claimnote{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--go);border:1px dashed var(--go);border-radius:3px;padding:2px 7px}
-.donext .btn.p{margin-left:auto;white-space:nowrap}
 .clusters{margin-top:28px}.clusters summary{cursor:pointer;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;list-style:none}
 /* a flex summary drops the browser's own marker, so these folds draw their own */
 .clusters summary::-webkit-details-marker,details.help>summary::-webkit-details-marker{display:none}
@@ -1720,14 +1690,6 @@ details.preview .jmeta{font-family:"IBM Plex Mono",monospace;font-size:11px}
 .btn.p{background:var(--accent);color:#fff;border-color:var(--accent)}.btn.sel{outline:2px solid var(--go);outline-offset:1px}.btn.sel::before{content:"✓ "}
 .btn.hand{border-color:var(--hold);color:var(--hold);border-style:dashed}
 .btn.hand.sel{outline-color:var(--hold);background:var(--hold-soft)}
-/* A batch card in three states, not two: out, partly lit (some of the rows
-   it names were decided differently), and lit. Without the middle one a
-   card you just pressed and a card you never touched looked identical. */
-.btn.p .cnt{font-size:10px;font-weight:500;opacity:.8;margin-left:6px;padding:0 4px;border-radius:99px;background:rgba(255,255,255,.22)}
-.btn.p.part{background:var(--surface);color:var(--hold);border-color:var(--hold);border-style:dashed}
-.btn.p.part .cnt{background:var(--hold-soft);opacity:1}
-.btn.p.part::before{content:"◐ "}
-.donext .next.part{border-left-style:dashed}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:12px 0}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:12px 14px}
 .card h4{margin:0 0 6px;font-size:14px}.card p{font-size:13.5px;color:var(--ink-2);margin:0 0 6px}.card ul{margin:0;padding-left:18px;font-size:13px;color:var(--ink-2)}
@@ -1756,12 +1718,10 @@ SCRIPT = r"""
 (function(){
   var cmdEl = document.getElementById('cmd');
   // The command is read off the lit buttons themselves, never off a shadow
-  // list, so what the bar shows can't lag a click. A Do-next card is a
-  // shortcut for the row buttons it names: lit, it contributes only
-  // `data-extra`, the part of its command no row button carries (a chain's
-  // unblock, a consolidation's request), and its rows say the rest.
-  function isCard(b){ return 'targets' in b.dataset || 'claims' in b.dataset; }
-  function fragment(b){ return isCard(b) ? (b.dataset.extra || '') : b.dataset.cmd; }
+  // list, so what the bar shows can't lag a click. Every button is a row
+  // button: there is no batch strip, so nothing on the page can carry a
+  // fragment a row does not.
+  function fragment(b){ return b.dataset.cmd; }
   // Every `--stamp N[:mode][ --force]` folds into the one --stamp list, with
   // --force said once for the batch: a second --stamp would be a second flag,
   // and an act.py that read it single-valued would drop every PR but the last.
@@ -1798,49 +1758,28 @@ SCRIPT = r"""
     o.setAttribute('aria-pressed', on ? 'true' : 'false');
   }
   function setSel(b, on){
-    if (isCard(b)) { paint(b, on); return; }   // a card is painted, never counted: its rows are
     if (b.dataset.run) { paint(b, on); return; }   // a handoff is its own line, with no twin and no fragment
     twins(b).forEach(function(o){ paint(o, on); });
-  }
-  // A Do-next card is the same decisions as the rows it names, pressed
-  // together: `data-targets` maps a PR to the row button it presses, and
-  // `data-claims` marks rows a card covers with no row button of its own (a
-  // chain, a consolidation). Either way a card and a contrary row decision
-  // can never both be lit, so the command at the bottom cannot contradict
-  // itself.
-  var cards = [].slice.call(document.querySelectorAll('button.btn[data-targets], button.btn[data-claims]'));
-  function cardTargets(c){ return c.dataset.targets ? JSON.parse(c.dataset.targets) : {}; }
-  function cardPrs(c){
-    if (c.dataset.claims) return c.dataset.claims.split(',');
-    return Object.keys(cardTargets(c));
-  }
-  function rowButton(pr, cmd){
-    var exact = document.querySelector('button.btn[data-pr="' + pr + '"][data-cmd="' + cmd.replace(/"/g, '\\"') + '"]');
-    if (exact) return exact;
-    // A row button may carry a `--reason` its card's target does not name
-    // (a send-back that quotes the red check, say). It is still the same
-    // decision, so match on the flag and the PR and let the row's own
-    // fragment -- reason and all -- be what the command carries.
-    var head = cmd.split(' --reason')[0];
-    return [].slice.call(document.querySelectorAll('button.btn[data-pr="' + pr + '"][data-cmd]'))
-             .filter(function(b){ return b.dataset.cmd.split(' --reason')[0] === head; })[0] || null;
-  }
-  // The chain card whose lead decision this button is: pressing it presses
-  // the whole chain.
-  function leadCard(b){
-    return cards.filter(function(c){
-      return c.dataset.lead === b.dataset.pr && cardTargets(c)[b.dataset.pr] === b.dataset.cmd;
-    })[0];
   }
   function clearRow(pr, keep){
     document.querySelectorAll('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]').forEach(function(o){ if (o !== keep) setSel(o, false); });
   }
-  // A chain does two things to two PRs, so it has no single row button to
-  // light. It marks the rows it covers instead, so the card and the rows are
-  // still visibly the same decision.
-  function markClaimed(card, on){
-    var n = card.dataset.pr.replace('next', '');
-    card.dataset.claims.split(',').forEach(function(pr){
+  // "Fix it yourself" and "ask @claude to fix them" are the same job by two
+  // routes, so they share an exclusive group and lighting either puts the
+  // other out. clearRow cannot do it: the handoff is deliberately not a
+  // decision, so it is invisible to the one-decision-per-row rule.
+  function clearExclusive(b){
+    if (!b.dataset.exclusive) return;
+    document.querySelectorAll('button.btn.sel[data-exclusive="' + b.dataset.exclusive + '"][data-pr="' + b.dataset.pr + '"]')
+      .forEach(function(o){ if (o !== b) setSel(o, false); });
+  }
+  // A chain button acts on a second row: once the lead lands, the next link
+  // gets master merged in. That row has no button for it, so it is marked
+  // covered while the chain is lit, and a decision picked there instead
+  // puts the chain out -- the command can never carry both.
+  function coveredBy(b){ return b.dataset.covers ? b.dataset.covers.split(',') : []; }
+  function markCovered(b, on){
+    coveredBy(b).forEach(function(pr){
       var r = document.querySelector('.mrow[data-pr="' + pr + '"]');
       if (!r) return;
       var acts = r.querySelector('.acts');
@@ -1848,45 +1787,20 @@ SCRIPT = r"""
       if (on && acts && !note) {
         note = document.createElement('span');
         note.className = 'claimnote';
-        note.textContent = '✓ covered by Do next ' + n;
-        note.title = 'Do next ' + n + ' acts on this PR, so there is nothing to pick here.';
+        note.textContent = '✓ covered by the chain from #' + b.dataset.pr;
+        note.title = 'The chain button on #' + b.dataset.pr + ' merges master into this PR once that one lands, so there is nothing to pick here. Pick something anyway and the chain goes out.';
         acts.insertBefore(note, acts.firstChild);
       } else if (!on && note) { note.remove(); }
     });
   }
-  // A batch card has three states, not two. Out, lit, and *partly* lit:
-  // some of the rows it names carry its decision and the rest were decided
-  // differently, so the card is not lit -- which, painted the same as
-  // untouched, read as "the button does nothing". It says the count now.
-  function paintCount(c, on, total){
-    var el = c.querySelector('.cnt');
-    if (el) el.textContent = on + '/' + total;
-    var part = total > 1 && on > 0 && on < total;
-    c.classList.toggle('part', part);
-    var li = c.closest('.next');
-    if (li) li.classList.toggle('part', part);
-    if (!('tip' in c.dataset)) c.dataset.tip = c.title;
-    c.title = part
-      ? on + ' of the ' + total + ' PRs this card names carry its decision; the rest were decided differently on '
-        + 'their own rows, so the card itself is out. Press it to take all ' + total + ' back.\n\n' + c.dataset.tip
-      : c.dataset.tip;
-  }
-  function syncCards(){
-    cards.forEach(function(c){
-      var t = cardTargets(c), prs = Object.keys(t), lit;
-      // any decision lit on a claimed row is a contradiction
-      var claimed = c.dataset.claims ? c.dataset.claims.split(',') : [];
-      var contradicted = claimed.some(function(pr){
+  function syncCovers(){
+    document.querySelectorAll('button.btn[data-covers]').forEach(function(b){
+      var lit = b.classList.contains('sel');
+      var contradicted = coveredBy(b).some(function(pr){
         return !!document.querySelector('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]');
       });
-      if (prs.length) {
-        var on = prs.filter(function(pr){ var b = rowButton(pr, t[pr]); return b && b.classList.contains('sel'); }).length;
-        lit = !contradicted && on === prs.length;
-        paintCount(c, on, prs.length);
-      } else {   // claims-only: lit until a claimed row picks something else
-        lit = c.classList.contains('sel') && !contradicted;
-      }
-      if (lit !== c.classList.contains('sel')) { setSel(c, lit); if (claimed.length) markClaimed(c, lit); }
+      if (lit && contradicted) { setSel(b, false); lit = false; }
+      markCovered(b, lit);
     });
   }
   // "Fix it yourself" is a run, not a write. It composes on its own line
@@ -1902,59 +1816,33 @@ SCRIPT = r"""
     handWrap.hidden = !runs.length;
   }
   document.querySelectorAll('button.btn.hand[data-run]').forEach(function(b){
-    b.addEventListener('click', function(){ setSel(b, !b.classList.contains('sel')); composeHand(); });
+    b.addEventListener('click', function(){
+      var on = !b.classList.contains('sel');
+      if (on) clearExclusive(b);
+      setSel(b, on);
+      settle();
+    });
   });
   var copyHand = document.getElementById('copyhand');
   if (copyHand) copyHand.addEventListener('click', function(){
     composeHand();
     if (navigator.clipboard) navigator.clipboard.writeText(handEl.textContent.replace(/^\$ /gm, ''));
   });
-  // Every click ends here: the cards settle first, then the command is read
-  // off whatever is lit, so the bar never shows one click ago.
-  function settle(){ syncCards(); compose(); composeHand(); progress(); }
+  // Every click ends here: the covered rows settle first, then the command
+  // is read off whatever is lit, so the bar never shows one click ago.
+  function settle(){ syncCovers(); compose(); composeHand(); progress(); }
   document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){
     if (b.classList.contains('sel')) setSel(b, true);
     b.addEventListener('click', function(){
       var on = !b.classList.contains('sel');
-      var t = b.dataset.targets ? JSON.parse(b.dataset.targets) : null;
-      if (t) {                                   // a batch card: press its rows
-        Object.keys(t).forEach(function(pr){
-          var row = rowButton(pr, t[pr]);
-          if (!row) return;
-          if (on) clearRow(pr, row);
-          setSel(row, on);
-        });
-        // A card can both press rows and cover rows that have no button of
-        // their own (a chain's follow-up, until it is actually stuck).
-        if (b.dataset.claims) {
-          b.dataset.claims.split(',').forEach(function(pr){ if (on) clearRow(pr, null); });
-          markClaimed(b, on);
-        }
-        setSel(b, on); settle(); return;
-      }
-      if (b.dataset.claims) {                    // a chain: the rows it covers defer to it
-        b.dataset.claims.split(',').forEach(function(pr){ if (on) clearRow(pr, null); });
-        markClaimed(b, on);
-      }
       if (on && b.dataset.kind === 'decision') {   // one decision per row; side actions ride along
         clearRow(b.dataset.pr, b);
       }
+      if (on) clearExclusive(b);
+      // Lighting a chain clears whatever was picked on the row it covers, so
+      // the covered mark is that row's only state.
+      if (on) coveredBy(b).forEach(function(pr){ clearRow(pr, null); });
       setSel(b, on);
-      // A chain's follow-up is part of the same decision, so pressing the
-      // lead row button presses the rest of the chain too -- and releasing it
-      // releases the chain. Every other card is a batch of independent
-      // decisions and is only lit by `syncCards` once they all are.
-      var lead = leadCard(b);
-      if (lead) {
-        var lt = cardTargets(lead);
-        Object.keys(lt).forEach(function(pr){
-          if (pr === b.dataset.pr) return;
-          var row = rowButton(pr, lt[pr]);
-          if (!row) return;
-          if (on) clearRow(pr, row);
-          setSel(row, on);
-        });
-      }
       settle();
     });
   });
@@ -2037,8 +1925,8 @@ SCRIPT = r"""
   });
   // A decision is any lit decision button -- approve, send back, close,
   // route, unblock, refresh, re-run -- on any row on the page, blocked rows
-  // included; a row a Do-next card covers has had its decision made by the
-  // card. The denominator is every row that has a decision to make.
+  // included; a row a lit chain covers has had its decision made on the
+  // lead's row. The denominator is every row that has a decision to make.
   function progress(){
     var el = document.getElementById('progress'); if (!el) return;
     var rows = [].slice.call(document.querySelectorAll('.mrow')).filter(function(r){

@@ -34,7 +34,7 @@ Choose Pro when your organization needs stronger access controls, automation, an
 
 ### Enterprise
 
-Choose Enterprise when your organization needs advanced compliance, identity management, or deployment controls. Enterprise adds conformance packs, unlimited custom policy packs, policy remediation, SCIM, self-hosting, GitHub Enterprise Server support, and unlimited custom roles.
+Choose Enterprise when your organization needs advanced compliance, identity management, or deployment controls. Enterprise adds conformance packs, unlimited custom policy packs, policy remediation, SCIM, self-hosting, GitHub Enterprise Server support, GitHub Enterprise Cloud with data residency support, and unlimited custom roles.
 
 {{% notes type="info" %}}
 Learn more about the differences between [the editions](/pricing/).

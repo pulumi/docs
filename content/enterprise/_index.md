@@ -9,94 +9,26 @@ overview:
     description: |
         Snowflake, Mercedes-Benz, NVIDIA, and Lemonade are among a rapidly growing number of enterprises worldwide that leverage Pulumi's Platform to enable modern cloud transformation, accelerate innovation, build their IDP while meeting the most rigorous security and compliance requirements.
 
-customer_logos:
-  title: Trusted by over 4,000 innovative companies
-  logos:
-    - name: bmw
-      link: /case-studies/
-    - name: snowflake
-      link: /case-studies/
-    - name: nvidia
-      link: /case-studies/
-    - name: moderna
-      link: /case-studies/
-    - name: docker
-      link: /case-studies/
-    - name: unity
-      link: /case-studies/
-    - name: ae-networks
-      link: /case-studies/
-    - name: deloitte
-      link: /case-studies/
-    - name: stokespace
-      link: /case-studies/
-    - name: univision
-      link: /case-studies/
-    - name: washington-trust
-      link: /case-studies/
-    - name: kyruus
-      link: /case-studies/
-    - name: modular-ai
-      link: /case-studies/
-    - name: korber
-      link: /case-studies/
-    - name: lemonade
-      link: /case-studies/
-    - name: pinecone
-      link: /case-studies/
-    - name: ware2go
-      link: /case-studies/
-    - name: nubank
-      link: /case-studies/
-    - name: mindbody
-      link: /case-studies/
-    - name: fenergo
-      link: /case-studies/
-    - name: webflow
-      link: /case-studies/
-    - name: bluenile
-      link: /case-studies/
-    - name: dutchie
-      link: /case-studies/
-    - name: panther-labs
-      link: /case-studies/
-    - name: materialize
-      link: /case-studies/
-    - name: altana
-      link: /case-studies/
-    - name: mercedes-benz
-      link: /case-studies/
-    - name: bt
-      link: /case-studies/
-    - name: portx
-      link: /case-studies/
-    - name: tivityhealth
-      link: /case-studies/
-    - name: starburst
-      link: /case-studies/
-    - name: linktree
-      link: /case-studies/
-
 case_studies:
     title: Customer Stories
     items:
-        - company: snowflake
-          link: /case-studies/snowflake
+        - customer: snowflake
+          link: /customers/snowflake
           quote: |
             Snowflake empowered its developers to provision standardized Kubernetes environments on AWS, Azure, and Google Cloud.
 
-        - company: mercedes-benz-rdna
-          link: /case-studies/mercedes-benz
+        - customer: mercedes-benz
+          link: /customers/mercedes-benz
           quote: |
             Mercedes-Benz enabled developers to provision Azure Kubernetes environments with a self-service platform built with Pulumi.
 
-        - company: lemonade
-          link: /case-studies/lemonade/
+        - customer: lemonade
+          link: /customers/lemonade/
           quote: |
             Lemonade boosted developer speed and cut costs with secure, reusable infrastructure.
 
-        - company: sans
-          link: /case-studies/sans-institute/
+        - customer: sans-institute
+          link: /customers/sans-institute/
           quote: |
             SANS increased deployment velocity by 3X after adopting cloud engineering and implementing infrastructure CI/CD.
 
@@ -143,7 +75,7 @@ capabilities:
           icon: buildings
           icon_color: blue
           description: |
-            Enterprises that require specific data controls can use the self-hosted Pulumi service in their own cloud or datacenter and maintain complete control over their hosting, network isolation, identity, and data ownership. Deployment options include Kubernetes clusters, VMWare vSphere, virtual private clouds in AWS, Azure, Google Cloud, and many other configurations.
+            Enterprises that require specific data controls can use the self-hosted Pulumi service in their own cloud or datacenter and maintain complete control over their hosting, network isolation, identity, and data ownership. Deployment options include Kubernetes clusters, VMware vSphere, virtual private clouds in AWS, Azure, Google Cloud, and many other configurations.
 
         - title: Security
           icon: shield

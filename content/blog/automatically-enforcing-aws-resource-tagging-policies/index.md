@@ -360,7 +360,7 @@ Finally, further down in the dialog, we can enter the tags we'd like to enforce:
 
 Now that it is configured, all subsequent updates across the organization will run policy checks.
 
-{{< blog/cta-card title="Enforce policy as code" href="/docs/insights/policy/" >}}
+{{< blog/cta-card title="Enforce policy as code" href="/docs/discovery-governance/policy/" >}}
 Write policy as code with Pulumi to catch missing tags, block risky configurations, and keep every deployment compliant across your team.
 {{< /blog/cta-card >}}
 
@@ -745,7 +745,7 @@ In this post, we've seen some ways to enforce AWS tagging best practices. This i
 Check out these resources to get started with Pulumi's open source platform:
 
 * [AWS getting started guide](/docs/iac/get-started/aws/)
-* [Policy as Code getting started guide](/docs/insights/policy/get-started/)
+* [Policy as Code getting started guide](/docs/discovery-governance/policy/get-started/)
 * [Full example code used in this post](https://github.com/joeduffy/aws-tags-example)
 
 Good luck making sure your team's resources are tagged early and often with less manual effort!
