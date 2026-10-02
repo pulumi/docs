@@ -232,6 +232,16 @@ html[data-theme="dark"] body.section-docs {
                 border-color: color-mix(in oklch, var(--color-violet-300) 40%, transparent);
             }
         }
+
+        [data-nav-promo] {
+            background-color: var(--color-violet-950);
+
+            &:hover,
+            &:focus-visible {
+                // Tailwind v4 `/50` mixes in oklab, so match it for parity with marketing-web.
+                background-color: color-mix(in oklab, var(--color-violet-800) 50%, transparent);
+            }
+        }
     }
 
     // Footer CTA band (footer/cta.html) — a near-white lavender in light mode;
