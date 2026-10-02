@@ -286,9 +286,11 @@ calculator:
       included_credits: 2000
       included_resources: 4750
       iac_resource_month: 0.5475
+      iac_resource_hour: 0.00075
       esc_secret_month: 1.00
+      esc_secret_hour: 0.00137
       insights_resource_month: 0.05475
-      
+      insights_resource_hour: 0.000075
   # What a Credit buys, per meter, for the (i) tooltip on each card's "additional
   # usage" note. This is a *view* of the rates above, not a second copy of them:
   # `key` names one of the per-edition rates or shared meters, and the card
