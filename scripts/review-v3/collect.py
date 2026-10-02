@@ -25,8 +25,9 @@ or MCP-fetched data handed over by a model session). Author filters use
 
 Cache: `/.pr-review-cache/<pr>/<head_sha>-<updated_at>.json` holds the raw
 per-PR responses that only change when the PR does (files, comments,
-reviews, commits). `mergeable_state` and the check rollup are transient and
-are re-fetched on every run. `--no-cache` bypasses reads; `--gc` drops
+commits). `mergeable_state`, the check rollup, requested reviewers and
+reviews are re-fetched on every run: a submitted review can land before
+`updated_at` moves, so a key built from it would serve the pre-review list. `--no-cache` bypasses reads; `--gc` drops
 entries for PRs no longer open.
 
 Deterministic, no model calls (scripts/review-v3 contract).
@@ -616,7 +617,6 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         raw = {
             "files": gh.pr_files(number),
             "comments": gh.issue_comments(number),
-            "reviews": gh.reviews(number),
             "commits": gh.pr_commits(number),
             "review_comments": gh.review_comments(number),
         }
@@ -625,6 +625,9 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
     statuses = gh.commit_statuses(head_sha) if head_sha else []
     workflows = gh.workflow_paths(head_sha) if head_sha else {}
     requested = gh.requested_reviewers(number)
+    # Never cached: an approval can land before `updated_at` moves, so a run
+    # right after `act.py` would read the old key and miss its own review.
+    reviews = gh.reviews(number)
 
     files = raw["files"]
     comments = raw["comments"]
@@ -741,7 +744,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
              # it with the live head to tell "waiting on the author" from
              # "they pushed since"
              "commit_id": r.get("commit_id")}
-            for r in raw["reviews"]
+            for r in reviews
         ],
         "requested_reviewers": {
             "users": [u.get("login") for u in (requested.get("users") or [])
