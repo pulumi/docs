@@ -21,8 +21,15 @@ interface CalculatorConfig {
 
 type RateUnit = "month" | "hour";
 
+// On /hr the time-billed meters are entered in unit-hours instead of units, and
+// a unit that exists all month is this many of them. Flipping the toggle
+// converts the entered quantities by this factor rather than the total, so the
+// estimate is still a monthly bill either way — /hr is for a reader who knows
+// their usage in resource-hours, not a per-hour price.
+const HOURS_PER_MONTH = 730;
+
 // `hourly` is set only on the meters billed by time (IaC resources, ESC secrets,
-// discovered resources) — the ones the header's /mo-/hr toggle switches. Workflow
+// discovered resources) — the ones the /mo-/hr toggle switches. Workflow
 // minutes and Neo tokens are billed per use and have no hourly form.
 interface Meter {
     rate: ((config: CalculatorConfig, edition: EditionRates) => number) | null;
@@ -30,6 +37,7 @@ interface Meter {
     hourly?: {
         rate: (edition: EditionRates) => number;
         unit: string;
+        valueText: (formatted: string) => string;
     };
     valueText: (formatted: string) => string;
 }
@@ -38,13 +46,13 @@ const METERS: Record<string, Meter> = {
     iac_resources: {
         rate: (_c, e) => e.iac_resource_month,
         unit: "/resource/mo",
-        hourly: { rate: e => e.iac_resource_hour, unit: "/resource/hr" },
+        hourly: { rate: e => e.iac_resource_hour, unit: "/resource/hr", valueText: v => `${v} resource-hours` },
         valueText: v => `${v} resources`,
     },
     esc_secrets: {
         rate: (_c, e) => e.esc_secret_month,
         unit: "/secret/mo",
-        hourly: { rate: e => e.esc_secret_hour, unit: "/secret/hr" },
+        hourly: { rate: e => e.esc_secret_hour, unit: "/secret/hr", valueText: v => `${v} secret-hours` },
         valueText: v => `${v} secrets`,
     },
     neo_tokens: {
@@ -60,7 +68,7 @@ const METERS: Record<string, Meter> = {
     insights_resources: {
         rate: (_c, e) => e.insights_resource_month,
         unit: "/resource/mo",
-        hourly: { rate: e => e.insights_resource_hour, unit: "/resource/hr" },
+        hourly: { rate: e => e.insights_resource_hour, unit: "/resource/hr", valueText: v => `${v} resource-hours` },
         valueText: v => `${v} resources`,
     },
 };
@@ -125,12 +133,17 @@ const usdRateHour = new Intl.NumberFormat("en-US", {
 
 const count = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
 
-function creditsForResources(resources: number, edition: EditionRates): number {
-    if (resources <= edition.included_resources) {
-        return resources * (edition.included_credits / edition.included_resources);
+// `quantity` is resources on /mo and resource-hours on /hr. The included tranche
+// scales with it, so 500 resources and 365,000 resource-hours both cost exactly
+// the Essentials base, and only the rate beyond the tranche differs by unit.
+function creditsForResources(quantity: number, edition: EditionRates, unit: RateUnit): number {
+    const hourly = unit === "hour";
+    const included = edition.included_resources * (hourly ? HOURS_PER_MONTH : 1);
+    if (quantity <= included) {
+        return quantity * (edition.included_credits / included);
     }
-    const beyond = resources - edition.included_resources;
-    return edition.included_credits + beyond * edition.iac_resource_month;
+    const beyond = quantity - included;
+    return edition.included_credits + beyond * (hourly ? edition.iac_resource_hour : edition.iac_resource_month);
 }
 
 function init(): void {
@@ -170,13 +183,27 @@ function init(): void {
         return rates || config.editions[Object.keys(config.editions)[0]];
     };
 
-    const parts = (row: HTMLElement) => ({
-        id: row.dataset.calcMeter as string,
-        max: parseFloat(row.dataset.calcMax || "") || 0,
-        range: row.querySelector<HTMLInputElement>("[data-calc-range]"),
-        number: row.querySelector<HTMLInputElement>("[data-calc-number]"),
-        rate: row.querySelector<HTMLElement>("[data-calc-rate]"),
-    });
+    const currentRateUnit = (): RateUnit => {
+        const pressed = rateUnitButtons.find(button => button.getAttribute("aria-pressed") === "true");
+        return (pressed?.dataset.calcRateUnit as RateUnit | undefined) || "month";
+    };
+
+    // How many of the row's entered units make one month of one unit: 730 for a
+    // time-billed meter on /hr, 1 everywhere else. The slider's ceiling scales by
+    // it too, so a thumb sits in the same place before and after a flip.
+    const unitFactor = (id: string): number =>
+        currentRateUnit() === "hour" && METERS[id].hourly ? HOURS_PER_MONTH : 1;
+
+    const parts = (row: HTMLElement) => {
+        const id = row.dataset.calcMeter as string;
+        return {
+            id,
+            max: (parseFloat(row.dataset.calcMax || "") || 0) * unitFactor(id),
+            range: row.querySelector<HTMLInputElement>("[data-calc-range]"),
+            number: row.querySelector<HTMLInputElement>("[data-calc-number]"),
+            rate: row.querySelector<HTMLElement>("[data-calc-rate]"),
+        };
+    };
 
     // The number input is the meter's value; the range only ever holds a curve
     // position. Negatives floor at zero here rather than in the input handler,
@@ -187,11 +214,6 @@ function init(): void {
         return isFinite(raw) && raw > 0 ? raw : 0;
     };
 
-    const currentRateUnit = (): RateUnit => {
-        const pressed = rateUnitButtons.find(button => button.getAttribute("aria-pressed") === "true");
-        return (pressed?.dataset.calcRateUnit as RateUnit | undefined) || "month";
-    };
-
     const recompute = (): void => {
         const edition = currentEdition();
         const values: Record<string, number> = {};
@@ -199,15 +221,12 @@ function init(): void {
             values[row.dataset.calcMeter as string] = valueOf(row);
         });
 
-        // The included-resources tranche (creditsForResources' tiered rate) prices
-        // a month of usage against the monthly base fee, so it has no meaning once
-        // the reader is asking "what does this fleet cost for one hour" instead —
-        // that view prices every resource at the flat published hourly rate, with
-        // no tier of its own.
-        const hourly = currentRateUnit() === "hour";
-        let credits = hourly
-            ? (values.iac_resources || 0) * edition.iac_resource_hour
-            : creditsForResources(values.iac_resources || 0, edition);
+        // On /hr the three time-billed values are unit-hours, priced at the
+        // published hourly rate; everything is still a month's usage, so the
+        // total stays a monthly figure.
+        const unit = currentRateUnit();
+        const hourly = unit === "hour";
+        let credits = creditsForResources(values.iac_resources || 0, edition, unit);
         credits += (values.esc_secrets || 0) * (hourly ? edition.esc_secret_hour : edition.esc_secret_month);
         credits += (values.workflow_minutes || 0) * config.meters.workflow_minute;
         credits += (values.neo_tokens || 0) * config.meters.neo_tokens_per_million;
@@ -217,7 +236,9 @@ function init(): void {
 
         const overage = Math.max(0, credits - edition.included_credits);
         const total = edition.base_usd + overage;
-        const volume = (values.iac_resources || 0) > config.contact_sales_resources;
+        // The threshold is a resource count, so resource-hours are brought back
+        // to resources before comparing.
+        const volume = (values.iac_resources || 0) / unitFactor("iac_resources") > config.contact_sales_resources;
 
         if (totalValue) totalValue.textContent = usd.format(total);
         if (creditsUsed) creditsUsed.textContent = count.format(credits);
@@ -264,7 +285,9 @@ function init(): void {
             range.style.setProperty("--form-range-fill", `${(pos / POSITIONS) * 100}%`);
             // What the thumb's position selects, not what the reader typed: past
             // the ceiling the two differ, and this attribute describes the slider.
-            range.setAttribute("aria-valuetext", METERS[id].valueText(count.format(valueAt(pos, max))));
+            const meter = METERS[id];
+            const valueText = currentRateUnit() === "hour" && meter.hourly ? meter.hourly.valueText : meter.valueText;
+            range.setAttribute("aria-valuetext", valueText(count.format(valueAt(pos, max))));
         }
     };
 
@@ -311,11 +334,47 @@ function init(): void {
         syncRow(row, "number");
     });
 
+    // The number input's own ceiling has to move with the unit, or clamp() would
+    // cap a resource-hour figure at the resource ceiling.
+    rows.forEach(row => {
+        const { number } = parts(row);
+        if (number) number.dataset.calcNumberMax = number.max;
+    });
+
+    const paintUnit = (): void => {
+        const hourly = currentRateUnit() === "hour";
+        rows.forEach(row => {
+            const { id, number } = parts(row);
+            if (!METERS[id].hourly) return;
+            row.querySelector("[data-calc-label-month]")?.classList.toggle("hidden", hourly);
+            row.querySelector("[data-calc-label-hour]")?.classList.toggle("hidden", !hourly);
+            const base = parseFloat(number?.dataset.calcNumberMax || "");
+            if (number && isFinite(base)) number.max = String(base * unitFactor(id));
+        });
+    };
+
+    // Converting the entered quantities, not the total, is what keeps the
+    // estimate unchanged across a flip: 500 resources becomes 365,000
+    // resource-hours and back. A figure typed in hours that isn't a whole month
+    // of whole units rounds to the nearest unit on the way back to /mo.
+    const selectRateUnit = (unit: RateUnit): void => {
+        if (unit === currentRateUnit()) return;
+        rows.forEach(row => {
+            const { id, number } = parts(row);
+            if (!METERS[id].hourly || !number) return;
+            const value = valueOf(row);
+            number.value = String(Math.round(unit === "hour" ? value * HOURS_PER_MONTH : value / HOURS_PER_MONTH));
+        });
+        rateUnitButtons.forEach(other => other.setAttribute("aria-pressed", String(other.dataset.calcRateUnit === unit)));
+        paintUnit();
+        rows.forEach(row => syncRow(row, "number"));
+        paintRates();
+        recompute();
+    };
+
     rateUnitButtons.forEach(button => {
         button.addEventListener("click", () => {
-            rateUnitButtons.forEach(other => other.setAttribute("aria-pressed", String(other === button)));
-            paintRates();
-            recompute();
+            selectRateUnit(button.dataset.calcRateUnit as RateUnit);
         });
     });
 

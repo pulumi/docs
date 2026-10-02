@@ -20,12 +20,11 @@
   is denominated in Pulumi Credits (1 credit = $1) drawn from one shared pool,
   and the monthly base buys the first tranche of it:
 
-      iacCredits = unit === "hour"
-                     ? iac_resources * iac_resource_hour
-                     : iac_resources <= included_resources
-                       ? iac_resources * (included_credits / included_resources)
-                       : included_credits
-                         + (iac_resources - included_resources) * iac_resource_month
+      h          = unit === "hour" ? 730 : 1
+      included   = included_resources * h
+      iacCredits = iac <= included
+                     ? iac * (included_credits / included)
+                     : included_credits + (iac - included) * iac_resource_<unit>
       credits    = iacCredits
                    + secrets    * esc_secret_<unit>
                    + minutes    * workflow_minute
@@ -33,15 +32,19 @@
                    + insights   * insights_resource_<unit>
       monthly    = base_usd + max(0, credits - included_credits)
 
+  where iac, secrets, and insights are counts on /mo and unit-hours on /hr.
+
   IaC resources, ESC secrets, and discovered resources are really billed by the
   hour, so a resource that exists for only part of the month costs
   proportionally less, but there is deliberately no utilization control: it
   would be a slider nearly every reader leaves where it starts. What there is
-  instead is one /mo-/hr toggle in the header — see the comment on it below —
-  because the comparison table already states each of those three rates both
-  ways. Selecting /hr re-prices those three meters' contributions; workflow
-  minutes and Neo tokens are billed per use rather than per unit of time, so
-  they have no hourly form and the toggle doesn't touch them.
+  instead is one /mo-/hr toggle, because the comparison table already states
+  each of those three rates both ways. Selecting /hr switches those three
+  meters to unit-hours: the entered quantities are multiplied by 730 (and
+  divided by 730 going back), priced at the hourly rate, and the included
+  tranche scales the same way, so the monthly total is unchanged by the flip
+  itself. Workflow minutes and Neo tokens are billed per use rather than per
+  unit of time, so they have no hourly form and the toggle doesn't touch them.
 
   The monthly (non-hourly) IaC branch is what makes the cards true: it prices
   the opening tranche of resources low enough that $40 covers 500 and $400
@@ -117,10 +120,12 @@
 {{- $meters := slice
     (dict "id" "iac_resources"
           "label" "IaC resources"
+          "label_hour" "IaC resource-hours"
           "tooltip" "Every resource declared in a Pulumi program counts, including component resources and stacks. A partial resource hour is billed as a full hour."
           "min" 0 "max" 250000 "step" 100 "start" 500)
     (dict "id" "esc_secrets"
           "label" "ESC secrets"
+          "label_hour" "ESC secret-hours"
           "tooltip" "Static and dynamic secrets in the latest revision of each environment. Plaintext config is free. This estimate assumes a full month of secret usage; actual billing is hourly."
           "min" 0 "max" 50000 "step" 10 "start" 0)
     (dict "id" "neo_tokens"
@@ -133,6 +138,7 @@
           "min" 0 "max" 1000000 "step" 100 "start" 0)
     (dict "id" "insights_resources"
           "label" "Discovered resources"
+          "label_hour" "Discovered resource-hours"
           "tooltip" "Cloud resources discovered by Pulumi Discovery, including resources that Pulumi doesn't manage."
           "min" 0 "max" 2000000 "step" 500 "start" 0)
 -}}
@@ -147,14 +153,18 @@
          be clipped by it. Nothing here has a background of its own to clip. */}}
     <div class="card grid grid-cols-1 lg:grid-cols-[1fr_22rem] divide-y lg:divide-y-0 lg:divide-x divide-gray-200 bg-white">
         <div class="p-6 md:p-8 flex flex-col gap-7">
-            <div class="flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-start justify-between gap-3">
                 {{/* An overline that is still the section's heading, so the card isn't
                      an unnamed landmark in the outline. It links to its own anchor —
                      the estimator is worth linking to from elsewhere on the page and
                      from a Slack thread, and a self-link is the conventional way to
                      hand someone that URL. Inherits the overline's color and only
-                     underlines on hover, so it reads as a heading first. */}}
-                <h2 class="font-overline m-0">
+                     underlines on hover, so it reads as a heading first.
+
+                     h-8 matches the btn-sm edition toggle, and the row aligns to the
+                     top rather than the center, so the heading lines up with the
+                     edition toggle instead of the middle of the two stacked toggles. */}}
+                <h2 class="font-overline m-0 h-8 flex items-center">
                     <a href="#calculator" class="no-underline hover:underline">Estimate your monthly cost</a>
                 </h2>
 
@@ -198,7 +208,11 @@
                          into the label's text and rename the input. */}}
                     <pulumi-tooltip class="inline-block">
                         <label id="calc-{{ $m.id }}-label" for="calc-{{ $m.id }}-number" class="heading-6 m-0">
-                            {{ $m.label }}
+                            {{- /* Both labels render; the TS module shows the one
+                                   for the selected /mo-/hr unit, on the meters that
+                                   have an hourly form. */}}
+                            <span data-calc-label-month>{{ $m.label }}</span>
+                            {{- with $m.label_hour }}<span class="hidden" data-calc-label-hour>{{ . }}</span>{{ end }}
                             {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-0.5 inline text-gray-700") }}
                         </label>
                         <span slot="content">{{ $m.tooltip }}</span>
