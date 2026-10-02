@@ -14,7 +14,7 @@
   {{ if $isMobile }}data-nav-sheet-close{{ end }}
   {{ if $item.promo }}data-nav-promo{{ end }}
   {{ with $item.track }}data-track="{{ . }}"{{ end }}
-  class="group flex rounded-md outline-none transition-all focus-visible:ring-3 focus-visible:ring-violet-400/50 {{ if $item.promo }}relative h-full flex-col justify-end overflow-hidden bg-violet-50 p-5 hover:bg-violet-100 focus-visible:bg-violet-100{{ else }}flex-row items-start gap-3 p-3 hover:bg-violet-50 focus-visible:bg-violet-50{{ end }}">
+  class="group flex rounded-md outline-none transition-all focus-visible:ring-3 focus-visible:ring-violet-400/50 {{ if $item.promo }}relative h-full flex-col justify-end overflow-hidden bg-violet-background p-5 hover:bg-violet-muted/50 focus-visible:bg-violet-muted/50{{ else }}flex-row items-start gap-3 p-3 hover:bg-violet-50 focus-visible:bg-violet-50{{ end }}">
   {{ if $item.promo }}
     <span aria-hidden="true"
       class="absolute inset-0 bg-lines-top-right bg-no-repeat bg-right-top bg-[length:220px_auto] opacity-50"></span>

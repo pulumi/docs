@@ -234,11 +234,12 @@ html[data-theme="dark"] body.section-docs {
         }
 
         [data-nav-promo] {
-            background-color: color-mix(in oklch, var(--color-violet-300) 10%, transparent);
+            background-color: var(--color-violet-950);
 
             &:hover,
             &:focus-visible {
-                background-color: color-mix(in oklch, var(--color-violet-300) 20%, transparent);
+                // Tailwind v4 `/50` mixes in oklab, so match it for parity with marketing-web.
+                background-color: color-mix(in oklab, var(--color-violet-800) 50%, transparent);
             }
         }
     }
