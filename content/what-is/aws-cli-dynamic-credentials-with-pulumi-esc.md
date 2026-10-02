@@ -47,6 +47,10 @@ Most AWS CLI credential errors, such as `ExpiredToken`, `InvalidAccessKeyId`, `I
 
 "An error occurred (SignatureDoesNotMatch) when calling the ListBuckets operation" means AWS could not verify the cryptographic signature computed from the secret access key. This usually points to a secret key that was copied incorrectly, is out of sync with its access key ID, or a system clock that has drifted enough to invalidate the signed request.
 
+### UnrecognizedClientException
+
+"The security token included in the request is invalid" backed by an `UnrecognizedClientException` (HTTP 403) means AWS could not match the access key ID, or X.509 certificate, signing the request to anything in its records. The [AWS STS common errors reference](https://docs.aws.amazon.com/STS/latest/APIReference/CommonErrors.html) documents this error the same way for both IAM and STS, and its wording overlaps heavily with `InvalidClientTokenId`, so treat the two as close cousins rather than cleanly separable causes. In practice, `UnrecognizedClientException` tends to surface on regional service calls such as DynamoDB, KMS, Lambda, or SES, and it is worth double-checking that the request is reaching the intended region as well as ruling out an expired or rotated key.
+
 ### Unable to locate credentials
 
 The AWS CLI and SDKs raise "Unable to locate credentials" when they cannot find any credentials at all in the usual places: environment variables, the shared credentials file, an EC2 instance profile, or an assumed role. It is the default failure when nothing has been configured yet.
@@ -163,6 +167,10 @@ Both errors mean AWS could not validate the access key or token it received, eit
 ### Why does AWS return SignatureDoesNotMatch?
 
 This error means AWS could not verify the request's cryptographic signature, usually because a secret access key was copied incorrectly, is mismatched with its access key ID, or the system clock has drifted. Dynamic credentials from Pulumi ESC avoid the problem entirely, since the access key and secret are generated together and used immediately.
+
+### What does the UnrecognizedClientException error mean in AWS?
+
+It means AWS could not recognize the access key ID or certificate used to sign the request, and it returns as an HTTP 403 with the message "The security token included in the request is invalid." The fix is the same as for the other credential errors above: generate a fresh, valid key or session token rather than trying to repair the one that failed, and confirm the request is targeting the correct region.
 
 ### What does "Unable to locate credentials" mean and how do I fix it?
 

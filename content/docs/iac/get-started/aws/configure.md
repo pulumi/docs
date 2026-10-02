@@ -52,6 +52,8 @@ If your AWS user ID, account, and ARN are printed, your configuration is correct
 }
 ```
 
+If the command returns an error instead of this output, see the guide to [AWS CLI credential errors like `ExpiredToken` and `InvalidAccessKeyId`](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/) for what each one means and how to fix it.
+
 ### Alternative approaches
 
 If you don't have the AWS CLI installed, or you plan on using Pulumi in a CI/CD pipeline, <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" target="_blank">retrieve your access key ID and secret access key</a> and then set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables on your workstation:
