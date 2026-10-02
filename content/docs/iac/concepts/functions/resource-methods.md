@@ -36,7 +36,7 @@ public Output<string> GetKubeconfig(ClusterGetKubeconfigArgs? args = null)
 <pulumi-choosable type="language" values="go">
 
 ```go
-func (r *Cluster) GetKubeconfig(ctx *Context, args *ClusterGetKubeconfigArgs) (pulumi.StringOutput, error)
+func (r *Cluster) GetKubeconfig(ctx *pulumi.Context, args *ClusterGetKubeconfigArgs) (pulumi.StringOutput, error)
 ```
 
 </pulumi-choosable>
