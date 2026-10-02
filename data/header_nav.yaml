@@ -128,7 +128,6 @@ items:
           - label: The agentic infrastructure operating model
             href: /whitepapers/agentic-infrastructure-operating-model/
             description: The path to agents operating your infrastructure at scale
-            icon: path
             overline: Whitepaper
             promo: true
             track: header-enterprise-agentic-infrastructure
