@@ -14,4 +14,4 @@ menu:
 These pages cover running Discovery & governance day to day.
 
 - [Review policy findings](/docs/discovery-governance/operations/policy-findings/): Track violations, manage issues, and monitor compliance across stacks and discovered resources.
-- [Self-hosted discovery and policy](/docs/discovery-governance/operations/self-hosted/): Run Discovery scans and policy evaluations on customer-managed workflow runners in your own environment.
+- [Run scans and policy evaluations on customer-managed runners](/docs/discovery-governance/operations/customer-managed-runners/): Run Discovery scans and audit policy evaluations on runners you host in your own infrastructure.
