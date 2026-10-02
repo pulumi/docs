@@ -34,7 +34,7 @@ Function serialization is not supported when using the Bun runtime (`runtime: bu
 
 ## Overview
 
-In many cases, a small piece of runtime functionality must be defined as part of a cloud application, and it makes sense to define that runtime functionality directly inline as part of the Pulumi program. This can augment, or even replace, using runtime code and binaries defined outside of Pulumi in Lambda ZIPs, Docker images, VM images, etc.
+Sometimes a small piece of runtime functionality must be defined as part of a cloud application, and it makes sense to define it directly inline in the Pulumi program. This can augment, or even replace, using runtime code and binaries defined outside of Pulumi in Lambda ZIPs, Docker images, VM images, etc.
 
 Pulumi supports this by letting you create libraries and components that allow the caller to pass in JavaScript callbacks that are serialized down into an artifact and invoked at runtime.
 
@@ -153,8 +153,8 @@ Because of this, almost all JavaScript values can be serialized with few excepti
 ##### Limitations and run-time behavior of captured values
 
 * Native functions are not capturable. This impacts capturing any value that is either itself a native function or which _transitively_ references a native from being capturable.
-* Each time the cloud Lambda is triggered, these values will be rehydrated. This happens immediately before the code for the Lambda itself starts executing.
-* Any mutations made to those values will be seen across a single invocation of that Lambda. However, it will not be seen by subsequent invocations. They will always start with the original value that was captured. This behavior is similar to how a web page works, where each client visiting the pages gets its own fresh copy of variables, and will not see mutations made by other clients on other machines.
+* Captured values are rehydrated when the Lambda's code loads, which happens once per execution environment (on a cold start), not on every invocation.
+* Reassigning a captured variable lasts only for the current invocation. Mutating a captured object's properties is different: the change persists across later invocations that reuse the same execution environment, while other environments start from the originally captured value. Don't use captured values to hold state.
 
 ##### Size of captured values
 
@@ -224,7 +224,7 @@ The `local` module &mdash; the module for the Pulumi application itself &mdash; 
 
 ### Pulumi execution order
 
-`pulumi` uses `node` to execute a Pulumi application. During execution, when a call to `new aws.lambda.CallbackFunction` is encountered, the function is converted to a Lambda at that point in execution. This means that if the function captures any state, then the value that is captured will be whatever it was at the point in time.
+`pulumi` uses `node` to execute a Pulumi application. When the program calls `new aws.lambda.CallbackFunction`, Pulumi starts serializing the function, but it reads captured values asynchronously. The rest of your synchronous program code usually runs before those values are read, so a captured value can reflect changes made after the constructor call.
 
 For this reason, avoid capturing values that your code also mutates. Immutable captured values are much safer and easier to reason about. To see the problems this avoids in practice, consider the following two programs:
 
@@ -251,9 +251,9 @@ const lambda = new aws.lambda.CallbackFunction("mylambda", {
 });
 ```
 
-When `pulumi` starts executing `new aws.lambda.CallbackFunction`, it will analyze the JavaScript function code and will see that it uses the `obj` value. At that point in time, it will use whatever the current value is to serialize over. So, in the first example, it will serialize the value `{ a: 1, b: 2 }`, even though right after executing `new aws.lambda.CallbackFunction` the program code will update that value to `{ a: 3, b: 4}`. In the second example, the code will see the `{ a: 3, b: 4 }` value and will serialize that into the _run time_ code.
+In both programs, Pulumi serializes `{ a: 3, b: 4 }`. Pulumi reads `obj` only after the constructor returns, so in the first program the reassignment on the following line has already run. The position of the constructor call doesn't fix the value that gets captured.
 
-Promise-like values add some subtleties. When `pulumi` encounters a Promise value that it needs to serialize into the code for a Lambda, it will actually `await` that Promise. During that `await`, `node` can execute more of the program application code. This means that later code may execute, which then changes a value which is captured by the JavaScript function. If `pulumi` then serialized that value after serializing the Promise, it may see the mutated value.
+Promise-like values make the timing even less predictable. When `pulumi` encounters a Promise value that it needs to serialize into the code for a Lambda, it will actually `await` that Promise. During that `await`, `node` can execute more of the program application code. This means that later code may execute, which then changes a value which is captured by the JavaScript function. If `pulumi` then serialized that value after serializing the Promise, it may see the mutated value.
 
 For example, in the following code:
 
