@@ -56,7 +56,7 @@ Policy packs run on the machine that runs Pulumi, so the pack's runtime must be 
 |:-------------|:--------------------------------------------------------------------------------|
 | `nodejs` | Node.js |
 | `python` | Python. Pulumi creates the virtual environment and installs dependencies for you. |
-| `opa` | None. Pulumi CLI v3.227.0 and later install the OPA analyzer plugin on first use. |
+| `opa` | The OPA language plugin, installed with `pulumi plugin install language opa`. |
 
 **Pulumi's pre-built policy packs all run on Node.js.** If you enable CIS, PCI DSS, NIST, HITRUST, ISO 27001, CMMC, or Pulumi Best Practices, every machine that runs `pulumi preview` or `pulumi up` against a governed stack needs Node.js installed.
 
