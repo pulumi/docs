@@ -165,27 +165,6 @@
                      interleaved between the labels would break its first/last-child
                      rounding, and `peer-checked` uses a general sibling combinator that
                      would light up every later segment. */}}
-                <div class="flex flex-wrap items-center gap-3">
-                    {{/* The one rate-unit switch for every time-billed meter (IaC
-                         resources, ESC secrets, discovered resources), which the
-                         comparison table already states both ways ("$0.00025/hour",
-                         "$0.1825/month" as its subtext). It sits up here beside the
-                         edition toggle rather than under any one meter because it
-                         applies to all of them at once. Workflow minutes and Neo
-                         tokens are billed per use, so their rates don't change. */}}
-                    <div role="group" aria-label="Rate unit" class="btn-group shrink-0">
-                        <button type="button" data-calc-rate-unit="month" aria-pressed="true"
-                                class="btn btn-sm btn-outline text-sm aria-pressed:border-gray-500 aria-pressed:bg-gray-100">/mo</button>
-                        <button type="button" data-calc-rate-unit="hour" aria-pressed="false"
-                                class="btn btn-sm btn-outline text-sm aria-pressed:border-gray-500 aria-pressed:bg-gray-100">/hr</button>
-                    </div>
-                    <div role="group" aria-label="Edition" class="btn-group shrink-0">
-                        {{ range $i, $e := $calcEditions }}
-                        <button type="button" data-calc-edition="{{ $e.id }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
-                                class="btn btn-sm btn-outline text-sm aria-pressed:border-gray-500 aria-pressed:bg-gray-100">{{ $e.name }}</button>
-                        {{ end }}
-                    </div>
-                </div>
             </div>
 
             {{ range $m := $meters }}
