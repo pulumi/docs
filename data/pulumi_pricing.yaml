@@ -859,8 +859,8 @@ categories:
         available_from: pro
 
       - id: audit-log-export
-        name: Automated log export to S3
-        link: /docs/administration/guides/audit-logs/aws-s3/
+        name: Automated log export to S3 and Microsoft Sentinel
+        link: /docs/administration/guides/audit-logs/#automated-export
         available_from: enterprise
 
   - id: support
