@@ -6,7 +6,7 @@ h1: Customer managed keys
 menu:
   administration:
     parent: administration-concepts
-    weight: 10
+    weight: 11
     identifier: administration-concepts-customer-managed-keys
 aliases:
   - /docs/pulumi-cloud/customer-managed-keys/
