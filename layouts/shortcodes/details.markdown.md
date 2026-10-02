@@ -1,5 +1,0 @@
-<details>
-<summary>{{ .Get 0 }}</summary>
-
-{{ .Inner }}
-</details>

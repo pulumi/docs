@@ -1,3 +1,0 @@
-name: unit-testing-function-mock-typescript
-runtime: nodejs
-description: Unit tests that mock a provider function (aws.ec2.getAmi).

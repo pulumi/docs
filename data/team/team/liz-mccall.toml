@@ -1,9 +1,0 @@
-id = "liz-mccall"
-name = "Liz McCall"
-title = "Account Executive"
-weight = 1
-
-status = "active"
-
-[social]
-linkedin = "liz-mccall"

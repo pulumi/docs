@@ -1,3 +1,0 @@
-name: awsx-vpc-java
-runtime: java
-description: An example that creates a new VPC using the default settings.

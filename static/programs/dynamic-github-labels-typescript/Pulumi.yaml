@@ -1,3 +1,0 @@
-name: dynamic-github-labels-typescript
-runtime: nodejs
-description: A dynamic provider that manages GitHub labels using the GitHub REST API.

@@ -1,3 +1,0 @@
-name: aws-static-website-with-runtime-logic-typescript
-description: An example that demonstrates a few interesting things you can do at runtime with Pulumi.
-runtime: nodejs

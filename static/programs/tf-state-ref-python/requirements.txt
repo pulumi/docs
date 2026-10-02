@@ -1,3 +1,0 @@
-pulumi>=3.0.0,<4.0.0
-pulumi_terraform>=6.0.1,<7.0.0
-pulumi_eks>=3.9.1,<4.0.0
