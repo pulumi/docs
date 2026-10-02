@@ -1,9 +1,0 @@
-name: aws-acm-certificate-yaml
-runtime: yaml
-
-resources:
-  cert:
-    type: aws:acm:Certificate
-    properties:
-      domainName: example.com
-      validationMethod: DNS

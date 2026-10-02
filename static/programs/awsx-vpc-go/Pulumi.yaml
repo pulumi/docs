@@ -1,3 +1,0 @@
-name: awsx-vpc-go
-runtime: go
-description: An example that creates a new VPC using the default settings.

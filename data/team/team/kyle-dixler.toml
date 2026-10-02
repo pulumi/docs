@@ -1,9 +1,0 @@
-id = "kyle-dixler"
-name = "Kyle Dixler"
-title = "Software Engineer"
-weight = 1
-
-status = "active"
-
-[social]
-github = "dixler"

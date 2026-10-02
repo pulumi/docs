@@ -1,3 +1,0 @@
-name: unit-testing-function-mock-go
-runtime: go
-description: Unit tests that mock a provider function (aws.ec2.LookupAmi).

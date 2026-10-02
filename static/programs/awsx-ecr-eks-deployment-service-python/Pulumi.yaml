@@ -1,5 +1,0 @@
-name: awsx-ecr-eks-deployment-service-python
-runtime:
-  name: python
-  options:
-    virtualenv: venv

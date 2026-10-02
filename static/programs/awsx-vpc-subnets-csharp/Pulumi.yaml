@@ -1,3 +1,0 @@
-name: awsx-vpc-subnets-csharp
-runtime: dotnet
-description: An example that creates a new VPC with a custom subnet specification.

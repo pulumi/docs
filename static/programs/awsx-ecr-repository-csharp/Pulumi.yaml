@@ -1,3 +1,0 @@
-name: awsx-ecr-repository-csharp
-runtime: dotnet
-description: An example that creates a container-image repository in Amazon Elastic Container Registry (ECR).

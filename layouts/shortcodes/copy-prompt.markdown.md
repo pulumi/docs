@@ -1,3 +1,0 @@
-```text
-{{ trim .Inner "\n " }}
-```
