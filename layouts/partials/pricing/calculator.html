@@ -153,18 +153,14 @@
          be clipped by it. Nothing here has a background of its own to clip. */}}
     <div class="card grid grid-cols-1 lg:grid-cols-[1fr_22rem] divide-y lg:divide-y-0 lg:divide-x divide-gray-200 bg-white">
         <div class="p-6 md:p-8 flex flex-col gap-7">
-            <div class="flex flex-wrap items-start justify-between gap-3">
+            <div class="flex flex-wrap items-center justify-between gap-3">
                 {{/* An overline that is still the section's heading, so the card isn't
                      an unnamed landmark in the outline. It links to its own anchor —
                      the estimator is worth linking to from elsewhere on the page and
                      from a Slack thread, and a self-link is the conventional way to
                      hand someone that URL. Inherits the overline's color and only
-                     underlines on hover, so it reads as a heading first.
-
-                     h-8 matches the btn-sm edition toggle, and the row aligns to the
-                     top rather than the center, so the heading lines up with the
-                     edition toggle instead of the middle of the two stacked toggles. */}}
-                <h2 class="font-overline m-0 h-8 flex items-center">
+                     underlines on hover, so it reads as a heading first. */}}
+                <h2 class="font-overline m-0">
                     <a href="#calculator" class="no-underline hover:underline">Estimate your monthly cost</a>
                 </h2>
 
@@ -175,7 +171,7 @@
                      interleaved between the labels would break its first/last-child
                      rounding, and `peer-checked` uses a general sibling combinator that
                      would light up every later segment. */}}
-                <div class="flex flex-col items-end gap-2">
+                <div class="flex flex-wrap items-center gap-4">
                     <div role="group" aria-label="Edition" class="btn-group shrink-0">
                         {{ range $i, $e := $calcEditions }}
                         <button type="button" data-calc-edition="{{ $e.id }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
@@ -185,7 +181,7 @@
                     {{/* The one rate-unit switch for every time-billed meter (IaC
                          resources, ESC secrets, discovered resources), which the
                          comparison table already states both ways ("$0.00025/hour",
-                         "$0.1825/month" as its subtext). It sits under the edition
+                         "$0.1825/month" as its subtext). It sits beside the edition
                          toggle rather than under any one meter because it applies to
                          all of them at once. Workflow minutes and Neo tokens are
                          billed per use, so their rates don't change. */}}
