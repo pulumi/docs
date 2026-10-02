@@ -756,6 +756,13 @@ def test_rows_waiting_on_the_author_and_rows_with_no_unblock_are_never_silent():
     assert "approved 2026-09-28" in render.render_terminal(q)
     t = render.chip_title("approved:2026-09-28")
     assert "Its author merges it" in t and "2026-09-28" in t
+    # the lane team's approval parks it too, naming who approved
+    appr["reasons"][-1] = "approved-by-owner:jeffmerrick:2026-10-02"
+    html = render.render_board(q)
+    assert 'data-pr="3"' not in html and "approved by @jeffmerrick 2026-10-02" in html
+    assert "approved by @jeffmerrick 2026-10-02" in render.render_terminal(q)
+    t = render.chip_title("approved-by-owner:jeffmerrick,cnunciato:2026-10-02")
+    assert "@jeffmerrick, @cnunciato approved" in t and "on 2026-10-02" in t and "Its author merges it" in t
     appr["waiting_on_author"] = False
     stuck["actions"] = []
     assert "blocked: mergeable:dirty (no action available)" in render.render_terminal(q)
