@@ -1,14 +1,15 @@
 ---
 title: Customer-managed runners
-title_tag: Customer-managed runners | Pulumi Deployments
-meta_desc: Self-host Pulumi workflow runners on your own infrastructure — supplying cloud credentials and the full configuration reference for customer-managed runners.
+title_tag: Customer-managed runners | Pulumi Cloud
+meta_desc: Run Pulumi Deployments, Discovery scans, and audit policy evaluations on runners you host in your own infrastructure.
 menu:
-  deployments:
+  administration:
     name: Customer-managed runners
-    parent: deployments-concepts
-    identifier: deployments-concepts-customer-managed-runners
-    weight: 90
+    parent: administration-concepts
+    identifier: administration-concepts-customer-managed-runners
+    weight: 11
 aliases:
+- /docs/deployments/concepts/customer-managed-runners/
 - /docs/deployments/concepts/runners/
 - /docs/deployments/deployments/runners/
 - /docs/pulumi-cloud/deployments/customer-managed-agents/
@@ -17,24 +18,54 @@ aliases:
 - /docs/deployments/deployments/runs/
 pulumi_cloud_feature: customer-managed-runners
 ---
+Customer-managed runners let you run [Pulumi Deployments](/docs/deployments/), [Discovery](/docs/discovery-governance/concepts/discovery/) scans, and audit [policy evaluations](/docs/discovery-governance/concepts/policy-as-code/) on runners you host in your own infrastructure. By default, this work runs on [Pulumi-managed runners](/docs/deployments/concepts/pulumi-managed-runners/). You group your runners into one or more runner pools, then choose which pool each stack, cloud account, or policy group uses.
 
-By default, deployments run on [Pulumi-managed runners](/docs/deployments/concepts/pulumi-managed-runners/). Customer-managed workflow runners let you self-host that compute on your own infrastructure instead — for example, to run within a private network — while supporting the same deployment triggers and workflow types.
+Common reasons to use customer-managed runners:
 
-## Customer-managed workflow runners
+- **Private network access**: Runners can live inside fully private VPCs and reach resources that aren't accessible from the public internet.
+- **Credentials and data stay in your network**: Cloud provider credentials, scan data, and policy evaluation results are processed on hardware you control.
+- **Your own environment**: Run on hardware of your choice and configure the runner image and environment you need. Linux and macOS are supported.
+- **Mix and match**: Keep using Pulumi-managed runners for some work, such as development stacks, while routing private-network work to your own pools.
+- **Scale on your terms**: Create multiple pools and add runners to a pool to increase concurrency, up to 150 concurrent workflows per organization.
 
-Customer-Managed Workflow Runners allow you to self-host workflow runners, bringing the same power and flexibility as Pulumi-hosted workflows. Self-hosting your workflow runners comes with many benefits for deployments, [Discovery](/docs/discovery-governance/concepts/discovery/) scans, and [policy evaluations](/docs/discovery-governance/concepts/policy-as-code/):
+To create, scale, and assign a runner pool, see the [customer-managed runners setup guide](/docs/administration/guides/customer-managed-runners/). The rest of this page explains what runs on customer-managed runners, how each kind of work picks a pool, the execution model, how to supply cloud credentials, and the full configuration reference.
 
-- **Host anywhere**: You can host the workflow runners anywhere to manage infrastructure, even within your fully private VPCs
-- **Any hardware, any environment<sup>1</sup>**: Run the workflow runners on any hardware of your choice and configure the environment that meets your needs
-- **Mix & match**: You can use standard Pulumi-hosted workflows for your development stacks and use self-hosted Customer-Managed Workflow Runners for your private network infrastructure. You can mix and match to suit your unique needs
-- **Multiple pools**: You can set up multiple workflow runner pools, assign stacks to specific pools, and scale workflow runners dynamically to increase your workflow concurrency. Customers can have up to 150 concurrent workflows
-- **Meet compliance**: You can configure the workflow runners with the credentials needed to manage your infrastructure. This way your cloud provider credentials never leave your private network
+## What runs on customer-managed runners
 
-<sup>1</sup> *Currently Linux and macOS are supported*
+A runner can run three workflow types. All three are enabled by default, and the [`enabled_workflow_types`](#configuration-reference) setting lets you dedicate a runner to a subset.
 
-Customer-Managed Workflow Runners support all the [deployment triggers](/docs/deployments/concepts/triggers/) currently offered by Pulumi Deployments such as on-demand deployment from the Pulumi Cloud console, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API. They also support running Discovery scans and policy evaluations.
+| Workflow type | `enabled_workflow_types` value | What it covers |
+|---|---|---|
+| Deployments | `deployment` | Every Pulumi Deployments operation on a stack, from any [deployment trigger](/docs/deployments/concepts/triggers/): on-demand runs from the console or REST API, git push to deploy, [review stacks](/docs/deployments/concepts/review-stacks/), remote Automation API, scheduled [drift detection and remediation](/docs/deployments/concepts/drift/), and [time-to-live stacks](/docs/deployments/concepts/ttl/). |
+| Discovery scans | `insights_scan` | On-demand and scheduled [scans of a cloud account](/docs/discovery-governance/concepts/discovery/cloud-accounts/). |
+| Policy evaluations | `policy_evaluation` | Evaluations run by [audit policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/). Preventative policy groups run inside `pulumi up` and `pulumi preview` wherever the CLI runs, so they don't use a runner pool. |
 
-To set up, scale, and assign a customer-managed runner pool, see [Customer-Managed Workflow Runners](/docs/deployments/guides/customer-managed-workflow-runners/). The rest of this page covers how to supply cloud credentials to runners and the full configuration reference.
+## How work chooses a runner pool
+
+Each kind of work resolves its pool independently. If nothing more specific is set, it falls back to the organization's [default runner pool](/docs/administration/guides/customer-managed-runners/#setting-an-organization-default-pool), and then to the Pulumi hosted pool.
+
+- **Deployments**: the pool set in the stack's **Settings** > **Deploy** page (the **Deployment runner pool** dropdown), then the organization default, then the Pulumi hosted pool. See [Runner pools](/docs/deployments/concepts/settings/runner-pools/).
+- **Discovery scans**: a pool chosen for an individual scan, then the cloud account's pool, then the organization default, then the Pulumi hosted pool. Scheduled scans use the account's pool. See [Run scans and policy evaluations on customer-managed runners](/docs/discovery-governance/operations/customer-managed-runners/).
+- **Policy evaluations**: the audit policy group's pool, then the organization default, then the Pulumi hosted pool.
+
+Self-hosted Pulumi Cloud installations have no Pulumi hosted pool, so all of this work must run on a customer-managed runner pool.
+
+## Not supported on customer-managed runners
+
+The following features run only on Pulumi-managed runners:
+
+- **[Dependency caching](/docs/deployments/concepts/settings/dependency-caching/)**: if a stack is assigned to a customer-managed pool, the setting has no effect. Because you control the runner environment and image, you can manage caching yourself, for example by persisting package manager caches and the Pulumi plugin directory (`~/.pulumi/plugins`) across jobs, or by pre-baking them into your runner image.
+- **[Terraform remote execution](/docs/integrations/terraform/remote-execution/)**: Terraform runs can't be assigned to a customer-managed pool.
+- **Terraform module conversion** in Pulumi Cloud.
+- **[Pulumi Neo](/docs/ai/) tasks**.
+
+## Terminology
+
+The same concept appears under a few names across Pulumi tools:
+
+- The CLI, REST API, and [RBAC scopes](/docs/administration/reference/rbac-scopes/) call a runner pool an **agent pool** (for example, the `agent_pool:*` scopes and agent pool access tokens).
+- The runner binary is `customer-managed-workflow-agent`, and its configuration file is `pulumi-workflow-agent.yaml`.
+- The Pulumi Cloud console lists pools under **Workflow runner pools** in organization settings, and labels a stack's pool setting **Deployment runner pool**.
 
 ## Execution model
 
@@ -43,16 +74,23 @@ A workflow runner is a long-lived agent process. It polls Pulumi Cloud for pendi
 The [`deploy_target`](#configuration-reference) setting controls *how* the agent creates that per-job environment. It has two values — `docker` and `kubernetes` — and the choice determines the isolation model, the prerequisites, and how you scale.
 
 ```mermaid
-flowchart LR
-    Cloud[Pulumi Cloud]
-    Agent[Workflow runner agent]
-    Env[Per-job runner container or Pod]
+sequenceDiagram
+    participant Agent as Runner agent
+    participant Cloud as Pulumi Cloud
+    participant Env as Per-job container or Pod
 
-    Agent -->|1. Poll for work| Cloud
-    Cloud -->|2. Claim one job| Agent
-    Agent -->|3. Launch| Env
-    Env -->|4. Execute and stream results| Cloud
-    Env -.->|5. Discard after job| Agent
+    loop Until a job is available
+        Agent->>Cloud: Poll for pending work
+    end
+    Cloud-->>Agent: Job claimed exclusively by this agent
+    Agent->>Env: Launch isolated runner environment
+    activate Env
+    Env->>Cloud: Execute the job and stream results
+    Agent->>Cloud: Check job status (detects cancellation)
+    Env-->>Agent: Job finished
+    deactivate Env
+    Agent->>Env: Discard the environment
+    Note over Agent: Keeps running and polls for the next job
 ```
 
 ### Docker
@@ -75,7 +113,7 @@ This mode fits environments that already run Kubernetes and want the cluster to 
 
 ### One job per runner
 
-Regardless of the deploy target, each agent process runs **one deployment at a time** — plus, optionally, one Discovery scan or policy evaluation in parallel — and has no internal worker pool to configure. To run more jobs concurrently, add more agents to the pool rather than trying to scale a single agent. For the full set of scaling patterns, per-organization concurrency limits, and crash-recovery behavior, see [Scaling and concurrency](/docs/deployments/guides/customer-managed-workflow-runners/#scaling-and-concurrency) in the setup guide.
+Regardless of the deploy target, each agent process runs **one deployment at a time** — plus, optionally, one Discovery scan or policy evaluation in parallel — and has no internal worker pool to configure. To run more jobs concurrently, add more agents to the pool rather than trying to scale a single agent. For the full set of scaling patterns, per-organization concurrency limits, and crash-recovery behavior, see [Scaling and concurrency](/docs/administration/guides/customer-managed-runners/#scaling-and-concurrency) in the setup guide.
 
 ### Choosing between Docker and Kubernetes
 
@@ -87,41 +125,54 @@ Regardless of the deploy target, each agent process runs **one deployment at a t
 | **Scaling** | Run more agent processes (for example, more hosts or systemd units) | Run more agent replicas, or use `single_run` with a `Job`/`CronJob` for ephemeral per-job runners |
 | **Best fit** | A single VM or host where you want the simplest setup | An existing Kubernetes environment that should schedule and bound runner resources |
 
-## Dependency caching
+## Providing cloud credentials to runners
 
-Pulumi's [dependency caching](/docs/deployments/concepts/settings/dependency-caching/) is not available on customer-managed runner pools. If a stack is assigned to a customer-managed pool, the setting has no effect.
+Where a job gets its cloud provider credentials depends on its workflow type.
 
-Because you control the runner environment and image, you can manage caching yourself — for example, by persisting package manager caches and the Pulumi plugin directory (`~/.pulumi/plugins`) across jobs, or by pre-baking them into your runner image.
+### Deployments
 
-## Providing cloud credentials to workflow runners
+Deployments support three ways to supply credentials:
 
-{{% notes type="info" %}}
-For most users, Pulumi recommends [Pulumi ESC](/docs/esc/) for supplying cloud credentials to Deployments. However, if your customer-managed agents can't reach Pulumi Cloud over the network to use ESC, [Pulumi Deployments OIDC](/docs/deployments/guides/oidc/) is an appropriate solution. For a comparison, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/guides/cloud-credentials/).
-{{% /notes %}}
+1. **[Pulumi ESC](/docs/esc/)** (recommended): import an ESC environment into the stack's [environment](/docs/esc/guides/pulumi-iac/), and the Pulumi CLI opens it on the runner during the deployment. ESC environments can issue short-lived credentials themselves, for example with the [`aws-login`](/docs/esc/providers/login/aws-login/) provider.
+1. **[Pulumi Deployments OIDC](/docs/deployments/guides/oidc/)**: if your runners can't reach Pulumi Cloud to use ESC, configure OIDC in the stack's deployment settings. Pulumi Cloud issues an OIDC token for each deployment, and the runner exchanges it with your cloud provider before the Pulumi program runs. The runner needs outbound access to the cloud provider's token endpoint, such as AWS STS, and the cloud provider must trust the Pulumi OIDC issuer, just as with Pulumi-managed runners.
+1. **Host environment variables**: forward credentials that already exist on the runner host into each job with [`env_forward_allowlist`](#forwarding-host-environment-variables).
 
-You can provide cloud provider credentials to the workflow runners in two ways:
+For a comparison of ESC and Deployments OIDC, see [Supplying cloud credentials to Pulumi Deployments](/docs/deployments/guides/cloud-credentials/).
 
-1. Use [OpenID Connect (OIDC) to generate credentials](/docs/deployments/guides/oidc/)
-2. Directly provide credentials to workflow runners through environment variables configured in the host, or passing the environment variables when invoking the binary. Example:
+### Discovery scans
 
-   ```bash
-   VARIABLE=value customer-managed-workflow-agent run
-   ```
+Discovery scans always use the ESC environment attached to the [cloud account](/docs/discovery-governance/concepts/discovery/cloud-accounts/#configure-esc-credentials). The scanner opens that environment on your runner and uses the credentials it exports, so a scan on a customer-managed runner needs no extra credential configuration. Deployments OIDC doesn't apply to scans.
 
-   You also need to update the `pulumi-workflow-agent.yaml` [configuration file](#configuration-reference) by setting `env_forward_allowlist`. `env_forward_allowlist` expects an array of strings. Example:
+The runner needs network access to Pulumi Cloud, which it already has in order to poll for work, and to the cloud provider APIs being scanned.
 
-    ```yaml
-    token: pul-d2d2….
-    version: v0.0.5
-    env_forward_allowlist:
-        - key_one
-        - key_two
-        - key_three
-    ```
+### Policy evaluations
+
+Policy evaluations don't call cloud provider APIs. They read stack state and discovered resources from Pulumi Cloud, so they need no cloud credentials. If a policy pack needs configuration or secrets, [attach an ESC environment](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#esc-environments) to it. The runner opens that environment and passes its `environmentVariables` and `policyConfig` to the policy pack.
+
+### Forwarding host environment variables
+
+The `env_forward_allowlist` setting forwards named environment variables from the runner host into every job, whatever its workflow type. To use it, set the variables on the host, or pass them when you start the runner:
+
+```bash
+VARIABLE=value customer-managed-workflow-agent run
+```
+
+Then list the variable names in `pulumi-workflow-agent.yaml`:
+
+```yaml
+token: pul-d2d2….
+version: v0.0.5
+env_forward_allowlist:
+    - key_one
+    - key_two
+    - key_three
+```
+
+Don't forward variables that Pulumi sets for each job, such as `PULUMI_ACCESS_TOKEN`. A forwarded variable can replace the value Pulumi provides.
 
 ## Configuration reference
 
-All configuration for customer-managed workflow runners is done through the `pulumi-workflow-agent.yaml` file. This can be created manually or with the `customer-managed-workflow-agent configure` command.
+All configuration for customer-managed runners is done through the `pulumi-workflow-agent.yaml` file. This can be created manually or with the `customer-managed-workflow-agent configure` command.
 
 The workflow runner will look for `pulumi-workflow-agent.yaml` in the following directories:
 
@@ -285,9 +336,9 @@ health_threshold: ""
 syslog: false
 ```
 
-### Kubernetes-managed workflow runners
+### Kubernetes-managed runners
 
-For Kubernetes-native installations, configuration for customer-managed workflow runners is set on the Kubernetes Deployment that runs the workflow runner. Configuration values may be set as environment variables, or by mounting a configuration file in the workflow runner Pod.
+For Kubernetes-native installations, configuration for customer-managed runners is set on the Kubernetes Deployment that runs the workflow runner. Configuration values may be set as environment variables, or by mounting a configuration file in the workflow runner Pod.
 
 The following Kubernetes-specific configuration options are available:
 
