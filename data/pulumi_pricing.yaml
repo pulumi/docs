@@ -382,6 +382,24 @@ categories:
         link: /registry/packages/pulumiservice/
         available_from: free
 
+      - id: developer-portal
+        name: Developer portal
+        availability:
+          free: Host public templates
+          essentials: Host public templates
+          pro: Host private templates
+          enterprise: Host private templates
+
+      - id: private-registry
+        name: Private Registry
+        available_from: pro
+        hidden: true
+
+      - id: organization-templates
+        name: Organization templates in the Private Registry
+        available_from: pro
+        hidden: true
+
   - id: deployments
     name: Deployments & workflows
     group: product
@@ -675,29 +693,6 @@ categories:
         available_from: pro
         hidden: true
 
-  - id: idp
-    name: Internal Developer Platform
-    group: product
-    icon: custom/pulumi-idp
-    features:
-      - id: developer-portal
-        name: Developer portal
-        availability:
-          free: Host public templates
-          essentials: Host public templates
-          pro: Host private templates
-          enterprise: Host private templates
-
-      - id: private-registry
-        name: Private Registry
-        available_from: pro
-        hidden: true
-
-      - id: organization-templates
-        name: Organization templates in the Private Registry
-        available_from: pro
-        hidden: true
-
   - id: neo
     name: Infrastructure AI
     group: product
@@ -738,7 +733,7 @@ categories:
         available_from: pro
 
       - id: neo-byok
-        name: BYOK
+        name: Bring your own model provider
         link: /docs/ai/neo/model-providers/
         available_from: enterprise
 
