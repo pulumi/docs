@@ -5,7 +5,9 @@ interface EditionRates {
     iac_resource_month: number;
     iac_resource_hour: number;
     esc_secret_month: number;
+    esc_secret_hour: number;
     insights_resource_month: number;
+    insights_resource_hour: number;
 }
 
 interface CalculatorConfig {
@@ -17,9 +19,18 @@ interface CalculatorConfig {
     editions: Record<string, EditionRates>;
 }
 
+type RateUnit = "month" | "hour";
+
+// `hourly` is set only on the meters billed by time (IaC resources, ESC secrets,
+// discovered resources) — the ones the header's /mo-/hr toggle switches. Workflow
+// minutes and Neo tokens are billed per use and have no hourly form.
 interface Meter {
     rate: ((config: CalculatorConfig, edition: EditionRates) => number) | null;
     unit: string;
+    hourly?: {
+        rate: (edition: EditionRates) => number;
+        unit: string;
+    };
     valueText: (formatted: string) => string;
 }
 
@@ -27,11 +38,13 @@ const METERS: Record<string, Meter> = {
     iac_resources: {
         rate: (_c, e) => e.iac_resource_month,
         unit: "/resource/mo",
+        hourly: { rate: e => e.iac_resource_hour, unit: "/resource/hr" },
         valueText: v => `${v} resources`,
     },
     esc_secrets: {
         rate: (_c, e) => e.esc_secret_month,
         unit: "/secret/mo",
+        hourly: { rate: e => e.esc_secret_hour, unit: "/secret/hr" },
         valueText: v => `${v} secrets`,
     },
     neo_tokens: {
@@ -47,6 +60,7 @@ const METERS: Record<string, Meter> = {
     insights_resources: {
         rate: (_c, e) => e.insights_resource_month,
         unit: "/resource/mo",
+        hourly: { rate: e => e.insights_resource_hour, unit: "/resource/hr" },
         valueText: v => `${v} resources`,
     },
 };
@@ -137,6 +151,7 @@ function init(): void {
         row => METERS[row.dataset.calcMeter || ""] !== undefined,
     );
     const editionButtons = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-calc-edition]"));
+    const rateUnitButtons = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-calc-rate-unit]"));
 
     const el = <T extends HTMLElement>(selector: string): T | null => root.querySelector<T>(selector);
     const totalValue = el("[data-calc-total-value]");
@@ -172,15 +187,10 @@ function init(): void {
         return isFinite(raw) && raw > 0 ? raw : 0;
     };
 
-    // Only the IaC resources row has a unit toggle; every other row's rate
-    // unit is fixed, so this reads as "month" for them without needing a
-    // per-meter flag.
-    const rateUnitFor = (row: HTMLElement): "month" | "hour" => {
-        const pressed = row.querySelector<HTMLButtonElement>("[data-calc-rate-unit][aria-pressed='true']");
-        return (pressed?.dataset.calcRateUnit as "month" | "hour" | undefined) || "month";
+    const currentRateUnit = (): RateUnit => {
+        const pressed = rateUnitButtons.find(button => button.getAttribute("aria-pressed") === "true");
+        return (pressed?.dataset.calcRateUnit as RateUnit | undefined) || "month";
     };
-
-    const iacRow = (): HTMLElement | undefined => rows.find(row => row.dataset.calcMeter === "iac_resources");
 
     const recompute = (): void => {
         const edition = currentEdition();
@@ -194,17 +204,16 @@ function init(): void {
         // the reader is asking "what does this fleet cost for one hour" instead —
         // that view prices every resource at the flat published hourly rate, with
         // no tier of its own.
-        const row = iacRow();
-        const iacCredits =
-            row && rateUnitFor(row) === "hour"
-                ? (values.iac_resources || 0) * edition.iac_resource_hour
-                : creditsForResources(values.iac_resources || 0, edition);
-
-        let credits = iacCredits;
-        credits += (values.esc_secrets || 0) * edition.esc_secret_month;
+        const hourly = currentRateUnit() === "hour";
+        let credits = hourly
+            ? (values.iac_resources || 0) * edition.iac_resource_hour
+            : creditsForResources(values.iac_resources || 0, edition);
+        credits += (values.esc_secrets || 0) * (hourly ? edition.esc_secret_hour : edition.esc_secret_month);
         credits += (values.workflow_minutes || 0) * config.meters.workflow_minute;
         credits += (values.neo_tokens || 0) * config.meters.neo_tokens_per_million;
-        credits += (values.insights_resources || 0) * edition.insights_resource_month;
+        credits +=
+            (values.insights_resources || 0) *
+            (hourly ? edition.insights_resource_hour : edition.insights_resource_month);
 
         const overage = Math.max(0, credits - edition.included_credits);
         const total = edition.base_usd + overage;
@@ -224,6 +233,7 @@ function init(): void {
 
     const paintRates = (): void => {
         const edition = currentEdition();
+        const hourly = currentRateUnit() === "hour";
         rows.forEach(row => {
             const { id, rate } = parts(row);
             const meter = METERS[id];
@@ -234,9 +244,9 @@ function init(): void {
             }
             // Swaps in the other already-published rate rather than deriving one
             // from the other, so it can't drift from the comparison table the way
-            // iac_resource_month / 730 could. recompute() prices by it too.
-            if (id === "iac_resources" && rateUnitFor(row) === "hour") {
-                rate.textContent = `${usdRateHour.format(edition.iac_resource_hour)}/resource/hr`;
+            // monthly / 730 could. recompute() prices by it too.
+            if (hourly && meter.hourly) {
+                rate.textContent = `${usdRateHour.format(meter.hourly.rate(edition))}${meter.hourly.unit}`;
                 return;
             }
             rate.textContent = `${usdRate.format(meter.rate(config, edition))}${meter.unit}`;
@@ -299,14 +309,13 @@ function init(): void {
         // inputs, and they are chosen to produce exactly the edition's base price.
         // Seeding from the range would round them off through the curve first.
         syncRow(row, "number");
+    });
 
-        const rateUnitButtons = Array.from(row.querySelectorAll<HTMLButtonElement>("[data-calc-rate-unit]"));
-        rateUnitButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                rateUnitButtons.forEach(other => other.setAttribute("aria-pressed", String(other === button)));
-                paintRates();
-                recompute();
-            });
+    rateUnitButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            rateUnitButtons.forEach(other => other.setAttribute("aria-pressed", String(other === button)));
+            paintRates();
+            recompute();
         });
     });
 
