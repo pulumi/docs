@@ -29,6 +29,9 @@ columns:
       - label: Events
         href: /events/
         track: footer-events
+      - label: Whitepapers
+        href: /whitepapers/
+        track: footer-whitepapers
       - label: Releases
         href: /releases/
         track: footer-releases
