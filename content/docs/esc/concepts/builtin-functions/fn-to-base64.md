@@ -14,7 +14,7 @@ menu:
     weight: 10
 ---
 
-The `fn::toBase64` built-in function encodes a binary value using Base64. If the input to `fn::toBase64` is a secret, the encoded value is also a secret.
+The `fn::toBase64` built-in function encodes a string using standard Base64 encoding. If the input to `fn::toBase64` is a secret, the encoded value is also a secret.
 
 ## Declaration
 
@@ -26,8 +26,8 @@ fn::toBase64: value-to-encode
 
 | Property          | Type   | Description                                                       |
 |-------------------|--------|-------------------------------------------------------------------|
-| `value-to-encode` | binary | The value to encode.
+| `value-to-encode` | string | The string to encode.
 
 ### Returns
 
-The encoded data.
+The Base64-encoded string.
