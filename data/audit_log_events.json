@@ -995,6 +995,16 @@
       "authenticationFailure": false,
       "category": "organization",
       "deprecated": false,
+      "description": "A plan migration moved the organization to a different plan.",
+      "displayName": "Organization Plan Migrated",
+      "event": "org-plan-migrated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
       "description": "The organization was moved to the Pro plan.",
       "displayName": "Organization Upgraded To Pro",
       "event": "org-upgraded-to-pro",
