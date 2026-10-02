@@ -19,6 +19,7 @@
                     <img src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" class="size-8 rounded-full bg-violet-200 object-cover border border-gray-100" loading="lazy" decoding="async" />
                     <span class="body-sm text-service-black transition-colors hover:text-violet-primary">{{ .name }}</span>
                 </a>
+                {{- if eq .status "guest" }}<span class="badge badge-brand badge-secondary">Guest</span>{{ end -}}
             </span>
         {{- end -}}
     {{- end -}}
