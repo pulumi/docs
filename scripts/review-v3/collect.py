@@ -895,6 +895,33 @@ def my_team_memberships(gh: GhClient, repo_root: Path | None, login: str | None)
     return out
 
 
+def approver_team_memberships(gh: GhClient, repo_root: Path | None, prs: list[dict],
+                              me: str | None) -> dict[str, dict[str, bool | None]]:
+    """`{"org/slug": {login: is a member}}` for every human who has approved
+    an open PR, against every team review-routing.yml names. The analyzer
+    reads it to tell an approval from the lane's own team — after which a
+    human-authored PR is its author's to merge — from a drive-by one. GitHub
+    clears the team's review request when a member reviews for it, so the
+    request alone can't carry that. None means the token couldn't read it."""
+    logins = sorted({r["user"] for pr in prs for r in pr.get("reviews") or []
+                     if r.get("state") == "APPROVED" and r.get("user") and r.get("user_type") != "Bot"
+                     and r["user"].lower() != (me or "").lower()})
+    if not logins:
+        return {}
+    path = (repo_root or _REPO_ROOT) / ".github" / "review-routing.yml"
+    try:
+        import routing  # noqa: PLC0415
+        teams = routing.load_config(path).teams
+    except Exception:  # noqa: BLE001
+        return {}
+    out: dict[str, dict[str, bool | None]] = {}
+    for full in sorted(set(teams.values())):
+        org, _, slug = full.partition("/")
+        if org and slug:
+            out[full] = {login: gh.team_member(org, slug, login) for login in logins}
+    return out
+
+
 def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str] | None = None,
             since: str | None = None, cache_dir: Path | None = DEFAULT_CACHE_DIR,
             repo_root: Path = _REPO_ROOT, ai_override: str | None = None, workers: int = 6,
@@ -927,6 +954,7 @@ def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str
         "approver": approver,
         "my_teams": my_team_memberships(gh, repo_root, approver),
         "teams": routing_teams(gh, repo_root),
+        "team_approvers": approver_team_memberships(gh, repo_root, prs, approver),
         "filters": {"pr": numbers or [], "author": authors or [], "since": since},
         "open_count": len(listed),
         "prs": prs,

@@ -82,7 +82,8 @@ def fresh(number: int, **over) -> dict:
     return stampable(number, **over)
 
 
-def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None, teams=None, my_teams=None, **kw) -> dict:
+def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None, teams=None, my_teams=None,
+        team_approvers=None, **kw) -> dict:
     """Collect + analyze the specs over a snapshot. `aliases=None` computes
     the alias map from `repo_root`; the default is an empty set. `teams`
     stands in for collect's GitHub team lookup (unreadable by default), and
@@ -96,6 +97,8 @@ def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None,
             q["teams"] = teams
         if my_teams is not None:
             q["my_teams"] = my_teams
+        if team_approvers is not None:
+            q["team_approvers"] = team_approvers
         return analyze.analyze(q, kw.pop("cfg", cfg()), config=config, repo_root=repo_root or root,
                                aliases=(None if aliases is None else set(aliases)), today=TODAY, **kw)
 
@@ -837,6 +840,45 @@ def test_own_approval_on_a_human_pr_waits_on_the_author_to_merge():
     # the latest word wins: a send-back after the approval is a send-back
     s = row(q, 5)
     assert s["approved"] is None and "sent-back:2026-09-29" in s["reasons"] and s["waiting_on_author"] is True
+    assert q["counts"]["waiting-on-author"] == 2
+    assert_every_row_has_a_button(q)
+
+
+def test_the_lane_team_s_approval_waits_on_the_author_to_merge():
+    """GitHub clears the team's review request when a member reviews for it,
+    so an approved PR used to come back as a route row asking that same team
+    to review it again (#21704). An approval from a member of every owning
+    team, on the live head, parks a human-authored row like my own does."""
+    head = HEAD_V3
+    human = dict(author="jdoe", author_type="User")
+    blog = dict(labels=["review:no-blockers", "domain:blog"],
+                files=[_file("content/blog/p/index.md", ["A new sentence."], ["An old sentence."])])
+    both = [_file("content/docs/f.md", ["x"]), _file("content/blog/q/index.md", ["A new sentence."], ["An old sentence."])]
+    q = run([stampable(1, reviews=[AP("jmember", commit_id=head)], **human, **blog),
+             stampable(2, title="Pushed since", reviews=[AP("jmember", commit_id="0" * 40)], **human, **blog),
+             stampable(3, title="Not on the team", reviews=[AP("outsider", commit_id=head)], **human, **blog),
+             stampable(4, title="Two lanes, one approved", reviews=[AP("jmember", commit_id=head)], files=both, **human),
+             stampable(5, title="Two lanes, both approved", reviews=[AP("jmember", commit_id=head), AP("dmember", commit_id=head)],
+                       files=[_file("content/docs/g.md", ["x"]), _file("content/blog/r/index.md", ["A new sentence."], ["An old sentence."])],
+                       **human),
+             stampable(6, title="Bot", reviews=[AP("jmember", commit_id=head)], author="workprentice[bot]", author_type="Bot", **blog),
+             stampable(7, title="Unreadable membership", reviews=[AP("hidden", commit_id=head)], **human, **blog),
+             stampable(8, title="No commit_id", reviews=[AP("jmember")], **human, **blog)],
+            cfg=cfg(me=["docs"]),
+            team_approvers={"pulumi/docs-marketing-review": {"jmember": True, "outsider": False, "hidden": None, "dmember": False},
+                            "pulumi/docs-guild": {"jmember": False, "outsider": False, "hidden": None, "dmember": True}})
+    p = row(q, 1)
+    assert "approved-by-owner:jmember:2026-09-28" in p["reasons"]
+    assert p["waiting_on_author"] is True and not [a for a in p["actions"] if a["id"] in analyze.DECISION_IDS]
+    for n in (2, 3, 4, 7, 8):
+        r = row(q, n)
+        assert r["waiting_on_author"] is False, n
+        assert not [c for c in r["reasons"] if c.startswith("approved-by-owner:")], n
+    # one approver per owning team, in team order
+    assert "approved-by-owner:dmember,jmember:2026-09-28" in row(q, 5)["reasons"]
+    assert row(q, 5)["waiting_on_author"] is True
+    # act.py merges bot PRs, so a team-approved bot row is still on the board
+    assert row(q, 6)["waiting_on_author"] is False
     assert q["counts"]["waiting-on-author"] == 2
     assert_every_row_has_a_button(q)
 

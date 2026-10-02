@@ -62,7 +62,7 @@ HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
 PRIMARY_CODES = ("warnings", "outstanding", "cluster", "directional", "duplicate", "mergeable", "checks",
                  "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate",
-                 "sent-back", "approved", "unblock")
+                 "sent-back", "approved", "approved-by-owner", "unblock")
 # Whole codes (not families) that change what you'd click: `author:self`
 # takes the stamp and the send-back off the row, where `author:internal` is
 # background.
@@ -330,6 +330,12 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
         elif code == "sent-back":
             text = (f"You already sent this PR back on {detail or 'an earlier run'} and nothing has been pushed since, so it "
                     "is waiting on its author, not on you. It returns to the board when a new commit lands.")
+        elif code == "approved-by-owner":
+            who, _, when = detail.rpartition(":")
+            names = ", ".join(f"@{w}" for w in who.split(",") if w)
+            text = (f"{names} approved this PR for the team that owns its lane{f' on {when}' if when else ''}. Its author "
+                    "merges it, so while nothing has been pushed since, it is waiting on them, not on you. It returns to "
+                    "the board when a new commit lands.")
         elif code == "approved":
             text = (f"You approved this PR on {detail or 'an earlier run'}. Its author merges it, so while nothing has been "
                     "pushed since, it is waiting on them, not on you. It returns to the board when a new commit lands.")
@@ -1334,11 +1340,17 @@ def sent_back_on(p: dict) -> str:
 
 def waiting_why(p: dict) -> tuple[str, str]:
     """Why a `waiting_on_author` row is the author's move, as (verb, date):
-    ("sent back", …) off `sent-back:<date>`, else ("approved", …) off
-    `approved:<date>` — a human author merges what you approved."""
+    ("sent back", …) off `sent-back:<date>`, else ("approved by @x", …) off
+    `approved-by-owner:<logins>:<date>` when the lane team approved and you
+    didn't, else ("approved", …) off `approved:<date>` — a human author
+    merges what was approved."""
     when = sent_back_on(p)
     if when:
         return "sent back", when
+    owner = next((r.partition(":")[2] for r in p.get("reasons") or [] if r.startswith("approved-by-owner:")), "")
+    if owner and not any(r.startswith("approved:") for r in p.get("reasons") or []):
+        who, _, when = owner.rpartition(":")
+        return "approved by " + ", ".join(f"@{w}" for w in who.split(",") if w), when
     return "approved", next((r.partition(":")[2] for r in p.get("reasons") or [] if r.startswith("approved:")), "")
 
 
@@ -1385,7 +1397,7 @@ def waiting_on_author_html(prs: list[dict], queue: dict | None = None) -> str:
 
     items = _waiting_items(queue, rows, who)
     return (f'<section class="waiting"><div class="sec-head"><h2>Waiting on the author</h2><span class="count">{len(rows)}</span>'
-            '<span class="note">you sent these back, or approved them for their author to merge, and nothing has been pushed since · ✗ red CI · ⚠ conflict · '
+            '<span class="note">you sent these back, or you or the lane team approved them for their author to merge, and nothing has been pushed since · ✗ red CI · ⚠ conflict · '
             'they return to the groups above when a commit lands; render with --include-handed-off to act on one now</span></div>'
             '<ul>' + items + "</ul></section>")
 
