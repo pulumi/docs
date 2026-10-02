@@ -220,7 +220,7 @@ editions:
         - Custom policy packs
         - Neo scheduled tasks
         - Internal developer platform (IDP)
-        - Automated audit log export
+        - Audit logs
         - Drift detection and remediation
         - Time-to-live stacks
         - Customer-managed keys
@@ -245,6 +245,7 @@ editions:
         - Self-hosting available
         - Conformance packs for CIS, CIS Kubernetes, CMMC, HITRUST, ISO 27001, NIST, and PCI DSS
         - Automatic group & user sync (SCIM)
+        - Automated audit log export
         - Unlimited custom policy packs
         - Policy remediation
         - Contract pricing and invoicing
@@ -872,12 +873,12 @@ categories:
       - id: audit-logs
         name: Audit logs
         link: /docs/administration/concepts/audit-logs/
-        available_from: essentials
+        available_from: pro
 
       - id: audit-log-export
-        name: Automated log export to S3
-        link: /docs/administration/guides/audit-logs/aws-s3/
-        available_from: pro
+        name: Automated log export to S3 and Microsoft Sentinel
+        link: /docs/administration/guides/audit-logs/#automated-export
+        available_from: enterprise
 
   - id: support
     name: Support
