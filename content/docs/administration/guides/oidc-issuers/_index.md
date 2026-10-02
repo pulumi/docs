@@ -1,9 +1,8 @@
 ---
-title_tag: OIDC Issuers integration for Pulumi Cloud
-meta_desc: This page provides an overview of how to configure OIDC Issuers in Pulumi Cloud
-           to establish trust relationships with third-party OIDC providers.
-title: OIDC Issuers
-h1: OIDC Issuers
+title_tag: Configure OIDC issuers | Pulumi Cloud
+meta_desc: Register an OIDC issuer in Pulumi Cloud, configure its authorization policies, and exchange OIDC tokens for Pulumi access tokens.
+title: OIDC issuers
+h1: OIDC issuers
 menu:
   administration:
     parent: administration-guides
@@ -22,40 +21,19 @@ aliases:
 - /docs/administration/access-identity/oidc-issuers/
 ---
 
-**OIDC Issuers let outside services securely obtain Pulumi Cloud access tokens via OIDC.** Instead of provisioning a long-lived Pulumi access token and storing it as a secret in your CI system, build runner, or Kubernetes cluster, you register that external service as a trusted OIDC Issuer in Pulumi Cloud. Workloads on the service then present their own short-lived OIDC id_tokens and receive short-lived Pulumi access tokens in exchange — no hardcoded credentials.
+Register an external service, such as GitHub Actions, GitLab CI, Amazon EKS, or Google Kubernetes Engine, as a trusted OIDC issuer so its workloads can exchange their own short-lived OIDC tokens for Pulumi access tokens instead of storing a long-lived Pulumi token. For how token exchange, authorization policies, and token types work, see [OIDC issuers](/docs/administration/concepts/oidc-issuers/).
 
-## Overview
+## Ways to manage OIDC issuers
 
-Any third-party service that can issue OIDC id_tokens — GitHub Actions, GitLab CI, AWS EKS, Google GKE, and others — can be registered in Pulumi Cloud as a trusted **OIDC Issuer**. The flow is always the same:
-
-1. The external workload obtains an OIDC id_token from its host service.
-1. The workload exchanges that id_token with Pulumi Cloud for a short-lived Pulumi access token.
-1. The workload uses the Pulumi access token to run Pulumi operations.
-
-This direction matters: OIDC Issuers configure how *inbound* tokens from external services are accepted and translated into Pulumi tokens. They are not used to issue tokens *from* Pulumi Cloud to other services.
-
-## Ways to manage OIDC Issuers
-
-You can configure and manage OIDC Issuers in three ways:
+You can configure and manage OIDC issuers in three ways:
 
 - **Pulumi Cloud UI** — Navigate to **Settings → Access Management → OIDC Issuers**. This page walks through the UI flow.
-- **REST API** — See the [OIDC Issuers REST API reference](/docs/reference/cloud-rest-api/oidc-issuers/).
-- **Pulumi Service provider** — Manage OIDC Issuers as code using the [`OidcIssuer`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/oidcissuer/) resource in the Pulumi Service provider.
+- **REST API** — See the [OIDC issuers REST API reference](/docs/reference/cloud-rest-api/oidc-issuers/).
+- **Pulumi Service provider** — Manage OIDC issuers as code using the [`OidcIssuer`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/oidcissuer/) resource in the Pulumi Service provider.
 
-## Token types by edition
+## Configuring an OIDC issuer in the UI
 
-The available OIDC token types vary by Pulumi edition:
-
-- **Free**: `personal`
-- **Essentials**: `personal`, `organization`
-- **Pro**: `personal`, `organization`, `team`
-- **Enterprise**: `personal`, `organization`, `team`, `deployment-runner`
-
-When configuring authorization policies and requesting tokens, ensure you select a token type that is available for your edition.
-
-## Configuring an OIDC Issuer in the UI
-
-### Register the OIDC Issuer
+### Register the OIDC issuer
 
 Navigate to **Settings → Access Management → OIDC Issuers** and select **Register issuer**. Provide:
 
@@ -91,13 +69,13 @@ Navigate to **Settings → Access Management → OIDC Issuers** and select **Reg
 
 ### Configure the authorization policies
 
-When you register a new OIDC Issuer, Pulumi Cloud provisions a default authorization policy that denies every token exchange. You must add explicit **allow** policies before tokens can be exchanged.
+When you register a new OIDC issuer, Pulumi Cloud provisions a default authorization policy that denies every token exchange. You must add explicit **allow** policies before tokens can be exchanged.
 
-Each policy must state the **Token type** the policy issues (Organization, Team, Personal, or Deployment Runner) and the team or user the token is scoped to.
+Each policy must state the **Token type** the policy issues (Organization, Team, Personal, or Deployment Runner) and the team or user the token is scoped to. The token types available depend on your edition; see [Token types](/docs/administration/concepts/oidc-issuers/#token-types).
 
 We recommend verifying the token's audience and subject claims against the provider's security guidance. For example, a GitHub Actions policy commonly checks `aud` against `urn:pulumi:org:<org-name>` and `sub` against `repo:<organization>/<repo>:*`.
 
-When a token's claims match more than one policy, **deny always takes precedence over allow**, regardless of how the policies are ordered or how specific each policy's claim match is.
+When a token's claims match more than one policy, deny always takes precedence over allow. See [Authorization policies](/docs/administration/concepts/oidc-issuers/#authorization-policies).
 
 To target nested claims, define the claim path. Given this token payload:
 

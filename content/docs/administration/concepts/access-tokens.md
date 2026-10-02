@@ -147,7 +147,7 @@ A token complies with the policy if it has an expiration date and its total life
 
   ![The personal access tokens page showing a banner that one organization enforces a maximum access token expiry of 14 days.](/images/docs/pulumi-cloud/access-tokens/personal-tokens-policy-warning.png)
 
-* **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/guides/oidc-issuers/) and internally issued credentials such as deployment agent pool tokens.
+* **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/concepts/oidc-issuers/) and internally issued credentials such as deployment agent pool tokens.
 
 Requests rejected by the policy receive a `403 Forbidden` response whose message names the organization and its policy maximum, so it's clear why the request was refused and how to fix it: generate a new token whose expiry meets the policy. For example, a CLI operation using a non-compliant token fails with:
 
@@ -171,7 +171,7 @@ Both token types continue to work. The admin/standard distinction maps directly 
 
 ## OIDC issued tokens
 
-OIDC-issued access tokens generated in CI/CD workflows (such as GitHub Actions) do not receive admin privileges by default. To perform operations that require elevated access—such as creating or deleting stacks—you must explicitly request the admin scope when exchanging the OIDC token. For how to register and configure an issuer for these tokens, see [OIDC Issuers](/docs/administration/guides/oidc-issuers/).
+OIDC-issued access tokens generated in CI/CD workflows (such as GitHub Actions) do not receive admin privileges by default. To perform operations that require elevated access—such as creating or deleting stacks—you must explicitly request the admin scope when exchanging the OIDC token. For how OIDC token exchange works, see [OIDC issuers](/docs/administration/concepts/oidc-issuers/); to register and configure an issuer, see the [OIDC issuers guide](/docs/administration/guides/oidc-issuers/).
 
 For example:
 
