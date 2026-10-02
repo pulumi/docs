@@ -490,6 +490,26 @@ def test_collect_cache_serves_files_until_head_or_updated_moves():
         assert collect.gc_cache(cache, set()) >= 1 and not (cache / "43").exists()
 
 
+def test_reviews_are_live_even_on_a_cache_hit():
+    """An approval can land before `updated_at` moves. The run right after
+    `act.py --stamp` then reads the old cache key, and a cached review list
+    would miss the approval it just posted (#22047 stayed on the board as a
+    judge row instead of parking under "Waiting on the author")."""
+    spec = pr_spec(47)
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        snap, cache = root / "snap", root / "cache"
+        make_snapshot(snap, [spec])
+        gh = GhClient("pulumi/docs", "snapshot", snapshot_dir=snap)
+        assert collect.collect(gh, cache_dir=cache, repo_root=root, workers=1)["prs"][0]["reviews"] == []
+        approval = {"user": {"login": "CamSoper"}, "state": "APPROVED", "submitted_at": "2026-10-01T22:48:29Z",
+                    "commit_id": spec.get("head_sha") or "a" * 40}
+        make_snapshot(snap, [dict(spec, reviews=[approval])])   # same head, same updated_at
+        snapshot_path(snap, "GET", "repos/pulumi/docs/pulls/47/files", None).unlink()   # proves the cache hit
+        reviews = collect.collect(gh, cache_dir=cache, repo_root=root, workers=1)["prs"][0]["reviews"]
+        assert [r["state"] for r in reviews] == ["APPROVED"], reviews
+
+
 def test_collect_records_triage_prose_and_absent_review():
     prose = comment("<!-- TRIAGE_PROSE -->\n🔍 **Triage prose check**\n- [spelling] teh", BOT)
     q = collect_specs([pr_spec(44, labels=["review:trivial", "review:prose-flagged"], comments=[prose]),

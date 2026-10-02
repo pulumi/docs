@@ -873,8 +873,17 @@ def pending_judgment(queue: dict, pr: dict) -> str:
                 + (" The diff is small enough to read here, so it is below."
                    if diff else f' <a href="{esc(files_url(queue, pr["number"]))}">Read the diff on GitHub ↗</a>')
                 + "</p>" + diff + "</div>")
+    plural = "s" if len(items) != 1 else ""
+    if pr.get("verdict") == "blocked":
+        # The judge step skips blocked rows, and a judgment wouldn't answer
+        # these anyway: they wait on the author, or on whoever stands in for
+        # one on a PR a workflow opened.
+        who = ("No author will answer them here: fix the branch, ask @claude on the PR, or close it out."
+               if not (pr.get("author") or {}).get("can_revise", True) else "They are the author&#x27;s to answer: a fix, or "
+               "<code>@claude &lt;why&gt; #update-review</code>.")
+        return "".join(rows) + f'<p class="jfoot">{len(items)} open finding{plural} holding this row. {who}</p>'
     return ("".join(rows)
-            + f'<p class="jfoot">{len(items)} finding{"s" if len(items) != 1 else ""} nobody has ruled on yet. '
+            + f'<p class="jfoot">{len(items)} finding{plural} nobody has ruled on yet. '
               "A full <code>/pr-review</code> runs the judge step, which turns each badge into a recommended call "
               "with its reasoning and picks this row&#x27;s button; until then they are yours to weigh.</p>")
 
@@ -998,6 +1007,11 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
             tail = (f' <span class="v v-dim" title="You {verb} this PR{" on " + esc(when) if when else ""} and nothing has been '
                     'pushed since, so its buttons are off: it is the author\'s turn, not yours.">waiting on the author</span>')
         body.append(f'<div class="jbox stop"><div class="q">Blocked: {esc(", ".join(pr.get("blockers") or []) or "no blocker named")}{tail}</div></div>')
+        # The findings holding it, under the blocker that names them: a
+        # send-back, a close, or "ask @claude to fix them" is a decision
+        # about these, and the terminal already lists them.
+        if not pr.get("judgments") and not expanded:
+            body.append(pending_judgment(queue, pr))
     body.append(action_bar(pr, queue, expanded=expanded))
     if expanded:
         body.append(detail_sections(queue, pr))
