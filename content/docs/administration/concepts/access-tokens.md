@@ -147,7 +147,7 @@ A token complies with the policy if it has an expiration date and its total life
 
   ![The personal access tokens page showing a banner that one organization enforces a maximum access token expiry of 14 days.](/images/docs/pulumi-cloud/access-tokens/personal-tokens-policy-warning.png)
 
-* **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/guides/oidc-issuers/) and internally issued credentials such as deployment agent pool tokens.
+* **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/guides/oidc-issuers/) and internally issued credentials such as [customer-managed runner](/docs/administration/concepts/customer-managed-runners/) pool tokens.
 
 Requests rejected by the policy receive a `403 Forbidden` response whose message names the organization and its policy maximum, so it's clear why the request was refused and how to fix it: generate a new token whose expiry meets the policy. For example, a CLI operation using a non-compliant token fails with:
 

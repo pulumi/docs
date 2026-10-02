@@ -96,12 +96,12 @@ sections:
     description: Build selectors, follow relationships, interpret responses, and check whether an answer is complete.
 
 - type: button-cards
-  heading: Self-hosted
+  heading: Customer-managed runners
   cards:
   - icon: buildings
-    heading: Self-hosted discovery and policy
-    link: /docs/discovery-governance/operations/self-hosted/
-    description: Run Discovery scans and policy evaluations in your own environment using customer-managed workflow runners.
+    heading: Run on customer-managed runners
+    link: /docs/discovery-governance/operations/customer-managed-runners/
+    description: Run Discovery scans and audit policy evaluations on runners you host in your own infrastructure.
 
 - type: flat
   heading: Have questions?
