@@ -143,6 +143,7 @@ REASON_CODES = {
     "outstanding": "🚨/❓ rows still open on the author card",
     "sent-back": "the approver's own changes-requested review, by date; not a blocker (the approval supersedes it). With no push since, the row waits on the author",
     "approved": "the approver's own approval, by date. On a human-authored PR with no push since, the row waits on the author to merge",
+    "approved-by-owner": "<logins>:<date>: a member of every owning lane team approved the live head. On a human-authored PR the row waits on the author to merge",
     "unblock": "refused:<why>: act.py will not push to this head (dependabot, a generated-docs regen, a fork), so the conflict is the author's to resolve",
     "stances": "the brief lists editorial stances (blocks only with --strict-stances)",
     "mergeable": "GitHub mergeable_state when not clean/blocked",
@@ -606,6 +607,43 @@ def own_approval(pr: dict, approver: str | None) -> dict | None:
     return _own_review_record(pr, latest)
 
 
+def owner_approval(pr: dict, lanes: dict, ctx: dict) -> dict | None:
+    """Someone else's approval that settles every lane this PR touches:
+    `{by: [logins], at: YYYY-MM-DD}`, or None. Each owning team needs an
+    approval, as the reviewer's latest word and left on the live head, from
+    one of its members (`team_approvers`, collected per approving login).
+
+    GitHub clears the team's review request when a member reviews for it,
+    which used to bring an approved PR back as a route row asking that same
+    team to review it again. The approval is the hand-off record instead:
+    a push puts the row back, since the approval no longer describes it. A
+    review with no `commit_id` (an older collect) or a membership the token
+    couldn't read never counts, so the row stays on the board on a guess."""
+    members = ctx.get("team_approvers") or {}
+    head = (pr.get("head") or {}).get("sha") or ""
+    me = norm_login(ctx.get("approver")) if ctx.get("approver") else ""
+    teams = {(lanes.get("owners") or {}).get(d, {}).get("team") for d in lanes.get("domains") or []}
+    if not head or not teams or None in teams:
+        return None
+    latest: dict[str, dict] = {}
+    for r in sorted(pr.get("reviews") or [], key=lambda r: r.get("submitted_at") or ""):
+        if (r.get("user_type") or "") == "Bot" or r.get("state") in ("COMMENTED", "PENDING", "DISMISSED"):
+            continue
+        latest[r["user"]] = r
+    approvals = [r for u, r in latest.items()
+                 if r.get("state") == "APPROVED" and norm_login(u) != me and r.get("commit_id") == head]
+    by: list[str] = []
+    when: list[str] = []
+    for team in sorted(teams):
+        hit = next((r for r in approvals if (members.get(team) or {}).get(r["user"]) is True), None)
+        if hit is None:
+            return None
+        if hit["user"] not in by:
+            by.append(hit["user"])
+        when.append((hit.get("submitted_at") or "")[:10])
+    return {"by": by, "at": max(when) or "unknown"}
+
+
 def unblock_refusal(pr: dict) -> str | None:
     """Why act.py would refuse `--unblock` on this row, as a short slug for
     the `unblock:refused:<why>` chip, or None when a push is allowed.
@@ -795,6 +833,13 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if approved:
         reasons.append(f"approved:{approved['at']}")
         if author.get("type") != "bot" and not author_self and not approved["head_moved"]:
+            waiting = True
+    # -- the lane team's approval. Same rule as mine: a human author merges
+    # what the owning team approved, so the row is theirs until a push.
+    if author.get("type") != "bot" and not author_self:
+        owned = owner_approval(pr, lanes, ctx)
+        if owned:
+            reasons.append(f"approved-by-owner:{','.join(owned['by'])}:{owned['at']}")
             waiting = True
 
     def send_back(label: str, reason: str | None = None):
@@ -1578,7 +1623,7 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
         "cfg": cfg, "config": config, "mine": lanes_for_owner(owner, config, cfg.me),
         "include_infra": include_infra, "strict_stances": strict_stances, "cross": {},
         "today": today or datetime.now(timezone.utc).date(), "approver": approver, "handed_off": set(),
-        "teams": queue.get("teams") or {}, "ownership": {},
+        "teams": queue.get("teams") or {}, "team_approvers": queue.get("team_approvers") or {}, "ownership": {},
     }
     # Ownership first: a cluster's `mine` members are the rows that are mine
     # to sequence, which the per-row pass needs to already know.

@@ -413,6 +413,30 @@ def test_my_team_memberships_answer_which_lanes_are_mine():
     assert collect.my_team_memberships(gh, None, None) == {}  # no login, no calls
 
 
+def test_approver_team_memberships_cover_every_human_approver_but_me():
+    class _Gh:
+        def __init__(self):
+            self.asked = []
+
+        def team_member(self, org, slug, login):
+            self.asked.append((slug, login))
+            return slug == "docs-marketing-review" and login == "jeffmerrick"
+
+    def rv(user, state="APPROVED", kind="User"):
+        return {"user": user, "state": state, "user_type": kind}
+
+    prs = [{"reviews": [rv("jeffmerrick"), rv("CamSoper"), rv("someone", "CHANGES_REQUESTED")]},
+           {"reviews": [rv("claude[bot]", kind="Bot"), rv("jeffmerrick")]}]
+    gh = _Gh()
+    got = collect.approver_team_memberships(gh, Path(__file__).resolve().parents[2], prs, "camsoper")
+    assert got["pulumi/docs-marketing-review"] == {"jeffmerrick": True}
+    assert got["pulumi/docs-guild"] == {"jeffmerrick": False}
+    assert {who for _, who in gh.asked} == {"jeffmerrick"}  # not me, not a bot, not a send-back
+    gh = _Gh()
+    assert collect.approver_team_memberships(gh, None, [{"reviews": [rv("CamSoper")]}], "CamSoper") == {}
+    assert gh.asked == []  # nobody to ask about, no calls
+
+
 def test_routing_teams_asks_github_for_every_configured_team():
     with tempfile.TemporaryDirectory() as td:
         root = Path(td)
