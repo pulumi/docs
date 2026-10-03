@@ -68,7 +68,7 @@ The rest of this post explains each score and where the gaps are.
 
 ## Can the agent preview a change before applying it?
 
-A preview lets an agent see exactly what will be created, updated, or deleted before it commits. This is the single most important safety property for agent-driven infrastructure, because the preview is where a wrong guess gets caught instead of deployed.
+A preview lets an agent see exactly what will be created, updated, or deleted before it commits. This is one of the most important safety properties for agent-driven infrastructure, because the preview is where a wrong guess gets caught instead of deployed.
 
 - **Pulumi:** `pulumi preview` shows the planned changes, `--diff` shows property-level differences, and `--expect-no-changes` exits with an error if the program would change anything. That last flag is useful for an agent verifying a refactor.
 - **Terraform and OpenTofu:** `terraform plan -out=tfplan` saves a plan that `apply` later executes, so the thing the agent reviewed is the thing that runs.
@@ -108,7 +108,7 @@ Policy turns "the agent was told not to" into "the agent cannot". It is the cont
 
 Agents fix mistakes quickly when errors are specific and arrive early. A compiler error naming a wrong property and its type is easier for a model to act on than a failure discovered at apply time.
 
-Pulumi and CDK use general-purpose languages, so type checkers, linters, and language servers catch many mistakes before any preview runs. HCL is a smaller and simpler language that models handle well, and `terraform validate` plus `terraform plan` give quick feedback too. The [benchmark linked above](/blog/token-efficiency-vs-cognitive-efficiency-choosing-iac-for-ai-agents/) found HCL used fewer tokens while typed Pulumi TypeScript needed fewer repair attempts, so each approach wins on a different axis.
+Pulumi and CDK use general-purpose languages, so type checkers, linters, and language servers can catch many mistakes before any preview runs. The benchmark shows this for Pulumi TypeScript with `tsc --noEmit`; the broader point is general engineering practice rather than a measured result. HCL is a smaller and simpler language that models handle well, and `terraform validate` plus `terraform plan` give quick feedback too. The [benchmark linked above](/blog/token-efficiency-vs-cognitive-efficiency-choosing-iac-for-ai-agents/) found HCL used fewer tokens while typed Pulumi TypeScript recovered to deployable code more often after repair, so each approach wins on a different axis.
 
 Crossplane manifests are YAML validated against schemas, which catches structural errors but not logic errors. Composition functions written in Go or Python get the same compiler feedback as any code in those languages.
 
@@ -128,7 +128,7 @@ These options live in code or manifests, so a reviewer sees changes to them in t
 Agents increasingly connect through the Model Context Protocol (MCP) or an SDK instead of a shell. An interface designed for agents can expose safe operations and withhold dangerous ones.
 
 - **Pulumi:** the [Automation API](/docs/iac/concepts/automation-api/) drives deployments from code, and the [Pulumi MCP server](/docs/ai/mcp-server/) exposes tools for searching resources, reading policy findings, and launching Neo tasks. [Neo](/product/neo/) is Pulumi's infrastructure agent, and the Pulumi [agent skills](/docs/ai/skills/) work with clients including Claude Code, Codex, Cursor, and GitHub Copilot.
-- **Terraform and OpenTofu:** HashiCorp's `terraform-mcp-server` covers registry lookups and HCP Terraform workspaces and runs. Tools that change workspaces or act on runs stay disabled until you set `ENABLE_TF_OPERATIONS=true`, a sensible default.
+- **Terraform and OpenTofu:** HashiCorp's `terraform-mcp-server` covers registry lookups and HCP Terraform workspaces and runs. Destructive tools, such as those that delete workspaces, force-unlock state, or run actions, stay disabled until you set `ENABLE_TF_OPERATIONS=true`, a sensible default.
 - **AWS CDK:** the CDK Toolkit Library offers programmatic access, and the AWS IaC MCP server in the `awslabs/mcp` repository provides CloudFormation template validation, CDK documentation search, and deployment troubleshooting.
 - **Crossplane:** the Kubernetes API is the interface, so any agent that can use `kubectl` or a Kubernetes client can work with it, governed by Kubernetes RBAC.
 
@@ -137,7 +137,7 @@ Agents increasingly connect through the Model Context Protocol (MCP) or an SDK i
 No single tool wins every row, so match the tool to the workflow you want agents to own.
 
 - **Agents writing and refactoring application-adjacent infrastructure:** Pulumi and AWS CDK give agents typed code, real tests, and compiler feedback in a language they already know.
-- **Agents extending an existing Terraform or OpenTofu estate:** stay with HCL. The ecosystem is large, `plan` output is well understood, and `terraform test` plus the MCP server cover the loop.
+- **Agents extending an existing Terraform or OpenTofu estate:** stay with HCL. The ecosystem is large, `plan` output is well understood, and `terraform test` plus the MCP server cover most of the loop, with `validate` and `plan` supplying feedback while the agent writes.
 - **AWS-only teams with CloudFormation governance:** CDK change sets, Guard, and Hooks fit existing controls.
 - **Kubernetes-centric platform teams:** Crossplane lets agents request infrastructure through the Kubernetes API with RBAC and admission policy already in place.
 - **Multi-cloud, multi-team platforms with agents in the loop:** Pulumi's preview, policy, and Automation API combination in one tool reduces the number of pieces to assemble. Our [head-to-head comparisons](/docs/iac/comparisons/) cover migration and feature differences in more depth.
@@ -156,7 +156,7 @@ Agents can run `terraform apply` safely when they apply a reviewed, saved plan, 
 
 ### Is Pulumi or Terraform better for AI agents?
 
-It depends on the workflow. Terraform has a large HCL ecosystem and a simple language models handle well. Pulumi offers typed languages, native test frameworks, and an Automation API, which helps agents verify their own work. In our [token efficiency benchmark](/blog/token-efficiency-vs-cognitive-efficiency-choosing-iac-for-ai-agents/), HCL used fewer tokens and Pulumi TypeScript needed fewer repairs.
+It depends on the workflow. Terraform has a large HCL ecosystem and a simple language models handle well. Pulumi offers typed languages, native test frameworks, and an Automation API, which helps agents verify their own work. In our [token efficiency benchmark](/blog/token-efficiency-vs-cognitive-efficiency-choosing-iac-for-ai-agents/), HCL used fewer tokens and Pulumi TypeScript recovered to deployable code more often after repair.
 
 ### Do AI agents need an MCP server to manage infrastructure?
 
