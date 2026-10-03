@@ -97,7 +97,7 @@ An agent that can run tests can check its own work and iterate without a human. 
 
 ## Are there policy hooks that block unsafe changes before deploy?
 
-Policy turns "the agent was told not to" into "the agent cannot". It is the control that scales when many agents and many people change infrastructure at once.
+Policy turns "the agent was told not to" into "the agent cannot". Policy is the control that scales when many agents and many people change infrastructure at once.
 
 - **Pulumi:** [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) evaluates resources during `pulumi preview` and `pulumi up`. Enforcement levels are `advisory`, `mandatory`, and `remediate`, and a `mandatory` violation blocks the deployment.
 - **Terraform and OpenTofu:** HCP Terraform supports Sentinel and OPA policy enforcement and run tasks at pre-plan, post-plan, pre-apply, and post-apply stages. With OpenTofu or self-managed Terraform, you can run OPA or Conftest against the plan JSON in CI.
@@ -116,7 +116,7 @@ Crossplane manifests are YAML validated against schemas, which catches structura
 
 Guardrails limit the blast radius when an agent gets something wrong despite previews and policy. The goal is for deleting a database to require a deliberate human step.
 
-- **Pulumi:** the [`protect` resource option](/docs/iac/concepts/resources/options/protect/) makes deletion fail until it is removed, and `retainOnDelete` leaves the cloud resource in place when it leaves the Pulumi stack.
+- **Pulumi:** the [`protect` resource option](/docs/iac/concepts/resources/options/protect/) makes deletion fail until you remove it, and `retainOnDelete` leaves the cloud resource in place when it leaves the Pulumi stack.
 - **Terraform and OpenTofu:** `lifecycle { prevent_destroy = true }` makes any plan that would destroy the resource fail.
 - **AWS CDK:** `RemovalPolicy.RETAIN`, CloudFormation `DeletionPolicy`, and stack termination protection serve the same purpose.
 - **Crossplane:** `managementPolicies` can restrict a managed resource to actions such as `Observe`, so Crossplane watches a resource without updating or deleting it.
@@ -156,7 +156,7 @@ Agents can run `terraform apply` safely when they apply a reviewed, saved plan, 
 
 ### Is Pulumi or Terraform better for AI agents?
 
-It depends on the workflow. Terraform has a large HCL ecosystem and a simple language models handle well. Pulumi offers typed languages, native test frameworks, and an Automation API, which helps agents verify their own work. In our [token efficiency benchmark](/blog/token-efficiency-vs-cognitive-efficiency-choosing-iac-for-ai-agents/), HCL used fewer tokens and Pulumi TypeScript recovered to deployable code more often after repair.
+It depends on the workflow. Terraform has a large HCL ecosystem and a compact language that models handle well. Pulumi offers typed languages, native test frameworks, and an Automation API, which helps agents verify their own work. In our [token efficiency benchmark](/blog/token-efficiency-vs-cognitive-efficiency-choosing-iac-for-ai-agents/), HCL used fewer tokens and Pulumi TypeScript recovered to deployable code more often after repair.
 
 ### Do AI agents need an MCP server to manage infrastructure?
 
