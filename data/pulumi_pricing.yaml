@@ -128,6 +128,14 @@
 # number on the page identical. The estimator prices whole months and says so;
 # it has no utilization control and no hours constant.
 #
+# The `*_hour` keys are the one exception, and they are stored rather than
+# derived for the same reason: the estimator lets a reader flip every
+# time-billed meter (IaC resources, ESC secrets, discovered resources) to its
+# hourly figure — the "$0.00025/hour" each on-demand row already leads with —
+# and computing it as the monthly rate / 730 would round to a number that can
+# silently drift from that published figure the next time either rate changes
+# by hand. Keep both in sync yourself, the same as every other rate on this page.
+#
 # -----------------------------------------------------------------------------
 # ADDING OR RENAMING
 # -----------------------------------------------------------------------------
@@ -259,22 +267,31 @@ calculator:
       included_credits: 40
       included_resources: 500
       iac_resource_month: 0.1825
+      iac_resource_hour: 0.00025
       esc_secret_month: 0.50
+      esc_secret_hour: 0.000685
       insights_resource_month: 0.0185
+      insights_resource_hour: 0.000025
     pro:
       base_usd: 400
       included_credits: 400
       included_resources: 2000
       iac_resource_month: 0.365
+      iac_resource_hour: 0.0005
       esc_secret_month: 0.75
+      esc_secret_hour: 0.001
       insights_resource_month: 0.0365
+      insights_resource_hour: 0.00005
     enterprise:
       base_usd: 2000
       included_credits: 2000
       included_resources: 4750
       iac_resource_month: 0.5475
+      iac_resource_hour: 0.00075
       esc_secret_month: 1.00
+      esc_secret_hour: 0.00137
       insights_resource_month: 0.05475
+      insights_resource_hour: 0.000075
   # What a Credit buys, per meter, for the (i) tooltip on each card's "additional
   # usage" note. This is a *view* of the rates above, not a second copy of them:
   # `key` names one of the per-edition rates or shared meters, and the card
