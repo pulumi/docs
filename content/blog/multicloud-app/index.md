@@ -5,117 +5,181 @@ tags: [kubernetes, aws, azure, google-cloud, eks, aks, gke]
 category: tutorials
 meta_desc: "Run Kubernetes apps using a multicloud strategy. We'll walk through how to leverage multiple Kubernetes providers for deployments across AWS, Azure, and GCP."
 date: "2019-08-14"
-
-
+updated: "2026-09-26"
 ---
 
-Kubernetes clusters from the managed platforms of AWS Elastic Kubernetes Service (EKS),
-Azure Kubernetes Service (AKS), and GCP Google Kubernetes Engine (GKE) all vary in configuration, management, and resource
-properties. This variance creates unnecessary complexity in cluster provisioning and application
-deployments, as well as for CI/CD and testing.
-
-Additionally, if you wanted to deploy the *same* app across multiple clusters
-for specific use cases or test scenarios across providers, subtleties
-such as LoadBalancer outputs and cluster connection settings can be a nuisance
-to manage.
-
-In this post, we'll see how to use Pulumi to deploy the `kuard` app across EKS,
-AKS, GKE and a local Kubernetes cluster, such as Docker Desktop or a self-managed cluster.
-We'll spin up the clusters in each provider, launch the app,
-and manage both cluster and app using the TypeScript programming language.
+Multi-cloud Kubernetes means running clusters on more than one cloud provider, typically some mix of Amazon EKS, Azure AKS, and Google GKE, and managing them through one consistent workflow instead of three separate ones. Teams take this on to avoid vendor lock-in, meet data-residency requirements, or let each application team run on the cloud that fits its workload.
 
 <!--more-->
 
-[View the full example and code.][multicloud-example]
+The catch is that EKS, AKS, and GKE each provision and configure clusters differently, so treating them as one target complicates cluster provisioning, application deployment, and CI/CD. If you also need to run the *same* application across providers for testing or resilience, details like load balancer outputs and cluster connection settings become one more thing to keep in sync by hand.
 
-<center>![](multicloud.png)</center>
+This post shows how to provision Kubernetes clusters on EKS, AKS, and GKE with Pulumi, and how to deploy the same application to all three from one codebase. We'll use TypeScript for the full walkthrough, with a Python equivalent for the AWS cluster to show the pattern carries across languages.
 
-## Cluster Provisioning
+<center>![Architecture diagram showing an application deployed identically across EKS, AKS, and GKE clusters](multicloud.png)</center>
 
-Provisioning Kubernetes **clusters** and their IaaS resources is made simple
-through Pulumi's various SDKs for the cloud providers:
+## Why run Kubernetes across multiple clouds?
 
-- AWS: [`pulumi/eks`](https://github.com/pulumi/eks)
-- GCP: [`pulumi/gcp`](https://github.com/pulumi/gcp)
-- Azure: [`pulumi/azure`](https://github.com/pulumi/pulumi-azure)
+A few situations make multi-cloud Kubernetes worth the extra coordination:
 
-[Crosswalk for AWS][crosswalk-aws] further allows us to leverage the Pulumi
-libraries of common infrastructure for AWS to simplify cloud resource
-instantiation and management while gaining best-practices as defaults.
-Check out the [`pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) SDK to get
-started.
+- **Avoiding lock-in.** Workloads that run identically on EKS, AKS, and GKE keep you free to negotiate on price or move a workload if a provider's roadmap or pricing changes.
+- **Meeting compliance and data-residency requirements.** Some customers or regulations require workloads to run on a specific provider or in a specific region that only one cloud serves well.
+- **Matching teams to the cloud they already use.** In a company built through acquisition, or one where different teams standardized on different clouds, multi-cloud Kubernetes lets each team keep its cloud without forking the deployment pipeline.
+- **Testing across environments.** Running the same app on EKS, AKS, and GKE surfaces provider-specific bugs, such as differences in default storage classes or load balancer behavior, before they reach customers.
 
-For local clusters such as those that are self-managed, or provisioned by a
-tool like Docker Desktop, Pulumi can still deploy workloads to these these
-systems given that the [`pulumi/kubernetes`][pulumi-kubernetes] workload SDK only requires a valid `kubeconfig`
-file. For more information on Pulumi's Kubernetes support, check out the [Kubernetes reference page](/registry/packages/kubernetes/).
+## What are the challenges of multi-cloud Kubernetes?
 
-We will use the cloud SDKs to provision the managed Kubernetes clusters. Given
-that we're working with real code, we are afforded developer benefits such as:
-code linting, type checking, IDE hints and completion,
-abstractions and inheritance.
+Multi-cloud Kubernetes is a real tradeoff, not a free upgrade. Cluster provisioning APIs, IAM models, default networking, and managed add-ons differ across EKS, AKS, and GKE, so a setup that is one API call on one provider can be several resources on another. Application manifests are mostly portable, but anything that touches a provider's native load balancer, storage class, or identity system needs provider-specific configuration. Running clusters on three providers also means three sets of the provider's own operational quirks, upgrade cadences, and support channels to track. Most teams find multi-cloud Kubernetes worth it only once the reason for doing it (compliance, team autonomy, or genuine lock-in risk) is concrete, rather than adopting it as a default posture.
 
-Leveraging these development features creates the opportunity to encapsulate
-the finer-grained details and settings, and expose the capability to create
-clusters as simple as the following code:
+## How do you provision Kubernetes clusters across EKS, AKS, and GKE with Pulumi?
 
-![Cluster](clusters.png)
+Pulumi provisions each provider's managed Kubernetes clusters using ordinary TypeScript, Python, Go, C#, Java, or YAML, so cluster definitions get the same code review, testing, and reuse as the rest of your infrastructure.
 
-## Workload Deployment
+Provision an EKS cluster with the [`@pulumi/eks`](https://www.pulumi.com/registry/packages/eks/) package, which wraps the underlying VPC, IAM, and node group resources behind a single component:
 
-Once the clusters are provisioned, we can leverage the
-[`pulumi/kubernetes`][pulumi-kubernetes] SDK to manage the Kubernetes
-**workloads** that will be deployed into the clusters.
+```typescript
+import * as eks from "@pulumi/eks";
 
-The `pulumi/kubernetes` SDK uses the official Kubernetes [client-go][client-go]
-library to interact with Kubernetes. Therefore, Pulumi can work pretty
-much anywhere `kubectl` works, even if Pulumi was not used to create the cluster.
+const eksCluster = new eks.Cluster("eks-cluster", {
+    instanceType: "t3.medium",
+    desiredCapacity: 2,
+    minSize: 1,
+    maxSize: 3,
+});
 
-![For Loop](forloop.png)
+export const eksKubeconfig = eksCluster.kubeconfig;
+```
 
-## Summary
+Provision an AKS cluster with the [`azure-native`](https://www.pulumi.com/registry/packages/azure-native/) provider, which maps directly onto the Azure Resource Manager API:
 
-As shown in the code samples, it becomes relatively easy to provision and
-manage Kubernetes clusters across multiple clouds, as well as deploy workloads to the cluster
-regardless if they are managed by a cloud provider, or self-managed.
+```typescript
+import * as resources from "@pulumi/azure-native/resources";
+import * as containerservice from "@pulumi/azure-native/containerservice";
 
-The various SDKS allow you to leverage industry standard best-practices and
-defaults, in addition to allowing you to further configure and customize how your clusters
-and apps are managed.
+const resourceGroup = new resources.ResourceGroup("aks-rg");
 
-Testing apps across various providers in this form allows you to abstract away
-the details of provider specific implementations, and focus on how your app
-operates in the various contexts.
+const aksCluster = new containerservice.ManagedCluster("aks-cluster", {
+    resourceGroupName: resourceGroup.name,
+    agentPoolProfiles: [{
+        name: "agentpool",
+        count: 2,
+        vmSize: "Standard_DS2_v2",
+        mode: "System",
+    }],
+    dnsPrefix: "multicloudaks",
+    identity: { type: "SystemAssigned" },
+});
+```
 
-## Learn More
+Provision a GKE cluster with the [`gcp`](https://www.pulumi.com/registry/packages/gcp/) provider:
 
-If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes multi-cloud capabilities through code, [get started today](/docs/get-started/). Pulumi is open source and free to
-use.
+```typescript
+import * as gcp from "@pulumi/gcp";
 
-For further examples on how to use Pulumi to create Kubernetes
-clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials](/registry/packages/kubernetes/how-to-guides/).
+const gkeCluster = new gcp.container.Cluster("gke-cluster", {
+    initialNodeCount: 2,
+    nodeConfig: {
+        machineType: "e2-medium",
+        oauthScopes: [
+            "https://www.googleapis.com/auth/cloud-platform",
+        ],
+    },
+});
+```
 
-As always, you can check out our code on
-[GitHub](https://github.com/pulumi), follow us on
-[Twitter](https://twitter.com/pulumicorp), subscribe to our [YouTube
-channel](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw), or
-join our [Community Slack](https://slack.pulumi.com/) channel if you have
-any questions, need support, or just want to say hello.
+The same EKS cluster in Python looks like this, using [`pulumi_eks`](https://www.pulumi.com/registry/packages/eks/installation-configuration/?section=python):
 
-If you'd like to chat with our team, or get hands-on assistance with
-migrating your existing configuration code to Pulumi, please don't hesitate to [drop us a line](/contact/).
+```python
+import pulumi
+import pulumi_eks as eks
 
-We also encourage you to watch Pulumi team member [Levi Blackstone][levi-blackstone]
-demo this post in an episode of the [Kubernetes Community Meeting](https://kubernetes.io/community).
+cluster = eks.Cluster("eks-cluster",
+    instance_type="t3.medium",
+    desired_capacity=2,
+    min_size=1,
+    max_size=3)
 
-{{< youtube "EyW2m5Xa_BQ?rel=0&start=67" >}}
+pulumi.export("kubeconfig", cluster.kubeconfig)
+```
 
-<!-- markdownlint-disable url -->
-[multicloud-example]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud
-[levi-blackstone]: /blog/author/levi-blackstone/
-[pulumi-kubernetes]: https://github.com/pulumi/pulumi-kubernetes
-[client-go]: https://github.com/kubernetes/client-go
-[crosswalk-aws]: /docs/iac/clouds/aws/guides/
-<!-- markdownlint-enable url -->
+Each block above is a normal Pulumi resource, so it gets the same `pulumi preview`, unit tests, and code review as any other change in the stack, rather than living in a separate cluster-provisioning tool.
+
+## How do you deploy the same application to multiple Kubernetes clusters?
+
+Once the clusters exist, the [`kubernetes`](https://www.pulumi.com/registry/packages/kubernetes/) provider deploys workloads to any of them using the same resource definitions, by pointing a separate provider instance at each cluster's kubeconfig:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as k8s from "@pulumi/kubernetes";
+
+interface ClusterTarget {
+    name: string;
+    kubeconfig: pulumi.Output<string>;
+}
+
+const clusters: ClusterTarget[] = [
+    { name: "eks", kubeconfig: eksCluster.kubeconfig },
+    { name: "aks", kubeconfig: aksKubeconfig },
+    { name: "gke", kubeconfig: gkeKubeconfig },
+];
+
+for (const cluster of clusters) {
+    const provider = new k8s.Provider(`${cluster.name}-provider`, {
+        kubeconfig: cluster.kubeconfig,
+    });
+
+    new k8s.apps.v1.Deployment(`${cluster.name}-kuard`, {
+        spec: {
+            replicas: 1,
+            selector: { matchLabels: { app: "kuard" } },
+            template: {
+                metadata: { labels: { app: "kuard" } },
+                spec: {
+                    containers: [{
+                        name: "kuard",
+                        image: "gcr.io/kuar-demo/kuard-amd64:blue",
+                        ports: [{ containerPort: 8080 }],
+                    }],
+                },
+            },
+        },
+    }, { provider });
+}
+```
+
+Because the loop body is ordinary code, adding a fourth provider, or a local cluster reachable through a `kubeconfig` file (Docker Desktop, kind, or a self-managed cluster), means adding one more entry to the `clusters` array rather than writing a new deployment pipeline. The full, runnable version of this example, including cluster provisioning for all three providers, is in the [`kubernetes-ts-multicloud`](https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud) example.
+
+## Which tools manage multi-cloud Kubernetes fleets?
+
+Provisioning the clusters is one job; keeping workloads scheduled and consistent across them once they exist is another. These are complementary layers, not competing choices:
+
+| Layer | What it does | Example tools | Best for |
+| --- | --- | --- | --- |
+| Fleet and control-plane federation | Coordinates workload placement and policy across clusters that already exist, from one control plane | [Karmada](https://karmada.io/), Google Anthos, Rancher, Gardener | Teams that already run multiple clusters and want centralized scheduling and policy enforcement |
+| Kubernetes-native infrastructure as code | Manages cloud infrastructure through Kubernetes custom resources and controllers | [Crossplane](https://www.crossplane.io/) | Teams standardized on GitOps and the Kubernetes API as the control plane for infrastructure |
+| General-purpose infrastructure as code | Provisions the clusters themselves, and every supporting resource around them (networking, IAM, node pools), in the same codebase and language as the rest of your infrastructure | [Pulumi](https://www.pulumi.com/registry/packages/kubernetes/) | Teams that want the clusters, the workloads, and the surrounding cloud resources under one review and testing process |
+
+A fleet tool like Karmada doesn't create the EKS, AKS, and GKE clusters it schedules onto; something has to provision those first. Pulumi is a good fit for that provisioning step, and it can sit alongside a fleet-management tool rather than replacing it. For teams that want to govern policy and cost across the clusters Pulumi provisions, [Pulumi Discovery](https://www.pulumi.com/docs/discovery-governance/) gives visibility into resources across all three providers from one inventory.
+
+## Where to go next
+
+This post covers provisioning and deploying across EKS, AKS, and GKE directly. If your goal is closer to sharing a golden-path Kubernetes setup across teams through a reusable component and the [Automation API](https://www.pulumi.com/docs/iac/concepts/automation-api/), see [Multicloud with Kubernetes and Pulumi](/blog/multicloud-with-kubernetes-and-pulumi/), which walks through building a customizable, self-service Kubernetes provisioning experience for other teams to consume.
+
+To get started with Kubernetes on Pulumi:
+
+- [Get started with Pulumi and Kubernetes](https://www.pulumi.com/docs/iac/get-started/kubernetes/)
+- [Kubernetes provider reference](https://www.pulumi.com/registry/packages/kubernetes/)
+- [EKS package reference](https://www.pulumi.com/registry/packages/eks/)
+- [Manage secrets and configuration across clusters with Pulumi ESC](https://www.pulumi.com/docs/esc/)
+
+## Is multi-cloud Kubernetes worth the added complexity?
+
+It depends on why you're considering it. If the driver is a concrete requirement, such as a customer contract that specifies a provider, a compliance rule tied to a region only one cloud serves, or a team that already standardized on a different cloud after an acquisition, the coordination cost is worth paying. If the driver is "just in case we need to switch providers someday," the ongoing cost of testing and operating three cluster types usually outweighs a lock-in risk that may never materialize. Start with the workloads that actually need to run on more than one cloud, rather than replicating everything by default.
+
+## Can I use the same Kubernetes manifests across EKS, AKS, and GKE?
+
+Mostly. Core Kubernetes resources, such as Deployments, Services of type `ClusterIP`, and ConfigMaps, behave the same way regardless of provider, because they're implemented by Kubernetes itself rather than the cloud. Anything that touches provider-specific infrastructure differs: a Service of type `LoadBalancer` provisions an AWS Network Load Balancer, an Azure Load Balancer, or a Google Cloud Load Balancer depending on the cluster, each with its own annotations for things like internal-only access or SSL termination. Persistent volume storage classes also differ by default (`gp3` on EKS, `managed-csi` on AKS, `standard-rwo` on GKE). Plan for a small provider-specific configuration layer around an otherwise-shared manifest, rather than expecting one manifest to be entirely provider-agnostic.
+
+## Do I still need a tool like Karmada if I'm provisioning clusters with Pulumi?
+
+Only if you need active workload scheduling and policy enforcement across clusters that are already running. Pulumi provisions the clusters and can deploy the same workload definitions to each one, which covers most teams running a handful of clusters with a known, mostly static placement. A fleet-management tool like Karmada earns its keep once you're actively rebalancing workloads between clusters based on capacity or failures, or enforcing cluster-wide policy from a single control plane across a larger fleet. The two aren't mutually exclusive: Pulumi can provision the clusters that Karmada then manages.
