@@ -9,6 +9,10 @@
 
 set -o nounset -o errexit -o pipefail
 
+# Resolve the script directory before any cd, so sibling scripts are found even
+# when this script is invoked with a relative path (e.g. ./scripts/run_docfx.sh).
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 DOCFX_CONFIG="${DOCFX_CONFIG:-docfx.json}"
 DOCFX_BUILD_PROJECTS="${DOCFX_BUILD_PROJECTS:-../pulumi-dotnet/sdk/Pulumi/Pulumi.csproj ../pulumi-dotnet/sdk/Pulumi.Automation/Pulumi.Automation.csproj}"
 DOCFX_OUT="${DOCFX_OUT:-../static-prebuilt/docs/reference/pkg/dotnet}"
@@ -171,7 +175,7 @@ sed -i -E 's/"relative_path": "([^"]+)"/"relative_path": "\L\1\E"/g' "$DOTNET_OU
 # docfx/pulumi-template/partials/head.tmpl.partial for why this can't be
 # done inside the Mustache template itself.
 step "Injecting SEO head metadata (canonical, truncated description, JSON-LD)"
-python3 "$(dirname "$0")/docfx_seo_postprocess.py" \
+python3 "${SCRIPT_DIR}/docfx_seo_postprocess.py" \
     "$DOTNET_OUT" \
     "https://www.pulumi.com/docs/reference/pkg/dotnet" \
     ${DOCFX_SDK_VERSION:+--sdk-version "$DOCFX_SDK_VERSION"}
