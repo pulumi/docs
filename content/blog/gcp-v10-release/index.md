@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Google Cloud Provider Version 10.0.0"
-date: 2026-10-01T09:00:00-07:00  # TODO: set to GA day
+date: 2026-10-01T09:00:00-07:00  # TODO(GA): set to GA day
 draft: false
 meta_desc: "Release of the v10 version of the Pulumi Provider for Google Cloud, with a migration guide and an agent skill to help you upgrade."
 feature_image: feature.png
@@ -39,7 +39,7 @@ The [migration guide](/registry/packages/gcp/how-to-guides/10-0-migration/) acco
 
 We have taught the `provider-upgrade` skill in [Pulumi Agent Skills](/blog/pulumi-agent-skills/) about every v10 breaking change. You can use it from [Pulumi Neo](/docs/ai/neo/) or from any popular coding agent. Before it bumps the provider, it scans your stack and code for the changes that affect you, and it stops to ask before anything that would replace or delete live infrastructure. Then it upgrades the dependency, runs `pulumi preview` until the diff is explained, and leaves `pulumi up` to you.
 
-<!-- TODO(Neo): the Neo prompt, plus screenshots of the prompt, the plan and the resulting pull request, following the v9 post. Needs pulumi/agent-skills#65 merged. -->
+<!-- TODO(GA, Neo): the Neo prompt, plus screenshots of the prompt, the plan and the resulting pull request, following the v9 post. Needs pulumi/agent-skills#65 merged. -->
 
 In Neo, ask: "Upgrade this project to pulumi-gcp v10." Neo picks the `provider-upgrade` skill for you; there is nothing to install or name.
 
@@ -66,7 +66,7 @@ In Pi, and in any other agent that supports the [Agent Skills](https://agentskil
 npx skills add pulumi/agent-skills/pulumi --skill provider-upgrade -a pi
 ```
 
-Then ask Pi to upgrade the provider to v10, or trigger the skill with `/skill:provider-upgrade`. <!-- TODO: verify the Pi trigger syntax. -->
+Then ask Pi to upgrade the provider to v10, or trigger the skill with `/skill:provider-upgrade`.
 
 ### Why upgrade
 
