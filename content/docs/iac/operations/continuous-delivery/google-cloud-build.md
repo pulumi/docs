@@ -415,10 +415,10 @@ FROM pulumi/pulumi-nodejs:latest
 
 # Pre-install each provider plugin your program uses, pinned to the version
 # from your dependency lockfile — for example, the Google Cloud provider:
-RUN pulumi plugin install resource gcp 9.0.0
+RUN pulumi plugin install resource gcp 10.0.0
 ```
 
-Push the image to [Artifact Registry](https://cloud.google.com/artifact-registry/docs) and reference it as the step `name` in place of `pulumi/pulumi-nodejs`. Rebuild the image whenever you change a provider version. This is the simplest and most deterministic option, and it's the [recommended approach](/docs/iac/concepts/plugins/) for CI/CD.
+Push the image to [Artifact Registry](https://cloud.google.com/artifact-registry/docs) and reference it as the step `name` in place of `pulumi/pulumi-nodejs`. Rebuild the image whenever you change a provider version. Pinning plugins in the image makes builds deterministic. See [Plugins](/docs/iac/concepts/plugins/) for more.
 
 ### Cache the plugins directory in a Cloud Storage bucket
 
