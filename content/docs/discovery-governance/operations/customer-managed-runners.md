@@ -32,8 +32,10 @@ Runners poll Pulumi Cloud for pending work and execute it in your environment. A
 
 Each kind of work picks a pool in this order:
 
-- **Discovery scans**: a pool chosen for an individual scan, then the cloud account's pool, then the organization default pool, then the Pulumi hosted pool. Scheduled scans use the cloud account's pool.
+- **Discovery scans**: the cloud account's pool, then the organization default pool, then the Pulumi hosted pool. A scan started through the [REST API](/docs/reference/cloud-rest-api/) can name a different pool for that one scan.
 - **Policy evaluations**: the audit policy group's pool, then the organization default pool, then the Pulumi hosted pool. Only [audit policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#run-audit-policy-groups-on-customer-managed-runners) use a runner pool. Preventative policy groups run inside `pulumi up` and `pulumi preview` wherever the CLI runs.
+
+## Set up
 
 ### Set up Discovery scans
 

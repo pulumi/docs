@@ -45,7 +45,7 @@ A runner can run three workflow types. All three are enabled by default, and the
 Each kind of work resolves its pool independently. If nothing more specific is set, it falls back to the organization's [default runner pool](/docs/administration/guides/customer-managed-runners/#setting-an-organization-default-pool), and then to the Pulumi hosted pool.
 
 - **Deployments**: the pool set in the stack's **Settings** > **Deploy** page (the **Deployment runner pool** dropdown), then the organization default, then the Pulumi hosted pool. See [Runner pools](/docs/deployments/concepts/settings/runner-pools/).
-- **Discovery scans**: a pool chosen for an individual scan, then the cloud account's pool, then the organization default, then the Pulumi hosted pool. Scheduled scans use the account's pool. See [Run scans and policy evaluations on customer-managed runners](/docs/discovery-governance/operations/customer-managed-runners/).
+- **Discovery scans**: the cloud account's pool, then the organization default, then the Pulumi hosted pool. A scan started through the [REST API](/docs/reference/cloud-rest-api/) can name a different pool for that one scan. See [Run scans and policy evaluations on customer-managed runners](/docs/discovery-governance/operations/customer-managed-runners/).
 - **Policy evaluations**: the audit policy group's pool, then the organization default, then the Pulumi hosted pool.
 
 Self-hosted Pulumi Cloud installations have no Pulumi hosted pool, so all of this work must run on a customer-managed runner pool.
@@ -141,7 +141,7 @@ For a comparison of ESC and Deployments OIDC, see [Supplying cloud credentials t
 
 ### Discovery scans
 
-Discovery scans always use the ESC environment attached to the [cloud account](/docs/discovery-governance/concepts/discovery/cloud-accounts/#configure-esc-credentials). The scanner opens that environment on your runner and uses the credentials it exports, so a scan on a customer-managed runner needs no extra credential configuration. Deployments OIDC doesn't apply to scans.
+Discovery scans get their credentials from the ESC environment attached to the [cloud account](/docs/discovery-governance/concepts/discovery/cloud-accounts/#configure-esc-credentials). The scanner opens that environment on your runner and exports its values into the scan, replacing any forwarded host variable with the same name. Deployments OIDC doesn't apply to scans.
 
 The runner needs network access to Pulumi Cloud, which it already has in order to poll for work, and to the cloud provider APIs being scanned.
 
@@ -172,7 +172,7 @@ Don't forward variables that Pulumi sets for each job, such as `PULUMI_ACCESS_TO
 
 ## Configuration reference
 
-All configuration for customer-managed runners is done through the `pulumi-workflow-agent.yaml` file. This can be created manually or with the `customer-managed-workflow-agent configure` command.
+You configure customer-managed runners with the `pulumi-workflow-agent.yaml` file, which you can create manually or with the `customer-managed-workflow-agent configure` command, or with `PULUMI_AGENT_` environment variables (see below).
 
 The workflow runner will look for `pulumi-workflow-agent.yaml` in the following directories:
 

@@ -98,7 +98,7 @@ Policies within policy groups can have different enforcement levels:
 
 Audit policy groups run their evaluations on Pulumi-managed runners by default. To evaluate policies inside your own infrastructure, select a [customer-managed runner](/docs/administration/concepts/customer-managed-runners/) pool for the audit policy group. If the group has no pool set, it uses the organization default pool, and then the Pulumi hosted pool.
 
-Only audit policy groups use a runner pool. Preventative policy groups run inside `pulumi preview` and `pulumi up` wherever the CLI runs, so they have no runner pool setting.
+Only audit policy groups run on a runner pool. Preventative policy groups run inside `pulumi preview` and `pulumi up` wherever the CLI runs.
 
 For setup steps, see [Run scans and policy evaluations on customer-managed runners](/docs/discovery-governance/operations/customer-managed-runners/).
 

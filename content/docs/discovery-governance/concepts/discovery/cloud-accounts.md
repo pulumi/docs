@@ -54,7 +54,7 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
 
 {{< pulumi-cloud "customer-managed-runners" "named" />}}
 
-By default, scans run on Pulumi-managed runners. To scan resources in a private network, or to keep credentials and scan data inside your own infrastructure, assign the cloud account to a [customer-managed runner](/docs/administration/concepts/customer-managed-runners/) pool. A scan uses the pool chosen for that individual scan, then the cloud account's pool, then the organization default pool, then the Pulumi hosted pool. Scheduled scans use the cloud account's pool.
+By default, scans run on Pulumi-managed runners. To scan resources in a private network, or to keep credentials and scan data inside your own infrastructure, assign the cloud account to a [customer-managed runner](/docs/administration/concepts/customer-managed-runners/) pool. A scan uses the cloud account's pool, then the organization default pool, then the Pulumi hosted pool. A scan started through the [REST API](/docs/reference/cloud-rest-api/) can name a different pool for that one scan.
 
 For setup steps, see [Run scans and policy evaluations on customer-managed runners](/docs/discovery-governance/operations/customer-managed-runners/).
 
