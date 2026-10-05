@@ -139,7 +139,7 @@
       {{ end }}
       {{ $fallbackAuthorPage := site.GetPage (printf "/authors/%s" (. | urlize)) }}
       {{ with $fallbackAuthorPage }}
-        {{ $fallbackAuthor = merge $fallbackAuthor (dict "url" .Permalink) }}
+        {{ $fallbackAuthor = merge $fallbackAuthor (dict "url" .Permalink "@id" (printf "%s#%s" .Permalink (cond $isOrg "organization" "person"))) }}
       {{ end }}
       {{ $authors = $authors | append $fallbackAuthor }}
     {{ end }}

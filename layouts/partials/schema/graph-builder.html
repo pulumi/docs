@@ -95,7 +95,11 @@
 {{ $mainEntity := partial "schema/collectors/main-entity.html" . }}
 {{ if $mainEntity }}
   {{ $graph = $graph | append $mainEntity }}
-  {{ $webpage = merge $webpage (dict "mainEntity" (dict "@id" "#main-content")) }}
+  {{ $mainEntityID := "#main-content" }}
+  {{ if $isAuthorTerm }}
+    {{ $mainEntityID = or (index $mainEntity "@id") "#main-content" }}
+  {{ end }}
+  {{ $webpage = merge $webpage (dict "mainEntity" (dict "@id" $mainEntityID)) }}
 {{ end }}
 
 {{/* Collect comparison table schema before finalizing WebPage so hasPart can be wired */}}

@@ -61,7 +61,12 @@
            page) rather than emit a dead link. */}}
       {{ $authorPage := site.GetPage (printf "/authors/%s" (.id | urlize)) }}
       {{ with $authorPage }}
-        {{ $author = merge $author (dict "url" .Permalink) }}
+        {{/* The @id must resolve to the page the entity describes: reuse the
+             real term permalink as the @id base (/blog/author/<slug>/#person)
+             so the byline reference on a post and the ProfilePage main entity
+             on the author page are the same node. /authors/<slug>/ is not a
+             published URL. */}}
+        {{ $author = merge $author (dict "url" .Permalink "@id" (printf "%s#%s" .Permalink (cond $isOrg "organization" "person"))) }}
       {{ end }}
 
       {{/* Add image. Team avatars live at /images/team/<id>.jpg by convention; an
@@ -157,7 +162,7 @@
       }}
       {{ $slugAuthorPage := site.GetPage (printf "/authors/%s" ($slug | urlize)) }}
       {{ with $slugAuthorPage }}
-        {{ $minimalAuthor = merge $minimalAuthor (dict "url" .Permalink) }}
+        {{ $minimalAuthor = merge $minimalAuthor (dict "url" .Permalink "@id" (printf "%s#person" .Permalink)) }}
       {{ end }}
       {{ $authors = $authors | append $minimalAuthor }}
     {{ end }}

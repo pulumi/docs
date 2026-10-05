@@ -86,7 +86,13 @@
            list here. */}}
       {{ $authorEntities := partial "schema/utils/author-entities.html" (dict "Params" (dict "authors" (slice .Data.Term))) }}
       {{ if gt (len $authorEntities) 0 }}
-        {{ $entity = merge (index $authorEntities 0) (dict "@id" "#main-content") }}
+        {{/* Keep the entity's own @id (<term permalink>#person) so post bylines
+             resolve to this node; graph-builder points mainEntity at it. When
+             the term page isn't resolvable, fall back to #main-content. */}}
+        {{ $entity = index $authorEntities 0 }}
+        {{ if not (strings.HasPrefix (index $entity "@id") "https://www.pulumi.com/blog/author/") }}
+          {{ $entity = merge $entity (dict "@id" "#main-content") }}
+        {{ end }}
       {{ end }}
 
     {{ else if .IsHome }}
