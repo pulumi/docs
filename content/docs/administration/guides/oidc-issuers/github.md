@@ -17,7 +17,7 @@ aliases:
 - /docs/administration/access-identity/oidc-issuers/github/
 ---
 
-This document outlines the steps required to configure Pulumi Cloud to accept GitHub id_tokens and exchange them for Pulumi access tokens. Three token types are supported — [organization](#organization-tokens), [team](#team-tokens), and [personal](#personal-tokens) — subject to your [Pulumi edition](/docs/administration/guides/oidc-issuers/#token-types-by-edition).
+This document outlines the steps required to configure Pulumi Cloud to accept GitHub id_tokens and exchange them for Pulumi access tokens. Three token types are supported — [organization](#organization-tokens), [team](#team-tokens), and [personal](#personal-tokens) — subject to your [Pulumi edition](/docs/administration/concepts/oidc-issuers/#token-types).
 
 {{< notes type="info" >}}
 This guide walks through the Pulumi Cloud UI. You can also configure OIDC Issuers via the [REST API](/docs/reference/cloud-rest-api/oidc-issuers/) or the [`OidcIssuer`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/oidcissuer/) resource in the Pulumi Service provider.

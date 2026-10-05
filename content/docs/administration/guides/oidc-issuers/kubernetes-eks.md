@@ -31,7 +31,7 @@ This guide walks through the Pulumi Cloud UI. You can also configure OIDC Issuer
 {{< /notes >}}
 
 {{< notes type="info" >}}
-This guide demonstrates using `personal` tokens. Depending on your [Pulumi edition](/docs/administration/guides/oidc-issuers/#token-types-by-edition), you can also use `organization` or `team` tokens by adjusting the token type in the authorization policies and the `pulumi login` parameters.
+This guide demonstrates using `personal` tokens. Depending on your [Pulumi edition](/docs/administration/concepts/oidc-issuers/#token-types), you can also use `organization` or `team` tokens by adjusting the token type in the authorization policies and the `pulumi login` parameters.
 {{< /notes >}}
 
 ## Prerequisites
@@ -114,7 +114,7 @@ This guide provides step-by-step instructions based on the official provider doc
 
 1. Select the issuer name.
 1. Set **Decision** to **Allow**.
-1. Set **Token type** to **Personal**. See the [token types section](/docs/administration/guides/oidc-issuers/#token-types-by-edition) for other options.
+1. Set **Token type** to **Personal**. See the [token types section](/docs/administration/concepts/oidc-issuers/#token-types) for other options.
 1. The user login should default to your login. Change it if you want to use a different login.
 1. Add a new rule and configure it to verify the namespace and the service account name.
 1. Select **Save policies**.
