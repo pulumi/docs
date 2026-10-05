@@ -49,9 +49,9 @@ curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PUL
 }'
 ```
 
-### Pulumi Cloud Service provider
+### Pulumi Cloud provider
 
-You can use Pulumi to manage and code review Deployment Settings and review stacks with the [Pulumi Cloud Service provider](/registry/packages/pulumiservice).
+You can use Pulumi to manage and code review Deployment Settings and review stacks with the [Pulumi Cloud provider](/registry/packages/pulumiservice).
 
 ```typescript
 import * as pulumiservice from "@pulumi/pulumiservice";
@@ -111,7 +111,7 @@ You can use review stack config in other creative ways, for instance to configur
 
 You can configure a single stack with `git push` to deploy, pull request previews, and review stacks. This is the simplest, lowest configuration approach, but results in your review stacks getting created in the same cloud account as your primary or production stack. It also means that the same configuration will be used for your production and review stacks, meaning that patterns like downsizing review stacks won't be possible.
 
-The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
+The following example shows how to configure this pattern using the [Pulumi Cloud provider](/registry/packages/pulumiservice):
 
 ```typescript
 const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSettings", {
@@ -141,7 +141,7 @@ If you need your review stacks to differ from your production stack in either co
 
 First you will need to run `pulumi stack init` to create a `pr` stack, set any necessary config values, and commit this file to source control.
 
-The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
+The following example shows how to configure this pattern using the [Pulumi Cloud provider](/registry/packages/pulumiservice):
 
 ```typescript
 const productionSettings = new pulumiservice.DeploymentSettings("productionSettings", {
@@ -196,7 +196,7 @@ Sometimes you want your review stack to differ substantially from the stack that
 - Shared Kubernetes stack: a Pulumi program that deploys a Kubernetes cluster, designed to be shared by all review stacks.
 - Review stack: a Pulumi program that builds containers, and deploys Kubernetes resources (pods, deployments, etc.) to the shared cluster.
 
-The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
+The following example shows how to configure this pattern using the [Pulumi Cloud provider](/registry/packages/pulumiservice):
 
 ```typescript
 const productionSettings = new pulumiservice.DeploymentSettings("productionSettings", {
@@ -258,7 +258,7 @@ const prSettings = new pulumiservice.DeploymentSettings("prSettings", {
 
 Sometimes you want to vary the behavior of a review stack based on what kind of code changed. For instance, changes to the `migrations` folder should trigger a migrations container to be built and run, but otherwise we want to skip this step as it adds a few extra minutes to our deployment times. This can be accomplished by using path filters in combination with multiple review stack templates. When the pull request is opened, Pulumi Deployments will evaluate the code changes and select which template to use based on matches against the path filters. This allows you to customize Deployment Settings, config, or Pulumi program, based on what code changes were made.
 
-The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
+The following example shows how to configure this pattern using the [Pulumi Cloud provider](/registry/packages/pulumiservice):
 
 ```typescript
 const productionSettings = new pulumiservice.DeploymentSettings("productionSettings", {
@@ -328,7 +328,7 @@ const prMigrationSettings = new pulumiservice.DeploymentSettings("prMigrationSet
 
 By default, every pull request against a configured branch creates a review stack. Set `reviewStackLabels` in your GitHub deployment settings to limit review stack creation to pull requests that carry at least one of the specified labels. Matching is case-sensitive. Labels added after a pull request is opened will also trigger creation.
 
-The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
+The following example shows how to configure this pattern using the [Pulumi Cloud provider](/registry/packages/pulumiservice):
 
 ```typescript
 const reviewSettings = new pulumiservice.DeploymentSettings("reviewSettings", {

@@ -27,7 +27,7 @@ This integration is most often used to authenticate workloads that run Pulumi op
 - **[Customer-managed deployment runners](/docs/deployments/concepts/customer-managed-runners/)** — Run Pulumi Deployments inside your own EKS cluster. The workflow runner fetches a Pulumi Pool token dynamically using its OIDC identity.
 
 {{< notes type="info" >}}
-This guide walks through the Pulumi Cloud UI. You can also configure OIDC Issuers via the [REST API](/docs/reference/cloud-rest-api/oidc-issuers/) or the [`OidcIssuer`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/oidcissuer/) resource in the Pulumi Service provider.
+This guide walks through the Pulumi Cloud console. You can also configure OIDC Issuers via the [REST API](/docs/reference/cloud-rest-api/oidc-issuers/) or the [`OidcIssuer`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/oidcissuer/) resource in the Pulumi Service provider.
 {{< /notes >}}
 
 {{< notes type="info" >}}

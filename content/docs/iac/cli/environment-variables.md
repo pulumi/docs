@@ -122,7 +122,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Overrides the domain used when generating links to the Pulumi Cloud.
+            Overrides the domain used when generating links to Pulumi Cloud.
         </p>
         <pre><code class="text-xs">PULUMI_CONSOLE_DOMAIN="yourhost.domain.com"</code></pre>
     </dd>

@@ -38,7 +38,7 @@ The customer is required to provide and manage the following:
 
 ### Pulumi deploying Pulumi
 
-This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses the Pulumi CLI with a self-managed backend (e.g. an s3-compatible object store) from the Docker environment server to deploy the Service containers.
+This installer uses Pulumi to deploy Pulumi Cloud. In this case, one uses the Pulumi CLI with a self-managed backend (e.g. an s3-compatible object store) from the Docker environment server to deploy the Service containers.
 
 To this end, you need to set up the following:
 
@@ -55,7 +55,7 @@ See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/ma
 
 ### Pulumi Cloud Updates
 
-When deploying the Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker/README.md) file to set the `imageTag` configuration property for the installer to use.
+When deploying Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker/README.md) file to set the `imageTag` configuration property for the installer to use.
 
 When ready to update the Pulumi Cloud containers to use a different version, do the following:
 

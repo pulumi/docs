@@ -61,7 +61,7 @@ URLs of the `acs` and `metadata` and `sso` endpoints of the Pulumi API, adjusted
     > **Important:** Do not change the value of Name ID Format value once your users have started using Pulumi---not even switching its value between `EMAIL` or `PERSISTENT`.
 
 1. The final step---attribute mapping---is optional, but you may wish to specify proper
-first and last names for your Pulumi users, based on their Google account profiles. The Pulumi Cloud
+first and last names for your Pulumi users, based on their Google account profiles. Pulumi Cloud
 expects to receive these fields as `firstName` and `lastName`, respectively.
 
     Once you add them, select **Finish**.
