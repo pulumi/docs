@@ -69,13 +69,13 @@ Navigate to **Settings → Access Management → OIDC Issuers** and select **Reg
 
 ### Configure the authorization policies
 
-When you register a new OIDC issuer, Pulumi Cloud provisions a default authorization policy that denies every token exchange. You must add explicit **allow** policies before tokens can be exchanged.
+Pulumi Cloud denies any token exchange that no allow policy matches, and a new OIDC issuer starts with no allow policies. You must add explicit **allow** policies before tokens can be exchanged.
 
-Each policy must state the **Token type** the policy issues (Organization, Team, Personal, or Deployment Runner) and the team or user the token is scoped to. The token types available depend on your edition; see [Token types](/docs/administration/concepts/oidc-issuers/#token-types).
+Each policy states the **Token type** it applies to (Organization, Team, Personal, or Deployment Runner) and, for team, personal, and deployment runner tokens, the team, user, or runner the token acts as. An allow policy issues that token. The token types available depend on your edition; see [Token types](/docs/administration/concepts/oidc-issuers/#token-types).
 
 We recommend verifying the token's audience and subject claims against the provider's security guidance. For example, a GitHub Actions policy commonly checks `aud` against `urn:pulumi:org:<org-name>` and `sub` against `repo:<organization>/<repo>:*`.
 
-When a token's claims match more than one policy, deny always takes precedence over allow. See [Authorization policies](/docs/administration/concepts/oidc-issuers/#authorization-policies).
+When an exchange request matches more than one policy, deny always takes precedence over allow. A deny policy only matches requests for its own token type, team, user, or runner. See [Authorization policies](/docs/administration/concepts/oidc-issuers/#authorization-policies).
 
 To target nested claims, define the claim path. Given this token payload:
 

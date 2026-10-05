@@ -26,8 +26,8 @@ sequenceDiagram
     W->>H: Request an ID token
     H-->>W: Signed ID token
     W->>P: Exchange the ID token (pulumi login --oidc-token, or POST /api/oauth/token)
-    P->>H: Fetch OpenID configuration and signing keys
-    P->>P: Verify signature, issuer, and TLS thumbprint
+    P->>H: Fetch the issuer's signing keys
+    P->>P: Verify the issuer, expiration, and signature
     P->>P: Evaluate the issuer's authorization policies
     P-->>W: Short-lived Pulumi access token
     W->>P: Run Pulumi operations with the access token
@@ -35,32 +35,32 @@ sequenceDiagram
 
 1. The workload asks its host service for an ID token. The token's claims describe the workload, for example the repository and branch of a GitHub Actions run, or the namespace and service account of a Kubernetes pod.
 1. The workload sends the ID token to Pulumi Cloud, either with `pulumi login --oidc-token` or by calling the OAuth 2.0 token exchange endpoint directly.
-1. Pulumi Cloud matches the token's `iss` claim to a registered issuer, fetches that issuer's OpenID configuration, and verifies the token's signature.
+1. Pulumi Cloud matches the token's `iss` claim to a registered issuer, checks that the token hasn't expired, fetches the issuer's signing keys over a verified TLS connection, and verifies the token's signature.
 1. Pulumi Cloud evaluates the issuer's authorization policies against the token's claims. If an allow policy matches and no deny policy does, Pulumi Cloud returns a Pulumi access token of the type and scope that the policy specifies.
 
 ## Issuer trust
 
 Each registered issuer has the following settings:
 
-- **URL**: the issuer URL. It must match the `iss` claim in the tokens the service issues. Pulumi Cloud discovers the issuer's signing keys by appending `/.well-known/openid-configuration` to this URL.
-- **Thumbprints**: fingerprints of the TLS certificates the issuer uses to serve its OpenID configuration. By default, Pulumi Cloud records the thumbprint of the certificate it sees at registration time. Add thumbprints yourself if the issuer serves its configuration from more than one certificate, or before a planned certificate rotation, so that token exchange keeps working after the certificate changes.
+- **URL**: the issuer URL. It must match the `iss` claim in the tokens the service issues. When you register the issuer, Pulumi Cloud appends `/.well-known/openid-configuration` to this URL to fetch the issuer's OpenID configuration, which tells it where to find the issuer's signing keys.
+- **Thumbprints**: fingerprints of the issuer's TLS certificates. By default, Pulumi Cloud records the thumbprint of the certificate it sees at registration time. Pulumi Cloud verifies the issuer's certificate against trusted certificate authorities, so routine certificate rotations don't break token exchange, and it checks thumbprints only as a fallback when that verification fails.
 - **Max expiration**: the longest lifetime of a Pulumi access token issued through this issuer. The default is 25 hours.
 
 An organization can register any number of issuers. Each issuer is registered with one organization, and the tokens it issues are scoped to that organization.
 
 ## Authorization policies
 
-Registering an issuer doesn't let anything exchange tokens yet. Pulumi Cloud gives each new issuer a default policy that denies every exchange, and an admin adds **allow** policies to grant access.
+Registering an issuer doesn't let anything exchange tokens yet. Pulumi Cloud denies any exchange that no allow policy matches, and a new issuer starts with no allow policies, so an admin adds **allow** policies to grant access.
 
 A policy has the following parts:
 
 - **Decision**: allow or deny.
 - **Rules**: claims that the incoming ID token must match. A rule can target a top-level claim such as `sub` or `aud`, or a nested claim by its path, such as `"kubernetes.io".pod.name`. Quote any object key that contains a dot.
-- **Token type**: for an allow policy, the kind of Pulumi access token to issue and, for team, personal, and deployment runner tokens, which team, user, or runner it acts as.
+- **Token type**: the kind of Pulumi access token the policy applies to and, for team, personal, and deployment runner tokens, which team, user, or runner it acts as. An allow policy issues this kind of token. A policy, allow or deny, only matches exchange requests for its own token type, team, user, or runner.
 
 Claim values and team scopes support wildcards: `*` matches zero or more characters, `?` matches zero or one character, and `.` matches exactly one character. For example, a rule of `runner-*` on a pod-name claim matches every pod whose name begins with `runner-`.
 
-When a token matches more than one policy, **deny always takes precedence over allow**. Policy order and how specific each rule is have no effect. To carve an exception out of a broad allow policy, add a deny policy for the exception.
+When an exchange request matches more than one policy, **deny always takes precedence over allow**. Policy order and how specific each rule is have no effect. To carve an exception out of a broad allow policy, add a deny policy for the exception with the same token type, team, user, or runner as the allow policy.
 
 ## Token types
 
@@ -94,7 +94,7 @@ A CI pipeline often uses both: it exchanges its CI system's token for a Pulumi a
 - **Check both the audience and the subject.** A policy that checks only `aud` accepts any workload on the issuer that can request that audience, which on a shared service like GitHub Actions can include repositories you don't control. Pin `sub` to your own organization, repository, branch, environment, or service account, following your provider's guidance.
 - **Issue the narrowest token type that works.** Prefer a team token scoped to a team with only the permissions the pipeline needs over an organization token.
 - **Keep max expiration short.** Set it close to the longest job that uses the issuer.
-- **Use deny policies for exceptions.** Since deny always wins, a deny policy reliably blocks a branch or namespace that a broader allow policy would otherwise admit.
+- **Use deny policies for exceptions.** Since deny always wins, a deny policy with the same token type, team, user, or runner as a broader allow policy reliably blocks a branch or namespace that the allow policy would otherwise admit.
 
 For more on limiting what automation can do, see [Least privilege](/docs/administration/guides/least-privilege/).
 
