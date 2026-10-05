@@ -197,7 +197,7 @@
                     </span>
                 </div>
                 {{ with $card.cta }}
-                <a href="{{ .href }}" class="btn btn-{{ .style }} w-full hidden lg:inline-flex"{{ with .data_role }} data-role="{{ . }}"{{ end }}>{{ .label }}</a>
+                <a href="{{ .href }}" class="btn btn-{{ .style }} w-full hidden lg:inline-flex whitespace-nowrap lg:text-xs xl:text-sm"{{ with .data_role }} data-role="{{ . }}"{{ end }}>{{ .label }}</a>
                 {{ end }}
             </div>
             {{ end }}
@@ -337,7 +337,7 @@
     <h2 class="heading-2 text-center mb-12!">Frequently asked questions</h2>
     <div class="max-w-4xl mx-auto">
         {{ range .Params.faq }}
-        <h3 id="faq-{{ .id }}" class="font-mono uppercase tracking-wider text-xs mt-12 mb-2">{{ .category }}</h3>
+        <h3 id="faq-{{ .id }}" class="font-overline-sm mt-12 mb-2">{{ .category }}</h3>
         <ul class="list-none p-0 m-0">
             {{ range $question := .items }}
             <li class="m-0 border-b border-gray-200">
