@@ -1,10 +1,8 @@
 module gcp-import-service-account-go
 
-go 1.21
-
-toolchain go1.21.0
+go 1.26.6
 
 require (
-	github.com/pulumi/pulumi-gcp/sdk/v6 v6.67.1
-	github.com/pulumi/pulumi/sdk/v3 v3.130.0
+	github.com/pulumi/pulumi-gcp/sdk/v10 v10.0.0
+	github.com/pulumi/pulumi/sdk/v3 v3.263.0
 )
