@@ -740,7 +740,7 @@ function checkCustomerRef(obj, fullPath) {
  * generates a public term page, so a typo would ship a junk URL) and must NOT
  * also appear in `tags`: that was the old workaround for manufacturing a landing
  * page under the `tags` taxonomy, and it now only produces a stray
- * /blog/tag/<slug>/ page and surfaces the slug as a topical tag pill. Applies
+ * /blog/tags/<slug>/ page and surfaces the slug as a topical tag pill. Applies
  * only to blog posts (content/blog/<slug>/index.md).
  *
  * @param {*} series The `series` front matter value.

@@ -114,7 +114,7 @@ demo this post in an episode of the [Kubernetes Community Meeting](https://kuber
 
 <!-- markdownlint-disable url -->
 [multicloud-example]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud
-[levi-blackstone]: /blog/author/levi-blackstone/
+[levi-blackstone]: /blog/authors/levi-blackstone/
 [pulumi-kubernetes]: https://github.com/pulumi/pulumi-kubernetes
 [client-go]: https://github.com/kubernetes/client-go
 [crosswalk-aws]: /docs/iac/clouds/aws/guides/

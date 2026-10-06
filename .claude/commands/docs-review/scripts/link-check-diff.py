@@ -320,7 +320,7 @@ def _self_test() -> int:
 
     def fake_probe(path: str) -> str:
         return {
-            "/blog/author/lee-zen": "live-200",
+            "/blog/authors/lee-zen": "live-200",
             "/docs/reference/pkg/aws": "live-200",
             "/docs/iac/concepts/stack-references": "dead-404",
             "/blog/2099/nope": "dead-404",
@@ -341,7 +341,7 @@ def _self_test() -> int:
             "Template: [t](/docs/<section>/).\n"
             "New page: [new](/docs/iac/concepts/new-page/).\n"
             "External: [gh](https://github.com/pulumi/docs) and [blog dead](/blog/2099/nope/?utm=1).\n"
-            "Image: ![shot](/blog/post/shot.png) [pdf](/docs/guide.pdf) [author](/blog/author/lee-zen/) [pkg](/docs/reference/pkg/aws/) [flaky](/docs/flaky/)\n"
+            "Image: ![shot](/blog/post/shot.png) [pdf](/docs/guide.pdf) [author](/blog/authors/lee-zen/) [pkg](/docs/reference/pkg/aws/) [flaky](/docs/flaky/)\n"
             "text\n"
         )
         (root / "content/docs/iac/concepts/stacks.md").write_text(head_stacks)
@@ -366,7 +366,7 @@ def _self_test() -> int:
 +Template: [t](/docs/<section>/).
 +New page: [new](/docs/iac/concepts/new-page/).
 +External: [gh](https://github.com/pulumi/docs) and [blog dead](/blog/2099/nope/?utm=1).
-+Image: ![shot](/blog/post/shot.png) [pdf](/docs/guide.pdf) [author](/blog/author/lee-zen/) [pkg](/docs/reference/pkg/aws/) [flaky](/docs/flaky/)
++Image: ![shot](/blog/post/shot.png) [pdf](/docs/guide.pdf) [author](/blog/authors/lee-zen/) [pkg](/docs/reference/pkg/aws/) [flaky](/docs/flaky/)
  text
 diff --git a/content/docs/iac/concepts/new-page.md b/content/docs/iac/concepts/new-page.md
 new file mode 100644
@@ -382,7 +382,7 @@ new file mode 100644
         expect(res.get("/docs/intro/concepts/config/#top") == "alias", f"alias: {res}")
         expect(res.get("/docs/iac/concepts/new-page/") == "added-by-pr", f"added: {res}")
         expect(res.get("/docs/<section>/") == "placeholder", f"placeholder: {res}")
-        expect(res.get("/blog/author/lee-zen/") == "live-200", f"taxonomy: {res}")
+        expect(res.get("/blog/authors/lee-zen/") == "live-200", f"taxonomy: {res}")
         expect(res.get("/docs/reference/pkg/aws/") == "live-200", f"pkg: {res}")
         expect(res.get("/docs/flaky/") == "unknown", f"unknown: {res}")
         expect("/blog/post/shot.png" not in res and "/docs/guide.pdf" not in res, f"assets skipped: {res}")

@@ -62,4 +62,4 @@ Read more about Pulumi's architecture and foundational concepts in depth, includ
 
 Browse the latest posts on using Pulumi with Google Cloud, including everything from new Google Cloud products and features to technical architectures and best practices.
 
-{{< get-started-next-step path="/blog/tag/google-cloud/" label="Browse Google Cloud posts" ref="gs-gcp-blog" >}}
+{{< get-started-next-step path="/blog/tags/google-cloud/" label="Browse Google Cloud posts" ref="gs-gcp-blog" >}}

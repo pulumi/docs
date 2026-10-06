@@ -1,5 +1,5 @@
 ---
-# Metadata for the tags taxonomy LIST page (/blog/tag/, via permalinks.taxonomy
+# Metadata for the tags taxonomy LIST page (/blog/tags/, via permalinks.taxonomy
 # in config.yml; rendered by layouts/taxonomy/tag.terms.html). Hugo merges this
 # file into the generated taxonomy page. This page is noindexed by
 # layouts/partials/taxonomy-indexable.html (pulumi-hugo#2138, anti tag-page

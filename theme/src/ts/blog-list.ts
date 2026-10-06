@@ -308,18 +308,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Filtering rewrites the address bar to the REAL category term page URL
-    // (/blog/category/<id>/), not a ?category= query on /blog/ — shared and
+    // (/blog/categories/<id>/), not a ?category= query on /blog/ — shared and
     // bookmarked links then point at the canonical, indexed page, so its search
     // equity isn't diluted onto /blog/. A reload or no-JS visit lands on the
     // server-rendered term page.
     const originalTitle = document.title;
 
     function categoryUrl(cat: string): string {
-        return cat ? `/blog/category/${cat}/` : basePath;
+        return cat ? `/blog/categories/${cat}/` : basePath;
     }
 
     function categoryFromLocation(): string {
-        const m = location.pathname.match(/^\/blog\/category\/([^/]+)\/$/);
+        const m = location.pathname.match(/^\/blog\/categories\/([^/]+)\/$/);
         return m ? m[1] : "";
     }
 
@@ -346,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const res = await fetch(`/blog/category/${cat}/rows.html`);
+            const res = await fetch(`/blog/categories/${cat}/rows.html`);
             if (!res.ok) {
                 throw new Error(`HTTP ${res.status}`);
             }

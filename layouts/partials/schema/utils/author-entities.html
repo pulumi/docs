@@ -54,7 +54,7 @@
 
       {{/* Add URL to author page. /authors/%s is a Hugo logical content path, not
            the published permalink -- config/_default/config.yml routes the
-           `authors` taxonomy term to /blog/author/:slug/. Resolve the real page
+           `authors` taxonomy term to /blog/authors/:slug/. Resolve the real page
            and use its Permalink so this doesn't drift if that route ever
            changes; omit `url` entirely if the author has no live term page
            (e.g. data-file-only authors referenced from a what-is/comparison
@@ -62,7 +62,7 @@
       {{ $authorPage := site.GetPage (printf "/authors/%s" (.id | urlize)) }}
       {{ with $authorPage }}
         {{/* The @id must resolve to the page the entity describes: reuse the
-             real term permalink as the @id base (/blog/author/<slug>/#person)
+             real term permalink as the @id base (/blog/authors/<slug>/#person)
              so the byline reference on a post and the ProfilePage main entity
              on the author page are the same node. /authors/<slug>/ is not a
              published URL. */}}
@@ -152,7 +152,7 @@
     {{ else }}
       {{/* Author not in team data — build a minimal Person from the slug.
            Same /authors/%s permalink caveat as above: resolve the real page
-           (published at /blog/author/:slug/ per config/_default/config.yml)
+           (published at /blog/authors/:slug/ per config/_default/config.yml)
            and omit `url` if there is no live term page for this slug. */}}
       {{ $minimalAuthor := dict
         "@type" "Person"

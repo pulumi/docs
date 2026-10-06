@@ -66,4 +66,4 @@ Read more about Pulumi's architecture and foundational concepts in depth, includ
 
 Read through the latest blog posts about using Pulumi with Kubernetes.
 
-{{< get-started-next-step path="/blog/tag/kubernetes" label="Read the Pulumi Blog" ref="gs-k8s-blog" >}}
+{{< get-started-next-step path="/blog/tags/kubernetes" label="Read the Pulumi Blog" ref="gs-k8s-blog" >}}

@@ -16,7 +16,7 @@ category: product
 ---
 
 
-We've had an exciting quarter at Pulumi, shipping all kinds of improvements from our providers to our Cloud service. To stay up-to-date on all the details and additional improvements between release blogs, be sure to check out the [pulumi/pulumi repo](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) changelog for CLI enhancements and the Pulumi Cloud features in the [new features blogs](/blog/tag/features) for updates on Pulumi Service features. We have a lot to cover, so let's get started!
+We've had an exciting quarter at Pulumi, shipping all kinds of improvements from our providers to our Cloud service. To stay up-to-date on all the details and additional improvements between release blogs, be sure to check out the [pulumi/pulumi repo](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) changelog for CLI enhancements and the Pulumi Cloud features in the [new features blogs](/blog/tags/features) for updates on Pulumi Service features. We have a lot to cover, so let's get started!
 
 <!--more-->
 

@@ -61,4 +61,4 @@ Read more about Pulumi's architecture and foundational concepts in depth, includ
 
 Browse the latest posts on using Pulumi with Microsoft Azure, including everything from new Azure products and features to technical architectures and best practices.
 
-{{< get-started-next-step path="/blog/tag/azure" label="Browse Azure posts" ref="gs-azure-blog" >}}
+{{< get-started-next-step path="/blog/tags/azure" label="Browse Azure posts" ref="gs-azure-blog" >}}

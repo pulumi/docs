@@ -1,5 +1,5 @@
 ---
-# Metadata for the authors taxonomy LIST page (/blog/author/, via
+# Metadata for the authors taxonomy LIST page (/blog/authors/, via
 # permalinks.taxonomy in config.yml; rendered by
 # layouts/taxonomy/author.terms.html). Hugo merges this file into the
 # generated taxonomy page. Indexed (carve-out in

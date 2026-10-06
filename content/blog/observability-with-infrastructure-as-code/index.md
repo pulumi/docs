@@ -22,7 +22,7 @@ observability to infrastructure provisioning.
 
 <!--more-->
 
-When using the [Pulumi Automation API](https://www.pulumi.com/blog/tag/automation-api/) to create applications that
+When using the [Pulumi Automation API](https://www.pulumi.com/blog/tags/automation-api/) to create applications that
 provisions infrastructure, it is very handy to use observability techniques to ensure the application functions
 correctly and to find where performance bottlenecks are.
 

@@ -62,4 +62,4 @@ Read more about Pulumi's architecture and foundational concepts in depth, includ
 
 Browse the latest posts on using Pulumi with AWS, including everything from new AWS products and features to technical architectures and best practices.
 
-{{< get-started-next-step path="/blog/tag/aws" label="Browse AWS posts" ref="gs-aws-blog" >}}
+{{< get-started-next-step path="/blog/tags/aws" label="Browse AWS posts" ref="gs-aws-blog" >}}

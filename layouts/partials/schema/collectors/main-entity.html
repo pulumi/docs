@@ -75,7 +75,7 @@
       {{ end }}
 
     {{ else if and (eq .Kind "term") (eq .Data.Singular "author") }}
-      {{/* Author archive term pages (/blog/author/{slug}/) get a Person (or
+      {{/* Author archive term pages (/blog/authors/{slug}/) get a Person (or
            Organization, for a house byline) main entity, built by the same
            schema/utils/author-entities.html logic every blog post already
            uses for its byline, so the person's entity data can never drift
@@ -90,7 +90,7 @@
              resolve to this node; graph-builder points mainEntity at it. When
              the term page isn't resolvable, fall back to #main-content. */}}
         {{ $entity = index $authorEntities 0 }}
-        {{ if not (strings.HasPrefix (index $entity "@id") "https://www.pulumi.com/blog/author/") }}
+        {{ if not (strings.HasPrefix (index $entity "@id") "https://www.pulumi.com/blog/authors/") }}
           {{ $entity = merge $entity (dict "@id" "#main-content") }}
         {{ end }}
       {{ end }}

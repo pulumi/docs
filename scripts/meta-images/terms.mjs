@@ -1,7 +1,7 @@
 // terms.mjs — virtual pages for the blog taxonomy TERM cards (category + tag
 // + series).
 //
-// Category, tag, and series term pages (/blog/category/<id>/, /blog/tag/<slug>/,
+// Category, tag, and series term pages (/blog/categories/<id>/, /blog/tags/<slug>/,
 // /blog/series/<slug>/) have no backing content file, so
 // generate-meta-images.mjs can't discover them by walking content/. This module
 // enumerates them instead: one card per blog category

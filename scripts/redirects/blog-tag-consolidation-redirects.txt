@@ -2,4 +2,4 @@
 # frontmatter, so Hugo no longer generates its term page. Tag term pages are noindexed site-wide
 # (layouts/partials/taxonomy-indexable.html), so this is a courtesy for stray external links
 # rather than SEO recovery.
-blog/tag/crossguard/index.html|/blog/tag/policy-as-code/
+blog/tag/crossguard/index.html|/blog/tags/policy-as-code/
