@@ -1327,7 +1327,7 @@ flowchart LR
   EV["`Push, label change, approval or dismissal, review lanes finishing, staging status`"] --> SE["`sentinel.py`"]
   SE --> G1["`G1: review ran at head`"]
   SE --> G2["`G2: every finding answered`"]
-  SE --> G3["`G3: routed team approved`"]
+  SE --> G3["`G3: human with write access approved`"]
   SE --> G4["`G4: staging deploy at head (infra PRs, not waivable)`"]
   SE --> G5["`G5: oversized PR acknowledged`"]
 ```

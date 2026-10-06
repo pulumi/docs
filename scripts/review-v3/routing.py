@@ -71,7 +71,7 @@ MATRIX_CELL_KEYS = frozenset({"mechanical", "substantive"})
 TOP_LEVEL_KEYS = frozenset({
     "schema", "teams", "bots", "matrix", "overrides", "staging_evidence",
     "claims_overlay", "approval", "external_contributors", "sla",
-    "author_staleness", "waive", "not_governed", "link_only",
+    "author_staleness", "waive", "not_governed", "link_only", "bot_approvers",
 })
 STAGING_EVIDENCE_KEYS = frozenset({"paths"})
 OVERRIDE_KEYS = frozenset({"paths", "role", "why"})
@@ -83,16 +83,24 @@ WAIVE_KEYS = frozenset({"label", "log_prefix"})
 NOT_GOVERNED_KEYS = frozenset({"authors", "author_label_pairs"})
 AUTHOR_LABEL_PAIR_KEYS = frozenset({"author", "label"})
 APPROVAL_KEYS = frozenset({"scope", "admins_satisfy"})
+BOT_APPROVER_KEYS = frozenset({"approver", "author", "label", "why"})
+BOT_APPROVER_REQUIRED_KEYS = ("approver", "author", "why")
 
 LINK_ONLY_KEYS = frozenset({"approval"})
 # Who can satisfy the approver gate (G3). `lane` is the per-subject rule the
 # matrix resolves; `any-team` says a member of any team in `teams:` satisfies
-# it, whatever the matrix routed -- the matrix still decides who is REQUESTED.
+# it, whatever the matrix routed; `any-human` says any human with write
+# access to the repo does -- the same set GitHub's own required-review rule
+# counts. Under every scope the matrix still decides who is REQUESTED.
 # One vocabulary for both `approval.scope` (every PR) and `link_only.approval`
 # (link-only diffs), because they answer the same question at two scopes; two
 # frozensets meant a third value could be accepted by one and rejected by the
 # other with nothing noticing.
-APPROVER_SCOPE = frozenset({"lane", "any-team"})
+APPROVER_SCOPE = frozenset({"lane", "any-team", "any-human"})
+# Narrowest first. When `approval.scope` and `link_only.approval` both apply
+# to a PR, the wider one wins: each is a statement about who MAY clear the
+# gate, so neither can narrow the other.
+_SCOPE_WIDTH = {"lane": 0, "any-team": 1, "any-human": 2}
 
 # Closed vocabulary for external_contributors.skip_gates. Add a gate id here
 # when the Sentinel grows a new gate that a fork PR can legitimately skip.
@@ -132,6 +140,9 @@ class Config:
     not_governed: dict = field(default_factory=dict)
     link_only: dict = field(default_factory=dict)
     approval: dict = field(default_factory=dict)
+    # Optional (absent == empty): the bot identities whose approval clears G3
+    # on one automated lane each. See BOT APPROVERS in the yaml header.
+    bot_approvers: list = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
 
 
@@ -148,6 +159,10 @@ class Resolution:
     # the lane's own team — either repo-wide (`approval.scope: any-team`) or
     # for this diff alone (`link_only.approval: any-team`).
     any_team: bool = False
+    # True when any human with write access satisfies the approver gate,
+    # team or no team (`approval.scope: any-human`). Wider than `any_team`,
+    # which is left False when this is set: the gate never asks about teams.
+    any_human: bool = False
 
     def to_json(self) -> dict:
         return {
@@ -157,6 +172,7 @@ class Resolution:
             "overridden": self.overridden,
             "reasons": self.reasons,
             "any_team": self.any_team,
+            "any_human": self.any_human,
         }
 
 
@@ -501,6 +517,30 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         if not isinstance(approval_cfg.get("admins_satisfy", False), bool):
             errors.append("approval.admins_satisfy must be true or false")
 
+    # ---- bot_approvers (optional) -----------------------------------------
+    # Each entry is one automated lane: this bot's approval clears G3 on a PR
+    # by this author (carrying this label, when one is given). `why` is
+    # required for the same reason it is on `overrides:` -- an exception
+    # nobody can explain is one nobody can safely delete.
+    bot_approvers = raw.get("bot_approvers", [])
+    if bot_approvers is None:
+        bot_approvers = []
+    if not isinstance(bot_approvers, list):
+        errors.append("bot_approvers must be a list of {approver, author, label?, why} mappings")
+        bot_approvers = []
+    else:
+        for i, entry in enumerate(bot_approvers):
+            where = f"bot_approvers[{i}]"
+            if not isinstance(entry, dict):
+                errors.append(f"{where} must be a mapping")
+                continue
+            _check_unknown_keys(entry, BOT_APPROVER_KEYS, where, errors)
+            for key in BOT_APPROVER_REQUIRED_KEYS:
+                if not _is_nonempty_str(entry.get(key)):
+                    errors.append(f"{where}.{key} must be a non-empty string")
+            if "label" in entry and not _is_nonempty_str(entry.get("label")):
+                errors.append(f"{where}.label must be a non-empty string when present")
+
     if errors:
         return None, errors, warnings
 
@@ -519,6 +559,7 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         not_governed=not_governed,
         link_only=link_only,
         approval=approval_cfg,
+        bot_approvers=bot_approvers,
         warnings=warnings,
     )
     return config, errors, warnings
@@ -713,12 +754,19 @@ def resolve_lanes(
     #   - `link_only.approval: any-team` is per-diff, for a sweep that
     #     changes nothing but link targets — careful work, but not lane
     #     knowledge. It still applies when the repo-wide scope is `lane`.
-    scope = (config.approval or {}).get("scope", "lane")
-    link_only_any_team = link_only and (config.link_only or {}).get("approval") == "any-team"
-    any_team = bool(roles) and (scope == "any-team" or link_only_any_team)
-    if any_team:
-        why = "approval.scope: any-team" if scope == "any-team" else "link-only diff"
-        reasons.append(f"{why}: any team in teams: satisfies the approver gate")
+    #
+    # `any-human` is the widest: any human with write access, no team asked.
+    # When both rules apply, the wider one wins.
+    repo_scope = (config.approval or {}).get("scope", "lane")
+    link_scope = (config.link_only or {}).get("approval", "lane") if link_only else "lane"
+    scope = max(repo_scope, link_scope, key=_SCOPE_WIDTH.__getitem__)
+    any_human = bool(roles) and scope == "any-human"
+    any_team = bool(roles) and scope == "any-team"
+    if any_human or any_team:
+        why = "approval.scope" if scope == repo_scope else "link-only diff"
+        who = ("any human with write access" if any_human
+               else "any team in teams:")
+        reasons.append(f"{why}: {scope}: {who} satisfies the approver gate")
 
     return Resolution(
         roles=roles,
@@ -727,6 +775,7 @@ def resolve_lanes(
         overridden=overridden,
         reasons=reasons,
         any_team=any_team,
+        any_human=any_human,
     )
 
 
@@ -738,6 +787,27 @@ def admins_satisfy(config: Config) -> bool:
     reporting a block the repo does not actually impose on them.
     """
     return bool((config.approval or {}).get("admins_satisfy"))
+
+
+def bot_approver_reason(
+    config: Config, approver: str, author: str, labels: set[str] | frozenset[str]
+) -> str | None:
+    """Why this bot's approval clears G3 on this PR, or None if it does not.
+
+    An entry matches only when the approving login, the PR author, and (if
+    the entry names one) a label on the PR all line up. Nothing else about
+    the bot matters: a `bot_approvers` match overrides both the `bots:`
+    denylist and the automatic `type == Bot` exclusion, for that lane only.
+    """
+    for entry in config.bot_approvers or []:
+        if entry.get("approver") != approver or entry.get("author") != author:
+            continue
+        label = entry.get("label")
+        if label and label not in labels:
+            continue
+        on = f" with label `{label}`" if label else ""
+        return f"`{approver}` is a listed bot approver for PRs by `{author}`{on}"
+    return None
 
 
 def not_governed_reason(config: Config, author: str, labels: set[str] | frozenset[str]) -> str | None:

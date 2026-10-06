@@ -111,7 +111,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 |---|---|---|
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `@claude … #update-review` phrasing |
-| G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of a routing team — any team in `teams:` under `approval.scope: any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, from a repository administrator | the team slug(s) needed |
+| G3 right-approver | an APPROVED latest review at head from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); re-run the failed "Build and deploy testing" run or dispatch it at the branch to retry — **not waivable** |
 | G5 oversized-ack | `review:oversized` PRs: approval body contains `sentinel:oversized-ack` | explains the ack |
 
@@ -357,14 +357,25 @@ approver to wait for. `mechanical` skips the *model* review at G1 and
 nothing else.
 
 **Who is asked and who can clear it are different questions.** `approval:`
-in the same config decides the second one. Under `approval.scope: any-team`
-(what we run) a member of any team in `teams:` satisfies G3 whatever the
-matrix routed, so a PR spanning three subjects needs one approval rather
-than a three-team quorum — the matrix still picks who gets requested, who
-the SLA sweep chases, and who the brief names. `approval.admins_satisfy`
-additionally lets a repository administrator's approval clear it, which
-concedes what a repo admin can already do at the merge box rather than
-granting anything new. Both default to the strict reading.
+in the same config decides the second one. Under `approval.scope: any-human`
+(what we run) any human with write access to the repo satisfies G3 whatever
+the matrix routed — the same set GitHub's required-review rule counts, read
+off the collaborator-permission endpoint, so a drive-by approval on this
+public repo does not count. The matrix still picks who gets requested, who
+the SLA sweep chases, and who the brief names. `any-team` (any member of a
+team in `teams:`) and `lane` (every matrix-required team) are the narrower
+settings. `approval.admins_satisfy` additionally lets a repository
+administrator's approval clear it under those, which concedes what a repo
+admin can already do at the merge box rather than granting anything new.
+Both default to the strict reading.
+
+**Bots approve only on a named lane.** `bot_approvers:` lists each automated
+process whose bot approval clears G3: the approving login, the PR author,
+and optionally a label the PR must carry. A match overrides the `bots:`
+denylist and the `type == Bot` exclusion for that lane alone; everywhere
+else a bot approval never counts. The live entries are the two workflows
+that post bot approvals today (`auto-approve-for-auto-merge.yml` as
+`github-actions[bot]`, `label-dependabot.yml` as `pulumi-bot`).
 
 That is a reversal, and the reason is worth keeping: the Sentinel is not the
 gate that decides mergeability. GitHub's required-review rule is, and it
