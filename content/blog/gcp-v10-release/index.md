@@ -37,7 +37,7 @@ The [migration guide](/registry/packages/gcp/how-to-guides/10-0-migration/) acco
 
 ### Use an agent to assist with your upgrade
 
-We have taught the `provider-upgrade` skill in [Pulumi Agent Skills](/blog/pulumi-agent-skills/) about every v10 breaking change. You can use it from [Pulumi Neo](/docs/ai/neo/) or from any popular coding agent. Before it bumps the provider, it scans your stack and code for the changes that affect you, and it stops to ask before anything that would replace or delete live infrastructure. Then it upgrades the dependency, runs `pulumi preview` until the diff is explained, and leaves `pulumi up` to you.
+We have updated the `provider-upgrade` skill in [Pulumi Agent Skills](/blog/pulumi-agent-skills/) to cover the upgrade from v9. You can use it from [Pulumi Neo](/docs/ai/neo/) or from any popular coding agent. Before it bumps the provider, it scans your stack and code for the changes that affect you, and it stops to ask before anything that would replace or delete live infrastructure. Then it upgrades the dependency, runs `pulumi preview` until the diff is explained, and leaves `pulumi up` to you.
 
 <!-- TODO(GA, Neo): the Neo prompt, plus screenshots of the prompt, the plan and the resulting pull request, following the v9 post. Needs pulumi/agent-skills#65 merged. -->
 
@@ -70,7 +70,7 @@ Then ask Pi to upgrade the provider to v10, or trigger the skill with `/skill:pr
 
 ### Why upgrade
 
-Moving to the latest version means you keep getting the latest updates from Google Cloud. GCP is covered by our [provider support policy](/docs/support/provider-support-policy/): with this release, v9 receives security updates for up to 12 months, while new features and upstream updates land only in v10.
+Moving to the latest version means you keep getting the latest updates from Google Cloud. GCP is covered by our [provider support policy](/docs/support/provider-support-policy/): with this release, v9 receives security updates for up to 12 months (or until v11 ships), while new features, bug fixes, and upstream updates land only in v10.
 
 Staying on the latest version also means you keep getting new features. Google Cloud offers capabilities you will not find on other clouds, such as TPUs, accelerators Google designed for training and serving AI models. For example, here is how you could create a [Cloud TPU v6e (Trillium)](https://docs.cloud.google.com/tpu/docs/v6e) slice with the new major version, using [`gcp.tpu.V2Vm`](/registry/packages/gcp/api-docs/tpu/v2vm/):
 
@@ -83,7 +83,7 @@ import * as gcp from "@pulumi/gcp";
 
 // A Cloud TPU v6e (Trillium) slice with 8 chips, on Spot capacity.
 const tpu = new gcp.tpu.V2Vm("trillium", {
-    zone: "us-east5-b",
+    zone: "us-east1-d",
     runtimeVersion: "v2-alpha-tpuv6e",
     acceleratorConfig: {
         type: "V6E",
@@ -112,7 +112,7 @@ import pulumi_gcp as gcp
 # A Cloud TPU v6e (Trillium) slice with 8 chips, on Spot capacity.
 tpu = gcp.tpu.V2Vm(
     "trillium",
-    zone="us-east5-b",
+    zone="us-east1-d",
     runtime_version="v2-alpha-tpuv6e",
     accelerator_config={
         "type": "V6E",
@@ -149,7 +149,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// A Cloud TPU v6e (Trillium) slice with 8 chips, on Spot capacity.
 		vm, err := tpu.NewV2Vm(ctx, "trillium", &tpu.V2VmArgs{
-			Zone:           pulumi.String("us-east5-b"),
+			Zone:           pulumi.String("us-east1-d"),
 			RuntimeVersion: pulumi.String("v2-alpha-tpuv6e"),
 			AcceleratorConfig: &tpu.V2VmAcceleratorConfigArgs{
 				Type:     pulumi.String("V6E"),
@@ -194,7 +194,7 @@ return await Deployment.RunAsync(() =>
     // A Cloud TPU v6e (Trillium) slice with 8 chips, on Spot capacity.
     var tpu = new Gcp.Tpu.V2Vm("trillium", new()
     {
-        Zone = "us-east5-b",
+        Zone = "us-east1-d",
         RuntimeVersion = "v2-alpha-tpuv6e",
         AcceleratorConfig = new Gcp.Tpu.Inputs.V2VmAcceleratorConfigArgs
         {
@@ -239,7 +239,7 @@ public class App {
         Pulumi.run(ctx -> {
             // A Cloud TPU v6e (Trillium) slice with 8 chips, on Spot capacity.
             var tpu = new V2Vm("trillium", V2VmArgs.builder()
-                .zone("us-east5-b")
+                .zone("us-east1-d")
                 .runtimeVersion("v2-alpha-tpuv6e")
                 .acceleratorConfig(V2VmAcceleratorConfigArgs.builder()
                     .type("V6E")
@@ -270,7 +270,7 @@ resources:
   trillium:
     type: gcp:tpu:V2Vm
     properties:
-      zone: us-east5-b
+      zone: us-east1-d
       runtimeVersion: v2-alpha-tpuv6e
       acceleratorConfig:
         type: V6E
@@ -289,6 +289,6 @@ outputs:
 
 {{< /chooser >}}
 
-Vertex AI keeps growing too. Since v9.0.0 the provider has added [Agent Engine](/registry/packages/gcp/api-docs/vertex/aireasoningengine/) and [Model Garden](/registry/packages/gcp/api-docs/vertex/aimodelgardenenablemodel/) resources. New in v10, `gcp.vertex.AiRagCorpus` brings Vertex AI RAG Engine under Pulumi: declare the corpus that grounds your Gemini applications in your own documents, with its embedding model and vector store, in the same program as the rest of your infrastructure. Its registry page ([aiRagCorpus](/registry/packages/gcp/api-docs/vertex/airagcorpus/)) goes live with v10.
+[Gemini Enterprise Agent Platform (formerly Vertex AI)](https://cloud.google.com/products/gemini-enterprise-agent-platform), Google's platform for building with Gemini models, also gets new resources. New in v10, [`gcp.vertex.AiRagCorpus`](/registry/packages/gcp/api-docs/vertex/airagcorpus/) brings its RAG Engine under Pulumi: declare the corpus that grounds your Gemini applications in your own documents, with its embedding model and vector store, in the same program as the rest of your infrastructure. It joins the [Agent Runtime](/registry/packages/gcp/api-docs/vertex/aireasoningengine/) and [Model Garden](/registry/packages/gcp/api-docs/vertex/aimodelgardenenablemodel/) resources added during v9. In the provider, these resources keep the `gcp.vertex` module name.
 
 You can find more about this release in the [v10 release notes](https://github.com/pulumi/pulumi-gcp/releases/tag/v10.0.0). We hope your transition goes smoothly, and as always we are happy to hear your feedback in our [Community Slack](https://slack.pulumi.com/) or through [support](/support/) if you are a paying Pulumi customer. Happy hacking!
