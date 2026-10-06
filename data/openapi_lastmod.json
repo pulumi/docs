@@ -2393,8 +2393,8 @@
       "hash": "9300ca4b86e9fe4475906cb45e09e6ed518eda83c3ed7e59f2991c3fb24ec0d0"
     },
     "PermissionExpression": {
-      "hash": "4ad6201d697ceb9d13d2b068302c37f7c105505da033cd3dfb6b23fcfd7c5d89",
-      "lastmod": "2026-05-13"
+      "hash": "c9fa7462d0d0d3f1c09571217494db5607cb135b5f147779aa7cb75015fabda0",
+      "lastmod": "2026-10-06"
     },
     "PermissionExpressionAnd": {
       "hash": "fee1f56f83e75ab23a75700e66a7e2b8c7034efbd3db771d00a03b06c319b1dc"
@@ -2407,6 +2407,9 @@
     },
     "PermissionExpressionHasTag": {
       "hash": "937fb999ea03306631fdd12ff8c8d6f7c974f2b6beaeac28123a73ecb3e979b7"
+    },
+    "PermissionExpressionIn": {
+      "hash": "915598c5e72bc2d3721abbf775f5e900cd20ba6aeabd988a666137c2ae45cabc"
     },
     "PermissionExpressionInsightsAccount": {
       "hash": "cb2afa17536a3cdf96aeb0e92cb216eadac430f7cbdfa1e0a2c340b2f54fb706"
@@ -2454,6 +2457,24 @@
     },
     "PermissionSelectvalue": {
       "hash": "2b24a2ff6486dc31f4703765a634959e3d5ed3b82143fa943fa7a1e5d3c337ec"
+    },
+    "PermissionSetExpression": {
+      "hash": "d7b895839c3e1c9cdc1900b9e10cebc4d7bb2ccdf807717614fbafdf474d4b73"
+    },
+    "PermissionSetExpressionEnvironment": {
+      "hash": "9795f06a822f2785b2065c67927f1fe7234a611cc21ca4c53d2856b5d2799a2f"
+    },
+    "PermissionSetExpressionInsightsAccount": {
+      "hash": "6ae37632f4fd4597dd130dca37e3ce93e963f7a5c5420302d241202f9d90777c"
+    },
+    "PermissionSetExpressionStack": {
+      "hash": "9a615956550076ab70b049cf797563ca5730a3cd55ebffa4601b93ddeb6cca20"
+    },
+    "PermissionSetExpressionString": {
+      "hash": "d1bff03397b528692a8b95bc02aa668760563016643da3f2a7cf456c641f1b4f"
+    },
+    "PermissionSetExpressionTeam": {
+      "hash": "f984d08c6c89dc566e17fb119fc2347366a6e83b47a36e21893c16e72074b332"
     },
     "PkixAttributeTypeAndValue": {
       "hash": "d85e32099363a3ca034b3a9cd6dcff692b03f835fef71ce390bae5cb07aba928",
