@@ -14,16 +14,9 @@ unlisted: false
 # to fill out the form before viewing.
 gated: false
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: true
 block_external_search_index: true
 
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: https://luma.com/seattle-ai-search
+event_url: https://luma.com/seattle-ai-search
 
 # The event type (workshop, webinar, talk).
 event_type: event
@@ -41,7 +34,7 @@ duration: 3 hours
 location: Seattle, WA
 
 # Description of the event.
-description:
+description: The Elastic Seattle User Group and Pulumi are hosting an evening on AI-powered applications and search, at the Pulumi office on the 51st floor of Two Union Square. Peter Yoakum shows how to tell automated AI agent traffic apart from human web traffic using an ELK stack configured with Pulumi, and Kapil Jadhav covers building AI applications with Jina models. Doors open at 5:00 PM with food, talks start at 5:30, and there is time to network either side. Registration is on Luma.
 
 # The event presenters
 presenters:
@@ -56,6 +49,7 @@ tags:
     level: # Beginner, Intermediate, Advanced
     topics: []
     languages: []
+    clouds: []
 
 # The right hand side form section.
 form:
