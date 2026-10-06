@@ -1,12 +1,12 @@
 ---
-title_tag: "Self-hosting the Pulumi Cloud"
+title_tag: "Self-hosting Pulumi Cloud"
 meta_desc: The Pulumi Enterprise edition gives you the option to self-host Pulumi within your organization's infrastructure.
 title: Self-hosting
 linktitle: Self-hosting
 docs_home: true
 notitle: true
 norightnav: true
-h1: Self-hosting the Pulumi Cloud
+h1: Self-hosting Pulumi Cloud
 description: <p>Deploy Pulumi Cloud in your own infrastructure with full control over data, security, and operations.</p>
 menu:
   administration:

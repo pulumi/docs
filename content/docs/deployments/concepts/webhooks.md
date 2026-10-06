@@ -247,7 +247,7 @@ notification, start running integration tests, or even update additional stacks.
 
 {{% notes type="info" %}}
 If a secret is provided, webhook deliveries will contain a signature in the HTTP request header that can be used
-to authenticate messages as coming from the Pulumi Cloud.
+to authenticate messages as coming from Pulumi Cloud.
 {{% /notes %}}
 
 #### Payload Examples
@@ -408,7 +408,7 @@ Payloads contain several headers.
 
 | Header                     | Description                                                                                                                                                   |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Pulumi-Webhook-ID`        | Unique ID for each webhook sent which you can reference when looking at delivery logs in the Pulumi Cloud.                                                    |
+| `Pulumi-Webhook-ID`        | Unique ID for each webhook sent which you can reference when looking at delivery logs in Pulumi Cloud.                                                    |
 | `Pulumi-Webhook-Kind`      | The kind of webhook event, e.g. `stack_update`.                                                                                                               |
 | `Pulumi-Webhook-Signature` | Only set if the webhook has a shared secret. HMAC hex digest of the request payload, using the `sha256` hash function and the webhook secret as the HMAC key. |
 
@@ -503,7 +503,7 @@ on your receiving service.
 
 If a delivery failed because your endpoint was unavailable, returned an error, or
 processed the event incorrectly, you can redeliver the same event from the Pulumi Cloud
-UI.
+console.
 
 1. Open the webhook and locate the delivery you want to resend, as described in
    [Viewing recent deliveries](#viewing-recent-deliveries).
@@ -543,7 +543,7 @@ releases of the Pulumi CLI. Listing recent deliveries is also available for orga
 webhooks (`pulumi org webhook delivery list`) and environment webhooks
 (`pulumi env webhook delivery list`), but
 redelivery is currently a stack-only CLI affordance — redeliver organization and
-environment webhooks from the Pulumi Cloud UI.
+environment webhooks from the Pulumi Cloud console.
 {{% /notes %}}
 
 ## Additional Resources

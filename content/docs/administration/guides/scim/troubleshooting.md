@@ -64,7 +64,7 @@ If the existing account is already managed by SAML SSO in another Pulumi organiz
 }
 ```
 
-Cause: The user being provisioned has the same username as an existing account in the Pulumi Cloud.
+Cause: The user being provisioned has the same username as an existing account in Pulumi Cloud.
 
 Suggested Resolution: Update the username attribute in your identity provider’s console if your identity provider allows, then try reprovisioning the user. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
@@ -153,7 +153,7 @@ Suggested Resolution: Rename the group in the identity provider so that its name
 
 ## Managing Pulumi-local teams alongside SCIM
 
-Alongside the SCIM-managed teams, you can also configure and manage Pulumi-local teams in the Pulumi Cloud. See [Teams](/docs/administration/concepts/rbac/teams/) for how to configure teams in the Pulumi Cloud.
+Alongside the SCIM-managed teams, you can also configure and manage Pulumi-local teams in Pulumi Cloud. See [Teams](/docs/administration/concepts/rbac/teams/) for how to configure teams in Pulumi Cloud.
 
 ## Learn more
 

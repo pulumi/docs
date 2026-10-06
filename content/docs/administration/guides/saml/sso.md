@@ -52,7 +52,7 @@ This is the URL where the IdP can `POST` SAML assertions. The URL format is alwa
 
 `https://api.pulumi.com/login/{orgName}/sso/saml/acs`
 
-`{orgName}` in the previous URL is where your Pulumi organization's name must be entered. The org name is case-sensitive. For example, if your Pulumi login name is `ACME-corp`, you must enter the name exactly as is in the above URL as well. You can find your org's Pulumi login name from the URL when you navigate to it in the [Pulumi Cloud](https://app.pulumi.com). Using this example, the URL would be `https://app.pulumi.com/ACME-corp`.
+`{orgName}` in the previous URL is where your Pulumi organization's name must be entered. The org name is case-sensitive. For example, if your Pulumi login name is `ACME-corp`, you must enter the name exactly as is in the above URL as well. You can find your org's Pulumi login name from the URL when you navigate to it in [Pulumi Cloud](https://app.pulumi.com). Using this example, the URL would be `https://app.pulumi.com/ACME-corp`.
 
 ### Entity ID
 

@@ -17,7 +17,7 @@ aliases:
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Infisical. OIDC
 in Infisical uses [identities](https://infisical.com/docs/documentation/platform/identities/oidc-auth/general) to access
 Infisical resources. Access to the temporary credentials is authorized using identities that validate the contents of
-the OIDC token issued by the Pulumi Cloud.
+the OIDC token issued by Pulumi Cloud.
 
 ## Prerequisites
 

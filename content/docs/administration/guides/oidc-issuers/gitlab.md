@@ -19,7 +19,7 @@ aliases:
 This document outlines the steps required to configure Pulumi Cloud to accept GitLab id_tokens and exchange them for organization access tokens.
 
 {{< notes type="info" >}}
-This guide walks through the Pulumi Cloud UI. You can also configure OIDC Issuers via the [REST API](/docs/reference/cloud-rest-api/oidc-issuers/) or the [`OidcIssuer`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/oidcissuer/) resource in the Pulumi Service provider.
+This guide walks through the Pulumi Cloud console. You can also configure OIDC Issuers via the [REST API](/docs/reference/cloud-rest-api/oidc-issuers/) or the [`OidcIssuer`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/oidcissuer/) resource in the Pulumi Service provider.
 {{< /notes >}}
 
 {{< notes type="info" >}}

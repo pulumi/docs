@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud: Access Tokens"
-meta_desc: Learn about the various types of access tokens for the Pulumi Cloud.
+meta_desc: Learn about the various types of access tokens for Pulumi Cloud.
 title: Access tokens
 h1: Pulumi Cloud access tokens
 menu:
@@ -19,7 +19,7 @@ aliases:
 - /docs/pulumi-cloud/access-management/access-tokens/
 ---
 
-Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usage of the Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/reference/cloud-rest-api/).
+Use access tokens to sign into Pulumi Cloud via the CLI or automate your usage of Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/reference/cloud-rest-api/).
 
 The token you use for `pulumi login` also authorizes the [`pulumi api`](/docs/iac/cli/api/) command, which calls any REST API endpoint directly from the CLI without needing to set the `Authorization` header yourself.
 

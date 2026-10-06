@@ -29,7 +29,7 @@ The AKS-hosted installation of Pulumi deploys the following services:
 
 ### Pulumi deploying Pulumi
 
-This installer uses Pulumi to deploy the Pulumi Cloud. In this case, use the Pulumi CLI with a DIY backend (e.g., S3) to deploy all services listed above to stand up the self-hosted Pulumi Cloud. The installation package includes Pulumi project code so you can deploy the Pulumi Cloud by running `pulumi up`.
+This installer uses Pulumi to deploy Pulumi Cloud. In this case, use the Pulumi CLI with a DIY backend (e.g., S3) to deploy all services listed above to stand up the self-hosted Pulumi Cloud. The installation package includes Pulumi project code so you can deploy Pulumi Cloud by running `pulumi up`.
 
 To this end, you need to set up the following:
 

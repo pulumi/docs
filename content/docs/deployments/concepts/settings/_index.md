@@ -14,13 +14,13 @@ menu:
     weight: 20
 ---
 
-Deployment settings refer to the full set of configuration required to run a Pulumi Deployment, defined on a per-stack basis. These settings can be managed through the Pulumi Cloud UI, via the REST API, or defined as code with the Pulumi Cloud provider.
+Deployment settings refer to the full set of configuration required to run a Pulumi Deployment, defined on a per-stack basis. These settings can be managed through the Pulumi Cloud console, via the REST API, or defined as code with the Pulumi Cloud provider.
 
 ## Creating deployment settings
 
 You can create and manage deployment settings in several ways:
 
-### From the Pulumi Cloud UI
+### From the Pulumi Cloud console
 
 From the Pulumi Cloud console, a stack's deployment settings can be accessed via the `Settings > Deploy` tab. Once the settings are defined via the UI, they apply to all Deployment triggers, including push-to-deploy (if you have a [VCS integration](/docs/integrations/version-control/) configured), click-to-deploy and the REST API.
 

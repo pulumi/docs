@@ -61,7 +61,7 @@ You don't have to choose between Pulumi Deployments and your existing CI/CD syst
 
 This approach gives you:
 
-- Access to specialized infrastructure operations and the Pulumi Cloud UI
+- Access to specialized infrastructure operations and the Pulumi Cloud console
 - Consistent infrastructure state management
 - The familiarity of your existing CI/CD workflow
 - Advanced capabilities like drift detection and management of dependent stacks

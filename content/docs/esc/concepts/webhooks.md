@@ -38,11 +38,11 @@ Webhooks do not guarantee ordered delivery of events. That is, you should not as
 
 Pulumi Webhooks may be created through any of the following methods:
 
-1. Manually, in the Pulumi Cloud UI using the steps outlined in [Create an Organization Webhook in the Pulumi Cloud UI](#create-an-organization-webhook-in-the-pulumi-cloud-ui) or [Create an Environment Webhook in Pulumi Cloud in the Pulumi Cloud UI](#create-an-environment-webhook-in-the-pulumi-cloud-ui).
+1. Manually, in the Pulumi Cloud console using the steps outlined in [Create an Organization Webhook in the Pulumi Cloud console](#create-an-organization-webhook-in-the-pulumi-cloud-console) or [Create an Environment Webhook in Pulumi Cloud in the Pulumi Cloud console](#create-an-environment-webhook-in-the-pulumi-cloud-console).
 1. Declaratively, as part of a [Pulumi IaC](/docs/iac) program as shown in [Create a Webhook in a Pulumi IaC Program](#create-a-webhook-in-a-pulumi-iac-program)
 1. By invoking the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/webhooks/#create-webhook) directly.
 
-#### Create an Environment Webhook in the Pulumi Cloud UI
+#### Create an Environment Webhook in the Pulumi Cloud console
 
 1. Navigate to the environment you wish to create a webhook for.
 1. Navigate to **Webhooks** tab.
@@ -54,7 +54,7 @@ Pulumi Webhooks may be created through any of the following methods:
    1. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
 1. Choose which events you would like to receive using groups and filters menu.
 
-#### Create an Organization Webhook in the Pulumi Cloud UI
+#### Create an Organization Webhook in the Pulumi Cloud console
 
 {{% notes type="info" %}}
 You must be an admin of the organization to create organization webhooks.
@@ -245,7 +245,7 @@ notification, start running integration tests, or even update additional stacks.
 
 {{% notes type="info" %}}
 If a secret is provided, webhook deliveries will contain a signature in the HTTP request header that can be used
-to authenticate messages as coming from the Pulumi Cloud.
+to authenticate messages as coming from Pulumi Cloud.
 {{% /notes %}}
 
 #### Payload Examples
@@ -371,7 +371,7 @@ Payloads contain several headers.
 
 | Header                     | Description                                                                                                                                                   |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Pulumi-Webhook-ID`        | Unique ID for each webhook sent which you can reference when looking at delivery logs in the Pulumi Cloud.                                                    |
+| `Pulumi-Webhook-ID`        | Unique ID for each webhook sent which you can reference when looking at delivery logs in Pulumi Cloud.                                                    |
 | `Pulumi-Webhook-Kind`      | The kind of webhook event, e.g. `environment`.                                                                                                                |
 | `Pulumi-Webhook-Signature` | Only set if the webhook has a shared secret. HMAC hex digest of the request payload, using the `sha256` hash function and the webhook secret as the HMAC key. |
 
@@ -444,7 +444,7 @@ func computeSignature(payload []byte, secret string) string {
 
 Pulumi Cloud records the recent deliveries for each webhook so you can confirm that events
 were received and troubleshoot any that failed. Environment and organization webhook
-deliveries can be viewed and redelivered from the webhook's page in the Pulumi Cloud UI.
+deliveries can be viewed and redelivered from the webhook's page in the Pulumi Cloud console.
 For step-by-step instructions, see [Webhook deliveries](/docs/deployments/concepts/webhooks/#webhook-deliveries)
 on the Pulumi Cloud Webhooks page.
 

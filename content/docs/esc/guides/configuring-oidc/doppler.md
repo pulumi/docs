@@ -17,7 +17,7 @@ aliases:
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Doppler. OIDC
 in Doppler uses [service account identities](https://docs.doppler.com/docs/service-account-identities) to access
 Doppler resources. Access to the temporary credentials is authorized using identities that validate the contents of
-the OIDC token issued by the Pulumi Cloud.
+the OIDC token issued by Pulumi Cloud.
 
 ## Prerequisites
 

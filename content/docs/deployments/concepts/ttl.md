@@ -60,7 +60,7 @@ Below is an example of setting up Time-To-Live on a stack programmatically:
 
 Refer to the [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/) for more details on how to use the REST API to manage Time-to-Live Stacks.
 
-### Pulumi Cloud Service provider
+### Pulumi Cloud provider
 
 The Pulumi Service Provider allows you to set up and manage Time-to-Live Stacks in source control.
 

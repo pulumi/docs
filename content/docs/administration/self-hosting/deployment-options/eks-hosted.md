@@ -83,5 +83,5 @@ AWS requires moving one Kubernetes release at a time. So if moving from 1.19 to 
 {{% /notes %}}
 
 {{% notes type="info" %}}
-If running the Pulumi Cloud with Kubernetes version 1.18, please refer to the installation package README for details on how to upgrade to V2.0 of the EKS installer before upgrading the Kubernetes version.
+If running Pulumi Cloud with Kubernetes version 1.18, please refer to the installation package README for details on how to upgrade to V2.0 of the EKS installer before upgrading the Kubernetes version.
 {{% /notes %}}
