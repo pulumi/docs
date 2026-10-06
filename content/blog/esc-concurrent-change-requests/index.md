@@ -20,21 +20,23 @@ social:
     bluesky:
 ---
 
-With [ESC Approvals](/docs/esc/concepts/approvals/), you can propose, review, and apply environment changes with change requests. However, we heard from users that they wanted multiple people to work on the same environment at the same time. Now you can! Each person can open their own change request for an environment and go through their own approval process.
+With [ESC Approvals](/docs/esc/concepts/approvals/), you can propose, review, and apply environment changes with change requests. Until now, an environment could only have one open change request at a time. If a teammate's change was waiting for review, others were blocked from opening change requests.
+
+Today, multiple people can open change requests on the same environment at the same time. A platform engineer can rotate a database credential while an app team adds a new feature flag, and each change goes through its own review. You no longer need to wait on your teammates' changes!
 
 <!--more-->
 
 ## How it works
 
-### Creating and viewing environment drafts in the Pulumi Cloud Console
+### Creating and viewing change requests in the Pulumi Cloud console
 
-Creating environment change requests works the same as before - just edit an environment that has Approvals enabled, and click "Create Draft" once ready. You can view all change requests for the environment from either the revision picker or the Approvals tab.
+Creating environment change requests works the same as before - just edit an environment that has approvals enabled, and click "Create Draft" once ready, which opens a change request for your teammates to review. You can view all change requests for the environment from either the revision picker or the Approvals tab.
 
 ![The revision picker listing two pending drafts by different users above the environment's revisions](revision-picker-drafts.png)
 
 ![The Approvals tab listing two pending change requests from different users](approvals-tab-change-requests.png)
 
-### Updating the base revision, a.k.a "rebasing"
+### Updating the base revision, a.k.a. "rebasing"
 
 If another change request gets applied first, yours is now pointing to an older base revision. This is nothing to worry about - just click on "Update to latest revision" and your changes are reapplied on top of the latest revision (using a 3-way merge).
 
@@ -46,4 +48,10 @@ In the rare case that there is a merge conflict, the console will let you know w
 
 ## Get started
 
-Concurrent change requests are available today in Pulumi Cloud for any environment with approvals enabled. To set up approvals, see the [Approvals documentation](/docs/esc/concepts/approvals/). We look forward to seeing your team move faster!
+Concurrent change requests are available today in Pulumi Cloud on the [Pro and Enterprise editions](/pricing/), for any environment with approvals enabled. To try it out:
+
+1. Turn on approvals for an environment. See the [Approvals documentation](/docs/esc/concepts/approvals/) for setup.
+1. Have two teammates each open a draft on the same environment.
+1. Review and apply the change requests.
+
+Let us know what you think in the [Pulumi Community Slack](https://slack.pulumi.com/)!
