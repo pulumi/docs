@@ -25,6 +25,7 @@ How Pulumi Cloud models your organization and who can do what inside it. Read th
 - [Agent accounts](/docs/administration/concepts/agent-accounts/) — accounts for AI agents and automation acting on your organization's behalf.
 - [Billing managers](/docs/administration/concepts/billing-managers/) — the role that delegates billing access without granting admin rights.
 - [Access tokens](/docs/administration/concepts/access-tokens/) — personal, team, and organization tokens for authenticating the CLI, CI/CD, and the REST API.
+- [OIDC issuers](/docs/administration/concepts/oidc-issuers/) — trust relationships that let CI/CD systems and Kubernetes workloads exchange their own OIDC tokens for short-lived Pulumi access tokens.
 
 ## Access control
 
@@ -34,3 +35,7 @@ How Pulumi Cloud models your organization and who can do what inside it. Read th
 
 - [Audit logs](/docs/administration/concepts/audit-logs/) — the record of user and system activity in your organization.
 - [Customer managed keys](/docs/administration/concepts/customer-managed-keys/) — using your own encryption keys to protect data at rest, currently for Pulumi ESC with AWS KMS.
+
+## Compute
+
+- [Customer-managed runners](/docs/administration/concepts/customer-managed-runners/) — runners you host in your own infrastructure for deployments, Discovery scans, and audit policy evaluations.

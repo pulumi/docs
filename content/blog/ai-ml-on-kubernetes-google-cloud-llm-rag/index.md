@@ -198,7 +198,7 @@ Pulumi provides several advantages for AI/ML teams running workloads on Kubernet
 
 Pulumi makes it easy to deploy, scale, and manage AI/ML workloads on Kubernetes, leveraging Google Cloud's AI infrastructure. Whether you're serving LLMs, training custom models, or automating ML pipelines, Pulumi provides a developer-friendly, scalable, and secure solution.
 
-- [Explore AI/ML Projects using Pulumi](https://www.pulumi.com/blog/tag/ml/)
+- [Explore AI/ML Projects using Pulumi](https://www.pulumi.com/blog/tags/ml/)
 - [Discover Essential Kubernetes Best Practices](https://www.pulumi.com/blog/kubernetes-best-practices-i-wish-i-had-known-before/)
 - [Get Started with Pulumi on Google Cloud](/docs/integrations/clouds/gcp/)
 - [Sign up for Pulumi ➡️](https://app.pulumi.com/signup)

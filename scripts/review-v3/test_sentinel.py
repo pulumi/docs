@@ -567,6 +567,130 @@ def test_g3_bot_denylist_and_bot_type_excluded():
     assert _gate(v, "G3").status == "red"
 
 
+HUMAN_CONFIG, _human_errors, _ = routing.validate_raw({
+    **RAW_CONFIG,
+    "approval": {"scope": "any-human", "admins_satisfy": True},
+    "bot_approvers": [
+        {"approver": "github-actions[bot]", "author": "pulumi-bot",
+         "label": "automation/merge", "why": "regen lane"},
+        {"approver": "pulumi-bot", "author": "dependabot[bot]", "why": "deps lane"},
+    ],
+})
+assert HUMAN_CONFIG is not None, _human_errors
+
+
+def test_g3_any_human_with_write_access_clears_any_lane():
+    """`approval.scope: any-human`: no team asked, no team required."""
+    card = author_card([], state=_state_with([]))
+    files = [docs_file_substantive(), frontend_file()]
+    gh = StubGh(pr=pr_meta(), files=files, comments=[card],
+                reviews=[approval("a-committer")], memberships={},
+                permissions={"a-committer": "write"})
+    v = sentinel.evaluate(gh, HUMAN_CONFIG)
+    g3 = _gate(v, "G3")
+    assert g3.status == "ok" and "a-committer" in g3.message, g3.message
+    assert v.conclusion == "success", v.to_json()
+    # maintain and admin are write-or-better
+    for perm in ("maintain", "admin"):
+        gh = StubGh(pr=pr_meta(), files=files, comments=[card],
+                    reviews=[approval("p")], permissions={"p": perm})
+        assert _gate(sentinel.evaluate(gh, HUMAN_CONFIG), "G3").status == "ok", perm
+
+
+def test_g3_any_human_still_means_someone_who_could_merge():
+    """A public repo takes reviews from anyone. A read-only approval is not
+    one GitHub's merge box counts, so G3 must not count it either."""
+    card = author_card([], state=_state_with([]))
+    for perm in ("read", "triage", "none"):
+        gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                    reviews=[approval("drive-by")], permissions={"drive-by": perm})
+        g3 = _gate(sentinel.evaluate(gh, HUMAN_CONFIG), "G3")
+        assert g3.status == "red" and "write access" in g3.message, perm
+    # a stale write-access approval says so
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("a-committer", commit_id="b" * 40)],
+                permissions={"a-committer": "write"})
+    g3 = _gate(sentinel.evaluate(gh, HUMAN_CONFIG), "G3")
+    assert g3.status == "red" and "approved an earlier commit" in g3.message
+
+
+def test_g3_any_human_never_asks_about_teams_and_one_error_does_not_poison():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("flaky"), approval("a-committer")],
+                membership_error_users={"flaky", "a-committer"},  # never consulted
+                permission_error_users={"flaky"},
+                permissions={"a-committer": "write"})
+    v = sentinel.evaluate(gh, HUMAN_CONFIG)
+    assert _gate(v, "G3").status == "ok", _gate(v, "G3").message
+    # when the only approver's lookup fails, it is action_required, not red
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("flaky")], permission_error_users={"flaky"})
+    v = sentinel.evaluate(gh, HUMAN_CONFIG)
+    assert _gate(v, "G3").status == "error" and v.conclusion == "action_required"
+
+
+def test_g3_any_human_still_excludes_bots_off_their_lane():
+    """Widening to "any human" does not widen to "any account": a bot with
+    write access (pulumi-bot has it) still never counts off its lane."""
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
+                comments=[card],
+                reviews=[approval("pulumi-bot"), approval("github-actions[bot]", utype="Bot"),
+                         approval("workprentice[bot]", utype="Bot")],
+                permissions={"pulumi-bot": "admin", "github-actions[bot]": "write",
+                             "workprentice[bot]": "write"})
+    g3 = _gate(sentinel.evaluate(gh, HUMAN_CONFIG), "G3")
+    assert g3.status == "red"
+    assert gh.permission_calls == []  # bot reviews never reach the lookup
+
+
+def test_g3_bot_approver_clears_its_own_lane_only():
+    card = author_card([], state=_state_with([]))
+    regen = dict(files=[docs_file_substantive()], comments=[card],
+                 reviews=[approval("github-actions[bot]", utype="Bot")])
+    # pulumi-bot + automation/merge, approved by github-actions[bot]: ok
+    gh = StubGh(pr=pr_meta(author="pulumi-bot", labels=["automation/merge"]), **regen)
+    # (that pair is also not_governed in RAW_CONFIG; take it out to see G3)
+    cfg = routing.validate_raw({**RAW_CONFIG, "not_governed": {},
+                                "approval": {"scope": "any-human"},
+                                "bot_approvers": HUMAN_CONFIG.bot_approvers})[0]
+    v = sentinel.evaluate(gh, cfg)
+    g3 = _gate(v, "G3")
+    assert g3.status == "ok" and "github-actions[bot]" in g3.message, g3.message
+    assert v.conclusion == "success", v.to_json()
+    assert gh.permission_calls == []  # the bot lane costs no API calls
+    # same approval without the label: a pulumi-bot content-review PR needs a human
+    gh = StubGh(pr=pr_meta(author="pulumi-bot"), **regen)
+    assert _gate(sentinel.evaluate(gh, cfg), "G3").status == "red"
+    # same label, different author: a human wearing the label is not the lane
+    gh = StubGh(pr=pr_meta(author="someone", labels=["automation/merge"]), **regen)
+    assert _gate(sentinel.evaluate(gh, cfg), "G3").status == "red"
+    # the bot lane works under the strict lane scope too: it is a statement
+    # about the lane, not about how wide the human rule is
+    strict = routing.validate_raw({**RAW_CONFIG, "not_governed": {},
+                                   "bot_approvers": HUMAN_CONFIG.bot_approvers})[0]
+    gh = StubGh(pr=pr_meta(author="pulumi-bot", labels=["automation/merge"]), **regen)
+    assert _gate(sentinel.evaluate(gh, strict), "G3").status == "ok"
+
+
+def test_g3_bot_approver_overrides_the_denylist_for_its_lane():
+    """pulumi-bot is `type: User` and on `bots:`; the Dependabot lane is the
+    one place its approval counts."""
+    card = author_card([], state=_state_with([]))
+    cfg = routing.validate_raw({**RAW_CONFIG, "not_governed": {},
+                                "approval": {"scope": "any-human"},
+                                "bot_approvers": HUMAN_CONFIG.bot_approvers})[0]
+    gh = StubGh(pr=pr_meta(author="dependabot[bot]"), files=[docs_file_substantive()],
+                comments=[card], reviews=[approval("pulumi-bot")])
+    assert _gate(sentinel.evaluate(gh, cfg), "G3").status == "ok"
+    # a stale lane approval does not carry over a push
+    gh = StubGh(pr=pr_meta(author="dependabot[bot]"), files=[docs_file_substantive()],
+                comments=[card], reviews=[approval("pulumi-bot", commit_id="b" * 40)])
+    g3 = _gate(sentinel.evaluate(gh, cfg), "G3")
+    assert g3.status == "red" and "approved an earlier commit" in g3.message
+
+
 def test_g3_membership_api_failure_action_required_not_red():
     card = author_card([], state=_state_with([]))
     gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],

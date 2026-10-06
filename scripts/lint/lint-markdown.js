@@ -740,7 +740,7 @@ function checkCustomerRef(obj, fullPath) {
  * generates a public term page, so a typo would ship a junk URL) and must NOT
  * also appear in `tags`: that was the old workaround for manufacturing a landing
  * page under the `tags` taxonomy, and it now only produces a stray
- * /blog/tag/<slug>/ page and surfaces the slug as a topical tag pill. Applies
+ * /blog/tags/<slug>/ page and surfaces the slug as a topical tag pill. Applies
  * only to blog posts (content/blog/<slug>/index.md).
  *
  * @param {*} series The `series` front matter value.
@@ -1212,6 +1212,57 @@ function checkPulumiCloudShortcode(content) {
 }
 
 /**
+ * Matches {{< pulumi-cloud-editions ... >}}, the inline edition list. Unlike a
+ * marker, it may name a feature available on every edition (it renders "All
+ * editions"), so it is checked against every feature id, not MARKABLE_FEATURES.
+ */
+const PULUMI_CLOUD_EDITIONS_SHORTCODE_REGEX = /\{\{[<%]\s*pulumi-cloud-editions(\s[^}]*?)?\s*\/?\s*[>%]\}\}/g;
+
+/**
+ * checkPulumiCloudEditionsShortcode validates that every
+ * {{< pulumi-cloud-editions "<feature>" >}} names a feature in
+ * data/pulumi_pricing.yaml that is available on at least one edition.
+ *
+ * @param {string} content The full file contents, front matter included.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkPulumiCloudEditionsShortcode(content) {
+    if (PRICING.loadError) {
+        return null;
+    }
+    const messages = [];
+    let match;
+    PULUMI_CLOUD_EDITIONS_SHORTCODE_REGEX.lastIndex = 0;
+    while ((match = PULUMI_CLOUD_EDITIONS_SHORTCODE_REGEX.exec(content)) !== null) {
+        const args = (match[1] || "").trim();
+        let err = null;
+        if (args === "") {
+            err = `{{< pulumi-cloud-editions >}} needs a feature id from data/pulumi_pricing.yaml, as {{< pulumi-cloud-editions "teams" >}}.`;
+        } else if (args.includes("=")) {
+            err = `Invalid {{< pulumi-cloud-editions >}} argument: '${args}'. Named parameters aren't supported — write the feature id positionally, as {{< pulumi-cloud-editions "teams" >}}.`;
+        } else {
+            const tokens = args.match(/"[^"]*"|\S+/g).map(t => t.replace(/^"(.*)"$/, "$1"));
+            const id = tokens[0];
+            if (tokens.length > 1) {
+                err = `Invalid {{< pulumi-cloud-editions >}} argument: '${args}'. It takes exactly one feature id.`;
+            } else if (PRICING.editions.includes(id)) {
+                err = `Invalid {{< pulumi-cloud-editions >}} value: '${id}'. That's an edition id, not a feature id — the editions are derived from the feature's availability in data/pulumi_pricing.yaml.`;
+            } else if (!Object.prototype.hasOwnProperty.call(PRICING.features, id)) {
+                const near = Object.keys(PRICING.features).filter(f => f.includes(id) || id.includes(f));
+                const hint = near.length > 0 ? ` Did you mean: ${near.join(", ")}?` : ` Add it to data/pulumi_pricing.yaml — with 'hidden: true' if it isn't a marketed line item on /pricing/.`;
+                err = `Invalid {{< pulumi-cloud-editions >}} value: '${id}'. Not a feature id in data/pulumi_pricing.yaml.${hint}`;
+            } else if (!PRICING.features[id]) {
+                err = `Invalid {{< pulumi-cloud-editions >}} value: '${id}'. That feature isn't available on any edition in data/pulumi_pricing.yaml.`;
+            }
+        }
+        if (err && !messages.includes(err)) {
+            messages.push(err);
+        }
+    }
+    return messages.length > 0 ? messages.join(" ") : null;
+}
+
+/**
  * Asset directories under content/releases/changelog/ whose files must be
  * date-prefixed, mirroring the entry-filename convention (checkChangelogFilename)
  * so the shared folders don't turn into an undated jumble.
@@ -1622,6 +1673,7 @@ function searchForMarkdown(paths) {
                     changelogEditions: checkChangelogEditions(obj.editions, obj.tiers, obj.tier, fullPath),
                     pulumiCloudFeature: checkPulumiCloudFeature(obj.pulumi_cloud_feature, obj.pulumi_cloud),
                     pulumiCloudShortcode: checkPulumiCloudShortcode(content),
+                    pulumiCloudEditionsShortcode: checkPulumiCloudEditionsShortcode(content),
                 };
                 result.files.push(fullPath);
             }
@@ -1814,6 +1866,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "Body",
                     ruleDescription: frontMatterErrors.pulumiCloudShortcode,
+                });
+            }
+            if (frontMatterErrors.pulumiCloudEditionsShortcode) {
+                lintErrors.push({
+                    lineNumber: "Body",
+                    ruleDescription: frontMatterErrors.pulumiCloudEditionsShortcode,
                 });
             }
         }

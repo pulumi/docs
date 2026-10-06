@@ -57,7 +57,7 @@ curl \
 
 Refer to the [Pulumi Deployments REST API documentation](/docs/deployments/deployments/api) for more details on how to use the REST API to manage Scheduled Deployments.
 
-### Pulumi Cloud Service provider
+### Pulumi Cloud provider
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 

@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud Organizations"
-meta_desc: Organizations are a space for you to collaborate on shared projects and stacks. Learn more about how Organizations work in the Pulumi Cloud.
+meta_desc: Organizations are a space for you to collaborate on shared projects and stacks. Learn more about how Organizations work in Pulumi Cloud.
 title: "Organizations"
 h1: Pulumi Cloud organizations
 menu:

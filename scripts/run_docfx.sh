@@ -6,8 +6,16 @@
 #   DOCFX_BUILD_PROJECTS  space-separated csproj paths to `dotnet build` first
 #   DOCFX_OUT             post-processing target dir (default: the IaC dotnet output)
 #   DOCFX_SDK_VERSION     optional SDK version string to surface on generated pages
+#
+# What the generated pages call the SDK (title, description, JSON-LD) is not an
+# environment variable: it comes from the _pulumiSdk* keys in the docfx config's
+# build.globalMetadata, and defaults to the IaC .NET SDK when they are absent.
 
 set -o nounset -o errexit -o pipefail
+
+# Resolve the script directory before any cd, so sibling scripts are found even
+# when this script is invoked with a relative path (e.g. ./scripts/run_docfx.sh).
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 DOCFX_CONFIG="${DOCFX_CONFIG:-docfx.json}"
 DOCFX_BUILD_PROJECTS="${DOCFX_BUILD_PROJECTS:-../pulumi-dotnet/sdk/Pulumi/Pulumi.csproj ../pulumi-dotnet/sdk/Pulumi.Automation/Pulumi.Automation.csproj}"
@@ -170,10 +178,24 @@ sed -i -E 's/"relative_path": "([^"]+)"/"relative_path": "\L\1\E"/g' "$DOTNET_OU
 # rather than docfx's pre-lowercase internal path — see
 # docfx/pulumi-template/partials/head.tmpl.partial for why this can't be
 # done inside the Mustache template itself.
-step "Injecting SEO head metadata (canonical, truncated description, JSON-LD)"
-python3 "$(dirname "$0")/docfx_seo_postprocess.py" \
+#
+# The canonical base URL is derived from where the output lands under
+# static-prebuilt/ (which is served from the site root), so a config that
+# writes to a subdirectory, like the ESC SDK's dotnet/esc-sdk, gets canonical
+# URLs under that subdirectory.
+case "$DOTNET_OUT" in
+    *static-prebuilt/*) ;;
+    *)
+        echo "ERROR: can't derive canonical URLs: DOCFX_OUT is not under static-prebuilt/: ${DOTNET_OUT}" >&2
+        exit 1
+        ;;
+esac
+SEO_BASE_URL="https://www.pulumi.com/${DOTNET_OUT#*static-prebuilt/}"
+step "Injecting SEO head metadata (canonical, truncated description, JSON-LD) for ${SEO_BASE_URL}"
+python3 "${SCRIPT_DIR}/docfx_seo_postprocess.py" \
     "$DOTNET_OUT" \
-    "https://www.pulumi.com/docs/reference/pkg/dotnet" \
+    "$SEO_BASE_URL" \
+    --docfx-config "$DOCFX_CONFIG" \
     ${DOCFX_SDK_VERSION:+--sdk-version "$DOCFX_SDK_VERSION"}
 
 step "Done"

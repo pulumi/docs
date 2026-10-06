@@ -33,7 +33,7 @@ category: product
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-In addition to our [Cloud Engineering Days launches](/blog/nov-2022-launches), we have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from September and October. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) and Pulumi Service features in the [new features blogs](/blog/tag/features).
+In addition to our [Cloud Engineering Days launches](/blog/nov-2022-launches), we have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from September and October. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) and Pulumi Service features in the [new features blogs](/blog/tags/features).
 
 <!--more-->
 

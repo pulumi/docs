@@ -231,8 +231,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Org-scoped token for the two membership endpoints G3 reads —
-          # org team membership, and (for `approval.admins_satisfy`) the
-          # approver's effective repo permission, which wants push access.
+          # org team membership, and (for `approval.scope: any-human` and
+          # `approval.admins_satisfy`) the approver's effective repo
+          # permission, which wants push access.
           # The default GITHUB_TOKEN can do neither. sentinel.py treats
           # lookup failures as action_required, never as "not a member", so
           # a missing/expired token degrades loud, not wrong.

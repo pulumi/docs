@@ -208,6 +208,7 @@ Connecting a cloud account creates an ESC environment and a trust role in your c
 - [Search your discovered resources](/docs/discovery-governance/guides/search-resources/)
 - [Review policy findings](/docs/discovery-governance/operations/policy-findings/)
 - [Import discovered resources into Pulumi IaC](/docs/discovery-governance/guides/visual-import/)
+- [Run scans on customer-managed runners](/docs/discovery-governance/operations/customer-managed-runners/) in your own infrastructure
 
 ## Learn more
 

@@ -465,6 +465,11 @@ gh pr list -R pulumi/<repo> --search "<term>"
 # not yet on master (e.g. docs PR body says "Documents pulumi/pulumi#23691")
 gh pr diff <n> -R pulumi/<repo>
 
+# Read a source file the docs PR body cites (github.com/pulumi/<repo>/blob/<ref>/<path>#L<a>-L<b>)
+# — a citation like any inline one: spot-check it first, then confirm the default
+# branch still agrees if it's pinned to an old SHA. Raw output; slice to the cited lines.
+gh api -H "Accept: application/vnd.github.raw" "repos/pulumi/<repo>/contents/<path>?ref=<ref>" | sed -n '<a>,<b>p'
+
 # Read provider schema generation source for resource property claims
 gh api repos/pulumi/pulumi-<provider>/contents/provider/cmd/...
 ```

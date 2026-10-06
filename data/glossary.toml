@@ -47,6 +47,11 @@ description = "Per-[stack](#stack) key-value settings that a Pulumi [program](#p
 link = "/docs/iac/concepts/config/"
 
 [[entries]]
+term = "Customer-managed runner"
+description = "A runner you host in your own infrastructure, instead of a Pulumi-managed runner, that executes [Pulumi Deployments](#pulumi-deployments) operations, Discovery scans, and audit policy evaluations. Runners are grouped into runner pools, and each stack, cloud account, or audit policy group can be assigned a pool. The CLI, REST API, and RBAC scopes call a runner pool an agent pool."
+link = "/docs/administration/concepts/customer-managed-runners/"
+
+[[entries]]
 term = "Deployment Engine"
 description = "The component of Pulumi responsible for computing the operations needed to drive current [state](#state) into the desired state declared by a [program](#program), then executing those operations through [resource providers](#resource-provider)."
 link = "/docs/iac/concepts/how-pulumi-works/"
@@ -178,7 +183,7 @@ link = "/product/pulumi-cloud/"
 
 [[entries]]
 term = "Pulumi Deployments"
-description = "A managed remote execution service in [Pulumi Cloud](#pulumi-cloud) that runs Pulumi operations (`up`, `preview`, `refresh`, `destroy`) on Pulumi-hosted or [self-hosted](#self-hosted) agents. Deployments power Git push-to-deploy, scheduled [drift detection](#drift-detection), [review stacks](#review-stacks), and click-to-deploy templates."
+description = "A managed remote execution service in [Pulumi Cloud](#pulumi-cloud) that runs Pulumi operations (`up`, `preview`, `refresh`, `destroy`) on Pulumi-managed or [customer-managed runners](#customer-managed-runner). Deployments power Git push-to-deploy, scheduled [drift detection](#drift-detection), [review stacks](#review-stacks), and click-to-deploy templates."
 link = "/docs/deployments/"
 
 [[entries]]
