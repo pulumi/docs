@@ -134,6 +134,13 @@ sections:
         h1: CMMC 2.0 - AWS
         metaDesc: Complete list of CMMC 2.0 compliance policies for AWS.
         weight: 1
+      - pack: cmmc-google-cloud
+        source: packs/cmmc/gcp
+        slug: google-cloud
+        title: Google Cloud
+        h1: CMMC 2.0 - Google Cloud
+        metaDesc: Complete list of CMMC 2.0 compliance policies for Google Cloud.
+        weight: 2
 
   - id: hitrust
     menu: reference-pre-built-policy-packs-hitrust

@@ -13,6 +13,7 @@
     "cis-kubernetes-azure": "2026-07-16",
     "cis-kubernetes-google-cloud": "2026-07-16",
     "cmmc-aws": "2026-07-16",
+    "cmmc-google-cloud": "2026-10-06",
     "hitrust-aws": "2026-07-16",
     "hitrust-azure": "2026-07-16",
     "hitrust-google-cloud": "2026-07-16",
