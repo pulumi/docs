@@ -2,7 +2,7 @@
 title_tag: "How Pulumi IaC Works | Pulumi Guides"
 meta_desc: "How Pulumi IaC works internally: the language host, deployment engine, and resource providers, and how they interact when you run pulumi up."
 title: How Pulumi IaC Works
-h1: How Pulumi IaC Works
+h1: How Pulumi IaC works
 menu:
     iac:
         name: How Pulumi IaC Works
@@ -24,7 +24,7 @@ This page describes how Pulumi Infrastructure as Code (IaC) turns a program into
 
 ## Running a Pulumi program
 
-Let's walk through a simple example. Suppose we have the following Pulumi program, which creates two S3 buckets:
+Consider the following Pulumi program, which creates two S3 buckets:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
@@ -146,21 +146,21 @@ HCL convention is snake_case resource labels, and the label becomes the logical 
 
 {{< /chooser >}}
 
-Now, we run `pulumi stack init mystack`. Since `mystack` is a new [stack](/docs/iac/concepts/stacks/), the "last deployed state" has no resources.
+First, run `pulumi stack init mystack`. Since `mystack` is a new [stack](/docs/iac/concepts/stacks/), the "last deployed state" has no resources.
 
 {{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
-Next, we run `pulumi up`. Since this program is written in {{% pulumi-language %}}, the Pulumi CLI launches the {{% pulumi-host %}} language host and requests that it execute the program. When the first {{% pulumi-bucket %}} object is constructed, the language host sends a _resource registration_ request to the deployment engine and then continues executing the program. This is subtle, but important: _When the call to_ {{% pulumi-new-bucket %}} _returns, it does not mean that the actual S3 bucket has been created in AWS_, it just means the language host has expressed that this bucket is part of the desired state of your infrastructure. The language host continues to execute your program concurrently with the engine processing this request. (The language host and deployment engine used throughout this walkthrough are defined in detail under [Architecture](#architecture) below.)
+Next, run `pulumi up`. Since this program is written in {{% pulumi-language %}}, the Pulumi CLI launches the {{% pulumi-host %}} language host and requests that it execute the program. When the first {{% pulumi-bucket %}} object is constructed, the language host sends a _resource registration_ request to the deployment engine and then continues executing the program. This is subtle, but important: _When the call to_ {{% pulumi-new-bucket %}} _returns, it does not mean that the actual S3 bucket has been created in AWS_, it only means the language host has expressed that this bucket is part of the desired state of your infrastructure. The language host continues to execute your program concurrently with the engine processing this request. (The language host and deployment engine used throughout this walkthrough are defined in detail under [Architecture](#architecture) below.)
 
 {{% /choosable %}}
 
 {{% choosable language hcl %}}
 
-Next, we run `pulumi up`. Since this program is written in HCL, the Pulumi CLI launches the HCL language host and requests that it execute the program. The language host reads every `.tf` file in the project, builds a dependency graph from the references between blocks, and walks that graph, sending a _resource registration_ request to the deployment engine for each `resource` block. This is subtle, but important: _registering_ `aws_s3_bucket.media_bucket` _does not mean that the actual S3 bucket has been created in AWS_, it just means the language host has expressed that this bucket is part of the desired state of your infrastructure. Blocks that do not depend on one another are registered without waiting on each other, so the language host keeps working concurrently with the engine processing this request. (The language host and deployment engine used throughout this walkthrough are defined in detail under [Architecture](#architecture) below.)
+Next, run `pulumi up`. Since this program is written in HCL, the Pulumi CLI launches the HCL language host and requests that it execute the program. The language host reads every `.tf` file in the project, builds a dependency graph from the references between blocks, and walks that graph, sending a _resource registration_ request to the deployment engine for each `resource` block. This is subtle, but important: _registering_ `aws_s3_bucket.media_bucket` _does not mean that the actual S3 bucket has been created in AWS_, it only means the language host has expressed that this bucket is part of the desired state of your infrastructure. Blocks that do not depend on one another are registered without waiting on each other, so the language host keeps working concurrently with the engine processing this request. (The language host and deployment engine used throughout this walkthrough are defined in detail under [Architecture](#architecture) below.)
 
 {{% /choosable %}}
 
-In this case, since the last deployed state has no resources, the engine determines that it needs to create the `media-bucket` resource. It uses the AWS resource plugin in order to create the resource and the AWS resource plugin uses the AWS SDK in order to go create it.  Note that the engine does not talk directly to AWS, instead it just asks the AWS Resource Plugin to create a Bucket. As new resource types are added, you can update the version of a resource provider to gain access to these new resources without having to update the CLI itself. When the operation to create this bucket is complete, the engine records information about the newly created resource in its state file.
+In this case, since the last deployed state has no resources, the engine determines that it needs to create the `media-bucket` resource. It uses the AWS resource plugin to create the resource, and the AWS resource plugin uses the AWS SDK to create it. Note that the engine does not talk directly to AWS; instead, it asks the AWS resource plugin to create a bucket. As new resource types are added, you can update the version of a resource provider to gain access to these new resources without having to update the CLI itself. When the operation to create this bucket is complete, the engine records information about the newly created resource in its state file.
 
 As the engine was creating the `media-bucket` bucket, the language host continued to execute the Pulumi program. This caused another resource registration to be generated (for `content-bucket`). Since there is no dependency between these two buckets, the engine is able to process that request in parallel with the creation of `media-bucket`.
 
@@ -180,9 +180,9 @@ Resources:
 Duration: 7s
 ```
 
-The names shown above—`media-bucket` and `content-bucket`—are the _logical names_ you gave the resources in your program. By default, Pulumi appends a random suffix to each resource's _physical name_ in AWS (for example, `media-bucket-653a4f2`). This is due to a process called [auto-naming](/docs/iac/concepts/resources/names/#autonaming), which Pulumi uses by default in order to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
+The names shown above—`media-bucket` and `content-bucket`—are the _logical names_ you gave the resources in your program. By default, Pulumi appends a random suffix to each resource's _physical name_ in AWS (for example, `media-bucket-653a4f2`). This is due to a process called [auto-naming](/docs/iac/concepts/resources/names/#autonaming), which Pulumi uses by default to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
 
-Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to add tags to the S3 `media-bucket`.  We change our program to express this new desired state:
+Now, make a change to one of the resources and run `pulumi up` again. Since Pulumi operates on a desired state model, it uses the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, suppose you want to add tags to the S3 `media-bucket`. Change the program to express this new desired state:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
@@ -316,11 +316,11 @@ resource "aws_s3_bucket" "content_bucket" {}
 
 {{< /chooser >}}
 
-When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the media bucket's definition causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `tags` property has changed from empty to a map assigning the `owner` tag. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the `tags` property to set the `owner` tag. When this operation completes, the current state is updated to reflect the change that had been made.
+When you run `pulumi preview` or `pulumi up`, the entire process starts over. The language host starts running your program and the media bucket's definition causes a new resource registration request to be sent to the engine. This time, however, the state already contains a resource named `media-bucket`, so the engine asks the resource provider to compare the existing state from the previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `tags` property has changed from empty to a map assigning the `owner` tag. By again consulting the resource provider, the engine determines that it can update this property without creating a new bucket, and so it tells the provider to update the `tags` property to set the `owner` tag. When this operation completes, the current state is updated to reflect the change that had been made.
 
-The engine also receives a resource registration request for "content-bucket".  However, since there are no changes between the current state and the desired state, the engine does not need to make any changes to the resource.
+The engine also receives a resource registration request for `content-bucket`. However, since there are no changes between the current state and the desired state, the engine does not need to make any changes to the resource.
 
-Now, suppose we rename `content-bucket` to `app-bucket`.
+Now, suppose you rename `content-bucket` to `app-bucket`.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
@@ -456,7 +456,7 @@ Renaming the label registers a new resource and drops the old one. To rename a r
 
 {{< /chooser >}}
 
-This time, the engine will not need to make any changes to `media-bucket` since its desired state matches its actual state. However, when the resource request for `app-bucket` is processed, the engine sees there's no existing resource named `app-bucket` in the current state so it must create a new S3 bucket. Once that process is complete and the language host has shut down, the engine looks for any resources in the current state which it did not see a resource registration for. In this case, since we removed the registration of `content-bucket` from our program, the engine calls the resource provider to delete the existing `content-bucket` bucket.
+This time, the engine does not need to make any changes to `media-bucket` since its desired state matches its actual state. However, when the resource request for `app-bucket` is processed, the engine sees there's no existing resource named `app-bucket` in the current state so it must create a new S3 bucket. Once that process is complete and the language host has shut down, the engine looks for any resources in the current state which it did not see a resource registration for. In this case, since you removed the registration of `content-bucket` from your program, the engine calls the resource provider to delete the existing `content-bucket` bucket.
 
 ## Resource operations
 
@@ -673,12 +673,12 @@ flowchart LR
 
 The _language host_ is responsible for running a Pulumi program and setting up an environment where it can register resources with the deployment engine. Language hosts are implemented via [plugins](/docs/iac/concepts/plugins/) (specifically, language plugins). The language host consists of two different pieces:
 
-1. A language executor, which is a binary named `pulumi-language-<language-name>`, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). Most language executors are distributed with the Pulumi CLI; the CLI downloads the HCL executor, `pulumi-language-hcl`, automatically the first time you run an HCL project.
+1. A language executor, which is a binary named `pulumi-language-<language-name>`, that Pulumi uses to launch the runtime for the language your program is written in (for example, Node or Python). Most language executors are distributed with the Pulumi CLI; the CLI downloads the HCL executor, `pulumi-language-hcl`, automatically the first time you run an HCL project.
 2. A language SDK is responsible for preparing your program to be executed and observing its execution in order to detect resource registrations. When a resource is _registered_—by constructing a resource object in your program—the language SDK communicates the registration request back to the deployment engine. The language SDK is distributed as a regular package, just like any other code that might depend on your program. For example, the TypeScript and JavaScript SDK is contained in the [`@pulumi/pulumi`](https://www.npmjs.com/package/@pulumi/pulumi) package available on npm, and the Python SDK is contained in the [`pulumi`](https://pypi.org/project/pulumi/) package available on PyPI. Pulumi YAML and Pulumi HCL have no separate language SDK: the language executor reads the program files itself and sends each resource registration to the engine.
 
 ### Deployment engine
 
-The _deployment engine_ is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program. When a resource registration is received from the language host, the engine consults the existing [state](/docs/iac/concepts/state-and-backends/) to determine if that resource has been created before. If it has not, the engine uses a resource provider to create it. If it already exists, the engine works with the resource provider to determine what, if anything, has changed by comparing the old state of the resource with the new desired state of the resource as expressed by the program. If there are changes, the engine determines if it can update the resource in place or if it must replace it by creating a new version and deleting the old version. The decision depends on what properties of the resource are changing and the type of the resource itself. When the language host communicates to the engine that it has completed the execution of the Pulumi program, the engine looks for any existing resources that it did not see a new resource registration and schedules these resources for deletion.
+The _deployment engine_ is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program. When a resource registration is received from the language host, the engine consults the existing [state](/docs/iac/concepts/state-and-backends/) to determine if that resource has been created before. If it has not, the engine uses a resource provider to create it. If it already exists, the engine works with the resource provider to determine what, if anything, has changed by comparing the old state of the resource with the new desired state of the resource as expressed by the program. If there are changes, the engine determines if it can update the resource in place or if it must replace it by creating a new version and deleting the old version. The decision depends on what properties of the resource are changing and the type of the resource itself. When the language host communicates to the engine that it has completed the execution of the Pulumi program, the engine looks for any existing resources for which it did not see a new resource registration and schedules these resources for deletion.
 
 The deployment engine is embedded in the `pulumi` CLI itself.
 

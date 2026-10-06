@@ -504,7 +504,7 @@ scrape_configs:
 To enable [Pulumi Deployments](/docs/deployments/concepts/), the following must be configured:
 
 * `PULUMI_SERVICE_METADATA_BLOB_STORAGE_ENDPOINT` or `PULUMI_LOCAL_OBJECTS` [object storage](#object-storage)
-* [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/) - You also need to update the `pulumi-workflow-agent.yaml` [configuration file](/docs/deployments/concepts/customer-managed-runners/#configuration-reference) by setting `service_url` to `<PULUMI_API_DOMAIN>`. Example:
+* [Customer-managed runners](/docs/administration/concepts/customer-managed-runners/) - You also need to update the `pulumi-workflow-agent.yaml` [configuration file](/docs/administration/concepts/customer-managed-runners/#configuration-reference) by setting `service_url` to `<PULUMI_API_DOMAIN>`. Example:
 
     ```yaml
     token: pul-d2d2….

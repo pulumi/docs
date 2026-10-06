@@ -438,11 +438,6 @@ categories:
         tooltip: For GitHub Enterprise Cloud enterprises on a ghe.com subdomain. GitHub Enterprise Cloud on github.com works with the standard GitHub integration in every edition.
         available_from: enterprise
 
-      - id: customer-managed-runners
-        name: Customer-managed deployment runners
-        link: /docs/deployments/concepts/customer-managed-runners/
-        available_from: enterprise
-
       - id: gated-deployments
         name: Gated deployments
         available_from: pro
@@ -682,11 +677,6 @@ categories:
           pro: Advisory and Mandatory
           enterprise: Advisory, Mandatory, and Remediation
 
-      - id: insights-self-hosted
-        name: Discovery on self-hosted Pulumi Cloud
-        link: /docs/discovery-governance/operations/self-hosted/
-        available_from: enterprise
-
       - id: context-api
         name: Context API
         link: /docs/discovery-governance/concepts/context-api/
@@ -878,6 +868,12 @@ categories:
       - id: audit-log-export
         name: Automated log export to S3 and Microsoft Sentinel
         link: /docs/administration/guides/audit-logs/#automated-export
+        available_from: enterprise
+
+      - id: customer-managed-runners
+        name: Customer-managed runners
+        link: /docs/administration/concepts/customer-managed-runners/
+        tooltip: Run Pulumi Deployments, Discovery scans, and audit policy evaluations on runners you host in your own infrastructure.
         available_from: enterprise
 
   - id: support

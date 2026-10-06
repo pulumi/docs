@@ -18,7 +18,7 @@ On the stack's **Settings** → **Deploy** page, turn on **Use a custom executor
 {{% notes type="warning" %}}
 Private registries are authenticated with **static username and password credentials only** — OIDC and IAM-role-based pulls are not supported for custom executor images. As a result, a **private Amazon ECR** registry does not work: ECR has no long-lived credentials. Its registry password is an authorization token from `aws ecr get-login-password` that expires after 12 hours, so a pasted token soon stops working and deployments can no longer pull the image. (A *public* image on [Amazon ECR Public](https://gallery.ecr.aws/) needs no credentials and works fine.)
 
-If you need to pull a private image from ECR — or your security model requires short-lived registry credentials — use [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/), which run in your own infrastructure and can authenticate to the registry with an IAM role or any other mechanism you configure.
+If you need to pull a private image from ECR — or your security model requires short-lived registry credentials — use [customer-managed runners](/docs/administration/concepts/customer-managed-runners/), which run in your own infrastructure and can authenticate to the registry with an IAM role or any other mechanism you configure.
 {{% /notes %}}
 
 For guidance on choosing between a pre-run install hook and a custom image, building a custom image, supported base images, and the trade-offs to consider, see [Deployment execution environment](/docs/deployments/guides/custom-images/).

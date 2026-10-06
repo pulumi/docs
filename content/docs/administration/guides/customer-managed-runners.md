@@ -1,28 +1,30 @@
 ---
-title: Customer-Managed Workflow Runners
-title_tag: Set up customer-managed workflow runners | Pulumi Deployments
-meta_desc: Set up, scale, and configure self-hosted workflow runner pools so Pulumi Deployments runs in your own environments.
+title: Set up customer-managed runners
+title_tag: Set up customer-managed runners | Pulumi Cloud
+meta_desc: Set up, scale, and assign customer-managed runner pools to run Pulumi Deployments, Discovery scans, and audit policy evaluations in your own infrastructure.
 menu:
-  deployments:
-    name: Customer-Managed Workflow Runners
-    parent: deployments-guides
-    weight: 20
-    identifier: deployments-guides-customer-managed-runners
+  administration:
+    name: Set up customer-managed runners
+    parent: administration-guides
+    weight: 7
+    identifier: administration-guides-customer-managed-runners
+aliases:
+- /docs/deployments/guides/customer-managed-workflow-runners/
 pulumi_cloud_feature: customer-managed-runners
 ---
 
-Customer-managed workflow runners let you self-host the compute that runs Pulumi Deployments, [Discovery](/docs/discovery-governance/concepts/discovery/) scans, and [policy evaluations](/docs/discovery-governance/concepts/policy-as-code/), so workflows execute inside your own network and on hardware you control. For an overview of how runners fit into a deployment run — and the full configuration reference — see [Runners](/docs/deployments/concepts/customer-managed-runners/).
+Customer-managed runners let you run Pulumi Deployments, [Discovery](/docs/discovery-governance/concepts/discovery/) scans, and audit [policy evaluations](/docs/discovery-governance/concepts/policy-as-code/) on compute you host, so work executes inside your own network and on hardware you control. For what runs on customer-managed runners, how each kind of work picks a pool, and the full configuration reference, see [Customer-managed runners](/docs/administration/concepts/customer-managed-runners/).
 
-## Using customer-managed workflow runners
+## Set up a runner pool
 
 Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) installed, which is required for running the workflow runner. If you plan to use workflow runners for **deployments**, you must also install the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) and update the [source control settings](/docs/deployments/get-started/) of the stack you want to deploy.
 
-1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow Runner Pools** tab
+1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow runner pools** tab
 1. Create a new pool. Copy and save the token
 1. Install the workflow runners as per the instructions on the page
 1. Verify the workflow runner status by refreshing the page
-1. Configure the workflow runner pool for the workflows you want to run:
-   - **Deployments**: Navigate to **Stack Settings** > **Deploy** tab and select the pool under the **Deployment Runner** pool dropdown
+1. Configure the runner pool for the workflows you want to run:
+   - **Deployments**: Navigate to **Stack Settings** > **Deploy** tab and select the pool from the **Deployment runner pool** dropdown
    - **Discovery scans**: Navigate to **Resources** > **Discovery** and select the pool for the account you want to scan
    - **Policy evaluation**: Navigate to **Governance** > **Policy configuration**, select the **Policy Groups** tab, and select the pool for an audit policy group
 1. **(Optional)** Add more workflow runners to the pool to increase concurrency by using the same token
@@ -37,7 +39,7 @@ Workflow runners support multiple workflow types beyond deployments, including D
 
 ### Scaling and concurrency
 
-Each workflow runner process runs **one deployment at a time**, plus optionally **one Discovery scan or policy evaluation in parallel**, and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one deployment slot and, if the pool also handles non-deployment workflow types, one additional slot for Discovery scans or policy evaluations. For how each runner launches a job (the Docker and Kubernetes execution models), see [Execution model](/docs/deployments/concepts/customer-managed-runners/#execution-model).
+Each workflow runner process runs **one deployment at a time**, plus optionally **one Discovery scan or policy evaluation in parallel**, and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one deployment slot and, if the pool also handles non-deployment workflow types, one additional slot for Discovery scans or policy evaluations. For how each runner launches a job (the Docker and Kubernetes execution models), see [Execution model](/docs/administration/concepts/customer-managed-runners/#execution-model).
 
 Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. Recovery behavior depends on the workflow type:
 
@@ -58,7 +60,7 @@ If you are running the workflow runner inside a firewall ensure to allow outboun
 
 ### Setting an organization default pool
 
-You can set one pool as the **organization default**. When a default pool is set, any deployment, Discovery scan, or policy evaluation that does not have an explicit workflow runner pool configured will use the default pool instead of the Pulumi Hosted Pool.
+You can set one pool as the **organization default**. When a default pool is set, any deployment, Discovery scan, or policy evaluation that does not have an explicit runner pool configured will use the default pool instead of the Pulumi Hosted Pool.
 
 The resolution order for each workflow is:
 
@@ -68,7 +70,7 @@ The resolution order for each workflow is:
 
 To set a default:
 
-1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow Runner Pools** tab.
+1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow runner pools** tab.
 1. Open the row actions menu on the pool you want to designate and choose **Set as default**.
 
 The **Pulumi Hosted Pool** row at the top of the list represents the built-in Pulumi-managed pool. Selecting **Set as default** on that row clears any customer-managed default, restoring the built-in pool as the fallback. If a custom default pool is deleted, the organization automatically reverts to the Pulumi Hosted Pool.
@@ -95,4 +97,4 @@ The workflow runner will attempt to read the `oidc_token_file` for a fresh OIDC 
 
 ## Providing credentials and configuring runners
 
-For the cloud credentials your runners need to manage infrastructure, see [Runners](/docs/deployments/concepts/customer-managed-runners/#providing-cloud-credentials-to-workflow-runners). For the full set of configuration options for the `pulumi-workflow-agent.yaml` file, see the [configuration reference](/docs/deployments/concepts/customer-managed-runners/#configuration-reference).
+For the cloud credentials your runners need to manage infrastructure, see [Customer-managed runners](/docs/administration/concepts/customer-managed-runners/#providing-cloud-credentials-to-runners). For the full set of configuration options for the `pulumi-workflow-agent.yaml` file, see the [configuration reference](/docs/administration/concepts/customer-managed-runners/#configuration-reference).

@@ -23,7 +23,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
-| `agent_pool:create` | Create a new agent pool for running Pulumi operations. Agent pools provide isolated environments for executing infrastructure deployments.<br><br>**Granted by default roles**: `Admin` |
+| `agent_pool:create` | Create a new agent pool (a [customer-managed runner](/docs/administration/concepts/customer-managed-runners/) pool). Agent pools run deployments, Discovery scans, and audit policy evaluations on runners you host in your own infrastructure.<br><br>**Granted by default roles**: `Admin` |
 | `agent_pool:delete` | Remove an existing agent pool and its associated resources. This permanently deletes the pool and its configuration.<br><br>**Granted by default roles**: `Admin` |
 | `agent_pool:read` | View agent pool configurations and status. This includes access to pool settings, agent status, and operational metrics.<br><br>**Granted by default roles**: `Admin` |
 | `agent_pool:update` | Modify agent pool settings and configurations. This allows updating pool parameters, scaling settings, and agent configurations.<br><br>**Granted by default roles**: `Admin` |

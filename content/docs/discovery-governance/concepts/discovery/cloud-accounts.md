@@ -50,6 +50,14 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
   A scan should be kicked off immediately. If you are creating a new cloud account for AWS, see the **child accounts** (one for each region) for scan status.
 {{< /notes >}}
 
+## Run scans on customer-managed runners
+
+{{< pulumi-cloud "customer-managed-runners" "named" />}}
+
+By default, scans run on Pulumi-managed runners. To scan resources in a private network, or to keep credentials and scan data inside your own infrastructure, assign the cloud account to a [customer-managed runner](/docs/administration/concepts/customer-managed-runners/) pool. A scan uses the cloud account's pool, then the organization default pool, then the Pulumi hosted pool. A scan started through the [REST API](/docs/reference/cloud-rest-api/) can name a different pool for that one scan.
+
+For setup steps, see [Run scans and policy evaluations on customer-managed runners](/docs/discovery-governance/operations/customer-managed-runners/).
+
 ## Account hierarchies
 
 Account hierarchies allow you to organize and manage cloud accounts in a structured way. Currently, child accounts can only be created automatically by Pulumi and is only done so for AWS regions. In the future, this feature will be expanded to support creating custom hierarchies, providing more flexibility for structuring accounts, such as for organizing Kubernetes clusters within an Azure subscription.

@@ -18,7 +18,7 @@ Dependency caching covers more than your language packages. A cache entry bundle
 The mechanism is straightforward. On the first deployment, the runner detects these items — using your lock files for the language dependencies — archives them, and stores the archive in blob storage. On later deployments, the runner pulls that archive down and unpacks it, saving the time it would otherwise spend downloading everything again. When your dependencies change, the runner invalidates the old cache and creates a new one.
 
 {{% notes type="info" %}}
-Dependency caching is unavailable on stacks that use a [customer-managed runner pool](/docs/deployments/concepts/customer-managed-runners/#dependency-caching), because you already control the lifetime and contents of those runners.
+Dependency caching is unavailable on stacks that use a [customer-managed runner pool](/docs/administration/concepts/customer-managed-runners/#not-supported-on-customer-managed-runners), because you already control the lifetime and contents of those runners.
 {{% /notes %}}
 
 ## Enabling dependency caching

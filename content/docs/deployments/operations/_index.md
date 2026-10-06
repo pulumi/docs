@@ -21,4 +21,4 @@ This section covers the operational details of running Pulumi Deployments — th
 - **[Permissions](/docs/deployments/operations/permissions/)** — the actions a deployment is allowed to perform within Pulumi Cloud, and how to grant additional access.
 - **[Deployment queue](/docs/deployments/operations/deployment-queue/)** — how deployments are queued, concurrency limits, queue expiry, and pausing deployments.
 
-For the compute that runs your deployments — including how runs are isolated — see [Pulumi-managed runners](/docs/deployments/concepts/pulumi-managed-runners/) and [Customer-managed runners](/docs/deployments/concepts/customer-managed-runners/).
+For the compute that runs your deployments — including how runs are isolated — see [Pulumi-managed runners](/docs/deployments/concepts/pulumi-managed-runners/) and [Customer-managed runners](/docs/administration/concepts/customer-managed-runners/).
