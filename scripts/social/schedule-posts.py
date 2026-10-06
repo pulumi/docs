@@ -22,6 +22,15 @@ posted (per S3 state), extracts social copy from frontmatter, and posts to X,
 LinkedIn, and Bluesky on the day — the blog is already live because this runs
 after Build and deploy, so the URL liveness check passes.
 
+LinkedIn and Bluesky go through upload-post.com. X goes direct through the X
+API
+
+  X_CONSUMER_KEY, X_CONSUMER_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET,
+  X_USERNAME (optional; only used to build a nicer permalink)
+
+With PROD_MODE off, the X_TEST_* equivalents are read instead. Missing
+credentials make X fall back to the manual-posting notice in the PR comment.
+
 See the upstream social_core module for scheduling, idempotency, and error
 handling details: https://github.com/pulumi/social
 """
@@ -43,6 +52,7 @@ from social_core import (
     run_post_file,
     run_schedule,
 )
+from x_client import XCredentials, verify_credentials
 
 
 # --- Account / API target ----------------------------------------------------
@@ -55,6 +65,11 @@ if PROD_MODE:
 else:
     USER = "pulumi-test"
     LINKEDIN_PAGE_ID = "113012346"
+
+X_ENV_PREFIX = "X_" if PROD_MODE else "X_TEST_"
+
+# Go-live gate for direct X API posting
+X_DIRECT_API_ENABLED = True
 
 SITE_URL = "https://www.pulumi.com"
 POSTS_GLOB = "content/blog/*/index.md"
@@ -164,11 +179,52 @@ def build_entries(changed: list[str]) -> list[PostEntry]:
 
 # --- config assembly --------------------------------------------------------
 
+def _x_direct_api_enabled() -> bool:
+    override = os.environ.get("X_DIRECT_API_ENABLED")
+    if override is not None:
+        return override.strip().lower() in ("1", "true", "yes")
+    return X_DIRECT_API_ENABLED
+
+
+def _x_credentials() -> XCredentials | None:
+    """X OAuth 1.0a credentials, or None when any required secret is missing.
+
+    social_core reads None as "no X posting this run" and falls back to the
+    manual-posting notice instead of failing the whole run.
+    """
+    p = X_ENV_PREFIX
+    creds = XCredentials(
+        consumer_key=os.environ.get(f"{p}CONSUMER_KEY", ""),
+        consumer_secret=os.environ.get(f"{p}CONSUMER_SECRET", ""),
+        access_token=os.environ.get(f"{p}ACCESS_TOKEN", ""),
+        access_token_secret=os.environ.get(f"{p}ACCESS_TOKEN_SECRET", ""),
+        username=os.environ.get(f"{p}USERNAME") or None,
+    )
+    return creds if creds.complete else None
+
+
+def run_verify_x(cfg: SchedulerConfig) -> int:
+    """Preflight the X credentials so a revoked or rotated token fails the run
+    before any posting starts. Disabled or unconfigured X is not a failure."""
+    if not cfg.x_direct_api_enabled:
+        print("X direct posting is disabled for this run — skipping check.")
+        return 0
+    if cfg.x_credentials is None:
+        print(f"::warning::No complete {X_ENV_PREFIX}* credential set — "
+              "X posts will fall back to the manual-posting notice.")
+        return 0
+    ok, detail = verify_credentials(cfg.x_credentials)
+    print(f"X credential check: {detail}")
+    return 0 if ok else 1
+
+
 def _build_config() -> SchedulerConfig:
     return SchedulerConfig(
         api_key=os.environ.get("UPLOAD_POST_API_KEY", ""),
         user=USER,
         linkedin_page_id=LINKEDIN_PAGE_ID,
+        x_credentials=_x_credentials(),
+        x_direct_api_enabled=_x_direct_api_enabled(),
         state_bucket=os.environ.get("SOCIAL_STATE_BUCKET", ""),
         github_repo=os.environ.get("GITHUB_REPOSITORY", "pulumi/docs"),
         github_token=os.environ.get("GITHUB_TOKEN", ""),
@@ -194,6 +250,10 @@ if __name__ == "__main__":
         "--check", action="store_true",
         help="Check mode: validate pending posts without publishing",
     )
+    mode.add_argument(
+        "--verify-x", action="store_true",
+        help="Verify X API credentials and exit",
+    )
     parser.add_argument(
         "--platform", action="append", choices=["x", "linkedin", "bluesky"],
         help="Limit to specific platform(s) (can be repeated; --post only)",
@@ -202,7 +262,9 @@ if __name__ == "__main__":
 
     cfg = _build_config()
 
-    if args.check:
+    if args.verify_x:
+        sys.exit(run_verify_x(cfg))
+    elif args.check:
         base_ref = os.environ.get("BASE_REF", "origin/master")
         sys.exit(run_check(cfg, base_ref))
     elif args.post:
