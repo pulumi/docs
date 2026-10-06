@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Google Cloud Provider Version 10.0.0"
-date: 2026-10-01T09:00:00-07:00  # TODO(GA): set to GA day
+date: 2026-10-06T08:00:00-07:00
 draft: false
 meta_desc: "Release of the v10 version of the Pulumi Provider for Google Cloud, with a migration guide and an agent skill to help you upgrade."
 feature_image: feature.png
