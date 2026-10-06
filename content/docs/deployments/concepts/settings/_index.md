@@ -41,7 +41,7 @@ Pulumi recommends against a stack defining its own Deployment Settings (that is,
 - **[Source settings](/docs/deployments/concepts/settings/source/)** — where a deployment gets the Pulumi program it runs: a version control integration, a Git URL, a template, or none.
 - **[Path filtering](/docs/deployments/concepts/settings/path-filtering/)** — trigger deployments only when a push changes files you care about, especially useful for monorepos.
 - **[Tag filtering](/docs/deployments/concepts/settings/tag-filtering/)** — trigger deployments when a matching git tag is pushed, for release-based workflows.
-- **[Deployment runner pools](/docs/deployments/concepts/settings/runner-pools/)** — choose where deployments run, and assign the organization role a deployment uses.
+- **[Runner pools](/docs/deployments/concepts/settings/runner-pools/)** — choose where deployments run, and assign the organization role a deployment uses.
 - **[Pre-run commands](/docs/deployments/concepts/settings/pre-run-commands/)** — run arbitrary shell commands before a deployment starts, for setup or authentication.
 - **[Skipping automatic dependency installation](/docs/deployments/concepts/settings/skip-dependency-installation/)** — take control of the dependency installation step yourself.
 - **[Skipping intermediate deployments](/docs/deployments/concepts/settings/skip-intermediate-deployments/)** — collapse a backlog of queued deployments into a single run.
