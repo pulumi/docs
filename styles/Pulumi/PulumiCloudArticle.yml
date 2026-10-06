@@ -1,0 +1,20 @@
+# "Pulumi Cloud" is a product name, so on its own it takes no article: "sign in
+# to Pulumi Cloud", not "sign in to the Pulumi Cloud". The leftovers are almost
+# all from the "the Pulumi Service" -> "Pulumi Cloud" find/replace. The brand
+# guide's product-names table spells out "the" only for the Pulumi CLI, SDK,
+# and Kubernetes Operator; it doesn't state the no-article rule outright, so
+# this rule is repo-owned and isn't tracked in BRAND-SYNC.yaml.
+#
+# "the" is still right when it belongs to a noun that follows: "the Pulumi
+# Cloud console", "the Pulumi Cloud REST API", "the Pulumi Cloud provider". The
+# lookahead allows those, plus any capitalized word, which is almost always a
+# named thing ("the Pulumi Cloud Security Whitepaper"). No list is complete, so
+# this is a warning, not a blocker: a false positive costs a glance, never a PR.
+extends: existence
+message: "Drop 'the' before 'Pulumi Cloud' unless it modifies a noun that follows (e.g., 'the Pulumi Cloud console')."
+link: "https://brand.pulumi.com/voice/names-and-terminology/"
+level: warning
+ignorecase: false
+nonword: true
+tokens:
+  - '\b[Tt]he \[?Pulumi Cloud\b(?!\]?\(?[^)\s]*\)?\s+(?:[A-Z]\w*|console|backend|frontend|provider|registry|private|organizations?|teams?|users?|roles?|stacks?|resource|account|application|tab|side|host|homepage|dashboard|platform|containers?|images?|configuration|networking|infrastructure|objects|environment|webhooks?|editions?|features?|remote|templates?|service|sign-in|sign-up)\b)'

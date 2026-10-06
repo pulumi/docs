@@ -199,11 +199,11 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 
 Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`](/docs/iac/cli/commands/pulumi_stack_tag_list/).
 
-Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/docs/iac/cli/commands/pulumi_stack_tag_set/) and can be used to customize the grouping of stacks in the [Pulumi Cloud](https://app.pulumi.com/signin). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in Pulumi Cloud.
+Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/docs/iac/cli/commands/pulumi_stack_tag_set/) and can be used to customize the grouping of stacks in [Pulumi Cloud](https://app.pulumi.com/signin). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in Pulumi Cloud.
 
 As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
 
-Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_remove/). Custom tags can also be created, edited, and deleted from each stack's **Overview** tab in the [Pulumi Cloud](https://app.pulumi.com/signin) UI.
+Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_remove/). Custom tags can also be created, edited, and deleted from each stack's **Overview** tab in the [Pulumi Cloud console](https://app.pulumi.com/signin).
 
 ## Stack outputs {#outputs}
 
@@ -513,7 +513,7 @@ The template file can reference other stack outputs (or resource properties) wit
 1. [Cloudwatch Logs](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logStream:group=${outputs.cloudwatchLogGroup}): Search across service logs
 ```
 
-After running `pulumi up`, the rendered README appears on the stack's **README** tab in the Pulumi Cloud UI.
+After running `pulumi up`, the rendered README appears on the stack's **README** tab in the Pulumi Cloud console.
 
 ## Getting the current stack programmatically
 

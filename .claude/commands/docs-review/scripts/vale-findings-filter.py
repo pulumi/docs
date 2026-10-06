@@ -119,6 +119,7 @@ RULE_CATEGORIES: dict[str, str] = {
     "Pulumi.BannedWords": "inclusive language",
     "Pulumi.Difficulty": "difficulty qualifier",
     "Pulumi.PoliciesSingular": "agreement",
+    "Pulumi.PulumiCloudArticle": "article before product name",
     "Pulumi.SetPieceTransitions": "set-piece transition",
     "Pulumi.EmDashDensity": "em-dash density",
     "Pulumi.ListicleH2Headings": "listicle heading",

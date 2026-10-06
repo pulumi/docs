@@ -1,6 +1,6 @@
 ---
 title_tag: Pulumi API | Self-Hosting Pulumi
-meta_desc: Pulumi API is one of the components required for self-hosting the Pulumi Cloud. Self-hosting is available as part of the Pulumi Enterprise edition.
+meta_desc: Pulumi API is one of the components required for self-hosting Pulumi Cloud. Self-hosting is available as part of the Pulumi Enterprise edition.
 title: Pulumi API
 h1: Pulumi Cloud self-hosted API
 menu:
@@ -20,7 +20,7 @@ pulumi_cloud_feature: self-hosting
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
-The Pulumi API is one of the components required for self-hosting the Pulumi Cloud in your organization's environment. It provides the necessary APIs for both the CLI and the [Console](/docs/administration/self-hosting/components/console/).
+The Pulumi API is one of the components required for self-hosting Pulumi Cloud in your organization's environment. It provides the necessary APIs for both the CLI and the [Console](/docs/administration/self-hosting/components/console/).
 
 ## Prerequisites
 
@@ -172,7 +172,7 @@ start or will not be able to run crypto operations:
 
 ## Cloud Provider Authentication
 
-These settings are required if you are running the Pulumi Cloud on one of these clouds or using one of their services.
+These settings are required if you are running Pulumi Cloud on one of these clouds or using one of their services.
 
 ### AWS
 
@@ -189,7 +189,7 @@ For more information about authenticating with AWS services, see the AWS SDK [do
 ### Azure
 
 {{% notes type="info" %}}
-Many of Azure's services support using Managed System Identity (MSI). As such, the Pulumi Cloud can also be configured
+Many of Azure's services support using Managed System Identity (MSI). As such, Pulumi Cloud can also be configured
 to use MSI to connect to all dependent Azure services (such as Azure KeyVault and Azure Storage). However,
 if you would like to use a self-managed Service Principal (aka AAD client credentials) instead, you must specify the
 Azure Storage account key using the `AZURE_STORAGE_KEY` env var.
@@ -218,8 +218,8 @@ Only required if using GitLab as the backing identity provider for your organiza
 | Variable Name | Description |
 | ------------- | ----------- |
 | SMTP_SERVER | Location of the SMTP server to use for sending notification emails. (must be in \<host>:\<port> format, e.g. `smtp.domain.com:465`) |
-| SMTP_USERNAME | Name of the SMTP user the Pulumi Cloud connects as. |
-| SMTP_PASSWORD | Password of the SMTP user the Pulumi Cloud connects as. |
+| SMTP_USERNAME | Name of the SMTP user Pulumi Cloud connects as. |
+| SMTP_PASSWORD | Password of the SMTP user Pulumi Cloud connects as. |
 | SMTP_GENERIC_SENDER | Sender information used as `FROM:` for outgoing emails. |
 
 ## Other Environment Variables {#other-env-vars}
@@ -227,8 +227,8 @@ Only required if using GitLab as the backing identity provider for your organiza
 | Variable Name                 | Description                                                                                                                                                                                                                                            |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GITHUB_OAUTH_ENDPOINT         | Used for GitHub API calls.                                                                                                                                                                                                                             |
-| PULUMI_DATABASE_USER_NAME     | Name of the database user the Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                     |
-| PULUMI_DATABASE_USER_PASSWORD | Password of the database user the Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                 |
+| PULUMI_DATABASE_USER_NAME     | Name of the database user Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                     |
+| PULUMI_DATABASE_USER_PASSWORD | Password of the database user Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                 |
 | PULUMI_CORS_ALLOWED_ORIGINS   | Comma-separated list of browser origins allowed to call the API cross-origin, each written as `<scheme>://<host>[:<port>]` with no path and no default port (`https://pulumiconsole.acmecorp.com`, not `https://pulumiconsole.acmecorp.com:443`). Two keywords are accepted: `*` allows every origin, and `localhost` allows any `http` or `https` origin on a loopback host regardless of port. Default is `*`, which will answer every cross-origin request. Set it to the origin of your Console (the `PULUMI_CONSOLE_DOMAIN` value with its scheme) to reject other sites' browser requests; add further entries only for other web apps you run that call the API from a browser. Requests that carry no `Origin` header, such as the `pulumi` CLI and server-to-server callers, are unaffected. Each rejected request is logged as `CORS origin mismatch` and counted by the `cors.origin_mismatch` metric. |
 | PULUMI_CORS_ENFORCE           | When `false`, requests whose `Origin` is not in `PULUMI_CORS_ALLOWED_ORIGINS` are still logged and counted but are answered as if the list were `*`. Use it to audit a candidate allowlist without affecting users, then unset it (or set `true`, the default) to enforce. |
 | PULUMI_DISABLE_EMAIL_LOGIN    | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/components/console#email-identity) for the Console.   |
