@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: "Agents, Search & AI Apps with Elastic and Pulumi"
-meta_desc: An Elastic Seattle User Group evening at the Pulumi office — telling AI agent traffic from human traffic, and building AI apps with Jina models.
+meta_desc: "The Elastic Seattle User Group meets at the Pulumi office. Two talks: telling AI agent traffic from human traffic, and building AI apps with Jina models."
 meta_image:
 
 # A featured event will display first in the list.
