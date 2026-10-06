@@ -345,6 +345,6 @@ Many times, that cost is not the variable being optimized for. Data is paramount
 
 For help provisioning Cosmos DB, check out our [Azure Cosmos DB How to guide](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and if you decide to go with Azure Tables instead, our [Azure Native provider](https://www.pulumi.com/registry/packages/azure-native/) is there to help you all the same.
 
-And if you have a Cosmos DB experience to share ( or I got something wrong ): [reach out](/blog/author/adam-gordon-bell/). And, if you haven't already, give Pulumi IaC a try:
+And if you have a Cosmos DB experience to share ( or I got something wrong ): [reach out](/blog/authors/adam-gordon-bell/). And, if you haven't already, give Pulumi IaC a try:
 
 {{< get-started >}}
