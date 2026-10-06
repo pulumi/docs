@@ -39,9 +39,21 @@ The [migration guide](/registry/packages/gcp/how-to-guides/10-0-migration/) acco
 
 We have updated the `provider-upgrade` skill in [Pulumi Agent Skills](/blog/pulumi-agent-skills/) to cover the upgrade from v9. You can use it from [Pulumi Neo](/docs/ai/neo/) or from any popular coding agent. Before it bumps the provider, it scans your stack and code for the changes that affect you, and it stops to ask before anything that would replace or delete live infrastructure. Then it upgrades the dependency, runs `pulumi preview` until the diff is explained, and leaves `pulumi up` to you.
 
-<!-- TODO(GA, Neo): the Neo prompt, plus screenshots of the prompt, the plan and the resulting pull request, following the v9 post. Needs pulumi/agent-skills#65 merged. -->
-
 In Neo, ask: "Upgrade this project to pulumi-gcp v10." Neo picks the `provider-upgrade` skill for you; there is nothing to install or name.
+
+![Neo task prompt asking to upgrade the project to pulumi-gcp v10, with the stack and repository attached](/blog/gcp-v10-release/migration-prompt.png)
+
+Neo plans the upgrade, starting with a scan of your stack while it is still on v9.
+
+![Neo's plan: verify the v9 baseline and scan state, bump pulumi-gcp to v10, fix SecretVersion, typecheck and preview, create a pull request](/blog/gcp-v10-release/neo-plan.png)
+
+Before it edits any code, it tells you which resources are affected and what could be replaced, and waits for your answer.
+
+![Neo reporting that only SecretVersion is affected, with the fix for each resource, and asking to proceed](/blog/gcp-v10-release/neo-risk-gate.png)
+
+Finally, Neo opens a pull request with the changes and the preview results. You review it and run `pulumi up` when you are ready.
+
+![Pull request opened by Neo changing secretDataWoVersion to a string and bumping @pulumi/gcp to 10.0.0](/blog/gcp-v10-release/neo-pr.png)
 
 In Claude Code, add the Pulumi marketplace and install the `pulumi` plugin:
 
