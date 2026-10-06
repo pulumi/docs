@@ -5,7 +5,7 @@ Runs AFTER scripts/run_docfx.sh's lowercasing pass, so every file's final,
 served relative path is already known and stable. For each generated HTML
 page (skipping redirect stubs, which never carry our placeholder) this:
 
-  1. Replaces the __PULUMI_SEO_CANONICAL__ placeholder (emitted by
+  1. Replaces the __pulumi_seo_canonical__ placeholder (emitted by
      docfx/pulumi-template/partials/head.tmpl.partial in the canonical
      <link>, the og:url meta tag, and the JSON-LD "url" field) with the
      real absolute URL computed from the file's own on-disk path — so the
@@ -21,7 +21,14 @@ page (skipping redirect stubs, which never carry our placeholder) this:
      class's doc comment can never break out of the <script> block —
      unlike a hand-assembled JSON literal in the Mustache template would.
 
-Usage: docfx_seo_postprocess.py <output_dir> <base_url> [--sdk-version VERSION]
+The JSON-LD names the SDK the pages document. That identity comes from the
+docfx config's build.globalMetadata (_pulumiSdkName, _pulumiSdkLibrary,
+_pulumiSdkRepository), the same place the head partial reads
+_pulumiSdkName from, so the two can't disagree. A key the config omits
+falls back to the IaC .NET SDK's value.
+
+Usage: docfx_seo_postprocess.py <output_dir> <base_url>
+    [--docfx-config PATH] [--sdk-version VERSION]
 
 Example: docfx_seo_postprocess.py static-prebuilt/docs/reference/pkg/dotnet \
     https://www.pulumi.com/docs/reference/pkg/dotnet
@@ -36,8 +43,19 @@ import re
 import sys
 from pathlib import Path
 
-CANONICAL_PLACEHOLDER = "__PULUMI_SEO_CANONICAL__"
+# Lowercase on purpose: run_docfx.sh lowercases every relative href before
+# this runs, so an uppercase placeholder in the canonical <link> would no
+# longer match.
+CANONICAL_PLACEHOLDER = "__pulumi_seo_canonical__"
 JSONLD_PLACEHOLDER = "<!-- PULUMI_SEO_JSONLD_PLACEHOLDER -->"
+
+# globalMetadata key -> value for the IaC .NET SDK, used when a config
+# doesn't set the key.
+SDK_IDENTITY_DEFAULTS = {
+    "_pulumiSdkName": "Pulumi",
+    "_pulumiSdkLibrary": "Pulumi",
+    "_pulumiSdkRepository": "https://github.com/pulumi/pulumi-dotnet",
+}
 
 _TITLE_RE = re.compile(r"<title>(.*?)</title>", re.DOTALL)
 _META_DESC_RE = re.compile(
@@ -70,7 +88,21 @@ def jsonld_safe(payload: dict) -> str:
     return json.dumps(payload, indent=2).replace("</", "<\\/")
 
 
-def process_file(path: Path, canonical_url: str, sdk_version: str | None) -> bool:
+def load_sdk_identity(docfx_config: Path | None) -> dict[str, str]:
+    identity = dict(SDK_IDENTITY_DEFAULTS)
+    if docfx_config is not None:
+        config = json.loads(docfx_config.read_text(encoding="utf-8"))
+        metadata = config.get("build", {}).get("globalMetadata", {})
+        identity.update({k: metadata[k] for k in identity if metadata.get(k)})
+    return identity
+
+
+def process_file(
+    path: Path,
+    canonical_url: str,
+    sdk_version: str | None,
+    sdk_identity: dict[str, str],
+) -> bool:
     text = path.read_text(encoding="utf-8")
     if CANONICAL_PLACEHOLDER not in text:
         # Redirect stub or a page our head partial never touched.
@@ -104,12 +136,12 @@ def process_file(path: Path, canonical_url: str, sdk_version: str | None) -> boo
             "headline": headline,
             "url": canonical_url,
             "programmingLanguage": ".NET",
-            "executableLibraryName": "Pulumi",
+            "executableLibraryName": sdk_identity["_pulumiSdkLibrary"],
             "about": {
                 "@type": "SoftwareSourceCode",
-                "name": "Pulumi",
+                "name": sdk_identity["_pulumiSdkName"],
                 "programmingLanguage": ".NET",
-                "codeRepository": "https://github.com/pulumi/pulumi-dotnet",
+                "codeRepository": sdk_identity["_pulumiSdkRepository"],
             },
             "isPartOf": {
                 "@type": "WebSite",
@@ -137,6 +169,7 @@ def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output_dir", type=Path)
     parser.add_argument("base_url")
+    parser.add_argument("--docfx-config", type=Path, default=None)
     parser.add_argument("--sdk-version", default=None)
     args = parser.parse_args(argv)
 
@@ -146,11 +179,13 @@ def main(argv: list[str]) -> int:
         print(f"ERROR: output dir not found: {out_dir}", file=sys.stderr)
         return 1
 
+    sdk_identity = load_sdk_identity(args.docfx_config)
+
     processed = 0
     for html_path in sorted(out_dir.rglob("*.html")):
         rel = html_path.relative_to(out_dir).as_posix()
         canonical_url = f"{base_url}/{rel}"
-        if process_file(html_path, canonical_url, args.sdk_version):
+        if process_file(html_path, canonical_url, args.sdk_version, sdk_identity):
             processed += 1
 
     print(f"docfx_seo_postprocess: updated {processed} file(s) under {out_dir}")
