@@ -46,7 +46,8 @@ description:
 # The event presenters
 presenters:
     - name: Peter Yoakum
-      role: AI & Compute, Pulumi
+      role: Developer Experience Engineer, Pulumi
+      photo: /images/team/peter-yoakum.jpg
     - name: Kapil Jadhav
       role: Elastic
 
