@@ -33,7 +33,7 @@ Here are a few links to help you get started if you are new to Pulumi:
 
 ### Upgrading
 
-The [migration guide](/registry/packages/gcp/how-to-guides/10-0-migration/) accounts for every resource, type and function that changed in the new version. For the most popular resources, it gives a description of the change, a risk and impact section, a way to check whether you are affected, and step by step migration snippets for each language.
+The [migration guide](/registry/packages/gcp/how-to-guides/10-0-migration/) accounts for every resource, type and function that changed in the new version. For the most popular resources, it gives a description of the change, a risk and impact section, a way to check whether you are affected, and step by step migration snippets.
 
 ### Use an agent to assist with your upgrade
 
