@@ -45,7 +45,8 @@
 # -----------------------------------------------------------------------------
 # `bots:` lists machine accounts whose approvals never count toward
 # satisfying a required role, even if the account happens to be a team
-# member.
+# member or has write access -- except on the one automated lane a
+# `bot_approvers:` entry names (see BOT APPROVERS below).
 #
 # `pulumi-bot` is the one that strictly needs to be here: it is a machine
 # **user** (`type: User`), so the Sentinel's automatic `type == Bot`
@@ -131,11 +132,11 @@
 # that path's role; every other path still goes through `matrix`.
 #
 # That role is who gets ASKED -- triage requests the team, the SLA sweep chases
-# it, the reviewer brief names it. Under `approval: {scope: any-team}` below it
-# is not who may CLEAR the gate, which is any routing team. Both misroutes
-# below were about the wrong people being asked, so this is the layer that
-# fixes them either way; set the scope back to `lane` and an override decides
-# the gate too.
+# it, the reviewer brief names it. Under `approval: {scope: any-human}` below
+# it is not who may CLEAR the gate, which is any human with write access. Both
+# misroutes below were about the wrong people being asked, so this is the
+# layer that fixes them either way; set the scope back to `lane` and an
+# override decides the gate too.
 #
 # It exists because `matrix` answers "what kind of file is this?" and was then
 # also being used to answer "who owns it?". Those are different questions, and
@@ -301,19 +302,31 @@ overrides:
 # now, and conflating them is what made a one-line Hugo shortcode change on a
 # docs PR sit waiting on a second team's approval.
 #
-#   scope: lane      every matrix-required team must approve (the original
-#                    rule, and still the default when this section is absent)
-#   scope: any-team  a member of ANY team in `teams:` satisfies the gate,
-#                    whatever the matrix routed
+#   scope: lane       every matrix-required team must approve (the original
+#                     rule, and still the default when this section is absent)
+#   scope: any-team   a member of ANY team in `teams:` satisfies the gate,
+#                     whatever the matrix routed
+#   scope: any-human  ANY human with write access to the repo satisfies the
+#                     gate, team or no team
 #
-# `any-team` is what we run. The matrix stays load-bearing — triage requests
+# `any-human` is what we run. The matrix stays load-bearing — triage requests
 # the lane's team, the SLA sweep chases that team, and the reviewer brief
 # names them — so a `frontend` change still goes to marketing first. What
-# changed is that a mixed PR no longer needs a quorum: it needs one reviewer
-# from a routing team who is willing to put their name on it. Three teams'
-# worth of required approvals on a PR that touches docs, a template, and a
-# lint script is a scheduling problem, not a quality bar, and what it
-# actually produces is a stale PR and a hand-applied `review:waived`.
+# changed, twice, is who may put their name on it. `any-team` dropped the
+# multi-team quorum (three teams' worth of approvals on a PR that touches
+# docs, a template, and a lint script is a scheduling problem, not a quality
+# bar). `any-human` then dropped the team requirement itself: a Pulumi
+# engineer who knows the change and can already merge it should not need to
+# go find a docs-team member to click the same button. The routing still
+# puts the PR in front of the right team; it just no longer holds everyone
+# else's approval hostage to it.
+#
+# "Human" means write access, read off GitHub's own effective permission
+# (`write`, `maintain`, or `admin` on
+# `repos/{repo}/collaborators/{user}/permission`). That is the same set
+# GitHub's required-review rule counts, so the Sentinel and the merge box
+# agree. "Any non-bot approval" would not be the same thing: this repo is
+# public, and anyone with a GitHub account can leave an APPROVED review.
 #
 # `admins_satisfy: true` lets a repository administrator's approval clear
 # the gate on its own. That concedes something already true rather than
@@ -322,10 +335,54 @@ overrides:
 # impose. It reads GitHub's own effective permission for the approver
 # (`admin` on `repos/{repo}/collaborators/{user}/permission`), not a
 # hand-kept list here — that would rot the first time someone's role
-# changed. Bot approvals never count, at any scope, admin or not.
+# changed. It is subsumed under `any-human` (an admin has write access) and
+# stays because it is the narrower rule: set the scope back to `lane` or
+# `any-team` and it is live again. Bot approvals never count at any scope,
+# admin or not, except on a `bot_approvers` lane.
 #
 # Both keys are optional and both default to the strict reading, so a config
 # that predates this section gates exactly as it did before.
+#
+# -----------------------------------------------------------------------------
+# BOT APPROVERS
+# -----------------------------------------------------------------------------
+# `bot_approvers:` is the one way a bot's approval clears G3. Each entry is
+# ONE automated lane:
+#
+#   - `approver`: the bot login whose approval counts (`github-actions[bot]`,
+#     `pulumi-bot`, ...). Overrides both `bots:` and the automatic
+#     `type == Bot` exclusion -- for this lane only.
+#   - `author`: the PR author the lane is for. Required: a bot approval is
+#     only as trustworthy as the process that opened the PR.
+#   - `label`: optional; when present the PR must also carry it. Use it
+#     whenever one author opens PRs through more than one process --
+#     pulumi-bot opens the generated-docs regens AND the content-review PRs,
+#     and only the regens are a lane we are confident merging unread.
+#   - `why`: required prose, same as `overrides:`.
+#
+# The approval must be at the current head, same as a human's. Stale bot
+# approvals do not carry over a push.
+#
+# The bar for adding an entry: a process we are confident produces a PR safe
+# to merge without a human reading it, AND something in that process actually
+# posts the approval as that identity. An entry with no workflow behind it
+# approves nothing; a workflow with no entry here is a green merge box and a
+# red Sentinel.
+#
+# One trap when wiring a new lane: an approval posted with the default
+# GITHUB_TOKEN (which is what `github-actions[bot]` is) does not trigger
+# workflows, so it will not wake the Sentinel's `pull_request_review`
+# trigger. The approving workflow has to dispatch `review-sentinel.yml` with
+# the PR number afterward (`workflow_dispatch` is the exception GitHub
+# allows), or approve with an App/PAT token instead.
+#
+# The two entries below are the two workflows that post bot approvals today.
+# Both lanes are also `not_governed` (below), which concludes success before
+# G3 is evaluated, so today these entries are the record of which approvals
+# those lanes run on rather than load-bearing. They become load-bearing the
+# moment either lane is taken out of `not_governed` to get the other gates
+# (G1 review-ran, G4 staging) back -- and that is the shape a NEW automated
+# lane should take: governed, gated, and approved by its bot.
 #
 # -----------------------------------------------------------------------------
 # CLAIMS OVERLAY
@@ -464,7 +521,24 @@ staging_evidence:
 
 claims_overlay: { add: marketing } # stacked when the claims signal fires; never mechanical
 
-approval: { scope: any-team, admins_satisfy: true }
+approval: { scope: any-human, admins_satisfy: true }
+
+bot_approvers:
+  - approver: "github-actions[bot]"
+    author: pulumi-bot
+    label: automation/merge
+    why: >-
+      Generated-docs regens (CLI-version bumps, package-schema and ESC schema
+      syncs). auto-approve-for-auto-merge.yml approves them with the default
+      GITHUB_TOKEN, which posts as github-actions[bot], and the generating
+      workflow arms auto-merge on the required build check.
+  - approver: pulumi-bot
+    author: "dependabot[bot]"
+    why: >-
+      Dependency bumps with no deps-lambda-edge-risk or deps-bulk-update
+      flag. label-dependabot.yml approves them as pulumi-bot and arms
+      auto-merge on the required build check; flagged bumps are never
+      approved, so they still need a human.
 
 external_contributors: { skip_gates: [review-ran, findings-answered] }
 
@@ -489,8 +563,8 @@ not_governed:
 # sentence claims, which any reviewer can answer. `any-team` lets any team
 # in `teams:` satisfy the approver gate for those; `lane` (the default) keeps
 # the ordinary per-subject rule. It is subsumed while `approval.scope` is
-# `any-team` — every PR gets that treatment now — and stays because it is the
-# narrower rule: set the scope back to `lane` and this one is live again.
+# `any-human` — the wider of the two rules always wins — and stays because it
+# is the narrower rule: set the scope back to `lane` and this one is live again.
 # The mechanical bar is untouched -- a link sweep is still substantive, so it
 # still needs a human, just not a particular one.
 link_only: { approval: any-team }
