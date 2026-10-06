@@ -18,7 +18,7 @@ faq_schema: true
 
 # Social media copy: auto-posted to X, LinkedIn, and Bluesky when merged to master.
 social:
-    twitter: "An agent decided to delete and recreate an environment. Amazon says a misconfigured role was the cause. Either account leads to the same fix: an agent can do whatever its credentials and pipeline allow, so guardrails belong in your infrastructure layer. What that looks like:"
+    twitter: "An agent decided to delete and recreate an environment. Amazon says a misconfigured role was the cause. Either account leads to the same fix: an agent can do whatever its credentials and pipeline allow, so guardrails belong in your infrastructure layer."
     linkedin: "In December 2025, an AWS engineer reportedly let the Kiro coding agent fix an issue, and the agent chose to delete and recreate the environment. Amazon says a misconfigured role was the cause, and the Financial Times reported it as an agent acting without intervention.\\n\\nBoth accounts agree on the mechanics: the agent could do exactly what its role allowed, and nothing structural stopped a destructive plan. We walk through what preview, mandatory policy, protect, approvals, and audit logs would each have done, and how to set them up today."
     bluesky: "An agent decided to delete and recreate an environment. Amazon says a misconfigured role was the cause. Either way, an agent can do whatever its credentials and pipeline allow, so the guardrails belong in the infrastructure layer. Here is what that looks like:"
 ---
@@ -31,7 +31,7 @@ In December 2025, AWS engineers reportedly let the Kiro agent fix an issue in Co
 
 The Financial Times [reported in February 2026](https://www.ft.com/content/00c282de-ed14-4acd-a948-bc8d6bdb339d) that a 13-hour disruption affecting one AWS service followed engineers allowing Kiro, Amazon's agentic coding tool, to make changes. According to [The Register's summary of the report](https://www.theregister.com/2026/02/20/amazon_denies_kiro_agentic_ai_behind_outage/), Kiro opted to "delete and recreate the environment." [Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/multiple-aws-outages-caused-by-ai-coding-bot-blunder-report-claims-amazon-says-both-incidents-were-user-error) added that the service was in parts of mainland China and that AI tools were treated as an extension of the user, with the same permissions and no secondary approval required.
 
-Amazon [published its own account](https://www.aboutamazon.com/news/aws/aws-service-outage-ai-bot-kiro). It describes an "extremely limited event" affecting a single service, AWS Cost Explorer, in one of 39 regions, with no customer inquiries. It attributes the event to "misconfigured access controls," and says the same issue could occur with any developer tool or manual action. Amazon also says Kiro requests authorization before acting by default, but the engineer in this case held a role with broader permissions than expected.
+Amazon [published its own account](https://www.aboutamazon.com/news/aws/aws-service-outage-ai-bot-kiro). It describes a very limited event affecting a single service, AWS Cost Explorer, in one of 39 regions, with no customer inquiries. It attributes the event to "misconfigured access controls," and says the same issue could occur with any developer tool or manual action. Amazon also says Kiro requests authorization before acting by default, but the engineer in this case held a role with broader permissions than expected.
 
 Neither account disputes that Kiro was in the loop or that the environment was deleted. They disagree about where to place the cause. We are not in a position to settle that, and the rest of this post does not depend on it.
 
@@ -43,7 +43,7 @@ Three conditions lined up, and each one is common in teams adopting coding agent
 2. **A destructive plan ran without a gate.** "Delete and recreate" is a perfectly reasonable plan for a throwaway environment. Nothing in the path asked whether this was one, or whether a person had seen the plan before it ran.
 3. **Nothing structural protected the resource.** The only defense was the agent choosing not to delete it. Choices made by a model are not a control.
 
-The pattern predates Kiro. In July 2025, a Replit agent [deleted a production database during a code freeze](https://www.theregister.com/2025/07/21/replit_saastr_vibe_coding_incident/). In 2026, a coding agent working in a Cursor session reportedly found an API token and [deleted a production volume and its backups in seconds](https://tech.yahoo.com/ai/claude/articles/violated-every-principle-given-ai-181500433.html). In each case the agent did what its access allowed.
+The pattern predates Kiro. In July 2025, a Replit agent [deleted a production database during a code freeze](https://www.theregister.com/2025/07/21/replit_saastr_vibe_coding_incident/). In 2026, another coding agent reportedly [deleted a production volume and its backups in seconds](https://tech.yahoo.com/ai/claude/articles/violated-every-principle-given-ai-181500433.html). In each case the agent did what its access allowed.
 
 Amazon's own remedy is instructive. It says additional safeguards include mandatory peer review for production access. That is a guardrail added outside the agent, which is the same conclusion you reach whether you call the incident an AI error or a user error. Fixing the role and adding a review gate both move the safety property out of the model's judgment and into the system.
 
@@ -53,10 +53,10 @@ Take the reported plan, delete and recreate an environment, and walk it through 
 
 - **Scoped credentials.** An agent working on a Cost Explorer issue does not need delete rights on production. With least-privilege, short-lived credentials, the destructive call fails at the cloud provider.
 - **A preview that shows the damage.** [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) lists every create, update, replace, and delete before anything happens. A plan that removes an environment shows up as a wall of deletes that a reviewer or a policy can act on.
-- **A mandatory policy.** [Policy as code](/what-is/what-is-policy-as-code/) evaluates the planned resources and blocks the update at the `mandatory` enforcement level. No role or flag on the agent's side overrides it.
+- **A mandatory policy.** [Policy as code](/what-is/what-is-policy-as-code/) evaluates the planned resources and blocks the update at the `mandatory` enforcement level. An agent cannot override it unless its role can change the policy pack.
 - **`protect` on stateful resources.** A resource marked [`protect`](/docs/iac/concepts/resources/options/protect/) cannot be deleted by any deployment, no matter who or what drives it. The engine returns an error instead.
 - **Approval before apply.** A person reads the preview and approves the `up`, so a destructive plan has to get past someone who can see it.
-- **An audit trail.** [Audit logs](/docs/administration/concepts/audit-logs/) record who, or which agent acting for whom, changed what.
+- **An audit trail.** [Audit logs](/docs/administration/concepts/audit-logs/) record which user, including an agent using that user's token, changed what.
 
 Here is a mandatory policy that requires `protect` on common stateful AWS resources. Attach it to a policy group that targets your production stacks.
 
@@ -66,7 +66,7 @@ import { PolicyPack, ResourceValidationPolicy } from "@pulumi/policy";
 const statefulTypes = [
     "aws:rds/instance:Instance",
     "aws:dynamodb/table:Table",
-    "aws:s3/bucket:BucketV2",
+    "aws:s3/bucket:Bucket",
 ];
 
 const protectStatefulResources: ResourceValidationPolicy = {
@@ -87,7 +87,7 @@ new PolicyPack("agent-safe-production", {
 });
 ```
 
-The policy also covers the escape route. If an agent edits a program to drop `protect` from a production database, the next update violates the policy and is blocked. If it removes the resource while it is still protected, the engine refuses to delete it. Removing the flag through a state edit takes separate credentials, which the scoped role withholds and the audit log records.
+The policy also covers the escape route. If an agent edits a program to drop `protect` from a production database, the next update violates the policy and is blocked. If it removes the resource while it is still protected, the engine refuses to delete it. Removing the flag through a state edit needs stack write access, so keep that out of the agent's scoped role. The audit log records the change.
 
 > "The smartest agent in the world still needs guardrails, audit trails, and policy enforcement to be trusted with production systems at scale, and that layer gets more valuable as agents get more capable, not less."
 >
@@ -100,13 +100,13 @@ The policy also covers the escape route. If an agent edits a program to drop `pr
 | Destructive operations | Allowed if the role allows | Blocked by mandatory policy and `protect` |
 | Approval | Optional or absent | Required before apply on production |
 | Audit | Reconstructed after the fact | Recorded as the change happens |
-| Recovery | Depends on backups nobody tested | Protected resources never leave the stack |
+| Recovery | Depends on backups nobody tested | Protected resources can't be deleted by a deployment |
 
 ## How do you design for agent-safe infrastructure today
 
 You can adopt these in order, and each step helps on its own.
 
-1. **Give agents the narrowest role that finishes the task.** Start read-only, and grant write access per task. Pulumi [RBAC](/docs/administration/concepts/rbac/) controls what a user, and therefore an agent acting as that user, can do on each stack.
+1. **Give agents the narrowest role that finishes the task.** Start read-only, and grant write access per task. Pulumi [RBAC](/docs/administration/concepts/rbac/) controls what a user, and so an agent acting as that user, can do on each stack.
 2. **Run every change through preview.** Make `pulumi preview` output a required artifact of any agent run, and treat a nonzero count of deletes or replaces as a stop sign. Our post on [sandboxing coding agents](/blog/sandboxing-coding-agents-yolo-mode/) covers keeping agents contained while they work.
 3. **Write mandatory policies for destructive operations.** Start with the stateful resources you would be unable to rebuild. The [deployment guardrails post](/blog/deployment-guardrails-with-policy-as-code/) shows how to roll policies out across stacks.
 4. **Set `protect` on stateful production resources**, and consider [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/) where the cloud resource must survive even if the Pulumi resource is removed.
@@ -132,7 +132,7 @@ Agent-safe infrastructure limits what an AI agent can break regardless of what i
 
 ### How do you stop an AI agent from deleting production resources?
 
-Combine several controls. Scope the agent's credentials so deletes fail, set `protect` on stateful resources so the Pulumi engine rejects any deployment that would delete them, enforce a mandatory policy that requires `protect` in production, and require human approval before apply. Audit logs then show every attempt.
+Combine several controls. Scope the agent's credentials so deletes fail, set `protect` on stateful resources so the Pulumi engine rejects any deployment that would delete them, enforce a mandatory policy that requires `protect` in production, and require human approval before apply. Audit logs then record every Pulumi operation the agent runs.
 
 ### Should AI agents have production access?
 
