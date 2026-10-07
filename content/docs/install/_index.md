@@ -344,13 +344,13 @@ To update Pulumi to a more recent version:
 </label>
 <div class="accordion-item-body-no-animation text-base">
 
-You can install Pulumi using elevated permissions through the [Chocolatey package manager](https://chocolatey.org):
+From an elevated (administrator) shell, install the [`pulumi` package](https://community.chocolatey.org/packages/pulumi) with the [Chocolatey package manager](https://chocolatey.org):
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi</code></pre>
 </div>
 
-This installs the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`) and generates the [shims](https://docs.chocolatey.org/en-us/features/shim) (usually `$($env:ChocolateyInstall)\bin`) that add Pulumi to your path.
+This installs the `pulumi` CLI to `$($env:ChocolateyInstall)\lib\pulumi\tools\Pulumi\bin` and adds that directory to the system path.
 
 Install subsequent updates the usual way:
 
