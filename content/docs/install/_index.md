@@ -30,6 +30,7 @@ search:
    keywords:
       - install
       - homebrew
+      - winget
       - msi
       - cli
 ---
@@ -87,6 +88,12 @@ macOS Ventura (13) or later is required.
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
+<h3 class="no-anchor pt-4">{{< icon name="package" class="pr-2" >}}Windows Package Manager (winget)</h3>
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows">&gt; winget install --exact --id Pulumi.Pulumi</code></pre>
+</div>
 
 <div class="mb-6 border-solid border-b-2 border-gray-200">
 <div class="w-full md:w-3/4">
@@ -299,6 +306,34 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 {{% choosable os windows %}}
 
 <div class="accordion-item text-2xl py-3 border-t-2">
+<input type="checkbox" class="absolute hidden" id="windows-winget" />
+<label for="windows-winget" class="accordion-label">
+<h5 class="mt-2 w-2/3">Windows Package Manager (winget)</h5>
+<div class="flex flex-grow justify-end items-center">
+<span class="closed-accordion">+</span>
+<span class="open-accordion hidden">-</span>
+</div>
+</label>
+<div class="accordion-item-body-no-animation text-base">
+
+Install Pulumi using the [Windows Package Manager](https://learn.microsoft.com/windows/package-manager/winget/) (`winget`) CLI, which is included with Windows 11 and modern versions of Windows 10:
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget">&gt; winget install --exact --id Pulumi.Pulumi</code></pre>
+</div>
+
+This runs the standalone installer (MSI), which installs Pulumi machine-wide and adds it to your path. You don't need an elevated shell, but Windows prompts you to approve the installation. If you don't have administrator rights, use the installation script instead, which installs Pulumi for your user account only.
+
+To update Pulumi to a more recent version:
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget-upgrade">&gt; winget upgrade --exact --id Pulumi.Pulumi</code></pre>
+</div>
+
+</div>
+</div>
+
+<div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="windows-chocolatey" />
 <label for="windows-chocolatey" class="accordion-label">
 <h5 class="mt-2 w-2/3">Chocolatey</h5>
@@ -321,32 +356,6 @@ Install subsequent updates the usual way:
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco-upgrade">&gt; choco upgrade pulumi</code></pre>
-</div>
-
-</div>
-</div>
-
-<div class="accordion-item text-2xl py-3 border-t-2">
-<input type="checkbox" class="absolute hidden" id="windows-winget" />
-<label for="windows-winget" class="accordion-label">
-<h5 class="mt-2 w-2/3">Windows Package Manager (winget)</h5>
-<div class="flex flex-grow justify-end items-center">
-<span class="closed-accordion">+</span>
-<span class="open-accordion hidden">-</span>
-</div>
-</label>
-<div class="accordion-item-body-no-animation text-base">
-
-Install Pulumi using the Windows Package Manager [`winget`](https://github.com/microsoft/winget-cli/) CLI. This is built-in on Windows 11 and later.
-
-<div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget">&gt; winget install pulumi</code></pre>
-</div>
-
-To update Pulumi to a more recent version:
-
-<div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget-upgrade">&gt; winget upgrade pulumi</code></pre>
 </div>
 
 </div>
@@ -532,12 +541,16 @@ To install, run our installation script:
 
 {{% choosable os windows %}}
 
-<h3 class="no-anchor pt-4">Chocolatey</h3>
-
-You can specify a specific version with [Chocolatey package manager](https://chocolatey.org):
+<h3 class="no-anchor pt-4">Windows Package Manager (winget)</h3>
 
 <div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi --version</code></pre>
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget">&gt; winget install --exact --id Pulumi.Pulumi --version &lt;version&gt;</code></pre>
+</div>
+
+<h3 class="no-anchor pt-4">Chocolatey</h3>
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi --version &lt;version&gt;</code></pre>
 </div>
 
 <h3 class="no-anchor pt-4">Windows installation script</h3>
