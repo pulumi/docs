@@ -71,7 +71,7 @@ When update approvals are enabled on an environment, the **Save** button is repl
 1. Make your changes in the editor.
 1. Select **Create Draft** to submit your proposed changes.
 
-If you already have an open draft on the environment, a banner linking to it will be shown. To find drafts opened by other users, use the revision picker or the **Approvals** tab.
+If you already have an open draft on the environment, a banner linking to it will be shown. To find drafts opened by other users, use the version dropdown or the **Approvals** tab.
 
 #### From the CLI
 
