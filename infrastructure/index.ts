@@ -1060,6 +1060,19 @@ if (config.devStack) {
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
+        // /community moved to marketing-web, except /community/team/*, which stays
+        // here (blog bylines link to it). Exact paths, never a "/community*" wildcard:
+        // that would also take /community/team/* and the
+        // /community/community-engineering/* redirect keys away from S3.
+        ...["/community", "/community/", "/community.md", "/community/puluminaries*"].map(
+            (pathPattern) => ({
+                ...baseCacheBehavior,
+                targetOriginId: devCDN,
+                pathPattern,
+                cachePolicyId: thirtyMinuteCachePolicy.id,
+                originRequestPolicyId: allViewerExceptHostHeaderId,
+            }),
+        ),
     )
 }
 
