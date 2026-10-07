@@ -509,7 +509,7 @@ REVIEW_STATE is the state, and the section a row lives in is the display.
 <!-- CLAUDE_REVIEW_BRIEF -->
 ## Reviewer's guide vN — not for the author
 > [!TIP] orienting alert                  ← carries the approval assertion ("approving asserts only the ⚠️ items")
-**Approval needed from:** @org/team …     ← composed when routing is on; never hand-written
+**Review requested from:** @org/team …    ← composed when routing is on; never hand-written. Wording follows approval.scope ("Approval needed from" only under lane)
 <!-- AUTHOR_STATE_BEGIN --> … <!-- AUTHOR_STATE_END -->  ← "Waiting on the author" table; composer-OWNED, machine-refreshed
 > [!NOTE] Summary + Review-confidence table   ← same content as the v2 TIP block
 ### ⚠️ Check these before approving          ← reviewer-check rows; the update lane also parks 🛡️ held disputes here
