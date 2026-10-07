@@ -44,7 +44,7 @@ export class Install {
     private get installCommand(): string {
         const commands = {
             macos: "brew install pulumi",
-            windows: "choco install pulumi",
+            windows: "winget install --exact --id Pulumi.Pulumi",
             linux: "curl -fsSL https://get.pulumi.com | sh",
         };
         return commands[this.os];
