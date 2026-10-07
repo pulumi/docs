@@ -125,6 +125,12 @@ Alternatively, the identity can be added as an **Owner** of the specific app reg
 Owner access alone suffices only for **delegated** logins (a user identity). An **application-only** token must *also* be granted the `Application.ReadWrite.OwnedBy` Microsoft Graph permission with **admin consent**, on top of being an Owner of the target app. This is the common case when an app rotates its *own* secret via [Azure OIDC login](/docs/esc/providers/login/azure-login/), where the `login` identity and the rotated `clientId` are the same app. Scoped to owned apps only, `Application.ReadWrite.OwnedBy` is the least-privilege option for self-rotation. For background, see Microsoft's [app-only access overview](https://learn.microsoft.com/en-us/entra/identity-platform/app-only-access-primer) and [adding an owner to an application](https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/users-groups-entra-apis/add-owner-for-application-microsoft-graph).
 {{% /notes %}}
 
+## Managing credentials
+
+The `login` input holds the Azure login credentials that this rotator uses to create and remove the application secret. It is a rotate-only input: ESC resolves it only when the environment is rotated, never when the environment is opened. Users who open the environment to read the rotated credentials therefore do not need access to any environment that `login` references. Every other input is resolved each time the environment is opened, so anyone who opens the environment needs access to whatever those inputs reference.
+
+Saving changes to the rotator's own environment is stricter. To save the environment, a user needs access to every environment it references, including the one behind `login`. See [Managing credentials and rotate-only inputs](/docs/esc/concepts/rotators/#managing-credentials-and-rotate-only-inputs) for the general rule.
+
 ## Inputs
 
 | Property         | Type                                              | Description                                                                                           |

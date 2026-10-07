@@ -60,7 +60,28 @@ values:
 
 In the above example, note the `${environments.credentials.production.aws.login}` reference. This is an implicit import of the `credentials/production` environment's aws.login path.
 
-This import is only resolved at `rotate` time, meaning that the value is not available during `open` time, making it possible for a user to access the rotated secret without needing access to the managing credentials.
+The `login` input is a rotate-only input, so this import is resolved only at `rotate` time and the value is not available at `open` time. That makes it possible for a user to access the rotated secret without needing access to the managing credentials. See [Managing credentials and rotate-only inputs](#managing-credentials-and-rotate-only-inputs) for the general rule.
+
+### Managing credentials and rotate-only inputs
+
+Every rotator that acts on an external service needs managing credentials: credentials with enough privilege to issue or change the credentials being rotated. Each such rotator designates one input as rotate-only. ESC resolves a rotate-only input, and any environment it references, only while a rotation runs. All other inputs are resolved every time the environment is opened. The access you need depends on the operation:
+
+- To open the environment, you need `OPEN` permission on the environment and on every environment referenced by inputs that are not rotate-only. You do not need access to environments referenced only by the rotate-only input.
+- To rotate the environment, you need `WRITE` permission on it and `OPEN` permission on every imported environment, including the one behind the rotate-only input.
+- To save changes to the environment, you need access to every environment it references, including the one behind the rotate-only input. This is stricter than opening, because ESC must validate the entire definition.
+
+Because of this, the best practice is to keep the managing credentials in a separate environment restricted to administrators, and to reference it only from the rotate-only input. The rotate-only input differs by rotator:
+
+| Rotator | Rotate-only input |
+|---|---|
+| [`aws-iam`](/docs/esc/providers/rotators/aws-iam/) | `login` |
+| [`azure-app-secret`](/docs/esc/providers/rotators/azure-app-secret/) | `login` |
+| [`snowflake-user`](/docs/esc/providers/rotators/snowflake-user/) | `login` |
+| [`postgres`](/docs/esc/providers/rotators/postgres/) | `database.managingUser` |
+| [`mysql`](/docs/esc/providers/rotators/mysql/) | `database.managingUser` |
+| [`external`](/docs/esc/providers/rotators/external/) | `request` |
+
+Inputs that are not listed are resolved on every open. For example, the `database.connector.awsLambda.login` input on the `postgres` and `mysql` rotators is not rotate-only, so users who open the environment need access to any environment it references.
 
 ### Rotation
 
@@ -103,7 +124,7 @@ Once you determined that you need one, follow the links below to learn how to se
 ## Permissions
 
 - To `rotate` an environment, a user must have `WRITE` permissions on the environment, and `OPEN` permissions on any imported environment.
-- To `open` an environment, a user must have `OPEN` permissions on the environment (and does not need any permissions for the implicitly imported environment which provides the rotation credentials).
+- To `open` an environment, a user must have `OPEN` permissions on the environment (and does not need any permissions for an environment referenced only by a rotate-only input).
 - To configure a rotation schedule for an environment, the user must have `WRITE` permissions on the environment.
 
 ## Best practices

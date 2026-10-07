@@ -168,6 +168,12 @@ Perform a manual rotation on the environment to provision a new private key. If 
 }
 ```
 
+## Managing credentials
+
+The `login` input holds the Snowflake login credentials that this rotator uses to change the rotated user's credentials. It is a rotate-only input: ESC resolves it only when the environment is rotated, never when the environment is opened. Users who open the environment to read the rotated credentials therefore do not need access to any environment that `login` references. Every other input is resolved each time the environment is opened, so anyone who opens the environment needs access to whatever those inputs reference.
+
+Saving changes to the rotator's own environment is stricter. To save the environment, a user needs access to every environment it references, including the one behind `login`. See [Managing credentials and rotate-only inputs](/docs/esc/concepts/rotators/#managing-credentials-and-rotate-only-inputs) for the general rule.
+
 ## Schema reference
 
 {{< esc-schema-updated >}}

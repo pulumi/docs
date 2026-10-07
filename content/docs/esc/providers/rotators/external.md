@@ -104,6 +104,12 @@ When opening the environment after rotation, you should see output like this:
 }
 ```
 
+## Managing credentials
+
+The `request` input is the rotate-only input for this rotator. ESC resolves it only when the environment is rotated, so anything it references, such as credentials that you pass to your rotation endpoint, is not needed by users who open the environment. Other inputs, including `url`, are resolved each time the environment is opened, so anyone who opens the environment needs access to whatever they reference.
+
+Saving changes to the rotator's own environment is stricter. To save the environment, a user needs access to every environment it references, including the one behind `request`. See [Managing credentials and rotate-only inputs](/docs/esc/concepts/rotators/#managing-credentials-and-rotate-only-inputs) for the general rule.
+
 ## Schema reference
 
 {{< esc-schema-updated >}}
