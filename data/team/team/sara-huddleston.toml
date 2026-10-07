@@ -3,6 +3,9 @@ name = "Sara Huddleston"
 title = "Director of Performance Marketing"
 weight = 1
 
+bio = """
+<p>Sara Huddleston, a Director of Performance Marketing, writes about platform engineering, DevOps, and developer experience on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

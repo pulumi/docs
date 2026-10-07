@@ -3,6 +3,9 @@ name = "Daniel Bradley"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Daniel Bradley, a Software Engineer, writes about AWS, AWS Lambda, and Azure on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

@@ -1,6 +1,9 @@
 id = "nishi-davidson"
 name = "Nishi Davidson"
 
+bio = """
+<p>Nishi Davidson contributed posts on Kubernetes, AWS, and Amazon EKS to the Pulumi blog in 2019.</p>
+"""
 status = "inactive"
 
 [social]

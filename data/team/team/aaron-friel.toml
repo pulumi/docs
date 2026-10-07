@@ -4,6 +4,9 @@ title = "Engineering Manager"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Aaron Friel is an Engineering Manager at Pulumi who writes about AI on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

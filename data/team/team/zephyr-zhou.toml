@@ -2,6 +2,9 @@ id = "zephyr-zhou"
 name = "Zephyr Zhou"
 title = "Software Engineer Intern"
 
+bio = """
+<p>Zephyr Zhou contributed posts on AWS and GitHub Actions to the Pulumi blog in 2020.</p>
+"""
 status = "inactive"
 
 [social]

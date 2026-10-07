@@ -3,6 +3,9 @@ name = "Justin Van Patten"
 title = "Engineering Manager"
 weight = 1
 
+bio = """
+<p>Justin Van Patten, an Engineering Manager, writes about AWS, Go, and Python on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

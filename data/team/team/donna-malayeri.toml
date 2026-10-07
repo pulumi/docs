@@ -1,4 +1,7 @@
 id = "donna-malayeri"	
 name = "Donna Malayeri"	
 
+bio = """
+<p>Donna Malayeri contributed posts on AWS, JavaScript, and containers to the Pulumi blog in 2018.</p>
+"""
 status = "inactive"

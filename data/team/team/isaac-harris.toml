@@ -3,6 +3,9 @@ name = "Isaac Harris"
 title = "Head of Business Development"
 weight = 1
 
+bio = """
+<p>Isaac Harris, a Head of Business Development, writes about AWS, AWS Lambda, and Kubernetes on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

@@ -3,6 +3,9 @@ name = "Piers Karsenbarg"
 title = "Customer Engineer"
 weight = 1
 
+bio = """
+<p>Piers Karsenbarg, a Customer Engineer, writes about AWS, TypeScript, and containers on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

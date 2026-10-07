@@ -3,6 +3,9 @@ name = "Arun Loganathan"
 title = "Senior Product Manager"
 weight = 1
 
+bio = """
+<p>Arun Loganathan, a Senior Product Manager, writes about Pulumi ESC, secrets management, and Pulumi Cloud on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

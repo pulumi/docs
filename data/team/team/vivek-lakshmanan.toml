@@ -3,6 +3,9 @@ name = "Vivek Lakshmanan"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Vivek Lakshmanan contributed posts on Kubernetes and continuous delivery to the Pulumi blog between 2021 and 2022.</p>
+"""
 status = "inactive"
 
 [social]

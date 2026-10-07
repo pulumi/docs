@@ -3,6 +3,9 @@ name = "George Huang"
 title = "Director of Product Marketing"
 weight = 1
 
+bio = """
+<p>George Huang, a Director of Product Marketing, writes about cloud engineering, Azure, and Kubernetes on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

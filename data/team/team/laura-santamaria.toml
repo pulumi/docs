@@ -3,6 +3,9 @@ name = "Laura Santamaria"
 title = "Senior Developer Advocate"
 weight = 1
 
+bio = """
+<p>Laura Santamaria contributed posts on continuous delivery, cloud engineering, and Kubernetes to the Pulumi blog between 2021 and 2022.</p>
+"""
 status = "inactive"
 
 [social]

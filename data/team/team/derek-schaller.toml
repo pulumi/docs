@@ -4,6 +4,9 @@ title = "Principal Software Engineer"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Derek Schaller is a Principal Software Engineer at Pulumi who writes about AI, GitLab, and Pulumi Cloud on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

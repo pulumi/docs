@@ -3,6 +3,9 @@ name = "Florian Stadler"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Florian Stadler, a Software Engineer, writes about AWS, Amazon EKS, and AI on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]
