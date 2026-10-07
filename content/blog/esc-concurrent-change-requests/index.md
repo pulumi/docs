@@ -36,13 +36,13 @@ Creating environment change requests works the same as before - just edit an env
 
 ![The Approvals tab listing two pending change requests from different users](approvals-tab-change-requests.png)
 
-### Updating the base revision, a.k.a. "rebasing"
+### Updating to the latest revision, a.k.a. "rebasing"
 
-If another change request gets applied first, yours is now pointing to an older base revision. This is nothing to worry about - just click on "Update to latest revision" and your changes are reapplied on top of the latest revision (using a 3-way merge).
+If another change request gets applied first, yours is now based on an older revision. This is nothing to worry about - just click "Update to latest revision" and your changes are reapplied on top of the latest revision (using a 3-way merge).
 
 ![A warning banner reading "This change request is out of date" with an Update to latest revision button](change-request-out-of-date.png)
 
-In the rare case that there is a merge conflict, the console will let you know where the conflict is. You can resolve this by either editing the draft or recreating the change request.
+If there is a merge conflict, the console will show which lines conflict. You can resolve this by either editing the draft or recreating the change request.
 
 ![An error banner reading "This change request cannot be updated automatically" listing a conflict at line 7, with a Close change request button](change-request-merge-conflict.png)
 
