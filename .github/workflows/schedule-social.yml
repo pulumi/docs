@@ -94,7 +94,12 @@ jobs:
           echo "API key valid (HTTP 200)"
 
       # X no longer routes through upload-post.com, so it needs its own
+      # preflight. A rejected X token must not block LinkedIn and Bluesky: this
+      # step soft-fails, the posting step drops X to the manual-posting notice,
+      # and the job fails at the end so Slack still hears about it.
       - name: Validate X API credentials
+        id: verify-x
+        continue-on-error: true
         env:
           X_CONSUMER_KEY: ${{ steps.esc-secrets.outputs.X_CONSUMER_KEY }}
           X_CONSUMER_SECRET: ${{ steps.esc-secrets.outputs.X_CONSUMER_SECRET }}
@@ -113,25 +118,36 @@ jobs:
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
           X_CONSUMER_KEY: ${{ steps.esc-secrets.outputs.X_CONSUMER_KEY }}
           X_CONSUMER_SECRET: ${{ steps.esc-secrets.outputs.X_CONSUMER_SECRET }}
-          X_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.X_ACCESS_TOKEN }}
+          # Blanked when the preflight failed: an incomplete credential set makes
+          # social_core skip X with the manual-posting notice instead of retrying.
+          X_ACCESS_TOKEN: ${{ steps.verify-x.outcome == 'success' && steps.esc-secrets.outputs.X_ACCESS_TOKEN || '' }}
           X_ACCESS_TOKEN_SECRET: ${{ steps.esc-secrets.outputs.X_ACCESS_TOKEN_SECRET }}
           X_USERNAME: ${{ steps.esc-secrets.outputs.X_USERNAME }}
         run: uv run scripts/social/schedule-posts.py
 
       - name: Capture failure summary
         id: failure-summary
-        if: steps.post.outcome == 'failure'
+        if: steps.post.outcome == 'failure' || steps.verify-x.outcome == 'failure'
+        env:
+          X_CHECK: ${{ steps.verify-x.outcome }}
         run: |
+          SUMMARY=""
           if [ -f "$FAILURE_SUMMARY_FILE" ]; then
+            SUMMARY=$(cat "$FAILURE_SUMMARY_FILE")
+          fi
+          if [ "$X_CHECK" = "failure" ]; then
+            SUMMARY="${SUMMARY:+$SUMMARY; }X credential check failed, so X posts fell back to manual posting"
+          fi
+          if [ -n "$SUMMARY" ]; then
             {
               echo "summary<<EOF"
-              cat "$FAILURE_SUMMARY_FILE"
+              echo "$SUMMARY"
               echo "EOF"
             } >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Fail if posting step failed
-        if: steps.post.outcome == 'failure'
+      - name: Fail if X credential check or posting step failed
+        if: steps.post.outcome == 'failure' || steps.verify-x.outcome == 'failure'
         run: exit 1
 
   notify:

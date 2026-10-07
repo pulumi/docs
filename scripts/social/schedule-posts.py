@@ -23,7 +23,7 @@ LinkedIn, and Bluesky on the day — the blog is already live because this runs
 after Build and deploy, so the URL liveness check passes.
 
 LinkedIn and Bluesky go through upload-post.com. X goes direct through the X
-API
+API, using these credentials:
 
   X_CONSUMER_KEY, X_CONSUMER_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET,
   X_USERNAME (optional; only used to build a nicer permalink)
