@@ -376,6 +376,10 @@ jobs:
       v3_ready: ${{ steps.v3-build.outputs.ready }}
       pr_number: ${{ steps.pr-context.outputs.pr_number }}
       head_sha: ${{ steps.pr-context.outputs.head_sha }}
+      # The publish error trap's fallback when publish dies before it reads
+      # the handoff (e.g. a hung checkout) — the handoff carries the same ids.
+      check_id: ${{ steps.check-run.outputs.check_id }}
+      progress_id: ${{ steps.progress.outputs.comment_id }}
 
     runs-on: ubuntu-latest
     # A review that genuinely hangs (one observed stall ran ~18 min with no
@@ -2267,12 +2271,33 @@ jobs:
       ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
       ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
     steps:
+      # Wall-clock anchor for the error trap: a publish cancelled
+      # ~timeout-minutes after this instant was killed by its own timeout,
+      # not superseded by a newer run. First step, so checkout time counts.
+      - name: Record job start
+        id: job-start
+        run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+
       # Default branch ONLY — see the security invariant above.
-      - name: Checkout repository (default branch)
+      #
+      # Sparse and blobless: this job runs scripts from three directories and
+      # nothing else, and a full checkout of this repo is a ~1 GB fetch that
+      # GitHub sometimes serves at a crawl. #22146's publish spent its whole
+      # 15-minute budget inside that fetch. The paths below are everything
+      # the steps here execute or read (the docs-review scripts load their
+      # siblings and ../footer.md; infrastructure/ is `pulumi -C` for the
+      # bucket outputs). A new step that reaches outside them needs its path
+      # added here.
+      - name: Checkout review scripts (default branch)
         uses: actions/checkout@v7
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            infrastructure
 
       - name: Download v3 handoff artifact
         uses: actions/download-artifact@v8
@@ -2596,28 +2621,58 @@ jobs:
             -f pr_number="${{ steps.current.outputs.pr }}"
 
       # Error trap: a failed publish must be visible — review:error, a red
-      # check, and an errored progress message. A CANCELLED publish is a
-      # supersession (a newer run entered the concurrency group) and touches
-      # nothing: the newer run owns all user-visible state.
-
+      # check, and an errored progress message. A CANCELLED publish is
+      # usually a supersession (a newer run entered the concurrency group)
+      # and touches nothing: the newer run owns all user-visible state.
+      #
+      # The exception is a publish killed by its own timeout-minutes, which
+      # the runner also reports as cancelled. Told apart by wall-clock, the
+      # same way the model job's "Classify review outcome" step does it.
+      # Ignoring it stranded #22146 on review:in-progress with an
+      # in_progress check-run and no run behind either. (Blind spot: a
+      # supersession in the final minute reads as a timeout. A publish takes
+      # about a minute, so one still running at minute 14 is hung anyway.)
+      #
+      # A publish that died before "Verify handoff is still current" has no
+      # handoff ids, so they fall back to the model job's outputs; it may
+      # have no checkout either, so the label falls back to a plain gh call
+      # (the 👀 clear below just no-ops under set +e).
       - name: Publish error trap
-        if: failure() && steps.current.outputs.superseded != 'true'
+        if: >-
+          (failure() || cancelled())
+          && steps.current.outputs.superseded != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PRIOR_HW_IN: ${{ github.event.inputs.prior_high_water }}
+          JOB_STATUS: ${{ job.status }}
+          JOB_START: ${{ steps.job-start.outputs.epoch }}
+          JOB_BUDGET_S: 840 # job timeout-minutes 15, minus 1 min slack
         run: |
           set +e
-          PR="${{ steps.current.outputs.pr }}"
+          if [ "$JOB_STATUS" = "cancelled" ]; then
+            ELAPSED=$(( $(date +%s) - ${JOB_START:-0} ))
+            if [ -z "$JOB_START" ] || [ "$ELAPSED" -lt "$JOB_BUDGET_S" ]; then
+              echo "Publish cancelled after ${ELAPSED}s: superseded by a newer run, which owns the review state."
+              exit 0
+            fi
+            echo "::error::Publish timed out after ${ELAPSED}s; marking the review errored."
+          fi
+          PR="${{ steps.current.outputs.pr || needs.claude-review.outputs.pr_number }}"
           REPO="${{ github.repository }}"
           [ -n "$PR" ] || exit 0
-          .claude/commands/docs-review/scripts/set-review-label.sh \
-            --pr "$PR" --repo "$REPO" --label review:error
-          CHECK_ID="${{ steps.current.outputs.check_id }}"
+          LABEL_SCRIPT=.claude/commands/docs-review/scripts/set-review-label.sh
+          if [ -f "$LABEL_SCRIPT" ]; then
+            "$LABEL_SCRIPT" --pr "$PR" --repo "$REPO" --label review:error
+          else
+            gh pr edit "$PR" --repo "$REPO" \
+              --add-label review:error --remove-label review:in-progress
+          fi
+          CHECK_ID="${{ steps.current.outputs.check_id || needs.claude-review.outputs.check_id }}"
           if [ -n "$CHECK_ID" ]; then
             jq -n '{status: "completed", conclusion: "failure", output: {title: "Pre-merge Review", summary: "Publishing the review failed after a successful model pass. See the publish job logs."}}' \
               | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true
           fi
-          PROGRESS_ID="${{ steps.current.outputs.progress_id }}"
+          PROGRESS_ID="${{ steps.current.outputs.progress_id || needs.claude-review.outputs.progress_id }}"
           MSG='🤖 Review errored while publishing. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
           ACK_TARGET="${{ github.event.inputs.ack_target }}"
           MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
