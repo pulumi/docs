@@ -160,13 +160,13 @@ def _self_test() -> int:
     assert any("edition" in r for r in out6["mechanical_reasons"]), out6["mechanical_reasons"]
     assert out6["claims"] is False and out6["roles"] == ["docs-guild"], out6
 
-    pricing_pr = {"additions": 1, "deletions": 0, "files": [{"path": "data/pulumi_pricing.yaml"}]}
+    pricing_pr = {"additions": 1, "deletions": 0, "files": [{"path": "data/pulumi_editions.yaml"}]}
     pricing_diff = (
-        "diff --git a/data/pulumi_pricing.yaml b/data/pulumi_pricing.yaml\n"
-        "--- a/data/pulumi_pricing.yaml\n"
-        "+++ b/data/pulumi_pricing.yaml\n"
+        "diff --git a/data/pulumi_editions.yaml b/data/pulumi_editions.yaml\n"
+        "--- a/data/pulumi_editions.yaml\n"
+        "+++ b/data/pulumi_editions.yaml\n"
         "@@ -1,0 +1,1 @@\n"
-        "+price: 50\n"
+        "+    min_edition: pro\n"
     )
     out3 = route(pricing_pr, pricing_diff, _REPO_ROOT / ".github/review-routing.yml", _REPO_ROOT)
     assert out3["claims"] is True
