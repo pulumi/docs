@@ -21,6 +21,7 @@ export interface SupportRedirectArgs {
     targetUrl: string;
     // certificateArn is an ACM certificate (us-east-1) covering `domain` — the *.pulumi.com wildcard in production.
     certificateArn: pulumi.Input<string>;
+    cachePolicyId: pulumi.Input<string>;
 }
 
 export class SupportRedirect extends pulumi.ComponentResource {
@@ -82,8 +83,7 @@ export class SupportRedirect extends pulumi.ComponentResource {
                     // only POST-capable set — anything narrower 403s non-GET requests instead of redirecting them.
                     allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
                     cachedMethods: ["GET", "HEAD"],
-                    // AWS-managed CachingDisabled policy — the function generates every response.
-                    cachePolicyId: "4135ea2d-6df8-44a3-b632-99711092ca9d",
+                    cachePolicyId: args.cachePolicyId,
                     functionAssociations: [
                         {
                             eventType: "viewer-request",

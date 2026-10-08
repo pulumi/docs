@@ -1,9 +1,9 @@
 <!-- chooser: language -->
 <!-- option: javascript -->
-[`Config.requireSecret`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret)
+[`Config.requireSecret`](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/Config.html#requiresecret)
 <!-- /option -->
 <!-- option: typescript -->
-[`Config.requireSecret`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret)
+[`Config.requireSecret`](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/Config.html#requiresecret)
 <!-- /option -->
 <!-- option: python -->
 [`Config.require_secret`](/docs/reference/pkg/python/pulumi/#pulumi.Config.require_secret)

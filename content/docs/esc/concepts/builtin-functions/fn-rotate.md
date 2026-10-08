@@ -41,7 +41,7 @@ fn::rotate::name:
 
 | Property    | Type         | Description                                                       |
 |-------------|--------------|-------------------------------------------------------------------|
-| `name`      | string       | The name of the rotator to use.
+| `provider`  | string       | The name of the rotator to use. In the short form, the name is part of the function key (`fn::rotate::name`) and this key is omitted.
 | `inputs`    | any          | The inputs to the rotator. The exact type is rotator-dependent.
 | `state`     | any          | The persistent state for the rotator. This value is managed by the rotator and should not be modified.
 

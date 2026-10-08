@@ -8,5 +8,5 @@ Pulumi Cloud. With this API, you can configure deployment settings for your
 stacks, trigger deployments, view deployment status and logs, and manage
 deployment execution.
 
-See [Pulumi Deployments](/docs/pulumi-cloud/deployments/) for conceptual
+See [Pulumi Deployments](/docs/deployments/concepts/) for conceptual
 documentation and getting-started guides.

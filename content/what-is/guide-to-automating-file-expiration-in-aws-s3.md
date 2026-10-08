@@ -4,6 +4,7 @@ meta_desc: |
      A comprehensive guide to automate file expiration in AWS S3 using Pulumi.
 
 type: what-is
+date: 2024-05-22T13:29:48-07:00
 page_title: Automate AWS S3 File Expiration with Pulumi
 authors: ["james-denyer"]
 ---
@@ -112,7 +113,7 @@ For more advanced configurations, refer to the [Pulumi AWS documentation](/regis
 
 ## Learn more about Pulumi
 
-Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/administration/) to make managing infrastructure secure, reliable, and hassle-free.
+Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with [Pulumi Cloud](/docs/administration/) to make managing infrastructure secure, reliable, and hassle-free.
 
 - Follow the [Getting Started](/docs/get-started/) guide to give Pulumi a try.
 

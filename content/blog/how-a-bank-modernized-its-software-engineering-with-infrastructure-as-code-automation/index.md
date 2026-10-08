@@ -35,7 +35,6 @@ tags:
     - fintech
     - case-studies
     - enterprise
-    - crossguard
     - policy-as-code
 category: customers
 
@@ -48,9 +47,9 @@ This blog post summarizes a presentation by Dennis Sauvé at [PulumiUP 2023](/pu
 
 [Washington Trust Bank](https://www.watrust.com), the largest independently-owned full-service commercial bank in the Northwest, has served personal, private, commercial and wealth management clients throughout the region since 1902. It has assets exceeding $11 billion and currently has 42 branches and offices in Idaho, Oregon, and Washington.
 
-As an FDIC-governed financial institution, it is imperative for the bank to maintain secure, reliable, and compliant cloud resources to protect clients’ personal data. On the other hand, it also aimed to create more agile development teams as it modernized its software development and infrastructure. [Dennis Sauvé](https://github.com/dengsauve), the bank's first DevOps Engineer, recognized [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/) as the solution to these challenges.
+As an FDIC-governed financial institution, it is imperative for the bank to maintain secure, reliable, and compliant cloud resources to protect clients’ personal data. On the other hand, it also aimed to create more agile development teams as it modernized its software development and infrastructure. [Dennis Sauvé](https://github.com/dengsauve), the bank's first DevOps Engineer, recognized [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/) as the solution to these challenges.
 
-Embracing an Infrastructure as Code approach would allow them to automate building and deploying their cloud infrastructure, eliminate infrastructure provisioning as a bottleneck, and empower developers to self-service infrastructure and increase productivity.
+Embracing an infrastructure as code approach would allow them to automate building and deploying their cloud infrastructure, eliminate infrastructure provisioning as a bottleneck, and empower developers to self-service infrastructure and increase productivity.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Q63ZaX340M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -86,9 +85,9 @@ Pulumi also gave the bank total confidence in being able to rapidly recover its 
 
 ### Policy as Code Guardrails with Pulumi CrossGuard
 
-[Pulumi CrossGuard](/docs/insights/policy/) adds an extra layer of security and control and is used in conjunction with Azure Policies, which are used for auditing purposes. CrossGuard prevents the deployment of undesired, insecure, or expensive resources during the preview and deployment stage, thus preventing developers from even reaching Azure to provision resources. Custom error messages give developers context on why their deployment was not allowed.
+[Pulumi CrossGuard](/docs/discovery-governance/policy/) adds an extra layer of security and control and is used in conjunction with Azure Policies, which are used for auditing purposes. CrossGuard prevents the deployment of undesired, insecure, or expensive resources during the preview and deployment stage, thus preventing developers from even reaching Azure to provision resources. Custom error messages give developers context on why their deployment was not allowed.
 
-[Pulumi Cloud Policy Packs](/docs/insights/policy/policy-packs/) allow them to group and deploy many policies simultaneously. The Policy Packs prevent specified resources from being deployed into staging and live environments. For example, one policy requires all SQL databases to use TLS 1.2 by default and another ensures all storage buckets have public access disabled by default. These capabilities helped bolster the security of the bank's cloud infrastructure.
+[Pulumi Cloud Policy Packs](/docs/discovery-governance/policy/policy-packs/) allow them to group and deploy many policies simultaneously. The Policy Packs prevent specified resources from being deployed into staging and live environments. For example, one policy requires all SQL databases to use TLS 1.2 by default and another ensures all storage buckets have public access disabled by default. These capabilities helped bolster the security of the bank's cloud infrastructure.
 
 ## Financial services cloud modernization with Pulumi
 

@@ -259,4 +259,4 @@ This is the first in a series of articles on using infrastructure as code for Ku
 
 - Watch educational content on [Pulumi TV](https://www.youtube.com/pulumitv)
 - Learn more about Pulumi's [support for Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/)
-- Practice [Kubernetes Tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) using Pulumi
+- Practice [Kubernetes Tutorials](/registry/packages/kubernetes/how-to-guides/) using Pulumi

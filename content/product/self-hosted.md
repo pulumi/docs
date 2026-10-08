@@ -52,13 +52,13 @@ capabilities:
 deployment:
     title: Hosting Options
     descriptionTop: |
-        [Install Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) in any on-premises or cloud provider environment or run in air-gapped environments, including those requiring FedRAMP.
+        [Install Self-Hosted Pulumi Cloud](/docs/administration/self-hosting/) in any on-premises or cloud provider environment or run in air-gapped environments, including those requiring FedRAMP.
     descriptionBottom: |
         [Talk to a Pulumi team member](/contact/) if you don't see your desired deployment option.
 pricing:
     title: Pricing
     description: |
-        Self-Hosted Pulumi is available as an additional license for the Business Critical Edition of Pulumi and provided as part of a guided Proof of Concept.
+        Self-Hosted Pulumi is available as an additional license for the Pulumi Enterprise edition and provided as part of a guided Proof of Concept.
 questions:
     title: Talk to a Human
     description: |

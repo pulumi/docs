@@ -16,6 +16,9 @@ Checks (all deterministic; the gate fails closed):
   `skipped`, and `reported` require an empty (or absent) one.
 - `reported` (the report-only lane) additionally may not propose retirement:
   it is the verdict for a page this repo cannot edit at all.
+- Banked-only categories: a `fixed` verdict may not list a `readthrough`
+  entry in `applied[]`. The fix lane banks every readthrough finding for the
+  glow-up lane instead of applying it (see `FIX_LANE_BANKED_CATEGORIES`).
 - `no_retire` backstop: a retirement verdict on a page the queue stamps
   `no_retire: true` is a hard failure, regardless of what the model wrote in
   the PR body. A queue entry missing the field counts as `no_retire: true`.
@@ -50,11 +53,13 @@ Exit codes: 0 = pass (publish may be true or false), 1 = violation.
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import os
 import sys
 from pathlib import Path
 
+HERE = Path(__file__).resolve().parent
 BRANCH_PREFIX = "content-review/"
 # "reported" is the report-only lane's verdict (pulumi/docs#20996): the worker
 # extracted and verified the page's claims, recorded them to the claims index,
@@ -80,15 +85,27 @@ RETIRE_PREFIXES = (
 )
 RETIRE_FILES = ("data/docs_menu_sections.yml",)
 
+# Categories the fix lane records as findings but never applies. Readthrough
+# repairs reshape a page's structure, and a bot reading one page in isolation
+# does not know why it is shaped that way: of the first 14 decided fix-lane
+# PRs carrying one (2026-09-14..23), two were closed over the readthrough edit
+# itself (#21664 broke rendering, #21775 turned prescriptive guidance
+# "wishy-washy") and two more merged with the edit questioned (#21719 over a
+# subject-matter expert's objection, #21690 deleting a section's only
+# example). Every readthrough finding is banked instead, and the glow-up lane
+# — whose product is a human reviewing the whole page — executes it. The
+# skill says so; this makes it a gate rather than a request.
+FIX_LANE_BANKED_CATEGORIES = {"readthrough"}
+
 # Auto-merge classing. A PR is "deterministic" — safe to arm auto-merge at
 # publish, so an approving review (including Robo-Cam's rubber stamp) merges
 # it — only when every applied fix is in a category whose correction the
 # pipeline itself authored (a dead-link path, a Vale-named replacement, a
-# frontmatter repair) AND the diff is small. Claim corrections and
-# readthrough repairs are judgment calls however confident, so they class
-# "judgment": the PR opens un-armed and the review sweep arms it only after
-# its own gate stack passes. Retirements are always "judgment" — a page
-# removal never merges on a bot stamp.
+# frontmatter repair) AND the diff is small. Claim corrections are judgment
+# calls however confident, so they class "judgment": the PR opens un-armed
+# and the review sweep arms it only after its own gate stack passes.
+# Retirements are always "judgment" — a page removal never merges on a bot
+# stamp.
 DETERMINISTIC_CATEGORIES = {"link", "vale", "frontmatter"}
 # Added+deleted lines, counted from the patch. Deterministic fixes are
 # line-scoped replacements; 40 covers a link/Vale sweep across a long page
@@ -235,6 +252,40 @@ def check_scope(paths: list[str], article_path: str, retirement: bool,
     return ok
 
 
+def check_glowup_body(body_file: Path, backlog_file: Path, verdict: dict | None) -> bool:
+    """Every row the composer stubbed — banked findings and this run's fresh
+    contradicted/mismatch verdicts — must sit in exactly one of the body's
+    Backlog executed / Backlog declined tables, with no `<TODO` left in
+    either. The glow-up analogue of the fix lane's per-hunk scope gate: a
+    row the model silently dropped is work that vanished. The sentinel's
+    executed_ids/declined_ids partition is checked too, but only warned on;
+    record-page-findings.py already handles a partial list."""
+    try:
+        body = body_file.read_text()
+        backlog = json.loads(backlog_file.read_text())
+    except (OSError, json.JSONDecodeError) as e:
+        fail(f"glow-up body check: input unreadable ({e})")
+        return False
+    spec = importlib.util.spec_from_file_location("compose_pr_body", HERE / "compose-pr-body.py")
+    cpb = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(cpb)
+    problems = cpb.glowup_body_accounting(body, backlog)
+    for pr in problems:
+        fail(f"glow-up body: {pr}")
+    ids = {str(b.get("id")) for b in (backlog.get("banked") or []) if isinstance(b, dict)}
+    ids |= {str(s.get("id")) for s in ((backlog.get("reconciled") or {}).get("fresh_stubs") or [])}
+    v = verdict or {}
+    listed = {str(i) for i in (v.get("executed_ids") or [])} | {str(i) for i in (v.get("declined_ids") or [])}
+    both = {str(i) for i in (v.get("executed_ids") or [])} & {str(i) for i in (v.get("declined_ids") or [])}
+    if ids - listed:
+        print(f"::warning::publish-gate: sentinel lists neither executed nor declined for "
+              f"{', '.join(sorted(ids - listed))}", file=sys.stderr)
+    if both:
+        print(f"::warning::publish-gate: sentinel lists {', '.join(sorted(both))} as both "
+              "executed and declined", file=sys.stderr)
+    return not problems
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--queue", required=True, type=Path)
@@ -243,6 +294,12 @@ def main() -> int:
     ap.add_argument("--paths-from", type=Path, default=None,
                     help="NUL-separated changed-path list (git diff --name-only -z); "
                          "when given, also enforce the diff-scope rules")
+    ap.add_argument("--body-file", type=Path, default=None,
+                    help="glow-up only: the PR body draft; every composer-stubbed row "
+                         "must land in Backlog executed or Backlog declined")
+    ap.add_argument("--backlog", type=Path, default=None,
+                    help="glow-up only: the reconciled .glowup-backlog.json the body "
+                         "was composed from (the snapshot copy)")
     args = ap.parse_args()
 
     article = load_article(args.queue)
@@ -275,6 +332,15 @@ def main() -> int:
         if glowup and retirement:
             fail("a glowup verdict cannot also propose retirement")
             violations += 1
+        if verdict["verdict"] == "fixed":
+            banked = sorted({
+                str(a.get("category")) for a in (verdict.get("applied") or [])
+                if isinstance(a, dict)
+                and str(a.get("category")) in FIX_LANE_BANKED_CATEGORIES})
+            if banked:
+                fail(f"a fixed verdict applied {', '.join(banked)} finding(s); the "
+                     "fix lane banks those for the glow-up lane and never applies them")
+                violations += 1
     else:  # clean / skipped / reported
         if not empty:
             fail(f"verdict is '{verdict['verdict']}' but the change patch is non-empty")
@@ -297,6 +363,10 @@ def main() -> int:
         if paths is None:
             violations += 1
         elif not check_scope(paths, article["path"], retirement, glowup):
+            violations += 1
+
+    if glowup and publish and args.body_file is not None and args.backlog is not None:
+        if not check_glowup_body(args.body_file, args.backlog, verdict):
             violations += 1
 
     if violations:

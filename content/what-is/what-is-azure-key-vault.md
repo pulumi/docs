@@ -4,6 +4,7 @@ meta_desc: |
     Azure Key Vault securely stores secrets, keys, and certificates and controls access to them. Learn to create Key Vault secrets and centralize with Pulumi ESC.
 
 type: what-is
+date: 2023-11-28T22:08:12+00:00
 page_title: "What is Azure Key Vault?"
 authors: ["torian-crane"]
 ---

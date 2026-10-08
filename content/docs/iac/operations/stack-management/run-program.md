@@ -62,14 +62,7 @@ This can be useful for ephemeral or pull-request preview environments, where a s
 
 ## Using the flag
 
-`--run-program` is accepted by `pulumi refresh`, `pulumi destroy`, and by `pulumi up` and `pulumi preview` when they perform a refresh step (`--refresh`):
-
-```bash
-pulumi refresh --run-program
-pulumi destroy --run-program
-pulumi up --refresh --run-program
-pulumi preview --refresh --run-program
-```
+`--run-program` is accepted by `pulumi refresh` and `pulumi destroy`, and by `pulumi up` and `pulumi preview` when they perform a refresh step (`--refresh`).
 
 To set it once per shell or in CI, use the equivalent environment variable:
 
@@ -84,7 +77,7 @@ See [Pulumi CLI environment variables](/docs/iac/cli/environment-variables/) for
 - **Resource hooks.** Delete hooks require `--run-program` on `pulumi destroy` — without it, Pulumi cannot register the hooks before deletion and the operation fails. See [Deletions and delete hooks](/docs/iac/concepts/resources/options/hooks/#deletions-and-delete-hooks).
 - **Dynamic providers.** Programs that use [dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) need the program to run so Pulumi can load the provider's implementation from your code.
 
-## See also
+## Learn more
 
 - [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) — CLI reference.
 - [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy/) — CLI reference.

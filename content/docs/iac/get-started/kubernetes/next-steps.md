@@ -16,13 +16,15 @@ aliases:
     - /docs/quickstart/kubernetes/next-steps/
 ---
 
-Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.
+Congrats! By completing this guide you have successfully:
 
-## Video tutorial
+- Created a new Pulumi project.
+- Deployed an NGINX web server to Kubernetes.
+- Modified and redeployed the running program.
+- Refactored the deployment into a reusable component.
+- Destroyed the resources you've provisioned.
 
-Take a deeper look at Pulumi with Kubernetes with this video tutorial.
-
-{{< get-started-next-step path="https://www.youtube.com/watch?v=2P8JLgAc5QI" label="Kubernetes in ~10 minutes" ref="gs-k8s-video" >}}
+Below are some recommended next steps, depending on your learning style. Also be sure to [join the Community Slack](https://slack.pulumi.com/) to meet fellow IaC practitioners.
 
 ## Try Pulumi ESC (Environments, Secrets, and Configuration)
 
@@ -32,7 +34,7 @@ With Pulumi ESC you can:
 
 - **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
 - **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
-- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud console, and in-code with TypeScript/JavaScript, Python, and Go SDKs.
 
 {{< get-started-next-step path="/docs/esc/get-started/" label="Learn more about Pulumi ESC" ref="gs-k8-esc" >}}
 
@@ -40,13 +42,19 @@ With Pulumi ESC you can:
 
 Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in the context of a real-life application.
 
-{{< get-started-next-step path="/learn/pulumi-fundamentals" label="Learn Pulumi Fundamentals" ref="gs-k8s-learn" >}}
+{{< get-started-next-step path="/dev/tutorials/pulumi-fundamentals/" label="Learn Pulumi Fundamentals" ref="gs-k8s-learn" >}}
 
 ## Launch a new project with a template
 
-Deploy the most common cloud architectures, from [static websites](/templates/static-website/) to [serverless applications](/templates/serverless-application/), [virtual machines](/templates/virtual-machine/), [container services](/templates/container-service/), and [Kubernetes clusters](/templates/kubernetes/).
+Provision a managed Kubernetes cluster on [AWS](/dev/templates/kubernetes/aws/), [Azure](/dev/templates/kubernetes/azure/), or [Google Cloud](/dev/templates/kubernetes/gcp/), or browse the full [Kubernetes cluster template](/dev/templates/kubernetes/) collection.
 
-{{< get-started-next-step path="/templates/" label="Browse templates" ref="gs-k8s-templates" >}}
+{{< get-started-next-step path="/dev/templates/kubernetes/" label="Browse Kubernetes templates" ref="gs-k8s-templates" >}}
+
+## Video tutorial
+
+Take a deeper look at Pulumi with Kubernetes with this video tutorial.
+
+{{< get-started-next-step path="https://www.youtube.com/watch?v=2P8JLgAc5QI" label="Kubernetes in ~10 minutes" ref="gs-k8s-video" >}}
 
 ## Dive into the docs
 
@@ -58,4 +66,4 @@ Read more about Pulumi's architecture and foundational concepts in depth, includ
 
 Read through the latest blog posts about using Pulumi with Kubernetes.
 
-{{< get-started-next-step path="/blog/tag/kubernetes" label="Read the Pulumi Blog" ref="gs-k8s-blog" >}}
+{{< get-started-next-step path="/blog/tags/kubernetes" label="Read the Pulumi Blog" ref="gs-k8s-blog" >}}

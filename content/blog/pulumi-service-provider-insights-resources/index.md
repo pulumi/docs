@@ -22,7 +22,7 @@ Today, we're excited to announce new resources in the [Pulumi Service Provider](
 With these new resources, you can:
 
 - **Discover all cloud resources** across AWS, Azure, GCP, Kubernetes, or OCI environments, including resources not managed by Pulumi
-- **Import discovered resources** into Pulumi management using [Visual Import](/docs/insights/discovery/visual-import/) to bring unmanaged infrastructure under IaC control
+- **Import discovered resources** into Pulumi management using [Visual Import](/docs/discovery-governance/discovery/visual-import/) to bring unmanaged infrastructure under IaC control
 - **Enforce compliance at scale** by organizing resources into Policy Groups and applying policy packs
 - **Automate governance workflows** by managing everything through code, enabling GitOps and CI/CD integration
 
@@ -460,7 +460,7 @@ No package installation needed for YAML - just use the resources directly.
 ## Learn More
 
 - [Pulumi Service Provider documentation](/registry/packages/pulumiservice/)
-- [Pulumi Insights documentation](/docs/insights/)
-- [Policy as Code documentation](/docs/insights/policy/)
+- [Pulumi Insights documentation](/docs/discovery-governance/)
+- [Policy as Code documentation](/docs/discovery-governance/policy/)
 
 We're excited to see how you use these new capabilities to improve visibility and governance across your cloud infrastructure. As always, we welcome your feedback in our [Community Slack](https://slack.pulumi.com/) or on [GitHub](https://github.com/pulumi/pulumi-pulumiservice).

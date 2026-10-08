@@ -49,7 +49,7 @@ The Protocol Buffers definition generates native classes and interfaces for each
 
 At this layer, you implement the provider interface directly. You write your [schema JSON](/docs/iac/guides/building-extending/packages/schema/) by hand, giving you complete control over resource definitions, property types, and how data structures map between Pulumi and your provider. This explicit control over the schema is particularly valuable when you need precise type mappings or want to define resources that don't fit standard patterns.
 
-Choose this layer when you need a provider in a language without a higher-level SDK, when you want full control over your schema and data structure mappings, when you're building something unusual that doesn't fit SDK patterns, or when you prefer explicit protocol handling over framework abstractions.
+For the criteria that point to this layer, see [When to use Layer 2](#when-to-use-layer-2-direct-implementation) below.
 
 For implementation guides, see [Direct implementation in Python](/docs/iac/guides/building-extending/providers/implementers/python/) or [Direct implementation in TypeScript](/docs/iac/guides/building-extending/providers/implementers/typescript/).
 

@@ -7,14 +7,10 @@ menu:
     administration:
         name: Agent Accounts
         parent: administration-concepts
-        weight: 5
+        weight: 6
 aliases:
   - /docs/administration/organizations-teams/agent-accounts/
 ---
-
-{{% notes type="info" %}}
-Agent accounts are in **preview**. Behavior and limits may change based on feedback.
-{{% /notes %}}
 
 Agent accounts give AI agents a free ephemeral Pulumi Cloud account to work in, without requiring a human user to sign up first. When the Pulumi CLI detects it is running in an agent context and no Pulumi Cloud credentials are available, it creates an account automatically and continues. The human claims the account later to take permanent ownership.
 
@@ -45,7 +41,8 @@ The provisioned account is a Pulumi Cloud individual account. Agents can:
 
 ## Claiming an account
 
-The user clicks the claim link and signs in with any supported identity (GitHub, GitLab, Google, Atlassian, email/password, or SAML SSO). The claim replaces the placeholder identity with the user's real identity. All state, history, and resources transfer automatically.
+The user clicks the claim link and signs in with any supported identity (GitHub, GitLab, Google, Atlassian, email/password, SAML SSO, or a passkey). The claim replaces the placeholder identity with the user's real identity. All state, history, and resources transfer automatically.
+
 Claiming never reduces capability. Everything available before the claim is still available after. Once the account is claimed and email is verified, you get access to various Pulumi Cloud features, including [Neo](/product/neo/), our AI infrastructure agent.
 
 ## Lifecycle

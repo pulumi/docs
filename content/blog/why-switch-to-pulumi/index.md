@@ -1,7 +1,7 @@
 ---
 title: "Why Switch to Pulumi for Infrastructure as Code?"
 date: 2024-07-23T19:47:50-07:00
-updated: 2026-07-05
+updated: 2026-09-21
 meta_desc: "Pulumi: the top choice for infrastructure as code. Boost productivity, scale infinitely, and use Pulumi Neo to automate infrastructure management with AI."
 authors:
     - aaron-kao
@@ -327,13 +327,11 @@ scalability, and collaboration.
     infrastructure engineer that works inside your existing workflow: it proposes
     changes, runs previews, responds to failures, and opens pull requests in tight
     feedback loops, grounded in the real state of your infrastructure in Pulumi
-    Cloud. Because that infrastructure is defined in Python, TypeScript, Go, .NET, or
-    Java rather than a bespoke configuration language, Neo can read, reason about,
+    Cloud. Because that infrastructure is defined in a [general-purpose
+    programming language](/docs/iac/languages-sdks/) rather
+    than a bespoke configuration language, Neo can read, reason about,
     test, and ship it the same way an AI coding agent already handles the rest of
-    your codebase. Terraform, by contrast, is defined in HCL, a domain-specific
-    configuration language that AI agents can generate and reason about less
-    reliably than a general-purpose programming language — one more reason
-    teams switch.
+    your codebase.
 
 - **Greater Scalability.** Pulumi embraces software engineering as a
     way to solve and manage the exponentially increasing complexity of
@@ -374,7 +372,7 @@ languages to write infrastructure as code. However, there are some key
 differences:
 
 - **No Vendor Lock-In.** CDK supports only AWS, whereas Pulumi
-    supports over 150 cloud and SaaS providers, with more being added
+    supports hundreds of cloud and SaaS providers, with more being added
     all the time. CDK depends on CloudFormation as the deployment
     engine; it shares many of the same benefits and limitations as
     CloudFormation (see [Pulumi vs.
@@ -447,7 +445,7 @@ CloudFormation, Azure Resource Manager (ARM) templates, or Kubernetes
 YAML.
 
 [Self-service Tool
-Guide](https://www.pulumi.com/docs/iac/adopting-pulumi/)
+Guide](/docs/iac/guides/migration/)
 
 If you need help, we have a team of cloud experts who can answer your
 questions, give you a demo, or roll up their sleeves to get your

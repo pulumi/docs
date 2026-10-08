@@ -18,7 +18,7 @@ pulumi_cloud_feature: scim
 
 This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.
 
-For the capabilities and attributes Pulumi's SCIM implementation supports, see [Pulumi Cloud & SCIM](/docs/administration/guides/scim/#capabilities).
+For the capabilities and attributes Pulumi's SCIM implementation supports, see [SCIM provisioning](/docs/administration/concepts/scim/#capabilities).
 
 ## Prerequisites
 
@@ -83,20 +83,20 @@ Be sure to check the *Include in SAML assertion* checkbox for each of the added 
 Optionally, you can override the default value for *scimusername* and use the `Macro` setting. For example, `{firstname}{lastname}` as per [OneLogin Macros](https://onelogin.service-now.com/kb_view_customer.do?sysparm_article=KB0010609)
 
 {{% notes type="warning" %}}
-Whatever value you choose for *scimusername*, it must stay stable for the lifetime of the account. Pulumi usernames are immutable, so an update that changes *scimusername* for an existing user fails. See [Usernames cannot change](/docs/administration/guides/scim/#usernames-cannot-change).
+Whatever value you choose for *scimusername*, it must stay stable for the lifetime of the account. Pulumi usernames are immutable, so an update that changes *scimusername* for an existing user fails. See [Usernames cannot change](/docs/administration/concepts/scim/#usernames-cannot-change).
 {{% /notes %}}
 
 Select **Save** to save the application settings.
 
 ## Configuring Communications Between Pulumi and OneLogin
 
-These next steps configure the Pulumi Cloud with details on your new OneLogin-based application  and configure OneLogin to be able to authenticate to the Pulumi Cloud.
+These next steps configure Pulumi Cloud with details on your new OneLogin-based application  and configure OneLogin to be able to authenticate to Pulumi Cloud.
 
 For the first step, you need to obtain the IDP metadata document from OneLogin and then provide it to Pulumi.
 
 1. Navigate to the OneLogin Application you created above and select the **More Actions** drop down menu button and select _SAML Metadata_ to download the metadata XML file.
 1. Open the file and copy the entire block of XML text in your clipboard.
-1. Open the Pulumi Cloud and navigate to the organization for which you are enabling SAML/SCIM.
+1. Open Pulumi Cloud and navigate to the organization for which you are enabling SAML/SCIM.
 1. Select the **Settings** tab, and then select **Access Management**.
 1. Select the **Other** tab.
 1. In the **Membership Requirements** section, select the **Change requirements** button.
@@ -107,7 +107,7 @@ For the first step, you need to obtain the IDP metadata document from OneLogin a
 
 At this point Pulumi is able to accept communications from OneLogin. The next step is to provide OneLogin a token to allow Pulumi to authenticate the communications from OneLogin.
 
-1. Navigate to the Pulumi Cloud, then **Settings**, then **Access Management**.
+1. Navigate to Pulumi Cloud, then **Settings**, then **Access Management**.
 1. Select the **SAML & SCIM** tab, then scroll to the **SCIM** section.
 1. Select **Generate new token**
 1. Copy the token

@@ -297,7 +297,7 @@ Pulumi Neo brings the next evolution in infrastructure diagramming, with AI-powe
 
 Pulumi Neo streamlines enterprise diagramming through an intelligent, organization-aware approach that scales across multiple projects and stakeholders:
 
-1. **Repository setup**: Create a dedicated repository to host your architecture diagrams and ensure your [GitHub App](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/github-app/) has access. The repository structure helps Neo understand your diagramming patterns:
+1. **Repository setup**: Create a dedicated repository to host your architecture diagrams and ensure your [GitHub App](/docs/integrations/version-control/github-app/) has access. The repository structure helps Neo understand your diagramming patterns:
    - `overview/` folder for organization-wide infrastructure views
    - `stacks/` folder for individual stack diagrams
    - Template files that Neo can model new diagrams from

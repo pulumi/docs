@@ -1,6 +1,6 @@
 ---
 title: "Alternative | Pulumi"
-meta_desc: Infrastructure as Code in Python, TypeScript, Go, or .NET. 170+ cloud providers, policy as code, secrets management. Open source. Free tier.
+meta_desc: Infrastructure as Code in Python, TypeScript, Go, or .NET. Hundreds of cloud providers, policy as code, secrets management. Open source. Free tier.
 layout: gads-template
 block_external_search_index: true
 
@@ -28,7 +28,7 @@ key_features_above:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to hundreds of providers like AWS, Azure, Google Cloud, and Kubernetes.
           features:
               - title: Code faster
                 description: |
@@ -43,7 +43,7 @@ key_features_above:
                     Test and validate infrastructure with standard unit test frameworks and
                     integration tests. Preview changes before deploying.
                 icon: eye
-        
+
 key_features:
     items:
         - title: "Build infrastructure faster with reusable components"
@@ -173,13 +173,13 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "350,000+"
-        description: "Community members"
+        description: "community members"
     company:
         number: "4,000+"
-        description: "Companies in production"
+        description: "companies in production"
     integration:
-        number: "170+"
-        description: "Cloud and service integrations"
+        number: "200+"
+        description: "cloud and service integrations"
 
 key_features_below:
     items:
@@ -192,7 +192,7 @@ key_features_below:
               - title: Pulumi IaC
                 icon: code
                 description: |
-                    Utilize open-source IaC in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Build and distribute reusable components for 170+ cloud & SaaS providers.
+                    Utilize open-source IaC in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Build and distribute reusable components for hundreds of cloud & SaaS providers.
               - title: Pulumi ESC
                 icon: lock
                 description: |
@@ -230,38 +230,38 @@ case_studies:
     title: Customers innovating with Pulumi Cloud
     items:
         - name: Atlassian
-          link: /case-studies/atlassian/
-          logo: atlassian-wordmark
+          link: /customers/atlassian/
+          customer: atlassian
           description: |
             Developers reduced their time spent on maintenance by 50%.
 
         - name: Elkjop
-          link: /case-studies/elkjop-nordic/
-          logo: elkjop-nordic
+          link: /customers/elkjop-nordic/
+          customer: elkjop-nordic
           description: |
             Increased developers' agility and speed through platform engineering.
 
         - name: Starburst
-          link: /case-studies/starburst/
-          logo: starburst
+          link: /customers/starburst/
+          customer: starburst
           description: |
             Increased velocity and speed, with deployments that are up to 3x faster.
 
         - name: BMW
-          link: /case-studies/bmw/
-          logo: bmw
+          link: /customers/bmw/
+          customer: bmw
           description: |
             Enabled developers to deploy across hybrid cloud environments.
 
         - name: Lemonade
-          link: /case-studies/lemonade/
-          logo: lemonade
+          link: /customers/lemonade/
+          customer: lemonade
           description: |
             Standardized infrastructure architectures with reusable components.
 
         - name: Snowflake
-          link: /case-studies/snowflake/
-          logo: snowflake
+          link: /customers/snowflake/
+          customer: snowflake
           description: |
             Built a multi-cloud, Kubernetes-based platform to standardize all deployments
 ---
