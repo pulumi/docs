@@ -62,7 +62,7 @@ The complete infrastructure required typically includes:
 
 * **Isolated compute environment**: A virtual machine (VM) or Kubernetes cluster within the air-gapped network.
 * **Pulumi Self-Hosted installation artifacts**: These can be retrieved from a network-accessible environment and transferred to the air-gapped system.
-* *A Private Container Registry*: Required to store Pulumi Self-Hosted container images for deployment.
+* **Private container registry**: Stores the Pulumi Self-Hosted container images inside the air-gapped network so your compute environment can pull them.
 * **Database and storage backend**: MySQL and object storage (such as MinIO or an on-premises S3-compatible storage system) for state management.
 * **Internal package management**: To host Pulumi SDKs and required language runtimes, as external package managers (npm, PyPI, etc.) won't be accessible.
 * **Automation and CI/CD setup**: Configured to run within the air-gapped network for secure infrastructure deployments.
@@ -117,7 +117,8 @@ To enable developers to use Pulumi within the air-gapped environment:
         $ pulumi login https://pulumi.corpnet.acmecorp.com
         ```
 
-    * Use an internally hosted Pulumi provider mirror.
+    * Use an internally hosted Pulumi provider mirror. Set [`PULUMI_PLUGIN_DOWNLOAD_URL_OVERRIDES`](/docs/iac/cli/environment-variables/) to redirect provider plugin downloads to it, or install plugins from transferred files with [`pulumi plugin install --file`](/docs/iac/cli/commands/pulumi_plugin_install/).
+    * Set `PULUMI_SKIP_UPDATE_CHECK=true`. Otherwise, the CLI tries to contact `api.pulumi.com` to check for a newer version, even when you're logged in to Pulumi Self-Hosted.
 
 ### Step 3: Run Pulumi in air-gapped mode
 
@@ -133,7 +134,7 @@ Because air-gapped is not the default mode Pulumi Cloud uses, there are some bes
 
 * **Automate dependency updates**: Establish a periodic process to update Pulumi CLI, SDKs, and providers by syncing with an external, controlled environment.
 * **Monitor and audit usage**: Implement internal logging and monitoring to track Pulumi operations.
-* *Secure Your Secrets Management*: Use a secure secrets management solution, such as [Pulumi ESC](/docs/esc) which is included in Self-Hosted, to manage sensitive data.
+* **Secure your secrets management**: Use a secure secrets management solution, such as [Pulumi ESC](/docs/esc/) which is included in Self-Hosted, to manage sensitive data.
 
 ## Next steps
 
