@@ -73,6 +73,9 @@ concurrency:
 jobs:
   review:
     name: Review one article (model, unprivileged)
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream sync
+    # but must not run it: this lane belongs to pulumi/docs alone.
+    if: github.repository == 'pulumi/docs'
     runs-on: ubuntu-latest
     # Hard cost ceiling for a single-article review; a hung run dies rather
     # than burning API budget. A glow-up gets 20 more minutes for its
@@ -1140,7 +1143,9 @@ jobs:
     # Runs even when the review job failed — the ledger must record the
     # incomplete outcome so the page stays due — but not when the run was
     # cancelled outright.
-    if: always() && needs.review.result != 'cancelled'
+    # The repository check is repeated here because always() would otherwise
+    # run this job after a mirror-skipped review.
+    if: always() && github.repository == 'pulumi/docs' && needs.review.result != 'cancelled'
     # Generous relative to the work (a shallow checkout + lint + push), but
     # the old 15 was killing ~30% of runs mid-checkout back when this job
     # cloned full history — after the model had already spent its tokens.
