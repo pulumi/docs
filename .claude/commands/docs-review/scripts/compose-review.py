@@ -2097,6 +2097,27 @@ def replace_waiting_block(brief_body: str, findings: list[dict],
     return "\n".join(lines) + ("\n" if brief_body.endswith("\n") else "")
 
 
+def render_approval_line(teams: str, scope: str) -> str:
+    """The brief's who-approves line, worded for `approval.scope`.
+
+    `teams` is who routing REQUESTED; `scope` (from route-pr.py) is who may
+    CLEAR the Sentinel's approver gate. They only coincide under `lane`, so
+    naming the teams as the required approvers under a wider scope tells
+    reviewers the gate is stricter than it is.
+    """
+    if scope == "any-human":
+        return (f"**Review requested from:** {teams} — an approval from anyone "
+                "with write access satisfies the merge gate.")
+    if scope == "any-team":
+        return (f"**Review requested from:** {teams} — an approval from a member "
+                "of any review team satisfies the merge gate.")
+    if "," in teams:
+        return (f"**Approval needed from:** {teams} — the merge gate needs an "
+                "approval from a member of each team.")
+    return (f"**Approval needed from:** {teams} — any member's approval "
+            "satisfies the merge gate.")
+
+
 def render_brief_orient() -> list[str]:
     """The TIP callout under the brief header. Owned here so the update lane
     can re-stamp it on cards composed with older wording
@@ -2677,8 +2698,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     if prep["outage_banner"]:
         brief += [prep["outage_banner"], ""]
     if getattr(args, "routed_team", ""):
-        brief += [f"**Approval needed from:** {args.routed_team} — any "
-                  "member's approval satisfies the merge gate.", ""]
+        brief += [render_approval_line(args.routed_team,
+                                       getattr(args, "approval_scope", "lane")), ""]
     waiting = render_waiting_block(findings, {})
     if waiting:
         brief += [*waiting, ""]
@@ -2937,6 +2958,8 @@ def main() -> int:
     p.add_argument("--prior-high-water", type=int, default=0,
                    help="v3: the previous review's REVIEW_STATE high_water; new ids start above it")
     p.add_argument("--routed-team", default="", help="v3: approval-team display string for the reviewer brief")
+    p.add_argument("--approval-scope", default="lane", choices=("lane", "any-team", "any-human"),
+                   help="v3: route-pr.py's approval_scope — who may clear the approver gate")
     args = p.parse_args()
 
     out_path = Path(args.out)

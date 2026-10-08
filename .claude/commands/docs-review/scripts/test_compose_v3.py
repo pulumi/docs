@@ -864,3 +864,27 @@ def test_orient_forms():
     assert "autofix" not in "\n".join(cr.render_author_orient(1, automated=True))
     assert "autofix" in "\n".join(cr.render_author_orient(1, automated=True, autofix=True))
     assert "needs an answer" in "\n".join(cr.render_author_orient(0, automated=True))
+
+
+@pytest.mark.parametrize("scope, teams, expected", [
+    ("lane", "@pulumi/docs-guild",
+     "**Approval needed from:** @pulumi/docs-guild — any member's approval satisfies the merge gate."),
+    ("lane", "@pulumi/docs-guild, @pulumi/docs-tools",
+     "**Approval needed from:** @pulumi/docs-guild, @pulumi/docs-tools — the merge gate needs an approval from a member of each team."),
+    ("any-team", "@pulumi/docs-guild",
+     "**Review requested from:** @pulumi/docs-guild — an approval from a member of any review team satisfies the merge gate."),
+    ("any-human", "@pulumi/docs-guild, @pulumi/docs-marketing-review",
+     "**Review requested from:** @pulumi/docs-guild, @pulumi/docs-marketing-review — an approval from anyone with write access satisfies the merge gate."),
+])
+def test_approval_line_follows_scope(tmp_path, scope, teams, expected):
+    brief = tmp_path / "b.md"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"),
+        "--out-author", str(tmp_path / "a.md"), "--out-brief", str(brief),
+        "--out-evidence", str(tmp_path / "e.json"),
+    ])
+    cmd[cmd.index("--routed-team") + 1] = teams
+    cmd += ["--approval-scope", scope]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    assert expected in brief.read_text().splitlines()
