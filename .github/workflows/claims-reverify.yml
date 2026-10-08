@@ -107,6 +107,9 @@ jobs:
   # unset, feed failure, or parse error all yield is_holiday=false.
   holiday-check:
     name: Company-holiday check
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream sync
+    # but must not run it: the scheduled lane belongs to pulumi/docs alone.
+    if: github.repository == 'pulumi/docs'
     runs-on: ubuntu-latest
     outputs:
       is_holiday: ${{ steps.check.outputs.is_holiday }}

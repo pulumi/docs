@@ -92,9 +92,13 @@ jobs:
   # failure, or parse error all yield is_holiday=false, so the dispatcher runs —
   # a missing or stale feed never silently halts the pipeline. The URL is never
   # echoed, so the token stays out of the logs. (Manual workflow_dispatch ignores
-  # this; see the `review` gate.) Always runs so `review`'s `needs` is satisfiable.
+  # this; see the `review` gate.) Always runs on pulumi/docs so `review`'s `needs`
+  # is satisfiable.
   holiday-check:
     name: Company-holiday check
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream sync
+    # but must not run it: the scheduled lane belongs to pulumi/docs alone.
+    if: github.repository == 'pulumi/docs'
     runs-on: ubuntu-latest
     # feed_status feeds the degradation-health lane at the end of the review
     # job: unconfigured (an explicit off-switch, never alarmed) / fetch_failed /

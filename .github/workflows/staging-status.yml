@@ -274,8 +274,11 @@ jobs:
     # the header. No concurrency group, for the same reason nothing else
     # here has one: a displaced pending run is a CANCELLED run.
     name: Finalize dispatched deploys the cascade never reported
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream sync
+    # but don't deploy, so there is nothing for the sweep to finalize there.
     if: >-
-      github.event_name == 'schedule'
+      github.repository == 'pulumi/docs'
+      && github.event_name == 'schedule'
       && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
     runs-on: ubuntu-latest
     timeout-minutes: 10
