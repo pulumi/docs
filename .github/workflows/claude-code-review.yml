@@ -347,6 +347,56 @@ jobs:
             -f head_sha="${{ github.event.after }}" \
             -f auto=true
 
+  # Keeps a no-op auto-fire run out of the per-PR concurrency group.
+  #
+  # Triage runs on every push (synchronize), so every push chains a
+  # workflow_run into claude-review below. On a PR the pipeline has already
+  # touched, that run does nothing: pr-context skips it as
+  # "already-reviewed". But it used to claim the claude-review-<PR> group
+  # first, and cancel-in-progress killed whatever was in flight there,
+  # usually the `#new-review` dispatch that the push and the comment were
+  # both meant to serve. The cancel landed in a pre-step, the error trap
+  # set review:error, and the no-op run read that label and skipped
+  # (pulumi/docs#21172 and #21210, 2026-10-08: the dispatch started at
+  # 01:08:11, the triage-chained run cancelled it at 01:09:37, then
+  # skipped at 01:10:27).
+  #
+  # This job reads the same signals pr-context's workflow_run skip reads
+  # (draft, or any review-state label) and, when the run is certain to
+  # skip, moves claude-review into a per-run group so it cannot cancel
+  # anything. claude-review still runs, so it publishes its skipped
+  # check-run as before. Fails open: when the lookup errors, the run joins
+  # the shared group as before. Keep the label list in sync with
+  # pr-context's already-reviewed guard.
+  autofire-gate:
+    if: |
+      github.event_name == 'workflow_run' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.pull_requests != null &&
+      github.event.workflow_run.pull_requests[0] != null
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    outputs:
+      noop: ${{ steps.check.outputs.noop }}
+    steps:
+      - name: Check whether this auto-fire run will skip
+        id: check
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.workflow_run.pull_requests[0].number }}
+          REPO: ${{ github.repository }}
+        run: |
+          NOOP=$(gh api "repos/$REPO/pulls/$PR" --jq '
+            .draft or ([.labels[].name] | any(IN(
+              "review:outstanding-issues", "review:no-blockers",
+              "review:stale", "review:error", "review:in-progress")))') \
+            || NOOP=false
+          echo "noop=$NOOP" >> "$GITHUB_OUTPUT"
+          echo "autofire-gate: PR #$PR noop=$NOOP"
+
   claude-review:
     # Fire only for workflow_run events from Claude Triage that were
     # themselves triggered by a pull_request AND completed successfully.
@@ -358,15 +408,22 @@ jobs:
     # The pull_requests array is populated by GitHub when the originating
     # workflow ran in a PR context on the same repo.
     if: |
+      !cancelled() && (
       (github.event_name == 'workflow_run' &&
        github.event.workflow_run.event == 'pull_request' &&
        github.event.workflow_run.conclusion == 'success' &&
        github.event.workflow_run.pull_requests != null &&
        github.event.workflow_run.pull_requests[0] != null) ||
-      github.event_name == 'workflow_dispatch'
+      github.event_name == 'workflow_dispatch')
+    # autofire-gate is skipped on workflow_dispatch. A status function
+    # (!cancelled) keeps that skip from skipping this job; the event checks
+    # above still decide.
+    needs: autofire-gate
 
+    # A run autofire-gate proved will skip gets a group of its own, so it
+    # can't cancel the review in flight (see autofire-gate).
     concurrency:
-      group: claude-review-${{ github.event.workflow_run.pull_requests[0].number || github.event.inputs.pr_number }}
+      group: claude-review-${{ github.event.workflow_run.pull_requests[0].number || github.event.inputs.pr_number }}${{ needs.autofire-gate.outputs.noop == 'true' && format('-noop-{0}', github.run_id) || '' }}
       cancel-in-progress: true
 
     # Consumed by the v3 publish job below; empty on v2 runs and on any v3
@@ -1536,6 +1593,7 @@ jobs:
           OUTCOME="${{ steps.claude-review.outcome }}"
           REVIEW_START="${{ steps.review-start.outputs.epoch }}"
           JOB_START="${{ steps.job-start.outputs.epoch }}"
+          JOB_STATUS="${{ job.status }}"
           TIMED_OUT=false
           SUPERSEDED=false
           # The runner reports a step that hit its step-level timeout-minutes
@@ -1556,10 +1614,20 @@ jobs:
             else
               SUPERSEDED=true
             fi
+          # A cancel that lands in a pre-step never reaches the Opus step, so
+          # its outcome reads "skipped" and the branch above misses it; the
+          # job status still says cancelled. Without this the error trap
+          # labels a superseded run review:error.
+          elif [ "$OUTCOME" = "skipped" ] && [ "$JOB_STATUS" = "cancelled" ]; then
+            if [ -n "$JOB_START" ] && [ $(( NOW - JOB_START )) -ge "$JOB_BUDGET_S" ]; then
+              TIMED_OUT=true
+            else
+              SUPERSEDED=true
+            fi
           fi
           echo "timed_out=$TIMED_OUT" >> "$GITHUB_OUTPUT"
           echo "superseded=$SUPERSEDED" >> "$GITHUB_OUTPUT"
-          echo "review outcome: $OUTCOME (timed_out=$TIMED_OUT superseded=$SUPERSEDED)"
+          echo "review outcome: $OUTCOME job=$JOB_STATUS (timed_out=$TIMED_OUT superseded=$SUPERSEDED)"
 
       # ---- post-edit validate / splice / re-validate / upsert chain ----
       # The editorial pass step (above) exits after editing .review-draft.md.
