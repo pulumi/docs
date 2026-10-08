@@ -14,23 +14,11 @@ unlisted: false
 # to fill out the form before viewing.
 gated: true
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: secrets-management-for-scalable-cloud-security
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
 # URL for embedding a URL for ungated events.
-youtube_url: 
-
+youtube_url: https://www.youtube.com/embed/CKQrrE-aQtM
 # Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2025-02-26T16:00:00+11:00
 
@@ -53,15 +41,12 @@ learn:
 
 # The event presenters
 presenters:
-    - name: Josh Kodroff 
+    - name: Josh Kodroff
       role: Principal Solutions Architect, Pulumi
       photo: /images/team/josh-kodroff.jpg
-    - name: Aurélien Requiem
-      role: Customer Engineer, Pulumi
-      photo: /images/team/aurelien-requiem.jpg
-    - name: Abdul Javed
-      role: Regional GTM Leader (APAC), Pulumi
-      photo: /images/team/abdul-javed.jpg
+    - name: Torian Crane
+      role: Senior Technical Content Engineer, Pulumi
+      photo: /images/team/torian-crane.jpg
 
 # case-sensitive
 tags:
@@ -75,5 +60,4 @@ form:
     # HubSpot form id.
     hubspot_form_id: bf58a0f2-c419-4319-9644-cf73a9de0a3b
     salesforce_campaign_id: 701PQ00000RsWHuYAN
-
 ---

@@ -69,6 +69,11 @@ sections:
     link: /docs/iac/operations/troubleshooting/architecture-mismatch/
     description: Fix crashes or hangs on Apple Silicon caused by x86_64 binaries running under Rosetta 2.
 
+  - icon: warning
+    heading: Output Value Errors
+    link: /docs/iac/operations/troubleshooting/output-values/
+    description: Diagnose errors from stringifying, branching on, or reading an output value like a plain value.
+
 - type: button-cards
   heading: Related
   cards:

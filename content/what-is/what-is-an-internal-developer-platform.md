@@ -4,6 +4,7 @@ allow_long_title: true
 meta_desc: |
     How internal developer platforms (IDPs) work: golden paths, self-service infrastructure, architecture, key components, and how to build or adopt one.
 type: what-is
+date: 2025-05-12T11:17:08-07:00
 page_title: What is an Internal Developer Platform (IDP)?
 authors: ["sarah-hughes"]
 ---

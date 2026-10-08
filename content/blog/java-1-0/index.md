@@ -21,7 +21,7 @@ social:
         Learn more about automating everything you run in the cloud with Java: [Link]"
 ---
 
-One of Pulumi's core Infrastructure as Code (IaC) features is the ability to [model infrastructure](https://www.pulumi.com/docs/iac/concepts/) using well-traveled, familiar general-purpose programming languages. Today, we're thrilled to announce that Java, one of the world's most popular programming languages, is now generally available in Pulumi. This release joins our existing first-class support for TypeScript, Python, Go, YAML, and C#, enabling Java developers to manage cloud infrastructure using the language they know and trust.
+One of Pulumi's core infrastructure as code (IaC) features is the ability to [model infrastructure](https://www.pulumi.com/docs/iac/concepts/) using well-traveled, familiar general-purpose programming languages. Today, we're thrilled to announce that Java, one of the world's most popular programming languages, is now generally available in Pulumi. This release joins our existing first-class support for TypeScript, Python, Go, YAML, and C#, enabling Java developers to manage cloud infrastructure using the language they know and trust.
 
 <!--more-->
 
@@ -85,7 +85,7 @@ With just a few lines of code (especially by Java standards), we composed a set 
 
 ## New: Java Automation API
 
-With the general availability of our Java language support, we’re also excited to announce that the [Automation API](https://www.pulumi.com/docs/iac/using-pulumi/automation-api/) is now supported in Java. The Automation API is a fully typed SDK that allows you to interact with Pulumi programs outside the Pulumi CLI. You can directly access and orchestrate your Pulumi projects and stacks with the SDK, allowing you to supercharge your Infrastructure as Code.
+With the general availability of our Java language support, we’re also excited to announce that the [Automation API](/docs/iac/concepts/automation-api/) is now supported in Java. The Automation API is a fully typed SDK that allows you to interact with Pulumi programs outside the Pulumi CLI. You can directly access and orchestrate your Pulumi projects and stacks with the SDK, allowing you to supercharge your infrastructure as code.
 
 In our Automation API [examples repo](https://github.com/pulumi/automation-api-examples), we have an example demonstrating how you could construct a Pulumi program with the Automation API to [perform a database migration](https://github.com/pulumi/automation-api-examples/tree/main/java/databaseMigration). Let's take a look at a few of the interesting aspects:
 
@@ -177,4 +177,4 @@ To learn more about and to get started with Pulumi Java, you can check out the f
 
 * [Examples Repo](https://github.com/pulumi/examples): The Pulumi examples repo has many examples of Pulumi Java programs to help you get up and running with Pulumi Java.
 
-* [Pulumi Java Converter](https://www.pulumi.com/docs/iac/adopting-pulumi/converters/): The Pulumi converter tool efficiently migrates existing IaC applications, such as Terraform, ARM, and Bicep, to Pulumi Java.
+* [Pulumi Java Converter](/docs/iac/guides/migration/converters/): The Pulumi converter tool efficiently migrates existing IaC applications, such as Terraform, ARM, and Bicep, to Pulumi Java.

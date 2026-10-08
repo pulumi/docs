@@ -1,0 +1,33 @@
+{{- $active := .active -}}
+{{- $cx := partialCached "customers/data.html" . "customers-data" -}}
+{{- $stories := partialCached "customers/stories.html" . "customer-stories" -}}
+{{- $populated := slice -}}
+{{- range $cx.industries -}}
+  {{- if gt .count 0 }}{{ $populated = $populated | append . }}{{ end -}}
+{{- end -}}
+<div class="customer-filter-bar">
+    <div class="customer-filter-scroll">
+        <nav data-customer-filter aria-label="Filter customers by industry" class="customer-filter">
+            <a href="/customers/" data-industry="" data-track="customer-filter-all"{{ if eq $active "" }} aria-current="page"{{ end }} class="btn btn-sm btn-outline text-sm{{ if eq $active "" }} is-active{{ end }}">
+                All
+                {{ partial "badge.html" (dict "text" (len $cx.list) "variant" "ghost" "size" "sm") }}
+            </a>
+            {{- range sort $populated "count" "desc" }}
+            <a href="/customers/industry/{{ .id }}/" data-industry="{{ .id }}" data-track="customer-filter-{{ .id }}"{{ if eq $active .id }} aria-current="page"{{ end }} class="btn btn-sm btn-outline text-sm{{ if eq $active .id }} is-active{{ end }}">
+                {{ .name }}
+                {{ partial "badge.html" (dict "text" .count "variant" "ghost" "size" "sm") }}
+            </a>
+            {{- end }}
+        </nav>
+    </div>
+    <div class="customer-filter-actions">
+        <button type="button" data-customer-filter-expand aria-expanded="false" class="btn btn-sm btn-ghost-primary text-sm customer-filter-expand">
+            {{ partial "icon.html" (dict "name" "plus" "weight" "bold" "class" "size-4") }}
+            More industries
+        </button>
+        <button type="button" data-customer-toggle-stories role="switch" aria-checked="false" class="customer-switch">
+            <span class="customer-switch-track" aria-hidden="true"><span class="customer-switch-thumb"></span></span>
+            <span class="customer-switch-label">Has case study</span>
+        </button>
+    </div>
+</div>

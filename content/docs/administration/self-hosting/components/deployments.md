@@ -1,6 +1,6 @@
 ---
 title_tag: Deployments | Self-Hosting Pulumi
-meta_desc: Deployments are available on Self-hosting. Self-hosting is available as part of the Pulumi Business Critical Edition.
+meta_desc: Deployments are available on Self-hosting. Self-hosting is available as part of the Pulumi Enterprise edition.
 title: Deployments
 h1: Pulumi Cloud self-hosted Deployments
 menu:
@@ -20,13 +20,13 @@ pulumi_cloud_feature: self-hosting
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
-[Pulumi Deployments](/docs/deployments/concepts/) is fully supported in Kubernetes-managed self-hosted environments. If you're using Kubernetes to manage your self-hosted Pulumi Cloud installation, you can enable Pulumi Deployments features by configuring a Kubernetes-native workflow runner pool in Pulumi Cloud and installing one or more [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) into your installation's Kubernetes cluster. Besides deployments, customer-managed workflow runners also support [Discovery](/docs/insights/discovery/) scans and [policy evaluations](/docs/insights/policy/).
+[Pulumi Deployments](/docs/deployments/concepts/) is fully supported in Kubernetes-managed self-hosted environments. If you're using Kubernetes to manage your self-hosted Pulumi Cloud installation, you can enable Pulumi Deployments features by configuring a Kubernetes-native workflow runner pool in Pulumi Cloud and installing one or more [customer-managed runners](/docs/administration/concepts/customer-managed-runners/) into your installation's Kubernetes cluster. Besides deployments, customer-managed runners also support [Discovery](/docs/discovery-governance/concepts/discovery/) scans and [policy evaluations](/docs/discovery-governance/concepts/policy-as-code/).
 
 To do so, follow these steps:
 
-1. Create a new pool. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow Runner Pools** tab, click **Add new pool**, and copy the generated access token.
+1. Create a new pool. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow runner pools** tab, click **Add new pool**, and copy the generated access token.
 
-1. Select the **Kubernetes** tab and follow the on-screen instructions to install and configure your Kubernetes-native deployment agent.
+1. Select the **Kubernetes** tab and follow the on-screen instructions to install and configure your Kubernetes-native runner.
 
 1. Set any environment variables directly on your Kubernetes deployment. The following environment variables are supported and may be set on the container running the Pulumi Cloud API service:
 
@@ -34,4 +34,4 @@ To do so, follow these steps:
     |-----------------------------------------|-----------------------------------------| --------------- |
     | `PULUMI_DEPLOY_DEFAULT_IMAGE_REFERENCE` | The Docker image to use for the runner. | `pulumi/pulumi` |
 
-1. Configure your stacks individually to use the deployment pool by navigating to **Settings > Deploy** and choosing the pool from the **Deployment runner pools** list. Click **Save deployment configuration** to apply your settings.
+1. Configure your stacks individually to use the deployment pool by navigating to **Settings > Deploy** and choosing the pool from the **Deployment runner pool** dropdown. Click **Save deployment configuration** to apply your settings.

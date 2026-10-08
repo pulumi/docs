@@ -108,7 +108,7 @@ Whether integrated with Pulumi's infrastructure as code (IaC) platform or used a
 
 ### 1. Seamless Integration with External Platforms
 
-Pulumi ESC integrates with popular secrets providers, including [AWS Secrets Manager](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/aws-secrets/), [Azure Key Vault](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/azure-secrets/), [GCP Secret Manager](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/gcp-secrets/), [1Password](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/1password-secrets/), and [HashiCorp Vault](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/vault-secrets/), making it adaptable for multi-cloud and hybrid cloud architectures.
+Pulumi ESC integrates with popular secrets providers, including [AWS Secrets Manager](/docs/esc/providers/secrets/aws-secrets/), [Azure Key Vault](/docs/esc/providers/secrets/azure-secrets/), [GCP Secret Manager](/docs/esc/providers/secrets/gcp-secrets/), [1Password](/docs/esc/providers/secrets/1password-secrets/), and [HashiCorp Vault](/docs/esc/providers/secrets/vault-secrets/), making it adaptable for multi-cloud and hybrid cloud architectures.
 
 ### 2. Dynamic Secrets Synchronization with ESO
 
@@ -132,17 +132,17 @@ Pulumi ESC embraces an "as-code" approach, enabling configuration and secrets ma
 
 ### 7. Dev Tools Integrations
 
-Pulumi ESC’s metadata and support for popular configuration formats enable seamless integration with tools like [Direnv](https://www.pulumi.com/docs/esc/integrations/dev-tools/direnv/), [Docker](https://www.pulumi.com/docs/esc/integrations/dev-tools/docker/), and [GitHub](https://www.pulumi.com/docs/esc/integrations/dev-tools/github/), allowing easy management of environment variables, secrets, and configurations.
+Pulumi ESC’s metadata and support for popular configuration formats enable seamless integration with tools like [Direnv](/docs/esc/guides/integrate-with/direnv/), [Docker](/docs/esc/guides/integrate-with/docker/), and [GitHub](/docs/esc/guides/integrate-with/github-actions/), allowing easy management of environment variables, secrets, and configurations.
 
 ### 8. Infrastructure Tools Integrations
 
-Pulumi ESC extends its capabilities beyond Pulumi IaC by integrating with other infrastructure tools such as [Cloudflare](https://www.pulumi.com/docs/esc/integrations/infrastructure/cloudflare/), [Terraform](https://www.pulumi.com/docs/esc/integrations/infrastructure/terraform/), and OpenTofu. These integrations enable seamless provisioning of cloud credentials and input variables directly from ESC environments.
+Pulumi ESC extends its capabilities beyond Pulumi IaC by integrating with other infrastructure tools such as [Cloudflare](/docs/esc/guides/integrate-with/cloudflare/), [Terraform](/docs/esc/guides/integrate-with/terraform/), and OpenTofu. These integrations enable seamless provisioning of cloud credentials and input variables directly from ESC environments.
 
 ## Why Cloud Engineers Need Pulumi ESC
 
 ### Enhanced Security and Compliance
 
-Cloud engineers often have to balance security and operations. Pulumi ESC centralizes secrets in a secure vault, ensuring encrypted storage, access control, and audit visibility. It also [complies with industry standards like SOC 2, PCI-DSS, and MTCS](https://www.pulumi.com/docs/administration/onboarding-guide/setting-up-for-success/#choose-your-compliance-approach).
+Cloud engineers often have to balance security and operations. Pulumi ESC centralizes secrets in a secure vault, ensuring encrypted storage, access control, and audit visibility. It also [complies with industry standards like SOC 2, PCI-DSS, and MTCS](/docs/administration/get-started/setting-up-for-success/#choose-your-compliance-approach).
 
 ### Streamlined Multi-Cloud Management
 
@@ -201,6 +201,6 @@ With rising cyber threats and stricter data regulations, adopting tools like Pul
 
 Secrets management doesn't have to be a headache! With **Pulumi ESC**, you can safeguard your infrastructure, ensure compliance, and eliminate manual errors—all while enhancing security and agility.
 
-[Get started with Pulumi ESC today](https://www.pulumi.com/docs/esc/get-started/begin/) and experience the future of secrets management. Take control of your cloud environment—securely and effortlessly.
+[Get started with Pulumi ESC today](/docs/esc/get-started/) and experience the future of secrets management. Take control of your cloud environment—securely and effortlessly.
 
 [Sign up for Pulumi ➡️](https://app.pulumi.com/signup)

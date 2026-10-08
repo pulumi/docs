@@ -37,7 +37,6 @@ pulumi:
   - automation-api
   - pulumi-deployments
   - deployments
-  - crossguard
   - packages
   - registry
   - providers
@@ -79,6 +78,7 @@ ai:
   - mlops
   - claude
   - claude-code
+  - codex
   - mcp
   - chatbot
 
@@ -116,7 +116,7 @@ security-and-governance:
   - security
   - secrets
   - secrets-management
-  - policy-as-code
+  - policy-as-code        # formerly "crossguard"
   - compliance
   - governance
   - iam

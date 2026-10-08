@@ -14,7 +14,7 @@ menu:
     weight: 3
 ---
 
-The `fn::fromBase64` built-in function decodes its input into a binary value. This can be used to realize binary values that are stored as Base64-encoded (often for use with the [`files` reserved property](/docs/esc/concepts/outputs/#files). If the input to `fn::fromBase64` is a secret, the decoded value is also a secret.
+The `fn::fromBase64` built-in function decodes a standard Base64-encoded string and returns the decoded data as a string. This can be used to realize values that are stored as Base64-encoded (often for use with the [`files` reserved property](/docs/esc/concepts/outputs/#files)). If the input to `fn::fromBase64` is a secret, the decoded value is also a secret.
 
 ## Declaration
 
@@ -30,4 +30,4 @@ fn::fromBase64: value-to-decode
 
 ### Returns
 
-The decoded data.
+The decoded string. If the input is not valid Base64, evaluation fails with a `decoding base64 string` error.

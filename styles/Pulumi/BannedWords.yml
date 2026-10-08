@@ -1,5 +1,6 @@
 extends: existence
-message: "Avoid '%s' (STYLE-GUIDE.md §Inclusive Language). Consider an alternative."
+message: "Avoid '%s' (brand guide: voice, inclusive language). Consider an alternative."
+link: "https://brand.pulumi.com/voice/voice-and-tone/#inclusive-language"
 level: warning
 ignorecase: true
 tokens:

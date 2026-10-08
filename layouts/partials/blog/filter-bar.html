@@ -8,7 +8,7 @@
     <a href="/blog/" data-category="" aria-current="page" data-track="blog-filter-all" class="btn btn-sm btn-outline text-sm is-active">All</a>
     {{- range site.Data.blog_categories.categories -}}
         {{- if not .default }}
-    <a href="/blog/category/{{ .id }}/" data-category="{{ .id }}" data-track="blog-filter-{{ .id }}" class="btn btn-sm btn-outline text-sm">{{ .name }}</a>
+    <a href="/blog/categories/{{ .id }}/" data-category="{{ .id }}" data-track="blog-filter-{{ .id }}" class="btn btn-sm btn-outline text-sm">{{ .name }}</a>
         {{- end -}}
     {{- end }}
 </nav>

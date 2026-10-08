@@ -1,0 +1,56 @@
+{{/*
+    customer-proof — a strip of customer results, each a logo tile beside a line
+    of proof.
+
+    Body is YAML: a list of rows. Each row carries a body and one of two tile
+    treatments.
+
+      body      the proof itself, markdown (required)
+      customer  an id from data/customers.yaml, rendered through
+                layouts/partials/customer-logo.html
+      icon      a phosphor icon name, for a customer that can't be named —
+                renders a dark tile with the mark instead of a logo
+      label     the name to show. Required with `icon` (it is the tile's only
+                text); optional with `customer`, where it becomes the tile's
+                label for assistive tech and defaults to the customer id.
+
+    Usage:
+      {{< customer-proof >}}
+      - customer: supabase
+        label: Supabase
+        body: "**Supabase** runs **16 regions**, inside guardrails."
+      - icon: detective
+        label: A top frontier lab
+        body: "**A top frontier lab** grew **982%** in twelve months."
+      {{< /customer-proof >}}
+*/}}
+{{- $rows := .Inner | transform.Unmarshal -}}
+{{- if not $rows -}}
+    {{- errorf "customer-proof: empty or unparseable YAML body (called from %s). Expected a list of rows." $.Page.File.Filename -}}
+{{- end -}}
+<div class="customer-proof">
+    {{- range $rows -}}
+        {{- if and (not .customer) (not .icon) -}}
+            {{- errorf "customer-proof: every row needs a customer= or an icon= (called from %s)." $.Page.File.Filename -}}
+        {{- end -}}
+        {{- if and .icon (not .label) -}}
+            {{- errorf "customer-proof: an icon row needs a label=, since the mark carries no name (called from %s)." $.Page.File.Filename -}}
+        {{- end -}}
+    <div class="customer-proof-row">
+        {{- if .icon -}}
+        {{- /* No logo to show, so the tile carries a mark instead. The name is
+               already the first thing the adjacent proof line says, so the tile
+               doesn't repeat it — `label` becomes the tile's label for assistive
+               tech, which is why it stays required. */ -}}
+        <div class="customer-proof-tile customer-proof-tile--anonymous" role="img" aria-label="{{ .label }}">
+            {{ partial "icon.html" (dict "name" .icon "weight" "regular" "class" "size-8") }}
+        </div>
+        {{- else -}}
+        <div class="customer-proof-tile" role="img" aria-label="{{ .label | default .customer }}">
+            {{ partial "customer-logo.html" (dict "customer" .customer "where" "the customer-proof shortcode") }}
+        </div>
+        {{- end -}}
+        <div class="customer-proof-body">{{ $.Page.RenderString .body }}</div>
+    </div>
+    {{- end -}}
+</div>

@@ -216,7 +216,7 @@ Options:
 **Logic:**
 
 - Generate descriptive heading for this section
-- Use Sentence case (not Title Case) for H2
+- Use sentence case (the standard at every heading level, the page title included)
 - Store result as `{section_heading}`
 
 ### Card Count

@@ -242,14 +242,14 @@ import com.pulumi.resources.ComponentResourceOptions;
 import com.pulumi.resources.ResourceArgs;
 import java.util.Map;
 
-public class AwsS3WebsiteArgs extends ResourceArgs {
+class AwsS3WebsiteArgs extends ResourceArgs {
     public String[] files;
     public AwsS3WebsiteArgs(String[] files) {
         this.files = files;
     }
 }
 
-public class AwsS3Website extends ComponentResource {
+class AwsS3Website extends ComponentResource {
     public Output<String> url;
 
     public AwsS3Website(String name, AwsS3WebsiteArgs args, ComponentResourceOptions opts) {
@@ -304,9 +304,9 @@ This defines a component but it doesn't do much yet.
 Next, make four changes:
 
 1. Move all resources from {{< langfile >}} into the component's constructor
-2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/resources/options/parent/)
-3. Generalize the creation of bucket objects by looping over the list of `files`
-4. Assign the resulting website URL to the `url` property of the component
+1. Change each resource to use the component [as the `parent`](/docs/iac/concepts/resources/options/parent/)
+1. Generalize the creation of bucket objects by looping over the list of `files`
+1. Assign the resulting website URL to the `url` property of the component
 
 {{% /choosable %}}
 
@@ -388,7 +388,7 @@ export class AwsS3Website extends pulumi.ComponentResource {
 
         // Capture the URL and make it available as a component property and output:
         this.url = pulumi.interpolate`http://${website.websiteEndpoint}`;
-        this.registerOutputs({ url: this.url }) // Signal component completion.
+        this.registerOutputs({ url: this.url }); // Signal component completion.
     }
 }
 ```
@@ -709,9 +709,9 @@ class AwsS3Website extends ComponentResource {
 
         // Create an S3 Bucket object for each file; note the changes to name/source:
         for (var file : args.files) {
-            new BucketObject("index.html", BucketObjectArgs.builder()
+            new BucketObject(file, BucketObjectArgs.builder()
                 .bucket(bucket.id())
-                .source(new FileAsset("index.html"))
+                .source(new FileAsset(file))
                 .contentType("text/html")
                 .acl("public-read")
                 .build(), CustomResourceOptions.builder()
@@ -889,9 +889,8 @@ func main() {
         // And export its autoassigned URL:
         ctx.Export("url", website.Url)
         return nil
-	  })
+    })
 }
-
 ```
 
 {{% /choosable %}}
@@ -1045,7 +1044,7 @@ directory the module lives in; the `components:index:` prefix is fixed.
 
 {{% /choosable %}}
 
-This preview shows you a few things. First, you'll see your new website component with all of its child
+This preview shows you a few things. First, you'll see your new website component with all its child
 resources neatly parented underneath it, which makes it easy to see which resources belong to which component.
 Next, you'll see that your old resources are being destroyed.
 

@@ -3,21 +3,29 @@
 # or more GitHub comments tagged with `<!-- CLAUDE_REVIEW N/M -->` markers.
 #
 # Subcommands:
-#   find             --pr <N>                           List pinned comment IDs in marker order.
+#   find             --pr <N> [--role author|brief]     List pinned comment IDs in marker order; with --role, that one comment's ID.
 #   fetch            --pr <N>                           Print the full body of every pinned comment, in order, separated by markers.
 #   upsert           --pr <N> --body-file <path> [--soft-floor]   Split body, edit existing comments in place, append new, prune tail. With --soft-floor: re-run validate-pinned.py --soft-floor first (emits the `soft-floor`-labeled CI annotation surfacing residual violations to the maintainer), then publish regardless — the documented second-failure fallback per ci.md §4.
+#   upsert           --pr <N> --body-file <path> --role author|brief   v3 surface: upsert the single role-marked card verbatim (no split, no footer restamp, no spine floor). Oversized input is an error, never a pagination event.
 #   prune            --pr <N> --keep <count>            Delete tail-end pinned comments past <count>.
-#   clear            --pr <N>                           Delete ALL pinned comments (1/M and tail). Bypasses the 1/M-sacrosanct rule. For explicit regenerate-from-scratch flows only.
-#   last-reviewed-sha --pr <N>                          Print the most recent SHA from the 1/M comment's review history.
+#   clear            --pr <N>                           Delete ALL pinned comments (1/M, tail, and v3 role cards). Bypasses the 1/M-sacrosanct rule. For explicit regenerate-from-scratch flows only.
+#   prune-legacy     --pr <N>                           Delete bot-posted v2 sequence pages left beside a v3 author card (no-op without one).
+#   last-reviewed-sha --pr <N>                          Print the current reviewed SHA: the CLAUDE_REVIEW_HEAD marker when present (same precedence as review-label-reconcile.yml), else the last (sha) in the 1/M comment's review history.
+#   banner           --pr <N> (--set <sha7> | --clear)  Stamp (or remove) the 🔄 re-review banner on the v3 author card — the instant "your push triggered a refresh" signal. A full card upsert clears it implicitly.
+#   banner-body      (--set <sha7> | --clear)           The pure stdin→stdout body transform behind `banner`; exists for tests.
 #
 # Common flags:
 #   --repo <owner/repo>   Override repository (default: $GH_REPO, $GITHUB_REPOSITORY, or `gh repo view`).
 #   --max-bytes <N>       Maximum body size per comment (default: 60000; GitHub hard cap is 65536).
 #   --dry-run             Print intended API calls; do not mutate.
+#   --allow-stale-overwrite   `upsert --role` only: publish even when the card already on the PR was composed AFTER the one being written. Break-glass; see the stale-publish guard below.
 #
 # Marker convention: every managed comment starts with a single line
 #   <!-- CLAUDE_REVIEW N/M -->
 # where N is 1-indexed and M is the total comment count in the sequence.
+# v3 role cards additionally carry <!-- CLAUDE_REVIEW_AUTHOR --> or
+# <!-- CLAUDE_REVIEW_BRIEF --> within their first three lines; the author card
+# keeps a legacy `1/1` first line so every v2 consumer still finds it.
 #
 # Hard rule: the 1/M comment is sacrosanct. This script will NEVER delete it
 # while a sequence is being managed in place. Tail-end deletes are fine.
@@ -41,8 +49,23 @@ FOOTER_SENTINEL='<!-- CLAUDE_REVIEW_FOOTER -->'
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 FOOTER_FILE="$SCRIPT_DIR/../footer.md"
 
+# v3 role-card markers. A card is identified by its role marker appearing as
+# an exact line within the FIRST THREE lines of the body — first-lines-only for
+# the same reason list_pinned_comments reads only line 1: a GitHub quote-reply
+# copies HTML comments verbatim but prefixes every line with `> `, so requiring
+# an unprefixed match near the top keeps quoted copies from matching.
+AUTHOR_MARKER='<!-- CLAUDE_REVIEW_AUTHOR -->'
+BRIEF_MARKER='<!-- CLAUDE_REVIEW_BRIEF -->'
+# Every composed card ends with `<sub>Review vN · updated <ISO8601> · head
+# commit <sha7></sub>`. That timestamp is the card's COMPOSITION time, which
+# is what the stale-publish guard in cmd_upsert_role compares — see its
+# comment for why composition time and not the revision number.
+CARD_STAMP_RE='<sub>(?:Review )?v[0-9]+ · updated ([0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9:.]+Z)'
+LEGACY_ALIAS_RE='^<!-- CLAUDE_REVIEW 1/1 -->[[:space:]]*$'
+HEAD_MARKER_GREP='<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->'
+
 usage() {
-    sed -n '2,19p' "$0" | sed 's/^# \{0,1\}//' >&2
+    sed -n '2,25p' "$0" | sed 's/^# \{0,1\}//' >&2
     exit 2
 }
 
@@ -85,6 +108,32 @@ load_footer() {
 # Sorted by position ascending.
 list_pinned_comments() {
     local repo="$1" pr="$2"
+    # A PR that carries a v3 author card IS a v3 review, whatever else is
+    # on it. A legacy v2 monolith left from before the surface flipped also
+    # opens `<!-- CLAUDE_REVIEW 1/1 -->`, and on #21066 the sort below tied
+    # the two on position 1 and handed every v2-shaped reader (the
+    # auto-refresh gate's last-reviewed-sha and fetch) the monolith pinned to
+    # a head five weeks old. So once an author card exists, it is the only
+    # sequence member returned. `clear` still sees everything through
+    # list_pinned_comments_all.
+    local rows
+    rows=$(list_pinned_comments_all "$repo" "$pr")
+    [[ -z "$rows" ]] && return 0
+    local author_ids
+    author_ids=$(list_role_comments "$repo" "$pr" "$AUTHOR_MARKER" | cut -f1 || true)
+    if [[ -n "$author_ids" ]]; then
+        printf '%s\n' "$rows" | awk -F'\t' 'NR==FNR { keep[$1] = 1; next } ($1 in keep)' \
+            <(printf '%s\n' "$author_ids") -
+        return 0
+    fi
+    printf '%s\n' "$rows"
+}
+
+# list_pinned_comments_all <repo> <pr>
+# Every `CLAUDE_REVIEW N/M` comment, both surfaces — for `clear` and
+# `prune-legacy`, which exist to remove what list_pinned_comments hides.
+list_pinned_comments_all() {
+    local repo="$1" pr="$2"
     # jq does the parsing: extract the leading line of each body, capture
     # the N/M marker, and emit only matching comments. Avoids relying on
     # gawk-specific match() captures.
@@ -100,6 +149,47 @@ list_pinned_comments() {
         | ($line1 | capture("^<!-- CLAUDE_REVIEW (?<n>[0-9]+)/(?<m>[0-9]+) -->")? // empty)
         | [$c.id, .n, .m, $c.created_at, $c.node_id] | @tsv
     ' | sort -t$'\t' -k2,2n
+}
+
+# role_marker <role>
+role_marker() {
+    case "$1" in
+        author) printf '%s' "$AUTHOR_MARKER" ;;
+        brief)  printf '%s' "$BRIEF_MARKER" ;;
+        *)      die "unknown role: $1 (expected author or brief)" ;;
+    esac
+}
+
+# list_role_comments <repo> <pr> <marker>
+# Emits TSV: comment_id<TAB>created_at<TAB>node_id, oldest first. Matches the
+# marker as an exact line among the body's first three lines (see the marker
+# constants above for why not the whole body).
+list_role_comments() {
+    local repo="$1" pr="$2" marker="$3"
+    gh api --paginate "repos/$repo/issues/$pr/comments" --jq "
+        .[]
+        | . as \$c
+        | (.body | split(\"\n\"))[:3] as \$head
+        | select(\$head | index(\"${marker}\"))
+        | [\$c.id, \$c.created_at, \$c.node_id] | @tsv
+    " | sort -t$'\t' -k2,2
+}
+
+# find_role_comment <repo> <pr> <role>
+# Prints the single role comment's TSV row (oldest wins), warning when a bug
+# has left more than one — the oldest is the one every prior PATCH targeted.
+find_role_comment() {
+    local repo="$1" pr="$2" role="$3"
+    local marker rows count
+    marker=$(role_marker "$role")
+    rows=$(list_role_comments "$repo" "$pr" "$marker" || true)
+    [[ -z "$rows" ]] && return 0
+    count=$(printf '%s\n' "$rows" | wc -l)
+    if (( count > 1 )); then
+        printf 'pinned-comment.sh: WARNING: %d %s cards found; using the oldest\n' \
+            "$count" "$role" >&2
+    fi
+    printf '%s\n' "$rows" | head -1
 }
 
 # unminimize_if_hidden <node_id>
@@ -312,7 +402,149 @@ cmd_find() {
     local repo pr
     repo=$(resolve_repo)
     pr="${PR:?--pr required}"
+    if [[ -n "$ROLE" ]]; then
+        find_role_comment "$repo" "$pr" "$ROLE" | cut -f1
+        return 0
+    fi
     list_pinned_comments "$repo" "$pr" | cut -f1
+}
+
+# card_stamp <file> — the card's composition time as `<epoch><TAB><ISO8601>`,
+# or nothing at all when the body carries no parseable `<sub>… · updated <ts>`
+# stamp. "Nothing" is the fail-open answer on purpose: a legacy body, a
+# hand-written fixture, or a composer that changes the stamp format must never
+# cost a review its publish. The epoch is what the guard compares; the ISO
+# string rides along so a refusal can name the times a human recognizes
+# rather than two float seconds-since-1970.
+card_stamp() {
+    python3 -c '
+import datetime, re, sys
+try:
+    body = open(sys.argv[1], encoding="utf-8").read()
+except OSError:
+    sys.exit(0)
+m = re.search(sys.argv[2], body)
+if not m:
+    sys.exit(0)
+try:
+    print("%s\t%s" % (datetime.datetime.fromisoformat(m.group(1).replace("Z", "+00:00")).timestamp(), m.group(1)))
+except ValueError:
+    sys.exit(0)
+' "$1" "$CARD_STAMP_RE" 2>/dev/null
+}
+
+# cmd_upsert_role — the v3 surface. One card per role, published VERBATIM:
+# the composer renders complete cards (markers, role footer, REVIEW_STATE), so
+# this path verifies rather than stamps. No split (evidence lives on the
+# evidence page, so an oversized card is a composer bug, not a pagination
+# event), no footer.md restamp (the role footers are footer-author.md /
+# footer-reviewer.md, already in the body), and no splice-spine floor (the
+# spine is machine-owned in the evidence object — there is nothing in the
+# comment left to protect).
+cmd_upsert_role() {
+    local repo pr body_file
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    body_file="${BODY_FILE:?--body-file required}"
+    [[ -r "$body_file" ]] || die "body file not readable: $body_file"
+    (( SOFT_FLOOR )) && die "--soft-floor applies to the v2 split path, not --role upserts"
+
+    local marker
+    marker=$(role_marker "$ROLE")
+
+    # Malformed-input gates, loud on purpose: a card missing its own markers
+    # or footer would publish fine and then be unfindable (or unreadable) for
+    # every downstream consumer — fail here, where the composer bug is
+    # attributable, not weeks later in reconcile.
+    if ! head -3 "$body_file" | grep -Fxq "$marker"; then
+        die "$ROLE card is missing its $marker line in the first three lines"
+    fi
+    if [[ "$ROLE" == "author" ]]; then
+        head -1 "$body_file" | grep -Eq "$LEGACY_ALIAS_RE" \
+            || die "author card must open with the legacy <!-- CLAUDE_REVIEW 1/1 --> alias line (v2 consumers find it there)"
+    else
+        grep -Eq '^<!-- CLAUDE_REVIEW [0-9]+/[0-9]+ -->' "$body_file" \
+            && die "brief card must not carry a CLAUDE_REVIEW N/M marker (the v2 sequence would claim it)"
+    fi
+    grep -Fq "$FOOTER_SENTINEL" "$body_file" \
+        || die "$ROLE card is missing its footer (no $FOOTER_SENTINEL sentinel) — cards arrive with role footers pre-rendered"
+
+    local bytes
+    bytes=$(wc -c <"$body_file")
+    (( bytes <= MAX_BYTES )) \
+        || die "$ROLE card is $bytes bytes, over the $MAX_BYTES budget — v3 cards never split; move bulk to the evidence page"
+
+    local row id node_id
+    row=$(find_role_comment "$repo" "$pr" "$ROLE")
+    if [[ -n "$row" ]]; then
+        id=$(printf '%s' "$row" | cut -f1)
+        node_id=$(printf '%s' "$row" | cut -f3)
+
+        # ---- stale-publish guard ----------------------------------------
+        # Two review runs on one PR are normal (a push trips the auto-refresh
+        # gate while a `#update-review` mention dispatches the update lane;
+        # triage chains re-dispatch; a human mentions twice). Nothing
+        # serializes them, so the run that finishes WRITING last wins even
+        # when it composed its card first — and because the author card
+        # carries REVIEW_STATE, losing that race silently deletes recorded
+        # dispositions. Observed twice on pulumi/docs#21785: a card holding
+        # `F1: fixed` was overwritten by one composed a minute earlier whose
+        # findings map was empty, leaving the Sentinel's G2 input blank with
+        # nothing anywhere saying why.
+        #
+        # handoff_guard.py does not cover this: it compares the handoff SHA
+        # against the live head and returns "publish, handoff is current"
+        # whenever the head has not moved — which is exactly the same-head
+        # case both losses fell through. publish_guard.py solves the
+        # equivalent problem for the Sentinel check-run by refusing when a
+        # newer run already published; this is that rule for the cards.
+        #
+        # The discriminator is COMPOSITION TIME, not the `vN` revision. A
+        # `#new-review` regeneration legitimately republishes v1 over a v2
+        # card, so a revision comparison would block the one flow that is
+        # supposed to reset — while its composition time is, correctly,
+        # newer than what it replaces.
+        #
+        # Refusing exits 0, matching publish_guard's posture: the newer card
+        # already on the PR is the right state, so this run has nothing left
+        # to do and must not fail a job over having been beaten to it.
+        if (( ! ALLOW_STALE )); then
+            local published_file incoming_stamp published_stamp incoming_at published_at
+            published_file=$(mktemp)
+            if ! gh api "repos/$repo/issues/comments/$id" --jq '.body' \
+                    >"$published_file" 2>/dev/null; then
+                # Fail open, but never silently: an unchecked publish is the
+                # exact scenario this guard exists to catch, so a reader of
+                # the log has to be able to tell "no newer card" apart from
+                # "could not look".
+                printf '::warning::pinned-comment.sh: could not read the published %s card on PR %s; publishing without the stale-publish check.\n' \
+                    "$ROLE" "$pr"
+                : >"$published_file"
+            fi
+            # `|| true` inside each substitution: this script runs under
+            # `set -e`, and a guard that cannot read a stamp must fail open
+            # rather than take a review's publish down with it.
+            incoming_stamp=$(card_stamp "$body_file" || true)
+            published_stamp=$(card_stamp "$published_file" || true)
+            incoming_at=$(printf '%s' "$incoming_stamp" | cut -f1)
+            published_at=$(printf '%s' "$published_stamp" | cut -f1)
+            rm -f "$published_file"
+            if [[ -n "$incoming_at" && -n "$published_at" ]] \
+               && awk "BEGIN{exit !($published_at > $incoming_at)}"; then
+                printf '::notice::pinned-comment.sh: not overwriting the %s card — the one on PR %s was composed at %s, after this one at %s. A concurrent run already published a newer card; this run stands down.\n' \
+                    "$ROLE" "$pr" \
+                    "$(printf '%s' "$published_stamp" | cut -f2)" \
+                    "$(printf '%s' "$incoming_stamp" | cut -f2)"
+                return 0
+            fi
+        fi
+        # ---- end stale-publish guard ------------------------------------
+
+        unminimize_if_hidden "$node_id"
+        patch_comment "$repo" "$id" "$body_file"
+    else
+        create_comment "$repo" "$pr" "$body_file"
+    fi
 }
 
 cmd_fetch() {
@@ -466,7 +698,7 @@ cmd_prune() {
     keep="${KEEP:?--keep required}"
 
     local existing_tsv
-    existing_tsv=$(list_pinned_comments "$repo" "$pr" || true)
+    existing_tsv=$(list_pinned_comments_all "$repo" "$pr" || true)
     [[ -z "$existing_tsv" ]] && return 0
 
     local i=0
@@ -486,24 +718,78 @@ cmd_clear() {
     local repo pr
     repo=$(resolve_repo)
     pr="${PR:?--pr required}"
-    local existing_tsv
-    existing_tsv=$(list_pinned_comments "$repo" "$pr" || true)
-    [[ -z "$existing_tsv" ]] && return 0
-    while IFS=$'\t' read -r id _pos _tot _created; do
+    # Union of the v2 sequence and both v3 role cards, deduped: the author
+    # card carries the legacy 1/1 alias, so it appears in BOTH lists and must
+    # be deleted exactly once. `#new-review` depends on clear leaving nothing.
+    local ids
+    ids=$(
+        {
+            list_pinned_comments_all "$repo" "$pr" | cut -f1 || true
+            list_role_comments "$repo" "$pr" "$AUTHOR_MARKER" | cut -f1 || true
+            list_role_comments "$repo" "$pr" "$BRIEF_MARKER" | cut -f1 || true
+        } | sort -u
+    )
+    [[ -z "$ids" ]] && return 0
+    while IFS= read -r id; do
+        [[ -z "$id" ]] && continue
         delete_comment "$repo" "$id"
-    done <<< "$existing_tsv"
+    done <<< "$ids"
+}
+
+# prune-legacy: delete the v2 sequence pages left beside a v3 author card.
+# The v3 publish calls it after upserting the cards, so the two surfaces
+# never coexist on a PR (#21066 carried both for a month, and every reader
+# that took "the 1/1 comment" got the wrong one). A no-op when there is no
+# author card — a legacy-only PR keeps its grandfathered review. Only
+# bot-posted pages go: a human comment that happens to open with the marker
+# is not ours to delete.
+cmd_prune_legacy() {
+    local repo pr
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    local author_ids
+    author_ids=$(list_role_comments "$repo" "$pr" "$AUTHOR_MARKER" | cut -f1 || true)
+    [[ -z "$author_ids" ]] && return 0
+    local bot_ids
+    bot_ids=$(gh api --paginate "repos/$repo/issues/$pr/comments" \
+        --jq '.[] | select(.user.login == "github-actions[bot]" or .user.login == "pulumi-bot") | .id')
+    local id
+    while IFS=$'\t' read -r id _; do
+        [[ -z "$id" ]] && continue
+        grep -qx "$id" <<< "$author_ids" && continue
+        grep -qx "$id" <<< "$bot_ids" || continue
+        delete_comment "$repo" "$id"
+    done < <(list_pinned_comments_all "$repo" "$pr")
 }
 
 cmd_last_reviewed_sha() {
-    local repo pr first_id
+    local repo pr first_id body head_sha
     repo=$(resolve_repo)
     pr="${PR:?--pr required}"
+    # The v3 author card keeps the legacy 1/1 alias as its first line, so the
+    # first comment of the v2 sequence IS the author card when one exists —
+    # one lookup serves both surfaces.
     first_id=$(list_pinned_comments "$repo" "$pr" | head -1 | cut -f1)
     [[ -z "$first_id" ]] && return 0
-    # Read the body and pull out the last (sha) parenthetical inside the
-    # `### 📜 Review history` section. Awk segments by section; grep + sed
-    # extract the SHA portably without gawk-specific match() captures.
-    gh api "repos/$repo/issues/comments/$first_id" --jq '.body' \
+    body=$(gh api "repos/$repo/issues/comments/$first_id" --jq '.body')
+
+    # Prefer the CLAUDE_REVIEW_HEAD marker — the sole machine head carrier on
+    # the v3 author card, and stamped by the composer on v2 headers too. Same
+    # precedence (marker first, history parenthetical as fallback) that
+    # review-label-reconcile.yml uses, so the two can never disagree about
+    # which SHA a review covers.
+    head_sha=$(printf '%s\n' "$body" \
+        | grep -oE "$HEAD_MARKER_GREP" | tail -1 \
+        | grep -oE '[0-9a-f]{7,40}' || true)
+    if [[ -n "$head_sha" ]]; then
+        printf '%s\n' "$head_sha"
+        return 0
+    fi
+
+    # Fallback: the last (sha) parenthetical inside `### 📜 Review history`.
+    # Awk segments by section; grep + tr extract the SHA portably without
+    # gawk-specific match() captures.
+    printf '%s\n' "$body" \
         | awk '
             /^### .*Review history/ { in_hist = 1; next }
             in_hist && /^### / { in_hist = 0 }
@@ -512,6 +798,81 @@ cmd_last_reviewed_sha() {
         | grep -oE '\([0-9a-f]{7,40}\)' \
         | tail -1 \
         | tr -d '()'
+}
+
+# The 🔄 banner: one line stamped between the machine markers and the H2 the
+# moment the auto-refresh gate decides a push qualifies (persona pass
+# 2026-09-01 / Cam: the author should see "re-review happening" instantly,
+# not after the update workflow spins up). The publish paths rewrite the
+# whole card body, so a completed refresh clears it for free; the update
+# lane's error path calls --clear so a failed refresh doesn't leave a
+# promise standing.
+BANNER_PREFIX="> 🔄 **Re-review in progress**"
+
+banner_transform() {
+    # stdin: card body; $1: "set"|"clear"; $2: sha7 (set only). stdout: body.
+    # The body rides a temp file: `python3 -` takes its PROGRAM from stdin,
+    # so the heredoc and the piped body cannot share the stream.
+    local _tmp_in
+    _tmp_in=$(mktemp)
+    cat > "$_tmp_in"
+    python3 - "$1" "${2:-}" "$_tmp_in" <<'PYEOF'
+import sys
+
+mode, sha = sys.argv[1], sys.argv[2]
+prefix = "> \U0001F504 **Re-review in progress**"
+lines = open(sys.argv[3]).read().splitlines()
+out = []
+skip_blank = False
+for ln in lines:
+    if ln.startswith(prefix):
+        skip_blank = True
+        continue
+    if skip_blank and not ln.strip():
+        skip_blank = False
+        continue
+    skip_blank = False
+    out.append(ln)
+if mode == "set":
+    banner = (prefix + f" for your push `{sha}` — this card is out of date "
+              "until it refreshes.")
+    at = 0
+    for i, ln in enumerate(out[:6]):
+        if ln.startswith("<!-- CLAUDE_REVIEW"):
+            at = i + 1
+    out[at:at] = [banner, ""]
+sys.stdout.write("\n".join(out) + "\n")
+PYEOF
+    rm -f "$_tmp_in"
+}
+
+cmd_banner_body() {
+    local mode
+    if [[ -n "$BANNER_SET" ]]; then mode="set"; elif (( BANNER_CLEAR )); then mode="clear"; else die "banner-body requires --set <sha7> or --clear"; fi
+    banner_transform "$mode" "$BANNER_SET"
+}
+
+cmd_banner() {
+    local repo pr row id body tmp
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    [[ -n "$BANNER_SET" || $BANNER_CLEAR -eq 1 ]] || die "banner requires --set <sha7> or --clear"
+    row=$(find_role_comment "$repo" "$pr" "author")
+    [[ -n "$row" ]] || { echo "banner: no author card on PR #$pr — nothing to stamp" >&2; return 0; }
+    id=$(printf '%s' "$row" | cut -f1)
+    body=$(gh api "repos/$repo/issues/comments/$id" --jq '.body')
+    tmp=$(mktemp)
+    if [[ -n "$BANNER_SET" ]]; then
+        printf '%s\n' "$body" | banner_transform set "$BANNER_SET" > "$tmp"
+    else
+        printf '%s\n' "$body" | banner_transform clear "" > "$tmp"
+    fi
+    if (( DRY_RUN )); then
+        echo "DRY RUN: would PATCH comment $id with banner ${BANNER_SET:+set }${BANNER_SET:-cleared}" >&2
+    else
+        patch_comment "$repo" "$id" "$tmp"
+    fi
+    rm -f "$tmp"
 }
 
 # Argument parsing.
@@ -525,6 +886,10 @@ REPO_FLAG=""
 MAX_BYTES=$DEFAULT_MAX_BYTES
 DRY_RUN=0
 SOFT_FLOOR=0
+ALLOW_STALE=0
+ROLE=""
+BANNER_SET=""
+BANNER_CLEAR=0
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -535,21 +900,38 @@ while [[ $# -gt 0 ]]; do
         --max-bytes)  MAX_BYTES="$2"; shift 2 ;;
         --dry-run)    DRY_RUN=1; shift ;;
         --soft-floor) SOFT_FLOOR=1; shift ;;
+        --allow-stale-overwrite) ALLOW_STALE=1; shift ;;
+        --role)       ROLE="$2"; shift 2 ;;
+        --set)        BANNER_SET="$2"; shift 2 ;;
+        --clear)      BANNER_CLEAR=1; shift ;;
         -h|--help)    usage ;;
         *)            die "unknown flag: $1" ;;
     esac
 done
 
-require_cmd gh
-require_cmd jq
+if [[ -n "$ROLE" ]]; then
+    case "$ROLE" in author|brief) ;; *) die "unknown role: $ROLE (expected author or brief)" ;; esac
+    case "$SUBCOMMAND" in
+        find|upsert) ;;
+        *) die "--role applies to find and upsert only (clear already sweeps role cards; prune and fetch are v2-sequence operations)" ;;
+    esac
+fi
+
+if [[ "$SUBCOMMAND" != "banner-body" ]]; then
+    require_cmd gh
+    require_cmd jq
+fi
 require_cmd awk
 
 case "$SUBCOMMAND" in
     find)              cmd_find ;;
     fetch)             cmd_fetch ;;
-    upsert)            cmd_upsert ;;
+    upsert)            if [[ -n "$ROLE" ]]; then cmd_upsert_role; else cmd_upsert; fi ;;
     prune)             cmd_prune ;;
     clear)             cmd_clear ;;
+    prune-legacy)      cmd_prune_legacy ;;
     last-reviewed-sha) cmd_last_reviewed_sha ;;
+    banner)            cmd_banner ;;
+    banner-body)       cmd_banner_body ;;
     *)                 usage ;;
 esac

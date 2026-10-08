@@ -1,0 +1,6 @@
+{{- $id := . -}}
+{{- $name := $id | humanize -}}
+{{- range site.Data.customers_industries.industries -}}
+    {{- if eq .id $id }}{{ $name = .name }}{{ end -}}
+{{- end -}}
+{{- return $name -}}

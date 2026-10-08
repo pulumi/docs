@@ -20,7 +20,7 @@ aliases:
     - /blog/understanding-code-organization-stacks/
 ---
 
-This is the first in a series of blog posts that explores how a fictional company---Zephyr Archaeotech Emporium---uses Pulumi to manage their online retail store. This post explores a couple of common questions that users ask when working with Pulumi; specifically, where should I store my Pulumi code? And how do I support multiple environments with Pulumi? This post will provide some guidance and [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) best practices around these topics, using Zephyr and their online store as the use case.<!--more-->
+This is the first in a series of blog posts that explores how a fictional company---Zephyr Archaeotech Emporium---uses Pulumi to manage their online retail store. This post explores a couple of common questions that users ask when working with Pulumi; specifically, where should I store my Pulumi code? And how do I support multiple environments with Pulumi? This post will provide some guidance and [infrastructure as code](/what-is/what-is-infrastructure-as-code/) best practices around these topics, using Zephyr and their online store as the use case.<!--more-->
 
 The ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application. However, it's important to note that these practices will emerge over the course of the series---not all immediately, and not all in the beginning. This is a deliberate decision to allow you to see how Zephyr's use of Pulumi evolves as the company grows and their online retail store application changes to accommodate their growth.
 
@@ -70,7 +70,7 @@ So which approach is best? That will depend on a number of different factors, ma
 It's worth stressing that the answers to these questions may change over time as organizations grow and their applications evolve. Addressing that change and its effects on an organization's Pulumi projects and stacks is something we'll be discussing later in this series.
 
 {{% notes type="info" %}}
-The discussion above is working from the assumption that Pulumi users will store their Pulumi code in a version control system, like Git. Strictly speaking, using a version control system isn't required for Pulumi to function (there is one exception we'll touch on later in this series when we discuss [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/)), but we **very strongly** recommend that all users use Pulumi in conjunction with version control.
+The discussion above is working from the assumption that Pulumi users will store their Pulumi code in a version control system, like Git. Strictly speaking, using a version control system isn't required for Pulumi to function (there is one exception we'll touch on later in this series when we discuss [Pulumi Deployments](/docs/deployments/concepts/)), but we **very strongly** recommend that all users use Pulumi in conjunction with version control.
 {{% /notes %}}
 
 In the case of Zephyr, their team felt like a monorepo approach (storing Pulumi code and application code together) was most appropriate for their specific requirements. Zephyr is a relatively small organization with a single team of developers who are responsible for managing both the cloud infrastructure as well as the development and deployment of the online store application. Zephyr's team also decided to use a single Pulumi project---for now. (Be sure to follow this blog series to see how that evolves, and why!)

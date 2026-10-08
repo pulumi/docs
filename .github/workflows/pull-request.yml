@@ -3,6 +3,7 @@ on:
   pull_request:
     branches:
       - master
+      - denny-hill
       - 'release/**'
 
 # Only the newest commit on a PR is worth building. Without this, pushing three
@@ -61,7 +62,9 @@ jobs:
         run: |
           S5CMD_VERSION="2.3.0"
           S5CMD_SHA256="de0fdbfa3aceae55e069ba81a0fc17b2026567637603734a387b2fca06c299b4"
-          curl -fsSL -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
           echo "${S5CMD_SHA256}  /tmp/s5cmd.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin s5cmd -f /tmp/s5cmd.tar.gz
           rm /tmp/s5cmd.tar.gz
@@ -70,7 +73,9 @@ jobs:
         run: |
           VALE_VERSION="3.14.1"
           VALE_SHA256="ff2b49ffaa9dcd246fd5008f03ff67746d2790b75bf4d3657e2fb9530fb96db3"
-          curl -fsSL -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
           echo "${VALE_SHA256}  /tmp/vale.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin vale -f /tmp/vale.tar.gz
           rm /tmp/vale.tar.gz
@@ -113,13 +118,13 @@ jobs:
         uses: actions/cache@v6
         with:
           path: resources
-          # Keyed on the Hugo resolved above, not a literal, so the four
+          # Keyed on the Hugo resolved above, not a literal, so the five
           # workflows that share this cache (pull-request.yml,
           # build-and-deploy.yml, testing-build-and-deploy.yml,
-          # pulumi-cli-docs.yml) stay in step through an upgrade without anyone
-          # remembering to bump them. Hugo does not put its version in its own
-          # cache entries, so without this an upgrade keeps serving images
-          # encoded by the previous version indefinitely.
+          # pulumi-cli-docs.yml, warm-build-cache.yml) stay in step through an
+          # upgrade without anyone remembering to bump them. Hugo does not put
+          # its version in its own cache entries, so without this an upgrade
+          # keeps serving images encoded by the previous version indefinitely.
           key: hugo-resources-${{ steps.hugo-version.outputs.version }}-${{ github.sha }}
           restore-keys: |
             hugo-resources-${{ steps.hugo-version.outputs.version }}-
@@ -128,6 +133,13 @@ jobs:
       # the elapsed time here is build time with no queue wait to subtract.
       - name: Record build start time
         run: echo "CI_BUILD_START_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
+
+      # Node's built-in runner over scripts/*.test.js. Runs before the build because it
+      # needs nothing installed -- `make ensure` begins with `clean`, so anything
+      # installed ahead of it is thrown away. `make test` is gated on static/programs
+      # changes in scheduled-test.yml, which would leave this coverage off content PRs.
+      - name: Run unit tests
+        run: make test-unit
 
       - name: Build and deploy
         run: make ci_pull_request

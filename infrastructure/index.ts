@@ -7,6 +7,7 @@ import * as fs from "fs";
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
 import { SupportFormApi } from "./supportForm";
+import { SupportRedirect } from "./supportRedirect";
 
 const stackConfig = new pulumi.Config();
 
@@ -52,8 +53,7 @@ const config = {
     // the registry stack to reference to route traffic to for `/registry` routes.
     registryStack: stackConfig.get("registryStack"),
 
-    // the guides stack to reference to route traffic to for `/guides` routes.
-    guidesStack: stackConfig.get("guidesStack"),
+    devStack: stackConfig.get("devStack"),
 
     answersStack: stackConfig.get("answersStack"),
 
@@ -77,13 +77,18 @@ const config = {
     enableWaf: stackConfig.getBoolean("enableWaf") || false,
 
     // wafRateLimit is the maximum number of requests per 5-minute window per IP before WAF blocks.
-    wafRateLimit: stackConfig.getNumber("wafRateLimit") || 500,
+    wafRateLimit: stackConfig.getNumber("wafRateLimit") || 5000,
 
     // enableSupportForm toggles the /api/support endpoint backing the support-request
     // form at /support/new/ (see supportForm.ts), which files submissions as Intercom
-    // tickets. Requires the intercomApiKey (secret) and intercomTicketTypeId stack
-    // config values — see SupportFormApiArgs in supportForm.ts.
+    // conversations. Requires the intercomApiKey stack config value — see
+    // SupportFormApiArgs in supportForm.ts.
     enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
+
+    // supportRedirectDomain is a retired hostname (e.g. support.pulumi.com) permanently redirected to the
+    // support-request form at /support/new/ via a dedicated CloudFront distribution — see supportRedirect.ts.
+    // Unset means no redirect infrastructure. DNS for the hostname is managed by the pulumi-service repo, not here.
+    supportRedirectDomain: stackConfig.get("supportRedirectDomain") || undefined,
 };
 
 // CloudFront Function to lowercase URIs for .NET SDK docs so that
@@ -98,9 +103,6 @@ const dotnetLowercaseFunction = new aws.cloudfront.Function("dotnet-lowercase-ur
 }`,
     publish: true,
 });
-
-const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
-const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
 
 // Reference to the OSS Airflow on EKS stack for data warehouse access (only if enabled)
 let airflowIrsaRoleArn: pulumi.Output<any> | undefined;
@@ -186,7 +188,9 @@ if (config.enableWaf) {
         }, {
             name: "rate-limit-per-ip",
             priority: 1,
-            action: { block: {} },
+            // A 429 isn't in customErrorResponses, so a rate-limit block stays visible
+            // instead of being rewritten into the 404 page like a 403 would be.
+            action: { block: { customResponse: { responseCode: 429 } } },
             statement: {
                 rateBasedStatement: {
                     limit: config.wafRateLimit,
@@ -346,6 +350,71 @@ new aws.s3.BucketPublicAccessBlock("content-review-ledger-public-access-block", 
     blockPublicPolicy: true,
     ignorePublicAcls: true,
     restrictPublicBuckets: true,
+});
+
+// Bucket for the pre-merge review evidence pages: one self-contained HTML
+// page per (PR, head SHA) plus a latest.html pointer, rendered by
+// scripts/review-v3/render-evidence-html.py (lands with the review-v3
+// machinery PR) and linked from the two pinned review comments. Public by
+// design — the content is the same verification trail that used to live in
+// a public PR comment, moved out to keep the comments readable. One stable
+// bucket (unlike the per-PR preview buckets): evidence pages are part of the
+// review's audit trail and must survive PR close, so the bucket is versioned
+// like the two state buckets above (latest.html is overwritten on every
+// re-review; versioning keeps the prior pointer). Objects are world-readable
+// but the bucket is not listable, matching the origin-bucket posture below.
+//
+// Deliberately NOT a static website: the S3 website endpoint is HTTP-only,
+// which the TLS-only policy statement below would deny outright. Pages are
+// linked by key at the bucket's HTTPS REST URL instead (`reviewEvidenceBaseUrl`
+// + `/<pr>/latest.html`), which the public-read statement already covers.
+const reviewEvidenceBucket = new aws.s3.Bucket("review-evidence", {});
+
+new aws.s3.BucketVersioning("review-evidence-versioning", {
+    bucket: reviewEvidenceBucket.id,
+    versioningConfiguration: { status: "Enabled" },
+});
+
+const reviewEvidencePublicAccessBlock = new aws.s3.BucketPublicAccessBlock("review-evidence-public-access-block", {
+    bucket: reviewEvidenceBucket.id,
+    blockPublicAcls: true,
+    blockPublicPolicy: false,
+    ignorePublicAcls: true,
+    restrictPublicBuckets: false,
+});
+
+// New buckets start with all four Block Public Access settings on, so the
+// public-read policy must wait for the block above to flip
+// blockPublicPolicy off — otherwise the first `pulumi up` fails with
+// AccessDenied on PutBucketPolicy (same ordering as the uploads bucket).
+new aws.s3.BucketPolicy("review-evidence-public-read-policy", {
+    bucket: reviewEvidenceBucket.bucket,
+    policy: reviewEvidenceBucket.arn.apply((arn) => JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [
+            {
+                Sid: "PublicReadObjects",
+                Effect: "Allow",
+                Principal: "*",
+                Action: "s3:GetObject",
+                Resource: `${arn}/*`,
+            },
+            {
+                Sid: "RestrictToTLSRequestsOnly",
+                Effect: "Deny",
+                Principal: "*",
+                Action: "s3:*",
+                Resource: [arn, `${arn}/*`],
+                Condition: {
+                    Bool: {
+                        "aws:SecureTransport": "false",
+                    },
+                },
+            },
+        ],
+    })),
+}, {
+    dependsOn: [reviewEvidencePublicAccessBlock],
 });
 
 // Grant the data warehouse's Snowpipe reader role read access to the buckets it
@@ -672,7 +741,7 @@ function cacheKeyPolicy(name: string, ttl: number, cacheKeyHeaders: string[] = [
 // updates them in place (adding the Brotli/Gzip flags) rather than replacing.
 //
 // thirtyMinuteCachePolicy varies on the Accept header so /registry/* and
-// /guides/* (which proxy to separate CDNs whose viewer-request functions do
+// /dev/* (which proxy to separate CDNs whose viewer-request functions do
 // markdown content negotiation) cache HTML and markdown variants separately
 // at the apex layer. Without this, whichever variant populates the apex cache
 // first is served to every requester until TTL. Fragmentation is bounded to
@@ -749,6 +818,18 @@ const permissionsPolicyHeaderItem = {
     override: false,
 };
 
+// CloudFront's securityHeadersConfig schema has no native field for this header either, so
+// it rides alongside permissionsPolicyHeaderItem as a plain custom header. "none" matches the
+// value already sent by api.pulumi.com and app.pulumi.com; this site never serves cross-domain
+// policy files (crossdomain.xml, clientaccesspolicy.xml), so Flash/Acrobat clients should be
+// told not to trust any that might otherwise be found upstream. get.pulumi.com is out of scope:
+// it's served from Cloudflare, not this CloudFront distribution.
+const crossDomainPolicyHeaderItem = {
+    header: "X-Permitted-Cross-Domain-Policies",
+    value: "none",
+    override: false,
+};
+
 // Fingerprinted/hashed assets get immutable browser caching (1 year).
 // This is separate from CloudFront edge TTLs (defaultTtl/maxTtl) which only
 // control CDN-level caching. Without this policy, browsers see no Cache-Control
@@ -756,7 +837,7 @@ const permissionsPolicyHeaderItem = {
 const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-logo-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=1800",
             override: true,
@@ -767,7 +848,7 @@ const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-log
 const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
             override: true,
@@ -785,7 +866,7 @@ const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cac
 const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=3600",
             override: true,
@@ -796,7 +877,7 @@ const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-ca
 const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=31536000, immutable",
             override: true,
@@ -814,7 +895,7 @@ const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable
 const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Vary",
             value: "Accept",
             override: false,
@@ -833,7 +914,7 @@ const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs
 const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('versioned-docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem],
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem],
     },
 });
 
@@ -843,7 +924,7 @@ const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPol
 const ApiResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy("api-response-headers", {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Cache-Control",
             value: "no-store",
             override: true,
@@ -871,9 +952,6 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
 const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
-const guidesOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
-const guidesBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
-
 const answersOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const answersBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
@@ -896,6 +974,27 @@ if (config.registryStack) {
         }
     );
     registryBehaviors.push(
+        // Registry hashed CSS/JS bundles (e.g. /registry/css/bundle-registry.push-<sha>.css)
+        // get a fresh filename on every deploy, so they're safe to cache immutably
+        // for a year. Must come BEFORE "/registry*" below so this more specific
+        // pattern matches first; otherwise the broader pattern's 30-minute cache
+        // policy and default (non-immutable) response headers would win.
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/registry/css/bundle-registry.*.css",
+            cachePolicyId: oneYearCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/registry/js/bundle-registry.*.js",
+            cachePolicyId: oneYearCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
         {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
@@ -923,32 +1022,41 @@ if (config.registryStack) {
     )
 }
 
-if (config.guidesStack) {
-    const guidesStack = new pulumi.StackReference(config.guidesStack);
-    const guidesCDN = guidesStack.getOutput("cloudFrontDomain");
+const devOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const devBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
-    guidesOrigins.push(
+if (config.devStack) {
+    const devStack = new pulumi.StackReference(config.devStack);
+    const devCDN = devStack.getOutput("cloudFrontDomain");
+
+    devOrigins.push(
         {
-            originId: guidesCDN,
-            domainName: guidesCDN,
+            originId: devCDN,
+            domainName: devCDN,
             customOriginConfig: {
                 originProtocolPolicy: "https-only",
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
             },
-            // Origin Shield for guides should be configured in pulumi/guides,
-            // not here, since guides has its own CloudFront distribution.
         }
     );
-    guidesBehaviors.push(
+    devBehaviors.push(
         {
             ...baseCacheBehavior,
-            targetOriginId: guidesCDN,
-            // "/guides*" (no slash) matches /guides, /guides.md, and
-            // /guides/... so the bare path reaches the guides origin and gets
-            // the native trailing-slash redirect, matching registry's behavior.
-            pathPattern: "/guides*",
+            targetOriginId: devCDN,
+            pathPattern: "/dev*",
+            cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: devCDN,
+            // The Dev Center (Astro) emits root-relative assets under /assets/*
+            // (CSS, JS, images), so those must reach the same origin as /dev or
+            // the pages render unstyled. pulumi/docs serves its own assets from
+            // /css and /js, so /assets is free to hand to marketing-web.
+            pathPattern: "/assets*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
@@ -1003,7 +1111,6 @@ let supportForm: SupportFormApi | undefined;
 if (config.enableSupportForm) {
     supportForm = new SupportFormApi("support-form", {
         intercomApiKey: stackConfig.requireSecret("intercomApiKey"),
-        intercomTicketTypeId: stackConfig.require("intercomTicketTypeId"),
     });
 
     supportFormOrigins.push(supportForm.getOrigin());
@@ -1111,20 +1218,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 originSslProtocols: ["TLSv1.2"],
             },
         },
-        {
-            originId: cloudAiAppDomain,
-            domainName: cloudAiAppDomain,
-            customOriginConfig: {
-                originProtocolPolicy: "https-only",
-                httpPort: 80,
-                httpsPort: 443,
-                originSslProtocols: ["TLSv1.2"],
-                originReadTimeout: 60,
-                originKeepaliveTimeout: 60,
-            },
-        },
         ...registryOrigins,
-        ...guidesOrigins,
+        ...devOrigins,
         ...answersOrigins,
         ...versionedDocsOrigins,
         ...supportFormOrigins,
@@ -1155,7 +1250,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...supportFormBehaviors,
 
         ...registryBehaviors,
-        ...guidesBehaviors,
+        ...devBehaviors,
         ...answersBehaviors,
 
         // Versioned docs archives. Must come BEFORE /docs/reference/pkg/dotnet/* and
@@ -1497,9 +1592,24 @@ async function createAliasRecord(
 
 [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
+// Redirect distribution for a retired support hostname (see supportRedirect.ts). Deliberately not in domainAliases:
+// that list drives Route 53 records for the website distribution, while this hostname lives in the pulumi.com zone
+// owned by the pulumi-service repo, which CNAMEs it to the supportRedirectDistributionDomain output below.
+let supportRedirect: SupportRedirect | undefined;
+if (config.supportRedirectDomain) {
+    supportRedirect = new SupportRedirect("support-redirect", {
+        domain: config.supportRedirectDomain,
+        targetUrl: `https://${config.websiteDomain}/support/new/`,
+        certificateArn: config.certificateArn,
+        cachePolicyId: noCacheKeyPolicy.id,
+    });
+}
+
 export const uploadsBucketName = uploadsBucket.bucket;
 export const socialStateBucketName = socialStateBucket.bucket;
 export const contentReviewLedgerBucketName = contentReviewLedgerBucket.bucket;
+export const reviewEvidenceBucketName = reviewEvidenceBucket.bucket;
+export const reviewEvidenceBaseUrl = pulumi.interpolate`https://${reviewEvidenceBucket.bucketRegionalDomainName}`;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
@@ -1508,4 +1618,5 @@ export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
 export const wafWebAclArn = webAcl?.arn;
 export const supportFormFunctionName = supportForm?.getFunctionName();
+export const supportRedirectDistributionDomain = supportRedirect?.getDistributionDomainName();
 export const readme = fs.readFileSync("./README.md").toString();

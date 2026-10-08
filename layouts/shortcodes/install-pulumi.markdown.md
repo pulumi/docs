@@ -19,7 +19,7 @@ $ curl -fsSL https://get.pulumi.com | sh
 <!-- option: windows -->
 {{ .Inner }}
 ```bat
-> choco install pulumi
+> winget install --exact --id Pulumi.Pulumi
 ```
 
 <!-- /option -->

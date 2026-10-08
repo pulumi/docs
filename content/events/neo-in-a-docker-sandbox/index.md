@@ -16,17 +16,6 @@ unlisted: false
 # to fill out the form before viewing.
 gated: true
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: neo-in-a-docker-sandbox
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
@@ -45,6 +34,7 @@ duration: 60 minutes
 sessions:
     - label: Americas
       sortable_date: 2026-09-16T09:00:00.000-07:00
+      youtube_url: https://www.youtube.com/embed/aTimO_kMS0c
       form:
           hubspot_form_id: 37d15e98-1e00-4b10-864c-629d7f55d4a1
           salesforce_campaign_id: 701PQ00000yEUGcYAO
