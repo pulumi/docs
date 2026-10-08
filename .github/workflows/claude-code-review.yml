@@ -2324,8 +2324,15 @@ jobs:
   # that job were still a member.
   publish:
     needs: claude-review
+    # autofire-gate (claude-review's need) is skipped on workflow_dispatch,
+    # and a skip anywhere upstream fails the implicit success() check, so
+    # without a status function every #new-review / redispatch run reviewed
+    # and then silently skipped publishing. !cancelled() plus an explicit
+    # result check keeps the old "only after a successful review" rule.
     if: >-
-      needs.claude-review.outputs.v3 == 'true'
+      !cancelled()
+      && needs.claude-review.result == 'success'
+      && needs.claude-review.outputs.v3 == 'true'
       && needs.claude-review.outputs.v3_ready == 'true'
     concurrency:
       group: claude-review-${{ needs.claude-review.outputs.pr_number }}
@@ -2804,7 +2811,12 @@ jobs:
   # (sparse), the same rule as the publish job.
   redispatch:
     needs: publish
-    if: needs.publish.outputs.action == 'redispatch'
+    # Same status-function rule as publish: autofire-gate is skipped on
+    # workflow_dispatch, which would otherwise skip this job too.
+    if: >-
+      !cancelled()
+      && needs.publish.result == 'success'
+      && needs.publish.outputs.action == 'redispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
