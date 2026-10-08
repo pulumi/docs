@@ -58,7 +58,7 @@ Here's a quick overview to give you an idea of how we'll be addressing those nee
 
 ### Consistency
 
-Pulumi can help bring consistency to your software catalog by encoding design patterns into reusable *[component resources](https://www.pulumi.com/learn/abstraction-encapsulation/component-resources/)* and by building custom *[organization templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/)* that provide a no-code or low-code way to start a new project. Templates help get projects off the ground faster and ensure consistent code structure, policy compliance, and best practices.
+Pulumi can help bring consistency to your software catalog by encoding design patterns into reusable *[component resources](https://www.pulumi.com/learn/abstraction-encapsulation/component-resources/)* and by building custom *[organization templates](/docs/idp/concepts/organization-templates/)* that provide a no-code or low-code way to start a new project. Templates help get projects off the ground faster and ensure consistent code structure, policy compliance, and best practices.
 
 <figure>
 {{< video title="The New Project Wizard in Pulumi Cloud" src="npw-720p.mp4" controls="false" autoplay="true" loop="true" >}}
@@ -67,7 +67,7 @@ Pulumi can help bring consistency to your software catalog by encoding design pa
 
 Beyond that, because Pulumi is [multi-cloud](https://www.pulumi.com/blog/deploy-to-multiple-regions/) (AWS, Azure, Google Cloud, and more) and [multi-language](https://www.pulumi.com/blog/pulumiup-pulumi-packages-multi-language-components/) (JavaScript, TypeScript, Python, Go, .NET, Java, YAML) you can enjoy the same consistency across all your environments and all your developer teams, regardless of the languages they prefer, or cloud tooling they need.
 
-Another core aspect of consistency is *[drift detection](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/)*. Pulumi automatically detects and remediates cloud resources that have deviated from the expected state stored in Pulumi Cloud. This tech is better than ibuprofen at getting rid of developer-created headaches.
+Another core aspect of consistency is *[drift detection](/docs/deployments/concepts/drift/)*. Pulumi automatically detects and remediates cloud resources that have deviated from the expected state stored in Pulumi Cloud. This tech is better than ibuprofen at getting rid of developer-created headaches.
 
 ### Reproducibility
 
@@ -83,11 +83,11 @@ Every resource under management by Pulumi is visible within [Pulumi Insights](ht
 
 ### Security and Compliance
 
-In the modern parlance, when you say DevOps, you mean DevSecOps. Pulumi is designed to be secure by default. Pulumi Cloud offers full [role-based access control (RBAC) functionality](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/) including deep integration with [GitHub teams](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/#github-based-teams) and [SAML-based SSO](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml/), managed secrets and flexibly-defined secure environments with [Pulumi ESC](https://www.pulumi.com/product/esc/), and policy-as-code provided by [Pulumi Crossguard](https://www.pulumi.com/crossguard/). Most importantly all of these features are deeply integrated across the platform, creating an air-tight system with all the guardrails you need for managing security and access.
+In the modern parlance, when you say DevOps, you mean DevSecOps. Pulumi is designed to be secure by default. Pulumi Cloud offers full [role-based access control (RBAC) functionality](/docs/administration/concepts/rbac/teams/) including deep integration with [GitHub teams](/docs/administration/concepts/rbac/teams/#github-based-teams) and [SAML-based SSO](/docs/administration/guides/saml/), managed secrets and flexibly-defined secure environments with [Pulumi ESC](https://www.pulumi.com/product/esc/), and policy-as-code provided by [Pulumi Crossguard](https://www.pulumi.com/crossguard/). Most importantly all of these features are deeply integrated across the platform, creating an air-tight system with all the guardrails you need for managing security and access.
 
 ### Auditability
 
-Every action a user takes in Pulumi can be tracked via the [audit log](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/) which is searchable in two clicks from the Pulumi Cloud homepage dashboard. Audit logs can be filtered by user with one more click. Creating automated backups of your audit logs is a [first-class feature](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/#automated-export). You will never have to worry about responding quickly when someone asks about an event that happened in your system. Also, each deployment and update has logs directly visible from the Pulumi Cloud app, regardless of how it was initiated.
+Every action a user takes in Pulumi can be tracked via the [audit log](/docs/administration/concepts/audit-logs/) which is searchable in two clicks from the Pulumi Cloud homepage dashboard. Audit logs can be filtered by user with one more click. Creating automated backups of your audit logs is a [first-class feature](/docs/administration/concepts/audit-logs/#automated-export). You will never have to worry about responding quickly when someone asks about an event that happened in your system. Also, each deployment and update has logs directly visible from the Pulumi Cloud app, regardless of how it was initiated.
 
 {{< figure src="/images/docs/guides/self-hosted/auditlogs.png" caption="Figure: Viewing the audit log in Pulumi Cloud">}}
 

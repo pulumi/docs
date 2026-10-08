@@ -478,6 +478,7 @@ tags:
     - remediation-policies
     - building-developer-portals
     - developer-portal-platform-teams
+    - how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation
 
   opa:
     - opa-support-for-crossguard
@@ -896,10 +897,6 @@ tags:
   refactoring:
     - refactoring-iac
     - cumundi-guest-post
-
-  crossguard:
-    - remediation-policies
-    - how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation
 
   import:
     - migration-hub

@@ -1,0 +1,3 @@
+name: unit-testing-function-mock-csharp
+runtime: dotnet
+description: Unit tests that mock a provider function (Aws.Ec2.GetAmi).

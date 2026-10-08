@@ -1,5 +1,5 @@
 extends: existence
-message: "CLI command '%s' should be wrapped in backticks in prose (STYLE-GUIDE.md §References to Commands or UI). Example: `pulumi up`."
+message: "CLI command '%s' should be wrapped in backticks in prose (brand guide: writing style, text formatting). Example: `pulumi up`."
 level: warning
 ignorecase: false
 nonword: false

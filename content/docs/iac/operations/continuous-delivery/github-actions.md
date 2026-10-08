@@ -57,13 +57,13 @@ Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Confi
 
 ### Authenticate with a stored access token
 
-Your workflow authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the workflow's identity isn't tied to an individual.
+Your workflow authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/concepts/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the workflow's identity isn't tied to an individual.
 
 Add the token as an [encrypted secret](https://docs.github.com/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) named `PULUMI_ACCESS_TOKEN` under your repository's **Settings > Secrets and variables > Actions**. The workflow then reads it through the `secrets` context, as shown in the examples below.
 
 ### Authenticate without a stored token using OIDC
 
-You can remove the static token entirely. GitHub Actions can issue a short-lived [OpenID Connect (OIDC)](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect) token for a workflow job. Register GitHub Actions as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/github/) in Pulumi Cloud, and the [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) action exchanges that OIDC token for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a repository secret.
+You can remove the static token entirely. GitHub Actions can issue a short-lived [OpenID Connect (OIDC)](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect) token for a workflow job. Register GitHub Actions as a trusted [OIDC issuer](/docs/administration/guides/oidc-issuers/github/) in Pulumi Cloud, and the [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) action exchanges that OIDC token for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a repository secret.
 
 Pair it with [`pulumi/esc-action`](https://github.com/pulumi/esc-action) to pull cloud credentials, secrets, and configuration from a [Pulumi ESC](/docs/esc/) environment. This is the recommended way to provide cloud credentials in GitHub Actions because it's:
 
@@ -117,9 +117,9 @@ The most common way to run Pulumi in CI/CD follows a [trunk-based development mo
 - `.github/workflows/pr.yml` runs `pulumi preview` on every pull request, surfacing the proposed changes for review.
 - `.github/workflows/main.yml` runs `pulumi up` when changes land — to staging on a push to `main`, and to production on a `release-*` tag.
 
-Both files check out the repository, set up your program's language, install dependencies, and then invoke `pulumi/actions`. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only the language setup and dependency-install steps differ between languages:
+Both files check out the repository and then invoke `pulumi/actions`. TypeScript, Python, and Go set up a language runtime and install dependencies first; C# and Java set up a runtime and let the Pulumi run restore dependencies; Pulumi HCL needs neither. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only those setup and install steps differ between languages:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -466,6 +466,69 @@ jobs:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+Pulumi HCL has no language runtime to set up and no dependencies to install, so the job is a checkout and the action, nothing else. Commit the `sdks/` descriptors `pulumi install` writes alongside your `.tf` files; the runner then resolves providers from them and downloads the plugins on demand.
+
+```yaml
+# .github/workflows/pr.yml
+name: Pulumi preview
+on:
+  pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pulumi/actions@v7
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+```yaml
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'release-*'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Push to main: deploy to the staging environment.
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/main'
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
+      # Release tag: promote to production.
+      - name: Deploy to production
+        if: startsWith(github.ref, 'refs/tags/release-')
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/production
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 The `pulumi/actions` step runs Pulumi non-interactively, so `pulumi up` applies changes without a confirmation prompt. For Java and C#, the language runtime resolves and builds dependencies as part of the Pulumi run, so no separate install step is needed.
@@ -585,7 +648,7 @@ The cache key includes a hash of your dependency manifest so the cache is rebuil
 
 ## Control concurrent runs
 
-When pull requests stack up or commits land faster than a workflow finishes, runs accumulate. [Concurrency groups](https://docs.github.com/actions/using-jobs/using-concurrency) bound how many run at once.
+When pull requests stack up or commits land faster than a workflow finishes, runs accumulate. [Concurrency groups](https://docs.github.com/actions/using-jobs/using-concurrency) bound how many run at once. Letting two runs reach the same stack at once causes one to fail with an [update conflict](/docs/iac/operations/troubleshooting/update-conflicts/), so a concurrency group on your deployment jobs is worth setting up before you hit one.
 
 For **pull request previews**, key the group to the pull request and cancel superseded runs so reviewers always see the result of the latest commit:
 
@@ -614,6 +677,6 @@ You can manage GitHub itself — repositories, teams, branch protection rules, a
 - [`pulumi/actions`](https://github.com/pulumi/actions) — the Pulumi GitHub Action's full input reference.
 - [Pulumi GitHub App](/docs/integrations/version-control/github-app/) — rich pull request comments and commit checks from Pulumi Cloud.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to workflows and developers consistently.
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [OIDC issuers](/docs/administration/guides/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

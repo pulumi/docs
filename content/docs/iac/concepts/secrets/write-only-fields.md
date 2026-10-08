@@ -8,9 +8,6 @@ menu:
         name: Write-Only Fields
         parent: iac-concepts-secrets
         weight: 1
-    concepts:
-        parent: secrets
-        weight: 1
 aliases:
 - /docs/intro/concepts/secrets/write-only-fields/
 - /docs/concepts/secrets/write-only-fields/

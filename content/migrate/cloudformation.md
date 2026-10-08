@@ -10,7 +10,7 @@ benefits:
       icon: code-window
       icon_color: violet
       description: |
-        Deliver infrastructure from 50+ cloud and SaaS providers. Pulumi’s SDKs provide a complete and consistent interface that offers full access to
+        Deliver infrastructure from hundreds of cloud and SaaS providers. Pulumi’s SDKs provide a complete and consistent interface that offers full access to
         clouds and abstracts complexity.
 
     - title: Bring the cloud closer to application development

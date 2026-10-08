@@ -4,6 +4,7 @@ meta_desc: |
     A Cloudflare secret is an encrypted variable Workers read at runtime, never exposed in code. Learn to create secrets with Wrangler and access them.
 
 type: what-is
+date: 2023-12-07T15:06:13-06:00
 page_title: "What is a Cloudflare Secret?"
 authors: ["diana-esteves"]
 ---
@@ -33,7 +34,7 @@ You can create secrets via [Wrangler](https://developers.cloudflare.com/workers/
     ```bash
     $ npx wrangler init secrets-demo
     # Select "Hello World" Worker
-    # Confirm "Yes" to using Typescript
+    # Confirm "Yes" to using TypeScript
     # Confirm "Yes" to using Git
     # Select "No" to deploy the application
 
@@ -146,7 +147,7 @@ $ pulumi config set secrets-demo --secret
 value:  ****
 ```
 
-{{< chooser language "typescript,python,go" / >}}
+{{< chooser language "typescript,python,go,hcl" / >}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -240,6 +241,38 @@ func main() {
 		}
 		return nil
 	})
+}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+Pulumi HCL reads each config key into the `variable` with the same name, so for this program set the secret under `secrets_demo`:
+
+```bash
+$ pulumi config set secrets_demo --secret
+```
+
+```hcl
+variable "account_id" {
+  type = string
+}
+
+variable "secrets_demo" {
+  type      = string
+  sensitive = true
+}
+
+resource "cloudflare_workers_script" "my_script" {
+  account_id  = var.account_id
+  script_name = "script_1"
+  content     = file("script.js")
+
+  bindings {
+    type = "secret_text"
+    name = "MY_SECRET_NAME_KEY" # secret key
+    text = var.secrets_demo    # secret value
+  }
 }
 ```
 

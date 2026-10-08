@@ -21,6 +21,10 @@ aliases:
 
 Pulumi Cloud integrates with GitLab to post merge request previews, deploy infrastructure on push, create ephemeral review stacks, and report commit statuses. Once configured, the integration automatically registers webhooks on your GitLab group and manages authentication for you.
 
+{{% notes type="info" %}}
+This page covers the GitLab deployments integration. Backing a Pulumi organization's *membership* with a GitLab group is a separate feature. See [Identity providers](/docs/administration/concepts/identity-providers/#gitlab).
+{{% /notes %}}
+
 ## Installation and configuration
 
 {{% notes type="info" %}}
@@ -28,7 +32,7 @@ To set up the GitLab integration, you must be an org admin in Pulumi Cloud and h
 {{% /notes %}}
 
 1. [Sign in to your Pulumi account.](https://app.pulumi.com/signin)
-1. Navigate to **Management** > **Version control**.
+1. Navigate to **Settings** > **Version control**.
 1. Select **Add account** and choose **GitLab**, then follow the prompts to authorize with GitLab.
 1. Select the GitLab group you want to integrate with and configure your [integration settings](#integration-settings).
 
@@ -45,7 +49,7 @@ If the selected group does not support Group Access Tokens, Pulumi Cloud prompts
 
 ### Individual user setup
 
-Separately from the org-level integration, individual users can complete a 3-step OAuth flow under **Management** > **Version control** to grant Pulumi access to their GitLab account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
+Separately from the org-level integration, individual users can complete a 3-step OAuth flow under **Settings** > **Version control** to grant Pulumi access to their GitLab account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
 
 Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level integration continues to handle merge request comments and deployments regardless of whether you grant individual access.
 
@@ -128,7 +132,7 @@ The Pulumi GitLab integration posts results back to GitLab regardless of which C
 
 ## OIDC authentication
 
-Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as CI variables. See [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-issuers/gitlab/) for configuration details.
+Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as CI variables. See [Configuring OpenID Connect for GitLab](/docs/administration/guides/oidc-issuers/gitlab/) for configuration details.
 
 ## Template sources
 
@@ -140,7 +144,7 @@ Use GitLab repositories as template sources for [Pulumi IDP](/docs/idp/concepts/
 
 If comments aren't appearing on your merge requests, verify that:
 
-1. In the [Pulumi Cloud console](https://app.pulumi.com), the GitLab integration is connected and shows a valid status under **Management** > **Version control**.
+1. In the [Pulumi Cloud console](https://app.pulumi.com), the GitLab integration is connected and shows a valid status under **Settings** > **Version control**.
 1. In the GitLab console, the webhook exists on your GitLab group. Navigate to your group's **Settings** > **Webhooks** and look for the `https://api.pulumi.com/workflow/gitlab` endpoint.
 1. In the Pulumi Cloud console, the stack is associated with the correct GitLab repository and branch.
 
@@ -155,3 +159,9 @@ If deployments aren't triggering on push or merge request events:
 1. Verify deployment settings are enabled under **Stack** > **Settings** > **Deploy**.
 1. Check that the branch matches your configured deployment branch.
 1. If using path filters, confirm that the changed files match your glob patterns.
+
+## Learn more
+
+- [Identity providers](/docs/administration/concepts/identity-providers/#gitlab) — backing your Pulumi organization's membership with a GitLab group.
+- [Pulumi Deployments](/docs/deployments/concepts/) — the deployment engine this integration triggers.
+- [Version control integrations](/docs/integrations/version-control/) — the same capabilities on GitHub, Bitbucket, and Azure DevOps.

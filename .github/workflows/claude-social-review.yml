@@ -52,22 +52,42 @@ jobs:
     steps:
       - name: Resolve PR info
         id: pr-info
+        # Author-controlled values go through `env:` and are read as "$VAR".
+        # `${{ }}` is substituted textually before bash parses the script, so
+        # a branch name written that way IS script — and `git
+        # check-ref-format` permits every shell metacharacter but space.
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_PR: ${{ github.event.inputs.pr_number }}
+          ISSUE_PR: ${{ github.event.issue.number }}
+          EVENT_PR: ${{ github.event.pull_request.number }}
+          EVENT_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          EVENT_BASE_REF: ${{ github.event.pull_request.base.ref }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            PR_NUMBER="${{ github.event.inputs.pr_number }}"
-          elif [ "${{ github.event_name }}" = "issue_comment" ]; then
-            PR_NUMBER="${{ github.event.issue.number }}"
+          set -uo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            PR_NUMBER="${INPUT_PR:-}"
+          elif [ "$EVENT_NAME" = "issue_comment" ]; then
+            PR_NUMBER="${ISSUE_PR:-}"
           else
-            PR_NUMBER="${{ github.event.pull_request.number }}"
+            PR_NUMBER="${EVENT_PR:-}"
           fi
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            HEAD_REF="${{ github.event.pull_request.head.ref }}"
-            BASE_REF="${{ github.event.pull_request.base.ref }}"
+          # Digits only: PR_NUMBER reaches `gh` and GITHUB_OUTPUT below, and
+          # the dispatch input is free text.
+          case "$PR_NUMBER" in
+            ''|*[!0-9]*)
+              echo "::error::PR number is not numeric; refusing to continue."
+              exit 1
+              ;;
+          esac
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            HEAD_REF="${EVENT_HEAD_REF:-}"
+            BASE_REF="${EVENT_BASE_REF:-}"
           else
-            HEAD_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json headRefName -q .headRefName)
-            BASE_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json baseRefName -q .baseRefName)
+            HEAD_REF=$(gh pr view "$PR_NUMBER" --repo "$REPO" --json headRefName -q .headRefName)
+            BASE_REF=$(gh pr view "$PR_NUMBER" --repo "$REPO" --json baseRefName -q .baseRefName)
           fi
           echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
           echo "head_ref=$HEAD_REF" >> "$GITHUB_OUTPUT"
@@ -278,7 +298,7 @@ jobs:
 
             Review each platform's copy using the rules in `.claude/commands/social-media-review/SKILL.md`.
 
-            IMPORTANT: Keep the review short and scannable. Use `#### Platform — PASS` or `#### Platform — FAIL` headings with bullet-pointed reasons. No analysis paragraphs, no rubric citations. A blogger should read it in 30 seconds.
+            IMPORTANT: Keep the review short and scannable. Use `#### Platform — PASS` or `#### Platform — FAIL` headings with bullet-pointed reasons. No analysis paragraphs, no rubric citations. A blogger should read it in 30 seconds. Follow SKILL.md §Output format exactly: the orienting `> [!NOTE]` line under the title, one line instead of three `— missing` headings when every platform is missing, and `### Suggested copy` / `### Suggestions (advisory)` collapsed inside `<details>`.
 
             Write the review to `.social-review.md`. Do NOT post a PR comment — a subsequent workflow step handles that. The file's body must:
 
@@ -289,7 +309,17 @@ jobs:
             Use the Write tool. Do not run `gh pr comment`. Your response text is
             discarded — the only output that counts is the `.social-review.md` file.
             Writing it is mandatory, even if every platform passes.
-          claude_args: '--model claude-sonnet-5 --allowed-tools "Read,Glob,Grep,Agent,Write,Bash(python3:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(date:*)"'
+          # The public Pulumi brand MCP server (voice/writing-style/terminology
+          # source of truth) is wired via `claude_args --mcp-config`; its tools
+          # are in --allowed-tools. No auth: the server is public.
+          # Sonnet 5.5 at medium effort: same verdicts and suggested-copy repairs
+          # as Sonnet 5 on the 2026-09-28 replay (63/63, 30/30) at ~60% lower
+          # cost; campaign 2026-09-28-sonnet55-effort-sweep in
+          # pulumi/docs-review-benchmarks.
+          claude_args: |
+            --model claude-sonnet-5-5 --effort medium
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Glob,Grep,Agent,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Write,Bash(python3:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(date:*)"
 
       # The review agent occasionally finishes without writing the file (it puts
       # the review in its response text instead). Degrade to a warning rather

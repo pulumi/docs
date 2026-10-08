@@ -40,9 +40,9 @@ Before you begin, make sure you have:
 
 ## Authenticate with Pulumi Cloud
 
-When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. Pulumi reads the token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login.
+When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/concepts/access-tokens/) to operate. Pulumi reads the token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login.
 
-Store the token outside of source control. Add it as a [build parameter](https://www.jetbrains.com/help/teamcity/configuring-build-parameters.html) of type **Password** named `env.PULUMI_ACCESS_TOKEN` so TeamCity keeps the value encrypted and masks it in build logs. Define it on a parent project to reuse it across every build configuration underneath. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
+Store the token outside of source control. Add it as a [build parameter](https://www.jetbrains.com/help/teamcity/configuring-build-parameters.html) of type **Password** named `env.PULUMI_ACCESS_TOKEN` so TeamCity keeps the value encrypted and masks it in build logs. Define it on a parent project to reuse it across every build configuration underneath. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
 [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places.
 
@@ -115,6 +115,12 @@ Promotion then becomes a single, traceable Git operation, and production never d
 
 Independently of TeamCity, Pulumi offers native [version control integrations](/docs/integrations/version-control/) for popular Git hosts. With one configured, Pulumi Cloud posts infrastructure-change summaries as pull request comments and status checks, and links each stack update back to the commit and pull request that produced it. See the [Version Control](/docs/integrations/version-control/) page for the integrations currently available.
 
+## Limit concurrent builds
+
+If two runs of the same build configuration reach the same stack at once — a scheduled build overlapping a manual one, or two commits triggering back to back — Pulumi Cloud grants the lease to only one, and the other's `pulumi up` fails with an [update conflict](/docs/iac/operations/troubleshooting/update-conflicts/). TeamCity's own default is to let build configurations run concurrently against as many free agents as it has, so nothing stops that race on its own.
+
+Turn the build configuration's advanced option **Limit the number of simultaneously running builds** from its default of `0` (unlimited) to `1`, under that configuration's **General Settings**. A second build that would otherwise start immediately is queued behind the first instead, and runs only once it finishes — the same one-at-a-time behavior Pulumi Cloud's own per-stack lease gives you, applied earlier so the build never gets far enough to hit the conflict.
+
 ## Speed up builds with caching
 
 A clean build agent starts with an empty plugin cache, so Pulumi re-downloads its provider plugins on every run. How you avoid that depends on your agents:
@@ -127,6 +133,6 @@ A clean build agent starts with an empty plugin cache, so Pulumi re-downloads it
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [CI/CD troubleshooting guide](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens on CI/CD systems that can issue OIDC tokens.
+- [OIDC Issuers](/docs/administration/guides/oidc-issuers/) — eliminate static tokens on CI/CD systems that can issue OIDC tokens.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments for pull requests.
 - [Version Control](/docs/integrations/version-control/) — connect Pulumi Cloud to your Git host for pull request reporting.

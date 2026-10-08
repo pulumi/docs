@@ -2,8 +2,18 @@
 {{/* Strip a leading "/" so frontmatter paths like "/images/foo.svg" resolve correctly. */}}
 {{ $src := .src | strings.TrimPrefix "/" }}
 {{ $img := resources.Get (printf "fingerprinted/%s" $src) }}
-{{ if ne $img.MediaType.SubType "svg" }}
-    {{ $maxWidth := .maxWidth | default 800 }}
+{{/* Intrinsic size of the resource actually emitted as `src` (post-resize for rasters), so
+     dynamic-src callers still get width/height and reserve layout space before load. */}}
+{{ $iw := 0 }}
+{{ $ih := 0 }}
+{{ $srcset := slice }}
+{{ $maxWidth := .maxWidth | default 800 }}
+{{ if eq $img.MediaType.SubType "svg" }}
+    {{ with partialCached "svg-dimensions.html" $img $src }}
+        {{ $iw = .width }}
+        {{ $ih = .height }}
+    {{ end }}
+{{ else }}
     {{/* Default to q90; raise via `quality` for screenshots / images with fine text where
          lossy artifacts are visible. */}}
     {{ $quality := .quality | default 90 }}
@@ -16,8 +26,9 @@
     {{ else }}
         {{ $img = $img.Process $processArgs }}
     {{ end }}
+    {{ $iw = $img.Width }}
+    {{ $ih = $img.Height }}
     {{/* Skip srcset for very small images (maxWidth < 400) — src already covers 1x and 2x. */}}
-    {{ $srcset := slice }}
     {{ if ge $maxWidth 400 }}
     {{ $maxSrcsetWidth := mul $maxWidth 2 }}
     {{ $candidates := slice 400 600 800 1200 1600 2000 2400 3200 }}
@@ -37,9 +48,19 @@
         {{ $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink $origImg.Width) }}
     {{ end }}
     {{ end }}
-    {{ $img = $img | fingerprint }}
-<img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ $.alt }}" {{ with $.width }}width="{{ . }}"{{ end }} {{ with $.height }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} decoding="async"{{ with $.ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
-{{ else }}
-    {{ $img = $img | fingerprint }}
-<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ .alt }}" {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}"{{ with .fetchpriority }} fetchpriority="{{ . }}"{{ end }} decoding="async"{{ with .ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ end }}
+{{/* A caller's width/height wins; when it passes only one, derive the other from the ratio. */}}
+{{ $w := .width }}
+{{ $h := .height }}
+{{ if and $iw $ih }}
+    {{ if and (not $w) (not $h) }}
+        {{ $w = $iw }}
+        {{ $h = $ih }}
+    {{ else if not $h }}
+        {{ $h = int (math.Round (div (mul (float $w) $ih) $iw)) }}
+    {{ else if not $w }}
+        {{ $w = int (math.Round (div (mul (float $h) $iw) $ih)) }}
+    {{ end }}
+{{ end }}
+{{ $img = $img | fingerprint }}
+<img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ $.alt }}" {{ with $w }}width="{{ . }}"{{ end }} {{ with $h }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} decoding="async"{{ with $.ariaHidden }} aria-hidden="{{ . }}"{{ end }} />

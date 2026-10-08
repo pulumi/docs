@@ -41,7 +41,7 @@ Although multi-region deployments are needed for scaling, availability, and perf
 
 ## The Pulumi solution
 
-A stack is a distinct deployment target within a Pulumi project. Stacks enable you to organize, version, and manage your infrastructure code effectively. They are flexible enough to do more than merely plan deployments across different stages of development. You may better control infrastructure orchestration with them as an adaptable tool for managing deployments in a variety of circumstances. Each stack represents a separate instance of your infrastructure, allowing you to deploy and manage your resources in different environments or configurations. To learn more about stacks, you can read [this](https://www.pulumi.com/docs/concepts/stack/).
+A stack is a distinct deployment target within a Pulumi project. Stacks enable you to organize, version, and manage your infrastructure code effectively. They are flexible enough to do more than merely plan deployments across different stages of development. You may better control infrastructure orchestration with them as an adaptable tool for managing deployments in a variety of circumstances. Each stack represents a separate instance of your infrastructure, allowing you to deploy and manage your resources in different environments or configurations. To learn more, see the [Pulumi Stacks concept guide](https://www.pulumi.com/docs/iac/concepts/stacks/).
 
 Consider how Pulumi Stacks can be used effectively in the following ways:
 

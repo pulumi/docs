@@ -30,6 +30,19 @@ table {
     }
 }
 
+.table-plain {
+    @apply border-collapse rounded-none bg-transparent;
+
+    th,
+    td {
+        @apply p-0 bg-transparent;
+    }
+
+    th {
+        color: inherit;
+    }
+}
+
 // Tier 2: on narrow viewports, tables that carry column headers (and
 // therefore data-label attributes) reflow into stacked cards — one card
 // per row, each cell shown as a "label: value" pair, EUI-style.

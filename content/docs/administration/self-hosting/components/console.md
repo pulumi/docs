@@ -2,7 +2,7 @@
 title_tag: Pulumi Console | Self-Hosting Pulumi
 title: Pulumi console
 h1: Pulumi Cloud self-hosted console
-meta_desc: Pulumi console is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Pulumi Business Critical Edition.
+meta_desc: Pulumi console is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Pulumi Enterprise edition.
 menu:
   administration:
         name: Pulumi console
@@ -20,7 +20,7 @@ pulumi_cloud_feature: self-hosting
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
-The Pulumi Cloud allows users to view the stacks they have created and see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
+Pulumi Cloud allows users to view the stacks they have created and see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
 
 In order for the CLI to persist the state of a particular stack, a user must login to the CLI. In order to login to the CLI, you should have created an account using the Console first.
 

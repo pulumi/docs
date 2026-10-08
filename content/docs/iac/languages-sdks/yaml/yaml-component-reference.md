@@ -57,7 +57,7 @@ The value of `inputs` is an object whose keys are logical names by which the con
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
-| `type` | string | No | Yes | Type is the (required) data type for the parameter. It can be one of: `string`, `integer`, `boolean` or `array`. |
+| `type` | string | Yes | Yes | Type is the data type for the parameter. It can be one of: `string`, `integer`, `boolean` or `array`. |
 | `default` | any | No | No | Default is a value of the appropriate type for the component to use if no value is specified. |
 | `items` | [config options](/docs/iac/concepts/projects/project-file/#config-options) | No | No | Required if `type` is `array`. Specifies the type of the array members |
 
@@ -75,7 +75,7 @@ The value of `resources` is an object whose keys are logical resource names by w
 
 ### Outputs
 
-The value of [`outputs`](https://www.pulumi.com/docs/concepts/stack/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi Component and whose values are potentially computed expressions that resolve to the values of the desired outputs.
+The value of [`outputs`](https://www.pulumi.com/docs/iac/concepts/stacks/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi Component and whose values are potentially computed expressions that resolve to the values of the desired outputs.
 
 ```yaml
 outputs:

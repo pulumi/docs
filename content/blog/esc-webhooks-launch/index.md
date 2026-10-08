@@ -56,7 +56,7 @@ const environmentWebhook = new service.Webhook("env-webhook", {
 Pulumi ESC Webhooks offer a range of benefits designed to enhance visibility, streamline workflows, and automate key processes related to your secrets and configuration management:
 
 - **Effortless Automation and Streamlined Workflows**: Automatically trigger actions based on ESC events such as application restarts, infrastructure deployments, or configuration updates. Easily integrate Pulumi ESC Webhooks into your CI/CD pipelines to automate builds, tests, and deployments whenever environment updates occur.
-- **Seamless Integration with Pulumi Deployments**: Whether you need to update your infrastructure, preview changes, or create temporary infrastructure with [TTL](/docs/pulumi-cloud/deployments/ttl/) or [review stacks](/docs/deployments/concepts/review-stacks/), Pulumi ESC Webhooks handles all these scenarios, making deployments faster and easier.
+- **Seamless Integration with Pulumi Deployments**: Whether you need to update your infrastructure, preview changes, or create temporary infrastructure with [TTL](/docs/deployments/concepts/ttl/) or [review stacks](/docs/deployments/concepts/review-stacks/), Pulumi ESC Webhooks handles all these scenarios, making deployments faster and easier.
 - **Real-time Awareness and Collaboration**: Receive instant notifications about critical changes in your Pulumi ESC environments, fostering better communication and collaboration between developers, operations teams, and security personnel. This real-time awareness enables faster incident response times, minimizing downtime and security risks.
 
 ## Conclusion

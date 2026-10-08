@@ -23,7 +23,7 @@ Every CI/CD system runs Pulumi the same way under the hood, so the failures you 
 
 To run a `pulumi preview` or `pulumi up` in a pipeline, the build agent needs all of the following:
 
-- A way to authenticate with your backend — a [Pulumi access token](/docs/administration/access-identity/access-tokens/) when using Pulumi Cloud.
+- A way to authenticate with your backend — a [Pulumi access token](/docs/administration/concepts/access-tokens/) when using Pulumi Cloud.
 - A [stack](/docs/iac/concepts/stacks/) that the pipeline will update, created ahead of time.
 - The Pulumi CLI available on the system `PATH`.
 - The language runtime and build tools for your Pulumi program (more on this below).
@@ -41,9 +41,9 @@ What to check when authentication fails:
 - The token is exposed to the pipeline as an environment variable named exactly `PULUMI_ACCESS_TOKEN`. Store it as a secret — most CI/CD systems can mark an environment variable as sensitive, and your access token is a sensitive value.
 - The environment variable is actually in scope for the job or step that runs the `pulumi` command. Many CI/CD systems reset the environment between jobs or stages, so a variable set in one job may not be visible in another.
 - The pipeline can reach the secret. Several systems restrict secrets to specific branches or environments — confirm the branch and job running Pulumi are allowed to read it.
-- Prefer an [organization or team access token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal one, so the pipeline's identity isn't tied to an individual.
+- Prefer an [organization or team access token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal one, so the pipeline's identity isn't tied to an individual.
 
-To avoid storing a long-lived secret at all, use [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/): the pipeline exchanges a short-lived token issued by your CI/CD system for a temporary Pulumi access token. [Pulumi ESC](/docs/esc/) can then supply cloud credentials and configuration the same way to both pipelines and developer machines.
+To avoid storing a long-lived secret at all, use [OpenID Connect (OIDC)](/docs/administration/guides/oidc-issuers/): the pipeline exchanges a short-lived token issued by your CI/CD system for a temporary Pulumi access token. [Pulumi ESC](/docs/esc/) can then supply cloud credentials and configuration the same way to both pipelines and developer machines.
 
 ## Stack name
 
@@ -61,7 +61,7 @@ What to check when a `pulumi` command can't find or access your stack:
 The build agent needs the Pulumi CLI on its `PATH`. Several CI/CD systems have a native extension that installs and runs the CLI for you:
 
 - [Azure Pipelines task extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) — see the [Azure DevOps guide](/docs/iac/operations/continuous-delivery/azure-devops/).
-- GitHub Actions — [`pulumi/actions`](https://github.com/pulumi/actions) and [`pulumi/action-install-pulumi-cli`](https://github.com/pulumi/action-install-pulumi-cli); see the [GitHub Actions guide](/docs/iac/operations/continuous-delivery/github-actions/). GitHub-hosted runners ship the Pulumi CLI pre-installed, so an explicit install step is only needed to pin a specific version.
+- GitHub Actions — [`pulumi/actions`](https://github.com/pulumi/actions), which installs the CLI only when you omit `command` ([installation-only mode](https://github.com/pulumi/actions#installation-only)); see the [GitHub Actions guide](/docs/iac/operations/continuous-delivery/github-actions/). GitHub-hosted Ubuntu and Windows runners ship the Pulumi CLI pre-installed, so an explicit install step is only needed there to pin a specific version.
 - [CircleCI orb](https://circleci.com/developer/orbs/orb/compute/pulumi) — see the [CircleCI guide](/docs/iac/operations/continuous-delivery/circleci/).
 
 If your system has no native extension, add an inline script step to [install the CLI manually](/docs/install/).
@@ -105,6 +105,12 @@ What to check when resource operations fail with authentication or authorization
 Refer to each provider's page in the [Pulumi Registry](/registry/) for the exact environment variables it expects.
 
 If you use Pulumi Cloud, [Pulumi ESC](/docs/esc/) is an alternative to storing static cloud keys in your CI/CD system: it can supply cloud provider credentials to your pipeline dynamically, including short-lived credentials issued through OIDC.
+
+## Concurrent updates
+
+If a run fails with `409 conflict: another update is currently in progress`, the pipeline isn't the problem — two updates reached the same stack at once, and only one lease can be held on a stack at a time. This happens most often when a pipeline allows overlapping runs on the same stack, or when a person updates a stack locally that a pipeline also deploys.
+
+See [Update conflicts](/docs/iac/operations/troubleshooting/update-conflicts/) for why this happens and how to serialize deployments so it stops recurring, rather than re-running the pipeline each time.
 
 ## Still need help?
 

@@ -88,6 +88,22 @@ def run_gate(body: str, diff: str, pr_files: list[str]) -> tuple[int, dict]:
 FILE = "content/docs/iac/concepts/stacks.md"
 
 
+def v3_pinned_body(outstanding: str = "", author_answer: str = "") -> str:
+    """A minimal v3 author card, marker + findings only (no REVIEW_STATE/footer
+    needed — the gate only reads AUTHOR_MARKER and the two finding sections).
+    """
+    return (
+        "<!-- CLAUDE_REVIEW 1/1 -->\n"
+        "<!-- CLAUDE_REVIEW_AUTHOR -->\n"
+        "<!-- CLAUDE_REVIEW_HEAD aaaabbbbccccddddeeeeffff0000111122223333 -->\n"
+        "## Review — action needed\n\n"
+        "### 🚨 Fix or disagree\n\n"
+        f"{outstanding}\n\n"
+        "### ❓ Questions for you\n\n"
+        f"{author_answer}\n\n"
+    )
+
+
 # ---- Tests -------------------------------------------------------------------
 
 
@@ -249,6 +265,80 @@ def test_malformed_pr_files_exits_2():
     assert rc == 2, rc
 
 
+# ---- v3 surface ----------------------------------------------------------
+
+
+def test_v3_outstanding_fires():
+    body = v3_pinned_body(outstanding="| **F1** | `content/docs/iac/x.md` L40-50 | wrong default |")
+    rc, res = run_gate(body, make_diff(FILE, 42, 3), [FILE])
+    assert rc == 0 and res["fire"] is True, res
+
+
+def test_v3_author_answer_section_also_fires():
+    # The promoted ❓ bucket must not break auto-refresh: a push fixing a ❓
+    # item is just as refresh-eligible as one fixing a 🚨 item.
+    body = v3_pinned_body(
+        author_answer="| **F3** | `content/docs/iac/x.md` L61 | unverifiable claim |"
+    )
+    rc, res = run_gate(body, make_diff(FILE, 61, 1), [FILE])
+    assert rc == 0 and res["fire"] is True, res
+
+
+def test_v3_both_sections_union():
+    body = v3_pinned_body(
+        outstanding="| **F1** | `content/docs/iac/x.md` L40-50 | wrong default |",
+        author_answer="| **F3** | `content/docs/iac/x.md` L61 | unverifiable claim |",
+    )
+    rc, res = run_gate(body, make_diff(FILE, 61, 1), [FILE])
+    assert rc == 0 and res["fire"] is True, res
+    rc, res = run_gate(body, make_diff(FILE, 42, 3), [FILE])
+    assert rc == 0 and res["fire"] is True, res
+
+
+def test_v3_out_of_range_hunk_fails():
+    body = v3_pinned_body(outstanding="| **F1** | `content/docs/iac/x.md` L40-50 | wrong default |")
+    rc, res = run_gate(body, make_diff(FILE, 300, 2), [FILE])
+    assert res["fire"] is False, res
+    assert "outside outstanding finding lines" in res["reason"], res
+
+
+def test_v3_finding_without_anchor_fails_closed():
+    # A v3 finding row with no `[L…]` ref (file-less detector finding) can't
+    # be located, so the whole gate must fail closed.
+    body = v3_pinned_body(outstanding="| **F1** | — | no line anchor on this one |")
+    rc, res = run_gate(body, make_diff(FILE, 42, 3), [FILE])
+    assert res["fire"] is False and "no parseable" in res["reason"], res
+
+
+def test_v3_no_findings_at_all_fails():
+    body = v3_pinned_body()
+    rc, res = run_gate(body, make_diff(FILE, 42, 3), [FILE])
+    assert res["fire"] is False and "no outstanding findings" in res["reason"], res
+
+
+def test_v3_style_bullet_is_not_an_anchor():
+    # A style-suggestion bullet (`- **line N:**`, no F-id) inside the same
+    # section span must not be mistaken for a finding row.
+    body = v3_pinned_body(
+        outstanding="| **F1** | `content/docs/iac/x.md` L40-50 | wrong default |\n"
+                    "- **line 88:** not a real finding row"
+    )
+    rc, res = run_gate(body, make_diff(FILE, 42, 3), [FILE])
+    assert rc == 0 and res["fire"] is True, res
+
+
+def test_v3_multi_ref_finding_unions_all_ranges():
+    # A collapsed frontmatter-sweep ref carries several comma-separated
+    # L-ranges; every one of them must anchor a refresh-eligible hunk.
+    body = v3_pinned_body(
+        outstanding="| **F1** | `content/docs/iac/x.md` L12, L80-82 | collapsed entry |"
+    )
+    rc, res = run_gate(body, make_diff(FILE, 81, 1), [FILE])
+    assert rc == 0 and res["fire"] is True, res
+    rc, res = run_gate(body, make_diff(FILE, 12, 1), [FILE])
+    assert rc == 0 and res["fire"] is True, res
+
+
 # ---- Runner ------------------------------------------------------------------
 
 
@@ -270,3 +360,13 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+def test_v3_linked_where_cell_still_yields_anchors():
+    """The composer deep-links the Where cell to the blob at head; the
+    L-range text lives inside the link text, and anchor extraction must see
+    it identically to the bare form (Josh-round grammar change)."""
+    body = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text()
+    assert "](https://github.com/pulumi/docs/blob/" in body  # fixture is linked
+    ranges = gate.parse_anchor_ranges(body)
+    assert (80, 82) in ranges and (61, 61) in ranges

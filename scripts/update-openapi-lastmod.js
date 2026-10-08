@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 // Keeps data/openapi_lastmod.json honest: an sha256 hash of each OpenAPI tag's
 // and schema's content, plus the date that hash last changed. Read by
-// content/docs/reference/cloud-rest-api/_content.gotmpl and
+// content/docs/reference/cloud-rest-api/_content.gotmpl to set each generated
+// tag page's sitemap <lastmod>, and by
 // content/docs/reference/cloud-rest-api/schema/_content.gotmpl to set each
-// generated page's sitemap <lastmod> — those pages have no other honest
-// per-page date, since they come from a gitignored, build-time-fetched spec
-// with no date fields of its own.
+// generated schema page's dateModified (schema pages are sitemap_exclude'd,
+// so lastmod no longer reaches their sitemap entry there) — both page sets
+// have no other honest per-page date, since they come from a gitignored,
+// build-time-fetched spec with no date fields of its own.
 //
 // A key's lastmod only moves to today when its hash actually differs from
 // the previously recorded hash (a real content change) or the key is new.
@@ -165,7 +167,14 @@ async function main() {
     }
 }
 
-main().catch((err) => {
-    console.error(`error: ${err.message}`);
-    process.exit(1);
-});
+if (require.main === module) {
+    main().catch((err) => {
+        console.error(`error: ${err.message}`);
+        process.exit(1);
+    });
+}
+
+// Exported so scripts/backfill-openapi-lastmod.js can reuse the exact same
+// canonicalization and hashing logic instead of reimplementing it (and
+// risking a subtly different hash for the same content).
+module.exports = { canonicalize, sha256, deriveTagOperations, updateSection, HTTP_METHODS, todayUTC };

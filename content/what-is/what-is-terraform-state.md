@@ -2,6 +2,7 @@
 title: What Is Terraform State?
 meta_desc: "Terraform state maps your configuration to real cloud resources so Terraform knows what it manages. Learn how the state file, backends, and locking work."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is Terraform State?"
 authors: ["alex-leventer"]
 ---
@@ -130,7 +131,7 @@ Pulumi also uses state, and for the same fundamental reason: an [infrastructure 
 | Self-managed option | S3, Azure Blob, GCS, etc. | S3, Azure Blob, GCS, or local filesystem |
 | Managed SaaS option | HCP Terraform | Pulumi Cloud |
 
-The result is a different set of defaults for the same job. Terraform gives you a state file and a wide choice of backends to store it in, and expects you to secure it; Pulumi manages the backend and encrypts secrets out of the box, while still letting you self-host if you prefer. Neither model is universally right, and teams migrating between the two can compare the mechanics in the [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/) guide and the [terminology mapping](/docs/iac/comparisons/terraform/terminology/).
+The result is a different set of defaults for the same job. Terraform gives you a state file and a wide choice of backends to store it in, and expects you to secure it; Pulumi manages the backend and encrypts secrets out of the box, while still letting you self-host if you prefer. Neither model is universally right, and teams migrating between the two can compare the mechanics in the [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/) guide and the [terminology mapping](/docs/iac/comparisons/terraform/#terraform-terms-and-command-equivalents).
 
 ## Frequently asked questions about Terraform state
 
@@ -176,7 +177,7 @@ Related reading:
 * [Secrets handling](/docs/iac/concepts/secrets/)
 * [Importing existing resources](/docs/iac/guides/migration/import/)
 * [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
-* [Terraform-to-Pulumi terminology](/docs/iac/comparisons/terraform/terminology/)
+* [Terraform-to-Pulumi terminology](/docs/iac/comparisons/terraform/#terraform-terms-and-command-equivalents)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)
 * [What is a Terraform module?](/what-is/what-is-a-terraform-module/)
 * [What is Terragrunt?](/what-is/what-is-terragrunt/)

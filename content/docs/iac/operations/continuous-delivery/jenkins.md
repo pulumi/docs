@@ -41,12 +41,12 @@ Before you begin, make sure you have:
 
 Give your pipeline a Pulumi Cloud identity in one of two ways. **Choose one — you don't need both:**
 
-- **A stored access token.** A long-lived [Pulumi access token](/docs/administration/access-identity/access-tokens/) saved as a Jenkins credential. Simple to set up and works on any Jenkins installation.
+- **A stored access token.** A long-lived [Pulumi access token](/docs/administration/concepts/access-tokens/) saved as a Jenkins credential. Simple to set up and works on any Jenkins installation.
 - **An OIDC token exchange.** The pipeline exchanges a short-lived token for a temporary Pulumi access token, so no long-lived secret is stored anywhere. Recommended where available, but on Jenkins it requires a community plugin (see below).
 
 ### Use a stored access token
 
-When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. Pulumi reads the token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login.
+When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/concepts/access-tokens/) to operate. Pulumi reads the token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login.
 
 Store the token as a Jenkins [credential](https://www.jenkins.io/doc/book/using/using-credentials/) of kind **Secret text** rather than committing it to source control, then expose it to the pipeline with the `environment` block:
 
@@ -56,11 +56,11 @@ environment {
 }
 ```
 
-Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
+Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
 ### Exchange an OIDC token
 
-You can remove the static token entirely with [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/). Pulumi Cloud can register any trusted service that issues OIDC tokens as an [OIDC Issuer](/docs/administration/access-identity/oidc-issuers/). The pipeline obtains a short-lived OIDC token from its host and exchanges it with Pulumi Cloud for a temporary Pulumi access token:
+You can remove the static token entirely with [OpenID Connect (OIDC)](/docs/administration/guides/oidc-issuers/). Pulumi Cloud can register any trusted service that issues OIDC tokens as an [OIDC Issuer](/docs/administration/guides/oidc-issuers/). The pipeline obtains a short-lived OIDC token from its host and exchanges it with Pulumi Cloud for a temporary Pulumi access token:
 
 ```bash
 pulumi login --oidc-token "$OIDC_TOKEN" --oidc-org "your-org"
@@ -209,6 +209,6 @@ Because the plugins are present in the image, every build starts with a warm cac
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [CI/CD troubleshooting guide](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens with short-lived, exchanged credentials.
+- [OIDC Issuers](/docs/administration/guides/oidc-issuers/) — eliminate static tokens with short-lived, exchanged credentials.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments for pull requests.
 - [Version Control](/docs/integrations/version-control/) — connect Pulumi Cloud to your version control system for pull request reporting.

@@ -6,6 +6,7 @@ tags: [containers, docker, kubernetes]
 category: tutorials
 meta_desc: "Go from Dockerfile to a fully running containerized service on your cloud of choice using infrastructure as code."
 date: "2020-12-08"
+updated: 2026-09-21
 
 ---
 
@@ -21,7 +22,7 @@ The general approach will be to create a new infrastructure as code project that
 * Builds and publishes your container image to that registry
 * Optionally, consumes the resulting image URL from a containerized task definition in Kubernetes, Amazon ECS, or any other container orchestrator
 
-All told, this will be just a few dozen lines of code. This article demonstrates doing this in AWS, Azure, Google Cloud, DigitalOcean, and Docker Hub, and offers code examples in each supported Pulumi language, namely Python, JavaScript, TypeScript, Go, and C#. These steps will work for any application that has a `Dockerfile` and is buildable by Docker. In principle, similar steps could be applied if you prefer to build your container image using different means, such as Buildpack.
+All told, this will be just a few dozen lines of code. This article demonstrates doing this in AWS, Azure, Google Cloud, DigitalOcean, and Docker Hub, and offers code examples in Python, JavaScript, TypeScript, Go, and .NET. These steps will work for any application that has a `Dockerfile` and is buildable by Docker. In principle, similar steps could be applied if you prefer to build your container image using different means, such as Buildpack.
 
 For purposes of illustration, we'll create a simple Nginx web server whose `Dockerfile` contains:
 
@@ -392,7 +393,7 @@ var imageName = repo.RepositoryUrl;
 
 #### Learn More About ECR
 
-ECR offers many additional options not shown here. This includes configuring advanced IAM permissions, enabling image vulnerability scanning, managing the lifetime of images so that older, unused images are deleted based on configured policies, encrypting images, and more. For details on these advanced capabilities and more, refer to [Pulumi's ECR user guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/ecr/), [Pulumi's ECR API reference](/registry/packages/aws/api-docs/ecr/repository/), or [Amazon's product documentation](https://aws.amazon.com/ecr/).
+ECR offers many additional options not shown here. This includes configuring advanced IAM permissions, enabling image vulnerability scanning, managing the lifetime of images so that older, unused images are deleted based on configured policies, encrypting images, and more. For details on these advanced capabilities and more, refer to [Pulumi's ECR user guide](/docs/iac/guides/clouds/aws/ecr/), [Pulumi's ECR API reference](/registry/packages/aws/api-docs/ecr/repository/), or [Amazon's product documentation](https://aws.amazon.com/ecr/).
 
 > To view another cloud provider's registry details, [select a new cloud in the switcher above](#prepare-a-container-registry).
 

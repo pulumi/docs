@@ -47,7 +47,7 @@ Before you begin, make sure you have:
 
 ## Authenticate with Pulumi Cloud
 
-CodeBuild authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity is not tied to an individual.
+CodeBuild authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/concepts/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity is not tied to an individual.
 
 Because the token is a sensitive credential, store it in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) (as a `SecureString`) or [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), and reference it from the CodeBuild project rather than hardcoding it. CodeBuild resolves the value at build time and never persists it in the build definition.
 
@@ -149,6 +149,12 @@ Production updates should be deliberate. Keep production on its own stack and de
 
 Configure this CodeBuild project (or CodePipeline source stage) to trigger on git tag events rather than branch pushes. Promotion then becomes a single, traceable Git operation, and production never deploys from an untested commit.
 
+## Serialize pipeline executions
+
+CodePipeline's default [execution mode](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works.html), `SUPERSEDED`, locks a stage to one execution at a time, but only protects an execution once it's actually running: a newer execution can still overtake one that's still *waiting* to enter a locked stage, dropping it before it ever starts. If your CodeBuild stage runs `pulumi up`, and enough commits land while it's busy, a queued execution waiting behind it can be superseded and never run at all — silently skipping a deployment rather than colliding with one already in progress.
+
+Set the pipeline's execution mode to `QUEUED` instead, so waiting executions form a queue and each one runs in turn rather than a later commit erasing an earlier one that never got its turn. `QUEUED` requires a V2 pipeline, so set both `executionMode` and `pipelineType` when you define the pipeline — with the AWS CLI's `create-pipeline`/`update-pipeline`, or as code by setting the `executionMode` and `pipelineType` inputs on the [`aws.codepipeline.Pipeline`](/registry/packages/aws/api-docs/codepipeline/pipeline/) resource described below.
+
 ## Manage the pipeline with Pulumi
 
 The CodeBuild projects, CodePipeline pipelines, IAM roles, and Parameter Store entries described above are themselves AWS resources, so you can define them with Pulumi using the [AWS provider](/registry/packages/aws/). Managing the pipeline as code keeps it versioned, reviewable, and reproducible alongside the infrastructure it deploys.
@@ -161,7 +167,7 @@ If you operate many pipelines that are similar or identical, package the pattern
 
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [OIDC issuers](/docs/administration/guides/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [AWS provider](/registry/packages/aws/) — manage AWS resources, including the pipeline itself, as code.
 - [Component resources](/docs/iac/concepts/components/) — package a reusable pipeline pattern as a single resource.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.

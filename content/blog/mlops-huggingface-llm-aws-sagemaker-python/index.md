@@ -28,15 +28,15 @@ category: tutorials
 [Pulumi Account]:https://app.pulumi.com/signup
 [Pulumi Template]:/blog/how-to-create-and-share-a-pulumi-template
 [Pulumi Templates]:/blog/how-to-create-and-share-a-pulumi-template
-[Pulumi Python]:https://www.pulumi.com/docs/reference/pkg/python/pulumi
+[Pulumi Python]:/docs/reference/pkg/python/pulumi/
 [Infrastructure as Code]:https://www.pulumi.com/what-is/what-is-infrastructure-as-code
 [IaC]:https://www.pulumi.com/what-is/what-is-infrastructure-as-code
 [IAM Roles]:/registry/packages/aws/api-docs/iam/role
 [Amazon SageMaker Model Endpoint]:/registry/packages/aws/api-docs/SageMaker/model
 [CloudWatch alarms]:/registry/packages/aws/api-docs/cloudwatch/metricalarm
-[Pulumi project and stack]:/docs/using-pulumi/organizing-projects-stacks/
-[Pulumi Cloud]:https://www.pulumi.com/product/pulumi-cloud
-[Pulumi state]:https://www.pulumi.com/docs/iac/concepts/state-and-backends
+[Pulumi project and stack]:/docs/iac/guides/basics/organizing-projects-stacks/
+[Pulumi Cloud]:https://www.pulumi.com/product/
+[Pulumi state]:/docs/iac/concepts/state-and-backends/
 [Python Virtual Environment]:/docs/languages-sdks/python/#virtual-environments
 [venv]:/docs/languages-sdks/python/#virtual-environments
 
@@ -98,7 +98,7 @@ mkdir newSageMaker && cd newSageMaker
 pulumi new sagemaker-aws-python
 ```
 
-While creating a new project from the `sagemaker-aws-python` Pulumi template, you will be prompted for a [project](https://www.pulumi.com/docs/concepts/projects/) name, description, [stack](https://www.pulumi.com/docs/concepts/stack/) name, and Amazon Web Service [Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/). You can proceed with defaults, or supply your own.
+While creating a new project from the `sagemaker-aws-python` Pulumi template, you will be prompted for a [project](https://www.pulumi.com/docs/iac/concepts/projects/) name, description, [stack](https://www.pulumi.com/docs/iac/concepts/stacks/) name, and Amazon Web Service [Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/). You can proceed with defaults, or supply your own.
 
 After responding to all prompts, the `pulumi new` command will proceed to setup a [Python Virtual Environment] (venv) and download all dependencies into the [venv].
 

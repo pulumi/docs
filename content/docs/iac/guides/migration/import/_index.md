@@ -16,18 +16,18 @@ aliases:
 
 Most infrastructure as code projects require working with existing cloud resources, whether those resources were originally created with another IaC tool or manually provisioned with a cloud provider console or CLI. Interacting with a previously created cloud resource with Pulumi typically happens in one of two ways:
 
-1. Referencing the properties of the existing cloud resource in order to use those properties to configure a Pulumi-managed resource.
+1. Referencing the properties of the existing cloud resource to configure a Pulumi-managed resource.
 1. Adopting the existing resource to bring it under management by Pulumi.
 
 The first scenario is sometimes called _coexistence_, and you can learn more about it in [Migrating to Pulumi > Coexistence](/docs/iac/guides/migration/#coexistence). The second scenario is called _adoption_ or _import_, and you can learn more about it in the sections that follow.
 
 ## Two recommended approaches to importing resources
 
-There are two recommended ways to bring an existing cloud resource under management by Pulumi:
+Pulumi supports two recommended ways to bring an existing cloud resource under management:
 
 1. **CLI-first import**, in which you run [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) against a specific cloud resource. Pulumi adds the resource to your stack's state and generates the code needed to manage it, which you then copy into your Pulumi program. This approach is best suited to importing a handful of resources at a time.
 
-1. **Program-first import**, sometimes called _bulk import_, in which you write your Pulumi program first --- potentially using [components](/docs/iac/concepts/components/) to describe many resources at once --- and then run [`pulumi preview --import-file`](/docs/iac/cli/commands/pulumi_preview/) to generate an import file listing every resource the program would otherwise create. You fill in the cloud provider ID for each resource in that file, then run `pulumi import --file` to bring all of them under management in a single operation. This approach scales better when you're importing many resources, or resources that are already described by a program you've written.
+1. **Program-first import**, sometimes called _bulk import_, in which you write your Pulumi program first --- potentially using [components](/docs/iac/concepts/components/) to describe many resources at once --- and then run [`pulumi preview --import-file`](/docs/iac/cli/commands/pulumi_preview/) to generate an import file listing every resource the program would otherwise create. You fill in the cloud provider ID for each resource in that file, then run `pulumi import --file` to bring them all under management in a single operation. This approach scales better when you're importing many resources, or resources that are already described by a program you've written.
 
 Both approaches rely on the same underlying mechanics, described in [How resource import works](#how-resource-import-works) below, and both result in resources that are fully managed by Pulumi going forward. A third, older mechanism --- the [`import` resource option](#the-import-resource-option) --- is still supported and explained later in this guide, but it has generally been superseded by the two approaches above.
 
@@ -41,7 +41,7 @@ Import uses the selected stack's configured [provider](/docs/iac/concepts/provid
 
 ### Where to find the type token and lookup property {#where-to-find}
 
-You'll find the type token and lookup property in the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). The type token is quoted in the `pulumi import` example, and the lookup property can be found in the description just above it:
+You'll find the type token and lookup property in the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). The type token is quoted in the `pulumi import` example, and the lookup property can be found in the description immediately above it:
 
 ![Where to find the type token and lookup property for a resource](/docs/iac/guides/migration/import/token-and-lookup.png)
 
@@ -151,6 +151,36 @@ Duration: 2s
 
 Notice that by default, resources imported with the CLI are marked as _protected_ to guard against accidental deletion. If you forgot, for example, to append the generated code to your program before running another `pulumi up`, Pulumi would first interpret the missing code as an intention to delete the new resource, but then fail on the existence of the `protect` property, leaving the resource intact. See the [`protect`](/docs/iac/concepts/resources/options/protect/) documentation to learn more.
 
+### Verify the import
+
+Run `pulumi preview` right after pasting the generated code into your program, before making any other change to it. Because the code came directly from the resource's current state, the preview should report no changes. Any proposed change is a difference the import didn't fully resolve, and it's worth understanding before you run `pulumi up` or edit the code further.
+
+A handful of causes account for most of these diffs. Values the resource never returns at all, such as passwords and other write-only fields, are typically left out of the generated code entirely, so you need to add them back to your program by hand, often as [secrets](/docs/iac/concepts/secrets/), before the two versions actually match. Providers can also normalize or compute values on read in ways the generated code doesn't fully anticipate: the [`aws.s3.Bucket`](/registry/packages/aws/api-docs/s3/bucket/#tagsall_nodejs) resource, for example, computes a `tagsAll` property from `tags` plus the provider's own `defaultTags` configuration, and other resources can surface similar computed or normalized properties of their own. If you're hand-authoring a program to describe an existing resource rather than pasting in the generated code directly, small differences in how you expressed otherwise-equivalent values are a common source too.
+
+Pay particular attention to a diff that proposes `replace` rather than `update`. `pulumi import` marks every resource it creates with the `protect` option, so Pulumi refuses to delete or replace it, and a `pulumi up` that proposes a replacement fails rather than proceeding. Don't remove `protect` to work around that error. Treat a proposed replacement of an imported resource as something to investigate, not something to accept, particularly in production: work out which property is driving the diff and why before you apply it.
+
+The fix in almost every case is to adjust the program so it matches the resource's actual state, the same way you'd resolve any [mismatched state](#mismatched-state) surfaced when importing with the `import` resource option. Reserve [`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/) for properties that are genuinely managed outside your Pulumi program, such as by another team, a separate tool, or the cloud provider itself, rather than as a way to silence a diff before you've worked out what's causing it.
+
+### Importing a resource managed by a non-default provider
+
+By default, `pulumi import` looks up the resource using the stack's default provider for that resource's package. If the resource you're importing is actually managed by an explicit [provider resource](/docs/iac/concepts/resources/options/provider/) in your program --- for example, a provider configured for a different account, region, or set of credentials than the default --- you need to tell `pulumi import` which provider to use. Otherwise, the import will either fail to locate the resource or bring it under management by the wrong provider, and you'll see a diff or a replacement the next time you run `pulumi preview`.
+
+Use the `--provider` flag to specify the provider by name and URN, in the form `name=urn`:
+
+```bash
+$ pulumi import <type> <name> <id> --provider <providerName>=<providerUrn>
+```
+
+`<providerName>` is the variable name the generated code will use to reference the provider, and `<providerUrn>` is the URN of the existing provider resource already present in your stack.
+
+To find a provider resource's URN, run [`pulumi stack --show-urns`](/docs/iac/cli/commands/pulumi_stack/) and look for a resource with a type token of the form `pulumi:providers:<package>`, or inspect the output of [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export/). For example, importing an Amazon S3 bucket using an explicit AWS provider named `usEast1` would look like this:
+
+```bash
+$ pulumi import aws:s3/bucket:Bucket infra-logs company-infra-logs --provider usEast1=urn:pulumi:dev::my-project::pulumi:providers:aws::usEast1::12345678-90ab-cdef-1234-567890abcdef
+```
+
+The [`--parent`](/docs/iac/cli/commands/pulumi_import/) flag, used when the imported resource is a child of a component, accepts the same `name=urn` format. If you're importing many resources that share a non-default provider, consider the [program-first (bulk) import](#approach-2-program-first-bulk-import) approach instead, whose [import file schema](#import-file-schema) lets you set a `provider` field once per resource entry.
+
 ### Demo
 
 The following short video illustrates the `pulumi import` process end to end:
@@ -159,56 +189,45 @@ The following short video illustrates the `pulumi import` process end to end:
 
 ## Approach 2: Program-first (bulk) import
 
-If you're importing many resources at once, or resources that are already described by a Pulumi program --- for example, a set of [components](/docs/iac/concepts/components/) --- it's usually easier to let Pulumi generate the import file for you rather than writing it by hand. The workflow has four steps:
+If you're importing many resources at once, or resources that are already described by a Pulumi program --- for example, a set of [components](/docs/iac/concepts/components/) --- it's usually easier to let Pulumi generate the import file for you rather than writing it by hand. The workflow has five steps:
 
 1. Write the Pulumi program that describes the infrastructure you want to import, using resources or components as appropriate. Don't run `pulumi up` yet --- the resources described by the program already exist in your cloud account, so applying the program as written would try to create them again.
-1. Run `pulumi preview --import-file <path>` to generate an import file for every resource the program would otherwise create. The generated file already has each resource's name, [URN](/docs/iac/concepts/resources/names/#urns), and type filled in, with a blank `id` field for each one.
+1. Run `pulumi preview --import-file <path>` to generate an import file for every resource the program would otherwise create. The generated file already has each resource's name and type filled in, leaving the `id` field for you to complete.
 1. Edit the generated file, filling in the `id` field for each resource with its identifier from the cloud provider.
 1. Run `pulumi import --file <path>` to import all of the resources into your stack's state in a single operation.
+1. Run `pulumi preview` to confirm that your program and the newly imported state agree. From this point forward, the resources are managed by Pulumi, and `pulumi up` behaves as though Pulumi had provisioned them from the outset.
 
 ### Example: Import a component with all resources
 
-In this example, the Pulumi program defines a VPC component from the AWS Crosswalk for Pulumi library. The component is imported into the program using the `pulumi import` command.
+In this example, the Pulumi program defines a VPC component from the `awsx` package. The component is imported into the program using the `pulumi import` command.
 
 The following code creates a new VPC using all default settings:
 
 {{< example-program path="awsx-vpc" >}}
 
-Here is how you can import your existing infrastructure to start managing it with Pulumi:
+Running step 2 of the workflow above --- `pulumi preview --import-file import.json` --- against this program produces an `import.json` file like the following:
 
-1. `pulumi preview --import-file import.json` to generate a placeholder import file for every resource that would be created. The resulting `import.json` file will look like this:
+```json
+{
+    "resources": [
+        {
+            "type": "awsx:ec2:Vpc",
+            "name": "vpc",
+            "component": true
+        },
+        {
+            "type": "aws:ec2/vpc:Vpc",
+            "name": "vpcVpc",
+            "id": "<PLACEHOLDER>",
+            "parent": "vpc",
+            "logicalName": "vpc"
+        },
+        //... more resources
+    ]
+}
+```
 
-    ```json
-    {
-        "resources": [
-            {
-                "type": "awsx:ec2:Vpc",
-                "name": "vpc",
-                "component": true
-            },
-            {
-                "type": "aws:ec2/vpc:Vpc",
-                "name": "vpcVpc",
-                "id": "<PLACEHOLDER>",
-                "parent": "vpc",
-                "logicalName": "vpc"
-            },
-            //... more resources
-        ]
-    }
-    ```
-
-    Note that the component is defined as a separate resource, and all `parent` values are set according to the preview.
-
-2. Edit the JSON file to replace all `<PLACEHOLDER>` values with existing resource IDs from your AWS account.
-
-3. Import all the resources in one operation with:
-
-    ```
-    pulumi import --file import.json
-    ```
-
-The same approach can be used to import any component resource and its sub-resources.
+Note that the component is defined as a separate resource, and all `parent` values are set according to the preview. Fill in the `<PLACEHOLDER>` values with the resource IDs from your AWS account, then run `pulumi import --file import.json` to import the component and its sub-resources in a single operation. The same approach can be used to import any component resource and its sub-resources.
 
 ### Authoring an import file by hand
 
@@ -216,23 +235,23 @@ You can also author an import file by hand rather than generating one with `pulu
 
 ```json
 {
-	"resources": [
+    "resources": [
         {
-			"type": "aws:ec2/vpc:Vpc",
-			"name": "application-vpc",
-			"id": "vpc-0ad77710973388316"
-		},
-		{
-			"type": "aws:ec2/subnet:Subnet",
-			"name": "public-1",
-			"id": "subnet-0fb5fdff92b9e5a3b"
-		},
-		{
-			"type": "aws:ec2/subnet:Subnet",
-			"name": "private-1",
-			"id": "subnet-0a39d25dd9f7b7808"
-		}
-	]
+            "type": "aws:ec2/vpc:Vpc",
+            "name": "application-vpc",
+            "id": "vpc-0ad77710973388316"
+        },
+        {
+            "type": "aws:ec2/subnet:Subnet",
+            "name": "public-1",
+            "id": "subnet-0fb5fdff92b9e5a3b"
+        },
+        {
+            "type": "aws:ec2/subnet:Subnet",
+            "name": "private-1",
+            "id": "subnet-0a39d25dd9f7b7808"
+        }
+    ]
 }
 ```
 
@@ -242,9 +261,9 @@ Pass the path to the JSON file using the `--file` (`-f`) option:
 $ pulumi import --file ./my-resources.json
 ```
 
-After adding the specified resources to the current stack state, Pulumi will generate all of the code necessary for managing the resources from that point forward:
+After adding the specified resources to the current stack state, Pulumi generates the code necessary for managing the resources from that point forward:
 
-{{< chooser language "typescript,python,csharp,go" >}}
+{{< chooser language "typescript,python,csharp,go,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -476,7 +495,91 @@ class MyStack : Stack
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    aws = {
+      source = "pulumi/aws"
+    }
+  }
+}
+
+resource "aws_ec2_vpc" "application-vpc" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_generated_ipv6_cidr_block = false
+  cidr_block                       = "172.16.0.0/16"
+  enable_dns_support               = true
+  instance_tenancy                 = "default"
+  tags = {
+    "Name"    = "pulumi-vpc"
+    "Owner"   = "pulumi"
+    "Project" = "pulumi-k8s-aws-cluster"
+  }
+}
+
+resource "aws_ec2_subnet" "public-1" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_ipv6_address_on_creation = false
+  cidr_block                      = "172.16.32.0/19"
+  map_public_ip_on_launch         = true
+  tags = {
+    "Name"                   = "pulumi-vpc-public-1"
+    "Owner"                  = "pulumi"
+    "Project"                = "pulumi-k8s-aws-cluster"
+    "kubernetes.io/role/elb" = "1"
+    "type"                   = "public"
+  }
+  vpc_id = "vpc-0ad77710973388316"
+}
+
+resource "aws_ec2_subnet" "private-1" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_ipv6_address_on_creation = false
+  cidr_block                      = "172.16.160.0/19"
+  map_public_ip_on_launch         = false
+  tags = {
+    "Name"                            = "pulumi-vpc-private-1"
+    "Owner"                           = "pulumi"
+    "Project"                         = "pulumi-k8s-aws-cluster"
+    "kubernetes.io/role/internal-elb" = "1"
+    "type"                            = "private"
+  }
+  vpc_id = "vpc-0ad77710973388316"
+}
+```
+
+The import file names resources by Pulumi type tokens such as `aws:ec2/vpc:Vpc`, so the generated program uses the `pulumi/aws` provider and its matching types (`aws_ec2_vpc`, `aws_ec2_subnet`). Keep that provider. The Terraform `aws` provider's `aws_vpc` and `aws_subnet` register under different tokens (`aws:index:Vpc`), so Pulumi would treat them as new resources rather than the ones you just imported.
+
+If the resources you are importing are already described by a Terraform or OpenTofu state file, skip the import file entirely and point the converter at the state file instead:
+
+```bash
+$ pulumi import --from hcl terraform.tfstate
+```
+
+This reads your `.tf` files alongside the state file, so run it from the project directory. See [Keep your code in HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#keep-your-code-in-hcl) for the full workflow.
+
+{{% /choosable %}}
+
 {{% /chooser %}}
+
+### Import file schema
 
 The bulk import JSON file follows this schema:
 
@@ -492,19 +595,17 @@ A `Resource` has the following schema:
 | `id`         | `string`        | Yes      | The provider determined ID for this resource type. This is required unless `component` is `true`.                                                                |
 | `type`       | `Type Token`    | Yes      | The type of the corresponding Pulumi resource.                                                                                                                 |
 | `name`       | `string`        | Yes      | The name of the resource.                                                                                                                                      |
-| `logicalName` | `string`       | No       | The [logical name](/docs/concepts/resources/names/#logicalname) of the resource. The original `name` property is then used just for codegen purposes (i.e. the source name). If either property is not set then the other field is used to fill it in. |
-| `parent`     | `string`        | No       | The name of the [parent](/docs/concepts/options/parent/) resource. The mentioned name must be present in the `nameTable`.                                      |
-| `provider`   | `string`        | No       | The name of the [provider](/docs/concepts/options/provider/) resource. The mentioned name must be present in the `nameTable`. |
-| `version`    | `string`        | No       | The [version](/docs/concepts/options/version/) of the provider to use.                                                        |
+| `logicalName` | `string`       | No       | The [logical name](/docs/iac/concepts/resources/names/#logicalname) of the resource. The original `name` property is then used only for codegen purposes (i.e. the source name). If either property is not set then the other field is used to fill it in. |
+| `parent`     | `string`        | No       | The name of the [parent](/docs/iac/concepts/resources/options/parent/) resource. The mentioned name must be present in the `nameTable`.                                      |
+| `provider`   | `string`        | No       | The name of the [provider](/docs/iac/concepts/resources/options/provider/) resource. The mentioned name must be present in the `nameTable`. |
+| `version`    | `string`        | No       | The [version](/docs/iac/concepts/resources/options/version/) of the provider to use.                                                        |
 | `properties` | `array[string]` | No       | The list of properties to include in the generated code. If unspecified all properties will be included.                                                       |
 | `component`  | `boolean`       | No       | This import should create an empty component resource. `id` must not be set if this is `true`.                                                                 |
-| `remote`     | `boolean`       | No       | This is a component in a [component package](/docs/using-pulumi/pulumi-packages/#types-of-pulumi-packages). `component` must be `true` if this is `true`.      |
-
-To make it easier to import resources into complex programs, you can run `pulumi preview --import-file <file>` to generate a placeholder import file for every resource that would be created. The generated file will contain all the names, URNs, and types already filled in, with blank `id` fields that need to be filled in.
+| `remote`     | `boolean`       | No       | This is a component in a [component package](/docs/iac/concepts/packages/). `component` must be `true` if this is `true`.      |
 
 ## The `import` resource option
 
-Before `pulumi preview --import-file` existed, the [`import` resource option](/docs/concepts/options/import/) was the recommended way to import multiple resources across multiple stacks or deployment environments: you added the option to a resource declaration you'd already written, and Pulumi imported the resource on the next update. It's documented here for completeness and because existing programs still use it, but for new work prefer CLI-first import or program-first (bulk) import, described above.
+Before `pulumi preview --import-file` existed, the [`import` resource option](/docs/iac/concepts/resources/options/import/) was the recommended way to import multiple resources across multiple stacks or deployment environments: you added the option to a resource declaration you'd already written, and Pulumi imported the resource on the next update. It's documented here for completeness and because existing programs still use it, but for new work prefer CLI-first import or program-first (bulk) import, described above.
 
 Code-based import also differs from the CLI-based approach in that it doesn't imperatively modify the state of the current stack. Whereas running `pulumi import` with the CLI adds imported resources to your stack state directly, using the `import` resource option delegates that responsibility to the program to be handled as part of the normal infrastructure lifecycle --- for example, on the next `pulumi up`.
 
@@ -512,7 +613,7 @@ Code-based import also differs from the CLI-based approach in that it doesn't im
 
 The following example imports an existing AWS EC2 security group with an assigned cloud provider ID of `sg-04aeda9a214730248`:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -599,6 +700,40 @@ var group = new SecurityGroup("my-sg",
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+
+resource "aws_security_group" "my_sg" {
+  name = "my-sg-62a569b"
+
+  ingress {
+    protocol    = "tcp"
+    from_port   = 80
+    to_port     = 80
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  pulumi {
+    import_id = "sg-04aeda9a214730248"
+  }
+}
+```
+
+A standalone [`import` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#import-blocks) does the same job and leaves the resource body unchanged:
+
+```hcl
+import {
+  to = aws_security_group.my_sg
+  id = "sg-04aeda9a214730248"
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 When Pulumi encounters a resource with the `import` option set, it looks up the resource in the cloud provider using the specified ID, where the ID value corresponds to the resource's [designated lookup property](#where-to-find). On the next `pulumi up`, if the resource is found, you'll notice an `=` symbol beside the resource indicating that it'll be imported:
@@ -616,7 +751,7 @@ Resources:
     1 unchanged
 ```
 
-If the resource isn't found, the preview will fail:
+If the resource isn't found, the preview fails:
 
 ```
 error: Preview failed: importing sg-04aeda9a214730248: security group not found
@@ -624,11 +759,11 @@ error: Preview failed: importing sg-04aeda9a214730248: security group not found
 
 After successfully importing a resource, you can delete the `import` option if you like, then re-run `pulumi up`, and all subsequent operations will now behave as though Pulumi had provisioned the imported resource from the outset.
 
-Be aware this applies to `destroy` operations also. Once an imported resource has been brought under management with Pulumi, destroying its containing stack will delete the imported resource as well in the usual way. If you wish to ensure that an imported resource survives through `pulumi destroy`, consider using the [`retainOnDelete`](/docs/concepts/options/protect/) resource option.
+Be aware this applies to `destroy` operations also. Once an imported resource has been brought under management with Pulumi, destroying its containing stack will delete the imported resource as well in the usual way. If you wish to ensure that an imported resource survives through `pulumi destroy`, consider using the [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/) resource option.
 
 ### Mismatched state
 
-When importing resources using the `import` resource option, the Pulumi engine compares the properties specified in your program with the actual state of the existing cloud resource. If there are differences, the engine will still perform the import and then issue an update step to reconcile the differences between the imported state and your program's desired state.
+When importing resources using the `import` resource option, the Pulumi engine compares the properties specified in your program with the actual state of the existing cloud resource. If there are differences, the engine still performs the import and then issues an update step to reconcile the differences between the imported state and your program's desired state.
 
 For instance, keeping with the example above, if you'd specified the wrong `ingress` rule by choosing port `22` instead of port `80`, you'd see a diff during preview showing both the import and a subsequent update:
 
@@ -672,5 +807,5 @@ To see details on what specifically doesn't match, you can select the `details` 
 After the import completes, Pulumi applies the update to bring the resource's configuration into alignment with your program's desired state. If you want the program to match the existing resource exactly without any updates, correct the mismatched properties in your code before running `pulumi up`.
 
 {{% notes type="info" %}}
-[Auto-named](/docs/concepts/resources/#autonaming) resources import cleanly: Pulumi reads the imported resource's actual name from the cloud provider and uses it before the update checks run, so auto-naming does not produce a name mismatch. That said, if you want subsequent updates to preserve a specific name — for example, to handle naming conflicts across multiple stacks — specify the `name` property explicitly, using [Pulumi configuration](/docs/concepts/config/) where necessary.
+[Auto-named](/docs/iac/concepts/resources/names/#autonaming) resources import cleanly: Pulumi reads the imported resource's actual name from the cloud provider and uses it before the update checks run, so auto-naming does not produce a name mismatch. That said, if you want later updates to preserve a specific name — for example, to handle naming conflicts across multiple stacks — specify the `name` property explicitly, using [Pulumi configuration](/docs/iac/concepts/config/) where necessary.
 {{% /notes %}}

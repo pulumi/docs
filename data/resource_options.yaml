@@ -52,7 +52,7 @@
 #                           `inherited_by_children` below and `note`).
 #   typed_on                base | custom-options | component-options
 #                           Where the option is declared in the strongly
-#                           typed SDKs (TypeScript, C#, Java). Options on
+#                           typed SDKs (TypeScript, .NET, Java). Options on
 #                           `CustomResourceOptions` or
 #                           `ComponentResourceOptions` are compile-time
 #                           enforced; options on the base `ResourceOptions`
@@ -240,6 +240,12 @@ retainOnDelete:
     don't have cloud resources to retain. The value propagates to every child
     custom resource of the component, which is the idiomatic way to retain a
     whole subtree.
+
+stateMigrations:
+  description: Migrate a component’s saved state and its children before calculating changes.
+  applies_to: both
+  typed_on: base
+  inherited_by_children: no
 
 transformations:
   description: Dynamically transform a resource's properties (prefer `transforms`).

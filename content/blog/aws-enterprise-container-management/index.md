@@ -55,11 +55,11 @@ Logging and monitoring are critical capabilities for keeping tabs on the health 
 
 ### Authentication and Authorization
 
-Adhering to the principle of least privilege for users and roles is an important step in securing your clusters and Pulumi has many capabilities to help you manage the complexities of authentication and authorization. For example, with Pulumi you can [create and manage AWS IAM roles](/docs/iac/guides/clouds/aws/iam/) and you can integrate Pulumi Enterprise with your centralized identity and access management platform of choice via [SAML 2.0](/docs/administration/access-identity/saml/sso/) and [OIDC](/blog/eks-oidc/).
+Adhering to the principle of least privilege for users and roles is an important step in securing your clusters and Pulumi has many capabilities to help you manage the complexities of authentication and authorization. For example, with Pulumi you can [create and manage AWS IAM roles](/docs/iac/guides/clouds/aws/iam/) and you can integrate Pulumi Enterprise with your centralized identity and access management platform of choice via [SAML 2.0](/docs/administration/guides/saml/sso/) and [OIDC](/blog/eks-oidc/).
 
 ### Centralized Governance and Compliance Controls
 
-Many customers are using Pulumi and Kubernetes to stand up shared services platforms (SSP) to empower their developers to self-service new infrastructure environments. To keep these environments compliant with internal policies, Pulumi Business Critical Edition includes [CrossGuard](/docs/insights/policy/) policy-as-code capabilities built-in.  This helps operators to ensure that configuration mistakes won’t reach production with policies that are enforced organization-wide.
+Many customers are using Pulumi and Kubernetes to stand up shared services platforms (SSP) to empower their developers to self-service new infrastructure environments. To keep these environments compliant with internal policies, Pulumi Business Critical Edition includes [CrossGuard](/docs/discovery-governance/policy/) policy-as-code capabilities built-in.  This helps operators to ensure that configuration mistakes won’t reach production with policies that are enforced organization-wide.
 
 ### Support for Hybrid Deployments
 
