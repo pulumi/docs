@@ -354,6 +354,12 @@ def build(author_body: str, brief_body: str, base: dict,
             "and not rewritten as **Spurious:** / **Mis-sourced:** / **Pre-existing:** — "
             "findings are dispositioned, never deleted"
         )
+    # The composer files some findings straight into `preexisting` (an
+    # unverifiable claim on a line the PR didn't write) without a card row;
+    # they reach the evidence page from the base, not from the drafts.
+    for fid, f in base_findings.items():
+        if fid not in seen_ids and f.get("bucket") == "preexisting":
+            findings.append(dict(f))
 
     # Detail blocks: every block pairs with an open blocking row on the
     # author card; blocks of dropped (Spurious/Pre-existing) rows are dropped
