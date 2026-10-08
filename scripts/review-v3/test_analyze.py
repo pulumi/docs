@@ -559,7 +559,10 @@ def test_handed_off_teams_map_through_routing():
              stampable(2, title="Marketing's", requested_teams=["docs-marketing-review"], files=[_file("content/docs/b.md", ["x"])])],
             cfg=cfg(me=["docs"]))
     assert row(q, 1)["handed_off"] is False  # docs-guild owns a lane in me
-    assert row(q, 2)["handed_off_to"] == ["@docs-marketing-review"]
+    assert row(q, 2)["handed_off"] is False  # a docs row is mine whichever team is also asked
+    q = run([stampable(3, title="Blog's", requested_teams=["docs-blog-review"], files=[_file("content/blog/x/index.md", ["x"])])],
+            cfg=cfg(me=["docs"]))
+    assert row(q, 3)["handed_off_to"] == ["@docs-blog-review"]  # not my lane: the team request still hands it off
     assert analyze.team_lanes("docs-tools", CONFIG) == {"infra", "other"} and analyze.team_lanes("nope", CONFIG) == set()
 
 
