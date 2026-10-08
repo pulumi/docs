@@ -10,10 +10,6 @@ menu:
         name: Crossplane
         parent: iac-comparisons
         weight: 29
-    concepts:
-        identifier: vs-crossplane
-        parent: vs
-        weight: 70
 aliases:
 - /docs/reference/vs/crossplane/
 - /docs/intro/vs/crossplane/
@@ -21,7 +17,7 @@ aliases:
 - /docs/iac/concepts/vs/crossplane/
 ---
 
-Pulumi and [Crossplane](https://www.crossplane.io/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms, but they take different architectural approaches. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML) and runs through a CLI or an embeddable SDK. Crossplane extends Kubernetes into a control plane: infrastructure is defined as Kubernetes resources in YAML and reconciled continuously by controllers running inside a cluster.
+Pulumi and [Crossplane](https://www.crossplane.io/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms, but they take different architectural approaches. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), plus YAML and [HCL](/docs/iac/languages-sdks/hcl/), and runs through a CLI or an embeddable SDK. Crossplane extends Kubernetes into a control plane: infrastructure is defined as Kubernetes resources in YAML and reconciled continuously by controllers running inside a cluster.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of Crossplane.
 
@@ -43,7 +39,7 @@ With Crossplane, infrastructure is expressed as Kubernetes resources written in 
 
 | Feature | Pulumi | Crossplane |
 | --- | --- | --- |
-| Language support | Python, TypeScript, JavaScript, Go, C#, Java, and YAML — general-purpose languages with familiar syntax for loops, conditionals, and abstractions | [Kubernetes YAML manifests](https://docs.crossplane.io/latest/) for declaring resources; Go is used to build providers and composition functions |
+| Language support | {{< pulumi-languages "general-purpose" >}} — general-purpose languages with familiar syntax for loops, conditionals, and abstractions — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/) | [Kubernetes YAML manifests](https://docs.crossplane.io/latest/) for declaring resources; Go is used to build providers and composition functions |
 | Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated from upstream API schemas; [any OpenTofu or Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be generated into a Pulumi SDK with `pulumi package add terraform-provider <name>` | [Crossplane providers](https://docs.crossplane.io/latest/packages/providers/) installed into the cluster as packages; official AWS, Azure, and Google Cloud providers plus community providers, many generated from Terraform providers via [Upjet](https://github.com/crossplane/upjet) |
 | Transpiled to another format? | No — programs run directly in their host language | No — YAML manifests are reconciled directly by Crossplane controllers |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | Stored in the Kubernetes cluster's etcd datastore as the status of resource objects; no separate state file |
@@ -53,7 +49,7 @@ With Crossplane, infrastructure is expressed as Kubernetes resources written in 
 | Programmatic API for tools and platforms | [Automation API](/docs/iac/concepts/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | The Kubernetes API itself is the programmatic interface; tools and platforms interact with Crossplane by creating and reading Kubernetes resources |
 | Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers (npm, PyPI, NuGet, Maven, Go modules); and the [Pulumi Registry](/registry/) for publicly available packages | [Composite Resource Definitions (XRDs) and Compositions](https://docs.crossplane.io/latest/composition/compositions/) define reusable APIs; [composition functions](https://docs.crossplane.io/latest/composition/composition-functions/) add programmatic logic; packaged and distributed as [Crossplane configuration packages](https://docs.crossplane.io/latest/packages/configurations/) |
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | Existing resources are brought under management by applying a manifest with the appropriate [external-name annotation](https://docs.crossplane.io/latest/guides/import-existing-resources/) so the controller adopts them |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | No built-in policy-as-code; teams typically use Kubernetes admission-control tools such as [Open Policy Agent Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/) to enforce policy on Crossplane resources |
+| Policy as code | [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | No built-in policy-as-code; teams typically use Kubernetes admission-control tools such as [Open Policy Agent Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/) to enforce policy on Crossplane resources |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | Yes — [Apache License 2.0](https://github.com/crossplane/crossplane/blob/main/LICENSE) |
 | Commercial option | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) | None from the Crossplane project itself; managed control planes and an enterprise distribution are offered by [Upbound](https://www.upbound.io/) |
 
@@ -87,7 +83,7 @@ Pulumi treats secrets as a first-class primitive. Values marked as secrets are e
 
 ### Policy as code
 
-[Pulumi Policies](/docs/insights/policy/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS). Crossplane has no built-in policy-as-code feature; because Crossplane resources are Kubernetes objects, teams typically enforce policy with Kubernetes admission controllers such as [Open Policy Agent Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/).
+[Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS). Crossplane has no built-in policy-as-code feature; because Crossplane resources are Kubernetes objects, teams typically enforce policy with Kubernetes admission controllers such as [Open Policy Agent Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/).
 
 ### Modularity and reuse
 
@@ -146,11 +142,11 @@ You have options that can be combined: convert Crossplane YAML manifests with [`
 
 ### Is Pulumi free like Crossplane?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. Crossplane itself is free under Apache 2.0; managed control planes and an enterprise distribution are sold separately by Upbound.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) includes managed state in the Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management. Crossplane itself is free under Apache 2.0; managed control planes and an enterprise distribution are sold separately by Upbound.
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Get started with Pulumi and Kubernetes](/docs/iac/get-started/kubernetes/)
 - [Pulumi Kubernetes provider](/registry/packages/kubernetes/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)

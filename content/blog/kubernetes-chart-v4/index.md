@@ -31,7 +31,7 @@ Let's look at what's new with Chart v4.
 
 ### New language support - Java SDK & YAML SDK
 
-The Chart v4 resource is a [Pulumi Component](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/#types-of-pulumi-packages) that works
+The Chart v4 resource is a [Pulumi Component](/docs/iac/guides/building-extending/providers/debugging-providers/#types-of-pulumi-packages) that works
 consistently across all Pulumi SDKs. Earlier versions were implemented separately for each SDK, leading to various
 inconsistencies and limited SDK support.
 
@@ -188,7 +188,7 @@ Pulumi automatically rebuilds the chart's dependencies if a lock file is present
 ### Better handling of chart values
 
 Chart v4 offers new ways to work with Chart values. It is now possible to use multiple values files and to use
-[Pulumi Assets](/docs/concepts/assets-archives/#assets). Of course you can also use output values from other
+[Pulumi Assets](/docs/iac/concepts/assets-archives/#assets). Of course you can also use output values from other
 resources as chart values.
 
 It is also possible to set a chart value to the contents of a text file, similarly to using Helm's `--set-file` argument.
@@ -418,7 +418,7 @@ For resources in the “core” group, the empty string is used instead (for exa
 
 Pulumi has a new way to transform component resources and their children, the `transforms`  options. The older
 `transformations` option doesn't work with multi-language components like Chart v4. See
-[Resource Option: transforms](/docs/concepts/options/transforms/) for more details.
+[Resource Option: transforms](/docs/iac/concepts/resources/options/transforms/) for more details.
 
 Note: you cannot change an object's namespace or name using a Pulumi transformation, and you cannot add or discard
 an object.
@@ -1085,6 +1085,6 @@ such as an IAM Role or cloud storage bucket. Such combinations make for great re
 Check out the following links to learn more about Pulumi Kubernetes today!
 
 - [Getting Started](/docs/iac/get-started/kubernetes/)
-- [Documentation](/docs/clouds/kubernetes/)
+- [Documentation](/docs/integrations/clouds/kubernetes/)
 - [Open Source](https://github.com/pulumi/pulumi-kubernetes)
 - [Community Slack](https://slack.pulumi.com/)

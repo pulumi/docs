@@ -185,7 +185,7 @@ vpc.privateSubnetIds.apply(ids => {
 ```
 
 {{% notes type="info" %}}
-If you are unfamiliar with the call to `apply()`, you can learn more about why this is necessary in [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/#apply). Creating resources within `apply` is usually not necessary, but this is one of the few cases where it is.
+If you are unfamiliar with the call to `apply()`, you can learn more about why this is necessary in [Inputs and Outputs](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/#apply). Creating resources within `apply` is usually not necessary, but this is one of the few cases where it is.
 {{% /notes %}}
 
 Now, deploy the infrastructure using the `pulumi up` command:
@@ -308,8 +308,8 @@ Now that you have proven that the architecture works, here are some next steps y
 
 * Replace the EC2 test instance with a real workload that uses Redis:
   * If your workload is running on EC2, then the code in this post should get you up and running. However, if you find you need some help [Pulumi Neo](https://www.pulumi.com/product/neo/) can be a very helpful resource. Simply enter a natural language query and select a support Pulumi language, and Pulumi AI will generate a Pulumi program that can be copy/pasted into your program and iterated on in the same Pulumi AI conversation.
-  * If you're using another AWS compute platform, Pulumi also has helpful guides for creating workloads on [ECS](https://www.pulumi.com/docs/iac/clouds/aws/guides/ecs/), [EKS](https://www.pulumi.com/docs/iac/clouds/aws/guides/eks/), or [Lambda](https://www.pulumi.com/docs/iac/clouds/aws/guides/lambda/).
+  * If you're using another AWS compute platform, Pulumi also has helpful guides for creating workloads on [ECS](/docs/iac/guides/clouds/aws/ecs/), [EKS](/docs/iac/guides/clouds/aws/eks/), or [Lambda](/docs/iac/guides/clouds/aws/lambda/).
 * Try creating [Redis Cloud clusters peered with Google Cloud](https://www.pulumi.com/registry/packages/rediscloud/api-docs/subscriptionpeering/#gcp).
-* If you're comfortable using Pulumi and are thinking of adopting it at a team or organizational level, consider [creating an organization in Pulumi Cloud](https://www.pulumi.com/docs/pulumi-cloud/admin/organizations/) and enjoying a [2-week free trial of our full set of features](https://app.pulumi.com/signup), no credit card required!
+* If you're comfortable using Pulumi and are thinking of adopting it at a team or organizational level, consider [creating an organization in Pulumi Cloud](/docs/administration/concepts/organizations/) and enjoying a [2-week free trial of our full set of features](https://app.pulumi.com/signup), no credit card required!
 
 With Redis Cloud you can enjoy lightning-fast access to whatever data your application needs. When Redis Cloud is coupled with Pulumi, you can manage your Redis databases and all your other cloud infrastructure using a single tool, in any language. That's powerful stuff!

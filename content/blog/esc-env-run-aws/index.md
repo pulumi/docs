@@ -14,7 +14,7 @@ tags:
 category: tutorials
 ---
 
-In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/), the focus of which is to help alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. It’s like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the `pulumi env run` functionality of Pulumi ESC will make that easier.
+In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called [Pulumi ESC (Environments, Secrets, and Configuration)](/product/secrets-management/), the focus of which is to help alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. It’s like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the `pulumi env run` functionality of Pulumi ESC will make that easier.
 
 <!--more-->
 
@@ -40,7 +40,7 @@ Now that we've covered the basics of what `pulumi env run` does, let's dive into
 
 ### Step 1: Install and log in to the Pulumi CLI
 
-To begin, you’ll need to [install the Pulumi CLI](/docs/iac/download-install/). Once the installation is complete, run the `pulumi login` command and follow the steps to log in to the CLI.
+To begin, you’ll need to [install the Pulumi CLI](/docs/install/). Once the installation is complete, run the `pulumi login` command and follow the steps to log in to the CLI.
 
 ```
 $ pulumi login
@@ -55,7 +55,7 @@ Logged in to pulumi.com as …
 
 Pulumi ESC offers you the ability to [manually set your credentials as secrets](/docs/iac/cli/commands/pulumi_env_set/) in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
 
-This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, you'll need to [configure OIDC between Pulumi and AWS](/docs/pulumi-cloud/esc/providers/#setting-up-oidc). On the AWS side, there are two resources you'll need to create:
+This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, you'll need to [configure OIDC between Pulumi and AWS](/docs/esc/providers/#setting-up-oidc). On the AWS side, there are two resources you'll need to create:
 
 - An IAM OIDC provider
 - An IAM Role
@@ -111,7 +111,7 @@ One area that we want to draw your attention to is the **Select trusted entities
 
 ![An image of the IAM role trust policy](/blog/esc-env-run-aws/review-trust-policy.png)
 
-This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. This more detailed configuration is outside the scope of this blog post, but you can learn more about it by checking out the [relevant Pulumi documentation](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#configuring-the-iam-role-and-trust-policy).
+This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. This more detailed configuration is outside the scope of this blog post, but you can learn more about it by checking out the [relevant Pulumi documentation](/docs/esc/providers/login/aws-login/).
 
 After creating your role, make sure to make a note of your role’s ARN value as you will need it in the next step.
 
@@ -140,7 +140,7 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-The variables defined under the `environmentVariables` parameter above are the same environment variables that the AWS CLI uses if you were authenticating with something like the `aws configure` command.  What the above configuration is doing is dynamically generating the credentials and projecting those credential values into your local environment. From there, the AWS CLI picks up those environment variables and runs the designated command. You can find out more about this provider definition and how it works in the Pulumi ESC documentation for [the AWS provider](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#example) as well as the documentation for [projecting environment variables](https://www.pulumi.com/docs/pulumi-cloud/esc/environments/#projecting-environment-variables).
+The variables defined under the `environmentVariables` parameter above are the same environment variables that the AWS CLI uses if you were authenticating with something like the `aws configure` command.  What the above configuration is doing is dynamically generating the credentials and projecting those credential values into your local environment. From there, the AWS CLI picks up those environment variables and runs the designated command. You can find out more about this provider definition and how it works in the Pulumi ESC documentation for [the AWS provider](/docs/esc/providers/login/aws-login/#examples) as well as the documentation for [projecting environment variables](/docs/esc/concepts/environments/).
 
 Click **Save**.
 

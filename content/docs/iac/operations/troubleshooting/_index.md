@@ -69,6 +69,11 @@ sections:
     link: /docs/iac/operations/troubleshooting/architecture-mismatch/
     description: Fix crashes or hangs on Apple Silicon caused by x86_64 binaries running under Rosetta 2.
 
+  - icon: warning
+    heading: Output Value Errors
+    link: /docs/iac/operations/troubleshooting/output-values/
+    description: Diagnose errors from stringifying, branching on, or reading an output value like a plain value.
+
 - type: button-cards
   heading: Related
   cards:
@@ -95,7 +100,7 @@ sections:
   - icon: chart-bar
     heading: Logging
     link: /docs/iac/operations/debugging/logging/
-    description: CLI verbose logging and program logging for debugging and diagnostics.
+    description: Automatic logging, CLI verbose logging, and program logging for debugging and diagnostics.
 
   - icon: wrench
     heading: Using Dev Builds
@@ -107,6 +112,7 @@ sections:
   description_md: |
     - Join [Community Slack](https://slack.pulumi.com) for fast community support
     - See our [guide for filing GitHub issues](/docs/support/filing-issues/) to report bugs in the right repository
+    - Run `pulumi logs share` to securely send the logs from a failed operation to the Pulumi team — see the [logging guide](/docs/iac/operations/debugging/logging/#automatic-logging)
     - [Contact us](/contact/) for paid support options
 
 - type: flat

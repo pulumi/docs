@@ -10,10 +10,8 @@ menu:
         weight: 1
         identifier: support-faq-infrastructure
 aliases:
-    - /docs/support/faq/infrastructure/
     - /docs/reference/faq/
     - /docs/troubleshooting/faq/
-    - /docs/support/faq/
     - /docs/iac/support/faq/
     - /docs/iac/support/version-support/
     - /docs/iac/faq/
@@ -54,19 +52,19 @@ Pulumi resources have different logical names and physical names. The logical na
 
 To ensure that as many logical Pulumi resources and stacks can be stood up side-by-side without them conflicting, Pulumi automatically creates each resource's name by combining the logical name with a random suffix appended afterwards. This approach to auto-naming also ensures Pulumi can replace resources with less downtime, by creating the replacement before needing to delete the old resource. In practice, both of these provide significant benefits. This means, however, that your resource's physical name will typically look like `my-bucket-d7c2fa0` instead of `my-bucket`.
 
-You can disable this [auto-naming](/docs/concepts/resources/names/#autonaming) on a per-resource basis if this isn't right for you. Doing so lets you have precise physical names without random suffixes, but also means you lose the two benefits named above.
+You can disable this [auto-naming](/docs/iac/concepts/resources/names/#autonaming) on a per-resource basis if this isn't right for you. Doing so lets you have precise physical names without random suffixes, but also means you lose the two benefits named above.
 
-You can also use project or stack configuration to customize or disable auto-naming globally, per provider, or per resource type. See [Auto-naming Configuration](/docs/concepts/resources/names/#autonaming-configuration) for more information.
+You can also use project or stack configuration to customize or disable auto-naming globally, per provider, or per resource type. See [Auto-naming Configuration](/docs/iac/concepts/resources/names/#autonaming-configuration) for more information.
 
 ## Secrets
 
 ### Are my secrets ever visible?
 
-Pulumi provides primitives so you can enforce your [secrets](/docs/concepts/secrets#secrets) are stored in a secure manner in the CLI, state file and Pulumi Cloud. During an update, your secrets will be decrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them.
+Pulumi provides primitives so you can enforce your [secrets](/docs/iac/concepts/secrets/#secrets) are stored in a secure manner in the CLI, state file and Pulumi Cloud. During an update, your secrets will be decrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them.
 
 ### How does Pulumi manage secrets?
 
-When you set a [configuration](/docs/concepts/config/) value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack Pulumi Cloud manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
+When you set a [configuration](/docs/iac/concepts/config/) value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack Pulumi Cloud manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
 
 When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config object.
 
@@ -94,8 +92,9 @@ Some Pulumi functionality is released as _experimental_. Experimental features a
 
 ### What is Pulumi's policy on provider version support?
 
-Pulumi focuses on actively supporting the latest released version of the providers we maintain.
-While we do not formally designate older versions for long term support, we are committed to helping our users succeed and continuously improve our providers based on community feedback and contributions. We encourage users to update to the latest versions to benefit from the most recent features, bug fixes, and security enhancements. You can find the current version for all providers maintained by Pulumi in the [Pulumi Registry](https://www.pulumi.com/registry/).
+Pulumi focuses on actively supporting the latest released major version of the providers we maintain. For a set of widely used providers, Pulumi also ships security updates for the previous major version for up to a year, or until the next major version is released, whichever comes first. The [provider support policy](/docs/support/provider-support-policy/) lists the covered providers and what a long-term support release contains.
+
+Older majors receive no patches at all, so update to the latest version to benefit from the most recent features, bug fixes, and security enhancements. You can find the current version for all providers maintained by Pulumi in the [Pulumi Registry](/registry/).
 
 ### What are the best practices for maintaining provider versions?
 
@@ -107,9 +106,9 @@ While we do not formally designate older versions for long term support, we are 
 
 **Never be 2 major versions behind, as it is inadvisable to jump a major version due to the number of potential breaking changes across the major versions.** Major versions typically include significant changes which may require some additional migration steps. Each major version of the provider includes migration logic to smooth the upgrade from the immediately previous major version, but these migrations do not always work across multiple major versions. Being two or more major versions behind can accumulate a significant number of changes and may require a multi-step upgrade, making the upgrade process more complex, time-consuming, and prone to errors.
 
-## More FAQ
+## Learn more
 
+- [Provider support policy](/docs/support/provider-support-policy/)
 - [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
-- [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
-- [Pulumi Cloud SCIM FAQ](/docs/administration/access-identity/scim/faq/)
-- [Pulumi Policies FAQ](/docs/support/faq/policies)
+- [Pulumi Cloud FAQ](/docs/support/faq/pulumi-cloud/)
+- [Pulumi Policies FAQ](/docs/support/faq/policies/)

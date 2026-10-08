@@ -1,6 +1,6 @@
 ---
 user-invocable: false
-description: Review criteria for technical documentation under content/docs, content/learn, content/tutorials, content/what-is.
+description: Review criteria for technical documentation under content/docs and content/what-is.
 ---
 
 # Review — Docs
@@ -46,18 +46,21 @@ The Hugo build pre-step (`.hugo-build.json`, see `docs-review:references:fact-ch
 - **Link target exists.** Every internal link added or modified in the diff must resolve to an existing page in the PR's snapshot (for links not surfaced by `.hugo-build.json`, check `gh api repos/<owner>/<repo>/contents/<path>`). Missing targets are 🚨.
 - **Anchor resolves.** `/docs/foo/#bar` requires `#bar` to exist on `/docs/foo/`. Verify by fetching the target file and grep for `## Bar` / `### Bar` (or whatever heading level the slug matches).
 - **Canonical-path links inside `/content/docs/**`.** Internal links from one docs page to another MUST use the full canonical path starting with `/docs/...` (e.g., `/docs/iac/concepts/stacks/`). Same-directory relative (`providers/`, `(providers/)`) and parent-relative (`../stacks/`) forms both render as 🚨 — they break when files move and silently mis-resolve in Hugo's render. The two exceptions: (a) anchor-only links to a heading on the same page (`#section-title`) are fine, and (b) image / asset references to colocated `static/` files use relative paths by convention (`![diagram](./diagram.png)`). Anything else inside `/content/docs/**` MUST be canonical. Mirrors the project's `AGENTS.md` §Updating Internal Links rule; quote that section in the suggestion block.
+- **Dev Center deep links.** A newly added `/dev/tutorials/<slug>/` link that isn't the page's hands-on companion tutorial is ✏️: suggest the matching stable page (`/dev/browse/cloud/<cloud>/`, a `/dev/browse/?cloud=…&tag=…` filter URL, or a hub). Quote `STYLE-GUIDE.md` §Linking to the Dev Center.
 - **Orphan cross-refs after moves.** If the PR moves a page, every inbound link elsewhere in `content/docs/` or `content/product/` must be updated (aliases handle outsider/historic links, but the repo's own internal links should use the new canonical path). `.hugo-build.json`'s `sitemap_diff.removed` flags the removed URL; the inbound-link sweep is still a model-side grep.
 - **Missing cross-link to a canonical concept page.** When the diff text mentions a Pulumi concept that has a canonical doc page (stacks, providers, components, ESC environments, projects, programs, policy packs), and no occurrence of the term in the file is hyperlinked, flag it once per concept. Quote the most prominent unlinked occurrence; propose the link target (e.g., `[stacks](/docs/iac/concepts/stacks/)`). Do not flag the page whose subject *is* the concept (a stacks page doesn't need to link "stacks" in its own intro). Do not flag terms outside Pulumi's vocabulary.
 
 ### Priority 4 — Terminology and product accuracy
 
-Vale catches product-name capitalization, the Pulumi Policies singular-verb rule, "public preview" vs "public beta", and preferred-terminology pairs from `STYLE-GUIDE.md` (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style findings). The reviewer's job here is **first-mention acronym expansion** that Vale doesn't cover: when a product acronym (ESC, IDP, IaC) appears in the diff for the first time in the file, propose `Pulumi ESC (Environments, Secrets, and Configuration)` on first mention. Subsequent mentions use the short form.
+Vale catches product-name capitalization, the Pulumi Policies singular-verb rule, "public preview" vs "public beta", and preferred-terminology pairs from `STYLE-GUIDE.md` (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style suggestions). The reviewer's job here is **first-mention acronym expansion** that Vale doesn't cover: when a product acronym (ESC, IDP, IaC) appears in the diff for the first time in the file, propose `Pulumi ESC (Environments, Secrets, and Configuration)` on first mention. Subsequent mentions use the short form.
 
 `data/glossary.toml` is the authoritative term list for glossary cross-references.
 
 ### Priority 5 — Prose patterns and spelling/grammar
 
 Apply `docs-review:references:prose-patterns` and `docs-review:references:spelling-grammar`.
+
+**Neutral tone toward other products.** When the diff describes another product (always on `content/docs/iac/comparisons/**` and `content/docs/esc/vs/**`), apply `STYLE-GUIDE.md` §Neutral tone toward other products, quoting and rewriting each violation. A claim that the other product has "no equivalent" is also a fact-check claim; verify it against that product's current docs.
 
 ### Priority 6 — SEO and discoverability
 
@@ -99,4 +102,4 @@ Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs
 
 - **Vague editorial feedback without quote-and-rewrite.** "Could be clearer" / "consider reorganizing this paragraph" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first; convert prose-quickstart to numbered steps) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Superseded terminology in historical context.** When a doc describes old behavior intentionally (e.g., "before v3.0, this was called X"), don't flag the old name as deprecated terminology.
-- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style findings. Don't double-flag.
+- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style suggestions. Don't double-flag.

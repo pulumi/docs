@@ -1,0 +1,101 @@
+# Volatile claims the nightly re-verify has confirmed wrong, on pages this repo
+# cannot edit — generated trees whose text comes from somewhere else.
+#
+# WHAT THIS FILE IS FOR
+#
+# The normal loop for a contradicted claim is: mark the page, boost it to the
+# front of the review queue, let the fix lane correct it, marker retires. That
+# loop needs an editable page. A generated page has none, so a marker written
+# there can never be cleared — and because `already_marked()` skips marked
+# entities, the claim also stops being re-checked. Three findings on the
+# pre-built policy-pack pages were lost exactly that way: found in mid-August,
+# then permanently removed from the rotation by their own markers. They were
+# the three most valuable results the lane had produced.
+#
+# So findings on generated pages take a different route: never marked, always
+# re-checked, reported every run, and announced to #docs-ops only when
+# something CHANGES. This file is what "changes" is measured against.
+#
+# An entry here means: we know, it is real, a human has filed it upstream, stop
+# paging us about it nightly. The claim keeps being verified on every rotation.
+# When it starts coming back clean, that is the upstream fix landing, and THAT
+# is worth a Slack message — it is the event the old marker scheme could never
+# report, because a marked claim was never checked again.
+#
+# ADDING AN ENTRY
+#
+#   - entity_key: the key from the nightly report's `entities[].entity_key`
+#     issue:      the upstream tracking issue (required — an entry without a
+#                 human owning it is just a mute button)
+#     noted:      YYYY-MM-DD you added it
+#     what:       one line on what the docs say vs. what is true
+#
+# REMOVING ONE
+#
+# Delete it when the upstream issue closes. The claim is still in the rotation,
+# so if the fix did not actually land, the next check re-reports it as new.
+# Nothing here suppresses verification — only the repeat notification.
+#
+# `reverify-claims.py --self-test` checks that every entry here cites an issue
+# and says what is wrong. The key itself is checked against the live claims
+# index at RUNTIME (that is the only place the index exists): a key matching no
+# volatile entity logs a `::warning::` — it is a typo, or a claim since
+# re-extracted under a different key, and either way it is muting nothing while
+# looking like it mutes something. It never fails the run.
+
+# Which repo owns the TEXT on each generated tree, so the nightly Slack line
+# can carry a prefilled "file this" link instead of just naming the problem.
+#
+# Deliberately a link and not an automatic filing. The lane has produced six
+# findings total; before #20348/#20349 fixed the verification targeting, 17 of
+# 22 contradicted verdicts were false positives. Six good ones since is not a
+# track record, and the failure modes are not symmetric: a finding that waits a
+# day for a human costs a day, while a stream of confidently wrong bot issues
+# in another team's backlog gets the bot muted and costs the whole channel. The
+# link puts a person's judgment and a person's name on the issue at the cost of
+# one click. Revisit when there is enough volume to measure precision.
+#
+# A tree with no entry still reports and still pages — it just gets no link.
+# `reference/pkg/` is deliberately absent: the SDK API reference is generated
+# per provider, so the owning repo varies page by page and a single prefix
+# cannot name it.
+repos:
+  - prefix: content/docs/reference/pre-built-policy-packs/
+    repo: pulumi/policy-packs-internal
+  - prefix: content/docs/iac/cli/commands/
+    repo: pulumi/pulumi
+
+# All three entries below cite ONE issue on purpose. policy-packs-internal#204
+# is an umbrella filed for the whole batch, not a placeholder standing in for
+# three issues nobody opened — the three defects share a root (the pack
+# descriptions this repo renders) and one owner. The removal rule still works
+# as the header describes: closing #204 drops all three entries, and any claim
+# that did not actually get fixed re-reports as new on the next rotation.
+#
+# `--self-test` checks only that an entry cites an issue, not that the issue is
+# distinct or open, so the honest statement of what this file guarantees is:
+# "a human has taken responsibility for this finding somewhere."
+known:
+  - entity_key: numerical/iam-user-unused-credentials-90-policy-ensures-iam-user
+    issue: https://github.com/pulumi/policy-packs-internal/issues/204
+    noted: 2026-08-19
+    what: >-
+      Docs describe the policy as ensuring IAM credentials are ROTATED within
+      90 days. The underlying AWS Config rule
+      (iam-user-unused-credentials-check) is about credentials left UNUSED for
+      90 days. Different control; the description is wrong, not stale.
+
+  - entity_key: numerical/redshift-backup-enabled-policy-ensures-redshift-clusters
+    issue: https://github.com/pulumi/policy-packs-internal/issues/204
+    noted: 2026-08-19
+    what: >-
+      Docs state a minimum 7-day retention period for Redshift automatic
+      snapshots; AWS Config's redshift-backup-enabled rule does not fix the
+      retention window that way.
+
+  - entity_key: numerical/cloud-logging-retention-period-365-ensure-cloud-logging-log
+    issue: https://github.com/pulumi/policy-packs-internal/issues/204
+    noted: 2026-08-19
+    what: >-
+      The CIS control mapping quoted for cloud-logging-retention-period-365
+      does not match the CIS 8.1 safeguard text it cites.

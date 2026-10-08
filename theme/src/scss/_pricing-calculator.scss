@@ -1,0 +1,49 @@
+// The volume-pricing popover in the /pricing/ estimator's results panel.
+//
+// Everything else about the calculator is inline utilities on the partial
+// (layouts/partials/pricing/calculator.html). This is here because it can't be:
+// the popover is shown and hidden by toggling the `hidden` class, and "when this
+// element does not have .hidden" is a selector, not a utility — there is no
+// variant that inverts a plain class the way `:not(.hidden)` does.
+//
+// It animates both ways. Fading *out* means staying displayed after the class
+// that hides it lands, which is what `allow-discrete` buys: `display` becomes a
+// transitionable property that flips at the *end* of the exit rather than the
+// start. `@starting-style` is the same trick for the entrance — the first frame
+// after `display` turns back on, which a normal transition can't otherwise see
+// because the element wasn't rendered a frame earlier.
+//
+// A browser without either (pre-117 Chrome, pre-17.4 Safari, pre-129 Firefox)
+// ignores both and shows/hides the popover instantly, which is the correct
+// baseline for a decorative flourish.
+#calculator [data-calc-volume-note] {
+    // How far it travels. A variable so the reduced-motion override below can
+    // zero it once and have that reach the @starting-style block too.
+    --volume-note-lift: 0.5rem;
+
+    // The hidden end of both animations: what it enters from, and what it leaves
+    // toward. The :not(.hidden) rule below is the shown end.
+    opacity: 0;
+    transform: translateY(var(--volume-note-lift));
+    transition:
+        opacity 200ms ease-out,
+        transform 200ms ease-out,
+        display 200ms allow-discrete;
+}
+
+#calculator [data-calc-volume-note]:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+
+    @starting-style {
+        opacity: 0;
+        transform: translateY(var(--volume-note-lift));
+    }
+}
+
+// Respect a reduced-motion preference: still fade, but don't travel.
+@media (prefers-reduced-motion: reduce) {
+    #calculator [data-calc-volume-note] {
+        --volume-note-lift: 0;
+    }
+}

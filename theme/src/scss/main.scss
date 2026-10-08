@@ -155,6 +155,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "shared/badge";
     @import "shared/button";
     @import "shared/card";
+    @import "shared/tabs";
 
     @import "marketing/cloud-engineering";
     @import "announcement-banner";
@@ -165,6 +166,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "docs/main-nav";
     @import "docs/docs-home";
     @import "customer-logo";
+    @import "doc-components";
     @import "marketing/developer-advocates";
     @import "docs/footer";
     @import "docs/icons";
@@ -195,14 +197,13 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "marketing/signup";
     @import "marketing/workshop-signup";
     @import "marketing/slot-machine";
-    @import "marketing/stacked-carousel";
     @import "marketing/state-of-agentic-infrastructure";
     @import "docs/registry";
-    @import "docs/tutorials";
     @import "tables";
     @import "tiles";
     @import "toggle";
     @import "tooltip";
+    @import "pricing-calculator";
 
     @import "components/banner";
     @import "components/chooser";
@@ -221,7 +222,8 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "components/user-toggle";
     @import "components/tabs";
     @import "templates";
-    @import "case-studies";
+    @import "customers";
+    @import "whitepapers";
     @import "neo-mode";
 
     .nav-main {

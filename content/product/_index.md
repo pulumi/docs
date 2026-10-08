@@ -21,8 +21,7 @@ aliases:
 
 sections:
   - type: hero
-    title_primary: The unified platform
-    title_secondary: for infrastructure teams.
+    title: "*The unified platform* <br>for infrastructure teams."
     description: |
       Infrastructure as code with modern languages, centralized secrets and governance, and AI built for infrastructure — all in one platform. Everything teams need to move fast and scale with confidence.
     image: /images/product/overview/overview-diagram.svg
@@ -35,7 +34,7 @@ sections:
     description: |
       Build infrastructure like you build software.
 
-      Compose your infrastructure code with the languages and tools your team already uses — TypeScript, Python, Go, C#, or Java. Our Apache 2.0-licensed engine gives you a foundation to scale from small project to large organization.
+      Compose your infrastructure code with the languages and tools your team already uses — TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL. Our Apache 2.0-licensed engine gives you a foundation to scale from small project to large organization.
     cta_text: Explore Pulumi IaC
     cta_link: /product/infrastructure-as-code/
     cards:
@@ -102,14 +101,14 @@ sections:
     anchor: secrets
 
   - type: section_header_with_image
-    tag_line: Insights & governance
+    tag_line: Discovery & governance
     title: See everything, control everything
     description: |
       Search across all clouds from a single pane of glass in Pulumi Cloud. Enforce policies automatically, track compliance, and get AI-powered insights. Know exactly what's running where and why.
-    cta_text: Explore Pulumi Insights & Governance
-    cta_link: /product/pulumi-insights/
+    cta_text: Explore Discovery & governance
+    cta_link: /product/discovery-governance/
     image: /images/product/overview/overview-governance.svg
-    image_alt: Pulumi Insights resource search across clouds
+    image_alt: Pulumi resource search across clouds
     cards:
       - icon: hard-drives
         title: Multi-cloud visibility
@@ -123,7 +122,7 @@ sections:
         title: Complete audit trail
         description: |
           Track every change, every action, and every user. Export to security and event management systems (SIEMs) for compliance reports.
-    anchor: insights
+    anchor: discovery
 
   - type: section_header
     tag_line: Internal developer platform
@@ -159,7 +158,7 @@ sections:
         cta_primary_text: Start Free
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo
-        cta_link: /contact/?form=request-a-demo
+        cta_link: /request-a-demo/
       - title: Migrating to Pulumi?
         description: |
           Our tools can help you migrate your code and resource state from Terraform, AWS CloudFormation, Azure Resource Manager, and others to Pulumi. Use Neo to make the process even easier.

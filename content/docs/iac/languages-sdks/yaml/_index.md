@@ -74,19 +74,20 @@ outputs:
   bucketEndpoint: http://${my-bucket.websiteEndpoint}
 ```
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The example is a fully valid and self-contained Pulumi project. You only need one file to create resources in Pulumi YAML.
 {{% /notes %}}
 
 Further examples are given in the [Pulumi YAML GitHub
 repository](https://github.com/pulumi/pulumi-yaml/tree/main/examples). The specification for Pulumi
-YAML documents is in the [Pulumi YAML reference](/docs/languages-sdks/yaml/yaml-language-reference/).
+YAML documents is in the [Pulumi YAML reference](/docs/iac/languages-sdks/yaml/yaml-language-reference/).
 
 ## Templates
 
 The fastest way to start a new project is to use a template. The template will initialize a Pulumi
 project and set up starter resources for the chosen cloud. The `yaml` template is cloud agnostic.
 
+- `pulumi new yaml`: creates a minimal, cloud-agnostic Pulumi YAML project
 - `pulumi new aws-yaml`: creates a starter AWS Pulumi YAML project
 - `pulumi new azure-yaml`: creates a starter Azure Pulumi YAML project
 - `pulumi new gcp-yaml`: creates a starter Google Cloud Pulumi YAML project
@@ -94,16 +95,16 @@ project and set up starter resources for the chosen cloud. The `yaml` template i
 
 By default, `pulumi new` provides a number of templates provided by Pulumi, but it can also use your own custom templates.
 
-To learn more about building and working with custom templates, see [Custom Templates](/docs/idp/concepts/templates) and the [`pulumi new`](/docs/iac/cli/commands/pulumi_new/) docs.
+To learn more about building and working with custom templates, see [Custom Templates](/docs/idp/concepts/organization-templates/) and the [`pulumi new`](/docs/iac/cli/commands/pulumi_new/) docs.
 
 ## Pulumi Programming Model
 
 The Pulumi programming model defines the core concepts you will use when creating infrastructure as
-code programs using Pulumi. [Concepts](/docs/intro/concepts)
+code programs using Pulumi. [Concepts](/docs/iac/concepts/)
 describes these concepts with examples available in all supported languages, including Pulumi YAML.
 
 To learn how the Pulumi Programming Model is implemented for Pulumi YAML, refer
-to the [Pulumi YAML Reference Guide](/docs/languages-sdks/yaml/yaml-language-reference/).
+to the [Pulumi YAML Reference Guide](/docs/iac/languages-sdks/yaml/yaml-language-reference/).
 
 ## Compiler support
 
@@ -123,4 +124,4 @@ interpret the output as a Pulumi YAML program.
 
 ## YAML Packages
 
-The [Pulumi Registry](/registry/) houses 100+ YAML packages.
+The [Pulumi Registry](/registry/) houses hundreds of YAML packages.

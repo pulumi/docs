@@ -22,7 +22,7 @@ In these cases, you can use `replaceWith` to make these relationships explicit t
 
 {{< resource-option-scope "replaceWith" >}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -54,8 +54,8 @@ application = aws.ec2.Instance('app-service', {},
 
 ```go
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
-    "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/rds"
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/rds"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -124,6 +124,23 @@ resources:
     options:
       replaceWith:
         - ${database}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_db_instance" "database" {
+  # ...
+}
+
+resource "aws_instance" "application" {
+  # ...
+
+  pulumi {
+    replace_with = [aws_db_instance.database]
+  }
+}
 ```
 
 {{% /choosable %}}

@@ -12,7 +12,7 @@ tags:
 category: community
 ---
 
-[PulumiUP](https://www.pulumi.com/pulumi-up/) is our virtual user conference for the Pulumi community and anyone interested in Infrastructure as Code. Every year, we strive to build a program packed with technical talks, demos, and best practices with the goal of leaving you with new learnings and inspiration that will help you become a better cloud engineer. You'll hear from industry leaders and experts about IaC, software engineering, DevOps, Platform engineering, and AI.
+[PulumiUP](https://www.pulumi.com/pulumi-up/) is our virtual user conference for the Pulumi community and anyone interested in infrastructure as code. Every year, we strive to build a program packed with technical talks, demos, and best practices with the goal of leaving you with new learnings and inspiration that will help you become a better cloud engineer. You'll hear from industry leaders and experts about IaC, software engineering, DevOps, Platform engineering, and AI.
 
 We hope you'll [join us virtually](https://www.pulumi.com/pulumi-up/) and take this opportunity to grow your knowledge and become infrastructure as code stars.
 
@@ -34,7 +34,7 @@ You'll hear from innovators, leaders, and experts from multiple industries and l
 ### Sam Cogan - Solution Architect, WTW
 
 _Talk: Keeping your Infrastructure Code DRY (Don't Repeat Yourself)_  
-Sam is a Solution Architect with [WTW](https://www.wtwco.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) and a Microsoft Azure MVP. Sam is focused on delivering applications into the cloud using IaaS, PaaS, Serverless, Containers, and Kubernetes. Sam is particularly focused on automation and DevOps, including Infrastructure as Code, Cloud automation tooling, PowerShell, and CI/CD tooling.
+Sam is a Solution Architect with [WTW](https://www.wtwco.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) and a Microsoft Azure MVP. Sam is focused on delivering applications into the cloud using IaaS, PaaS, Serverless, Containers, and Kubernetes. Sam is particularly focused on automation and DevOps, including infrastructure as code, Cloud automation tooling, PowerShell, and CI/CD tooling.
 
 ### Dennis Sauvé - DevOps Engineer, Washington Trust Bank
 

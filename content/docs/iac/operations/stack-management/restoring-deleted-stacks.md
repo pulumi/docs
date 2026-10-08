@@ -8,12 +8,13 @@ menu:
         name: Restoring deleted stacks
         parent: iac-operations-stack-management
         weight: 35
+pulumi_cloud_feature: restore-deleted-stacks
 ---
 
 Pulumi Cloud retains the state file versions of recently deleted stacks so that organization administrators can recover them through the Pulumi Cloud console. This is useful when a stack is deleted accidentally — most often by `pulumi stack rm --force`, which removes the state file even when the stack still has resources associated with it — or when a stack was intentionally deleted but its activity history is later needed.
 
 {{% notes type="info" %}}
-Restoring deleted stacks is a [Pulumi Cloud](/docs/pulumi-cloud/) feature. Stacks stored in a [DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/) cannot be restored this way; if you operate a DIY backend, you are responsible for your own backup and recovery process for the underlying storage.
+Stacks stored in a [DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/) cannot be restored this way; if you operate a DIY backend, you are responsible for your own backup and recovery process for the underlying storage.
 {{% /notes %}}
 
 ## What gets restored
@@ -26,7 +27,7 @@ If the stack was deleted with `pulumi stack rm --force` while resources still ex
 
 - Only the **last 25 deleted stacks** in an organization are available for self-service restore.
 - Only **organization administrators** can restore stacks.
-- If you need to restore an older stack that is no longer in the list, [contact Pulumi support](/support/).
+- If you need to restore an older stack that is no longer in the list, [contact Pulumi support](/support/new/).
 
 ## Restore a stack
 
@@ -43,7 +44,7 @@ The restore window is finite, so the best protection against accidental loss is 
 
 - Prefer `pulumi stack rm` (without `--force`) so the CLI refuses to remove a stack that still has resources tracked in state. Use `pulumi destroy` first, confirm the stack is empty, and then remove it.
 - Reserve `pulumi stack rm --force` for cases where you have intentionally decided to orphan the underlying cloud resources or where you are certain the state file does not need to be preserved.
-- For stacks that should never be removable through routine operations, restrict who has organization-admin or stack-write permissions. See [Teams and RBAC](/docs/administration/organizations-teams/teams/).
+- For stacks that should never be removable through routine operations, restrict who has organization-admin or stack-write permissions. See [Teams and RBAC](/docs/administration/concepts/rbac/teams/).
 
 ## Related
 

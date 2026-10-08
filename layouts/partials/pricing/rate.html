@@ -1,0 +1,22 @@
+{{- /*
+  Formats one rate from the `calculator:` block of data/pulumi_pricing.yaml as a
+  plain decimal string, for the markdown rendering of /pricing/.
+
+      {{ partial "pricing/rate.html" 0.000025 }}  ->  0.000025
+      {{ partial "pricing/rate.html" 0.5 }}       ->  0.50
+
+  A single precision can't serve both ends of the range: `%g` turns 0.000025
+  into 2.5e-05, and any fixed `%f` either truncates the hourly rates or pads the
+  monthly ones. So: print wide, trim the padding, then restore the two decimal
+  places money is normally written with.
+*/ -}}
+{{- /* Cast first: a whole number in YAML (`neo_tokens_per_million: 3`) parses as
+       an int, and %f on an int renders %!f(uint64=3). Hugo's strings.TrimRight
+       takes the CUTSET first, not the string. */ -}}
+{{- $n := . | float -}}
+{{- $s := strings.TrimRight "0" (printf "%.6f" $n) -}}
+{{- $parts := split $s "." -}}
+{{- $frac := "" -}}
+{{- if gt (len $parts) 1 -}}{{- $frac = index $parts 1 -}}{{- end -}}
+{{- if lt (len $frac) 2 -}}{{- $s = printf "%.2f" $n -}}{{- end -}}
+{{- return $s -}}

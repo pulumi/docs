@@ -35,7 +35,6 @@ tags:
     - fintech
     - case-studies
     - enterprise
-    - crossguard
     - policy-as-code
 category: customers
 
@@ -48,9 +47,9 @@ This blog post summarizes a presentation by Dennis Sauvé at [PulumiUP 2023](/pu
 
 [Washington Trust Bank](https://www.watrust.com), the largest independently-owned full-service commercial bank in the Northwest, has served personal, private, commercial and wealth management clients throughout the region since 1902. It has assets exceeding $11 billion and currently has 42 branches and offices in Idaho, Oregon, and Washington.
 
-As an FDIC-governed financial institution, it is imperative for the bank to maintain secure, reliable, and compliant cloud resources to protect clients’ personal data. On the other hand, it also aimed to create more agile development teams as it modernized its software development and infrastructure. [Dennis Sauvé](https://github.com/dengsauve), the bank's first DevOps Engineer, recognized [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/) as the solution to these challenges.
+As an FDIC-governed financial institution, it is imperative for the bank to maintain secure, reliable, and compliant cloud resources to protect clients’ personal data. On the other hand, it also aimed to create more agile development teams as it modernized its software development and infrastructure. [Dennis Sauvé](https://github.com/dengsauve), the bank's first DevOps Engineer, recognized [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/) as the solution to these challenges.
 
-Embracing an Infrastructure as Code approach would allow them to automate building and deploying their cloud infrastructure, eliminate infrastructure provisioning as a bottleneck, and empower developers to self-service infrastructure and increase productivity.
+Embracing an infrastructure as code approach would allow them to automate building and deploying their cloud infrastructure, eliminate infrastructure provisioning as a bottleneck, and empower developers to self-service infrastructure and increase productivity.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Q63ZaX340M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -64,7 +63,7 @@ The bank decided to adopt IaC to create reliable and rapid deployments while ens
 
 ## Why Washington Trust Bank Chose Pulumi
 
-The bank evaluated several options, including [Terraform](/docs/iac/comparisons/terraform/) and Azure Bicep. However, Pulumi stood out due to its versatility, support for multiple clouds and [native Azure support](/blog/introducing-azure-native-v2/), and the ability to write IaC in the bank's preferred language, TypeScript. The ease of using Pulumi with GitHub, its ability to be used in conjunction with Azure CLI, and its comprehensive [support for CI/CD](/docs/iac/packages-and-automation/continuous-delivery/) through GitHub Actions were also compelling factors.
+The bank evaluated several options, including [Terraform](/docs/iac/comparisons/terraform/) and Azure Bicep. However, Pulumi stood out due to its versatility, support for multiple clouds and [native Azure support](/blog/introducing-azure-native-v2/), and the ability to write IaC in the bank's preferred language, TypeScript. The ease of using Pulumi with GitHub, its ability to be used in conjunction with Azure CLI, and its comprehensive [support for CI/CD](/docs/iac/operations/continuous-delivery/) through GitHub Actions were also compelling factors.
 
 Dennis praised Pulumi, saying, "_Pulumi was exactly the Swiss Army Knife versatility we were looking for. We've only uncovered more of what we love about Pulumi as our relationship has evolved._"
 
@@ -74,11 +73,11 @@ Pulumi helped Washington Trust Bank improve efficiency by maintaining its infras
 
 ### Improved Development Speed with Reusable Infrastructure Packages and CI/CD
 
-Pulumi's automation capabilities played a transformational role. By freeing the infrastructure team from handling manual deployments, it could focus on improving developer productivity. The team created reusable and repeatable [infrastructure components](/docs/concepts/resources/components/) built around strict IT security standards in the form of Frazure, an internal NPM package.
+Pulumi's automation capabilities played a transformational role. By freeing the infrastructure team from handling manual deployments, it could focus on improving developer productivity. The team created reusable and repeatable [infrastructure components](/docs/iac/concepts/components/) built around strict IT security standards in the form of Frazure, an internal NPM package.
 
 Frazure allows the bank’s developers to easily provision out-of-the-box resources for cloud services and covers the necessary Azure resource groups, vnets, and other resources. The package encapsulates best practices, such as how resource groups and their virtual networks can be created, including subnet IP spaces, peerings to and from the hub virtual network, user-defined routes and more.
 
-To deploy, developers open a pull request which kicks off a [CI/CD pipeline in GitHub Actions](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) and provisions testing environments and tests. Once the PR is reviewed and approved, the changes are automatically deployed to staging and live environments. This automated process enabled the bank to accelerate the building, testing, and deployment of new applications, translating into rapid value delivery to their customers.
+To deploy, developers open a pull request which kicks off a [CI/CD pipeline in GitHub Actions](/docs/deployments/concepts/) and provisions testing environments and tests. Once the PR is reviewed and approved, the changes are automatically deployed to staging and live environments. This automated process enabled the bank to accelerate the building, testing, and deployment of new applications, translating into rapid value delivery to their customers.
 
 ### Safeguards for Infrastructure
 
@@ -86,9 +85,9 @@ Pulumi also gave the bank total confidence in being able to rapidly recover its 
 
 ### Policy as Code Guardrails with Pulumi CrossGuard
 
-[Pulumi CrossGuard](/docs/using-pulumi/crossguard/) adds an extra layer of security and control and is used in conjunction with Azure Policies, which are used for auditing purposes. CrossGuard prevents the deployment of undesired, insecure, or expensive resources during the preview and deployment stage, thus preventing developers from even reaching Azure to provision resources. Custom error messages give developers context on why their deployment was not allowed.
+[Pulumi CrossGuard](/docs/discovery-governance/policy/) adds an extra layer of security and control and is used in conjunction with Azure Policies, which are used for auditing purposes. CrossGuard prevents the deployment of undesired, insecure, or expensive resources during the preview and deployment stage, thus preventing developers from even reaching Azure to provision resources. Custom error messages give developers context on why their deployment was not allowed.
 
-[Pulumi Cloud Policy Packs](/docs/using-pulumi/crossguard/configuration/) allow them to group and deploy many policies simultaneously. The Policy Packs prevent specified resources from being deployed into staging and live environments. For example, one policy requires all SQL databases to use TLS 1.2 by default and another ensures all storage buckets have public access disabled by default. These capabilities helped bolster the security of the bank's cloud infrastructure.
+[Pulumi Cloud Policy Packs](/docs/discovery-governance/policy/policy-packs/) allow them to group and deploy many policies simultaneously. The Policy Packs prevent specified resources from being deployed into staging and live environments. For example, one policy requires all SQL databases to use TLS 1.2 by default and another ensures all storage buckets have public access disabled by default. These capabilities helped bolster the security of the bank's cloud infrastructure.
 
 ## Financial services cloud modernization with Pulumi
 

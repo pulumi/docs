@@ -118,7 +118,7 @@ type Random struct{}
 Resource behavior is determined by implementing methods on the controlling struct.
 
 ```go
-// All resources must implement Create at a minumum.
+// All resources must implement Create at a minimum.
 func (Random) Create(ctx p.Context, name string, input RandomArgs, preview bool) (string, RandomState, error) {
     state := RandomState{RandomArgs: input}
     if preview {
@@ -210,7 +210,7 @@ type RandomState struct {
     Result string `pulumi:"result"`
 }
 
-// All resources must implement Create at a minumum.
+// All resources must implement Create at a minimum.
 func (Random) Create(ctx p.Context, name string, input RandomArgs, preview bool) (string, RandomState, error) {
     state := RandomState{RandomArgs: input}
     if preview {

@@ -1,6 +1,6 @@
 ---
 title_tag: "Migrating from Azure Resource Manager"
-meta_desc: Modernize Azure infrastructure by replacing or coexisting with ARM templates using Pulumi in C#, Python, Go, or TypeScript.
+meta_desc: Modernize Azure infrastructure by replacing or coexisting with ARM templates using Pulumi in .NET, Python, Go, or TypeScript.
 title: Azure Resource Manager
 h1: From Azure Resource Manager (ARM) to Pulumi
 menu:
@@ -17,14 +17,14 @@ aliases:
 
 <img src="/logos/tech/azure_arm.png" align="right" class="h-32 px-8 pb-4">
 
-Pulumi offers a flexible, code-first alternative to Azure ARM templates using C#, Python, Go, or TypeScript.
+Pulumi offers a flexible, code-first alternative to Azure ARM templates using .NET, Python, Go, or TypeScript.
 
 If your team has already provisioned Azure infrastructure using ARM (Azure Resource Manager) templates and is looking for a more productive approach, Pulumi provides several paths to move forward:
 
 * **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your ARM templates and import existing resources with zero downtime
-* **[Discovered Stacks](/docs/insights/discovery/discovered-stacks/)**: Scan your Azure account and Pulumi Cloud automatically groups your ARM deployments into discovered stacks you can migrate from the console, with per-resource status tracking.
+* **[Discovered stacks](/docs/discovery-governance/concepts/discovery/discovered-stacks/)**: Scan your Azure account and Pulumi Cloud automatically groups your ARM resources by resource group into discovered stacks you can migrate from the console, with per-resource status tracking.
 * [**Coexist**](#coexist-with-arm) with resources provisioned by ARM by referencing deployment outputs.
-* [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing Azure resources into Pulumi in the usual way.
+* [**Import**](/docs/iac/guides/migration/import/) existing Azure resources into Pulumi in the usual way.
 * [**Convert**](#convert-arm-templates-to-pulumi) your deployments to use Pulumi and then incrementally migrate resources.
 
 ## Why move beyond ARM
@@ -33,7 +33,7 @@ ARM templates were Azure's original infrastructure as code solution. But they fa
 
 | Feature           | ARM Templates        | Pulumi                        |
 |-------------------|----------------------|-------------------------------|
-| Language          | JSON                 | Code Native, e.g. C#, Python, TS |
+| Language          | JSON                 | Code Native, e.g. .NET, Python, TS |
 | Cloud             | Azure only           | Agnostic + on-prem            |
 | Reuse             | Limited (copy/paste) | Functions, classes, modules   |
 | Logic & Loops     | Complex expressions  | if / for / switch             |
@@ -100,7 +100,7 @@ For instance, let's say your infrastructure team has provisioned your Azure stor
 
 Instead, you can look up that ARM deployment by name and use one of its output values. The following example reads a deployment by its fully qualified ID and then uses the exported `storageAccountName` value to upload a private zipfile to blob storage, containing a `wwwroot/` directory locally:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -250,13 +250,61 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    azure-native = {
+      source = "pulumi/azure-native"
+    }
+  }
+}
+
+# Read the deployment and the storage account name.
+data "azure-native_resources_get_deployment" "storage" {
+  deployment_name     = "myStorageDeployment62ba53a3"
+  resource_group_name = "myrg"
+}
+
+locals {
+  storage_account_name = data.azure-native_resources_get_deployment.storage.properties.outputs.storageAccountName.value
+}
+
+# Create a blob for our own deployment.
+resource "azure-native_storage_blob_container" "myStorageContainer" {
+  resource_group_name = "myrg"
+  account_name        = local.storage_account_name
+  container_name      = "files"
+}
+
+resource "azure-native_storage_blob" "zip" {
+  resource_group_name = "myrg"
+  account_name        = local.storage_account_name
+  container_name      = azure-native_storage_blob_container.myStorageContainer.name
+  source              = filearchive("wwwroot")
+}
+
+output "blob_url" {
+  value = azure-native_storage_blob.zip.url
+}
+```
+
+HCL has no resource `get`, so the program reads the deployment through the `getDeployment` function as a data source, which takes the deployment's name and resource group rather than its fully qualified ID.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 All we need to do is run `pulumi up` and the Pulumi runtime will know how to query the ARM deployment to retrieve its output values. In this case, the deployment and all of its resources are treated entirely as read-only, and Pulumi will never attempt to modify any of them.
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 Notice that the ID is of the format: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/resourceGroups/<DEPLOYMENT-RG-NAME>/providers/Microsoft.Resources/deployments/<DEPLOYMENT-NAME>`. Consult the Azure CLI or portal to find this ID.
 
-> Although we've hard-coded the ARM deployment ID here, it's common to dynamically compute a name using unique per-stack information, like the stack name, subscription ID, or other configuration variables.
+{{% /choosable %}}
+
+> Although we've hard-coded the ARM deployment here, it's common to dynamically compute a name using unique per-stack information, like the stack name, subscription ID, or other configuration variables.
 
 ### Convert ARM templates to Pulumi
 
@@ -264,9 +312,9 @@ Let's say you want to migrate from ARM to Pulumi, and that simply co-existing si
 
 Let's see how to actually migrate your ARM-managed resources fully to Pulumi. This requires rewriting the ARM template JSON as your favorite programming language code, either entirely, or one resource at a time. Because you can query deployment outputs and provide parameters in code, you can more easily intermingle ARM-managed resources alongside Pulumi ones. Cyclic dependencies, of course, cannot be expressed, since the entire ARM deployment is seen as one opaque resource to Pulumi.
 
-Our example below will result in a Pulumi program that creates a Storage Account equivalent to the ARM template below. The example will also use [import](/docs/using-pulumi/adopting-pulumi/import/) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
+Our example below will result in a Pulumi program that creates a Storage Account equivalent to the ARM template below. The example will also use [import](/docs/iac/guides/migration/import/) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
 
-You can convert ARM templates into Pulumi program code using `pulumi convert --from arm`. Simply provide your ARM template and get back a Pulumi program in C#, TypeScript, Python, Go, Java, or YAML.
+You can convert ARM templates into Pulumi program code using `pulumi convert --from arm`. Simply provide your ARM template and get back a Pulumi program in .NET, TypeScript, Python, Go, Java, YAML, or HCL.
 
 Let's say you have an existing ARM Template shown below.
 
@@ -291,7 +339,7 @@ Let's say you have an existing ARM Template shown below.
 
 Run `pulumi convert --from arm --language <language>` in the directory containing your ARM template. You will receive the Pulumi program that is equivalent to the ARM template.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -394,6 +442,39 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    azure-native = {
+      source = "pulumi/azure-native"
+    }
+  }
+}
+
+variable "resourceGroupNameParam" {
+  type = string
+}
+
+resource "azure-native_storage_storage_account" "storagecreatedbyarm" {
+  lifecycle {
+    create_before_destroy = true
+  }
+  account_name        = "storagecreatedbyarm"
+  kind                = "StorageV2"
+  location            = "westeurope"
+  resource_group_name = var.resourceGroupNameParam
+  sku = {
+    name = "Standard_LRS"
+  }
+}
+```
+
+Alongside the `.tf` file, `pulumi convert --from arm --language hcl` writes a `Pulumi.yaml` with `runtime: hcl`, so the output is a complete Pulumi HCL project. Run `pulumi install` to fetch the providers it declares.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 Next, we will adjust the code to adopt the existing resource instead of creating a new one.
@@ -404,7 +485,7 @@ To adopt the ARM resources under Pulumi's control, we will rewrite the code gene
 
 Create a new Pulumi project, if you don't have one yet, and copy-paste the program generated by `pulumi convert`. Adjust the code to specify the `import` ID for the storage account.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -509,6 +590,38 @@ class MyStack : Stack
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    azure-native = {
+      source = "pulumi/azure-native"
+    }
+  }
+}
+
+resource "azure-native_storage_storage_account" "storagecreatedbyarm" {
+  lifecycle {
+    create_before_destroy = true
+  }
+  account_name        = "storagecreatedbyarm"
+  kind                = "StorageV2"
+  location            = "westeurope"
+  resource_group_name = "existing-rg"
+  sku = {
+    name = "Standard_LRS"
+  }
+
+  pulumi {
+    import_id = "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/existing-rg/providers/Microsoft.Storage/storageAccounts/storagecreatedbyarm"
+  }
+}
+```
+
+A standalone [`import` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#import-blocks) that names `azure-native_storage_storage_account.storagecreatedbyarm` and the same ID does the same job.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -526,7 +639,20 @@ Diagnostics:
     warning: inputs to import do not match the existing resource; importing this resource will fail
 ```
 
-This is because the import operation requires explicit definitions for all properties that may have been auto-populated by Azure during the resource creation. You can suppress the warning by setting the [`ignoreChanges`](/docs/concepts/resources/#ignorechanges) option to `["accessTier","enableHttpsTrafficOnly","encryption","networkRuleSet"]`.
+This is because the import operation requires explicit definitions for all properties that may have been auto-populated by Azure during the resource creation. You can suppress the warning by setting the [`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/) option to `["accessTier","enableHttpsTrafficOnly","encryption","networkRuleSet"]`.
+
+{{% choosable language hcl %}}
+
+In HCL, list the same properties by their snake_case names in the resource's `lifecycle` block:
+
+```hcl
+lifecycle {
+  create_before_destroy = true
+  ignore_changes        = [access_tier, enable_https_traffic_only, encryption, network_rule_set]
+}
+```
+
+{{% /choosable %}}
 
 After running `pulumi up` again, your storage account will become under the control of Pulumi without any disruption. All subsequent infrastructure changes you'd like to be made can happen within Pulumi instead of ARM template deployments.
 

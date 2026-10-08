@@ -6,21 +6,18 @@ block_external_search_index: true
 
 heading: "Platform engineering"
 subheading: |
-    Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
-    make managing infrastructure secure, reliable, and hassle-free.
-
-hide_platform_details: true
+    Give developers self-service infrastructure inside the guardrails your platform team defines.
+    Policies, templates, and audit trails are built in.
 
 customer_quote:
     text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies for logging, permissions, resource tagging, and security."
     author: "Igor Shapiro"
     title: "Principal Engineer"
-    company: "Lemonade"
-    logo: lemonade
-    link: /case-studies/lemonade
+    customer: lemonade
+    link: /customers/lemonade
 
 overview:
-    title: Enable self-service infrastructure<br/>without scaling your platform team
+    title: Enable self-service infrastructure <br/>without scaling your platform team
     description: |
         Looking for <span id="dki-placeholder" style="font-weight: bold;">a platform engineering solution</span>? Build internal developer platforms that let engineers provision infrastructure safely, with policies, guardrails, and full auditability built in.
 
@@ -31,24 +28,20 @@ key_features_above:
           description:
             Write policies in TypeScript, Python, or Go to define what teams can provision, then let them self-service within boundaries
           features:
-              - title: Empower developers with guardrails
+              - title: Ship infrastructure with AI
                 description: |
-                    Write policies in TypeScript, Python, or Go to define what teams can provision, then let them self-service within boundaries
-                icon: code
-                color: yellow
+                    Pulumi Neo plans and executes infrastructure changes inside the guardrails you set. Claude Code, Cursor, and Codex work with Pulumi through the MCP server and Agent Skills.
+                icon: lightning
               - title: Prove platform ROI with metrics
                 description: |
                     Track adoption, cost, and compliance across every stack and environment with centralized visibility
                 icon: monitor
-                color: yellow
               - title: Reduce ticket backlog
                 description: |
                     Developers get infrastructure on-demand while platform engineers maintain control and governance
                 icon: security
-                color: yellow
 
 key_features:
-    title: Key features
     items:
         - title: "Build infrastructure faster with reusable components"
           sub_title: "Pulumi Packages"
@@ -146,11 +139,7 @@ key_features:
               - title: Native cloud providers
                 icon: cloud
                 description: |
-                    Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates.
-              - title: Crosswalk for AWS
-                icon: abstract-shapes
-                description: |
-                    Adopt well-architected best practices for your infrastructure easily with the Crosswalk library.
+                    Azure Native covers 100% of the Azure Resource Manager API, and the Kubernetes provider reaches any resource in the Kubernetes API.
               - title: Cloud Native support
                 icon: clouds
                 description: |
@@ -187,90 +176,45 @@ stats:
         number: "4,000+"
         description: organizations
     integration:
-        number: "170+"
-        description: Cloud and service integrations
-
-key_features_below:
-    items:
-        - title: "Use Pulumi IaC at scale"
-          sub_title: "Pulumi Cloud"
-          description: |
-             A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
-          image: "/images/product/pulumi-cloud-iac-stylized-01.png"
-          features:
-              - title: Pulumi IaC
-                icon: code
-                description: |
-                    Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
-              - title: Pulumi ESC
-                icon: lock
-                description: |
-                    Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
-              - title: Automate deployment workflows
-                icon: cycle
-                description: |
-                    Orchestrate secure deployment workflows through GitHub or an API.
-              - title: Search and analytics
-                icon: eye
-                description: |
-                    View resources from any cloud in one place. Search for resources across clouds with powerful queries and filters.
-              - title: Pulumi Automation API
-                icon: gear
-                description: |
-                    Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
-              - title: Developer portals
-                icon: buildings
-                description: |
-                    Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
-              - title: Identity and access control
-                icon: security
-                description: |
-                    Manage teams with SCIM, SAML SSO, GitHub, GitLab, or Atlassian. Set permissions and access tokens.
-              - title: Policy enforcement
-                icon: gavel
-                description: |
-                    Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and remediation policies to correct violations.
-              - title: Audit logs
-                icon: clipboard
-                description: |
-                    Track and store user actions and change history with option to export logs.
+        number: "200+"
+        description: cloud and service integrations
 
 case_studies:
     title: Customers innovating with Pulumi Cloud
     items:
         - name: Atlassian
-          link: /case-studies/atlassian/
-          logo: atlassian-wordmark
+          link: /customers/atlassian/
+          customer: atlassian
           description: |
             Developers reduced their time spent on maintenance by 50%.
 
         - name: Elkjop
-          link: /case-studies/elkjop-nordic/
-          logo: elkjop-nordic
+          link: /customers/elkjop-nordic/
+          customer: elkjop-nordic
           description: |
             Increased developers' agility and speed through platform engineering.
 
         - name: Starburst
-          link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
-          logo: starburst
+          link: /customers/starburst/
+          customer: starburst
           description: |
             Increased velocity and speed, with deployments that are up to 3x faster.
 
         - name: BMW
-          link: /case-studies/bmw/
-          logo: bmw
+          link: /customers/bmw/
+          customer: bmw
           description: |
             Enabled developers to deploy across hybrid cloud environments.
 
         - name: Lemonade
-          link: /case-studies/lemonade/
-          logo: lemonade
+          link: /customers/lemonade/
+          customer: lemonade
           description: |
             Standardized infrastructure architectures with reusable components.
 
         - name: Snowflake
-          link: /case-studies/snowflake/
-          logo: snowflake
+          link: /customers/snowflake/
+          customer: snowflake
           description: |
             Built a multicloud, Kubernetes-based platform to standardize all deployments
 ---

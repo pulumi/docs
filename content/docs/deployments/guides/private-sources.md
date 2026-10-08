@@ -19,14 +19,14 @@ A Pulumi Deployment runs in an isolated environment that, by default, can only r
 - **Private package feeds** — a private npm, PyPI, or NuGet registry that hosts your packages.
 
 {{% notes type="info" %}}
-This page is about private dependencies that a deployment pulls *during a run*. To deploy from a private repository that holds your Pulumi program itself, configure source control through the [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) instead — that grants Pulumi Deployments access to the program's own repository.
+This page is about private dependencies that a deployment pulls *during a run*. To deploy from a private repository that holds your Pulumi program itself, configure source control through the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) instead — that grants Pulumi Deployments access to the program's own repository.
 {{% /notes %}}
 
 ## Private Git dependencies
 
 When your program depends on code in another private Git repository — for example a private Go module, or a [component](/docs/iac/concepts/components/) referenced from a private repo — the deployment needs Git access to clone it. Configure an SSH key with read access to the required repositories and tell Git to use SSH for GitHub. The same mechanism works regardless of the language or the kind of dependency, because the deployment is ultimately performing a `git clone`.
 
-1. Add the following code to the **Pre-run commands** and toggle on **Skip automatic dependency installation step** in **Advanced Settings**. This writes the SSH key, trusts GitHub's host key, and rewrites `https://github.com` URLs to use SSH so private clones authenticate with your key:
+1. Add the following code to the **Pre-run commands** and turn on **Skip package manager dependency installation** in **Advanced settings**. This writes the SSH key, trusts GitHub's host key, and rewrites `https://github.com` URLs to use SSH so private clones authenticate with your key:
 
     ```bash
     mkdir /root/.ssh && printf -- "$SSHKEY" > /root/.ssh/id_ed25519
@@ -65,4 +65,4 @@ If your dependencies come from a private package registry rather than a Git repo
     dotnet nuget add source https://nuget.example.com/v3/index.json --name private --username pulumi --password "$NUGET_TOKEN" --store-password-in-clear-text
     ```
 
-In each case, store the token (`NPM_TOKEN`, `PYPI_TOKEN`, `NUGET_TOKEN`) as a **secret** environment variable so it is encrypted and kept out of logs. Leave **Skip automatic dependency installation step** off if you want Pulumi Deployments to install dependencies after your pre-run commands have configured the feed.
+In each case, store the token (`NPM_TOKEN`, `PYPI_TOKEN`, `NUGET_TOKEN`) as a **secret** environment variable so Pulumi encrypts it and keeps it out of logs. Leave **Skip package manager dependency installation** off if you want Pulumi Deployments to install dependencies after your pre-run commands have configured the feed.

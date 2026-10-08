@@ -33,7 +33,7 @@ category: product
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-In addition to our [Cloud Engineering Days launches](/blog/nov-2022-launches), we have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from September and October. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) and Pulumi Service features in the [new features blogs](/blog/tag/features).
+In addition to our [Cloud Engineering Days launches](/blog/nov-2022-launches), we have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from September and October. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) and Pulumi Service features in the [new features blogs](/blog/tags/features).
 
 <!--more-->
 
@@ -76,7 +76,7 @@ We shipped new versions of the AWS Native provider, Google Native provider and t
 In October we announced a set of major updates which deepen and extend Pulumi’s support for Kubernetes and the Kubernetes ecosystem. Here are a few of these exciting enhancements:
 
 - [Pulumi Kubernetes Operator v1.10](https://github.com/pulumi/pulumi-kubernetes-operator/#readme): New integration with Flux for richer GitOps support, and ability to deploy Pulumi stacks from directly within the Kubernetes resource model
-- [New Pulumi Provider for Flux](https://www.pulumi.com/registry/packages/flux/): Manage Flux with Infrastructure as Code
+- [New community Pulumi provider for Flux](https://www.pulumi.com/registry/packages/flux/): Manage Flux with infrastructure as code
 - [Pulumi Kubernetes Provider v3.22](/registry/packages/kubernetes): Server Side Apply Option and Resource Patch
 
 👉  Learn more in the [Pulumi+Kubernetes: New Flux Integration and Inline Programs blog](/blog/pulumi-kubernetes-new-2022).
@@ -99,7 +99,7 @@ Automation API now supports parallel execution of NodeJS inline programs in addi
 
 ### New --remove flag for `pulumi destroy`
 
-A [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy) operation destroys all existing resources in the stack, but not the stack itself. If you then wanted to delete the stack itself, once all the resources were destroyed, you would run a [`pulumi stack rm`]. A community member, [mrod-io](https://github.com/mrod-io) added a flag for `pulumi destroy` for when you want to remove the stack after its resources are destroyed: `pulumi destroy --remove`.
+A [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy/) operation destroys all existing resources in the stack, but not the stack itself. If you then wanted to delete the stack itself, once all the resources were destroyed, you would run a [`pulumi stack rm`]. A community member, [mrod-io](https://github.com/mrod-io) added a flag for `pulumi destroy` for when you want to remove the stack after its resources are destroyed: `pulumi destroy --remove`.
 
 **See it in action below:**
 
@@ -178,8 +178,8 @@ Pulumi Deployments removes the cloud as a bottleneck and unlocks it as an accele
 
 - [Request access](/product/pulumi-deployments) to the Pulumi Deployments preview
 - [The Pulumi Deployments demo video](https://www.youtube.com/watch?v=v48U7CNWutc&ab_channel=PulumiTV)
-- [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments/)
-- [Pulumi Deployments REST API documentation](/docs/reference/deployments-rest-api)
+- [Pulumi Deployments documentation](/docs/deployments/concepts/)
+- [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/)
 - [Automation API examples](https://github.com/pulumi/automation-api-examples)
 
 👉  Learn more in the [Pulumi Deployments launch blog post](/blog/pulumi-deployments).

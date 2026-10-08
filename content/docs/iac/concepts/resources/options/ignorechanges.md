@@ -22,7 +22,7 @@ The `ignoreChanges` resource option specifies a list of properties that Pulumi w
 The `ignoreChanges` option only applies to resource inputs, not outputs.
 {{% /notes %}}
 
-In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/reference/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
+Besides top-level property names, you can also pass nested properties to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/reference/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
 
 {{% notes type="info" %}}
 For arrays with different lengths, only changes for elements that are in both arrays are ignored. If the new input array is longer, additional elements will be taken from the new array. If the new array is shorter, we only take that number of elements from the original array.
@@ -30,7 +30,7 @@ For arrays with different lengths, only changes for elements that are in both ar
 For example `ignoreChanges` on an old array `[1, 2]` and a new array `[a, b, c]` results in `[1, 2, c]`, and an old array `[1, 2, 3]` and a new array `[a, b]` results in `[1, 2]`.
 {{% /notes %}}
 
-## How ignoreChanges works
+## How `ignoreChanges` works
 
 After the resource is created, Pulumi relies on the last recorded state for every property named in `ignoreChanges`. During a preview or update, Pulumi:
 
@@ -44,9 +44,9 @@ Because Pulumi reuses the value stored in the state, an external system can safe
 When you skip `pulumi refresh` (or `pulumi up --refresh`) after `ignoreChanges` has been set, Pulumi keeps using the previous state value when it performs an update. This can lead to unintentional changes if the cloud state has been changed (either through intentional external management, or unintentional drift). Providers that require full object replacements—such as AWS load balancer listeners where the entire target group array is sent on every update—will receive the potentially stale values from the state and may reset the live configuration.
 {{% /notes %}}
 
-For instance, in this example, the resource’s prop property "new-value" will be set when Pulumi initially creates the resource, but from then on, any updates will ignore it:
+In this example, Pulumi sets the resource's `prop` property to `"new-value"` when it initially creates the resource, but from then on, any updates ignore it:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -110,6 +110,21 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "my_resource" "res" {
+  prop = "new-value"
+
+  lifecycle {
+    ignore_changes = [prop]
+  }
+}
+```
+
+In HCL, ignored properties use the standard Terraform `ignore_changes` lifecycle argument rather than a `pulumi` option.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -123,7 +138,7 @@ Some common reasons to use the `ignoreChanges` option are:
 
 Consider an AWS Application Load Balancer listener whose target group weights are managed by an external traffic controller. You can let Pulumi create the listener and target groups while preventing future updates to the weights by adding the property path to `ignoreChanges`:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -418,6 +433,51 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_lb" "front_end" {}
+
+resource "aws_lb_target_group" "front_end_blue" {}
+
+resource "aws_lb_target_group" "front_end_green" {}
+
+resource "aws_lb_listener" "front_end_listener" {
+  load_balancer_arn = aws_lb.front_end.arn
+  port              = 443
+  protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4"
+
+  default_action {
+    type = "forward"
+
+    forward {
+      target_group {
+        arn    = aws_lb_target_group.front_end_blue.arn
+        weight = 100
+      }
+
+      target_group {
+        arn    = aws_lb_target_group.front_end_green.arn
+        weight = 0
+      }
+    }
+  }
+
+  lifecycle {
+    ignore_changes = [
+      default_action[0].forward[0].target_group[0].weight,
+      default_action[0].forward[0].target_group[1].weight,
+    ]
+  }
+}
+```
+
+HCL `ignore_changes` entries are attribute paths with constant indices; wildcard (`[*]`) paths are not supported.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
-After the initial deployment, an external process could change the weights (for example, to a 50/50 split). Before you next run `pulumi up` to add a third target group, run `pulumi refresh` so that the stack captures the live weights. Without the refresh, Pulumi retains the original `100` and `0` values in state and will resend them to the AWS API on the next update, resetting the weights you meant to preserve.
+After the initial deployment, an external process could change the weights (for example, to a 50/50 split). Before you next run `pulumi up` to add a third target group, run `pulumi refresh` so that the stack captures the live weights. Without the refresh, Pulumi retains the original `100` and `0` values in state and resends them to the AWS API on the next update, resetting the weights you meant to preserve.

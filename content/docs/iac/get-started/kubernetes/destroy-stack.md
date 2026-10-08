@@ -64,7 +64,7 @@ As with an update, we can choose `no` or `details`; select `yes` to proceed:
 
 ```
 Do you want to perform this destroy? yes
-Destroying (dev)
+Destroying (dev):
 
      Type                                        Name            Status
  -   pulumi:pulumi:Stack                         quickstart-dev  deleted (0.08s)
@@ -86,7 +86,7 @@ At this stage, your stack still exists, but all cloud resources have been delete
 ## Remove the stack
 
 The final step is to remove the stack itself. Destroy keeps the stack around so that you still have the full
-history of what happened to the stack. Running [`pulumi stack rm`](/docs/iac/cli/commands/pulumi_stack_rm) will
+history of what happened to the stack. Running [`pulumi stack rm`](/docs/iac/cli/commands/pulumi_stack_remove/) will
 delete it entirely, including all history and state snapshots. Be careful, this step cannot be undone!
 
 {{% choosable "os" "macos,linux" %}}

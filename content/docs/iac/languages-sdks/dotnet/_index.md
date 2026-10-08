@@ -116,7 +116,7 @@ runtime:
 Writing a Pulumi program in .NET involves declaring infrastructure resources using resource constructors. Here are the key concepts:
 
 - **Declare resources**: Create infrastructure resources by instantiating resource classes from provider packages. For example, `new Bucket("my-bucket")` creates an S3 bucket.
-- **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation for details.
+- **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See the [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/) documentation for details.
 - **Immutable infrastructure**: Once declared, resource properties are immutable within your program. Changes to resource definitions result in updates during the next deployment.
 - **Stack outputs**: Export values from your program by returning a dictionary from `Deployment.RunAsync` (or by decorating fields with the `[Output]` attribute) to make them accessible from the CLI or to other Pulumi programs.
 
@@ -145,11 +145,11 @@ The [Pulumi SDK (`Pulumi`)](/docs/reference/pkg/dotnet/pulumi/pulumi.html) is di
 
 ### Provider SDKs
 
-For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/), which houses 100+ .NET packages.
+For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/), which houses hundreds of .NET packages.
 
 ### Policy SDK
 
-Pulumi Policy as Code packs cannot be authored in .NET. Policy packs are authored in [TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/) or [Python](/docs/reference/pkg/python/pulumi_policy/). A .NET program can still be validated by policy packs written in those languages. For more information, see [Pulumi Policy as Code](/docs/insights/policy/).
+Pulumi Policy as Code packs cannot be authored in .NET. Policy packs are authored in [TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/) or [Python](/docs/reference/pkg/python/pulumi_policy/). A .NET program can still be validated by policy packs written in those languages. For more information, see [Pulumi Policy as Code](/docs/discovery-governance/concepts/policy-as-code/).
 
 ### Dev versions
 
@@ -163,8 +163,8 @@ For more information on when and how to use dev builds, see [Using dev builds fo
 
 ### Testing
 
-- [Unit testing](/docs/iac/concepts/testing/unit/): Test your infrastructure code in isolation
-- [Integration testing](/docs/iac/concepts/testing/integration/): Test your infrastructure deployments end-to-end
+- [Unit testing](/docs/iac/guides/testing/unit/): Test your infrastructure code in isolation
+- [Integration testing](/docs/iac/guides/testing/integration/): Test your infrastructure deployments end-to-end
 
 ## Troubleshooting .NET versions
 

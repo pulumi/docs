@@ -68,7 +68,7 @@ sections:
 
   - type: feature_callout
     background: 2
-    title: Agentic AI with built-in governance
+    title: Agentic infrastructure with built-in governance
     description: Neo automates AWS operations while respecting your policies, compliance requirements, and approval workflows. From Lambda runtime updates to security remediation, Neo generates infrastructure changes as pull requests — giving your team full visibility and control before any changes reach production.
     cta_primary_text: Contact us to learn more
     cta_primary_link: /contact/
@@ -107,7 +107,7 @@ sections:
         description: Modivcare used Pulumi to transform fragmented acquisition-built infrastructure into a unified platform without service disruption, achieving up to 25% cost reductions and enabling developer self-service.
       - slug: bmw
         title: Unified solution for all services
-        description: BMW used Pulumi to build a scalable and resilient hybrid cloud implementation that could handle more than eleven thousand developers.
+        description: BMW used Pulumi to build a scalable and resilient hybrid cloud implementation that manages more than 20,000 cloud resources with Python-based infrastructure code.
     anchor: customers
 
   - type: two_column
@@ -115,7 +115,7 @@ sections:
       - title: Interested in learning more about Neo + Amazon Bedrock AgentCore?
         description: Request a session with one of our solution architects for a customized demo.
         cta_primary_text: Request a session
-        cta_primary_link: /contact/?form=request-a-demo
+        cta_primary_link: /request-a-demo/
       - title: Get started with Pulumi and AWS joint solutions
         description: Ready to deploy AWS infrastructure at AI speed? Start with our quickstart guide, explore workshops, or talk to our AWS specialists about your specific needs.
         cta_primary_text: AWS Marketplace

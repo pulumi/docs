@@ -38,7 +38,7 @@ if isMinikube {
    frontendServiceType = “LoadBalancer”
 }
 
-frontendService, err := corev1.NewService(ctx, “frontent”, &corev1.ServiceArgs{
+frontendService, err := corev1.NewService(ctx, “frontend”, &corev1.ServiceArgs{
    Metadata: &metav1.ObjectMetaArgs{
       Labels: frontendLabels,
       Name: pulumi.String(“frontend”),
@@ -105,4 +105,4 @@ If you’re just starting out with Kubernetes, Pulumi provides a great experienc
 
 You don't have to start from scratch if you have existing YAML manifests and Helm charts. Pulumi gives you the flexibility to manage your stack in whatever way makes sense to you, on any cloud provider, including your own infrastructure. We make it easier to bridge the gap between developers and operators so you can put Kubernetes to work for your organization!
 
-Learn how Pulumi can make your Kubernetes experience smoother and more efficient by working through [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) or trying out our [examples](https://github.com/pulumi/examples#kubernetes).
+Learn how Pulumi can make your Kubernetes experience smoother and more efficient by working through [tutorials](/registry/packages/kubernetes/how-to-guides/) or trying out our [examples](https://github.com/pulumi/examples#kubernetes).

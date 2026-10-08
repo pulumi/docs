@@ -10,12 +10,12 @@ meta_desc: "Based on feedback from cloud developers, Pulumi Outputs have been si
 ---
 
 > [!INFO]
-> This blog post refers to an outdated version of Pulumi (0.17). For current information about Outputs and the latest features, please refer to the [Inputs and Outputs documentation](/docs/concepts/inputs-outputs/).
+> This blog post refers to an outdated version of Pulumi (0.17). For current information about Outputs and the latest features, please refer to the [Inputs and Outputs documentation](/docs/iac/concepts/inputs-outputs/).
 
 Pulumi allows cloud developers to use programming languages like
 JavaScript, TypeScript and Python to define and deploy cloud
 infrastructure and applications. To do this, Pulumi exposes a notion of
-[Outputs](/docs/concepts/inputs-outputs/)
+[Outputs](/docs/iac/concepts/inputs-outputs/)
 that track how the outputs of one cloud resource are used and
 transformed as part of creating another cloud resource.
 

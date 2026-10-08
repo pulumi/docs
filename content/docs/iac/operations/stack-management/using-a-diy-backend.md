@@ -14,7 +14,7 @@ aliases:
 
 A DIY ("Do It Yourself") backend stores Pulumi [state](/docs/iac/concepts/state-and-backends/) in an object store or on your local machine instead of in Pulumi Cloud. The filesystem and cloud storage backends allow you to store state locally on your machine or remotely within a cloud object store. For DIY backends, state management—including backup, sharing, and team access synchronization—is custom and implemented manually. A basic file-based locking system is enabled by default for all DIY backends.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Both Pulumi Cloud and DIY backends provide reliable state management. DIY backends include built-in state locking and history tracking. However, most users find Pulumi Cloud to be the easiest way to get started and scale. Pulumi Cloud handles operational concerns automatically, including backup and recovery, team collaboration, RBAC, and audit logging. It also provides a transactional API that offers stronger guarantees than blob storage protocols. With DIY backends, you will need to implement your own backup procedures and manage access control. For a full comparison, see [Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/). For advanced state management concepts, see [Advanced state](/docs/iac/concepts/state-and-backends/#advanced-state).
 {{% /notes %}}
 
@@ -200,4 +200,4 @@ error: read ".pulumi\\meta.yaml": blob (key ".pulumi/meta.yaml") (code=Unknown):
 - **Missing region configuration (AWS S3).** The AWS SDK can't determine which region the bucket is in. Specify the region in the backend URL—for example, `pulumi login 's3://<bucket-name>?region=us-east-1'`—or set the `AWS_REGION` environment variable before logging in.
 - **Missing authentication environment variables.** DIY backends authenticate using the cloud provider's own SDK. Verify that the variables that SDK expects are set—see the section for your backend ([AWS S3](#aws-s3), [Azure Blob Storage](#azure-blob-storage), or [Google Cloud Storage](#google-cloud-storage)) above for the specifics.
 
-To get more detail while diagnosing the problem, re-run the command with [CLI verbose logging](/docs/support/debugging/logging/#cli-verbose-logging) enabled.
+To get more detail while diagnosing the problem, re-run the command with [CLI verbose logging](/docs/iac/operations/debugging/logging/#cli-verbose-logging) enabled.

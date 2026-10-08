@@ -48,26 +48,111 @@ on:
         required: false
         type: string
         default: ''
+      ack_target:
+        description: 'API path (issues/comments/<id> or pulls/comments/<id>) of the comment that asked for this review; on success it gets a 🚀 reaction instead of the terminal comment (ack-request.sh). Empty keeps the comment.'
+        required: false
+        type: string
+        default: ''
+      prior_high_water:
+        description: 'REVIEW_STATE high_water of the review the dispatcher cleared (claude-new.yml only); new finding ids start above it so they never reuse a retired id'
+        required: false
+        type: string
+        default: '0'
+      # Set only by this workflow's own `redispatch` job. Counts how many
+      # automatic re-dispatches this run is downstream of, so the publish
+      # guard can stop chaining at handoff_guard.py's MAX_DEPTH instead of
+      # queueing a review per push. Every other dispatcher leaves it at 0.
+      supersede_depth:
+        description: 'Automatic re-dispatches this run is downstream of (redispatch job only; 0 for every other dispatcher)'
+        required: false
+        type: string
+        default: '0'
 
 jobs:
   # synchronize → mark the existing pinned review stale, and record whether
   # the prior state was outstanding-issues so the auto-refresh job below can
   # decide whether the push is a candidate for a scoped automatic update.
+  #
+  # The bot-author exclusion below skips the high-volume bot PRs nobody
+  # reviews (SDK doc regens, dependabot) — but it must carve out
+  # `content-review/*`, `fix/broken-links-*`, and `vale/brand-sync-*`,
+  # matching the same carve-out the review job's own skip logic makes
+  # ("Bot-authored PRs are slop-skipped
+  # — EXCEPT content-review/*"). Those PRs are authored by pulumi-bot and DO get a
+  # full review, and being bot-authored is exactly why a human pushes to
+  # them (applying suggestions, answering findings). Without the carve-out
+  # the transition never fires: on #21456 a human push at 16:41Z produced a
+  # synchronize run where every job skipped, and the PR wore
+  # review:no-blockers against a two-commit-old review until the
+  # review-label-reconcile cron happened to catch it up to two hours later.
   mark-stale:
     if: |
       github.event_name == 'pull_request' &&
       github.event.action == 'synchronize' &&
-      github.event.pull_request.user.login != 'pulumi-bot' &&
-      github.event.pull_request.user.login != 'dependabot[bot]'
+      (
+        ( github.event.pull_request.user.login != 'pulumi-bot' &&
+          github.event.pull_request.user.login != 'dependabot[bot]' ) ||
+        startsWith(github.event.pull_request.head.ref, 'content-review/') ||
+        startsWith(github.event.pull_request.head.ref, 'fix/broken-links-') ||
+        startsWith(github.event.pull_request.head.ref, 'vale/brand-sync-')
+      )
     runs-on: ubuntu-latest
     permissions:
       contents: read
       pull-requests: write
+      actions: write # re-evaluate the Sentinel after a base-merge restamp
     outputs:
       was_outstanding: ${{ steps.transition.outputs.was_outstanding }}
     steps:
+      # A push that only merges the base leaves the diff the review read
+      # untouched. Marking it stale sent #21673 to review:stale with nothing
+      # scheduled to clear it (the review lane is skipped on synchronize).
+      # restamp-base-merge.py moves the v3 card's head marker to the new head
+      # instead — only when every commit since the reviewed head is a merge
+      # AND the PR's own +/- lines are unchanged; anything else, or any read
+      # it can't make, falls through to the stale transition below. Scripts
+      # from the BASE ref, never the PR head.
+      - name: Checkout review scripts (base ref)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 1
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            .github
+
+      - name: Carry the review across a base-only merge
+        id: restamp
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          python3 -m pip install --quiet pyyaml >/dev/null 2>&1 || true
+          # A stacked PR's base branch may predate the script; that's the old
+          # behavior (mark stale), not a failure.
+          if [ ! -f scripts/review-v3/restamp-base-merge.py ]; then
+            echo "restamped=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          RESULT=$(python3 scripts/review-v3/restamp-base-merge.py --repo "${{ github.repository }}" --pr "$PR") \
+            || RESULT='{"restamped":false,"reason":"restamp script failed on this base"}'
+          echo "restamp: $RESULT" | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "restamped=$(echo "$RESULT" | jq -r '.restamped')" >> "$GITHUB_OUTPUT"
+
+      - name: Re-evaluate Sentinel after a restamp
+        if: steps.restamp.outputs.restamped == 'true' && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run review-sentinel.yml --repo "${{ github.repository }}" \
+            -f pr_number="${{ github.event.pull_request.number }}"
+
       - name: Mark previous Claude review as stale
         id: transition
+        if: steps.restamp.outputs.restamped != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
@@ -112,6 +197,9 @@ jobs:
   # - Once per push comes free: one synchronize event per push, and
   #   claude-update.yml's per-PR concurrency group (cancel-in-progress)
   #   collapses stacked pushes onto the newest head.
+  # - An explicit `#update-review` already in flight wins: the yield step
+  #   skips the dispatch so the concurrency group can't cancel the
+  #   human's request (see that step's comment).
   auto-refresh:
     needs: mark-stale
     if: |
@@ -120,7 +208,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: read
+      pull-requests: write # instant review:in-progress label on gate fire
+      issues: write # instant 🔄 banner PATCH on the author card
       actions: write # gh workflow run claude-update.yml
     steps:
       # The gate scripts come from the BASE ref, never the PR head — the
@@ -180,11 +269,75 @@ jobs:
           echo "fire=$FIRE" >> "$GITHUB_OUTPUT"
           echo "auto-refresh gate: fire=$FIRE — $REASON" | tee -a "$GITHUB_STEP_SUMMARY"
 
+      # Push-then-comment is the documented happy path, and it used to
+      # lose: the author pushes, then within seconds replies `@claude …
+      # #update-review` with their reasoning; the explicit run starts, the
+      # dispatch below lands a few seconds later and cancels it through
+      # claude-update.yml's per-PR concurrency group (#21535, 20:35 —
+      # runs 34527254288 → 34527268414). The scoped auto pass then marked
+      # the findings fixed on diff evidence alone and the reasoning was
+      # never adjudicated. So before dispatching, look for a live explicit
+      # request in the last 15 minutes that still has a run in flight; an
+      # explicit run reads the PR live, so it covers this head too. Yield
+      # to it. (A request whose run already finished may have evaluated
+      # an older head; mention-gate.py's `pending` only yields when the
+      # run is still in flight.) Fail open: if the lookup errors, dispatch.
+      - name: Yield to an explicit refresh already in flight
+        id: yield
+        if: steps.gate.outputs.fire == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          SCRIPTS=.claude/commands/docs-review/scripts
+          SINCE=$(date -u -d '15 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
+          gh api "repos/$REPO/issues/$PR/comments?since=$SINCE&per_page=100" > /tmp/recent-issue-comments.json || echo '[]' > /tmp/recent-issue-comments.json
+          gh api "repos/$REPO/pulls/$PR/comments?since=$SINCE&per_page=100" > /tmp/recent-review-comments.json || echo '[]' > /tmp/recent-review-comments.json
+          gh api "repos/$REPO/pulls/$PR/reviews?per_page=100" > /tmp/recent-reviews.json || echo '[]' > /tmp/recent-reviews.json
+          gh run list --repo "$REPO" --workflow claude-update.yml --limit 30 \
+            --json event,status,createdAt > /tmp/update-runs.json || echo '[]' > /tmp/update-runs.json
+          python3 "$SCRIPTS/mention-gate.py" pending \
+            --hashtag update-review --exclude new-review --since "$SINCE" \
+            --comments /tmp/recent-issue-comments.json \
+            --comments /tmp/recent-review-comments.json \
+            --comments /tmp/recent-reviews.json \
+            --runs /tmp/update-runs.json | tee -a "$GITHUB_OUTPUT"
+          if grep -q '^yield=true' "$GITHUB_OUTPUT"; then
+            echo "auto-refresh: yielding to the explicit #update-review already in flight" | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+
+      # The instant signal (persona-pass round, 2026-09-01 / Cam): the
+      # author learns "a re-review is happening" the moment the gate
+      # decides — not minutes later when the dispatched workflow starts.
+      # Label flips to review:in-progress AND the author card gets a 🔄
+      # banner stamped under its markers. The refresh's publish rewrites
+      # the whole card (clearing the banner); claude-update.yml's error
+      # path clears it explicitly so a failed refresh doesn't leave the
+      # promise standing.
+      - name: Signal re-review instantly (label + card banner)
+        if: steps.gate.outputs.fire == 'true' && steps.yield.outputs.yield != 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AFTER: ${{ github.event.after }}
+        run: |
+          SCRIPTS=.claude/commands/docs-review/scripts
+          "$SCRIPTS/set-review-label.sh" \
+            --pr "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" \
+            --label review:in-progress
+          bash "$SCRIPTS/pinned-comment.sh" banner \
+            --pr "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" \
+            --set "${AFTER:0:7}"
+
       # Dispatch with GITHUB_TOKEN — same pattern as claude-new.yml's
       # dispatch of this workflow. The dispatched run's actor becomes
       # github-actions[bot]; claude-update.yml opts in via allowed_bots.
       - name: Dispatch scoped update review
-        if: steps.gate.outputs.fire == 'true'
+        if: steps.gate.outputs.fire == 'true' && steps.yield.outputs.yield != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -216,12 +369,32 @@ jobs:
       group: claude-review-${{ github.event.workflow_run.pull_requests[0].number || github.event.inputs.pr_number }}
       cancel-in-progress: true
 
+    # Consumed by the v3 publish job below; empty on v2 runs and on any v3
+    # run that didn't reach a publishable handoff.
+    outputs:
+      v3: ${{ steps.pr-context.outputs.v3 }}
+      v3_ready: ${{ steps.v3-build.outputs.ready }}
+      pr_number: ${{ steps.pr-context.outputs.pr_number }}
+      head_sha: ${{ steps.pr-context.outputs.head_sha }}
+      # The publish error trap's fallback when publish dies before it reads
+      # the handoff (e.g. a hung checkout) — the handoff carries the same ids.
+      check_id: ${{ steps.check-run.outputs.check_id }}
+      progress_id: ${{ steps.progress.outputs.comment_id }}
+
     runs-on: ubuntu-latest
     # A review that genuinely hangs (one observed stall ran ~18 min with no
     # output before being cancelled) would otherwise sit on the runner for
-    # GitHub's 6-hour default. 25 min is comfortably above the slowest real
-    # reviews (blog reviews run 9-12+ min).
-    timeout-minutes: 25
+    # GitHub's 6-hour default. The hang guard is the step-level
+    # timeout-minutes on the Opus step (18 min, comfortably above the
+    # slowest real reviews — blog reviews run 9-12+ min); this job-level
+    # value only backstops the deterministic pre/post steps. It's sized so
+    # the Opus step's budget survives pre-step variance (one observed
+    # checkout took 10 minutes on its own — PR #20560, run 30557604289;
+    # under the old job-level-only 25-min timeout that run gave Opus just
+    # 12 minutes before the axe fell, and the axe landed on the whole job,
+    # skipping every finalize step gated on step outcomes). Keep the two
+    # values in sync with the *_BUDGET_S env of the classify-outcome step.
+    timeout-minutes: 40
     # No `environment: production` — this job never pushes commits
     # (allowed_tools below excludes git push / commit / add and gh pr
     # edit), so it doesn't need a PULUMI_BOT_TOKEN-authenticated
@@ -244,6 +417,14 @@ jobs:
       checks: write
 
     steps:
+      # Wall-clock anchor for the classify-outcome step at job end: a job
+      # cancelled ~timeout-minutes after this instant was killed by its own
+      # timeout, not superseded by a newer run. Must be the first step —
+      # checkout time (observed up to 10 min) counts against the job budget.
+      - name: Record job start
+        id: job-start
+        run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+
       # Check out the PR head, not the base. workflow_run carries the
       # originating commit on the event payload; workflow_dispatch
       # doesn't, so claude-new.yml passes it through as an input.
@@ -269,13 +450,14 @@ jobs:
       - name: Resolve PR context
         id: pr-context
         env:
+          INPUT_PR: ${{ github.event.inputs.pr_number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # PR number comes from the workflow_run pull_requests array on
           # the triage-chained path, or from the workflow_dispatch input
           # on the #new-review path.
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            PR="${{ github.event.inputs.pr_number }}"
+            PR="$INPUT_PR"
           else
             PR="${{ github.event.workflow_run.pull_requests[0].number }}"
           fi
@@ -288,10 +470,28 @@ jobs:
           # real changes. Retry once after a pause to catch the race
           # before falling through to the empty-diff skip.
           fetch_pr() {
-            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,files,title
+            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,headRepository,headRepositoryOwner,additions,deletions,changedFiles,files,title
           }
-          DATA=$(fetch_pr)
-          if [[ "$(echo "$DATA" | jq -r '.files | length')" == "0" ]]; then
+          # Retry up to 3 times on transient server-side errors (5xx / 503).
+          # The empty-diff retry below is a separate, orthogonal concern.
+          fetch_pr_with_retry() {
+            local attempt delay out
+            for attempt in 1 2 3; do
+              if out=$(fetch_pr 2>&1); then
+                echo "$out"
+                return 0
+              fi
+              if [[ "$attempt" -lt 3 ]]; then
+                delay=$(( (attempt - 1) * 15 ))
+                echo "review: fetch_pr attempt $attempt failed (transient error?), retrying in ${delay}s" >&2
+                sleep "$delay"
+              fi
+            done
+            echo "$out" >&2
+            return 1
+          }
+          DATA=$(fetch_pr_with_retry)
+          if [[ "$(echo "$DATA" | jq -r '.changedFiles')" == "0" ]]; then
             echo "review: pr=$PR file_count=0 on first read, retrying after 30s (likely post-force-push race)"
             sleep 30
             DATA=$(fetch_pr)
@@ -300,20 +500,55 @@ jobs:
           AUTHOR=$(echo "$DATA" | jq -r '.author.login')
           LABELS_JSON=$(echo "$DATA" | jq -c '[.labels[].name]')
           LABELS_CSV=$(echo "$DATA" | jq -r '[.labels[].name] | join(",")')
+          # Which review surface this run renders: the REVIEW_V3_COMMENTS
+          # repo variable, literal compare (an unset variable is never truthy).
+          V3=false
+          if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ]; then
+            V3=true
+          fi
           # Pre-compute PR metadata so the review model doesn't burn turns
           # re-deriving it via gh pr view / git remote / etc. The 2026-04-28
           # cost-optimization measurement showed ~85% denial reduction and
           # ~51% cost reduction stacked with the broadened allowed-tools
           # list (see scratch/2026-04-28-pipeline-comparison/SONNET-EVERYWHERE-ANALYSIS.md).
-          HEAD_SHA=$(echo "$DATA" | jq -r '.headRefOid')
+          # The SHA this run REVIEWS is the one the checkout above resolved
+          # (workflow_run.head_sha, or the dispatcher's head_sha input) — not
+          # the live head, which is already newer if a push landed between
+          # the trigger and this step. The v3 handoff carries this SHA and
+          # the publish job's freshness guard compares it with the live head
+          # at publish time; stamping the live head here would let a review
+          # of commit A publish as a review of commit B whenever the two had
+          # diverged before the guard ran. Live head is the fallback only when
+          # neither trigger supplied one.
+          HEAD_SHA="${{ github.event.workflow_run.head_sha || github.event.inputs.head_sha }}"
+          if [ -z "$HEAD_SHA" ]; then
+            HEAD_SHA=$(echo "$DATA" | jq -r '.headRefOid')
+          fi
           HEAD_SHA_SHORT="${HEAD_SHA:0:7}"
           HEAD_BRANCH=$(echo "$DATA" | jq -r '.headRefName')
+          # owner/name of the HEAD repo — differs from $REPO on fork PRs; the
+          # composer's ✏️ edit links must open the editor on the fork, where
+          # the author can actually commit.
+          HEAD_REPO=$(echo "$DATA" | jq -r 'if (.headRepositoryOwner.login? // "") != "" and (.headRepository.name? // "") != "" then .headRepositoryOwner.login + "/" + .headRepository.name else "" end')
           BASE_BRANCH=$(echo "$DATA" | jq -r '.baseRefName')
           ADDITIONS=$(echo "$DATA" | jq -r '.additions')
           DELETIONS=$(echo "$DATA" | jq -r '.deletions')
           TITLE=$(echo "$DATA" | jq -r '.title')
-          FILE_COUNT=$(echo "$DATA" | jq -r '.files | length')
+          # `.changedFiles` is the true total; `.files` is capped at 100 by the
+          # GraphQL page `gh pr view` requests, so `.files | length` under-reports
+          # (and stalls at 100) on a large PR.
+          FILE_COUNT=$(echo "$DATA" | jq -r '.changedFiles')
           FILES_LIST=$(echo "$DATA" | jq -r '.files[] | "  - \(.path) (+\(.additions)/-\(.deletions))"')
+          if [[ "$FILE_COUNT" =~ ^[0-9]+$ ]] && [ "$FILE_COUNT" -gt 100 ]; then
+            FILES_LIST="$FILES_LIST"$'\n'"  - … and $((FILE_COUNT - 100)) more (list truncated at 100 by the API)"
+          fi
+          # Bare paths, one per line, for path matching. Two reasons this can't
+          # reuse FILES_LIST: that is the human-readable "  - path (+n/-m)" form
+          # rendered into the prompt, whose two-space bullet prefix means an
+          # anchored ^path/ pattern never matches it; and it is capped at 100,
+          # so a templating change sorting past that position would be missed.
+          # The paginated REST endpoint returns every file.
+          FILES_PATHS=$(gh api --paginate "repos/$REPO/pulls/$PR/files" --jq '.[].filename')
 
           # force=true (set by claude-new.yml on #new-review dispatch)
           # bypasses the auto-skip heuristics. The user explicitly asked
@@ -328,22 +563,28 @@ jobs:
               SKIP="trivial"
             elif [[ ",$LABELS_CSV," == *",review:frontmatter-only,"* ]]; then
               SKIP="frontmatter-only"
-            # Oversized PRs (triage-set; >15K changed lines — in practice
-            # generated corpora) can't finish inside the job timeout: every
-            # attempt burns ~25 minutes of runner + API spend, then
-            # error-cycles the labels. Triage posts a TRIAGE_OVERSIZED
-            # advisory comment explaining the skip and the alternatives.
+            # Oversized PRs (>15K changed lines or >150 files — set by
+            # triage, or by hand on a PR that timed out under those
+            # thresholds) can't finish inside the review budget: every
+            # attempt burns the full Opus step timeout of runner + API
+            # spend, then error-cycles the labels. Triage posts a
+            # TRIAGE_OVERSIZED advisory comment explaining the skip and
+            # the alternatives.
             elif [[ ",$LABELS_CSV," == *",review:oversized,"* ]]; then
               SKIP="oversized"
-            # Bot-authored PRs are slop-skipped — EXCEPT content-review/*, which
-            # are first-class automated docs fixes we want reviewed. Those fall
+            # Bot-authored PRs are slop-skipped — EXCEPT content-review/*,
+            # fix/broken-links-* (the broken-link fixer), and vale/brand-sync-*
+            # (the weekly brand-guide sync), which are first-class automated
+            # docs fixes we want reviewed. Those fall
             # through to the already-reviewed guard below (so they still can't
             # re-review loop) and otherwise get a normal review. Triage already
             # ran on them and applied any trivial / frontmatter-only short-circuit
             # above — the point of this change: a trivial content-review PR skips
             # there instead of being force-reviewed.
             elif [[ ( "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ) \
-                    && "$HEAD_BRANCH" != content-review/* ]]; then
+                    && "$HEAD_BRANCH" != content-review/* \
+                    && "$HEAD_BRANCH" != fix/broken-links-* \
+                    && "$HEAD_BRANCH" != vale/brand-sync-* ]]; then
               SKIP="bot-author"
             # Auto-fire path (workflow_run from triage) on a PR that the
             # review pipeline has already touched: don't burn API on a
@@ -354,12 +595,22 @@ jobs:
             # (no commits since — mark-stale would have transitioned
             # otherwise). stale: review ran, commits pushed; refresh via
             # explicit mention. error: workflow failed; explicit retry
-            # avoids transient-error loops.
+            # avoids transient-error loops. in-progress: another review
+            # (usually an `#update-review` the author posted seconds after
+            # pushing) is already running on this PR and will publish for
+            # it; a second, full review racing it only overwrites the
+            # author's resolved card with a fresh v1 (pulumi/docs#21871). An
+            # orphaned in-progress label is review-label-reconcile.yml's
+            # to clear, not this run's. The publish guard rests a
+            # superseded run at review:stale and its `redispatch` job
+            # re-enters via workflow_dispatch, which this guard doesn't
+            # cover — by design, the re-run is the refresh.
             elif [[ "${{ github.event_name }}" == "workflow_run" ]] && (
               [[ ",$LABELS_CSV," == *",review:outstanding-issues,"* ]] || \
               [[ ",$LABELS_CSV," == *",review:no-blockers,"* ]] || \
               [[ ",$LABELS_CSV," == *",review:stale,"* ]] || \
-              [[ ",$LABELS_CSV," == *",review:error,"* ]]
+              [[ ",$LABELS_CSV," == *",review:error,"* ]] || \
+              [[ ",$LABELS_CSV," == *",review:in-progress,"* ]]
             ); then
               SKIP="already-reviewed"
             fi
@@ -378,7 +629,7 @@ jobs:
           # build-and-deploy workflow runs a real Hugo build on every PR;
           # any templating error there blocks the merge regardless.
           TEMPLATING_CHANGED="false"
-          if printf '%s\n' "$FILES_LIST" | grep -qE '^(assets|config|data|i18n|layouts|styles|theme)/|^(hugo|config)\.(toml|yaml|yml)$'; then
+          if printf '%s\n' "$FILES_PATHS" | grep -qE '^(assets|config|data|i18n|layouts|styles|theme)/|^(hugo|config)\.(toml|yaml|yml)$'; then
             TEMPLATING_CHANGED="true"
           fi
 
@@ -388,11 +639,13 @@ jobs:
             echo "author=$AUTHOR"
             echo "labels_csv=$LABELS_CSV"
             echo "labels_json=$LABELS_JSON"
+            echo "v3=$V3"
             echo "skip_reason=$SKIP"
             echo "repo_full=$REPO"
             echo "head_sha=$HEAD_SHA"
             echo "head_sha_short=$HEAD_SHA_SHORT"
             echo "head_branch=$HEAD_BRANCH"
+            echo "head_repo=$HEAD_REPO"
             echo "base_branch=$BASE_BRANCH"
             echo "additions=$ADDITIONS"
             echo "deletions=$DELETIONS"
@@ -409,6 +662,24 @@ jobs:
           else
             echo "review: pr=$PR proceed (labels=$LABELS_CSV, files=$FILE_COUNT, +$ADDITIONS/-$DELETIONS, head=$HEAD_SHA_SHORT)"
           fi
+
+      # Wall-clock timestamp for the card's `<sub>Review vN · updated <ts>`
+      # stamp and the `## Pre-merge Review — Last updated <ts>` line. Computed
+      # in the workflow (not by the model) so the timestamp is always a real
+      # UTC instant — left to the model, it sometimes renders a T00:00:00Z /
+      # round-hour placeholder instead of the actual time.
+      #
+      # Taken HERE, right after the run reads PR state, not when the composer
+      # starts: pinned-comment.sh's stale-publish guard compares this stamp
+      # against the card already on the PR, and the question it has to answer
+      # is "did anything publish after this run looked?". Stamped at compose
+      # time (6+ minutes of pre-steps later), a full review that started
+      # BEFORE an `#update-review` finished looked newer than it, and
+      # overwrote the author's resolved card with a fresh v1 (pulumi/docs#21871,
+      # three times: 09-24 15:32, 09-25 10:41 and 14:51).
+      - name: Compute review timestamp
+        id: now
+        run: echo "value=$(date -u '+%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
 
       # Publish a Checks API check-run pinned to the PR's head SHA so
       # the review status appears in the PR's Status checks list.
@@ -481,19 +752,38 @@ jobs:
             echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
 
-      # Post a transient <!-- CLAUDE_PROGRESS --> comment so the author sees
-      # "something is happening" while the pre-steps and Opus run. The post
-      # step below edits it to a done/errored state when the review completes.
-      # Separate marker from the pinned review so pinned-comment.sh never
-      # touches it.
+      # In-flight signal. A requested run (#new-review, or the update lane's
+      # retry — both dispatch with ack_target) gets a 👀 on the comment that
+      # asked for it (ack-request.sh --start; re-adding one the dispatcher
+      # already put there is a no-op), which the finalize step or the
+      # publish job swaps for 🚀 or clears. Everything else — a
+      # ready-transition has no request to react to, a failed reaction —
+      # posts a transient <!-- CLAUDE_PROGRESS
+      # --> comment so the author sees "something is happening" while the
+      # pre-steps and Opus run; the finalize step edits it to a
+      # done/errored state. Separate marker from the pinned review so
+      # pinned-comment.sh never touches it. `signal` gates the finalize
+      # step, so it's written on every path.
       - name: Post progress signal
         if: steps.check-access.outputs.has_write_access == 'true'
         id: progress
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACK_TARGET: ${{ github.event.inputs.ack_target }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
+          # This job checks out the PR head, which can predate ack-request.sh
+          # (every branch cut before it landed), so run the default branch's
+          # copy — otherwise those PRs silently fall back to the spinner.
+          ACK="$RUNNER_TEMP/ack-request.sh"
+          gh api -H 'Accept: application/vnd.github.raw' \
+            "repos/$REPO/contents/.claude/commands/docs-review/scripts/ack-request.sh?ref=${{ github.event.repository.default_branch }}" \
+            > "$ACK" 2>/dev/null || : > "$ACK"
+          if [ -s "$ACK" ] && bash "$ACK" --start --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"; then
+            echo "signal=reaction" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           BODY=$(cat <<'EOF'
           <!-- CLAUDE_PROGRESS -->
           <img src="https://github.com/user-attachments/assets/5ac382c7-e004-429b-8e35-7feb3e8f9c6f" width="16"> Reviewing — this can take several minutes.
@@ -501,6 +791,7 @@ jobs:
           )
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
             -f body="$BODY" --jq '.id' || echo "")
+          echo "signal=comment" >> "$GITHUB_OUTPUT"
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
 
       # Set the in-progress state label right after the progress signal so
@@ -526,7 +817,11 @@ jobs:
       # Other skip paths (trivial / fmonly / draft / bot) never had a prior
       # state label, so they don't need this.
       - name: Clear stale review-state label (oversized skip)
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.skip_reason == 'oversized'
+        # No has_write_access conjunct: the `Check repository write access`
+        # step above only runs when skip_reason is empty, so on the oversized
+        # path its output is always '' and adding it here made this step
+        # unreachable — the stale review:error label was never cleared.
+        if: steps.pr-context.outputs.skip_reason == 'oversized'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -537,10 +832,13 @@ jobs:
             --clear
 
       # Run Vale on PR-changed files in content/docs and content/blog. Findings
-      # are filtered to PR-introduced lines only, capped (10/file, 50 total),
-      # and written to .vale-findings.json for the review skill to consume.
-      # continue-on-error keeps Vale problems from blocking the review --
-      # style nits are nags, not gates.
+      # are filtered to PR-introduced lines only and capped (10/file, 50 total);
+      # blocker-tier findings are exempt from both caps so one is never silently
+      # dropped. Written to .vale-findings.json for the review skill to consume.
+      # continue-on-error keeps a Vale *crash* from blocking the review: no
+      # findings is a degraded review, not a failed one. That is separate from
+      # what the findings mean -- advisory ones are nags, but the blocker tier
+      # lands in 🚨 and drives review:outstanding-issues.
       - name: Run Vale on PR-changed prose
         if: steps.pr-context.outputs.skip_reason == ''
         id: vale
@@ -550,7 +848,7 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '{}' > .vale-raw.json
             echo '[]' > .vale-findings.json
@@ -569,7 +867,7 @@ jobs:
           # syntax patterns and emits Vale-shaped JSON we merge into the raw
           # findings before filtering. Same `||` fallback discipline.
           python3 .claude/commands/docs-review/scripts/markdown-syntax-findings.py \
-            $CHANGED > .syntax-findings.json 2>/dev/null \
+            $CHANGED > .syntax-findings.json \
             || echo '{}' > .syntax-findings.json
           # Concatenate per-file alert arrays (jq's `*` shallow-merges and would
           # *replace* Vale's array with the script's for any overlapping file).
@@ -578,7 +876,7 @@ jobs:
             && mv .vale-raw.merged.json .vale-raw.json \
             || true
           python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
-            --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
+            --pr "$PR" --in .vale-raw.json --out .vale-findings.json \
             || echo '[]' > .vale-findings.json
 
       # Pre-fetch external URLs added by the PR diff. Pass 2 of the External
@@ -597,14 +895,14 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '[]' > .fetched-urls.json
             echo "extract-urls: no in-scope prose files changed; skipping"
             exit 0
           fi
           python3 .claude/commands/docs-review/scripts/extract-urls-and-fetch.py \
-            --pr "$PR" --out .fetched-urls.json 2>/dev/null \
+            --pr "$PR" --out .fetched-urls.json \
             || echo '[]' > .fetched-urls.json
 
       # ---- Claim extraction ------------------------------------------------
@@ -668,19 +966,16 @@ jobs:
           wait "$ATOMIC_PID";   ATOMIC_RC=$?
           wait "$HOLISTIC_PID"; HOLISTIC_RC=$?
           if [ "$ATOMIC_RC" -ne 0 ] && [ ! -s .candidate-claims-llm-1.json ]; then
-            echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+            echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
           fi
           if [ "$HOLISTIC_RC" -ne 0 ] && [ ! -s .candidate-claims-llm-2.json ]; then
-            echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+            echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
           fi
           exit 0
 
       - name: Merge candidate claims → .candidate-claims.json
         if: steps.pr-context.outputs.skip_reason == ''
-        id: merge-claims
         continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 .claude/commands/docs-review/scripts/merge-claims.py \
             --regex .candidate-claims-regex.json \
@@ -717,7 +1012,7 @@ jobs:
         run: |
           # Added content pages, plus any blog/case-study file (any status).
           FILES=$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
-            --jq '.[] | select(.filename | test("^content/.*\\.md$")) | select(.status == "added" or (.filename | test("^content/(blog|case-studies)/"))) | .filename' \
+            --jq '.[] | select(.filename | test("^content/.*\\.md$")) | select(.status == "added" or (.filename | test("^content/(blog|customers)/"))) | .filename' \
             | paste -sd, - || true)
           echo "files=$FILES" >> "$GITHUB_OUTPUT"
           if [ -n "$FILES" ]; then echo "readthrough scope: $FILES"; else echo "readthrough scope: none"; fi
@@ -733,15 +1028,15 @@ jobs:
         run: |
           python3 .claude/commands/docs-review/scripts/readthrough.py \
             --pr "$PR" --changed-files "$FILES" --out .readthrough-findings.json \
-            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
+            || echo '{"schema_version": 1, "ran": false, "model": "claude-opus-5-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
       # ---- end readthrough coherence lane ----------------------------------
 
       # ---- Claim verification ----------------------------------------------
       # verify-claims.py routes every entry in .candidate-claims.json to one of
       # three lanes — Pass 1 (pulumi-internal: `gh` + local reads), Pass 2
       # (external w/ a fetched URL: consult .fetched-urls.json), Pass 3
-      # (external w/o a fetched URL: server-side web_search) — fires ≤8 parallel
-      # Sonnet 4.6 verifiers via direct /v1/messages with a forced `verify_claim`
+      # (external w/o a fetched URL: server-side web_search) — fires ≤16 parallel
+      # Sonnet 5 verifiers via direct /v1/messages with a forced `verify_claim`
       # tool, and emits .verified-claims.json. The main review reads that file as
       # the verdict *source* (it does NOT re-verify); validate-pinned.py's
       # `verified-claims-trail-faithful` rule fails the review if the rendered
@@ -761,7 +1056,39 @@ jobs:
             --in .candidate-claims.json --fetched-urls .fetched-urls.json \
             --pr "$PR" --repo "$GITHUB_REPOSITORY" \
             --out .verified-claims.json \
-            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+            || echo '{"schema_version": 1, "model": "claude-opus-5-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+
+      # Raw claim records for post-mortems. The evidence trail keeps a rendered,
+      # truncated view of each verdict; the questions a false `contradicted`
+      # raises — what `type` / `source_hint` the extractor assigned, which
+      # layer found the claim, why it routed to web search, what the
+      # pre-fetch actually returned — are only answerable from these files,
+      # and they vanished with the runner. Uploaded here rather than beside
+      # the other debug bundles so a later timeout or model failure can't
+      # lose them. Everything in them derives from the public diff, public
+      # web pages (unauthenticated fetch, 8 KB/URL × 30 URLs at most), and
+      # repo-scoped GITHUB_TOKEN reads.
+      - name: Upload claim artifacts
+        if: always() && steps.pr-context.outputs.pr_number != '' && steps.pr-context.outputs.skip_reason == ''
+        # Observability only — an upload hiccup must not fail the review.
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-claims-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
+          path: |
+            .candidate-claims.json
+            .verified-claims.json
+            .fetched-urls.json
+          # All dotfiles: upload-artifact skips hidden files unless this is
+          # set, and with if-no-files-found: ignore the bundle would come up
+          # empty without a word.
+          include-hidden-files: true
+          # A re-run attempt keeps the run id, so the name repeats.
+          overwrite: true
+          # Matches the other debug bundles. .fetched-urls.json holds excerpts of
+          # third-party pages, which have no reason to outlive a post-mortem.
+          retention-days: 30
+          if-no-files-found: ignore
       # ---- end claim verification ------------------------------------------
 
       # Pre-compute editorial-balance Tier 1 (listicle / FAQ trigger detection,
@@ -785,7 +1112,7 @@ jobs:
             exit 0
           fi
           python3 .claude/commands/docs-review/scripts/editorial-balance-detect.py \
-            --pr "$PR" --out .editorial-balance.json 2>/dev/null \
+            --pr "$PR" --out .editorial-balance.json \
             || echo '{"trigger": null, "files": []}' > .editorial-balance.json
 
       # Pre-compute cross-sibling discovery so the model uses a structurally-
@@ -808,7 +1135,7 @@ jobs:
             exit 0
           fi
           python3 .claude/commands/docs-review/scripts/cross-sibling-discover.py \
-            --pr "$PR" --out .cross-sibling-discovery.json 2>/dev/null \
+            --pr "$PR" --out .cross-sibling-discovery.json \
             || echo '{"files": []}' > .cross-sibling-discovery.json
 
       # Pre-compute frontmatter validation: menu-parent identifier resolution
@@ -832,7 +1159,7 @@ jobs:
             exit 0
           fi
           python3 .claude/commands/docs-review/scripts/frontmatter-validate.py \
-            --pr "$PR" --out .frontmatter-validation.json 2>/dev/null \
+            --pr "$PR" --out .frontmatter-validation.json \
             || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
 
       # Pre-compute Hugo build artifact: full `hugo --renderToMemory`
@@ -880,20 +1207,61 @@ jobs:
             --out .hugo-build.json \
             || echo '{"schema_version": 1, "head_exit_code": -1, "head_exit_nonzero_is_ci_noise": false, "errors": ["hugo-build-validate.py failed to start"], "link_integrity": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 1, "warnings_count": 0, "link_integrity_count": 0, "suppressed_ci_noise_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
 
-      # Wall-clock timestamp for the `## Pre-merge Review — Last updated <ts>`
-      # line. Computed in the workflow (not by the model) so the timestamp is
-      # always a real UTC instant — left to the model, it sometimes renders a
-      # T00:00:00Z / round-hour placeholder instead of the actual time.
-      - name: Compute review timestamp
-        if: steps.check-access.outputs.has_write_access == 'true'
-        id: now
-        run: echo "value=$(date -u '+%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
+      # Deterministic dead-internal-link check over the diff. Hugo doesn't
+      # validate plain markdown links (only ref/relref) and the Hugo pre-step
+      # above is skipped for content-only PRs, so without this a `/docs/...`
+      # link to a page that doesn't exist reached the reviewer only if the
+      # model happened to notice (#21560). Results are appended to
+      # `.hugo-build.json.link_integrity` — the composer pre-stubs them as 🚨
+      # rows — and `link_check` records whether the check ran at all.
+      - name: Check added internal links
+        if: steps.pr-context.outputs.skip_reason == ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/link-check-diff.py \
+            --pr "$PR" --repo "$GITHUB_REPOSITORY" --repo-root . \
+            --merge-into .hugo-build.json \
+            || python3 -c "import json,pathlib; p=pathlib.Path('.hugo-build.json'); d=json.loads(p.read_text()) if p.is_file() else {'schema_version': 1, 'link_integrity': []}; d['link_check']={'ran': False, 'checked': 0, 'dead': 0, 'error': 'link-check-diff.py failed to start'}; p.write_text(json.dumps(d, indent=2)+'\\n'); print('::warning::link-check-diff.py failed to start; dead internal links were NOT checked')"
+
+      # v3 brief header: which teams were requested, and who may clear the
+      # merge gate (`approval_scope` — under `any-human`, anyone with write
+      # access, not just the requested teams).
+      # Same resolver the triage routing step uses (route-pr.py →
+      # routing.py + the tightened mechanical bar), so the brief and the
+      # Sentinel can never name different teams. Best-effort: on any
+      # failure the brief simply omits the line.
+      - name: Compute routed approval team (v3)
+        id: routing
+        if: vars.REVIEW_V3_ROUTING == '1' && steps.pr-context.outputs.v3 == 'true' && steps.check-access.outputs.has_write_access == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          gh pr view "$PR" --repo "$REPO" \
+            --json files,author,labels,additions,deletions,changedFiles,title \
+            > /tmp/route-pr-data.json
+          gh api -H "Accept: application/vnd.github.v3.diff" \
+            "repos/$REPO/pulls/$PR" > /tmp/route-pr.diff
+          python3 scripts/review-v3/route-pr.py \
+            --pr-data /tmp/route-pr-data.json --diff /tmp/route-pr.diff \
+            --config .github/review-routing.yml --repo-root . \
+            > /tmp/route-pr-out.json
+          TEAMS=$(jq -r '[.teams[] | "@" + .] | join(", ")' /tmp/route-pr-out.json)
+          SCOPE=$(jq -r '.approval_scope // "lane"' /tmp/route-pr-out.json)
+          echo "team_display=$TEAMS" >> "$GITHUB_OUTPUT"
+          echo "approval_scope=$SCOPE" >> "$GITHUB_OUTPUT"
+          echo "routing: teams=${TEAMS:-<none>} approval_scope=$SCOPE"
 
       # Compose an ~80%-assembled review draft (.review-draft.md) from the
       # pre-step artifacts so the Opus job EDITS rather than ASSEMBLES — the 🔍
       # trail (verbatim from .verified-claims.json), bucket-count table,
       # investigation-log scaffold, 📊 Editorial-balance Tier 1, #### Style
-      # findings block, 📜 Review-history line, and stub 🚨/⚠️ bullets are laid
+      # suggestions block, 📜 Review-history line, and stub 🚨/⚠️ bullets are laid
       # out; <TODO> tokens mark the parts that are the reviewer's (summary,
       # confidence levels, fix prose, cross-sibling read count). The composer
       # runs validate-pinned.py on its own draft (--skip-rule no-todo-tokens)
@@ -908,7 +1276,85 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # v3 surface (REVIEW_V3_COMMENTS repo variable — derived once in
+          # pr-context). The variable is compared
+          # explicitly against '1' everywhere — vars.UNSET != '0' is TRUE,
+          # so a negated compare on an unset variable silently flips a gate.
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
         run: |
+          # v3 surface: the composer emits the author card, the reviewer
+          # brief, and the machine-owned evidence base instead of the v2
+          # monolith. A can't-even-start failure writes the same CAUTION
+          # banner into both draft paths that compose's own v3 self-check
+          # uses — there is deliberately NO manual-assembly fallback on v3
+          # (the evidence base can't be hand-assembled), so the banner makes
+          # v21 validation fail and the run lands on the error path instead
+          # of publishing something unverifiable.
+          if [[ "$REVIEW_V3" == "1" ]]; then
+            # Finding ids never restart: continue above the high-water mark
+            # of whatever review this one replaces — the live author card
+            # when there is one, else what `#new-review` read off the card
+            # it cleared (the input). Unreadable either way → 0, the old
+            # behavior.
+            PRIOR_HW="${{ github.event.inputs.prior_high_water || '0' }}"
+            [[ "$PRIOR_HW" =~ ^[0-9]+$ ]] || PRIOR_HW=0
+            CARD_ID=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh find \
+              --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" --role author 2>/dev/null || true)
+            if [[ -n "$CARD_ID" ]]; then
+              LIVE_HW=$(gh api "repos/$GITHUB_REPOSITORY/issues/comments/$CARD_ID" --jq .body 2>/dev/null \
+                | python3 scripts/review-v3/review_state.py high-water 2>/dev/null || echo 0)
+              [[ "$LIVE_HW" =~ ^[0-9]+$ ]] && (( LIVE_HW > PRIOR_HW )) && PRIOR_HW=$LIVE_HW
+            fi
+            # An earlier forced run that errored after its card was cleared
+            # left the mark on its failure notice. Failure notices only: other bot
+            # comments (cards, triage prose) can quote PR-derived text.
+            MARK_HW=$(gh api --paginate "repos/$GITHUB_REPOSITORY/issues/${{ steps.pr-context.outputs.pr_number }}/comments" \
+                --jq '.[] | select(.user.login == "github-actions[bot]") | select(.body | startswith("<!-- CLAUDE_PROGRESS -->")) | .body' 2>/dev/null \
+              | python3 scripts/review-v3/review_state.py high-water-marker 2>/dev/null || echo 0)
+            [[ "$MARK_HW" =~ ^[0-9]+$ ]] && (( MARK_HW > PRIOR_HW )) && PRIOR_HW=$MARK_HW
+            echo "compose: finding ids start above high_water=$PRIOR_HW"
+            # The composer runs from the PR head checkout: a branch cut before
+            # the flag existed would reject it and error the whole review.
+            HW_ARGS=()
+            if grep -q -- '--prior-high-water' .claude/commands/docs-review/scripts/compose-review.py; then
+              HW_ARGS=(--prior-high-water "$PRIOR_HW")
+            fi
+            # Same guard for --approval-scope (#22172): this workflow runs from
+            # master but compose-review.py comes from the PR head, so a branch
+            # cut before the flag existed rejects it as an unrecognized argument
+            # and the whole review errors. Without the flag, an older composer
+            # words the approval line its default (lane) way.
+            SCOPE_ARGS=()
+            if grep -q -- '--approval-scope' .claude/commands/docs-review/scripts/compose-review.py; then
+              SCOPE_ARGS=(--approval-scope "${{ steps.routing.outputs.approval_scope || 'lane' }}")
+            fi
+            python3 .claude/commands/docs-review/scripts/compose-review.py \
+              "${HW_ARGS[@]}" "${SCOPE_ARGS[@]}" \
+              --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" \
+              --out .review-draft.md --surface v3 --run-id "${{ github.run_id }}" \
+              --timestamp "${{ steps.now.outputs.value }}" \
+              --head-sha "${{ steps.pr-context.outputs.head_sha }}" \
+              --head-sha-short "${{ steps.pr-context.outputs.head_sha_short }}" \
+              --verified-claims .verified-claims.json \
+              --candidate-claims .candidate-claims.json \
+              --vale-findings .vale-findings.json \
+              --editorial-balance .editorial-balance.json \
+              --cross-sibling .cross-sibling-discovery.json \
+              --frontmatter .frontmatter-validation.json \
+              --hugo-build .hugo-build.json \
+              --fetched-urls .fetched-urls.json \
+              --readthrough .readthrough-findings.json \
+              --head-repo "${{ steps.pr-context.outputs.head_repo }}" \
+              --head-branch "${{ steps.pr-context.outputs.head_branch }}" \
+              --routed-team "${{ steps.routing.outputs.team_display }}" \
+            || {
+              printf '%s\n' \
+                '> [!CAUTION]' \
+                '> compose-review.py --surface v3 failed to start. Do not edit or publish these drafts — the run must land on the error path (v3 has no manual-assembly fallback).' \
+                | tee .review-draft-author.md > .review-draft-brief.md
+            }
+            exit 0
+          fi
           python3 .claude/commands/docs-review/scripts/compose-review.py \
             --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" \
             --out .review-draft.md \
@@ -933,14 +1379,36 @@ jobs:
             '_(composer stub — see ci.md §Fallback)_' \
             > .review-draft.md
 
+      # Wall-clock anchor for distinguishing "the Opus step burned its whole
+      # budget" (deterministic timeout — retrying the same PR fails the same
+      # way) from "the Opus step died early" (transient error — retry advice
+      # is legitimate) in the classify-outcome step below.
+      - name: Record review start
+        if: steps.check-access.outputs.has_write_access == 'true'
+        id: review-start
+        run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+
       - name: Run Claude Code Review
         if: steps.check-access.outputs.has_write_access == 'true'
         id: claude-review
+        # Step-level timeout so a review that can't finish ends THIS step
+        # instead of tripping the job-level timeout, which cancels the
+        # whole job and takes the finalize/labeling steps down with it.
+        # (The runner reports the timed-out step as cancelled, not failed —
+        # the classify-outcome step below tells a timeout apart from a
+        # supersession by elapsed wall-clock, not by the outcome word.)
+        # Observed on PR #20560 (155 files): two consecutive runs hit the
+        # old job-level 25-min timeout mid-Opus; the cancellation deleted
+        # the progress comment without a trace and the author was left with
+        # a bare review:error label and retry advice that deterministically
+        # re-failed. Keep in sync with STEP_BUDGET_S in the
+        # classify-outcome step.
+        timeout-minutes: 18
         uses: anthropics/claude-code-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Expose ANTHROPIC_API_KEY in the step env so Bash sub-shells (e.g.
-          # `pinned-comment.sh upsert-validated → validator-fix.py → claude -p
+          # the Step C2 `validator-fix.py → claude -p
           # --bare`) can authenticate without OAuth — OAuth state isn't
           # available in subprocesses spawned by the action. The `with:
           # anthropic_api_key` input below configures the action's own
@@ -965,12 +1433,17 @@ jobs:
           # because the action reports the actor as bare `workprentice`
           # while github.actor renders it as `workprentice[bot]`.
           allowed_bots: 'github-actions[bot],workprentice,workprentice[bot]'
+          # The public Pulumi brand MCP server (voice/writing-style source of
+          # truth) is wired below via `claude_args --mcp-config` — v1 has no
+          # `mcp_config` input. Its tools are added to --allowed-tools. The
+          # config merges with the action's built-in GitHub MCP server. No auth.
           # Initial review uses Opus; re-entrant updates (via @claude mentions)
           # use Sonnet — see .github/workflows/claude.yml.
           # The CI prompt lives at .claude/commands/docs-review/ci.md and is
           # diff-only by hard rule. Output goes through pinned-comment.sh so
           # the review survives across re-runs as a single logical comment.
           prompt: |
+            ${{ steps.pr-context.outputs.v3 == 'true' && 'IMPORTANT — the v3 review surface is active for this run. Read `.claude/commands/docs-review/ci.md` §The v3 surface FIRST: your drafts are `.review-draft-author.md` and `.review-draft-brief.md` (there is NO `.review-draft.md`), and the v3 edit contract in `references/output-format.md` §The model''s edit contract (v3) overrides the draft-structure description below wherever they conflict. Everything else in this prompt (pre-computed metadata, artifact discipline, style-suggestion sidecar rules, DO-NOT list) applies unchanged.' || '' }}
             You are running in a CI environment.
 
             Review pull request #${{ steps.pr-context.outputs.pr_number }} by following the instructions in `.claude/commands/docs-review/ci.md`.
@@ -1003,12 +1476,12 @@ jobs:
             - the bucket-count table (a *starting point* matching the stub-bullet counts);
             - the 🔍 Verification trail — one line per `.verified-claims.json` verdict, verbatim: verdict word, per-verdict emoji (`verified` ✅ · `matches` 🤝 · `not-a-claim` ➖ · `unverifiable` 🤷 · `contradicted` ❌ · `mismatch` ⚔️ · `framing-drift` 🌀), evidence pointer, source;
             - the 📊 Editorial-balance Tier 1 (blog only — empty form when `trigger=null`, rich form with section-depth stats + outliers otherwise; Tier 2 vendor/FAQ counts are `<TODO>`);
-            - the `#### Style findings` block (from `.vale-findings.json`, with the correct inline-vs-collapse render mode already chosen);
+            - the `#### Style suggestions` block (advisory Vale findings from `.vale-findings.json`, expanded, uncounted) plus any `[style-blocker]` bullets rendered into 🚨 Outstanding (blocker-tier Vale findings, counted);
             - the empty 💡 / ✅ forms;
             - the 📜 Review-history line (timestamp + SHA + `<TODO: one-line summary>`);
-            - stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker.
+            - stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + the verdict (and its `framing:` note when present) + a `<TODO>` marker. The evidence/source pointer is deliberately NOT repeated in the bullet — it already renders verbatim on that claim's 🔍 trail line, and duplicating it put ~10% of the comment between the claim and the fix. The trail is the evidence record; the bucket bullet is the instruction.
 
-            **Your job is to EDIT this draft, not rebuild it.** Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view. Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents (extraction already happened). Do NOT WebFetch / re-verify claims (the trail is the verdict source — `verified-claims-trail-faithful` fails the review if you flip a verdict; if you believe one is wrong, render it as recorded and open a follow-up issue). Follow `.claude/commands/docs-review/ci.md` §2–4 for the editorial pass: (a) triage each `<TODO>`-marked stub bucket bullet — remove spurious ones (and decrement the matching count-table cell), write the fix prose / suggestion block for real ones, mirror `framing:` notes (anti-hedge for `⚔️ mismatch`), promote a `framing-drift` ⚠️ stub to 🚨 when the drifted phrasing also rides `social.*` frontmatter (it auto-posts on merge) or materially misleads, promote an `unverifiable` ⚠️ stub to 🚨 if it's a factual blocker (file the author-question line either way; a `turn_cap_exhausted` stub describes a retryable verifier budget failure — never call it out-of-scope); (b) add the findings the composer couldn't pre-stub — Hugo-build errors & link-integrity (from `.hugo-build.json`), frontmatter alias/URL collisions (from `.frontmatter-validation.json`, triaging PR-internal renames), internal-link/shortcode breaks in the content, cross-sibling mismatches (from your in-review sibling-read fan-out), code-examples findings, editorial-balance threshold flags, intuition-flag promotions, domain two-question-test findings — each as its 🔍 trail line (if it's a claim/sibling check) AND its `**[L…]**` bucket bullet, prefixes consistent; (c) replace the cross-sibling investigation-log placeholder with the real `X of N siblings` count; (d) write the Summary paragraph and the Review-confidence levels + notes (add/remove rows per the references you actually applied; don't say HIGH unless the work finished) — and if a `> [!WARNING]` automated-fact-checking banner sits between the header and the Summary (the fact-check verifier was degraded this run), preserve it verbatim, keep the pre-filled `facts` row at LOW, and write the Summary in unconfirmed terms; do NOT delete the banner or upgrade `facts` (this `> [!WARNING]` is usable-but-degraded, distinct from the discard-the-draft `> [!CAUTION]`); (e) fill the Review-history `<TODO: one-line summary>`; (f) fill the Tier-2 editorial-balance `<TODO>`s if the §📊 section is in rich form; (g) keep the body self-consistent — count-table cells == bucket-bullet counts (style findings count in ⚠️); every 🔍 trail line corresponds to a verdict (you may add, may not drop a candidate-claims-floor entry); every `**[L…]**` bucket bullet matches a trail record; `contradicted`/`mismatch` trail verdicts surface in 🚨 Outstanding and `framing-drift` in ⚠️ or 🚨; (h) apply the `docs-review:references:output-format` DO-NOT list. On a re-entrant run, the draft's 📜 history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history (append-only) and populate ✅ Resolved per `docs-review:references:update`.
+            **Your job is to EDIT this draft, not rebuild it.** Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view. Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents (extraction already happened). Do NOT WebFetch / re-verify claims (the trail is the verdict source — `verified-claims-trail-faithful` fails the review if you flip a verdict; if you believe one is wrong, render it as recorded and open a follow-up issue). Follow `.claude/commands/docs-review/ci.md` §2–4 for the editorial pass: (a) triage each `<TODO>`-marked stub bucket bullet — remove spurious ones (and decrement the matching count-table cell), write the fix prose / suggestion block for real ones, mirror `framing:` notes (anti-hedge for `⚔️ mismatch`), promote a `framing-drift` ⚠️ stub to 🚨 when the drifted phrasing also rides `social.*` frontmatter (it auto-posts on merge) or materially misleads, promote an `unverifiable` ⚠️ stub to 🚨 if it's a factual blocker (file the author-question line either way; a `turn_cap_exhausted` stub describes a retryable verifier budget failure — never call it out-of-scope); (b) add the findings the composer couldn't pre-stub — Hugo-build errors & link-integrity (from `.hugo-build.json`), frontmatter alias/URL collisions (from `.frontmatter-validation.json`, triaging PR-internal renames), internal-link/shortcode breaks in the content, cross-sibling mismatches (from your in-review sibling-read fan-out), code-examples findings, editorial-balance threshold flags, intuition-flag promotions, domain two-question-test findings — each as its 🔍 trail line (if it's a claim/sibling check) AND its `**[L…]**` bucket bullet, prefixes consistent; (c) replace the cross-sibling investigation-log placeholder with the real `X of N siblings` count; (d) write the Summary paragraph and the Review-confidence levels + notes (add/remove rows per the references you actually applied; don't say HIGH unless the work finished) — and if a `> [!WARNING]` automated-fact-checking banner sits between the header and the Summary (the fact-check verifier was degraded this run), preserve it verbatim, keep the pre-filled `facts` row at LOW, and write the Summary in unconfirmed terms; do NOT delete the banner or upgrade `facts` (this `> [!WARNING]` is usable-but-degraded, distinct from the discard-the-draft `> [!CAUTION]`); (e) fill the Review-history `<TODO: one-line summary>`; (f) fill the Tier-2 editorial-balance `<TODO>`s if the §📊 section is in rich form; (g) keep the body self-consistent — count-table cells == bucket-bullet counts (advisory `[style]` bullets are NOT counted in ⚠️; `[style-blocker]` bullets ARE counted in 🚨); every 🔍 trail line corresponds to a verdict (you may add, may not drop a candidate-claims-floor entry); every `**[L…]**` bucket bullet matches a trail record; `contradicted`/`mismatch` trail verdicts surface in 🚨 Outstanding and `framing-drift` in ⚠️ or 🚨; (h) apply the `docs-review:references:output-format` DO-NOT list. On a re-entrant run, the draft's 📜 history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history (append-only) and populate ✅ Resolved per `docs-review:references:update`.
 
             **If `.review-draft.md` is absent, or its first lines are a `> [!CAUTION]` composer-failed banner, ignore the draft entirely** and assemble the review manually per `ci.md` §Fallback (read `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` / `.hugo-build.json` / `.frontmatter-validation.json` / `.cross-sibling-discovery.json` directly and render per `docs-review:references:output-format` — `.candidate-claims.json` is the claim floor whose every entry must surface a verdict line in the trail). That is the pre-composer procedure; it's the safety net, not the normal path.
 
@@ -1016,16 +1489,77 @@ jobs:
 
             The composer already rendered the §📊 Editorial-balance section's Tier 1 form into `.review-draft.md` (empty form when `.editorial-balance.json.trigger=null`, rich form with section-depth count/mean/median/std + outliers otherwise). Don't touch the Tier 1 stats — `editorial-balance-counts-faithful` enforces them against the JSON. Your job: fill the Tier 2 `<TODO>`s (vendor / entity mention counts, FAQ steering ratios) per `docs-review:references:blog` §Priority 2.5, and decide whether the Tier 1 outliers and any Tier 2 threshold trips warrant a ⚠️ bullet — Tier 3 don't-flag exceptions (single-subject post w/ parenthetical competitor mentions; intentionally asymmetric framing) remain your judgment.
 
-            ## Style findings
+            ## Style suggestions
 
-            The composer already rendered the `#### Style findings` block from `.vale-findings.json` (correct inline-vs-collapse render mode, the `category` field never the `rule` field, per-file `<details>` roll-ups in collapse mode). Don't rebuild it. Style findings are nags, not blockers — never put them in 🚨 Outstanding. If you remove a false-positive style bullet, decrement the ⚠️ count-table cell.
+            The composer already split Vale findings into two tiers and rendered both. Don't rebuild either. **Blocker tier** (`[style-blocker]` bullets in 🚨 Outstanding, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong or deprecated product names, banned terms, misspellings, agreement errors): these are near-zero-false-positive correctness findings; never delete, demote, or reword them, and leave their 🚨 count intact. **Never author a `[style-blocker]` bullet yourself** — that marker means "the composer put this here from Vale's blocker tier" and it exempts the bullet from trail-matching, so writing one routes an unverified finding into 🚨 behind a check. If you find a real issue Vale missed and it belongs in 🚨, render it as an ordinary `**[L…]**` bullet with a matching 🔍 trail record. The `style-blocker-provenance` validator rule fails the review otherwise. **Advisory tier** (the `#### Style suggestions` block under ⚠️, expanded and grouped per file, the `category` field never the `rule` field): these are nags — they are NOT counted in the ⚠️ count-table cell, so if you remove a false-positive advisory bullet, do NOT decrement any count. **Delete false positives silently.** Do not list them, count them, name the rule that produced them, or add a sentence explaining why they were omitted — a bullet you deleted is one the author never needed to read about, and narrating it just re-adds the noise you removed (DO-NOT list item 1, "no retracted findings").
+
+            **Inline-suggestion sidecar.** As the last act of the editorial pass, triage the ADVISORY style bullets and Write `.style-suggestions.json` (a JSON array; write `[]` if none qualify) for the ones whose rewrite is a clear improvement. Schema per entry: `{"file": "<path>", "line": <n>, "original": "<exact text on that line>", "replacement": "<new text>", "category": "<category>", "note": "<≤10-word reason>"}`. A workflow step validates each entry against the diff and file content and posts them as one-click GitHub `suggestion` comments — you never post them yourself. Convert a finding ONLY when ALL hold: (a) the rewrite preserves meaning exactly — a hedge that is factually load-bearing ("usually completes in five minutes") is NOT a conversion candidate, deleting it would overpromise; (b) the fix is contained on the single flagged line; (c) you are confident the result reads better, not just shorter. Skip false positives entirely (delete their bullets as usual). Cap at 10 — prefer the highest-reader-impact ones. `original` must be the exact substring on that line in the checked-out file, or validation drops the entry. Do NOT remove the corresponding `[style]` bullet — the block stays the complete record; the suggestion is the actionable copy. **Never write the ✏️ mark, and never write the ✏️ banner line under the count table.** The workflow writes both after posting, from the set the GitHub API accepted — you cannot know which entries survive validation (a blocker-line collision, an anchor mismatch, or the cap can drop one), so a mark or a count you author risks promising buttons that aren't there. Any ✏️ you add is stripped and recomputed. The mark is keyed to the **line**, not the finding: one suggestion rewrites a whole line, so if that line carries two style findings both bullets get a ✏️. Marks can therefore outnumber the banner's count — the banner counts buttons, the marks point at the lines they sit on. That is expected; do not "reconcile" it. Blocker findings are never suggestions, and neither is anything sharing a LINE with one — a suggestion replaces the whole line, so it would re-commit the blocking text. The workflow drops those deterministically; don't waste an entry on them.
 
             ## Output
 
             When the editorial pass is done, save `.review-draft.md` and **exit**. Do not post the comment yourself; do not call `pinned-comment.sh` or `validate-pinned.py`. The workflow runs validation, deterministic surgical fixes, and the GitHub upsert as separate steps after this one. Every `<TODO:` placeholder must be replaced before you exit — `validate-pinned.py`'s `no-todo-tokens` rule fails the body otherwise.
 
             Post-run review-state labels (`review:outstanding-issues` / `review:no-blockers` / `review:stale` / `review:error`) are applied by separate workflow steps based on the published body's 🚨 Outstanding count. Do not apply them yourself.
-          claude_args: '--model claude-opus-5 --effort low --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
+          claude_args: |
+            --model claude-opus-5-5 --effort low
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"
+
+      # The Opus step can end short of success three different ways, and the
+      # right user-facing behavior differs for each:
+      #   timed_out=true  — the step (or the whole job) burned its full
+      #                     timeout budget. Deterministic for a given PR
+      #                     size: a bare retry hits the same wall, so the
+      #                     messaging must say "shrink the PR or get a human
+      #                     review", never "retry".
+      #   superseded=true — outcome=cancelled with neither the Opus step nor
+      #                     the job near its budget: concurrency cancel-in-
+      #                     progress killed this run because a newer one
+      #                     started. The
+      #                     newer run owns all user-visible state; this run
+      #                     must not touch labels (a superseded run's error
+      #                     trap setting review:error races the newer run's
+      #                     label read and makes it skip as already-reviewed).
+      #   neither         — a genuine mid-flight failure (API error etc.).
+      #                     Transient; the existing retry advice is correct.
+      # Budgets are (timeout-minutes - 1) * 60, the slack covering runner
+      # clock skew between step scheduling and process start. Keep in sync
+      # with the job-level timeout-minutes and the Opus step's.
+      - name: Classify review outcome
+        if: always() && steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.skip_reason == ''
+        id: outcome
+        env:
+          STEP_BUDGET_S: 1020 # Opus step timeout-minutes 18, minus 1 min slack
+          JOB_BUDGET_S: 2340 # job timeout-minutes 40, minus 1 min slack
+        run: |
+          NOW=$(date +%s)
+          OUTCOME="${{ steps.claude-review.outcome }}"
+          REVIEW_START="${{ steps.review-start.outputs.epoch }}"
+          JOB_START="${{ steps.job-start.outputs.epoch }}"
+          TIMED_OUT=false
+          SUPERSEDED=false
+          # The runner reports a step that hit its step-level timeout-minutes
+          # as a *cancelled* step, not a failed one — the same outcome word a
+          # concurrency supersession produces. So a timeout is detected by
+          # elapsed wall-clock, not by outcome: any non-success end after the
+          # Opus step's budget elapsed is a timeout. (The one blind spot: a
+          # supersession arriving inside the budget's final minute of slack
+          # classifies as a timeout — at that point the review was about to
+          # time out anyway.)
+          if [ "$OUTCOME" != "success" ] && [ "$OUTCOME" != "skipped" ] \
+             && [ -n "$REVIEW_START" ] \
+             && [ $(( NOW - REVIEW_START )) -ge "$STEP_BUDGET_S" ]; then
+            TIMED_OUT=true
+          elif [ "$OUTCOME" = "cancelled" ]; then
+            if [ -n "$JOB_START" ] && [ $(( NOW - JOB_START )) -ge "$JOB_BUDGET_S" ]; then
+              TIMED_OUT=true
+            else
+              SUPERSEDED=true
+            fi
+          fi
+          echo "timed_out=$TIMED_OUT" >> "$GITHUB_OUTPUT"
+          echo "superseded=$SUPERSEDED" >> "$GITHUB_OUTPUT"
+          echo "review outcome: $OUTCOME (timed_out=$TIMED_OUT superseded=$SUPERSEDED)"
 
       # ---- post-edit validate / splice / re-validate / upsert chain ----
       # The editorial pass step (above) exits after editing .review-draft.md.
@@ -1044,13 +1578,52 @@ jobs:
         if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
         id: validate-body
         continue-on-error: true
+        env:
+          # The validator fetches the PR diff itself (`gh pr diff`) for the
+          # rules that exempt content the review merely echoes -- e.g.
+          # `internal-link-existence` skips a dead link that appears in the
+          # diff, because reporting it IS the finding. Without a token that
+          # fetch fails silently and the exemption is dead: on v2 the splicer
+          # and model fallback papered over it; on v3 (no soft floor) the
+          # first review that quoted a broken link errored (#21560).
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
         run: |
           set +e
           rm -f /tmp/validate-pinned.fix-me.json /tmp/validate-pinned.fix-me.md /tmp/splicer-fallback.json
-          python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
-            --body-file .review-draft.md \
-            --pr "${{ steps.pr-context.outputs.pr_number }}" \
-            --repo "${{ steps.pr-context.outputs.repo_full }}"
+          # v3: validate the two model-edited cards against the v21 rule set
+          # (marker integrity, finding grammar, bucket-split faithfulness vs
+          # the composer's evidence base). There is no splicer and no
+          # soft-floor on v3 — a body that fails validation here fails the
+          # run (see the v3 build step below); publishing a card the
+          # validator rejected would put unverifiable content behind the
+          # evidence contract, which is the failure mode v3 exists to close.
+          if [[ "$REVIEW_V3" == "1" ]]; then
+            # Deterministic repair of the two card-grammar slips the model
+            # makes (a hand-built four-column finding table; a deleted
+            # `#### F<n> · Do this` block) — 2 of 25 reviews on the first
+            # repo-wide weekend errored on exactly these. Idempotent, no
+            # model, always exits 0; each repair is a ::warning:: and lands
+            # in the summary that rides the post-edit-debug artifact.
+            rm -f /tmp/normalize-v3-draft.json
+            python3 .claude/commands/docs-review/scripts/normalize-v3-draft.py \
+              --author-file .review-draft-author.md \
+              --brief-file .review-draft-brief.md \
+              --evidence-base .review-evidence-base.json \
+              --summary /tmp/normalize-v3-draft.json \
+              || echo "::warning::normalize-v3-draft.py failed to start; validating the drafts as the model left them"
+            python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+              --body-file .review-draft-author.md \
+              --brief-file .review-draft-brief.md \
+              --evidence-base .review-evidence-base.json \
+              --pr "${{ steps.pr-context.outputs.pr_number }}" \
+              --repo "${{ steps.pr-context.outputs.repo_full }}"
+          else
+            python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+              --body-file .review-draft.md \
+              --pr "${{ steps.pr-context.outputs.pr_number }}" \
+              --repo "${{ steps.pr-context.outputs.repo_full }}"
+          fi
           rc=$?
           echo "validate_exit=$rc" >> "$GITHUB_OUTPUT"
           if [[ $rc -eq 1 ]]; then
@@ -1060,8 +1633,14 @@ jobs:
           fi
           exit 0
 
+      # Steps C/C2/D/D2 are v2-only: on v3 there is no splicer, no model
+      # fallback, and no soft-floor — validation is pass/fail and the v3
+      # build step below owns the verdict. The splicer's job (restoring
+      # machine-owned sections the model dropped) has no v3 equivalent
+      # because those sections live in the evidence base the model never
+      # touches.
       - name: Splice surgical fixes (Step C)
-        if: steps.validate-body.outputs.violations_present == 'true'
+        if: steps.validate-body.outputs.violations_present == 'true' && steps.pr-context.outputs.v3 != 'true'
         id: splicer
         continue-on-error: true
         run: |
@@ -1105,9 +1684,11 @@ jobs:
           exit 0
 
       - name: Re-validate review body (Step D)
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && steps.pr-context.outputs.v3 != 'true'
         id: revalidate
         continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set +e
           rm -f /tmp/validate-pinned.fix-me.json /tmp/validate-pinned.fix-me.md
@@ -1131,14 +1712,168 @@ jobs:
       # section is just visual noise and gets removed here. Validators
       # don't require 📋 to be present (it's not in MANDATORY_H3_SECTIONS).
       - name: Strip empty 📋 section (Step D2)
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && steps.pr-context.outputs.v3 != 'true'
         continue-on-error: true
         run: |
           python3 .claude/commands/docs-review/scripts/strip-empty-triaged.py \
             --body-file .review-draft.md
 
-      - name: Upsert pinned comment (Step E)
+      # Post the advisory-style inline suggestions the editorial pass staged
+      # in .style-suggestions.json (one PR review, event=COMMENT, one
+      # ```suggestion block per finding — one-click applyable). The script
+      # validates every entry against the PR diff and the checked-out file
+      # (anti-hallucination), skips lines carrying a blocker finding, deletes
+      # prior suggestion comments first (delete-and-repost, same as
+      # TRIAGE_PROSE), and always exits 0 — suggestions are best-effort
+      # polish, never a pipeline failure.
+      #
+      # This runs BEFORE the pinned upsert on purpose: --annotate-draft marks
+      # the style bullets that actually posted with ✏️, and keying that mark
+      # off the API's accepted set (rather than what the model staged) is what
+      # keeps it from advertising a button that isn't there.
+      #
+      # Advisory suggestions stay off the Files-changed view unless the repo
+      # variable REVIEW_STYLE_INLINE is '1' (reader feedback, 2026-09-22:
+      # non-binding bot suggestions interleaved with the human review read as
+      # noise). Off, the step still runs — with an explicit empty sidecar,
+      # which the script treats as authoritative: it deletes any advisory
+      # buttons a previous run posted and strips the ✏️ marks, banner, and
+      # caption legend, so the card never points at buttons that aren't
+      # there. The style block itself stays on the card either way.
+      - name: Post inline style suggestions (Step D3)
         if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
+          STYLE_INLINE: ${{ vars.REVIEW_STYLE_INLINE }}
+        run: |
+          # v3: the style block and ✏️ banner live on the author card. This
+          # runs BEFORE the v3 build step so the ✏️ annotations ride into the
+          # cleaned publish body and the handoff artifact.
+          DRAFT=.review-draft.md
+          [[ "$REVIEW_V3" == "1" ]] && DRAFT=.review-draft-author.md
+          SIDECAR=.style-suggestions.json
+          if [[ "$STYLE_INLINE" != "1" ]]; then
+            SIDECAR=.style-suggestions.off.json
+            echo '[]' > "$SIDECAR"
+          fi
+          python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --in "$SIDECAR" \
+            --vale-findings .vale-findings.json \
+            --annotate-draft "$DRAFT"
+
+      # ---- v3 build + handoff ------------------------------------------------
+      # The v3 replacement for Steps C-E: the model job never publishes.
+      # build-evidence.py re-parses the two edited cards fail-closed (numbers
+      # model-added F? rows, files Spurious/Mis-sourced/Pre-existing rewrites,
+      # merges REVIEW_STATE), validate-evidence.py enforces the closed schema,
+      # and everything the credentialed publish job needs rides ONE artifact.
+      # Any failure here (including Step B validation) means no artifact, no
+      # publish, and the error-path finalize steps below own the terminal
+      # state — publishing a card that failed validation would put
+      # unverifiable content behind the evidence contract.
+      - name: Build evidence + cleaned bodies (v3)
+        if: >-
+          steps.pr-context.outputs.v3 == 'true'
+          && steps.check-access.outputs.has_write_access == 'true'
+          && steps.claude-review.outcome == 'success'
+        id: v3-build
+        continue-on-error: true
+        env:
+          # Only for the advisory anchor-check diff fetch below; without it
+          # `gh api` fails and the check silently never runs.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [[ "${{ steps.validate-body.outputs.violations_present }}" != "false" ]]; then
+            echo "::error::v3 validation failed (or did not run) — refusing to build/publish. See Step B output."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # Advisory anchor check: build-evidence flags a finding whose cited
+          # line falls outside the PR's own changed lines, which is what
+          # silently disables auto-refresh (#21748). A failed fetch just
+          # leaves the check off -- it is never allowed to cost the review.
+          rm -f /tmp/anchor-pr.diff
+          gh api -H "Accept: application/vnd.github.v3.diff" \
+            "repos/${{ github.repository }}/pulls/${{ steps.pr-context.outputs.pr_number }}" \
+            > /tmp/anchor-pr.diff 2>/dev/null \
+            || echo "::warning::could not fetch the PR diff; skipping the anchor check"
+          # This YAML comes from master but the scripts come from the PR's
+          # head, so a branch cut before build-evidence.py grew `--pr-diff`
+          # rejects the flag outright -- which errored every review on such a
+          # branch the day the flag landed (#21787's first run, #21783,
+          # #21759). Probe for it; an older script just runs without the check.
+          ANCHOR_ARGS=""
+          if [ -s /tmp/anchor-pr.diff ] \
+              && python3 .claude/commands/docs-review/scripts/build-evidence.py --help 2>/dev/null \
+                | grep -q -- '--pr-diff'; then
+            ANCHOR_ARGS="--pr-diff /tmp/anchor-pr.diff"
+          fi
+          if ! python3 .claude/commands/docs-review/scripts/build-evidence.py \
+              --author-body .review-draft-author.md \
+              --brief-body .review-draft-brief.md \
+              --base .review-evidence-base.json \
+              --output .review-evidence.json \
+              --author-out .review-author.md \
+              --brief-out .review-brief.md $ANCHOR_ARGS; then
+            echo "::error::build-evidence.py failed — a card row didn't parse. See log above."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if ! python3 scripts/review-v3/validate-evidence.py .review-evidence.json; then
+            echo "::error::final evidence object failed schema validation."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          jq -n \
+            --arg pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --arg head_sha "${{ steps.pr-context.outputs.head_sha }}" \
+            --arg check_id "${{ steps.check-run.outputs.check_id }}" \
+            --arg progress_comment_id "${{ steps.progress.outputs.comment_id }}" \
+            '{pr: $pr, head_sha: $head_sha, check_id: $check_id, progress_comment_id: $progress_comment_id}' \
+            > .review-v3-handoff.json
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+
+      # One-click fixes for what blocks merge (reader feedback, 2026-09-25:
+      # authors wanted applyable suggestions inline for the findings they
+      # must act on, and the optional nags off the Files view). Derived
+      # deterministically from the card's 🚨 Do-this blocks — only a quoted
+      # line with exactly one single-line fenced replacement qualifies — and
+      # validated against the checked-out file and the PR diff. Own marker,
+      # so it never touches the style set; a fix that landed loses its
+      # comment without a new review event. Best-effort: never fails the run.
+      - name: Post one-click fixes for blocking findings (v3)
+        if: steps.v3-build.outputs.ready == 'true'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --fixes-from-author-card .review-author.md
+
+      - name: Upload v3 handoff artifact
+        if: steps.v3-build.outputs.ready == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-v3-handoff-pr${{ steps.pr-context.outputs.pr_number }}
+          path: |
+            .review-evidence.json
+            .review-author.md
+            .review-brief.md
+            .review-v3-handoff.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+      # ---- end v3 build + handoff --------------------------------------------
+
+      - name: Upsert pinned comment (Step E)
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && steps.pr-context.outputs.v3 != 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -1166,12 +1901,17 @@ jobs:
       # PR head, which (for fixture branches and most synchronize events)
       # doesn't carry the parser script path. Keeping the parser as an
       # operator-side ad-hoc tool sidesteps that working-tree dependency.
+      # Gate on "the Opus step at least started" rather than succeeded: the
+      # execution log and the partially-edited draft are exactly the
+      # artifacts a timeout/failure post-mortem needs, and they were being
+      # discarded on the runs that most needed them. if-no-files-found:
+      # ignore keeps the step harmless when the action died before writing.
       - name: Upload Claude execution log
-        if: always() && steps.claude-review.outcome == 'success'
+        if: always() && steps.review-start.outputs.epoch != ''
         uses: actions/upload-artifact@v7
         with:
           name: claude-execution-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
-          path: /home/runner/work/_temp/claude-execution-output.json
+          path: ${{ runner.temp }}/claude-execution-output.json
           retention-days: 90
           if-no-files-found: ignore
 
@@ -1180,7 +1920,7 @@ jobs:
       # post-mortem on splicer behavior / validator pairing doesn't require
       # reproducing the run.
       - name: Upload post-edit chain debug artifacts
-        if: always() && steps.claude-review.outcome == 'success'
+        if: always() && steps.review-start.outputs.epoch != ''
         uses: actions/upload-artifact@v7
         with:
           name: post-edit-debug-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
@@ -1188,26 +1928,43 @@ jobs:
             /tmp/validate-pinned.fix-me.json
             /tmp/validate-pinned.fix-me.md
             /tmp/splicer-fallback.json
+            /tmp/normalize-v3-draft.json
             .review-draft.md
+            .review-draft-author.md
+            .review-draft-brief.md
+            .review-evidence-base.json
+            .style-suggestions.json
+          # .style-suggestions.json is a dotfile; upload-artifact skips hidden
+          # files unless this is set, which silently emptied the sidecar from
+          # the debug bundle on the 2026-08-03 fork run.
+          include-hidden-files: true
           retention-days: 30
           if-no-files-found: ignore
 
-      # Runs on success or failure so the transient CLAUDE_PROGRESS comment
-      # always reaches a terminal state regardless of outcome.
+      # Runs on success or failure so the progress signal (👀 on the
+      # request, or the spinner comment) always reaches a terminal state
+      # regardless of outcome.
       #
-      # Spinner outcome handling:
-      # - success: delete the spinner. The pinned review is the durable
-      #   artifact; "Review updated." would read strangely as the bot's
-      #   first comment on a fresh PR.
-      # - cancelled / skipped: delete the orphan spinner. A cancellation
-      #   means a newer run preempted this one (concurrency cancel-in-
-      #   progress); the new run owns the user-visible state and this
-      #   one's progress comment is just noise.
+      # Outcome handling:
+      # - success: delete the spinner / swap the 👀 for 🚀. The pinned
+      #   review is the durable artifact; "Review updated." would read
+      #   strangely as the bot's first comment on a fresh PR.
+      # - superseded / skipped: delete the orphan spinner / clear the 👀.
+      #   A superseding run owns the user-visible state (a requested re-run
+      #   puts its own 👀 back) and this one's signal is just noise.
+      # - timed out (step or job): edit to a "Review timed out" message
+      #   that says the PR exceeds the automated budget and that a bare
+      #   retry will hit the same wall — the one case where the generic
+      #   retry advice below is actively wrong. Before outcome
+      #   classification existed, a job-level timeout took the cancelled
+      #   branch here and silently DELETED the spinner: the author's only
+      #   signal was a bare review:error label (observed on PR #20560).
       # - any other (failure, etc.): edit to "Review errored." The
-      #   message stays unattributed; the synchronize path has no
-      #   requester, and on the dispatch path the requester's mention
-      #   is consumed by the success-only "Review regenerated" terminal
-      #   below.
+      #   message stays unattributed on the spinner (the synchronize path
+      #   has no requester). With no spinner to edit — a requested run
+      #   signalled with 👀, or the spinner post failed — the 👀 is cleared
+      #   and the message goes up as a new comment, @-mentioning the
+      #   requester when there is one so their failed request notifies them.
       #
       # Dispatcher confirmation comment cleanup (workflow_dispatch from
       # claude-new.yml only): the dispatcher posts "🤖 @<author> — pinned
@@ -1221,9 +1978,13 @@ jobs:
       # notification). Both branches are no-ops when the inputs are
       # empty (workflow_run path).
       - name: Finalize progress signal
-        if: always() && steps.progress.outputs.comment_id != ''
+        if: always() && steps.progress.outputs.signal != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
+          V3_READY: ${{ steps.v3-build.outputs.ready }}
+          ACK_TARGET: ${{ github.event.inputs.ack_target }}
+          PRIOR_HW_IN: ${{ github.event.inputs.prior_high_water }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
@@ -1231,22 +1992,90 @@ jobs:
           OUTCOME="${{ steps.claude-review.outcome }}"
           DISPATCHER_COMMENT_ID="${{ github.event.inputs.dispatcher_comment_id }}"
           MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
+          # PR-head checkout: run the default branch's ack-request.sh (see
+          # "Post progress signal").
+          ACK="$RUNNER_TEMP/ack-request.sh"
+          [ -s "$ACK" ] || gh api -H 'Accept: application/vnd.github.raw' \
+            "repos/$REPO/contents/.claude/commands/docs-review/scripts/ack-request.sh?ref=${{ github.event.repository.default_branch }}" \
+            > "$ACK" 2>/dev/null || : > "$ACK"
+          clear_eyes() {
+            if [ -s "$ACK" ]; then
+              bash "$ACK" --clear --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
+            fi
+          }
+          # A forced #new-review cleared the card this run was replacing; its
+          # high_water survives only in the input. Carry it on any failure
+          # notice so the next review continues above it (review_state.py
+          # high-water-marker).
+          HW_MARK=""
+          [[ "$PRIOR_HW_IN" =~ ^[1-9][0-9]*$ ]] && HW_MARK=$'\n'"<!-- REVIEW_HIGH_WATER $PRIOR_HW_IN -->"
+          # Terminal message: edit the spinner in place, or — with none to
+          # edit — clear the 👀 and post it, addressed to the requester.
+          say() {
+            local msg="$1$HW_MARK" body
+            if [ -n "$COMMENT_ID" ]; then
+              body=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$msg")
+              gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
+                -f body="$body" >/dev/null || true
+              return
+            fi
+            clear_eyes
+            if [ -n "$MENTION_AUTHOR" ]; then
+              msg="🤖 @${MENTION_AUTHOR} — ${msg#🤖 }"
+              msg="${msg/— Review /— review }"
+            fi
+            body=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$msg")
+            gh api "repos/$REPO/issues/$PR/comments" -f body="$body" >/dev/null || true
+          }
+
+          # v3 handoff succeeded: the credentialed publish job owns every
+          # terminal user-visible state — spinner, dispatcher cleanup, the
+          # "regenerated" terminal comment. Touching any of it here would
+          # declare success before anything published.
+          if [ "$REVIEW_V3" = "1" ] && [ "$OUTCOME" = "success" ] && [ "$V3_READY" = "true" ]; then
+            echo "v3: leaving progress signal for the publish job to finalize"
+            exit 0
+          fi
+          # v3 build/validation failed with the model step green: the
+          # success-delete branch below would silently eat the spinner, so
+          # reroute this case onto the errored-edit branch by lying about
+          # OUTCOME for the rest of this script only.
+          if [ "$REVIEW_V3" = "1" ] && [ "$OUTCOME" = "success" ] && [ "$V3_READY" != "true" ]; then
+            OUTCOME="failure"
+          fi
 
           if [ -n "$DISPATCHER_COMMENT_ID" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$DISPATCHER_COMMENT_ID" >/dev/null 2>&1 || true
           fi
 
-          if [ "$OUTCOME" = "success" ] || [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
-            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
-            if [ "$OUTCOME" = "success" ] && [ -n "$MENTION_AUTHOR" ]; then
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review regenerated on @${MENTION_AUTHOR}'s request.")
-              gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+          TIMED_OUT="${{ steps.outcome.outputs.timed_out }}"
+          SUPERSEDED="${{ steps.outcome.outputs.superseded }}"
+
+          if [ "$OUTCOME" = "success" ] || [ "$OUTCOME" = "skipped" ] || [ "$SUPERSEDED" = "true" ]; then
+            if [ -n "$COMMENT_ID" ]; then
+              gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
             fi
+            if [ "$OUTCOME" = "success" ] && [ -n "$MENTION_AUTHOR" ]; then
+              # A 🚀 on the requesting comment, not a timeline comment
+              # (ack-request.sh has the why). Keep the old comment if the
+              # default branch's copy couldn't be fetched.
+              MSG="🤖 Review regenerated on @${MENTION_AUTHOR}'s request."
+              if [ -s "$ACK" ]; then
+                bash "$ACK" --pr "$PR" --repo "$REPO" --target "$ACK_TARGET" --message "$MSG"
+              else
+                BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
+                gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+              fi
+            else
+              clear_eyes
+            fi
+          elif [ "$TIMED_OUT" = "true" ]; then
+            # One line, not a YAML literal: an indented continuation line
+            # inside the quoted string would reach GitHub with leading
+            # spaces and can render as a Markdown code block.
+            say '🤖 Review timed out — this PR is larger than the automated review can finish inside its time budget, so no review was posted. Retrying without shrinking the PR will almost certainly time out again. Options: split the PR into smaller pieces, or ask a maintainer to review it by hand (adding the `review:oversized` label stops the pipeline from re-attempting it — triage deliberately never removes it).'
           else
-            BODY='<!-- CLAUDE_PROGRESS -->
-          🤖 Review errored. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
-            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
-              -f body="$BODY" >/dev/null || true
+            say '🤖 Review errored. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
           fi
 
       # Finalize the review-state label based on the published body. Counts
@@ -1255,7 +2084,9 @@ jobs:
       # Skipped runs (trivial / draft / bot / empty-diff) deliberately leave
       # the label untouched: in-progress was never set for them.
       - name: Finalize review-state label (success path)
-        if: steps.claude-review.outcome == 'success' && steps.check-access.outputs.has_write_access == 'true'
+        # v2-only: on v3 the publish job sets the terminal label after the
+        # author card (the count source) is actually published.
+        if: steps.claude-review.outcome == 'success' && steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.v3 != 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -1292,7 +2123,13 @@ jobs:
       # success-path step above already set outstanding-issues / no-blockers
       # and this step short-circuits.
       - name: Finalize review-state label (error trap)
-        if: always() && steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome != 'success' && steps.pr-context.outputs.skip_reason == ''
+        # The v3 term: a green model step whose build/validation failed is an
+        # error this job owns (the publish job never runs — no artifact).
+        if: >-
+          always() && steps.check-access.outputs.has_write_access == 'true'
+          && steps.pr-context.outputs.skip_reason == ''
+          && (steps.claude-review.outcome != 'success'
+              || (steps.pr-context.outputs.v3 == 'true' && steps.v3-build.outputs.ready != 'true'))
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -1300,6 +2137,15 @@ jobs:
           set +e
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
+          # A superseded run must not touch labels: the newer run that
+          # cancelled this one reads the PR's labels in its pr-context step,
+          # and review:error set here makes it skip as "already-reviewed" —
+          # the error label then blocks the very run that was supposed to
+          # replace this one.
+          if [ "${{ steps.outcome.outputs.superseded }}" = "true" ]; then
+            echo "review-state error trap: superseded by a newer run, which owns the label state"
+            exit 0
+          fi
           # Check whether a pinned <!-- CLAUDE_REVIEW --> comment exists.
           # If it does, the success-path step above already set the label;
           # don't overwrite to error.
@@ -1308,6 +2154,9 @@ jobs:
           if [ "${PUBLISHED:-0}" -gt 0 ]; then
             echo "review-state error trap: pinned review present; success-path already labeled"
             exit 0
+          fi
+          if [ "${{ steps.outcome.outputs.timed_out }}" = "true" ]; then
+            echo "review-state error trap: review timed out (PR over the automated budget)"
           fi
           .claude/commands/docs-review/scripts/set-review-label.sh \
             --pr "$PR" --repo "$REPO" --label review:error
@@ -1326,15 +2175,45 @@ jobs:
           REPO="${{ github.repository }}"
           OUTCOME="${{ steps.claude-review.outcome }}"
           SKIP_REASON="${{ steps.pr-context.outputs.skip_reason }}"
-          if [ "$OUTCOME" = "success" ]; then
+          TIMED_OUT="${{ steps.outcome.outputs.timed_out }}"
+          HAS_WRITE_ACCESS="${{ steps.check-access.outputs.has_write_access }}"
+          REVIEW_V3="${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}"
+          V3_READY="${{ steps.v3-build.outputs.ready }}"
+          # v3 handoff succeeded: the check stays in_progress and the publish
+          # job concludes it — success here would read "review done" while
+          # nothing is on the PR yet.
+          if [ "$REVIEW_V3" = "1" ] && [ "$OUTCOME" = "success" ] && [ "$V3_READY" = "true" ]; then
+            echo "v3: leaving check-run in_progress for the publish job"
+            exit 0
+          fi
+          if [ "$REVIEW_V3" = "1" ] && [ "$OUTCOME" = "success" ] && [ "$V3_READY" != "true" ]; then
+            CONCLUSION="failure"
+            SUMMARY="Review body failed v3 validation or evidence build — nothing was published. See workflow logs (Step B / v3 build)."
+          elif [ "$OUTCOME" = "success" ]; then
             CONCLUSION="success"
             SUMMARY="Pinned review updated. See the PR's pinned comment for findings."
           elif [ -n "$SKIP_REASON" ]; then
             CONCLUSION="skipped"
             SUMMARY="Review skipped: $SKIP_REASON"
+          elif [ "$TIMED_OUT" = "true" ]; then
+            CONCLUSION="failure"
+            SUMMARY="Review timed out — this PR exceeds the automated review budget. Split it or request a manual review; a bare retry will time out again."
           elif [ "$OUTCOME" = "cancelled" ]; then
             CONCLUSION="neutral"
             SUMMARY="Cancelled — superseded by a newer run."
+          elif [ "$OUTCOME" = "skipped" ] && [ "$HAS_WRITE_ACCESS" = "false" ]; then
+            # Deliberate skip — the author can't trigger a review here.
+            # Publishing it as a red ✗ misreads as a broken pipeline.
+            CONCLUSION="skipped"
+            SUMMARY="Review skipped: PR author lacks write access to this repository."
+          elif [ "$OUTCOME" = "skipped" ]; then
+            # Skipped for some other reason: the job was cancelled during the
+            # pre-steps (cancel-in-progress fires before the review step, so
+            # the "cancelled" branch above doesn't catch it), or a pre-step
+            # failed outright. Neither is the author's doing — don't claim a
+            # permissions problem, and don't publish a red ✗ for a supersede.
+            CONCLUSION="neutral"
+            SUMMARY="Review did not run — superseded by a newer run, or a pre-step failed. See workflow logs."
           else
             CONCLUSION="failure"
             SUMMARY="Review failed. See workflow logs."
@@ -1345,3 +2224,574 @@ jobs:
             --arg summary "$SUMMARY" \
             '{status: "completed", conclusion: $conclusion, output: {title: $title, summary: $summary}}' \
             | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true
+
+  # ---- v3 publish (single credentialed deterministic job) --------------------
+  # The v3 counterpart to Step E and the finalize steps: everything that
+  # publishes or finalizes runs HERE, in one job, in one order —
+  # record evidence to S3 → render/upload the evidence page → upsert the
+  # reviewer brief → upsert the author card → set the terminal label →
+  # conclude the check-run. One ordering means one partial-publish contract:
+  # the author card is the machine-read head carrier and the label/count
+  # source, and it goes LAST, so any interruption leaves the old author card
+  # (and its label) intact — review-label-reconcile / the next run heal a
+  # newer-brief-older-card mismatch, and nothing ever lies about which SHA
+  # the blocking counts describe.
+  #
+  # SECURITY INVARIANT: this job holds AWS credentials (evidence writes) and
+  # therefore never checks out or executes PR code — scripts come from the
+  # default branch only. The model job upstream is uncredentialed; its output
+  # reaches this job only as a validated artifact (the blog-review two-job
+  # pattern).
+  #
+  # Concurrency: same group as claude-review, no cancel-in-progress of its
+  # own. A newer review run entering the group cancels an in-flight publish;
+  # with author-card-last ordering that cancellation is safe (see above), and
+  # the newer run republishes everything.
+  #
+  # A handoff whose head moved while the model worked is refused by the
+  # freshness guard (first step) and handed to the `redispatch` job below,
+  # which starts a fresh review at the live head. That job sits OUTSIDE this
+  # concurrency group on purpose: the run it dispatches enters the group
+  # with cancel-in-progress and would cancel the job that dispatched it if
+  # that job were still a member.
+  publish:
+    needs: claude-review
+    if: >-
+      needs.claude-review.outputs.v3 == 'true'
+      && needs.claude-review.outputs.v3_ready == 'true'
+    concurrency:
+      group: claude-review-${{ needs.claude-review.outputs.pr_number }}
+    # Consumed by the redispatch job; empty on a published or cancelled run.
+    outputs:
+      action: ${{ steps.current.outputs.action }}
+      pr: ${{ steps.current.outputs.pr }}
+      next_depth: ${{ steps.current.outputs.next_depth }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # `environment: production` for PULUMI_STACK_NAME (environment-scoped —
+    # omitting it silently resolves `--stack ""`) and the OIDC role trust.
+    environment: production
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      checks: write
+      id-token: write
+      actions: write # dispatch review-sentinel.yml after publishing (workflow_run carries no PR for dispatch/comment-triggered runs)
+    env:
+      ESC_ACTION_OIDC_AUTH: true
+      ESC_ACTION_OIDC_ORGANIZATION: pulumi
+      ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+      ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+      ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+    steps:
+      # Wall-clock anchor for the error trap: a publish cancelled
+      # ~timeout-minutes after this instant was killed by its own timeout,
+      # not superseded by a newer run. First step, so checkout time counts.
+      - name: Record job start
+        id: job-start
+        run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+
+      # Default branch ONLY — see the security invariant above.
+      #
+      # Sparse and blobless: this job runs scripts from three directories and
+      # nothing else, and a full checkout of this repo is a ~1 GB fetch that
+      # GitHub sometimes serves at a crawl. #22146's publish spent its whole
+      # 15-minute budget inside that fetch. The paths below are everything
+      # the steps here execute or read (the docs-review scripts load their
+      # siblings and ../footer.md; infrastructure/ is `pulumi -C` for the
+      # bucket outputs). A new step that reaches outside them needs its path
+      # added here.
+      - name: Checkout review scripts (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            infrastructure
+
+      - name: Download v3 handoff artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: review-v3-handoff-pr${{ needs.claude-review.outputs.pr_number }}
+
+      # A push that landed while the model worked makes this handoff stale.
+      # Publishing it would stamp CLAUDE_REVIEW_HEAD with a SHA that is no
+      # longer head and flip labels for content nobody can see in the diff.
+      # handoff_guard.py makes the call (publish / redispatch / rest); this
+      # step owns the side effects of a refusal, because a refusal that
+      # touches nothing is exactly what #21642 hit: the check-run and the
+      # spinner were cleaned up but review:in-progress stayed on the PR with
+      # no run behind it and nothing scheduled to replace it, until a human
+      # dispatched the workflow by hand.
+      #
+      # The label rests at review:stale rather than being cleared. It is the
+      # one state whose documented meaning is true here ("commits landed
+      # since the review ran; refresh via a ready-transition or mention");
+      # every reader already treats it as "needs a refresh, don't auto-loop"
+      # (pr-context's already-reviewed skip, the address-review and
+      # pr-review skills, review-label-reconcile); and a cleared PR is
+      # indistinguishable from one triage never touched — a worse lie when
+      # an older review's cards are still on the PR. On the redispatch path
+      # it is transient: the dispatched run flips it to review:in-progress
+      # within a minute (workflow_dispatch bypasses the already-reviewed
+      # skip). On the rest path it is where the PR stays until the author
+      # asks for a refresh, so the spinner is rewritten to say so rather
+      # than deleted.
+      - name: Verify handoff is still current
+        id: current
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEPTH: ${{ github.event.inputs.supersede_depth || '0' }}
+        run: |
+          # The default `run` shell is `bash -e` with NO pipefail, so without
+          # this a crash in handoff_guard.py would be masked by the tee below,
+          # ACTION would parse empty, and the step would silently take the
+          # rest branch — review:stale, no publish, nothing red. A guard that
+          # can't decide must fail loudly instead: the error trap then sets
+          # review:error and concludes the check-run failure, the job's
+          # normal contract for a broken publish.
+          set -o pipefail
+          PR=$(jq -r .pr .review-v3-handoff.json)
+          HANDOFF_SHA=$(jq -r .head_sha .review-v3-handoff.json)
+          CHECK_ID=$(jq -r .check_id .review-v3-handoff.json)
+          PROGRESS_ID=$(jq -r .progress_comment_id .review-v3-handoff.json)
+          REPO="${{ github.repository }}"
+          {
+            echo "pr=$PR"
+            echo "head_sha=$HANDOFF_SHA"
+            echo "check_id=$CHECK_ID"
+            echo "progress_id=$PROGRESS_ID"
+          } >> "$GITHUB_OUTPUT"
+          # Writes action / reason / superseded / live_head / next_depth to
+          # GITHUB_OUTPUT itself; the tee is for the branches below.
+          python3 scripts/review-v3/handoff_guard.py decide \
+            --handoff .review-v3-handoff.json --repo "$REPO" --pr "$PR" \
+            --depth "$DEPTH" | tee /tmp/handoff-guard.txt
+          ACTION=$(grep '^action=' /tmp/handoff-guard.txt | cut -d= -f2-)
+          REASON=$(grep '^reason=' /tmp/handoff-guard.txt | cut -d= -f2-)
+          LIVE_SHA=$(grep '^live_head=' /tmp/handoff-guard.txt | cut -d= -f2-)
+          case "$ACTION" in
+            publish) exit 0 ;;
+            redispatch|rest) ;;
+            *)
+              echo "::error::handoff-guard returned no usable action ('$ACTION'); refusing to guess — see the script output above"
+              exit 1
+              ;;
+          esac
+
+          echo "publish: $REASON"
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "$PR" --repo "$REPO" --label review:stale || true
+          ACK_TARGET="${{ github.event.inputs.ack_target }}"
+          MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
+          if [ "$ACTION" = "redispatch" ]; then
+            SUMMARY="Superseded — the PR head moved to ${LIVE_SHA:0:7} while the review ran. A fresh review is being dispatched at that head."
+            # The re-run posts its own spinner within a minute — or, for a
+            # requested run, keeps the 👀 already on the request.
+            if [ -n "$PROGRESS_ID" ]; then
+              gh api -X DELETE "repos/$REPO/issues/comments/$PROGRESS_ID" >/dev/null 2>&1 || true
+            fi
+          else
+            SUMMARY="Superseded — the PR head kept moving across $DEPTH automatic re-runs, so no review was published. Mention @claude #new-review once the branch settles."
+            MSG='🤖 Review superseded — the branch kept moving while the review ran, so no review was published. Mention `@claude #new-review` once it settles.'
+            if [ -n "$PROGRESS_ID" ]; then
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
+              gh api --method PATCH "repos/$REPO/issues/comments/$PROGRESS_ID" -f body="$BODY" >/dev/null || true
+            elif [ -n "$ACK_TARGET" ]; then
+              # A requested run signalled with 👀 and has no spinner to
+              # edit: take the 👀 down and tell the requester directly.
+              bash .claude/commands/docs-review/scripts/ack-request.sh --clear \
+                --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
+              [ -z "$MENTION_AUTHOR" ] || MSG="🤖 @${MENTION_AUTHOR} — review superseded — the branch kept moving while the review ran, so no review was published. Mention \`@claude #new-review\` once it settles."
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
+              gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+            fi
+          fi
+          if [ -n "$CHECK_ID" ]; then
+            jq -n --arg summary "$SUMMARY" \
+              '{status: "completed", conclusion: "neutral", output: {title: "Pre-merge Review", summary: $summary}}' \
+              | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true
+          fi
+          # #new-review's "regenerating…" confirmation is otherwise deleted
+          # only on the publish path below, so it outlived a superseded
+          # regenerate. Not forwarded to the re-run: it posts its own spinner.
+          DISPATCHER_COMMENT_ID="${{ github.event.inputs.dispatcher_comment_id }}"
+          if [ -n "$DISPATCHER_COMMENT_ID" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$DISPATCHER_COMMENT_ID" >/dev/null 2>&1 || true
+          fi
+
+      # continue-on-error: every consumer below already degrades explicitly
+      # (empty PULUMI_ACCESS_TOKEN ⇒ bucket resolution warns and yields
+      # local/artifact-only evidence with a run-URL link). A hard failure
+      # here would trade a degraded-but-published review for review:error —
+      # and it is also what lets the fork battery run this job with no ESC
+      # trust policy at all.
+      - name: Fetch ESC secrets
+        if: steps.current.outputs.superseded == 'false'
+        id: esc-secrets
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Configure AWS Credentials
+        if: steps.current.outputs.superseded == 'false'
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: review-v3-publish
+          aws-region: us-west-2
+
+      - if: steps.current.outputs.superseded == 'false'
+        uses: pulumi/actions@v7
+
+      # Both buckets resolve from stack outputs, retried — a transient flake
+      # must not drop the evidence record (the content-review lesson). The
+      # evidence-page bucket is OPTIONAL until its infra deploys: missing
+      # outputs degrade to the workflow-run URL as the evidence link, never a
+      # failed publish. The ledger prefix is the system of record; its
+      # absence is record-evidence.py's own degradation contract (local +
+      # artifact + ::warning::).
+      - name: Resolve evidence buckets
+        if: steps.current.outputs.superseded == 'false'
+        id: buckets
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          resolve() {
+            local out=""
+            for i in 1 2 3; do
+              out=$(pulumi -C infrastructure stack output "$1" \
+                --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+              [ -n "$out" ] && break
+              [ "$i" -lt 3 ] && sleep $((i * 5))
+            done
+            printf '%s' "$out"
+          }
+          LEDGER=$(resolve contentReviewLedgerBucketName)
+          EVIDENCE=$(resolve reviewEvidenceBucketName)
+          BASE_URL=$(resolve reviewEvidenceBaseUrl)
+          [ -n "$LEDGER" ] || echo "::warning::ledger bucket unresolved; evidence records will be local/artifact only"
+          [ -n "$EVIDENCE" ] || echo "::warning::evidence-page bucket unresolved (infra not deployed yet?); comments will link the workflow run"
+          {
+            echo "ledger=$LEDGER"
+            echo "evidence=$EVIDENCE"
+            echo "base_url=$BASE_URL"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Record evidence
+        if: steps.current.outputs.superseded == 'false'
+        env:
+          LEDGER_BUCKET: ${{ steps.buckets.outputs.ledger }}
+        run: |
+          if [ -n "$LEDGER_BUCKET" ]; then
+            export PR_REVIEW_EVIDENCE_URI="s3://$LEDGER_BUCKET/pr-review"
+          fi
+          python3 scripts/review-v3/record-evidence.py \
+            --evidence .review-evidence.json \
+            --pr "${{ steps.current.outputs.pr }}" \
+            --head-sha "${{ steps.current.outputs.head_sha }}"
+
+      - name: Upload evidence record artifact
+        if: steps.current.outputs.superseded == 'false'
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-v3-evidence-pr${{ needs.claude-review.outputs.pr_number }}-run${{ github.run_id }}
+          path: .pr-review-evidence/
+          # Dot-prefixed dir: without this the action sees zero files
+          # and if-no-files-found: error fails the publish (fork battery 2026-08-31).
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Render and upload evidence page
+        if: steps.current.outputs.superseded == 'false'
+        id: evidence-page
+        env:
+          EVIDENCE_BUCKET: ${{ steps.buckets.outputs.evidence }}
+          BASE_URL: ${{ steps.buckets.outputs.base_url }}
+        run: |
+          PR="${{ steps.current.outputs.pr }}"
+          SHA="${{ steps.current.outputs.head_sha }}"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          python3 scripts/review-v3/render-evidence-html.py \
+            --evidence .review-evidence.json --output .review-evidence.html
+          if [ -n "$EVIDENCE_BUCKET" ] && [ -n "$BASE_URL" ]; then
+            aws s3 cp .review-evidence.html "s3://$EVIDENCE_BUCKET/$PR/$SHA.html" \
+              --content-type "text/html; charset=utf-8"
+            aws s3 cp .review-evidence.html "s3://$EVIDENCE_BUCKET/$PR/latest.html" \
+              --content-type "text/html; charset=utf-8"
+            # HTTPS REST URL of the object — the bucket is deliberately not a
+            # static website (its endpoint is HTTP-only and the bucket policy
+            # denies non-TLS requests).
+            echo "url=$BASE_URL/$PR/latest.html" >> "$GITHUB_OUTPUT"
+          else
+            echo "url=$RUN_URL" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Brief first, author LAST — the author card carries the machine-read
+      # HEAD marker and the counts the label reads; see the job comment.
+      - name: Publish the two cards
+        if: steps.current.outputs.superseded == 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVIDENCE_URL: ${{ steps.evidence-page.outputs.url }}
+        run: |
+          PR="${{ steps.current.outputs.pr }}"
+          sed -i "s|%%EVIDENCE_URL%%|$EVIDENCE_URL|g" .review-brief.md .review-author.md
+          bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+            --role brief --pr "$PR" --body-file .review-brief.md
+          bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+            --role author --pr "$PR" --body-file .review-author.md
+          # The cards are the review now: remove any legacy v2 pages left
+          # beside them. #21066 carried a month-old monolith next to its v3
+          # card, and the reconcile cron and auto-refresh gate both read the
+          # monolith's head. Best-effort — a leftover page is noise, not a
+          # failed publish.
+          bash .claude/commands/docs-review/scripts/pinned-comment.sh prune-legacy --pr "$PR" \
+            || echo "::warning::prune-legacy failed; a legacy review page may remain on PR #$PR"
+
+      - name: Finalize label, check-run, progress signal
+        if: steps.current.outputs.superseded == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROGRESS_FAILURE_JQ: '.[] | select(.user.login == "github-actions[bot]") | select(.body | startswith("<!-- CLAUDE_PROGRESS -->")) | select(.body | test("errored|timed out|Couldn.t start|superseded")) | .id'
+        run: |
+          set +e
+          PR="${{ steps.current.outputs.pr }}"
+          REPO="${{ github.repository }}"
+          python3 .claude/commands/docs-review/scripts/validate-pinned.py \
+            count-buckets --pr "$PR" --repo "$REPO" > /tmp/bucket-counts.txt
+          rc=$?
+          if [ $rc -eq 0 ]; then
+            OUTSTANDING=$(grep '^outstanding=' /tmp/bucket-counts.txt | cut -d= -f2)
+            if [ -n "$OUTSTANDING" ]; then
+              if [ "$OUTSTANDING" -gt 0 ]; then LABEL="review:outstanding-issues"; else LABEL="review:no-blockers"; fi
+              .claude/commands/docs-review/scripts/set-review-label.sh \
+                --pr "$PR" --repo "$REPO" --label "$LABEL"
+            else
+              echo "::warning::count-buckets returned no outstanding count; leaving label untouched"
+            fi
+          else
+            echo "::warning::count-buckets failed (rc=$rc); leaving label untouched"
+          fi
+          CHECK_ID="${{ steps.current.outputs.check_id }}"
+          if [ -n "$CHECK_ID" ]; then
+            jq -n '{status: "completed", conclusion: "success", output: {title: "Pre-merge Review", summary: "Review published: author card + reviewer brief on the PR, evidence page linked from both."}}' \
+              | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true
+          fi
+          PROGRESS_ID="${{ steps.current.outputs.progress_id }}"
+          if [ -n "$PROGRESS_ID" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$PROGRESS_ID" >/dev/null 2>&1 || true
+          fi
+          # A published review answers every earlier run's failure notice:
+          # "Review errored — retry" under a fresh card is wrong advice
+          # (#21787 kept three, #21920 one). Only the bot's own terminal
+          # CLAUDE_PROGRESS notices go; a live spinner does not match.
+          gh api --paginate "repos/$REPO/issues/$PR/comments" \
+            --jq "$PROGRESS_FAILURE_JQ" 2>/dev/null \
+            | while read -r cid; do
+                [ -n "$cid" ] && gh api -X DELETE "repos/$REPO/issues/comments/$cid" >/dev/null 2>&1 || true
+              done
+          # Dispatcher cleanup + terminal comment (the #new-review path) —
+          # deferred from the model job so "regenerating" stays accurate
+          # until the cards actually landed.
+          DISPATCHER_COMMENT_ID="${{ github.event.inputs.dispatcher_comment_id }}"
+          MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
+          if [ -n "$DISPATCHER_COMMENT_ID" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$DISPATCHER_COMMENT_ID" >/dev/null 2>&1 || true
+          fi
+          if [ -n "$MENTION_AUTHOR" ]; then
+            # A 🚀 on the requesting comment, not a timeline comment
+            # (ack-request.sh has the why; it falls back to the comment).
+            bash .claude/commands/docs-review/scripts/ack-request.sh --pr "$PR" --repo "$REPO" \
+              --target "${{ github.event.inputs.ack_target }}" \
+              --message "🤖 Review regenerated on @${MENTION_AUTHOR}'s request."
+          else
+            # No requester to thank, but never leave a 👀 behind.
+            bash .claude/commands/docs-review/scripts/ack-request.sh --clear --pr "$PR" --repo "$REPO" \
+              --target "${{ github.event.inputs.ack_target }}"
+          fi
+          exit 0
+
+      # The Sentinel's workflow_run trigger resolves the PR from
+      # `workflow_run.pull_requests[]`, which is EMPTY when this workflow was
+      # started by workflow_dispatch (`#new-review`) or an issue comment — so
+      # after such a publish the check-run kept saying "no current review"
+      # (fork smoke, 2026-09-01). Poke it explicitly, like claude-update.yml.
+      # Loud on failure (a 403 from missing `actions: write` must show as a
+      # red step), non-fatal for the job.
+      - name: Re-evaluate Sentinel (v3)
+        if: steps.current.outputs.superseded == 'false' && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run review-sentinel.yml --repo "${{ github.repository }}" \
+            -f pr_number="${{ steps.current.outputs.pr }}"
+
+      # Error trap: a failed publish must be visible — review:error, a red
+      # check, and an errored progress message. A CANCELLED publish is
+      # usually a supersession (a newer run entered the concurrency group)
+      # and touches nothing: the newer run owns all user-visible state.
+      #
+      # The exception is a publish killed by its own timeout-minutes, which
+      # the runner also reports as cancelled. Told apart by wall-clock, the
+      # same way the model job's "Classify review outcome" step does it.
+      # Ignoring it stranded #22146 on review:in-progress with an
+      # in_progress check-run and no run behind either. (Blind spot: a
+      # supersession in the final minute reads as a timeout. A publish takes
+      # about a minute, so one still running at minute 14 is hung anyway.)
+      #
+      # A publish that died before "Verify handoff is still current" has no
+      # handoff ids, so they fall back to the model job's outputs; it may
+      # have no checkout either, so the label falls back to a plain gh call
+      # (the 👀 clear below just no-ops under set +e).
+      - name: Publish error trap
+        if: >-
+          (failure() || cancelled())
+          && steps.current.outputs.superseded != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRIOR_HW_IN: ${{ github.event.inputs.prior_high_water }}
+          JOB_STATUS: ${{ job.status }}
+          JOB_START: ${{ steps.job-start.outputs.epoch }}
+          JOB_BUDGET_S: 840 # job timeout-minutes 15, minus 1 min slack
+        run: |
+          set +e
+          if [ "$JOB_STATUS" = "cancelled" ]; then
+            ELAPSED=$(( $(date +%s) - ${JOB_START:-0} ))
+            if [ -z "$JOB_START" ] || [ "$ELAPSED" -lt "$JOB_BUDGET_S" ]; then
+              echo "Publish cancelled after ${ELAPSED}s: superseded by a newer run, which owns the review state."
+              exit 0
+            fi
+            echo "::error::Publish timed out after ${ELAPSED}s; marking the review errored."
+          fi
+          PR="${{ steps.current.outputs.pr || needs.claude-review.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          [ -n "$PR" ] || exit 0
+          LABEL_SCRIPT=.claude/commands/docs-review/scripts/set-review-label.sh
+          if [ -f "$LABEL_SCRIPT" ]; then
+            "$LABEL_SCRIPT" --pr "$PR" --repo "$REPO" --label review:error
+          else
+            gh pr edit "$PR" --repo "$REPO" \
+              --add-label review:error --remove-label review:in-progress
+          fi
+          CHECK_ID="${{ steps.current.outputs.check_id || needs.claude-review.outputs.check_id }}"
+          if [ -n "$CHECK_ID" ]; then
+            jq -n '{status: "completed", conclusion: "failure", output: {title: "Pre-merge Review", summary: "Publishing the review failed after a successful model pass. See the publish job logs."}}' \
+              | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true
+          fi
+          PROGRESS_ID="${{ steps.current.outputs.progress_id || needs.claude-review.outputs.progress_id }}"
+          MSG='🤖 Review errored while publishing. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
+          ACK_TARGET="${{ github.event.inputs.ack_target }}"
+          MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
+          # Same high-water carry as "Finalize progress signal".
+          HW_MARK=""
+          [[ "$PRIOR_HW_IN" =~ ^[1-9][0-9]*$ ]] && HW_MARK=$'\n'"<!-- REVIEW_HIGH_WATER $PRIOR_HW_IN -->"
+          if [ -n "$PROGRESS_ID" ]; then
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s%s' "$MSG" "$HW_MARK")
+            gh api --method PATCH "repos/$REPO/issues/comments/$PROGRESS_ID" -f body="$BODY" >/dev/null || true
+          elif [ -n "$ACK_TARGET" ]; then
+            # 👀-signalled request: clear it and tell the requester directly.
+            bash .claude/commands/docs-review/scripts/ack-request.sh --clear \
+              --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
+            [ -z "$MENTION_AUTHOR" ] || MSG="🤖 @${MENTION_AUTHOR} — review errored while publishing. Flip to draft and back to ready, or mention \`@claude #update-review\`, to retry."
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s%s' "$MSG" "$HW_MARK")
+            gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+          fi
+          exit 0
+
+  # ---- re-dispatch after a superseded handoff ----------------------------
+  # The publish guard refused the handoff because the head moved. Nothing
+  # else will start a review for the new head — a push fires no review; only
+  # open / ready_for_review / an explicit dispatch do — so this job
+  # dispatches one at the live head, the way claude-new.yml does for
+  # `#new-review`.
+  #
+  # Cost discipline: this is one full review per SUPERSESSION, not per push.
+  # A run that is itself superseded re-enters here at depth+1, and the guard
+  # rests at review:stale at handoff_guard.py's MAX_DEPTH, so the worst case
+  # per ready-transition is bounded (1 + MAX_DEPTH full reviews). Before
+  # dispatching, the job waits until the head has been quiet for
+  # handoff_guard.py's SETTLE_S: a retry fired into a push train would only
+  # be superseded again and burn a slot, and idle runner seconds are free
+  # next to a model call. The alternative — re-triggering on every
+  # synchronize and letting cancel-in-progress sort it out — was rejected
+  # because each push would kill a partly-run model step: a train of N
+  # pushes costs N-1 wasted partial reviews plus their pre-steps.
+  #
+  # Deliberately OUTSIDE the claude-review-<pr> concurrency group: the run
+  # this dispatches enters that group with cancel-in-progress and would
+  # cancel the job that dispatched it if that job were still a member. The
+  # group still does its job downstream — a human #new-review or a
+  # draft→ready flip that lands in the meantime collapses with the re-run
+  # onto one review of the newest head.
+  #
+  # Never checks out PR code: the guard script comes from the default branch
+  # (sparse), the same rule as the publish job.
+  redispatch:
+    needs: publish
+    if: needs.publish.outputs.action == 'redispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pull-requests: read
+      actions: write # gh workflow run claude-code-review.yml
+    steps:
+      - name: Checkout guard script (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          sparse-checkout: scripts/review-v3
+
+      - name: Wait for the head to settle, then dispatch at it
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ needs.publish.outputs.pr }}
+          REPO: ${{ github.repository }}
+          NEXT_DEPTH: ${{ needs.publish.outputs.next_depth }}
+        run: |
+          read_head() {
+            gh pr view "$PR" --repo "$REPO" --json state,isDraft,headRefOid \
+              --jq '[.state, (.isDraft|tostring), .headRefOid] | join(" ")'
+          }
+          # Up to three settle rounds; a head still moving after that is
+          # dispatched anyway and the guard's depth cap bounds the rest.
+          for round in 1 2 3; do
+            read -r STATE IS_DRAFT HEAD <<<"$(read_head)"
+            PUSHED_AT=$(gh api "repos/$REPO/commits/$HEAD" --jq '.commit.committer.date' 2>/dev/null || true)
+            python3 scripts/review-v3/handoff_guard.py settle --pushed-at "$PUSHED_AT" \
+              | tee /tmp/settle.txt
+            WAIT=$(grep '^wait=' /tmp/settle.txt | cut -d= -f2)
+            [ "${WAIT:-0}" -gt 0 ] || break
+            echo "redispatch: round $round — head $HEAD pushed ${PUSHED_AT}; waiting ${WAIT}s"
+            sleep "$WAIT"
+          done
+          read -r STATE IS_DRAFT HEAD <<<"$(read_head)"
+          # A PR that closed or went back to draft while we waited gets no
+          # review: the ready-transition (or #new-review) is its refresh
+          # path, and review:stale already says so.
+          if [ "$STATE" != "OPEN" ] || [ "$IS_DRAFT" = "true" ]; then
+            echo "redispatch: PR #$PR is $STATE (draft=$IS_DRAFT); leaving review:stale"
+            exit 0
+          fi
+          echo "redispatch: PR #$PR at $HEAD (depth $NEXT_DEPTH)"
+          # force / mention_author / ack_target / prior_high_water carry a
+          # human #new-review's intent through to the re-run (without the
+          # last, a re-run after `clear` finds no card and restarts at F1); dispatcher_comment_id does not
+          # (deleted by the guard — the re-run posts its own spinner).
+          gh workflow run claude-code-review.yml --repo "$REPO" \
+            -f pr_number="$PR" \
+            -f head_sha="$HEAD" \
+            -f force="${{ github.event.inputs.force || 'false' }}" \
+            -f mention_author="${{ github.event.inputs.mention_author }}" \
+            -f ack_target="${{ github.event.inputs.ack_target }}" \
+            -f prior_high_water="${{ github.event.inputs.prior_high_water || '0' }}" \
+            -f supersede_depth="$NEXT_DEPTH"

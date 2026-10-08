@@ -7,20 +7,12 @@ meta_title: Approvals in Pulumi ESC
 menu:
   esc:
     parent: esc-concepts
-    weight: 11
-  administration:
-    name: ESC Approvals
-    parent: administration-security-compliance
-    weight: 10
+    weight: 12
 aliases:
   - /docs/esc/administration/approvals/
   - /docs/esc/operations/approvals/
+pulumi_cloud_feature: esc-change-requests
 ---
-
-{{% notes "info" %}}
-Approvals in Pulumi ESC are available for organizations using the Enterprise and Business Critical editions.
-Learn more about editions on the [pricing page](/pricing/).
-{{% /notes %}}
 
 ## Overview
 
@@ -65,7 +57,7 @@ When creating or editing a ruleset, you can:
 
 Update approvals control changes to environment configurations. When an update approval ruleset is enabled on an environment, direct writes to the environment are blocked. Instead, users must create **drafts** that propose configuration changes. Drafts go through a review and approval workflow before they can be applied to the environment, ensuring that updates to critical configuration values and secrets are intentional and auditable.
 
-Only one draft can be active on an environment at a time. A draft is mutable — team members can continue editing it until it is approved and applied, similar to collaborating on a shared document.
+Multiple users can have drafts open on the same environment at the same time, with a limit of one open draft per user per environment. Each draft is reviewed and applied independently. A draft is mutable — team members can continue editing it until it is approved and applied, similar to collaborating on a shared document.
 
 To enable update approvals, follow the steps in [Configuring a Ruleset](#configuring-a-ruleset) and select **Update** for the **Action**.
 
@@ -79,7 +71,7 @@ When update approvals are enabled on an environment, the **Save** button is repl
 1. Make your changes in the editor.
 1. Select **Create Draft** to submit your proposed changes.
 
-If a draft already exists, the editor opens in read-only mode with a banner indicating that the draft is pending approval.
+If you already have an open draft on the environment, a banner linking to it will be shown. To find drafts opened by other users, use the version dropdown or the **Approvals** tab.
 
 #### From the CLI
 
@@ -104,6 +96,14 @@ The environment editor provides two modes when working with drafts:
 
 - **Edit mode**: The editor is fully editable, allowing you to modify the draft. Select **Update Draft** to save your changes. A banner with a **Review diff to approve** button lets you switch to the approval view when your changes are ready.
 - **Approval mode**: A read-only diff view showing what changed between the draft and the current revision. This view includes the review and approval controls along with an **Edit draft** button to switch back to edit mode if further changes are needed.
+
+### Updating a draft to the latest revision
+
+A draft is based on the environment revision that was current when the draft was created. If another draft is applied first, your draft becomes out of date, and you must update it before you can apply it.
+
+To update an out-of-date draft, open its change request and select **Update to latest revision**. Pulumi ESC uses a three-way merge to reapply your changes on top of the environment's latest revision.
+
+If your changes conflict with the latest revision, the draft can't be updated automatically, and the console shows which lines conflict. To continue, edit the draft or close the change request and recreate a draft from the latest revision.
 
 ### Approving and applying drafts
 

@@ -14,23 +14,11 @@ unlisted: false
 # to fill out the form before viewing.
 gated: true
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: getting-started-with-aws-java
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
 # URL for embedding a URL for ungated events.
-youtube_url: 
-
+youtube_url: https://www.youtube.com/embed/hxnb_G2EVmk
 # Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2025-02-12T09:00:00-08:00
 
@@ -42,7 +30,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    In this workshop, you'll discover how Pulumi empowers Java development teams to confidently manage cloud infrastructure while maintaining enterprise-grade security and control. As organizations face increasing complexity in cloud operations, Pulumi's Cloud Engineering platform offers a natural path forward by allowing your developers to use familiar Java skills to manage cloud resources - eliminating the need to learn new domain-specific languages.
+    In this workshop, you'll discover how Pulumi empowers Java development teams to confidently manage cloud infrastructure while maintaining enterprise-grade security and control. As organizations face increasing complexity in cloud operations, Pulumi's Cloud Engineering platform offers a natural path forward by allowing your developers to use familiar Java skills to manage cloud resources without picking up a separate domain-specific language.
 
     This session is designed for engineering leaders and developers looking to modernize their cloud infrastructure practices. Through practical demonstrations and real-world examples, you'll see how Pulumi's enterprise platform streamlines cloud operations by unifying infrastructure management, security controls, and secrets management in a single dashboard. We'll also explore proven strategies for adopting Pulumi within your organization, including practical approaches for transitioning from existing tools like Terraform while maintaining business continuity.
 
@@ -69,5 +57,4 @@ form:
     # HubSpot form id.
     hubspot_form_id: 60fc5939-0493-4e0c-9157-799e2ca73d7a
     salesforce_campaign_id: 701PQ00000QinAwYAJ
-
 ---

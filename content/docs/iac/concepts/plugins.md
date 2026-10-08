@@ -8,8 +8,6 @@ menu:
         name: Plugins
         parent: iac-concepts
         weight: 140
-    concepts:
-        weight: 140
 ---
 
 {{% notes type="info" %}}
@@ -28,7 +26,7 @@ Pulumi supports five categories of plugins:
 
 Resource plugins (also known as [providers](/docs/iac/concepts/providers/)) expose standardized interfaces for managing cloud resources. Resource plugins are distributed as [Pulumi packages](/docs/iac/concepts/packages/). A listing of providers is available in the [Pulumi Registry](/registry/).
 
-In addition to the packages in the Pulumi Registry, you can write your own [components](/docs/iac/concepts/resources/components/) and distribute them as resource plugins, enabling consumption in any Pulumi language. Components can be published to [Pulumi IDP](/docs/idp/) for discoverability within your organization or shared directly via Git references.
+Beyond the packages in the Pulumi Registry, you can write your own [components](/docs/iac/concepts/components/) and distribute them as resource plugins, enabling consumption in any Pulumi language. Components can be published to [Pulumi IDP](/docs/idp/) for discoverability within your organization or shared directly via Git references.
 
 When you first run `pulumi preview` or `pulumi up`, the Pulumi CLI will install any required providers that are not already in your plugin cache.
 
@@ -43,15 +41,15 @@ Pulumi-supported language plugins are installed automatically with the Pulumi CL
 
 ### Analyzer plugins
 
-Analyzer plugins scan Pulumi programs for potential issues and power [Pulumi Policy as Code](/docs/insights/policy/). These plugins enable you to enforce compliance, security, and best practices across your infrastructure.
+Analyzer plugins scan Pulumi programs for potential issues and power [Pulumi Policy as Code](/docs/discovery-governance/concepts/policy-as-code/). These plugins enable you to enforce compliance, security, and best practices across your infrastructure.
 
-Policy plugins are installed automatically with the Pulumi CLI. The policy packs themselves run on the machine that runs Pulumi, so that machine also needs the pack's [runtime](/docs/insights/policy/policy-packs/#runtime-requirements) installed.
+Policy plugins are installed automatically with the Pulumi CLI. The policy packs themselves run on the machine that runs Pulumi, so that machine also needs the pack's [runtime](/docs/discovery-governance/concepts/policy-as-code/policy-packs/#runtime-requirements) installed.
 
 ### Converter plugins
 
 Converter plugins transform existing infrastructure-as-code from other tools (like Terraform, Kubernetes YAML, or CloudFormation) into Pulumi programs. Learn more about [converters](/docs/iac/concepts/converters/).
 
-Converter plugins are installed automatically with the Pulumi CLI when you run the [`pulumi convert`](/docs/iac/cli/commands/pulumi_convert) command.
+Converter plugins are installed automatically with the Pulumi CLI when you run the [`pulumi convert`](/docs/iac/cli/commands/pulumi_convert/) command.
 
 ### Tool plugins
 
@@ -111,7 +109,7 @@ Use this configuration file when developing custom components or providers to di
 
 | Name | Required | Description | Options |
 | - | - | - | - |
-| `runtime` | required | Installed language runtime used to run the plugin: `nodejs`, `python`, `go`, `dotnet`, `java`, `yaml`, or `bun`. | [runtime options](#plugin-runtime-options) |
+| `runtime` | required | Installed language runtime used to run the plugin: `nodejs`, `python`, `go`, `dotnet`, `java`, `yaml`, `hcl`, or `bun`. | [runtime options](#plugin-runtime-options) |
 | `packages` | optional | Additional packages to be used in the plugin. | Same as [`Pulumi.yaml` packages](/docs/iac/concepts/projects/project-file/#packages-options) |
 | `requiredPulumiVersion` | optional | The version range of the Pulumi CLI this plugin requires. | Same as [`Pulumi.yaml` requiredPulumiVersion](/docs/iac/concepts/projects/project-file/#requiredpulumiversion-options) |
 

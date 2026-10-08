@@ -233,7 +233,7 @@ sections:
         description: The Pulumi Azure Native provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, .NET, Java, and YAML. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
       - icon: shield-check
         title: Built-in guardrails
-        description: When you enable Pulumi's Policy as Code feature, you instantly gain the power to prevent mistakes from being deployed. Enforce security, compliance, cost controls, and best practices using policies defined in modern languages.
+        description: When you enable Pulumi Policies, you instantly gain the power to prevent mistakes from being deployed. Enforce security, compliance, cost controls, and best practices using policies defined in modern languages.
       - icon: test-tube
         title: Reduce deployment complexity
         description: Pulumi lets you take advantage of common tools, frameworks, and techniques to unit, integration, and property test your Azure infrastructure. Ensure your infrastructure is correct before and after deployment.
@@ -244,7 +244,7 @@ sections:
       - title: Need help with Azure?
         description: Learn how top engineering teams are using Pulumi's SDK to create, deploy, and manage Azure resources.
         cta_primary_text: Request a demo
-        cta_primary_link: /contact/?form=request-a-demo
+        cta_primary_link: /request-a-demo/
       - title: Get started with Pulumi and Azure
         description: Deploy your first Azure project in minutes. Follow our quickstart guide, or talk to our team about your specific needs.
         cta_primary_text: Get started

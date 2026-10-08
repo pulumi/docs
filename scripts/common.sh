@@ -79,6 +79,74 @@ current_time_in_ms() {
     echo "$(node -e 'console.log(Date.now())')"
 }
 
+# publish_run_id returns the GitHub Actions run ID of the current run, or the bare JSON
+# literal `null` when there isn't one (a laptop or dev-stack build) or when the value
+# isn't something that can be compared as a number.
+#
+# This is the ordering key scripts/check-publish-ordering.js uses to refuse a publish
+# that would move the live site backwards. Run IDs are assigned by GitHub, strictly
+# increasing per repository, and immune to the clock skew that makes the metadata
+# document's `timestamp` field untrustworthy for ordering. See that script's header for
+# why the comparison is built on them rather than on wall clock or commit ancestry.
+#
+# The numeric check is not paranoia about GitHub: it's about the JSON. These values are
+# interpolated unquoted into the metadata document (they have to be, so a consumer reads
+# a number and not a string), so anything non-numeric would emit a document that no
+# consumer can parse -- which would take out the ordering check, list-recent-buckets.sh,
+# and the bucket-cleanup retention window together.
+publish_run_id() {
+    if [[ "$GITHUB_RUN_ID" =~ ^[0-9]+$ ]]; then
+        echo "$GITHUB_RUN_ID"
+    else
+        echo "null"
+    fi
+}
+
+# publish_run_attempt returns the GitHub Actions run attempt, or `null`. Same contract as
+# publish_run_id. A re-run keeps its run ID and increments this, which is why the
+# ordering check treats equal run IDs as "the same run publishing again" rather than as a
+# regression -- it's the content that run built either way.
+publish_run_attempt() {
+    if [[ "$GITHUB_RUN_ATTEMPT" =~ ^[0-9]+$ ]]; then
+        echo "$GITHUB_RUN_ATTEMPT"
+    else
+        echo "null"
+    fi
+}
+
+# render_origin_bucket_metadata prints the JSON document that sync-and-test-bucket.sh
+# writes to origin_bucket_metadata_filepath() and uploads into the bucket it just built.
+#
+# Usage: render_origin_bucket_metadata <timestamp-ms> <commit-sha> <bucket> <url>
+#
+# Consumers, so the shape isn't changed casually:
+#   - infrastructure/index.ts reads `.bucket` and makes it the CloudFront origin.
+#   - scripts/check-publish-ordering.js reads `.runId`, `.commit` and `.timestamp` from
+#     both this file and the live bucket's uploaded copy.
+#   - scripts/list-recent-buckets.sh reads `.bucket`, `.url`, `.commit` and `.timestamp`
+#     when working out which buckets are safe to delete.
+#
+# `runId` and `runAttempt` are numbers or JSON null, never strings, so a consumer can
+# compare them without knowing where the document came from. It lives here rather than
+# inline in sync-and-test-bucket.sh so the document's validity is unit-testable
+# (scripts/check-publish-ordering.test.js) without running a full site build.
+render_origin_bucket_metadata() {
+    local timestamp=$1
+    local commit=$2
+    local bucket=$3
+    local url=$4
+
+    printf '{
+    "timestamp": %s,
+    "commit": "%s",
+    "runId": %s,
+    "runAttempt": %s,
+    "bucket": "%s",
+    "url": "%s"
+}
+' "$timestamp" "$commit" "$(publish_run_id)" "$(publish_run_attempt)" "$bucket" "$url"
+}
+
 origin_bucket_prefix() {
     # This function returns the bucket name prefix to be used when naming the
     # S3 buckets. We are adding a `www` prefix to the buckets being deployed
@@ -120,6 +188,123 @@ build_identifier() {
     fi
 
     echo "$identifier"
+}
+
+# to_base36 converts a non-negative integer to a lowercase base-36 string. Used to keep
+# the deploy-run uniquifier (see deploy_run_uniquifier below) as compact as possible, since
+# it has to fit inside S3's 63-character bucket-name limit alongside the bucket prefix, the
+# event name, and the commit SHA.
+to_base36() {
+    local n=$1
+    local chars="0123456789abcdefghijklmnopqrstuvwxyz"
+    local result=""
+
+    if [ "$n" -eq 0 ]; then
+        echo "0"
+        return
+    fi
+
+    while [ "$n" -gt 0 ]; do
+        result="${chars:$((n % 36)):1}${result}"
+        n=$((n / 36))
+    done
+
+    echo "$result"
+}
+
+# deploy_run_uniquifier returns a short token that's different across separate script
+# invocations that would otherwise compute the same build_identifier -- most importantly,
+# two scheduled rebuilds of the same commit (no new push in between). In CI, this is the
+# GitHub Actions run ID (plus the run attempt, if this is a re-run), base36-encoded to stay
+# compact. Outside CI, it falls back to the current epoch second, also base36-encoded.
+deploy_run_uniquifier() {
+    if [[ ! -z "$GITHUB_RUN_ID" ]]; then
+        local run_attempt="${GITHUB_RUN_ATTEMPT:-1}"
+        local encoded="$(to_base36 "$GITHUB_RUN_ID")"
+
+        if [ "$run_attempt" != "1" ]; then
+            encoded="${encoded}${run_attempt}"
+        fi
+
+        echo "$encoded"
+    else
+        to_base36 "$(date +%s)"
+    fi
+}
+
+# deploy_event_alias returns the short, fixed-width-ish event segment used in deploy-path
+# bucket names. build_identifier() uses the raw GitHub event name (e.g. "workflow-dispatch",
+# 17 characters), which together with the bucket prefix, the commit SHA, and the per-run
+# uniquifier leaves no room under S3's 63-character bucket-name limit. Rather than trim the
+# event name to fit -- which would make the segment vary by environment and by run attempt
+# ("workflow-dispat" in testing, "workflow-di" in production) and break any prefix filter
+# that looks for it -- deploy-path names use a short alias per event. Add an alias here
+# whenever a new event becomes a deploy-path trigger; deploy_bucket_name() fails loudly if
+# the name still doesn't fit.
+deploy_event_alias() {
+    case "$1" in
+        push) echo "push" ;;
+        schedule) echo "schedule" ;;
+        workflow_dispatch) echo "dispatch" ;;
+        repository_dispatch) echo "repo" ;;
+        *) echo "${1//_/-}" ;;
+    esac
+}
+
+# deploy_bucket_name returns the name of the S3 bucket to use for a deploy-path (i.e.,
+# non-preview) build: pushes to master and the scheduled/manual rebuilds in
+# build-and-deploy.yml. Unlike build_identifier(), which is also used to fingerprint asset
+# bundle paths and therefore MUST stay identical for a given commit, this appends a short
+# per-run token (deploy_run_uniquifier) so that two deploy runs at the same commit never
+# collide on the same bucket name.
+#
+# Why this matters: sync-and-test-bucket.sh treats "bucket already exists" as an expected,
+# swallowed condition (aws s3 mb ... || true) covering the case where a previous run of
+# *this same build* failed partway through. Without a uniquifier, an unrelated later run
+# that happens to share a commit -- e.g. a scheduled rebuild with no intervening push --
+# hits that same swallowed condition and then runs a destructive `s5cmd sync --delete` in
+# place against the pre-existing bucket, which may be the one CloudFront is actively
+# serving. Preview (PR) builds are intentionally excluded: they're named directly by the
+# caller from build_identifier() so a PR keeps reusing the same bucket across pushes, and
+# they're never a CloudFront origin, so they carry none of this risk.
+#
+# The event segment of build_identifier() is swapped for its deploy_event_alias() so the
+# result is the same shape in every environment and on every run attempt:
+#
+#   <origin_bucket_prefix>-<event-alias>-<sha8>-<uniquifier>
+#   www-production-pulumi-docs-origin-dispatch-564e8a30-fqwwnrm2
+#
+# The commit SHA (needed for traceability) and the uniquifier (needed for collision-freedom)
+# are never shortened. If the name still exceeds S3's 63-character limit -- an unaliased
+# long event name, or a caller-supplied $BUILD_IDENTIFIER -- this fails loudly rather than
+# silently truncating.
+deploy_bucket_name() {
+    local prefix identifier uniq name max_len event_sanitized alias
+
+    prefix="$(origin_bucket_prefix)"
+    identifier="$(build_identifier)"
+    uniq="$(deploy_run_uniquifier)"
+    max_len=63
+
+    # In CI, build_identifier() is "<event-sanitized>-<sha8>" (or "pr-<n>-<sha8>" for pull
+    # requests, which never take this path but are handled consistently if they do).
+    # Replace the leading event segment with its alias; anything else passes through.
+    if [ -n "$GITHUB_EVENT_NAME" ]; then
+        event_sanitized="${GITHUB_EVENT_NAME//_/-}"
+        alias="$(deploy_event_alias "$GITHUB_EVENT_NAME")"
+        if [[ "$identifier" == "${event_sanitized}-"* ]]; then
+            identifier="${alias}-${identifier#"${event_sanitized}-"}"
+        fi
+    fi
+
+    name="${prefix}-${identifier}-${uniq}"
+
+    if [ "${#name}" -gt "$max_len" ]; then
+        echo "ERROR: deploy bucket name '${name}' is ${#name} chars (max ${max_len}); refusing to silently truncate the SHA or the uniquifier. If a new deploy-path event was added, give it a short alias in deploy_event_alias()." >&2
+        return 1
+    fi
+
+    echo "$name"
 }
 
 # List the 100 most recent bucket in the current account, sorted descendingly by

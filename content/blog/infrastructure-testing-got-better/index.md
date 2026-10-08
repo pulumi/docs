@@ -22,7 +22,7 @@ Advancements in available cloud services give us the opportunity to deliver bett
 1. [AWS Lambda](https://aws.amazon.com/lambda/) Step Functions for workflows; and
 1. [AWS Lake Formation](https://aws.amazon.com/lake-formation/) for creating a secure data catalog available for analytics tools.
 
-With this shift, it makes sense to throw out old configurations and pick the best tools for the job rather than be encumbered by legacy DSLs. We use Pulumi as our Infrastructure as Code tool of choice because it has all of the capabilities we need:
+With this shift, it makes sense to throw out old configurations and pick the best tools for the job rather than be encumbered by legacy DSLs. We use Pulumi as our infrastructure as code tool of choice because it has all of the capabilities we need:
 
 * Pulumi supports TypeScript - the modern programming language that the team prefers for its static typing capabilities.
 * It works ‘out of the box’ with modern Integrated Development Environments (IDEs) like Visual Studio Code.

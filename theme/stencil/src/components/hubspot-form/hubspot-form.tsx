@@ -1,4 +1,4 @@
-import { Component, Element, Event, EventEmitter, h, Prop, State } from "@stencil/core";
+import { Component, Element, Event, EventEmitter, h, Method, Prop, State } from "@stencil/core";
 import { parseCookie, parseUTMCookieString, getQueryVariable } from "../../util/util";
 
 interface UTMData {
@@ -17,6 +17,8 @@ let hubspotInstanceCount = 0;
 // https://legacydocs.hubspot.com/docs/methods/forms/advanced_form_options
 type HubSpotFormEvent = "onBeforeFormInit" | "onBeforeValidationInit" | "onFormReady" | "onFormSubmit" | "onFormSubmitted" | "onFormDefinitionFetchError";
 
+const REASSIGNABLE_INPUT_TYPES = ["text", "email", "tel", "url", "search", "number"];
+
 @Component({
     tag: "pulumi-hubspot-form",
     styleUrl: "hubspot-form.scss",
@@ -26,6 +28,13 @@ export class HubspotForm {
     // The formId is the HubSpot defined form ID this form will submit to.
     @Prop()
     formId: string;
+
+    // A human-readable name for this form (e.g. "general", "sales", "demo"),
+    // forwarded to Segment on submission so multiple forms on one page (or
+    // multiple single-form pages) can be told apart in analytics. Optional:
+    // when unset, the submission event is sent exactly as it always has been.
+    @Prop()
+    formName?: string;
 
     // The salesforceCampaignId is the ID for the associated SalesForce Campaign.
     @Prop()
@@ -51,6 +60,9 @@ export class HubspotForm {
     // leaves the form untouched.
     @Prop()
     prefill?: string;
+
+    @Prop()
+    carryOverValues?: Record<string, string>;
 
     // Emitted once HubSpot confirms the submission, so a page can render its own
     // confirmation UI. `values` holds the submitted values in display form.
@@ -161,6 +173,10 @@ export class HubspotForm {
             // Set the internal ad id.
             this.setInternalAdId();
 
+            if (this.carryOverValues) {
+                this.fillEmptyFields(this.carryOverValues);
+            }
+
             this.applyPrefill();
         }
 
@@ -204,6 +220,10 @@ export class HubspotForm {
                 utmCampaign: utmData.campaign,
                 utmSource: utmData.source,
                 utmMedium: utmData.medium,
+                // Omitted rather than sent empty: pages that haven't set a
+                // formName keep submitting exactly the payload shape they
+                // always have.
+                ...(this.formName ? { formName: this.formName } : {}),
             };
             analytics.track("form-submission", submissionData);
         }
@@ -228,28 +248,67 @@ export class HubspotForm {
 
         try {
             const fieldsToParams: Record<string, string> = JSON.parse(this.prefill);
+            const values: Record<string, string> = {};
 
             Object.keys(fieldsToParams).forEach(fieldName => {
                 const value = getQueryVariable(fieldsToParams[fieldName]);
-                if (!value) {
-                    return;
+                if (value) {
+                    values[fieldName] = value;
                 }
-
-                const field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement = this.el.querySelector(`[name="${fieldName}"]`);
-                if (!field) {
-                    return;
-                }
-
-                // HubSpot validates off its own state, so it needs both events to
-                // register the value. `window.Event` because Stencil's `Event`
-                // decorator shadows the global constructor here.
-                field.value = value;
-                field.dispatchEvent(new window.Event("input", { bubbles: true }));
-                field.dispatchEvent(new window.Event("change", { bubbles: true }));
             });
+
+            this.applyValues(values);
         } catch (e) {
             // Malformed prefill map, or a query string getQueryVariable can't parse.
         }
+    }
+
+    private applyValues(values: Record<string, string>) {
+        this.writeFields(values, false);
+    }
+
+    private fillEmptyFields(values: Record<string, string>) {
+        this.writeFields(values, true);
+    }
+
+    private writeFields(values: Record<string, string>, skipFilled: boolean) {
+        Object.keys(values).forEach(fieldName => {
+            const value = values[fieldName];
+            if (!value) {
+                return;
+            }
+
+            const field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement = this.el.querySelector(`[name="${fieldName}"]`);
+            if (!field || (skipFilled && field.value)) {
+                return;
+            }
+
+            // HubSpot validates off its own state, so it needs both events to
+            // register the value. `window.Event` because Stencil's `Event`
+            // decorator shadows the global constructor here.
+            field.value = value;
+            field.dispatchEvent(new window.Event("input", { bubbles: true }));
+            field.dispatchEvent(new window.Event("change", { bubbles: true }));
+        });
+    }
+
+    @Method()
+    async getCarryOverValues(): Promise<Record<string, string>> {
+        const values: Record<string, string> = {};
+
+        this.el.querySelectorAll("input, textarea, select").forEach((field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement) => {
+            if (!field.name) {
+                return;
+            }
+
+            if (field instanceof HTMLInputElement && !REASSIGNABLE_INPUT_TYPES.includes(field.type)) {
+                return;
+            }
+
+            values[field.name] = field.value;
+        });
+
+        return values;
     }
 
     // The form's current values, keyed by field name, in display form.

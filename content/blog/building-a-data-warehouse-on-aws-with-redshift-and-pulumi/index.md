@@ -283,7 +283,7 @@ vpc_endpoint = ec2.VpcEndpoint("s3-vpc-endpoint", ec2.VpcEndpointArgs(
 
 {{% /choosable %}}
 
-Finally, add the cluster itself, using everything you've defined up to now --- config settings, network settings, IAM role, and the VPC's default security group, which enables traffic to and from the cluster on all ports and subnet IPs. Finish things off by exporting the name of the S3 bucket and Redshift ARN, as you'll need both in order to post and then import the S3 data (both will be [auto-named](/docs/concepts/resources/names/#autonaming)):
+Finally, add the cluster itself, using everything you've defined up to now --- config settings, network settings, IAM role, and the VPC's default security group, which enables traffic to and from the cluster on all ports and subnet IPs. Finish things off by exporting the name of the S3 bucket and Redshift ARN, as you'll need both in order to post and then import the S3 data (both will be [auto-named](/docs/iac/concepts/resources/names/#autonaming)):
 
 {{< chooser language "typescript,python" />}}
 

@@ -13,18 +13,43 @@ aliases:
   - /docs/pulumi-cloud/self-hosted/changelog/
   - /docs/administration/self-hosting/pulumi-cloud/changelog/
   - /docs/pulumi-cloud/admin/self-hosted/changelog/
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note />}}
 
 ## 2026
 
+### September
+
+* Upgraded OpenSearch to 3.7.0 across the self-hosted installers, matching the version Pulumi Cloud runs
+
+{{< notes type="warning" >}}
+Breaking Change: Installers that deploy an OpenSearch cluster now deploy 3.7.0. Redeploying takes that cluster across the OpenSearch 2.x to 3.x major boundary, so plan for it rather than picking it up on your next update. If instead you point the service at an OpenSearch cluster you manage yourself, nothing changes on this release: the service stays compatible with 2.x, so you can update the service and keep that cluster where it is. For upgrade steps, see the README for your [installer](/docs/administration/self-hosting/deployment-options/).
+{{< /notes >}}
+
+* Added per-feature control of SSRF protection with the `PULUMI_DISABLE_SSRF_PROTECTION` environment variable, support for outbound proxies set with `HTTPS_PROXY` and `HTTP_PROXY` on requests under SSRF protection, and SSRF protection for refreshing members' GitHub Enterprise Server tokens for [individual user authentication](/docs/integrations/version-control/github-app/#individual-user-authentication-for-github-enterprise-server), under the `VCS` scope. See [SSRF protection](/docs/administration/self-hosting/components/api/#ssrf-protection).
+
+{{< notes type="warning" >}}
+Breaking Change: `PULUMI_DISABLE_ESC_SSRF_PROTECTION=true` now switches off SSRF protection for Pulumi ESC only. It is deprecated; set `PULUMI_DISABLE_SSRF_PROTECTION=ESC` instead. If you relied on it to let Pulumi Neo reach a custom model provider on your private network, add `AGENTS_BYOK` to the list, for example `PULUMI_DISABLE_SSRF_PROTECTION=ESC,AGENTS_BYOK`.
+
+If individual user authentication is enabled and your GitHub Enterprise Server resolves to a private or loopback address, refreshing a member's token now fails, so operations that run as that member stop working once the token expires. Add `VCS` to `PULUMI_DISABLE_SSRF_PROTECTION` to let the API service reach the server.
+{{< /notes >}}
+
+### August
+
+* Tightened encryption checks for Pulumi ESC environments: ciphertext that was copied from another environment is now blocked when the environment is opened
+
+{{< notes type="info" >}}
+If an environment fails to open because of this check, set the `PULUMI_DISABLE_CRYPTO_ACCESS_ENFORCEMENT=true` environment variable, create a new revision of the affected environment from its plaintext values, and then remove the environment variable again.
+{{< /notes >}}
+
 ### April
 
 * Added SSRF (server-side request forgery) protection to Pulumi ESC providers to prevent requests to private, loopback, and link-local IP addresses
 
 {{< notes type="warning" >}}
-Breaking Change: ESC providers now block requests to private, loopback, and link-local IP addresses by default. If you run dependent services (for example, local secret stores or webhooks) on the same host or private network as your self-hosted Pulumi Cloud, you may need to disable SSRF protection by setting the `PULUMI_DISABLE_ESC_SSRF_PROTECTION=true` environment variable.
+Breaking Change: ESC providers now block requests to private, loopback, and link-local IP addresses by default. If you run dependent services (for example, local secret stores or webhooks) on the same host or private network as your self-hosted Pulumi Cloud, you may need to disable SSRF protection by setting the `PULUMI_DISABLE_ESC_SSRF_PROTECTION=true` environment variable. As of September 2026, set `PULUMI_DISABLE_SSRF_PROTECTION=ESC` instead.
 {{< /notes >}}
 
 ## 2025
@@ -65,7 +90,7 @@ Breaking Change: Ensure your permissions are up to date if you are using AWS KMS
 
 ### November
 
-* Added support for self-hosted Insights scans
+* Added support for self-hosted Discovery scans
 * Fixed policy evaluator for more reliable policy enforcement
 * Upgraded pulumi-self-hosted-installers
 

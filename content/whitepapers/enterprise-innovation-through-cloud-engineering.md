@@ -1,5 +1,5 @@
 ---
-title: Accelerating Enterprise Innovation through Cloud Engineering
+title: Accelerating enterprise innovation through cloud engineering
 description: |
     Pulumi is a cloud engineering platform that gives enterprises a unified process for delivering infrastructure and applications for greater innovation velocity.
 meta_desc: |
@@ -23,19 +23,21 @@ sections:
       anchor: conclusion
 ---
 
-## Executive summary
-
+{{% panel title="Executive summary" id="executive-summary" %}}
 Enterprises are facing an unprecedented challenge of delivering business innovation and customer value more quickly and at high scale. They must tame complexity across hybrid clouds and increase reliability and security across the organization in order to accelerate release velocity and match the scale of customer demand. Enterprises are faced with managing disparate teams across infrastructure, development, and compliance using countless technologies and tools to deliver and manage infrastructure critical for business innovation. Cloud engineering is the practice of applying software engineering to tame the complexity of delivering and managing modern cloud applications.
 
 In this whitepaper, we will look at the implications of cloud engineering and present solutions for adopting cloud engineering to fully maximize the benefits of the modern cloud and capitalize on software engineering as a lever for digital transformation.
+{{% /panel %}}
+
+---
 
 ## Introduction to cloud engineering
 
-Since the early 2010s, enterprises have embarked on a migration from on-premises data centers to the cloud. This shift was driven by 1/ the business needs of increasing innovation and reducing costs, 2/ satisfying increased customer needs for access to their products or services, and 3/ the inability to scale to compete with other businesses who had more resources. The cloud provided on-demand infrastructure that allowed near-infinite scalability, reduction of upfront infrastructure capital expenditures, increased availability and uptime of infrastructure, and global geographic reach. The practice of DevOps and tools like Infrastructure as Code were employed to automate the complexity of VM-centric deployments and infrastructure.
+Since the early 2010s, enterprises have embarked on a migration from on-premises data centers to the cloud. This shift was driven by 1/ the business needs of increasing innovation and reducing costs, 2/ satisfying increased customer needs for access to their products or services, and 3/ the inability to scale to compete with other businesses who had more resources. The cloud provided on-demand infrastructure that allowed near-infinite scalability, reduction of upfront infrastructure capital expenditures, increased availability and uptime of infrastructure, and global geographic reach. The practice of DevOps and tools like infrastructure as code were employed to automate the complexity of VM-centric deployments and infrastructure.
 
 During that migration, businesses drove innovation through software engineering, which enabled companies to meet customer demand for increased reliability and increase the speed to market. To support the needs of software engineering, cloud architectures also evolved with the introduction of new technologies like containerization, microservices, Kubernetes, and serverless systems. This shift to a world where the business capabilities defined services drove an increase in the number of cloud services and APIs that make up an application, and that number continues to grow exponentially. This evolution forms what we know today as the modern cloud. In addition, the traditional line between development and operations has blurred with the rise of shared responsibility for services brought by DevOps cultures. Operations and infrastructure teams have shifted to providing platform-like systems or applying software engineering practices to cloud infrastructure, all driven by the rise in API capabilities with cloud services that enables more automation and more code-based management. As a result, developers are increasingly involved in the provisioning of infrastructure. Meanwhile, compliance teams have gained more insight into the software development lifecycle and the cloud itself through those same APIs, enabling security and compliance through automation and code.
 
-As these changes in organization, process, and tooling happened, a new order of problems started to emerge. The need to utilize these new architectures and technologies cause the management of infrastructure spanning multiple clouds, including existing on-premises private clouds, to become increasingly fragmented and complex. Developers who now need to work more closely with infrastructure face significant learning curves. Infrastructure teams managing service-level agreements and defining reliability best practices face further difficulty from the complexity and scale. Compliance and security teams enforcing policies at scale across the entire organization need to do so without slowing down development velocity. The existing processes of DevOps and legacy Infrastructure as Code tools are not equipped to keep up with these changes and solve these problems. Delivery and innovation velocities experience slowdowns as a result.
+As these changes in organization, process, and tooling happened, a new order of problems started to emerge. The need to utilize these new architectures and technologies cause the management of infrastructure spanning multiple clouds, including existing on-premises private clouds, to become increasingly fragmented and complex. Developers who now need to work more closely with infrastructure face significant learning curves. Infrastructure teams managing service-level agreements and defining reliability best practices face further difficulty from the complexity and scale. Compliance and security teams enforcing policies at scale across the entire organization need to do so without slowing down development velocity. The existing processes of DevOps and legacy infrastructure as code tools are not equipped to keep up with these changes and solve these problems. Delivery and innovation velocities experience slowdowns as a result.
 
 Against these challenges, new best practices started to develop amongst enterprises. Infrastructure, development, and compliance teams must work as one organization to deliver and manage modern cloud applications. Those best practices are collectively known as cloud engineering, and the goal of cloud engineering is to tame the complexity of the modern cloud and increase innovation velocity. There are three pillars of practices to cloud engineering: build, deploy, and manage.
 
@@ -51,27 +53,29 @@ Cloud engineering teams deliver both infrastructure and application code through
 
 Cloud engineering teams manage and secure their cloud infrastructure and applications through repeatable, auditable code and management processes that enable visibility. Teams use policy-as-code as programmable guardrails to enforce security, best practices, and cost across all infrastructure. Auditing controls that track all cloud resource changes across all cloud infrastructure enable faster, more reliable compliance even across the most complex of architectures and deployments. Finally, enabling deeper visibility increases collaboration between infrastructure, development, and compliance teams by reducing miscommunication and friction among teams.<br>
 
----
-
 Cloud engineering is a practice that provides a blueprint on the processes to employ in order to use software engineering across infrastructure, development, and compliance teams to transform the way infrastructure is managed. The next section discusses the tools needed to make it easier to adopt the practices.
+
+---
 
 ## Accelerating innovation through cloud engineering
 
-Pulumi is a cloud engineering platform that enables enterprises to use a unified software engineering process to deliver infrastructure and applications together and faster. It brings together infrastructure, development, and compliance teams through the entire cloud engineering lifecycle. Pulumi provides developer-first infrastructure as code that allows organizations to build, deploy, and manage cloud infrastructure with popular programming languages including Python, JavaScript, TypeScript, Go, .NET/C#, and Java, and markup languages like YAML. Organizations can deploy cloud infrastructure and applications together using a unified delivery process and automation with fine-grained visibility and controls. Pulumi provides advanced security and compliance features, premium support, and self-hosting options to support the most sophisticated production workloads in the modern cloud.
+Pulumi is a cloud engineering platform that enables enterprises to use a unified software engineering process to deliver infrastructure and applications together and faster. It brings together infrastructure, development, and compliance teams through the entire cloud engineering lifecycle. Pulumi provides developer-first infrastructure as code that allows organizations to build, deploy, and manage cloud infrastructure with popular programming languages including Python, JavaScript, TypeScript, Go, .NET, and Java, plus YAML and HCL for teams that prefer a declarative format. Organizations can deploy cloud infrastructure and applications together using a unified delivery process and automation with fine-grained visibility and controls. Pulumi provides advanced security and compliance features, premium support, and self-hosting options to support the most sophisticated production workloads in the modern cloud.
 
 ### Pulumi spans the entire cloud engineering lifecycle
 
-Pulumi is designed as a platform to manage the cloud engineering lifecycle for any enterprise. Infrastructure teams and developers are empowered to __build__ infrastructure as code in familiar programming languages. They can use TypeScript, JavaScript, Python, Go, and .NET to model cloud infrastructure by leveraging the features of each language, and they can build on any cloud by accessing the full breadth of services in AWS, Azure, Google Cloud, and 60+ providers through a complete and consistent SDK interface. Infrastructure and compliance teams can encapsulate cloud architectures and best practices as reusable Pulumi Packages and share reusable infrastructure that can be used anywhere in the organization.
+Pulumi is designed as a platform to manage the cloud engineering lifecycle for any enterprise. Infrastructure teams and developers are empowered to __build__ infrastructure as code in familiar programming languages. They can use TypeScript, JavaScript, Python, Go, .NET, and Java to model cloud infrastructure by leveraging the features of each language, and they can build on any cloud by accessing the full breadth of services in AWS, Azure, Google Cloud, and hundreds of providers through a complete and consistent SDK interface. Infrastructure and compliance teams can encapsulate cloud architectures and best practices as reusable Pulumi Packages and share reusable infrastructure that can be used anywhere in the organization.
 
 Pulumi enables infrastructure teams and developers to __deploy__ cloud infrastructure and applications together. Every infrastructure change can be tested and validated using standard unit test frameworks and integration tests, reducing errors in infrastructure deployments. With Pulumi, infrastructure can be deployed interactively with a CLI, programmatically through Pulumi’s Automation API, or through standard CI/CD processes.
 
 Compliance and infrastructure teams can __manage__ cloud infrastructure and applications with greater visibility and controls. They can enforce server-side, organization-wide policies, including compliance and security best practices, network access restrictions, and cost controls. Enterprises can also control access to sensitive data and operations through fine-grained roles across the entire organization and for specific projects. Pulumi offers federated services for enterprises to leverage existing SAML 2.0 and Single Sign-On (SSO) investments and uses the System for Cross-domain Identity Management (SCIM) protocol for automatic identity synchronization with systems like Microsoft Active Directory, Google Workspace, and Okta, among others. All activity within Pulumi is automatically recorded with the ability to export logs for integration with other security and compliance partners.
 
-Enterprises that require specific data controls can use the self-hosted Pulumi service in their own cloud or datacenter and maintain complete control over their hosting, network isolation, identity, and data ownership. Deployment options include Kubernetes clusters, VMWare vSphere, virtual private clouds in AWS, Azure, Google Cloud, and many other configurations. Pulumi runs in an AWS VPC, and the architecture follows industry best practices. All network communication is encrypted using TLS, and Pulumi’s endpoints are only accessible via HTTPS. Data is encrypted at rest, and Pulumi is compliant with SOC 2 Type II. Pulumi also provides a range of support options, such as dedicated 24x7 support, premium training, onboarding, and professional services.
+Enterprises that require specific data controls can use the self-hosted Pulumi service in their own cloud or datacenter and maintain complete control over their hosting, network isolation, identity, and data ownership. Deployment options include Kubernetes clusters, VMware vSphere, virtual private clouds in AWS, Azure, Google Cloud, and many other configurations. Pulumi runs in an AWS VPC, and the architecture follows industry best practices. All network communication is encrypted using TLS, and Pulumi’s endpoints are only accessible via HTTPS. Data is encrypted at rest, and Pulumi is compliant with SOC 2 Type II. Pulumi also provides a range of support options, such as dedicated 24x7 support, premium training, onboarding, and professional services.
 
-The new order of problems that come with the adoption of the modern cloud—multi-cloud complexity, repeatability risks, security and reliability, velocity slowdowns—can be solved through cloud engineering empowered by the Pulumi platform. __Pulumi tames modern cloud complexity.__ It provides one consistent approach to accessing over 60 cloud providers and works for the entire enterprise as each team scales up. __Pulumi reduces risk through automation.__ Enterprises can leverage a rich and programmable cloud interface with reusable packages that abstract away complexity to increase consistency and reduce maintenance across infrastructure. __Pulumi provides better guardrails for reliability and security.__ Pulumi also fosters collaboration between developers, infrastructure teams, and security engineers using Policy as Code to ensure cloud services and resources are used in a secure, consistent, and well-architected way. Lastly, __Pulumi accelerates development velocity.__ Enterprises can employ software engineering practices with Infrastructure as Code—including modularity, testing, and CI/CD—to reduce deployment risks and increase development velocity.
+The new order of problems that come with the adoption of the modern cloud—multi-cloud complexity, repeatability risks, security and reliability, velocity slowdowns—can be solved through cloud engineering empowered by the Pulumi platform. __Pulumi tames modern cloud complexity.__ It provides one consistent approach to accessing hundreds of cloud providers and works for the entire enterprise as each team scales up. __Pulumi reduces risk through automation.__ Enterprises can leverage a rich and programmable cloud interface with reusable packages that abstract away complexity to increase consistency and reduce maintenance across infrastructure. __Pulumi provides better guardrails for reliability and security.__ Pulumi also fosters collaboration between developers, infrastructure teams, and security engineers using Policy as Code to ensure cloud services and resources are used in a secure, consistent, and well-architected way. Lastly, __Pulumi accelerates development velocity.__ Enterprises can employ software engineering practices with infrastructure as code—including modularity, testing, and CI/CD—to reduce deployment risks and increase development velocity.
 
 Pulumi accelerates innovation for enterprises because it allows enterprises to fully maximize the benefits of the modern cloud and capitalize on software engineering as a lever for digital transformation. The next section discusses the steps that should be taken to employ cloud engineering.
+
+---
 
 ## The cloud engineering journey
 
@@ -139,15 +143,15 @@ Pulumi promotes creating reusable and modular components which allows standard a
 
 #### Establishing software supply chain
 
-The next step after building reusable and modular components is establishing a secure software supply chain for each of the components. Enterprises broadly implement software versioning and supply chain for application development. Pulumi brings true software versioning and a secure software supply chain to the way organizations manage infrastructure. Legacy markup and DSL toolchains have limited supply chain capabilities leading to configuration drift and insecure practices. Teams often copy-and-paste configuration changes, and when critical security misconfigurations happen in an environment, they need to manually track down all places in which the same configuration mistakes were copied. With Pulumi, an infrastructure change is versioned just like software. Out-of-date versions can be audited the same way, and rollouts can be performed using standard release techniques, giving teams confidence they aren’t running out of date configurations.
+The next step after building reusable and modular components is establishing a secure software supply chain for each of the components. Enterprises broadly implement software versioning and supply chain for application development. Pulumi brings true software versioning and a secure software supply chain to the way organizations manage infrastructure. Markup- and template-based toolchains often have limited software supply-chain capabilities, which can lead to configuration drift when changes are copied between environments. Teams often copy-and-paste configuration changes, and when critical security misconfigurations happen in an environment, they need to manually track down all places in which the same configuration mistakes were copied. With Pulumi, an infrastructure change is versioned just like software. Out-of-date versions can be audited the same way, and rollouts can be performed using standard release techniques, giving teams confidence they aren’t running out of date configurations.
 
 #### Automating and orchestrating the control plane
 
 SSPs have a control and data plane. The control plane exposes the interface that users interact with and orchestrates the provisioning of infrastructure requested. The data plane is the shared platform components or application components used by developers. The Pulumi Automation API allows the embedding of Pulumi programs directly into the application code of the SSP control plane. The Automation API is a strongly typed, programmatic interface for running Pulumi programs without the Pulumi CLI. With the Automation API, enterprises can build control planes that natively execute Pulumi programs to provision data plane infrastructure components. No other infrastructure as code tool has this capability.
 
----
-
 Pulumi provides a platform that supports all stages of the cloud engineering journey with each stage progressively unlocking greater benefits of the modern cloud. Enterprises rely on Pulumi as a trusted advisor and partner through this entire journey.
+
+---
 
 ## Success stories
 
@@ -155,16 +159,16 @@ Organizations of all sizes, from startups to the Global 2000, have chosen Pulumi
 
 ### Snowflake
 
-Snowflake’s platform team enabled its developers to deploy standardized Kubernetes environments across AWS, Azure, and Google Cloud with a self-service platform that’s powered by Pulumi and Golang. [Read the case study](/case-studies/snowflake/).
+Snowflake’s platform team enabled its developers to deploy standardized Kubernetes environments across AWS, Azure, and Google Cloud with a self-service platform that’s powered by Pulumi and Golang. [Read the case study](/customers/snowflake/).
 
 ### Mercedes-Benz
 
 Mercedes-Benz Research & Development North America and its platform team enabled developers to deploy standardized Kubernetes environments on Azure with a self-service platform.
-[Read the case study](/case-studies/mercedes-benz/).
+[Read the case study](/customers/mercedes-benz/).
 
 ### Atlassian
 
-Atlassian Bitbucket reduced its developers’ time spent on cloud maintenance by 50% through creating a self-service platform that deploys standard development environments for Bitbucket. [Read the case study](/case-studies/atlassian/).
+Atlassian Bitbucket reduced its developers’ time spent on cloud maintenance by 50% through creating a self-service platform that deploys standard development environments for Bitbucket. [Read the case study](/customers/atlassian/).
 
 ### Skai
 
@@ -172,7 +176,9 @@ Skai’s DevOps group migrated a core monolith service from its private cloud to
 
 ### SANS Institute
 
-SANS Institute’s DevOps team reduced deployment times for a key service by up to 70% by moving from a domain-specific language to Pulumi and implementing software engineering practices like Git and CI/CD. [Read the case study](/case-studies/sans-institute/).
+SANS Institute’s DevOps team reduced deployment times for a key service by up to 70% by moving from a domain-specific language to Pulumi and implementing software engineering practices like Git and CI/CD. [Read the case study](/customers/sans-institute/).
+
+---
 
 ## Conclusion
 

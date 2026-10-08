@@ -30,7 +30,7 @@ So far, you've read about how Zephyr started out with a single project and a sin
 
 You can review the reasons for this structure in the post on [best practices for structuring Pulumi projects](/blog/iac-best-practices-structuring-pulumi-projects/). One of the reasons listed in the third Zephyr blog post was security:
 
-> ...security is a factor that affects how projects and stacks should be structured. In Zephyr's case, the ability for one team to affect another team's resources was present when everything was a single project. With multiple projects, Zephyr can use stack permissions and role-based access control (RBAC) in [Pulumi Cloud](/product/pulumi-cloud/) to appropriately control _who_ can affect _what_.
+> ...security is a factor that affects how projects and stacks should be structured. In Zephyr's case, the ability for one team to affect another team's resources was present when everything was a single project. With multiple projects, Zephyr can use stack permissions and role-based access control (RBAC) in [Pulumi Cloud](/product/) to appropriately control _who_ can affect _what_.
 
 The last part of that quote---the part about being able to "appropriately control _who_ can affect _what_"---is another way of describing what's known as [the principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're unfamiliar with this term, we recommend following the link and getting more information, because the principle of least privilege stands at the core of all the recommended practices you'll read in this post.
 
@@ -82,7 +82,7 @@ When it comes to assigning a team access to a stack, there are three options:
 When the "Allow organization members to create stacks and transfer stacks to this organization" is checked, like in the screenshot above, then the user (organization member) that creates a stack automatically becomes the stack admin for that stack. The user's ability to delete the stack, however, is affected by the "Allow stack admins to delete stacks" setting.
 {{% /notes %}}
 
-Full details on what each of these permissions grants is detailed in [the projects and stacks documentation](/docs/pulumi-cloud/projects-and-stacks/) (see the "Stack Permissions" section). In accordance with the principle of least privilege, Pulumi recommends you **grant the minimum level of access necessary** in order for a user (organization member) to meet their job responsibilities. You accomplish this by adding the member to a team, and then granting the team the minimum level of necessary access. _You can't assign stack permissions directly to users._
+Full details on what each of these permissions grants is detailed in [the projects and stacks documentation](/docs/iac/concepts/stacks/) (see the "Stack Permissions" section). In accordance with the principle of least privilege, Pulumi recommends you **grant the minimum level of access necessary** in order for a user (organization member) to meet their job responsibilities. You accomplish this by adding the member to a team, and then granting the team the minimum level of necessary access. _You can't assign stack permissions directly to users._
 
 Because team membership is central to the use of stack permissions, Pulumi has several ways to make it easier to manage the relationship between teams and stacks:
 

@@ -20,22 +20,22 @@ aliases:
 
 Pulumi programs can be defined in many languages, and the Pulumi YAML dialect offers an additional language for authoring Pulumi programs.
 
-Pulumi supports programs written in YAML or JSON.  In both cases, the programs (`.yaml` or `.json` files) follow a simple schema, including four top level sections:
+Pulumi supports programs written in YAML or JSON. In both cases, the programs (`.yaml` or `.json` files) follow a schema with five top-level sections:
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
-| `config` | [config options](#config) | No | No | Config specifies the [Pulumi config](/docs/concepts/config/) inputs to the deployment. |
-| `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/concepts/resources/) that will be deployed and managed by the program |
-| `variables` | map[string]Expression | No | Yes | Variables specifies intermediate values of the program, the values of variables are expressions that can be re-used. |
-| `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/concepts/stack#outputs) of the program and how they are computed from the `resources` is a value of the appropriate type for the template to use if no value is specified. |
-| `pulumi` | map[string]Expression | No | No | Configuration of the Pulumi CLI |
+| `config` | [config options](#config) | No | No | Config specifies the [Pulumi config](/docs/iac/concepts/config/) inputs to the deployment. |
+| `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/iac/concepts/resources/) that the program deploys and manages. |
+| `variables` | map[string]Expression | No | Yes | Variables specifies intermediate values of the program. The values of [variables](#variables) are expressions that can be reused. |
+| `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/iac/concepts/stacks/#outputs) of the program and how they are computed from the `resources`. |
+| `pulumi` | map[string]Expression | No | No | Configuration of the [Pulumi CLI](#pulumi-cli-configuration). |
 
-In many locations within this schema, values may be expressions which compute a value based on the `config`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
+In many locations within this schema, values may be expressions that compute a value based on the `config`, `variables`, or outputs of `resources`. These expressions can be provided in two ways:
 
-* If an object is provided as a value, and has a key that has the prefix `fn::`, the object is treated as an expression, and the expression will be resolved to a new value that will be used in place of the object.
+* If an object is provided as a value, and has a key that has the prefix `fn::`, the object is treated as an expression, and the expression is resolved to a new value that is used in place of the object.
 * Any string value is interpreted as an interpolation, with `${...}` being replaced by evaluating the expression in the `...`.
 
-The supported expression forms for each of these is detailed below.
+The supported expression forms for each of these are detailed in [Expressions](#expressions).
 
 ## Config
 
@@ -43,14 +43,14 @@ The supported expression forms for each of these is detailed below.
 Pulumi YAML programs declare config using the same project-level `config` schema documented in the [Pulumi project file reference](/docs/iac/concepts/projects/project-file/#config-options). The schema is shown again here for convenience, alongside YAML-flavored examples.
 {{% /notes %}}
 
-`config` is a map of config property keys to either values or structured declarations. The value of `config` is an object whose keys are logical names by which the config input will be referenced in expressions within the program, and whose values are elements of the schema below. Each item in this object represents an independent config input. Either `type` or `default` is required; when `type` is omitted, the type is inferred from `default`.
+`config` is a map of config property keys to either values or structured declarations. The value of `config` is an object whose keys are logical names by which the config input is referenced in expressions within the program, and whose values are elements of the schema below. Each item in this object represents an independent config input. Either `type` or `default` is required; when `type` is omitted, the type is inferred from `default`.
 
-A config key can also map directly to a scalar value as a shorthand for a structured declaration with only `default` set. For example, `replicas: 3` is equivalent to `replicas: { default: 3 }`.
+A config key in the project's own namespace can also map directly to a scalar or array value as a shorthand for a structured declaration with only `default` set. For example, `replicas: 3` is equivalent to `replicas: { default: 3 }`. A key namespaced by another package, such as `aws:region: us-west-2`, sets that key's `value` instead.
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
 | `type` | string | No | No | The data type for the config value. Valid types are: `string`, `boolean`, `integer`, `array`, and `object`. |
-| `items` | object | Required if `type` is `array` | No | A nested structured declaration of the type of the items in the array. |
+| `items` | object | Required if `type` is `array` | No | A nested structured declaration that describes each item in the array. |
 | `default` | any | No | No | A default value of the appropriate type for the program to use if no value is set on the stack. |
 | `secret` | bool | No | No | When `true`, the config value is encrypted as a secret. Secret values must be set with `pulumi config set --secret`. |
 
@@ -110,7 +110,7 @@ Config values are set using `pulumi config set` for scalar types, `pulumi config
 
 ## Resources
 
-The value of `resources` is an object whose keys are logical resource names by which the resource will be referenced in expressions within the program, and whose values are elements of the schema below.  Each item in this object represents a resource which will be managed by the Pulumi program.
+The value of `resources` is an object whose keys are logical resource names by which the resource is referenced in expressions within the program, and whose values are elements of the schema below. Each item in this object represents a resource that the Pulumi program manages.
 
 | Property  |  Type | Required | Expressions | Description |
 |- | - | - | - | - |
@@ -122,7 +122,7 @@ The value of `resources` is an object whose keys are logical resource names by w
 
 ### Resource options
 
-The value of the `options` property of a Resource is an object whose keys are [resource option names](/docs/concepts/options/) and whose values are elements of the schema below. No resource options are required.
+The value of the `options` property of a Resource is an object whose keys are [resource option names](/docs/iac/concepts/resources/options/) and whose values are elements of the schema below. No resource options are required.
 
 The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions which must use interpolation syntax to reference resources by name. For example:
 
@@ -141,7 +141,7 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
 | `additionalSecretOutputs` | string[] | AdditionalSecretOutputs specifies properties that must be encrypted as secrets |
 | `aliases` | string[] | Aliases specifies names that this resource used to have, so that renaming or refactoring doesn’t replace it |
 | `customTimeouts` | [Custom Timeout](#custom-timeout) | CustomTimeouts overrides the default retry/timeout behavior for resource provisioning |
-| `deleteBeforeReplace` | bool | DeleteBeforeReplace  overrides the default create-before-delete behavior when replacing |
+| `deleteBeforeReplace` | bool | DeleteBeforeReplace overrides the default create-before-delete behavior when replacing |
 | `dependsOn` | Expression[] | DependsOn makes this resource explicitly depend on another resource, by name, so that it won't be created before the dependent finishes being created (and the reverse for destruction). Normally, Pulumi automatically tracks implicit dependencies through inputs/outputs, but this can be used when dependencies aren't captured purely from input/output edges.|
 | `ignoreChanges` | string[] | IgnoreChanges declares that changes to certain properties should be ignored during diffing |
 | `import` | string | Import adopts an existing resource from your cloud account under the control of Pulumi |
@@ -150,13 +150,13 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
 | `provider` | Expression | Provider specifies an explicitly configured provider, instead of using the default global provider |
 | `providers` |  map[string]Expression | Map of providers for a resource and its children. |
 | `version` | string | Version specifies a provider plugin version that should be used when operating on a resource |
-| `pluginDownloadURL` | string | PluginDownloadURL specifies a provider plugin download URL  |
+| `pluginDownloadURL` | string | PluginDownloadURL specifies a provider plugin download URL |
 | `replaceOnChanges` | string[] | ReplaceOnChanges specifies if changes to certain properties on a resource should force replacement instead of an in-place update. |
 | `retainOnDelete` | bool | RetainOnDelete causes a resource to be preserved in the cloud even when it is deleted from the Pulumi state. |
 
 ### Resource getter
 
-Supplying a `get` key turns the resource declaration into a [Getter Function](/docs/concepts/resources/get/).
+Supplying a `get` key turns the resource declaration into a [getter function](/docs/iac/concepts/functions/get-functions/).
 
 | Property | Type | Required | Description |
 | - | - | - | - |
@@ -175,12 +175,12 @@ The optional `customTimeouts` property of a resource is an object of the followi
 
 ## Providers and provider versions
 
-There are at least two reasons to explicitly define providers in YAML, or explicitly set their versions while creating resources.
+Explicitly defining providers in YAML, or explicitly setting their versions when creating resources, is useful for at least two reasons:
 
 1. Using explicit versions enables pinning the dependencies used, a technique used to improve build reliability.
-2. Using explicit providers enables controlling the options for providers used by each resource, as described in [Unlock Programmatic Control by Disabling Default Providers](/blog/disable-default-providers/).
+1. Using explicit providers enables controlling the options for providers used by each resource, as described in [Unlock Programmatic Control by Disabling Default Providers](/blog/disable-default-providers/).
 
-If a specific provider version is necessary, we prefer the approaches in the order described here.
+If a specific provider version is necessary, use the following approaches, listed in order of preference.
 
 ### Default provider
 
@@ -251,9 +251,9 @@ resources:
 
 ### Third-party providers
 
-Third party providers may require a `pluginDownloadURL` option for Pulumi to acquire the provider plugin. The publisher of that provider should provide this URL, following our guide for [Authoring & Publishing](/docs/using-pulumi/pulumi-packages/how-to-author/#publish-your-package).
+Third-party providers may require a `pluginDownloadURL` option for Pulumi to download the provider plugin. The publisher of that provider should provide this URL, following the guide to [publishing packages](/docs/iac/guides/building-extending/packages/publishing-packages/#publish-your-package).
 
-All of the above examples setting a `version` with a default provider, explicit provider, or on individual resources may be combined with the `pluginDownloadURL` option to use a third party provider.
+Each of the preceding ways to set a `version` (on a default provider, on an explicit provider, or on individual resources) can be combined with the `pluginDownloadURL` option to use a third-party provider.
 
 This declares one of Pulumi's own providers as a default provider, setting an explicit `pluginDownloadURL`.
 
@@ -269,9 +269,29 @@ resources:
     type: aws:s3:Bucket
 ```
 
+## Variables
+
+The value of `variables` is an object whose keys are logical names and whose values are [expressions](#expressions). Variables hold intermediate values that you can reuse throughout the program. Config, variables, and resource keys all exist in a single namespace, and you reference a variable with `${name}` interpolation, just like config values and resources. A variable can also reference other variables.
+
+```yaml
+config:
+  environment:
+    type: string
+variables:
+  bucketPrefix: app-${environment}
+  commonTags:
+    Environment: ${environment}
+resources:
+  my-bucket:
+    type: aws:s3:BucketV2
+    properties:
+      bucketPrefix: ${bucketPrefix}
+      tags: ${commonTags}
+```
+
 ## Outputs and stack references
 
-The value of [`outputs`](https://www.pulumi.com/docs/concepts/stack/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi stack (via [`pulumi stack output`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_stack_output/)), and whose values are potentially computed expressions that resolve to the values of the desired outputs.
+The value of [`outputs`](/docs/iac/concepts/stacks/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi stack (via [`pulumi stack output`](/docs/iac/cli/commands/pulumi_stack_output/)), and whose values are potentially computed expressions that resolve to the values of the desired outputs.
 
 ```yaml
 outputs:
@@ -291,18 +311,18 @@ outputs:
   secondOutputName: ${reference.outputs["outputName"]}
 ```
 
-The above output will have the value of the `outputName` output from the stack `org/project/stack`.
+The `secondOutputName` output has the value of the `outputName` output from the stack `org/project/stack`.
 
 ## Pulumi CLI configuration
 
-The `pulumi` section configures the Pulumi CLI. The `requiredVersion` option specifies the version range of the Pulumi CLI that this project requires. The format follows the syntax of [semantic version ranges](https://pkg.go.dev/github.com/blang/semver#ParseRange). This option is useful when your program requires a newer feature and you want to ensure the program won't be run with a CLI that is too old.
+The `pulumi` section configures the Pulumi CLI. The `requiredVersion` option specifies the version range of the Pulumi CLI that this project requires. The format follows the syntax of [semantic version ranges](https://pkg.go.dev/github.com/blang/semver#ParseRange). This option is useful when your program requires a newer feature and you want to ensure the program doesn't run with a CLI that is too old.
 
 ```yaml
 pulumi:
   requiredVersion: ">=3.0.0 !3.1.2"
 ```
 
-The above configuration will ensure that the Pulumi CLI version is at least 3.0.0 but not 3.1.2. If run with a version that is not within this range, the program will exit with an error.
+This configuration requires a Pulumi CLI version that is at least 3.0.0 but not 3.1.2. If run with a version outside this range, the program exits with an error.
 
 ## Expressions
 
@@ -313,13 +333,13 @@ Expressions can be used in several contexts:
 * the values of `variables` and `outputs`
 * some or all values provided to built-in functions, as specified below
 
-Generally speaking, most values permit an expression and exceptions will be documented as not permitting an expression, as above.
+Generally speaking, most values permit an expression, and exceptions are documented as not permitting an expression.
 
-In these contexts, any JSON/YAML value may be provided.  If that value is a string, it is interpolated.  If that value is an object, and the object has a key with a prefix of `fn::`, it is evaluated as an expression.
+In these contexts, you can provide any JSON/YAML value. Pulumi interpolates a string value, and evaluates an object that has a key with a prefix of `fn::` as an expression.
 
 ### Interpolation
 
-In expression locations, strings are evaluated as interpolations and any nested `${...}` expressions within the string value are replaced by the value of the expression `...`.  The syntax of expressions within interpolations permits [property access](#property-access) only.
+In expression locations, strings are evaluated as interpolations and any nested `${...}` expressions within the string value are replaced by the value of the expression `...`. The syntax of expressions within interpolations permits [property access](#property-access) only.
 
 To use `${}` in a string literal, escape `$` with `$$` like so:
 
@@ -328,7 +348,7 @@ variables:
   plainString: $${value}
 ```
 
-A string like `Hello, ${foo}` will convert the expression `foo` to a string.
+A string like `Hello, ${foo}` converts the expression `foo` to a string.
 
 If a string contains only an `${...}` expression, it's considered a [substitution](#substitution).
 
@@ -360,7 +380,7 @@ We have not discussed types until now, but implicitly every expression has a typ
 
 ### Substitution
 
-Expressions denoted by `${...}` are only converted to strings when interpolated into a string with surrounding text. If a resource property takes a list or a map for example, that can be provided by a variable whose value can be substituted in. In the example below, the `httpPort` variable is used to reduce repetition in the two Kubernetes Service resources.
+Expressions denoted by `${...}` are only converted to strings when interpolated into a string with surrounding text. If a resource property takes a list or a map for example, that can be provided by a variable whose value can be substituted in. In the following example, the `httpPort` variable is used to reduce repetition in the two Kubernetes Service resources.
 
 ```yaml
 name: kubernetes-port-example
@@ -411,11 +431,11 @@ variables:
     fn::toBase64: "Hello, world!"
 ```
 
-The expression `${greeting}` will return `SGVsbG8sIHdvcmxkIQ==`
+The expression `${greeting}` returns `SGVsbG8sIHdvcmxkIQ==`.
 
 ### `fn::fromBase64`
 
-Converts a Base64 encoded string into a UTF-8 string. **This will fail if the result is not a valid UTF-8 string**
+Converts a Base64 encoded string into a UTF-8 string. **This fails if the result is not a valid UTF-8 string.**
 
 ```yaml
 variables:
@@ -423,7 +443,7 @@ variables:
     fn::fromBase64: SGVsbG8sIFdvcmxkIQ==
 ```
 
-The expression `${greeting}` will return `Hello, World!`
+The expression `${greeting}` returns `Hello, World!`.
 
 ### `fn::toJSON`
 
@@ -437,7 +457,7 @@ variables:
       key2: 123
 ```
 
-The expression `${item}` will return a JSON value `{ "key1": "value1", "key2": 123 }`.
+The expression `${item}` returns the JSON string `{"key1":"value1","key2":123}`.
 
 ### `fn::invoke`
 
@@ -470,7 +490,7 @@ variables:
       return: id
 ```
 
-The expression `${AmazonLinuxAmi}` will return the AMI ID returned from the [`aws:getAmi`](/registry/packages/aws/api-docs/ec2/getami/) function.
+The expression `${AmazonLinuxAmi}` returns the AMI ID returned from the [`aws:getAmi`](/registry/packages/aws/api-docs/ec2/getami/) function.
 
 Example calling the `sum` function in the `pulumi-std` provider package to subtract 255 from `${route53Weight}`:
 
@@ -487,13 +507,13 @@ variables:
       return: result
 ```
 
-The expression `${modifiedWeight}` will return `145` in this case.
+The expression `${modifiedWeight}` returns `145` in this case.
 
 #### Invoke options
 
 The value of the `options` property of an fn::invoke is an object with the following properties.
 
-The  `parent` and `provider` values permit expressions which must use interpolation syntax to reference resources by name. For example:
+The `parent` and `provider` values permit expressions which must use interpolation syntax to reference resources by name. For example:
 
 ```yaml
     options:
@@ -506,7 +526,7 @@ The  `parent` and `provider` values permit expressions which must use interpolat
 | `parent` | Expression | Parent specifies a parent for the resource |
 | `provider` | Expression | Provider specifies an explicitly configured provider, instead of using the default global provider |
 | `version` | string | Version specifies a provider plugin version that should be used when operating on a resource |
-| `pluginDownloadURL` | string | Version specifies a URL that should be used to download the provider plugin |
+| `pluginDownloadURL` | string | PluginDownloadURL specifies a URL that should be used to download the provider plugin |
 
 ### `fn::join`
 
@@ -521,7 +541,7 @@ variables:
               - a
 ```
 
-The expression `${banana}` will have the value `"BaNaNa"`.
+The expression `${banana}` has the value `"BaNaNa"`.
 
 ### `fn::split`
 
@@ -535,7 +555,7 @@ variables:
             - "apple, orange, banana"
 ```
 
-The expression `${fruits}` will be a list containing the values `["apple", "orange", "banana"]`.
+The expression `${fruits}` is a list containing the values `["apple", "orange", "banana"]`.
 
 ### `fn::select`
 
@@ -551,20 +571,20 @@ variables:
               - v2.0
 ```
 
-The expression `${policyVersion}` will have the value `v1.1`.
+The expression `${policyVersion}` has the value `v1.1`.
 
 ### `fn::*Asset` and `fn::*Archive`
 
-[Assets and Archives](/docs/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes a single string value.
+[Assets and archives](/docs/iac/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes a single string value, except `fn::assetArchive`, which takes a map.
 
-| Built-In | Argument Type | Description |
+| Built-in | Argument type | Description |
 | - | - | - |
 | `fn::fileAsset` | string | The contents of the asset are read from a file on disk. |
 | `fn::stringAsset` | string | The contents of the asset are read from a string in memory. |
-| `fn::remoteAsset` | string | The contents of the asset are read from an http, https or file URI. |
+| `fn::remoteAsset` | string | The contents of the asset are read from an `http`, `https`, or `file` URI. |
 | `fn::fileArchive` | string | The contents of the archive are read from either a folder on disk or a file on disk in one of the supported formats: .tar, .tgz, .tar.gz, .zip or .jar. |
-| `fn::remoteArchive` | string | The contents of the asset are read from an http, https or file URI, which must produce an archive of one of the same supported types as FileArchive. |
-| `fn::assetArchive` | map | The contents of the archive are read from a map of either Asset or Archive objects, one file or folder respectively per entry in the map.
+| `fn::remoteArchive` | string | The contents of the archive are read from an `http`, `https`, or `file` URI, which must produce an archive of one of the same supported types as FileArchive. |
+| `fn::assetArchive` | map | The contents of the archive are read from a map of either Asset or Archive objects, one file or folder respectively per entry in the map. |
 
 ```yaml
 variables:
@@ -573,7 +593,7 @@ variables:
   aString:
     fn::stringAsset: Hello, world!
   aRemoteAsset:
-    fn::remoteAsset: http://worldclockapi.com/api/json/est/now
+    fn::remoteAsset: https://example.com/data.json
 
   aFileArchive:
     fn::fileArchive: ./file.zip
@@ -589,9 +609,9 @@ variables:
 
 ### `fn::secret`
 
-Constructs a [Secret](/docs/concepts/secrets/) from an existing value.
+Constructs a [Secret](/docs/iac/concepts/secrets/) from an existing value.
 
-``` yaml
+```yaml
 variables:
   secret:
     fn::secret:
@@ -601,9 +621,9 @@ variables:
 
 ### `fn::unsecret`
 
-Unwraps a [Secret](/docs/concepts/secrets/), returning the underlying value with the secret marking removed.
+Unwraps a [Secret](/docs/iac/concepts/secrets/), returning the underlying value with the secret marking removed.
 
-``` yaml
+```yaml
 variables:
   plaintext:
     fn::unsecret: ${someSecretValue}
@@ -611,10 +631,10 @@ variables:
 
 ### `fn::readFile`
 
-Reads a file from disk and returns the contents as a string, must be utf-8. This function has
+Reads a file from disk and returns the contents as a string, which must be UTF-8. This function has
 special rules for its behavior.
 
-``` yaml
+```yaml
 variables:
   someText:
     fn::readFile: ./README.md
@@ -644,7 +664,7 @@ forbidden to prevent path traversals.
 
 Reads a file from disk and returns the contents as a Base64 encoded string using the [standard encoding](https://pkg.go.dev/encoding/base64#pkg-variables).
 
-``` yaml
+```yaml
 variables:
   encoded:
     fn::filebase64: ./file.txt
@@ -654,7 +674,7 @@ variables:
 
 Reads a file from disk and returns the SHA-256 hash of its contents as a Base64 encoded string.
 
-``` yaml
+```yaml
 variables:
   fileHash:
     fn::filebase64sha256: ./file.txt
@@ -670,7 +690,7 @@ variables:
     fn::sha1: "Hello, world!"
 ```
 
-The expression `${hashed}` will return `943a702d06f34599aee1f8da8ef9f7296031d699`.
+The expression `${hashed}` returns `943a702d06f34599aee1f8da8ef9f7296031d699`.
 
 ### `fn::length`
 
@@ -686,11 +706,11 @@ variables:
     fn::length: ${fruits}
 ```
 
-The expression `${fruitCount}` will return `3`.
+The expression `${fruitCount}` returns `3`.
 
 ### `fn::singleOrNone`
 
-Takes a list and returns its single element, or `null` if the list is empty. It is an error if the list contains more than one element.
+Takes a list and returns its single element, or `null` if the list is empty. The function fails if the list contains more than one element.
 
 ```yaml
 variables:
@@ -699,11 +719,11 @@ variables:
       - v1
 ```
 
-The expression `${single}` will return `v1`.
+The expression `${single}` returns `v1`.
 
 ### `fn::pulumiResourceName`
 
-Returns the name a resource was registered with. This is the resource's logical name unless it was overridden with the `name` resource option.
+Returns the name a resource was registered with. This is the resource's logical name unless the `name` resource option overrides it.
 
 ```yaml
 resources:
@@ -714,7 +734,7 @@ variables:
     fn::pulumiResourceName: ${bucket}
 ```
 
-The expression `${bucketName}` will return `bucket`.
+The expression `${bucketName}` returns `bucket`.
 
 ### `fn::pulumiResourceType`
 
@@ -729,12 +749,12 @@ variables:
     fn::pulumiResourceType: ${bucket}
 ```
 
-The expression `${bucketType}` will return `aws:s3/bucketV2:BucketV2`.
+The expression `${bucketType}` returns `aws:s3/bucketV2:BucketV2`.
 
 ### `fn::stackReference`
 
 {{% notes type="warning" %}}
-`fn::stackReference` is deprecated. Declare a resource of type [`pulumi:pulumi:StackReference`](/docs/concepts/stack/#stackreferences) instead.
+`fn::stackReference` is deprecated. Declare a resource of type [`pulumi:pulumi:StackReference`](/docs/iac/concepts/stacks/#stackreferences) instead.
 {{% /notes %}}
 
 Reads an output from another Pulumi stack. Arguments are passed as a list, with the first item being the fully qualified stack name and the second item the name of the output to read.
@@ -753,7 +773,7 @@ Built-in variables accessible within any Pulumi YAML program.
 
 ### `pulumi`
 
-The built-in `pulumi` variable contains three properties, which can be useful for retrieving information
+The built-in `pulumi` variable contains properties that can be useful for retrieving information
 about your current workspace.
 
 ```yaml
@@ -761,10 +781,12 @@ about your current workspace.
       cwd: ${pulumi.cwd}
       organization: ${pulumi.organization}
       project: ${pulumi.project}
+      rootDirectory: ${pulumi.rootDirectory}
       stack: ${pulumi.stack}
 ```
 
 * `${pulumi.cwd}` retrieves the current working directory
 * `${pulumi.organization}` retrieves the current Pulumi organization
 * `${pulumi.project}` retrieves the current project
+* `${pulumi.rootDirectory}` retrieves the project's root directory, which contains the `Pulumi.yaml` file
 * `${pulumi.stack}` retrieves the current stack

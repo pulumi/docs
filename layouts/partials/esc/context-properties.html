@@ -1,0 +1,44 @@
+{{/*
+  Flattens the ESC built-in `context` schema (the "context" key of
+  data/esc_schemas.json) into a sorted slice of its leaf properties, each a dict:
+
+    path         dotted path below `context`, e.g. "pulumi.token.type"
+    type         JSON Schema type of the leaf, e.g. "string"
+    description  the leaf's description (Markdown)
+
+  Callers render the dotted path rather than the nested name/indent rows of
+  esc/property-rows.html, because that is the form readers actually write:
+  ${context.pulumi.token.type}. The context schema also carries no "required" —
+  every property always resolves — so there is no required/optional distinction
+  to render.
+
+  Input: dict with "properties", and "prefix" when recursing.
+  Properties are sorted alphabetically; the schema carries no explicit order.
+*/}}
+{{ $properties := .properties | default dict }}
+{{ $prefix := .prefix | default "" }}
+{{ $rows := slice }}
+
+{{ $names := slice }}
+{{ range $name, $_ := $properties }}{{ $names = $names | append $name }}{{ end }}
+
+{{ range sort $names }}
+  {{ $name := . }}
+  {{ $prop := index $properties $name }}
+  {{ $path := cond (eq $prefix "") $name (printf "%s.%s" $prefix $name) }}
+  {{ if $prop.properties }}
+    {{/* Intermediate object: recurse. Append one row at a time — Hugo's append
+         flattens a slice argument, which would lose the row dicts' identity. */}}
+    {{ range partial "esc/context-properties.html" (dict "properties" $prop.properties "prefix" $path) }}
+      {{ $rows = $rows | append . }}
+    {{ end }}
+  {{ else }}
+    {{ $rows = $rows | append (dict
+      "path" $path
+      "type" ($prop.type | default "string")
+      "description" ($prop.description | default "")
+    ) }}
+  {{ end }}
+{{ end }}
+
+{{ return $rows }}

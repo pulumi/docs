@@ -11,6 +11,7 @@ menu:
         identifier: ai-automations
         parent: ai-neo
         weight: 25
+pulumi_cloud_feature: neo-scheduled-tasks
 ---
 
 Automations turn any Neo task into recurring work. Define a prompt, set a cadence, and Neo runs the task at that interval. When a run produces changes, Neo opens a [pull request](/docs/ai/neo/pull-requests/) that goes through your normal review process.
@@ -39,7 +40,7 @@ Automations inherit the rest of Neo's context model. [Custom Instructions](/docs
 
 ## How permissions work
 
-A scheduled task runs with the [RBAC permissions](/docs/administration/access-identity/rbac/) of the user who scheduled it, evaluated at execution time. If that user's permissions change between scheduling and execution, the new permissions apply.
+A scheduled task runs with the [RBAC permissions](/docs/administration/concepts/rbac/) of the user who scheduled it, evaluated at execution time. If that user's permissions change between scheduling and execution, the new permissions apply.
 
 ## Limitations
 

@@ -4,33 +4,13 @@ meta_desc: |
     DevOps automation can be key to consistent and scalable workflows. Learn how engineering teams can ship faster and more reliably with DevOps automation.
 
 type: what-is
+date: 2023-09-14T16:21:22-07:00
 page_title: What Is DevOps Automation?
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
-authors: ["james-denyer"]
+authors: ["pulumi-content-team"]
 ---
 
-Discover the transformative power of DevOps automation through real-world examples. Learn essential best practices like version control and modular design, and find out how Pulumi is reshaping modern Infrastructure as Code solutions.
+Discover the transformative power of DevOps automation through real-world examples. Learn essential best practices like version control and modular design, and find out how Pulumi is reshaping modern infrastructure as code solutions.
 
 ## A Guide to DevOps Automation: Benefits and Best Practices
 
@@ -42,13 +22,13 @@ DevOps automation refers to integrating technologies that minimize manual interv
 
 In this article, we'll unravel how automation not only accelerates software delivery but also fosters a culture of collaboration, innovation, and continuous improvement. Whether you're a novice exploring DevOps for the first time or an expert seeking to refine your automation strategies, this guide provides a holistic overview of the DevOps automation landscape.
 
-## What is DevOps Automation?
+## Understanding DevOps automation
 
 DevOps, a fusion of "development" and "operations," is both a cultural movement and a philosophy that emphasizes the collaboration between software developers and IT operations teams. The core idea behind DevOps is to break down silos, enhance communication, and streamline processes to deliver software faster, more reliably, and with improved quality. It represents a shift from traditional software development and infrastructure management processes, encouraging rapid, iterative work cycles and shared responsibility for the end product's performance and reliability.
 
 At the heart of the DevOps paradigm is automation. DevOps automation aims to reduce the manual overhead in tasks such as code integration, testing, deployment, and infrastructure provisioning. By automating these processes, organizations can achieve more frequent deployments, reduce human error, and ensure consistent environments from development to production. This not only accelerates software delivery but also fosters collaboration by integrating the efforts of different teams through shared tooling and processes. The idea is to allow teams to focus on delivering value rather than getting bogged down with repetitive tasks.
 
-## Why is DevOps Automation important?
+## Why DevOps automation matters
 
 In today's fast-paced digital world, agility and responsiveness have become critical for businesses to stay competitive. DevOps automation, in essence, serves as the backbone for this agility. Without automation, organizations would find it challenging to maintain the pace of modern software delivery, respond to market changes, and ensure top-notch service quality. Moreover, as the complexity of IT environments continues to grow – with microservices, cloud-native architectures, and intricate deployment topologies – manual processes become increasingly error-prone and unsustainable. DevOps automation bridges this gap by creating streamlined, repeatable, and scalable processes that drive innovation without compromising reliability.
 
@@ -60,7 +40,7 @@ In today's fast-paced digital world, agility and responsiveness have become crit
 * **Scalability:** Automation allows businesses to adapt to changing loads and demands easily. Whether it's scaling infrastructure during traffic spikes or managing complex deployment patterns, automation ensures systems remain responsive and resilient.
 * **Cost Efficiency:** By eliminating manual overhead, reducing errors, and accelerating delivery, organizations can achieve significant cost savings. Moreover, quick feedback loops ensure that defects are detected early, further reducing the costs associated with late-stage error rectification.
 
-## What types of DevOps processes can/should be automated?
+## DevOps processes that can be automated
 
 * **Continuous Integration (CI):** This is the practice of frequently merging code changes into a central repository. Automated tests are run to ensure new changes don't introduce errors. It's essential for catching issues early and streamlining code integration.
 * **Continuous Delivery/Deployment (CD):** Once code passes the CI phase, it can be automatically deployed to various environments (staging, production). Continuous Delivery ensures the code is always in a deployable state, while Continuous Deployment automates the deployment to production.
@@ -72,7 +52,7 @@ In today's fast-paced digital world, agility and responsiveness have become crit
 
 By automating these processes, DevOps teams can ensure consistency, reliability, and efficiency throughout the software development lifecycle, while also freeing up time for more value-added tasks and innovations.
 
-## What does effective DevOps automation look like?
+## Characteristics of effective DevOps automation
 
 Effective DevOps automation transcends merely stringing together a series of tools and scripts. At its core, it represents a seamless fusion of culture, process, and technology. Culturally, teams are aligned in their goals, fostering an environment of transparency, continuous learning, and shared responsibility.
 
@@ -85,7 +65,7 @@ Measuring the effectiveness of DevOps automation requires a set of KPIs (Key Per
 * **Change Failure Rate:** This is the percentage of changes that fail. A lower change failure rate indicates a more stable and reliable deployment process, whereas a higher rate may suggest issues with testing or integration processes.
 * **Mean Time to Recovery (MTTR):** When failures occur, how long does it take to restore service? A shorter MTTR implies a more resilient system and effective incident response.
 * **Automated Test Pass Rate:** The percentage of automated tests that pass during the CI/CD process. A high pass rate may indicate good code health, while a low rate can be a red flag for potential quality issues.
-* **Infrastructure Automation Rate:** Measures the percentage of infrastructure provisioning and management tasks that are automated. Higher automation rates indicate a mature Infrastructure as Code (IaC) approach.
+* **Infrastructure Automation Rate:** Measures the percentage of infrastructure provisioning and management tasks that are automated. Higher automation rates indicate a mature infrastructure as code (IaC) approach.
 * **Feedback Loop Time:** The time it takes for developers to receive feedback on their changes, whether through automated tests, code reviews, or production monitoring. Quicker feedback loops enhance the development process and reduce latent defects.
 * **Percent of Defects Found in Automation:** A higher percentage indicates that your automation processes, especially testing, are effective in catching issues before they reach production.
 * **Operational Overhead:** The time spent on operational tasks as opposed to value-added activities. Effective automation should reduce this overhead, allowing teams to focus more on innovation and less on maintenance.
@@ -99,21 +79,21 @@ How have existing companies successfully leveraged devops automation to improve 
 
 ### Atlassian
 
-Atlassian’s Bitbucket DevSpeed team is responsible for improving developer productivity through better workflows and tooling. The DevSpeed team built [a self-service dashboard](/case-studies/atlassian/) using Pulumi and the existing CI/CD process that enables any Bitbucket developer to quickly and easily provision a cloud-based development environment through automation. Now any developer can deploy and configure AWS instances for feature development, increasing developer productivity and leading to a 50% reduction in the time developers spend maintaining their instances.
+Atlassian’s Bitbucket DevSpeed team is responsible for improving developer productivity through better workflows and tooling. The DevSpeed team built [a self-service dashboard](/customers/atlassian/) using Pulumi and the existing CI/CD process that enables any Bitbucket developer to quickly and easily provision a cloud-based development environment through automation. Now any developer can deploy and configure AWS instances for feature development, increasing developer productivity and leading to a 50% reduction in the time developers spend maintaining their instances.
 
 ### Mercedes-Benz
 
-Mercedes-Benz Research & Development North America (MBRDNA) enabled its distributed innovation teams to move hundreds of microservices to the cloud leveraging automation. Infrastructure teams used [Pulumi’s Automation API](/case-studies/mercedes-benz/) to build self-service tools for building, deploying, and managing infrastructure and offer the right levels of complexity and customization for the tool’s target audience.
+Mercedes-Benz Research & Development North America (MBRDNA) enabled its distributed innovation teams to move hundreds of microservices to the cloud leveraging automation. Infrastructure teams used [Pulumi’s Automation API](/customers/mercedes-benz/) to build self-service tools for building, deploying, and managing infrastructure and offer the right levels of complexity and customization for the tool’s target audience.
 
 ### SANS Institute
 
-The DevOps team at SANS Institute, which provides cybersecurity training and certification, needed to provide each student with a virtual training environment. Instructors needed a way to spin up ephemeral AWS EC2 instances and related resources, but the process required manual steps that involved gluing together multiple provisioning and scripting tools. To solve this challenge, they built [a self-service platform](/case-studies/sans-institute/) that can automatically deploy, configure and destroy approved infrastructure with best practices baked-in from SANS security and operations teams, eliminating the need for a manual ticketing process.
+The DevOps team at SANS Institute, which provides cybersecurity training and certification, needed to provide each student with a virtual training environment. Instructors needed a way to spin up ephemeral AWS EC2 instances and related resources, but the process required manual steps that involved gluing together multiple provisioning and scripting tools. To solve this challenge, they built [a self-service platform](/customers/sans-institute/) that can automatically deploy, configure and destroy approved infrastructure with best practices baked-in from SANS security and operations teams, eliminating the need for a manual ticketing process.
 
 In each of these examples, devops teams improved scalability and reliability of their infrastructure by introducing automation.
 
 ## Best practices for DevOps automation
 
-DevOps automation, especially when dealing with Infrastructure as Code (IaC), requires a strategic approach to ensure consistency, maintainability, and security. Here are some best practices for DevOps automation:
+DevOps automation, especially when dealing with infrastructure as code (IaC), requires a strategic approach to ensure consistency, maintainability, and security. Here are some best practices for DevOps automation:
 
 * **Version Control Everything:** Just like application code, your infrastructure code should be stored in a version control system. This provides a history of changes, allows for rollbacks, and enables collaboration among teams.
 * **Automate Testing:** Test your infrastructure code to ensure it does what's expected. Tools like Test Kitchen, inspec, and ServerSpec can help test infrastructure changes before they're applied.
@@ -121,11 +101,29 @@ DevOps automation, especially when dealing with Infrastructure as Code (IaC), re
 * **Use a Consistent Naming Convention:** A consistent naming schema for resources, modules, and variables improves clarity and eases maintenance.
 * **Manage Secrets Securely:** Tools like Pulumi Cloud keep secrets secure by default. Never embed secrets directly in your code.
 
-By adhering to these best practices, teams can maximize the benefits of [DevOps automation and Infrastructure as Code](/what-is/infrastructure-as-code-for-devops/), resulting in faster, more consistent, and more reliable infrastructure provisioning and management.
+By adhering to these best practices, teams can maximize the benefits of [DevOps automation and infrastructure as code](/what-is/infrastructure-as-code-for-devops/), resulting in faster, more consistent, and more reliable infrastructure provisioning and management.
 
 ## How to get started with DevOps automation
 
-Embarking on the journey of DevOps automation can seem daunting given its expansive nature, but it's pivotal to start with a clear understanding of your organization's needs and pain points. Begin by identifying repetitive tasks, bottlenecks, and areas prone to human error, then prioritize them for automation. As you work through this, consider embracing tools like [Pulumi](https://www.pulumi.com/), which stands out for its unique approach to Infrastructure as Code. Pulumi allows you to define and manage infrastructure using popular programming languages you're already familiar with, thereby seamlessly integrating into existing development workflows. By leveraging such tools, and fostering a culture of collaboration and continuous improvement, organizations can unlock the full potential of DevOps automation, driving efficiency, reliability, and innovation in their software delivery processes.
+Embarking on the journey of DevOps automation can seem daunting given its expansive nature, but it's pivotal to start with a clear understanding of your organization's needs and pain points. Begin by identifying repetitive tasks, bottlenecks, and areas prone to human error, then prioritize them for automation. As you work through this, consider embracing tools like [Pulumi](https://www.pulumi.com/), which stands out for its unique approach to infrastructure as code. Pulumi allows you to define and manage infrastructure using popular programming languages you're already familiar with, thereby seamlessly integrating into existing development workflows. By leveraging such tools, and fostering a culture of collaboration and continuous improvement, organizations can unlock the full potential of DevOps automation, driving efficiency, reliability, and innovation in their software delivery processes.
+
+## Frequently asked questions
+
+### What is DevOps automation?
+
+DevOps automation is the use of tools and scripts to carry out software delivery and infrastructure tasks, such as building, testing, deploying, and provisioning, without manual, repetitive human effort. It applies automation across the entire development lifecycle so teams can ship changes faster, with fewer errors, and with consistent, repeatable results from development through to production.
+
+### What is automation in DevOps?
+
+Automation in DevOps refers specifically to the mechanisms, such as scripts, pipelines, and tooling, that DevOps teams use to execute the broader DevOps philosophy of collaboration and continuous delivery. Where DevOps is the cultural and organizational practice, automation is the practical machinery that makes that practice repeatable, measurable, and scalable across teams and environments.
+
+### What does DevOps automate?
+
+DevOps automation typically covers CI/CD pipelines that build and release code, automated testing that validates changes before they ship, infrastructure provisioning that stands up and configures cloud resources, and monitoring that watches applications in production. Configuration management and incident remediation are also commonly automated, reducing manual handoffs at nearly every stage of the delivery lifecycle.
+
+### What is a DevOps automation platform?
+
+A DevOps automation platform brings these individual automations, CI/CD, provisioning, testing, monitoring, into one coherent system teams can use consistently. Pulumi contributes to that platform picture through infrastructure as code written in real programming languages, policy as code for guardrails, and self-service delivery via an internal developer platform, letting infrastructure automation plug into the same workflows as application code.
 
 ## Conclusion
 

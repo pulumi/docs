@@ -29,7 +29,7 @@ Updating secrets manually across all these systems is not only tedious but also 
 
 Moreover, the lack of a centralized system makes it difficult to track where secrets are stored and who has access to them. This complicates security audits and compliance efforts. When a secret is compromised, the process of revoking and rotating it across multiple systems can be slow and disruptive, potentially leading to application downtime.
 
-## ESC Sync with Infrastructure as Code
+## ESC sync with infrastructure as code
 
 Using Pulumi building blocks like ESC and IaC, we can create a pattern where secrets and configuration can be centrally defined in ESC, and then automatically synced across the external platforms where they will be utilized.
 
@@ -51,7 +51,7 @@ values:
 
 The `sync` block defines the secrets and configuration values to be synced. In this example, we are syncing values to AWS Secrets Manager. The `value` field contains the actual values to be synced, while the `name` field specifies the name of the secret in AWS Secrets Manager.
 
-To automate the synchronization process, we define a Pulumi program that creates a Pulumi ESC environment, Pulumi IaC stack, and Pulumi [deployment](/docs/pulumi-cloud/deployments/) settings for the target stack. We then define a set of pre-run commands that extract the values from the environment and set them as configuration values in the target stack. The `syncCronSchedule` variable specifies how often the synchronization process should run.
+To automate the synchronization process, we define a Pulumi program that creates a Pulumi ESC environment, Pulumi IaC stack, and Pulumi [deployment](/docs/deployments/concepts/) settings for the target stack. We then define a set of pre-run commands that extract the values from the environment and set them as configuration values in the target stack. The `syncCronSchedule` variable specifies how often the synchronization process should run.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -153,7 +153,7 @@ This pattern allows you to define secrets and configuration values in a single l
 
 ## Webhooks: An Event-Driven Alternative Approach
 
-In addition to the scheduled synchronization approach, Pulumi ESC also supports [webhooks](/docs/esc/environments/webhooks/). Webhooks allow you to respond to events in real-time, such as when a secret is updated in ESC, and take immediate action to sync the new value to an external platform.
+In addition to the scheduled synchronization approach, Pulumi ESC also supports [webhooks](/docs/esc/concepts/webhooks/). Webhooks allow you to respond to events in real-time, such as when a secret is updated in ESC, and take immediate action to sync the new value to an external platform.
 
 In the example below, instead of a scheduled deployment, we define a webhook that triggers when the Pulumi ESC environment is updated. This ensures that the secrets and configuration values are always in sync between Pulumi ESC and the external platform.
 
@@ -179,4 +179,4 @@ Using Pulumi IaC to synchronize secrets and configuration across platform bounda
 
 Whether you're working with AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, GitHub Secrets or other platforms, Pulumi ESC provides a streamlined solution that ensures your secrets are always secure and up-to-date. It offers the convenience and security of a single source of truth for all your secrets, allowing you to focus on building and improving your applications rather than wrestling with secret management.
 
-We encourage you to explore [Pulumi's documentation](https://www.pulumi.com/docs/pulumi-cloud/esc/get-started) and dive into the [Pulumi ESC Sync Examples repository](https://github.com/pulumi/esc-examples/tree/main/sync) to see how you can implement this powerful tool in your own projects. Join our vibrant [community on Slack](https://slack.pulumi.com/) to discuss your experiences, ask questions, and share insights. Together, we can make secret management simpler, more secure, and more efficient.
+We encourage you to explore [Pulumi's documentation](/docs/esc/get-started/) and dive into the [Pulumi ESC Sync Examples repository](https://github.com/pulumi/esc-examples/tree/main/sync) to see how you can implement this powerful tool in your own projects. Join our vibrant [community on Slack](https://slack.pulumi.com/) to discuss your experiences, ask questions, and share insights. Together, we can make secret management simpler, more secure, and more efficient.

@@ -38,7 +38,7 @@ config:
 
 The program reads them with the standard [Configuration API](/docs/iac/concepts/config/):
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -101,6 +101,22 @@ config:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+Pulumi HCL reads each config key into the `variable` with the same name, minus the `myapp:` prefix, so these names stay camelCase to match the keys.
+
+```hcl
+variable "containerImage" {
+  type = string
+}
+
+variable "dbConnectionString" {
+  type      = string
+  sensitive = true
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -142,6 +158,8 @@ Pass `--keep-config` if you'd rather leave the values in the stack file while yo
 To do the same thing by hand (for example, when you want the values in a shared environment rather than a per-stack one), create the environment with [`pulumi env init`](/docs/iac/cli/commands/pulumi_env_init/), add the values under `pulumiConfig` with [`pulumi env edit`](/docs/iac/cli/commands/pulumi_env_edit/), and add the `environment` block to your stack file yourself.
 
 ## Pin the environment
+
+{{< pulumi-cloud "esc-versioning" />}}
 
 By default, a stack imports the latest revision of an environment. That means a change to the environment takes effect on your next `pulumi up` with no change to the stack itself. That's convenient, but it also means an unrelated edit can alter a stack you weren't touching.
 

@@ -15,7 +15,6 @@ aliases:
   - /docs/iac/crossguard/faq/
   - /docs/guides/crossguard/faq/
   - /docs/using-pulumi/crossguard/faq/
-  - /docs/iac/packages-and-automation/crossguard/
   - /docs/iac/packages-and-automation/crossguard/faq/
   - /docs/iac/using-pulumi/crossguard/faq/
 ---
@@ -54,7 +53,7 @@ The next preview or update of the stack with fail due to the policy violation. T
 
 For accounts:
 
-A policy violation will be added to any account resources that are out of compliance. Policy violations for Insights resources are informational rather than preventative since the resource state is discovered, but not managed, by Pulumi.
+A policy violation will be added to any account resources that are out of compliance. Policy violations for discovered resources are informational rather than preventative since the resource state is discovered, but not managed, by Pulumi.
 
 ## How do I version a Policy Pack?
 
@@ -78,17 +77,17 @@ For OPA Policy Packs, the version is also specified in the `PulumiPolicy.yaml` f
 
 A version can only be used one time and once published the version can never be used by that Policy Pack again.
 
-For a complete list of all `PulumiPolicy.yaml` fields, see the [policy pack project file reference](/docs/insights/policy/policy-packs/project-file/).
+For a complete list of all `PulumiPolicy.yaml` fields, see the [policy pack project file reference](/docs/discovery-governance/reference/policy-project-file/).
 
 ## How are secrets handled in policies?
 
-Encrypted [secrets](/docs/concepts/secrets#secrets) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
+Encrypted [secrets](/docs/iac/concepts/secrets/#secrets) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
 
 ## How are dependencies managed with Python Policy Packs?
 
 As of Pulumi 2.4.0, new Python Policy Packs created with `pulumi policy new` will have a virtual environment created in a `venv` directory with required dependencies from `requirements.txt` installed in it, and Pulumi will automatically use this virtual environment when running the program.
 
-This behavior is controlled by the following `virtualenv` `runtime` option in `PulumiPolicy.yaml` (see the [project file reference](/docs/insights/policy/policy-packs/project-file/) for all available settings):
+This behavior is controlled by the following `virtualenv` `runtime` option in `PulumiPolicy.yaml` (see the [project file reference](/docs/discovery-governance/reference/policy-project-file/) for all available settings):
 
 ```yaml
 runtime:
@@ -138,11 +137,11 @@ If you prefer to manage the virtual environment on your own (for example, using 
 runtime: python
 ```
 
-When managing the virtual environment on your own and [running the Policy Pack locally](/docs/insights/policy/get-started#running-locally) against a Pulumi program, you'll need to run any `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell (or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix any `pulumi` commands with `pipenv run pulumi ...`). If the Pulumi program is also Python, both the Policy Pack and Pulumi program can use the same virtual environment.
+When managing the virtual environment on your own and [running the Policy Pack locally](/docs/discovery-governance/guides/write-a-policy-pack/#running-policies-locally) against a Pulumi program, you'll need to run any `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell (or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix any `pulumi` commands with `pipenv run pulumi ...`). If the Pulumi program is also Python, both the Policy Pack and Pulumi program can use the same virtual environment.
 
 Enforced Policy Packs that are published to Pulumi Cloud will automatically create a virtual environment, install dependencies in the virtual environment, and use the virtual environment when running against a Pulumi stack.
 
-### Adding a new dependency
+### How do I add a new dependency to a Python Policy Pack?
 
 To install a new dependency in the virtual environment, add an entry to `requirements.txt`, and run the following in your Policy Pack directory:
 
@@ -175,9 +174,8 @@ venv/bin/pip install -r requirements.txt
 
 {{< /chooser >}}
 
-## More FAQ
+## Learn more
 
-- [Pulumi IaC FAQ](/docs/iac/support/faq/)
+- [Pulumi IaC FAQ](/docs/support/faq/infrastructure/)
 - [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
-- [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
-- [Pulumi Cloud SCIM FAQ](/docs/administration/access-identity/scim/faq/)
+- [Pulumi Cloud FAQ](/docs/support/faq/pulumi-cloud/)

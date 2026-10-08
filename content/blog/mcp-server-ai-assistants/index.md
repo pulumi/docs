@@ -37,7 +37,7 @@ Before diving in, you typically need to configure your AI assistant to communica
 
 The assistant can now leverage Pulumi tools seamlessly. These tools are specific actions enabled by the MCP server—like searching the Pulumi Registry or running a `pulumi` command—allowing the assistant to gather information or interact with your Pulumi project.
 
-For detailed setup instructions for Cursor, Claude Code, Windsurf, Claude Desktop, and other AI assistants, see the [Pulumi MCP Server documentation](/docs/iac/using-pulumi/mcp-server/).
+For detailed setup instructions for Cursor, Claude Code, Windsurf, Claude Desktop, and other AI assistants, see the [Pulumi MCP Server documentation](/docs/ai/mcp-server/).
 
 ## The Goal: Provisioning an AKS Cluster
 
@@ -140,6 +140,6 @@ Integrating AI assistants with the Pulumi Model Context Protocol offers tangible
 
 ## Conclusion
 
-The synergy between AI coding assistants and the Pulumi Model Context Protocol (MCP) integration creates a remarkably efficient environment for Infrastructure as Code development. By bringing cloud resource knowledge, code generation, and the Pulumi CLI workflow directly into the editor, developers can build, deploy, and iterate on their infrastructure faster and with significantly less friction.
+The synergy between AI coding assistants and the Pulumi Model Context Protocol (MCP) integration creates a remarkably efficient environment for infrastructure as code development. By bringing cloud resource knowledge, code generation, and the Pulumi CLI workflow directly into the editor, developers can build, deploy, and iterate on their infrastructure faster and with significantly less friction.
 
 Whether you use Cursor, Copilot, Claude Code, Windsurf, or another emerging AI tool, integrating it with the Pulumi MCP server offers a glimpse into the future of streamlined, intelligent IaC development, ultimately boosting productivity and improving the overall developer experience.

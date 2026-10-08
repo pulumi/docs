@@ -43,7 +43,7 @@ jobs:
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
       - name: Install dependencies
@@ -60,7 +60,7 @@ jobs:
           git config --local user.email "bot@pulumi.com"
           git config --local user.name "pulumi-bot"
           git checkout -b policy-packs/${{ github.run_id }}-${{ github.run_number }}
-          git add data/policy_pack_policies
+          git add data/policy_pack_policies data/policy_pack_lastmod.json
           if git diff --cached --quiet; then
             echo "No policy pack changes to commit"
             echo "has_changes=false" >> $GITHUB_OUTPUT

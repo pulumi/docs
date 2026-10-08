@@ -4,6 +4,7 @@ meta_desc: |
      A comprehensive guide to automate file expiration in AWS S3 using Pulumi.
 
 type: what-is
+date: 2024-05-22T13:29:48-07:00
 page_title: Automate AWS S3 File Expiration with Pulumi
 authors: ["james-denyer"]
 ---
@@ -83,7 +84,7 @@ The filter property with the prefix sub-property ensures that this rule only app
 
 Finally, we export the bucket name, which can be useful if you want to reference this bucket from other parts of your Pulumi program or from other Pulumi stacks.
 
-## Verify the configuration of your S3 file expiration
+## How do you verify the configuration of your S3 file expiration?
 
 After deployment, you can verify the lifecycle configuration in the AWS Management Console:
 
@@ -108,11 +109,11 @@ Automating S3 with Pulumi can extend beyond file expiration to address various o
 
 By leveraging Pulumi with AWS S3, you can automate and streamline various aspects of your AWS S3 management, leading to more efficient, cost-effective, and secure cloud storage operations.
 
-For more advanced configurations, refer to the [Pulumi AWS documentation](/docs/reference/pkg/aws/s3/bucketlifecycleconfiguration/) and the [AWS S3 Lifecycle Management guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html).
+For more advanced configurations, refer to the [Pulumi AWS documentation](/registry/packages/aws/api-docs/s3/bucketlifecycleconfiguration/) and the [AWS S3 Lifecycle Management guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html).
 
 ## Learn more about Pulumi
 
-Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
+Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with [Pulumi Cloud](/docs/administration/) to make managing infrastructure secure, reliable, and hassle-free.
 
 - Follow the [Getting Started](/docs/get-started/) guide to give Pulumi a try.
 

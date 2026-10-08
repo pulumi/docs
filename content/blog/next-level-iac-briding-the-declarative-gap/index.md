@@ -19,6 +19,8 @@ Pulumi stands out in the world of infrastructure-as-code (IaC) for its flexibili
 
 <!--more-->
 
+{{% hcl-note %}}
+
 In Pulumi, you describe your infrastructure in code – real code, not a [DSL][dsl-wiki] or [YAML][yaml-wiki] – using your preferred general purpose programming language. You don't have to become a specialist in a niche proprietary declarative language, like Terraform's HCL. Rather, you can reuse your existing programming skills, writing in standard imperative, object-oriented, and even [functional language][fsharp-example] styles, while still gaining all of the benefits of the declarative style that other tools emphasize.
 
 Pulumi provides a unique mix of a [declarative model][pulumi-declarative-imperative-docs] embedded and implemented inside of a standard programming language, allowing all the flexibility of custom imperative code, while still enabling Pulumi's [deployment engine][pulumi-engine-docs] to infer opportunities for parallel asynchronous execution and to converge a partially-realized system.
@@ -175,14 +177,14 @@ The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open
 [yaml-wiki]: https://en.wikipedia.org/wiki/YAML
 [fsharp-example]: https://github.com/pulumi/examples/blob/master/aws-fs-s3-folder/Program.fs
 [pulumi-static-website-example]: https://www.pulumi.com/registry/packages/aws/how-to-guides/s3-website/
-[pulumi-declarative-imperative-docs]: https://www.pulumi.com/docs/concepts/how-pulumi-works/#declarative-and-imperative-approach
-[pulumi-program-docs]: https://www.pulumi.com/docs/concepts/glossary/#program
-[pulumi-engine-docs]: https://www.pulumi.com/docs/concepts/how-pulumi-works/#deployment-engine
-[pulumi-providers-docs]: https://www.pulumi.com/docs/concepts/how-pulumi-works/#resource-providers
-[input-docs]: https://www.pulumi.com/docs/concepts/inputs-outputs/#inputs
-[output-docs]: https://www.pulumi.com/docs/concepts/inputs-outputs/#outputs
-[apply-docs]: https://www.pulumi.com/docs/concepts/inputs-outputs/apply/
-[all-docs]: https://www.pulumi.com/docs/concepts/inputs-outputs/all/
+[pulumi-declarative-imperative-docs]: https://www.pulumi.com/docs/iac/guides/basics/how-pulumi-works/
+[pulumi-program-docs]: https://www.pulumi.com/docs/reference/glossary/#program
+[pulumi-engine-docs]: https://www.pulumi.com/docs/iac/guides/basics/how-pulumi-works/#deployment-engine
+[pulumi-providers-docs]: https://www.pulumi.com/docs/iac/guides/basics/how-pulumi-works/#resource-providers
+[input-docs]: https://www.pulumi.com/docs/iac/concepts/inputs-outputs/#inputs
+[output-docs]: https://www.pulumi.com/docs/iac/concepts/inputs-outputs/#outputs
+[apply-docs]: https://www.pulumi.com/docs/iac/concepts/inputs-outputs/apply/
+[all-docs]: https://www.pulumi.com/docs/iac/concepts/inputs-outputs/all/
 [futures-wiki]: https://en.wikipedia.org/wiki/Futures_and_promises
 [base64-wiki]: https://en.wikipedia.org/wiki/Base64
 [next-level-iac-package-ecosystems]: https://www.pulumi.com/blog/next-level-iac-package-ecosystems/

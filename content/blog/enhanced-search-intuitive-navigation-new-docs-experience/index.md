@@ -42,13 +42,13 @@ The [Pulumi quickstart](/docs/get-started/) experience is for people new to Pulu
 
 ### Cloud get started tutorials
 
-The [Pulumi cloud get started tutorials](/docs/clouds/) are for people who want a more detailed walkthrough when using Pulumi for the first time.
+The [Pulumi cloud get started tutorials](/docs/integrations/clouds/) are for people who want a more detailed walkthrough when using Pulumi for the first time.
 
 ![Pulumi cloud get started tutorials](imgs/get-started.png)
 
 ### Concept docs
 
-The [Pulumi concept docs](/docs/concepts/) are where you can dive into Pulumi concepts. Learn how they work together and how to effectively use them to ship infrastructure.
+The [Pulumi concept docs](/docs/iac/concepts/) are where you can dive into Pulumi concepts. Learn how they work together and how to effectively use them to ship infrastructure.
 
 ![Pulumi concept docs](imgs/concepts.png)
 

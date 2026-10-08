@@ -27,7 +27,7 @@ We’ve now started simplifying these workflows from the moment you create a new
 
 ## Using Pulumi ESC as an OIDC Provider
 
-Among its many uses, [Pulumi ESC can act as an OpenID Connect (OIDC) provider](/docs/esc/environments/configuring-oidc/), issuing short-lived, signed tokens that external systems can exchange for temporary cloud credentials. This eliminates hard-coded credentials and improves your security posture.
+Among its many uses, [Pulumi ESC can act as an OpenID Connect (OIDC) provider](/docs/esc/guides/configuring-oidc/), issuing short-lived, signed tokens that external systems can exchange for temporary cloud credentials. This eliminates hard-coded credentials and improves your security posture.
 
 Other Pulumi offerings, such as [Pulumi Insights](/product/pulumi-insights/), use this mechanism to securely scan resources across your organization.
 
@@ -65,4 +65,4 @@ You can now access your cloud resources securely, without worrying about managin
 
 This is just the beginning of our work to simplify Pulumi ESC setup and onboarding. We’re continuing to refine how teams configure, secure, and manage environments to make getting started with ESC as smooth as possible.
 
-Try [Pulumi ESC](/docs/esc/environments/) today and see how it can streamline your secrets and configuration management!
+Try [Pulumi ESC](/docs/esc/concepts/environments/) today and see how it can streamline your secrets and configuration management!

@@ -14,13 +14,8 @@ aliases:
   - /docs/pulumi-cloud/developer-platforms/templates/
   - /docs/pulumi-cloud/developer-portals/templates/
   - /docs/idp/concepts/templates
+pulumi_cloud_feature: organization-templates
 ---
-
-{{% notes "info" %}}
-Organization Templates are only available to organizations using the Enterprise and Business Critical editions.
-
-If you would like to use this feature, [contact us](/contact?form=sales) to upgrade.
-{{% /notes %}}
 
 A large number of public project templates are provided by Pulumi in our [examples](https://github.com/pulumi/examples) and [templates](https://github.com/pulumi/templates) repos. These can be useful for teams starting from scratch; however, as your business and infrastructure grow in complexity, it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
 
@@ -61,7 +56,7 @@ VCS-backed templates are sourced from GitHub or GitLab repositories that you con
 
 All Pulumi templates require a valid `Pulumi.yaml` file at the root of the template directory. For registry-backed templates, this is the directory you publish. For VCS-backed templates, this can be at the repository root or within a subdirectory.
 
-The `Pulumi.yaml` file must contain a `template` section to be recognized as a valid template. This section typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can be marked as [`secret`](/docs/concepts/secrets), which ensures values in templated projects will be stored with secure encryption.
+The `Pulumi.yaml` file must contain a `template` section to be recognized as a valid template. This section typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can be marked as [`secret`](/docs/iac/concepts/secrets/), which ensures values in templated projects will be stored with secure encryption.
 
 ```yaml
 name: my-aws-project
@@ -202,7 +197,7 @@ By doing publishing organization templates, your organization's members will be 
 
 - Discover template in the [private registry](/docs/idp/concepts/private-registry/).
 - Configure and launch new Pulumi projects from their browser.
-- Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments) to automatically work with new projects.
+- Configure [Pulumi Deployments](/docs/deployments/concepts/) to automatically work with new projects.
 
 ## Configuring VCS-backed Templates
 
@@ -217,6 +212,10 @@ VCS-backed templates require that your Pulumi account has an integration configu
 This can be set up by navigating to your organization's "Settings → Integrations" tab, under the "Organization Template Sources" section.
 If you have not already authorized you will see an "Authorize GitHub" or "Authorize GitLab" button. Click the button and accept the required permissions.
 
+Template source content itself is fetched using the Pulumi GitHub app, so the app must also be installed and connected to your Pulumi organization for GitHub-backed sources. See the GitHub app [installation instructions](/docs/integrations/version-control/github-app/) for more details.
+
+Because the app is installed and granted repository access at the organization level, any repository it can reach becomes usable as a template source by every member of your Pulumi organization — regardless of whether an individual member's own GitHub user has access to that repository. An organization admin who adds a source is assumed to be making it available to the whole organization.
+
 #### Template destinations
 
 VCS-backed template destinations only support GitHub as they leverage Deployments for Pulumi operations.
@@ -224,21 +223,21 @@ If you plan on using no-code or CLI deployment methods these prerequisites are n
 
 ##### GitHub OAuth
 
-This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when fetching and creating private repositories.
-More specifically, this ensures that only repositories your GitHub user would normally have access can be used as template sources.
+This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when creating private repositories; template source content is fetched using the Pulumi GitHub app.
+More specifically, this ensures that any repositories created on your behalf are created using your own GitHub user's permissions, rather than the (potentially broader) access granted to the Pulumi GitHub app.
 
-Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Click the button and accept the required permissions. This can also be set up during the new [project wizard flow](/docs/idp/concepts/new-project-wizard/#github-oauth-application).
+Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Click the button and accept the required permissions. This can also be set up during the new [project wizard flow](/docs/idp/concepts/new-project-wizard/#vcs-authorization).
 
-If you have OAuth App access restrictions enabled in your Github organization, you will also need to
-[authorize the Pulumi Github App](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization)
+If you have OAuth App access restrictions enabled in your GitHub organization, you will also need to
+[approve the Pulumi OAuth app](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization)
 in the "OAuth App Policy" settings.
 
 ##### GitHub App
 
-You will need the Pulumi GitHub application installed and connected to your Pulumi organization in order to configure [Deployment settings](/docs/deployments/concepts/settings/) on new projects.
+You will need the Pulumi GitHub application installed and connected to your Pulumi organization in order to configure [Deployment settings](/docs/deployments/concepts/settings/) on new projects. It is also what fetches content from configured template sources (see [Template sources](#template-sources) above).
 See the GitHub app [installation instructions](/docs/integrations/version-control/github-app/) for more details.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Granting the app access to _some_ or _all_ of your GitHub repos will impact how the New Project Wizard behaves.
 
 If you grant the app access to _all_ repos, the New Project Wizard will allow users to create projects in new repositories. If the app only has access to _some_ repos, users will only be able to create new projects within _existing_ repositories.
@@ -252,6 +251,6 @@ Enter sources as `github.com/<owner>/<repo>/<optional subdirectory>`. A source c
 - `github.com/pulumi/templates` (all public Pulumi templates)
 - `github.com/pulumi/templates/aws-typescript` (a specific public template)
 
-Private repositories work similarly as long as your GitHub user has access to the repository.
+Private repositories work similarly, as long as the Pulumi GitHub app has been granted access to the repository (see the [GitHub App](#github-app) prerequisite) — an individual member's own GitHub user does not need direct access to the repository.
 
 After you have configured template sources, the private registry and New Project Wizard will allow users to use those sources when creating new projects with Deployments.

@@ -10,9 +10,6 @@ menu:
         name: Serverless Framework
         parent: iac-comparisons
         weight: 80
-    concepts:
-        parent: vs
-        weight: 80
 aliases:
 - /docs/reference/vs/serverless/
 - /docs/intro/vs/serverless/
@@ -40,7 +37,7 @@ The Serverless Framework is operated through a CLI, with the [Serverless Framewo
 
 | Feature | Pulumi | Serverless Framework |
 | --- | --- | --- |
-| Language support | Python, TypeScript, JavaScript, Go, C#, Java, and YAML — general-purpose languages with familiar syntax for loops, conditionals, and abstractions | [`serverless.yml`](https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml) — a YAML configuration file with a [variable system](https://www.serverless.com/framework/docs/guides/variables) for limited dynamic values |
+| Language support | {{< pulumi-languages "general-purpose" >}} — general-purpose languages with familiar syntax for loops, conditionals, and abstractions — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/) | [`serverless.yml`](https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml) — a YAML configuration file with a [variable system](https://www.serverless.com/framework/docs/guides/variables) for limited dynamic values |
 | Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated from upstream API schemas; [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be adapted into a Pulumi provider | AWS is the primary, fully supported provider; non-AWS providers historically existed through community plugins but are deprecated in [version 4](https://www.serverless.com/blog/serverless-framework-v4-a-new-model) |
 | Transpiled to another format? | No — programs run directly in their host language | Yes — for AWS, `serverless.yml` is compiled into an [AWS CloudFormation template](https://www.serverless.com/framework/docs/providers/aws/guide/resources) that CloudFormation then deploys |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | No independent state store; for AWS, state is the CloudFormation stack (named `{service}-{stage}`) managed inside the AWS account |
@@ -50,7 +47,7 @@ The Serverless Framework is operated through a CLI, with the [Serverless Framewo
 | Programmatic API for tools and platforms | [Automation API](/docs/iac/concepts/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | No embeddable SDK; orchestration goes through `serverless` CLI invocations |
 | Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers (npm, PyPI, NuGet, Maven, Go modules); and the [Pulumi Registry](/registry/) for publicly available packages | [Plugins](https://www.serverless.com/plugins) extend CLI behavior; configuration is reused by composing `serverless.yml` files and referencing external files through the variable system |
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | No first-class import command; existing resources are brought in through [CloudFormation's resource import](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) and then described in `serverless.yml` |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | No built-in policy-as-code feature; teams typically rely on external tools such as [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html) or [Open Policy Agent](https://www.openpolicyagent.org/) against the generated CloudFormation template |
+| Policy as code | [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | No built-in policy-as-code feature; teams typically rely on external tools such as [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html) or [Open Policy Agent](https://www.openpolicyagent.org/) against the generated CloudFormation template |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | Versions 3 and earlier were MIT-licensed; [version 4](https://www.serverless.com/blog/serverless-framework-v4-a-new-model) is distributed under a proprietary license |
 | Commercial option | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) | [Serverless Subscription](https://www.serverless.com/pricing) — required for organizations above a stated annual revenue threshold; free for individuals and smaller organizations |
 
@@ -78,7 +75,7 @@ Pulumi treats secrets as a first-class primitive. Values marked as secrets are e
 
 ### Policy as code
 
-[Pulumi Policies](/docs/insights/policy/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS), so teams don't have to author and maintain those rules themselves. The Serverless Framework has no built-in policy-as-code feature; teams typically evaluate the generated CloudFormation template with external tools such as [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html) or [Open Policy Agent](https://www.openpolicyagent.org/).
+[Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS), so teams don't have to author and maintain those rules themselves. The Serverless Framework has no built-in policy-as-code feature; teams typically evaluate the generated CloudFormation template with external tools such as [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html) or [Open Policy Agent](https://www.openpolicyagent.org/).
 
 ### Modularity and reuse
 
@@ -132,7 +129,7 @@ Yes. Pulumi manages AWS Lambda functions, API Gateway, event source mappings, IA
 
 ### Is Pulumi open source?
 
-The Pulumi CLI and SDKs are open source under the Apache 2.0 license. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) is the commercial product, with a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. The Serverless Framework was MIT-licensed through version 3; version 4 is distributed under a proprietary license.
+The Pulumi CLI and SDKs are open source under the Apache 2.0 license. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) includes managed state in the Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management. The Serverless Framework was MIT-licensed through version 3; version 4 is distributed under a proprietary license.
 
 ### Can I use Pulumi for non-AWS infrastructure alongside the Serverless Framework?
 
@@ -140,7 +137,7 @@ Yes — and this is a common adoption pattern. Teams keep AWS serverless service
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Pulumi vs. AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
 - [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)
 - [Migrating from Serverless Framework to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-serverless/)

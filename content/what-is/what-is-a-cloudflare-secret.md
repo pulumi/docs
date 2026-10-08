@@ -1,9 +1,10 @@
 ---
-title: What is a Cloudflare Secret?
+title: What is a Cloudflare Secret? Setup & Best Practices
 meta_desc: |
-    Learn more about Cloudflare secrets and how to use them.
+    A Cloudflare secret is an encrypted variable Workers read at runtime, never exposed in code. Learn to create secrets with Wrangler and access them.
 
 type: what-is
+date: 2023-12-07T15:06:13-06:00
 page_title: "What is a Cloudflare Secret?"
 authors: ["diana-esteves"]
 ---
@@ -33,7 +34,7 @@ You can create secrets via [Wrangler](https://developers.cloudflare.com/workers/
     ```bash
     $ npx wrangler init secrets-demo
     # Select "Hello World" Worker
-    # Confirm "Yes" to using Typescript
+    # Confirm "Yes" to using TypeScript
     # Confirm "Yes" to using Git
     # Select "No" to deploy the application
 
@@ -146,7 +147,7 @@ $ pulumi config set secrets-demo --secret
 value:  ****
 ```
 
-{{< chooser language "typescript,python,go" / >}}
+{{< chooser language "typescript,python,go,hcl" / >}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -244,8 +245,40 @@ func main() {
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+Pulumi HCL reads each config key into the `variable` with the same name, so for this program set the secret under `secrets_demo`:
+
+```bash
+$ pulumi config set secrets_demo --secret
+```
+
+```hcl
+variable "account_id" {
+  type = string
+}
+
+variable "secrets_demo" {
+  type      = string
+  sensitive = true
+}
+
+resource "cloudflare_workers_script" "my_script" {
+  account_id  = var.account_id
+  script_name = "script_1"
+  content     = file("script.js")
+
+  bindings {
+    type = "secret_text"
+    name = "MY_SECRET_NAME_KEY" # secret key
+    text = var.secrets_demo    # secret value
+  }
+}
+```
+
+{{% /choosable %}}
 
 - **Get started tutorial**: Follow a simple tutorial to [deploy a Hello World web application using Cloudflare Workers and Pulumi](https://developers.cloudflare.com/pulumi/tutorial/hello-world/)
-- **Advanced secrets management**: For organizations that use more than one secrets manager or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across various environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+- **Advanced secrets management**: For organizations that use more than one secrets manager or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across various environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/esc/providers/secrets/aws-secrets/).
 
 The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

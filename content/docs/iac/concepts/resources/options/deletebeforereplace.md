@@ -22,7 +22,7 @@ Setting the `deleteBeforeReplace` option to true means that Pulumi will delete t
 
 This example deletes a database entirely before its replacement is created:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -78,6 +78,24 @@ resources:
     type: Database
     options:
       deleteBeforeReplace: true
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+# The HCL equivalent of deleteBeforeReplace: true is
+# create_before_destroy = false, shown explicitly here. HCL follows
+# Terraform's replacement semantics, where deleting before creating is
+# already the default; set create_before_destroy = true to opt into
+# Pulumi's default create-first behavior instead.
+resource "database" "db" {
+  # ...
+
+  lifecycle {
+    create_before_destroy = false
+  }
+}
 ```
 
 {{% /choosable %}}

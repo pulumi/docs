@@ -12,16 +12,45 @@ This is the **CI entry point** for the docs review pipeline.
 ## Hard rules for CI
 
 1. **Never read working-tree *source* state.** No `git status`, `git diff` against the local checkout, no `ls`, no Read against arbitrary repo content files. The CI runner's working tree is a shallow checkout that may not reflect what's in the PR. Use `gh pr view` and `gh pr diff` for **everything** about the PR. *(The workflow-generated pre-step artifacts in the workspace root — `.review-draft.md`, `.verified-claims.json`, etc. per Hard rule 7 — are not "working-tree source state"; Read them freely.)*
-2. **Do not post the pinned comment yourself.** Edit `.review-draft.md` in place and exit when the editorial pass is done. The workflow runs validate / splice / re-validate / upsert as separate steps after your session ends — you do not call `pinned-comment.sh`, `validate-pinned.py`, or any post-processing script from inside your turn. **Every `<TODO:` placeholder must be replaced** before you exit — the validator's `no-todo-tokens` rule fails the body otherwise.
+2. **Do not post the pinned comment yourself.** Edit `.review-draft.md` in place and exit when the editorial pass is done. The workflow runs validate / splice / re-validate / upsert as separate steps after your session ends (on v3: a deterministic `normalize-v3-draft.py` pass that repairs a mis-shaped finding table or a deleted `#### F<n> · Do this` block, then validate / build-evidence / publish) — you do not call `pinned-comment.sh`, `validate-pinned.py`, or any post-processing script from inside your turn. **Every `<TODO:` placeholder must be replaced** before you exit — the validator's `no-todo-tokens` rule fails the body otherwise.
 3. **Diffs do not show trailing-newline status.** Do not flag missing trailing newlines from CI; the lint job catches this.
 4. **Don't run `make` targets.** No `make build`, `make lint`, `make serve`. Lint and build run in their own jobs.
 5. **No file paths from the working tree in findings.** Every `file:line` reference must come from the PR's diff or `gh pr view --json files` output.
 6. **No internal-source MCP servers.** Notion and Slack MCP tools are not whitelisted in CI; review output is public. Live code execution beyond `gh` and file reads is unavailable.
 7. **Bash patterns the runner sandbox rejects.** Friction patterns the harness blocks regardless of the allow-list — write commands that avoid them. (On the normal path you should not need any of these: the workflow's `compose-review.py` pre-step has already parsed every artifact into `.review-draft.md`; read that, not the JSON.)
-   - **Reading or writing under `/tmp/`.** The filesystem-path policy restricts `cat`, `grep`, and output redirection to the runner's working directory. Use the `Read` tool (not Bash `cat`) for any `/tmp/...` path; never redirect output to `/tmp/...`. Workflow-managed pre-step artifacts (`.review-draft.md`, `.fetched-urls.json`, `.editorial-balance.json`, `.vale-findings.json`, `.cross-sibling-discovery.json`, `.frontmatter-validation.json`, `.hugo-build.json`, `.candidate-claims.json`, `.verified-claims.json` — see `docs-review:references:pre-computation`) live in the workspace root and are Bash-accessible.
+   - **Reading or writing under `/tmp/`.** The filesystem-path policy restricts `cat`, `grep`, and output redirection to the runner's working directory. Use the `Read` tool (not Bash `cat`) for any `/tmp/...` path; never redirect output to `/tmp/...`. Workflow-managed pre-step artifacts (`.review-draft.md`, `.fetched-urls.json`, `.editorial-balance.json`, `.vale-findings.json`, `.cross-sibling-discovery.json`, `.frontmatter-validation.json`, `.hugo-build.json`, `.candidate-claims.json`, `.verified-claims.json`, `.readthrough-findings.json` — see `docs-review:references:pre-computation`) live in the workspace root and are Bash-accessible.
    - **Shell control flow in Bash (`for`, `while`, `case`, `if`).** The multi-op decomposer rejects loops and conditionals even when each constituent command is allow-listed. For iteration over a list, use a single-line `python3 -c "..."` (allow-listed) or sequential single-op `gh` invocations.
    - **Brace expansion (`{a,b,c}`) and subshell grouping (`(cmd1; cmd2)`).** Both decompose unfavorably; expand the list manually or move the logic to a single-line `python3 -c "..."`.
    - **Multi-line `python3 -c "..."` strings and heredocs.** The `-c` argument must be a *single line* of `;`-separated statements — no embedded newlines, no `python3 <<'EOF' … EOF` heredocs (both are rejected by the multi-op decomposer even though `Bash(python3 -c:*)` is allow-listed). If the logic won't fit on one line, decompose it into separate single-op `python3 -c` / `jq` / `gh` invocations — do **not** write a helper script in the workspace root (`.dump-verdicts.py`, `.build-trail.py`, …): the allow-list only permits `python3 .claude/commands/docs-review/scripts/validate-pinned.py:*`, so an arbitrary `python3 .foo.py` is rejected. Everything you need to parse is already in `.review-draft.md`.
+
+---
+
+## The v3 surface
+
+When the workflow prompt says **the v3 review surface is active**, the composer
+emitted TWO drafts instead of `.review-draft.md`:
+
+- **`.review-draft-author.md`** — the author card (🚨 Fix or disagree /
+  ❓ Questions for you / style suggestions / ✅ Resolved).
+- **`.review-draft-brief.md`** — the reviewer brief (summary + confidence
+  table / ⚠️ Check these / rubber-stampable counts).
+
+Your editorial pass edits **both files** under the contract in
+`references/output-format.md` §The model's edit contract (v3), which overrides
+§2–3 below wherever they conflict. The short version: the verification trail,
+investigation log, triaged findings, pre-existing issues, count table, and
+review history are **not in your drafts** — they live in the machine-owned
+evidence base (`.review-evidence-base.json`, which you never edit) and render
+on the evidence page. You triage the finding rows (promote-only; new findings
+as `| **F?** | … | … |` table rows; `**Spurious:**` / `**Mis-sourced:**` /
+`**Pre-existing:**` rewrites instead of deletions), write the fix prose, the
+summary, and the confidence levels, and never touch the HTML markers, the
+REVIEW_STATE block, the `%%EVIDENCE_URL%%` lines, the `<sub>vN …</sub>`
+version line, the Where-cell links, or the composer-owned count lines. Hard rules 1–7 apply unchanged, as do the style-suggestion sidecar
+rules (§Style suggestions in the workflow prompt) — the sidecar and ✏️
+annotations target the author card. If either draft opens with a
+`> [!CAUTION]` banner, stop and exit without editing — v3 has **no**
+manual-assembly fallback; the run must land on the error path.
 
 ---
 
@@ -59,10 +88,10 @@ The workflow ran `compose-review.py` and wrote **`.review-draft.md`** at the wor
 - the bucket-count table (a *starting point* matching the stub-bullet counts);
 - the 🔍 Verification trail — one line per `.verified-claims.json` verdict, verbatim: verdict word, per-verdict emoji (✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch` · 🌀 `framing-drift`), evidence pointer, source. **The composed trail is the hard contract — see §3 step 7; do not re-render its lines.**
 - the 📊 Editorial-balance Tier 1 (blog only — empty form when `trigger=null`, rich form with section-depth stats + outliers otherwise; Tier 2 vendor/FAQ counts are `<TODO>`);
-- the `#### Style findings` block (from `.vale-findings.json`, with the inline-vs-collapse render mode already chosen);
+- the `#### Style suggestions` block (advisory Vale findings from `.vale-findings.json`, expanded, uncounted) plus any `[style-blocker]` bullets in 🚨 Outstanding (blocker-tier Vale findings, counted — never delete or demote these);
 - the empty 💡 / ✅ forms;
 - the 📜 Review-history line (timestamp + SHA + `<TODO: one-line summary>`);
-- stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker. When a section has findings it opens with an italic guidance one-liner under the heading (`*These must be resolved or refuted before merging.*` for 🚨 Outstanding; `*Review each and resolve as appropriate — these don't block the PR.*` for ⚠️ Low-confidence) — same pattern as `*Found by pattern-based linting; Findings may be false positives.*` under `#### Style findings`.
+- stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch`/`flagged` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + the verdict (and its `framing:` note when present) + a `<TODO>` marker. The evidence/source pointer is deliberately NOT repeated in the bullet — `docs-review:references:output-format` §Composed-draft contract owns the why. When a section has findings it opens with an italic guidance one-liner under the heading (`*These must be resolved or refuted before merging.*` for 🚨 Outstanding; `*Review each and resolve as appropriate — these don't block the PR.*` for ⚠️ Low-confidence) — same pattern as the pattern-based-linting caption under `#### Style suggestions`.
 
 **Do NOT rebuild any of these from scratch. Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view.** Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents — extraction already happened.
 
@@ -86,7 +115,7 @@ For each `- **[L…]**` `<TODO>`-marked bullet under 🚨 / ⚠️, apply the bu
 </step>
 
 <step number="2" name="Add findings the composer couldn't pre-stub">
-Hugo-build errors / link-integrity breaks and frontmatter alias/URL/menu-parent collisions are now pre-stubbed by the composer (route: `preflight`); their bullets carry a `<TODO: confirm or REMOVE …>` marker — confirm the fix or REMOVE per the bucket-transition vocabulary. **Add** the rest: internal-link / shortcode breaks in content, cross-sibling mismatches (from your in-review sibling-read fan-out — `docs-review:references:fact-check` §Cross-sibling consistency), code-examples findings (3-specialist checks), editorial-balance threshold flags (Tier 2 + Tier 1 outliers from §📊), intuition-flag promotions, two-question-test findings from the domain rules.
+Hugo-build errors / link-integrity breaks and frontmatter alias/URL/menu-parent collisions are now pre-stubbed by the composer (route: `preflight`); their bullets carry a `<TODO: confirm or REMOVE …>` marker — confirm the fix or REMOVE per the bucket-transition vocabulary. Dead `/docs/…` and `/blog/…` links on added lines are pre-stubbed the same way (`link-check-diff.py` → `.hugo-build.json.link_integrity`, on every PR, Hugo run or not; a link with no content file is probed on production and counts as dead only on a 404/410, so taxonomy, content-adapter, registry-proxied, and redirect-backed paths don't false-positive). **Add** the rest: shortcode breaks in content, internal links the checker can't see (relative paths, links inside shortcode arguments), cross-sibling mismatches (from your in-review sibling-read fan-out — `docs-review:references:fact-check` §Cross-sibling consistency), code-examples findings (3-specialist checks), editorial-balance threshold flags (Tier 2 + Tier 1 outliers from §📊), intuition-flag promotions, two-question-test findings from the domain rules.
 
 Every `**[L<line>]**` bucket bullet you ADD MUST be backed by a matching 🔍 trail line (`bucket-bullet-trail-match` / `bucket-bullet-line-range-prefix` enforce this — a missing anchor soft-floors the review). Render the file path as a backticked literal after the L-prefix: `- **[L45]** ` `content/docs/foo/_index.md` ` "claim text" — …`; the trail line uses `- L45 in ` `content/docs/foo/_index.md` ` "…"`. If the finding has no fact-check claim behind it, add its trail line first (`- L<line> in ` `path` ` "<short description>" → <emoji> <verdict>` — `⚔️ mismatch` for cross-sibling, `🤷 unverifiable` for an editorial-balance flag, etc.). Findings with no line anchor at all go in prose elsewhere — not in a `**[L…]**` bullet.
 </step>
@@ -110,7 +139,7 @@ Vendor / entity mention counts, FAQ steering ratios — if §📊 is in rich for
 </step>
 
 <step number="7" name="Keep the body self-consistent">
-Count-table cells == bucket-bullet counts (style findings count in ⚠️). Every 🔍 trail line corresponds to a verdict; you may add a claim the artifact missed but may NOT drop a candidate-claims-floor entry (`docs-review:references:fact-check`). Every `**[L…]**` bucket bullet matches a trail record. **Never re-render a composed 🔍 trail line except to fix a literal rendering bug — and never drop, paraphrase, or truncate the `<evidence>; source: …>` parenthetical.** In particular, the `WebSearch ran query "…"` pointer on a Pass-3 unverifiable verdict is load-bearing for `pass-3-unverifiable-evidence` — the composer rendered it verbatim from `.verified-claims.json`; leave it intact.
+Count-table cells == bucket-bullet counts (advisory `[style]` bullets are NOT counted in ⚠️; `[style-blocker]` bullets ARE counted in 🚨). Every 🔍 trail line corresponds to a verdict; you may add a claim the artifact missed but may NOT drop a candidate-claims-floor entry (`docs-review:references:fact-check`). Every `**[L…]**` bucket bullet matches a trail record. **Never re-render a composed 🔍 trail line except to fix a literal rendering bug — and never drop, paraphrase, or truncate the `<evidence>; source: …>` parenthetical.** In particular, the `WebSearch ran query "…"` pointer on a Pass-3 unverifiable verdict is load-bearing for `pass-3-unverifiable-evidence` — the composer rendered it verbatim from `.verified-claims.json`; leave it intact.
 </step>
 
 <step number="8" name="Apply output-format DO-NOT list">
@@ -118,10 +147,14 @@ See `docs-review:references:output-format`. Do NOT WebFetch / re-verify claims �
 </step>
 
 <step number="9" name="On a re-entrant run">
-Per `docs-review:references:update`: the draft's 📜 Review history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history lines (append-only) and populate ✅ Resolved with prior findings now absent.
+Per `docs-review:references:update`: the draft's 📜 Review history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history lines (append-only) and populate ✅ Resolved with prior findings now absent. **Advisory `[style]` bullets are excluded from that rule** — they regenerate from a fresh Vale run every time, so one that disappears is dropped silently, never moved to ✅. `[style-blocker]` bullets ARE tracked like ordinary findings and do move to ✅ when resolved.
 </step>
 
-<step number="10" name="Write for the author, not the pipeline">
+<step number="10" name="Stage the inline-suggestion sidecar">
+Triage the ADVISORY style bullets and Write `.style-suggestions.json` (array; `[]` if none qualify): `{"file", "line", "original", "replacement", "category", "note"}` per entry, cap 10. Convert only when the rewrite preserves meaning exactly (a factually load-bearing hedge like "usually completes in five minutes" is NOT a candidate), fits on the single flagged line, and clearly reads better. `original` must be the exact substring on that line. A workflow step (`post-style-suggestions.py`) validates and posts them as one-click `suggestion` comments — never post them yourself. Leave the `[style]` bullets in place; blocker findings are never suggestions, and neither is anything sharing a line with one. On **v3** the block is also where your OWN mechanical nits go — a typo, a stray space, a doubled word — as `- **line N:** [nit] _category_ — <what and the fix>` under the file's `##### <path>` heading. It is the author card's only non-blocking lane, so a nit parked on the brief's ⚠️ list lands on someone who can't fix it (PR #21787 F3). Tag yours `[nit]`, never `[style]` — `[style]` asserts the linter found it and is checked against the artifact. Qualifying test and shape: `docs-review:references:output-format` §Nits. A `[nit]` may be staged as a suggestion like any advisory bullet. Drop false positives silently — no tally, no rule name, no explanation of what you removed. Never write the ✏️ mark or the ✏️ banner under the count table; the workflow writes both after posting, from what the API accepted, and strips any you add. On a re-entrant run, stage the **full** qualifying set — the step deletes the previous run's suggestion comments before posting, so an omitted finding loses its button.
+</step>
+
+<step number="11" name="Write for the author, not the pipeline">
 Bullet bodies and Summary prose must read to a PR author who knows nothing about how this review was assembled. Refer to **outcomes** (`✅ verified`, `❌ contradicted`, source URL), not the **processes**. Avoid pipeline-internal terms like *"the extraction layer"*, *"the verifier / validator / splicer"*, *"Pass 1/2/3"*, *"framing comparison"*, *"soft floor"*, *"the composer"*, or script names. Say *"the verification step"* or describe the outcome directly.
 - **Bad:** "Counted as ❌ contradicted because the extraction layer truncated the claim text..."
 - **Good:** "Flagged as ❌ contradicted in error — the source actually supports the claim. The verification step compared a shortened version of the claim against the source."
@@ -136,7 +169,7 @@ Save `.review-draft.md` and exit. The workflow runs the publish chain as separat
 If `.review-draft.md` is absent or its first lines are a `> [!CAUTION]` composer-failed banner, assemble the review manually — the pre-composer procedure:
 
 1. Route each changed file using `docs-review:references:domain-routing`. Run each file under its domain and merge findings into a single output object.
-2. Read the pre-step artifacts directly: `.verified-claims.json` for the trail/verdicts (render one trail line per verdict, verbatim — verdict word + per-verdict emoji + evidence + source; **do not re-verify**); `.candidate-claims.json` is the claim *floor* — every entry must surface a verdict line in the 🔍 Verification trail (the `candidate-claims-coverage` rule fails the review otherwise) and you add any claims the artifact missed; `.vale-findings.json` for the `#### Style findings` block; `.editorial-balance.json` for the §📊 Tier 1; `.hugo-build.json` / `.frontmatter-validation.json` / `.cross-sibling-discovery.json` for the build / frontmatter / sibling checks. If `.verified-claims.json` is absent or its `verdicts[]` is empty, fall back further to the in-review extraction + verification path per `docs-review:references:fact-check` §Routed verification fallback.
+2. Read the pre-step artifacts directly: `.verified-claims.json` for the trail/verdicts (render one trail line per verdict, verbatim — verdict word + per-verdict emoji + evidence + source; **do not re-verify**); `.candidate-claims.json` is the claim *floor* — every entry must surface a verdict line in the 🔍 Verification trail (the `candidate-claims-coverage` rule fails the review otherwise) and you add any claims the artifact missed; `.vale-findings.json` for BOTH Vale tiers -- split on the `blocker` field: `blocker: true` entries render in 🚨 Outstanding as `- **[L<n>]** <file-in-backticks> — [style-blocker] _category_ — <message>` and are counted there (this is the one path where the composer isn't doing it for you, so skipping the split silently drops every blocking style finding); everything else goes in the `#### Style suggestions` block, expanded and uncounted; `.editorial-balance.json` for the §📊 Tier 1; `.hugo-build.json` / `.frontmatter-validation.json` / `.cross-sibling-discovery.json` for the build / frontmatter / sibling checks. If `.verified-claims.json` is absent or its `verdicts[]` is empty, fall back further to the in-review extraction + verification path per `docs-review:references:fact-check` §Routed verification fallback.
 3. Render per `docs-review:references:output-format` and apply its DO-NOT list before emitting.
 4. Save the assembled body to `.review-draft.md` and exit — the workflow publishes it. (See §4 above.)
 

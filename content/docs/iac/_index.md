@@ -10,7 +10,7 @@ menu:
         weight: 1
 meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
 h1: Infrastructure as Code
-description: <p>Define and manage cloud infrastructure using familiar programming languages. Pulumi's <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code SDK supports TypeScript, Python, Go, .NET, Java, and YAML.</p>
+description: <p>Define and manage cloud infrastructure using familiar programming languages. Pulumi's <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code SDK supports TypeScript, Python, Go, .NET, Java, YAML, and HCL.</p>
 link_buttons:
   primary:
     label: Get Started
@@ -55,6 +55,9 @@ sections:
   - label: YAML
     icon: icon-32-32 yaml-color-32-32
     link: /docs/iac/languages-sdks/yaml/
+  - label: HCL
+    icon: icon-32-32 hcl-color-32-32
+    link: /docs/iac/languages-sdks/hcl/
 - type: button-cards
   heading: Resources
   cards:
@@ -66,6 +69,10 @@ sections:
     heading: Pulumi CLI
     description: Browse the complete documentation of available CLI commands.
     link: /docs/iac/cli/
+  - icon: question
+    heading: FAQ
+    description: Answers to common questions about infrastructure as code, resource management, state, and deployments.
+    link: /docs/support/faq/infrastructure/
 - type: button-cards
   heading: Guides
   cards:
@@ -111,7 +118,7 @@ sections:
   - icon: shield
     heading: Least Privilege
     description: Apply least-privilege security across IaC, ESC, and CI/CD.
-    link: /docs/administration/security-compliance/least-privilege/
+    link: /docs/administration/guides/least-privilege/
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>

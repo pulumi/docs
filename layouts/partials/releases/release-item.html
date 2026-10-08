@@ -34,8 +34,11 @@
 {{ if $link }}{{ $cardClasses = printf "%s group/linked transition-colors duration-200 hover:bg-violet-50 hover:border-violet-primary" $cardClasses }}{{ end }}
 
 {{ if $link }}<a href="{{ $link }}" class="{{ $cardClasses }}">{{ else }}<div class="{{ $cardClasses }}">{{ end }}
-    <div class="flex flex-col lg:flex-row items-center">
-        <div class="pb-0 xl:pl-52 flex-1 min-w-0 flex flex-col gap-5 px-8 py-10 md:px-12 md:py-14 lg:px-16 lg:py-16">
+    {{/* items-stretch (not items-center) so the image column spans the full card
+         height and can bottom-align its artwork; the text block re-centers itself
+         with justify-center. */}}
+    <div class="flex flex-col lg:flex-row items-stretch">
+        <div class="pb-0 xl:pl-52 flex-1 min-w-0 flex flex-col justify-center gap-5 px-8 py-10 md:px-12 md:py-14 lg:px-16 lg:py-16">
             {{ with $overline }}
             <span class="badge badge-brand badge-lg self-start">{{ . }}</span>
             {{ end }}
@@ -47,12 +50,21 @@
             {{ end }}
         </div>
         {{ if $featureImage }}
-        <div class="w-full lg:ml-24 lg:w-2/5 flex items-stretch shrink-0">
+        {{/* Stacked below the text on mobile: inset the left edge to line up with
+             the text block's padding, keeping the right edge flush.
+
+             From lg the card goes side-by-side, the image bleeds off the right,
+             and the column holds a fixed 600/497 aspect — the tallest release
+             artwork — so every card reserves the same image height at any
+             viewport width and the cards line up. Shorter artwork sits flush
+             with the bottom of the card (items-end) rather than floating in the
+             middle. */}}
+        <div class="w-full pl-8 md:pl-12 lg:pl-0 lg:ml-24 lg:w-2/5 lg:aspect-[600/497] flex items-end shrink-0">
             {{ if $featureImageExists }}
                 {{ partial "fingerprinted-img.html" (dict
                     "src" $featureImage
                     "alt" $featureImageAlt
-                    "class" "w-full h-full object-cover block transition-transform group-hover/linked:scale-105"
+                    "class" "w-full h-auto object-contain block transition-transform group-hover/linked:scale-105"
                     "loading" "eager"
                     "maxWidth" 900
                     "quality" 90

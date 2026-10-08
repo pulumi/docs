@@ -5,7 +5,7 @@ description: Review criteria for blog posts and customer stories. Fact-check-fir
 
 # Review — Blog
 
-Applied to blog posts (`content/blog/`) and customer stories (`content/case-studies/`). These are usually drafted whole-file (often with AI assistance) rather than edited incrementally, so scrutiny is `heightened` by default and the whole file is in scope. (Small incremental edits to an already-published post are the exception: the claim pre-step extracts from the changed lines only -- see `docs-review:references:fact-check` §Scope.) On this whole-file path, a pre-computed `readthrough` coherence pass (`docs-review:references:readthrough`) reads the post end to end and surfaces anchored structural defects as `🚩 flagged` findings in your buckets — triage each with the standard two-question test.
+Applied to blog posts (`content/blog/`) and customer stories (`content/customers/`). These are usually drafted whole-file (often with AI assistance) rather than edited incrementally, so scrutiny is `heightened` by default and the whole file is in scope. (Small incremental edits to an already-published post are the exception: the claim pre-step extracts from the changed lines only -- see `docs-review:references:fact-check` §Scope.) On this whole-file path, a pre-computed `readthrough` coherence pass (`docs-review:references:readthrough`) reads the post end to end and surfaces anchored structural defects as `🚩 flagged` findings in your buckets — triage each with the standard two-question test.
 
 > **Fact-check-first treatment.** Fact-check is the headline finding bucket. Get it right before commenting on AI-writing patterns or structure.
 
@@ -31,6 +31,14 @@ Investigate as content triggers each priority below.
 
 Invoke `docs-review:references:fact-check` (`scrutiny=heightened`) **before** any style pass. The reference owns claim extraction; in blog copy, pay particular attention to **performance multipliers**, **competitor claims**, and **adoption / market-position statistics** — common in this domain and high-blast-radius when wrong.
 
+**Third-party framing.** Fact-check verifies that an attributed claim is *true*. This pass, run alongside it, checks that the claim is *framed* safely: a true third-party metric can still be a publishing problem if the post moves it onto Pulumi or implies a relationship that doesn't exist. Findings follow the standard bucket rules in `docs-review:references:output-format`.
+
+- **Metrics are attributed where they're used.** A third-party number ("cut deploy time by 70%") names its source in the same sentence every time the post uses it, not only in an earlier paragraph or a footnote. Quote the unattributed use; propose "According to <source>, …" or "<Source> reports …".
+- **No implied Pulumi causation or guarantee.** Flag constructions that move a third party's outcome onto Pulumi: "With Pulumi, you'll cut deploy time by 70%", "Pulumi guarantees …". Quote the construction; propose a rewrite that keeps the metric with its source and says plainly what Pulumi does.
+- **No implied endorsement.** A named company, project, or person must not read as recommending or using Pulumi unless the cited source says so. Quote the construction ("X recommends …", "trusted by X", a named company alongside a Pulumi CTA); propose neutral framing. Companies Pulumi names publicly as customers are the ones in `data/customers.yaml`.
+- **Adaptations are labeled.** When a post rebuilds a third party's published architecture or case study with Pulumi, it says so, and says the result is not that party's implementation. Quote the first description of the architecture; propose a one-sentence disclaimer ("This post adapts that architecture with Pulumi. It is not <party>'s implementation.").
+- **Summarize and link; don't copy.** A passage that tracks a source's wording closely, beyond a short quoted and attributed excerpt, is a finding. Quote the passage and the matching source text; propose a summary with a link.
+
 ### Priority 2 — Prose patterns and spelling/grammar
 
 Apply `docs-review:references:prose-patterns` and `docs-review:references:spelling-grammar`.
@@ -38,8 +46,9 @@ Apply `docs-review:references:prose-patterns` and `docs-review:references:spelli
 **Blog-specific patterns** (apply alongside the shared references):
 
 - **TL;DR / summary paragraphs that restate the post.** The reader just finished reading; they don't need a recap. Quote the recap; propose removal.
-- **Self-criticism of prior Pulumi decisions.** "We used to handle this badly," "the old way was wrong," "before we got this right." Acceptable in case-studies discussing a *customer's* prior tooling; not acceptable when describing prior Pulumi product behavior. Quote the construction; reframe as forward-looking: "v3.0 introduced X" not "before v3.0, we got it wrong."
+- **Self-criticism of prior Pulumi decisions.** "We used to handle this badly," "the old way was wrong," "before we got this right." Acceptable in a customer story discussing a *customer's* prior tooling; not acceptable when describing prior Pulumi product behavior. Quote the construction; reframe as forward-looking: "v3.0 introduced X" not "before v3.0, we got it wrong."
 - **Weak conclusions.** A closing paragraph that doesn't name a specific next step. "Check out Pulumi to learn more" without a specific link or command. Quote the conclusion; propose a concrete CTA: "Try it: `pulumi up` against the example at `<link>`" or "See the X reference at /docs/foo/."
+- **Missed engagement mechanisms.** The blog has purpose-built ways to hand the reader a next step — `resource_links` frontmatter (icon links to docs, GitHub, feature request, community Slack, video, etc.), the `{{< blog/cta-card >}}` and `{{< blog/cta-button >}}` body shortcodes, `{{< blog/card "/events/…" >}}` to embed a live event or post, and `related_posts` frontmatter (see `BLOGGING.md`). **Only suggest one when the post's own content points to a clear, specific next step** — a doc the reader would obviously want next, a repo the post is about, a relevant event, a related post that continues the thread. Never suggest one to a post that already closes well, and never propose more than fits naturally. Any suggestion must be **tasteful, context-relevant, and reader-serving** — it deepens the reader's understanding of or engagement with the product. Do **not** suggest salesy or spammy additions (generic "sign up now" buttons, signup CTAs unrelated to the post's topic, stacking multiple CTAs for reach). When nothing specific presents itself, say so and suggest nothing — a bare get-started card is not an improvement over a strong closing paragraph.
 - **Listicle bloat.** Posts structured as `## item N:` patterns or numbered top-N lists. Cap at 12 items; cap total post length at ≈3,000 words for listicles. If a list goes longer, suggest which items to cut or merge.
 
 ### Priority 2.5 — Editorial balance (comparison, listicle, FAQ posts)
@@ -99,7 +108,7 @@ Apply `docs-review:references:code-examples`.
 
 ### Priority 4 — Product accuracy
 
-Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-verb rule, and "public preview" vs "public beta" (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style findings). The reviewer's job here is the things Vale can't:
+Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-verb rule, and "public preview" vs "public beta" (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style suggestions). The reviewer's job here is the things Vale can't:
 
 - **Feature names.** Capitalization and punctuation must match how the product refers to itself in docs. If a blog introduces a feature, the feature name should match the canonical doc page's title.
 - **"Generally available," not "generally released."** Release terminology beyond what Vale's substitution list covers.
@@ -114,7 +123,7 @@ Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-ve
 
 When a blog post announces a new feature, provider, or significant capability:
 
-- **Check that `/content/docs/` covers it.** Search for the feature name across `content/docs/`, `content/learn/`, `content/tutorials/`. If the only mention of the feature is the blog post itself, that's a finding.
+- **Check that `/content/docs/` covers it.** Search for the feature name across `content/docs/`. If the only mention of the feature is the blog post itself, that's a finding.
 - **Note specific gaps.** Don't just say "docs are missing" — name the page that should exist (e.g., "no `content/docs/esc/integrations/<feature>/` page found").
 - **Suggest a doc type.** Reference / tutorial / concept guide / how-to — pick the one that matches the feature's nature.
 
@@ -152,7 +161,7 @@ Scope of pre-existing findings for blog: everything from `docs-review:references
 - **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for the custom-override retired-logo and animated-GIF cases.)
 - **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Heading case.** markdownlint owns case-consistency; Vale owns product-name miscapitalization (e.g., "Pulumi esc"). Don't flag either here.
-- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style findings. Don't double-flag.
+- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style suggestions. Don't double-flag.
 
 ## Publishing blockers
 
@@ -161,6 +170,7 @@ Each item below renders as a single 🚨 Outstanding finding when violated. Quot
 - **A custom `meta_image` override uses retired Pulumi logos.** Only applies when a post sets its own `meta_image` — most posts leave it blank and get the on-brand build-time card, so there is nothing to inspect. When an override is present, inspect it (its filename / path or rendered image) for retired brand variants; quote the path and propose the current-brand replacement, or suggest dropping the override to fall back to the build-time card. (A renamed `meta-legacy.png` archive image is not a `meta_image` and is never flagged.)
 - **`meta_image` animated-GIF / format constraints** — see `docs-review:references:image-review`.
 - **`<!--more-->` break missing or buried.** The break must be present and land after the first 1–3 paragraphs, not buried mid-post. Without it, the entire post body renders on the blog index. Quote the surrounding paragraphs; propose the correct placement. Skip on `draft: true` or archival posts.
+- **`feature_image` missing.** Active blog posts (not draft, not archival) must set `feature_image` to a hero image in the post's directory. New posts scaffold with the field blank — that's the starting state, not the shipping state. Two exemptions, both deliberate: `category: general` (the catch-all bucket — SEO comparisons, "what is X" explainers — which is lower-touch by design) and `draft: true` (a work in progress; the image lands before undrafting). Flag the empty field; propose running `/blog-feature-image`, labeling the PR `needs-design` for a designer-made image, or — if the post really is a catch-all — moving it to `category: general`. Posts predating the blog redesign are grandfathered; only flag posts new or changed in this PR.
 - **`social:` block missing or empty.** Active blog posts (not draft, not archival) must have a `social:` frontmatter block with at least one of `twitter`, `linkedin`, or `bluesky` populated; without it the post won't be promoted. Flag the missing/empty block; do not draft the copy (marketing owns voice).
 - **Author profile avatar missing.** `data/team/team/{author}.yaml` must reference an avatar file. Quote the missing field or the path of the file that should exist.
 

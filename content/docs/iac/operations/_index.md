@@ -29,4 +29,4 @@ These pages cover the Day 2 workflows for running Pulumi at scale.
 
 **[Container image build caching and deployment reproducibility](/docs/iac/operations/container-image-reproducibility/)** - Build caching, digest-based tagging, and a build/deploy stack split for container images built with the Docker or Docker Build providers.
 
-**[Least privilege](/docs/administration/security-compliance/least-privilege/)** - Apply least-privilege security across your Pulumi platform: cloud provider credentials, IaC and ESC access, and CI/CD. A recommended next step once your operational workflows are in place.
+**[Least privilege](/docs/administration/guides/least-privilege/)** - Apply least-privilege security across your Pulumi platform: cloud provider credentials, IaC and ESC access, and CI/CD. A recommended next step once your operational workflows are in place.

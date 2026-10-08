@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "repo": "pulumi/docs",
+  "pr": 21722,
+  "head_sha": "26974241f26e740c497148bd1295631d21e52aac",
+  "run_id": "35356000600",
+  "generated_at": "2026-09-18T14:25:12Z",
+  "high_water": 1,
+  "findings": [
+    {
+      "id": "F1",
+      "bucket": "outstanding",
+      "file": "content/docs/iac/guides/building-extending/providers/dynamic-providers.md",
+      "text": "In the widget-service example, each provider method reads the `WIDGET_API_TOKEN` environment variable itself, rather than sharing a client, because the\u2026",
+      "origin": "verdict:contradicted",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        310
+      ]
+    }
+  ],
+  "trail": [
+    {
+      "file": "content/docs/iac/guides/building-extending/providers/dynamic-providers.md",
+      "claim": "The page section anchored at `#readid-props` (titled `read(id, props)`) provides details on the `read` method limitation and a workaround for dynamic providers.",
+      "verdict": "verified",
+      "line": 42,
+      "evidence": "evidence: The heading `### read(id, props)` at line 97 slugifies to anchor `#readid-props`, and its body states: \"The `read` method is not currently functional for dynamic providers... If your use case requires importing existing resources\u2026; source: repo:content/docs/iac/guides/building-extending/providers/dynamic-providers.md",
+      "source": "repo:content/docs/iac/guides/building-extending/providers/dynamic-providers.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/building-extending/providers/dynamic-providers.md",
+      "claim": "In the widget-service example, each provider method reads the `WIDGET_API_TOKEN` environment variable itself, rather than sharing a client, because the\u2026",
+      "verdict": "contradicted",
+      "line": 310,
+      "evidence": "evidence: The cited URL https://api.example.com is a placeholder/example domain, not a real API reference; it returns a DNS resolution error (no address associated with hostname), so it cannot support the claim.; source: https://api.example.com; intuition: source_hint is a generic placeholder domain (api.example.com), suggesting the citation was never a real source for\u2026",
+      "source": "https://api.example.com",
+      "route": "pass2"
+    }
+  ],
+  "investigation_log": {
+    "cross-sibling-reads": "0 of 4 siblings",
+    "external-claim-verification": "1 of 2 claims verified (0 unverifiable, 1 contradicted) \u00b7 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations \u00b7 routed: 0 inline, 1 Pass 1, 1 Pass 2 (verified 0, contradicted 1, unverifiable 0), 0 Pass 3.",
+    "cited-claim-spot-checks": "1 of 1 cited claims fetched and compared",
+    "frontmatter-sweep": "ran on body + meta_desc",
+    "temporal-trigger-sweep": "ran (recency words present in diff; spot-check in-review)",
+    "code-execution": "not run (no `static/programs/` change)",
+    "code-examples-checks": "not run (no fenced code blocks in content files)",
+    "editorial-balance-pass": "not run (not under content/blog/)"
+  },
+  "editorial_balance": null,
+  "triaged": [],
+  "style_suggestions_count": 0,
+  "confidence": {
+    "mechanics": "TODO",
+    "facts": "TODO",
+    "cross-sibling consistency": "TODO"
+  },
+  "summary": null,
+  "stances": [
+    {
+      "file": "content/docs/iac/guides/building-extending/providers/dynamic-providers.md",
+      "text": "The following example manages a fictional widget service through its REST API at `https://api.example.com`. It reuses the same `create`/`delete` shape as the\u2026",
+      "type": "positioning",
+      "line": 310,
+      "found_by": [
+        "regex"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "ts": "2026-09-18T14:25:12Z",
+      "summary": "initial review (pending publication)",
+      "sha": "2697424"
+    }
+  ]
+}

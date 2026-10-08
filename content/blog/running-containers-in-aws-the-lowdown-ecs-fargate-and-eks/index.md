@@ -105,7 +105,7 @@ containers run in. That includes control over the precise numbers of
 servers, AMIs they are running, and their auto-scaling policies.
 
 To use an EC2 backed cluster, you will need to
-[create a cluster and configure the EC2 launch and autoscaling configurations](/docs/iac/clouds/aws/guides/ecs#creating-an-auto-scaling-group-for-ecs-cluster-instances),
+[create a cluster and configure the EC2 launch and autoscaling configurations](/docs/iac/guides/clouds/aws/ecs/#creating-an-auto-scaling-group-for-ecs-cluster-instances),
 and then simply use the awsx.ecs.EC2Service class to create your service
 instead. Other than these differences, the resulting code would look
 very similar to Option 1 - ECS Fargate above.
@@ -205,7 +205,7 @@ more about Pulumi's support for Kubernetes, [go here](/blog/pulumi-a-better-way-
 
 ## Private ECR Container Registries
 
-In all of these cases, [Amazon Elastic Container Registry (ECR)](/docs/iac/clouds/aws/guides/ecr)
+In all of these cases, [Amazon Elastic Container Registry (ECR)](/docs/iac/guides/clouds/aws/ecr/)
 lets you publish
 Docker container images to a privately hosted repository inside your AWS
 account. The benefit of this is that images are stored within your AWS
@@ -229,9 +229,9 @@ production-ready way, [get started for free with Pulumi for AWS today](/docs/iac
 After getting started, here are some additional resources to go deeper
 on specific topics:
 
-- [Getting Started with ECS](/docs/iac/clouds/aws/guides/ecs/)
+- [Getting Started with ECS](/docs/iac/guides/clouds/aws/ecs/)
 - [Getting Started with EKS](/docs/iac/clouds/aws/guides/eks/)
-- [Getting Started with ECR](/docs/iac/clouds/aws/guides/ecr/)
-    - [Using ECR from ECS Fargate or EC2](/docs/iac/clouds/aws/guides/ecs#building-and-publishing-docker-images-automatically)
-    - [Using ECR from EKS](/docs/iac/clouds/aws/guides/eks#using-an-ecr-container-image-from-an-eks-kubernetes-deployment)
+- [Getting Started with ECR](/docs/iac/guides/clouds/aws/ecr/)
+    - [Using ECR from ECS Fargate or EC2](/docs/iac/guides/clouds/aws/ecs/#building-and-publishing-docker-images-automatically)
+    - [Using ECR from EKS](/docs/iac/guides/clouds/aws/eks/#using-an-ecr-container-image-from-an-eks-kubernetes-deployment)
     - [Building and Publishing Docker Images to a Private Amazon ECR Repository](/blog/building-and-publishing-docker-images-to-a-private-amazon-ecr-repository/)

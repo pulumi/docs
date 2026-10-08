@@ -199,6 +199,20 @@ Pulumi, i.e only the following types (or pulumi.Output of those types) are allow
 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray&lt;T&gt;</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary&lt;TKey, TValue&gt;</a>
 with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> keys, <a class="xref" href="pulumi.union-2.html">Union&lt;T0, T1&gt;</a></li></ul>
 </section>
+      <h4><a class="xref" href="pulumi.discriminatedunioncaseattribute.html">DiscriminatedUnionCaseAttribute</a></h4>
+      <section><p>Attribute used to declare one member of a discriminated union interface marked with
+<a class="xref" href="pulumi.discriminateduniondiscriminatorattribute.html">DiscriminatedUnionDiscriminatorAttribute</a>. <a class="xref" href="pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute_Tag">Tag</a> is the
+discriminator property value that selects this member, and <a class="xref" href="pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute_Type">Type</a> is the
+concrete <a class="xref" href="pulumi.outputtypeattribute.html">OutputTypeAttribute</a> class to instantiate; it must implement the
+annotated interface.</p>
+</section>
+      <h4><a class="xref" href="pulumi.discriminateduniondiscriminatorattribute.html">DiscriminatedUnionDiscriminatorAttribute</a></h4>
+      <section><p>Attribute used to mark an interface that represents a discriminated union of complex
+output property types. The interface must also carry one
+<a class="xref" href="pulumi.discriminatedunioncaseattribute.html">DiscriminatedUnionCaseAttribute</a> per union member. When deserializing, the
+Pulumi runtime reads the discriminator property named by <a class="xref" href="pulumi.discriminateduniondiscriminatorattribute.html#Pulumi_DiscriminatedUnionDiscriminatorAttribute_PropertyName">PropertyName</a> from
+the raw value and instantiates the member whose tag matches.</p>
+</section>
       <h4><a class="xref" href="pulumi.enumtypeattribute.html">EnumTypeAttribute</a></h4>
       <section><p>Attribute used by a Pulumi Cloud Provider Package to mark enum types.</p>
 <p>Requirements for a struct-based enum to be (de)serialized are as follows.
@@ -357,7 +371,7 @@ in your Pulumi programs to mark outputs of <a class="xref" href="pulumi.componen
       <h4><a class="xref" href="pulumi.outputconstructorattribute.html">OutputConstructorAttribute</a></h4>
       <section><p>Attribute used by a Pulumi Cloud Provider Package to marks the constructor for a complex
 property type so that it can be instantiated by the Pulumi runtime.</p>
-<p>The constructor should contain parameters that map to the resultant <a class="xref" href="https://github.com/pulumi/protobuf/blob/master/csharp/src/Google.Protobuf/WellKnownTypes/Struct.pb.cs">Fields</a> returned by the engine.</p>
+<p>The constructor should contain parameters that map to the resultant <span class="xref">Google.Protobuf.WellKnownTypes.Struct.Fields</span> returned by the engine.</p>
 </section>
       <h4><a class="xref" href="pulumi.outputconstructorparameterattribute.html">OutputConstructorParameterAttribute</a></h4>
       <section><p>Attribute used by a Pulumi Cloud Provider Package to mark
@@ -437,8 +451,9 @@ Binds <a class="xref" href="pulumi.resourcehook.html">ResourceHook</a>s to a res
 lifecycle of the resource.
 </p>
 <p>
-<code>Before*</code> hooks that raise an exception will cause the resource operation to fail. <code>After*</code> hooks that
-raise an exception will log a warning, but do not cause the action or the deployment to fail.
+By default, an exception from a <code>Before*</code> hook causes the resource operation to fail. An exception from an
+<code>After*</code> hook fails the deployment. The resource operation itself has already succeeded, so its result is
+recorded in state. Set <a class="xref" href="pulumi.resourcehookoptions.html#Pulumi_ResourceHookOptions_IgnoreErrors">IgnoreErrors</a> on the hook to log a warning instead.
 </p>
 <p>
 When running <code>pulumi destroy</code>, <code>BeforeDelete</code> and <code>AfterDelete</code> resource hooks require the
@@ -553,7 +568,7 @@ resource will not be transformed.</p>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.109.0</p>
+    <p class="sdk-version">Version 3.114.1</p>
               <div class="contribution">
                 <ul class="nav">
                 </ul>

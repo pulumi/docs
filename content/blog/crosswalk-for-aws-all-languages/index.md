@@ -44,7 +44,7 @@ Crosswalk for AWS is the easiest way to get started with core compute and applic
 
 These libraries use automatic well-architected best practices to make common infrastructure as code tasks in AWS easier and more secure.
 
-Crosswalk for AWS is available to users in all Pulumi languages, [TypeScript](https://www.pulumi.com/docs/languages-sdks/javascript), [Python](https://www.pulumi.com/docs/languages-sdks/python), [.NET](https://www.pulumi.com/docs/languages-sdks/dotnet), [Go](https://www.pulumi.com/docs/languages-sdks/go), [Java](https://www.pulumi.com/docs/languages-sdks/java) and [YAML](https://www.pulumi.com/docs/languages-sdks/yaml). The AWSx package now joins the existing API Gateway and EKS packages in the Pulumi Registry, available in all Pulumi languages.
+Crosswalk for AWS is available to users in all Pulumi languages, [TypeScript](/docs/iac/languages-sdks/javascript/), [Python](/docs/iac/languages-sdks/python/), [.NET](/docs/iac/languages-sdks/dotnet/), [Go](/docs/iac/languages-sdks/go/), [Java](/docs/iac/languages-sdks/java/) and [YAML](/docs/iac/languages-sdks/yaml/). The AWSx package now joins the existing API Gateway and EKS packages in the Pulumi Registry, available in all Pulumi languages.
 
 ![Crosswalk for AWS diagram](arch.png)
 
@@ -851,13 +851,13 @@ export const vpcId = vpc.Id;
 
 ## What’s Next?
 
-Crosswalk for AWS is free and open source, and you can [get started](https://www.pulumi.com/docs/iac/clouds/aws/guides/) today.
+Crosswalk for AWS is free and open source, and you can [get started](/docs/iac/guides/clouds/aws/) today.
 
 For more on Crosswalk for AWS see:
 
-- [Pulumi Crosswalk for AWS API Gateway documentation](/docs/iac/clouds/aws/guides/api-gateway/)
-- [Pulumi Crosswalk for AWS Auto Scaling documentation](/docs/iac/clouds/aws/guides/autoscaling/)
-- [Pulumi Crosswalk for AWS Elastic Container Registry (ECR) documentation](/docs/iac/clouds/aws/guides/ecr)
-- [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)](/docs/iac/clouds/aws/guides/eks)
-- [Pulumi Crosswalk for AWS Elastic Load Balancing (ELB)](/docs/iac/clouds/aws/guides/elb)
-- [Pulumi Crosswalk for AWS Virtual Private Cloud (VPC)](/docs/iac/clouds/aws/guides/vpc)
+- [Pulumi Crosswalk for AWS API Gateway documentation](/docs/iac/guides/clouds/aws/api-gateway/)
+- [Pulumi Crosswalk for AWS Auto Scaling documentation](/docs/iac/guides/clouds/aws/)
+- [Pulumi Crosswalk for AWS Elastic Container Registry (ECR) documentation](/docs/iac/guides/clouds/aws/ecr/)
+- [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)](/docs/iac/guides/clouds/aws/eks/)
+- [Pulumi Crosswalk for AWS Elastic Load Balancing (ELB)](/docs/iac/guides/clouds/aws/elb/)
+- [Pulumi Crosswalk for AWS Virtual Private Cloud (VPC)](/docs/iac/guides/clouds/aws/vpc/)

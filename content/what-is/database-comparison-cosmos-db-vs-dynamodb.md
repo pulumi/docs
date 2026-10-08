@@ -4,30 +4,10 @@ meta_desc: |
      Compare NoSQL databases Cosmos DB vs DynamoDB. See the similarities and differences between these databases to determine which is best for you.
 
 type: what-is
+date: 2022-09-26T07:16:39-07:00
 page_title: "Database Comparison: Cosmos DB vs DynamoDB"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
-authors: ["kat-cosgrove"]
+authors: ["pulumi-content-team"]
 ---
 {{% notes type="info" %}}
 **This document has been updated and expanded into [Cosmos DB vs DynamoDB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/#dynamo-db-vs-cosmos-db) section of the [When to use Cosmos DB Guide](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/).**
@@ -35,7 +15,7 @@ authors: ["kat-cosgrove"]
 
 ## Cosmos DB vs DynamoDB: What Are The Similarities?
 
-Both Cosmos DB and DynamoDB are [NoSQL](/tutorials/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs.
+Both Cosmos DB and DynamoDB are [NoSQL](/dev/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs.
 
 Cosmos DB and DynamoDB are both highly-available, scalable, globally distributed and fully-managed serverless NoSQL databases. Both function as document&ndash; or key-value&ndash;based databases.
 
@@ -63,4 +43,4 @@ DynamoDB is best if the rest of your infrastructure is already on AWS or your pr
 
 Often, the deciding factor isn't the feature matrix at all: it's which cloud you already operate in. Both databases are managed, globally distributed, and fast enough that the day-to-day differences rarely outweigh the cost of running across two providers. Cosmos DB's extra data models and SQL-style queries matter when you actually need them, but if your stack lives on AWS or Azure, the gravity of your existing IAM, networking, and billing tends to settle the question before any benchmark does.
 
-Pulumi can provision either one as infrastructure as code in the language you already use. Try [Cosmos DB](/blog/how-to-build-globally-distributed-applications-with-azure-cosmos-db-and-pulumi/) and [DynamoDB](/docs/aws/dynamodb/) for yourself.
+Pulumi can provision either one as infrastructure as code in the language you already use. Try [Cosmos DB](/blog/how-to-build-globally-distributed-applications-with-azure-cosmos-db-and-pulumi/) and [DynamoDB](/docs/iac/guides/clouds/aws/) for yourself.

@@ -12,9 +12,7 @@ aliases:
 
 sections:
   - type: hero
-    title_primary: Centralized configuration,
-    title_secondary: "zero sprawl."
-    title_reversed: false
+    title: "*Centralized configuration,* <br>zero sprawl."
     description: Compose, manage, and share configuration and secrets across environments with Pulumi ESC.
     image: /images/product/secrets-management/esc-hero.svg
     image_alt: Pulumi ESC secrets management — connect any secrets store
@@ -53,8 +51,7 @@ sections:
       With Pulumi ESC, our developers get dynamic AWS and Azure credentials on-demand. Onboarding new developers is quick and secure, with no more manually filling in .env templates.
     author: Liam White
     title: Platform Lead
-    company: Tetrate
-    logo: /logos/tech/tetrate.svg
+    customer: tetrate
     anchor: testimonial-tetrate
 
   - type: section_header
@@ -101,19 +98,18 @@ sections:
       Pulumi ESC has been a lifesaver for us. It's nice to throw everything behind an ESC environment and eliminate one-off granting IAM permissions and other issues related to static credentials.
     author: Jk Jensen
     title: Software Engineering Team Lead
-    company: Mysten Labs
-    logo: /logos/tech/mysten-labs.svg
+    customer: mysten-labs
     anchor: testimonial-mysten
 
   - type: two_column
     highlight_first_card: true
     columns:
       - title: Start managing secrets today
-        description: Experience enterprise-grade secrets management with Pulumi Cloud's free tier.
+        description: Experience enterprise-grade secrets management with Pulumi Cloud's Free edition.
         cta_primary_text: Start Free
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo
-        cta_link: /contact/?form=request-a-demo
+        cta_link: /request-a-demo/
       - title: Learn more
         description: Explore the documentation and Get Started guides to implement ESC in your infrastructure.
         cta_primary_text: Read the Docs

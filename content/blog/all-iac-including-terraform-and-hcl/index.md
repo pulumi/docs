@@ -13,11 +13,11 @@ tags:
 category: product
 ---
 
-We work with thousands of customers who prefer Pulumi due to our modern approach to infrastructure that delivers faster time to market with built-in security and compliance. Yet we know many organizations have years of investments into tools like Terraform. At the same time, HashiCorp customers are increasingly telling us about their frustrations post-IBM acquisition: rate increases, loss of open source heritage, overnight rug-pull of CDKTF, … and the hits just keep on coming. Today, we’re excited to announce three new ways Pulumi is enabling customers of HashiCorp, an IBM Company, who want a better, open source friendly, modern solution for their IaC to choose Pulumi. First, Pulumi Cloud will support Terraform and OpenTofu, so you can continue using any Terraform or Pulumi CLI and language with the complete Pulumi Cloud product, including our infrastructure engineering AI agent, Neo. Second, Pulumi’s own open source IaC tool will support HCL natively as one of its many languages, alongside the industry’s best languages including Python, TypeScript, Go, C#, Java, and YAML. Pulumi is multi-language at its core and many organizations are diverse and polyglot—these new capabilities truly make Pulumi the most universal IaC platform with the broadest support. Third, we’re offering flexible financing to make it easy to depart HashiCorp for Pulumi.
+We work with thousands of customers who prefer Pulumi due to our modern approach to infrastructure that delivers faster time to market with built-in security and compliance. Yet we know many organizations have years of investments into tools like Terraform. At the same time, HashiCorp customers are increasingly telling us about their frustrations post-IBM acquisition: rate increases, loss of open source heritage, overnight rug-pull of CDKTF, … and the hits just keep on coming. Today, we’re excited to announce three new ways Pulumi is enabling customers of HashiCorp, an IBM Company, who want a better, open source friendly, modern solution for their IaC to choose Pulumi. First, Pulumi Cloud will support Terraform and OpenTofu, so you can continue using any Terraform or Pulumi CLI and language with the complete Pulumi Cloud product, including our infrastructure engineering AI agent, Neo. Second, Pulumi’s own open source IaC tool will support HCL natively as one of its many languages, alongside the industry’s best languages including Python, TypeScript, Go, .NET, Java, and YAML. Pulumi is multi-language at its core and many organizations are diverse and polyglot—these new capabilities truly make Pulumi the most universal IaC platform with the broadest support. Third, we’re offering flexible financing to make it easy to depart HashiCorp for Pulumi.
 
 ## The TL;DR
 
-Pulumi Cloud now manages Terraform/OpenTofu with full visibility, governance, and agentic AI included. Pulumi IaC now speaks HCL alongside general purpose languages and YAML. And we'll cover your costs until your HashiCorp contract ends.
+Pulumi Cloud now manages Terraform/OpenTofu with full visibility, governance, and agentic infrastructure included. Pulumi IaC now speaks HCL alongside general purpose languages and YAML. And we'll cover your costs until your HashiCorp contract ends.
 
 ## Terraform/OpenTofu in Pulumi Cloud
 
@@ -33,7 +33,7 @@ Support for Terraform/OpenTofu state is generally available today, and we're wor
 
 ## HCL Language Support in Pulumi IaC
 
-At Pulumi, we love our languages. We now support six – depending on how you count: Python, TypeScript, Go, any .NET language (like C#), and any JVM language (like Java itself), and even YAML. Having this broad array of languages is a massive unlock: you suddenly get access to the full ecosystem of tooling and expertise around these languages, including rich syntax (for loops, if statements, functions), IDEs, testing frameworks, true sharing and reuse, and ensuring that LLMs deeply understand your IaC. This choice of language is then married with the best of declarative IaC, so you still get the belts and suspenders safety of a desired state IaC tool.
+At Pulumi, we love our languages. We now support seven – depending on how you count: Python, TypeScript, JavaScript, Go, any .NET language (like C#), and any JVM language (like Java itself), and even YAML. Having this broad array of languages is a massive unlock: you suddenly get access to the full ecosystem of tooling and expertise around these languages, including rich syntax (for loops, if statements, functions), IDEs, testing frameworks, true sharing and reuse, and ensuring that LLMs deeply understand your IaC. This choice of language is then married with the best of declarative IaC, so you still get the belts and suspenders safety of a desired state IaC tool.
 
 But we work with customers all the time where some of the team is more comfortable with and/or genuinely prefers HCL. The HCL language was purpose-built for IaC through Terraform and, now, OpenTofu and is easy for simple use cases. We actually shipped YAML support two years ago because it’s an industry standard and we kept hearing about simpler use cases where you didn’t need a full blown language (especially e.g. when code-generating IaC or supporting simple developer self-service CI/CD pipelines where a handful of lines of YAML do the trick). But despite that, there’s a ton of muscle memory with HCL in the IaC community.
 
@@ -43,7 +43,7 @@ The good news is that this is not a bolt on. Just like any of the other Pulumi l
 
 HCL support also integrates with Pulumi’s multi-language technology in a deep way, so that you can author modules in one language and consume them from another. This will let, for example, platform teams author complex components in, say, Go – with the rich facilities offered by the language – and then expose them to teammates who consume them in HCL (or vice versa!)
 
-Similar to Terraform support in Pulumi Cloud, HCL is now generally available as a first-class Pulumi language, alongside Python, TypeScript, Go, C#, Java, and YAML.
+Similar to Terraform support in Pulumi Cloud, HCL is now generally available as a first-class Pulumi language, alongside Python, TypeScript, JavaScript, Go, .NET, Java, and YAML.
 
 ## Builds on Existing Coexist/Convert Capabilities
 
@@ -81,7 +81,7 @@ For example:
 
 * [Lemonade](https://www.pulumi.com/case-studies/lemonade/) switched from Terraform to Pulumi so they could embed business logic into infrastructure, share and reuse logic, and scale their lean ops team to support a much larger group of developers. "We're not limited to one-size-fits-all configurations, but can actually implement environment-specific customizations for our infrastructure."
 
-* [BMW](https://www.pulumi.com/case-studies/bmw/) was able to establish a center of infrastructure excellence that they call CodeCraft, standardizing all infrastructure delivery, and scaling to support 10,000+ developers.
+* [BMW](https://www.pulumi.com/case-studies/bmw/) was able to establish a center of infrastructure excellence that they call CodeCraft, standardizing all infrastructure delivery, and managing more than 20,000 cloud resources with Python-based infrastructure code.
 
 * [Supabase](https://www.pulumi.com/case-studies/supabase/) was able to scale to meet the heightened demands and pace of AI, saying that “the infrastructure team acts as groundkeepers of our Pulumi practices, not gatekeepers, but promoters for the entire org."
 

@@ -61,7 +61,7 @@ KNOWN_UNMANGLED: dict[str, list[str]] = {
     "docs/iac/guides/testing/unit/index.md": ["</artifactId>"],
     "docs/iac/get-started/terraform/terraform-modules/index.md": ["</artifactId>"],
     # Phase 2 follow-up: `<project>` (a `<p…>` token) was eaten from a prose inline-code span.
-    "docs/administration/access-identity/oidc-issuers/gitlab/index.md": ["<namespace>/<project>"],
+    "docs/administration/guides/oidc-issuers/gitlab/index.md": ["<namespace>/<project>"],
 }
 
 

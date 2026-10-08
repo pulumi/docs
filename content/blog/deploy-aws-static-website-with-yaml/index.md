@@ -106,7 +106,7 @@ To get started, go to the folder that contains your static website project. Then
     │   ├── Pulumi.yaml
     ```
 
-    **Note:** Pulumi will also add some other files to the **infrastructure** directory, such as a file that contains information specific to your Pulumi [stack](/docs/concepts/stack/).
+    **Note:** Pulumi will also add some other files to the **infrastructure** directory, such as a file that contains information specific to your Pulumi [stack](/docs/iac/concepts/stacks/).
 
 1. Copy the resources section and the outputs section from the example and add it to the end of the **Pulumi.yaml** file.
 
@@ -199,7 +199,7 @@ If you’re curious and want to learn more about Pulumi and the AWS Static Websi
 * If you want to learn about other Pulumi components, take a look at the [registry page](/registry/), which catalogs them all.
 * If you want to view more examples of how to use Pulumi, take a look at the Pulumi [examples](https://github.com/pulumi/examples) repo.
 * If you want to delve deeper into Pulumi, the [Getting Started](/docs/get-started/) guide is a good first step.
-* If you’re interested in learning more about Pulumi concepts, try the [Concepts](/docs/concepts/) page.
+* If you’re interested in learning more about Pulumi concepts, try the [Concepts](/docs/iac/concepts/) page.
 
 ## <a name="install"></a> Install Pulumi
 

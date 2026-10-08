@@ -17,14 +17,14 @@ This page is the canonical reference for Neo's permissions model: what Neo can d
 
 Neo acts on behalf of the user invoking it, and Neo can only do what that user could do themselves.
 
-- Neo operates within the acting user's [role-based access control (RBAC)](/docs/administration/access-identity/rbac/) entitlements and cannot perform actions that user couldn't perform.
+- Neo operates within the acting user's [role-based access control (RBAC)](/docs/administration/concepts/rbac/) entitlements and cannot perform actions that user couldn't perform.
 - No privilege escalation: Neo never gets more access than the user has, only the same or less.
 - Tasks are private to the user who created them. That user can [share a task](/docs/ai/neo/tasks/#ownership-and-sharing) with the rest of the organization as a read-only link: viewers see the conversation but cannot act through it, and any stack or resource it links to still enforces the viewer's own RBAC.
 
 The rest of this page describes which user Neo acts as on each surface, the ceiling that user's RBAC sets, and the controls that narrow it further.
 
 {{% notes type="info" %}}
-Neo has no identity of its own: by default a task carries the acting user's full set of [role](/docs/administration/access-identity/rbac/) assignments. On Enterprise and Business Critical editions, a task can instead assume a single role, and then runs with that role's permissions in place of the user's own assignments. You can only assume a role you already hold, so this narrows Neo's access and never widens it. Per-task roles are still rolling out; if your organization doesn't have them yet, the levers for constraining Neo are the acting user's RBAC and the ESC environments they can open.
+Neo has no identity of its own: by default a task carries the acting user's full set of [role](/docs/administration/concepts/rbac/) assignments. On the Pro and Enterprise editions, a task can instead assume a single role, and then runs with that role's permissions in place of the user's own assignments. You can only assume a role you already hold, so this narrows Neo's access and never widens it. Per-task roles are still rolling out; if your organization doesn't have them yet, the levers for constraining Neo are the acting user's RBAC and the ESC environments they can open.
 {{% /notes %}}
 
 ## Execution identity per surface
@@ -54,12 +54,12 @@ Neo's access ceiling is the acting user's RBAC. Within that ceiling, Neo reads b
 | Environments and secrets ([ESC](/docs/esc/)) | Any environment the user can open — including decrypting secrets and minting dynamic cloud credentials | Through ESC code changes where the environment is managed in IaC; otherwise Neo edits the environment definition directly. Environments with [update approvals](/docs/esc/concepts/approvals/) force those edits into a draft that a reviewer must approve. |
 | Deployment settings | Settings the user can read | Through code and pull requests where the settings are managed in IaC; otherwise Neo edits them directly through the API. |
 | Policy packs | Packs and results the user can read | No direct management of policy packs. |
-| Insights / discovery (cloud) accounts | Accounts and scan results the user can read | No direct management of accounts. |
+| Cloud accounts | Accounts and scan results the user can read | No direct management of accounts. |
 | Audit logs | Logs, if the user holds an audit-log read permission (typically Admin) | Read-only resource. |
 
 ### ESC, secrets, and downstream cloud access
 
-Neo inherits the acting user's ESC access. If the user can [open](/docs/administration/access-identity/rbac/) an environment (the `environment:open` permission), so can Neo — which means Neo can decrypt that environment's secrets and use any dynamic cloud credentials it mints. If an environment brokers OIDC credentials to an AWS, Azure, or Google Cloud account, Neo can assume those roles and operate in that cloud account, exactly as the user could.
+Neo inherits the acting user's ESC access. If the user can [open](/docs/administration/concepts/rbac/) an environment (the `environment:open` permission), so can Neo — which means Neo can decrypt that environment's secrets and use any dynamic cloud credentials it mints. If an environment brokers OIDC credentials to an AWS, Azure, or Google Cloud account, Neo can assume those roles and operate in that cloud account, exactly as the user could.
 
 This has two consequences worth stating plainly:
 
@@ -124,16 +124,16 @@ Neo's version control writes do not run as you. Neo authenticates as the shared 
 | Provider | Neo writes as | Individual access | Notes |
 | :--- | :--- | :--- | :--- |
 | GitHub.com | The shared Pulumi GitHub App for all VCS interactions (opening PRs, pushing commits, PR comments, checks); your connected GitHub account for creating repositories | **Required** to create repositories and to trigger [Neo code reviews](/docs/ai/neo/code-reviews/); optional otherwise | When a task needs individual access you don't have connected, Neo posts a nudge prompting you to grant it. |
-| GitHub Enterprise Server | The shared app installation by default; your connected account when individual user authentication is enabled | Enabled per integration by an admin, then connected per user | Business Critical edition. Scheduled Neo tasks and API-created operations always use the shared installation. |
-| Azure DevOps | The org integration handles PR comments and deployments; individual access lets Neo create repositories | Optional | Neo posts PR reviews when enabled (the default). |
-| GitLab | The org integration handles MR comments and deployments; individual access lets Neo create repositories | Optional | Neo posts MR reviews when enabled (the default). |
-| Bitbucket | The org integration handles PR comments and deployments; individual access lets Neo create repositories | Optional | Neo posts PR reviews when enabled (the default). |
+| GitHub Enterprise Server | The shared app installation by default; your connected account when individual user authentication is enabled | Enabled per integration by an admin, then connected per user | Enterprise edition. Scheduled Neo tasks and API-created operations always use the shared installation. |
+| Azure DevOps | The org integration for repository reads and writes; individual access lets Neo create repositories | Optional | Neo does not comment on Azure DevOps pull requests. [Neo code reviews](/docs/ai/neo/code-reviews/) are GitHub-only, and the integration's pull request comments come from Pulumi Deployments, not Neo. |
+| GitLab | The org integration for repository reads and writes; individual access lets Neo create repositories | Optional | Neo does not comment on GitLab merge requests. [Neo code reviews](/docs/ai/neo/code-reviews/) are GitHub-only, and the integration's merge request comments come from Pulumi Deployments, not Neo. |
+| Bitbucket | The org integration for repository reads and writes; individual access lets Neo create repositories | Optional | Neo does not comment on Bitbucket pull requests. [Neo code reviews](/docs/ai/neo/code-reviews/) are GitHub-only, and the integration's pull request comments come from Pulumi Deployments, not Neo. |
 | [Custom VCS](/docs/integrations/version-control/custom-vcs/) | The credentials from the integration's ESC environment — a shared identity belonging to whoever configured the integration | N/A | Neo can clone and push (Git and Mercurial) but cannot open pull requests or create repositories on Custom VCS servers. |
 
 ## Learn more
 
-- [Role-based access control](/docs/administration/access-identity/rbac/) — the permission model Neo inherits
-- [Least-privilege access](/docs/administration/security-compliance/least-privilege/) — scoping down what a user, and so Neo, can do
+- [Role-based access control](/docs/administration/concepts/rbac/) — the permission model Neo inherits
+- [Least-privilege access](/docs/administration/guides/least-privilege/) — scoping down what a user, and so Neo, can do
 - [Pulumi ESC](/docs/esc/) — environments, secrets, and dynamic credentials
 - [ESC approvals](/docs/esc/concepts/approvals/) — review gates on opening and updating an environment
 - [Tasks](/docs/ai/neo/tasks/) — Plan Mode and approval modes in depth

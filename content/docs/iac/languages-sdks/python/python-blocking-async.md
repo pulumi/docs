@@ -36,7 +36,7 @@ For asynchronous code the coroutine or other awaitable result can also be passed
 
 ## Background
 
-As covered in [Concepts](/docs/intro/concepts), when a Pulumi program is run it creates resources and the dependencies or
+As covered in [Concepts](/docs/iac/concepts/), when a Pulumi program is run it creates resources and the dependencies or
 connections between them. Consider the following example (taken from the Pulumi
 blog article [Programming the Cloud with Python](/blog/programming-the-cloud-with-python)):
 
@@ -87,7 +87,7 @@ This can cause problems both with blocking code and with explicitly asynchronous
 - Blocking code will prevent the event loop on the Pulumi program’s thread from
   pumping while the blocking code is executing
 - Asynchronous code may not be executed unless it is explicitly scheduled. For example, it is
-  not possible to call `asyncio.run` from within a Pulumi program because there is already an event loop running. Instead, register an async entrypoint with `pulumi.run`, described in [Async program entrypoint](#async-program-entrypoint) below.
+  not possible to call `asyncio.run` from within a Pulumi program because there is already an event loop running. Instead, register an async entrypoint with `pulumi.run`, described in [Async program entrypoint](#async-program-entrypoint) below (requires version 3.254.0 or later of the Pulumi Python SDK).
 
 ### Blocking Code
 
@@ -147,14 +147,14 @@ async def async_operation(foo: str) -> str:
   """
   proc = await asyncio.create_subprocess_shell(
     f'my-cli {shlex.quote(foo)}',
-    stdout=asyncio.subprocess.PIPE
+    stdout=asyncio.subprocess.PIPE,
     stderr=asyncio.subprocess.PIPE)
 
   stdout, stderr = await proc.communicate()
 
-  if proc.returncode is not 0:
+  if proc.returncode != 0:
     raise Exception(f'my-cli returned {proc.returncode}: {stderr.decode()}')
-  return stdout.decode
+  return stdout.decode()
 
 # Calling an async function directly (without the await keyword) returns a
 # coroutine

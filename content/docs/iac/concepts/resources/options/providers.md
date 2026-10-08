@@ -30,7 +30,7 @@ The first match wins. So a child resource created with a component as its parent
 
 A component can be instantiated multiple times against different sets of providers. Suppose `MyComponent` deploys a regional AWS database alongside a Helm chart on a Kubernetes cluster in the same region. To run the component in two regions from a single Pulumi program, declare a separate AWS provider and Kubernetes provider for each region, then pass the matching pair into each component instance via the `providers` map.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -174,6 +174,39 @@ var east = new MyComponent("east", new MyComponentArgs(),
 var west = new MyComponent("west", new MyComponentArgs(),
     ComponentResourceOptions.builder().providers(awsWest, k8sWest).build());
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  alias  = "east"
+  region = "us-east-1"
+}
+
+provider "aws" {
+  alias  = "west"
+  region = "us-west-2"
+}
+
+module "east" {
+  source = "./my-component"
+
+  providers = {
+    aws = aws.east
+  }
+}
+
+module "west" {
+  source = "./my-component"
+
+  providers = {
+    aws = aws.west
+  }
+}
+```
+
+In HCL, components are modules, and explicit providers are passed with the standard Terraform `providers` map on the module block.
 
 {{% /choosable %}}
 

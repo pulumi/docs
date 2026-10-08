@@ -121,7 +121,7 @@ significantly easier to stand up a production-ready EKS cluster.
 
 ## Pulumi CDK adapter
 
-The [Pulumi CDK adapter](/docs/iac/guides/clouds/aws/cdk/) allows you to use AWS CDK constructs — including CDK's L2 and L3 constructs —
+The [Pulumi CDK adapter](/dev/tutorials/aws-cdk/) allows you to use AWS CDK constructs — including CDK's L2 and L3 constructs —
 directly within a Pulumi program. The most common scenarios for reaching for it are:
 
 - Your organization has existing CDK constructs you want to reuse during a migration to Pulumi.
@@ -131,7 +131,7 @@ directly within a Pulumi program. The most common scenarios for reaching for it 
 For new infrastructure, use the native providers and component libraries. Most organizations that adopt the CDK
 adapter do so as a transitional step rather than a long-term strategy.
 
-See the [Pulumi CDK guide](/docs/iac/guides/clouds/aws/cdk/) for more detail.
+See the [Pulumi CDK adapter tutorial](/dev/tutorials/aws-cdk/) for more detail.
 
 ## Choosing the right package
 
@@ -161,7 +161,7 @@ patterns quickly and want Pulumi to handle the low-level resource wiring. They a
 who want sensible defaults without becoming experts in every service's configuration details.
 
 For teams with strong infrastructure opinions or custom requirements — for example, an organization with specific
-VPC design standards — you may prefer to use the AWS provider directly and build your own [Pulumi components](/docs/iac/concepts/resources/components/).
+VPC design standards — you may prefer to use the AWS provider directly and build your own [Pulumi components](/docs/iac/concepts/components/).
 The component libraries and the AWS provider work well alongside one another in the same stack, so you can adopt
 them selectively.
 
@@ -196,5 +196,5 @@ records the combined state in your [Pulumi Cloud](https://app.pulumi.com) backen
 - [AWSx documentation](/registry/packages/awsx/)
 - [AWS API Gateway documentation](/registry/packages/aws-apigateway/)
 - [Amazon EKS documentation](/registry/packages/eks/)
-- [Pulumi CDK adapter guide](/docs/iac/guides/clouds/aws/cdk/)
+- [Pulumi CDK adapter tutorial](/dev/tutorials/aws-cdk/)
 - [Get started with AWS](/docs/iac/get-started/aws/)

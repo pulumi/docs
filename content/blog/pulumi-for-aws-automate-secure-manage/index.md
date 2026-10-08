@@ -22,6 +22,8 @@ Stop by the Pulumi re:Invent booth #370 this week to chat with experts on the Pu
 
 <!--more-->
 
+{{% hcl-note %}}
+
 ## Why Pulumi for AWS?
 
 Pulumi empowers your organization to automate AWS cloud infrastructure through code, tame secrets sprawl through centralized secrets management, and manage cloud assets and compliance with the help of AI. Pulumi encourages infrastructure, platform, development, DevOps, and security teams to collaborate and accelerates time to market with greater control and minimized risk.
@@ -56,7 +58,7 @@ Many AWS customers build [internal developer platforms](/product/internal-develo
 
 In 2022, Pulumi brought the ability to use AWS Cloud Development Kit (CDK) constructs from within a Pulumi deployment. For users already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering improved deployment speed and integration with the full set of features of the Pulumi Platform. Even better, you can also now combine AWS CDK and Pulumi resources in a single Pulumi infrastructure as code project - passing outputs from Pulumi resources into AWS CDK constructs, and outputs from AWS CDK constructs into Pulumi resources.
 
-AWS Cloud Development Kit (CDK) on Pulumi is now generally available. This powerful integration includes full support for CDK features like assets, custom resources, aspects, and context values/methods. It provides access to the full ecosystem of over 1,200 CDK Construct libraries, and it also supports all 180+ Pulumi providers, allowing for CDK applications to include resources outside of AWS.
+AWS Cloud Development Kit (CDK) on Pulumi is now generally available. This powerful integration includes full support for CDK features like assets, custom resources, aspects, and context values/methods. It provides access to the full ecosystem of over 1,200 CDK Construct libraries, and it also supports hundreds of Pulumi providers, allowing for CDK applications to include resources outside of AWS.
 
 [Read more about AWS CDK on Pulumi](/blog/aws-cdk-on-pulumi-1.0/)
 

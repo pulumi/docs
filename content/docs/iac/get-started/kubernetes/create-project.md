@@ -166,6 +166,24 @@ $ pulumi new kubernetes-yaml
 {{% /choosable %}}
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ pulumi new kubernetes-hcl
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new kubernetes-hcl
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 
 The `pulumi new` command interactively walks through initializing a new project, as well as creating a [**stack**](/docs/iac/concepts/stacks) and [**configuring**](/docs/iac/concepts/config) it. A stack is an instance of your project and you may have many of them -- like `dev`, `staging`, and `prod` -- each with different configuration settings.
 
@@ -207,11 +225,17 @@ After the command completes, the project and stack will be ready.
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+After the command completes, the project and stack will be ready.
+
+{{% /choosable %}}
+
 ### Review your new project's contents
 
 Review some of the generated project files:
 
-{{% choosable language "typescript,python,go,csharp,java" %}}
+{{% choosable language "typescript,python,go,csharp,java,hcl" %}}
 
 - `Pulumi.yaml` defines the [project](/docs/iac/concepts/projects/).
 
@@ -237,7 +261,7 @@ Review some of the generated project files:
 
 {{% /choosable %}}
 
-{{% choosable language "typescript,go,csharp,java" %}}
+{{% choosable language "typescript,go,csharp,java,hcl" %}}
 
 - <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
 
@@ -245,7 +269,7 @@ Review some of the generated project files:
 
 Examine {{< langfile >}}:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -273,9 +297,7 @@ export const name = deployment.metadata.name;
 """A Kubernetes Python Pulumi program"""
 
 import pulumi
-from pulumi_kubernetes.apps.v1 import Deployment, DeploymentSpecArgs
-from pulumi_kubernetes.meta.v1 import LabelSelectorArgs, ObjectMetaArgs
-from pulumi_kubernetes.core.v1 import ContainerArgs, PodSpecArgs, PodTemplateSpecArgs
+from pulumi_kubernetes.apps.v1 import Deployment
 
 app_labels = { "app": "nginx" }
 
@@ -456,7 +478,7 @@ public class App {
                     .build());
 
             var name = deployment.metadata()
-                .applyValue(m -> m.orElseThrow().name().orElse(""));
+                .applyValue(m -> m.name().orElse(""));
 
             ctx.export("name", name);
         });
@@ -497,6 +519,53 @@ resources:
 outputs:
   name: ${deployment.metadata.name}
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source = "pulumi/kubernetes"
+    }
+  }
+}
+
+locals {
+  app_labels = {
+    app = "nginx"
+  }
+}
+
+resource "kubernetes_apps_v1_deployment" "deployment" {
+  spec = {
+    selector = {
+      match_labels = local.app_labels
+    }
+    replicas = 1
+    template = {
+      metadata = {
+        labels = local.app_labels
+      }
+      spec = {
+        containers = [{
+          name  = "nginx"
+          image = "nginx"
+        }]
+      }
+    }
+  }
+}
+
+output "name" {
+  value = kubernetes_apps_v1_deployment.deployment.metadata.name
+}
+```
+
+The `pulumi/kubernetes` source selects the Pulumi Kubernetes provider, whose resource types follow the Kubernetes
+API groups directly. See [Pulumi HCL](/docs/iac/languages-sdks/hcl/) for how provider sources resolve.
 
 {{% /choosable %}}
 

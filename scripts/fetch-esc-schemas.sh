@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# Fetches the JSON schemas for every ESC provider and rotator from the Pulumi
-# Cloud REST API and writes them to data/esc_schemas.json, the single source of
-# truth for the auto-generated schema-reference tables on the ESC provider and
-# rotator pages (content/docs/esc/providers/**).
+# Fetches the JSON schemas for every ESC provider and rotator, plus the schema
+# for the built-in `context` object, from the Pulumi Cloud REST API and writes
+# them to data/esc_schemas.json, the single source of truth for the
+# auto-generated schema-reference tables on the ESC provider and rotator pages
+# (content/docs/esc/providers/**) and for the built-in properties reference
+# (content/docs/esc/concepts/builtin-properties.md).
 #
 # These endpoints require authentication, so this script is NOT part of the
 # normal `make ensure` build (which must work without a token). It is run by the
@@ -48,11 +50,44 @@ for kind in providers rotators; do
   done <<< "$names"
 done
 
+# The built-in `context` object is a singleton: there is no list endpoint and no
+# name, so it gets its own fetch rather than joining the loop above.
+echo "Fetching ESC context schema..."
+fetch /api/esc/context/schema "$WORKDIR/context.json"
+
 # Assemble the combined, sorted, pretty-printed data file for stable diffs.
 python3 - "$WORKDIR" "$OUTPUT" <<'PY'
 import json
 import os
 import sys
+
+
+def normalize(node):
+    """Impose a total order on the schema so equal content serializes equally.
+
+    The API returns order-insignificant arrays in a nondeterministic order --
+    `rotateOnly` on the mysql and postgres rotators has been observed to flip
+    between runs. Left alone that produces a nightly diff when nothing actually
+    changed, which auto-merges a no-op PR and falsely advances the "last
+    updated" date the provider pages render.
+
+    Arrays whose elements are all strings (`required`, `enum`, `rotateOnly`,
+    and JSON Schema's array form of `type`) are sets, so sorting them loses
+    nothing. Arrays of objects (`examples`, `oneOf`, `anyOf`) carry presentation
+    order that the docs templates render as written, so they are left alone --
+    and their nesting is still normalized.
+
+    Dict key order is handled separately, by json.dump(sort_keys=True).
+    """
+    if isinstance(node, dict):
+        return {key: normalize(value) for key, value in node.items()}
+    if isinstance(node, list):
+        items = [normalize(value) for value in node]
+        if items and all(isinstance(item, str) for item in items):
+            return sorted(items)
+        return items
+    return node
+
 
 workdir, output = sys.argv[1], sys.argv[2]
 result = {}
@@ -64,9 +99,19 @@ for kind in ("providers", "rotators"):
             schemas[name] = json.load(f)
     result[kind] = schemas
 
+# Unlike the provider/rotator endpoints, which return the schema document
+# directly, the context endpoint wraps it as {"schema": {...}}. Unwrap it so all
+# three top-level keys are shaped alike, and fail loudly if it's missing — a
+# silently empty object would render an empty properties reference.
+with open(os.path.join(workdir, "context.json")) as f:
+    context = json.load(f)
+if "schema" not in context:
+    sys.exit("error: /api/esc/context/schema response has no 'schema' key")
+result["context"] = context["schema"]
+
 os.makedirs(os.path.dirname(output), exist_ok=True)
 with open(output, "w") as f:
-    json.dump(result, f, indent=2, sort_keys=True)
+    json.dump(normalize(result), f, indent=2, sort_keys=True)
     f.write("\n")
 PY
 

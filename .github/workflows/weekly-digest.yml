@@ -1,9 +1,19 @@
 name: Weekly review digest
 
-# Replaces the recurring docs review meeting with two Slack messages to
-# #docs-ops every Monday: one for the PR review queue, one for the issue
-# backlog. A single deterministic collection pass (digest.py) feeds one
-# Claude synthesis call, whose two outputs post as two separate messages.
+# Replaces the recurring docs review meeting with one Slack message to
+# #docs-ops every Monday: what needs a human this week, the Sentinel-green
+# PRs ready to merge, a search link per team's review queue, the SLA sweep's
+# verdicts (overdue reviews by team, abandoned PRs), and one line each for
+# review-loop outcomes, failed runs, and lane switches.
+#
+# collect (digest.py, deterministic) -> rank (rank.py, the only model call:
+# orders the top "Needs a human" list; best-effort) -> render (render.py,
+# deterministic Slack mrkdwn) -> post. A ranking failure falls back to a
+# fixed priority order rather than skipping the week.
+#
+# To preview without posting: run this workflow with dry_run, or locally:
+#   uv run scripts/weekly-digest/digest.py > d.json
+#   python3 scripts/weekly-digest/render.py render d.json
 on:
   schedule:
     # Mondays 14:00 UTC.
@@ -11,7 +21,7 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Dry run — collect + synthesize, print both bodies to the log, no Slack posts"
+        description: "Dry run: collect, rank, and render; print the message to the log, no Slack post"
         type: boolean
         default: false
 
@@ -20,6 +30,7 @@ permissions:
   contents: read
   pull-requests: read
   issues: read
+  actions: read   # scheduled + master run history for the failed-runs line
 
 concurrency:
   group: weekly-digest
@@ -42,108 +53,82 @@ jobs:
 
       - uses: astral-sh/setup-uv@v7
 
-      # 1. COLLECT — deterministic, no model. Dumps the full digest JSON;
-      # under dry_run it also echoes the raw JSON so queries are inspectable
-      # before any model or Slack step runs.
+      # The content-review ledger bucket (discovered by name prefix, no
+      # Pulumi needed) feeds two readers: collect_v3_ops() reads the sweep's
+      # pr-review/runs/ records, and the read-only sweep reads its per-PR
+      # pr-review/state/ so a PR it already warned shows its real remaining
+      # notice. Without credentials both degrade (the digest shows a "Review
+      # ledger unreadable" warning) and the rest of the digest stays intact.
+      - name: Configure AWS credentials
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: weekly-digest
+          aws-region: us-west-2
+
+      # 1. COLLECT: deterministic, no model. Includes a read-only
+      # `sla-sweep.py --dry-run` (the sweep's own no-mutation mode), so the
+      # SLA verdicts render whether or not the scheduled sweep is switched
+      # on. DIGEST_VARS hands over the lane switches, because GITHUB_TOKEN
+      # can't read repo variables; an unset variable arrives as "".
       - name: Collect digest data
-        id: collect
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DIGEST_VARS: >-
+            {"REVIEW_V3_SLA": "${{ vars.REVIEW_V3_SLA }}",
+             "REVIEW_V3_SENTINEL": "${{ vars.REVIEW_V3_SENTINEL }}",
+             "CONTENT_REVIEW_COUNT": "${{ vars.CONTENT_REVIEW_COUNT }}",
+             "GLOWUP_COUNT": "${{ vars.GLOWUP_COUNT }}",
+             "BLOG_REVIEW_COUNT": "${{ vars.BLOG_REVIEW_COUNT }}",
+             "CLAIMS_REVERIFY_COUNT": "${{ vars.CLAIMS_REVERIFY_COUNT }}",
+             "BRAND_SYNC_ENABLED": "${{ vars.BRAND_SYNC_ENABLED }}"}
         run: |
           set -euo pipefail
           uv run scripts/weekly-digest/digest.py > /tmp/digest.json
-          echo "Collected $(jq '.prs | length' /tmp/digest.json) open PRs and $(jq '.issues.all_open_count' /tmp/digest.json) open issues."
+          echo "Collected $(jq '.prs | length' /tmp/digest.json) open PRs, $(jq '.issues.all_open_count' /tmp/digest.json) open issues, $(jq '.sla.verdicts // [] | length' /tmp/digest.json) SLA verdicts."
           if [[ "${{ inputs.dry_run }}" == "true" ]]; then
             echo "----- raw digest JSON -----"
             cat /tmp/digest.json
           fi
 
-      # 2. SYNTHESIZE — one raw curl to the Anthropic API (cloned from
-      # claude-triage.yml). Pure JSON-in / prose-out; no agency, so no Claude
-      # Code action. Returns {"pr_digest":...,"backlog_digest":...}; we strip
-      # any ```json fences defensively before parsing.
-      - name: Synthesize digests
-        id: synth
+      # 2. RANK: the one judgment call. Never fails the job: on any error
+      # rank.py writes {} and render.py uses its fixed priority order.
+      - name: Rank the "Needs a human" list
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           set -euo pipefail
-          PROMPT=$(cat scripts/weekly-digest/synthesis-prompt.md)
-          DIGEST=$(cat /tmp/digest.json)
-          REQUEST=$(jq -n \
-            --arg prompt "$PROMPT" \
-            --arg digest "$DIGEST" \
-            '{
-              model: "claude-sonnet-5",
-              max_tokens: 16000,
-              thinking: { type: "adaptive" },
-              messages: [{
-                role: "user",
-                content: ($prompt + "\n\n=== DATA (JSON) ===\n\n" + $digest)
-              }]
-            }')
-          RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
-            -H "x-api-key: $ANTHROPIC_API_KEY" \
-            -H "anthropic-version: 2023-06-01" \
-            -H "content-type: application/json" \
-            -d "$REQUEST" || echo '{"error":"curl_failed"}')
-          # Sonnet 5 runs adaptive thinking, so a thinking block precedes the text
-          # block — select the text block(s) rather than content[0].
-          TEXT=$(echo "$RESPONSE" | jq -r '[.content[] | select(.type=="text") | .text] | join("")')
-          if [[ -z "$TEXT" ]]; then
-            echo "::error::Anthropic API returned no text"
-            echo "$RESPONSE" | head -c 2000 >&2
-            exit 1
-          fi
-          CLEAN=$(echo "$TEXT" \
-            | sed -E 's/^[[:space:]]*```(json)?[[:space:]]*//' \
-            | sed -E 's/[[:space:]]*```[[:space:]]*$//' \
-            | tr -d '\r')
-          if ! echo "$CLEAN" | jq -e . >/dev/null 2>&1; then
-            echo "::error::Synthesis output was not valid JSON"
-            echo "$CLEAN" | head -c 2000 >&2
-            exit 1
-          fi
-          PR_DIGEST=$(echo "$CLEAN" | jq -r '.pr_digest // empty')
-          BACKLOG_DIGEST=$(echo "$CLEAN" | jq -r '.backlog_digest // empty')
-          if [[ -z "$PR_DIGEST" || -z "$BACKLOG_DIGEST" ]]; then
-            echo "::error::Synthesis JSON missing pr_digest or backlog_digest"
-            exit 1
-          fi
-          {
-            echo "pr_digest<<DIGEST_EOF"
-            echo "$PR_DIGEST"
-            echo "DIGEST_EOF"
-            echo "backlog_digest<<DIGEST_EOF"
-            echo "$BACKLOG_DIGEST"
-            echo "DIGEST_EOF"
-          } >> "$GITHUB_OUTPUT"
+          python3 scripts/weekly-digest/render.py candidates /tmp/digest.json > /tmp/candidates.json
+          python3 scripts/weekly-digest/rank.py /tmp/candidates.json > /tmp/ranking.json || echo '{}' > /tmp/ranking.json
+          echo "Ranked $(jq 'length' /tmp/candidates.json) candidates; model order: $(jq -c '[.order[]?.ref]' /tmp/ranking.json)"
 
-      # 3. ASSEMBLE — one combined digest (PR queue + backlog, each with its
-      # own heading). Slack truncates long messages, so post-to-slack.py splits
-      # this on line boundaries and posts it as as many sequential messages as
-      # needed -- it reads as one continuous run in the channel.
-      - name: Assemble combined digest
-        env:
-          PR_DIGEST: ${{ steps.synth.outputs.pr_digest }}
-          BACKLOG_DIGEST: ${{ steps.synth.outputs.backlog_digest }}
-        run: printf '%s\n\n%s\n' "$PR_DIGEST" "$BACKLOG_DIGEST" > /tmp/digest-combined.txt
+      # 3. RENDER: deterministic Slack mrkdwn: the digest, plus a thread
+      # reply with the full lists behind every "+N more in thread" (empty
+      # when nothing was cut, and then no reply is posted).
+      - name: Render digest
+        run: >-
+          python3 scripts/weekly-digest/render.py render /tmp/digest.json
+          --ranking /tmp/ranking.json --thread-out /tmp/digest-thread.txt
+          > /tmp/digest-message.txt
 
-      # 3a. DRY RUN — print the combined digest and the chunk boundaries it
-      # would post as, skip posting (no token needed).
+      # 3a. DRY RUN: print the message and the chunk boundaries it would post
+      # as, skip posting (no token needed).
       - name: Preview digest (dry run)
         if: ${{ inputs.dry_run }}
-        run: uv run scripts/weekly-digest/post-to-slack.py /tmp/digest-combined.txt --dry-run
+        run: python3 scripts/weekly-digest/post-to-slack.py /tmp/digest-message.txt --thread /tmp/digest-thread.txt --dry-run
 
-      # 3b. POST — chunked via the Slack API (chat.postMessage), cloning the link
-      # checker's posting path: SLACK_ACCESS_TOKEN from ESC, mrkdwn on, no unfurl.
+      # 3b. POST: via the Slack API (chat.postMessage), cloning the link
+      # checker's posting path: SLACK_ACCESS_TOKEN from ESC, mrkdwn on, no
+      # unfurl. post-to-slack.py still splits on line boundaries if a heavy
+      # week ever outgrows one message.
       - name: Post digest to Slack
         if: ${{ !inputs.dry_run }}
         timeout-minutes: 3
         env:
           SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
           SLACK_CHANNEL: docs-ops
-        run: uv run scripts/weekly-digest/post-to-slack.py /tmp/digest-combined.txt
+        run: python3 scripts/weekly-digest/post-to-slack.py /tmp/digest-message.txt --thread /tmp/digest-thread.txt
 
 env:
   ESC_ACTION_OIDC_AUTH: true

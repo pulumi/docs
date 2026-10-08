@@ -40,7 +40,7 @@ Read-only mode takes your existing permissions and removes the ability to make c
 
 ## Read-only mode and auto-approve
 
-Neo's [operating modes](/docs/ai/tasks/#task-modes) let you choose how much oversight you want: review mode for full approval at each step, balanced mode for approving only mutating operations, and auto mode for hands-off execution.
+Neo's [operating modes](/docs/ai/neo/tasks/#task-modes) let you choose how much oversight you want: review mode for full approval at each step, balanced mode for approving only mutating operations, and auto mode for hands-off execution.
 
 Read-only mode pairs well with auto-approve. Because Neo cannot perform write operations like deployments or destroys, you can let it run autonomously and trust that the output is a pull request, not a production change. Kick off a task, let Neo work in the background, and come back to a ready-to-review PR.
 

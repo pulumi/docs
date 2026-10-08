@@ -1,6 +1,6 @@
 ---
-title_tag: Get Started Pulumi and Kubernetes
-meta_desc: This page provides an overview and guide on how to get started with Kubernetes.
+title_tag: Get started with Pulumi and Kubernetes
+meta_desc: Deploy an NGINX web server to Kubernetes with Pulumi in TypeScript, Python, Go, C#, Java, YAML, or HCL. Works with any cluster, including a local one.
 title: Kubernetes
 h1: Get Started with Pulumi and Kubernetes
 menu:
@@ -28,9 +28,13 @@ Complete this step-by-step tutorial to deploy an [NGINX](https://www.nginx.com/)
 
 ## Before you begin
 
-You need access to a Kubernetes cluster (local or cloud-based) and kubectl installed and configured. Choose your language and ensure you've performed any prerequisites:
+You need access to a Kubernetes cluster (local or cloud-based) and kubectl installed and configured.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+Don't have a cluster yet? Spin one up locally with [kind](https://kind.sigs.k8s.io/), [minikube](https://minikube.sigs.k8s.io/docs/start/), or Docker Desktop's built-in Kubernetes, or provision a managed cluster on AWS, Azure, or Google Cloud with one of Pulumi's [Kubernetes cluster templates](/dev/templates/kubernetes/).
+
+Choose your language and ensure you've performed any prerequisites:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -65,6 +69,13 @@ You need access to a Kubernetes cluster (local or cloud-based) and kubectl insta
 {{% choosable language "yaml" %}}
 
 * A text editor
+
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+* A text editor
+* The [Pulumi CLI](/docs/install/) v3.256.0 or later; [Pulumi HCL](/docs/iac/languages-sdks/hcl/) needs no separate language runtime
 
 {{% /choosable %}}
 

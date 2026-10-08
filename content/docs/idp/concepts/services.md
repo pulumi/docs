@@ -22,7 +22,7 @@ A service can be created during the project and stack creation flows. They can a
 
 Entities can be added when a service is created or after the fact.
 
-1. Click Add Service for a new service or Add Entity for an existing service.
+1. Select Add Service for a new service or Add Entity for an existing service.
 2. At the bottom of the page, there is an Add Entities section. Select the Add Entities button.
 3. Select Add Stack or Add Environment based on which entity type you'd like to add to the service.
 4. In the pane that slides out from the right, you can search for and add select stacks to add to the service. Once finished, select Add Entities.

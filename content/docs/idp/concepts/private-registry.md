@@ -10,6 +10,7 @@ menu:
     parent: idp-concepts
     identifier: idp-concepts-private-registry
     weight: 10
+pulumi_cloud_feature: private-registry
 ---
 
 Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like [components](/docs/iac/concepts/components/) and [templates](/docs/idp/concepts/organization-templates/). Platform engineers publish components to the private registry so that developers can discover them, browse auto-generated API documentation, and use them in their Pulumi programs.
@@ -18,9 +19,10 @@ For detailed information about different component packaging approaches, see [Pa
 
 ## Before you begin
 
-1. You need a [Pulumi Cloud](https://app.pulumi.com) account on the Enterprise or Business Critical plan.
+1. You need a [Pulumi Cloud](https://app.pulumi.com) account.
 1. You need the [Pulumi CLI](/docs/install/) installed.
 1. Your component must be pushed to a GitHub or GitLab repository that Pulumi can access. Private repositories are supported — see [Authenticating with private repositories](#authenticating-with-private-repositories).
+1. Your component repository must have a `README.md` in its root directory, or you must specify a custom location with the `--readme` flag. See [README](#readme).
 1. If you haven't built a component yet, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/).
 
 ## Quick start
@@ -141,7 +143,7 @@ type PetAbstractedArgs struct {
 }
 
 func (f *PetAbstractedArgs) Annotate(a infer.Annotator) {
-	a.Describe(&f.Size, "This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name.")
+	a.Describe(&f.Size, "This input represents the size of the pet name to generate. Valid values are \"small\", \"medium\", \"large\", \"xlarge\", or a number representing the length of the pet name.")
 }
 
 type PetAbstractedOutputs struct {
@@ -196,9 +198,9 @@ Browse all packages available to your organization, including public providers a
 
 ### Private components
 
-This tab shows only the component packages published by your organization via `pulumi package publish`.
+This tab shows only the component packages published by your organization.
 
-### Usage tracking
+## Usage tracking
 
 ![Package list showing usage columns and filters](/docs/idp/concepts/usage-columns.png)
 
@@ -209,9 +211,5 @@ Each package page also includes a "Used by" tab showing which stacks use that pa
 ## Templates
 
 [Organization templates](/docs/idp/concepts/organization-templates/) are an efficient way to scaffold new Pulumi programs. Templates are available to users in the private registry and [New Project Wizard](/docs/idp/concepts/new-project-wizard/).
-
-{{% notes type="info" %}}
-Organization templates require the Enterprise or Business Critical plan
-{{% /notes %}}
 
 Templates can be published directly to the Private Registry using the `pulumi template publish` command, or sourced from configured GitHub or GitLab repositories. For detailed information on template publishing and management, see [Organization Templates](/docs/idp/concepts/organization-templates/).

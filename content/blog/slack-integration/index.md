@@ -13,7 +13,7 @@ tags:
 category: product
 ---
 
-Today, we are excited to introduce a set of improvements to [Pulumi Cloud Webhooks](/docs/pulumi-cloud/webhooks) designed to deliver your deployment notifications to where you already spend your time, enabling faster response times to critical issues. Getting your deployment notifications into Slack is now easier than ever on Pulumi Cloud with our new Slack integration. We are also announcing two new improvements to our webhooks feature: Pulumi Deployments events and fine-grained event filtering.
+Today, we are excited to introduce a set of improvements to [Pulumi Cloud Webhooks](/docs/deployments/concepts/webhooks/) designed to deliver your deployment notifications to where you already spend your time, enabling faster response times to critical issues. Getting your deployment notifications into Slack is now easier than ever on Pulumi Cloud with our new Slack integration. We are also announcing two new improvements to our webhooks feature: Pulumi Deployments events and fine-grained event filtering.
 
 <!--more-->
 
@@ -35,7 +35,7 @@ You can either create your own Slack app (or use an existing one you may already
 
 {{< blog/cta-button "Create a Slack app from manifest" "https://api.slack.com/apps?new_app=1&manifest_yaml=display_information%3A%0A%20%20name%3A%20pulumi-slack-notifications%0A%20%20description%3A%20Funnel%20Pulumi%20webhooks%20to%20Slack%0A%20%20background_color%3A%20%22%238a3391%22%0Afeatures%3A%0A%20%20bot_user%3A%0A%20%20%20%20display_name%3A%20pulumi-slack-notifications%0A%20%20%20%20always_online%3A%20false%0Aoauth_config%3A%0A%20%20scopes%3A%0A%20%20%20%20bot%3A%0A%20%20%20%20%20%20-%20incoming-webhook%0Asettings%3A%0A%20%20org_deploy_enabled%3A%20false%0A%20%20socket_mode_enabled%3A%20false%0A%20%20token_rotation_enabled%3A%20false" "_blank" >}}
 
-By following these steps, which can also be found in [our webhooks documentation](/docs/pulumi-cloud/webhooks), in a few clicks you will have a Slack incoming webhook URL which you can use to set up a webhook in [Pulumi Cloud](https://app.pulumi.com/signin), as shown in the GIF below.
+By following these steps, which can also be found in [our webhooks documentation](/docs/deployments/concepts/webhooks/), in a few clicks you will have a Slack incoming webhook URL which you can use to set up a webhook in [Pulumi Cloud](https://app.pulumi.com/signin), as shown in the GIF below.
 
 ![Setting it up in the UI](https://www.pulumi.com/uploads/content/blog/slack-integration/webhooks_2.gif)
 

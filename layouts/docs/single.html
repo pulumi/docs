@@ -24,8 +24,32 @@
                     {{ end }}
                 </div>
 
+                {{/* Opt-in visible freshness signal, same pattern as faq_schema/itemlist/dataset:
+                     an explicit frontmatter flag rather than a heuristic on page type, so this
+                     stays a no-op for the ~2,700 other docs pages that haven't opted in. Reuses
+                     the same "never fabricate now" source-of-truth chain as what-is/single.html
+                     and the JSON-LD dateModified fallback in schema/graph-builder.html: prefer an
+                     explicit .Lastmod, else fall back to .GitInfo.AuthorDate, else show nothing. */}}
+                {{ if .Params.show_updated_date }}
+                    {{ $updatedDate := "" }}
+                    {{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") "0001-01-01") }}
+                        {{ $updatedDate = .Lastmod }}
+                    {{ else if and .GitInfo .GitInfo.AuthorDate }}
+                        {{ $updatedDate = .GitInfo.AuthorDate }}
+                    {{ end }}
+                    {{ with $updatedDate }}
+                        <div class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                            <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">Updated {{ .Format "January 2, 2006" }}</time>
+                        </div>
+                    {{ end }}
+                {{ end }}
+
                 {{ if .Params.cli_command_page }}
                     {{ partial "docs/cli-command-banner.html" . }}
+                {{ end }}
+
+                {{ if not .Params.docs_home }}
+                    {{ partial "docs/cloud-availability.html" . }}
                 {{ end }}
 
                 <div class="docs-table-of-contents docs-toc-mobile">

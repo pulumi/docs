@@ -23,6 +23,8 @@ These fundamentals apply across all cloud providers and help you build maintaina
 
 **[Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/)** - Compare open source Pulumi with Pulumi Cloud across state backends, access management, secrets and configuration, policy enforcement, and workflows.
 
+**[Language Essentials](/docs/iac/guides/basics/language-essentials/)** - Translate the constructs you already use in Pulumi YAML or Terraform HCL, such as variables, conditionals, loops, and modules, into the small set of general-purpose-language constructs a Pulumi program needs.
+
 **[Organizing projects & stacks](/docs/iac/guides/basics/organizing-projects-stacks/)** - Learn how to structure your infrastructure code into projects and stacks. Understand when to split infrastructure into multiple projects versus using a single project with multiple stacks.
 
 For day-to-day operations — targeted updates, update plans, state file editing, self-managed state backends, least-privilege setup — see [Operations](/docs/iac/operations/).

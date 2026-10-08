@@ -228,7 +228,7 @@ fmt.Println("encountered error creating new Pulumi GitHub team: ", team.Name)
 }
 ```
 
-Notice how the GitHub provider allows us to use team names to create teams. In contrast, team IDs are only needed for importing to the Stack, not for maintaining state.
+Notice how the GitHub provider allows us to use team names to create teams. In contrast, team IDs are only needed for importing to the stack, not for maintaining state.
 
 ## Relationships Are Hard
 
@@ -263,7 +263,7 @@ Here is where things get a little tricky. Any GitHub Team can have subteams, but
 4. Write the parent team’s ID into the `ParentTeamId field` of each child team.
 5. Do all of the above in a single `pulumi up`.
 
-This is where maintaining infrastructure with Pulumi truly shines. In our code, we can use [Pulumi Apply](/docs/concepts/inputs-outputs#apply) to hold on to the promise of a parent team ID, and pass this promise into the appropriate field:
+This is where maintaining infrastructure with Pulumi truly shines. In our code, we can use [Pulumi Apply](/docs/iac/concepts/inputs-outputs/#apply) to hold on to the promise of a parent team ID, and pass this promise into the appropriate field:
 
 ```go
 func setupTeams(ctx *pulumi.Context, parentTeam *Team) error {
@@ -297,7 +297,7 @@ func setupTeams(ctx *pulumi.Context, parentTeam *Team) error {
 }
 ```
 
-Running this as part of `main.go` will result in beautifully nested teams on the GitHub UI. But with Pulumi, we can do even better. We can set [`pulumi.Parent()`](/docs/concepts/options/parent) on the child teams:
+Running this as part of `main.go` will result in beautifully nested teams on the GitHub UI. But with Pulumi, we can do even better. We can set [`pulumi.Parent()`](/docs/iac/concepts/resources/options/parent/) on the child teams:
 
 ```go
 for _, childTeam := range parentTeam.Teams {
@@ -343,7 +343,7 @@ teams:
      - username: "owlcat"
 ```
 
-A [`TeamMembership` in GitHub](/registry/packages/github/api-docs/teammembership) is a cross reference between a `Team` and a `User`. Fortunately these do not need to be explicitly imported, as they are merely establishing relationships between GitHub Users and Teams. We can add `TeamMemberships` to the Stack with a `Members` struct, a new `Members[]` field on the `Team` struct, and an extra function. Again, Pulumi lets us use the promised output of the team ID to set the `TeamId` field in the `TeamMembership`:
+A [`TeamMembership` in GitHub](/registry/packages/github/api-docs/teammembership) is a cross reference between a `Team` and a `User`. Fortunately these do not need to be explicitly imported, as they are merely establishing relationships between GitHub Users and Teams. We can add `TeamMemberships` to the stack with a `Members` struct, a new `Members[]` field on the `Team` struct, and an extra function. Again, Pulumi lets us use the promised output of the team ID to set the `TeamId` field in the `TeamMembership`:
 
 ```go
 type Team struct {
@@ -402,7 +402,7 @@ That’s pretty great so far! While there are many org chart tools, what makes t
 
 ## Add CI
 
-In order for this tool to be used by everyone, we keep code and configuration in a GitHub repository. We can use [Pulumi’s GitHub Action](/docs/iac/packages-and-automation/continuous-delivery/github-actions) to run a `pulumi preview` on a pull request, and a `pulumi up` on merge to main.
+In order for this tool to be used by everyone, we keep code and configuration in a GitHub repository. We can use [Pulumi’s GitHub Action](/docs/iac/operations/continuous-delivery/github-actions/) to run a `pulumi preview` on a pull request, and a `pulumi up` on merge to main.
 
 Here’s what that looks like on the pull request:
 
@@ -479,7 +479,7 @@ jobs:
          stack-name: pulumi/prod
 ```
 
-Note that we are calling `refresh: true` in both Workflows, which uses [Pulumi Refresh](/docs/iac/cli/commands/pulumi_refresh/) to make sure that the existing GitHub resources are aligned with the resource state in our Stack.
+Note that we are calling `refresh: true` in both Workflows, which uses [Pulumi Refresh](/docs/iac/cli/commands/pulumi_refresh/) to make sure that the existing GitHub resources are aligned with the resource state in our stack.
 
 Now, anyone with access to the GitHub management repo can:
 

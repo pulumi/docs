@@ -18,6 +18,8 @@ See [Best practices](/docs/esc/operations/rotation/best-practices/) for guidance
 
 ## Rotation connectors
 
+{{< pulumi-cloud "esc-db-secrets-rotation-private" />}}
+
 Some [rotators](/docs/esc/providers/rotators/) need to reach the credential they're rotating — for example, the `mysql` and `postgres` rotators must connect to the database to change a user's password. When the target lives in a private network that Pulumi Cloud can't reach directly, a **rotation connector** runs the rotation inside that network on Pulumi Cloud's behalf.
 
 ### Available connectors

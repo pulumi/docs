@@ -21,7 +21,7 @@ series: pulumi-copilot
 Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
-AI is transforming how users interact with every category of technology today, and cloud infrastructure is no exception.  Last year we launched [Pulumi AI](/ai/) to combine generative AI with Pulumi’s knowledge of cloud infrastructure, helping users solve complex cloud development problems using Infrastructure-as-Code.  Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.
+AI is transforming how users interact with every category of technology today, and cloud infrastructure is no exception.  Last year we launched [Pulumi AI](/ai/) to combine generative AI with Pulumi’s knowledge of cloud infrastructure, helping users solve complex cloud development problems using infrastructure-as-code.  Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.
 
 Today, we’re excited to introduce [__Pulumi Copilot__](/product/copilot/), a huge leap forward in applying AI to cloud infrastructure management.  Pulumi Copilot is a new conversational chat interface integrated throughout Pulumi Cloud, enabling Pulumi Cloud users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the power of large language models plus the rich capabilities of Pulumi Cloud.
 
@@ -37,7 +37,7 @@ Through Pulumi Copilot, you can explore your cloud infrastructure and gain insig
 
 ### Access any data in Pulumi Cloud
 
-* The state of every resource you are managing with Pulumi across _any_ Cloud, _any_ account, and _any_ region.  With [Pulumi Insights'](/product/pulumi-insights) Cloud Supergraph support for 160+ cloud providers, this offers an unprecedented breadth of cloud infrastructure data to explore and interrogate with Pulumi Copilot.
+* The state of every resource you are managing with Pulumi across _any_ Cloud, _any_ account, and _any_ region. With [Pulumi Insights'](/product/pulumi-insights) Cloud Supergraph support for 160+ cloud providers, this offers an unprecedented breadth of cloud infrastructure data to explore and interrogate with Pulumi Copilot.
 * Pulumi stacks, projects, updates, deployments, environments, policies, audit logs and more - enabling historical understanding of what happened when, by who, and why across all of your cloud engineering systems managed by Pulumi.
 
 ### Pulumi IaC Authoring and Deployment
@@ -74,7 +74,7 @@ We get a hyperlink at the end, enabling us to jump directly to the members page,
 
 ![Pulumi Cloud screenshot with copilot window open. The dashboard depicts the Admins in the Console](/blog/pulumi-copilot/admins-console.png)
 
-Pulumi Copilot has access to everything that Pulumi Cloud manages, including [Pulumi ESC](/docs/esc) environments. We can find all of the environments we have that manage access to GitHub through a natural language query, and then ask a follow up question to get a direct link to where each environment is defined.
+Pulumi Copilot has access to everything that Pulumi Cloud manages, including [Pulumi ESC](/docs/esc/) environments. We can find all of the environments we have that manage access to GitHub through a natural language query, and then ask a follow up question to get a direct link to where each environment is defined.
 
 <p align="center"><img src="./environments.png" alt="ESC Environments in Pulumi Copilot window" width="600" /></p>
 
@@ -94,7 +94,7 @@ If we are thinking about removing some infrastructure we may want to know what o
 
 ![Stack references check in Pulumi Copilot window](/blog/pulumi-copilot/stack-references.png)
 
-If we’re getting started on compliance with a new compliance framework, we can get guidance on areas to focus on for compliance review, ahead of applying more formal compliance tools like [Pulumi Crossguard Compliance Ready Policies](/docs/using-pulumi/crossguard/compliance-ready-policies/).
+If we’re getting started on compliance with a new compliance framework, we can get guidance on areas to focus on for compliance review, ahead of applying more formal compliance tools like [Pulumi Crossguard Compliance Ready Policies](https://github.com/pulumi/compliance-policies).
 
 <p align="center"><img src="./fedramp.png" alt="Pulumi Copilot question about getting FedRAMP compliant" width="600" /></p>
 
@@ -149,7 +149,7 @@ We’re excited to introduce Pulumi Copilot, the first conversational AI for gen
 * [Open an issue in GitHub](https://github.com/pulumi/pulumi-cloud-requests)
 * [Reach out to schedule a demo](/contact/)
 * [Join the Pulumi Community on Slack](https://slack.pulumi.com/)
-* [Check out the Pulumi Copilot docs](/docs/pulumi-cloud/copilot)
+* [Check out the Pulumi Copilot docs](/product/neo/)
 
 Pulumi Copilot is available now in public beta, and is free while in beta for all organizations in Pulumi Cloud. Organization administrators can turn on Pulumi Copilot for their organization by going to __Settings > Access Management > Pulumi Copilot__ within the Pulumi Cloud console.
 

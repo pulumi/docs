@@ -15,7 +15,7 @@ Once you've built a first Automation API program by following [Using Automation 
 
 ## Prerequisites
 
-The examples below assume the same setup as the getting-started guide: the [Pulumi CLI](/docs/install/) on your `PATH` (or [installed programmatically](/docs/iac/guides/building-extending/automation-api/#install-the-cli-programmatically)), the Node.js or Python runtime for your chosen language, and a [Pulumi access token](/docs/administration/access-identity/access-tokens/) or another configured [state backend](/docs/iac/concepts/state-and-backends/).
+The examples below assume the same setup as the getting-started guide: the [Pulumi CLI](/docs/install/) on your `PATH` (or [installed programmatically](/docs/iac/guides/building-extending/automation-api/#install-the-cli-programmatically)), the Node.js or Python runtime for your chosen language, and a [Pulumi access token](/docs/administration/concepts/access-tokens/) or another configured [state backend](/docs/iac/concepts/state-and-backends/).
 
 Some examples below orchestrate multiple Pulumi projects from a single Automation API program. Each project---`network` and `app` in the examples---is an ordinary Pulumi project directory with its own `Pulumi.yaml`, deployed as a [local program](/docs/iac/concepts/automation-api/#local-programs) rather than an inline one. That's a deliberate choice for these scenarios: an orchestrator managing multiple independently developed projects typically doesn't own their program code, so it drives them by path instead of importing their logic as a function.
 
@@ -349,6 +349,8 @@ Automation API gives you three ways to associate a stack with a program, and the
 ### Create, select, and create-or-select
 
 The three convenience functions differ only in what they assume about the stack's existence: `createStack` fails if the stack already exists, `selectStack` fails if it doesn't, and `createOrSelectStack` does whichever is needed. Prefer `createOrSelectStack` for idempotent orchestrators that may run against a mix of new and existing environments---most of the examples in this guide use it for that reason. Reach for `createStack` or `selectStack` directly when you want the corresponding failure mode: `createStack` to guarantee you never silently reuse an existing stack's state, `selectStack` (as in the teardown example above) to guarantee you never accidentally create one that shouldn't exist yet.
+
+Once you have a `Stack`, the same Automation API can also manage which [Pulumi ESC environments](/docs/esc/concepts/environments/) it imports, adding, listing, and removing them programmatically instead of editing `Pulumi.<stack>.yaml` by hand. See [Automation API for ESC](/docs/esc/integrations/automation-api/) for the supported methods and per-language examples.
 
 ### Reusing workspaces across stacks
 

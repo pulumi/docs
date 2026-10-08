@@ -54,12 +54,23 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_API
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides the URL of the Pulumi Cloud API that the CLI communicates with when using the Pulumi Cloud backend. Most users should set <span class="font-mono">PULUMI_BACKEND_URL</span> instead, which selects the backend itself; this variable is for advanced scenarios, such as pointing the CLI at a non-default Pulumi Cloud API endpoint.
+        </p>
+        <pre><code class="text-xs">PULUMI_API="https://api.pulumi.com"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_BACKEND_URL
         </span>
     </dt>
     <dd>
         <p>
-            Set this environment variable to use a specified backend instead of the default backend.  See <a href="/docs/concepts/state">State and Backends</a> for details on valid backend URLs.
+            Set this environment variable to use a specified backend instead of the default backend.  See <a href="/docs/iac/concepts/state-and-backends/">State and Backends</a> for details on valid backend URLs.
         </p>
         <pre><code class="text-xs">PULUMI_BACKEND_URL="s3://your-pulumi-state-bucket"</code></pre>
     </dd>
@@ -70,7 +81,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Sets <a href="/docs/concepts/config">configuration</a> for <a href="/docs/iac/guides/testing/unit/">unit testing</a>. Must be in JSON format.
+            Sets <a href="/docs/iac/concepts/config/">configuration</a> for <a href="/docs/iac/guides/testing/unit/">unit testing</a>. Must be in JSON format.
         </p>
         <p>
             <strong>This environment variable is ignored during normal Pulumi operations -- e.g., <code>up</code>, <code>preview</code>, etc. -- but must be valid JSON if present.</strong>
@@ -88,7 +99,7 @@ aliases:
             is used to generate a unique key for your stack, and configuration and encrypted state values are then encrypted
             using <code>AES-256-GCM</code>.
             Read <a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#secrets-and-pluggable-encryption">the change log</a>
-            and <a href="/docs/concepts/config">Configuration and Secrets</a> to learn more about Pulumi's configuration
+            and <a href="/docs/iac/concepts/config/">Configuration and Secrets</a> to learn more about Pulumi's configuration
             and secrets management system.
         </p>
         <pre><code class="text-xs">PULUMI_CONFIG_PASSPHRASE="your-passphrase"</code></pre>
@@ -111,7 +122,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Overrides the domain used when generating links to the Pulumi Cloud.
+            Overrides the domain used when generating links to Pulumi Cloud.
         </p>
         <pre><code class="text-xs">PULUMI_CONSOLE_DOMAIN="yourhost.domain.com"</code></pre>
     </dd>
@@ -128,14 +139,17 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
-            PULUMI_COPILOT
+            PULUMI_CREDENTIAL_STORE
         </span>
     </dt>
     <dd>
         <p>
-            Enables Neo help and links in the CLI output, regardless of the Neo settings for the given Pulumi organization.
+            Selects an opt-in store for CLI credentials, such as your Pulumi Cloud access token, that encrypts them at rest with a key
+            protected by your operating system's credential manager (Keychain on macOS, Credential Manager on Windows, or a Secret
+            Service provider such as GNOME Keyring on Linux) instead of writing them to disk in plaintext under
+            <code class="text-xs">PULUMI_HOME</code>. Set to <code class="text-xs">os</code> to require the OS-native store, or <code class="text-xs">auto</code> to use it when available and fall back to plaintext. Set to <code class="text-xs">plaintext</code> to opt out.
         </p>
-        <pre><code class="text-xs">PULUMI_COPILOT=true</code></pre>
+        <pre><code class="text-xs">PULUMI_CREDENTIAL_STORE=os</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -166,11 +180,24 @@ aliases:
     </dt>
     <dd>
         <p>
-            As of <a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0166-2018-11-28"><code>v0.12.2</code></a>,
+            As of <a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0122-2018-05-19"><code>v0.12.2</code></a>,
             the promise leak experience has been improved and shows a simple error message. Set this environment variable to
             get more verbose error messages when debugging promise leaks.
         </p>
         <pre><code class="text-xs">PULUMI_DEBUG_PROMISE_LEAKS=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DEFAULT_ORGANIZATION
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the default organization to use when creating a new stack or resolving an unqualified stack name, similar to
+            setting a default organization with
+            <a href="/docs/iac/cli/commands/pulumi_org_set-default/"><code class="text-xs">pulumi org set-default</code></a>.
+        </p>
+        <pre><code class="text-xs">PULUMI_DEFAULT_ORGANIZATION=your-org</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -261,6 +288,24 @@ aliases:
             Enables gzip compression when writing state files.
         </p>
         <pre><code class="text-xs">PULUMI_DIY_BACKEND_GZIP=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Using a self-managed (DIY) state backend, such as a local directory or an Amazon S3, Google Cloud Storage, or
+            Azure Blob Storage bucket, in the legacy non-project-scoped stack layout is deprecated and due to be removed in
+            a future release. The CLI now raises an error rather than a warning when it detects this layout. Set this to
+            <code class="text-xs">true</code> to bypass the error and continue using the legacy layout. We recommend running
+            <a href="/docs/iac/cli/commands/pulumi_state_upgrade/"><code class="text-xs">pulumi state upgrade</code></a>
+            to move to project-scoped stacks instead, and consider moving to the
+            <a href="/docs/iac/concepts/state-and-backends/#pulumi-cloud-backend">Pulumi Cloud backend</a> while you are at
+            it, since it manages this state layout, locking, and encryption for you.
+        </p>
+        <pre><code class="text-xs">PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -452,6 +497,75 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_LOG_ROTATION_MAX_AGE_DAYS
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides how long automatic logs in <code>$PULUMI_HOME/logs</code> are kept before being
+            rotated out. Defaults to <code>7</code> days.
+        </p>
+        <pre><code class="text-xs">PULUMI_LOG_ROTATION_MAX_AGE_DAYS=14</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_LOG_ROTATION_MAX_TOTAL_MB
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides the maximum total size, in megabytes, of the automatic logs directory
+            (<code>$PULUMI_HOME/logs</code>) before the oldest logs are rotated out. Defaults to
+            <code>500</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_LOG_ROTATION_MAX_TOTAL_MB=1000</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_NEO
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enables Neo help and links in the CLI output, regardless of the Neo settings for the given Pulumi organization. The legacy name <span class="font-mono">PULUMI_COPILOT</span> is still accepted as an alias.
+        </p>
+        <pre><code class="text-xs">PULUMI_NEO=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_PACKAGE_TEMPLATE_BRANCH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the branch that <code>pulumi package new</code> checks out from the package template repository. Defaults to <code>main</code>, regardless of the repository's default branch.
+        </p>
+        <pre><code class="text-xs">PULUMI_PACKAGE_TEMPLATE_BRANCH="develop"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_PACKAGE_TEMPLATE_GIT_REPOSITORY
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the Git repository that <code>pulumi package new</code> fetches package templates from. Accepts a Git URL or a local repository path. Defaults to <code>https://github.com/pulumi/templates-packages.git</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_PACKAGE_TEMPLATE_GIT_REPOSITORY="https://github.com/acme/pulumi-package-templates.git"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_PACKAGE_TEMPLATE_PATH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the directory where <code>pulumi package new</code> caches package templates. Defaults to <code>~/.pulumi/templates-packages</code>, or <code>$PULUMI_HOME/templates-packages</code> if <span class="font-mono">PULUMI_HOME</span> is set.
+        </p>
+        <pre><code class="text-xs">PULUMI_PACKAGE_TEMPLATE_PATH="/tmp/pulumi/templates-packages"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_PARALLEL
         </span>
     </dt>
@@ -482,6 +596,39 @@ aliases:
             Specifies overrides for plugin-download URLs. The expected format is <code>regexp=URL</code>, and multiple pairs can be specified separated by commas.
         </p>
         <pre><code class="text-xs">PULUMI_PLUGIN_DOWNLOAD_URL_OVERRIDES="^https://foo=https://bar,^github://=https://buzz"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_POLICY_TEMPLATE_BRANCH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the branch that <code>pulumi policy new</code> checks out from the policy pack template repository. Defaults to <code>master</code>, regardless of the repository's default branch.
+        </p>
+        <pre><code class="text-xs">PULUMI_POLICY_TEMPLATE_BRANCH="main"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_POLICY_TEMPLATE_GIT_REPOSITORY
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the Git repository that <code>pulumi policy new</code> fetches policy pack templates from. Accepts a Git URL or a local repository path. Defaults to <code>https://github.com/pulumi/templates-policy.git</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_POLICY_TEMPLATE_GIT_REPOSITORY="https://github.com/acme/pulumi-policy-templates.git"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_POLICY_TEMPLATE_PATH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the directory where <code>pulumi policy new</code> caches policy pack templates. Defaults to <code>~/.pulumi/templates-policy</code>, or <code>$PULUMI_HOME/templates-policy</code> if <span class="font-mono">PULUMI_HOME</span> is set.
+        </p>
+        <pre><code class="text-xs">PULUMI_POLICY_TEMPLATE_PATH="/tmp/pulumi/templates-policy"</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -556,14 +703,47 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
-            PULUMI_SUPPRESS_COPILOT_LINK
+            PULUMI_SUPPRESS_NEO_LINK
         </span>
     </dt>
     <dd>
         <p>
-            Suppresses showing the 'explainFailure' link to Neo in the CLI output, regardless of the Neo settings for the given Pulumi organization.
+            Suppresses showing the 'explainFailure' link to Neo in the CLI output, regardless of the Neo settings for the given Pulumi organization. The legacy name <span class="font-mono">PULUMI_SUPPRESS_COPILOT_LINK</span> is still accepted as an alias.
         </p>
-        <pre><code class="text-xs">PULUMI_SUPPRESS_COPILOT_LINK=true</code></pre>
+        <pre><code class="text-xs">PULUMI_SUPPRESS_NEO_LINK=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_TEMPLATE_BRANCH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the branch that <code>pulumi new</code> checks out from the project template repository. Defaults to <code>master</code>, regardless of the repository's default branch.
+        </p>
+        <pre><code class="text-xs">PULUMI_TEMPLATE_BRANCH="main"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_TEMPLATE_GIT_REPOSITORY
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the Git repository that <code>pulumi new</code> fetches project templates from. Accepts a Git URL or a local repository path. Defaults to <code>https://github.com/pulumi/templates.git</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_TEMPLATE_GIT_REPOSITORY="https://github.com/acme/pulumi-templates.git"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_TEMPLATE_PATH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the directory where <code>pulumi new</code> caches project templates. Defaults to <code>~/.pulumi/templates</code>, or <code>$PULUMI_HOME/templates</code> if <span class="font-mono">PULUMI_HOME</span> is set.
+        </p>
+        <pre><code class="text-xs">PULUMI_TEMPLATE_PATH="/tmp/pulumi/templates"</code></pre>
     </dd>
     <dt>
         <span class="font-mono">

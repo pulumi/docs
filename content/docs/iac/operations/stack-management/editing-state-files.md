@@ -31,7 +31,7 @@ Before manually editing your state file, consider these troubleshooting steps:
 
 1. Run the `pulumi refresh` command.
 1. Update to the latest version of the Pulumi CLI ([installation instructions](/docs/install/)) and attempt your operation again.
-1. If a `pulumi update` failed and a resource was created and shows in your cloud console, but Pulumi is attempting to create the resource again, use the [`pulumi import`](/docs/iac/cli/commands/pulumi_import) command instead of editing your state file.
+1. If a `pulumi update` failed and a resource was created and shows in your cloud console, but Pulumi is attempting to create the resource again, use the [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command instead of editing your state file.
 1. If you have recently updated the Pulumi CLI, consider downgrading back to the previous known-good version and attempt your operation again.
 1. Update the Pulumi SDK to the version that matches the Pulumi CLI.
 1. If the problem seems to be related to a particular resource type or provider, consider updating your provider dependencies (do this work on a separate git branch so you can easily undo any changes to your Pulumi code).
@@ -76,21 +76,28 @@ To download a state file:
 
 ### 2. Try targeted fixes with the `pulumi state` command
 
-The [`pulumi state`](/docs/iac/cli/commands/pulumi_state) command allows you to make targeted, surgical changes to your state file without the risk of exposing your entire state file in an editor for hand-editing, which can cause additional errors.
+The [`pulumi state`](/docs/iac/cli/commands/pulumi_state/) command allows you to make targeted, surgical changes to your state file without the risk of exposing your entire state file in an editor for hand-editing, which can cause additional errors.
 
 The `pulumi state` command can help with the following scenarios:
 
-- Automatically repairing your state file with [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair)
-- Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_delete)
+- Inspecting a single resource's tracked state, including its inputs and outputs, with [`pulumi state get`](/docs/iac/cli/commands/pulumi_state_get/)
+- Automatically repairing your state file with [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair/)
+- Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_remove/) — see [Removing resources without deleting them](/docs/iac/operations/stack-management/removing-resources-without-deleting-them/) for a complete walkthrough, including dependent and protected resources
 - [Moving resources between stacks](/docs/iac/operations/stack-management/moving-resources-between-stacks/) with `pulumi state move`
-- Unprotecting resources from deletion with [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect)
-- Targeting resources for recreation with [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint)
+- Unprotecting resources from deletion with [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/)
+- Targeting resources for recreation with [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/)
 
-Refer to [the `pulumi state` reference docs](/docs/iac/cli/commands/pulumi_state) for a complete list of capabilities.
+Refer to [the `pulumi state` reference docs](/docs/iac/cli/commands/pulumi_state/) for a complete list of capabilities.
 
 ### 3. If necessary, export your state file and edit
 
-If the `pulumi state` command does not resolve the issue for you, you will need to edit your Pulumi state file in an editor to resolve the issue. First, export the state file again:
+If the `pulumi state` command does not resolve the issue for you, you will need to edit your Pulumi state file in an editor to resolve the issue.
+
+{{% notes type="info" %}}
+If you only need to see what Pulumi has tracked for a single resource, rather than a full understanding of your entire state file, run [`pulumi state get`](/docs/iac/cli/commands/pulumi_state_get/) with the resource's URN or auto-assigned identifier instead of exporting the whole file.
+{{% /notes %}}
+
+First, export the state file again:
 
 ```bash
 pulumi stack export --file state.json

@@ -17,7 +17,10 @@ release-triggered / contradiction-detection consumers join pages on
 Writer discipline: ONLY this per-article worker writes the claims index. Its
 runs are whole-page snapshots, so overwriting `<slug>.json` is always correct;
 the pre-merge PR review sees partial-page diffs and must never write here (a
-partial snapshot would silently shrink a page's claim set).
+partial snapshot would silently shrink a page's claim set). That covers the
+worker's report-only mode too (pulumi/docs#20996): same worker, same whole-page
+synthetic diff, no model — and it is how the generated trees, which the fix
+lane can never select, get a claim list at all.
 
 Snapshot rules:
   * Kept verdicts: verified | matches | contradicted | mismatch — the claims

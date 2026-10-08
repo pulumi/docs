@@ -44,7 +44,7 @@ Read the full blog post file (frontmatter + body).
 
 ### Fast-path: existing feature image
 
-If a real `feature.png` already exists in the blog post's directory (not a placeholder), skip all interactive questions — just make sure `feature_image: feature.png` is set in frontmatter (Step 4) and report.
+If a `feature.png` already exists in the blog post's directory, skip all interactive questions — just make sure `feature_image: feature.png` is set in frontmatter (Step 4) and report. (New posts scaffold with a blank `feature_image` and no image file, so any `feature.png` present is a real one.)
 
 If `$ARGUMENTS` fully specifies the feature template (e.g., `/blog-feature-image rocket`), skip the interactive question and go straight to Step 3's rendering. If partially specified, only ask about the unspecified parts.
 
@@ -81,6 +81,8 @@ If **I have a designer-supplied image** is selected:
    cp "<provided-path>" "<blog-dir>/feature.png"
    ```
 3. Skip straight to Step 4.
+
+> **`make lint` only accepts two PNG `Software` tags**: `Figma` (a designer's Figma export) and `pulumi-blog-feature-image` (this skill's renderer). An **untagged** PNG now fails, because that's what every ad-hoc image writer produces by default. So a designer-supplied file that isn't a straight Figma export — re-saved from another tool, or run through an optimizer that strips metadata — will fail lint even though it's legitimate. **Do not "fix" that by writing a tag onto the file.** Report the failure to the user and ask them for the original Figma export.
 
 ---
 

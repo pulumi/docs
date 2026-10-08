@@ -20,7 +20,7 @@ For example, you might want to rotate cryptographic keys monthly by using a `YYY
 
 {{< resource-option-scope "replacementTrigger" >}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -97,6 +97,30 @@ resources:
     type: example:components:KeyManager
     options:
       replacementTrigger: ${rotationPeriod}
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "rotation_period" {
+  type    = string
+  default = "01-2026"
+}
+
+resource "terraform_data" "rotation" {
+  input = var.rotation_period
+}
+
+resource "key_manager_resource" "key_manager" {
+  # ...
+
+  lifecycle {
+    replace_triggered_by = [terraform_data.rotation]
+  }
+}
+```
+
+In HCL, use the standard Terraform `replace_triggered_by` lifecycle argument, which references other resources rather than taking an arbitrary value. To trigger on an arbitrary value, route it through a `terraform_data` resource as shown.
+
 {{% /choosable %}}
 
 {{< /chooser >}}

@@ -148,31 +148,28 @@ meta-images:
 
 .PHONY: test
 test:
+	$(MAKE) test-unit
 	$(MAKE) test-programs
+
+# Unit tests: the scripts/*.test.js files. Fast; no network.
+.PHONY: test-unit
+test-unit:
+	./scripts/run-unit-tests.sh
 
 .PHONY: test-programs
 test-programs:
 	./scripts/programs/test.sh preview
 
+# Every test suite belonging to the review pipelines (pre-merge PR review,
+# daily content review, blog known-issues index). Not part of `make test`,
+# which is scoped to the example programs; run by review-pipeline-tests.yml.
+.PHONY: test-review-pipeline
+test-review-pipeline:
+	./scripts/test-review-pipeline.sh
+
 .PHONY: upgrade-programs
 upgrade-programs:
 	./scripts/programs/upgrade.sh
-
-.PHONY: new-tutorial-module
-new-tutorial-module:
-	./scripts/content/new-tutorial-module.sh
-
-.PHONY: new-tutorial-topic
-new-tutorial-topic:
-	./scripts/content/new-tutorial-topic.sh
-
-.PHONY: new-tutorial
-new-tutorial:
-	./scripts/content/new-tutorial.sh
-
-.PHONY: new-template
-new-template:
-	./scripts/content/new-template.sh
 
 .PHONY: new-example-program
 new-example-program:

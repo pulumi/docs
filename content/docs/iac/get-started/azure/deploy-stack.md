@@ -19,9 +19,20 @@ aliases:
 
 Now run `pulumi up` to start deploying your new storage account:
 
+{{% choosable "os" "macos,linux" %}}
+
 ```bash
 $ pulumi up
 ```
+
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> pulumi up
+```
+
+{{% /choosable %}}
 
 This command first shows you a **preview** of the changes that will be made:
 
@@ -54,7 +65,7 @@ To proceed and deploy your new storage account, select `yes`. This begins an **u
 
 ```
 Do you want to perform this update? yes
-Updating (dev)
+Updating (dev):
 
 View in Browser (Ctrl+O): https://app.pulumi.com/your-org-name/quickstart/dev/updates/1
 
@@ -81,6 +92,8 @@ may take a bit longer, so the update could finish in 20-30 seconds.
 
 The storage account name is available as a stack output. To view it:
 
+{{% choosable os "linux,macos" %}}
+
 {{% choosable language "typescript,go,csharp,java,yaml" %}}
 
 ```bash
@@ -89,11 +102,33 @@ $ pulumi stack output storageAccountName
 
 {{% /choosable %}}
 
-{{% choosable language python %}}
+{{% choosable language "python,hcl" %}}
 
 ```bash
 $ pulumi stack output storage_account_name
 ```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
+
+{{% choosable os "windows" %}}
+
+{{% choosable language "typescript,go,csharp,java,yaml" %}}
+
+```powershell
+> pulumi stack output storageAccountName
+```
+
+{{% /choosable %}}
+
+{{% choosable language "python,hcl" %}}
+
+```powershell
+> pulumi stack output storage_account_name
+```
+
+{{% /choosable %}}
 
 {{% /choosable %}}
 

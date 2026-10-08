@@ -19,9 +19,9 @@ This guide explains how Pulumi Cloud relates to open source Pulumi. It clarifies
 
 Pulumi's infrastructure as code (IaC) tool is [open source](https://github.com/pulumi). It includes the CLI, the deployment engine, the language SDKs, and the resource providers, and it is how many people first adopt Pulumi. Open source Pulumi can store state in a "DIY" backend—object storage such as AWS S3, Azure Blob Storage, or Google Cloud Storage, a PostgreSQL database, or your local filesystem.
 
-Pulumi Cloud is a managed service for storing state, managing access, and collaborating on cloud infrastructure. It is a single platform: the IaC state backend, role-based access control, secrets and configuration management, cloud resource inventory, policy enforcement, an AI agent, and managed workflows are all part of one product. Pulumi Cloud is the default backend for open source Pulumi, and it is available both as a hosted service (SaaS) and as a [self-hosted](/docs/pulumi-cloud/self-hosted/) edition you can run in your own environment.
+Pulumi Cloud is a managed service for storing state, managing access, and collaborating on cloud infrastructure. It is a single platform: the IaC state backend, role-based access control, secrets and configuration management, cloud resource inventory, policy enforcement, an AI agent, and managed workflows are all part of one product. Pulumi Cloud is the default backend for open source Pulumi, and it is available both as a hosted service (SaaS) and as a [self-hosted](/docs/administration/self-hosting/) edition you can run in your own environment.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Just as Git is fully open source and you can host, secure, and manage repositories yourself, you can also host your own Pulumi projects and stacks. However, many teams use Git with a service like GitHub for its security, reliability, and collaboration features. A similar dynamic exists with open source Pulumi and Pulumi Cloud.
 {{% /notes %}}
 
@@ -37,7 +37,7 @@ The following table summarizes how open source Pulumi and Pulumi Cloud compare a
 | Secrets encryption | Passphrase or self-managed KMS keys | Managed encryption by default; can also use a separate encryption service |
 | Secrets and configuration management | Per-stack config files only | Per-stack config files, plus centrally managed, reusable Pulumi ESC environments |
 | Policy as code | Policy packs kept on disk and passed as CLI arguments | Centrally managed enforcement, plus custom and pre-built policy packs |
-| Cloud resource inventory | Not included | Pulumi Insights discovers resources not managed by Pulumi |
+| Cloud resource inventory | Not included | Pulumi Discovery finds resources not managed by Pulumi |
 | Drift detection | Run `pulumi refresh` manually | Scheduled drift detection and remediation |
 | AI assistance | Pulumi CLI and editor integrations | Pulumi Neo AI agent integrated across the platform |
 | Ephemeral environments | Not included | Review Stacks and TTL Stacks |
@@ -63,7 +63,7 @@ The Pulumi Cloud backend exposes a transactional REST API rather than a blob sto
 
 Open source Pulumi leaves access control to you. With a DIY backend, your options are the access controls of the underlying storage: your cloud provider's IAM for an object store, or ordinary file permissions for a local or shared filesystem. That access is expressed in terms of storage operations—reads and writes to files. At that level you cannot distinguish one Pulumi operation from another: a routine `pulumi up` and a `pulumi destroy` both look like writes to the same state file, so you cannot grant someone permission to update infrastructure without also allowing them to delete it.
 
-Pulumi Cloud provides a [role-based access control model](/docs/administration/organizations-teams/teams/) expressed in terms of Pulumi concepts and operations—stacks, projects, and the actions performed on them. It integrates with identity providers such as Microsoft Entra ID, Google Workspace, Okta, and any SAML/SSO provider, and supports [access tokens](/docs/administration/access-identity/access-tokens/) with fine-grained permissions for automation, including auditing and revocation.
+Pulumi Cloud provides a [role-based access control model](/docs/administration/concepts/rbac/teams/) expressed in terms of Pulumi concepts and operations—stacks, projects, and the actions performed on them. It integrates with identity providers such as Microsoft Entra ID, Google Workspace, Okta, and any SAML/SSO provider, and supports [access tokens](/docs/administration/concepts/access-tokens/) with fine-grained permissions for automation, including auditing and revocation.
 
 ## Secrets and configuration management
 
@@ -75,13 +75,13 @@ Pulumi Cloud supports the same per-stack config files and adds Pulumi ESC (Envir
 
 With open source Pulumi, you can inspect the resources Pulumi manages by reading state—for example, with `pulumi stack` and `pulumi stack export`—but only one stack's state at a time, and only for resources Pulumi created. There is no built-in view of resources across stacks or of resources outside Pulumi's state.
 
-Pulumi Cloud adds [Pulumi Insights](/docs/insights/), which scans your connected cloud accounts to build a searchable inventory of resources—including resources that were not created or managed by Pulumi. This helps you find unmanaged or orphaned resources and understand what exists across your cloud accounts. This capability is available only with Pulumi Cloud.
+Pulumi Cloud adds [Pulumi Discovery](/docs/discovery-governance/), which scans your connected cloud accounts to build a searchable inventory of resources—including resources that were not created or managed by Pulumi. This helps you find unmanaged or orphaned resources and understand what exists across your cloud accounts. This capability is available only with Pulumi Cloud.
 
 ## Policy enforcement
 
 Both open source Pulumi and Pulumi Cloud support policy as code. With open source Pulumi, you write your own policy packs and run them locally or in CI: the policy packs must be present on disk, and you supply them as command-line arguments on each run. Open source policy evaluation is limited to the resources defined in the Pulumi program being run.
 
-Pulumi Cloud manages policy enforcement centrally. Policies are configured once for the organization and applied automatically to every update, so individual users do not need the policy packs locally. In addition to custom policy packs, Pulumi Cloud offers pre-built policy packs for common security, compliance, and cost rules. Policies apply both to infrastructure as code—blocking violations before they are deployed—and to existing cloud resources, including resources that were not created or managed by Pulumi. Pulumi Cloud evaluates policies against the resources discovered by [cloud resource inventory](#cloud-resource-inventory) with Pulumi Insights, so you can find and remediate violations across your cloud accounts regardless of how the resources were provisioned. Pulumi Cloud can also detect [drift](/docs/deployments/concepts/drift/) on a schedule, alerting you—or remediating automatically—when deployed infrastructure diverges from its declared state.
+Pulumi Cloud manages policy enforcement centrally. Policies are configured once for the organization and applied automatically to every update, so individual users do not need the policy packs locally. Beyond custom policy packs, Pulumi Cloud offers pre-built policy packs for common security, compliance, and cost rules. Policies apply to infrastructure as code, blocking violations before they are deployed, and to existing cloud resources, including resources that were not created or managed by Pulumi. Pulumi Cloud evaluates policies against the resources discovered by [cloud resource inventory](#cloud-resource-inventory) with Pulumi Discovery, so you can find and remediate violations across your cloud accounts regardless of how the resources were provisioned. Pulumi Cloud can also detect [drift](/docs/deployments/concepts/drift/) on a schedule, alerting you (or remediating automatically) when deployed infrastructure diverges from its declared state.
 
 ## AI assistance
 

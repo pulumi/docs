@@ -4,30 +4,10 @@ meta_desc: |
      YAML is a data serialization language that has steadily increased in popularity. Discover how to use YAML with Pulumi today.
 
 type: what-is
+date: 2022-09-26T07:16:39-07:00
 page_title: "What is YAML?"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
-authors: ["kat-cosgrove"]
+authors: ["pulumi-content-team"]
 ---
 
 YAML is a data serialization language most commonly used for configuration files. Its easy readability and rich feature set have made it an increasingly popular choice over the years, for everything from configuration files to object serialization. Originally named "Yet Another Markup Language," the creators changed the name to "YAML Ain't a Markup Language" in order to better reflect its strength as a data-oriented language rather than simply markup.
@@ -105,7 +85,7 @@ languages:
 
 ## The Benefits of YAML With Pulumi
 
-If a high degree of readability is your concern and you do not need the expressivity of a full-fledged programming language like Python or Typescript, YAML is a great option for defining and deploying your infrastructure with Pulumi. Take the following example, which creates an AWS S3 bucket and deploys a simple "hello world" website before returning the URL of your bucket:
+If a high degree of readability is your concern and you do not need the expressivity of a full-fledged programming language like Python or TypeScript, YAML is a great option for defining and deploying your infrastructure with Pulumi. Take the following example, which creates an AWS S3 bucket and deploys a simple "hello world" website before returning the URL of your bucket:
 
 ```yaml
 ---
@@ -210,10 +190,10 @@ outputs:
   bucketEndpoint: http://${my-bucket.websiteEndpoint}
 ```
 
-Finally, we have an output. This is a value handed to you by Pulumi, after the completion of any work required on behalf of relevant resources. If you're familiar with Javascript, you can think of it sort of like a promise. In this case, we're asking for the URL our document will be visible at.
+Finally, we have an output. This is a value handed to you by Pulumi, after the completion of any work required on behalf of relevant resources. If you're familiar with JavaScript, you can think of it sort of like a promise. In this case, we're asking for the URL our document will be visible at.
 
 ## Conclusion
 
 The reason to reach for YAML isn't that it's simpler than a programming language. It's that infrastructure work often doesn't need a programming language at all. When your stack is little more than a declared set of resources and their relationships, the loops, conditionals, and abstractions of Python or TypeScript are overhead you pay for capability you aren't using. YAML strips that back to the part that actually describes your infrastructure, and because Pulumi treats `runtime: yaml` as a first-class option, choosing it costs you nothing on the platform side: the same engine, state, and providers back your program whether it's written in YAML or code. Start in YAML, and you can move to a richer language later if your needs outgrow it.
 
-[Try it yourself](/docs/languages-sdks/yaml/) and get started with any major cloud provider.
+[Try it yourself](/docs/iac/languages-sdks/yaml/) and get started with any major cloud provider.

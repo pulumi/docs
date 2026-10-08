@@ -26,14 +26,24 @@ Orthogonal event flag: a finding is *disputed* when it carries a
 `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` line (adjudication
 "held") or was conceded via a `concede:` annotation (adjudication "conceded").
 
-Style findings (`[style]` bullets under `#### Style findings`) are counted
-separately and never outcome-classified — they are regenerated fresh on every
-re-review and never move to ✅ Resolved, so per-finding tracking would lie.
+Advisory style suggestions (`[style]` bullets under `#### Style suggestions`,
+spelled `#### Style findings` before 2026-08-03 — this reader keys on the
+bullet form, not the heading, so both parse) are
+counted separately and never outcome-classified — they are regenerated fresh
+on every re-review and never move to ✅ Resolved, so per-finding tracking
+would lie. Blocker-tier style findings (`[style-blocker]` bullets in 🚨) are
+deliberately NOT matched by STYLE_BULLET_RE (`[style]` is not a substring of
+`[style-blocker]`): they persist across re-reviews and move to ✅ Resolved
+like any outstanding finding, so they ARE outcome-classified.
 
 This is a telemetry READER, never a gate: unparseable or legacy comment
 formats degrade to `parse_confidence: "low"` (counts-only) or
 `status: "no_review_data"`, and the aggregate reports how often that happened
-so silent degradation stays visible.
+so silent degradation stays visible. One case is NOT a degradation: a comment
+payload where nothing decodes at all means the wire format moved, not that the
+PR went unreviewed. That is `status: "decode_failed"` with its own aggregate
+column (`prs_decode_failed`) — a window scrape still returns every other PR's
+data, and `--pr` exits nonzero.
 
 Usage:
   scrape-review-outcomes.py --pr 20123 [--repo owner/repo]
@@ -64,6 +74,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+REPO_ROOT = HERE.parents[3]
 
 # Single source of truth for pinned-body parsing. validate-pinned.py's name is
 # hyphenated, so import by path; its main() is __main__-guarded, so importing
@@ -76,8 +87,27 @@ _vp = importlib.util.module_from_spec(_spec)
 sys.modules["validate_pinned"] = _vp
 _spec.loader.exec_module(_vp)
 
+# v3 surface: the finding-line grammar + marker constants come from
+# compose-review.py, the REVIEW_STATE disposition store from
+# scripts/review-v3/review_state.py. Import by path, same pattern as
+# validate_pinned above — one parser/store per contract, never a second copy.
+_cr_spec = importlib.util.spec_from_file_location("compose_review", HERE / "compose-review.py")
+_cr = importlib.util.module_from_spec(_cr_spec)
+sys.modules["compose_review"] = _cr
+_cr_spec.loader.exec_module(_cr)
+
+_rs_spec = importlib.util.spec_from_file_location(
+    "review_state", REPO_ROOT / "scripts" / "review-v3" / "review_state.py"
+)
+_rs = importlib.util.module_from_spec(_rs_spec)
+sys.modules["review_state"] = _rs
+_rs_spec.loader.exec_module(_rs)
+
 DEFAULT_REPO = "pulumi/docs"
 MARKER_RE = re.compile(r"^<!-- CLAUDE_REVIEW (\d+)/(\d+) -->")
+AUTHOR_MARKER = _cr.AUTHOR_MARKER
+BRIEF_MARKER = _cr.BRIEF_MARKER
+HEAD_SENTINEL_RE = re.compile(r"<!-- CLAUDE_REVIEW_HEAD ([0-9a-f]{7,40}) -->")
 # Canonical annotation shapes are owned by validate-pinned.py (schema v18's
 # `outcome-annotation-shape` rule enforces them going forward); this reader
 # additionally accepts a looser legacy dispute form, since old pinned comments
@@ -91,8 +121,8 @@ STYLE_BULLET_RE = re.compile(r"^\s*-\s+\*\*line \d+:?\*\*|\[style\]")
 # so the SHA shares its parens with prose. Requiring at least one a-f letter
 # keeps pure-digit runs (issue numbers, dates) from matching.
 HISTORY_SHA_RE = re.compile(r"\b(?=[0-9a-f]*[a-f])[0-9a-f]{7,40}\b")
-# Column-0 finding-paragraph start, mirroring extract_bucket_bullets.
-FINDING_START_RE = re.compile(r"^(?:- )?\*\*\S")
+# Column-0 finding-paragraph start — the shared rule, not a mirror of it.
+FINDING_START_RE = _vp.FINDING_START_RE
 # Branch prefixes of the repo's own automation; their PRs' review outcomes are
 # reported separately from human-authored PRs.
 BOT_BRANCH_PREFIXES = ("content-review/", "fix-broken-links")
@@ -105,6 +135,23 @@ OUTCOME_KEYS = (
     "unconfirmed_at_merge",
     "abandoned",
 )
+# v3-only additions. `ignored_low_confidence` doesn't carry over: the ⚠️
+# bucket it counted split into ❓ (author-answer, blocking) and ⚠️
+# (reviewer-check, advisory) on the v3 surface, so lumping their still-open
+# counts back into one legacy key would erase that distinction — hence two
+# new keys rather than a rename. `author_accepted` covers the REVIEW_STATE
+# dispositions (`accepted`/`deferred`/`not-applicable`) that are an active,
+# adjudicated answer rather than something merged over unaddressed.
+# `bulk_accepted` is the honesty-metric counter: how many of those answers
+# came from one accept-everything `#update-review` mention (the update lane's
+# `bulk: true`) rather than a per-finding decision.
+V3_ONLY_OUTCOME_KEYS = (
+    "ignored_author_answer",
+    "reviewer_check_open",
+    "author_accepted",
+    "bulk_accepted",
+)
+ALL_OUTCOME_KEYS = OUTCOME_KEYS + V3_ONLY_OUTCOME_KEYS
 
 
 def log(msg: str) -> None:
@@ -142,6 +189,36 @@ def fetch_pr_meta(repo: str, pr: int) -> dict | None:
         return None
 
 
+def _decode_gh_json_line(line: str) -> dict | None:
+    """Decode one line of `gh api --jq '... | @json'` output.
+
+    `gh` emits one SINGLE-encoded JSON object per line. Earlier code here
+    assumed `@json` double-encoded and decoded twice, which raised on every
+    real line. The double-encoded form is still accepted so a fixture or a
+    future `gh` that wraps the value keeps working; anything else returns None
+    for the caller to count.
+    """
+    try:
+        obj = json.loads(line)
+    except json.JSONDecodeError:
+        return None
+    if isinstance(obj, str):          # double-encoded: a JSON string of JSON
+        try:
+            obj = json.loads(obj)
+        except json.JSONDecodeError:
+            return None
+    return obj if isinstance(obj, dict) else None
+
+
+class CommentDecodeError(RuntimeError):
+    """No line of a PR's comment payload decoded — the wire format moved.
+
+    Distinct from "this PR has no pinned review", which is an ordinary,
+    expected result. Raised per PR; `scrape_pr` converts it into a
+    `decode_failed` record so one unreadable PR can't abort a window scrape.
+    """
+
+
 def fetch_pinned_bodies(repo: str, pr: int) -> list[str]:
     """Return the bodies of every CLAUDE_REVIEW N/M comment, ordered by N.
 
@@ -154,23 +231,59 @@ def fetch_pinned_bodies(repo: str, pr: int) -> list[str]:
             "--jq", '.[] | {id: .id, body: .body} | @json',
         ]
     )
-    tagged = []
-    for line in out.splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        try:
-            # --jq '@json' double-encodes: each output line is a JSON string
-            # containing a JSON object.
-            obj = json.loads(json.loads(line))
-        except (json.JSONDecodeError, TypeError):
+    tagged, undecodable = [], 0
+    lines = [ln for ln in (l.strip() for l in out.splitlines()) if ln]
+    for line in lines:
+        obj = _decode_gh_json_line(line)
+        if obj is None:
+            undecodable += 1
             continue
         body = obj.get("body") or ""
         m = MARKER_RE.match(body.split("\n", 1)[0])
         if m:
             tagged.append((int(m.group(1)), body))
+    # A PR with no pinned review legitimately yields zero tagged comments. A
+    # payload where NOTHING decoded is a different thing entirely -- the wire
+    # format moved -- and must not be reported as "this PR has no review data".
+    # That conflation is exactly how this went unnoticed: the decoder assumed
+    # the wrong encoding, every line raised, the except clause swallowed it,
+    # and 100% scrape failure rendered as a tidy row of zeros.
+    if lines and undecodable == len(lines):
+        raise CommentDecodeError(
+            f"could not decode any of {len(lines)} comment records for {repo}#{pr}; "
+            f"`gh api --jq '... | @json'` output is not in a recognized form. "
+            f"First line: {lines[0][:120]!r}"
+        )
     tagged.sort(key=lambda t: t[0])
     return [body for _, body in tagged]
+
+
+def fetch_brief_body(repo: str, pr: int) -> str:
+    """Return the v3 reviewer-brief comment body, or "" if there isn't one.
+
+    Unlike the author card, the brief carries no `CLAUDE_REVIEW N/M` marker,
+    so it isn't among `fetch_pinned_bodies`'s results — this fetches it
+    separately, filtering on BRIEF_MARKER the same way `fetch_pinned_bodies`
+    filters on MARKER_RE. Needed to count ⚠️ reviewer-check findings still
+    open at merge (`reviewer_check_open`) — that bucket lives on the brief,
+    not the author card.
+    """
+    out = run_gh(
+        [
+            "api", "--paginate", f"repos/{repo}/issues/{pr}/comments",
+            "--jq", '.[] | {id: .id, body: .body} | @json',
+        ]
+    )
+    for line in (l.strip() for l in out.splitlines()):
+        if not line:
+            continue
+        obj = _decode_gh_json_line(line)
+        if obj is None:
+            continue
+        body = obj.get("body") or ""
+        if body.startswith(BRIEF_MARKER):
+            return body
+    return ""
 
 
 def list_closed_prs(repo: str, since: str) -> list[dict]:
@@ -217,6 +330,8 @@ def extract_finding_paragraphs(body: str, heading_substring: str) -> list[str]:
     paragraphs: list[str] = []
     current: list[str] = []
     for line in lines:
+        if _vp.is_card_furniture(line):
+            break
         if FINDING_START_RE.match(line):
             if current:
                 paragraphs.append("\n".join(current))
@@ -340,6 +455,188 @@ def scrape_body(body: str, merged: bool, head_sha: str | None) -> dict:
     }
 
 
+# ---- v3 body parsing --------------------------------------------------------
+#
+# The v3 author card carries no 🔍 trail, no 📜 history, and no count table —
+# those live on the evidence page now (scripts/review-v3/README.md), linked
+# via %%EVIDENCE_URL%% rather than rendered into the comment. So this reader
+# classifies from the card's F-id finding rows + the REVIEW_STATE block
+# embedded in the same comment, plus the brief's ⚠️ rows — never from S3 (no
+# network dependency beyond the two `gh` comment fetches already in play).
+# "review current at merge" is read straight off the CLAUDE_REVIEW_HEAD
+# sentinel instead of 📜-history SHA archaeology.
+
+V3_SECTION_HEADINGS = {
+    "outstanding": "🚨 Fix or disagree",
+    "author-answer": "❓ Questions for you",
+    "resolved": "✅ Resolved since last review",
+}
+V3_BRIEF_HEADING = "⚠️ Check these before approving"
+
+
+def _iter_v3_finding_lines(body: str, heading_substring: str):
+    """Yield (parsed, raw_line) for every F-id finding row in one v3 section."""
+    span = _vp.find_section(body, heading_substring)
+    if span is None:
+        return
+    start, end = span
+    for line in body.splitlines()[start:end]:
+        parsed = _cr.parse_finding_line(line)
+        if parsed is not None and parsed["id"] != "F?":
+            yield parsed, line
+
+
+def extract_v3_findings(author_body: str, brief_body: str) -> list[dict]:
+    """One {id, bucket, text} record per F-id finding across both comments."""
+    findings: list[dict] = []
+    for bucket, heading in V3_SECTION_HEADINGS.items():
+        for parsed, line in _iter_v3_finding_lines(author_body, heading):
+            findings.append({"id": parsed["id"], "bucket": bucket, "text": first_line(line)})
+    for parsed, line in _iter_v3_finding_lines(brief_body, V3_BRIEF_HEADING):
+        findings.append({"id": parsed["id"], "bucket": "reviewer-check", "text": first_line(line)})
+    return findings
+
+
+def _count_v3_style_bullets(body: str) -> int:
+    """Count `#### Style suggestions` bullets — unchanged v2 block, counted
+    the same way (never outcome-classified, regenerated fresh every review)."""
+    lines = body.splitlines()
+    idx = None
+    for i, line in enumerate(lines):
+        if line.strip() in _vp.STYLE_HEADINGS:
+            idx = i
+            break
+    if idx is None:
+        return 0
+    end = len(lines)
+    for j in range(idx + 1, len(lines)):
+        if lines[j].startswith("### "):
+            end = j
+            break
+    return sum(1 for line in lines[idx:end] if STYLE_BULLET_RE.search(line))
+
+
+def classify_finding_v3(finding: dict, merged: bool, review_current: bool, state_findings: dict) -> dict:
+    """v3 per-finding classification: structural bucket + REVIEW_STATE.
+
+    A REVIEW_STATE disposition of `accepted`/`deferred`/`not-applicable`/
+    `fixed` is a conclusive, adjudicated answer and overrides the structural
+    (still-open) outcome; `refuted` does NOT override it — it's filed as a
+    dispute annotation alongside whatever outcome the finding structurally
+    has, exactly like v2's held/conceded dispute annotations, so a "refuted"
+    claim that never actually left the card at merge still reads as ignored
+    rather than silently resolved.
+    """
+    fid = finding["id"]
+    bucket = finding["bucket"]
+    entry = state_findings.get(fid) or {}
+    disposition = entry.get("disposition")
+    bulk = bool(entry.get("bulk"))
+    conceded = bool(CONCEDE_RE.search(finding["text"]))
+
+    if bucket == "resolved":
+        outcome = "conceded" if conceded else "fixed"
+    elif not merged:
+        outcome = "abandoned"
+    elif not review_current:
+        outcome = "unconfirmed_at_merge"
+    elif disposition in ("accepted", "deferred", "not-applicable"):
+        outcome = "author_accepted"
+    elif disposition == "fixed":
+        outcome = "fixed"
+    elif bucket == "outstanding":
+        outcome = "ignored_outstanding"
+    elif bucket == "author-answer":
+        outcome = "ignored_author_answer"
+    else:  # reviewer-check
+        outcome = "reviewer_check_open"
+
+    record = {
+        "id": fid,
+        "bucket": bucket,
+        "style": False,
+        "text": finding["text"],
+        "outcome": outcome,
+    }
+    if disposition:
+        record["disposition"] = disposition
+    if disposition == "refuted":
+        record["disputed"] = {
+            "by": entry.get("actor"),
+            "on": (entry.get("updated_at") or "")[:10] or None,
+            "adjudication": "refuted",
+            "outcome": outcome,
+        }
+    elif bucket == "resolved" and conceded:
+        record["disputed"] = {"by": None, "on": None, "adjudication": "conceded"}
+    if bulk:
+        record["bulk"] = True
+    return record
+
+
+def scrape_body_v3(author_body: str, brief_body: str, merged: bool, head_sha: str | None) -> dict:
+    """v3 counterpart to scrape_body: classify from the author card + brief +
+    REVIEW_STATE, never from a rendered trail/history (there isn't one)."""
+    head_match = HEAD_SENTINEL_RE.search(author_body)
+    review_head_sha = head_match.group(1) if head_match else None
+    review_current = True
+    if merged and head_sha and review_head_sha:
+        review_current = head_sha.startswith(review_head_sha)
+
+    try:
+        state = _rs.parse_state(author_body) or _rs.empty_state()
+        state_ok = True
+    except ValueError:
+        state = _rs.empty_state()
+        state_ok = False
+    state_findings = state.get("findings", {})
+
+    raw_findings = extract_v3_findings(author_body, brief_body)
+    findings = [
+        classify_finding_v3(f, merged, review_current, state_findings) for f in raw_findings
+    ]
+
+    outcome_counts = {k: 0 for k in ALL_OUTCOME_KEYS}
+    for f in findings:
+        outcome_counts[f["outcome"]] += 1
+        # `bulk_accepted` ⊆ `author_accepted` by definition (see the key
+        # docs above): a bulk-flagged `fixed` is bulk but not an acceptance,
+        # and counting it here let the digest's bulk-accept rate exceed 100%.
+        if f.get("bulk") and f["outcome"] == "author_accepted":
+            outcome_counts["bulk_accepted"] += 1
+    disputes = [
+        {**f["disputed"], "finding": f["text"]} for f in findings if f.get("disputed")
+    ]
+
+    counts_table = {
+        "outstanding": sum(1 for f in raw_findings if f["bucket"] == "outstanding"),
+        "author_answer": sum(1 for f in raw_findings if f["bucket"] == "author-answer"),
+        "reviewer_check": sum(1 for f in raw_findings if f["bucket"] == "reviewer-check"),
+        "resolved": sum(1 for f in raw_findings if f["bucket"] == "resolved"),
+    }
+    # High confidence needs the head sentinel (the only machine-read head
+    # carrier on a v3 card) AND a REVIEW_STATE block that actually parses;
+    # either gap means dispositions can't be trusted the way a parsed v2
+    # count table can.
+    parse_confidence = "high" if (review_head_sha and state_ok) else "low"
+
+    return {
+        "counts_table": counts_table,
+        "findings": findings,
+        "style_findings": _count_v3_style_bullets(author_body),
+        "outcomes": outcome_counts,
+        "disputes": disputes,
+        # Not rendered into the v3 comments (📜 history now lives on the
+        # evidence page only) -- 0 here means "not available from a comment
+        # scrape", not "no review activity happened".
+        "review_events": 0,
+        "review_current_at_merge": review_current,
+        # 💡 Pre-existing likewise isn't rendered into the v3 comments.
+        "pre_existing": 0,
+        "parse_confidence": parse_confidence,
+    }
+
+
 # ---- per-PR record --------------------------------------------------------------
 
 
@@ -353,7 +650,10 @@ def author_kind(meta: dict) -> str:
     return "human"
 
 
-def scrape_pr(repo: str, pr: int) -> dict:
+def scrape_pr(repo: str, pr: int, surface: str = "auto") -> dict:
+    """Scrape one PR. `surface` is "auto" (detect from the comment body,
+    the normal path), or a forced override ("v2"/"v3") for debugging/testing
+    a specific reader against a PR regardless of what's actually posted."""
     meta = fetch_pr_meta(repo, pr)
     if meta is None:
         return {"pr": pr, "status": "pr_unavailable"}
@@ -366,14 +666,32 @@ def scrape_pr(repo: str, pr: int) -> dict:
         "closed_at": meta.get("mergedAt") or meta.get("closedAt"),
         "author_kind": author_kind(meta),
     }
-    bodies = fetch_pinned_bodies(repo, pr)
+    try:
+        bodies = fetch_pinned_bodies(repo, pr)
+    except CommentDecodeError as exc:
+        # Record it and keep going. A window scrape that aborts on one
+        # unreadable PR loses every record already gathered and mutes the
+        # digest's whole outcomes section -- the same "no data" reading this
+        # status exists to prevent, one level up. `aggregate` counts these in
+        # their own column, and `main` exits nonzero, so the failure is loud
+        # without being fatal to the other 130-odd PRs in the window.
+        record["status"] = "decode_failed"
+        record["detail"] = str(exc)
+        return record
     if not bodies:
         # Short-circuited (review:trivial etc.), comment deleted, or never
         # reviewed. Counted, never rated.
         record["status"] = "no_review_data"
         return record
-    body = "\n".join(bodies)
-    record.update(scrape_body(body, merged, meta.get("headRefOid")))
+    author_body = "\n".join(bodies)
+    is_v3 = AUTHOR_MARKER in author_body if surface == "auto" else surface == "v3"
+    if is_v3:
+        brief_body = fetch_brief_body(repo, pr)
+        record.update(scrape_body_v3(author_body, brief_body, merged, meta.get("headRefOid")))
+        record["surface"] = "v3"
+    else:
+        record.update(scrape_body(author_body, merged, meta.get("headRefOid")))
+        record["surface"] = "v2"
     record["status"] = "scraped"
     record["comment_count"] = len(bodies)
     return record
@@ -383,14 +701,21 @@ def scrape_pr(repo: str, pr: int) -> dict:
 
 
 def empty_outcomes() -> dict:
-    return {k: 0 for k in OUTCOME_KEYS}
+    # Always the full key set (legacy six + v3-only four): a v2 record's
+    # outcomes dict never populates the v3-only keys and vice versa, so
+    # having every column present from the start is what keeps a mixed
+    # window's aggregate columns stable rather than needing per-surface
+    # merge logic.
+    return {k: 0 for k in ALL_OUTCOME_KEYS}
 
 
 def aggregate(records: list[dict]) -> dict:
     agg = {
         "prs_scraped": 0,
         "prs_no_review_data": 0,
+        "prs_decode_failed": 0,
         "prs_parse_low": 0,
+        "prs_v3": 0,
         "outcomes": {"human": empty_outcomes(), "bot": empty_outcomes()},
         "style_findings": 0,
         "disputes": [],
@@ -398,12 +723,21 @@ def aggregate(records: list[dict]) -> dict:
         "by_verdict": {},
     }
     for rec in records:
+        # A wire-format break gets its own column. Folding it into
+        # prs_no_review_data would re-create the conflation this reader was
+        # just fixed for -- "nobody reviewed these" and "we can't read these"
+        # look identical in the digest but mean opposite things.
+        if rec.get("status") == "decode_failed":
+            agg["prs_decode_failed"] += 1
+            continue
         if rec.get("status") != "scraped":
             agg["prs_no_review_data"] += 1
             continue
         agg["prs_scraped"] += 1
         if rec.get("parse_confidence") != "high":
             agg["prs_parse_low"] += 1
+        if rec.get("surface") == "v3":
+            agg["prs_v3"] += 1
         kind = rec.get("author_kind", "human")
         for key, n in rec.get("outcomes", {}).items():
             agg["outcomes"][kind][key] += n
@@ -433,21 +767,30 @@ def render_stats(agg: dict, since: str) -> str:
     def rate(n: int, d: int) -> str:
         return f"{100 * n / d:.0f}%" if d else "–"
 
+    v3_note = f", {agg['prs_v3']} v3-surface" if agg.get("prs_v3") else ""
     lines = [
         f"# Review outcome stats since {since}",
         "",
         f"PRs with scraped reviews: **{agg['prs_scraped']}** "
         f"(+{agg['prs_no_review_data']} with no review data, "
-        f"{agg['prs_parse_low']} parsed at low confidence)",
+        f"{agg['prs_parse_low']} parsed at low confidence"
+        + (f", **{agg['prs_decode_failed']} undecodable**" if agg.get("prs_decode_failed") else "")
+        + v3_note
+        + ")",
         "",
-        "| Author | Fixed | Conceded | Ignored 🚨 | Ignored ⚠️ | Unconfirmed | Abandoned |",
-        "| :--- | ---: | ---: | ---: | ---: | ---: | ---: |",
+        # Legacy columns (Fixed .. Abandoned) count the same thing for v2 and
+        # v3 records. The v3-only columns are additive: a v2-only window
+        # renders them all zero rather than needing a second table shape.
+        "| Author | Fixed | Conceded | Ignored 🚨 | Ignored ⚠️ | Ignored ❓ | ⚠️ Open | Author-accepted | Bulk | Unconfirmed | Abandoned |",
+        "| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for kind in ("human", "bot"):
         o = agg["outcomes"][kind]
         lines.append(
             f"| {kind} | {o['fixed']} | {o['conceded']} | {o['ignored_outstanding']} "
-            f"| {o['ignored_low_confidence']} | {o['unconfirmed_at_merge']} | {o['abandoned']} |"
+            f"| {o['ignored_low_confidence']} | {o['ignored_author_answer']} | {o['reviewer_check_open']} "
+            f"| {o['author_accepted']} | {o['bulk_accepted']} "
+            f"| {o['unconfirmed_at_merge']} | {o['abandoned']} |"
         )
     lines += [
         "",
@@ -570,13 +913,100 @@ def self_test() -> int:
         {"status": "scraped", "pr": 1, "author_kind": "human", "parse_confidence": "high",
          **{k: rec[k] for k in ("outcomes", "style_findings", "disputes", "findings")}},
         {"status": "no_review_data", "pr": 2},
+        {"status": "decode_failed", "pr": 3, "detail": "boom"},
     ])
     check("aggregate scraped count", agg["prs_scraped"] == 1)
     check("aggregate no-data count", agg["prs_no_review_data"] == 1)
+    check("aggregate decode-failure column", agg["prs_decode_failed"] == 1)
     check("aggregate human fixed", agg["outcomes"]["human"]["fixed"] == 1)
     check("merged_with_outstanding listed", len(agg["merged_with_outstanding"]) == 1)
     check("by_verdict contradicted", "contradicted" in agg["by_verdict"])
     check("stats renders", "Per verdict category" in render_stats(agg, "2026-01-01"))
+
+    # ---- v3 surface -------------------------------------------------------
+    v3_author = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text(encoding="utf-8")
+    v3_brief = (HERE / "testdata" / "v3-fixture-brief.md.txt").read_text(encoding="utf-8")
+    v3_merged_head = "aaaabbbbccccddddeeeeffff0000111122223333"
+
+    check("v3 marker detected", AUTHOR_MARKER in v3_author)
+    raw = extract_v3_findings(v3_author, v3_brief)
+    ids = {f["id"] for f in raw}
+    check("F1-F4 extracted", ids == {"F1", "F2", "F3", "F4"})
+    check("F4 comes from the brief's ⚠️ bucket",
+          next(f for f in raw if f["id"] == "F4")["bucket"] == "reviewer-check")
+
+    # Undecided: every F-id is still structurally open, current review.
+    v3_undecided = scrape_body_v3(v3_author, v3_brief, merged=True, head_sha=v3_merged_head)
+    check("v3 parse_confidence high", v3_undecided["parse_confidence"] == "high")
+    check("v3 review current at merge", v3_undecided["review_current_at_merge"] is True)
+    check("v3 outstanding ignored", v3_undecided["outcomes"]["ignored_outstanding"] == 2)
+    check("v3 author-answer ignored", v3_undecided["outcomes"]["ignored_author_answer"] == 1)
+    check("v3 reviewer-check open", v3_undecided["outcomes"]["reviewer_check_open"] == 1)
+    check("v3 style counted separately", v3_undecided["style_findings"] == 1)
+    check("v3 counts_table shape",
+          v3_undecided["counts_table"] == {"outstanding": 2, "author_answer": 1, "reviewer_check": 1, "resolved": 0})
+
+    # Answered: fixed / refuted / accepted / bulk-accepted dispositions.
+    rs = _rs.empty_state()
+    rs = _rs.set_disposition(rs, "F1", "fixed", actor="cam")
+    rs = _rs.set_disposition(rs, "F2", "refuted", actor="cam", note="style rule doesn't apply here")
+    rs = _rs.set_disposition(rs, "F3", "accepted", actor="cam", note="shipping as-is", bulk=True)
+    v3_answered_author = _rs.replace_block(v3_author, rs)
+    v3_answered = scrape_body_v3(v3_answered_author, v3_brief, merged=True, head_sha=v3_merged_head)
+    outcomes = v3_answered["outcomes"]
+    check("fixed disposition -> fixed", outcomes["fixed"] == 1)
+    check("author_accepted counts accepted disposition", outcomes["author_accepted"] == 1)
+    check("bulk_accepted counted separately", outcomes["bulk_accepted"] == 1)
+    check("reviewer-check unaffected", outcomes["reviewer_check_open"] == 1)
+    # F2 (outstanding, refuted) is disputed AND still structurally open --
+    # refuted doesn't silently resolve a finding still sitting in the card.
+    check("F2 still ignored_outstanding despite refuted disposition",
+          outcomes["ignored_outstanding"] == 1)
+    refuted_dispute = next(d for d in v3_answered["disputes"] if d["adjudication"] == "refuted")
+    check("refuted dispute carries its structural outcome",
+          refuted_dispute["outcome"] == "ignored_outstanding")
+
+    # Unmerged -> abandoned regardless of disposition.
+    v3_abandoned = scrape_body_v3(v3_answered_author, v3_brief, merged=False, head_sha=None)
+    check("v3 unmerged -> abandoned", v3_abandoned["outcomes"]["abandoned"] == 4)
+
+    # Stale review at merge -> unconfirmed, not ignored.
+    v3_stale = scrape_body_v3(v3_author, v3_brief, merged=True,
+                               head_sha="0123456789abcdef0123456789abcdef01234567")
+    check("v3 stale review -> unconfirmed", v3_stale["outcomes"]["unconfirmed_at_merge"] == 4)
+    check("v3 stale review -> review_current false", v3_stale["review_current_at_merge"] is False)
+
+    # A corrupt REVIEW_STATE block degrades parse_confidence, never crashes.
+    corrupt_author = v3_author.replace(
+        '<!-- REVIEW_STATE {"findings":{},"high_water":4,"schema":1} -->',
+        '<!-- REVIEW_STATE {broken -->',
+    )
+    v3_corrupt = scrape_body_v3(corrupt_author, v3_brief, merged=True, head_sha=v3_merged_head)
+    check("corrupt REVIEW_STATE -> low parse confidence", v3_corrupt["parse_confidence"] == "low")
+
+    # scrape_pr routes to the v3 reader automatically off the author marker.
+    def fake_meta(repo, pr):
+        return {
+            "number": pr, "title": "t", "url": "u", "state": "MERGED",
+            "mergedAt": "2026-08-31T18:00:00Z", "closedAt": None,
+            "headRefOid": v3_merged_head, "headRefName": "feature",
+            "author": {"login": "alice"}, "labels": [],
+        }
+
+    originals = (fetch_pr_meta, fetch_pinned_bodies, fetch_brief_body)
+    globals()["fetch_pr_meta"] = fake_meta
+    globals()["fetch_pinned_bodies"] = lambda repo, pr: [v3_author]
+    globals()["fetch_brief_body"] = lambda repo, pr: v3_brief
+    try:
+        v3_rec = scrape_pr("pulumi/docs", 999)
+    finally:
+        globals()["fetch_pr_meta"], globals()["fetch_pinned_bodies"], globals()["fetch_brief_body"] = originals
+    check("scrape_pr auto-detects v3", v3_rec["surface"] == "v3")
+    check("scrape_pr v3 status scraped", v3_rec["status"] == "scraped")
+
+    check("ALL_OUTCOME_KEYS superset of legacy OUTCOME_KEYS",
+          set(OUTCOME_KEYS) <= set(ALL_OUTCOME_KEYS))
+    check("empty_outcomes covers every key", set(empty_outcomes()) == set(ALL_OUTCOME_KEYS))
 
     if failures:
         print(f"{len(failures)} self-test failure(s)")
@@ -594,14 +1024,22 @@ def main() -> int:
     ap.add_argument("--pr", type=int, help="scrape a single PR")
     ap.add_argument("--closed-since", help="scrape review-labeled PRs closed since YYYY-MM-DD")
     ap.add_argument("--stats", action="store_true", help="render a markdown tuning report instead of JSON")
+    ap.add_argument("--surface", choices=("auto", "v2", "v3"), default="auto",
+                    help="format detection is automatic (default); force a reader for debugging/testing")
     ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
 
     if args.self_test:
         return self_test()
     if args.pr:
-        json.dump(scrape_pr(args.repo, args.pr), sys.stdout, indent=2, ensure_ascii=False)
+        record = scrape_pr(args.repo, args.pr, args.surface)
+        json.dump(record, sys.stdout, indent=2, ensure_ascii=False)
         sys.stdout.write("\n")
+        # Single-PR mode has no partial result worth protecting, so a wire-format
+        # break exits nonzero. The record still prints, with `detail`.
+        if record.get("status") == "decode_failed":
+            log(f"decode failure: {record['detail']}")
+            return 1
         return 0
     if args.closed_since:
         try:
@@ -610,8 +1048,16 @@ def main() -> int:
             ap.error("--closed-since must be YYYY-MM-DD")
         candidates = list_closed_prs(args.repo, args.closed_since)
         log(f"{len(candidates)} review-labeled PRs closed since {args.closed_since}")
-        records = [scrape_pr(args.repo, pr["number"]) for pr in candidates]
+        records = [scrape_pr(args.repo, pr["number"], args.surface) for pr in candidates]
         agg = aggregate(records)
+        # Deliberately NOT a nonzero exit: digest.py runs this with check=True
+        # and mutes its whole outcomes section on a failed call, so exiting
+        # here would throw away 130-odd good records to report that one PR was
+        # unreadable. The count rides in the aggregate instead, where the
+        # digest can show it.
+        if agg["prs_decode_failed"]:
+            log(f"WARNING: {agg['prs_decode_failed']} PR(s) had undecodable comment "
+                f"payloads; see prs_decode_failed and the per-PR `detail` fields")
         if args.stats:
             sys.stdout.write(render_stats(agg, args.closed_since))
             return 0

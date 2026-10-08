@@ -1,21 +1,33 @@
 ---
 title: What is Pulumi?
 meta_desc: |
-    Discover what Pulumi is, how it works, and why it's revolutionizing infrastructure as code with familiar programming languages.
+    Pulumi is open source infrastructure as code: define, deploy, and manage cloud infrastructure in TypeScript, Python, JavaScript, Go, .NET, Java, YAML, or HCL.
 type: what-is
+date: 2025-07-22T14:48:42-04:00
 page_title: "What is Pulumi?"
-authors: ["asaf-ashirov"]
+authors: ["pulumi-content-team"]
+software_application_schema: true
 ---
 
-The modern cloud landscape has transformed how organizations build and deploy applications, but managing cloud infrastructure often remains a complex, error-prone process involving clicking through web consoles, writing brittle scripts, or learning domain-specific languages. Pulumi emerges as a solution that fundamentally changes this paradigm by enabling developers and infrastructure teams to manage cloud resources using the same programming languages they already know and love.
+Pulumi is an open source infrastructure as code platform that lets you define, deploy, and manage cloud infrastructure using general-purpose programming languages — TypeScript, Python, JavaScript, Go, .NET, and Java — plus YAML and HCL. It provisions resources across AWS, Azure, Google Cloud, Kubernetes, and hundreds of providers, and pairs with Pulumi Cloud for state, secrets, policy, and AI-assisted operations.
 
-Pulumi is a cloud engineering platform that treats infrastructure as software, allowing teams to define, deploy, and manage cloud resources using familiar programming languages like TypeScript, Python, Go, C#, Java, and YAML. Rather than forcing teams to learn proprietary configuration languages or rely on limited templating systems, Pulumi brings the full power of modern software development practices to infrastructure management.
+Pulumi treats infrastructure as software: instead of a templating language or a fixed schema, teams write real programs — with loops, functions, tests, and packages — that generate and manage cloud resources. Whichever language a team picks, Pulumi Cloud adds collaboration, governance, and AI-assisted workflows on top through one platform, not a set of disconnected add-ons.
+
+## Pulumi at a glance
+
+| Entity | Role | Notes |
+| --- | --- | --- |
+| **Pulumi** | Infrastructure as code platform | Defines, deploys, and manages cloud infrastructure as real code |
+| **Languages** | TypeScript, Python, JavaScript, Go, .NET, Java, YAML, HCL | General-purpose languages plus a declarative option, with full IDE, test, and package support |
+| **Cloud providers** | AWS, Azure, Google Cloud, Kubernetes, hundreds of providers | One consistent programming model across every provider |
+| **Pulumi Cloud** | Managed platform layer | State backend, secrets and configuration via Pulumi ESC, policy as code, Pulumi Discovery, and Neo (Pulumi's AI infrastructure agent) |
+| **Competitors** | Terraform, OpenTofu, AWS CloudFormation, AWS CDK, Crossplane | Pulumi differs by using general-purpose languages instead of a DSL or fixed templates |
 
 ## The evolution of infrastructure management
 
-To understand Pulumi's significance, it's helpful to consider how infrastructure management has evolved. In the early days of cloud computing, infrastructure was typically managed through web consoles or command-line interfaces. While functional, this approach suffered from poor repeatability, limited collaboration capabilities, and difficulty tracking changes over time.
+Managing cloud infrastructure has historically meant clicking through web consoles, writing brittle scripts, or learning a tool-specific templating language — approaches that get harder to maintain as environments grow. To understand Pulumi's significance, it's helpful to consider how infrastructure management has evolved. In the early days of cloud computing, infrastructure was typically managed through web consoles or command-line interfaces. While functional, this approach suffered from poor repeatability, limited collaboration capabilities, and difficulty tracking changes over time.
 
-The introduction of infrastructure as code (IaC) tools like Terraform and AWS CloudFormation represented a significant improvement, enabling teams to define infrastructure declaratively and version control their configurations. However, these tools introduced their own challenges through domain-specific languages that required additional learning curves and offered limited expressiveness compared to general-purpose programming languages.
+The introduction of infrastructure as code (IaC) tools like Terraform and AWS CloudFormation represented a significant improvement, enabling teams to define infrastructure declaratively and version control their configurations. These tools introduced domain-specific languages with their own learning curves. They favor a constrained, declarative model, while general-purpose languages trade that simplicity for richer abstraction and reuse.
 
 Pulumi represents the next evolution in this space by embracing what the company calls "infrastructure as software." This approach enables teams to leverage the full software engineering ecosystem (including testing frameworks, package managers, IDEs, and development workflows) when managing their cloud infrastructure.
 
@@ -33,7 +45,7 @@ The combination of AI coding tools with Pulumi's platform capabilities, particul
 
 At its core, Pulumi follows a declarative model where you describe your desired infrastructure state in code, and the platform handles the complexities of provisioning, updating, and managing cloud resources to achieve that state. This process involves several key components working together seamlessly.
 
-The Pulumi SDK provides language-specific libraries that offer strongly-typed bindings for cloud resources across 200+ providers. These libraries enable developers to define infrastructure using familiar programming constructs like functions, loops, conditionals, and classes, while providing rich IDE support including IntelliSense, error checking, and refactoring capabilities.
+The Pulumi SDK provides language-specific libraries that offer strongly typed bindings for cloud resources across hundreds of providers. These libraries enable developers to define infrastructure using familiar programming constructs like functions, loops, conditionals, and classes, while providing rich IDE support including IntelliSense, error checking, and refactoring capabilities.
 
 When you run a [Pulumi program](/docs/iac/concepts/projects/), the deployment engine analyzes your code, computes the necessary changes to reach your desired state, and executes those changes in the optimal order while respecting resource dependencies. The engine maintains a detailed record of your infrastructure state, enabling features like [drift detection](/what-is/what-is-infrastructure-drift/), rollback capabilities, and collaborative workflows.
 
@@ -53,7 +65,7 @@ The **state management** system maintains a comprehensive record of your infrast
 
 ## The Pulumi Registry: A comprehensive ecosystem
 
-The [Pulumi Registry](/registry/) represents one of Pulumi's most significant advantages over traditional infrastructure tools. This comprehensive ecosystem provides access to over 200 cloud and SaaS providers through a unified, multi-language interface that goes far beyond what any single cloud provider offers.
+The [Pulumi Registry](/registry/) represents one of Pulumi's most significant advantages over traditional infrastructure tools. This comprehensive ecosystem provides access to hundreds of cloud and SaaS providers through a unified, multi-language interface that goes far beyond what any single cloud provider offers.
 
 ### Native cloud providers
 
@@ -65,7 +77,7 @@ The registry extends far beyond traditional cloud providers to include specializ
 
 ### Community and official packages
 
-The registry combines official packages maintained by Pulumi with a growing ecosystem of community contributions. Popular packages include Kubernetes operators, Docker configurations, and specialized industry solutions. Each package is automatically generated for all supported programming languages, meaning a single package definition provides TypeScript, Python, Go, C#, and Java bindings.
+The registry combines official packages maintained by Pulumi with a growing ecosystem of community contributions. Popular packages include Kubernetes operators, Docker configurations, and specialized industry solutions. Each package is automatically generated for all supported programming languages, meaning a single package definition provides TypeScript, Python, Go, .NET, and Java bindings.
 
 ### AWSx components
 
@@ -73,9 +85,9 @@ Pulumi AWSx components represent opinionated, well-architected patterns for comm
 
 ## The power of real programming languages
 
-One of Pulumi's most significant differentiators is its support for general-purpose programming languages rather than domain-specific languages. This design choice has profound implications for how teams approach infrastructure management.
+One of Pulumi's defining features is the breadth of languages it supports: general-purpose languages like TypeScript, Python, JavaScript, Go, .NET, and Java, alongside YAML and HCL. Teams can pick the language that best fits how they already work, which shapes how they approach infrastructure management.
 
-Using familiar programming languages means developers can apply existing skills and knowledge to infrastructure problems. They can leverage the full ecosystem of language features, including package managers, testing frameworks, and development tools. This approach eliminates the need to learn proprietary configuration languages and enables teams to create more sophisticated, maintainable infrastructure code.
+Using familiar programming languages means developers can apply existing skills and knowledge to infrastructure problems. They can use the full ecosystem of language features, including package managers, testing frameworks, and development tools, while still reaching for declarative formats like YAML or HCL when those fit better. The result is infrastructure code that's easier to maintain and build on.
 
 The ability to use standard programming constructs like loops, conditionals, and functions enables dynamic infrastructure definitions that would be difficult or impossible with templating-based approaches. For example, you might programmatically create resources based on environment variables, implement complex business logic within your infrastructure code, or generate resources based on external data sources.
 
@@ -131,7 +143,7 @@ Organizations across various industries have adopted Pulumi to address diverse i
 
 Snowflake, a leading cloud data platform, used Pulumi to reduce its deployment time from 1.5 weeks to a single day while improving reliability and maintainability. The ability to use familiar programming languages enabled their development teams to contribute directly to infrastructure management, reducing silos between development and operations.
 
-BMW manages infrastructure for over 11,000 developers using Pulumi, leveraging the platform's collaboration features and policy enforcement capabilities to maintain consistency and security across their global development organization. The company particularly benefits from Pulumi's ability to create reusable components that encapsulate their infrastructure best practices.
+BMW manages more than 20,000 cloud resources using Pulumi, leveraging the platform's collaboration features and policy enforcement capabilities to maintain consistency and security across their global development organization. The company particularly benefits from Pulumi's ability to create reusable components that encapsulate their infrastructure best practices.
 
 Starburst achieved a 112x improvement in deployment speed, reducing deployment times from two weeks to just three hours. This dramatic improvement was enabled by Pulumi's testing capabilities and the ability to create sophisticated deployment pipelines using familiar programming languages.
 
@@ -141,7 +153,7 @@ These success stories demonstrate how Pulumi enables organizations to achieve su
 
 When compared to established infrastructure as code tools, Pulumi offers several distinct advantages that address common pain points in infrastructure management.
 
-Traditional tools like Terraform require teams to learn domain-specific languages with limited expressiveness compared to general-purpose programming languages. Pulumi's approach enables teams to leverage existing language skills while providing access to the full ecosystem of development tools and practices.
+Tools like Terraform center on a domain-specific language built for IaC. Pulumi lets teams use languages they already know, and now supports HCL as well, so adopting it builds on existing skills while providing access to the full ecosystem of development tools and practices.
 
 The testing capabilities represent another significant advantage. While some tools offer limited testing options, Pulumi's integration with language-native testing frameworks enables comprehensive testing strategies including unit tests, integration tests, and property-based testing approaches.
 
@@ -183,14 +195,45 @@ That distinction matters most now, when AI can generate infrastructure faster th
 
 [Get started with Pulumi](/docs/get-started/) to see this in your own stack.
 
+## Frequently asked questions
+
+### What is Pulumi used for?
+
+Pulumi is used to define, deploy, and manage cloud infrastructure as code — provisioning resources like virtual machines, databases, Kubernetes clusters, and serverless functions across AWS, Azure, Google Cloud, and hundreds of other providers. Teams use it to replace manual console clicks and brittle scripts with versioned, testable infrastructure programs written in a language they already know.
+
+### What languages does Pulumi support?
+
+Pulumi supports general-purpose programming languages — TypeScript, Python, JavaScript, Go, .NET, and Java — plus YAML and HCL for teams that prefer a declarative format. Because Pulumi programs are real code, they get full IDE support, static typing, automated testing, and package management: capabilities that templating languages and fixed-schema DSLs don't provide natively.
+
+### Is Pulumi open source?
+
+Yes. Pulumi's core SDK and providers are open source under the Apache 2.0 license, and the CLI and language SDKs are free to use. Pulumi Cloud, the optional managed backend for state, secrets, and policy, offers a Free edition plus the paid Essentials, Pro, and Enterprise editions for organizations that need collaboration and governance at scale.
+
+### How is Pulumi different from Terraform?
+
+Terraform and OpenTofu use HashiCorp Configuration Language (HCL), a domain-specific language built around a fixed schema. Pulumi lets you use general-purpose languages instead — and, with native HCL support and a Terraform state backend, can also work directly with existing HCL configurations. The difference is optionality: Pulumi adds full programming-language capability without giving up compatibility.
+
+### Can Pulumi manage AWS, Azure, and Google Cloud at the same time?
+
+Yes. Pulumi provides native providers for AWS, Azure, and Google Cloud, along with Kubernetes and hundreds of other providers, so a single program can define resources across multiple clouds using one consistent language and one deployment engine — no separate tools or state stores per provider required.
+
+### Is Pulumi free?
+
+The Pulumi CLI, SDKs, and providers are free and open source. Pulumi Cloud adds managed state, secrets, and collaboration. Free supports one user. Essentials adds organizations, multiple users, Pulumi Neo, Resource Search, Property Search, and policy results in advisory mode. Pro adds organization-managed policy enforcement, preventative policies, and custom policy packs. Enterprise adds conformance packs, unlimited custom policy packs, and policy remediation.
+
+### What is Pulumi Cloud?
+
+Pulumi Cloud is the managed platform layer that sits on top of Pulumi's open-source engine. It provides state storage, Pulumi ESC for secrets and configuration, policy as code, Pulumi Discovery for cloud estate visibility, and Neo, an AI infrastructure agent — the collaboration and governance capabilities teams need once more than one person touches the same infrastructure.
+
 ## Learn more
 
 Ready to experience infrastructure as software? Explore Pulumi's comprehensive platform and discover how it can transform your approach to cloud infrastructure management.
 
 - [Get started with Pulumi](/docs/get-started/)
 - [Explore the registry](/registry/)
-- [Read customer success stories](/case-studies/)
+- [Read customer success stories](/customers/)
 - [Compare infrastructure as code tools](/blog/infrastructure-as-code-tools/)
+- [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 
 ### Related topics
 

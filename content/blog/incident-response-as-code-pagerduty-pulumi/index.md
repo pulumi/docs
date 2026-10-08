@@ -1,6 +1,7 @@
 ---
 title: "Incident Response as Code: Managing PagerDuty with Pulumi"
 date: 2026-07-20
+updated: 2026-09-21
 draft: false
 meta_desc: "Manage PagerDuty teams, schedules, escalation policies, and services with Pulumi, and wire alerting to the AWS infrastructure in the same program."
 feature_image: feature.png
@@ -55,13 +56,13 @@ flowchart LR
     EP -->|"level 2, after 15 min"| Lead["Team lead"]
 ```
 
-Everything on both sides of that diagram is one TypeScript program. If you would rather write Python, Go, C#, Java, or YAML, the [Pulumi PagerDuty provider](https://www.pulumi.com/registry/packages/pagerduty/) supports all of them. It is bridged from PagerDuty's official Terraform provider (which started life as a community project by Alexander Hellbom before PagerDuty adopted it), so the resource coverage is identical.
+Everything on both sides of that diagram is one TypeScript program. If you would rather write Python, JavaScript, Go, .NET, Java, or YAML, the [Pulumi PagerDuty provider](https://www.pulumi.com/registry/packages/pagerduty/) supports all of them. It is bridged from PagerDuty's official Terraform provider (which [started life as a community project](https://www.pagerduty.com/eng/how-why-terraform/) before PagerDuty adopted it), so its resource coverage closely tracks the upstream provider.
 
 ## Prerequisites
 
 Before getting started, ensure you have:
 
-- [Pulumi CLI](/docs/iac/download-install/) installed and configured
+- [Pulumi CLI](/docs/install/) installed and configured
 - A [Pulumi Cloud account](https://app.pulumi.com/signup)
 - A PagerDuty account with admin access; a [free trial](https://www.pagerduty.com/sign-up/) works fine
 - An [AWS](https://aws.amazon.com/) account for the alarm wiring in the second half

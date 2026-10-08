@@ -43,7 +43,7 @@ You can also hand tasks to Neo from other agent sessions. Simply ask your agent,
 
 ## What carries over
 
-Local tools and context are what's new. The full set of controls you have in Pulumi Cloud Neo applies in the terminal: approval modes (manual, balanced, auto) for tool calls, permission modes (default, read-only) for what Neo can change, and [Plan Mode](/docs/ai/tasks/#plan-mode) for research and planning before execution.
+Local tools and context are what's new. The full set of controls you have in Pulumi Cloud Neo applies in the terminal: approval modes (manual, balanced, auto) for tool calls, permission modes (default, read-only) for what Neo can change, and [Plan Mode](/docs/ai/neo/tasks/#plan-mode) for research and planning before execution.
 
 Integrations carry over too. The [integration catalog](/blog/neo-integration-catalog/) (connectors to Atlassian, Datadog, Linear, PagerDuty, and others) works the same way from the terminal. Identity, RBAC, and audit all run through your `pulumi login`, the same way they do in the console. See the [Pulumi Neo docs](/docs/ai/) for details.
 

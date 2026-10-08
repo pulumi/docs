@@ -13,6 +13,7 @@ menu:
     parent: deployments-concepts
     weight: 70
     identifier: deployments-concepts-schedules
+pulumi_cloud_feature: scheduled-deployments
 ---
 
 Scheduled Deployments in Pulumi Cloud introduce a robust capability to automate cloud operations, enabling more control over when and how infrastructure updates are applied. This feature is ideal for teams looking to enhance operational efficiency by automating routine tasks and ensuring that changes are made during optimal times, such as off-peak hours or predetermined maintenance windows.
@@ -25,7 +26,7 @@ In order to set up a deployment schedule in the Pulumi Cloud console, follow the
 
 <!-- markdownlint-disable ol-prefix -->
 1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/concepts/settings/)
-2. Navigate to the Stack > Settings > Schedules
+2. Navigate to the stack > Settings > Schedules
 3. Select "Raw operation"
 4. Select from the drop-down the type of operation you would like to schedule
 5. Set the schedule using a cron expression
@@ -56,9 +57,9 @@ curl \
 
 Refer to the [Pulumi Deployments REST API documentation](/docs/deployments/deployments/api) for more details on how to use the REST API to manage Scheduled Deployments.
 
-### Pulumi Cloud Service provider
+### Pulumi Cloud provider
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -217,6 +218,46 @@ outputs:
 ```
 
 {{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+`Pulumi.yaml`:
+
+```yaml
+name: raw-schedule-setup
+runtime: hcl
+description: Setup of a raw schedule for automatic operations with Pulumi
+```
+
+`main.tf`:
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source = "pulumi/pulumiservice"
+    }
+  }
+}
+
+resource "pulumiservice_deployment_schedule" "raw_schedule" {
+  organization = "my-org"
+  project      = "my-project"
+  stack        = "prod-stack"
+
+  schedule_cron    = "0 0 * * *" # Run an update daily at midnight
+  pulumi_operation = "update"
+}
+
+output "schedule_id" {
+  value = pulumiservice_deployment_schedule.raw_schedule.schedule_id
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 See the [Pulumi Service Provider documentation](/registry/packages/pulumiservice/api-docs/provider) for more details on how to manage Scheduled Deployments in source control.

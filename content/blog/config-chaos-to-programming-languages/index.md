@@ -22,6 +22,8 @@ social:
 
 *This post is based on our video interview with Daniel Ward, a Software Developer/Consultant at Lean TECHniques and Microsoft MVP. Daniel shares his strategies for moving teams from configuration chaos to programming languages for infrastructure, including the 10% rule for change, viral adoption, and why Pulumi beats YAML for complex systems. Watch the video below or read on. - Adam Gordon Bell*
 
+{{% hcl-note %}}
+
 {{< youtube "3VKbaNtbdSs?rel=0" >}}
 
 Imagine your infrastructure codebase has evolved from a few files to thousands of lines across dozens of configuration files. Your team spends hours deciphering CloudFormation templates, your AWS CDK deployments take 30+ minutes, and introducing any change becomes a multi-day effort. This is the reality many organizations face when their infrastructure-as-code approach outgrows their tooling.
@@ -82,7 +84,7 @@ We try to work with teams that ask for our help instead of being pushed onto tea
 
 This success creates natural curiosity, leading other teams to either request similar help or study and adopt the successful team's practices. Either way, I'm happy that things are improving.
 
-## 5. Align Dev and Ops with Infrastructure as Code
+## 5. Align dev and ops with infrastructure as code
 
 When it comes to infrastructure as code specifically, I've noticed it's becoming table stakes for many organizations, though implementation quality varies widely.
 

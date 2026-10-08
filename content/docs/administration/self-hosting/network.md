@@ -15,6 +15,7 @@ aliases:
   - /docs/pulumi-cloud/self-hosted/network/
   - /docs/administration/self-hosting/network/
   - /docs/pulumi-cloud/admin/self-hosted/network/
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note />}}

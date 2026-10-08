@@ -3,33 +3,13 @@ title: What Is Infrastructure as Software?
 meta_desc: "Infrastructure as Software is IaC written in general-purpose programming languages. Learn how it differs from DSL-based IaC and where it fits in practice."
 
 type: what-is
+date: 2021-07-22T15:11:35-07:00
 page_title: "Infrastructure as Software: The Next Step in Cloud Management"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 authors: ["cam-soper"]
 ---
 
-**Infrastructure as Software (IaS) is the practice of defining cloud infrastructure in general-purpose programming languages and applying the full toolchain of modern software engineering to it: real types, real abstractions, real tests, real package management, real APIs, and real CI/CD.** It's the natural next step after [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/), which uses domain-specific languages (DSLs) or markup formats like HCL, JSON, and YAML, and which makes most of these engineering practices either awkward or unavailable.
+**Infrastructure as Software (IaS) is the practice of defining cloud infrastructure in general-purpose programming languages and applying the full toolchain of modern software engineering to it: real types, real abstractions, real tests, real package management, real APIs, and real CI/CD.** It's the natural next step after [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/), which uses domain-specific languages (DSLs) or markup formats like HCL, JSON, and YAML. Those formats keep infrastructure declarative and approachable, and some software-engineering practices (rich abstraction, in-language testing, packaging) are harder to apply directly in them.
 
 The two terms overlap in intent. They both aim to replace manual cloud operations with reviewable, automated, reproducible code. They differ in *how much code engineering* you can do once your infrastructure is in code. IaS treats every cloud resource as a software object whose lifecycle can be programmed, abstracted, tested, packaged, and called from other programs. That last property is the one that opens up automation patterns DSL-based IaC can't reach: building self-service portals, embedding `pulumi up` inside a SaaS product, and using the same APIs internally that Pulumi itself uses.
 
@@ -48,7 +28,7 @@ In this article, we'll cover the key questions about infrastructure as software:
 
 DSL-based IaC was a big jump forward in the 2010s. It introduced versioning, code review, and reproducible environments to cloud operations. Three pressures since then have stretched its limits and motivated the move toward IaS:
 
-* **Sophisticated, multi-layer architectures.** A typical service today spans containers, Kubernetes, serverless functions, managed databases, message brokers, secrets, IAM, DNS, and CDN. Composing all of those in a DSL turns into thousands of lines of templates and external glue. A general-purpose language can express the same composition in dozens of lines of typed code.
+* **Sophisticated, multi-layer architectures.** A typical service today spans containers, Kubernetes, serverless functions, managed databases, message brokers, secrets, IAM, DNS, and CDN. Composing all of those in a DSL can grow into many lines of templates plus external glue, where a general-purpose language can factor the same composition into typed, reusable functions.
 * **Ephemeral and dynamic infrastructure.** Cloud resources change daily or hourly. Templating engines and string interpolation in YAML weren't designed for that pace; real loops, conditionals, and types are.
 * **Self-service platforms.** Platform engineering teams need to expose cloud capabilities to product teams through forms, APIs, and chat commands, not by handing them HCL files. Doing that on top of a DSL means writing a templating shim; doing it on top of a programming language means importing the IaC as a library.
 
@@ -58,7 +38,7 @@ Both describe the desired state of cloud resources. The difference is what's aro
 
 | Dimension | DSL-based IaC (HCL, YAML, ARM) | Infrastructure as Software |
 |---|---|---|
-| Language | Domain-specific | TypeScript, Python, Go, C#, Java, etc. |
+| Language | Domain-specific | TypeScript, Python, Go, .NET, Java, etc. |
 | Types | Limited or none | Full static types over cloud APIs |
 | Abstractions | Modules, limited generics | Classes, functions, packages, generics |
 | Sharing | Per-tool registry (Terraform Registry, etc.) | Standard package managers (npm, PyPI, etc.) |
@@ -68,7 +48,7 @@ Both describe the desired state of cloud resources. The difference is what's aro
 | Conditional and looped logic | Restricted (`for_each`, `count`) | Native language constructs |
 | Onboarding for software engineers | New language to learn | Same language they already use |
 
-The most consequential row is the second-to-last one. Because IaS programs are ordinary code, the IaC engine can be called from another program, which is the foundation of [Pulumi's automation API](/docs/iac/packages-and-automation/automation-api/) and the reason IaS reaches use cases DSL-based IaC structurally can't.
+The most consequential row is the second-to-last one. Because IaS programs are ordinary code, the IaC engine can be called from another program, which is the foundation of [Pulumi's automation API](/docs/iac/concepts/automation-api/) and the reason IaS reaches use cases DSL-based IaC structurally can't.
 
 ## What engineering capabilities does IaS add?
 
@@ -79,7 +59,7 @@ The everyday capabilities that come for free with IaS are the ones DSL-based IaC
 * **Standard package management.** Internal components ship through npm, PyPI, Go modules, NuGet, or Maven, depending on the language. Versions follow semver. Dependencies are locked.
 * **Real testing.** Use the test runner that already works for your application code (Jest, pytest, `go test`, xUnit, JUnit) for your IaC. Pulumi's [test mocks](/docs/iac/guides/testing/unit/) let unit tests run in memory without touching the cloud.
 * **IDE-grade tooling.** Autocomplete, jump-to-definition, refactoring, inline error squiggles. The same VS Code, JetBrains, or Neovim setup that works for the app works for the infra.
-* **Policy as code in the same language.** [Pulumi policies](/docs/insights/policy/) can be written in TypeScript, JavaScript, Python, or OPA's Rego against the actual resource model. The same engineers who wrote the infrastructure can write the policies that govern it.
+* **Policy as code in the same language.** [Pulumi policies](/docs/discovery-governance/concepts/policy-as-code/) can be written in TypeScript, JavaScript, Python, or OPA's Rego against the actual resource model. The same engineers who wrote the infrastructure can write the policies that govern it.
 * **Composability with non-infra code.** Pull configuration from an internal service, fetch a list of allowed regions from a database, compute a resource name from a feature-flag value. Any of those is one library call away in IaS; they require an external preprocessing step in a DSL.
 
 ## Where does IaS shine in practice?
@@ -105,7 +85,7 @@ The automation API is the most distinctive capability that comes with IaS. It ex
 
 Doing any of these on top of a DSL-based IaC tool typically means shelling out to a CLI, parsing text output, and hoping the next CLI release doesn't break the parser. The automation API replaces all of that with a typed function call.
 
-See [the automation API documentation](/docs/iac/packages-and-automation/automation-api/) for the supported languages and patterns.
+See [the automation API documentation](/docs/iac/concepts/automation-api/) for the supported languages and patterns.
 
 ## What are the trade-offs of IaS?
 
@@ -125,10 +105,10 @@ Pulumi was built around the IaS model from day one.
 * **First-class languages.** TypeScript, JavaScript, Python, Go, C# (.NET), Java, plus YAML for teams that want a markup format. Every language has full SDKs, full test mocks, and full ecosystem support.
 * **Generated, typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, plus hundreds of other providers (Cloudflare, Snowflake, Datadog, GitHub, MongoDB Atlas, etc.). Types are generated from each provider's schema so they reflect the real cloud surface.
 * **Component model.** Reusable [Pulumi components](/docs/iac/concepts/components/) ship as ordinary packages in your language's package manager.
-* **Policy as code.** Write [policies](/docs/insights/policy/) in the same language as the infrastructure. Run them in CI and as a deploy gate.
-* **Secrets with Pulumi ESC.** [Pulumi ESC](/product/esc/) keeps secrets out of code and state, pulled at runtime by IaS programs, CI jobs, and applications. See the [ESC docs](/docs/esc/) for setup and configuration.
+* **Policy as code.** Write [policies](/docs/discovery-governance/concepts/policy-as-code/) in the same language as the infrastructure. Run them in CI and as a deploy gate.
+* **Secrets with Pulumi ESC.** [Pulumi ESC](/product/secrets-management/) keeps secrets out of code and state, pulled at runtime by IaS programs, CI jobs, and applications. See the [ESC docs](/docs/esc/) for setup and configuration.
 * **Automation API.** Embed `pulumi up`, `pulumi preview`, and `pulumi destroy` inside any program that needs to provision infrastructure programmatically.
-* **CI/CD-native.** Pulumi runs in every major CI/CD system. The [continuous delivery guide](/docs/iac/guides/continuous-delivery/) covers the common patterns.
+* **CI/CD-native.** Pulumi runs in every major CI/CD system. The [continuous delivery guide](/docs/iac/operations/continuous-delivery/) covers the common patterns.
 
 The dividing line between IaC and IaS isn't syntax preference, it's whether your infrastructure can be called by other code. Once a cloud resource is an ordinary software object, the IaC engine becomes a library, and provisioning stops being a separate operational silo and becomes something you can compose into platforms, products, and pipelines the same way you compose any other function. That reach, not the cleaner loops or the better autocomplete, is what DSL-based IaC can't follow you into.
 
@@ -166,7 +146,7 @@ No, it enables them. A platform engineering team uses IaS to build the component
 
 ### Can I migrate from Terraform to IaS?
 
-Yes. Pulumi can [import existing resources](/docs/iac/adopting-pulumi/import/) without recreating them, and [`pulumi convert`](/docs/iac/guides/migration/converters/) can translate HCL source into a Pulumi program in the language of your choice. Most teams migrate incrementally: new infrastructure starts in IaS, existing HCL stays in place until it changes.
+Yes. Pulumi can [import existing resources](/docs/iac/guides/migration/import/) without recreating them, and [`pulumi convert`](/docs/iac/guides/migration/converters/) can translate HCL source into a Pulumi program in the language of your choice. Most teams migrate incrementally: new infrastructure starts in IaS, existing HCL stays in place until it changes.
 
 ### Does IaS work for multi-cloud?
 

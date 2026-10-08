@@ -38,6 +38,8 @@ category: customers
 ---
 The story of how the cloud fuels startup innovation seems never ending. In the beginning, AWS birthed cloud computing with its first service, SQS, in 2004 and quickly released several additional services (like S3, EC2, and SimpleDB). From this innovation, startups flourished because they were able to build, experiment, and grow faster than before at much lower cost. Airbnb, Netflix, Zynga, and many more were born, and the rest is history.
 
+{{% hcl-note %}}
+
 Today, a new generation of startups is flourishing because of the cloud, but this time with modern cloud architectures that are distributed, API-driven, and more resilient and scalable than ever. Today’s startups have to get to market even faster and rapidly innovate in order to delight customers and carve out market share. Most startups understand the benefits of adopting the modern cloud to help them achieve this goal. However, their ability to reap these benefits for competitive advantage depends on how well they can harness the modern cloud.
 
 Within the [cloud engineering](/cloud-engineering/) community, we see several common patterns for harnessing the modern cloud. Some startups have teams of full-stack developers who need to deploy cloud infrastructure and applications safely and at high velocity. Others might have a few infrastructure or platform engineers who need to enable other developers to use cloud infrastructure easily on a self-serve basis. Many of these teams started off using domain-specific languages (DSLs) to manage infrastructure as code and quickly found that these languages were the limiting factor in achieving faster velocity. DSLs are cumbersome to use and don’t support the logic and expressiveness needed to build and manage modern architectures that are more complex in nature. DSLs are also a barrier to entry to most developers.
@@ -48,9 +50,9 @@ Cloud engineering is a central character in the next chapter of how the modern c
 
 ## Panther Labs
 
-Panther Labs helps modern security teams build world-class detection and response pipelines using code and automation, developer-friendly workflows, and big data primitives. Its Platform Team is responsible for a large, complex serverless architecture on AWS. Because of the limitations of its legacy Infrastructure-as-Code (IaC) tool, the team was unable to manage and scale its cloud infrastructure with the speed and automation that the company needed to support its fast-growing business. After comparing different alternatives, Panther Labs decided to migrate to the Pulumi Cloud Engineering Platform. Pulumi increased the company’s deployment speeds by up to 10x, reduced the size of its infrastructure codebase by >50%, and enabled its developers to adopt cloud engineering best practices to deliver its cloud applications faster and more reliably.
+Panther Labs helps modern security teams build world-class detection and response pipelines using code and automation, developer-friendly workflows, and big data primitives. Its Platform Team is responsible for a large, complex serverless architecture on AWS. Because of the limitations of its legacy infrastructure-as-code (IaC) tool, the team was unable to manage and scale its cloud infrastructure with the speed and automation that the company needed to support its fast-growing business. After comparing different alternatives, Panther Labs decided to migrate to the Pulumi Cloud Engineering Platform. Pulumi increased the company’s deployment speeds by up to 10x, reduced the size of its infrastructure codebase by >50%, and enabled its developers to adopt cloud engineering best practices to deliver its cloud applications faster and more reliably.
 
-[![Pulumi vs. DSL](pulumi_v_cf.png)](/case-studies/panther-labs)
+[![Pulumi vs. DSL](pulumi_v_cf.png)](/case-studies/panther-labs/)
 
 ### Results
 
@@ -60,7 +62,7 @@ Panther Labs helps modern security teams build world-class detection and respons
 - The ability to create reusable components made it easy to replicate and share components that always followed cloud engineering best practices.
 - Central visibility across hundreds of single-tenant customer deployments, including a history of when changes were made and what changed for each account.
 
-[Read the full case study→](/case-studies/panther-labs)
+[Read the full case study→](/case-studies/panther-labs/)
 
 ## WhyLabs
 
@@ -75,7 +77,7 @@ WhyLabs helps organizations run their AI applications with certainty by monitori
 - Pulumi’s integration with GitLab enables WhyLabs to deliver infrastructure through CI/CD pipelines just like with application code, which increases iteration frequency and accelerates time to market.
 - Pulumi’s support for multiple cloud providers will help WhyLabs expand their platform in the future to meet customers’ needs.
 
-[Read the full case study→](/case-studies/whylabs)
+[Read the full case study→](/case-studies/whylabs/)
 
 ## Fauna
 

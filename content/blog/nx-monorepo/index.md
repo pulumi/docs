@@ -46,7 +46,7 @@ In the Node.js ecosystem, we've seen an explosion of great tooling over the last
 
 While it has always been possible to apply these tools to Pulumi Node.js projects in TypeScript or JavaScript just like any other Node.js project, we've recently made [a](https://github.com/pulumi/pulumi/issues/15436) [number](https://github.com/pulumi/pulumi/issues/2661) [of](https://github.com/pulumi/pulumi/issues/7168) [enhancements](https://github.com/pulumi/pulumi/issues/3013) [and](https://github.com/pulumi/pulumi/issues/15455) [fixes](https://github.com/pulumi/examples/issues/1605) to make sure that Pulumi works truly seamlessly with these tools.
 
-In this post, we'll show how you can build a seamless development workflow by integrating Pulumi code level abstractions, such as [Component Resources](https://www.pulumi.com/docs/concepts/resources/components/), with a monorepo-based build system like [Nx](https://nx.dev).
+In this post, we'll show how you can build a seamless development workflow by integrating Pulumi code level abstractions, such as [Component Resources](https://www.pulumi.com/docs/iac/concepts/components/), with a monorepo-based build system like [Nx](https://nx.dev).
 
 <!--more-->
 
@@ -80,7 +80,7 @@ By using [npm workspaces](https://docs.npmjs.com/cli/v10/using-npm/workspaces) w
 Pulumi has builtin TypeScript support and compiles your code on the fly without manual build-step, however this is currently limited to TypeScript 3.8. We are working on providing more choice here, but in the mean time Nx makes it easy to add a build-step to compile code using any version of TypeScript. For this example we are using the latest and greatest, TypeScript 5.4.
 
 {{% notes type="info" %}}
-As of [v3.113.0 of the @pulumi/pulumi NPM package](https://www.npmjs.com/package/@pulumi/pulumi) any version of TypeScript is supported natively. To select the version to use, add it as a [dependency to your package.json](/docs/languages-sdks/javascript/#typescript-versions).
+As of [v3.113.0 of the @pulumi/pulumi NPM package](https://www.npmjs.com/package/@pulumi/pulumi) any version of TypeScript is supported natively. To select the version to use, add it as a [dependency to your package.json](/docs/iac/languages-sdks/javascript/#typescript-versions).
 {{% /notes %}}
 
 ## Declaring Dependencies

@@ -1,9 +1,10 @@
 ---
-title: What is AWS Secrets Manager?
+title: What is AWS Secrets Manager? Setup & Best Practices
 meta_desc: |
-     Learn more about what AWS Secrets Manager is and how to use it.
+    AWS Secrets Manager stores, rotates, and retrieves credentials without hard-coding them. Learn to create secrets via the CLI and use Pulumi ESC.
 
 type: what-is
+date: 2023-11-28T22:04:30+00:00
 page_title: "What is AWS Secrets Manager?"
 authors: ["torian-crane"]
 ---
@@ -70,7 +71,7 @@ $ aws secretsmanager list-secrets
 
 {{< notes type="info" >}}
 
-Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/concepts/secrets/).
+Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/iac/concepts/secrets/).
 
 {{< /notes >}}
 
@@ -114,9 +115,9 @@ The hard part of AWS Secrets Manager isn't storing a secret, it's keeping the se
 
 That's why it's worth managing Secrets Manager through your infrastructure code rather than as a separate manual step. Explore these resources to see how that fits together:
 
-- **Streamlined infrastructure management with IaC**: Learn about [deploying and managing AWS Secrets Manager secrets](/registry/packages/aws/api-docs/secretsmanager/secret/) as well as other AWS resources using Pulumi's Infrastructure as Code capabilities. Pulumi enables you to define and provision your cloud infrastructure using familiar programming languages, integrating the management of secrets directly into your IaC workflows. Discover how to integrate AWS Secrets Manager into your broader cloud infrastructure with Pulumi by exploring [Pulumi's AWS Provider documentation](/registry/packages/aws/). Below are some examples of how to create an AWS Secrets Manager secret in a number of supported programming languages:
+- **Streamlined infrastructure management with IaC**: Learn about [deploying and managing AWS Secrets Manager secrets](/registry/packages/aws/api-docs/secretsmanager/secret/) as well as other AWS resources using Pulumi's infrastructure as code capabilities. Pulumi enables you to define and provision your cloud infrastructure using familiar programming languages, integrating the management of secrets directly into your IaC workflows. Discover how to integrate AWS Secrets Manager into your broader cloud infrastructure with Pulumi by exploring [Pulumi's AWS Provider documentation](/registry/packages/aws/). Below are some examples of how to create an AWS Secrets Manager secret in a number of supported programming languages:
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -235,6 +236,26 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+{{% choosable language hcl %}}
+
+```hcl
+# Create a secret
+resource "aws_secretsmanager_secret" "secret" {}
+
+# Store a new secret version
+resource "aws_secretsmanager_secret_version" "secret_version" {
+  secret_id     = aws_secretsmanager_secret.secret.id
+  secret_string = "mysecret"
+}
+
+# Export secret ID (in this case the ARN)
+output "secret_id" {
+  value = aws_secretsmanager_secret.secret.id
+}
+```
+
+{{% /choosable %}}
+
+- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/esc/providers/secrets/aws-secrets/).
 
 The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

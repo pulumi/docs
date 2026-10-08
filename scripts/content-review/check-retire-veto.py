@@ -52,23 +52,26 @@ _select = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_select)
 load_tiers = _select.load_tiers
 tier_for = _select.tier_for
+policy_for = _select.policy_for
 DEFAULT_TIERS = _select.DEFAULT_TIERS
 
 
 def verdict_for(path: str, rules: list[dict]) -> dict:
     """Tier facts for one repo path: tier, no_retire, and the winning prefix."""
-    tier, no_retire = tier_for(path, rules)
+    policy = policy_for(path, rules)
     matched = next(
         (r.get("prefix") for r in rules if path.startswith(r.get("prefix", ""))),
         None,
     )
-    # Tier 0 is generated/synced content: the bot must never touch it at all,
-    # so retirement is vetoed there too (selection excludes these pages, but
-    # this gate is deliberately defensive).
+    # A page a generator owns is never retired by this pipeline either — the
+    # generator would recreate it, and the report-only lane visits some of
+    # these pages now (pulumi/docs#20996), so the veto keys on `editable`
+    # rather than on tier 0. Selection already excludes retirement for them;
+    # this gate is deliberately defensive.
     return {
         "path": path,
-        "tier": tier,
-        "no_retire": no_retire or tier == 0,
+        "tier": policy.tier,
+        "no_retire": policy.no_retire or not policy.editable,
         "matched_prefix": matched,
     }
 
@@ -101,7 +104,8 @@ def self_test() -> int:
             failures.append(name)
 
     # Against the real shipped tiers file: pins the protection promises the
-    # repo currently makes (mirrors test_select_articles.py validating tier 0).
+    # repo currently makes (mirrors test_select_articles.py validating the
+    # generated trees' lanes).
     real = load_tiers(DEFAULT_TIERS)
     check("real: tier-1 page vetoed (iac/concepts implies no_retire)",
           verdict_for("content/docs/iac/concepts/state.md", real)["no_retire"])
@@ -109,8 +113,14 @@ def self_test() -> int:
           verdict_for("content/docs/iac/languages-sdks/python.md", real)["no_retire"])
     check("real: pinned tier-3 vetoed (reference/)",
           verdict_for("content/docs/reference/cloud-rest-api/_index.md", real)["no_retire"])
+    # The CLI reference is `editable: false, reviewable: true` since #20996 —
+    # the report-only lane visits it, so the veto must come from `editable`
+    # and not from the tier alone (its tier is 3).
+    cli = verdict_for("content/docs/iac/cli/commands/pulumi_up.md", real)
+    check("real: generated CLI tree vetoed despite being tier 3 and reviewable",
+          cli["no_retire"] and cli["tier"] == 3)
     check("real: tier-0 generated tree vetoed",
-          verdict_for("content/docs/iac/cli/commands/pulumi_up.md", real)["no_retire"])
+          verdict_for("content/docs/reference/pkg/python/pulumi/_index.md", real)["no_retire"])
     check("real: unmatched tier-3 page allowed",
           not verdict_for("content/docs/support/faq.md", real)["no_retire"])
 

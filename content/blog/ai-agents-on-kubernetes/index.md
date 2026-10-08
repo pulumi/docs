@@ -206,7 +206,7 @@ Verify the exact CRD group/version (`kagent.dev/v1alpha2` above) against kagent'
 
 ## Why write agent infrastructure in a general-purpose language instead of templated YAML?
 
-Because an agent's infrastructure has exactly the kind of conditional, repeated, testable shape that general-purpose languages are built for, and templated YAML is not. A `for` loop that provisions one GPU node pool per region, a function that returns a standard "agent + its guardrail policy" bundle, a unit test that asserts a policy pack actually blocks an over-privileged service account before it ships — all of that is native to TypeScript, Python, Go, C#, and Java, and bolted-on at best in Helm templates or raw manifests.
+Because an agent's infrastructure has exactly the kind of conditional, repeated, testable shape that general-purpose languages are built for, and templated YAML is not. A `for` loop that provisions one GPU node pool per region, a function that returns a standard "agent + its guardrail policy" bundle, a unit test that asserts a policy pack actually blocks an over-privileged service account before it ships — all of that is native to TypeScript, Python, Go, .NET, and Java, and bolted-on at best in Helm templates or raw manifests.
 
 This isn't a knock on Helm or Kustomize, which remain genuinely good tools for packaging and distributing charts — including kagent's own install, which is a Helm chart for a reason. The distinction is what you're doing with the result. Distributing a reusable, versioned package is a job Helm is built for. Composing that package into your specific cluster, wiring its secrets, gating its rollout with policy, and testing the whole thing before it ships is software engineering, and it benefits from a real language: loops, functions, types, unit tests, and the same CI/CD your application code already runs through.
 
@@ -214,7 +214,7 @@ This isn't a knock on Helm or Kustomize, which remain genuinely good tools for p
 
 An agent that can act on infrastructure needs infrastructure-shaped guardrails, not just a service account and a prayer. Three pieces of the Pulumi platform apply directly:
 
-- **Policy as code.** [Pulumi Policies](/docs/insights/policy/) let you write rules — in the same general-purpose languages, not a separate policy DSL — that run before a change is applied: block a `Deployment` requesting cluster-admin, require GPU node pools to carry a cost-center label, or flag any `RemoteMCPServer` pointed at a host outside an allowlist.
+- **Policy as code.** [Pulumi Policies](/docs/discovery-governance/policy/) let you write rules — in the same general-purpose languages, not a separate policy DSL — that run before a change is applied: block a `Deployment` requesting cluster-admin, require GPU node pools to carry a cost-center label, or flag any `RemoteMCPServer` pointed at a host outside an allowlist.
 - **[Pulumi ESC](/docs/esc/)** for secrets and configuration, so model-provider API keys and other credentials are centrally managed, rotated, and scoped, rather than copy-pasted into `Secret` manifests across every cluster an agent touches.
 - **RBAC scoped to the agent's actual job.** The same custom-resource pattern used to declare the agent (shown above) is the natural place to also declare its `ServiceAccount`, `Role`, and `RoleBinding` — as code, reviewed the same way as the agent's own configuration, not layered on afterward.
 
@@ -256,7 +256,7 @@ Neo operates at the infrastructure layer underneath your agent workloads: it can
 
 ## Where to go next
 
-If you're starting from zero, the [Kubernetes get-started guide](/docs/iac/get-started/kubernetes/) and the [Kubernetes provider registry](https://www.pulumi.com/registry/packages/kubernetes/) cover the provisioning basics this post builds on. If you're already running agent workloads and want the governance layer, start with [Pulumi Policies](/docs/insights/policy/) and [Pulumi ESC](/docs/esc/). And if agent sprawl — not just agentic Kubernetes workloads, but the broader proliferation of agents across your org — is the more pressing problem, [Agent Sprawl Is Here. Your IaC Platform Is the Answer.](/blog/agent-sprawl-iac-platform-is-the-answer/) is the companion read.
+If you're starting from zero, the [Kubernetes get-started guide](/docs/iac/get-started/kubernetes/) and the [Kubernetes provider registry](https://www.pulumi.com/registry/packages/kubernetes/) cover the provisioning basics this post builds on. If you're already running agent workloads and want the governance layer, start with [Pulumi Policies](/docs/discovery-governance/policy/) and [Pulumi ESC](/docs/esc/). And if agent sprawl — not just agentic Kubernetes workloads, but the broader proliferation of agents across your org — is the more pressing problem, [Agent Sprawl Is Here. Your IaC Platform Is the Answer.](/blog/agent-sprawl-iac-platform-is-the-answer/) is the companion read.
 
 [^cncf-survey]: CNCF Annual Survey Report, January 2026: [cncf.io/wp-content/uploads/2026/01/CNCF_Annual_Survey_Report_final.pdf](https://www.cncf.io/wp-content/uploads/2026/01/CNCF_Annual_Survey_Report_final.pdf).
 [^kagent-cncf]: "kagent was accepted to CNCF on May 22, 2025 at the Sandbox maturity level." CNCF Projects: [cncf.io/projects/kagent/](https://www.cncf.io/projects/kagent/).

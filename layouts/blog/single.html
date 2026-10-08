@@ -58,7 +58,7 @@
                     <div class="mt-8 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-8">
                         <span class="body-sm font-semibold text-service-black">Tagged as:</span>
                         {{ range $tag := .Params.tags }}
-                            {{ partial "blog/badge.html" (dict "text" ($tag | urlize) "variant" "secondary" "href" (printf "/blog/tag/%s/" ($tag | urlize)) "track" (printf "blog-tag-%s" ($tag | urlize))) }}
+                            {{ partial "blog/badge.html" (dict "text" ($tag | urlize) "variant" "secondary" "href" (printf "/blog/tags/%s/" ($tag | urlize)) "track" (printf "blog-tag-%s" ($tag | urlize))) }}
                         {{ end }}
                     </div>
                 {{ end }}
@@ -102,4 +102,9 @@
     </div>
 
     {{ partial "blog/related-posts.html" . }}
+
+    {{- /* Overlay shell for the post-body media lightbox; blog-lightbox.ts
+        decides at runtime which images and videos (if any) open into it. Only
+        posts carrying one or the other need it. */ -}}
+    {{ if or (strings.Contains .Content "<img") (strings.Contains .Content "<video") }}{{ partial "blog/lightbox.html" . }}{{ end }}
 {{ end }}

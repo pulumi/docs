@@ -3,29 +3,9 @@ title: JavaScript and TypeScript Infrastructure as Code
 meta_desc: "Define cloud infrastructure as code in TypeScript or JavaScript: real types, npm packages, IDE tooling, and Jest tests for VPCs and clusters."
 
 type: what-is
+date: 2021-09-27T08:46:43-07:00
 page_title: "JavaScript and TypeScript Infrastructure as Code"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 authors: ["pablo-seibelt"]
 ---
 
@@ -51,7 +31,7 @@ A few practical reasons drive most adoptions:
 
 * **The team already knows it.** Most full-stack and frontend-heavy organizations already run Node.js in production. Using the same language for IaC means no new training, no new style guides, no new package manager.
 * **The npm ecosystem is huge.** Thousands of utility libraries, validators, AWS/GCP/Azure SDK clients, retry helpers, schema validators, and logging libraries are already published, tested, and vetted at scale.
-* **Real abstractions, not text templates.** Functions, classes, modules, generics. A repeating VPC pattern becomes a Pulumi component you import, not a folder of copy-pasted HCL.
+* **Real abstractions, not text templates.** Functions, classes, modules, generics. A repeating VPC pattern becomes a Pulumi component you import and parameterize, rather than a module you copy and edit.
 * **Real testing tools.** Jest, Vitest, ts-mocha, supertest. Unit tests for IaC use the same runners you already configured for the application code.
 * **Real IDE support.** Autocomplete, jump-to-definition, refactoring, inline error squiggles. The same VS Code or WebStorm experience that helps with app code helps with cloud APIs that have hundreds of optional properties.
 
@@ -71,7 +51,7 @@ Pulumi templates generate TypeScript projects by default for this reason. The ru
 
 ## What does JS/TS offer that an IaC DSL doesn't?
 
-DSLs like HCL or CloudFormation YAML are deliberately limited: no functions, limited loops, no real type system, no module system other than what the DSL provides. That keeps the surface area small at the cost of expressiveness. JS/TS gives back what the DSL took away:
+DSLs like HCL or CloudFormation YAML keep their surface area small on purpose. They favor a constrained, declarative model, and general-purpose languages trade that simplicity for functions, richer loops, and a type system. JS/TS gives you those when you want them:
 
 * **Loops and conditionals that compose.** A subnet per availability zone, a Lambda per region, or a Kubernetes namespace per tenant, all expressed as familiar `.map()` and `for` loops rather than DSL-specific iteration features.
 * **Abstractions you actually own.** A Pulumi component is just a TypeScript class. It can take typed inputs, build any combination of underlying resources, and expose typed outputs. You can publish it to npm, version it semantically, and depend on it from many stacks.
@@ -165,7 +145,7 @@ A few patterns that hold up in production Node.js + Pulumi codebases:
 
 * **Use TypeScript with `strict` enabled.** Strict mode catches the entire class of "undefined is not a function" issues at compile time. Worth setting on day one.
 * **Don't import the cloud SDKs to "do something real time" inside a Pulumi program.** Pulumi programs describe desired state; they don't execute imperative calls against the cloud at apply time. Use Pulumi resources for declared state and `pulumi.runtime.runInPulumiStack` only for the small set of advanced cases that genuinely need it.
-* **Don't put secrets in source.** Use [Pulumi ESC](/product/esc/) or another secrets store and pull them at runtime. Configuration stays in code; secret material doesn't.
+* **Don't put secrets in source.** Use [Pulumi ESC](/product/secrets-management/) or another secrets store and pull them at runtime. Configuration stays in code; secret material doesn't.
 * **Write components for any pattern you repeat.** If you copy-paste a VPC three times, the fourth time it should be `new MyVpc()`. Components version like any other npm package.
 * **Treat `package-lock.json` (or `pnpm-lock.yaml`) as part of your IaC.** Lock files make `pulumi up` reproducible. Without them, a new transitive dependency can break a deploy.
 * **Pin Pulumi providers explicitly.** Like any other npm dependency, Pulumi provider packages can release breaking changes. Pin major versions and upgrade deliberately.
@@ -178,14 +158,14 @@ The most common pitfall: writing IaC like a script. JS/TS lets you do that, but 
 
 Pulumi treats Node.js as a first-class runtime alongside Python, Go, .NET, Java, and YAML.
 
-* **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and the rest of the [200+ providers in the Pulumi Registry](/registry/). Generated from each provider's API, so the types reflect the real cloud surface.
-* **`pulumi new typescript`.** Creates a project with `tsconfig.json`, `package.json`, and a starter program in seconds. See the [JavaScript / TypeScript language guide](/docs/languages-sdks/javascript/) and [the get-started flow](/docs/get-started/).
+* **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and the rest of the [hundreds of providers in the Pulumi Registry](/registry/). Generated from each provider's API, so the types reflect the real cloud surface.
+* **`pulumi new typescript`.** Creates a project with `tsconfig.json`, `package.json`, and a starter program in seconds. See the [JavaScript / TypeScript language guide](/docs/iac/languages-sdks/javascript/) and [the get-started flow](/docs/get-started/).
 * **Component model.** Write reusable [Pulumi components](/docs/iac/concepts/components/) as TypeScript classes. Publish them to npm (private or public) and depend on them across teams.
 * **Crosswalk for AWS.** The [`@pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) package wraps common AWS patterns (VPCs, ECS services, ECR registries, load balancers) in higher-level TypeScript classes with sensible defaults.
 * **Unit testing with mocks.** Pulumi's [TypeScript test mocks](/docs/iac/guides/testing/unit/) replace cloud calls with canned responses, so Jest tests run in milliseconds.
-* **Automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you run Pulumi programs from inside another Node.js application. Build CLIs, self-service portals, or CI jobs that drive `pulumi up` and `pulumi destroy` from typed JS.
-* **Policy as code in TypeScript.** [Pulumi policies](/docs/insights/policy/) can be written in the same language as the IaC, with the same typing over the resource model.
-* **Pulumi ESC for secrets.** [Pulumi ESC](/product/esc/) pulls secrets at runtime into Node.js programs, CI jobs, and applications, with audit trails.
+* **Automation API.** The [automation API](/docs/iac/concepts/automation-api/) lets you run Pulumi programs from inside another Node.js application. Build CLIs, self-service portals, or CI jobs that drive `pulumi up` and `pulumi destroy` from typed JS.
+* **Policy as code in TypeScript.** [Pulumi policies](/docs/discovery-governance/concepts/policy-as-code/) can be written in the same language as the IaC, with the same typing over the resource model.
+* **Pulumi ESC for secrets.** [Pulumi ESC](/product/secrets-management/) pulls secrets at runtime into Node.js programs, CI jobs, and applications, with audit trails.
 
 [Get started with Pulumi and TypeScript](/docs/get-started/) to provision cloud infrastructure with the same tools you already use for application code.
 
@@ -193,7 +173,7 @@ Pulumi treats Node.js as a first-class runtime alongside Python, Go, .NET, Java,
 
 ### Can I use Node.js to manage infrastructure on every cloud?
 
-Yes. Pulumi's TypeScript SDK covers AWS, Azure, Google Cloud, Kubernetes, and 200+ providers in total, with a uniform programming model across them. The same Pulumi program can mix providers (an AWS VPC, a Cloudflare DNS record, a Datadog monitor) without leaving the language.
+Yes. Pulumi's TypeScript SDK covers AWS, Azure, Google Cloud, Kubernetes, and hundreds of providers in total, with a uniform programming model across them. The same Pulumi program can mix providers (an AWS VPC, a Cloudflare DNS record, a Datadog monitor) without leaving the language.
 
 ### Is TypeScript meaningfully better than JavaScript for IaC?
 
@@ -221,7 +201,7 @@ A Pulumi `Output<T>` represents a value that's resolved during deploy time, ofte
 
 ### How do you handle secrets in a Node.js Pulumi program?
 
-Use `pulumi.secret()` for values that should be encrypted in state, and pull anything sensitive from [Pulumi ESC](/product/esc/), AWS Secrets Manager, Azure Key Vault, or HashiCorp Vault at runtime. The Pulumi program references the secret; the secret material doesn't live in source.
+Use `pulumi.secret()` for values that should be encrypted in state, and pull anything sensitive from [Pulumi ESC](/product/secrets-management/), AWS Secrets Manager, Azure Key Vault, or HashiCorp Vault at runtime. The Pulumi program references the secret; the secret material doesn't live in source.
 
 ### Can I migrate from Terraform / HCL to TypeScript?
 

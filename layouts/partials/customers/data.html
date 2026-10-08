@@ -1,0 +1,160 @@
+{{- $where := "data/customers.yaml" -}}
+{{- $data := site.Data.customers -}}
+{{- if not $data -}}
+  {{- errorf "%s is missing or empty." $where -}}
+{{- end -}}
+{{- if not $data.customers -}}
+  {{- errorf "%s has no `customers:` list." $where -}}
+{{- end -}}
+
+{{- $industries := site.Data.customers_industries.industries -}}
+{{- if not $industries -}}
+  {{- errorf "data/customers_industries.yaml is missing or has no `industries:` list." -}}
+{{- end -}}
+{{- $industryIds := slice -}}
+{{- $industryNames := dict -}}
+{{- range $industries -}}
+  {{- $industryIds = $industryIds | append .id -}}
+  {{- $industryNames = merge $industryNames (dict .id .name) -}}
+{{- end -}}
+{{- $industryList := delimit $industryIds ", " -}}
+
+{{- $raster := $data.raster_holdouts | default slice -}}
+{{- $logoDir := "fingerprinted/logos/customers" -}}
+
+{{- $lightFillAbove := 0.55 -}}
+{{- $hexDigit := dict "0" 0 "1" 1 "2" 2 "3" 3 "4" 4 "5" 5 "6" 6 "7" 7 "8" 8 "9" 9 "a" 10 "b" 11 "c" 12 "d" 13 "e" 14 "f" 15 -}}
+
+{{- $scratch := newScratch -}}
+{{- $ids := slice -}}
+{{- $list := slice -}}
+
+{{- range $i, $c := $data.customers -}}
+  {{- $id := $c.id | default "" -}}
+  {{- if not $id -}}
+    {{- errorf "%s: customers[%d] (%q) has no id." $where $i ($c.name | default "") -}}
+  {{- end -}}
+  {{- if not (findRE "^[a-z0-9][a-z0-9-]*$" $id) -}}
+    {{- errorf "%s: customer id %q is not lowercase-kebab (^[a-z0-9][a-z0-9-]*$). Hugo map lookups are case-insensitive, so mixed case silently collides." $where $id -}}
+  {{- end -}}
+  {{- if $scratch.Get (printf "seen-%s" $id) -}}
+    {{- errorf "%s: duplicate customer id %q. Ids are unique — they name the logo files." $where $id -}}
+  {{- end -}}
+  {{- $scratch.Set (printf "seen-%s" $id) true -}}
+  {{- $ids = $ids | append $id -}}
+
+  {{- if not $c.name -}}
+    {{- errorf "%s: customer %q has no name." $where $id -}}
+  {{- end -}}
+  {{- if not (in $industryIds $c.industry) -}}
+    {{- errorf "%s: customer %q has industry: %q, which is not an id in data/customers_industries.yaml (%s)." $where $id ($c.industry | default "") $industryList -}}
+  {{- end -}}
+  {{- with $c.color -}}
+    {{- if not (findRE "^#[0-9a-fA-F]{6}$" .) -}}
+      {{- errorf "%s: customer %q has color: %q. Brand colors are six-digit hex, quoted, for example \"#29B5E8\" — omit the key entirely for a neutral tile." $where $id . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $c.tile_logo -}}
+    {{- if ne . "light" -}}
+      {{- errorf "%s: customer %q has tile_logo: %q. The only value is `light`, for a brand color light enough that the white logo would disappear on it; omit the key for the default." $where $id . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $c.fill_text -}}
+    {{- if not (in (slice "light" "dark") .) -}}
+      {{- errorf "%s: customer %q has fill_text: %q. The values are `light` and `dark`; omit the key to let the brand color decide." $where $id . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $c.quote -}}
+    {{- if or (not .text) (not .author) -}}
+      {{- errorf "%s: customer %q has a quote without both `text` and `author`." $where $id -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $isRaster := in $raster $id -}}
+  {{- $logo := "" -}}
+  {{- $onDark := "" -}}
+  {{- if $isRaster -}}
+    {{- $logo = resources.Get (printf "%s/%s.png" $logoDir $id) -}}
+    {{- if not $logo -}}
+      {{- errorf "%s: customer %q is listed in raster_holdouts but assets/%s/%s.png does not exist. Either add the PNG, or source an SVG pair and drop the id from raster_holdouts." $where $id $logoDir $id -}}
+    {{- end -}}
+    {{- $onDark = resources.Get (printf "%s/%s-on-dark.png" $logoDir $id) -}}
+  {{- else -}}
+    {{- $logo = resources.Get (printf "%s/%s.svg" $logoDir $id) -}}
+    {{- $onDark = resources.Get (printf "%s/%s-on-dark.svg" $logoDir $id) -}}
+    {{- if not $logo -}}
+      {{- errorf "%s: customer %q has no logo at assets/%s/%s.svg. Every customer needs a light-background SVG; see the ADDING A CUSTOMER checklist in that file." $where $id $logoDir $id -}}
+    {{- end -}}
+    {{- if not $onDark -}}
+      {{- errorf "%s: customer %q has no on-dark logo at assets/%s/%s-on-dark.svg. Derive one with `node scripts/customers/derive-on-dark.mjs %s` and check it on a dark background." $where $id $logoDir $id $id -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $lightFill := true -}}
+  {{- with $c.color -}}
+    {{- $h := lower (strings.TrimPrefix "#" .) -}}
+    {{- $rgb := slice -}}
+    {{- range $byteIndex := seq 0 2 -}}
+      {{- $hi := index $hexDigit (substr $h (mul $byteIndex 2) 1) -}}
+      {{- $lo := index $hexDigit (substr $h (add (mul $byteIndex 2) 1) 1) -}}
+      {{- $rgb = $rgb | append (add (mul $hi 16) $lo) -}}
+    {{- end -}}
+    {{- $lum := div (add (add (mul 0.2126 (index $rgb 0)) (mul 0.7152 (index $rgb 1))) (mul 0.0722 (index $rgb 2))) 255.0 -}}
+    {{- $lightFill = gt $lum $lightFillAbove -}}
+  {{- end -}}
+  {{- with $c.fill_text -}}
+    {{- $lightFill = eq . "dark" -}}
+  {{- end -}}
+
+  {{- $logoW := 0.0 -}}
+  {{- $logoH := 0.0 -}}
+  {{- if $isRaster -}}
+    {{- $logoW = float $logo.Width -}}
+    {{- $logoH = float $logo.Height -}}
+  {{- else -}}
+    {{- with findRESubmatch `viewBox=["']([^"']*)["']` $logo.Content 1 -}}
+      {{- $parts := split (index (index . 0) 1) " " -}}
+      {{- if eq (len $parts) 4 -}}
+        {{- $logoW = float (index $parts 2) -}}
+        {{- $logoH = float (index $parts 3) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if or (le $logoW 0.0) (le $logoH 0.0) -}}
+      {{- errorf "%s: customer %q has a logo with no usable viewBox. Every logo needs one — it is what sizes the <img> and normalizes the logo against its neighbours." $where $id -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $expanded := merge $c (dict
+      "logo" $logo
+      "logo_on_dark" $onDark
+      "raster" $isRaster
+      "light_fill" $lightFill
+      "logo_w" (math.Round $logoW)
+      "logo_h" (math.Round $logoH)
+      "logo_aspect_root" (div (math.Round (mul (math.Sqrt (div $logoW $logoH)) 100)) 100.0)
+      "industry_name" (index $industryNames $c.industry)) -}}
+  {{- $list = $list | append $expanded -}}
+  {{- $scratch.SetInMap "byId" $id $expanded -}}
+  {{- $scratch.Add (printf "count-%s" $c.industry) 1 -}}
+{{- end -}}
+
+{{- range $raster -}}
+  {{- if not ($scratch.Get (printf "seen-%s" .)) -}}
+    {{- errorf "%s: raster_holdouts lists %q, which is not a customer in this file." $where . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $counts := dict -}}
+{{- $withCounts := slice -}}
+{{- range $industries -}}
+  {{- $count := $scratch.Get (printf "count-%s" .id) | default 0 -}}
+  {{- $counts = merge $counts (dict .id $count) -}}
+  {{- $withCounts = $withCounts | append (merge . (dict "count" $count)) -}}
+{{- end -}}
+
+{{- return (dict
+    "list" $list
+    "byId" ($scratch.Get "byId")
+    "ids" (sort $ids)
+    "industries" $withCounts
+    "counts" $counts) -}}

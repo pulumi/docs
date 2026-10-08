@@ -2,7 +2,7 @@
 title: "The Agentic Infrastructure Era"
 date: 2026-05-19T03:00:00-07:00
 draft: false
-meta_desc: "Why infrastructure as code is the natural substrate for AI agents, and what we're shipping today to make agentic infrastructure even better."
+meta_desc: "Agentic infrastructure is cloud infrastructure that AI agents provision, govern, and operate through code. See what Pulumi is building to make it real."
 feature_image: feature.png
 authors:
     - joe-duffy
@@ -28,6 +28,8 @@ But as the AI tsunami whips up reams of code, what happens to it becomes just as
 
 <!--more-->
 
+New to the term? Start with [what agentic infrastructure is](/what-is/what-is-agentic-infrastructure/) and how it works.
+
 [See Pulumi Neo in action →](/product/neo/) Neo is the agent at the center of everything below: it previews changes, checks them against policy, and opens PRs for your review.
 
 ## LLMs are natural coders
@@ -50,7 +52,7 @@ Before getting to what's new, however, why are we seeing this happening in reali
 
 ## Turning infrastructure problems into coding problems
 
-We began our journey with our open-source infrastructure-as-code project nearly ten years ago. Having spent much of my career working on programming languages and compilers, I had a strong conviction that the right substrate for infrastructure was the languages developers already knew and loved, not yet another DSL and certainly not piles of YAML. So we focused first on great ergonomics for humans, and for us, that meant letting you use programming languages, tools, and ecosystems that humans already know and love. Languages like Python, TypeScript, Go, C#, Java, and more. Infrastructure as code also, importantly, comes with guardrails to make infrastructure deployments dependable, reviewable, and auditable. Over time we've built out an entire platform with security, compliance, and governance capabilities.
+We began our journey with our open-source infrastructure-as-code project nearly ten years ago. Having spent much of my career working on programming languages and compilers, I had a strong conviction that the right substrate for infrastructure was the languages developers already knew and loved, not yet another DSL and certainly not piles of YAML. So we focused first on great ergonomics for humans, and for us, that meant letting you use programming languages, tools, and ecosystems that humans already know and love. Languages like Python, TypeScript, Go, .NET, Java, and more. Infrastructure as code also, importantly, comes with guardrails to make infrastructure deployments dependable, reviewable, and auditable. Over time we've built out an entire platform with security, compliance, and governance capabilities.
 
 One way of thinking about this is we modeled the realm of cloud infrastructure inside the realm of programming languages: cloud resources become objects, configurations are just variables, dependencies between resources are just references, standard blueprints become classes. Doing so turns the cloud into something that is suddenly programmable, and allows us to apply real software engineering patterns and practices to infrastructure.
 

@@ -13,6 +13,7 @@ menu:
     parent: deployments-concepts
     weight: 50
     identifier: deployments-concepts-ttl
+pulumi_cloud_feature: ttl-stacks
 ---
 
 Time-to-live (TTL) Stacks enable the automated management of a stack's lifecycle by specifying a date and time after which the stack is automatically torn down. TTL stacks allow platform teams to control costs, improve security posture, and reduce operational overhead by ensuring temporary or ephemeral cloud resources (like development environments) are automatically de-provisioned.
@@ -21,14 +22,14 @@ Time-to-live (TTL) Stacks enable the automated management of a stack's lifecycle
 A stack's time to live is measured from the stack's **creation** date, not its most recent update. Updating a stack does not reset its TTL.
 {{% /notes %}}
 
-## Setting a Time-to-Live on a Stack
+## Setting a Time-to-Live on a stack
 
 ### Pulumi Cloud UI
 
 In order to set up Time-to-Live Stacks in the Pulumi Cloud console, follow these steps:
 
 1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/concepts/settings/)
-2. Navigate to the Stack > Settings > Schedules
+2. Navigate to the stack > Settings > Schedules
 3. Select "Time-to-Live"
 4. (Optional) Turn on "Delete After Destroy" if applicable
 5. Set the schedule using a cron expression
@@ -59,11 +60,11 @@ Below is an example of setting up Time-To-Live on a stack programmatically:
 
 Refer to the [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/) for more details on how to use the REST API to manage Time-to-Live Stacks.
 
-### Pulumi Cloud Service provider
+### Pulumi Cloud provider
 
 The Pulumi Service Provider allows you to set up and manage Time-to-Live Stacks in source control.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -218,6 +219,44 @@ outputs:
   scheduleId: ${ttlSchedule.scheduleId}
 
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+`Pulumi.yaml`:
+
+```yaml
+name: ttl-schedule-setup
+runtime: hcl
+description: Setup of TTL for automatic resource destruction with Pulumi
+```
+
+`main.tf`:
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source = "pulumi/pulumiservice"
+    }
+  }
+}
+
+resource "pulumiservice_ttl_schedule" "ttl_schedule" {
+  organization = "my-org"
+  project      = "my-project"
+  stack        = "temp-stack"
+
+  timestamp = "2024-01-01T00:00:00Z" # Specify the ISO date/time for destruction
+}
+
+output "schedule_id" {
+  value = pulumiservice_ttl_schedule.ttl_schedule.schedule_id
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
 
 {{% /choosable %}}
 

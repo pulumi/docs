@@ -256,7 +256,7 @@ What was missing wasn't the appetite. It was an agent with enough organizational
 
 The theme across these tasks is clear. A thing platform engineers used to keep in their heads becomes a task you delegate, then becomes work that runs without you. Neo isn't generating infrastructure from a template. It's a teammate who knows your code, your providers, your conventions, your production metrics, and can raise PRs for you to review.
 
-Neo now lives in your terminal, in your pull requests, in your Slack workspace, and in Pulumi Cloud. Pick one of these workflows and [give it a try](/docs/pulumi-cloud/neo/).
+Neo now lives in your terminal, in your pull requests, in your Slack workspace, and in Pulumi Cloud. Pick one of these workflows and [give it a try](/docs/ai/neo/).
 
 [^compostable]: For a concrete example, see [Seven Rules for Building an AI-Native Software Factory](/blog/seven-rules-ai-native-software-factory/): Ewan Dawson, CTO of Compostable AI, runs nineteen client deployments with five engineers, using Pulumi Neo to handle most of the infrastructure work.
 

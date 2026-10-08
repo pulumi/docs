@@ -13,6 +13,7 @@ aliases:
   - /docs/guides/self-hosted/eks-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/eks-hosted/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/eks-hosted/
+pulumi_cloud_feature: self-hosting
 ---
 
 The [EKS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted) installer is used to deploy the self-hosted Pulumi Cloud in Amazon Elastic Kubernetes Service (EKS).
@@ -42,7 +43,7 @@ This installer uses Pulumi to deploy Pulumi Cloud. In this case, use the Pulumi 
 To this end, you need to set up the following:
 
 * [Download and install the Pulumi CLI](/docs/install/) on your workstation
-* [Login to S3-compatible backend](/docs/concepts/state#aws-s3)
+* [Login to S3-compatible backend](/docs/iac/concepts/state-and-backends/#logging-into-and-out-of-state-backends)
 
 ### Deployment Steps
 
@@ -82,5 +83,5 @@ AWS requires moving one Kubernetes release at a time. So if moving from 1.19 to 
 {{% /notes %}}
 
 {{% notes type="info" %}}
-If running the Pulumi Cloud with Kubernetes version 1.18, please refer to the installation package README for details on how to upgrade to V2.0 of the EKS installer before upgrading the Kubernetes version.
+If running Pulumi Cloud with Kubernetes version 1.18, please refer to the installation package README for details on how to upgrade to V2.0 of the EKS installer before upgrading the Kubernetes version.
 {{% /notes %}}

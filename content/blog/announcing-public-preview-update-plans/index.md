@@ -12,13 +12,13 @@ canonical_url: "https://www.pulumi.com/docs/iac/concepts/update-plans/"
 ---
 
 > [!INFO]
-> Update Plans now no longer require the `PULUMI_EXPERIMENTAL` environment variable. For the most up-to-date information about using Update Plans, please see the [Update Plans documentation](/docs/iac/cli/commands/pulumi_preview#save-a-plan-file).
+> Update Plans now no longer require the `PULUMI_EXPERIMENTAL` environment variable. For the most up-to-date information about using Update Plans, please see the [Update Plans documentation](/docs/iac/cli/commands/pulumi_preview/#save-a-plan-file).
 
 Pulumi’s previews are an important part of any workflow where you want to see the changes that will be made to your infrastructure before actually making the changes (with `pulumi up`). However, today there is no guarantee that the `pulumi up` operation will do only what was previewed; if the program, or your infrastructure, changes between the preview and the update, the update might make additional changes to bring your infrastructure back in line with what’s defined in your program. We’ve [heard from many of you](https://github.com/pulumi/pulumi/issues/2318) that you need a strong guarantee about exactly which changes an update will make to your infrastructure, especially in critical and production environments.
 
 <!--more-->
 
-Today, I’m excited to announce the public preview of [Update Plans](/docs/iac/concepts/update-plans/), a new Pulumi feature which guarantees that operations shown in `pulumi preview` will run on `pulumi up`. Update Plans also help catch any unexpected changes that might happen between when you preview a change and when you apply that change. Update Plans work by saving the results of a `pulumi preview` to a _plan file_, which enables you to restrict subsequent `pulumi up` operations to only the actions saved in the plan file. This helps you ensure that what you saw in the `pulumi preview` is what will actually happen when you run `pulumi up`.
+Today, I’m excited to announce the public preview of [Update Plans](/docs/iac/operations/stack-management/update-plans/), a new Pulumi feature which guarantees that operations shown in `pulumi preview` will run on `pulumi up`. Update Plans also help catch any unexpected changes that might happen between when you preview a change and when you apply that change. Update Plans work by saving the results of a `pulumi preview` to a _plan file_, which enables you to restrict subsequent `pulumi up` operations to only the actions saved in the plan file. This helps you ensure that what you saw in the `pulumi preview` is what will actually happen when you run `pulumi up`.
 
 Here’s an example of Update Plans in action. In this example we're creating a new [AWS EC2](https://aws.amazon.com/ec2/) instance and associated security group. First, we plan the change with `pulumi preview --save-plan plan.json`, and then we examine the plan file to see which resources the plan expects to change. Finally, we run an update that's constrained to the plan with `pulumi up --plan plan.json`.
 

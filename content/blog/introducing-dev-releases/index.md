@@ -53,7 +53,7 @@ Dev releases of the CLI can be [installed](/docs/install/#installing-dev-release
 $ curl -fsSL https://get.pulumi.com | sh -s -- --version dev
 ```
 
-Dev SDKs are currently available for [Node.js](/docs/languages-sdks/javascript/#dev-versions), [Python](/docs/languages-sdks/python/#dev-versions), [.NET](/docs/languages-sdks/dotnet/#dev-versions), and [Go](/docs/languages-sdks/go/#dev-versions). For example, installing the dev release of the Node.js SDK with `npm`:
+Dev SDKs are currently available for [Node.js](/docs/iac/languages-sdks/javascript/#dev-versions), [Python](/docs/iac/languages-sdks/python/#dev-versions), [.NET](/docs/iac/languages-sdks/dotnet/#dev-versions), and [Go](/docs/iac/languages-sdks/go/#dev-versions). For example, installing the dev release of the Node.js SDK with `npm`:
 
 ```bash
 $ npm add @pulumi/pulumi@dev
@@ -74,6 +74,6 @@ In addition to making it easier for us to test new code that gets merged, and ma
 
 ## How to get started
 
-For instructions on how to use the CLI dev releases see the [Install Docs](/docs/install/#installing-dev-releases), and for pre-release versions of dev SDKs see the docs for [Node.js](/docs/languages-sdks/javascript/#dev-versions), [Python](/docs/languages-sdks/python/#dev-versions), [.NET](/docs/languages-sdks/dotnet/#dev-versions), and [Go](/docs/languages-sdks/go/#dev-versions).
+For instructions on how to use the CLI dev releases see the [Install Docs](/docs/install/#installing-dev-releases), and for pre-release versions of dev SDKs see the docs for [Node.js](/docs/iac/languages-sdks/javascript/#dev-versions), [Python](/docs/iac/languages-sdks/python/#dev-versions), [.NET](/docs/iac/languages-sdks/dotnet/#dev-versions), and [Go](/docs/iac/languages-sdks/go/#dev-versions).
 
 Happy building!

@@ -4,35 +4,15 @@ meta_desc: |
      Compare Amazon DynamoDB vs Google Cloud Bigtable, plus other DynamoDB alternatives like Cassandra, MongoDB, and Cosmos DB, to pick the right NoSQL database.
 
 type: what-is
+date: 2022-09-26T07:16:39-07:00
 page_title: "Amazon DynamoDB vs Google Cloud Bigtable"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
-authors: ["kat-cosgrove"]
+authors: ["pulumi-content-team"]
 ---
 
 ## Biggest Similarities and Differences Between Google Cloud Bigtable and AWS DynamoDB
 
-Both Google Cloud Bigtable and DynamoDB are [NoSQL](/tutorials/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs.
+Both Google Cloud Bigtable and DynamoDB are [NoSQL](/dev/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs.
 
 Google Cloud Bigtable and AWS DynamoDB are both highly-available, scalable, globally distributed and fully-managed serverless NoSQL databases. Both can function as a key-value store, however DynamoDB additionally supports a document model and Bigtable additionally supports a wide-column store. Both offer two consistency levels: eventual consistency, and immediate consistency.
 
@@ -82,4 +62,4 @@ Whichever you choose, Pulumi can provision and manage it as [infrastructure as c
 
 The decision between DynamoDB and Bigtable is rarely settled by a feature checklist. The two are close on availability, scale, and latency, so the deciding factor is often where the rest of your infrastructure already lives. DynamoDB pulls in the AWS ecosystem (IAM, the broader service suite) while Bigtable assumes you're on Google Cloud and comfortable with its native GoogleSQL query API, so the cloud you've committed to tends to pick the database for you. Treat the gravity of your existing platform as the first input, then let the workload specifics (query patterns, predictability of cost) break any remaining tie.
 
-You can provision either one as infrastructure as code with Pulumi: deploy an [AWS Data Service with DynamoDB](/docs/aws/dynamodb/) or [get started with Google Cloud](/docs/iac/get-started/gcp/).
+You can provision either one as infrastructure as code with Pulumi: deploy an [AWS Data Service with DynamoDB](/docs/iac/guides/clouds/aws/) or [get started with Google Cloud](/docs/iac/get-started/gcp/).

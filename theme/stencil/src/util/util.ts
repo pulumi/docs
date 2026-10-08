@@ -11,8 +11,9 @@ export const gb = new GrowthBook({
 
 gb.init({ streaming: true });
 
-// Hook up GrowthBook to analytics when ready
-(window as any).analytics.ready(function() {
+// Hook up GrowthBook to analytics when ready. The optional chain keeps this module
+// loadable when the analytics snippet is absent (e.g., in the test environment).
+(window as any).analytics?.ready(function() {
     gb.setTrackingCallback((experiment, result) => {
         (window as any).analytics.track("Experiment Viewed", {
             experimentId: experiment.key,

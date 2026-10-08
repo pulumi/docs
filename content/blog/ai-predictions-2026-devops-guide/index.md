@@ -50,7 +50,7 @@ We're already seeing this transition. [Google Antigravity](https://developers.go
 
 AWS validated this direction at [re:Invent 2025](https://www.pulumi.com/blog/aws-reinvent-2025-roundup/) by announcing "frontier agents" including Kiro for autonomous coding, along with dedicated security and DevOps agents. These agents maintain state, log actions, operate with policy guardrails, and integrate directly with CI/CD pipelines.
 
-For infrastructure specifically, [Pulumi Neo](/docs/ai/get-started/) represents this same shift. Instead of writing code or running CLI commands for every operation, you describe what you need in natural language and Neo handles the implementation. It works across your entire infrastructure, understanding dependencies and creating execution plans that go through pull requests for review.
+For infrastructure specifically, [Pulumi Neo](/docs/ai/neo/get-started/) represents this same shift. Instead of writing code or running CLI commands for every operation, you describe what you need in natural language and Neo handles the implementation. It works across your entire infrastructure, understanding dependencies and creating execution plans that go through pull requests for review.
 
 For DevOps engineers, this means your pipelines need to accommodate AI-generated code at scale. Multiple agents working simultaneously need isolated, reproducible environments. More generated code means more artifacts to track, version, and deploy.
 
@@ -88,7 +88,7 @@ I think of this as a three-step process:
 
 We're still in the loop. We are the final say in whatever is created, but we're delegating the grunt work to our coding agents.
 
-This is exactly the model that [Pulumi Neo](/docs/ai/tasks/) implements for infrastructure. When you give Neo a complex request, it creates a task plan outlining the steps it will take to accomplish your goal. This plan provides transparency into Neo's approach and gives you the opportunity to adjust the strategy before execution begins. Neo operates in different modes: Review mode where everything requires approval, Balanced mode where only deployments need sign-off, or Auto mode for full autonomy. You define the boundaries, Neo orchestrates the work, and you validate through pull requests and previews.
+This is exactly the model that [Pulumi Neo](/docs/ai/neo/tasks/) implements for infrastructure. When you give Neo a complex request, it creates a task plan outlining the steps it will take to accomplish your goal. This plan provides transparency into Neo's approach and gives you the opportunity to adjust the strategy before execution begins. Neo operates in different modes: Review mode where everything requires approval, Balanced mode where only deployments need sign-off, or Auto mode for full autonomy. You define the boundaries, Neo orchestrates the work, and you validate through pull requests and previews.
 
 For DevOps engineers, this shift means building robust validation infrastructure becomes critical. When AI writes the code, you need automated testing pipelines, security scanning, and verification systems that can operate at the speed of AI-generated changes.
 
@@ -168,5 +168,5 @@ If you want to experience what this future looks like right now, [Pulumi Neo](ht
 
 Whether you're looking to update outdated resources across your infrastructure, analyze your cloud spend, or automate complex multi-step workflows, Neo provides the agent-first experience that's defining the next generation of DevOps tooling.
 
-- [**Get started with Pulumi Neo**](/docs/ai/get-started/) and see how AI-powered infrastructure automation can transform your workflow.
+- [**Get started with Pulumi Neo**](/docs/ai/neo/get-started/) and see how AI-powered infrastructure automation can transform your workflow.
 - **Project**: [Build a production-ready AI agent](https://www.pulumi.com/blog/from-works-on-my-machine-to-production-ready-ai-agents-with-amazon-bedrock-agentcore/) by moving from local prototypes to deployed infrastructure with Amazon Bedrock AgentCore, the Strands SDK, and Pulumi.

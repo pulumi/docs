@@ -6,7 +6,7 @@
     <section id="overview" class="mt-8 pb-16 relative">
         <div class="container mx-auto text-center">
             <div class="w-full p-4">
-                <h2>{{ .Params.overview.title | markdownify }}</h2>
+                <h2>{{ partial "functions/heading-br-space.html" .Params.overview.title | markdownify }}</h2>
             </div>
         </div>
         <div class="container mx-auto">
@@ -26,7 +26,7 @@
         <div class="flex flex-wrap justify-center items-center py-4">
             {{ range . }}
                 <div class="w-28 h-12 mx-6 my-2 flex items-center justify-center saturate-0">
-                    {{ partial "customer-logo.html" (dict "logo" .logo) }}
+                    {{ partial "customer-logo.html" (dict "customer" .customer) }}
                 </div>
             {{ end }}
         </div>
@@ -39,8 +39,7 @@
             "quote" .text
             "author" .author
             "title" .title
-            "company" (.company | default .logo)
-            "logo" (printf "logos/customers/%s.svg" .logo)) }}
+            "customer" .customer) }}
     </section>
     {{ end }}
 
@@ -56,9 +55,9 @@
         {{ partial "gads/stats.html" .Params.stats }}
     </section>
 
-    {{ if not (eq .Params.hide_platform_details true) }}
+    {{ with .Params.key_features_below }}
     <section id="key-features-below">
-        {{ partial "gads/feature-section.html" (dict "items" .Params.key_features_below.items) }}
+        {{ partial "gads/feature-section.html" (dict "items" .items) }}
     </section>
     {{ end }}
 

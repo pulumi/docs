@@ -31,7 +31,7 @@ For platform teams, the new Pulumi Components offer a more intuitive, more secur
 
 ## Understanding Pulumi Components
 
-At their core, [Pulumi Components](/docs/iac/concepts/resources/components/) are logical groupings of resources that encapsulate infrastructure patterns and best practices. Unlike standard resources that map directly to cloud provider resources, components are higher-level abstractions that can contain multiple child resources working together to implement a specific capability. While similar in concept to Terraform modules, Pulumi Components offer more power through full programming language capabilities, stronger typing, and now, cross-language support.
+At their core, [Pulumi Components](/docs/iac/concepts/components/) are logical groupings of resources that encapsulate infrastructure patterns and best practices. Unlike standard resources that map directly to cloud provider resources, components are higher-level abstractions that can contain multiple child resources working together to implement a specific capability. While similar in concept to Terraform modules, Pulumi Components offer more power through full programming language capabilities, stronger typing, and now, cross-language support.
 
 For example, a `SecureBucket` component might include a bucket, versioning configuration, encryption settings, and tagging policies—all bundled together as a single, reusable unit that enforces your organization's security and compliance standards.
 
@@ -53,7 +53,7 @@ Our latest enhancements focus on making components more accessible and easier to
 
 ### Creating Components
 
-The code for creating a [cross-language component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/) starts similarly to a single-language component: define a class that extends `ComponentResource`:
+The code for creating a [cross-language component](/docs/iac/guides/building-extending/components/build-a-component/) starts similarly to a single-language component: define a class that extends `ComponentResource`:
 
 {{< chooser language "typescript,python,csharp,go,java,yaml" >}}
 
@@ -927,7 +927,7 @@ Author a component once in your preferred language, then let your teams consume 
 
 - **Managing Dependencies**: Once you've added an entry to the `packages` section of your Pulumi.yaml file, you can run `pulumi install` to generate a local SDK in your project. This command will process all packages listed in your Pulumi.yaml and create the necessary SDK files. Check in these files if you want fully reproducible builds; or add them to `.gitignore` if you prefer to regenerate them on each checkout. When using `.gitignore`, team members will need to run `pulumi install` after checkout to regenerate the SDK.
 
-- **Leveraging Private Repos**: If you need to keep your components private, you can still point to a Git source in a private repository. Just make sure the correct access tokens are set in the environment [as described in our package management documentation](/docs/iac/using-pulumi/extending-pulumi/build-a-component/#sharing-via-git).
+- **Leveraging Private Repos**: If you need to keep your components private, you can still point to a Git source in a private repository. Just make sure the correct access tokens are set in the environment [as described in our package management documentation](/docs/iac/guides/building-extending/components/build-a-component/#sharing-via-git).
 
 ## The Spectrum of Pulumi Components You Can Build
 
@@ -951,6 +951,6 @@ You can use Pulumi Components with more flexibility and control depending on you
 
 The ability to author components in one language and consume them in any other Pulumi language—including YAML—provides unprecedented flexibility and collaboration opportunities between platform teams and application developers.
 
-To learn more about Pulumi Components, check out our documentation on [components](/docs/iac/concepts/resources/components/), [building a component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/), [packaging and publishing components](/docs/iac/using-pulumi/extending-pulumi/publishing-packages/), and [component schemas](/docs/iac/using-pulumi/extending-pulumi/schema/).
+To learn more about Pulumi Components, check out our documentation on [components](/docs/iac/concepts/components/), [building a component](/docs/iac/guides/building-extending/components/build-a-component/), [packaging and publishing components](/docs/iac/guides/building-extending/packages/publishing-packages/), and [component schemas](/docs/iac/guides/building-extending/packages/schema/).
 
 We're excited to see what you build with Pulumi Components! Share your feedback with us on the [Pulumi Community Slack](https://slack.pulumi.com/) or open an issue in the [pulumi/pulumi GitHub repository](https://github.com/pulumi/pulumi).

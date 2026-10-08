@@ -2,6 +2,7 @@
 title: What Is Terragrunt?
 meta_desc: "Terragrunt wraps Terraform and OpenTofu to add DRY configuration, remote state management, and multi-module orchestration. Learn how it works."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is Terragrunt?"
 authors: ["alex-leventer"]
 ---
@@ -107,7 +108,7 @@ The right alternative depends on what is driving the search. If the pain is Terr
 
 [Pulumi](/docs/iac/) and Terragrunt address some of the same pains from opposite directions. Terragrunt adds a DRY and orchestration layer *on top of* an HCL tool. Pulumi is a complete [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform in which the same needs are met by the programming language and the platform itself, so there is no separate wrapper to adopt.
 
-**DRY comes from the language, not a wrapper.** In Pulumi, you write infrastructure in TypeScript, Python, Go, C#, Java, or YAML. Loops, functions, classes, and package imports are native to those languages, so factoring out shared configuration, iterating over environments, and building reusable abstractions ([components](/docs/iac/concepts/components/)) is just ordinary programming. The repetition Terragrunt exists to remove is handled by the same mechanisms you already use to keep application code DRY.
+**DRY comes from the language, not a wrapper.** In Pulumi, you write infrastructure in a general-purpose language — TypeScript, JavaScript, Python, Go, .NET, or Java. Loops, functions, classes, and package imports are native to those languages, so factoring out shared configuration, iterating over environments, and building reusable abstractions ([components](/docs/iac/concepts/components/)) is ordinary programming. The repetition Terragrunt exists to remove is handled by the same mechanisms you already use to keep application code DRY.
 
 **State is a managed service, not a tool you configure.** Pulumi manages [state](/what-is/what-is-terraform-state/) for you through the managed Pulumi Cloud backend, or a self-hosted backend if you prefer (S3, Azure Blob, Google Cloud Storage, or local files). There is no per-module backend block to generate and keep DRY, because backend configuration is not something each project has to declare.
 
@@ -116,13 +117,13 @@ The right alternative depends on what is driving the search. If the pain is Terr
 | Dimension | Terragrunt | Pulumi |
 |---|---|---|
 | What it is | Wrapper over Terraform/OpenTofu | Full IaC platform |
-| Authoring language | HCL + `terragrunt.hcl` | TypeScript, Python, Go, C#, Java, YAML |
-| DRY mechanism | Config inheritance and generation | Native language features (loops, functions, classes) |
-| State | Backend you configure per module | Managed service or self-hosted backend |
+| Authoring language | HCL + `terragrunt.hcl` | TypeScript, JavaScript, Python, Go, .NET, Java, YAML |
+| DRY mechanism | Config inheritance, remote-state generation, and hooks | Native language features (loops, functions, classes) |
+| State | Root `remote_state` block generating each unit's backend config | Managed service or self-hosted backend |
 | Cross-module wiring | `dependency` blocks and `run --all` | Stack references and stacks |
 | Extra tool required for DRY/orchestration | Yes (Terragrunt itself) | No |
 
-None of this makes Terragrunt a poor choice. For teams committed to Terraform or OpenTofu and happy with HCL, Terragrunt is a well-established, pragmatic way to scale a codebase. Pulumi is worth considering when you'd rather get DRY configuration, abstraction, and orchestration from a programming language and a managed platform than from HCL plus a wrapper. If you already have Terraform or Terragrunt code, Pulumi can [convert and adopt it](/migrate/tf2pulumi/), and the two ecosystems interoperate.
+None of this makes Terragrunt a poor choice. For teams committed to Terraform or OpenTofu and happy with HCL, Terragrunt is a well-established, pragmatic way to scale a codebase. Pulumi is worth considering when you'd rather get DRY configuration, abstraction, and orchestration from a programming language and a managed platform than from HCL plus a wrapper. If you already have Terraform or Terragrunt code, Pulumi can [convert and adopt it](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/), and the two ecosystems interoperate.
 
 ## Frequently asked questions about Terragrunt
 
@@ -166,7 +167,7 @@ Related reading:
 
 * [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 * [Pulumi vs. OpenTofu](/docs/iac/comparisons/opentofu/)
-* [Convert Terraform to Pulumi](/migrate/tf2pulumi/)
+* [Convert Terraform to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)
 * [What is Terraform state?](/what-is/what-is-terraform-state/)
 * [What is a Terraform module?](/what-is/what-is-a-terraform-module/)

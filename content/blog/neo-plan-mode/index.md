@@ -59,6 +59,6 @@ Plan Mode is opt-in. You choose it when you want to work through an approach bef
 
 ## Get started
 
-Plan Mode is available now for all Pulumi Cloud organizations. It works with any [task mode](/docs/ai/tasks/#task-modes), so you can pair thorough upfront planning with whatever level of execution autonomy fits the situation.
+Plan Mode is available now for all Pulumi Cloud organizations. It works with any [task mode](/docs/ai/neo/tasks/#task-modes), so you can pair thorough upfront planning with whatever level of execution autonomy fits the situation.
 
-To try it, [open Neo in Pulumi Cloud](https://app.pulumi.com/neo). For more details, see the [Plan Mode documentation](/docs/ai/tasks/#plan-mode).
+To try it, [open Neo in Pulumi Cloud](https://app.pulumi.com/neo). For more details, see the [Plan Mode documentation](/docs/ai/neo/tasks/#plan-mode).

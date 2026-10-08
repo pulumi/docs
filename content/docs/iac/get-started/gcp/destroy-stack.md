@@ -1,8 +1,8 @@
 ---
-title_tag: Destroy the Stack | Google Cloud
+title_tag: Destroy the stack | Google Cloud
 title: Destroy stack
 h1: "Get started with Pulumi and Google Cloud"
-meta_desc: This page provides an overview of how to destroy a Pulumi stack of a Google Cloud project.
+meta_desc: Learn how to delete the Google Cloud resources in your Pulumi stack with pulumi destroy, then remove the stack itself.
 weight: 8
 menu:
     iac:
@@ -16,11 +16,11 @@ aliases:
     - /docs/clouds/gcp/get-started/destroy-stack/
 ---
 
-## Cleanup & destroy the stack
+## Clean up and destroy the stack
 
-Our final step is to clean up all of the resources we've allocated in this tutorial.
+To finish the tutorial, clean up all the resources you created.
 
-Run the `pulumi destroy` command to delete all cloud resources in this project/stack:
+Run the `pulumi destroy` command to delete all cloud resources in the stack:
 
 {{% choosable os "linux,macos" %}}
 
@@ -38,9 +38,9 @@ $ pulumi destroy
 
 {{% /choosable %}}
 
-Just like `pulumi up`, you'll be shown a preview to ensure that you want to proceed:
+Just like `pulumi up`, `pulumi destroy` shows you a preview so you can confirm that you want to proceed:
 
-```
+```output
 Previewing destroy (dev):
 
      Type                             Name               Plan
@@ -61,9 +61,9 @@ Do you want to perform this destroy?
   details
 ```
 
-As with an update, we can choose `no` or `details`; select `yes` to proceed:
+As with an update, you can choose `no` or `details`. Select `yes` to proceed:
 
-```
+```output
 Destroying (dev):
 
      Type                             Name               Status
@@ -85,9 +85,9 @@ At this stage, your stack still exists, but all cloud resources have been delete
 
 ## Remove the stack
 
-The final step is to remove the stack itself. Destroy keeps the stack around so that you still have the full
-history of what happened to the stack. Running [`pulumi stack rm`](/docs/iac/cli/commands/pulumi_stack_rm) will
-delete it entirely, including all history and state snapshots. Be careful, this step cannot be undone!
+The final step is to remove the stack itself. `pulumi destroy` keeps the stack around so that you still have the full
+history of what happened to the stack. Running [`pulumi stack rm`](/docs/iac/cli/commands/pulumi_stack_remove/)
+deletes it entirely, including all history and state snapshots. Be careful: this step can't be undone!
 
 {{% choosable "os" "macos,linux" %}}
 
@@ -104,6 +104,6 @@ $ pulumi stack rm
 
 {{% /choosable %}}
 
-You'll be prompted to confirm the removal. Confirm it to successfully complete this tutorial.
+`pulumi stack rm` prompts you to confirm the removal. Confirm it to complete this tutorial.
 
 {{< get-started-stepper >}}

@@ -41,7 +41,7 @@ aliases:
 
 An _environment_ is the fundamental unit of organization in Pulumi ESC (Environments, Secrets, and Configuration): a named, versioned YAML document that defines a collection of configuration and secrets. Environments combine static values, secrets, dynamically retrieved values from supported providers (including all major clouds through OpenID Connect), and values imported from other environments. When an environment is _opened_, ESC evaluates the document and produces a concrete set of values that any application, tool, or Pulumi IaC stack can consume.
 
-Environments are accessible from the [`pulumi` CLI](/docs/iac/download-install/), the [Pulumi SDKs](/docs/esc/languages-sdks/), the [Pulumi Cloud console](#managing-environments), and the [REST API](/docs/pulumi-cloud/cloud-rest-api/). Pulumi ESC is a service of Pulumi Cloud.
+Environments are accessible from the [`pulumi` CLI](/docs/install/), the [Pulumi SDKs](/docs/esc/languages-sdks/), the [Pulumi Cloud console](#managing-environments), and the [REST API](/docs/reference/cloud-rest-api/). Pulumi ESC is a service of Pulumi Cloud.
 
 ## What's in an environment
 
@@ -134,8 +134,8 @@ Environments can be created, edited, versioned, and consumed through several sur
 
 - **Pulumi Cloud console** — a visual editor with an intelligent YAML editor, live evaluation preview, version history, revision tagging, and access-control management. Best for interactive authoring and review.
 - **Pulumi CLI** — the [`pulumi env` subcommands](/docs/iac/cli/commands/pulumi_env/) cover the full lifecycle: initialize, list, get and set values, edit, open, run commands with injected values, diff and tag versions, clone, and delete. Best for day-to-day work and scripting. See the [CLI reference](/docs/iac/cli/commands/pulumi_env/) for the complete command set.
-- **REST API** — the [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/) performs standard CRUD operations on environments and is the foundation for custom integrations.
-- **Automation API** — manage which environments a Pulumi stack imports programmatically with [Automation API](/docs/iac/concepts/automation-api/) (`addEnvironments`, `listEnvironments`, `removeEnvironment`).
+- **REST API** — the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) performs standard CRUD operations on environments and is the foundation for custom integrations.
+- **Automation API** — manage which environments a Pulumi stack imports programmatically with [Automation API](/docs/esc/integrations/automation-api/) (`addEnvironments`, `listEnvironments`, `removeEnvironment`).
 - **Pulumi Service Provider** — manage environments as infrastructure-as-code with the [Pulumi Service provider](/docs/esc/integrations/pulumi-service-provider/)'s [`Environment`](/registry/packages/pulumiservice/api-docs/environment/) resource, so environment definitions are themselves provisioned and versioned through Pulumi.
 
 Every change to an environment creates a new immutable revision. See [Versioning](/docs/esc/concepts/versioning/) for how to compare, tag, and pin revisions.
@@ -158,7 +158,7 @@ There are several ways to reference an environment from a Pulumi IaC program:
 
 - **With the Pulumi CLI** — use `pulumi config env add <project>/<environment>` to add an environment to the current stack's configuration (or `pulumi config env init` to create a new environment from a stack's existing config).
 
-- **With Automation API** — call `addEnvironments(...)` on a stack's workspace to attach environments programmatically in [Automation API](/docs/iac/concepts/automation-api/) workflows.
+- **With Automation API** — call `addEnvironments(...)` on a stack's workspace to attach environments programmatically in [Automation API](/docs/esc/integrations/automation-api/) workflows.
 
 Once an environment is referenced, values flow into your program through the standard [configuration API](/docs/iac/concepts/config/#code):
 
@@ -175,4 +175,4 @@ Stacks may only read from environments that belong to the same Pulumi organizati
 
 ## Access control
 
-Access to environments is governed by Pulumi Cloud's role-based access control. Permissions are granted through roles and reusable permission sets — the built-in environment permission sets are `Environment Read`, `Environment Open`, `Environment Write`, and `Environment Admin` — and can be assigned to users or teams, including on individual environments. The `open` permission is what allows a user to decrypt secrets and retrieve dynamic credentials, so it can be granted independently of the `write` permission used to edit a definition. For the full permission model, see [Role-Based Access Control](/docs/administration/access-identity/rbac/).
+Access to environments is governed by Pulumi Cloud's role-based access control. Permissions are granted through roles and reusable permission sets — the built-in environment permission sets are `Environment Read`, `Environment Open`, `Environment Write`, and `Environment Admin` — and can be assigned to users or teams, including on individual environments. The `open` permission is what allows a user to decrypt secrets and retrieve dynamic credentials, so it can be granted independently of the `write` permission used to edit a definition. For the full permission model, see [Role-Based Access Control](/docs/administration/concepts/rbac/).

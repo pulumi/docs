@@ -11,10 +11,6 @@ menu:
         parent: iac-comparisons
         weight: 40
         identifier: iac-comparisons-arm-templates
-    concepts:
-        identifier: vs-arm-templates
-        parent: vs
-        weight: 40
 aliases:
 - /docs/reference/vs/arm/
 - /docs/intro/vs/arm/
@@ -26,7 +22,7 @@ aliases:
 - /docs/iac/concepts/vs/arm-templates/
 ---
 
-Pulumi and [Azure Resource Manager (ARM) Templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview) are both declarative infrastructure as code tools for Microsoft Azure. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML) and supports any cloud or SaaS provider through the [Pulumi Registry](/registry/); ARM Templates and [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview) — a domain-specific language that compiles to ARM JSON — provision only Azure resources and run through Azure's centralized deployment service.
+Pulumi and [Azure Resource Manager (ARM) Templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview) are both declarative infrastructure as code tools for Microsoft Azure. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), plus YAML and [HCL](/docs/iac/languages-sdks/hcl/), and supports any cloud or SaaS provider through the [Pulumi Registry](/registry/); ARM Templates and [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview) — a domain-specific language that compiles to ARM JSON — provision only Azure resources and run through Azure's centralized deployment service.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of ARM Templates and Bicep.
 
@@ -46,7 +42,7 @@ ARM Templates are Azure's original declarative infrastructure as code format. Te
 
 | Feature | Pulumi | ARM Templates |
 | --- | --- | --- |
-| Language support | Python, TypeScript, JavaScript, Go, C#, Java, and YAML — general-purpose languages with familiar syntax for loops, conditionals, and abstractions | [JSON templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview) or [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview) (a DSL that compiles to JSON), with [template functions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions) for limited dynamic logic |
+| Language support | {{< pulumi-languages "general-purpose" >}} — general-purpose languages with familiar syntax for loops, conditionals, and abstractions — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/) | [JSON templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview) or [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview) (a DSL that compiles to JSON), with [template functions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions) for limited dynamic logic |
 | Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Azure Native](/registry/packages/azure-native/) and [Kubernetes](/registry/packages/kubernetes/) generated from upstream API schemas; [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be adapted into a Pulumi provider | Azure resources only; third-party resources require a [custom resource provider](https://learn.microsoft.com/en-us/azure/azure-resource-manager/custom-providers/) or [deployment scripts](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/deployment-script-template) |
 | Transpiled to another format? | No — programs run directly in their host language | Bicep compiles to ARM JSON before deployment; JSON ARM templates are interpreted directly by the ARM service |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | Managed by the ARM service inside the Azure subscription as [deployment history](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/deployment-history); no user-accessible state file |
@@ -56,7 +52,7 @@ ARM Templates are Azure's original declarative infrastructure as code format. Te
 | Programmatic API for tools and platforms | [Automation API](/docs/iac/concepts/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | No embeddable SDK; orchestration goes through the Azure CLI, Azure SDKs, or the ARM REST API |
 | Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers (npm, PyPI, NuGet, Maven, Go modules); and the [Pulumi Registry](/registry/) for publicly available packages | [Linked templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/linked-templates) and [Bicep modules](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/modules); shared through the [Bicep public module registry](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/private-module-registry) and [template specs](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-specs) |
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | No first-class import; existing resources can be referenced read-only via the [`existing` keyword in Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/existing-resource), or adopted by hand-authoring a template that matches the deployed state |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview) — a separate Azure service that enforces rules at the subscription or management-group level rather than as part of the template authoring loop |
+| Policy as code | [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview) — a separate Azure service that enforces rules at the subscription or management-group level rather than as part of the template authoring loop |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | [Bicep](https://github.com/Azure/bicep) is MIT-licensed; the ARM deployment service itself is a closed-source Microsoft service |
 | Commercial option | [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) | None — ARM and Bicep are part of Azure with no separate commercial tier |
 
@@ -70,7 +66,7 @@ Pulumi programs are written directly in general-purpose languages, so authors ge
 
 ### Cloud and service coverage
 
-ARM Templates and Bicep manage Azure resources only; third-party support is limited to custom resource providers and deployment scripts. Pulumi targets any cloud or SaaS platform through the [Pulumi Registry](/registry/), which includes [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers). For Azure specifically, Pulumi maintains the [Azure Native](/registry/packages/azure-native/) provider, generated directly from the Azure Resource Manager REST API specifications, which gives same-day coverage of new Azure resources — the same coverage story that ARM Templates offer, but consumed from Python, TypeScript, Go, C#, Java, or YAML. The [Azure Classic](/registry/packages/azure/) provider, built on the AzureRM Terraform provider, is also available and is appropriate for existing projects. When a resource is not available in a Pulumi provider, Pulumi can [adapt any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) for use from a Pulumi program.
+ARM Templates and Bicep manage Azure resources only; third-party support is limited to custom resource providers and deployment scripts. Pulumi targets any cloud or SaaS platform through the [Pulumi Registry](/registry/), which includes [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers). For Azure specifically, Pulumi maintains the [Azure Native](/registry/packages/azure-native/) provider, generated directly from the Azure Resource Manager REST API specifications, which gives same-day coverage of new Azure resources — the same coverage story that ARM Templates offer, but consumed from {{< pulumi-languages "general-purpose" >}}, as well as YAML. The [Azure Classic](/registry/packages/azure/) provider, built on the AzureRM Terraform provider, is also available and is appropriate for existing projects. When a resource is not available in a Pulumi provider, Pulumi can [adapt any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) for use from a Pulumi program.
 
 ### Execution and rollbacks
 
@@ -82,7 +78,7 @@ Pulumi treats secrets as a first-class primitive. Values marked as secrets are e
 
 ### Policy as code
 
-[Pulumi Policies](/docs/insights/policy/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS), so teams don't have to author and maintain those rules themselves. ARM Templates have no policy-as-code mechanism built into the templating language; teams use [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), a separate Azure service that enforces rules at the subscription or management-group level, to gate the resources that ARM is allowed to create.
+[Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS), so teams don't have to author and maintain those rules themselves. ARM Templates have no policy-as-code mechanism built into the templating language; teams use [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), a separate Azure service that enforces rules at the subscription or management-group level, to gate the resources that ARM is allowed to create.
 
 ### Modularity and reuse
 
@@ -124,7 +120,7 @@ For a complete walkthrough including coexistence patterns and resource adoption,
 
 ### Does Pulumi support Bicep?
 
-Yes. [`pulumi convert --from bicep`](/docs/iac/guides/migration/converters/) translates Bicep files into a Pulumi program in Python, TypeScript, Go, C#, Java, or YAML. The generated program uses the [Azure Native](/registry/packages/azure-native/) provider, which is built from the same Azure Resource Manager REST API specifications that Bicep ultimately deploys to, so the resource model matches what Bicep produces.
+Yes. [`pulumi convert --from bicep`](/docs/iac/guides/migration/converters/) translates Bicep files into a Pulumi program in {{< pulumi-languages "general-purpose" >}}, as well as YAML. The generated program uses the [Azure Native](/registry/packages/azure-native/) provider, which is built from the same Azure Resource Manager REST API specifications that Bicep ultimately deploys to, so the resource model matches what Bicep produces.
 
 ### Does Pulumi cover the same Azure resources as ARM Templates?
 
@@ -140,7 +136,7 @@ You have several options that can be combined: convert templates with [`pulumi c
 
 ### Is Pulumi free like ARM Templates?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. ARM Templates and Bicep have no usage cost beyond the resources they manage.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) includes managed state in its Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management. ARM Templates and Bicep have no usage cost beyond the resources they manage.
 
 ### Can Pulumi detect drift like ARM?
 
@@ -148,7 +144,7 @@ Pulumi has first-class drift detection: [`pulumi refresh`](/docs/iac/cli/command
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Get started with Pulumi and Azure](/docs/iac/get-started/azure/)
 - [Pulumi for Azure](/docs/integrations/clouds/azure/)
 - [Pulumi Azure Native provider](/registry/packages/azure-native/)

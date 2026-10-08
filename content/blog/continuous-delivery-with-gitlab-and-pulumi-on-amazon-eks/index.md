@@ -32,8 +32,8 @@ organization. This can be a specific GitHub, GitLab or Atlassian
 organization or your solo organization. Inside each organization, users
 create Pulumi projects and stacks.
 
-Pulumi [projects](/docs/concepts/projects/)
-and [stacks](/docs/concepts/stack/)
+Pulumi [projects](/docs/iac/concepts/projects/)
+and [stacks](/docs/iac/concepts/stacks/)
 are flexible to accommodate the diverse needs across teams, applications,
 and infrastructure scenarios. Just like Git repos that work with varying
 approaches Pulumi projects and stacks allow you to organize your code
@@ -55,7 +55,7 @@ Working with Inter-Stack Dependencies with the latter option is more
 suited in a production setup giving users more flexibility and
 boundaries between their teams. We will use this structure in our
 example below. For more information on Pulumi projects and stacks,
-please refer to our [organizaing documentation](/docs/using-pulumi/organizing-projects-stacks/).
+please refer to our [organizaing documentation](/docs/iac/guides/basics/organizing-projects-stacks/).
 
 ### Use Tags to group Pulumi Stacks as Environments:
 
@@ -71,7 +71,7 @@ please refer to our [organizaing documentation](/docs/using-pulumi/organizing-pr
     - In the Pulumi Service, you'll be able to group stacks by
         tag: `environment:dev` and tag: `environment:prod`.
 
-Please read more about managing [stack tags in Pulumi](/docs/concepts/stack#stack-tags).
+Please read more about managing [stack tags in Pulumi](/docs/iac/concepts/stacks/#stack-tags).
 
 ![Stack tags](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/image-4.png)
 

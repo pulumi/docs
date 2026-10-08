@@ -53,7 +53,7 @@ Team-backed organization, you can invite the same members to collaborate
 on Pulumi.
 
 This allows you to set permissions on
-[Stacks](/docs/concepts/stack/) owned by your
+[Stacks](/docs/iac/concepts/stacks/) owned by your
 organization. You can learn more about
 [Teams](/docs/pulumi-cloud/access-management/teams/)
 in the Pulumi and how those permissions get applied too.
@@ -62,11 +62,11 @@ in the Pulumi and how those permissions get applied too.
 
 Did you also know that the Pulumi CLI can be used in most, if not all,
 CI/CD workflows? Check out our
-[documentation](/docs/iac/packages-and-automation/continuous-delivery/) for integrating
+[documentation](/docs/iac/operations/continuous-delivery/) for integrating
 with several popular CI/CD systems. Get up and running with Pulumi in CI
-on [GitLab](/docs/iac/packages-and-automation/continuous-delivery/gitlab-ci/),
-[Travis](/docs/iac/packages-and-automation/continuous-delivery/travis/),
-[Azure DevOps](/docs/iac/packages-and-automation/continuous-delivery/azure-devops/) and more.
+on [GitLab](/docs/iac/operations/continuous-delivery/gitlab-ci/),
+[Travis](/docs/iac/operations/continuous-delivery/travis/),
+[Azure DevOps](/docs/iac/operations/continuous-delivery/azure-devops/) and more.
 Don't see docs for a particular CI system? Let us know or better yet
 file an issue [here](https://github.com/pulumi/docs/issues).
 

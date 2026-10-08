@@ -8,7 +8,7 @@ meta_desc: "Learn how to automate AWS resource tagging using Infrastructure and 
 
 ---
 
-AWS publishes best practices for how to tag your resources for cost tracking, automation, and organization. But how do you enforce that you're doing it correctly across all of your projects? And is it really necessary to manually track down all those places where you missed a tag and manually patch things up? In this article, we'll see how to use Policy as Code to enforce your team's tagging strategies in addition to some powerful [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) techniques to automate applying your tags in a consistent way across all of your projects and resources.
+AWS publishes best practices for how to tag your resources for cost tracking, automation, and organization. But how do you enforce that you're doing it correctly across all of your projects? And is it really necessary to manually track down all those places where you missed a tag and manually patch things up? In this article, we'll see how to use Policy as Code to enforce your team's tagging strategies in addition to some powerful [infrastructure as code](/what-is/what-is-infrastructure-as-code/) techniques to automate applying your tags in a consistent way across all of your projects and resources.
 
 ## Why Tag Your Resources?
 
@@ -16,7 +16,7 @@ A tag is simply a key/value label that you can apply to your AWS infrastructure 
 
 [Amazon recommends many tagging strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/), including technical tags like name and environment, automation tags like dates and security requirements, business tags like owner and cost center, and security tags for compliance. Each of these enables you to apply policies.
 
-Specifying a tag in your Infrastructure as Code is easy. Not all resources are taggable (although the most important ones are); to tag a resource, specify a map of key/values using the `tags` property. For example, this code declares an S3 Bucket that carries three tags that enable cost allocation reporting: `"user:Project"`, `"user:Stack"`, and `"user:Cost Center"`:
+Specifying a tag in your infrastructure as code is easy. Not all resources are taggable (although the most important ones are); to tag a resource, specify a map of key/values using the `tags` property. For example, this code declares an S3 Bucket that carries three tags that enable cost allocation reporting: `"user:Project"`, `"user:Stack"`, and `"user:Cost Center"`:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -360,7 +360,7 @@ Finally, further down in the dialog, we can enter the tags we'd like to enforce:
 
 Now that it is configured, all subsequent updates across the organization will run policy checks.
 
-{{< blog/cta-card title="Enforce policy as code" href="/docs/insights/policy/" >}}
+{{< blog/cta-card title="Enforce policy as code" href="/docs/discovery-governance/policy/" >}}
 Write policy as code with Pulumi to catch missing tags, block risky configurations, and keep every deployment compliant across your team.
 {{< /blog/cta-card >}}
 
@@ -370,7 +370,7 @@ In all cases, after manually fixing our bucket, and adding the correct tags, the
 
 ![Tag Policy Succeeded](/blog/automatically-enforcing-aws-resource-tagging-policies/tag-policy-succeed.png)
 
-This is great &mdash; we can now rest assured that all taggable AWS resources will be tagged before we provision them. But it sure is tedious to add these tags to every resource and then get policy violations errors anytime we forget. One of the advantages of using Infrastructure as Code is that we can automate the injection of these tags.
+This is great &mdash; we can now rest assured that all taggable AWS resources will be tagged before we provision them. But it sure is tedious to add these tags to every resource and then get policy violations errors anytime we forget. One of the advantages of using infrastructure as code is that we can automate the injection of these tags.
 
 To do that, let's write a function that detects taggable resources and merges in automatic tags:
 
@@ -745,7 +745,7 @@ In this post, we've seen some ways to enforce AWS tagging best practices. This i
 Check out these resources to get started with Pulumi's open source platform:
 
 * [AWS getting started guide](/docs/iac/get-started/aws/)
-* [Policy as Code getting started guide](/docs/using-pulumi/crossguard/get-started/)
+* [Policy as Code getting started guide](/docs/discovery-governance/policy/get-started/)
 * [Full example code used in this post](https://github.com/joeduffy/aws-tags-example)
 
 Good luck making sure your team's resources are tagged early and often with less manual effort!

@@ -1,4 +1,5 @@
 {
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
   "source_base_path": "/home/runner/work/docs/docs/docs/docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -1753,6 +1754,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.DiscriminatedUnionCaseAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.discriminatedunioncaseattribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.DiscriminatedUnionCaseAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DiscriminatedUnionCaseAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used to declare one member of a discriminated union interface marked with\n<xref href=\"Pulumi.DiscriminatedUnionDiscriminatorAttribute\" data-throw-if-not-resolved=\"false\"></xref>. <xref href=\"Pulumi.DiscriminatedUnionCaseAttribute.Tag\" data-throw-if-not-resolved=\"false\"></xref> is the\ndiscriminator property value that selects this member, and <xref href=\"Pulumi.DiscriminatedUnionCaseAttribute.Type\" data-throw-if-not-resolved=\"false\"></xref> is the\nconcrete <xref href=\"Pulumi.OutputTypeAttribute\" data-throw-if-not-resolved=\"false\"></xref> class to instantiate; it must implement the\nannotated interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.DiscriminatedUnionDiscriminatorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.discriminateduniondiscriminatorattribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.DiscriminatedUnionDiscriminatorAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DiscriminatedUnionDiscriminatorAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used to mark an interface that represents a discriminated union of complex\noutput property types. The interface must also carry one\n<xref href=\"Pulumi.DiscriminatedUnionCaseAttribute\" data-throw-if-not-resolved=\"false\"></xref> per union member. When deserializing, the\nPulumi runtime reads the discriminator property named by <xref href=\"Pulumi.DiscriminatedUnionDiscriminatorAttribute.PropertyName\" data-throw-if-not-resolved=\"false\"></xref> from\nthe raw value and instantiates the member whose tag matches.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.EnumTypeAttribute.yml",
       "output": {
         ".html": {
@@ -2687,7 +2716,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Pulumi.InputList<T>",
-      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InputList-1.yml\" sourcestartlinenumber=\"1\">A list of values that can be passed in as the arguments to a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>.\nThe individual values are themselves <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref>s.  i.e. the individual values\ncan be concrete values or <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s.</p>\n<p></p>\n<xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> differs from a normal <xref href=\"System.Collections.Generic.IList%601\" data-throw-if-not-resolved=\"false\"></xref> in that it is itself\nan <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref>.  For example, a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> that accepts an <xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> will accept not just a list but an <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>\nof a list.  This is important for cases where the <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>\nlist from some <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> needs to be passed into another <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>.  Or for cases where creating the list invariably produces an <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref> because its resultant value is dependent on other <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s.\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.InputList-1.yml\" sourcestartlinenumber=\"13\">This benefit of <xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> is also a limitation.  Because it represents a\nlist of values that may eventually be created, there is no way to simply iterate over, or\naccess the elements of the list synchronously.</p>\n<p></p>\n<xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> is designed to be easily used in object and collection\ninitializers.  For example, a resource that accepts a list of inputs can be written in\neither of these forms:\n<p></p>\n<pre><code class=\"lang-csharp\">new SomeResource(\"name\", new SomeResourceArgs {\n    ListProperty = { Value1, Value2, Value3 },\n});</code></pre>\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.InputList-1.yml\" sourcestartlinenumber=\"28\">or</p>\n<pre><code class=\"lang-csharp\">new SomeResource(\"name\", new SomeResourceArgs {\n    ListProperty = new [] { Value1, Value2, Value3 },\n});</code></pre>\n"
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InputList-1.yml\" sourcestartlinenumber=\"1\">A list of values that can be passed in as the arguments to a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>.\nThe individual values are themselves <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref>s.  i.e. the individual values\ncan be concrete values or <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s.</p>\n<p></p>\n<xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> differs from a normal <xref href=\"System.Collections.Generic.IList%601\" data-throw-if-not-resolved=\"false\"></xref> in that it is itself\nan <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref>.  For example, a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> that accepts an <xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> will accept not just a list but an <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>\nof a list.  This is important for cases where the <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>\nlist from some <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> needs to be passed into another <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>.  Or for cases where creating the list invariably produces an <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref> because its resultant value is dependent on other <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s.\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.InputList-1.yml\" sourcestartlinenumber=\"13\">This benefit of <xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> is also a limitation.  Because it represents a\nlist of values that may eventually be created, there is no way to simply iterate over, or\naccess the elements of the list synchronously.</p>\n<p></p>\n<xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> is designed to be easily used in object and collection\ninitializers.  For example, a resource that accepts a list of inputs can be written in\neither of these forms:\n<p></p>\n<pre><code class=\"lang-csharp\">new SomeResource(\"name\", new SomeResourceArgs {\n    ListProperty = { Value1, Value2, Value3 },\n});</code></pre>\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.InputList-1.yml\" sourcestartlinenumber=\"30\">or</p>\n<pre><code class=\"lang-csharp\">new SomeResource(\"name\", new SomeResourceArgs {\n    ListProperty = new [] { Value1, Value2, Value3 },\n});</code></pre>\n"
     },
     {
       "type": "ManagedReference",
@@ -3107,7 +3136,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Pulumi.ResourceHookBinding",
-      "Summary": "<p>\nBinds <xref href=\"Pulumi.ResourceHook\" data-throw-if-not-resolved=\"false\"></xref>s to a resource. The resource hooks will be invoked at specific points in the\nlifecycle of the resource.\n</p>\n<p>\n<code>Before*</code> hooks that raise an exception will cause the resource operation to fail. <code>After*</code> hooks that\nraise an exception will log a warning, but do not cause the action or the deployment to fail.\n</p>\n<p>\nWhen running <code>pulumi destroy</code>, <code>BeforeDelete</code> and <code>AfterDelete</code> resource hooks require the\noperation to run with <code>--run-program</code>, to ensure that the program which defines the hooks is available.\n</p>\n"
+      "Summary": "<p>\nBinds <xref href=\"Pulumi.ResourceHook\" data-throw-if-not-resolved=\"false\"></xref>s to a resource. The resource hooks will be invoked at specific points in the\nlifecycle of the resource.\n</p>\n<p>\nBy default, an exception from a <code>Before*</code> hook causes the resource operation to fail. An exception from an\n<code>After*</code> hook fails the deployment. The resource operation itself has already succeeded, so its result is\nrecorded in state. Set <xref href=\"Pulumi.ResourceHookOptions.IgnoreErrors\" data-throw-if-not-resolved=\"false\"></xref> on the hook to log a warning instead.\n</p>\n<p>\nWhen running <code>pulumi destroy</code>, <code>BeforeDelete</code> and <code>AfterDelete</code> resource hooks require the\noperation to run with <code>--run-program</code>, to ensure that the program which defines the hooks is available.\n</p>\n"
     },
     {
       "type": "ManagedReference",

@@ -123,7 +123,7 @@ imports:
 
 | Option  | Type    | Default | Description |
 |---------|---------|---------|-------------|
-| `merge` | boolean | `true`  | Whether to add the imported environment to the merge stack. When `false`, the environment is evaluated but its values are not automatically merged into the current environment. Unmerged imports are still accessible via the [`imports` built-in property](/docs/esc/concepts/interpolations-and-references/#imports). |
+| `merge` | boolean | `true`  | Whether to add the imported environment to the merge stack. When `false`, the environment is evaluated but its values are not automatically merged into the current environment. Unmerged imports are still accessible via the [`imports` built-in property](/docs/esc/concepts/builtin-properties/#imports). |
 
 ## Implicit imports
 
@@ -144,6 +144,8 @@ values:
           duration: 1h
           roleArn: arn:aws:iam::123456789012:role/MyRole
           sessionName: pulumi-environments-session
+    dbPassword:
+      fn::secret: correct-horse-battery-staple
 ```
 
 ```yaml
@@ -153,10 +155,21 @@ values:
 
   environmentVariables:
     AWS_REGION: ${environments.aws.dev.aws.region}
+    DB_PASSWORD: ${environments.aws.dev.aws.dbPassword}
     GREETING: ${greeting}
 ```
 
-In this example, the `AWS_REGION` value is implicitly imported from the `aws/dev` environment, but only the `region` value is imported, rather than the entire `aws/dev` environment.
+In this example, the `AWS_REGION` and `DB_PASSWORD` values are implicitly imported from the `aws/dev` environment, but only those two values are imported, rather than the entire `aws/dev` environment.
+
+Because `dbPassword` is marked with `fn::secret` in `aws/dev`, `DB_PASSWORD` stays secret in `myapp/dev` without being wrapped in `fn::secret` again. `pulumi env run` masks it in the command's output:
+
+```bash
+$ pulumi env run myorg/myapp/dev -- bash -c 'echo $AWS_REGION'
+us-west-2
+
+$ pulumi env run myorg/myapp/dev -- bash -c 'echo $DB_PASSWORD'
+[secret]
+```
 
 The resolved value of the above environment at `open` time would be:
 
@@ -165,6 +178,7 @@ The resolved value of the above environment at `open` time would be:
   "greeting": "Hello from the myapp/dev environment!",
   "environmentVariables": {
     "AWS_REGION": "us-west-2",
+    "DB_PASSWORD": "correct-horse-battery-staple",
     "GREETING": "Hello from the myapp/dev environment!"
   }
 }

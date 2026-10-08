@@ -26,13 +26,13 @@ your code and then re-run `pulumi up` which will update your infrastructure.
 ### Add new resources
 
 Pulumi knows how to evolve your current infrastructure to your project's new desired state, both for
-the first deployment as well as subsequent updates.
+the first deployment and for every update after it.
 
 To turn your bucket into a static website, you will add two new Google Cloud Storage resources:
 
 1. [`BucketObject`](/registry/packages/gcp/api-docs/storage/bucketobject/):
     uploads your website content to the bucket
-2. [`BucketIAMBinding`](/registry/packages/gcp/api-docs/storage/bucketiambinding/):
+1. [`BucketIAMBinding`](/registry/packages/gcp/api-docs/storage/bucketiambinding/):
     makes the bucket publicly accessible
 
 ### Add an index.html
@@ -85,7 +85,7 @@ EOT
 
 Now that you have an `index.html` file with some content, open {{< langfile >}} and modify it to add that file to your storage bucket.
 
-For this, you'll use Pulumi's `FileAsset` class to assign the content of the file to a new `BucketObject`.
+For this, you'll use a Pulumi [asset](/docs/iac/concepts/assets-archives/#assets) to assign the content of the file to a new bucket object.
 
 {{% choosable language typescript %}}
 
@@ -205,9 +205,27 @@ index-html:
 
 {{% /choosable %}}
 
-Notice how you provide the name of the bucket you created earlier as an input for the `BucketObject`. This tells Pulumi which bucket the object should live in.
+{{% choosable language hcl %}}
 
-Below the `BucketObject`, add an IAM binding allowing the contents of the bucket to be viewed anonymously over the Internet:
+In {{< langfile >}}, create the bucket object right below the bucket itself.
+
+```hcl
+# Upload the file
+resource "gcp_storage_bucket_object" "index-html" {
+  bucket = gcp_storage_bucket.my-bucket.name
+  name   = "index.html"
+  source = fileasset("index.html")
+}
+```
+
+A dotted label like `index.html` can't be referenced in expressions (and Terraform's grammar doesn't allow
+one), so the resource is labeled `index-html` and the `name` attribute names the object in the bucket.
+
+{{% /choosable %}}
+
+Notice how you provide the name of the bucket you created earlier as an input for the bucket object. This tells Pulumi which bucket the object should live in.
+
+Below the bucket object, add an IAM binding allowing the contents of the bucket to be viewed anonymously over the internet:
 
 {{% choosable language typescript %}}
 
@@ -293,6 +311,21 @@ my-bucket-binding:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+resource "gcp_storage_bucket_i_a_m_binding" "my-bucket-binding" {
+  bucket  = gcp_storage_bucket.my-bucket.name
+  role    = "roles/storage.objectViewer"
+  members = ["allUsers"]
+}
+```
+
+Pulumi HCL derives a resource's type name by snake-casing its Pulumi type, so `gcp:storage:BucketIAMBinding`
+becomes `gcp_storage_bucket_i_a_m_binding`.
+
+{{% /choosable %}}
+
 {{% notes type="info" %}}
 
 If you encounter permission errors when uploading files, the IAM binding may still be propagating. The component
@@ -321,7 +354,7 @@ const bucket = new gcp.storage.Bucket("my-bucket", {
 Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```typescript
-// Export the DNS name of the bucket
+// Export the bucket's gs:// URL
 export const bucketName = bucket.url;
 
 // Export the bucket's public URL
@@ -348,7 +381,7 @@ bucket = storage.Bucket(
 Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```python
-# Export the DNS name of the bucket
+# Export the bucket's gs:// URL
 pulumi.export("bucket_name", bucket.url)
 
 # Export the bucket's public URL
@@ -382,7 +415,7 @@ if err != nil {
 Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```go
-// Export the DNS name of the bucket
+// Export the bucket's gs:// URL
 ctx.Export("bucketName", bucket.Url)
 
 // Export the bucket's public URL
@@ -436,7 +469,7 @@ var bucket = new Bucket("my-bucket", BucketArgs.builder()
 Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```java
-// Export the DNS name of the bucket
+// Export the bucket's gs:// URL
 ctx.export("bucketName", bucket.url());
 
 // Export the bucket's public URL
@@ -464,7 +497,37 @@ outputs:
 
 {{% /choosable %}}
 
-We prepend `http://` using a helper because the bucket's URL is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
+{{% choosable language hcl %}}
+
+```hcl
+resource "gcp_storage_bucket" "my-bucket" {
+  location                    = "US"
+  uniform_bucket_level_access = true
+  website = {
+    main_page_suffix = "index.html"
+  }
+}
+```
+
+### Export the website URL
+
+Now to export the website's public URL, add the `url` output as shown in this example:
+
+```hcl
+# Export the bucket's gs:// URL
+output "bucket_name" {
+  value = gcp_storage_bucket.my-bucket.url
+}
+
+# Export the bucket's public URL
+output "url" {
+  value = "http://storage.googleapis.com/${gcp_storage_bucket.my-bucket.name}/${gcp_storage_bucket_object.index-html.name}"
+}
+```
+
+{{% /choosable %}}
+
+You prepend `http://` because the bucket's URL is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
 that Google Cloud assigns at deployment time, not a raw string, meaning its value is not known in advance.
 
 ### Deploy the changes
@@ -541,7 +604,7 @@ In just a few seconds, your new website will be ready. Curl the endpoint to see 
 $ curl $(pulumi stack output url)
 ```
 
-This will reveal your new website!
+This reveals your new website:
 
 ```
 <html>
@@ -551,7 +614,7 @@ This will reveal your new website!
 </html>
 ```
 
-Feel free to experiment, such as changing the contents of `index.html` and redeploying.
+Feel free to experiment: change the contents of `index.html` and redeploy.
 
 Next, wrap the website into an infrastructure abstraction.
 

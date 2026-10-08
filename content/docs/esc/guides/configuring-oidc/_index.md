@@ -60,16 +60,16 @@ The following claims are commonly used when configuring trust relationships:
 
 ## Default token claim
 
-Pulumi ESC's default issued OIDC tokens include the following claims:
+Pulumi ESC's default issued OIDC tokens include the following claims. Most of them carry the same values ESC exposes through the [`context` built-in property](/docs/esc/concepts/builtin-properties/#context):
 
 | Claim         | Description |
 |:--------------|:------------|
-| aud           | _(Audience)_ The name of the organization associated with the environment prefixed with the provider's platform name (`aws:{org}`, `azure:{org}`, `gcp:{org}`). |
+| aud           | _(Audience)_ The name of the organization associated with the environment prefixed with the provider's platform name (`aws:{org}`, `azure:{org}`, `gcp:{org}`).<br><br>Built from [`context.pulumi.organization.login`](/docs/esc/concepts/builtin-properties/#context-pulumi-organization-login). |
 | iss           | _(Issuer)_ The issuer of the OIDC token: `https://api.pulumi.com/oidc`. |
-| current_env   | _(Current Environment)_ The name of the environment where the [ESC OIDC provider configuration](/docs/esc/integrations/) is defined. |
-| root_env      | _(Root Environment)_ The name of the environment that is opened first. This Root Environment in turn opens other imported environments. |
-| trigger_user  | _(Trigger User)_ The user whose credentials are used to open an environment. |
-| sub           | _(Subject)_ The subject of the OIDC token. Often used for configuring trust relationships, it contains information about the associated service. Each component is also available as a custom claim. |
+| current_env   | _(Current Environment)_ The name of the environment where the [ESC OIDC provider configuration](/docs/esc/integrations/) is defined.<br><br>Built from [`context.currentEnvironment.name`](/docs/esc/concepts/builtin-properties/#context-currentEnvironment-name). |
+| root_env      | _(Root Environment)_ The name of the environment that is opened first. This Root Environment in turn opens other imported environments.<br><br>Built from [`context.rootEnvironment.name`](/docs/esc/concepts/builtin-properties/#context-rootEnvironment-name). |
+| trigger_user  | _(Trigger User)_ The user whose credentials are used to open an environment.<br><br>Built from [`context.pulumi.user.login`](/docs/esc/concepts/builtin-properties/#context-pulumi-user-login). |
+| sub           | _(Subject)_ The subject of the OIDC token. Often used for configuring trust relationships, it contains information about the associated service. Each component is also available as a custom claim.<br><br>Composed from the [subject attributes](#custom-token-claim) below. |
 
 ## Custom token claim
 
@@ -81,14 +81,9 @@ By default (when `subjectAttributes` is not set), the subject claim has the form
 
 When you set `subjectAttributes`, the subject instead begins with the fixed prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}`, and each configured attribute is appended to it as a `:<attribute>:<value>` pair, in the order listed.
 
-The following attributes are available. This is a deliberately restricted subset of the `context` built-in property — see [Built-in properties](/docs/esc/concepts/interpolations-and-references/#context) for the full set of values you can interpolate anywhere in an environment.
+The following attributes are available. This is a deliberately restricted subset of the `context` built-in property — see [Built-in properties](/docs/esc/concepts/builtin-properties/#context) for what each one resolves to, and for the full set of values you can interpolate anywhere in an environment.
 
-* `rootEnvironment.name`: the name of the environment that is opened first. This root environment in turn opens other imported environments
-* `currentEnvironment.name`: the full name (including the project) of the environment where the ESC login provider and `subjectAttributes` are defined
-* `pulumi.user.login`: the login identifier of the user opening the environment
-* `pulumi.organization.login`: the login identifier of the organization
-* `pulumi.token.type`: the type of the access token used to open the environment, such as `personal`, `team`, or `organization`
-* `pulumi.token.team`: the name of the team a team-scoped token belongs to, which lets a trust policy scope a role to one team
+{{< esc-oidc-subject-attributes >}}
 
 {{< notes type="info" >}}
 

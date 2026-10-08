@@ -34,6 +34,6 @@ When a resource option is set on a component, several options propagate from the
 
 {{< resource-options-inheritance-table >}}
 
-Options marked **N/A** can't be set on a component to begin with: `additionalSecretOutputs`, `deleteBeforeReplace`, and `import` are custom-resource-only (and a compile-time error on components in TypeScript, C#, and Java); `envVarMappings` only applies to explicitly configured provider resources; and `parent` defines the parent/child relationship itself rather than being a value that's inherited.
+Options marked **N/A** can't be set on a component to begin with: `additionalSecretOutputs`, `deleteBeforeReplace`, and `import` are custom-resource-only (and a compile-time error on components in TypeScript, .NET, and Java); `envVarMappings` only applies to explicitly configured provider resources; and `parent` defines the parent/child relationship itself rather than being a value that's inherited.
 
 For options that aren't inherited, set them on each child resource that needs the behavior, or use `transforms` on the component to inject the option into matching child registrations as they're created.

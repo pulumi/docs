@@ -2,6 +2,7 @@
 title: Level up your Azure Platform as a Service Applications
 h1: "Level up your Azure Platform as a Service applications with Pulumi"
 date: "2019-05-06"
+updated: 2026-08-23
 meta_desc: "This post walks through the process of developing Pulumi programs to leverage Azure Platform services."
 authors: ["mikhail-shilkov"]
 tags: [azure]
@@ -54,7 +55,7 @@ the rescue.
 ## A Sample Application
 
 For this walkthrough, I took an existing application from Azure Samples
-GitHub: [.NET Core MVC sample for Azure App Service](https://github.com/azure-samples/dotnetcore-sqldb-tutorial).
+GitHub: [.NET Core MVC sample for Azure App Service](https://web.archive.org/web/20180604133239/https://github.com/Azure-Samples/dotnetcore-sqldb-tutorial).
 Predictably enough, it's a Todo List application, and this time it is a
 web app built with [ASP.NET](https://ASP.NET) Core, Entity Framework Core
 and a SQL database.
@@ -89,7 +90,7 @@ The following snippet shows the essential elements of the solution:
     azure-pipelines.yml      # Azure DevOps pipeline definition
 
 As a first step, I cloned the [Todo List
-app](https://github.com/azure-samples/dotnetcore-sqldb-tutorial) into
+app](https://web.archive.org/web/20180604133239/https://github.com/Azure-Samples/dotnetcore-sqldb-tutorial) into
 the `src` folder. There's nothing specific to Pulumi here: it's just an
 [ASP.NET](https://ASP.NET) Core app. It could be your application
 instead.
@@ -100,7 +101,7 @@ definition, and deployment pipeline in [Pulumi Examples repository](https://git
 ## Bootstrapping a Pulumi Program
 
 The Pulumi development experience is powered by the
-[Pulumi CLI](/docs/cli/). After
+[Pulumi CLI](/docs/iac/cli/). After
 [installing the CLI](/docs/install/), I jump into an empty
 `infra` folder and run `pulumi new azure-typescript` accepting all the
 default answers. The CLI bootstraps a skeleton of a TypeScript NodeJS
@@ -134,12 +135,12 @@ appropriate types: `ResourceGroup` and `Account` in this example.
 
 If an application is developed to run and evolve for months and years,
 it's smart to invest in practices like Continuous Integration and
-Deployment (CI/CD) and Infrastructure as Code (IaC). It's quite likely
+Deployment (CI/CD) and infrastructure as code (IaC). It's quite likely
 that such an application will run in multiple environments: production,
 staging, development, and so on.
 
 Pulumi comes with a handy concept of
-[stacks](/docs/concepts/stack/)--- isolated,
+[stacks](/docs/iac/concepts/stacks/)--- isolated,
 independently configurable instances of a Pulumi program. A separate
 stack can be designated for each deployment environment.
 
@@ -212,7 +213,7 @@ tiers based on the target environment identified by the stack name.
 App Service is a mature Azure service with a long history, so it has
 numerous options for deployment methods. Arguably, the newest
 [Run from Package](https://github.com/Azure/app-service-announcements/issues/110)
-is the most friendly way to practice Infrastructure as Code automation.
+is the most friendly way to practice infrastructure as code automation.
 
 Essentially, I prepare a zip file with the published .NET Core
 assemblies and upload it to Azure Blob Storage:
@@ -263,7 +264,7 @@ I'm using Azure SQL Database service.
 Setting up a SQL Server requires a couple of parameter values that might
 change between execution environments, for instance, a username and a
 password for the connection string. Pulumi provides
-[a way to configure](/docs/concepts/config/) the program's
+[a way to configure](/docs/iac/concepts/config/) the program's
 parameters per stack.
 
 The configuration itself will happen in my CI/CD pipeline. For now, I

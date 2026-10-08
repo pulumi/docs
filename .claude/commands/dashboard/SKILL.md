@@ -1,12 +1,12 @@
 ---
-description: Display repository status with PRs, issues, CI/CD health, and suggested tasks
+description: Display repository status with issues, CI/CD health, and suggested tasks (PR triage lives in /pr-review)
 ---
 
 # Repository Dashboard
 
 **Use this when:** You want a quick overview of repository status, priority work items, and health metrics.
 
-Displays priority PRs/issues, suggested next tasks, CI/CD health, and deployment status with intelligent prioritization based on user context.
+Displays assigned issues, suggested next tasks, CI/CD health, and deployment status. Open PRs are adjudicated on the `/pr-review` board; the dashboard shows only their count.
 
 ---
 
@@ -47,21 +47,7 @@ Parse the JSON output and present it according to the mode requested. The JSON s
     "uncommitted_changes": number,
     "rate_remaining": number
   },
-  "prs": [
-    {
-      "number": number,
-      "title": "string",
-      "author": {"login": "string"},
-      "isDraft": boolean,
-      "createdAt": "timestamp",
-      "labels": [{"name": "string"}],
-      "priority": number,        // Calculated priority score
-      "age_days": number,        // Days since creation
-      "type": "security|lambda-edge|normal",
-      "is_assigned": boolean,    // Assigned to current user
-      "is_mentioned": boolean    // User mentioned in PR
-    }
-  ],
+  "prs": [],                    // always empty — PR triage moved to /pr-review
   "issues": [
     {
       "number": number,
@@ -116,55 +102,32 @@ If `rate_remaining` < 50, show warning: `⚠️  GitHub API rate limit low ({cou
 
 #### Priority Items Section
 
-**PRs:**
-
-- Sort by `priority` (descending), then by `age_days` (descending)
-- Show emojis based on type:
-  - 🔒 = `type: "security"`
-  - ⚠️  = `type: "lambda-edge"`
-  - 📝 = normal (or draft if `isDraft: true`)
-  - 🤖 = bot author (contains `[bot]` in username)
-- Format: `{emoji} #{number}  {title} ({type if special}, {age}d)`
-- Truncate titles to 60 characters
-
-**Item limits by mode:**
-
-- **compact**: Top 5 PRs
-- **detailed**: Top 10 PRs
-- **full**: Top 20 PRs (or all if less)
+**PRs:** not listed here. Open PRs are adjudicated on the `/pr-review` board (stamp / judge / route / blocked, with collision clusters); the dashboard shows only the open-PR count from `stats.total_prs`, as one line: `📋 {total_prs} open PRs → /pr-review`.
 
 **Issues:**
 
 - Show assigned issues after PRs
 - Format: `🐛 #{number}  {title} (issue, {age}d)`
-- Same limits as PRs (5/10/20)
+- Limits: compact 5, detailed 10, full 20
 
 #### Suggested Tasks Section
 
 Generate actionable tasks based on data. Priority order:
 
-1. **Security patches** (`type: "security"`):
-   - `🔒 Review and merge security patch PR #{number} → /pr-review {number}`
+1. **Open PRs** (if `stats.total_prs > 0`):
+   - `📋 Adjudicate {total_prs} open PRs → /pr-review`
 
 2. **Uncommitted changes** (if `uncommitted_changes > 0`):
    - `📝 Review and commit {count} uncommitted changes → git status`
 
-3. **Assigned PRs** (`is_assigned: true`):
-   - `🔍 Review assigned PR #{number}: {short_title} → /pr-review {number}`
-   - Limit to top 3 by priority
-
-4. **Lambda@Edge-risk PRs** (`type: "lambda-edge"`):
-   - `⚠️  Review Lambda@Edge dependency PR #{number} (bundle-size check) → /pr-review {number}`
-   - Limit to top 2
-
-5. **Assigned issues**:
+3. **Assigned issues**:
    - `🐛 Work on issue #{number}: {short_title} → gh issue view {number}`
    - Limit to top 2
 
-6. **Workflow failures** (if `status: "CRITICAL"` and recent failures):
+4. **Workflow failures** (if `status: "CRITICAL"` and recent failures):
    - `❌ Investigate workflow failure: {name} → gh run list --workflow "{name}"`
 
-7. **Current branch work** (if not on master/main):
+5. **Current branch work** (if not on master/main):
    - `🔧 Continue work on branch {current_branch}`
 
 **Task limits by mode:**
@@ -214,42 +177,26 @@ Adjust tip based on current mode.
 
 ---
 
-## Priority Scoring Algorithm
-
-PRs are scored with these weights (already calculated in JSON):
-
-- **+100**: Assigned to me
-- **+80**: Mentions me
-- **+70**: Security patch (`deps-security-patch` label)
-- **+60**: Lambda@Edge risk (`deps-lambda-edge-risk` label)
-- **+40**: Ready for review (not draft)
-- **+30**: Team member (internal users only)
-- **+50**: Age > 14 days
-- **+25**: Age > 7 days
-- **-20**: Draft
-
----
-
 ## Display Modes
 
 ### Compact (Default)
 
 - **Purpose**: Quick status check
-- **Items**: Top 5 PRs/issues, 3 tasks
+- **Items**: Top 5 issues, 3 tasks
 - **Details**: Essential info only
 - **Target**: Fits on one screen
 
 ### Detailed
 
 - **Purpose**: Standard review workflow
-- **Items**: Top 10 PRs/issues, 5 tasks
+- **Items**: Top 10 issues, 5 tasks
 - **Details**: More context per item
 - **Target**: 1-2 screens
 
 ### Full
 
 - **Purpose**: Deep investigation
-- **Items**: Top 20+ PRs/issues, 10 tasks
+- **Items**: Top 20+ issues, 10 tasks
 - **Details**: Complete visibility
 - **Target**: Comprehensive view
 

@@ -34,6 +34,7 @@ sections:
       - what-is-configuration-management
       - what-is-cloud-security
       - what-is-agentic-infrastructure
+      - what-is-ai-infrastructure
       - what-is-immutable-infrastructure
       - what-is-infrastructure-drift
       - what-is-serverless
@@ -72,6 +73,7 @@ sections:
 
   - title: Comparisons
     slugs:
+      - opentofu-vs-terraform
       - database-comparison-cosmos-db-vs-dynamodb
       - cosmos-db-vs-mongodb-know-the-differences
       - amazon-dynamodb-vs-google-cloud-bigtable
@@ -86,18 +88,4 @@ troubleshooting:
   short: Troubleshooting
   slugs:
     - run-aws-sts-get-caller-identity-with-dynamic-credentials
-    - run-aws-s3-ls-with-dynamic-credentials
-    - run-aws-s3-cp-with-dynamic-credentials
-    - run-aws-s3-sync-with-dynamic-credentials
-    - run-aws-ec2-describe-instances-with-dynamic-credentials
-    - run-aws-ec2-start-instances-with-dynamic-credentials
-    - run-aws-ec2-stop-instances-with-dynamic-credentials
-    - run-aws-dynamodb-list-tables-with-dynamic-credentials
-    - run-aws-lambda-list-functions-with-dynamic-credentials
-    - run-aws-iam-list-users-with-dynamic-credentials
-    - run-aws-cloudwatch-get-metric-data-with-dynamic-credentials
-    - resolve-unable-to-locate-credentials
-    - resolve-list-buckets-expired-token
-    - resolve-list-buckets-invalid-access-key-id
-    - resolve-list-buckets-invalid-client-token-id
-    - resolve-list-buckets-signature-does-not-match
+    - aws-cli-dynamic-credentials-with-pulumi-esc

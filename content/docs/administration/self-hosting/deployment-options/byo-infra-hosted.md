@@ -13,6 +13,7 @@ aliases:
   - /docs/guides/self-hosted/byo-infra-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/byo-infra-hosted/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/byo-infra-hosted/
+pulumi_cloud_feature: self-hosting
 ---
 
 The [BYO-Infrastructure Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/byo-infra) installer is used to deploy the self-hosted Pulumi Cloud on your own K8s, MySQL and S3-compatible infrastructure.
@@ -28,12 +29,12 @@ Prerequisites and configuration for the your infrastructure can be found in the 
 
 ### Pulumi deploying Pulumi
 
-This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses the Pulumi CLI with a self-managed backend (e.g. S3 storage bucket) to deploy all services listed above to stand up the self-hosted Pulumi Cloud. The installation package includes Pulumi project code so that you can deploy the Service by running `pulumi up`.
+This installer uses Pulumi to deploy Pulumi Cloud. In this case, one uses the Pulumi CLI with a DIY backend (e.g. S3 storage bucket) to deploy all services listed above to stand up the self-hosted Pulumi Cloud. The installation package includes Pulumi project code so that you can deploy the Service by running `pulumi up`.
 
 To this end, you need to set up the following:
 
 * [Download and install the Pulumi CLI](/docs/install/) on your workstation
-* [Choose a self-managed storage backend](/docs/concepts/state/)
+* [Choose a self-managed storage backend](/docs/iac/concepts/state-and-backends/)
 
 ### Deployment Steps
 
@@ -43,9 +44,9 @@ See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/ma
 
 ### Pulumi Cloud Updates
 
-When deploying the Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/byo-infra/README.md) file to set the `imageTag` configuration property for the installer to use.
+When deploying Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/byo-infra/README.md) file to set the `imageTag` configuration property for the installer to use.
 
-When ready to update the Pulumi Service containers to use a different version, do the following:
+When ready to update the Pulumi Cloud containers to use a different version, do the following:
 
 * `pulumi login` to the self-managed (not self-hosted) backend as chosen above when installing the self-hosted service.
 * `pulumi config set imageTag {image tag}` to set the version you want to use.

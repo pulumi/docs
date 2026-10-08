@@ -64,7 +64,7 @@ This import is only resolved at `rotate` time, meaning that the value is not ava
 
 ### Rotation
 
-Once a rotation function is configured within the environment definition, you can manually rotate your secrets by running the `pulumi env rotate` command, or by clicking the `Rotate secrets` button in the Pulumi Cloud UI.
+Once a rotation function is configured within the environment definition, you can manually rotate your secrets by running the `pulumi env rotate` command, or by clicking the `Rotate secrets` button in the Pulumi Cloud console.
 
 #### Via the CLI
 
@@ -74,17 +74,19 @@ Environment 'rotators/pulumi-ci' rotated.
 New revision '19' was created.
 ```
 
-#### Via the Pulumi Cloud UI
+#### Via the Pulumi Cloud console
 
 In the Pulumi Cloud console, open the environment and click the **Rotate secrets** button on its **Rotated secrets** tab.
 
 ### Schedule
 
-You can create a schedule for automatic rotation of your secrets in the Pulumi Cloud UI by navigating to the `Rotated secrets` tab of your environment, and clicking the `Create rotation schedule` button.
+You can create a schedule for automatic rotation of your secrets in the Pulumi Cloud console by navigating to the `Rotated secrets` tab of your environment, and clicking the `Create rotation schedule` button.
 
 The rotation schedule can be defined as a [cron expression](https://crontab.cronhub.io/).
 
 ### Rotation connectors
+
+{{< pulumi-cloud "esc-db-secrets-rotation-private" />}}
 
 Many organizations keep their databases in private networks, making it impossible for external credential managers (like ESC) to rotate the credentials.
 

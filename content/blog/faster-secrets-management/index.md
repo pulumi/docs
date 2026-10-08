@@ -18,13 +18,13 @@ social:
     linkedin: "Pulumi Infrastructure as Code now processes stack secrets more efficiently, reducing deployment times while maintaining robust security. Our latest update optimizes encryption and decryption operations through intelligent batching and smart change detection, eliminating unnecessary processing during updates. For stacks with many secrets, these improvements can save up to 10 seconds per operation, which adds up to significant time savings across your deployment pipeline. Update to version 3.155.0 today to experience these performance improvements without any configuration changes required."
 ---
 
-Pulumi now handles [secrets](https://www.pulumi.com/docs/concepts/secrets/) more efficiently through optimized encryption and decryption processes, reducing deployment times while maintaining security standards. Users of [Pulumi Cloud](https://app.pulumi.com/signin) for state management will notice the most improvement due to new batch API capabilities.
+Pulumi now handles [secrets](https://www.pulumi.com/docs/iac/concepts/secrets/) more efficiently through optimized encryption and decryption processes, reducing deployment times while maintaining security standards. Users of [Pulumi Cloud](https://app.pulumi.com/signin) for state management will notice the most improvement due to new batch API capabilities.
 
 <!--more-->
 
 ## Secrets Management in Pulumi
 
-Pulumi Infrastructure as Code (IaC)'s built-in secrets management encrypts individual _secrets_ within the stack for fine-grained protection. Pulumi Cloud transmits and stores stack state securely, ensuring that sensitive information—such as database passwords, API keys, and access tokens—remains protected even if someone gains access to your stack file. For organizations with more complex secrets management needs, Pulumi also offers [Pulumi ESC](/product/esc/) (Environments, Secrets, and Configuration), which provides centralized secrets management with hierarchical environments and dynamic credential generation.
+Pulumi Infrastructure as Code (IaC)'s built-in secrets management encrypts individual _secrets_ within the stack for fine-grained protection. Pulumi Cloud transmits and stores stack state securely, ensuring that sensitive information—such as database passwords, API keys, and access tokens—remains protected even if someone gains access to your stack file. For organizations with more complex secrets management needs, Pulumi also offers [Pulumi ESC](/product/secrets-management/) (Environments, Secrets, and Configuration), which provides centralized secrets management with hierarchical environments and dynamic credential generation.
 
 Beyond simple encryption, Pulumi tracks the transitive use of secrets to prevent accidental exposure of sensitive values. This tracking works across your entire infrastructure definition, ensuring secrets remain protected:
 
@@ -86,7 +86,7 @@ By reducing wait times during encryption and decryption operations, we're helpin
 
 ## Beyond Stack Secrets: Pulumi ESC
 
-While these performance improvements enhance Pulumi's built-in secrets management, some organizations require more advanced capabilities. If you need secrets to be centrally managed, composable, and reusable across teams and applications, [Pulumi ESC](/product/esc/) (Environments, Secrets, and Configuration) may be a better fit. Pulumi ESC keeps sensitive information out of source control, supports hierarchical environments, and enables dynamic credential generation. It's designed for organizations that need to share secrets between multiple teams, applications, and infrastructure deployments while maintaining strict access controls and auditability.
+While these performance improvements enhance Pulumi's built-in secrets management, some organizations require more advanced capabilities. If you need secrets to be centrally managed, composable, and reusable across teams and applications, [Pulumi ESC](/product/secrets-management/) (Environments, Secrets, and Configuration) may be a better fit. Pulumi ESC keeps sensitive information out of source control, supports hierarchical environments, and enables dynamic credential generation. It's designed for organizations that need to share secrets between multiple teams, applications, and infrastructure deployments while maintaining strict access controls and auditability.
 
 ### Get Started Today
 

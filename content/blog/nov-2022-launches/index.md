@@ -38,7 +38,7 @@ We launched the Pulumi Automation API [two years ago](https://www.pulumi.com/blo
 
 Today, we are taking the next step in this journey with the introduction of Pulumi Deployments to the Pulumi Service.  With Pulumi Deployments, you can run a Pulumi infrastructure as code action (a preview, update, destroy or refresh) inside Pulumi’s managed service.  Pulumi provides scalability, observability and security for deployments.
 
-Pulumi Deployments are exposed as a new fundamental capability of the service via the [Pulumi Service REST API](https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api/).  They are also now supported in Automation API as a new kind of `Remote` workspace that can be used in building your own custom infrastructure automation software.
+Pulumi Deployments are exposed as a new fundamental capability of the service via the [Pulumi Service REST API](/docs/reference/cloud-rest-api/).  They are also now supported in Automation API as a new kind of `Remote` workspace that can be used in building your own custom infrastructure automation software.
 
 ![Pulumi Deployments REST API and Automation API](deployment-api.png)
 
@@ -88,7 +88,7 @@ outputs:
   url: ${api.url}
 ```
 
-Pulumi YAML is the only declarative Infrastructure as Code language that supports `convert` - the ability to convert a YAML program into a program in any other Pulumi language (TypeScript, Python, Go, .NET and Java). If the complexity of a project ever grows beyond what YAML can comfortably express, you can seamlessly adopt another richer language to continue to scale.
+Pulumi YAML is the only declarative infrastructure as code language that supports `convert` - the ability to convert a YAML program into a program in any other Pulumi language (TypeScript, Python, Go, .NET and Java). If the complexity of a project ever grows beyond what YAML can comfortably express, you can seamlessly adopt another richer language to continue to scale.
 
 ```console
 pulumi convert  --language python
@@ -100,7 +100,7 @@ With the Pulumi YAML GA, we’ve made dozens of improvements to Pulumi YAML.  Ri
 
 ## Architecture Templates
 
-The new Pulumi Architecture Templates offer the easiest way to get started with a complete working piece of infrastructure for one of the most common Infrastructure as Code use cases.  Each architecture template is short (~100 lines of code), builds a deployable infrastructure project out of the box, is easy to customize, uses a mix of raw cloud resources and Pulumi components to operate at the right level of abstraction for the use case, and comes with useful documentation.
+The new Pulumi Architecture Templates offer the easiest way to get started with a complete working piece of infrastructure for one of the most common infrastructure as code use cases.  Each architecture template is short (~100 lines of code), builds a deployable infrastructure project out of the box, is easy to customize, uses a mix of raw cloud resources and Pulumi components to operate at the right level of abstraction for the use case, and comes with useful documentation.
 
 The initial set of architecture templates support common infrastructure as code use cases across AWS, Azure, Google Cloud and Kubernetes, and in all supported Pulumi languages.
 
@@ -154,7 +154,7 @@ service = awsx.ecs.FargateService(
 export("url", Output.concat("http://", loadbalancer.load_balancer.dns_name))
 ```
 
-Pulumi Architecture Templates build on Pulumi’s support for creating your own templates. Pulumi programs can be templated by users to create their own starting points for cloud infrastructure projects using `pulumi new`.  You can [build your own templates and Deploy with Pulumi buttons](https://www.pulumi.com/docs/pulumi-cloud/pulumi-button/) to create similar architecture templates within your own team and organization.
+Pulumi Architecture Templates build on Pulumi’s support for creating your own templates. Pulumi programs can be templated by users to create their own starting points for cloud infrastructure projects using `pulumi new`.  You can [build your own templates and Deploy with Pulumi buttons](/docs/idp/integrations/pulumi-button/) to create similar architecture templates within your own team and organization.
 
 👉 Read more in the [Pulumi Architecture Templates blog post](https://www.pulumi.com/blog/intro-architecture-templates/).
 

@@ -321,15 +321,15 @@ Since this article came out, I've had a chance to talk to several Cosmos DB user
 
 ## Managing Database Infrastructure with Pulumi
 
-Whether you choose Cosmos DB, PostgreSQL, or Azure Table Storage Pulumi simplifies the process of provisioning and managing database infrastructure on Azure. With infrastructure as code in your favorite programming languages, you can define, deploy, and maintain your entire database infrastructure using familiar development practices. Pulumi's [Azure Native provider](/docs/iac/clouds/aws/) helps you implement the right database solution for your specific needs.
+Whether you choose Cosmos DB, PostgreSQL, or Azure Table Storage Pulumi simplifies the process of provisioning and managing database infrastructure on Azure. With infrastructure as code in your favorite programming languages, you can define, deploy, and maintain your entire database infrastructure using familiar development practices. Pulumi's [Azure Native provider](/registry/packages/azure-native/) helps you implement the right database solution for your specific needs. Getting started only takes a few minutes: [install the Pulumi CLI](/docs/install/) and point it at your existing Azure subscription.
 
 With Pulumi, you get:
 
-- [Rich Azure database provisioning](/docs/iac/clouds/azure/) capabilities for Cosmos DB, PostgreSQL, and Azure SQL
+- [Rich Azure database provisioning](/docs/integrations/clouds/azure/) capabilities for Cosmos DB, PostgreSQL, and Azure SQL
 - [Automated configuration management](/docs/iac/concepts/config/) to handle connection strings and secrets securely
 - [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your database configuration before deployment
-- [Stack references](/docs/concepts/stack/#stackreferences) for managing multiple database environments
-- [Custom components](/docs/concepts/resources/components/) for creating reusable database infrastructure patterns
+- [Stack references](/docs/iac/concepts/stacks/#stackreferences) for managing multiple database environments
+- [Custom components](/docs/iac/concepts/components/) for creating reusable database infrastructure patterns
 
 Ready to streamline your database infrastructure management?
 
@@ -345,6 +345,6 @@ Many times, that cost is not the variable being optimized for. Data is paramount
 
 For help provisioning Cosmos DB, check out our [Azure Cosmos DB How to guide](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and if you decide to go with Azure Tables instead, our [Azure Native provider](https://www.pulumi.com/registry/packages/azure-native/) is there to help you all the same.
 
-And if you have a Cosmos DB experience to share ( or I got something wrong ): [reach out](/blog/author/adam-gordon-bell/). And, if you haven't already, give Pulumi IaC a try:
+And if you have a Cosmos DB experience to share ( or I got something wrong ): [reach out](/blog/authors/adam-gordon-bell/). And, if you haven't already, give Pulumi IaC a try:
 
 {{< get-started >}}

@@ -9,7 +9,7 @@ canonical_url: "https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pul
 ---
 
 {{% notes %}}
-See [Migrating From Terraform to Pulumi](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/) for updated documentation on migrating from Terraform.
+See [Migrating From Terraform to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for updated documentation on migrating from Terraform.
 {{% /notes %}}
 
 Most cloud infrastructure projects involve working with existing cloud resources &mdash; either building on top of existing resources or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
@@ -30,7 +30,7 @@ We'll review referencing existing resources, and then dive deeper into how you c
 For referencing existing resources, Pulumi offers several tools.
 
 * The `.get` methods available on every resource let you [get all the details for a resource](/registry/packages/aws/api-docs/ec2/vpc#look-up) from the cloud provider based just on its `id`.
-* The `StackReference` resource lets you reference outputs of another stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](/docs/using-pulumi/organizing-projects-stacks/).
+* The `StackReference` resource lets you reference outputs of another stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](/docs/iac/guides/basics/organizing-projects-stacks/).
 * [`terraform.state.RemoteStateReference()`](/blog/using-terraform-remote-state-with-pulumi), [`aws.cloudformation.getStack()`](/registry/packages/aws/api-docs/cloudformation/getstack) and [`azure.core.SubscriptionTemplateDeployment.get()`](/registry/packages/azure/api-docs/core/subscriptiontemplatedeployment#look-up) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively.
 
 Together, these make it easy to reference existing infrastructure regardless of how it was provisioned.
@@ -82,7 +82,7 @@ For our "existing" infrastructure, we'll use a small Azure deployment of a Virtu
 
 #### 2. Create a Pulumi program
 
-Next, we'll create a Pulumi program to describe the same infrastructure that exists in Azure.  We could write this by hand, but since we used Terraform to define the original infrastructure, we also have the option to use [`tf2pulumi`](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/) to automatically convert our `.tf` files to Pulumi.
+Next, we'll create a Pulumi program to describe the same infrastructure that exists in Azure.  We could write this by hand, but since we used Terraform to define the original infrastructure, we also have the option to use [`tf2pulumi`](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) to automatically convert our `.tf` files to Pulumi.
 
 {{% notes type="info" %}}
 As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.

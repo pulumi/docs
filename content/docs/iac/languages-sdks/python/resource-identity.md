@@ -101,7 +101,7 @@ The static `.get()` method on a resource class also takes a physical ID:
 existing_vpc = aws.ec2.Vpc.get("imported-vpc", id="vpc-0abc123def456789")
 ```
 
-For a complete walk-through of the import workflow, see [Importing resources](/docs/iac/adopting-pulumi/import/).
+For a complete walk-through of the import workflow, see [Importing resources](/docs/iac/guides/migration/import/).
 
 ## Common type-mismatch errors
 

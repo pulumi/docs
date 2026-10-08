@@ -35,7 +35,7 @@ social:
 
         Instance-type recommendations by model size (which g-class EC2 instance you actually need)
         Cost-per-token math comparing self-hosted Ollama to OpenAI and Anthropic APIs
-        Copy-paste Pulumi programs in TypeScript, Python, Go, C#, and YAML
+        Copy-paste Pulumi programs in TypeScript, Python, Go, .NET, and YAML
         OpenAI-compatible API access from your existing tooling
 
     Read the full guide: <link>
@@ -171,7 +171,7 @@ The takeaway: **self-hosting wins on data residency, latency, and predictable co
 Before we start, make sure you have the following:
 
 - An [AWS account](https://aws.amazon.com/account/)
-- [Pulumi CLI](/docs/iac/download-install/) installed
+- [Pulumi CLI](/docs/install/) installed
 - [AWS CLI](https://aws.amazon.com/cli/) installed and configured
 - A working understanding of [Ollama](https://ollama.com/)
 

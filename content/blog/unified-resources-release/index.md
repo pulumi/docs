@@ -33,7 +33,7 @@ When you search for resources in Pulumi Cloud, our system now automatically iden
 * Resources imported into Pulumi stacks
 * Resources discovered through Pulumi Insights including resources managed outside of Pulumi IaC
 
-Resources with multiple sources are marked with a distinctive <img src="/docs/insights/assets/spoke.svg" alt="spoke icon" style="display: inline; width: 16px; height: 16px; vertical-align: middle;"> icon in search results. This visual indicator lets you immediately identify which resources have rich, multi-source information available.
+Resources with multiple sources are marked with a distinctive <img src="/docs/discovery-governance/assets/spoke.svg" alt="spoke icon" style="display: inline; width: 16px; height: 16px; vertical-align: middle;"> icon in search results. This visual indicator lets you immediately identify which resources have rich, multi-source information available.
 
 ![Unified Resource search](/blog/unified-resources-release/unified-resource-search.png)
 
@@ -78,9 +78,9 @@ When investigating issues, find all relevant information about a resource in one
 
 Unified resources are available now for all Pulumi Cloud users. Ready to see unified resources in action? Check out these resources:
 
-* [Resource search documentation](/docs/insights/search/) for search tips and filtering options
-* [API reference](/docs/pulumi-cloud/reference/resource-search/) for programmatic access
-* [Pulumi Insights overview](/docs/insights/) for the complete platform capabilities
+* [Resource search documentation](/docs/discovery-governance/discovery/search/) for search tips and filtering options
+* [API reference](/docs/reference/cloud-rest-api/resource-search/) for programmatic access
+* [Pulumi Insights overview](/docs/discovery-governance/) for the complete platform capabilities
 
 We'd love to hear your feedback as you explore unified resources. Share your thoughts in the [Pulumi Community Slack](https://slack.pulumi.com/) or connect with your customer success team.
 

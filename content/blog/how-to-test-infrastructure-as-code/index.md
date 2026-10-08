@@ -2,7 +2,7 @@
 title: "How to Test Infrastructure as Code"
 date: 2026-06-30T14:00:00-07:00
 draft: false
-meta_desc: "Learn how to test infrastructure as code with Pulumi—unit tests, integration tests, and policy checks in Python, TypeScript, Go, C#, and Java."
+meta_desc: "Learn how to test infrastructure as code with Pulumi—unit tests, integration tests, and policy checks in Python, TypeScript, Go, .NET, and Java."
 feature_image: feature.png
 authors:
     - alex-leventer
@@ -1008,7 +1008,7 @@ pulumi policy publish
 
 > As Joe Duffy, Pulumi CEO, [puts it](https://www.pulumi.com/blog/the-agentic-infrastructure-era/): "The smartest agent in the world still needs guardrails, audit trails, and policy enforcement to be trusted with production systems at scale."
 
-Policy checks complement unit tests: unit tests verify your intent ("I wrote tags into this resource"), while policies enforce your standards ("all resources must have these tags, regardless of what any one developer intended"). For complex compliance environments, [publish policies to Pulumi Cloud](/docs/insights/policy/) and assign them via policy groups to enforce them across the stacks or accounts you choose—including organization-wide.
+Policy checks complement unit tests: unit tests verify your intent ("I wrote tags into this resource"), while policies enforce your standards ("all resources must have these tags, regardless of what any one developer intended"). For complex compliance environments, [publish policies to Pulumi Cloud](/docs/discovery-governance/policy/) and assign them via policy groups to enforce them across the stacks or accounts you choose—including organization-wide.
 
 ## How is testing IaC in Pulumi different from Terraform?
 
@@ -1016,7 +1016,7 @@ The fundamental difference is **language cohesion**. With Pulumi, you write infr
 
 | | Pulumi | Terratest | `terraform test` (≥ 1.6) |
 |-|--------|-----------|--------------------------|
-| **Language for tests** | Same language as infra (Python, TypeScript, Go, C#, Java); YAML programs tested via Automation API from any of those languages | Always Go (regardless of infra language) | HCL DSL (`.tftest.hcl`) |
+| **Language for tests** | Same language as infra (Python, TypeScript, Go, .NET, Java); YAML programs tested via Automation API from any of those languages | Always Go (regardless of infra language) | HCL DSL (`.tftest.hcl`) |
 | **Unit tests with mocks** | Yes — `pulumi.runtime.set_mocks()`, no cloud credentials needed | No — no mock layer for cloud providers | Limited — `mock_provider` (v1.7+) is HCL-declarative, no programmatic logic |
 | **Integration testing** | Automation API (any language) or Go framework | Full-featured but Go-only | Yes, via `command = apply` run blocks |
 | **Policy / guardrails** | Pulumi Policies: Python or TypeScript, runs at preview time | External tools (checkov, tfsec, OPA/Rego — separate toolchain) | Sentinel (enterprise) or external |
@@ -1035,7 +1035,7 @@ Write unit tests, integration tests, and policy checks in the language you alrea
 
 ## How to set up IaC testing with Pulumi
 
-Follow these steps to add a complete test suite to a Pulumi project. The examples use Python, but the pattern is identical in TypeScript, Go, C#, or Java.
+Follow these steps to add a complete test suite to a Pulumi project. The examples use Python, but the pattern is identical in TypeScript, Go, .NET, or Java.
 
 <script type="application/ld+json">
 {
@@ -1178,7 +1178,7 @@ Implement `pulumi.runtime.Mocks` (Python) or call `pulumi.runtime.setMocks()` (T
 
 ### What test frameworks work with Pulumi?
 
-Any language-native test framework works. For Python: **pytest** (recommended) or **unittest**. For TypeScript/JavaScript: **Mocha**, **Jest**, or **Vitest**. For Go: the standard `testing` package. For C#: **NUnit** or **xUnit**. For Java: **JUnit**. The `@pulumi/pulumi/automation` SDK and `pulumi.automation` module integrate naturally with all of them. YAML is Pulumi's declarative configuration language; because it has no control flow or executable statements, you cannot write test logic in YAML itself. YAML programs are tested by pointing the Automation API from Python, TypeScript, Go, C#, or Java at the project directory and asserting on the stack outputs.
+Any language-native test framework works. For Python: **pytest** (recommended) or **unittest**. For TypeScript/JavaScript: **Mocha**, **Jest**, or **Vitest**. For Go: the standard `testing` package. For .NET: **NUnit** or **xUnit**. For Java: **JUnit**. The `@pulumi/pulumi/automation` SDK and `pulumi.automation` module integrate naturally with all of them. YAML is Pulumi's declarative configuration language; because it has no control flow or executable statements, you cannot write test logic in YAML itself. YAML programs are tested by pointing the Automation API from Python, TypeScript, Go, .NET, or Java at the project directory and asserting on the stack outputs.
 
 ### How do you test Pulumi in CI/CD?
 
@@ -1205,9 +1205,9 @@ When you're ready to go deeper:
 - **[Testing overview](/docs/iac/guides/testing/)** — Pulumi's full testing documentation
 - **[Unit testing guide](/docs/iac/guides/testing/unit/)** — detailed mock API reference with Go and C# examples
 - **[Automation API integration testing](/docs/iac/guides/testing/integration/automation-api/)** — advanced patterns (multi-stack tests, config injection, parallel test execution)
-- **[Policy as code authoring](/docs/insights/policy/policy-packs/authoring/)** — writing and publishing Pulumi Policies
+- **[Policy as code authoring](/docs/discovery-governance/policy/policy-packs/authoring/)** — writing and publishing Pulumi Policies
 - **[Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)** — a full comparison of the two platforms
 
-If you're migrating from Terraform, the [Pulumi conversion tool](/tf2pulumi/) translates your existing HCL to Python, TypeScript, Go, C#, and more, including your test infrastructure. Your Terratest or `terraform test` suites can be ported to Pulumi's native test runner—using your existing language—as part of the migration.
+If you're migrating from Terraform, the [Pulumi conversion tool](/tf2pulumi/) translates your existing HCL to Python, TypeScript, Go, .NET, and more, including your test infrastructure. Your Terratest or `terraform test` suites can be ported to Pulumi's native test runner—using your existing language—as part of the migration.
 
 **[Get started with Pulumi for free →](https://app.pulumi.com/signup)**

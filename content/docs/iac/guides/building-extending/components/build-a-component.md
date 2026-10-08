@@ -20,7 +20,7 @@ This guide will walk you through the steps of making a [Pulumi Component](/docs/
 **Prerequisites:**
 
 - The [Pulumi CLI](/docs/install/)
-- One of Pulumi’s [supported language runtimes](/docs/languages-sdks/) installed
+- One of Pulumi’s [supported language runtimes](/docs/iac/languages-sdks/) installed
 - Access to a Git hosting environment *(optional)*
 
 {{< /notes >}}
@@ -1023,7 +1023,7 @@ For the full schema, see the [YAML component reference](/docs/iac/languages-sdks
 
 ### Defining a component resource
 
-Once your arguments are defined, write the component itself. The pattern differs by language: TypeScript, Python, C#, and Java use a class with a constructor; Go uses a struct paired with a factory function (Go has no constructors); YAML uses a declarative definition (no class) under the [`components` key](/docs/iac/languages-sdks/yaml/yaml-component-reference/).
+Once your arguments are defined, write the component itself. The pattern differs by language: TypeScript, Python, .NET, and Java use a class with a constructor; Go uses a struct paired with a factory function (Go has no constructors); YAML uses a declarative definition (no class) under the [`components` key](/docs/iac/languages-sdks/yaml/yaml-component-reference/).
 
 In all cases, the component must register a unique type name with the engine. The type name takes the form `<package-name>:index:<component-class-name>` — the `index` portion is required. Type names are namespaced alongside non-component resources such as `aws:lambda:Function`.
 
@@ -1474,6 +1474,10 @@ Not all [resource options](/docs/iac/concepts/resources/options/) apply to compo
 {{< /notes >}}
 
 The `providers` option is the most common reason to pass options to a component instance — it flows the consumer's chosen provider configuration through to every child resource the component creates. See the [`providers` resource option](/docs/iac/concepts/resources/options/providers/) for details and a worked example targeting one component at multiple provider configurations from a single program.
+
+## Evolving a component
+
+When a new component version changes how its children are represented in state, use [state migrations](/docs/iac/guides/building-extending/components/state-migrations/) to translate the prior state before Pulumi calculates changes. For changes to resource names or parents that do not require translating saved properties, use [aliases](/docs/iac/concepts/resources/options/aliases/).
 
 ## Next steps
 

@@ -22,7 +22,7 @@ Pulumi will normally call the provider's delete action for every resource during
 
 For example, if you are deleting a Kubernetes cluster or Kubernetes namespace, you might want to speed up deletion by skipping delete on any Pulumi managed resources created in that Kubernetes cluster or namespace since they will be deleted implicitly.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -70,8 +70,8 @@ var dep = new Deployment("res2", new DeploymentArgs(),
 {{% /choosable %}}
 {{% choosable language java %}}
 
-{{% notes "info" %}}
-This resource option is not yet implemented for Java. You can follow up the [implementation status on Github](https://github.com/pulumi/pulumi-java/issues/944).
+{{% notes type="info" %}}
+This resource option is not yet implemented for Java. You can follow up the [implementation status on GitHub](https://github.com/pulumi/pulumi-java/issues/944).
 {{% /notes %}}
 
 ```java
@@ -98,11 +98,28 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "kubernetes_namespace" "ns" {
+  # ...
+}
+
+resource "kubernetes_deployment" "dep" {
+  # ...
+
+  pulumi {
+    deleted_with = kubernetes_namespace.ns
+  }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 ## Inheritance from parent
 
-`deletedWith` is inherited from a resource's [`parent`](/docs/iac/concepts/options/parent). Setting `deletedWith` on a parent causes every descendant in the resource tree to skip its provider delete as well, which makes it the idiomatic way to apply `deletedWith` for [component resources](/docs/iac/concepts/components/).
+`deletedWith` is inherited from a resource's [`parent`](/docs/iac/concepts/resources/options/parent/). Setting `deletedWith` on a parent causes every descendant in the resource tree to skip its provider delete as well, which makes it the idiomatic way to apply `deletedWith` for [component resources](/docs/iac/concepts/components/).
 
 Because the Pulumi engine never invokes Delete on a component itself, setting `deletedWith` on a component has no direct effect on the component. Its effect comes entirely from propagating the value to each of the component's child custom resources, which then skip their own deletes.

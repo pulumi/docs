@@ -14,6 +14,8 @@ One of the most fulfilling aspects of working at Pulumi is learning how customer
 
 <!--more-->
 
+{{% hcl-note %}}
+
 Pulumi is born from the experiences and needs of teams practicing cloud engineering every day. When we [announced](/blog/pulumi-3-0/) the Pulumi Cloud Engineering Platform in April, CEO & Founder Joe Duffy [talked about](https://www.youtube.com/watch?v=Zko70KVGcgo) bringing cloud engineering to everyone. Over the past year we have seen significant growth in cloud engineering and usage of Pulumi across companies of all industries and sizes, and spanning a diverse spectrum of teams and engineering disciplines. We’re also seeing growing numbers of job postings with “cloud engineer” in the title or which have Pulumi as a requirement or desired skill set.
 
 Recently, we published several case studies about how teams are applying cloud engineering best practices. Cloud engineers apply standard software engineering practices and tools uniformly across infrastructure management, application development, and security to tame the complexity of delivering and managing modern cloud applications. We’ve published on our [website](/cloud-engineering/) and in this [blog](/blog/infrastructure-testing-concepts/) some of the key cloud engineering best practices that we see broadly across the community, and encourage you to read further to see three stories of cloud engineering in action.
@@ -42,7 +44,7 @@ Atlassian’s Bitbucket DevSpeed team is responsible for improving developer pro
 - Reduced the time Bitbucket developers spent maintaining their instances from 8 hours per week to fewer than four.
 - Reduced the size and complexity of its infrastructure code compared to its previous infrastructure tool while increasing the code’s clarity.
 
-[Read the full case study→](/case-studies/atlassian)
+[Read the full case study→](/case-studies/atlassian/)
 <br>
 <br>
 
@@ -66,7 +68,7 @@ SANS Institute is the global leader in cybersecurity training. Using Pulumi, the
 - Enabled developers to use familiar programming languages and tools, which also helped make their code cleaner and - more uniform, resulting in streamlined pipelines.
 - Helped to identify opportunities in other SANS departments where Pulumi can streamline operations.
 
-[Read the full case study→](/case-studies/sans-institute)
+[Read the full case study→](/case-studies/sans-institute/)
 <br>
 <br>
 

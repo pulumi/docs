@@ -31,6 +31,8 @@ For the full CLI workflow — detection, remediation, adoption, and `--expect-no
 
 ## Pulumi Cloud UI
 
+{{< pulumi-cloud "drift-detection" />}}
+
 ### Running via Click to Deploy
 
 You can run a drift or remediate-drift run ad hoc from your stack using the **Click to Deploy** menu, which lists the operations available for the stack. Select **Detect drift** to run a preview-only refresh, or **Remediate drift** to reconcile any detected drift. Both runs appear in the Drift tab when they complete.
@@ -71,6 +73,8 @@ You can route drift notifications to Slack, Microsoft Teams, and more using the 
 
 ### Setting it up via the REST API
 
+{{< pulumi-cloud "drift-detection" />}}
+
 For those who prefer to automate and script their infrastructure tasks, drift detection and remediation can be configured programmatically using HTTP requests. The available endpoints are:
 
 * Create a drift schedule
@@ -94,9 +98,11 @@ curl -H "Accept: application/vnd.pulumi+json" \
 
 ### Setting it up via the Pulumi Service Provider
 
+{{< pulumi-cloud "drift-detection" />}}
+
 The Pulumi Service Provider allows you to set up automated drift detection and remediation in source control.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -259,6 +265,45 @@ outputs:
   driftScheduleId: ${driftDetectionSchedule.scheduleId}
 
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+`Pulumi.yaml`:
+
+```yaml
+name: drift-detection-setup
+runtime: hcl
+description: Setup of automated drift detection with Pulumi
+```
+
+`main.tf`:
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source = "pulumi/pulumiservice"
+    }
+  }
+}
+
+resource "pulumiservice_drift_schedule" "drift_detection_schedule" {
+  organization = "my-org"
+  project      = "my-project"
+  stack        = "production"
+
+  schedule_cron  = "0 0 * * *" # Run drift detection daily at midnight
+  auto_remediate = true        # Automatically remediate any drift detected
+}
+
+output "drift_schedule_id" {
+  value = pulumiservice_drift_schedule.drift_detection_schedule.schedule_id
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
 
 {{% /choosable %}}
 

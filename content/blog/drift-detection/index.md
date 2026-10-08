@@ -16,7 +16,7 @@ category: product
 
 At Pulumi, we recognize the challenges platform teams face in maintaining the stability and compliance of their cloud infrastructures. One of the primary challenges is configuration drift, where the actual state of the infrastructure deviates from its intended state. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider’s console, unintended consequences of scripts, or unauthorized changes. Such drift can lead to significant problems including security vulnerabilities that open up potential breaches, compliance violations that can result in penalties, operational disruptions that affect user experience and business operations, and increased costs from unnecessary resource spend.
 
-Today, we are excited to launch a new Drift Detection and Remediation feature in Pulumi Cloud to address these challenges. This new functionality is designed to automate the detection and correction of drift in your cloud environments, seamlessly integrating into your existing workflows, whether you use [Pulumi Deployments](/product/pulumi-deployments) or other CI/CD systems, and is supported for any resource you can manage with Pulumi, whether they are from Amazon Web Services, Microsoft Azure, Google Cloud Platform, or any of the [180+ supported providers](/registry). Drift Detection and Remediation is available today on the Enterprise and Business Critical editions of Pulumi Cloud.
+Today, we are excited to launch a new Drift Detection and Remediation feature in Pulumi Cloud to address these challenges. This new functionality is designed to automate the detection and correction of drift in your cloud environments, seamlessly integrating into your existing workflows, whether you use [Pulumi Deployments](/product/pulumi-deployments) or other CI/CD systems, and is supported for any resource you can manage with Pulumi, whether they are from Amazon Web Services, Microsoft Azure, Google Cloud Platform, or any of the [hundreds of supported providers](/registry). Drift Detection and Remediation is available today on the Enterprise and Business Critical editions of Pulumi Cloud.
 
 {{< video title="Drift Detection and Remediation in Pulumi Cloud" src="./drift.mp4" width=600 height=420 autoplay="true" loop="true" >}}
 
@@ -52,7 +52,7 @@ To get started with Drift Detection in Pulumi, select which deployment route you
 
 In order to set up Drift Detection and Remediation in the Pulumi Cloud console, follow these steps:
 
-1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/pulumi-cloud/deployments/reference)
+1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/concepts/)
 2. Navigate to the `Stack > Settings > Schedules` page
 3. Select "Drift"
 4. (Optional) Turn on auto-remediation if applicable
@@ -82,7 +82,7 @@ For those who prefer to automate and script their infrastructure tasks, Drift De
 - Pause or resume a Drift schedule
 - List all schedules (includes raw Pulumi operations and Time-to-Live schedules)
 
-Below is an example of setting up Drift Detection and Remediation on a stack, see the [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api) for more details on how to set Drift Detection and Remediation up programmatically.
+Below is an example of setting up Drift Detection and Remediation on a stack, see the [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/) for more details on how to set Drift Detection and Remediation up programmatically.
 
 **Create a Drift Detection and Remediation schedule:**
 

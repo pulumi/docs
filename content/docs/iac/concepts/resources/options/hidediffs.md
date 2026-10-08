@@ -13,32 +13,28 @@ aliases:
   - /docs/concepts/options/hidediffs/
 ---
 
-The `hideDiffs` resource option specifies a list of property paths whose diff details Pulumi will compact in CLI output. Setting `hideDiffs` does not affect what resources are updated, only how those updates are displayed.
+The `hideDiffs` resource option specifies a list of property paths whose diff details Pulumi compacts in CLI output. Setting `hideDiffs` does not affect what resources are updated, only how those updates are displayed.
 
 {{< resource-option-scope "hideDiffs" >}}
 
 {{% notes type="info" %}}
-The `hideDiffs` option only affects CLI display output. It does not change resource update behavior, prevent changes from being detected, or modify what gets stored in state.
+Unlike `ignoreChanges`, `hideDiffs` does not affect which properties trigger updates. If you want to prevent updates based on property changes, use the [`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/) option instead.
 {{% /notes %}}
 
-{{% notes type="info" %}}
-Unlike `ignoreChanges`, `hideDiffs` does not affect which properties trigger updates. If you want to prevent updates based on property changes, use the [`ignoreChanges`](/docs/concepts/options/ignorechanges/) option instead.
-{{% /notes %}}
+## How `hideDiffs` works
 
-## How hideDiffs works
+When you set `hideDiffs` on a resource property, Pulumi:
 
-When you set `hideDiffs` on a resource property, Pulumi will:
-
-1. Still detect and process all changes to that property during preview and update operations.
-1. Compact the diff display in the CLI, hiding the details of what changed within that property.
-1. Show that the property changed without expanding the full before/after values.
-1. Continue to update the resource normally based on those changes.
+1. Still detects and processes all changes to that property during preview and update operations.
+1. Compacts the diff display in the CLI, hiding the details of what changed within that property.
+1. Shows that the property changed without expanding the full before/after values.
+1. Continues to update the resource normally based on those changes.
 
 This is useful when working with properties that generate large or verbose diffs that clutter CLI output, while still allowing Pulumi to manage those properties normally.
 
 ## Example usage
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -102,16 +98,31 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "my_resource" "res" {
+  prop = "new-value"
+
+  pulumi {
+    hide_diffs = [prop]
+  }
+}
+```
+
+In HCL, each entry is a bare attribute name (in the provider's `snake_case` form), not a quoted string.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
-## Property Paths
+## Property paths
 
-In addition to passing simple property names, nested properties can also be supplied to hide diffs for a more targeted nested part of the resource's properties. See [property paths](/docs/reference/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
+Besides top-level property names, you can pass paths to nested properties to hide diffs for a specific part of the resource's properties. See [property paths](/docs/reference/property-paths/) for examples of valid paths to nested properties of objects and arrays.
 
 For example, to hide diffs for all weights in an AWS load balancer listener's target groups:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -259,6 +270,40 @@ resources:
       hideDiffs:
         - defaultActions[*].forward.targetGroups[*].weight
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_lb_listener" "listener" {
+  # ... other configuration ...
+
+  default_action {
+    type = "forward"
+
+    forward {
+      target_group {
+        arn    = aws_lb_target_group.blue.arn
+        weight = 80
+      }
+
+      target_group {
+        arn    = aws_lb_target_group.green.arn
+        weight = 20
+      }
+    }
+  }
+
+  pulumi {
+    hide_diffs = [
+      default_action[0].forward[0].target_group[0].weight,
+      default_action[0].forward[0].target_group[1].weight,
+    ]
+  }
+}
+```
+
+In HCL, each entry is a bare traversal rather than a quoted string, so wildcard paths like `[*]` are not available; list each element by index instead.
 
 {{% /choosable %}}
 

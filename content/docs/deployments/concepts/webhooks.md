@@ -19,12 +19,8 @@ aliases:
 - /docs/intro/console/webhooks/
 - /docs/intro/pulumi-service/webhooks/
 - /docs/intro/pulumi-cloud/webhooks/
+pulumi_cloud_feature: webhooks
 ---
-
-{{% notes "info" %}}
-Pulumi Webhooks is a feature available on the Pulumi Team, Enterprise and Business Critical editions.
-To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
-{{% /notes %}}
 
 Pulumi Webhooks allow you to notify external services of events
 happening within your Pulumi organization. For example,
@@ -45,9 +41,9 @@ stacks.
 
 The Webhooks page is located at **Settings** > **Integrations** > **Webhooks**.
 
-If you are looking for Environment Webhook documentation, it's [here](/docs/esc/webhooks/).
+If you are looking for Environment Webhook documentation, it's [here](/docs/esc/concepts/webhooks/).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Webhooks do not guarantee event order. You should not assume events will be received in the order they occurred.
 {{% /notes %}}
 
@@ -55,9 +51,9 @@ Webhooks do not guarantee event order. You should not assume events will be rece
 
 Pulumi Webhooks may be created through the UI using the steps outlined below, by using the
 [Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider
-or by [using the API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
+or by [using the API](/docs/reference/cloud-rest-api/webhooks/) directly.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -77,11 +73,11 @@ const webhook = new pulumiservice.Webhook("example-webhook", {
 ```python
 import pulumi
 import pulumi_pulumiservice
-webhook = pulumi_service.Webhook("example-webhook",
-    active: True,
-    display_name: "webhook example",
-    organization_name: "example",
-    payload_url: "https://example.com/webhook",
+webhook = pulumi_pulumiservice.Webhook("example-webhook",
+    active=True,
+    display_name="webhook example",
+    organization_name="example",
+    payload_url="https://example.com/webhook",
 )
 ```
 
@@ -131,6 +127,30 @@ class PulumiServiceWebhook: Stack
 ```
 
 {{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source = "pulumi/pulumiservice"
+    }
+  }
+}
+
+resource "pulumiservice_webhook" "example_webhook" {
+  active            = true
+  display_name      = "webhook example"
+  organization_name = "example"
+  payload_url       = "https://example.com/webhook"
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 #### Create an Organization Webhook
@@ -215,7 +235,7 @@ and optionally choosing which events you want delivered using [event groups and 
 
 ### Deployment Webhooks
 
-The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/deployments/concepts/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
+The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/deployments/concepts/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/iac/concepts/stacks/#stackreferences).
 
 Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/deployments/concepts/settings/).
 
@@ -225,9 +245,9 @@ When using generic JSON webhooks, Pulumi will send an HTTP `POST` request to
 all registered webhooks. The webhook can then be used to emit a
 notification, start running integration tests, or even update additional stacks.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If a secret is provided, webhook deliveries will contain a signature in the HTTP request header that can be used
-to authenticate messages as coming from the Pulumi Cloud.
+to authenticate messages as coming from Pulumi Cloud.
 {{% /notes %}}
 
 #### Payload Examples
@@ -388,7 +408,7 @@ Payloads contain several headers.
 
 | Header                     | Description                                                                                                                                                   |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Pulumi-Webhook-ID`        | Unique ID for each webhook sent which you can reference when looking at delivery logs in the Pulumi Cloud.                                                    |
+| `Pulumi-Webhook-ID`        | Unique ID for each webhook sent which you can reference when looking at delivery logs in Pulumi Cloud.                                                    |
 | `Pulumi-Webhook-Kind`      | The kind of webhook event, e.g. `stack_update`.                                                                                                               |
 | `Pulumi-Webhook-Signature` | Only set if the webhook has a shared secret. HMAC hex digest of the request payload, using the `sha256` hash function and the webhook secret as the HMAC key. |
 
@@ -483,7 +503,7 @@ on your receiving service.
 
 If a delivery failed because your endpoint was unavailable, returned an error, or
 processed the event incorrectly, you can redeliver the same event from the Pulumi Cloud
-UI.
+console.
 
 1. Open the webhook and locate the delivery you want to resend, as described in
    [Viewing recent deliveries](#viewing-recent-deliveries).
@@ -517,16 +537,16 @@ See the CLI reference for
 and
 [`pulumi stack webhook delivery redeliver`](/docs/iac/cli/commands/pulumi_stack_webhook_delivery_redeliver/).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The `pulumi stack webhook delivery` commands are experimental and available in recent
 releases of the Pulumi CLI. Listing recent deliveries is also available for organization
 webhooks (`pulumi org webhook delivery list`) and environment webhooks
 (`pulumi env webhook delivery list`), but
 redelivery is currently a stack-only CLI affordance — redeliver organization and
-environment webhooks from the Pulumi Cloud UI.
+environment webhooks from the Pulumi Cloud console.
 {{% /notes %}}
 
 ## Additional Resources
 
-* [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
-* [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/)
+* [Managing GitHub Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
+* [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/)

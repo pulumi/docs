@@ -12,18 +12,18 @@ aliases:
   - /docs/esc/development/psp/
 ---
 
-Pulumi Service Provider empowers you to manage your entire infrastructure and application landscape through a unified approach. This means you can define [environments](/docs/esc/concepts/environments/), add [version tags](/docs/esc/concepts/versioning/#tagging-versions), and even control access using familiar Infrastructure as Code (IaC) practices ensuring consistency and repeatability across your deployments.
+Pulumi Service Provider empowers you to manage your entire infrastructure and application landscape through a unified approach. This means you can define [environments](/docs/esc/concepts/environments/), add [version tags](/docs/esc/concepts/versioning/#tagging-versions), and even control access using familiar infrastructure as code (IaC) practices ensuring consistency and repeatability across your deployments.
 
 Here's a list of ESC resources available through Pulumi Service Provider:
 
 - **Environment**: Define new environments and create new revisions using the normal `pulumi up` command. Learn more [here](/registry/packages/pulumiservice/api-docs/environment/).
 - **Environment Team Permission**: Control permissions to your environments. Combines with **Team** and **Environment** resources easily! Learn more [here](/registry/packages/pulumiservice/api-docs/teamenvironmentpermission/).
 - **Environment Revision Tag**: Add tags to your environment revision for flexible environment import and version control. Learn more [here](/registry/packages/pulumiservice/api-docs/environmentversiontag/).
-- **ESC Webhook**: Create webhooks to monitor or react to events on your environments. This can be configured for specific environments or at the organization level. Learn more [here](/docs/esc/webhooks).
+- **ESC Webhook**: Create webhooks to monitor or react to events on your environments. This can be configured for specific environments or at the organization level. Learn more [here](/docs/esc/concepts/webhooks/).
 
 If you haven't used Pulumi Service Provider before, see this [installation and configuration guide](https://www.pulumi.com/registry/packages/pulumiservice/installation-configuration/).
 
-Pulumi Service Provider ESC capabilities are available for TypeScript/JavaScript, Go, Python, C#, Java, and YAML. Here are examples of creating environments in TypeScript/JavaScript, Go, and Python:
+Pulumi Service Provider ESC capabilities are available for TypeScript/JavaScript, Go, Python, .NET, Java, and YAML. Here are examples of creating environments in TypeScript/JavaScript, Go, and Python:
 
 {{< chooser language "typescript,python,go" />}}
 

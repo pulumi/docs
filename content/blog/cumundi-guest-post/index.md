@@ -22,7 +22,7 @@ At Cumundi, we build reusable libraries for our customers to set up their infras
 
 It may come as no surprise that we also use Pulumi to manage Cumundi's own infrastructure. As a young company (founded January 1st!), it is hard to foresee how our infrastructure needs will evolve. With Pulumi, we write code in a modern programming language, and, good coding practice is not to [optimize prematurely](http://wiki.c2.com/?PrematureOptimization) because the future is unpredictable. Another coding best practice is [red-green-refactor](https://en.wikipedia.org/wiki/Test-driven_development) or formally known as Test-Driven Development. You take the current code, write a test for the new requirement, which initially fails (red). Next, you implement the code in the most straightforward way to make the test succeed (green) and you complete the cycle by refactoring the code to keep the design in proper shape.
 
-This blog post demonstrates a TDD cycle for Pulumi code with a reduced version of the code used to configure the internal infrastructure we provide for each customer. This example focuses on one specific Pulumi resource property: [`aliases`](/docs/concepts/resources#aliases).
+This blog post demonstrates a TDD cycle for Pulumi code with a reduced version of the code used to configure the internal infrastructure we provide for each customer. This example focuses on one specific Pulumi resource property: [`aliases`](/docs/iac/concepts/resources/#aliases).
 
 All the code is [available on Github](https://github.com/cumundi/pulumi-refactoring-aliases) if you want to follow along with a full project setup. Every step described here is committed as a separate branch with the starting point on `master`, the default branch.
 
@@ -129,7 +129,7 @@ In the current state of the code, we created a Google Cloud service account and 
 
 Although we have this relationship between our resources, the Pulumi state graph doesn't display it. How can we change this without affecting the real resources on Gitlab and Google Cloud?
 
-We can pass [`CustomResourceOptions`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions) as the last argument to every Pulumi resource that we want to create and use `parent` and `aliases` for refactoring.
+We can pass [`CustomResourceOptions`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/interfaces/CustomResourceOptions.html) as the last argument to every Pulumi resource that we want to create and use `parent` and `aliases` for refactoring.
 
 To link the key to the service account, we set the `parent` property to the service account resource. If you run `pulumi preview`,  Pulumi wants to recreate the key. It wants to do this because it searches for the key as a child resource of the service account. In your last applied Pulumi state, that is not the case.
 

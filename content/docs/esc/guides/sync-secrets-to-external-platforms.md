@@ -10,7 +10,7 @@ menu:
     weight: 15
 ---
 
-Traditional secret management leads to *secret sprawl*: the same secret is duplicated across repositories, cloud providers, and CI/CD pipelines, and every change has to be applied by hand in each place. This guide shows a pattern that uses Pulumi ESC together with [Pulumi IaC](/docs/iac/) and [Pulumi Deployments](/docs/pulumi-cloud/deployments/) to define secrets and configuration once in ESC and automatically push them out to the external platforms where they're consumed.
+Traditional secret management leads to *secret sprawl*: the same secret is duplicated across repositories, cloud providers, and CI/CD pipelines, and every change has to be applied by hand in each place. This guide shows a pattern that uses Pulumi ESC together with [Pulumi IaC](/docs/iac/) and [Pulumi Deployments](/docs/deployments/concepts/) to define secrets and configuration once in ESC and automatically push them out to the external platforms where they're consumed.
 
 {{< notes type="info" >}}
 **This guide is for existing Pulumi IaC and ESC users.** If you're new to ESC, start with the [ESC Get Started guide](/docs/esc/get-started/). To consume an environment from a Pulumi program, see [Integrate ESC with Pulumi IaC](/docs/esc/guides/pulumi-iac/).
@@ -39,7 +39,7 @@ flowchart LR
 - [Pulumi CLI](/docs/install/) installed
 - [Pulumi account](https://app.pulumi.com/signup) created
 - An ESC environment containing the secrets and configuration you want to distribute
-- A GitHub repository connected to [Pulumi Deployments](/docs/pulumi-cloud/deployments/) for the target stack
+- A GitHub repository connected to [Pulumi Deployments](/docs/deployments/concepts/) for the target stack
 
 ## Define the secrets to sync
 
@@ -63,7 +63,7 @@ The `value` field contains the data to sync, and `name` is the name of the secre
 
 ## Automate the sync
 
-Next, define a Pulumi program that provisions the ESC environment, the target stack, and the [Pulumi Deployments](/docs/pulumi-cloud/deployments/) settings for that stack. The pre-run commands extract the values from the environment and set them as stack configuration, and a deployment schedule runs the sync on a recurring basis (hourly by default):
+Next, define a Pulumi program that provisions the ESC environment, the target stack, and the [Pulumi Deployments](/docs/deployments/concepts/) settings for that stack. The pre-run commands extract the values from the environment and set them as stack configuration, and a deployment schedule runs the sync on a recurring basis (hourly by default):
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -199,4 +199,4 @@ The same pattern works for other targets — adjust the `sync` block and the tar
 - [Integrate ESC with Pulumi IaC](/docs/esc/guides/pulumi-iac/) — consume environments from a Pulumi program
 - [Webhooks](/docs/esc/concepts/webhooks/) — respond to environment changes in real time
 - [Secrets and configuration providers](/docs/esc/providers/secrets/) — dynamically import secrets from external systems
-- [Pulumi Deployments](/docs/pulumi-cloud/deployments/) — run Pulumi programs on a schedule or in response to events
+- [Pulumi Deployments](/docs/deployments/concepts/) — run Pulumi programs on a schedule or in response to events

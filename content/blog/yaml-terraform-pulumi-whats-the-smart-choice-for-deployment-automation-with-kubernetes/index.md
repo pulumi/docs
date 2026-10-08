@@ -55,6 +55,8 @@ YAML and [Kubernetes](https://kubernetes.io/) go together like peanut butter and
 It's often the first tool developers encounter when diving into Kubernetes, and for good reason - its human-readable format makes it the preferred choice in most tutorials, documentation, and even production deployments.
 <!--more-->
 
+{{% hcl-note %}}
+
 <div style="display: flex; align-items: center; justify-content: center; height: 600px;">
     <img src="yaml.png" alt="Description of image" style="width: 60%; height: 100%">
 </div>
@@ -146,7 +148,7 @@ Or to rephrase it: Friends don't let friends manage Kubernetes resources with YA
 
 ## Terraform Kubernetes Provider
 
-[Terraform](https://www.terraform.io/) is an Infrastructure as Code tool. It lets you define and manage your infrastructure in a declarative way. It uses a high-level configuration language called HashiCorp Configuration Language (HCL). To manage Kubernetes objects with Terraform, use the Kubernetes provider. It allows you to define Kubernetes objects in Terraform HCL.
+[Terraform](https://www.terraform.io/) is an infrastructure as code tool. It lets you define and manage your infrastructure in a declarative way. It uses a high-level configuration language called HashiCorp Configuration Language (HCL). To manage Kubernetes objects with Terraform, use the Kubernetes provider. It allows you to define Kubernetes objects in Terraform HCL.
 
 The [Kubernetes provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest) allows you to define Kubernetes objects like `kubernetes_deployment`, `kubernetes_service`, `kubernetes_config_map`, `kubernetes_secret`, and more in code, leveraging the language features of Terraform. You can use, to a certain extent, loops, conditions, and variables in a way that is not possible with plain YAML files.
 
@@ -281,7 +283,7 @@ But is there a better way to manage your Kubernetes resources? Let's have a look
 
 ## Pulumi and the Power of General Purpose Languages
 
-Last but not least, let's have a look at Pulumi. Pulumi is an Infrastructure as Code tool. It lets you define and manage your Kubernetes objects using general-purpose programming languages. Pulumi [supports multiple languages](/docs/iac/languages-sdks/) like Python, Go, TypeScript, JavaScript, .NET, and JVM-based languages. This gives you all the benefits of a full programming language. It includes native IDE support, code completion, and debugging.
+Last but not least, let's have a look at Pulumi. Pulumi is an infrastructure as code tool. It lets you define and manage your Kubernetes objects using general-purpose programming languages. Pulumi [supports multiple languages](/docs/iac/languages-sdks/) like Python, Go, TypeScript, JavaScript, .NET, and JVM-based languages. This gives you all the benefits of a full programming language. It includes native IDE support, code completion, and debugging.
 
 You need to install the [Pulumi CLI](/docs/iac/cli/). Then, create a [new Pulumi project](/docs/iac/cli/commands/pulumi_new/). Finally, add the [Kubernetes library](/registry/packages/kubernetes/) to it. It depends on the language you choose. You could use a package manager, like `npm` or `pip`.
 
@@ -363,7 +365,7 @@ You can use general-purpose languages to define your Kubernetes objects. These i
 - **Abstraction:** You can use the DRY principle in Pulumi. Define reusable functions, classes, and modules in your chosen programming language.
 - **Environment management:** You can manage multiple environments, like development, staging, and production, by defining config variables. This is a more structured way, without needing extra tools.
 - **Kubernetes Helm Support:** Pulumi supports [Helm charts](/registry/packages/kubernetes/api-docs/helm/) out of the box. You can manage Helm charts with Pulumi without needing extra tools or providers.
-- **Programmatic execution of Pulumi:** You can further blend Pulumi code into your projects using the [Pulumi Automation API](/docs/iac/packages-and-automation/automation-api/).
+- **Programmatic execution of Pulumi:** You can further blend Pulumi code into your projects using the [Pulumi Automation API](/docs/iac/concepts/automation-api/).
 
 #### Cons
 
@@ -411,6 +413,8 @@ Next time you start a new project, try Pulumi. See for yourself that it's a smar
 
 But that's my opinion. What's your opinion? What's your smart choice for deployment automation with Kubernetes?
 
-If you want to try out Pulumi or play around to prove [me](/blog/author/engin-diri) wrong, you can start with:
+This post focuses on how you author manifests. If you also want the wider operating picture — provisioning, testing, policy, and where AI agents fit into managing Kubernetes infrastructure day to day — see [Terraform and Kubernetes: A Practical Guide for 2026](/blog/terraform-kubernetes/).
+
+If you want to try out Pulumi or play around to prove [me](/blog/authors/engin-diri) wrong, you can start with:
 
 {{< get-started >}}

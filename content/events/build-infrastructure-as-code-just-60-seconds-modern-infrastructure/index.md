@@ -15,17 +15,6 @@ unlisted: false
 # to fill out the form before viewing.
 gated: false
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: build-infrastructure-as-code-just-60-seconds-modern-infrastructure
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
@@ -42,7 +31,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    Imagine the power of creating Infrastructure as Code effortlessly. With Pulumi AI, you use natural-language prompts to generate infrastructure as code (IaC) programs in the language of your choice, such as TypeScript, Python, Go, C#, Java, or YAML. Pulumi AI will create all the necessary parts, from the instance itself to the security groups that will allow access. 
+    Imagine the power of creating Infrastructure as Code effortlessly. With Pulumi AI, you use natural-language prompts to generate infrastructure as code (IaC) programs in the language of your choice, such as TypeScript, Python, Go, .NET, Java, or YAML. Pulumi AI will create all the necessary parts, from the instance itself to the security groups that will allow access. 
     
     🤖 [Try Pulumi Neo now](https://www.pulumi.com/product/neo/) and see the magic unfold!
     

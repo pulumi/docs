@@ -98,7 +98,7 @@ To follow along, you'll need the following prerequisites:
 
 - A Kubernetes cluster (I will be using a local [KinD](https://kind.sigs.k8s.io/) cluster, but you can use any
   Kubernetes cluster)
-- [Pulumi CLI](/docs/iac/download-install/) installed. You can use the `pulumi env` commands to manage secrets and configurations.
+- [Pulumi CLI](/docs/install/) installed. You can use the `pulumi env` commands to manage secrets and configurations.
 - `kubectl` [CLI installed](https://kubernetes.io/docs/tasks/tools/) for some debugging
 
 ### Step 1: Install ESO and Link to Pulumi ESC
@@ -161,7 +161,7 @@ values:
 
 {{% notes type="info" %}}
 
-Don't know how to create a PAT? Check out the official Pulumi [documentation](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/).
+Don't know how to create a PAT? Check out the official Pulumi [documentation](/docs/administration/concepts/access-tokens/).
 
 {{% /notes %}}
 

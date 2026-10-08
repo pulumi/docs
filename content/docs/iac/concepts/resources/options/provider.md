@@ -14,11 +14,11 @@ aliases:
   - /docs/iac/concepts/options/provider/
 ---
 
-The `provider` resource option sets a provider for the resource. For more information, see [Providers](/docs/iac/concepts/resources/options/providers). The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
+The `provider` resource option sets a provider for the resource. For more information, see [Providers](/docs/iac/concepts/providers/). The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
 
 {{< resource-option-scope "provider" >}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -82,6 +82,22 @@ resources:
     options:
       provider: ${provider}
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  alias  = "usw2"
+  region = "us-west-2"
+}
+
+resource "aws_vpc" "vpc" {
+  provider = aws.usw2
+}
+```
+
+In HCL, explicit providers use the standard Terraform `provider` meta-argument with an aliased `provider` block.
 
 {{% /choosable %}}
 

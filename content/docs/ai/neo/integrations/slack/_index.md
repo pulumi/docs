@@ -11,6 +11,7 @@ menu:
         parent: ai-integrations
         weight: 3
         identifier: ai-integrations-slack
+pulumi_cloud_feature: neo-slack
 ---
 
 Mention `@Neo` in any channel where Neo has been added to start a Neo [task](/docs/ai/neo/tasks/) without leaving Slack. The response lands in the same thread, and follow-up messages continue the conversation, so the full exchange stays where the discussion is already happening.
@@ -43,7 +44,7 @@ _Slack will prompt you to add Neo to the channel if it's not there already._
 
 ## How permissions work
 
-Tasks started from Slack run with the [RBAC permissions](/docs/administration/access-identity/rbac/) of the Pulumi Cloud user linked to your Slack identity.
+Tasks started from Slack run with the [RBAC permissions](/docs/administration/concepts/rbac/) of the Pulumi Cloud user linked to your Slack identity.
 
 ## Limitations
 

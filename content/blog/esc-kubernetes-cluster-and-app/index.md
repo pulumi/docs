@@ -25,7 +25,7 @@ such as `kubectl` and the Pulumi Kubernetes provider. Let's take a look.
 ![pulumi-esc-kubectl](/blog/esc-kubernetes-cluster-and-app/pulumi-esc-kubectl.gif)
 
 In this post, we will create a Kubernetes cluster, deploy an application to the created cluster,
-and then use `kubectl` to check on the deployed application. Pulumi gives you great flexibility to [factor your infrastructure into reusable parts](/docs/using-pulumi/organizing-projects-stacks), and we'll do that here. With ESC, we'll define an environment that provides
+and then use `kubectl` to check on the deployed application. Pulumi gives you great flexibility to [factor your infrastructure into reusable parts](/docs/iac/guides/basics/organizing-projects-stacks/), and we'll do that here. With ESC, we'll define an environment that provides
 access to an AWS account, and use that environment to create the cluster. Then we'll define an environment that encapsulates
 the kubeconfig needed to connect to that cluster.
 
@@ -163,7 +163,7 @@ values:
     aws:region: us-west-2
 ```
 
-Notice that this environment uses the `aws-login` ESC provider to [dynamically load short-lived credentials using OIDC](/docs/esc/environments/configuring-oidc/aws/).
+Notice that this environment uses the `aws-login` ESC provider to [dynamically load short-lived credentials using OIDC](/docs/esc/guides/configuring-oidc/aws/).
 These credentials are then exposed as environment variables for consumers of this environment. We also set the AWS region
 in the `pulumiConfig` section to configure the region for `pulumi` to manage resources with the `pulumi-aws` provider.
 
@@ -784,7 +784,7 @@ Since we factored the shared configuration into ESC environments, it is easy to 
 AWS or Kubernetes resources. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud, with
 additional providers on the roadmap. Check out the following links to learn more about Pulumi ESC today!
 
-* [Getting Started](/docs/pulumi-cloud/esc/get-started)
-* [Documentation](/docs/pulumi-cloud/esc)
+* [Getting Started](/docs/esc/get-started/)
+* [Documentation](/docs/esc/)
 * [Open Source](https://github.com/pulumi/esc)
 * [Community Slack](https://slack.pulumi.com/)

@@ -18,6 +18,8 @@
         {{ end }}
     </div>
 
+    {{ partial "docs/cloud-availability.html" . }}
+
     {{ range .Params.sections }}
         {{ if eq .type "cards-logo-label-link" }}
             <div class="docs-home-section">

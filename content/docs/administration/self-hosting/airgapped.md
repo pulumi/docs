@@ -12,6 +12,7 @@ menu:
 aliases:
 - /docs/administration/self-hosting/airgapped/
 - /docs/pulumi-cloud/admin/self-hosted/airgapped/
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note />}}
@@ -61,7 +62,7 @@ The complete infrastructure required typically includes:
 
 * *An Isolated Compute Environment*: A virtual machine (VM) or Kubernetes cluster within the air-gapped network.
 * *Pulumi Self-Hosted Installation Artifacts*: These can be retrieved from a network-accessible environment and transferred to the air-gapped system.
-* *A Private Container Registry*: Required to store Pulumi service images for deployment.
+* *A Private Container Registry*: Required to store Pulumi Self-Hosted container images for deployment.
 * *Database and Storage Backend*: MySQL and object storage (such as MinIO or an on-premises S3-compatible storage system) for state management.
 * *Internal Package Management*: To host Pulumi SDKs and required language runtimes, as external package managers (npm, PyPI, etc.) won't be accessible.
 * *Automation and CI/CD Setup*: Configured to run within the air-gapped network for secure infrastructure deployments.
@@ -98,7 +99,7 @@ Pulumi Self-Hosted can be installed using Kubernetes, Docker, or virtual machine
 4. Configure Authentication and Access Control
     * Integrate with your organization's internal identity provider (OIDC, LDAP, SAML).
     * Define role-based access controls (RBAC) to ensure proper permissions.
-    * For more detailed organization configuration options, refer to [this onboarding guide](/docs/administration/onboarding-guide/).
+    * For more detailed organization configuration options, refer to [this onboarding guide](/docs/administration/get-started/).
 
 ### Step 2: Configure the Pulumi CLI and SDKs
 
@@ -135,7 +136,7 @@ Because air-gapped is not the default mode Pulumi Cloud uses, there are some bes
 * *Monitor and Audit Usage*: Implement internal logging and monitoring to track Pulumi operations.
 * *Secure Your Secrets Management*: Use a secure secrets management solution, such as [Pulumi ESC](/docs/esc) which is included in Self-Hosted, to manage sensitive data.
 
-## Next Steps
+## Next steps
 
 Pulumi Self-Hosted enables organizations to deploy and manage infrastructure within secure, air-gapped environments. By mirroring dependencies, configuring internal storage, and leveraging self-hosted Pulumi services, teams can maintain modern infrastructure automation workflows while meeting strict security and compliance requirements.
 

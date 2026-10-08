@@ -1,6 +1,4 @@
 {{ define "main" }}
-    {{ partial "blog/header.html" (dict "context" .) }}
-
     {{- /* Featured slots (hero + 3 small cards) and the feed below the fold, from
         the shared partial. head.html paginates the SAME $feed first, so the
         section paginator is set to the feed collection and the featured/helper
@@ -10,6 +8,12 @@
     {{ $feed := $bf.feed }}
     {{ $paginator := .Paginate $feed }}
     {{ $isFirst := eq $paginator.PageNumber 1 }}
+
+    {{ partial "blog/header.html" (dict "context" .) }}
+
+    {{- /* Releases/changelog ticker — page 1 only, where it reads as part of the
+        masthead rather than as a stray strip above a paginated feed. */ -}}
+    {{ if $isFirst }}{{ partialCached "blog/releases-marquee.html" . "blog-releases-marquee" }}{{ end }}
 
     <div class="container mx-auto px-4 py-8 lg:py-10">
         {{ if $isFirst }}

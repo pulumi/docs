@@ -1,11 +1,8 @@
 ---
 title: "Terraform Alternative | Pulumi"
-meta_desc: "Use Python, TypeScript, Go, or C# instead of HCL. Free migration tools, no resource caps on the free tier, 170+ cloud providers."
+meta_desc: "Use Python, TypeScript, Go, or .NET — or HCL — for infrastructure as code. Free migration tools, no resource caps on the free tier, hundreds of cloud providers."
 layout: gads-template
 block_external_search_index: true
-hide_platform_details: true
-aliases:
-    - /gads/gads-template
 
 heading: "Terraform Alternative"
 subheading: |
@@ -16,49 +13,44 @@ customer_quote:
     text: "What used to take a week and a half now, with Pulumi, took under a day."
     author: "Raman Hariharan"
     title: "Director of Cloud Platform Engineering"
-    company: "Snowflake"
-    logo: snowflake
-    link: /case-studies/snowflake
+    customer: snowflake
+    link: /customers/snowflake
 
 overview:
-    title: Real Languages. No Resource Caps.<br/>Migrate at Your Pace.
+    title: Your Choice of Language. No Resource Caps. <br/>Migrate at Your Pace.
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform alternative</span>? HCP Terraform's free tier caps you at 500 managed resources. Pulumi Cloud has no resource caps. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 170+ cloud providers. Free migration tooling included: convert your existing Terraform with the Pulumi CLI.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform alternative</span>? HCP Terraform's free tier caps you at 500 managed resources per organization. Pulumi Cloud has no resource caps. Write infrastructure in Python, TypeScript, JavaScript, Go, or .NET with full IDE support, testing, and hundreds of cloud providers. Free migration tooling included: convert your existing Terraform with the Pulumi CLI.
 
 key_features_above:
     items:
-        - title: "Switch from HCL to real languages"
+        - title: "Author infrastructure in the language you prefer"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Stop writing HCL. Author infrastructure as code using programming languages you already know, including Python, TypeScript, Go, C#, Java, and YAML. Use `pulumi convert`, the free converter built into the Pulumi CLI, to migrate your existing Terraform files. Deploy to 170+ providers.
+            Author infrastructure as code using programming languages you already know, including Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL. Use `pulumi convert`, the free converter built into the Pulumi CLI, to migrate your existing Terraform files. Deploy to hundreds of providers.
           features:
               - title: Code faster
                 description: |
-                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, and YAML using your IDE and any language ecosystem tools.
+                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL using your IDE and any language ecosystem tools.
                 icon: code
-                color: yellow
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
+                    Access the full breadth of services in AWS, Azure, GCP, and hundreds of providers through
                     a complete and consistent SDK interface.
                 icon: global
-                color: yellow
               - title: AI-powered infrastructure
                 description: |
-                    Generate Pulumi code from natural language or convert existing Terraform with Pulumi AI and Neo.
+                    Convert existing Terraform with `pulumi convert`, or hand the migration to Pulumi Neo. Claude Code, Cursor, and Codex work with Pulumi through the MCP server and Agent Skills.
                 icon: lightning
-                color: yellow
-        
+
 key_features:
-    title: Key features
     items:
-        - title: "Migrate from Terraform in minutes"
+        - title: "Start migrating from Terraform in minutes"
           sub_title: "Free Migration Tools"
           description: |
-            Use `pulumi convert` to turn your existing Terraform HCL into Python, TypeScript, Go, or C#. Import existing state with `pulumi import`. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
+            Use `pulumi convert` to turn your existing Terraform HCL into Python, TypeScript, Go, or .NET. Import existing state with `pulumi import`. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
           image: "/images/product/pulumi-iac-code.png"
           features:
-              - title: Convert HCL to real code
+              - title: Convert HCL to a general-purpose language
                 icon: exchange
                 description: |
                     `pulumi convert --from terraform` turns your .tf files into Pulumi programs in your language of choice. [Read the migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
@@ -167,11 +159,7 @@ key_features:
               - title: Native cloud providers
                 icon: cloud
                 description: |
-                    Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates.
-              - title: Crosswalk for AWS
-                icon: abstract-shapes
-                description: |
-                    Adopt well-architected best practices for your infrastructure easily with the Crosswalk library.
+                    Azure Native covers 100% of the Azure Resource Manager API, and the Kubernetes provider reaches any resource in the Kubernetes API.
               - title: Cloud Native support
                 icon: clouds
                 description: |
@@ -202,89 +190,44 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "350,000+"
-        description: "Community members"
+        description: "community members"
     company:
         number: "4,000+"
-        description: "Companies in production"
+        description: "companies in production"
     integration:
-        number: "170+"
-        description: "Cloud and service integrations"
-
-key_features_below:
-    items:
-        - title: "The fastest and easiest way to use Pulumi IaC at scale"
-          sub_title: "Pulumi Cloud"
-          description: |
-             A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
-          image: "/images/product/pulumi-cloud-iac-stylized-01.png"
-          features:
-              - title: Pulumi IaC
-                icon: code
-                description: |
-                    Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
-              - title: Pulumi ESC
-                icon: lock
-                description: |
-                    Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
-              - title: Automate deployment workflows
-                icon: cycle
-                description: |
-                    Orchestrate secure deployment workflows through GitHub or an API.
-              - title: Search and analytics
-                icon: eye
-                description: |
-                    View resources from any cloud in one place. Search for resources across clouds with simple queries and filters.
-              - title: Pulumi Automation API
-                icon: gear
-                description: |
-                    Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
-              - title: Developer portals
-                icon: buildings
-                description: |
-                    Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
-              - title: Identity and access control
-                icon: security
-                description: |
-                    Manage teams with SCIM, SAML SSO, GitHub, GitLab, or Atlassian. Set permissions and access tokens.
-              - title: Policy enforcement
-                icon: gavel
-                description: |
-                    Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and remediation policies to correct violations.
-              - title: Audit logs
-                icon: clipboard
-                description: |
-                    Track and store user actions and change history with option to export logs.
+        number: "200+"
+        description: "cloud and service integrations"
 
 case_studies:
     title: Customers innovating with Pulumi Cloud
     items:
         - name: Atlassian
-          link: /case-studies/atlassian/
-          logo: atlassian-wordmark
+          link: /customers/atlassian/
+          customer: atlassian
           description: |
             Developers reduced their time spent on maintenance by 50%.
 
         - name: Starburst
-          link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
-          logo: starburst
+          link: /customers/starburst/
+          customer: starburst
           description: |
-            Deployments up to 3x faster with Pulumi infrastructure automation.
+            Cut multi-region blue/green deployments from two weeks to three hours.
 
         - name: BMW
-          link: /case-studies/bmw/
-          logo: bmw
+          link: /customers/bmw/
+          customer: bmw
           description: |
             Enabled developers to deploy across hybrid cloud environments.
 
         - name: Lemonade
-          link: /case-studies/lemonade/
-          logo: lemonade
+          link: /customers/lemonade/
+          customer: lemonade
           description: |
             Standardized infrastructure architectures with reusable components.
 
         - name: Snowflake
-          link: /case-studies/snowflake/
-          logo: snowflake
+          link: /customers/snowflake/
+          customer: snowflake
           description: |
             Switched from HCL to Go with Pulumi. Deployment time cut from 1.5 weeks to under a day.
 ---
