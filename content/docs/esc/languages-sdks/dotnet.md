@@ -44,7 +44,7 @@ using Pulumi.Esc.Sdk;
 using var client = EscClient.CreateDefault();
 ```
 
-This method reads the access token from the `PULUMI_ACCESS_TOKEN` environment variable. If the variable isn't set, it throws an `InvalidOperationException`; it doesn't fall back to Pulumi CLI credentials.
+This method reads the access token from the `PULUMI_ACCESS_TOKEN` environment variable and throws an `InvalidOperationException` if it isn't set. As of `Pulumi.Esc.Sdk` v0.14.0, it no longer falls back to the credentials that `pulumi login` saves on disk, so you must set `PULUMI_ACCESS_TOKEN` or pass a token explicitly.
 
 If the default behavior does not work for you, you can always pass an access token directly to the client constructor:
 
