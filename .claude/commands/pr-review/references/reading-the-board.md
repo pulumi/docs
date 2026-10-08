@@ -141,7 +141,7 @@ Copy it and run it, or hand it to Claude. Invoking it *is* the yes: `act.py` pla
 
 ## Waiting on others
 
-A PR whose requested reviewer is a human who isn't you is waiting on them, not on you. Those rows collapse into a compact list at the bottom. `--include-handed-off` brings them back as full rows. Routing a PR is also how you say "don't show me this again": the review request lives on GitHub, so every future run sees it, and GitHub clears it when the reviewer acts.
+A PR whose requested reviewer is a named person who isn't you is waiting on them, not on you. A requested team only parks a row that touches none of your lanes; on a row in your lane, another team being asked covers nothing of yours, so the row stays on the board. Those rows collapse into a compact list at the bottom. `--include-handed-off` brings them back as full rows. Routing a PR is also how you say "don't show me this again": the review request lives on GitHub, so every future run sees it, and GitHub clears it when the reviewer acts.
 
 ## Waiting on the author
 

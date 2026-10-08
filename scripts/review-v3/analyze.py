@@ -160,7 +160,7 @@ REASON_CODES = {
     "size": "changed lines at or over stamp_max_lines",
     "owner": "the PR's domains and their owning roles",
     "route": "the lane this PR should go to; `no-team`: GitHub says the lane's team doesn't exist, so the SLA person is the target; `team-unverified`: the token couldn't read teams, so the config's team is used unchecked",
-    "handed-off": "a human reviewer who isn't me is requested; the row waits on them",
+    "handed-off": "a named reviewer who isn't me is requested (or, on a row outside my lanes, another lane's team); the row waits on them",
     "merging-over": "an approval or changes-requested review already on the PR",
     "not-governed": "the Sentinel does not gate this PR",
     "author": "author type when human; `generated`: a workflow opened this PR and cannot answer a review, so the row closes rather than goes back; `self`: my own PR, which GitHub lets me neither approve nor send back — it routes to the lane team",
@@ -522,7 +522,7 @@ def team_lanes(slug: str, config: routing.Config) -> set[str]:
     return {d for d, cell in config.matrix.items() if role in (cell.get("mechanical"), cell.get("substantive"))}
 
 
-def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: list[str]) -> list[str]:
+def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: list[str], is_mine: bool = False) -> list[str]:
     """Who this PR is waiting on, when it is not me: the requested human
     reviewers and teams that aren't the approver or one of the approver's
     lanes. Empty when the approver is among the requested reviewers, or when
@@ -530,7 +530,13 @@ def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: li
 
     The review request is the hand-off record: it lives on the PR, every
     session and machine sees it, and GitHub clears it when the reviewer
-    acts, which is exactly when the row should come back."""
+    acts, which is exactly when the row should come back.
+
+    A requested team never hands off a row I own (`is_mine`). The Sentinel
+    needs every lane team's approval, so another lane's team being asked
+    covers nothing of mine; and triage asks teams automatically, so a team
+    request is routing, not a decision to give the row to someone else. A
+    named person is that decision."""
     rr = pr.get("requested_reviewers") or {}
     users = [u for u in rr.get("users") or [] if u]
     teams = [t for t in rr.get("teams") or [] if t]
@@ -538,7 +544,8 @@ def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: li
     if mine and any(norm_login(u) == mine for u in users):
         return []
     others = [f"@{u}" for u in users]
-    others += [f"@{t}" for t in teams if not (set(me) & team_lanes(t, config))]
+    if not is_mine:
+        others += [f"@{t}" for t in teams if not (set(me) & team_lanes(t, config))]
     return others
 
 
@@ -748,7 +755,7 @@ def ownership(pr: dict, ctx: dict) -> dict:
         reasons.append("author:self")
         is_mine = False
     return {"lanes": lanes, "is_mine": is_mine, "reasons": reasons, "author_self": author_self,
-            "handed_off_to": handed_off_to(pr, approver, config, cfg.me)}
+            "handed_off_to": handed_off_to(pr, approver, config, cfg.me, is_mine)}
 
 
 def _quote_safe(text: str) -> str:

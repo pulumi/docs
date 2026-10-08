@@ -1,6 +1,6 @@
 ---
-title_tag: Make an Update | Kubernetes
-meta_desc: This page provides an overview on how to update a Kubernetes project from a Pulumi program.
+title_tag: Make an update | Kubernetes
+meta_desc: Update your Pulumi Kubernetes program to add a service for NGINX, deploy the change with pulumi up, and verify the deployment.
 title: Make an update
 h1: "Get started with Pulumi and Kubernetes"
 weight: 6
@@ -201,18 +201,18 @@ func main() {
 				return ""
 			}).(pulumi.StringOutput)
 		} else {
-      ip = frontend.Status.ApplyT(func(val *corev1.ServiceStatus) string {
-          if val.LoadBalancer.Ingress != nil && len(val.LoadBalancer.Ingress) > 0 {
-              ingress := val.LoadBalancer.Ingress[0]
-              if ingress.Ip != nil {
-                  return *ingress.Ip
-              }
-              if ingress.Hostname != nil {
-                  return *ingress.Hostname
-              }
-          }
-          return ""
-      }).(pulumi.StringOutput)
+			ip = frontend.Status.ApplyT(func(val *corev1.ServiceStatus) string {
+				if val.LoadBalancer.Ingress != nil && len(val.LoadBalancer.Ingress) > 0 {
+					ingress := val.LoadBalancer.Ingress[0]
+					if ingress.Ip != nil {
+						return *ingress.Ip
+					}
+					if ingress.Hostname != nil {
+						return *ingress.Hostname
+					}
+				}
+				return ""
+			}).(pulumi.StringOutput)
 		}
 
 		ctx.Export("ip", ip)
@@ -521,11 +521,16 @@ A `variable` block is how a Pulumi HCL program reads [configuration](/docs/iac/c
 
 {{% /choosable %}}
 
-Our program now creates a service to access the NGINX deployment, and requires a new [config](/docs/iac/concepts/config/) value to indicate whether the program is being deployed to Minikube or not.
+Your program now creates a service to access the NGINX deployment, and requires a new [config](/docs/iac/concepts/config/) value to indicate whether the program is being deployed to Minikube or not.
 
 The configuration value can be set for the stack using the `pulumi config set isMinikube <true|false>` command.
 
-If you are currently using Minikube, set `isMinikube` to `true`, otherwise, set `isMinikube` to `false` as shown in the following command.
+If you aren't using Minikube, set `isMinikube` to `false`. If you are using Minikube, it doesn't expose LoadBalancer services externally by default, so choose how you'll reach the service before you set the value:
+
+- **Use `minikube tunnel` (recommended):** Minikube can provide LoadBalancer support through the `minikube tunnel` command, which assigns an external IP to LoadBalancer services. In a separate terminal, run `minikube tunnel` and leave it running, then set `isMinikube` to `false`. Note that `minikube tunnel` may require administrator or `sudo` privileges.
+- **Use port forwarding:** Set `isMinikube` to `true`. The program creates a `ClusterIP` service instead, and you forward a local port to it after you deploy.
+
+For example, to set `isMinikube` to `false`:
 
 ```bash
 $ pulumi config set isMinikube false
@@ -572,7 +577,7 @@ Do you want to perform this update?
   details
 ```
 
-Select `yes` to proceed. Pulumi will create the new service resource:
+Select `yes` to proceed. Pulumi creates the new service resource:
 
 ```
 Do you want to perform this update? yes
@@ -635,7 +640,7 @@ kubernetes       ClusterIP   10.96.0.1        <none>        443/TCP   44h
 nginx-9e5d5cd4   ClusterIP   10.103.199.118   <none>        80/TCP    6m47s
 ```
 
-The assigned name for this particular nginx service is `nginx-9e5d5cd4`; yours will be different. In a new terminal window, run:
+The assigned name for this particular nginx service is `nginx-9e5d5cd4`. Yours will be different. In a new terminal window, run:
 
 ```bash
 $ kubectl port-forward service/nginx-9e5d5cd4 8080:80
