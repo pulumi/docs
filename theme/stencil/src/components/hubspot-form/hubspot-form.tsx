@@ -29,6 +29,13 @@ export class HubspotForm {
     @Prop()
     formId: string;
 
+    // A human-readable name for this form (e.g. "general", "sales", "demo"),
+    // forwarded to Segment on submission so multiple forms on one page (or
+    // multiple single-form pages) can be told apart in analytics. Optional:
+    // when unset, the submission event is sent exactly as it always has been.
+    @Prop()
+    formName?: string;
+
     // The salesforceCampaignId is the ID for the associated SalesForce Campaign.
     @Prop()
     salesforceCampaignId: string;
@@ -213,6 +220,10 @@ export class HubspotForm {
                 utmCampaign: utmData.campaign,
                 utmSource: utmData.source,
                 utmMedium: utmData.medium,
+                // Omitted rather than sent empty: pages that haven't set a
+                // formName keep submitting exactly the payload shape they
+                // always have.
+                ...(this.formName ? { formName: this.formName } : {}),
             };
             analytics.track("form-submission", submissionData);
         }

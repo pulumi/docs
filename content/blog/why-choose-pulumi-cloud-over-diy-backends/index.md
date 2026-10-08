@@ -21,7 +21,7 @@ Many companies are building internal developer platforms or modern infrastructur
 
 At Pulumi, we’re committed to open source&mdash;always have been; always will be. Pulumi IaC is [entirely open source](https://github.com/pulumi/pulumi) (Apache 2.0 license), meaning you can adopt and extend it however you like. If you’re new to Pulumi, the open source edition is an excellent way to start modernizing your infrastructure. But as your organization grows and the complexity of your environment increases, you may find yourself devoting significant time to rolling your own enterprise IaC backend features.
 
-That’s why we built [Pulumi Cloud](/product/pulumi-cloud/)&mdash;to help you avoid building and maintaining these capabilities from scratch while ensuring you can automate, secure, and manage your infrastructure at scale. Pulumi Cloud provides enterprise capabilities that make it easier to build modern infrastructure platforms. Companies receive increasing value from Pulumi Cloud as their organization and their infrastructure platforms grow in size and complexity.
+That’s why we built [Pulumi Cloud](/product/)&mdash;to help you avoid building and maintaining these capabilities from scratch while ensuring you can automate, secure, and manage your infrastructure at scale. Pulumi Cloud provides enterprise capabilities that make it easier to build modern infrastructure platforms. Companies receive increasing value from Pulumi Cloud as their organization and their infrastructure platforms grow in size and complexity.
 
 As companies expand or [platform engineering](/what-is/what-is-platform-engineering/) mandates become more expansive, challenges arise around collaboration, security, governance, and scaling. Some questions that need answering include:
 
@@ -51,7 +51,7 @@ Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering sea
 
 ### Scale
 
-Part of building an infrastructure platform is so your organization can scale and make it easy to onboard new developers. Pulumi Cloud integrates seamlessly with various [identity providers](/docs/administration/access-identity/oidc-issuers/) like Azure ActiveDirectory, Okta, G Suite, or any [SAML/SSO provider](/docs/administration/access-identity/saml/), offering deep support for role-based access control (RBAC) and SCIM for automatic synchronization and revocation of access based on identity provider groups. Audit logs keep track of developer activity within an organization, recording what actions were taken, when, and by whom.
+Part of building an infrastructure platform is so your organization can scale and make it easy to onboard new developers. Pulumi Cloud integrates seamlessly with various [identity providers](/docs/administration/concepts/identity-providers/) like Azure ActiveDirectory, Okta, G Suite, or any [SAML/SSO provider](/docs/administration/guides/saml/), offering deep support for role-based access control (RBAC) and SCIM for automatic synchronization and revocation of access based on identity provider groups. Audit logs keep track of developer activity within an organization, recording what actions were taken, when, and by whom.
 
 Pulumi Cloud also makes it easy to [build developer portals](/product/internal-developer-platforms/) for developer self-service. Organization Templates can provide a centralized repository for cloud components, best practices and configurations. The New Project Wizard also provides a gallery interface to pick a template and easily walk through configuration and deployment of the infrastructure.
 

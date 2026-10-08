@@ -24,8 +24,9 @@
 #      same page carries a heading anchor `{#copilot}` a rename would break.
 #   2. "Some replacements can't be automated." "Insights" resolves to the
 #      Discovery *product* in most sentences but to the "Discovery &
-#      governance" *category* in others (its own row in the brand table), and
-#      the docs IA still lives under /docs/insights/.
+#      governance" *category* in others (its own row in the brand table), so
+#      the swap still needs a human to pick which one the sentence means. The
+#      docs IA moved to /docs/discovery-governance/ in #21461.
 #
 # Neither case needs the rule demoted. A 🚨 finding is "resolve or refute", so
 # the historical-prose author refutes it in one line; and review-existing-
@@ -91,3 +92,12 @@ swap:
   '(?-i)\bInsights Policy\b': Pulumi Policies
   '(?-i)\bInsights Discovery\b': Discovery
   '(?-i)\bAccount Discovery\b': Discovery
+  # One alternation, so "Pulumi Crosswalk for AWS" is a single finding with a
+  # single replacement rather than overlapping matches. Case-sensitive: a
+  # lowercase "crosswalk" is ordinary English.
+  '(?-i)\b(?:Pulumi )?Crosswalk(?: for AWS)?\b': AWSx
+  # Retired edition name. Hedged tier because the brand guide allows the old
+  # names where content is specifically about customers still on the earlier
+  # pricing ("Organizations on the legacy Business Critical edition ...").
+  # Case-sensitive: "business critical workloads" is ordinary prose.
+  '(?-i)\bBusiness Critical\b': Enterprise

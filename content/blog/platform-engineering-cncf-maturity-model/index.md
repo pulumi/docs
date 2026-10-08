@@ -129,7 +129,7 @@ If you're interested in learning more about platform engineering and getting inv
 
 - Register for the [Platform Engineering workshop series course](https://info.pulumi.com/platform-engineering-workshop-series).
 - Join the bi-weekly [CNCF Platform Working Group meetings](https://tag-app-delivery.cncf.io/wgs/platforms/#meetings) every other Tuesday at 5 PM Berlin time (11 AM ET).
-- Learn how to [build Developer Portals with Pulumi](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/). You can get off the ground faster with organization templates, a new project wizard, or leveraging the backstage plugin.
+- Learn how to [build Developer Portals with Pulumi](/docs/idp/concepts/). You can get off the ground faster with organization templates, a new project wizard, or leveraging the backstage plugin.
 
 ---
 

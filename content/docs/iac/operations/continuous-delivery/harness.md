@@ -191,7 +191,7 @@ spec:
       - "~/.pulumi/plugins"
 ```
 
-On self-managed build infrastructure, use the [`Save Cache`/`Restore Cache` steps](https://developer.harness.io/docs/category/share-and-cache-ci-data) to store the same directory in an [S3](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/saving-cache/) or [GCS](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/save-cache-in-gcs/) bucket.
+On self-managed build infrastructure, use the `Save Cache`/`Restore Cache` steps to store the same directory in an [S3](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/saving-cache/) or [GCS](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/save-cache-in-gcs/) bucket.
 
 The most deterministic option is to bake the plugins into a custom builder image: derive it from `pulumi/pulumi`, `pulumi plugin install` the providers your program uses, and reference that image from the `Run` step instead of `pulumi/pulumi`. See the [plugins documentation](/docs/iac/concepts/plugins/) for details.
 

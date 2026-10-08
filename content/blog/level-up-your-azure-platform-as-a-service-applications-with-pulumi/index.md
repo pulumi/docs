@@ -135,7 +135,7 @@ appropriate types: `ResourceGroup` and `Account` in this example.
 
 If an application is developed to run and evolve for months and years,
 it's smart to invest in practices like Continuous Integration and
-Deployment (CI/CD) and Infrastructure as Code (IaC). It's quite likely
+Deployment (CI/CD) and infrastructure as code (IaC). It's quite likely
 that such an application will run in multiple environments: production,
 staging, development, and so on.
 
@@ -213,7 +213,7 @@ tiers based on the target environment identified by the stack name.
 App Service is a mature Azure service with a long history, so it has
 numerous options for deployment methods. Arguably, the newest
 [Run from Package](https://github.com/Azure/app-service-announcements/issues/110)
-is the most friendly way to practice Infrastructure as Code automation.
+is the most friendly way to practice infrastructure as code automation.
 
 Essentially, I prepare a zip file with the published .NET Core
 assemblies and upload it to Azure Blob Storage:

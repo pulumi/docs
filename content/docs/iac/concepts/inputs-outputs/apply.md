@@ -8,9 +8,6 @@ menu:
         name: Apply
         parent: iac-concepts-inputs-outputs
         weight: 1
-    concepts:
-        weight: 2
-        parent: inputs-outputs
 aliases:
     - /docs/concepts/inputs-outputs/apply/
 ---
@@ -28,6 +25,10 @@ For more information about what outputs are and why they are necessary in Pulumi
 
 {{% notes type="info" %}}
 The `apply` method is designed for accessing single output values. If you need to access multiple output values across multiple resources, use Pulumi's [`all` method](/docs/iac/concepts/inputs-outputs/all/) instead.
+{{% /notes %}}
+
+{{% notes type="info" %}}
+Seeing placeholder text like `Calling [toString] on an [Output<T>] is not supported` in a log line, a generated file, or a resource property instead of the value you expected? See [Output value errors](/docs/iac/operations/troubleshooting/output-values/) for a rundown of this and other symptoms of treating an output as if it were already a plain value.
 {{% /notes %}}
 
 {{% notes type="warning" %}}

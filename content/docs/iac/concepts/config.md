@@ -8,8 +8,6 @@ menu:
         name: Configuration
         parent: iac-concepts
         weight: 40
-    concepts:
-        weight: 6
 aliases:
 - /docs/reference/config/
 - /docs/tour/programs-configuration/
@@ -109,7 +107,7 @@ For potentially secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi
 
 Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -194,6 +192,38 @@ config:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+In Pulumi HCL, configuration is the program's `variable` blocks. A variable with no `default` is required, and a `default` makes it optional; `sensitive = true` makes the value a [secret](/docs/iac/concepts/secrets/):
+
+```hcl
+variable "name" {
+  type = string
+}
+
+variable "lucky" {
+  type    = number
+  default = 42
+}
+
+variable "secret" {
+  type      = string
+  sensitive = true
+}
+```
+
+Reference the values elsewhere in the program as `var.name`, `var.lucky`, and `var.secret`.
+
+{{% notes type="info" %}}
+Pulumi HCL variables always read from the project's own namespace, so a value set without
+an explicit namespace — `pulumi config set name Joe` — resolves to `<project>:name` and
+reaches `var.name`. Variables also load from `terraform.tfvars` and `*.auto.tfvars` files
+and from `TF_VAR_<name>` environment variables; see
+[Setting variable values](/docs/iac/languages-sdks/hcl/hcl-language-reference/#setting-variable-values)
+for the full priority order.
+{{% /notes %}}
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -207,7 +237,7 @@ config:
 
 Given that configuration, the following shows how to read the value from within your Pulumi program:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -257,12 +287,40 @@ variables:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+A `variable` block only reads the project's own namespace, so a value set under another namespace, such as `aws:region`, is not reachable as `var.region`. The default AWS provider, which the program uses when it has no `provider "aws"` block, reads `aws:region` from stack configuration on its own. To use the region as a value in the program, read it back from the provider with the `aws_region` data source:
+
+```hcl
+data "aws_region" "current" {}
+
+locals {
+  aws_region = data.aws_region.current.region
+}
+```
+
+A `provider "aws"` block does not read `aws:region` from stack configuration, so set its arguments in the block. To keep the region in stack configuration, declare it as a project variable and pass it through:
+
+```hcl
+variable "region" {
+  type    = string
+  default = "us-west-2"
+}
+
+provider "aws" {
+  region = var.region
+}
+```
+
+Set it with `pulumi config set region us-east-1`.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/iac/concepts/components/), pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -273,7 +331,7 @@ class MyComponent extends pulumi.ComponentResource {
 
         // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
         const config = new pulumi.Config("mylib");
-        const name = config.require("name");
+        const configuredName = config.require("name");
     }
 }
 ```
@@ -289,10 +347,9 @@ class MyComponent(pulumi.ComponentResource):
 
         # Read settings from the 'mylib' namespace (e.g., 'mylib:name').
         config = pulumi.Config("mylib")
-        name = config.require("name")
+        configured_name = config.require("name")
 
         # ...
-
 ```
 
 {{% /choosable %}}
@@ -313,7 +370,7 @@ func NewMyComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOpt
 
     // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
     conf := config.New(ctx, "mylib")
-    name := conf.Require("name")
+    configuredName := conf.Require("name")
 
     // ...
 }
@@ -332,7 +389,7 @@ class MyComponent : Pulumi.ComponentResource
 
         // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
         var config = new Pulumi.Config("mylib");
-        var name = config.Require("name");
+        var configuredName = config.Require("name");
 
         // ...
     }
@@ -353,12 +410,38 @@ class MyComponent extends ComponentResource {
 
         // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
         var config = ctx.config("mylib");
-        var name = config.require("name");
+        var configuredName = config.require("name");
 
         // ...
     }
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+Pulumi HCL reaches the same isolation through [modules](/docs/iac/languages-sdks/hcl/hcl-language-reference/#modules) rather than a namespace argument. Only the root module reads stack configuration, so a module declares the settings it accepts as its own `variable` blocks and the caller supplies them:
+
+```hcl
+# modules/mylib/main.tf
+variable "name" {
+  type = string
+}
+```
+
+```hcl
+# main.tf
+variable "mylib_name" {
+  type = string
+}
+
+module "mylib" {
+  source = "./modules/mylib"
+  name   = var.mylib_name
+}
+```
+
+A module's variables are never read from stack config directly. Leaving `name` unset in the `module` block is an error even when `mylib:name` is set.
 
 {{% /choosable %}}
 
@@ -377,7 +460,7 @@ $ pulumi config set --path 'data.nums[1]' 2
 $ pulumi config set --path 'data.nums[2]' 3
 ```
 
-The structure of `data` is persisted in the stack's `Pulumi.<stack-name>.yaml` file as:
+The structure of `data` is persisted in the stack's `Pulumi.<stack-name>.yaml` file. Note the types: `true` and `false` are persisted as boolean values, and values convertible to integers are persisted as integers.
 
 ```yaml
 config:
@@ -389,11 +472,9 @@ config:
     - 3
 ```
 
-For structured config, `true` and `false` values are persisted as boolean values, and values convertible to integers are persisted as integers.
-
 The `data` config can be accessed in your Pulumi program using:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -492,12 +573,32 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+Declare the key as a variable with an object type constraint. Values set with `pulumi config set --path` populate it, and the type constraint is checked as the value is loaded:
+
+```hcl
+variable "data" {
+  type = object({
+    active = bool
+    nums   = list(number)
+  })
+}
+
+resource "aws_s3_bucket" "my_bucket" {
+  tags = {
+    Active = var.data.active
+  }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 ### Accessing nested values
 
-`requireObject` and `getObject` return a plain object — a dictionary or map, depending on the language — and not a `Config` instance. So once you have the object, reach into it with ordinary property or key access rather than chaining more `Config` calls. Nesting can go deeper than one level, as in this `api` key:
+`requireObject` and `getObject` return a plain object — a dictionary or map, depending on the language — and not a `Config` instance. Once you have the object, reach into it with ordinary property or key access rather than chaining more `Config` calls. Nesting can go deeper than one level, as in this `api` key:
 
 ```bash
 $ pulumi config set --path 'api.endpoint' "https://api.example.com"
@@ -508,7 +609,7 @@ $ pulumi config set --path 'api.headers.content-type' "application/json"
 
 Read the whole `api` object once, then walk it:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -627,12 +728,35 @@ outputs:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+Nest the type constraint as deeply as the value goes, then reach into the variable with ordinary attribute and index access:
+
+```hcl
+variable "api" {
+  type = object({
+    endpoint = string
+    timeout  = number
+    headers  = map(string)
+  })
+}
+
+locals {
+  endpoint    = var.api.endpoint                  # "https://api.example.com"
+  timeout     = var.api.timeout                   # 30
+  auth_header = var.api.headers["authorization"]  # "Bearer token123"
+}
+```
+
+An `object({...})` constraint fixes the set of attributes, while a `map(string)` accepts any key, so `headers` can hold whatever header names you set.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 ## Project-level configuration
 
-Some configuration is the same for more than one stack in a project — `aws:region`, for example, is often shared across several stacks or all of them. Project-level configuration (also called hierarchical configuration) lets you set such values once at the project level instead of repeating them in every stack's configuration file.
+Some configuration is the same for more than one stack in a project — `aws:region`, for example, is often shared by every stack in the project. Project-level configuration (also called hierarchical configuration) lets you set such values once at the project level instead of repeating them in every stack's configuration file.
 
 ### Setting project-level configuration
 
@@ -653,7 +777,7 @@ Project-level configuration supports both flat and structured configuration, in 
 Watch for this difference when you move configuration between the two files.
 {{% /notes %}}
 
-Using the keys from the earlier examples, project-level configuration inside `Pulumi.yaml` looks like this:
+Using the keys from the earlier examples, and applying the `value:` wrapper that project-level structured config requires, project-level configuration inside `Pulumi.yaml` looks like this:
 
 ```yaml
 config:
@@ -704,15 +828,15 @@ For example, given this in the `Pulumi.yaml` file:
 
 ```yaml
 config:
-    name:
-        type: string
-        description: Base name to use for resources.
-        default: BroomeLLC
-    subnets:
-        type: array
-        description: Array of subnets to create.
-        items:
-            type: string
+  name:
+    type: string
+    description: Base name to use for resources.
+    default: BroomeLLC
+  subnets:
+    type: array
+    description: Array of subnets to create.
+    items:
+      type: string
 ```
 
 Stacks default to `BroomeLLC` for the `name` configuration item, and the Pulumi CLI reports an error if a stack configuration file sets `name` to, say, an integer. The CLI reports an error in the same way if a stack's `subnets` property is not an array of strings.
@@ -723,7 +847,7 @@ At this time, configuration specifications are not supported for structured conf
 
 ## Provider configuration options
 
-There are three ways to configure providers:
+You can configure providers in three ways:
 
 1. Set configuration keys in the stack configuration file: `pulumi config set [PROVIDER]:[KEY] [VALUE]`
 2. Set a provider-specific environment variable
@@ -733,6 +857,7 @@ Note the following:
 
 * Only the default provider reads configuration file settings. A provider object that you instantiate yourself does not read values from the stack configuration.
 * The precedence of configuration sources (configuration file, environment, and constructor arguments) can vary between providers. Refer to the provider's documentation for its specific rules.
+* Default providers can be turned off for some or all packages with the [`pulumi:disable-default-providers`](/docs/iac/concepts/config/#pulumidisable-default-providers) key, described below.
 
 ## Pulumi configuration options
 
@@ -766,9 +891,9 @@ config:
 
 The Pulumi CLI only creates or updates tags listed in the config. If you remove a tag from the stack config, remove it from the stack in Pulumi Cloud manually as well.
 
-Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overview tab:
+Stack tags applied by the Pulumi CLI are listed in the **Tags** section of the Overview tab:
 
-![Tags applied by Pulumi CLI](/images/docs/concepts/stack-config-tags.png)
+![Tags applied by the Pulumi CLI](/images/docs/concepts/stack-config-tags.png)
 
 ## Using Pulumi ESC from Pulumi stack config
 
@@ -783,7 +908,7 @@ Once you have an [environment](/docs/esc/concepts/) set up and are [projecting P
 environment:
   - test
 config:
-    # normal pulumi config
+  # normal pulumi config
 ```
 
 When a key is set both by an imported environment and explicitly in your stack configuration, the explicit stack value takes precedence. See [Precedence](/docs/esc/concepts/outputs/#precedence-1) for the full rules.

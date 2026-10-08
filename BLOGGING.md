@@ -229,6 +229,20 @@ Readers can click an image to see it full size in an overlay, but only where tha
 
 The same applies to videos added with the [`video` shortcode](#video) below, which is worth knowing when you record one: a clip shot at 1080p is being squeezed into the ~768px content column, and readers can open it at full size, so record at a comfortably higher resolution than the column rather than at the column's width. The enlarged copy always gets playback controls, even though the clip in the post body has none, so readers can pause and scrub there. Clips you give `controls="true"` are left out of this altogether — their controls already include a fullscreen button.
 
+#### Diagrams
+
+For diagrams, prefer [Mermaid](https://mermaid.js.org/) over ASCII art or a static image — it's version-controlled, editable, and renders natively on the site. Drop a ` ```mermaid ` fenced code block into the post body and the Hugo code-block hook (`layouts/_default/_markup/render-codeblock-mermaid.html`) renders it; there's no shortcode or import to add.
+
+```` markdown
+```mermaid
+flowchart LR
+    Dev["Your program"] --> Engine["Pulumi engine"]
+    Engine --> Cloud["Cloud provider"]
+```
+````
+
+See [`content/blog/incident-response-as-code-pagerduty-pulumi/`](https://github.com/pulumi/docs/tree/master/content/blog/incident-response-as-code-pagerduty-pulumi) for a post that uses one, and the [Mermaid docs](https://mermaid.js.org/) for the full syntax (flowcharts, sequence diagrams, state diagrams, and more).
+
 #### Social ("Meta") and Feature Images
 
 > [!IMPORTANT]

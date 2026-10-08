@@ -35,7 +35,7 @@ jobs:
         node-version:
           - 24.x
         python-version:
-          - 3.9
+          - "3.12"
         dotnet-version:
           - 8.0.x
         java-version:
@@ -73,7 +73,7 @@ jobs:
           go-version: ${{ matrix.go-version }}
 
       - name: Install Java
-        uses: actions/setup-java@v5.6.0
+        uses: actions/setup-java@v6.0.1
         with:
           distribution: temurin
           java-version: ${{ matrix.java-version }}

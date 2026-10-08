@@ -87,16 +87,11 @@ diagrams:
 customer_logos:
   title: Organizations practicing infrastructure CI/CD with Pulumi
   logos:
-    - name: sans
-      link: /case-studies/sans-institute
-    - name: skai
-      link: /blog/kenshoo-migrates-to-aws-with-pulumi
-    - name: atlassian
-      link: /case-studies/atlassian
-    - name: panther-labs
-      link: /case-studies/panther-labs
-    - name: whylabs
-      link: /case-studies/whylabs
+    - sans-institute
+    - skai
+    - atlassian
+    - panther-labs
+    - whylabs
 
 get_started:
     title: Getting started

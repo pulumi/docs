@@ -2,11 +2,11 @@
 {{ end }}
 
 {{ define "main" }}
-    {{- /* Case-study industry term page, at /case-studies/industry/<slug>/.
-        Renders the SAME shared board as the /case-studies/ index (hero + filter
-        bar + every card), pre-filtered to this industry: the matching pill is
-        active and non-matching cards are server-hidden. Navigating between the
-        index and here (or between industries) is a same-page URL swap driven by
-        case-studies-list.ts — this is the no-JS / crawler / reload fallback. */ -}}
-    {{ partial "case-studies/board.html" (dict "active" .Data.Term) }}
+    {{- /* Industry term page, at /customers/industry/<slug>/. Renders the SAME
+        shared board as the /customers/ index (hero + filter bar + every cell),
+        pre-filtered to this industry: the matching pill is active and
+        non-matching cells are server-hidden. Navigating between the index and
+        here (or between industries) is a same-page URL swap driven by
+        customers-list.ts — this is the no-JS / crawler / reload fallback. */ -}}
+    {{ partial "customers/board.html" (dict "active" .Data.Term) }}
 {{ end }}

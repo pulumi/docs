@@ -8,9 +8,10 @@ import { supportFormHandler } from "./support-form/handler";
 
 // SupportFormApi is the server side of the support-request form at
 // /support/new/ — a Lambda (fronted by a Function URL) that validates
-// submissions and files them as Intercom tickets. See support-form/handler.ts
-// for the endpoint's behavior, support-form/intercom.ts for the ticket-filing
-// client, and support-form/validation.ts for the payload contract.
+// submissions and files them as Intercom conversations. See
+// support-form/handler.ts for the endpoint's behavior, support-form/intercom.ts
+// for the conversation-filing client, and support-form/validation.ts for the
+// payload contract.
 //
 // The Function URL uses authorizationType NONE, so it is technically publicly
 // invokable — but the handler rejects any request that doesn't carry the
@@ -26,9 +27,6 @@ export interface SupportFormApiArgs {
     // (pulumi config set --secret intercomApiKey, or an ESC environment
     // entry) — never checked into this repo or shipped to the frontend.
     intercomApiKey: pulumi.Input<string>;
-    // intercomTicketTypeId is the Intercom ticket type filed for support
-    // requests.
-    intercomTicketTypeId: pulumi.Input<string>;
 }
 
 export class SupportFormApi extends pulumi.ComponentResource {
@@ -120,7 +118,6 @@ export class SupportFormApi extends pulumi.ComponentResource {
                     variables: {
                         SUPPORT_FORM_ORIGIN_SECRET: this.originSecret.result,
                         INTERCOM_API_KEY: args.intercomApiKey,
-                        INTERCOM_TICKET_TYPE_ID: args.intercomTicketTypeId,
                     },
                 },
             },

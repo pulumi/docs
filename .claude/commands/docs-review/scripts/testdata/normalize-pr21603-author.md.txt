@@ -1,0 +1,62 @@
+<!-- CLAUDE_REVIEW 1/1 -->
+<!-- CLAUDE_REVIEW_AUTHOR -->
+<!-- CLAUDE_REVIEW_HEAD 0244eb6a718b6b0434ef265ad103de302dddee40 -->
+## Author action guide v1 — 1 item blocks merge
+
+> [!IMPORTANT]
+> **You = the PR author.** This review needs your answers before this PR can merge. Fix each item below, or tell the review why it's wrong — **How to answer** at the bottom shows exactly what to type. Answering unblocks the review; a human reviewer still approves the merge.
+
+_This PR is a prose polish of the AWS API Gateway guide — sentence-case headings, clearer wording, and a duplicated code example replaced with a cross-reference — and the review checked every factual claim the new wording makes, the page's links and shortcodes, and the anchors behind the renamed headings._
+
+### 🚨 Fix or disagree
+
+_Nothing to fix — this section is empty._
+
+### ❓ Questions for you
+
+| ID | Where | Finding |
+|---|---|---|
+| **F1** | [`content/docs/iac/guides/clouds/aws/api-gateway.md` L319](https://github.com/pulumi/docs/pull/21603/files#diff-9f0eedf1b0ac5a433588dca515590d8124c75ff900842d8b581a22c1ddab03ebR319) · [✏️ edit](https://github.com/pulumi/docs/edit/content-review/glowup-docs-iac-guides-clouds-aws-api-gateway/content/docs/iac/guides/clouds/aws/api-gateway.md) | *"You can configure a custom domain name for an API Gateway instance (such as `api.example.com`) and customize the base path of the URL to be something other…"* — verdict: unverifiable; framing: Cited source (CloudFront landing page) does not address API Gateway custom domain names or base path mapping; **Mis-sourced:** the CloudFront landing page was checked against the wrong half of the sentence. That link is cited for the CDN that API Gateway provisions, not for custom domain names or base path mapping; the custom-domain behavior is sourced two paragraphs later, from the AWS "Set up Custom Domain Name for an API in API Gateway" guide the page already links. The sentence is also unchanged by this PR apart from renaming "Content Distribution Network" to CloudFront's current name, "content delivery network". |
+
+_Editing in the browser? The ✏️ links open the file in GitHub's editor — Ctrl+F for the quoted line._
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<!-- REVIEW_STATE {"findings":{},"high_water":1,"schema":1} -->
+<!-- The block above stores dispositions only; a finding ID absent from it is OPEN. Machines parse the JSON block, not this note. -->
+
+<sub>Review v1 · updated 2026-09-14T14:31:46Z · head commit 0244eb6</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+### How to answer
+
+Every 🚨 and ❓ item above needs one of these before merge:
+
+1. **Fix it** — push the change. If your push lines up with the flagged lines, this card shows a 🔄 banner within a minute and then refreshes itself. No banner? Comment:
+
+   ```text
+   @claude I pushed a fix for F1 #update-review
+   ```
+
+1. **Disagree with it** — say which item and why; the review re-checks with your input:
+
+   ```text
+   @claude F2: <your reasoning — e.g. where the figure comes from> #update-review
+   ```
+
+   Either way your answer counts: the review marks the item resolved, or keeps it with a 🛡️ note for your human reviewer to weigh — it stops blocking merge in both cases.
+
+1. **Accept it as-is** — you own the PR; a one-line reason is a valid answer, and your reviewer sees it beside the finding:
+
+   ```text
+   @claude F2: accepting as-is — <your reason> #update-review
+   ```
+
+   To accept every open item at once: `@claude accepting all open items — <reason> #update-review`.
+
+The `#update-review` hashtag matters — it routes your reply to this review, and (besides pushing a fix) **it is the only reply that unblocks merge**. A bare `@claude` gets you ad-hoc help and leaves this card — and the merge block — untouched.
+
+Please don't edit, hide, or delete this comment — it is the review's record. Full mechanics: [CONTRIBUTING.md §AI-assisted contributions](https://github.com/pulumi/docs/blob/master/CONTRIBUTING.md#ai-assisted-contributions).

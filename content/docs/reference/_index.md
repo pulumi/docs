@@ -106,7 +106,7 @@ sections:
 
   - icon: link
     heading: Property Paths
-    description: Reference for property path syntax used in resource options, ESC, and Insights.
+    description: Reference for property path syntax used in resource options, ESC, and Discovery.
     link: /docs/reference/property-paths/
 
 - type: button-cards
@@ -114,7 +114,7 @@ sections:
   cards:
   - icon: package
     heading: Package Registry
-    description: Browse packages for AWS, Azure, Google Cloud, Kubernetes, and 120+ providers.
+    description: Browse packages for AWS, Azure, Google Cloud, Kubernetes, and hundreds of providers.
     link: /registry/
 
 - type: flat

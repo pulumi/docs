@@ -20,7 +20,7 @@ pulumi_cloud_feature: scim
 
 This document outlines the steps required to configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.
 
-For the capabilities and attributes Pulumi's SCIM implementation supports, see [Pulumi Cloud & SCIM](/docs/administration/guides/scim/#capabilities).
+For the capabilities and attributes Pulumi's SCIM implementation supports, see [SCIM provisioning](/docs/administration/concepts/scim/#capabilities).
 
 ## Prerequisites
 
@@ -39,10 +39,10 @@ For the capabilities and attributes Pulumi's SCIM implementation supports, see [
 Under the **Admin Credentials** section of the **Provisioning** feature, fill out the form as follows:
 
 * **Tenant URL**: `https://api.pulumi.com/scim/v2/{orgName}`, where `{orgName}` must be replaced with your organization’s login name (not display name). If you do not know this, navigate to your SAML settings and look at the SSO URL. It will have your organization’s login name in the URL.
-* **Secret Token**: You will use a token from the [Pulumi Cloud](https://app.pulumi.com/signin) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Cloud, select **Settings**, then **Access Management**, and then in the **SCIM** section, generate a new token if you have never generated one for your org or regenerate it if you have already done so in the past.
+* **Secret Token**: You will use a token from [Pulumi Cloud](https://app.pulumi.com/signin) as the authorization bearer token. To generate a token, navigate to your org in Pulumi Cloud, select **Settings**, then **Access Management**, and then in the **SCIM** section, generate a new token if you have never generated one for your org or regenerate it if you have already done so in the past.
 
 {{% notes type="info" %}}
-Once you generate the token, save it securely. Neither the Pulumi Cloud nor Pulumi support can retrieve a token once it's been initially generated. If you lose and need the SCIM token again, you'll have to generate a new token, invalidating any previous tokens for your Pulumi organization.
+Once you generate the token, save it securely. Neither Pulumi Cloud nor Pulumi support can retrieve a token once it's been initially generated. If you lose and need the SCIM token again, you'll have to generate a new token, invalidating any previous tokens for your Pulumi organization.
 {{% /notes %}}
 
 Select **Test Connection**. You should get a success notification once the connection is successful.

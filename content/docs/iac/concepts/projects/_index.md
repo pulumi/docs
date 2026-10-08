@@ -9,9 +9,6 @@ menu:
         parent: iac-concepts
         weight: 20
         identifier: iac-concepts-projects
-    concepts:
-        identifier: projects
-        weight: 1
 
 aliases:
 - /docs/reference/project/
@@ -180,7 +177,7 @@ The path returned is an absolute path. When using this in resource properties, e
 
 The {{< pulumi-getproject >}} function returns the name of the currently deploying project. This can be useful for naming or tagging resources.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -222,6 +219,15 @@ var project = ctx.projectName();
 ```yaml
 variables:
   project: ${pulumi.project}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  project = pulumi.project
+}
 ```
 
 {{% /choosable %}}

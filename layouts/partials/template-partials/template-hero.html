@@ -9,7 +9,12 @@
     - title: Hero headline, authored as a single markdown string. *Emphasis* (or
              **strong**) renders the enclosed run in violet — same color, same
              weight, no italics — and <br> forces a line break, e.g.
-             "*Infrastructure as code*<br>in any language."
+             "*Infrastructure as code* <br>in any language." A leading space
+             before <br> is no longer required for text-extraction purposes:
+             this partial inserts a non-breaking space before the break itself
+             (see functions/heading-br-space.html), so the rendered text stays
+             separable even after the production `hugo --minify` build strips
+             ordinary whitespace next to <br>.
     - description: Hero description
     - cta_primary_text: Primary CTA button text (defaults to site.Params.cta.primary.label)
     - cta_primary_link: Primary CTA button link (defaults to site.Params.cta.primary.href)
@@ -116,7 +121,7 @@
 
 {{ if eq $layout "split" }}
 <section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="flex flex-col xl:flex-row items-center justify-between gap-12">
+    <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-12">
         <div class="xl:w-1/2 flex flex-col items-start">
             {{ if or $badgeText $badgeHighlightText }}
             <a href="{{ $badgeLink }}" class="font-overline flex-wrap inline-flex items-center gap-1 border border-violet-300 rounded-full py-3 px-5 no-underline hover:border-violet-500 transition-colors">
@@ -130,7 +135,7 @@
             </div>
             {{ end }}
             {{ with $title }}
-            <h1 class="product-hero-heading text-left">{{ . | markdownify }}</h1>
+            <h1 class="product-hero-heading text-left">{{ partial "functions/heading-br-space.html" . | markdownify }}</h1>
             {{ end }}
             {{ if or $dateAndLocation $booth }}
             <p class="hero-event-details mb-8">
@@ -165,11 +170,11 @@
             {{ end }}
         </div>
         {{ if eq $heroVisual "animation" }}
-        <div class="xl:w-1/2 w-full flex justify-end">
+        <div class="xl:w-1/2 w-full flex xl:justify-end">
             {{ partial (printf "template-partials/hero-animation/%s.html" $heroAnimation) . }}
         </div>
         {{ else if eq $heroVisual "code" }}
-        <div class="xl:w-1/2 w-full flex justify-end">
+        <div class="xl:w-1/2 w-full flex xl:justify-end">
             {{ if or $codeAspectRatio $overlayImage }}
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
                 <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
@@ -218,7 +223,7 @@
     <div class="flex flex-col items-center gap-12">
         <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
             {{ with $title }}
-            <h1 class="product-hero-heading">{{ . | markdownify }}</h1>
+            <h1 class="product-hero-heading">{{ partial "functions/heading-br-space.html" . | markdownify }}</h1>
             {{ end }}
             {{ if $description }}
             <p class="product-hero-description mb-10">{{ $description | markdownify }}</p>

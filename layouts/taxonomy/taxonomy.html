@@ -1,8 +1,13 @@
 {{ define "main" }}
-    {{- /* Generic fallback taxonomy term template. Every blog taxonomy (tag,
-        author, category) has its own template, so this is rarely hit; it renders
-        the shared blog header + list rows for any other term. */ -}}
-    {{ partial "blog/header.html" (dict "title" (printf "%s: %s" (.Data.Singular | title) (.Data.Term | humanize)) "url" .RelPermalink "context" .) }}
+    {{- /* Generic fallback for a taxonomy with no <singular>.html (term pages)
+        or no <singular>.terms.html (the list page). Every current taxonomy has
+        both, so nothing renders through this today. The crumb branches because
+        .Data.Term is empty on a list page. */ -}}
+    {{ $crumb := .Title }}
+    {{ if eq .Kind "term" }}
+        {{ $crumb = printf "%s: %s" (.Data.Singular | title) (.Data.Term | humanize) }}
+    {{ end }}
+    {{ partial "blog/header.html" (dict "title" $crumb "url" .RelPermalink "context" .) }}
 
     <div class="container mx-auto px-4 py-8 lg:py-12">
         {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}

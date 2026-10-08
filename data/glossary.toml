@@ -7,6 +7,16 @@ description = "A resource option that lets a resource keep its identity in [stat
 link = "/docs/iac/concepts/resources/options/aliases/"
 
 [[entries]]
+term = "Archive"
+description = "A built-in Pulumi type representing a collection of files passed to a [resource](#resources) input, such as a serverless function's code bundle. An archive's contents come from a folder or archive file on disk, a remote URI, or a map of other [assets](#asset) and archives."
+link = "/docs/iac/concepts/assets-archives/#archives"
+
+[[entries]]
+term = "Asset"
+description = "A built-in Pulumi type representing a single file passed to a [resource](#resources) input. An asset's contents come from a string in memory, a file on disk, or a remote URI. See also [archive](#archive)."
+link = "/docs/iac/concepts/assets-archives/#assets"
+
+[[entries]]
 term = "Audit Log"
 description = "An immutable record of user and service activity in a [Pulumi Cloud](#pulumi-cloud) [organization](#organization). Audit logs are available to organization admins and can be exported via the CLI or REST API."
 link = "/docs/administration/concepts/audit-logs/"
@@ -35,6 +45,11 @@ link = "/docs/iac/concepts/components/"
 term = "Config"
 description = "Per-[stack](#stack) key-value settings that a Pulumi [program](#program) reads at runtime. Configuration values are stored as strings but can be parsed as richer types, and they can be marked as [secrets](#secrets) so they are encrypted at rest and in transit."
 link = "/docs/iac/concepts/config/"
+
+[[entries]]
+term = "Customer-managed runner"
+description = "A runner you host in your own infrastructure, instead of a Pulumi-managed runner, that executes [Pulumi Deployments](#pulumi-deployments) operations, Discovery scans, and audit policy evaluations. Runners are grouped into runner pools, and each stack, cloud account, or audit policy group can be assigned a pool. The CLI, REST API, and RBAC scopes call a runner pool an agent pool."
+link = "/docs/administration/concepts/customer-managed-runners/"
 
 [[entries]]
 term = "Deployment Engine"
@@ -134,7 +149,7 @@ link = "/docs/iac/concepts/packages/"
 [[entries]]
 term = "Pulumi Policies"
 description = "Governance rules written as code (in TypeScript, Python, or supported policy languages) that Pulumi enforces against infrastructure. Policies can run during `pulumi preview` and `pulumi up` and against [resources](#resources) discovered by [Pulumi Discovery](#pulumi-discovery), regardless of how they were created."
-link = "/docs/insights/policy/"
+link = "/docs/discovery-governance/concepts/policy-as-code/"
 
 [[entries]]
 term = "Preview"
@@ -168,7 +183,7 @@ link = "/product/pulumi-cloud/"
 
 [[entries]]
 term = "Pulumi Deployments"
-description = "A managed remote execution service in [Pulumi Cloud](#pulumi-cloud) that runs Pulumi operations (`up`, `preview`, `refresh`, `destroy`) on Pulumi-hosted or [self-hosted](#self-hosted) agents. Deployments power Git push-to-deploy, scheduled [drift detection](#drift-detection), [review stacks](#review-stacks), and click-to-deploy templates."
+description = "A managed remote execution service in [Pulumi Cloud](#pulumi-cloud) that runs Pulumi operations (`up`, `preview`, `refresh`, `destroy`) on Pulumi-managed or [customer-managed runners](#customer-managed-runner). Deployments power Git push-to-deploy, scheduled [drift detection](#drift-detection), [review stacks](#review-stacks), and click-to-deploy templates."
 link = "/docs/deployments/"
 
 [[entries]]
@@ -179,7 +194,7 @@ link = "/docs/esc/"
 [[entries]]
 term = "Pulumi Discovery"
 description = "The discovery half of [Pulumi Cloud](#pulumi-cloud)'s Discovery & governance capabilities. It discovers [resources](#resources) across all your cloud accounts (including those Pulumi did not create), provides a searchable resource graph, and makes them available to [Pulumi Policies](#pulumi-policies) for evaluation."
-link = "/docs/insights/"
+link = "/docs/discovery-governance/"
 
 [[entries]]
 term = "Pulumi Neo"
@@ -229,7 +244,7 @@ link = "/docs/iac/concepts/providers/"
 [[entries]]
 term = "Resource Search"
 description = "The [Pulumi Discovery](#pulumi-discovery) feature for querying every [resource](#resources) Pulumi knows about across IaC stacks and discovered cloud accounts, using a structured search syntax."
-link = "/docs/insights/discovery/search/"
+link = "/docs/discovery-governance/guides/search-resources/"
 
 [[entries]]
 term = "Resources"

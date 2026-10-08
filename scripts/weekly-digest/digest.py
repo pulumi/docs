@@ -1,21 +1,32 @@
 #!/usr/bin/env -S uv run --script
 # /// script
 # requires-python = ">=3.11"
-# dependencies = []
+# dependencies = ["pyyaml"]
 # ///
 """Collect open PRs and the full issue backlog for the weekly #docs-ops digest.
 
 Deterministic collection only -- no model, no prose, no grouping. Emits a
-single JSON object to stdout that weekly-digest.yml feeds to one Claude
-synthesis call. Shells out to `gh`; runs via `uv run` in the workflow.
+single JSON object to stdout that render.py turns into the Slack message
+(rank.py asks the model to order the "needs a human" list; nothing else is
+model-written). Shells out to `gh`; runs via `uv run` in the workflow.
+
+The SLA verdicts come from scripts/review-v3/sla-sweep.py run with
+--dry-run: the sweep's own evaluator, read-only, whether or not the
+scheduled sweep (REVIEW_V3_SLA) is switched on. pyyaml is here for that
+subprocess, which loads .github/review-routing.yml.
 
 Mirrors the query patterns in .claude/commands/dashboard/scripts/dashboard.sh
 but broadened: the issue query is the whole open backlog, not assignee-scoped.
 """
 
+import importlib.util
 import json
+import os
 import subprocess
 import sys
+import tempfile
+import urllib.parse
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -27,6 +38,39 @@ OUTCOME_SCRAPER = (
     Path(__file__).resolve().parents[2]
     / ".claude/commands/docs-review/scripts/scrape-review-outcomes.py"
 )
+
+# v3 SLA-sweep state lives in the same content-review ledger bucket as
+# everything collect_review_outcomes/review-admin.py read, under pr-review/
+# (see scripts/review-v3/README.md). No stack-output wiring exists in this
+# script (unlike the credentialed record jobs) -- discover the bucket by
+# name prefix, review-admin.py's own technique, or accept it pre-resolved
+# via env (same variable name that tool uses, so one env setting works for
+# both).
+LEDGER_BUCKET_ENV = "CONTENT_REVIEW_LEDGER_BUCKET"
+LEDGER_BUCKET_PREFIX = "content-review-ledger-"
+
+SLA_SWEEP = Path(__file__).resolve().parents[2] / "scripts/review-v3/sla-sweep.py"
+ROUTING_CONFIG = Path(__file__).resolve().parents[2] / ".github/review-routing.yml"
+
+# Operational switches: repo variables that turn a scheduled lane on or off.
+# The workflow passes the raw values in DIGEST_VARS (JSON; "" = unset), since
+# GITHUB_TOKEN can't read repo variables. Each entry mirrors how the owning
+# workflow reads its variable -- the semantics differ, and a lane that
+# defaults ON when unset must not be reported off (see blog-review-index.yml
+# and review-sla-sweep.yml headers for the `== '1'` vs `!= '0'` split).
+#   (label, variable, rule, default) where rule is:
+#     "eq1"   on only when the value is exactly "1"
+#     "ne0"   on unless the value is exactly "0" (count lanes: value = per-run count)
+#     "mode"  sentinel: "1" enforcing, "report" report-only, else off
+SWITCHES = [
+    ("SLA sweep", "REVIEW_V3_SLA", "eq1", None),
+    ("Sentinel", "REVIEW_V3_SENTINEL", "mode", None),
+    ("content review", "CONTENT_REVIEW_COUNT", "ne0", "3"),
+    ("glow-up", "GLOWUP_COUNT", "ne0", "1"),
+    ("blog review index", "BLOG_REVIEW_COUNT", "ne0", "5"),
+    ("claims re-verify", "CLAIMS_REVERIFY_COUNT", "ne0", "25"),
+    ("brand sync", "BRAND_SYNC_ENABLED", "ne0", None),
+]
 
 
 def run_gh(args):
@@ -104,6 +148,7 @@ def shape_prs(raw):
                 "isDraft": pr.get("isDraft", False),
                 "checks": rollup_state(pr),
                 "is_bot": login in BOT_LOGINS,
+                "head_sha": pr.get("headRefOid"),
             }
         )
     return prs
@@ -146,44 +191,165 @@ def shape_issues(raw):
     }
 
 
-def shape_ci_health(raw):
-    """Pure transform: raw `gh run list` objects -> CI health over last 24h.
+FAILED_CONCLUSIONS = {"failure", "timed_out", "startup_failure"}
 
-    Thresholds mirror dashboard.sh: 0 failures and >=95% success -> HEALTHY;
-    <=2 failures and >=85% success -> WARNING; otherwise CRITICAL.
+
+def shape_workflow_failures(raw):
+    """Pure transform: raw `gh run list` objects (scheduled runs plus pushes
+    to master, trailing window) -> per-workflow failure stats, worst first.
+
+    `streak` is how many of the workflow's most recent runs failed in a row
+    (0 = its latest run passed), which separates "broken right now" from
+    "flaked once on Tuesday". Only workflows with a failure are listed;
+    `total_runs` is the denominator so a quiet week still reads as "0 of N";
+    it excludes skipped runs (fork-only guards like Upstream Sync skip every
+    run and would otherwise swamp it).
+    Runs are re-sorted newest first here: the input is two `gh run list`
+    calls concatenated, so its order is not chronological.
     """
-    cutoff = NOW - timedelta(hours=24)
-    recent = []
-    for run in raw:
-        dt = run.get("createdAt")
-        if not dt:
-            continue
-        try:
-            when = datetime.fromisoformat(dt.replace("Z", "+00:00"))
-        except ValueError:
-            continue
-        if when >= cutoff:
-            recent.append(run)
-    if not recent:
-        return {"status": "UNKNOWN", "success_rate": None, "failures": 0, "total": 0}
-    completed = [r for r in recent if r.get("conclusion")]
-    failures = sum(1 for r in completed if r.get("conclusion") == "failure")
-    successes = sum(
-        1 for r in completed if r.get("conclusion") in ("success", "skipped")
-    )
-    rate = round(100 * successes / len(completed)) if completed else None
-    if failures == 0 and (rate is None or rate >= 95):
-        status = "HEALTHY"
-    elif failures <= 2 and rate is not None and rate >= 85:
-        status = "WARNING"
-    else:
-        status = "CRITICAL"
+    runs = sorted((r for r in raw if r.get("status") == "completed"),
+                  key=lambda r: r.get("createdAt") or "", reverse=True)
+    by_wf = {}
+    for r in runs:
+        name = r.get("workflowName") or "unknown"
+        e = by_wf.setdefault(name, {"workflow": name, "runs": 0, "failures": 0, "streak": 0,
+                                    "last_failure_url": None, "_streak_open": True})
+        e["runs"] += 1
+        failed = r.get("conclusion") in FAILED_CONCLUSIONS
+        if failed:
+            e["failures"] += 1
+            if e["last_failure_url"] is None:
+                e["last_failure_url"] = r.get("url")
+        if e["_streak_open"]:
+            if failed:
+                e["streak"] += 1
+            elif r.get("conclusion") not in ("skipped", "cancelled"):
+                e["_streak_open"] = False
+    failing = []
+    for e in by_wf.values():
+        e.pop("_streak_open")
+        if e["failures"]:
+            failing.append(e)
+    failing.sort(key=lambda e: (-e["streak"], -e["failures"] / e["runs"], e["workflow"]))
+    ran = sum(1 for r in runs if r.get("conclusion") != "skipped")
+    return {"total_runs": ran, "failing": failing}
+
+
+def shape_switches(raw_vars):
+    """Pure transform: {VAR: value} (None = not passed, "" = unset) -> one
+    record per SWITCHES entry. `state` is on | off | report | unknown;
+    unknown means the value wasn't passed at all (a local run without
+    DIGEST_VARS), which the renderer must not dress up as "off"."""
+    out = []
+    for label, var, rule, default in SWITCHES:
+        value = raw_vars.get(var) if isinstance(raw_vars, dict) else None
+        if value is None:
+            state = "unknown"
+        elif rule == "eq1":
+            state = "on" if value == "1" else "off"
+        elif rule == "mode":
+            state = {"1": "on", "report": "report"}.get(value, "off")
+        else:
+            state = "off" if value == "0" else "on"
+        out.append({"label": label, "var": var, "state": state,
+                    "value": (value or default) if state == "on" and rule == "ne0" else None})
+    return out
+
+
+def collect_switches():
+    raw = os.environ.get("DIGEST_VARS")
+    if not raw:
+        return shape_switches(None)
+    try:
+        return shape_switches(json.loads(raw))
+    except json.JSONDecodeError:
+        sys.stderr.write("warning: DIGEST_VARS is not valid JSON; switches unknown\n")
+        return shape_switches(None)
+
+
+def shape_sla(record, config, enabled):
+    """Pure transform: a sla-sweep.py --dry-run run record -> per-PR
+    verdicts the renderer groups. Nothing here re-decides policy: kind,
+    waited/SLA business days, idle days, and closes_in_days all come from
+    the sweep's own evaluator; this only flattens and labels them.
+    """
+    verdicts = []
+    for entry in record.get("actions") or []:
+        kind = entry.get("kind")
+        if kind == "author":
+            a = entry.get("action") or {}
+            verdicts.append({
+                "pr": entry["pr"], "kind": "author",
+                "idle_days": a.get("idle_days"),
+                "undecided_count": a.get("undecided_count"),
+                "closes_in_days": a.get("closes_in_days"),
+                "warned": a.get("type") == "none" and "warn_age_days" in a,
+                "abandoned": (a.get("idle_days") or 0) > config["warn_days"],
+            })
+        elif kind == "reviewer":
+            roles = [
+                {"role": a["role"], "waited": a["waited_business_days"], "sla": a["sla_business_days"],
+                 "escalate_to": config["escalate_to"].get(a["role"])}
+                for a in entry.get("actions") or [] if a.get("role")
+            ]
+            overdue = [r for r in roles if r["waited"] > r["sla"]]
+            verdicts.append({"pr": entry["pr"], "kind": "reviewer", "roles": roles, "overdue": overdue})
+    return {"available": True, "enabled": enabled, "policy": {
+        "warn_days": config["warn_days"], "close_days": config["close_days"],
+        "escalate_to": config["escalate_to"]}, "verdicts": verdicts}
+
+
+def load_sla_policy():
+    """The `author_staleness` and `sla` blocks of review-routing.yml, via
+    the same loader the sweep uses (routing.load_config), so the digest
+    labels verdicts with the thresholds the sweep enforced."""
+    sys.path.insert(0, str(SLA_SWEEP.parent))
+    import routing  # noqa: PLC0415 -- lives beside sla-sweep.py
+
+    cfg = routing.load_config(str(ROUTING_CONFIG))
     return {
-        "status": status,
-        "success_rate": rate,
-        "failures": failures,
-        "total": len(recent),
+        "warn_days": cfg.author_staleness["warn_days"],
+        "close_days": cfg.author_staleness["close_days"],
+        "escalate_to": {role: v.get("escalate_to") for role, v in cfg.sla.items()},
     }
+
+
+def collect_sla(enabled, ledger_bucket):
+    """Run the SLA sweep's evaluator read-only and shape its verdicts.
+
+    `--dry-run` is the sweep's own no-mutation contract (no comments,
+    labels, closes, Slack, or state writes; it prints the run record it
+    would have acted on). With the ledger bucket resolved, the sweep reads
+    its per-PR state from S3, so a PR it already warned shows the real
+    remaining notice. Degrades to {"available": False} like every other
+    collector here.
+    """
+    try:
+        policy = load_sla_policy()
+    except Exception as exc:  # noqa: BLE001 -- a config problem mutes this section, not the digest
+        sys.stderr.write(f"warning: could not load review-routing.yml: {exc}\n")
+        return {"available": False, "enabled": enabled}
+    env = dict(os.environ)
+    if ledger_bucket:
+        env["PR_REVIEW_EVIDENCE_URI"] = f"s3://{ledger_bucket}/pr-review"
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            proc = subprocess.run(
+                [sys.executable, str(SLA_SWEEP), "--repo", REPO, "--dry-run", "--state-dir", tmp],
+                capture_output=True, text=True, env=env, timeout=900,
+            )
+        if proc.returncode != 0:
+            raise RuntimeError(proc.stderr.strip()[-500:])
+        record = json.loads(proc.stdout)
+    except (OSError, RuntimeError, subprocess.TimeoutExpired, json.JSONDecodeError) as exc:
+        sys.stderr.write(f"warning: sla-sweep dry-run failed: {str(exc)[:500]}\n")
+        return {"available": False, "enabled": enabled}
+    shaped = shape_sla(record, policy, enabled)
+    # Without the ledger the dry run evaluates from an empty state dir, so a
+    # PR the sweep already warned reads as un-warned (a longer notice than it
+    # really has). The renderer flags it.
+    shaped["ledger"] = bool(ledger_bucket)
+    return shaped
 
 
 def collect_review_outcomes(since):
@@ -212,6 +378,155 @@ def collect_review_outcomes(since):
     return {"available": True, "since": since, **aggregate}
 
 
+def resolve_ledger_bucket() -> str | None:
+    """The content-review ledger bucket name, or None on any failure to
+    resolve it (no explicit env override, `aws` missing/unauthenticated, an
+    ambiguous or empty prefix match) -- collect_v3_ops() treats None as the
+    same "unavailable" degradation collect_review_outcomes() uses for a
+    scraper failure."""
+    explicit = os.environ.get(LEDGER_BUCKET_ENV, "").strip()
+    if explicit:
+        return explicit
+    try:
+        proc = subprocess.run(
+            ["aws", "s3api", "list-buckets", "--query",
+             f"Buckets[?starts_with(Name, '{LEDGER_BUCKET_PREFIX}')].Name", "--output", "json"],
+            capture_output=True, text=True,
+        )
+    except FileNotFoundError:
+        sys.stderr.write("warning: aws CLI not found; v3 ops summary unavailable\n")
+        return None
+    if proc.returncode != 0:
+        sys.stderr.write(f"warning: bucket discovery failed: {proc.stderr.strip()[:300]}\n")
+        return None
+    try:
+        names = json.loads(proc.stdout or "[]")
+    except json.JSONDecodeError:
+        return None
+    if len(names) == 1:
+        return names[0]
+    sys.stderr.write(f"warning: {len(names)} bucket(s) match '{LEDGER_BUCKET_PREFIX}*'; "
+                      f"set {LEDGER_BUCKET_ENV} explicitly\n")
+    return None
+
+
+def _bulk_accept_keys() -> tuple[str, str]:
+    """(bulk_key, accepted_key) -- the outcome-count field names for a
+    bulk accept-everything answer vs. any adjudicated accept/defer/n-a
+    answer, per scrape-review-outcomes.py's V3_ONLY_OUTCOME_KEYS.
+
+    Imported by path (loose coupling, not a hard dependency -- see
+    OUTCOME_SCRAPER) purely to validate the literal names below still exist
+    in that module's vocabulary; any import failure or a renamed key just
+    logs a warning and keeps the literals, since a missing key already
+    degrades cleanly to a 0 count downstream.
+    """
+    bulk_key, accepted_key = "bulk_accepted", "author_accepted"
+    try:
+        spec = importlib.util.spec_from_file_location("_scrape_outcomes_for_digest", OUTCOME_SCRAPER)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        keys = set(getattr(mod, "V3_ONLY_OUTCOME_KEYS", ()))
+        if bulk_key not in keys or accepted_key not in keys:
+            sys.stderr.write(
+                "warning: scrape-review-outcomes.py's V3_ONLY_OUTCOME_KEYS no longer names "
+                f"{bulk_key!r}/{accepted_key!r}; bulk-accept rate may be stale\n"
+            )
+    except Exception as exc:  # noqa: BLE001 -- never let a key-vocabulary check break the digest
+        sys.stderr.write(f"warning: could not import scrape-review-outcomes.py for key validation: {exc}\n")
+    return bulk_key, accepted_key
+
+
+def collect_v3_ops(since: str, review_outcomes: dict, bucket: str | None) -> dict:
+    """v3 SLA-sweep operational summary for the trailing window: escalations
+    (by lane/role), author-staleness warns and closes, waives, and a
+    bulk-accept rate.
+
+    Syncs `pr-review/runs/` and `pr-review/waives/` from the ledger bucket
+    (`pr-review/state/` is the sweep's idempotency ledger and carries nothing
+    this summary reads, so it is neither synced nor load-bearing) (see scripts/review-v3/README.md and
+    sla-sweep.py's module docstring for the run-record shape) and reduces
+    the run records in-window. The bulk-accept rate is NOT a second scrape
+    -- it's derived from the `review_outcomes` aggregate collect_review_outcomes()
+    already fetched this run, so a missing/unavailable outcomes block just
+    yields a 0/0 -> None rate rather than another `gh` round-trip.
+
+    Same degradation contract as collect_review_outcomes(): any failure to
+    resolve the bucket or sync its prefixes -> {"available": False}, a loud
+    signal for the synthesis prompt to render, never a silently dropped
+    section.
+    """
+    if not bucket:
+        return {"available": False}
+
+    with tempfile.TemporaryDirectory() as tmp:
+        cache = Path(tmp)
+        load_bearing_ok = True
+        for prefix in ("runs", "waives"):
+            proc = subprocess.run(
+                ["aws", "s3", "sync", f"s3://{bucket}/pr-review/{prefix}/",
+                 str(cache / prefix), "--no-progress"],
+                capture_output=True, text=True,
+            )
+            if proc.returncode != 0:
+                # waives/ may legitimately not exist yet (nobody has waived
+                # a v3 gate); only runs/ not syncing is fatal to this section.
+                if prefix == "runs":
+                    sys.stderr.write(
+                        f"warning: aws s3 sync failed for pr-review/{prefix}/: {proc.stderr.strip()[:300]}\n"
+                    )
+                    load_bearing_ok = False
+        if not load_bearing_ok:
+            return {"available": False}
+
+        escalations_by_role: Counter = Counter()
+        warns = 0
+        closes = 0
+        runs_dir = cache / "runs"
+        for run_file in sorted(runs_dir.rglob("*.json")) if runs_dir.is_dir() else []:
+            try:
+                record = json.loads(run_file.read_text())
+            except (OSError, json.JSONDecodeError):
+                continue
+            if (record.get("run_at") or "")[:10] < since:
+                continue
+            for pr_action in record.get("actions", []):
+                if pr_action.get("kind") == "author":
+                    a = pr_action.get("action") or {}
+                    if a.get("type") == "warn":
+                        warns += 1
+                    elif a.get("type") == "close":
+                        closes += 1
+                elif pr_action.get("kind") == "reviewer":
+                    for a in pr_action.get("actions") or []:
+                        if a.get("type") == "escalate":
+                            escalations_by_role[a.get("role") or "unknown"] += 1
+
+        waives_dir = cache / "waives"
+        waive_count = sum(1 for f in waives_dir.rglob("*.json")) if waives_dir.is_dir() else 0
+
+    bulk_key, accepted_key = _bulk_accept_keys()
+    human = {}
+    if review_outcomes.get("available"):
+        human = (review_outcomes.get("outcomes") or {}).get("human") or {}
+    bulk_accepted = human.get(bulk_key, 0)
+    author_accepted = human.get(accepted_key, 0)
+    bulk_accept_rate = round(100 * bulk_accepted / author_accepted) if author_accepted else None
+
+    return {
+        "available": True,
+        "since": since,
+        "escalations_total": sum(escalations_by_role.values()),
+        "escalations_by_role": dict(escalations_by_role),
+        "warns": warns,
+        "closes": closes,
+        "waives": waive_count,
+        "bulk_accepted": bulk_accepted,
+        "author_accepted": author_accepted,
+        "bulk_accept_rate": bulk_accept_rate,
+    }
+
+
 def search_count(qualifier):
     """Exact issue count via the search API's total_count (REST, not GraphQL)."""
     out = run_gh(
@@ -234,14 +549,103 @@ def search_count(qualifier):
         return None
 
 
+SENTINEL_CHECK = "Sentinel"
+
+
+def sentinel_state(check_runs):
+    """Pure transform: a head commit's check runs -> the Sentinel's verdict
+    for that PR: ready | blocked | none.
+
+    Reads what the merge gate itself concluded, so "ready to merge" can't
+    mean something different here than on the PR page. The gate runs in
+    preview (report-only) mode for now, concluding `neutral` with the real
+    verdict in its title ("Preview — would be: success"); an enforcing run
+    concludes `success` outright. Both read as ready. The newest run wins,
+    since each gate event re-posts the check.
+    """
+    runs = [r for r in check_runs or [] if r.get("name") == SENTINEL_CHECK and r.get("status") == "completed"]
+    if not runs:
+        return "none"
+    latest = max(runs, key=lambda r: r.get("completed_at") or "")
+    title = ((latest.get("output") or {}).get("title") or "").lower()
+    if latest.get("conclusion") == "success" or "would be: success" in title:
+        return "ready"
+    return "blocked"
+
+
+def collect_sentinel(prs):
+    """Attach each non-draft PR's Sentinel verdict (one check-runs read per
+    PR head). A failed read is "unknown", never "blocked": the renderer
+    must not report a PR as not-ready on missing data."""
+    for pr in prs:
+        if pr.get("isDraft") or not pr.get("head_sha"):
+            continue
+        out = run_gh(["api", f"repos/{REPO}/commits/{pr['head_sha']}/check-runs?check_name={SENTINEL_CHECK}&per_page=20"])
+        try:
+            pr["sentinel"] = sentinel_state(json.loads(out).get("check_runs")) if out.strip() else "unknown"
+        except (json.JSONDecodeError, AttributeError):
+            pr["sentinel"] = "unknown"
+
+
+def search_url(qualifiers):
+    return f"https://github.com/{REPO}/pulls?q=" + urllib.parse.quote_plus(qualifiers)
+
+
+def collect_review_queues():
+    """Per routed team: open, non-draft `review:no-blockers` PRs with a pending
+    review request for that team. The count comes from the same search the
+    link opens, so the number in Slack always matches the page it links to.
+
+    The teams come from review-routing.yml (the same map triage uses to
+    request them). GitHub drops a team's request once any member submits
+    a review, so this is "requested and not yet reviewed", not "awaiting
+    an approval"; the SLA section carries the approval-based view.
+    """
+    try:
+        sys.path.insert(0, str(SLA_SWEEP.parent))
+        import routing  # noqa: PLC0415 -- lives beside sla-sweep.py
+
+        teams = routing.load_config(str(ROUTING_CONFIG)).teams
+    except Exception as exc:  # noqa: BLE001 -- a config problem drops this line, not the digest
+        sys.stderr.write(f"warning: could not load review teams: {exc}\n")
+        return []
+    queues = []
+    for role, team in teams.items():
+        q = f"is:pr is:open -is:draft label:review:no-blockers team-review-requested:{team}"
+        queues.append({"role": role, "team": team, "count": search_count(q),
+                       "url": search_url(q)})
+    return queues
+
+
+def throughput(start, end=None):
+    """Opened / merged / closed-unmerged PR counts and opened / closed issue
+    counts for [start, end) -- end None means "through now". Exact counts
+    from the search API; a failed query is None, never 0."""
+    rng = f">={start}" if end is None else f"{start}..{end}"
+    return {
+        "prs_opened": search_count(f"is:pr created:{rng}"),
+        "prs_merged": search_count(f"is:pr merged:{rng}"),
+        "prs_closed": search_count(f"is:pr is:unmerged closed:{rng}"),
+        "issues_opened": search_count(f"is:issue created:{rng}"),
+        "issues_closed": search_count(f"is:issue closed:{rng}"),
+    }
+
+
 def main():
-    cutoff = (NOW - timedelta(days=WINDOW_DAYS)).date().isoformat()
+    cutoff_dt = NOW - timedelta(days=WINDOW_DAYS)
+    cutoff = cutoff_dt.date().isoformat()
+    # Throughput compares two equal windows of whole days: the 7 days before
+    # today and the 7 before those. (A `>=cutoff` open-ended window would
+    # run ~7.6 days against 7 and bias the week-over-week shift.)
+    yesterday = (NOW - timedelta(days=1)).date().isoformat()
+    prev_start = (cutoff_dt - timedelta(days=WINDOW_DAYS)).date().isoformat()
+    prev_end = (cutoff_dt - timedelta(days=1)).date().isoformat()
     prs = shape_prs(
         gh_json(
             [
                 "pr", "list", "--repo", REPO, "--state", "open", "--limit", "200",
                 "--json",
-                "number,title,author,createdAt,updatedAt,labels,isDraft,statusCheckRollup",
+                "number,title,author,createdAt,updatedAt,labels,isDraft,statusCheckRollup,headRefOid",
             ]
         )
     )
@@ -253,23 +657,36 @@ def main():
             ]
         )
     )
-    issues["opened_last_7d"] = search_count(f"is:issue created:>={cutoff}")
-    issues["closed_last_7d"] = search_count(f"is:issue closed:>={cutoff}")
-    ci_health = shape_ci_health(
-        gh_json(
+    this_week = throughput(cutoff, yesterday)
+    # Kept for readers of the old field names (the backlog delta).
+    issues["opened_last_7d"] = this_week["issues_opened"]
+    issues["closed_last_7d"] = this_week["issues_closed"]
+    runs = []
+    for event_args in (["--event", "schedule"], ["--event", "push", "--branch", "master"]):
+        runs += gh_json(
             [
-                "run", "list", "--repo", REPO, "--limit", "50",
-                "--json", "status,conclusion,createdAt",
+                "run", "list", "--repo", REPO, *event_args, "--created", f">={cutoff}",
+                "--limit", "1000", "--json", "workflowName,status,conclusion,createdAt,url",
             ]
         )
-    )
+    collect_sentinel(prs)
+    switches = collect_switches()
+    sweep_state = next((sw["state"] for sw in switches if sw["var"] == "REVIEW_V3_SLA"), "unknown")
+    bucket = resolve_ledger_bucket()
     review_outcomes = collect_review_outcomes(cutoff)
+    v3_ops = collect_v3_ops(cutoff, review_outcomes, bucket)
     digest = {
+        "generated_at": NOW.isoformat(),
         "window_days": WINDOW_DAYS,
         "prs": prs,
         "issues": issues,
-        "ci_health": ci_health,
+        "throughput": {"this_week": this_week, "prev_week": throughput(prev_start, prev_end)},
+        "workflow_failures": shape_workflow_failures(runs),
+        "review_queues": collect_review_queues(),
+        "switches": switches,
+        "sla": collect_sla(sweep_state, bucket),
         "review_outcomes": review_outcomes,
+        "v3_ops": v3_ops,
     }
     json.dump(digest, sys.stdout, indent=2)
     sys.stdout.write("\n")

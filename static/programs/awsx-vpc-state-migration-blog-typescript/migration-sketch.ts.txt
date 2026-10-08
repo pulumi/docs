@@ -1,0 +1,35 @@
+export const migrateClassicVpc: pulumi.StateMigration = (args) => {
+    if (args.oldState.length === 0) {
+        return undefined;
+    }
+
+    const oldRoot = args.oldState[0];
+    if (oldRoot.type === modernVpcType || oldRoot.type === awsVpcType) {
+        return undefined;
+    }
+    if (oldRoot.type !== classicVpcType) {
+        throw new Error(`Unexpected VPC type: ${oldRoot.type}`);
+    }
+
+    // ...find the old records and calculate the new URNs...
+
+    const newSubnet = rename(oldSubnet, newSubnetUrn, newVpcUrn);
+
+    // ...copy and rename the other retained records...
+
+    return {
+        newState: [
+            newRoot,
+            newVpc,
+            newSubnet,
+            newRouteTable,
+            newRouteTableAssociation,
+            newInternetGateway,
+        ],
+        successors: {
+            [oldSubnetComponentUrn]: newSubnetUrn,
+            [resourceUrn(oldSubnet)]: newSubnetUrn,
+            // ...map the other old URNs to their successors...
+        },
+    };
+};
