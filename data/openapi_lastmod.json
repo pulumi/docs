@@ -789,8 +789,8 @@
       "hash": "51d5cb48099a20d8cb48bba6834d4c283ec5e0a7046b2f43028eebdba4bb79c1"
     },
     "ApprovalRuleEligibilityInputPermission": {
-      "hash": "b04369137479629e2a7cab0b0329d6edbd9c41dc824301c946957002c03b32a5",
-      "lastmod": "2026-09-23"
+      "hash": "6fe0202110a3b7c0823472f6f2ed1f36ec95bd3931ad62908325767c7c42115d",
+      "lastmod": "2026-10-08"
     },
     "ApprovalRuleEligibilityInputTeam": {
       "hash": "3a99b8c35c705ebc60692aa6a6350dad0986054db002df8a023cccbfc1a8f09f"
@@ -802,8 +802,8 @@
       "hash": "468c478a2ca53b58914f68518c366eacdd3018352ce2a14780575a0e50ea032c"
     },
     "ApprovalRuleEligibilityOutputPermission": {
-      "hash": "708680000f2b5eed302685616a39b407794324a8baff1688635ef108bde89472",
-      "lastmod": "2026-09-23"
+      "hash": "084f126897fda2b48efe1afd7d6327ed3d56288553269e7e5ee1a5b8080f20ab",
+      "lastmod": "2026-10-08"
     },
     "ApprovalRuleEligibilityOutputTeam": {
       "hash": "92d53d1a479fe3d756ea91d6c33c65cc651c80dcdef75cb394ea724e7d14c47d"
@@ -1414,8 +1414,8 @@
       "hash": "a6162bca6e1ce3af60f27862189f8bbc933fd63d9c4a1475349281dbd7476245"
     },
     "EnvironmentMetadata": {
-      "hash": "fea0086a8330fff31d9004883fc8c18540a7af3ba38b946fc721f742b84a4aff",
-      "lastmod": "2026-09-15"
+      "hash": "d53eca9537d904ed020be4be0aace399a1ec67903acb069f7f1867c4835a1a31",
+      "lastmod": "2026-10-08"
     },
     "EnvironmentReferrer": {
       "hash": "a97ffd8b3f6c79afc02ef87195903843f52f0542ee99b18f0e0a8a1bf7df8791",
@@ -2308,8 +2308,8 @@
       "lastmod": "2026-09-15"
     },
     "OrganizationMetadata": {
-      "hash": "fa80349d5c76bcd6ab33664fe1dd1fcfa2ed7baff6840cf0871c892de3e21e9a",
-      "lastmod": "2026-09-15"
+      "hash": "1773d371e910ba124989def628441e0ab3652aea62784ddaf8390848ddbc059b",
+      "lastmod": "2026-10-08"
     },
     "OrganizationSummary": {
       "hash": "5529ba2a664bda97d8dbc38499656af56d98ce9834b3545fbf56c87ee589cbe9",
@@ -2366,8 +2366,8 @@
       "hash": "4dbf036c07c514c178419ce7739f5acf2758514705832b8b20951a43ab374f6a"
     },
     "PermissionDescriptorAllow": {
-      "hash": "b7e7927f1d529b91555d3e40912d38b60421614099de798cc4f3c07cc5f52dc9",
-      "lastmod": "2026-09-23"
+      "hash": "b086b8f5c3928a12ed8cfa994c17c25f27c69045e2ff9a6b569aa86b644974d1",
+      "lastmod": "2026-10-08"
     },
     "PermissionDescriptorBase": {
       "hash": "e98421ae30171d68a06ff1b0bc7ef360ba189aeccc042e5d111ad921debb017f",
@@ -2572,8 +2572,8 @@
       "lastmod": "2026-09-15"
     },
     "RbacScope": {
-      "hash": "d336640243499479b626f0e7ba519e58abc63a67c634399c1be8e5d341e8e184",
-      "lastmod": "2026-09-23"
+      "hash": "c2ae64b29351fa51ae9edccb24180e57e87e56f4ddb9574f25abc50d829fe0ee",
+      "lastmod": "2026-10-08"
     },
     "RbacScopeGroup": {
       "hash": "dd2e5e14bcfb4a196bffada47022efb60dc554e1c1c07ba6746e59ab2d3f9f92",
@@ -2920,8 +2920,8 @@
       "lastmod": "2026-09-15"
     },
     "TerraformModulePackageConversion": {
-      "hash": "3fbaa243518ddac2009e1c4f9867d05b2effe9a6fc0312690b54eb379272596e",
-      "lastmod": "2026-09-15"
+      "hash": "ee224484dbd38f3cc9a5f013fa82bb3e1c9fc4b7654a5b9bac9ef39c15fe00cd",
+      "lastmod": "2026-10-08"
     },
     "TerraformModuleProviderRequirement": {
       "hash": "7f33edbf97549015abb2e5ebed89a0a954e557cc7e8e5a5fd3ae8c2304bf38a4",
