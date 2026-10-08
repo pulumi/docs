@@ -1,0 +1,648 @@
+{
+  "schema_version": 1,
+  "repo": "pulumi/docs",
+  "pr": 21787,
+  "head_sha": "438cef54e9305e45085428975581a6a0bf692dae",
+  "run_id": "35659061355",
+  "generated_at": "2026-09-21T21:48:09Z",
+  "high_water": 3,
+  "findings": [
+    {
+      "id": "F1",
+      "bucket": "outstanding",
+      "file": "content/docs/support/_index.md",
+      "text": "Pulumi maintains a provider support policy documented at /docs/support/provider-support-policy/ that specifies how long Pulumi maintains each provider major\u2026",
+      "origin": "verdict:contradicted",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        64,
+        67
+      ]
+    },
+    {
+      "id": "F2",
+      "bucket": "outstanding",
+      "file": "content/docs/support/provider-support-policy.md",
+      "text": "A provider's LTS branch is supported until the next major version ships, for up to 12 months.",
+      "origin": "preflight:readthrough-self-redundancy",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        30,
+        32
+      ]
+    },
+    {
+      "id": "F3",
+      "bucket": "outstanding",
+      "file": "content/docs/support/provider-support-policy.md",
+      "text": "### Engine support  Providers will be compatible with the version of Pulumi they were frozen at unless otherwise prompted via security fixes.",
+      "origin": "preflight:readthrough-orphaned-structure",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        34,
+        47
+      ]
+    }
+  ],
+  "trail": [
+    {
+      "file": "content/docs/support/_index.md",
+      "claim": "Pulumi maintains a provider support policy documented at /docs/support/provider-support-policy/ that specifies how long Pulumi maintains each provider major\u2026",
+      "verdict": "contradicted",
+      "line": 64,
+      "evidence": "evidence: The pulumi/docs repo's content/docs/support/ directory contains only _index.md, faq/, filing-issues.md, and getting-support.md \u2014 there is no provider-support-policy page or subdirectory. The claim (and the sibling link card in _index.md)\u2026; source: gh api repos/pulumi/docs/contents/content/docs/support (master branch listing)",
+      "source": "gh api repos/pulumi/docs/contents/content/docs/support (master branch listing)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "When an error or failure occurs during a Pulumi update, Pulumi completes any pending operations currently in progress and then exits and reports the error or\u2026",
+      "verdict": "verified",
+      "line": 24,
+      "evidence": "evidence: The FAQ doc itself states: \"In the event that an error or failure occurs, Pulumi will complete any pending operations currently in progress and then exit and report the error or failure,\" which matches the claim verbatim. Pulumi's engine\u2026; source: repo:content/docs/support/faq/infrastructure.md (lines 24-25); gh search code --owner pulumi pulumi/pulumi backend.go CancellationScope",
+      "source": "repo:content/docs/support/faq/infrastructure.md (lines 24-25); gh search code --owner pulumi pulumi/pulumi backend.go CancellationScope",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "To accomplish a manual rollback after a failed Pulumi deployment, you revert the code and configuration changes of the failed deployment and run `pulumi up`\u2026",
+      "verdict": "verified",
+      "line": 27,
+      "evidence": "evidence: The file itself states: \"To accomplish a _manual_ rollback after a failed deployment, revert the code and configuration changes of the failed deployment and run `pulumi up` to update your infrastructure to its previous state.\" This is\u2026; source: repo:content/docs/support/faq/infrastructure.md",
+      "source": "repo:content/docs/support/faq/infrastructure.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi compares the desired state declared in your program against the last recorded state to determine what changes to make, instead of querying live cloud\u2026",
+      "verdict": "verified",
+      "line": 33,
+      "evidence": "evidence: The sibling docs page content/docs/iac/concepts/state-and-backends.md independently confirms this exact behavior: \"When you run pulumi preview or pulumi up, Pulumi compares this recorded state against the configuration declared in your\u2026; source: repo:content/docs/iac/concepts/state-and-backends.md",
+      "source": "repo:content/docs/iac/concepts/state-and-backends.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Refreshing state requires a round-trip to the cloud provider for every resource in a stack, which adds significant latency, especially for large stacks.",
+      "verdict": "verified",
+      "line": 35,
+      "evidence": "evidence: The linked sibling doc (state-and-backends.md) explains the same behavior in more detail: \"Querying every resource's live state from the cloud provider can be slow, particularly for large stacks with hundreds or thousands of resources.\u2026; source: repo:content/docs/iac/concepts/state-and-backends.md",
+      "source": "repo:content/docs/iac/concepts/state-and-backends.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Running `pulumi refresh` synchronizes Pulumi's recorded state with the actual state of your cloud resources.",
+      "verdict": "verified",
+      "line": 39,
+      "evidence": "evidence: The sibling docs page content/docs/iac/concepts/state-and-backends.md states: \"To synchronize Pulumi's recorded state with the actual state of your cloud resources, run: `pulumi refresh`... This command queries each resource in your\u2026; source: repo:content/docs/iac/concepts/state-and-backends.md",
+      "source": "repo:content/docs/iac/concepts/state-and-backends.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "`pulumi up --refresh` refreshes and applies your desired state in a single step.",
+      "verdict": "verified",
+      "line": 43,
+      "evidence": "evidence: The `pulumi up` CLI reference documents the `--refresh` flag as: \"Refresh the state of the stack's resources before this update\" \u2014 confirming that `pulumi up --refresh` performs a refresh and then applies the update in a single invocation.; source: content/docs/iac/cli/commands/pulumi_up.md (auto-generated CLI reference)",
+      "source": "content/docs/iac/cli/commands/pulumi_up.md (auto-generated CLI reference)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi Cloud provides built-in drift detection for automated drift detection and remediation on a schedule.",
+      "verdict": "verified",
+      "line": 43,
+      "evidence": "evidence: The linked docs page confirms: \"This page covers the drift detection and remediation capabilities that Pulumi Cloud manages for you: scheduled drift runs, the Drift tab, automatic remediation, and notifications\" and describes\u2026; source: repo:content/docs/deployments/concepts/drift.md",
+      "source": "repo:content/docs/deployments/concepts/drift.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi resources have different logical names and physical names.",
+      "verdict": "verified",
+      "line": 51,
+      "evidence": "evidence: Pulumi's own concepts docs confirm this: \"A resource's logical and physical names may not match... Logical name \u2014 the name you give the resource in your program... Physical name \u2014 the name Pulumi assigns in the cloud provider.\" This\u2026; source: repo:content/docs/iac/concepts/resources/names.md",
+      "source": "repo:content/docs/iac/concepts/resources/names.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "A Pulumi resource's physical name typically needs to be unique within a certain scope, sometimes even globally.",
+      "verdict": "verified",
+      "line": 51,
+      "evidence": "evidence: The same doc page states: \"the physical name typically needs to be unique within a certain scope (sometimes even globally)\" \u2014 an exact match to the claim, and consistent with Pulumi's documented autonaming concept.; source: repo:content/docs/support/faq/infrastructure.md (line 51)",
+      "source": "repo:content/docs/support/faq/infrastructure.md (line 51)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi automatically creates each resource's physical name by combining the logical name with a random suffix appended afterwards.",
+      "verdict": "verified",
+      "line": 53,
+      "evidence": "evidence: Sibling docs page content/docs/iac/concepts/resources/names.md confirms: \"Physical name \u2014 the name Pulumi assigns in the cloud provider, usually derived from the logical name plus a random suffix\" and \"most physical resource names in\u2026; source: repo:content/docs/iac/concepts/resources/names.md",
+      "source": "repo:content/docs/iac/concepts/resources/names.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi's auto-naming approach ensures Pulumi can replace resources with less downtime, by creating the replacement before needing to delete the old resource.",
+      "verdict": "verified",
+      "line": 53,
+      "evidence": "evidence: Sibling docs page content/docs/iac/concepts/resources/names.md states auto-naming's random suffix \"allows Pulumi to do zero-downtime resource updates... By default, Pulumi creates replacements first, then updates the existing references\u2026; source: repo:content/docs/iac/concepts/resources/names.md",
+      "source": "repo:content/docs/iac/concepts/resources/names.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "With Pulumi's default auto-naming, a resource's physical name will typically look like `my-bucket-d7c2fa0` instead of `my-bucket`.",
+      "verdict": "verified",
+      "line": 53,
+      "evidence": "evidence: The sibling docs page (resources/names.md) states the identical behavior with the same example format: \"even if your IAM role has a logical name of `my-role`, the physical name will typically look something like `my-role-d7c2fa0`. The\u2026; source: repo:content/docs/iac/concepts/resources/names.md",
+      "source": "repo:content/docs/iac/concepts/resources/names.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "You can disable Pulumi's auto-naming on a per-resource basis.",
+      "verdict": "verified",
+      "line": 55,
+      "evidence": "evidence: The linked docs page (content/docs/iac/concepts/resources/names.md) confirms auto-naming can be disabled per-resource: resources can be given explicit names to override auto-naming individually, and the `pulumi:autonaming` config\u2026; source: repo:content/docs/iac/concepts/resources/names.md",
+      "source": "repo:content/docs/iac/concepts/resources/names.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "You can use project or stack configuration to customize or disable Pulumi auto-naming globally, per provider, or per resource type.",
+      "verdict": "verified",
+      "line": 57,
+      "evidence": "evidence: The linked page content/docs/iac/concepts/resources/names.md states: \"you can [customize or disable auto-naming](#autonaming-configuration) globally, per provider, or per resource type\" and describes \"You can customize how Pulumi\u2026; source: repo:content/docs/iac/concepts/resources/names.md",
+      "source": "repo:content/docs/iac/concepts/resources/names.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "During a Pulumi update, secrets are decrypted in memory and visible to the Pulumi program.",
+      "verdict": "verified",
+      "line": 63,
+      "evidence": "evidence: The same file states: \"During an update, your secrets will be decrypted in memory and visible to your Pulumi program,\" and further down, \"When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the\u2026; source: repo:content/docs/support/faq/infrastructure.md",
+      "source": "repo:content/docs/support/faq/infrastructure.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi provides primitives so secrets are stored in a secure manner in the CLI, state file, and Pulumi Cloud.",
+      "verdict": "verified",
+      "line": 63,
+      "evidence": "framing: Claim drops \"you can enforce your\" but preserves the same assertion about secrets storage across CLI, state file, and Pulumi Cloud.; evidence: Source file states: \"Pulumi provides primitives so you can enforce your secrets are stored in a secure manner in the CLI, state file and Pulumi Cloud.\" This matches the claim almost verbatim, just omitting \"you can enforce your\".; source: repo:content/docs/support/faq/infrastructure.md#L63",
+      "source": "repo:content/docs/support/faq/infrastructure.md#L63",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Because a different encryption key is used for each stack, encrypting the same value across two different stacks leads to different encrypted strings being\u2026",
+      "verdict": "verified",
+      "line": 67,
+      "evidence": "evidence: The same doc states: \"For every stack Pulumi Cloud manages a unique encryption key, which it uses to encrypt secrets for that stack... Because a different key is used for each stack, encrypting the same value across two different stacks\u2026; source: repo:content/docs/support/faq/infrastructure.md (line 67)",
+      "source": "repo:content/docs/support/faq/infrastructure.md (line 67)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "For every stack, Pulumi Cloud manages a unique encryption key, which it uses to encrypt secrets for that stack.",
+      "verdict": "verified",
+      "line": 67,
+      "evidence": "evidence: Confirmed by independent sibling page content/docs/iac/concepts/secrets/_index.md: \"By default, the Pulumi CLI uses a per-stack encryption key managed by Pulumi Cloud, and a per-value nonce, to encrypt values\" and \"Pulumi Cloud\u2026; source: repo:content/docs/iac/concepts/secrets/_index.md",
+      "source": "repo:content/docs/iac/concepts/secrets/_index.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi's per-stack secrets encryption is configurable to use your own custom secrets provider.",
+      "verdict": "verified",
+      "line": 67,
+      "evidence": "evidence: Pulumi CLI supports per-stack secrets providers, configurable via `pulumi stack init --secrets-provider` and changeable via `pulumi stack change-secrets-provider`, including custom providers (e.g., AWS KMS URL, passphrase, or\u2026; source: gh search code --owner pulumi \"secrets provider\" --repo pulumi/pulumi (pkg/cmd/pulumi/stack/stack_change_secrets_provider.go, pkg/cmd/pulumi/stack/stack_new.go)",
+      "source": "gh search code --owner pulumi \"secrets provider\" --repo pulumi/pulumi (pkg/cmd/pulumi/stack/stack_change_secrets_provider.go, pkg/cmd/pulumi/stack/stack_new.go)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "When you run a Pulumi preview, update, or destroy, Pulumi decrypts secret configuration data.",
+      "verdict": "verified",
+      "line": 69,
+      "evidence": "evidence: The source file itself states: \"When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config\u2026; source: repo:content/docs/support/faq/infrastructure.md:69",
+      "source": "repo:content/docs/support/faq/infrastructure.md:69",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "During the execution of a Pulumi deployment, decrypted secret data is plain text and any part of the Pulumi program may access it using the Pulumi config\u2026",
+      "verdict": "not-a-claim",
+      "line": 69,
+      "evidence": "evidence: The claim is a verbatim restatement of the doc's own text: \"When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it\u2026; source: repo:content/docs/support/faq/infrastructure.md",
+      "source": "repo:content/docs/support/faq/infrastructure.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Some Pulumi providers use the open-source Terraform schemas in order to know what resources and parameters are available, and to determine the return and\u2026",
+      "verdict": "verified",
+      "line": 75,
+      "evidence": "evidence: The pulumi/pulumi-terraform-bridge repo (\"A library allowing Terraform providers to be bridged into Pulumi\") confirms that many Pulumi providers are generated by bridging Terraform providers, consuming their schemas to determine\u2026; source: gh search repos --owner pulumi pulumi-terraform-bridge; content/docs/support/faq/infrastructure.md L75",
+      "source": "gh search repos --owner pulumi pulumi-terraform-bridge; content/docs/support/faq/infrastructure.md L75",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "The programming language used in a Pulumi program is used for authoring the program and is not used for talking to the cloud provider API.",
+      "verdict": "verified",
+      "line": 79,
+      "evidence": "evidence: The doc itself states: \"Pulumi is a declarative tool that uses imperative languages to define your end state. The language is used for authoring your program. It's not used for talking to the cloud provider API.\" This matches Pulumi's\u2026; source: repo:content/docs/support/faq/infrastructure.md line 79",
+      "source": "repo:content/docs/support/faq/infrastructure.md line 79",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi uses strongly typed languages with programming languages that support IntelliSense and the Language Server Protocol.",
+      "verdict": "verified",
+      "line": 83,
+      "evidence": "evidence: Pulumi programs are written in general-purpose languages (TypeScript, Python, Go, C#, Java) which have mature IDE tooling supporting IntelliSense/autocomplete and implement the Language Server Protocol; this is a standard, accurate\u2026; source: content/docs/support/faq/infrastructure.md L83",
+      "source": "content/docs/support/faq/infrastructure.md L83",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi experimental features are always opt-in, requiring explicit enabling via a flag, command, or environment variable such as `PULUMI_EXPERIMENTAL=true`.",
+      "verdict": "verified",
+      "line": 89,
+      "evidence": "evidence: Corroborated across multiple pulumi/docs and pulumi/pulumi sources: environment-variables.md states PULUMI_EXPERIMENTAL \"Enables experimental options and commands\"; pulumi.go comment notes \"hidden unless PULUMI_EXPERIMENTAL is set to\u2026; source: gh search code --owner pulumi PULUMI_EXPERIMENTAL; repo:content/docs/iac/cli/environment-variables.md; pulumi/pulumi:pkg/cmd/pulumi/pulumi.go",
+      "source": "gh search code --owner pulumi PULUMI_EXPERIMENTAL; repo:content/docs/iac/cli/environment-variables.md; pulumi/pulumi:pkg/cmd/pulumi/pulumi.go",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi experimental features are not necessarily supported and can change or be removed at any time without a deprecation cycle.",
+      "verdict": "not-a-claim",
+      "line": 89,
+      "evidence": "evidence: This is Pulumi's own stated policy on its own \"experimental\" feature designation, found verbatim in the same FAQ doc: \"They are not necessarily supported, and they can change or be removed at any time without a deprecation cycle.\" This\u2026; source: repo:content/docs/support/faq/infrastructure.md",
+      "source": "repo:content/docs/support/faq/infrastructure.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "When an experimental Pulumi feature proves valuable, Pulumi invests in stabilizing it and promoting it to general availability.",
+      "verdict": "not-a-claim",
+      "line": 89,
+      "evidence": "evidence: This is Pulumi's own stated policy about its own experimental-feature lifecycle process, found in the FAQ itself: \"When an experimental feature proves valuable, Pulumi invests in stabilizing it and promoting it to general availability.\"\u2026; source: repo:content/docs/support/faq/infrastructure.md",
+      "source": "repo:content/docs/support/faq/infrastructure.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "The Pulumi provider support policy page lists the covered providers and what a long-term support release contains.",
+      "verdict": "verified",
+      "line": 95,
+      "evidence": "evidence: The linked page content/docs/support/provider-support-policy.md contains a \"## Providers covered\" section listing pulumi-aws, pulumi-azure, etc., and a \"## What ships on the long-term support branch\" section describing LTS release\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "For a set of widely used providers, Pulumi ships security updates for the previous major version for up to a year, or until the next major version is\u2026",
+      "verdict": "verified",
+      "line": 95,
+      "evidence": "evidence: The linked provider-support-policy page states verbatim: \"For a set of widely used providers, Pulumi also ships security updates for the previous major version for up to 12 months, or until the next major version is released, whichever\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Users can find the current version for all providers maintained by Pulumi in the Pulumi Registry.",
+      "verdict": "verified",
+      "line": 97,
+      "evidence": "evidence: The Pulumi Registry homepage lists current versions for Pulumi-maintained providers, e.g. \"AWS \u00b7 v7.47.0 \u00b7 Azure Native \u00b7 v3.28.0 \u00b7 Google Cloud \u00b7 v9.36.1 \u00b7 Kubernetes \u00b7 v4.34.1\", and individual package pages show \"Version: v3.28.0 \u2026; source: https://www.pulumi.com/registry/",
+      "source": "https://www.pulumi.com/registry/",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "When a major version of a Pulumi provider is released, that is a signal to begin planning a provider version update.",
+      "verdict": "not-a-claim",
+      "line": 101,
+      "evidence": "evidence: The line is a verbatim restatement of the doc's own best-practices guidance: \"When a major version is released, that is a signal to begin planning a provider version update.\" This is Pulumi's own editorial recommendation/guidance, not an\u2026; source: repo:content/docs/support/faq/infrastructure.md L101",
+      "source": "repo:content/docs/support/faq/infrastructure.md L101",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Major provider versions typically include significant changes such as deprecations, new resources, and new functionality, which may require additional\u2026",
+      "verdict": "not-a-claim",
+      "line": 101,
+      "evidence": "evidence: The line is the doc's own general best-practices guidance restating its own policy text: \"Major versions typically include significant changes such as deprecations, new resources and new functionality, which may require some additional\u2026; source: repo:content/docs/support/faq/infrastructure.md",
+      "source": "repo:content/docs/support/faq/infrastructure.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Minor versions of Pulumi providers typically include new resources and features, as well as performance improvements and bug fixes, without introducing\u2026",
+      "verdict": "verified",
+      "line": 103,
+      "evidence": "evidence: The claim verbatim matches the source file's own text at line 103: \"Minor versions typically include new resources and features, as well as performance improvements, and bug fixes without introducing breaking changes.\" This is consistent\u2026; source: repo:content/docs/support/faq/infrastructure.md (line 103); corroborated by pulumi/registry:themes/default/content/registry/packages/azure-native/version-guide/_index.md and pulumi/docs:content/blog/golden-paths-infrastructure-components-and-templates/index.md",
+      "source": "repo:content/docs/support/faq/infrastructure.md (line 103); corroborated by pulumi/registry:themes/default/content/registry/packages/azure-native/version-guide/_index.md and pulumi/docs:content/blog/golden-paths-infrastructure-components-and-templates/index.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "The tilde operator in npm, for example ~1.2.3, can be used to always allow patch updates on the current minor version.",
+      "verdict": "verified",
+      "line": 105,
+      "evidence": "evidence: npm's official semver docs state the tilde operator \"Allows patch-level changes if a minor version is specified on the comparator,\" e.g. ~1.2.3 permits patch updates within the 1.2.x range without moving to 1.3.0.; source: https://www.npmjs.com/package/semver",
+      "source": "https://www.npmjs.com/package/semver",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Patch versions of Pulumi providers are primarily for bug fixes and security updates and are designed to be fully backward compatible.",
+      "verdict": "matches",
+      "line": 105,
+      "evidence": "evidence: The sibling page content/docs/support/provider-support-policy.md links directly to this FAQ section (\"Best practices for maintaining provider versions\") and corroborates the same semver-style policy: current major gets \"bug fixes\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Each major version of a Pulumi provider includes migration logic to smooth the upgrade from the immediately previous major version.",
+      "verdict": "verified",
+      "line": 107,
+      "evidence": "evidence: The Pulumi IaC FAQ states verbatim: \"Each major version of the provider includes migration logic to smooth the upgrade from the immediately previous major version, but these migrations do not always work across multiple major versions.\"; source: https://pulumi.com/docs/iac/faq",
+      "source": "https://pulumi.com/docs/iac/faq",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "Pulumi recommends never being 2 major versions behind on a provider, because it is inadvisable to jump a major version due to the number of potential\u2026",
+      "verdict": "verified",
+      "line": 107,
+      "evidence": "evidence: The Pulumi IaC FAQ page states verbatim: \"Never be 2 major versions behind\" and explains that major versions \"typically include significant changes such as deprecations, new resources and new functionality, which may require some\u2026; source: https://www.pulumi.com/docs/support/faq/infrastructure/",
+      "source": "https://www.pulumi.com/docs/support/faq/infrastructure/",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "claim": "The 'Provider support policy' link target exists at /docs/support/provider-support-policy/.",
+      "verdict": "verified",
+      "line": 111,
+      "evidence": "evidence: The file content/docs/support/provider-support-policy.md exists in the repo with frontmatter title \"Provider support policy\" and is registered under the support menu (parent: support-home), confirming it renders at\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "For a set of widely used providers, Pulumi ships security updates for the previous major version for up to 12 months, or until the next major version is\u2026",
+      "verdict": "not-a-claim",
+      "line": 14,
+      "evidence": "evidence: (escalated from pass3) This is Pulumi's own stated support policy (a first-party policy declaration), and it is internally consistent throughout the same document: the \"Duration of long-term support\" section states \"A provider's LTS\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "The providers covered by Pulumi's long-term support policy are pulumi-aws, pulumi-azure, pulumi-azure-native, pulumi-azuread, pulumi-command\u2026",
+      "verdict": "not-a-claim",
+      "line": 19,
+      "evidence": "evidence: This is the docs PR (pulumi/docs#21787, \"Add LTS policy to public-facing docs\") that is itself introducing/defining the LTS provider list for the first time as part of a new policy rollout (\"This is part of the policy rollout for\u2026; source: gh pr view 21787 -R pulumi/docs; repo:content/docs/support/provider-support-policy.md",
+      "source": "gh pr view 21787 -R pulumi/docs; repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "A covered provider's long-term support branch is supported until the next major version ships, for up to 12 months.",
+      "verdict": "verified",
+      "line": 32,
+      "evidence": "evidence: (escalated from pass3) The same document states: \"Pulumi also ships security updates for the previous major version for up to 12 months, or until the next major version is released, whichever comes first\" and the summary table confirms\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "The long-term support branch ships fixes for broken internal infrastructure on the LTS branch needed to ship the High/Critical CVE security patches.",
+      "verdict": "not-a-claim",
+      "line": 36,
+      "evidence": "evidence: The text at lines 36-39 is the PR's own policy documentation: \"High/Critical CVE security patches: - Fixes for CVEs affecting the provider's code or its direct dependencies. - Fixes for broken internal infrastructure on the LTS branch\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "An LTS release does not contain compatibility updates with newer versions of the Pulumi engine, the Pulumi SDKs, or language runtimes.",
+      "verdict": "not-a-claim",
+      "line": 41,
+      "evidence": "evidence: The claim text is a direct paraphrase of the source doc's own policy list: \"An LTS release does not contain: ... Compatibility with newer versions of the Pulumi engine, the Pulumi SDKs, or language runtimes.\" This is Pulumi's own stated\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "- New resources or new resource properties.",
+      "verdict": "not-a-claim",
+      "line": 44,
+      "evidence": "evidence: This line is part of the docs page's own policy list (\"An LTS release does not contain: ... New resources or new resource properties.\") describing Pulumi's own LTS support policy design, not a falsifiable external fact.; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "Providers on the long-term support branch remain compatible with the version of Pulumi they were frozen at unless otherwise prompted via security fixes.",
+      "verdict": "not-a-claim",
+      "line": 51,
+      "evidence": "evidence: The claim is a direct restatement of the document's own \"Engine support\" section: \"Providers will be compatible with the version of Pulumi they were frozen at unless otherwise prompted via security fixes.\" This is Pulumi's own\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "At any time, exactly one major version of a covered provider is the long-term support version.",
+      "verdict": "not-a-claim",
+      "line": 55,
+      "evidence": "evidence: The line is a summary restatement of the policy defined earlier in the same document (\"Exactly one long-term support major exists per provider at any time\"). This is Pulumi's own stated policy design, not a third-party-verifiable fact \u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "The long-term support major (N\u22121) of a covered provider receives security updates in the provider's code or its direct dependencies for up to 12 months from\u2026",
+      "verdict": "matches",
+      "line": 59,
+      "evidence": "evidence: (escalated from pass3) The claim exactly matches the document's own summary table row: \"Long-term support (N\u22121) ... Up to 12 months from the general availability of N, or until N+1 ships, whichever comes first. ... Security updates in\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "| **Long-term support (N\u22121)** | The major immediately before the current one. If v3 is N, then v2 is N\u22121. | Up to 12 months from the general availability of\u2026",
+      "verdict": "matches",
+      "line": 60,
+      "evidence": "evidence: (escalated from pass3) The table row's duration (\"Up to 12 months from the general availability of N, or until N+1 ships, whichever comes first\") is consistent with the page's own stated policy elsewhere: \"Pulumi also ships security\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "| **End of life (N\u22122 and older)** | Every older major. | \u2014 | Nothing. |",
+      "verdict": "not-a-claim",
+      "line": 61,
+      "evidence": "evidence: The table row is part of the document's own policy definition, internally consistent with line 55 (\"At any time, exactly one major version of a covered provider is the LTS version. Older majors receive no patches.\"). This is Pulumi\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "When a provider's N+1 major version ships, it becomes the new current major (N), the old N becomes the new long-term support major, and the previous\u2026",
+      "verdict": "not-a-claim",
+      "line": 65,
+      "evidence": "evidence: The claim is a restatement of the policy document's own \"What the policy guarantees\" section: \"When N+1 ships, it becomes the new N, and the old N becomes the new LTS major. The old long-term support major reaches end of life on the same\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "Exactly one long-term support major version exists per covered provider at any time.",
+      "verdict": "not-a-claim",
+      "line": 65,
+      "evidence": "evidence: The line is a verbatim restatement of the document's own policy summary: \"Exactly one long-term support major exists per provider at any time.\" This is Pulumi's own stated support policy definition, not an externally falsifiable fact \u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "The old long-term support major reaches end of life on the same day, regardless of how much of its 12-month window remained.",
+      "verdict": "verified",
+      "line": 67,
+      "evidence": "evidence: The doc states LTS lasts \"until N+1 ships, whichever comes first\" and \"Exactly one long-term support major exists per provider at any time... When N+1 ships, it becomes the new N, and the old N becomes the new LTS major.\" Since only one\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "- Within the long-term support major, only the latest minor version receives patches. Earlier minors are frozen.",
+      "verdict": "not-a-claim",
+      "line": 68,
+      "evidence": "evidence: This line is part of Pulumi's own stated support policy document, describing the company's own LTS versioning design (only latest minor within the LTS major receives patches). It's consistent with the rest of the same document (e.g., \"A\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "LTS releases follow the same distribution channels as current-major releases, i.e. the relevant SDK package registries for each language, but are tagged\u2026",
+      "verdict": "not-a-claim",
+      "line": 72,
+      "evidence": "evidence: This line is part of Pulumi's own first-party description of its own support-policy design (how it distributes and tags LTS provider releases) \u2014 a faithful description of the author's own process, not a third-party-attributed or\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "Pulumi recommends that customers pin to a specific major provider version, and doing so causes them to automatically receive patch releases as they ship.",
+      "verdict": "not-a-claim",
+      "line": 73,
+      "evidence": "evidence: Line 73 of the same file states: \"Customers pinning to a specific major version (recommended) will automatically receive patch releases as they ship.\" This is the document's own stated policy/recommendation, not a third-party claim to\u2026; source: repo:content/docs/support/provider-support-policy.md",
+      "source": "repo:content/docs/support/provider-support-policy.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "A page titled \"Best practices for maintaining provider versions\" exists at /docs/support/faq/infrastructure/#what-are-the-best-practices-for-maintaining-provid\u2026",
+      "verdict": "verified",
+      "line": 77,
+      "evidence": "evidence: content/docs/support/faq/infrastructure.md contains the heading \"### What are the best practices for maintaining provider versions?\" which generates the anchor #what-are-the-best-practices-for-maintaining-provider-versions, matching the\u2026; source: repo:content/docs/support/faq/infrastructure.md",
+      "source": "repo:content/docs/support/faq/infrastructure.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "- [Pulumi Registry](/registry/)",
+      "verdict": "not-a-claim",
+      "line": 78,
+      "evidence": "evidence: This is a relative internal link ([Pulumi Registry](/registry/)) pointing to Pulumi's own registry page, not a falsifiable factual assertion.; source: content/docs/support/provider-support-policy.md",
+      "source": "content/docs/support/provider-support-policy.md",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "- [Getting support](/docs/support/getting-support/)",
+      "verdict": "verified",
+      "line": 79,
+      "evidence": "evidence: content/docs/support/getting-support.md exists at that path with title \"Getting Support,\" confirming the internal link target is valid.; source: repo:content/docs/support/getting-support.md",
+      "source": "repo:content/docs/support/getting-support.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "A provider's LTS branch is supported until the next major version ships, for up to 12 months.",
+      "verdict": "flagged",
+      "line": 30,
+      "evidence": "readthrough: self-redundancy",
+      "source": "readthrough pre-step",
+      "route": "preflight"
+    },
+    {
+      "file": "content/docs/support/provider-support-policy.md",
+      "claim": "### Engine support  Providers will be compatible with the version of Pulumi they were frozen at unless otherwise prompted via security fixes.",
+      "verdict": "flagged",
+      "line": 34,
+      "evidence": "readthrough: orphaned-structure",
+      "source": "readthrough pre-step",
+      "route": "preflight"
+    }
+  ],
+  "investigation_log": {
+    "cross-sibling-reads": "0 of 3 siblings",
+    "external-claim-verification": "39 of 59 claims verified (0 unverifiable, 1 contradicted) \u00b7 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations \u00b7 routed: 0 inline, 54 Pass 1, 0 Pass 2, 5 Pass 3 (verified 4, contradicted 0, unverifiable 1).",
+    "cited-claim-spot-checks": "not run (no cited claims)",
+    "frontmatter-sweep": "ran on body + meta_desc",
+    "temporal-trigger-sweep": "ran (recency words present in diff; spot-check in-review)",
+    "code-execution": "not run (no `static/programs/` change)",
+    "code-examples-checks": "not run (no fenced code blocks in content files)",
+    "editorial-balance-pass": "not run (not under content/blog/)"
+  },
+  "editorial_balance": null,
+  "triaged": [],
+  "style_suggestions_count": 1,
+  "confidence": {
+    "mechanics": "TODO",
+    "facts": "TODO",
+    "coherence": "TODO",
+    "cross-sibling consistency": "TODO"
+  },
+  "summary": null,
+  "stances": [
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "text": "Pulumi recommends at least quarterly considering updating to the latest minor version on the current major, and minimally reviewing provider release notes.",
+      "type": "positioning",
+      "line": 103,
+      "found_by": [
+        "llm-atomic"
+      ]
+    },
+    {
+      "file": "content/docs/support/faq/infrastructure.md",
+      "text": "Pulumi is a declarative tool that uses imperative languages to define your end state.",
+      "type": "positioning",
+      "line": 79,
+      "found_by": [
+        "llm-atomic"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "ts": "2026-09-21T21:48:09Z",
+      "summary": "initial review (pending publication)",
+      "sha": "438cef5"
+    }
+  ]
+}

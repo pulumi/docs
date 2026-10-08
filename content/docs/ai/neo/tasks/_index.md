@@ -87,7 +87,7 @@ Each task belongs to the user who created it. By default, tasks are private, but
 Sharing preserves security boundaries:
 
 - Viewers can see the conversation but cannot trigger any actions
-- Links to stacks or resources within the shared task still enforce the viewer's existing [RBAC](/docs/administration/access-identity/rbac/) permissions
+- Links to stacks or resources within the shared task still enforce the viewer's existing [RBAC](/docs/administration/concepts/rbac/) permissions
 - The original task owner retains full control
 
 ### Interruptions and resuming

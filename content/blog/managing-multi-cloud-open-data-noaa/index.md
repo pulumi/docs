@@ -64,7 +64,7 @@ As our team grew and our platform scaled (more than doubling in storage size ove
 
 We began looking at infrastructure as code (IAC) solutions and initially considered many of the cloud-specific options: CloudFormation on AWS, Deployment Manager on Google, and Resource Manager on Azure. While these were nice for automation, we quickly discarded these as options because each had an individual learning curve for that environment; they did not translate well in a multi-cloud environment. These tools also did not have the control features of a full-fledged programming language; looping and if-then statements were challenging to implement.
 
-We also considered other Infrastructure as Code providers. While these solutions would meet a lot of our needs, and one of our team members had extensive experience with one of these  tools, the ability to use a common tool seamlessly in a multi-cloud environment was attractive. However, the learning curve associated with a domain specific language was cause for reticence.  In addition, we really wanted to be able to use the features of a full-fledged programming language.
+We also considered other infrastructure as code providers. While these solutions would meet a lot of our needs, and one of our team members had extensive experience with one of these  tools, the ability to use a common tool seamlessly in a multi-cloud environment was attractive. However, the learning curve associated with a domain specific language was cause for reticence.  In addition, we really wanted to be able to use the features of a full-fledged programming language.
 
 After experimenting with a few IAC options, our research institute began using Pulumi in late 2021 and immediately began implementing it to expand our infrastructure.
 

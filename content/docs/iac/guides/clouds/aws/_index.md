@@ -21,7 +21,7 @@ aliases:
 ---
 
 This section contains guides for working with AWS services using Pulumi. If you are unsure which AWS package to
-use for your project, see [Choosing a Pulumi AWS provider](providers/) for a comparison of the available packages
+use for your project, see [Choosing a Pulumi AWS provider](/docs/iac/guides/clouds/aws/providers/) for a comparison of the available packages
 and when to use each one.
 
 The guides use the following packages:
@@ -34,22 +34,13 @@ The guides use the following packages:
 
 ## Getting started
 
-- [Choosing a provider](providers/)
-- [Pulumi CDK Adapter](cdk/)
+- [Choosing a provider](/docs/iac/guides/clouds/aws/providers/)
+- [Pulumi CDK Adapter](/dev/tutorials/aws-cdk/)
 
-## Containers
+## Tutorials and examples
 
-- [Elastic Container Service (ECS)](ecs)
-- [Elastic Kubernetes Service (EKS)](eks)
-- [Elastic Container Registry (ECR)](ecr)
+The [Dev Center](/dev/browse/cloud/aws/) has hands-on AWS tutorials, templates, and examples. Browse them by topic:
 
-## Serverless
-
-- [Lambda](lambda/)
-- [API Gateway](api-gateway/)
-
-## Core infrastructure
-
-- [Elastic Load Balancing (ELB)](elb)
-- [Identity and Access Management (IAM)](iam)
-- [Virtual Private Cloud (VPC)](vpc)
+- [Containers](/dev/browse/?cloud=aws&tag=containers): Amazon ECS, Amazon EKS, and Amazon ECR
+- [Serverless](/dev/browse/?cloud=aws&tag=serverless): AWS Lambda and Amazon API Gateway
+- [Networking](/dev/browse/?cloud=aws&tag=networking): VPCs, load balancers, and related infrastructure

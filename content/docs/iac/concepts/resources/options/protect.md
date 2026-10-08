@@ -16,6 +16,8 @@ aliases:
 
 The `protect` resource option marks a resource as protected. A protected resource cannot be deleted directly, and it will be an error to do a Pulumi deployment which tries to delete a protected resource for any reason.
 
+`protect` is a Pulumi-engine construct, enforced entirely within Pulumi and never sent to the cloud provider. Many cloud resources also carry their own, separate deletion-protection attributes, such as `deletionProtection` on a GCP Cloud SQL instance or an AWS RDS instance, which the cloud provider enforces independently of anything Pulumi knows about. A resource can be unprotected in Pulumi and still refuse to delete, or vice versa. See [Deletion protection on the resource itself](/docs/iac/operations/troubleshooting/destroy-failures/#deletion-protection-on-the-resource-itself) for how to tell the two apart and resolve each.
+
 {{< resource-option-scope "protect" >}}
 
 To delete a protected resource, it must first be *unprotected*. There are two ways to unprotect a resource:

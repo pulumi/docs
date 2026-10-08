@@ -327,6 +327,20 @@ for the decision itself, and
 for the full walkthrough, including packaging it for other languages to
 consume.
 
+## Frequently asked questions
+
+### Do I need to know object-oriented programming to use Pulumi?
+
+No. Classes are entirely optional in Pulumi, and most day-to-day infrastructure code is plain functions and resource declarations. You only reach for a class when you want to package resources into a reusable, named component that other code can create and reference as a unit.
+
+### What is a ComponentResource?
+
+A `ComponentResource` is a resource that groups a set of child resources under one logical parent and exposes their combined outputs through a single interface, using `registerOutputs` (`RegisterOutputs` in C#). Consumers of the [component](/docs/iac/concepts/components/) interact with that simple interface instead of wiring up each child resource themselves.
+
+### Can I use a component written in another language?
+
+Yes, if it's packaged as a source-based package. Consumers run `pulumi package add` against its Git URL, and Pulumi generates an SDK in whichever language they're using, YAML included. A plain npm- or PyPI-style native language package, by contrast, only works in the language it was published for.
+
 ## Next steps
 
 Continue to

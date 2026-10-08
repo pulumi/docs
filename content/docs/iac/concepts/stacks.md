@@ -8,8 +8,6 @@ menu:
         name: Stacks
         parent: iac-concepts
         weight: 30
-    concepts:
-        weight: 2
 aliases:
 - /docs/iac/concepts/stacks/stackreference/
 - /docs/reference/stack/
@@ -109,7 +107,7 @@ dev                                       n/a                      n/a
 
 ## Rename a stack
 
-To rename an existing stack, run `pulumi stack rename <new-name>`. The new name may be a simple stack name or a fully qualified name in the form `<org>/<project>/<stack>`:
+To rename an existing stack, run `pulumi stack rename <new-name>`. The new name may be an unqualified stack name or a fully qualified name in the form `<org>/<project>/<stack>`:
 
 ```bash
 $ pulumi stack rename production
@@ -151,7 +149,7 @@ config:
   aws:region: us-west-2
 ```
 
-Keys that include an explicit namespace other than the project name (such as `aws:region`) are unaffected and do not need to change. Alternatively, you can recreate each value using `pulumi config set` (or `pulumi config set --secret` for sensitive values) after updating `Pulumi.yaml`.
+Keys that include an explicit namespace other than the project name (such as `aws:region`) are unaffected and do not need to change. You can instead recreate each value using `pulumi config set` (or `pulumi config set --secret` for sensitive values) after updating `Pulumi.yaml`.
 
 ## Generate an update plan
 
@@ -162,7 +160,7 @@ Keys that include an explicit namespace other than the project name (such as `aw
 To preview an update of the currently selected stack and save that plan run `pulumi preview --save-plan=plan.json`. The operation uses the latest [configuration values](/docs/iac/concepts/config/) for the active stack.
 
 {{% notes type="info" %}}
-Your program code can distinguish between execution for `preview` and `update` operations by using [pulumi.runtime.isDryRun()](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun).
+Your program code can distinguish between execution for `preview` and `update` operations by using [pulumi.runtime.isDryRun()](/docs/reference/pkg/nodejs/pulumi/pulumi/functions/runtime.isDryRun.html).
 {{% /notes %}}
 
 ## Update a stack
@@ -201,11 +199,11 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 
 Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`](/docs/iac/cli/commands/pulumi_stack_tag_list/).
 
-Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/docs/iac/cli/commands/pulumi_stack_tag_set/) and can be used to customize the grouping of stacks in the [Pulumi Cloud](https://app.pulumi.com/signin). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in Pulumi Cloud.
+Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/docs/iac/cli/commands/pulumi_stack_tag_set/) and can be used to customize the grouping of stacks in [Pulumi Cloud](https://app.pulumi.com/signin). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in Pulumi Cloud.
 
 As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
 
-Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_remove/). Custom tags can also be created, edited, and deleted from each stack's **Overview** tab in the [Pulumi Cloud](https://app.pulumi.com/signin) UI.
+Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_remove/). Custom tags can also be created, edited, and deleted from each stack's **Overview** tab in the [Pulumi Cloud console](https://app.pulumi.com/signin).
 
 ## Stack outputs {#outputs}
 
@@ -213,7 +211,7 @@ A stack can export values as stack outputs. These outputs are shown during an up
 
 To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -276,6 +274,15 @@ outputs:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+output "url" {
+  value = aws_instance.web.public_dns
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -287,7 +294,7 @@ Stack exports are effectively JSON serialized, though quotes are removed when ex
 
 For example, the following statements:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -356,6 +363,19 @@ outputs:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+output "x" {
+  value = "hello"
+}
+
+output "o" {
+  value = { num = 42 }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -381,7 +401,7 @@ $ pulumi stack output --json
 ```
 
 {{% notes type="info" %}}
-Note: If you export an actual resource, it too will be JSON serialized. This usually isn’t what you want, especially because some resources are quite large. For example, if you only want to export the resource’s ID or name, just export those properties directly.
+If you export an actual resource, it too is JSON serialized. This usually isn’t what you want, especially because some resources are large. If you only want to export the resource’s ID or name, export those properties directly.
 {{% /notes %}}
 
 Stack outputs respect secret annotations and are encrypted appropriately. If a stack contains any secret values, their plaintext values will not be shown by default. Instead, they will be displayed as secret in the CLI. Pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
@@ -493,13 +513,13 @@ The template file can reference other stack outputs (or resource properties) wit
 1. [Cloudwatch Logs](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logStream:group=${outputs.cloudwatchLogGroup}): Search across service logs
 ```
 
-After running `pulumi up`, the rendered README appears on the stack's **README** tab in the Pulumi Cloud UI.
+After running `pulumi up`, the rendered README appears on the stack's **README** tab in the Pulumi Cloud console.
 
 ## Getting the current stack programmatically
 
 The {{< pulumi-getstack >}} function gives you the currently deploying stack, which can be useful in naming, tagging, or accessing resources.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -544,16 +564,27 @@ variables:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  stack = pulumi.stack
+}
+```
+
+The companion references `pulumi.project` and `pulumi.organization` are available the same way.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 ## Stack references {#stackreferences}
 
-Stack references allow you to access the outputs of one stack from another stack. Inter-stack dependencies allow one stack to reference the outputs of another stack.
+Stack references allow you to access the outputs of one stack from another stack, creating an inter-stack dependency between them.
 
 To reference values from another stack, create an instance of the `StackReference` type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -615,15 +646,30 @@ variables:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+In Pulumi HCL, a stack reference is a `pulumi_stack_reference` resource. Its `outputs` attribute is a map of the referenced stack's exports, indexed by name:
+
+```hcl
+resource "pulumi_stack_reference" "other" {
+  name = "acmecorp/infra/other"
+}
+
+locals {
+  other_output = pulumi_stack_reference.other.outputs["x"]
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 Stack names must be fully qualified, including the organization, project, and stack name components, in the format `<organization>/<project>/<stack>`. For individual accounts, use your account name for the organization component.
 
-To expand on this further, imagine you need to define a cluster's infrastructure in one project and consume it from another.
-Perhaps one project, `infra`, defines a Kubernetes cluster and another, `services`, deploys
-services into it. Let's further imagine you are doing this across three distinct environments: production, staging,
-and testing. In that case, you will have six distinct stacks that pair up in the following ways:
+For example, suppose you need to define a cluster's infrastructure in one project and consume it from another.
+One project, `infra`, defines a Kubernetes cluster and another, `services`, deploys
+services into it. If you do this across three distinct environments — production, staging,
+and testing — you have six distinct stacks that pair up in the following ways:
 
 * `mycompany/infra/production` provides the cluster used by `mycompany/services/production`
 * `mycompany/infra/staging` provides the cluster used by `mycompany/services/staging`
@@ -632,7 +678,7 @@ and testing. In that case, you will have six distinct stacks that pair up in the
 The way Pulumi programs communicate information for external consumption is by using stack exports. For example,
 your infrastructure stack might export the Kubernetes configuration information needed to deploy into a cluster:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -687,6 +733,15 @@ outputs:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+output "kubeConfig" {
+  value = module.cluster.kubeconfig # a cluster's output property
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -695,7 +750,7 @@ connect to the Kubernetes cluster provisioned in its respective environment.
 
 The Pulumi programming model offers a way to do this with its `StackReference` resource type. For example:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -735,11 +790,14 @@ func main() {
   pulumi.Run(func(ctx *pulumi.Context) error {
     slug := fmt.Sprintf("mycompany/infra/%v", ctx.Stack())
     stackRef, err := pulumi.NewStackReference(ctx, slug, nil)
+    if err != nil {
+      return err
+    }
 
     kubeConfig := stackRef.GetOutput(pulumi.String("kubeConfig"))
     // ...
     return nil
-  }
+  })
 }
 ```
 
@@ -824,6 +882,35 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source = "pulumi/kubernetes"
+    }
+  }
+}
+
+resource "pulumi_stack_reference" "infra" {
+  name = "mycompany/infra/${pulumi.stack}"
+}
+
+provider "kubernetes" {
+  kubeconfig = pulumi_stack_reference.infra.outputs["kubeConfig"]
+}
+
+resource "kubernetes_namespace" "app" {
+  metadata = {
+    name = "my-app"
+  }
+}
+```
+
+The `pulumi/` source prefix selects the native Pulumi Kubernetes provider, which takes a `kubeconfig` argument directly. The bridged `hashicorp/kubernetes` provider you would get from an unqualified `kubernetes` source configures itself differently — with `config_path`, `host`, and friends — so check the provider's own documentation when you use a bridged provider here.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -833,7 +920,7 @@ you access the outputs of that stack.
 In the above example, you construct a stack reference to a specific stack in this project which has the same name
 as your current stack (i.e. when deploying the "staging" stack of the above program, you reference the "staging" stack)
 from the infra project. Once you have that resource, you can read output variables from it.
-From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
+From that point on, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
 
 ### Reading outputs from stack references
 
@@ -851,11 +938,10 @@ Stack references support the following methods for reading outputs from the refe
   use in your program's logic, or when you need to distinguish between a non-secret output
   (available as `.value`) and a secret output (available as `.secretValue`).
 
-The following example uses `requireOutput`, the recommended method for reading stack reference
-outputs. It reads a `vpcId` export and fails immediately at deployment time if that output is
-absent from the referenced stack:
+The following example uses `requireOutput`, the recommended default that fails at deployment
+time if the output is missing, to read a `vpcId` export:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -925,15 +1011,33 @@ variables:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "pulumi_stack_reference" "infra" {
+  name = "acmecorp/infra/prod"
+}
+
+locals {
+  # Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+  vpc_id = pulumi_stack_reference.infra.outputs["vpcId"]
+}
+```
+
+{{% notes type="info" %}}
+Indexing the `outputs` map is the Pulumi HCL equivalent of `requireOutput`: a name that
+the referenced stack does not export is an `Invalid index` error at deployment time. For
+`getOutput` behavior, see the next example.
+{{% /notes %}}
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
-Use `getOutput` when the absence of an output is an expected, handled condition in your program.
-The following example reads a `privateIp` output and transforms it with `Output.apply` to build
-a derived value. If the output is missing, the undefined value propagates silently rather than
-surfacing as an error:
+The following example uses `getOutput`, which lets a missing output propagate silently, to read
+a `privateIp` output, then transforms it with `Output.apply` to build a derived value:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -1026,19 +1130,34 @@ exist in the referenced stack.
 {{% /notes %}}
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+Wrap the lookup in [`try`](/docs/iac/languages-sdks/hcl/hcl-language-reference/#try-and-can), or use `lookup` with a fallback, to get `getOutput`'s tolerance of a missing name. No `apply` step is needed: an ordinary HCL expression over a stack reference output produces a derived value directly.
+
+```hcl
+resource "pulumi_stack_reference" "infra" {
+  name = "acmecorp/infra/prod"
+}
+
+locals {
+  ip      = try(pulumi_stack_reference.infra.outputs["privateIp"], "unknown")
+  log_key = "logs/${local.ip}.log"
+}
+
+resource "aws_s3_object" "log" {
+  # ...
+  key = local.log_key
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
-`getOutputDetails` is useful when you need direct access to a resolved output value.
-This is most helpful when you want to inspect whether a value is marked as a secret, or when
-you need to use the value in your program logic without calling `Output.apply()`. The method
-returns an `OutputDetails` object whose `value` field holds the raw value for non-secret
-outputs, and whose `secretValue` field holds the raw value for outputs the referenced stack
-has marked as secret.
+The following example uses `getOutputDetails`, which bypasses the `Output` wrapper, in a case
+where the referenced stack exports a database hostname as a plain string:
 
-As an example, suppose your referenced stack exports a database hostname as a plain string:
-
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -1060,25 +1179,33 @@ export = async () => {
 }
 ```
 
-See [Javascript Entrypoint](/docs/languages-sdks/javascript/#entrypoint)
+See [JavaScript program entrypoint](/docs/iac/languages-sdks/javascript/#program-entrypoint)
 for more information.
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
-{{% notes type="info" %}}
-This functionality is not currently supported in Python.
-Progress is tracked on [pulumi/pulumi#12172](https://github.com/pulumi/pulumi/issues/12172)
-if you need this functionality.
-{{% /notes %}}
+Because `get_output_details` is awaited, your Pulumi program must register an async
+entrypoint with `pulumi.run`. This requires version 3.254.0 or later of the Pulumi
+Python SDK.
 
-<!-- ```python -->
-<!-- infra = StackReference("acmecorp/infra/prod") -->
-<!-- db_host_details = await infra.get_output_details("dbHost") -->
-<!-- # For non-secret outputs, the value is in .value. -->
-<!-- # For outputs marked as secret, use .secret_value instead. -->
-<!-- db_host = db_host_details.value -->
-<!-- ``` -->
+```python
+import pulumi
+from pulumi import StackReference
+
+async def main():
+    infra = StackReference("acmecorp/infra/prod")
+    db_host_details = await infra.get_output_details("dbHost")
+
+    # For non-secret outputs, the value is in .value.
+    # For outputs marked as secret in the referenced stack, use .secret_value instead.
+    db_host = db_host_details.value
+
+pulumi.run(main)
+```
+
+See [async entrypoint](/docs/iac/languages-sdks/python/#async-entrypoint)
+for more information.
 
 {{% /choosable %}}
 {{% choosable language go %}}
@@ -1144,6 +1271,17 @@ output in YAML, use the `outputs` property of a `StackReference` resource, as sh
 {{% /notes %}}
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+{{% notes type="info" %}}
+`getOutputDetails` has no Pulumi HCL equivalent. HCL expressions are not wrapped in
+`Output`, so there is nothing to unwrap: index the `outputs` map of a
+`pulumi_stack_reference` resource, as shown in the `requireOutput` example above, and use
+the result like any other value. A secret output stays secret as it flows through the
+program.
+{{% /notes %}}
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -1171,7 +1309,7 @@ There are scenarios when `pulumi destroy` may fail to delete resources as expect
 
 ## Delete a stack
 
-To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.
+To delete a stack with no resources, run `pulumi stack rm`. Removing the stack removes all stack history from Pulumi Cloud and deletes the stack configuration file `Pulumi.<stack-name>.yaml`.
 
 To force the deletion of a stack that still contains resources---potentially orphaning them---use `pulumi stack rm --force`.
 

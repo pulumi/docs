@@ -14,17 +14,6 @@ unlisted: false
 # to fill out the form before viewing.
 gated: false
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: production-ready-networking-aws-with-python
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
@@ -44,7 +33,7 @@ location: virtual
 description: |
     In this workshop you'll learn to apply Infrastructure as Code concepts to build a hub and spoke network topology with an inspection VPC. This pattern is incredibly useful for standing up separate environments for development, testing and production, providing workload isolation for multiple customers and standing up shared services.
 
-    This 200-level course will be taught in the Python language but the concepts apply to any modern programming language. The content builds upon Pulumi concepts from [learn.pulumi.com](/tutorials/) and our Getting Started workshop series.
+    This 200-level course will be taught in the Python language but the concepts apply to any modern programming language. The content builds upon Pulumi concepts from [learn.pulumi.com](/dev/tutorials/) and our Getting Started workshop series.
 
 learn:
     - AWS networking concepts using Python

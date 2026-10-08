@@ -9,7 +9,7 @@ A "claim" is any assertion in PR-changed content that **could be wrong** and is 
 
 This file is loaded by two consumers:
 
-1. **The claim-extraction pre-step** (`extract-claims-llm.py`) — two redundant Sonnet passes that read each changed `content/**/*.md` file and emit a JSON claim list. This file is their system prompt.
+1. **The claim-extraction pre-step** (`extract-claims-llm.py`) — two redundant LLM passes that read each changed `content/**/*.md` file and emit a JSON claim list. This file is their system prompt.
 2. **The main review's verification step** (`docs-review:references:fact-check` §Claim extraction) — which reads the merged pre-step artifact `.candidate-claims.json` as the claim *floor* (verify every entry; may add more) and applies the routing / triage / framing rules downstream.
 
 Both consumers use the *same* definition of "claim" — that's the point of having one file.
@@ -23,7 +23,7 @@ Every claim record carries a `type`. Use the most specific type that fits; a sen
 | `type` | What it is | How to record it |
 |---|---|---|
 | `numerical` | A specific quantity — price, rate, limit, size, count, percentage, multiplier, duration, version-distance ("two minor versions"). | `text` = the assertion as a self-contained sentence. If a source is named in the same sentence, set `source_hint` to it; the verifier framing-compares (§Framing). Unrounded/unsourced specifics also warrant the intuition-check flag downstream. |
-| `version` | A pinned version, SDK/runtime version, or availability-by-version statement ("`pulumi-gcp` v8.2.0", "requires Node.js 18+", "available since v3.230", "Go 1.21"). | `text` = the pin and what it applies to. `source_hint` = the package/product if extractable. The verifier checks it against release notes / the registry; a stale-but-correct pin gets an §API-currency note, not a 🚨. |
+| `version` | A pinned version, SDK/runtime version, or availability-by-version statement ("`pulumi-gcp` v8.2.0", "requires Node.js 18+", "available since v3.230", "Go 1.21"). | `text` = the pin and what it applies to — the thing the version number *belongs to*, which in a nested config block is not always the nearest name (worked example 14). `source_hint` = the package/product if extractable; when it ships from a Pulumi repo, use the `pulumi/<repo>` form (`pulumi/pulumi-terraform-provider`, not `terraform-provider`) — release tags decide a pin, and the bare package name reads downstream as a third-party product. The verifier checks it against release notes / the registry; a stale-but-correct pin gets an §API-currency note, not a 🚨. |
 | `temporal` | A recency/time-bounded assertion — "recently", "now supports", "new in v…", "as of April 2026", "retiring in March 2026", "deprecated", "introduced". | `text` = the assertion. Set `source_hint` if a date or release is named. The verifier records the result with a date anchor ("As of $TODAY, …") or flags temporal *misuse* ("recently" describing a years-old change) as contradicted. |
 | `feature` | "Feature/integration X exists / is supported / works on Y" (and the negative: "X is not supported"). | `text` = the capability statement. Negatives are harder to verify (proving absence) — say so in `text` so the verifier knows to read the provider registry / source. |
 | `behavior` | What a command / API / resource *does* — output, side effect, default value, flag semantics ("`pulumi up` deploys all resources in the stack", "encryption is enabled by default", "`--cwd` accepts a path"). | `text` = the behavior as a testable statement. The verifier reads the source / runs the command. |
@@ -32,8 +32,8 @@ Every claim record carries a `type`. Use the most specific type that fits; a sen
 | `cross-reference` | "See the X guide / the Y page" — the target must exist — *and* sibling-consistency claims in templated directories (nav steps, headings, field labels, placeholder conventions checked against parallel pages). | For "see X": `text` names the link target. For sibling-consistency: this is handled by the cross-sibling sibling-read fan-out (`.cross-sibling-discovery.json` + `docs-review:references:fact-check` §Cross-sibling consistency), not by the prose-claim passes — don't duplicate it here. |
 | `quote` | A direct quotation or a paraphrase attributed to a named source ("Willison writes …", "the README says …"). | `text` = the quoted/paraphrased statement. `source_hint` = the named source. The verifier fetches the source and framing-compares the quote against it. |
 | `attribution` | An assertion of *fact about the world* that the PR attributes to a third party ("per the AWS Lambda docs, retries default to 3 attempts", "Anthropic announced Claude N in <month>", "the Kubernetes deprecation policy guarantees three minor releases"). The verifiable assertion is **the attribution itself** — does the named source actually say this, in this framing? | `text` = the attributed claim, *including the attribution* ("the AWS Lambda docs say retries default to 3 attempts"). `source_hint` = the named source. This is distinct from `quote` (a verbatim quotation) — an attribution restates/summarizes. **An attribution is always a claim, even when the underlying detail would not be a claim on its own** (see §Not a claim). |
-| `positioning` | A market-position / recommendation / canonicality statement — "the only X", "the canonical IaC tool", "the recommended approach", "industry standard", "battle-tested", "actively maintained". | `text` = the positioning statement. `source_hint` = a source if cited. The verifier checks whether it's defensible; superlatives/AI-boilerplate also warrant the intuition-check flag downstream. Marketing voice in docs is itself a finding (`docs-review:references:prose-patterns`). |
-| `comparison` | An explicit comparison — "faster than X", "unlike Terraform, …", "up to 40× …", "outperforms Y". | `text` = the comparison, *including both sides* ("Pulumi uses real programming languages; Terraform does not" — extract the implicit claim about Terraform too). `source_hint` = a benchmark/source if cited. |
+| `positioning` | A market-position / recommendation / canonicality statement — "the only X", "the canonical IaC tool", "the recommended approach", "the fastest path", "industry standard", "battle-tested", "actively maintained". | `text` = the positioning statement. `source_hint` = a source if cited. **Extracted, never verified.** `merge-claims.py` (schema v2) writes positioning and comparison records to a separate `stances` list; `verify-claims.py` never sees them (a page's own framing has no external ground truth — the verifier's hard rules landed every one `not-a-claim`, and that verdict was then banked as a finding: PR #20004 → #21291). The review lists them verdict-free under ⚠️ as **Editorial stances introduced by this PR** so a human sees that an agent asserted "fastest" / "recommended" / "the only"; `editorial-stances-coverage` holds the list to the artifact. Marketing voice in docs is itself a finding (`docs-review:references:prose-patterns`). |
+| `comparison` | An explicit comparison — "faster than X", "unlike Terraform, …", "up to 40× …", "outperforms Y". | `text` = the comparison, *including both sides* ("Pulumi uses real programming languages; Terraform does not" — extract the implicit claim about Terraform too). `source_hint` = a benchmark/source if cited. Routed with `positioning`: surfaced as a stance, not verified. A comparison that carries a **checkable number** ("up to 40× faster") is also a `numerical` claim — emit that record too; the number is verified even though the framing is not. |
 
 When in doubt between two types, pick the more specific, or emit the claim under both — duplicates are merged downstream by line range + near-text.
 
@@ -55,6 +55,9 @@ Each claim's `text` must stand alone — a verifier reading only the record (wit
 - "It's enabled by default." → "S3 bucket server-side encryption is enabled by default in this example."
 - "This is the recommended approach." → "Using a separate ESC environment per stack is the recommended approach for secret isolation."
 - "They retired it in March 2026." → "Pulumi retired the legacy `pulumi-base` Docker image in March 2026."
+- "As of Pulumi CLI v3.33.1, add `awssdk=v2` and `profile=` to the query string." — under the heading `#### AWS Key Management Service (KMS)` → "As of Pulumi CLI v3.33.1, the `awskms` secrets-provider URL takes `awssdk=v2` and `profile=<name>` in its query string."
+
+**Carry the enclosing scope.** A sentence on the page inherits the subject of the heading and paragraph it sits under; a claim record does not. The nightly re-verification reads records straight from the claims index with no page in view, so a record that says "the query string" when the page meant "the awskms URL's query string" gets verified as a claim about every query string — and comes back contradicted or framing-drift for a page that is correct in context. On 2026-09-03 exactly that marked two pages and burned two review slots for no defect. Name the thing the heading scopes the sentence to, every time.
 
 Keep it faithful — restate, don't editorialize, don't strengthen. If the original is hedged ("ESC can integrate with Vault in some configurations"), keep the hedge.
 
@@ -130,6 +133,11 @@ Return a single JSON object via the `extract_claims` tool:
                                                           // page and manufactures a false contradiction. If the claim's own
                                                           // URL is already in `text`, the hint is redundant; never substitute
                                                           // a different page.
+                                                          // For `version` and `api-surface` claims it is the package or
+                                                          // product the pin/surface belongs to ("pulumi/pulumi-gcp",
+                                                          // "Node.js"), cited or not: entity_key.py keys the claim on it,
+                                                          // and without it a version claim is keyed on whatever words
+                                                          // happen to open the sentence ("version/later-exactly").
       "confidence": "high"                     // high | medium | low
     }
   ]
@@ -155,7 +163,7 @@ Both modes use the same taxonomy, the same not-a-claim list, and the same record
 
 ## Worked examples
 
-Real patterns from the corpus, with the extracted record(s) and the reasoning. The hard cases are claims a single Opus run got right one run and wrong the next — these examples train extraction to be reliable on exactly that shape.
+Real patterns from the corpus, with the extracted record(s) and the reasoning. The hard cases are claims a single review run got right one run and wrong the next — these examples train extraction to be reliable on exactly that shape.
 
 **1 — The StrongDM holdout-mechanics paragraph**
 
@@ -242,6 +250,31 @@ Real patterns from the corpus, with the extracted record(s) and the reasoning. T
 - Record A (type `behavior`): `text` = "`pulumi preview` shows the planned changes without applying them."
 - Record B (type `behavior`): `text` = "`pulumi preview --expect-no-changes` exits non-zero when it detects a diff."
 - Reasoning: two independent, separately-verifiable behaviors joined by "and". Split them so a wrong half is isolated.
+
+**13 — Scope lives in the heading.**
+
+> Under `#### AWS Key Management Service (KMS)`, after three `awskms://...` examples:
+> "As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_PROFILE` environment variable, add `awssdk=v2` and `profile=` followed by the profile name to the query string."
+
+- Record (type `version`): `text` = "As of Pulumi CLI v3.33.1, the `awskms` secrets-provider URL accepts `awssdk=v2` and `profile=<name>` in its query string as an alternative to the `AWS_PROFILE` environment variable." `source_hint` = "pulumi/pulumi" `confidence` = high.
+- Reasoning: on the page, "the query string" can only mean the awskms URL — the heading and the surrounding examples say so. Lifted out verbatim, the sentence reads as a claim about AWS query strings in general, and a verifier holding only the record will find the v3.33.1 release note scoped to `awskms` and call the record over-broad. It is the record that is over-broad, not the page. The `source_hint` names the product whose release notes decide the pin, so the claim keys as `version/pulumi` rather than on the sentence's opening words.
+
+**14 — A version pin in a nested config block: whose version is it?**
+
+> ```yaml
+> packages:
+>   random:
+>     source: terraform-provider
+>     version: 1.4.0
+>     parameters:
+>       - hashicorp/random
+>       - 3.7.1
+> ```
+
+- Wrong record: `text` = "The example `Pulumi.yaml` pins the `terraform-provider` package's `random` provider to version 1.4.0." — this attaches 1.4.0 to the wrapped Terraform provider, which no release of `hashicorp/random` matches, so a correct pin verifies as `contradicted`.
+- Record A (type `version`): `text` = "The example `Pulumi.yaml` pins Pulumi's `terraform-provider` package (the Any Terraform Provider bridge) to version 1.4.0." `source_hint` = "pulumi/pulumi-terraform-provider" `confidence` = high.
+- Record B (type `version`, only if the block carries it): `text` = "The example `Pulumi.yaml` parameterizes the `terraform-provider` package with the `hashicorp/random` Terraform provider at version 3.7.1." `source_hint` = "hashicorp/random".
+- Reasoning: in a `packages:` entry, `version:` pins the package named by the sibling `source:` key; the map key (`random`) is only the local name. The entries under `parameters:` name the wrapped Terraform provider and, optionally, *its* version — a different number from a different release stream. Read the structure, not the proximity: the two versions are separate claims with separate sources. The `pulumi/<repo>` hint sends Record A to the lane that can read release tags; a bare `terraform-provider` hint reads as an external product and gets web-searched, where the top hit is the page under review.
 
 ---
 

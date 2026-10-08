@@ -58,6 +58,7 @@ Read `.content-review-queue.json` from the repo root (written by
       "stale_claims": 1,
       "stale_claim_markers": [
         { "entity_key": "version/pulumi-package",
+          "claim_text": "Package source is saved to `packages` in Pulumi.yaml as of Pulumi 3.157.0.",
           "verdict": "contradicted",
           "evidence": "CHANGELOG lists \"Save package source to `packages` in Pulumi.yaml on `package add`\" under 3.163.0, not 3.157.0.",
           "source": "gh api repos/pulumi/pulumi/releases",
@@ -78,7 +79,9 @@ Read `.content-review-queue.json` from the repo root (written by
   nightly re-verification found contradicted (see §Claims index below). A
   non-zero count is why the page jumped the queue.
 - `stale_claim_markers` (when present) — **those findings in full**, each with
-  the `entity_key`, the `verdict`, the `evidence` the nightly verifier
+  the `entity_key`, the `claim_text` (the exact sentence the nightly verifier
+  checked — search the page for it; a marker without one predates 2026-09 and
+  names only the entity), the `verdict`, the `evidence` the nightly verifier
   recorded, the `source` it reached, and `unresolved_reviews` (how many prior
   reviews saw this marker and left it unresolved). **These are the highest-
   priority findings in your queue and you must address every one of them.**
@@ -100,7 +103,8 @@ Read `.content-review-queue.json` from the repo root (written by
   `resolved_claims`. A marker you do not resolve is carried onto the next
   review with `unresolved_reviews` incremented, and after two such rounds it
   is escalated for a human — so silently skipping one does not make it go
-  away, it just delays it.
+  away, it just delays it. (That next review is not tomorrow's: the boost
+  sits out a five-day cooldown after any completed review of the page.)
 - `no_retire` — when true, retirement must never be proposed for this page.
   This is the **hard veto** on retirement — honor it regardless of evidence.
 - `reader_signals` / `signals` — Search Console and feedback-widget figures
@@ -168,13 +172,22 @@ python3 .claude/commands/docs-review/scripts/cross-sibling-discover.py \
     --changed-files <path> --out .cross-sibling-discovery.json
 ```
 
-Run Vale the way the review workflow does, in whole-file mode (no `--pr`):
+Run Vale in whole-file mode (no `--pr`) and in **fix mode**:
 
 ```bash
 vale --no-exit --output=JSON <path> > .vale-raw.json 2>/dev/null || echo '{}' > .vale-raw.json
 python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
-    --in .vale-raw.json --out .vale-findings.json || echo '[]' > .vale-findings.json
+    --fix-mode --in .vale-raw.json --out .vale-findings.json || echo '[]' > .vale-findings.json
 ```
+
+`--fix-mode` is required here and is the one place it is used. Without it the
+filter applies the pinned review's comment budget — 10 findings per file, 50
+total, advisory findings de-duplicated per (category, message) — which
+truncates the backlog you are here to clear. A single-file run hits the
+per-file cap exactly, you fix those 10, and the next review run surfaces the
+next 10 as fresh PR churn. The dedup is worse for a fixer than for a reader:
+`Pulumi.NarrativeWe` emits the same message for every "we will" in the file,
+so a deduped list shows one line and hides the rest.
 
 If any artifact is missing or carries an `errors` field, continue with the
 artifacts you have and say so in the PR description; never fabricate artifact
@@ -212,25 +225,29 @@ only:
   This is verify-a-proposed-fix, not compose-a-fix; it is still a judgment.
   Vale findings *without* the flag are style/judgment nags — leave them for the
   human (see `docs-review:references:spelling-grammar`).
-- **Readthrough `local_repair` findings** — `.readthrough-findings.json`
-  findings with `fix_class: "local_repair"` (per `docs-review:references:readthrough`).
-  Apply the finding's `proposed_fix` and nothing beyond it: reorder so a
-  prerequisite precedes its use, add a missing definition/step, split a
-  mixed-concept H2, delete a genuinely redundant passage, or surface a buried
-  outcome. The change stays inside the one page and preserves its purpose — that
-  bound is what makes it high-confidence. If applying it would mean touching
-  other files or reshaping the whole page, it isn't `local_repair`; treat it as
-  `reconception`.
+
+**Never apply a readthrough finding in this lane**, whatever its `fix_class`.
+Readthrough repairs change a page's structure, and one page read in isolation
+doesn't tell you why it's shaped the way it is. In September 2026, 4 of the
+first 14 decided fix-lane PRs carrying one went wrong over the readthrough edit:
+it broke rendering, flattened prescriptive guidance, or deleted a section's only
+example. Every readthrough finding is banked for the glow-up lane (see
+§Glow-up mode), where a human reviews the whole page.
+`scripts/content-review/publish-gate.py` refuses a `fixed` verdict whose
+`applied[]` lists a `readthrough` entry, so a readthrough edit fails the whole
+run.
 
 Everything else — `unverifiable` verdicts, low-confidence corrections,
-prose-quality findings, structural suggestions, **every readthrough finding with
-`fix_class: "reconception"`** (a whole-page rewrite, cross-file split/merge, or
-purpose change — flag, never auto-rewrite), anything you'd phrase with
+prose-quality findings, structural suggestions, **every readthrough finding**
+(`local_repair` and `reconception` alike), anything you'd phrase with
 "consider" — goes in the PR description's **Findings not applied** section
 (one line of reasoning each), not in the diff. That list is the
-almost-made-the-cut record the human reviewer adjudicates. When you flag a
-`reconception`, set `clarity_flag: true` in the verdict sentinel (step 8) so the
-ledger carries the signal even on an otherwise-clean page.
+almost-made-the-cut record the human reviewer adjudicates, and the backlog the
+glow-up lane executes. Count every one of them in the verdict's
+`skipped_findings`, **including on a `clean` verdict**: the glow-up selector
+ranks pages on that number. When you flag a `reconception`, set
+`clarity_flag: true` in the verdict sentinel (step 8) so the ledger carries the
+signal even on an otherwise-clean page.
 
 Record every fix you apply as an entry in the verdict sentinel's `applied`
 array (step 8): its category, file, **pre-fix** line range, and a pointer to
@@ -239,6 +256,60 @@ that every hunk in your exported changes falls within the line range of a
 recorded finding (`scripts/content-review/verify-fix-scope.py`); an edit
 outside the recorded findings fails that gate and nothing is pushed — so if a
 change doesn't trace to a finding above, don't make it.
+
+#### Re-run Vale to a fixpoint — glow-up lane only
+
+**Only when `mode` is `glowup`.** After applying your Vale fixes, re-run the
+filter over the modified file and triage what comes back, up to **3 rounds
+total** or until a round yields nothing you would apply:
+
+```bash
+vale --no-exit --output=JSON <path> > .vale-round<N>.json 2>/dev/null || echo '{}' > .vale-round<N>.json
+python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
+    --fix-mode --in .vale-round<N>.json --out .vale-findings-round<N>.json \
+    || echo '[]' > .vale-findings-round<N>.json
+```
+
+A fix can *create* a finding: Vale's rules are independent, so a phrase one
+rule steers you toward can be a phrase another rule flags. The case that
+motivated this loop was #21456 — `write-good.TooWordy` flagged "a number of",
+the fix chose "several", and `write-good.Weasel` flagged "several". That
+specific pair is fixed at the source (`Weasel`'s quantifier tokens were
+removed; see #21470), but nothing prevents the next one, and a page that
+oscillates should stop here rather than at the reader.
+
+Rules for the loop:
+
+- **Stop at 3 rounds** and record any still-open findings under **Findings not
+  applied**, with the round count. Non-convergence is a style-config bug worth
+  a human's attention — do not keep grinding, and do not oscillate a phrase
+  back to a form an earlier round already rejected.
+- **If two rules disagree on the same span, change neither.** Record it under
+  Findings not applied naming both rules. Picking a third phrasing to dodge
+  both is how prose gets worse one round at a time ("provides a number of
+  options" → "provides several options" → "provides options" lost the reader
+  the fact that there are several).
+- **Respect the churn budget.** `verify-glowup-scope.py` fails the review over
+  `MAX_CHANGED_LINES` (400) total added+deleted. If a later round would push
+  you near it, stop and flag the remainder.
+- **Keep the round files dot-prefixed and never overwrite
+  `.vale-findings.json`.** The export step stages with
+  `git add -A -- ':!.*' ':!.*/**'`, so a dot-path can't ride along in the
+  handoff patch; a round file named without the dot would land in the diff and
+  fail the scope gate on paths. The step-2 artifact stays the immutable record
+  of what the pre-step found.
+
+**Do not do this on the fix lane** (`mode` other than `glowup`), where it would
+fail the publish gate rather than help. `verify-fix-scope.py` reads its allowed
+ranges from the `review-snapshot` artifact, which is uploaded *before* the model
+step and is immutable from then on, and matches hunks against **pre-fix**
+line numbers. A round-2 finding exists in neither: it is absent from the
+snapshot, and its line numbers index the already-modified file. Fixes traceable
+only to a later round therefore read as out-of-scope edits, and the publish job
+fails before anything is pushed. The glow-up lane is exempt because
+`verify-glowup-scope.py` bounds a rehab by path, size, and protected
+frontmatter instead of per-finding ranges — page-wide editing is that lane's
+whole job.
 
 Editing guardrails:
 
@@ -398,11 +469,12 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
 - `retirement`: `true` only for a retirement PR (branch
   `content-review/retire-<slug>`).
 - `applied`: one entry per applied fix — `category` (one of `claim`, `link`,
-  `frontmatter`, `vale`, `readthrough`), `file`, `lines` (`[start, end]`,
-  inclusive, **pre-fix** line numbers — the file as it was on master, the same
-  numbering the pre-step artifacts use), and `source` (the artifact finding it
-  implements, e.g. `verified-claims:<claim_id>`, `vale:<rule>@L<line>`,
-  `readthrough:L40-58`, or the dead link's old path). `fixes` should equal
+  `frontmatter`, `vale`; never `readthrough`, which the publish gate rejects),
+  `file`, `lines` (`[start, end]`, inclusive, **pre-fix** line numbers — the
+  file as it was on master, the same numbering the pre-step artifacts use),
+  and `source` (the artifact finding it
+  implements, e.g. `verified-claims:<claim_id>`, `vale:<rule>@L<line>`, or the
+  dead link's old path). `fixes` should equal
   `len(applied)`. The workflow's scope gate cross-checks these against the
   artifacts and the branch diff; for link fixes (which have no artifact) the
   declared lines must actually carry the link in the pre-fix file.
@@ -454,19 +526,52 @@ review backlog** — not a high-confidence-fix sweep. Everything above applies
 except as amended here.
 
 **Input**: `.glowup-backlog.json` at the repo root (built by the workflow via
-`scripts/content-review/build-glowup-backlog.py`): the ledger's
-`skipped_findings` / `clarity_flag` counters plus every banked finding
-extracted from the page's prior review PRs' "Findings not applied",
-"Screenshot check", and "Rendered content" sections, each with a stable `id`
-and its `source_pr`. The pre-step artifacts (claims, Vale, readthrough,
-frontmatter) are also present and are your evidence base.
+`scripts/content-review/build-glowup-backlog.py`, then reconciled by
+`compose-pr-body.py`): the ledger's `skipped_findings` / `clarity_flag`
+counters plus every banked finding extracted from the page's prior review
+PRs' "Findings not applied", "Screenshot check", and "Rendered content"
+sections, each with a stable `id` and its `source_pr` — plus, for PRs
+reviewed on the v3 surface, what the pre-merge *reviewer* found and the page
+still carries (`source: pr-review`: findings left open, accepted as-is, or
+held over a dispute, and every pre-existing issue it filed). The pre-step
+artifacts (claims, Vale, readthrough, frontmatter) are also present and are
+your evidence base.
+
+Each banked item is split in two, and the split is the point:
+
+- **`finding`** is the work — what an earlier run found.
+- **`prior_disposition`** is one earlier reviewer's reason for leaving it.
+  It is **context, never direction**. It tells you why someone hesitated;
+  it does not tell you what the page should say, and an aside inside it
+  ("the page frames X as primary") is not a finding to execute. Two
+  September 2026 glow-ups went wrong exactly here: one promoted such an
+  aside into a new superlative claim, the other executed a readthrough
+  finding the earlier run had declined as editorial.
+- **`fresh_verdict`** is what *this run's* artifacts say about the same
+  sentence (matched by text, since claim ids and line numbers drift between
+  runs). A banked claim the fresh verifier now calls `not-a-claim` or
+  `verified`, and a banked readthrough finding the fresh readthrough pass
+  did not re-raise, are **pre-declined by the composer** as "superseded by
+  re-verification": their rows are already in the Backlog declined table.
+  Leave them as composed and list their ids in `declined_ids`.
+- Rows sourced **"this run"** (`fresh-<claim id>`) are fresh
+  `contradicted`/`mismatch` verdicts stubbed as work, exactly like the fix
+  lane's "Fixes applied" stubs. Fix each, or move it to Backlog declined
+  with a reason. The publish gate refuses a body that leaves any stubbed
+  row — banked or fresh — out of both tables.
 
 **Procedure**:
 
 1. **Work the backlog first.** Execute every banked finding, or explicitly
-   decline it with one line of reasoning. Every item lands in exactly one of
+   decline it with one line of reasoning. This includes banked readthrough
+   findings: step 3's ban on applying them is the fix lane's rule, and this
+   lane is where they get executed. A `reconception` still means a
+   restructure a human should green-light, so decline it with a reason rather
+   than rewrite the page to fit it. Every item lands in exactly one of
    the PR body's two tables — **Backlog executed** (pre-stubbed, one row per
-   item; fill "What changed") or **Backlog declined**. No silent drops.
+   item; fill "What changed") or **Backlog declined** (move the whole row,
+   keeping its id cell, and fill "Why not executed"). No silent drops, and
+   no row in both tables.
 1. **Then the secondary sweep**: apply the improvement taxonomy from
    `.claude/commands/glow-up.md` §5 — style, structural fixes, code
    formatting, terminology, links, image/diagram flags (flag-only, as ever),
@@ -478,12 +583,31 @@ frontmatter) are also present and are your evidence base.
    never change frontmatter `title`, `aliases`, or `redirect_to`; retirement
    is never a glow-up outcome. Preserve the page's purpose and technical
    accuracy — a glow-up reads better, it does not say different things
-   without artifact-backed evidence.
+   without artifact-backed evidence. In particular, never add superlative or
+   ranking language ("fastest", "the recommended", "where to start", "the
+   only", "primary") the artifacts don't back.
 1. **Validate** with `make lint` as usual, and self-check with the glow-up
    gate instead of verify-fix-scope: stage/diff/unstage as in step 8's
    self-check, then run `verify-glowup-scope.py --diff-file
-   .self-check.u0.diff --article <path> --article-blob <pristine-copy> --out
-   .self-check-report.json` (copy the article aside before your first edit).
+   .self-check.u0.diff --article <path> --article-blob <pristine-copy>
+   --verified-claims .verified-claims.json --out .self-check-report.json`
+   (copy the article aside before your first edit). The gate's superlative
+   check is a `::warning::`, not a violation, but every warning must be
+   acknowledged in the PR body under "Secondary sweep → Content
+   enhancements": name the verdict that supports the wording, or remove it.
+   Then self-check the PR body the way the publish gate will:
+
+   ```bash
+   python3 scripts/content-review/compose-pr-body.py --check-accounting \
+       --body-file .pr-body-draft.md --backlog .glowup-backlog.json
+   ```
+
+   Exit 0 is required. It lists every stubbed id that is not a row in
+   exactly one of the two Backlog tables and any `<TODO` either table still
+   carries; fix the body and re-run until it is clean. Membership is by
+   row (the backticked id that opens a row's first cell), so a reason cell
+   may cross-reference another row ("see `findings-f17`") freely — that is
+   not a second row.
 1. **Verdict sentinel**: `{"verdict": "glowup", "fixes": <executed count>,
    "skipped_findings": <declined count>, "clarity_flag": <bool>,
    "executed_ids": [...], "declined_ids": [...], "retirement": false}` — no
@@ -505,12 +629,150 @@ frontmatter) are also present and are your evidence base.
    `resolved_claims`, or it carries forward with `unresolved_reviews`
    incremented.
 
+### Pre-verification (the workflow's, after you finish)
+
+When your turn ends, the workflow verifies what you changed before any PR
+exists. `scripts/content-review/preverify-glowup.py` builds the
+pristine→edited patch and runs the pre-merge review's **own** claim pipeline
+over it (URL fetch, regex + atomic + holistic extraction at `standard`
+scrutiny, merge, `verify-claims.py`), so it checks exactly the claims the
+review will check, on the lines you changed and nowhere else. A claim is
+**must-address** when the review would block on it: `contradicted`,
+`mismatch`, or `flagged` (🚨), `unverifiable` (❓), or a `framing-drift` your
+edit introduced. Each carries a provenance against the pristine page's own
+verdicts: `introduced` (your edit created or broke it) or `carried` (the page
+already had it and your edit touched the line, which puts it in front of a
+diff-scoped review).
+
+This is why the rules above matter more than they look: "a glow-up does not
+say different things" is now checked, not just asked. The two findings that
+motivated it were both numbers the glow-up changed without evidence: "three
+properties" → "four" on #21939 (the source declares five), and a sample
+`pulumi up` summary → "4 changes. 2 unchanged" on #21897 (the CLI prints no
+total for a create-only run). Don't touch a number, a flag, a version, or a
+sample output unless an artifact verdict gives you the value.
+
+The loop is bounded at **three verify rounds** — the lane's fixpoint bound,
+shared in spirit with the Vale loop above — with a narrow repair turn
+between rounds (below). After the last round, the workflow deterministically
+reverts every changed block that still carries a must-address claim to the
+pristine text, then writes the **Pre-verification** section of the PR body:
+every claim on an edited line, its verdict and source, and what happened to
+it. Leave that section's placeholder alone; the workflow replaces it. Round
+files are uploaded as artifacts as they are written and re-downloaded before
+each later step, so nothing in the workspace can change what they say.
+
+### Pre-verification repair
+
+You run this only when the workflow invokes you for a repair turn. The newest
+`.preverify-trusted/rounds/round-*.json` (highest number) lists every claim on
+an edited line; the entries with `"must_address": true` are your whole job.
+The pristine page is `.preverify-trusted/snapshot/article-base.txt`.
+
+For **each** must-address claim, do exactly one of these, touching only the
+lines in its `line_range`:
+
+- **Correct it** — only when `verdict` is `contradicted`/`mismatch` **and**
+  its `evidence` states the correct value outright. Write that value and
+  nothing more. Never guess a value the evidence doesn't state.
+- **Revert it** — restore those lines to the pristine text. Always right for
+  an `unverifiable` claim you `introduced` (a glow-up must not add a claim
+  nothing verifies) and for any `carried` claim (the pristine page already
+  had the problem; your edit only re-exposed it, and a rewrite of a
+  pre-existing unverified sentence is not this lane's call).
+
+Read each entry's `action`, `provenance`, `evidence`, and `source` first. Do
+not change any other line, add a claim, or reword to dodge the verifier: the
+next round re-extracts and re-verifies every edited line.
+
+Then keep the body and sentinel consistent. If a revert undid the change a
+**Backlog executed** row describes, move that whole row to **Backlog
+declined** with the reason `reverted by pre-verification: <verdict> — <one
+line>`, and move its id from `executed_ids` to `declined_ids` (adjusting
+`fixes` / `skipped_findings`) in `.content-review-verdict.json`. Do not touch
+the **Pre-verification** section. Re-run both self-checks from the procedure
+above (`verify-glowup-scope.py` against the pristine copy and
+`compose-pr-body.py --check-accounting`), and `make lint`.
+
 **What happens downstream**: the publish job derives the branch
 `content-review/glowup-<slug>`, classes the PR `glow-up`, and **never arms
-auto-merge** — the PR opens ready for human review and the PR-review sweep
-assigns the reviewers. The ledger records status `glowup` (a completed
+auto-merge**. The PR opens ready for review, and triage requests the approver
+team `.github/review-routing.yml` routes the page to (docs-guild, or
+marketing for a Get Started page). If the pre-merge review still posts
+blocking findings and the repo variable `GLOWUP_AUTOFIX` is `'1'` (it is
+off by default), `content-review-glowup-autofix.yml` makes one bounded pass
+at them as pulumi-bot (the PR's author): it fixes, refutes, or reverts
+each finding, answers it on the review card the way `/address-review` would,
+records the dispositions in the PR body, and hands anything it can't settle
+to the routed team by name. The ledger records status `glowup` (a completed
 review: it advances the staleness clock and starts the selector's 90-day
 glow-up cooldown).
+
+## Post-open autofix
+
+`.github/workflows/content-review-glowup-autofix.yml` runs you on an **open**
+glow-up PR whose pre-merge review still has blocking findings (🚨 or ❓)
+nobody has answered. Pre-verification is supposed to make this rare; this is
+the fallback. The PR's author is pulumi-bot, which never reads the review
+card, so you answer it the way `/address-review` would, once. The working
+tree is the PR's head.
+
+**Inputs** in `.autofix/`:
+
+- `select.json` — `open`: the findings to settle, each with `id` (`F<n>`),
+  `bucket` (`outstanding` = 🚨, `author-answer` = ❓), `anchor` (PR-head line
+  range), and `summary`.
+- `card.md` — the review's author card. Each finding's `#### F<n> · Do this`
+  block quotes the line, says why, and proposes the fix.
+- `base.md` — the article as it is on master (before the glow-up).
+- `head.md` — the article as it is at the PR head (what the review read).
+
+**For each open finding, choose exactly one disposition** (closed set; a bot
+can't own `accepted` or `deferred`, which need a human):
+
+- `fixed` — change the text so it says what the source says. Only when the
+  card's evidence, the verifier's source, or a file in the checkout states
+  the value outright. Prefer the card's proposed fix when it is right. Never
+  guess a value.
+- `reverted` — withdraw the glow-up's edit: restore the anchored lines to
+  `base.md`'s text. The right answer for a ❓ on a claim the glow-up added
+  or reworded, and for any finding on text the glow-up only restyled. A
+  glow-up that says less is fine; one that says something unverified is not.
+- `refuted` — the finding is wrong. Only with a `source` you actually read
+  this run in the checkout (a repo path, e.g. `.autofix-master/content/...`
+  for master's text, or a line of `card.md`'s own evidence) that shows it.
+  Your `note` says what the source says. Disagreeing without a source is
+  `unresolved`. You have no shell and no web access in this job: it reads
+  review text anyone can comment on while holding an API key.
+- `unresolved` — none of the above is safe. A human decides; say why in
+  one line.
+
+Touch only the anchored lines of the one article, plus whatever a fix needs
+in the same paragraph. Don't restyle, don't add claims, don't edit any other
+file. Every changed line is re-verified after you finish with the same
+verifier (`preverify-glowup.py`), and a change that doesn't verify is
+withdrawn and its finding reported `unresolved`, whatever you wrote.
+
+**Output**: `.autofix/dispositions.json`:
+
+```json
+{"findings": [
+  {"id": "F1", "disposition": "fixed", "note": "<what the text says now, and why>", "source": "<repo:path, URL, or gh query>"},
+  {"id": "F3", "disposition": "reverted", "note": "<which edit was withdrawn>"},
+  {"id": "F5", "disposition": "refuted", "note": "<what the source says>", "source": "<repo:path, URL, or gh query>"},
+  {"id": "F6", "disposition": "unresolved", "note": "<why no safe answer exists>"}
+]}
+```
+
+Every id in `select.json`'s `open` gets exactly one entry; a missing or
+malformed entry is recorded `unresolved`. The workflow, not you, commits and
+pushes as pulumi-bot, posts one `@claude … #update-review` comment with your
+dispositions (the update lane then refreshes the card), records them in the
+PR body's **Post-open review findings** table, and hands every `unresolved`
+finding to the routed team by name. There are at most two passes per PR and
+never two on the same head. The autofix stands down on any PR a person has
+pushed to or answered a finding on (`@claude F3: … #update-review`; a bare
+`@claude #update-review` refresh doesn't count): from then on it is theirs.
 
 ## Report-only mode — no model runs
 
@@ -616,7 +878,9 @@ The nightly `claims-reverify.yml` workflow re-checks volatile entities
 contradicted, every page asserting it gets a `stale_claims` marker in its
 ledger entry, and `select-articles.py` boosts those pages to the front of the
 next sweep — that is how a page can arrive in your queue the day after a
-release changed a fact it states.
+release changed a fact it states. The boost never fires within five days of
+the page's last completed review, so a marker one review leaves unresolved
+comes back after the cooldown rather than the next morning.
 
 None of this is yours to write: this worker's whole-page runs are the index's
 **only** writer, and the workflow runs `record-claims.py` itself after your

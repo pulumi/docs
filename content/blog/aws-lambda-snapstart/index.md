@@ -61,7 +61,7 @@ The new [Lambda Telemetry API](https://docs.aws.amazon.com/lambda/latest/dg/tele
 
 All of the benefits of SnapStart are a great reason to give this feature a try, and there is no additional cost for enabling SnapStart for your functions. However, there are some considerations to keep in mind before you get started:
 
-- SnapStart improvements require the [Amazon Corretto 11](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/what-is-corretto-11.html) runtime - Amazon’s production-ready distribution of OpenJDK.
+- SnapStart improvements require the [Amazon Corretto 11](https://web.archive.org/web/20260817150314/https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/what-is-corretto-11.html) runtime - Amazon’s production-ready distribution of OpenJDK.
 - After 14 days without an invocation, your function version becomes inactive and Lambda will delete the snapshot. If you invoke an inactive function version, Lambda will initialize a new snapshot.
 - Network connections may not persist when a function is invoked from a snapshot, so, your code should assume connections need to be restored.
 - Ephemeral data such as temporary credentials created during initialization may expire between the time the snapshot is created and later resumed.

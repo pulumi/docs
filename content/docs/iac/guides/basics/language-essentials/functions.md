@@ -278,6 +278,20 @@ does, that's the signal to move to a class-based
 [component](/docs/iac/guides/basics/language-essentials/classes/)
 instead.
 
+## Frequently asked questions
+
+### When should I use a function instead of a component?
+
+Reach for a plain function when you just want to group or parameterize a handful of resource declarations, and reach for a [component](/docs/iac/concepts/components/) once that group needs its own identity, combined outputs, or the ability to be referenced elsewhere in the program as a single unit. A function is the lighter-weight option; a component is the one that behaves like a resource itself.
+
+### Are Pulumi functions the same as Terraform modules?
+
+Not quite. The closest analogue to a Terraform module is a Pulumi component resource, which gets its own name, state entry, and combined outputs. A plain function in your programming language is a lighter-weight grouping mechanism with no state identity of its own; it just runs code and returns values.
+
+### Can I pass a resource output into a function?
+
+Yes. Accept it as an ordinary function parameter and pass it straight through to whatever resource properties need it. You don't need to unwrap an [output](/docs/iac/concepts/inputs-outputs/) before handing it to a function; Pulumi resolves it later, once its value is known.
+
 ## Next steps
 
 Continue to

@@ -67,6 +67,12 @@ if [[ "$yesno_deploy" != [Yy]* ]]; then
     exit
 fi
 
+# Refuse to publish over a newer deploy. A laptop deploy is the likeliest thing to be
+# racing CI -- you built locally while master moved -- and it's the one path where
+# nothing else is watching. Set ALLOW_OUT_OF_ORDER_PUBLISH=true if you're deliberately
+# putting an older build back.
+node ./scripts/check-publish-ordering.js
+
 # Run a preview and pause to confirm before running the update.
 pulumi -C infrastructure up
 

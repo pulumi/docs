@@ -129,12 +129,12 @@ If your image lives in a private registry, you must supply static username and p
 
 This rules out a **private Amazon ECR** registry, which has no long-lived credentials: its registry password is an authorization token from `aws ecr get-login-password` that expires after 12 hours, so a pasted token soon stops working and deployments can no longer pull the image. (A *public* image on [Amazon ECR Public](https://gallery.ecr.aws/) needs no credentials and works fine.)
 
-If your security model requires short-lived registry credentials — or you need to pull a private image from ECR — [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/) run in your own infrastructure and can use whatever pull mechanism you configure, including an IAM role.
+If your security model requires short-lived registry credentials — or you need to pull a private image from ECR — [Customer-managed runners](/docs/administration/concepts/customer-managed-runners/) run in your own infrastructure and can use whatever pull mechanism you configure, including an IAM role.
 
 ## See also
 
 - [Deployment settings](/docs/deployments/concepts/settings/): UI walkthrough for configuring the executor image on a stack
-- [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/): full control over the runner host, registry pulls, network access, and lifecycle
+- [Customer-managed runners](/docs/administration/concepts/customer-managed-runners/): full control over the runner host, registry pulls, network access, and lifecycle
 - [Pre-run commands](/docs/deployments/concepts/settings/pre-run-commands/): where pre-run installs run
 - [Pulumi Docker images](/docs/iac/operations/docker-images/): the full catalog of official images, variants, and release cadence
 - [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers): image source, variants, and contribution guide

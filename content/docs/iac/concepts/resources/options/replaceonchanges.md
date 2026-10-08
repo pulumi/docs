@@ -16,7 +16,7 @@ aliases:
 
 The `replaceOnChanges` resource option can be used to indicate that changes to certain properties on a resource should force a replacement of the resource instead of an in-place update.  Typically users rely on the resource provider to make this decision based on whether the input property is one that the provider knows how to update in place, or if not, requires a replacement to modify.  However, there are cases where users want to replace a resource on a change to an input property even if the resource provider itself doesn't believe it has to replace the resource.
 
-For example, with Kubernetes `CustomResource` resources, the Kubernetes resource model doesn't know whether or not a specific input property on a specific kind of `CustomResource` requires a replacement, and so assumes that *any* change can be made without replacement.  However, in practice, many specific kinds of `CustomResource` in the Kubernetes ecosystem *do* require replacement when certain input properties are changed.  The Kubernetes provider itself can't know this, but users can use `replaceOnChanges` to ensure that these changes can be made correctly via Pulumi.
+For example, with Kubernetes `CustomResource` resources, the Kubernetes resource model doesn't know whether a specific input property on a specific kind of `CustomResource` requires a replacement, and so assumes that *any* change can be made without replacement. However, in practice, many specific kinds of `CustomResource` in the Kubernetes ecosystem *do* require replacement when certain input properties are changed. The Kubernetes provider itself can't know this, but users can use `replaceOnChanges` to ensure that these changes can be made correctly via Pulumi.
 
 {{< resource-option-scope "replaceOnChanges" >}}
 
@@ -60,7 +60,7 @@ widget, err = apiextensions.NewCustomResource(ctx, "widget", &apiextensions.Cust
             "input": "something",
         },
     },
-}, pulumi.ReplaceOnChanges([]string{"spec.input"})
+}, pulumi.ReplaceOnChanges([]string{"spec.input"}))
 ```
 
 {{% /choosable %}}
@@ -128,7 +128,7 @@ In HCL, each entry is a bare attribute name (in the provider's `snake_case` form
 
 {{< /chooser >}}
 
-The [property paths](/docs/reference/property-paths/) provided as input to `replaceOnChanges` can each describe a subset of the properties of the resource which should trigger a replacement on changes.  The `*` wildcard can be used in any part of a path.  A few examples of what changes will trigger replacement for a given property path string are:
+The [property paths](/docs/reference/property-paths/) provided as input to `replaceOnChanges` can each describe a subset of the properties of the resource which should trigger a replacement on changes. The `*` wildcard can be used in any part of a path. A few examples of what changes will trigger replacement for a given property path string are:
 
 - `*`: any property change
 - `spec`: any change to the `spec` property or any of its children
@@ -136,10 +136,10 @@ The [property paths](/docs/reference/property-paths/) provided as input to `repl
 - `spec[*].item`: any change to the `item` property of any element of the array in the `spec` property or any of the `item` property's children
 
 {{% notes type="info" %}}
-The property paths passed to `replaceOnChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
+The property paths passed to `replaceOnChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model. HCL is the exception: each entry uses the provider's `snake_case` attribute name, as described in the HCL example above.
 {{% /notes %}}
 
-If there are initialization errors on a resource (because the resource was created but failed to fully initialize correctly on a previous deployment) then the resource will normally be updated on the following Pulumi update, even if there are no other changes to the resource's inputs.  If `*` is specified as a property path for `replaceOnChanges`, then initialization errors will trigger a replacement instead of an update.
+If there are initialization errors on a resource (because the resource was created but failed to fully initialize correctly on a previous deployment), then the resource will normally be updated on the following Pulumi update, even if there are no other changes to the resource's inputs. If `*` is specified as a property path for `replaceOnChanges`, then initialization errors will trigger a replacement instead of an update.
 
 The `replaceOnChanges` resource option can be combined with the [`deleteBeforeReplace`](/docs/iac/concepts/resources/options/deletebeforereplace/) resource option to trigger a resource to be deleted before it is replaced whenever a given input has changes.
 

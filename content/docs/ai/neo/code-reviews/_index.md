@@ -31,7 +31,7 @@ By default, Neo reviews every pull request automatically, skipping drafts and pu
 
 You can scope Neo to review only when someone mentions `@pulumi-neo`, instead of automatically. Mention it in a pull request description, a review comment (top-level or inline), or an issue, and Neo replies in the same thread. Ask it to walk through what a change does, including resources that change in stacks the pull request does not modify directly.
 
-Neo matches your GitHub identity to your Pulumi user. If you signed in to Pulumi with GitHub, that link already exists; otherwise, [link a GitHub identity to your Pulumi account](/docs/administration/organizations-teams/accounts/#adding-new-identities).
+Neo matches your GitHub identity to your Pulumi user. If you signed in to Pulumi with GitHub, that link already exists; otherwise, [link a GitHub identity to your Pulumi account](/docs/administration/concepts/accounts/#adding-new-identities).
 
 ## Availability
 
@@ -42,11 +42,11 @@ Neo code reviews run on GitHub.com. They are not available on Azure DevOps, GitL
 1. Enable [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) for your organization.
 1. Install the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) on the repositories you want Neo to analyze.
 1. Confirm code reviews are enabled under **Settings** > **Neo settings** > **Code reviews**. They're on by default.
-1. Grant Pulumi access to your GitHub account by completing the [individual OAuth flow](/docs/integrations/version-control/github-app/#individual-user-setup) under **Management** > **Version control**.
+1. Grant Pulumi access to your GitHub account by completing the [individual OAuth flow](/docs/integrations/version-control/github-app/#individual-user-setup) under **Settings** > **Version control**.
 
 ## Permissions
 
-Neo code reviews run with the same governance as any other [Neo task](/docs/ai/neo/tasks/), including the [role-based access control](/docs/administration/access-identity/rbac/), guardrails, and audit logging your organization has configured. To turn them off, disable code reviews under **Settings** > **Neo settings** > **Code reviews**.
+Neo code reviews run with the same governance as any other [Neo task](/docs/ai/neo/tasks/), including the [role-based access control](/docs/administration/concepts/rbac/), guardrails, and audit logging your organization has configured. To turn them off, disable code reviews under **Settings** > **Neo settings** > **Code reviews**.
 
 ## Troubleshooting
 

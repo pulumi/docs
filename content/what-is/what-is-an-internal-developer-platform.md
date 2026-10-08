@@ -4,6 +4,7 @@ allow_long_title: true
 meta_desc: |
     How internal developer platforms (IDPs) work: golden paths, self-service infrastructure, architecture, key components, and how to build or adopt one.
 type: what-is
+date: 2025-05-12T11:17:08-07:00
 page_title: What is an Internal Developer Platform (IDP)?
 authors: ["sarah-hughes"]
 ---
@@ -169,7 +170,7 @@ No single product is "the IDP"—an IDP is assembled from layers. The ecosystem 
 | Infrastructure provisioning (IaC) | Provisions and manages cloud resources as code | Pulumi, Terraform/OpenTofu, Crossplane |
 | CI/CD & GitOps | Builds and deploys applications | GitHub Actions, GitLab CI, Argo CD, Flux |
 | Observability | Logging, metrics, tracing, alerting | Prometheus, Grafana, OpenTelemetry |
-| Policy & security | Guardrails and compliance as code | Pulumi CrossGuard, OPA, Kyverno |
+| Policy & security | Guardrails and compliance as code | Pulumi Policies, OPA, Kyverno |
 
 Pulumi typically serves as the provisioning and orchestration layer—defining golden paths and infrastructure in general-purpose languages—while integrating with whatever portal, CI/CD, and observability tooling a team already uses.
 

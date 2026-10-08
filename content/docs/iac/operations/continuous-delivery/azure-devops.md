@@ -46,7 +46,7 @@ Install the [Pulumi Task Extension](https://marketplace.visualstudio.com/items?i
 
 ## Authenticate with Pulumi Cloud
 
-Your pipeline needs a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to authenticate with Pulumi Cloud.
+Your pipeline needs a single [Pulumi access token](/docs/administration/concepts/access-tokens/) to authenticate with Pulumi Cloud.
 
 The task looks for the pipeline variable `pulumi.access.token` and maps it automatically to the `PULUMI_ACCESS_TOKEN` environment variable. Store the token as a [secret pipeline variable](https://learn.microsoft.com/azure/devops/pipelines/process/set-secret-variables) or in a linked [variable group](https://learn.microsoft.com/azure/devops/pipelines/library/variable-groups) so it isn't checked into source control. Prefer an organization or team token over a personal token.
 
@@ -169,6 +169,32 @@ To use the task with AWS, Google Cloud, or another provider, pass the required c
 ```
 
 Using [Pulumi ESC](/docs/esc/) to broker short-lived cloud credentials avoids storing provider keys as pipeline variables at all.
+
+## Serialize deployments with an exclusive lock
+
+If two runs reach the same stack at once — a scheduled run overlapping a manual one, say, or two merges landing close together — Pulumi Cloud grants the lease to only one of them, and the other's `pulumi up` fails with an [update conflict](/docs/iac/operations/troubleshooting/update-conflicts/). Azure Pipelines can prevent that at the source with an [exclusive lock check](https://learn.microsoft.com/azure/devops/pipelines/process/approvals?view=azure-devops) on the environment your deployment job targets.
+
+Add the check from that environment's **Approvals and checks** tab, then set `lockBehavior` on the stage that references it:
+
+```yaml
+stages:
+- stage: DeployProduction
+  lockBehavior: sequential
+  jobs:
+  - deployment: Deploy
+    environment: production
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: Pulumi@1
+            inputs:
+              command: up
+              stack: acme/website/production
+              args: --yes
+```
+
+Use `sequential` rather than the default `runLatest`. With `runLatest`, only the most recently queued run ever acquires the lock, so an older run stuck waiting behind it is passed over rather than eventually applied — acceptable for a preview environment where only the newest state matters, but not for a stack where every update needs to land. `sequential` runs every queued stage against the lock in order instead, one at a time, the same way Pulumi Cloud itself serializes updates to a stack. You can also manage the check as code with the [`azuredevops.CheckExclusiveLock`](/registry/packages/azuredevops/api-docs/checkexclusivelock/) resource in the Azure DevOps provider.
 
 ## Managing Azure DevOps with Pulumi
 

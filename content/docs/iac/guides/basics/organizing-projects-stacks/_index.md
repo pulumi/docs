@@ -20,7 +20,7 @@ aliases:
 ---
 
 A [project](/docs/iac/concepts/projects/) is a collection of code, and a [stack](/docs/iac/concepts/stacks/) is a
-unit of deployment with its own configuration, secrets, [role-based access controls (RBAC)](/docs/administration/access-identity/), policies, and concurrent deployments. Pulumi deliberately leaves the
+unit of deployment with its own configuration, secrets, [role-based access controls (RBAC)](/docs/administration/concepts/rbac/), policies, and concurrent deployments. Pulumi deliberately leaves the
 relationship between the two flexible so that it can accommodate everything from a single developer's side project to
 a large organization with many teams.
 
@@ -38,7 +38,7 @@ Every decision about how to split (or not split) your infrastructure is a balanc
 
 * **Ownership and permissions.** Stacks are the boundary at which you grant access. If your networking and your
   application live in the same stack, anyone who can deploy the application can also change the network. Splitting along
-  team boundaries lets you use [stack permissions](/docs/administration/access-identity/rbac/permission-sets/) to give each team exactly the
+  team boundaries lets you use [stack permissions](/docs/administration/concepts/rbac/permission-sets/) to give each team exactly the
   access it needs and no more.
 
 * **Repository alignment.** Pulumi works naturally with GitOps-style continuous delivery, so most teams align their
@@ -176,7 +176,7 @@ primitive its own stack — that is the micro-stacks pattern below, and it's rar
 Layers connect through [stack references](/docs/iac/concepts/stacks/#stackreferences), which let one stack read the
 outputs another stack exported. The `clusters` program reads the network the `networking` program published:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -321,6 +321,32 @@ variables:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+variable "org" {
+  type        = string
+  description = "Pulumi organization that owns the networking stack"
+}
+
+# Resolves to e.g. "myorg/networking/prod" when deploying the prod stack.
+resource "pulumi_stack_reference" "networking" {
+  name = "${var.org}/networking/${pulumi.stack}"
+}
+
+locals {
+  vpc_id             = pulumi_stack_reference.networking.outputs["vpcId"]
+  private_subnet_ids = pulumi_stack_reference.networking.outputs["privateSubnetIds"]
+}
+
+# Create cluster resources in the shared network...
+```
+
+Set `org` once per stack with `pulumi config set clusters:org myorg`. Output names are map keys, so use them exactly
+as the producing stack exported them: `vpcId`, not `vpc_id`.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 The stack name resolves dynamically: deploying the `prod` stack of `clusters` reads the `prod` stack of `networking` in
@@ -375,7 +401,7 @@ environment:
 The outputs now arrive as plain configuration, which your program reads exactly like any other config value — no
 `StackReference` in sight:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -496,6 +522,26 @@ config:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Supplied by the imported ESC environment — no stack reference needed.
+variable "vpcId" {
+  type = string
+}
+
+variable "privateSubnetIds" {
+  type = list(string)
+}
+
+# Create cluster resources in the shared network...
+```
+
+Each `variable` block reads the stack configuration value of the same name in the project's namespace, so these names
+match the `pulumiConfig` keys above rather than HCL's usual snake_case.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 See [Integrate ESC with Pulumi IaC](/docs/esc/guides/pulumi-iac/) for the full workflow.
@@ -595,7 +641,7 @@ code lives in.
 A common multi-repo layout puts a platform team's shared infrastructure in one repo and a service team's resources in
 another:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -713,6 +759,26 @@ my-service/              # service team: one workload
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```
+platform-infra/          # platform team: networking, clusters
+├── main.tf
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+└── sdks/                # provider descriptors written by `pulumi install`
+
+my-service/              # service team: one workload
+├── main.tf
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+└── sdks/
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 The service program reads the platform stack with a stack reference, exactly as shown in
@@ -721,7 +787,7 @@ keep these tradeoffs in mind:
 
 * **Team ownership.** Each repository has its own access controls, pipeline, and release process, so the platform team
   can evolve shared infrastructure without touching service code.
-* **Security.** [Stack permissions](/docs/administration/access-identity/rbac/permission-sets/) let you grant service teams read-only access
+* **Security.** [Stack permissions](/docs/administration/concepts/rbac/permission-sets/) let you grant service teams read-only access
   to platform stack outputs without write access to the underlying infrastructure.
 * **Stack reference coupling.** Stack references return the *current* outputs of the referenced stack, so a renamed or
   removed output breaks dependents until they are updated. Coordinate breaking changes to exported outputs carefully.
@@ -746,7 +812,7 @@ workloads or aspects of your infrastructure** — the same networking / clusters
 than around individual cloud services. Files named for the *purpose* they serve stay meaningful as your infrastructure
 grows; files named for cloud primitives do not.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -840,6 +906,36 @@ my-platform/
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+A Pulumi HCL project is a directory of `.tf` files, and every `.tf` file in that directory is loaded into a single
+root module. The files are merged rather than imported, so splitting the program across them is purely organizational:
+no file has to compose the others, and any file can reference the resources, locals, and variables any other file
+declares.
+
+```
+my-platform/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── networking.tf     # VPC, subnets, security groups
+├── clusters.tf       # Kubernetes / compute clusters
+└── workloads.tf      # application services
+```
+
+Because those files share one namespace, the unit of reuse is the
+[`module` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#modules) rather than a package import. A module
+is its own directory of `.tf` files, and Pulumi instantiates it as a component resource:
+
+```hcl
+module "vpc" {
+  source     = "./modules/vpc"
+  cidr_block = "10.0.0.0/16"
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 Keep the bulk of your resources in these layer files and the project's entrypoint. Reserve additional files for genuinely
@@ -905,8 +1001,8 @@ instead of by project. To do this, you could assign a custom `environment` tag t
 production stack, `staging` to each staging stack, and so on. Then in Pulumi Cloud you can group stacks by
 `Tag: environment`.
 
-Tags aren't only for grouping. On the [Pulumi Enterprise or Business Critical editions](/pricing/), they also drive
-[tag-based (ABAC) rules](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules) in Pulumi Cloud RBAC, so
+Tags aren't only for grouping. On the [Pulumi Pro or Enterprise editions](/pricing/), they also drive
+[tag-based (ABAC) rules](/docs/administration/concepts/rbac/roles#tag-based-abac-rules) in Pulumi Cloud RBAC, so
 you can grant permissions by tag — for example, giving a team access to every stack tagged `team: payments` — instead of
 enumerating each stack individually. As new stacks pick up the tag, they inherit the access automatically.
 

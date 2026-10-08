@@ -68,9 +68,19 @@ Selection algorithm (weighted fair queuing by staleness):
                 resolves it (record-review.py `resolved_claims`), and one
                 unresolved through MARKER_ESCALATION_CAP reviews stops
                 boosting (escalated — a human's turn), so the boost is
-                bounded either way.
+                bounded either way. No marker boosts inside
+                STALE_BOOST_COOLDOWN_DAYS of the page's last completed
+                review, whichever side of that review it was written on.
 
    Ties break on path ascending, so runs are reproducible.
+
+RESERVED SLOT (fix lane, count >= 2). Score alone never reaches the cold half
+of the corpus: importance spans ~22x, so tier-3 pages sit behind the tier-1/2
+front however stale they get — measured 2026-08-25, tier 3 was 0/288 reviewed,
+a third of the corpus, never once. So the first slot of each fix-lane run goes
+to the OLDEST never-reviewed page (by git creation date) ahead of the scored
+queue, displacing that run's lowest-scoring article rather than its highest.
+See NEVER_REVIEWED_RESERVE. Those articles carry `"reserved": "never_reviewed"`.
 
 Two modes, over disjoint halves of the corpus (see `eligible`):
 
@@ -173,6 +183,31 @@ ATTEMPT_CAP = 3
 
 TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
 
+# One slot per fix-lane run is reserved for the oldest page that has never been
+# reviewed, ahead of the scored queue.
+#
+# WHY: score = importance * staleness, and importance spans ~22x across the
+# corpus, so cold pages sit permanently behind the tier-1/2 front no matter how
+# stale they get. Measured 2026-08-25: tier 1 = 79.6% covered (86/108), tier 2 =
+# 8.5% (39/459), tier 3 = 0.0% (0/288). A third of the corpus had never been
+# reviewed once — not "reviewed and found fine". Simulating the real selector
+# forward from the live ledger put the first full pass at day 862 (~2.4 years)
+# with tier 3 flat at 12/288 for the whole first year.
+#
+# Reserving one slot: first pass 862 -> 556 days, tier 3 at one year 12/288 ->
+# 151/288. Same throughput, no new infrastructure — the reserved page displaces
+# the LOWEST-scoring article of the run, not the highest.
+#
+# Those day-counts were simulated at 3 fix slots/day (the default below);
+# pulumi/docs currently runs CONTENT_REVIEW_COUNT=5, so treat them as
+# directional rather than as a forecast for this lane. The starvation they
+# describe is not sensitive to the count — tier 3 was 0/288 either way.
+#
+# Disabled at count 1 (see RESERVE_MIN_COUNT): the fix lane must never become
+# purely a cold-page sweep with the scored queue dark.
+NEVER_REVIEWED_RESERVE = 1
+RESERVE_MIN_COUNT = 2
+
 # Additive boost for a page whose ledger entry carries a non-empty
 # `stale_claims` marker (a volatile claim it asserts re-verified contradicted
 # — see reverify-claims.py). Sized to outrank a top-importance page that has
@@ -193,21 +228,34 @@ STALE_CLAIM_BOOST = 400.0
 MARKER_ESCALATION_CAP = 2
 
 # A stale-claim marker does not boost while the page's last COMPLETED review is
-# newer than this. The claims index snapshots the PRE-fix page on purpose (the
-# model must not launder its own edits into the index), so the night after a
-# fix merges the marker is still there describing a value the merged PR already
-# corrected — and a +400 boost would drag the just-fixed page straight back to
-# the front of the queue. That echo bought one redundant full review per fix,
-# observed twice in the 2026-08-18 queue alone.
+# newer than this, whichever side of that review the marker was written on.
 #
+# Marker written AFTER the review (an echo): the claims index snapshots the
+# PRE-fix page on purpose (the model must not launder its own edits into the
+# index), so the night after a fix merges the marker is still there describing
+# a value the merged PR already corrected — and a +400 boost would drag the
+# just-fixed page straight back to the front of the queue. That echo bought one
+# redundant full review per fix, observed twice in the 2026-08-18 queue alone.
 # reverify-claims.superseded_by_review() is the primary guard and stops the
 # re-check upstream of the marker; this is the second, independent one, on the
-# consumer side, for a marker that is already on the entry when a fix lands.
-# Both were specified in #20970; only the reverify half shipped.
+# consumer side, for a marker already on the entry when a fix lands.
 #
-# An INCOMPLETE review never suppresses — it did not fix anything, so the
-# marker is still live. A marker surviving past the cooldown is real drift and
-# boosts exactly as before.
+# Marker written BEFORE the review (seen and left): the review was handed the
+# marker in full (`stale_claim_markers`) and did not name it in
+# `resolved_claims`. Until 2026-09-09 that case kept boosting, on the argument
+# that unresolved drift must not be muted — and what it bought was an
+# identical pass the next working day, same marker, same page, before anything
+# about either had changed. elb.md was reviewed on 2026-09-08 (#21457, one of
+# three markers left unresolved), scored 400.4 the next morning, and was
+# reviewed again (#21495); providers/_index.md went from 2026-08-28 (#21220)
+# to 2026-08-31 (#21266) the same way. MARKER_ESCALATION_CAP already says a
+# repeat pass is not the remedy for a marker a review declined; the cooldown
+# says it is not the remedy the next morning either. Nothing is muted: the
+# marker stays on the entry, still rides the queue item, and boosts again once
+# the cooldown lapses — where a second miss escalates it exactly as before.
+#
+# An INCOMPLETE review never suppresses — it did not look at the page, so the
+# marker is still live.
 STALE_BOOST_COOLDOWN_DAYS = 5
 
 
@@ -232,37 +280,24 @@ def _day(value) -> date | None:
         return None
 
 
-def boost_suppressed_by_recent_fix(entry: dict | None, today: date) -> bool:
-    """True when this page's markers are an ECHO of a fix that already landed.
+def boost_suppressed_by_recent_review(entry: dict | None, today: date) -> bool:
+    """True when this page's last COMPLETED review is inside the cooldown.
 
-    See STALE_BOOST_COOLDOWN_DAYS. Three conditions, all required:
-
-    1. The last review COMPLETED (record-review.py's vocabulary: any status
-       but "incomplete"). An incomplete review fixed nothing.
-    2. It is inside the cooldown window.
-    3. EVERY marker on the entry was checked AFTER that review.
-
-    (3) is the one that makes this precise rather than a blunt mute. A marker
-    written after a completed review is the echo #20970 describes: the claims
-    index still holds the PRE-fix snapshot, so that night's re-check re-flags
-    a value the merged PR already corrected. A marker written BEFORE the
-    review is the opposite situation — the review saw it and left it — and
-    that is real, unresolved drift which must keep boosting (and escalates on
-    its own via MARKER_ESCALATION_CAP). Suppressing those would mute the
-    finding the whole mechanism exists to carry.
+    See STALE_BOOST_COOLDOWN_DAYS. "Completed" is record-review.py's
+    vocabulary: any status but "incomplete" — an incomplete review looked at
+    nothing, so it never suppresses. Marker timing is deliberately not
+    consulted: a marker written after the review is an echo of its fix, and a
+    marker written before it was handed to that review and left, and neither
+    earns the page another full pass tomorrow. An unparseable review date
+    fails open (keeps the boost) rather than suppressing silently.
     """
     entry = entry or {}
-    if entry.get("status") == "incomplete":
+    if entry.get("status") == INCOMPLETE_STATUS:
         return False
     reviewed = _day(entry.get("reviewed_at"))
-    if reviewed is None or not (0 <= (today - reviewed).days < STALE_BOOST_COOLDOWN_DAYS):
+    if reviewed is None:
         return False
-    markers = all_markers(entry)
-    if not markers:
-        return False
-    # An undated marker is not provably an echo, so it keeps its boost.
-    checked = [_day(m.get("checked_at")) for m in markers]
-    return all(c is not None and c > reviewed for c in checked)
+    return 0 <= (today - reviewed).days < STALE_BOOST_COOLDOWN_DAYS
 
 
 def active_markers(entry: dict | None) -> list[dict]:
@@ -622,6 +657,22 @@ def importance(
     return tier_w * gsc_m * feedback_m
 
 
+def never_reviewed(entry: dict | None) -> bool:
+    """True when no review has ever COMPLETED on this page.
+
+    Same test `effective_last_review` applies when it decides whether a ledger
+    entry can date the staleness clock: an `incomplete` review (worker died
+    before recording a verdict) did not look at the page, so it does not count
+    as a review here either. Deliberately one predicate rather than two
+    opinions about what "reviewed" means.
+    """
+    if not entry:
+        return True
+    if entry.get("status") == INCOMPLETE_STATUS:
+        return True
+    return not parse_day(entry.get("reviewed_at"))
+
+
 def score_page(
     tier: int,
     visits: int | None,
@@ -785,7 +836,8 @@ def main() -> int:
             } if fb_entry else None,
         }
 
-    def article(path: str, lane: str, score: float | None) -> dict:
+    def article(path: str, lane: str, score: float | None,
+                reserved: str | None = None) -> dict:
         policy = policy_for(path, tier_rules)
         entry = ledger.get(path, {})
         return {
@@ -817,6 +869,10 @@ def main() -> int:
             # a one-line unrelated repair while the flagged bug stayed on master).
             "stale_claim_markers": all_markers(entry),
             "score": score,
+            # Set only on a page that took the reserved slot rather than
+            # winning on score, so a reader of the queue (or the PR's "Why this
+            # page" block) can tell the two apart.
+            **({"reserved": reserved} if reserved else {}),
         }
 
     # --paths: explicit override, no scoring, no guardrails (testing path).
@@ -889,7 +945,7 @@ def main() -> int:
                 today,
                 have_traffic,
                 stale_claims=(bool(active_markers(ledger.get(path)))
-                              and not boost_suppressed_by_recent_fix(
+                              and not boost_suppressed_by_recent_review(
                                   ledger.get(path), today)),
                 gsc_m=gsc_m,
                 feedback_m=fb_m,
@@ -902,7 +958,40 @@ def main() -> int:
         key=lambda t: (-t[0], t[1]),
     )
 
-    for score, path in scored[: max(args.count, 0)]:
+    count = max(args.count, 0)
+    # Reserve the first slot for the oldest never-reviewed page (see
+    # NEVER_REVIEWED_RESERVE). Fix lane only — the report lane's whole job is a
+    # first pass over never-checked pages, so a reservation there is redundant.
+    reserved: set[str] = set()
+    if mode == FIX_MODE and count >= RESERVE_MIN_COUNT:
+        # Oldest by git creation date — the only clock a never-reviewed page
+        # has. Tie-break on path, matching the scored sort, so the choice is
+        # deterministic across runs.
+        cold = sorted((p_ for p_ in candidates if never_reviewed(ledger.get(p_))),
+                      key=lambda p_: (created.get(p_, 0), p_))
+        # Never more than the run has slots for, so the scored queue can't go
+        # dark if the reserve is ever widened past the count.
+        for path in cold[: min(NEVER_REVIEWED_RESERVE, count - 1)]:
+            reserved.add(path)
+            # Its REAL score, not None: the reserved page didn't out-rank the
+            # queue, but every downstream consumer (the PR's "Why this page"
+            # block, the ledger, signal-health) reads `.score`, and a null
+            # there would be a hole in the bookkeeping. `reserved` is what
+            # says it was picked despite the ranking.
+            queue["articles"].append(
+                article(path, "priority", scored_entry(path)[0],
+                        reserved="never_reviewed"))
+            print(
+                f"select-articles: reserved slot -> {path} "
+                f"(oldest of {len(cold)} never-reviewed page(s))",
+                file=sys.stderr,
+            )
+
+    for score, path in scored:
+        if len(queue["articles"]) >= count:
+            break
+        if path in reserved:
+            continue
         queue["articles"].append(article(path, "priority", score))
 
     return finish(queue, args, LANE)

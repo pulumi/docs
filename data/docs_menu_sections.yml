@@ -10,8 +10,8 @@
   label: Deployments & Workflows
 - menu: esc
   label: Secrets & Configuration (ESC)
-- menu: insights
-  label: Discovery & Governance
+- menu: discovery-governance
+  label: Discovery & governance
 - menu: idp
   label: Internal Developer Platform
 - menu: administration

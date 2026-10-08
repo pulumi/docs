@@ -1,0 +1,449 @@
+{
+  "schema_version": 1,
+  "repo": "pulumi/docs",
+  "pr": 21603,
+  "head_sha": "0244eb6a718b6b0434ef265ad103de302dddee40",
+  "run_id": "34855961660",
+  "generated_at": "2026-09-14T14:31:46Z",
+  "high_water": 1,
+  "findings": [
+    {
+      "id": "F1",
+      "bucket": "author-answer",
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "text": "You can configure a custom domain name for an API Gateway instance (such as `api.example.com`) and customize the base path of the URL to be something other\u2026",
+      "origin": "verdict:unverifiable",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        319
+      ]
+    }
+  ],
+  "trail": [
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The AWS API Gateway component applies infrastructure as code techniques to declarative API definitions, including built-in Lambda integration.",
+      "verdict": "verified",
+      "line": 28,
+      "evidence": "evidence: The pulumi-aws-apigateway repo confirms the component provides higher-level, declarative API Gateway definitions with built-in Lambda integration: \"An Event Handler Route is a route that will map to a Lambda... Pulumi allows you to\u2026; source: gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/apigateway/README.md; gh search code --owner pulumi repo:pulumi/pulumi-aws-apigateway lambda",
+      "source": "gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/apigateway/README.md; gh search code --owner pulumi repo:pulumi/pulumi-aws-apigateway lambda",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "If you leave off a custom stage name when using the AWS API Gateway component, a default stage name of `stage` will be chosen.",
+      "verdict": "verified",
+      "line": 50,
+      "evidence": "evidence: Source code in pulumi/pulumi-aws-apigateway confirms this: `aws-apigateway/apigateway/api.ts` contains `const stageName = args.stageName || \"stage\";`, and the component's own README states \"You can also define the stage name (else it\u2026; source: gh search code --owner pulumi \"stage\" \"default\" repo:pulumi/pulumi-aws-apigateway (api.ts: `const stageName = args.stageName || \"stage\";`; README.md: \"You can also define the stage name (else it will default to \\\"stage\\\").\")",
+      "source": "gh search code --owner pulumi \"stage\" \"default\" repo:pulumi/pulumi-aws-apigateway (api.ts: `const stageName = args.stageName || \"stage\";`; README.md: \"You can also define the stage name (else it will default to \\\"stage\\\").\")",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The AWS API Gateway component supports multiple ways to define APIs, including handling requests with Lambda, serving static files from S3, integrating with\u2026",
+      "verdict": "verified",
+      "line": 56,
+      "evidence": "evidence: The pulumi-aws-apigateway source confirms all five modes: RouteArgs.eventHandler (Lambda), RouteArgs.localPath (S3 static files), RouteArgs.target (AWS service integration), RestAPI.swaggerString (\"Either `swaggerString` or `routes` must\u2026; source: gh search code --owner pulumi repo:pulumi/pulumi-aws-apigateway (RouteArgs, RestAPI.cs, schema.yaml)",
+      "source": "gh search code --owner pulumi repo:pulumi/pulumi-aws-apigateway (RouteArgs, RestAPI.cs, schema.yaml)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The AWS API Gateway component supports defining an entire endpoint with OpenAPI, documented under an anchor named #openapi-full.",
+      "verdict": "verified",
+      "line": 58,
+      "evidence": "evidence: The same file defines the heading `### Defining an entire endpoint {#openapi-full}` (line 335), which matches the cross-reference link `[Defining an entire endpoint with OpenAPI](#openapi-full)` at line 61.; source: repo:content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "source": "repo:content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The AWS API Gateway component's Lambda and S3 examples use API Gateway integrations internally even though this is not evident in the streamlined interface\u2026",
+      "verdict": "verified",
+      "line": 154,
+      "evidence": "framing: Claim paraphrases doc's own existing sentence describing the component's internal architecture; corroborated by source code structure showing unified route\u2026; evidence: The doc text itself (line 154) states: \"The previous Lambda and S3 examples use API Gateway integrations internally, even if it's not evident in the streamlined interface the component exposes\" \u2014 an exact restatement is trivially\u2026; source: repo:pulumi/pulumi-aws-apigateway aws-apigateway/restAPI.ts (RestAPIRoute type unifying EventHandlerRoute, StaticRoute, IntegrationRoute fields, passed to createAPI)",
+      "source": "repo:pulumi/pulumi-aws-apigateway aws-apigateway/restAPI.ts (RestAPIRoute type unifying EventHandlerRoute, StaticRoute, IntegrationRoute fields, passed to createAPI)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "API Gateway integrations give full control over how HTTP requests are handled and responses are served by an API Gateway route.",
+      "verdict": "verified",
+      "line": 154,
+      "evidence": "evidence: The doc line itself states: \"Integrations give you full control over how HTTP requests are handled, and responses served, by an API Gateway route,\" directly citing AWS's own developer guide on API Gateway integration types, which\u2026; source: content/docs/iac/guides/clouds/aws/api-gateway.md L154; https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-integration-types.html",
+      "source": "content/docs/iac/guides/clouds/aws/api-gateway.md L154; https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-integration-types.html",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Amazon API Gateway integrations connect an API Gateway endpoint to backend services that execute code in response to requests.",
+      "verdict": "verified",
+      "line": 154,
+      "evidence": "framing: Source enumerates specific integration types (Lambda, HTTP, AWS service, mock); claim's general summary is a narrower/simplified restatement entailed by the\u2026; evidence: The AWS doc describes integration types (AWS, AWS_PROXY, HTTP, HTTP_PROXY, MOCK) that connect API Gateway to backend endpoints such as Lambda functions, HTTP endpoints, or AWS service actions\u2014e.g. \"AWS_PROXY: ... lets an API method be\u2026; source: https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-integration-types.html",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-integration-types.html",
+      "route": "pass2"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The `aws` integration route type allows an API to expose an AWS service action, such as invoking AWS Lambda functions, Amazon DynamoDB, Amazon Simple\u2026",
+      "verdict": "verified",
+      "line": 160,
+      "evidence": "evidence: AWS docs state: \"AWS: This type of integration lets an API expose AWS service actions. In AWS integration, you must configure both the integration request and integration response and set up necessary data mappings from the method\u2026; source: https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-integration-types.html",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-integration-types.html",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Using the `aws` integration route type requires configuring the data mappings between the HTTP and underlying AWS service requests and responses.",
+      "verdict": "verified",
+      "line": 160,
+      "evidence": "evidence: The pulumi-aws-apigateway source (api.ts, IntegrationTarget doc comment) documents integration types matching AWS's own API Gateway reference: \"aws: for integrating the API method request with an AWS service action... With any other AWS\u2026; source: gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/apigateway/api.ts (IntegrationTarget interface doc comments)",
+      "source": "gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/apigateway/api.ts (IntegrationTarget interface doc comments)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The `aws_proxy` integration route type integrates a route with a Lambda function invocation (Lambda proxy integration), passing the HTTP request (including\u2026",
+      "verdict": "verified",
+      "line": 163,
+      "evidence": "evidence: AWS docs confirm: \"AWS_PROXY: This type of integration lets an API method be integrated with the Lambda function invocation action with a flexible, versatile, and streamlined integration setup... also known as the Lambda proxy\u2026; source: https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-integration-types.html",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-integration-types.html",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "AWS API Gateway supports several mechanisms for controlling and managing access to APIs, including authentication and authorization with resource policies\u2026",
+      "verdict": "verified",
+      "line": 177,
+      "evidence": "evidence: AWS's own documentation on controlling API Gateway access lists resource policies, IAM roles/policies, Lambda authorizers, and Cognito user pools as the supported access control mechanisms: \"Lambda authorizers are used to control who can\u2026; source: https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "AWS API Gateway access can also be configured via cross-origin resource sharing (CORS), client-side SSL certificates, AWS WAF, and limiting access to\u2026",
+      "verdict": "verified",
+      "line": 177,
+      "evidence": "evidence: AWS's official API Gateway documentation states: \"Cross-origin resource sharing (CORS) lets you control how your REST API responds to cross-domain resource requests... Client-side SSL certificates can be used to verify that HTTP requests\u2026; source: https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The API Gateway component's `RestAPI` resource supports three methods of controlling access to APIs.",
+      "verdict": "verified",
+      "line": 179,
+      "evidence": "evidence: The pulumi-aws-apigateway schema.json defines an `Authorizer` type supporting both `providerARNs` (Cognito User Pools) and `type: token/request` (Lambda authorizers), plus a `apiKeyRequired` boolean on routes for usage-plan/API-key\u2026; source: gh api repos/pulumi/pulumi-aws-apigateway/contents/provider/cmd/pulumi-resource-aws-apigateway/schema.json",
+      "source": "gh api repos/pulumi/pulumi-aws-apigateway/contents/provider/cmd/pulumi-resource-aws-apigateway/schema.json",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Usage plans let you provide API keys to customers, and then track and limit usage of your APIs.",
+      "verdict": "verified",
+      "line": 185,
+      "evidence": "evidence: The same doc later elaborates: \"you can use Amazon API Gateway usage plans to make them available to your customers. Usage plans and API keys allow customers to use your API at agreed-upon request rates and quotas...\" This matches AWS's\u2026; source: repo:content/docs/iac/guides/clouds/aws/api-gateway.md (lines 277-279, 306-307)",
+      "source": "repo:content/docs/iac/guides/clouds/aws/api-gateway.md (lines 277-279, 306-307)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "For access-control capabilities not directly supported by the API Gateway component's `RestAPI` resource, those capabilities remain accessible through the\u2026",
+      "verdict": "verified",
+      "line": 187,
+      "evidence": "evidence: The pulumi-aws-apigateway repo's schema.yaml confirms RestAPI is a component resource (\"aws-apigateway:index:RestAPI\") that wraps the underlying aws.apigateway.RestApi resource (\"$ref\"\u2026; source: gh search code --owner pulumi RestAPI repo:pulumi/pulumi-aws-apigateway (schema.yaml)",
+      "source": "gh search code --owner pulumi RestAPI repo:pulumi/pulumi-aws-apigateway (schema.yaml)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Cognito Authorizers allow you to use Amazon Cognito User Pools as an authorizer for API Gateway.",
+      "verdict": "verified",
+      "line": 191,
+      "evidence": "evidence: Source file cognitoAuthorizer.ts in pulumi/pulumi-aws-apigateway defines `export interface CognitoAuthorizer` with doc comment \"CognitoAuthorizer provides the definition for a Cognito User Pools Authorizer for API Gateway\" and a\u2026; source: gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/apigateway/cognitoAuthorizer.ts",
+      "source": "gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/apigateway/cognitoAuthorizer.ts",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "With a Cognito user pool, users can sign into a web or mobile app through Amazon Cognito directly, social identity providers like Google and Facebook, or\u2026",
+      "verdict": "verified",
+      "line": 191,
+      "evidence": "evidence: The doc text states: \"With a user pool, your users can sign into your web or mobile app through Amazon Cognito directly, social identity providers like Google and Facebook, or SAML and OIDC identity providers,\" citing AWS's own Cognito\u2026; source: content/docs/iac/guides/clouds/aws/api-gateway.md (L191), citing https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html",
+      "source": "content/docs/iac/guides/clouds/aws/api-gateway.md (L191), citing https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "When deployed, the Cognito Authorizer example configuration requires that a user authenticate, get an identity or access token, and call the API with that\u2026",
+      "verdict": "verified",
+      "line": 197,
+      "evidence": "evidence: The doc text (line 197) is a direct restatement of standard Cognito User Pool authorizer flow described at the linked AWS doc (apigateway-integrate-with-cognito.html): the client authenticates with the user pool, obtains an\u2026; source: content/docs/iac/guides/clouds/aws/api-gateway.md (lines 189-197); AWS docs: https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html",
+      "source": "content/docs/iac/guides/clouds/aws/api-gateway.md (lines 189-197); AWS docs: https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Lambda Authorizers are AWS Lambda functions that control access to an API by using information in the request itself (including headers, paths, query\u2026",
+      "verdict": "verified",
+      "line": 201,
+      "evidence": "evidence: The AWS doc states: \"Use a Lambda authorizer... to control access to your API... Your scheme can use request parameters to determine the caller's identity or use a bearer token authentication strategy,\" and describes REQUEST authorizers\u2026; source: https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html",
+      "route": "pass2"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "You can define a Lambda Authorizer for an event-handler route or a static route, and API Gateway supports `request` or `token` type Lambda authorizers.",
+      "verdict": "verified",
+      "line": 203,
+      "evidence": "evidence: AWS API Gateway Lambda authorizer types are confirmed as `TOKEN` and `REQUEST`: \"Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using\u2026; source: https://www.pulumi.com/registry/packages/aws/api-docs/apigateway/authorizer/ and https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/awsx/interfaces/classic.apigateway.LambdaAuthorizer.html",
+      "source": "https://www.pulumi.com/registry/packages/aws/api-docs/apigateway/authorizer/ and https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/awsx/interfaces/classic.apigateway.LambdaAuthorizer.html",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "API Gateway supports `request` or `token` type Lambda authorizers.",
+      "verdict": "verified",
+      "line": 203,
+      "evidence": "evidence: The pulumi-aws-apigateway source (lambdaAuthorizer.ts) defines `type: \"token\" | \"request\";` on the `LambdaAuthorizer` interface, with doc comments: '\"token\", for an authorizer with the caller identity embedded in an authorization token'\u2026; source: gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/apigateway/lambdaAuthorizer.ts",
+      "source": "gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/apigateway/lambdaAuthorizer.ts",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "When a request validation fails in API Gateway, a 400 error is returned immediately, without invoking the backend integration.",
+      "verdict": "verified",
+      "line": 234,
+      "evidence": "evidence: AWS API Gateway official docs state: \"When the validation fails, API Gateway immediately fails the request, returns a 400 error response to the caller, and publishes the validation results in CloudWatch Logs. This reduces unnecessary\u2026; source: https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "API Gateway can perform basic validations against the parameters of a request, the request payload, or both.",
+      "verdict": "verified",
+      "line": 234,
+      "evidence": "evidence: AWS API Gateway docs state: \"API Gateway can perform the basic request validation... API Gateway verifies either or both of the following conditions\" \u2014 required request parameters or the request payload against a JSON schema, matching\u2026; source: https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html",
+      "source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Validators can be assigned for an entire API or at the individual method level, such as only for `POST` requests on a given route.",
+      "verdict": "verified",
+      "line": 248,
+      "evidence": "framing: Source shows API-level and method(route)-level validator override generically; claim's specific example (POST-only validation) is a valid narrower instance\u2026; evidence: RestAPIArgs.request_validator docstring: \"Request Validator specifies the validator to use at the API level. Note method level validators override this.\" Confirms requestValidator is settable on RestAPIArgs (API-wide) and RouteArgs\u2026; source: gh api repos/pulumi/pulumi-aws-apigateway/contents/sdk/python/pulumi_aws_apigateway/rest_api.py; gh search code --owner pulumi RequestValidator repo:pulumi/pulumi-aws-apigateway",
+      "source": "gh api repos/pulumi/pulumi-aws-apigateway/contents/sdk/python/pulumi_aws_apigateway/rest_api.py; gh search code --owner pulumi RequestValidator repo:pulumi/pulumi-aws-apigateway",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Validators defined at a method level override any validator set at the global (API Gateway instance) level.",
+      "verdict": "verified",
+      "line": 248,
+      "evidence": "framing: Claim describes AWS's own documented method-vs-API validator precedence; Pulumi's component is a thin wrapper exposing this native behavior, so the claim is\u2026; evidence: This describes AWS API Gateway's native validator precedence (not a Pulumi-specific behavior): AWS's request-validation model lets validators be set at both the RestApi and Method resource level, with the method-level requestValidatorId\u2026; source: repo:content/docs/iac/guides/clouds/aws/api-gateway.md (lines 246-269); pulumi/pulumi-aws-apigateway README confirms requestValidator property wraps native AWS API Gateway validation",
+      "source": "repo:content/docs/iac/guides/clouds/aws/api-gateway.md (lines 246-269); pulumi/pulumi-aws-apigateway README confirms requestValidator property wraps native AWS API Gateway validation",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The `requiredParameters` route property is an array that defines each required parameter and where the parameter is expected to be found (`header`, `path`\u2026",
+      "verdict": "verified",
+      "line": 263,
+      "evidence": "evidence: Source (aws-apigateway/restAPI.ts in pulumi/pulumi-aws-apigateway) defines: `export interface RestAPIRoute { ... requiredParameters?: RequiredParameter[]; ... }` and `export interface RequiredParameter { name: string; in: \"path\" |\u2026; source: gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/restAPI.ts",
+      "source": "gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/restAPI.ts",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The `requiredParameters` property is an array that defines each required parameter and where the parameter is expected to be found (`header`, `path`\u2026",
+      "verdict": "verified",
+      "line": 263,
+      "evidence": "evidence: Source confirms: schema.yaml defines `requiredParameters: type: array, items: $ref: #/types/aws-apigateway:index:RequiredParameter`, and restAPI.ts defines `export interface RequiredParameter { name: string; in: \"path\" | \"query\" |\u2026; source: gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/restAPI.ts and schema.yaml",
+      "source": "gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/restAPI.ts and schema.yaml",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The example above (Assigning validators to APIs and Methods) declares a `/search` route with `requiredParameters` set to `name: \"q\"` and `in: \"query\"`, so\u2026",
+      "verdict": "verified",
+      "line": 265,
+      "evidence": "evidence: The example program (static/programs/awsx-apigateway-validation-types-typescript/index.ts) defines a `/search` route with `requestValidator: apigateway.RequestValidator.ALL` and `requiredParameters: [{ name: \"q\", in: \"query\" }]`\u2026; source: repo:static/programs/awsx-apigateway-validation-types-typescript/index.ts",
+      "source": "repo:static/programs/awsx-apigateway-validation-types-typescript/index.ts",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Because of the `/search` route's `requiredParameters` configuration, requests to `/search` are rejected unless the `q` query parameter is present and non-empty.",
+      "verdict": "verified",
+      "line": 265,
+      "evidence": "evidence: The referenced example program (static/programs/awsx-apigateway-validation-types-typescript/index.ts) exactly matches the doc's description: the `/search` route has `requiredParameters: [{name: \"q\", in: \"query\"}]` combined with\u2026; source: repo:static/programs/awsx-apigateway-validation-types-typescript/index.ts; repo:pulumi/pulumi-aws-apigateway aws-apigateway/apigateway/api.ts (requiredParameters handling)",
+      "source": "repo:static/programs/awsx-apigateway-validation-types-typescript/index.ts; repo:pulumi/pulumi-aws-apigateway aws-apigateway/apigateway/api.ts (requiredParameters handling)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Request body validation is not yet supported by the AWS API Gateway component.",
+      "verdict": "verified",
+      "line": 272,
+      "evidence": "evidence: Issue pulumi/pulumi-aws-apigateway#36 \"[API Gateway] Support Request Body Validation\" is open and the author states \"We are tabling this work\" \u2014 confirming the JSON-schema-model-based request body validation feature (distinct from the\u2026; source: gh issue view 36 -R pulumi/pulumi-aws-apigateway",
+      "source": "gh issue view 36 -R pulumi/pulumi-aws-apigateway",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Amazon API Gateway usage plans allow customers to use an API at agreed-upon request rates and quotas.",
+      "verdict": "verified",
+      "line": 277,
+      "evidence": "evidence: The doc text itself (\"Usage plans and API keys allow customers to use your API at agreed-upon request rates and quotas\") accurately paraphrases standard AWS API Gateway functionality, which the same section cites via the official AWS doc\u2026; source: AWS docs: https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html (cited in the same doc section)",
+      "source": "AWS docs: https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html (cited in the same doc section)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "API Gateway automatically provisions and assigns a domain name, a URL that contains the stage, and SSL support.",
+      "verdict": "verified",
+      "line": 311,
+      "evidence": "evidence: This is a description of native AWS API Gateway behavior, consistent with the same doc's earlier statement: \"API Gateway will auto-generate a domain name with built-in HTTPS support. The stage name will also be part of this URL.\" This\u2026; source: repo:content/docs/iac/guides/clouds/aws/api-gateway.md (line 53 and 311-313, internally consistent)",
+      "source": "repo:content/docs/iac/guides/clouds/aws/api-gateway.md (line 53 and 311-313, internally consistent)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "API Gateway automatically provisions and assigns a domain name, a URL that contains the stage, and SSL support, with generated URLs like\u2026",
+      "verdict": "not-a-claim",
+      "line": 311,
+      "evidence": "evidence: The URL cited is an illustrative example of an auto-generated API Gateway domain (a placeholder pattern like `https://<random-id>.execute-api.<region>.amazonaws.com/stage/`), not a live resource meant to resolve. Its DNS failure (Name or\u2026; source: https://no90ji5v23.execute-api.us-west-2.amazonaws.com/stage/",
+      "source": "https://no90ji5v23.execute-api.us-west-2.amazonaws.com/stage/",
+      "route": "pass2"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "You can configure a custom domain name for an API Gateway instance (such as `api.example.com`) and customize the base path of the URL to be something other\u2026",
+      "verdict": "unverifiable",
+      "line": 319,
+      "evidence": "framing: Cited source (CloudFront landing page) does not address API Gateway custom domain names or base path mapping; target mismatch between claim subject and cited\u2026; evidence: The cited URL (aws.amazon.com/cloudfront/) is the generic CloudFront marketing/product landing page and does not mention API Gateway custom domain names or base path mapping at all \u2014 it's the wrong target for this claim, which is really\u2026; source: https://aws.amazon.com/cloudfront/; intuition: Source hint URL (CloudFront product page) seems mismatched to the claim's actual subject (API Gateway custom\u2026",
+      "source": "https://aws.amazon.com/cloudfront/",
+      "route": "pass2"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "In the custom domain example, the ACM certificate is created in the `us-east-1` region because that is a CloudFront requirement, and is validated with a\u2026",
+      "verdict": "verified",
+      "line": 321,
+      "evidence": "evidence: AWS official docs confirm: \"To use a certificate in AWS Certificate Manager (ACM) to require HTTPS between viewers and CloudFront, make sure you request (or import) the certificate in the US East (N. Virginia) Region (us-east-1).\" This\u2026; source: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html",
+      "source": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The ACM certificate in the example is created in the `us-east-1` region because that is a CloudFront requirement.",
+      "verdict": "verified",
+      "line": 321,
+      "evidence": "evidence: The doc itself states: \"Note that the ACM certificate is created in the `us-east-1` region (a CloudFront requirement)\". This matches AWS's well-documented requirement that ACM certificates associated with CloudFront distributions (which\u2026; source: content/docs/iac/guides/clouds/aws/api-gateway.md:321 (corroborated by well-known AWS ACM/CloudFront region requirement)",
+      "source": "content/docs/iac/guides/clouds/aws/api-gateway.md:321 (corroborated by well-known AWS ACM/CloudFront region requirement)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "Amazon API Gateway supports the OpenAPI specification (formerly known as \"Swagger\") for defining APIs.",
+      "verdict": "verified",
+      "line": 330,
+      "evidence": "evidence: Multiple sources confirm this. AWS docs reference importing OpenAPI definitions, and a third-party source states: \"One of the key capabilities of API Gateway is its support for the OpenAPI Specification (formerly known as Swagger\u2026; source: https://medium.com/@christopheradamson253/build-apis-with-amazon-api-gateway-using-openapi-specifications-451236e289f4",
+      "source": "https://medium.com/@christopheradamson253/build-apis-with-amazon-api-gateway-using-openapi-specifications-451236e289f4",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "To use an OpenAPI specification to initialize an API Gateway, you supply an entire OpenAPI specification as a JSON string in the `swaggerString` property.",
+      "verdict": "verified",
+      "line": 337,
+      "evidence": "evidence: In pulumi/pulumi-aws-apigateway, RestAPIArgs/schema.yaml define a `swaggerString` input property (type string) on the RestAPI component, with docs noting \\\"Either `swaggerString` or `routes` must be specified\\\" and \\\"when using\u2026; source: gh search code --owner pulumi -R pulumi/pulumi-aws-apigateway swaggerString; RestAPIArgs.java, restAPI.ts, schema.yaml",
+      "source": "gh search code --owner pulumi -R pulumi/pulumi-aws-apigateway swaggerString; RestAPIArgs.java, restAPI.ts, schema.yaml",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The example under 'Defining an entire endpoint' proxies a route through to another HTTP endpoint by setting up an `http_proxy` integration.",
+      "verdict": "verified",
+      "line": 337,
+      "evidence": "evidence: The doc text at L338 states: \"this API proxies a route through to another HTTP endpoint by setting up an http_proxy integration\" and the referenced example program (awsx-apigateway-openapi-full-typescript/index.ts) confirms this with\u2026; source: repo:static/programs/awsx-apigateway-openapi-full-typescript/index.ts and repo:content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "source": "repo:static/programs/awsx-apigateway-openapi-full-typescript/index.ts and repo:content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "You can define a single API route (a \"raw data\" route) with OpenAPI using the `data` property.",
+      "verdict": "verified",
+      "line": 357,
+      "evidence": "evidence: The pulumi-aws-apigateway schema.json defines a `data` property on the `Route` type: \"A raw Swagger object to include verbatim in the integration for this path\" \u2014 confirming a single route can be defined via OpenAPI/Swagger using the\u2026; source: gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/schema.json (Route.data property)",
+      "source": "gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/schema.json (Route.data property)",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "The `data` property is the `x-amazon-apigateway-integration` object.",
+      "verdict": "verified",
+      "line": 361,
+      "evidence": "evidence: The pulumi-aws-apigateway README (aws-apigateway/apigateway/README.md) states: \"A Raw Data Route is a fallback route for when raw swagger control is desired. The `data` field should be an object that will be then included in the final\u2026; source: gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/apigateway/README.md",
+      "source": "gh api repos/pulumi/pulumi-aws-apigateway/contents/aws-apigateway/apigateway/README.md",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "claim": "A single OpenAPI route's other parameters, such as its path and method, otherwise use the same approaches seen earlier in the document.",
+      "verdict": "verified",
+      "line": 361,
+      "evidence": "evidence: The pulumi-aws-apigateway README describes the Raw Data Route: \"A Raw Data Route is a fallback route for when raw swagger control is desired. The `data` field should be an object that will be then included in the final swagger\u2026; source: gh search code --owner pulumi \"x-amazon-apigateway-integration\" repo:pulumi/pulumi-aws-apigateway (aws-apigateway/apigateway/README.md)",
+      "source": "gh search code --owner pulumi \"x-amazon-apigateway-integration\" repo:pulumi/pulumi-aws-apigateway (aws-apigateway/apigateway/README.md)",
+      "route": "pass1"
+    }
+  ],
+  "investigation_log": {
+    "cross-sibling-reads": "0 of 9 siblings",
+    "external-claim-verification": "40 of 42 claims verified (1 unverifiable, 0 contradicted) \u00b7 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations \u00b7 routed: 0 inline, 29 Pass 1, 4 Pass 2 (verified 2, contradicted 0, unverifiable 2), 9 Pass 3 (verified 9, contradicted 0, unverifiable 0).",
+    "cited-claim-spot-checks": "4 of 4 cited claims fetched and compared",
+    "frontmatter-sweep": "ran on body + meta_desc",
+    "temporal-trigger-sweep": "ran (recency words present in diff; spot-check in-review)",
+    "code-execution": "not run (no `static/programs/` change)",
+    "code-examples-checks": "not run (no fenced code blocks in content files)",
+    "editorial-balance-pass": "not run (not under content/blog/)"
+  },
+  "editorial_balance": null,
+  "triaged": [],
+  "style_suggestions_count": 1,
+  "confidence": {
+    "mechanics": "TODO",
+    "facts": "TODO",
+    "cross-sibling consistency": "TODO"
+  },
+  "summary": null,
+  "stances": [
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "text": "The auto-generated API Gateway URL isn't user-friendly or memorable, and may not be suitable for business scenarios that require using company domains.",
+      "type": "positioning",
+      "line": 315,
+      "found_by": [
+        "llm-atomic"
+      ]
+    },
+    {
+      "file": "content/docs/iac/guides/clouds/aws/api-gateway.md",
+      "text": "Using OpenAPI to define APIs eases integration with other API authoring, modeling, and testing tools, at some added complexity cost, since you need to\u2026",
+      "type": "positioning",
+      "line": 330,
+      "found_by": [
+        "llm-atomic"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "ts": "2026-09-14T14:31:46Z",
+      "summary": "initial review (pending publication)",
+      "sha": "0244eb6"
+    }
+  ]
+}

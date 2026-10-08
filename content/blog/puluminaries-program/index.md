@@ -35,11 +35,11 @@ Before we dive into what is new, we want to recognize and applaud the incredible
 
 The Pulumi Puluminaries 2.0 Program is designed to recognize and empower developers, architects, and technologists who are committed to driving innovation with Pulumi. This program offers exclusive opportunities to collaborate with Pulumi engineers, gain early access to new features, and share insights with the community.
 
-Similar to how other ambassador programs bring together dedicated advocates around a specific focus, the Pulumi Puluminaries 2.0 Program unites a community of individuals who champion Pulumi’s approach to cloud engineering. Pulumi Puluminaries lead conversations, help new users adopt Pulumi effectively, and showcase best practices and use cases that highlight the power of Infrastructure as Code. They are also key participants in shaping Pulumi’s future by providing feedback to the product team and taking part in special initiatives.
+Similar to how other ambassador programs bring together dedicated advocates around a specific focus, the Pulumi Puluminaries 2.0 Program unites a community of individuals who champion Pulumi’s approach to cloud engineering. Pulumi Puluminaries lead conversations, help new users adopt Pulumi effectively, and showcase best practices and use cases that highlight the power of infrastructure as code. They are also key participants in shaping Pulumi’s future by providing feedback to the product team and taking part in special initiatives.
 
 #### What does it mean to be a Pulumi Puluminary?
 
-Pulumi Puluminaries serve as champions of cloud engineering. They help users navigate the complexities of building, deploying, and managing applications with Pulumi. They also promote the benefits of Infrastructure as Code in modern organizations by creating thought leadership content, hosting or co-hosting events, and offering guidance for those just getting started.
+Pulumi Puluminaries serve as champions of cloud engineering. They help users navigate the complexities of building, deploying, and managing applications with Pulumi. They also promote the benefits of infrastructure as code in modern organizations by creating thought leadership content, hosting or co-hosting events, and offering guidance for those just getting started.
 
 **Key Responsibilities for Pulumi Puluminaries:**
 
@@ -52,7 +52,7 @@ As a Pulumi Puluminary, you will be expected to engage with the community at lea
     - Participate in Pulumi’s community forums, Slack channels, and social media discussions.
 
 2. **Thought Leadership**
-    - Write blog posts (like [Simen A. W. Olsen](/blog/author/simen-a-w-olsen/) did in his latest post [Your Perfect Infrastructure May Not Be So Perfect](/blog/your-perfect-infrastructure/) or [Tyler Mulligan](/blog/author/tyler-mulligan/)) or create [videos showcasing](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqxDJjRRhgLGu1_Oct0VVhN) innovative ways to use Pulumi.
+    - Write blog posts (like [Simen A. W. Olsen](/blog/authors/simen-a-w-olsen/) did in his latest post [Your Perfect Infrastructure May Not Be So Perfect](/blog/your-perfect-infrastructure/) or [Tyler Mulligan](/blog/authors/tyler-mulligan/)) or create [videos showcasing](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlqxDJjRRhgLGu1_Oct0VVhN) innovative ways to use Pulumi.
     - Contribute to discussions around best practices and patterns for cloud engineering with Pulumi.
 
 3. **Product Feedback**

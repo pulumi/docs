@@ -2,6 +2,7 @@
 title: What Is a Terraform Module?
 meta_desc: "A Terraform module is a reusable container for a group of related resources, defined once and called with different inputs. Learn how modules work."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is a Terraform Module?"
 authors: ["alex-leventer"]
 ---
@@ -176,7 +177,7 @@ None of these make modules a poor choice; they're the natural boundaries of a do
 
 ## How does Pulumi handle reuse?
 
-Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that takes a different approach to the same reuse problem. Instead of a configuration language with a module system layered on top, Pulumi lets you define infrastructure in general-purpose programming languages (TypeScript, Python, Go, C#, Java, and YAML), so the reuse mechanisms are the ones those languages already provide: functions, classes, and packages.
+Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that takes a different approach to the same reuse problem. Instead of a configuration language with a module system layered on top, Pulumi lets you define infrastructure in general-purpose programming languages — TypeScript, JavaScript, Python, Go, .NET, and Java — so the reuse mechanisms are the ones those languages already provide: functions, classes, and packages.
 
 The closest analog to a Terraform module is a Pulumi **component**. A [component resource](/docs/iac/concepts/components/) is a class that groups multiple child resources behind a constructor, taking typed arguments and exposing typed outputs, the same inputs-in, outputs-out contract a module has, but expressed as a real class in your language:
 
@@ -207,11 +208,11 @@ export class S3Bucket extends pulumi.ComponentResource {
 
 Because a component is ordinary code, you get the reuse tools of the host language for free: loops, conditionals, functions, unit tests with your normal test framework, and package managers (npm, PyPI, NuGet, Maven) for distribution. A component packaged as a [Pulumi package](/docs/iac/concepts/packages/) can be published with a Pulumi plugin so that Pulumi generates SDKs for it in every supported language, letting a component authored in one language be consumed from another.
 
-Pulumi also interoperates with the Terraform ecosystem rather than replacing it. You can [consume an existing Terraform module directly from a Pulumi program](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), which lets teams reuse modules they've already written while adopting Pulumi. For a side-by-side of the two tools' models and terminology, see the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/).
+Pulumi also interoperates with the Terraform ecosystem rather than replacing it. You can [consume an existing Terraform module directly from a Pulumi program](/docs/integrations/terraform/modules/), which lets teams reuse modules they've already written while adopting Pulumi. For a side-by-side of the two tools' models and terminology, see the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/).
 
 | Aspect | Terraform module | Pulumi component |
 |---|---|---|
-| Authored in | HCL configuration | TypeScript, Python, Go, C#, Java, or YAML |
+| Authored in | HCL configuration | TypeScript, JavaScript, Python, Go, .NET, or Java |
 | Reuse unit | Directory of `.tf` files | Class extending `ComponentResource` |
 | Interface | Input variables and outputs | Constructor arguments and class properties |
 | Logic | HCL expressions, `count`/`for_each` | Full language: loops, functions, conditionals |
@@ -248,22 +249,22 @@ The `source` argument supports several locations: a local path in the same repos
 
 ### What is the difference between a Terraform module and a Pulumi component?
 
-Both encapsulate a group of resources behind inputs and outputs. A Terraform module is a directory of HCL files, and a Pulumi component is a class in a general-purpose language (TypeScript, Python, Go, C#, Java) that extends `ComponentResource`. The practical difference is expressiveness and distribution: components use the host language's loops, functions, and unit-testing tools, and can be packaged as Pulumi Packages for use across multiple languages. Pulumi can also consume existing Terraform modules directly.
+Both encapsulate a group of resources behind inputs and outputs. A Terraform module is a directory of HCL files, and a Pulumi component is a class in a general-purpose language (TypeScript, JavaScript, Python, Go, .NET, Java) that extends `ComponentResource`. The practical difference is expressiveness and distribution: components use the host language's loops, functions, and unit-testing tools, and can be packaged as Pulumi Packages for use across multiple languages. Pulumi can also consume existing Terraform modules directly.
 
 ### Can you use Terraform modules with Pulumi?
 
-Yes. Pulumi can consume an existing Terraform module directly from a Pulumi program, so teams can reuse modules they've already written while adopting Pulumi's programming model. See the guide on [using a Terraform module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+Yes. Pulumi can consume an existing Terraform module directly from a Pulumi program, so teams can reuse modules they've already written while adopting Pulumi's programming model. See the guide on [using a Terraform module in Pulumi](/docs/integrations/terraform/modules/).
 
 ## Learn more
 
-Terraform modules and Pulumi components solve the same reuse problem with different tools: one uses a configuration language and a public registry, the other uses general-purpose programming languages and their package ecosystems. If you're evaluating both, the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/) maps the concepts side by side, and you can [use your existing Terraform modules from Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) without rewriting them.
+Terraform modules and Pulumi components solve the same reuse problem with different tools: one uses a configuration language and a public registry, the other uses general-purpose programming languages and their package ecosystems. If you're evaluating both, the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/) maps the concepts side by side, and you can [use your existing Terraform modules from Pulumi](/docs/integrations/terraform/modules/) without rewriting them.
 
 Related reading:
 
 * [Pulumi components](/docs/iac/concepts/components/)
 * [Pulumi packages](/docs/iac/concepts/packages/)
 * [Pulumi resources](/docs/iac/concepts/resources/)
-* [Use a Terraform module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/)
+* [Use a Terraform module in Pulumi](/docs/integrations/terraform/modules/)
 * [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/)
 * [Pulumi IaC concepts](/docs/iac/concepts/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)

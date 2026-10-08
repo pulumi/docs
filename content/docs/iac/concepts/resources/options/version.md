@@ -55,8 +55,8 @@ var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(),
 var vpc = new com.pulumi.aws.ec2.Vpc("vpc",
     com.pulumi.aws.ec2.VpcArgs.Empty,
     CustomResourceOptions.builder()
-        .version("2.10.0" )
-        .build();
+        .version("2.10.0")
+        .build());
 ```
 
 {{% /choosable %}}

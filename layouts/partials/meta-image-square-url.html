@@ -14,7 +14,7 @@
 */ -}}
 {{- $img := "" -}}
 {{- if .Params.meta_image_square -}}
-    {{- if or (eq .Section "blog") (eq .Section "templates") -}}
+    {{- if eq .Section "blog" -}}
         {{- with .Resources.GetMatch .Params.meta_image_square -}}{{- $img = .RelPermalink -}}{{- end -}}
     {{- else -}}
         {{- $img = .Params.meta_image_square -}}

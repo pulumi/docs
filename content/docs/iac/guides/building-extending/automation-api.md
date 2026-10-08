@@ -27,7 +27,7 @@ Before you begin, make sure you have:
 
 - The [Pulumi CLI](/docs/install/) installed and available on your `PATH`. Automation API drives the CLI under the hood. Or, your program can [install the CLI programmatically](#install-the-cli-programmatically) at runtime.
 - The runtime for your chosen language installed: Node.js, Python, Go, .NET, or Java.
-- A [Pulumi access token](/docs/administration/access-identity/access-tokens/) so your program can store state in Pulumi Cloud. Run `pulumi login` to authenticate, or set the `PULUMI_ACCESS_TOKEN` environment variable.
+- A [Pulumi access token](/docs/administration/concepts/access-tokens/) so your program can store state in Pulumi Cloud. Run `pulumi login` to authenticate, or set the `PULUMI_ACCESS_TOKEN` environment variable.
 - AWS credentials configured, since this guide deploys resources to AWS.
 
 ### Install the CLI programmatically

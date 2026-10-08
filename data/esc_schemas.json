@@ -5,7 +5,7 @@
       "currentEnvironment": {
         "properties": {
           "name": {
-            "description": "The name of the environment currently being evaluated \u2014 the one the reference itself is written in \u2014 as `<project>/<name>`. Inside an imported environment it is the import exactly as written in the importing environment's `imports:` list, so an import written `payments/db` resolves to `payments/db`. Environments in the legacy `default` project may be imported without a project prefix; those resolve as written too, so `db` stays `db` and `default/db` stays `default/db`.",
+            "description": "The name of the environment currently being evaluated \u2014 the one the reference resolves to \u2014 as `<project>/<name>`. Inside an imported environment it is normally the import exactly as written in the importing environment's `imports:` list, so an import written `payments/db` resolves to `payments/db`. When an environment override replaces the import, it is the replacement reference. Environments in the legacy `default` project may be imported without a project prefix; those resolve as written too, so `db` stays `db` and `default/db` stays `default/db`.",
             "type": "string"
           }
         },
@@ -132,7 +132,7 @@
       "inputs": {
         "examples": [
           {
-            "snippet": "fn::open::aws-login:\n  oidc:\n    duration: 1h\n    roleArn: arn:aws:iam::012345678912:role/role-abcd123\n    sessionName: pulumi-esc"
+            "snippet": "fn::open::aws-login:\n  oidc:\n    duration: 1h\n    roleArn: arn:aws:iam::012345678912:role/role-abcd123\n    sessionName: pulumi-esc\n    subjectAttributes:\n      - currentEnvironment.name"
           }
         ],
         "properties": {
@@ -404,7 +404,7 @@
       "inputs": {
         "examples": [
           {
-            "snippet": "fn::open::azure-login:\n  clientId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n  tenantId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n  subscriptionId: /subscriptions/00000000-0000-0000-0000-000000000000\n  oidc: true"
+            "snippet": "fn::open::azure-login:\n  clientId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n  tenantId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n  subscriptionId: /subscriptions/00000000-0000-0000-0000-000000000000\n  oidc: true\n  subjectAttributes:\n    - currentEnvironment.name"
           }
         ],
         "properties": {
@@ -759,7 +759,7 @@
       "inputs": {
         "examples": [
           {
-            "snippet": "fn::open::gcp-login:\n  project: 123456789\n  oidc:\n    workloadPoolId: pulumi-esc\n    providerId: pulumi-esc\n    serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com"
+            "snippet": "fn::open::gcp-login:\n  project: 123456789\n  oidc:\n    workloadPoolId: pulumi-esc\n    providerId: pulumi-esc\n    serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com\n    subjectAttributes:\n      - currentEnvironment.name"
           }
         ],
         "properties": {
@@ -1548,8 +1548,7 @@
                 ],
                 "type": "object"
               }
-            ],
-            "type": ""
+            ]
           }
         },
         "required": [

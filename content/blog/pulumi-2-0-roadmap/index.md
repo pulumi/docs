@@ -45,7 +45,7 @@ Expect to see a steady stream of improvements between now and 2.0 being finished
 
 You can write custom policies, or use off-the-shelf policies authored by the community, including our preview [AWS pack](https://github.com/pulumi/pulumi-policy-aws) and [Open Policy Agent (OPA) integration](https://github.com/pulumi/pulumi-policy-opa). Just as you can share your own infrastructure creations using your language's package manager, you can share your policies too.
 
-CrossGuard is 100% open source, enabled by `pulumi up`'s new `--policy-pack` flag, and advanced organization-wide controls are available in the Team and Enterprise Editions. To learn more, [read the CrossGuard user guide](/docs/insights/policy/); or, to dive straight in, try out [the getting started tutorial](/docs/insights/policy/get-started/).
+CrossGuard is 100% open source, enabled by `pulumi up`'s new `--policy-pack` flag, and advanced organization-wide controls are available in the Team and Enterprise Editions. To learn more, [read the CrossGuard user guide](/docs/discovery-governance/policy/); or, to dive straight in, try out [the getting started tutorial](/docs/discovery-governance/policy/get-started/).
 
 ### Testing
 

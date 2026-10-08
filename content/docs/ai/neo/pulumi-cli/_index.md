@@ -39,7 +39,7 @@ The [Neo handoff skill](https://github.com/pulumi/agent-skills/tree/main/delegat
 
 ## How permissions work
 
-`pulumi neo` uses your existing `pulumi login` and the [RBAC permissions](/docs/administration/access-identity/rbac/) of your Pulumi user. Identity, RBAC, and audit all run through your Pulumi Cloud login, the same way they do in the console.
+`pulumi neo` uses your existing `pulumi login` and the [RBAC permissions](/docs/administration/concepts/rbac/) of your Pulumi user. Identity, RBAC, and audit all run through your Pulumi Cloud login, the same way they do in the console.
 
 ## Get started
 
