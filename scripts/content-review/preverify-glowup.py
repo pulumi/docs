@@ -12,10 +12,14 @@ prints. Those findings then deadlocked, because the card asks the PR author
 (pulumi-bot) to answer.
 
 The fix is to run the review's verifier where the review would: over the
-EDITED spans only. `extract-claims-llm.py` at `standard` scrutiny already
-extracts only from `+` lines, so feeding it a pristine→edited patch gives the
-exact claim set the pre-merge review will see, at a cost proportional to the
-edit rather than the page.
+EDITED spans only. `extract-claims-llm.py` at `standard` scrutiny extracts
+from `+` lines and their immediate context, so feeding it a pristine→edited
+patch and keeping the claims that touch an edited line covers what the
+pre-merge review can block on, at a cost proportional to the edit rather than
+the page. The review sees the context claims too; an `unverifiable` there is
+filed as pre-existing (compose-review.py `split_untouched_unverifiable`), and
+a `contradicted` there stays the review model's call, which this step can't
+pre-empt by reverting lines the glow-up never changed.
 
 Subcommands (all deterministic except the model calls inside the review's own
 scripts, which this only orchestrates):

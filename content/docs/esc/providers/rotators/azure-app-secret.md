@@ -125,46 +125,21 @@ Alternatively, the identity can be added as an **Owner** of the specific app reg
 Owner access alone suffices only for **delegated** logins (a user identity). An **application-only** token must *also* be granted the `Application.ReadWrite.OwnedBy` Microsoft Graph permission with **admin consent**, on top of being an Owner of the target app. This is the common case when an app rotates its *own* secret via [Azure OIDC login](/docs/esc/providers/login/azure-login/), where the `login` identity and the rotated `clientId` are the same app. Scoped to owned apps only, `Application.ReadWrite.OwnedBy` is the least-privilege option for self-rotation. For background, see Microsoft's [app-only access overview](https://learn.microsoft.com/en-us/entra/identity-platform/app-only-access-primer) and [adding an owner to an application](https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/users-groups-entra-apis/add-owner-for-application-microsoft-graph).
 {{% /notes %}}
 
-## Inputs
+## Schema reference
 
-| Property         | Type                                              | Description                                                                                           |
-|------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| `login`          | [AzureLogin](#azurelogin)                         | The credentials to use to log in to Azure.                                                            |
-| `clientId`       | string                                            | The Application (client) ID of the app registration whose secret should be rotated.                   |
-| `lifetimeInDays` | number                                            | [Optional] - The number of days the secret should be valid. Defaults to 180. Maximum is 730.          |
+{{< esc-schema-updated >}}
 
-## State (Optional)
+### Inputs
 
-| Property   | Type                                                          | Description                                                                                                            |
-|------------|---------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| `current`  | [AzureAppSecretOutputs](#azureappsecretoutputs)               | [Optional] - Current credential information. These are the newest and recommended credentials.                         |
-| `previous` | [AzureAppSecretOutputs](#azureappsecretoutputs)               | [Optional] - Previous credential information. These credentials are still valid, but will be phased out next rotation. |
+{{< esc-schema type="rotator" name="azure-app-secret" section="inputs" >}}
 
-### AzureLogin
+### State
 
-| Property         | Type   | Description                                                     |
-|------------------|--------|-----------------------------------------------------------------|
-| `clientId`       | string | The client ID to use.                                           |
-| `tenantId`       | string | The tenant ID to use.                                           |
-| `subscriptionId` | string | The subscription ID to use.                                     |
-| `clientSecret`   | string | [Optional] - The client secret to use for authentication.       |
-| `oidc`           | object | [Optional] - OIDC-related data, if OIDC is used for authentication. |
+{{< esc-schema type="rotator" name="azure-app-secret" section="state" >}}
 
-## Outputs
+### Outputs
 
-| Property   | Type                                                          | Description                                                                                               |
-|------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| `current`  | [AzureAppSecretOutputs](#azureappsecretoutputs)               | Current credential information. These are the newest and recommended credentials.                         |
-| `previous` | [AzureAppSecretOutputs](#azureappsecretoutputs)               | Previous credential information. These credentials are still valid, but will be phased out next rotation. |
-
-### AzureAppSecretOutputs
-
-| Property      | Type   | Description                                                    |
-|---------------|--------|----------------------------------------------------------------|
-| `secretId`    | string | The secret ID.                                                 |
-| `secretValue` | string | The client secret value, stored as a secret.                   |
-| `createdAt`   | string | [Optional] - The creation timestamp of the secret (RFC3339).   |
-| `expiresAt`   | string | [Optional] - The expiration timestamp of the secret (RFC3339). |
+{{< esc-schema type="rotator" name="azure-app-secret" section="outputs" >}}
 
 ## Troubleshooting
 
