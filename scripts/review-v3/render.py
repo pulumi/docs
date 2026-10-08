@@ -77,7 +77,7 @@ CHIP_LABEL = {
     "route:no-team": "team missing, routing to a person",
     "route:team-unverified": "team not verifiable from here",
 }
-ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "rerun-checks": "stop", "close": "stop", "ask-fix": "hold",
+ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "rerun-checks": "stop", "close": "stop", "ask-fix": "hold", "unrequest": "route",
                 "chain": "go", "consolidate": "hold", "fix": "", "render": "", "deploy": ""}
 INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
 # A row takes one decision (what happens to the PR) and any number of side
@@ -420,6 +420,8 @@ ACTION_HELP = {
               "answer and the lane re-queues the page on its next run. Not the only option: you can fix the branch "
               "yourself or ask Claude on the PR instead."),
     "route": "Request a review from the lane's owner and post what the queue flagged as a comment. Nothing merges, and the row moves to 'waiting on others'.",
+    "unrequest": ("Remove you from this PR's requested reviewers. You were asked by name, not through a team, so "
+                  "this is yours to decline. No comment is posted; whoever asked sees the request disappear."),
     "unblock": "Merge master into this branch as a merge commit and push, so it stops conflicting. A conflicted merge is aborted and reported, never resolved blind.",
     "ask-fix": ("Comment `@claude fix <ids> #update-review` on the PR, naming this row's open findings, so the agent "
                 "watching the PR fixes them and refreshes the review. The batched alternative to running "

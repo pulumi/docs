@@ -101,7 +101,7 @@ DUPLICATE_TITLE_RATIO = 0.8
 CROSS_CODE_CAP = 6
 # The row buttons that are decisions (a row takes one); everything else is a
 # side action. A row that is waiting on its author keeps only the side ones.
-DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate", "ask-fix")
+DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate", "ask-fix", "unrequest")
 SENTINEL_CHECK = act.SENTINEL_CHECK
 
 # code -> meaning; the detail after ':' is free text. Rendered as chips.
@@ -161,6 +161,7 @@ REASON_CODES = {
     "owner": "the PR's domains and their owning roles",
     "route": "the lane this PR should go to; `no-team`: GitHub says the lane's team doesn't exist, so the SLA person is the target; `team-unverified`: the token couldn't read teams, so the config's team is used unchecked",
     "handed-off": "a named reviewer who isn't me is requested (or, on a row outside my lanes, another lane's team); the row waits on them",
+    "requested": "me: I'm a requested reviewer by name (not through a team); `--unrequest` drops the request",
     "merging-over": "an approval or changes-requested review already on the PR",
     "not-governed": "the Sentinel does not gate this PR",
     "author": "author type when human; `generated`: a workflow opened this PR and cannot answer a review, so the row closes rather than goes back; `self`: my own PR, which GitHub lets me neither approve nor send back — it routes to the lane team",
@@ -987,6 +988,14 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
             if me and norm_login(user) == me:
                 continue  # mine: `approved:` above
             reasons.append(f"merging-over:approved-by:{user}")
+    # Someone asked for me by name. Declining is a decision of its own --
+    # the request is the one thing tying this row to me rather than to the
+    # lane -- so it takes the row's decision slot. Team requests aren't mine
+    # to drop: removing myself from a team's request removes the team.
+    requested = (pr.get("requested_reviewers") or {}).get("users") or []
+    if me and not author_self and any(norm_login(u) == me for u in requested):
+        reasons.append("requested:me")
+        add_action({"id": "unrequest", "label": "remove me as reviewer", "cmd": f"--unrequest {n}"})
 
     # -- shape
     for f in pr.get("files") or []:
