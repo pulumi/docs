@@ -10,7 +10,7 @@ menu:
     weight: 8
 ---
 
-Pulumi ESC (Environments, Secrets, and Configuration) OIDC tokens for custom audiences let an environment mint an OpenID Connect (OIDC) token for any service that accepts OIDC identities. You mint the token with [`fn::open::oidc`](/docs/esc/providers/login/oidc/). The service that accepts the token is the relying party. This guide shows how to configure a relying party to trust `fn::open::oidc` tokens, with examples for Cloudsmith, AWS Identity and Access Management (IAM), and Aembit.
+Pulumi ESC (Environments, Secrets, and Configuration) OIDC tokens for custom audiences let an environment mint an OpenID Connect (OIDC) token for any service that accepts OIDC identities. You mint the token with [`fn::open::oidc`](/docs/esc/providers/login/oidc/). The service that accepts the token is the relying party. This guide shows how to configure a relying party to trust `fn::open::oidc` tokens, with examples for Cloudsmith and Aembit. For AWS, Azure, and Google Cloud, use the vendor login providers such as [`aws-login`](/docs/esc/providers/login/aws-login/) instead; they exchange the token for cloud credentials for you.
 
 {{< notes type="info" >}}
 Pulumi is turning on `fn::open::oidc` organization by organization. To have it turned on for your organization, [contact Pulumi](/contact/).
@@ -132,66 +132,6 @@ Cloudsmith exchanges an OIDC token for a short-lived Cloudsmith API token that b
     ```
 
     The response contains a `token` field. Send it to the Cloudsmith API in the `X-Api-Key: Bearer <token>` header.
-
-## AWS IAM
-
-To get AWS credentials inside an environment, use [`aws-login`](/docs/esc/providers/login/aws-login/) with the [AWS guide](/docs/esc/guides/configuring-oidc/aws/). Use `fn::open::oidc` with AWS when your own tool calls `AssumeRoleWithWebIdentity` with the token, for example through the AWS CLI or an AWS SDK.
-
-<!-- TODO(devon): verify the AWS console steps and the AWS_WEB_IDENTITY_TOKEN_FILE / AWS_ROLE_ARN behavior against current AWS docs. They come from AWS's public docs, not from Pulumi code. -->
-
-1. In the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers** > **Add provider**, select **OpenID Connect**, and enter:
-    - **Provider URL:** `https://api.pulumi.com/oidc/v2`
-    - **Audience:** the audience you will use, for example `sts.amazonaws.com`
-
-    AWS allows one identity provider per URL. If you already use `aws-login`, this provider is a second one next to `https://api.pulumi.com/oidc`.
-
-1. Create a role whose trust policy names the new provider and matches `aud` and `sub`:
-
-    ```json
-    {
-      "Version": "2012-10-17",
-      "Statement": [
-        {
-          "Effect": "Allow",
-          "Principal": {
-            "Federated": "arn:aws:iam::123456789012:oidc-provider/api.pulumi.com/oidc/v2"
-          },
-          "Action": "sts:AssumeRoleWithWebIdentity",
-          "Condition": {
-            "StringEquals": {
-              "api.pulumi.com/oidc/v2:aud": "sts.amazonaws.com",
-              "api.pulumi.com/oidc/v2:sub": "pulumi:org:<org-id>:env:<environment-id>"
-            }
-          }
-        }
-      ]
-    }
-    ```
-
-    To trust every environment in your organization, replace the `sub` condition with a `StringLike` condition on `pulumi:org:<org-id>:env:*`.
-
-1. In Pulumi ESC, write the token to a file and set the variables that the AWS CLI and SDKs read:
-
-    ```yaml
-    values:
-      aws:
-        webIdentityToken:
-          fn::open::oidc:
-            audience: sts.amazonaws.com
-            identityToken:
-              version: v2
-      files:
-        AWS_WEB_IDENTITY_TOKEN_FILE: ${aws.webIdentityToken}
-      environmentVariables:
-        AWS_ROLE_ARN: arn:aws:iam::123456789012:role/my-role
-        AWS_ROLE_SESSION_NAME: pulumi-esc
-    ```
-
-1. Run an AWS command through the environment:
-
-    ```bash
-    pulumi env run <org>/<project>/<environment> -- aws sts get-caller-identity
-    ```
 
 ## Aembit
 

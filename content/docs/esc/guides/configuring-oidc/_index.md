@@ -15,7 +15,7 @@ aliases:
   - /docs/esc/concepts/providers/login/oidc-setup/
 ---
 
-Pulumi ESC (Environments, Secrets, and Configuration) can be configured to act as an OpenID Connect (OIDC) provider, issuing signed, short-lived tokens. These tokens can then be exchanged by external systems for temporary cloud provider credentials, eliminating the need for hard-coded credentials.
+Pulumi ESC can be configured to act as an OpenID Connect (OIDC) provider, issuing signed, short-lived tokens. These tokens can then be exchanged by external systems for temporary cloud provider credentials, eliminating the need for hard-coded credentials.
 
 ```yaml
 values:

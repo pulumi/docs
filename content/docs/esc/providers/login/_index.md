@@ -30,6 +30,6 @@ OIDC is the recommended authentication mode wherever supported. See [Configuring
 | [gcp-login](/docs/esc/providers/login/gcp-login/) | Log in to Google Cloud using OIDC or static credentials. |
 | [gh-login](/docs/esc/providers/login/gh-login/) | Log in to GitHub using app credentials. |
 | [infisical-login](/docs/esc/providers/login/infisical-login/) | Log in to Infisical using OIDC or static credentials. |
-| [oidc](/docs/esc/providers/login/oidc/) | Mint an OIDC token for an audience you choose, for any service that accepts OIDC identities. |
+| [oidc](/docs/esc/providers/login/oidc/) | The generic provider. Mints an OIDC token for an audience you choose, signed by the `https://api.pulumi.com/oidc/v2` issuer, for any service that accepts OIDC identities. |
 | [snowflake-login](/docs/esc/providers/login/snowflake-login/) | Authenticate to Snowflake using OIDC. |
 | [vault-login](/docs/esc/providers/login/vault-login/) | Log in to HashiCorp Vault using OIDC or static credentials. |

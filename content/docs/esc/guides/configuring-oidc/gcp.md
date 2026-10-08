@@ -53,10 +53,6 @@ Reach for the manual steps below instead when you already have a workload identi
   {{< /notes >}}
 9. In the **Configure provider attributes** section, provide the value of `assertion.sub` in the **OIDC 1** field. Then click **Save**.
 
-{{< notes type="info" >}}
-This guide covers `gcp-login`, which uses the `https://api.pulumi.com/oidc` issuer. [`fn::open::oidc`](/docs/esc/providers/login/oidc/) uses the `https://api.pulumi.com/oidc/v2` issuer and a different subject. To trust its tokens, see [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
-{{< /notes >}}
-
 ## Configure a Service Account
 
 Once you have created your workload identity pool and provider, you will be directed to the pool details page. If you already have an appropriate service account created, skip ahead to the steps found in the [Grant access to the service account](#grant-access-to-the-service-account) section. Otherwise, continue through the steps below to create a new one.
