@@ -1,11 +1,11 @@
 ---
-title: Customer Managed Keys
-title_tag: Configure Customer Managed Keys for Pulumi Cloud
+title: Customer managed keys
+title_tag: Configure customer managed keys for Pulumi Cloud
 h1: Configure customer managed keys
 meta_desc: Configure an external key management system so Pulumi Cloud encrypts your data with a key you control.
 menu:
   administration:
-    name: Customer Managed Keys
+    name: Customer managed keys
     parent: administration-guides
     identifier: administration-guides-customer-managed-keys
     weight: 5

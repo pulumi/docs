@@ -218,7 +218,7 @@ open $(pulumi stack output url)
                 <a href="https://www.pulumi.com" class="hover:underline">pulumi.com</a>
             </div>
             <ul class="md:ml-auto md:text-right flex flex-wrap gap-x-3 gap-y-1 list-none m-0 p-0">
-                <li><a class="hover:underline cursor-pointer" data-track="footer-legal-privacy-preferences" onclick="window.consentManager.openConsentManager()">Your Privacy Preferences</a></li>
+                <li><a class="hover:underline cursor-pointer" data-track="footer-legal-privacy-preferences" onclick="window.consentManager && window.consentManager.openConsentManager()">Your Privacy Preferences</a></li>
                 <li><a class="hover:underline" data-track="footer-legal-trademark-usage" href="/trademark/">Trademark Usage</a></li>
                 <li><a class="hover:underline" data-track="footer-legal-acceptable-use-policy" href="/acceptable-use/">Acceptable Use Policy</a></li>
                 <li><a class="hover:underline" data-track="footer-legal-terms-conditions" href="/terms-and-conditions/">Terms &amp; Conditions</a></li>

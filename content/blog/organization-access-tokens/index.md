@@ -52,7 +52,7 @@ See below how Organization Access Tokens appears in Audit Logs:
 
 ![Gif of tokens in Audit Logs](https://www.pulumi.com/uploads/content/blog/organization-access-tokens/audit-logs-org-tokens.gif)
 
-Learn more about using this feature in our [Access Token documentation](/docs/administration/access-identity/access-tokens/).
+Learn more about using this feature in our [Access Token documentation](/docs/administration/concepts/access-tokens/).
 
 Let's explore how one of our customers is adopting Organization Access Tokens in the Pulumi Service. [Fauna](https://faunadb.org/), a Pulumi customer, is a distributed document relational database, delivered as a Cloud API. A native serverless architecture means no operations are required. Developers choose Fauna to build new applications faster and confidently scale existing ones across regions and the globe.
 

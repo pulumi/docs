@@ -8,9 +8,6 @@ menu:
         name: Names
         parent: iac-concepts-resources
         weight: 1
-    concepts:
-        parent: resources
-        weight: 1
 aliases:
 - /docs/intro/concepts/resources/names/
 - /docs/concepts/resources/names/
@@ -31,11 +28,11 @@ Pulumi [auto-names](#autonaming) most resources by default, using the logical na
 Be careful when you change a resource's name because changing the name of a resource will create a new resource and delete the old/original resource. If you'd like to rename a resource without destroying the old one, refer to the [aliases](/docs/iac/concepts/resources/options/aliases/) resource option.
 {{% /notes %}}
 
-## Logical Names {#logicalname}
+## Logical names {#logicalname}
 
 Every resource managed by Pulumi has a logical name that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -82,10 +79,33 @@ resources:
 
 {{% notes type="info" %}}
 
-In Pulumi YAML, you always use the logical name of a resource (e.g., my-role in the above)
-to refer to it. There are no distinct variable names, as there are in other languages.
+In Pulumi YAML, you always use the logical name of a resource (e.g., `my-role` in the above)
+to refer to it. Unlike other languages, Pulumi YAML has no distinct variable names.
 
 {{% /notes %}}
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+A resource's second label is its logical name, so this role's logical name is `my_role`. (`aws_iam_role` requires an assume-role policy. This example and the ones below read it from an `aws_iam_policy_document` data source named `assume_role`, which isn't shown.)
+
+```hcl
+resource "aws_iam_role" "my_role" {
+  assume_role_policy = data.aws_iam_policy_document.assume_role.json
+}
+```
+
+The label is also how the rest of the program refers to the resource, as `aws_iam_role.my_role`. To give the resource a logical name that differs from its label — to match the `my-role` the other languages use here, for instance — set `name` in the resource's [`pulumi` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#resource-options):
+
+```hcl
+resource "aws_iam_role" "my_role" {
+  assume_role_policy = data.aws_iam_policy_document.assume_role.json
+
+  pulumi {
+    name = "my-role"
+  }
+}
+```
 
 {{% /choosable %}}
 
@@ -94,7 +114,7 @@ to refer to it. There are no distinct variable names, as there are in other lang
 The logical name you specify during resource creation is used in two ways:
 
 - As a default prefix for the resource’s physical name, assigned by the cloud provider.
-- To construct the [Universal Resource Name (URN)](#urns) used to track the resource across updates.
+- To construct the [Uniform Resource Name (URN)](#urns) used to track the resource across updates.
 
 Pulumi uses the logical name to track the identity of a resource through multiple deployments of the same program and uses it to choose between creating new resources or updating existing ones.
 
@@ -106,13 +126,13 @@ var foo = new aws.Thing("my-thing");
 
 The variable name `foo` has no bearing at all on the resulting infrastructure. You could change it to another name, run `pulumi up`, and the result would be no changes. The only exception is if you export that variable, in which case the name of the export would change to the new name.
 
-## Physical Names and Auto-Naming {#autonaming}
+## Physical names and auto-naming {#autonaming}
 
 A resource’s logical and physical names may not match. In fact, most physical resource names in Pulumi are, by default, auto-named. As a result, even if your IAM role has a logical name of `my-role`, the physical name will typically look something like `my-role-d7c2fa0`. The suffix appended to the end of the name is random.
 
 This random suffix serves two purposes:
 
-- It ensures that two stacks for the same project can be deployed without their resources colliding. The suffix helps you to create multiple instances of your project more easily, whether because you want, for example, many development or testing stacks, or to scale to new regions.
+- It ensures that two stacks for the same project can be deployed without their resources colliding. The suffix lets you create multiple instances of your project — many development or testing stacks, for example, or a deployment in a new region.
 - It allows Pulumi to do zero-downtime resource updates. Due to the way some cloud providers work, certain updates require replacing resources rather than updating them in place. By default, Pulumi creates replacements first, then updates the existing references to them, and finally deletes the old resources.
 
 {{% notes type="info" %}}
@@ -123,7 +143,7 @@ The exact format of auto-generated physical names varies by provider. While the 
 
 For cases that require specific names, you can override auto-naming by specifying a physical name. Most resources have a `name` property that you can use to name the resource yourself. Specify your name in the argument object to the constructor. Here’s an example.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -181,6 +201,18 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+The physical name is an ordinary argument in the resource body, distinct from the `name` in the `pulumi` block, which sets the logical name:
+
+```hcl
+resource "aws_iam_role" "my_role" {
+  name               = "my-role-001"
+  assume_role_policy = data.aws_iam_policy_document.assume_role.json
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -190,7 +222,7 @@ Overriding auto-naming makes your project susceptible to naming collisions. As a
 
 Because physical and logical names do not need to match, you can construct the physical name by using your project and stack names. Similarly to auto-naming, this approach protects you from naming collisions while still having meaningful names. Note that `deleteBeforeReplace` is still necessary:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -259,10 +291,27 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_iam_role" "my_role" {
+  name               = "my-role-${pulumi.project}-${pulumi.stack}"
+  assume_role_policy = data.aws_iam_policy_document.assume_role.json
+}
+```
+
+{{% notes type="info" %}}
+Pulumi HCL needs no `deleteBeforeReplace` here. It keeps Terraform's replacement ordering,
+destroying the old resource before creating its replacement, which is what that option asks
+for elsewhere. Set `create_before_destroy = true` in a `lifecycle` block to opt into
+Pulumi's create-first ordering instead.
+{{% /notes %}}
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
-## Configuring Auto-Naming {#autonaming-configuration}
+## Configuring auto-naming {#autonaming-configuration}
 
 You can customize how Pulumi generates resource names through the `pulumi:autonaming` configuration setting. This can be set at the stack or project level. And by leveraging [Pulumi ESC](/docs/esc/), autonaming can be managed at the organization level.
 
@@ -297,7 +346,7 @@ pulumiConfig:
 
 Here are the key ways to configure auto-naming:
 
-### Default Auto-Naming
+### Default auto-naming
 
 The default behavior adds a random suffix to resource names:
 
@@ -309,7 +358,7 @@ config:
 
 This is equivalent to having no configuration at all.
 
-### Verbatim Names
+### Verbatim names
 
 To use the logical name exactly as specified, without any modifications:
 
@@ -321,7 +370,7 @@ config:
 
 No random suffixes will be added to the resource names.
 
-### Disable Auto-Naming
+### Disable auto-naming
 
 To require explicit names for all resources:
 
@@ -331,7 +380,7 @@ config:
     mode: disabled
 ```
 
-### Custom Naming Pattern
+### Custom naming pattern
 
 You can specify a template pattern for generating names:
 
@@ -360,7 +409,7 @@ The following expressions are supported in patterns:
 When an update requires replacing the resource, Pulumi's default behavior is to create the new resource and then delete the old resource. However, when using verbatim names or patterns without random components, resources that need to be replaced will be deleted before creating the new resource. This can lead to downtime.
 {{% /notes %}}
 
-### Provider-Specific Configuration
+### Provider-specific configuration
 
 You can configure auto-naming differently for specific providers or resource types:
 
@@ -378,7 +427,7 @@ config:
             pattern: ${name}${string(6)}  # Storage accounts need unique names
 ```
 
-### Strict Name Pattern Enforcement
+### Strict name pattern enforcement
 
 By default, providers may modify the generated names to comply with resource-specific requirements. To prevent this and enforce your exact pattern:
 
@@ -393,7 +442,7 @@ config:
 
 Changing the autonaming setting on an existing stack doesn't cause any immediate changes. It will only affect any newly created resources on this stack, including resources being replaced for unrelated reasons. To re-create resources with new names, e.g. on a dev stack, you would need to destroy the stack and update it again.
 
-## Resource Types and Type Tokens {#types}
+## Resource types and type tokens {#types}
 
 Each resource is an instance of a specific Pulumi resource type. This type is specified by a _type token_ in the format `<package>:<module>:<typename>`. Concrete examples of this format are:
 
@@ -426,7 +475,7 @@ The examples above can be written in simplified form as:
 
 ## Resource URNs {#urns}
 
-Each resource is assigned a [Uniform Resource Name (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) that uniquely identifies that resource globally. Unless you are writing a tool, you will seldom need to interact with an URN directly, but it is fundamental to how Pulumi works so it’s good to have a general understanding of it.
+Each resource is assigned a Uniform Resource Name (URN) that uniquely identifies that resource globally. Unless you are writing a tool, you will seldom need to interact with a URN directly, but it is fundamental to how Pulumi works so it’s good to have a general understanding of it.
 
 The URN is automatically constructed from the project name, stack name, resource name, resource type, and the types of all the parent resources (for [component resources](/docs/iac/concepts/components/)).
 
@@ -454,7 +503,7 @@ Resources constructed as children of a component resource must include the compo
 
 ## Physical IDs {#physicalid}
 
-In addition to its logical name, physical name, and URN, every resource that Pulumi creates in a cloud provider is assigned a **physical ID** by that provider once creation is complete. This ID is exposed as the `id` output property on every resource.
+In addition to its logical name, physical name, and URN, every resource that Pulumi creates in a cloud provider is assigned a **physical ID** by that provider once creation is complete. This ID is exposed as the `id` output property on those resources. ([Component resources](/docs/iac/concepts/components/), which Pulumi does not create in a provider, have no `id`.)
 
 Unlike the logical name (which you choose) or the URN (which Pulumi derives), the physical ID is assigned by the provider and is specific to that provider's conventions:
 
@@ -469,7 +518,7 @@ Because `id` is an output, it is wrapped in Pulumi's `Output<T>` type and is not
 The physical ID is always stored in plain text in the state file and cannot be encrypted, even with [`additionalSecretOutputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/). If a resource places a sensitive value in its ID, see [The resource ID cannot be made secret](/docs/iac/concepts/secrets/#the-resource-id-cannot-be-made-secret).
 {{% /notes %}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -569,6 +618,21 @@ resources:
       content: "Hello, Pulumi!"
       key: hello.txt
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_s3_bucket" "my_bucket" {}
+
+resource "aws_s3_object" "hello_txt" {
+  bucket  = aws_s3_bucket.my_bucket.id # The AWS-assigned bucket name.
+  content = "Hello, Pulumi!"
+  key     = "hello.txt"
+}
+```
+
+Pulumi HCL has no `Output` wrapper to unpack, so a not-yet-known `id` is referenced like any other value; the engine resolves the dependency for you. `pulumiresourceurn`, `pulumiresourcename`, and `pulumiresourcetype` return a resource's [URN](#urns), logical name, and [type token](#types) when you need those instead.
 
 {{% /choosable %}}
 

@@ -7,7 +7,7 @@ menu:
   administration:
     name: Billing managers
     parent: administration-concepts
-    weight: 6
+    weight: 7
 aliases:
 - /docs/pulumi-cloud/access-management/billing-managers/
 - /docs/intro/pulumi-service/billing-managers/
@@ -20,7 +20,7 @@ The Billing Manager role gives customers the ability to have someone in their Pu
 
 Any Organization Admin can view, invite, and remove Billing Managers from their organization.
 
-The Team edition is limited to 1 Billing Manager at a time; the Enterprise and Business Critical editions allow unlimited Billing Managers.
+The Essentials edition is limited to 1 Billing Manager at a time; the Pro and Enterprise editions allow unlimited Billing Managers.
 
 ## Inviting a Billing Manager to an Organization
 

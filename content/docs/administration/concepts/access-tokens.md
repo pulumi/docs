@@ -1,13 +1,13 @@
 ---
 title_tag: "Pulumi Cloud: Access Tokens"
-meta_desc: Learn about the various types of access tokens for the Pulumi Cloud.
+meta_desc: Learn about the various types of access tokens for Pulumi Cloud.
 title: Access tokens
 h1: Pulumi Cloud access tokens
 menu:
   administration:
     name: Access tokens
     parent: administration-concepts
-    weight: 7
+    weight: 8
 aliases:
 - /docs/administration/access-identity/access-tokens/
 - /docs/intro/pulumi-service/organization-access-tokens/
@@ -19,15 +19,15 @@ aliases:
 - /docs/pulumi-cloud/access-management/access-tokens/
 ---
 
-Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usage of the Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/reference/cloud-rest-api/).
+Use access tokens to sign into Pulumi Cloud via the CLI or automate your usage of Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/reference/cloud-rest-api/).
 
 The token you use for `pulumi login` also authorizes the [`pulumi api`](/docs/iac/cli/api/) command, which calls any REST API endpoint directly from the CLI without needing to set the `Authorization` header yourself.
 
 Pulumi offers three types of access tokens:
 
 1. **Personal tokens**, which carry the permissions of the individual user who created them. Personal tokens are available to all Pulumi Cloud users.
-1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are available in the Team, Enterprise, and Business Critical editions.
-1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens appear in audit logs attributed to the team. Team tokens are only available to Enterprise and Business Critical customers.
+1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are available in the Essentials, Pro, and Enterprise editions.
+1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens appear in audit logs attributed to the team. Team tokens are only available to Pro and Enterprise customers.
 
 When using tokens, be mindful of the following security best practices:
 
@@ -81,6 +81,8 @@ Actions taken by organization tokens appear in audit logs attributed to the orga
 
 Any organization admin can create, view, and delete organization tokens via **Settings** > **Access Management** > **Access Tokens**. Tokens are not owned by the admin who created them — if that person leaves the organization, other admins retain full access. Each token's name must be unique across all organization and team tokens in the organization, including deleted tokens, so that tokens can be reliably identified in audit logs and incident response.
 
+Creating or deleting an organization token requires a user credential, such as a personal access token. A request authenticated with an organization or team access token fails with `403 Forbidden: Machine tokens are not allowed to perform this operation`, whatever role the token has, including Admin. This is a security control: if a token could create organization tokens, a leaked token could create new ones and keep access after the original was revoked. To automate organization token management, for example with the [Pulumi Cloud provider](/registry/packages/pulumiservice/), use a personal access token that belongs to a dedicated service-account user.
+
 Deleting a token immediately revokes its access; all further operations using it will fail as unauthorized. The token name is permanently reserved after deletion to preserve audit log integrity.
 
 ## Team access tokens
@@ -101,13 +103,13 @@ As with organization tokens, team token activity is recorded in audit logs with 
 
 ### Who can manage team tokens
 
-Organization admins and team admins can create and delete team tokens. Tokens are found under the team's page (**Teams** > select a team > **Access Tokens**) and are not owned by the admin who created them. Each token name must be unique across all organization and team tokens in the organization, including deleted tokens.
+Organization admins and team admins can create and delete team tokens. Tokens are found under the team's page (**Teams** > select a team > **Access Tokens**) and are not owned by the admin who created them. Each token name must be unique across all organization and team tokens in the organization, including deleted tokens. Unlike organization tokens, team tokens can also be created by a machine token whose role grants enough permission.
 
 Deleting a token immediately revokes its access. The token name is permanently reserved after deletion to preserve audit log integrity.
 
 ## Access token expiry policy
 
-Organization administrators can enforce a maximum expiry on the access tokens used against their organization. When a policy is set, personal, organization, and team tokens must have an expiration date, and the time remaining until that expiration must be within the policy's cap, for requests against the organization to succeed.
+Organization administrators can enforce a maximum expiry on the access tokens used against their organization. When a policy is set, personal, organization, and team tokens must have an expiration date, and their total lifetime (the time from creation to expiration) must be within the policy's cap, for requests against the organization to succeed.
 
 ### Setting a policy
 
@@ -128,10 +130,10 @@ To remove the policy, set the value to 0 (or clear the field) and save. Policy c
 
 ### How compliance is evaluated
 
-A token complies with the policy if it has an expiration date and its remaining lifetime — the time between now and its expiration — is within the policy maximum. Compliance is evaluated on every request, not just when the token is created:
+A token complies with the policy if it has an expiration date and its total lifetime (the time between its creation and its expiration) is within the policy maximum. Compliance is evaluated on every request, not just when the token is created:
 
 * A token that never expires violates any policy.
-* A token created with a long expiry becomes compliant once its remaining lifetime falls within the cap. For example, under a 30-day policy, a token that expires 20 days from now is compliant even if it was originally created with a one-year expiry.
+* A token created with a lifetime longer than the cap never becomes compliant, even as its expiration approaches. For example, under a 30-day policy, a token created with a one-year expiry is rejected even when it has only 20 days left; it must be recreated with a compliant expiry.
 
 ### What the policy affects
 
@@ -145,7 +147,7 @@ A token complies with the policy if it has an expiration date and its remaining 
 
   ![The personal access tokens page showing a banner that one organization enforces a maximum access token expiry of 14 days.](/images/docs/pulumi-cloud/access-tokens/personal-tokens-policy-warning.png)
 
-* **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/guides/oidc-issuers/) and internally issued credentials such as deployment agent pool tokens.
+* **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/concepts/oidc-issuers/) and internally issued credentials such as [customer-managed runner](/docs/administration/concepts/customer-managed-runners/) pool tokens.
 
 Requests rejected by the policy receive a `403 Forbidden` response whose message names the organization and its policy maximum, so it's clear why the request was refused and how to fix it: generate a new token whose expiry meets the policy. For example, a CLI operation using a non-compliant token fails with:
 
@@ -169,7 +171,7 @@ Both token types continue to work. The admin/standard distinction maps directly 
 
 ## OIDC issued tokens
 
-OIDC-issued access tokens generated in CI/CD workflows (such as GitHub Actions) do not receive admin privileges by default. To perform operations that require elevated access—such as creating or deleting stacks—you must explicitly request the admin scope when exchanging the OIDC token. For how to register and configure an issuer for these tokens, see [OIDC Issuers](/docs/administration/guides/oidc-issuers/).
+OIDC-issued access tokens generated in CI/CD workflows (such as GitHub Actions) do not receive admin privileges by default. To perform operations that require elevated access—such as creating or deleting stacks—you must explicitly request the admin scope when exchanging the OIDC token. For how OIDC token exchange works, see [OIDC issuers](/docs/administration/concepts/oidc-issuers/); to register and configure an issuer, see the [OIDC issuers guide](/docs/administration/guides/oidc-issuers/).
 
 For example:
 

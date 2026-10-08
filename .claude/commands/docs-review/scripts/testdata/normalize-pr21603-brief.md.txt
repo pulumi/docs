@@ -1,0 +1,63 @@
+<!-- CLAUDE_REVIEW_BRIEF -->
+## Reviewer's guide v1 — not for the author
+
+> [!TIP]
+> **This is the reviewer's guide.** Work through the ⚠️ checklist below, then approve — **approving asserts only that the ⚠️ items looked right to you.** Machine-verified this run: links, shortcodes, page metadata, and every claim marked verified (receipts on the evidence page). Code samples are read, not compiled.
+>
+> _PR author: your to-do list is the other review comment, "Author action guide" — nothing on this card is yours._
+
+<!-- AUTHOR_STATE_BEGIN -->
+**Waiting on the author** — 1 item blocks merge from the author's own card; you don't need to police them, but check the final diff shows them answered before you approve:
+
+| ID | State | Claim |
+|---|---|---|
+| **F1** | ❓ open | You can configure a custom domain name for an API Gateway instance (such as `api.example.com`) and… |
+<!-- AUTHOR_STATE_END -->
+
+> [!NOTE]
+> **What this PR changes:**
+>
+> - Nine headings on the AWS API Gateway guide were retitled to sentence case.
+> - The "define APIs" bullet list was relabeled with task-style link text ("Handling requests with Lambda" for "Lambda Function Event Handler Route").
+> - The duplicate `awsx-apigateway-validation-types` example under "Request parameter validation" was replaced with prose pointing back at the earlier copy.
+> - The `aws_proxy` integration bullet was rewritten to describe it as Lambda proxy integration specifically.
+> - Assorted wording swaps: "easier" to "higher-level", "Amazon Lambda Functions" to "AWS Lambda functions", "Amazon Web Application Firewall (WAF)" to "AWS WAF", "Content Distribution Network" to "content delivery network".
+>
+> A reader is blocked here if a retitled heading breaks an in-page anchor, or if a rewritten sentence now describes AWS behavior that isn't real. Both were checked: every renamed heading was matched against the links that point at it, the claims the new wording makes were verified against AWS documentation, and the example program the new cross-reference relies on was read.
+>
+> **Review confidence:**
+>
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | mechanics | HIGH |  |
+> | facts | HIGH |  |
+> | cross-sibling consistency | MEDIUM | Not yours to check — the page stands alone; no other guide repeats this material. |
+
+### ⚠️ Check these before approving
+
+_No findings to check — but the editorial stances below still need a human eye._
+
+#### Editorial stances introduced by this PR
+
+*Superlative, ranking, or comparative language the diff adds. No verdict — a page's own framing isn't fact-checkable — but confirm each is a stance the docs should take, and that no agent-written rewrite introduced it unasked.*
+
+- L315-317 `content/docs/iac/guides/clouds/aws/api-gateway.md` — *"The auto-generated API Gateway URL isn't user-friendly or memorable, and may not be suitable for business scenarios that require using company domains."* — positioning (found by llm-atomic)
+- L330-333 `content/docs/iac/guides/clouds/aws/api-gateway.md` — *"Using OpenAPI to define APIs eases integration with other API authoring, modeling, and testing tools, at some added complexity cost, since you need to…"* — positioning (found by llm-atomic)
+
+### ✅ What you can rubber-stamp
+
+- **Facts:** 41 factual claims checked — 40 verified clean, 1 open on the author's card ("Waiting on the author" above).
+- **Mechanics:** frontmatter sweep ran; no internal links added.
+- **Style:** 1 advisory suggestion(s) left with the author; never blocking.
+
+💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<sub>Review v1 · updated 2026-09-14T14:31:46Z · head commit 0244eb6</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+**For the reviewer:** the ⚠️ items above are the minutes that matter — the receipts for everything machine-verified are on the evidence page. The author's open items live on their own card (the comment headed "Author action guide"); while any are open, a **Waiting on the author** list above tracks them, and merge stays blocked until they're answered. If something here seems off, comment on the PR — `@claude <your point> #update-review` re-adjudicates with your input.

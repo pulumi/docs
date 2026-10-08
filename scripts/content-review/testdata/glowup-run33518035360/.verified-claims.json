@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "model": "claude-sonnet-5",
+  "verdicts": [
+    {
+      "claim_id": "c2",
+      "file": "content/docs/iac/concepts/providers/_index.md",
+      "line_range": "L13-15",
+      "text": "- /docs/intro/concepts/resources/providers/",
+      "type": "url",
+      "verdict": "not-a-claim",
+      "confidence": "high",
+      "evidence": "The line is part of the page's `aliases:` frontmatter list (lines 12-15), used to redirect old URLs to this page. It's routing metadata describing the page's own historical URLs, not a factual assertion about Pulumi.",
+      "source": "repo:content/docs/iac/concepts/providers/_index.md"
+    },
+    {
+      "claim_id": "c5",
+      "file": "content/docs/iac/concepts/providers/_index.md",
+      "line_range": "L30-31",
+      "text": "Native providers are not bridged and are generated from a cloud or service's API specification, which produces both the resource definitions and the CRUD calls that manage those resources.",
+      "type": "url",
+      "verdict": "unverifiable",
+      "confidence": "low",
+      "evidence": "The cited URL is the pulumi-terraform-bridge repo, which describes the bridged provider mechanism (Terraform providers bridged into Pulumi), not native providers. The claim is about native providers NOT being bridged, so this source doesn't",
+      "source": "https://github.com/pulumi/pulumi-terraform-bridge"
+    },
+    {
+      "claim_id": "c6",
+      "file": "content/docs/iac/concepts/providers/_index.md",
+      "line_range": "L31",
+      "text": "Native providers are not bridged; they are generated from a cloud or service's API specification, which produces both the resource definitions and the CRUD calls that manage those resources.",
+      "type": "url",
+      "verdict": "verified",
+      "confidence": "high",
+      "evidence": "The pulumi-azure-native README states: \"This provider uses the Azure Resource Manager REST API directly and therefore provides full access to the ARM API... The Azure Native provider works directly with the Azure Resource Manager (ARM) plat",
+      "source": "gh api repos/pulumi/pulumi-azure-native/readme"
+    },
+    {
+      "claim_id": "c7",
+      "file": "content/docs/iac/concepts/providers/_index.md",
+      "line_range": "L33",
+      "text": "Azure publishes many API versions for a given service.",
+      "type": "entity-spec",
+      "verdict": "verified",
+      "confidence": "high",
+      "evidence": "Microsoft Learn confirms each resource provider releases new API versions as features are added: \"As a resource provider enables new features, it releases a new version of the REST API.\" Pulumi's own Azure Native version guide corroborates:",
+      "source": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types; https://www.pulumi.com/registry/packages/azure-native/ve"
+    },
+    {
+      "claim_id": "c11",
+      "file": "content/docs/iac/concepts/providers/_index.md",
+      "line_range": "L40",
+      "text": "Organizations using Pulumi more commonly build components that consume one or more providers to create reusable abstractions, and distribute those components through Pulumi IDP.",
+      "type": "url",
+      "verdict": "matches",
+      "confidence": "high",
+      "evidence": "The providers page states: \"More commonly, organizations using Pulumi build [components](/docs/iac/concepts/components/) that consume one or more providers to create reusable abstractions, and distribute those components through [Pulumi IDP",
+      "source": "repo:content/docs/iac/concepts/components/_index.md"
+    },
+    {
+      "claim_id": "c18",
+      "file": "content/docs/iac/concepts/providers/_index.md",
+      "line_range": "L60",
+      "text": "When you first run `pulumi preview` or `pulumi up`, the Pulumi CLI will install any required providers that are not already in your plugin cache.",
+      "type": "behavior",
+      "verdict": "verified",
+      "confidence": "high",
+      "evidence": "The identical sentence \"When you first run `pulumi preview` or `pulumi up`, the Pulumi CLI will install any required providers that are not already in your plugin cache.\" already exists verbatim in the sibling doc content/docs/iac/concepts/",
+      "source": "repo:content/docs/iac/concepts/plugins.md"
+    },
+    {
+      "claim_id": "c19",
+      "file": "content/docs/iac/concepts/providers/_index.md",
+      "line_range": "L64",
+      "text": "This parameterized-provider method of consuming a provider is most commonly applicable when a pre-built provider SDK does not exist for a given cloud provider, SaaS service, or on-prem device, but a provider does exist in the OpenTofu registry.",
+      "type": "url",
+      "verdict": "unverifiable",
+      "confidence": "low",
+      "evidence": "The cited URL (https://search.opentofu.org) returns 200 but the pre-fetched body only shows the generic registry landing page title \"OpenTofu Registry\" with no content addressing the claim about parameterized-provider usage patterns or SDK ",
+      "source": "https://search.opentofu.org"
+    },
+    {
+      "claim_id": "c20",
+      "file": "content/docs/iac/concepts/providers/_index.md",
+      "line_range": "L66",
+      "text": "For example, to generate a local SDK for the [`hashicorp/random` provider](https://search.opentofu.org/provider/hashicorp/random/latest):",
+      "type": "url",
+      "verdict": "verified",
+      "confidence": "high",
+      "evidence": "The URL https://search.opentofu.org/provider/hashicorp/random/latest resolves to the live OpenTofu Registry page titled \"Provider: Random - hashicorp/random\", confirming the link is valid and correctly targets the hashicorp/random provider.",
+      "source": "https://search.opentofu.org/provider/hashicorp/random/latest"
+    },
+    {
+      "claim_id": "c29",
+      "file": "content/docs/iac/concepts/providers/_index.md",
+      "line_range": "L91-107",
+      "text": "In the example `Pulumi.yaml`, the `random` package entry uses `source: terraform-provider`, `version: 0.10.0` (the version of terraform-provider in the Pulumi registry), and a parameters list including `hashicorp/random` and version `3.7.1` of the `hashicorp/random` provider in the OpenTofu Registry.",
+      "type": "numerical",
+      "verdict": "not-a-claim",
+      "confidence": "medium",
+      "evidence": "This \"claim\" is simply a transcription of the doc's own illustrative Pulumi.yaml example (same file, lines 91-107): `source: terraform-provider`, `version: 0.10.0` with comment \"The version of terraform-provider in the Pulumi registry\", and",
+      "source": "repo:content/docs/iac/concepts/providers/_index.md (L91-107)"
+    },
+    {
+      "claim_id": "c31",
+      "file": "content/docs/iac/concepts/providers/_index.md",
+      "line_range": "L118-120",
+      "text": "If `pulumi install` is used to install packages defined in the project file, generated SDK files must be removed from version control and the SDK directory must be `.gitignore`d, or the generated files will still be under version control.",
+      "type": "behavior",
+      "verdict": "not-a-claim",
+      "confidence": "high",
+      "evidence": "The claim is a verbatim paraphrase of the doc's own existing warning note: \"If you are using `pulumi install` to install packages defined in your project file, be sure to remove any generated SDK files from version control and `.gitignore` ",
+      "source": "repo:content/docs/iac/concepts/providers/_index.md L118-120"
+    }
+  ],
+  "errors": [],
+  "meta": {
+    "n_claims": 74,
+    "trimmed": "model_usage and long evidence dropped; fixture of run artifacts"
+  }
+}

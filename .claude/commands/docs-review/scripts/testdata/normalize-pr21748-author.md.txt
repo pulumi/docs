@@ -1,0 +1,60 @@
+<!-- CLAUDE_REVIEW 1/1 -->
+<!-- CLAUDE_REVIEW_AUTHOR -->
+<!-- CLAUDE_REVIEW_HEAD eb04ed04b14589cac2790df5bca6799cf80eb485 -->
+## Author action guide v1 — nothing blocks merge
+
+> [!NOTE]
+> Nothing here blocks merge — no open items need an answer from you. A human reviewer still approves the merge.
+
+_This PR removes the board's "Do next" batch strip and turns the two cluster moves (chain, consolidate) into buttons on the rows they belong to; the review read the full diff, the surrounding `analyze.py` / `render.py` code it touches, and the three prose files that describe the board._
+
+### 🚨 Fix or disagree
+
+_Nothing to fix — this section is empty._
+
+### ❓ Questions for you
+
+| ID | Where | Finding |
+|---|---|---|
+| **F?** | `scripts/review-v3/analyze.py` L1198 | The consolidate guard skips `waiting_on_author` and `handed_off` rows but not `author:self`, so the approver's own PR can pick up an `ask … for one consolidated PR` button — a `--request-changes` GitHub will not accept on your own PR. `cluster_recommendation` sets `on = max(overlapping)` and only checks `can_revise`, which is true for a human self PR, so the case is reachable whenever your PR is the highest-numbered overlapping member of a bot sweep pile. Intentional, or should the guard add `or on.get("author", {}).get("is_self")` (whatever the row's self flag is — `self_note` is the only self marker on the row today)? The chain avoids this by construction, since `first` only picks `stamp` / `judge` rows and a self PR is route-only. |
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<!-- REVIEW_STATE {"findings":{},"high_water":0,"schema":1} -->
+<!-- The block above stores dispositions only; a finding ID absent from it is OPEN. Machines parse the JSON block, not this note. -->
+
+<sub>Review v1 · updated 2026-09-19T17:03:25Z · head commit eb04ed0</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+### How to answer
+
+Every 🚨 and ❓ item above needs one of these before merge:
+
+1. **Fix it** — push the change. If your push lines up with the flagged lines, this card shows a 🔄 banner within a minute and then refreshes itself. No banner? Comment:
+
+   ```text
+   @claude I pushed a fix for F1 #update-review
+   ```
+
+1. **Disagree with it** — say which item and why; the review re-checks with your input:
+
+   ```text
+   @claude F2: <your reasoning — e.g. where the figure comes from> #update-review
+   ```
+
+   Either way your answer counts: the review marks the item resolved, or keeps it with a 🛡️ note for your human reviewer to weigh — it stops blocking merge in both cases.
+
+1. **Accept it as-is** — you own the PR; a one-line reason is a valid answer, and your reviewer sees it beside the finding:
+
+   ```text
+   @claude F2: accepting as-is — <your reason> #update-review
+   ```
+
+   To accept every open item at once: `@claude accepting all open items — <reason> #update-review`.
+
+The `#update-review` hashtag matters — it routes your reply to this review, and (besides pushing a fix) **it is the only reply that unblocks merge**. A bare `@claude` gets you ad-hoc help and leaves this card — and the merge block — untouched.
+
+Please don't edit, hide, or delete this comment — it is the review's record. Full mechanics: [CONTRIBUTING.md §AI-assisted contributions](https://github.com/pulumi/docs/blob/master/CONTRIBUTING.md#ai-assisted-contributions).

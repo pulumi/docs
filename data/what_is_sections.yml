@@ -73,6 +73,7 @@ sections:
 
   - title: Comparisons
     slugs:
+      - opentofu-vs-terraform
       - database-comparison-cosmos-db-vs-dynamodb
       - cosmos-db-vs-mongodb-know-the-differences
       - amazon-dynamodb-vs-google-cloud-bigtable

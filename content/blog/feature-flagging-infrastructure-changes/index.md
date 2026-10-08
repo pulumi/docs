@@ -23,9 +23,9 @@ The examples in this post range from simply creating a flag and using it in a La
 Check out the code here: [01: Flag Application With LaunchDarkly](https://github.com/pulumi-csa/feature-flagging/tree/main/01-flag-application-launchdarkly).
 {{% /notes %}}
 
-When you define flags in your infrastructure as code, you can configure them alongside all the supporting infrastructure your code needs. You can also encourage flag creation as a best practice in Pulumi [components](https://www.pulumi.com/docs/iac/concepts/components/) or [templates](https://www.pulumi.com/docs/idp/developer-portals/templates/).
+When you define flags in your infrastructure as code, you can configure them alongside all the supporting infrastructure your code needs. You can also encourage flag creation as a best practice in Pulumi [components](https://www.pulumi.com/docs/iac/concepts/components/) or [templates](/docs/idp/concepts/organization-templates/).
 
-With Pulumi, you can use [any Terraform provider](https://www.pulumi.com/docs/iac/concepts/resources/providers/#terraform-bridge-providers) to manage your feature flags, whether that's LaunchDarkly, Statsig, Split, Flagsmith, or any other feature flagging tool with Terraform support. This lets you define flags, targeting rules, and the infrastructure they control in a single codebase. The example uses the LaunchDarkly provider to create flags and supporting infrastructure:
+With Pulumi, you can use [any Terraform provider](/docs/iac/concepts/providers/) to manage your feature flags, whether that's LaunchDarkly, Statsig, Split, Flagsmith, or any other feature flagging tool with Terraform support. This lets you define flags, targeting rules, and the infrastructure they control in a single codebase. The example uses the LaunchDarkly provider to create flags and supporting infrastructure:
 
 ```typescript
 const flag = new launchdarkly.FeatureFlag("example-flag", {
@@ -95,7 +95,7 @@ This approach keeps all configuration in one place, eliminates dependencies on e
 There is some risk involved with automatically triggering updates. You can leave out the webhook and deploy manually if that's safer for your team.
 {{% /notes %}}
 
-Set up a [Pulumi Cloud webhook](https://www.pulumi.com/docs/pulumi-cloud/webhooks/) to automatically deploy infrastructure when ESC environment values change. The example creates an AWS Lambda function behind API Gateway that receives webhook events and triggers deployments via the Pulumi Deployments API:
+Set up a [Pulumi Cloud webhook](/docs/deployments/concepts/webhooks/) to automatically deploy infrastructure when ESC environment values change. The example creates an AWS Lambda function behind API Gateway that receives webhook events and triggers deployments via the Pulumi Deployments API:
 
 ```typescript
 const webhook = new pulumiservice.Webhook("escEnvironmentWebhook", {
@@ -121,7 +121,7 @@ Check out the code here: [04: LaunchDarkly Auto-updating](https://github.com/pul
 
 ### Ingesting flags from LaunchDarkly using ESC Connect
 
-If your team already uses LaunchDarkly for application feature flags, you can integrate those same flags with your infrastructure using [ESC Connect](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/external/). This is also a good option if you need enterprise-grade features like advanced targeting rules or percentage rollouts.
+If your team already uses LaunchDarkly for application feature flags, you can integrate those same flags with your infrastructure using [ESC Connect](/docs/esc/providers/secrets/external/). This is also a good option if you need enterprise-grade features like advanced targeting rules or percentage rollouts.
 
 This approach unifies application and infrastructure flag management. The ESC environment uses `fn::open::external` to query a Lambda function that fetches current flag values from LaunchDarkly:
 

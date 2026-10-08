@@ -1,17 +1,14 @@
 ---
-title_tag: What is Pulumi?
-meta_desc: Learn about what Pulumi is, how it works, and how its components work together to deliver a robust platform for creating and managing cloud infrastructure.
+title_tag: Pulumi Concepts and Architecture
+meta_desc: Learn how Pulumi's SDK, CLI, deployment engine, providers, and Pulumi Cloud work together to provision and manage cloud infrastructure as code.
 title: Concepts
-h1: What is Pulumi?
+h1: Concepts
 menu:
     iac:
         name: Concepts
         weight: 15
         parent: iac-home
         identifier: iac-concepts
-    concepts:
-        name: Overview
-        weight: 4
 aliases:
 - /docs/reference/concepts/
 - /docs/intro/concepts/
@@ -83,6 +80,7 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 - [Resources](/docs/iac/concepts/resources/) — Learn more about how to use and manage resources in your programs.
 - [Resource options](/docs/iac/concepts/resources/options/) — Learn more about how to use and manage resource options in your program.
 - [Inputs and outputs](/docs/iac/concepts/inputs-outputs/) — Learn how to use resource properties to handle dependencies between resources.
+- [Assets and archives](/docs/iac/concepts/assets-archives/) — Learn how to pass files and folders from your program to resources that accept them.
 
 ### Configuration and state
 

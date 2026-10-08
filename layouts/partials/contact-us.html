@@ -20,7 +20,7 @@
                             <li class="m-0">
                                 <h3 class="heading-5 m-0">{{ .label }}</h3>
                                 <p class="body-sm text-gray-600 my-2 max-w-xs">{{ .description }}</p>
-                                <a href="{{ .url }}"{{ partial "external-link-attrs.html" .url | safeHTMLAttr }} class="btn btn-link">
+                                <a href="{{ .url }}"{{ partial "external-link-attrs.html" .url | safeHTMLAttr }}{{ with .track_event }} data-analytics-event="{{ . }}"{{ end }} class="btn btn-link">
                                     {{ .cta_label }}
                                     {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                                 </a>

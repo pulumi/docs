@@ -121,9 +121,9 @@ Pulumi IDP brings **[Infrastructure Platform Engineering](/what-is/what-is-platf
 
 ### Strengths
 
-- **Infrastructure as a First-Class Concern** with built-in multitenancy, isolation, and [governance](/docs/insights/policy/).
+- **Infrastructure as a First-Class Concern** with built-in multitenancy, isolation, and [governance](/docs/discovery-governance/policy/).
 - **Efficiency & Cost Awareness** through [golden paths](/templates) and [reusable components](/docs/iac/concepts/components/) optimized from the start.
-- **Policy-Driven by Design** that enforces security, compliance, and cost [policies](/docs/insights/policy/get-started/) automatically.
+- **Policy-Driven by Design** that enforces security, compliance, and cost [policies](/docs/discovery-governance/policy/get-started/) automatically.
 - **Cloud-Native Ready** ideal for ephemeral workloads, Kubernetes, and multi-cloud.
 
 ### Considerations
@@ -150,8 +150,8 @@ Pulumi IDP brings **[Infrastructure Platform Engineering](/what-is/what-is-platf
 
 **Choose Pulumi IDP for platform engineering if you:**
 
-- Need [infrastructure governance](/docs/insights/policy/) from day one
-- Want [cost management](/blog/finops-with-pulumi) and [policy automation](/docs/insights/policy/get-started/) built in
+- Need [infrastructure governance](/docs/discovery-governance/policy/) from day one
+- Want [cost management](/blog/finops-with-pulumi) and [policy automation](/docs/discovery-governance/policy/get-started/) built in
 - Must scale efficiently across [Kubernetes](/docs/integrations/clouds/kubernetes/) and [multi-cloud](/docs/iac/guides/basics/how-pulumi-works/)
 - Prefer to avoid building everything from scratch
 - Need to deploy quickly (hours vs months)

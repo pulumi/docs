@@ -30,6 +30,7 @@ search:
    keywords:
       - install
       - homebrew
+      - winget
       - msi
       - cli
 ---
@@ -48,16 +49,16 @@ You don't need a Pulumi Cloud account to install the CLI. You'll be prompted to 
 
 {{% choosable os macos %}}
 
-<h3 class="no-anchor pt-4">{{< icon name="package" class="pr-2" >}}Homebrew Package Manager</h3>
+<h3 class="no-anchor pt-4">{{< icon name="package" class="pr-2" >}}Homebrew package manager</h3>
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos">$ brew install pulumi/tap/pulumi</code></pre>
 </div>
 
-<h3 class="no-anchor pt-4">{{< icon name="download-simple" class="pr-2" >}}macOS Binary Download</h3>
+<h3 class="no-anchor pt-4">{{< icon name="download-simple" class="pr-2" >}}macOS binary download</h3>
 
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz">amd64</a>
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-arm64.tar.gz">arm64</a></p>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-arm64.tar.gz">arm64</a>
 
 macOS Ventura (13) or later is required.
 
@@ -69,7 +70,7 @@ macOS Ventura (13) or later is required.
 
 <div class="mb-6 border-solid border-b-2 border-gray-200">
 <div class="w-full md:w-3/4">
-<h3 class="no-anchor pt-4">{{< icon name="package" class="pr-2" >}}Install Script</h3>
+<h3 class="no-anchor pt-4">{{< icon name="package" class="pr-2" >}}Install script</h3>
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
@@ -77,7 +78,7 @@ macOS Ventura (13) or later is required.
 
 </div>
 <div class="w-full">
-<h3 class="no-anchor pt-4">{{< icon name="download-simple" class="pr-2" >}}Linux Binary Download</h3>
+<h3 class="no-anchor pt-4">{{< icon name="download-simple" class="pr-2" >}}Linux binary download</h3>
 <p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz">amd64</a></p>
 </div>
 </div>
@@ -88,6 +89,12 @@ macOS Ventura (13) or later is required.
 
 {{% choosable os windows %}}
 
+<h3 class="no-anchor pt-4">{{< icon name="package" class="pr-2" >}}Windows Package Manager (winget)</h3>
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows">&gt; winget install --exact --id Pulumi.Pulumi</code></pre>
+</div>
+
 <div class="mb-6 border-solid border-b-2 border-gray-200">
 <div class="w-full md:w-3/4">
 <h3 class="no-anchor pt-4">{{< icon name="package" class="pr-2" >}}Installer (MSI)</h3>
@@ -96,7 +103,7 @@ macOS Ventura (13) or later is required.
 </p>
 </div>
 <div class="w-full">
-<h3 class="no-anchor pt-4">{{< icon name="download-simple" class="pr-2" >}}Windows Binary Download</h3>
+<h3 class="no-anchor pt-4">{{< icon name="download-simple" class="pr-2" >}}Windows binary download</h3>
 <p>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip">amd64</a>
 </p>
@@ -113,7 +120,7 @@ Windows 8 and later are supported.
 
 ## More installation methods
 
-In addition, there are many ways to install Pulumi:
+Pulumi also supports these installation methods:
 
 {{< chooser os "macos,windows,linux" >}}
 
@@ -121,7 +128,7 @@ In addition, there are many ways to install Pulumi:
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="macos-official-homebrew-tap" />
 <label for="macos-official-homebrew-tap" class="accordion-label">
-<h5 class="mt-2 w-2/3">Official Pulumi Homebrew Tap</h5>
+<h5 class="mt-2 w-2/3">Official Pulumi Homebrew tap</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -129,16 +136,16 @@ In addition, there are many ways to install Pulumi:
 </label>
 <div class="accordion-item-body-no-animation text-base">
 
-You can install Pulumi through the [Homebrew package manager](https://brew.sh/) and using our official
-[Pulumi Homebrew Tap](https://github.com/pulumi/homebrew-tap/)
+You can install Pulumi through the [Homebrew package manager](https://brew.sh/) using our official
+[Pulumi Homebrew tap](https://github.com/pulumi/homebrew-tap/).
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-brew-official">$ brew install pulumi/tap/pulumi</code></pre>
 </div>
 
-This will install the `pulumi` CLI to the usual place (often `/usr/local/bin/pulumi`) and add it to your path.
+This installs the `pulumi` CLI into your Homebrew prefix — `/opt/homebrew/bin/pulumi` on Apple silicon, `/usr/local/bin/pulumi` on Intel Macs — and adds it to your path.
 
-Subsequent updates can be installed in the usual way:
+Install subsequent updates the same way you update any other formula:
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-brew-upgrade">$ brew upgrade pulumi</code></pre>
@@ -158,8 +165,8 @@ Subsequent updates can be installed in the usual way:
 </label>
 <div class="accordion-item-body-no-animation text-base">
 
-A Pulumi formula is available on the Community Homebrew. If you do not have the Pulumi tap installed, then you can
-still install Pulumi from homebrew using the command:
+A Pulumi formula is also available from the community Homebrew repository. If you do not have the Pulumi tap
+installed, you can still install Pulumi with Homebrew:
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-brew-community">$ brew install pulumi</code></pre>
@@ -185,9 +192,9 @@ You can install Pulumi through the [MacPorts package manager](https://www.macpor
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-port">$ sudo port install pulumi</code></pre>
 </div>
 
-This will install the `pulumi` CLI to `/opt/local/bin/pulumi` and add it to your path.
+This installs the `pulumi` CLI to `/opt/local/bin/pulumi` and adds it to your path.
 
-Subsequent updates can be installed through the `upgrade outdated` command:
+Install subsequent updates with the `upgrade outdated` command:
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-port-update">$ sudo port upgrade outdated</code></pre>
@@ -199,7 +206,7 @@ Subsequent updates can be installed through the `upgrade outdated` command:
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="macos-installation-script" />
 <label for="macos-installation-script" class="accordion-label">
-<h5 class="mt-2 w-2/3">Installation Script</h5>
+<h5 class="mt-2 w-2/3">Installation script</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -213,11 +220,11 @@ Alternatively, you can run our installation script.
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-install-script">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
 </div>
 
-This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
+This installs the `pulumi` CLI to `~/.pulumi/bin` and adds it to your path. When it can't add `pulumi` to your path automatically, it prompts you to add it manually.
 
 See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
 
-The installer script can be rerun to subsequently install new updates.
+Rerun the installer script to install later updates.
 
 </div>
 </div>
@@ -225,7 +232,7 @@ The installer script can be rerun to subsequently install new updates.
 <div class="accordion-item text-2xl py-3 border-t-2 border-b-2">
 <input type="checkbox" class="absolute hidden" id="macos-manual-installation" />
 <label for="macos-manual-installation" class="accordion-label">
-<h5 class="mt-2 w-2/3">Manual Installation</h5>
+<h5 class="mt-2 w-2/3">Manual installation</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -251,7 +258,7 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="linux-installation-script" />
 <label for="linux-installation-script" class="accordion-label">
-<h5 class="mt-2 w-2/3">Installation Script</h5>
+<h5 class="mt-2 w-2/3">Installation script</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -265,7 +272,7 @@ To install, run our installation script:
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux-install-script">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
 </div>
 
-This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
+This installs the `pulumi` CLI to `~/.pulumi/bin` and adds it to your path. When it can't add `pulumi` to your path automatically, it prompts you to add it manually.
 
 See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
 
@@ -275,7 +282,7 @@ See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/1
 <div class="accordion-item text-2xl py-3 border-t-2 border-b-2">
 <input type="checkbox" class="absolute hidden" id="linux-manual-installation" />
 <label for="linux-manual-installation" class="accordion-label">
-<h5 class="mt-2 w-2/3">Manual Installation</h5>
+<h5 class="mt-2 w-2/3">Manual installation</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -299,6 +306,34 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 {{% choosable os windows %}}
 
 <div class="accordion-item text-2xl py-3 border-t-2">
+<input type="checkbox" class="absolute hidden" id="windows-winget" />
+<label for="windows-winget" class="accordion-label">
+<h5 class="mt-2 w-2/3">Windows Package Manager (winget)</h5>
+<div class="flex flex-grow justify-end items-center">
+<span class="closed-accordion">+</span>
+<span class="open-accordion hidden">-</span>
+</div>
+</label>
+<div class="accordion-item-body-no-animation text-base">
+
+Install Pulumi using the [Windows Package Manager](https://learn.microsoft.com/windows/package-manager/winget/) (`winget`) CLI, which is included with Windows 11 and modern versions of Windows 10:
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget">&gt; winget install --exact --id Pulumi.Pulumi</code></pre>
+</div>
+
+This runs the standalone installer (MSI), which installs Pulumi machine-wide and adds it to your path. You don't need an elevated shell, but Windows prompts you to approve the installation. If you don't have administrator rights, use the installation script instead, which installs Pulumi for your user account only.
+
+To update Pulumi to a more recent version:
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget-upgrade">&gt; winget upgrade --exact --id Pulumi.Pulumi</code></pre>
+</div>
+
+</div>
+</div>
+
+<div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="windows-chocolatey" />
 <label for="windows-chocolatey" class="accordion-label">
 <h5 class="mt-2 w-2/3">Chocolatey</h5>
@@ -309,15 +344,15 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 </label>
 <div class="accordion-item-body-no-animation text-base">
 
-You can install Pulumi using elevated permissions through the [Chocolatey package manager](https://chocolatey.org):
+From an elevated (administrator) shell, install the [`pulumi` package](https://community.chocolatey.org/packages/pulumi) with the [Chocolatey package manager](https://chocolatey.org):
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi</code></pre>
 </div>
 
-This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`) and generate the [shims](https://docs.chocolatey.org/en-us/features/shim) (usually `$($env:ChocolateyInstall)\bin`) to add Pulumi to your path.
+This installs the `pulumi` CLI to `$($env:ChocolateyInstall)\lib\pulumi\tools\Pulumi\bin` and adds that directory to the system path.
 
-Subsequent updates can be installed in the usual way:
+Install subsequent updates the usual way:
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco-upgrade">&gt; choco upgrade pulumi</code></pre>
@@ -327,35 +362,9 @@ Subsequent updates can be installed in the usual way:
 </div>
 
 <div class="accordion-item text-2xl py-3 border-t-2">
-<input type="checkbox" class="absolute hidden" id="windows-winget" />
-<label for="windows-winget" class="accordion-label">
-<h5 class="mt-2 w-2/3">Windows Package Manager (Winget)</h5>
-<div class="flex flex-grow justify-end items-center">
-<span class="closed-accordion">+</span>
-<span class="open-accordion hidden">-</span>
-</div>
-</label>
-<div class="accordion-item-body-no-animation text-base">
-
-Install Pulumi using the Windows Package Manager [`winget`](https://github.com/microsoft/winget-cli/) CLI. This is built-in on Windows 11 and later.
-
-<div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget">&gt; winget install pulumi</code></pre>
-</div>
-
-To update Pulumi to a more recent version:
-
-<div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget-upgrade">&gt; winget upgrade pulumi</code></pre>
-</div>
-
-</div>
-</div>
-
-<div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="windows-standalone-installer" />
 <label for="windows-standalone-installer" class="accordion-label">
-<h5 class="mt-2 w-2/3">Standalone Installer (MSI)</h5>
+<h5 class="mt-2 w-2/3">Standalone installer (MSI)</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -373,7 +382,7 @@ Download the latest [Pulumi Installer for Windows x64](https://github.com/pulumi
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="windows-installation-script" />
 <label for="windows-installation-script" class="accordion-label">
-<h5 class="mt-2 w-2/3">Installation Script</h5>
+<h5 class="mt-2 w-2/3">Installation script</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -389,7 +398,7 @@ Download the latest [Pulumi Installer for Windows x64](https://github.com/pulumi
    <pre class="chroma"><code class="language-bash" data-lang="bat" data-track="install-pulumi-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"</code></pre>
 </div>
 
-This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
+This installs the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and adds it to your path.
 
 </div>
 </div>
@@ -397,7 +406,7 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 <div class="accordion-item text-2xl py-3 border-t-2 border-b-2">
 <input type="checkbox" class="absolute hidden" id="windows-manual-installation" />
 <label for="windows-manual-installation" class="accordion-label">
-<h5 class="mt-2 w-2/3">Manual Installation</h5>
+<h5 class="mt-2 w-2/3">Manual installation</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -464,7 +473,7 @@ If you get an error that `pulumi` could not be found, it means your path has not
 
 #### New version warning
 
-If a new version of Pulumi is available, the CLI produces the following example warning when running any of the available commands:
+If a new version of Pulumi is available, the CLI prints a warning like this one when you run any command:
 
 {{% chooser os "macos,windows,linux" %}}
 
@@ -502,35 +511,6 @@ or visit https://pulumi.com/docs/reference/install/ for manual instructions and 
 
 {{< skip-version-check >}}
 
-## Enhance your AI coding assistant with agent skills
-
-Skills are structured knowledge packages that follow the open [Agent Skills](https://agentskills.io) specification. They work across multiple AI coding platforms including Claude Code, GitHub Copilot, Cursor, VS Code, Codex, and Gemini CLI. When you install Pulumi skills, your AI assistant gains access to detailed workflows, code patterns, and decision trees for common infrastructure tasks.
-
-### Claude Code Plugin Marketplace
-
-For Claude Code users, the plugin system provides the simplest installation experience:
-
-```bash
-claude plugin marketplace add pulumi/agent-skills
-claude plugin install pulumi-migration      # Install migration skills
-claude plugin install pulumi                # Install Pulumi skills (overview + specialized)
-claude plugin install pulumi-delegation     # Install delegation skills (Neo handoff)
-```
-
-You can install all plugin groups or choose only the ones you need.
-
-### Universal installation
-
-For Cursor, GitHub Copilot, VS Code, Codex, Gemini, and other platforms, use the universal [Agent Skills](https://agentskills.io) CLI. The universal installer does not read plugin marketplace manifests, so install each end-user skill group:
-
-```bash
-npx skills add pulumi/agent-skills/pulumi --skill '*'
-npx skills add pulumi/agent-skills/migration --skill '*'
-npx skills add pulumi/agent-skills/delegation --skill '*'
-```
-
-You can also connect your assistant to the [Pulumi MCP server](/docs/ai/mcp-server/) for live access to your Pulumi Cloud stacks, resources, and the Pulumi Registry.
-
 ## Installing betas and previous versions
 
 Most installation methods choose the latest version by default. To install a specific version, use the following commands. You can find the list of versions on the [Available versions](/docs/install/versions/) page.
@@ -539,7 +519,7 @@ Most installation methods choose the latest version by default. To install a spe
 
 {{% choosable os macos %}}
 
-<h3 class="no-anchor pt-4">macOS Installation Script</h3>
+<h3 class="no-anchor pt-4">macOS installation script</h3>
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-install-script">$ curl -fsSL https://get.pulumi.com | sh -s -- --version &lt;version&gt;</code></pre>
@@ -549,7 +529,7 @@ Most installation methods choose the latest version by default. To install a spe
 
 {{% choosable os linux %}}
 
-<h3 class="no-anchor pt-4">Linux Installation Script</h3>
+<h3 class="no-anchor pt-4">Linux installation script</h3>
 
 To install, run our installation script:
 
@@ -561,15 +541,19 @@ To install, run our installation script:
 
 {{% choosable os windows %}}
 
-<h3 class="no-anchor pt-4">Chocolatey</h3>
-
-You can specify a specific version with [Chocolatey package manager](https://chocolatey.org):
+<h3 class="no-anchor pt-4">Windows Package Manager (winget)</h3>
 
 <div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi --version</code></pre>
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-winget">&gt; winget install --exact --id Pulumi.Pulumi --version &lt;version&gt;</code></pre>
 </div>
 
-<h3 class="no-anchor pt-4">Windows Installation Script</h3>
+<h3 class="no-anchor pt-4">Chocolatey</h3>
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi --version &lt;version&gt;</code></pre>
+</div>
+
+<h3 class="no-anchor pt-4">Windows installation script</h3>
 
 1. Open a new command prompt window (**WIN+R**: `cmd.exe`):
 
@@ -585,13 +569,13 @@ You can specify a specific version with [Chocolatey package manager](https://cho
 
 ## Installing dev releases
 
-In addition to installing a specific version, the latest dev version can also be installed automatically.  This version contains the latest changes that have been merged to the main development branch.
+Besides a specific version, you can also install the latest dev version automatically. This version contains the latest changes merged to the main development branch.
 
 {{% chooser os "macos,windows,linux" %}}
 
 {{% choosable os macos %}}
 
-### macOS Installation Script
+### macOS installation script
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-install-script">$ curl -fsSL https://get.pulumi.com | sh -s -- --version dev</code></pre>
@@ -601,7 +585,7 @@ In addition to installing a specific version, the latest dev version can also be
 
 {{% choosable os linux %}}
 
-### Linux Installation Script
+### Linux installation script
 
 To install, run our installation script:
 
@@ -613,7 +597,7 @@ To install, run our installation script:
 
 {{% choosable os windows %}}
 
-### Windows Installation Script
+### Windows installation script
 
 1. Open a new command prompt window (**WIN+R**: `cmd.exe`):
 
@@ -640,7 +624,7 @@ The memory usage for both was 1.5GB.
 So the following recommendations were made to add some headroom for the typical pulumi actions, especially for larger projects.
 -->
 
-The following are general recommendations for minimum system requirements when using Pulumi. Actual performance may vary based on the SDK runtime, providers used, operating system and the size and complexity of your infrastructure deployments. However, the following requirements should be considered a minimum to account for typical usage.
+The following are general recommendations for minimum system requirements when using Pulumi. Actual performance varies with the SDK runtime, the providers you use, your operating system, and the size and complexity of your infrastructure deployments — but treat these figures as a floor for typical usage.
 
 | Component      | Recommendation                                                                                                              |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -649,9 +633,38 @@ The following are general recommendations for minimum system requirements when u
 | **Disk Space** | 1 GB or more free disk space (additional space may be required when using multiple runtimes, providers, or large codebases) |
 
 {{% notes type="info" %}}
-System requirements can vary significantly depending on the providers used and how packages/plugins are managed. Using multiple providers or large plugins may require additional disk space. Performance may also be impacted by the runtime for the SDK you are using (e.g., Node.js, Python, Go), the operating system, and how packages are managed in your development environment. Additionally, CPU and RAM requirements can be influenced by the complexity of your infrastructure, the runtimes, and the packages/plugins used, as well as the ability to take advantage of parallel processing during `pulumi plan` and `pulumi apply` operations.
+System requirements vary widely with the providers you use and how you manage packages and plugins. Using multiple providers or large plugins may require additional disk space. Your SDK runtime (for example, Node.js, Python, or Go), your operating system, and how you manage packages in your development environment also affect performance. CPU and RAM requirements depend on the complexity of your infrastructure, the runtimes, the packages and plugins used, and how much of a `pulumi preview` or `pulumi up` operation can run in parallel.
 {{% /notes %}}
+
+## Enhance your AI coding assistant with agent skills
+
+Skills are structured knowledge packages that follow the open [Agent Skills](https://agentskills.io) specification. They work across multiple AI coding platforms including Claude Code, GitHub Copilot, Cursor, VS Code, Codex, and Gemini CLI. When you install Pulumi skills, your AI assistant gains access to detailed workflows, code patterns, and decision trees for common infrastructure tasks.
+
+### Claude Code plugin marketplace
+
+For Claude Code users, the plugin system provides the simplest installation experience:
+
+```bash
+claude plugin marketplace add pulumi/agent-skills
+claude plugin install pulumi-migration      # Install migration skills
+claude plugin install pulumi                # Install Pulumi skills (overview + specialized)
+claude plugin install pulumi-delegation     # Install delegation skills (Neo handoff)
+```
+
+You can install all plugin groups or choose only the ones you need.
+
+### Universal installation
+
+For Cursor, GitHub Copilot, VS Code, Codex, Gemini, and other platforms, use the universal [Agent Skills](https://agentskills.io) CLI. The universal installer does not read plugin marketplace manifests, so install each end-user skill group:
+
+```bash
+npx skills add pulumi/agent-skills/pulumi --skill '*'
+npx skills add pulumi/agent-skills/migration --skill '*'
+npx skills add pulumi/agent-skills/delegation --skill '*'
+```
+
+You can also connect your assistant to the [Pulumi MCP server](/docs/ai/mcp-server/) for live access to your Pulumi Cloud stacks, resources, and the Pulumi Registry.
 
 ## Uninstalling Pulumi
 
-To uninstall Pulumi, use your installation method's command of choice. If you installed Pulumi manually, delete the `pulumi` directory that you created. Afterwards, remove the `.pulumi` folder from your home directory which contains plugins and other cached metadata.
+To uninstall Pulumi, use the uninstall command for the method you installed it with. If you installed Pulumi manually, delete the `pulumi` directory that you created. Then remove the `.pulumi` folder from your home directory, which holds plugins and other cached metadata.

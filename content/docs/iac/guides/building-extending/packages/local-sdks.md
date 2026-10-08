@@ -74,7 +74,7 @@ This clones the repo and executes the source, enabling you to use packages from 
 pulumi package add terraform-provider hashicorp/random 3.5.1
 ```
 
-Refer to the [Any Terraform Provider documentation](/docs/iac/get-started/terraform/terraform-providers/) for more details.
+Refer to the [Any Terraform Provider documentation](/docs/iac/concepts/providers/any-terraform-provider/) for more details.
 
 ## Using generated SDKs
 

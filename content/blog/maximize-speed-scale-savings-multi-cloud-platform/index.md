@@ -29,7 +29,7 @@ Pulumi Cloud accelerates time to market. It automates deployments, manages state
 By supporting modern programming languages like Python, TypeScript, and Go, Pulumi Cloud allows developers to define infrastructure using familiar tools, speeding up onboarding and simplifying workflows. Predefined policy packs and dynamic secrets further reduce operational overhead.
 
 {{% notes type="info" %}}
-[BMW Group](/case-studies/bmw/) used Pulumi to build a scalable and resilient hybrid cloud implementation that could handle more than eleven thousand developers.
+[BMW Group](/case-studies/bmw/) used Pulumi to build a scalable and resilient hybrid cloud implementation that manages more than 20,000 cloud resources with Python-based infrastructure code.
 {{% /notes %}}
 
 ### Security - Enhanced Security and Compliance
@@ -54,4 +54,4 @@ _"Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all
 
 _– Paul Hemberger, Engineering Manager for Materialize’s cloud team_
 
-Is your team ready to move from a self-managed environment to Pulumi cloud? Explore your options with [these resources](/product/pulumi-cloud/), and [enroll in our workshop](https://info.pulumi.com/pulumi-platform-engineering-immersion-days) series that’s customizable for your cloud and business environment.
+Is your team ready to move from a self-managed environment to Pulumi cloud? Explore your options with [these resources](/product/), and [enroll in our workshop](https://info.pulumi.com/pulumi-platform-engineering-immersion-days) series that’s customizable for your cloud and business environment.

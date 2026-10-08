@@ -84,7 +84,7 @@ Agents are only as good as the context they can reason over. Drop a generic LLM 
 
 An agent that needs to touch five systems shouldn't need five separate credential dances. That's where credential sprawl starts. Every agent gets a long-lived key, every key ends up in somebody's `.env`, and every rotation turns into an incident.
 
-The Pulumi surface here is the [200+ providers](https://www.pulumi.com/registry/) plus [Pulumi ESC](/product/secrets-management/) handling dynamic credentials through OIDC. An agent doesn't ask for an AWS access key. It asks ESC for a short-lived, scoped token bound to the environment it's allowed to operate in, and the token expires when the task ends. No static keys, no rotation pain, no awkward postmortem about how something got committed to GitHub. [The ESC patterns I walked through in the Claude skills post](/blog/top-8-claude-skills-devops-2026/) work just as well for an autonomous agent as they do for a human developer, which is really the whole point.
+The Pulumi surface here is the [hundreds of providers](https://www.pulumi.com/registry/) plus [Pulumi ESC](/product/secrets-management/) handling dynamic credentials through OIDC. An agent doesn't ask for an AWS access key. It asks ESC for a short-lived, scoped token bound to the environment it's allowed to operate in, and the token expires when the task ends. No static keys, no rotation pain, no awkward postmortem about how something got committed to GitHub. [The ESC patterns I walked through in the Claude skills post](/blog/top-8-claude-skills-devops-2026/) work just as well for an autonomous agent as they do for a human developer, which is really the whole point.
 
 ### 3. Governed actions
 
@@ -96,7 +96,7 @@ The framing I keep coming back to goes like this. An agent shouldn't call `pulum
 
 Real governance lives outside the prompt. "Please don't delete production" is a wish written into a system prompt, not an enforced control. And when an agent overrides your intent to do what it thought you meant, it's behaving exactly the way the technology was designed to behave.
 
-[Pulumi Policies](/docs/insights/policy/) is the answer the IaC community landed on years ago: policy as code, written in a real programming language, evaluated deterministically at preview and update time. Disallow production RDS deletions. Require encryption at rest. Block S3 buckets with public ACLs. An agent running through Pulumi hits those gates whether it "wants" to or not, because the gates live in the pipeline and not in the prompt. This is the pillar most teams underweight, and it's the first one most auditors ask about.
+[Pulumi Policies](/docs/discovery-governance/policy/) is the answer the IaC community landed on years ago: policy as code, written in a real programming language, evaluated deterministically at preview and update time. Disallow production RDS deletions. Require encryption at rest. Block S3 buckets with public ACLs. An agent running through Pulumi hits those gates whether it "wants" to or not, because the gates live in the pipeline and not in the prompt. This is the pillar most teams underweight, and it's the first one most auditors ask about.
 
 ### 5. An audit trail
 

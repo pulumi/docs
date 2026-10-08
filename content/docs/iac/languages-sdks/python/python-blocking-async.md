@@ -87,7 +87,7 @@ This can cause problems both with blocking code and with explicitly asynchronous
 - Blocking code will prevent the event loop on the Pulumi program’s thread from
   pumping while the blocking code is executing
 - Asynchronous code may not be executed unless it is explicitly scheduled. For example, it is
-  not possible to call `asyncio.run` from within a Pulumi program because there is already an event loop running. Instead, register an async entrypoint with `pulumi.run`, described in [Async program entrypoint](#async-program-entrypoint) below.
+  not possible to call `asyncio.run` from within a Pulumi program because there is already an event loop running. Instead, register an async entrypoint with `pulumi.run`, described in [Async program entrypoint](#async-program-entrypoint) below (requires version 3.254.0 or later of the Pulumi Python SDK).
 
 ### Blocking Code
 
