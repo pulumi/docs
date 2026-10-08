@@ -57,7 +57,7 @@ Full details of our Pulumi Service editions can be found on [our pricing page](/
 
 The Pulumi Business Critical edition includes everything in the Pulumi Enterprise Edition, plus:
 
-- [Organization policies and enforcement](/docs/discovery-governance/policy/)
+- [Organization policies and enforcement](/docs/discovery-governance/concepts/policy-as-code/)
 - [Self-hosting available](/docs/administration/self-hosting/)
 - [Cross-domain identity (SCIM)](/docs/administration/guides/scim/)
 - [Automatic export of audit logs](/docs/administration/security-compliance/audit-logs/#automated-export)
