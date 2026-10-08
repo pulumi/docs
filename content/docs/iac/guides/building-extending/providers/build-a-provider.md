@@ -267,17 +267,19 @@ func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileSt
 		return infer.UpdateResponse[FileState]{}, nil
 	}
 
-	f, err := os.Create(req.State.Path)
-	if err != nil {
-		return infer.UpdateResponse[FileState]{}, err
-	}
-	defer f.Close()
-	n, err := f.WriteString(req.Inputs.Content)
-	if err != nil {
-		return infer.UpdateResponse[FileState]{}, err
-	}
-	if n != len(req.Inputs.Content) {
-		return infer.UpdateResponse[FileState]{}, fmt.Errorf("only wrote %d/%d bytes", n, len(req.Inputs.Content))
+	if req.State.Content != req.Inputs.Content {
+		f, err := os.Create(req.State.Path)
+		if err != nil {
+			return infer.UpdateResponse[FileState]{}, err
+		}
+		defer f.Close()
+		n, err := f.WriteString(req.Inputs.Content)
+		if err != nil {
+			return infer.UpdateResponse[FileState]{}, err
+		}
+		if n != len(req.Inputs.Content) {
+			return infer.UpdateResponse[FileState]{}, fmt.Errorf("only wrote %d/%d bytes", n, len(req.Inputs.Content))
+		}
 	}
 
 	return infer.UpdateResponse[FileState]{
@@ -595,7 +597,7 @@ func (File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckRespo
 
 ##### The `Update` operation
 
-The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode or not, we overwrite the file with the new contents. Note that it's not necessary to check if the input contents are different than current state of the content, as this logic is handled by the `Diff` operation.
+The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode or not, it overwrites the file with the new contents. `Diff` also reports an update when only `force` changes, so `Update` compares the input contents to the current state and skips the write when they match.
 
 ```go
 func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileState]) (infer.UpdateResponse[FileState], error) {
@@ -603,17 +605,19 @@ func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileSt
 		return infer.UpdateResponse[FileState]{}, nil
 	}
 
-	f, err := os.Create(req.State.Path)
-	if err != nil {
-		return infer.UpdateResponse[FileState]{}, err
-	}
-	defer f.Close()
-	n, err := f.WriteString(req.Inputs.Content)
-	if err != nil {
-		return infer.UpdateResponse[FileState]{}, err
-	}
-	if n != len(req.Inputs.Content) {
-		return infer.UpdateResponse[FileState]{}, fmt.Errorf("only wrote %d/%d bytes", n, len(req.Inputs.Content))
+	if req.State.Content != req.Inputs.Content {
+		f, err := os.Create(req.State.Path)
+		if err != nil {
+			return infer.UpdateResponse[FileState]{}, err
+		}
+		defer f.Close()
+		n, err := f.WriteString(req.Inputs.Content)
+		if err != nil {
+			return infer.UpdateResponse[FileState]{}, err
+		}
+		if n != len(req.Inputs.Content) {
+			return infer.UpdateResponse[FileState]{}, fmt.Errorf("only wrote %d/%d bytes", n, len(req.Inputs.Content))
+		}
 	}
 
 	return infer.UpdateResponse[FileState]{
