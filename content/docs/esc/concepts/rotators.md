@@ -64,13 +64,9 @@ The `login` input is a `rotate-only` input, so this import is resolved only at `
 
 ### Managing credentials and `rotate-only` inputs
 
-Rotators that act on an external service typically need managing credentials: credentials with enough privilege to issue or change the credentials being rotated. Each rotator that does designates an input as `rotate-only`. ESC resolves a `rotate-only` input, and any environment it references, only while a rotation runs. All other inputs are resolved every time the environment is opened. The access you need depends on the operation:
+Rotators that act on an external service typically need managing credentials: credentials with enough privilege to issue or change the credentials being rotated. Most rotators designate an input as `rotate-only` for the managing credentials, which is only used during a rotation. Since these are not surfaced when opening the environment, you will not need `OPEN` permissions on environments referenced from `rotate-only` inputs.
 
-- To open the environment, you need `OPEN` permission on the environment and on every environment referenced by inputs that are not `rotate-only`. You do not need access to environments referenced only by the `rotate-only` input.
-- To rotate the environment, you need `WRITE` permission on it and `OPEN` permission on every imported environment, including the one behind the `rotate-only` input.
-- To save changes to the environment, you need access to every environment it references, including the one behind the `rotate-only` input.
-
-Because of this, the best practice is to keep the managing credentials in a separate environment restricted to administrators, and to reference it only from the `rotate-only` input. The `rotate-only` input differs by rotator:
+A good practice is to keep the managing credentials in a separate environment restricted to administrators, and to reference it only from the `rotate-only` input.
 
 ### Rotation
 
