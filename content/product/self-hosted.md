@@ -2,7 +2,7 @@
 title: Self-Hosted Pulumi Cloud
 layout: self-hosted
 
-meta_desc: Run Pulumi Cloud in your own cloud account, data center, or air-gapped network — including inside a FedRAMP authorization boundary.
+meta_desc: Run Pulumi Cloud in your own cloud account, data center, or air-gapped network, including inside a FedRAMP authorization boundary.
 
 overview:
     title: Try Self-Hosted Pulumi
