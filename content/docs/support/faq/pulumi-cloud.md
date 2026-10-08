@@ -184,7 +184,7 @@ To discuss that, [contact us](/contact/).
 
 ### Where can I find my invoices?
 
-If your organization is on a self-serve edition, your invoices are available to download from the bottom of your organization's **Billing & usage** settings page, at `https://app.pulumi.com/<org-name>/settings/billing-usage`. Pulumi also emails a receipt for each invoice to your organization's billing email address.
+If your organization is on a self-serve edition, your invoices are available to download from the bottom of your organization's **Billing & usage** settings page. To get there, select **Settings** > **Billing & usage** in the left navigation bar, or go directly to `https://app.pulumi.com/<org-name>/settings/billing-usage`. Pulumi also emails a receipt for each invoice to your organization's billing email address.
 
 ### What editions are available?
 

@@ -112,7 +112,7 @@ If you need to delegate billing-only access to a team member without granting fu
 
 ## Viewing and downloading invoices
 
-If your organization is on a self-serve edition, you can download your invoices from the bottom of your organization's billing page, at `https://app.pulumi.com/<org-name>/settings/billing-usage`. Pulumi also emails a receipt for each invoice to your organization's billing email address.
+If your organization is on a self-serve edition, you can download your invoices from the bottom of your organization's billing page. To get there, select **Settings** > **Billing & usage** in the left navigation bar, or go directly to `https://app.pulumi.com/<org-name>/settings/billing-usage`. Pulumi also emails a receipt for each invoice to your organization's billing email address.
 
 ## Changing the company name on invoices
 
