@@ -19,9 +19,12 @@ fi
 source ./scripts/ci-login.sh
 
 # The AWS credentials from ci-login.sh expire after two hours, so give both invocations below
-# a single shared deadline comfortably inside that window. Anything not removed by then is
-# handled by the next scheduled run.
+# a single shared deadline comfortably inside that window. Each invocation stops starting new
+# removals once the deadline passes and exits non-zero if it had to skip any. Run both before
+# reporting failure so that a slow "deploy" pass doesn't prevent the "pr" pass from running.
 export BUCKET_CLEANUP_DEADLINE="$(( $(date +%s) + ${BUCKET_CLEANUP_TIME_BUDGET_SECONDS:-5400} ))"
 
-./scripts/remove-recent-buckets.sh deploy
-./scripts/remove-recent-buckets.sh pr
+status=0
+./scripts/remove-recent-buckets.sh deploy || status=1
+./scripts/remove-recent-buckets.sh pr || status=1
+exit "$status"
