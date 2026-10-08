@@ -2,6 +2,7 @@
 title: What Is GitOps?
 meta_desc: "GitOps manages infrastructure and apps with Git as the single source of truth and agents that reconcile live state to match. Learn how it works."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is GitOps?"
 authors: ["alex-leventer"]
 ---
@@ -120,7 +121,7 @@ Pulumi supports GitOps through several complementary paths, extending the model 
 
 **Drift detection.** Pulumi Deployments can run scheduled [drift detection](/docs/deployments/concepts/drift/), comparing the live state of your infrastructure against what your Pulumi program declares and alerting (or remediating) when they diverge, which is the continuous-reconciliation principle applied to cloud infrastructure.
 
-Because Pulumi programs are written in general-purpose languages (TypeScript, Python, Go, C#, Java, or YAML), the same GitOps workflow covers application config and the cloud infrastructure underneath it, and it interoperates with Argo CD and Flux for teams that already run them for Kubernetes delivery.
+Because Pulumi programs are written in general-purpose languages (TypeScript, JavaScript, Python, Go, .NET, or Java) as well as YAML or HCL, the same GitOps workflow covers application config and the cloud infrastructure underneath it, and teams already running Argo CD or Flux can drive it from there through the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/): [Argo CD syncs the operator's `Stack` resource](/docs/iac/operations/continuous-delivery/argocd/) from Git like any other manifest, and a `Stack` can take its program from a [Flux source](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/defining-stacks/#using-a-flux-source).
 
 The through-line never changes, whichever tool you reach for: the repository holds the truth, and software keeps production faithful to it.
 
@@ -132,7 +133,7 @@ GitOps means using a Git repository as the single source of truth for your syste
 
 ### Is GitOps only for Kubernetes?
 
-No. GitOps originated in the Kubernetes community and the best-known tools (Argo CD and Flux) are Kubernetes-focused, but the principles apply to any declarative system. Infrastructure as code tools like Pulumi extend GitOps to cloud resources across 200+ providers, so the same model can manage databases, networks, and serverless functions, not just cluster workloads.
+No. GitOps originated in the Kubernetes community and the best-known tools (Argo CD and Flux) are Kubernetes-focused, but the principles apply to any declarative system. Infrastructure as code tools like Pulumi extend GitOps to cloud resources across hundreds of providers, so the same model can manage databases, networks, and serverless functions, not just cluster workloads.
 
 ### What is the difference between GitOps and DevOps?
 
@@ -156,7 +157,7 @@ Yes, and it's a natural fit. Infrastructure as code provides the declarative sou
 
 ## Learn more
 
-Pulumi brings GitOps to your entire cloud footprint: the Pulumi Kubernetes Operator reconciles infrastructure from Git in a pull-based model, and Pulumi Deployments adds Git Push to Deploy, pull-request previews, and drift detection across 200+ providers. [Get started with the Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) to run your first GitOps reconciliation loop.
+Pulumi brings GitOps to your entire cloud footprint: the Pulumi Kubernetes Operator reconciles infrastructure from Git in a pull-based model, and Pulumi Deployments adds Git Push to Deploy, pull-request previews, and drift detection across hundreds of providers. [Get started with the Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) to run your first GitOps reconciliation loop.
 
 Related reading:
 

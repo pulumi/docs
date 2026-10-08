@@ -34,7 +34,7 @@ category: product
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from January and February. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi-aws-native/releases) and Pulumi Service features in the [new features blogs](/blog/tag/features).
+We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from January and February. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi-aws-native/releases) and Pulumi Service features in the [new features blogs](/blog/tags/features).
 
 <!--more-->
 
@@ -254,4 +254,4 @@ The main benefits of using the OIDC integration for Pulumi Deployments are as fo
 
 ### If you haven’t yet tried out Pulumi Deployments
 
-You should now see a “Deploy” tab under Stack Settings in the [Pulumi Service console](https://app.pulumi.com/signin) and have access to the [Deployments REST API](https://www.pulumi.com/docs/reference/deployments-rest-api/). View [the documentation](https://www.pulumi.com/docs/pulumi-cloud/deployments/) for help getting started and join our [Slack](https://pulumi-community.slack.com/archives/C048NVDH6DV) (#pulumi-deployments channel) for questions and feedback.
+You should now see a “Deploy” tab under Stack Settings in the [Pulumi Service console](https://app.pulumi.com/signin) and have access to the [Deployments REST API](/docs/reference/cloud-rest-api/deployments/). View [the documentation](/docs/deployments/concepts/) for help getting started and join our [Slack](https://pulumi-community.slack.com/archives/C048NVDH6DV) (#pulumi-deployments channel) for questions and feedback.

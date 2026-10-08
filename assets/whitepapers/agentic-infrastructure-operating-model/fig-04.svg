@@ -1,0 +1,20 @@
+<svg width="560" height="159" viewBox="0 0 560 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="159" rx="7.69793" fill="#F5F5FF"/>
+<rect x="59" y="19" width="1" height="106" fill="#DEDBFF"/>
+<rect x="59" y="125" width="468" height="1" fill="#DEDBFF"/>
+<rect x="59" y="31" width="468" height="0.5" fill="#DEDBFF"/>
+<rect x="59" y="92" width="468" height="0.5" fill="#DEDBFF"/>
+<text fill="#6A6675" style="white-space: pre" xml:space="preserve" font-family="'Monaspace Neon Var', ui-monospace, monospace" font-size="5.5" font-weight="500" letter-spacing="0.06em"><tspan x="42.5628" y="30.079">80%</tspan></text>
+<text fill="#6A6675" style="white-space: pre" xml:space="preserve" font-family="'Monaspace Neon Var', ui-monospace, monospace" font-size="5.5" font-weight="500" letter-spacing="0.06em"><tspan x="42.5628" y="91.3542">28%</tspan></text>
+<text fill="#6A6675" style="white-space: pre" xml:space="preserve" font-family="'Monaspace Neon Var', ui-monospace, monospace" font-size="5.5" font-weight="500" letter-spacing="0.06em"><tspan x="46.3034" y="124.349">0%</tspan></text>
+<text fill="#6A6675" style="white-space: pre" xml:space="preserve" font-family="'Monaspace Neon Var', ui-monospace, monospace" font-size="5.5" font-weight="500" letter-spacing="0.06em"><tspan x="63.6365" y="141.162">MID-2025</tspan></text>
+<text fill="#6A6675" style="white-space: pre" xml:space="preserve" font-family="'Monaspace Neon Var', ui-monospace, monospace" font-size="5.5" font-weight="500" letter-spacing="0.06em"><tspan x="266.475" y="141.162">MID-2026</tspan></text>
+<text fill="#6A6675" style="white-space: pre" xml:space="preserve" font-family="'Monaspace Neon Var', ui-monospace, monospace" font-size="5.5" font-weight="500" letter-spacing="0.06em"><tspan x="492.223" y="141.162">MID-2027</tspan></text>
+<path d="M78.9092 122.68C180.727 121.387 227.818 131.072 281.273 92.2722" stroke="#5A30C5" stroke-linecap="round"/>
+<path d="M281.273 92.2723C347.455 53.4723 399.637 36.1704 498.909 30.9971" stroke="#5A30C5" stroke-linecap="round" stroke-dasharray="5.13 3.85"/>
+<circle cx="283" cy="91" r="2" fill="#5A30C5"/>
+<circle cx="498" cy="31" r="1.5" fill="#F5F5FF" stroke="#5A30C5"/>
+<text fill="#5A30C5" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="8" font-weight="600" letter-spacing="0em"><tspan x="234.768" y="87.1945">28% today</tspan></text>
+<text fill="#5A30C5" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="8" font-weight="600" letter-spacing="0em"><tspan x="431.032" y="24.6261">~80% projected</tspan></text>
+<text fill="#9077F3" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="8" letter-spacing="0em"><tspan x="384.921" y="61.4091">Projection</tspan></text>
+</svg>

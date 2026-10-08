@@ -38,7 +38,7 @@ We launched the Pulumi Automation API [two years ago](https://www.pulumi.com/blo
 
 Today, we are taking the next step in this journey with the introduction of Pulumi Deployments to the Pulumi Service.  With Pulumi Deployments, you can run a Pulumi infrastructure as code action (a preview, update, destroy or refresh) inside Pulumi’s managed service.  Pulumi provides scalability, observability and security for deployments.
 
-Pulumi Deployments are exposed as a new fundamental capability of the service via the [Pulumi Service REST API](https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api/).  They are also now supported in Automation API as a new kind of `Remote` workspace that can be used in building your own custom infrastructure automation software.
+Pulumi Deployments are exposed as a new fundamental capability of the service via the [Pulumi Service REST API](/docs/reference/cloud-rest-api/).  They are also now supported in Automation API as a new kind of `Remote` workspace that can be used in building your own custom infrastructure automation software.
 
 ![Pulumi Deployments REST API and Automation API](deployment-api.png)
 
@@ -154,7 +154,7 @@ service = awsx.ecs.FargateService(
 export("url", Output.concat("http://", loadbalancer.load_balancer.dns_name))
 ```
 
-Pulumi Architecture Templates build on Pulumi’s support for creating your own templates. Pulumi programs can be templated by users to create their own starting points for cloud infrastructure projects using `pulumi new`.  You can [build your own templates and Deploy with Pulumi buttons](https://www.pulumi.com/docs/pulumi-cloud/pulumi-button/) to create similar architecture templates within your own team and organization.
+Pulumi Architecture Templates build on Pulumi’s support for creating your own templates. Pulumi programs can be templated by users to create their own starting points for cloud infrastructure projects using `pulumi new`.  You can [build your own templates and Deploy with Pulumi buttons](/docs/idp/integrations/pulumi-button/) to create similar architecture templates within your own team and organization.
 
 👉 Read more in the [Pulumi Architecture Templates blog post](https://www.pulumi.com/blog/intro-architecture-templates/).
 

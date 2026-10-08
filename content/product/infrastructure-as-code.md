@@ -11,7 +11,7 @@ aliases:
 
 sections:
   - type: hero
-    title: "*Infrastructure as code*<br>in any language."
+    title: "*Infrastructure as code* <br>in any language."
     description: |
       Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and hundreds more providers.
     anchor: hero
@@ -213,8 +213,7 @@ sections:
   - type: feature_split
     heading: Write infrastructure code in your favorite language
     description: |
-      TypeScript/JavaScript, Python, Go, C#, Java, YAML, and HCL. Get autocomplete, type checking, and all your favorite IDE features.
-
+      TypeScript/JavaScript, Python, Go, .NET, Java, YAML, and HCL. Get autocomplete, type checking, and all your favorite IDE features.
       Build on AWS, Azure, Google Cloud, Kubernetes, and hundreds of other providers. Our open source engine is Apache 2.0 licensed and will always be free.
     cards:
       - icon: code
@@ -248,7 +247,7 @@ sections:
         label: engineers building with Pulumi
       - number: "4,000+"
         label: companies in production
-      - number: "300+"
+      - number: "200+"
         label: cloud and service providers
 
   - type: testimonial
@@ -256,8 +255,7 @@ sections:
       Our developers needed a fast, modular, and testable platform for managing cloud infrastructure. Nothing is better than having standard programming languages for building and managing infrastructure.
     author: Austin Byers
     title: Principal Platform Engineer
-    company: Panther Labs
-    logo: /logos/customers/panther.svg
+    customer: panther-labs
     anchor: testimonial
 
   - type: section_header_with_code
@@ -437,7 +435,7 @@ sections:
       - icon: gear-six
         title: Works with your CI/CD
         description: |
-          Integrates with [any CI/CD system](/docs/iac/packages-and-automation/continuous-delivery/). GitHub Actions, GitLab, Jenkins, CircleCI – your choice. Or use the [Kubernetes operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) for GitOps.
+          Integrates with [any CI/CD system](/docs/iac/operations/continuous-delivery/). GitHub Actions, GitLab, Jenkins, CircleCI – your choice. Or use the [Kubernetes operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) for GitOps.
 
   - type: section_header
     title: Scale confidently with Pulumi Cloud

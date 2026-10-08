@@ -7,8 +7,9 @@
     adjacent full-height card.
 
     Card data is pulled automatically from the matching case study .md file via its slug
-    (e.g. "snowflake" → content/case-studies/snowflake.md). The partial reads
-    customer_logo and quote_block from that file's frontmatter.
+    (e.g. "snowflake" → content/customers/snowflake.md). The logo and customer
+    name come from data/customers.yaml, via that page's `customer:` key; the
+    quote comes from the page's quote_block frontmatter.
 
     Schema:
     - title: Optional section heading
@@ -33,16 +34,15 @@
 {{ range $cards }}
     {{ $slug := .slug }}
     {{ $size := .size | default "full" }}
-    {{ $page := site.GetPage (printf "/case-studies/%s" $slug) }}
+    {{ $page := site.GetPage (printf "/customers/%s" $slug) }}
     {{ if $page }}
         {{ $resolved = $resolved | append (dict
-            "slug"   $slug
-            "size"   $size
-            "link"   $page.RelPermalink
-            "logo"   $page.Params.customer_logo
-            "name"   $page.Params.customer_name
-            "quote"  $page.Params.quote_block.quote
-            "attrib" $page.Params.quote_block.quote_attrib
+            "slug"     $slug
+            "size"     $size
+            "link"     $page.RelPermalink
+            "customer" $page.Params.customer
+            "quote"    $page.Params.quote_block.quote
+            "attrib"   $page.Params.quote_block.quote_attrib
         ) }}
     {{ end }}
 {{ end }}
@@ -101,22 +101,18 @@
                     <div class="flex flex-col gap-6 h-full">
                         {{ range .cards }}
                         <a href="{{ .link }}" class="case-study-card case-study-card--half">
-                            {{ if .logo }}
-                            <div class="flex items-center justify-center">
-                                {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
+                            <div class="case-study-card-logo flex items-center justify-center">
+                                {{ partial "customer-logo.html" (dict "customer" .customer) }}
                             </div>
-                            {{ end }}
                         </a>
                         {{ end }}
                     </div>
                     {{ else }}
                     {{ range .cards }}
                     <a href="{{ .link }}" class="case-study-card case-study-card--full h-full">
-                        {{ if .logo }}
-                        <div class="flex items-start mb-6">
-                            {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
+                        <div class="case-study-card-logo flex items-start mb-6">
+                            {{ partial "customer-logo.html" (dict "customer" .customer) }}
                         </div>
-                        {{ end }}
                         {{ if .quote }}
                         <blockquote class="font-semibold text-black border-0 mx-0 px-0 text-xl my-auto">
                             {{ .quote | markdownify }}
@@ -144,22 +140,18 @@
                     <div class="flex flex-col gap-6 h-full">
                         {{ range .cards }}
                         <a href="{{ .link }}" class="case-study-card case-study-card--half">
-                            {{ if .logo }}
-                            <div class="flex items-center justify-center">
-                                {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
+                            <div class="case-study-card-logo flex items-center justify-center">
+                                {{ partial "customer-logo.html" (dict "customer" .customer) }}
                             </div>
-                            {{ end }}
                         </a>
                         {{ end }}
                     </div>
                     {{ else }}
                     {{ range .cards }}
                     <a href="{{ .link }}" class="case-study-card case-study-card--full h-full">
-                        {{ if .logo }}
-                        <div class="flex items-start mb-6">
-                            {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
+                        <div class="case-study-card-logo flex items-start mb-6">
+                            {{ partial "customer-logo.html" (dict "customer" .customer) }}
                         </div>
-                        {{ end }}
                         {{ if .quote }}
                         <blockquote class="font-semibold text-black border-0 mx-0 px-0 text-xl my-auto">
                             {{ .quote | markdownify }}

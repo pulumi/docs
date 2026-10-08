@@ -1,17 +1,17 @@
 ---
-title_tag: "Pulumi Cloud: Organization Identity Providers"
-meta_desc: How Pulumi Cloud organizations are backed by GitHub, GitLab, Bitbucket, or a SAML 2.0 identity provider, and how to set up or change the provider.
-title: Identity Providers
-h1: Pulumi Cloud organization identity providers
+title_tag: "Pulumi Cloud: Organization Identity Providers and SAML SSO"
+meta_desc: How Pulumi Cloud organizations use SAML 2.0 single sign-on (SSO), GitHub, GitLab, or Bitbucket as their identity provider, and how to set up or change it.
+title: Identity providers and SSO
+h1: Pulumi Cloud organization identity providers and SAML SSO
 menu:
   administration:
-    name: Identity Providers
+    name: Identity providers and SSO
     parent: administration-concepts
     weight: 2
     identifier: administration-concepts-identity-providers
 ---
 
-Every Pulumi organization is backed by exactly one identity provider, which governs who is allowed to be a member. New organizations use the Pulumi identity provider, where membership is managed entirely in Pulumi Cloud. You can instead back an organization with a GitHub organization, a GitLab group, a Bitbucket workspace, or a SAML 2.0 identity provider.
+Every Pulumi organization is backed by exactly one identity provider, which governs who is allowed to be a member. New organizations use the Pulumi identity provider, where membership is managed entirely in Pulumi Cloud. You can instead back an organization with a GitHub organization, a GitLab group, a Bitbucket workspace, or a SAML 2.0 identity provider. The SAML 2.0 option is how you set up single sign-on (SSO) with Okta, Microsoft Entra ID, and similar identity providers.
 
 When an organization is backed by a third party, membership is the intersection of two things: a user must belong to the Pulumi organization *and* be a current member of the backing organization, group, or workspace. As soon as someone loses access to the backing system, they lose access to the Pulumi organization.
 
@@ -105,7 +105,7 @@ To back your organization with Bitbucket:
 
 Once the change is complete, admins can see the list of Bitbucket workspace members and add or invite them to the Pulumi organization. Adding them is a separate step from their workspace membership. See [Backing membership doesn't grant Pulumi membership](/docs/administration/concepts/organizations/#backing-membership).
 
-## SAML 2.0
+## SAML 2.0 single sign-on (SSO) {#saml-20}
 
 {{< pulumi-cloud "saml-sso" />}}
 
@@ -116,7 +116,7 @@ Configuring SAML is covered by the [SAML SSO guides](/docs/administration/guides
 - **You become the organization owner.** Pulumi makes the user who applies the SAML configuration the organization owner, so that an error in the identity provider metadata cannot lock everyone out of the organization.
 - **Your account cannot have other commitments.** {{< saml-conversion-prereq >}} Your individual account must also not own any stacks or environments. Transfer or delete them first.
 
-[SCIM provisioning](/docs/administration/guides/scim/) is available only for SAML-backed organizations, and the **SAML & SCIM** settings tab appears only once your organization is SAML-backed.
+[SCIM provisioning](/docs/administration/concepts/scim/) is available only for SAML-backed organizations, and the **SAML & SCIM** settings tab appears only once your organization is SAML-backed.
 
 Members of a SAML organization can sign in with the organization name pre-filled by visiting `https://app.pulumi.com/welcome/<organization-name>/sso`.
 
@@ -135,5 +135,6 @@ Switching away from SAML discards the organization's SAML configuration and ever
 - [Accounts](/docs/administration/concepts/accounts/) — linking third-party identities to your individual Pulumi account.
 - [Organizations](/docs/administration/concepts/organizations/) — creating organizations, inviting members, and organization roles.
 - [SAML SSO](/docs/administration/guides/saml/) — configuring Pulumi Cloud with a SAML 2.0 identity provider.
-- [SCIM](/docs/administration/guides/scim/) — automating user and team provisioning from your identity provider.
+- [SCIM provisioning](/docs/administration/concepts/scim/) — how Pulumi synchronizes users and teams from your identity provider.
+- [SCIM guides](/docs/administration/guides/scim/) — setting up SCIM provisioning with Entra ID, Okta, or OneLogin.
 - [Organization settings scopes](/docs/administration/reference/rbac-scopes/org-settings/) — the full list of organization-level RBAC permissions.

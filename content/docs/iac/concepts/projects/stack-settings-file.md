@@ -8,9 +8,6 @@ menu:
         name: Stack settings file reference
         parent: iac-concepts-projects
         weight: 2
-    concepts:
-        parent: projects
-        weight: 2
 
 aliases:
 - /docs/reference/stack-settings-file/
@@ -20,7 +17,7 @@ aliases:
 Every Pulumi stack has a settings file named `Pulumi.<stack-name>.yaml` that contains configuration specific to that stack. This file typically resides in the root of the project directory and stores stack-specific configuration values, secrets metadata, and environment settings.
 
 {{< notes type="info" >}}
-Stack settings files are typically managed through Pulumi CLI commands such as [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set/) and [`pulumi config get`](/docs/iac/cli/commands/pulumi_config_get/). While you can edit these files directly, it's recommended to use the CLI commands as they handle encryption and validation properly.
+Stack settings files are typically managed through Pulumi CLI commands such as [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set/) and [`pulumi config get`](/docs/iac/cli/commands/pulumi_config_get/). While you can edit these files directly, we recommend using the CLI commands because they handle encryption and validation properly.
 {{< /notes >}}
 
 The stack settings file must be named exactly `Pulumi.<stack-name>.yaml` where `<stack-name>` matches your stack name. For example, if your stack is named `dev`, the file would be `Pulumi.dev.yaml`. The file format must be YAML.
@@ -39,12 +36,14 @@ The stack settings file must be named exactly `Pulumi.<stack-name>.yaml` where `
 
 The `secretsprovider` attribute specifies which secrets provider to use for encrypting sensitive configuration values. Common values include:
 
-- `default`: Uses the Pulumi Cloud's default encryption
-- `passphrase`: Uses a local passphrase for encryption  
+- `default`: Uses Pulumi Cloud's default encryption
+- `passphrase`: Uses a local passphrase for encryption
 - `awskms://alias/my-key`: Uses AWS KMS with the specified key
 - `azurekeyvault://vault-name/key-name`: Uses Azure Key Vault
 - `gcpkms://projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-key`: Uses Google Cloud KMS
 - `hashivault://my-secret-path`: Uses HashiCorp Vault
+
+For each provider's URL format and authentication options, see [Available encryption providers](/docs/iac/concepts/secrets/#available-encryption-providers).
 
 ### `encryptedkey`
 
@@ -81,7 +80,7 @@ By default, stack settings files are stored in the same directory as your `Pulum
 ## Security considerations
 
 - **Secret values**: When you set configuration values marked as secrets (using `pulumi config set --secret`), they are encrypted in the file and safe to commit to version control
-- **Version control**: It's recommended to check stack settings files into version control for team collaboration, especially for shared environments
+- **Version control**: We recommend checking stack settings files into version control for team collaboration, especially for shared environments
 - **Ephemeral stacks**: For temporary or ephemeral stacks, you may choose not to commit these files
 
 ## Example stack settings files
@@ -111,7 +110,7 @@ config:
 secretsprovider: passphrase
 encryptionsalt: v1:BNJOCpOPGV4=:v1:9jpeMm7HcnK+6+Wt:gcfklR9vOw==
 config:
-  myproject:name: my-application  
+  myproject:name: my-application
   myproject:api-key:
     secure: v1:LToJ+3kqSG30mW3P:6F1Gm7QFBUwKOBPBz[...encrypted...]
   aws:region: us-west-2

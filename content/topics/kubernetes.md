@@ -26,24 +26,14 @@ sections:
   - type: logo_banner
     text: Powering top engineering teams
     logos:
-      - src: /logos/customers/snowflake-logo.svg
-        alt: Snowflake
-      - src: /logos/customers/mercedes-benz-RDNA_logo.png
-        alt: Mercedes-Benz Research and Development
-      - src: /logos/customers/mindbody_logo.svg
-        alt: MindBody
-      - src: /logos/customers/nih.png
-        alt: National Institutes of Health
-      - src: /logos/customers/sourcegraph-logo.svg
-        alt: Sourcegraph
-      - src: /logos/customers/lemonade.svg
-        alt: Lemonade
-      - src: /logos/customers/bmw.svg
-        alt: BMW Group
-      - src: /logos/customers/unity.png
-        alt: Unity
-      - src: /logos/customers/starburst.png
-        alt: Starburst
+      - customer: snowflake
+      - customer: mercedes-benz
+      - customer: mindbody
+      - customer: sourcegraph
+      - customer: lemonade
+      - customer: bmw
+      - customer: unity
+      - customer: starburst
     anchor: customers
 
   - type: section_header_with_image
@@ -56,8 +46,8 @@ sections:
 
       - Manage Kubernetes clusters on all major cloud providers.
       - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
-      - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/iac/using-pulumi/continuous-delivery/).
-      - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/), including [ArgoCD integration](/docs/iac/using-pulumi/continuous-delivery/argocd/).
+      - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/iac/operations/continuous-delivery/).
+      - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/), including [ArgoCD integration](/docs/iac/operations/continuous-delivery/argocd/).
       - Use Kubernetes [Server-Side Apply](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/) to safely manage shared Kubernetes resources with Pulumi and your existing controllers.
     image: /images/topics/kubernetes/k8s-diagram.png
     image_alt: Kubernetes architecture diagram

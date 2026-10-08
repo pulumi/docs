@@ -39,7 +39,7 @@ social:
         Here's what shipped today.
 ---
 
-At Pulumi, we are building the platform for agentic infrastructure. Pulumi Cloud provides the guardrails and enterprise readiness needed to safely move fast in this new era. While we are seeing extraordinary adoption — over 40% of our users now manage infrastructure using AI agents — we know many organizations are at different phases in their AI journey and have to balance building for the future with maintaining their existing infrastructure as code (IaC) solutions like Terraform.
+At Pulumi, we are building the platform for [agentic infrastructure](/what-is/what-is-agentic-infrastructure/). Pulumi Cloud provides the guardrails and enterprise readiness needed to safely move fast in this new era. While we are seeing extraordinary adoption — over 40% of our users now manage infrastructure using AI agents — we know many organizations are at different phases in their AI journey and have to balance building for the future with maintaining their existing infrastructure as code (IaC) solutions like Terraform.
 
 Today, [we are launching](/releases/terraform-state-backend-modules-hcl/) three ways that Pulumi lets you avoid trading off building for the future against building for today. You don't have to rip out Terraform to enter the agentic era. Pulumi Cloud brings agentic infrastructure to the IaC estate you already have.
 
@@ -60,9 +60,9 @@ We recognize there is lots of infrastructure that works as is, and switching ove
 
 With this release, stacks with Terraform state are first-class entities in Pulumi Cloud. They get access to all of the capabilities that organizations need to scale in this new AI-first era.
 
-- **[Manage access to your Terraform stacks at scale](/docs/administration/access-identity/rbac/)** using tag-based access control, team role assignments, and user role assignments.
+- **[Manage access to your Terraform stacks at scale](/docs/administration/concepts/rbac/)** using tag-based access control, team role assignments, and user role assignments.
 - [**Take advantage of Neo code reviews**](/docs/ai/neo/code-reviews/). On every pull request, leverage what Pulumi Cloud knows about your running infrastructure and get clear feedback on whether it's safe to merge changes to your Terraform and OpenTofu projects.
-- [**Run preventive policies**](/docs/insights/policy/) after a Terraform plan to block non-compliant resources before deployment.
+- [**Run preventive policies**](/docs/discovery-governance/policy/) after a Terraform plan to block non-compliant resources before deployment.
 - **[Configure your Terraform deployments with Pulumi ESC](/docs/esc/)**, which is natively available to Pulumi Cloud-backed Terraform projects, to securely inject OIDC credentials at apply time and expose outputs to downstream stacks and services.
 
 Learn more in [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/).

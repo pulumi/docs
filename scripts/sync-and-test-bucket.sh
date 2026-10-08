@@ -30,8 +30,21 @@ if [ ! "$(find $build_dir -type f | grep index.html | wc -l)" -ge 1000 ]; then
 fi
 
 # For previews, name the destination bucket with the PR number, to reduce the number of
-# buckets we create and to facilitate shorter sync times.
-destination_bucket="$(origin_bucket_prefix)-$(build_identifier)"
+# buckets we create and to facilitate shorter sync times. PR preview buckets intentionally
+# keep this deterministic, un-uniquified name: build-site.sh bakes it into the site's
+# absolute baseURL at build time, so the same PR reuses the same bucket across pushes.
+#
+# For every other invocation (pushes to master, the scheduled and manual rebuilds in
+# build-and-deploy.yml), use deploy_bucket_name(), which appends a short per-run token.
+# That token is what keeps two runs at the same commit -- most commonly a scheduled
+# rebuild with no intervening push -- from computing the identical bucket name and racing
+# a destructive in-place sync against a bucket CloudFront may already be serving from. See
+# deploy_bucket_name()'s definition in common.sh for the full rationale.
+if [[ "$1" == "preview" ]]; then
+    destination_bucket="$(origin_bucket_prefix)-$(build_identifier)"
+else
+    destination_bucket="$(deploy_bucket_name)"
+fi
 destination_bucket_uri="s3://${destination_bucket}"
 
 # Translate Hugo redirects into a file we'll use for making 301 redirects later. Note that
@@ -44,6 +57,13 @@ node scripts/translate-redirects.js "$build_dir" "$(pulumi -C infrastructure con
 # which case we should simply proceed (to repopulate it), or the bucket was somehow
 # created in another account, in which case subsequent operations on the bucket will also
 # fail, causing this script to exit nonzero. In either case, it's okay to continue.
+#
+# For deploy-path (non-preview) builds, the destination bucket name already includes a
+# per-run uniquifier (see deploy_bucket_name() in common.sh), so a genuine name collision
+# with an unrelated, still-being-served bucket should no longer happen: the only way this
+# `mb` can now fail with BucketAlreadyOwnedByYou is a retried run of *this same build*
+# recreating a bucket it already made. That's exactly the case this swallowed error is
+# meant to tolerate.
 aws s3 mb $destination_bucket_uri --region "$(aws_region)" || true
 # set `BlockPublicAcls` to false to enable setting the public-read ACL below.
 aws s3api put-public-access-block --bucket "$destination_bucket" --public-access-block-configuration BlockPublicAcls=false
@@ -104,14 +124,18 @@ echo "Running browser tests on $s3_website_url..."
 # we need ensure that every CI job deploys only what it was responsible for building.
 # Coupled with the locking we get from the Pulumi Service, using a local file is a safe
 # way to ensure we're deploying what we just finished building and testing.
+#
+# The document also records the GitHub Actions run ID that produced it. That's the
+# ordering key scripts/check-publish-ordering.js compares against the live bucket's copy
+# of this same file, so an older run that reaches `pulumi up` after a newer one has
+# already published is stopped instead of silently flipping the origin backwards. See
+# render_origin_bucket_metadata() in common.sh for the document's shape and consumers.
 echo "Writing result metadata."
-metadata='{
-    "timestamp": %s,
-    "commit": "%s",
-    "bucket": "%s",
-    "url": "%s"
-}'
-printf "$metadata" "$(current_time_in_ms)" "$(git_sha)" "$destination_bucket" "$s3_website_url" > "$metadata_file"
+render_origin_bucket_metadata \
+    "$(current_time_in_ms)" \
+    "$(git_sha)" \
+    "$destination_bucket" \
+    "$s3_website_url" > "$metadata_file"
 
 # Copy the file to the destination bucket, for future reference.
 aws s3 cp "$metadata_file" "${destination_bucket_uri}/metadata.json" --region "$(aws_region)" --acl public-read

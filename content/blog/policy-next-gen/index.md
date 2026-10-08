@@ -96,7 +96,7 @@ This powerful new experience is available today. Navigate to the **Policies** an
 **Ready to try these features?**
 
 * [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) and start a Neo task  
-* [Read the Get Started guide](/docs/insights/policy/get-started/) to set up and apply a policy group to stacks and clouds.
+* [Read the Get Started guide](/docs/discovery-governance/policy/get-started/) to set up and apply a policy group to stacks and clouds.
 * [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
 
-For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/insights/policy/).
+For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/discovery-governance/policy/).

@@ -37,7 +37,7 @@ social:
         The full step-by-step is up.
 ---
 
-With [Discovered Stacks](/docs/insights/discovery/discovered-stacks/), Pulumi Cloud does the bookkeeping for a CloudFormation migration: every resource in the stack gets an explicit migration status, and the migration is done when the code provably matches the cloud. In this tutorial, we take one real CloudFormation stack from discovered to migrated and managed by Pulumi IaC, end to end.
+With [Discovered Stacks](/docs/discovery-governance/discovery/discovered-stacks/), Pulumi Cloud does the bookkeeping for a CloudFormation migration: every resource in the stack gets an explicit migration status, and the migration is done when the code provably matches the cloud. In this tutorial, we take one real CloudFormation stack from discovered to migrated and managed by Pulumi IaC, end to end.
 
 <!--more-->
 
@@ -55,7 +55,7 @@ We'll use [Pulumi Neo](/docs/ai/) to do the heavy lifting, but nothing here depe
 
 ## Step 1: Find your stack in Pulumi Cloud
 
-Discovered Stacks builds on [Discovery](/docs/insights/discovery/), so the only prerequisite is a scanned [cloud account](/docs/insights/discovery/accounts/) — the AWS account holding your CloudFormation stacks.
+Discovered Stacks builds on [Discovery](/docs/discovery-governance/discovery/), so the only prerequisite is a scanned [cloud account](/docs/discovery-governance/discovery/accounts/) — the AWS account holding your CloudFormation stacks.
 
 Once a scan has run, open the **Stacks** page and turn on **Show Discovered Stacks**. Your CloudFormation stacks appear alongside your Pulumi stacks. The project name comes from the CloudFormation stack (`payments-api`), and the stack name encodes the account and region it came from, so the same template deployed to two regions shows up as two distinct discovered stacks.
 
@@ -77,7 +77,7 @@ Most of `payments-api` has a direct migration path — 54 of its 61 resources ar
 
 From the discovered stack's **Actions** menu, select **Migrate with Neo**. Neo asks where the code should live — a git repository, a target project and stack, a language — and then works through the migration:
 
-1. Fetches the discovered resources and their statuses through the [Discovered Stacks API](/docs/insights/discovery/discovered-stacks/migrate/#use-the-api).
+1. Fetches the discovered resources and their statuses through the [Discovered Stacks API](/docs/discovery-governance/discovery/discovered-stacks/migrate/#use-the-api).
 1. Imports the Ready resources in batches with `pulumi import`, building up a Pulumi program as it goes.
 1. Runs `pulumi preview` after each batch and reconciles the generated code against the real cloud state.
 1. Opens a pull request with the program and a migration report.
@@ -116,6 +116,6 @@ The same flow works for Azure Resource Manager deployments, which Discovery mode
 
 To go deeper:
 
-- [Discovered Stacks documentation](/docs/insights/discovery/discovered-stacks/)
-- [Migrate from a Discovered Stack](/docs/insights/discovery/discovered-stacks/migrate/)
+- [Discovered Stacks documentation](/docs/discovery-governance/discovery/discovered-stacks/)
+- [Migrate from a Discovered Stack](/docs/discovery-governance/discovery/discovered-stacks/migrate/)
 - [Migrating from AWS CloudFormation](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/)

@@ -9,9 +9,6 @@ menu:
         parent: iac-concepts
         weight: 60
         identifier: iac-concepts-inputs-outputs
-    concepts:
-        identifier: inputs-outputs
-        weight: 5
 aliases:
     - /docs/reference/inputs-outputs/
     - /docs/intro/concepts/inputs-outputs/

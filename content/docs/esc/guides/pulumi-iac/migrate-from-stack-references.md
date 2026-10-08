@@ -28,7 +28,7 @@ This guide shows how to migrate one consumer from `StackReference` to `pulumi-st
 
 Suppose an application stack reads networking details from a `vpc-infra` stack using a `StackReference`:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -107,6 +107,22 @@ variables:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "pulumi_stack_reference" "infra" {
+  name = "acmecorp/vpc-infra/prod"
+}
+
+locals {
+  vpc_id            = pulumi_stack_reference.infra.outputs["vpcId"]
+  public_subnet_ids = pulumi_stack_reference.infra.outputs["publicSubnetIds"]
+}
+
+# ... use local.vpc_id and local.public_subnet_ids to create resources
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -146,7 +162,7 @@ environment:
 
 With the outputs arriving as configuration, replace the `StackReference` in your program with ordinary config reads:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -221,10 +237,25 @@ config:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "vpcId" {
+  type = string
+}
+
+variable "publicSubnetIds" {
+  type = list(string)
+}
+
+# ... use var.vpcId and var.publicSubnetIds to create resources
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
-Use the accessor that matches each output's type: a string accessor (`require` / `Require`) for `vpcId`, an object accessor (`requireObject` / `RequireObject`) for the `publicSubnetIds` list, and a secret accessor (`requireSecret` / `RequireSecret`) for any value that was secret in the producer stack.
+Use the accessor that matches each output's type: a string accessor (`require` / `Require`) for `vpcId`, an object accessor (`requireObject` / `RequireObject`) for the `publicSubnetIds` list, and a secret accessor (`requireSecret` / `RequireSecret`) for any value that was secret in the producer stack. In HCL, each `variable` block reads the config key with the same name, and its `type` does the accessor's job (`list(string)` for `publicSubnetIds`). A value that arrives as a secret stays secret without any extra declaration.
 
 ## Verify the migration is a no-op
 

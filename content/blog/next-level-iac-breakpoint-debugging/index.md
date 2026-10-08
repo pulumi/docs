@@ -347,7 +347,7 @@ The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open
 [breakpoints-wiki]: https://en.wikipedia.org/wiki/Breakpoint
 [typescript-aws-static-website-template]: https://www.pulumi.com/templates/static-website/aws/
 [debugging]: https://en.wikipedia.org/wiki/Debugging
-[printf-debugging]: https://www.cs.colostate.edu/~fsieker/misc/debug/DEBUG.html
+[printf-debugging]: https://web.archive.org/web/20260415184227/https://www.cs.colostate.edu/~fsieker/misc/debug/DEBUG.html
 [repl]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
 [input-docs]: https://www.pulumi.com/docs/iac/concepts/inputs-outputs/#inputs
 [output-docs]: https://www.pulumi.com/docs/iac/concepts/inputs-outputs/#outputs

@@ -44,12 +44,12 @@ sections:
   - icon: books
     heading: Reference
     link: /docs/administration/reference/
-    description: Lookup tables, including the complete catalog of RBAC scopes.
+    description: Lookup tables, including the complete catalogs of RBAC scopes and audit log events.
 
   - icon: cloud
     heading: Self-Hosting
     link: /docs/administration/self-hosting/
-    description: Deploy Pulumi Cloud in your own infrastructure with the Business Critical edition.
+    description: Deploy Pulumi Cloud in your own infrastructure with the Enterprise edition.
 
 - type: flat
   heading: Have questions?
