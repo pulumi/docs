@@ -254,12 +254,24 @@ jobs:
             PROSE_DIFF=$(printf '%s' "$DIFF" | head -c 50000)
             PROSE_RULES=$(cat .claude/commands/docs-review/triage-prose.md \
                               .claude/commands/docs-review/references/spelling-grammar.md)
+            # Haiku 5.5, adaptive thinking at low effort (2026-10-07 benchmark,
+            # 20 trivial/frontmatter-only PR diffs + 13 with planted typos x 2
+            # reps; campaign 2026-10-07-haiku55-fitness in
+            # pulumi/docs-review-benchmarks): every planted typo found (42/42 vs
+            # 39/42 on Haiku 4.5), 0 unparseable replies (Haiku 4.5: 14 of 66,
+            # prose after the JSON), and 3 flags on real merged diffs vs 18,
+            # at about an eighth of the cost. Thinking-off flagged as much as
+            # Haiku 4.5 and wrote "no concern" entries into the array, so it is
+            # left on. Thinking counts against max_tokens (p95 ~2K, max ~3.3K
+            # observed), hence 8000; the parse selects text blocks by type,
+            # because a thinking block arrives first.
             REQUEST=$(jq -n \
               --arg rules "$PROSE_RULES" \
               --arg diff "$PROSE_DIFF" \
               '{
-                model: "claude-haiku-4-5-20251001",
-                max_tokens: 512,
+                model: "claude-haiku-5-5",
+                max_tokens: 8000,
+                output_config: {effort: "low"},
                 messages: [{
                   role: "user",
                   content: ("Apply the rules below to the diff that follows.\n\n=== RULES ===\n\n" + $rules + "\n\n=== DIFF (truncated to 50000 bytes) ===\n\n" + $diff)
@@ -270,7 +282,7 @@ jobs:
               -H "anthropic-version: 2023-06-01" \
               -H "content-type: application/json" \
               -d "$REQUEST" || echo '{"error":"curl_failed"}')
-            TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+            TEXT=$(echo "$RESPONSE" | jq -r '[.content[]? | select(.type == "text") | .text] | join("")')
             if [[ -n "$TEXT" ]]; then
               PROSE_JSON=$(echo "$TEXT" \
                 | sed -E 's/^[[:space:]]*```(json)?[[:space:]]*//' \

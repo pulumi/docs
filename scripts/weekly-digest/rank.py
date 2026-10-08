@@ -26,7 +26,9 @@ from pathlib import Path
 
 PROMPT = Path(__file__).resolve().parent / "rank-prompt.md"
 API_URL = "https://api.anthropic.com/v1/messages"
-MODEL = "claude-sonnet-5"
+# Sonnet 5.5: same price as Sonnet 5, and the request below (adaptive
+# thinking, effort low, no sampling params, no prefill) is valid on it as-is.
+MODEL = "claude-sonnet-5-5"
 # Thinking tokens count against max_tokens. The output here is ~5 short
 # lines, so the first budget is generous; one retry covers a run where
 # adaptive thinking still exhausts it (seen on the old synthesis call).

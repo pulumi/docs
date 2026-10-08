@@ -1319,8 +1319,17 @@ jobs:
             if grep -q -- '--prior-high-water' .claude/commands/docs-review/scripts/compose-review.py; then
               HW_ARGS=(--prior-high-water "$PRIOR_HW")
             fi
+            # Same guard for --approval-scope (#22172): this workflow runs from
+            # master but compose-review.py comes from the PR head, so a branch
+            # cut before the flag existed rejects it as an unrecognized argument
+            # and the whole review errors. Without the flag, an older composer
+            # words the approval line its default (lane) way.
+            SCOPE_ARGS=()
+            if grep -q -- '--approval-scope' .claude/commands/docs-review/scripts/compose-review.py; then
+              SCOPE_ARGS=(--approval-scope "${{ steps.routing.outputs.approval_scope || 'lane' }}")
+            fi
             python3 .claude/commands/docs-review/scripts/compose-review.py \
-              "${HW_ARGS[@]}" \
+              "${HW_ARGS[@]}" "${SCOPE_ARGS[@]}" \
               --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" \
               --out .review-draft.md --surface v3 --run-id "${{ github.run_id }}" \
               --timestamp "${{ steps.now.outputs.value }}" \
@@ -1338,7 +1347,6 @@ jobs:
               --head-repo "${{ steps.pr-context.outputs.head_repo }}" \
               --head-branch "${{ steps.pr-context.outputs.head_branch }}" \
               --routed-team "${{ steps.routing.outputs.team_display }}" \
-              --approval-scope "${{ steps.routing.outputs.approval_scope || 'lane' }}" \
             || {
               printf '%s\n' \
                 '> [!CAUTION]' \
