@@ -56,10 +56,10 @@ rpc Configure(ConfigureRequest) returns (ConfigureResponse)
 
 **Request fields:**
 
-- `variables` (map<string, string>): Environment variables
+- `variables` (map<string, string>): Deprecated map of provider input properties with compound values JSON-encoded; use `args` instead
 - `args` (Struct): Configuration values from the Pulumi program
-- `acceptSecrets` (bool): Whether the provider can accept secret values
-- `acceptResources` (bool): Whether the provider can accept resource references
+- `acceptSecrets` (bool): Whether the caller supports secret values
+- `acceptResources` (bool): Whether the caller supports strongly typed resource references
 
 **Response fields:**
 
@@ -332,7 +332,6 @@ For a typical `pulumi up` creating a new resource:
 1. `Configure` → Provider receives credentials
 1. `GetSchema` → Engine gets resource definitions
 1. `Check` → Validate and default inputs
-1. `Diff` → Compute changes (none, since new)
 1. `Create` → Provision the resource
 
 For updating an existing resource:
