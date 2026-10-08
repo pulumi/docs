@@ -114,14 +114,6 @@ When you open the environment after a rotation, you should see output similar to
 }
 ```
 
-## Managing credentials
-
-The `database.managingUser` input holds the managing credentials that this rotator uses to change the passwords of the users listed in `rotateUsers`. It is a rotate-only input: ESC resolves it only when the environment is rotated, never when the environment is opened. Users who open the environment to read the rotated credentials therefore do not need access to the environment that `database.managingUser` references.
-
-Other inputs are resolved each time the environment is opened. In particular, `database.connector.awsLambda.login` is not rotate-only, so anyone who opens the environment needs access to any environment that it references.
-
-Saving changes to the rotator's own environment is stricter. To save the environment, a user needs access to every environment it references, including the one behind `database.managingUser`. See [Managing credentials and rotate-only inputs](/docs/esc/concepts/rotators/#managing-credentials-and-rotate-only-inputs) for the general rule.
-
 ## Schema reference
 
 {{< esc-schema-updated >}}
