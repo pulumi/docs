@@ -48,6 +48,10 @@ Reach for the manual steps below instead when you already have an OIDC identity 
   For the `default` project, the audience uses only the Pulumi organization name. This prevents regressions for legacy environments.
   {{< /notes >}}
 
+{{< notes type="info" >}}
+This guide covers `aws-login`, which uses the `https://api.pulumi.com/oidc` issuer. [`fn::open::oidc`](/docs/esc/providers/login/oidc/) uses the `https://api.pulumi.com/oidc/v2` issuer and a different subject. To trust its tokens, see [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
+{{< /notes >}}
+
 ## Configure the IAM role
 
 Once you have created the identity provider, you will see a notification at the top of your screen prompting you to assign an IAM role.

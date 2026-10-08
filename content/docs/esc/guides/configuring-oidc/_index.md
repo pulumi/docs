@@ -15,7 +15,7 @@ aliases:
   - /docs/esc/concepts/providers/login/oidc-setup/
 ---
 
-Pulumi ESC can be configured to act as an OpenID Connect (OIDC) provider, issuing signed, short-lived tokens. These tokens can then be exchanged by external systems for temporary cloud provider credentials, eliminating the need for hard-coded credentials.
+Pulumi ESC (Environments, Secrets, and Configuration) can be configured to act as an OpenID Connect (OIDC) provider, issuing signed, short-lived tokens. These tokens can then be exchanged by external systems for temporary cloud provider credentials, eliminating the need for hard-coded credentials.
 
 ```yaml
 values:
@@ -34,6 +34,17 @@ values:
 
 In this example we have an environment definition and ARN that identifies us to AWS. We're requesting a short term token that will live for 1 hour for the session `sessionName: esc-${context.pulumi.user.login}`. This token will be used to provide access to the AWS services defined in the permissions policies set for the role.
 
+## Token issuers
+
+Pulumi ESC signs OIDC tokens under two issuers. Each issuer has its own signing keys, subject format, and claims, so a relying party that trusts one issuer does not accept tokens from the other.
+
+| Issuer | Used by | Subject format |
+|:-------|:--------|:---------------|
+| `https://api.pulumi.com/oidc` | The vendor login providers, such as `aws-login`, `azure-login`, `gcp-login`, and `vault-login` | `pulumi:environments:org:<org-name>:env:<project>/<environment>`, customizable with `subjectAttributes` |
+| `https://api.pulumi.com/oidc/v2` | [`fn::open::oidc`](/docs/esc/providers/login/oidc/), which mints a token for an audience you choose | `pulumi:org:<org-id>:env:<environment-id>`, not customizable |
+
+The rest of this page, and the per-provider guides below, describe the `https://api.pulumi.com/oidc` issuer, except where a section names `fn::open::oidc`. For `fn::open::oidc` tokens, also called OIDC v2 tokens, see [Custom-audience token claims](#custom-audience-token-claims) and [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
+
 ## Configuring OpenID with your cloud provider
 
 To configure OIDC for your cloud provider, refer to one of our guides:
@@ -44,6 +55,8 @@ To configure OIDC for your cloud provider, refer to one of our guides:
 * [Configuring OIDC for Google Cloud](/docs/esc/guides/configuring-oidc/gcp/)
 * [Configuring OIDC for Infisical](/docs/esc/guides/configuring-oidc/infisical/)
 * [Configuring OIDC for Vault](/docs/esc/guides/configuring-oidc/vault/)
+
+To trust tokens from `fn::open::oidc` in any other service, see [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
 
 ## Configuring trust relationships
 
@@ -60,7 +73,7 @@ The following claims are commonly used when configuring trust relationships:
 
 ## Default token claim
 
-Pulumi ESC's default issued OIDC tokens include the following claims. Most of them carry the same values ESC exposes through the [`context` built-in property](/docs/esc/concepts/builtin-properties/#context):
+Tokens from the vendor login providers include the following claims. Most of them carry the same values ESC exposes through the [`context` built-in property](/docs/esc/concepts/builtin-properties/#context):
 
 | Claim         | Description |
 |:--------------|:------------|
@@ -70,6 +83,26 @@ Pulumi ESC's default issued OIDC tokens include the following claims. Most of th
 | root_env      | _(Root Environment)_ The name of the environment that is opened first. This Root Environment in turn opens other imported environments.<br><br>Built from [`context.rootEnvironment.name`](/docs/esc/concepts/builtin-properties/#context-rootEnvironment-name). |
 | trigger_user  | _(Trigger User)_ The user whose credentials are used to open an environment.<br><br>Built from [`context.pulumi.user.login`](/docs/esc/concepts/builtin-properties/#context-pulumi-user-login). |
 | sub           | _(Subject)_ The subject of the OIDC token. Often used for configuring trust relationships, it contains information about the associated service. Each component is also available as a custom claim.<br><br>Composed from the [subject attributes](#custom-token-claim) below. |
+
+## Custom-audience token claims
+
+Tokens from [`fn::open::oidc`](/docs/esc/providers/login/oidc/) use the `https://api.pulumi.com/oidc/v2` issuer and carry the following claims. Pulumi-specific claims have names that start with `https://pulumi.com/`.
+
+| Claim | Description |
+|:------|:------------|
+| `iss` | _(Issuer)_ `https://api.pulumi.com/oidc/v2`. |
+| `sub` | _(Subject)_ `pulumi:org:<org-id>:env:<environment-id>`. The environment is the one that declares the `fn::open::oidc` block. |
+| `aud` | _(Audience)_ The `audience` input of `fn::open::oidc`, as a single string. |
+| `iat`, `nbf`, `exp`, `jti` | Issued-at time, not-before time, expiry time, and a unique token ID. |
+| `https://pulumi.com/org` | The organization name. |
+| `https://pulumi.com/org_id` | The organization ID. |
+| `https://pulumi.com/current_env` | The name of the environment that declares the `fn::open::oidc` block, as `<project>/<environment>`. |
+| `https://pulumi.com/current_env_id` | The ID of that environment. |
+| `https://pulumi.com/root_env` | The name of the environment that was opened, as `<project>/<environment>`. |
+| `https://pulumi.com/root_env_id` | The ID of the environment that was opened. Omitted when that environment has no ID. |
+| `https://pulumi.com/actor` | The login of the user whose credentials opened the environment. |
+
+The subject uses IDs, not names, so renaming an organization or environment does not change it. `subjectAttributes`, described in the next section, does not apply to these tokens: `fn::open::oidc` refuses it.
 
 ## Custom token claim
 

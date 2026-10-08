@@ -76,6 +76,10 @@ Success! Data written to: auth/jwt/config
 Vault and Pulumi Cloud use the `jwt` path by default.
 {{% /notes %}}
 
+{{< notes type="info" >}}
+This guide covers `vault-login`, which uses the `https://api.pulumi.com/oidc` issuer. [`fn::open::oidc`](/docs/esc/providers/login/oidc/) uses the `https://api.pulumi.com/oidc/v2` issuer and a different subject. To trust its tokens, see [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
+{{< /notes >}}
+
 ### Create Vault policy
 
 For our example we will create a simple readonly policy (called `reader`) that allows read/list permissions to the `secret` path in Vault.

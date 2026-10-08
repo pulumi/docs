@@ -72,6 +72,10 @@ Once you have created your new application registration, you will be redirected 
 For environments in the `default` project the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
 {{< /notes >}}
 
+{{< notes type="info" >}}
+This guide covers `azure-login`, which uses the `https://api.pulumi.com/oidc` issuer. [`fn::open::oidc`](/docs/esc/providers/login/oidc/) uses the `https://api.pulumi.com/oidc/v2` issuer and a different subject. To trust its tokens, see [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
+{{< /notes >}}
+
 ## Create a service principal
 
 To provide Pulumi services the ability to deploy, manage, and interact with Azure resources, you need to associate your Microsoft Entra application with your Subscription or Resource Group.
