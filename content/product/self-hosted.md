@@ -2,7 +2,7 @@
 title: Self-Hosted Pulumi Cloud
 layout: self-hosted
 
-meta_desc: Run Pulumi Cloud in your own cloud account, data center, or air-gapped network, including inside a FedRAMP authorization boundary.
+meta_desc: Run Pulumi Cloud in your own cloud account, data center, or air-gapped network — including inside a FedRAMP authorization boundary.
 
 overview:
     title: Try Self-Hosted Pulumi
@@ -16,37 +16,17 @@ trial:
         Fill out the form to connect with a solutions architect and start your evaluation.
     hubspot_form_id: b6ff58c0-2b40-4202-9a7f-d6d8aca4414a
 regulated:
-    title: Run Pulumi inside your FedRAMP boundary
+    title: Deploy within your FedRAMP boundary
     description: |
-        Self-Hosted Pulumi is software you install and operate in your own environment, not a cloud service that Pulumi runs for you. It becomes a component of your system, inside your authorization boundary, so your infrastructure state, secrets, and configuration stay in the environment your assessor already reviews. Teams working toward FedRAMP certification and government authority to operate (ATO) run Pulumi this way today.
+        Self-hosted Pulumi Cloud runs inside your FedRAMP authorization boundary, assessed as a component of your own system. Teams pursuing a government authority to operate (ATO) run it this way today. [Talk to us](/contact/) about the security documentation to support your package.
     items:
-        - title: Your data stays in your boundary
+        - title: Everything within your boundary
           description: |
-            All Self-Hosted Pulumi data is stored in a MySQL database and an encrypted object store that you run, in the cloud account, government cloud region, or data center you already operate.
-        - title: No connection to Pulumi required
-          description: |
-            Run fully [air-gapped](/docs/administration/self-hosting/airgapped/), with no communication outside your private network. The install guide covers offline image transfer, private container registries, and internal mirrors for the CLI, SDKs, and providers.
+            Your resource state, configuration, and secrets all live in the Pulumi Cloud instance you deploy — optionally fully [air-gapped](/docs/administration/self-hosting/airgapped/), with no connection to the hosted Pulumi Cloud service. See [Capabilities](#self-hosted-capabilities) above for the full list.
         - title: Controls your assessor can read
           description: |
-            Pulumi Policy as Code enforces security controls on every deployment and gives assessors code to review rather than documents and diagrams. [Spear AI](/customers/spear-ai/) gave auditors access to its policy packs and cut its government ATO timeline from 18 months to three.
-        - title: Your identity provider and your secrets
-          description: |
-            Sign in through your own identity provider with SAML SSO and apply role-based access controls. [Pulumi ESC](/product/secrets-management/) is included, so secrets and configuration are managed inside your environment.
-    scope:
-        title: What this means for your certification
-        description: |
-            FedRAMP certifies cloud services. Pulumi Cloud, our SaaS offering, is not FedRAMP certified, and Self-Hosted Pulumi does not carry a certification of its own, because it is software you run and not a service we operate.
+            [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) enforce security controls on every deployment and give your assessors actual code to review, rather than just documents. [Spear AI](/customers/spear-ai/) gave auditors its Pulumi policies and cut its government ATO timeline [from 18 months to three](/customers/spear-ai/).
 
-            If you are a cloud service provider, Self-Hosted Pulumi is assessed as part of your system, under your certification. If you are an agency installing it on your own systems, FedRAMP's [Minimum Assessment Scope](https://www.fedramp.gov/2026/reference/20x/c/minimum-assessment-scope/) treats separately delivered software that you operate yourself as outside the scope of FedRAMP.
-
-            Certification decisions rest with your assessor and authorizing official. [Talk to our team](/contact/) about security documentation to support your package.
-    cta:
-        primary:
-            label: Request a Proof of Concept
-            link: "#self-hosted-trial"
-        secondary:
-            label: Air-gapped install guide
-            link: /docs/administration/self-hosting/airgapped/
 capabilities:
     title: Capabilities of Self-Hosted Pulumi
     items:
