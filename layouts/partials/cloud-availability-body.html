@@ -55,7 +55,7 @@
       {{- if $near -}}
         {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_editions.yaml (in %s). Did you mean: %s?" $id .where (delimit $near ", ") -}}
       {{- else -}}
-        {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_editions.yaml (in %s). Add it in pulumi/marketing-web (apps/www/src/data/pricing/features.yaml) — with `hidden: true` if it isn't a marketed line item on /pricing/ — and merge the sync PR that brings it here. Known ids: %s" $id .where (delimit $px.ids ", ") -}}
+        {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_editions.yaml (in %s). Add it in pulumi/marketing-web (apps/www/src/data/pricing/features.yaml), and use `hidden: true` if the feature should not be listed in the pricing table. An automated PR will be generated on this repo containing the updated YAML file. Once that PR is merged, you can reference the new feature ID(s). Known ids: %s" $id .where (delimit $px.ids ", ") -}}
       {{- end -}}
     {{- end -}}
   {{- else -}}
