@@ -731,9 +731,9 @@ Golden paths aren’t complete until they deliver measurable value. Use these KP
 
 Organizations using golden paths report significant improvements in speed and consistency:
 
-- **[Snowflake](https://www.pulumi.com/case-studies/snowflake/)** reduced deployment time from 1.5 weeks to less than a day
-- **[Starburst Data](https://www.pulumi.com/case-studies/starburst/)** cut deployment time from 2 weeks to 3 hours, a 112x improvement
-- **[Mercedes-Benz R&D North America](https://www.pulumi.com/case-studies/mercedes-benz/)** moved hundreds of microservices to the cloud on one toolset shared by its application and infrastructure teams
+- **[Snowflake](https://www.pulumi.com/customers/snowflake/)** reduced deployment time from 1.5 weeks to less than a day
+- **[Starburst Data](https://www.pulumi.com/customers/starburst/)** cut deployment time from 2 weeks to 3 hours, a 112x improvement
+- **[Mercedes-Benz R&D North America](https://www.pulumi.com/customers/mercedes-benz/)** moved hundreds of microservices to the cloud on one toolset shared by its application and infrastructure teams
 
 Golden paths give developers a faster route to production and give platform teams a consistent one to maintain. To learn more, download the whitepaper: [The Golden Path to Cloud Success: Your IDP Roadmap](https://info.pulumi.com/whitepaper-the-golden-path-to-cloud-success).
 

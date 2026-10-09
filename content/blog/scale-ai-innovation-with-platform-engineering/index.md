@@ -54,9 +54,9 @@ All these efficiencies combine to reduce cloud, compute and storage costs, so yo
 
 While speed is a byproduct of these efficiencies, it’s also a key reason to leverage platform engineering for AI. The most recognizable names in the AI industry have many attributes in common, including innovation and speed to market. Many of these leaders leverage Pulumi to achieve this decisive advantage.
 
-Snowflake is a great example of this approach. “There’s no question that, if we had gone down the traditional infrastructure automation route, it would have taken us a week or a week and a half to do one deployment of the cluster, end to end,” said Raman Hariharan, Director of Cloud Platform Engineering. “Plus, that deployment wouldn’t be repeatable, testable or scalable. It would have been a mad scramble to meet our deadline. When we demonstrated to people that what used to take a week and a half now, with [platform engineering], took under a day, they were shocked.” [Read the full Snowflake case study here](https://www.pulumi.com/case-studies/snowflake/).
+Snowflake is a great example of this approach. “There’s no question that, if we had gone down the traditional infrastructure automation route, it would have taken us a week or a week and a half to do one deployment of the cluster, end to end,” said Raman Hariharan, Director of Cloud Platform Engineering. “Plus, that deployment wouldn’t be repeatable, testable or scalable. It would have been a mad scramble to meet our deadline. When we demonstrated to people that what used to take a week and a half now, with [platform engineering], took under a day, they were shocked.” [Read the full Snowflake case study here](https://www.pulumi.com/customers/snowflake/).
 
-Pulumi customers regularly rave about their results with platform engineering - many citing 5 to 10X faster time to market. [See more case studies here](/case-studies/).
+Pulumi customers regularly rave about their results with platform engineering - many citing 5 to 10X faster time to market. [See more case studies here](/customers/).
 
 ### Another benefit: more freedom to innovate with more resources
 
@@ -76,6 +76,6 @@ Whether it’s cloud settings, API keys, database credentials or VM passwords, A
 
 Many industry-leading AI technology providers such as Snowflake have already based some of  their competitive differentiation on Pulumi’s unique value. More waves of large organizations are following this example as they navigate their journeys to AI time to market and return on investment.
 
-Learn more about how Pulumi and Platform Engineering can help your organization in the same way it [helped Snowflake speed up its deployment by 10x](/case-studies/snowflake/). Or take a look at [how Aptos Labs achieved 10x faster development cycles](/case-studies/aptos/).
+Learn more about how Pulumi and Platform Engineering can help your organization in the same way it [helped Snowflake speed up its deployment by 10x](/customers/snowflake/). Or take a look at [how Aptos Labs achieved 10x faster development cycles](/customers/aptos/).
 
 If you are ready to talk to an expert about how platform engineering can help your organization, [click here](/contact/?form=sales). For practitioners on your team, here are some [events and learning assets](/events/) to get up to speed quickly on platform engineering and infrastructure as code.
