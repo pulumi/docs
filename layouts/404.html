@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     {{ partial "head.html" . }}
-    <body class="font-mono bg-service-black text-white min-h-screen flex flex-col items-center px-4">
-     <div class="h-12 w-full mt-4 -mb-16 flex justify-center bg-service-black">
-        <a href="/" aria-label="Home" class="block w-12 h-12">
-            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
-                <path fill="var(--color-violet-400)" d="M4.75,20.1c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
-                <path fill="var(--color-violet-400)" d="M22.37,18.31c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
-                <path fill="var(--color-violet-400)" d="M10.62,23.5c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
-                <path fill="var(--color-violet-400)" d="M16.5,21.7c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
-                <path fill="var(--color-violet-400)" d="M12,3.96c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
-                <path fill="var(--color-violet-400)" d="M4.75,13.32c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
-                <path fill="var(--color-violet-400)" d="M6.13,7.34c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
-                <path fill="var(--color-violet-400)" d="M22.36,11.53c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
-                <path fill="var(--color-violet-400)" d="M17.87,7.34c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
-                <path fill="var(--color-violet-400)" d="M10.62,16.71c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
-                <path fill="var(--color-violet-400)" d="M16.5,14.92c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
-                <path fill="var(--color-violet-400)" d="M12,10.73c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
-            </svg>
-        </a>
+    <body class="nf-page">
+        <div class="nf-logo-bar">
+            <a href="/" aria-label="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="var(--nf-violet-400)" d="M4.75,20.1c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M22.37,18.31c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M10.62,23.5c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M16.5,21.7c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M12,3.96c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M4.75,13.32c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M6.13,7.34c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M22.36,11.53c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M17.87,7.34c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M10.62,16.71c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M16.5,14.92c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                <path fill="var(--nf-violet-400)" d="M12,10.73c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                </svg>
+            </a>
         </div>
         {{/* The <title> Hugo renders for this page comes from Hugo's own default .Title for
              the 404 node (this template sets no .Title of its own), wrapped by the "{{ $title
@@ -28,43 +28,442 @@
              SOFT_404_SIGNATURE in the workflow too, or the health check will silently stop
              detecting soft 404s. (The <h1> below is separate markup and editing it alone does
              not affect this coupling.) */}}
-        <main class="flex flex-col items-center justify-center w-full max-w-full my-auto">
-            <div class="flex items-center justify-center w-full h-[24em]">
-                <pre
-                    id="ascii-404"
-                    aria-hidden="true"
-                    class="text-violet-400 bg-transparent m-0 font-mono whitespace-pre leading-[1.15] text-[clamp(0.75rem,1.1vw,1rem)] [text-shadow:0_0_12px_rgba(139,92,246,0.5)]"
-                ></pre>
+        <main class="nf-main" data-neon="off">
+            <div class="nf-stage">
+                <div class="nf-sign-box">
+                    <div class="nf-spill" aria-hidden="true"></div>
+                    <pre id="ascii-404" class="nf-sign" aria-hidden="true"></pre>
+                </div>
+                <div class="nf-pulumipus">
+                    <div class="nf-figure" aria-hidden="true">
+                        <svg class="nf-pulumipus-in-dark" viewBox="0 0 134 134"><use href="#nf-pulumipus" /></svg>
+                        <svg class="nf-pulumipus-in-neon" viewBox="0 0 134 134"><use href="#nf-pulumipus" /></svg>
+                    </div>
+                    <div class="nf-ledge"></div>
+                </div>
             </div>
-            <div class="text-violet-400 uppercase text-center mt-2 max-w-xl">
-                <h1 class="font-mono text-2xl md:text-3xl font-normal mb-2 text-violet-400">Page not found</h1>
-                <p class="text-sm md:text-base text-violet-400">
-                    Sorry, the page you're looking for could not be found.
-                    <br />Try visiting our <a href="/" class="underline text-violet-200 hover:text-violet-400">homepage</a> instead.
+            <div class="nf-copy">
+                <h1>Page not found</h1>
+                <p>
+                    We couldn’t find what you’re looking for.
+                    <a href="/">Take me home</a>
                 </p>
             </div>
         </main>
 
+        <svg class="nf-filter-defs" aria-hidden="true">
+            <symbol id="nf-pulumipus" viewBox="0 0 134 134" fill="none">
+                <path d="M87.5652 87.3845C84.1638 82.5733 80.5122 83.0062 80.8428 76.8091C82.1682 70.0857 84.7903 66.1013 87.176 58.323C88.5713 53.775 90.2178 48.2334 88.2974 42.8269C85.7969 35.7865 77.033 29.7067 67.6465 29.4862C60.2495 29.3125 54.9219 31.5217 51.0806 38.4185C47.5222 44.807 46.0598 54.1948 44.6572 61.161C44.2056 63.4047 43.7329 65.7859 43.2734 68.2733C41.561 69.0783 39.6482 70.0853 38.1736 71.2062C36.5217 72.4616 34.5037 73.9952 33.3665 75.7313C31.2451 78.9697 30.1912 83.4373 32.3875 86.6255C33.6567 88.4682 35.8108 89.5487 38.0051 89.9879C38.8403 90.1551 39.6873 90.2231 40.5374 90.2565C40.5034 90.9693 40.4565 91.678 40.4363 92.3945C40.1748 101.624 42.4888 111.59 44.0183 118.753L44.2698 119.889C60.4629 119.993 68.8746 120.344 80.5443 119.954C80.073 116.253 78.6829 110.478 79.1863 101.286C82.3181 100.789 86.2549 99.4826 87.9063 97.285C89.9436 94.574 89.7817 90.5197 87.5652 87.3845Z" fill="#34CAD7"/>
+                <path d="M82.9102 103.644C86.8368 104.056 90.8128 102.933 94.2687 101.083C96.5884 99.8405 98.8859 98.2222 101.537 98.1855C103.753 98.1549 105.885 99.307 107.274 100.979C108.052 101.915 108.628 103.025 108.822 104.211C109.386 107.66 106.684 110.849 103.657 112.75C99.1503 115.579 93.685 116.678 88.3166 116.869C83.8788 117.028 79.0577 116.453 75.8219 113.51C73.6991 111.579 72.5207 108.817 72.134 106.023C71.8311 103.834 71.0674 97.1686 74.5978 99.5876C77.3807 101.494 79.2847 103.264 82.9102 103.644Z" fill="#34CAD7"/>
+                <path d="M99.1451 104.016C96.1693 106.026 92.6715 107.389 89.0609 107.844C87.8531 107.987 86.6202 108.022 85.4007 107.846C84.7955 107.741 84.4117 107.434 84.5292 107.172C84.629 106.945 85.0345 106.819 85.4896 106.848C87.1913 106.883 88.8993 106.684 90.5787 106.282C93.3639 105.64 96.1046 104.532 98.6168 103.164C99.6725 102.567 100.18 103.258 99.1451 104.016Z" fill="#392960"/>
+                <path d="M102.684 107.134C99.285 109.47 95.3444 111.317 91.1444 111.914C89.7445 112.105 88.309 112.142 86.8986 111.932C86.201 111.797 85.756 111.477 85.89 111.218C86.0038 110.995 86.4755 110.883 87.0045 110.936C88.9835 111.021 90.9708 110.789 92.9078 110.263C96.1261 109.428 99.2404 107.952 102.146 106.288C103.377 105.568 103.872 106.267 102.684 107.134Z" fill="#392960"/>
+                <path d="M94.0183 103.459C95.5762 105.423 97.1944 107.309 99.021 109.014C99.5996 109.572 100.181 110.132 100.838 110.765C101.135 111.059 101.201 111.444 100.986 111.624C100.801 111.778 100.468 111.731 100.188 111.527C99.1582 110.775 98.1704 109.959 97.2254 109.07C95.6616 107.592 94.2774 105.853 93.1968 104.032C92.7424 103.245 93.4585 102.776 94.0183 103.459Z" fill="#392960"/>
+                <path d="M88.5692 105.434C89.8648 107.278 91.4249 108.991 92.993 110.687C93.5162 111.255 94.0426 111.824 94.555 112.41C94.808 112.699 94.8326 113.07 94.6095 113.24C94.4178 113.384 94.1046 113.331 93.8578 113.129C92.9481 112.382 92.0943 111.571 91.2672 110.721C89.9178 109.305 88.5982 107.737 87.7076 105.945C87.3455 105.165 88.1153 104.787 88.5692 105.434Z" fill="#392960"/>
+                <path d="M64.3456 42.2924C59.5054 41.6324 58.1853 49.2127 50.0449 43.9325C43.3257 39.574 37.2443 32.2918 30.424 34.9319C23.7119 37.5301 21.5529 46.829 33.8448 57.5177C43.9653 66.3181 50.7507 67.4264 56.2859 68.2381C61.9123 69.0631 66.1864 67.578 67.8365 62.6278C70.4565 54.7677 66.8311 42.6314 64.3456 42.2924Z" fill="#9077F3"/>
+                <path d="M42.2913 45.7184C42.3621 45.581 42.4136 45.4469 42.484 45.3091C42.6885 44.9095 42.9158 44.5214 43.1795 44.1597C43.6397 43.5277 43.983 43.1117 44.1905 42.9095C44.2928 42.8097 44.5233 42.7099 44.8123 42.8857C45.0562 43.034 45.0655 43.3622 45.0206 43.4708C44.8548 43.8717 44.629 44.2834 44.2591 44.8401C44.0047 45.2232 43.7337 45.5997 43.4305 45.9493C43.3292 46.0662 43.2252 46.1811 43.1148 46.2901C42.9493 46.4534 42.7037 46.3916 42.5342 46.2957C42.3428 46.1874 42.1695 45.9551 42.2913 45.7184Z" fill="#392960"/>
+                <path d="M47.732 44.9069C47.6695 45.0452 47.6263 45.1794 47.5643 45.318C47.3843 45.7201 47.181 46.1117 46.9402 46.4789C46.5196 47.1203 46.2027 47.5442 46.0086 47.7518C45.9127 47.8544 45.6895 47.962 45.3922 47.8006C45.1414 47.6644 45.1131 47.3414 45.1514 47.2326C45.293 46.8308 45.4932 46.416 45.8284 45.8524C46.0589 45.4646 46.3062 45.0826 46.587 44.7259C46.681 44.6065 46.7774 44.4891 46.8809 44.3772C47.0357 44.2096 47.2833 44.2604 47.4573 44.3481C47.6534 44.4469 47.8392 44.6688 47.732 44.9069Z" fill="#392960"/>
+                <path d="M79.4036 116.858C78.8196 113.946 78.3059 110.94 78.0977 107.902C77.855 104.869 77.9624 101.793 78.1504 98.8252C78.2639 96.827 78.3909 94.8295 78.5542 92.8341C78.6348 91.8488 78.9595 91.1554 79.2795 91.285C79.5539 91.3961 79.7356 92.0766 79.731 92.8881C79.7151 95.8841 79.615 98.8758 79.5142 101.873C79.3401 106.799 79.8884 111.765 80.5669 116.672C80.6431 117.31 80.5986 117.773 80.4934 118.04L80.3804 118.326L80.3762 118.328C80.1709 118.443 80.0134 118.344 79.9634 118.285C79.9021 118.217 79.8828 118.144 79.8865 118.08C79.9031 117.939 80.0034 117.936 80.0398 117.966C80.1084 118.003 80.094 118.005 80.1204 117.995C80.1379 117.991 80.1587 117.968 80.1516 117.975C80.1392 117.98 80.1428 118.042 80.1402 118.022L79.8838 118.128C79.7039 117.903 79.5305 117.483 79.4036 116.858Z" fill="#392960"/>
+                <path d="M50.6817 103.566C52.0125 103.748 53.3416 103.895 54.6533 103.894C55.3086 103.894 55.959 103.857 56.5969 103.771C56.9158 103.726 57.2307 103.669 57.5425 103.6C58.0152 103.557 58.6812 103.219 59.1585 103.691C59.3877 103.901 59.5115 104.138 59.5364 104.485L59.5694 105.23L59.6179 106.253L59.72 108.299C59.7967 109.659 59.8733 111.018 59.95 112.374C60.0613 114.185 60.1824 115.994 60.3474 117.787C60.4314 118.668 60.2688 119.34 59.9334 119.302C59.6502 119.267 59.3318 118.685 59.1995 117.945C58.7261 115.219 58.4973 112.489 58.3001 109.747C58.2371 108.612 58.1736 107.471 58.1101 106.328L58.0733 105.47L58.0567 105.041C58.0552 104.988 58.0574 105.024 58.0576 105.011C58.0484 105.01 58.0833 104.996 58.0283 105.008L57.4978 105.11C55.0816 105.525 52.7019 105.175 50.4837 104.708C48.5857 104.276 48.7984 103.309 50.6817 103.566Z" fill="#392960"/>
+                <path d="M69.1223 117.332C73.1943 116.239 77.1126 116.232 79.5327 116.672C81.2813 116.99 82.4721 117.507 83.8229 118.432C84.9951 119.234 85.7113 120.299 84.7137 120.331C78.6899 120.301 72.6662 120.272 66.6424 120.242C64.8771 120.233 60.575 120.223 60.575 120.223C60.575 120.223 64.1743 118.66 69.1223 117.332Z" fill="#9077F3"/>
+                <path d="M52.7581 117.332C48.6861 116.239 45.1678 116.232 42.7476 116.672C40.9991 116.99 39.8082 117.507 38.4574 118.432C37.2853 119.234 36.5691 120.299 37.5666 120.331C43.5904 120.301 49.6142 120.272 55.638 120.242C57.4033 120.233 60.5054 120.223 60.5054 120.223C60.5054 120.223 57.7061 118.66 52.7581 117.332Z" fill="#9077F3"/>
+                <path d="M72.91 117.475C73.1063 117.485 73.2882 117.484 73.4855 117.503C74.0553 117.566 74.6256 117.696 75.1573 117.92C76.0875 118.311 76.6554 118.717 76.9293 118.958C77.0672 119.076 77.2067 119.355 77.0104 119.68C76.8419 119.956 76.4681 119.967 76.3419 119.926C75.7228 119.685 75.2914 119.518 74.6874 119.283C74.203 119.098 73.7079 118.937 73.2128 118.764C73.0619 118.712 72.9044 118.656 72.714 118.59C72.4664 118.498 72.3993 118.221 72.4071 118C72.4149 117.753 72.5699 117.457 72.91 117.475Z" fill="#392960"/>
+                <path d="M78.1961 116.938C78.4017 116.988 78.5938 117.024 78.7984 117.084C79.3889 117.264 79.9673 117.512 80.4888 117.85C81.4016 118.439 81.9295 118.974 82.178 119.278C82.3038 119.427 82.407 119.741 82.1582 120.028C81.9446 120.271 81.5557 120.197 81.4297 120.127C80.8325 119.758 80.3997 119.489 79.7886 119.111C79.3055 118.82 78.8052 118.553 78.3062 118.277C78.1529 118.192 77.9934 118.104 77.8035 118C77.5547 117.859 77.5296 117.572 77.5752 117.355C77.6253 117.112 77.8397 116.852 78.1961 116.938Z" fill="#392960"/>
+                <path d="M49.7739 119.152C49.562 119.211 49.3743 119.288 49.1658 119.354C48.4939 119.574 47.9414 119.755 47.3586 119.945C46.3054 120.28 45.5981 120.571 45.2073 120.695C45.0139 120.753 44.6772 120.767 44.4692 120.444C44.2937 120.174 44.5444 119.788 44.6919 119.687C45.2248 119.306 45.8596 118.953 46.8271 118.605C47.4924 118.365 48.187 118.186 48.8874 118.094C49.1221 118.065 49.3567 118.041 49.5915 118.035C49.9441 118.025 50.1133 118.274 50.1677 118.486C50.229 118.728 50.137 119.052 49.7739 119.152Z" fill="#392960"/>
+                <path d="M43.961 118.445C43.7774 118.522 43.6183 118.614 43.4388 118.698C42.8482 118.974 42.38 119.192 41.8807 119.426C41.0548 119.815 40.4642 120.093 40.0157 120.304C39.8463 120.374 39.5362 120.407 39.2962 120.107C39.0941 119.857 39.2711 119.467 39.3927 119.359C39.8314 118.954 40.367 118.568 41.2044 118.152C41.7804 117.866 42.3895 117.633 43.0135 117.479C43.223 117.43 43.4329 117.385 43.6451 117.357C43.9635 117.315 44.1497 117.544 44.2271 117.749C44.315 117.983 44.2752 118.312 43.961 118.445Z" fill="#392960"/>
+                <path d="M60.7435 33.2274C63.2945 32.5166 66.2582 33.2052 68.2245 35.1496C69.1908 36.1085 69.8551 37.2119 70.5604 38.171C71.2652 39.1443 72.0045 39.9503 72.9999 40.4348C74.3399 41.0932 75.9662 41.4887 77.5218 41.8141C78.2977 41.9665 78.8446 42.2887 78.7252 42.5918C78.6222 42.849 78.0384 42.9996 77.3548 42.9264C76.0926 42.7884 74.857 42.546 73.6212 42.1676C73.0013 41.9721 72.3754 41.7208 71.7818 41.3661C71.1854 41.0073 70.6564 40.5432 70.2064 40.0508C68.7347 38.3992 67.8866 36.4953 66.36 35.4568C64.8443 34.3851 62.8441 33.9684 61.0038 34.3217C60.2252 34.471 59.7579 34.4365 59.6407 34.1889C59.5321 33.9684 59.8346 33.4961 60.7435 33.2274Z" fill="#392960"/>
+                <mask id="nf-pulumipus-eye-left" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="56" y="37" width="4" height="5">
+                <path d="M59.6942 39.5677C59.2844 40.6644 58.6149 41.4549 57.5051 41.1306C56.339 40.7898 56.3903 39.8187 56.8001 38.722C57.2099 37.6253 57.9071 36.8428 58.9892 37.1591C60.071 37.4752 60.104 38.471 59.6942 39.5677Z" fill="white"/>
+                </mask>
+                <g mask="url(#nf-pulumipus-eye-left)">
+                <path d="M60.2007 35.9003L54.9421 36.9517L56.0265 42.3746L61.285 41.3231L60.2007 35.9003Z" fill="#392960"/>
+                </g>
+                <mask id="nf-pulumipus-eye-right" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="70" y="40" width="4" height="6">
+                <path d="M73.255 43.4134C72.8451 44.5101 72.1757 45.3006 71.0659 44.9763C69.8998 44.6355 69.9511 43.6643 70.3609 42.5676C70.7707 41.4709 71.4679 40.6885 72.55 41.0048C73.6318 41.3209 73.6648 42.3167 73.255 43.4134Z" fill="white"/>
+                </mask>
+                <g mask="url(#nf-pulumipus-eye-right)">
+                <path d="M73.7615 39.7459L68.5029 40.7974L69.5873 46.2203L74.8458 45.1688L73.7615 39.7459Z" fill="#392960"/>
+                </g>
+                <path d="M52.2439 66.9533C52.5283 67.6445 52.7434 68.1139 52.0571 68.5228C51.3708 68.9318 49.8925 68.3296 49.0784 68.9914C50.4195 68.793 52.116 69.0499 53.0234 69.953C53.3941 70.3219 53.4328 71.8081 53.313 72.2919C53.1721 72.8612 52.518 73.2048 51.8924 73.3729C51.2668 73.541 50.5879 73.6119 50.0509 73.9441C49.591 74.2286 49.2922 74.6706 48.9511 75.0664C48.4595 75.6369 47.8566 76.131 47.1778 76.5196C46.9982 76.6224 46.8078 76.7197 46.5971 76.7496C46.3295 76.7876 46.0584 76.7129 45.8071 76.6222C42.7746 75.5276 41.1555 71.0352 43.2291 68.6134C44.4272 67.214 51.1564 64.3096 52.2439 66.9533Z" fill="#9077F3"/>
+                <path d="M45.8407 79.2315C44.8968 80.4335 43.9593 81.6263 43.2594 82.908C42.535 84.1878 42.1681 85.5349 42.005 87.0381C41.9161 88.0413 41.868 89.0512 41.7525 90.0641C41.6991 90.563 41.3978 90.9319 41.0797 90.8829C40.8072 90.8405 40.6104 90.4924 40.5936 90.0644C40.5575 88.4791 40.4574 86.9143 40.7782 85.2831C41.0345 83.9201 41.6307 82.6019 42.3912 81.4788C43.1515 80.3445 44.0553 79.3615 44.9774 78.4584C45.7787 77.6983 46.5021 78.3741 45.8407 79.2315Z" fill="#392960"/>
+                <path d="M47.8445 70.9632C48.0552 70.8415 48.2515 70.7269 48.481 70.6347C49.1429 70.3651 49.8921 70.2838 50.5432 70.3285C51.6993 70.3806 52.5645 70.6795 52.9729 71.0023C53.1888 71.1431 53.3833 71.5505 53.0974 71.8103C52.8521 72.0153 52.5296 72.0057 52.4165 71.9881C51.9912 71.8681 51.4273 71.7954 50.5557 71.7702C49.939 71.7504 49.4019 71.7693 48.8553 71.87C48.6741 71.903 48.4949 71.9458 48.3135 71.994C48.0467 72.0667 47.8149 71.9017 47.6792 71.7246C47.5283 71.5315 47.4786 71.1824 47.8445 70.9632Z" fill="#392960"/>
+                <path d="M48.4083 65.7096C48.6094 65.6629 48.7943 65.6081 49.003 65.582C49.6068 65.4968 50.2393 65.5508 50.8243 65.7362C51.8477 66.0703 52.4227 66.5542 52.6881 66.8253C52.8236 66.9613 52.9388 67.2648 52.6981 67.5594C52.4913 67.807 52.1302 67.7821 52.0154 67.7359C51.588 67.5462 51.1365 67.3348 50.4666 67.1319C50.0027 67.0032 49.5289 66.9145 49.0421 66.8721C48.8926 66.8602 48.7361 66.8478 48.5474 66.8329C48.3008 66.8207 48.149 66.5783 48.0826 66.3665C48.0074 66.1309 48.0589 65.8005 48.4083 65.7096Z" fill="#392960"/>
+            </symbol>
+            <filter id="nf-neon-cast" color-interpolation-filters="sRGB">
+                <feFlood></feFlood>
+                <feComposite in2="SourceGraphic" operator="arithmetic" k1="1"></feComposite>
+            </filter>
+        </svg>
+
         <div id="ascii-arts" hidden>{{ partial "404-art.html" . }}</div>
+
+        <style>
+            @font-face {
+                font-family: "Monaspace Neon Var";
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+                src: url("/fonts/monaspace-neon-regular.woff2") format("woff2");
+            }
+            @font-face {
+                font-family: "Inter";
+                font-weight: 600;
+                font-style: normal;
+                font-display: swap;
+                src: url("/fonts/inter-semibold.woff2") format("woff2");
+            }
+
+            .nf-page {
+                --nf-violet-200: #dedbff;
+                --nf-violet-400: #a697fc;
+                --nf-violet-500: #9077f3;
+                --nf-violet-600: #7952e5;
+                --nf-service-black: #1f1b21;
+                --nf-font-sans: "Inter", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+                --nf-font-mono: "Monaspace Neon Var", Menlo, Consolas, ui-monospace, monospace;
+            }
+            .nf-page *,
+            .nf-page *::before,
+            .nf-page *::after {
+                box-sizing: border-box;
+            }
+            body.nf-page {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                padding: 0 1rem;
+                background-color: var(--nf-service-black);
+                color: #fff;
+                font-family: var(--nf-font-mono);
+                font-size: 1rem;
+                line-height: 1.5;
+                font-feature-settings: "liga" 1, "calt" 1, "cv11" 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .nf-logo-bar {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 3rem;
+                margin-top: 1rem;
+                margin-bottom: -4rem;
+                background-color: var(--nf-service-black);
+            }
+            .nf-logo-bar a {
+                display: block;
+                width: 3rem;
+                height: 3rem;
+            }
+            .nf-logo-bar svg {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            .nf-main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                max-width: 100%;
+                margin: auto 0;
+                padding: 6rem 0 25vh;
+            }
+            .nf-stage {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-width: 64rem;
+                margin-bottom: 1.25rem;
+            }
+            .nf-sign-box {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 19em;
+                padding-bottom: 6rem;
+            }
+            .nf-spill {
+                position: absolute;
+                top: calc(50% - 3rem);
+                left: 50%;
+                width: 48rem;
+                height: 48rem;
+                translate: -50% -50%;
+                pointer-events: none;
+                background: radial-gradient(
+                    circle closest-side,
+                    color-mix(in oklab, var(--nf-violet-500) 18%, transparent),
+                    color-mix(in oklab, var(--nf-violet-500) 6%, transparent) 40%,
+                    transparent 75%
+                );
+                opacity: 0;
+                transition: opacity 80ms;
+            }
+            .nf-sign {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                overflow: visible;
+                background-color: transparent;
+                font-family: var(--nf-font-mono);
+                font-size: clamp(0.75rem, 1.1vw, 1rem);
+                line-height: 1.15;
+                white-space: pre;
+                color: color-mix(in oklab, var(--nf-violet-400) 22%, transparent);
+                text-shadow: none;
+                transition:
+                    color 80ms,
+                    text-shadow 80ms;
+            }
+
+            .nf-pulumipus {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .nf-figure {
+                position: relative;
+                z-index: 10;
+                width: 11rem;
+                aspect-ratio: 10 / 9;
+            }
+            .nf-figure svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 1;
+            }
+            .nf-pulumipus-in-dark {
+                filter: brightness(0.22) saturate(0.8);
+            }
+            .nf-pulumipus-in-neon {
+                filter: url(#nf-neon-cast) hue-rotate(15deg) saturate(0.75) brightness(1.25);
+                mask-image: radial-gradient(
+                    circle at 10% 15%,
+                    black 25%,
+                    color-mix(in oklab, black 50%, transparent) 45%,
+                    transparent 65%
+                );
+                opacity: 0;
+                transition: opacity 80ms;
+            }
+            #nf-neon-cast feFlood {
+                flood-color: var(--nf-violet-400);
+            }
+            .nf-filter-defs {
+                position: absolute;
+                width: 0;
+                height: 0;
+            }
+
+            .nf-ledge {
+                position: relative;
+                width: 8rem;
+                height: 0.125rem;
+            }
+            .nf-ledge::before,
+            .nf-ledge::after {
+                --nf-ledge-light: black;
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 20rem;
+                height: 0.875rem;
+                background:
+                    radial-gradient(
+                        ellipse 30% 100% at 78% 100%,
+                        color-mix(in oklab, var(--nf-ledge-light) 15%, transparent),
+                        transparent
+                    ),
+                    radial-gradient(
+                        ellipse 50% 40% at 50% 100%,
+                        color-mix(in oklab, var(--nf-ledge-light) 10%, transparent),
+                        transparent
+                    );
+            }
+            .nf-ledge::before {
+                bottom: -2px;
+            }
+            .nf-ledge::after {
+                --nf-ledge-light: var(--nf-violet-400);
+                opacity: 0;
+                transition: opacity 80ms;
+            }
+
+            .nf-copy {
+                position: relative;
+                max-width: 36rem;
+                margin-top: 2rem;
+                text-align: center;
+                color: var(--nf-violet-400);
+            }
+            .nf-copy h1 {
+                margin: 0 0 1.5rem;
+                font-family: var(--nf-font-sans);
+                font-size: 1.875rem;
+                line-height: 1.2;
+                font-weight: 600;
+                letter-spacing: -0.05em;
+                color: var(--nf-violet-400);
+            }
+            .nf-copy p {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+                margin: 0;
+                color: var(--nf-violet-400);
+                font-size: 0.875rem;
+                line-height: calc(1.25 / 0.875);
+            }
+            .nf-copy a {
+                color: inherit;
+                text-decoration: underline;
+                text-underline-offset: 4px;
+            }
+            @media (hover: hover) {
+                .nf-copy a:hover {
+                    color: var(--nf-violet-200);
+                }
+            }
+
+            [data-neon="on"] .nf-sign {
+                color: var(--nf-violet-400);
+                text-shadow:
+                    0 0 2px var(--nf-violet-200),
+                    0 0 8px var(--nf-violet-400),
+                    0 0 24px var(--nf-violet-500),
+                    0 0 48px var(--nf-violet-600);
+                transition-duration: 40ms;
+            }
+            [data-neon="on"] .nf-spill,
+            [data-neon="on"] .nf-pulumipus-in-neon,
+            [data-neon="on"] .nf-ledge::after {
+                opacity: 1;
+                transition-duration: 40ms;
+            }
+
+            @media (min-width: 48rem) {
+                .nf-sign-box {
+                    width: 32rem;
+                }
+                .nf-pulumipus {
+                    position: absolute;
+                    bottom: -1.25rem;
+                    left: 50%;
+                }
+                .nf-figure {
+                    width: 16rem;
+                }
+                .nf-ledge {
+                    align-self: flex-start;
+                    width: 12rem;
+                    margin-left: -2rem;
+                }
+                .nf-copy h1 {
+                    font-size: 3rem;
+                    line-height: 1;
+                }
+                .nf-copy p {
+                    font-size: 1rem;
+                    line-height: 1.5;
+                }
+            }
+        </style>
 
         <script>
             (function () {
-                const target = document.getElementById("ascii-404");
-                const sources = Array.from(document.querySelectorAll("#ascii-arts pre"));
-                if (!target || sources.length === 0) return;
+                const MAX_SIGN_COLUMNS = 48;
+                const MAX_SIGN_ROWS = 10;
 
-                const arts = sources.map(function (el) {
-                    return el.textContent;
-                });
-                let i = Math.floor(Math.random() * arts.length);
+                const scene = document.querySelector("[data-neon]");
+                const sign = document.getElementById("ascii-404");
+                const fitsSign = function (art) {
+                    const lines = art.split("\n");
+                    return (
+                        lines.length <= MAX_SIGN_ROWS &&
+                        lines.every(function (line) {
+                            return line.length <= MAX_SIGN_COLUMNS;
+                        })
+                    );
+                };
+                const arts = Array.from(document.querySelectorAll("#ascii-arts pre"))
+                    .map(function (el) {
+                        return el.textContent;
+                    })
+                    .filter(fitsSign);
+                if (!scene || !sign || arts.length === 0) return;
 
-                function render() {
-                    target.textContent = arts[i % arts.length];
-                    i++;
+                const between = function (min, max) {
+                    return min + Math.random() * (max - min);
+                };
+                const wait = function (ms) {
+                    return new Promise(function (resolve) {
+                        setTimeout(resolve, ms);
+                    });
+                };
+
+                let next = Math.floor(Math.random() * arts.length);
+                const showNextArt = function () {
+                    sign.textContent = arts[next];
+                    next = (next + 1) % arts.length;
+                };
+                const setLit = function (lit) {
+                    scene.dataset.neon = lit ? "on" : "off";
+                };
+                const flicker = async function (times) {
+                    for (let n = 0; n < times; n++) {
+                        setLit(false);
+                        await wait(between(40, 90));
+                        setLit(true);
+                        await wait(between(40, 90));
+                    }
+                };
+                const stayLit = async function () {
+                    const duration = between(3000, 6000);
+                    if (Math.random() < 1 / 3) {
+                        const beforeBlip = between(800, duration - 800);
+                        await wait(beforeBlip);
+                        await flicker(1);
+                        await wait(duration - beforeBlip);
+                    } else {
+                        await wait(duration);
+                    }
+                };
+
+                showNextArt();
+                if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    setLit(true);
+                    setInterval(showNextArt, 4000);
+                    return;
                 }
-
-                render();
-                setInterval(render, 1500);
+                (async function () {
+                    for (;;) {
+                        await wait(between(350, 800));
+                        await flicker(Math.round(between(1, 2)));
+                        await stayLit();
+                        await flicker(Math.round(between(2, 3)));
+                        setLit(false);
+                        showNextArt();
+                    }
+                })();
             })();
         </script>
     </body>
