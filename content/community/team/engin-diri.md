@@ -9,6 +9,10 @@ aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "AI Agents NYC: Coding Agents with Elastic Memory + The Evolution to Stateless Serverless"
+  title: "Give Your Coding Agent an (Elastic) Memory"
+  url: "https://luma.com/ai-agents-nyc"
+  date: 2026-10-06T18:00:00.000-04:00
 - event: "London Platform User Group (LOPUG)"
   title: "Stop Wasting GPUs: How We Built a Golden Path for GPU Sharing on Kubernetes"
   url: "https://www.meetup.com/london-platform-user-group-lopug/events/313277993/"
