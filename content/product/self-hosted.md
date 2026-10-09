@@ -18,7 +18,7 @@ trial:
 regulated:
     title: Deploy within your FedRAMP boundary
     description: |
-        Self-hosted Pulumi Cloud runs inside your FedRAMP authorization boundary, assessed as a component of your own system. Teams pursuing a government authority to operate (ATO) run it this way today. [Talk to us](/contact/) about the security documentation to support your package.
+        Self-hosted Pulumi Cloud runs inside your FedRAMP authorization boundary, assessed as a component of your own system. Pulumi supports a FIPS-enabled self-hosted image. Teams pursuing a government authority to operate (ATO) run it this way today. [Talk to us](/contact/) about the security documentation to support your package.
     items:
         - title: Everything within your boundary
           description: |
