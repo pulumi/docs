@@ -1218,3 +1218,46 @@ def test_the_merge_preflight_refuses_a_review_it_cannot_read_whole():
         assert ok
     finally:
         env.close()
+
+
+def test_unrequest_drops_my_request_and_nothing_else():
+    env = Env([stampable(1, requested_users=["CamSoper", "cnunciato"]), stampable(2, requested_teams=["docs-guild"])])
+    try:
+        try:
+            act.plan(env.queue, args(unrequest=[2]))
+            raise AssertionError("expected refusal: only a team is requested")
+        except act.ActError as exc:
+            assert "by name" in str(exc)
+        p = act.plan(env.queue, args(unrequest=[1]))
+        assert "DELETE requested_reviewers: me" in act.preview(p, env.queue)
+        env.move_head(1, "f" * 40)  # declining is about the PR, not a commit
+        res = act.execute(p, env.gh, queue=env.queue)
+        assert res[0].ok, res[0].message
+        w = env.writes()
+        assert len(w) == 1 and w[0]["method"] == "DELETE"
+        assert w[0]["path"] == "repos/pulumi/docs/pulls/1/requested_reviewers" and w[0]["body"] == {"reviewers": ["CamSoper"]}
+    finally:
+        env.close()
+
+
+def test_unrequest_when_the_request_is_already_gone_sends_nothing():
+    env = Env([stampable(1, requested_users=["CamSoper"])])
+    try:
+        p = act.plan(env.queue, args(unrequest=[1]))
+        env.set_detail(1, requested_reviewers=[])
+        res = act.execute(p, env.gh, queue=env.queue)
+        assert res[0].ok and "already" in res[0].message
+        assert env.writes() == []
+    finally:
+        env.close()
+
+
+def test_unrequest_is_a_decision():
+    env = Env([stampable(1, requested_users=["CamSoper"])])
+    try:
+        act.plan(env.queue, args(stamp=["1"], unrequest=[1]))
+        raise AssertionError("expected refusal: two decisions on one PR")
+    except act.ActError as exc:
+        assert "contradict" in str(exc)
+    finally:
+        env.close()

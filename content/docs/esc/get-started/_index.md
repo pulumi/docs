@@ -43,8 +43,8 @@ curl -fsSL https://get.pulumi.com | sh
 
 {{% choosable os windows %}}
 
-```bat
-choco install pulumi
+```powershell
+winget install --exact --id Pulumi.Pulumi
 ```
 
 {{% /choosable %}}

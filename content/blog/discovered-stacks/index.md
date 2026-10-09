@@ -11,7 +11,7 @@ tags:
     - features
     - insights
     - pulumi-cloud
-canonical_url: /docs/discovery-governance/discovery/discovered-stacks/
+canonical_url: /docs/discovery-governance/concepts/discovery/discovered-stacks/
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
@@ -65,7 +65,7 @@ Terraform stacks whose state you [store in Pulumi Cloud](/docs/iac/get-started/t
 
 Open the **Stacks** page in [Pulumi Cloud](https://app.pulumi.com/), turn on **Show Discovered Stacks**, and your CloudFormation and ARM estates appear next to your IaC. From there:
 
-- Read the [Discovered Stacks documentation](/docs/discovery-governance/discovery/discovered-stacks/).
+- Read the [Discovered Stacks documentation](/docs/discovery-governance/concepts/discovery/discovered-stacks/).
 - Follow the [step-by-step migration tutorial](/blog/discovered-stacks-migrate-cloudformation-to-pulumi/) to take a CloudFormation stack all the way to Pulumi.
 
 We'd love to hear how it works on your estate — reach out through [Pulumi feedback](https://github.com/pulumi/pulumi-cloud-requests) or your customer success team.

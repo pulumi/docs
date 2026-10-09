@@ -156,7 +156,7 @@ make clean                # Remove build artifacts and dependencies
 
 **CI/CD:**
 
-- **GitHub Actions**: 62 workflows for build, test, review, deploy, and content upkeep
+- **GitHub Actions**: 63 workflows for build, test, review, deploy, and content upkeep
 - **Pulumi ESC**: Secrets and environment management
 - **OIDC**: Secure AWS authentication without static keys
 
@@ -344,7 +344,7 @@ make new-example-program
 ├── config/              # Hugo configuration
 │   ├── _default/        # Base configuration
 │   └── production/      # Production overrides
-├── .github/workflows/   # GitHub Actions (62 workflows)
+├── .github/workflows/   # GitHub Actions (63 workflows)
 ├── Makefile             # Build targets
 └── BUILD-AND-DEPLOY.md  # This document
 ```
@@ -1012,7 +1012,7 @@ Updated automatically via `pulumi-cli.yml` workflow when new CLI versions are re
 
 ## GitHub Actions Workflows
 
-The repository has 62 workflows in `.github/workflows/`. They fall into five families, plus two that only run on downstream mirrors such as `pulumi/docs-private`. This section describes each family, then lists every workflow, schedule, and switch. When this section and a workflow file disagree, the workflow file wins. Most workflows carry a detailed header comment explaining why they're built the way they are, so read that before changing one.
+The repository has 63 workflows in `.github/workflows/`. They fall into five families, plus two that only run on downstream mirrors such as `pulumi/docs-private`. This section describes each family, then lists every workflow, schedule, and switch. When this section and a workflow file disagree, the workflow file wins. Most workflows carry a detailed header comment explaining why they're built the way they are, so read that before changing one.
 
 ```mermaid
 flowchart LR
@@ -1444,7 +1444,11 @@ Two workflows are gated on `github.repository != 'pulumi/docs'` and only do anyt
 
 **Triggers:** Every 15 minutes; manual `workflow_dispatch`.
 
-Uses the Fork-Sync-With-Upstream action with `PULUMI_BOT_TOKEN`, preserving the mirror's own changes.
+**Jobs:** Check out the mirror's `master` with `PULUMI_BOT_TOKEN`, then run `aormsby/Fork-Sync-With-Upstream-action@v3.4`, which `git pull --no-edit`s pulumi/docs `master` and pushes the result. A `notify` job posts to `#docs-ops` on failure, so a merge conflict fails the job and lands there.
+
+**Which token pushes:** The workflow passes `target_repo_token: ${{ secrets.GITHUB_TOKEN }}`, and the action rewrites `origin` to use it, but checkout's persisted `PULUMI_BOT_TOKEN` auth header still rides on every git request, so the push goes out as `pulumi-bot`. That means pushes to the mirror's `master` *do* start push-triggered workflows there (the push runs on docs-private show `pulumi-bot` as the actor). Today that's harmless only because the two push-triggered workflows, `build-and-deploy.yml` and `testing-build-and-deploy.yml`, are disabled on the mirror.
+
+**It merges, it doesn't mirror.** The mirror's `master` carries a few workflow-plumbing commits of its own (six PRs merged into it between May 2024 and September 2025), so it can never fast-forward. Every sync that finds new upstream commits adds a `Merge branch 'master' of https://github.com/pulumi/docs` commit authored by "GH Action - Upstream Sync"; there are thousands of them. Content flows one way: nothing in docs-private writes back to pulumi/docs, and by convention nobody merges content PRs into the mirror's `master`. As of 2026-10-07 the mirror's `master` tree was identical to the upstream commit it last merged.
 
 #### warm-build-cache.yml
 
@@ -1454,7 +1458,23 @@ Uses the Fork-Sync-With-Upstream action with `PULUMI_BOT_TOKEN`, preserving the 
 
 **Jobs:** Check out `master`, restore the `meta-images-*` and `hugo-resources-*` caches, run `make ensure` + `make build`, and let `actions/cache` save the result. No deploy, no cloud credentials.
 
-**Why It Matters:** GitHub scopes `actions/cache` so a branch can only restore entries written by itself or by the default branch. On the mirrors, `build-and-deploy.yml` and `testing-build-and-deploy.yml` are disabled, so nothing ever wrote a cache from `master` and every PR build there started cold (Hugo re-encoding ~2,700 images, ~19-24 minutes per run versus ~7 warm on pulumi/docs). This job is the missing default-branch writer. `pulumi/docs` doesn't need it because its master deploys already save the same caches on every push.
+**Why It Matters:** GitHub scopes `actions/cache` so a branch can only restore entries written by itself or by the default branch. On the mirrors, `build-and-deploy.yml` and `testing-build-and-deploy.yml` are disabled (along with others; see [What runs on the mirrors](#what-runs-on-the-mirrors)), so nothing ever wrote a cache from `master` and every PR build there started cold (Hugo re-encoding ~2,700 images, ~19-24 minutes per run versus ~7 warm on pulumi/docs). This job is the missing default-branch writer. `pulumi/docs` doesn't need it because its master deploys already save the same caches on every push.
+
+#### What runs on the mirrors
+
+The mirror carries every workflow file pulumi/docs has, so the repository gate above is the exception, not the rule. As of 2026-10-07 on docs-private:
+
+- **Disabled** (`disabled_manually` in the Actions API), 19 workflows: `add-to-project`, `bucket-cleanup`, `bucket-cleanup-testing`, `build-and-deploy`, `check-lighthouse`, `check-links`, `check-search-urls`, `esc-cli`, `esc-update-schemas`, `pr-closed`, `pulumi-cli`, `pulumi-cli-dev-version`, `schedule-social`, `scheduled-test`, `scheduled-upgrade-programs`, `testing-build-and-deploy`, `update-audit-log-events`, `update-openapi-lastmod`, `update-search-index`.
+- **Active and doing work on a schedule:** `review-label-reconcile`, `blog-review-index`, `claims-reverify`, `review-existing-content` (which dispatches `content-review-article`), `update-policy-packs`, and `warm-build-cache`. The content-review lane opens `pulumi-bot` "Content review: …" PRs against the mirror's `master` that never merge (for example docs-private #300, #302, #307, and #314).
+- **Active but skipped by their own gates:** `weekly-digest` and `brand-style-sync` (gated to pulumi/docs), and `review-sla-sweep`, `staging-status`, and `content-review-glowup-autofix` (gated on `REVIEW_V3_SLA`, `REVIEW_V3_SENTINEL`, and `GLOWUP_AUTOFIX`, which aren't set there). Their runs fire and every job is skipped.
+
+### Launch branches
+
+Coordinated launches stage content in docs-private so it can be reviewed and previewed before it's public:
+
+1. Create a dated launch branch in docs-private named `release/<date>-<topic>` (for example `release/2025-09-15-docs`, `release/2025-11-policy`, or `release/05-19-content`). `pull-request.yml` triggers on `release/**`, so PRs into the branch get the normal PR build and preview. Older launch branches (`06/12-content`, `9/18-content`, `5/6-release`) predate the `release/**` pattern and needed their own trigger entries.
+1. Merge the launch's content PRs into that branch, not into the mirror's `master`. 49 of the 59 PRs ever merged in docs-private went into launch branches like these; the rest were workflow plumbing into `master` or stacked feature branches.
+1. At launch, push the branch to pulumi/docs and merge it to `master` with a release PR, which deploys it like any other merge. Examples: pulumi/docs #15978 (`release/2025-09-15-docs`), #16465 (`release/2025-11-policy`), #19169 (`release/05-19-content`), and #19215 (`release/05-20-content`).
 
 ### Repository variables
 
