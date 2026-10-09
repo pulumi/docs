@@ -93,9 +93,18 @@ The left nav is data-driven from `data/docs_menu_sections.yml`, which is consume
 
 ---
 
-## The Dev Center lives in another repo
+## Pages that live in pulumi/marketing-web
 
-`/dev` — tutorials, templates, community examples, and the glossary — is **not** in this repo. It ships from [pulumi/marketing-web](https://github.com/pulumi/marketing-web) (`apps/www`, an Astro build with its own S3 + CloudFront), and `infrastructure/index.ts` proxies `/dev*` to that distribution the same way it proxies `/registry` and `/guides`. Hugo's `content/tutorials/` and `content/templates/` trees were deleted when it launched; `scripts/redirects/dev-redirects.txt` 301s their URLs into `/dev`.
+Some pulumi.com pages are **not** in this repo. They ship from [pulumi/marketing-web](https://github.com/pulumi/marketing-web) (`apps/www`, an Astro build with its own S3 + CloudFront), and `infrastructure/index.ts` proxies their paths to that distribution the same way it proxies `/registry` and `/guides`. To change one of them, edit it there:
+
+- **`/dev`**: the Dev Center (tutorials, templates, community examples, and the glossary). See below.
+- **`/community`**: the community landing page and `/community/puluminaries/`. The proxied paths are exactly `/community`, `/community/`, `/community.md`, and `/community/puluminaries*`, because `/community/team/*` (the author pages blog bylines link to) is still built here from `content/community/team/` and `data/team/`.
+
+`invalidate-dev-cache.yml` flushes these paths from CloudFront when marketing-web deploys. When another page moves over, add its paths to that workflow's defaults and to this list.
+
+### The Dev Center
+
+Hugo's `content/tutorials/` and `content/templates/` trees were deleted when the Dev Center launched; `scripts/redirects/dev-redirects.txt` 301s their URLs into `/dev`.
 
 What that means when you work here:
 
