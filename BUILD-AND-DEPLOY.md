@@ -871,13 +871,13 @@ Hugo generates:
 - Sitemap.xml
 - robots.txt
 - Meta-refresh redirect pages (from aliases)
-- Markdown output (`.md`) for `/docs/` pages, the homepage, `/what-is/`, `/product/`, and `/pricing/` (for content negotiation)
+- Markdown output (`.md`) for `/docs/` pages, the homepage, `/what-is/`, and `/product/` (for content negotiation)
 - LLM sitemap JSON (`llmsitemap`) — hierarchical JSON index of docs navigation, served at `/docs/llm-sitemap.json`
 - LLM index (`llms`) — curated text overview at `/llms.txt` for AI agents
 
 **Markdown output format:** Hugo generates clean markdown versions of documentation pages alongside HTML. These are served via CloudFront content negotiation when clients send `Accept: text/markdown`. The conversion is handled by an 8-phase pipeline in `layouts/partials/docs/markdown-pipeline.md` that converts rendered HTML back to markdown (Chroma → fenced code blocks, HTML tags → markdown syntax, choosable options → chooser comment blocks, etc.).
 
-The same negotiation covers the marketing front door: the homepage, `/what-is/`, `/product/`, and `/pricing/` emit `index.md` artifacts (enabled via `outputs`/`cascade` front matter), served by a second viewer-request CloudFront Function on the default cache behavior (`marketing-markdown-negotiation` in `infrastructure/cloudfrontFunctions.ts`). That function rewrites only an allowlist of prefixes — a rewrite on a path with no `.md` artifact would 404, so extending coverage to a new section means BOTH enabling the `markdown` output for that section AND adding its prefix to the function. Template-driven pages (frontmatter `sections:` arrays) render markdown via `layouts/partials/markdown/sections.md`, a type-agnostic walker over the sections' textual fields.
+The same negotiation covers the marketing front door: the homepage, `/what-is/`, and `/product/` emit `index.md` artifacts (enabled via `outputs`/`cascade` front matter), served by a second viewer-request CloudFront Function on the default cache behavior (`marketing-markdown-negotiation` in `infrastructure/cloudfrontFunctions.ts`). That function rewrites only an allowlist of prefixes — a rewrite on a path with no `.md` artifact would 404, so extending coverage to a new section means BOTH enabling the `markdown` output for that section AND adding its prefix to the function. Template-driven pages (frontmatter `sections:` arrays) render markdown via `layouts/partials/markdown/sections.md`, a type-agnostic walker over the sections' textual fields.
 
 **Layout files:**
 
@@ -885,7 +885,6 @@ The same negotiation covers the marketing front door: the homepage, `/what-is/`,
 - `layouts/docs/list.md` — Markdown output for list pages
 - `layouts/index.md` — Markdown output for the homepage
 - `layouts/page/template-page.md` — Markdown output for template-driven pages (frontmatter `sections:`)
-- `layouts/page/pricing.md` — Markdown output for `/pricing/` (tiers, edition comparison, FAQ)
 - `layouts/_default/single.md`, `layouts/_default/list.md` — generic markdown fallbacks for markdown-enabled sections whose pages use bespoke layouts
 - `layouts/docs/list.llmsitemap.json` — Hierarchical JSON sitemap
 - `layouts/index.llms.txt` — Curated text overview at `/llms.txt`
@@ -1180,11 +1179,11 @@ Runs `make ci_update_search_index`, which indexes this repo's content and merges
 
 #### invalidate-dev-cache.yml
 
-**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, and `/community`) from CloudFront when it deploys.
+**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, and `/pricing`) from CloudFront when it deploys.
 
 **Triggers:** `repository_dispatch` (`dev-deployed`) from pulumi/marketing-web; manual `workflow_dispatch`.
 
-Invalidates `/dev*`, `/assets*`, and `/community`, `/community/`, `/community.md`, `/community/puluminaries*` using the same delivery role as `build-and-deploy.yml`. A concurrency group collapses a burst of deploys into one in-flight invalidation.
+Invalidates `/dev*`, `/assets*`, `/community`, `/community/`, `/community.md`, `/community/puluminaries*`, `/pricing`, `/pricing/`, and `/pricing.md` using the same delivery role as `build-and-deploy.yml`. A concurrency group collapses a burst of deploys into one in-flight invalidation.
 
 #### bucket-cleanup.yml and bucket-cleanup-testing.yml
 
@@ -1532,7 +1531,7 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `post-deployment-health-check.yml` | Ship | After a successful deploy, manual | Live-site smoke checks |
 | `schedule-social.yml` | Ship | After a successful production deploy, manual | Schedule blog social posts |
 | `update-search-index.yml` | Ship | Hourly, manual | Refresh Algolia |
-| `invalidate-dev-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/dev` and `/community` from CloudFront |
+| `invalidate-dev-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/dev`, `/community`, and `/pricing` from CloudFront |
 | `bucket-cleanup.yml` | Ship | Daily | Delete old production buckets |
 | `bucket-cleanup-testing.yml` | Ship | Daily, manual | Delete old testing and preview buckets |
 | `pull-request.yml` | PR checks | Pull request | Lint, test, preview build and deploy |
@@ -1805,6 +1804,7 @@ Delivery: CloudWatch Logs infrastructure v2
 | /guides/* | Guides | 30 minutes | Dynamic content, origin-proxied |
 | /dev* | Dev Center (pulumi/marketing-web) | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
 | /community, /community/, /community.md, /community/puluminaries* | Community pages (pulumi/marketing-web) | 30 minutes | Origin-proxied; exact paths so /community/team/* stays on S3 |
+| /pricing, /pricing/, /pricing.md | Pricing page (pulumi/marketing-web) | 30 minutes | Origin-proxied; exact paths so redirects under /pricing/ stay on S3 |
 | /docs/* | S3 Main | 10 min | Content negotiation for Accept: text/markdown |
 | /docs/reference/pkg/dotnet/* | S3 Main | 10 min | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
 | /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |

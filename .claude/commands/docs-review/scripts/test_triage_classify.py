@@ -137,7 +137,7 @@ def test_domain_routing() -> None:
           "scripts/programs beats the scripts/ infra rule")
     check(domains(["content/blog/post/index.md"]) == ["domain:blog"], "blog routes to blog")
     check(domains(["content/docs/a.md"]) == ["domain:docs"], "docs routes to docs")
-    check(domains(["content/pricing/_index.md"]) == ["domain:website"],
+    check(domains(["content/product/_index.md"]) == ["domain:website"],
           "non-docs content markdown routes to website")
 
     # The rendering layer is its own domain (2026-09-11): reviewed under the
@@ -179,7 +179,7 @@ def test_domain_routing() -> None:
     check(domains(["data/team/team/cam-soper.toml"]) == ["domain:blog"], "author bios route to blog")
     check(domains(["data/customers_industries.yaml"]) == ["domain:blog"], "customer industries route to blog")
     check(domains(["data/customers.yaml"]) == ["domain:blog"], "the customer registry routes to blog")
-    check(domains(["data/pulumi_pricing.yaml"]) == ["domain:website"], "pricing data routes to website")
+    check(domains(["data/pulumi_editions.yaml"]) == ["domain:website"], "edition data routes to website")
     check(domains(["data/header_nav.yaml"]) == ["domain:website"], "site chrome data routes to website")
     check(domains(["data/hero_agent_loop.yaml"]) == ["domain:frontend"], "hero animation data routes to frontend")
     check(domains(["content/docs/a.md", "data/docs_menu_sections.yml"]) == ["domain:docs"],

@@ -1073,6 +1073,14 @@ if (config.devStack) {
                 originRequestPolicyId: allViewerExceptHostHeaderId,
             }),
         ),
+        // Exact paths: /pricing* would also take the /pricing/open-source-free-tier/ redirect off S3.
+        ...["/pricing", "/pricing/", "/pricing.md"].map((pathPattern) => ({
+            ...baseCacheBehavior,
+            targetOriginId: marketingCDN,
+            pathPattern,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+        })),
     )
 }
 
@@ -1246,8 +1254,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...baseCacheBehavior,
         cachePolicyId: tenMinuteCacheKeyPolicy.id,
         functionAssociations: [
-            // Serves index.md for the homepage, /what-is/, /product/, and /pricing/
-            // via Accept: text/markdown or the .md URL suffix. The viewer-request
+            // Serves index.md for the homepage, /what-is/, and /product/ via
+            // Accept: text/markdown or the .md URL suffix. The viewer-request
             // rewrite lands before the cache lookup, so the rewritten URI is the
             // cache key and no cache policy changes are needed.
             getMarketingMarkdownNegotiationFunctionAssociation(),

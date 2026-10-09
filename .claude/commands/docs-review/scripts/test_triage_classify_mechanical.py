@@ -441,8 +441,8 @@ def test_condition_claims_signal() -> None:
     check(ok is False, "a Layer-A claim trigger on an added line is never mechanical")
     check(any("claim-extraction signal" in r for r in reasons), f"got {reasons}")
 
-    d_pricing = make_file_diff("data/pulumi_pricing.yaml", [" some: value", "+another: value"])
-    ok2, reasons2 = run_mechanical(d_pricing, files=[{"path": "data/pulumi_pricing.yaml"}])
+    d_pricing = make_file_diff("data/pulumi_editions.yaml", [" some: value", "+another: value"])
+    ok2, reasons2 = run_mechanical(d_pricing, files=[{"path": "data/pulumi_editions.yaml"}])
     check(ok2 is False, "a pricing-sensitive file change is never mechanical")
     check(any("pricing-sensitive" in r for r in reasons2), f"got {reasons2}")
 

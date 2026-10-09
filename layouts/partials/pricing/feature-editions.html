@@ -1,10 +1,10 @@
 {{- /*
   Returns the display names of the editions a feature from
-  data/pulumi_pricing.yaml is available in, lowest first: the feature's
+  data/pulumi_editions.yaml is available in, lowest first: the feature's
   `min_edition` and every edition above it, in `editions[]` order.
 
   Expects a dict:
-    feature  a feature id from data/pulumi_pricing.yaml
+    feature  a feature id from data/pulumi_editions.yaml
     where    a human-readable location used in build errors (page path)
 
   An unknown id is a hard build failure. Unlike cloud-availability-body.html,
@@ -15,11 +15,11 @@
 {{- $px := partialCached "pricing/data.html" "pricing-data" "pricing-data" -}}
 {{- $f := index $px.features $id -}}
 {{- if not $f -}}
-  {{- errorf "%q is not a feature in data/pulumi_pricing.yaml (in %s). Known ids: %s" $id .where (delimit $px.ids ", ") -}}
+  {{- errorf "%q is not a feature in data/pulumi_editions.yaml (in %s). Known ids: %s" $id .where (delimit $px.ids ", ") -}}
 {{- end -}}
 {{- $min := $f.min_edition -}}
 {{- if not $min -}}
-  {{- errorf "feature %q in data/pulumi_pricing.yaml isn't available on any edition (in %s), so there are no editions to list." $id .where -}}
+  {{- errorf "feature %q in data/pulumi_editions.yaml isn't available on any edition (in %s), so there are no editions to list." $id .where -}}
 {{- end -}}
 {{- $names := slice -}}
 {{- $seen := false -}}
