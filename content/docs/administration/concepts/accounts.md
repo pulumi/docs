@@ -197,11 +197,11 @@ In [self-hosted Pulumi Cloud](/docs/administration/self-hosting/), the Passkeys 
 
 ## Deleting your account
 
-You can delete your account from your [account settings](https://app.pulumi.com/user/account/settings) in Pulumi Cloud. To get there, click your user profile, then **Settings**, in the left navigation bar.
+You can delete your account from your [account settings](https://app.pulumi.com/user/account/settings) in Pulumi Cloud. To get there, select your user profile, then **Settings**, in the left navigation bar.
 
 Scroll to the bottom of the account settings page to find the **Delete account** button.
 
-Deleting your account removes your access to every organization you belong to, and deletes your individual organization along with all of its stacks. It does not delete any cloud resources those stacks provisioned — those keep running in your cloud provider account. **This is a permanent operation and cannot be undone.**
+Deleting your account removes your access to every organization you belong to, and deletes your individual organization along with its stacks. It does not delete any cloud resources those stacks provisioned — those keep running in your cloud provider account. **This is a permanent operation and cannot be undone.**
 
 Before deleting your account, transfer any stacks you want to keep to another organization, and make sure you are not the last admin of an organization that still needs one.
 
