@@ -554,6 +554,8 @@
             });
         </script>
 
+        {{ partial "gravity.html" . }}
+
         <!-- Floqer (RB2B) visitor identification — Marketing & Analytics consent-gated (see partials/floqer.html). Page-scoped via `include_floqer` front matter. -->
         {{ if .Params.include_floqer }}
         {{ partial "floqer.html" . }}

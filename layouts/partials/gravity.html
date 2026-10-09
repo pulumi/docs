@@ -1,0 +1,36 @@
+<script>
+    (function () {
+        var loaded = false;
+        var pageLoaded = document.readyState === "complete";
+        var advertisingAllowed = false;
+
+        function loadGravity() {
+            if (!pageLoaded || !advertisingAllowed || loaded) return;
+            loaded = true;
+            if (window.GravityPixelObject || window.gravityPixel) return;
+            !function(w,d,t,u,n,a,m){w['GravityPixelObject']=n;w[n]=w[n]||function(){
+            (w[n].q=w[n].q||[]).push(arguments)},w[n].l=1*new Date();a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+            }(window,document,'script','https://code.trygravity.com/gr-pix.js','gravity');
+            gravity('init', 'f9505c8e-5d0b-4159-88b8-53bd2d5f2c8a');
+        }
+
+        function updateConsent(groups) {
+            advertisingAllowed = Array.isArray(groups) && groups.indexOf("C0004") !== -1;
+            if (loaded && !advertisingAllowed) {
+                window.location.reload();
+                return;
+            }
+            loadGravity();
+        }
+
+        window.addEventListener("OneTrustGroupsUpdated", function (event) {
+            updateConsent(event.detail);
+        });
+        window.addEventListener("load", function () {
+            pageLoaded = true;
+            loadGravity();
+        });
+        updateConsent((window.OnetrustActiveGroups || "").split(","));
+    })();
+</script>
