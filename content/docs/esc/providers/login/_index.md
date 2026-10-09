@@ -17,17 +17,19 @@ aliases:
   - /docs/esc/concepts/providers/login/
 ---
 
-Login providers issue short-lived credentials for downstream services. Each provider is invoked through `fn::open::<name>-login` in an environment definition and returns a set of credentials that other providers (and your own code) can consume.
+Login providers issue short-lived credentials for downstream services. You invoke most of them through `fn::open::<name>-login` in an environment definition, and they return credentials that other providers and your own code can consume. The `oidc` provider instead returns a raw OpenID Connect (OIDC) token for an audience you choose, and `debug-oidc-claims` previews a token's claims without signing one.
 
-OpenID Connect (OIDC) is the recommended authentication mode wherever supported — see [Configuring OIDC](/docs/esc/guides/configuring-oidc/) for per-provider setup.
+OIDC is the recommended authentication mode wherever supported. See [Configuring OIDC](/docs/esc/guides/configuring-oidc/) for per-provider setup.
 
 | Provider | Description |
 |---|---|
 | [aws-login](/docs/esc/providers/login/aws-login/) | Log in to AWS using OIDC or static credentials. |
 | [azure-login](/docs/esc/providers/login/azure-login/) | Log in to Azure using OIDC or static credentials. |
+| [debug-oidc-claims](/docs/esc/providers/login/debug-oidc-claims/) | Preview the claims of an OIDC token without signing one. |
 | [doppler-login](/docs/esc/providers/login/doppler-login/) | Log in to Doppler using OIDC. |
 | [gcp-login](/docs/esc/providers/login/gcp-login/) | Log in to Google Cloud using OIDC or static credentials. |
 | [gh-login](/docs/esc/providers/login/gh-login/) | Log in to GitHub using app credentials. |
 | [infisical-login](/docs/esc/providers/login/infisical-login/) | Log in to Infisical using OIDC or static credentials. |
+| [oidc](/docs/esc/providers/login/oidc/) | The generic provider. Mints an OIDC token for an audience you choose, signed by the `https://api.pulumi.com/oidc/v2` issuer, for any service that accepts OIDC identities. |
 | [snowflake-login](/docs/esc/providers/login/snowflake-login/) | Authenticate to Snowflake using OIDC. |
 | [vault-login](/docs/esc/providers/login/vault-login/) | Log in to HashiCorp Vault using OIDC or static credentials. |

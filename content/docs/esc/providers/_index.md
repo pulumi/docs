@@ -22,10 +22,12 @@ Issue short-lived credentials for downstream services. Prefer OpenID Connect ove
 |---|---|
 | [aws-login](/docs/esc/providers/login/aws-login/) | Log in to AWS using OIDC or static credentials. |
 | [azure-login](/docs/esc/providers/login/azure-login/) | Log in to Azure using OIDC or static credentials. |
+| [debug-oidc-claims](/docs/esc/providers/login/debug-oidc-claims/) | Preview the claims of an OIDC token without signing one. |
 | [doppler-login](/docs/esc/providers/login/doppler-login/) | Log in to Doppler using OIDC. |
 | [gcp-login](/docs/esc/providers/login/gcp-login/) | Log in to Google Cloud using OIDC or static credentials. |
 | [gh-login](/docs/esc/providers/login/gh-login/) | Log in to GitHub using app credentials. |
 | [infisical-login](/docs/esc/providers/login/infisical-login/) | Log in to Infisical using OIDC or static credentials. |
+| [oidc](/docs/esc/providers/login/oidc/) | The generic provider. Mints an OIDC token for an audience you choose, signed by the `https://api.pulumi.com/oidc/v2` issuer, for any service that accepts OIDC identities. |
 | [snowflake-login](/docs/esc/providers/login/snowflake-login/) | Authenticate to Snowflake using OIDC. |
 | [vault-login](/docs/esc/providers/login/vault-login/) | Log in to HashiCorp Vault using OIDC or static credentials. |
 

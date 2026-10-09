@@ -29,6 +29,7 @@ Actionability
 addon
 addons
 Addy
+Aembit
 affordance
 Agentgateway
 agentic
@@ -142,6 +143,7 @@ Civo
 cli
 CLI's
 Cloudformation
+Cloudsmith
 CNCF's
 codeblock
 Codefresh

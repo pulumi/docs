@@ -163,6 +163,8 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/aws/) documentation.
 
+If you need a raw OIDC token to exchange with another service yourself, use [`fn::open::oidc`](/docs/esc/providers/login/oidc/) instead.
+
 ## Troubleshooting
 
 Most `aws-login` failures come from the OIDC trust relationship between Pulumi Cloud and AWS. For full setup steps, see [Configuring OpenID Connect for AWS](/docs/esc/guides/configuring-oidc/aws/).
