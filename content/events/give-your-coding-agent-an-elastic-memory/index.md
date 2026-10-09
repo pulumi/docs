@@ -64,7 +64,6 @@ tags:
 
 # Registration form (only rendered when gated: true).
 form:
-    # TODO: wire in from MA-1045 (https://linear.app/pulumi/issue/MA-1045) once marketing creates the form and campaign.
-    hubspot_form_id: ""
-    salesforce_campaign_id: ""
+    hubspot_form_id: "04455508-6145-4f44-ae2a-444f6c395c43"
+    salesforce_campaign_id: "701PQ000011ELMrYAO"
 ---
