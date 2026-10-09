@@ -34,7 +34,7 @@ duration: 3 hours
 location: Seattle, WA
 
 # Description of the event.
-description: The Elastic Seattle User Group and Pulumi are hosting an evening on AI-powered applications and search, at the Pulumi office on the 51st floor of Two Union Square. Peter Yoakum shows how to tell automated AI agent traffic apart from human web traffic using an ELK stack configured with Pulumi, and Kapil Jadhav covers building AI applications with Jina models. Doors open at 5:00 PM with food, talks start at 5:30, and there is time to network either side. Registration is on Luma.
+description: The Elastic Seattle User Group and Pulumi are hosting an evening on AI-powered applications and search, at the Pulumi office on the 51st floor of Two Union Square. Peter Yoakum shows how to tell automated AI agent traffic apart from human web traffic using an ELK stack configured with Pulumi, and Kapil Jadhav, a product leader at Elastic who works on generative AI, conversational agents, and AI search, covers building AI applications with Jina models. Doors open at 5:00 PM with food, talks start at 5:30, and there is time to network either side. Registration is on Luma.
 
 # The event presenters
 presenters:
@@ -42,7 +42,8 @@ presenters:
       role: Developer Experience Engineer, Pulumi
       photo: /images/team/peter-yoakum.jpg
     - name: Kapil Jadhav
-      role: Elastic
+      role: Product Leader, Elastic
+      photo: /images/people/kapil-jadhav.jpg
 
 # case-sensitive
 tags:
