@@ -48,8 +48,6 @@
 {{ end }}
 {{ $schema = merge $schema (dict "image" $image) }}
 
-{{/* Plain offer with no price range: edition prices live in pulumi/marketing-web,
-     which also emits the /pricing/ page's own Offer schema. */}}
 {{ $schema = merge $schema (dict "offers" (dict
   "@type" "Offer"
   "priceCurrency" "USD"

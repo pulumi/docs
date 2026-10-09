@@ -1073,9 +1073,7 @@ if (config.devStack) {
                 originRequestPolicyId: allViewerExceptHostHeaderId,
             }),
         ),
-        // /pricing moved to marketing-web. Exact paths, never a "/pricing*" wildcard:
-        // that would also take the /pricing/open-source-free-tier/ redirect key away
-        // from S3. marketing-web's own CloudFront function handles Accept: text/markdown.
+        // Exact paths: /pricing* would also take the /pricing/open-source-free-tier/ redirect off S3.
         ...["/pricing", "/pricing/", "/pricing.md"].map((pathPattern) => ({
             ...baseCacheBehavior,
             targetOriginId: marketingCDN,

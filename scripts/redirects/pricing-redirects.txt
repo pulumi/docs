@@ -1,3 +1,2 @@
-# /pricing/ is served by pulumi/marketing-web (apps/www).
-# /blog/tf-migration-offer/ was a Hugo alias on the pricing page that used to live in this repo.
+# Was an alias on the Hugo pricing page, now served by pulumi/marketing-web.
 blog/tf-migration-offer/index.html|/pricing/

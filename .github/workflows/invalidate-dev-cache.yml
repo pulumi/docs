@@ -59,10 +59,9 @@ jobs:
           # /dev* (the pages) and /assets* (its root-relative CSS/JS/images). The
           # assets are content-hashed so they don't strictly need flushing, but
           # clearing them is cheap and keeps the surface consistent. It also flushes
-          # /community and /community/puluminaries*, which marketing-web serves too
-          # (not /community/*, since /community/team/* is still Hugo), and /pricing,
-          # /pricing/, and /pricing.md. A dispatch caller may narrow/override the
-          # paths via client_payload.paths.
+          # /community and /community/puluminaries*, which marketing-web serves too;
+          # not /community/*, since /community/team/* is still Hugo. A dispatch
+          # caller may narrow/override the paths via client_payload.paths.
           #
           # "/dev/" is listed on its own because "/dev/*" matches everything below
           # /dev/ but not /dev/ itself, which left the landing page uninvalidated.
