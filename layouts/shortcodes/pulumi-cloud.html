@@ -11,7 +11,7 @@
       ## Organization templates
       {{< pulumi-cloud "organization-templates" />}}
 
-  The argument is a feature id from data/pulumi_pricing.yaml — the edition the
+  The argument is a feature id from data/pulumi_editions.yaml — the edition the
   sentence names ("available in the Pro and Enterprise editions")
   is derived from that feature's availability, so it can't drift from
   /pricing/.
@@ -31,16 +31,17 @@
 
   When a section covers something broadly and only one option in it is gated,
   "This feature is…" is ambiguous. Pass "named" as a second argument to lead
-  with the feature's name from data/pulumi_pricing.yaml instead:
+  with the feature's name from data/pulumi_editions.yaml instead:
 
       ## Customer-managed runner pools
       {{< pulumi-cloud "customer-managed-runners" "named" />}}
                 → "Customer-managed runners is a Pulumi Cloud
                    feature available in the Enterprise edition."
 
-  The name comes from data/pulumi_pricing.yaml, which is the source of truth
-  for feature names. Make the page's prose use that name, rather than
-  renaming the feature in the data file to match a docs page.
+  The name comes from data/pulumi_editions.yaml, generated from
+  pulumi/marketing-web, which is the source of truth for feature names. Make
+  the page's prose use that name, rather than renaming the feature there to
+  match a docs page.
 
   Inner content with no feature renders the prose alone, no availability
   sentence — which is the form for a cross-product pointer: "the page teaches

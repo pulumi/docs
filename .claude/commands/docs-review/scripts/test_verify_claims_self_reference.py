@@ -84,7 +84,7 @@ def user_text(body) -> str:
     ("content/blog/some-post/index.md", "/blog/some-post/"),
     ("./content/docs/Mixed-Case.md", "/docs/mixed-case/"),
     ("content/_index.md", "/"),
-    ("data/pulumi_pricing.yaml", None),
+    ("data/pulumi_editions.yaml", None),
     ("static/programs/aws-s3-typescript/index.ts", None),
     ("content/docs/iac/diagram.png", None),
     ("", None),
@@ -137,7 +137,7 @@ def test_same_site_only_sources(source):
     f"{ATP_URL}; gh release list -R pulumi/pulumi-terraform-provider",
     f"`gh api repos/pulumi/pulumi/contents/pkg/x.go` and {ATP_URL}",
     f"{ATP_URL} and github.com/pulumi/pulumi-terraform-provider",
-    f"{ATP_URL} and repo:data/pulumi_pricing.yaml",
+    f"{ATP_URL} and repo:data/pulumi_editions.yaml",
     f"{ATP_URL} and static/programs/any-tf-yaml/Pulumi.yaml",
     f"{ATP_URL} and https://registry.terraform.io/providers/hashicorp/random/latest",
     # The generated-reference carve-out carries product-source authority.
