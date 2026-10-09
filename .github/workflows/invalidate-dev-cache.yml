@@ -15,7 +15,7 @@ on:
       paths:
         # Keep in sync with the PATHS fallback below.
         description: Space-separated CloudFront paths to invalidate
-        default: "/dev /dev/ /dev/* /assets /assets/ /assets/* /pricing /pricing/ /pricing.md"
+        default: "/dev /dev/ /dev/* /assets /assets/ /assets/* /community /community/ /community.md /community/puluminaries* /pricing /pricing/ /pricing.md"
 
 permissions:
   id-token: write # OIDC for the AWS + ESC logins
@@ -59,12 +59,14 @@ jobs:
           # /dev* (the pages) and /assets* (its root-relative CSS/JS/images). The
           # assets are content-hashed so they don't strictly need flushing, but
           # clearing them is cheap and keeps the surface consistent. It also flushes
-          # /pricing, /pricing/, and /pricing.md, which marketing-web serves too. A
-          # dispatch caller may narrow/override the paths via client_payload.paths.
+          # /community and /community/puluminaries*, which marketing-web serves too
+          # (not /community/*, since /community/team/* is still Hugo), and /pricing,
+          # /pricing/, and /pricing.md. A dispatch caller may narrow/override the
+          # paths via client_payload.paths.
           #
           # "/dev/" is listed on its own because "/dev/*" matches everything below
           # /dev/ but not /dev/ itself, which left the landing page uninvalidated.
-          PATHS: ${{ github.event.client_payload.paths || github.event.inputs.paths || '/dev /dev/ /dev/* /assets /assets/ /assets/* /pricing /pricing/ /pricing.md' }}
+          PATHS: ${{ github.event.client_payload.paths || github.event.inputs.paths || '/dev /dev/ /dev/* /assets /assets/ /assets/* /community /community/ /community.md /community/puluminaries* /pricing /pricing/ /pricing.md' }}
         run: |
           set -o errexit -o pipefail
           DISTRIBUTION_ID=$(pulumi -C infrastructure stack output cloudFrontDistributionId --stack "$PULUMI_STACK_NAME")
