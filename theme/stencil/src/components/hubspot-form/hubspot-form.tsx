@@ -90,7 +90,6 @@ export class HubspotForm {
 
     // The field values as of onFormSubmit, held for the onFormSubmitted event.
     private submittedValues: Record<string, string> = {};
-    private gravityConversionId?: string;
 
     componentWillLoad() {
         if (!this.formId) {
@@ -183,7 +182,6 @@ export class HubspotForm {
 
         // When the form is submitted, notify Segment and fire any conversion tracking.
         if (eventName === "onFormSubmit") {
-            this.gravityConversionId = this.formId === "32b46b45-6717-4d11-ae15-4b9a21afeacd" && typeof window.crypto?.randomUUID === "function" ? window.crypto.randomUUID() : undefined;
             const emailAddress: HTMLInputElement = this.el.querySelector(`input[name="email"]`);
             if (emailAddress) {
                 this.notifySegment(emailAddress.value, utmData);
@@ -201,22 +199,6 @@ export class HubspotForm {
 
         if (eventName === "onFormSubmitted") {
             this.hubspotFormSubmitted.emit({ formId: this.formId, values: this.submittedValues });
-            const conversionId = this.gravityConversionId;
-            this.gravityConversionId = undefined;
-            const browser = window as any;
-            const trustedOrigin = event.origin === window.location.origin || /^https:\/\/forms(?:-na\d+|-eu\d+)?\.hsforms\.com$/.test(event.origin);
-            if (conversionId && event.data.id === this.formId && trustedOrigin && this.formId === "32b46b45-6717-4d11-ae15-4b9a21afeacd" && browser.pulumiConsent?.isAllowed("C0004") === true && typeof browser.analytics?.track === "function") {
-                let gravity = {};
-                try {
-                    gravity = browser.gravityPixel?.getCAPIData() || {};
-                } catch (_) {}
-                browser.analytics.track("Demo Request Confirmed", {
-                    conversionConfirmed: true,
-                    conversionId: `demo-${conversionId}`,
-                    formId: this.formId,
-                    gravity,
-                }, { context: { consent: { categoryPreferences: { C0004: true } } } });
-            }
         }
 
         // When there are problems loading the form, show a failure message.
