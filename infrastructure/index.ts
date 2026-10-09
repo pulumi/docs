@@ -1027,12 +1027,12 @@ const devBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[
 
 if (config.devStack) {
     const devStack = new pulumi.StackReference(config.devStack);
-    const devCDN = devStack.getOutput("cloudFrontDomain");
+    const marketingCDN = devStack.getOutput("cloudFrontDomain");
 
     devOrigins.push(
         {
-            originId: devCDN,
-            domainName: devCDN,
+            originId: marketingCDN,
+            domainName: marketingCDN,
             customOriginConfig: {
                 originProtocolPolicy: "https-only",
                 httpPort: 80,
@@ -1044,14 +1044,14 @@ if (config.devStack) {
     devBehaviors.push(
         {
             ...baseCacheBehavior,
-            targetOriginId: devCDN,
+            targetOriginId: marketingCDN,
             pathPattern: "/dev*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
         {
             ...baseCacheBehavior,
-            targetOriginId: devCDN,
+            targetOriginId: marketingCDN,
             // The Dev Center (Astro) emits root-relative assets under /assets/*
             // (CSS, JS, images), so those must reach the same origin as /dev or
             // the pages render unstyled. pulumi/docs serves its own assets from
@@ -1067,7 +1067,7 @@ if (config.devStack) {
         ...["/community", "/community/", "/community.md", "/community/puluminaries*"].map(
             (pathPattern) => ({
                 ...baseCacheBehavior,
-                targetOriginId: devCDN,
+                targetOriginId: marketingCDN,
                 pathPattern,
                 cachePolicyId: thirtyMinuteCachePolicy.id,
                 originRequestPolicyId: allViewerExceptHostHeaderId,
