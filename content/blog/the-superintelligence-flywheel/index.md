@@ -10,6 +10,10 @@ tags:
     - pulumi-neo
     - infrastructure-as-code
 category: perspectives
+aliases:
+    - /product/superintelligence-infrastructure/
+    - /pulumi-for-ai-infrastructure/
+    - /solutions/ai/
 ---
 
 We've been in the infrastructure business for nearly a decade, and we've never been more excited about, or in awe of, the scale we are seeing as the industry pursues superintelligence. We are now hitting a tipping point that requires entirely different approaches to managing and scaling infrastructure in this new era.
@@ -40,7 +44,7 @@ We call this the *superintelligence flywheel*.
 
 The superintelligence flywheel describes a self-reinforcing cycle between two forces:
 
-**[Superintelligence Infrastructure](https://www.pulumi.com/product/superintelligence-infrastructure/)**: The massively distributed compute, storage, networking, and orchestration systems required to train and serve frontier AI models.
+**Superintelligence Infrastructure**: The massively distributed compute, storage, networking, and orchestration systems required to train and serve frontier AI models.
 
 **Infrastructure Superintelligence**: AI systems capable of managing infrastructure with increasing autonomy. These systems handle the full spectrum of infrastructure automation, from provisioning to securing to evolving and scaling entire environments.
 
@@ -154,4 +158,4 @@ The superintelligence flywheel is spinning fast, and it’s only going to get fa
 
 *Pulumi provides the infrastructure platform for the superintelligence era: infrastructure as code in general-purpose languages, unified multi-cloud management, and Neo for progressive infrastructure autonomy.*
 
-[*Pulumi Neo*](/product/neo) ・ [*Superintelligence Infrastructure*](/product/superintelligence-infrastructure/) ・ [*Case Studies*](/case-studies/) ・ [*Contact*](/contact)
+[*Pulumi Neo*](/product/neo) ・ [*Case Studies*](/case-studies/) ・ [*Contact*](/contact)
