@@ -1335,7 +1335,7 @@
       "authenticationFailure": false,
       "category": "organization",
       "deprecated": false,
-      "description": "A Pulumi site admin started a retrial for the organization.",
+      "description": "Pulumi started a retrial of another plan's features for the organization.",
       "displayName": "Retrial Started",
       "event": "retrial-started",
       "requiresOrgAdmin": true,
