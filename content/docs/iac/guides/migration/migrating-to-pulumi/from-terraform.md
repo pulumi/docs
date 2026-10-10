@@ -196,9 +196,9 @@ Pulumi allows you to reference output values from existing Terraform state files
 * Scenarios where some infrastructure must remain under management by Terraform due to organizational constraints
 * Accessing shared infrastructure (like VPCs, networks, or databases) managed by other teams
 
-You can use the [Terraform provider](/registry/packages/terraform) functions to reference output values from a Terraform state source:
+You can use the [Terraform provider](/registry/packages/terraform/) functions to reference output values from a Terraform state source:
 
-* For local state files, use [`terraform.state.getLocalReference`](/registry/packages/terraform/api-docs/state/getlocalreference)
+* For local state files, use [`terraform.state.getLocalReference`](/registry/packages/terraform/api-docs/state/getlocalreference/)
 * For state files stored in a remote backend — HCP Terraform, Terraform Enterprise, or [Pulumi Cloud](/docs/integrations/terraform/state-backend/) — use [`terraform.state.getRemoteReference`](/registry/packages/terraform/api-docs/state/getremotereference/#terraform-state-getremotereference)
 
 The following code reads VPC and subnet IDs from a local `terraform.tfstate` file and provisions an EKS cluster that uses the read IDs:

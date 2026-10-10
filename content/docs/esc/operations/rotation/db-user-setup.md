@@ -12,7 +12,7 @@ aliases:
   - /docs/esc/environments/rotation/db-user-setup/
 ---
 
-In order to create an [ESC rotator for database credentials](/docs/esc/providers/rotators), you need to prepare 2 users to rotate and a managing user. To start, connect to your existing database or provision a new one. The following sections will explain why we need these users and provide sample SQL commands to easily create them in your database.
+In order to create an [ESC rotator for database credentials](/docs/esc/providers/rotators/), you need to prepare 2 users to rotate and a managing user. To start, connect to your existing database or provision a new one. The following sections will explain why we need these users and provide sample SQL commands to easily create them in your database.
 
 ## Rotated users
 
@@ -67,4 +67,4 @@ GRANT user2 TO managing_user WITH ADMIN OPTION;
 
 ## Next steps
 
-That is all, your database users are ready for rotation. If your database is in a private network, check out the [Rotation Connectors](/docs/esc/concepts/rotators#rotation-connectors) section for next steps, otherwise go straight to [MySQL rotator](/docs/esc/providers/rotators/mysql) or [PostgreSQL rotator](/docs/esc/providers/rotators/postgres).
+That is all, your database users are ready for rotation. If your database is in a private network, check out the [Rotation Connectors](/docs/esc/concepts/rotators/#rotation-connectors) section for next steps, otherwise go straight to [MySQL rotator](/docs/esc/providers/rotators/mysql/) or [PostgreSQL rotator](/docs/esc/providers/rotators/postgres/).

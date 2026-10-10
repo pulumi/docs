@@ -124,7 +124,7 @@ When opening the environment after rotation, you should see output like this:
 
 ### Requirements
 
-Your rotator adapter must meet the [same requirements as an external provider adapter](/docs/esc/providers/secrets/external#requirements), including validating the JWT token in every incoming request. Two values are required for correct validation:
+Your rotator adapter must meet the [same requirements as an external provider adapter](/docs/esc/providers/secrets/external/#requirements), including validating the JWT token in every incoming request. Two values are required for correct validation:
 
 - `iss` (issuer): `https://api.pulumi.com/oidc`
 - `sub` (subject) format: `pulumi:environments:org:<org>:env:<project>/<env>` — note the `<project>/` segment. Environments in the legacy `default` project are the exception: their subject omits the project entirely (`pulumi:environments:org:<org>:env:<env>`).
