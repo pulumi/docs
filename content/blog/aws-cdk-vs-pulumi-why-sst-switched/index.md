@@ -69,6 +69,8 @@ The solution? Pulumi. In this post, we’ll explore why SST moved to Pulumi, wha
 
 TL;DR: Pulumi lets SST offer a faster, more flexible, and provider-agnostic infrastructure experience.
 
+Choosing between the two tools for a new project? See [SST vs. AWS CDK: Which Should You Use?](/blog/sst-vs-aws-cdk/).
+
 <!--more-->
 
 ## In This Article:
