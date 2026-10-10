@@ -101,13 +101,14 @@ The first time your agent connects, it opens a browser window:
 
 1. Paste a Pulumi access token.
 1. Select the organization the server should use by default.
+1. Confirm the redirect URL and select **Authorize Connection**.
 1. Return to your agent.
 
 The server stores the token encrypted and uses it for every call until the session ends. Sessions last 30 days, after which the agent asks you to authenticate again. If you delete the token, or it expires, before then, tool calls fail until you authenticate again with a new token. To switch the default organization, disconnect and reconnect the server in your agent and choose a different organization. You can also name an organization in a request ("list the stacks in the acme org") and the agent passes it to the tool.
 
 ### Choose a token
 
-The token you give the MCP server is separate from the one the Pulumi CLI uses (stored by `pulumi login` or set in `PULUMI_ACCESS_TOKEN`), so create a separate one for the MCP server. You can then revoke or rotate it without affecting the CLI. The server accepts two kinds:
+The token you give the MCP server is separate from the one the Pulumi CLI uses (stored by `pulumi login` or set in `PULUMI_ACCESS_TOKEN`), so create a separate one for the MCP server. You can then revoke or rotate it without affecting the CLI. The server accepts any Pulumi access token, but two kinds are most useful:
 
 - **An [organization token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token)** acts as the organization with whatever [role](/docs/administration/concepts/rbac/roles/) you assign it, and works in a single organization. This is the way to limit what the agent can see and do in Pulumi Cloud, for example by assigning a role that can only read stacks. Don't rely on the token's role to block [Neo tasks](#costs-and-edition-requirements), though: deny `neo-bridge` in your agent as well if you want the agent to be read-only. Organization tokens are available in {{< pulumi-cloud-editions "org-team-access-tokens" >}}.
 - **A [personal access token](/docs/administration/concepts/access-tokens/#personal-access-tokens)** acts as you, with your permissions in every organization you belong to. Create one at [app.pulumi.com/account/tokens](https://app.pulumi.com/account/tokens).
@@ -161,7 +162,7 @@ You don't call these tools directly: describe what you want and your agent picks
 | Tool | Description |
 |---|---|
 | `get-stacks` | List the stacks in your organization. |
-| `resource-search` | Search resources across all stacks using [resource search queries](/docs/discovery-governance/concepts/discovery/querying-resources/), such as `type:aws:s3/bucket:Bucket` or `NOT _exists_:tags`. |
+| `resource-search` | Search resources across all stacks using [resource search queries](/docs/discovery-governance/concepts/discovery/querying-resources/), such as `package:aws` or `-.tags:` (resources without tags). |
 | `get-policy-violations` | List [policy as code](/docs/discovery-governance/concepts/policy-as-code/) violations for your stacks. |
 | `get-users` | List the members of your organization and their roles. |
 
@@ -172,7 +173,7 @@ You don't call these tools directly: describe what you want and your agent picks
 | `neo-bridge` | Start a Neo task, send it follow-up messages, and approve or reject its requests. Returns a link to the task in the Pulumi Cloud console. |
 | `neo-get-tasks` | List your organization's Neo tasks and their status. |
 | `neo-continue-task` | Check the status of an existing task and read its latest events. |
-| `neo-reset-conversation` | Clear the agent's tracked conversation for a task, or for all tasks. |
+| `neo-reset-conversation` | Clear the server's tracked state for a task, or for all tasks. |
 
 ### Pulumi Registry
 
@@ -219,7 +220,7 @@ Prompts are reusable instructions your agent can load, usually from a slash-comm
 
 **New or renamed tools don't appear.** Some agents, including Cursor, cache tool definitions. Restart the agent or reconnect the server.
 
-**A tool reports an entitlement or licensing error.** The feature isn't available in your organization's edition. See [Costs and edition requirements](#costs-and-edition-requirements).
+**A tool reports "Quota limit exceeded" or "Forbidden".** A quota error usually means the feature isn't available in your organization's edition; see [Costs and edition requirements](#costs-and-edition-requirements). "Forbidden" means the token's role lacks permission; see [Choose a token](#choose-a-token).
 
 **Neo tasks don't start.** Check that Neo is enabled for your organization and that it hasn't reached its [usage limit](/docs/ai/neo/usage-limits/).
 
