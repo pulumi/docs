@@ -28,7 +28,7 @@ itemlist:
     - name: "OpenBao"
       url: "https://openbao.org/"
     - name: "CyberArk Conjur"
-      url: "https://www.cyberark.com/products/secrets-manager/"
+      url: "https://github.com/cyberark/conjur"
     - name: "Akeyless"
       url: "https://www.akeyless.io/"
     - name: "AWS Secrets Manager"
@@ -38,7 +38,7 @@ itemlist:
     - name: "Google Secret Manager"
       url: "https://cloud.google.com/security/products/secret-manager"
     - name: "1Password Secrets Automation"
-      url: "https://1password.com/products/secrets-automation"
+      url: "https://1password.com/developers/secrets-management"
     - name: "Bitwarden Secrets Manager"
       url: "https://bitwarden.com/products/secrets-manager/"
     - name: "GitGuardian"
@@ -68,7 +68,7 @@ This guide compares 17 tools across secrets orchestration platforms, enterprise 
 | [Pulumi ESC](#pulumi-esc-environments-secrets-and-configuration) | Orchestration | Managed SaaS or self-hosted | Open-source engine, commercial platform | Dynamic, short-lived OIDC credentials | Teams orchestrating multiple existing stores |
 | [Doppler](#doppler) | Orchestration | Managed SaaS | Commercial | Sync-based, integrations-driven | Developer-experience-first teams |
 | [Infisical](#infisical) | Orchestration | Self-hosted or managed | Open-source core, commercial cloud | Dynamic secrets on paid tiers | Teams wanting open-source with a cloud option |
-| [HashiCorp Vault](#hashicorp-vault) | Enterprise vault | Self-hosted or HCP-managed | BSL 1.1 (source-available) | Dynamic secrets, 50+ engines | Complex, multi-cloud enterprises with platform teams |
+| [HashiCorp Vault](#hashicorp-vault) | Enterprise vault | Self-hosted or HCP-managed | BSL 1.1 (source-available) | Dynamic secrets, broad plugin ecosystem | Complex, multi-cloud enterprises with platform teams |
 | [OpenBao](#openbao) | Enterprise vault | Self-hosted | Open source (MPL 2.0) | Dynamic secrets (Vault-compatible) | Teams that want Vault's model without the BSL |
 | [CyberArk Conjur](#cyberark-conjur) | Enterprise vault | Self-hosted or Conjur Cloud | Commercial, open-source core | Policy-driven rotation | Regulated industries needing PAM integration |
 | [Akeyless](#akeyless) | Enterprise vault | Managed SaaS | Commercial, usage-based | Just-in-time, zero-knowledge | Cloud-first teams avoiding self-hosted ops |
@@ -89,15 +89,15 @@ Orchestration platforms connect and coordinate multiple secret sources rather th
 
 ### Pulumi ESC (Environments, Secrets, and Configuration)
 
-[Pulumi ESC](/docs/esc/) orchestrates the secret stores you already have, connecting HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, Google Secret Manager, 1Password, and 20-plus other providers through a unified interface. You can modernize your secrets workflow without abandoning current infrastructure investments.
+[Pulumi ESC](/docs/esc/) orchestrates the secret stores you already have, connecting HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, Google Secret Manager, 1Password, and other secret stores through a unified interface. You can modernize your secrets workflow without abandoning current infrastructure investments.
 
 The platform's [configuration-as-code approach](/docs/esc/concepts/) defines hierarchical YAML environments that cascade from base configuration through development, staging, and production. Define common settings once, inherit them everywhere, and keep appropriate security boundaries between environments.
 
-ESC provides [audit logging](/docs/esc/administration/audit-logs/) with user identity, timestamp, access method, and resource detail on every access, supporting compliance frameworks like SOC 2 and GDPR. Dynamic credential generation is the bigger differentiator: instead of storing long-lived AWS access keys or Azure service principal secrets, ESC provisions short-lived OIDC tokens on demand through its [provider model](/docs/esc/providers/), so credentials expire automatically rather than sitting around waiting to be misused.
+ESC provides [audit logging](/docs/esc/administration/audit-logs/) with timestamp, user, action taken, and source IP on every access, supporting compliance frameworks like SOC 2 and GDPR. Dynamic credential generation is the bigger differentiator: instead of storing long-lived AWS access keys or Azure service principal secrets, ESC provisions short-lived OIDC tokens on demand through its [provider model](/docs/esc/providers/), so credentials expire automatically rather than sitting around waiting to be misused.
 
-The platform keeps a zero-lock-in posture through its [open-source engine](https://github.com/pulumi/esc) and [SDK support](/docs/esc/languages-sdks/) for TypeScript, Python, Go, and .NET. GitGuardian's own 2027 tooling roundup independently describes ESC as pulling credentials dynamically from AWS Secrets Manager, Azure Key Vault, Google Secret Manager, Vault, and 1Password via OIDC, with automated rotation shipped for AWS IAM keys and Postgres/MySQL credentials — third-party confirmation of the orchestration model rather than Pulumi's own marketing copy.
+The platform keeps a zero-lock-in posture through its [open-source engine](https://github.com/pulumi/esc) and [SDK support](/docs/esc/languages-sdks/) for TypeScript, Python, Go, and .NET.
 
-ESC's [free tier](/pricing/) covers unlimited environments, and usage-based pricing for advanced features scales with organizational growth. For teams with strict data residency requirements, [Pulumi's self-hosting options](/product/self-hosted/) add cost predictability and control. ESC fits best when you're running multiple clouds or already have secrets scattered across several stores; if you have exactly one secret store and no plans to add a second, a cloud-native manager or a lighter developer tool may be all you need.
+ESC's [Free edition](/pricing/) includes basic Pulumi ESC, and paid editions bill per secret and per API call, so costs scale with usage. For teams with strict data residency requirements, [Pulumi's self-hosting options](/product/self-hosted/) add cost predictability and control. ESC fits best when you're running multiple clouds or already have secrets scattered across several stores; if you have exactly one secret store and no plans to add a second, a cloud-native manager or a lighter developer tool may be all you need.
 
 ### Doppler
 
@@ -105,9 +105,9 @@ Doppler focuses on developer experience: an intuitive interface, branch-based en
 
 ### Infisical
 
-Infisical pairs an open-source core with a managed cloud option, and it now prices secrets management [per identity](https://infisical.com/pricing) — human and machine — rather than per human user. The free tier covers 5 identities; Pro runs $20/identity/month billed annually ($23 month-to-month), with Advanced at $40/identity/month annually for dynamic-secret proxying and stronger access controls.
+Infisical pairs an open-source core with a managed cloud option, and it now prices secrets management [per identity](https://infisical.com/pricing) — human and machine — rather than per human user. The free tier covers 5 identities; Pro runs $20/identity/month billed annually ($23 month-to-month), with higher tiers adding stronger access controls; check [Infisical's pricing page](https://infisical.com/pricing) for current figures.
 
-Infisical has also shipped **Agent Vault**, an open-source credential broker built specifically for AI agents: it sits between an agent and the API it calls, hands the agent's sandbox a placeholder value, and swaps in the real credential only as the request leaves the sandbox — a direct response to agents that would otherwise need standing access to real secrets. It's a newer, standalone project, and it overlaps in purpose with the "Agent Proxy" capability bundled into Infisical's paid tiers, so check Infisical's own docs for which one fits your deployment before you commit to either. Infisical has also broadened its scope beyond secrets into certificate management and privileged access, positioning itself as an identity security platform rather than a single-purpose vault.
+Infisical has also shipped **Agent Vault**, an open-source credential broker built specifically for AI agents: it sits between an agent and the API it calls, hands the agent's sandbox a placeholder value, and swaps in the real credential only as the request leaves the sandbox — a direct response to agents that would otherwise need standing access to real secrets. Infisical has also broadened its scope beyond secrets into certificate management and privileged access, positioning itself as an identity security platform rather than a single-purpose vault.
 
 ## Enterprise secrets vaults
 
@@ -115,7 +115,7 @@ Enterprise vaults prioritize maximum flexibility, extensibility, and compliance 
 
 ### HashiCorp Vault
 
-[HashiCorp Vault](/what-is/what-is-hashicorp-vault/) is still the reference point for enterprise secrets management, with dynamic secrets generation across 50-plus systems and support for more than 100 authentication methods and secret engines. Two changes matter for anyone budgeting or evaluating Vault today. First, HashiCorp is now HashiCorp, an IBM Company: IBM's roughly $6.4 billion acquisition closed February 27, 2025, and Vault ships under IBM's stewardship going forward. Second, Vault moved off the open-source MPL 2.0 license to the Business Source License (BSL) 1.1 starting with v1.15.0 in August 2023, so Vault today is source-available rather than OSI-approved open source. HCP Vault Dedicated, the managed offering, now bills by the cluster-hour rather than the flat per-node rate some older comparisons still quote; a production-grade cluster commonly runs well over $1,000/month, so confirm current numbers directly with HashiCorp before you budget against an old figure.
+[HashiCorp Vault](/what-is/what-is-hashicorp-vault/) is still the reference point for enterprise secrets management, with dynamic secrets generation and a wide range of authentication methods and secret engines. Two changes matter for anyone budgeting or evaluating Vault today. First, HashiCorp is now HashiCorp, an IBM Company: IBM's roughly $6.4 billion acquisition closed February 27, 2025, and Vault ships under IBM's stewardship going forward. Second, Vault moved off the open-source MPL 2.0 license to the Business Source License (BSL) 1.1 announced in August 2023 and first applied in v1.15.0 (September 2023), so Vault today is source-available rather than OSI-approved open source. HCP Vault Dedicated, the managed offering, bills by the cluster-hour; a production-grade cluster commonly runs well over $1,000/month, so confirm current numbers directly with HashiCorp before you budget against an old figure.
 
 Vault remains the right call for organizations that need maximum flexibility, run genuinely complex multi-cloud environments, and have the DevOps expertise to operate it well.
 
@@ -167,7 +167,7 @@ Scanning tools find secrets that have already leaked into code, commits, or CI l
 
 ### GitGuardian
 
-GitGuardian scans commits, pull requests, and issues across GitHub, GitLab, Bitbucket, and Azure DevOps in real time, detecting over 350 secret types. Its published Standard tier runs [$18/developer/month](https://www.gitguardian.com/pricing) for teams of 26-100 developers; above that, and for Enterprise, pricing moves to a custom quote. GitGuardian fits organizations with large codebases and formal DevSecOps programs that need to catch exposure before it reaches production.
+GitGuardian scans commits, pull requests, and issues across GitHub, GitLab, Bitbucket, and Azure DevOps in real time, detecting a large catalog of secret types. Its published Standard tier runs [$18/developer/month](https://www.gitguardian.com/pricing) for teams of 26-100 developers; above that, and for Enterprise, pricing moves to a custom quote. GitGuardian fits organizations with large codebases and formal DevSecOps programs that need to catch exposure before it reaches production.
 
 ### TruffleHog
 
@@ -221,7 +221,7 @@ Compliance and licensing add a fourth filter on top of those three: government a
 
 ### What's the difference between AWS Secrets Manager and HashiCorp Vault?
 
-AWS Secrets Manager is a managed, AWS-only service with native rotation for AWS databases and, since late 2025, a growing set of third-party SaaS integrations through Managed External Secrets. HashiCorp Vault is self-hosted (or HCP-managed) and cloud-agnostic, supporting over 50 dynamic secret engines across any infrastructure. Choose Secrets Manager if you're AWS-only; choose Vault or OpenBao if you're multi-cloud or need engines AWS doesn't offer.
+AWS Secrets Manager is a managed, AWS-only service with native rotation for AWS databases and, since late 2025, a growing set of third-party SaaS integrations through Managed External Secrets. HashiCorp Vault is self-hosted (or HCP-managed) and cloud-agnostic, with dynamic secret engines for major clouds and databases. Choose Secrets Manager if you're AWS-only; choose Vault or OpenBao if you're multi-cloud or need engines AWS doesn't offer.
 
 ### Is base64 encoding in Kubernetes Secrets actually secure?
 
