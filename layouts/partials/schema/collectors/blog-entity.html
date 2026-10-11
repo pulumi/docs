@@ -116,7 +116,7 @@
       {{ end }}
       {{/* /authors/%s is a Hugo logical content path, not the published
            permalink -- config/_default/config.yml routes the `authors`
-           taxonomy term to /blog/author/:slug/. Resolve the real page and
+           taxonomy term to /blog/authors/:slug/. Resolve the real page and
            omit `url` if there is no live term page for this slug, mirroring
            schema/utils/author-entities.html. */}}
       {{ $fallbackAuthor := dict
@@ -139,7 +139,7 @@
       {{ end }}
       {{ $fallbackAuthorPage := site.GetPage (printf "/authors/%s" (. | urlize)) }}
       {{ with $fallbackAuthorPage }}
-        {{ $fallbackAuthor = merge $fallbackAuthor (dict "url" .Permalink) }}
+        {{ $fallbackAuthor = merge $fallbackAuthor (dict "url" .Permalink "@id" (printf "%s#%s" .Permalink (cond $isOrg "organization" "person"))) }}
       {{ end }}
       {{ $authors = $authors | append $fallbackAuthor }}
     {{ end }}

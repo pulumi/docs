@@ -77,7 +77,7 @@ const config = {
     enableWaf: stackConfig.getBoolean("enableWaf") || false,
 
     // wafRateLimit is the maximum number of requests per 5-minute window per IP before WAF blocks.
-    wafRateLimit: stackConfig.getNumber("wafRateLimit") || 500,
+    wafRateLimit: stackConfig.getNumber("wafRateLimit") || 5000,
 
     // enableSupportForm toggles the /api/support endpoint backing the support-request
     // form at /support/new/ (see supportForm.ts), which files submissions as Intercom
@@ -188,7 +188,9 @@ if (config.enableWaf) {
         }, {
             name: "rate-limit-per-ip",
             priority: 1,
-            action: { block: {} },
+            // A 429 isn't in customErrorResponses, so a rate-limit block stays visible
+            // instead of being rewritten into the 404 page like a 403 would be.
+            action: { block: { customResponse: { responseCode: 429 } } },
             statement: {
                 rateBasedStatement: {
                     limit: config.wafRateLimit,
@@ -972,6 +974,27 @@ if (config.registryStack) {
         }
     );
     registryBehaviors.push(
+        // Registry hashed CSS/JS bundles (e.g. /registry/css/bundle-registry.push-<sha>.css)
+        // get a fresh filename on every deploy, so they're safe to cache immutably
+        // for a year. Must come BEFORE "/registry*" below so this more specific
+        // pattern matches first; otherwise the broader pattern's 30-minute cache
+        // policy and default (non-immutable) response headers would win.
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/registry/css/bundle-registry.*.css",
+            cachePolicyId: oneYearCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/registry/js/bundle-registry.*.js",
+            cachePolicyId: oneYearCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
         {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
@@ -1004,12 +1027,12 @@ const devBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[
 
 if (config.devStack) {
     const devStack = new pulumi.StackReference(config.devStack);
-    const devCDN = devStack.getOutput("cloudFrontDomain");
+    const marketingCDN = devStack.getOutput("cloudFrontDomain");
 
     devOrigins.push(
         {
-            originId: devCDN,
-            domainName: devCDN,
+            originId: marketingCDN,
+            domainName: marketingCDN,
             customOriginConfig: {
                 originProtocolPolicy: "https-only",
                 httpPort: 80,
@@ -1021,14 +1044,14 @@ if (config.devStack) {
     devBehaviors.push(
         {
             ...baseCacheBehavior,
-            targetOriginId: devCDN,
+            targetOriginId: marketingCDN,
             pathPattern: "/dev*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
         {
             ...baseCacheBehavior,
-            targetOriginId: devCDN,
+            targetOriginId: marketingCDN,
             // The Dev Center (Astro) emits root-relative assets under /assets/*
             // (CSS, JS, images), so those must reach the same origin as /dev or
             // the pages render unstyled. pulumi/docs serves its own assets from
@@ -1037,6 +1060,27 @@ if (config.devStack) {
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
+        // /community moved to marketing-web, except /community/team/*, which stays
+        // here (blog bylines link to it). Exact paths, never a "/community*" wildcard:
+        // that would also take /community/team/* and the
+        // /community/community-engineering/* redirect keys away from S3.
+        ...["/community", "/community/", "/community.md", "/community/puluminaries*"].map(
+            (pathPattern) => ({
+                ...baseCacheBehavior,
+                targetOriginId: marketingCDN,
+                pathPattern,
+                cachePolicyId: thirtyMinuteCachePolicy.id,
+                originRequestPolicyId: allViewerExceptHostHeaderId,
+            }),
+        ),
+        // Exact paths: /pricing* would also take the /pricing/open-source-free-tier/ redirect off S3.
+        ...["/pricing", "/pricing/", "/pricing.md"].map((pathPattern) => ({
+            ...baseCacheBehavior,
+            targetOriginId: marketingCDN,
+            pathPattern,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+        })),
     )
 }
 
@@ -1210,8 +1254,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...baseCacheBehavior,
         cachePolicyId: tenMinuteCacheKeyPolicy.id,
         functionAssociations: [
-            // Serves index.md for the homepage, /what-is/, /product/, and /pricing/
-            // via Accept: text/markdown or the .md URL suffix. The viewer-request
+            // Serves index.md for the homepage, /what-is/, and /product/ via
+            // Accept: text/markdown or the .md URL suffix. The viewer-request
             // rewrite lands before the cache lookup, so the rewritten URI is the
             // cache key and no cache policy changes are needed.
             getMarketingMarkdownNegotiationFunctionAssociation(),

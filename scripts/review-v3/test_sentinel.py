@@ -567,6 +567,130 @@ def test_g3_bot_denylist_and_bot_type_excluded():
     assert _gate(v, "G3").status == "red"
 
 
+HUMAN_CONFIG, _human_errors, _ = routing.validate_raw({
+    **RAW_CONFIG,
+    "approval": {"scope": "any-human", "admins_satisfy": True},
+    "bot_approvers": [
+        {"approver": "github-actions[bot]", "author": "pulumi-bot",
+         "label": "automation/merge", "why": "regen lane"},
+        {"approver": "pulumi-bot", "author": "dependabot[bot]", "why": "deps lane"},
+    ],
+})
+assert HUMAN_CONFIG is not None, _human_errors
+
+
+def test_g3_any_human_with_write_access_clears_any_lane():
+    """`approval.scope: any-human`: no team asked, no team required."""
+    card = author_card([], state=_state_with([]))
+    files = [docs_file_substantive(), frontend_file()]
+    gh = StubGh(pr=pr_meta(), files=files, comments=[card],
+                reviews=[approval("a-committer")], memberships={},
+                permissions={"a-committer": "write"})
+    v = sentinel.evaluate(gh, HUMAN_CONFIG)
+    g3 = _gate(v, "G3")
+    assert g3.status == "ok" and "a-committer" in g3.message, g3.message
+    assert v.conclusion == "success", v.to_json()
+    # maintain and admin are write-or-better
+    for perm in ("maintain", "admin"):
+        gh = StubGh(pr=pr_meta(), files=files, comments=[card],
+                    reviews=[approval("p")], permissions={"p": perm})
+        assert _gate(sentinel.evaluate(gh, HUMAN_CONFIG), "G3").status == "ok", perm
+
+
+def test_g3_any_human_still_means_someone_who_could_merge():
+    """A public repo takes reviews from anyone. A read-only approval is not
+    one GitHub's merge box counts, so G3 must not count it either."""
+    card = author_card([], state=_state_with([]))
+    for perm in ("read", "triage", "none"):
+        gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                    reviews=[approval("drive-by")], permissions={"drive-by": perm})
+        g3 = _gate(sentinel.evaluate(gh, HUMAN_CONFIG), "G3")
+        assert g3.status == "red" and "write access" in g3.message, perm
+    # a stale write-access approval says so
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("a-committer", commit_id="b" * 40)],
+                permissions={"a-committer": "write"})
+    g3 = _gate(sentinel.evaluate(gh, HUMAN_CONFIG), "G3")
+    assert g3.status == "red" and "approved an earlier commit" in g3.message
+
+
+def test_g3_any_human_never_asks_about_teams_and_one_error_does_not_poison():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("flaky"), approval("a-committer")],
+                membership_error_users={"flaky", "a-committer"},  # never consulted
+                permission_error_users={"flaky"},
+                permissions={"a-committer": "write"})
+    v = sentinel.evaluate(gh, HUMAN_CONFIG)
+    assert _gate(v, "G3").status == "ok", _gate(v, "G3").message
+    # when the only approver's lookup fails, it is action_required, not red
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("flaky")], permission_error_users={"flaky"})
+    v = sentinel.evaluate(gh, HUMAN_CONFIG)
+    assert _gate(v, "G3").status == "error" and v.conclusion == "action_required"
+
+
+def test_g3_any_human_still_excludes_bots_off_their_lane():
+    """Widening to "any human" does not widen to "any account": a bot with
+    write access (pulumi-bot has it) still never counts off its lane."""
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
+                comments=[card],
+                reviews=[approval("pulumi-bot"), approval("github-actions[bot]", utype="Bot"),
+                         approval("workprentice[bot]", utype="Bot")],
+                permissions={"pulumi-bot": "admin", "github-actions[bot]": "write",
+                             "workprentice[bot]": "write"})
+    g3 = _gate(sentinel.evaluate(gh, HUMAN_CONFIG), "G3")
+    assert g3.status == "red"
+    assert gh.permission_calls == []  # bot reviews never reach the lookup
+
+
+def test_g3_bot_approver_clears_its_own_lane_only():
+    card = author_card([], state=_state_with([]))
+    regen = dict(files=[docs_file_substantive()], comments=[card],
+                 reviews=[approval("github-actions[bot]", utype="Bot")])
+    # pulumi-bot + automation/merge, approved by github-actions[bot]: ok
+    gh = StubGh(pr=pr_meta(author="pulumi-bot", labels=["automation/merge"]), **regen)
+    # (that pair is also not_governed in RAW_CONFIG; take it out to see G3)
+    cfg = routing.validate_raw({**RAW_CONFIG, "not_governed": {},
+                                "approval": {"scope": "any-human"},
+                                "bot_approvers": HUMAN_CONFIG.bot_approvers})[0]
+    v = sentinel.evaluate(gh, cfg)
+    g3 = _gate(v, "G3")
+    assert g3.status == "ok" and "github-actions[bot]" in g3.message, g3.message
+    assert v.conclusion == "success", v.to_json()
+    assert gh.permission_calls == []  # the bot lane costs no API calls
+    # same approval without the label: a pulumi-bot content-review PR needs a human
+    gh = StubGh(pr=pr_meta(author="pulumi-bot"), **regen)
+    assert _gate(sentinel.evaluate(gh, cfg), "G3").status == "red"
+    # same label, different author: a human wearing the label is not the lane
+    gh = StubGh(pr=pr_meta(author="someone", labels=["automation/merge"]), **regen)
+    assert _gate(sentinel.evaluate(gh, cfg), "G3").status == "red"
+    # the bot lane works under the strict lane scope too: it is a statement
+    # about the lane, not about how wide the human rule is
+    strict = routing.validate_raw({**RAW_CONFIG, "not_governed": {},
+                                   "bot_approvers": HUMAN_CONFIG.bot_approvers})[0]
+    gh = StubGh(pr=pr_meta(author="pulumi-bot", labels=["automation/merge"]), **regen)
+    assert _gate(sentinel.evaluate(gh, strict), "G3").status == "ok"
+
+
+def test_g3_bot_approver_overrides_the_denylist_for_its_lane():
+    """pulumi-bot is `type: User` and on `bots:`; the Dependabot lane is the
+    one place its approval counts."""
+    card = author_card([], state=_state_with([]))
+    cfg = routing.validate_raw({**RAW_CONFIG, "not_governed": {},
+                                "approval": {"scope": "any-human"},
+                                "bot_approvers": HUMAN_CONFIG.bot_approvers})[0]
+    gh = StubGh(pr=pr_meta(author="dependabot[bot]"), files=[docs_file_substantive()],
+                comments=[card], reviews=[approval("pulumi-bot")])
+    assert _gate(sentinel.evaluate(gh, cfg), "G3").status == "ok"
+    # a stale lane approval does not carry over a push
+    gh = StubGh(pr=pr_meta(author="dependabot[bot]"), files=[docs_file_substantive()],
+                comments=[card], reviews=[approval("pulumi-bot", commit_id="b" * 40)])
+    g3 = _gate(sentinel.evaluate(gh, cfg), "G3")
+    assert g3.status == "red" and "approved an earlier commit" in g3.message
+
+
 def test_g3_membership_api_failure_action_required_not_red():
     card = author_card([], state=_state_with([]))
     gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
@@ -703,7 +827,7 @@ def test_infra_needs_staging_status_g4():
                 memberships={("docs-tools", "tools-member"): "active"})
     v_red = sentinel.evaluate(StubGh(**base), CONFIG)
     assert _gate(v_red, "G4").status == "red"
-    assert "/deploy-staging" in _gate(v_red, "G4").message
+    assert "testing-build-and-deploy.yml" in _gate(v_red, "G4").message
     assert v_red.conclusion == "failure"
 
     v_ok = sentinel.evaluate(
@@ -1015,8 +1139,7 @@ def test_role_comments_must_come_from_the_bot():
     forgery, so the real card never showed it.
 
     The rule is the one the writer already enforces: bot-authored, marker as
-    an exact line in the first three (`pinned-comment.sh list_role_comments`,
-    `resolve-handler.py:222`).
+    an exact line in the first three (`pinned-comment.sh list_role_comments`).
     """
     real = author_card([("F1", "must"), ("F2", "must")], state=_state_with([]))
     real["user"] = {"login": sentinel.BOT_LOGIN, "type": "Bot"}
@@ -1453,11 +1576,11 @@ def test_no_workflow_interpolates_pr_controlled_text_into_a_shell():
     `)` and `'` — space is the only shell metacharacter it rejects, and
     `$IFS` covers that.
 
-    staging-deploy-auto.yml and staging-deploy-pr.yml both did this with
-    `github.event.pull_request.head.ref`. The PR lane holds `id-token: write`
-    with ESC already authenticated, so the payload could mint an OIDC token
-    and read the org-scoped PULUMI_BOT_TOKEN — repo-write escalating to
-    org-scoped credentials.
+    staging-deploy-auto.yml and the since-retired comment-triggered staging
+    lane both did this with `github.event.pull_request.head.ref`. The latter
+    held `id-token: write` with ESC already authenticated, so the payload
+    could mint an OIDC token and read the org-scoped PULUMI_BOT_TOKEN —
+    repo-write escalating to org-scoped credentials.
 
     Both files' headers justified safety as "never checks out or executes PR
     code", which is true and beside the point: the VALUE is the vector, not
@@ -1551,7 +1674,7 @@ def test_workflow_can_actually_write_the_comments_it_writes():
     when enforcing, and the status comment did not exist. The first real
     POST failed with exit 1 (PR #21642).
     """
-    for name in ("review-sentinel.yml", "staging-deploy-pr.yml"):
+    for name in ("review-sentinel.yml",):
         wf = (REPO_ROOT / ".github" / "workflows" / name).read_text()
         assert "pull-requests: write" in wf, (
             f"{name} posts comments on a PR and needs `pull-requests: write`; "
@@ -1639,27 +1762,17 @@ def test_the_auto_staging_lane_dispatches_and_gets_out():
     writes its own `staging/pulumi-test-io` status.
     """
     auto = (REPO_ROOT / ".github" / "workflows" / "staging-deploy-auto.yml").read_text()
-    assert "--dispatch-only" in auto, "the auto lane must not wait on the deploy"
     import yaml as _yaml  # noqa: PLC0415
     jobs = _yaml.safe_load(auto)["jobs"]
     assert all("concurrency" not in j for j in jobs.values()), "a queued job is a job that gets cancelled"
 
     script = (REPO_ROOT / "scripts" / "review-v3" / "staging-deploy.sh").read_text()
-    assert "--dispatch-only) DISPATCH_ONLY" in script
+    # The script is dispatch-only: nothing that calls it may hold a runner
+    # open on the deploy. Match the command, not the prose.
+    assert not any(ln.lstrip().startswith(("gh run watch", "if gh run watch"))
+                   for ln in script.splitlines()), "staging-deploy.sh must not wait on the deploy"
     # stale comment guard: the header must not still promise a queue
     assert "Concurrency sits on the DEPLOY JOB" not in auto
-    # The attended lane still watches -- not to write the status (that is
-    # staging-status.yml's job now) but because the watch is what holds its
-    # `staging-stack` group for the length of the deploy. Match the script
-    # invocation, not the prose: the header explains the contrast.
-    pr_lane = (REPO_ROOT / ".github" / "workflows" / "staging-deploy-pr.yml").read_text()
-    invocation = "\n".join(
-        step["run"] for step in _yaml.safe_load(pr_lane)["jobs"]["deploy"]["steps"]
-        if "staging-deploy.sh" in step.get("run", "")
-    )
-    assert invocation, "the attended lane must still call staging-deploy.sh"
-    assert "--dispatch-only" not in invocation
-    assert "--announce" in invocation
 
     # The dispatched run must NOT resolve its own status: see
     # test_the_staging_status_listener_finalizes_from_the_default_branch.
@@ -1753,9 +1866,8 @@ def test_staging_deploy_writes_no_status_at_all():
         "a pending status needs a writer that cannot miss -- a schedule sweep, not a cascade"
     assert "-f state=\"$STATE\"" not in script, \
         "the terminal status belongs to staging-status.yml"
-    assert "gh run watch" in script, "the attended lane still holds the stack"
-    # The evidence the Sentinel actually reads is the run record, and both
-    # lanes must keep producing one.
+    # The evidence the Sentinel actually reads is the run record, and the
+    # lane must keep producing one.
     assert "gh workflow run testing-build-and-deploy.yml" in script
 
 
@@ -1839,3 +1951,99 @@ def test_a_legacy_review_missing_a_page_errors_g2_rather_than_passing_it():
     assert _gate(v, "G2").status == "error"
     assert "page(s) 2 could not be read" in _gate(v, "G2").message
     assert v.conclusion != "success"
+
+
+def test_a_legacy_page_the_v2_update_lane_posted_as_pulumi_bot_is_read():
+    """#21210/#21487/#21149: the v2 update lane runs claude-code-action on
+    PULUMI_BOT_TOKEN, so the page it re-posts is pulumi-bot's. G2 read only
+    github-actions[bot] pages and reported page 2 unreadable."""
+    page1 = {"id": 9, "user": {"login": "github-actions[bot]"},
+             "body": (f"<!-- CLAUDE_REVIEW 1/2 -->\n## Pre-merge Review\n"
+                      f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->\n### 📜 Review history\n")}
+    page2 = {"id": 10, "user": {"login": "pulumi-bot"},
+             "body": ("<!-- CLAUDE_REVIEW 2/2 -->\n### 🚨 Outstanding in this PR\n\n"
+                      "- **[L10-12]** `f.md` — broken thing\n")}
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[page1, page2],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "red" and "1 🚨 Outstanding" in _gate(v, "G2").message
+    # The v3 role cards stay github-actions[bot]-only.
+    card = {"id": 11, "user": {"login": "pulumi-bot"},
+            "body": sentinel.AUTHOR_MARKER + "\n"}
+    assert sentinel._find_comment([card], sentinel.AUTHOR_MARKER) is None
+
+
+def test_a_transient_5xx_on_a_read_is_retried(monkeypatch):
+    """Run 35938827723: one HTTP 500 on `pulls/N` failed the evaluation."""
+    calls = []
+
+    class R:
+        def __init__(self, rc, err="", out="{}"):
+            self.returncode, self.stderr, self.stdout = rc, err, out
+
+    results = [R(1, "gh: HTTP 500"), R(1, "gh: HTTP 502"), R(0)]
+
+    def fake_run(argv, **_kw):
+        calls.append(argv)
+        return results.pop(0)
+
+    monkeypatch.setattr(sentinel.subprocess, "run", fake_run)
+    monkeypatch.setattr(sentinel, "RETRY_SLEEP_S", 0)
+    gh = sentinel.Gh("pulumi/docs", 1)
+    gh._run(["api", "repos/pulumi/docs/pulls/1"])
+    assert len(calls) == 3
+
+    calls.clear()
+    results[:] = [R(1, "gh: HTTP 500"), R(0)]
+    try:
+        gh._run(["api", "-X", "PATCH", "repos/pulumi/docs/issues/comments/1"])
+    except sentinel.SentinelDataError:
+        pass
+    assert len(calls) == 1, "writes never retry"
+
+    calls.clear()
+    results[:] = [R(1, "gh: HTTP 404"), R(0)]
+    try:
+        gh._run(["api", "repos/pulumi/docs/pulls/1"])
+    except sentinel.SentinelDataError:
+        pass
+    assert len(calls) == 1, "a 4xx is an answer, not a flake"
+
+
+def test_g2_does_not_call_a_stale_card_answered():
+    """#21840: G1 red "no current review" beside G2 green "every finding
+    answered" about a card at an older head. An answered stale card defers to
+    G1; undecided findings on it stay red — they are real until answered."""
+    old = "b" * 40
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                comments=[author_card(head=old), brief_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").status == "red" and "#update-review" in _gate(v, "G1").message
+    assert "push to refresh" not in _gate(v, "G1").message
+    assert _gate(v, "G2").status == "skip" and "not current" in _gate(v, "G2").message
+
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                comments=[author_card([("F1", "must")], head=old), brief_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "red" and "F1" in _gate(v, "G2").message
+
+
+def test_oversized_is_the_label_not_the_size():
+    """Adversarial review of #21948: deciding "oversized" by size flipped PRs
+    reviewed before the size check existed -- G1/G2 skipped (so open 🚨
+    findings stopped blocking) and G5 newly red on approved PRs. The label is
+    the source of truth; triage re-dispatches the Sentinel when it moves it
+    (#21936's race)."""
+    meta = pr_meta()
+    meta.update(additions=31000, deletions=382, changed_files=1156)
+    gh = StubGh(pr=meta, files=[docs_file_substantive()],
+                comments=[author_card([("F1", "must")]), brief_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "red" and "F1" in _gate(v, "G2").message
+    assert _gate(v, "G5").status == "skip"
+    labelled = pr_meta(labels=["review:oversized"])
+    labelled.update(additions=31000, deletions=382, changed_files=1156)
+    v = sentinel.evaluate(StubGh(pr=labelled, files=[docs_file_substantive()]), CONFIG)
+    assert _gate(v, "G1").status == "skip" and "oversized" in _gate(v, "G1").message
+    assert _gate(v, "G5").status == "red"

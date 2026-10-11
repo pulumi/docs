@@ -57,6 +57,23 @@ The brand guide owns link *text* (descriptive, no "here"/"click here"). This sit
   - Incorrect: `[stacks](./stacks/)`, `![diagram](./diagram.png)`, `[stacks](../stacks/)`
 - When changing the URL of an existing page, add a redirect with a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
 
+### Linking to the Dev Center
+
+The [Dev Center](/dev/) (tutorials, templates, examples, and a glossary) ships from a different repo, [pulumi/marketing-web](https://github.com/pulumi/marketing-web). Individual tutorials there can be renamed or retired without this repo finding out, so link to pages built to last rather than to single tutorials. Dev Center content is technical examples, not marketing, so linking to it from the docs is fine.
+
+**What to link to**, most stable first:
+
+1. **Facet landing pages**: `/dev/browse/cloud/<cloud>/`, `/dev/browse/language/<language>/`, and `/dev/browse/collection/<collection>/` (for example `/dev/browse/cloud/aws/`).
+1. **Filter URLs** when you need more than one facet: `/dev/browse/?cloud=aws&tag=containers`. The query parameters (`type`, `cloud`, `language`, `collection`, `tag`, `q`) are a frozen contract on the Dev Center side, so these URLs always resolve.
+1. **Hubs and template groups**: `/dev/`, `/dev/tutorials/`, `/dev/templates/`, a tutorial series index (such as `/dev/tutorials/pulumi-fundamentals/`), or a template group (`/dev/templates/<group>/[<cloud>/]`).
+1. **Tag landing pages**: `/dev/browse/tag/<tag>/`. A tag page exists only while at least five items carry the tag (currently; set by `MIN_LANDING_ROWS` in marketing-web's `apps/www/src/lib/dev-facets.ts`), so it can disappear. Link to one only if it's listed at `https://www.pulumi.com/dev/sitemap-0.xml`, and prefer a filter URL (`/dev/browse/?tag=<tag>`) when a tag has few items.
+
+**Deep links to a single tutorial** (`/dev/tutorials/<slug>/`) are fine only when that tutorial is the hands-on companion to the docs page, for example a concept page that links to the tutorial walking through it. Don't use a list of individual tutorials as a page's navigation.
+
+**Where to link:** "Next steps" and "Learn more" sections, cloud and integration index pages, and get-started next steps. Don't send readers to the Dev Center in place of a docs page that explains a concept.
+
+Always use root-relative `/dev/...` paths with a trailing slash. Never link to `/tutorials/` or `/templates/`; those only redirect.
+
 ### External link indicator
 
 Links that take users to a different UI/experience should include the ↗ (U+2197 North East Arrow) symbol when they appear in navigation menus or landing-page cards.
@@ -283,6 +300,29 @@ Rules:
 - **FAQ is not troubleshooting.** "How do I fix this error?" content belongs with the rest of the day-2 material under [IaC Operations](https://www.pulumi.com/docs/iac/operations/) (Troubleshooting, Debugging) — or, for a Pulumi Cloud feature, on a `troubleshooting.md` page inside that feature's own section (the SAML and SCIM sections each have one) — not in an FAQ. FAQ pages answer conceptual and product questions ("Does Pulumi support rollbacks?", "How does Pulumi store state?").
 - **Keep answers canonical.** If an answer needs more than a few paragraphs, the full explanation belongs in the topical docs and the FAQ entry gives the short answer plus a link. Don't let an FAQ become the only place something is documented.
 - **In-page FAQ sections are different.** A "Frequently asked questions" H2 near the end of a what-is page, blog post, or product page is a page-level pattern, not part of the FAQ hub, and stays with its page. See [Headings](#headings) for the question-mark exception that lets the FAQPage JSON-LD collector pick those questions up.
+
+---
+
+## Neutral tone toward other products
+
+Docs under `content/docs/` exist to inform readers, not to convince them. This matters most on comparison pages (`content/docs/iac/comparisons/`, `content/docs/esc/vs/`, `content/docs/deployments/versus.md`), but it applies anywhere docs mention another product. A reader who arrives on a comparison page is often still deciding, and a page that reads like a sales pitch loses their trust in the rest of the docs. Persuasive copy belongs on product and marketing pages (`content/product/`, the homepage), not in docs. The brand guide's [voice and tone](https://brand.pulumi.com/voice/voice-and-tone/) section asks for grounded copy without "overly promotional, salesy, or marketing-heavy language"; this section applies that to the Hugo docs tree.
+
+This is about how docs treat *other products*, not a ban on opinions. Docs can and should recommend best practices for using Pulumi itself ("we recommend a general-purpose language for projects that need unit tests," "use one stack per environment") and patterns we've found effective for using Pulumi alongside other products ("provision the cluster with Pulumi and install charts with `helm.Release`"). State those as recommendations, with the reasoning, rather than as claims that the other product falls short.
+
+Write docs so that a user of the other product would call them fair:
+
+- **Describe, don't rank.** State what each product does and how. No superlatives or verdicts between products: "the best alternative," "Pulumi is the better choice," "more powerful than X." Let the reader draw the conclusion.
+- **No persuasion framing.** Don't write sections whose purpose is to move the reader, such as "Why teams are leaving X," "What you get in return," "One platform, not a pile of point tools," or "X is no longer a reason to wait." Headings describe content ("Policy as code," "Pricing models"); they don't argue.
+- **No fear, uncertainty, or doubt.** Leave out acquisitions, ownership changes, licensing controversies, pricing changes, or plan retirements unless the fact directly changes what the reader can do (for example, a free tier's resource limit, or a deprecated product like CDKTF). When one belongs, state it once, plainly, with a `<!-- verified: YYYY-MM -->` marker, and don't speculate about its consequences.
+- **Represent the other product accurately and at its best.** Describe its equivalent features by name before saying what it lacks. "No equivalent" and "Limited" need to be true and specific; check the other product's current docs rather than working from memory. Don't frame a design difference as a defect (Vault storing only secrets isn't a missing "open ecosystem").
+- **Keep table cells factual and parallel.** Each cell says what the product does, in the same register for both columns. No loaded qualifiers ("powerful," "requires significant management overhead," "a narrower training target") and no one-word judgments in place of a description.
+- **Give the other product real "choose when" reasons.** A "When to choose" section lists genuine reasons to pick the other product, and doesn't follow them with a rebuttal. Put Pulumi's interoperability facts (HCL support, state backends, module reuse) in the adoption section instead.
+- **No testimonials or sales proof.** Customer results, "proven at scale" sections, and vendor benchmarks don't belong in docs. Link to `/customers/` from a **Learn more** block if it's relevant.
+- **Link to docs, not marketing pages.** Point to `/docs/...` pages for Pulumi features, not `/product/...` pages.
+- **Compare Pulumi to other products, never other products to each other.** Every comparison is Pulumi vs. something else. Don't write pages, sections, table columns, or sentences that weigh two non-Pulumi products against each other (for example, "CDK vs. Terraform," or a table with Pulumi, AWS CDK, and Terraform columns side by side). Adjudicating between other vendors' products isn't our place, and we can't keep those claims accurate. A category page such as TACOS can describe what the category's products have in common, but compares the category to Pulumi, not its members to one another.
+- **Front matter follows the same rules.** `title_tag`, `meta_desc`, and `h1` describe the comparison ("Pulumi vs. HCP Terraform") instead of selling it ("The best Terraform Cloud alternative").
+
+Comparison pages share a structure; follow it for new ones: an intro stating what both products are and how they differ, **What is Pulumi?** (the `what-is-pulumi` shortcode), **What is _X_?**, **Detailed comparison** (a table), **Key differences**, **When to choose Pulumi vs. _X_**, **Adoption**, **Frequently asked questions**, and **Next steps**. `content/docs/iac/comparisons/crossplane.md` is a representative example.
 
 ---
 

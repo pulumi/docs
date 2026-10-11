@@ -90,6 +90,7 @@ blocker:
 #   Pulumi.HeadingSentenceCase    - auto-lowercasing risks mangling proper nouns outside the exceptions list.
 #   Pulumi.CommandBackticks       - false-positive-prone (phrase may already sit in a heading, link, or code).
 #   Pulumi.PoliciesSingular       - needs verb conjugation (are->is), not a fixed swap.
+#   Pulumi.PulumiCloudArticle     - dropping "the" can need a recast ("Open the Pulumi Cloud" may mean the console).
 #   Pulumi.FutureTense            - present-tense rewrite needs verb conjugation (will pause -> pauses), not a fixed swap.
 #   Pulumi.NarrativeWe            - imperative rewrite is editorial (let's create -> create), not a swap.
 #   Pulumi.HedgeThenPivot / SetPieceTransitions / ListicleH2Headings /

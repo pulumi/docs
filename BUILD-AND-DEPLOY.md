@@ -68,7 +68,7 @@ make clean                # Remove build artifacts and dependencies
 - Hugo 0.157.0
 - Yarn 1.22.x (not strictly enforced in CI)
 - Go 1.26.x (for documentation generation)
-- Python 3.9 (for testing workflows) and 3.13 (for SDK documentation generation)
+- Python 3.12 (for testing workflows) and 3.13 (for SDK documentation generation)
 - Pulumi CLI (for infrastructure deployments)
 
 **Optional Tools:**
@@ -156,7 +156,7 @@ make clean                # Remove build artifacts and dependencies
 
 **CI/CD:**
 
-- **GitHub Actions**: 24 workflows for build, test, deploy
+- **GitHub Actions**: 63 workflows for build, test, review, deploy, and content upkeep
 - **Pulumi ESC**: Secrets and environment management
 - **OIDC**: Secure AWS authentication without static keys
 
@@ -344,7 +344,7 @@ make new-example-program
 ├── config/              # Hugo configuration
 │   ├── _default/        # Base configuration
 │   └── production/      # Production overrides
-├── .github/workflows/   # GitHub Actions (24 workflows)
+├── .github/workflows/   # GitHub Actions (63 workflows)
 ├── Makefile             # Build targets
 └── BUILD-AND-DEPLOY.md  # This document
 ```
@@ -871,13 +871,13 @@ Hugo generates:
 - Sitemap.xml
 - robots.txt
 - Meta-refresh redirect pages (from aliases)
-- Markdown output (`.md`) for `/docs/` pages, the homepage, `/what-is/`, `/product/`, and `/pricing/` (for content negotiation)
+- Markdown output (`.md`) for `/docs/` pages, the homepage, `/what-is/`, and `/product/` (for content negotiation)
 - LLM sitemap JSON (`llmsitemap`) — hierarchical JSON index of docs navigation, served at `/docs/llm-sitemap.json`
 - LLM index (`llms`) — curated text overview at `/llms.txt` for AI agents
 
 **Markdown output format:** Hugo generates clean markdown versions of documentation pages alongside HTML. These are served via CloudFront content negotiation when clients send `Accept: text/markdown`. The conversion is handled by an 8-phase pipeline in `layouts/partials/docs/markdown-pipeline.md` that converts rendered HTML back to markdown (Chroma → fenced code blocks, HTML tags → markdown syntax, choosable options → chooser comment blocks, etc.).
 
-The same negotiation covers the marketing front door: the homepage, `/what-is/`, `/product/`, and `/pricing/` emit `index.md` artifacts (enabled via `outputs`/`cascade` front matter), served by a second viewer-request CloudFront Function on the default cache behavior (`marketing-markdown-negotiation` in `infrastructure/cloudfrontFunctions.ts`). That function rewrites only an allowlist of prefixes — a rewrite on a path with no `.md` artifact would 404, so extending coverage to a new section means BOTH enabling the `markdown` output for that section AND adding its prefix to the function. Template-driven pages (frontmatter `sections:` arrays) render markdown via `layouts/partials/markdown/sections.md`, a type-agnostic walker over the sections' textual fields.
+The same negotiation covers the marketing front door: the homepage, `/what-is/`, and `/product/` emit `index.md` artifacts (enabled via `outputs`/`cascade` front matter), served by a second viewer-request CloudFront Function on the default cache behavior (`marketing-markdown-negotiation` in `infrastructure/cloudfrontFunctions.ts`). That function rewrites only an allowlist of prefixes — a rewrite on a path with no `.md` artifact would 404, so extending coverage to a new section means BOTH enabling the `markdown` output for that section AND adding its prefix to the function. Template-driven pages (frontmatter `sections:` arrays) render markdown via `layouts/partials/markdown/sections.md`, a type-agnostic walker over the sections' textual fields.
 
 **Layout files:**
 
@@ -885,7 +885,6 @@ The same negotiation covers the marketing front door: the homepage, `/what-is/`,
 - `layouts/docs/list.md` — Markdown output for list pages
 - `layouts/index.md` — Markdown output for the homepage
 - `layouts/page/template-page.md` — Markdown output for template-driven pages (frontmatter `sections:`)
-- `layouts/page/pricing.md` — Markdown output for `/pricing/` (tiers, edition comparison, FAQ)
 - `layouts/_default/single.md`, `layouts/_default/list.md` — generic markdown fallbacks for markdown-enabled sections whose pages use bespoke layouts
 - `layouts/docs/list.llmsitemap.json` — Hierarchical JSON sitemap
 - `layouts/index.llms.txt` — Curated text overview at `/llms.txt`
@@ -1013,475 +1012,364 @@ Updated automatically via `pulumi-cli.yml` workflow when new CLI versions are re
 
 ## GitHub Actions Workflows
 
-The repository uses 24 GitHub Actions workflows organized into categories. All workflows are in `.github/workflows/`.
+The repository has 63 workflows in `.github/workflows/`. They fall into five families, plus two that only run on downstream mirrors such as `pulumi/docs-private`. This section describes each family, then lists every workflow, schedule, and switch. When this section and a workflow file disagree, the workflow file wins. Most workflows carry a detailed header comment explaining why they're built the way they are, so read that before changing one.
 
-### Production Deployment
+```mermaid
+flowchart LR
+  A1(["`Push to master`"])
+  A2(["`PR opened or pushed`"])
+  A3(["`@claude comment or review`"])
+  A4(["`Cron schedule`"])
+  A5(["`Upstream repo releases`"])
+  F1["`Ship (8)`"]
+  F2["`PR checks and preview (10)`"]
+  F3["`AI review and merge gate (10)`"]
+  F4["`Content upkeep (10)`"]
+  F5["`Generated reference docs (22)`"]
+  O1[("`www.pulumi.com`")]
+  O2[("`www.pulumi-test.io`")]
+  O3[("`PR preview bucket`")]
+  O5[("`PR labels, cards, Sentinel check`")]
+  O4[("`Bot-authored PRs`")]
+  O7[("`S3 ledgers and indexes`")]
+  A1 --> F1
+  A2 --> F2
+  A2 --> F3
+  A3 --> F3
+  A4 --> F1
+  A4 --> F4
+  A4 --> F5
+  A5 --> F5
+  F1 --> O1
+  F1 --> O2
+  F2 --> O3
+  F2 --> O2
+  F3 --> O5
+  F4 --> O4
+  F4 --> O7
+  F5 --> O4
+```
+
+Rounded boxes are triggers, rectangles are workflow families, and cylinders are what they change. Bot-authored PRs then re-enter as ordinary PRs and go through the same checks.
+
+### Shared conventions
+
+These apply across nearly every workflow. Follow them when you add or change one.
+
+- **Secrets come from Pulumi ESC.** Workflows call `pulumi/esc-action@v3` with OIDC against the `github-secrets/pulumi-docs` environment (the `ESC_ACTION_*` env block at the bottom of each file). That yields `PULUMI_ACCESS_TOKEN`, `PULUMI_BOT_TOKEN`, `ALGOLIA_APP_ADMIN_KEY`, `SLACK_WEBHOOK_URL`, `SLACK_ACCESS_TOKEN`, and a few others. The one exception is `ANTHROPIC_API_KEY`, which the AI workflows read from repository secrets.
+- **AWS uses OIDC.** `aws-actions/configure-aws-credentials` assumes the `ContinuousDelivery` role in the production (`388588623842`) or testing (`571684982431`) account. There are no static AWS keys. Stack names and the CDN URN come from the `production` and `testing` GitHub environments.
+- **Push with `PULUMI_BOT_TOKEN` when downstream workflows must fire.** GitHub doesn't start workflows for events created with `GITHUB_TOKEN`. A merge, push, or PR made with it never triggers `build-and-deploy.yml`, the review pipeline, or anything else.
+- **Model work runs unprivileged.** Any job that runs a model over untrusted content (PR diffs, fetched URLs, reviewed pages) holds no push token, AWS credentials, or production environment. A separate deterministic job validates the model's output and holds the credentials. See [Content upkeep automation](#content-upkeep-automation).
+- **`pull_request_target` never checks out PR code.** Workflows on that trigger (`review-sentinel.yml`) pin their checkout to the default branch and read the PR through the API as data. Author-controlled values reach shell steps through `env:`, never through `${{ }}` inside `run:`.
+- **Switches are repository variables, and unset has to be handled explicitly.** An unset variable is null, and GitHub coerces a null-versus-string comparison to numbers (null and `'0'` both become 0), so a bare `vars.X != '0'` is *false* when `X` is unset: a switch meant to default on silently defaults off. Default-on switches compare `format('{0}', vars.X) != '0'`; default-off switches compare `vars.X == '1'`. See [Repository variables](#repository-variables).
+- **Crons run on odd minutes.** GitHub silently drops scheduled runs under load, most often on the hour. See [Schedule](#schedule).
+- **Failures go to Slack.** Most workflows end with a `notify` job that posts to `#docs-ops` (`#docs-ops-test` for the testing deploy) on failure.
+
+### Life of a pull request
+
+```mermaid
+flowchart TD
+  A["`Author opens PR`"] --> P["`pull-request.yml: unit tests, lint, build, preview bucket, Cypress`"]
+  A --> X["`Path-filtered checks: example programs, review pipeline, support form, versioned docs`"]
+  A --> DR{"`Draft?`"}
+  DR -->|yes, until marked ready| WAIT["`No AI review yet`"]
+  DR -->|no| T["`claude-triage.yml: labels, prose check, team request`"]
+  WAIT -.->|ready_for_review| T
+  T -->|workflow_run| R["`claude-code-review.yml: full review, cards pinned`"]
+  A --> I{"`Touches infra paths?`"}
+  I -->|yes| SD["`staging-deploy-auto.yml: deploy head to pulumi-test.io`"]
+  SD --> SS["`staging-status.yml: commit status and Sentinel poke`"]
+  R --> S["`review-sentinel.yml: the merge gate`"]
+  SS --> S
+  S --> H["`Approval from the routed team`"]
+  H --> M["`Squash-merge to master`"]
+  M --> BD["`build-and-deploy.yml to www.pulumi.com`"]
+  M --> TD["`testing-build-and-deploy.yml to www.pulumi-test.io`"]
+  M --> PC["`pr-closed.yml deletes preview buckets`"]
+  BD -->|workflow_run, success| HC["`post-deployment-health-check.yml`"]
+  BD -->|workflow_run, success| SO["`schedule-social.yml`"]
+```
+
+Pushes to an open PR rebuild the preview, mark the pinned review `review:stale`, and re-score the Sentinel.
+
+### Production deployment
 
 #### build-and-deploy.yml
 
-**Purpose:** Deploy the site to production (<www.pulumi.com>)
+**Purpose:** Build the site and publish it to production (<www.pulumi.com>).
 
 **Triggers:**
 
-- Push to `master` branch
-- Scheduled: Daily at 6 AM Eastern (7 AM during DST), noon Pacific (1 PM during DST)
-- Manual: `workflow_dispatch`
+- Push to `master`
+- Scheduled: 11:17, 12:43, and 20:23 UTC (7:17 AM, 8:43 AM, and 4:23 PM Eastern during daylight saving time). The rebuilds publish future-dated content. The 12:43 run is a fallback in case GitHub drops the 11:17 one, and both land before scheduled social posts fire at 10 AM Eastern.
+- Manual: `workflow_dispatch`, with an optional `allow_out_of_order_publish` input (see below)
 
-**Environment:** Production (AWS Account: 388588623842)
+**Environment:** Production (AWS account `388588623842`)
 
 **Jobs:**
 
-1. **buildSite**
-   - Checkout code
-   - Fetch secrets from Pulumi ESC
-   - Setup: Node.js 24, Go 1.26, Hugo 0.157.0
-   - Configure AWS credentials via OIDC (role: ContinuousDelivery, 2-hour session)
-   - Install Pulumi CLI
-   - Run `make ci_push`:
-     - Build site
-     - Create S3 bucket with atomic naming
-     - Sync content to S3
-     - Run Cypress browser tests
-     - Generate search index
-     - Update CloudFront via Pulumi
-     - Apply S3 redirects
-   - Archive browser test videos and bucket metadata
+1. **buildSite**: checks out full history (blobless, so Hugo's `enableGitInfo` can read each file's last commit date), sets up Node 24, Go 1.26, Hugo 0.157.0, s5cmd, Vale, and the Pulumi CLI, restores the meta-image and Hugo resource caches, then runs `make ci_push`. Afterwards it alerts Slack if a successful build ran longer than 20 minutes (`scripts/ci-build-duration-alert.sh`, which subtracts time spent queued) and archives Cypress videos and `origin-bucket-metadata.json`.
+1. **notify**: posts to `#docs-ops` on failure.
 
-2. **notify**
-   - Sends Slack alert to `docs-ops` channel on failure
+`make ci_push` runs `make ensure` and then `scripts/ci-push.sh`:
 
-**Infrastructure Deployed:**
+```mermaid
+flowchart TD
+  EN["`make ensure: clean, deps, icon sprite, OpenAPI spec, theme assets`"] --> BS["`build-site.sh: meta images, Hugo production build, SDK version selectors, docs JSON, CSS purge`"]
+  BS --> SY["`sync-and-test-bucket.sh update: new bucket for this run, s5cmd sync, Cypress smoke tests, metadata file`"]
+  SY --> SI["`generate-search-index.sh updates Algolia`"]
+  SI --> AW["`await-in-progress.js waits for earlier runs, up to 45 minutes`"]
+  AW --> RP["`run-pulumi.sh update on www-production`"]
+  RP --> OR{"`check-publish-ordering.js: has a newer run already published?`"}
+  OR -->|yes| STOP["`Refuse to publish`"]
+  OR -->|no| UP["`pulumi up points CloudFront at the new bucket; the site is live`"]
+  UP --> RD["`make-s3-redirects.sh`"]
+```
 
-- S3 origin bucket (versioned by commit SHA)
-- CloudFront distribution (updated to point to new bucket)
-- Lambda@Edge functions
-- Route53 records
-- Response headers policies
+Key points:
 
-**Typical Duration:** 8-12 minutes
+- **A deploy never modifies the live bucket.** `sync-and-test-bucket.sh` creates a new origin bucket for every run (`deploy_bucket_name()` in `scripts/common.sh` adds a per-run token, so two runs at the same commit don't collide). `infrastructure/index.ts` reads the bucket name from `origin-bucket-metadata.json`, so `pulumi up` on `www-production` *is* the publish step.
+- **Two guards keep deploys in order.** `scripts/await-in-progress.js` waits for runs with a lower run ID but gives up after 45 minutes. `scripts/check-publish-ordering.js`, called from `run-pulumi.sh` immediately before `pulumi up`, refuses to point the live origin at an older run's bucket. Set `allow_out_of_order_publish` on a manual run only if you're deliberately rolling back and another run may publish first. A revert-and-push doesn't need it.
+- **Stack lock conflicts are retried.** `run-pulumi.sh` retries only `[409] Conflict: Another update is currently in progress`, up to five attempts (about 7.5 minutes). Any other failure fails fast.
+- **Caches are keyed on the Hugo version.** The `hugo-resources-*` key is derived from `hugo version`, so upgrading Hugo invalidates it automatically. The version pin itself (`hugo-version: '0.157.0'`) is repeated in each building workflow and in `scripts/ensure.sh`, and must be bumped in all of them.
+
+**Typical duration:** 8-12 minutes
 
 #### testing-build-and-deploy.yml
 
-**Purpose:** Deploy to testing environment (<www.pulumi-test.io>)
+**Purpose:** Deploy to the testing environment (<www.pulumi-test.io>).
 
-**Triggers:**
+**Triggers:** Push to `master`; manual `workflow_dispatch`. `staging-deploy-auto.yml` also dispatches it at an infra PR's head branch to produce Sentinel staging evidence. See [Sentinel merge gate](#sentinel-merge-gate-and-staging-evidence).
 
-- Push to `master` branch
-- Manual: `workflow_dispatch`
+**Environment:** Testing (AWS account `571684982431`). Same pipeline as production, built with `--buildFuture` against the testing stack. Failures go to `#docs-ops-test`.
 
-**Environment:** Testing (AWS Account: 571684982431)
+#### post-deployment-health-check.yml
 
-**Differences from Production:**
+**Purpose:** Smoke-test the live site after a successful deploy.
 
-- Deploys to separate AWS account
-- Uses testing CloudFront distribution
-- Sends failures to `docs-ops-test` Slack channel
-- Parallel testing environment for validation
+**Triggers:** `workflow_run` when `Build and deploy` or `Build and deploy testing` completes successfully; manual `workflow_dispatch`.
 
-**Usage:** Test infrastructure changes before production deployment
-
-### Pull Request Workflows
-
-#### pull-request.yml
-
-**Purpose:** Build and validate PRs, create preview environments
-
-**Triggers:**
-
-- Pull requests to `master` or `release/*` branches
-- PR synchronize (new commits pushed)
-
-**Environment:** Testing (AWS Account: 571684982431)
-
-**Security:** Only runs deployment for PRs from the main repository (not forks)
-
-**Jobs:**
-
-1. **buildSite**
-   - Check if PR is from fork (skip deployment if true)
-   - Build site in preview mode
-   - Create PR-specific S3 bucket:
-
-     ```
-     www-testing-pulumi-docs-origin-pr-{PR_NUMBER}-{SHA}
-     ```
-
-   - Sync built site to preview bucket
-   - Run Cypress browser tests
-   - Generate search index
-   - Run Pulumi preview (non-destructive)
-   - Post preview URL to PR comments:
-
-     ```
-     http://www-testing-pulumi-docs-origin-pr-123-abc1234.s3-website.us-west-2.amazonaws.com
-     ```
-
-   - Run Lighthouse performance audits (Mobile + Desktop) and post results as a separate PR comment (skipped for content-only PRs; only runs when UI-related files are changed)
-   - Archive test results and metadata
-
-2. **notify**
-   - Slack alert on failure
-
-**Preview Lifecycle:**
-
-- Created on first PR commit
-- Updated on subsequent commits
-- Deleted when PR is closed
-
-#### pr-closed.yml
-
-**Purpose:** Clean up PR preview resources
-
-**Triggers:**
-
-- Pull request closed (merged or abandoned)
-
-**Environment:** Testing
-
-**Jobs:**
-
-1. **do_cleanup**
-   - Find all S3 buckets matching `*-pr-{PR_NUMBER}-*`
-   - Delete buckets and all contents
-   - Post cleanup notification to PR:
-
-     ```
-     Site previews for this pull request have been removed.
-     ```
-
-**Why It Matters:** Prevents accumulation of abandoned preview buckets, reducing AWS costs.
-
-### Automated Documentation Generation
-
-#### pulumi-cli.yml
-
-**Purpose:** Auto-generate CLI documentation when Pulumi CLI is released
-
-**Triggers:**
-
-- Repository dispatch event from pulumi/pulumi repository
-- Triggered automatically on Pulumi CLI release
-
-**Jobs:**
-
-1. **build-pulumi-cli-docs**
-   - Checkout docs and pulumi repositories
-   - Install: pulumictl, Pulumi CLI, Go, Hugo, Node, Python, .NET
-   - Generate TypeScript SDK docs with TypeDoc
-   - Generate Python SDK docs with Sphinx
-   - Generate CLI command docs with `pulumi gen-markdown`
-   - Update version files:
-     - `static/latest-version`
-     - `static/latest-dev-version`
-   - Create feature branch: `pulumi/{run-id}-{run-number}`
-   - Commit changes with bot credentials
-   - Push branch
-
-2. **pull-request**
-   - Create PR with auto-merge label
-   - Link to triggering pulumi/pulumi release
-   - Auto-merge if tests pass
-
-3. **notify**
-   - Slack alert on failure
-
-**Why It Matters:** Keeps CLI documentation synchronized with releases automatically.
-
-#### customer-managed-deployment-agent-cli.yml
-
-**Purpose:** Update CMDA CLI version
-
-**Triggers:**
-
-- Repository dispatch from CMDA repository
-
-**Process:**
-
-- Updates version file for customer-managed-deployment-agent
-- Creates automated PR
-
-### Scheduled Maintenance
-
-#### scheduled-test.yml
-
-**Purpose:** Run comprehensive tests on example programs
-
-**Triggers:**
-
-- Daily at 8:00 AM UTC
-- Pull requests to master
-- Manual: `workflow_dispatch`
-
-**Platform:** GitHub-hosted runner (ubuntu-latest), with [jlumbroso/free-disk-space](https://github.com/jlumbroso/free-disk-space) to reclaim disk space before tests run
-
-**Setup:**
-
-- Disk space reclaimed via `jlumbroso/free-disk-space` (`tool-cache: false`, `dotnet: false` to preserve caches used by later setup steps)
-- Multi-language runtimes:
-  - Go 1.26
-  - Node.js 20
-  - Python 3.9
-  - .NET 8.0
-  - Java 11
-- Hugo 0.157.0
-- Latest Pulumi CLI
-- Kubernetes KinD cluster
-
-**Cloud Authentication:**
-
-- AWS via OIDC (gets credentials from Pulumi ESC)
-- GCP via workload identity federation
-- Azure credentials from ESC
-
-**Tests:** Runs `make test` on ~425 example programs across:
-
-- Languages: TypeScript, Python, Go, .NET, Java, YAML
-- Clouds: AWS, GCP, Azure, Kubernetes
-- Scenarios: Simple deployments, complex architectures
-
-**Notification:** Slack alert for scheduled failures only (not PRs)
-
-**Typical Duration:** 2-2.5 hours (scheduled runs), 3-5 minutes (PR runs)
-
-#### scheduled-upgrade-programs.yml
-
-**Status:** ⚠️ Currently disabled due to disk space issues (see issue #17321)
-
-**Purpose:** Keep example program dependencies up to date
-
-**Triggers:**
-
-- ~~Daily at 6:00 AM UTC~~ (schedule disabled)
-- Manual: `workflow_dispatch` (but will likely fail without fixes)
-
-**Jobs:**
-
-- Upgrade Go module dependencies in example programs
-- Run tests to verify upgrades work
-- Create PR with branch `examples/upgrade`
-- Uses PULUMI_BOT_TOKEN for authentication
-
-**Why It Matters:** Prevents example programs from using outdated dependencies with security vulnerabilities.
-
-**Note:** The workflow consistently fails due to GitHub Actions runner disk space exhaustion when testing 385+ example programs. The schedule has been disabled while we investigate proper fixes.
-
-#### bucket-cleanup.yml
-
-**Purpose:** Clean up old S3 buckets in production
-
-**Triggers:**
-
-- Daily at 3:00 PM UTC
-- Manual: Not currently configured
-
-**Environment:** Production (AWS Account: 388588623842)
-
-**Jobs:**
-
-- Run `make ci_bucket_cleanup`
-- Identify buckets older than retention period
-- Delete old origin buckets
-- Clean up AWS Parameter Store records
-
-**Retention Policy:** Configurable (typically 7-30 days)
-
-#### bucket-cleanup-testing.yml
-
-**Purpose:** Clean up old S3 buckets in testing
-
-**Triggers:**
-
-- Daily at 3:00 PM UTC
-- Manual: `workflow_dispatch`
-
-**Environment:** Testing (AWS Account: 571684982431)
-
-**Process:** Same as production cleanup but for testing environment
-
-### Quality Assurance
-
-#### check-links.yml
-
-**Purpose:** Verify all internal and external links
-
-**Triggers:**
-
-- Daily at 3:00 PM UTC
-- Manual: `workflow_dispatch`
-
-**Jobs:**
-
-- Run `make check_links`
-- Crawl production site (<www.pulumi.com>)
-- Check all links (internal and external)
-- Merge real-404 server-log hits from the reader-signals export into
-  `.broken-links.json` (`scripts/link-checker/merge-404-signal.py`; no-op
-  until the data-team export exists)
-- Report broken links
-
-**Output:** Slack notification with broken link report
-
-#### check-search-urls.yml
-
-**Purpose:** Validate search index integrity
-
-**Triggers:**
-
-- Daily at 3:00 PM UTC
-- Manual: `workflow_dispatch`
-
-**Jobs:**
-
-- Run `make check_search_urls`
-- Query Algolia search index
-- Verify all indexed URLs are accessible
-- Report missing or broken URLs
-
-**Why It Matters:** Ensures search results don't link to 404 pages.
-
-#### check-lighthouse.yml
-
-**Purpose:** Monitor site performance and accessibility
-
-**Triggers:**
-
-- Daily at 3:00 PM UTC
-- Manual: `workflow_dispatch`
-
-**Pages Tested:**
-
-- Homepage (<www.pulumi.com>)
-- Product page
-- Pricing page
-- Get Started guide
-- Documentation (concepts)
-- Registry homepage
-- Registry package page (AWS S3 bucket)
-
-**Metrics:**
-
-- Performance
-- Accessibility
-- Best Practices
-- SEO
-
-**Output:** Lighthouse scores and recommendations
-
-### Utility Workflows
-
-#### update-search-index.yml
-
-**Purpose:** Update Algolia search index on demand
-
-**Triggers:**
-
-- Hourly (every 60 minutes)
-- Manual: `workflow_dispatch`
-
-**Environment:** Production
-
-**Jobs:**
-
-- Run `make ci_update_search_index`
-- Extract content from built site
-- Update Algolia indices
-- Apply index settings and ranking rules
-
-**Indices Updated:**
-
-- pulumi (main documentation)
-- blog posts
-- registry packages
-
-#### scheduled-upstream-sync.yaml
-
-**Purpose:** Sync private fork with upstream
-
-**Triggers:**
-
-- Every 15 minutes
-- Manual: `workflow_dispatch`
-
-**Target:** Only runs on private fork repositories (not pulumi/docs)
-
-**Jobs:**
-
-- Sync latest commits from pulumi/docs to downstream fork
-- Uses Fork-Sync-With-Upstream action
-- Preserves private fork changes
-
-**Why It Matters:** Keeps private documentation fork synchronized with public repository.
-
-#### warm-build-cache.yml
-
-**Purpose:** Populate the shared Hugo image cache and meta-image cache from the default branch on downstream mirrors
-
-**Triggers:**
-
-- Every 6 hours
-- Manual: `workflow_dispatch`
-
-**Target:** Only runs on private fork repositories (not pulumi/docs)
-
-**Jobs:**
-
-- Check out `master`, restore the `meta-images-*` and `hugo-resources-*` caches, run `make ensure` + `make build`, and let `actions/cache` save the result
-- No deploy, no cloud credentials
-
-**Why It Matters:** GitHub scopes `actions/cache` so a branch can only restore entries written by itself or by the default branch. On the mirrors, `build-and-deploy.yml` and `testing-build-and-deploy.yml` are disabled, so nothing ever wrote a cache from `master` and every PR build there started cold (Hugo re-encoding ~2,700 images, ~19-24 minutes per run versus ~7 warm on pulumi/docs). This job is the missing default-branch writer. `pulumi/docs` doesn't need it because its master deploys already save the same caches on every push.
-
-### Social Media Automation
+Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/dev` proxy hops to pulumi/marketing-web. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
 
 #### schedule-social.yml
 
-**Purpose:** Automatically schedule social media posts (X, LinkedIn, Bluesky) for new blog content.
+**Purpose:** Schedule social media posts (X, LinkedIn, Bluesky) for new blog content.
 
-**Triggers:**
+**Triggers:** `workflow_run` when `Build and deploy` completes successfully (pulumi/docs only); manual `workflow_dispatch`. It used to run on push to `master`, which raced the deploy and produced link cards for pages that didn't exist yet. It checks out the exact SHA the deploy built.
 
-- Push to `master` branch
-- Manual: `workflow_dispatch`
+**How it works:**
 
-**Environment:** Production (AWS Account: 388588623842)
+1. Detects blog posts changed since the last processed commit (tracked in S3 state).
+1. Reads `social.twitter`, `social.linkedin`, and `social.bluesky` from frontmatter.
+1. Posts dated today or earlier go out immediately; future-dated posts are scheduled for 10 AM Eastern.
+1. Posts older than two days are skipped.
+1. State is tracked in S3 (`posted.json`) for idempotency. If the state can't be loaded, the script aborts rather than risk double-posting.
 
-**How It Works:**
+**Required secrets (from ESC):** `UPLOAD_POST_API_KEY` (upload-post.com) and `PULUMI_ACCESS_TOKEN` (to read the `socialStateBucketName` stack output).
 
-1. Detects blog posts changed since the last processed commit (tracked in S3 state)
-1. Reads `social.twitter`, `social.linkedin`, `social.bluesky` from frontmatter
-1. Posts dated today or in the past are posted immediately; future-dated posts are scheduled for 10 AM Eastern
-1. Posts older than 2 days are skipped
-1. State is tracked in S3 (`posted.json`) for idempotency — if state can't be loaded, the script aborts rather than risk double-posting
+**Implementation:** `scripts/social/schedule-posts.py` (`PROD_MODE = True`)
 
-**Required Secrets (from ESC):**
+#### update-search-index.yml
 
-- `UPLOAD_POST_API_KEY` — API key for upload-post.com
-- `PULUMI_ACCESS_TOKEN` — For reading the `socialStateBucketName` Pulumi stack output
+**Purpose:** Refresh the Algolia search index.
 
-**Required Infrastructure:**
+**Triggers:** Hourly; manual `workflow_dispatch`.
 
-- S3 bucket for state tracking (name read from Pulumi stack output `socialStateBucketName`)
+Runs `make ci_update_search_index`, which indexes this repo's content and merges in Registry and Dev Center records. A Dev Center fetch failure is non-fatal. See [Search Index Management](#search-index-management).
 
-**Rollout Status:** Currently in test mode (`PROD_MODE = False`), posting to test accounts. Flip to prod once validated.
+#### invalidate-dev-cache.yml
 
-**Typical Duration:** < 1 minute
+**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, and `/pricing`) from CloudFront when it deploys.
 
-### Other Workflows
+**Triggers:** `repository_dispatch` (`dev-deployed`) from pulumi/marketing-web; manual `workflow_dispatch`.
 
-The repository includes 10 additional utility workflows for automation and project management:
+Invalidates `/dev*`, `/assets*`, `/community`, `/community/`, `/community.md`, `/community/puluminaries*`, `/pricing`, `/pricing/`, and `/pricing.md` using the same delivery role as `build-and-deploy.yml`. A concurrency group collapses a burst of deploys into one in-flight invalidation.
 
-**Automation and Auto-merge:**
+#### bucket-cleanup.yml and bucket-cleanup-testing.yml
 
-- **Native auto-merge**: Bot PR workflows (`pulumi-cli.yml`, `pulumi-cli-dev-version.yml`, `esc-cli.yml`, `customer-managed-workflow-agent-cli.yml`) enable GitHub's native auto-merge via `gh pr merge --auto --squash` after creating the PR. This replaces the former polling-based `automerge-workflow.yml`.
-- **auto-approve-for-auto-merge.yml**: Auto-approve PRs that meet auto-merge criteria (trusted bots, dependency updates). Uses the `automation/merge` label to gate approval — note that this label now drives auto-*approval* only; auto-merge is handled natively by GitHub.
+**Purpose:** Delete old origin buckets.
 
-**AI-Assisted Development:**
+**Triggers:** Daily at 15:00 UTC. The testing variant also accepts `workflow_dispatch`.
 
-- **claude.yml**: AI-assisted code analysis and suggestions (triggered by @claude mentions in issues/PRs)
-- **claude-code-review.yml**: AI-powered code review automation for pull requests
-- **claude-social-review.yml**: AI-powered review of social media post copy generated for blog post PRs
-- **review-existing-content.yml** / **content-review-article.yml**: Daily existing-content review — deterministic selection fans out one per-article worker per page. Three lanes, each with its own count variable: `fix` (`CONTENT_REVIEW_COUNT`, unset = 3/run) reviews an editable page and opens a PR for what it fixed — with its **first slot reserved** for the oldest page no review has ever completed on (`NEVER_REVIEWED_RESERVE`, fix lane only, disabled at count 1), because `importance x staleness` alone never reaches the cold end of the corpus; `glowup` (`GLOWUP_COUNT`, unset = 1/run) rehabs one page from its banked findings backlog — and, because a page can carry a banked *count* with nothing behind it (no findings record and no review PR to scrape), it also dispatches up to one **fix-lane repair** per run (`GLOWUP_REPAIRS_PER_RUN`) for such a page, since a fix review needs no ledger and writes the findings record a later glow-up needs; `report` (`REPORT_REVIEW_COUNT`, **unset = off**) fact-checks a page a generator owns — it runs the claim pipeline, writes the page's claims to the S3 claims index, and changes nothing. The report lane has no model step at all (nothing to fix, no PR body to write) and its verdict is written by the workflow; contradictions it finds are reported to #docs-ops with a prefilled upstream issue, never as stale-claims markers no PR here could retire. Which lane a page belongs to comes from `editable` / `reviewable` in `strategic-tiers.yaml` (pulumi/docs#20996 — before that split, "a generator owns this file" also meant "never look at it", hiding 30% of `content/docs/` from the fact-check entirely).
-- **blog-review-index.yml**: Daily blog known-issues indexing — deterministic selection (`scripts/blog-review/select-posts.py`), one unprivileged model review per post (matrix), one deterministic record job. FLAG-ONLY: findings land in S3 (`blog-review/` prefix in the content-review ledger bucket: `ledger/`, `index/`, `runs/`, `index/_summary.json`); no content edits, no PRs. On/off/cadence via the `BLOG_REVIEW_COUNT` repo variable (unset = 5/run, `'0'` = off). The index is evidence for a future noindex decision process (`block_external_search_index: true` on rotted, low-value posts).
+Both run `make ci_bucket_cleanup` (`scripts/ci-bucket-cleanup.sh`). Push, scheduled, and manual deploy buckets share one retention window: the live bucket plus the 10 before it are kept (`buckets_to_retain` in `scripts/list-recent-buckets.sh`), which is what makes a quick rollback possible. The testing variant also removes PR preview buckets that `pr-closed.yml` missed.
 
-The first two workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution. The social review workflow runs only on internal PRs from non-bot authors.
+### Pull request workflows
+
+#### pull-request.yml
+
+**Purpose:** Build and validate each PR and publish a preview.
+
+**Triggers:** Pull requests targeting `master`, `denny-hill`, or `release/**`. A concurrency group cancels older runs when a newer commit is pushed to the same PR.
+
+**Environment:** Testing (AWS account `571684982431`)
+
+**Fork PRs:** the `buildSite` job only runs when the head branch is in `pulumi/docs`, so fork PRs get no build from this workflow. (`scripts/ci-pull-request.sh` has a build-only fallback for missing credentials, but CI never reaches it.)
+
+```mermaid
+flowchart TD
+  U["`make test-unit`"] --> C["`make ci_pull_request: make ensure, then make lint`"]
+  C --> B["`build-site.sh preview: baseURL is the bucket's S3 website`"]
+  B --> S["`sync-and-test-bucket.sh preview: bucket www-testing-pulumi-docs-origin-pr-N-sha, Cypress, PR comment with the preview URL`"]
+  S --> SI["`generate-search-index.sh`"]
+  SI --> PV["`run-pulumi.sh preview: shows the infra diff, applies nothing`"]
+  PV --> LH{"`layouts, theme, assets, static CSS/JS/images, or config changed?`"}
+  LH -->|yes| L["`Lighthouse audit on the preview, posted as a PR comment`"]
+  LH -->|no| DONE["`Done`"]
+```
+
+Slack is alerted if a successful PR build runs longer than 15 minutes, and on failure for `release/*` branches and pulumi-bot PRs.
+
+**Preview lifecycle:** each commit gets its own bucket, named for the PR number and head SHA. `pr-closed.yml` removes them all when the PR closes, and `bucket-cleanup-testing.yml` sweeps any leftovers daily.
+
+#### pr-closed.yml
+
+**Purpose:** Clean up PR preview resources.
+
+**Triggers:** Pull request closed (merged or abandoned), same-repo branches only.
+
+Runs `make ci_pull_request_closed`, which deletes every bucket matching `*-pr-{PR_NUMBER}-*` and posts a comment that the previews were removed.
+
+#### scheduled-test.yml
+
+**Purpose:** Test the example programs in `static/programs/`.
+
+**Triggers:** Daily at 08:00 UTC; pull requests to `master`; manual `workflow_dispatch`.
+
+**Platform:** GitHub-hosted runner (ubuntu-latest), with [jlumbroso/free-disk-space](https://github.com/jlumbroso/free-disk-space) to reclaim disk space before tests run (`tool-cache: false`, `dotnet: false` to preserve caches later setup steps use).
+
+**Setup:** Go, Node.js, Python, .NET, and Java runtimes, Hugo 0.157.0, the latest Pulumi CLI, and a Kubernetes KinD cluster. AWS credentials via OIDC, GCP via workload identity federation, and Azure credentials from ESC.
+
+**Scope:** On PRs, the job first asks the API which files changed and only tests programs the PR touched. Content-only PRs finish in seconds, but the job still reports so the required check name exists. The nightly run tests all ~425 programs across TypeScript, Python, Go, .NET, Java, and YAML on AWS, GCP, Azure, and Kubernetes. Dependabot PRs are skipped because they can't reach ESC.
+
+**Notification:** Slack alert for scheduled failures only.
+
+**Typical duration:** about 3 hours nightly (4-hour timeout); minutes on PRs.
+
+To reproduce a failure locally: `ONLY_TEST="program-name" ./scripts/programs/test.sh`.
+
+#### Path-filtered checks
+
+| Workflow | Runs when a PR touches | What it does |
+|----------|------------------------|--------------|
+| `review-pipeline-tests.yml` | `scripts/content-review/`, `scripts/blog-review/`, `scripts/review-v3/`, `.claude/commands/docs-review/scripts/`, `.github/review-routing.yml`, and a few related paths | `make test-review-pipeline` |
+| `support-form-tests.yml` | `infrastructure/**` (except `versioned-docs/`), the support form TypeScript and page | Compiles and runs the support form and infrastructure test suites |
+| `versioned-docs-check.yml` | `infrastructure/versioned-docs/**` | Typechecks the versioned-docs Pulumi program |
+
+If you add a script to a review pipeline outside the paths above, add its path to `review-pipeline-tests.yml`.
+
+#### Dependabot and bot PRs
+
+- **label-dependabot.yml** (Dependabot PRs; manual `workflow_dispatch`): labels each PR from Dependabot's signed commit metadata (flagging Lambda@Edge risk and bulk updates). When the `DEPS_AUTO_MERGE` variable is `'true'` and no risk flag applies, it approves the PR and arms auto-merge with `PULUMI_BOT_TOKEN`, so the merge still triggers a deploy. See [Dependency management](#dependency-management).
+- **auto-approve-for-auto-merge.yml** (pull request events): approves PRs authored by pulumi-bot from a same-repo branch that carry the `automation/merge` label. This is what lets the generated-docs PRs described below merge themselves. It approves nothing else.
+
+### Pre-merge review pipeline
+
+A chain of workflows labels each PR, runs a Claude review with heavy deterministic pre-computation, and publishes the result as pinned PR comments. The model job never posts; a separate job does. For the author-facing mechanics (how to answer findings, refresh a review, and read the cards), see `CONTRIBUTING.md` §AI-assisted contributions and `scripts/review-v3/README.md`. The review logic lives in `.claude/commands/docs-review/` and `scripts/review-v3/`.
+
+```mermaid
+flowchart TD
+  O["`PR opened non-draft, or ready_for_review`"] --> TR["`claude-triage.yml: domain labels, skip labels, Haiku and Vale prose check, request the routed team`"]
+  TR -->|workflow_run| C1
+  subgraph MAIN["`claude-code-review.yml`"]
+    direction TB
+    C1["`Resolve PR context: skip drafts, trivial PRs, most bot authors`"]
+    C2["`Deterministic pre-steps: Vale, URL prefetch, frontmatter, Hugo build, added internal links`"]
+    C3["`Claim extraction and verification, readthrough pass`"]
+    C4["`Compose draft; the model edits it`"]
+    C5["`Validate and normalize`"]
+    C1 --> C2 --> C3 --> C4 --> C5
+  end
+  C5 --> PUB["`publish job, no model: evidence to S3, author card and reviewer brief`"]
+  PUB --> SEN["`Re-evaluate the Sentinel`"]
+  PUB --> RED["`redispatch job: if the head moved, review again`"]
+```
+
+| Workflow | Trigger | Purpose |
+|----------|---------|---------|
+| `claude-triage.yml` | PR opened (non-draft) or ready for review | Applies `domain:*` and skip labels (`review:trivial`, `review:frontmatter-only`), runs a Haiku and Vale prose check, and requests the review team that `.github/review-routing.yml` routes the PR to. With `REVIEW_V3_ROUTING=1` it also runs a label-only pass on every push. Skips pulumi-bot and Dependabot PRs except `content-review/*` branches. |
+| `claude-code-review.yml` | `workflow_run` after triage; PR `synchronize`; `workflow_dispatch` | The full review. On a push, `mark-stale` flips the label to `review:stale`, and `auto-refresh` dispatches `claude-update.yml` when `auto-refresh-gate.py` proves the push only touched lines carrying blocking findings. |
+| `claude-update.yml` | `@claude #update-review`; auto-refresh dispatch | Refreshes the pinned review in place. A cheap `gate` job rejects quoted or self-authored mentions before the worker's concurrency group, so a declined mention can't cancel a live refresh. |
+| `claude-new.yml` | `@claude #new-review` | Deletes the pinned review and re-dispatches `claude-code-review.yml` with `force=true`. For corrupted or deleted reviews. |
+| `claude.yml` | Bare `@claude` in an issue or PR | Ad-hoc help from `claude-code-action` in tag mode. |
+| `claude-social-review.yml` | PRs touching `content/blog/*/index.md`; comments; `workflow_dispatch` | Reviews the social copy in blog frontmatter and posts a PASS/FAIL comment. Doesn't re-run when the copy is unchanged. |
+| `review-label-reconcile.yml` | Every 2 hours at :23 | Repairs `review:*` labels when a push fired no events (pushes with `GITHUB_TOKEN` or by the Copilot agent) and clears `review:in-progress` left by a run that died. |
+| `review-sla-sweep.yml` | Every 2 hours at :53, when `REVIEW_V3_SLA=1` | Reviewer-wait SLA escalations and author-staleness warnings and closes, per the `sla:` and `author_staleness:` blocks in `review-routing.yml`. |
+| `weekly-digest.yml` | Mondays 14:00 UTC | Posts two Slack messages to `#docs-ops`: the PR review queue and the issue backlog. |
+
+The workflows that act on `@claude` mentions all check that the commenter has write access. The `review:*` labels follow this state machine:
+
+```mermaid
+stateDiagram-v2
+  state "review:triaging" as tri
+  state "review:in-progress" as inp
+  state "review:no-blockers" as nb
+  state "review:outstanding-issues" as oi
+  state "review:error" as err
+  state "review:stale" as st
+  [*] --> tri: triage starts
+  tri --> inp: main review starts
+  inp --> nb: no blocking findings
+  inp --> oi: blocking findings
+  inp --> err: workflow failed
+  nb --> st: push
+  oi --> st: push
+  st --> inp: update-review or auto-refresh
+  err --> inp: new-review
+```
+
+### Sentinel merge gate and staging evidence
+
+`review-sentinel.yml` publishes one check run, **Sentinel**, that answers whether a PR can merge. The evaluator, `scripts/review-v3/sentinel.py`, is deterministic (no model, no AWS) and reads PR state only through the GitHub API.
+
+```mermaid
+flowchart LR
+  EV["`Push, label change, approval or dismissal, review lanes finishing, staging status`"] --> SE["`sentinel.py`"]
+  SE --> G1["`G1: review ran at head`"]
+  SE --> G2["`G2: every finding answered`"]
+  SE --> G3["`G3: human with write access approved`"]
+  SE --> G4["`G4: staging deploy at head (infra PRs, not waivable)`"]
+  SE --> G5["`G5: oversized PR acknowledged`"]
+```
+
+- **Triggers:** `pull_request_target` (open, ready, push, reopen, label changes), `pull_request_review` (submitted, dismissed, and edits to approving reviews), `workflow_run` after either review lane, and `workflow_dispatch`.
+- **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` concludes `neutral` with the would-be verdict; `'1'` enforces.
+- **Security invariant:** `pull_request_target` carries secrets and a write token even for fork PRs. The workflow is safe only because it never checks out or runs PR code, and `test_sentinel.py` enforces that. Don't add a head checkout.
+- **No concurrency group, on purpose:** a cancelled run shows as a failing check. Overlapping runs are cheap, and `scripts/review-v3/publish_guard.py` drops a verdict if the head moved or a newer run already published.
+- **Break-glass:** the `review:waived` label, which is logged. G4 can't be waived.
+
+G4 needs a successful pulumi-test.io deploy at the PR's current head:
+
+- **staging-deploy-auto.yml** (pull request events): runs `route-pr.py` from the default branch. If it reports `staging_evidence_required`, it dispatches `testing-build-and-deploy.yml` at the PR's head branch. Same-repo PRs only. It never checks out PR code and never fails a PR. To retry, re-run the failed deploy or run `gh workflow run testing-build-and-deploy.yml --ref <branch>`.
+- **staging-status.yml** (every 10 minutes; `workflow_run` after the testing deploy; manual): writes the terminal `staging/pulumi-test-io` commit status and pokes the Sentinel. The schedule is the trigger that actually fires: runs dispatched with `GITHUB_TOKEN` never produce `workflow_run` events, so the listener almost never fires for staging deploys.
+
+### Content upkeep automation
+
+Scheduled jobs that review content nobody is currently editing.
+
+```mermaid
+flowchart TD
+  CR["`claims-reverify.yml, nightly`"] -->|stale_claims markers| LED[("`S3 content-review ledger`")]
+  LED --> DISP["`review-existing-content.yml, weekdays: picks articles by importance and staleness`"]
+  DISP -->|one dispatch per article| RV
+  subgraph W["`content-review-article.yml`"]
+    direction TB
+    RV["`review job: model, no credentials, emits a patch`"] --> PB["`publish job: no model, holds credentials, runs publish-gate.py`"]
+  end
+  PB --> LED
+  PB --> BPR["`Bot PR, then the normal review pipeline`"]
+  BR["`blog-review-index.yml, weekdays`"] --> BIDX[("`S3 blog known-issues index (flag-only)`")]
+  CL["`check-links.yml, daily`"] --> FBL["`Claude runs the fix-broken-links skill`"] --> LPR["`Bot PR`"]
+```
+
+- **review-existing-content.yml / content-review-article.yml**: Daily (workdays, 14:00 UTC) existing-content review. Deterministic selection fans out one per-article worker per page. Three lanes, each with its own count variable: `fix` (`CONTENT_REVIEW_COUNT`, unset = 3/run) reviews an editable page and opens a PR for what it fixed — with its **first slot reserved** for the oldest page no review has ever completed on (`NEVER_REVIEWED_RESERVE`, fix lane only, disabled at count 1), because `importance x staleness` alone never reaches the cold end of the corpus; `glowup` (`GLOWUP_COUNT`, unset = 1/run) rehabs one page from its banked findings backlog — and, because a page can carry a banked *count* with nothing behind it (no findings record and no review PR to scrape), it also dispatches up to one **fix-lane repair** per run (`GLOWUP_REPAIRS_PER_RUN`) for such a page, since a fix review needs no ledger and writes the findings record a later glow-up needs; `report` (`REPORT_REVIEW_COUNT`, **unset = off**) fact-checks a page a generator owns — it runs the claim pipeline, writes the page's claims to the S3 claims index, and changes nothing. The report lane has no model step at all (nothing to fix, no PR body to write) and its verdict is written by the workflow; contradictions it finds are reported to #docs-ops with a prefilled upstream issue, never as stale-claims markers no PR here could retire. Which lane a page belongs to comes from `editable` / `reviewable` in `strategic-tiers.yaml` (pulumi/docs#20996 — before that split, "a generator owns this file" also meant "never look at it", hiding 30% of `content/docs/` from the fact-check entirely). Fix PRs open ready (draft only on lint failure) and go through the normal triage, review, and Sentinel chain. Deterministic-class fixes (links, Vale-named fixes, frontmatter) arm auto-merge, which still needs a human approval; judgment-class fixes open un-armed.
+- **claims-reverify.yml**: Nightly (07:00 UTC) re-verification of volatile claims (version pins, prices, limits) from the S3 claims index. Contradicted entities get a `stale_claims` marker on their pages' ledger objects, which moves those pages to the front of the next day's content-review queue. Never edits content or opens PRs. `CLAIMS_REVERIFY_COUNT` (unset = 25 entities/night, `'0'` = off).
+- **blog-review-index.yml**: Daily (workdays, 14:30 UTC) blog known-issues indexing — deterministic selection (`scripts/blog-review/select-posts.py`), one unprivileged model review per post (matrix), one deterministic record job. FLAG-ONLY: findings land in S3 (`blog-review/` prefix in the content-review ledger bucket: `ledger/`, `index/`, `runs/`, `index/_summary.json`); no content edits, no PRs. On/off/cadence via the `BLOG_REVIEW_COUNT` repo variable (unset = 5/run, `'0'` = off). The index is evidence for a future noindex decision process (`block_external_search_index: true` on rotted, low-value posts).
+- **check-links.yml**: Daily at 15:00 UTC; manual. Runs `make check_links` against the production site, merges real-404 server-log hits from the reader-signals export into `.broken-links.json` (`scripts/link-checker/merge-404-signal.py`; a no-op until the export exists), then runs `claude-code-action` with the `fix-broken-links` skill, which fixes what it can in one PR and files issues for the rest. The PR link is posted to `#docs-ops`.
+- **check-lighthouse.yml**: Daily at 15:00 UTC; manual. Lighthouse performance, accessibility, best-practices, and SEO scores for the homepage, product, pricing, get-started, concepts, and Registry pages. Slack alert on failure.
+- **check-search-urls.yml**: Manual only. Runs `make check_search_urls` to verify URLs in the Algolia index resolve.
+- **brand-style-sync.yml**: Mondays at 14:20 UTC; manual. Checks the offline Vale mirror (`styles/Pulumi/`) against the brand guide, per `styles/Pulumi/BRAND-SYNC.yaml`, and opens a draft PR when it has drifted. `BRAND_SYNC_ENABLED='0'` turns it off. See `.claude/commands/brand-vale-sync/SKILL.md`.
+- **auto-label-issues.yml**: New and reopened issues. One Haiku call classifies the issue; if it's confident, it sets the issue Type and `area/*` labels and removes `needs-triage`. It never touches priority, impact, resolution, or PR-pipeline labels.
+- **add-to-project.yml**: Adds new and reopened issues to the Docs GitHub project.
 
 **Content-review worker privilege model (`content-review-article.yml`):** the per-article worker is split into two jobs with opposite privilege profiles, because the review model consumes artifacts derived from fetched external URLs (a prompt-injection surface):
 
@@ -1490,43 +1378,216 @@ The first two workflows include a permission check step that verifies the trigge
 
 This mirrors the pre-merge review's posture (`claude-code-review.yml` runs its model with no push credentials); the accepted residual risk in the review job is the Anthropic API key the model inherently runs on.
 
-**Project Management:**
+### Generated reference docs
 
-- **add-triage-label.yml**: Automatically apply triage labels to new issues
-- **add-to-project.yml**: Add issues and PRs to GitHub Projects for tracking
+Other repos notify this one with `repository_dispatch` when they release, and nightly jobs pull data from Pulumi Cloud APIs. Each generator regenerates only its own slice of the site and opens a PR that merges itself.
 
-**Secret Management:**
+```mermaid
+flowchart LR
+  PP["`pulumi/pulumi release`"] -->|pulumi-cli| DISP["`pulumi-cli.yml dispatcher`"]
+  DISP --> G1["`pulumi-cli-docs`"]
+  DISP --> G2["`pulumi-sdk-typescript-docs`"]
+  DISP --> G3["`pulumi-sdk-python-docs`"]
+  DISP --> G4["`package-schema-docs`"]
+  PD["`pulumi/pulumi dev build`"] -->|pulumi-cli-dev-version| G5["`pulumi-cli-dev-version`"]
+  DN["`.NET SDK release`"] -->|pulumi-dotnet-sdk| G6["`pulumi-sdk-dotnet-docs and package-schema-docs-dotnet`"]
+  JV["`Java SDK release`"] -->|pulumi-java-sdk| G7["`pulumi-sdk-java-docs and package-schema-docs-java`"]
+  ES["`pulumi/esc release`"] -->|esc-cli| G8["`esc-cli`"]
+  AG["`Workflow agent release`"] -->|customer-managed-workflow-agent| G9["`customer-managed-workflow-agent-cli`"]
+```
 
-- **export-repo-secrets.yml**: Export repository secrets for CI/CD consumption
-- **export-secrets.yml**: General-purpose secrets export utility for workflows
+Every generator except `scheduled-upgrade-programs.yml` follows the same pattern:
 
-**Development Versions:**
+1. A `pull-request` job creates a branch and PR as pulumi-bot, labels it `automation/merge`, and arms auto-merge with `gh pr merge --auto --squash`.
+1. A build job runs `make ensure` and the generator, then commits to the PR branch.
+1. `auto-approve-for-auto-merge.yml` approves the PR because of the label.
+1. Once required checks pass, GitHub squash-merges it and `build-and-deploy.yml` ships it.
+1. A `notify` job posts to `#docs-ops` if the generator fails.
 
-- **pulumi-cli-dev-version.yml**: Handle development and pre-release versions of Pulumi CLI documentation
+All pushes use `PULUMI_BOT_TOKEN`; a `GITHUB_TOKEN` push would never trigger the PR's checks or the deploy.
 
-These workflows support repository maintenance, automation, and developer experience but are not part of the core build and deployment pipeline documented in detail above.
+| Workflow | Trigger | Produces |
+|----------|---------|----------|
+| `pulumi-cli.yml` | `repository_dispatch: pulumi-cli` | Nothing itself. Dispatches the four workflows below with the release version. |
+| `pulumi-cli-docs.yml` | Dispatched by `pulumi-cli.yml`; manual | CLI command reference (`pulumi gen-markdown`) |
+| `pulumi-sdk-typescript-docs.yml` | Dispatched by `pulumi-cli.yml`; manual | TypeDoc reference for `@pulumi/pulumi`, plus a versioned snapshot |
+| `pulumi-sdk-python-docs.yml` | Dispatched by `pulumi-cli.yml`; manual | Sphinx reference for the Python SDK |
+| `package-schema-docs.yml` | Dispatched by `pulumi-cli.yml`; manual | Package schema core reference and the Go, Node.js, and Python language extensions |
+| `pulumi-sdk-dotnet-docs.yml`, `package-schema-docs-dotnet.yml` | `repository_dispatch: pulumi-dotnet-sdk`; manual | .NET SDK reference and the .NET schema extension |
+| `pulumi-sdk-java-docs.yml`, `package-schema-docs-java.yml` | `repository_dispatch: pulumi-java-sdk`; manual | Java SDK reference and the Java schema extension |
+| `pulumi-esc-sdk-{dotnet,python,typescript}-docs.yml` | Manual | ESC SDK references |
+| `pulumi-policy-sdk-{python,typescript}-docs.yml` | Manual | Policy SDK references |
+| `pulumi-cli-dev-version.yml` | `repository_dispatch: pulumi-cli-dev-version`; manual | `static/latest-dev-version` |
+| `esc-cli.yml` | `repository_dispatch: esc-cli`; manual | `static/esc/latest-version`, which `pulumi/esc-action` v1 and v2 read at runtime to pick an ESC version |
+| `customer-managed-workflow-agent-cli.yml` | `repository_dispatch: customer-managed-workflow-agent`; manual | Customer-managed workflow agent CLI docs |
+| `update-openapi-lastmod.yml` | Daily 06:45 UTC; manual | `data/openapi_lastmod.json`, advanced only for OpenAPI tags whose content changed |
+| `esc-update-schemas.yml` | Daily 07:00 UTC; manual | ESC schemas (`scripts/fetch-esc-schemas.sh`) |
+| `update-audit-log-events.yml` | Daily 07:15 UTC; manual | Audit log event reference (`scripts/fetch-audit-log-events.sh`) |
+| `update-policy-packs.yml` | Daily 07:30 UTC; manual | Pre-built policy pack data from the Pulumi Cloud API (`scripts/fetch-policy-packs.js`) |
+| `scheduled-upgrade-programs.yml` | Manual only | Example program dependency upgrades (see below) |
 
-### Workflow Summary Matrix
+#### scheduled-upgrade-programs.yml
 
-| Workflow | Trigger | Environment | Duration | Purpose |
-|----------|---------|-------------|----------|---------|
-| build-and-deploy | Push to master, Scheduled | Production | 8-12 min | Production deployment |
-| testing-build-and-deploy | Push to master, Manual | Testing | 8-12 min | Testing deployment |
-| pull-request | PRs to master | Testing | 10-15 min | PR validation & preview |
-| pr-closed | PR closed | Testing | <1 min | Cleanup preview resources |
-| pulumi-cli | Repository dispatch | N/A | 5-10 min | Auto-generate CLI docs |
-| esc-cli | Repository dispatch | N/A | <1 min | Update `static/esc/latest-version` pointer (read by pulumi/esc-action v1/v2) |
-| scheduled-test | Daily 8 AM UTC, PRs | Testing | 2-2.5 hrs (scheduled), 3-5 min (PR) | Test example programs |
-| scheduled-upgrade-programs | ~~Daily 6 AM UTC~~ (disabled) | N/A | N/A (fails) | Update dependencies |
-| bucket-cleanup | Daily 3 PM UTC | Production | 2-5 min | Delete old buckets |
-| bucket-cleanup-testing | Daily 3 PM UTC | Testing | 2-5 min | Delete old buckets |
-| check-links | Daily 3 PM UTC | N/A | 5-10 min | Verify links |
-| check-search-urls | Daily 3 PM UTC | N/A | 2-5 min | Validate search index |
-| check-lighthouse | Daily 3 PM UTC | N/A | 3-8 min | Performance monitoring |
-| update-search-index | Hourly | Production | 2-5 min | Update Algolia |
-| schedule-social | Push to master, Manual | Production | < 1 min | Social media scheduling |
+**Status:** ⚠️ Effectively disabled. Despite its name, it has no schedule (see issue #17321).
 
-> **Note:** The table above shows the 15 core deployment and testing workflows. An additional 11 utility workflows (automation, AI review, project management, secret management, dev versions) are listed in the "Other Workflows" section, bringing the total to 26 workflows.
+**Purpose:** Keep example program dependencies up to date by upgrading Go module dependencies, running tests, and opening a PR on the `examples/upgrade` branch.
+
+**Note:** The workflow consistently fails because testing 385+ example programs exhausts the runner's ~14 GB of disk. It can still be dispatched manually, but will likely fail without changes.
+
+### Mirror-only workflows
+
+Two workflows are gated on `github.repository != 'pulumi/docs'` and only do anything on downstream mirrors such as `pulumi/docs-private`. On pulumi/docs their scheduled runs are skipped.
+
+#### scheduled-upstream-sync.yaml
+
+**Purpose:** Sync the mirror's `master` from pulumi/docs.
+
+**Triggers:** Every 15 minutes; manual `workflow_dispatch`.
+
+**Jobs:** Check out the mirror's `master` with `PULUMI_BOT_TOKEN`, then run `aormsby/Fork-Sync-With-Upstream-action@v3.4`, which `git pull --no-edit`s pulumi/docs `master` and pushes the result. A `notify` job posts to `#docs-ops` on failure, so a merge conflict fails the job and lands there.
+
+**Which token pushes:** The workflow passes `target_repo_token: ${{ secrets.GITHUB_TOKEN }}`, and the action rewrites `origin` to use it, but checkout's persisted `PULUMI_BOT_TOKEN` auth header still rides on every git request, so the push goes out as `pulumi-bot`. That means pushes to the mirror's `master` *do* start push-triggered workflows there (the push runs on docs-private show `pulumi-bot` as the actor). Today that's harmless only because the two push-triggered workflows, `build-and-deploy.yml` and `testing-build-and-deploy.yml`, are disabled on the mirror.
+
+**It merges, it doesn't mirror.** The mirror's `master` carries a few workflow-plumbing commits of its own (six PRs merged into it between May 2024 and September 2025), so it can never fast-forward. Every sync that finds new upstream commits adds a `Merge branch 'master' of https://github.com/pulumi/docs` commit authored by "GH Action - Upstream Sync"; there are thousands of them. Content flows one way: nothing in docs-private writes back to pulumi/docs, and by convention nobody merges content PRs into the mirror's `master`. As of 2026-10-07 the mirror's `master` tree was identical to the upstream commit it last merged.
+
+#### warm-build-cache.yml
+
+**Purpose:** Populate the Hugo image cache and meta-image cache from the default branch on downstream mirrors.
+
+**Triggers:** Every 6 hours at :23; manual `workflow_dispatch`.
+
+**Jobs:** Check out `master`, restore the `meta-images-*` and `hugo-resources-*` caches, run `make ensure` + `make build`, and let `actions/cache` save the result. No deploy, no cloud credentials.
+
+**Why It Matters:** GitHub scopes `actions/cache` so a branch can only restore entries written by itself or by the default branch. On the mirrors, `build-and-deploy.yml` and `testing-build-and-deploy.yml` are disabled (along with others; see [What runs on the mirrors](#what-runs-on-the-mirrors)), so nothing ever wrote a cache from `master` and every PR build there started cold (Hugo re-encoding ~2,700 images, ~19-24 minutes per run versus ~7 warm on pulumi/docs). This job is the missing default-branch writer. `pulumi/docs` doesn't need it because its master deploys already save the same caches on every push.
+
+#### What runs on the mirrors
+
+The mirror carries every workflow file pulumi/docs has, so the repository gate above is the exception, not the rule. As of 2026-10-07 on docs-private:
+
+- **Disabled** (`disabled_manually` in the Actions API), 19 workflows: `add-to-project`, `bucket-cleanup`, `bucket-cleanup-testing`, `build-and-deploy`, `check-lighthouse`, `check-links`, `check-search-urls`, `esc-cli`, `esc-update-schemas`, `pr-closed`, `pulumi-cli`, `pulumi-cli-dev-version`, `schedule-social`, `scheduled-test`, `scheduled-upgrade-programs`, `testing-build-and-deploy`, `update-audit-log-events`, `update-openapi-lastmod`, `update-search-index`.
+- **Active and doing work on a schedule:** `review-label-reconcile`, `blog-review-index`, `claims-reverify`, `review-existing-content` (which dispatches `content-review-article`), `update-policy-packs`, and `warm-build-cache`. The content-review lane opens `pulumi-bot` "Content review: …" PRs against the mirror's `master` that never merge (for example docs-private #300, #302, #307, and #314).
+- **Active but skipped by their own gates:** `weekly-digest` and `brand-style-sync` (gated to pulumi/docs), and `review-sla-sweep`, `staging-status`, and `content-review-glowup-autofix` (gated on `REVIEW_V3_SLA`, `REVIEW_V3_SENTINEL`, and `GLOWUP_AUTOFIX`, which aren't set there). Their runs fire and every job is skipped.
+
+### Launch branches
+
+Coordinated launches stage content in docs-private so it can be reviewed and previewed before it's public:
+
+1. Create a dated launch branch in docs-private named `release/<date>-<topic>` (for example `release/2025-09-15-docs`, `release/2025-11-policy`, or `release/05-19-content`). `pull-request.yml` triggers on `release/**`, so PRs into the branch get the normal PR build and preview. Older launch branches (`06/12-content`, `9/18-content`, `5/6-release`) predate the `release/**` pattern and needed their own trigger entries.
+1. Merge the launch's content PRs into that branch, not into the mirror's `master`. 49 of the 59 PRs ever merged in docs-private went into launch branches like these; the rest were workflow plumbing into `master` or stacked feature branches.
+1. At launch, push the branch to pulumi/docs and merge it to `master` with a release PR, which deploys it like any other merge. Examples: pulumi/docs #15978 (`release/2025-09-15-docs`), #16465 (`release/2025-11-policy`), #19169 (`release/05-19-content`), and #19215 (`release/05-20-content`).
+
+### Repository variables
+
+These repository variables turn automation on, off, or up and down without a code change. Check their current values under **Settings > Secrets and variables > Actions > Variables**.
+
+| Variable | Controls | When unset |
+|----------|----------|------------|
+| `CONTENT_REVIEW_COUNT` | Existing-content fix lane, articles per run | 3; `'0'` turns the whole dispatcher off |
+| `GLOWUP_COUNT` | Glow-up lane, articles per run | 1 |
+| `REPORT_REVIEW_COUNT` | Report-only lane for generated pages | Off |
+| `CLAIMS_REVERIFY_COUNT` | Volatile claims re-verified per night | 25; `'0'` off |
+| `BLOG_REVIEW_COUNT` | Blog posts indexed per run | 5; `'0'` off |
+| `BRAND_SYNC_ENABLED` | Weekly Vale mirror drift check | On; `'0'` off |
+| `REVIEW_V3_COMMENTS` | v3 author card and reviewer brief instead of the single legacy review comment | Legacy (it's set repo-wide) |
+| `REVIEW_V3_ROUTING` | Triage label-only pass on every push | Off; `'1'` on |
+| `REVIEW_V3_SENTINEL` | Sentinel check | Doesn't run; `'report'` is a neutral preview; `'1'` enforces |
+| `REVIEW_V3_SLA` | Reviewer SLA escalations and author-staleness closes | Off; `'1'` on |
+| `DEPS_AUTO_MERGE` | Dependabot auto-approve and auto-merge | Off; `'true'` on |
+
+Scheduled review lanes also run a `holiday-check` job and skip company holidays.
+
+### Schedule
+
+All cron expressions are UTC. Eastern times shift by an hour when daylight saving time ends. Keep new jobs on odd minutes and away from 15:00 UTC, where four jobs already start.
+
+| Time (UTC) | Workflow | Days |
+|------------|----------|------|
+| Every 10 min (:07, :17, …) | `staging-status.yml` | Daily |
+| Every 15 min | `scheduled-upstream-sync.yaml` (mirrors only) | Daily |
+| Hourly (:00) | `update-search-index.yml` | Daily |
+| Every 2 h at :23 | `review-label-reconcile.yml` | Daily |
+| Every 2 h at :53 | `review-sla-sweep.yml` (when `REVIEW_V3_SLA=1`) | Daily |
+| Every 6 h at :23 | `warm-build-cache.yml` (mirrors only) | Daily |
+| 06:45 | `update-openapi-lastmod.yml` | Daily |
+| 07:00 | `claims-reverify.yml`, `esc-update-schemas.yml` | Daily |
+| 07:15 | `update-audit-log-events.yml` | Daily |
+| 07:30 | `update-policy-packs.yml` | Daily |
+| 08:00 | `scheduled-test.yml` (about 3 hours) | Daily |
+| 11:17, 12:43, 20:23 | `build-and-deploy.yml` | Daily |
+| 14:00 | `review-existing-content.yml` | Weekdays |
+| 14:00 | `weekly-digest.yml` | Mondays |
+| 14:20 | `brand-style-sync.yml` | Mondays |
+| 14:30 | `blog-review-index.yml` | Weekdays |
+| 15:00 | `bucket-cleanup.yml`, `bucket-cleanup-testing.yml`, `check-links.yml`, `check-lighthouse.yml` | Daily |
+
+### Workflow inventory
+
+Every workflow in `.github/workflows/`, grouped by family.
+
+| Workflow | Family | Trigger | Purpose |
+|----------|--------|---------|---------|
+| `build-and-deploy.yml` | Ship | Push to master, 3× daily, manual | Production deploy |
+| `testing-build-and-deploy.yml` | Ship | Push to master, manual | Testing deploy; staging evidence for infra PRs |
+| `post-deployment-health-check.yml` | Ship | After a successful deploy, manual | Live-site smoke checks |
+| `schedule-social.yml` | Ship | After a successful production deploy, manual | Schedule blog social posts |
+| `update-search-index.yml` | Ship | Hourly, manual | Refresh Algolia |
+| `invalidate-dev-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/dev`, `/community`, and `/pricing` from CloudFront |
+| `bucket-cleanup.yml` | Ship | Daily | Delete old production buckets |
+| `bucket-cleanup-testing.yml` | Ship | Daily, manual | Delete old testing and preview buckets |
+| `pull-request.yml` | PR checks | Pull request | Lint, test, preview build and deploy |
+| `pr-closed.yml` | PR checks | PR closed | Delete preview buckets |
+| `scheduled-test.yml` | PR checks | Pull request, daily, manual | Example program tests |
+| `review-pipeline-tests.yml` | PR checks | Pull request (paths) | Review pipeline test suites |
+| `support-form-tests.yml` | PR checks | Pull request (paths) | Support form and infra tests |
+| `versioned-docs-check.yml` | PR checks | Pull request (paths) | Typecheck the versioned-docs program |
+| `staging-deploy-auto.yml` | PR checks | Pull request | Staging deploy for infra PRs |
+| `staging-status.yml` | PR checks | Every 10 min, after testing deploy, manual | Staging commit status and Sentinel poke |
+| `label-dependabot.yml` | PR checks | Pull request, manual | Dependabot labels and auto-merge |
+| `auto-approve-for-auto-merge.yml` | PR checks | Pull request | Approve `automation/merge` bot PRs |
+| `claude-triage.yml` | AI review | Pull request | Labels, prose check, team request |
+| `claude-code-review.yml` | AI review | After triage, PR push, manual | Full pre-merge review |
+| `claude-update.yml` | AI review | `@claude #update-review`, auto-refresh | Refresh the pinned review |
+| `claude-new.yml` | AI review | `@claude #new-review` | Regenerate the pinned review |
+| `claude.yml` | AI review | `@claude` | Ad-hoc help |
+| `claude-social-review.yml` | AI review | Pull request (blog paths), comment, manual | Social copy review |
+| `review-sentinel.yml` | AI review | `pull_request_target`, reviews, after review lanes, manual | Merge gate check |
+| `review-label-reconcile.yml` | AI review | Every 2 h, manual | Repair `review:*` labels |
+| `review-sla-sweep.yml` | AI review | Every 2 h, manual | Review SLAs and stale PRs |
+| `weekly-digest.yml` | AI review | Mondays, manual | Slack digests |
+| `review-existing-content.yml` | Content upkeep | Weekdays, manual | Content review dispatcher |
+| `content-review-article.yml` | Content upkeep | Dispatched | Review one article |
+| `claims-reverify.yml` | Content upkeep | Daily, manual | Re-verify volatile claims |
+| `blog-review-index.yml` | Content upkeep | Weekdays, manual | Blog known-issues index |
+| `check-links.yml` | Content upkeep | Daily, manual | Broken links and fix PR |
+| `check-lighthouse.yml` | Content upkeep | Daily, manual | Lighthouse scores |
+| `check-search-urls.yml` | Content upkeep | Manual | Validate search index URLs |
+| `brand-style-sync.yml` | Content upkeep | Mondays, manual | Vale mirror drift check |
+| `auto-label-issues.yml` | Content upkeep | Issue opened | Issue Type and area labels |
+| `add-to-project.yml` | Content upkeep | Issue opened | Add issues to the Docs project |
+| `pulumi-cli.yml` | Generated docs | `repository_dispatch` | Release dispatcher |
+| `pulumi-cli-docs.yml` | Generated docs | Dispatched, manual | CLI reference |
+| `pulumi-sdk-typescript-docs.yml` | Generated docs | Dispatched, manual | TypeScript SDK reference |
+| `pulumi-sdk-python-docs.yml` | Generated docs | Dispatched, manual | Python SDK reference |
+| `pulumi-sdk-dotnet-docs.yml` | Generated docs | `repository_dispatch`, manual | .NET SDK reference |
+| `pulumi-sdk-java-docs.yml` | Generated docs | `repository_dispatch`, manual | Java SDK reference |
+| `package-schema-docs.yml` | Generated docs | Dispatched, manual | Package schema reference |
+| `package-schema-docs-dotnet.yml` | Generated docs | `repository_dispatch`, manual | .NET schema extension |
+| `package-schema-docs-java.yml` | Generated docs | `repository_dispatch`, manual | Java schema extension |
+| `pulumi-esc-sdk-dotnet-docs.yml` | Generated docs | Manual | ESC .NET SDK reference |
+| `pulumi-esc-sdk-python-docs.yml` | Generated docs | Manual | ESC Python SDK reference |
+| `pulumi-esc-sdk-typescript-docs.yml` | Generated docs | Manual | ESC TypeScript SDK reference |
+| `pulumi-policy-sdk-python-docs.yml` | Generated docs | Manual | Policy Python SDK reference |
+| `pulumi-policy-sdk-typescript-docs.yml` | Generated docs | Manual | Policy TypeScript SDK reference |
+| `pulumi-cli-dev-version.yml` | Generated docs | `repository_dispatch`, manual | CLI dev version pointer |
+| `esc-cli.yml` | Generated docs | `repository_dispatch`, manual | ESC latest-version pointer |
+| `customer-managed-workflow-agent-cli.yml` | Generated docs | `repository_dispatch`, manual | Workflow agent CLI docs |
+| `update-openapi-lastmod.yml` | Generated docs | Daily, manual | OpenAPI lastmod ledger |
+| `esc-update-schemas.yml` | Generated docs | Daily, manual | ESC schemas |
+| `update-audit-log-events.yml` | Generated docs | Daily, manual | Audit log events |
+| `update-policy-packs.yml` | Generated docs | Daily, manual | Policy pack data |
+| `scheduled-upgrade-programs.yml` | Generated docs | Manual | Example dependency upgrades (disabled) |
+| `scheduled-upstream-sync.yaml` | Mirror only | Every 15 min, manual | Sync mirror from pulumi/docs |
+| `warm-build-cache.yml` | Mirror only | Every 6 h, manual | Seed build caches on mirrors |
 
 ---
 
@@ -1742,6 +1803,8 @@ Delivery: CloudWatch Logs infrastructure v2
 | /registry/* | Registry | 30 minutes | Dynamic content, origin-proxied |
 | /guides/* | Guides | 30 minutes | Dynamic content, origin-proxied |
 | /dev* | Dev Center (pulumi/marketing-web) | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
+| /community, /community/, /community.md, /community/puluminaries* | Community pages (pulumi/marketing-web) | 30 minutes | Origin-proxied; exact paths so /community/team/* stays on S3 |
+| /pricing, /pricing/, /pricing.md | Pricing page (pulumi/marketing-web) | 30 minutes | Origin-proxied; exact paths so redirects under /pricing/ stay on S3 |
 | /docs/* | S3 Main | 10 min | Content negotiation for Accept: text/markdown |
 | /docs/reference/pkg/dotnet/* | S3 Main | 10 min | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
 | /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |

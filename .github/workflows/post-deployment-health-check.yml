@@ -305,6 +305,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [health-check]
     if: failure()
+    permissions:
+      contents: read
+      id-token: write # ESC OIDC auth to fetch the Slack webhook
 
     steps:
       - name: Fetch secrets from ESC

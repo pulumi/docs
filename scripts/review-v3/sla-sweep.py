@@ -100,6 +100,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import math
 import os
 import subprocess
 import sys
@@ -485,6 +486,23 @@ def slack_notify(text: str) -> None:
 # ---- AUTHOR-TIME processing (step 3) -----------------------------------------
 
 
+def projected_close_days(config: routing.Config, idle_days: float,
+                         warn_age_days: float | None) -> int:
+    """Whole days until process_author_time would close this PR if the
+    author stays idle and the sweep runs on schedule — the same two
+    conditions as the close branch below (idle past `close_days`, AND a warn
+    at least `close_days - warn_days` old), solved for time. `warn_age_days`
+    is None when no warn is on record yet: one fires once idle passes
+    `warn_days`, and the notice gap starts from there. Read-only consumers
+    (the weekly digest) use this so "closes in N days" can't drift from the
+    policy the sweep actually enforces."""
+    warn_days = config.author_staleness["warn_days"]
+    close_days = config.author_staleness["close_days"]
+    gap = close_days - warn_days
+    notice_left = gap - warn_age_days if warn_age_days is not None else gap
+    return max(0, math.ceil(max(close_days - idle_days, notice_left)))
+
+
 def process_author_time(
     gh: Gh, pr_number: int, head_sha: str, undecided_count: int, config: routing.Config,
     state: dict, now: datetime, dry_run: bool, last_activity: datetime,
@@ -526,8 +544,12 @@ def process_author_time(
             state["warns"] = warns + [{"at": now.isoformat(), "head_sha": head_sha}]
             return {"changed": True, "action": {
                 "type": "warn", "idle_days": round(idle_days, 2), "undecided_count": undecided_count,
+                "closes_in_days": projected_close_days(config, idle_days, 0.0),
             }}
-        return {"changed": False, "action": {"type": "none", "idle_days": round(idle_days, 2)}}
+        return {"changed": False, "action": {
+            "type": "none", "idle_days": round(idle_days, 2), "undecided_count": undecided_count,
+            "closes_in_days": projected_close_days(config, idle_days, None),
+        }}
 
     warn_at = _parse_ts(last_warn["at"])
     warn_age_days = (now - warn_at).total_seconds() / 86400.0
@@ -547,6 +569,8 @@ def process_author_time(
 
     return {"changed": False, "action": {
         "type": "none", "idle_days": round(idle_days, 2), "warn_age_days": round(warn_age_days, 2),
+        "undecided_count": undecided_count,
+        "closes_in_days": projected_close_days(config, idle_days, warn_age_days),
     }}
 
 

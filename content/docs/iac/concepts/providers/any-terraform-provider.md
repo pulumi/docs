@@ -98,7 +98,7 @@ This walkthrough adds the Honeycomb Terraform provider to a new Pulumi project. 
 
 ### Step 1: Create a new Pulumi project
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -148,17 +148,31 @@ pulumi new yaml
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+Create a directory with a `Pulumi.yaml` that selects the HCL runtime:
+
+```yaml
+name: honeycomb-example
+runtime: hcl
+description: Using the Honeycomb Terraform provider with Pulumi
+```
+
+Pulumi HCL takes providers from a `required_providers` block rather than from `pulumi package add`, so skip step 2 and go straight to step 3.
+
+{{% /choosable %}}
+
 ### Step 2: Add the Terraform provider
 
 ```bash
 pulumi package add terraform-provider honeycombio/honeycombio
 ```
 
-This downloads the provider and records it in your `Pulumi.yaml`. In every language except YAML, it also generates and links a typed SDK in your project.
+This downloads the provider and records it in your `Pulumi.yaml`. In every language except YAML, it also generates and links a typed SDK in your project. Pulumi HCL skips this step.
 
 ### Step 3: Use the provider in your code
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -296,6 +310,31 @@ packages:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+Name the provider's source in a `required_providers` block, then run `pulumi install`:
+
+```hcl
+terraform {
+  required_providers {
+    honeycombio = {
+      source = "honeycombio/honeycombio"
+    }
+  }
+}
+
+resource "honeycombio_marker" "deployment_marker" {
+  message = "Deployed via Pulumi"
+  dataset = "my-dataset"
+}
+
+output "marker_id" {
+  value = honeycombio_marker.deployment_marker.id
+}
+```
+
+{{% /choosable %}}
+
 ### Step 4: Deploy your infrastructure
 
 ```bash
@@ -324,7 +363,7 @@ To look up a name, read the provider's own documentation in the [OpenTofu](https
 
 ## Working with your team
 
-Commit your `Pulumi.yaml` to source control. It records the provider and its version, which is all a teammate or a CI job needs to reproduce your setup.
+Commit your `Pulumi.yaml` to source control. It records the provider and its version, which is all a teammate or a CI job needs to reproduce your setup. In Pulumi HCL, the provider is named in your `.tf` files instead, so commit those along with the `sdks/<provider>/hcl.sdk.json` descriptor that `pulumi install` writes for each provider.
 
 When someone clones the repository, they run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/):
 
@@ -345,7 +384,7 @@ If the provider you need isn't in the Pulumi Registry, search the [OpenTofu regi
 ## Best practices
 
 1. **Use a Pulumi provider when one exists**: A provider published in the Pulumi Registry is maintained, documented, and versioned for Pulumi, so prefer it over adding the Terraform provider directly.
-1. **Pin provider versions**: Specify a version when you add a provider so that every teammate and CI job generates the same SDK.
+1. **Pin provider versions**: Specify a version when you add a provider so that every teammate and CI job gets the same provider. In Pulumi HCL, set `version` in the provider's `required_providers` entry.
 1. **Document provider usage**: Record which Terraform providers your team uses and why, so they can be revisited when a Pulumi provider becomes available.
 1. **Watch for upstream changes**: Track the provider's releases for breaking changes before you upgrade.
 

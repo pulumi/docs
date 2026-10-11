@@ -1,8 +1,8 @@
 ---
-title_tag: Changelog |
+title_tag: Changelog | Self-Hosting Pulumi
 meta_desc: Changes related to the self-hosted version of Pulumi Cloud.
 title: Changelog
-h1: Self-Hosted Changelog
+h1: Pulumi Cloud self-hosted changelog
 menu:
   administration:
         name: Changelog
@@ -28,10 +28,12 @@ pulumi_cloud_feature: self-hosting
 Breaking Change: Installers that deploy an OpenSearch cluster now deploy 3.7.0. Redeploying takes that cluster across the OpenSearch 2.x to 3.x major boundary, so plan for it rather than picking it up on your next update. If instead you point the service at an OpenSearch cluster you manage yourself, nothing changes on this release: the service stays compatible with 2.x, so you can update the service and keep that cluster where it is. For upgrade steps, see the README for your [installer](/docs/administration/self-hosting/deployment-options/).
 {{< /notes >}}
 
-* Added per-feature control of SSRF protection with the `PULUMI_DISABLE_SSRF_PROTECTION` environment variable, and support for outbound proxies set with `HTTPS_PROXY` and `HTTP_PROXY` on requests under SSRF protection. See [SSRF protection](/docs/administration/self-hosting/components/api/#ssrf-protection).
+* Added per-feature control of SSRF (server-side request forgery) protection with the `PULUMI_DISABLE_SSRF_PROTECTION` environment variable, support for outbound proxies set with `HTTPS_PROXY` and `HTTP_PROXY` on requests under SSRF protection, and SSRF protection for refreshing members' GitHub Enterprise Server tokens for [individual user authentication](/docs/integrations/version-control/github-app/#individual-user-authentication-for-github-enterprise-server), under the `VCS` scope. See [SSRF protection](/docs/administration/self-hosting/components/api/#ssrf-protection).
 
 {{< notes type="warning" >}}
 Breaking Change: `PULUMI_DISABLE_ESC_SSRF_PROTECTION=true` now switches off SSRF protection for Pulumi ESC only. It is deprecated; set `PULUMI_DISABLE_SSRF_PROTECTION=ESC` instead. If you relied on it to let Pulumi Neo reach a custom model provider on your private network, add `AGENTS_BYOK` to the list, for example `PULUMI_DISABLE_SSRF_PROTECTION=ESC,AGENTS_BYOK`.
+
+If individual user authentication is enabled and your GitHub Enterprise Server resolves to a private or loopback address, refreshing a member's token now fails, so operations that run as that member stop working once the token expires. Add `VCS` to `PULUMI_DISABLE_SSRF_PROTECTION` to let the API service reach the server.
 {{< /notes >}}
 
 ### August
@@ -57,7 +59,7 @@ Breaking Change: ESC providers now block requests to private, loopback, and link
 * [Bring your own keys (BYOK) with Pulumi ESC](https://www.pulumi.com/blog/bring-your-own-keys-with-pulumi-esc/) and improved crypto operation capabilities
 
 {{< notes type="warning" >}}
-Breaking Change: Ensure your permissions are up to date if you are using AWS KMS or Azure KeyVault [encryption services](/docs/administration/self-hosting/components/api/#encryption-services).
+Breaking Change: Ensure your permissions are up to date if you are using AWS KMS or Azure Key Vault [encryption services](/docs/administration/self-hosting/components/api/#encryption-services).
 {{< /notes >}}
 
 ### March

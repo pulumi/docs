@@ -14,13 +14,13 @@ aliases:
     - /docs/iac/troubleshooting/common-issues/update-conflicts/
 ---
 
-Run `pulumi cancel` to cancel the update.
+If you hit a 409 conflict error, run `pulumi cancel` to cancel the update.
 
 {{% notes type="warning" %}}
 Warning! If you cancel another person's update, their update will fail immediately.
 {{% /notes %}}
 
-One of the services that the [Pulumi Cloud](/docs/administration/) provides is *concurrency control*. The service allows at most one user to update a particular stack at a time. This is accomplished by using "leases"; whenever a user requests an update, they request a "lease" on the stack that gives them the right to update the requested stack. The service makes sure that only one person has a lease active at a time.
+One of the services that [Pulumi Cloud](/docs/administration/) provides is *concurrency control*. The service allows at most one user to update a particular stack at a time. This is accomplished by using "leases"; whenever a user requests an update, they request a "lease" on the stack that gives them the right to update the requested stack. The service makes sure that only one person has a lease active at a time.
 
 If you get this error message, this means that the service believes that somebody else has requested and was granted a lease to the stack that you are attempting to update. There are two reasons why this could be:
 
@@ -40,6 +40,9 @@ How you serialize updates depends on your CI/CD system:
 - **GitHub Actions** — use a [concurrency group](/docs/iac/operations/continuous-delivery/github-actions/#control-concurrent-runs) keyed to the stack, without `cancel-in-progress`, so queued deployments wait rather than overlap.
 - **GitLab CI/CD** — assign deployment jobs a [`resource_group`](/docs/iac/operations/continuous-delivery/gitlab-ci/#serialize-deployments) so GitLab runs them one at a time.
 - **Travis CI** — set **Limit concurrent jobs** to `1` for deployment builds, as described in the [Travis CI guide](/docs/iac/operations/continuous-delivery/travis/#concurrency).
+- **Azure Pipelines** — add an [exclusive lock check](/docs/iac/operations/continuous-delivery/azure-devops/#serialize-deployments-with-an-exclusive-lock) to the environment your deployment job targets, with `lockBehavior: sequential` on the stage.
+- **AWS CodePipeline** — set the pipeline's [execution mode](/docs/iac/operations/continuous-delivery/aws-code-services/#serialize-pipeline-executions) to `QUEUED` so waiting executions run in turn instead of the default, which lets a newer execution supersede an older one that's still waiting to start.
+- **TeamCity** — set **Limit the number of simultaneously running builds** to `1` on the build configuration, as described in the [TeamCity guide](/docs/iac/operations/continuous-delivery/teamcity/#limit-concurrent-builds).
 - **Jenkins** — wrap the deployment stage in a [`lock`](https://www.jenkins.io/doc/pipeline/steps/lockable-resources/) step from the Lockable Resources plugin, keyed to the stack, so the Jenkins queue holds a second run until the first finishes:
 
   ```groovy
@@ -54,4 +57,4 @@ How you serialize updates depends on your CI/CD system:
 
 - **Any other system** — look for its equivalent of a named lock or serial job queue (most CI/CD systems have one) and key it to the stack, the same way as above.
 
-If you'd rather not wire this up yourself, [Pulumi Deployments](/docs/deployments/) queues updates per stack automatically — see [Deployment queue](/docs/deployments/operations/deployment-queue/) — so this class of conflict can't occur regardless of what triggers the update.
+If you'd rather not wire this up yourself, [Pulumi Deployments](/docs/deployments/) queues updates per stack automatically — see [Deployment queue](/docs/deployments/operations/deployment-queue/) — so deployments submitted through it never collide with one another. A direct `pulumi up` bypasses that queue, so the guidance above about treating pipeline-owned stacks as pipeline-owned still applies.

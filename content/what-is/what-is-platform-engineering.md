@@ -6,7 +6,7 @@ meta_desc: |
 type: what-is
 date: 2023-02-03T20:08:47+00:00
 page_title: What is Platform Engineering?
-lastmod: 2026-08-21
+lastmod: 2026-09-25
 authors: ["christian-nunciato"]
 ---
 
@@ -64,7 +64,7 @@ Platform teams, once established, tend to stick rather than get rolled back into
 
 ## What tools do platform engineering teams use?
 
-No single product is "the platform." Most platform teams compose tools from each of the following categories into one coherent, self-service experience:
+Platform engineering teams typically combine seven categories of tooling, infrastructure as code, a developer portal, container orchestration, CI/CD, policy and governance, secrets and configuration, and observability, into one coherent, self-service platform. No single product is "the platform." Most platform teams compose tools from each of the following categories into one experience:
 
 | Category | What it does | Common examples |
 |---|---|---|
@@ -126,6 +126,20 @@ That said, IaC does not disappear as agents take on more of this work, a theme e
 
 [Pulumi Neo](/product/neo/) is a purpose-built AI infrastructure agent designed for this shift. It works inside a platform team's existing Pulumi setup, enforces the same policy as code, and takes on provisioning, debugging, and remediation work, freeing the team to focus on platform design and developer experience rather than ticket queues. For how it compares with other options in the category, see our guide to the [best AI infrastructure tools](/blog/ai-infrastructure-tools/).
 
+### What is AI platform engineering?
+
+AI platform engineering is the practice of extending an internal platform so that AI agents, not only human developers, are first-class consumers of its APIs, golden paths, and guardrails. It covers giving agents their own identity and access scope, applying the same policy and review standards to agent-driven changes that already apply to human-driven ones, and keeping every agent action auditable after the fact.
+
+The shift described above (agents calling platform APIs directly, agents provisioning and remediating infrastructure, agents earning their own golden paths) is what most people mean when they use this term. It is a natural extension of platform engineering's original goal: give every consumer of the platform, human or otherwise, a self-service path that is fast, governed, and reviewable, rather than either an unmanaged shortcut or a ticket queue.
+
+### Does AI platform engineering mean building platforms for AI workloads?
+
+The term gets used two ways, and both are legitimate. The primary reading, and the one this page focuses on, is platforms built to serve AI agents as consumers. A second reading points the other direction: platforms built to host AI and machine learning workloads themselves.
+
+That second sense brings its own platform requirements. Provisioning GPUs and other accelerators, standing up model-serving infrastructure, and governing the cost of inference at scale are all becoming platform-team responsibilities as more product teams ship AI features. FinOps for token and compute spend is emerging as a governance layer alongside the security and compliance guardrails platform teams already enforce. See [what is AI infrastructure](/what-is/what-is-ai-infrastructure/) for how that side of the practice works.
+
+In both readings, the underlying discipline is the same: build a self-service, policy-governed platform, and extend it to whichever new consumer or workload type shows up next.
+
 ## How to get started with platform engineering
 
 There is no one-size-fits-all blueprint, but most successful platform initiatives follow a similar sequence:
@@ -171,6 +185,14 @@ There is no universal answer, but platform teams often start small (a handful of
 ### Does platform engineering replace SRE?
 
 No. The two are complementary. SRE focuses on the reliability of production services through SLOs, error budgets, and incident response. Platform engineering focuses on developer experience and self-service infrastructure. Most companies that adopt platform engineering keep SRE in place; the platform team often surfaces SRE-defined guardrails through the internal platform itself.
+
+### Does AI replace platform engineers?
+
+No. AI is a force multiplier for platform teams, not a substitute for them. Routine platform work like writing new IaC modules, diagnosing failed deployments, and reconciling drift is increasingly automatable, which lets a small team credibly support a much larger surface area. Someone still has to design the platform, set its guardrails, and decide what a golden path looks like, and that remains squarely a human platform engineer's job.
+
+### Do AI agents need their own identities on an internal developer platform?
+
+Yes. An agent that provisions or modifies infrastructure through the platform needs the same governance primitives a human developer gets: a distinct identity, scoped role-based access, and resource quotas, rather than a shared credential or blanket admin access. Platform teams that skip this step end up with an agent that is either an unmanaged superuser or blocked from the platform entirely, and both are failure modes. See [how to govern and secure agentic infrastructure](/what-is/what-is-agentic-infrastructure/#how-do-you-govern-and-secure-agentic-infrastructure) for the specifics.
 
 ## Why is platform engineering important?
 

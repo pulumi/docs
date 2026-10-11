@@ -2,7 +2,7 @@
 title_tag: Destroy the Stack | AWS
 title: Destroy stack
 h1: "Get started with Pulumi and AWS"
-meta_desc: This page provides an overview of how to destroy a Pulumi stack of an AWS project.
+meta_desc: Learn how to delete the AWS resources in your Pulumi stack with pulumi destroy, then remove the stack itself.
 weight: 8
 menu:
     iac:
@@ -17,11 +17,11 @@ aliases:
     - /docs/clouds/aws/get-started/destroy-stack/
 ---
 
-## Cleanup & destroy the stack
+## Clean up and destroy the stack
 
-Our final step is to clean up all of the resources we've allocated in this tutorial.
+To finish the tutorial, clean up all the resources you created.
 
-Run the `pulumi destroy` command to delete all cloud resources in this project/stack:
+Run the `pulumi destroy` command to delete all cloud resources in the stack:
 
 {{% choosable os "linux,macos" %}}
 
@@ -39,7 +39,7 @@ $ pulumi destroy
 
 {{% /choosable %}}
 
-Just like `pulumi up`, you'll be shown a preview to ensure that you want to proceed:
+Just like `pulumi up`, `pulumi destroy` shows you a preview so you can confirm that you want to proceed:
 
 ```
 Previewing destroy (dev):
@@ -50,14 +50,14 @@ Previewing destroy (dev):
  -   ├─ aws:s3:BucketOwnershipControls       ownership-controls   delete
  -   ├─ aws:s3:BucketPublicAccessBlock       public-access-block  delete
  -   ├─ aws:s3:BucketWebsiteConfiguration    website              delete
- -   └─ aws:s3:Bucket                      my-bucket            delete
+ -   └─ aws:s3:Bucket                        my-bucket            delete
 
 Outputs:
   - bucketEndpoint: "http://my-bucket-dfd6bd0.s3-website-us-east-1.amazonaws.com"
   - bucketName    : "my-bucket-dfd6bd0"
 
 Resources:
-    - 5 to delete
+    - 6 to delete
 
 Do you want to perform this destroy?
 > yes
@@ -65,7 +65,7 @@ Do you want to perform this destroy?
   details
 ```
 
-As with an update, we can choose `no` or `details`; select `yes` to proceed:
+As with an update, you can choose `no` or `details`. Select `yes` to proceed:
 
 ```
 Destroying (dev):
@@ -76,14 +76,14 @@ Destroying (dev):
  -   ├─ aws:s3:BucketPublicAccessBlock       public-access-block  deleted (0.67s)
  -   ├─ aws:s3:BucketWebsiteConfiguration    website              deleted (0.88s)
  -   ├─ aws:s3:BucketOwnershipControls       ownership-controls   deleted (1s)
- -   └─ aws:s3:Bucket                      my-bucket            deleted (0.58s)
+ -   └─ aws:s3:Bucket                        my-bucket            deleted (0.58s)
 
 Outputs:
   - bucketEndpoint: "http://my-bucket-dfd6bd0.s3-website-us-east-1.amazonaws.com"
   - bucketName    : "my-bucket-dfd6bd0"
 
 Resources:
-    - 5 deleted
+    - 6 deleted
 
 Duration: 4s
 ```
@@ -92,9 +92,9 @@ At this stage, your stack still exists, but all cloud resources have been delete
 
 ## Remove the stack
 
-The final step is to remove the stack itself. Destroy keeps the stack around so that you still have the full
-history of what happened to the stack. Running [`pulumi stack rm`](/docs/iac/cli/commands/pulumi_stack_remove/) will
-delete it entirely, including all history and state snapshots. Be careful, this step cannot be undone!
+The final step is to remove the stack itself. `pulumi destroy` keeps the stack around so that you still have the full
+history of what happened to the stack. Running [`pulumi stack rm`](/docs/iac/cli/commands/pulumi_stack_remove/)
+deletes it entirely, including all history and state snapshots. Be careful: this step can't be undone!
 
 {{% choosable "os" "macos,linux" %}}
 

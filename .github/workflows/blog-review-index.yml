@@ -84,6 +84,9 @@ jobs:
   # workflow_dispatch ignores this via the `select` gate.
   holiday-check:
     name: Company-holiday check
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream sync
+    # but must not run it: the scheduled lane belongs to pulumi/docs alone.
+    if: github.repository == 'pulumi/docs'
     runs-on: ubuntu-latest
     outputs:
       is_holiday: ${{ steps.check.outputs.is_holiday }}
@@ -383,11 +386,11 @@ jobs:
           python3 $S/extract-claims-llm.py \
             --patch-file .synthetic.patch --changed-files "$POST_PATH" \
             --pass atomic --scrutiny heightened --out .candidate-claims-llm-1.json \
-            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
           python3 $S/extract-claims-llm.py \
             --patch-file .synthetic.patch --changed-files "$POST_PATH" \
             --pass holistic --scrutiny heightened --out .candidate-claims-llm-2.json \
-            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
           python3 $S/merge-claims.py \
             --regex .candidate-claims-regex.json \
             --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \

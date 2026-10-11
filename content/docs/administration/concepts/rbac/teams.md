@@ -24,7 +24,7 @@ aliases:
 pulumi_cloud_feature: teams
 ---
 
-The Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions to a group of users. When your organization has custom roles enabled, teams can also be assigned **roles** (in addition to stack-level permissions), so that members receive the union of the team's roles and their own user role.
+Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions to a group of users. When your organization has custom roles enabled, teams can also be assigned **roles** (in addition to stack-level permissions), so that members receive the union of the team's roles and their own user role.
 
 ## Creating a Team{#creating-a-team}
 
@@ -65,7 +65,7 @@ If your Pulumi organization is backed by GitHub, you can import your existing
 GitHub teams into Pulumi.
 
 For these teams, membership is managed on GitHub, while the set of stack
-permissions and role assignments granted to team members is managed in the Pulumi Cloud.
+permissions and role assignments granted to team members is managed in Pulumi Cloud.
 
 ## Team Entity Access Grants
 

@@ -25,23 +25,43 @@ The model's patch is a closed action vocabulary over finding ids:
   add       a new finding from the push delta; gets the next F-id
   retext    the finding's body text changes; id and anchor preserved
 
+Beside the actions, an optional top-level `summary` replaces the author
+card's one-sentence italic summary. The composer's sentence is written once
+at v1; when it named open items it went stale the moment they resolved (a
+"nothing blocks merge" card still saying four claims "only you can
+confirm", pulumi/docs#21871).
+
 Disposition mapping (aligned with scrape-review-outcomes.py's v3
 classifier, which this must never contradict):
   - `resolve` writes REVIEW_STATE disposition `fixed` (actor `update-lane`,
     sha = the new head): the gate reads it as answered, and the scraper's
     resolved-bucket row reads as `fixed`.
-  - `concede` writes NO disposition. The ✅ row's `concede:` annotation IS
-    the machine record (CONCEDE_ANNOTATION_RE); writing `refuted` here would
-    flip the scraper's dispute adjudication from "conceded" (model yielded)
-    to "refuted" (author answer standing un-reviewed) — a different claim.
+  - `concede` writes disposition `not-applicable` (actor `update-lane`,
+    note `conceded: <reason>`). It used to write nothing, on the theory that
+    the ✅ row's `concede:` annotation was the machine record — but the card
+    itself tells readers "a finding ID absent from [REVIEW_STATE] is OPEN",
+    so a card whose four findings were all conceded shipped `{}` and read as
+    four open findings to anyone taking it at its word (pulumi/docs#21790,
+    and one conceded row each on #21793/#21796/#21798/#21799/#21801/#21828).
+    Every ✅ row now carries a disposition. Not `refuted`: that would flip
+    the scraper's dispute adjudication from "conceded" (model yielded) to
+    "refuted" (author answer standing un-reviewed) — a different claim.
+    `not-applicable` leaves the scraper's resolved-bucket `conceded`
+    classification (keyed on the annotation) exactly as it was.
+  - ✅ rows that predate that change carry no disposition; every refresh
+    backfills one (`backfill_resolved_dispositions`) so an old card heals on
+    its next update instead of needing a hand edit.
   - `hold` writes NO disposition: the finding is still open; the author may
-    still fix it or `/resolve` it.
+    still fix it.
 
-The REVIEW_STATE race: a `/resolve` can land while the model works. The
-publish chain re-fetches the live author card just before calling this
-script, and this script parses REVIEW_STATE from that fresh body and merges
-its own action-implied dispositions per finding-id (newest `updated_at`
-wins) — never a whole-block overwrite.
+The REVIEW_STATE race: another review run can publish the author card while
+the model works — a full review triage auto-fired, a `#new-review`, another
+update dispatch (#21785, #21871). The publish chain re-fetches the live
+author card just before calling this script, and this script parses
+REVIEW_STATE from that fresh body and merges its own action-implied
+dispositions per finding-id (newest `updated_at` wins) — never a
+whole-block overwrite. pinned-comment.sh's stale-publish guard (#21788)
+separately refuses a card composed before the one already on the PR.
 
 Evidence: the trail/investigation log live only in S3, not on the cards, so
 the credentialed publish step downloads the prior evidence object and passes
@@ -111,6 +131,7 @@ AUTO_FORBIDDEN = ("concede", "hold", "accept", "add")
 ADD_BUCKETS = ("outstanding", "author-answer", "reviewer-check")
 
 RESOLVED_HEADING = "### ✅ Resolved since last review"
+SUMMARY_MAX = 300
 RESOLVED_PLACEHOLDER = "_No items resolved since the last review._"
 # Same placeholder strings the composer uses, so an emptied section reads
 # identically whether the initial lane or a refresh emptied it.
@@ -134,11 +155,11 @@ _HINT_RE = re.compile(r"^_Editing in the browser\?[^\n]*\n(?:\n)?", re.M)
 # re-renders from the LIVE body, so the banner must be stripped here — the
 # first live auto-refresh published a fresh card still promising a refresh.
 _BANNER_RE = re.compile(r"^> 🔄 \*\*Re-review in progress\*\*[^\n]*\n(?:\n)?", re.M)
-_EVIDENCE_LINK_RE = re.compile(r"(📎 \*\*Full evidence:\*\* \[[^\]]+\]\()[^)]*(\))")
+_EVIDENCE_LINK_RE = re.compile(r"((?:📎 )?\*\*Full evidence:\*\* \[[^\]]+\]\()[^)]*(\))")
 
 
 def set_evidence_url(body: str, url: str) -> str:
-    """Point the 📎 line at this refresh's evidence page. The composer's
+    """Point the evidence line at this refresh's evidence page. The composer's
     token is long gone from a published card, so a refresh must rewrite the
     live URL — on the fork's artifact-only path the link otherwise keeps
     pointing at the FIRST run's artifact forever."""
@@ -175,6 +196,27 @@ def normalize_update(update: dict) -> tuple[dict, list[str]]:
     if "schema" not in u:
         u["schema"] = 1
         notes.append("`schema` defaulted to 1")
+    # `summary` is optional, and "optional" slips into the envelope as "",
+    # null, or the prompt's own `<…>` placeholder copied verbatim. All mean
+    # "leave the sentence alone" — none may fail an otherwise good refresh or
+    # put a placeholder on the card.
+    if "summary" in u:
+        sv = u["summary"]
+        text = sv.strip() if isinstance(sv, str) else sv
+        if text is None or text == "" or (isinstance(text, str) and text.startswith("<") and text.endswith(">")):
+            del u["summary"]
+            notes.append("empty/placeholder `summary` dropped")
+    if isinstance(u.get("findings"), list):
+        fixed = []
+        for e in u["findings"]:
+            if isinstance(e, dict) and e.get("action") == "add" and isinstance(e.get("bucket"), str):
+                raw = e["bucket"].strip()
+                mapped = _BUCKET_ALIASES.get(raw.lower(), _BUCKET_ALIASES.get(raw))
+                if raw not in ADD_BUCKETS and mapped:
+                    e = dict(e, bucket=mapped)
+                    notes.append(f"add bucket `{raw}` → `{mapped}`")
+            fixed.append(e)
+        u["findings"] = fixed
     if u.get("case") is None and isinstance(u.get("findings"), list):
         acts = {e.get("action") for e in u["findings"] if isinstance(e, dict)}
         if acts and acts <= {"resolve", "add"}:
@@ -188,6 +230,55 @@ def normalize_update(update: dict) -> tuple[dict, list[str]]:
     return u, notes
 
 
+# The card's own vocabulary leaks into `add` buckets: the header says "N items
+# block merge", so the model wrote `bucket: "blocking"` and the whole refresh
+# failed (run 35626815279, #21761). Map the words and glyphs a card shows to
+# the closed set; an unmapped value still fails validation.
+_BUCKET_ALIASES = {
+    "blocking": "outstanding", "block": "outstanding", "blocker": "outstanding",
+    "must-fix": "outstanding", "fix": "outstanding", "🚨": "outstanding",
+    "question": "author-answer", "questions": "author-answer", "author": "author-answer",
+    "❓": "author-answer",
+    "low-confidence": "reviewer-check", "reviewer": "reviewer-check",
+    "advisory": "reviewer-check", "check": "reviewer-check", "⚠️": "reviewer-check",
+}
+
+
+def drop_stale_targets(update: dict, known_ids: set[str],
+                       resolved_ids: set[str]) -> tuple[dict, list[str]]:
+    """Drop entries that target a finding this card no longer has open.
+
+    Two shapes, both observed, neither worth failing a refresh over:
+      - `resolve`/`concede` on an id already in ✅: a concurrent refresh
+        resolved it while this run's model read the older card (#21614,
+        run 34988034588 — six ids, the whole refresh lost). The finding is
+        already where the action would put it.
+      - any non-`add` action on an id the card never had: the model gave an
+        untracked ⚠️ prose bullet an invented id (#21785, run 35650017269).
+    Dropping is the safe direction: an open finding the model failed to
+    name stays open. Every drop is logged; nothing else is repaired here.
+    """
+    if not isinstance(update, dict) or not isinstance(update.get("findings"), list):
+        return update, []
+    kept, notes = [], []
+    for entry in update["findings"]:
+        if not isinstance(entry, dict) or entry.get("action") == "add" or entry.get("action") not in ACTIONS:
+            kept.append(entry)
+            continue
+        fid = entry.get("id")
+        if not isinstance(fid, str) or fid in known_ids:
+            kept.append(entry)
+        elif fid in resolved_ids and entry["action"] in ("resolve", "concede"):
+            notes.append(f"{entry['action']} {fid}: already resolved (concurrent refresh) — no-op")
+        elif fid in resolved_ids:
+            kept.append(entry)  # a reopening action; validate_update decides
+        elif re.match(r"^F\d+$", fid):
+            notes.append(f"{entry['action']} {fid}: not a finding on this card — dropped")
+        else:
+            kept.append(entry)
+    return dict(update, findings=kept), notes
+
+
 def validate_update(update: dict, known_ids: set[str],
                     resolved_ids: set[str] | None = None) -> list[str]:
     problems: list[str] = []
@@ -198,6 +289,14 @@ def validate_update(update: dict, known_ids: set[str],
         problems.append(f"update.case {update.get('case')!r} not in the closed set")
     if not str(update.get("history_summary", "")).strip():
         problems.append("update.history_summary is required")
+    if "summary" in update:
+        summary = update.get("summary")
+        if not isinstance(summary, str) or not summary.strip():
+            problems.append("update.summary, when present, must be a non-empty string")
+        elif "\n" in summary.strip():
+            problems.append("update.summary must be one line")
+        elif len(summary.strip()) > SUMMARY_MAX:
+            problems.append(f"update.summary must be ≤{SUMMARY_MAX} chars")
     findings = update.get("findings")
     if not isinstance(findings, list):
         return problems + ["update.findings must be a list"]
@@ -290,6 +389,197 @@ def _reopen_row(fid: str, resolved: dict, prior_findings: dict) -> dict:
             "parsed": parsed, "raw": resolved["raw"], "reopened": True}
 
 
+def backfill_resolved_dispositions(state: dict, resolved_rows: list[str], *,
+                                   sha: str = "", now: datetime | None = None) -> dict:
+    """Give every ✅ Resolved row a REVIEW_STATE disposition it lacks.
+
+    The contract (compose-review.py's note under the block, Sentinel G2,
+    review-worklist.py) is that the block is the complete disposition
+    record. A ✅ row with no entry breaks it: the row is closed on screen and
+    open by the letter of the block. A `concede:` cell backfills to
+    `not-applicable` (the concede action's own mapping), anything else to
+    `fixed`. Existing entries are never touched — a human's answer wins.
+    """
+    findings = state.get("findings", {})
+    for line in resolved_rows:
+        parsed = cr.parse_finding_line(line)
+        if not parsed or parsed["id"] == "F?" or parsed["id"] in findings:
+            continue
+        body = parsed["body"]
+        if CONCEDE_SEP in body:
+            reason = body.split(CONCEDE_SEP, 1)[1].strip() or "conceded"
+            state = review_state.set_disposition(
+                state, parsed["id"], "not-applicable", actor="update-lane",
+                note=f"conceded: {reason}", sha=sha, now=now)
+        else:
+            state = review_state.set_disposition(
+                state, parsed["id"], "fixed", actor="update-lane", sha=sha, now=now)
+        findings = state.get("findings", {})
+    return state
+
+
+# ---- brief/summary drift after a rework --------------------------------
+#
+# The brief's "What this PR changes" bullets and Review-confidence notes, and
+# the author card's one-sentence summary, are composed once by the full
+# review and carried verbatim by every refresh. After a rework they describe
+# a diff that no longer exists: #21801's brief still listed
+# `use-terraform-module.md` (moved out of the PR), its confidence notes said
+# "→ see F1" about a conceded finding, #21798/#21799/#21828 pointed at an
+# empty ⚠️ list, and #21790's card said "these four need a source from you"
+# under "nothing blocks merge". The model may send a new `summary`, but
+# nothing made the carried text agree with the live card. These repairs are
+# deterministic and only ever REMOVE or neutralize a statement the card
+# itself now contradicts; they never write new analysis.
+
+_CHANGES_BULLET_RE = re.compile(r"^> - `([^`]+)` — ")
+_CONF_ROW_RE = re.compile(r"^(> \| [^|]+\| [^|]+\| )(.*?)( \|\s*)$")
+_POINTER_RE = re.compile(r"→ see|list below|row below|on the author'?s card|⚠️ list", re.I)
+_FID_RE = re.compile(r"\bF(\d+)\b")
+SETTLED_NOTE = "Settled since this was written — see ✅ Resolved on the author card."
+# The summary names open work FOR THE AUTHOR: an ask addressed to them
+# about a counted set of items ("these four need a source from you").
+# Only consulted when nothing blocks — a card with open items may say so.
+# Deliberately narrow, because a match deletes the sentence. An ask phrase
+# alone isn't enough: summaries describe what a PR's page asks of ITS reader
+# ("steps that need your input from the IdP console", "what you need to
+# configure"), and say that work is done ("nothing more is needed from
+# you"). So the sentence also needs a count of items and no negation; a
+# count alone isn't enough either ("checked two claims … confirmed both").
+_ASK_RE = re.compile(
+    r"\bfrom you\b|\bonly you can\b|\bwaiting on you\b"
+    r"|\b(need|needs|needing|awaiting|await) your "
+    r"(answer|confirmation|input|source|decision|call|review|reply)s?\b",
+    re.I)
+_COUNT_RE = re.compile(
+    r"\b(\d+|one|two|three|four|five|six|seven|eight|nine|ten|both|these|those)\b", re.I)
+_NEGATED_RE = re.compile(r"\b(nothing|none|no longer|no more|not needed)\b", re.I)
+
+
+def _names_open_work(text: str) -> bool:
+    return bool(_ASK_RE.search(text) and _COUNT_RE.search(text) and not _NEGATED_RE.search(text))
+
+
+# A "What this PR changes" bullet names a file when its lead is one token
+# with a slash or an extension. Anything else (`restamp_body()`,
+# `review:stale`, `pinned-comment.sh prune-legacy`) isn't a path, and the
+# file list can't say whether the PR still changes it.
+_PATHLIKE_RE = re.compile(r"^[\w.@+-]*(/[\w.@+-]*)*$")
+_EXT_RE = re.compile(r"\.[A-Za-z][A-Za-z0-9]{0,7}$")
+_CHANGES_HEAD_RE = re.compile(r"^> \*\*What this PR changes:?\*\*")
+
+
+def _names_a_file(name: str) -> bool:
+    # `@pulumi/aws` has a slash but is a package, not a path, and
+    # `/docs/iac/concepts/stacks/` is a site URL, not a repo path.
+    return (not name.startswith(("@", "/")) and bool(_PATHLIKE_RE.match(name))
+            and ("/" in name or bool(_EXT_RE.search(name))))
+
+
+def _still_changed(name: str, pr_files: list[str]) -> bool:
+    if name.endswith("/"):
+        return any(p.startswith(name) or ("/" + name) in p for p in pr_files)
+    return any(p == name or p.endswith("/" + name) for p in pr_files)
+
+
+def prune_changes_bullets(brief: str, pr_files: list[str] | None) -> tuple[str, list[str]]:
+    """Drop "What this PR changes" bullets naming a file the PR no longer
+    changes. Only bullets inside that block whose lead names a file (see
+    `_names_a_file`) are candidates; a file survives when any PR path equals
+    it or ends with `/<it>`, a directory (`dir/`) while any PR path sits
+    under it. No file list → no change."""
+    if not pr_files:
+        return brief, []
+    dropped = []
+    out = []
+    in_block = False
+    for line in brief.splitlines():
+        if _CHANGES_HEAD_RE.match(line):
+            in_block = True
+        elif in_block and (not line.startswith(">") or line.startswith("> **")):
+            in_block = False
+        m = _CHANGES_BULLET_RE.match(line) if in_block else None
+        if m:
+            name = m.group(1).strip()
+            if _names_a_file(name) and not _still_changed(name, pr_files):
+                dropped.append(name)
+                continue
+        out.append(line)
+    return "\n".join(out) + ("\n" if brief.endswith("\n") else ""), dropped
+
+
+def settle_confidence_pointers(brief: str, open_ids: set[str], open_checks: bool,
+                               open_author: bool | None = None) -> tuple[str, int]:
+    """A Review-confidence note that points at a finding which is no longer
+    open (by id), or at a ⚠️ list / author card with nothing open on it,
+    is replaced by SETTLED_NOTE. The level cell is left alone."""
+    n = 0
+    out = []
+    for line in brief.splitlines():
+        m = _CONF_ROW_RE.match(line)
+        if m and _POINTER_RE.search(m.group(2)) and m.group(2).strip() != SETTLED_NOTE:
+            note = m.group(2)
+            ids = {f"F{x}" for x in _FID_RE.findall(note)}
+            if ids:
+                stale = not (ids & open_ids)
+            elif re.search(r"author'?s card", note, re.I):
+                stale = not (open_author if open_author is not None else open_ids)
+            else:
+                stale = not open_checks
+            if stale:
+                line = f"{m.group(1)}{SETTLED_NOTE}{m.group(3)}"
+                n += 1
+        out.append(line)
+    return "\n".join(out) + ("\n" if brief.endswith("\n") else ""), n
+
+
+def drop_stale_summary(author: str, n_blocking: int) -> tuple[str, bool]:
+    """With nothing blocking, an italic summary that still names open work
+    for the author contradicts the header right above it; remove it (the
+    header and sections carry the live state). Anything else is kept."""
+    if n_blocking:
+        return author, False
+    lines = author.splitlines()
+    for i, ln in enumerate(lines):
+        st = ln.strip()
+        if st.startswith("_") and st.endswith("_") and len(st) > 2 and not st.startswith("_No ") \
+                and not st.startswith("_Nothing") and _names_open_work(st.strip("_")):
+            del lines[i]
+            if i < len(lines) and not lines[i].strip() and i > 0 and not lines[i - 1].strip():
+                del lines[i]
+            return "\n".join(lines) + ("\n" if author.endswith("\n") else ""), True
+        if st.startswith("### "):
+            break  # the summary sits above the first section
+    return author, False
+
+
+def refresh_carried_text(brief: str, author: str, state: dict, n_blocking: int,
+                         pr_files: list[str] | None) -> tuple[str, str]:
+    """Apply the three drift repairs above against the live cards."""
+    answered = set((state or {}).get("findings", {}))
+    open_author = {r[0] for r in (_walk_ids(author, be.AUTHOR_SECTIONS, "author"))} - answered
+    open_checks = bool(_walk_ids(brief, be.BRIEF_SECTIONS, "brief"))
+    open_ids = open_author | {r[0] for r in _walk_ids(brief, be.BRIEF_SECTIONS, "brief")}
+    brief, dropped = prune_changes_bullets(brief, pr_files)
+    brief, settled = settle_confidence_pointers(brief, open_ids, open_checks, bool(open_author))
+    author, gone = drop_stale_summary(author, n_blocking)
+    notes = []
+    if dropped:
+        notes.append("dropped change bullet(s) for files no longer in the PR: " + ", ".join(dropped))
+    if settled:
+        notes.append(f"{settled} review-confidence note(s) pointed at settled findings")
+    if gone:
+        notes.append("removed a summary sentence that named open work under 'nothing blocks merge'")
+    if notes:
+        print("::notice::apply-update: " + "; ".join(notes), file=sys.stderr)
+    return brief, author
+
+
+def _walk_ids(body: str, headings, doc: str) -> list[tuple[str]]:
+    return [(parsed["id"],) for _b, _i, parsed, _raw in be._walk(body, headings, doc)
+            if parsed and parsed.get("id") != "F?"]
+
+
 def _collect_resolved(author_body: str) -> list[str]:
     lines = author_body.splitlines()
     out: list[str] = []
@@ -303,6 +593,36 @@ def _collect_resolved(author_body: str) -> list[str]:
         if in_section and line.startswith("|") and not cr.is_table_furniture(line):
             out.append(line)
     return out
+
+
+def replace_summary(body: str, text: str) -> str:
+    """Swap the author card's italic one-sentence summary for `text`.
+
+    The summary is the first single-line `_…_` paragraph between the H2
+    header and the first section heading (the browser hint is also italic
+    but sits below the tables, and starts with its own fixed prefix). A card
+    with no summary line gets one after the orienting callout rather than
+    silently dropping the model's refresh."""
+    text = " ".join(text.split()).strip("_ ")
+    lines = body.splitlines()
+    head = next((i for i, ln in enumerate(lines) if _AUTHOR_REV_RE.match(ln)), None)
+    if head is None:
+        return body
+    end = next((i for i in range(head + 1, len(lines)) if lines[i].startswith("### ")), len(lines))
+    for i in range(head + 1, end):
+        ln = lines[i]
+        if (len(ln) > 2 and ln.startswith("_") and ln.endswith("_")
+                and not ln.startswith(cr.V3_BROWSER_HINT_PREFIX)):
+            lines[i] = f"_{text}_"
+            break
+    else:
+        # Right after the orienting callout (or the header, if it has none).
+        at = head + 1
+        callout = [i for i in range(head + 1, end) if lines[i].startswith(">")]
+        if callout:
+            at = callout[-1] + 1
+        lines[at:at] = ["", f"_{text}_"]
+    return "\n".join(lines) + ("\n" if body.endswith("\n") else "")
 
 
 def _render_row(fid: str, ref: str, file: str, body: str,
@@ -390,6 +710,9 @@ def apply(
     new_rev = (int(m_rev.group(1)) + 1) if m_rev else 2
 
     author_body = _BANNER_RE.sub("", author_body)
+    # A nothing-for-you card publishes without 🚨/❓; restore them so a
+    # reopened, added, or promoted row has a section to land in.
+    author_body = be.ensure_author_sections(author_body)
     author_body, detail_blocks = _strip_detail_blocks(author_body)
     rows = _collect_rows(author_body, brief_body)
     resolved_rows = _collect_resolved(author_body)
@@ -404,6 +727,10 @@ def apply(
     if repairs:
         print("::warning::apply-update repaired the patch envelope: " + "; ".join(repairs),
               file=sys.stderr)
+    update, dropped_targets = drop_stale_targets(update, set(rows), set(resolved_by_id))
+    if dropped_targets:
+        print("::warning::apply-update dropped action(s) on findings this card no longer has open: "
+              + "; ".join(dropped_targets), file=sys.stderr)
     problems = validate_update(update, set(rows), set(resolved_by_id))
     if problems:
         raise UpdateError("; ".join(problems))
@@ -485,6 +812,10 @@ def apply(
                 f"{row['parsed']['body']}{CONCEDE_SEP}{reason}",
                 link_base=link_base))
             del rows[fid]
+            disposition_state = review_state.set_disposition(
+                disposition_state, fid, "not-applicable",
+                actor="update-lane", note=f"conceded: {reason}",
+                sha=head_sha[:12], now=now)
         elif action == "hold":
             # The author answered and the model still disagrees: that is a
             # judgment call for the human reviewer, not a lock on the author.
@@ -534,18 +865,21 @@ def apply(
                 # _rebuild_detail_block tolerates an empty `old`.
                 detail_blocks[fid] = _rebuild_detail_block(fid, detail_blocks.get(fid, []), entry["detail"])
 
-    # Merge action-implied dispositions with the LIVE card's state — a
-    # /resolve that landed while the model worked survives (newest wins).
+    # Merge action-implied dispositions with the LIVE card's state — whatever
+    # another run published while the model worked survives unless this run
+    # is newer.
     merged_state = review_state.merge_states(state, disposition_state)
     merged_state["high_water"] = max(merged_state["high_water"], high_water)
     # A reopened finding sheds the lane's own machine-recorded `fixed` entry,
-    # or it would still count as answered. A human's disposition (a /resolve
-    # that landed meanwhile, or an accept/hold applied above) is kept — newer
+    # or it would still count as answered. A human's disposition (one an
+    # earlier run recorded, or an accept/hold applied above) is kept — newer
     # wins in the merge, and an answered finding stays answered.
     for fid in reopened:
         live = merged_state["findings"].get(fid)
         if isinstance(live, dict) and live.get("actor") == "update-lane" and fid not in disposition_state["findings"]:
             del merged_state["findings"][fid]
+    merged_state = backfill_resolved_dispositions(
+        merged_state, resolved_rows, sha=head_sha[:12], now=now)
 
     author_out = _render_doc(author_body, rows, resolved_rows, doc="author",
                              link_base=link_base, edit_base=edit_base,
@@ -553,9 +887,8 @@ def apply(
     if resolved_rows and RESOLVED_HEADING not in author_out:
         # the composer omits ✅ Resolved while empty — insert it on first resolve
         a_lines = author_out.splitlines()
-        at = next((i for i, ln in enumerate(a_lines) if ln.startswith("📎 ")), len(a_lines))
-        a_lines[at:at] = [RESOLVED_HEADING, "", cr.FINDING_TABLE_HEADER,
-                          cr.FINDING_TABLE_SEPARATOR, *resolved_rows, ""]
+        at = next((i for i, ln in enumerate(a_lines) if ln.startswith(cr.EVIDENCE_LINE_PREFIXES)), len(a_lines))
+        a_lines[at:at] = [RESOLVED_HEADING, "", *cr.render_resolved_block(resolved_rows), ""]
         author_out = "\n".join(a_lines) + ("\n" if author_out.endswith("\n") else "")
     brief_out = _render_doc(brief_body, rows, resolved_rows, doc="brief",
                             link_base=link_base)
@@ -567,10 +900,17 @@ def apply(
     brief_out = cr.replace_waiting_block(
         brief_out, open_findings, merged_state.get("findings", {}))
     author_out = review_state.replace_block(author_out, merged_state)
-    # Blocking = author-card rows WITHOUT a disposition: a `/resolve F1
-    # accepted` that landed before this refresh must not be counted back in.
+    # Blocking = author-card rows WITHOUT a disposition: an answer an earlier
+    # run recorded must not be counted back in.
     n_blocking = be.count_blocking(open_findings, merged_state.get("findings", {}))
     author_out = be._fix_header(author_out, n_blocking, rev=new_rev)
+    _contrib = cr.contributing_url_for(repo)
+    author_out = be.restamp_footer(author_out, cr.render_author_footer(_contrib, n_blocking))
+    brief_out = be.restamp_footer(brief_out, cr.render_reviewer_footer(_contrib))
+    brief_out = be.restamp_brief_orient(brief_out)
+    author_out = be.drop_empty_author_sections(author_out)
+    if str(update.get("summary") or "").strip():
+        author_out = replace_summary(author_out, update["summary"])
     author_out = _HEAD_RE.sub(f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->", author_out, count=1)
     brief_out = _BRIEF_HEADER_RE.sub(
         f"## Reviewer's guide v{new_rev} — not for the author", brief_out, count=1)
@@ -630,7 +970,7 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
     replacements: list[tuple[int, int, list[str]]] = []
     for bucket, start, end in spans:
         if bucket == "resolved":
-            new_lines = _table(resolved_rows) if resolved_rows else [RESOLVED_PLACEHOLDER]
+            new_lines = cr.render_resolved_block(resolved_rows) if resolved_rows else [RESOLVED_PLACEHOLDER]
         else:
             bucket_rows = by_bucket.get(bucket)
             empty = SECTION_EMPTY.get(bucket, "")
@@ -780,7 +1120,9 @@ def main() -> int:
     parser.add_argument("--evidence-out", default=".review-evidence.json")
     parser.add_argument("--head-repo", default="", help="head repo full name for ✏️ edit links")
     parser.add_argument("--head-branch", default="", help="head branch for ✏️ edit links")
-    parser.add_argument("--evidence-url", default="", help="URL for the 📎 evidence line on both cards")
+    parser.add_argument("--evidence-url", default="", help="URL for the evidence line on both cards")
+    parser.add_argument("--pr-files", default="",
+                        help="file of the PR's changed paths, one per line (prunes stale brief bullets)")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
     if args.self_test:
@@ -804,6 +1146,9 @@ def main() -> int:
         except json.JSONDecodeError:
             print("apply-update: prior evidence unreadable; proceeding degraded", file=sys.stderr)
 
+    pr_files = None
+    if args.pr_files and Path(args.pr_files).is_file():
+        pr_files = [ln.strip() for ln in Path(args.pr_files).read_text().splitlines() if ln.strip()] or None
     try:
         author_out, brief_out, merged_state, report = apply(
             author_body, brief_body, update,
@@ -815,6 +1160,8 @@ def main() -> int:
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,
             run_id=args.run_id, timestamp=report["timestamp"])
         brief_out = refresh_facts_line(brief_out, evidence["findings"])
+        brief_out, author_out = refresh_carried_text(
+            brief_out, author_out, merged_state, report["blocking"], pr_files)
         # The brief's rubber-stamp Style line follows the card too (the
         # evidence count moves with it inside assemble_evidence). No empty-block
         # drop here: build-evidence already removed any empty block before the
@@ -868,7 +1215,7 @@ def _self_test() -> int:
     assert "**F5**" in b_out and "new soft mismatch" in b_out, "add landed in brief with next id"
     assert f"<!-- CLAUDE_REVIEW_HEAD {sha} -->" in a_out
     assert "## Author action guide v2 — 2 items block merge" in a_out, f"count refreshed and rev bumped: {report}"
-    assert a_out.count("📎 **Full evidence:**") == 1, "evidence line survives the re-render"
+    assert a_out.count("**Full evidence:**") == 1, "evidence line survives the re-render"
     assert a_out.count(cr.V3_BROWSER_HINT_PREFIX) == 1, "browser hint survives, exactly once"
     assert "<sub>Review v2 · updated " in a_out and "<sub>Review v2 · updated " in b_out, "sub line rewritten on both cards"
     assert f"· head commit {sha[:7]}</sub>" in a_out and "." not in a_out.split("· updated ")[1].split(" ·")[0], "sub: 7-char sha, no microseconds"
@@ -876,14 +1223,14 @@ def _self_test() -> int:
     reparsed = review_state.parse_state(a_out)
     assert reparsed is not None and reparsed["high_water"] == 5
 
-    # Racing /resolve survives: author card carries a disposition for F2.
+    # A racing disposition survives: the live author card carries one for F2.
     from datetime import datetime, timezone
     live = review_state.set_disposition(
         review_state.parse_state(author), "F2", "refuted", actor="author", note="n",
         now=datetime(2026, 8, 31, 23, 0, tzinfo=timezone.utc))
     author_live = review_state.replace_block(author, live)
     a2, _b2, state2, _ = apply(author_live, brief, update, head_sha=sha, actor="cam", auto=False)
-    assert state2["findings"]["F2"]["disposition"] == "refuted", "racing /resolve merged, not clobbered"
+    assert state2["findings"]["F2"]["disposition"] == "refuted", "racing disposition merged, not clobbered"
     assert review_state.parse_state(a2)["findings"]["F2"]["disposition"] == "refuted"
 
     # Auto mode drops adjudication actions but keeps resolve.
@@ -898,12 +1245,16 @@ def _self_test() -> int:
     assert state3["findings"].get("F1", {}).get("disposition") == "fixed"
     assert "concede: nope" not in a3 and r3["dropped_in_auto"] == ["concede F2"]
 
-    # Demotion rejected; unknown id rejected.
+    # Demotion rejected. An unknown id is dropped (logged), not fatal:
+    # the finding it failed to name stays open (#21785).
+    a99, _b99, s99, _r99 = apply(author, brief, {
+        "schema": 1, "case": "mixed", "history_summary": "x",
+        "findings": [{"id": "F99", "action": "resolve", "annotation": "a"}]},
+        head_sha=sha, actor="x", auto=False)
+    assert "F99" not in s99["findings"]
     for bad in (
         {"schema": 1, "case": "mixed", "history_summary": "x",
          "findings": [{"id": "F1", "action": "promote", "to": "author-answer", "reason": "r"}]},
-        {"schema": 1, "case": "mixed", "history_summary": "x",
-         "findings": [{"id": "F99", "action": "resolve", "annotation": "a"}]},
     ):
         try:
             apply(author, brief, bad, head_sha=sha, actor="x", auto=False)

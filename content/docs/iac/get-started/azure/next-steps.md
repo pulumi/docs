@@ -35,7 +35,7 @@ With Pulumi ESC you can:
 
 - **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
 - **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
-- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with TypeScript/JavaScript, Python, and Go SDKs.
+- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud console, and in-code with TypeScript/JavaScript, Python, and Go SDKs.
 
 {{< get-started-next-step path="/docs/esc/get-started/" label="Learn more about Pulumi ESC" ref="gs-azure-esc" >}}
 
@@ -61,4 +61,4 @@ Read more about Pulumi's architecture and foundational concepts in depth, includ
 
 Browse the latest posts on using Pulumi with Microsoft Azure, including everything from new Azure products and features to technical architectures and best practices.
 
-{{< get-started-next-step path="/blog/tag/azure" label="Browse Azure posts" ref="gs-azure-blog" >}}
+{{< get-started-next-step path="/blog/tags/azure" label="Browse Azure posts" ref="gs-azure-blog" >}}

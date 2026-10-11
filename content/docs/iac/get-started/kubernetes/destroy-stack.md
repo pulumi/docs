@@ -64,7 +64,7 @@ As with an update, we can choose `no` or `details`; select `yes` to proceed:
 
 ```
 Do you want to perform this destroy? yes
-Destroying (dev)
+Destroying (dev):
 
      Type                                        Name            Status
  -   pulumi:pulumi:Stack                         quickstart-dev  deleted (0.08s)

@@ -49,7 +49,7 @@ Most AWS CLI credential errors, such as `ExpiredToken`, `InvalidAccessKeyId`, `I
 
 ### UnrecognizedClientException
 
-"The security token included in the request is invalid" backed by an `UnrecognizedClientException` (HTTP 403) means AWS could not match the access key ID, or X.509 certificate, signing the request to anything in its records. The [AWS STS common errors reference](https://docs.aws.amazon.com/STS/latest/APIReference/CommonErrors.html) documents this error the same way for both IAM and STS, and its wording overlaps heavily with `InvalidClientTokenId`, so treat the two as close cousins rather than cleanly separable causes. In practice, `UnrecognizedClientException` tends to surface on regional service calls such as DynamoDB, KMS, Lambda, or SES, and it is worth double-checking that the request is reaching the intended region as well as ruling out an expired or rotated key.
+An `UnrecognizedClientException` (HTTP 403) means the X.509 certificate or AWS access key ID in the request does not exist in AWS's records. The [AWS STS common errors reference](https://docs.aws.amazon.com/STS/latest/APIReference/CommonErrors.html) lists this error and advises verifying that the credentials are valid and have not expired. Double-check that the key has not been rotated or deleted, and that the request is reaching the intended region.
 
 ### Unable to locate credentials
 
@@ -170,7 +170,7 @@ This error means AWS could not verify the request's cryptographic signature, usu
 
 ### What does the UnrecognizedClientException error mean in AWS?
 
-It means AWS could not recognize the access key ID or certificate used to sign the request, and it returns as an HTTP 403 with the message "The security token included in the request is invalid." The fix is the same as for the other credential errors above: generate a fresh, valid key or session token rather than trying to repair the one that failed, and confirm the request is targeting the correct region.
+It means the X.509 certificate or AWS access key ID used to sign the request does not exist in AWS's records. AWS lists it as a common error with HTTP status code 403 and advises verifying that the credentials are valid and have not expired ([AWS STS common errors](https://docs.aws.amazon.com/STS/latest/APIReference/CommonErrors.html)). The fix is the same as for the other credential errors above: generate a fresh, valid key or session token rather than trying to repair the one that failed, and confirm the request is targeting the correct region.
 
 ### What does "Unable to locate credentials" mean and how do I fix it?
 

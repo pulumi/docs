@@ -1,0 +1,26 @@
+{{- /*
+  Inline list of the Pulumi Cloud editions a feature is available in, derived
+  from data/pulumi_editions.yaml, for places a callout doesn't fit — a table
+  cell, or a list of per-edition limits:
+
+      | Team | {{< pulumi-cloud-editions "teams" >}} |   → Pro, Enterprise
+
+  A feature available on every edition renders "All editions". The argument is
+  validated by `make lint` (checkPulumiCloudEditionsShortcode) and by the
+  build. For a section or page that needs a paid edition, use the
+  {{< pulumi-cloud >}} shortcode or the `pulumi_cloud_feature:` key instead.
+*/ -}}
+{{- if reflect.IsMap .Params -}}
+  {{- errorf `pulumi-cloud-editions takes a positional feature id, not named parameters (in %s). Write {{< pulumi-cloud-editions "teams" >}}.` .Page.File.Path -}}
+{{- end -}}
+{{- $feature := .Get 0 -}}
+{{- if not $feature -}}
+  {{- errorf `pulumi-cloud-editions needs a feature id from data/pulumi_editions.yaml (in %s).` .Page.File.Path -}}
+{{- end -}}
+{{- $px := partialCached "pricing/data.html" "pricing-data" "pricing-data" -}}
+{{- $names := partial "pricing/feature-editions.html" (dict "feature" $feature "where" .Page.File.Path) -}}
+{{- if eq (len $names) (len $px.editions) -}}
+  All editions
+{{- else -}}
+  {{- delimit $names ", " -}}
+{{- end -}}

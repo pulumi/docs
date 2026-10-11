@@ -82,6 +82,47 @@ def test_code_fence_stripped_before_length_check() -> None:
     assert out == BODY, "fence wrapper must be stripped and the body accepted"
 
 
+def test_splice_request_is_valid_for_haiku_5_5() -> None:
+    """Haiku 5.5 needs adaptive thinking here (thinking off left fixes unapplied)
+    and rejects non-default sampling params; the request must send neither."""
+    import io
+    import json
+
+    sent: list[dict] = []
+
+    class _Resp(io.BytesIO):
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+
+    def fake_urlopen(req, timeout=None):
+        sent.append(json.loads(req.data))
+        return _Resp(json.dumps(_payload(BODY)).encode())
+
+    real = validator_fix.urllib.request.urlopen
+    validator_fix.urllib.request.urlopen = fake_urlopen
+    try:
+        out = validator_fix.dispatch_splice("prompt", "key", len(BODY))
+    finally:
+        validator_fix.urllib.request.urlopen = real
+    assert out == BODY, "a clean response must round-trip"
+    body = sent[0]
+    assert body["model"] == "claude-haiku-5-5", body["model"]
+    assert body["thinking"] == {"type": "adaptive"}, body["thinking"]
+    assert body["output_config"] == {"effort": "medium"}, body.get("output_config")
+    assert not {"temperature", "top_p", "top_k"} & set(body), "Haiku 5.5 400s on sampling params"
+
+
+def test_thinking_block_ignored() -> None:
+    payload = {"content": [{"type": "thinking", "thinking": "hmm", "signature": "x"},
+                           {"type": "text", "text": BODY}],
+               "stop_reason": "end_turn"}
+    out = extract_splice_output(payload, len(BODY))
+    assert out == BODY, "a thinking block must not leak into the echoed body"
+
+
 TESTS = [
     test_full_echo_passes,
     test_max_tokens_rejected_even_with_content,
@@ -91,6 +132,8 @@ TESTS = [
     test_shrunken_echo_rejected,
     test_lightly_edited_echo_passes,
     test_code_fence_stripped_before_length_check,
+    test_splice_request_is_valid_for_haiku_5_5,
+    test_thinking_block_ignored,
 ]
 
 

@@ -349,13 +349,12 @@ def test_fixed_disposition_reads_as_already_done():
                                   "decision": "Anchor right?", "disposition": "fixed", "deep_link": "https://x/y#z"})
     html = render.render_board(q)
     assert "already fixed</span>" in html and "recommend <b>fixed</b>" not in html
-    # A badge says why the finding doesn't stop the merge, never what the
-    # author answered, and the title says what approving does about it.
+    # A badge is the approver's own call: it stays on the board and nothing
+    # is posted for it.
     assert "not a real issue</span>" in html
-    assert "title=\"The review got this one wrong. Approving posts `/resolve &lt;id&gt; refuted`" in html
-    assert "the author has not answered anything here" in html
-    # and the row says what the reader actually clicks
-    assert "Approving the row records these calls on the PR" in html and "Nothing here needs a click of its own." in html
+    assert 'title="The review got this one wrong."' in html and "/resolve" not in html
+    assert "never answers a blocking finding for the author" in html
+    assert "Nothing here needs a click of its own." in html
 
 
 def test_theme_selectors_present_in_both_forms():
@@ -725,8 +724,7 @@ def test_rows_waiting_on_the_author_and_rows_with_no_unblock_are_never_silent():
     full = render.render_board(q, include_handed_off=True)
     assert ">waiting on the author</span>" in full and full.count(">no action available</span>") == 1   # #4 only
     assert "<b>1</b><span>blocked, no action</span>" in full
-    assert "judged blocking finding" not in render.chip_title("outstanding:judged:F1,F2")
-    assert "approving this row posts their /resolve lines" in render.chip_title("outstanding:judged:F1,F2")
+    assert "#update-review" in render.chip_title("outstanding:2:F1,F2")
     # the new chips read as words, stay out of the fold, and explain themselves
     row1 = html.split('data-pr="1"')[1].split('class="acts"')[0]
     assert ">your own PR<" in row1.split("<summary>why")[0]
@@ -749,6 +747,23 @@ def test_rows_waiting_on_the_author_and_rows_with_no_unblock_are_never_silent():
     text = render.render_terminal(q)
     assert "1 waiting on the author" in text and "waiting on the author (1):" in text and "sent back 2026-09-10" in text
     assert "[re-run the failed checks]  --rerun-checks 4" in text and "     2  " not in text.split("waiting on the author (1)")[0]
+    # an approved row parks beside the sent-back one, saying which it was
+    appr = row(q, 3)
+    appr["waiting_on_author"] = True
+    appr["reasons"].append("approved:2026-09-28")
+    html = render.render_board(q)
+    assert 'data-pr="3"' not in html and "approved 2026-09-28" in html and "<b>2</b><span>waiting on the author</span>" in html
+    assert "approved 2026-09-28" in render.render_terminal(q)
+    t = render.chip_title("approved:2026-09-28")
+    assert "Its author merges it" in t and "2026-09-28" in t
+    # the lane team's approval parks it too, naming who approved
+    appr["reasons"][-1] = "approved-by-owner:jeffmerrick:2026-10-02"
+    html = render.render_board(q)
+    assert 'data-pr="3"' not in html and "approved by @jeffmerrick 2026-10-02" in html
+    assert "approved by @jeffmerrick 2026-10-02" in render.render_terminal(q)
+    t = render.chip_title("approved-by-owner:jeffmerrick,cnunciato:2026-10-02")
+    assert "@jeffmerrick, @cnunciato approved" in t and "on 2026-10-02" in t and "Its author merges it" in t
+    appr["waiting_on_author"] = False
     stuck["actions"] = []
     assert "blocked: mergeable:dirty (no action available)" in render.render_terminal(q)
 
@@ -855,3 +870,25 @@ def test_the_two_ways_to_fix_a_stuck_row_put_each_other_out():
     assert 'data-kind="decision"' in ask
     assert "clearExclusive" in html
     assert "--ask-fix 18" in render.render_terminal(q)
+
+
+def test_a_blocked_row_shows_the_findings_holding_it():
+    """A row blocked on open findings shows them under the blocker. Every way
+    out it offers -- send back, close, ask @claude to fix them, fix it
+    yourself -- is a decision about those findings, so the board has to say
+    what they are, as the terminal already does."""
+    q = run([stampable(18, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="pulumi-bot", author_type="User",
+                       files=[_file("content/docs/f.md", ["x"], ["o"])]),
+             stampable(19, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       files=[_file("content/docs/g.md", ["x"], ["o"])])], cfg=cfg(me=["docs"]))
+    html = render.render_board(q)
+    for n in (18, 19):
+        assert row(q, n)["verdict"] == "blocked"
+        r = html.split(f'data-pr="{n}" data-verdict="blocked"')[1].split('<div class="mrow')[0]
+        assert "Blocked: outstanding:3" in r and '<div class="jbox pending">' in r, r
+        assert r.index("Blocked: outstanding:3") < r.index("The esc CLI defaults to JSON output")
+        assert "3 open findings holding this row." in r and "nobody has ruled on yet" not in r
+    gen = html.split('data-pr="18" data-verdict="blocked"')[1].split('<div class="mrow')[0]
+    person = html.split('data-pr="19" data-verdict="blocked"')[1].split('<div class="mrow')[0]
+    assert "No author will answer them here" in gen and "No author will answer them here" not in person
+    assert "the author&#x27;s to answer" in person

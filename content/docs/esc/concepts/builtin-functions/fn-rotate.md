@@ -16,7 +16,7 @@ menu:
 
 The `fn::rotate` built-in function invokes a [rotator](/docs/esc/concepts/rotators) to rotate secrets.
 
-Some of a rotator's inputs may only be evaluated when the environment containing the `fn::rotate` invocation is rotated. This can be combined with the [`environments` built-in value](/docs/esc/concepts/builtin-properties/#environments) to fetch managing credentials from other environments that may require additional permissions beyond those given to typical users of an environment. The exact inputs that are rotation-only are dependent on the rotator.
+Some of a rotator's inputs may only be evaluated when the environment containing the `fn::rotate` invocation is rotated. This can be combined with the [`environments` built-in value](/docs/esc/concepts/builtin-properties/#environments) to fetch managing credentials from other environments that may require additional permissions beyond those given to typical users of an environment. The exact inputs that are rotation-only depend on the rotator; see [Managing credentials and rotate-only inputs](/docs/esc/concepts/rotators/#managing-credentials-and-rotate-only-inputs) for more information.
 
 ## Declaration
 
@@ -41,7 +41,7 @@ fn::rotate::name:
 
 | Property    | Type         | Description                                                       |
 |-------------|--------------|-------------------------------------------------------------------|
-| `name`      | string       | The name of the rotator to use.
+| `provider`  | string       | The name of the rotator to use. In the short form, the name is part of the function key (`fn::rotate::name`) and this key is omitted.
 | `inputs`    | any          | The inputs to the rotator. The exact type is rotator-dependent.
 | `state`     | any          | The persistent state for the rotator. This value is managed by the rotator and should not be modified.
 

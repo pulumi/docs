@@ -2,7 +2,7 @@
 title_tag: Configure access | AWS
 title: Configure access
 h1: "Get started with Pulumi and AWS"
-meta_desc: This page provides an overview on how to get started with Pulumi when starting an AWS project.
+meta_desc: Configure Pulumi's access to your AWS account with the AWS CLI, environment variables, or AWS profiles, and test that access works.
 weight: 3
 menu:
     iac:
@@ -42,9 +42,9 @@ $ aws sts get-caller-identity
 
 {{% /choosable %}}
 
-If your AWS user ID, account, and ARN are printed, your configuration is correct. If not, read on:
+You should see output similar to:
 
-```
+```json
 {
     "UserId": "BXO3165...ZP36NYY5FOU:my-session",
     "Account": "9263...9123",
@@ -52,7 +52,7 @@ If your AWS user ID, account, and ARN are printed, your configuration is correct
 }
 ```
 
-If the command returns an error instead of this output, see the guide to [AWS CLI credential errors like `ExpiredToken` and `InvalidAccessKeyId`](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/) for what each one means and how to fix it.
+If your AWS user ID, account, and ARN are printed, your configuration is correct. If not, try one of the alternative approaches below. If the command returns an error, see the guide to [AWS CLI credential errors like `ExpiredToken` and `InvalidAccessKeyId`](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/) for what each one means and how to fix it.
 
 ### Alternative approaches
 
@@ -77,11 +77,10 @@ $ export AWS_SECRET_ACCESS_KEY="<YOUR_SECRET_ACCESS_KEY>"
 {{% /choosable %}}
 
 {{% notes type="info" %}}
-Consider using [Pulumi ESC's AWS login support](/docs/esc/providers/login/aws-login/) for dynamic,
-short-lived AWS credentials via OpenID Connect (OIDC) instead of long-lived static credentials. This is a security best practice.
+Consider using [Pulumi ESC's AWS login support](/docs/esc/providers/login/aws-login/) for dynamic, short-lived AWS credentials via OpenID Connect (OIDC) instead of long-lived static credentials. This is a security best practice.
 {{% /notes %}}
 
-You may optionally use AWS profiles if your configuration requires them:
+If your configuration requires AWS profiles, you can optionally set one:
 
 {{% choosable os "linux,macos" %}}
 
@@ -99,6 +98,6 @@ $ export AWS_PROFILE="<YOUR_PROFILE_NAME>"
 
 {{% /choosable %}}
 
-For detailed information on Pulumi's use of AWS credentials, see [AWS Setup](/registry/packages/aws/installation-configuration/).
+For detailed information on Pulumi's use of AWS credentials, see [AWS Installation & Configuration](/registry/packages/aws/installation-configuration/).
 
 {{< get-started-stepper >}}

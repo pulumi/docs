@@ -60,11 +60,11 @@ Below is an example of setting up Time-To-Live on a stack programmatically:
 
 Refer to the [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/) for more details on how to use the REST API to manage Time-to-Live Stacks.
 
-### Pulumi Cloud Service provider
+### Pulumi Cloud provider
 
 The Pulumi Service Provider allows you to set up and manage Time-to-Live Stacks in source control.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -219,6 +219,44 @@ outputs:
   scheduleId: ${ttlSchedule.scheduleId}
 
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+`Pulumi.yaml`:
+
+```yaml
+name: ttl-schedule-setup
+runtime: hcl
+description: Setup of TTL for automatic resource destruction with Pulumi
+```
+
+`main.tf`:
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source = "pulumi/pulumiservice"
+    }
+  }
+}
+
+resource "pulumiservice_ttl_schedule" "ttl_schedule" {
+  organization = "my-org"
+  project      = "my-project"
+  stack        = "temp-stack"
+
+  timestamp = "2024-01-01T00:00:00Z" # Specify the ISO date/time for destruction
+}
+
+output "schedule_id" {
+  value = pulumiservice_ttl_schedule.ttl_schedule.schedule_id
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
 
 {{% /choosable %}}
 

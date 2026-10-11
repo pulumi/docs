@@ -82,7 +82,8 @@ def fresh(number: int, **over) -> dict:
     return stampable(number, **over)
 
 
-def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None, teams=None, my_teams=None, **kw) -> dict:
+def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None, teams=None, my_teams=None,
+        team_approvers=None, **kw) -> dict:
     """Collect + analyze the specs over a snapshot. `aliases=None` computes
     the alias map from `repo_root`; the default is an empty set. `teams`
     stands in for collect's GitHub team lookup (unreadable by default), and
@@ -96,6 +97,8 @@ def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None,
             q["teams"] = teams
         if my_teams is not None:
             q["my_teams"] = my_teams
+        if team_approvers is not None:
+            q["team_approvers"] = team_approvers
         return analyze.analyze(q, kw.pop("cfg", cfg()), config=config, repo_root=repo_root or root,
                                aliases=(None if aliases is None else set(aliases)), today=TODAY, **kw)
 
@@ -182,14 +185,17 @@ def test_open_blockers_block_the_row_they_do_not_merely_demote_it():
     assert "close" in ids and "request-changes" not in ids, gen["actions"]
 
 
-def test_gate_self_accepted_disposition():
-    state = '<!-- REVIEW_STATE {"findings":{"F2":{"disposition":"accepted","note":"will fix later","actor":"workprentice[bot]","sha":"","bulk":false,"updated_at":"2026-09-01T00:00:00Z"}},"high_water":4,"schema":1} -->'
-    body = CLEAN_AUTHOR.replace('<!-- REVIEW_STATE {"findings":{},"high_water":4,"schema":1} -->', state)
-    p = _judge_because("self-accepted:F2", comments=[comment(CLEAN_BRIEF), comment(body)])
-    assert p["self_accepted_ids"] == ["F2"]
-    # a maintainer's disposition is not self-accepted
-    q = run([stampable(comments=[comment(CLEAN_BRIEF), comment(body.replace("workprentice[bot]", "cnunciato"))])])
-    assert row(q, 100)["self_accepted_ids"] == []
+def test_a_disposition_on_a_brief_row_does_not_clear_it():
+    """A ⚠️ row is the approver's checklist. The author accepting it (the
+    update lane's `accept` moves the row onto the brief) is their answer,
+    not the approver's, so the row still holds the stamp — whoever recorded
+    the disposition."""
+    for actor in ("workprentice[bot]", "cnunciato"):
+        state = ('<!-- REVIEW_STATE {"findings":{"F4":{"disposition":"accepted","note":"will fix later","actor":"%s",'
+                 '"sha":"","bulk":false,"updated_at":"2026-09-01T00:00:00Z"}},"high_water":4,"schema":1} -->' % actor)
+        body = CLEAN_AUTHOR.replace('<!-- REVIEW_STATE {"findings":{},"high_water":4,"schema":1} -->', state)
+        p = _judge_because("warnings:1:F4", comments=[comment(V3_BRIEF), comment(body)])
+        assert p["open_warning_ids"] == ["F4"]
 
 
 def test_the_stamp_buttons_say_whether_approving_merges():
@@ -553,7 +559,10 @@ def test_handed_off_teams_map_through_routing():
              stampable(2, title="Marketing's", requested_teams=["docs-marketing-review"], files=[_file("content/docs/b.md", ["x"])])],
             cfg=cfg(me=["docs"]))
     assert row(q, 1)["handed_off"] is False  # docs-guild owns a lane in me
-    assert row(q, 2)["handed_off_to"] == ["@docs-marketing-review"]
+    assert row(q, 2)["handed_off"] is False  # a docs row is mine whichever team is also asked
+    q = run([stampable(3, title="Blog's", requested_teams=["docs-blog-review"], files=[_file("content/blog/x/index.md", ["x"])])],
+            cfg=cfg(me=["docs"]))
+    assert row(q, 3)["handed_off_to"] == ["@docs-blog-review"]  # not my lane: the team request still hands it off
     assert analyze.team_lanes("docs-tools", CONFIG) == {"infra", "other"} and analyze.team_lanes("nope", CONFIG) == set()
 
 
@@ -800,6 +809,83 @@ CR = lambda who, at="2026-09-12T00:00:00Z", commit_id=None: {  # noqa: E731
     "user": {"login": who, "type": "User"}, "state": "CHANGES_REQUESTED", "submitted_at": at, "commit_id": commit_id}
 
 
+AP = lambda who, at="2026-09-28T00:00:00Z", commit_id=None: {  # noqa: E731
+    "user": {"login": who, "type": "User"}, "state": "APPROVED", "submitted_at": at, "commit_id": commit_id}
+
+
+def test_own_approval_on_a_human_pr_waits_on_the_author_to_merge():
+    """`--stamp` approves a human-authored PR without merging it; the next
+    move is the author's. With no push since, the row parks under "Waiting
+    on the author" rather than offering the same approval again."""
+    head = HEAD_V3
+    human = dict(author="jdoe", author_type="User")
+    q = run([stampable(1, reviews=[AP("CamSoper", commit_id=head)], **human),
+             stampable(2, title="Pushed since", reviews=[AP("CamSoper", commit_id="0" * 40)], files=[_file("content/docs/b.md", ["x"])], **human),
+             stampable(3, title="Bot", reviews=[AP("CamSoper", commit_id=head)], author="workprentice[bot]", author_type="Bot",
+                       files=[_file("content/docs/c.md", ["x"])]),
+             stampable(4, title="Someone else", reviews=[AP("cnunciato", commit_id=head)], files=[_file("content/docs/d.md", ["x"])], **human),
+             stampable(5, title="Approved, then sent back", reviews=[AP("CamSoper", commit_id=head),
+                                                                    CR("CamSoper", at="2026-09-29T00:00:00Z", commit_id=head)],
+                       files=[_file("content/docs/e.md", ["x"])], **human)])
+    p = row(q, 1)
+    assert "approved:2026-09-28" in p["reasons"] and "merging-over:approved-by:CamSoper" not in p["reasons"]
+    assert p["approved"] == {"at": "2026-09-28", "by": "CamSoper", "commit_id": head, "head_moved": False}
+    assert p["waiting_on_author"] is True and p["actions"] == []
+    # a push since the approval brings the row back, decisions and all
+    p = row(q, 2)
+    assert p["waiting_on_author"] is False and p["approved"]["head_moved"] is True and p["actions"][0]["cmd"] == "--stamp 2"
+    # act.py merges bot PRs, so an approved-but-open bot row is still mine to merge
+    b = row(q, 3)
+    assert b["waiting_on_author"] is False and "approved:2026-09-28" in b["reasons"] and b["actions"][0]["id"] == "stamp"
+    # someone else's approval is background, not a reason to park
+    o = row(q, 4)
+    assert o["waiting_on_author"] is False and "merging-over:approved-by:cnunciato" in o["reasons"] and o["approved"] is None
+    # the latest word wins: a send-back after the approval is a send-back
+    s = row(q, 5)
+    assert s["approved"] is None and "sent-back:2026-09-29" in s["reasons"] and s["waiting_on_author"] is True
+    assert q["counts"]["waiting-on-author"] == 2
+    assert_every_row_has_a_button(q)
+
+
+def test_the_lane_team_s_approval_waits_on_the_author_to_merge():
+    """GitHub clears the team's review request when a member reviews for it,
+    so an approved PR used to come back as a route row asking that same team
+    to review it again (#21704). An approval from a member of every owning
+    team, on the live head, parks a human-authored row like my own does."""
+    head = HEAD_V3
+    human = dict(author="jdoe", author_type="User")
+    blog = dict(labels=["review:no-blockers", "domain:blog"],
+                files=[_file("content/blog/p/index.md", ["A new sentence."], ["An old sentence."])])
+    both = [_file("content/docs/f.md", ["x"]), _file("content/blog/q/index.md", ["A new sentence."], ["An old sentence."])]
+    q = run([stampable(1, reviews=[AP("jmember", commit_id=head)], **human, **blog),
+             stampable(2, title="Pushed since", reviews=[AP("jmember", commit_id="0" * 40)], **human, **blog),
+             stampable(3, title="Not on the team", reviews=[AP("outsider", commit_id=head)], **human, **blog),
+             stampable(4, title="Two lanes, one approved", reviews=[AP("jmember", commit_id=head)], files=both, **human),
+             stampable(5, title="Two lanes, both approved", reviews=[AP("jmember", commit_id=head), AP("dmember", commit_id=head)],
+                       files=[_file("content/docs/g.md", ["x"]), _file("content/blog/r/index.md", ["A new sentence."], ["An old sentence."])],
+                       **human),
+             stampable(6, title="Bot", reviews=[AP("jmember", commit_id=head)], author="workprentice[bot]", author_type="Bot", **blog),
+             stampable(7, title="Unreadable membership", reviews=[AP("hidden", commit_id=head)], **human, **blog),
+             stampable(8, title="No commit_id", reviews=[AP("jmember")], **human, **blog)],
+            cfg=cfg(me=["docs"]),
+            team_approvers={"pulumi/docs-marketing-review": {"jmember": True, "outsider": False, "hidden": None, "dmember": False},
+                            "pulumi/docs-guild": {"jmember": False, "outsider": False, "hidden": None, "dmember": True}})
+    p = row(q, 1)
+    assert "approved-by-owner:jmember:2026-09-28" in p["reasons"]
+    assert p["waiting_on_author"] is True and not [a for a in p["actions"] if a["id"] in analyze.DECISION_IDS]
+    for n in (2, 3, 4, 7, 8):
+        r = row(q, n)
+        assert r["waiting_on_author"] is False, n
+        assert not [c for c in r["reasons"] if c.startswith("approved-by-owner:")], n
+    # one approver per owning team, in team order
+    assert "approved-by-owner:dmember,jmember:2026-09-28" in row(q, 5)["reasons"]
+    assert row(q, 5)["waiting_on_author"] is True
+    # act.py merges bot PRs, so a team-approved bot row is still on the board
+    assert row(q, 6)["waiting_on_author"] is False
+    assert q["counts"]["waiting-on-author"] == 2
+    assert_every_row_has_a_button(q)
+
+
 def test_no_verdict_leaves_the_approver_without_a_button():
     specs = [
         fresh(1, mergeable_state="dirty"),
@@ -1021,31 +1107,19 @@ def test_no_config_tells_unreadable_teams_from_being_on_none():
     assert pr_review_config.lanes_from_teams({"pulumi/docs-guild": False, "pulumi/docs-marketing-review": False, "pulumi/docs-tools": False}, CONFIG) == []
 
 
-def test_judged_blockers_lift_the_row_out_of_blocked():
-    """SKILL: judging the row is what lets the stamp post the /resolve lines.
-    So a row whose every open 🚨 has a resolvable judgment with a note is an
-    approver's call again; one judgment short and it stays blocked."""
+def test_judging_the_blockers_never_lifts_the_row_out_of_blocked():
+    """Blocking findings are the author's to answer. The approver's judgments
+    are board notes, so even a row whose every 🚨 is judged stays blocked,
+    and a stamp recommendation on it is recorded as rejected."""
     q = run([stampable(1, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)])])
     p = row(q, 1)
     assert p["verdict"] == "blocked" and set(p["open_blocker_ids"]) == {"F1", "F2", "F3"}
     js = [{"finding_id": f, "disposition": d, "note": "checked; holds"} for f, d in (("F1", "refuted"), ("F2", "accepted"), ("F3", "not-applicable"))]
-    analyze.merge_judgments(q, {1: {"judgments": js[:2], "recommended": "stamp"}})
-    assert p["verdict"] == "blocked" and p["open_blocker_ids"] == ["F3"] and "recommended" not in p
-    assert p["rejected_recommendation"] == "stamp: the row is blocked, not judge"
     analyze.merge_judgments(q, {1: {"judgments": js, "recommended": "stamp"}})
-    assert p["verdict"] == "judge" and p["open_blocker_ids"] == [] and p["judged_blocker_ids"] == ["F1", "F2", "F3"]
-    assert "outstanding:judged:F1,F2,F3" in p["reasons"] and p["recommended"] == "stamp"
-    assert [a["cmd"] for a in p["actions"][:2]] == ["--stamp 1 --force", "--stamp 1:no-merge --force"]
-    assert q["counts"]["judge"] == 1 and q["counts"]["blocked"] == 0
-    # `deferred` is the author's, and a judgment without a note posts nothing: neither answers
-    analyze.merge_judgments(q, {1: {"judgments": js[:2] + [{"finding_id": "F3", "disposition": "deferred", "note": "theirs"}]}})
-    assert p["verdict"] == "blocked"
-    analyze.merge_judgments(q, {1: {"judgments": js[:2] + [{"finding_id": "F3", "disposition": "refuted"}]}})
-    assert p["verdict"] == "blocked"
-    # red CI still holds a fully judged row
-    q = run([stampable(1, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], check_runs=_red())])
-    analyze.merge_judgments(q, {1: {"judgments": js}})
-    assert row(q, 1)["verdict"] == "blocked" and row(q, 1)["blockers"] == ["checks:red"]
+    assert p["verdict"] == "blocked" and set(p["open_blocker_ids"]) == {"F1", "F2", "F3"}
+    assert "recommended" not in p and p["rejected_recommendation"] == "stamp: the row is blocked, not judge"
+    assert not [a for a in p["actions"] if a["id"].startswith("stamp")], p["actions"]
+    assert q["counts"]["blocked"] == 1
 
 
 def test_close_and_route_recommendations_add_their_buttons():
@@ -1365,3 +1439,18 @@ def test_a_review_that_parsed_into_nothing_is_never_stampable():
     p = row(q, 1)
     assert p["verdict"] == "judge" and "review:parse-confidence:low" in p["gate_fails"]
     assert "review:unreadable" not in p["blockers"]
+
+
+def test_unrequest_offered_only_when_asked_for_by_name():
+    q = run([stampable(1, requested_users=["CamSoper"]),
+             stampable(2, title="Team ask", requested_teams=["docs-guild"], files=[_file("content/docs/b.md", ["x"])]),
+             stampable(3, title="Someone else", requested_users=["cnunciato"], files=[_file("content/docs/c.md", ["x"])]),
+             stampable(4, title="Mine", author="CamSoper", author_type="User", requested_users=["CamSoper"],
+                       files=[_file("content/docs/d.md", ["x"])])])
+    ids = lambda n: [a["id"] for a in row(q, n)["actions"]]
+    assert "unrequest" in ids(1) and "requested:me" in row(q, 1)["reasons"]
+    assert next(a for a in row(q, 1)["actions"] if a["id"] == "unrequest")["cmd"] == "--unrequest 1"
+    assert "unrequest" not in ids(2)  # a team request isn't mine to drop
+    assert "unrequest" not in ids(3)
+    assert "unrequest" not in ids(4)  # my own PR
+    assert "unrequest" in analyze.DECISION_IDS

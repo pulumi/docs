@@ -1,24 +1,61 @@
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pulumi &mdash; Pulumi SDK 3.264.0 documentation</title>
+  <title>pulumi — Pulumi SDK Python API reference</title>
+
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/python/pulumi/index.html" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js?v=4184c757"></script>
+        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js?v=82b9e21f"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex/" />
-    <link rel="search" title="Search" href="search/" /> 
+    <link rel="search" title="Search" href="search/" />
+   
+  
+  <meta name="description" content="The Pulumi Core SDK for Python. This package defines the core primitives that providers and libraries in the Pulumi ecosystem use to create and manage…" />
+  
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "APIReference",
+  "headline": "pulumi \u2014 Pulumi SDK Python API reference",
+  "description": "The Pulumi Core SDK for Python. This package defines the core primitives that providers and libraries in the Pulumi ecosystem use to create and manage\u2026",
+  "url": "https://www.pulumi.com/docs/reference/pkg/python/pulumi/index.html",
+  "programmingLanguage": "Python",
+  "executableLibraryName": "pulumi",
+  "assemblyVersion": "3.268.0",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "name": "pulumi",
+    "programmingLanguage": "Python"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pulumi Docs",
+    "url": "https://www.pulumi.com/docs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://www.pulumi.com/"
+  }
+}
+  </script>
+  
+
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +70,7 @@
             Pulumi SDK
           </a>
               <div class="version">
-                3.264.0
+                3.268.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search/" method="get">
@@ -3085,9 +3122,9 @@ any existing export with the same name. The entrypoint may instead return
 <code class="docutils literal notranslate"><span class="pre">None</span></code> and use <a class="reference internal" href="#pulumi.export" title="pulumi.export"><code class="xref py py-func docutils literal notranslate"><span class="pre">pulumi.export()</span></code></a> directly.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pulumi.run</span></code> may only be called once per Pulumi program.</p>
 <p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pulumi</span>
 
-<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Inputs</span><span class="p">:</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Inputs</span><span class="p">:</span>
     <span class="n">value</span> <span class="o">=</span> <span class="k">await</span> <span class="n">some_async_operation</span><span class="p">()</span>
     <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">value</span><span class="p">}</span>
 

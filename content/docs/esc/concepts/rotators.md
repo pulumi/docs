@@ -60,11 +60,17 @@ values:
 
 In the above example, note the `${environments.credentials.production.aws.login}` reference. This is an implicit import of the `credentials/production` environment's aws.login path.
 
-This import is only resolved at `rotate` time, meaning that the value is not available during `open` time, making it possible for a user to access the rotated secret without needing access to the managing credentials.
+The `login` input is a `rotate-only` input, so this import is resolved only at `rotate` time and is not available in an `open`. That makes it possible for a user to access the rotated secret without needing access to the managing credentials.
+
+### Managing credentials and `rotate-only` inputs
+
+Rotators that act on an external service typically need managing credentials: credentials with enough privilege to issue or change the credentials being rotated. Most rotators designate an input as `rotate-only` for the managing credentials, which is only used during a rotation. Since these are not surfaced when opening the environment, you will not need `OPEN` permissions on environments referenced from `rotate-only` inputs.
+
+A good practice is to keep the managing credentials in a separate environment restricted to administrators, and to reference it only from the `rotate-only` input.
 
 ### Rotation
 
-Once a rotation function is configured within the environment definition, you can manually rotate your secrets by running the `pulumi env rotate` command, or by clicking the `Rotate secrets` button in the Pulumi Cloud UI.
+Once a rotation function is configured within the environment definition, you can manually rotate your secrets by running the `pulumi env rotate` command, or by clicking the `Rotate secrets` button in the Pulumi Cloud console.
 
 #### Via the CLI
 
@@ -74,13 +80,13 @@ Environment 'rotators/pulumi-ci' rotated.
 New revision '19' was created.
 ```
 
-#### Via the Pulumi Cloud UI
+#### Via the Pulumi Cloud console
 
 In the Pulumi Cloud console, open the environment and click the **Rotate secrets** button on its **Rotated secrets** tab.
 
 ### Schedule
 
-You can create a schedule for automatic rotation of your secrets in the Pulumi Cloud UI by navigating to the `Rotated secrets` tab of your environment, and clicking the `Create rotation schedule` button.
+You can create a schedule for automatic rotation of your secrets in the Pulumi Cloud console by navigating to the `Rotated secrets` tab of your environment, and clicking the `Create rotation schedule` button.
 
 The rotation schedule can be defined as a [cron expression](https://crontab.cronhub.io/).
 
@@ -103,7 +109,7 @@ Once you determined that you need one, follow the links below to learn how to se
 ## Permissions
 
 - To `rotate` an environment, a user must have `WRITE` permissions on the environment, and `OPEN` permissions on any imported environment.
-- To `open` an environment, a user must have `OPEN` permissions on the environment (and does not need any permissions for the implicitly imported environment which provides the rotation credentials).
+- To `open` an environment, a user must have `OPEN` permissions on the environment (and does not need any permissions for an environment referenced only by a `rotate-only` input).
 - To configure a rotation schedule for an environment, the user must have `WRITE` permissions on the environment.
 
 ## Best practices

@@ -79,3 +79,132 @@ def test_review_uploads_raw_claim_artifacts():
     # reason a review fails.
     assert str(step.get("if", "")).startswith("always()")
     assert step.get("continue-on-error") is True
+
+
+def test_update_lane_trigger_leaves_new_review_to_the_mention_gate():
+    """A job-level `if:` is a substring match and can't see quoting. When the
+    update lane's excluded `#new-review` there, a comment that only quoted
+    that hashtag ran neither lane: claude-new.yml's gate declined it as a
+    quote, and this one never reached its own gate (#21909). The exclusion
+    belongs to mention-gate.py's `--exclude new-review`, which reads only
+    live text."""
+    wf = _WF_DIR / "claude-update.yml"
+    gate = yaml.safe_load(wf.read_text())["jobs"]["gate"]
+    assert "#new-review" not in gate["if"], "the trigger must not screen #new-review by substring"
+    runs = "\n".join(s.get("run") or "" for s in gate.get("steps") or [])
+    assert "--hashtag update-review --exclude new-review" in runs, "the mention gate must still apply the exclusion"
+
+
+_BOT_ALLOWLIST_RE = __import__("re").compile(r'"\$AUTHOR" == "([^"]+)"')
+_ACCESS_CHECKERS = ("claude-new.yml", "claude-update.yml", "claude-code-review.yml", "claude-triage.yml")
+
+
+def test_trusted_bot_allowlist_is_identical_in_every_access_check():
+    """The collaborator-permission API says `none` for a GitHub App, so each
+    lane that gates on write access carries a list of trusted bots. The four
+    copies said "keep in sync" and claude-new.yml had none at all: every
+    workprentice `#new-review` was silently dropped (#21936)."""
+    lists = {}
+    for name in _ACCESS_CHECKERS:
+        text = (_WF_DIR / name).read_text()
+        blocks = __import__("re").findall(
+            r'if \[\[ "\$AUTHOR" == "github-copilot\[bot\]".*?\]\]; then', text, __import__("re").S)
+        assert len(blocks) == 1, f"{name}: expected one trusted-bot block, found {len(blocks)}"
+        lists[name] = frozenset(_BOT_ALLOWLIST_RE.findall(blocks[0]))
+    reference = lists["claude-update.yml"]
+    assert "workprentice[bot]" in reference and "app/workprentice" in reference
+    for name, bots in lists.items():
+        assert bots == reference, f"{name} trusts {sorted(bots)}, claude-update.yml trusts {sorted(reference)}"
+
+
+def _job_run_text(wf_name: str, job: str) -> str:
+    data = yaml.safe_load((_WF_DIR / wf_name).read_text())
+    return "\n".join(str(s.get("run", "")) for s in data["jobs"][job].get("steps") or [])
+
+
+def test_redispatch_forwards_every_new_review_input():
+    """Adversarial review of #21948: the redispatch forwarded force /
+    mention_author / ack_target but not prior_high_water, so a #new-review
+    superseded after `clear` re-ran with no card and restarted at F1."""
+    data = yaml.safe_load((_WF_DIR / "claude-code-review.yml").read_text())
+    trigger = data.get("on") or data.get(True)
+    inputs = set((trigger["workflow_dispatch"].get("inputs") or {}))
+    run = _job_run_text("claude-code-review.yml", "redispatch")
+    # dispatcher_comment_id is deliberately dropped (the guard deleted it);
+    # the rest are the re-run's own bookkeeping or its resolved head.
+    carried = inputs - {"dispatcher_comment_id", "supersede_depth", "head_sha", "pr_number"}
+    missing = sorted(i for i in carried if f"-f {i}=" not in run)
+    assert not missing, f"redispatch drops {missing}"
+
+
+def test_failure_notices_carry_the_prior_high_water():
+    """An errored forced run's card is already gone; its notice keeps the
+    mark, and both readers look for it."""
+    text = (_WF_DIR / "claude-code-review.yml").read_text()
+    assert text.count("<!-- REVIEW_HIGH_WATER $PRIOR_HW_IN -->") == 2
+    assert text.count("PRIOR_HW_IN: ${{ github.event.inputs.prior_high_water }}") == 2
+    assert "review_state.py high-water-marker" in text
+    assert "review_state.py high-water-marker" in (_WF_DIR / "claude-new.yml").read_text()
+    # Only failure notices: a card or triage prose can quote PR text, and a
+    # quoted marker would inflate the next review's ids.
+    for wf in ("claude-code-review.yml", "claude-new.yml"):
+        reader = next(l for l in (_WF_DIR / wf).read_text().splitlines()
+                      if "select(.user.login == \"github-actions[bot]\")" in l and ".body' 2>/dev/null" in l)
+        assert 'startswith("<!-- CLAUDE_PROGRESS -->")' in reader, wf
+
+
+def test_reconcile_re_evaluates_the_sentinel_after_it_repairs_a_card():
+    """Adversarial review of #21948: the cron restamped cards and un-staled
+    labels, but GITHUB_TOKEN writes fire no event, so G1 stayed red."""
+    wf = _WF_DIR / "review-label-reconcile.yml"
+    data = yaml.safe_load(wf.read_text())
+    assert data["permissions"].get("actions") == "write"
+    run = _job_run_text("review-label-reconcile.yml", "reconcile")
+    assert "gh workflow run review-sentinel.yml" in run
+    # After the loop-1 restamp and after the loop-3 label write.
+    restamp_branch = run.split("review carried across", 1)[1].split("continue", 1)[0]
+    assert 'sentinel "$pr"' in restamp_branch
+    unstale = run.split("review:stale → $label", 1)[1].split("done", 1)[0]
+    assert 'sentinel "$pr"' in unstale
+
+
+def test_triage_re_evaluates_the_sentinel_when_it_moves_a_label_the_gate_reads():
+    """The Sentinel decides oversized/trivial from the label alone, and a
+    GITHUB_TOKEN label write fires no `labeled` event (#21936's G5 race)."""
+    data = yaml.safe_load((_WF_DIR / "claude-triage.yml").read_text())
+    job = next(iter(data["jobs"].values()))
+    assert job["permissions"].get("actions") == "write"
+    text = (_WF_DIR / "claude-triage.yml").read_text()
+    apply_at = text.index('gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}"')
+    dispatch_at = text.index("gh workflow run review-sentinel.yml")
+    assert dispatch_at > apply_at, "dispatch after the labels land"
+
+
+def test_the_sentinel_job_keeps_its_default_name():
+    """Blast-radius review of #21948: renaming the job made /pr-review's
+    `_is_sentinel` (act.py, analyze.py) count it as an ordinary pending
+    check, stalling every stamp preflight after a push, label or review."""
+    data = yaml.safe_load((_WF_DIR / "review-sentinel.yml").read_text())
+    assert "name" not in data["jobs"]["sentinel"]
+
+
+def test_a_push_never_newly_flags_a_pr_as_oversized_by_file_count():
+    """The paginated count made the 150-file axis reachable; on a push that
+    would flip open PRs reviewed and approved under the normal gates."""
+    text = (_WF_DIR / "claude-triage.yml").read_text()
+    gate = text.index('"$OVERSIZED" == "true" && "$EVENT_ACTION" == "synchronize"')
+    assert ".oversized_by_lines // false" in text[gate:gate + 300]
+    assert gate < text.index('TARGET["review:oversized"]=1')
+
+
+def test_pr_file_listings_page_by_100_and_keep_renamed_paths():
+    helper = (_WF_DIR.parent.parent / ".claude/commands/docs-review/scripts/with-pr-files.sh").read_text()
+    assert "pulls/$PR/files?per_page=100" in helper
+    update = (_WF_DIR / "claude-update.yml").read_text()
+    assert "pulls/$PR/files?per_page=100" in update and "previous_filename" in update
+
+
+def test_restamp_step_tolerates_a_base_without_the_script():
+    run = _job_run_text("claude-code-review.yml", "mark-stale")
+    assert "[ ! -f scripts/review-v3/restamp-base-merge.py ]" in run
+    assert "|| RESULT=" in run

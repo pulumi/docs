@@ -52,7 +52,10 @@ jobs:
     # (the worker opens them ready when the re-lint passes — falling back to
     # draft only on lint failure — so triage fires on the non-draft `opened`
     # event). They flow through the normal triage → review chain instead of
-    # being force-dispatched.
+    # being force-dispatched. fix/broken-links-* (the broken-link fixer) and
+    # vale/brand-sync-* (the weekly brand-guide sync) get the same treatment:
+    # both open ready when their validation passes, and a ready PR that
+    # triage skips never requests a review team, so it sits unnoticed.
     #
     # The synchronize (label-delta) pass is Phase 3 of the v3 rollout and is
     # gated on REVIEW_V3_ROUTING: with the variable unset a push changes no
@@ -62,7 +65,8 @@ jobs:
       && github.event.pull_request.user.login != 'dependabot[bot]'
       && (github.event.pull_request.user.login != 'pulumi-bot'
           || startsWith(github.event.pull_request.head.ref, 'content-review/')
-          || startsWith(github.event.pull_request.head.ref, 'fix/broken-links-'))
+          || startsWith(github.event.pull_request.head.ref, 'fix/broken-links-')
+          || startsWith(github.event.pull_request.head.ref, 'vale/brand-sync-'))
       && (github.event.action != 'synchronize' || vars.REVIEW_V3_ROUTING == '1')
 
     concurrency:
@@ -74,6 +78,7 @@ jobs:
       contents: read
       pull-requests: write
       id-token: write
+      actions: write # re-evaluate the Sentinel after a label it reads changes
 
     steps:
       # Surface "triage is running" as visible label state from workflow
@@ -201,12 +206,18 @@ jobs:
           PR: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
           EVENT_ACTION: ${{ github.event.action }}
+          SENTINEL_MODE: ${{ vars.REVIEW_V3_SENTINEL }}
         run: |
           set -euo pipefail
 
           # 1. Gather PR state.
           PR_DATA=$(gh pr view "$PR" --repo "$REPO" \
-            --json title,body,author,files,labels,additions,deletions,commits,isDraft)
+            --json title,body,author,files,labels,additions,deletions,commits,isDraft,changedFiles)
+          # `gh pr view --json files` is one 100-file GraphQL page; swap in the
+          # paginated REST list. Never via argv: a ~1,000-file list overflows
+          # MAX_ARG_STRLEN (see with-pr-files.sh).
+          PR_DATA=$(printf '%s' "$PR_DATA" \
+            | bash .claude/commands/docs-review/scripts/with-pr-files.sh --repo "$REPO" --pr "$PR")
           # 100KB diff cap. The
           # classifier doesn't need every byte to detect frontmatter /
           # link / code-block / version-claim signals.
@@ -243,12 +254,24 @@ jobs:
             PROSE_DIFF=$(printf '%s' "$DIFF" | head -c 50000)
             PROSE_RULES=$(cat .claude/commands/docs-review/triage-prose.md \
                               .claude/commands/docs-review/references/spelling-grammar.md)
+            # Haiku 5.5, adaptive thinking at low effort (2026-10-07 benchmark,
+            # 20 trivial/frontmatter-only PR diffs + 13 with planted typos x 2
+            # reps; campaign 2026-10-07-haiku55-fitness in
+            # pulumi/docs-review-benchmarks): every planted typo found (42/42 vs
+            # 39/42 on Haiku 4.5), 0 unparseable replies (Haiku 4.5: 14 of 66,
+            # prose after the JSON), and 3 flags on real merged diffs vs 18,
+            # at about an eighth of the cost. Thinking-off flagged as much as
+            # Haiku 4.5 and wrote "no concern" entries into the array, so it is
+            # left on. Thinking counts against max_tokens (p95 ~2K, max ~3.3K
+            # observed), hence 8000; the parse selects text blocks by type,
+            # because a thinking block arrives first.
             REQUEST=$(jq -n \
               --arg rules "$PROSE_RULES" \
               --arg diff "$PROSE_DIFF" \
               '{
-                model: "claude-haiku-4-5-20251001",
-                max_tokens: 512,
+                model: "claude-haiku-5-5",
+                max_tokens: 8000,
+                output_config: {effort: "low"},
                 messages: [{
                   role: "user",
                   content: ("Apply the rules below to the diff that follows.\n\n=== RULES ===\n\n" + $rules + "\n\n=== DIFF (truncated to 50000 bytes) ===\n\n" + $diff)
@@ -259,7 +282,7 @@ jobs:
               -H "anthropic-version: 2023-06-01" \
               -H "content-type: application/json" \
               -d "$REQUEST" || echo '{"error":"curl_failed"}')
-            TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+            TEXT=$(echo "$RESPONSE" | jq -r '[.content[]? | select(.type == "text") | .text] | join("")')
             if [[ -n "$TEXT" ]]; then
               PROSE_JSON=$(echo "$TEXT" \
                 | sed -E 's/^[[:space:]]*```(json)?[[:space:]]*//' \
@@ -306,6 +329,17 @@ jobs:
             TARGET["review:trivial"]=1
           elif [[ "$FRONTMATTER_ONLY" == "true" ]]; then
             TARGET["review:frontmatter-only"]=1
+          fi
+          # The file-count axis only became reachable with the paginated
+          # file list. On a push, a PR that isn't already labelled is flagged
+          # by the line axis alone, as before: newly flagging an open PR by
+          # its file count would skip G1/G2 and turn G5 red on a PR reviewed
+          # and approved under the normal gates. Open / ready / reopen use
+          # both axes.
+          if [[ "$OVERSIZED" == "true" && "$EVENT_ACTION" == "synchronize" ]] \
+             && [[ "$(echo "$CLASS" | jq -r '.oversized_by_lines // false')" != "true" ]] \
+             && ! echo "$PR_DATA" | jq -e '.labels[] | select(.name == "review:oversized")' >/dev/null; then
+            OVERSIZED=false
           fi
           [[ "$OVERSIZED" == "true" ]] && TARGET["review:oversized"]=1
           # Prose concerns flag — applies to either trivial or
@@ -366,6 +400,24 @@ jobs:
           fi
           if (( ${#ARGS[@]} > 0 )); then
             gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}" || true
+          fi
+          # 7b. The Sentinel reads review:oversized and review:trivial, and
+          # listens for their `labeled` events -- but a GITHUB_TOKEN label
+          # write fires none. Its `opened` run beat this label on #21936, so
+          # G5 said "not oversized" beside the label for good. The label is
+          # the Sentinel's source of truth (a size computed there would flip
+          # PRs already reviewed and approved under the normal gates), so
+          # triage re-evaluates it whenever that label moves.
+          # (review:oversized is re-added on every run -- see step 5 -- so
+          # "moved" means it wasn't on the PR before this run.)
+          MOVED=""
+          [[ " ${ADD_LIST[*]:-} ${REMOVE_LIST[*]:-} " == *" review:trivial "* ]] && MOVED=1
+          if [[ "$OVERSIZED" == "true" ]] \
+             && ! echo "$PR_DATA" | jq -e '.labels[] | select(.name == "review:oversized")' >/dev/null; then
+            MOVED=1
+          fi
+          if [[ -n "$MOVED" && ( "$SENTINEL_MODE" == "report" || "$SENTINEL_MODE" == "1" ) ]]; then
+            gh workflow run review-sentinel.yml --repo "$REPO" -f pr_number="$PR" || true
           fi
 
           # 8. Prose-check advisory comment.
@@ -430,7 +482,7 @@ jobs:
           if [[ "$OVERSIZED" == "true" ]]; then
               PR_ADDITIONS=$(echo "$PR_DATA" | jq -r '.additions')
               PR_DELETIONS=$(echo "$PR_DATA" | jq -r '.deletions')
-              PR_FILES=$(echo "$PR_DATA" | jq -r '.files | length')
+              PR_FILES=$(echo "$PR_DATA" | jq -r '.changedFiles // (.files | length)')
               BODY=$(cat <<EOF
           <!-- TRIAGE_OVERSIZED -->
           📦 **Oversized PR** — this diff (+$PR_ADDITIONS/−$PR_DELETIONS across $PR_FILES files) exceeds the automated review budget, so the Claude review is skipped (\`review:oversized\`).
@@ -438,9 +490,7 @@ jobs:
           A diff this size is usually mostly generated output, which an automated line-review can't finish (and wouldn't add value to). What works better:
 
           - Split the hand-written source (scripts, workflows, layouts, templates) into its own PR — that PR gets a normal full review.
-          - Have a human spot-check a sample of the generated output here.
-
-          \`@claude #new-review\` still force-runs a full review, but on a diff this size it will likely hit the job timeout.
+          - Have a human review this PR by hand, assisted by their own AI subscription seat (for example, Claude Code running \`/docs-review\` locally against this PR). A local session has no job timeout, so it can focus on the hand-written source and spot-check a sample of the generated output.
           EOF
           )
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
@@ -497,8 +547,10 @@ jobs:
           PR_DATA_FILE=$(mktemp)
           DIFF_FILE=$(mktemp)
           trap 'rm -f "$PR_DATA_FILE" "$DIFF_FILE"' EXIT
-          gh pr view "$PR" --repo "$REPO" \
-            --json files,additions,deletions > "$PR_DATA_FILE"
+          # Paginated file list — see the classification step (100-file cap).
+          gh pr view "$PR" --repo "$REPO" --json files,additions,deletions,changedFiles \
+            | bash .claude/commands/docs-review/scripts/with-pr-files.sh --repo "$REPO" --pr "$PR" \
+            > "$PR_DATA_FILE"
           gh pr diff "$PR" --repo "$REPO" | head -c 100000 > "$DIFF_FILE" || true
           ROUTE=$(python3 scripts/review-v3/route-pr.py \
             --pr-data "$PR_DATA_FILE" --diff "$DIFF_FILE")

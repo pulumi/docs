@@ -18,23 +18,20 @@ Cross-PR: collision clusters (union-find over shared paths; a pair is
 directional conflicts (a PR adding links to a URL that exists only as a
 Hugo `aliases:` entry while another open PR removes links from it),
 duplicate candidates (shared file, similar title, opened within 10
-minutes), stale blog dates, self-accepted findings (REVIEW_STATE actor ==
-PR author), stale reviews (reviewed SHA not a prefix of head), and stale
+minutes), stale blog dates, stale reviews (reviewed SHA not a prefix of head), and stale
 brief summaries (a "What this PR changes" bullet naming a value the current
 diff no longer contains).
 
 A row with unanswered 🚨 blocking findings is `blocked`, not `judge`: it
 cannot merge until the review is answered, and `blocked` is the one lane
---force never reaches. A blocking finding the judge step resolved
-(`fixed|refuted|accepted|not-applicable`, with a note) counts as answered,
-because approving the row posts that `/resolve` line before it merges
-(`act.resolve_lines` is the contract); the row then carries
-`outstanding:judged:<ids>` and sits in `judge` with stamp buttons.
+--force never reaches. Answering them is the author's job (a fix, or
+`@claude <why> #update-review`); the approver's judgments are board notes
+and never answer a finding.
 
 The stamp bar (every gate required):
   label review:no-blockers (or, after a base merge, the card itself saying
   nothing blocks with no open ⚠️ row) · zero ⚠️ rows (zero low-confidence on
-  legacy) · no self-accepted disposition · review CURRENT · mergeable_state
+  legacy; a v3 ⚠️ row counts whatever its disposition) · review CURRENT · mergeable_state
   in {clean, blocked} with checks green (the Sentinel is left out, as
   act.py's preflight leaves it out: it concludes failure until an approval
   exists) · no overlap collision, directional conflict or duplicate · one
@@ -58,13 +55,16 @@ preflight ignores it: the approval about to post supersedes it). The row
 carries `sent-back:<date>` and, when the head has not moved since that
 review and the author can answer it, `waiting_on_author: true` with every
 decision button removed — it is the author's turn, and the board groups
-those rows the way it groups handed-off ones. My own PR (`author:self`)
+those rows the way it groups handed-off ones. The approver's own approval
+does the same on a human-authored PR (`approved:<date>`): `--stamp`
+approves those without merging, so with no push since, the merge is the
+author's move, not the approver's. My own PR (`author:self`)
 gets no stamp or send-back either, since GitHub rejects both (422); it
 routes to the lane team and points at `/address-review`.
 
 `--judgments FILE` merges the model's judge output (`judgments[]`,
 `fix_draft`, `recommended`) into the matching rows and recomputes each
-row, so judged blockers can lift it out of `blocked`. It never lowers a
+row. It never lowers a
 verdict below what this script computed; the model only adds the
 judgment call. Deterministic, no model calls.
 """
@@ -85,7 +85,7 @@ from pathlib import Path
 _HERE = Path(__file__).resolve().parent
 _REPO_ROOT = _HERE.parent.parent
 sys.path.insert(0, str(_HERE))
-import act  # noqa: E402  (push policy and the /resolve contract, so the board and the act layer can't disagree)
+import act  # noqa: E402  (push policy, so the board and the act layer can't disagree)
 import pr_review_config  # noqa: E402
 import routing  # noqa: E402
 import sentinel  # noqa: E402
@@ -101,7 +101,7 @@ DUPLICATE_TITLE_RATIO = 0.8
 CROSS_CODE_CAP = 6
 # The row buttons that are decisions (a row takes one); everything else is a
 # side action. A row that is waiting on its author keeps only the side ones.
-DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate", "ask-fix")
+DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate", "ask-fix", "unrequest")
 SENTINEL_CHECK = act.SENTINEL_CHECK
 
 # code -> meaning; the detail after ':' is free text. Rendered as chips.
@@ -140,10 +140,11 @@ REASON_CODES = {
     "review": "pinned review status when not CURRENT (stale/absent/in-progress/error/triage-prose); base-merged: the head moved only by merging the base, so the reviewed diff still stands; unreadable:<why>: the review did not arrive whole (a missing page of a split review, or a tally declaring more findings than parsed) — blocked, never judge; parse-confidence:low: it parsed into no findings and nothing corroborates that",
     "label": "the review:* state label; `card-clean`: the label lags a base merge, but the card itself says nothing blocks, so it stands in for review:no-blockers",
     "warnings": "⚠️ reviewer-check rows still open on the brief (legacy: low-confidence)",
-    "outstanding": "🚨/❓ rows still open on the author card; `judged:<ids>`: every open one has a resolvable judgment, which approving posts as `/resolve` lines",
+    "outstanding": "🚨/❓ rows still open on the author card",
     "sent-back": "the approver's own changes-requested review, by date; not a blocker (the approval supersedes it). With no push since, the row waits on the author",
+    "approved": "the approver's own approval, by date. On a human-authored PR with no push since, the row waits on the author to merge",
+    "approved-by-owner": "<logins>:<date>: a member of every owning lane team approved the live head. On a human-authored PR the row waits on the author to merge",
     "unblock": "refused:<why>: act.py will not push to this head (dependabot, a generated-docs regen, a fork), so the conflict is the author's to resolve",
-    "self-accepted": "a REVIEW_STATE disposition recorded by the PR author",
     "stances": "the brief lists editorial stances (blocks only with --strict-stances)",
     "mergeable": "GitHub mergeable_state when not clean/blocked",
     "checks": "check rollup when not green; `sentinel:failing`: only the Sentinel is red, which it is until an approval exists, so it is not a CI failure",
@@ -159,7 +160,8 @@ REASON_CODES = {
     "size": "changed lines at or over stamp_max_lines",
     "owner": "the PR's domains and their owning roles",
     "route": "the lane this PR should go to; `no-team`: GitHub says the lane's team doesn't exist, so the SLA person is the target; `team-unverified`: the token couldn't read teams, so the config's team is used unchecked",
-    "handed-off": "a human reviewer who isn't me is requested; the row waits on them",
+    "handed-off": "a named reviewer who isn't me is requested (or, on a row outside my lanes, another lane's team); the row waits on them",
+    "requested": "me: I'm a requested reviewer by name (not through a team); `--unrequest` drops the request",
     "merging-over": "an approval or changes-requested review already on the PR",
     "not-governed": "the Sentinel does not gate this PR",
     "author": "author type when human; `generated`: a workflow opened this PR and cannot answer a review, so the row closes rather than goes back; `self`: my own PR, which GitHub lets me neither approve nor send back — it routes to the lane team",
@@ -466,23 +468,17 @@ def desc_findings(pr: dict) -> list[str]:
     return reasons
 
 
-def self_accepted(pr: dict) -> list[str]:
-    state = (pr.get("review") or {}).get("review_state") or {}
-    author = norm_login((pr.get("author") or {}).get("login"))
-    out = []
-    for fid, entry in sorted((state.get("findings") or {}).items()):
-        if norm_login(entry.get("actor")) == author and entry.get("disposition") != "fixed":
-            out.append(fid)
-    return out
-
-
 def open_warnings(pr: dict) -> list[str]:
-    """⚠️ rows (v3 brief) or low-confidence items (legacy) with no disposition."""
+    """⚠️ rows (v3 brief) or low-confidence items (legacy) with no disposition.
+
+    A v3 brief row is open whatever REVIEW_STATE says about it. The brief is
+    the approver's checklist, and a disposition there is the author's answer
+    (an update-lane `accept` or a held dispute moves the row onto it), not
+    the approver's — so it is exactly what a stamp must not skip reading."""
     review = pr.get("review") or {}
     items = review.get("items") or []
-    disposed = {i["id"] for i in items if i.get("disposition")}
     if review.get("surface") == "v3":
-        return [w["id"] for w in review.get("warning_rows") or [] if w["id"] not in disposed]
+        return [w["id"] for w in review.get("warning_rows") or []]
     return [i["id"] for i in items if i.get("bucket") == "low" and not i.get("disposition")]
 
 
@@ -527,7 +523,7 @@ def team_lanes(slug: str, config: routing.Config) -> set[str]:
     return {d for d, cell in config.matrix.items() if role in (cell.get("mechanical"), cell.get("substantive"))}
 
 
-def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: list[str]) -> list[str]:
+def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: list[str], is_mine: bool = False) -> list[str]:
     """Who this PR is waiting on, when it is not me: the requested human
     reviewers and teams that aren't the approver or one of the approver's
     lanes. Empty when the approver is among the requested reviewers, or when
@@ -535,7 +531,13 @@ def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: li
 
     The review request is the hand-off record: it lives on the PR, every
     session and machine sees it, and GitHub clears it when the reviewer
-    acts, which is exactly when the row should come back."""
+    acts, which is exactly when the row should come back.
+
+    A requested team never hands off a row I own (`is_mine`). The Sentinel
+    needs every lane team's approval, so another lane's team being asked
+    covers nothing of mine; and triage asks teams automatically, so a team
+    request is routing, not a decision to give the row to someone else. A
+    named person is that decision."""
     rr = pr.get("requested_reviewers") or {}
     users = [u for u in rr.get("users") or [] if u]
     teams = [t for t in rr.get("teams") or [] if t]
@@ -543,7 +545,8 @@ def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: li
     if mine and any(norm_login(u) == mine for u in users):
         return []
     others = [f"@{u}" for u in users]
-    others += [f"@{t}" for t in teams if not (set(me) & team_lanes(t, config))]
+    if not is_mine:
+        others += [f"@{t}" for t in teams if not (set(me) & team_lanes(t, config))]
     return others
 
 
@@ -563,6 +566,28 @@ def lanes_for_owner(spec: str | None, config: routing.Config, me: list[str]) -> 
     return {d for d, cell in config.matrix.items() if role in (cell.get("mechanical"), cell.get("substantive"))}
 
 
+def _own_latest_review(pr: dict, approver: str | None) -> dict | None:
+    """The approver's latest APPROVED / CHANGES_REQUESTED / DISMISSED review,
+    or None. A DISMISSED record clears whatever came before it."""
+    me = norm_login(approver) if approver else ""
+    if not me:
+        return None
+    latest = None
+    for r in sorted(pr.get("reviews") or [], key=lambda r: r.get("submitted_at") or ""):
+        if (r.get("user_type") or "") == "Bot" or r.get("state") in ("COMMENTED", "PENDING"):
+            continue
+        if norm_login(r.get("user")) == me:
+            latest = r
+    return latest
+
+
+def _own_review_record(pr: dict, review: dict) -> dict:
+    head = (pr.get("head") or {}).get("sha") or ""
+    cid = review.get("commit_id") or None
+    return {"at": (review.get("submitted_at") or "")[:10] or "unknown", "by": review.get("user") or "",
+            "commit_id": cid, "head_moved": bool(cid and head and cid != head)}
+
+
 def own_send_back(pr: dict, approver: str | None) -> dict | None:
     """The approver's own changes-requested review, when it is their latest
     review on the PR: `{at: YYYY-MM-DD, by, commit_id, head_moved}`. It is
@@ -572,29 +597,59 @@ def own_send_back(pr: dict, approver: str | None) -> dict | None:
     whether the author has pushed since. A queue whose reviews carry no
     `commit_id` (an older collect) reads as not moved, so a second send-back
     is never offered on a guess."""
-    me = norm_login(approver) if approver else ""
-    if not me:
-        return None
-    latest = None
-    for r in sorted(pr.get("reviews") or [], key=lambda r: r.get("submitted_at") or ""):
-        if (r.get("user_type") or "") == "Bot" or r.get("state") in ("COMMENTED", "PENDING"):
-            continue
-        if norm_login(r.get("user")) == me:
-            latest = r  # a DISMISSED record clears an earlier CHANGES_REQUESTED
+    latest = _own_latest_review(pr, approver)
     if not latest or latest.get("state") != "CHANGES_REQUESTED":
         return None
+    return _own_review_record(pr, latest)
+
+
+def own_approval(pr: dict, approver: str | None) -> dict | None:
+    """The approver's own approval, when it is their latest review on the
+    PR: the same `{at, by, commit_id, head_moved}` shape as `own_send_back`.
+    A human-authored PR that `--stamp` approved without merging stays open
+    for its author to merge; with no push since, there is nothing left for
+    the approver to decide, so the row waits on the author."""
+    latest = _own_latest_review(pr, approver)
+    if not latest or latest.get("state") != "APPROVED":
+        return None
+    return _own_review_record(pr, latest)
+
+
+def owner_approval(pr: dict, lanes: dict, ctx: dict) -> dict | None:
+    """Someone else's approval that settles every lane this PR touches:
+    `{by: [logins], at: YYYY-MM-DD}`, or None. Each owning team needs an
+    approval, as the reviewer's latest word and left on the live head, from
+    one of its members (`team_approvers`, collected per approving login).
+
+    GitHub clears the team's review request when a member reviews for it,
+    which used to bring an approved PR back as a route row asking that same
+    team to review it again. The approval is the hand-off record instead:
+    a push puts the row back, since the approval no longer describes it. A
+    review with no `commit_id` (an older collect) or a membership the token
+    couldn't read never counts, so the row stays on the board on a guess."""
+    members = ctx.get("team_approvers") or {}
     head = (pr.get("head") or {}).get("sha") or ""
-    cid = latest.get("commit_id") or None
-    return {"at": (latest.get("submitted_at") or "")[:10] or "unknown", "by": latest.get("user") or "",
-            "commit_id": cid, "head_moved": bool(cid and head and cid != head)}
-
-
-def answered_blockers(pr: dict) -> set[str]:
-    """Blocking finding ids the row's judgments answer: exactly the ones the
-    stamp will post a `/resolve` line for. `act.resolve_lines` is the
-    contract (v3 card, real `F<n>` id, resolvable disposition, a note), so a
-    judgment that would post nothing answers nothing here either."""
-    return {m.group(1) for line in act.resolve_lines(pr) if (m := act.RESOLVE_ID_RE.match(line))}
+    me = norm_login(ctx.get("approver")) if ctx.get("approver") else ""
+    teams = {(lanes.get("owners") or {}).get(d, {}).get("team") for d in lanes.get("domains") or []}
+    if not head or not teams or None in teams:
+        return None
+    latest: dict[str, dict] = {}
+    for r in sorted(pr.get("reviews") or [], key=lambda r: r.get("submitted_at") or ""):
+        if (r.get("user_type") or "") == "Bot" or r.get("state") in ("COMMENTED", "PENDING", "DISMISSED"):
+            continue
+        latest[r["user"]] = r
+    approvals = [r for u, r in latest.items()
+                 if r.get("state") == "APPROVED" and norm_login(u) != me and r.get("commit_id") == head]
+    by: list[str] = []
+    when: list[str] = []
+    for team in sorted(teams):
+        hit = next((r for r in approvals if (members.get(team) or {}).get(r["user"]) is True), None)
+        if hit is None:
+            return None
+        if hit["user"] not in by:
+            by.append(hit["user"])
+        when.append((hit.get("submitted_at") or "")[:10])
+    return {"by": by, "at": max(when) or "unknown"}
 
 
 def unblock_refusal(pr: dict) -> str | None:
@@ -701,7 +756,7 @@ def ownership(pr: dict, ctx: dict) -> dict:
         reasons.append("author:self")
         is_mine = False
     return {"lanes": lanes, "is_mine": is_mine, "reasons": reasons, "author_self": author_self,
-            "handed_off_to": handed_off_to(pr, approver, config, cfg.me)}
+            "handed_off_to": handed_off_to(pr, approver, config, cfg.me, is_mine)}
 
 
 def _quote_safe(text: str) -> str:
@@ -778,6 +833,22 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if sent:
         reasons.append(f"sent-back:{sent['at']}")
         waiting = revisable and not author_self and not sent["head_moved"]
+    # -- my own approval. A human author merges their own PR, so once I have
+    # approved this head the next move is theirs. A bot row is different:
+    # act.py merges those, so an approved-but-open bot row is still mine.
+    approved = own_approval(pr, ctx.get("approver"))
+    pr["approved"] = approved
+    if approved:
+        reasons.append(f"approved:{approved['at']}")
+        if author.get("type") != "bot" and not author_self and not approved["head_moved"]:
+            waiting = True
+    # -- the lane team's approval. Same rule as mine: a human author merges
+    # what the owning team approved, so the row is theirs until a push.
+    if author.get("type") != "bot" and not author_self:
+        owned = owner_approval(pr, lanes, ctx)
+        if owned:
+            reasons.append(f"approved-by-owner:{','.join(owned['by'])}:{owned['at']}")
+            waiting = True
 
     def send_back(label: str, reason: str | None = None):
         """The author's turn, said once per row. A generated row has no
@@ -856,27 +927,17 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         gate_fail("label:no-blockers-missing", chip=False)
         if review.get("base_merged") and status == "CURRENT":
             add_action({"id": "refresh", "label": "refresh review", "cmd": f"--refresh {n}"})
-    answered = answered_blockers(pr)
-    unanswered = [b for b in blockers if b not in answered]
-    if unanswered:
+    if blockers:
         # Blocked, not judge. An unanswered 🚨 is the review still waiting on
-        # an answer, and no approver's call substitutes for giving one — so
-        # the row must not sit in a lane --force can reach. Answering it is a
-        # `/resolve <id> <disposition>: <why>` on the PR (or a fix, or a
-        # send-back); the row leaves this lane on the next collect, carrying
-        # the record of why each finding closed.
-        gate_fail(f"outstanding:{len(unanswered)}:{','.join(unanswered)}")
-        blocked.append(f"outstanding:{len(unanswered)}")
+        # the author, and no approver's call substitutes for their answer —
+        # so the row must not sit in a lane --force can reach. The author
+        # answers with a fix or `@claude <why> #update-review`; the row
+        # leaves this lane on the next collect.
+        gate_fail(f"outstanding:{len(blockers)}:{','.join(blockers)}")
+        blocked.append(f"outstanding:{len(blockers)}")
         send_back("send back to author")
-    elif blockers:
-        # Every open blocker has a resolvable judgment: approving posts the
-        # `/resolve` lines first (act.resolve_lines), so the stamp is the
-        # answer and the row is an approver's call again.
-        gate_fail(f"outstanding:judged:{','.join(blockers)}")
     if warnings:
         gate_fail(f"warnings:{len(warnings)}:{','.join(warnings)}")
-    for fid in self_accepted(pr):
-        gate_fail(f"self-accepted:{fid}")
     if review.get("stances"):
         reasons.append("stances:present")
         if ctx["strict_stances"]:
@@ -924,7 +985,17 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
             # button that addresses it, and it parks the row with them.
             add_action({"id": "route", "label": f"ask @{user} to re-review", "cmd": f"--route {n}:@{user}", "targets": [f"@{user}"]})
         elif state == "APPROVED":
+            if me and norm_login(user) == me:
+                continue  # mine: `approved:` above
             reasons.append(f"merging-over:approved-by:{user}")
+    # Someone asked for me by name. Declining is a decision of its own --
+    # the request is the one thing tying this row to me rather than to the
+    # lane -- so it takes the row's decision slot. Team requests aren't mine
+    # to drop: removing myself from a team's request removes the team.
+    requested = (pr.get("requested_reviewers") or {}).get("users") or []
+    if me and not author_self and any(norm_login(u) == me for u in requested):
+        reasons.append("requested:me")
+        add_action({"id": "unrequest", "label": "remove me as reviewer", "cmd": f"--unrequest {n}"})
 
     # -- shape
     for f in pr.get("files") or []:
@@ -1035,7 +1106,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     # on the row as a handoff instead of a fragment of the composed command.
     # Only where the fix would survive: dependabot and the generated-docs
     # regens are rebuilt from source, and a fork head has no push access.
-    open_count = len(unanswered) + len(warnings)
+    open_count = len(blockers) + len(warnings)
     pr["handoffs"] = []
     if not revisable and open_count and act.push_allowed(pr)[0]:
         pr["handoffs"].append({
@@ -1072,9 +1143,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     pr["actions"] = actions
     pr["route_targets"] = next((a.get("targets") or [] for a in actions if a["id"] == "route"), [])
     pr["open_warning_ids"] = warnings
-    pr["open_blocker_ids"] = unanswered
-    pr["judged_blocker_ids"] = [b for b in blockers if b in answered]
-    pr["self_accepted_ids"] = self_accepted(pr)
+    pr["open_blocker_ids"] = blockers
     pr.setdefault("judgments", [])
     pr.setdefault("fix_draft", None)
     pr["summary"] = one_line_summary(pr)
@@ -1274,7 +1343,7 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
             # `--chain` approves the lead with --force, so it is offered only
             # where the lead cleared every gate but the collision itself --
             # the thing the chain is for. A lead held up by anything else (an
-            # open ⚠️ row, a judged 🚨, a stale review, a new blog post, a
+            # open ⚠️ row, a stale review, a new blog post, a
             # diff over the cap) states the fact and stops: that decision
             # belongs on #first's own row, next to the findings behind it.
             if lead.get("verdict") != "stamp" and not only_collisions_hold(lead):
@@ -1286,7 +1355,7 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
                               "cmd": None, "claims": [], "targets": {}})
                 continue
             # `--chain C1` is one command act.py runs through the stamp gates
-            # (resolves, plan-time blocker check, preflight) before it merges
+            # (plan-time blocker check, preflight) before it merges
             # base into the next link, so the card is that command and the
             # rows it covers defer to it (`claims`) rather than mapping to a
             # row button of their own.
@@ -1357,7 +1426,7 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
     if stamps:
         held = sorted(p["number"] for p in stamped if not merges_on_stamp(p))
         merged = [n for n in stamps if n not in held]
-        does = "Approves each, records the judged findings, and squash-merges " + (
+        does = "Approves each and squash-merges " + (
             "them." if not held else f"the {len(merged)} bot-authored one{'s' if len(merged) != 1 else ''}; {pr_list(held)} {'are' if len(held) != 1 else 'is'} human-authored, so approval stops there.")
         cards.append({"kind": "stamp", "say": f"{pr_list(stamps)} pass{'' if len(stamps) != 1 else 'es'} every gate.",
                       "does": does,
@@ -1570,7 +1639,7 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
         "cfg": cfg, "config": config, "mine": lanes_for_owner(owner, config, cfg.me),
         "include_infra": include_infra, "strict_stances": strict_stances, "cross": {},
         "today": today or datetime.now(timezone.utc).date(), "approver": approver, "handed_off": set(),
-        "teams": queue.get("teams") or {}, "ownership": {},
+        "teams": queue.get("teams") or {}, "team_approvers": queue.get("team_approvers") or {}, "ownership": {},
     }
     # Ownership first: a cluster's `mine` members are the rows that are mine
     # to sequence, which the per-row pass needs to already know.
@@ -1669,9 +1738,9 @@ def _close_with_judgments(pr: dict) -> dict | None:
 def merge_judgments(queue: dict, judgments: dict, *, ctx: dict | None = None) -> dict:
     """Fold the model's judge output into the rows. Keys are PR numbers (as
     strings or ints); each value may carry `judgments` (list), `fix_draft`
-    (dict) and `recommended` (verdict). Each touched row is recomputed, so a
-    blocking finding every judgment resolves lifts the row out of `blocked`
-    (approving then posts the `/resolve` lines). A recommendation never
+    (dict) and `recommended` (verdict). Each touched row is recomputed. A
+    judgment never answers a finding, so it never lifts a row out of
+    `blocked`. A recommendation never
     lowers the computed verdict: blocked stays blocked, route stays route —
     and one the row can't carry (a close with nothing to say, a route with
     no team, a send-back on my own PR) is recorded as rejected rather than

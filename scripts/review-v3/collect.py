@@ -25,8 +25,9 @@ or MCP-fetched data handed over by a model session). Author filters use
 
 Cache: `/.pr-review-cache/<pr>/<head_sha>-<updated_at>.json` holds the raw
 per-PR responses that only change when the PR does (files, comments,
-reviews, commits). `mergeable_state` and the check rollup are transient and
-are re-fetched on every run. `--no-cache` bypasses reads; `--gc` drops
+commits). `mergeable_state`, the check rollup, requested reviewers and
+reviews are re-fetched on every run: a submitted review can land before
+`updated_at` moves, so a key built from it would serve the pre-review list. `--no-cache` bypasses reads; `--gc` drops
 entries for PRs no longer open.
 
 Deterministic, no model calls (scripts/review-v3 contract).
@@ -264,7 +265,9 @@ def find_review_comments(comments: list[dict]) -> tuple[dict | None, dict | None
     return None, None, "none"
 
 
-RUBBER_RE = re.compile(r"### ✅ What you can rubber-stamp\s*(.*?)(?=\n#{2,3} |\n💡|\n📎|\Z)", re.S)
+# 💡/📎 are the pre-2026-09-25 prefixes of the two lines after the list.
+RUBBER_RE = re.compile(r"### ✅ What you can rubber-stamp\s*(.*?)"
+                       r"(?=\n#{2,3} |\n💡|\n📎|\n\*\*Pre-existing issues|\n\*\*Full evidence:|\Z)", re.S)
 EVIDENCE_RE = re.compile(r"\[([^\]]+)\]\((https://[^)\s]*review-evidence[^)\s]*)\)")
 
 
@@ -614,7 +617,6 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         raw = {
             "files": gh.pr_files(number),
             "comments": gh.issue_comments(number),
-            "reviews": gh.reviews(number),
             "commits": gh.pr_commits(number),
             "review_comments": gh.review_comments(number),
         }
@@ -623,6 +625,9 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
     statuses = gh.commit_statuses(head_sha) if head_sha else []
     workflows = gh.workflow_paths(head_sha) if head_sha else {}
     requested = gh.requested_reviewers(number)
+    # Never cached: an approval can land before `updated_at` moves, so a run
+    # right after `act.py` would read the old key and miss its own review.
+    reviews = gh.reviews(number)
 
     files = raw["files"]
     comments = raw["comments"]
@@ -739,7 +744,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
              # it with the live head to tell "waiting on the author" from
              # "they pushed since"
              "commit_id": r.get("commit_id")}
-            for r in raw["reviews"]
+            for r in reviews
         ],
         "requested_reviewers": {
             "users": [u.get("login") for u in (requested.get("users") or [])
@@ -890,6 +895,33 @@ def my_team_memberships(gh: GhClient, repo_root: Path | None, login: str | None)
     return out
 
 
+def approver_team_memberships(gh: GhClient, repo_root: Path | None, prs: list[dict],
+                              me: str | None) -> dict[str, dict[str, bool | None]]:
+    """`{"org/slug": {login: is a member}}` for every human who has approved
+    an open PR, against every team review-routing.yml names. The analyzer
+    reads it to tell an approval from the lane's own team — after which a
+    human-authored PR is its author's to merge — from a drive-by one. GitHub
+    clears the team's review request when a member reviews for it, so the
+    request alone can't carry that. None means the token couldn't read it."""
+    logins = sorted({r["user"] for pr in prs for r in pr.get("reviews") or []
+                     if r.get("state") == "APPROVED" and r.get("user") and r.get("user_type") != "Bot"
+                     and r["user"].lower() != (me or "").lower()})
+    if not logins:
+        return {}
+    path = (repo_root or _REPO_ROOT) / ".github" / "review-routing.yml"
+    try:
+        import routing  # noqa: PLC0415
+        teams = routing.load_config(path).teams
+    except Exception:  # noqa: BLE001
+        return {}
+    out: dict[str, dict[str, bool | None]] = {}
+    for full in sorted(set(teams.values())):
+        org, _, slug = full.partition("/")
+        if org and slug:
+            out[full] = {login: gh.team_member(org, slug, login) for login in logins}
+    return out
+
+
 def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str] | None = None,
             since: str | None = None, cache_dir: Path | None = DEFAULT_CACHE_DIR,
             repo_root: Path = _REPO_ROOT, ai_override: str | None = None, workers: int = 6,
@@ -922,6 +954,7 @@ def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str
         "approver": approver,
         "my_teams": my_team_memberships(gh, repo_root, approver),
         "teams": routing_teams(gh, repo_root),
+        "team_approvers": approver_team_memberships(gh, repo_root, prs, approver),
         "filters": {"pr": numbers or [], "author": authors or [], "since": since},
         "open_count": len(listed),
         "prs": prs,

@@ -504,11 +504,92 @@ def test_link_only_any_team_policy():
     assert bad[0] is None and any("link_only.approval" in e for e in bad[1])
 
 
+def test_any_human_scope():
+    cfg = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG),
+                                "approval": {"scope": "any-human"}})[0]
+    assert cfg is not None
+    res = routing.resolve_lanes(["content/docs/foo.md", "layouts/x.html"], False, False, cfg)
+    # the matrix still routes (triage requests both teams) ...
+    assert res.roles == {"docs-guild", "marketing"}
+    # ... but the gate takes any human with write access, and never asks
+    # about teams at all
+    assert res.any_human is True and res.any_team is False
+    assert any("any human with write access" in r for r in res.reasons)
+    # a zero-file PR is still not anyone's to approve
+    assert routing.resolve_lanes([], False, False, cfg).any_human is False
+
+
+def test_wider_scope_wins_between_repo_and_link_only():
+    # repo-wide any-human beats link_only's any-team on a link sweep
+    wide = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG),
+                                 "approval": {"scope": "any-human"},
+                                 "link_only": {"approval": "any-team"}})[0]
+    res = routing.resolve_lanes(["content/blog/p/index.md"], False, False, wide, link_only=True)
+    assert res.any_human is True and res.any_team is False
+    # and link_only's any-human widens a lane-scoped repo for that diff only
+    narrow = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG),
+                                   "link_only": {"approval": "any-human"}})[0]
+    assert routing.resolve_lanes(["content/blog/p/index.md"], False, False, narrow,
+                                 link_only=True).any_human is True
+    assert routing.resolve_lanes(["content/blog/p/index.md"], False, False, narrow,
+                                 link_only=False).any_human is False
+
+
+def test_bot_approvers_match_on_approver_author_and_label():
+    cfg = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "bot_approvers": [
+        {"approver": "github-actions[bot]", "author": "pulumi-bot",
+         "label": "automation/merge", "why": "regen lane"},
+        {"approver": "pulumi-bot", "author": "dependabot[bot]", "why": "deps lane"},
+    ]})[0]
+    assert cfg is not None
+    r = routing.bot_approver_reason
+    assert r(cfg, "github-actions[bot]", "pulumi-bot", {"automation/merge"})
+    # every half is load-bearing
+    assert r(cfg, "github-actions[bot]", "pulumi-bot", set()) is None
+    assert r(cfg, "github-actions[bot]", "someone", {"automation/merge"}) is None
+    assert r(cfg, "pulumi-bot", "pulumi-bot", {"automation/merge"}) is None
+    # an entry with no label matches on the pair alone
+    assert r(cfg, "pulumi-bot", "dependabot[bot]", set())
+    assert r(cfg, "pulumi-bot", "workprentice[bot]", set()) is None
+    # absent section: no bot ever clears the gate
+    assert r(routing.validate_raw(copy.deepcopy(routing._CANNED_CONFIG))[0],
+             "pulumi-bot", "dependabot[bot]", set()) is None
+
+
+def test_bot_approvers_validation_fails_closed():
+    def errs(section):
+        cfg, e, _ = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG),
+                                          "bot_approvers": section})
+        assert cfg is None
+        return " ".join(e)
+    assert "bot_approvers must be a list" in errs({"approver": "x"})
+    assert "bot_approvers[0].why" in errs([{"approver": "a[bot]", "author": "b"}])
+    assert "bot_approvers[0].author" in errs([{"approver": "a[bot]", "why": "w"}])
+    assert "unknown key 'labels'" in errs([{"approver": "a[bot]", "author": "b", "why": "w",
+                                           "labels": ["x"]}])
+    assert "bot_approvers[0].label" in errs([{"approver": "a[bot]", "author": "b", "why": "w",
+                                             "label": ""}])
+
+
+def test_live_config_bot_approvers_are_exactly_the_auto_approve_lanes():
+    """The live entries mirror the two workflows that post bot approvals
+    today. If a workflow changes which identity approves, this is where the
+    config has to follow."""
+    live = routing.load_config(routing.DEFAULT_CONFIG_PATH)
+    assert routing.bot_approver_reason(live, "github-actions[bot]", "pulumi-bot",
+                                       {"automation/merge"})
+    assert routing.bot_approver_reason(live, "pulumi-bot", "dependabot[bot]", set())
+    # and nothing wider: a content-review PR (no label) needs a human
+    assert routing.bot_approver_reason(live, "github-actions[bot]", "pulumi-bot", set()) is None
+    assert routing.bot_approver_reason(live, "pulumi-bot", "pulumi-bot", set()) is None
+    assert (live.approval or {}).get("scope") == "any-human"
+
+
 def test_resolution_to_json_shape(config):
     r = routing.resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False, config=config)
     payload = r.to_json()
     assert set(payload) == {"roles", "staging_evidence_required", "subjects",
-                            "overridden", "reasons", "any_team"}
+                            "overridden", "reasons", "any_team", "any_human"}
     assert payload["roles"] == ["docs-guild"]
 
 
@@ -862,6 +943,17 @@ def test_get_started_routes_to_marketing_everywhere_it_lives():
         r = routing.resolve_lanes([path], mechanical=False, claims=False, config=cfg)
         assert r.roles == {"marketing"}, path
         assert r.subjects[path] == "docs", path
+
+
+def test_what_is_routes_to_marketing(live_config):
+    """What-is articles are marketing's SEO content, not docs-guild's, but
+    they keep the docs subject and therefore the docs review criteria."""
+    for path, subject in (("content/what-is/what-is-pulumi.md", "docs"),
+                          ("data/what_is_sections.yml", "docs")):
+        r = routing.resolve_lanes([path], mechanical=False, claims=False, config=live_config)
+        assert r.roles == {"marketing"}, path
+        assert r.subjects[path] == subject, path
+        assert r.overridden == {path: "marketing"}, path
 
 
 def test_ordinary_paths_are_untouched_by_the_overrides():

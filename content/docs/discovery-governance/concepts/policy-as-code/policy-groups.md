@@ -92,6 +92,16 @@ Policies within policy groups can have different enforcement levels:
 - **Advisory:** Issues warnings but allows deployments to proceed. Useful for testing new policies or providing informational guidance.
 - **Mandatory:** Blocks deployments when violations are detected. Use for critical security, compliance, or cost policies.
 
+## Run audit policy groups on customer-managed runners
+
+{{< pulumi-cloud "customer-managed-runners" "named" />}}
+
+Audit policy groups run their evaluations on Pulumi-managed runners by default. To evaluate policies inside your own infrastructure, select a [customer-managed runner](/docs/administration/concepts/customer-managed-runners/) pool for the audit policy group. If the group has no pool set, it uses the organization default pool, and then the Pulumi hosted pool.
+
+Only audit policy groups run on a runner pool. Preventative policy groups run inside `pulumi preview` and `pulumi up` wherever the CLI runs.
+
+For setup steps, see [Run scans and policy evaluations on customer-managed runners](/docs/discovery-governance/operations/customer-managed-runners/).
+
 ## Managing policy groups at scale with ESC
 
 <a id="esc-environments"></a>Once you have more than a handful of policy groups, keeping their configuration in sync becomes the hard part. Policy packs in a policy group can reference [Pulumi ESC](/docs/esc/) environments, which lets you define that configuration once and share it across every group that needs it, instead of editing each group separately.

@@ -23,6 +23,9 @@ on:
       - 'scripts/content-review/**'
       - 'scripts/blog-review/**'
       - 'scripts/review-v3/**'
+      # The weekly digest renders the SLA sweep's verdicts, so its suite runs
+      # alongside the sweep's.
+      - 'scripts/weekly-digest/**'
       - 'scripts/test-review-pipeline.sh'
       - '.claude/commands/docs-review/scripts/**'
       # The suites assert against the shipped strategic-tiers.yaml and
@@ -34,9 +37,6 @@ on:
       # resolvable, matrix complete, SLA entries present), so a config-only
       # edit must run it too.
       - '.github/review-routing.yml'
-      # test_staging_gate.py executes this workflow's gate step, extracted
-      # from the YAML, so an edit to the workflow alone must run it too.
-      - '.github/workflows/staging-deploy-pr.yml'
       - '.github/workflows/review-pipeline-tests.yml'
 
 permissions:

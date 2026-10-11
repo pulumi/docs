@@ -1,0 +1,11 @@
+id = "alberto-pose"
+name = "Alberto Pose"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "pose"
+linkedin = "apose"

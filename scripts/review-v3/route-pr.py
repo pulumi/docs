@@ -12,8 +12,13 @@ bar and claims signal (triage-classify.py) into the lane matrix
       "claims": bool,
       "roles": [...], "teams": [...],          # teams = org/slug to request
       "staging_evidence_required": bool,
+      "approval_scope": "lane" | "any-team" | "any-human",
       "reasons": [...]
     }
+
+`teams` is who gets REQUESTED; `approval_scope` is who may CLEAR the
+approver gate (see `approval:` in review-routing.yml). Under `any-human`
+the requested teams are a routing hint, not a requirement.
 
 Deterministic, no network. Inputs are the files the triage step already has
 on disk: the `gh pr view --json ...` payload and the (possibly truncated)
@@ -71,6 +76,8 @@ def route(pr_data: dict, diff_text: str, config_path: Path, repo_root: Path) -> 
         "roles": roles,
         "teams": [config.teams[r] for r in roles],
         "staging_evidence_required": resolution.staging_evidence_required,
+        "approval_scope": ("any-human" if resolution.any_human
+                           else "any-team" if resolution.any_team else "lane"),
         "reasons": resolution.reasons,
     }
 
@@ -94,6 +101,7 @@ def _self_test() -> int:
     assert out["roles"] == ["docs-guild"], out
     assert out["teams"] == ["pulumi/docs-guild"], out
     assert out["staging_evidence_required"] is False
+    assert out["approval_scope"] in {"lane", "any-team", "any-human"}, out
 
     infra_pr = {"additions": 3, "deletions": 0, "files": [{"path": ".github/workflows/foo.yml"}]}
     infra_diff = (
@@ -160,13 +168,13 @@ def _self_test() -> int:
     assert any("edition" in r for r in out6["mechanical_reasons"]), out6["mechanical_reasons"]
     assert out6["claims"] is False and out6["roles"] == ["docs-guild"], out6
 
-    pricing_pr = {"additions": 1, "deletions": 0, "files": [{"path": "data/pulumi_pricing.yaml"}]}
+    pricing_pr = {"additions": 1, "deletions": 0, "files": [{"path": "data/pulumi_editions.yaml"}]}
     pricing_diff = (
-        "diff --git a/data/pulumi_pricing.yaml b/data/pulumi_pricing.yaml\n"
-        "--- a/data/pulumi_pricing.yaml\n"
-        "+++ b/data/pulumi_pricing.yaml\n"
+        "diff --git a/data/pulumi_editions.yaml b/data/pulumi_editions.yaml\n"
+        "--- a/data/pulumi_editions.yaml\n"
+        "+++ b/data/pulumi_editions.yaml\n"
         "@@ -1,0 +1,1 @@\n"
-        "+price: 50\n"
+        "+    min_edition: pro\n"
     )
     out3 = route(pricing_pr, pricing_diff, _REPO_ROOT / ".github/review-routing.yml", _REPO_ROOT)
     assert out3["claims"] is True

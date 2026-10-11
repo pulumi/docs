@@ -59,7 +59,9 @@ jobs:
     name: Sweep open PRs (deterministic, credentialed)
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    if: vars.REVIEW_V3_SLA == '1' || github.event_name == 'workflow_dispatch'
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream sync
+    # but must not run it: the scheduled lane belongs to pulumi/docs alone.
+    if: github.repository == 'pulumi/docs' && (vars.REVIEW_V3_SLA == '1' || github.event_name == 'workflow_dispatch')
     # PULUMI_STACK_NAME is an environment-scoped variable, so the job must
     # select the environment to resolve the ledger bucket stack output
     # (same reason blog-review-index.yml's select/record jobs do this).
