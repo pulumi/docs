@@ -3,6 +3,9 @@ name = "Cam Soper"
 title = "Senior Technical Content Engineer"
 weight = 1
 
+bio = """
+<p>Cam Soper, a Senior Technical Content Engineer, writes about AI and developer experience on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

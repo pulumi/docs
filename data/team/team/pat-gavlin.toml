@@ -3,6 +3,9 @@ name = "Pat Gavlin"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Pat Gavlin, a Software Engineer, writes about Pulumi Deployments, Pulumi ESC, and cloud engineering on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

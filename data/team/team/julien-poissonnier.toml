@@ -3,6 +3,9 @@ name = "Julien Poissonnier"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Julien Poissonnier, a Software Engineer, writes about infrastructure as code, Python, and TypeScript on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

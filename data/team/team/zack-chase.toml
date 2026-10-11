@@ -3,6 +3,9 @@ name = "Zack Chase"
 title = "Growth Engineer"
 weight = 1
 
+bio = """
+<p>Zack Chase, a Growth Engineer, writes about AWS and identity and access management on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

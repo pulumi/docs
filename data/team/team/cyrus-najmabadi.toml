@@ -1,6 +1,9 @@
 id = "cyrus-najmabadi"
 name = "Cyrus Najmabadi"
 
+bio = """
+<p>Cyrus Najmabadi contributed posts on serverless, AWS, and JavaScript to the Pulumi blog between 2018 and 2020.</p>
+"""
 status = "inactive"
 
 [social]

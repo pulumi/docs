@@ -1,4 +1,7 @@
 id = "sean-gillespie"
 name = "Sean Gilespie"
 
+bio = """
+<p>Sean Gilespie contributed posts on Kubernetes, AWS, and Docker to the Pulumi blog between 2018 and 2019.</p>
+"""
 status = "inactive"

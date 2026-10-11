@@ -3,6 +3,9 @@ name = "Fraser Waters"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Fraser Waters, a Software Engineer, writes about AI, infrastructure as code, and migration on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

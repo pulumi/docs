@@ -3,6 +3,9 @@ name = "Sean Yeh"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Sean Yeh, a Software Engineer, writes about Pulumi ESC, secrets management, and configuration management on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

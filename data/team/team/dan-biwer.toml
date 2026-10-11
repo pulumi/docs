@@ -1,5 +1,8 @@
 id = "dan-biwer"
 name = "Dan Biwer"
+bio = """
+<p>Dan Biwer, a Software Engineer, writes about Pulumi Cloud, policy as code, and compliance on the Pulumi blog.</p>
+"""
 status = "active"
 title = "Software Engineer"
 weight = 1

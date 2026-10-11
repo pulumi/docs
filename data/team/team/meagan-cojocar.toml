@@ -3,6 +3,9 @@ name = "Meagan Cojocar"
 title = "General Manager, IaC"
 weight = 1
 
+bio = """
+<p>Meagan Cojocar, a General Manager, IaC, writes about Pulumi Cloud, platform engineering, and AI on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

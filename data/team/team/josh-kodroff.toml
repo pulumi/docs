@@ -4,6 +4,9 @@ title = "Principal Customer Success Architect"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Josh Kodroff is a Principal Customer Success Architect at Pulumi who writes about AWS, AWS Lambda, and DevOps on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

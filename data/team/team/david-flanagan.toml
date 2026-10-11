@@ -3,6 +3,9 @@ name = "David Flanagan"
 title = "Staff Developer Advocate"
 weight = 1
 
+bio = """
+<p>David Flanagan contributed posts on Kubernetes, AWS, and Amazon EKS to the Pulumi blog between 2021 and 2022.</p>
+"""
 status = "inactive"
 
 [social]

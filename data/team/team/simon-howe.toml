@@ -4,5 +4,8 @@ title = "Software Engineer"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Simon Howe is a Software Engineer at Pulumi who writes about AI, GitHub Copilot, and infrastructure as code on the Pulumi blog.</p>
+"""
 status = "active"
 

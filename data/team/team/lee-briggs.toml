@@ -3,6 +3,9 @@ name = "Lee Briggs"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Lee Briggs, a Software Engineer, writes about Kubernetes, AWS, and AWS Lambda on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

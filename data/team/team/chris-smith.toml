@@ -1,6 +1,9 @@
 id = "chris-smith"
 name = "Chris Smith"
 
+bio = """
+<p>Chris Smith contributed posts on continuous delivery, secrets management, and security to the Pulumi blog between 2018 and 2022.</p>
+"""
 status = "inactive"
 
 [social]

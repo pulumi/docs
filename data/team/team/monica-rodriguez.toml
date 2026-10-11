@@ -4,6 +4,9 @@ title = "Senior Product Manager"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Monica Rodriguez is a Senior Product Manager at Pulumi who writes about AWS, Azure, and Docker on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

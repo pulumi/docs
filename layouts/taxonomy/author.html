@@ -20,6 +20,7 @@
                         {{ if eq .status "guest" }}<span class="badge badge-brand badge-secondary">Guest</span>{{ end }}
                         {{ with .title }}<span class="font-overline-sm">{{ . }}</span>{{ end }}
                     </div>
+                    {{ with .bio }}<div class="max-w-prose text-sm">{{ . | safeHTML }}</div>{{ end }}
                     {{ with .social }}{{ partial "widgets/social-icons.html" (dict "social" .) }}{{ end }}
                     {{/* A handful of Community Engineering authors also have a
                          richer, prose-bio profile at /community/team/{slug}/

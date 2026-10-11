@@ -2,6 +2,9 @@ id = "troy-howard"
 name = "Troy Howard"
 title = "Principal Technical Content Engineer"
 
+bio = """
+<p>Troy Howard, a Principal Technical Content Engineer, writes about TypeScript, DevOps, and Python on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

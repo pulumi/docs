@@ -3,6 +3,9 @@ name = "Iaroslav Titov"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Iaroslav Titov, a Software Engineer, writes about Pulumi ESC, secrets management, and Pulumi Deployments on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

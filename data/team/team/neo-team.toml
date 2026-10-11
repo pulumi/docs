@@ -2,6 +2,9 @@ id = "neo-team"
 name = "Pulumi Neo Team"
 title = "Product Team"
 company = "Pulumi"
+bio = """
+<p>Pulumi Neo Team is a Pulumi team byline covering AI, Pulumi Neo, and platform engineering.</p>
+"""
 status = "active"
 
 # This byline is a group, not a natural person -- schema.org Person denotes an

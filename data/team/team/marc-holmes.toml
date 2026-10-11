@@ -1,4 +1,7 @@
 id = "marc-holmes"
 name = "Marc Holmes"
 
+bio = """
+<p>Marc Holmes contributed posts on cloud native and serverless to the Pulumi blog in 2018.</p>
+"""
 status = "inactive"

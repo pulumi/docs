@@ -1,6 +1,9 @@
 id = "sophia-parafina"
 name = "Sophia Parafina"
 
+bio = """
+<p>Sophia Parafina contributed posts on Kubernetes, Azure, and AWS to the Pulumi blog between 2019 and 2021.</p>
+"""
 status = "inactive"
 
 [social]

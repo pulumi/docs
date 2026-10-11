@@ -1,6 +1,9 @@
 id = "matt-stratton"
 name = "Matty Stratton"
 
+bio = """
+<p>Matty Stratton contributed posts on cloud engineering, security, and the Automation API to the Pulumi blog between 2021 and 2022.</p>
+"""
 status = "inactive"
 
 [social]

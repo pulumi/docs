@@ -3,6 +3,9 @@ name = "Marlowe Fenne"
 title = "Director of ABM"
 weight = 1
 
+bio = """
+<p>Marlowe Fenne, a Director of ABM, writes about platform engineering, cloud engineering, and cloud native on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

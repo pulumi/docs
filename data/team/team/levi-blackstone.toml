@@ -3,6 +3,9 @@ name = "Levi Blackstone"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Levi Blackstone, a Software Engineer, writes about Kubernetes, Pulumi Cloud, and Pulumi Insights on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]
