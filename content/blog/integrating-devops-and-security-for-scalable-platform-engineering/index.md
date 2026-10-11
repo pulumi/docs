@@ -224,7 +224,7 @@ Learn how Pulumi customers build secure, scalable platforms and empower their de
 
 - **Tivity Health**: [DevSecOps Game-Changer: Security Automation That Delivers Business Results](https://www.pulumi.com/blog/devsecops-strategy-security-automation-tivity-health/)
 - **BMW Group**: [Unified and Programmatic Approach to Infrastructure Management at BMW Using Pulumi](https://www.pulumi.com/blog/unified-programmatic-approach-infrastructure-management-bmw-using-pulumi/)
-- **Lemonade**: [How the DevOps team supports a much larger group of developers](https://www.pulumi.com/case-studies/lemonade/) using by Pulumi to standardize infrastructure components and enforce best practices.
+- **Lemonade**: [How the DevOps team supports a much larger group of developers](https://www.pulumi.com/customers/lemonade/) using by Pulumi to standardize infrastructure components and enforce best practices.
 
 Discover platform engineering best practices in [The Guide to Platform Engineering: 7 Steps to Get It Right](https://www.pulumi.com/blog/the-guide-platform-engineering-idp-steps-best-practices/).
 

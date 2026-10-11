@@ -170,7 +170,7 @@ These two measures combined tell you your security works and at what cost, so yo
 Achieving these goals, a decreasing incident rate coupled with a low developer friction score, requires a platform built with the right foundations. Pulumi helps you construct such a platform by providing built-in capabilities that directly embed security into your infrastructure workflows:
 
 * **[Policy as Code (CrossGuard)](https://www.pulumi.com/crossguard/):** Automatically enforce security and compliance standards.
-* **[Secure Secrets Management (Pulumi ESC)](https://www.pulumi.com/product/esc/):** Centralize and securely inject secrets without manual handling.
+* **[Secure Secrets Management (Pulumi ESC)](https://www.pulumi.com/product/secrets-management/):** Centralize and securely inject secrets without manual handling.
 * **[Identity-Based Authentication](/docs/administration/concepts/rbac/):** Simplify secure access to cloud resources using existing identities.
 
 With Pulumi, security becomes an integrated, frictionless part of your platform—accelerating innovation while building trust.

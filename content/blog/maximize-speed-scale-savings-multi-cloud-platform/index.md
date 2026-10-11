@@ -21,7 +21,7 @@ Hundreds of thousands of developers across the globe already rely on Pulumi to d
 Pulumi Cloud accelerates time to market. It automates deployments, manages state, and centralizes secrets, eliminating the complexities of DIY IaC backends. Its transactional state management prevents issues like outages caused by mismanaged state files, offering a secure, reliable platform for scaling operations.
 
 {{% notes type="info" %}}
-[Materialize](/case-studies/materialize/) reduced costs and accelerated time to market by making developer onboarding 75% faster.
+[Materialize](/customers/materialize/) reduced costs and accelerated time to market by making developer onboarding 75% faster.
 {{% /notes %}}
 
 ### Scale - Improved Developer Productivity
@@ -29,7 +29,7 @@ Pulumi Cloud accelerates time to market. It automates deployments, manages state
 By supporting modern programming languages like Python, TypeScript, and Go, Pulumi Cloud allows developers to define infrastructure using familiar tools, speeding up onboarding and simplifying workflows. Predefined policy packs and dynamic secrets further reduce operational overhead.
 
 {{% notes type="info" %}}
-[BMW Group](/case-studies/bmw/) used Pulumi to build a scalable and resilient hybrid cloud implementation that manages more than 20,000 cloud resources with Python-based infrastructure code.
+[BMW Group](/customers/bmw/) used Pulumi to build a scalable and resilient hybrid cloud implementation that manages more than 20,000 cloud resources with Python-based infrastructure code.
 {{% /notes %}}
 
 ### Security - Enhanced Security and Compliance
@@ -45,7 +45,7 @@ With features like Pulumi CrossGuard for policy enforcement and Pulumi ESC for c
 Pulumi Cloud's AI-driven insights identify stale infrastructure and optimize resource use, reducing waste and cutting costs. Its managed service eliminates the need for dedicated backend engineers, freeing resources for core business innovation.
 
 {{% notes type="info" %}}
-[Unity Technologies](/case-studies/unity/) reduced deployment times by 80%, from weeks to hours, significantly improving their time to market.
+[Unity Technologies](/customers/unity/) reduced deployment times by 80%, from weeks to hours, significantly improving their time to market.
 {{% /notes %}}
 
 By choosing Pulumi Cloud, IT leaders can focus on driving innovation, securing infrastructure, and achieving scalability without the hidden costs and risks of managing IaC backends manually. It’s a comprehensive solution for modern cloud management.
