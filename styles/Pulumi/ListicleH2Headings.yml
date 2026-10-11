@@ -1,0 +1,10 @@
+extends: existence
+message: "Numbered listicle H2 heading ('%s'). H2 numbered listicles are commonly seen in AI-drafted post structure; consider whether enumeration suits the content or whether the structure can flow more naturally."
+level: warning
+scope: heading.h2
+ignorecase: false
+tokens:
+  - '\d+[.)]\s+\S+'
+  - 'Part\s+\d+'
+  - 'Section\s+\d+'
+  - 'Phase\s+\d+'

@@ -1,0 +1,10 @@
+name: aws-iam-user-group-grouppolicy-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an IAM user, group, and group policy on AWS.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python

@@ -1,0 +1,25 @@
+{{- /*
+    Featured hero card: dark violet-950 field, feature image left, badge / title
+    (h2) / 3-line excerpt / byline right. The whole card is a stretched link to
+    the post; the category badge is non-interactive here (link false), so a click
+    anywhere on the card — badge included — opens the post.
+
+    Params: page (required) the post page.
+*/ -}}
+{{- $page := .page -}}
+{{- $excerpt := $page.Params.meta_desc -}}
+{{- if not $excerpt }}{{ $excerpt = $page.Summary | plainify | truncate 220 }}{{ end -}}
+{{- $hasImage := partial "blog/has-feature-image.html" $page -}}
+<article class="group relative flex flex-col overflow-hidden rounded-lg bg-violet-950 lg:min-h-[440px] lg:flex-row">
+    {{ if $hasImage }}
+    <div class="flex aspect-[16/10] w-full items-center justify-center p-4 sm:aspect-[2/1] lg:aspect-auto lg:w-1/2 lg:p-6">
+        {{ partialCached "blog/feature-image.html" (dict "page" $page "w" 720 "h" 440 "mode" "fit" "class" "max-h-full w-auto object-contain" "sizes" "(min-width: 1024px) 45vw, 100vw" "eager" true) $page.RelPermalink "featured-720x440" }}
+    </div>
+    {{ end }}
+    <div class="flex flex-col items-start justify-center gap-5 p-6 lg:p-10 lg:pr-12 {{ if $hasImage }}lg:w-1/2{{ else }}lg:w-full{{ end }}">
+        {{ partial "blog/category-badge.html" (dict "category" $page.Params.category "dark" true "link" false) }}
+        <h2 class="m-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-featured-{{ $page.Title | urlize }}" class="text-white transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-200">{{ $page.Title }}</a></h2>
+        {{- with $excerpt }}<p class="m-0! body-lg text-white/90 line-clamp-3">{{ . }}</p>{{ end -}}
+        {{ partial "blog/post-meta.html" (dict "page" $page "dark" true "readingTime" true) }}
+    </div>
+</article>

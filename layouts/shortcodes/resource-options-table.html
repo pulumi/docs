@@ -1,0 +1,18 @@
+{{- /*
+  Renders the table of resource options — name, description, and which
+  resources each applies to — driven by data/resource_options.yaml.
+  Usage: {{< resource-options-table >}}
+*/ -}}
+{{- $labels := dict
+  "both" "Custom and component"
+  "component" "Component only"
+  "custom" "Custom only"
+  "provider" "Provider only" -}}
+{{- $rows := slice -}}
+{{- range $name, $d := site.Data.resource_options -}}
+  {{- $link := printf "[%s](/docs/iac/concepts/resources/options/%s/)" $name (lower $name) -}}
+  {{- $applies := index $labels $d.applies_to -}}
+  {{- $rows = $rows | append (printf "| %s | %s | %s |" $link (chomp $d.description) $applies) -}}
+{{- end -}}
+{{- $table := printf "| Resource option | Description | Applies to |\n|---|---|---|\n%s\n" (delimit $rows "\n") -}}
+{{ $table | markdownify }}

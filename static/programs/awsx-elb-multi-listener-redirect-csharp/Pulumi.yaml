@@ -1,0 +1,3 @@
+name: awsx-elb-multi-listener-redirect-csharp
+runtime: dotnet
+description: An example of an ApplicationLoadBalancer with multiple listeners and a custom redirect action.

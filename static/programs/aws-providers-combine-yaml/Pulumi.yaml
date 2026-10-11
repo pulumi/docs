@@ -1,0 +1,44 @@
+name: aws-providers-combine-yaml
+runtime: yaml
+
+resources:
+  # AWSx provides a VPC with well-architected defaults: subnets, route
+  # tables, NAT gateways, and an internet gateway, all pre-configured.
+  main:
+    type: awsx:ec2:Vpc
+    properties:
+      natGateways:
+        strategy: Single
+
+  # The AWS provider manages the majority of resources.
+  app-data:
+    type: aws:s3:Bucket
+
+  # The AWS Cloud Control provider is used for a resource available
+  # through Cloud Control but not yet in the classic AWS provider.
+  api-slo:
+    type: aws-native:applicationsignals:ServiceLevelObjective
+    properties:
+      name: api-availability-slo
+      sli:
+        sliMetric:
+          metricType: AVAILABILITY
+          operationName: GET /api
+          keyAttributes:
+            Type: Service
+            Name: my-service
+            Environment: production
+        comparisonOperator: GreaterThanOrEqualTo
+        metricThreshold: 99
+      goal:
+        attainmentGoal: 99
+        warningThreshold: 99.5
+        interval:
+          rollingInterval:
+            durationUnit: DAY
+            duration: 30
+
+outputs:
+  vpcId: ${main.vpcId}
+  bucketName: ${app-data.bucket}
+  sloArn: ${api-slo.arn}

@@ -1,0 +1,82 @@
+{{- /*
+    Shared blog listing header: "Blog" (+ optional breadcrumb tail and
+    description) on the left; Algolia search + RSS on the right; hairline bottom
+    border. Renders the page's single <h1>. Not used on the post page.
+
+    Params:
+      title       breadcrumb tail shown after "Blog /" (e.g. "Product", "Series")
+      url         optional href for the crumb — the listing's base (page 1) URL,
+                  so paginated pages get a way back to the top of the term
+      description  optional lead text shown after a divider (lg+ only)
+      context     the page (passed to the search partial); defaults to the current context
+      heading     render the "Blog" text as the page <h1> (default true). The post
+                  page passes false — there the post title is the h1.
+*/ -}}
+{{- $crumb := .title -}}
+{{- $crumbUrl := .url -}}
+{{- $description := .description -}}
+{{- $ctx := .context | default . -}}
+{{- $heading := true }}{{- if isset . "heading" }}{{ $heading = .heading }}{{ end -}}
+<div class="blog-header border-b border-gray-200">
+    {{- /* Single row that never wraps: the right-hand controls stay fixed
+        (shrink-0) and the left-hand text absorbs any overflow. Within the
+        heading, "Blog" and the "/" separator stay put while the crumb term
+        truncates; the term description wraps to at most two lines (line-clamp-2)
+        so it fits within the row without spilling past the bottom border. A
+        FIXED lg:h-26 (not min-h) pins the row to one height so items-center
+        vertically centers whatever it contains and the header never shifts by a
+        few pixels between the description and no-description states. */ -}}
+    <div class="container mx-auto flex flex-nowrap items-center justify-between gap-4 px-4 py-6 lg:h-26 lg:py-0">
+        <div class="flex min-w-0 items-center gap-3 lg:gap-4">
+            {{ if $heading }}
+            <h1 class="heading-2 m-0! flex min-w-0 items-center gap-2">
+                <a href="/blog/" class="shrink-0 text-service-black transition-colors hover:text-violet-primary">Blog</a>
+                {{- with $crumb }}<span class="shrink-0 text-gray-400" aria-hidden="true">/</span>{{ if $crumbUrl }}<a href="{{ $crumbUrl }}" data-track="blog-crumb" class="min-w-0 truncate text-service-black transition-colors hover:text-violet-primary">{{ . }}</a>{{ else }}<span class="min-w-0 truncate text-service-black">{{ . }}</span>{{ end }}{{ end -}}
+            </h1>
+            {{ else }}
+            <div class="heading-2 m-0! flex min-w-0 items-center gap-2">
+                <a href="/blog/" class="shrink-0 text-service-black transition-colors hover:text-violet-primary">Blog</a>
+                {{- with $crumb }}<span class="shrink-0 text-gray-400" aria-hidden="true">/</span>{{ if $crumbUrl }}<a href="{{ $crumbUrl }}" data-track="blog-crumb" class="min-w-0 truncate text-service-black transition-colors hover:text-violet-primary">{{ . }}</a>{{ else }}<span class="min-w-0 truncate text-service-black">{{ . }}</span>{{ end }}{{ end -}}
+            </div>
+            {{ end }}
+            {{- with $description }}
+                <span class="hidden h-10 w-px shrink-0 bg-gray-200 lg:block" aria-hidden="true"></span>
+                <p class="m-0! body-sm hidden min-w-0 max-w-md text-service-black line-clamp-2 lg:block">{{ . }}</p>
+            {{- end }}
+        </div>
+        <div class="flex shrink-0 items-center">
+            {{- /* Compact newsletter subscribe (reuses the footer's HubSpot form),
+                left of search; hidden where the header gets crowded. */ -}}
+            <div class="hidden items-center xl:flex mr-4">
+                <pulumi-hubspot-form form-id="027b4c6d-9b73-4ad8-b149-3c8b07fff608" class="newsletter newsletter-inline newsletter-header newsletter-btn-outline"></pulumi-hubspot-form>
+            </div>
+            {{ partial "blog/search.html" $ctx }}
+            {{- /* RSS: a plain link to the main feed, except on a term page
+                (category / tag / author / series) where it becomes a dropdown
+                offering the main feed and that term's own feed. */ -}}
+            {{- $mainFeed := "/blog/rss.xml" -}}
+            {{- $termFeed := "" -}}
+            {{- if eq $ctx.Kind "term" }}{{ with $ctx.OutputFormats.Get "rss" }}{{ $termFeed = .RelPermalink }}{{ end }}{{ end -}}
+            {{ if and $termFeed (ne $termFeed $mainFeed) }}
+                {{- /* Kind label for the term feed: Category / Author / Series /
+                    Collection / Tag. */ -}}
+                {{- $sing := $ctx.Data.Singular -}}
+                {{- $termKind := "Tag" -}}
+                {{- if eq $sing "category" }}{{ $termKind = "Category" }}{{ else if eq $sing "author" }}{{ $termKind = "Author" }}{{ else if eq $sing "collection" }}{{ $termKind = "Collection" }}{{ else if eq $sing "series" }}{{ $termKind = "Series" }}{{ end -}}
+            <details data-dropdown class="relative shrink-0">
+                <summary class="btn btn-icon btn-ghost cursor-pointer list-none [&::-webkit-details-marker]:hidden" aria-label="Pulumi Blog RSS feeds" aria-haspopup="menu">
+                    {{ partial "icon.html" (dict "name" "rss" "class" "size-6") }}
+                </summary>
+                <div class="absolute right-0 z-30 mt-2 w-56 rounded-lg border border-gray-200 bg-white p-1 shadow-lg" role="menu">
+                    <a href="{{ $mainFeed }}" target="_blank" rel="noopener" data-track="blog-rss-all" class="block rounded px-3 py-2 body-sm text-service-black transition-colors hover:bg-gray-100" role="menuitem">All posts</a>
+                    <a href="{{ $termFeed }}" target="_blank" rel="noopener" data-track="blog-rss-term" class="block rounded px-3 py-2 body-sm text-service-black transition-colors hover:bg-gray-100" role="menuitem">{{ $termKind }}: {{ partial "blog/term-name.html" $ctx }}</a>
+                </div>
+            </details>
+            {{ else }}
+            <a href="{{ $mainFeed }}" target="_blank" rel="noopener" aria-label="Pulumi Blog RSS feed" data-track="blog-rss" class="btn btn-icon btn-ghost shrink-0">
+                {{ partial "icon.html" (dict "name" "rss" "class" "size-6") }}
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+// Breakpoint mixins replacing Tailwind's removed @screen directive.
+// Breakpoint values match _theme.scss screens.
+@mixin screen-sm { @media (min-width: 640px) { @content; } }
+@mixin screen-md { @media (min-width: 768px) { @content; } }
+@mixin screen-lg { @media (min-width: 1024px) { @content; } }
+@mixin screen-xl { @media (min-width: 1280px) { @content; } }
+@mixin screen-xxl { @media (min-width: 1536px) { @content; } }
+
+@mixin transition($scope: all, $duration: 120ms, $fn: linear) {
+    transition: $scope $duration $fn;
+}
+
+@mixin heading-inline-code {
+    font-size: calc(14em / 16);
+    font-weight: inherit;
+    letter-spacing: normal;
+    line-height: 1;
+    padding: 0.15em 0.3em;
+}
+
+@mixin bg-gradient($from-color, $to-color, $radius, $center-x: 50%, $center-y: 50%) {
+    background-image: radial-gradient($radius at $center-x $center-y, $from-color, $to-color);
+}
+
+@mixin gradient-border() {
+    border-bottom: 2px solid var(--color-violet-primary);
+}
+
+@mixin gradient-background() {
+    background: var(--color-violet-primary);
+}
+
+@mixin gradient-button {
+    @apply relative text-white border-2 rounded-lg cursor-pointer z-auto;
+    background: var(--color-violet-primary);
+    border-color: var(--color-violet-primary);
+
+    &:hover {
+        @apply no-underline;
+        background: var(--color-violet-800);
+        border-color: var(--color-violet-800);
+    }
+
+    &:not(input) {
+        @include transition;
+    }
+
+    &:is(input) {
+        @apply border-gray-100;
+
+        &:hover {
+            @include gradient-background;
+        }
+    }
+
+    &:focus {
+        @apply bg-violet-primary border-violet-primary;
+    }
+}

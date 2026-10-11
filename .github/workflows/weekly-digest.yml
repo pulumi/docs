@@ -1,0 +1,138 @@
+name: Weekly review digest
+
+# Replaces the recurring docs review meeting with one Slack message to
+# #docs-ops every Monday: what needs a human this week, the Sentinel-green
+# PRs ready to merge, a search link per team's review queue, the SLA sweep's
+# verdicts (overdue reviews by team, abandoned PRs), and one line each for
+# review-loop outcomes, failed runs, and lane switches.
+#
+# collect (digest.py, deterministic) -> rank (rank.py, the only model call:
+# orders the top "Needs a human" list; best-effort) -> render (render.py,
+# deterministic Slack mrkdwn) -> post. A ranking failure falls back to a
+# fixed priority order rather than skipping the week.
+#
+# To preview without posting: run this workflow with dry_run, or locally:
+#   uv run scripts/weekly-digest/digest.py > d.json
+#   python3 scripts/weekly-digest/render.py render d.json
+on:
+  schedule:
+    # Mondays 14:00 UTC.
+    - cron: "0 14 * * 1"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: collect, rank, and render; print the message to the log, no Slack post"
+        type: boolean
+        default: false
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: read
+  issues: read
+  actions: read   # scheduled + master run history for the failed-runs line
+
+concurrency:
+  group: weekly-digest
+  cancel-in-progress: false
+
+jobs:
+  weekly-digest:
+    if: github.repository == 'pulumi/docs'
+    name: Weekly review digest
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - uses: astral-sh/setup-uv@v7
+
+      # The content-review ledger bucket (discovered by name prefix, no
+      # Pulumi needed) feeds two readers: collect_v3_ops() reads the sweep's
+      # pr-review/runs/ records, and the read-only sweep reads its per-PR
+      # pr-review/state/ so a PR it already warned shows its real remaining
+      # notice. Without credentials both degrade (the digest shows a "Review
+      # ledger unreadable" warning) and the rest of the digest stays intact.
+      - name: Configure AWS credentials
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: weekly-digest
+          aws-region: us-west-2
+
+      # 1. COLLECT: deterministic, no model. Includes a read-only
+      # `sla-sweep.py --dry-run` (the sweep's own no-mutation mode), so the
+      # SLA verdicts render whether or not the scheduled sweep is switched
+      # on. DIGEST_VARS hands over the lane switches, because GITHUB_TOKEN
+      # can't read repo variables; an unset variable arrives as "".
+      - name: Collect digest data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DIGEST_VARS: >-
+            {"REVIEW_V3_SLA": "${{ vars.REVIEW_V3_SLA }}",
+             "REVIEW_V3_SENTINEL": "${{ vars.REVIEW_V3_SENTINEL }}",
+             "CONTENT_REVIEW_COUNT": "${{ vars.CONTENT_REVIEW_COUNT }}",
+             "GLOWUP_COUNT": "${{ vars.GLOWUP_COUNT }}",
+             "BLOG_REVIEW_COUNT": "${{ vars.BLOG_REVIEW_COUNT }}",
+             "CLAIMS_REVERIFY_COUNT": "${{ vars.CLAIMS_REVERIFY_COUNT }}",
+             "BRAND_SYNC_ENABLED": "${{ vars.BRAND_SYNC_ENABLED }}"}
+        run: |
+          set -euo pipefail
+          uv run scripts/weekly-digest/digest.py > /tmp/digest.json
+          echo "Collected $(jq '.prs | length' /tmp/digest.json) open PRs, $(jq '.issues.all_open_count' /tmp/digest.json) open issues, $(jq '.sla.verdicts // [] | length' /tmp/digest.json) SLA verdicts."
+          if [[ "${{ inputs.dry_run }}" == "true" ]]; then
+            echo "----- raw digest JSON -----"
+            cat /tmp/digest.json
+          fi
+
+      # 2. RANK: the one judgment call. Never fails the job: on any error
+      # rank.py writes {} and render.py uses its fixed priority order.
+      - name: Rank the "Needs a human" list
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -euo pipefail
+          python3 scripts/weekly-digest/render.py candidates /tmp/digest.json > /tmp/candidates.json
+          python3 scripts/weekly-digest/rank.py /tmp/candidates.json > /tmp/ranking.json || echo '{}' > /tmp/ranking.json
+          echo "Ranked $(jq 'length' /tmp/candidates.json) candidates; model order: $(jq -c '[.order[]?.ref]' /tmp/ranking.json)"
+
+      # 3. RENDER: deterministic Slack mrkdwn: the digest, plus a thread
+      # reply with the full lists behind every "+N more in thread" (empty
+      # when nothing was cut, and then no reply is posted).
+      - name: Render digest
+        run: >-
+          python3 scripts/weekly-digest/render.py render /tmp/digest.json
+          --ranking /tmp/ranking.json --thread-out /tmp/digest-thread.txt
+          > /tmp/digest-message.txt
+
+      # 3a. DRY RUN: print the message and the chunk boundaries it would post
+      # as, skip posting (no token needed).
+      - name: Preview digest (dry run)
+        if: ${{ inputs.dry_run }}
+        run: python3 scripts/weekly-digest/post-to-slack.py /tmp/digest-message.txt --thread /tmp/digest-thread.txt --dry-run
+
+      # 3b. POST: via the Slack API (chat.postMessage), cloning the link
+      # checker's posting path: SLACK_ACCESS_TOKEN from ESC, mrkdwn on, no
+      # unfurl. post-to-slack.py still splits on line boundaries if a heavy
+      # week ever outgrows one message.
+      - name: Post digest to Slack
+        if: ${{ !inputs.dry_run }}
+        timeout-minutes: 3
+        env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
+          SLACK_CHANNEL: docs-ops
+        run: python3 scripts/weekly-digest/post-to-slack.py /tmp/digest-message.txt --thread /tmp/digest-thread.txt
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

@@ -1,0 +1,16 @@
+name: awsx-vpc-subnets-yaml
+runtime: yaml
+description: An example that creates a new VPC with a custom subnet specification.
+
+resources:
+  vpc:
+    type: awsx:ec2:Vpc
+    properties:
+      subnetSpecs:
+        - type: "Public"
+          cidrMask: 22
+        - type: "Private"
+          cidrMask: 20
+
+outputs:
+  vpcId: ${vpc.vpcId}

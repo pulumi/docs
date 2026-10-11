@@ -1,0 +1,81 @@
+---
+title: doppler-secrets
+title_tag: doppler-secrets Pulumi ESC provider
+meta_desc: The doppler-secrets Pulumi ESC Provider enables you to dynamically import secrets from Doppler into your environment.
+h1: doppler-secrets
+menu:
+  esc:
+    identifier: doppler-secrets
+    parent: esc-providers-secrets
+    weight: 1
+aliases:
+  - /docs/pulumi-cloud/esc/providers/doppler-secrets/
+  - /docs/esc/providers/doppler-secrets/
+  - /docs/esc/integrations/dynamic-secrets/doppler-secrets/
+  - /docs/esc/concepts/providers/secrets/doppler-secrets/
+---
+
+The `doppler-secrets` provider enables you to dynamically import Secrets from Doppler into
+your Environment. The provider will return a map of names to Secrets.
+
+## Example
+
+```yaml
+values:
+  doppler:
+    login:
+      fn::open::doppler-login:
+        oidc:
+          identityId: 00000000-0000-0000-0000-000000000000
+    secrets:
+      fn::open::doppler-secrets:
+        login: ${doppler.login}
+        project: example-project
+        config: dev
+        get:
+          api-key:
+            name: API_KEY
+          app-secret:
+            name: APP_SECRET
+  pulumiConfig:
+    apiKey: ${doppler.secrets.api-key}
+    appSecret: ${doppler.secrets.app-secret}
+```
+
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="doppler-secrets" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="doppler-secrets" section="outputs" >}}
+
+## Configuring OIDC
+
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Doppler, see
+the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/doppler/) documentation. Once you have completed
+these steps, you can validate that your configuration is working by running either of the following:
+
+* `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
+* `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
+
+Make sure to replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and
+environment identifier respectively. You should see output similar to the following:
+
+```json
+{
+  "doppler": {
+    "login": {
+      "accessToken": "dp.said.XXX..."
+    },
+    "secrets": {
+      "api-key": "my-api-key",
+      "app-secret": "my-app-secret"
+    }
+  }
+}
+```

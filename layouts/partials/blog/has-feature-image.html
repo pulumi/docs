@@ -1,0 +1,10 @@
+{{- /*
+    Returns true if the given post page has a resolvable `feature_image` in its
+    bundle. Callers use it to collapse the image slot (and go full-width) for
+    posts with no feature image — most pre-redesign posts. Call with the page.
+*/ -}}
+{{- $has := false -}}
+{{- with .Params.feature_image -}}
+    {{- if $.Resources.GetMatch . }}{{ $has = true }}{{ end -}}
+{{- end -}}
+{{- return $has -}}

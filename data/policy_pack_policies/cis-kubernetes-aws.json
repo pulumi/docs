@@ -1,0 +1,1221 @@
+{
+  "applied": false,
+  "displayName": "",
+  "name": "cis-kubernetes-aws",
+  "policies": [
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from Access Manager requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure EKS clusters use the Cluster Access Manager API for enhanced access control management.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-cluster-access-manager-enabled",
+      "remediationSteps": "## Fix: Enable Cluster Access Manager for EKS Cluster\n\n```typescript\nconst cluster = new aws.eks.Cluster(\"cluster\", {\n    accessConfig: {\n        authenticationMode: \"API_AND_CONFIG_MAP\",  // Or \"API\" for full EKS Access API\n        bootstrapClusterCreatorAdminPermissions: false,\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from audit logging requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure EKS clusters have audit logging enabled for security monitoring and compliance.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "2.1 Audit Logging",
+        "specification": "Enable audit logs for EKS clusters to track all API server requests and administrative actions.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-cluster-audit-logging-enabled",
+      "remediationSteps": "## Fix: Enable Audit Logging for EKS Cluster\n\n```typescript\nconst cluster = new aws.eks.Cluster(\"cluster\", {\n    enabledClusterLogTypes: [\n        \"api\",\n        \"audit\",\n        \"authenticator\",\n        \"controllerManager\",\n        \"scheduler\"\n    ],\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from CloudWatch logging requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure EKS clusters have all CloudWatch log types enabled for comprehensive audit logging.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "2.1 Audit Logging",
+        "specification": "Enable audit logs for EKS clusters to track all API server requests and administrative actions.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-cluster-cloudwatch-logs-enabled",
+      "remediationSteps": "## Fix: Enable All CloudWatch Log Types for EKS Cluster\n\n```typescript\nconst cluster = new aws.eks.Cluster(\"cluster\", {\n    enabledClusterLogTypes: [\n        \"api\",\n        \"audit\",\n        \"authenticator\",\n        \"controllerManager\",\n        \"scheduler\"\n    ],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard matching for exempt cluster names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure EKS cluster endpoints are not publicly accessible for enhanced security.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.4 Network Security",
+        "specification": "Restrict Access to the Control Plane Endpoint. Ensure Network Policy is Enabled and set as appropriate. Encrypt traffic to HTTPS load balancers with TLS certificates.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-cluster-endpoint-restrict-public-access",
+      "remediationSteps": "## Fix: Restrict Public Access to EKS Cluster Endpoint\n\n```typescript\nconst cluster = new aws.eks.Cluster(\"cluster\", {\n    vpcConfig: {\n        endpointPublicAccess: false,  // Disable public access\n        endpointPrivateAccess: true,  // Enable private access\n        // ... other config\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptRepositories": {
+            "description": "List of repository names/patterns exempt from image scanning requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure ECR repositories have image scanning enabled for vulnerability detection.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.1 Container Registry Security",
+        "specification": "Ensure Image Vulnerability Scanning using Amazon ECR image scanning. Minimize user access to Amazon ECR.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-ecr-image-scanning-enabled",
+      "remediationSteps": "## Fix: Enable Image Scanning for ECR Repository\n\n```typescript\nconst repository = new aws.ecr.Repository(\"repository\", {\n    imageScanningConfiguration: {\n        scanOnPush: true,\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptRepositories": {
+            "description": "List of repository policy names/patterns exempt from access control requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure ECR repositories do not have overly permissive access policies.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.1 Container Registry Security",
+        "specification": "Ensure Image Vulnerability Scanning using Amazon ECR image scanning. Minimize user access to Amazon ECR.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-ecr-private-repository",
+      "remediationSteps": "## Fix: Minimize Access to ECR Repository\n\nReview and restrict ECR repository policies to grant access only to necessary principals:\n\n```typescript\nconst repositoryPolicy = new aws.ecr.RepositoryPolicy(\"policy\", {\n    repository: repository.name,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Sid: \"AllowPullFromSpecificRole\",\n            Effect: \"Allow\",\n            Principal: {\n                AWS: specificRoleArn,  // Only specific role, not \"*\"\n            },\n            Action: [\n                \"ecr:GetDownloadUrlForLayer\",\n                \"ecr:BatchGetImage\",\n                \"ecr:BatchCheckLayerAvailability\",\n            ],\n        }],\n    }),\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from IAM authenticator requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure EKS clusters do not use legacy ConfigMap-only authentication mode and instead use EKS Access API with IAM.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-iam-authenticator-enabled",
+      "remediationSteps": "## Fix: Use IAM Authentication for EKS\n\nAWS EKS uses IAM authentication by default. Ensure proper IAM role mappings are configured:\n\n```typescript\n// Create access entry for IAM principal\nconst accessEntry = new aws.eks.AccessEntry(\"userAccess\", {\n    clusterName: cluster.name,\n    principalArn: userRoleArn,\n    type: \"STANDARD\",\n});\n\n// Associate with access policy\nconst policyAssociation = new aws.eks.AccessPolicyAssociation(\"userPolicy\", {\n    clusterName: cluster.name,\n    principalArn: userRoleArn,\n    policyArn: \"arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy\",\n    accessScope: {\n        type: \"cluster\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "additionalInsecurePatterns": {
+            "description": "Additional insecure patterns to check (regex strings)",
+            "items": {
+              "properties": {
+                "description": {
+                  "type": "string"
+                },
+                "pattern": {
+                  "type": "string"
+                },
+                "remediation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "pattern",
+                "description",
+                "remediation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptTemplates": {
+            "description": "List of launch template names/patterns exempt from kubelet config validation",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "skipNonEksTemplates": {
+            "default": true,
+            "description": "Skip validation if template doesn't use EKS bootstrap script",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Detects explicitly insecure kubelet configurations in EKS launch templates. Only reports violations for configurations that are provably wrong (e.g., anonymous auth enabled, overly permissive file permissions).",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "3.1-3.2 Kubelet Configuration",
+        "specification": "Ensure kubelet configuration follows security best practices including proper authentication, authorization, and file permissions.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-launch-template-kubelet-config",
+      "remediationSteps": "## Fix: Remove Insecure Kubelet Configurations\n\nThis policy detects EXPLICITLY insecure configurations. Remove or fix any detected issues:\n\n**Insecure flags to avoid:**\n- `--anonymous-auth=true` (remove or set to false)\n- `--authorization-mode=AlwaysAllow` (use Webhook instead)\n- `--read-only-port=<non-zero>` (set to 0)\n- `--streaming-connection-idle-timeout=0` (set to 5m or appropriate value)\n- `--make-iptables-util-chains=false` (remove or set to true)\n- `--rotate-certificates=false` (remove or set to true)\n\n**Insecure file permissions to avoid:**\n- `chmod 777`, `chmod 755`, etc. on kubeconfig files (use 644 or more restrictive)\n- `chown <non-root>:<non-root>` on kubeconfig files (use root:root)\n\n**Example secure configuration:**\n\n```typescript\nconst launchTemplate = new aws.ec2.LaunchTemplate(\"nodeTemplate\", {\n    userData: pulumi.all([cluster.name]).apply(([clusterName]) => {\n        const script = `#!/bin/bash\nset -o xtrace\n/etc/eks/bootstrap.sh ${clusterName} \\\\\n  --kubelet-extra-args '--read-only-port=0 \\\\\n    --anonymous-auth=false \\\\\n    --authorization-mode=Webhook \\\\\n    --streaming-connection-idle-timeout=5m \\\\\n    --rotate-certificates=true'\n\n# Set secure file permissions\nchmod 644 /var/lib/kubelet/kubeconfig\nchown root:root /var/lib/kubelet/kubeconfig`;\n        return Buffer.from(script).toString('base64');\n    }),\n});\n```\n\nNote: This policy does NOT fail on missing secure configurations - it only fails on EXPLICITLY insecure ones.",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure internet-facing load balancers use HTTPS listeners with TLS certificates for encrypted traffic. Internal load balancers are exempt from this requirement.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.4 Network Security",
+        "specification": "Restrict Access to the Control Plane Endpoint. Ensure Network Policy is Enabled and set as appropriate. Encrypt traffic to HTTPS load balancers with TLS certificates.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-load-balancer-tls-encryption",
+      "remediationSteps": "## Fix: Configure TLS for Load Balancer\n\nFor Application Load Balancers:\n```typescript\nconst listener = new aws.lb.Listener(\"httpsListener\", {\n    loadBalancerArn: lb.arn,\n    port: 443,\n    protocol: \"HTTPS\",\n    sslPolicy: \"ELBSecurityPolicy-TLS-1-2-2017-01\",\n    certificateArn: certificateArn,\n    defaultActions: [{\n        type: \"forward\",\n        targetGroupArn: targetGroup.arn,\n    }],\n});\n```\n\nFor Classic Load Balancers:\n```typescript\nconst listener = new aws.elb.LoadBalancer(\"lb\", {\n    listeners: [{\n        instancePort: 80,\n        instanceProtocol: \"http\",\n        lbPort: 443,\n        lbProtocol: \"https\",\n        sslCertificateId: certificateArn,\n    }],\n});\n```\n\nNote: This policy only applies to internet-facing load balancers. Internal load balancers are exempt from TLS requirements.",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure EKS clusters have a network policy add-on enabled for pod-level network segmentation. Supports vpc-cni with network policy enabled and Calico addon. This policy validates that each EKS cluster has at least one network policy addon configured.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.4 Network Security",
+        "specification": "Restrict Access to the Control Plane Endpoint. Ensure Network Policy is Enabled and set as appropriate. Encrypt traffic to HTTPS load balancers with TLS certificates.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-network-policy-enabled",
+      "remediationSteps": "## Fix: Enable Network Policy for EKS Cluster\n\nInstall a CNI plugin that supports network policies, such as AWS VPC CNI with Network Policy support or Calico:\n\n```typescript\n// Option 1: Enable VPC CNI Network Policy support\nconst addon = new aws.eks.Addon(\"vpc-cni\", {\n    clusterName: cluster.name,\n    addonName: \"vpc-cni\",\n    configurationValues: JSON.stringify({\n        enableNetworkPolicy: \"true\",\n    }),\n});\n\n// Option 2: Install Calico\nconst calico = new aws.eks.Addon(\"calico\", {\n    clusterName: cluster.name,\n    addonName: \"calico\",\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure EKS node groups have minimal IAM permissions, especially read-only access to ECR.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.2-5.3 IAM and Encryption",
+        "specification": "Prefer using dedicated EKS Service Accounts. Ensure Kubernetes Secrets are encrypted using Customer Master Keys (CMKs) managed in AWS KMS.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-node-group-iam-role-minimal-policy",
+      "remediationSteps": "## Fix: Use Read-Only ECR Access for Node Groups\n\nAttach only the AmazonEC2ContainerRegistryReadOnly policy for ECR access:\n\n```typescript\nconst nodeRole = new aws.iam.Role(\"nodeRole\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { Service: \"ec2.amazonaws.com\" },\n            Action: \"sts:AssumeRole\",\n        }],\n    }),\n});\n\n// Attach read-only ECR policy\nnew aws.iam.RolePolicyAttachment(\"nodeRoleEcrReadOnly\", {\n    role: nodeRole.name,\n    policyArn: \"arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly\",\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNodeGroups": {
+            "description": "List of node group names/patterns exempt from launch template requirement",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure EKS node groups use launch templates to enforce kubelet configuration.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "3.1-3.2 Kubelet Configuration",
+        "specification": "Ensure kubelet configuration follows security best practices including proper authentication, authorization, and file permissions.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-node-group-launch-template-required",
+      "remediationSteps": "## Fix: Use Launch Template for Node Group\n\nCreate a launch template with proper kubelet configuration:\n\n```typescript\nconst launchTemplate = new aws.ec2.LaunchTemplate(\"nodeTemplate\", {\n    userData: pulumi.interpolate`#!/bin/bash\nset -o xtrace\n/etc/eks/bootstrap.sh ${cluster.name} \\\n  --kubelet-extra-args '--read-only-port=0 --anonymous-auth=false --authorization-mode=Webhook'\n`,\n});\n\nconst nodeGroup = new aws.eks.NodeGroup(\"nodes\", {\n    clusterName: cluster.name,\n    launchTemplate: {\n        id: launchTemplate.id,\n        version: pulumi.interpolate`${launchTemplate.latestVersion}`,\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from KMS encryption requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure EKS clusters encrypt Kubernetes secrets using AWS KMS Customer Master Keys.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.2-5.3 IAM and Encryption",
+        "specification": "Prefer using dedicated EKS Service Accounts. Ensure Kubernetes Secrets are encrypted using Customer Master Keys (CMKs) managed in AWS KMS.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-secrets-encryption-kms-enabled",
+      "remediationSteps": "## Fix: Enable KMS Encryption for EKS Secrets\n\n```typescript\nconst kmsKey = new aws.kms.Key(\"eksKmsKey\", {\n    description: \"EKS Secret Encryption Key\",\n});\n\nconst cluster = new aws.eks.Cluster(\"cluster\", {\n    encryptionConfig: {\n        provider: {\n            keyArn: kmsKey.arn,\n        },\n        resources: [\"secrets\"],\n    },\n    // ... other config\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Reminder to configure OIDC providers for EKS clusters to enable IRSA. This is a basic check that cannot verify correct configuration.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.2-5.3 IAM and Encryption",
+        "specification": "Prefer using dedicated EKS Service Accounts. Ensure Kubernetes Secrets are encrypted using Customer Master Keys (CMKs) managed in AWS KMS.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "eks-service-accounts-iam-role-binding",
+      "remediationSteps": "## Reminder: Create OIDC Provider for IRSA\n\n```typescript\nconst oidcProvider = new aws.iam.OpenIdConnectProvider(\"eksOidc\", {\n    clientIdLists: [\"sts.amazonaws.com\"],\n    thumbprintLists: [thumbprint],\n    url: cluster.identity.oidcs[0].issuer,\n});\n```\n\n**Note**: This policy only checks if OIDC providers exist, not if they're correctly configured.",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptBindings": {
+            "description": "List of ClusterRoleBinding names to exempt from validation",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure cluster-admin ClusterRole is bound to a minimal number of users and service accounts.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-cluster-admin-role-binding-minimized",
+      "remediationSteps": "## Fix: Minimize cluster-admin Role Bindings\n\nUse more specific roles instead of cluster-admin:\n\n```typescript\n// Instead of binding cluster-admin, create specific roles\nconst role = new k8s.rbac.v1.Role(\"specificRole\", {\n    metadata: { namespace: \"default\" },\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"pods\"],\n        verbs: [\"get\", \"list\", \"watch\"],\n    }],\n});\n\nconst roleBinding = new k8s.rbac.v1.RoleBinding(\"specificBinding\", {\n    metadata: { namespace: \"default\" },\n    roleRef: {\n        apiGroup: \"rbac.authorization.k8s.io\",\n        kind: \"Role\",\n        name: role.metadata.name,\n    },\n    subjects: [{\n        kind: \"User\",\n        name: \"specific-user\",\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowClusterResources": {
+            "default": true,
+            "description": "Allow cluster-level resources which don't have namespaces",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptResourceTypes": {
+            "description": "List of resource types allowed in default namespace (e.g., 'ConfigMap', 'Secret')",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptResources": {
+            "description": "List of resource names/patterns that are allowed in default namespace",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure workloads are not deployed to the default namespace.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.4-4.5 Secret Management and Namespaces",
+        "specification": "Prefer using secrets as files over secrets as environment variables. Ensure default namespace is not used for workloads.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-default-namespace-not-used",
+      "remediationSteps": "## Fix: Use Dedicated Namespaces\n\nCreate and use dedicated namespaces:\n\n```typescript\nconst namespace = new k8s.core.v1.Namespace(\"app-namespace\", {\n    metadata: {\n        name: \"my-app\",\n    },\n});\n\nconst deployment = new k8s.apps.v1.Deployment(\"app\", {\n    metadata: {\n        namespace: namespace.metadata.name,\n    },\n    // ... rest of deployment spec\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedServiceAccounts": {
+            "description": "Allowed service account names considered as acceptable defaults",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces where default service account is allowed",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use default service account",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure workloads do not use the default service account.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-default-service-accounts-not-used",
+      "remediationSteps": "## Fix: Use Dedicated Service Accounts\n\nCreate and use dedicated service accounts for workloads:\n\n```typescript\nconst serviceAccount = new k8s.core.v1.ServiceAccount(\"appServiceAccount\", {\n    metadata: {\n        namespace: \"default\",\n        name: \"my-app-sa\",\n    },\n});\n\nconst deployment = new k8s.apps.v1.Deployment(\"app\", {\n    spec: {\n        template: {\n            spec: {\n                serviceAccountName: serviceAccount.metadata.name,\n                // ... rest of pod spec\n            },\n        },\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptContainers": {
+            "description": "List of container names/patterns that are allowed privilege escalation",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces exempt from privilege escalation restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed privilege escalation",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure containers do not allow privilege escalation.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.2 Pod Security",
+        "specification": "Implement and manage a firewall on servers. Minimize the admission of privileged containers and containers with dangerous capabilities.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-allow-privilege-escalation-minimized",
+      "remediationSteps": "## Fix: Disable Privilege Escalation\n\nSet allowPrivilegeEscalation to false in container security context:\n\n```typescript\nconst pod = new k8s.core.v1.Pod(\"pod\", {\n    spec: {\n        containers: [{\n            name: \"app\",\n            image: \"nginx\",\n            securityContext: {\n                allowPrivilegeEscalation: false,\n                runAsNonRoot: true,\n                capabilities: {\n                    drop: [\"ALL\"],\n                },\n            },\n        }],\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowForWorkloadTypes": {
+            "description": "Allow host IPC for specific types of workloads (e.g., DaemonSet)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces exempt from host IPC restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use host IPC",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure containers do not share the host IPC namespace.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.2 Pod Security",
+        "specification": "Implement and manage a firewall on servers. Minimize the admission of privileged containers and containers with dangerous capabilities.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-host-ipc-minimized",
+      "remediationSteps": "## Fix: Disable Host IPC Sharing\n\nRemove hostIPC from pod spec:\n\n```typescript\nconst pod = new k8s.core.v1.Pod(\"pod\", {\n    spec: {\n        hostIPC: false,  // Explicitly set to false or remove\n        containers: [{\n            name: \"app\",\n            image: \"nginx\",\n        }],\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowForWorkloadTypes": {
+            "description": "Allow host network for specific types of workloads (e.g., DaemonSet)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces exempt from host network restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use host network",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure containers do not share the host network namespace.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.2 Pod Security",
+        "specification": "Implement and manage a firewall on servers. Minimize the admission of privileged containers and containers with dangerous capabilities.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-host-network-minimized",
+      "remediationSteps": "## Fix: Disable Host Network Sharing\n\nRemove hostNetwork from pod spec:\n\n```typescript\nconst pod = new k8s.core.v1.Pod(\"pod\", {\n    spec: {\n        hostNetwork: false,  // Explicitly set to false or remove\n        containers: [{\n            name: \"app\",\n            image: \"nginx\",\n        }],\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowForWorkloadTypes": {
+            "description": "Allow host PID for specific types of workloads (e.g., DaemonSet)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces exempt from host PID restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use host PID",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure containers do not share the host process ID namespace.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.2 Pod Security",
+        "specification": "Implement and manage a firewall on servers. Minimize the admission of privileged containers and containers with dangerous capabilities.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-host-pid-minimized",
+      "remediationSteps": "## Fix: Disable Host PID Sharing\n\nRemove hostPID from pod spec:\n\n```typescript\nconst pod = new k8s.core.v1.Pod(\"pod\", {\n    spec: {\n        hostPID: false,  // Explicitly set to false or remove\n        containers: [{\n            name: \"app\",\n            image: \"nginx\",\n        }],\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptContainers": {
+            "description": "List of container names/patterns that are allowed to run privileged",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces exempt from privileged container restrictions (e.g., kube-system, kube-public)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use privileged containers",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure containers do not run in privileged mode.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.2 Pod Security",
+        "specification": "Implement and manage a firewall on servers. Minimize the admission of privileged containers and containers with dangerous capabilities.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-privileged-containers-minimized",
+      "remediationSteps": "## Fix: Disable Privileged Mode\n\nRemove privileged flag from container security context:\n\n```typescript\nconst pod = new k8s.core.v1.Pod(\"pod\", {\n    spec: {\n        containers: [{\n            name: \"app\",\n            image: \"nginx\",\n            securityContext: {\n                privileged: false,  // Explicitly set to false or remove\n                runAsNonRoot: true,\n                capabilities: {\n                    drop: [\"ALL\"],\n                },\n            },\n        }],\n    },\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusterRoles": {
+            "description": "List of cluster roles exempt from dangerous verb restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptNamespacePatterns": {
+            "description": "Namespace patterns to exclude from validation (supports wildcards)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptRoles": {
+            "description": "List of roles exempt from dangerous verb restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Roles and ClusterRoles do not grant dangerous permissions: bind, impersonate, and escalate, which can lead to privilege escalation.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-rbac-bind-impersonate-escalate-minimized",
+      "remediationSteps": "## Fix: Remove Dangerous RBAC Permissions\n\nAvoid granting bind, impersonate, and escalate permissions:\n\n```typescript\n// Bad: DON'T grant these dangerous permissions\nconst dangerousRole = new k8s.rbac.v1.ClusterRole(\"dangerous\", {\n    rules: [{\n        apiGroups: [\"rbac.authorization.k8s.io\"],\n        resources: [\"clusterroles\", \"roles\"],\n        verbs: [\"bind\", \"escalate\"],  // DON'T DO THIS\n    }, {\n        apiGroups: [\"\"],\n        resources: [\"users\", \"groups\", \"serviceaccounts\"],\n        verbs: [\"impersonate\"],  // DON'T DO THIS\n    }],\n});\n\n// Good: Grant only necessary read permissions\nconst safeRole = new k8s.rbac.v1.ClusterRole(\"safe\", {\n    rules: [{\n        apiGroups: [\"rbac.authorization.k8s.io\"],\n        resources: [\"clusterroles\", \"roles\"],\n        verbs: [\"get\", \"list\", \"watch\"],  // Read-only\n    }],\n});\n```\n\n**Why these are dangerous:**\n- `bind`: Allows binding roles with more permissions than the user has\n- `impersonate`: Allows acting as another user/service account\n- `escalate`: Allows creating roles with more permissions than the user has",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusterRoles": {
+            "description": "List of cluster role names/patterns exempt from pod creation restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptRoles": {
+            "description": "List of role names/patterns exempt from pod creation restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Roles and ClusterRoles do not grant excessive permissions to create pods or resources that can create pods (deployments, jobs, etc.).",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-rbac-create-pods-minimized",
+      "remediationSteps": "## Fix: Minimize Pod Creation Permissions\n\nAvoid granting create permissions on pods and pod-creating resources:\n\n```typescript\n// Good: Read-only access to pods\nconst podReader = new k8s.rbac.v1.Role(\"podReader\", {\n    metadata: { namespace: \"default\" },\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"pods\"],\n        verbs: [\"get\", \"list\", \"watch\"],  // Read-only\n    }],\n});\n\n// Bad: Avoid granting pod creation abilities\nconst podCreator = new k8s.rbac.v1.Role(\"podCreator\", {\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"pods\", \"pods/exec\", \"pods/attach\"],\n        verbs: [\"create\", \"*\"],  // DON'T DO THIS unless absolutely necessary\n    }],\n});\n```\n\nResources that can create pods and should be restricted:\n- pods, pods/exec, pods/attach, pods/portforward\n- deployments, replicasets, statefulsets, daemonsets, jobs, cronjobs\n- replicationcontrollers",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusterRoles": {
+            "description": "List of cluster roles exempt from secret access restrictions (e.g., cluster-admin, system:*)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptNamespacePatterns": {
+            "description": "Namespace patterns to exclude from validation (supports wildcards, e.g., kube-*)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptRoles": {
+            "description": "List of roles exempt from secret access restrictions (e.g., system:controller:*, system:kube-*)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Roles and ClusterRoles do not grant excessive permissions to secrets (create, update, patch, delete, or wildcard verbs).",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-rbac-secret-access-minimized",
+      "remediationSteps": "## Fix: Minimize Secret Access Permissions\n\nLimit secret access to read-only (get, list, watch) unless write access is explicitly required:\n\n```typescript\n// Good: Read-only secret access\nconst readOnlyRole = new k8s.rbac.v1.Role(\"secretReader\", {\n    metadata: { namespace: \"default\" },\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"secrets\"],\n        verbs: [\"get\", \"list\", \"watch\"],  // Read-only access\n    }],\n});\n\n// Bad: Avoid granting write access to secrets\nconst writeRole = new k8s.rbac.v1.Role(\"secretWriter\", {\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"secrets\"],\n        verbs: [\"*\"],  // DON'T DO THIS\n    }],\n});\n```\n\nOnly grant create/update/delete/patch permissions when absolutely necessary and document the justification.",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedWildcardApiGroups": {
+            "description": "Allow wildcards for specific API groups",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowedWildcardResources": {
+            "description": "Allow wildcards for specific resource types",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowedWildcardVerbs": {
+            "description": "Allow wildcards for specific verbs",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusterRoles": {
+            "description": "List of cluster role names/patterns exempt from wildcard restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptRoles": {
+            "description": "List of role names/patterns exempt from wildcard restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Roles and ClusterRoles do not use wildcards for resources, verbs, or apiGroups.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-rbac-wildcard-use-minimized",
+      "remediationSteps": "## Fix: Remove Wildcards from RBAC Rules\n\nBe specific about resources, verbs, and API groups:\n\n```typescript\nconst role = new k8s.rbac.v1.Role(\"specificRole\", {\n    metadata: { namespace: \"default\" },\n    rules: [{\n        apiGroups: [\"\"],  // Specific API group, not \"*\"\n        resources: [\"pods\", \"services\"],  // Specific resources, not \"*\"\n        verbs: [\"get\", \"list\", \"watch\"],  // Specific verbs, not \"*\"\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedSecretEnvVars": {
+            "description": "List of secret names that are allowed as environment variables",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptContainers": {
+            "description": "List of container names/patterns that are allowed to use secret env vars",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces where secret env vars are allowed",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use secret env vars",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure secrets are mounted as files via volumes rather than exposed as environment variables.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.4-4.5 Secret Management and Namespaces",
+        "specification": "Prefer using secrets as files over secrets as environment variables. Ensure default namespace is not used for workloads.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-secrets-as-files-not-env-vars",
+      "remediationSteps": "## Fix: Mount Secrets as Files\n\nUse volume mounts instead of environment variables for secrets:\n\n```typescript\n// Bad: Using secrets as environment variables\nconst badPod = new k8s.core.v1.Pod(\"bad-pod\", {\n    spec: {\n        containers: [{\n            name: \"app\",\n            image: \"myapp:latest\",\n            env: [{\n                name: \"DB_PASSWORD\",\n                valueFrom: {\n                    secretKeyRef: {\n                        name: \"db-secret\",\n                        key: \"password\",\n                    },\n                },\n            }],\n        }],\n    },\n});\n\n// Good: Mount secrets as files\nconst goodPod = new k8s.core.v1.Pod(\"good-pod\", {\n    spec: {\n        containers: [{\n            name: \"app\",\n            image: \"myapp:latest\",\n            volumeMounts: [{\n                name: \"secret-volume\",\n                mountPath: \"/etc/secrets\",\n                readOnly: true,\n            }],\n        }],\n        volumes: [{\n            name: \"secret-volume\",\n            secret: {\n                secretName: \"db-secret\",\n            },\n        }],\n    },\n});\n// Access secret via: cat /etc/secrets/password\n```\n\n**Benefits of file-based secrets:**\n- Not visible in process listings\n- Not logged by default\n- Can be rotated without container restart (with proper file watching)",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowUndefinedAutomount": {
+            "default": true,
+            "description": "Allow undefined automount (uses cluster default)",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces where automount is allowed",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptServiceAccounts": {
+            "description": "List of service accounts that are allowed to automount by default",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to automount tokens",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure service account tokens are not automatically mounted in pods unless explicitly required.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-service-account-token-mounted-minimized",
+      "remediationSteps": "## Fix: Disable Service Account Token Auto-Mounting\n\nSet `automountServiceAccountToken: false` unless the pod needs Kubernetes API access:\n\n```typescript\n// Good: Disable auto-mounting when not needed\nconst pod = new k8s.core.v1.Pod(\"myPod\", {\n    metadata: { name: \"my-pod\" },\n    spec: {\n        automountServiceAccountToken: false,  // Explicitly disable\n        containers: [{\n            name: \"app\",\n            image: \"nginx:latest\",\n        }],\n    },\n});\n\n// Also disable at ServiceAccount level\nconst sa = new k8s.core.v1.ServiceAccount(\"myServiceAccount\", {\n    metadata: { name: \"my-sa\" },\n    automountServiceAccountToken: false,  // Disable by default\n});\n```\n\nOnly enable when the pod explicitly requires Kubernetes API access.",
+      "severity": "medium"
+    }
+  ],
+  "version": 2,
+  "versionTag": "1.0.1"
+}

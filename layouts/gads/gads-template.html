@@ -1,0 +1,119 @@
+{{ define "hero" }}
+    {{ partial "gads/hero.html" . }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="mt-8 pb-16 relative">
+        <div class="container mx-auto text-center">
+            <div class="w-full p-4">
+                <h2>{{ partial "functions/heading-br-space.html" .Params.overview.title | markdownify }}</h2>
+            </div>
+        </div>
+        <div class="container mx-auto">
+            <p id="dynamic-description" class="mx-auto text-center text-gray-800 w-full px-4 max-w-3xl">
+                {{ .Params.overview.description | markdownify }}
+            </p>
+        </div>
+        <div class="container mx-auto pt-8 w-9/12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            {{ partial "cta-get-started" (dict "label" "Try Pulumi") }}
+            {{ partial "gads/cta-contact.html" (dict) }}
+        </div>
+    </section>
+
+    {{ with .Params.case_studies.items }}
+    <section class="container mx-auto text-center px-3 mt-8">
+        <h6 class="font-overline font-normal text-center text-gray-500 text-sm mb-2">Trusted by innovative companies</h6>
+        <div class="flex flex-wrap justify-center items-center py-4">
+            {{ range . }}
+                <div class="w-28 h-12 mx-6 my-2 flex items-center justify-center saturate-0">
+                    {{ partial "customer-logo.html" (dict "customer" .customer) }}
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.customer_quote }}
+    <section class="container mx-auto px-6 my-8">
+        {{ partial "template-partials/template-testimonial.html" (dict
+            "quote" .text
+            "author" .author
+            "title" .title
+            "customer" .customer) }}
+    </section>
+    {{ end }}
+
+    <section id="key-features-above">
+        {{ partial "gads/feature-section.html" (dict "items" .Params.key_features_above.items) }}
+    </section>
+
+    <section id="key-features">
+        {{ partial "gads/feature-section.html" (dict "items" .Params.key_features.items) }}
+    </section>
+
+    <section id="stats">
+        {{ partial "gads/stats.html" .Params.stats }}
+    </section>
+
+    {{ with .Params.key_features_below }}
+    <section id="key-features-below">
+        {{ partial "gads/feature-section.html" (dict "items" .items) }}
+    </section>
+    {{ end }}
+
+    <section id="case-studies">
+        {{ partial "gads/case-studies.html" .Params.case_studies }}
+    </section>
+
+    {{ $contact := .Params.contact_form | default dict }}
+    <section id="contact-form" class="py-16 px-4 mt-8 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2>{{ $contact.headline | default "Talk to a Pulumi expert" | markdownify }}</h2>
+            <p class="text-gray-700 max-w-xl mx-auto">
+                {{ $contact.description | default "Have questions about Pulumi, pricing, or migrating from another tool? Tell us about your use case and our team will get back to you within one business day." | markdownify }}
+            </p>
+        </div>
+        <div class="container mx-auto max-w-2xl mt-8">
+            <div class="card p-10 bg-white shadow-lg">
+                <div class="hs-form hs-form-fg-dark font-normal">
+                    <pulumi-hubspot-form form-id="{{ $contact.hubspot_form_id | default "8381e562-5fdf-4736-bb10-86096705e4ee" }}"></pulumi-hubspot-form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    (function() {
+      var keyword = (function(){
+        try {
+          var params = new URLSearchParams(window.location.search || "");
+          var term = params.get('utm_term');
+          return term ? decodeURIComponent(term.replace(/\+/g, ' ')) : '';
+        } catch(e) { return ''; }
+      })();
+
+      var placeholder = document.getElementById('dki-placeholder');
+      if (!placeholder || !keyword) return;
+
+      var formattedKeyword = keyword.replace(/[-_]/g, ' ').trim();
+
+      var acronyms = {
+        'aws': 'AWS','cdk':'CDK','iac':'IaC','ci':'CI','cd':'CD',
+        'api':'API','sdk':'SDK','cli':'CLI','iam':'IAM','vpc':'VPC',
+        's3':'S3','ec2':'EC2','rds':'RDS','ecs':'ECS','eks':'EKS',
+        'gcp':'GCP','gke':'GKE'
+      };
+
+      var words = formattedKeyword.split(/\s+/).map(function(word){
+        var lower = word.toLowerCase();
+        if (acronyms[lower]) return acronyms[lower];
+        if (word.length) {
+          return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        }
+        return word;
+      });
+
+      placeholder.innerText = words.join(' ');
+    })();
+    </script>
+{{ end }}

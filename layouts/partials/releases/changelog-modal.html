@@ -1,0 +1,23 @@
+{{/*
+    Changelog Modal
+
+    Hidden dialog shell for /releases/. theme/src/ts/releases.ts opens it when
+    a [data-changelog-link] row is clicked, pushState-ing the item's URL and
+    injecting the fetched <article data-changelog-article> fragment into
+    [data-changelog-modal-content]. Escape, the close button, and clicking the
+    overlay all close it. No parameters.
+*/}}
+
+<div data-changelog-modal role="dialog" aria-modal="true" aria-label="Changelog item" class="hidden fixed inset-0 z-[90] bg-service-black/50 overflow-y-auto p-4 md:p-8">
+    <div data-changelog-modal-panel class="relative bg-white rounded-lg shadow-xl max-w-3xl mx-auto my-4 md:my-12 px-6 py-8 md:px-10 md:py-10">
+        <button
+            type="button"
+            data-changelog-modal-close
+            aria-label="Close"
+            class="absolute top-4 right-4 inline-flex items-center justify-center size-9 rounded-full bg-transparent border-none cursor-pointer text-gray-500 hover:text-service-black hover:bg-gray-100 transition-colors"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" class="size-5"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+        </button>
+        <div data-changelog-modal-content></div>
+    </div>
+</div>

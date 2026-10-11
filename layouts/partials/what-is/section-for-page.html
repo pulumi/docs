@@ -1,0 +1,25 @@
+{{/* Resolves the curated overview section a single what-is page belongs to,
+     from data/what_is_sections.yml (the same source that drives the /what-is/
+     overview grouping). Used by the single-page breadcrumb and its JSON-LD
+     BreadcrumbList so both stay in sync.
+
+     Context (.) is the page. Returns a dict:
+       title  the section heading (e.g. "Core concepts")
+       id     the section anchor slug (matches the overview's section ids)
+       url    deep link to the filtered overview (/what-is/#<id>)
+
+     Pages not explicitly placed fall back to "Other concepts", matching the
+     overview's fallback group so the breadcrumb never comes up empty. */}}
+{{ $slug := "" }}
+{{ with .File }}{{ $slug = .ContentBaseName }}{{ end }}
+{{ $data := site.Data.what_is_sections }}
+{{ $title := "" }}
+{{ range $data.sections }}
+    {{ if in .slugs $slug }}{{ $title = .title }}{{ end }}
+{{ end }}
+{{ with $data.troubleshooting }}
+    {{ if in .slugs $slug }}{{ $title = .title }}{{ end }}
+{{ end }}
+{{ if not $title }}{{ $title = "Other concepts" }}{{ end }}
+{{ $id := $title | urlize }}
+{{ return dict "title" $title "id" $id "url" (printf "/what-is/#%s" $id) }}

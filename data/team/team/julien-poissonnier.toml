@@ -1,0 +1,10 @@
+id = "julien-poissonnier"
+name = "Julien Poissonnier"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "julienp"
+linkedin = "jpoissonnier"

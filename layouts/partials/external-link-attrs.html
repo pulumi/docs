@@ -1,0 +1,14 @@
+{{- /*
+    External Link Attributes Partial
+
+    Emits ` target="_blank" rel="noopener noreferrer"` when the given URL is
+    external (starts with http:// or https://), otherwise emits nothing. Used
+    by template partials whose CTA links may be external.
+
+    Parameter:
+    - url: The URL string to check.
+*/ -}}
+{{- $url := . -}}
+{{- if or (hasPrefix $url "http://") (hasPrefix $url "https://") -}}
+ target="_blank" rel="noopener noreferrer"
+{{- end -}}

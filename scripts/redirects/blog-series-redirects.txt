@@ -1,0 +1,18 @@
+# Blog series moved from the tags taxonomy (/blog/tag/<slug>/) to a
+# dedicated series taxonomy (/blog/series/<slug>/). Slugs come from
+# data/blog_series.yml. See layouts/taxonomy/series.html.
+blog/tag/neo-things/index.html|/blog/series/neo-things/
+blog/tag/idp-best-practices/index.html|/blog/series/idp-best-practices/
+blog/tag/platform-engineering-pillars/index.html|/blog/series/platform-engineering-pillars/
+blog/tag/pulumi-copilot/index.html|/blog/series/pulumi-copilot/
+blog/tag/ai-slack-bot/index.html|/blog/series/ai-slack-bot/
+blog/tag/iac-best-practices/index.html|/blog/series/iac-best-practices/
+blog/tag/aws-networking-advanced/index.html|/blog/series/aws-networking-advanced/
+blog/tag/organizational-patterns/index.html|/blog/series/organizational-patterns/
+blog/tag/cloud-systems/index.html|/blog/series/cloud-systems/
+blog/tag/kubernetes-fundamentals/index.html|/blog/series/kubernetes-fundamentals/
+blog/tag/azure-top-5/index.html|/blog/series/azure-top-5/
+blog/tag/embrace-kubernetes/index.html|/blog/series/embrace-kubernetes/
+blog/tag/kubernetes-getting-started/index.html|/blog/series/kubernetes-getting-started/
+blog/tag/aws-credentials-cicd/index.html|/blog/series/aws-credentials-cicd/
+blog/tag/architecture-as-code/index.html|/blog/series/architecture-as-code/

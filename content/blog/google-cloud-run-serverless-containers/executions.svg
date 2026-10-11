@@ -1,0 +1,28 @@
+<svg width="1441" height="715" viewBox="0 0 1441 715" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+      .small { font-size: 35px; font-family: Burst My Bubble; }
+      .medium { font-size: 42px; font-family: Burst My Bubble; }
+  </style>
+
+  <polygon fill="#F9CDAC" stroke="#D54D88" stroke-width="2" points="300,130 650,130 650,190 300,190" />
+
+  <polygon fill="#EA708E" stroke="#63218F" stroke-width="2" points="400,250 850,250 850,310 400,310" />
+
+  <polygon fill="#A62C99" stroke="#2D0F41" stroke-width="2" points="550,370 1000,370 1000,430 550,430" />
+
+  <polyline fill="none" stroke="#aaaaaa" stroke-width="2" stroke-dasharray="4,2" points="200,100 1050,100" />
+  <polyline fill="none" stroke="#aaaaaa" stroke-width="2" stroke-dasharray="4,2" points="200,220 1050,220" />
+  <polyline fill="none" stroke="#aaaaaa" stroke-width="2" stroke-dasharray="4,2" points="200,340 1050,340" />
+  <polyline fill="none" stroke="#aaaaaa" stroke-width="2" stroke-dasharray="4,2" points="200,460 1050,460" />
+
+  <polyline fill="none" stroke="#A62C99" stroke-width="3" stroke-dasharray="4,4" points="300,190 300,600" />
+  <polyline fill="none" stroke="#A62C99" stroke-width="3" stroke-dasharray="4,4" points="1000,430 1000,600" />
+
+  <text x="600" y="500" class="small" fill="#666666">time</text>
+  <text x="40" y="170" class="medium" fill="#D54D88">Request A</text>
+  <text x="40" y="290" class="medium" fill="#63218F">Request B</text>
+  <text x="40" y="410" class="medium" fill="#2D0F41">Request C</text>
+
+  <text x="330" y="580" class="small" fill="#A62C99">Billing starts</text>
+  <text x="1030" y="580" class="small" fill="#A62C99">Billing stops</text>
+</svg>

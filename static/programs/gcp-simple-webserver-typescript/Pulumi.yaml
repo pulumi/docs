@@ -1,0 +1,10 @@
+name: gcp-simple-webserver-typescript
+description: A example that deploys the resources for a simple web server on Google Cloud.
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-typescript

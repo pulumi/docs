@@ -1,0 +1,40 @@
+{{- $result := slice -}}
+{{- range .menuEntries -}}
+  {{- $menuItem := . -}}
+  {{- with .Page -}}
+    {{- if and (not .Params.llms_exclude) (ne .Title "") -}}
+      {{- $children := slice -}}
+      {{- with $menuItem.Children -}}
+        {{- $children = partial "llm-sitemap-walk.json" (dict "menuEntries" .) -}}
+      {{- end -}}
+      {{- $entry := dict "title" .Title "path" .RelPermalink "children" $children -}}
+      {{- if $children -}}
+        {{- $selfLabel := "Introduction" -}}
+        {{- if .Params.docs_home -}}
+          {{- $selfLabel = "Overview" -}}
+        {{- end -}}
+        {{- $entry = merge $entry (dict "selfLabel" $selfLabel) -}}
+      {{- end -}}
+      {{- $result = $result | append $entry -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not .Page -}}
+    {{- $children := slice -}}
+    {{- with $menuItem.Children -}}
+      {{- $children = partial "llm-sitemap-walk.json" (dict "menuEntries" .) -}}
+    {{- end -}}
+    {{- if $children -}}
+      {{- $path := "" -}}
+      {{- with index $children 0 -}}
+        {{- $childPath := .path -}}
+        {{- $trimmed := strings.TrimRight "/" $childPath -}}
+        {{- $path = printf "%s/" (path.Dir $trimmed) -}}
+      {{- end -}}
+      {{- $entry := dict "title" $menuItem.Name "path" $path "children" $children -}}
+      {{- $result = $result | append $entry -}}
+    {{- else if $menuItem.URL -}}
+      {{- $result = $result | append (dict "title" $menuItem.Name "path" $menuItem.URL) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $result -}}

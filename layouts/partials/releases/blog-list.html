@@ -1,0 +1,28 @@
+{{/*
+    Releases Blog List
+
+    A bordered .card with an overline and a list of blog posts, rendered with the
+    shared blog list-row component (title left; category badge + author avatars +
+    date right).
+
+    Parameters:
+    - anchor:   Optional section ID for TOC link targets.
+    - title:    Overline text. Defaults to "More from the blog".
+    - posts:    Array of blog post paths (e.g. "/blog/some-post").
+                Looked up via site.GetPage; missing pages are skipped.
+*/}}
+
+{{ $anchor := .anchor }}
+{{ $title := .title | default "More from the blog" }}
+{{ $posts := .posts }}
+
+<section{{ with $anchor }} id="{{ . }}"{{ end }} class="card bg-white p-8 md:p-10 scroll-mt-28">
+    <p class="font-overline m-0 mb-6 text-service-black">{{ $title }}</p>
+    <div class="flex flex-col">
+        {{ range $posts }}
+            {{ with site.GetPage . }}
+                {{ partialCached "blog/card/list-row.html" (dict "page" .) .RelPermalink }}
+            {{ end }}
+        {{ end }}
+    </div>
+</section>

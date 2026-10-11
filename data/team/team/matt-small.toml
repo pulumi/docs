@@ -1,0 +1,10 @@
+id = "matt-small"
+name = "Matt Small"
+title = "Head of Customer Experience"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "mattasmall"

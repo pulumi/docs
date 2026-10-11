@@ -1,0 +1,13 @@
+name: awsx-vpc-yaml
+runtime: yaml
+description: An example that creates a new VPC using the default settings.
+resources:
+  # Allocate a new VPC with the default settings.
+  vpc:
+    type: awsx:ec2:Vpc
+
+outputs:
+  # Export a few properties to make them easy to use.
+  vpcId: ${vpc.vpcId}
+  publicSubnetIds: ${vpc.publicSubnetIds}
+  privateSubnetIds: ${vpc.privateSubnetIds}

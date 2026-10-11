@@ -1,0 +1,3 @@
+name: aws-eks-helm-tarball-typescript
+runtime: nodejs
+description: An example that deploys a Helm chart from a tarball URL.

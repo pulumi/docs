@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1531px" preserveAspectRatio="none" height="210px" viewBox="0 0 1531 210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>images/waves</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="46.1222947%" y1="-6.87391493%" x2="46.122295%" y2="188.283963%" id="linearGradient-1">
+            <stop stop-color="#894EA1" offset="0%"></stop>
+            <stop stop-color="#512668" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-2">
+            <stop stop-color="#542B68" offset="0%"></stop>
+            <stop stop-color="#2A1337" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="images/waves">
+            <g id="Combined-Shape">
+                <path d="M7.14983628e-14,180.583591 L-3.12671725e-05,0 L1531,0 L1531,68.3221944 C1423.77706,146.774054 1289.4583,186 1128.04375,186 C879.099043,186 650.780641,61.5964844 400.683505,61.5964844 C237.62212,61.5964844 104.060941,101.258861 -3.12671725e-05,180.583615 L7.14983628e-14,180.583591 Z" fill="url(#linearGradient-1)"></path>
+                <path d="M0,89.4717406 L0,0 L1531,0 L1531,190.256028 C1427.27953,109.781621 1296.48618,69.5444178 1138.61995,69.5444178 C883.18784,69.5444178 649.999039,210 395.743937,210 C238.724521,210 106.809875,169.823914 0,89.4717406 Z" fill="url(#linearGradient-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,6 @@
+name: aws-ec2-sg-nginx-server-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An examples that deploys a simple public facing Nginx server

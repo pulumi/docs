@@ -1,0 +1,103 @@
+# Vale rules whose fix is a single, mechanical replacement -- Vale already knows
+# the exact text to swap in (a fixed substitution, a canonical spelling, or a
+# closed-set heading rename). vale-findings-filter.py reads this file and stamps
+# every emitted finding with `deterministic_fix: true|false`.
+#
+# IMPORTANT: `deterministic_fix` describes the *fix*, not a decision to apply it.
+# It means the reviewer does not have to *author* the correction -- not that the
+# correction is correct in this spot. The correction still has to be *judged*:
+#
+#   - review-existing-content (the automated content-review workflow) is the
+#     only consumer that acts on the stamp. It applies a deterministic_fix
+#     finding ONLY after confirming the swap preserves meaning in context
+#     (e.g. "click" inside "click event" stays; a "See also" block that is
+#     actually sequential becomes "Next steps", not "Learn more"). Swaps that
+#     would change meaning are skipped and flagged, never applied. See that
+#     skill's SKILL.md, step 3.
+#   - docs-review (interactive + pinned PR review) ignores the stamp entirely
+#     and stays advisory / flag-only.
+#
+# Without that judgment gate this would just be `vale | sed`. The gate is the
+# point. A rule earns a place here only if its fix is a fixed replacement the
+# reviewer can verify rather than compose; anything requiring an editorial
+# rewrite or a context-dependent choice is deliberately excluded (see below).
+deterministic_fix:
+  - Pulumi.Substitutions        # Fixed terminology swaps: public beta->public preview, CrossGuard->Pulumi Policies, ...
+  - Pulumi.RetiredNames         # Renamed products (Pulumi Insights->Pulumi Discovery, ...); the brand table names the replacement, but the swap needs the meaning-preserving check before it's applied.
+  - Pulumi.WordChoice           # Fixed word-preference swaps: click->select, go to->navigate to.
+  - Pulumi.Nomenclature         # Canonical product-name spellings: pulumi esc->Pulumi ESC, ...
+  - Pulumi.ThirdPartyNames      # Canonical third-party casing: Github->GitHub, Typescript->TypeScript, ...
+  - Pulumi.CrossReferenceHeadings  # Closed-set cross-reference heading rename to Next steps / Learn more.
+
+# Rules elevated to blocker in the pinned PR review: the composer renders these
+# under 🚨 Outstanding (counted, label-driving, auto-refresh-anchored) instead
+# of the advisory `#### Style suggestions` block. A rule earns a place here
+# only when its finding is a *correctness* error (wrong product name, misspelling,
+# grammatical agreement) with a near-zero false-positive rate — not a style
+# preference. Blocker is independent of deterministic_fix: PoliciesSingular is
+# a blocker whose fix needs verb conjugation; CrossReferenceHeadings has a
+# deterministic fix but stays advisory (heading naming is convention, not
+# correctness). vale-findings-filter.py stamps `blocker: true|false` and
+# exempts blockers from the per-file/total caps so one is never silently
+# dropped.
+blocker:
+  - Pulumi.Substitutions        # Wrong term (dead brand name, misstated lifecycle stage) with a fixed correct replacement.
+  - Pulumi.Nomenclature         # Misspelled/miscased Pulumi product name.
+  - Pulumi.ThirdPartyNames      # Miscased non-Pulumi project name (Github -> GitHub). Canonical form already dominates the corpus in every pair, so these are slips.
+  - Pulumi.PoliciesSingular     # Grammatical agreement error ("policies is").
+  - Pulumi.RetiredNames         # A renamed product (Pulumi Insights, Pulumi Copilot, ...). Shipping the dead name is a correctness error; that the proposed replacement still needs a meaning check is `deterministic_fix`'s job, not this list's.
+  - Pulumi.DeprecatedProductNames  # A retired name with no fixed replacement (Pulumi Service, IAS) is always wrong; choosing the current one is the author's call, but shipping the dead name is not.
+# Google.Spelling is deliberately on NEITHER list, and the name is why it's
+# tempting to add it. It is not a spell-checker -- it's four tokens for British
+# spellings (colour, labour, centre, and the open family `(?:\w+)nised?`).
+# Measured against current content it produces 6 findings, and 3 of them are
+# proper nouns it cannot distinguish: "RAI Convention Centre" (the Amsterdam
+# venue) twice, and "Organise imports" (a literal VS Code command label). A 50%
+# false-positive rate fails this list's own near-zero admission criterion, so it
+# does not block. It's off `deterministic_fix` for a separate reason: styles/
+# Google/Spelling.yml is `extends: existence` with no `action:` and no swap map,
+# so Vale emits no replacement to apply -- the fix has to be composed, and one
+# token is a wildcard. Real misspellings are Pulumi.Spelling's job (Hunspell,
+# advisory).
+#
+# Pulumi.RetiredNames blocks even though the replacement it proposes isn't
+# always the right one. Those are separate questions: `blocker` asks whether
+# shipping the finding is acceptable -- for a dead brand name, never --  while
+# `deterministic_fix` asks whether the reviewer has to author the correction.
+# The brand guide's two carve-outs ("historical usage is fine": content/
+# customers/unity.md's "Pulumi Neo ... replacing Pulumi Copilot"; and "some
+# replacements can't be automated": Insights is the Discovery product in most
+# sentences, the "Discovery & governance" category in others) are handled by
+# the meaning gate above and by 🚨's resolve-or-refute path -- not by demoting
+# the rule. Demoting it would also expose a dead brand name to the per-file
+# cap, which drops advisory findings silently; blockers bypass both caps.
+#
+# Pulumi.WordChoice (click->select, go to->navigate to) is deliberately absent
+# from `blocker:` despite having a deterministic fix — those swaps are house
+# word preferences, not correctness errors, so they fail this list's admission
+# criterion and stay advisory. That distinction is why WordChoice was split out
+# of Substitutions in the first place (styles/Pulumi/WordChoice.yml).
+
+# Deliberately NOT listed ABOVE IN `deterministic_fix` (no fixed replacement --
+# the reviewer must compose the fix) and why. Note this says nothing about
+# blocking: the two lists are independent, so DeprecatedProductNames appears
+# here *and* in `blocker` -- its fix needs authoring, but shipping the dead
+# name still blocks.
+#   Pulumi.DeprecatedProductNames - retired names with no fixed replacement (Pulumi Service, IAS) -> the current name is context-dependent; see the brand guide's retired-names table.
+#   Pulumi.BannedWords            - replacement needs judgment (whitelist->allowlist is safe; master/guys are not mechanical).
+#   Pulumi.Difficulty             - "easily"/"simply" needs a rewrite, not a swap.
+#   Pulumi.DirectionalReferences  - "see above" needs a real link/anchor, not a swap.
+#   Pulumi.HeadingSentenceCase    - auto-lowercasing risks mangling proper nouns outside the exceptions list.
+#   Pulumi.CommandBackticks       - false-positive-prone (phrase may already sit in a heading, link, or code).
+#   Pulumi.PoliciesSingular       - needs verb conjugation (are->is), not a fixed swap.
+#   Pulumi.PulumiCloudArticle     - dropping "the" can need a recast ("Open the Pulumi Cloud" may mean the console).
+#   Pulumi.FutureTense            - present-tense rewrite needs verb conjugation (will pause -> pauses), not a fixed swap.
+#   Pulumi.NarrativeWe            - imperative rewrite is editorial (let's create -> create), not a swap.
+#   Pulumi.HedgeThenPivot / SetPieceTransitions / ListicleH2Headings /
+#   Pulumi.EmDashDensity / Pulumi.Repetition - AI-prose heuristics; inherently judgment/rewrite.
+#   Pulumi.Spelling               - Hunspell flags the word but proposes nothing, and the right fix is
+#                                   often to ADD the term to styles/Pulumi/ignore/tech-vocabulary.txt
+#                                   rather than change the prose. Advisory while the vocabulary settles.
+#   Pulumi.Overcapitalization     - "Stack"->"stack" looks mechanical but the same word is a legitimate
+#                                   proper noun inside a console page name (the Stacks view), which the
+#                                   rule can't see.

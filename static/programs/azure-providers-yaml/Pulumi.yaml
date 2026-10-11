@@ -1,0 +1,31 @@
+name: azure-providers-yaml
+description: An example that uses the Azure Native and Azure AD providers together to create a resource group and an Entra ID service principal.
+runtime: yaml
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-yaml
+
+resources:
+  # Create a resource group using the Azure Native provider.
+  my-resource-group:
+    type: azure-native:resources:ResourceGroup
+    properties:
+      location: eastus
+
+  # Create an Entra ID application registration using the Azure AD provider.
+  my-application:
+    type: azuread:Application
+    properties:
+      displayName: my-application
+
+  # Create a service principal for the application.
+  my-service-principal:
+    type: azuread:ServicePrincipal
+    properties:
+      clientId: ${my-application.clientId}
+
+outputs:
+  resourceGroupName: ${my-resource-group.name}
+  applicationClientId: ${my-application.clientId}
+  servicePrincipalId: ${my-service-principal.id}

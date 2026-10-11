@@ -1,0 +1,42 @@
+---
+# Name of the event.
+title: "Build Panel Discussion"
+meta_desc: Join Wesley Faulkner, Ellen Körbes, Rizel Scarlett, and Paul Czarkowski as they discuss a variety of topics related to Cloud Engineering.
+meta_image: /events/cloud-engineering-summit-2021-build-panel/meta.png
+meta_image_square: /events/cloud-engineering-summit-2021-build-panel/meta-square.png
+
+# A featured event will display first in the list.
+featured: false
+
+# Events with unlisted as true will not be shown on the event list
+unlisted: false
+
+# Gated events will have a registration form and the user will need
+# to fill out the form before viewing.
+gated: false
+
+# The event type (workshop, webinar, talk).
+event_type: talk
+
+# The content of the hero section.
+# URL for embedding a URL for ungated events.
+youtube_url: "https://www.youtube.com/embed/uZgnf1iXi6w"
+# Sortable date. The datetime Hugo will use to sort the events in date order.
+sortable_date: 2021-10-20T15:00:00-07:00
+# Duration of the event.
+duration: "49 minutes"
+# Description of the event.
+description: |
+    Join Wesley Faulkner, Ellen Körbes, Rizel Scarlett, and Paul Czarkowski as they discuss a variety of topics related to Cloud Engineering.
+
+# The event presenters
+presenters:
+    - name: Wesley Faulkner
+      role: Developer Advocate
+    - name: Ellen Körbes
+      role: Head of Product, Tilt
+    - name: Rizel Scarlett
+      role: Junior Developer Advocate, GitHub
+    - name: Paul Czarkowski
+      role: Managed OpenShift Black Belt, Red Hat
+---

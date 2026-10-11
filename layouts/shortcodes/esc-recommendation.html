@@ -1,0 +1,10 @@
+<div class="note note-info">
+    <div class="icon-and-line">
+        {{ partial "icon.html" (dict "name" "info" "weight" "fill") }}
+        <div class="line"></div>
+    </div>
+    <div class="content">
+        {{ $body := `**Pulumi ESC is the recommended way to supply cloud credentials to Pulumi Deployments.** Deployments OIDC predates Pulumi ESC and was originally the only way to use OIDC with Deployments. It still works, but for most users ESC is the better choice. For a comparison and guidance on when each is appropriate, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/deployments/cloud-credentials/).` }}
+        {{- $body | markdownify -}}
+    </div>
+</div>

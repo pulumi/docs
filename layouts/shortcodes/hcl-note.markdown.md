@@ -1,0 +1,1 @@
+> **Note:** Since this post was published, Pulumi has added first-class support for HashiCorp Configuration Language (HCL). You can now write Pulumi programs in HCL directly, alongside general-purpose languages like TypeScript, Python, Go, and C#. To see how it works, see [Pulumi HCL](/docs/iac/languages-sdks/hcl/).

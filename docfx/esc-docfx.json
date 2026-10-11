@@ -1,0 +1,42 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../esc-sdk/sdk/csharp",
+          "files": ["Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Esc.Sdk"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "src": "metadata",
+        "files": ["**/*.yml"],
+        "dest": "."
+      }
+    ],
+    "overwrite": [],
+    "dest": "../static-prebuilt/docs/reference/pkg/dotnet/esc-sdk",
+    "globalMetadata": {
+      "_appFooter": "Copyright 2016-2023, Pulumi Corporation.",
+      "_pulumiSdkName": "Pulumi ESC",
+      "_pulumiSdkLibrary": "Pulumi.Esc.Sdk",
+      "_pulumiSdkRepository": "https://github.com/pulumi/esc-sdk"
+    },
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "./pulumi-template"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

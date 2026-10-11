@@ -1,0 +1,12 @@
+{{- /* Used to display a language-specific runtime name based on the chosen language. */ -}}
+<pulumi-chooser type="language" options="javascript,typescript,python,go,csharp,java,yaml,fsharp,visualbasic" option-style="none" class="inline">
+    <pulumi-choosable type="language" value="javascript">JavaScript</pulumi-choosable>
+    <pulumi-choosable type="language" value="typescript">TypeScript</pulumi-choosable>
+    <pulumi-choosable type="language" value="python">Python</pulumi-choosable>
+    <pulumi-choosable type="language" value="go">Go</pulumi-choosable>
+    <pulumi-choosable type="language" value="csharp">C#</pulumi-choosable>
+    <pulumi-choosable type="language" value="java">Java</pulumi-choosable>
+    <pulumi-choosable type="language" value="yaml">Pulumi YAML</pulumi-choosable>
+    <pulumi-choosable type="language" value="fsharp">F#</pulumi-choosable>
+    <pulumi-choosable type="language" value="visualbasic">VB</pulumi-choosable>
+</pulumi-chooser>

@@ -1,0 +1,14 @@
+name: awsx-apigateway-s3-yaml
+runtime: yaml
+description: An example that uses API Gateway to serve static content from Amazon S3.
+
+resources:
+  api:
+    type: aws-apigateway:RestAPI
+    properties:
+      routes:
+        - path: /
+          localPath: www
+
+outputs:
+  url: ${api.url}

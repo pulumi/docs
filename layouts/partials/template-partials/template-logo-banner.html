@@ -1,0 +1,41 @@
+{{/*
+    Template Logo Banner Partial
+
+    Parameters:
+    - logos: Array of entries, each either a customer id from data/customers.yaml
+      or an explicit {src, alt} pair:
+          logos:
+            - customer: snowflake
+            - src: /images/badges/soc2.svg
+              alt: SOC 2 Type II
+      `customer` is the form to use for a Pulumi customer — name and logo come
+      from the registry. `src` is for everything else a banner shows that is not
+      a customer (compliance badges, partner marks).
+    - text: Optional text to display above logos
+    - anchor: Optional anchor for section id
+    - bordered: Optional boolean; when true, renders each logo in a square bordered tile
+*/}}
+
+{{ $logos := .logos }}
+{{ $text := .text }}
+{{ $anchor := .anchor }}
+{{ $bordered := .bordered }}
+
+<section class="template-logo-banner{{ if $bordered }} template-logo-banner--bordered{{ end }}"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+        {{ if $text }}
+        <div class="text-center mb-8">
+            <p class="logo-banner-text">{{ $text }}</p>
+        </div>
+        {{ end }}
+        <div class="logo-grid flex flex-wrap items-center justify-center">
+            {{ range $logos }}
+            <div class="logo-container flex items-center justify-center">
+                {{ with .customer }}
+                    {{ partial "customer-logo.html" (dict "customer" . "class" "w-full h-full object-contain") }}
+                {{ else }}
+                    {{ partial "fingerprinted-img.html" (dict "src" .src "alt" .alt) }}
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+</section>

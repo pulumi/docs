@@ -1,0 +1,16 @@
+{
+  "CORSRules": [
+    {
+      "AllowedOrigins": [
+        "https://*.pulumi.com",
+        "https://*.pulumi-dev.io",
+        "https://*.pulumi-test.io",
+        "https://*.pulumi-staging.io",
+        "http://localhost:3000",
+        "http://localhost:4200"
+      ],
+      "AllowedMethods": ["GET"],
+      "MaxAgeSeconds": 300
+    }
+  ]
+}

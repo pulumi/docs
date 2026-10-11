@@ -1,0 +1,38 @@
+# Blog post resource-link types — consumed by layouts/partials/blog/post-resources.html.
+#
+# A post declares structured resource links in front matter:
+#
+#   resource_links:
+#     - type: documentation          # a key from `types` below
+#       url: /docs/iac/
+#     - type: feature-request
+#       url: https://github.com/pulumi/pulumi/issues
+#       text: "Request a feature"    # optional; overrides the default label
+#
+# Each type maps to a sprite icon name + a default label. Icon names are kept as
+# string literals so scripts/build-icon-sprite.js discovers them.
+types:
+  documentation:
+    icon: book-open
+    label: "Documentation"
+  registry:
+    icon: book-open
+    label: "Pulumi Registry"
+  feature-request:
+    icon: note-pencil
+    label: "File a feature request"
+  issue:
+    icon: note-pencil
+    label: "Open an issue"
+  slack:
+    icon: brand/slack
+    label: "Join the discussion on Community Slack"
+  github:
+    icon: brand/github
+    label: "View on GitHub"
+  video:
+    icon: brand/youtube
+    label: "Watch the video"
+  discussion:
+    icon: chat-circle
+    label: "Join the discussion"

@@ -1,0 +1,14 @@
+extends: existence
+message: "Avoid '%s' (brand guide: voice, inclusive language). Consider an alternative."
+link: "https://brand.pulumi.com/voice/voice-and-tone/#inclusive-language"
+level: warning
+ignorecase: true
+tokens:
+  - crazy
+  - dummy
+  - guys
+  - sanity check
+  - whitelist
+  - blacklist
+  - master
+  - slave

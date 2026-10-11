@@ -1,0 +1,62 @@
+---
+# Name of the event, <= 60 characters
+title: Deploying a Kubernetes Cluster on Equinix Metal
+meta_desc: In this code-centric session, you will learn how to manage Equinix Metal resources using Pulumi and the new Equinix Pulumi provider.
+meta_image: /events/deploying-a-kubernetes-cluster-on-equinix-metal/meta.png
+meta_image_square: /events/deploying-a-kubernetes-cluster-on-equinix-metal/meta-square.png
+
+# A featured event will display first in the list.
+featured: false
+
+# Events with unlisted as true will not be shown on the event list
+unlisted: false
+
+# Gated events will have a registration form and the user will need
+# to fill out the form before viewing.
+gated: false
+
+# The event type (workshop, webinar, talk).
+event_type: workshop
+
+# URL for embedding a URL for ungated events.
+youtube_url: https://www.youtube.com/embed/a5iEQteKgHU?rel=0
+
+# Sortable date. The datetime Hugo will use to sort the events in date order.
+sortable_date: 2023-09-13T09:00:00-04:00
+
+# Duration of the event.
+duration: 1 hour
+
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
+
+# Description of the event.
+description: |
+    In this code-centric session, you will learn how to manage Equinix Metal resources using Pulumi and the new Equinix Pulumi provider. We'll teach you the basics of how Pulumi works and demonstrate deploying a Kubernetes cluster and workload on Equinix Metal.
+
+learn:
+    - How to provision a Kubernetes cluster on Equinix Metal
+    - Defining and deploying Equinix resources using popular programming languages
+    - How to use Pulumi and Equinix together
+
+# The event presenters
+presenters:
+    - name: Josh Kodroff
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Oscar Cobles
+      role: Integrations Engineer, Equinix
+
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Kubernetes"]
+    languages: []
+    clouds: ["Equinix"]
+
+# The right hand side form section.
+form:
+    # HubSpot form id.
+    hubspot_form_id: 97b4a73f-c4d4-440c-b24e-2c04fd34d62a
+    salesforce_campaign_id: 701Du000000AXEtIAO
+---

@@ -1,0 +1,7 @@
+name: gcp-providers-classic-csharp
+description: An example that uses the GCP Classic provider to create a Cloud Storage bucket and a Cloud Run service.
+runtime: dotnet
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-csharp

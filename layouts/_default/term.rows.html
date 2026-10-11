@@ -1,0 +1,16 @@
+{{- /*
+    Bare list-rows fragment for a taxonomy term — no page chrome. Fetched by the
+    homepage category filter (theme/src/ts/blog-list.ts) and swapped into the feed
+    container. Rendered for the `rows` output format (config.yml). Only blog posts
+    are emitted, so non-blog terms (authors, collections) produce an empty file.
+    Not in the sitemap. Order matches the term listing (newest-first).
+
+    The leading robots meta keeps crawlers that render JS (and thus discover the
+    fetch) from indexing the bare fragment as a thin page: HTML parsers hoist a
+    leading <meta> into the implied <head>, and blog-list.ts only extracts
+    [data-post-row] nodes, so the filter is unaffected.
+*/ -}}
+<meta name="robots" content="noindex">
+{{- range (where .Data.Pages "Section" "blog").ByDate.Reverse -}}
+{{ partialCached "blog/card/list-row.html" (dict "page" .) .RelPermalink }}
+{{- end -}}

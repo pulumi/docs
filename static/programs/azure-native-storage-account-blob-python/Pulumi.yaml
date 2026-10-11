@@ -1,0 +1,11 @@
+name: azure-native-storage-account-blob-python
+description: An example that deploys a blob into a blob storage account on Azure.
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-python

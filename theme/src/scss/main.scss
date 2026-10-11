@@ -1,0 +1,411 @@
+@import "tailwindcss";
+
+// Drive the `dark:` variant off our docs theme attribute instead of the v4
+// default (prefers-color-scheme). This is the standard Tailwind v4 mechanism for
+// attribute/selector-based dark mode. Because the inline head script only writes
+// data-theme on docs pages, `dark:` utilities are automatically scoped to /docs
+// and track the three-state toggle (system resolves to dark there).
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+// Tell Tailwind v4 where to scan for utility class usage in templates.
+// Paths are relative to this file (theme/src/scss/).
+@source "../../../layouts/**/*.html";
+@source "../../../layouts/partials/header/*.html";
+@source "../../../content/**/*.{html,md}";
+@source "../../../assets/js/**/*.js";
+@source "../../stencil/src/**/*.tsx";
+@source "../**/*.{js,ts}";
+
+@import "theme";
+
+@import "mixins";
+
+// Sass variables (no CSS output)
+$sitenav-height: 90px;
+$sitenav-offset: calc($sitenav-height + 16px);
+
+@import "shared/utilities";
+
+// v4 layer placement: base styles go in @layer base so Tailwind utilities can override them.
+// Component styles go in @layer components for the same reason.
+// In v2, utilities came last in the stylesheet and won via cascade order.
+// In v4, utilities are in @layer utilities which beats @layer base and @layer components,
+// but loses to unlayered CSS. So we must layer our custom styles.
+
+@layer base {
+    @import "shared/base";
+
+    body {
+        @apply font-body text-service-black;
+
+        figure {
+            figcaption {
+                clear: left;
+                margin: 0.75em 0;
+                text-align: center;
+                font-style: italic;
+                line-height: 1.5em;
+            }
+        }
+    }
+
+    main {
+        @apply text-service-black;
+
+        p,
+        li,
+        blockquote,
+        table {
+            a {
+                @apply text-violet-primary break-words;
+
+                &:hover {
+                    @apply text-violet-800;
+
+                    .section-docs &,
+                    .section-blog &,
+                    .section-authors &,
+                    .section-tags & {
+                        @apply underline;
+                    }
+                }
+            }
+
+        }
+
+        strong {
+            @apply font-semibold;
+        }
+
+        ul,
+        ol {
+            @apply pl-5;
+        }
+
+        ul {
+            @apply list-disc;
+        }
+
+        ol {
+            @apply list-decimal;
+        }
+
+        li {
+            @apply my-2 leading-normal;
+        }
+
+        blockquote {
+            @apply border-l-4 rounded border-violet-100 px-4 py-1 text-sm my-4;
+
+            p {
+                @apply my-1 leading-relaxed;
+            }
+        }
+    }
+
+    // Anchor offset for fixed navbar (medium and up).
+    @include screen-md {
+        :target {
+            &::before {
+                content: " ";
+                display: block;
+                height: $sitenav-offset;
+                margin-top: -$sitenav-offset;
+                position: absolute;
+                z-index: -1;
+            }
+        }
+    }
+
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+
+    // Round all YouTube embeds. The `youtube` shortcode and youtube.html partial
+    // render a full-bleed iframe in a bare wrapper, so putting the radius on the
+    // iframe itself clips its corners regardless of the surrounding markup.
+    iframe[src*="youtube.com/embed"],
+    iframe[src*="youtube-nocookie.com/embed"] {
+        @apply rounded-lg;
+    }
+}
+
+@layer components {
+    // Shared form system (theme/src/scss/shared/). Imported FIRST because later
+    // partials (_hubspot, _blog, _footer) @include its mixins, and Sass @mixin is
+    // order-dependent — so it can't join the shared/ block below.
+    @import "shared/forms";
+    @import "about";
+    @import "accordion";
+    @import "algolia";
+    @import "animation";
+    @import "api-nodejs";
+    @import "api-python";
+    @import "api-symbol";
+    @import "awards";
+    @import "marketing/automation-api";
+    @import "benefits";
+    @import "blog";
+    @import "breadcrumb";
+
+    // Shared design-system primitives (theme/src/scss/shared/). Reuse these —
+    // the `.btn`, `.card`, and `.badge` systems — before rolling your own
+    // component styles. See shared/README.md.
+    @import "shared/badge";
+    @import "shared/button";
+    @import "shared/card";
+    @import "shared/tabs";
+
+    @import "marketing/cloud-engineering";
+    @import "announcement-banner";
+    @import "code";
+    @import "container";
+    @import "copy-button";
+    @import "docs/docs-main";
+    @import "docs/main-nav";
+    @import "docs/docs-home";
+    @import "customer-logo";
+    @import "doc-components";
+    @import "marketing/developer-advocates";
+    @import "docs/footer";
+    @import "docs/icons";
+    @import "event-list";
+    @import "event-schedule";
+    @import "fonts";
+    @import "footer";
+    @import "glossary";
+    @import "header";
+    @import "hero";
+    @import "hubspot";
+    @import "phosphor";
+    @import "marketing/learn";
+    @import "lists";
+    @import "no-select";
+    @import "notes";
+    @import "github-card";
+    @import "neo-card";
+    @import "docs/packages";
+    @import "marketing/product";
+    @import "responsive-video";
+    @import "marketing/pulumi-deployments";
+    @import "marketing/pulumi-up";
+    @import "search";
+    @import "section-nav";
+    @import "marketing/self-hosted";
+    // NOTE: marketing/shape-backgrounds intentionally removed
+    @import "marketing/signup";
+    @import "marketing/workshop-signup";
+    @import "marketing/slot-machine";
+    @import "marketing/state-of-agentic-infrastructure";
+    @import "docs/registry";
+    @import "tables";
+    @import "tiles";
+    @import "toggle";
+    @import "tooltip";
+
+    @import "components/banner";
+    @import "components/chooser";
+    @import "components/choosable";
+    @import "components/docs-nav";
+    @import "components/filter-select";
+    @import "components/greenhouse-jobs-list";
+    @import "components/install";
+    @import "components/resource-links";
+    @import "components/examples";
+    @import "components/audio";
+    @import "components/llm-menu";
+    @import "components/swiper";
+    @import "components/slot-machine";
+    @import "components/pulumi-tertiary-nav";
+    @import "components/user-toggle";
+    @import "components/tabs";
+    @import "templates";
+    @import "customers";
+    @import "whitepapers";
+    @import "neo-mode";
+
+    .nav-main {
+        a {
+            @include transition;
+        }
+    }
+
+    .section-docs {
+        .footer-dots-container {
+            @apply hidden;
+        }
+    }
+
+    .link {
+        @apply text-violet-primary;
+    }
+
+    .section-blog, .section-tags, .section-authors {
+        .tags {
+            .tag {
+                @apply lowercase border border-violet-200 rounded py-1 px-2 mr-1;
+
+                &.tag-blog {
+                    @apply bg-gray-100 text-violet-primary;
+
+                    &:hover {
+                        @apply border-violet-300 text-violet-800 no-underline;
+                    }
+
+                    &.active {
+                        @apply border-violet-primary bg-violet-primary text-white;
+
+                        &:hover {
+                            @apply text-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .popup-overlay {
+        @apply flex w-full h-full fixed inset-0 z-50;
+        background-color: rgba(44, 44, 44, 0.6);
+    }
+
+    .transition-all {
+        @include transition(all);
+
+        &-200 {
+            @include transition($duration: 200ms);
+        }
+    }
+
+    .github-widget {
+        > span {
+            @apply flex;
+        }
+    }
+
+    // Custom css for the Calendly iframe we use on the event registration pages.
+    #calendly-widget {
+        min-width: 270px;
+        height: 600px;
+
+        @include screen-md {
+            min-width: 320px;
+            height: 750px;
+        }
+
+        .booking-container {
+            background-color: green;
+            max-width: initial !important;
+        }
+    }
+
+    .sticky-sidebar {
+        @include screen-lg {
+            @apply sticky self-start overflow-y-auto;
+            max-height: 90vh;
+            top: $sitenav-offset;
+
+            // Registry's nav isn't sticky, so we don't need to position sidebars in relation to it.
+            .section-registry & {
+                @apply top-8;
+            }
+        }
+    }
+
+    .resource-deprecated {
+        @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
+    }
+
+    .aws-reinvent-blog-image {
+        img {
+            @apply mb-0;
+
+            @include screen-lg {
+                @apply mb-8;
+            }
+        }
+    }
+
+    .section-docs {
+        // Hide the language-specific SDK-docs tables until we've removed them from the provider builds.
+        main .container dl.package-details + p + dl.tabular {
+            @apply hidden;
+        }
+        // Hide input and output type notes as well.
+        #supporting-types ~ h4 ~ div pulumi-choosable .active blockquote {
+            @apply hidden;
+        }
+    }
+
+    // NOTE: .rainbow-text intentionally removed 
+
+    .blue-star-background {
+        @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-blue-200 shadow-lg;
+
+        .blue-star-background-image {
+            @apply w-full h-full;
+            background-image: url("/images/home/hero-background.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+        }
+    }
+
+    .purple-hex-background {
+        @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-violet-200 shadow-lg;
+
+        .purple-hex-background-image {
+            @apply w-full h-full;
+            background-image: url("/images/home/hexagons.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+        }
+    }
+
+    #architectures {
+        @apply text-center;
+
+        h2 {
+            @apply pl-2 pr-2 inline;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    pulumi-tree-item {
+        &::part(expand-collapse-button) {
+            @apply text-xs;
+        }
+        &.expanded {
+            .glyph {
+                transform: rotateZ(90deg);
+            }
+        }
+    }
+
+}
+
+@import "consent-banner";
+
+// Docs dark mode. Imported UNLAYERED (not inside @layer components) so its dark
+// overrides win against the Tailwind utilities used by the docs header/buttons —
+// utilities beat the components layer regardless of specificity. Everything in
+// the partial is scoped to body.section-docs + html[data-theme="dark"], so it
+// cannot affect any non-docs page.
+@import "docs/docs-theme";
+
+// Min Light code theme for /docs light mode. Unlayered (like docs-theme above) so
+// it beats the layered component rules; scoped + documented in the partial.
+@import "docs/code-light";
+
+// Auth-aware header swap. The inline script in head.html adds .is-signed-in
+// to <html> when the auth cookie is present, before first paint. These rules
+// live unlayered so they win against the buttons' display utilities (which
+// live in @layer utilities/components). When signed-in, the dashboard rule
+// is dropped and the buttons' own `hidden nav-desktop:inline-flex` style
+// rules decide visibility per breakpoint — so we don't end up showing both
+// the desktop and mobile dashboard variants at once.
+html:not(.is-signed-in) [data-nav-dashboard] { display: none; }
+html.is-signed-in [data-nav-loggedout] { display: none; }
+

@@ -1,0 +1,13 @@
+---
+title: View team membership from the Members tab
+date: 2026-05-15
+aliases:
+    - /releases/changelog/team-membership-members-tab/
+meta_desc: The Members tab in Access Management now indicates which teams every organization member belongs to.
+authors:
+    - christian-nunciato
+---
+
+The Members tab in Access Management now shows which teams each member of your organization belongs to. Before, you had to open each team individually to see who was on it; now the full picture is on one page, under **Settings** > **Access Management** > **Members**.
+
+Visit the [Pulumi Cloud console](https://app.pulumi.com) to have a look.

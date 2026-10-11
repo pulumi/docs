@@ -1,0 +1,23 @@
+.github-card {
+    @apply block mx-auto max-w-lg my-8 bg-gray-100 border border-gray-300 rounded-xl overflow-hidden no-underline transition-colors;
+
+    &:hover {
+        @apply border-gray-400;
+    }
+
+    .github-card-image {
+        @apply block w-full h-auto m-0 p-0 border-none align-bottom;
+    }
+
+    .github-card-content {
+        @apply px-4 py-2.5 border-t border-gray-300;
+    }
+
+    .github-card-domain {
+        @apply flex items-center gap-1.5 text-sm text-gray-600 m-0 p-0;
+    }
+
+    .github-card-icon {
+        @apply text-base;
+    }
+}

@@ -1,0 +1,6 @@
+name: aws-ec2-instance-with-sg-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that shows how to create an EC2 instance and security group.

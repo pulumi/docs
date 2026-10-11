@@ -1,0 +1,11 @@
+name: helm-kubernetes-python
+description: Kubernetes Operator
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: helm-kubernetes-python

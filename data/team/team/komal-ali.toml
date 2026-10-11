@@ -1,0 +1,11 @@
+id = "komal-ali"
+name = "Komal Ali"
+title = "Software Engineering Manager"
+weight = 1
+
+status = "active"
+
+[social]
+github = "komalali"
+x = "zwitkali"
+linkedin = "komal-ali"

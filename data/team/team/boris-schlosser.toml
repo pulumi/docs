@@ -1,0 +1,11 @@
+id = "boris-schlosser"
+name = "Boris Schlosser"
+title = "Senior Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "borisschlosser"
+linkedin = "boris-schlosser"

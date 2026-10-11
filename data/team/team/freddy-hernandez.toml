@@ -1,0 +1,9 @@
+id = "freddy-hernandez"
+name = "Freddy Hernandez"
+title = "Director of Operations"
+weight = 1
+
+status = "inactive"
+
+[social]
+linkedin = "hernandezfreddy"

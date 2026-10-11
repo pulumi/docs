@@ -1,0 +1,7 @@
+extends: existence
+message: "Possible hedge-then-pivot construction ('%s'). This pattern -- 'While X, Y is also worth ...' / 'Although X, what really matters is Y' -- often appears in AI-drafted prose; consider rewriting as a direct claim."
+level: warning
+ignorecase: false
+tokens:
+  - 'While\s+[^,.\n]{4,80},\s+[^.\n]{0,200}?\b(?:also|really|what''s|what is|more importantly|worth|matters|key|crucial)\b'
+  - 'Although\s+[^,.\n]{4,80},\s+[^.\n]{0,200}?\b(?:also|really|what''s|what is|more importantly|worth|matters|key|crucial)\b'

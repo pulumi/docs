@@ -1,0 +1,27 @@
+<svg width="1550" height="600" viewBox="0 0 1550 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+      .small { font-size: 24px; font-family: BlinkMacSystemFont; }
+      .smallb { font-size: 30px; font-family: BlinkMacSystemFont; font-weight: bold }
+      .medium { font-size: 32px; font-family: BlinkMacSystemFont }
+  </style>
+
+  <polyline fill="none" stroke="#aaaaaa" stroke-width="2" stroke-dasharray="4,2" points="260,502 960,502" />
+
+  <polygon fill="#8A3391" stroke="#8A3391" stroke-width="2" points="360,500 420,500 420,330 360,330" />
+  <polygon fill="#4D5BD9" stroke="#4D5BD9" stroke-width="2" points="460,500 520,500 520,310 460,311" />
+  <polygon fill="#8A3391" stroke="#8A3391" stroke-width="2" points="700,500 760,500 760,375 700,375" />
+  <polygon fill="#4D5BD9" stroke="#4D5BD9" stroke-width="2" points="800,500 860,500 860,305 800,305" />
+
+  <text x="365" y="310" class="small" fill="#48565E">466</text>
+  <text x="460" y="285" class="smallb" fill="#48565E">508</text>
+  <text x="700" y="355" class="small" fill="#48565E">5,071</text>
+  <text x="785" y="279" class="smallb" fill="#48565E">8,638</text>
+
+  <text x="363" y="550" class="medium" fill="#48565E">Resources</text>
+  <text x="708" y="550" class="medium" fill="#48565E">Properties</text>
+
+  <polygon fill="#8A3391" stroke="#8A3391" stroke-width="2" points="1100,300 1160,300 1160,320 1100,320" />
+  <polygon fill="#4D5BD9" stroke="#4D5BD9" stroke-width="2" points="1100,340 1160,340 1160,360 1100,360" />
+  <text x="1175" y="317" class="small" fill="#48565E">GCP</text>
+  <text x="1175" y="357" class="small" fill="#48565E">Google-Native</text>
+</svg>

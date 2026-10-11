@@ -1,0 +1,20 @@
+{{ define "hero" }}
+<header class="page-hero">
+    <div class="container mx-auto px-6 lg:px-0">
+        {{ with .Params.hero }}
+        <div class="page-hero-title">
+            <h1 class="heading-1">{{ .title }}</h1>
+        </div>
+        {{ with .description }}
+        <p class="max-w-xl mx-auto mt-6 text-center text-lg text-gray-700">{{ . | markdownify }}</p>
+        {{ end }}
+        {{ end }}
+    </div>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<div class="font-body container mx-auto mb-16 px-6 md:px-8">
+    {{ partial "events/list-section.html" . }}
+</div>
+{{ end }}

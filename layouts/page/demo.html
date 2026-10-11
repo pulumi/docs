@@ -1,0 +1,37 @@
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+
+    <section>
+        <div class="container mx-auto py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                <div class="p-6">
+                    <h1 class="heading-xl mb-6 max-w-lg">{{ .Params.overview.title }}</h1>
+                    <ul class="body-xl max-w-xl">
+                        {{ range $detail := .Params.overview.details }}
+                            <li>{{ $detail }}</li>
+                        {{ end }}
+                    </ul>
+
+                    <div class="flex flex-wrap justify-center items-center mt-12 max-w-lg">
+                        {{ range $id := .Params.customer_logos.logos }}
+                            <div class="w-1/4 p-3">
+                                <a href="{{ partial "customers/href.html" $id }}">
+                                    {{ partial "customer-logo.html" (dict "customer" $id "hoverable" true) }}
+                                </a>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <div class="p-6 flex items-center">
+                    <div class="card mt-10 md:mt-0 p-12 mx-auto">
+                        <h4>Request a demo</h4>
+                        <pulumi-hubspot-form form-id="{{ .Params.form.form_id }}" form-name="demo"></pulumi-hubspot-form>
+                        <p class="body-sm text-gray-600 mt-4">Have a quick question instead? <a href="/contact/" class="underline">Contact us</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

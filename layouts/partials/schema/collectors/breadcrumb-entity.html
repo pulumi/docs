@@ -1,0 +1,357 @@
+{{/* Returns breadcrumb entity for @graph (not full JSON-LD) */}}
+
+{{ $breadcrumbs := slice }}
+{{ $position := 0 }}
+
+{{/* Blog category/tag/series/author term pages. Hugo sets a term page's .Type
+     to its taxonomy ("tags", "category", ...), not "blog", so these need their
+     own check to get the Blog crumb their visible "Blog / ..." header shows. */}}
+{{ $isBlogTerm := and (eq .Kind "term") (in (slice "category" "tag" "series" "author") .Data.Singular) }}
+
+{{/* Home is the first item for most page types, but skipped for what-is to match visible breadcrumb */}}
+{{ if ne .Type "what-is" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Home"
+    "item" "https://www.pulumi.com"
+  ) }}
+{{ end }}
+
+{{/* Process parent sections */}}
+{{ if eq .Type "what-is" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "What Is"
+    "item" "https://www.pulumi.com/what-is/"
+  ) }}
+
+  {{/* Single pages terminate on their overview section (matching the visible
+       breadcrumb) rather than repeating the title. */}}
+  {{ if .IsPage }}
+    {{ $section := partial "what-is/section-for-page.html" . }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" $section.title
+      "item" (printf "https://www.pulumi.com%s" $section.url)
+    ) }}
+  {{ end }}
+
+{{ else if or (eq .Type "blog") $isBlogTerm }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Blog"
+    "item" "https://www.pulumi.com/blog/"
+  ) }}
+
+{{ else if eq .Type "docs" }}
+  {{/* Build docs hierarchy */}}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Documentation"
+    "item" "https://www.pulumi.com/docs/"
+  ) }}
+
+  {{/* Add Pulumi IaC if in the docs/iac section */}}
+  {{ if in .RelPermalink "/docs/iac/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Pulumi IaC"
+      "item" "https://www.pulumi.com/docs/iac/"
+    ) }}
+
+  {{/* Add Discovery & governance if in the docs/discovery-governance section */}}
+  {{ else if in .RelPermalink "/docs/discovery-governance/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Pulumi Discovery"
+      "item" "https://www.pulumi.com/docs/discovery-governance/"
+    ) }}
+
+  {{/* Add Pulumi ESC if in the docs/esc section */}}
+  {{ else if in .RelPermalink "/docs/esc/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Pulumi ESC"
+      "item" "https://www.pulumi.com/docs/esc/"
+    ) }}
+
+  {{/* Add Pulumi Cloud if in the docs/pulumi-cloud section */}}
+  {{ else if in .RelPermalink "/docs/pulumi-cloud/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Pulumi Cloud"
+      "item" "https://www.pulumi.com/docs/pulumi-cloud/"
+    ) }}
+
+  {{/* Add Administration if in the docs/administration section */}}
+  {{ else if in .RelPermalink "/docs/administration/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Administration"
+      "item" "https://www.pulumi.com/docs/administration/"
+    ) }}
+
+  {{/* Add Deployments & Workflows if in the docs/deployments section */}}
+  {{ else if in .RelPermalink "/docs/deployments/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Deployments & Workflows"
+      "item" "https://www.pulumi.com/docs/deployments/"
+    ) }}
+
+  {{/* Add Internal Developer Platform if in the docs/idp section */}}
+  {{ else if in .RelPermalink "/docs/idp/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Internal Developer Platform"
+      "item" "https://www.pulumi.com/docs/idp/"
+    ) }}
+
+  {{/* Add Integrations if in the docs/integrations section */}}
+  {{ else if in .RelPermalink "/docs/integrations/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Integrations"
+      "item" "https://www.pulumi.com/docs/integrations/"
+    ) }}
+
+  {{/* Add Infrastructure AI if in the docs/ai section */}}
+  {{ else if in .RelPermalink "/docs/ai/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Infrastructure AI"
+      "item" "https://www.pulumi.com/docs/ai/"
+    ) }}
+
+  {{/* Add Reference if in the docs/reference section */}}
+  {{ else if in .RelPermalink "/docs/reference/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Reference"
+      "item" "https://www.pulumi.com/docs/reference/"
+    ) }}
+
+  {{/* Add Support & Troubleshooting if in the docs/support section */}}
+  {{ else if in .RelPermalink "/docs/support/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Support & Troubleshooting"
+      "item" "https://www.pulumi.com/docs/support/"
+    ) }}
+
+  {{/* Add Download & Install if in the docs/install section */}}
+  {{ else if in .RelPermalink "/docs/install/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Download & Install Pulumi"
+      "item" "https://www.pulumi.com/docs/install/"
+    ) }}
+
+  {{/* Add Get Started if in the docs/get-started section */}}
+  {{ else if in .RelPermalink "/docs/get-started/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Get Started"
+      "item" "https://www.pulumi.com/docs/get-started/"
+    ) }}
+
+  {{/* End of main docs sections (IaC, Discovery, ESC, Pulumi Cloud, Administration,
+       Deployments & Workflows, IDP, Integrations, Infrastructure AI, Reference,
+       Support & Troubleshooting, Install, Get Started) */}}
+  {{ end }}
+
+  {{/* Additional nesting for IaC Clouds section only - this is separate from the main section logic above */}}
+  {{ if and (in .RelPermalink "/docs/iac/") (in .RelPermalink "/docs/iac/clouds/") }}
+      {{ $position = add $position 1 }}
+      {{ $breadcrumbs = $breadcrumbs | append (dict
+        "@type" "ListItem"
+        "position" $position
+        "name" "Clouds"
+        "item" "https://www.pulumi.com/docs/iac/clouds/"
+      ) }}
+
+      {{/* Add specific cloud provider */}}
+      {{ if in .RelPermalink "/clouds/aws/" }}
+        {{ $position = add $position 1 }}
+        {{ $breadcrumbs = $breadcrumbs | append (dict
+          "@type" "ListItem"
+          "position" $position
+          "name" "AWS"
+          "item" "https://www.pulumi.com/docs/iac/clouds/aws/"
+        ) }}
+
+        {{/* Add Guides if in guides section */}}
+        {{ if in .RelPermalink "/guides/" }}
+          {{ $position = add $position 1 }}
+          {{ $breadcrumbs = $breadcrumbs | append (dict
+            "@type" "ListItem"
+            "position" $position
+            "name" "Guides"
+            "item" "https://www.pulumi.com/docs/iac/clouds/aws/guides/"
+          ) }}
+        {{ end }}
+      {{ end }}
+
+    {{/* End of IaC Clouds section additional nesting */}}
+    {{ end }}
+
+{{ else if eq .Section "product" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Product"
+    "item" "https://www.pulumi.com/product/"
+  ) }}
+
+{{/* Events: mirror the visible breadcrumb in layouts/events/single.html, which
+     shows "Events and Workshops" then "Upcoming" or "On-demand" (never the
+     event page itself). */}}
+{{ else if eq .Section "events" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Events and Workshops"
+    "item" "https://www.pulumi.com/events/"
+  ) }}
+
+  {{ if .Params.sortable_date }}
+    {{ $second := dict "name" "Upcoming" "url" "/events/#upcoming" }}
+    {{ if .Params.youtube_url }}
+      {{ $second = dict "name" "On-demand" "url" "/events/#on-demand" }}
+    {{ end }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" $second.name
+      "item" (printf "https://www.pulumi.com%s" $second.url)
+    ) }}
+  {{ end }}
+
+{{/* Case studies: mirror layouts/customers/single.html, which adds an
+     industry crumb (looked up from data/customers_industries.yaml) between
+     "Customers" and the page itself. */}}
+{{ else if eq .Section "customers" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Customers"
+    "item" "https://www.pulumi.com/customers/"
+  ) }}
+
+  {{ with .Params.industry }}
+    {{ $industry := . }}
+    {{ range site.Data.customers_industries.industries }}
+      {{ if eq .id $industry }}
+        {{ $position = add $position 1 }}
+        {{ $breadcrumbs = $breadcrumbs | append (dict
+          "@type" "ListItem"
+          "position" $position
+          "name" .name
+          "item" (printf "https://www.pulumi.com/customers/industry/%s/" $industry)
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+{{/* Remaining sections that only need a single section-level crumb before the
+     page itself. "migrate" and "partner" are intentionally excluded: both
+     sections' index pages redirect elsewhere (/migrate/ -> /docs/iac/guides/migration/,
+     /partner/ -> /registry/packages/) so a crumb pointing at them would point at
+     a redirect target rather than a real page. "gads" is excluded because those
+     pages are noindexed paid-landing pages. */}}
+{{ else if in (slice "releases" "whitepapers" "solutions" "community" "topics" "about" "security" "why-pulumi" "legal") .Section }}
+  {{ $sectionNames := dict
+    "releases" "Releases"
+    "whitepapers" "Whitepapers"
+    "solutions" "Solutions"
+    "community" "Community"
+    "topics" "Topics"
+    "about" "About"
+    "security" "Pulumi Security"
+    "why-pulumi" "Why Pulumi"
+    "legal" "Legal"
+  }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" (index $sectionNames .Section)
+    "item" (printf "https://www.pulumi.com/%s/" .Section)
+  ) }}
+{{ end }}
+
+{{/* A section's own index page (e.g. /docs/, /product/, /customers/, the new
+     /events/, /security/, etc.) already gets a crumb pointing at itself from the
+     logic above; appending a second "current page" crumb for that same page
+     produces a duplicate node (e.g. "Home > Documentation > Documentation" on
+     the live /docs/ index today). Detect that by checking whether the last
+     crumb built so far already targets this exact page, and skip the
+     otherwise-redundant terminal item when it does. */}}
+{{ $lastCrumbIsSelf := false }}
+{{ if gt (len $breadcrumbs) 0 }}
+  {{ $lastCrumb := index $breadcrumbs (sub (len $breadcrumbs) 1) }}
+  {{ if eq $lastCrumb.item .Permalink }}
+    {{ $lastCrumbIsSelf = true }}
+  {{ end }}
+{{ end }}
+
+{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb; on a blog term page, use the short display name from blog/term-name.html ("Best Practices", "Kubernetes") instead of Hugo's slug-derived term title, since the Blog crumb above already gives it context. Skipped for what-is single pages, which terminate on their section above instead of repeating the title, and for section index pages already represented by the crumb immediately above. */}}
+{{ if and (not (and (eq .Type "what-is") .IsPage)) (not $lastCrumbIsSelf) }}
+  {{ $position = add $position 1 }}
+  {{ $crumbName := or .Params.page_title .Title }}
+  {{ if and $isBlogTerm (not .Params.page_title) }}
+    {{ $crumbName = partial "blog/term-name.html" . }}
+  {{ end }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" $crumbName
+  ) }}
+{{ end }}
+
+{{/* Return breadcrumb entity */}}
+{{ return dict
+  "@type" "BreadcrumbList"
+  "@id" "#breadcrumb"
+  "itemListElement" $breadcrumbs
+}}

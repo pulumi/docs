@@ -1,0 +1,6 @@
+name: dynamic-random-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A dynamic provider that generates a random number stored in Pulumi state.

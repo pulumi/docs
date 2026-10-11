@@ -1,0 +1,10 @@
+id = "thomas-meckel"
+name = "Thomas Meckel"
+status = "guest"
+role = "puluminary"
+title = "Senior Cloud Solution Architect"
+company = "Ophios GmbH"
+
+[social]
+github = "tmeckel"
+linkedin = "thomas-meckel"

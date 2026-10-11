@@ -1,0 +1,62 @@
+---
+# Name of the event, <= 60 characters
+title: "AWS Immersion Day: Building an IDP with Pulumi"
+meta_desc: Learn best practices for platform engineering on AWS and how Pulumi makes it easier than ever to build an Internal Developer Platform (IDP) for your team.
+meta_image: /events/aws-immersion-day-building-an-idp/meta.png
+meta_image_square: /events/aws-immersion-day-building-an-idp/meta-square.png
+
+# A featured event will display first in the list.
+featured: false
+
+# Events with unlisted as true will not be shown on the event list
+unlisted: false
+
+# Gated events will have a registration form and the user will need
+# to fill out the form before viewing.
+gated: false
+
+# The event type (workshop, webinar, talk).
+event_type: workshop
+
+# URL for embedding a URL for ungated events.
+youtube_url: https://www.youtube.com/embed/oMdNuso6jdM?si=rHV6kLSA0XPT6YKa
+
+# Sortable date. The datetime Hugo will use to sort the events in date order.
+sortable_date: 2025-07-24T12:00:00-04:00
+
+# Duration of the event.
+duration: 60 minutes
+
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
+
+# Description of the event.
+description: |
+    Learn how to streamline platform engineering on AWS with an Internal Developer Platform (IDP). This AWS Immersion Day workshop covers best practices for platform engineering on AWS, using Infrastructure as Code (IaC) components to automate infrastructure and codify best practices, strengthen security with short-lived credentials, and gain visibility into AWS environments with Pulumi Insights.
+learn:
+    - How Pulumi supports platform engineering and improves AWS infrastructure management.
+    - Best practices for using Pulumi and Infrastructure as Code (IaC) across AWS and multi-cloud environments.
+    - Strategies to empower developers, reduce operational overhead, and improve your organization's security posture using Pulumi's ecosystem.
+
+# The event presenters
+presenters:
+    - name: Rob Smith
+      role: Solutions Architect, Pulumi
+      photo: /images/team/Rob-Smith.png
+    - name: Josh Kodroff
+      role: Principal Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics:  ["Pulumi Features", "Platform Engineering", "DevOps", "Security", "Infrastructure as Code", "Pulumi IDP"]
+    languages: ["TypeScript"]
+    clouds: ["AWS"]
+
+# The right hand side form section.
+form:
+    # HubSpot form id.
+    hubspot_form_id: dd71b8fd-4896-445c-b5ae-50a6ed95f4b7
+    salesforce_campaign_id: 701PQ00000Z0DKUYA3
+--- 

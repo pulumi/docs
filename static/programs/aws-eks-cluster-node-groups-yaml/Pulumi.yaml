@@ -1,0 +1,73 @@
+name: aws-eks-cluster-node-groups-yaml
+runtime: yaml
+description: An example that creates an EKS cluster with custom node groups.
+variables:
+  managedPolicyArns:
+    - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+    - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+    - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+  assumeRolePolicy:
+    fn::toJSON:
+      Version: 2012-10-17
+      Statement:
+        - Action: sts:AssumeRole
+          Effect: Allow
+          Sid: ""
+          Principal:
+            Service: ec2.amazonaws.com
+resources:
+  # Create instance profiles for the two node groups.
+  role1:
+    type: aws:iam:Role
+    properties:
+      assumeRolePolicy: ${assumeRolePolicy}
+      managedPolicyArns: ${managedPolicyArns}
+  role2:
+    type: aws:iam:Role
+    properties:
+      assumeRolePolicy: ${assumeRolePolicy}
+      managedPolicyArns: ${managedPolicyArns}
+  instanceProfile1:
+    type: aws:iam:InstanceProfile
+    properties:
+      role: ${role1.name}
+  instanceProfile2:
+    type: aws:iam:InstanceProfile
+    properties:
+      role: ${role2.name}
+  # Create an EKS cluster with the IAM roles, and with no default node group.
+  cluster:
+    type: eks:Cluster
+    properties:
+      skipDefaultNodeGroup: true
+      instanceRoles:
+        - ${role1}
+        - ${role2}
+  # Create a node group for fixed compute.
+  fixedNodeGroup:
+    type: eks:NodeGroupV2
+    properties:
+      cluster: ${cluster}
+      instanceType: t2.medium
+      desiredCapacity: 2
+      minSize: 1
+      maxSize: 3
+      spotPrice: "1"
+      labels:
+        ondemand: true
+      instanceProfile: ${instanceProfile1}
+  # Create a preemptible node group using spot pricing for our ephemeral workloads.
+  spotNodeGroup:
+    type: eks:NodeGroupV2
+    properties:
+      cluster: ${cluster}
+      instanceType: t2.medium
+      desiredCapacity: 1
+      minSize: 1
+      maxSize: 2
+      labels:
+        preemptible: "true"
+      instanceProfile: ${instanceProfile2}
+outputs:
+  # Export the cluster's kubeconfig.
+  kubeconfig: ${cluster.kubeconfig}

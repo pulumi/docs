@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Running pre-commit checks..."
+
+# Run linters only on staged files (very fast)
+npx lint-staged

@@ -1,0 +1,10 @@
+id = "anita-trimbur"
+name = "Anita Trimbur"
+title = "UX Designer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "anita-trimbur"
+linkedin = "anitatrimbur"

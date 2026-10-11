@@ -1,0 +1,10 @@
+id = "aaron-kao"
+name = "Aaron Kao"
+title = "VP Marketing"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "kaoaaron"
+github = "aaronkao"

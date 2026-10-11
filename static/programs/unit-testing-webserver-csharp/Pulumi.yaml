@@ -1,0 +1,3 @@
+name: unit-testing-webserver-csharp
+runtime: dotnet
+description: A sample Pulumi program used in the unit testing guide.

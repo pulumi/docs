@@ -1,0 +1,57 @@
+@import "mixins";
+
+.footer-heading {
+    @apply font-mono font-normal uppercase mb-3 text-[12px] tracking-[0.05em] leading-6 text-violet-300;
+}
+
+[data-statuspage-dot] { @apply bg-green-500; }
+[data-statuspage-state="minor"] [data-statuspage-dot] { @apply bg-yellow-500; }
+[data-statuspage-state="major"] [data-statuspage-dot] { @apply bg-orange-500; }
+[data-statuspage-state="critical"] [data-statuspage-dot] { @apply bg-red-500; }
+[data-statuspage-state="maintenance"] [data-statuspage-dot] { @apply bg-gray-400; }
+
+// Hubspot renders <input> elements at runtime, so we can't apply utilities
+// at template time.
+.newsletter.newsletter-inline {
+    @apply items-stretch w-full md:w-[250px];
+
+    form {
+        @apply flex gap-0;
+    }
+    
+    .hs-submit,
+    .actions,
+    .input {
+        @apply flex items-stretch shrink-0;
+    }
+
+    .hs-form-field {
+        @apply pt-0!;
+    }
+    
+    .hs-email {
+        @apply w-full!;
+        input {
+            @apply w-full!;
+        }
+    }
+
+    .hs-submit input {
+        @apply ml-0!;
+    }
+
+    // Dark re-skin + joined-left layout. This single-field newsletter form has no
+    // <fieldset>, so the normalized `.hs-form fieldset input` base never reaches it —
+    // the control chrome (border, height, radius) is set in full here.
+    input:not(.hs-button) {
+        @apply bg-black text-white border border-gray-800 rounded-l-md rounded-r-none! h-10 py-0;
+
+        &::placeholder { @apply text-gray-500; }
+    }
+
+    input.hs-button {
+        // 1px violet-primary border so the button's edges line up with the input's
+        // border in the joined control (.btn ships a transparent border otherwise).
+        @apply leading-none bg-violet-primary text-white border-violet-primary rounded-l-none! rounded-r-md! h-10 px-2! py-0 ml-0;
+    }
+}

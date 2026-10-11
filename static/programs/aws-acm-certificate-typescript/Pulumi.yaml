@@ -1,0 +1,7 @@
+name: aws-acm-certificate-typescript
+runtime: nodejs
+description: Creates a simple ACM certificate resource
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

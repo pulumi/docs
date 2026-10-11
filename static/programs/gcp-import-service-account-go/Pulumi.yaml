@@ -1,0 +1,7 @@
+name: gcp-import-service-account-go
+description: An example that deploys the configuration necessary to import a Service Account resource in Google Cloud.
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-go

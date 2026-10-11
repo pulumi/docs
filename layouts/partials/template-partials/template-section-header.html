@@ -1,0 +1,98 @@
+{{/*
+    Template Section Header Partial
+
+    Centered section intro: optional tag line, title, description.
+    Used to introduce a new content area (e.g., "Scale confidently with Pulumi Cloud").
+
+    Parameters:
+    - tag_line: Optional tag line (displays in violet above title)
+    - title: Section title (line 1 when title_line_2 is set)
+    - title_line_2: Optional second line of title (renders on its own line below title)
+    - description: Section description/subtitle
+    - image: Optional image path (e.g. dashboard placeholder), below text unless image_above is true
+    - image_alt: Alt text for image
+    - image_above: Optional true to display image above the title
+    - image_visible_from: Optional Tailwind breakpoint (sm, md, lg, xl, 2xl) at which the image
+      becomes visible. When set, the image is hidden by default and shown from that breakpoint up.
+      When unset, the image is always visible.
+    - cta_text: Optional CTA link text (renders below description)
+    - cta_as_button: Optional boolean. When true, renders the CTA as a pill button. Default: false.
+    - cta_link: Optional CTA link URL
+    - cards: Optional array of mini feature cards rendered below the image.
+      Each item: { icon: "code", title: "Title", description: "..." }
+    - cards_cols: Optional number of columns at md+ for the mini cards grid (2, 3, or 4). Default 3.
+    - align: Optional "left" or "center" (default). Controls horizontal alignment of the header block.
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $tagLine := .tag_line }}
+{{ $title := .title }}
+{{ $titleLine2 := .title_line_2 }}
+{{ $description := .description }}
+{{ $image := .image }}
+{{ $imageAlt := .image_alt | default "" }}
+{{ $imageAbove := .image_above }}
+{{ $imageVisibleFrom := .image_visible_from }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+{{ $ctaAsButton := .cta_as_button | default false }}
+{{ $cards := .cards }}
+{{ $cardsCols := .cards_cols | default 3 }}
+{{ $align := .align | default "center" }}
+{{ $alignClasses := "sm:text-center max-w-4xl mx-auto" }}
+{{ if eq $align "left" }}{{ $alignClasses = "text-left" }}{{ end }}
+{{ $ctaAlignClass := "text-center" }}
+{{ if eq $align "left" }}{{ $ctaAlignClass = "text-left" }}{{ end }}
+{{ $imageJustifyClass := "justify-center" }}
+{{ if eq $align "left" }}{{ $imageJustifyClass = "justify-start" }}{{ end }}
+{{ $anchor := .anchor }}
+
+{{/* Build responsive visibility classes for the image container. */}}
+{{ $imageDisplayClass := "flex" }}
+{{ if $imageVisibleFrom }}
+    {{ $imageDisplayClass = printf "hidden %s:flex" $imageVisibleFrom }}
+{{ end }}
+
+<section class="template-section-header{{ if eq $align "left" }} section-header--left{{ end }}"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="{{ $alignClasses }}">
+        {{ if and $image $imageAbove }}
+        <div class="section-header-image section-header-image-above mb-6 w-full {{ $imageDisplayClass }} {{ $imageJustifyClass }}">
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "section-header-image-above-img rounded-lg" "maxWidth" 1000 "quality" 95) }}
+        </div>
+        {{ end }}
+        {{ if $tagLine }}
+        <div class="section-header-tag-wrap">
+            <span class="section-header-tag-line">{{ $tagLine }}</span>
+        </div>
+        {{ end }}
+        {{ if $title }}
+        <h2 class="section-header-title mb-4">
+            {{ if $titleLine2 }}
+            <span class="block">{{ $title }}</span>
+            <span class="block">{{ $titleLine2 }}</span>
+            {{ else }}
+            {{ $title }}
+            {{ end }}
+        </h2>
+        {{ end }}
+        {{ if $description }}
+        <p class="section-header-description">{{ $description | markdownify }}</p>
+        {{ end }}
+        {{ if $ctaText }}
+        <div class="mt-6 {{ $ctaAlignClass }}">
+            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link btn-xl{{ end }}">
+                {{ $ctaText }}
+                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+            </a>
+        </div>
+        {{ end }}
+    </div>
+    {{ if and $image (not $imageAbove) }}
+    <div class="section-header-image mt-10 w-full {{ $imageDisplayClass }} {{ $imageJustifyClass }}">
+        {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full rounded-lg" "maxWidth" 1500 "quality" 95) }}
+    </div>
+    {{ end }}
+    {{ if $cards }}
+    {{ partial "mini-cards.html" (dict "cards" $cards "cols" $cardsCols) }}
+    {{ end }}
+</section>

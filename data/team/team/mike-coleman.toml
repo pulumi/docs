@@ -1,0 +1,9 @@
+id = "mike-coleman"
+name = "Mike Coleman"
+title = "Staff Solutions Architect"
+company = "Docker"
+status = "guest"
+[social]
+github = "mikegcoleman"
+x = "mikegcoleman"
+linkedin = "mikegcoleman"

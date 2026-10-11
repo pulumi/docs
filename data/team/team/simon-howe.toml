@@ -1,0 +1,8 @@
+id = "simon-howe"
+name = "Simon Howe"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+

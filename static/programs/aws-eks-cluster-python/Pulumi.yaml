@@ -1,0 +1,6 @@
+name: aws-eks-cluster-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys a Kubernetes cluster on AWS.

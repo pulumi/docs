@@ -1,0 +1,10 @@
+name: aws-s3bucket-bucketpolicy-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an S3 bucket and bucket policy on AWS.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python

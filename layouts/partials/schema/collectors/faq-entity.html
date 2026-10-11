@@ -1,0 +1,229 @@
+{{/* Returns FAQPage entity for FAQ pages in @graph */}}
+
+{{/* Initialize FAQ schema */}}
+{{ $schema := dict
+  "@type" "FAQPage"
+  "@id" "#main-content"
+  "url" .Permalink
+  "name" (or .Params.title_tag .Title)
+  "inLanguage" "en-US"
+}}
+
+{{/* Add description if available */}}
+{{ with (or .Params.meta_desc .Summary) }}
+  {{ $schema = merge $schema (dict "description" .) }}
+{{ end }}
+
+{{/* Extract Q&A pairs from content */}}
+{{ $questions := slice }}
+{{ $rawContent := .RawContent }}
+
+{{/* Parse markdown content for questions and answers */}}
+{{/* Questions are H3 headers or H2 headers ending with ?, answers are the content following them */}}
+{{ $lines := split $rawContent "\n" }}
+{{ $currentQuestion := "" }}
+{{ $currentAnswer := slice }}
+{{ $inQuestion := false }}
+{{ $inCodeFence := false }}
+
+{{ range $index, $line := $lines }}
+  {{/* Track fenced code blocks so heading-shaped comment lines inside a
+       code sample (e.g. "# Install the CLI") are never mistaken for a
+       markdown heading or a question. */}}
+  {{ $trimmedForFence := trim $line " \t" }}
+  {{ $isFenceDelim := or (strings.HasPrefix $trimmedForFence "```") (strings.HasPrefix $trimmedForFence "~~~") }}
+  {{ if $isFenceDelim }}
+    {{ $inCodeFence = not $inCodeFence }}
+  {{ end }}
+  {{/* Check if this is a question (H2 ending with ? or context-aware H3) */}}
+  {{/* Context-aware H3 detection:
+       - In FAQ pages (/faq in URL): All H3s are treated as questions
+       - Elsewhere: H3 must end with ? to be a question */}}
+  {{ $isH3Question := false }}
+  {{ if and (not $inCodeFence) (not $isFenceDelim) }}
+    {{ if strings.Contains (lower $.RelPermalink) "/faq" }}
+      {{ $isH3Question = strings.HasPrefix $line "### " }}
+    {{ else }}
+      {{ $isH3Question = and (strings.HasPrefix $line "### ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+    {{ end }}
+  {{ end }}
+  {{ $isH2Question := false }}
+  {{ if and (not $inCodeFence) (not $isFenceDelim) }}
+    {{ $isH2Question = and (strings.HasPrefix $line "## ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+  {{ end }}
+  {{ if or $isH3Question $isH2Question }}
+    {{/* Save previous Q&A if exists */}}
+    {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
+      {{/* Render the joined markdown lines (bold, links, lists, tables) to HTML
+           and strip tags to plain text, so acceptedAnswer.text never leaks raw
+           markdown syntax ("**", "* ", "|---|", "[text](url)") into the
+           FAQPage schema. Joining with "\n" (not a space) preserves the line
+           structure GFM tables and lists need to parse correctly. htmlUnescape
+           decodes the named entities (&ldquo; etc.) goldmark's typographer
+           extension emits for smart quotes/dashes, which plainify alone
+           leaves as literal escaped text. Shortcode tags are stripped from the
+           joined lines first, since an answer's collected line range can split
+           a multi-line shortcode (e.g. a "notes" callout) from its closing tag,
+           and an unbalanced shortcode token would make markdownify abort the
+           whole site build rather than just this page. */}}
+      {{ $joinedAnswer := delimit $currentAnswer "\n" }}
+      {{ $safeJoinedAnswer := replaceRE `\{\{[%<][^}]*[%>]\}\}` "" $joinedAnswer }}
+      {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify $safeJoinedAnswer)))) " \t\n\r" }}
+      {{ if $answerText }}
+        {{ $questionText := $currentQuestion }}
+        {{/* Remove the heading prefix */}}
+        {{ if strings.HasPrefix $questionText "### " }}
+          {{ $questionText = strings.TrimPrefix "### " $questionText }}
+        {{ else if strings.HasPrefix $questionText "## " }}
+          {{ $questionText = strings.TrimPrefix "## " $questionText }}
+        {{ end }}
+        {{ $qa := dict
+          "@type" "Question"
+          "name" (trim $questionText " \t\n\r")
+          "acceptedAnswer" (dict
+            "@type" "Answer"
+            "text" $answerText
+          )
+        }}
+        {{ $questions = $questions | append $qa }}
+      {{ end }}
+    {{ end }}
+    {{/* Start new question */}}
+    {{ $currentQuestion = $line }}
+    {{ $currentAnswer = slice }}
+    {{ $inQuestion = true }}
+  {{ else if and (not $inCodeFence) (not $isFenceDelim) (findRE "^#{1,6}[ \t]" $trimmedForFence) }}
+    {{/* Any other markdown heading (## section break or a non-question ###/#### sub-heading)
+         ends the current answer too, so narrative sub-headings inside an answer's
+         span don't get swallowed verbatim into acceptedAnswer.text.
+         Requires actual heading syntax (one to six "#" followed by a space) and
+         excludes lines inside fenced code blocks, so a heading-shaped comment
+         (e.g. "# Install the CLI") in a shell/YAML/Python sample is never
+         mistaken for a markdown heading. */}}
+    {{/* New section, save previous Q&A if exists */}}
+    {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
+      {{/* See the markdown-to-plain-text rationale on the first occurrence above. */}}
+      {{ $joinedAnswer := delimit $currentAnswer "\n" }}
+      {{ $safeJoinedAnswer := replaceRE `\{\{[%<][^}]*[%>]\}\}` "" $joinedAnswer }}
+      {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify $safeJoinedAnswer)))) " \t\n\r" }}
+      {{ if $answerText }}
+        {{ $questionText := $currentQuestion }}
+        {{/* Remove the heading prefix */}}
+        {{ if strings.HasPrefix $questionText "### " }}
+          {{ $questionText = strings.TrimPrefix "### " $questionText }}
+        {{ else if strings.HasPrefix $questionText "## " }}
+          {{ $questionText = strings.TrimPrefix "## " $questionText }}
+        {{ end }}
+        {{ $qa := dict
+          "@type" "Question"
+          "name" (trim $questionText " \t\n\r")
+          "acceptedAnswer" (dict
+            "@type" "Answer"
+            "text" $answerText
+          )
+        }}
+        {{ $questions = $questions | append $qa }}
+      {{ end }}
+    {{ end }}
+    {{ $currentQuestion = "" }}
+    {{ $currentAnswer = slice }}
+    {{ $inQuestion = false }}
+  {{ else if $inQuestion }}
+    {{/* Add to current answer if we're in a question and line isn't empty */}}
+    {{ $trimmedLine := trim $line " \t\n\r" }}
+    {{ if $trimmedLine }}
+      {{/* Skip markdown links to other FAQ sections */}}
+      {{ if not (and (strings.Contains $trimmedLine "[") (strings.Contains $trimmedLine "/faq/")) }}
+        {{ $currentAnswer = $currentAnswer | append $trimmedLine }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Save last Q&A if exists */}}
+{{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
+  {{/* See the markdown-to-plain-text rationale on the first occurrence above. */}}
+  {{ $joinedAnswer := delimit $currentAnswer "\n" }}
+  {{ $safeJoinedAnswer := replaceRE `\{\{[%<][^}]*[%>]\}\}` "" $joinedAnswer }}
+  {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify $safeJoinedAnswer)))) " \t\n\r" }}
+  {{ if $answerText }}
+    {{ $questionText := $currentQuestion }}
+    {{/* Remove the heading prefix */}}
+    {{ if strings.HasPrefix $questionText "### " }}
+      {{ $questionText = strings.TrimPrefix "### " $questionText }}
+    {{ else if strings.HasPrefix $questionText "## " }}
+      {{ $questionText = strings.TrimPrefix "## " $questionText }}
+    {{ end }}
+    {{ $qa := dict
+      "@type" "Question"
+      "name" (trim $questionText " \t\n\r")
+      "acceptedAnswer" (dict
+        "@type" "Answer"
+        "text" $answerText
+      )
+    }}
+    {{ $questions = $questions | append $qa }}
+  {{ end }}
+{{ end }}
+
+{{/* Only return FAQPage schema if we have questions */}}
+{{ if $questions }}
+  {{/* Add mainEntity with questions */}}
+  {{ $schema = merge $schema (dict "mainEntity" $questions) }}
+
+  {{/* Add dates, but only from a real source of truth. datePublished must come
+       from an explicit front-matter date/publishDate — never from git info,
+       since a page's git history reflects when it was last *touched*, not
+       when it was first published, and using it here fabricates a publish
+       date that always equals dateModified. When no explicit front-matter
+       date exists, omit datePublished entirely (a page with only
+       dateModified is valid schema.org). dateModified may fall back to git
+       info, since that's an honest modification signal. Never fall back to
+       `now`: an absent git history (e.g. a shallow CI checkout) would
+       otherwise stamp every page as modified today, which is both wrong and
+       harmful for SEO/AEO. Mirrors schema/collectors/article-entity.html. */}}
+  {{/* no_authored_date guard: see schema/collectors/article-entity.html. */}}
+  {{ $publishDate := "" }}
+  {{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") (not .Params.no_authored_date) }}
+    {{ $publishDate = .PublishDate }}
+  {{ end }}
+
+  {{ $modifiedDate := "" }}
+  {{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") "0001-01-01") }}
+    {{ $modifiedDate = .Lastmod }}
+  {{ else if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $modifiedDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $modifiedDate = $publishDate }}
+  {{ end }}
+
+  {{ with $publishDate }}
+    {{ $schema = merge $schema (dict "datePublished" (.Format "2006-01-02T15:04:05Z07:00")) }}
+  {{ end }}
+  {{ with $modifiedDate }}
+    {{ $schema = merge $schema (dict "dateModified" (.Format "2006-01-02T15:04:05Z07:00")) }}
+  {{ end }}
+
+  {{/* Add publisher reference */}}
+  {{ $schema = merge $schema (dict
+    "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+  ) }}
+
+  {{/* Add breadcrumb reference if it exists. Uses the bare "#breadcrumb"
+       fragment, matching how breadcrumb-entity.html actually defines the
+       BreadcrumbList node's own @id and how WebPage.breadcrumb references it
+       elsewhere in graph-builder.html. The previous absolute-permalink form
+       here (printf "%s#breadcrumb" .Permalink) built a URL matching no @id in
+       the page's @graph, so FAQPage.breadcrumb dangled on every page that
+       carries both FAQ and breadcrumb schema — every non-home page reaching
+       this partial, since breadcrumb-entity.html only runs on non-home
+       pages. */}}
+  {{ $schema = merge $schema (dict
+    "breadcrumb" (dict "@id" "#breadcrumb")
+  ) }}
+{{ else }}
+  {{/* No questions found, don't generate FAQPage schema */}}
+  {{ $schema = dict }}
+{{ end }}
+
+{{ return $schema }}

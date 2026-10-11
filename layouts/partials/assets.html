@@ -1,0 +1,43 @@
+<!--
+  This partial contains the tags to include the JS and CSS assets for the website.
+  You will need to include this partial in head of pages you want the CSS styles and/or
+  JS components.
+-->
+
+{{ $jsManifest := $.Site.Data.js_manifest }}
+<script src="/js/{{ index $jsManifest "bundle" }}" defer></script>
+
+{{ $searchSections := slice "docs" "registry" "blog" "tags" "authors" "category" }}
+{{ if in $searchSections .Section }}
+    <script src="/js/{{ index $jsManifest "algolia" }}" defer></script>
+{{ end }}
+
+{{/* Inline template for CSS links: stable URL in dev (required for LiveReload), fingerprinted+post-processed in prod */}}
+{{ define "css-link" }}
+    {{- if hugo.IsServer -}}
+        {{- $css := resources.Get .source -}}
+        {{- $_ := $css.Permalink -}}
+        <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    {{- else -}}
+        {{- $css := resources.Get .source | fingerprint -}}
+        {{- $_ := $css.Permalink -}}
+        <link rel="stylesheet" href="/css/{{ .name }}.{{ getenv "CSS_BUNDLE_ID" }}.css">
+    {{- end -}}
+{{ end }}
+
+<!--
+  CSS bundle selection. Marketing pages additionally load the marketing
+  stylesheet on top of the default bundle.
+
+  In production, beasties extracts critical CSS from each page's stylesheets
+  and inlines it automatically. Do NOT manually inline CSS here — the full
+  stylesheets use @layer and unlayered inline styles will override them.
+-->
+{{ $nonMarketingSections := slice "docs" "registry" "blog" "providers" "ai" "authors" "tags" "legal" }}
+{{ $isMarketing := not (in $nonMarketingSections .Section) }}
+
+{{ template "css-link" (dict "source" "css/bundle.css" "name" "bundle") }}
+
+{{ if $isMarketing }}
+    {{ template "css-link" (dict "source" "css/marketing.css" "name" "marketing") }}
+{{ end }}

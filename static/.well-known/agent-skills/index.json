@@ -1,0 +1,110 @@
+{
+    "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+    "skills": [
+        {
+            "name": "pulumi-overview",
+            "type": "skill-md",
+            "description": "Entry-point skill for any task that creates, modifies, inspects, or destroys cloud infrastructure or SaaS configuration with Pulumi, from one-off CLI operations to full multi-resource projects. Triggers even when Pulumi is not named (\"deploy this app\", \"provision a database\", \"stand up a VPC\", \"tear down staging\") and routes to specialized skills.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/pulumi/skills/pulumi-overview/SKILL.md",
+            "digest": "sha256:d2c77d3f86d00b103ec507124316eeffc893e5afe6a8b456a564f4e89110300c"
+        },
+        {
+            "name": "pulumi-best-practices",
+            "type": "skill-md",
+            "description": "Best practices for writing, reviewing, or debugging Pulumi programs: Output<T>/apply() usage, ComponentResource classes, refactoring without destroying (aliases), secrets and config, resource dependency ordering, and pulumi preview/up CI workflows.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/pulumi/skills/pulumi-best-practices/SKILL.md",
+            "digest": "sha256:6fa693e456fbb2a6507aaa9574d29f672e98b6d0557bd1d547a535ce682d58bb"
+        },
+        {
+            "name": "pulumi-component",
+            "type": "skill-md",
+            "description": "Guide for authoring Pulumi ComponentResource classes. Use when creating reusable infrastructure components, designing component interfaces, setting up multi-language support, or distributing component packages.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/pulumi/skills/pulumi-component/SKILL.md",
+            "digest": "sha256:59caa0dd0fde8100665795b7abcf28850a36320753c27bee2539275ce9e8a3dd"
+        },
+        {
+            "name": "pulumi-automation-api",
+            "type": "skill-md",
+            "description": "Run Pulumi programmatically with the Automation API: embed Pulumi in an application, orchestrate multiple stacks in code, build self-service infrastructure portals, replace CLI shell scripts with code, and handle multi-stack sequencing, parallel deployments, and passing outputs between stacks.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/pulumi/skills/pulumi-automation-api/SKILL.md",
+            "digest": "sha256:656bbba0a8e2a7be906d9c8867ac14fc765f6030ed21d6fca9700e64d112d9b4"
+        },
+        {
+            "name": "pulumi-esc",
+            "type": "skill-md",
+            "description": "Guidance for working with Pulumi ESC (Environments, Secrets, and Configuration). Use for managing secrets, configuration, environments, short-term credentials, configuring OIDC for AWS/Azure/GCP, integrating with secret stores, or using ESC with Pulumi stacks.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/pulumi/skills/pulumi-esc/SKILL.md",
+            "digest": "sha256:31f9ff063d79c3553b5bc30be29bed1362b62f0f3d1ef7f1c3f709baa154a73f"
+        },
+        {
+            "name": "pulumi-debug-failed-operation",
+            "type": "skill-md",
+            "description": "Debug a Pulumi update or preview that failed: read the failure Pulumi already recorded, find what caused it, and fix it. Load when the user asks to debug, diagnose, or fix a failed update or preview, or points at a failing `pulumi up` or `pulumi preview`.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/pulumi/skills/pulumi-debug-failed-operation/SKILL.md",
+            "digest": "sha256:55d8387bdfbccf88ab45c71bd13baa5b364c68092d0ba4423949ae0c83e83ed1"
+        },
+        {
+            "name": "package-usage",
+            "type": "skill-md",
+            "description": "Track which stacks across a Pulumi organization use a specific package and at what versions. Use for cross-stack audits, finding outdated package versions, identifying affected stacks before publishing breaking changes, or planning coordinated upgrade rollouts.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/pulumi/skills/package-usage/SKILL.md",
+            "digest": "sha256:f7a64a946da238466e1fb5a46b4a06aac44f99a3f55233832af2e619219170ed"
+        },
+        {
+            "name": "provider-upgrade",
+            "type": "skill-md",
+            "description": "Upgrade any Pulumi provider to a newer version and reconcile the resulting diff. Use when bumping a provider SDK, checking for breaking changes before or during an upgrade, fixing resources that broke after an upgrade, or resolving unexpected replacements, creates, or deletes in a post-upgrade preview.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/pulumi/skills/provider-upgrade/SKILL.md",
+            "digest": "sha256:e265e1ecd95e2ccf2c7b452e2186020799f544488ef93e7adb047029c3d2cf10"
+        },
+        {
+            "name": "pulumi-terraform-to-pulumi",
+            "type": "skill-md",
+            "description": "Migrate Terraform/OpenTofu projects to Pulumi, including translating HCL source and/or importing Terraform state into a Pulumi stack. Use when converting Terraform to Pulumi, migrating from HCL, or importing tfstate.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/migration/skills/pulumi-terraform-to-pulumi/SKILL.md",
+            "digest": "sha256:f51af02c06f8f25b1a71930ae2307ebc6dafc366ffbe2f7b91f85e71c796dfab"
+        },
+        {
+            "name": "pulumi-cdk-to-pulumi",
+            "type": "skill-md",
+            "description": "Migrate, convert, port, or translate an AWS CDK application (stacks, constructs, or CloudFormation-synthesized templates) to Pulumi.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/migration/skills/pulumi-cdk-to-pulumi/SKILL.md",
+            "digest": "sha256:a6857de1dc7159fbfabd64908ff9fc38c2fb8b70e5903cd79ca338d1033621b1"
+        },
+        {
+            "name": "cloudformation-to-pulumi",
+            "type": "skill-md",
+            "description": "Convert, migrate, or import AWS CloudFormation stacks or templates into Pulumi programs. Load whenever a user wants to move from CloudFormation to Pulumi, convert a CFN template, or import existing CloudFormation-managed resources.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/migration/skills/cloudformation-to-pulumi/SKILL.md",
+            "digest": "sha256:2aed85e5fc471f257ead2626522b0dfc044a47ac486a9504ea18569a310d00fb"
+        },
+        {
+            "name": "pulumi-arm-to-pulumi",
+            "type": "skill-md",
+            "description": "Convert or migrate Azure ARM templates, Bicep templates, or code to Pulumi, including importing existing Azure resources.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/migration/skills/pulumi-arm-to-pulumi/SKILL.md",
+            "digest": "sha256:794c3c5bb9323b07fe4a73933581516ad3fa98785f720f9ad3b77ef6f0880239"
+        },
+        {
+            "name": "pulumi-upgrade-provider",
+            "type": "skill-md",
+            "description": "Automate Pulumi provider repo upgrades with the `upgrade-provider` tool. Use when upgrading a Pulumi provider repository to a new upstream version and addressing common failure modes like patch conflicts or missing module mappings.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/package-maintenance/skills/pulumi-upgrade-provider/SKILL.md",
+            "digest": "sha256:fd03e5cc5655c3c075093ebc48604437b9085863a26e8b6f6caf23cfae5acf08"
+        },
+        {
+            "name": "upstream-patches",
+            "type": "skill-md",
+            "description": "Create, amend, remove, and rebase patches for Terraform provider submodules using `./scripts/upstream.sh`. Use when upgrade-provider or manual patch work needs owning-patch lookup, patch conflict fixes, patch/hunk removal, or upstream rebase.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/package-maintenance/skills/upstream-patches/SKILL.md",
+            "digest": "sha256:794aac659faa47362b1d063e4079a19ac9dea5e838e9de00abe27e81e04f31c4"
+        },
+        {
+            "name": "pulumi-neo-handoff",
+            "type": "skill-md",
+            "description": "Hand off the current thread to a new Pulumi Neo task as a one-way transfer. Use when the user explicitly asks to hand off, send, transfer, or continue current work in Pulumi Neo.",
+            "url": "https://raw.githubusercontent.com/pulumi/agent-skills/main/delegation/skills/pulumi-neo-handoff/SKILL.md",
+            "digest": "sha256:0ad626d5b29282205988b9d5d960cde6ac4702ad3f7e7b91fa7293c89a8e422e"
+        }
+    ]
+}

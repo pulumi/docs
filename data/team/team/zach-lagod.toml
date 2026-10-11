@@ -1,0 +1,10 @@
+id = "zach-lagod"
+name = "Zach Lagod"
+title = "VP Enterprise Sales"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "zachlagod"

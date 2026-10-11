@@ -1,0 +1,310 @@
+---
+title_tag: "hideDiffs | Resource Options"
+meta_desc: The hideDiffs resource option controls how property diffs are displayed in the CLI.
+title: "hideDiffs"
+h1: "Resource option: hideDiffs"
+menu:
+  iac:
+    identifier: hideDiffs
+    parent: options-concepts
+    weight: 80
+aliases:
+  - /docs/iac/concepts/options/hidediffs/
+  - /docs/concepts/options/hidediffs/
+---
+
+The `hideDiffs` resource option specifies a list of property paths whose diff details Pulumi compacts in CLI output. Setting `hideDiffs` does not affect what resources are updated, only how those updates are displayed.
+
+{{< resource-option-scope "hideDiffs" >}}
+
+{{% notes type="info" %}}
+Unlike `ignoreChanges`, `hideDiffs` does not affect which properties trigger updates. If you want to prevent updates based on property changes, use the [`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/) option instead.
+{{% /notes %}}
+
+## How `hideDiffs` works
+
+When you set `hideDiffs` on a resource property, Pulumi:
+
+1. Still detects and processes all changes to that property during preview and update operations.
+1. Compacts the diff display in the CLI, hiding the details of what changed within that property.
+1. Shows that the property changed without expanding the full before/after values.
+1. Continues to update the resource normally based on those changes.
+
+This is useful when working with properties that generate large or verbose diffs that clutter CLI output, while still allowing Pulumi to manage those properties normally.
+
+## Example usage
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+let res = new MyResource("res",
+    { prop: "new-value" }, { hideDiffs: ["prop"] });
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+res = MyResource("res",
+    prop="new-value",
+    opts=ResourceOptions(hide_diffs=["prop"]))
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+res, _ := NewMyResource(ctx, "res",
+    &MyResourceArgs{Prop: "new-value"},
+    pulumi.HideDiffs([]string{"prop"}))
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var res = new MyResource("res",
+    new MyResourceArgs { Prop = "new-value" },
+    new CustomResourceOptions { HideDiffs = { "prop" } });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var res = new MyResource("res",
+    MyResourceArgs.builder()
+        .prop("new-value")
+        .build(),
+    CustomResourceOptions.builder()
+        .hideDiffs("prop")
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  res:
+    type: MyResource
+    properties:
+      prop: new-value
+    options:
+      hideDiffs:
+        - prop
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "my_resource" "res" {
+  prop = "new-value"
+
+  pulumi {
+    hide_diffs = [prop]
+  }
+}
+```
+
+In HCL, each entry is a bare attribute name (in the provider's `snake_case` form), not a quoted string.
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+## Property paths
+
+Besides top-level property names, you can pass paths to nested properties to hide diffs for a specific part of the resource's properties. See [property paths](/docs/reference/property-paths/) for examples of valid paths to nested properties of objects and arrays.
+
+For example, to hide diffs for all weights in an AWS load balancer listener's target groups:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const listener = new aws.lb.Listener("listener", {
+    // ... other configuration ...
+    defaultActions: [{
+        type: "forward",
+        forward: {
+            targetGroups: [
+                { arn: blueGroup.arn, weight: 80 },
+                { arn: greenGroup.arn, weight: 20 },
+            ],
+        },
+    }],
+}, { hideDiffs: ["defaultActions[*].forward.targetGroups[*].weight"] });
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+listener = aws.lb.Listener("listener",
+    # ... other configuration ...
+    default_actions=[{
+        "type": "forward",
+        "forward": {
+            "target_groups": [
+                {"arn": blue_group.arn, "weight": 80},
+                {"arn": green_group.arn, "weight": 20},
+            ],
+        },
+    }],
+    opts=ResourceOptions(hide_diffs=["defaultActions[*].forward.targetGroups[*].weight"]))
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+listener, err := lb.NewListener(ctx, "listener", &lb.ListenerArgs{
+    // ... other configuration ...
+    DefaultActions: lb.ListenerDefaultActionArray{
+        &lb.ListenerDefaultActionArgs{
+            Type: pulumi.String("forward"),
+            Forward: &lb.ListenerDefaultActionForwardArgs{
+                TargetGroups: lb.ListenerDefaultActionForwardTargetGroupArray{
+                    &lb.ListenerDefaultActionForwardTargetGroupArgs{
+                        Arn:    blueGroup.Arn,
+                        Weight: pulumi.Int(80),
+                    },
+                    &lb.ListenerDefaultActionForwardTargetGroupArgs{
+                        Arn:    greenGroup.Arn,
+                        Weight: pulumi.Int(20),
+                    },
+                },
+            },
+        },
+    },
+}, pulumi.HideDiffs([]string{"defaultActions[*].forward.targetGroups[*].weight"}))
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+var listener = new Aws.LB.Listener("listener", new()
+{
+    // ... other configuration ...
+    DefaultActions = new[]
+    {
+        new Aws.LB.Inputs.ListenerDefaultActionArgs
+        {
+            Type = "forward",
+            Forward = new Aws.LB.Inputs.ListenerDefaultActionForwardArgs
+            {
+                TargetGroups = new[]
+                {
+                    new Aws.LB.Inputs.ListenerDefaultActionForwardTargetGroupArgs
+                    {
+                        Arn = blueGroup.Arn,
+                        Weight = 80,
+                    },
+                    new Aws.LB.Inputs.ListenerDefaultActionForwardTargetGroupArgs
+                    {
+                        Arn = greenGroup.Arn,
+                        Weight = 20,
+                    },
+                },
+            },
+        },
+    },
+}, new CustomResourceOptions { HideDiffs = { "defaultActions[*].forward.targetGroups[*].weight" } });
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+var listener = new Listener("listener", ListenerArgs.builder()
+    // ... other configuration ...
+    .defaultActions(ListenerDefaultActionArgs.builder()
+        .type("forward")
+        .forward(ListenerDefaultActionForwardArgs.builder()
+            .targetGroups(
+                ListenerDefaultActionForwardTargetGroupArgs.builder()
+                    .arn(blueGroup.arn())
+                    .weight(80)
+                    .build(),
+                ListenerDefaultActionForwardTargetGroupArgs.builder()
+                    .arn(greenGroup.arn())
+                    .weight(20)
+                    .build())
+            .build())
+        .build())
+    .build(),
+    CustomResourceOptions.builder()
+        .hideDiffs("defaultActions[*].forward.targetGroups[*].weight")
+        .build());
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  listener:
+    type: aws:lb:Listener
+    properties:
+      # ... other configuration ...
+      defaultActions:
+        - type: forward
+          forward:
+            targetGroups:
+              - arn: ${blueGroup.arn}
+                weight: 80
+              - arn: ${greenGroup.arn}
+                weight: 20
+    options:
+      hideDiffs:
+        - defaultActions[*].forward.targetGroups[*].weight
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_lb_listener" "listener" {
+  # ... other configuration ...
+
+  default_action {
+    type = "forward"
+
+    forward {
+      target_group {
+        arn    = aws_lb_target_group.blue.arn
+        weight = 80
+      }
+
+      target_group {
+        arn    = aws_lb_target_group.green.arn
+        weight = 20
+      }
+    }
+  }
+
+  pulumi {
+    hide_diffs = [
+      default_action[0].forward[0].target_group[0].weight,
+      default_action[0].forward[0].target_group[1].weight,
+    ]
+  }
+}
+```
+
+In HCL, each entry is a bare traversal rather than a quoted string, so wildcard paths like `[*]` are not available; list each element by index instead.
+
+{{% /choosable %}}
+
+{{< /chooser >}}

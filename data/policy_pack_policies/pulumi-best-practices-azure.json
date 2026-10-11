@@ -1,0 +1,1690 @@
+{
+  "applied": true,
+  "displayName": "",
+  "name": "pulumi-best-practices-azure",
+  "policies": [
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt gateway names using * wildcards",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptGateways": {
+            "description": "List of Application Gateway names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maximumProbeTimeout": {
+            "default": 30,
+            "description": "Maximum probe timeout in seconds",
+            "type": "number"
+          },
+          "maximumUnhealthyThreshold": {
+            "default": 3,
+            "description": "Maximum unhealthy threshold count",
+            "type": "number"
+          },
+          "minimumProbeInterval": {
+            "default": 30,
+            "description": "Minimum probe interval in seconds",
+            "type": "number"
+          },
+          "requireCustomProbes": {
+            "default": false,
+            "description": "Require custom health probes (not just default probes)",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Application Gateway to enable health probes",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "9. Resource Availability",
+        "specification": "Define and enforce timeouts, quotas, and capacity limits to prevent resource exhaustion.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "application-gateway-has-health-probes",
+      "remediationSteps": "## Fix: Configure Health Probes\n\n```typescript\nconst appGateway = new azurenative.network.ApplicationGateway(\"my-app-gateway\", {\n    probes: [{\n        name: \"health-probe\",\n        protocol: \"Https\",\n        path: \"/health\",\n        interval: 30,\n        timeout: 30,\n        unhealthyThreshold: 3,\n        match: {\n            statusCodes: [\"200-399\"],\n        },\n    }],\n    backendHttpSettingsCollection: [{\n        name: \"backend-settings\",\n        probe: { id: healthProbe.id },  // Associate probe with backend settings\n        // ... other config\n    }],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt gateway names using * wildcards",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptGateways": {
+            "description": "List of Application Gateway names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumZones": {
+            "default": 2,
+            "description": "Minimum number of availability zones required",
+            "type": "number"
+          },
+          "requiredZones": {
+            "description": "Specific zones that must be included (e.g., ['1', '2', '3'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Application Gateway to be configured across multiple availability zones",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "7. High Availability",
+        "specification": "Deploy resources in redundant, fault-tolerant configurations to ensure service continuity.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "application-gateway-multi-az",
+      "remediationSteps": "## Fix: Deploy Across Multiple Availability Zones\n\n```typescript\nconst appGateway = new azurenative.network.ApplicationGateway(\"my-app-gateway\", {\n    zones: [\"1\", \"2\", \"3\"],  // Deploy across at least 2 availability zones\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt gateway names using * wildcards",
+            "type": "boolean"
+          },
+          "allowedSslPolicies": {
+            "default": [
+              "AppGwSslPolicy20220101",
+              "AppGwSslPolicy20220101S"
+            ],
+            "description": "List of allowed predefined SSL policies",
+            "items": {
+              "enum": [
+                "AppGwSslPolicy20150501",
+                "AppGwSslPolicy20170401",
+                "AppGwSslPolicy20170401S",
+                "AppGwSslPolicy20220101",
+                "AppGwSslPolicy20220101S"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptGateways": {
+            "description": "List of Application Gateway names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumTlsVersion": {
+            "default": "TLSv1_2",
+            "description": "Minimum TLS version required",
+            "enum": [
+              "TLSv1_0",
+              "TLSv1_1",
+              "TLSv1_2",
+              "TLSv1_3"
+            ],
+            "type": "string"
+          },
+          "requireCustomSslPolicy": {
+            "default": false,
+            "description": "Require custom SSL policy configuration instead of predefined policies",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Application Gateway to have secure TLS configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "application-gateway-tls",
+      "remediationSteps": "## Fix: Configure Secure TLS Policy\n\n```typescript\nconst appGateway = new azurenative.network.ApplicationGateway(\"my-app-gateway\", {\n    sslPolicy: {\n        policyType: \"Predefined\",\n        policyName: \"AppGwSslPolicy20220101\",  // Use modern policy with TLS 1.2+\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt account names using * wildcards",
+            "type": "boolean"
+          },
+          "allowedBackupTypes": {
+            "default": [
+              "Continuous",
+              "Periodic"
+            ],
+            "description": "List of allowed backup policy types",
+            "items": {
+              "enum": [
+                "Continuous",
+                "Periodic"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptAccounts": {
+            "description": "List of Cosmos DB account names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireSpecificTier": {
+            "description": "Require a specific backup tier for continuous mode (e.g., 'Continuous30Days')",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cosmos DB account to have backup policies configured",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "13. Data Backup and Recovery",
+        "specification": "Regularly back up critical data and systems, store backups securely, and test recovery procedures to ensure timely restoration after failures or disasters.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cosmos-db-backup-policies",
+      "remediationSteps": "## Fix: Configure Cosmos DB Backup Policies\n\n```typescript\n// Option 1: Continuous Backup (recommended)\nconst cosmosDbContinuous = new azurenative.cosmosdb.DatabaseAccount(\"my-cosmosdb\", {\n    databaseAccountOfferType: \"Standard\",\n    backupPolicy: {\n        type: \"Continuous\",  // Enable continuous backup\n        continuousModeProperties: {\n            tier: \"Continuous30Days\",  // 30-day point-in-time restore\n        },\n    },\n    // ... other config\n});\n\n// Option 2: Periodic Backup\nconst cosmosDbPeriodic = new azurenative.cosmosdb.DatabaseAccount(\"my-cosmosdb\", {\n    databaseAccountOfferType: \"Standard\",\n    backupPolicy: {\n        type: \"Periodic\",  // Enable periodic backup\n        periodicModeProperties: {\n            backupIntervalInMinutes: 240,  // 4 hours\n            backupRetentionIntervalInHours: 720,  // 30 days\n        },\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt domain names using * wildcards",
+            "type": "boolean"
+          },
+          "allowedCertificateTypes": {
+            "default": [
+              "ManagedCertificate",
+              "AzureFirstPartyManagedCertificate"
+            ],
+            "description": "List of allowed certificate types",
+            "items": {
+              "enum": [
+                "CustomerCertificate",
+                "ManagedCertificate",
+                "AzureFirstPartyManagedCertificate"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptDomains": {
+            "description": "List of custom domain names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumTlsVersion": {
+            "default": "TLS12",
+            "description": "Minimum TLS version required",
+            "enum": [
+              "TLS10",
+              "TLS12"
+            ],
+            "type": "string"
+          },
+          "requireManagedCertificate": {
+            "default": false,
+            "description": "Require use of Azure-managed certificates for enhanced security",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Front Door custom domains to use secure TLS configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "front-door-tls",
+      "remediationSteps": "## Fix: Configure Secure TLS Settings\n\n```typescript\nconst customDomain = new azurenative.cdn.AFDCustomDomain(\"my-custom-domain\", {\n    tlsSettings: {\n        minimumTlsVersion: \"TLS12\",  // Enforce minimum TLS 1.2\n        certificateType: \"ManagedCertificate\",  // Use Azure-managed certificates\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt key names using * wildcards",
+            "type": "boolean"
+          },
+          "allowedCurves": {
+            "default": [
+              "P-256",
+              "P-384",
+              "P-521",
+              "P-256K"
+            ],
+            "description": "Allowed elliptic curves for EC keys",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowedKeyTypes": {
+            "default": [
+              "RSA",
+              "EC",
+              "RSA-HSM",
+              "EC-HSM"
+            ],
+            "description": "Allowed key types (RSA, EC, RSA-HSM, EC-HSM)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptKeys": {
+            "description": "List of key names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumKeySize": {
+            "default": {
+              "ec": [
+                "P-256",
+                "P-384",
+                "P-521",
+                "P-256K"
+              ],
+              "rsa": 2048
+            },
+            "description": "Minimum key sizes by type",
+            "type": "object"
+          },
+          "requireHSM": {
+            "default": false,
+            "description": "Require HSM-protected keys",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require proper Key Vault key creation and configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "14. Key Management & Rotation",
+        "specification": "Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "key-vault-key-configuration",
+      "remediationSteps": "## Fix: Configure Key with Proper Type, Size, and Operations\n\n```typescript\nconst key = new azurenative.keyvault.Key(\"my-key\", {\n    properties: {\n        kty: \"RSA\",  // or \"RSA-HSM\" for hardware protection\n        keySize: 2048,  // Minimum 2048 bits for RSA\n        keyOps: [\"encrypt\", \"decrypt\"],  // Specify exact operations needed\n        attributes: {\n            exportable: false,\n        },\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt key names using * wildcards",
+            "type": "boolean"
+          },
+          "enforceLifecycleAttributes": {
+            "default": false,
+            "description": "Require keys to have lifecycle attributes (expiration, not before)",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptKeys": {
+            "description": "List of key names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireKeyExpiration": {
+            "default": false,
+            "description": "Require keys to have expiration dates",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require proper Key Vault key deletion and lifecycle management",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "14. Key Management & Rotation",
+        "specification": "Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "key-vault-key-lifecycle",
+      "remediationSteps": "## Fix: Configure Key Vault Key Lifecycle Attributes\n\n```typescript\nconst key = new azurenative.keyvault.Key(\"my-key\", {\n    properties: {\n        kty: \"RSA\",\n        attributes: {\n            exp: 1735689600,  // Set expiration date (Unix epoch timestamp)\n            nbf: 1704067200,  // Set not-before date (Unix epoch timestamp)\n        },\n        // ... other config\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt key names using * wildcards",
+            "type": "boolean"
+          },
+          "allowedRotationActions": {
+            "default": [
+              "rotate"
+            ],
+            "description": "List of allowed rotation actions",
+            "items": {
+              "enum": [
+                "rotate",
+                "notify"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptKeys": {
+            "description": "List of Key Vault key names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maxRotationIntervalDays": {
+            "default": 90,
+            "description": "Maximum allowed rotation interval in days",
+            "minimum": 1,
+            "type": "number"
+          },
+          "requireExpiryTime": {
+            "default": true,
+            "description": "Require expiry time to be set in rotation policy",
+            "type": "boolean"
+          },
+          "requireTimeAfterCreate": {
+            "default": true,
+            "description": "Require timeAfterCreate trigger in rotation policy",
+            "type": "boolean"
+          },
+          "requireTimeBeforeExpiry": {
+            "default": false,
+            "description": "Require timeBeforeExpiry trigger in rotation policy",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Key Vault keys to have rotation policies configured",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "14. Key Management & Rotation",
+        "specification": "Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "key-vault-key-rotation",
+      "remediationSteps": "## Fix: Configure Key Vault Key Rotation Policy\n\n```typescript\nconst key = new azurenative.keyvault.Key(\"my-key\", {\n    properties: {\n        kty: \"RSA\",\n        rotationPolicy: {\n            attributes: {\n                expiryTime: \"P2Y\",  // Set expiry time for key versions\n            },\n            lifetimeActions: [{\n                action: { type: \"rotate\" },\n                trigger: { timeAfterCreate: \"P90D\" },  // Rotate 90 days after creation\n            }],\n        },\n        // ... other config\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt vault names using * wildcards",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptVaults": {
+            "description": "List of Key Vault names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maximumSoftDeleteRetentionDays": {
+            "default": 90,
+            "description": "Maximum number of days for soft delete retention",
+            "maximum": 90,
+            "minimum": 7,
+            "type": "number"
+          },
+          "minimumSoftDeleteRetentionDays": {
+            "default": 90,
+            "description": "Minimum number of days for soft delete retention",
+            "maximum": 90,
+            "minimum": 7,
+            "type": "number"
+          },
+          "requirePurgeProtection": {
+            "default": true,
+            "description": "Also require purge protection to be enabled",
+            "type": "boolean"
+          },
+          "requireSoftDelete": {
+            "default": true,
+            "description": "Require soft delete to be enabled",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Key Vault to have soft delete enabled with appropriate retention",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "13. Data Backup and Recovery",
+        "specification": "Regularly back up critical data and systems, store backups securely, and test recovery procedures to ensure timely restoration after failures or disasters.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "key-vault-soft-delete",
+      "remediationSteps": "## Fix: Enable Key Vault Soft Delete\n\n```typescript\nconst vault = new azurenative.keyvault.Vault(\"my-key-vault\", {\n    properties: {\n        sku: { name: \"standard\" },\n        enableSoftDelete: true,  // Enable soft delete\n        softDeleteRetentionInDays: 90,  // Set retention period (minimum 90 days)\n        // ... other config\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt load balancer names using * wildcards",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptLoadBalancers": {
+            "description": "List of Load Balancer names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maximumProbeThreshold": {
+            "default": 3,
+            "description": "Maximum number of probe failures before marking unhealthy",
+            "type": "number"
+          },
+          "minimumProbeInterval": {
+            "default": 5,
+            "description": "Minimum probe interval in seconds",
+            "type": "number"
+          },
+          "requireCustomProbes": {
+            "default": false,
+            "description": "Require custom health probes (not just default probes)",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Load Balancer to enable health probes",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "9. Resource Availability",
+        "specification": "Define and enforce timeouts, quotas, and capacity limits to prevent resource exhaustion.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "load-balancer-health-probes",
+      "remediationSteps": "## Fix: Configure Load Balancer Health Probes\n\n```typescript\nconst loadBalancer = new azurenative.network.LoadBalancer(\"my-load-balancer\", {\n    sku: { name: \"Standard\" },\n    probes: [{\n        name: \"http-health-probe\",\n        properties: {\n            protocol: \"Http\",\n            port: 80,\n            requestPath: \"/health\",  // Configure health check endpoint\n        },\n    }],\n    loadBalancingRules: [{\n        name: \"http-rule\",\n        properties: {\n            probe: { id: probeId },  // Associate probe with rule\n            // ... other config\n        },\n    }],\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt load balancer names using * wildcards",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptLoadBalancers": {
+            "description": "List of Load Balancer names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumZones": {
+            "default": 2,
+            "description": "Minimum number of availability zones required",
+            "type": "number"
+          },
+          "requiredZones": {
+            "description": "Specific zones that must be included (e.g., ['1', '2', '3'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Load Balancer to be configured across multiple availability zones",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "7. High Availability",
+        "specification": "Deploy resources in redundant, fault-tolerant configurations to ensure service continuity.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "load-balancer-multi-az",
+      "remediationSteps": "## Fix: Configure Load Balancer for Multiple Availability Zones\n\n```typescript\nconst loadBalancer = new azurenative.network.LoadBalancer(\"my-lb\", {\n    sku: {\n        name: \"Standard\",  // Standard SKU required for zone redundancy\n    },\n    frontendIPConfigurations: [{\n        zones: [\"1\", \"2\", \"3\"],  // Deploy across multiple zones\n        // ... other config\n    }],\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt workspace names using * wildcards",
+            "type": "boolean"
+          },
+          "allowedSkus": {
+            "default": [
+              "PerGB2018",
+              "CapacityReservation"
+            ],
+            "description": "Allowed pricing tiers (e.g., 'PerGB2018', 'Premium')",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptWorkspaces": {
+            "description": "List of Log Analytics workspace names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maximumRetentionDays": {
+            "default": 730,
+            "description": "Maximum allowed retention period in days (for cost control)",
+            "type": "number"
+          },
+          "minimumRetentionDays": {
+            "default": 90,
+            "description": "Minimum required retention period in days",
+            "type": "number"
+          },
+          "requireArchiveEnabled": {
+            "default": false,
+            "description": "Require workspace to have archiving enabled for long-term retention",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Log Analytics workspace to have appropriate retention policies",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "log-analytics-retention",
+      "remediationSteps": "## Fix: Configure Log Analytics Workspace Retention Policy\n\n```typescript\nconst workspace = new azurenative.operationalinsights.Workspace(\"my-workspace\", {\n    sku: {\n        name: \"PerGB2018\",\n    },\n    retentionInDays: 90,  // Set to meet compliance requirements (minimum 90 days)\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNetworkInterfaces": {
+            "description": "List of Network Interface names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Network Interfaces to have no public IP address associations",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "network-interface-no-public-ip",
+      "remediationSteps": "## Fix: Remove Public IP Address from Network Interface\n\n```typescript\nconst nic = new azurenative.network.NetworkInterface(\"my-nic\", {\n    ipConfigurations: [{\n        privateIPAllocationMethod: \"Dynamic\",\n        // Do NOT include publicIPAddress property\n        // ... other config\n    }],\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt NSG names using * wildcards",
+            "type": "boolean"
+          },
+          "allowedPorts": {
+            "default": [],
+            "description": "List of ports that are allowed to have public internet access (e.g., [80, 443] for web traffic)",
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNsgs": {
+            "description": "List of NSG names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Network Security Groups to disallow public internet ingress",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "11. Networking",
+        "specification": "Only allow required inbound and outbound traffic through network security groups, firewalls, or ACLs.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "nsg-disallow-public-internet-ingress",
+      "remediationSteps": "## Fix: Remove Public Internet Ingress from Network Security Group\n\n```typescript\nconst nsg = new azurenative.network.NetworkSecurityGroup(\"secure-nsg\", {\n    securityRules: [\n        {\n            protocol: \"Tcp\",\n            sourceAddressPrefix: \"203.0.113.0/24\",  // Use specific IP ranges, not 0.0.0.0/0\n            access: \"Allow\",\n            direction: \"Inbound\",\n            // ... other config\n        },\n    ],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt NSG names using * wildcards",
+            "type": "boolean"
+          },
+          "allowedDestinationPorts": {
+            "description": "List of allowed destination ports for external access",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowedSourceAddresses": {
+            "description": "List of allowed source addresses/ranges (e.g., '10.0.0.0/8', '192.168.1.0/24')",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNsgs": {
+            "description": "List of NSG names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maxPriorityAllowed": {
+            "default": 1000,
+            "description": "Maximum priority value allowed for custom rules (lower numbers = higher priority)",
+            "type": "number"
+          },
+          "prohibitedSourceAddresses": {
+            "description": "Additional prohibited source addresses beyond the defaults",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireExplicitDeny": {
+            "default": false,
+            "description": "Require at least one explicit deny rule to be present",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require strict Network Security Group rules with explicit allow/deny configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "11. Networking",
+        "specification": "Only allow required inbound and outbound traffic through network security groups, firewalls, or ACLs.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "nsg-strict-rules",
+      "remediationSteps": "## Fix: Configure Strict Network Security Group Rules\n\n```typescript\nconst nsg = new azurenative.network.NetworkSecurityGroup(\"strict-nsg\", {\n    securityRules: [\n        {\n            protocol: \"Tcp\",\n            sourceAddressPrefix: \"10.0.0.0/16\",  // Use specific IP ranges, not * or 0.0.0.0/0\n            destinationAddressPrefix: \"10.0.1.0/24\",  // Use specific destinations\n            access: \"Allow\",\n            direction: \"Inbound\",\n            // ... other config\n        },\n    ],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for scopes and principals using * wildcards",
+            "type": "boolean"
+          },
+          "allowedScopes": {
+            "description": "List of allowed scope patterns (e.g., '/subscriptions/*/resourceGroups/*')",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "blockedRoleIds": {
+            "description": "List of role definition IDs to block (default includes Owner, Contributor, User Access Administrator)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptPrincipals": {
+            "description": "List of principal IDs to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce least privilege access control by prohibiting overly broad RBAC role assignments",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "rbac-least-privilege",
+      "remediationSteps": "## Fix: Use Specific Least-Privilege Roles\n\n```typescript\nconst roleAssignment = new azurenative.authorization.RoleAssignment(\"my-assignment\", {\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7\",  // Reader role instead of Owner/Contributor\n    principalId: servicePrincipalId,\n    scope: \"/subscriptions/{sub-id}/resourceGroups/my-rg\",  // Scope to resource group instead of subscription\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "additionalRequiredTags": {
+            "description": "Additional required tags beyond the default change tracking tags",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowEmptyTags": {
+            "default": false,
+            "description": "Allow empty tag values",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptResourceTypes": {
+            "description": "Resource types to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireAllTags": {
+            "default": true,
+            "description": "Require all tags from the list (if false, require at least one)",
+            "type": "boolean"
+          },
+          "requiredChangeTags": {
+            "default": [
+              "last-modified",
+              "modified-by",
+              "change-reason"
+            ],
+            "description": "List of required change tracking tag keys",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require all Azure resources to have proper tagging for change tracking",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "5. Tagging",
+        "specification": "Enforce standardized resource tags for ownership, environment, and compliance tracking.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "resources-change-tracking-tags",
+      "remediationSteps": "## Fix: Add Change Tracking Tags to Resources\n\n```typescript\nconst storageAccount = new azurenative.storage.StorageAccount(\"app-storage\", {\n    sku: {\n        name: \"Standard_LRS\",\n    },\n    tags: {\n        \"last-modified\": \"2025-10-07\",  // ISO 8601 date format (YYYY-MM-DD)\n        \"modified-by\": \"jane.doe@company.com\",\n        \"change-reason\": \"Added storage account for new application deployment\",\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowEmptyTag": {
+            "default": false,
+            "description": "Allow empty tag values",
+            "type": "boolean"
+          },
+          "allowedEnvironments": {
+            "default": [
+              "dev",
+              "test",
+              "staging",
+              "prod",
+              "production"
+            ],
+            "description": "List of allowed environment values",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptResourceTypes": {
+            "description": "Resource types to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requiredTagKey": {
+            "default": "environment",
+            "description": "The tag key that must be present on all resources",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require all resources to have environment tags",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "5. Tagging",
+        "specification": "Enforce standardized resource tags for ownership, environment, and compliance tracking.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "resources-environment-tags",
+      "remediationSteps": "## Fix: Add Environment Tag\n\n```typescript\nconst resource = new azurenative.storage.StorageAccount(\"my-storage\", {\n    tags: {\n        environment: \"prod\",  // Use \"dev\", \"test\", \"staging\", or \"prod\"\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt queue names using * wildcards",
+            "type": "boolean"
+          },
+          "allowedForwardingTargets": {
+            "description": "List of allowed forwarding targets for dead letter messages",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptQueues": {
+            "description": "List of Service Bus queue names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maxDeliveryCount": {
+            "description": "Maximum allowed delivery count before dead lettering",
+            "minimum": 1,
+            "type": "number"
+          },
+          "minDeliveryCount": {
+            "description": "Minimum required delivery count before dead lettering",
+            "minimum": 1,
+            "type": "number"
+          },
+          "requireDeadLetteringOnExpiration": {
+            "default": true,
+            "description": "Require dead lettering when messages expire",
+            "type": "boolean"
+          },
+          "requireForwardingTarget": {
+            "default": false,
+            "description": "Require forwarding target for dead letter messages",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Validate Service Bus queues have proper dead letter queue configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "8. Require DLQ",
+        "specification": "Ensure all asynchronous messaging systems are configured with a dead-letter queue to handle failures.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "service-bus-dead-letter-queue",
+      "remediationSteps": "## Fix: Configure Service Bus Queue Dead Letter Settings\n\n```typescript\nconst queue = new azurenative.servicebus.Queue(\"my-queue\", {\n    maxDeliveryCount: 10,  // Maximum delivery attempts before dead lettering\n    deadLetteringOnMessageExpiration: true,  // Enable dead lettering when messages expire\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt database names using * wildcards",
+            "type": "boolean"
+          },
+          "allowedBackupStorageRedundancy": {
+            "default": [
+              "Zone",
+              "Geo",
+              "GeoZone"
+            ],
+            "description": "List of allowed backup storage redundancy types",
+            "items": {
+              "enum": [
+                "Local",
+                "Zone",
+                "Geo",
+                "GeoZone"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptDatabases": {
+            "description": "List of database names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Azure SQL Database to have backup retention configured with redundant storage",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "13. Data Backup and Recovery",
+        "specification": "Regularly back up critical data and systems, store backups securely, and test recovery procedures to ensure timely restoration after failures or disasters.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "sql-database-backup-retention",
+      "remediationSteps": "## Fix: Enable SQL Database Backup Retention with Redundant Storage\n\n```typescript\nconst database = new azurenative.sql.Database(\"my-database\", {\n    sku: {\n        name: \"S0\",\n        tier: \"Standard\",\n    },\n    requestedBackupStorageRedundancy: \"Geo\",  // Use geo-redundant backup storage\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt SQL Server names using * wildcards",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptServers": {
+            "description": "List of SQL Server names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Azure SQL databases to use customer-managed keys for transparent data encryption",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "sql-database-customer-managed-keys",
+      "remediationSteps": "## Fix: Enable SQL Database Customer-Managed Keys for TDE\n\n```typescript\nconst encryptionProtector = new azurenative.sql.EncryptionProtector(\"tde-protector\", {\n    serverKeyType: \"AzureKeyVault\",  // Use customer-managed key from Azure Key Vault\n    serverKeyName: serverKey.name,\n    autoRotationEnabled: true,  // Enable auto-rotation when key version changes\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt database names using * wildcards",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptDatabases": {
+            "description": "List of database names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumHighAvailabilityReplicaCount": {
+            "default": 0,
+            "description": "Minimum number of high availability replicas required",
+            "minimum": 0,
+            "type": "number"
+          },
+          "requireZoneRedundancy": {
+            "default": false,
+            "description": "Require zone redundancy to be explicitly enabled",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Azure SQL Database to have high availability configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "7. High Availability",
+        "specification": "Deploy resources in redundant, fault-tolerant configurations to ensure service continuity.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "sql-database-high-availability",
+      "remediationSteps": "## Fix: Enable SQL Database High Availability\n\n```typescript\nconst database = new azurenative.sql.Database(\"my-database\", {\n    sku: {\n        name: \"P1\",\n        tier: \"Premium\",\n    },\n    zoneRedundant: true,  // Enable zone redundancy for high availability\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt server names using * wildcards",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptServers": {
+            "description": "List of SQL Server names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumRetentionDays": {
+            "default": 0,
+            "description": "Minimum number of days to retain audit logs",
+            "minimum": 0,
+            "type": "number"
+          },
+          "requireStorageDestination": {
+            "default": true,
+            "description": "Require storage endpoint or Azure Monitor destination when audit is enabled",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Azure SQL Server to have audit logging enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "sql-server-audit-logging",
+      "remediationSteps": "## Fix: Enable SQL Server Audit Logging\n\n```typescript\nconst auditPolicy = new azurenative.sql.ServerBlobAuditingPolicy(\"audit-policy\", {\n    state: \"Enabled\",  // Enable audit logging\n    storageEndpoint: storageEndpoint,\n    retentionDays: 90,  // Retain audit logs for 90 days\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt server names using * wildcards",
+            "type": "boolean"
+          },
+          "allowSecuredByPerimeter": {
+            "default": true,
+            "description": "Allow publicNetworkAccess to be 'SecuredByPerimeter' in addition to 'Disabled'",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptServers": {
+            "description": "List of SQL Server names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Azure SQL Server to disable public network access",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "sql-server-disable-public-access",
+      "remediationSteps": "## Fix: Disable SQL Server Public Network Access\n\n```typescript\nconst sqlServer = new azurenative.sql.Server(\"my-sql-server\", {\n    publicNetworkAccess: \"Disabled\",  // Disable public network access\n    // ... other config\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedSkus": {
+            "default": [
+              "Standard_GRS",
+              "Standard_GZRS",
+              "Standard_RAGRS",
+              "Standard_RAGZRS",
+              "Premium_ZRS",
+              "Premium_GZRS"
+            ],
+            "description": "List of allowed SKU names that provide geo-replication",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptStorageAccounts": {
+            "description": "List of Storage Account names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Storage Accounts to have geo-replication enabled for business continuity",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "13. Data Backup and Recovery",
+        "specification": "Regularly back up critical data and systems, store backups securely, and test recovery procedures to ensure timely restoration after failures or disasters.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "storage-account-geo-replication",
+      "remediationSteps": "## Fix: Enable Geo-Replication\n\n```typescript\nconst storageAccount = new azurenative.storage.StorageAccount(\"mystorageaccount\", {\n    sku: { name: \"Standard_GRS\" },  // Use geo-replicated SKU for redundancy\n    kind: \"StorageV2\",\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptStorageAccounts": {
+            "description": "List of Storage Account names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Storage Accounts to enforce HTTPS-only traffic",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "storage-account-https-only",
+      "remediationSteps": "## Fix: Enable HTTPS-Only Traffic\n\n```typescript\nconst storageAccount = new azurenative.storage.StorageAccount(\"mystorageaccount\", {\n    sku: { name: \"Standard_LRS\" },\n    kind: \"StorageV2\",\n    enableHttpsTrafficOnly: true,  // Enforce HTTPS-only traffic\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptStorageAccounts": {
+            "description": "List of Storage Account names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Storage Accounts to disable public blob access",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "storage-account-public-access",
+      "remediationSteps": "## Fix: Disable Public Blob Access\n\n```typescript\nconst storageAccount = new azurenative.storage.StorageAccount(\"mystorageaccount\", {\n    sku: { name: \"Standard_LRS\" },\n    kind: \"StorageV2\",\n    allowBlobPublicAccess: false,  // Disable public blob access\n    // ... other config\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt Storage Account names using * wildcards",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptStorageAccounts": {
+            "description": "List of Storage Account names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Storage Accounts to use customer-managed keys for encryption",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "storage-account-uses-customer-managed-keys",
+      "remediationSteps": "## Fix: Configure Customer-Managed Keys\n\n```typescript\nconst storageAccount = new azurenative.storage.StorageAccount(\"mystorageaccount\", {\n    sku: { name: \"Standard_LRS\" },\n    kind: \"StorageV2\",\n    encryption: {\n        keySource: \"Microsoft.Keyvault\",  // Use customer-managed keys\n        keyVaultProperties: {\n            keyName: \"my-encryption-key\",\n            keyVaultUri: \"https://my-keyvault.vault.azure.net/\",\n        },\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt VM names using * wildcards",
+            "type": "boolean"
+          },
+          "approvedImages": {
+            "description": "List of approved VM images in 'publisher:offer:sku' format. If not specified, uses default approved images.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptVms": {
+            "description": "List of VM names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require pre-approved hardened VM images from trusted publishers",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "10. Approved Versions",
+        "specification": "Only allow deployment of approved, patched, and supported versions of runtimes, images, and dependencies.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "vm-approved-images",
+      "remediationSteps": "## Fix: Use Approved VM Images\n\n```typescript\nconst vm = new azurenative.compute.VirtualMachine(\"my-vm\", {\n    hardwareProfile: { vmSize: \"Standard_D2s_v3\" },\n    storageProfile: {\n        imageReference: {\n            publisher: \"Canonical\",              // Use approved publisher\n            offer: \"UbuntuServer\",               // Use approved offer\n            sku: \"20.04-LTS\",                    // Use approved SKU\n            version: \"latest\",\n        },\n        // ... other config\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt VM names using * wildcards",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptVMs": {
+            "description": "List of VM names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require VMs to use managed disks only",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "vm-requires-managed-disks",
+      "remediationSteps": "## Fix: Configure VM to Use Managed Disks\n\n```typescript\nconst vm = new azurenative.compute.VirtualMachine(\"my-vm\", {\n    hardwareProfile: { vmSize: \"Standard_D2s_v3\" },\n    storageProfile: {\n        osDisk: {\n            createOption: \"FromImage\",\n            managedDisk: {  // Use managed disk, not vhd property\n                storageAccountType: \"Premium_LRS\",\n            },\n        },\n        dataDisks: [{\n            lun: 0,\n            createOption: \"Empty\",\n            diskSizeGB: 128,\n            managedDisk: {  // Use managed disk, not vhd property\n                storageAccountType: \"Premium_LRS\",\n            },\n        }],\n        // ... other config\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    }
+  ],
+  "version": 5,
+  "versionTag": "1.1.1"
+}

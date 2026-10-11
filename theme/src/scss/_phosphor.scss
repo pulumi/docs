@@ -1,0 +1,15 @@
+// Phosphor icon base styles.
+// Applied via the `icon.html` partial which injects class="ph-icon ph-icon--{weight}".
+
+.ph-icon {
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: -0.225em;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+// Note: duotone styling is handled by the inline opacity="0.2" attribute on
+// the secondary <path> inside each <symbol>. Host-page CSS targeting
+// .duotone-primary / .duotone-secondary cannot reach into <use> shadow DOM.

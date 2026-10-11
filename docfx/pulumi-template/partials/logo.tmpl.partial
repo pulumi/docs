@@ -1,0 +1,3 @@
+<a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+  <img id="logo" class="svg" src="{{_rel}}{{{_appLogoPath}}}{{^_appLogoPath}}logo.svg{{/_appLogoPath}}" alt="{{_appName}}" style="height:40px" >
+</a>

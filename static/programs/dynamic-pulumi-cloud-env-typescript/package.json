@@ -1,0 +1,11 @@
+{
+    "name": "dynamic-pulumi-cloud-env-typescript",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0",
+        "axios": "^1.0.0"
+    }
+}

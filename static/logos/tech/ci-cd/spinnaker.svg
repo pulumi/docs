@@ -1,0 +1,20 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path style="mix-blend-mode:multiply" d="M4 29.2916C16.3576 30.5166 26.2802 23.2072 28.7554 20.075C31.2306 16.943 27.4776 2 27.4776 2C23.4092 11.9945 16.0121 27.1424 4 29.2966V29.2916Z" fill="url(#paint0_linear)"/>
+<path style="mix-blend-mode:multiply" d="M9.71436 25.3028C17.0037 25.5712 22.552 20.9874 23.8896 19.0872C25.227 17.187 23.1792 8.62842 23.1792 8.62842C21.1536 14.5572 15.517 23.1964 9.71436 25.3028Z" fill="url(#paint1_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="25.0378" y1="3.65438" x2="11.4302" y2="30.3828" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2B3990"/>
+<stop offset="0.16" stop-color="#1E62A7"/>
+<stop offset="0.32" stop-color="#1485BC"/>
+<stop offset="0.49" stop-color="#0BA1CC"/>
+<stop offset="0.66" stop-color="#05B4D7"/>
+<stop offset="0.83" stop-color="#01C0DE"/>
+<stop offset="1" stop-color="#00C4E0"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="-4622.86" y1="13182.7" x2="-2887.62" y2="13182.7" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2B3990"/>
+<stop offset="0.16" stop-color="#1E62A7"/>
+<stop offset="1" stop-color="#00C4E0"/>
+</linearGradient>
+</defs>
+</svg>

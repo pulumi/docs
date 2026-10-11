@@ -1,0 +1,25 @@
+{{- $id := printf "%v" (.customer | default "") -}}
+{{- $customer := partial "customers/get.html" (dict "id" $id "where" (.where | default "customer-logo.html")) -}}
+{{- $dark := eq (.variant | default "light") "dark" -}}
+{{- $asset := cond (and $dark $customer.logo_on_dark) $customer.logo_on_dark $customer.logo -}}
+{{- $class := printf "customer-logo %s" (.class | default "") -}}
+{{- if .hoverable -}}
+  {{- $class = printf "%s customer-logo-hoverable" $class -}}
+{{- end -}}
+{{- $vars := slice (printf "--logo-aspect-root:%v" $customer.logo_aspect_root) -}}
+{{- with $customer.logo_scale }}{{ $vars = $vars | append (printf "--logo-scale:%v" .) }}{{ end -}}
+{{- $style := delimit $vars ";" | safeCSS -}}
+{{- if $customer.raster -}}
+  {{- partial "fingerprinted-img.html" (dict
+      "src" (printf "logos/customers/%s%s.png" $id (cond (and $dark $customer.logo_on_dark) "-on-dark" ""))
+      "alt" (printf "%s logo" $customer.name)
+      "class" (trim $class " ")
+      "style" $style
+      "width" $customer.logo_w
+      "height" $customer.logo_h
+      "maxWidth" ($.maxWidth | default 300)
+      "loading" ($.loading | default "lazy")) -}}
+{{- else -}}
+  {{- $asset = $asset | fingerprint -}}
+  <img src="{{ $asset.RelPermalink }}" alt="{{ $customer.name }} logo"{{ with $class }} class="{{ trim . " " }}"{{ end }} style="{{ $style }}" width="{{ $customer.logo_w }}" height="{{ $customer.logo_h }}" loading="{{ $.loading | default "lazy" }}" decoding="async" />
+{{- end -}}

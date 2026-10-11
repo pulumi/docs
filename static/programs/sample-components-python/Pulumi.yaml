@@ -1,0 +1,10 @@
+name: sample-components-python
+description: A Pulumi Python program that builds and uses a static page component
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python

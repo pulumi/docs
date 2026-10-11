@@ -1,0 +1,7 @@
+name: aws-acm-certificate-java
+runtime: java
+description: Creates a simple ACM certificate resource
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-java

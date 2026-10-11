@@ -1,0 +1,12 @@
+diff --git a/content/docs/x/test.md b/content/docs/x/test.md
+new file mode 100644
+index 0000000..f0d6043
+--- /dev/null
++++ b/content/docs/x/test.md
+@@ -0,0 +1,6 @@
++---
++title: Test
++---
++
++Pulumi Copilot costs $0.20 per resource hour.
++See https://example.com/pricing for details.

@@ -1,0 +1,22 @@
+name: awsx-elb-vpc-yaml
+runtime: yaml
+description: An example that deploys an ApplicationLoadBalancer in a VPC.
+
+resources:
+  # Allocate (or get) a custom VPC.
+  vpc:
+    type: awsx:ec2:Vpc
+
+  # Create a load balancer in the default VPC listening on port 80.
+  alb:
+    type: awsx:lb:ApplicationLoadBalancer
+    properties:
+      listener:
+        port: 80
+
+      # Associate the load balancer with the VPC's `public` or `private` subnet.
+      subnetIds: ${vpc.publicSubnetIds}
+
+outputs:
+  # Export the resulting URL so that it's easy to access.
+  endpoint: ${alb.loadBalancer.dnsName}

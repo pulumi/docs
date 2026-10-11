@@ -1,0 +1,7 @@
+name: kubernetes-csi-driver-go
+description: Example on how to deploy the Pulumi ESC CSI Provider
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-go

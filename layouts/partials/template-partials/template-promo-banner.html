@@ -1,0 +1,49 @@
+{{/*
+    Template Promo Banner Partial
+
+    Parameters:
+    - title: Banner title
+    - description: Banner description
+    - cta_text: CTA button text
+    - cta_link: CTA button link
+    - bg_image: Optional background image path
+    - anchor: Optional anchor for section id (defaults to "promo-banner")
+*/}}
+
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+{{ $bgImage := .bg_image }}
+{{ $anchor := .anchor | default "promo-banner" }}
+
+{{/* Fingerprint and optimize the background image. SVGs are fingerprinted as-is; rasters get resized + WebP-encoded. */}}
+{{ $bgImageURL := "" }}
+{{ if $bgImage }}
+    {{ $fpSrc := $bgImage | strings.TrimPrefix "/" }}
+    {{ $bgAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+    {{ if eq $bgAsset.MediaType.SubType "svg" }}
+        {{ $bgImageURL = ($bgAsset | fingerprint).RelPermalink }}
+    {{ else }}
+        {{/* Larger than fingerprinted-img.html's 800px default since this is a full-bleed background image. */}}
+        {{ $maxWidth := 1600 }}
+        {{ if gt $bgAsset.Width $maxWidth }}
+            {{ $bgAsset = $bgAsset.Process (printf "resize %dx webp q90" $maxWidth) }}
+        {{ else }}
+            {{ $bgAsset = $bgAsset.Process "webp q90" }}
+        {{ end }}
+        {{ $bgImageURL = ($bgAsset | fingerprint).RelPermalink }}
+    {{ end }}
+{{ end }}
+
+<section id="{{ $anchor }}" class="rounded-2xl template-promo-banner px-12 py-24 text-white {{ if $bgImageURL }}bg-cover bg-center{{ else }}bg-violet-primary{{ end }}" {{ if $bgImageURL }}style="background-image: url('{{ $bgImageURL }}');"{{ end }}>
+    {{ if $title }}
+    <h2 class="promo-banner-title">{{ $title }}</h2>
+    {{ end }}
+    {{ if $description }}
+    <p class="promo-banner-description mb-8 w-full md:w-1/2">{{ $description }}</p>
+    {{ end }}
+    {{ if $ctaText }}
+    <p class="promo-banner-cta">{{ $ctaText }}</p>
+    {{ end }}
+</section>

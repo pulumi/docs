@@ -1,0 +1,940 @@
+// Template Components Stylesheet
+// Styles for reusable template partials (template-hero, template-logo-banner, etc.)
+
+@mixin page-header {
+    @apply text-black heading-1;
+}
+
+@mixin section-header {
+    @apply heading-1;
+    strong {
+        @apply text-violet-primary;
+    }
+}
+
+
+@mixin product-hero-heading {
+    @apply text-black text-center not-italic heading-xl mb-4;
+}
+
+@mixin section-description {
+    @apply font-normal leading-normal body-xl mt-0;
+}
+
+@mixin section-subheader-bold {
+    @apply font-semibold leading-normal text-black body-2xl;
+}
+
+@mixin section-hint {
+    @apply font-semibold leading-normal body-xl;
+}
+
+@mixin section-hint-accent {
+    @apply font-overline text-gray-primary;
+}
+
+@mixin edge-fade {
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(to right, white, transparent);
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(to left, white, transparent);
+    }
+}
+
+
+// Offset anchored sections within template pages to account for the fixed nav.
+.template-page-content section[id] {
+    @apply scroll-mt-22;
+
+    @include screen-lg {
+        @apply scroll-mt-28;
+    }
+}
+
+.template-hero {
+    .hero-tag-line {
+        @include section-hint-accent();
+    }
+
+    .hero-event-details {
+        @apply flex flex-wrap items-center font-semibold leading-normal body-lg text-gray-primary;
+    }
+
+    .hero-date-and-location {
+        @apply font-semibold;
+
+        a,
+        a:hover,
+        a:visited {
+            color: inherit;
+        }
+    }
+
+    .hero-booth-number {
+        @apply font-semibold text-violet-primary;
+    }
+
+    .hero-bullet {
+        @apply text-gray-400;
+    }
+
+    .title {
+        @include page-header();
+    }
+
+    .description {
+        @include section-description();
+    }
+
+
+    // Product page widgets
+    //
+    // The headline is a single markdown string in frontmatter: *emphasis* (or
+    // **strong**) marks the run that renders in violet. Color is the only
+    // change — the run keeps the heading's own weight and stays upright.
+    .product-hero-heading {
+        @include product-hero-heading();
+
+        em,
+        strong {
+            @apply text-violet-primary;
+            font-style: inherit;
+            font-weight: inherit;
+        }
+    }
+
+    .product-hero-description {
+        @include section-description();
+        @apply max-w-xl;
+    }
+
+    .product-hero-visual {
+        @apply w-full;
+    }
+}
+
+.template-logo-banner {
+    .logo-banner-text {
+        @include section-hint-accent();
+    }
+
+    .logo-container {
+        img {
+            @apply w-auto h-[54px] max-h-[54px];
+        }
+    }
+
+    .logo-grid {
+        @apply gap-12;
+    }
+
+    &--bordered {
+        .logo-grid {
+            @apply gap-[10px];
+        }
+
+        .logo-container {
+            @apply w-[150px] h-[150px] border border-violet-300 rounded-[10px];
+
+            img {
+                @apply w-auto h-auto max-h-[107px] max-w-[130px];
+            }
+        }
+    }
+}
+
+.template-features {
+    .features-tag-line {
+        @include section-hint-accent();
+    }
+
+    .features-title {
+        @include section-header();
+    }
+
+    .features-description {
+        @include section-description();
+    }
+
+    .feature-title {
+        @apply heading-4;
+        @apply flex flex-row items-center;
+
+        .ph-icon {
+            @apply flex-shrink-0 text-violet-primary;
+        }
+    }
+
+    .feature-description {
+        @apply body-lg;
+    }
+
+    .features-content {
+        @include screen-xl {
+            width: 37.5%;
+        }
+    }
+
+    .features-image {
+        @include screen-xl {
+            width: 62.5%;
+        }
+    }
+}
+
+.template-card {
+    @extend .card;
+    @apply flex flex-1 items-start p-8;
+
+    &.template-card--highlight {
+        @apply bg-violet-50 border-0;
+    }
+
+    .card-label {
+        @include section-hint-accent();
+    }
+
+    .card-title {
+        @apply heading-3;
+    }
+
+    .card-subheader {
+        @apply heading-4;
+        @apply text-gray-primary;
+    }
+
+    .card-description {
+        @apply body-lg;
+    }
+}
+
+.template-promo-banner {
+    .promo-banner-title {
+        @apply heading-3;
+        @apply text-white;
+    }
+
+    .promo-banner-description {
+        @apply body-lg;
+        @apply text-white;
+    }
+
+    .promo-banner-cta {
+        @include section-hint();
+        @apply text-violet-500;
+    }
+}
+
+.template-three-column {
+    .three-column-tag-line {
+        @include section-hint-accent();
+    }
+
+    .three-column-title {
+        @include section-header();
+    }
+
+    .three-column-item-title {
+        @apply text-black font-semibold heading-3;
+
+        .ph-icon {
+            @apply flex-shrink-0 text-violet-primary;
+        }
+    }
+
+    .three-column-item-description {
+        @apply body-base mt-0;
+    }
+}
+
+// Shared feature card (icon above title + description) — used by template-feature-split and template-three-column (icon_layout: above)
+.template-feature-card-icon {
+    @apply text-violet-primary mb-3 body-2xl;
+
+    svg {
+        width:32px;
+        height:32px;
+        @apply flex-shrink-0;
+    }
+}
+
+.template-feature-card-title {
+    @apply text-black font-semibold mt-0! mb-3 heading-3;
+}
+
+.template-feature-card-description {
+    @apply body-base;
+
+    ul {
+        @apply list-disc pl-5 mt-2 text-gray-700;
+
+        li {
+            @apply mb-1;
+        }
+    }
+}
+
+.template-testimonial {
+    @apply font-body bg-violet-50 bg-cover bg-center bg-no-repeat;
+
+    &.template-testimonial-bg-1 {
+        background-image: url('/images/template-testimonial-bg-1.svg');
+    }
+
+    &.template-testimonial-bg-2 {
+        background-image: url('/images/template-testimonial-bg-2.svg');
+    }
+
+    .template-testimonial-logo img {
+        @apply grayscale brightness-0 h-12 w-auto;
+    }
+}
+
+.template-feature-callout {
+    @apply font-body bg-violet-50 bg-cover bg-center bg-no-repeat;
+
+    &.template-feature-callout-bg-1 {
+        background-image: url('/images/template-testimonial-bg-1.svg');
+    }
+
+    &.template-feature-callout-bg-2 {
+        background-image: url('/images/template-testimonial-bg-2.svg');
+    }
+
+    .feature-callout-tag-line {
+        @include section-hint-accent();
+    }
+
+    .feature-callout-title {
+        @include section-header();
+        @apply mb-0;
+    }
+
+    .feature-callout-lead {
+        @apply text-xl md:text-2xl text-black m-0;
+    }
+
+    .feature-callout-description {
+        @include section-description();
+
+        a {
+            @apply text-inherit no-underline;
+        }
+    }
+}
+
+.template-location {
+    .location-tag-line {
+        @include section-hint-accent();
+    }
+
+    .location-title {
+        @include section-header();
+    }
+
+    .location-details {
+        @include section-subheader-bold();
+        @apply text-gray-800;
+    }
+
+    .location-description {
+        @apply body-lg text-gray-primary;
+    }
+
+    iframe {
+        @apply rounded-2xl;
+    }
+}
+
+
+.template-section-header {
+
+    .section-header-image-above-img {
+        @apply w-auto h-auto max-w-[350px];
+    }
+
+    .section-header-tag-line {
+        @include section-hint-accent();
+        @apply text-center;
+    }
+
+    .section-header-tag-wrap {
+        @apply mb-2;
+    }
+
+    .section-header-title {
+        @include section-header();
+    }
+
+    .section-header-description {
+        @include section-description();
+        @apply max-w-xl mx-auto;
+
+        a {
+            @apply text-inherit no-underline;
+        }
+    }
+
+    &.section-header--left {
+        .section-header-tag-line {
+            @apply text-left;
+        }
+
+        .section-header-description {
+            @apply max-w-2xl ml-0 mr-auto;
+        }
+    }
+}
+
+.template-section-header-with-code,
+.template-section-header-with-image {
+    .section-header-split-inner {
+        @apply gap-12 xl:gap-24;
+    }
+
+    .section-header-split-content {
+        @apply xl:min-w-0 mt-20;
+        flex: 1.25 1 0%;
+    }
+
+    .section-header-split-image {
+        @apply xl:min-w-0 flex-1;
+
+        pulumi-chooser {
+            @apply block w-full;
+
+            > ul {
+                @apply w-full;
+            }
+        }
+    }
+
+    .section-header-split-tag {
+        @include section-hint-accent();
+        @apply m-0;
+    }
+
+    .section-header-split-title {
+        @include section-header();
+        @apply text-black text-left;
+    }
+
+    .section-header-split-description {
+        @include section-description();
+
+        p {
+            @apply m-0;
+        }
+
+        p+p {
+            @apply mt-4;
+        }
+    }
+
+    pulumi-chooser > ul li.active {
+        @apply border-violet-primary;
+        border-image-source: none;
+    }
+
+}
+
+.template-section-header-with-image {
+    .section-header-split-content {
+        @apply flex-1;
+    }
+}
+
+.template-counter-cards {
+    .counter-card-number {
+        @include page-header();
+        @apply text-black;
+    }
+
+    .counter-card-label {
+        @apply body-lg;
+        @apply m-0;
+    }
+
+    // Opt-in accent for a stat row set inside body copy, where the default black
+    // numbers read as a second set of headings.
+    &.template-counter-cards--violet .counter-card-number {
+        @apply text-violet-primary;
+    }
+}
+
+.template-icon-grid {
+    .icon-grid-tag-line {
+        @include section-hint-accent();
+        @apply m-0;
+    }
+
+    .icon-grid-tag-wrap {
+        @apply mb-2;
+    }
+
+    .icon-grid-title {
+        @include section-header();
+        @apply m-0!;
+    }
+
+    .icon-grid-description {
+        @include section-description();
+    }
+}
+
+// Event list styles. The event card itself is composed from shared primitives
+// (.card / .card-hover / .badge / .btn) plus inline Tailwind in
+// layouts/partials/events/event-card.html.
+.template-event-list {
+    .event-list-month-header {
+        @apply font-overline m-0 text-gray-950;
+    }
+}
+
+// Single event page styles
+.template-event-single-header {
+    .event-single-title {
+        @apply text-black heading-xl max-w-prose mb-4;
+    }
+}
+
+// Violet-50 highlight card (matches the "what you'll learn" panel).
+.event-summary-cloud-notice {
+    @apply body-base rounded-lg p-6 mb-6 text-gray-950 bg-violet-50;
+
+    a {
+        @apply font-semibold text-violet-primary;
+    }
+}
+
+.template-event-summary {
+    .event-summary-description {
+        @apply body-base text-gray-950;
+
+        p:first-child {
+            @apply mt-0;
+        }
+
+        p + p {
+            @apply mt-4;
+        }
+    }
+}
+
+.event-summary-learn {
+    .event-summary-learn-title {
+        @apply font-overline text-gray-950 mb-4;
+    }
+
+    .event-summary-learn-list {
+        @apply list-none p-0 m-0 flex flex-col gap-3;
+
+        li {
+            @apply flex items-start body-base m-0 text-gray-950;
+
+            svg {
+                @apply mt-0.5 flex-shrink-0 text-violet-primary;
+            }
+        }
+    }
+}
+
+.template-event-speakers {
+    .event-speaker-photo {
+        @apply rounded-full object-cover w-20 h-20;
+    }
+
+    // Hosts/moderators read as secondary to the panel — smaller portrait.
+    .event-host-photo {
+        @apply w-14 h-14;
+    }
+
+    .event-speaker-name {
+        @apply font-semibold body-base text-gray-950;
+    }
+
+    .event-speaker-role {
+        @apply font-normal body-sm text-gray-700;
+    }
+
+    // widgets/social-icons.html is shared with the team, author, and leadership
+    // pages, so trim it here rather than in the widget. Two things need it: the
+    // icons size off the inherited font size (1.25em), which lands them larger
+    // than the body-sm role line they sit under; and the <li>s pick up the
+    // vertical margin main's base list styles give every list item, which reads
+    // as a gap above the row.
+    .event-speaker-links {
+        .ph-icon {
+            @apply size-4;
+        }
+
+        li {
+            @apply my-0;
+        }
+    }
+}
+
+.template-feature-split {
+    .product-two-column-heading {
+        @apply heading-1;
+        strong {
+            @apply text-violet-primary;
+        }
+    }
+
+    .product-two-column-description {
+        @include section-description();
+
+        p:first-of-type {
+            @apply font-semibold mt-0;
+        }
+
+        p+p {
+            @apply mt-4;
+        }
+    }
+
+}
+
+.template-video-embed {
+    @apply w-full;
+}
+
+.template-social-carousel {
+    .template-social-carousel-rows {
+        @apply overflow-hidden pb-8 relative;
+        @include edge-fade;
+    }
+
+    .template-social-carousel-header {
+        @apply text-center pb-16 px-6;
+
+        h2 {
+            @include section-header();
+        }
+    }
+
+    .template-social-carousel-row {
+        @apply mb-6;
+    }
+
+    .social-carousel-card {
+        @extend .card;
+        @apply p-4 md:p-8 flex flex-col gap-4 w-full min-h-[320px];
+
+        p {
+            @apply text-gray-primary text-left leading-relaxed m-0 line-clamp-5;
+        }
+
+        .social-carousel-card-author {
+            @apply flex items-center gap-4;
+
+            img {
+                @apply rounded-full w-8 h-8 shrink-0;
+            }
+
+            a {
+                @apply text-gray-700 font-semibold text-sm no-underline;
+                &:hover { @apply underline; }
+            }
+        }
+    }
+}
+
+.template-case-study-cards {
+    h2 {
+        @include section-header();
+    }
+
+    .case-study-cards-description {
+        @include section-description();
+
+        p { @apply mt-0; }
+    }
+
+    .case-study-swiper-wrapper {
+        @apply relative;
+        @include edge-fade;
+    }
+
+    pulumi-swiper .swiper-slide {
+        @apply items-stretch h-[50vh];
+    }
+
+    .case-study-card {
+        @extend .card;
+        @extend .card-hover;
+        @apply flex flex-col no-underline text-black text-left;
+
+        &--half {
+            @apply flex-1 items-center justify-center p-8;
+        }
+
+        &--full {
+            @apply p-8 justify-between min-h-[50vh];
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Hero With Code — composite: code block + SVG decorative overlay
+// ---------------------------------------------------------------------------
+
+// Container that holds both the code block and the SVG overlay.
+// The code block drives the height; the overlay is layered on top.
+.hero-code-visual {
+    position: relative;
+    width: 100%;
+
+    // Shift the composite so the code block, not the canvas, reads as centered:
+    // half the block's 23% left offset (code_offsets, page frontmatter). Only from
+    // lg — below that the visual fills its container and the shift would push the
+    // artwork past the edge.
+    @include screen-lg {
+        transform: translateX(-11.5%);
+    }
+}
+
+// The code-snippets block is absolutely positioned within the aspect-ratio canvas
+// so both it and the SVG overlay scale together as one composite unit.
+// All positioning is set via inline style from the code_offsets frontmatter map.
+.hero-code-block {
+    position: absolute;
+    z-index: 0;
+}
+
+// The SVG overlay is positioned to cover the entire visual canvas.
+// pointer-events: none ensures clicks, scroll, and dropdown interactions
+// pass through to the code block underneath. The dropdown menu itself has
+// z-index: 50 so it still renders above the overlay when open.
+.hero-code-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    pointer-events: none;
+    z-index: 1;
+}
+
+// When the code block is absolutely positioned with both top and bottom offsets,
+// the snippets panel fills the computed block height. Requires both top and bottom
+// to be set in code_offsets frontmatter for height to resolve correctly.
+.hero-code-block .code-snippets-container {
+    height: 100%;
+}
+
+// ---------------------------------------------------------------------------
+// Code Snippets — language-dropdown code block component
+// ---------------------------------------------------------------------------
+
+.code-snippets-container {
+    @apply rounded-lg overflow-scroll w-full;
+    padding-bottom: 25%;
+    border: 1px solid var(--color-violet-900);
+    background-color: var(--color-violet-950);
+    height: 350px;
+    position: relative;
+
+    // Hide scrollbars while preserving scroll functionality
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE/Edge
+
+    &::-webkit-scrollbar {
+        display: none; // Chrome/Safari/Opera
+    }
+
+    // Kill the default pre margin/rounding inside container
+    pre {
+        @apply rounded-none m-0;
+
+        // Hide scrollbars on pre too (horizontal overflow)
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .highlight {
+        @apply m-0;
+    }
+
+    // Hide the copy button — not needed in the template code snippet widget
+    // !important needed to override the @media (min-width: 768px) display:flex in _copy-button.scss
+    .copy-button-container {
+        display: none !important;
+    }
+}
+
+.code-snippets-titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-violet-950);
+    border-bottom: 1px solid var(--color-violet-900);
+    padding: 0.5rem 1rem;
+    min-height: 2.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.code-snippets-title {
+    font-family: "Monaspace Neon Var", "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.75rem;
+    color: var(--color-violet-200);
+    letter-spacing: 0.01em;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 0.75rem;
+}
+
+// Dropdown wrapper
+.code-snippets-dropdown {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.code-snippets-dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.375rem;
+    padding: 0.25rem 0.5rem;
+    background: transparent;
+    border: 1px solid var(--color-violet-900);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--color-violet-200);
+    font-family: "Monaspace Neon Var", "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    transition: border-color 0.15s ease, color 0.15s ease;
+    min-width: 9rem;
+
+    &:hover,
+    &:focus {
+        border-color: var(--color-violet-400);
+        color: var(--color-violet-100);
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-violet-400);
+        outline-offset: 2px;
+    }
+}
+
+.code-snippets-dropdown-chevron {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.15s ease;
+
+    .open & {
+        transform: rotate(180deg);
+    }
+}
+
+.code-snippets-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    min-width: 9rem;
+    background-color: var(--color-violet-950);
+    border: 1px solid var(--color-violet-900);
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    z-index: 50;
+    list-style: none;
+    margin: 0;
+    padding: 0.25rem 0;
+    overflow: hidden;
+
+    &.open {
+        display: block;
+    }
+}
+
+.code-snippets-dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    margin:0;
+    font-family: "Monaspace Neon Var", "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.75rem;
+    color: var(--color-violet-400);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.1s ease, color 0.1s ease;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: transparent;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+        transition: background-color 0.1s ease;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-violet-900);
+        color: var(--color-violet-100);
+        outline: none;
+    }
+
+    &.active {
+        color: var(--color-violet-100);
+
+        &::before {
+            background-color: var(--color-violet-100);
+        }
+    }
+}
+
+// Code panels within the container
+.code-snippets-panels {
+    position: relative;
+}
+
+.code-snippets-panel {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+// Responsive font sizes for the code snippet widget
+.code-snippets-container code,
+.code-snippets-title,
+.code-snippets-dropdown-trigger,
+.code-snippets-dropdown-item {
+    font-size: clamp(10px, 3vw, 12px);
+}

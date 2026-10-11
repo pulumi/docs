@@ -1,0 +1,6 @@
+extends: occurrence
+message: "Heavy em-dash use in this paragraph (more than 2). Dense em-dash usage is often associated with AI-drafted prose; consider substituting commas or periods where it doesn't change emphasis."
+level: warning
+scope: paragraph
+max: 2
+token: "—"

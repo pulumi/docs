@@ -1,0 +1,3 @@
+name: unit-testing-webserver-typescript
+runtime: nodejs
+description: A sample Pulumi program used in the unit testing guide.

@@ -1,0 +1,28 @@
+{{- /*
+    In-body "Program the Cloud" CTA card for blog posts. Single source of markup
+    for the manual `blog/cta-card` shortcode. Adapted from `blog/sidebar-cta.html`
+    for the full-width prose column (violet-50 card, overline eyebrow, `.btn btn-primary`).
+
+    Takes a dict; every field defaults so an empty dict renders the generic card:
+        title  — eyebrow heading                (default "Program the Cloud")
+        text   — body copy, pre-rendered HTML ok (default sidebar-cta copy)
+        label  — button label                   (default site.Params.cta.primary.label)
+        href   — button destination             (default site.Params.cta.primary.href)
+        track  — data-track value for analytics  (default "blog-body-cta")
+
+    Note: uses <p>/<span>, never <h2>-<h4>, so it can't collide with the post's
+    heading styles inside .blog-post-content. Blog is light-theme only — no dark: variants.
+*/ -}}
+{{- $title := .title | default "Program the Cloud" -}}
+{{- $text := .text | default "Create, deploy, and manage cloud infrastructure using your favorite language." -}}
+{{- $label := .label | default site.Params.cta.primary.label -}}
+{{- $href := .href | default site.Params.cta.primary.href -}}
+{{- $track := .track | default "blog-body-cta" -}}
+<div class="rounded-lg bg-violet-50 p-6 my-8">
+    <p class="heading-4 m-0 mb-3 flex items-center gap-1.5">{{ $title }}</p>
+    <div class="body-base m-0 text-gray-950">{{ $text | safeHTML }}</div>
+    <a href="{{ $href }}" data-track="{{ $track }}" class="btn btn-primary mt-4">
+        {{ $label }}
+        {{ partial "icon.html" (dict "name" "arrow-right" "class" "size-4") }}
+    </a>
+</div>

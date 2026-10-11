@@ -1,0 +1,88 @@
+{{/* Content Aggregator Utility - Extracts effective content from various page types */}}
+{{/* Returns a dict with 'content' (string), 'wordCount' (int), and 'cloudServices' (slice) */}}
+
+{{ $result := dict "content" "" "wordCount" 0 "cloudServices" slice }}
+
+{{/* Strategy 1: Traditional markdown content */}}
+{{ if .Content }}
+  {{ $result = dict 
+    "content" .Content 
+    "wordCount" .WordCount 
+    "cloudServices" slice 
+  }}
+
+{{/* Strategy 2: Docs home pages */}}
+{{ else if .Params.sections }}
+  {{ $aggregated := slice }}
+  
+  {{/* Add h1 and description */}}
+  {{ with .Params.h1 }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  {{ with .Params.description }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  
+  {{/* Extract section content */}}
+  {{ range .Params.sections }}
+    {{ with .heading }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+    {{ with .description }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+    {{ with .description_md }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+    
+    {{/* Extract card content */}}
+    {{ range .cards }}
+      {{ with .heading }}
+        {{ $aggregated = $aggregated | append . }}
+      {{ end }}
+      {{ with .label }}
+        {{ $aggregated = $aggregated | append . }}
+      {{ end }}
+      {{ with .description }}
+        {{ $aggregated = $aggregated | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{ $combinedContent := delimit $aggregated " " }}
+  {{ $wordCount := len (split $combinedContent " ") }}
+  
+  {{ $result = dict 
+    "content" $combinedContent 
+    "wordCount" $wordCount 
+    "cloudServices" slice 
+  }}
+
+{{/* Strategy 3: Minimal pages - use title and description */}}
+{{ else }}
+  {{ $aggregated := slice }}
+  
+  {{ with .Title }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  {{ with .Params.meta_desc }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  {{ with .Params.description }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  {{ with .Summary }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  
+  {{ $combinedContent := delimit $aggregated " " }}
+  {{ $wordCount := len (split $combinedContent " ") }}
+  
+  {{ $result = dict 
+    "content" $combinedContent 
+    "wordCount" $wordCount 
+    "cloudServices" slice 
+  }}
+{{ end }}
+
+{{ return $result }}

@@ -1,0 +1,10 @@
+name: aws-iam-role-policyattachment-managedpolicy-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an IAM role and a policy attachment with an AWS managed policy on AWS.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python

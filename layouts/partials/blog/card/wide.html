@@ -1,0 +1,36 @@
+{{- /*
+    Wide card: category, title (h3), excerpt, and byline stacked in a column on
+    the left, with an optional square feature image on the right. The full-width
+    counterpart to the medium/contained tiles — used by the homepage feed's card
+    view (blog/card/list-row.html) and by in-body embeds (the blog/card shortcode).
+
+    The caller owns the wrapper element, because the two uses need different ones:
+    the homepage row is a bare, border-separated row that starts hidden (the view
+    toggle flips it to flex), while an embed is a boxed, padded .card. So this
+    renders the wrapper's *contents* and takes its classes and attributes as params.
+
+    The title carries the stretched link (after:inset-0), so the wrapper — or an
+    ancestor of it — must be `relative`, and `group` for the hover color.
+
+    Params:
+      page  (required) the post page.
+      class (optional) classes for the wrapper <div>. Must include a display
+            utility; there is no default, since the row's is toggled at runtime.
+      attrs (optional) raw attributes for the wrapper <div>.
+*/ -}}
+{{- $page := .page -}}
+{{- $excerpt := $page.Params.meta_desc -}}
+{{- if not $excerpt }}{{ $excerpt = $page.Summary | plainify | truncate 160 }}{{ end -}}
+<div{{ with .attrs }} {{ . | safeHTMLAttr }}{{ end }} class="{{ .class }}">
+    <div class="flex min-w-0 flex-1 flex-col items-start gap-2">
+        {{ partial "blog/category-badge.html" (dict "category" $page.Params.category "link" false) }}
+        <h3 class="heading-4 mt-1 mb-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-card-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h3>
+        {{- with $excerpt }}<p class="m-0! body-sm text-service-black line-clamp-2">{{ . }}</p>{{ end -}}
+        <div class="mt-1">{{ partial "blog/post-meta.html" (dict "page" $page) }}</div>
+    </div>
+    {{ if partial "blog/has-feature-image.html" $page }}
+    <div class="flex size-20 sm:size-28 lg:size-36 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-violet-950">
+        {{ partialCached "blog/feature-image.html" (dict "page" $page "w" 288 "h" 288 "mode" "fit" "class" "h-full w-auto max-w-none") $page.RelPermalink "fit-288x288" }}
+    </div>
+    {{ end }}
+</div>

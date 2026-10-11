@@ -1,0 +1,44 @@
+{{- /*
+    "In this post" table of contents — h2 headings only, from .Fragments.Headings.
+    Nothing renders for posts with 2 or fewer h2s — a TOC that short isn't worth
+    the space it takes.
+
+    Params:
+      page        (required) the post page
+      collapsible true → render as a <details> disclosure (used on mobile, above
+                  the content); default false → the sticky-sidebar nav.
+*/ -}}
+{{- $page := .page -}}
+{{- $collapsible := .collapsible -}}
+{{- $h2s := slice -}}
+{{- range $page.Fragments.Headings -}}
+    {{- if eq .Level 2 -}}
+        {{- $h2s = $h2s | append . -}}
+    {{- else -}}
+        {{- range .Headings }}{{ if eq .Level 2 }}{{ $h2s = $h2s | append . }}{{ end }}{{ end -}}
+    {{- end -}}
+{{- end -}}
+{{- if gt (len $h2s) 2 -}}{{- with $h2s -}}
+    {{- if $collapsible -}}
+        <details class="group border-b py-3 -mt-8">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 marker:hidden [&::-webkit-details-marker]:hidden">
+                <span class="font-overline-sm text-service-black">In this post</span>
+                {{ partial "icon.html" (dict "name" "caret-down" "class" "size-4 shrink-0 text-gray-500 transition-transform group-open:rotate-180") }}
+            </summary>
+            <ul class="m-0 mt-4 flex list-none flex-col gap-3 p-0">
+                {{ range . }}
+                <li class="m-0 leading-snug"><a href="#{{ .ID }}" data-track="blog-toc" class="block font-semibold text-service-black transition-colors hover:text-violet-primary">{{ .Title | plainify }}</a></li>
+                {{ end }}
+            </ul>
+        </details>
+    {{- else -}}
+        <nav data-blog-toc aria-label="Table of contents">
+            <p class="font-overline-sm mb-4 text-service-black">In this post</p>
+            <ul class="m-0 flex list-none flex-col gap-2 p-0">
+                {{ range . }}
+                <li class="m-0 leading-snug"><a href="#{{ .ID }}" data-track="blog-toc" class="body-sm block font-semibold text-service-black transition-colors hover:text-violet-primary">{{ .Title | plainify }}</a></li>
+                {{ end }}
+            </ul>
+        </nav>
+    {{- end -}}
+{{- end -}}{{- end -}}

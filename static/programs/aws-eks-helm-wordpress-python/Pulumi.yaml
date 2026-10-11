@@ -1,0 +1,6 @@
+name: aws-eks-helm-wordpress-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys a WordPress Helm chart to an EKS cluster.

@@ -1,0 +1,7 @@
+name: aws-import-export-pulumi-config-go
+runtime: go
+description: An example that retrieves and exports a Pulumi config value
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-go

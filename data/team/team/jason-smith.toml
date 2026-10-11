@@ -1,0 +1,11 @@
+id = "jason-smith"
+name = 'Jason "Jay" Smith'
+status = "guest"
+role = "puluminary"
+title = "Cloud Architect"
+company = "Google"
+
+[social]
+linkedin = "jasonsmithio"
+github = "jasonsmithio"
+

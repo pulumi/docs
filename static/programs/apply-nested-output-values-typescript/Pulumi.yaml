@@ -1,0 +1,7 @@
+name: apply-nested-output-values-typescript
+runtime: nodejs
+description: Demonstrates accessing nested output values using apply and lifting
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

@@ -1,0 +1,10 @@
+id = "cory-hall"
+name = "Cory Hall"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "corymhall"
+linkedin = "corymhall27"

@@ -1,0 +1,10 @@
+id = "iaroslav-titov"
+name = "Iaroslav Titov"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "IaroslavTitov"
+linkedin = "iaroslavtitov"

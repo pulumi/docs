@@ -1,0 +1,636 @@
+const { HtmlUrlChecker } = require("broken-link-checker");
+const httpServer = require("http-server");
+const Sitemapper = require("sitemapper").default;
+const sitemap = new Sitemapper();
+const path = require("path");
+const fs = require("fs");
+
+// Internal domain for separating internal vs external broken links
+const INTERNAL_DOMAIN = "pulumi.com";
+// CDN subdomains serve binary downloads, not documentation, and the link checker
+// cannot reliably handle CDN redirects for binary files.
+const CDN_SUBDOMAINS = ["get.pulumi.com"];
+
+// Helper function to check if a URL is an internal Pulumi link
+function isInternalLink(url) {
+    try {
+        const urlObj = new URL(url);
+        if (CDN_SUBDOMAINS.includes(urlObj.hostname)) return false;
+        return urlObj.hostname === INTERNAL_DOMAIN || urlObj.hostname.endsWith(`.${INTERNAL_DOMAIN}`);
+    } catch {
+        return false;
+    }
+}
+
+// Path of the file the checker writes its final results to. Downstream tooling
+// (the link-fix workflow) reads this and hands it to the Claude Code action.
+const RESULTS_FILE = ".broken-links.json";
+
+// Additional routes to check that are not included in the sitemap.
+const additionalRoutes = [
+    "https://github.com/pulumi/pulumi",
+    // Alternative version of the home page for Google ads.
+    "https://www.pulumi.com/b/",
+    "https://www.pulumi.com/registry/sitemap.xml",
+    // Cloud REST API schema pages carry `block_external_search_index: true` (they're
+    // a large, uniformly auto-generated set with no search intent of their own; see
+    // CONTRIBUTING.md), which also drops them from sitemap.xml, so the sitemap-derived
+    // crawl below never visits any of them and their outbound links go unchecked.
+    // All ~800 pages share one template, so one representative page is enough to
+    // catch a template-wide broken-link regression even without full coverage.
+    "https://www.pulumi.com/docs/reference/cloud-rest-api/schema/decryptenvironmentsecretsrequest/",
+]
+
+
+/**
+ *  This script uses the programmatic API of https://github.com/stevenvachon/broken-link-checker
+    to check the links (including images, iframes, and client-side redirects) for either an individual page
+    or for a whole site. Usage:
+
+    # Log successes as well as failures.
+    $ DEBUG=1 node scripts/check-links.js "https://www.pulumi.com"
+ */
+
+let [ baseURL, maxRetries ] = process.argv.slice(2);
+let retryCount = 0;
+
+if (!baseURL) {
+    throw new Error("A baseURL (e.g., 'https://pulumi.com') is required.");
+}
+
+if (!maxRetries || Number.isNaN(maxRetries)) {
+    maxRetries = 0;
+}
+
+// Globally patch bhttp, broken-link-checker's HTTP library. We do with sadness because
+// BLC doesn't expose an API for setting custom HTTP headers, and many services reject
+// HTTP requests that lack certain headers (like Accept) or other characteristics.
+const bhttp = require("bhttp");
+const oldRequest = bhttp.request;
+bhttp.request = function() {
+    const [ url, options, callback ] = arguments;
+
+    // Modify request options.
+    // https://git.cryto.net/joepie91/node-bhttp/src/branch/master/lib/bhttp.js#L886
+    options.headers.accept = "*/*";
+
+    // Some CDNs reject requests that don't provide an acceptable accept-encoding header.
+    // The checker's underlying HTTP library seems to support deflate compression best, so
+    // we use that for all requests.
+    options.headers["accept-encoding"] = "deflate";
+
+    return oldRequest.apply(this, arguments);
+};
+
+// Run.
+checkLinks();
+
+// Runs the checker.
+async function checkLinks() {
+    const checker = getChecker([], []);
+
+    // Load all URLs.
+    const urls = await getURLsToCheck(baseURL);
+
+    // Start the checker.
+    checker.enqueue(baseURL);
+    urls.forEach(url => checker.enqueue(url));
+}
+
+// Path segments that identify URL spaces that have been retired in favor of a
+// new location, each fixed up with `aliases:` front matter so the retired URL
+// still resolves via a redirect instead of going dead. A link that still
+// points at one of these but resolves via a redirect isn't broken, so the
+// checker's broken/not-broken split never sees it -- it costs the reader and
+// the crawler a hop for nothing, which is a separate, quieter kind of problem
+// than a dead link. See redirectHops below. Add a new entry here whenever
+// another retired-path class turns out to keep resurfacing in body content.
+const RETIRED_PATHS = [
+    // Moved to /docs/iac/concepts/* by #21072.
+    "/docs/concepts/",
+    // Moved to /docs/iac/concepts/resources/options/* ; occurrences fixed by
+    // #21145 and #21155.
+    "/docs/iac/concepts/options/",
+];
+
+// Returns an instance of either HtmlUrlChecker.
+// https://github.com/stevenvachon/broken-link-checker#htmlurlchecker
+function getChecker(brokenLinks, redirectHops) {
+
+    // Specify an alternative user agent, as BLC's default doesn't pass some services' validations.
+    const userAgent = "pulumi+blc/0.1";
+
+    // For details about each of the options used below, see the BLC docs at
+    // https://github.com/stevenvachon/broken-link-checker#options.
+    const opts = {
+        requestMethod: "GET",
+        filterLevel: 1,
+        userAgent,
+        excludeInternalLinks: false,
+        excludeExternalLinks: false,
+        excludeLinksToSamePage: true,
+        excludedKeywords: [
+            ...getDefaultExcludedKeywords(),
+        ]
+    };
+
+    return new HtmlUrlChecker(opts, getDefaultHandlers(brokenLinks, redirectHops));
+}
+
+// Returns the set of event handlers for HTMLUrlCheckers.
+// https://github.com/stevenvachon/broken-link-checker#htmlurlchecker
+function getDefaultHandlers(brokenLinks, redirectHops) {
+    return {
+        link: (result) => {
+            try {
+                onLink(result, brokenLinks, redirectHops);
+            }
+            catch (error) {
+                fail(error);
+            }
+        },
+        error: (error) => {
+            fail(error);
+        },
+        page: (error, pageURL) => {
+            try {
+                onPage(error, pageURL, brokenLinks);
+            }
+            catch(error) {
+                fail(error);
+            }
+        },
+        end: async () => {
+            try {
+                await onComplete(brokenLinks, redirectHops);
+            }
+            catch (error) {
+                fail(error);
+            }
+        },
+    };
+}
+
+// Handles BLC 'link' events, adding broken links to the running list.
+function onLink(result, brokenLinks, redirectHops) {
+    const source = result.base.resolved;
+    const destination = result.url.resolved;
+
+    if (result.broken) {
+        const reason = result.brokenReason;
+
+        addLink(source, destination, reason, brokenLinks);
+
+        // Always log broken links to the console.
+        logLink(source, destination, reason);
+
+    } else {
+        // Not broken, but did it get here by way of a redirect? BLC follows
+        // redirects transparently before deciding broken/not-broken, so a
+        // working-but-stale link never surfaces any other way. Scope this
+        // narrowly to the hop classes we know keep resurfacing (see
+        // RETIRED_PATHS above) rather than flagging every internal redirect
+        // -- most of those are intentional (versioned URLs, S3 redirects the
+        // exclusion list already tolerates) and would just be noise here.
+        // Match on the resolved (absolutized) URL rather than the as-authored
+        // href: a relative link into a retired space (e.g. "../concepts/
+        // stacks/", which docs/ content can't write but blog/marketing pages
+        // can) wouldn't contain the retired segment in its raw form, but its
+        // resolved URL always will.
+        const redirectedTo = result.url.redirected;
+        if (
+            redirectedTo != null &&
+            isInternalLink(destination) &&
+            RETIRED_PATHS.some((retiredPath) => destination.includes(retiredPath))
+        ) {
+            addRedirectHop(source, destination, redirectedTo, redirectHops);
+            logLink(source, destination, `REDIRECT_HOP -> ${redirectedTo}`);
+        } else if (process.env.DEBUG) {
+
+            // Log successes when DEBUG is truthy.
+            logLink(source, destination, result.http.response.statusCode);
+        }
+    }
+}
+
+// Handles BLC 'page' events.
+function onPage(error, pageURL, brokenLinks) {
+    if (error) {
+        addLink(pageURL, pageURL, error.message, brokenLinks);
+        logLink(pageURL, pageURL, error.message);
+    }
+    else if (process.env.DEBUG) {
+        logLink(pageURL, pageURL, "PAGE_OK");
+    }
+}
+
+// Handles the BLC 'complete' event, which is raised at the end of a run.
+async function onComplete(brokenLinks, redirectHops) {
+    // Split broken links into internal and external
+    const internalLinks = brokenLinks.filter(link => isInternalLink(link.destination));
+    const externalLinks = brokenLinks.filter(link => !isInternalLink(link.destination));
+
+    // Apply filters to each group
+    const filteredInternal = excludeAcceptable(internalLinks);
+    const filteredExternal = excludeAcceptable(externalLinks);
+
+    // Only broken links justify a retry: a redirect hop is a permanent,
+    // deterministic finding (the link is stale until someone edits it -- it
+    // will never "pass" on a later attempt), not a transient failure that a
+    // re-crawl could clear. Folding it into the retry trigger would force up
+    // to maxRetries extra full-site crawls on every run that finds one, for
+    // no benefit. Redirect hops are still reported below via writeResults();
+    // they're just excluded from the decision to retry.
+    const totalFiltered = filteredInternal.length + filteredExternal.length;
+
+    // If we failed and a retry count was provided, retry. Note that retry count !==
+    // run count, so a retry count of 1 means run once, then retry once, which means a
+    // total run count of two.
+    if (totalFiltered > 0 && maxRetries > 0 && retryCount < maxRetries) {
+        retryCount += 1;
+        console.log(`Retrying (${retryCount} of ${maxRetries})...`);
+        checkLinks();
+        return;
+    }
+
+    // Write the final results to disk for downstream tooling. We write on every
+    // final pass — including clean runs, which produce empty lists — so the
+    // workflow can branch on the contents and stay silent when nothing is
+    // broken. Slack posting now happens at the workflow level (the link-fix PR
+    // link), not here. Broken links are already logged to the console as they're
+    // found, in onLink.
+    writeResults(filteredInternal, filteredExternal, redirectHops);
+}
+
+// Writes the final broken-link results to RESULTS_FILE in the shape downstream
+// tooling expects: a generation timestamp plus separate internal/external/
+// redirectHops lists.
+function writeResults(internal, external, redirectHops) {
+    const results = {
+        generated: new Date().toISOString(),
+        internal,
+        external,
+        redirectHops,
+    };
+    fs.writeFileSync(RESULTS_FILE, JSON.stringify(results, null, 2) + "\n");
+    console.log(`Wrote ${internal.length + external.length} broken link(s) and ${redirectHops.length} redirect hop(s) to ${RESULTS_FILE}.`);
+}
+
+/**
+    We exclude some links:
+    - Our generated API docs have lots of broken links.
+    - Our available versions page includes links to private repos.
+    - GitHub Edit Links may be broken, because the page might not yet exist!
+    - Our LinkedIn page, for some reason, returns an HTTP error (despite being valid).
+    - Our Visual Studio Marketplace link for the Azure Pipelines task extension,
+      although valid and publicly available, is reported as a broken link.
+    - A number of synthetic illustrative links come from our examples/tutorials.
+    - GitLab 503s for requests for protected pages that don't contain certain cookies.
+*/
+function getDefaultExcludedKeywords() {
+    return [
+        "example.com",
+        "/docs/reference/pkg",
+        "/registry/packages/*/api-docs",
+        "/logos/pkg",
+        "/docs/get-started/install/versions",
+        "https://api.pulumi.com/",
+        "https://github.com/pulls?",
+        "https://github.com/pulumi/pulumi/projects", // additionalRoutes crawls github.com/pulumi/pulumi; GitHub's own page links to its now-deprecated /projects tab (HTTP 400). Not in our content.
+        "https://github.com/pulumi/docs/edit/master",
+        "https://github.com/pulumi/docs/issues/new",
+        "https://github.com/pulumi/registry/edit/master",
+        "https://github.com/pulumi/registry/issues/new",
+        "https://github.com/pulumi/ci-workflow-templates", // blog/{infrastructure-ci-cd-with-github-actions-and-pulumi,pulumiup-ci-cd-assistant-all-plans}: repo is private + archived, so its issue-template link 404s for readers. Blog prose is historical; tracked in #20911.
+        "https://www.linkedin.com/",
+        "https://linkedin.com/",
+        "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task",
+        "https://blog.mapbox.com/",
+        "https://www.youtube.com/",
+        "https://apps.twitter.com/",
+        "https://www.googleapis.com/",
+        "https://us-central1-/",
+        "https://www.mysql.com/",
+        "https://ksonnet.io/",
+        "https://www.latlong.net/",
+        "https://www.packet.com/",
+        "https://www.random.org",
+        "https://mbrdna.com",
+        "https://www.linode.com/",
+        "https://www.hetzner.com/cloud",
+        "https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_web_01.pdf",
+        "https://kubernetes-charts-incubator.storage.googleapis.com",
+        "https://kubernetes-charts.storage.googleapis.com",
+        "http://web-lb-23139b7-1806442625.us-east-1.elb.amazonaws.com",
+        "https://ruby-app-7a54c5f5e006d5cf33c2-zgms4nzdba-uc.a.run.app",
+        "https://hello-a28eea2-q1wszdxb2b-ew.a.run.app",
+        "https://ruby-420a973-q1wszdxb2b-ew.a.run.app",
+        "https://280f2167f1.execute-api.us-east-1.amazonaws.com",
+        "http://my-bucket-1234567.s3-website.us-west-2.amazonaws.com",
+        "https://gitlab.com/users/sign_in",
+        "https://gitlab.com/profile/applications",
+        "https://blog.coinbase.com/",
+        "https://www.netfilter.org/",
+        "https://codepen.io",
+        "https://twitter.com",
+        "https://t.co",
+        "https://www.akamai.com",
+        "http://localhost:16686/search", // Local Jaeger endpoint presented in troubleshooting guide.
+        "https://ceph.io",
+        "https://www.pagerduty.com",
+        "https://support.pulumi.com",
+        "https://support.pulumi.com/",
+        "https://www.pulumi.com/support/",
+        "https://pbs.twimg.com/profile_images/",
+        "https://linen.dev/",
+        "https://cloud.yandex.com/",
+        "http://localhost:3000",
+        "https://data-flair.training",
+        "https://opensource.org/licenses",
+        "https://console.eventstore.cloud/authentication-tokens",
+        "https://telecomreseller.com/2019/03/20/crossing-cloud-chasms-avoiding-catastrophic-cloud-calamities",
+        "https://www.enterprisetech.com/2018/10/23/startup-pulumi-rolls-cloud-native-tools",
+        "http://optout.networkadvertising.org/?c=1",
+        "https://thenewstack.io/",
+        "https://rootly.com/",
+        "https://www.vultr.com/",
+        "https://my.vultr.com/",
+        "https://my.vultr.com/settings/#settingsapi",
+        "https://shell.azure.com/",
+        "https://portal.azure.com/",
+        "https://www.noaa.gov/information-technology/open-data-dissemination",
+        "https://www.inc.com/inc5000/2023",
+        "https://www.inc.com/inc5000",
+        "https://www.weforum.org/press/2020/10/recession-and-automation-changes-our-future-of-work-but-there-are-jobs-coming-report-says-52c5162fce/",
+        "https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/",
+        "https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/",
+        "https://dash.cloudflare.com/sign-up/",
+        "https://www.sdxcentral.com/articles/news/pulumi-wants-to-piece-together-aws-lego-blocks/2019/06/",
+        "https://www.sdxcentral.com/articles/news/pulumi-code-dev-platform-adds-premium-team-tier-scores-15m-series-a/2018/10/",
+        "https://www.gartner.com/en/newsroom/press-releases/2023-11-29-gartner-says-cloud-will-become-a-business-necessity-by-2028",
+        "https://www.gartner.com/en/articles/what-is-platform-engineering",
+        "https://venturebeat.com/data-infrastructure/pulumi-infrastructure-as-code-goes-universal-to-build-cloud-apps/",
+        "https://www.digitalnewsasia.com/business/idc-reveals-its-top-predictions-cloud-2023-and-beyond",
+        "https://www.gartner.com/smarterwithgartner/welcome-to-the-api-economy",
+        "https://code.visualstudio.com/",
+        "https://www.honeycomb.io/",
+        "https://wiki.osdev.org/Atomic_operation",
+        "https://conference.pulumi.com/",
+        "https://wallaroo.ai/",
+        "https://www.gartner.com/en/infrastructure-and-it-operations-leaders/topics/platform-engineering",
+        "http://127.0.0.1:5000/",
+        "https://platform.openai.com",
+        "https://openai.com/",
+        "https://github.com/marketplace",
+        "https://bard.google.com/",
+        "https://cloud.getdbt.com/api",
+        "https://dutchie.com/",
+        "https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028",
+        "https://www.gartner.com/en/webinar/445864/1051166",
+        "https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md*",
+	    "https://x.com*",
+        "https://stackoverflow.com/questions/tagged/pulumi",
+        "https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix",
+        "https://blog.postman.com/postman-now-supports-grpc/",
+        "https://dzone.com/articles/survey-reveals-rapid-growth-in-kubernetes-usage-se",
+        "https://networkengineering.stackexchange.com/a/18877",
+        "https://stackoverflow.com/questions/46604721/azure-ad-delete-user-group-unauthorized",
+        "https://stackoverflow.com/a/69270933",
+        "https://old.reddit.com/r/devops/comments/1izpca1/platform_engineering_fad/",
+        "https://www.deepseek.com/",
+        "https://marketplace.visualstudio.com/",
+        "https://pulumi.com/authors/",
+        "https://pulumi.com/tags/",
+        "https://pulumi.com/collections/",
+        "https://securityboulevard.com/2024/09/pulumi-adds-cloud-security-intelligence-tool-to-portfolio/",
+        "https://awsinsider.net/articles/2019/06/12/pulumi.aspx",
+        "https://www.tivityhealth.com/",
+        "https://blog.ekik.org*",
+        "https://www.crn.com*",
+        "https://www.downelink.com/a-deep-dive-into-openais-text-embedding-ada-002-unlocking-the-power-of-semantic-understanding/",
+        "https://github.com/serverless/components",
+        "https://docs.spot.io/spot-connect/integrations/pulumi",
+        // News/Media sites with aggressive bot protection
+        "https://devops.com/",
+        "https://www.bizjournals.com/",
+        "https://redmonk.com/",
+        "https://www.eweek.com/",
+        "https://www.axios.com/",
+        "https://www.mordorintelligence.com/",
+        "https://betterprogramming.pub/",
+        "https://garymarcus.substack.com/",
+        "https://www.coingecko.com/",
+        "https://news.ycombinator.com/",
+        "https://www.gao.gov/",
+        "https://apps.dtic.mil/",
+        "https://queue.acm.org/",
+        // NPM (block all, not just 429s)
+        "https://www.npmjs.com/",
+        "https://npmjs.com/",
+        // Developer tools/platforms with bot protection
+        "https://dev.mysql.com/",
+        "https://circleci.com/docs/",
+        "https://docs.gitlab.com/",
+        "https://gitlab.com/help/",
+        // Conference/event sites
+        "https://sched.com",
+        "https://static.sched.com/",
+        "colocatedevents",
+        "kccnc",
+        "wasmcon",
+        "gitopscon",
+        // Archive/rate-limited Pulumi properties
+        "https://archive.pulumi.com/",
+        // Sites with known connection issues
+        "https://trivy.dev/",
+        "https://elastisys.com/",
+        "https://cloudnativedenmark.dk/",
+        "https://stackconf.eu/",
+        // HashiCorp maintains redirects when reorganizing docs - skip checking entirely
+        "https://developer.hashicorp.com/",
+        "https://www.hashicorp.com/",
+        // Archived/deleted personal repositories referenced in historical blog posts
+        "https://github.com/chrsmith/static-website-aws",
+        "https://github.com/chrsmith/browserhack-demo",
+        "https://github.com/chrsmith/pulumi-aws-travis-cicd-demo",
+        "https://github.com/jasonsmithio/pulumi-experiments",
+        // Old example repository paths that have been renamed or removed
+        "https://github.com/pulumi/examples/tree/master/aws-js-webserver",
+        "https://github.com/pulumi/examples/blob/master/aws-js-webserver/index.js",
+        "https://github.com/pulumi/examples/tree/master/aws-js-s3-folder",
+        "https://github.com/pulumi/examples/tree/master/aws-js-sqs-slack",
+        "https://github.com/pulumi/examples/tree/master/aws-py-oidc-provider-pulumi-cloud",
+        "https://github.com/pulumi/examples/tree/master/gcp-py-oidc-provider-pulumi-cloud",
+        "https://github.com/pulumi/examples/tree/master/google-native-ts-k8s-ruby-on-rails-postgresql",
+        "https://github.com/pulumi/examples/tree/master/google-native-ts-functions",
+        "https://github.com/kubernetes/examples/tree/master/guestbook",
+        // Old internal URLs with working S3 redirects (issue #17449)
+        "https://www.pulumi.com/docs/cli/commands/pulumi_plugin_install",
+        "https://www.pulumi.com/docs/cli/commands/pulumi_schema_check",
+        // Old internal URLs with working S3 redirects, flagged on the 2026-06-16 run
+        "https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/",                       // blog/unified-programmatic-approach-...-bmw, docs/reference/cloud-rest-api/organizations (from OpenAPI spec): S3 → /docs/administration/access-identity/oidc-issuers/
+        // Old internal URLs with working S3 redirects, recurring false positives after PR #19980 (2026-06-30, 2026-07-02)
+        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/playbooks/",                          // blog/2019-year-at-a-glance, blog/aws-enterprise-container-management, blog/beyond-yaml-kubernetes-2026-automation-era: S3 → /docs/integrations/clouds/kubernetes/ (transient CloudFront cache misses re-flag it)
+        "https://www.pulumi.com/blog/relaunching-pulumis-public-roadmap/",                              // blog/2021-end-of-year-review: S3 → /blog/ (post never migrated, redirect added in #19541)
+        // External links reported as broken in issue #17495
+        "https://roadmap.sh/videos/scaling-the-unscalable",
+        "https://redis.io/docs/ui/cli/",
+        "https://telephoneworld.org/telephone-sounds/",
+        "https://aidevtlv.com/agenda/",
+        "https://cloud.google.com/deployment-manager/docs",
+        "https://daninacan.com/",
+        "https://www.tigera.io/blog/top-5-kubernetes-trends-for-2019/",
+        // Bot-protected or dead external links referenced in historical blog posts (issue #18586)
+        "https://hub.docker.com/",                                                  // blog/docker-containers: 500s to automated clients
+        "https://docs.microsoft.com/",                                              // MS redirects to learn.microsoft.com and bot-protects
+        "https://www.zdnet.com/",                                                   // aggressive bot protection
+        "https://gist.github.com/pulumipus/56d1ee83f295971e2a26a8091880c482",        // deleted gist in blog/automation-api-as-platform
+        "https://gist.github.com/pulumipus/61edcdd8ab3f50a42b4bd34a7e1f789b",        // deleted gist in blog/automation-api-workflow
+        // Dead/transient third-party links in historical blog posts (#docs-ops 2026-06-01)
+        "https://github.com/aws/aws-lambda-runtime-interface-clients",              // blog/aws-lambda-container-support
+        "https://docs.docker.com/docker-for-mac/kubernetes/",                       // blog/how-to-deploy-jenkins-to-kubernetes-with-pulumi
+        "https://editor.swagger.io",                                                // blog/next-level-iac-pulumi-automation-api (transient 504)
+        "https://github.com/ollama/ollama/blob/main/docs/openai.md",                // blog/run-deepseek-on-aws-ec2-using-pulumi
+        "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe-2026/",   // blog/kubecon-eu-2026-recap: post-event page returns 504 consistently, no replacement
+        "https://greenparksports.com/",                                             // blog/organizational-patterns-infra-repo: company site 404, no replacement
+        // Pulumi/GitHub status pages — AWS WAF (CloudFront) returns 405 with x-amzn-waf-action: captcha to all automated clients. Live in browsers. (2026-06-05 run flagged 1190+ from the footer badge)
+        "https://pulumi.statuspage.io/",                                            // global footer badge (layouts/partials/footer/statuspage-badge.html)
+        "https://status.pulumi.com",                                                // docs/iac/operations/troubleshooting/server-errors
+        "https://www.githubstatus.com/",                                            // referenced from github.com/pulumi/pulumi crawl; bot-protected
+        "https://github.com/pulumi/pulumi/stargazers",                              // blog/pulumi-up-2024: GitHub 404s the anonymous /stargazers view for every repo; valid in a browser
+        "https://github.com/pulumi/pulumi/watchers",                                // referenced from github.com/pulumi/pulumi crawl: GitHub 404s the anonymous /watchers view for every repo; valid in a browser (same pattern as /stargazers above)
+        // Recurring false positives flagged on 2026-07-23 — S3 redirects committed, but registry/build overwrites or CloudFront cache-miss re-flags them
+        "https://www.pulumi.com/registry/packages/azure/api-docs/voice/",           // blog/azure-v6-release: S3 redirect in scripts/redirects/general-broken-links-redirects.txt (added in #20366) keeps getting overwritten by the registry build
+        "https://ieeexplore.ieee.org/",                                             // blog/aws-iam-access-analyzer-and-crossguard: IEEE returns HTTP 418 (I'm a teapot) to automated clients; loads in browsers
+    ];
+}
+
+// Filters out transient errors that needn't fail a link-check run.
+function excludeAcceptable(links) {
+    // HTTP status codes to filter out for external sites (bot protection, auth walls, timeouts)
+    const externalErrorReasons = ["HTTP_403", "HTTP_401", "HTTP_202", "HTTP_undefined"];
+
+    return (links
+        // Ignore GitHub and npm 429s (rate-limited). We should really be handling these more
+        // intelligently, but we can come back to that in a follow up.
+        .filter(b => !(b.reason === "HTTP_429" && b.destination.match(/github.com|npmjs.com|medium.com/)))
+
+        // Ignore remote disconnects.
+        .filter(b => b.reason !== "ERRNO_ECONNRESET")
+
+        // Ignore BLC_UNKNOWN's
+        .filter(b => b.reason !== "BLC_UNKNOWN")
+
+        // Ignore BLC_INVALID's
+        .filter(b => b.reason !== "BLC_INVALID")
+
+        // Ignore HTTP 308s.
+        .filter(b => b.reason !== "HTTP_308")
+
+        // Ignore HTTP 503s.
+        .filter(b => b.reason !== "HTTP_503")
+
+        // Ignore HTTP 502s (Bad Gateway - transient server errors).
+        .filter(b => b.reason !== "HTTP_502")
+
+        // Ignore HTTP 415s (Unsupported Media Type - often bot protection).
+        .filter(b => b.reason !== "HTTP_415")
+
+        // Ignore all HTTP 429s (rate limiting, bot protection).
+        .filter(b => b.reason !== "HTTP_429")
+
+        // Filter errors from external sites (bot protection, auth walls, connection issues)
+        .filter(b => !(externalErrorReasons.includes(b.reason) && !isInternalLink(b.destination)))
+
+        // Ignore complaints about MIME types. BLC currently hard-codes an expectation of
+        // type text/html, which causes it to fail on direct links to images, PDFs, and
+        // other media.
+        // https://github.com/stevenvachon/broken-link-checker/issues/65
+        // https://github.com/stevenvachon/broken-link-checker/blob/43770535ad7b84cadec9dc54c5140694389e33dc/lib/internal/streamHTML.js#L36-L39
+        .filter(b => !b.reason.startsWith(`Expected type "text/html"`))
+    );
+}
+
+// Adds a broken link to the running list.
+function addLink(source, destination, reason, links) {
+    links.push({
+        source,
+        destination,
+        reason,
+    });
+}
+
+// Adds a redirect-hop finding to the running list. Unlike addLink, this also
+// records where the link actually landed (redirectsTo), since the fix is to
+// rewrite the source link to that path, not to treat it as broken.
+//
+// Deduped on (destination, redirectsTo), dropping source: a stale link in
+// shared chrome (nav, footer, a partial) surfaces once per page that
+// includes it, and a broken links.json shouldn't carry thousands of
+// near-identical entries for what is, structurally, one stale link. The
+// first page it's found on is enough of a pointer for the fix to locate it.
+function addRedirectHop(source, destination, redirectsTo, links) {
+    const alreadyRecorded = links.some(
+        link => link.destination === destination && link.redirectsTo === redirectsTo
+    );
+    if (alreadyRecorded) {
+        return;
+    }
+    links.push({
+        source,
+        destination,
+        redirectsTo,
+        reason: "REDIRECT_HOP",
+    });
+}
+
+// Logs a link result to the console.
+function logLink(source, destination, reason) {
+    console.log(source);
+    console.log(`  -> ${destination}`);
+    console.log(`  -> ${reason}`);
+    console.log();
+}
+
+// Logs and exits immediately.
+function fail(error) {
+    console.error(error.message);
+    process.exit(1);
+}
+
+// Start by fetching the sitemap from `baseURL`.
+async function getURLsToCheck(base) {
+    return await sitemap
+        .fetch(`${base}/sitemap.xml`)
+        .then(map => {
+            const urls = map.sites
+
+                // Exclude resource docs, SDK docs, and CLI download pages.
+                .filter(page => !page.match(/\/registry\/packages\/.+\/api-docs\//))
+                .filter(page => !page.match(/\/docs\/reference\/pkg\/nodejs|python\//))
+                .filter(page => !page.match(/\/docs\/install\/versions\//))
+                .filter(page => !page.match(/\/authors\//))
+                .filter(page => !page.match(/\/collections\//))
+                .filter(page => !page.match(/\/tags\//))
+                .filter(page => !page.match(/\/crosswalk\//))
+
+                // Always check using the supplied baseURL.
+                .map(url => {
+                    const newURL = new URL(url);
+                    const baseURLObj = new URL(base);
+                    newURL.hostname = baseURLObj.hostname;
+                    newURL.protocol = baseURLObj.protocol;
+                    return newURL.toString();
+                })
+
+                // Tack on any additional pages we'd like to check.
+                .concat(additionalRoutes)
+
+                // Sort everything alphabetically.
+                .sort();
+
+            // Return the list of URLs to be crawled.
+            return urls;
+        });
+}
+

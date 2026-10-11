@@ -1,0 +1,58 @@
+---
+# Name of the event, <= 60 characters
+title: Building AI-powered Applications at Pulumi
+meta_desc: Learn how the Pulumi engineering team builds AI-powered capabilities and the lessons learned bringing these features into production.
+meta_image:
+
+# A featured event will display first in the list.
+featured: false
+
+# Events with unlisted as true will not be shown on the event list
+unlisted: false
+
+# Gated events will have a registration form and the user will need
+# to fill out the form before viewing.
+gated: true
+
+# The event type (workshop, webinar, talk).
+event_type: workshop
+
+# URL for embedding a URL for ungated events.
+youtube_url: https://www.youtube.com/embed/tZexrqdyl9E
+# Sortable date. The datetime Hugo will use to sort the events in date order.
+sortable_date: 2024-07-10T09:00:00.000-07:00
+
+# Duration of the event.
+duration: 90 minutes
+
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
+
+# Description of the event.
+description: |
+    Developers, DevOps, and Platform Engineering teams are increasingly charged with helping their organizations to deliver product innovation using AI capabilities. For the past 18 months, Pulumi has built and shipped a variety of AI-powered capabilities for customers using Pulumi Cloud to manage underlying AI infrastructure.
+
+    In this session, you'll hear from Pulumi Engineering Manager, Aaron Friel about the lessons learned building applications with Large Language Models at Pulumi.
+
+learn:
+    - Best practices for experimenting with AI in product development
+    - Architecture and cost considerations when managing AI infrastructure at scale
+
+# The event presenters
+presenters:
+    - name: Aaron Friel
+      role: Engineering Manager, Pulumi
+      photo: /images/team/aaron-friel.jpg
+
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["AI"]
+    languages: []
+
+# The right hand side form section.
+form:
+    # HubSpot form id.
+    hubspot_form_id: ce41b4a0-18fa-4b5f-a988-ea89178dabae
+    salesforce_campaign_id: 701PQ000008jy1sYAA
+---

@@ -1,0 +1,38 @@
+---
+title: Deployments & Workflows
+linktitle: Deployments & Workflows
+docs_home: true
+notitle: true
+norightnav: true
+menu:
+  deployments:
+    identifier: deployments-home
+    weight: 1
+meta_desc: Cloud-hosted deployment automation, drift detection, and workflow management for infrastructure as code.
+h1: Deployments & Workflows
+description: <p>Operational tools for managing infrastructure projects, automating deployments, and integrating workflows.</p>
+aliases:
+  - /docs/platform/
+
+link_buttons:
+  primary:
+    label: Get Started
+    link: /docs/deployments/get-started/
+
+sections:
+- type: button-cards
+  heading: Capabilities
+  cards:
+  - icon: rocket-launch
+    heading: Deployments
+    description: Managed CI/CD platform with git integration, automated drift detection and remediation, ephemeral review stacks for pull requests, scheduled operations, and TTL-based cleanup for temporary infrastructure.
+    link: /docs/deployments/concepts/
+  - icon: bell
+    heading: Webhooks
+    description: Trigger external systems and workflows in response to stack updates, deployments, drift detection, and policy violations. Integrates with Slack, Microsoft Teams, or custom webhooks.
+    link: /docs/deployments/concepts/webhooks/
+
+- type: flat
+  heading: Have questions?
+  description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>
+---

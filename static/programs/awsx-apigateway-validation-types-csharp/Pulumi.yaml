@@ -1,0 +1,3 @@
+name: awsx-apigateway-validation-types-csharp
+runtime: dotnet
+description: An example of configuring request validators for an API Gateway instance.

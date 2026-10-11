@@ -1,0 +1,6 @@
+name: aws-eks-cluster-k8s-canary-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an EKS cluster and a canary NGINX service.

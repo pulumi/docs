@@ -1,0 +1,10 @@
+id = "tim-carter"
+name =  "Tim Carter"
+title = "Customer Success Manager"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "timothy-carter-86214197"

@@ -1,0 +1,11 @@
+id = "daniel-ward"
+name = "Daniel Ward"
+title = "Software Developer/Consultant"
+company = "Lean TECHniques"
+status = "guest"
+role = "puluminary"
+
+[social]
+github = "danielwarddev"
+linkedin = "daniel-ward-dev"
+x = "danielwarddev"

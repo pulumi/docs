@@ -1,0 +1,17 @@
+{{- /*
+    Blog badge/pill — thin wrapper over the shared `partials/badge.html`. Kept so the
+    ~8 blog callers (category/tag/series badges, card partials) need no changes. The
+    variant names map 1:1 onto the shared system; `outline` is the default.
+
+    Params:
+      text    (required) label
+      variant outline (default) | secondary | dark
+      href    optional → renders a link
+      track   optional data-track value
+*/ -}}
+{{- $variant := .variant | default "outline" -}}
+{{- partial "badge.html" (dict
+    "text" .text
+    "variant" $variant
+    "href" .href
+    "track" .track) -}}

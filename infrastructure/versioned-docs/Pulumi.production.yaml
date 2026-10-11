@@ -1,0 +1,5 @@
+config:
+  aws:region: us-west-2
+  # distributionArn is optional; when set, the publisher role's
+  # cloudfront:CreateInvalidation is scoped to just that distribution instead of "*".
+  # pulumi-docs-versioned:distributionArn: "arn:aws:cloudfront::388588623842:distribution/XXXXXXXXXXXXX"

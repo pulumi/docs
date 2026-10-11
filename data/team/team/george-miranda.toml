@@ -1,0 +1,11 @@
+id = "george-miranda"
+name = "George Miranda"
+title = "Principal Product Marketing Manager"
+weight = 1
+
+status = "active"
+
+[social]
+github = "gmiranda23"
+linkedin = "gmiranda23"
+x = "gmiranda23"

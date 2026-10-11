@@ -1,0 +1,10 @@
+name: aws-eks-cluster-default-yaml
+runtime: yaml
+description: An example that creates an EKS cluster with default configuration.
+resources:
+  # Create an EKS cluster with the default configuration.
+  cluster:
+    type: eks:Cluster
+outputs:
+  # Export the cluster's kubeconfig.
+  kubeconfig: ${cluster.kubeconfig}

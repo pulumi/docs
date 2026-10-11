@@ -1,0 +1,38 @@
+#announcement-banner {
+    .announcement-text {
+        a { @apply underline; }
+        strong { @apply font-semibold; }
+        em { @apply italic; }
+        code { @apply rounded bg-white/10 px-1 py-0.5 font-mono text-xs; }
+    }
+
+    // Marquee gap appears as right-padding on each copy. With two identical
+    // copies of `(text + gap)`, the content width is `2 * (text + gap)`, so an
+    // animation of `translateX(-50%)` advances by exactly one (text + gap) —
+    // landing the clone where the original started for a seamless loop.
+    [data-announcement-marquee].is-overflowing {
+        .announcement-text {
+            @apply pr-12;
+        }
+        [data-announcement-content] {
+            animation: announcement-marquee 30s linear infinite;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        [data-announcement-marquee] {
+            text-overflow: ellipsis;
+        }
+        [data-announcement-marquee].is-overflowing [data-announcement-content] {
+            animation: none;
+        }
+        [data-announcement-marquee].is-overflowing .announcement-text-clone {
+            @apply hidden;
+        }
+    }
+}
+
+@keyframes announcement-marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}

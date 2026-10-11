@@ -1,0 +1,10 @@
+name: gcp-storage-bucket-object-typescript
+description: An example that deploys a storage bucket and uploads a file on Google Cloud.
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-typescript

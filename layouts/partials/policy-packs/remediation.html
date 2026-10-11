@@ -1,0 +1,29 @@
+{{/*
+    Normalizes a policy's `remediationSteps` Markdown for embedding in a generated
+    policy pack page. Takes the raw string, returns the cleaned string.
+
+    Two fixes:
+
+    1. Demote headings. remediationSteps is authored with a leading "## Fix: ..."
+       heading, which would outrank the policy's own "###" heading and pollute the
+       page's table of contents.
+
+    2. Repair closing code fences that carry trailing punctuation. At least one
+       upstream policy (`rds-private-subnet-validation`, shipped in hitrust-aws,
+       iso-27001-aws, pci-dss-aws and pulumi-best-practices-aws) ends its fenced
+       example with "```," instead of "```". A fence with an info string is an
+       *opening* fence, so the code block never closes and swallows everything that
+       follows it — which silently dropped the next policy from the page. A language
+       tag is always alphanumeric, so a fence whose info string is pure punctuation
+       is always a typo, never legitimate.
+
+       scripts/fetch-policy-packs.js warns when it sees an unclosed fence, so new
+       instances get noticed and fixed at the source instead of quietly relying on
+       this repair.
+*/}}
+{{ $steps := . }}
+{{ $backtick := printf "%c" 96 }}
+{{ $fence := strings.Repeat 3 $backtick }}
+{{ $steps = replaceRE (printf "(?m)^%s[,;:.]+[ \\t]*$" $fence) $fence $steps }}
+{{ $steps = replaceRE `(?m)^#{1,4} ` "##### " $steps }}
+{{ return $steps }}

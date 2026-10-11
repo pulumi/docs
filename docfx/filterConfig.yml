@@ -1,0 +1,7 @@
+apiRules:
+  - exclude:
+      uidRegex: Pulumi.Utilities
+      type: Namespace
+  - exclude:
+      uidRegex: Pulumi.Serialization
+      type: Namespace

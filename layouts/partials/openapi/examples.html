@@ -1,0 +1,15 @@
+{{ define "openapi/examples.html" }}
+{{ $jsonContent := index .responseDetails.content "application/json" }}
+{{ with $jsonContent }}
+    {{ if .example }}
+        <h5>Example</h5>
+        <pre><code style="flex-wrap: nowrap; overflow-x: scroll;">{{ .example | jsonify (dict "indent" "  ") }}</code></pre>
+    {{ end }}
+    {{ range $exampleName, $example := .examples }}
+        <h5>Example: {{ $exampleName }}</h5>
+        {{ if $example.value }}
+            <pre><code style="flex-wrap: nowrap; overflow-x: scroll;">{{ $example.value | jsonify (dict "indent" "  ") }}</code></pre>
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,7 @@
+name: aws-iam-role-instanceprofile-typescript
+runtime: nodejs
+description: An example that deploys an IAM role and instance profile on AWS.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

@@ -1,0 +1,82 @@
+name: awsx-apigateway-custom-domain-yaml
+runtime: yaml
+description: An example that deploys an API Gateway REST API with a custom domain from Route53.
+
+variables:
+  hostedZoneName: example.com
+  domainName: myapp.${hostedZoneName}
+  zone:
+    fn::invoke:
+      function: aws:route53:getZone
+      arguments:
+        name: ${hostedZoneName}
+
+resources:
+  usEast1:
+    type: pulumi:providers:aws
+    properties:
+      region: us-east-1
+
+  certificate:
+    type: aws:acm:Certificate
+    properties:
+      domainName: ${domainName}
+      validationMethod: DNS
+    options:
+      provider: ${usEast1}
+
+  validationRecord:
+    type: aws:route53:Record
+    properties:
+      name: ${certificate.domainValidationOptions[0].resourceRecordName}
+      type: ${certificate.domainValidationOptions[0].resourceRecordType}
+      records:
+        - ${certificate.domainValidationOptions[0].resourceRecordValue}
+      zoneId: ${zone.zoneId}
+      ttl: 60
+
+  validation:
+    type: aws:acm:CertificateValidation
+    properties:
+      certificateArn: ${certificate.arn}
+      validationRecordFqdns:
+        - ${validationRecord.fqdn}
+    options:
+      provider: ${usEast1}
+
+  api:
+    type: aws-apigateway:RestAPI
+    properties:
+      routes:
+        - path: /
+          localPath: www
+
+  gatewayDomainName:
+    type: aws:apigateway:DomainName
+    properties:
+      certificateArn: ${certificate.arn}
+      domainName: ${domainName}
+    options:
+      dependsOn:
+        - ${validation}
+
+  gatewayDNSRecord:
+    type: aws:route53:Record
+    properties:
+      zoneId: ${zone.zoneId}
+      type: A
+      name: ${domainName}
+      aliases:
+        - name: ${gatewayDomainName.cloudfrontDomainName}
+          zoneId: ${gatewayDomainName.cloudfrontZoneId}
+          evaluateTargetHealth: false
+
+  basePathMapping:
+    type: aws:apigateway:BasePathMapping
+    properties:
+      restApi: ${api.api.id}
+      stageName: ${api.stage.stageName}
+      domainName: ${gatewayDomainName.domainName}
+
+outputs:
+  url: https://${basePathMapping.domainName}

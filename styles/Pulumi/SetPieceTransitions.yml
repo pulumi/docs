@@ -1,0 +1,13 @@
+extends: existence
+message: "'%s' is a stock set-piece transition often seen in AI-drafted prose. Consider a more direct opener -- if the phrasing reads naturally in context, ignore."
+level: warning
+ignorecase: true
+tokens:
+  - "But here's the thing"
+  - "And that's the key insight"
+  - "Let's dive in"
+  - "Now here's where it gets interesting"
+  - "Here's what's wild"
+  - "The reality is"
+  - "But it gets better"
+  - "Here's the kicker"

@@ -1,0 +1,6 @@
+name: awsx-apigateway-validation-types-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example of configuring request validators for an API Gateway instance.

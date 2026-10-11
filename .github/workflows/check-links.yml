@@ -1,0 +1,196 @@
+name: "Scheduled jobs: Check links"
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string.
+    # Run every day at 3:00PM UTC.
+    - cron: '0 15 * * *'
+  workflow_dispatch: null
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write # Required for ESC OIDC auth
+  actions: read
+jobs:
+  all:
+    env:
+      GOPATH: ${{ github.workspace }}/go
+    name: Check links
+    runs-on: ubuntu-latest
+    steps:
+      # ESC runs before checkout so the bot token can authenticate the
+      # checkout — the PR opened by claude-code-action later then goes out as
+      # pulumi-bot rather than github-actions[bot], which is what lets
+      # downstream workflows (build-and-deploy, docs review, etc.) fire on it.
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Install Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24.x'
+          cache: 'yarn'
+          cache-dependency-path: |
+            yarn.lock
+            infrastructure/yarn.lock
+            theme/yarn.lock
+            theme/stencil/yarn.lock
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.157.0'
+          extended: true
+      # The reader-signals export (see review-existing-content.yml) carries a
+      # `not_found` section: real 404 hits from server logs — URLs readers
+      # actually request that no crawl of our own pages can see (external
+      # referrers, bookmarks, stale search results). Resolve + fetch it the
+      # same way that workflow does, then merge it into .broken-links.json so
+      # the fix-broken-links triage works both lists at once, highest-traffic
+      # first. Every step degrades gracefully: until the export ships
+      # (pulumi/docs#20078 item 4.5), the merge is a logged no-op and this
+      # workflow behaves exactly as before.
+      - name: Configure AWS credentials
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: check-links
+          aws-region: us-west-2
+      # continue-on-error like the rest of this block: the CLI exists here only
+      # for the optional enrichment, and a failed install must not take down
+      # the core daily link check.
+      - name: Install Pulumi CLI
+        continue-on-error: true
+        uses: pulumi/actions@v7
+      - name: Resolve reader-signals URI
+        id: signals-uri
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          URI=$(pulumi stack output docsReaderSignalsLatestS3Uri \
+            --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+          if [ -n "$URI" ]; then
+            echo "resolved reader-signals export URI: $URI"
+            echo "uri=$URI" >> "$GITHUB_OUTPUT"
+          else
+            echo "reader-signals export not yet published; link check proceeds without the real-404 signal"
+          fi
+      - name: Fetch reader-signals snapshot from S3
+        if: steps.signals-uri.outputs.uri != ''
+        continue-on-error: true
+        run: |
+          if aws s3 cp "${{ steps.signals-uri.outputs.uri }}" .reader-signals.json --quiet; then
+            echo "fetched reader-signals snapshot: $(wc -c < .reader-signals.json) bytes"
+          else
+            echo "reader-signals snapshot unavailable; link check proceeds without it"
+          fi
+      # No SLACK_ACCESS_TOKEN in env: the checker no longer posts to Slack. It
+      # writes its results to .broken-links.json, and Slack posting (the PR
+      # link) happens at the end of this workflow instead.
+      - name: Run make check_links
+        run: make check_links
+      # Deterministic enrichment (never model-run): annotate crawler entries
+      # with real reader 404 traffic and append high-hit server-log 404s the
+      # crawler can't see. Runs before the broken-count gate below, so a day
+      # with zero crawler breakage but real 404 traffic still triggers triage.
+      - name: Merge real-404 signal
+        continue-on-error: true
+        run: python3 scripts/link-checker/merge-404-signal.py
+      # Branch the rest of the workflow on whether anything is actually broken.
+      # On a clean run the Claude and Slack steps below are skipped entirely, so
+      # quiet days cost no API spend and post nothing.
+      - name: Detect broken links
+        id: detect
+        run: |
+          if [ ! -f .broken-links.json ]; then
+            echo "has_broken=false" >> "$GITHUB_OUTPUT"
+            echo "No .broken-links.json produced; nothing to do."
+            exit 0
+          fi
+          COUNT=$(jq '(.internal | length) + (.external | length) + ((.redirectHops // []) | length)' .broken-links.json)
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "date=$(date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          if [ "$COUNT" -gt 0 ]; then
+            echo "has_broken=true" >> "$GITHUB_OUTPUT"
+            echo "Found $COUNT broken link(s)/redirect hop(s)."
+          else
+            echo "has_broken=false" >> "$GITHUB_OUTPUT"
+            echo "No broken links or redirect hops."
+          fi
+      # Hand the broken-link list to the Claude Code action, which follows the
+      # fix-broken-links skill: triage each link, fix in-repo, file issues for
+      # out-of-scope breakage, open a ready PR, and write the PR link to
+      # .broken-links-pr.txt for the Slack step.
+      - name: Run Claude Code
+        if: steps.detect.outputs.has_broken == 'true'
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Bot token so the PR/pushes trigger downstream workflows.
+          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          prompt: |
+            The daily link checker found broken links and/or stale-but-working
+            redirect hops on https://www.pulumi.com. The results are in
+            `.broken-links.json` at the repo root, which may include a
+            `redirectHops` list alongside `internal`/`external`.
+
+            Follow `.claude/commands/fix-broken-links/SKILL.md` exactly. In short:
+
+            1. Read `.broken-links.json`.
+            2. Verify each `internal`/`external` link is genuinely broken (the
+               checker has false positives) and each `redirectHops` entry still
+               redirects as recorded, then skip any already covered by an open
+               PR or existing issue (deduplication — see the skill).
+            3. If every confirmed-broken link and every redirect hop is a
+               duplicate, open no PR: just write the "all already tracked"
+               Slack summary to `.broken-links-pr.txt` and stop. Otherwise,
+               for the actionable (non-duplicate) links and hops:
+            4. Create a branch `fix/broken-links-${{ steps.detect.outputs.date }}`.
+            5. Triage and fix each broken link using the strategies in the skill
+               (alias, S3 redirect, source edit, exclusion, or out-of-scope issue).
+            6. File a GitHub issue for new out-of-scope items (reuse the existing
+               issue for duplicates).
+            7. Run `make lint` and `make build`; resolve anything they surface.
+            8. Open a **ready** (non-draft) PR to `master` with the auditable
+               description the skill describes (every link → strategy → reasoning,
+               plus Verification, False-positives, Already-tracked, and
+               Out-of-scope/filed-issues sections).
+            9. Write the final PR URL and a one-line summary to
+               `.broken-links-pr.txt` for the Slack notification.
+          # The public Pulumi brand MCP server (voice/writing-style/terminology
+          # source of truth) is wired via `claude_args --mcp-config`; its tools
+          # are in --allowed-tools. No auth: the server is public.
+          claude_args: |
+            --model claude-opus-5-5 --effort low
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue create:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(curl:*)"
+      # A step here used to label this lane's PR `sentinel:preview` (the
+      # opt-in that made a report-only Sentinel post its pinned gate-status
+      # comment). Retired 2026-09-21: report-only now posts that comment on
+      # every PR it evaluates, so nothing replaces the step.
+
+      # Post the PR link to #docs-ops. Gated on the results file the Claude step
+      # writes, so a run where Claude couldn't open a PR stays silent rather than
+      # posting an empty message.
+      - name: Post PR link to Slack
+        if: steps.detect.outputs.has_broken == 'true' && hashFiles('.broken-links-pr.txt') != ''
+        env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
+            -H "Content-type: application/json; charset=utf-8" \
+            --data "$(jq -n --arg ch "#docs-ops" --rawfile txt .broken-links-pr.txt \
+              '{channel: $ch, text: $txt, unfurl_links: true}')"
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

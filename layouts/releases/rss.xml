@@ -1,0 +1,44 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
+{{- /*
+    Releases RSS feed -> /releases/rss.xml
+
+    Driven by this section's pages (.RegularPagesRecursive — see
+    content/releases/_index.md), emitted newest-first by date and mirroring
+    the JSON feed: one <item> per release page and per changelog item, linking
+    to the page's own URL. <description> carries the page's full rendered body
+    — the field readers universally display as the article (matching
+    layouts/blog/rss.xml) — falling back to the short summary
+    (short_description for releases, meta_desc for changelog items) when a page
+    has no body. Modeled on layouts/blog/rss.xml and layouts/events/rss.xml.
+
+    A changelog item's editions ride along as <category> elements: the slot
+    RSS 2.0 already defines for this, so there is no custom namespace and no
+    consumer has to be taught anything. They carry display names ("Business
+    Critical") — what a feed reader shows, and what this data was published as
+    under the old `tiers:` key, so a consumer keying off those strings is
+    unaffected by the rename. The ids stay in the JSON feed, which is the
+    machine-readable surface and emits `editions` plus the deprecated `tiers`.
+*/ -}}
+<rss version="2.0">
+    <channel>
+        <title>Pulumi Releases</title>
+        <link>{{ .Permalink }}</link>
+        <description>A running log of major and minor updates from the Pulumi team.</description>
+        <language>{{ .Site.LanguageCode }}</language>
+        {{ range .RegularPagesRecursive.ByDate.Reverse }}
+            <item>
+                <title>{{ .Title }}</title>
+                <link>{{ .Permalink }}</link>
+                <guid>{{ .Permalink }}</guid>
+                <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+                {{ range partial "releases/edition-names.html" (dict "editions" .Params.editions "where" .RelPermalink) }}
+                <category domain="{{ absURL "/pricing/" }}">{{ . }}</category>
+                {{ end }}{{ with .Content }}
+                <description>{{ . | html }}</description>
+                {{ else }}{{ with or .Params.short_description .Params.meta_desc }}
+                <description>{{ . | markdownify | plainify | htmlUnescape | chomp | replaceRE "\\s+" " " }}</description>
+                {{ end }}{{ end }}
+            </item>
+        {{ end }}
+    </channel>
+</rss>

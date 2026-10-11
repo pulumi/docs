@@ -1,0 +1,10 @@
+images/mascot/babypus.svg|/images/mascot/legacy/babypus.svg
+images/mascot/backpack-pulumipus.svg|/images/mascot/legacy/backpack-pulumipus.svg
+images/mascot/eggpus.svg|/images/mascot/legacy/eggpus.svg
+images/mascot/gandalfpus.svg|/images/mascot/legacy/gandalfpus.svg
+images/mascot/hoodie-cube.png|/images/mascot/legacy/hoodie-cube.png
+images/mascot/hoodie-kubernetes.png|/images/mascot/legacy/hoodie-kubernetes.png
+images/mascot/hoodie-pulumipus.svg|/images/mascot/legacy/hoodie-pulumipus.svg
+images/mascot/pulumipus.svg|/images/mascot/legacy/pulumipus.svg
+images/mascot/rocketpus.svg|/images/mascot/legacy/rocketpus.svg
+images/mascot/victory-medal-pulumipus.svg|/images/mascot/legacy/victory-medal-pulumipus.svg

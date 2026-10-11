@@ -1,0 +1,13 @@
+<ul class="glossary">
+    {{ range sort site.Data.glossary.entries "term" }}
+        <li><a href="#{{ anchorize .term }}">{{ .term }}</a></li>
+    {{ end }}
+</ul>
+
+{{ range sort site.Data.glossary.entries "term" }}
+    <h2 id="{{ anchorize .term }}">{{ .term }}</h2>
+    <p>{{ .description | markdownify }}</p>
+    <p>
+        <a data-track="{{ .term | urlize }}" href="{{ .link }}">{{ partial "icon.html" (dict "name" "book" "class" "mr-2") }}{{ .term }}</a>
+    </p>
+{{ end }}

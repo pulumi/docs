@@ -1,0 +1,25 @@
+name: apply-nested-output-values-yaml
+runtime: yaml
+
+resources:
+  zone:
+    type: aws:route53:Zone
+    properties:
+      name: example.com
+
+  cert:
+    type: aws:acm:Certificate
+    properties:
+      domainName: example.com
+      validationMethod: DNS
+
+  # Using lifting to access nested output values
+  certValidation:
+    type: aws:route53:Record
+    properties:
+      name: ${cert.domainValidationOptions[0].resourceRecordName}
+      type: ${cert.domainValidationOptions[0].resourceRecordType}
+      zoneId: ${zone.zoneId}
+      ttl: 60
+      records:
+        - ${cert.domainValidationOptions[0].resourceRecordValue}

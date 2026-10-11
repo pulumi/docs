@@ -1,0 +1,102 @@
+# NOTE: `make lint` and `make format` run prettier through
+# scripts/prettier.sh, which unions this file with .gitignore. A runtime
+# artifact only needs a .gitignore entry -- it does not have to be repeated
+# here. The entries below predate that and are kept as-is so `prettier` run
+# directly (or through lint-staged) behaves the same way.
+
+_vendor
+node_modules
+/resources
+/assets/css/bundle.css
+*/resources
+public
+.github
+.idea
+.vscode
+.DS_Store
+yarn-error.log
+.hugo_build.lock
+*.md
+.devcontainer
+assets
+config
+cypress
+data
+docfx
+infrastructure
+theme
+tools
+layouts
+scripts
+
+# Don't check csharp build products
+static/programs/*/bin/*
+static/programs/*/obj/*
+
+# Program files use hand-written style conventions, not Prettier
+static/programs/**/*.ts
+
+# Ignore Python virtual environments
+**/.venv/**
+**/venv/**
+
+static/registry/
+static-prebuilt
+
+# Ignore auto-generated docs
+content/docs/reference/pkg
+
+# Ignore config files
+tsconfig.json
+package.json
+package-lock.json
+typedoc.json
+
+# Ignore the files we generate during the build and deployment process.
+origin-bucket-metadata.json
+
+# Ignore js scripts added to the static folder
+static/js
+
+# Conductor workspace state
+.context
+
+**/.claude/settings.json
+**/.claude/settings.local.json
+
+# Link-checker workflow artifacts (gitignored, generated at runtime)
+/.broken-links.json
+/.broken-links-pr.txt
+
+# Content-review / docs-review pre-compute artifacts (gitignored, generated at
+# runtime). The content-review worker re-runs `make lint` on the fix branch in a
+# workspace that still holds these scratch files; without this, `prettier
+# --check .` flags them and the re-gate false-fails. This must cover BOTH the
+# root-level artifacts AND the `.review-snapshot/` directory (which holds copies
+# of the same JSONs, downloaded as a workflow artifact into the publish job) plus
+# the fix-scope report — otherwise lint false-fails and the PR is stuck in draft.
+/.synthetic.patch
+/.fetched-urls.json
+/.candidate-claims*.json
+/.verified-claims.json
+/.frontmatter-validation.json
+/.cross-sibling-discovery.json
+/.readthrough-findings.json
+/.vale-raw.json
+/.vale-findings.json
+/.content-review-*.json
+/.fix-scope-report.json
+/.glowup-*.json
+/.review-snapshot/
+/.pr-body-draft.md
+/.lint.log
+/.lint-comment.md
+/.review-changes.patch
+/.review-changes.paths
+/.applied.paths
+/.review-admin-cache/
+
+# Real-corpus fixture for test_corpus_classifiers.py. Written one claim per
+# line on purpose: pretty-printing it is ~5,700 lines of pure noise in every
+# diff that regenerates it, which is how a review fixture stops getting read.
+scripts/content-review/testdata/

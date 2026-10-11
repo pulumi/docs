@@ -1,0 +1,15 @@
+{{- /*
+    "Program the Cloud" get-started CTA at the bottom of the post sidebar,
+    carried over from the pre-redesign blog. data-track="sidebar" is kept for
+    analytics continuity. The button's -ml-2.5 cancels .btn's px-2.5 so its
+    label left-aligns with the text above, and its hover is bumped to
+    violet-100 — the ghost default (violet-50) would vanish on this card.
+*/ -}}
+<div class="rounded-lg bg-violet-50 p-4 pb-2">
+    <p class="font-overline-sm m-0 mb-4 flex items-center gap-1.5 text-violet-primary">{{ partial "icon.html" (dict "name" "brand/pulumi" "class" "size-4") }}Program the Cloud</p>
+    <p class="body-sm m-0">Create, deploy, and manage cloud infrastructure using your favorite language.</p>
+    <a href="/docs/get-started/" data-track="sidebar" class="btn btn-ghost-primary mt-2 -ml-2.5 hover:bg-violet-100">
+        Get started
+        {{ partial "icon.html" (dict "name" "arrow-right" "class" "size-4") }}
+    </a>
+</div>

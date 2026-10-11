@@ -1,0 +1,122 @@
+---
+# Event title, <= 60 characters.
+title: "{{ replace .Name "-" " " | humanize }}"
+meta_desc: ""
+
+# Social card. Leave blank to auto-generate an on-brand event card at build time
+# (overline + title + presenter "With…" line + Pulumi logo + presenter photos).
+# A square 1:1 card is generated alongside it as a second og:image. Set either
+# field to override with a custom image committed to this bundle, e.g.
+# /events/{{ .Name }}/meta.png. The /event-meta-image skill can produce both,
+# plus extra social sizes, and add external co-presenters and partner logos.
+# meta_image:
+# meta_image_square:
+
+# Overline shown on the generated card. Defaults to event_type (uppercased).
+# overline:
+
+# A featured event displays first in the list.
+featured: false
+
+# Hide from the event list.
+unlisted: false
+
+# Show a registration form. Requires form.hubspot_form_id.
+gated: false
+
+# For an event hosted elsewhere, set event_url to where it lives: an
+# "https://..." URL for a third-party page (opened in a new tab) or a "/..."
+# path for another Pulumi page. The generated /events/{{ .Name }}/ stub then
+# redirects there and is never indexed; the list and RSS link out to it. Omit
+# it for a normal event that renders its own page here.
+# event_url:
+
+# The event type (workshop, webinar, talk).
+event_type: workshop
+
+# YouTube embed URL. When set, the event appears in "On-demand recordings".
+# When empty, it appears in "Upcoming events".
+youtube_url:
+
+# ISO 8601 datetime used for sorting and display.
+sortable_date: {{ now.Format "2006-01-02T15:04:05-07:00" }}
+
+# Human-readable duration.
+duration: "60 minutes"
+
+# "virtual" or a city/state (e.g., "Seattle, WA").
+location: virtual
+
+# Markdown description.
+description: |
+    Event description.
+
+# What attendees will learn (rendered as a checklist).
+learn:
+    - ""
+
+# Speakers.
+presenters:
+    - name: ""
+      role: ""
+      photo: ""
+
+# Used for filtering on the event list page.
+tags:
+    level: Beginner # Beginner | Intermediate | Advanced
+    topics: []
+    languages: []
+    clouds: []
+
+# Registration form (only rendered when gated: true).
+form:
+    hubspot_form_id: ""
+    salesforce_campaign_id: ""
+
+# Offering the same event on two dates (say an Americas slot and an EMEA one)?
+# Add a `sessions:` array instead of duplicating the page. The event keeps one
+# URL, one title, and one description; the sessions carry what actually differs.
+# Each session gets a tab on the event page and its own card in every list.
+#
+# sessions:
+#     - label: Americas              # required when there's more than one session
+#       sortable_date: 2026-09-16T09:00:00.000-07:00
+#       duration: 60 minutes         # optional; falls back to the value above
+#       form:                        # required per session when gated: true
+#           hubspot_form_id: ""
+#           salesforce_campaign_id: ""
+#       presenters:                  # optional; falls back to the list above.
+#           - name: ""               # When every session names its own lineup,
+#             role: ""               # delete the top-level list — anything that
+#             photo: ""              # needs "everyone" unions the sessions.
+#     - label: EMEA
+#       sortable_date: 2026-10-14T10:00:00.000+02:00
+#
+# Once a session has run you can post its recording without waiting for the rest:
+# add `youtube_url:` to that session and the video replaces its register card
+# (the session tab reads "(recording)"). Later sessions keep their forms, and the
+# page stays on the upcoming layout until the whole event is done — at which point
+# you swap all of this for the single top-level `youtube_url` below.
+#
+#     - label: Americas
+#       sortable_date: 2026-09-16T09:00:00.000-07:00
+#       youtube_url: https://www.youtube.com/embed/VIDEO_ID   # this session's recording
+#       form:
+#           hubspot_form_id: ""
+#           salesforce_campaign_id: ""
+#
+# Two rules `make lint` enforces:
+#   - the top-level `sortable_date` above must equal the earliest session's date
+#     (it stays the event's own date for sorting, schema, and social cards)
+#   - the top-level `form:` above must be removed, so there's no question which
+#     form a session renders
+#
+# One rule it can't: DON'T set the top-level `youtube_url` until every session has
+# run. It turns the page into the on-demand layout, which has no session tabs and
+# no registration form — so posting the Americas recording there while the EMEA
+# date is still weeks out takes the EMEA form off the page, drops the event out of
+# the upcoming list, and leaves any `{{< blog/card >}}` embed pointing at a session
+# tab that no longer exists. To surface a finished session's recording early, use
+# the per-session `youtube_url` shown above instead; reserve the top-level key for
+# when the whole event is done.
+---

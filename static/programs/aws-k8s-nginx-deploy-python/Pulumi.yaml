@@ -1,0 +1,6 @@
+name: aws-k8s-nginx-deploy-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that deploys an NGINX service to Kubernetes.

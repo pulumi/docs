@@ -1,0 +1,3157 @@
+#!/usr/bin/env python3
+"""compose-review.py — assemble an ~80%-done review draft from the pre-step artifacts.
+
+Runs as a workflow pre-step AFTER `verify-claims.py` (and the other pre-steps)
+and BEFORE the Opus review job. It reads the artifacts the other pre-steps
+emitted (`.verified-claims.json`, `.vale-findings.json`, `.editorial-balance.json`,
+`.cross-sibling-discovery.json`, `.frontmatter-validation.json`, `.hugo-build.json`,
+and `.candidate-claims.json` as a fallback) plus `gh pr diff` for diff context,
+and writes `.review-draft.md` at the workspace root — a review body that's
+already structurally complete and self-consistent. Opus then EDITS it (triages
+the stub bucket bullets, adds the findings the composer can't pre-stub, fills the
+`<TODO>` tokens) rather than ASSEMBLING it from scratch over 100+ Bash-thrash
+turns.
+
+The design frame: **the composer ASSEMBLES, Opus JUDGES.** The composer never
+decides which findings surface — it lays out the skeleton, renders the 🔍 trail
+verbatim from `.verified-claims.json`, the bucket-count table, the investigation
+log scaffold, the 📊 Editorial-balance Tier 1, the `#### Style suggestions` block,
+the 📜 Review-history line, and *stub* 🚨/⚠️ bucket bullets (one per promoting
+verdict) carrying a `<TODO>` marker. Whether a stub is a real finding, what the
+fix prose should be, the summary paragraph, the confidence levels, the
+cross-sibling read count, the Tier-2 editorial balance — those are `<TODO>`s for
+Opus. Pushing any of that into the composer re-opens the discovery-variance hole
+and degrades the output.
+
+After emitting the draft, the composer runs `validate-pinned.py check
+--skip-rule no-todo-tokens` against its own output. A clean pass means the draft
+is structurally sound (the `<TODO>` tokens are expected and the `no-todo-tokens`
+rule is suppressed for the self-check; the publish path does NOT skip it). A
+*failure* means a composer bug or a contradictory upstream artifact — the
+composer prepends a visible `> [!CAUTION]` banner INTO `.review-draft.md` (never
+a silent-empty file or a file-presence heuristic) so Opus sees the failure and
+falls back to manual assembly per `ci.md` §Fallback, and emits a `::error::`
+annotation for the operator.
+
+Separately from that self-check `> [!CAUTION]` banner (which means "discard this
+draft, assemble manually"), the composer emits a distinct `> [!WARNING]`
+verifier-outage banner between the header and the Summary when it detects that
+the fact-check verifier was DOWN for this run (transport/API errors in
+`.verified-claims.json` — see the outage sentinels above). That banner means
+"this draft is usable, but fact-checking didn't actually run — findings are
+unverified"; it also pre-fills the `facts` confidence row to LOW so the posted
+review can't present unverified findings as `facts: HIGH`. The two banners are
+deliberately different alert levels so the model lane (and maintainers) don't
+conflate "discard" with "read carefully."
+
+Degrades gracefully: any uncaught exception → `safe_main()` writes a minimal
+valid fallback draft (the `> [!CAUTION]` banner shape) and returns 0; the
+workflow's `||` stub is reserved for can't-even-start failures and writes the
+same shape. A missing/empty artifact → that section renders in its degraded
+form with a banner note; the composer never crashes and never blocks the
+pipeline.
+
+Usage:
+    compose-review.py --out .review-draft.md --pr <N> --repo <owner/repo> \
+        --timestamp <ISO8601> --head-sha <sha> [--head-sha-short <sha>] \
+        [--verified-claims .verified-claims.json] [--candidate-claims .candidate-claims.json] \
+        [--vale-findings .vale-findings.json] [--editorial-balance .editorial-balance.json] \
+        [--cross-sibling .cross-sibling-discovery.json] [--frontmatter .frontmatter-validation.json] \
+        [--hugo-build .hugo-build.json] [--repo-root .] [--no-validate] [--dry-run]
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+import subprocess
+import sys
+import traceback
+from pathlib import Path
+
+# ---- constants -------------------------------------------------------------
+
+# Single source of truth for the review footer. `pinned-comment.sh` reads the
+# same file and is the authoritative writer on publish (it stamps the footer
+# onto every page of a split review); the sentinel is how both sides find and
+# strip an existing copy. Keep the sentinel in sync with the shell's
+# FOOTER_SENTINEL.
+FOOTER_SENTINEL = "<!-- CLAUDE_REVIEW_FOOTER -->"
+FOOTER_PATH = Path(__file__).resolve().parent.parent / "footer.md"
+
+# Quick-win: an `unverifiable` *factual* claim renders in ⚠️ Low-confidence
+# (with an author-question line), not 🚨. Flip to "outstanding" if that spec
+# change reverts. (The validator never enforced always-🚨 for unverifiable —
+# `_trail_is_outstanding` only keys on `contradicted`/`mismatch` — so either
+# value keeps the draft structurally valid.)
+PROMOTE_UNVERIFIABLE_TO = "warning"
+
+# `flagged` is the detector verdict: anything synthesized from a deterministic
+# pre-flight check (Hugo build, frontmatter collisions, readthrough coherence)
+# carries `verdict: "flagged"` + `route: "preflight"`. It is NOT a fact-check
+# outcome — `contradicted`/`mismatch` mean "a source disagrees with a claim",
+# which a build error or a coherence gap is not. The specific detector lives in
+# the record's `type`/`source`, rendered in the trail-line parenthetical.
+# `framing-drift` is the fact-check verdict for "the anchor value is accurate
+# but the claim's published meaning differs from what the source supports"
+# (widened denominator, usage → intent, dropped qualifier). It stubs into
+# ⚠️ Low-confidence by default — the reviewer promotes to 🚨 when the drifted
+# phrasing also rides `social.*` frontmatter (auto-posted on merge) or
+# otherwise misleads a reader. It is counted SEPARATELY from the contradiction
+# family in the headline tallies — see DRIFT_VERDICTS below.
+TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged", "framing-drift")
+EXPECTED_TRAIL_EMOJI = {
+    "verified": "✅",
+    "matches": "🤝",
+    "not-a-claim": "➖",
+    "unverifiable": "🤷",
+    "contradicted": "❌",
+    "mismatch": "⚔️",
+    "flagged": "🚩",
+    "framing-drift": "🌀",
+}
+OUTSTANDING_VERDICTS = {"contradicted", "mismatch", "flagged"}
+# Verdicts that say the claim is wrong as written — the ones the headline
+# tallies label `contradicted`, and the ones that must reach 🚨.
+CONTRADICTION_FAMILY = {"contradicted", "mismatch"}
+# `framing-drift` is adjacent but not one of them: the anchor value is accurate
+# and the default bucket is ⚠️. Folding it into the `contradicted` tally makes
+# the trail header and the investigation log report contradictions the body
+# doesn't contain (observed live: a header reading `2 contradicted` above a
+# trail with zero ❌ lines). It gets its own segment in both places instead.
+DRIFT_VERDICTS = {"framing-drift"}
+
+# Mirror of `validate-pinned.py` TEMPORAL_TRIGGERS — keep synchronized.
+TEMPORAL_TRIGGERS = {
+    "recently", "now supports", "now available", "new", "just launched",
+    "latest", "introduced", "as of", "starting", "going forward",
+}
+
+# Truncation budgets for verbatim artifact text (the trail can hold 80-110
+# entries; on a claims-dense post that approaches the 65K body cap — keep
+# entries terse).
+TEXT_TRUNC = 160
+# The v3 author card quotes a claim twice: in its table cell and, verbatim,
+# in the `#### F<n> · Do this` block right under the table. The cell only has
+# to say WHICH claim; the block carries the full line. So an author-card
+# cell gets a short excerpt (reader feedback 2026-09-25: the duplicate made
+# the card twice as long as its content).
+AUTHOR_CELL_TRUNC = 90
+EVIDENCE_TRUNC = 240
+
+GH_TIMEOUT = 30
+
+# Outage sentinels written by verify-claims.py when a per-claim verifier hit a
+# transport/API failure (HTTP 5xx, overloaded, network) rather than a genuine
+# unverifiable (paywall / dead link / turn-cap). The evidence marker is THE
+# signal — verify-claims.py writes it only in process_claim()'s except handler
+# (verify-claims.py:675); the error marker is its top-level errors[] companion
+# (verify-claims.py:669). The turn-cap message ("verification did not converge
+# within N turns") is an ORDINARY unverifiable and must NOT match — keep the
+# predicate keyed on these markers, never on the `unverifiable` verdict alone.
+_VERIFIER_OUTAGE_EVIDENCE_MARKER = "verify-claims.py errored on this claim:"
+_VERIFIER_OUTAGE_ERROR_MARKER = "verifier failed:"
+_VERIFIER_OUTAGE_TOKENS = (
+    "HTTP 500", "HTTP 502", "HTTP 503", "HTTP 529",
+    "Internal server error", "api_error", "overloaded",
+    "RuntimeError: HTTP", "URLError", "TimeoutError",
+)
+# Evidence the candidate-claims floor carries when verify-claims didn't complete
+# at all (the `verdicts is None` degraded path below) — also an outage.
+_FLOOR_DEGRADED_EVIDENCE = "claim verification did not complete"
+
+FALLBACK_BANNER_DRAFT = """## Pre-merge Review — Last updated {ts}
+
+> [!CAUTION]
+> The review composer (`compose-review.py`) did not produce a usable draft ({reason}). Do **not** post the lines below — assemble the review manually per `.claude/commands/docs-review/ci.md` §Fallback (manual assembly): read the pre-step artifacts (`.verified-claims.json` for the trail/verdicts, `.vale-findings.json` for style, `.editorial-balance.json` for Tier 1, `.hugo-build.json`, `.frontmatter-validation.json`, `.cross-sibling-discovery.json`) and render per `docs-review:references:output-format`. This stub exists so the consumer sees the failure rather than a missing file.
+
+_(composer stub — see ci.md §Fallback)_
+"""
+
+# ---- credential redaction (backstop; mirrors fact-check.md §Credential redaction) ----
+
+_REDACT_PATTERNS = [
+    re.compile(r"\bghp_[A-Za-z0-9]{20,}\b"),
+    re.compile(r"\bgithub_pat_[A-Za-z0-9_]{20,}\b"),
+    re.compile(r"\bsk-[A-Za-z0-9\-]{16,}\b"),
+    re.compile(r"\bAKIA[0-9A-Z]{12,}\b"),
+    re.compile(r"\bpul-[a-f0-9]{32,}\b"),
+    re.compile(r"\bxox[bpars]-[A-Za-z0-9\-]{10,}\b"),
+    re.compile(r"\beyJ[A-Za-z0-9_\-]{10,}\.[A-Za-z0-9_\-]{10,}\.[A-Za-z0-9_\-]{10,}\b"),  # JWT
+    re.compile(r"\bhttps?://[^/\s:@]+:[^/\s@]+@[^\s]+"),  # user:pass@host
+]
+# An opaque ≥40-char alphanumeric blob that isn't a hex git SHA (7-40 hex) and
+# isn't a UUID — conservative to avoid clobbering real evidence text.
+_OPAQUE_BLOB_RE = re.compile(r"\b(?![0-9a-fA-F]{7,40}\b)[A-Za-z0-9]{40,}\b")
+
+
+def redact(s: str) -> str:
+    if not s:
+        return s
+    out = s
+    for pat in _REDACT_PATTERNS:
+        out = pat.sub("[REDACTED]", out)
+    out = _OPAQUE_BLOB_RE.sub("[REDACTED]", out)
+    return out
+
+
+# ---- artifact loaders (graceful — None means absent, [] / {} present-but-empty) ----
+
+
+def _load_json(path: str | None):
+    if not path:
+        return None
+    p = Path(path)
+    if not p.is_file():
+        return None
+    try:
+        return json.loads(p.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def load_verified_claims(path: str | None) -> tuple[list[dict] | None, list[str], dict]:
+    """Return (verdicts | None, errors, meta). None means the artifact is
+    absent; [] means present but empty (the verify-claims step crashed)."""
+    data = _load_json(path)
+    if not isinstance(data, dict):
+        return None, [], {}
+    verdicts = data.get("verdicts")
+    if not isinstance(verdicts, list):
+        return None, [], {}
+    errors = data.get("errors") if isinstance(data.get("errors"), list) else []
+    meta = data.get("meta") if isinstance(data.get("meta"), dict) else {}
+    return [v for v in verdicts if isinstance(v, dict)], errors, meta
+
+
+def load_candidate_claims(path: str | None) -> list[dict] | None:
+    data = _load_json(path)
+    if not isinstance(data, dict):
+        return None
+    claims = data.get("claims")
+    if not isinstance(claims, list):
+        return None
+    return [c for c in claims if isinstance(c, dict)]
+
+
+def load_candidate_stances(path: str | None) -> list[dict] | None:
+    """The `stances` list from `.candidate-claims.json` (merge-claims schema
+    v2): positioning/comparison records the verifier never sees. None when
+    the artifact is absent or pre-dates the split."""
+    data = _load_json(path)
+    if not isinstance(data, dict):
+        return None
+    stances = data.get("stances")
+    if not isinstance(stances, list):
+        return None
+    return [c for c in stances if isinstance(c, dict)]
+
+
+def load_vale_findings(path: str | None) -> list[dict]:
+    data = _load_json(path)
+    if not isinstance(data, list):
+        return []
+    return [f for f in data if isinstance(f, dict)]
+
+
+def load_editorial_balance(path: str | None) -> dict | None:
+    data = _load_json(path)
+    return data if isinstance(data, dict) else None
+
+
+def load_cross_sibling(path: str | None) -> list[dict]:
+    data = _load_json(path)
+    if not isinstance(data, dict):
+        return []
+    files = data.get("files")
+    return [f for f in files if isinstance(f, dict)] if isinstance(files, list) else []
+
+
+def load_frontmatter(path: str | None) -> list[dict]:
+    data = _load_json(path)
+    if not isinstance(data, dict):
+        return []
+    files = data.get("files")
+    return [f for f in files if isinstance(f, dict)] if isinstance(files, list) else []
+
+
+def load_hugo_build(path: str | None) -> dict | None:
+    data = _load_json(path)
+    return data if isinstance(data, dict) else None
+
+
+def load_readthrough(path: str | None) -> dict | None:
+    data = _load_json(path)
+    return data if isinstance(data, dict) else None
+
+
+# ---- preflight synthetic verdicts (Hugo + frontmatter pre-stubs) -----------
+
+
+# Hugo error lines often embed a file path + optional line number. Recognise:
+#   "page.md:LINE:COL"   (most common)
+#   "page.md:LINE"
+#   `"page.md"`          (no line — fall back to L1)
+#   anywhere `content/.../page.md` appears
+_HUGO_FILE_LINE_RE = re.compile(
+    r"""
+    (?P<file>(?:content|layouts|themes)/[\w./\-]+\.(?:md|html|toml|yaml|yml))
+    (?::(?P<line>\d+))?
+    """,
+    re.VERBOSE,
+)
+
+
+def _hugo_extract_file_line(raw: str) -> tuple[str, str]:
+    """Return (file, L-anchor) parsed from a Hugo error/link-integrity line.
+    Anchor is empty string when no line number is recoverable; the synthetic
+    verdict then falls back to L1 (the frontmatter block / top of file)."""
+    m = _HUGO_FILE_LINE_RE.search(raw)
+    if not m:
+        return ("", "")
+    file = m.group("file")
+    line = m.group("line")
+    return (file, f"L{line}" if line else "")
+
+
+_HUGO_SOURCE = "hugo --renderToMemory pre-step"
+_FM_SOURCE = "frontmatter-validate.py pre-step"
+
+
+def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
+    """Synthesize verdict-shaped dicts from `.hugo-build.json` so the composer
+    pre-stubs Hugo errors and link-integrity breakages into 🚨 Outstanding.
+    These flow through render_trail (as `🚩 flagged` detector lines) and
+    build_stubs (as `**[L<n>]**` bullets) just like real fact-check verdicts.
+    Routed as `preflight` so build_stubs writes a confirm-or-REMOVE TODO
+    rather than the fact-check fix-or-spurious-or-mis-sourced TODO, and so the
+    fact-check claim metadata excludes them.
+    """
+    if not isinstance(hugo_artifact, dict):
+        return []
+    out: list[dict] = []
+    # `skipped` means the Hugo render didn't run (content-only PR), so there
+    # are no build errors to stub. `link_integrity` is still read: since
+    # link-check-diff.py the workflow appends deterministic dead-internal-link
+    # entries to it on every PR, skipped or not (#21560 quoted a dead link
+    # inside another finding and never flagged it).
+    hugo_errors = [] if hugo_artifact.get("skipped") else (hugo_artifact.get("errors", []) or [])
+    for entry in hugo_errors:
+        if not isinstance(entry, str) or not entry.strip():
+            continue
+        file, anchor = _hugo_extract_file_line(entry)
+        out.append({
+            "claim_id": f"hugo-error-{len(out)}",
+            "file": file,
+            "line_range": anchor or "L1",
+            "text": entry.strip()[:TEXT_TRUNC],
+            "type": "hugo-build-error",
+            "route": "preflight",
+            "verdict": "flagged",
+            "confidence": "high",
+            "evidence": entry.strip(),
+            "source": _HUGO_SOURCE,
+        })
+    for entry in hugo_artifact.get("link_integrity", []) or []:
+        if not isinstance(entry, str) or not entry.strip():
+            continue
+        file, anchor = _hugo_extract_file_line(entry)
+        out.append({
+            "claim_id": f"hugo-link-{len(out)}",
+            "file": file,
+            "line_range": anchor or "L1",
+            "text": entry.strip()[:TEXT_TRUNC],
+            "type": "hugo-link-integrity",
+            "route": "preflight",
+            "verdict": "flagged",
+            "confidence": "high",
+            "evidence": entry.strip(),
+            "source": _HUGO_SOURCE,
+        })
+    return out
+
+
+def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]:
+    """Synthesize verdicts from `.frontmatter-validation.json`'s `files[]` array.
+
+    Three failure classes get pre-stubbed as `🚩 flagged` (so they surface
+    in 🚨 Outstanding via the flagged detector-promotion path):
+      - `menu_parents[].parent_exists_in_menu == false`  (broken nav parent)
+      - `alias_collisions[]`                              (alias hits another file)
+      - `url_collisions[]`                                (URL hits another file)
+
+    No line number is recoverable from the artifact, so all anchor at L1
+    (the frontmatter block at the top of the file). The reviewer's editorial
+    pass triages PR-internal-rename cases (move the bullet to 💡 Pre-existing
+    with a `**Pre-existing:**` label) vs real collisions.
+    """
+    out: list[dict] = []
+    for fm in frontmatter_files or []:
+        if not isinstance(fm, dict):
+            continue
+        fpath = fm.get("file") or ""
+        for parent in fm.get("menu_parents", []) or []:
+            if not isinstance(parent, dict) or parent.get("parent_exists_in_menu") is not False:
+                continue
+            menu = parent.get("menu_name") or "?"
+            pid = parent.get("parent_identifier") or "?"
+            also = parent.get("found_in_other_menus") or []
+            also_note = f" (parent identifier exists in: {', '.join(also)})" if also else ""
+            out.append({
+                "claim_id": f"fm-parent-{len(out)}",
+                "file": fpath,
+                "line_range": "L1",
+                "text": f"frontmatter `menu.{menu}.parent: {pid}` does not exist in the `{menu}` menu{also_note}"[:TEXT_TRUNC],
+                "type": "frontmatter-menu-parent",
+                "route": "preflight",
+                "verdict": "flagged",
+                "confidence": "high",
+                "evidence": f"menu={menu} parent={pid} parent_exists_in_menu=false",
+                "source": _FM_SOURCE,
+            })
+        for col in fm.get("alias_collisions", []) or []:
+            if not isinstance(col, dict):
+                continue
+            alias = col.get("alias") or "?"
+            collides = col.get("collides_with") or "?"
+            out.append({
+                "claim_id": f"fm-alias-{len(out)}",
+                "file": fpath,
+                "line_range": "L1",
+                "text": f"frontmatter alias `{alias}` collides with `{collides}`"[:TEXT_TRUNC],
+                "type": "frontmatter-alias-collision",
+                "route": "preflight",
+                "verdict": "flagged",
+                "confidence": "high",
+                "evidence": f"alias={alias} collides_with={collides}",
+                "source": _FM_SOURCE,
+            })
+        for col in fm.get("url_collisions", []) or []:
+            if not isinstance(col, dict):
+                continue
+            url = col.get("url") or col.get("alias") or "?"
+            collides = col.get("collides_with") or col.get("claimants") or "?"
+            out.append({
+                "claim_id": f"fm-url-{len(out)}",
+                "file": fpath,
+                "line_range": "L1",
+                "text": f"frontmatter URL `{url}` collides with `{collides}`"[:TEXT_TRUNC],
+                "type": "frontmatter-url-collision",
+                "route": "preflight",
+                "verdict": "flagged",
+                "confidence": "high",
+                "evidence": f"url={url} collides_with={collides}",
+                "source": _FM_SOURCE,
+            })
+    return out
+
+
+_RT_SOURCE = "readthrough pre-step"
+
+# Backstop mirror of `readthrough.py`'s normalize_line_range() — kept here (and
+# deliberately duplicated rather than imported; these scripts are standalone by
+# design) so an artifact from an older readthrough run, or one whose anchor
+# repair failed, still can't render the degenerate `L0` anchor in both the trail
+# line and the bucket bullet. File-less, so no anchor-quote fallback: numeric
+# parse only, then `L1`.
+_RT_DASHES = str.maketrans({c: "-" for c in "‐‑‒–—―−"})
+_RT_L_RANGE_RE = re.compile(r"L(\d+)(?:\s*-\s*L?(\d+))?", re.IGNORECASE)
+_RT_BARE_RANGE_RE = re.compile(r"(\d+)(?:\s*-\s*(\d+))?")
+
+
+def _rt_normalize_line_range(raw: str) -> str:
+    """Coerce a readthrough `line_range` to `L<a>` / `L<a>-<b>`; "" if unusable."""
+    s = (raw or "").translate(_RT_DASHES)
+    m = _RT_L_RANGE_RE.search(s) or _RT_BARE_RANGE_RE.search(s)
+    if not m:
+        return ""
+    a = int(m.group(1))
+    b = int(m.group(2)) if m.group(2) else a
+    if a <= 0:  # `L0` is not a line
+        return ""
+    return f"L{a}" if b <= a else f"L{a}-{b}"
+
+
+def _readthrough_synthetic_verdicts(readthrough_artifact: dict | None) -> list[dict]:
+    """Synthesize `🚩 flagged` verdict-shaped dicts from `.readthrough-findings.json`.
+
+    The readthrough lane (`readthrough.py`, a Sonnet pre-step) emits whole-page
+    coherence/structure findings. Each becomes a `route: "preflight"` detector
+    verdict so it flows through render_trail + build_stubs exactly like the Hugo
+    and frontmatter pre-steps. `fix_class` (local_repair | reconception) rides on
+    the record so build_stubs can write the right TODO and the existing-content
+    worker can decide fix-vs-flag.
+    """
+    if not isinstance(readthrough_artifact, dict):
+        return []
+    out: list[dict] = []
+    for f in readthrough_artifact.get("findings", []) or []:
+        if not isinstance(f, dict):
+            continue
+        mode = (f.get("failure_mode") or "coherence").strip()
+        fix_class = (f.get("fix_class") or "reconception").strip()
+        anchor = (f.get("anchor_quote") or "").strip()
+        rationale = (f.get("rationale") or f.get("proposed_fix") or "").strip()
+        out.append({
+            "claim_id": f"readthrough-{len(out)}",
+            "file": f.get("file") or "",
+            "line_range": _rt_normalize_line_range(f.get("line_range")) or "L1",
+            "text": (anchor or mode)[:TEXT_TRUNC],
+            "type": f"readthrough-{mode}",
+            "route": "preflight",
+            "verdict": "flagged",
+            "confidence": "high",
+            "evidence": rationale,
+            "source": _RT_SOURCE,
+            "fix_class": fix_class,
+            "proposed_fix": (f.get("proposed_fix") or "").strip(),
+        })
+    return out
+
+
+# ---- gh helpers ------------------------------------------------------------
+
+
+def _gh(args: list[str]) -> str:
+    try:
+        proc = subprocess.run(["gh", *args], capture_output=True, text=True, timeout=GH_TIMEOUT)
+    except (subprocess.SubprocessError, OSError):
+        return ""
+    return proc.stdout or ""
+
+
+def gh_diff_name_only(pr: str, repo: str | None, override: str | None = None) -> list[str]:
+    if override is not None:
+        return [f.strip() for f in override.split(",") if f.strip()]
+    args = ["pr", "diff", str(pr), "--name-only"]
+    if repo:
+        args += ["--repo", repo]
+    return [ln.strip() for ln in _gh(args).splitlines() if ln.strip()]
+
+
+def gh_diff_text(pr: str, repo: str | None) -> str:
+    args = ["pr", "diff", str(pr)]
+    if repo:
+        args += ["--repo", repo]
+    return _gh(args)
+
+
+_DIFF_FILE_RE = re.compile(r"^\+\+\+ (?:b/)?(.+)$")
+_DIFF_HUNK_RE = re.compile(r"^@@ -\d+(?:,(\d+))? \+(\d+)(?:,(\d+))? @@")
+
+
+def changed_lines_by_file(diff_text: str) -> dict[str, set[int]]:
+    """{path: head-side line numbers this diff adds or modifies}.
+
+    Only `+` lines count, never the hunk's context lines: the claim extractor
+    sees the context too ("and their immediate surrounding context"), so a
+    hunk span is wider than what the PR wrote. A pure deletion marks the head
+    line it joins onto, so a claim on either side of the cut still reads as
+    touched. Every file in the diff gets a key, even one with no `+` lines.
+    Hunk bodies are consumed by their header counts, so a deleted line that
+    itself starts with `--` is never mistaken for the next file header.
+    """
+    changed: dict[str, set[int]] = {}
+    path = None
+    new_ln = old_left = new_left = 0
+    for line in (diff_text or "").splitlines():
+        if old_left > 0 or new_left > 0:
+            tag = line[:1]
+            if tag == "+":
+                changed[path].add(new_ln)
+                new_ln += 1
+                new_left -= 1
+            elif tag == "-":
+                changed[path].add(new_ln)
+                old_left -= 1
+            elif tag == "\\":
+                pass
+            else:
+                new_ln += 1
+                old_left -= 1
+                new_left -= 1
+            continue
+        m = _DIFF_FILE_RE.match(line)
+        if m:
+            path = None if m.group(1) == "/dev/null" else m.group(1)
+            if path is not None:
+                changed.setdefault(path, set())
+            continue
+        m = _DIFF_HUNK_RE.match(line)
+        if m and path is not None:
+            old_left = int(m.group(1)) if m.group(1) is not None else 1
+            new_ln = int(m.group(2))
+            new_left = int(m.group(3)) if m.group(3) is not None else 1
+    return changed
+
+
+def claim_lines(line_range: str) -> set[int]:
+    """Every head-side line a claim's `line_range` names ('L42', 'L42-47',
+    'L12, L88-90'); empty when nothing parses."""
+    out: set[int] = set()
+    for ref in line_refs(line_range):
+        nums = _lines_from_ref(ref)
+        if nums:
+            out.update(range(nums[0], nums[-1] + 1))
+    return out
+
+
+def split_untouched_unverifiable(stubs: list[dict], changed: dict[str, set[int]] | None
+                                 ) -> tuple[list[dict], list[dict]]:
+    """(kept, preexisting): pull out `unverifiable` claims on lines the PR
+    didn't write.
+
+    The extractor reads each hunk's context lines, so a claim the PR never
+    touched can come back `unverifiable` and land on the author card as a ❓
+    the author must answer before merge. pulumi/docs#22164 (2026-10-07):
+    a glow-up spelled out "SSRF" on L31, and the two breaking-change notes
+    beside it (L28, L34, written by the service engineers weeks earlier)
+    became merge blockers because the verifier can't read the private
+    service repo. An unverifiable is "nobody could check this", which the PR
+    can't have caused on a line it didn't write, so it is pre-existing by
+    definition and goes to the evidence page's 💡 bucket.
+
+    Deliberately narrow. Only `unverifiable`: a `contradicted` or `mismatch`
+    on an untouched line can be the PR's doing (an edit that makes another
+    line wrong), so those stay with the model's pre-existing judgment. Only a
+    file the diff touches, a claim whose lines parse, and a diff we actually
+    have: anything less keeps today's behavior.
+    """
+    if not changed:
+        return list(stubs), []
+    kept: list[dict] = []
+    pre: list[dict] = []
+    for s in stubs:
+        lines = s.get("lines_all") or set()
+        f = s.get("file") or ""
+        if (s.get("verdict") == "unverifiable" and f in changed and lines
+                and not (lines & changed[f])):
+            pre.append(s)
+        else:
+            kept.append(s)
+    return kept, pre
+
+
+# ---- small helpers ---------------------------------------------------------
+
+_L_TOKEN_RE = re.compile(r"L\d+(?:-\d+)?")
+
+
+def line_refs(line_range: str) -> list[str]:
+    """All L-tokens in a `line_range` ('L42' / 'L42-47' / 'L12, L88, L91')."""
+    return _L_TOKEN_RE.findall(line_range or "")
+
+
+def first_line_ref(line_range: str) -> str:
+    """The first L-token, or 'L0' as a degenerate fallback (keeps the draft
+    self-consistent rather than crashing on a malformed range)."""
+    refs = line_refs(line_range)
+    return refs[0] if refs else "L0"
+
+
+def trunc(s: str, n: int) -> str:
+    """Truncate to <= n chars, breaking on a word boundary.
+
+    Cutting mid-word produces the likes of `…you reuse the "same IAM policies
+    you have al…`, which reads as a rendering bug and costs the reader the one
+    clause that would have made the sentence land. Back up to the last space
+    in the final quarter of the budget when there is one; hard-cut otherwise
+    (a long unbroken token, e.g. a URL).
+    """
+    s = (s or "").strip().replace("\n", " ")
+    if len(s) <= n:
+        return s
+    cut = s[: n - 1].rstrip()
+    space = cut.rfind(" ")
+    if space >= int((n - 1) * 0.75):
+        cut = cut[:space].rstrip()
+    return cut.rstrip(",;:—-") + "…"
+
+
+def quote(s: str) -> str:
+    return '"' + (s or "").replace('"', "'") + '"'
+
+
+def is_blog_diff(diff_files: list[str]) -> bool:
+    return any(f.startswith("content/blog/") for f in diff_files)
+
+
+def touches_programs(diff_files: list[str]) -> bool:
+    return any(f.startswith("static/programs/") for f in diff_files)
+
+
+# ---- section renderers -----------------------------------------------------
+
+
+def render_header(timestamp: str, head_sha: str = "") -> str:
+    """Header line plus, when the head SHA is known, a machine-readable
+    freshness sentinel. The sentinel exists because an entire class of pusher
+    (the Copilot coding agent, `GITHUB_TOKEN` pushes) never fires the
+    `pull_request: synchronize` event, so the `review:stale` label can miss a
+    push entirely (PR #20556 closed wearing `review:no-blockers` while the
+    pinned review described content a later conflict-resolution commit had
+    replaced). Label-independent consumers (`/pr-review`'s collect.py, the
+    review-label-reconcile workflow) compare this SHA against the PR head —
+    an exact check, immune to suppressed webhooks. The re-entrant update path
+    must refresh it alongside the `Last updated` timestamp (see
+    `docs-review:references:update`)."""
+    header = f"## Pre-merge Review — Last updated {timestamp}"
+    if head_sha:
+        header += f"\n<!-- CLAUDE_REVIEW_HEAD {head_sha} -->"
+    return header
+
+
+def count_verifier_outages(verdicts: list[dict] | None) -> tuple[int, int]:
+    """Return (n_outage, n_total) over fact-check verdicts. A verdict is an
+    OUTAGE when its evidence carries the script-error marker (a transport/API
+    failure verify-claims.py caught), OR carries an outage token AND is
+    `unverifiable`, OR is the candidate-floor degraded placeholder. Ordinary
+    unverifiables (turn-cap, dead link, paywall) do NOT count — they don't
+    carry the markers. Call BEFORE appending Hugo/frontmatter synthetic
+    verdicts so preflight verdicts don't dilute the ratio."""
+    n_total = len(verdicts or [])
+    n_outage = 0
+    for v in verdicts or []:
+        ev = str(v.get("evidence") or "")
+        if _VERIFIER_OUTAGE_EVIDENCE_MARKER in ev or ev == _FLOOR_DEGRADED_EVIDENCE:
+            n_outage += 1
+        elif v.get("verdict") == "unverifiable" and any(tok in ev for tok in _VERIFIER_OUTAGE_TOKENS):
+            n_outage += 1
+    return n_outage, n_total
+
+
+def render_verifier_outage_banner(n_outage: int, n_total: int) -> str:
+    """A `> [!WARNING]` banner (distinct from the self-check `> [!CAUTION]`
+    discard banner) telling the reader fact-checking was degraded. Empty string
+    when no outage. Author-facing wording (no internal tooling names)."""
+    if n_outage <= 0:
+        return ""
+    retry = ("Once the service is back, flip the PR to draft and back to "
+             "ready to regenerate a complete review.")
+    if n_outage >= n_total:
+        return (
+            "> [!WARNING]\n"
+            "> **Automated fact-checking did not run for this review.** The "
+            f"verification service returned errors for all {n_total} extracted "
+            "claim(s), so every finding below is script-generated and unverified "
+            "— treat the 🔍 Verification trail and the Summary as **unconfirmed** "
+            "and fact-check the claims manually before relying on them. "
+            "(`facts` confidence is forced to LOW for this reason.) " + retry
+        )
+    return (
+        "> [!WARNING]\n"
+        "> **Automated fact-checking was incomplete for this review.** The "
+        f"verification service errored on {n_outage} of {n_total} claim(s); those "
+        "trail entries are unconfirmed — spot-check them manually. " + retry
+    )
+
+
+def render_summary_block(confidence_dims: list[str], forced_levels: dict[str, tuple[str, str]] | None = None) -> str:
+    forced_levels = forced_levels or {}
+
+    def _row(d: str) -> str:
+        if d in forced_levels:
+            level, note = forced_levels[d]
+            return f"> | {d} | {level} | {note} |"
+        return f"> | {d} | <TODO: HIGH/MEDIUM/LOW> | <TODO: short note when not HIGH; leave empty when HIGH> |"
+
+    rows = "\n".join(_row(d) for d in confidence_dims)
+    return (
+        "> [!TIP]\n"
+        "> **Summary:** <TODO: one paragraph — (1) what this PR is (content type + subject; for a new page, which existing pages it parallels), "
+        "(2) what specific kind of wrongness would block a reader's success, (3) which investigative passes ran>.\n"
+        ">\n"
+        "> **Review confidence:**\n"
+        ">\n"
+        "> | Dimension | Level | Notes |\n"
+        "> | :--- | :---: | :--- |\n"
+        f"{rows}"
+    )
+
+
+def render_investigation_log(
+    *,
+    cross_sibling: list[dict],
+    verdicts: list[dict],
+    route_counts: dict,
+    frontmatter: list[dict],
+    has_temporal_trigger: bool,
+    diff_files: list[str],
+    has_fenced_code_in_content: bool,
+    editorial_balance: dict | None,
+    is_blog: bool,
+    diff_unavailable: bool,
+) -> str:
+    bullets: list[str] = []
+
+    # 1. Cross-sibling reads.
+    templated = [f for f in cross_sibling if f.get("in_templated_section")]
+    if not templated:
+        bullets.append("- **Cross-sibling reads:** not run (not in a templated section)")
+    else:
+        # Y = the dispatch-list size for the (first) templated file. The leading
+        # count starts at 0 (the reviewer's sibling-read fan-out runs in the
+        # review pass, not here) — ci.md §3 tells the reviewer to overwrite it.
+        # Keep the parenthetical reader-facing (no internal-tooling names).
+        y = len(templated[0].get("siblings_for_dispatch") or templated[0].get("directory_peers") or [])
+        bullets.append(f"- **Cross-sibling reads:** 0 of {y} siblings")
+
+    # 2. External claim verification. Detector findings (route: preflight —
+    # Hugo/frontmatter/readthrough) are NOT fact-check claims; exclude them so
+    # they don't inflate the "X of Y claims verified" counts (route_counts is
+    # filtered to match, so I+P+F+S still sums to Y).
+    fact_verdicts = [v for v in verdicts if v.get("route") != "preflight"]
+    if not fact_verdicts:
+        bullets.append("- **External claim verification:** not run (no claims in this diff)")
+    else:
+        y = len(fact_verdicts)
+        x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
+        n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
+        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
+        n_drift = sum(1 for v in fact_verdicts if v.get("verdict") in DRIFT_VERDICTS)
+        i_inline = route_counts.get("inline", 0)
+        p1 = route_counts.get("pass1", 0)
+        f2 = route_counts.get("pass2", 0)
+        s3 = route_counts.get("pass3", 0)
+        k_corr = route_counts.get("k_corr", 0)
+        seg = (
+            f"- **External claim verification:** {x} of {y} claims verified "
+            f"({n_unver} unverifiable, {n_contra} contradicted"
+            f"{f', {n_drift} framing-drift' if n_drift else ''}) · "
+            f"4 specialists (numerical, cross-reference, capability, framing); "
+            f"{k_corr} cross-specialist corroborations · "
+            f"routed: {i_inline} inline, {p1} Pass 1, {f2} Pass 2"
+        )
+        if f2 > 0:
+            v2, c2, u2 = route_counts.get("pass2_vcu", (0, 0, 0))
+            seg += f" (verified {v2}, contradicted {c2}, unverifiable {u2})"
+        seg += f", {s3} Pass 3"
+        if s3 > 0:
+            v3, c3, u3 = route_counts.get("pass3_vcu", (0, 0, 0))
+            seg += f" (verified {v3}, contradicted {c3}, unverifiable {u3})"
+        seg += "."
+        bullets.append(seg)
+
+    # 3. Cited-claim spot-checks.
+    n_cited = sum(1 for v in verdicts if v.get("route") == "pass2")
+    if n_cited == 0:
+        bullets.append("- **Cited-claim spot-checks:** not run (no cited claims)")
+    else:
+        bullets.append(f"- **Cited-claim spot-checks:** {n_cited} of {n_cited} cited claims fetched and compared")
+
+    # 4. Frontmatter sweep.
+    if not frontmatter:
+        bullets.append("- **Frontmatter sweep:** not run (no frontmatter in diff)")
+    else:
+        keys: set[str] = set()
+        for f in frontmatter:
+            for k in f.get("frontmatter_keys") or []:
+                keys.add(str(k))
+        locs = ["body"]
+        if any(k == "meta_desc" or k.startswith("meta_desc.") for k in keys):
+            locs.append("meta_desc")
+        social_subs = sorted(k.split(".", 1)[1] for k in keys if k.startswith("social."))
+        if social_subs:
+            locs.append("social.{" + ", ".join(social_subs) + "}")
+        bullets.append(f"- **Frontmatter sweep:** ran on {' + '.join(locs)}")
+
+    # 5. Temporal-trigger sweep.
+    if diff_unavailable:
+        bullets.append("- **Temporal-trigger sweep:** ran (sweep runs in-review — confirm matches)")
+    elif has_temporal_trigger:
+        bullets.append("- **Temporal-trigger sweep:** ran (recency words present in diff; spot-check in-review)")
+    else:
+        bullets.append("- **Temporal-trigger sweep:** not run (no trigger words)")
+
+    # 6. Code execution.
+    if touches_programs(diff_files):
+        progs = sorted({"/".join(f.split("/")[:3]) for f in diff_files if f.startswith("static/programs/")})
+        bullets.append(
+            f"- **Code execution:** ran {', '.join(progs)} (CI test harness gates parse + imports)"
+        )
+    else:
+        bullets.append("- **Code execution:** not run (no `static/programs/` change)")
+
+    # 7. Code-examples checks.
+    if touches_programs(diff_files) and not has_fenced_code_in_content:
+        bullets.append("- **Code-examples checks:** ran (1 specialist: body-code-coverage); 0 findings")
+    elif has_fenced_code_in_content:
+        bullets.append("- **Code-examples checks:** ran (3 specialists: structural, existence, body-code-coverage); 0 findings")
+    elif diff_unavailable:
+        bullets.append("- **Code-examples checks:** ran (3 specialists: structural, existence, body-code-coverage); 0 findings")
+    else:
+        bullets.append("- **Code-examples checks:** not run (no fenced code blocks in content files)")
+
+    # 8. Editorial-balance pass.
+    if not is_blog:
+        bullets.append("- **Editorial-balance pass:** not run (not under content/blog/)")
+    elif not editorial_balance or editorial_balance.get("trigger") is None:
+        bullets.append("- **Editorial-balance pass:** ran (single-subject, N/A)")
+    else:
+        target = _eb_target(editorial_balance)
+        n_h2 = len(target.get("sections") or []) if target else 0
+        n_flags = len(target.get("outliers") or []) if target else 0
+        bullets.append(f"- **Editorial-balance pass:** ran ({n_h2} H2 sections, {n_flags} flags fired)")
+
+    return "<details>\n<summary>Investigation log</summary>\n\n" + "\n".join(bullets) + "\n\n</details>"
+
+
+def render_count_table(a: int, b: int, c: int, d: int) -> str:
+    return (
+        "| 🚨 Outstanding | ⚠️ Low-confidence | 💡 Pre-existing | ✅ Resolved |\n"
+        "| :---: | :---: | :---: | :---: |\n"
+        f"| **{a}** | **{b}** | **{c}** | **{d}** |"
+    )
+
+
+# The advisory-tier sub-heading. Renamed from "Style findings" on 2026-08-03:
+# once the blocker tier carries the correctness errors and the known
+# false-positive rules are disabled, what's left is optional polish, and
+# "findings" oversold it. validate-pinned.py still recognizes the old spelling
+# so an in-flight review that merges a pre-rename body keeps validating.
+STYLE_HEADING = "#### Style suggestions"
+# On v3 the block is the author card's ONLY non-blocking lane, so it is also
+# where a model-found nit goes — a typo, a stray space, a mechanical wording
+# slip Vale's rules don't carry. Before this, such a find had nowhere to land:
+# 🚨 overshoots (it blocks merge on a one-character fix), ❓ is the composer's
+# deterministic `unverifiable` lane, and a hand-written `[style]` bullet
+# desynced the brief's Vale-derived count. So the model parked them on the
+# brief's ⚠️ list, which is addressed to the reviewer — PR #21787 F3 shipped
+# "Typo: `i. e.` has a stray space … Trivial fix for the author" on the card
+# headed "not for the author", making a human relay a one-character fix.
+#
+# The two tags are the provenance split, and both are load-bearing:
+#   [style] — Vale's advisory tier. `style-advisory-provenance` matches every
+#             one against `.vale-findings.json`, so the tag can't be used to
+#             launder a model finding into a lane that claims linter backing.
+#   [nit]   — the review found it itself. Free-form, never blocking, counted
+#             separately in the brief's rubber-stamp line.
+# Keep them distinguishable: the block is quoted out of context often enough
+# that a bullet has to say where it came from on its own.
+NIT_TAG = "nit"
+STYLE_TAG = "style"
+# Current spelling first; "Style findings" is the pre-2026-08-03 name, still
+# accepted so an in-flight review that merges a pre-rename body keeps parsing.
+# validate-pinned.py and post-style-suggestions.py carry their own copies.
+STYLE_HEADINGS = (STYLE_HEADING, "#### Style findings")
+# The v3 block always renders at compose time — the model needs a stable
+# anchor to append a `[nit]` under, and asking it to author the H4 + caption
+# verbatim is how you get a malformed block. build-evidence.py drops it again
+# when nothing landed, so an empty one never reaches the published card.
+_V3_EMPTY_STYLE = "_No style suggestions or nits._"
+# Editorial stances the diff introduces — "the fastest path", "the recommended
+# approach", "unlike Terraform". Listed under ⚠️ with NO verdict: a page's own
+# framing has no external ground truth (the verifier lands these `not-a-claim`
+# every time), but a human should see that an agent asserted a superlative.
+# PR #21291 shipped "`pulumi convert` is the fastest path … and it's where to
+# start" and nothing in the review surfaced the word. Uncounted in the ⚠️
+# cell (like style suggestions) and never a trail record — the bullets start
+# with `- L<n>` rather than `- **[L<n>]**` so extract_bucket_bullets skips
+# them, and `editorial-stances-coverage` in validate-pinned.py checks the list
+# against the extractor's records both ways.
+STANCES_HEADING = "#### Editorial stances introduced by this PR"
+STANCES_NOTE = ("*Superlative, ranking, or comparative language the diff adds. No verdict — a page's own "
+                "framing isn't fact-checkable — but confirm each is a stance the docs should take, "
+                "and that no agent-written rewrite introduced it unasked.*")
+# The v3 brief's shorter caption (the v2 monolith keeps the one above: its
+# golden output is pinned byte-identical).
+STANCES_NOTE_V3 = ("*Superlatives and comparisons the diff adds. Framing isn't fact-checkable, so "
+                   "confirm each is a stance the docs should take.*")
+STANCES_EMPTY = "_None — the extractor found no positioning or comparison language in this PR's added lines._"
+
+# Italic one-liners that open the 🚨 / ⚠️ sections when they have findings
+# (parallel to the pattern-based-linting caption under STYLE_HEADING) —
+# omitted on the explicit-empty form.
+_OUTSTANDING_NOTE = "*These must be resolved or refuted before merging.*"
+_LOWCONF_NOTE = "*Review each and resolve as appropriate — these don't block the PR.*"
+
+
+# `source` sentinels `verify-claims.py` emits when it has no real citation
+# (turn-cap exhausted, per-claim error, deterministic pass-0 resolution) — not
+# reader-facing "sources"; drop them rather than leak the script name.
+_INTERNAL_SOURCE_PREFIXES = ("verify-claims.py", "(no source pointer", "(no source")
+
+
+def _clean_source(src: str) -> str:
+    s = (src or "").strip()
+    if not s or any(s.startswith(p) for p in _INTERNAL_SOURCE_PREFIXES):
+        return ""
+    return redact(s)
+
+
+def _evidence_pointer(v: dict) -> str:
+    # Preflight detector verdicts (Hugo build, frontmatter collisions, readthrough
+    # coherence) render a `detector: subtype` token in the trail-line parenthetical
+    # — e.g. `readthrough: prerequisite-inversion`, `frontmatter: alias-collision` —
+    # not a fact-check `evidence:`/`source:` pointer. The detector is the verdict;
+    # the finding's evidence and fix live in its bucket bullet. Keeps the trail
+    # scannable by defect type (output-format.md §per-verdict table).
+    if v.get("route") == "preflight":
+        vtype = (v.get("type") or "").strip()
+        if "-" in vtype:
+            detector, _, sub = vtype.partition("-")
+            return f"{detector}: {sub}"
+        return vtype or _clean_source(str(v.get("source") or "")) or "detector finding"
+    ev = redact(trunc(v.get("evidence") or "", EVIDENCE_TRUNC))
+    src = _clean_source(str(v.get("source") or ""))
+    parts = []
+    fn = (v.get("framing_note") or "").strip()
+    if fn:
+        parts.append(f"framing: {redact(trunc(fn, 160))}")
+    if ev:
+        parts.append(f"evidence: {ev}")
+    if src:
+        parts.append(f"source: {src}")
+    intu = (v.get("intuition_flag") or "").strip()
+    if intu:
+        parts.append(f"intuition: {redact(trunc(intu, 120))}")
+    body = "; ".join(parts) if parts else "no evidence summary recorded"
+    # Pass-3 unverifiable verdicts that didn't converge get a synthetic
+    # search-was-run pointer so `pass-3-unverifiable-evidence` is satisfied
+    # and the statement stays honest.
+    if (
+        v.get("route") == "pass3"
+        and v.get("verdict") == "unverifiable"
+        and not re.search(r"WebSearch|search ran|searched|query", body, re.IGNORECASE)
+    ):
+        body += " (WebSearch dispatched but verification did not converge within the turn budget)"
+    return body
+
+
+def render_trail(verdicts: list[dict], degraded_note: str | None) -> tuple[str, int, int, int, int]:
+    """Return (block, n_claims, x_verified, y_unverifiable, z_contradicted).
+
+    `n_claims` excludes `route: "preflight"` detector synthetics (Hugo build,
+    frontmatter collisions, readthrough coherence). They are not claims, they
+    are counted in none of x/y/z, and the investigation log's "X of Y claims
+    verified" already excludes them (compute_route_counts) — so counting them
+    in N made the two headline numbers disagree by exactly the detector count
+    and gave the 🚩 lines a phantom presence in a claim tally. They get their
+    own trailing count instead.
+    """
+    if not verdicts:
+        return ("### 🔍 Verification trail\n\n_No verifiable claims extracted from this diff._", 0, 0, 0, 0)
+    n_detector = sum(1 for v in verdicts if v.get("route") == "preflight")
+    n = len(verdicts) - n_detector
+    x = sum(1 for v in verdicts if v.get("verdict") in ("verified", "matches"))
+    y = sum(1 for v in verdicts if v.get("verdict") == "unverifiable")
+    z = sum(1 for v in verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
+    n_drift = sum(1 for v in verdicts if v.get("verdict") in DRIFT_VERDICTS)
+    lines: list[str] = []
+    for v in verdicts:
+        verdict = v.get("verdict")
+        if verdict not in TRAIL_VERDICT_WORDS:
+            verdict = "unverifiable"  # defensive — verify-claims.py already coerces
+        emoji = EXPECTED_TRAIL_EMOJI[verdict]
+        refs = line_refs(v.get("line_range") or "")
+        first = refs[0] if refs else "L0"
+        also = ""
+        if len(refs) > 1:
+            also = " (also " + ", ".join(refs[1:]) + ")"
+        text = quote(redact(trunc(v.get("text") or "", TEXT_TRUNC)))
+        pointer = _evidence_pointer(v)
+        file_path = (v.get("file") or "").strip()
+        file_in = f" in `{file_path}`" if file_path else ""
+        lines.append(f"- {first}{file_in} {text}{also} → {emoji} {verdict} ({pointer})")
+    drift_part = f" · <strong>{n_drift}</strong> framing-drift" if n_drift else ""
+    detector_part = ""
+    if n_detector:
+        detector_part = (
+            f" · <strong>{n_detector}</strong> detector "
+            f"finding{'' if n_detector == 1 else 's'}"
+        )
+    header = (
+        f"<details>\n<summary><strong>{n} claims extracted</strong> · "
+        f"<strong>{x}</strong> verified · <strong>{y}</strong> unverifiable · "
+        f"<strong>{z}</strong> contradicted{drift_part}{detector_part}</summary>"
+    )
+    block = "### 🔍 Verification trail\n\n" + header + "\n\n" + "\n".join(lines) + "\n\n</details>"
+    if degraded_note:
+        block += f"\n\n_{degraded_note}_"
+    return (block, n, x, y, z)
+
+
+def _eb_target(eb: dict) -> dict | None:
+    files = eb.get("files") or []
+    # The artifact strips `trigger_local`; the validator's fallback (and ours)
+    # is "first file with non-empty sections".
+    return next((f for f in files if f.get("sections")), None)
+
+
+def render_editorial_balance(eb: dict | None, is_blog: bool) -> str:
+    if not is_blog:
+        return ""  # omitted entirely on non-blog (mandatory-h3-order only requires it on blog)
+    if not eb or eb.get("trigger") is None:
+        return "### 📊 Editorial balance\n\n_Single-subject post; balance check N/A._"
+    target = _eb_target(eb)
+    if target is None:
+        return "### 📊 Editorial balance\n\n_Single-subject post; balance check N/A._"
+    n = len(target.get("sections") or [])
+    stats = target.get("stats") or {}
+    mean = stats.get("mean", 0)
+    median = stats.get("median", 0)
+    std = stats.get("std", 0)
+    outliers = target.get("outliers") or []
+    if outliers:
+        out_str = "Outliers: " + ", ".join(
+            f"{o.get('heading', '?')}: {o.get('lines', 0)} ({o.get('ratio', 0)}× median)" for o in outliers
+        ) + "."
+    else:
+        out_str = "No section-depth outliers (≥3× median)."
+    return (
+        "### 📊 Editorial balance\n\n"
+        "<details>\n<summary>Section depth, mention distribution, recommendation steering</summary>\n\n"
+        f"- **Section depth:** {n} H2 sections (mean {mean} lines, median {median}, std {std}). {out_str}\n"
+        "- **Vendor / entity mentions:** <TODO: entity-A: count · entity-B: count · … (one per distinctly-mentioned vendor/product)>.\n"
+        "- **FAQ steering** (if a FAQ section is present): <TODO: N FAQ entries; count recommend X; count recommend Y — or delete this bullet if there's no FAQ section>.\n\n"
+        "</details>"
+    )
+
+
+def render_outstanding(stubs: list[dict], vale_blockers: list[dict]) -> str:
+    # Empty form is reader-facing — the "what the reviewer should add here"
+    # guidance lives in ci.md §3, never in the published body.
+    if not stubs and not vale_blockers:
+        return "### 🚨 Outstanding in this PR\n\n_No outstanding findings in this PR._"
+    lines = ["### 🚨 Outstanding in this PR", "", _OUTSTANDING_NOTE, ""]
+    # Blank line between bullets renders as a "loose list" — each bullet gets
+    # paragraph-level vertical spacing so a stack of 8+ findings doesn't read
+    # as a wall of text. Validators' extract_bucket_bullets keys off the
+    # leading `**` so blank lines between bullets don't false-positive.
+    for i, s in enumerate(stubs):
+        if i > 0:
+            lines.append("")
+        lines.append(s["bullet"])
+    # Blocker-tier Vale findings (the `blocker:` allowlist in
+    # vale-deterministic-fixes.yaml): correctness errors with near-zero
+    # false-positive rates. Rendered with the standard `**[L<n>]**` anchor so
+    # auto-refresh-gate.py can match a fix-push against them, plus a
+    # `[style-blocker]` marker that exempts them from trail-matching in
+    # validate-pinned.py (they have no verification-trail record) and tells
+    # the reviewer these are composer-rendered, not model findings.
+    for i, f in enumerate(vale_blockers):
+        if stubs or i > 0:
+            lines.append("")
+        fname = str(f.get("file") or "").strip()
+        file_part = f" `{fname}` —" if fname else ""
+        cat = str(f.get("category") or "style")
+        msg = str(f.get("message") or "").strip()
+        lines.append(f"- **[L{f.get('line', '?')}]**{file_part} [style-blocker] _{cat}_ — {msg}")
+    return "\n".join(lines)
+
+
+def style_caption(source: str, files_link: str, v3: bool, legend: bool = True) -> str:
+    """The italic caption under the style heading. post-style-suggestions.py
+    reconciles every card to this exact string (test_caption_matches_composer
+    pins the two). v3 cards get the short form; the v2 monolith keeps the
+    long one, since its golden output is pinned byte-identical."""
+    if v3:
+        tail = (f" ✏️ marks one you can apply from the {files_link} tab "
+                "(**Add suggestion to batch** on each, then **Commit suggestions**)."
+                if legend else "")
+        return f"*Optional polish from {source}; never blocking.{tail}*"
+    tail = (f" ✏️ marks one you can apply from the {files_link} tab — use **Add suggestion to batch** "
+            "on each, then **Commit suggestions** to take several in a single commit."
+            if legend else "")
+    return (f"*Optional polish from {source} — never blocking, not counted above. "
+            f"Take the ones that read better and ignore the rest.{tail}*")
+
+
+def render_stances(stances: list[dict] | None, v3: bool = False) -> str:
+    """The no-verdict stance list. None (artifact absent / pre-v2) renders
+    nothing at all; an empty list renders the explicit-empty form on the v2
+    monolith. The v3 brief (v3=True) renders nothing for an empty list:
+    a heading, a caption, and "None" under a ⚠️ section that already said
+    stances "still need a human eye" was three lines contradicting each other
+    (#21918's brief). The validator treats an absent block with no records as
+    fine, and the evidence page keeps the extractor's record either way."""
+    if stances is None or (not stances and v3):
+        return ""
+    out = [STANCES_HEADING, "", STANCES_NOTE_V3 if v3 else STANCES_NOTE, ""]
+    if not stances:
+        out.append(STANCES_EMPTY)
+        return "\n".join(out)
+    for c in sorted(stances, key=lambda c: (c.get("file", ""), first_line_ref(c.get("line_range") or ""))):
+        ref = first_line_ref(c.get("line_range") or "")
+        text = quote(redact(trunc(c.get("text") or "", TEXT_TRUNC)))
+        fb = "+".join(c.get("found_by") or []) or "?"
+        file_part = f" `{c.get('file')}` —" if c.get("file") else ""
+        out.append(f"- {ref}{file_part} *{text}* — {c.get('type', 'positioning')} (found by {fb})")
+    return "\n".join(out)
+
+
+def stance_records(stances: list[dict]) -> list[dict]:
+    """The evidence-object shape of the stance list: one record per extractor
+    stance, same order and text as the rendered bullets (the evidence page is
+    the durable copy of what the brief showed). `line` is the first line of
+    the extractor's range when it has one."""
+    out: list[dict] = []
+    for c in sorted(stances, key=lambda c: (c.get("file", ""), first_line_ref(c.get("line_range") or ""))):
+        rec: dict = {
+            "file": (c.get("file") or "").strip() or "(unknown)",
+            "text": redact(trunc(c.get("text") or "", TEXT_TRUNC)) or "(empty)",
+            "type": "comparison" if c.get("type") == "comparison" else "positioning",
+        }
+        refs = line_refs(c.get("line_range") or "")
+        nums = _lines_from_ref(refs[0]) if refs else None
+        if nums:
+            rec["line"] = nums[0]
+        fb = [str(x) for x in (c.get("found_by") or []) if str(x).strip()]
+        if fb:
+            rec["found_by"] = fb
+        out.append(rec)
+    return out
+
+
+# Mirrors CONFIDENCES / FRAMINGS in scripts/review-v3/validate-evidence.py, which
+# the publish job runs from the default branch. test_compose_v3.py pins the two
+# together: a value added here first fails validation and blocks publish; added
+# there first, it is silently dropped from the trail.
+_TRAIL_CONFIDENCES = ("high", "medium", "low")
+_TRAIL_FRAMINGS = ("exact-match", "entailed-narrower", "overclaim-broader", "shifted", "none")
+
+
+def _trail_verdict_metadata(v: dict) -> dict:
+    """The verifier metadata a trail record carries beside the rendered verdict
+    — all optional, each emitted only when the verdict has a well-formed value.
+
+    A verdict that looks wrong is diagnosed from these: the claim `type`
+    drives routing, `confidence` and `framing` drive bucket placement, and
+    `turn_cap_exhausted` / `source_discipline_gate` mark a verdict the
+    verifier coerced rather than reached. Without them the evidence object
+    shows what was decided and nothing about why. Anything malformed is
+    dropped, never coerced: a bad optional field must not cost the whole
+    evidence object its schema validation."""
+    out: dict = {}
+    for key in ("claim_id", "type", "source_discipline_gate"):
+        val = v.get(key)
+        if isinstance(val, str) and val.strip():
+            out[key] = trunc(val.strip(), 80)
+    if v.get("confidence") in _TRAIL_CONFIDENCES:
+        out["confidence"] = v["confidence"]
+    if v.get("framing") in _TRAIL_FRAMINGS:
+        out["framing"] = v["framing"]
+    note = v.get("framing_note")
+    if isinstance(note, str) and note.strip():
+        out["framing_note"] = redact(trunc(note.strip(), EVIDENCE_TRUNC))
+    if v.get("turn_cap_exhausted") is True:
+        out["turn_cap_exhausted"] = True
+    return out
+
+
+def render_lowconfidence(stubs: list[dict], vale_findings: list[dict], files_url: str = "",
+                         stances: list[dict] | None = None) -> str:
+    has_style = bool(vale_findings)
+    stance_block = render_stances(stances)
+    if not stubs and not has_style and not stance_block:
+        return "### ⚠️ Low-confidence\n\n_No low-confidence findings._"
+    lines = ["### ⚠️ Low-confidence", "", _LOWCONF_NOTE, ""]
+    for i, s in enumerate(stubs):
+        if i > 0:
+            lines.append("")
+        lines.append(s["bullet"])
+    if stance_block:
+        if stubs:
+            lines.append("")
+        lines.append(stance_block)
+    if has_style:
+        if stubs or stance_block:
+            lines.append("")
+        lines.append(_render_style_findings(vale_findings, files_url))
+    return "\n".join(lines)
+
+
+def _render_style_findings(findings: list[dict], files_url: str = "",
+                           allow_nits: bool = False) -> str:
+    # Rendered EXPANDED (no <details>) and excluded from the ⚠️ count. These
+    # are advisory nags kept for the rule-tuning loop, not reviewer burden —
+    # the count exclusion carries that signal, so hiding them behind a
+    # disclosure just costs a click. Blocker-tier Vale findings render under
+    # 🚨 instead and never reach this function.
+    #
+    # Each file gets an `##### <path>` heading rather than a <summary>.
+    # Two constraints pin that shape:
+    #   1. post-style-suggestions.py --annotate-draft walks these headings to
+    #      attribute `- **line N:**` bullets to a file before appending ✏️.
+    #   2. It must NOT start with `**` at column 0 — validate-pinned.py's
+    #      extract_bucket_bullets counts any such line as a bucket finding,
+    #      which would inflate the ⚠️ count and trip the L-prefix rule.
+    # Keep all three in sync.
+    by_file: dict[str, list[dict]] = {}
+    for f in findings:
+        by_file.setdefault(str(f.get("file") or "?"), []).append(f)
+    # The caption links straight to the Files-changed tab when the composer
+    # knows the PR: that is where the ```suggestion blocks render, and where
+    # "Add suggestion to batch" lets the author stage several and commit them
+    # in one go. Without a link the reader has to work out where to look.
+    files_link = f"[Files changed]({files_url})" if files_url else "Files changed"
+    # The v3 caption has to cover both tags, because the block now mixes two
+    # provenances and the author's response to each is the same (take it or
+    # leave it) but their trustworthiness isn't.
+    source = ("pattern-based linting and the review's own read"
+              if allow_nits else "pattern-based linting")
+    out = [
+        STYLE_HEADING,
+        "",
+        style_caption(source, files_link, v3=allow_nits),
+        "",
+    ]
+    if allow_nits and not by_file:
+        # Empty anchor: the heading and caption stand so the model has
+        # somewhere to append. build-evidence.py removes the whole block if it
+        # is still empty at publish time.
+        out.append(_V3_EMPTY_STYLE)
+        return "\n".join(out)
+    multi = len(by_file) > 1
+    for fname in sorted(by_file):
+        items = sorted(by_file[fname], key=lambda x: int(x.get("line") or 0))
+        kind_counts: dict[str, int] = {}
+        for it in items:
+            kind_counts[str(it.get("category") or "style")] = kind_counts.get(str(it.get("category") or "style"), 0) + 1
+        kinds_sorted = sorted(kind_counts.items(), key=lambda kv: (-kv[1], kv[0]))
+        breakdown = ", ".join(f"{c} {k}" for k, c in kinds_sorted)
+        # The file heading is always rendered — the annotator needs it even on
+        # a single-file review to bind bullets to a path.
+        suffix = f" — {len(items)} ({breakdown})" if multi else ""
+        out.append(f"##### {fname}{suffix}")
+        out.append("")
+        for it in items:
+            cat = str(it.get("category") or "style")
+            msg = str(it.get("message") or "").strip()
+            out.append(f"- **line {it.get('line', '?')}:** [style] _{cat}_ — {msg}")
+        out.append("")
+    # drop trailing blank
+    while out and out[-1] == "":
+        out.pop()
+    return "\n".join(out)
+
+
+# The advisory block's read side. `_render_style_findings` writes this shape
+# and `post-style-suggestions.annotate_text` re-reads it to place ✏️ marks;
+# this is the third reader (build-evidence's recount, validate-pinned's
+# provenance rule), so it lives here with the writer rather than as another
+# private copy of the `##### <path>` walk. Keep all of them in sync.
+_STYLE_FILE_RE = re.compile(r"^#{5}\s+(\S+\.\w+)")
+_STYLE_BULLET_RE = re.compile(
+    rf"^\s*- \*\*line (?P<line>\d+):\*\*\s*\[(?P<tag>{STYLE_TAG}|{NIT_TAG})\]\s*(?P<rest>.*)$")
+
+
+def walk_style_bullets(body: str) -> list[dict]:
+    """Every advisory bullet under `#### Style suggestions`, with the file the
+    `##### <path>` heading above it attributes it to.
+
+    Returns `{"file", "line", "tag", "text"}` per bullet; `file` is "" when a
+    bullet has no heading above it (a split review's later part — the same
+    degradation `annotate_text` tolerates). Bullets outside the block are not
+    returned: the walk starts at the heading and ends at the next `#### `.
+    """
+    lines = body.splitlines()
+    start = next((i for i, ln in enumerate(lines) if ln.strip() in STYLE_HEADINGS), None)
+    if start is None:
+        return []
+    out: list[dict] = []
+    current = ""
+    for ln in lines[start + 1:]:
+        if ln.startswith("#### ") or ln.startswith("### ") or ln.startswith("## "):
+            break
+        fm = _STYLE_FILE_RE.match(ln)
+        if fm:
+            current = fm.group(1)
+            continue
+        bm = _STYLE_BULLET_RE.match(ln)
+        if bm:
+            out.append({"file": current, "line": int(bm.group("line")),
+                        "tag": bm.group("tag"), "text": bm.group("rest").strip()})
+    return out
+
+
+def render_style_line(n_style: int, n_nits: int) -> str:
+    """The brief's rubber-stamp **Style** bullet. Composed from Vale's count
+    and RE-DERIVED by build-evidence.py from the published author card, because
+    the model may add `[nit]` bullets after this runs — a count fixed at
+    compose time would under-report them and the reviewer would rubber-stamp a
+    number that doesn't match the card they're being asked to trust."""
+    total = n_style + n_nits
+    noun = "suggestion" if total == 1 else "suggestions"
+    if n_nits:
+        detail = f" ({n_style} from linting, {n_nits} found by the review)"
+    else:
+        detail = ""
+    return (f"- **Style:** {total} advisory {noun}{detail} left with the author; "
+            "never blocking.")
+
+
+def render_triaged() -> str:
+    # Always rendered, always wrapped in a collapsed <details>. The reviewer
+    # moves verifier-side noise (false positives, mis-sourced verdicts) here
+    # during the editorial pass so they don't clutter 🚨 / ⚠️. The empty
+    # marker `_No triaged findings._` is the signal strip-empty-triaged.py
+    # uses to remove the whole section when the reviewer didn't move any
+    # bullets in.
+    return (
+        "### 📋 Triaged verifier findings\n\n"
+        "<details>\n"
+        "<summary><em>I double-checked these and realized they weren't real findings — click to expand</em></summary>\n\n"
+        "_No triaged findings._\n\n"
+        "</details>"
+    )
+
+
+def render_preexisting() -> str:
+    return "### 💡 Pre-existing issues in touched files (optional)\n\n_No pre-existing issues in touched files._"
+
+
+def render_resolved() -> str:
+    return "### ✅ Resolved since last review\n\n_No items resolved since the last review._"
+
+
+def render_review_history(timestamp: str, head_sha_short: str) -> str:
+    return (
+        "### 📜 Review history\n\n"
+        f"- {timestamp} — <TODO: one-line summary of what this review found> ({head_sha_short})"
+    )
+
+
+def render_footer() -> str:
+    """Return the canonical footer, read from `docs-review/footer.md`.
+
+    `pinned-comment.sh` is the authoritative writer: on upsert it strips this
+    block from the inbound body and re-stamps it onto EVERY page of a split
+    review. Rendering it here anyway keeps the composed draft (and the local
+    `/docs-review` output, which never reaches the shell) a complete document,
+    and keeps exactly one copy of the text in the repo.
+
+    If the file is unreadable, emit the bare sentinel: it renders to nothing in
+    a GitHub comment, and the shell still supplies the real text on publish.
+    """
+    try:
+        return FOOTER_PATH.read_text(encoding="utf-8").rstrip("\n")
+    except OSError:
+        return FOOTER_SENTINEL
+
+
+# ---- stub bucket bullets ---------------------------------------------------
+
+
+def _stub_bullet(v: dict, todo: str) -> dict:
+    ref = first_line_ref(v.get("line_range") or "")
+    text = quote(redact(trunc(v.get("text") or "", TEXT_TRUNC)))
+    verdict = v.get("verdict") or "?"
+    file_path = (v.get("file") or "").strip()
+    # Bullet shape: `- **[L<n>]** `<file>` — *"<claim text>"* — verdict: <v>[; framing: …] <TODO>`.
+    #   1. L-prefix + file path (the validator anchors here)
+    #   2. italicized quoted claim (so the reader can scan claims fast)
+    #   3. verdict + the reviewer's fix prose (the actionable bit)
+    # The file path is rendered AFTER `**[L<n>]**` so the validator's
+    # bucket-bullet-line-range-prefix regex (`^\s*-\s+\*\*\[(L\d+...)\]\*\*`)
+    # still anchors on the L-token; the filename disambiguates which file
+    # the line number refers to on multi-file PRs.
+    #
+    # The evidence/source/intuition pointer is deliberately NOT repeated here.
+    # It is already rendered verbatim on this claim's 🔍 trail line a few
+    # lines above, and measuring a published review (2026-08-03, fork PR #228)
+    # put the duplicate at 1,596 chars — 10% of the whole comment — sitting
+    # between the claim and the fix the author actually has to read. The trail
+    # is the evidence record; the bucket bullet is the instruction. Every
+    # evidence-checking validator rule (pass-3-unverifiable-evidence,
+    # pass-3-evidence-faithful, verified-claims-trail-faithful) reads the
+    # trail, not this bullet, so nothing is weakened by dropping it.
+    #
+    # `framing:` survives: the editorial pass is told to mirror it (anti-hedge
+    # on ⚔️ mismatch), so it stays where the reviewer is working.
+    fn = (v.get("framing_note") or "").strip()
+    framing_part = f"; framing: {redact(trunc(fn, 160))}" if fn else ""
+    file_part = f" `{file_path}` —" if file_path else ""
+    italic_text = f"*{text}*" if text else text
+    bullet = (f"- **[{ref}]**{file_part} {italic_text} — verdict: {verdict}{framing_part} "
+              f"<TODO: {todo}>")
+    # file/text/origin ride along for the v3 surface's evidence records; the
+    # v2 renderers read only ref/bullet/verdict.
+    origin = f"preflight:{v.get('type') or 'detector'}" if v.get("route") == "preflight" else f"verdict:{verdict}"
+    return {
+        "ref": ref,
+        "bullet": bullet,
+        "verdict": verdict,
+        "file": file_path,
+        "text": redact(trunc(v.get("text") or "", TEXT_TRUNC)),
+        "origin": origin,
+        "framing": redact(trunc(fn, 160)) if fn else "",
+        "todo": todo,
+        "lines_all": claim_lines(v.get("line_range") or ""),
+    }
+
+
+def author_cell_bullet(stub: dict) -> str:
+    """The v2-shaped bullet for an author-card (🚨/❓) row: a short claim
+    excerpt + the verdict, with no `framing:` note — that moves into the
+    Do-this block's **Why** prompt (render_detail_scaffold), which is where
+    the author reads the reason. Only claim verdicts are shortened: a
+    detector finding's text IS its message, and a stub without the parts
+    (a style-blocker) keeps its bullet."""
+    if not str(stub.get("origin") or "").startswith("verdict:") or "todo" not in stub:
+        return stub["bullet"]
+    text = stub.get("text") or ""
+    excerpt = f"*{quote(trunc(text, AUTHOR_CELL_TRUNC))}* " if text else ""
+    file_part = f" `{stub['file']}` —" if stub.get("file") else ""
+    return (f"- **[{stub['ref']}]**{file_part} {excerpt}— verdict: {stub['verdict']} "
+            f"<TODO: {stub['todo']}>")
+
+
+def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Return (outstanding_stubs, lowconfidence_stubs)."""
+    outstanding: list[dict] = []
+    lowconf: list[dict] = []
+    for v in verdicts:
+        verdict = v.get("verdict")
+        conf = (v.get("confidence") or "").lower()
+        route = v.get("route") or ""
+        # Preflight verdicts (Hugo + frontmatter pre-step) carry a different
+        # TODO shape — the reviewer's job is "confirm or REMOVE if CI noise,"
+        # not "triage against verifier source choices."
+        if route == "preflight" and verdict in OUTSTANDING_VERDICTS:
+            vtype = v.get("type") or ""
+            if vtype.startswith("readthrough-"):
+                if (v.get("fix_class") or "") == "local_repair":
+                    todo = ("apply the structural fix per the readthrough finding (quote-and-rewrite the anchored "
+                            "span / reorder / add the missing step). Bucket by reader impact: 🚨 if a reader cannot "
+                            "reach the page's stated outcome without it, otherwise move to ⚠️ Low-confidence. "
+                            "REMOVE only if you judge the page actually reads fine.")
+                else:
+                    todo = ("this is a `reconception` flag — a whole-page restructure the lane will NOT auto-rewrite. "
+                            "State the structural problem concretely (name the anchor); do NOT write an inline rewrite. "
+                            "Bucket by reader impact (🚨 if it blocks the reader, else ⚠️); route the fix to a follow-up "
+                            "issue. REMOVE if the page actually reads fine.")
+            elif vtype.startswith("hugo-"):
+                todo = ("confirm the fix needed (or REMOVE the bullet if this is a CI-environment near-miss — "
+                        "e.g., a transient render-time warning that doesn't reproduce on a clean Hugo build). "
+                        "If pre-existing on a line this PR didn't touch, replace the body with `**Pre-existing:** <reason>` "
+                        "AND move the bullet to `### 💡 Pre-existing`.")
+            else:
+                todo = ("triage: is this a real collision (alias or URL clashes with another live page) "
+                        "or a PR-internal rename (an old alias for a file this PR is restructuring)? "
+                        "Confirm the fix needed, or REMOVE the bullet if the collision is intentional and announced. "
+                        "If pre-existing, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`.")
+            # Frame as a detector finding, not a fact-check claim — keeps Opus from
+            # re-applying `verdict: contradicted` / `framing: shifted` fact-check
+            # vocabulary to a `🚩 flagged` finding (the trail line is the verdict).
+            todo = ("this is a `🚩 flagged` detector finding (from a deterministic pre-step), NOT a fact-check "
+                    "claim — write the bullet as a plain statement of what's broken and the fix; do NOT attach "
+                    "fact-check verdict vocabulary (`verdict: contradicted`, `framing: shifted`, etc.). " + todo)
+            outstanding.append(_stub_bullet(v, todo))
+            continue
+        if verdict in OUTSTANDING_VERDICTS:
+            if verdict == "mismatch":
+                todo = ("write the fix / suggestion block. Anti-hedge mandate: state which sibling pages corroborate the divergence "
+                        "and what the author must change; do NOT soften to a manual-check ask. "
+                        "If you judge the verdict spurious, replace the body with `**Spurious:** <1-2 sentence reason>` "
+                        "AND move the bullet to `### 📋 Triaged verifier findings` (do NOT leave it in 🚨; "
+                        "do NOT add `no author action required` / `nothing to fix` codas — the `**Spurious:**` label IS the resolution). "
+                        "If pre-existing on a line this PR didn't touch, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`. "
+                        "`trail-verdict-bucket-promotion` accepts the bullet under 🚨, 📋, or 💡.")
+            else:
+                todo = ("write the fix / suggestion block for the author (quote-and-rewrite mandate). "
+                        "If you judge the verdict spurious (verifier checked stale data / wrong site / SPA page / missed a PR-local alias / "
+                        "compared a paraphrased version of the claim), replace the body with `**Spurious:** <1-2 sentence reason>` "
+                        "AND move the bullet to `### 📋 Triaged verifier findings` (do NOT leave it in 🚨; "
+                        "do NOT add `no author action required` / `nothing to fix` codas — the `**Spurious:**` label IS the resolution). "
+                        "If pre-existing on a line this PR didn't touch, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`. "
+                        "`trail-verdict-bucket-promotion` accepts the bullet under 🚨, 📋, or 💡.")
+            outstanding.append(_stub_bullet(v, todo))
+        elif verdict == "framing-drift":
+            lowconf.append(_stub_bullet(
+                v, "this is a `framing-drift` finding — the anchor value is accurate but the claim's published meaning "
+                   "differs from what the source supports (see the framing note). Write the fix as a quote-and-rewrite "
+                   "that restores the source's framing (scope, denominator, tense, qualifiers). PROMOTE to 🚨 Outstanding "
+                   "if the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would "
+                   "materially mislead a reader; move to 📋 Triaged with `**Spurious:**` only if the framing comparison "
+                   "itself is wrong."))
+        elif verdict == "unverifiable":
+            if v.get("turn_cap_exhausted"):
+                lowconf.append(_stub_bullet(
+                    v, "this `unverifiable` is a TURN-BUDGET failure (the verifier ran out of turns), NOT evidence that "
+                       "no authoritative source exists — never describe it as 'out of scope' or 'can't be verified'. "
+                       "Verify it yourself in-review if cheap (one gh read / one fetch), else file the author-question "
+                       "line saying verification ran out of budget and the claim is retryable."))
+            elif v.get("source_discipline_gate"):
+                # verify-claims.py downgraded this for resting on evidence that
+                # can't settle it (the page itself, its live copy, another
+                # Pulumi page). The evidence opens with the question to ask.
+                lowconf.append(_stub_bullet(
+                    v, "this `unverifiable` is a SOURCE-DISCIPLINE GATE (see the bracketed note opening the evidence): "
+                       "the verifier's only source could not settle the claim either way. File the author-question "
+                       "line with the question the note names. NEVER promote it to 🚨 Outstanding and never call the "
+                       "claim wrong; if the note carries a concrete finding (e.g. a stale pin), quote it in the question."))
+            elif PROMOTE_UNVERIFIABLE_TO == "outstanding":
+                outstanding.append(_stub_bullet(
+                    v, "if this isn't actually a checkable factual claim, it should be `not-a-claim` not `unverifiable`; "
+                       "otherwise file the author-question buffer line and keep here. "
+                       "If the verifier was demonstrably mis-sourced (wrong URL followed, ran out of turns on a duplicate, etc.), "
+                       "replace the body with `**Mis-sourced:** <reason>` AND move the bullet to `### 📋 Triaged verifier findings`."))
+            else:
+                lowconf.append(_stub_bullet(
+                    v, "if this is a factual blocker (a price/spec/capability with no citation a reader needs), promote to 🚨 Outstanding; "
+                       "either way file the author-question buffer line. REMOVE only if it's not actually a checkable claim "
+                       "(then it should already be `not-a-claim`). "
+                       "If the verifier was demonstrably mis-sourced (wrong URL followed, ran out of turns on a duplicate, "
+                       "the cited URL was unrelated to the claim subject, etc.), replace the body with `**Mis-sourced:** <reason>` "
+                       "AND move the bullet to `### 📋 Triaged verifier findings`."))
+        elif verdict == "verified" and conf == "low":
+            lowconf.append(_stub_bullet(
+                v, "this is a `verified weakly` claim — confirm the residual judgment is about reader impact; if it's actually fine, REMOVE; "
+                   "if there's a real concern, write the note"))
+        # high/medium verified, matches, not-a-claim → trail-only, no stub
+    return outstanding, lowconf
+
+
+# ---- route accounting ------------------------------------------------------
+
+
+def compute_route_counts(verdicts: list[dict], candidate_claims: list[dict] | None) -> dict:
+    # `inline` = pass0 (deterministic, no model verifier dispatched); P/F/S come
+    # from each verdict's recorded `route` (not meta.n_pass*, which is the
+    # pre-reroute count — verify-claims.py re-routes pass2→pass3 when the URL
+    # isn't actually in .fetched-urls.json). Detector findings (route: preflight)
+    # are not fact-check claims and are excluded, so I+P+F+S equals the fact-check
+    # claim total Y in the investigation log.
+    verdicts = [v for v in verdicts if v.get("route") != "preflight"]
+    by_route = {"pass0": 0, "pass1": 0, "pass2": 0, "pass3": 0}
+    for v in verdicts:
+        r = v.get("route") or "pass1"
+        if r not in by_route:
+            r = "pass1"
+        by_route[r] += 1
+
+    def vcu(route: str) -> tuple[int, int, int]:
+        v = c = u = 0
+        for x in verdicts:
+            if x.get("route") != route:
+                continue
+            verd = x.get("verdict")
+            if verd in ("verified", "matches"):
+                v += 1
+            elif verd in CONTRADICTION_FAMILY or verd in DRIFT_VERDICTS:
+                # `framing-drift` rides the `contradicted` column here, unlike
+                # the two headline tallies. This triple's shape is pinned by
+                # validate-pinned.py's PASS2_OUTCOME_RE / PASS3_OUTCOME_RE
+                # (`verified N, contradicted N, unverifiable N`), and it is a
+                # routing diagnostic rather than a reader-facing count — better
+                # grouped with the disagreements than silently counted as
+                # `unverifiable`, which is what the plain `else` would do.
+                c += 1
+            else:  # unverifiable / not-a-claim (rare on an external lane)
+                u += 1
+        return (v, c, u)
+
+    k_corr = 0
+    if candidate_claims:
+        k_corr = sum(1 for c in candidate_claims if c.get("cross_specialist_corroboration"))
+
+    return {
+        "inline": by_route["pass0"],
+        "pass1": by_route["pass1"],
+        "pass2": by_route["pass2"],
+        "pass3": by_route["pass3"],
+        "pass2_vcu": vcu("pass2"),
+        "pass3_vcu": vcu("pass3"),
+        "k_corr": k_corr,
+    }
+
+
+# ---- compose ---------------------------------------------------------------
+
+
+def _prepare(args: argparse.Namespace) -> dict:
+    """Load artifacts and compute everything both surfaces need.
+
+    Pure extraction of what used to be compose()'s top half, shared verbatim
+    with compose_v3() so the two surfaces can never disagree about what the
+    pre-steps found — only about how it renders.
+    """
+    verdicts, vc_errors, _vc_meta = load_verified_claims(args.verified_claims)
+    candidate_claims = load_candidate_claims(args.candidate_claims)
+    candidate_stances = load_candidate_stances(args.candidate_claims)
+    vale_findings = load_vale_findings(args.vale_findings)
+    editorial_balance = load_editorial_balance(args.editorial_balance)
+    cross_sibling = load_cross_sibling(args.cross_sibling)
+    frontmatter = load_frontmatter(args.frontmatter)
+    hugo_build = load_hugo_build(args.hugo_build)
+    readthrough = load_readthrough(args.readthrough)
+
+    head_sha = (args.head_sha or "").strip()
+    head_sha_short = (args.head_sha_short or "").strip() or (head_sha[:8] if head_sha else "unknown")
+    timestamp = (args.timestamp or "").strip() or "unknown"
+
+    pr_diff = getattr(args, "pr_diff", "") or ""
+    if pr_diff:
+        diff_text = Path(pr_diff).read_text(encoding="utf-8", errors="replace")
+        diff_files = (gh_diff_name_only("", None, override=args.diff_files)
+                      if args.diff_files is not None else sorted(changed_lines_by_file(diff_text)))
+        diff_unavailable = not diff_files
+    elif args.diff_files is not None:
+        diff_files = gh_diff_name_only("", None, override=args.diff_files)
+        diff_text = ""
+        diff_unavailable = False
+    elif args.pr and not args.dry_run:
+        diff_files = gh_diff_name_only(args.pr, args.repo)
+        diff_text = gh_diff_text(args.pr, args.repo)
+        diff_unavailable = not diff_files
+    else:
+        diff_files = []
+        diff_text = ""
+        diff_unavailable = False
+    is_blog = is_blog_diff(diff_files)
+    has_temporal_trigger = any(t in diff_text.lower() for t in TEMPORAL_TRIGGERS) if diff_text else False
+    has_fenced_code_in_content = bool(diff_text) and bool(re.search(r"^\+\s*```", diff_text, re.MULTILINE))
+
+    degraded_note: str | None = None
+    if verdicts is None:
+        # Claim verification didn't complete — fall back to the candidate-claims
+        # floor. (Reader-facing strings only; ci.md §Fallback tells the reviewer
+        # to re-verify each claim in the review pass.)
+        if candidate_claims:
+            verdicts = [
+                {
+                    "claim_id": c.get("id", "?"),
+                    "file": c.get("file", ""),
+                    "line_range": c.get("line_range", ""),
+                    "text": c.get("text", ""),
+                    "type": c.get("type", ""),
+                    "route": "pass1",
+                    "verdict": "unverifiable",
+                    "confidence": "low",
+                    "evidence": "claim verification did not complete",
+                    "source": "",
+                }
+                for c in candidate_claims
+            ]
+            degraded_note = ("Claim verification did not complete; the trail entries below are placeholders — "
+                             "each claim was re-verified during the review pass.")
+        else:
+            verdicts = []
+    elif vc_errors:
+        degraded_note = ("Claim verification reported errors — some verdicts may be incomplete; "
+                         "spot-check the affected claims in-review.")
+
+    # Detect a fact-check verifier OUTAGE (transport/API errors) on the
+    # fact-check verdicts ONLY — measure before appending Hugo/frontmatter
+    # synthetics so preflight verdicts don't dilute the ratio. When detected,
+    # the composer emits a prominent `> [!WARNING]` banner and pre-fills the
+    # `facts` confidence row to LOW (so the posted review can't present
+    # unverified findings as `facts: HIGH`).
+    n_outage, n_outage_total = count_verifier_outages(verdicts)
+    outage_banner = render_verifier_outage_banner(n_outage, n_outage_total)
+
+    # Append synthetic verdicts from the Hugo + frontmatter pre-steps so the
+    # composer pre-stubs those findings into 🚨 Outstanding rather than
+    # leaving them for Opus to discover and triage from `.hugo-build.json`
+    # / `.frontmatter-validation.json` artifacts. Routed as `preflight` —
+    # build_stubs branches on the route to emit a confirm-or-REMOVE TODO
+    # instead of the fact-check spurious-or-mis-sourced TODO.
+    verdicts = (
+        list(verdicts)
+        + _hugo_synthetic_verdicts(hugo_build)
+        + _frontmatter_synthetic_verdicts(frontmatter)
+        + _readthrough_synthetic_verdicts(readthrough)
+    )
+
+    route_counts = compute_route_counts(verdicts, candidate_claims)
+
+    # Deep-link target for the style caption. Both parts are optional (local
+    # /docs-review runs have neither), so fall back to unlinked prose.
+    files_url = (f"https://github.com/{args.repo}/pull/{args.pr}/files"
+                 if args.repo and args.pr else "")
+
+    outstanding_stubs, lowconf_stubs = build_stubs(verdicts)
+    # Blocker-tier Vale findings (stamped by vale-findings-filter.py from the
+    # `blocker:` allowlist) count toward 🚨 — they drive the
+    # review:outstanding-issues label like any other outstanding finding.
+    # Advisory style findings render expanded under ⚠️ and are NOT counted:
+    # they're kept for the rule-tuning loop, not the reviewer's burden.
+    vale_blockers = [f for f in vale_findings if f.get("blocker")]
+    vale_nags = [f for f in vale_findings if not f.get("blocker")]
+    a = len(outstanding_stubs) + len(vale_blockers)
+    b = len(lowconf_stubs)
+    c_pre = 0
+    d_resolved = 0
+
+    confidence_dims = ["mechanics", "facts"]
+    if readthrough and (readthrough.get("findings") or readthrough.get("ran")):
+        confidence_dims.append("coherence")
+    if any(f.get("in_templated_section") for f in cross_sibling):
+        confidence_dims.append("cross-sibling consistency")
+    if is_blog and editorial_balance and editorial_balance.get("trigger") is not None:
+        confidence_dims.append("editorial balance")
+    if touches_programs(diff_files) or has_fenced_code_in_content or (
+        hugo_build and (hugo_build.get("errors") or hugo_build.get("link_integrity"))
+    ):
+        confidence_dims.append("code correctness")
+
+    trail_block, _n, _x, _y, _z = render_trail(verdicts, degraded_note)
+
+    # On a verifier outage, pre-fill the `facts` row to LOW deterministically so
+    # the posted review can't read `facts: HIGH` even if Opus doesn't cooperate.
+    forced_levels: dict[str, tuple[str, str]] = {}
+    if outage_banner:
+        forced_levels["facts"] = ("LOW", "automated fact-checking errored — claims unverified")
+
+    return {
+        "verdicts": verdicts,
+        "candidate_claims": candidate_claims,
+        "candidate_stances": candidate_stances,
+        "vale_blockers": vale_blockers,
+        "vale_nags": vale_nags,
+        "editorial_balance": editorial_balance,
+        "cross_sibling": cross_sibling,
+        "frontmatter": frontmatter,
+        "hugo_build": hugo_build,
+        "readthrough": readthrough,
+        "head_sha": head_sha,
+        "head_sha_short": head_sha_short,
+        "timestamp": timestamp,
+        "diff_files": diff_files,
+        "diff_unavailable": diff_unavailable,
+        "changed_lines": changed_lines_by_file(diff_text) if diff_text else None,
+        "is_blog": is_blog,
+        "has_temporal_trigger": has_temporal_trigger,
+        "has_fenced_code_in_content": has_fenced_code_in_content,
+        "degraded_note": degraded_note,
+        "outage_banner": outage_banner,
+        "route_counts": route_counts,
+        "files_url": files_url,
+        "outstanding_stubs": outstanding_stubs,
+        "lowconf_stubs": lowconf_stubs,
+        "counts": (a, b, c_pre, d_resolved),
+        "confidence_dims": confidence_dims,
+        "trail_block": trail_block,
+        "trail_nxyz": (_n, _x, _y, _z),
+        "forced_levels": forced_levels,
+    }
+
+
+def compose(args: argparse.Namespace) -> str:
+    prep = _prepare(args)
+    verdicts = prep["verdicts"]
+    candidate_stances = prep["candidate_stances"]
+    vale_blockers = prep["vale_blockers"]
+    vale_nags = prep["vale_nags"]
+    editorial_balance = prep["editorial_balance"]
+    cross_sibling = prep["cross_sibling"]
+    frontmatter = prep["frontmatter"]
+    head_sha = prep["head_sha"]
+    head_sha_short = prep["head_sha_short"]
+    timestamp = prep["timestamp"]
+    diff_files = prep["diff_files"]
+    diff_unavailable = prep["diff_unavailable"]
+    is_blog = prep["is_blog"]
+    has_temporal_trigger = prep["has_temporal_trigger"]
+    has_fenced_code_in_content = prep["has_fenced_code_in_content"]
+    outage_banner = prep["outage_banner"]
+    route_counts = prep["route_counts"]
+    files_url = prep["files_url"]
+    outstanding_stubs = prep["outstanding_stubs"]
+    lowconf_stubs = prep["lowconf_stubs"]
+    a, b, c_pre, d_resolved = prep["counts"]
+    confidence_dims = prep["confidence_dims"]
+    trail_block = prep["trail_block"]
+    forced_levels = prep["forced_levels"]
+
+    sections: list[str] = [render_header(timestamp, head_sha), ""]
+    if outage_banner:
+        sections += [outage_banner, ""]
+    sections += [
+        render_summary_block(confidence_dims, forced_levels),
+        "",
+        render_investigation_log(
+            cross_sibling=cross_sibling,
+            verdicts=verdicts,
+            route_counts=route_counts,
+            frontmatter=frontmatter,
+            has_temporal_trigger=has_temporal_trigger,
+            diff_files=diff_files,
+            has_fenced_code_in_content=has_fenced_code_in_content,
+            editorial_balance=editorial_balance,
+            is_blog=is_blog,
+            diff_unavailable=diff_unavailable,
+        ),
+        "",
+        render_count_table(a, b, c_pre, d_resolved),
+        "",
+        trail_block,
+        "",
+    ]
+    eb_block = render_editorial_balance(editorial_balance, is_blog)
+    if eb_block:
+        sections.append(eb_block)
+        sections.append("")
+    sections += [
+        render_outstanding(outstanding_stubs, vale_blockers),
+        "",
+        render_lowconfidence(lowconf_stubs, vale_nags, files_url, candidate_stances),
+        "",
+        render_triaged(),
+        "",
+        render_preexisting(),
+        "",
+        render_resolved(),
+        "",
+        render_review_history(timestamp, head_sha_short),
+        "",
+        render_footer(),
+        "",
+    ]
+    return "\n".join(sections)
+
+
+# ---- v3 surface ------------------------------------------------------------
+#
+# `--surface v3` renders the same prepared inputs as TWO comments plus a
+# machine-owned evidence object (see scripts/review-v3/README.md):
+#   .review-draft-author.md — the author card: 🚨 / ❓ / style / ✅ + REVIEW_STATE
+#   .review-draft-brief.md  — the reviewer brief: summary, ⚠️, rubber-stamp counts
+#   .review-evidence-base.json — trail/log/etc. for S3; comments only link it
+# The model edits both drafts under the contract in output-format.md §v3; the
+# deterministic build-evidence.py step then parses the finding bullets back out
+# and emits the final evidence object — so the bullet grammar below must
+# round-trip by construction (render_finding_line ↔ parse_finding_line).
+
+AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTHOR -->"
+BRIEF_MARKER = "<!-- CLAUDE_REVIEW_BRIEF -->"
+EVIDENCE_URL_TOKEN = "%%EVIDENCE_URL%%"
+FOOTER_AUTHOR_PATH = Path(__file__).resolve().parent.parent / "footer-author.md"
+FOOTER_REVIEWER_PATH = Path(__file__).resolve().parent.parent / "footer-reviewer.md"
+_REVIEW_V3_DIR = Path(__file__).resolve().parents[4] / "scripts" / "review-v3"
+
+# One table row per finding, everywhere a v3 finding renders (🚨 / ❓ / ⚠️,
+# and the ✅ Resolved log):
+#
+#   | ID | Where | Finding |
+#   |---|---|---|
+#   | **F3** | `file.md` L12-14 | <finding cell> |
+#
+# There is deliberately no status column: REVIEW_STATE is the state, the
+# section a row lives in is the display (a ⬜/✅ glyph column was tried and
+# dropped — it duplicated both and spent a table column doing it). `F?`
+# is the model's placeholder for a finding it added; build-evidence.py
+# assigns the real id. File and L-range are each optional (`—` when both
+# are absent) so the grammar also carries file-less detector findings; the
+# L-range keeps its bare `L\d+(-\d+)?` shape because auto-refresh-gate
+# anchors on it. Literal pipes in the Finding cell are escaped `\|`. The
+# Where cell links to the PR's Files-changed diff anchor (sha256 of the
+# path + `R<line>`), so clicking a finding lands on the change itself.
+FINDING_TABLE_HEADER = "| ID | Where | Finding |"
+# The evidence-link line that closes both cards. It led with a decorative 📎
+# until 2026-09-25; cards published before then keep it until they refresh,
+# so every reader that keys on the line accepts both prefixes.
+EVIDENCE_LINE_PREFIX = "**Full evidence:**"
+EVIDENCE_LINE_PREFIXES = ("📎 ", EVIDENCE_LINE_PREFIX)
+FINDING_TABLE_SEPARATOR = "|---|---|---|"
+
+
+def render_resolved_block(rows: list[str]) -> list[str]:
+    """The ✅ Resolved table, collapsed. Resolved rows are history — nothing
+    on them asks the author for anything — so they fold away under a count
+    and stop pushing the open items and the footer off the screen (reader
+    feedback, 2026-09-25). The H3 stays outside the fold: it is the section
+    anchor every parser keys on. The `<details>`/`<summary>` lines are
+    neither `|` rows nor `- ` bullets, so the finding-row walkers skip them;
+    the blank line after `<summary>` is what lets GitHub render the table."""
+    n = len(rows)
+    noun = "item" if n == 1 else "items"
+    return [
+        "<details>",
+        f"<summary>{n} resolved {noun} — click to expand</summary>",
+        "",
+        FINDING_TABLE_HEADER,
+        FINDING_TABLE_SEPARATOR,
+        *rows,
+        "",
+        "</details>",
+    ]
+
+
+_TABLE_SEPARATOR_RE = re.compile(r"^\|(\s*:?-{2,}:?\s*\|){2,}\s*$")
+# The Where cell parses BOTH forms — linked (composer output, deep link to
+# the PR diff) and bare (a model-added row; the next full render re-links
+# it). The visible text is identical either way, so auto-refresh-gate's
+# L-range extraction sees the same anchors.
+FINDING_LINE_RE = re.compile(
+    r"^\|\s*\*\*(?P<id>F\d+|F\?)\*\*\s*"
+    r"\|\s*(?:\[)?(?:`(?P<file>[^`|\]]+)`)?\s*(?P<ref>L\d+(?:-\d+)?(?:,\s*L\d+(?:-\d+)?)*)?"
+    r"(?:\]\((?P<url>[^)|\s]+)\))?\s*(?:·\s*\[✏️(?:\s*edit)?\]\([^)|\s]+\)\s*)?(?:—\s*)?"
+    r"\|\s*(?P<body>(?:\\\||[^|\n])*?\S)\s*\|\s*$"
+)
+
+
+def is_table_furniture(line: str) -> bool:
+    """True for the finding table's header/separator rows — the only `|`
+    lines in a finding section that are legitimately not finding rows."""
+    stripped = line.strip()
+    if _TABLE_SEPARATOR_RE.match(stripped):
+        return True
+    return stripped.replace(" ", "") == FINDING_TABLE_HEADER.replace(" ", "")
+
+
+def diff_anchor(file: str, ref: str) -> str:
+    """The Files-changed anchor for a file (+ first line of the ref).
+
+    GitHub anchors each file in the diff view at `#diff-<sha256(path)>`, with
+    `R<n>` addressing line n on the right (new) side. A line that isn't part
+    of the diff still lands on the file's header in the Files tab — the
+    useful place anyway.
+    """
+    anchor = "#diff-" + hashlib.sha256(file.encode()).hexdigest()
+    nums = _lines_from_ref(ref)
+    if nums:
+        anchor += f"R{nums[0]}"
+    return anchor
+
+
+def render_finding_row(fid: str, *, ref: str = "", file: str = "",
+                       body: str = "", link_base: str = "",
+                       edit_base: str = "") -> str:
+    """The canonical row renderer; inverse of parse_finding_line.
+
+    With `link_base` (https://github.com/<repo>/pull/<pr>/files) and a file,
+    the Where cell deep-links to the change itself on the Files-changed tab.
+    The link is re-derived on every render, so it always points where the
+    review currently describes.
+    """
+    where_bits = []
+    if file:
+        where_bits.append(f"`{file}`")
+    if ref:
+        where_bits.append(ref)
+    where = " ".join(where_bits) or "—"
+    if link_base and file:
+        where = f"[{where}]({link_base}{diff_anchor(file, ref)})"
+    if edit_base and file:
+        where += f" · [✏️ edit]({edit_base}{file})"
+    cell = body.replace("|", "\\|")
+    return f"| **{fid}** | {where} | {cell} |"
+
+
+# v2-shaped stub bullets (`- **[L…]** `file` — body`) are what build_stubs
+# emits; this splits one into row parts so compose_v3 can place it in cells.
+_V2_STUB_RE = re.compile(
+    r"^-\s+(?:\[[ xX]\]\s+)?(?:\*\*\[(?P<ref>L[^\]]+)\]\*\*\s+)?"
+    r"(?:`(?P<file>[^`]+)`\s+—\s+)?(?P<body>.*\S)\s*$"
+)
+
+
+def render_finding_line(fid: str, v2_bullet: str, link_base: str = "",
+                        edit_base: str = "") -> str:
+    """Adapt a v2-shaped stub bullet into a v3 table row."""
+    m = _V2_STUB_RE.match(v2_bullet)
+    if not m:
+        return render_finding_row(fid, body=v2_bullet.strip(), link_base=link_base,
+                                  edit_base=edit_base)
+    return render_finding_row(
+        fid,
+        ref=(m.group("ref") or "").strip(),
+        file=(m.group("file") or "").strip(),
+        body=m.group("body").strip(),
+        link_base=link_base,
+        edit_base=edit_base,
+    )
+
+
+def parse_finding_line(line: str) -> dict | None:
+    """Inverse of render_finding_row; None when the line isn't a finding row.
+
+    REVIEW_STATE is authoritative for whether a finding is answered; a row
+    carries no display state of its own.
+    """
+    m = FINDING_LINE_RE.match(line)
+    if not m:
+        return None
+    return {
+        "id": m.group("id"),
+        "ref": (m.group("ref") or "").strip(),
+        "file": (m.group("file") or "").strip(),
+        "body": m.group("body").strip().replace("\\|", "|"),
+    }
+
+
+def _lines_from_ref(ref: str) -> list[int] | None:
+    m = re.match(r"L(\d+)(?:-(\d+))?", ref or "")
+    if not m:
+        return None
+    start = int(m.group(1))
+    if start <= 0:
+        return None
+    if m.group(2):
+        return [start, int(m.group(2))]
+    return [start]
+
+
+def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Deterministic ❓/⚠️ split of the v2 ⚠️ bucket, keyed on verdict alone.
+
+    `unverifiable` → ❓ (only the author can source or soften their own claim —
+    a turn-cap unverifiable still ends the same way: the author supplies the
+    source). Everything else the composer stubs at low confidence
+    (framing-drift, weakly-verified) → ⚠️: there might be an issue, and that
+    judgment belongs to the reviewer, not the author. The model may PROMOTE
+    (⚠️ → ❓ → 🚨) with a stated reason, never demote — bucket-split-faithful
+    in the validator holds it to that.
+    """
+    author_answer: list[dict] = []
+    reviewer_check: list[dict] = []
+    for s in lowconf_stubs:
+        if s.get("verdict") == "unverifiable":
+            author_answer.append(s)
+        else:
+            reviewer_check.append(s)
+    return author_answer, reviewer_check
+
+
+def v3_may_demote(finding: dict) -> bool:
+    """The one exception to promote-only: a readthrough detector finding.
+
+    `build_stubs` pre-stubs every readthrough finding in 🚨 and tells the model
+    to "bucket by reader impact: 🚨 if a reader cannot reach the page's stated
+    outcome without it, otherwise move to ⚠️" — so moving one to the brief's
+    ⚠️ list is the model following its instructions, not arguing a finding
+    down. The validator and build-evidence.py both ask here, so the TODO and
+    the two enforcers can't disagree again (pulumi/docs#21787, 2026-09-21: a
+    redundancy and an orphaned heading moved to ⚠️ as told, review:error).
+    Hugo and frontmatter detector stubs carry no such instruction and stay
+    promote-only, as does every fact-check verdict.
+    """
+    return str(finding.get("origin") or "").startswith("preflight:readthrough-")
+
+
+AUTHOR_STATE_BEGIN = "<!-- AUTHOR_STATE_BEGIN -->"
+AUTHOR_STATE_END = "<!-- AUTHOR_STATE_END -->"
+
+
+def waiting_state_cell(bucket: str, disposition: dict | None) -> str:
+    """The State cell of the brief's "Waiting on the author" table."""
+    if isinstance(disposition, dict):
+        d = disposition.get("disposition")
+        if d == "accepted":
+            return "✋ accepted as-is by the author"
+        if d == "refuted":
+            return "🛡️ disputed by the author"
+        if d in ("deferred", "not-applicable"):
+            return f"📌 {d} by the author"
+    return "🚨 open" if bucket == "outstanding" else "❓ open"
+
+
+def render_waiting_block(findings: list[dict], state_findings: dict) -> list[str]:
+    """The composer-owned "Waiting on the author" block on the brief.
+
+    Lists every blocking finding on the author card with its claim text and
+    live disposition, so the reviewer sees WHAT is open (2026-09-01 persona
+    pass: an unsourced statistic reduced to a count under "✅ rubber-stamp"
+    gets batch-approved). Wrapped in AUTHOR_STATE markers; build-evidence.py
+    and apply-update.py regenerate it from the final findings + REVIEW_STATE,
+    so the model never maintains it. Empty list when nothing blocks.
+    """
+    rows = [f for f in findings if f.get("bucket") in ("outstanding", "author-answer")]
+    if not rows:
+        return []
+    answered = [f for f in rows if isinstance(state_findings.get(f["id"]), dict)]
+    n_open = len(rows) - len(answered)
+    if n_open:
+        noun = "item blocks" if n_open == 1 else "items block"
+        head = f"**Waiting on the author** — {n_open} {noun} merge from the author's own card"
+        if answered:
+            more = "more is" if len(answered) == 1 else "more are"
+            head += f" ({len(answered)} {more} answered — see State)"
+        head += ". Before you approve, check the final diff answers them:"
+    else:
+        head = ("**Answered by the author** — nothing blocks merge. Weigh their "
+                "answers before you approve:")
+    lines = [
+        AUTHOR_STATE_BEGIN,
+        head,
+        "",
+        "| ID | State | Claim |",
+        "|---|---|---|",
+    ]
+    for f in rows:
+        cell = waiting_state_cell(f["bucket"], state_findings.get(f["id"]))
+        claim = trunc(str(f.get("text") or ""), 110).replace("|", "\\|")
+        lines.append(f"| **{f['id']}** | {cell} | {claim} |")
+    lines.append(AUTHOR_STATE_END)
+    return lines
+
+
+def replace_waiting_block(brief_body: str, findings: list[dict],
+                          state_findings: dict) -> str:
+    """Deterministically refresh the AUTHOR_STATE span in a brief body."""
+    block = render_waiting_block(findings, state_findings)
+    span_re = re.compile(
+        re.escape(AUTHOR_STATE_BEGIN) + r".*?" + re.escape(AUTHOR_STATE_END),
+        re.DOTALL)
+    if span_re.search(brief_body):
+        if block:
+            return span_re.sub(lambda _m: "\n".join(block), brief_body, count=1)
+        # nothing open any more — drop the span (and one trailing newline)
+        return span_re.sub("", brief_body, count=1).replace("\n\n\n", "\n\n")
+    if not block:
+        return brief_body
+    # markers lost (model edit) — re-insert before the first H3
+    lines = brief_body.splitlines()
+    at = next((i for i, ln in enumerate(lines) if ln.startswith("### ")), len(lines))
+    lines[at:at] = block + [""]
+    return "\n".join(lines) + ("\n" if brief_body.endswith("\n") else "")
+
+
+def render_approval_line(teams: str, scope: str) -> str:
+    """The brief's who-approves line, worded for `approval.scope`.
+
+    `teams` is who routing REQUESTED; `scope` (from route-pr.py) is who may
+    CLEAR the Sentinel's approver gate. They only coincide under `lane`, so
+    naming the teams as the required approvers under a wider scope tells
+    reviewers the gate is stricter than it is.
+    """
+    if scope == "any-human":
+        return (f"**Review requested from:** {teams} — an approval from anyone "
+                "with write access satisfies the merge gate.")
+    if scope == "any-team":
+        return (f"**Review requested from:** {teams} — an approval from a member "
+                "of any review team satisfies the merge gate.")
+    if "," in teams:
+        return (f"**Approval needed from:** {teams} — the merge gate needs an "
+                "approval from a member of each team.")
+    return (f"**Approval needed from:** {teams} — any member's approval "
+            "satisfies the merge gate.")
+
+
+def render_brief_orient() -> list[str]:
+    """The TIP callout under the brief header. Owned here so the update lane
+    can re-stamp it on cards composed with older wording
+    (build-evidence.restamp_brief_orient)."""
+    return [
+        "> [!TIP]",
+        "> **Check the ⚠️ items, then approve.** Your approval covers only "
+        "those; links, shortcodes, metadata, and verified claims were checked "
+        "by machine (receipts on the evidence page). Code samples are read, "
+        "not compiled.",
+        ">",
+        '> _PR author: nothing here is yours. Your to-do list is the "Author '
+        'action guide" comment._',
+    ]
+
+
+# A PR whose author is an automation that never reads this card. Today that
+# is the content-review lanes (pulumi-bot pushes `content-review/*`). Their
+# cards used to tell "the PR author" to answer, and the author never did:
+# glow-up findings sat open for days with nobody addressed (#21897). The
+# marker rides the card so the refresh lanes, which re-stamp the orienting
+# callout from the card alone (build-evidence._fix_header), keep the right
+# audience without knowing the PR's branch.
+# Only glow-ups have a post-open autofix (content-review-glowup-autofix.yml);
+# fix- and retire-lane cards must not promise one. The marker carries the
+# lane so a refresh re-stamps the same copy.
+AUTOMATED_AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTOMATED_AUTHOR -->"
+AUTOFIX_AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTOMATED_AUTHOR autofix -->"
+AUTOMATED_AUTHOR_BRANCH_PREFIXES = ("content-review/",)
+AUTOFIX_BRANCH_PREFIXES = ("content-review/glowup-",)
+
+
+def is_automated_branch(branch: str) -> bool:
+    return any(str(branch or "").startswith(p) for p in AUTOMATED_AUTHOR_BRANCH_PREFIXES)
+
+
+def is_autofix_branch(branch: str) -> bool:
+    return any(str(branch or "").startswith(p) for p in AUTOFIX_BRANCH_PREFIXES)
+
+
+def automated_marker(branch: str) -> str:
+    if is_autofix_branch(branch):
+        return AUTOFIX_AUTHOR_MARKER
+    return AUTOMATED_AUTHOR_MARKER if is_automated_branch(branch) else ""
+
+
+def orient_audience(body: str) -> tuple[bool, bool]:
+    """(automated, autofix) from a card's marker, for the refresh lanes."""
+    return ("<!-- CLAUDE_REVIEW_AUTOMATED_AUTHOR" in body, AUTOFIX_AUTHOR_MARKER in body)
+
+
+def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool = False) -> list[str]:
+    """The callout under the author header. Owned here so the refresh lanes
+    (build-evidence._fix_header) can swap it when the count crosses zero —
+    a "nothing blocks merge" card must not open with "needs your answers
+    before this PR can merge" (2026-09-01 update-lane smoke).
+
+    The blocking form carries the one reply shape an author must get right,
+    because the full **How to answer** footer is collapsed (2026-09-25:
+    authors lost the open items under a screenful of instructions). The
+    callout is the part of the card everyone reads; the fold keeps the
+    worked examples one click away."""
+    if automated and n_blocking:
+        # Nobody on the author side will answer. Say who does: the reviewer
+        # triage requested, after the glow-up autofix's pass where it runs.
+        lead = ("> **Automation opened this PR and does not read this card.** Where the glow-up "
+                "autofix is enabled it answers each item once; anything still open is for **you, "
+                "the requested reviewer**, to settle before merge."
+                if autofix else
+                "> **Automation opened this PR and does not read this card.** Each item below is "
+                "for **you, the requested reviewer**, to settle before merge.")
+        return [
+            "> [!IMPORTANT]",
+            lead,
+            ">",
+            "> **To settle an item:** push a fix, or reply "
+            "`@claude F1: <what you fixed, why it's wrong, or \"accepting as-is — why\"> #update-review`. "
+            "A reply without the `#update-review` tag doesn't count. "
+            "Examples: **How to answer** at the bottom.",
+        ]
+    if automated:
+        return [
+            "> [!NOTE]",
+            "> Nothing here needs an answer. Automation opened this PR; a human reviewer "
+            "still approves the merge.",
+        ]
+    if n_blocking:
+        return [
+            "> [!IMPORTANT]",
+            "> **You = the PR author.** Answer every item below before this PR can merge.",
+            ">",
+            "> **To answer:** push a fix, or reply "
+            "`@claude F1: <what you fixed, why it's wrong, or \"accepting as-is — why\"> #update-review`. "
+            "A reply without the `#update-review` tag doesn't count. "
+            "Examples: **How to answer** at the bottom.",
+        ]
+    return [
+        "> [!NOTE]",
+        "> Nothing here needs an answer from you. A human reviewer still approves the merge.",
+    ]
+
+
+def render_detail_scaffold(fid: str, framing: str = "") -> list[str]:
+    """The per-finding "Do this" block scaffold under the author tables.
+
+    One block per blocking finding; the model fills the TODOs. The shape is
+    the 2026-09-01 persona-pass contract: exactly one required action per ID,
+    the flagged line quoted verbatim exactly once, replacement text in a
+    fenced block (GitHub gives it a copy button). Model-added `F?` rows get
+    NO block (ids are not assigned yet); their cell stays terse instead.
+
+    The three labelled lines are a bulleted list (2026-09-11: the paragraph
+    form read as a wall of text). Readers that key on the labels accept
+    both the bulleted and the older unbulleted form, because cards
+    rendered before this change stay live until their PR closes.
+    """
+    return [
+        f"#### {fid} · Do this",
+        "",
+        "- **Line (verbatim):** <TODO: the flagged line, quoted exactly as it "
+        "appears in the file — the only quote of it on this card; never a paraphrase>",
+        "- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)"
+        + (f". The verifier's note, to write from (not to paste): {framing}" if framing else "") + ">",
+        "- **Fix:** <TODO: exactly ONE required action, stated first; put any "
+        "replacement text in a fenced block at column 0 after this list — on 🚨, make the fence "
+        "a one-line replacement for exactly the text quoted above, and it also posts as a "
+        "one-click suggestion; label an alternative "
+        "\"- **If you'd rather keep it:**\" as a fourth bullet — never two competing imperatives>",
+    ]
+
+
+CONTRIBUTING_URL_TOKEN = "%%CONTRIBUTING_URL%%"
+
+
+def contributing_url_for(repo: str) -> str:
+    return (f"https://github.com/{repo}/blob/master/CONTRIBUTING.md#ai-assisted-contributions"
+            if repo else "")
+
+
+# The collapsed **How to answer** fold in footer-author.md. It exists only
+# while something blocks: on a "nothing blocks merge" card it was a fold of
+# instructions for items that don't exist, opening "Every 🚨 and ❓ item
+# above needs one of these" (reader feedback, 2026-09-25).
+_HOW_TO_ANSWER_RE = re.compile(
+    r"^<details>\n<summary><strong>How to answer</strong>.*?\n</details>\n\n?", re.S | re.M)
+
+
+def render_author_footer(contributing_url: str = "", n_blocking: int = 1) -> str:
+    """The author card's footer, from FOOTER_SENTINEL to the end. Both
+    refresh lanes re-stamp it through build-evidence.restamp_footer, so a
+    card follows the current footer (and gains or loses the How-to-answer
+    fold as its count crosses zero) instead of keeping whatever footer it
+    was first published with."""
+    text = _read_footer(FOOTER_AUTHOR_PATH, contributing_url)
+    return text if n_blocking else _HOW_TO_ANSWER_RE.sub("", text)
+
+
+def render_reviewer_footer(contributing_url: str = "") -> str:
+    return _read_footer(FOOTER_REVIEWER_PATH, contributing_url)
+
+
+def _read_footer(path: Path, contributing_url: str = "") -> str:
+    """Footer include, with the CONTRIBUTING deep link substituted at compose
+    time (the repo is known here, unlike the evidence URL, which only the
+    publish step knows). Without a repo the link degrades to plain text
+    rather than shipping a dead relative link."""
+    try:
+        text = path.read_text(encoding="utf-8").rstrip("\n")
+    except OSError:
+        return FOOTER_SENTINEL
+    if contributing_url:
+        text = text.replace(CONTRIBUTING_URL_TOKEN, contributing_url)
+    else:
+        text = re.sub(r"\[([^\]]+)\]\(" + re.escape(CONTRIBUTING_URL_TOKEN) + r"\)", r"\1", text)
+    return text
+
+
+# The stub TODOs in build_stubs() speak v2 — they tell the model to move
+# spurious/pre-existing bullets into the 📋/💡 sections, which the v3 cards do
+# not have. On the v3 surface those flows become in-place rewrites that
+# build-evidence.py files on the evidence page and drops from the published
+# card. Applied to every stub bullet at render time; v3_self_check asserts no
+# stale section reference survives, so drift between build_stubs' wording and
+# this table fails the compose instead of publishing v2 instructions.
+_V3_TODO_REWRITES: tuple[tuple[str, str], ...] = (
+    (
+        "replace the body with `**Spurious:** <1-2 sentence reason>` "
+        "AND move the bullet to `### 📋 Triaged verifier findings` (do NOT leave it in 🚨; "
+        "do NOT add `no author action required` / `nothing to fix` codas — the `**Spurious:**` label IS the resolution)",
+        "rewrite the Finding cell as `**Spurious:** <1-2 sentence reason>` — build-evidence files it "
+        "on the evidence page and drops it from this card (the `**Spurious:**` label IS the resolution)",
+    ),
+    (
+        "replace the body with `**Mis-sourced:** <reason>` AND move the bullet to `### 📋 Triaged verifier findings`",
+        "rewrite the Finding cell as `**Mis-sourced:** <reason>` — it is filed on the evidence page and dropped from this card",
+    ),
+    (
+        "replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`",
+        "rewrite the Finding cell as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card",
+    ),
+    (
+        "replace the body with `**Pre-existing:** <reason>` AND move the bullet to `### 💡 Pre-existing`",
+        "rewrite the Finding cell as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card",
+    ),
+    (
+        "move to 📋 Triaged with `**Spurious:**` only if the framing comparison itself is wrong",
+        "rewrite as `**Spurious:** <reason>` only if the framing comparison itself is wrong",
+    ),
+    (
+        "otherwise move to ⚠️ Low-confidence",
+        "otherwise move it under `### ⚠️ Check these before approving` on the reviewer brief",
+    ),
+    (
+        "promote to 🚨 Outstanding",
+        "promote to `### 🚨 Fix or disagree` on the author card",
+    ),
+    (
+        "either way file the author-question buffer line",
+        "otherwise keep it here — this row IS the question the author must answer",
+    ),
+    (
+        "file the author-question line saying verification ran out of budget and the claim is retryable",
+        "keep it here with a note that verification ran out of budget and the claim is retryable",
+    ),
+    (
+        " `trail-verdict-bucket-promotion` accepts the bullet under 🚨, 📋, or 💡.",
+        "",
+    ),
+)
+
+# Stale v2 vocabulary that must never reach a published v3 card; the
+# self-check greps for these (TODO text only — the style H4 is fine).
+_V3_STALE_TOKENS = ("📋 Triaged", "⚠️ Low-confidence", "### 💡 Pre-existing", "trail-verdict-bucket-promotion")
+# Text the composer quotes from the PR (claim cells, stance bullets) always
+# renders through quote() inside italics: *"…"*, with inner double quotes
+# already turned to single ones.
+_QUOTED_SPAN_RE = re.compile(r'\*"[^"\n]*"\*')
+
+
+def stale_v2_tokens(draft: str) -> list[str]:
+    """v2 vocabulary in the composer's own text. Quoted PR text is skipped:
+    a PR that edits the review docs can quote "⚠️ Low-confidence" in a
+    stance bullet, and failing the self-check on that stopped #21920's
+    first review cold."""
+    own = _QUOTED_SPAN_RE.sub("", draft)
+    return [tok for tok in _V3_STALE_TOKENS if tok in own]
+
+
+def _v3_adapt_todo(bullet: str) -> str:
+    for old, new in _V3_TODO_REWRITES:
+        bullet = bullet.replace(old, new)
+    return bullet
+
+
+def _review_state_block(high_water: int) -> str:
+    """Empty REVIEW_STATE block via the shared scripts/review-v3 library.
+
+    Imported lazily and by path; a v3 compose on a checkout without the
+    library is a hard error — silently omitting the block would leave the
+    published comment with no disposition store and the Sentinel unable to
+    go green.
+    """
+    import importlib.util
+
+    lib = _REVIEW_V3_DIR / "review_state.py"
+    spec = importlib.util.spec_from_file_location("review_state", lib)
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules.setdefault("review_state", mod)
+    spec.loader.exec_module(mod)
+    state = mod.empty_state()
+    state["high_water"] = high_water
+    return mod.serialize_block(state)
+
+
+# The brief's reviewer-check section heading and the author card's
+# "nothing blocks" header verb are read back by the Sentinel's clean-brief
+# rule (scripts/review-v3/sentinel.py) — named here so the writer and the
+# reader can't drift apart.
+CHECKS_HEADING = "### ⚠️ Check these before approving"
+AUTHOR_HEADER_PREFIX = "## Author action guide v"
+AUTHOR_HEADER_NOTHING_BLOCKS = "nothing blocks merge"
+
+_V3_EMPTY_OUTSTANDING = "_Nothing to fix — this section is empty._"
+_V3_EMPTY_QUESTIONS = "_No open questions for you._"
+_V3_EMPTY_CHECKS = "_Nothing needs a human eye beyond the rubber-stamp list below._"
+# The ⚠️ section can be empty of findings and still carry the verdict-free
+# editorial-stances H4 under it, which DOES need a human eye. The sentinel
+# has to know (pulumi/docs#21369, 2026-09-03: "Nothing needs a human eye"
+# printed directly above a stance the reviewer was asked to confirm).
+_V3_EMPTY_CHECKS_STANCES = "_No findings to check — but the editorial stances below still need a human eye._"
+
+
+def empty_checks_sentinel(stances_follow: bool) -> str:
+    """The ⚠️ section's empty-table sentinel; every emitter (composer,
+    build-evidence's collapse, apply-update's re-render) picks it here so the
+    wording can't contradict the stances block below it."""
+    return _V3_EMPTY_CHECKS_STANCES if stances_follow else _V3_EMPTY_CHECKS
+# The browser-editing hint under the author tables. Named because the section
+# and detail-block walkers in build-evidence.py / apply-update.py must treat it
+# as a boundary: a detail block that swallowed it, and a section span that ran
+# through the 📎 line behind it, cost the author card its evidence link on the
+# first live #update-review (2026-09-01).
+V3_BROWSER_HINT_PREFIX = "_Editing in the browser?"
+V3_BROWSER_HINT = (V3_BROWSER_HINT_PREFIX + " ✏️ opens the file in GitHub's editor; "
+                   "Ctrl+F for the quoted line._")
+
+
+def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
+    """Return (author_draft, brief_draft, evidence_base)."""
+    prep = _prepare(args)
+    timestamp = prep["timestamp"]
+    head_sha = prep["head_sha"]
+    head_sha_short = prep["head_sha_short"]
+    n_claims, x_verified, y_unverifiable, z_contradicted = prep["trail_nxyz"]
+
+    lowconf_kept, preexisting_stubs = split_untouched_unverifiable(
+        prep["lowconf_stubs"], prep["changed_lines"])
+    author_answer_stubs, reviewer_check_stubs = split_v3_buckets(lowconf_kept)
+
+    link_base = (f"https://github.com/{args.repo}/pull/{args.pr}/files"
+                 if args.repo and args.pr else "")
+    edit_base = (f"https://github.com/{args.head_repo}/edit/{args.head_branch}/"
+                 if getattr(args, "head_repo", "") and getattr(args, "head_branch", "")
+                 else "")
+    contributing_url = contributing_url_for(args.repo)
+
+    # Assign finding ids in render order: 🚨 stubs, 🚨 style-blockers, ❓, ⚠️.
+    findings: list[dict] = []
+    # Ids continue from the previous review's high-water mark: `F<n>` is
+    # "monotonically increasing per PR, never reused" (README §Finding IDs),
+    # and every id-keyed join across generations — REVIEW_STATE, the
+    # evidence merge in record-evidence.py, an author's `F3 is wrong`
+    # reply — depends on it. Restarting at F1 on every full review handed
+    # #21798's new F3 (an alias-syntax finding) the v1 F3's `fixed` record
+    # and left the author's reply to v1 F3 pointing at the wrong finding.
+    next_id = max(0, int(getattr(args, "prior_high_water", 0) or 0)) + 1
+
+    def _assign(stub: dict, bucket: str, rendered: str) -> tuple[str, dict]:
+        nonlocal next_id
+        fid = f"F{next_id}"
+        next_id += 1
+        lines = _lines_from_ref(stub.get("ref") or "")
+        record = {
+            "id": fid,
+            "bucket": bucket,
+            "file": stub.get("file") or "(unknown)",
+            "text": stub.get("text") or rendered,
+            "origin": stub.get("origin") or "model",
+            "status": "open",
+            "disposition": None,
+        }
+        if lines:
+            record["lines"] = lines
+        findings.append(record)
+        return fid, record
+
+    outstanding_lines: list[str] = []
+    outstanding_ids: list[str] = []
+    framing_by_id: dict[str, str] = {}
+    for s in prep["outstanding_stubs"]:
+        fid, _ = _assign(s, "outstanding", s["bullet"])
+        outstanding_ids.append(fid)
+        framing_by_id[fid] = s.get("framing") or ""
+        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(author_cell_bullet(s)), link_base=link_base, edit_base=edit_base))
+    for f in prep["vale_blockers"]:
+        fname = str(f.get("file") or "").strip()
+        cat = str(f.get("category") or "style")
+        msg = str(f.get("message") or "").strip()
+        file_part = f" `{fname}` —" if fname else ""
+        v2_bullet = f"- **[L{f.get('line', '?')}]**{file_part} [style-blocker] _{cat}_ — {msg}"
+        stub = {
+            "ref": f"L{f.get('line', '?')}",
+            "file": fname,
+            "text": f"[style-blocker] {cat}: {msg}",
+            "origin": "style-blocker",
+        }
+        fid, _ = _assign(stub, "outstanding", v2_bullet)
+        outstanding_ids.append(fid)
+        outstanding_lines.append(render_finding_line(fid, v2_bullet, link_base=link_base, edit_base=edit_base))
+
+    question_lines: list[str] = []
+    question_ids: list[str] = []
+    for s in author_answer_stubs:
+        fid, _ = _assign(s, "author-answer", s["bullet"])
+        question_ids.append(fid)
+        framing_by_id[fid] = s.get("framing") or ""
+        question_lines.append(render_finding_line(fid, _v3_adapt_todo(author_cell_bullet(s)), link_base=link_base, edit_base=edit_base))
+
+    check_lines: list[str] = []
+    for s in reviewer_check_stubs:
+        fid, _ = _assign(s, "reviewer-check", s["bullet"])
+        check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base))
+
+    # Evidence-page only: build-evidence.py carries a base `preexisting`
+    # finding through without a card row, the same place a model-filed
+    # `**Pre-existing:**` rewrite ends up.
+    for s in preexisting_stubs:
+        _, rec = _assign(s, "preexisting", s["bullet"])
+        rec["text"] = (f"Unverifiable claim on a line this PR doesn't change: "
+                       f"{s.get('text') or rec['text']}")
+    n_preexisting = len(preexisting_stubs)
+
+    n_blocking = sum(1 for f in findings if f["bucket"] in ("outstanding", "author-answer"))
+    high_water = next_id - 1
+
+    # ---- evidence base ----
+    trail_records: list[dict] = []
+    for v in prep["verdicts"]:
+        verdict = v.get("verdict")
+        if verdict not in TRAIL_VERDICT_WORDS:
+            verdict = "unverifiable"
+        rec: dict = {
+            "file": (v.get("file") or "").strip() or "(unknown)",
+            "claim": redact(trunc(v.get("text") or "", TEXT_TRUNC)) or "(empty)",
+            "verdict": verdict,
+        }
+        refs = line_refs(v.get("line_range") or "")
+        nums = _lines_from_ref(refs[0]) if refs else None
+        if nums:
+            rec["line"] = nums[0]
+        pointer = _evidence_pointer(v)
+        if pointer:
+            rec["evidence"] = pointer
+        src = _clean_source(str(v.get("source") or ""))
+        if src:
+            rec["source"] = src
+        route = v.get("route")
+        if route in ("pass0", "pass1", "pass2", "pass3", "preflight"):
+            rec["route"] = route
+        rec.update(_trail_verdict_metadata(v))
+        trail_records.append(rec)
+
+    log_block = render_investigation_log(
+        cross_sibling=prep["cross_sibling"],
+        verdicts=prep["verdicts"],
+        route_counts=prep["route_counts"],
+        frontmatter=prep["frontmatter"],
+        has_temporal_trigger=prep["has_temporal_trigger"],
+        diff_files=prep["diff_files"],
+        has_fenced_code_in_content=prep["has_fenced_code_in_content"],
+        editorial_balance=prep["editorial_balance"],
+        is_blog=prep["is_blog"],
+        diff_unavailable=prep["diff_unavailable"],
+    )
+    investigation_log: dict[str, str] = {}
+    for line in log_block.splitlines():
+        m = re.match(r"^- \*\*(?P<key>[^:*]+):\*\* (?P<val>.+)$", line)
+        if m:
+            key = m.group("key").strip().lower().replace(" ", "-")
+            investigation_log[key] = m.group("val").strip()
+
+    confidence = {
+        dim: prep["forced_levels"][dim][0] if dim in prep["forced_levels"] else "TODO"
+        for dim in prep["confidence_dims"]
+    }
+
+    evidence_base = {
+        "schema_version": 1,
+        "repo": args.repo or "unknown/unknown",
+        "pr": int(args.pr) if args.pr and str(args.pr).isdigit() else 0,
+        "head_sha": head_sha or ("0" * 40),
+        "run_id": str(getattr(args, "run_id", "") or "local"),
+        "generated_at": timestamp,
+        "high_water": high_water,
+        "findings": findings,
+        "trail": trail_records,
+        "investigation_log": investigation_log,
+        "editorial_balance": prep["editorial_balance"] if prep["is_blog"] else None,
+        "triaged": [],
+        "style_suggestions_count": len(prep["vale_nags"]),
+        "confidence": confidence,
+        "summary": None,
+        **({"stances": stance_records(prep["candidate_stances"])}
+           if prep["candidate_stances"] is not None else {}),
+        "history": [
+            {"ts": timestamp, "summary": "initial review (pending publication)", "sha": head_sha_short}
+        ],
+    }
+
+    # ---- author card ----
+    # The review revision: v1 on the initial compose; apply-update bumps it
+    # as it appends history entries. A from-scratch regen naturally restarts
+    # at v1. Display-only — the machine-read head lives in CLAUDE_REVIEW_HEAD.
+    rev = len(evidence_base["history"])
+    sub_line = f"<sub>Review v{rev} · updated {timestamp} · head commit {head_sha_short}</sub>"
+    if n_blocking:
+        noun = "item blocks" if n_blocking == 1 else "items block"
+        header_verb = f"{n_blocking} {noun} merge"
+    else:
+        header_verb = AUTHOR_HEADER_NOTHING_BLOCKS
+    marker = automated_marker(getattr(args, "head_branch", ""))
+    orient = render_author_orient(n_blocking, bool(marker), marker == AUTOFIX_AUTHOR_MARKER)
+
+    def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
+        if not rows:
+            return [empty_sentinel]
+        return [FINDING_TABLE_HEADER, FINDING_TABLE_SEPARATOR, *rows]
+
+    author: list[str] = [
+        "<!-- CLAUDE_REVIEW 1/1 -->",
+        AUTHOR_MARKER,
+        f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->" if head_sha else "",
+        *([marker] if marker else []),
+        f"{AUTHOR_HEADER_PREFIX}{rev} — {header_verb}",
+        "",
+        *orient,
+        "",
+    ]
+    if prep["outage_banner"]:
+        author += [prep["outage_banner"], ""]
+    author += [
+        "_<TODO: one sentence — what this PR is and what the review checked. No counts of open items and nothing only the author can answer: the header and sections carry the live state, and this line outlives them>_",
+        "",
+        "### 🚨 Fix or disagree",
+        "",
+    ]
+    author += _finding_table(outstanding_lines, _V3_EMPTY_OUTSTANDING)
+    for fid in outstanding_ids:
+        author += ["", *render_detail_scaffold(fid, framing_by_id.get(fid, ""))]
+    author += [
+        "",
+        "### ❓ Questions for you",
+        "",
+    ]
+    author += _finding_table(question_lines, _V3_EMPTY_QUESTIONS)
+    for fid in question_ids:
+        author += ["", *render_detail_scaffold(fid, framing_by_id.get(fid, ""))]
+    author += [""]
+    if edit_base and (outstanding_lines or question_lines):
+        author += [V3_BROWSER_HINT, ""]
+    # Always rendered on v3 (see NIT_TAG) — build-evidence.py drops it again
+    # when neither Vale nor the model put a bullet in it.
+    author += [_render_style_findings(prep["vale_nags"], prep["files_url"], allow_nits=True), ""]
+    # ✅ Resolved is omitted while empty (a v1 card has no "last review" to
+    # refer to — persona pass 2026-09-01); apply-update.py inserts the
+    # section the first time something resolves.
+    author += [
+        f"{EVIDENCE_LINE_PREFIX} [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
+        "",
+        _review_state_block(high_water),
+        "<!-- The block above stores dispositions only; a finding ID absent from it is OPEN. Machines parse the JSON block, not this note. -->",
+        "",
+        sub_line,
+        "",
+        render_author_footer(contributing_url, n_blocking),
+        "",
+    ]
+    author_draft = "\n".join(a for a in author if a is not None)
+
+    # ---- reviewer brief ----
+    detector_count = sum(1 for v in prep["verdicts"] if v.get("route") == "preflight")
+    mech_bits: list[str] = []
+    if prep["frontmatter"]:
+        mech_bits.append("frontmatter sweep ran")
+    hugo = prep["hugo_build"]
+    if hugo and not hugo.get("skipped"):
+        n_hugo = len(hugo.get("errors") or []) + len(hugo.get("link_integrity") or [])
+        mech_bits.append("Hugo build green" if n_hugo == 0 else f"Hugo build: {n_hugo} error(s) — see 🚨")
+    link_check = hugo.get("link_check") if isinstance(hugo, dict) else None
+    if isinstance(link_check, dict):
+        # The deterministic dead-internal-link check (link-check-diff.py).
+        # An unrun check is named as such rather than left to look clean.
+        if not link_check.get("ran"):
+            mech_bits.append("internal-link check did not run — dead links NOT verified")
+        else:
+            n_checked = int(link_check.get("checked") or 0)
+            n_dead = int(link_check.get("dead") or 0)
+            n_unknown = int(link_check.get("unknown") or 0)
+            if n_checked == 0:
+                mech_bits.append("no internal links added")
+            elif n_dead == 0:
+                mech_bits.append(f"{n_checked} added internal link(s) resolve")
+            else:
+                mech_bits.append(f"{n_dead} of {n_checked} added internal link(s) dead — see 🚨")
+            if n_unknown:
+                mech_bits.append(f"{n_unknown} added internal link(s) could not be verified against production")
+    if detector_count:
+        mech_bits.append(f"{detector_count} detector finding(s) filed above")
+    if not mech_bits:
+        mech_bits.append("no mechanical sweeps applicable to this diff")
+
+    brief: list[str] = [
+        BRIEF_MARKER,
+        f"## Reviewer's guide v{rev} — not for the author",
+        "",
+        *render_brief_orient(),
+        "",
+    ]
+    if prep["outage_banner"]:
+        brief += [prep["outage_banner"], ""]
+    if getattr(args, "routed_team", ""):
+        brief += [render_approval_line(args.routed_team,
+                                       getattr(args, "approval_scope", "lane")), ""]
+    waiting = render_waiting_block(findings, {})
+    if waiting:
+        brief += [*waiting, ""]
+    brief += [
+        # The orienting TIP above is the only TIP box — the summary block
+        # renders as a NOTE here so the two don't stack as twins. The v3
+        # summary is a bullet list, not a paragraph: reviewers scan changes,
+        # they don't read prose about them (Cam, 2026-09-01). The shared v2
+        # renderer keeps its paragraph scaffold (byte-identity golden); only
+        # the TODO scaffold differs here — the confidence table is reused.
+        render_summary_block(prep["confidence_dims"], prep["forced_levels"]).replace(
+            "> [!TIP]", "> [!NOTE]", 1).replace(
+            "> **Summary:** <TODO: one paragraph — (1) what this PR is (content type + subject; for a new page, which existing pages it parallels), "
+            "(2) what specific kind of wrongness would block a reader's success, (3) which investigative passes ran>.",
+            "> **What this PR changes:**\n"
+            ">\n"
+            "> - <TODO: one bullet per meaningful change — subject + what changed, one line each; a reviewer scans this list, so no compound bullets>\n"
+            ">\n"
+            "> <TODO: one sentence — what specific kind of wrongness would block a reader's success — then one sentence naming which investigative passes ran>.",
+            1),
+        "",
+        CHECKS_HEADING,
+        "",
+    ]
+    stance_block = render_stances(prep["candidate_stances"], v3=True)
+    brief += _finding_table(check_lines, empty_checks_sentinel(bool(stance_block)))
+    if check_lines:
+        _team_txt = getattr(args, "routed_team", "") or "the routed reviewer team"
+        brief += ["", f"_Not your area? Hand it to another member of {_team_txt} "
+                  "rather than approving on faith._"]
+    # Editorial stances ride the brief, not the author card: they are
+    # reviewer-check material by nature (a page's own framing, no verdict,
+    # nothing for the author to answer) and the same verdict-free H4 the v2
+    # monolith renders under ⚠️. It sits below the finding table because
+    # `#### ` terminates every row walker (build-evidence, apply-update,
+    # validate-pinned), so the sub-list is invisible to finding parsing and
+    # survives an update-lane re-render of the table above it.
+    if stance_block:
+        brief += ["", stance_block]
+    brief += [
+        "",
+        "### ✅ What you can rubber-stamp",
+        "",
+        _render_facts_line(prep["verdicts"], prep["trail_nxyz"]),
+        f"- **Mechanics:** {'; '.join(mech_bits)}.",
+        render_style_line(len(prep["vale_nags"]), 0),
+        "",
+        f"**Pre-existing issues in touched files:** {n_preexisting} — details on the evidence page.",
+        "",
+        f"{EVIDENCE_LINE_PREFIX} [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
+        "",
+        sub_line,
+        "",
+        render_reviewer_footer(contributing_url),
+        "",
+    ]
+    brief_draft = "\n".join(b for b in brief if b is not None)
+
+    return author_draft, brief_draft, evidence_base
+
+
+
+def _render_facts_line(verdicts: list[dict], nxyz: tuple[int, int, int, int]) -> str:
+    """The brief's rubber-stamp **Facts** bullet.
+
+    Counts only what is SETTLED — open findings belong to "Waiting on the
+    author", never under a ✅ heading (2026-09-01 persona pass: all three
+    reviewer personas read "✅ rubber-stamp … 1 contradicted" as being asked
+    to bless a false claim). Extraction candidates the verifier ruled
+    non-claims live on the evidence page only.
+    """
+    n, x, y, z = nxyz
+    n_not_claim = sum(1 for v in verdicts if v.get("verdict") == "not-a-claim")
+    n_drift = sum(1 for v in verdicts if v.get("verdict") in DRIFT_VERDICTS)
+    checked = n - n_not_claim
+    if checked <= 0:
+        return "- **Facts:** no factual claims found in the changed lines."
+    parts: list[str] = []
+    if x:
+        parts.append(f"{x} verified clean")
+    open_ct = y + z
+    if open_ct:
+        parts.append(f'{open_ct} open on the author\'s card ("Waiting on the author" above)')
+    if n_drift:
+        parts.append(f"{n_drift} flagged in the ⚠️ list")
+    unaccounted = checked - (x + y + z + n_drift)
+    if unaccounted > 0:
+        parts.append(f"{unaccounted} other — see the evidence page")
+    noun = "factual claim" if checked == 1 else "factual claims"
+    head = f"- **Facts:** {checked} {noun} checked"
+    if parts:
+        head += " — " + ", ".join(parts)
+    return head + "."
+
+
+def v3_self_check(author_draft: str, brief_draft: str, evidence_base: dict) -> list[str]:
+    """Structural invariants for the v3 drafts (validate-pinned speaks v2 only).
+
+    Returns problem strings; empty = sound. Deliberately cheap and exact — the
+    deep validation lives in validate-evidence.py and (post-model) in
+    build-evidence.py's fail-closed parse.
+    """
+    problems: list[str] = []
+    for marker, where in ((AUTHOR_MARKER, "author"), ("<!-- CLAUDE_REVIEW 1/1 -->", "author")):
+        if marker not in author_draft:
+            problems.append(f"{where} draft missing {marker}")
+    if BRIEF_MARKER not in brief_draft:
+        problems.append(f"brief draft missing {BRIEF_MARKER}")
+    if "CLAUDE_REVIEW_HEAD" in brief_draft:
+        problems.append("brief draft must not carry the machine-read HEAD marker")
+    for name, draft in (("author", author_draft), ("brief", brief_draft)):
+        for marker in (AUTHOR_MARKER, BRIEF_MARKER, "<!-- CLAUDE_REVIEW 1/1 -->"):
+            if draft.count(marker) > 1:
+                problems.append(f"{name} draft repeats {marker}")
+        if EVIDENCE_URL_TOKEN not in draft:
+            problems.append(f"{name} draft missing {EVIDENCE_URL_TOKEN} link")
+    for line_needed in ("### 🚨 Fix or disagree", "### ❓ Questions for you"):
+        if line_needed not in author_draft:
+            problems.append(f"author draft missing section {line_needed}")
+    if CHECKS_HEADING not in brief_draft:
+        problems.append("brief draft missing ⚠️ section")
+    if "<!-- REVIEW_STATE" not in author_draft:
+        problems.append("author draft missing REVIEW_STATE block")
+    blocking_ids = [f["id"] for f in evidence_base.get("findings", [])
+                    if f.get("bucket") in ("outstanding", "author-answer")]
+    for fid in blocking_ids:
+        if f"#### {fid} · Do this" not in author_draft:
+            problems.append(f"author draft missing the detail block for {fid}")
+    if blocking_ids and AUTHOR_STATE_BEGIN not in brief_draft:
+        problems.append("brief draft missing the Waiting-on-the-author block")
+    for name, draft in (("author", author_draft), ("brief", brief_draft)):
+        for tok in stale_v2_tokens(draft):
+            problems.append(f"{name} draft carries stale v2 vocabulary: {tok!r} — update _V3_TODO_REWRITES")
+    ids = [f["id"] for f in evidence_base.get("findings", [])]
+    if len(ids) != len(set(ids)):
+        problems.append("duplicate finding ids in evidence base")
+    for f in evidence_base.get("findings", []):
+        if f.get("bucket") == "preexisting":
+            continue
+        if f["id"] not in author_draft and f["id"] not in brief_draft:
+            problems.append(f"finding {f['id']} in evidence base but rendered in neither draft")
+    return problems
+
+
+# ---- self-check ------------------------------------------------------------
+
+
+def run_self_check(draft_path: Path, args: argparse.Namespace) -> list[dict]:
+    """Run validate-pinned.py check --skip-rule no-todo-tokens on the draft.
+    Return the list of violation dicts (empty = clean)."""
+    script_dir = Path(__file__).resolve().parent
+    validator = script_dir / "validate-pinned.py"
+    if not validator.is_file():
+        return []  # can't self-check; not fatal
+    out_json = Path("/tmp/compose-review.validate.json")
+    cmd = [
+        sys.executable, str(validator), "check",
+        "--body-file", str(draft_path),
+        "--skip-rule", "no-todo-tokens",
+        "--output-json", str(out_json),
+        "--output-markdown", "/tmp/compose-review.validate.md",
+    ]
+    if args.pr:
+        cmd += ["--pr", str(args.pr)]
+    if args.repo:
+        cmd += ["--repo", args.repo]
+    for opt, val in (
+        ("--verified-claims", args.verified_claims),
+        ("--candidate-claims", args.candidate_claims),
+        ("--fetched-urls", args.fetched_urls),
+        ("--editorial-balance", args.editorial_balance),
+    ):
+        if val:
+            cmd += [opt, val]
+    try:
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+    except (subprocess.SubprocessError, OSError) as e:
+        print(f"compose-review: self-check could not run validate-pinned.py: {e}", file=sys.stderr)
+        return []
+    if proc.returncode == 0:
+        return []
+    try:
+        data = json.loads(out_json.read_text())
+        return data.get("violations", []) if isinstance(data, dict) else []
+    except (OSError, json.JSONDecodeError):
+        return [{"rule_id": "self-check-unparseable", "line_ref": "<validator>",
+                 "expected": "validate-pinned.py emits a parseable fix-me JSON",
+                 "actual": f"exit {proc.returncode}; output unparseable",
+                 "hint": proc.stderr.strip()[:300]}]
+
+
+def prepend_caution_banner(draft_path: Path, violations: list[dict], timestamp: str) -> None:
+    summary = "; ".join(f"{v.get('rule_id', '?')}@{v.get('line_ref', '?')}" for v in violations[:8])
+    if len(violations) > 8:
+        summary += f"; (+{len(violations) - 8} more)"
+    banner = (
+        f"## Pre-merge Review — Last updated {timestamp}\n\n"
+        "> [!CAUTION]\n"
+        f"> The review composer (`compose-review.py`) produced a structurally-invalid draft "
+        f"({len(violations)} validator violation(s)). Do **not** use the sections below as-is — "
+        f"assemble the review manually per `.claude/commands/docs-review/ci.md` §Fallback (manual assembly) "
+        f"and validate before posting. Violations: {summary}.\n"
+    )
+    try:
+        existing = draft_path.read_text()
+    except OSError:
+        existing = ""
+    # Drop the draft's own `## Pre-merge Review` first line if present, then prepend.
+    lines = existing.splitlines()
+    if lines and lines[0].startswith("## Pre-merge Review"):
+        lines = lines[1:]
+        # also drop a single leading blank
+        if lines and not lines[0].strip():
+            lines = lines[1:]
+    draft_path.write_text(banner + "\n" + "\n".join(lines).lstrip("\n") + ("\n" if not existing.endswith("\n") else ""))
+
+
+# ---- main / safe_main ------------------------------------------------------
+
+
+def _write_fallback(out_path: Path, reason: str, timestamp: str) -> None:
+    try:
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(FALLBACK_BANNER_DRAFT.format(ts=timestamp or "unknown", reason=reason))
+    except OSError:
+        pass
+
+
+def main() -> int:
+    p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    p.add_argument("--out", required=True, help="Output draft path (.review-draft.md)")
+    p.add_argument("--pr", help="PR number (for `gh pr diff` context)")
+    p.add_argument("--repo", help="owner/repo (for gh)")
+    p.add_argument("--repo-root", default=".", help="Repo root (default: cwd)")
+    p.add_argument("--timestamp", help="ISO-8601 UTC review timestamp (from the workflow)")
+    p.add_argument("--head-sha", help="PR head SHA")
+    p.add_argument("--head-sha-short", help="PR head SHA (short); derived from --head-sha if absent")
+    p.add_argument("--verified-claims", default=".verified-claims.json")
+    p.add_argument("--candidate-claims", default=".candidate-claims.json")
+    p.add_argument("--vale-findings", default=".vale-findings.json")
+    p.add_argument("--editorial-balance", default=".editorial-balance.json")
+    p.add_argument("--cross-sibling", default=".cross-sibling-discovery.json")
+    p.add_argument("--frontmatter", default=".frontmatter-validation.json")
+    p.add_argument("--hugo-build", default=".hugo-build.json")
+    p.add_argument("--readthrough", default=".readthrough-findings.json")
+    p.add_argument("--fetched-urls", default=".fetched-urls.json")
+    p.add_argument("--diff-files", help="Comma-separated changed-file list (overrides `gh pr diff --name-only`; for testing).")
+    p.add_argument("--pr-diff", default="", help="Unified diff of the PR (overrides `gh pr diff`; for testing).")
+    p.add_argument("--no-validate", action="store_true", help="Skip the self-check (local debugging).")
+    p.add_argument("--dry-run", action="store_true", help="Don't call gh; emit the draft only.")
+    p.add_argument("--surface", choices=("v2", "v3"), default="v2",
+                   help="v2 = single pinned-review draft (default); v3 = author card + reviewer brief + evidence base")
+    p.add_argument("--run-id", default="", help="Workflow run id, recorded in the v3 evidence base")
+    p.add_argument("--out-author", default="", help="v3 author-card path (default: .review-draft-author.md beside --out)")
+    p.add_argument("--out-brief", default="", help="v3 reviewer-brief path (default: .review-draft-brief.md beside --out)")
+    p.add_argument("--out-evidence", default="", help="v3 evidence-base path (default: .review-evidence-base.json beside --out)")
+    p.add_argument("--head-repo", default="", help="v3: head repo full name (owner/name) for ✏️ edit links")
+    p.add_argument("--head-branch", default="", help="v3: head branch for ✏️ edit links")
+    p.add_argument("--prior-high-water", type=int, default=0,
+                   help="v3: the previous review's REVIEW_STATE high_water; new ids start above it")
+    p.add_argument("--routed-team", default="", help="v3: approval-team display string for the reviewer brief")
+    p.add_argument("--approval-scope", default="lane", choices=("lane", "any-team", "any-human"),
+                   help="v3: route-pr.py's approval_scope — who may clear the approver gate")
+    args = p.parse_args()
+
+    out_path = Path(args.out)
+    timestamp = (args.timestamp or "").strip() or "unknown"
+
+    if args.surface == "v3":
+        out_dir = out_path.parent
+        author_path = Path(args.out_author) if args.out_author else out_dir / ".review-draft-author.md"
+        brief_path = Path(args.out_brief) if args.out_brief else out_dir / ".review-draft-brief.md"
+        evidence_path = Path(args.out_evidence) if args.out_evidence else out_dir / ".review-evidence-base.json"
+        author_draft, brief_draft, evidence_base = compose_v3(args)
+        problems = [] if args.no_validate else v3_self_check(author_draft, brief_draft, evidence_base)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        if problems:
+            # Same contract as the v2 CAUTION path: a visible in-band failure,
+            # never a silent-empty file.
+            banner = (
+                "> [!CAUTION]\n"
+                f"> compose-review.py --surface v3 self-check failed ({len(problems)} problem(s)): "
+                + "; ".join(problems[:8])
+                + ". Do not publish these drafts — assemble manually per ci.md §Fallback.\n\n"
+            )
+            author_draft = banner + author_draft
+            brief_draft = banner + brief_draft
+            print(f"::error::compose-review.py v3 self-check failed — {'; '.join(problems[:5])}", file=sys.stderr)
+        author_path.write_text(author_draft if author_draft.endswith("\n") else author_draft + "\n")
+        brief_path.write_text(brief_draft if brief_draft.endswith("\n") else brief_draft + "\n")
+        evidence_path.write_text(json.dumps(evidence_base, indent=2) + "\n")
+        print(f"compose-review: wrote {author_path}, {brief_path}, {evidence_path}")
+        return 0
+
+    draft = compose(args)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(draft if draft.endswith("\n") else draft + "\n")
+
+    if not args.no_validate:
+        violations = run_self_check(out_path, args)
+        if violations:
+            prepend_caution_banner(out_path, violations, timestamp)
+            summary = "; ".join(f"{v.get('rule_id', '?')}@{v.get('line_ref', '?')}" for v in violations[:5])
+            if len(violations) > 5:
+                summary += f"; (+{len(violations) - 5} more)"
+            print(f"::error::compose-review.py self-check failed — {len(violations)} violation(s): {summary}", file=sys.stderr)
+            print("compose-review: wrote a > [!CAUTION] banner into the draft; Opus will fall back to manual assembly.", file=sys.stderr)
+        else:
+            print("compose-review: draft self-check clean.", file=sys.stderr)
+
+    print(f"compose-review: wrote {out_path}", file=sys.stderr)
+    return 0
+
+
+def safe_main() -> int:
+    try:
+        return main()
+    except SystemExit:
+        raise
+    except BaseException as e:  # noqa: BLE001 — deliberately broad; never crash the pipeline
+        out_path = None
+        timestamp = "unknown"
+        argv = sys.argv
+        for i, a in enumerate(argv):
+            if a == "--out" and i + 1 < len(argv):
+                out_path = Path(argv[i + 1])
+            elif a.startswith("--out="):
+                out_path = Path(a.split("=", 1)[1])
+            elif a == "--timestamp" and i + 1 < len(argv):
+                timestamp = argv[i + 1]
+            elif a.startswith("--timestamp="):
+                timestamp = a.split("=", 1)[1]
+        if out_path is not None:
+            _write_fallback(out_path, f"uncaught exception: {type(e).__name__}: {e}", timestamp)
+        traceback.print_exc(file=sys.stderr)
+        return 0
+
+
+if __name__ == "__main__":
+    sys.exit(safe_main())

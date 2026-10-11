@@ -1,0 +1,23 @@
+<!--
+    Render a list of social media icons based on a mapping of accounts to handles.
+    e.g. { "social": { "github": "chrsmith", "twitter": "aChrisSmith" } }
+-->
+{{ if .social }}
+    {{ $socialIdentities := .social }}
+    {{ $platforms := slice "github" "linkedin" "twitter" "x" "bluesky" }}
+    {{ $platformUrlPrefixes := slice "https://github.com" "https://www.linkedin.com/in" "https://twitter.com" "https://x.com" "https://bsky.app/profile" }}
+
+    <ul class="list-none p-0 inline-flex items-center">
+        {{ range $idx, $platform := $platforms }}
+        {{ if (index $socialIdentities $platform) }}
+        <li class="{{ if lt $idx (sub (len $platforms) 1) }}mr-3{{ end }}">
+            <a data-track="{{ $platform | urlize }}" href="{{ index $platformUrlPrefixes $idx }}/{{ index $socialIdentities $platform }}">
+                {{ $brandName := $platform }}
+                {{ if eq $platform "twitter" }}{{ $brandName = "x" }}{{ end }}
+                {{ partial "icon.html" (dict "name" (printf "brand/%s" $brandName)) }}
+            </a>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+{{ end }}

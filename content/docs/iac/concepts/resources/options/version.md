@@ -1,0 +1,90 @@
+---
+title_tag: "version | Resource Options"
+meta_desc: The version resource option specifies a provider version to use when operating on a resource.
+title: "version"
+h1: "Resource option: version"
+menu:
+  iac:
+    identifier: resource-option-version
+    parent: options-concepts
+    weight: 220
+aliases:
+  - /docs/iac/concepts/options/version/
+  - /docs/intro/concepts/resources/options/version/
+  - /docs/concepts/options/version/
+---
+
+The `version` resource option specifies a provider version to use when operating on a resource. This version overrides the version information inferred from the current package. This option was built to be used directly by the Pulumi SDK. `version` should not be used directly during normal operations.
+
+{{< resource-option-scope "version" >}}
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+let vpc = new aws.ec2.Vpc("vpc", {}, { version: "2.10.0" });
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+vpc = ec2.Vpc("vpc", opts=ResourceOptions(version="2.10.0"))
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+vpc, _ := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{}, pulumi.Version("2.10.0"))
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(),
+    new CustomResourceOptions { Version = "2.10.0" });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var vpc = new com.pulumi.aws.ec2.Vpc("vpc",
+    com.pulumi.aws.ec2.VpcArgs.Empty,
+    CustomResourceOptions.builder()
+        .version("2.10.0")
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  vpc:
+    type: aws:ec2:Vpc
+    options:
+      version: "2.10.0"
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_vpc" "vpc" {
+  # ...
+
+  pulumi {
+    version = "2.10.0"
+  }
+}
+```
+
+This pins the version of the Pulumi provider plugin that operates on the resource. To pin the version of a Terraform provider itself, use the standard `required_providers` block instead.
+
+{{% /choosable %}}
+
+{{< /chooser >}}

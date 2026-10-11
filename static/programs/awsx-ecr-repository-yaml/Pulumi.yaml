@@ -1,0 +1,8 @@
+name: awsx-ecr-repository-yaml
+runtime: yaml
+description: An example that creates a container-image repository in Amazon Elastic Container Registry (ECR).
+resources:
+  repository:
+    type: awsx:ecr:Repository
+outputs:
+  url: ${repository.url}

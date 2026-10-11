@@ -1,0 +1,1261 @@
+{
+  "applied": false,
+  "displayName": "",
+  "name": "pulumi-best-practices-google-cloud",
+  "policies": [
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to have access logging enabled for audit trails",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "bucket-access-logging",
+      "remediationSteps": "## Fix: Enable Access Logging\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    logging: {\n        logBucket: \"my-logging-bucket\",  // Specify the bucket for access logs\n        logObjectPrefix: \"bucket-logs/\", // Optional prefix for log objects\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to use customer-managed Cloud KMS keys for encryption",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "bucket-customer-managed-kms",
+      "remediationSteps": "## Fix: Configure Customer-Managed KMS Key\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    encryption: {\n        defaultKmsKeyName: \"projects/my-project/locations/us/keyRings/my-keyring/cryptoKeys/my-key\",  // Specify customer-managed KMS key\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce least privilege access for Cloud Storage bucket IAM policies",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "bucket-iam-least-privilege",
+      "remediationSteps": "## Fix: Use Specific Least Privilege Roles\n\n```typescript\n// Instead of overly broad roles like storage.admin or storage.objectAdmin\n// Use specific roles based on actual needs:\n\n// For read-only access\nconst viewerBinding = new gcp.storage.BucketIAMBinding(\"viewer-binding\", {\n    bucket: bucket.name,\n    role: \"roles/storage.objectViewer\",  // Read-only access to objects\n    members: [\"user:viewer@example.com\"],\n});\n\n// For write-only access\nconst creatorBinding = new gcp.storage.BucketIAMBinding(\"creator-binding\", {\n    bucket: bucket.name,\n    role: \"roles/storage.objectCreator\",  // Write-only access (no read)\n    members: [\"serviceAccount:app@project.iam.gserviceaccount.com\"],\n});\n\n// Avoid these overly broad roles:\n// - roles/storage.admin\n// - roles/storage.objectAdmin\n// - roles/owner\n// - roles/editor\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to have multi-region replication for business continuity",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "7. High Availability",
+        "specification": "Deploy resources in redundant, fault-tolerant configurations to ensure service continuity.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "bucket-multi-region",
+      "remediationSteps": "## Fix: Configure Multi-Region Replication\n\n```typescript\n// Option 1: Use multi-region location\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",  // Multi-region location (US, EU, or ASIA)\n    // ... other config\n});\n\n// Option 2: Use dual-region location\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"NAM4\",  // Dual-region location\n    // ... other config\n});\n\n// Option 3: Use custom placement with multiple data locations\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    customPlacementConfig: {\n        dataLocations: [\"US-EAST1\", \"US-WEST1\"],  // Specify at least 2 regions\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to disallow public read access",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "bucket-no-public-read",
+      "remediationSteps": "## Fix: Enforce Public Access Prevention\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    publicAccessPrevention: \"enforced\",  // Prevent all public access\n    // ... other config\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Cloud Storage bucket versioning is enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "13. Data Backup and Recovery",
+        "specification": "Regularly back up critical data and systems, store backups securely, and test recovery procedures to ensure timely restoration after failures or disasters.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "bucket-versioning",
+      "remediationSteps": "Enable versioning on Cloud Storage buckets by setting versioning.enabled to true to protect against accidental deletion or modification.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst bucket = new gcp.storage.Bucket(\"versioned-bucket\", {\n    location: \"US\",\n    versioning: {\n        enabled: true,\n    },\n});\n```\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    versioning: {\n        enabled: true,\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "acceptableLoggingValues": {
+            "default": [
+              "CLOUD_LOGGING_ONLY",
+              "LEGACY"
+            ],
+            "description": "Acceptable values for build.options.logging",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns in exemptTriggers list",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptTriggers": {
+            "description": "List of trigger names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Build triggers to have secure logging configurations",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cloud-build-logging",
+      "remediationSteps": "## Fix: Configure Secure Logging\n\n```typescript\nconst trigger = new cloudbuild.Trigger(\"my-trigger\", {\n    build: {\n        logsBucket: \"gs://my-logs-bucket/build-logs\",  // Configure centralized logs bucket\n        options: {\n            logging: \"CLOUD_LOGGING_ONLY\",  // Use Cloud Logging for audit trails\n        },\n        // ... other config\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud CDN to use secure TLS to origin",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cloud-cdn-origin-tls",
+      "remediationSteps": "## Fix: Enable HTTPS Protocol for CDN Backend Service\n\n```typescript\nconst backendService = new gcp.compute.BackendService(\"cdn-backend\", {\n    enableCdn: true,\n    protocol: \"HTTPS\",  // Use HTTPS for secure communication to origin\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "maxAttempts": {
+            "description": "Maximum allowed retry attempts (default: 100)",
+            "type": "number"
+          },
+          "minAttempts": {
+            "description": "Minimum allowed retry attempts (default: 1)",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Tasks queues to have proper retry configuration for business continuity",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "9. Resource Availability",
+        "specification": "Define and enforce timeouts, quotas, and capacity limits to prevent resource exhaustion.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cloud-tasks-retry-configuration",
+      "remediationSteps": "## Fix: Configure Retry Policy with Max Attempts\n\n```typescript\nconst queue = new gcp.cloudtasks.Queue(\"my-queue\", {\n    retryConfig: {\n        maxAttempts: 10,  // Set reasonable max retry attempts\n        maxRetryDuration: \"3600s\",  // Set max retry duration (1 hour)\n        minBackoff: \"0.1s\",\n        maxBackoff: \"3600s\",\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt functions list for pattern matching",
+            "type": "boolean"
+          },
+          "descriptionPatterns": {
+            "description": "Required regex patterns that must appear in function descriptions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforceLabelsDocumentation": {
+            "default": true,
+            "description": "Require documentation-specific labels (default: true)",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFunctions": {
+            "description": "List of function names exempt from documentation requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minDescriptionLength": {
+            "description": "Minimum required description length in characters (default: 20)",
+            "type": "number"
+          },
+          "requiredLabels": {
+            "description": "List of required label keys for documentation (e.g., ['team', 'purpose', 'environment'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Functions to have adequate documentation",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "12. Documentation",
+        "specification": "Maintain up-to-date documentation of architectures, configurations, policies, and procedures to ensure clarity, consistency, and auditability.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cloudfunctions-documentation",
+      "remediationSteps": "## Fix: Add Function Documentation\n\n```typescript\nconst func = new gcp.cloudfunctions.Function(\"my-function\", {\n    description: \"Processes customer orders from Pub/Sub and stores results in BigQuery\",  // Add descriptive documentation\n    labels: {\n        purpose: \"order-processing\",  // Document function purpose\n        team: \"backend-team\",  // Document ownership\n        // ... other labels\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud SQL instances to have backup retention enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "13. Data Backup and Recovery",
+        "specification": "Regularly back up critical data and systems, store backups securely, and test recovery procedures to ensure timely restoration after failures or disasters.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cloudsql-backup",
+      "remediationSteps": "## Fix: Enable Backup Configuration\n\n```typescript\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-sql-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    settings: {\n        backupConfiguration: {\n            enabled: true,  // Enable backups\n            pointInTimeRecoveryEnabled: true,  // Enable PITR for PostgreSQL/MySQL\n        },\n        // ... other config\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Cloud SQL instances have regional high availability enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "7. High Availability",
+        "specification": "Deploy resources in redundant, fault-tolerant configurations to ensure service continuity.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cloudsql-high-availability",
+      "remediationSteps": "Enable regional high availability for Cloud SQL instances by setting availabilityType to 'REGIONAL'. This provides automatic failover and data replication across zones within a region.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst instance = new gcp.sql.DatabaseInstance(\"my-db-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    region: \"us-central1\",\n    settings: {\n        tier: \"db-f1-micro\",\n        availabilityType: \"REGIONAL\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Restrict public access for Cloud SQL instances",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cloudsql-private-ip",
+      "remediationSteps": "Disable public IP by setting ipv4Enabled to false and configure privateNetwork in ipConfiguration. Remove authorized networks that allow 0.0.0.0/0 access.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst instance = new gcp.sql.DatabaseInstance(\"my-db-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    region: \"us-central1\",\n    settings: {\n        tier: \"db-f1-micro\",\n        ipConfiguration: {\n            ipv4Enabled: false,\n            privateNetwork: \"projects/my-project/global/networks/my-vpc\",\n        },\n    },\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud SQL connections to use SSL/TLS encryption",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cloudsql-ssl",
+      "remediationSteps": "## Fix: Require SSL/TLS for All Connections\n\n```typescript\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-sql-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    settings: {\n        ipConfiguration: {\n            sslMode: \"ENCRYPTED_ONLY\",  // Require SSL/TLS for all connections\n            // ... other config\n        },\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Compute Engine instances to have encrypted attached disks",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "compute-instance-encrypted-attached-disk",
+      "remediationSteps": "## Fix: Encrypt Attached Disks with CMEK\n\n```typescript\nconst instance = new compute.Instance(\"my-instance\", {\n    attachedDisks: [{\n        source: myDisk.selfLink,\n        kmsKeySelfLink: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Use CMEK for attached disk encryption\n    }],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Compute Engine instances to have encrypted boot disks",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "compute-instance-encrypted-boot-disk",
+      "remediationSteps": "## Fix: Enable Boot Disk Encryption with CMEK\n\n```typescript\nconst instance = new compute.Instance(\"my-instance\", {\n    bootDisk: {\n        initializeParams: {\n            image: \"debian-cloud/debian-11\",\n        },\n        kmsKeySelfLink: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Use customer-managed encryption key\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Compute Engine instances are not publicly accessible",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "compute-no-public-ip",
+      "remediationSteps": "Remove accessConfigs from networkInterfaces to disable external IP assignment:\n\n```typescript\nnew gcp.compute.Instance(\"my-instance\", {\n  networkInterfaces: [{\n    network: \"my-vpc\",\n    subnetwork: \"my-subnet\",\n    // accessConfigs: [], // Remove or set to empty array\n  }],\n  canIpForward: false,\n});\n```\n\nUse Cloud NAT or load balancers for controlled external access.",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "environmentKey": {
+            "default": "environment",
+            "description": "Key name for environment label",
+            "type": "string"
+          },
+          "validEnvironments": {
+            "description": "List of valid environment values (default: ['development', 'staging', 'production'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require all labelable resources to have an environment label",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "5. Tagging",
+        "specification": "Enforce standardized resource tags for ownership, environment, and compliance tracking.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "environment-label",
+      "remediationSteps": "## Fix: Add Valid Environment Label\n\nAdd an environment label with a valid value (development, staging, or production) to your GCP resources:\n\n```typescript\nconst instance = new gcp.compute.Instance(\"my-instance\", {\n    labels: {\n        environment: \"production\",  // Required: valid environment label\n        // ... other labels\n    },\n    // ... other config\n});\n\n// For Cloud SQL instances, use userLabels within settings\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-database\", {\n    settings: {\n        userLabels: {\n            environment: \"staging\",  // Required: valid environment label\n        },\n        // ... other settings\n    },\n    // ... other config\n});\n\n// For GKE clusters, use resourceLabels\nconst cluster = new gcp.container.Cluster(\"my-cluster\", {\n    resourceLabels: {\n        environment: \"development\",  // Required: valid environment label\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedSources": {
+            "description": "List of source IP ranges (CIDR) allowed for HTTP traffic. If not specified, no HTTP traffic is allowed.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptTargets": {
+            "description": "List of target tags or service accounts exempt from HTTP restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require firewall rules to disallow inbound HTTP traffic from unauthorized sources",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "11. Networking",
+        "specification": "Only allow required inbound and outbound traffic through network security groups, firewalls, or ACLs.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "firewall-no-http-ingress",
+      "remediationSteps": "## Fix: Use HTTPS Instead of HTTP\n\n```typescript\nconst firewallRule = new gcp.compute.Firewall(\"allow-https\", {\n    network: network.id,\n    direction: \"INGRESS\",\n    allows: [{\n        protocol: \"tcp\",\n        ports: [\"443\"],  // Use HTTPS (port 443) instead of HTTP (port 80)\n    }],\n    sourceRanges: [\"0.0.0.0/0\"],\n    // ... other config\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedPublicRanges": {
+            "description": "List of public IP ranges (CIDR) that are specifically allowed for ingress (e.g., load balancer health checks, CDN origins)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptTargets": {
+            "description": "List of target tags or service accounts exempt from public ingress restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require firewall rules to disallow public internet ingress unless specifically authorized",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "11. Networking",
+        "specification": "Only allow required inbound and outbound traffic through network security groups, firewalls, or ACLs.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "firewall-no-public-ingress",
+      "remediationSteps": "## Fix: Use Private Network Ranges or Source Tags\n\n```typescript\nconst firewallRule = new gcp.compute.Firewall(\"allow-private-ingress\", {\n    network: network.id,\n    direction: \"INGRESS\",\n    allows: [{\n        protocol: \"tcp\",\n        ports: [\"443\"],\n    }],\n    sourceRanges: [\"10.0.0.0/8\", \"192.168.0.0/16\"],  // Use private ranges instead of 0.0.0.0/0\n    // Or use source tags for internal traffic control:\n    // sourceTags: [\"web-tier\"],\n    // ... other config\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce firewall rule restrictions for SSH and RDP access",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "11. Networking",
+        "specification": "Only allow required inbound and outbound traffic through network security groups, firewalls, or ACLs.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "firewall-ssh-rdp",
+      "remediationSteps": "## Fix: Restrict SSH/RDP Access to Specific Sources\n\n```typescript\nconst firewallRule = new gcp.compute.Firewall(\"allow-ssh-restricted\", {\n    network: network.id,\n    direction: \"INGRESS\",\n    allows: [{\n        protocol: \"tcp\",\n        ports: [\"22\"],\n    }],\n    sourceRanges: [\"10.0.0.0/8\", \"192.168.1.0/24\"],  // Restrict to specific IP ranges, not 0.0.0.0/0\n    targetTags: [\"ssh-access\"],\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce strict firewall rules with explicit allow/deny configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "11. Networking",
+        "specification": "Only allow required inbound and outbound traffic through network security groups, firewalls, or ACLs.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "firewall-strict",
+      "remediationSteps": "## Fix: Configure Explicit and Restrictive Firewall Rules\n\n```typescript\nconst firewallRule = new gcp.compute.Firewall(\"strict-firewall-rule\", {\n    network: network.id,\n    direction: \"INGRESS\",  // Explicitly specify direction\n    allows: [{\n        protocol: \"tcp\",\n        ports: [\"443\"],  // Specify explicit ports, not all ports\n    }],\n    sourceRanges: [\"10.0.0.0/24\"],  // Use restrictive source ranges for sensitive ports\n    targetTags: [\"web-servers\"],  // Specify explicit targets\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require GKE cluster API endpoints to be private",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "gke-private-endpoints",
+      "remediationSteps": "## Fix: Enable Private Cluster Configuration\n\n```typescript\nconst cluster = new gcp.container.Cluster(\"my-cluster\", {\n    privateClusterConfig: {\n        enablePrivateEndpoint: true,  // Restrict control plane access to private networks\n        enablePrivateNodes: true,      // Assign only private IPs to cluster nodes\n        masterIpv4CidrBlock: \"172.16.0.0/28\",  // CIDR block for the master\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require GKE clusters to have Application-layer Secrets Encryption enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "gke-secrets-encryption",
+      "remediationSteps": "## Fix: Enable Application-layer Secrets Encryption\n\n```typescript\nconst cluster = new gcp.container.Cluster(\"my-cluster\", {\n    databaseEncryption: {\n        state: \"ENCRYPTED\",  // Enable secrets encryption\n        keyName: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Specify KMS key\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "blockedRoles": {
+            "description": "List of IAM roles to block (default: ['roles/owner'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce least privilege access control by prohibiting overly broad roles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "iam-no-broad-roles",
+      "remediationSteps": "## Fix: Use Specific Least-Privilege Roles\n\n```typescript\nconst binding = new gcp.projects.IAMBinding(\"service-binding\", {\n    project: \"my-project\",\n    role: \"roles/storage.objectViewer\",  // Use specific roles instead of broad ones\n    members: [\n        \"serviceAccount:my-app@my-project.iam.gserviceaccount.com\",\n    ],\n    // Avoid overly broad roles like:\n    // - roles/owner (full project access)\n    // - roles/editor (write access to most resources)\n    // Use specific roles: roles/storage.objectViewer, roles/pubsub.publisher, etc.\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedAlgorithms": {
+            "description": "List of allowed cryptographic algorithms",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "requirePurpose": {
+            "description": "Require keys to have purpose explicitly specified (default: false)",
+            "type": "boolean"
+          },
+          "requireRotationPeriod": {
+            "description": "Require keys to have rotation period configured (default: false)",
+            "type": "boolean"
+          },
+          "requiredProtectionLevel": {
+            "description": "Required protection level (e.g., 'HSM' for hardware security modules)",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require proper Cloud KMS key creation and configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "14. Key Management & Rotation",
+        "specification": "Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "kms-key-configuration",
+      "remediationSteps": "## Fix: Configure KMS Key with Version Template\n\n```typescript\nconst cryptoKey = new gcp.kms.CryptoKey(\"my-crypto-key\", {\n    name: \"my-key\",\n    keyRing: keyRing.id,\n    versionTemplate: {\n        algorithm: \"GOOGLE_SYMMETRIC_ENCRYPTION\",  // Specify cryptographic algorithm\n        protectionLevel: \"HSM\",  // Set protection level (SOFTWARE, HSM, EXTERNAL, EXTERNAL_VPC)\n    },\n    rotationPeriod: \"7776000s\",  // Optional: Configure 90-day rotation period\n    purpose: \"ENCRYPT_DECRYPT\",  // Optional: Explicitly set key purpose\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "description": "Enable pattern matching for key names. When enabled, exemptKeys supports wildcards (*).",
+            "type": "boolean"
+          },
+          "allowSkipInitialVersion": {
+            "description": "Allow keys to skip initial version creation. When false, requires keys to have initial versions.",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptKeys": {
+            "description": "List of KMS key names to exempt from lifecycle management requirements. Supports wildcard patterns when allowPatternMatching is enabled.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maximumDestroyDuration": {
+            "description": "Maximum destroy scheduled duration in seconds. Keys should not have destruction periods longer than this.",
+            "type": "number"
+          },
+          "minimumDestroyDuration": {
+            "description": "Minimum destroy scheduled duration in seconds. Keys must have at least this duration before destruction.",
+            "type": "number"
+          },
+          "requireExplicitDestroyDuration": {
+            "description": "Require keys to have destroy scheduled duration explicitly configured. When false, allows GCP default (30 days).",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require proper Cloud KMS key deletion and lifecycle management",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "14. Key Management & Rotation",
+        "specification": "Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "kms-key-lifecycle",
+      "remediationSteps": "## Fix: Configure Key Lifecycle Management\n\n```typescript\nconst cryptoKey = new kms.CryptoKey(\"my-crypto-key\", {\n    name: \"my-key\",\n    keyRing: keyRing.id,\n    destroyScheduledDuration: \"2592000s\",  // Set 30-day scheduled destruction period\n    skipInitialVersionCreation: false,  // Create initial key version\n    versionTemplate: {\n        algorithm: \"GOOGLE_SYMMETRIC_ENCRYPTION\",\n        protectionLevel: \"SOFTWARE\",\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud KMS keys to have key rotation enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "14. Key Management & Rotation",
+        "specification": "Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "kms-key-rotation",
+      "remediationSteps": "## Fix: Enable Automatic Key Rotation\n\n```typescript\nconst cryptoKey = new kms.CryptoKey(\"my-crypto-key\", {\n    name: \"my-key\",\n    keyRing: keyRing.id,\n    rotationPeriod: \"7776000s\",  // Enable rotation every 90 days\n    versionTemplate: {\n        algorithm: \"GOOGLE_SYMMETRIC_ENCRYPTION\",\n        protectionLevel: \"SOFTWARE\",\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptLoadBalancerTypes": {
+            "description": "List of load balancer types or protocols exempt from health check requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Load Balancers to enable health checks for monitoring backend instance health",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "7. High Availability",
+        "specification": "Deploy resources in redundant, fault-tolerant configurations to ensure service continuity.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "load-balancer-health-checks",
+      "remediationSteps": "## Fix: Configure Health Checks for Backend Service\n\n```typescript\n// Create a health check\nconst healthCheck = new gcp.compute.HealthCheck(\"backend-health-check\", {\n    httpHealthCheck: {\n        port: 80,\n        requestPath: \"/health\",\n    },\n    checkIntervalSec: 10,\n    timeoutSec: 5,\n});\n\n// Attach health check to backend service\nconst backendService = new gcp.compute.BackendService(\"my-backend\", {\n    healthChecks: [healthCheck.id],  // Configure health checks for monitoring\n    backends: [/* ... */],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enable Load Balancer logging for monitoring",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "load-balancer-logging",
+      "remediationSteps": "Enable logging on backend services by configuring `logConfig.enable: true` and set `logConfig.sampleRate` (1.0 for full logging, lower values for sampling). Ensure logs are retained in Cloud Logging for security analysis and troubleshooting.\n\n**Pulumi TypeScript Example:**\n\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\n// For global backend service\nconst backendService = new gcp.compute.BackendService(\"my-backend\", {\n    logConfig: {\n        enable: true,\n        sampleRate: 1.0  // 1.0 = 100% logging, 0.5 = 50% sampling\n    },\n    // ... other configuration\n});\n\n// For regional backend service\nconst regionBackendService = new gcp.compute.RegionBackendService(\"my-region-backend\", {\n    logConfig: {\n        enable: true,\n        sampleRate: 1.0\n    },\n    // ... other configuration\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptLoadBalancerTypes": {
+            "description": "List of load balancer types exempt from multi-zone requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumZones": {
+            "description": "Minimum number of zones required for backend distribution (default: 2)",
+            "minimum": 2,
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Load Balancers to be configured across multiple zones for high availability",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "7. High Availability",
+        "specification": "Deploy resources in redundant, fault-tolerant configurations to ensure service continuity.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "load-balancer-multi-zone",
+      "remediationSteps": "## Fix: Configure Backends Across Multiple Zones\n\n```typescript\n// Create instance groups in multiple zones\nconst instanceGroup1 = new gcp.compute.InstanceGroup(\"backend-zone-a\", {\n    zone: \"us-central1-a\",\n    instances: [/* ... */],\n});\n\nconst instanceGroup2 = new gcp.compute.InstanceGroup(\"backend-zone-b\", {\n    zone: \"us-central1-b\",\n    instances: [/* ... */],\n});\n\n// Configure backend service with multi-zone backends\nconst backendService = new gcp.compute.BackendService(\"multi-zone-backend\", {\n    backends: [\n        { group: instanceGroup1.id },  // Backend in zone A\n        { group: instanceGroup2.id },  // Backend in zone B for high availability\n    ],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Load Balancer uses TLS/HTTPS listeners only",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "load-balancer-tls",
+      "remediationSteps": "Configure forwarding rules to use port 443 for HTTPS traffic. Use `TargetHttpsProxy` instead of `TargetHttpProxy`. For HTTP listeners, ensure they redirect to HTTPS via URL map configuration. Remove standalone HTTP listeners without HTTPS redirection.\n\n**Pulumi TypeScript Example:**\n\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\n// Create SSL certificate (or use existing)\nconst sslCert = new gcp.compute.ManagedSslCertificate(\"my-cert\", {\n    managed: {\n        domains: [\"example.com\"]\n    }\n});\n\n// Create HTTPS target proxy\nconst httpsProxy = new gcp.compute.TargetHttpsProxy(\"https-proxy\", {\n    urlMap: urlMap.id,\n    sslCertificates: [sslCert.id]\n});\n\n// Create forwarding rule on port 443\nconst httpsForwardingRule = new gcp.compute.GlobalForwardingRule(\"https-rule\", {\n    target: httpsProxy.id,\n    portRange: \"443\",\n    ipProtocol: \"TCP\",\n    loadBalancingScheme: \"EXTERNAL\"\n});\n\n// Optional: HTTP to HTTPS redirect\nconst httpProxy = new gcp.compute.TargetHttpProxy(\"http-proxy\", {\n    urlMap: redirectUrlMap.id  // URL map configured for redirect\n});\n\nconst httpForwardingRule = new gcp.compute.GlobalForwardingRule(\"http-rule\", {\n    target: httpProxy.id,\n    portRange: \"80\",\n    ipProtocol: \"TCP\",\n    loadBalancingScheme: \"EXTERNAL\"\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "maxDeliveryAttempts": {
+            "description": "Maximum allowed delivery attempts before moving to dead letter queue (default: 100)",
+            "type": "number"
+          },
+          "minDeliveryAttempts": {
+            "description": "Minimum allowed delivery attempts before moving to dead letter queue (default: 5)",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Pub/Sub subscriptions to have dead letter queue configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "8. Require DLQ",
+        "specification": "Ensure all asynchronous messaging systems are configured with a dead-letter queue to handle failures.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "pubsub-dead-letter-queue",
+      "remediationSteps": "## Fix: Configure Dead Letter Queue\n\n```typescript\nconst deadLetterTopic = new gcp.pubsub.Topic(\"dead-letter-topic\", {});\n\nconst subscription = new gcp.pubsub.Subscription(\"my-subscription\", {\n    topic: topic.name,\n    deadLetterPolicy: {\n        deadLetterTopic: deadLetterTopic.id,  // Specify dead letter topic\n        maxDeliveryAttempts: 5,  // Set max delivery attempts before moving to DLQ\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedRoles": {
+            "description": "List of allowed IAM roles for Pub/Sub topics. If specified, only these roles are permitted.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "prohibitedMembers": {
+            "description": "List of prohibited member patterns (default: allUsers, allAuthenticatedUsers)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "prohibitedRoles": {
+            "description": "List of prohibited IAM roles (default: roles/pubsub.admin, roles/owner, roles/editor)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce least privilege IAM policies for Pub/Sub topics",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "pubsub-topic-iam-least-privilege",
+      "remediationSteps": "## Fix: Use Least Privilege IAM Roles\n\n```typescript\nconst topicIamBinding = new gcp.pubsub.TopicIAMBinding(\"topic-publisher-binding\", {\n    topic: topic.id,\n    role: \"roles/pubsub.publisher\",  // Use specific role instead of admin/owner/editor\n    members: [\n        \"serviceAccount:app-service@project.iam.gserviceaccount.com\",  // Use specific service accounts instead of allUsers\n    ],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt resources list",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptResources": {
+            "description": "List of resource names exempt from labeling requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "invalidValues": {
+            "description": "List of invalid placeholder values for labels",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "labelPatterns": {
+            "description": "Regex patterns for validating label values (e.g., { environment: '^(dev|staging|prod)$' })",
+            "type": "object"
+          },
+          "requiredLabels": {
+            "description": "List of required label keys (default: ['environment', 'team', 'owner'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require all GCP resources to have proper labeling for change tracking",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "5. Tagging",
+        "specification": "Enforce standardized resource tags for ownership, environment, and compliance tracking.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "resource-labeling",
+      "remediationSteps": "## Fix: Add Required Labels for Change Tracking\n\nAdd the required labels (environment, team, owner) to your GCP resources:\n\n```typescript\nconst instance = new gcp.compute.Instance(\"my-instance\", {\n    labels: {\n        environment: \"production\",  // Required: environment label\n        team: \"platform\",           // Required: team label\n        owner: \"john-doe\",          // Required: owner label\n        // ... other labels\n    },\n    // ... other config\n});\n\n// For Cloud SQL instances, use userLabels within settings\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-database\", {\n    settings: {\n        userLabels: {\n            environment: \"production\",  // Required: environment label\n            team: \"data\",               // Required: team label\n            owner: \"jane-smith\",        // Required: owner label\n        },\n        // ... other settings\n    },\n    // ... other config\n});\n\n// For GKE clusters, use resourceLabels\nconst cluster = new gcp.container.Cluster(\"my-cluster\", {\n    resourceLabels: {\n        environment: \"production\",  // Required: environment label\n        team: \"infrastructure\",     // Required: team label\n        owner: \"ops-team\",          // Required: owner label\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    }
+  ],
+  "version": 5,
+  "versionTag": "1.1.1"
+}

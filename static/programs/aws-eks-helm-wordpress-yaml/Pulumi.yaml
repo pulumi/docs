@@ -1,0 +1,22 @@
+name: aws-eks-helm-wordpress-yaml
+runtime: yaml
+description: An example that deploys a WordPress Helm chart to an EKS cluster.
+resources:
+  eks-provider:
+    type: pulumi:providers:kubernetes
+    properties:
+      kubeconfig: ${cluster.kubeconfigJson}
+  cluster:
+    type: eks:Cluster
+  wordpress:
+    type: kubernetes:helm.sh/v3:Release
+    properties:
+      repositoryOpts:
+        repo: https://charts.bitnami.com/bitnami
+      chart: wordpress
+      values:
+        wordpressBlogName: My Cool Kubernetes Blog!
+    options:
+      provider: ${eks-provider}
+outputs:
+  kubeconfig: ${cluster.kubeconfig}

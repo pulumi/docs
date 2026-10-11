@@ -1,0 +1,10 @@
+name: aws-import-export-pulumi-config-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that retrieves and exports a Pulumi config value
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python

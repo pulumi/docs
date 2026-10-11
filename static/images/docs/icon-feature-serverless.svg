@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="115px" viewBox="0 0 125 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/icon-feature-serverless</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-21.9%" y="-55.3%" width="143.8%" height="210.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-150.0%" y="-150.0%" width="400.0%" height="400.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-45.7%" y="-55.3%" width="191.3%" height="210.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-61.8%" y="-55.3%" width="223.5%" height="210.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-19.4%" y="-55.3%" width="138.9%" height="210.5%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-150.0%" y="-150.0%" width="400.0%" height="400.0%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-17.5%" y="-55.3%" width="135.0%" height="210.5%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-150.0%" y="-150.0%" width="400.0%" height="400.0%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-95.5%" y="-55.3%" width="290.9%" height="210.5%" filterUnits="objectBoundingBox" id="filter-9">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-300.0%" y="-11.4%" width="700.0%" height="122.8%" filterUnits="objectBoundingBox" id="filter-10">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="icons/icon-feature-serverless" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(24.000000, 19.000000)">
+            <g id="Group-5" transform="translate(0.000000, 4.000000)">
+                <path d="M34.9113424,0 L76.7120606,0 C77.4203199,0 78,0.589655172 78,1.31034483 L78,17.6896552 C78,18.4103448 77.4203199,19 76.7120606,19 L30,19" id="Stroke-3" stroke="#EE975C" stroke-width="3" stroke-linecap="round" filter="url(#filter-1)"></path>
+                <path d="M72,10 C72,11.6568885 70.6568622,13 69.0000588,13 C67.3431378,13 66,11.6568885 66,10 C66,8.34311149 67.3431378,7 69.0000588,7 C70.6568622,7 72,8.34311149 72,10 Z" id="Stroke-5" fill="#EE975C" filter="url(#filter-2)"></path>
+                <path d="M18.0794526,19 L1.29718511,19 C0.583841398,19 0,18.4103448 0,17.6896552 L0,1.31034483 C0,0.589655172 0.583841398,0 1.29718511,0 L23,0" id="Stroke-1" stroke="#EE975C" stroke-width="3" stroke-linecap="round" filter="url(#filter-3)"></path>
+                <path d="M34.9113424,0 L76.7120606,0 C77.4203199,0 78,0.589655172 78,1.31034483 L78,17.6896552 C78,18.4103448 77.4203199,19 76.7120606,19 L30,19" id="Stroke-3" stroke="#EE975C" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M72,10 C72,11.6568885 70.6568622,13 69.0000588,13 C67.3431378,13 66,11.6568885 66,10 C66,8.34311149 67.3431378,7 69.0000588,7 C70.6568622,7 72,8.34311149 72,10 Z" id="Stroke-5" fill="#EE975C"></path>
+                <path d="M18.0794526,19 L1.29718511,19 C0.583841398,19 0,18.4103448 0,17.6896552 L0,1.31034483 C0,0.589655172 0.583841398,0 1.29718511,0 L23,0" id="Stroke-1" stroke="#EE975C" stroke-width="3" stroke-linecap="round"></path>
+            </g>
+            <g id="Group-8" transform="translate(0.000000, 29.000000)">
+                <path d="M12.1145682,19 L1.28083681,19 C0.576376566,19 0,18.4103448 0,17.6896552 L0,1.31034483 C0,0.589655172 0.576376566,0 1.28083681,0 L17,0" id="Stroke-7" stroke="#EE975C" stroke-width="3" stroke-linecap="round" filter="url(#filter-4)"></path>
+                <path d="M28.9937605,0 L76.7065868,0 C77.4179641,0 78,0.589655172 78,1.31034483 L78,17.6896552 C78,18.4103448 77.4179641,19 76.7065868,19 L24,19" id="Stroke-9" stroke="#EE975C" stroke-width="3" stroke-linecap="round" filter="url(#filter-5)"></path>
+                <path d="M72,10 C72,11.6568885 70.6568622,13 69.0000588,13 C67.3431378,13 66,11.6568885 66,10 C66,8.34311149 67.3431378,7 69.0000588,7 C70.6568622,7 72,8.34311149 72,10 Z" id="Stroke-11" fill="#EE975C" filter="url(#filter-6)"></path>
+                <path d="M12.1145682,19 L1.28083681,19 C0.576376566,19 0,18.4103448 0,17.6896552 L0,1.31034483 C0,0.589655172 0.576376566,0 1.28083681,0 L17,0" id="Stroke-7" stroke="#EE975C" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M28.9937605,0 L76.7065868,0 C77.4179641,0 78,0.589655172 78,1.31034483 L78,17.6896552 C78,18.4103448 77.4179641,19 76.7065868,19 L24,19" id="Stroke-9" stroke="#EE975C" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M72,10 C72,11.6568885 70.6568622,13 69.0000588,13 C67.3431378,13 66,11.6568885 66,10 C66,8.34311149 67.3431378,7 69.0000588,7 C70.6568622,7 72,8.34311149 72,10 Z" id="Stroke-11" fill="#EE975C"></path>
+            </g>
+            <g id="Group-17" transform="translate(0.000000, 54.000000)">
+                <path d="M22.8828655,0 L76.6979025,0 C77.4140561,0 78,0.589655172 78,1.31034483 L78,17.6896552 C78,18.4103448 77.4140561,19 76.6979025,19 L18,19" id="Stroke-15" stroke="#EE975C" stroke-width="3" stroke-linecap="round" filter="url(#filter-7)"></path>
+                <path d="M72,10 C72,11.6568885 70.6568885,13 69,13 C67.3432291,13 66,11.6568885 66,10 C66,8.34311149 67.3432291,7 69,7 C70.6568885,7 72,8.34311149 72,10 Z" id="Stroke-17" fill="#EE975C" filter="url(#filter-8)"></path>
+                <path d="M5.9636568,19 L1.32771191,19 C0.597359717,19 0,18.4103448 0,17.6896552 L0,1.31034483 C0,0.589655172 0.597359717,0 1.32771191,0 L11,0" id="Stroke-13" stroke="#EE975C" stroke-width="3" stroke-linecap="round" filter="url(#filter-9)"></path>
+                <path d="M22.8828655,0 L76.6979025,0 C77.4140561,0 78,0.589655172 78,1.31034483 L78,17.6896552 C78,18.4103448 77.4140561,19 76.6979025,19 L18,19" id="Stroke-15" stroke="#EE975C" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M72,10 C72,11.6568885 70.6568885,13 69,13 C67.3432291,13 66,11.6568885 66,10 C66,8.34311149 67.3432291,7 69,7 C70.6568885,7 72,8.34311149 72,10 Z" id="Stroke-17" fill="#EE975C"></path>
+                <path d="M5.9636568,19 L1.32771191,19 C0.597359717,19 0,18.4103448 0,17.6896552 L0,1.31034483 C0,0.589655172 0.597359717,0 1.32771191,0 L11,0" id="Stroke-13" stroke="#EE975C" stroke-width="3" stroke-linecap="round"></path>
+            </g>
+            <rect id="Rectangle" fill="#EE975C" filter="url(#filter-10)" transform="translate(20.595215, 39.011719) rotate(13.000000) translate(-20.595215, -39.011719) " x="19.0952148" y="-0.48828125" width="3" height="79"></rect>
+            <rect id="Rectangle" fill="#EE975C" transform="translate(20.595215, 38.825044) rotate(13.000000) translate(-20.595215, -38.825044) " x="19.0952148" y="-0.674955859" width="3" height="79" rx="1.5"></rect>
+        </g>
+    </g>
+</svg>

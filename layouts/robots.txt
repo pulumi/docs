@@ -1,0 +1,25 @@
+User-agent: *
+# Explicitly opt in to AI training, search indexing, and AI grounding/RAG use.
+# Non-standard directive proposed by Cloudflare; honored by crawlers that support it.
+# Must sit inside the User-agent group with no preceding blank line (a blank
+# line ends a record per RFC 9309).
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+{{- if ne hugo.Environment "production" }}
+Disallow: *
+{{ end }}
+
+# Disallow certain pages that are perceived as soft-404s.
+Disallow: /docs/search/$
+
+# Disallow azure-native-v2. See https://github.com/pulumi/pulumi-azure-native/issues/3420 for details.
+Disallow: /registry/packages/azure-native-v2
+
+Sitemap: https://www.pulumi.com/sitemap-index.xml
+
+Sitemap: https://www.pulumi.com/dev/sitemap-index.xml
+
+Sitemap: https://www.pulumi.com/registry/sitemap.xml
+
+# Dev Center, for agents:
+#   llms.txt index:    https://www.pulumi.com/dev/llms.txt
+#   Per-page markdown: append `.md` to any /dev detail URL

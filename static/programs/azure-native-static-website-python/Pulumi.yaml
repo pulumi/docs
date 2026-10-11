@@ -1,0 +1,11 @@
+name: azure-native-static-website-python
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+description: An example that deploys all of the resources for a static website on Azure.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-python

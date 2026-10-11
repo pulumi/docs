@@ -1,0 +1,12 @@
+name: awsx-vpc-azs-yaml
+runtime: yaml
+description: An example that creates a new VPC and configuring availability zones.
+
+resources:
+  vpc:
+    type: awsx:ec2:Vpc
+    properties:
+      numberOfAvailabilityZones: 4
+
+outputs:
+  vpcId: ${vpc.vpcId}

@@ -1,0 +1,96 @@
+@import "mixins";
+
+pulumi-tooltip {
+    @apply relative;
+
+    // Use the currently applied line height and font size.
+    line-height: 1em;
+    font-size: 1em;
+
+    .tooltip-content {
+        @apply absolute block opacity-0 pointer-events-none w-64 max-w-[calc(100vw-2rem)] py-2 mb-2 px-3 bg-service-black rounded shadow font-body text-center text-xs text-white z-50;
+        @include transition();
+
+        // The bubble renders inside whatever element triggered it, so it inherits
+        // that element's typography. Triggers are no longer just body text — a
+        // heading hands down tight leading and negative tracking, an overline
+        // hands down uppercase — and any of those make the bubble's own copy
+        // unreadable. State the bubble's type outright instead of trusting the
+        // context it lands in.
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-transform: none;
+        font-weight: 400;
+        font-style: normal;
+
+        // Position the tooltip above the target, centered.
+        bottom: 108%;
+        transform: translateX(-50%);
+        left: 50%;
+
+        // Draw the caret below the tooltip.
+        &:after {
+            @apply block bg-service-black -mb-3 mt-1 h-2 w-2 text-center mx-auto;
+            transform: rotate(45deg);
+            content: " ";
+        }
+    }
+
+    .tooltip-target {
+
+        &.active {
+            + .tooltip-content {
+                opacity: 0.98;
+                bottom: 100%;
+            }
+        }
+    }
+
+    // Left placement (opt in with position="left"): bubble to the left of the
+    // target, vertically centered, caret on its right edge. For triggers where an
+    // above-centered tooltip would overflow (e.g. the code copy button).
+    &[position="left"] {
+        .tooltip-content {
+            top: 50%;
+            bottom: auto;
+            left: auto;
+            right: 100%;
+            margin: 0 8px 0 0;
+            transform: translateY(-50%);
+
+            &:after {
+                @apply absolute m-0;
+                top: 50%;
+                left: auto;
+                right: -3px;
+                transform: translateY(-50%) rotate(45deg);
+            }
+        }
+
+        // Cancel the base active rule's `bottom: 100%` so it stays left when shown.
+        .tooltip-target.active + .tooltip-content {
+            bottom: auto;
+        }
+    }
+
+    // Wide placement (opt in with size="lg"): a roomier, left-aligned bubble for
+    // multi-line content — e.g. the label/value rate lists on the /pricing/ cards,
+    // which the default 12rem centered bubble wraps into an unreadable stack.
+    &[size="lg"] {
+        .tooltip-content {
+            @apply w-72 text-left leading-relaxed;
+        }
+    }
+
+    // To prevent a flash of unstyled/understyled slotted content, we hide that content until
+    // it's rendered as a child of the tooltip component.
+    [slot="content"] {
+        @apply hidden;
+    }
+
+    .tooltip-content {
+        [slot="content"] {
+            display: unset;
+        }
+    }
+}

@@ -1,0 +1,203 @@
+.note {
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    padding: 10px 12px 12px 12px;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 12px 0;
+    position: relative;
+
+    p {
+        margin-bottom: 16px;
+        line-height: 1.6;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    :last-child {
+        margin-bottom: 0;
+    }
+    
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    div.icon-and-line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+
+        svg.ph-icon, i {
+            font-size: 15px;
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+    }
+
+    div.line {
+        display: flex;
+        width: 2px;
+        border-radius: 100px;
+        margin-top: 4px;
+        position: absolute;
+        top: 34px;
+        height: calc(100% - 46px);
+    }
+
+    div.content {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 14px;
+        color: #131314;
+        flex-direction: row;
+        min-width: 0;
+    }
+
+    &.note-large div.content {
+        font-size: 17px;
+        line-height: 1.65;
+
+        p {
+            line-height: 1.65;
+        }
+    }
+
+    &.note-info {
+        background: var(--color-blue-background);
+
+        a,
+        i {
+            color: var(--color-blue-primary);
+        }
+
+        div.icon-and-line svg.ph-icon {
+            color: var(--color-blue-primary);
+        }
+
+        div.line {
+            background-color: var(--color-blue-muted);
+        }
+
+        :not(pre) > code {
+            background-color: var(--color-blue-muted);
+        }
+    }
+
+    &.note-tip {
+        background: var(--color-green-background);
+
+        a,
+        i {
+            color: var(--color-green-primary);
+        }
+
+        div.icon-and-line svg.ph-icon {
+            color: var(--color-green-primary);
+        }
+
+        div.line {
+            background-color: var(--color-green-muted);
+        }
+
+        :not(pre) > code {
+            background-color: var(--color-green-muted);
+        }
+    }
+
+    &.note-warning {
+        background: var(--color-orange-background);
+
+        a,
+        i {
+            color: var(--color-orange-primary);
+        }
+
+        div.icon-and-line svg.ph-icon {
+            color: var(--color-orange-primary);
+        }
+
+        div.line {
+            background-color: var(--color-orange-muted);
+        }
+
+        :not(pre) > code {
+            background: var(--color-orange-muted);
+        }
+    }
+
+    // Pulumi Cloud availability. Named for the semantic, like the variants above
+    // — not `.note-violet` — even though violet is the only hue it will ever use.
+    &.note-cloud {
+        background: var(--color-violet-background);
+
+        a,
+        i {
+            color: var(--color-violet-primary);
+        }
+
+        div.icon-and-line svg.ph-icon {
+            color: var(--color-violet-primary);
+        }
+
+        div.line {
+            background-color: var(--color-violet-muted);
+        }
+
+        :not(pre) > code {
+            background: var(--color-violet-muted);
+        }
+    }
+
+}
+
+section.docs-content div.note {
+    // Tighten the last content block (scoped to the content's direct children so it
+    // doesn't reach deeply-nested last children like the copy button).
+    div.content > :last-child {
+        padding-bottom: 0;
+    }
+
+    div.content p {
+        font-size: inherit; // 14px normally, 17px for .note-large; overrides the 16px docs-content p rule
+    }
+}
+
+blockquote.pullquote {
+    // Sizes come from the shared body scale (shared/_utilities.scss) rather than
+    // hand-set pixels, and the color is inherited from the body.
+    @apply body-xl font-normal not-italic my-10;
+    // The base `blockquote` rule in main.scss gives every quote a rounded violet
+    // rule. A pull quote is a break in the prose, not a nested aside, so it sits
+    // flush with the body copy instead.
+    @apply rounded-none border-l-0 p-0;
+    max-width: none;
+
+    p {
+        margin: 0;
+    }
+
+    cite {
+        @apply font-overline-sm block text-gray-primary mt-4;
+        font-style: normal;
+    }
+}
+
+// The `statement` variant of the same shortcode: an emphasis line in the
+// author's own voice. It takes the pull quote's frame and scale but is set
+// upright and bold, because it is a claim being made rather than a quotation —
+// which is also why the shortcode renders it as a <p>, not a <blockquote>.
+p.pullquote-statement {
+    // tracking-tighter is the -0.05em the headings in shared/_base.scss use:
+    // this is display type, so it takes the display tracking rather than the
+    // body default it would otherwise inherit from body-2xl.
+    @apply body-2xl font-semibold not-italic tracking-tighter my-12 pl-6;
+    border-left: 4px solid var(--color-violet-primary, #9077f3);
+}

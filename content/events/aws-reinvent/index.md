@@ -1,0 +1,53 @@
+---
+# Name of the event, <= 60 characters
+title: AWS re:Invent 2025
+meta_desc: "Visit Pulumi booth #1127 at AWS re:Invent"
+meta_image:
+
+# A featured event will display first in the list.
+featured: false
+
+# Events with unlisted as true will not be shown on the event list
+unlisted: false
+
+# Gated events will have a registration form and the user will need
+# to fill out the form before viewing.
+gated: false
+
+block_external_search_index: true
+
+event_url: /reinvent/
+
+# The event type (workshop, webinar, talk).
+event_type: event
+
+# URL for embedding a URL for ungated events.
+youtube_url:
+
+# Sortable date. The datetime Hugo will use to sort the events in date order.
+sortable_date: 2025-12-01T09:00:00-00:00
+
+# Duration of the event.
+duration: 4 days
+
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: Las Vegas, NV
+# Description of the event.
+description: "Visit Pulumi booth #1127 at AWS re:Invent, where pioneers gather from across the globe to hear the latest AWS innovations, peer-to-peer learning and invaluable networking opportunities."
+
+# The event presenters
+presenters:
+
+# case-sensitive
+tags:
+    level: # Beginner, Intermediate, Advanced
+    topics: []
+    languages: []
+    clouds: ["AWS"]
+
+# The right hand side form section.
+form:
+    # HubSpot form id.
+    hubspot_form_id:
+    salesforce_campaign_id:
+---

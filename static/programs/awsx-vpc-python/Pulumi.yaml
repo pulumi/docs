@@ -1,0 +1,6 @@
+name: awsx-vpc-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that creates a new VPC using the default settings.

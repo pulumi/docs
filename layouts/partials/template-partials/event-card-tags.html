@@ -1,0 +1,15 @@
+{{/*
+    Event card tag chips. Context: the event page (.). Renders a compact set of
+    .badge chips (level + clouds + languages); topics are omitted to keep the card
+    footer tidy. Full tag detail lives on the event page and in the meta image.
+
+    The wrapper div always renders (even with no tags) so the card footer's
+    justify-between flex keeps the CTA right-aligned.
+*/}}
+<div class="flex flex-wrap items-center gap-1.5">
+    {{ with .Params.tags }}
+        {{ with .level }}{{ partial "badge.html" (dict "text" . "variant" "secondary") }}{{ end }}
+        {{ range .clouds }}{{ partial "badge.html" (dict "text" . "variant" "secondary") }}{{ end }}
+        {{ range .languages }}{{ partial "badge.html" (dict "text" . "variant" "secondary") }}{{ end }}
+    {{ end }}
+</div>

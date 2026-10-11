@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="115px" viewBox="0 0 125 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/icon-feature-data</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-27.6%" y="-27.6%" width="155.3%" height="155.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-43.8%" y="-43.8%" width="187.5%" height="187.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-43.8%" y="-43.8%" width="187.5%" height="187.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-43.8%" y="-43.8%" width="187.5%" height="187.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-58.2%" y="-35.5%" width="216.5%" height="171.1%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-350.0%" y="-45.7%" width="800.0%" height="191.3%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-58.2%" y="-35.5%" width="216.5%" height="171.1%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="icons/icon-feature-data" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(10.000000, 12.000000)" id="Group" stroke="#EE975C" stroke-width="3">
+            <g>
+                <path d="M54,42 C64.4934102,42 73,33.4934102 73,23 C73,12.5065898 64.4934102,4 54,4 C43.5065898,4 35,12.5065898 35,23 C35,29.9472165 38.7285833,36.0235757 44.2937776,39.3371053" id="Oval-2" stroke-linecap="round" filter="url(#filter-1)" transform="translate(54.000000, 23.000000) rotate(13.000000) translate(-54.000000, -23.000000) "></path>
+                <path d="M17,78 C23.627417,78 29,72.627417 29,66 C29,59.372583 23.627417,54 17,54 C10.372583,54 5,59.372583 5,66 C5,70.3877157 7.3548947,74.2254162 10.8697542,76.3181718" id="Oval-2" stroke-linecap="round" filter="url(#filter-2)" transform="translate(17.000000, 66.000000) rotate(-150.000000) translate(-17.000000, -66.000000) "></path>
+                <path d="M54.3923048,89.3923048 C61.0197218,89.3923048 66.3923048,84.0197218 66.3923048,77.3923048 C66.3923048,70.7648878 61.0197218,65.3923048 54.3923048,65.3923048 C47.7648878,65.3923048 42.3923048,70.7648878 42.3923048,77.3923048 C42.3923048,81.7800205 44.7471995,85.617721 48.2620591,87.7104766" id="Oval-2" stroke-linecap="round" filter="url(#filter-3)" transform="translate(54.392305, 77.392305) rotate(-259.000000) translate(-54.392305, -77.392305) "></path>
+                <path d="M90.553294,78.553294 C97.180711,78.553294 102.553294,73.180711 102.553294,66.553294 C102.553294,59.925877 97.180711,54.553294 90.553294,54.553294 C83.925877,54.553294 78.553294,59.925877 78.553294,66.553294 C78.553294,70.9410097 80.9081887,74.7787102 84.4230483,76.8714658" id="Oval-2" stroke-linecap="round" filter="url(#filter-4)" transform="translate(90.553294, 66.553294) rotate(-82.000000) translate(-90.553294, -66.553294) "></path>
+                <polyline id="Line-4" stroke-linecap="round" stroke-linejoin="round" filter="url(#filter-5)" points="35.5 22.5 17.4722436 22.5 17.4722436 52.0395335"></polyline>
+                <path d="M54.5,43.4093634 L54.5,65.5208243" id="Line-5" stroke-linecap="square" filter="url(#filter-6)"></path>
+                <polyline id="Line-4" stroke-linecap="round" stroke-linejoin="round" filter="url(#filter-7)" transform="translate(82.013878, 37.769767) scale(-1, 1) translate(-82.013878, -37.769767) " points="91.0277564 23 73 23 73 29 73 35 73 52.5395335"></polyline>
+            </g>
+            <g>
+                <path d="M54,42 C64.4934102,42 73,33.4934102 73,23 C73,12.5065898 64.4934102,4 54,4 C43.5065898,4 35,12.5065898 35,23 C35,29.9472165 38.7285833,36.0235757 44.2937776,39.3371053" id="Oval-2" stroke-linecap="round" transform="translate(54.000000, 23.000000) rotate(13.000000) translate(-54.000000, -23.000000) "></path>
+                <path d="M17,78 C23.627417,78 29,72.627417 29,66 C29,59.372583 23.627417,54 17,54 C10.372583,54 5,59.372583 5,66 C5,70.3877157 7.3548947,74.2254162 10.8697542,76.3181718" id="Oval-2" stroke-linecap="round" transform="translate(17.000000, 66.000000) rotate(-150.000000) translate(-17.000000, -66.000000) "></path>
+                <path d="M54.3923048,89.3923048 C61.0197218,89.3923048 66.3923048,84.0197218 66.3923048,77.3923048 C66.3923048,70.7648878 61.0197218,65.3923048 54.3923048,65.3923048 C47.7648878,65.3923048 42.3923048,70.7648878 42.3923048,77.3923048 C42.3923048,81.7800205 44.7471995,85.617721 48.2620591,87.7104766" id="Oval-2" stroke-linecap="round" transform="translate(54.392305, 77.392305) rotate(-259.000000) translate(-54.392305, -77.392305) "></path>
+                <path d="M90.553294,78.553294 C97.180711,78.553294 102.553294,73.180711 102.553294,66.553294 C102.553294,59.925877 97.180711,54.553294 90.553294,54.553294 C83.925877,54.553294 78.553294,59.925877 78.553294,66.553294 C78.553294,70.9410097 80.9081887,74.7787102 84.4230483,76.8714658" id="Oval-2" stroke-linecap="round" transform="translate(90.553294, 66.553294) rotate(-82.000000) translate(-90.553294, -66.553294) "></path>
+                <polyline id="Line-4" stroke-linecap="round" stroke-linejoin="round" points="35.5 22.5 17.4722436 22.5 17.4722436 52.0395335"></polyline>
+                <path d="M54.5,43.4093634 L54.5,65.5208243" id="Line-5" stroke-linecap="square"></path>
+                <polyline id="Line-4" stroke-linecap="round" stroke-linejoin="round" transform="translate(82.013878, 37.769767) scale(-1, 1) translate(-82.013878, -37.769767) " points="91.0277564 23 73 23 73 29 73 35 73 52.5395335"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

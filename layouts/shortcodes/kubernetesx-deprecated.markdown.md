@@ -1,0 +1,1 @@
+> **Warning:** The `@pulumi/kubernetesx` library is archived and is no longer maintained. For new projects, use the [`@pulumi/kubernetes`](https://www.pulumi.com/registry/packages/kubernetes/) provider directly.

@@ -1,0 +1,96 @@
+#################################################################################
+# devcontainer
+# - initialize a new repo with devcontainer config
+
+mkdir workshop && cd workshop
+git init --initial-branch=main
+git submodule add https://github.com/pulumi/devcontainer .devcontainer
+git submodule update --init --recursive .devcontainer
+cp -f .devcontainer/containers/kind/devcontainer.json .devcontainer.json
+gh codespace rebuild
+
+# for subsequent maintenance updates
+git submodule update --remote --merge .devcontainer; cp -f .devcontainer/containers/kind/devcontainer.json .devcontainer.json
+
+
+#################################################################################
+# Pulumi Login (with token)
+# - Pulumi Access Tokens: https://app.pulumi.com/usrbinkat/settings/tokens
+# - Login to Pulumi Cloud for:
+#   - State Storage & Visibility
+#   - PulumiAI on the CLI
+#   - Environment Variables, Secrets, and Configuration Files
+
+pulumi login
+
+
+#################################################################################
+# Pulumi ESC
+# - Create a new Pulumi ESC environment for storing env vars, secrets, and configs
+
+pulumi env init workshop
+pulumi env set workshop secrets.GITHUB_TOKEN --secret ghp_z9GXXXXXXXXXXXXXXXXXXXXXXXXwq8x
+pulumi env set workshop environmentVariables.GITHUB_TOKEN --plaintext \${secrets.GITHUB_TOKEN}
+eval $(pulumi env open workshop --format shell)
+
+
+#################################################################################
+# direnv
+# - initialize the new repo's direnv ./.envrc file
+
+echo 'export KUBECONFIG=${PWD}/.kube/config' >> .envrc && direnv allow
+direnv allow
+
+#################################################################################
+# KinD
+# - create a new KinD cluster for IaC dev/test
+# - Load Kubeconfig into Pulumi ESC
+
+mkdir .kube
+kind create cluster
+pulumi env set workshop kubeconfig.kind (kubectl config view --raw --output json | jq . -c)
+pulumi env set workshop secrets.kubeconfig.kind --secret "(kubectl config view --raw --output json | jq . -c)"
+pulumi env set workshop files.KUBECONFIG --plaintext \${secrets.kubeconfig.kind}
+
+
+#################################################################################
+# Pulumi Project
+
+pulumi new --ai "Write a program using pulumi kubernetes helm v3 Release to deploy the itzg/minecraft-server helm chart on Kubernetes." --language python --name pulumi-minecraft-kubernetes --stack pulumi-iac-workshop --description "A pulumi infrastructure as code (iac) program for deploying and serving minecraft on kubernetes" --force --dir .
+pulumi up -y --skip-preview
+
+#################################################################################
+# Check for a running minecraft pod
+
+kubectl get pods -owide
+
+
+#################################################################################
+# Github Repository
+# - create a new repo with gh cli and initialize it locally
+#
+# References:
+# - https://github.com/settings/tokens
+# - https://cli.github.com/manual/gh_repo_create
+# - https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
+
+```bash
+gh repo create workshop --public --description "pulumi iac developer workflow workshop" --gitignore python --license apache-2.0 --clone
+gh repo create iac-developer-workshop --public --confirm
+git config user.name "usrbinkat"
+git config user.email "usrbinkat@braincraft.io"
+git init
+git add .
+git commit -m "initial commit"
+git branch -M main
+git remote add origin
+git push -u origin main
+gh auth login --web --hostname github.com --with-token <(pulumi config get githubToken)
+gh auth login --hostname github.com --with-token < ~/.gitconfig.pat
+pulumi env get usrbinkat/iac-developer-workshop --show-secrets --value json githubToken | sed 's/\"//g' | gh auth login --hostname github.com --with-token -
+```
+
+
+#################################################################################
+#################################################################################
+#################################################################################

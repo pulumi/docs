@@ -1,0 +1,77 @@
+{{- /*
+    "Popular series" / "More series" strip: mono overline + "See all →" and a
+    grid of up to 4 series cards. Shared by the homepage and the series page.
+
+    Selection depends on context:
+      - featured  the homepage curates its strip from blog_home.yaml
+                  `featured_series`.
+      - exclude   a series page passes the current slug. The strip then shows
+                  related series — those whose member posts share the most tags
+                  with the current series — with a random fill for the remainder.
+      - neither   any other caller gets a random selection of all series.
+
+    Params:
+      title     overline text (default "Popular series")
+      featured  use the curated featured_series list (homepage)
+      exclude   the current series slug (drops it and switches to "related")
+*/ -}}
+{{- $title := .title | default "Popular series" -}}
+{{- $exclude := .exclude -}}
+{{- $all := site.Data.blog_series.series -}}
+{{- $chosen := $all -}}
+{{- if .featured -}}
+    {{- with site.Data.blog_home.featured_series -}}
+        {{- $chosen = slice -}}
+        {{- range . -}}
+            {{- $slug := . -}}
+            {{- range $all -}}{{ if eq .slug $slug }}{{ $chosen = $chosen | append . }}{{ end }}{{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- else if $exclude -}}
+    {{- /* Tag set of the current series' published posts. */ -}}
+    {{- $curTags := slice -}}
+    {{- range (where (where site.RegularPages "Params.series" $exclude) "Date" "lt" now) -}}
+        {{- range .Params.tags -}}{{ $curTags = $curTags | append . }}{{- end -}}
+    {{- end -}}
+    {{- $curTags = $curTags | uniq -}}
+    {{- /* Score every other series by tag overlap; split into related / rest. */ -}}
+    {{- $related := slice -}}
+    {{- $rest := slice -}}
+    {{- range $all -}}
+        {{- if ne .slug $exclude -}}
+            {{- $sTags := slice -}}
+            {{- range (where (where site.RegularPages "Params.series" .slug) "Date" "lt" now) -}}
+                {{- range .Params.tags -}}{{ $sTags = $sTags | append . }}{{- end -}}
+            {{- end -}}
+            {{- $score := len (intersect $curTags ($sTags | uniq)) -}}
+            {{- if gt $score 0 -}}
+                {{- $related = $related | append (dict "series" . "score" $score) -}}
+            {{- else -}}
+                {{- $rest = $rest | append . -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $chosen = slice -}}
+    {{- range (sort $related "score" "desc") -}}{{ $chosen = $chosen | append .series }}{{- end -}}
+    {{- range (shuffle $rest) -}}{{ $chosen = $chosen | append . }}{{- end -}}
+{{- else -}}
+    {{- $chosen = shuffle $all -}}
+{{- end -}}
+{{- $out := slice -}}
+{{- range $chosen -}}
+    {{- if and (ne .slug $exclude) (lt (len $out) 4) -}}{{ $out = $out | append . }}{{- end -}}
+{{- end -}}
+{{- with $out }}
+<section class="mt-10 border-t border-gray-200 pt-10">
+    <div class="mb-8 flex items-center justify-between gap-4">
+        <p class="font-overline m-0! text-service-black">{{ $title }}</p>
+        <a href="/blog/series/" data-track="blog-series-see-all" class="btn btn-link shrink-0">See all &rarr;</a>
+    </div>
+    <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        {{ range . }}
+            {{ $count := len (where (where site.RegularPages "Params.series" .slug) "Date" "lt" now) }}
+            {{ partial "blog/card/series.html" (dict "series" . "count" $count) }}
+        {{ end }}
+    </div>
+</section>
+{{- end }}

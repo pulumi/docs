@@ -1,0 +1,63 @@
+---
+# Name of the event, <= 60 characters
+title: Secrets Management for Scalable Cloud Security
+meta_desc: Learn how to prevent secrets sprawl, enhance security, and integrate centralized secrets management into your platform engineering workflows.
+meta_image:
+
+# A featured event will display first in the list.
+featured: false
+
+# Events with unlisted as true will not be shown on the event list
+unlisted: false
+
+# Gated events will have a registration form and the user will need
+# to fill out the form before viewing.
+gated: true
+
+# The event type (workshop, webinar, talk).
+event_type: workshop
+
+# URL for embedding a URL for ungated events.
+youtube_url: https://www.youtube.com/embed/CKQrrE-aQtM
+# Sortable date. The datetime Hugo will use to sort the events in date order.
+sortable_date: 2025-02-26T16:00:00+11:00
+
+# Duration of the event.
+duration: 90 minutes
+
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
+
+# Description of the event.
+description: |
+    Secrets sprawl is a huge challenge in organizations, particularly for platform engineering teams responsible for securing infrastructure at scale. When you have secrets stored in many places, how do you ensure that practitioners only have access to what they need, and how do you manage and view that access in a single place?
+
+    In this workshop, you'll learn best practices for centralized secrets management to help prevent sprawl, strengthen security, and improve developer experience. We'll explore how to integrate secrets management into your infrastructure and platform engineering workflows, ensuring teams have secure, streamlined access to the credentials they need—without compromising security.
+
+learn:
+    - How to prevent secrets sprawl and improve security across your cloud environments.
+    - How centralized secrets management enables access control and visibility at scale.
+    - How to integrate secrets management into infrastructure as code and platform engineering workflows for better automation and compliance.
+
+# The event presenters
+presenters:
+    - name: Josh Kodroff
+      role: Principal Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Torian Crane
+      role: Senior Technical Content Engineer, Pulumi
+      photo: /images/team/torian-crane.jpg
+
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["Platform Engineering", "DevOps", "Automation"]
+    languages: []
+    clouds: []
+
+# The right hand side form section.
+form:
+    # HubSpot form id.
+    hubspot_form_id: bf58a0f2-c419-4319-9644-cf73a9de0a3b
+    salesforce_campaign_id: 701PQ00000RsWHuYAN
+---

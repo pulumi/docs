@@ -1,0 +1,11 @@
+id = "tom-king"
+name = "Tom King"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "tomkingkong"
+bluesky = "@tomking.design"
+linkedin = "tom-king-12a102b"

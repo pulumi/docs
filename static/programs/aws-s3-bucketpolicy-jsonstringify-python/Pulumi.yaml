@@ -1,0 +1,10 @@
+name: aws-s3-bucketpolicy-jsonstringify-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that uses JSON helpers to define an S3 bucket policy.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python

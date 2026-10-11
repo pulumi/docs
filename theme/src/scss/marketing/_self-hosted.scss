@@ -1,0 +1,12 @@
+#self-hosted-overview,
+#self-hosted-deployment {
+    a:not(.btn) {
+        text-decoration: underline;
+    }
+}
+
+#self-hosted-capabilities {
+    .card:nth-child(even) {
+        margin-right: 0px;
+    }
+}

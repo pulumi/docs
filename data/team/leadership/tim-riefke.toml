@@ -1,0 +1,9 @@
+id = "tim-riefke"
+name = "Tim Riefke"
+title = "Head of Finance"
+weight = 5
+
+status = "active"
+
+[social]
+linkedin = "tim-riefke-cfa-0064976"

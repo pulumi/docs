@@ -1,0 +1,40 @@
+{{/*
+    GADS Stats Section Partial
+
+    Bordered section with title + description and a 3-col counter-style grid
+    (matches template-counter-cards visual).
+
+    Params:
+    - title:       Section title
+    - description: Section description
+    - community / company / integration: Optional {number, description}
+*/}}
+
+<div class="border-t p-8 md:p-16 lg:p-32 relative">
+    <div class="container mx-auto">
+        {{ partial "gads/section-header.html" (dict "title" .title "description" .description) }}
+    </div>
+
+    <div class="container mx-auto mt-12 md:mt-12 lg:mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-16">
+            {{ with .community }}
+            <div class="text-center">
+                <div class="text-black heading-1">{{ .number }}</div>
+                <p class="body-lg m-0">{{ .description }}</p>
+            </div>
+            {{ end }}
+            {{ with .company }}
+            <div class="text-center">
+                <div class="text-black heading-1">{{ .number }}</div>
+                <p class="body-lg m-0">{{ .description }}</p>
+            </div>
+            {{ end }}
+            {{ with .integration }}
+            <div class="text-center">
+                <div class="text-black heading-1">{{ .number }}</div>
+                <p class="body-lg m-0">{{ .description }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+id = "sarah-hughes"
+name = "Sarah Hughes"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "shughes26"
+linkedin = "shughes26"

@@ -1,0 +1,140 @@
+name: deepseek-ollama-yaml
+description: DeepSeek Ollama AWS example
+runtime: yaml
+
+variables:
+  publicKey:
+    fn::readFile: ./deepseek.rsa
+  userData:
+    fn::readFile: ./cloud-init.yaml
+  amiFilter: "amzn2-ami-hvm-*-x86_64-gp2"
+  amiOwner: "137112412989"
+  amiId:
+    fn::invoke:
+      function: aws:ec2:getAmi
+      arguments:
+        filters:
+          - name: name
+            values: ["${amiFilter}"]
+        owners: ["${amiOwner}"]
+        mostRecent: true
+      return: id
+
+resources:
+  deepSeekRole:
+    type: aws:iam:Role
+    properties:
+      name: deepseek-role
+      assumeRolePolicy: |
+        {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Action": "sts:AssumeRole",
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "ec2.amazonaws.com"
+                    }
+                }
+            ]
+        }
+
+  deepSeekS3Policy:
+    type: aws:iam:RolePolicyAttachment
+    properties:
+      role: ${deepSeekRole.name}
+      policyArn: arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+
+  deepSeekProfile:
+    type: aws:iam:InstanceProfile
+    properties:
+      name: deepseek-profile
+      role: ${deepSeekRole.name}
+
+  deepSeekVpc:
+    type: aws:ec2:Vpc
+    properties:
+      cidrBlock: 10.0.0.0/16
+      enableDnsHostnames: true
+      enableDnsSupport: true
+
+  deepSeekSubnet:
+    type: aws:ec2:Subnet
+    properties:
+      vpcId: ${deepSeekVpc.id}
+      cidrBlock: 10.0.48.0/20
+      availabilityZone: eu-central-1a
+      mapPublicIpOnLaunch: true
+
+  deepSeekInternetGateway:
+    type: aws:ec2:InternetGateway
+    properties:
+      vpcId: ${deepSeekVpc.id}
+
+  deepSeekRouteTable:
+    type: aws:ec2:RouteTable
+    properties:
+      vpcId: ${deepSeekVpc.id}
+      routes:
+        - cidrBlock: 0.0.0.0/0
+          gatewayId: ${deepSeekInternetGateway.id}
+
+  deepSeekRouteTableAssociation:
+    type: aws:ec2:RouteTableAssociation
+    properties:
+      subnetId: ${deepSeekSubnet.id}
+      routeTableId: ${deepSeekRouteTable.id}
+
+  deepSeekSecurityGroup:
+    type: aws:ec2:SecurityGroup
+    properties:
+      vpcId: ${deepSeekVpc.id}
+      ingress:
+        - fromPort: 22
+          toPort: 22
+          protocol: tcp
+          cidrBlocks:
+            - 0.0.0.0/0
+        - fromPort: 3000
+          toPort: 3000
+          protocol: tcp
+          cidrBlocks:
+            - 0.0.0.0/0
+        - fromPort: 11434
+          toPort: 11434
+          protocol: tcp
+          cidrBlocks:
+            - 0.0.0.0/0
+      egress:
+        - fromPort: 0
+          toPort: 0
+          protocol: -1
+          cidrBlocks:
+            - 0.0.0.0/0
+
+  deepSeekKey:
+    type: aws:ec2:KeyPair
+    properties:
+      publicKey: ${publicKey}
+
+  deepSeekInstance:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${amiId}
+      instanceType: "g4dn.xlarge"
+      keyName: ${deepSeekKey.keyName}
+      rootBlockDevice:
+        volumeSize: 100
+        volumeType: gp3
+      subnetId: ${deepSeekSubnet.id}
+      vpcSecurityGroupIds:
+        - ${deepSeekSecurityGroup.id}
+      iamInstanceProfile: ${deepSeekProfile.name}
+      userData: ${userData}
+      tags:
+        Name: deepSeek-server
+
+outputs:
+  AmiId: ${amiId}
+  InstanceId: ${deepSeekInstance.id}
+  InstancePublicDns: ${deepSeekInstance.publicIp}

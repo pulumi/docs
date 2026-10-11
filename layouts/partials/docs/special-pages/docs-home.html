@@ -1,0 +1,142 @@
+{{ $primary_link_button := .Params.link_buttons.primary }}
+{{ $secondary_link_button := .Params.link_buttons.secondary }}
+
+
+<section class="content docs-home">
+    <div id="docs-home-banner" class="header bg-violet-50 dark:bg-violet-950 bg-right">
+        <h1><strong>{{ .Params.h1 }}</strong></h1>
+        <div class="w-full md:w-2/3">
+            {{ .Params.description | safeHTML }}
+        </div>
+        {{ if $primary_link_button.link }}
+        <div class="link-buttons">
+            <a class="btn btn-primary" href="{{ $primary_link_button.link }}">{{ $primary_link_button.label }}</a>
+            {{ if $secondary_link_button.link }}
+            <a class="btn btn-outline" href="{{ $secondary_link_button.link }}">{{ $secondary_link_button.label }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+
+    {{ partial "docs/cloud-availability.html" . }}
+
+    {{ range .Params.sections }}
+        {{ if eq .type "cards-logo-label-link" }}
+            <div class="docs-home-section">
+                <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                {{ if .description }}
+                    {{ .description | safeHTML }}
+                {{ end }}
+                <div class="cards-logo-label-link {{ anchorize .heading }}">
+                    {{ range .cards }}
+                        <a href="{{ .link }}">
+                            <div>
+                                <div class="card-icon">
+                                    <div class="icon {{ .icon }}"></div>
+                                </div>
+                                <div class="label">{{ .label }}</div>
+                            </div>
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
+        {{ else if eq .type "full-width-cards" }}
+            <div class="docs-home-section">
+                <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                {{ range .cards }}
+                    <a class="full-width-card" href="{{ .link }}">
+                        <div class="icon-heading">
+                            {{ if .emoji }}
+                                <span class="text-2xl mr-2">{{ .emoji }}</span>
+                            {{ else if .icon }}
+                                <div class="icon icon-21-21 {{ .icon }}"></div>
+                            {{ end }}
+                            <h3 id="{{ anchorize .heading }}">{{ .heading }}</h3>
+                        </div>
+                        <p>{{ .description }}</p>
+                    </a>
+                {{ end }}
+            </div>
+        {{ else if eq .type "button-cards" }}
+        <div class="docs-home-section">
+            <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+
+            <div class="tiles flex-wrap justify-left items-stretch mt-4">
+                {{ range .cards }}
+                <div class="pb-4 md:pr-4 md:w-1/2">
+                    <div class="tile h-full">
+                        <div class="block p-3 h-full flex flex-col">
+                            <a href="{{ .link }}">
+                                <h4 class="no-anchor">
+                                    {{ if .icon }}
+                                        <span class="text-violet-primary mr-2 inline-flex align-top">{{ partial "icon.html" (dict "name" .icon "weight" "duotone") }}</span>
+                                        {{ .heading }}
+                                    {{ else if .emoji }}
+                                        <span class="text-2xl mr-2">{{ .emoji }}</span>
+                                        {{ .heading }}
+                                    {{ else if .image }}
+                                        <span class="flex items-center gap-2">
+                                            {{ $fpSrc := strings.TrimPrefix "/" .image }}
+                                            {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+                                            {{/* Dark-mode logo: same path with -on-dark before the extension, when that sibling exists. Toggled by the .docs-logo-light/.docs-logo-dark CSS in _docs-theme.scss. */}}
+                                            {{ $darkRel := replaceRE `\.svg$` "-on-dark.svg" .image }}
+                                            {{ $hasDark := and (ne $darkRel .image) (fileExists (printf "static%s" $darkRel)) }}
+                                            {{ $imgClass := "h-6 w-6 object-contain flex-shrink-0" }}
+                                            {{ $lightClass := cond $hasDark (printf "docs-logo-light %s" $imgClass) $imgClass }}
+                                            {{ if $fpAsset }}
+                                                {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" "" "class" $lightClass) }}
+                                            {{ else }}
+                                                <img src="{{ .image }}" alt="" class="{{ $lightClass }}">
+                                            {{ end }}
+                                            {{ if $hasDark }}
+                                                <img src="{{ $darkRel }}" alt="" class="docs-logo-dark {{ $imgClass }}">
+                                            {{ end }}
+                                            <span>{{ .heading }}</span>
+                                        </span>
+                                    {{ else }}
+                                        {{ .heading }}
+                                    {{ end }}
+                            </h4>
+                            <p class="pb-4">
+                            {{ if .description }}
+                                {{ .description | safeHTML }}
+                            {{ end }}
+                            </p>
+                        </a>
+                        <div class="flex space-x-2 flex-grow items-end">
+                                {{ if .primary_button_link }}
+                                <a href="{{ .primary_button_link }}" class="btn btn-primary">{{ .primary_button_label }}</a>
+                                {{ end }}
+                                {{ if .secondary_button_link }}
+                                <a href="{{ .secondary_button_link }}" class="btn btn-outline">{{ .secondary_button_label }}</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ else if eq .type "blue-sparkle" }}
+            <div class="blue-sparkle docs-home-section">
+                <div class="heading">
+                    <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                    <div class="sparkle"></div>
+                </div>
+                <p>{{ .description }}</p>
+                {{ if .raw_html }}
+                  {{ .raw_html | safeHTML }}
+                {{ end }}
+            </div>
+        {{ else if eq .type "flat" }}
+            <div class="docs-home-section">
+                <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                {{ if .description }}
+                    {{ .description | safeHTML }}
+                {{ else if .description_md }}
+                    {{ .description_md | markdownify }}
+                {{ end }}
+            </div>
+        {{ end }}
+    {{ end }}
+</section>

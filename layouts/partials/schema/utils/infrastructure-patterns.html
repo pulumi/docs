@@ -1,0 +1,123 @@
+{{/* Detect infrastructure patterns and architectural styles from content */}}
+
+{{/* Get aggregated content using the content aggregator */}}
+{{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+{{ $effectiveContent := $aggregatedContent.content }}
+
+{{/* Performance optimization: limit content scanning to improve build times */}}
+{{ $patterns := slice }}
+{{ $maxLength := .Site.Params.schema.max_content_scan_length | default 5000 }}
+{{ $content := substr $effectiveContent 0 $maxLength | lower }}
+{{ $title := lower .Title }}
+{{ $url := .RelPermalink }}
+
+{{/* Serverless Patterns */}}
+{{ if or (in $content "serverless ") (in $content " serverless") (in $content "aws lambda") (in $content "azure functions") (in $content "cloud functions") (in $content "function-as-a-service") (in $content " faas ") (in $title "serverless") (in $url "/serverless/") }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://en.wikipedia.org/wiki/Serverless_computing"
+    "name" "Serverless Computing"
+    "description" "Cloud computing execution model where cloud provider manages server infrastructure"
+    "sameAs" "https://www.wikidata.org/wiki/Q22908627"
+  ) }}
+{{ end }}
+
+{{/* Container Patterns */}}
+{{ if or (in $content "container ") (in $content " containers") (in $content "docker ") (in $content " docker") (in $content "kubernetes") (in $content " k8s ") (in $url "/kubernetes/") (in $url "/k8s/") (in $title "container") (in $title "docker") }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://en.wikipedia.org/wiki/OS-level_virtualization"
+    "name" "Containerization"
+    "description" "Operating-system-level virtualization for deploying and running applications"
+    "sameAs" "https://www.wikidata.org/wiki/Q1143001"
+  ) }}
+{{ end }}
+
+{{/* Microservices */}}
+{{ if or (in $content "microservice") (in $content "micro-service") (in $content "service mesh") (in $title "microservice") }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://en.wikipedia.org/wiki/Microservices"
+    "name" "Microservices Architecture"
+    "description" "Architectural style that structures applications as a collection of loosely coupled services"
+    "sameAs" "https://www.wikidata.org/wiki/Q18344624"
+  ) }}
+{{ end }}
+
+{{/* Infrastructure as Code */}}
+{{ if or (in $content "infrastructure as code") (in $content "infrastructure-as-code") (in $content " iac ") (in $content "pulumi") (in $content "terraform") (in $title "iac") (in $title "infrastructure as code") }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://en.wikipedia.org/wiki/Infrastructure_as_code"
+    "name" "Infrastructure as Code"
+    "alternateName" "IaC"
+    "description" "Managing and provisioning computing infrastructure through machine-readable definition files"
+    "sameAs" "https://www.wikidata.org/wiki/Q6036587"
+  ) }}
+{{ end }}
+
+{{/* CI/CD */}}
+{{ if or (in $content "continuous integration") (in $content "continuous deployment") (in $content "continuous delivery") (in $content " ci/cd") (in $content "cicd") (in $content "github actions") (in $content "jenkins") (in $content "gitlab ci") (in $title "ci/cd") (in $title "cicd") }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://en.wikipedia.org/wiki/CI/CD"
+    "name" "CI/CD"
+    "description" "Continuous Integration and Continuous Delivery/Deployment practices"
+    "sameAs" "https://www.wikidata.org/wiki/Q7562215"
+  ) }}
+{{ end }}
+
+{{/* Event-Driven Architecture */}}
+{{ if or (in $content "event-driven") (in $content "event driven") (in $content "message queue") (in $content "event bus") (in $content "pub/sub") (in $content "publish-subscribe") (in $title "event-driven") }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://en.wikipedia.org/wiki/Event-driven_architecture"
+    "name" "Event-Driven Architecture"
+    "description" "Software architecture pattern promoting the production, detection, and reaction to events"
+    "sameAs" "https://www.wikidata.org/wiki/Q1384209"
+  ) }}
+{{ end }}
+
+{{/* API Gateway Pattern - More specific to avoid false positives */}}
+{{ if or (in $content "api gateway pattern") (in $content "implements api gateway") (in $content "api gateway as a pattern") (in $content "api management") (and (in $content "api gateway") (or (in $content "pattern") (in $content "microservice") (in $content "architecture"))) }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://microservices.io/patterns/apigateway.html"
+    "name" "API Gateway Pattern"
+    "description" "Single entry point for all clients in microservices architecture"
+  ) }}
+{{ end }}
+
+{{/* DevOps Practices */}}
+{{ if or (in $content "devops") (in $content "dev ops") (in $content "devsecops") (in $title "devops") }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://en.wikipedia.org/wiki/DevOps"
+    "name" "DevOps"
+    "description" "Set of practices combining software development and IT operations"
+    "sameAs" "https://www.wikidata.org/wiki/Q548486"
+  ) }}
+{{ end }}
+
+{{/* GitOps */}}
+{{ if or (in $content "gitops") (in $content "git ops") (in $content "git-ops") (in $title "gitops") }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://www.weave.works/technologies/gitops/"
+    "name" "GitOps"
+    "description" "Operational framework using Git as a single source of truth for declarative infrastructure"
+  ) }}
+{{ end }}
+
+{{/* Service Mesh */}}
+{{ if or (in $content "service mesh") (in $content "istio") (in $content "linkerd") (in $content "consul connect") (in $title "service mesh") }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://en.wikipedia.org/wiki/Service_mesh"
+    "name" "Service Mesh"
+    "description" "Infrastructure layer for service-to-service communication in microservices"
+    "sameAs" "https://www.wikidata.org/wiki/Q85759716"
+  ) }}
+{{ end }}
+
+{{ return $patterns }}

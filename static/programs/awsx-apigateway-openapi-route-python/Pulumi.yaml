@@ -1,0 +1,6 @@
+name: awsx-apigateway-openapi-route-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: n example of configuring an API Gateway route with an OpenAPI/Swagger definition.

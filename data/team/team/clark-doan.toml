@@ -1,0 +1,10 @@
+id = "clark-doan"
+name = "Clark Doan"
+status = "guest"
+role = "alumni-puluminary"
+title = "Senior Platform Engineer"
+company = "Nvidia"
+
+[social]
+x = "DoanClark"
+linkedin = "clark-doan-330150134"

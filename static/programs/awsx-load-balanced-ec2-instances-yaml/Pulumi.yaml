@@ -1,0 +1,107 @@
+name: awsx-load-balanced-ec2-instances-yaml
+runtime: yaml
+description: An example that deploys multiple load-balanced VMs in Amazon EC2.
+
+variables:
+  amiId:
+    fn::invoke:
+      function: aws:ec2:getAmi
+      arguments:
+        filters:
+          - name: "name"
+            values: ["amzn2-ami-hvm-*"]
+        owners: ["amazon"]
+        mostRecent: true
+      return: id
+
+resources:
+  # Get the default VPC for the current region.
+  defaultVpc:
+    type: awsx:ec2:DefaultVpc
+
+  # Create a security group to allow traffic to and from the virtual machine.
+  webSg:
+    type: aws:ec2:SecurityGroup
+    properties:
+      vpcId: ${defaultVpc.vpcId}
+      ingress:
+        - protocol: tcp
+          fromPort: 80
+          toPort: 80
+          cidrBlocks: ["0.0.0.0/0"]
+      egress:
+        - protocol: "-1"
+          fromPort: 0
+          toPort: 0
+          cidrBlocks: ["0.0.0.0/0"]
+  # Create an ALB in the default VPC listening on port 80.
+  webTrafficAlb:
+    type: awsx:lb:ApplicationLoadBalancer
+    properties:
+      listener:
+        port: 80
+      securityGroups:
+        - ${webSg.id}
+
+  # In each VPC subnet, create an EC2 instance and attach it to the ALB.
+
+  web1:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${amiId}
+      instanceType: t2.micro
+      subnetId: ${defaultVpc.publicSubnetIds[0]}
+      vpcSecurityGroupIds:
+        - ${webTrafficAlb.loadBalancer.securityGroups[0]}
+      userData: |
+        #!/bin/bash
+        echo "Hello World, from Server 1!" > index.html
+        nohup python -m SimpleHTTPServer 80 &
+
+  attachment1:
+    type: awsx:lb:TargetGroupAttachment
+    properties:
+      targetGroup: ${webTrafficAlb.defaultTargetGroup}
+      instance: ${web1}
+
+  web2:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${amiId}
+      instanceType: t2.micro
+      subnetId: ${defaultVpc.publicSubnetIds[1]}
+      vpcSecurityGroupIds:
+        - ${webTrafficAlb.loadBalancer.securityGroups[0]}
+      userData: |
+        #!/bin/bash
+        echo "Hello World, from Server 2!" > index.html
+        nohup python -m SimpleHTTPServer 80 &
+
+  attachment2:
+    type: awsx:lb:TargetGroupAttachment
+    properties:
+      targetGroup: ${webTrafficAlb.defaultTargetGroup}
+      instance: ${web2}
+
+  web3:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${amiId}
+      instanceType: t2.micro
+      subnetId: ${defaultVpc.publicSubnetIds[2]}
+      vpcSecurityGroupIds:
+        - ${webTrafficAlb.loadBalancer.securityGroups[0]}
+      userData: |
+        #!/bin/bash
+        echo "Hello World, from Server 3!" > index.html
+        nohup python -m SimpleHTTPServer 80 &
+
+  attachment3:
+    type: awsx:lb:TargetGroupAttachment
+    properties:
+      targetGroup: ${webTrafficAlb.defaultTargetGroup}
+      instance: ${web3}
+
+# Export the resulting URL so that it's easy to access.
+outputs:
+  endpoint: ${webTrafficAlb.loadBalancer.dnsName}

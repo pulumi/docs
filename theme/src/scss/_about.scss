@@ -1,0 +1,191 @@
+.about-navigation-container {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    #about-nav {
+        @apply flex gap-x-9;
+        
+        list-style: none !important;
+
+        li {
+            > a {
+                @apply inline-flex w-max text-base font-semibold text-center text-gray-700 no-underline;
+            }
+
+            &:hover {
+                @apply border-gray-600;
+
+                > a {
+                    @apply text-black;
+                }
+            }
+
+            &:last-of-type {
+                @apply mr-8;
+            }
+        }
+
+        // On initial load without a target in the url, the all tab should be active.
+        li.active-about-nav-item {
+            @include gradient-border;
+
+            > a {
+                @apply font-semibold text-black;
+            }
+        }
+    }
+}
+
+.community-spotlight {
+    img {
+        height: 115px;
+    }
+}
+
+#awards {
+    .award {
+        height: 230px;
+        width: 230px;
+        border-radius: 14px;
+        background: var(--color-violet-primary);
+    
+        a {
+            height: 226px;
+            width: 226px;
+            border-radius: 12px;
+            background-color: white;
+
+            img {
+                width: 180px;
+            }
+        }
+    }
+}
+
+#we-are-pulumi {
+    @apply relative w-full;
+
+    .dot-overlay {
+        @apply w-full h-full absolute top-0 left-0 pointer-events-none;
+        z-index: -1;;
+    }
+
+    .title {
+        z-index: 100;
+
+        h2 {
+            width: fit-content;
+        }
+    }
+}
+
+.about-card {
+    width: 360px;
+    .about-card-photo {
+        width: 150px;
+        height: 150px;
+        border-right: 4px solid var(--color-violet-primary);
+    }
+
+    .social-overlay {
+        li {
+            @apply mr-5;
+
+            a {
+                @apply text-white;
+            }
+        }
+    }
+}
+
+#we-are-pulumi, #who-we-are, #what-we-believe, #community, #history, #awards, #newsroom, #join-us {
+    scroll-margin-top: 75px;
+}
+
+.photo-container {
+    img {
+        border: double 6px var(--color-violet-primary);
+        border-radius: 6px;
+    }
+}
+
+.photo-background {
+    max-width: 1440px;
+}
+
+
+
+.about-us-gradient-hero {
+    border-top: 6px solid var(--color-violet-primary);
+    border-bottom: 6px solid var(--color-violet-primary);
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
+    background: var(--color-violet-primary);
+    z-index: 10;
+  
+    &:before {
+        background: var(--color-violet-800);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        opacity: 0;
+        width: 100%;
+        z-index: -150;
+        animation: opacity-animation 8s infinite ease-in-out;
+    }
+}
+
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  } 
+  
+  50% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.value-card {
+    height: 600px;   
+
+    @include screen-xl {
+        height: 465px;
+    }
+    border: double 2px var(--color-violet-primary);
+    border-radius: 12px;
+}
+
+
+.values-flex .value-card {
+    width: 90%;
+    height: auto;
+
+    @include screen-md {
+        height: 505px;
+    }
+
+    h4 {
+        @apply text-3xl;
+
+        @include screen-md {
+            @apply text-2xl;
+        }
+    }
+
+    @include screen-md {
+        width: 365px;
+
+        p {
+            @apply mt-0;
+        }
+    }
+}

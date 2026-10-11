@@ -1,0 +1,14 @@
+{{ define "hero" }}
+    {{ partial "hero.html" (dict "title" .Params.title "small_title" "true") }}
+{{ end }}
+
+{{ define "main" }}
+    <section class="container mx-auto text-center w-9/12 mt-4">
+        <p class="mt-0 text-xl">        
+            <strong>We are democratizing the cloud.</strong><br /> Engineers love Pulumi. Don't believe us? Check out what our users have to say.
+        </p>    
+    </section>
+    <section class="container mx-auto text-center my-16">
+        <pulumi-developer-quotes quotes="{{ .Params.messages | jsonify }}"></pulumi-developer-quotes>
+    </section>
+{{ end }}

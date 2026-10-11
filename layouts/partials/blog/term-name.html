@@ -1,0 +1,21 @@
+{{- /*
+    Display name for a blog taxonomy term page — the human-readable label for a
+    category / tag / author / series term. Used by the term RSS feed title and
+    the header RSS dropdown. Call with the term page context.
+
+    - category → the name from data/blog_categories.yaml
+    - author   → the person's name from data/team
+    - series   → the series title from data/blog_series.yml
+    - fallback → the humanized term (tags)
+*/ -}}
+{{- $term := .Data.Term -}}
+{{- $name := $term | humanize -}}
+{{- $sing := .Data.Singular -}}
+{{- if eq $sing "category" -}}
+    {{- range site.Data.blog_categories.categories }}{{ if eq .id $term }}{{ $name = .name }}{{ end }}{{ end -}}
+{{- else if eq $sing "author" -}}
+    {{- with index site.Data.team.team $term }}{{ $name = .name }}{{ end -}}
+{{- else if eq $sing "series" -}}
+    {{- range site.Data.blog_series.series }}{{ if eq .slug $term }}{{ $name = .title }}{{ end }}{{ end -}}
+{{- end -}}
+{{- return $name -}}

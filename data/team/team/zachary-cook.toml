@@ -1,0 +1,10 @@
+id = "zachary-cook"
+name = "Zac Cook"
+title = "Software Engineering Manager"
+weight = 1
+
+status = "active"
+
+[social]
+github = "zacdirect"
+linkedin = "zacc"

@@ -1,0 +1,22 @@
+{{- /*
+  Renders a callout stating whether a resource option applies to custom
+  resources, component resources, or both, and how each SDK enforces it.
+  Usage: {{< resource-option-scope "providers" >}}
+  Data:  data/resource_options.yaml
+*/ -}}
+{{- $key := .Get 0 -}}
+{{- $data := index site.Data.resource_options $key -}}
+{{- if not $data -}}
+  {{- errorf "resource-option-scope: unknown resource option %q (in %s)" $key .Page.File.Path -}}
+{{- end -}}
+{{- $body := partial "resource-option-scope-body.html" (dict "name" $key "data" $data) -}}
+{{- $noteType := cond (eq $data.applies_to "both") "info" "warning" -}}
+<div class="note note-{{ $noteType }}">
+    <div class="icon-and-line">
+        {{ partial "icon.html" (dict "name" $noteType "weight" "fill") }}
+        <div class="line"></div>
+    </div>
+    <div class="content">
+        {{- $body | markdownify -}}
+    </div>
+</div>

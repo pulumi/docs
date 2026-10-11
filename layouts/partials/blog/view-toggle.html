@@ -1,0 +1,15 @@
+{{- /*
+    Homepage feed view toggle: compact list (default) vs. card rows. Mirrors the
+    /releases/ view control (partials/releases/changelog-index.html), but this
+    one is client-side — the buttons carry no href; theme/src/ts/blog-list.ts
+    toggles `.is-cards` on the `[data-post-list]` container and persists the
+    choice. The compact button is the server-rendered default (aria-current).
+*/ -}}
+<div data-blog-view-toggle role="group" aria-label="Post list view" class="btn-group shrink-0">
+    <button type="button" data-view="list" aria-current="page" aria-label="Compact list view" title="Compact list" data-track="blog-view-list" class="btn btn-icon-sm btn-outline">
+        {{ partial "icon.html" (dict "name" "list-dashes") }}
+    </button>
+    <button type="button" data-view="cards" aria-label="Card view" title="Cards" data-track="blog-view-cards" class="btn btn-icon-sm btn-outline">
+        {{ partial "icon.html" (dict "name" "cards") }}
+    </button>
+</div>

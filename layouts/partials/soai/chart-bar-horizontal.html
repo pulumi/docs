@@ -1,0 +1,35 @@
+{{/*
+    SOAI horizontal bar chart. Rows are sorted by percent descending, with any
+    option flagged `other: true` pinned last. The longest bar fills ~90% of the
+    track; the width is carried in `--val`.
+
+    Params (.): question dict with .options = [{ label, percent, highlight?, other? }].
+*/}}
+{{ $opts := .options }}
+
+{{/* Largest percent sets the scale (longest bar). */}}
+{{ $max := 0.0 }}
+{{ range $opts }}{{ if gt (float .percent) $max }}{{ $max = float .percent }}{{ end }}{{ end }}
+{{ if eq $max 0.0 }}{{ $max = 1.0 }}{{ end }}
+
+{{/* Split out "other", sort the rest desc, then append "other" last. */}}
+{{ $main := slice }}
+{{ $other := slice }}
+{{ range $opts }}
+    {{ if .other }}{{ $other = $other | append . }}{{ else }}{{ $main = $main | append . }}{{ end }}
+{{ end }}
+{{ $rows := sort $main "percent" "desc" }}
+{{ range $other }}{{ $rows = $rows | append . }}{{ end }}
+
+<div class="soai-hbar">
+    {{ range $rows }}
+    {{ $val := mul (div (float .percent) $max) 90.0 }}
+    <div class="soai-hbar__row{{ if .highlight }} soai-hbar__row--highlight{{ end }}">
+        <span class="soai-hbar__label">{{ .label }}</span>
+        <div class="soai-hbar__meter">
+            <span class="soai-hbar__fill" style="--val: {{ printf "%.1f" $val }}%"></span>
+            <span class="soai-hbar__pct">{{ .percent }}%</span>
+        </div>
+    </div>
+    {{ end }}
+</div>

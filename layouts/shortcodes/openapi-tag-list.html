@@ -1,0 +1,16 @@
+{{/* Lists all child pages that have openapi_docs=true, plus the schema page. */}}
+{{ $section := .Page.CurrentSection }}
+{{ $tagPages := slice }}
+{{ $schemaPage := false }}
+{{ range $section.Pages }}
+    {{ if .Params.openapi_docs }}
+        {{ $tagPages = $tagPages | append . }}
+    {{ else if .Params.openapi_schema }}
+        {{ $schemaPage = . }}
+    {{ end }}
+{{ end }}
+<ul>
+{{ range $tagPages }}<li><a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a>: {{ .Params.meta_desc }}</li>
+{{ end }}
+{{ with $schemaPage }}<li><a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a>: {{ .Params.meta_desc }}</li>{{ end }}
+</ul>

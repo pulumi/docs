@@ -1,0 +1,10 @@
+name: kubernetes-csi-driver-typescript
+description: Example on how to deploy the Pulumi ESC CSI Provider
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-typescript

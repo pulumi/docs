@@ -1,0 +1,56 @@
+footer.docs-footer {
+    padding: 24px;
+    border-top: 2px solid;
+    border-color: color-mix(in srgb, var(--color-violet-primary) 30%, transparent);
+    justify-content: space-between;
+    gap: 40px;
+
+    div.icon-pulumi-logo {
+        margin-right: 12px;
+    }
+
+    div.heading {
+        min-width: 170px;
+
+        p {
+            margin: 8px 0;
+            display: flex;
+        }
+
+        p.open-source {
+            font-family: 'Inter';
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--docs-fg-muted, #5f6065);
+            margin-top: 0;
+        }
+
+        p.copyright {
+            font-family: 'Inter';
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--docs-fg-muted, #808080);
+        }
+    }
+
+    ul {
+        gap: 12px 24px;
+        flex-wrap: wrap;
+        justify-content: right;
+        align-items: center;
+        text-align: right;
+
+        li {
+            font-family: 'Inter';
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--docs-fg-muted, #5f6065);
+
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                text-decoration-color: #8e8f97;
+            }
+        }
+    }
+}

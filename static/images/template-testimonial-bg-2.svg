@@ -1,0 +1,27 @@
+<svg width="1470" height="305" viewBox="0 0 1470 305" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1043_33441)">
+<mask id="mask0_1043_33441" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="1470" height="305">
+<path d="M0 305H1470V0H0V305Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_1043_33441)">
+<mask id="mask1_1043_33441" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="799" y="-161" width="671" height="771">
+<path d="M799.13 610H1470V-160.77H799.13V610Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_1043_33441)">
+<path d="M1470 212.35H1243.24C1229.64 212.35 1218.61 223.39 1218.61 237.01V650" stroke="#D7CDEA" stroke-miterlimit="10" vector-effect="non-scaling-stroke"/>
+<path d="M1470 231.6H1257.76C1247.26 231.6 1238.72 240.14 1238.72 250.66V650" stroke="#D7CDEA" stroke-miterlimit="10" vector-effect="non-scaling-stroke"/>
+<path d="M1470 250.87H1272.26C1264.83 250.87 1258.82 256.89 1258.82 264.33V650" stroke="#D7CDEA" stroke-miterlimit="10" vector-effect="non-scaling-stroke"/>
+<path d="M1470 270.11H1286.78C1282.45 270.11 1278.93 273.63 1278.93 277.97V650" stroke="#D7CDEA" stroke-miterlimit="10" vector-effect="non-scaling-stroke"/>
+<path d="M1530 192.22H1129.51C1118.37 192.22 1107.69 187.79 1099.81 179.92L859.48 -60.4098" stroke="#D7CDEA" stroke-miterlimit="10" vector-effect="non-scaling-stroke"/>
+<path d="M1530 172.22H1134.28C1125.21 172.22 1116.51 168.62 1110.1 162.2L867.49 -80.4098" stroke="#D7CDEA" stroke-miterlimit="10" vector-effect="non-scaling-stroke"/>
+<path d="M1530 152.22H1139.04C1132.04 152.22 1125.32 149.44 1120.37 144.49L875.47 -100.41" stroke="#D7CDEA" stroke-miterlimit="10" vector-effect="non-scaling-stroke"/>
+<path d="M1530 132.22H1143.81C1138.88 132.22 1134.15 130.26 1130.66 126.77L883.48 -120.41" stroke="#D7CDEA" stroke-miterlimit="10" vector-effect="non-scaling-stroke"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1043_33441">
+<rect width="1470" height="305" fill="white" transform="matrix(-1 0 0 -1 1470 305)"/>
+</clipPath>
+</defs>
+</svg>

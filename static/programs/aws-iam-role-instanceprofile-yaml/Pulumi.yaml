@@ -1,0 +1,31 @@
+name: aws-iam-role-instanceprofile-yaml
+runtime: yaml
+description: An example that deploys an IAM role and instance profile on AWS.
+
+resources:
+  role:
+    type: aws:iam:Role
+    name: my-role
+    properties:
+      assumeRolePolicy: ${assumeRole.json}
+
+  instanceProfile:
+    type: aws:iam:InstanceProfile
+    name: instance-profile
+    properties:
+      name: instance-profile
+      role: ${role.name}
+
+variables:
+  assumeRole:
+    fn::invoke:
+      Function: aws:iam:getPolicyDocument
+      Arguments:
+        statements:
+          - effect: Allow
+            principals:
+              - type: Service
+                identifiers:
+                  - ec2.amazonaws.com
+            actions:
+              - sts:AssumeRole

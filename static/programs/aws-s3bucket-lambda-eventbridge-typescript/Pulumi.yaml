@@ -1,0 +1,10 @@
+name: aws-s3bucket-lambda-eventbridge-typescript
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+description: A example that deploys an S3 bucket, lambda function resources, and an eventbridge trigger permission.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

@@ -1,0 +1,7 @@
+id = "daniel-perlovsky"
+name = "Daniel Perlovsky"
+title = "Principal Product Manager"
+company = "Pulumi"
+weight = 1
+
+status = "active"

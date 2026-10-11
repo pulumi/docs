@@ -1,0 +1,36 @@
+{{- $path := .Get "path" -}}
+{{- $language := .Get "language" -}}
+{{- $specifiedFilename := .Get "file" -}}
+{{- $from := .Get "from" -}}
+{{- $to := .Get "to" -}}
+
+{{- $program := "" -}}
+{{- if eq $specifiedFilename "" -}}
+    {{- if eq $language "javascript" -}}
+        {{- $program = "index.js" -}}
+    {{- else if eq $language "typescript" -}}
+        {{- $program = "index.ts" -}}
+    {{- else if eq $language "python" -}}
+        {{- $program = "__main__.py" -}}
+    {{- else if eq $language "go" -}}
+        {{- $program = "main.go" -}}
+    {{- else if eq $language "csharp" -}}
+        {{- $program = "Program.cs" -}}
+    {{- else if eq $language "java" -}}
+        {{- $program = "src/main/java/myproject/App.java" -}}
+    {{- else if eq $language "yaml" -}}
+        {{- $program = "Pulumi.yaml" -}}
+    {{- end -}}
+{{- else -}}
+    {{- $program = $specifiedFilename -}}
+{{- end -}}
+{{- $file := readFile (path.Join "static" "programs" (printf "%s-%s" $path $language) $program) -}}
+{{- if and (ne $from "") (ne $to "") -}}
+    {{- $lines := split $file "\n" -}}
+    {{- $toEnd := after (sub (int $from) 1) $lines -}}
+    {{- $lineCount := add (sub (int $to) (int $from)) 1 -}}
+    {{- $toTo := first $lineCount $toEnd -}}
+    {{- delimit $toTo "\n" | safeHTML -}}
+{{- else -}}
+    {{- $file | safeHTML -}}
+{{- end -}}

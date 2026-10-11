@@ -1,0 +1,3 @@
+# /community/ and /community/puluminaries/ are served by pulumi/marketing-web (apps/www).
+# /puluminaries/ was a Hugo alias on the Puluminaries page that used to live in this repo.
+puluminaries/index.html|/community/puluminaries/

@@ -1,0 +1,7 @@
+name: azure-native-import-resource-group-go
+description: An example that provides the code to import an existing resource group from Azure.
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-go

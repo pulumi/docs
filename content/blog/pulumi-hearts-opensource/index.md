@@ -1,0 +1,19 @@
+---
+title: "Pulumi 💜's Open Source"
+title_tag: "Pulumi Loves Open Source"
+allow_long_title: True
+authors: ["joe-duffy"]
+tags: [open-source, license, apache, bsl]
+category: community
+meta_desc: "Pulumi stands with the open source community and remains true open source"
+date: "2023-08-11"
+
+---
+
+Pulumi stands with the open source community.
+
+We are unaffected by HashiCorp relicensing their software yesterday, and express profound support for many of our cloud friends who have been affected.
+
+Pulumi is [true open source](https://github.com/pulumi/pulumi), uses the Apache 2.0 license, and does not and never will depend on BSL-licensed software in any way, HashiCorp owned or otherwise.
+
+We look forward to continuing to serve our [new](https://app.pulumi.com/signup) and loyal customers, always with open source and our amazing, fast-growing community at our core.

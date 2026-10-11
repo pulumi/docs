@@ -1,0 +1,67 @@
+pulumi-banner {
+    @apply hidden text-white font-body text-base text-center py-3 px-4 shadow;
+
+    background: var(--color-violet-primary);
+
+    &[visible] {
+        @apply block;
+    }
+
+    .dismiss {
+        top: 1.5rem;
+        right: 0.4rem;
+
+        @include screen-md {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        span {
+            @apply text-2xl inline-block text-violet-100 mr-2;
+
+            &:hover {
+                @apply text-white;
+                @include transition;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .content {
+        @apply flex flex-col items-center justify-center;
+
+        @include screen-md {
+            @apply flex-row;
+        }
+    }
+
+    .summary {
+        @apply mx-4 font-bold;
+
+        @include screen-md {
+            @apply mr-1;
+        }
+    }
+
+    .cta {
+        @apply cursor-pointer mx-2 w-full rounded-full font-bold bg-violet-primary px-4 py-2 text-sm uppercase mt-4 mb-2 flex items-center justify-center;
+        @include transition;
+
+        &:after {
+            @apply opacity-75 ml-2 text-xs;
+            content: "›";
+        }
+
+        a {
+            @apply font-body;
+        }
+
+        @include screen-md {
+            @apply my-0 w-auto;
+        }
+
+        &:hover {
+            @apply bg-violet-800;
+        }
+    }
+}

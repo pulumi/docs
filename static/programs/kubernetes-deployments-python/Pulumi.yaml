@@ -1,0 +1,11 @@
+name: kubernetes-deployments-python
+description: An example that creates a Kubernetes Deployment
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-python

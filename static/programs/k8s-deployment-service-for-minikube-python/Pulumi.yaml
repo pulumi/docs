@@ -1,0 +1,11 @@
+name: k8s-deployment-service-for-minikube-python
+description: An example that deploys a Deployment and Service for Minikube on Kubernetes.
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-python

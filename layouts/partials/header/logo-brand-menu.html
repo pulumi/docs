@@ -1,0 +1,30 @@
+{{- /* Right-click brand context menu for the header Pulumi logo. Positioned at the
+       cursor and toggled by header-nav.ts (initBrandLogoMenu). Download and the external
+       links are plain anchors; only "Copy logo SVG" needs JS for the clipboard write. */ -}}
+{{- $item := "flex w-full items-center justify-between gap-3 rounded-md px-3 py-2 text-left text-sm font-normal text-gray-950 outline-none transition-colors hover:bg-violet-50 hover:text-violet-primary focus-visible:bg-violet-50 focus-visible:ring-3 focus-visible:ring-violet-400/50" -}}
+{{- $arrow := partial "icon.html" (dict "name" "arrow-square-out" "class" "size-3.5 shrink-0 text-gray-400") -}}
+<div data-brand-menu role="menu" aria-label="Pulumi logo options" hidden
+  class="card fixed z-50 min-w-[220px] bg-white p-2 text-gray-950 shadow">
+  <ul class="flex flex-col gap-0.5">
+    <li role="none">
+      <button type="button" role="menuitem" data-brand-menu-copy class="{{ $item }}">
+        <span data-brand-menu-copy-label>Copy logo SVG</span>
+      </button>
+    </li>
+    <li role="none">
+      <a role="menuitem" data-brand-menu-close
+        href="/logos/brand/pulumi_mark_on_light.svg" download="pulumi-logo-mark-color.svg"
+        class="{{ $item }}">Download mark</a>
+    </li>
+    <li role="none">
+      <a role="menuitem" data-brand-menu-close
+        href="https://brand.pulumi.com/identity/logo/#get-the-logo" target="_blank" rel="noopener"
+        class="{{ $item }}"><span>Get other variants</span>{{ $arrow }}</a>
+    </li>
+    <li role="none">
+      <a role="menuitem" data-brand-menu-close
+        href="https://brand.pulumi.com" target="_blank" rel="noopener"
+        class="{{ $item }}"><span>Read brand guide</span>{{ $arrow }}</a>
+    </li>
+  </ul>
+</div>

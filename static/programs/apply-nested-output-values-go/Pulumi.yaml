@@ -1,0 +1,7 @@
+name: apply-nested-output-values-go
+runtime: go
+description: Demonstrates accessing nested output values using apply and lifting
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-go

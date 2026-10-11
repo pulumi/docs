@@ -1,0 +1,11 @@
+id = "robbie-mckinstry"
+name = "Robbie McKinstry"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "RobbieMcKinstry"
+linkedin = "robert-mckinstry"

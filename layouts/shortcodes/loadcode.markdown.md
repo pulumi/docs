@@ -1,0 +1,1 @@
+{{ (.Page.Resources.GetMatch (.Get 0)).Content | htmlUnescape | safeHTML }}

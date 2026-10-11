@@ -1,0 +1,64 @@
+---
+# Name of the event, <= 60 characters
+title: Microsoft AKS Engineering at Scale with Spot and Pulumi
+meta_desc: Explore real-world examples of how organizations can leverage the power of Pulumi and Spot to optimize their AKS workloads.
+meta_image:
+
+# A featured event will display first in the list.
+featured: false
+
+# Events with unlisted as true will not be shown on the event list
+unlisted: false
+
+# Gated events will have a registration form and the user will need
+# to fill out the form before viewing.
+gated: true
+
+# The event type (workshop, webinar, talk).
+event_type: workshop
+
+# URL for embedding a URL for ungated events.
+youtube_url:
+
+# Sortable date. The datetime Hugo will use to sort the events in date order.
+sortable_date: 2024-04-10T09:00:00.000-07:00
+
+# Duration of the event.
+duration: 90 minutes
+
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
+
+# Description of the event.
+description: |
+    As the rush to the cloud continues, businesses need to run at the speed of innovation. This means a well-defined and efficient platform engineering approach becomes essential while balancing your cloud infrastructure’s security, compliance, and scalability.
+
+    In this webinar, presented by Spot by NetApp and Pulumi, we will explore real-world examples of how organizations can leverage the power of Pulumi and Spot to optimize their AKS workloads at launch and why continuous optimization of your AKS infrastructure is a critical part of any successful platform engineering program. Our experts will discuss best practices for managing AKS at scale and how you can simultaneously increase time-to-market and developer productivity.
+
+learn:
+    - What Spot is and how to use it in Azure.
+    - How Spot ensures security and compliance while scaling.
+    - How Pulumi and Spot facilitate AKS usage at enterprise scale.
+
+# The event presenters
+presenters:
+    - name: Engin Diri
+      role: Sr. Community Engineer, Pulumi
+      photo: /images/team/engin-diri.jpg
+    - name: Shon Harris
+      role: Developer Relations Lead, NetApp
+      photo: /images/people/shon-harris.jpg
+
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Platform Engineering", "Spot by NetApp"]
+    languages: []
+    clouds: ["Azure"]
+
+# The right hand side form section.
+form:
+    # HubSpot form id.
+    hubspot_form_id: 99bdfd5c-c36c-4be7-b45a-75b1cf490c45
+    salesforce_campaign_id: 701PQ000008YkQlYAK
+---

@@ -1,0 +1,35 @@
+{{- /*
+  Renders <tr> rows for the CLI versions table on /docs/install/versions/.
+  Source of truth: data/versions.json, regenerated from pulumi/pulumi release
+  tags by scripts/get-cli-versions.js (run via `make update-versions` locally or
+  by .github/workflows/pulumi-cli-docs.yml in CI). Only 3.x releases render.
+*/ -}}
+{{- /* 2.23.0 (2021-03-17): first linux/darwin arm64 build. */ -}}
+{{- $armBuildsStartDate := time.AsTime "2021-03-17" -}}
+{{- /* 3.39.4 (2022-09-14): first windows arm64 build. */ -}}
+{{- $winArmBuildsStartDate := time.AsTime "2022-09-14" -}}
+{{ range site.Data.versions }}
+  {{- if and (hasPrefix .version "v3.") (not (in .version "-")) -}}
+    {{- $version := strings.TrimPrefix "v" .version -}}
+    {{- $dateTime := time.AsTime .date -}}
+    {{- $date := $dateTime.Format "2006-01-02" -}}
+    {{- $flatVersion := replace $version "." "" -}}
+        <tr>
+            <td><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}">{{ $version }}</a></td>
+            <td>{{ $date }}</td>
+            <td>{{ template "cli-version-dl-cell" (dict "version" $version "dateTime" $dateTime "armDate" $armBuildsStartDate "platform" "linux" "ext" "tar.gz" "display" "Linux") }}</td>
+            <td>{{ template "cli-version-dl-cell" (dict "version" $version "dateTime" $dateTime "armDate" $armBuildsStartDate "platform" "darwin" "ext" "tar.gz" "display" "macOS") }}</td>
+            <td>{{ template "cli-version-dl-cell" (dict "version" $version "dateTime" $dateTime "armDate" $winArmBuildsStartDate "platform" "windows" "ext" "zip" "display" "Windows") }}</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-{{ $version }}-checksums.txt">Checksums</a></td>
+        </tr>
+  {{- end -}}
+{{- end -}}
+
+{{- define "cli-version-dl-cell" -}}
+    {{- if ge .dateTime .armDate -}}
+      <span class="text-sm">{{ .display }}</span>
+      <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ .version }}-{{ .platform }}-x64.{{ .ext }}" class="text-xs">x64</a>/<a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ .version }}-{{ .platform }}-arm64.{{ .ext }}" class="text-xs">arm64</a>
+    {{- else -}}
+      <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ .version }}-{{ .platform }}-x64.{{ .ext }}">{{ .display }}</a>
+    {{- end -}}
+{{- end -}}

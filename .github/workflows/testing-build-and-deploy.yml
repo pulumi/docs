@@ -1,0 +1,183 @@
+name: Build and deploy testing
+on:
+  workflow_dispatch: null
+  push:
+    branches:
+      - master
+permissions:
+      id-token: write # This is required for requesting the JWT
+      contents: read # This is required for actions/checkout
+jobs:
+  buildSite:
+    env:
+      GOPATH: ${{ github.workspace }}/go
+    name: Install deps and build site
+    runs-on: ubuntu-latest
+    environment: testing
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.x'
+          cache: 'yarn'
+          cache-dependency-path: |
+            yarn.lock
+            infrastructure/yarn.lock
+            theme/yarn.lock
+            theme/stencil/yarn.lock
+
+      - uses: actions/setup-go@v7
+        with:
+          go-version: 1.26.x
+
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.157.0'
+          extended: true
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::571684982431:role/ContinuousDelivery
+          role-session-name: docs-deploy
+          role-duration-seconds: 7200
+          aws-region: us-west-2
+
+      - name: Install s5cmd v2.3.0 for fast S3 uploads
+        run: |
+          S5CMD_VERSION="2.3.0"
+          S5CMD_SHA256="de0fdbfa3aceae55e069ba81a0fc17b2026567637603734a387b2fca06c299b4"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
+          echo "${S5CMD_SHA256}  /tmp/s5cmd.tar.gz" | sha256sum -c -
+          sudo tar -xz -C /usr/local/bin s5cmd -f /tmp/s5cmd.tar.gz
+          rm /tmp/s5cmd.tar.gz
+
+      - name: Install Vale (required by scripts/ensure.sh)
+        run: |
+          VALE_VERSION="3.14.1"
+          VALE_SHA256="ff2b49ffaa9dcd246fd5008f03ff67746d2790b75bf4d3657e2fb9530fb96db3"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          echo "${VALE_SHA256}  /tmp/vale.tar.gz" | sha256sum -c -
+          sudo tar -xz -C /usr/local/bin vale -f /tmp/vale.tar.gz
+          rm /tmp/vale.tar.gz
+
+      - name: Install Pulumi CLI
+        uses: pulumi/actions@v7
+
+      # Restore previously generated OpenGraph cards so the build-time generator
+      # only re-renders pages that changed (manifest content-hash skip). The
+      # cards are gitignored; this cache is their only persistence across runs.
+      - name: Cache generated meta images
+        uses: actions/cache@v6
+        with:
+          path: assets/images/generated
+          key: meta-images-${{ github.sha }}
+          restore-keys: |
+            meta-images-
+
+      # Derive the cache key from the Hugo installed above rather than a literal,
+      # so revving hugo-version updates the key on its own. Fails loudly on an
+      # unparseable version rather than silently collapsing every build into a
+      # single unversioned namespace, which is the bug this exists to prevent.
+      - name: Resolve Hugo version for the cache key
+        id: hugo-version
+        run: |
+          hv="$(hugo version)"
+          # -n/p so a non-match yields empty rather than echoing the input back,
+          # and check before appending -extended so the guard can't see a value
+          # that is only the suffix.
+          ver="$(printf '%s' "$hv" | sed -nE 's/^hugo v([0-9]+\.[0-9]+\.[0-9]+).*/\1/p')"
+          [ -n "$ver" ] || { echo "could not parse hugo version from: $hv" >&2; exit 1; }
+          case "$hv" in *+extended*) ver="$ver-extended" ;; esac
+          echo "version=$ver" >> "$GITHUB_OUTPUT"
+
+      # Persist Hugo's processed-image cache (resources/_gen). Blog templates
+      # process feature images to WebP at several sizes via .Process; without
+      # this cache every CI run re-encodes ~2,400 images from scratch (~4-5
+      # minutes of the build). With a warm cache, .Process is a lookup.
+      - name: Cache Hugo processed images
+        uses: actions/cache@v6
+        with:
+          path: resources
+          # Keyed on the Hugo resolved above, not a literal, so the five
+          # workflows that share this cache (pull-request.yml,
+          # build-and-deploy.yml, testing-build-and-deploy.yml,
+          # pulumi-cli-docs.yml, warm-build-cache.yml) stay in step through an
+          # upgrade without anyone remembering to bump them. Hugo does not put
+          # its version in its own cache entries, so without this an upgrade
+          # keeps serving images encoded by the previous version indefinitely.
+          key: hugo-resources-${{ steps.hugo-version.outputs.version }}-${{ github.sha }}
+          restore-keys: |
+            hugo-resources-${{ steps.hugo-version.outputs.version }}-
+
+      - name: Build and deploy
+        run: make ci_push
+        env:
+          CDN_PULUMI_URN: ${{ vars.CDN_PULUMI_URN }}
+          DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
+          ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
+          ALGOLIA_APP_ADMIN_KEY: ${{  steps.esc-secrets.outputs.ALGOLIA_APP_ADMIN_KEY }}
+          NODE_OPTIONS: "--max_old_space_size=8192"
+
+      - name: Archive test results
+        uses: actions/upload-artifact@v7
+        with:
+          name: browser-test-results
+          path: cypress/videos
+
+      - name: Archive bucket metadata
+        uses: actions/upload-artifact@v7
+        with:
+          name: origin-bucket-metadata
+          path: origin-bucket-metadata.json
+  # A dispatched run is somebody's staging evidence: `staging-deploy.sh`
+  # writes a pending `staging/pulumi-test-io` status at this SHA and exits
+  # without waiting. Resolving that status is NOT this run's job, and must
+  # never be moved back here.
+  #
+  # It used to be (a `staging-status` job, #21642/#21677), and that job only
+  # ever existed for PR branches cut after it merged: a workflow_dispatch
+  # runs the workflow file from the ref it is dispatched at. PR #21676
+  # branched from 8712bb8b, its deploy succeeded, and the file the run
+  # executed had no such job — so the pending status never resolved.
+  # `.github/workflows/staging-status.yml` owns the terminal status now: a
+  # `workflow_run` listener always runs the default branch's copy and fires
+  # for runs on any branch, so branch age stops mattering. Sentinel gate G4
+  # reads either that status or this run.
+  notify:
+    if: (github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'pulumi-bot')) && failure()
+    name: Send slack notification
+    runs-on: ubuntu-latest
+    needs: [buildSite]
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Slack Notification
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops-test
+          SLACK_COLOR: "#F54242"
+          SLACK_MESSAGE: "build and deploy failure in pulumi/docs repo :meow_sad:"
+          SLACK_USERNAME: docsbot
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

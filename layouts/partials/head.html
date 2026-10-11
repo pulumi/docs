@@ -1,0 +1,641 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <!-- GrowthBook / Segment keys -->
+    <script>
+        {{- if eq hugo.Environment "production" }}
+            var segmentWriteKey = "UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u";
+            var snippetName = "C8Y429BDEy/06ujkUhzfL.min.js";
+            window.growthbook_sdk_key="sdk-psPofGr6jFV2ja9O";
+            window.growthbook_decrypt_key="9NsAVMNWaDS+Oky3rhLQ+A==";
+            window.growthbook_dev_mode=false;
+        {{- else }}
+            var segmentWriteKey = "bATvhu6XKpwi7Cs258MGsELkDpVOzvdY";
+            var snippetName = "C8Y429BDEy/hpBKpR8Nx1yVCjKPB2nJWg.min.js";
+            window.growthbook_sdk_key="sdk-BwIkZCqXQ9pZyp0P";
+            window.growthbook_decrypt_key=undefined;
+            window.growthbook_dev_mode=true;
+        {{- end }}
+    </script>
+
+    <!-- Preconnect to Segment (used on every page). -->
+    <link rel="preconnect" href="https://cdn.segment.com" crossorigin />
+    <!-- Preconnect to GrowthBook (A/B testing, used on every page). -->
+    <link rel="preconnect" href="https://cdn.growthbook.io" crossorigin />
+    {{- if eq hugo.Environment "production" }}
+    <!-- Preconnect to Common Room (production only). -->
+    <link rel="preconnect" href="https://cdn.cr-relay.com" crossorigin />
+    <!-- Preconnect to OpenAI ad pixel CDN (production only). -->
+    <link rel="preconnect" href="https://bzrcdn.openai.com" crossorigin />
+    {{- end }}
+
+    <!-- Preload critical fonts (the homepage hero animation types in monospace above the fold). -->
+    <link rel="preload" href="/fonts/monaspace-neon-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-semibold.woff2" as="font" type="font/woff2" crossorigin />
+
+    <link rel="llms-txt" href="/llms.txt" />
+    {{ with .OutputFormats.Get "markdown" }}
+    <link rel="alternate" type="text/markdown" href="{{ .Permalink }}" />
+    {{ end }}
+
+    <!-- Our CSS and JS bundles. -->
+    {{ partial "assets" . }}
+
+    {{- /* Cross-document view transitions, docs section only. On same-origin
+           navigations, supporting browsers (Chrome 126+, Safari 18.2+) keep the
+           old page on screen until the new one is ready instead of flashing
+           white. Both the outgoing and incoming page must carry the rule, so
+           gating it here scopes transitions to docs <-> docs navigations.
+           Disabling the snapshot animations makes the swap instant (no
+           crossfade). This must be a page-gated inline style — the rule is a
+           document-level opt-in, so it can't live in the shared CSS bundle. */ -}}
+    {{ if eq .Section "docs" }}
+        <style>
+            @view-transition {
+                navigation: auto;
+            }
+
+            ::view-transition-old(root),
+            ::view-transition-new(root) {
+                animation: none;
+            }
+        </style>
+    {{ end }}
+
+    {{- /* Docs dark mode: apply the saved (or system) theme before first paint
+           so there's no flash. Gating on the docs section means data-theme is
+           never written on any other page, which is what scopes dark mode to
+           /docs. Paired with theme/src/scss/docs/_docs-theme.scss (CSS, also
+           scoped to body.section-docs) and theme/src/ts/docs-theme.ts (toggle
+           behavior). data-theme = effective light|dark; data-theme-pref = the
+           raw choice so the toggle can show the active state. */ -}}
+    {{ if eq .Section "docs" }}
+        <script>
+            (function () {
+                try {
+                    var pref = localStorage.getItem("pulumi-docs-theme") || "system";
+                    var el = document.documentElement;
+                    el.dataset.themePref = pref;
+                    var dark =
+                        pref === "dark" ||
+                        (pref === "system" &&
+                            window.matchMedia &&
+                            window.matchMedia("(prefers-color-scheme: dark)").matches);
+                    if (dark) {
+                        el.dataset.theme = "dark";
+                    }
+                } catch (e) {}
+            })();
+        </script>
+    {{ end }}
+
+
+    <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
+    <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
+
+    {{/* An event hosted elsewhere (event_url) redirects its generated stub there,
+         alongside the general-purpose redirect_to mechanism. */}}
+    {{ $redirectTarget := or .Params.redirect_to .Params.event_url }}
+    {{ if $redirectTarget }}
+        {{ $delay := 0 }}
+
+        {{/* https://developers.google.com/search/docs/advanced/crawling/301-redirects#metarefresh */}}
+        {{ if .Params.redirect_temporarily }}
+            {{ $delay = 1 }}
+        {{ end }}
+
+
+        <meta http-equiv="refresh" content="{{ $delay }}; url={{ $redirectTarget }}" />
+    {{ end }}
+
+    {{/* An off-page event (event_url) is never indexable: the generated stub only
+         exists so the list and RSS have something to link out from. */}}
+    {{ if or (eq .Params.block_external_search_index true) .Params.event_url }}
+        <meta name="robots" content="noindex" />
+    {{ end }}
+
+
+    <!--
+        Taxonomy pages (tags, authors, and the bare taxonomy lists) are
+        noindexed because they cannibalise core pages that rank for the same
+        terms; curated landing pages (blog categories, blog series,
+        customer industries) are carved out. The full policy and its history live in
+        partials/taxonomy-indexable.html, which the sitemap shares.
+    -->
+    {{ if not (partial "taxonomy-indexable.html" .) }}
+        <meta name="robots" content="noindex" />
+    {{ end }}
+
+    <!-- Structured Data Schemas -->
+    {{ partial "schema/loader.html" . }}
+
+
+    <!--
+        Metadata tags for OpenGraph and Twitter.
+    -->
+
+    {{ $ogImage := "/logos/brand/og-default.png" }}
+    {{ $twitterImage := "/logos/brand/twitter-summary.png" }}
+    {{ $twitterCardType := "summary" }}
+
+    <!--
+        Effective social card: a page-level meta_image (custom override) wins;
+        otherwise a build-time generated card for the section, if one exists.
+        Resolved by partials/meta-image-url.html, which the schema collectors
+        share so OpenGraph and JSON-LD images stay in sync.
+    -->
+    {{ $metaImage := partial "meta-image-url.html" . }}
+    {{ with $metaImage }}
+        {{ $ogImage = . }}
+        {{ $twitterImage = . }}
+        {{ $twitterCardType = "summary_large_image" }}
+    {{ end }}
+
+
+    <meta property="og:image" content="{{ $ogImage | absURL }}" />
+    {{- /*
+        Optional second og:image: a square (1:1) card for surfaces that prefer
+        it. Best-effort — most scrapers use the first og:image (the landscape
+        card above), which also stays the twitter:image. Resolved by
+        partials/meta-image-square-url.html (events auto-generate one; any page
+        can set meta_image_square).
+    */ -}}
+    {{ $squareImage := partial "meta-image-square-url.html" . }}
+    {{ with $squareImage }}
+        <meta property="og:image" content="{{ . | absURL }}" />
+        {{- /* Only the auto-generated card is known to be 628x628; a custom
+               meta_image_square override may be any size, so don't declare dims. */ -}}
+        {{ if not $.Params.meta_image_square }}
+            <meta property="og:image:width" content="628" />
+            <meta property="og:image:height" content="628" />
+        {{ end }}
+    {{ end }}
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:site_name" content="pulumi" />
+
+    <meta name="twitter:image" content="{{ $twitterImage | absURL }}" />
+    <meta name="twitter:card" content="{{ $twitterCardType }}" />
+    <meta name="twitter:site" content="@PulumiCorp" />
+
+    {{ if .Params.meta_twitter_creator }}
+        <meta name="twitter:creator" content="{{ .Params.meta_twitter_creator }}" />
+    {{ else if .Params.authors }}
+        {{ range $idx, $authorName := .Params.authors }}
+            {{ $authorData := index site.Data.team.team $authorName }}
+            {{ with $authorData.social }}
+                {{ with .twitter }}
+                    <meta name="twitter:creator" content="@{{ . }}" />
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ with .Params.authors }}
+        {{ range $authorName := . }}
+            {{ with index site.Data.team.team $authorName }}
+                <meta property="article:author" content="{{ .name }}" />
+                <meta name="author" content="{{ .name }}" />
+            {{ end }}
+        {{ end }}
+        {{/* no_authored_date: see layouts/partials/schema/collectors/article-entity.html
+             for why content-adapter pages with only a "lastmod" date map must not
+             have their cascade-backfilled PublishDate treated as a real publish date. */}}
+        {{ if and (not $.PublishDate.IsZero) (not $.Params.no_authored_date) }}
+            <meta property="article:published_time" content="{{ $.PublishDate.Format "2006-01-02T15:04:05Z07:00" }}" />
+        {{ end }}
+        {{ if not $.Lastmod.IsZero }}
+            <meta property="article:modified_time" content="{{ $.Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+        {{ end }}
+    {{ end }}
+
+    {{/* Taxonomy term pages (blog category/tag/author/series, customer
+        industry) carry no front-matter title/meta_title, so without this
+        branch they fall through to the site-wide default below. Source the
+        same human display name the <title> tag uses further down instead. */}}
+    {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
+        <meta property="og:title" content="{{ partial "blog/term-name.html" . }}" />
+    {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
+        <meta property="og:title" content="{{ partial "customers/industry-name.html" .Data.Term }}" />
+    {{ else if .Params.meta_title }}
+        <meta property="og:title" content="{{ .Params.meta_title }}" />
+    {{ else if .Params.title }}
+        <meta property="og:title" content="{{ .Params.title }}" />
+    {{ else }}
+        <meta property="og:title" content="{{ .Site.Title }}" />
+    {{ end }}
+
+    {{ if .Params.meta_desc }}
+        <meta name="description" content="{{ .Params.meta_desc }}" />
+        <meta property="og:description" content="{{ .Params.meta_desc }}" />
+    {{ else if and .IsHome .Site.Params.meta_desc }}
+        <meta name="description" content="{{ .Site.Params.meta_desc }}" />
+        <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
+    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "industry" "author") .Data.Singular) }}
+        {{/* Blog taxonomy term pages (category, tag, series, author) and the
+            customer industry taxonomy have no .Summary; source their
+            description from the data files so they don't fall through to an
+            empty meta description. Author term pages below the post-count
+            floor in taxonomy-indexable.html are noindexed anyway, so a
+            generic description here is harmless for them and correct for the
+            indexable ones. */}}
+        {{ $desc := "" }}
+        {{ if eq .Data.Singular "category" }}
+            {{ range site.Data.blog_categories.categories }}
+                {{ if eq .id $.Data.Term }}{{ $desc = .description }}{{ end }}
+            {{ end }}
+        {{ else if eq .Data.Singular "series" }}
+            {{ with site.Data.blog_series }}{{ range .series }}
+                {{ if eq .slug $.Data.Term }}{{ $desc = .description }}{{ end }}
+            {{ end }}{{ end }}
+        {{ else if eq .Data.Singular "tag" }}
+            {{ $desc = printf "Pulumi blog posts about %s." ($.Data.Term | humanize | lower) }}
+        {{ else if eq .Data.Singular "industry" }}
+            {{ range site.Data.customers_industries.industries }}
+                {{ if eq .id $.Data.Term }}{{ $desc = .description }}{{ end }}
+            {{ end }}
+        {{ else if eq .Data.Singular "author" }}
+            {{ $authorName := .Data.Term | humanize }}
+            {{ with index site.Data.team.team .Data.Term }}{{ $authorName = .name }}{{ end }}
+            {{ $desc = printf "Pulumi blog posts by %s." $authorName }}
+        {{ end }}
+        {{ with $desc | chomp }}
+            <meta name="description" content="{{ . }}" />
+            <meta property="og:description" content="{{ . }}" />
+        {{ end }}
+    {{ else if .Summary }}
+        <meta name="description" content="{{ .Summary }}" />
+        <meta property="og:description" content="{{ .Summary }}" />
+    {{ end }}
+
+    {{ if .IsHome }}
+        {{- /* Home page: honour the front-matter title (title_tag, then .Title)
+             the same way every other page in this file does, falling back to
+             the site title only if the home page has neither. This keeps the
+             rendered <title> consistent with the WebPage schema name, which
+             already reads title_tag-then-.Title, and with og:title, which on
+             the home page resolves to the same front-matter title. */ -}}
+        <title>{{ or .Params.title_tag .Title .Site.Title }}</title>
+    {{ else if .Title }}
+        {{ $title := .Title }}
+        {{- /* Blog taxonomy pages: use the display name (category name / series
+             title / author name / humanized tag) from the shared partial instead
+             of Hugo's slug-derived .Title, and suffix "| Pulumi Blog" below —
+             "Engineering | Pulumi" clashes with core pages; "Engineering | Pulumi
+             Blog" doesn't. $blogTerm drives the suffix branch. */ -}}
+        {{ $blogTerm := false }}
+        {{ $seriesTerm := false }}
+        {{ $industryTerm := false }}
+        {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
+            {{ $blogTerm = true }}
+            {{ $title = partial "blog/term-name.html" . }}
+            {{ if eq .Data.Singular "series" }}{{ $seriesTerm = true }}{{ end }}
+        {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
+            {{- /* Customer industry term page: use the display name from the
+                 data-file source of truth instead of Hugo's slug-derived .Title
+                 ("Developer-Tools"), and suffix "| Customers" below. */ -}}
+            {{ $industryTerm = true }}
+            {{ $title = partial "customers/industry-name.html" .Data.Term }}
+        {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "category") }}
+            {{ $blogTerm = true }}
+            {{ $title = "Categories" }}
+        {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "series") }}
+            {{ $blogTerm = true }}
+            {{ $title = "All Series" }}
+        {{ end }}
+        {{ if .Params.title_tag }}
+            {{ $title = .Params.title_tag }}
+        {{ end }}
+
+
+        {{- /* Blog section title page number. Seed the paginator with the shared
+             feed here (head renders before list.html), never the default
+             `.Paginator` — see partials/blog/feed.html for why. Blog term pages
+             seed the same collection their templates paginate (the term's blog
+             posts, newest-first) for the same reason. */ -}}
+        {{ $pageNum := 1 }}
+        {{ if and (eq .Type "blog") .IsSection }}
+            {{ $pageNum = ($.Paginate (partialCached "blog/feed.html" . "blog-home").feed).PageNumber }}
+        {{- /* Series pages render all parts unpaginated, so don't init a
+             paginator for them — .Paginate here would make Hugo emit stray
+             /page/N/ pages their template never links. */ -}}
+        {{ else if and $blogTerm (eq .Kind "term") (not $seriesTerm) }}
+            {{ $pageNum = ($.Paginate (where .Data.Pages "Section" "blog").ByDate.Reverse).PageNumber }}
+        {{ end }}
+        <!-- The blog tags, specifically the tag lists, end up clashing with other page titles on the website. We
+             add "Blog" to the title so that the titles no longer clash. -->
+        {{ if and (eq .Type "blog") .IsPage }}
+            <title>{{ $title }} | Pulumi Blog</title>
+        {{ else if and (eq .Type "blog") .IsSection }}
+            {{ if gt $pageNum 1 }}
+                <title>{{ $title }} | Page {{ $pageNum }} | Pulumi</title>
+            {{ else }}
+                <title>{{ $title }} | Pulumi</title>
+            {{ end }}
+        {{ else if eq .Type "blog" }}
+            {{ if gt $pageNum 1 }}
+                <title>{{ $title }} | Page {{ $pageNum }} | Pulumi Blog</title>
+            {{ else }}
+                <title>{{ $title }} | Pulumi Blog</title>
+            {{ end }}
+        {{ else if $blogTerm }}
+            {{ if gt $pageNum 1 }}
+                <title>{{ $title }} | Page {{ $pageNum }} | Pulumi Blog</title>
+            {{ else }}
+                <title>{{ $title }} | Pulumi Blog</title>
+            {{ end }}
+        {{ else if eq .Type "docs" }}
+            <title>{{ $title }} | Pulumi Docs</title>
+        {{ else if eq .Type "registry" }}
+            <title>{{ replace $title "/" "." }} | Pulumi Registry</title>
+        {{ else if $industryTerm }}
+            <title>{{ $title }} | Customers | Pulumi</title>
+        {{ else }}
+            <title>{{ $title }} | Pulumi</title>
+        {{ end }}
+
+        {{- /* /blog/page/N/ (N>1) gets a canonical further below in this file
+             pointing at /blog/ -- Hugo resolves .RelPermalink for a paginated
+             section to the section's base URL regardless of which /page/N/
+             is being rendered, so this isn't self-referential, but a canonical
+             is still only a hint Google can choose to ignore. Search Console
+             confirms it does for this specific series: pages 2, 3, 5, and 8
+             were independently indexed anyway despite the same canonical.
+             noindex,follow removes the ambiguity while still letting crawlers
+             follow links to the real posts linked from the page. Category
+             term pagination (the $blogTerm branch above) gets the identical
+             canonical-to-base-URL treatment and is deliberately left
+             untouched -- confirmed via GSC's "Alternate page with proper
+             canonical tag" coverage state, Google does honor it there, even
+             though nothing in the template treats the two series
+             differently. Tag/author term pagination is a separate case,
+             already blanket-noindexed outright by taxonomy-indexable.html,
+             which this branch does not touch. */ -}}
+        {{ if and (eq .Type "blog") .IsSection (gt $pageNum 1) }}
+            <meta name="robots" content="noindex,follow" />
+        {{ end }}
+    {{ else if not (or .Params.redirect_to .Params.private) }}
+        <!--
+            TODO[pulumi/docs#1127]: can't enable this until Python docs are fixed.
+            \{\{ /* errorf "%q: Missing 'title' directive; please specify this to improve search indexing." .Path */ \}\}
+        -->
+    {{ end }}
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!--
+        The canonical URL for the website. In all cases, this should be the public-facing
+        production URL of the site, to avoid SEO penalties for duplicate content.
+        https://support.google.com/webmasters/answer/139066?hl=en
+        https://en.wikipedia.org/wiki/Canonical_link_element
+    -->
+
+    {{ if .Params.canonical_url }}
+        <link rel="canonical" href="{{ .Params.canonical_url }}" />
+    {{ else }}
+        <link rel="canonical" href="{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}" />
+    {{ end }}
+
+
+    <!-- RSS: the main blog feed everywhere, plus this page's own feed (a blog
+         category/tag/author/series term, or the events feed) for autodiscovery. -->
+    <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
+    {{ with .OutputFormats.Get "rss" }}
+        {{ if ne .RelPermalink "/blog/rss.xml" }}
+    <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ if eq $.Kind "term" }}Pulumi Blog: {{ partial "blog/term-name.html" $ }}{{ else }}{{ $.Title }}{{ end }}" />
+        {{ end }}
+    {{ end }}
+
+
+    <!--Segment tracking-->
+    <script>
+        // Do not load Segment for these user agents.
+        userAgentBlocklist = [
+            'Mozilla/5.0 (compatible; SiteAuditBot/0.97; +http://www.semrush.com/bot.html)',
+            'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+        ]
+
+        !(function () {
+            var i = "analytics",
+                analytics = (window[i] = window[i] || []);
+            if (!analytics.initialize)
+                if (analytics.invoked) {
+                    window.console && console.error && console.error("Segment snippet included twice.");
+                } else if (userAgentBlocklist.includes(navigator.userAgent)) {
+                    console.log("Segment snippet not loaded for user agent: " + navigator.userAgent);
+                } else {
+                    analytics.invoked = !0;
+                    analytics.methods = [
+                        "trackSubmit",
+                        "trackClick",
+                        "trackLink",
+                        "trackForm",
+                        "pageview",
+                        "identify",
+                        "reset",
+                        "group",
+                        "track",
+                        "ready",
+                        "alias",
+                        "debug",
+                        "page",
+                        "screen",
+                        "once",
+                        "off",
+                        "on",
+                        "addSourceMiddleware",
+                        "addIntegrationMiddleware",
+                        "setAnonymousId",
+                        "addDestinationMiddleware",
+                        "register",
+                    ];
+                    analytics.factory = function (e) {
+                        return function () {
+                            if (window[i].initialized) return window[i][e].apply(window[i], arguments);
+                            var n = Array.prototype.slice.call(arguments);
+                            if (["track", "screen", "alias", "group", "page", "identify"].indexOf(e) > -1) {
+                                var c = document.querySelector("link[rel='canonical']");
+                                n.push({ __t: "bpc", c: (c && c.getAttribute("href")) || void 0, p: location.pathname, u: location.href, s: location.search, t: document.title, r: document.referrer });
+                            }
+                            n.unshift(e);
+                            analytics.push(n);
+                            return analytics;
+                        };
+                    };
+                    for (var n = 0; n < analytics.methods.length; n++) {
+                        var key = analytics.methods[n];
+                        analytics[key] = analytics.factory(key);
+                    }
+                    analytics.load = function (key, n) {
+                        var t = document.createElement("script");
+                        t.type = "text/javascript";
+                        t.async = !0;
+                        t.setAttribute("data-global-segment-analytics-key", i);
+                        t.src = "https://evs.analytics.pulumi.com/" + snippetName;
+                        var r = document.getElementsByTagName("script")[0];
+                        r.parentNode.insertBefore(t, r);
+                        analytics._loadOptions = n;
+                    };
+                    analytics._writeKey = segmentWriteKey;
+                    analytics._cdn = "https://evs.analytics.pulumi.com";
+                    analytics.SNIPPET_VERSION = "5.2.0";
+                    analytics.page();
+                }
+        })();
+    </script>
+
+    <!-- Segment Consent Manager (production only - the banner and its analytics
+         gating are suppressed on local dev and PR preview builds). -->
+    {{- if eq hugo.Environment "production" }}
+    <script>
+        window.consentManagerConfig = {
+            writeKey: segmentWriteKey,
+            cdnHost: "evs.analytics.pulumi.com",
+            container: "#segment-consent-manager",
+            privacyPolicyUrl: "/privacy/",
+            bannerText: "We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you\u02BCre agreeing to the collection of data as described in our",
+            preferencesDialogTitle: "Website Data Collection Preferences",
+            preferencesDialogContent: "We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.",
+            cancelDialogTitle: "Are you sure you want to cancel?",
+            cancelDialogContent: "Your preferences have not been saved. By continuing to use our website, you are agreeing to our Website Data Collection Policy."
+        };
+    </script>
+
+    {{ $jsManifest := $.Site.Data.js_manifest }}
+    <script>
+        window.addEventListener('load', function() {
+            var s = document.createElement('script');
+            s.src = '/js/{{ index $jsManifest "consent-manager" }}';
+            document.body.appendChild(s);
+        });
+    </script>
+    {{- end }}
+
+    {{- if eq hugo.Environment "production" }}
+        <!-- Facebook Domain Verification -->
+        <meta name="facebook-domain-verification" content="phlf6qes2bxa9ufzk8zt2es0qivg8j" />
+
+        <!-- Common Room (deferred to window.load to avoid blocking first paint) -->
+        <script>
+            window.addEventListener('load', function() {
+                if (typeof window.signals !== 'undefined') return;
+                var script = document.createElement('script');
+                script.src = 'https://cdn.cr-relay.com/v1/site/a725b5ba-75f1-44dc-b250-11023fc10b9d/signals.js';
+                script.async = true;
+                window.signals = Object.assign(
+                    [],
+                    ['page', 'identify', 'form'].reduce(function (acc, method){
+                        acc[method] = function () {
+                        signals.push([method, arguments]);
+                        return signals;
+                        };
+                        return acc;
+                    }, {})
+                );
+                document.head.appendChild(script);
+            });
+        </script>
+
+        <!-- OpenAI ad pixel (deferred to window.load to avoid blocking first paint) — Marketing & Analytics
+             consent-gated: loads only after the consent-managed Segment analytics is ready
+             (window.analytics.ready), same as the Floqer integration below. Fail-closed: if
+             consent-managed analytics never loads, the pixel never loads. -->
+        <script>
+            window.addEventListener('load', function() {
+                function loadOaiq() {
+                    !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
+                    oaiq("init",{pixelId:"7KRuATZtZE3j5BSAZErZAb",debug:false});
+                }
+                if (window.analytics && typeof window.analytics.ready === "function") {
+                    window.analytics.ready(loadOaiq);
+                }
+            });
+        </script>
+
+        <!-- Floqer (RB2B) visitor identification — Marketing & Analytics consent-gated (see partials/floqer.html). Page-scoped via `include_floqer` front matter. -->
+        {{ if .Params.include_floqer }}
+        {{ partial "floqer.html" . }}
+        {{ end }}
+
+    {{- end }}
+
+    <!-- Apply anchor links to headings in the docs, blog and taxonomy pages.
+         Self-hosted (static/js/anchor-js.min.js, vendored from anchor-js v4.1.0's anchor.min.js)
+         rather than loaded from cdnjs: this removes a third-party render-relevant dependency and
+         its DNS/TLS/connection setup cost from every docs/blog/authors/tags/registry
+         page, and eliminates the single point of failure where a cdnjs slowdown or outage delayed
+         anchors sitewide. The vendored file's SHA-512 matches cdnjs's own published SRI hash for
+         anchor-js@4.1.0/anchor.min.js (sha512-8IXYpHF8LXD5JYo9bhj3ja2uLOJ7QJ/o+F1DSitgu0HmT5W0Vv3vTi+p5nn9jbi/cPnskPO9qT0RY5VAdofRJQ==,
+         per https://api.cdnjs.com/libraries/anchor-js/4.1.0), confirming it is unmodified. -->
+    {{ if and (not .IsHome) (.Section) (in "docs blog authors tags registry" .Section) }}
+        <script async defer src="{{ "js/anchor-js.min.js" | relURL }}"></script>
+        <script>
+            // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.
+            window.addEventListener("load", function (event) {
+                if (anchors) {
+                    {{ if in (slice "blog" "authors" "tags") .Section }}
+                    // Blog: only anchor headings inside the post body, not card
+                    // titles / the blog header (listing pages have no .blog-post-content).
+                    anchors.add(".blog-post-content :is(h1, h2, h3, h4, h5, h6):not(.no-anchor)");
+                    {{ else }}
+                    anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+                    {{ end }}
+                }
+            });
+        </script>
+    {{ end }}
+
+    {{ if .Params.math }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},  // Block
+                    {left: "$", right: "$", display: false}    // Inline
+                ]
+            });
+        });
+    </script>
+    {{ end }}
+
+    {{ if .Store.Get "hasMermaid" }}
+        {{ partial "mermaid.html" . }}
+    {{ end }}
+
+    {{/* Tests to enforce required frontmatter for certain content types. */}}
+    {{ if and (eq .Type "blog") (eq .BundleType "leaf") .IsPage }}
+        {{ if not .Params.authors }}
+            {{ errorf "Blog posts require authors: %s" .File.Path }}
+        {{ else }}
+            {{ range $authorID := .Params.authors }}
+                {{ if not (index site.Data.team.team $authorID) }}
+                    {{ errorf "Blog posts author (%s) not found: %s" $authorID $.Page.File.Path }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{ if not .Params.tags }}
+            {{ errorf "Blog posts require tags: %s" .File.Path }}
+        {{ end }}
+    {{ end }}
+
+    <!-- Last-modified meta tag for blog posts with updated date -->
+    {{ if and (eq .Type "blog") .IsPage .Params.updated }}
+        <meta http-equiv="last-modified" content="{{ (time .Params.updated).Format "2006-01-02T15:04:05Z0700" }}" />
+    {{ end }}
+
+    {{- /* Sets <html class="is-signed-in"> before first paint when the auth
+           cookie is present, so the header's Sign-in -> Dashboard swap doesn't
+           cause layout shift for logged-in users. Paired with CSS in main.scss. */ -}}
+    <script>
+      try {
+        var c = document.cookie.split("; ").find(function (s) { return s.indexOf("pulumi_web_user_info=") === 0; });
+        var v = c ? JSON.parse(decodeURIComponent(c.slice(c.indexOf("=") + 1)).slice(2)) : null;
+        if (v && v.userId) document.documentElement.classList.add("is-signed-in");
+      } catch (e) {}
+    </script>
+</head>

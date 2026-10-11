@@ -1,0 +1,12 @@
+{{- /*
+  The whole-page Pulumi Cloud availability callout, rendered from the
+  `pulumi_cloud_feature:` front matter key. Takes the page.
+
+  It lives in its own partial because the docs list/single layouts render it
+  directly above the content, while `docs_home: true` overview pages render it
+  from docs/special-pages/docs-home.html so it lands *below* the violet hero
+  banner instead of above it. Both call sites must produce the same markup.
+*/ -}}
+{{- with .Params.pulumi_cloud_feature -}}
+    {{ partial "notes.html" (dict "type" "cloud" "text" (partial "cloud-availability-body.html" (dict "feature" . "where" $.RelPermalink) | markdownify)) }}
+{{- end -}}

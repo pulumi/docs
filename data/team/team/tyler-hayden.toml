@@ -1,0 +1,11 @@
+id = "tyler-hayden"
+name = "Tyler Hayden"
+title = "Director of Sales Development"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "Pulumi-TH"
+linkedin = "tyler-hayden-a8749414"

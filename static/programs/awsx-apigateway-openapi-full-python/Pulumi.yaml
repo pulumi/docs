@@ -1,0 +1,6 @@
+name: awsx-apigateway-openapi-full-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example of configuring an API Gateway instance with an OpenAPI/Swagger JSON definition.

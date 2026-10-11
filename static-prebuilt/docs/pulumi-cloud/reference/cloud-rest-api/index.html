@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <script>
+    // Handle section anchor redirects for the decomposition of the original REST API doc into separate pages
+    // Reference: https://github.com/pulumi/docs/pull/15030
+    (function () {
+        var anchorMap = {
+            'endpoint-url': 'api-basics/#endpoint-url',
+            'authentication': 'api-basics/#authentication',
+            'required-request-headers': 'api-basics/#required-request-headers',
+            'stacks': 'stacks',
+            'stack-tags': 'stack-tags',
+            'stack-policy-information': 'stack-policy',
+            'stack-updates': 'stack-updates',
+            'personal-access-tokens': 'personal-access-tokens',
+            'organizations': 'organizations',
+            'insight-accounts': 'insight-accounts',
+            'policy-groups': 'policy-groups',
+            'policy-packs': 'policy-packs',
+            'policy-results': 'policy-results',
+            'environments': 'environments',
+            'schedules': 'schedules',
+            'audit-logs': 'audit-logs',
+            'deployment-runners': 'deployment-runners',
+            'oidc-issuers': 'oidc-issuers',
+            'oauth-token-exchange': 'oauth-token-exchange',
+            'resources-under-management-rum': 'resources-under-management',
+            'resource-search': 'resource-search',
+            'data-export': 'data-export',
+            'registry': 'registry',
+            // 'schemas': 'schemas',
+            'services': 'services',
+        }
+        /*
+        * Best practice for extracting anchor:
+        * https://stackoverflow.com/a/10076097/151365
+        */
+        var anchor = window.location.hash.substring(1);
+        /*
+        * Best practice for javascript redirects: 
+        * https://stackoverflow.com/a/506004/151365
+        */
+        window.location.replace(`/docs/pulumi-cloud/reference/${anchorMap[anchor] ?? ''}`);
+    })();
+  </script>
+</html>

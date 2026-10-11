@@ -1,0 +1,10 @@
+id = "hans-zhang"
+name = "Hans Zhang"
+title = "Software Engineer Intern"
+weight = 1
+
+status = "inactive"
+
+[social]
+github = "hanszhang00"
+linkedin = "hanszhang00"

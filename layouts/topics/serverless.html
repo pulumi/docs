@@ -1,0 +1,158 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" "Cloud Engineering with Serverless") }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="my-16">
+        <div class="flex flex-wrap container mx-auto">
+            <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5">
+                <h2>{{ .Params.hero.title }}</h2>
+                <p class="mr-4">{{ .Params.hero.body | markdownify }}</p>
+            </div>
+            <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
+                <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="what-is-serverless" class="py-16 px-4">
+        <div class="container md:mx-auto md:max-w-4xl">
+            <h3>What is Serverless?</h3>
+            <p>
+                Serverless, or function-based, computing enables you to build and run applications and services without thinking about the server infrastructure on which the
+                functions depend. 'Serverless' applications of course require servers (typically cloud infrastructure, or Kubernetes clusters), but don't require you to provision,
+                scale, and manage any servers.
+            </p>
+            <p>
+                The reduced operational overhead of serverless computing means teams can focus on the business and application logic they need: the development of products vs the
+                management of the infrastructure for them.
+            </p>
+        </div>
+    </section>
+    <section id="serverless-building-blocks" class="py-16 px-4">
+        <div class="container md:mx-auto md:max-w-4xl">
+            <h3>Building Blocks of Serverless Programming</h3>
+            <p>
+                Building serverless applications can be considered to be a composition of a series of standardized building blocks. For instance, serverless services can provide
+                compute, storage, data storage, messaging/queues and orchestration. With just those blocks, extremely powerful applications can be composed and delivered with
+                minimal infrastructure concerns.
+            </p>
+
+            <div class="table-wrapper table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Building Block</th>
+                        <th>AWS</th>
+                        <th>Azure</th>
+                        <th>Google Cloud</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Building Block"><a href="#code-api" class="link">API</a></td>
+                        <td data-label="AWS">Lambda</td>
+                        <td data-label="Azure">Functions</td>
+                        <td data-label="Google Cloud">Cloud Functions</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Building Block"><a href="#code-bucket" class="link">Storage</a></td>
+                        <td data-label="AWS">S3</td>
+                        <td data-label="Azure">Blob Storage</td>
+                        <td data-label="Google Cloud">Cloud Storage</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Building Block"><a href="#code-table" class="link">Data Storage</a></td>
+                        <td data-label="AWS">DynamoDB</td>
+                        <td data-label="Azure">Cosmos DB</td>
+                        <td data-label="Google Cloud">Cloud Datatable</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Building Block"><a href="#code-timer" class="link">Timer</a></td>
+                        <td data-label="AWS">CloudWatch</td>
+                        <td data-label="Azure">Monitor</td>
+                        <td data-label="Google Cloud">Stackdriver Monitoring</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Building Block"><a href="#code-queue" class="link">Queue</a></td>
+                        <td data-label="AWS">SQS</td>
+                        <td data-label="Azure">Queue Storage</td>
+                        <td data-label="Google Cloud">Cloud Pub/Sub</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Building Block"><a href="#code-topic" class="link">Topic</a></td>
+                        <td data-label="AWS">SNS</td>
+                        <td data-label="Azure">Queue Storage</td>
+                        <td data-label="Google Cloud">Cloud Pub/Sub</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <p>Pulumi makes it simple to interact with serverless services available from the major cloud vendors, and with Kubernetes.</p>
+        </div>
+    </section>
+    <section id="code" class="py-16 px-4">
+        {{ range .Params.examples }}
+            <div id="{{ .id }}" class="container md:mx-auto md:flex md:my-12">
+                <div class="md:w-1/2 md:pr-24">
+                    <h3>{{ .title }}</h3>
+                    <p>
+                        {{ .body | markdownify | safeHTML }}
+                    </p>
+                    <p class="my-8">
+                        <a data-track="cta-get-started" class="btn btn-primary btn-xl" href="{{ site.Params.cta.primary.href }}" data-role="cta-get-started">
+                            {{ site.Params.cta.primary.label }}
+                        </a>
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+        {{ end }}
+    </section>
+
+    <section id="templates" class="py-16 px-4">
+        <div class="container md:mx-auto md:max-w-4xl text-center">
+            <h3>Deploy with a serverless template</h3>
+            <p>
+                Pulumi serverless application templates provide a complete starting point for a serverless application
+                on AWS, Azure, or Google Cloud. Each template provisions the cloud functions, storage, and supporting
+                resources you need, so you can focus on your application code.
+            </p>
+        </div>
+        <div class="container mx-auto max-w-4xl mt-8">
+            <div class="tiles flex-wrap mt-4">
+                <div class="pb-4 md:pr-4 md:w-1/3">
+                    <a class="tile p-8" href="/dev/templates/serverless-application/aws/">
+                        <img class="h-10 mx-auto" src="/logos/tech/aws.svg" alt="" />
+                        <p class="text-center mt-4">Deploy on AWS</p>
+                    </a>
+                </div>
+                <div class="pb-4 md:pr-4 md:w-1/3">
+                    <a class="tile p-8" href="/dev/templates/serverless-application/azure/">
+                        <img class="h-10 mx-auto" src="/logos/tech/azure.svg" alt="" />
+                        <p class="text-center mt-4">Deploy on Azure</p>
+                    </a>
+                </div>
+                <div class="pb-4 md:w-1/3">
+                    <a class="tile p-8" href="/dev/templates/serverless-application/gcp/">
+                        <img class="h-10 mx-auto" src="/logos/tech/gcp.svg" alt="" />
+                        <p class="text-center mt-4">Deploy on Google Cloud</p>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center mt-8">
+                <a href="/dev/templates/serverless-application/">Browse all serverless templates &rarr;</a>
+            </p>
+        </div>
+    </section>
+
+    {{ partial "how-pulumi-works.html" . }}
+
+    {{ partial "get-started.html" . }}
+
+    {{ partial "hand-raise-section" . }}
+{{ end }}

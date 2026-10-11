@@ -1,0 +1,183 @@
+{{/* Map technology terms to their Wikipedia/Wikidata URIs for entity disambiguation */}}
+{{ $entities := slice }}
+
+{{/* Get aggregated content using the content aggregator */}}
+{{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+{{ $effectiveContent := $aggregatedContent.content }}
+
+{{ $content := lower $effectiveContent }}
+{{ $title := lower .Title }}
+
+
+{{/* Container & Orchestration */}}
+{{ if or (in $content "kubernetes") (in $content "k8s") (in $title "kubernetes") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://en.wikipedia.org/wiki/Kubernetes"
+    "name" "Kubernetes"
+    "alternateName" "K8s"
+    "sameAs" "https://www.wikidata.org/wiki/Q22661306"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "docker") (in $title "docker") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://en.wikipedia.org/wiki/Docker_(software)"
+    "name" "Docker"
+    "sameAs" "https://www.wikidata.org/wiki/Q15206305"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "terraform") (in $title "terraform") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://en.wikipedia.org/wiki/Terraform_(software)"
+    "name" "Terraform"
+    "sameAs" "https://www.wikidata.org/wiki/Q30273653"
+  ) }}
+{{ end }}
+
+{{/* Programming Languages */}}
+{{ if or (in $content "typescript") (in $title "typescript") }}
+  {{ $entities = $entities | append (dict
+    "@type" "ComputerLanguage"
+    "@id" "https://en.wikipedia.org/wiki/TypeScript"
+    "name" "TypeScript"
+    "sameAs" "https://www.wikidata.org/wiki/Q978185"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "python") (in $title "python") }}
+  {{ $entities = $entities | append (dict
+    "@type" "ComputerLanguage"
+    "@id" "https://en.wikipedia.org/wiki/Python_(programming_language)"
+    "name" "Python"
+    "sameAs" "https://www.wikidata.org/wiki/Q28865"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "javascript") (in $title "javascript") }}
+  {{ $entities = $entities | append (dict
+    "@type" "ComputerLanguage"
+    "@id" "https://en.wikipedia.org/wiki/JavaScript"
+    "name" "JavaScript"
+    "sameAs" "https://www.wikidata.org/wiki/Q2005"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "golang") (in $content "go programming") (in $title "go ") }}
+  {{ $entities = $entities | append (dict
+    "@type" "ComputerLanguage"
+    "@id" "https://en.wikipedia.org/wiki/Go_(programming_language)"
+    "name" "Go"
+    "alternateName" "Golang"
+    "sameAs" "https://www.wikidata.org/wiki/Q37227"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "java ") (in $content "java.") (in $title "java") }}
+  {{ $entities = $entities | append (dict
+    "@type" "ComputerLanguage"
+    "@id" "https://en.wikipedia.org/wiki/Java_(programming_language)"
+    "name" "Java"
+    "sameAs" "https://www.wikidata.org/wiki/Q251"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "csharp") (in $content "c#") (in $title "c#") }}
+  {{ $entities = $entities | append (dict
+    "@type" "ComputerLanguage"
+    "@id" "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
+    "name" "C#"
+    "alternateName" "CSharp"
+    "sameAs" "https://www.wikidata.org/wiki/Q2370"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "yaml") (in $title "yaml") }}
+  {{ $entities = $entities | append (dict
+    "@type" "ComputerLanguage"
+    "@id" "https://en.wikipedia.org/wiki/YAML"
+    "name" "YAML"
+    "sameAs" "https://www.wikidata.org/wiki/Q281876"
+  ) }}
+{{ end }}
+
+{{/* DevOps & CI/CD */}}
+{{ if or (in $content "github actions") (in $title "github actions") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://en.wikipedia.org/wiki/GitHub#GitHub_Actions"
+    "name" "GitHub Actions"
+    "sameAs" "https://www.wikidata.org/wiki/Q95990850"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "gitlab") (in $title "gitlab") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://en.wikipedia.org/wiki/GitLab"
+    "name" "GitLab"
+    "sameAs" "https://www.wikidata.org/wiki/Q16639197"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "jenkins") (in $title "jenkins") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://en.wikipedia.org/wiki/Jenkins_(software)"
+    "name" "Jenkins"
+    "sameAs" "https://www.wikidata.org/wiki/Q7491312"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "circleci") (in $title "circleci") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "name" "CircleCI"
+    "sameAs" "https://www.wikidata.org/wiki/Q64110864"
+  ) }}
+{{ end }}
+
+{{/* Databases */}}
+{{ if or (in $content "postgresql") (in $content "postgres") (in $title "postgres") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://en.wikipedia.org/wiki/PostgreSQL"
+    "name" "PostgreSQL"
+    "alternateName" "Postgres"
+    "sameAs" "https://www.wikidata.org/wiki/Q192490"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "mysql") (in $title "mysql") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://en.wikipedia.org/wiki/MySQL"
+    "name" "MySQL"
+    "sameAs" "https://www.wikidata.org/wiki/Q850"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "mongodb") (in $title "mongodb") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://en.wikipedia.org/wiki/MongoDB"
+    "name" "MongoDB"
+    "sameAs" "https://www.wikidata.org/wiki/Q1165204"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "redis") (in $title "redis") }}
+  {{ $entities = $entities | append (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://en.wikipedia.org/wiki/Redis"
+    "name" "Redis"
+    "sameAs" "https://www.wikidata.org/wiki/Q2136322"
+  ) }}
+{{ end }}
+
+
+
+{{ return $entities }}

@@ -1,0 +1,36 @@
+{{- /*
+  Shared dropdown item link with icon, label, and optional description.
+  Used by both the desktop nav-popup and the mobile sheet collapsible panels.
+
+  Parameters:
+    item    — item object: { href, label, icon, iconWeight?, description?, track?, overline?, promo? }
+              overline — small label rendered above the item label
+              promo    — renders the item as a tinted promo tile with a line accent, in place of the icon
+    variant — "desktop" or "mobile"
+*/ -}}
+{{- $item := .item -}}
+{{- $isMobile := eq .variant "mobile" -}}
+<a href="{{ $item.href }}"
+  {{ if $isMobile }}data-nav-sheet-close{{ end }}
+  {{ if $item.promo }}data-nav-promo{{ end }}
+  {{ with $item.track }}data-track="{{ . }}"{{ end }}
+  class="group flex rounded-md outline-none transition-all focus-visible:ring-3 focus-visible:ring-violet-400/50 {{ if $item.promo }}relative h-full flex-col justify-end overflow-hidden bg-violet-background p-5 hover:bg-violet-muted/50 focus-visible:bg-violet-muted/50{{ else }}flex-row items-start gap-3 p-3 hover:bg-violet-50 focus-visible:bg-violet-50{{ end }}">
+  {{ if $item.promo }}
+    <span aria-hidden="true"
+      class="absolute inset-0 bg-lines-top-right bg-no-repeat bg-right-top bg-[length:220px_auto] opacity-50"></span>
+  {{ else }}
+    <span aria-hidden="true"
+      class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-md border border-gray-200 group-hover:border-violet-200 text-violet-700">
+      {{ partial "icon.html" (dict "name" $item.icon "weight" (default "regular" $item.iconWeight) "class" "size-6") }}
+    </span>
+  {{ end }}
+  <span class="flex min-w-0 flex-col {{ if $item.promo }}relative gap-1 {{ if $isMobile }}max-w-[65%]{{ end }}{{ else }}gap-0.5{{ end }}">
+    {{ with $item.overline }}
+      <span class="font-mono text-[0.625rem] leading-none uppercase tracking-wider text-violet-700">{{ . }}</span>
+    {{ end }}
+    <span class="font-semibold text-gray-950 group-hover:text-violet-primary {{ if $item.promo }}text-base leading-snug{{ else }}text-sm{{ end }}">{{ $item.label }}</span>
+    {{ with $item.description }}
+      <span class="text-xs text-gray-600 group-hover:text-gray-800">{{ . }}</span>
+    {{ end }}
+  </span>
+</a>

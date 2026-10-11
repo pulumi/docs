@@ -1,0 +1,13 @@
+.tiles {
+    @apply items-center;
+
+    @include screen-md {
+        @apply flex;
+    }
+
+    .tile {
+        @extend .card;
+        @extend .card-hover;
+        @apply block;
+    }
+}

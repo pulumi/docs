@@ -1,0 +1,27 @@
+{{- /*
+    Shared badge/pill — mono uppercase overline text on a fully-rounded pill.
+    Emits the `.badge` classes defined in theme/src/scss/_badges.scss.
+
+    Params:
+      text    (required) label
+      variant default | brand | secondary | outline | success | warning
+              | destructive | info | dark | ghost  (default: brand)
+      size    "" (default h-5) | sm | lg
+      href    optional → renders a link (with hover/focus); `relative z-10` keeps it
+              clickable above a card's stretched title link
+      icon    optional raw SVG/HTML rendered before the text (safeHTML)
+      track   optional data-track value
+*/ -}}
+{{- $text := .text -}}
+{{- $variant := .variant | default "brand" -}}
+{{- $size := .size -}}
+{{- $href := .href -}}
+{{- $icon := .icon -}}
+{{- $track := .track -}}
+{{- $class := printf "badge badge-%s" $variant -}}
+{{- with $size }}{{ $class = printf "%s badge-%s" $class . }}{{ end -}}
+{{- if $href -}}
+<a href="{{ $href }}"{{ with $track }} data-track="{{ . }}"{{ end }} class="relative z-10 {{ $class }}">{{ with $icon }}{{ . | safeHTML }}{{ end }}{{ $text }}</a>
+{{- else -}}
+<span class="{{ $class }}">{{ with $icon }}{{ . | safeHTML }}{{ end }}{{ $text }}</span>
+{{- end -}}

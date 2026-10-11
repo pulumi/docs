@@ -1,0 +1,21 @@
+name: aws-import-iac-iam-role-yaml
+runtime: yaml
+description: An example that deploys the resource definition for an imported IAM role on AWS.
+resources:
+  importedRole:
+    type: aws:iam:Role
+    name: imported_role
+    properties:
+      name: pulumi-tutorial-iam-role
+      description: Allows Lambda functions to call AWS services on your behalf.
+      assumeRolePolicy:
+        fn::toJSON:
+          Version: 2012-10-17
+          Statement:
+            - Action: sts:AssumeRole
+              Effect: Allow
+              Sid:
+              Principal:
+                Service: lambda.amazonaws.com
+    options:
+      import: pulumi-tutorial-iam-role

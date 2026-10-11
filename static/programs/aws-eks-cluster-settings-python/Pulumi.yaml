@@ -1,0 +1,6 @@
+name: aws-eks-cluster-settings-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example that creates an EKS cluster with modified settings.

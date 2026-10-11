@@ -1,0 +1,44 @@
+name: aws-iam-user-group-grouppolicy-yaml
+runtime: yaml
+description: An example that deploys an IAM user, group, and group policy on AWS.
+
+resources:
+  jane:
+    type: aws:iam:User
+    properties:
+      name: jane
+
+  mary:
+    type: aws:iam:User
+    properties:
+      name: mary
+
+  devs:
+    type: aws:iam:Group
+    properties:
+      name: devs
+      path: /users/
+
+  myDeveloperPolicy:
+    type: aws:iam:GroupPolicy
+    name: my_developer_policy
+    properties:
+      name: my_developer_policy
+      group: ${devs.name}
+      policy:
+        fn::toJSON:
+          Version: 2012-10-17
+          Statement:
+            - Action:
+                - ec2:Describe*
+              Effect: Allow
+              Resource: "*"
+
+  devTeam:
+    type: aws:iam:GroupMembership
+    properties:
+      name: dev-team
+      users:
+        - ${jane.id}
+        - ${mary.id}
+      group: ${devs.name}
