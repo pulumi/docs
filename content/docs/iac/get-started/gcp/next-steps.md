@@ -36,7 +36,7 @@ With Pulumi ESC you can:
 
 - **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
 - **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
-- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud console, and in-code with TypeScript/JavaScript, Python, and Go SDKs.
 
 {{< get-started-next-step path="/docs/esc/get-started/" label="Learn more about Pulumi ESC" ref="gs-gcp-esc" >}}
 
@@ -44,7 +44,7 @@ With Pulumi ESC you can:
 
 Let our Google Cloud tutorials guide you through key Pulumi concepts.
 
-{{< get-started-next-step path="/dev/tutorials/" label="Browse tutorials" ref="gs-gcp-tutorials" >}}
+{{< get-started-next-step path="/dev/browse/cloud/google-cloud/" label="Browse Google Cloud tutorials" ref="gs-gcp-tutorials" >}}
 
 ## Launch a new project with a template
 
@@ -62,4 +62,4 @@ Read more about Pulumi's architecture and foundational concepts in depth, includ
 
 Browse the latest posts on using Pulumi with Google Cloud, including everything from new Google Cloud products and features to technical architectures and best practices.
 
-{{< get-started-next-step path="/blog/tag/google-cloud/" label="Browse Google Cloud posts" ref="gs-gcp-blog" >}}
+{{< get-started-next-step path="/blog/tags/google-cloud/" label="Browse Google Cloud posts" ref="gs-gcp-blog" >}}

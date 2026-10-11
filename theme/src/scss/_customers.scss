@@ -1,0 +1,282 @@
+.case-study-content :is(h2, h3, h4, h5, h6) {
+    scroll-margin-top: 6rem;
+}
+
+.case-study-hero {
+    .case-study-hero-logo {
+        @apply h-8 w-auto;
+    }
+
+    .case-study-hero-quote-panel {
+        @apply bg-white flex-[2];
+    }
+
+    .case-study-hero-stat {
+        @apply font-bold text-black heading-3 leading-relaxed;
+    }
+
+    .case-study-hero-headline {
+        @include section-description();
+        @apply text-gray-800;
+    }
+
+    .case-study-hero-quote {
+        @include section-description();
+        @apply m-0 text-black;
+    }
+
+    .case-study-hero-attrib {
+        @apply font-body mt-4 mb-0 text-gray-600;
+    }
+
+    .case-study-hero-stat-panel {
+        @apply flex-1 bg-violet-50 border-t border-violet-200 flex flex-col justify-center;
+
+        @include screen-md {
+            @apply border-t-0 border-l;
+        }
+    }
+}
+
+.customer-filter-bar {
+    @apply flex min-w-0 flex-col gap-3 md:flex-row md:items-start md:gap-4;
+}
+
+.customer-filter-actions {
+    @apply flex shrink-0 items-center justify-center gap-4 md:justify-start;
+}
+
+.customer-filter-scroll {
+    @apply relative min-w-0 flex-1;
+    @include edge-fade;
+
+    &::before,
+    &::after {
+        @apply opacity-0 transition-opacity duration-200;
+    }
+
+    &.has-overflow-start::before,
+    &.has-overflow-end::after {
+        @apply opacity-100;
+    }
+}
+
+.customer-filter {
+    @apply flex flex-nowrap items-center gap-3 overflow-x-auto;
+    justify-content: safe center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    @include screen-md {
+        justify-content: flex-start;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    > a {
+        @apply shrink-0;
+    }
+}
+
+.customer-filter-bar.is-expanded {
+    .customer-filter {
+        @apply flex-wrap overflow-visible;
+    }
+
+    .customer-filter-expand {
+        @apply hidden;
+    }
+}
+
+.customer-filter-expand {
+    @apply shrink-0 whitespace-nowrap;
+}
+
+.customer-switch {
+    @apply flex h-8 shrink-0 cursor-pointer items-center gap-2 border-0 bg-transparent p-0;
+
+    .customer-switch-track {
+        @apply relative block h-5 w-9 rounded-full bg-gray-300 transition-colors duration-200;
+    }
+
+    .customer-switch-thumb {
+        @apply absolute left-0.5 top-0.5 block size-4 rounded-full bg-white transition-transform duration-200;
+    }
+
+    .customer-switch-label {
+        @apply text-sm whitespace-nowrap text-service-black;
+    }
+
+    &:hover .customer-switch-track {
+        @apply bg-gray-400;
+    }
+
+    &[aria-checked="true"] {
+        .customer-switch-track {
+            @apply bg-violet-primary;
+        }
+
+        .customer-switch-thumb {
+            @apply translate-x-4;
+        }
+
+        .customer-switch-label {
+            @apply text-service-black;
+        }
+    }
+
+    &:focus-visible .customer-switch-track {
+        @apply outline outline-2 outline-offset-2 outline-violet-primary;
+    }
+}
+
+.customer-grid-clip {
+    @apply overflow-hidden;
+}
+
+.customer-grid {
+    @apply -mb-px -mr-px grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+    grid-auto-flow: dense;
+}
+
+.customer-cell {
+    --cell-fill-inset: 0.5rem;
+    --cell-fill-hold: 150ms;
+    --cell-ease: linear;
+    @apply relative flex min-h-36 flex-col justify-center border-b border-r border-gray-200 bg-white;
+
+    &::before {
+        content: '';
+        @apply pointer-events-none absolute inset-0 opacity-0;
+        background-color: var(--customer-color, var(--color-gray-100));
+        transition:
+            inset 220ms var(--cell-ease),
+            border-radius 220ms var(--cell-ease);
+    }
+
+    .customer-cell-logo {
+        --logo-unit: 3.8rem;
+        --logo-cap: 2.9rem;
+        @apply relative flex flex-1 items-center justify-center px-6 py-10;
+    }
+
+    .customer-cell-logo-dark {
+        @apply pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0;
+    }
+
+    .customer-cell-badge {
+        @apply absolute right-4 top-4;
+
+        .badge {
+            @apply transition-none;
+        }
+    }
+
+    &.customer-cell-linked {
+        &:hover::before,
+        &:focus-within::before {
+            @apply rounded-lg opacity-100;
+            inset: var(--cell-fill-inset);
+            transition:
+                inset 150ms var(--cell-ease) var(--cell-fill-hold),
+                border-radius 150ms var(--cell-ease) var(--cell-fill-hold);
+        }
+
+        &:hover,
+        &:focus-within {
+            .customer-cell-logo-light {
+                @apply opacity-0;
+            }
+
+            .customer-cell-logo-dark {
+                @apply opacity-100;
+            }
+        }
+
+        &:hover .badge,
+        &:focus-within .badge {
+            @apply bg-white/15 text-white;
+        }
+
+        &.customer-cell-light-fill:hover .badge,
+        &.customer-cell-light-fill:focus-within .badge {
+            @apply bg-black/10 text-service-black;
+        }
+    }
+}
+
+.customer-cell-testimonial {
+    .customer-cell-logo {
+        --logo-unit: 3.2rem;
+        @apply flex-none items-start justify-start p-0;
+    }
+
+    blockquote,
+    .customer-cell-attrib p {
+        @apply text-service-black;
+    }
+
+    .customer-cell-attrib .body-sm {
+        @apply text-gray-primary;
+    }
+
+    .customer-cell-logo-dark {
+        @apply left-0 top-1/2 translate-x-0;
+    }
+
+    &.customer-cell-linked:not(.customer-cell-light-fill):hover,
+    &.customer-cell-linked:not(.customer-cell-light-fill):focus-within {
+        blockquote,
+        p {
+            @apply text-white;
+        }
+
+        .body-sm {
+            @apply text-white/70;
+        }
+    }
+
+    &.customer-cell-linked.customer-cell-light-fill:hover .body-sm,
+    &.customer-cell-linked.customer-cell-light-fill:focus-within .body-sm {
+        @apply text-black/60;
+    }
+}
+
+.customer-logo-grid {
+    @apply -mb-px -mr-px grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6;
+}
+
+.customer-logo-grid-cell {
+    --logo-unit: 2.9rem;
+    --logo-cap: 2.5rem;
+    @apply flex min-h-24 items-center justify-center border-b border-r border-gray-200 px-4 py-6;
+
+    img {
+        @apply grayscale transition-[filter] duration-200;
+    }
+
+    &:hover img {
+        @apply grayscale-0;
+    }
+}
+
+.case-study-card-logo {
+    --logo-unit: 5.2rem;
+    --logo-cap: 3.25rem;
+}
+
+.customer-logo-row {
+    --logo-unit: 3.6rem;
+    --logo-cap: 3.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .customer-cell::before,
+    .customer-cell.customer-cell-linked:hover::before,
+    .customer-cell.customer-cell-linked:focus-within::before {
+        transition-duration: 1ms;
+        transition-delay: 0s;
+    }
+}

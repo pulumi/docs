@@ -14,15 +14,11 @@
                     </ul>
 
                     <div class="flex flex-wrap justify-center items-center mt-12 max-w-lg">
-                        {{ range $logo := .Params.customer_logos.logos }}
+                        {{ range $id := .Params.customer_logos.logos }}
                             <div class="w-1/4 p-3">
-                                {{ if $logo.link }}
-                                    <a href="{{ relref $pageContext $logo.link }}">
-                                        {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                                    </a>
-                                {{ else }}
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                                {{ end }}
+                                <a href="{{ partial "customers/href.html" $id }}">
+                                    {{ partial "customer-logo.html" (dict "customer" $id "hoverable" true) }}
+                                </a>
                             </div>
                         {{ end }}
                     </div>

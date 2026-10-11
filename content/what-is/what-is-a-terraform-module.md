@@ -208,7 +208,7 @@ export class S3Bucket extends pulumi.ComponentResource {
 
 Because a component is ordinary code, you get the reuse tools of the host language for free: loops, conditionals, functions, unit tests with your normal test framework, and package managers (npm, PyPI, NuGet, Maven) for distribution. A component packaged as a [Pulumi package](/docs/iac/concepts/packages/) can be published with a Pulumi plugin so that Pulumi generates SDKs for it in every supported language, letting a component authored in one language be consumed from another.
 
-Pulumi also interoperates with the Terraform ecosystem rather than replacing it. You can [consume an existing Terraform module directly from a Pulumi program](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), which lets teams reuse modules they've already written while adopting Pulumi. For a side-by-side of the two tools' models and terminology, see the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/).
+Pulumi also interoperates with the Terraform ecosystem rather than replacing it. You can [consume an existing Terraform module directly from a Pulumi program](/docs/integrations/terraform/modules/), which lets teams reuse modules they've already written while adopting Pulumi. For a side-by-side of the two tools' models and terminology, see the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/).
 
 | Aspect | Terraform module | Pulumi component |
 |---|---|---|
@@ -253,18 +253,18 @@ Both encapsulate a group of resources behind inputs and outputs. A Terraform mod
 
 ### Can you use Terraform modules with Pulumi?
 
-Yes. Pulumi can consume an existing Terraform module directly from a Pulumi program, so teams can reuse modules they've already written while adopting Pulumi's programming model. See the guide on [using a Terraform module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+Yes. Pulumi can consume an existing Terraform module directly from a Pulumi program, so teams can reuse modules they've already written while adopting Pulumi's programming model. See the guide on [using a Terraform module in Pulumi](/docs/integrations/terraform/modules/).
 
 ## Learn more
 
-Terraform modules and Pulumi components solve the same reuse problem with different tools: one uses a configuration language and a public registry, the other uses general-purpose programming languages and their package ecosystems. If you're evaluating both, the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/) maps the concepts side by side, and you can [use your existing Terraform modules from Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) without rewriting them.
+Terraform modules and Pulumi components solve the same reuse problem with different tools: one uses a configuration language and a public registry, the other uses general-purpose programming languages and their package ecosystems. If you're evaluating both, the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/) maps the concepts side by side, and you can [use your existing Terraform modules from Pulumi](/docs/integrations/terraform/modules/) without rewriting them.
 
 Related reading:
 
 * [Pulumi components](/docs/iac/concepts/components/)
 * [Pulumi packages](/docs/iac/concepts/packages/)
 * [Pulumi resources](/docs/iac/concepts/resources/)
-* [Use a Terraform module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/)
+* [Use a Terraform module in Pulumi](/docs/integrations/terraform/modules/)
 * [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/)
 * [Pulumi IaC concepts](/docs/iac/concepts/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)

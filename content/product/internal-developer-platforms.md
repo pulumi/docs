@@ -29,7 +29,7 @@ sections:
       - icon: rocket
         title: Ship faster
         description: |
-          Golden paths and reusable components get engineers from idea to production in minutes.
+          Golden paths and reusable components let developers provision approved infrastructure on demand.
       - icon: shield-check
         title: Engineer-friendly governance
         description: |
@@ -101,7 +101,7 @@ sections:
     highlight_first_card: true
     columns:
       - title: Start building your platform today
-        description: Build your internal developer platform with Pulumi Cloud. Start with our free tier and scale when you need enterprise features.
+        description: Build your internal developer platform with Pulumi Cloud. Start with the Free edition and scale when you need enterprise features.
         cta_primary_text: Get Started with Pulumi
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo

@@ -5,20 +5,23 @@
     Renders on a violet-100 background with a decorative SVG.
 
     Parameters:
-    - quote: Testimonial quote (supports markdown)
-    - author: Author name (e.g. "Austin Byers")
-    - title: Author title/role (e.g. "Principal Platform Engineer")
-    - company: Company name (for logo alt)
-    - logo: Logo path (displayed in right column)
+    - customer: Customer id from data/customers.yaml. Supplies the logo and the
+      company name; also supplies the quote, author, and title when the section
+      doesn't set its own.
+    - quote: Testimonial quote (supports markdown). Page-specific — a product
+      page quotes the customer on that product. Omit to fall back to the
+      customer's canonical `quote:` in the registry.
+    - author: Author name (e.g. "Austin Byers"). Same fallback.
+    - title: Author title/role (e.g. "Principal Platform Engineer"). Same fallback.
     - background: Optional background variant — 1 or 2 (defaults to 1)
     - anchor: Optional anchor for section id
 */}}
 
-{{ $quote := .quote }}
-{{ $author := .author }}
-{{ $title := .title }}
-{{ $company := .company }}
-{{ $logo := .logo }}
+{{ $customer := partial "customers/get.html" (dict "id" .customer "where" "template-testimonial.html") }}
+{{ $fallback := $customer.quote | default dict }}
+{{ $quote := .quote | default $fallback.text }}
+{{ $author := .author | default $fallback.author }}
+{{ $title := .title | default $fallback.title }}
 {{ $bg := .background | default 1 }}
 {{ $anchor := .anchor }}
 
@@ -32,11 +35,9 @@
             {{ end }}
         </div>
         <div class="flex flex-col items-start lg:items-end lg:w-[25%] lg:min-w-[280px] flex-shrink-0">
-            {{ if $logo }}
             <div class="template-testimonial-logo mb-6">
-                {{ partial "fingerprinted-img.html" (dict "src" $logo "alt" $company) }}
+                {{ partial "customer-logo.html" (dict "customer" $customer.id) }}
             </div>
-            {{ end }}
             {{ if $author }}
             <p class="text-black font-bold m-0 mb-1 text-xl">{{ $author }}</p>
             {{ end }}

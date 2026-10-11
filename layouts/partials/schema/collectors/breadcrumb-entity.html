@@ -3,6 +3,11 @@
 {{ $breadcrumbs := slice }}
 {{ $position := 0 }}
 
+{{/* Blog category/tag/series/author term pages. Hugo sets a term page's .Type
+     to its taxonomy ("tags", "category", ...), not "blog", so these need their
+     own check to get the Blog crumb their visible "Blog / ..." header shows. */}}
+{{ $isBlogTerm := and (eq .Kind "term") (in (slice "category" "tag" "series" "author") .Data.Singular) }}
+
 {{/* Home is the first item for most page types, but skipped for what-is to match visible breadcrumb */}}
 {{ if ne .Type "what-is" }}
   {{ $position = add $position 1 }}
@@ -37,7 +42,7 @@
     ) }}
   {{ end }}
 
-{{ else if eq .Type "blog" }}
+{{ else if or (eq .Type "blog") $isBlogTerm }}
   {{ $position = add $position 1 }}
   {{ $breadcrumbs = $breadcrumbs | append (dict
     "@type" "ListItem"
@@ -261,28 +266,28 @@
     ) }}
   {{ end }}
 
-{{/* Case studies: mirror layouts/case-studies/single.html, which adds an
-     industry crumb (looked up from data/case_study_industries.yaml) between
-     "Case Studies" and the page itself. */}}
-{{ else if eq .Section "case-studies" }}
+{{/* Case studies: mirror layouts/customers/single.html, which adds an
+     industry crumb (looked up from data/customers_industries.yaml) between
+     "Customers" and the page itself. */}}
+{{ else if eq .Section "customers" }}
   {{ $position = add $position 1 }}
   {{ $breadcrumbs = $breadcrumbs | append (dict
     "@type" "ListItem"
     "position" $position
-    "name" "Case Studies"
-    "item" "https://www.pulumi.com/case-studies/"
+    "name" "Customers"
+    "item" "https://www.pulumi.com/customers/"
   ) }}
 
   {{ with .Params.industry }}
     {{ $industry := . }}
-    {{ range site.Data.case_study_industries.industries }}
+    {{ range site.Data.customers_industries.industries }}
       {{ if eq .id $industry }}
         {{ $position = add $position 1 }}
         {{ $breadcrumbs = $breadcrumbs | append (dict
           "@type" "ListItem"
           "position" $position
           "name" .name
-          "item" (printf "https://www.pulumi.com/case-studies/industry/%s/" $industry)
+          "item" (printf "https://www.pulumi.com/customers/industry/%s/" $industry)
         ) }}
       {{ end }}
     {{ end }}
@@ -315,7 +320,7 @@
   ) }}
 {{ end }}
 
-{{/* A section's own index page (e.g. /docs/, /product/, /case-studies/, the new
+{{/* A section's own index page (e.g. /docs/, /product/, /customers/, the new
      /events/, /security/, etc.) already gets a crumb pointing at itself from the
      logic above; appending a second "current page" crumb for that same page
      produces a duplicate node (e.g. "Home > Documentation > Documentation" on
@@ -330,13 +335,17 @@
   {{ end }}
 {{ end }}
 
-{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb. Skipped for what-is single pages, which terminate on their section above instead of repeating the title, and for section index pages already represented by the crumb immediately above. */}}
+{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb; on a blog term page, use the short display name from blog/term-name.html ("Best Practices", "Kubernetes") instead of Hugo's slug-derived term title, since the Blog crumb above already gives it context. Skipped for what-is single pages, which terminate on their section above instead of repeating the title, and for section index pages already represented by the crumb immediately above. */}}
 {{ if and (not (and (eq .Type "what-is") .IsPage)) (not $lastCrumbIsSelf) }}
   {{ $position = add $position 1 }}
+  {{ $crumbName := or .Params.page_title .Title }}
+  {{ if and $isBlogTerm (not .Params.page_title) }}
+    {{ $crumbName = partial "blog/term-name.html" . }}
+  {{ end }}
   {{ $breadcrumbs = $breadcrumbs | append (dict
     "@type" "ListItem"
     "position" $position
-    "name" (or .Params.page_title .Title)
+    "name" $crumbName
   ) }}
 {{ end }}
 

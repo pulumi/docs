@@ -25,7 +25,7 @@ aliases:
     - /docs/cli
 ---
 
-Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi Cloud
+Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with Pulumi Cloud
 to deploy changes to your cloud apps and infrastructure. It keeps a history of who updated what in your team and when.
 This CLI has been designed for great inner loop productivity, in addition to
 [continuous integration and delivery](/docs/iac/operations/continuous-delivery/) scenarios.

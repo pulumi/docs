@@ -1,8 +1,8 @@
 ---
-title_tag: What is Pulumi?
-meta_desc: Learn about what Pulumi is, how it works, and how its components work together to deliver a robust platform for creating and managing cloud infrastructure.
+title_tag: Pulumi Concepts and Architecture
+meta_desc: Learn how Pulumi's SDK, CLI, deployment engine, providers, and Pulumi Cloud work together to provision and manage cloud infrastructure as code.
 title: Concepts
-h1: What is Pulumi?
+h1: Concepts
 menu:
     iac:
         name: Concepts

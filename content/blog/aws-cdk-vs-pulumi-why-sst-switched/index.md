@@ -8,7 +8,7 @@ title: "AWS CDK vs Pulumi: Why SST Chose Pulumi"
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 date: 2024-09-25T07:32:40Z
-updated: 2025-03-05
+updated: 2026-09-21
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -156,7 +156,7 @@ One of Pulumi's most significant benefits for SST users is the simplified mental
 Instead of having to navigate the complexities of intermediary formats, deployment pipelines, and the separation between infrastructure code and deployment code, SST users can now focus on writing their infrastructure logic in the same programming languages they use for their application code. This makes it much easier for them to understand, maintain, and extend their infrastructure as their needs evolve.
 
 {{< blog/cta-card title="Build across any cloud with Pulumi" >}}
-Define your infrastructure in TypeScript, Python, Go, or C#, and deploy it across AWS, Azure, Google Cloud, and on-premises environments from one consistent workflow.
+Define your infrastructure in TypeScript, JavaScript, Python, Go, .NET, or Java, and deploy it across AWS, Azure, Google Cloud, and on-premises environments from one consistent workflow.
 {{< /blog/cta-card >}}
 
 ## The Future of SST with Pulumi
@@ -165,7 +165,7 @@ With Pulumi's foundation in place, they can now focus on further enhancing the d
 
 - **Deeper Integration with Application Frameworks**: By leveraging Pulumi's flexibility, they can create even tighter integrations between SST and the application frameworks and libraries that their users rely on, making managing infrastructure seamless alongside their application code.
 - **Expanded Provider Support**: the SST team will continue to add support for a wide range of cloud and on-premises providers, ensuring that their users can deploy and manage their infrastructure wherever it makes the most sense for their needs.
-- **Improved Deployment Workflows**: Building on Pulumi's extensibility, they can create [more advanced deployment workflows](https://www.pulumi.com/docs/pulumi-cloud/deployments/) that address the specific needs of application developers, such as faster deployment times, better rollback capabilities, and more granular control over the deployment process.
+- **Improved Deployment Workflows**: Building on Pulumi's extensibility, they can create [more advanced deployment workflows](/docs/deployments/concepts/) that address the specific needs of application developers, such as faster deployment times, better rollback capabilities, and more granular control over the deployment process.
 - **Enhanced Observability and Monitoring**: By treating the infrastructure code as a first-class program, they can provide their users with [better visibility](https://www.pulumi.com/product/pulumi-insights/) into the deployment process and more robust monitoring and observability capabilities, helping them to identify and resolve issues quickly.
 
 As the SST team continues to evolve with Pulumi at its core, they aim to deliver an even more powerful and user-friendly infrastructure management experience for developers. This will empower teams to focus on building great applications while effortlessly managing the underlying infrastructure.
@@ -174,7 +174,7 @@ As the SST team continues to evolve with Pulumi at its core, they aim to deliver
 
 If you're interested in exploring Pulumi further, here are several ways to get involved:
 
-- Discover how Pulumi Crosswalk for AWS simplifies “day one” tasks in our [AWS guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/)
+- Discover how Pulumi Crosswalk for AWS simplifies “day one” tasks in our [AWS guide](/docs/iac/guides/clouds/aws/)
 - Watch our on-demand workshop [Getting Stated with Infrastructure as Code on AWS](https://www.pulumi.com/resources/getting-started-with-iac-pulumi-aws/)
 - Register for one of our upcoming [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming)
 - But most importantly, [try Pulumi](https://app.pulumi.com/signup) today!

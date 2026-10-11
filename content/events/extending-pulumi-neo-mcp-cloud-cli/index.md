@@ -17,20 +17,11 @@ unlisted: false
 # to fill out the form before viewing.
 gated: true
 
-# External events will link to an external page instead of an event
-# landing/registration page.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page.
-url_slug: extending-pulumi-neo-mcp-cloud-cli
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
 # URL for embedding a URL for ungated events.
-youtube_url:
-
+youtube_url: https://www.youtube.com/embed/LxUHQgf6caM
 # Sortable date. The datetime Hugo will use to sort the events in date order.
 # With sessions below, this is the earliest session's date.
 sortable_date: 2026-09-08T09:00:00.000-07:00

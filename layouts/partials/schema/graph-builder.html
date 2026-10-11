@@ -10,7 +10,7 @@
      appended to $graph. */}}
 {{ $hasParts := slice }}
 
-{{/* Author archive term pages (/blog/author/{slug}/) get ProfilePage instead
+{{/* Author archive term pages (/blog/authors/{slug}/) get ProfilePage instead
      of WebPage per Google's profile-page structured-data guidance
      (https://developers.google.com/search/docs/appearance/structured-data/profile-page),
      and their name/headline needs to be the person's real name rather than
@@ -22,11 +22,18 @@
 {{/* Create WebPage/ProfilePage entity as the main container.
      name uses the same title_tag-then-.Title precedence head.html uses for
      the <title> tag (minus its " | Pulumi …" suffix), not the short sidebar
-     nav label — except on an author term page, where it's the real name. */}}
+     nav label. Blog category/tag/series term pages have no title_tag and a
+     slug-derived .Title ("Best-Practices"), so they get the display name from
+     blog/term-name.html (the same lookup <title> and og:title use), prefixed
+     with the kind of page ("Pulumi Blog tag: Kubernetes") so the name doesn't
+     read as a page about that topic. Author term pages are ProfilePages and
+     are named after the person alone. */}}
 {{ $pageName := or .Params.title_tag .Title }}
-{{ if $isAuthorTerm }}
-  {{ with index site.Data.team.team .Data.Term }}
-    {{ $pageName = .name }}
+{{ if and (eq .Kind "term") (not .Params.title_tag) }}
+  {{ if in (slice "category" "tag" "series") .Data.Singular }}
+    {{ $pageName = printf "Pulumi Blog %s: %s" .Data.Singular (partial "blog/term-name.html" .) }}
+  {{ else if eq .Data.Singular "author" }}
+    {{ $pageName = partial "blog/term-name.html" . }}
   {{ end }}
 {{ end }}
 {{ $webpage := dict
@@ -88,7 +95,11 @@
 {{ $mainEntity := partial "schema/collectors/main-entity.html" . }}
 {{ if $mainEntity }}
   {{ $graph = $graph | append $mainEntity }}
-  {{ $webpage = merge $webpage (dict "mainEntity" (dict "@id" "#main-content")) }}
+  {{ $mainEntityID := "#main-content" }}
+  {{ if $isAuthorTerm }}
+    {{ $mainEntityID = or (index $mainEntity "@id") "#main-content" }}
+  {{ end }}
+  {{ $webpage = merge $webpage (dict "mainEntity" (dict "@id" $mainEntityID)) }}
 {{ end }}
 
 {{/* Collect comparison table schema before finalizing WebPage so hasPart can be wired */}}

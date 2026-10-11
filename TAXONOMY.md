@@ -107,7 +107,7 @@ Teams:
 
 **Definition:** Customer success narratives — who they are, what problem they had, how Pulumi solved it, with quotes and metrics.
 
-- **Lives at:** `content/case-studies/`
+- **Lives at:** `content/customers/`
 - **Owns:** Marketing
 - **Contributes:** Sales/CS (customer relationships), Community Eng
 - **Consumes:** Buyers seeking social proof
@@ -116,7 +116,7 @@ Teams:
 
 **Definition:** Template-driven pages that sell — product pages, solution pages, pricing, comparison/topic landing pages, and ad-campaign landing pages.
 
-- **Lives at:** `content/product/`, `content/solutions/`, `content/topics/`, `content/pricing/`, `content/why-pulumi/`, `content/gads/`, and ~20 similar campaign directories
+- **Lives at:** `content/product/`, `content/solutions/`, `content/topics/`, `content/why-pulumi/`, `content/gads/`, and ~20 similar campaign directories
 - **Owns:** Marketing
 - **Contributes:** Eng/Product (feature accuracy), Docs (technical review)
 - **Consumes:** Evaluators and buyers
@@ -166,7 +166,7 @@ Teams:
 | Reference | Exhaustive lookup material | `content/docs/reference/`, generated CLI docs | Docs + Eng/Product | Eng/Product | Practitioners |
 | Topics | Adjacent, industry-relevant educational content ("what is X") | `content/what-is/` | Marketing | Docs, Community Eng | Learners, evaluators |
 | Blog posts | Point-in-time posts; historical | `content/blog/` | Marketing | Everyone | Community |
-| Case studies | Customer success stories | `content/case-studies/` | Marketing | Sales/CS, Community Eng | Buyers |
+| Customers | The customer registry and their case studies | `content/customers/` | Marketing | Sales/CS, Community Eng | Buyers |
 | Product/campaign pages | Pages that sell | `content/product/`, `solutions/`, `gads/`, … | Marketing | Eng/Product, Docs | Evaluators, buyers |
 | Events & workshops | Registration/recap pages | `content/events/` | Marketing + Community Eng | — | Community, prospects |
 | Releases & changelog | Dated record of what shipped | `content/releases/` | Marketing | Eng/Product, Docs | Existing and prospective users |
@@ -182,7 +182,7 @@ The "guides" collision described at the top of this document has been resolved a
    - The things we currently call "the Getting Started guides" (`content/docs/*/get-started/`). We'll try to call these the Getting Started *tutorials* going forward — that's what they are in the Diátaxis sense.
    - The things that live at [pulumi.com/dev/tutorials](https://www.pulumi.com/dev/tutorials/). The content at pulumi.com/guides is being folded selectively into these.
 1. **Tutorials are Marketing-owned** (specifically Technical Content Marketing), with contribution from everyone welcome.
-1. **The hub at `/dev` has shipped.** It pulls together tutorials, templates, community examples, and a glossary, alongside blog posts categorized [as tutorials](https://www.pulumi.com/blog/category/tutorials/), series, workshops, and Academy programs. Like the Registry and pulumi.com/guides, it is served by a separate web app (pulumi/marketing-web) rather than this repo; `infrastructure/index.ts` proxies `/dev*` to it.
+1. **The hub at `/dev` has shipped.** It pulls together tutorials, templates, community examples, and a glossary, alongside blog posts categorized [as tutorials](https://www.pulumi.com/blog/categories/tutorials/), series, workshops, and Academy programs. Like the Registry and pulumi.com/guides, it is served by a separate web app (pulumi/marketing-web) rather than this repo; `infrastructure/index.ts` proxies `/dev*` to it.
 
 Open items:
 

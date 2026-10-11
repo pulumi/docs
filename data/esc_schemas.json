@@ -1548,8 +1548,7 @@
                 ],
                 "type": "object"
               }
-            ],
-            "type": ""
+            ]
           }
         },
         "required": [

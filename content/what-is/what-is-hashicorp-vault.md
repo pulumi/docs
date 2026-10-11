@@ -6,7 +6,7 @@ meta_desc: |
 type: what-is
 date: 2023-11-21T11:28:23-08:00
 page_title: "What is HashiCorp Vault?"
-authors: ["james-denyer"]
+authors: ["pulumi-content-team"]
 ---
 ### What is HashiCorp Vault?
 

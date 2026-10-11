@@ -41,6 +41,7 @@ and `claims/`):
      "findings": [{"id": "f3", "label": ..., "source": ..., "detail": ...,
                    "category": ..., "line_range": ..., "fix_candidate": bool,
                    "applied": bool,
+                   "severity": "<readthrough severity_hint; absent otherwise>",
                    "finding": "<the label — what was found>",
                    "prior_disposition": {"status": "applied|deferred|superseded",
                                          "reason": "<the model's one-liner, if any>",
@@ -291,7 +292,7 @@ def mark_applied(findings: list[dict], verdict: dict | None) -> list[dict]:
         else:
             label = str(f.get("label") or "").strip().lower()
             hit = any(p and label and (p in label or label[:60] in p) for p in pointers)
-        out.append({
+        rec = {
             "id": f"f{i + 1}",
             "label": f.get("label", ""),
             "source": f.get("source", ""),
@@ -300,7 +301,10 @@ def mark_applied(findings: list[dict], verdict: dict | None) -> list[dict]:
             "line_range": f.get("line_range", ""),
             "fix_candidate": bool(f.get("fix")),
             "applied": hit,
-        })
+        }
+        if f.get("severity"):
+            rec["severity"] = f["severity"]
+        out.append(rec)
     return out
 
 
@@ -442,6 +446,8 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
             "fix_candidate": bool(f.get("fix")),
             "applied": i in applied_idx,
         }
+        if f.get("severity"):
+            rec["severity"] = f["severity"]
         bid = marked_by.get(i) or declined_by.get(i)
         if bid:
             rec["_backlog_id"] = bid
@@ -537,7 +543,8 @@ def self_test() -> int:
         {"label": "Vale wordiness (L200): 'all of' is too wordy.", "source": "vale",
          "category": "vale", "line_range": "L200", "fix": False},
         {"label": "Readthrough missing-step (L636-640)", "source": "readthrough pass",
-         "category": "readthrough", "line_range": "L636-640", "fix": True},
+         "category": "readthrough", "line_range": "L636-640", "fix": True,
+         "severity": "blocker"},
         {"label": "Frontmatter alias collision: `/docs/old-path/`",
          "source": "`.frontmatter-validation.json`", "category": "frontmatter",
          "line_range": "", "fix": True},
@@ -578,6 +585,9 @@ def self_test() -> int:
           applied({"category": "claim", "lines": "nope", "source": ""}) == [False] * 5)
     check("ids are stable and 1-based",
           [f["id"] for f in mark_applied(F, None)] == ["f1", "f2", "f3", "f4", "f5"])
+    check("readthrough severity survives onto the record; absent elsewhere",
+          mark_applied(F, None)[3].get("severity") == "blocker"
+          and "severity" not in mark_applied(F, None)[0])
     check("fix_candidate and location survive onto the record",
           mark_applied(F, None)[3]["line_range"] == "L636-640"
           and mark_applied(F, None)[3]["category"] == "readthrough")

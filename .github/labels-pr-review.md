@@ -14,8 +14,8 @@ Every triaged PR carries exactly one of these, `domain:other` included, so **the
 |---|---|---|
 | `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/what-is/`). |
 | `domain:blog` | `a2eeef` | PR touches blog posts or customer stories (`content/blog/`, `content/case-studies/`). |
-| `domain:infra` | `d4c5f9` | PR touches the build and deploy pipeline: workflows, scripts, infrastructure code, Makefile, build/bundling config. The v3 matrix routes it to the tools team and requires a staging run. |
-| `domain:frontend` | `7057ff` | PR touches the site's rendering layer: `layouts/`, `theme/`, `assets/`, `static/` (except programs), plus the hero-animation and color-token data files. Reviewed under the infra criteria (Hugo correctness, dark-mode pass) but the v3 matrix routes it to marketing, with no staging run. |
+| `domain:infra` | `d4c5f9` | PR touches the build and deploy pipeline: workflows, scripts, infrastructure code, Makefile, build/bundling config. The v3 matrix routes it to the tools team. It does **not** by itself require a staging run: that is a separate question answered by `staging_evidence.paths` in `.github/review-routing.yml`, which lists only what can break `pulumi up`. Most `domain:infra` paths — build scripts included — need no staging run, because the PR's own preview build already exercises them. |
+| `domain:frontend` | `7057ff` | PR touches the site's rendering layer: `layouts/`, `theme/`, `assets/`, `static/` (except programs), plus the hero-animation and color-token data files. Reviewed under the infra criteria (Hugo correctness, dark-mode pass) but the v3 matrix routes it to marketing. No path under this label needs a staging run: that gate is only for changes that could break `pulumi up`. |
 | `domain:programs` | `fbca04` | PR touches example programs under `static/programs/`. |
 | `domain:website` | `c5def5` | PR touches marketing, pricing, legal, or competitive landing pages (any other `content/**.md`), or the site-chrome / pricing data files that render on them. |
 | `domain:mixed` | `bfd4f2` | PR touches more than one domain. Each file is reviewed under its domain. |
@@ -35,11 +35,12 @@ Load-bearing — these gate workflow execution.
 | `review:in-progress` | `fbca04` | Claude review is currently running for this PR's current state. |
 | `review:outstanding-issues` | `b60205` | Claude review completed and 🚨 Outstanding contains at least one author-actionable finding. |
 | `review:no-blockers` | `0e8a16` | Claude review completed cleanly — 🚨 Outstanding is empty. |
-| `review:stale` | `ededed` | New commits landed since the last Claude review; refresh on next ready-transition or `@claude` mention. |
+| `review:stale` | `ededed` | New commits landed since the last Claude review; refresh on next ready-transition or `@claude` mention. Also where a run rests when the head moved while it was reviewing: the publish guard refuses the stale handoff, sets this, and re-dispatches at the live head (at most twice in a row, then it waits for a mention). |
 | `review:error` | `e11d21` | Workflow failed before publishing a review. See the Actions logs. |
-| `needs-author-response` | `f7c6c7` | Review surfaced unverifiable claims; author needs to provide sources or fix. Applied by `pr-review`. |
+| `needs-author-response` | `f7c6c7` | Review surfaced unverifiable claims; author needs to provide sources or fix. Applied by a maintainer from `/pr-review` (the route action's request-changes path). |
 | `review:waived` | `d93f0b` | **Break-glass.** A human deliberately waived the v3 merge gates (Sentinel concludes success, except infra staging evidence, which is never waivable). Actor and reason are logged to the waive ledger and the waive rate is tracked — apply it on purpose, in an incident, not to skip the answer loop. Applied by humans only; never by automation. |
 | `review:author-stalled` | `fad8c7` | The PR has been waiting on its author (unanswered findings or a standing changes-requested review) for 14+ days. Applied and cleared by the SLA sweep; the PR closes at 21 days if nothing changes, with one-click reopen. |
+| `automation/merge` | `ededed` | Marks a PR the Sentinel does not gate at all: with it, a `not_governed.author_label_pairs` match (today `pulumi-bot` + this label) concludes the check `success` with **no gates evaluated**. That is safe only because the generating workflow posts its own approval and arms auto-merge. Applied by those workflows, never by hand — putting it on a human PR turns the merge gate off. Predates this scheme, so it is not in the create-them-all block below. |
 
 The six `review:*` state labels are **mutually exclusive**. Setting one removes the others. `set-review-label.sh` (under `.claude/commands/docs-review/scripts/`) enforces this atomically and supports a `--clear` mode that strips any state label without adding a new one (used by claude-triage.yml's `if: always()` cleanup).
 
@@ -84,6 +85,19 @@ gh label create "review:author-stalled"  --color fad8c7 --description "Waiting o
 gh label create "content-review/deterministic" --color c5def5 --description "Content-review PR whose fixes are all deterministic-class (links, Vale, frontmatter)"
 gh label create "content-review/judgment"      --color bfd4f2 --description "Content-review PR containing judgment-class fixes (needs a human eye)"
 gh label create "content-review/glow-up"       --color d4c5f9 --description "Content glow-up PR (whole-article polish)"
+```
+
+## Retired labels
+
+| Label | Retired | Why |
+|---|---|---|
+| `sentinel:preview` | 2026-09-21 | Opt-in preview of the Sentinel's pinned gate-status comment while the check is report-only. Retired when report-only went repo-wide: the comment is now maintained on **every** PR the Sentinel evaluates, in both modes, and in report-only mode it leads with a ⚠️ banner saying it blocks nothing yet and will be enforced soon. `content-review-article.yml` and `check-links.yml` no longer apply it, nothing reads it, and `review-sentinel.yml`'s label-event filter no longer lists it. |
+| `surface:v3` | 2026-09-14 | Per-PR opt-in to the v3 review comment surface, retired once the repo-wide `REVIEW_V3_COMMENTS` variable had soaked. |
+
+Delete them from the repo once no open PR is still wearing one — a stale label on a merged PR is harmless, but an existing label invites someone to apply it:
+
+```bash
+gh label delete "sentinel:preview" --yes
 ```
 
 ## Migrate from the old two-label scheme

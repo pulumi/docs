@@ -23,90 +23,40 @@ const BLOG_CATEGORIES = (function () {
     }
 })();
 
-/**
- * Allowed case-study industry ids, loaded once from the single source of truth
- * at data/case_study_industries.yaml. See that file's header for the rules.
- */
-const CASE_STUDY_INDUSTRIES = (function () {
+const CUSTOMER_INDUSTRIES = (function () {
     try {
-        const p = path.resolve(__dirname, "../../data/case_study_industries.yaml");
+        const p = path.resolve(__dirname, "../../data/customers_industries.yaml");
         const doc = yaml.load(fs.readFileSync(p, "utf8"));
         return (doc.industries || []).map(i => i.id);
     } catch (e) {
-        console.warn(`Warning: could not load case-study industries: ${e.message}`);
+        console.warn(`Warning: could not load customer industries: ${e.message}`);
         return [];
     }
 })();
 
-/**
- * The Pulumi Cloud editions and the feature availability matrix, loaded once
- * from the single source of truth at data/pulumi_pricing.yaml. See that file's
- * header for the rules.
- *
- * The `available_from` + `availability` expansion below mirrors the one in
- * layouts/partials/pricing/data.html. It is duplicated rather than shared
- * because the two run in different languages, and the repo splits data
- * validation by consumer: structural invariants belong to the template that
- * renders the file, frontmatter-facing invariants belong here so authors fail
- * in `make lint` (~2s, and it gates the build) instead of in a full Hugo build.
- *
- * Shape: { editions: [id], names: {id: name}, features: {id: minEdition},
- *          duplicates: [id], yamlBooleans: [{line, value, text}],
- *          loadError: string|null }. A feature's minimum edition is the first
- * edition with a truthy cell, or its `requires:` when set. `loadError` is set
- * when the file didn't parse: the checks that read this vocabulary stand down,
- * and the run reports the data file itself instead (see pricingDataErrors).
- */
-const PRICING = (function () {
-    const empty = { editions: [], names: {}, features: {}, duplicates: [], yamlBooleans: [], loadError: null };
+const CUSTOMERS = (function () {
     try {
-        const p = path.resolve(__dirname, "../../data/pulumi_pricing.yaml");
-        const raw = fs.readFileSync(p, "utf8");
+        const p = path.resolve(__dirname, "../../data/customers.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return Object.fromEntries((doc.customers || []).map(c => [c.id, c]));
+    } catch (e) {
+        console.warn(`Warning: could not load customers: ${e.message}`);
+        return {};
+    }
+})();
+const CUSTOMER_IDS = Object.keys(CUSTOMERS).sort();
 
-        // YAML 1.1 parses `no`, `yes`, `on`, `off`, `y`, and `n` as booleans, so
-        // an author writing `enterprise: No` to mean the *word* "No" silently
-        // gets `false` and the cell renders as a dash. By parse time the two are
-        // indistinguishable from a deliberate `false`, so catch it in the source
-        // text: quote the string, or write `true`/`false` if you meant the bool.
-        const yamlBooleans = [];
-        raw.split("\n").forEach(function (line, i) {
-            const m = line.match(/^\s+[a-z0-9-]+:\s*(y|n|yes|no|on|off)\s*$/i);
-            if (m) {
-                yamlBooleans.push({ line: i + 1, value: m[1], text: line.trim() });
-            }
-        });
-
-        const doc = yaml.load(raw);
+const EDITION_DATA = (function () {
+    const empty = { editions: [], names: {}, features: {}, loadError: null };
+    try {
+        const p = path.resolve(__dirname, "../../data/pulumi_editions.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
         const editions = (doc.editions || []).map(e => e.id);
         const names = {};
         (doc.editions || []).forEach(e => (names[e.id] = e.name));
         const features = {};
-        const duplicates = [];
-        for (const cat of doc.categories || []) {
-            for (const f of cat.features || []) {
-                if (Object.prototype.hasOwnProperty.call(features, f.id)) {
-                    duplicates.push(f.id);
-                }
-                const from = f.available_from ? editions.indexOf(f.available_from) : -1;
-                let min = null;
-                editions.forEach(function (id, i) {
-                    let v = from >= 0 && i >= from;
-                    // A stranded key (`enterprise:` with nothing after it) parses
-                    // as null, which Hugo's `ne $o nil` treats as no override at
-                    // all. Match that, or lint and the build disagree about the
-                    // feature's minimum edition and the "fail in lint first"
-                    // contract inverts.
-                    if (f.availability && f.availability[id] !== undefined && f.availability[id] !== null) {
-                        v = f.availability[id];
-                    }
-                    if (v && min === null) {
-                        min = id;
-                    }
-                });
-                features[f.id] = f.requires || min;
-            }
-        }
-        return { editions, names, features, duplicates, yamlBooleans, loadError: null };
+        (doc.features || []).forEach(f => (features[f.id] = f.min_edition || null));
+        return { editions, names, features, loadError: null };
     } catch (e) {
         // Don't warn and carry on with empty vocabularies: that makes every
         // marked page and changelog entry fail with "not an edition id... Use
@@ -120,8 +70,8 @@ const PRICING = (function () {
  * Feature ids a marker may name: everything except the ones that resolve to the
  * lowest edition, which gates nothing.
  */
-const MARKABLE_FEATURES = Object.keys(PRICING.features)
-    .filter(id => PRICING.features[id] && PRICING.features[id] !== PRICING.editions[0])
+const MARKABLE_FEATURES = Object.keys(EDITION_DATA.features)
+    .filter(id => EDITION_DATA.features[id] && EDITION_DATA.features[id] !== EDITION_DATA.editions[0])
     .sort();
 
 /**
@@ -183,7 +133,10 @@ function checkPageTitle(title, allowLongTitle) {
  *
  * @param {string} meta The meta description for a given page
  */
-function checkPageMetaDescription(meta) {
+function checkPageMetaDescription(meta, fullPath) {
+    if (fullPath && /[/\\]content[/\\]industry[/\\][^/\\]+[/\\]_index\.md$/.test(fullPath)) {
+        return null;
+    }
     if (!meta) {
         return "Missing meta description";
     } else if (typeof meta === "string") {
@@ -636,14 +589,14 @@ function checkBlogCategory(category, legacyCategories, fullPath) {
 /**
  * checkCaseStudyIndustry validates the `industry:` front matter on case studies
  * against the closed set in data/case_study_industries.yaml. It applies ONLY to
- * individual case-study pages (content/case-studies/<slug>.md), not the section
+ * individual case-study pages (content/customers/<slug>.md), not the section
  * index (_index.md) or any other content.
  *
  * Industry is REQUIRED and SINGULAR: every case study declares exactly one
  * `industry:` scalar value from the allowed set — a customer belongs to one
  * vertical. A list value, a missing value, or a value outside the set is an
  * error. `industry` is a dedicated Hugo taxonomy (see config.yml), so any value
- * generates a public term page at /case-studies/industry/<slug>/; a typo would
+ * generates a public term page at /customers/industry/<slug>/; a typo would
  * silently ship an orphan URL, which this guard prevents.
  *
  * @param {*} industry The `industry` front matter value.
@@ -651,60 +604,66 @@ function checkBlogCategory(category, legacyCategories, fullPath) {
  */
 function checkCaseStudyIndustry(industry, fullPath) {
     const isCaseStudy =
-        fullPath.includes("/content/case-studies/") && path.basename(fullPath) !== "_index.md";
+        fullPath.includes("/content/customers/") && path.basename(fullPath) !== "_index.md";
     if (!isCaseStudy) {
         return null;
     }
 
     if (Array.isArray(industry)) {
-        return "Case study 'industry' must be a single scalar value, not a list (e.g. 'industry: security'). See data/case_study_industries.yaml.";
+        return "Case study 'industry' must be a single scalar value, not a list (e.g. 'industry: security'). See data/customers_industries.yaml.";
     }
     if (!industry) {
-        return "Case study is missing a required 'industry' value. Add exactly one industry from data/case_study_industries.yaml.";
+        return "Case study is missing a required 'industry' value. Add exactly one industry from data/customers_industries.yaml.";
     }
-    if (!CASE_STUDY_INDUSTRIES.includes(industry)) {
-        return `Invalid case-study industry value: '${industry}'. Allowed: ${CASE_STUDY_INDUSTRIES.join(", ")}. See data/case_study_industries.yaml.`;
+    if (!CUSTOMER_INDUSTRIES.includes(industry)) {
+        return `Invalid case-study industry value: '${industry}'. Allowed: ${CUSTOMER_INDUSTRIES.join(", ")}. See data/customers_industries.yaml.`;
     }
 
     return null;
 }
 
-/**
- * checkCaseStudyLogoTile validates the optional logo-tile front matter on case
- * studies, rendered by layouts/partials/case-studies/card.html (see its header
- * comment for what each field does):
- *   - logo_bg_color: a hex color ("#RRGGBB" or "#RGB")
- *   - logo_style: "white" or "dark", lowercase
- *   - logo_size: "lg"
- * All are optional; this guard rejects present-but-malformed values, which
- * would otherwise ship silently — the template compares exactly, so e.g.
- * `logo_style: White` just renders the logo in its original colors, and a bad
- * hex paints no tile background at all.
- *
- * @param {*} obj The parsed front matter object.
- * @param {string} fullPath The absolute path of the file being linted.
- */
-function checkCaseStudyLogoTile(obj, fullPath) {
+function checkCustomerRef(obj, fullPath) {
     const isCaseStudy =
-        fullPath.includes("/content/case-studies/") && path.basename(fullPath) !== "_index.md";
+        fullPath.includes("/content/customers/") && path.basename(fullPath) !== "_index.md";
     if (!isCaseStudy) {
         return null;
     }
 
     const errors = [];
-    if (obj.logo_bg_color !== undefined && !/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(String(obj.logo_bg_color))) {
-        errors.push(
-            `Invalid 'logo_bg_color' value: '${obj.logo_bg_color}'. Use a quoted hex color like "#0052CC".`,
-        );
+    const RETIRED = {
+        customer_name: "name",
+        customer_url: "url",
+        customer_logo: "the <id>.svg logo file",
+        card_logo: "the <id>-on-dark.svg logo file",
+        logo_bg_color: "color",
+        logo_style: "the light/on-dark logo pair",
+        logo_size: "the logo file itself",
+    };
+    for (const [key, replacement] of Object.entries(RETIRED)) {
+        if (obj[key] !== undefined) {
+            errors.push(
+                `'${key}' is no longer read: ${replacement} comes from data/customers.yaml. Remove it and set 'customer: <id>'.`,
+            );
+        }
     }
-    if (obj.logo_style !== undefined && !["white", "dark"].includes(obj.logo_style)) {
+
+    const customer = obj.customer;
+    if (Array.isArray(customer)) {
+        errors.push("Case study 'customer' must be a single scalar value, not a list (e.g. 'customer: snowflake').");
+    } else if (!customer) {
         errors.push(
-            `Invalid 'logo_style' value: '${obj.logo_style}'. Allowed: white, dark (lowercase), or omit to render the logo in its original colors.`,
+            "Case study is missing a required 'customer' value. Add the id of an entry in data/customers.yaml (see the ADDING A CUSTOMER checklist there).",
         );
-    }
-    if (obj.logo_size !== undefined && obj.logo_size !== "lg") {
+    } else if (!CUSTOMERS[customer]) {
+        const near = CUSTOMER_IDS.filter(id => id.includes(customer) || customer.includes(id));
         errors.push(
-            `Invalid 'logo_size' value: '${obj.logo_size}'. Allowed: lg, or omit for the default size.`,
+            near.length
+                ? `Unknown customer '${customer}'. Did you mean: ${near.join(", ")}? See data/customers.yaml.`
+                : `Unknown customer '${customer}'. Add an entry to data/customers.yaml (see the ADDING A CUSTOMER checklist there).`,
+        );
+    } else if (obj.industry && CUSTOMERS[customer].industry !== obj.industry) {
+        errors.push(
+            `Industry mismatch: this page says '${obj.industry}' but data/customers.yaml files '${customer}' under '${CUSTOMERS[customer].industry}'. Change one so they agree.`,
         );
     }
 
@@ -723,7 +682,7 @@ function checkCaseStudyLogoTile(obj, fullPath) {
  * generates a public term page, so a typo would ship a junk URL) and must NOT
  * also appear in `tags`: that was the old workaround for manufacturing a landing
  * page under the `tags` taxonomy, and it now only produces a stray
- * /blog/tag/<slug>/ page and surfaces the slug as a topical tag pill. Applies
+ * /blog/tags/<slug>/ page and surfaces the slug as a topical tag pill. Applies
  * only to blog posts (content/blog/<slug>/index.md).
  *
  * @param {*} series The `series` front matter value.
@@ -979,18 +938,15 @@ function checkChangelogFilename(date, fullPath) {
 
 /**
  * checkChangelogEditions validates the optional `editions:` front matter on
- * individual changelog entries: it must be a YAML array of edition ids from
- * data/pulumi_pricing.yaml. Templates look the ids up to render the display
- * name, so an entry writes `business-critical` and the badge reads "Business
- * Critical". Authors list every edition the feature is available in; since a
- * lower edition implies the ones above it, that means the lowest applicable
- * edition and all editions above it — checked here as a contiguous suffix of
- * the edition list, not just set membership. Applies only to entry pages, not
- * the section `_index.md`.
+ * individual changelog entries. Entries dated before the V6 launch use the V5
+ * ids. Newer entries use the current ids from data/pulumi_editions.yaml. Authors
+ * list every edition the feature is available in, so the list must be a
+ * contiguous suffix of the edition order. Applies only to entry pages, not the
+ * section `_index.md`.
  *
  * The legacy `tiers:` array and singular `tier:` scalar are both rejected:
  * "tier" is not a word the product uses, and the old list carried a `Free`
- * value for an edition that doesn't exist (the free edition is Individual).
+ * value from before Pulumi Cloud had editions at all.
  *
  * @param {*} editions The front matter `editions` value.
  * @param {*} tiers The front matter `tiers` value (legacy; rejected if present).
@@ -1005,14 +961,14 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
         path.basename(normalized) !== "_index.md";
     // Without the pricing data there is no vocabulary to check against, and
     // guessing produces "use one of: " with an empty list on every entry. The
-    // run already carries one finding about the data file (pricingDataErrors).
-    if (!isChangelogEntry || PRICING.loadError) {
+    // run already carries one finding about the data file (see EDITION_DATA.loadError).
+    if (!isChangelogEntry || EDITION_DATA.loadError) {
         return null;
     }
 
     if (tier !== undefined || tiers !== undefined) {
         const old = tier !== undefined ? "tier:" : "tiers:";
-        return `Changelog \`${old}\` has been replaced by \`editions:\`, a YAML array of edition ids (e.g. \`editions:\` then \`    - enterprise\`). List every edition the feature is available in — the lowest applicable edition and all editions above it. Ids come from data/pulumi_pricing.yaml: ${PRICING.editions.join(", ")}.`;
+        return `Changelog \`${old}\` has been replaced by \`editions:\`, a YAML array of edition ids (e.g. \`editions:\` then \`    - enterprise\`). List every edition the feature is available in — the lowest applicable edition and all editions above it. Ids come from data/pulumi_editions.yaml: ${EDITION_DATA.editions.join(", ")}.`;
     }
     if (editions === undefined) {
         return null;
@@ -1020,8 +976,12 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
     if (!Array.isArray(editions)) {
         return "Changelog `editions:` must be a YAML array (e.g. `editions:` then `    - enterprise`), not a single value.";
     }
+    const filenameDate = path.basename(normalized).slice(0, 10);
+    const legacyEditions = ["individual", "team", "enterprise", "business-critical"];
+    const isLegacyEntry = /^\d{4}-\d{2}-\d{2}$/.test(filenameDate) && filenameDate < "2026-09-15";
+    const allowedEditions = isLegacyEntry ? legacyEditions : EDITION_DATA.editions;
     const invalid = editions.filter(function (e) {
-        return !PRICING.editions.includes(e);
+        return !allowedEditions.includes(e);
     });
     if (invalid.length > 0) {
         const quoted = invalid
@@ -1029,19 +989,20 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
                 return "'" + e + "'";
             })
             .join(", ");
-        return "Changelog `editions:` value(s) " + quoted + " not allowed. Use an edition id from data/pulumi_pricing.yaml: " + PRICING.editions.join(", ") + ". Templates render the display name from the id, so write 'business-critical', not 'Business Critical'.";
+        const vocabulary = isLegacyEntry ? "the V5 edition ids" : "data/pulumi_editions.yaml";
+        return "Changelog `editions:` value(s) " + quoted + " not allowed for this entry date. Use an edition id from " + vocabulary + ": " + allowedEditions.join(", ") + ".";
     }
     if (editions.length === 0) {
         return "Changelog `editions:` is empty. List every edition the feature is available in — the lowest applicable edition and all editions above it — or drop the key.";
     }
     // A lower edition implies the ones above it, so a valid list is a contiguous
-    // suffix of PRICING.editions. `editions: [enterprise]` on its own lints as
-    // three valid ids but renders a badge that tells Business Critical readers
-    // the feature isn't theirs.
-    const listed = PRICING.editions.filter(function (e) {
+    // suffix of EDITION_DATA.editions. `editions: [pro]` on its own lints as a
+    // valid id but renders a badge that tells Enterprise readers the feature
+    // isn't theirs.
+    const listed = allowedEditions.filter(function (e) {
         return editions.includes(e);
     });
-    const expected = PRICING.editions.slice(PRICING.editions.indexOf(listed[0]));
+    const expected = allowedEditions.slice(allowedEditions.indexOf(listed[0]));
     if (listed.length !== expected.length) {
         const missing = expected.filter(function (e) {
             return !listed.includes(e);
@@ -1068,9 +1029,9 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
  *   pulumi_cloud_feature: rbac
  *   {{< pulumi-cloud "rbac" />}}
  *
- * The edition the callout states is derived from that feature's row in
- * data/pulumi_pricing.yaml, so a feature that moves editions updates /pricing/
- * and every page marked with it in one edit.
+ * The edition the callout states is derived from that feature's min_edition in
+ * data/pulumi_editions.yaml (generated from pulumi/marketing-web), so a feature
+ * that moves editions updates /pricing/ and every page marked with it in one edit.
  *
  * We only mark what a reader has to buy, so there is no value meaning "Cloud but
  * ungated" — such a page carries no marker at all. `true`, `false`, and any
@@ -1082,7 +1043,7 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
  */
 function pulumiCloudValueError(value, label) {
     if (typeof value === "boolean") {
-        return `Invalid ${label} value: ${value}. Name the feature (for example 'rbac' or 'audit-logs'), or drop the key — an ungated page carries no marker. See data/pulumi_pricing.yaml.`;
+        return `Invalid ${label} value: ${value}. Name the feature (for example 'rbac' or 'audit-logs'), or drop the key — an ungated page carries no marker. See data/pulumi_editions.yaml.`;
     }
     // A bare `pulumi_cloud_feature:` parses as null, and nothing stops an author
     // writing a number. Normalize before the string comparisons below, which would
@@ -1090,20 +1051,20 @@ function pulumiCloudValueError(value, label) {
     // unhelpful message.
     const id = value === null || value === undefined ? "" : String(value);
     if (!id) {
-        return `Empty ${label} value. Name the feature (for example 'rbac' or 'audit-logs'), or drop the key — an ungated page carries no marker. See data/pulumi_pricing.yaml.`;
+        return `Empty ${label} value. Name the feature (for example 'rbac' or 'audit-logs'), or drop the key — an ungated page carries no marker. See data/pulumi_editions.yaml.`;
     }
-    if (PRICING.editions.includes(id)) {
-        return `Invalid ${label} value: '${id}'. That's an edition id, not a feature id — markers name the feature and the edition is derived from data/pulumi_pricing.yaml. Features on the ${PRICING.names[id] || id} edition include: ${MARKABLE_FEATURES.filter(f => PRICING.features[f] === id)
+    if (EDITION_DATA.editions.includes(id)) {
+        return `Invalid ${label} value: '${id}'. That's an edition id, not a feature id — markers name the feature and the edition is derived from data/pulumi_editions.yaml. Features on the ${EDITION_DATA.names[id] || id} edition include: ${MARKABLE_FEATURES.filter(f => EDITION_DATA.features[f] === id)
             .slice(0, 5)
             .join(", ")}.`;
     }
-    if (PRICING.features[id] !== undefined && !MARKABLE_FEATURES.includes(id)) {
-        return `Invalid ${label} value: '${id}'. That feature is available on the ${PRICING.names[PRICING.editions[0]]} edition, which gates nothing — drop the marker, or set 'requires:' on it in data/pulumi_pricing.yaml if its lowest column is really a limited variant.`;
+    if (EDITION_DATA.features[id] !== undefined && !MARKABLE_FEATURES.includes(id)) {
+        return `Invalid ${label} value: '${id}'. That feature is available on the ${EDITION_DATA.names[EDITION_DATA.editions[0]]} edition, which gates nothing — drop the marker, or set 'requires:' on it in pulumi/marketing-web (apps/www/src/data/pricing/) if its lowest column is really a limited variant.`;
     }
     if (!MARKABLE_FEATURES.includes(id)) {
         const near = MARKABLE_FEATURES.filter(f => f.includes(id) || id.includes(f));
-        const hint = near.length > 0 ? ` Did you mean: ${near.join(", ")}?` : ` Add it to data/pulumi_pricing.yaml — with 'hidden: true' if it isn't a marketed line item on /pricing/.`;
-        return `Invalid ${label} value: '${id}'. Not a feature id in data/pulumi_pricing.yaml.${hint}`;
+        const hint = near.length > 0 ? ` Did you mean: ${near.join(", ")}?` : ` Add it in pulumi/marketing-web (apps/www/src/data/pricing/) — with 'hidden: true' if it isn't a marketed line item on /pricing/ — then merge the sync PR that brings it into data/pulumi_editions.yaml.`;
+        return `Invalid ${label} value: '${id}'. Not a feature id in data/pulumi_editions.yaml.${hint}`;
     }
     return null;
 }
@@ -1127,9 +1088,9 @@ function checkPulumiCloudFeature(feature, legacy) {
     // Hugo ignores an unknown front matter key, so without this the page would
     // just quietly render no marker. Droppable once the rename has settled.
     if (legacy !== undefined) {
-        return "`pulumi_cloud:` is now `pulumi_cloud_feature:`, and its value is a feature id rather than an edition (e.g. `pulumi_cloud_feature: rbac`). The edition the callout states is derived from that feature in data/pulumi_pricing.yaml.";
+        return "`pulumi_cloud:` is now `pulumi_cloud_feature:`, and its value is a feature id rather than an edition (e.g. `pulumi_cloud_feature: rbac`). The edition the callout states is derived from that feature in data/pulumi_editions.yaml.";
     }
-    if (feature === undefined || PRICING.loadError) {
+    if (feature === undefined || EDITION_DATA.loadError) {
         return null;
     }
     return pulumiCloudValueError(feature, "'pulumi_cloud_feature'");
@@ -1159,7 +1120,7 @@ const PULUMI_CLOUD_SHORTCODE_REGEX = /\{\{[<%]\s*pulumi-cloud(\s[^}]*?)?\s*\/?\s
  * @returns {string|null} An error message, or null when valid/not applicable.
  */
 function checkPulumiCloudShortcode(content) {
-    if (PRICING.loadError) {
+    if (EDITION_DATA.loadError) {
         return null;
     }
     const messages = [];
@@ -1177,7 +1138,64 @@ function checkPulumiCloudShortcode(content) {
             // claims the feature is available on every edition.
             err = `Invalid {{< pulumi-cloud >}} argument: '${args}'. Named parameters aren't supported — write the feature id positionally, as {{< pulumi-cloud "rbac" />}}.`;
         } else {
-            err = pulumiCloudValueError(args.replace(/^"(.*)"$/, "$1"), "{{< pulumi-cloud >}}");
+            // An optional second positional argument, "named", leads the
+            // callout with the feature's name instead of "This feature".
+            const tokens = args.match(/"[^"]*"|\S+/g).map(t => t.replace(/^"(.*)"$/, "$1"));
+            err = pulumiCloudValueError(tokens[0], "{{< pulumi-cloud >}}");
+            if (!err && tokens.length > 1 && (tokens.length > 2 || tokens[1] !== "named")) {
+                err = `Invalid {{< pulumi-cloud >}} argument: '${tokens.slice(1).join(" ")}'. The only optional second argument is "named", as {{< pulumi-cloud "rbac" "named" />}}.`;
+            }
+        }
+        if (err && !messages.includes(err)) {
+            messages.push(err);
+        }
+    }
+    return messages.length > 0 ? messages.join(" ") : null;
+}
+
+/**
+ * Matches {{< pulumi-cloud-editions ... >}}, the inline edition list. Unlike a
+ * marker, it may name a feature available on every edition (it renders "All
+ * editions"), so it is checked against every feature id, not MARKABLE_FEATURES.
+ */
+const PULUMI_CLOUD_EDITIONS_SHORTCODE_REGEX = /\{\{[<%]\s*pulumi-cloud-editions(\s[^}]*?)?\s*\/?\s*[>%]\}\}/g;
+
+/**
+ * checkPulumiCloudEditionsShortcode validates that every
+ * {{< pulumi-cloud-editions "<feature>" >}} names a feature in
+ * data/pulumi_editions.yaml that is available on at least one edition.
+ *
+ * @param {string} content The full file contents, front matter included.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkPulumiCloudEditionsShortcode(content) {
+    if (EDITION_DATA.loadError) {
+        return null;
+    }
+    const messages = [];
+    let match;
+    PULUMI_CLOUD_EDITIONS_SHORTCODE_REGEX.lastIndex = 0;
+    while ((match = PULUMI_CLOUD_EDITIONS_SHORTCODE_REGEX.exec(content)) !== null) {
+        const args = (match[1] || "").trim();
+        let err = null;
+        if (args === "") {
+            err = `{{< pulumi-cloud-editions >}} needs a feature id from data/pulumi_editions.yaml, as {{< pulumi-cloud-editions "teams" >}}.`;
+        } else if (args.includes("=")) {
+            err = `Invalid {{< pulumi-cloud-editions >}} argument: '${args}'. Named parameters aren't supported — write the feature id positionally, as {{< pulumi-cloud-editions "teams" >}}.`;
+        } else {
+            const tokens = args.match(/"[^"]*"|\S+/g).map(t => t.replace(/^"(.*)"$/, "$1"));
+            const id = tokens[0];
+            if (tokens.length > 1) {
+                err = `Invalid {{< pulumi-cloud-editions >}} argument: '${args}'. It takes exactly one feature id.`;
+            } else if (EDITION_DATA.editions.includes(id)) {
+                err = `Invalid {{< pulumi-cloud-editions >}} value: '${id}'. That's an edition id, not a feature id — the editions are derived from the feature's availability in data/pulumi_editions.yaml.`;
+            } else if (!Object.prototype.hasOwnProperty.call(EDITION_DATA.features, id)) {
+                const near = Object.keys(EDITION_DATA.features).filter(f => f.includes(id) || id.includes(f));
+                const hint = near.length > 0 ? ` Did you mean: ${near.join(", ")}?` : ` Add it in pulumi/marketing-web (apps/www/src/data/pricing/) — with 'hidden: true' if it isn't a marketed line item on /pricing/ — then merge the sync PR that brings it into data/pulumi_editions.yaml.`;
+                err = `Invalid {{< pulumi-cloud-editions >}} value: '${id}'. Not a feature id in data/pulumi_editions.yaml.${hint}`;
+            } else if (!EDITION_DATA.features[id]) {
+                err = `Invalid {{< pulumi-cloud-editions >}} value: '${id}'. That feature isn't available on any edition in data/pulumi_editions.yaml.`;
+            }
         }
         if (err && !messages.includes(err)) {
             messages.push(err);
@@ -1245,6 +1263,47 @@ function checkChangelogAssets() {
         walk(path.resolve(__dirname, rel));
     });
     return errors;
+}
+
+function checkIndustryTermStubs() {
+    const dir = path.resolve(__dirname, "../../content/industry");
+    let present;
+    try {
+        present = fs
+            .readdirSync(dir, { withFileTypes: true })
+            .filter(e => e.isDirectory())
+            .map(e => e.name);
+    } catch (e) {
+        return [
+            {
+                path: "content/industry/",
+                errors: [
+                    {
+                        lineNumber: "Directory",
+                        ruleDescription: `content/industry/ does not exist, so no /customers/industry/<id>/ term page is generated. Add one _index.md stub per id in data/customers_industries.yaml.`,
+                    },
+                ],
+            },
+        ];
+    }
+
+    const expected = CUSTOMER_INDUSTRIES;
+    const missing = expected.filter(id => !present.includes(id));
+    const extra = present.filter(id => !expected.includes(id));
+    const errors = [];
+    if (missing.length > 0) {
+        errors.push({
+            lineNumber: "Directory",
+            ruleDescription: `Missing industry term stub(s): ${missing.join(", ")}. Add content/industry/<id>/_index.md for each, or drop the id from data/customers_industries.yaml — without a stub, /customers/industry/<id>/ 404s while the filter bar still links to it.`,
+        });
+    }
+    if (extra.length > 0) {
+        errors.push({
+            lineNumber: "Directory",
+            ruleDescription: `Industry term stub(s) with no entry in data/customers_industries.yaml: ${extra.join(", ")}. Add the industry there or delete the stub — a stub with no entry renders an untitled term page.`,
+        });
+    }
+    return errors.length > 0 ? [{ path: "content/industry/", errors }] : [];
 }
 
 /**
@@ -1541,7 +1600,7 @@ function searchForMarkdown(paths) {
                 result.frontMatter[fullPath] = {
                     error: null,
                     title: checkPageTitle(obj.title, allowLongTitle),
-                    metaDescription: checkPageMetaDescription(obj.meta_desc),
+                    metaDescription: checkPageMetaDescription(obj.meta_desc, fullPath),
                     metaImage: checkMetaImage(obj.meta_image),
                     featureImageDimensions: checkFeatureImageDimensions(obj.feature_image, fullPath),
                     featureImageBackground: checkFeatureImageBackground(obj.feature_image, fullPath),
@@ -1549,13 +1608,14 @@ function searchForMarkdown(paths) {
                     featureImageC2pa: checkFeatureImageC2pa(obj.feature_image, fullPath),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
-                    caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
+                    customerRef: checkCustomerRef(obj, fullPath),
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     eventSessions: checkEventSessions(obj, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
                     changelogEditions: checkChangelogEditions(obj.editions, obj.tiers, obj.tier, fullPath),
                     pulumiCloudFeature: checkPulumiCloudFeature(obj.pulumi_cloud_feature, obj.pulumi_cloud),
                     pulumiCloudShortcode: checkPulumiCloudShortcode(content),
+                    pulumiCloudEditionsShortcode: checkPulumiCloudEditionsShortcode(content),
                 };
                 result.files.push(fullPath);
             }
@@ -1708,10 +1768,10 @@ function groupLintErrorOutput(result) {
                     ruleDescription: frontMatterErrors.caseStudyIndustry,
                 });
             }
-            if (frontMatterErrors.caseStudyLogoTile) {
+            if (frontMatterErrors.customerRef) {
                 lintErrors.push({
                     lineNumber: "File Header",
-                    ruleDescription: frontMatterErrors.caseStudyLogoTile,
+                    ruleDescription: frontMatterErrors.customerRef,
                 });
             }
             if (frontMatterErrors.seriesConsistency) {
@@ -1748,6 +1808,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "Body",
                     ruleDescription: frontMatterErrors.pulumiCloudShortcode,
+                });
+            }
+            if (frontMatterErrors.pulumiCloudEditionsShortcode) {
+                lintErrors.push({
+                    lineNumber: "Body",
+                    ruleDescription: frontMatterErrors.pulumiCloudEditionsShortcode,
                 });
             }
         }
@@ -1848,41 +1914,21 @@ if (filesFromArgs.length === 0) {
     checkChangelogAssets().forEach(function (assetError) {
         errors.push(assetError);
     });
+    checkIndustryTermStubs().forEach(function (stubError) {
+        errors.push(stubError);
+    });
 }
 
-// Feature ids in data/pulumi_pricing.yaml are global, so a duplicate is one
-// finding about the data file, not a finding about every page that happens to
-// reference it. Report it once per run. (Hugo raises the same error at build
-// time; this just surfaces it seconds earlier.)
-//
-// A file that doesn't parse at all is the same kind of finding, and it comes
-// first: the marker and changelog-edition checks read this file, so they stand
-// down (returning null) until it loads. Reporting it here is what keeps a merge
-// conflict marker from blaming every page in the repo.
-const pricingDataErrors = PRICING.loadError
-    ? [
-        {
-            lineNumber: "Data",
-            ruleDescription: `Could not load data/pulumi_pricing.yaml: ${PRICING.loadError}. Every Pulumi Cloud marker and changelog \`editions:\` check reads this file, so they were skipped for this run — fix the file and lint again.`,
-        },
-    ]
-    : PRICING.duplicates
-        .map(function (id) {
-            return {
+if (EDITION_DATA.loadError) {
+    errors.push({
+        path: "data/pulumi_editions.yaml",
+        errors: [
+            {
                 lineNumber: "Data",
-                ruleDescription: `Duplicate feature id '${id}'. Ids are unique across every category — prefix the newer one with its product (for example 'esc-${id}').`,
-            };
-        })
-        .concat(
-            PRICING.yamlBooleans.map(function (b) {
-                return {
-                    lineNumber: b.line,
-                    ruleDescription: `'${b.text}' — YAML 1.1 parses '${b.value}' as a boolean, so this cell becomes ${/^(y|yes|on)$/i.test(b.value) ? "true" : "false"} and renders as a ${/^(y|yes|on)$/i.test(b.value) ? "check mark" : "dash"}, not the word. Quote it ("${b.value}") if you meant the text, or write true/false if you meant the boolean.`,
-                };
-            })
-        );
-if (pricingDataErrors.length > 0) {
-    errors.push({ path: "data/pulumi_pricing.yaml", errors: pricingDataErrors });
+                ruleDescription: `Could not load data/pulumi_editions.yaml: ${EDITION_DATA.loadError}. Every Pulumi Cloud marker and changelog \`editions:\` check reads this file, so they were skipped for this run. It is generated by pulumi/marketing-web; restore it from that repo's latest sync PR rather than editing it here.`,
+            },
+        ],
+    });
 }
 
 // Chooser/choosable shortcode calls live in the body rather than the front

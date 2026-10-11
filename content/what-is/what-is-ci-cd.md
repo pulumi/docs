@@ -5,7 +5,7 @@ meta_desc: |
 type: what-is
 date: 2023-12-08T11:24:23-08:00
 page_title: "What is Continuous Integration/Continuous Delivery (CI/CD)?"
-authors: ["james-denyer"]
+authors: ["pulumi-content-team"]
 ---
 
 Continuous integration/continuous delivery (CI/CD) is a methodology in software development that emphasizes frequent, automated integration of code changes into a shared repository, followed by automated and reliable software release processes. As a foundational component of [modern DevOps practices](/what-is/what-is-devops/) CI/CD practices and tools increase efficiency, reduce bugs, and enable faster release cycles, thereby enhancing overall software quality and accelerating time-to-market for new features.
@@ -76,9 +76,9 @@ For a detailed exploration and steps to implement CI/CD and DevOps practices, re
 
 * **Continuous integration and continuous delivery (CI/CD)**: For integrating CI/CD processes with Pulumi, visit our [CI/CD integration documentation](https://www.pulumi.com/docs/guides/continuous-delivery/).
 
-* **Policy as code**: To manage policies using Pulumi Policies, visit the [Pulumi Policies documentation](https://www.pulumi.com/docs/discovery-governance/policy/).
+* **Policy as code**: To manage policies using Pulumi Policies, visit the [Pulumi Policies documentation](https://www.pulumi.com/docs/discovery-governance/concepts/policy-as-code/).
 
-* **[Infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/)**: Start with Infrastructure as Code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
+* **[Infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/)**: Start with infrastructure as code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
 
 * **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](https://www.pulumi.com/docs/intro/concepts/state/#backends).
 

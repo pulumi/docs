@@ -202,10 +202,18 @@ def test_role_upsert_never_invokes_spine_floor(env):
     set_comments(stub_dir, [comment(11, author_card())])
     r = run(env, "upsert", "--pr", "7", "--role", "author", body=author_card())
     assert r.returncode == 0, r.stderr
-    calls = (stub_dir / "calls.log").read_text()
-    # The v2 spine floor starts by fetching every prior body one comment at a
-    # time; the role path PATCHes without ever GETting a single comment body.
-    assert "issues/comments/11\", \"--jq\"" not in calls.replace("'", '"')
+    calls = [json.loads(line) for line
+             in (stub_dir / "calls.log").read_text().splitlines() if line.strip()]
+    # The v2 spine floor fetches every prior body, one comment at a time, to
+    # diff the evidence spine out of them. The role path reads exactly one
+    # body — the card it is about to replace, for the stale-publish guard —
+    # and never walks a sequence. Counting is the assertion: "reads no body at
+    # all" stopped being true when the guard landed, but "reads more than the
+    # one card it owns" is still the spine floor leaking in.
+    body_gets = [c for c in calls
+                 if c[:1] == ["api"] and ".body" in c
+                 and any("issues/comments/" in a for a in c)]
+    assert len(body_gets) == 1, f"role upsert reads one card body, got {body_gets}"
 
 
 def test_unknown_role_and_wrong_subcommand_rejected(env):
@@ -330,3 +338,206 @@ def test_banner_body_set_clear_roundtrip():
     assert "beefcaf" in restamped and "4c70141" not in restamped.splitlines()[3]
     assert run(["--clear"], restamped) == fixture
     assert run(["--clear"], fixture) == fixture
+
+
+# ---- stale-publish guard -----------------------------------------------------
+#
+# Regression cover for the card race observed twice on pulumi/docs#21785: two
+# runs at the SAME head published concurrently, the one that finished writing
+# last won regardless of when it composed, and the author card's REVIEW_STATE
+# — the Sentinel's G2 input — lost a recorded disposition with no trace.
+
+
+def stamped_author_card(updated: str, rev: int = 1, state: str = '{"findings":{},"high_water":1,"schema":1}') -> str:
+    return (
+        "<!-- CLAUDE_REVIEW 1/1 -->\n"
+        "<!-- CLAUDE_REVIEW_AUTHOR -->\n"
+        f"<!-- CLAUDE_REVIEW_HEAD {'a' * 40} -->\n"
+        f"## Author action guide v{rev} — nothing blocks merge\n\n"
+        "### 🚨 Fix or disagree\n\n_Nothing to fix._\n\n"
+        f"<!-- REVIEW_STATE {state} -->\n\n"
+        f"<sub>Review v{rev} · updated {updated} · head commit aaaaaaa</sub>\n\n"
+        + FOOTER
+    )
+
+
+def test_stale_card_does_not_overwrite_newer_one(env):
+    """The #21785 loss, verbatim: a card carrying `F1: fixed` must survive a
+    concurrent run whose card was composed a minute earlier."""
+    stub_dir, _ = env
+    published = stamped_author_card(
+        "2026-09-21T20:49:07Z", rev=2,
+        state='{"findings":{"F1":{"disposition":"fixed","sha":"1508820834ad"}},"high_water":1,"schema":1}')
+    set_comments(stub_dir, [comment(11, published)])
+    stale = stamped_author_card("2026-09-21T20:48:08Z", rev=1)
+
+    r = run(env, "upsert", "--pr", "21785", "--role", "author", body=stale)
+
+    assert r.returncode == 0, r.stderr
+    assert not (stub_dir / "patched-11.body").exists(), \
+        "a card composed earlier must not overwrite the newer one on the PR"
+    assert "not overwriting" in r.stdout + r.stderr
+
+
+def test_newer_card_still_publishes_over_older(env):
+    stub_dir, _ = env
+    set_comments(stub_dir, [comment(11, stamped_author_card("2026-09-21T20:48:08Z"))])
+    fresh = stamped_author_card("2026-09-21T20:49:07Z", rev=2)
+
+    r = run(env, "upsert", "--pr", "21785", "--role", "author", body=fresh)
+
+    assert r.returncode == 0, r.stderr
+    assert (stub_dir / "patched-11.body").read_text() == fresh
+
+
+def test_new_review_regeneration_is_not_blocked(env):
+    """`#new-review` legitimately republishes v1 over a v2 card. The guard
+    compares composition time, not revision, so the reset still lands."""
+    stub_dir, _ = env
+    set_comments(stub_dir, [comment(11, stamped_author_card("2026-09-21T20:49:07Z", rev=2))])
+    regenerated = stamped_author_card("2026-09-21T21:10:00Z", rev=1)
+
+    r = run(env, "upsert", "--pr", "21785", "--role", "author", body=regenerated)
+
+    assert r.returncode == 0, r.stderr
+    assert (stub_dir / "patched-11.body").read_text() == regenerated
+
+
+def test_unstamped_cards_fail_open(env):
+    """A body with no parseable stamp (legacy, fixture, changed format) must
+    never lose its publish to the guard."""
+    stub_dir, _ = env
+    set_comments(stub_dir, [comment(11, author_card())])
+    card = author_card(extra="edited\n\n")
+
+    r = run(env, "upsert", "--pr", "7", "--role", "author", body=card)
+
+    assert r.returncode == 0, r.stderr
+    assert (stub_dir / "patched-11.body").read_text() == card
+
+
+def test_allow_stale_overwrite_is_the_break_glass(env):
+    stub_dir, _ = env
+    set_comments(stub_dir, [comment(11, stamped_author_card("2026-09-21T20:49:07Z", rev=2))])
+    stale = stamped_author_card("2026-09-21T20:48:08Z")
+
+    r = run(env, "upsert", "--pr", "21785", "--role", "author",
+            "--allow-stale-overwrite", body=stale)
+
+    assert r.returncode == 0, r.stderr
+    assert (stub_dir / "patched-11.body").read_text() == stale
+
+
+def test_guard_covers_the_brief_too(env):
+    stub_dir, _ = env
+    newer = (
+        "<!-- CLAUDE_REVIEW_BRIEF -->\n## Reviewer's guide v2 — not for the author\n\n"
+        "<sub>Review v2 · updated 2026-09-21T20:49:07Z · head commit aaaaaaa</sub>\n\n" + FOOTER
+    )
+    older = (
+        "<!-- CLAUDE_REVIEW_BRIEF -->\n## Reviewer's guide v1 — not for the author\n\n"
+        "<sub>Review v1 · updated 2026-09-21T20:48:08Z · head commit aaaaaaa</sub>\n\n" + FOOTER
+    )
+    set_comments(stub_dir, [comment(12, newer)])
+
+    r = run(env, "upsert", "--pr", "21785", "--role", "brief", body=older)
+
+    assert r.returncode == 0, r.stderr
+    assert not (stub_dir / "patched-12.body").exists()
+
+
+def test_refused_notice_names_iso_times_not_epochs(env):
+    """The stand-down notice is the only diagnostic a refused publish leaves,
+    so it has to name times a human recognizes."""
+    stub_dir, _ = env
+    set_comments(stub_dir, [comment(11, stamped_author_card("2026-09-21T20:49:07Z", rev=2))])
+    stale = stamped_author_card("2026-09-21T20:48:08Z")
+
+    r = run(env, "upsert", "--pr", "21785", "--role", "author", body=stale)
+
+    out = r.stdout + r.stderr
+    assert "2026-09-21T20:49:07Z" in out and "2026-09-21T20:48:08Z" in out
+    assert "1758" not in out, "raw epoch seconds are not a diagnostic"
+
+
+def test_unreadable_published_card_warns_before_failing_open(env):
+    """Fail open, but say so: 'no newer card' and 'could not look' must not
+    be indistinguishable in the log."""
+    stub_dir, e = env
+    # A comment id the list reports but the single-comment GET cannot serve.
+    card = stamped_author_card("2026-09-21T20:48:08Z")
+    set_comments(stub_dir, [comment(11, card)])
+    broken = stub_dir / "gh"
+    broken.write_text(GH_STUB.replace(
+        'payload = json.dumps(next(c for c in comments if c["id"] == cid))',
+        'sys.exit(1)'))
+    broken.chmod(broken.stat().st_mode | stat.S_IEXEC)
+
+    r = run((stub_dir, e), "upsert", "--pr", "21785", "--role", "author", body=card)
+
+    assert r.returncode == 0, r.stderr
+    assert "could not read the published" in r.stdout + r.stderr
+    assert (stub_dir / "patched-11.body").exists(), "must still publish"
+
+
+# ---- a legacy monolith beside a v3 card (#21066) ------------------------------
+
+
+def _legacy_monolith(sha: str) -> str:
+    return (f"<!-- CLAUDE_REVIEW 1/1 -->\n## Pre-merge Review\n"
+            f"<!-- CLAUDE_REVIEW_HEAD {sha} -->\n\n### 🚨 Outstanding in this PR\n\n" + FOOTER)
+
+
+def _bot(c: dict, login: str = "github-actions[bot]") -> dict:
+    return {**c, "user": {"login": login}}
+
+
+def test_a_v3_card_beats_an_older_legacy_monolith(env):
+    """#21066: the legacy monolith (older, lower id) and the v3 author card
+    both open `1/1`; the sort tied them and last-reviewed-sha read the
+    monolith's five-week-old head. The author card is the review."""
+    stub_dir, _ = env
+    set_comments(stub_dir, [
+        _bot(comment(40, _legacy_monolith("89f9510" + "0" * 33))),
+        _bot(comment(51, author_card(sha="d94fdd4" + "0" * 33))),
+        _bot(comment(52, brief_card())),
+    ])
+    assert run(env, "last-reviewed-sha", "--pr", "7").stdout.strip().startswith("d94fdd4")
+    assert run(env, "find", "--pr", "7").stdout.split() == ["51"]
+    fetched = run(env, "fetch", "--pr", "7").stdout
+    assert "CLAUDE_REVIEW_AUTHOR" in fetched and "Outstanding in this PR" not in fetched
+
+
+def test_clear_still_sweeps_the_hidden_legacy_monolith(env):
+    stub_dir, _ = env
+    set_comments(stub_dir, [
+        _bot(comment(40, _legacy_monolith("1" * 40))),
+        _bot(comment(51, author_card())),
+        _bot(comment(52, brief_card())),
+    ])
+    assert run(env, "clear", "--pr", "7").returncode == 0
+    deletes = sorted(json.loads(l)[-1].rsplit("/", 1)[1]
+                     for l in (stub_dir / "calls.log").read_text().splitlines() if "DELETE" in l)
+    assert deletes == ["40", "51", "52"]
+
+
+def test_prune_legacy_deletes_only_bot_legacy_pages_beside_a_v3_card(env):
+    stub_dir, _ = env
+    set_comments(stub_dir, [
+        _bot(comment(40, _legacy_monolith("1" * 40))),
+        _bot(comment(41, "<!-- CLAUDE_REVIEW 2/2 -->\nlegacy tail\n"), login="pulumi-bot"),
+        _bot(comment(42, "<!-- CLAUDE_REVIEW 1/1 -->\nsomeone quoting\n"), login="a-human"),
+        _bot(comment(51, author_card())),
+        _bot(comment(52, brief_card())),
+    ])
+    assert run(env, "prune-legacy", "--pr", "7").returncode == 0
+    deletes = sorted(json.loads(l)[-1].rsplit("/", 1)[1]
+                     for l in (stub_dir / "calls.log").read_text().splitlines() if "DELETE" in l)
+    assert deletes == ["40", "41"]
+
+
+def test_prune_legacy_is_a_no_op_without_a_v3_card(env):
+    stub_dir, _ = env
+    set_comments(stub_dir, [_bot(comment(40, _legacy_monolith("1" * 40)))])
+    assert run(env, "prune-legacy", "--pr", "7").returncode == 0
+    assert "DELETE" not in (stub_dir / "calls.log").read_text()

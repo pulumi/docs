@@ -34,7 +34,7 @@ At the same time, thousands of organizations are using Pulumi and Pulumi Cloud t
 
 In this article, we'll dig into both of these trends and the impacts that they are already having today, as well as the trends we are expecting to see (and build) for the near future.
 
-## AI transforming Infrastructure as Code
+## AI transforming infrastructure as code
 
 ### Today
 

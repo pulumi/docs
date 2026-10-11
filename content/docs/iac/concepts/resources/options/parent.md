@@ -123,7 +123,7 @@ Previewing update (dev):
 
 ## Inherited resource options
 
-Child resources always inherit the following resource options from their `parent`:
+A child resource inherits the following resource options from its `parent` unless the child sets the option explicitly. This is the complete list; other resource options are not inherited.
 
 * [`provider`](/docs/iac/concepts/resources/options/provider/): Child resources inherit their parent's provider to ensure that child resources are created in the same cloud context (account, region, etc.) as their parent.
 
@@ -131,8 +131,12 @@ Child resources always inherit the following resource options from their `parent
 
 * [`protect`](/docs/iac/concepts/resources/options/protect/): Child resources inherit their parent's protection bit to ensure that deletions execute correctly. Children are deleted before their parent, so inheriting protection ensures that if a parent is marked as protected, none of its children will be deleted (because deleting the protected parent would fail).
 
+* [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/): Child resources inherit their parent's `retainOnDelete` so that the resources inside a retained component are retained too. Setting `retainOnDelete` on a component resource has no effect on the component itself, which has no physical infrastructure to keep, but it applies to every child that doesn't set the option explicitly. A child can set `retainOnDelete: false` to opt out.
+
 * [`transforms`](/docs/iac/concepts/resources/options/transforms/):  Transforms applied to a parent will run on the parent and on all child resources. This allows a transform to be applied to a component to intercept and modify any resources created by its children. As a special case, [Stack transforms](/docs/iac/concepts/resources/options/transforms/#stack-transforms) will be applied to *all* resources (since all resources ultimately are parented directly or indirectly by the root stack resource).
 
 * [`transformations`](/docs/iac/concepts/resources/options/transformations/):  Transformations applied to a parent will run on the parent and on all child resources. This allows a transformation to be applied to a component to intercept and modify any resources created by its children. As a special case, [Stack transformations](/docs/iac/concepts/resources/options/transformations/#stack-transformations) will be applied to *all* resources (since all resources ultimately are parented directly or indirectly by the root stack resource). Prefer `transforms` over `transformations` as the latter is deprecated.
 
 * [`deletedWith`](/docs/iac/concepts/resources/options/deletedwith/): Child resources inherit their parent's `deletedWith` so that when a parent is being removed alongside the resource named in its `deletedWith`, child deletions are skipped as well. This matches how containing resources (such as a Kubernetes namespace or a cloud resource group) cascade-delete their contents in the backing provider — individual child deletes are unnecessary, and skipping them also speeds up `pulumi destroy`.
+
+The Pulumi engine, not the language SDK, applies inheritance for `provider`, `protect`, `retainOnDelete`, and `deletedWith`. As a result, SDK source code is not a reliable way to tell which options a child inherits.
