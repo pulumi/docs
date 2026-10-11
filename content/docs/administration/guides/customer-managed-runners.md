@@ -17,7 +17,7 @@ Customer-managed runners let you run Pulumi Deployments, [Discovery](/docs/disco
 
 ## Set up a runner pool
 
-Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) installed, which is required for running the workflow runner. If you plan to use workflow runners for **deployments**, you must also install the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) and update the [source control settings](/docs/deployments/get-started/) of the stack you want to deploy.
+Before you begin, ensure you have somewhere for the workflow runner to launch jobs: [Docker](https://docs.docker.com/engine/), a [Kubernetes](https://kubernetes.io/docs/home/) cluster, or an [Amazon ECS](https://docs.aws.amazon.com/ecs/) cluster. See [Choosing a deploy target](/docs/administration/concepts/customer-managed-runners/#choosing-a-deploy-target). If you plan to use workflow runners for **deployments**, you must also install the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) and update the [source control settings](/docs/deployments/get-started/) of the stack you want to deploy.
 
 1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow runner pools** tab
 1. Create a new pool. Copy and save the token
@@ -39,7 +39,7 @@ Workflow runners support multiple workflow types beyond deployments, including D
 
 ### Scaling and concurrency
 
-Each workflow runner process runs **one deployment at a time**, plus optionally **one Discovery scan or policy evaluation in parallel**, and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one deployment slot and, if the pool also handles non-deployment workflow types, one additional slot for Discovery scans or policy evaluations. For how each runner launches a job (the Docker and Kubernetes execution models), see [Execution model](/docs/administration/concepts/customer-managed-runners/#execution-model).
+Each workflow runner process runs **one deployment at a time**, plus optionally **one Discovery scan or policy evaluation in parallel**, and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one deployment slot and, if the pool also handles non-deployment workflow types, one additional slot for Discovery scans or policy evaluations. For how each runner launches a job (the Docker, Kubernetes, and Amazon ECS execution models), see [Execution model](/docs/administration/concepts/customer-managed-runners/#execution-model).
 
 Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. Recovery behavior depends on the workflow type:
 
