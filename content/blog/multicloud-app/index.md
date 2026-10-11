@@ -69,11 +69,20 @@ const aksCluster = new containerservice.ManagedCluster("aks-cluster", {
     dnsPrefix: "multicloudaks",
     identity: { type: "SystemAssigned" },
 });
+
+const aksCreds = containerservice.listManagedClusterUserCredentialsOutput({
+    resourceGroupName: resourceGroup.name,
+    resourceName: aksCluster.name,
+});
+
+export const aksKubeconfig = aksCreds.kubeconfigs[0].value.apply(
+    v => Buffer.from(v, "base64").toString());
 ```
 
 Provision a GKE cluster with the [`gcp`](https://www.pulumi.com/registry/packages/gcp/) provider:
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const gkeCluster = new gcp.container.Cluster("gke-cluster", {
@@ -85,6 +94,31 @@ const gkeCluster = new gcp.container.Cluster("gke-cluster", {
         ],
     },
 });
+
+export const gkeKubeconfig = pulumi
+    .all([gkeCluster.name, gkeCluster.endpoint, gkeCluster.masterAuth])
+    .apply(([name, endpoint, auth]) => `apiVersion: v1
+kind: Config
+clusters:
+- name: ${name}
+  cluster:
+    certificate-authority-data: ${auth.clusterCaCertificate}
+    server: https://${endpoint}
+contexts:
+- name: ${name}
+  context:
+    cluster: ${name}
+    user: ${name}
+current-context: ${name}
+users:
+- name: ${name}
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      command: gke-gcloud-auth-plugin
+      installHint: Install gke-gcloud-auth-plugin to authenticate to GKE
+      provideClusterInfo: true
+`);
 ```
 
 The same EKS cluster in Python looks like this, using [`pulumi_eks`](https://www.pulumi.com/registry/packages/eks/installation-configuration/?section=python):
@@ -159,7 +193,7 @@ Provisioning the clusters is one job; keeping workloads scheduled and consistent
 | Kubernetes-native infrastructure as code | Manages cloud infrastructure through Kubernetes custom resources and controllers | [Crossplane](https://www.crossplane.io/) | Teams standardized on GitOps and the Kubernetes API as the control plane for infrastructure |
 | General-purpose infrastructure as code | Provisions the clusters themselves, and every supporting resource around them (networking, IAM, node pools), in the same codebase and language as the rest of your infrastructure | [Pulumi](https://www.pulumi.com/registry/packages/kubernetes/) | Teams that want the clusters, the workloads, and the surrounding cloud resources under one review and testing process |
 
-A fleet tool like Karmada doesn't create the EKS, AKS, and GKE clusters it schedules onto; something has to provision those first. Pulumi is a good fit for that provisioning step, and it can sit alongside a fleet-management tool rather than replacing it. For teams that want to govern policy and cost across the clusters Pulumi provisions, [Pulumi Discovery](https://www.pulumi.com/docs/discovery-governance/) gives visibility into resources across all three providers from one inventory.
+A fleet tool like Karmada doesn't create the EKS, AKS, and GKE clusters it schedules onto; something has to provision those first. Pulumi is a good fit for that provisioning step, and it can sit alongside a fleet-management tool rather than replacing it.
 
 ## Where to go next
 
@@ -178,7 +212,7 @@ It depends on why you're considering it. If the driver is a concrete requirement
 
 ## Can I use the same Kubernetes manifests across EKS, AKS, and GKE?
 
-Mostly. Core Kubernetes resources, such as Deployments, Services of type `ClusterIP`, and ConfigMaps, behave the same way regardless of provider, because they're implemented by Kubernetes itself rather than the cloud. Anything that touches provider-specific infrastructure differs: a Service of type `LoadBalancer` provisions an AWS Network Load Balancer, an Azure Load Balancer, or a Google Cloud Load Balancer depending on the cluster, each with its own annotations for things like internal-only access or SSL termination. Persistent volume storage classes also differ by default (`gp3` on EKS, `managed-csi` on AKS, `standard-rwo` on GKE). Plan for a small provider-specific configuration layer around an otherwise-shared manifest, rather than expecting one manifest to be entirely provider-agnostic.
+Mostly. Core Kubernetes resources, such as Deployments, Services of type `ClusterIP`, and ConfigMaps, behave the same way regardless of provider, because they're implemented by Kubernetes itself rather than the cloud. Anything that touches provider-specific infrastructure differs: a Service of type `LoadBalancer` provisions an AWS load balancer (a Network Load Balancer with the AWS Load Balancer Controller or EKS Auto Mode, a Classic Load Balancer otherwise), an Azure Load Balancer, or a Google Cloud Load Balancer depending on the cluster, each with its own annotations for things like internal-only access or SSL termination. Persistent volume storage classes also differ by default (`gp3` on EKS, `managed-csi` on AKS, `standard-rwo` on GKE). Plan for a small provider-specific configuration layer around an otherwise-shared manifest, rather than expecting one manifest to be entirely provider-agnostic.
 
 ## Do I still need a tool like Karmada if I'm provisioning clusters with Pulumi?
 
