@@ -153,7 +153,7 @@ None of these is universally best. Knowing your failure mode is the real decisio
 | GitHub stars (current) | ~279K | ~8.8K on the new repo (plus 64.6K on the archived original) | ~130K |
 | Agent support | 13+ agents | 9+ agents via installer | 8+ agents |
 
-For infrastructure work, GSD's context management matters most. Long Pulumi sessions that provision dozens of resources across multiple stacks are exactly the scenario where context rot bites hardest. GSD's phase-based approach keeps each orchestrator fresh.
+For infrastructure work, GSD's context management matters most. Long Pulumi sessions that provision dozens of resources across multiple stacks are exactly the scenario where context rot bites hardest. GSD's phase-based approach keeps each orchestrator fresh. If you would rather not manage that context yourself, [Pulumi Neo](/product/neo/) is an infrastructure agent that starts from your stacks, dependencies, and deployment history.
 
 Superpowers' TDD workflow maps well to application code where unit tests are straightforward. Infrastructure testing is different. You cannot unit test whether an [IAM policy](/docs/iac/guides/clouds/aws/iam/) actually grants the right permissions. You can test the shape of the policy with [Pulumi's testing frameworks](/docs/iac/guides/testing/), but the real validation happens at [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) and [`pulumi up`](/docs/iac/cli/commands/pulumi_up/). Superpowers still helps here (discipline is discipline), but the TDD cycle is less natural for infra than for app code.
 
