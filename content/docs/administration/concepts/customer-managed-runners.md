@@ -177,7 +177,7 @@ Regardless of the deploy target, each agent process runs **one deployment at a t
 | **Prerequisite** | A Docker daemon on the host | A Kubernetes cluster | An ECS cluster, and AWS credentials for the agent |
 | **Per-job unit** | A runner container launched via the Docker socket | A runner Pod launched via the in-cluster API | An ECS task launched via the ECS API |
 | **Isolation** | Container-level, sharing the host Docker daemon | Pod-level, scheduled and isolated by the cluster | A microVM per job on Fargate |
-| **Scaling** | Run more agent processes (for example, more hosts or systemd units) | Run more agent replicas, or use `single_run` with a `Job`/`CronJob` for ephemeral per-job runners | Run more agent processes; ECS provides the capacity for each task |
+| **Scaling** | Run more agent processes (for example, more hosts or systemd units) | Run more agent replicas, or use `single_run` with a `Job`/`CronJob` for ephemeral per-job runners | Run more agent processes |
 | **Best fit** | A single VM or host where you want the simplest setup | An existing Kubernetes environment that should schedule and bound runner resources | AWS environments that need per-job isolation without managing hosts or a cluster |
 
 ## Providing cloud credentials to runners
