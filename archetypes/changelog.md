@@ -29,7 +29,7 @@ authors:
     - christian-nunciato
 
 # Optional Pulumi Cloud edition availability, shown as badge(s) beside the date.
-# A YAML array of edition ids from the closed set in data/pulumi_pricing.yaml
+# A YAML array of edition ids from the closed set in data/pulumi_editions.yaml
 # (free, essentials, pro, enterprise); `make lint` enforces it.
 # Write the id — the badge renders the display name ("Enterprise") from
 # it. List every edition the feature is available in — since a lower edition

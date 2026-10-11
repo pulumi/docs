@@ -1,14 +1,15 @@
-// industries.mjs — virtual pages for the case-study INDUSTRY term cards.
+// industries.mjs — virtual pages for the customer INDUSTRY term cards.
 //
-// Industry term pages (/case-studies/industry/<slug>/) are a taxonomy with no
-// backing content file, so generate-meta-images.mjs can't discover them by
-// walking content/. This module enumerates them instead: one card per industry
-// in data/case_study_industries.yaml (the single source of truth the linter and
-// the term-page templates also read). This is the case-study analogue of the
-// blog term cards in terms.mjs.
+// Industry term pages (/customers/industry/<slug>/) are a taxonomy whose
+// backing content files are stubs under content/industry/, so
+// generate-meta-images.mjs doesn't discover them by walking the sections it
+// knows about. This module enumerates them instead: one card per industry in
+// data/customers_industries.yaml (the single source of truth the linter and the
+// term-page templates also read). This is the customer analogue of the blog
+// term cards in terms.mjs.
 //
-// Each card uses the LIGHT docs-style card ("tutorial" template) — a "Case
-// Studies" badge, an "Industry" corner label, and the industry name as the
+// Each card uses the LIGHT docs-style card ("tutorial" template) — a
+// "Customers" badge, an "Industry" corner label, and the industry name as the
 // title — so industry cards share the light field of the case-study cards
 // (the "case-study"/"title" templates) with no new template.
 //
@@ -29,12 +30,12 @@ const yaml = require("js-yaml")
 const CANVAS_W = 1200
 const CANVAS_H = 628
 
-// One virtual industry term page per entry in data/case_study_industries.yaml.
-// The LIGHT "tutorial" card carries a "Case Studies" badge and an "Industry"
+// One virtual industry term page per entry in data/customers_industries.yaml.
+// The LIGHT "tutorial" card carries a "Customers" badge and an "Industry"
 // corner label; the optional per-industry description fills the body under the
 // title (omit it and the title stands alone, like the blog term cards).
 export function industryPages() {
-  const file = join(REPO_ROOT, "data", "case_study_industries.yaml")
+  const file = join(REPO_ROOT, "data", "customers_industries.yaml")
   const industries = (yaml.load(readFileSync(file, "utf-8")) || {}).industries || []
   const pages = []
   for (const ind of industries) {
@@ -43,7 +44,7 @@ export function industryPages() {
       id: `industry/${ind.id}`,
       template: "tutorial",
       fields: {
-        sectionLabel: "Case Studies",
+        sectionLabel: "Customers",
         subSectionLabel: "Industry",
         title: clean(ind.name) || ind.id,
         description: clean(ind.description),

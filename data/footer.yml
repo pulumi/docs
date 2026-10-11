@@ -29,6 +29,9 @@ columns:
       - label: Events
         href: /events/
         track: footer-events
+      - label: Whitepapers
+        href: /whitepapers/
+        track: footer-whitepapers
       - label: Releases
         href: /releases/
         track: footer-releases
@@ -81,8 +84,8 @@ columns:
         href: /solutions/ai/
         track: footer-artificial-intelligence
       - label: Teams like yours
-        href: /case-studies/
-        track: footer-case-studies
+        href: /customers/
+        track: footer-customers
 
   - heading: Company
     items:

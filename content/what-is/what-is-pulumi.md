@@ -231,7 +231,7 @@ Ready to experience infrastructure as software? Explore Pulumi's comprehensive p
 
 - [Get started with Pulumi](/docs/get-started/)
 - [Explore the registry](/registry/)
-- [Read customer success stories](/case-studies/)
+- [Read customer success stories](/customers/)
 - [Compare infrastructure as code tools](/blog/infrastructure-as-code-tools/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 

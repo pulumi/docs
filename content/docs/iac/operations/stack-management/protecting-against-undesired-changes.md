@@ -22,7 +22,7 @@ The [`protect`](/docs/iac/concepts/resources/options/protect/) resource option m
 
 Rather than hard-code `protect: true`, drive it from [stack configuration](/docs/iac/concepts/config/) so that production stacks protect the resource while development stacks can still be torn down freely:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -95,6 +95,29 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+variable "protect" {
+  type    = bool
+  default = false
+}
+
+resource "database" "db" {
+  # ...
+
+  pulumi {
+    protect = var.protect
+  }
+}
+```
+
+Set the variable per stack with `pulumi config set`, the same as any other HCL variable.
+
+Pulumi HCL also honors Terraform's `lifecycle { prevent_destroy = true }`, but the two guards are not the same thing. `prevent_destroy` is enforced by the language plugin and re-evaluated on every run from the program text, so the guard disappears the moment you remove the argument — including when you delete the whole resource block, which is exactly the case `protect` exists to catch. `protect` is a Pulumi resource option recorded in state, so it keeps refusing the delete until you unprotect it. Use `prevent_destroy` to guard against an accidental replacement while the resource is still declared; use `protect` for a resource that must survive being dropped from the program.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 Set the value per stack, so a production stack protects the database while a development stack leaves it deletable:
@@ -109,6 +132,8 @@ Child resources inherit `protect` from their [parent](/docs/iac/concepts/resourc
 * Run [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/) against the resource's URN.
 
 Pulumi has no single flag to protect every resource in a stack. To apply `protect: true` across the board, use [stack transforms](/docs/iac/concepts/resources/options/transforms/#stack-transforms) to set the option on every resource as it's registered.
+
+`protect` guards a resource within Pulumi, but it's not the only layer worth knowing about: many cloud resources carry their own, separate deletion-protection attributes that the provider or the cloud API enforces independently, such as `deletionProtection` on a GCP Cloud SQL instance or an AWS RDS instance. The two layers are complementary rather than substitutes for one another. See [Deletion protection on the resource itself](/docs/iac/operations/troubleshooting/destroy-failures/#deletion-protection-on-the-resource-itself) for how to tell them apart and resolve a destroy failure caused by either.
 
 ## Retain data on delete
 
@@ -159,7 +184,7 @@ Undesired changes don't only come from your program. Someone can also modify a r
 
 ## Enforce guardrails with policy as code
 
-The safeguards above are opt-in per resource or per run. [Policy as code](/docs/discovery-governance/policy/) makes them enforceable across every stack automatically. A policy pack can, for example, block the deletion of any resource tagged `environment: production`, require encryption on storage, or fail an update that violates your organization's standards, and it's evaluated on every `pulumi preview` and `pulumi up`. Wire policy packs into your pipeline so the rules apply consistently; see [policy in CI/CD](/docs/discovery-governance/policy/ci-cd/).
+The safeguards above are opt-in per resource or per run. [Policy as code](/docs/discovery-governance/concepts/policy-as-code/) makes them enforceable across every stack automatically. A policy pack can, for example, block the deletion of any resource tagged `environment: production`, require encryption on storage, or fail an update that violates your organization's standards, and it's evaluated on every `pulumi preview` and `pulumi up`. Wire policy packs into your pipeline so the rules apply consistently; see [policy in CI/CD](/docs/discovery-governance/guides/policies-in-ci-cd/).
 
 ## Gate previews in CI/CD
 

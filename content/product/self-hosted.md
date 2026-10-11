@@ -2,12 +2,12 @@
 title: Self-Hosted Pulumi Cloud
 layout: self-hosted
 
-meta_desc: Learn how to operate Pulumi Cloud in your own cloud account or data center.
+meta_desc: Run Pulumi Cloud in your own cloud account, data center, or air-gapped network, including inside a FedRAMP authorization boundary.
 
 overview:
     title: Try Self-Hosted Pulumi
     descriptionTop: |
-        Maintain complete control over your hosting, network isolation, identity, and data ownership to satisfy compliance requirements.  [Request a Proof of Concept](#self-hosted-trial) to evaluate self-hosted Pulumi.
+        Maintain complete control over your hosting, network isolation, identity, and data ownership to satisfy compliance requirements, including [FedRAMP](#fedramp).  [Request a Proof of Concept](#self-hosted-trial) to evaluate self-hosted Pulumi.
     descriptionBottom: |
         Want Pulumi Cloud delivered as SaaS?  [Start Using Pulumi Cloud for free](https://app.pulumi.com/signin).
 trial:
@@ -15,6 +15,18 @@ trial:
     description: |
         Fill out the form to connect with a solutions architect and start your evaluation.
     hubspot_form_id: b6ff58c0-2b40-4202-9a7f-d6d8aca4414a
+regulated:
+    title: Deploy within your FedRAMP boundary
+    description: |
+        Self-hosted Pulumi Cloud runs inside your FedRAMP authorization boundary, assessed as a component of your own system. Pulumi supports a FIPS-enabled self-hosted image. Teams pursuing a government authority to operate (ATO) run it this way today. [Talk to us](/contact/) about the security documentation to support your package.
+    items:
+        - title: Everything within your boundary
+          description: |
+            Your resource state, configuration, and secrets all live in the Pulumi Cloud instance you deploy — optionally fully [air-gapped](/docs/administration/self-hosting/airgapped/), with no connection to the hosted Pulumi Cloud service. See [Capabilities](#self-hosted-capabilities) above for the full list.
+        - title: Controls your assessor can read
+          description: |
+            [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) enforce security controls on every deployment and give your assessors actual code to review, rather than just documents. [Spear AI](/customers/spear-ai/) gave auditors its Pulumi policies and cut its government ATO timeline [from 18 months to three](/customers/spear-ai/).
+
 capabilities:
     title: Capabilities of Self-Hosted Pulumi
     items:
@@ -52,7 +64,7 @@ capabilities:
 deployment:
     title: Hosting Options
     descriptionTop: |
-        [Install Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) in any on-premises or cloud provider environment or run in air-gapped environments, including those requiring FedRAMP.
+        [Install Self-Hosted Pulumi Cloud](/docs/administration/self-hosting/) in any on-premises or cloud provider environment, in [air-gapped networks](/docs/administration/self-hosting/airgapped/), and inside [FedRAMP authorization boundaries](#fedramp).
     descriptionBottom: |
         [Talk to a Pulumi team member](/contact/) if you don't see your desired deployment option.
 pricing:

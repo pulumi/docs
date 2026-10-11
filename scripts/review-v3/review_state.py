@@ -4,18 +4,19 @@
 REVIEW_STATE is the disposition source of truth for the v3 review workflow: a
 single-line HTML comment embedded in the bot-owned author-facing pinned
 comment, carrying every finding's answer (fixed / refuted / deferred /
-accepted / not-applicable). It lives on the PR — not in S3 — because the
-Sentinel must read it uncredentialed, from fork PRs, atomically with the
-findings it answers; the credentialed record job mirrors it one-way into
-`pr-review/<pr>/latest.json` for telemetry.
+accepted / not-applicable). It lives on the PR — not in S3 — because the Sentinel must read it uncredentialed, from fork PRs,
+atomically with the findings it answers; the credentialed record job
+mirrors it one-way into `pr-review/<pr>/latest.json` for telemetry.
 
-Three writers share this module and MUST merge rather than overwrite:
-`review-resolve.yml` (the deterministic `/resolve` command), the update lane
-(`apply-update.py`), and nothing else. Merging is per finding-id with the
-newest `updated_at` winning — the update lane's model step can take ~10
-minutes between fetching the comment and writing it back, and a `/resolve`
-landing in that window must survive (the lost-update race from the v3 design
-review).
+Two lanes publish the author card, and this block with it: the full-review
+lane (claude-code-review.yml — a ready-transition, triage's auto-fire,
+`#new-review`) and the update lane (`apply-update.py`), which is the only one
+that records dispositions. Their runs overlap routinely (#21785, #21871), and
+the update lane's model step can take ~10 minutes between fetching the card
+and writing it back. So it MUST merge rather than overwrite: per finding-id,
+newest `updated_at` winning, against a card re-fetched just before publish.
+pinned-comment.sh's stale-publish guard (#21788) is the other half: it
+refuses to publish a card composed before the one already on the PR.
 
 Serialization escapes `<` and `>` inside the JSON payload: an HTML comment
 terminates at the first `-->`, so a disposition note containing one would
@@ -51,7 +52,16 @@ def parse_state(body: str) -> dict | None:
     exists but does not decode or validate — a corrupt block must be surfaced,
     never silently treated as empty (that would un-answer every finding).
     """
-    m = BLOCK_RE.search(body)
+    # LAST match, not the first. The composer appends the real block at the
+    # end of the card, after the finding rows — and a finding row renders the
+    # changed file's path verbatim inside backticks, with a permissive
+    # character class. So a PR that adds a file whose *path* embeds a
+    # `<!-- REVIEW_STATE {...} -->` block gets that block quoted into every
+    # row for that file, ahead of the genuine one, and `search` would read
+    # the attacker's dispositions as the state. Reading from the end means
+    # the block the composer actually wrote always wins.
+    matches = list(BLOCK_RE.finditer(body))
+    m = matches[-1] if matches else None
     if not m:
         if "<!-- REVIEW_STATE" in body:
             raise ValueError("REVIEW_STATE marker present but block is malformed/truncated")
@@ -98,7 +108,9 @@ def validate_state(state: object) -> list[str]:
             problems.append(f"{prefix}: updated_at must be an ISO-8601 timestamp")
         if "bulk" in entry and not isinstance(entry["bulk"], bool):
             problems.append(f"{prefix}: bulk must be a boolean")
-        unknown = set(entry) - {"disposition", "note", "actor", "sha", "bulk", "updated_at"}
+        unknown = set(entry) - {
+            "disposition", "note", "actor", "sha", "bulk", "updated_at",
+        }
         if unknown:
             problems.append(f"{prefix}: unknown keys {sorted(unknown)}")
     return problems
@@ -232,16 +244,64 @@ def _self_test() -> int:
     reparsed = parse_state(replaced)
     assert reparsed is not None and set(reparsed["findings"]) == {"F3", "F4"}
 
+    assert high_water_of(replaced) == reparsed["high_water"]
+    assert high_water_of("no block here") == 0
+    assert high_water_of("<!-- REVIEW_STATE {broken -->") == 0
+
     print("review_state self-test passed")
     return 0
+
+
+def high_water_of(body: str) -> int:
+    """The block's high_water, or 0 when there is no parseable block. A
+    caller uses it to continue finding ids, so "unknown" must degrade to the
+    old restart-at-F1 behavior, never raise."""
+    try:
+        state = parse_state(body)
+    except ValueError:
+        return 0
+    try:
+        return max(0, int((state or {}).get("high_water", 0)))
+    except (TypeError, ValueError):
+        return 0
+
+
+# A forced `#new-review` clears the author card before its replacement is
+# composed, so the card's high_water lives only in the dispatch input until
+# the new card publishes. A run that errors or times out in between would
+# lose it, and the next review would restart at F1 (#21798). The failure
+# notice carries it instead: `<!-- REVIEW_HIGH_WATER n -->`, written only by
+# github-actions[bot] and read back only from its comments.
+HW_MARKER_RE = re.compile(r"<!-- REVIEW_HIGH_WATER (\d+) -->")
+
+
+def hw_marker(n: int) -> str:
+    return f"<!-- REVIEW_HIGH_WATER {int(n)} -->" if int(n) > 0 else ""
+
+
+def marker_high_water(text: str) -> int:
+    """The largest REVIEW_HIGH_WATER marker in `text` (many comment bodies
+    concatenated is fine), or 0."""
+    return max((int(m) for m in HW_MARKER_RE.findall(text or "")), default=0)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--self-test", action="store_true")
+    parser.add_argument("command", nargs="?", choices=("high-water", "high-water-marker"),
+                        help="high-water: print the high_water of the REVIEW_STATE "
+                             "block in the card on stdin (0 when absent or corrupt); "
+                             "high-water-marker: the largest REVIEW_HIGH_WATER marker "
+                             "in the bot comment bodies on stdin (0 when none)")
     args = parser.parse_args()
     if args.self_test:
         return _self_test()
+    if args.command == "high-water":
+        print(high_water_of(sys.stdin.read()))
+        return 0
+    if args.command == "high-water-marker":
+        print(marker_high_water(sys.stdin.read()))
+        return 0
     parser.print_help()
     return 2
 

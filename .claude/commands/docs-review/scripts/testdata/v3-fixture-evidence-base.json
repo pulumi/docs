@@ -65,7 +65,10 @@
       "line": 12,
       "evidence": "evidence: setup.py requires >=3.9; source: github.com/pulumi/pulumi setup.py",
       "source": "github.com/pulumi/pulumi setup.py",
-      "route": "pass1"
+      "route": "pass1",
+      "claim_id": "c1",
+      "type": "capability",
+      "confidence": "high"
     },
     {
       "file": "content/docs/iac/x.md",
@@ -73,7 +76,10 @@
       "verdict": "unverifiable",
       "line": 61,
       "evidence": "evidence: WebSearch ran; no source found for the 40% figure",
-      "route": "pass3"
+      "route": "pass3",
+      "claim_id": "c2",
+      "type": "statistic",
+      "confidence": "low"
     },
     {
       "file": "content/docs/iac/x.md",
@@ -82,7 +88,10 @@
       "line": 80,
       "evidence": "evidence: esc env get renders a table by default; --format json is opt-in; source: esc CLI docs",
       "source": "esc CLI docs",
-      "route": "pass1"
+      "route": "pass1",
+      "claim_id": "c3",
+      "type": "capability",
+      "confidence": "high"
     },
     {
       "file": "content/docs/iac/x.md",
@@ -91,7 +100,11 @@
       "line": 95,
       "evidence": "framing: widened denominator; evidence: source says trial users, not most users; source: internal adoption dashboard",
       "source": "internal adoption dashboard",
-      "route": "pass1"
+      "route": "pass1",
+      "claim_id": "c4",
+      "type": "framing",
+      "confidence": "medium",
+      "framing_note": "widened denominator"
     },
     {
       "file": "content/docs/iac/x.md",
@@ -100,7 +113,10 @@
       "line": 101,
       "evidence": "evidence: security whitepaper section 4; source: pulumi.com/security",
       "source": "pulumi.com/security",
-      "route": "pass2"
+      "route": "pass2",
+      "claim_id": "c5",
+      "type": "capability",
+      "confidence": "high"
     }
   ],
   "investigation_log": {

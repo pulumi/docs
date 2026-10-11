@@ -50,12 +50,8 @@
 {{ end }}
 {{ $schema = merge $schema $place }}
 
-{{/* Add event status - if external and block_external_search_index is true, might be past */}}
+{{/* Add event status */}}
 {{ $eventStatus := "https://schema.org/EventScheduled" }}
-{{ if and .Params.external .Params.block_external_search_index }}
-  {{/* External blocked events might be past */}}
-  {{ $eventStatus = "https://schema.org/EventScheduled" }}
-{{ end }}
 {{ $schema = merge $schema (dict "eventStatus" $eventStatus) }}
 
 {{/* Add organizer */}}

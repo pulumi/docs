@@ -1,5 +1,3 @@
-registry/packages/azure/api-docs/mobile/index.html|/registry/packages/azure/
-registry/packages/azure/api-docs/voice/index.html|/registry/packages/azure/
 containers/index.html|/docs/integrations/clouds/kubernetes/
 docs/guides/index.html|/docs/iac/
 docs/iac/guides/index.html|/docs/iac/
@@ -11,13 +9,13 @@ docs/support/troubleshooting/debugging/images/automatic-2.png|/docs/iac/operatio
 docs/support/troubleshooting/debugging/images/stack-selection-1.png|/docs/iac/operations/debugging/images/stack-selection-1.png
 docs/support/troubleshooting/debugging/images/debugging.png|/docs/iac/operations/debugging/images/debugging.png
 docs/support/troubleshooting/debugging/images/debug-console.png|/docs/iac/operations/debugging/images/debug-console.png
-docs/insights/assets/create-policy-group.png|/docs/discovery-governance/discovery/get-started/add-policies/
+docs/insights/assets/create-policy-group.png|/docs/discovery-governance/get-started/add-policies/
 docs/pulumi-cloud/access-management/saml/aad/index.html|/docs/administration/guides/saml/entra/
 docs/pulumi-cloud/deployments/faq/index.html|/docs/deployments/operations/
 docs/pulumi-cloud/developer-portals/new-project-wizard/index.html|/docs/idp/concepts/new-project-wizard/
 docs/pulumi-cloud/developer-portals/backstage/index.html|/docs/idp/integrations/backstage-plugin/
 docs/pulumi-cloud/access-management/scim/azuread/index.html|/docs/administration/guides/scim/entra/
-docs/iac/packages-and-automation/crossguard/core-concepts/index.html|/docs/discovery-governance/policy/
+docs/iac/packages-and-automation/crossguard/core-concepts/index.html|/docs/discovery-governance/concepts/policy-as-code/
 docs/pulumi-cloud/access-management/oidc/index.html|/docs/administration/guides/oidc-issuers/
 docs/pulumi-cloud/access-management/oidc/client/index.html|/docs/administration/guides/oidc-issuers/
 docs/administration/self-hosting/pulumi-cloud/index.html|/docs/administration/self-hosting/
@@ -26,10 +24,10 @@ docs/reference/cloud-rest-api/cloud-rest-api/index.html|/docs/reference/cloud-re
 docs/using-pulumi/index.html|/docs/iac/
 topics/containers/index.html|/docs/integrations/clouds/kubernetes/
 docs/concepts/options/hidediffs/index.html|/docs/iac/concepts/resources/options/hidediffs/
-docs/iac/using-pulumi/pulumi-packages/terraform-provider/index.html|/docs/iac/get-started/terraform/terraform-providers/
+docs/iac/using-pulumi/pulumi-packages/terraform-provider/index.html|/docs/iac/concepts/providers/any-terraform-provider/
 docs/concepts/stacks/index.html|/docs/iac/concepts/stacks/
-docs/insights/policy/metadata/index.html|/docs/discovery-governance/policy/policy-packs/metadata/
-docs/iac/using-pulumi/crossguard/core-concepts/index.html|/docs/discovery-governance/policy/
+docs/insights/policy/metadata/index.html|/docs/discovery-governance/reference/policy-fields/
+docs/iac/using-pulumi/crossguard/core-concepts/index.html|/docs/discovery-governance/concepts/policy-as-code/
 blog/pulumi-kubernetes-operator-2-0-ga/index.html|/blog/pko-2-0-ga/
 registry/packages/pinecone/api-docs/pineconeindex/index.html|/registry/packages/pinecone/
 docs/iac/clouds/aws/guides/more/index.html|/docs/iac/guides/clouds/aws/
@@ -104,8 +102,13 @@ events/neo-in-a-docker-sandbox-eu/meta-square.png|/events/neo-in-a-docker-sandbo
 # legacy Copilot service (and its REST API) was retired in favor of Pulumi Neo.
 blog/pulumi-copilot-rest/index.html|/docs/ai/
 
-# The per-provider "How-to guides" indexes were retired from the Registry. The
-# blog posts that link them have no equivalent replacement page, so the old
-# paths point at the package landing pages instead of the prose being reworded.
-registry/packages/azure/how-to-guides/index.html|/registry/packages/azure/
-registry/packages/azure-native/how-to-guides/index.html|/registry/packages/azure-native/
+# Do NOT add `registry/...` sources to this file: they never fire. /registry is
+# proxied to the Registry's own CloudFront distribution (see infrastructure/index.ts),
+# so redirect rules published from this bucket are not consulted for those paths.
+# The Registry owns its redirects in pulumi/registry's redirects.js.
+#
+# The retired per-provider "How-to guides" indexes were previously mapped here
+# (registry/packages/azure{,-native}/how-to-guides/index.html) and kept 404ing
+# for exactly that reason; the blog links into them are now pointed straight at
+# /dev/examples/, where those guides actually live. The remaining Registry-side
+# breakage is tracked in pulumi/registry#12449.

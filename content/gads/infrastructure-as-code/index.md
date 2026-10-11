@@ -15,9 +15,8 @@ customer_quote:
     text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies for logging, permissions, resource tagging, and security."
     author: "Igor Shapiro"
     title: "Principal Engineer"
-    company: "Lemonade"
-    logo: lemonade
-    link: /case-studies/lemonade
+    customer: lemonade
+    link: /customers/lemonade
 
 overview:
     title: Infrastructure as Code <br/>in Real Programming Languages
@@ -224,38 +223,38 @@ case_studies:
     title: Customers innovating with Pulumi Cloud
     items:
         - name: Atlassian
-          link: /case-studies/atlassian/
-          logo: atlassian-wordmark
+          link: /customers/atlassian/
+          customer: atlassian
           description: |
             Developers reduced their time spent on maintenance by 50%.
 
         - name: Elkjop
-          link: /case-studies/elkjop-nordic/
-          logo: elkjop-nordic
+          link: /customers/elkjop-nordic/
+          customer: elkjop-nordic
           description: |
             Increased developers' agility and speed through platform engineering.
 
         - name: Starburst
-          link: /case-studies/starburst/
-          logo: starburst
+          link: /customers/starburst/
+          customer: starburst
           description: |
             Cut multi-region blue/green deployments from two weeks to three hours.
 
         - name: BMW
-          link: /case-studies/bmw/
-          logo: bmw
+          link: /customers/bmw/
+          customer: bmw
           description: |
             Enabled developers to deploy across hybrid cloud environments.
 
         - name: Lemonade
-          link: /case-studies/lemonade/
-          logo: lemonade
+          link: /customers/lemonade/
+          customer: lemonade
           description: |
             Standardized infrastructure architectures with reusable components.
 
         - name: Snowflake
-          link: /case-studies/snowflake/
-          logo: snowflake
+          link: /customers/snowflake/
+          customer: snowflake
           description: |
             Built a multi-cloud, Kubernetes-based platform to standardize all deployments.
 ---

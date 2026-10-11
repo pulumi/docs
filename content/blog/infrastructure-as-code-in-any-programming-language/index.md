@@ -41,7 +41,7 @@ How do we ensure our infrastructure practices are repeatable in the event someth
 
 These are all things that infrastructure as code solves, and it starts with code.
 
-## Benefits of Infrastructure as Code
+## Benefits of infrastructure as code
 
 The Infrastructure as Code approach provides many benefits, but they fall into two primary categories:
 

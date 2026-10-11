@@ -282,14 +282,31 @@ JUDGMENT_NOTICE = (
 )
 
 # The glow-up lane's notice: these PRs are the product of a whole-page rehab
-# and exist to be human-reviewed. Auto-merge is never armed and the review
-# sweep never stamps them; it assigns the reviewers instead.
+# and exist to be human-reviewed. Auto-merge is never armed and no automation
+# approves them. Who is asked: triage requests the approver team that
+# .github/review-routing.yml routes the page to (docs-guild, or marketing for
+# a Get Started page). This notice used to say "the PR-review sweep assigns
+# the reviewers", which no sweep did -- triage always had.
 HUMAN_REVIEW_NOTICE = (
     "> [!IMPORTANT]\n"
     "> **Glow-up PR — human review required.** Auto-merge is never armed on "
-    "glow-up PRs and the automated PR-review sweep never approves them; it "
-    "assigns the reviewers. Adjudicate the Backlog executed / Backlog declined "
-    "tables below and merge manually."
+    "glow-up PRs and no automation approves them; triage requests the approver "
+    "team `.github/review-routing.yml` routes this page to. Every claim on an "
+    "edited line was checked before this PR opened (see **Pre-verification**). "
+    "If the pre-merge review still blocks, the bot takes one pass at resolving "
+    "the blocking findings (when glow-up autofix is enabled). Beyond that, a "
+    "human takes the PR through the review process: adjudicate the Backlog "
+    "executed / Backlog declined tables below and merge manually."
+)
+
+# The receipts placeholder. The workflow replaces the whole section after the
+# model finishes (preverify-glowup.py receipts); the model never writes it.
+PREVERIFY_PLACEHOLDER = (
+    "## Pre-verification\n\n"
+    "<!-- Written by the workflow after the glow-up (scripts/content-review/"
+    "preverify-glowup.py receipts). Leave this section exactly as it is. -->\n"
+    "_Pending: the workflow verifies the edited lines after the glow-up and "
+    "writes the results here._\n"
 )
 
 # Glow-up body sections — keep in lockstep with record-review.py's
@@ -299,6 +316,7 @@ GLOWUP_SECTIONS = [
     "Backlog executed",
     "Backlog declined",
     "Secondary sweep",
+    "Pre-verification",
     "Screenshot check",
     "Verification",
 ]
@@ -393,7 +411,14 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
                 # downstream (a budget failure is worth retrying; "no source
                 # exists" is not).
                 cap = bool(v.get("turn_cap_exhausted"))
-                tag = " — unverifiable (verifier turn budget exhausted; retryable)" if cap else " — unverifiable"
+                if cap:
+                    tag = " — unverifiable (verifier turn budget exhausted; retryable)"
+                elif v.get("source_discipline_gate"):
+                    # The only evidence was the page itself or other Pulumi
+                    # pages: an author question, never a claim shown wrong.
+                    tag = " — unverifiable (no independent source; author question)"
+                else:
+                    tag = " — unverifiable"
                 findings.append({
                     "label": f"Claim ({v.get('claim_id', '?')}): {_truncate(v.get('text', ''))}{tag}",
                     "source": _truncate(v.get("source", ""), 200) or "(verifier did not converge)",
@@ -422,21 +447,24 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
     elif vale is not None:
         errors.append("vale-findings (unexpected shape)")
 
-    # Readthrough: local_repair -> fix candidate; reconception -> deferral (flag only).
+    # Readthrough: always a deferral, local_repair and reconception alike. The
+    # fix lane banks structural findings for the glow-up lane, where a human
+    # reviews the whole page; publish-gate.py refuses a fixed verdict that
+    # applies one. `severity` rides along for select-glowup.py's blocker boost.
     if isinstance(readthrough, dict):
         if readthrough.get("errors"):
             errors.append("readthrough")
         for f in readthrough.get("findings") or []:
-            fix_class = (f.get("fix_class") or "reconception").lower()
             loc = f.get("line_range") or ""
             findings.append({
                 "label": f"Readthrough {f.get('failure_mode', 'finding')}"
                          f"{' (' + loc + ')' if loc else ''}: \"{_truncate(f.get('anchor_quote', ''), 100)}\"",
                 "source": "readthrough coherence pass",
                 "detail": _truncate(f.get("proposed_fix", "")),
-                "fix": fix_class == "local_repair",
+                "fix": False,
                 "category": "readthrough",
                 "line_range": loc,
+                "severity": (f.get("severity_hint") or "").lower(),
             })
     elif readthrough is not None:
         errors.append("readthrough (unexpected shape)")
@@ -805,6 +833,8 @@ def compose_glowup(queue: dict, backlog: dict | None, verified, vale,
         "\n".join(declined),
         "",
         "\n".join(sweep),
+        "",
+        PREVERIFY_PLACEHOLDER.rstrip(),
         "",
         render_screenshot(gates).rstrip(),
         "",

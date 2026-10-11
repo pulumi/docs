@@ -66,7 +66,7 @@ items:
             track: header-engineers-docs
           - label: Registry
             href: /registry/
-            description: Browse hundreds of cloud providers and packages
+            description: Browse hundreds of cloud providers and packages
             icon: package
             track: header-engineers-registry
           - label: Dev Center
@@ -96,18 +96,20 @@ items:
             track: header-engineers-releases
 
   - label: For enterprises
+    wide: true
     sections:
-      - items:
+      - columns: 2
+        items:
           - label: Enterprise solutions
             href: /enterprise/
             description: Security, compliance, and support for teams
             icon: buildings
             track: header-enterprise-solutions
-          - label: Case studies
-            href: /case-studies/
-            description: How Snowflake, Mercedes-Benz, and others use Pulumi
+          - label: Customers
+            href: /customers/
+            description: Get a glimpse of who's using Pulumi and hear their stories
             icon: article
-            track: header-enterprise-case-studies
+            track: header-enterprise-customers
           - label: Request a demo
             href: /request-a-demo/
             description: See how Pulumi can help your team
@@ -123,6 +125,12 @@ items:
             description: Talk to our team about your needs
             icon: chat-circle
             track: header-enterprise-contact
+          - label: The agentic infrastructure operating model
+            href: /whitepapers/agentic-infrastructure-operating-model/
+            description: The path to agents operating your infrastructure at scale
+            overline: Whitepaper
+            promo: true
+            track: header-enterprise-agentic-infrastructure
 
   - { label: Docs,     href: /docs/,     track: header-docs }
   - { label: Registry, href: /registry/, track: header-registry }

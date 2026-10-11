@@ -41,7 +41,7 @@ Deployments must authenticate against an OIDC provider in **each** AWS account i
 #### Create the identity provider
 
 1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
-1. In the **Provider type** section, click the radio button next to **OpenID Connect**.
+1. In the **Provider type** section, select the radio button next to **OpenID Connect**.
 1. For the **Provider URL**, provide the following URL: `https://api.pulumi.com/oidc`
 1. For the **Audience** field, enter the name of your Pulumi organization. Then select **Add provider**.
 

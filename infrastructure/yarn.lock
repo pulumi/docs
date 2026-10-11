@@ -22,9 +22,9 @@
   integrity sha512-GmzA9ckNokPypTg10pgpeHNQe7ph+iIKKmhKu3Ob9ANkswreCx7R3cKmY781K8QK3AqVL3xVh9A42JvIAbkkSA==
 
 "@grpc/grpc-js@^1.10.1", "@grpc/grpc-js@^1.14.3":
-  version "1.14.4"
-  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.14.4.tgz#e73ff57d97802f063999545f43ebb2b1eca65d9d"
-  integrity sha512-k9Dj3DV/itK9D06Y8f190Qgop7/Ui+D0njFV3LHMPwPT75DpXLQohE9Wmz0QElrJnzsjB7KPWiKJbOl7IPDArQ==
+  version "1.14.5"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.14.5.tgz#12f97bd9f716358e377ffaa768195d1219eb76a3"
+  integrity sha512-7VZM+SVdEcUUqSQeNI3zM8Qs/BhQKZndPo2h5VkYkAM8Iz0wJIa8mKV5ekQGqG8UUsnkQ0NMxIxwkIHYvj0qOw==
   dependencies:
     "@grpc/proto-loader" "^0.8.0"
     "@js-sdsl/ordered-map" "^4.4.2"
@@ -437,18 +437,18 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.1.tgz#eaee5900122c110a3dbcb728c0597014a2621774"
   integrity sha512-oOAWABowe8EAbMyWKM0tYDKi8Yaox52D+HWZhAIJqQXbqe0xI/GV7FhLWqlEKreMkfDjshR5FKgi3mnle0h6Eg==
 
-"@pulumi/aws@^7.44.0":
-  version "7.44.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-7.44.0.tgz#4287bdb81c0a06434e8828515af54b247e627b6e"
-  integrity sha512-ijGL+aIW9NdnUxnRYEBhVpZ4MN9WPAVYLZhfMU7GJ5QqZj098/Gx7oAVmk6TxhqSsln839pa06cozH+l9U5+Rw==
+"@pulumi/aws@^7.48.0":
+  version "7.48.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-7.48.0.tgz#07bab32af61b2edcae59ad0ba3243150db4ad56a"
+  integrity sha512-roKXYZ2EyjvapKYacvRQNUeW2UBI8MKwzO2338XwdXtCf75TabY4DVy56zY2HbnEU0H1fbBXct8oAx9ynQeMrA==
   dependencies:
     "@pulumi/pulumi" "^3.142.0"
     mime "^2.0.0"
 
-"@pulumi/pulumi@^3.142.0", "@pulumi/pulumi@^3.261.0":
-  version "3.261.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-3.261.0.tgz#7596eb3c49420a8d588e94075262abaa3a118e8f"
-  integrity sha512-gZDiCmaBKxXpIagOytLTOc/GOWYMj/8OgW/X78RN7ngv7+N550+tWIu9dETPrz7NmWVWfeXdjGeRmH+GxuaPxg==
+"@pulumi/pulumi@^3.142.0", "@pulumi/pulumi@^3.265.0":
+  version "3.265.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-3.265.0.tgz#1d24026d4ddf2d2c8001c5e3625be5c416be5f61"
+  integrity sha512-rg/aFiQ1DIWcqQOQLuzg/9vIC5J4L6eLLkT54FPlIf0yhYTvEnREF7uip+WLSdHhHTi81PzeU0MPYRtiPTJ+IQ==
   dependencies:
     "@grpc/grpc-js" "^1.10.1"
     "@logdna/tail-file" "^2.0.6"
@@ -468,7 +468,7 @@
     execa "^5.1.0"
     google-protobuf "^3.21.4"
     ini "^2.0.0"
-    js-yaml "^4.0.0"
+    js-yaml "^4.3.2"
     minimist "^1.2.6"
     normalize-package-data "^6.0.0"
     require-from-string "^2.0.1"
@@ -476,10 +476,10 @@
     source-map-support "^0.5.6"
     upath "^1.1.0"
 
-"@pulumi/random@^4.16.0":
-  version "4.21.1"
-  resolved "https://registry.yarnpkg.com/@pulumi/random/-/random-4.21.1.tgz#5bfe67166f530a0bff2ba32fc4abb81ce805308d"
-  integrity sha512-2wD0UJTsoyj+MyBOa60E2FyrqyIaspTCz1qBG+mj34xQUk/u568s4925oWpGEeY3Z3wV7BbRpiEnnztnDb1xOA==
+"@pulumi/random@^4.21.2":
+  version "4.21.2"
+  resolved "https://registry.yarnpkg.com/@pulumi/random/-/random-4.21.2.tgz#a9b0ed10aba29a456d582af9d6fc64783516ee29"
+  integrity sha512-yQVSPeQE55oqL4KHoWwKqTTTjx3jYGaJ3RCXnlUOcqmGW5zT3hmKWqAS+5nBYCtrVPA8J06UqjC1ZOrQP+Q5yg==
   dependencies:
     "@pulumi/pulumi" "^3.142.0"
 
@@ -552,10 +552,10 @@
   resolved "https://registry.yarnpkg.com/@types/google-protobuf/-/google-protobuf-3.15.12.tgz#eb2ba0eddd65712211a2b455dc6071d665ccf49b"
   integrity sha512-40um9QqwHjRS92qnOaDpL7RmDK15NuZYo9HihiJRbYkMQZlWnuH8AdvbMy8/o6lgLmKbDUKa+OALCltHdbOTpQ==
 
-"@types/node@>=13.7.0", "@types/node@^25.9.5":
-  version "25.9.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.9.5.tgz#0fefc09e6e82e94cde291bacf43522e989eb01a4"
-  integrity sha512-OScDchr2fwuUmWdf4kZ9h7PcJiYDVInhJizG/biAq3cAvqwYktuy/TYGGdZNMtNTFUP7rnb0NU4TUdm82kt4Rg==
+"@types/node@>=13.7.0", "@types/node@^25.9.8":
+  version "25.9.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.9.8.tgz#a460865b194c2c416a8f11841613207848b92583"
+  integrity sha512-VfMrScDmMhUJQmd5hArdQnFvK0OIeD36uN2Va1FcpYaLB/BgkgM8Ulc50XtYISPMz7APJ30+N0T5EM0jlcdfRw==
   dependencies:
     undici-types ">=7.24.0 <7.24.7"
 
@@ -905,9 +905,9 @@ hosted-git-info@^9.0.0:
     lru-cache "^11.1.0"
 
 http-cache-semantics@^4.1.1:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.2.0.tgz#205f4db64f8562b76a4ff9235aa5279839a09dd5"
-  integrity sha512-dTxcvPXqPvXBQpq5dUr6mEMJX4oIEFv6bwom3FDwKRDsuIjjJGANqhBuoAn9c1RQJIdAKav33ED65E2ys+87QQ==
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.3.0.tgz#09eead3b16c6d85552857cc3fbd888d8353a2aaf"
+  integrity sha512-M5t5LlJpS1UHMjvwRQVdFHvPISGeLAxNcrWuJkeGh0KxsqCHZ1O3NXZU/8x7cD0BDcGW8kapxMKTvwlqrNkHkA==
 
 http-proxy-agent@^7.0.0:
   version "7.0.2"
@@ -977,9 +977,9 @@ ini@^6.0.0:
   integrity sha512-IBTdIkzZNOpqm7q3dRqJvMaldXjDHWkEDfrwGEQTs5eaQMWV+djAhR+wahyNNMAa+qpbDUhBMVt4ZKNwpPm7xQ==
 
 ip-address@^10.0.1:
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/ip-address/-/ip-address-10.4.0.tgz#c5910bc541b6eae287765d1e4846be0308a05d93"
-  integrity sha512-oSK96Grm3aP6OrS263xVxbNDGVL7rzBtYdpGqlDG8iQdoenDoTs/nkki+DflYbAEE8Xl6o5YxhxlrKvI3nqKXQ==
+  version "10.7.2"
+  resolved "https://registry.yarnpkg.com/ip-address/-/ip-address-10.7.2.tgz#5b3b2b7d46c6293861b82dfcd49cc203aa8f2c5c"
+  integrity sha512-7H/2gFSIitxc0hG3nOI1glS8QLo/EHBFFLk8vEUjXY/xu0AdL8jZ9U1IzO2PUm0d2D/ofQcAifb0g6OBkt8U7w==
 
 is-core-module@^2.16.1:
   version "2.16.1"
@@ -1021,10 +1021,10 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-js-yaml@^4.0.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.3.0.tgz#d1900572a7f7cf0b5f540c83673e60bad3436592"
-  integrity sha512-1td788aAnnZ5qs7V2QIRl1owjtYpbKt749Y3xauqQgwIIGF/xXWz1wMTEBx5O3LK3lXLVuqXPdPxj2BoFHaW9Q==
+js-yaml@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.3.2.tgz#8e44fb14a2643c59726bb15787b5f1512cb3d3fb"
+  integrity sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==
   dependencies:
     argparse "^2.0.1"
 

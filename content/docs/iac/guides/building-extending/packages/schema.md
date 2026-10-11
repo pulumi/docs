@@ -1,7 +1,6 @@
 ---
-title_tag: "Schema for Pulumi Packages"
-meta_desc: This page describes the schema for a Pulumi Package, describing the resources, functions and types
-           that define a Pulumi Package.
+title_tag: "Pulumi package schema reference"
+meta_desc: Field-by-field reference for the Pulumi package schema (schema.json), covering resources, functions, types, and language-specific extensions.
 title: Schema
 h1: Pulumi package schema
 menu:
@@ -19,11 +18,11 @@ aliases:
 - /docs/iac/build-with-pulumi/schema/
 ---
 
-Pulumi Packages are described by a package schema, which is used to drive code generation for SDKs in each supported Pulumi language, as well as generation of language-agnostic package documentation. This schema can be manually authored (for component packages) or generated from some other source (such as a cloud provider's API specifications for a native Pulumi resource provider). Packages can expose resources and functions, define types used by these resources and functions, and provide packaging metadata for language-specific SDKs.
+Pulumi packages are described by a package schema, which drives code generation for SDKs in each supported Pulumi language, as well as generation of language-agnostic package documentation. This schema can be manually authored (for component packages) or generated from some other source (such as a cloud provider's API specifications for a native Pulumi resource provider). Packages can expose resources and functions, define types used by these resources and functions, and provide packaging metadata for language-specific SDKs.
 
 ## Example
 
-An example of the Pulumi Package Schema is below. This schema describes a package named `apigateway`, with a single resource `RestAPI` which is a [component](/docs/iac/concepts/components/), and which has a required input property `routes` and required (always populated) output properties `url` of type `string` and `api` which references the external type of the AWS API Gateway [`RestAPI`](/registry/packages/aws/api-docs/apigateway/restapi/) resource. The type of the `routes` input is a custom type named `EventHandlerRoute` defined in the schema, which is an object type with `path`,`method` and `function` properties. The schema supports generation of SDKs for `csharp`, `go`, `nodejs` and `python`, with metadata configuring each of the generated SDKs in the corresponding sections.
+The following example schema describes a package named `apigateway` with a single resource, `RestAPI`, which is a [component](/docs/iac/concepts/components/). `RestAPI` has a required input property `routes` and two required (always populated) output properties: `url`, of type `string`, and `api`, which references the external type of the AWS API Gateway [`RestAPI`](/registry/packages/aws/api-docs/apigateway/restapi/) resource. The type of the `routes` input is a custom type named `EventHandlerRoute` defined in the schema, which is an object type with `path`, `method`, and `function` properties. The schema supports generation of SDKs for `csharp`, `go`, `nodejs`, and `python`, with metadata configuring each of the generated SDKs in the corresponding sections.
 
 ```json
 {
@@ -103,9 +102,9 @@ An example of the Pulumi Package Schema is below. This schema describes a packag
 
 Complete schema examples that include a much wider range of schema configuration styles are available in these existing packages:
 
-* [AWS](https://github.com/pulumi/pulumi-aws/blob/master/provider/cmd/pulumi-resource-aws/schema.json) - Bridged Provider Package
-* [Azure Native](https://github.com/pulumi/pulumi-azure-native/blob/master/provider/cmd/pulumi-resource-azure-native/schema.json) - Native Pulumi Provider Package
-* [EKS](https://github.com/pulumi/pulumi-eks/blob/master/provider/cmd/pulumi-resource-eks/schema.json) - Component Package
+* [AWS](https://github.com/pulumi/pulumi-aws/blob/master/provider/cmd/pulumi-resource-aws/schema.json) - Bridged provider package
+* [Azure Native](https://github.com/pulumi/pulumi-azure-native/blob/master/provider/cmd/pulumi-resource-azure-native/schema.json) - Native Pulumi provider package
+* [EKS](https://github.com/pulumi/pulumi-eks/blob/master/provider/cmd/pulumi-resource-eks/schema.json) - Component package
 
 ## Pulumi package schema
 
@@ -125,8 +124,8 @@ that object is decided by that language's SDK code generator rather than by the 
 itself, which is how a generator gets to encode what it alone needs — an NPM package name,
 a Java base package, a Go import path.
 
-Each generator owns its extension, so each section below is generated from that language's
-own repository and carries the release it came from. A language that has no entry for a
-section does not read one.
+Each generator owns its extension, so each section below is generated from the repository
+that owns that language's code generator and carries the release it came from. A language
+that has no entry for a section does not read one.
 
 {{< package-schema group="language" >}}

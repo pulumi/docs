@@ -48,14 +48,15 @@ RAW_CONFIG = {
     },
     "bots": ["pulumi-bot"],
     "matrix": {
-        "docs": {"mechanical": "none", "substantive": "docs-guild"},
-        "blog": {"mechanical": "none", "substantive": "marketing"},
-        "website": {"mechanical": "none", "substantive": "marketing"},
-        "programs": {"mechanical": "none", "substantive": "docs-guild"},
-        "infra": {"mechanical": "tools", "substantive": "tools", "staging_evidence": "required"},
-        "frontend": {"mechanical": "none", "substantive": "marketing"},
-        "other": {"mechanical": "none", "substantive": "tools"},
+        "docs": {"mechanical": "docs-guild", "substantive": "docs-guild"},
+        "blog": {"mechanical": "marketing", "substantive": "marketing"},
+        "website": {"mechanical": "marketing", "substantive": "marketing"},
+        "programs": {"mechanical": "docs-guild", "substantive": "docs-guild"},
+        "infra": {"mechanical": "tools", "substantive": "tools"},
+        "frontend": {"mechanical": "marketing", "substantive": "marketing"},
+        "other": {"mechanical": "tools", "substantive": "tools"},
     },
+    "staging_evidence": {"paths": ["infrastructure/"]},
     "claims_overlay": {"add": "marketing"},
     "external_contributors": {"skip_gates": ["review-ran", "findings-answered"]},
     "sla": {
@@ -279,6 +280,33 @@ def test_close_only_after_warn_aged_enough():
         sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=False, state_dir=state_dir, evidence_uri="")
         assert len(gh.closed) == 1 and gh.closed[0][0] == 1
         assert "Closing this PR as stale" in gh.closed[0][1]
+
+
+def test_projected_close_days_matches_the_close_rule():
+    # CONFIG: warn_days 14, close_days 21 -> a 7-day notice gap after the warn.
+    proj = sla_sweep.projected_close_days
+    assert proj(CONFIG, 5.0, None) == 16      # not yet warned: idle clock dominates
+    assert proj(CONFIG, 16.0, None) == 7      # past warn_days, unwarned: warn fires, then 7d notice
+    assert proj(CONFIG, 16.0, 0.0) == 7       # warned this sweep
+    assert proj(CONFIG, 25.0, 3.0) == 4       # idle already past close_days; notice still running
+    assert proj(CONFIG, 19.5, 5.5) == 2       # both clocks agree, partial days round up
+    assert proj(CONFIG, 30.0, 9.0) == 0       # closable now
+
+
+def test_author_actions_carry_the_projected_close():
+    with tempfile.TemporaryDirectory() as d:
+        state_dir = Path(d)
+        gh = StubGh()
+        gh.add_pr(1, comments=[author_card([("F1", "must")])], files=[docs_file_substantive()],
+                  timeline=[committed(iso(NOW - timedelta(days=25)))])
+        warned = sla_sweep.empty_sweep_state()
+        warned["warns"] = [{"at": iso(NOW - timedelta(days=3)), "head_sha": HEAD}]
+        sla_sweep.save_state(1, warned, "", state_dir)
+        record = sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=True, state_dir=state_dir, evidence_uri="")
+        action = record["actions"][0]["action"]
+        assert action["type"] == "none" and action["closes_in_days"] == 4
+        assert action["undecided_count"] == 1
+        assert gh.closed == [] and gh.comments_posted == []
 
 
 def test_activity_clears_warn_and_label():
@@ -522,9 +550,16 @@ def test_comment_failure_is_fatal_for_that_pr_only():
         assert by_pr[2]["action"]["type"] == "warn"
 
 
-def test_stale_author_warn_cleared_on_no_clock_branch():
-    """Warned PR whose findings got answered and which now resolves to
-    'mechanical, no required role': the label must not leak."""
+def test_stale_author_warn_cleared_when_the_findings_get_answered():
+    """A warned PR whose findings got answered: the author-stalled label
+    must not leak, and the clock hands over to the reviewer.
+
+    This used to be the "mechanical, so no required role, so no clock at
+    all" branch. Mechanical resolves to the lane team now, so the PR moves
+    onto the reviewer clock instead of off the clock entirely — which is
+    the point: somebody is on the hook for every PR, so the sweep has
+    somebody to chase.
+    """
     with tempfile.TemporaryDirectory() as d:
         state_dir = Path(d)
         gh = StubGh()
@@ -536,7 +571,8 @@ def test_stale_author_warn_cleared_on_no_clock_branch():
         record = sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=False, state_dir=state_dir, evidence_uri="")
         assert gh.labels_removed == [(1, sla_sweep.AUTHOR_STALLED_LABEL)]
         assert json.loads((state_dir / "state" / "1.json").read_text())["warns"] == []
-        assert record["actions"][0]["kind"] is None
+        # The author clock stopped; the reviewer clock is what runs now.
+        assert record["actions"][0]["kind"] == "reviewer"
 
 
 def test_no_durable_state_forces_dry_run():

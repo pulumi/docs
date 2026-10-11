@@ -85,10 +85,11 @@ CONTENT_DATA_EXACT = {
     "data/blog_series.yml": "domain:blog",
     "data/blog_home.yaml": "domain:blog",
     "data/blog_link_types.yaml": "domain:blog",
-    "data/case_study_industries.yaml": "domain:blog",
-    # website: the pricing matrix (also PRICING_SENSITIVE) and site chrome /
-    # marketing data rendered on landing pages
-    "data/pulumi_pricing.yaml": "domain:website",
+    "data/customers_industries.yaml": "domain:blog",
+    "data/customers.yaml": "domain:blog",
+    # website: the edition availability data (also PRICING_SENSITIVE) and site
+    # chrome / marketing data rendered on landing pages
+    "data/pulumi_editions.yaml": "domain:website",
     "data/announcements.yml": "domain:website",
     "data/header_nav.yaml": "domain:website",
     "data/footer.yml": "domain:website",
@@ -106,12 +107,19 @@ CONTENT_DATA_PREFIXES = (
 )
 
 
+# Directories under scripts/ that hold the PR/content review pipelines: they
+# read PRs and write comments, and are never part of building or deploying
+# the site. Kept beside classify_path() so routing and triage can never
+# disagree about them, which is the whole reason classify_path is shared.
+REVIEW_PIPELINE_DIRS = ("review-v3", "review-admin", "content-review", "blog-review")
+
+
 def classify_path(path: str) -> str | None:
     # Programs first — both static/programs/** AND scripts/programs/** are
     # programs territory (the latter would otherwise fall to infra).
     if path.startswith("static/programs/") or path.startswith("scripts/programs/"):
         return "domain:programs"
-    if path.startswith("content/blog/") or path.startswith("content/case-studies/"):
+    if path.startswith("content/blog/") or path.startswith("content/customers/"):
         return "domain:blog"
     for prefix in ("content/docs/", "content/what-is/"):
         if path.startswith(prefix):
@@ -123,6 +131,23 @@ def classify_path(path: str) -> str | None:
             return domain
     if path.startswith(".github/workflows/"):
         return "domain:infra"
+    # The agent/review pipelines under scripts/ are repo plumbing, not the
+    # build: nothing here is read by `make build`, by a Hugo template, or by
+    # the deploy. They fall through to `other`, which routes to the same
+    # `tools` approver as `infra` but gives a mechanical change there no
+    # approver at all.
+    #
+    # This cut was originally about the staging gate, which is no longer
+    # what a domain decides: gate G4 keys on `staging_evidence.paths` in
+    # `.github/review-routing.yml`, a path list that covers the Pulumi
+    # program and the scripts `make ci_push` actually runs. So do NOT reach
+    # for this function to exempt a path from a staging deploy — that lever
+    # is in the config, and bending a path's domain to move it was how this
+    # carve-out came to exist in the first place. Everything else under
+    # scripts/ (lint, search, meta-images, redirects, the fetch and generate
+    # scripts) stays infra, because tools do own it.
+    if any(path.startswith(f"scripts/{d}/") for d in REVIEW_PIPELINE_DIRS):
+        return None
     if path.startswith("scripts/") or path.startswith("infrastructure/"):
         return "domain:infra"
     if path in ("Makefile", "package.json", "webpack.config.js"):
@@ -513,11 +538,10 @@ MECHANICAL_CLAIMS_EXEMPT_LINE_RE = re.compile(r"^(?:(?:updated|tags):(?:\s|$)|- 
 # availability markers" / "Pricing data" — AND stacks the marketing
 # approver via the routing claims overlay (route-pr.py / sentinel.py key
 # the overlay on the "pricing-sensitive" reason prefix).
-PRICING_SENSITIVE_EXACT = {
-    "data/pulumi_pricing.yaml",
+PRICING_SENSITIVE = {
+    "data/pulumi_editions.yaml",
     "content/docs/administration/get-started/choose-edition.md",
 }
-PRICING_SENSITIVE_PREFIXES = ("content/pricing/",)
 
 # Pages that routinely state what each Pulumi Cloud edition includes, where a
 # two-line rewrite of a feature list reads as "mechanical" by shape (2026-09-11
@@ -533,7 +557,7 @@ EDITION_SENSITIVE_PREFIXES = ("content/docs/support/faq/", "content/what-is/")
 # "edition(s)" in the same line as a feature verb ("available in ... editions",
 # "the Enterprise edition adds ..."). Layer A's claim regexes don't cover
 # these (they key on numbers, versions, and links), and they are exactly the
-# sentences data/pulumi_pricing.yaml exists to be the single source of truth
+# sentences data/pulumi_editions.yaml exists to be the single source of truth
 # for.
 EDITION_NAME_RE = re.compile(
     r"\b(?:Individual|Team|Enterprise|Business Critical)\s+editions?\b"
@@ -549,9 +573,7 @@ EDITION_FEATURE_RE = re.compile(
 
 
 def _is_pricing_sensitive(path: str) -> bool:
-    return path in PRICING_SENSITIVE_EXACT or any(
-        path.startswith(p) for p in PRICING_SENSITIVE_PREFIXES
-    )
+    return path in PRICING_SENSITIVE
 
 
 def _is_edition_sensitive(path: str) -> bool:
@@ -825,11 +847,31 @@ def claims_signal_reasons(files: list[dict], diff_text: str) -> list[str]:
 # ---- PR-level aggregation --------------------------------------------------
 
 
+def pr_file_count(pr_data: dict) -> int:
+    """The PR's true changed-file count. `files` may be a capped page (gh's
+    GraphQL `files` stops at 100); `changedFiles` is GitHub's own total when
+    the caller asked for it. The larger wins, so neither a capped list nor a
+    missing total can under-count."""
+    try:
+        total = int(pr_data.get("changedFiles") or pr_data.get("changed_files") or 0)
+    except (TypeError, ValueError):
+        total = 0
+    return max(total, len(pr_data.get("files") or []))
+
+
+def is_oversized(additions: int, deletions: int, file_count: int) -> bool:
+    """The one definition of oversized. Triage labels by it, and the label
+    is what the Sentinel reads: computing size there would flip PRs already
+    approved under the normal gates. Triage re-dispatches the Sentinel when
+    it moves the label (#21936: G5 said "not oversized" beside it)."""
+    return (additions + deletions) > OVERSIZED_TOTAL_LINES or file_count > OVERSIZED_TOTAL_FILES
+
+
 def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
     additions = int(pr_data.get("additions") or 0)
     deletions = int(pr_data.get("deletions") or 0)
     files = pr_data.get("files") or []
-    file_count = len(files)
+    file_count = pr_file_count(pr_data)
     total_lines = additions + deletions
 
     domains: set[str] = set()
@@ -893,7 +935,11 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
         "mixed": len(domains) > 1,
         "trivial": trivial,
         "frontmatter_only": frontmatter_only,
-        "oversized": total_lines > OVERSIZED_TOTAL_LINES or file_count > OVERSIZED_TOTAL_FILES,
+        "oversized": is_oversized(additions, deletions, file_count),
+        # The line axis alone. Before the paginated file count, the 150-file
+        # axis was unreachable; triage uses this to keep a push from newly
+        # flagging an open PR by file count (see claude-triage.yml step 4).
+        "oversized_by_lines": total_lines > OVERSIZED_TOTAL_LINES,
         "prose_check_needed": trivial or frontmatter_only,
         "summary": {
             "lines": total_lines,

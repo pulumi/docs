@@ -14,23 +14,11 @@ unlisted: false
 # to fill out the form before viewing.
 gated: true
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: how-ai-agents-turned-5-engineers-into-50
-
 # The event type (workshop, webinar, talk).
 event_type: webinar
 
 # URL for embedding a URL for ungated events.
-youtube_url:
-
+youtube_url: https://www.youtube.com/embed/oHNdlWlsR-w
 # Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2026-04-28T12:00:00-04:00
 

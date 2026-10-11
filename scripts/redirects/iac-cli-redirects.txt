@@ -104,5 +104,6 @@ docs/cli/commands/pulumi_state_unprotect/index.html|/docs/iac/cli/commands/pulum
 docs/cli/commands/pulumi_state_upgrade/index.html|/docs/iac/cli/commands/pulumi_state_upgrade/
 docs/cli/commands/pulumi_up/index.html|/docs/iac/cli/commands/pulumi_up/
 docs/cli/commands/pulumi_version/index.html|/docs/iac/cli/commands/pulumi_version/
-docs/cli/commands/pulumi_watch/index.html|/docs/iac/cli/commands/pulumi_watch/
+docs/cli/commands/pulumi_watch/index.html|/docs/iac/cli/commands/
 docs/cli/commands/pulumi_whoami/index.html|/docs/iac/cli/commands/pulumi_whoami/
+docs/iac/cli/commands/pulumi_watch/index.html|/docs/iac/cli/commands/

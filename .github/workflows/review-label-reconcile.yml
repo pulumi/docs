@@ -25,19 +25,37 @@ name: Review Label Reconcile
 # label it can't justify.
 #
 # A second sweep covers the other orphan: review:in-progress with no run
-# behind it. Both review lanes post a <!-- CLAUDE_PROGRESS --> spinner
-# comment seconds BEFORE they set the label and delete or rewrite it on
-# every terminal path, so "label present, live spinner absent" cannot be a
-# running review — it is a run that died without finalizing (job-level
+# behind it. Both review lanes put up a progress signal seconds BEFORE they
+# set the label — a <!-- CLAUDE_PROGRESS --> spinner comment, or, for a
+# requested run, a 👀 from github-actions[bot] on the requesting comment —
+# and take it down on every terminal path, so "label present, no live
+# signal" cannot be a running review — it is a run that died without
+# finalizing (job-level
 # timeout axing the finalize steps, a lost runner, or the superseded-publish
 # gap #21642 hit before claude-code-review.yml's guard learned to reset the
 # label). Those PRs move to review:stale, the state the guard itself now
-# uses, once the label is at least 30 minutes old (slack for the
-# spinner-then-label ordering and API lag; no lane sets the label before
-# its spinner). Run-list mapping is deliberately not used: a dispatched run
+# uses, once the label is at least 30 minutes old (slack for API lag and
+# for the update lane, which sets the label before its signal and whose
+# "Working on it" spinner and auto-refresh 🔄 banner aren't read here — a
+# refresh finishes well inside the window). Run-list mapping is deliberately not used: a dispatched run
 # reports the default branch as its head and carries no PR number.
 #
-# Deterministic — no model calls. Mutations are label transitions only.
+# A third sweep runs the other direction, because until it existed the label
+# only ever moved TOWARD stale. A PR wearing review:stale whose review is in
+# fact current at the head — a refresh whose label write lost a race, or a
+# head that moved only by a base merge (restamp-base-merge.py carries the v3
+# card across it) — goes back to review:outstanding-issues / no-blockers from
+# the card's own bucket counts (validate-pinned.py count-buckets, the same
+# call every publish path uses).
+#
+# Which card: `pinned-comment.sh last-reviewed-sha`, which prefers the v3
+# author card. This job used to take the first `CLAUDE_REVIEW 1/` comment,
+# and on #21066 that was a legacy monolith left from August: every run
+# re-staled a PR whose v3 card was current, undoing each `#update-review`
+# two hours later.
+#
+# Deterministic — no model calls. Mutations are label transitions and the
+# base-merge head restamp (head carriers only; see restamp-base-merge.py).
 
 on:
   schedule:
@@ -47,17 +65,53 @@ on:
 permissions:
   contents: read
   pull-requests: write
+  actions: write # re-evaluate the Sentinel after a restamp or an un-stale
 
 jobs:
   reconcile:
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream sync
+    # but must not run it: the scheduled lane belongs to pulumi/docs alone.
+    if: github.repository == 'pulumi/docs'
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout review scripts (default branch)
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            .github
+
       - name: Reconcile review labels against PR heads
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
+          SENTINEL_MODE: ${{ vars.REVIEW_V3_SENTINEL }}
         run: |
           set -euo pipefail
+          python3 -m pip install --quiet pyyaml >/dev/null 2>&1 || true
+          SCRIPTS=.claude/commands/docs-review/scripts
+
+          # reviewed_sha <pr>: the SHA the live review covers (v3 card first).
+          reviewed_sha() {
+            bash "$SCRIPTS/pinned-comment.sh" last-reviewed-sha --pr "$1" --repo "$REPO" 2>/dev/null || true
+          }
+          # sentinel <pr>: re-evaluate the merge gate. A restamp moves the card
+          # head (G1's input) and an un-stale moves the label, but neither
+          # fires an event the Sentinel listens to: GITHUB_TOKEN writes start
+          # no workflow. Without this, a card the cron repaired kept G1 red
+          # until something else poked it (the #21673 symptom).
+          sentinel() {
+            case "$SENTINEL_MODE" in report|1) ;; *) return 0 ;; esac
+            gh workflow run review-sentinel.yml --repo "$REPO" -f pr_number="$1" \
+              || echo "PR #$1: Sentinel dispatch failed; the next event re-evaluates it"
+          }
+          # restamped <pr>: true when a base-only merge was carried across.
+          restamped() {
+            python3 scripts/review-v3/restamp-base-merge.py --repo "$REPO" --pr "$1" \
+              | tee /dev/stderr | jq -r '.restamped' 2>/dev/null || echo false
+          }
 
           prs=$(
             {
@@ -72,23 +126,14 @@ jobs:
           for pr in $prs; do
             head_sha=$(gh pr view "$pr" --repo "$REPO" --json headRefOid --jq .headRefOid)
 
-            # The 1/M pinned review body (first comment starting with the marker).
-            body=$(gh api "repos/$REPO/issues/$pr/comments" --paginate \
-              --jq '[.[] | select(.body | startswith("<!-- CLAUDE_REVIEW 1/"))][0].body' 2>/dev/null || true)
-            if [ -z "$body" ] || [ "$body" = "null" ]; then
+            # The live review (v3 author card first — see the header).
+            body=$(bash "$SCRIPTS/pinned-comment.sh" fetch --pr "$pr" --repo "$REPO" 2>/dev/null || true)
+            if [ -z "$body" ]; then
               echo "PR #$pr: no pinned review found; skipping"
               continue
             fi
 
-            reviewed=$(printf '%s\n' "$body" \
-              | grep -oE '<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->' | tail -1 \
-              | grep -oE '[0-9a-f]{7,40}' || true)
-            if [ -z "$reviewed" ]; then
-              # Pre-sentinel reviews: last (sha) parenthetical in 📜 Review history.
-              reviewed=$(printf '%s\n' "$body" \
-                | awk '/^### .*Review history/ { h = 1; next } h && /^### / { h = 0 } h' \
-                | grep -oE '\([0-9a-f]{7,40}\)' | tail -1 | tr -d '()' || true)
-            fi
+            reviewed=$(reviewed_sha "$pr")
 
             if [ -n "$reviewed" ]; then
               case "$head_sha" in
@@ -97,6 +142,11 @@ jobs:
                   continue
                   ;;
               esac
+              if [ "$(restamped "$pr")" = "true" ]; then
+                echo "PR #$pr: head moved only by a base merge since $reviewed; review carried across"
+                sentinel "$pr"
+                continue
+              fi
               echo "PR #$pr: reviewed SHA $reviewed != head $head_sha; marking stale"
             else
               # Timestamp fallback, 10-minute slack. Skip when indeterminate.
@@ -129,6 +179,34 @@ jobs:
             fi
           done
 
+          # ---- review:stale on a review that is current -------------------
+          staled=$(gh pr list --repo "$REPO" --state open --label review:stale \
+            --json number --jq '.[].number' | sort -un)
+          for pr in $staled; do
+            head_sha=$(gh pr view "$pr" --repo "$REPO" --json headRefOid --jq .headRefOid)
+            reviewed=$(reviewed_sha "$pr")
+            [ -n "$reviewed" ] || { echo "PR #$pr: stale, no reviewed SHA; leaving it"; continue; }
+            case "$head_sha" in
+              "$reviewed"*) ;;
+              *)
+                if [ "$(restamped "$pr")" != "true" ]; then
+                  echo "PR #$pr: stale and genuinely behind ($reviewed vs $head_sha); leaving it"
+                  continue
+                fi
+                ;;
+            esac
+            counts=$(python3 "$SCRIPTS/validate-pinned.py" count-buckets --pr "$pr" --repo "$REPO" 2>/dev/null || true)
+            outstanding=$(printf '%s\n' "$counts" | grep '^outstanding=' | cut -d= -f2 || true)
+            if ! [[ "$outstanding" =~ ^[0-9]+$ ]]; then
+              echo "PR #$pr: review current but its buckets didn't count; leaving review:stale"
+              continue
+            fi
+            if [ "$outstanding" -gt 0 ]; then label=review:outstanding-issues; else label=review:no-blockers; fi
+            echo "PR #$pr: review is current at $head_sha; review:stale → $label"
+            bash "$SCRIPTS/set-review-label.sh" --pr "$pr" --repo "$REPO" --label "$label" || true
+            sentinel "$pr"
+          done
+
           # ---- orphaned review:in-progress -------------------------------
           stuck=$(gh pr list --repo "$REPO" --state open --label review:in-progress \
             --json number --jq '.[].number' | sort -un)
@@ -159,7 +237,22 @@ jobs:
               echo "PR #$pr: in-progress for ${age_s}s with a live spinner; a run may still be going"
               continue
             fi
-            echo "PR #$pr: review:in-progress for ${age_s}s with no live spinner; marking stale"
+            # A requested run signals with a 👀 on the request instead of a
+            # spinner. Only comments carrying any 👀 are worth a lookup.
+            eyes=0
+            for kind in issues pulls; do
+              for cid in $(gh api --paginate "repos/$REPO/$kind/$pr/comments" \
+                  --jq '.[] | select(.reactions.eyes > 0) | .id' 2>/dev/null); do
+                n=$(gh api "repos/$REPO/$kind/comments/$cid/reactions?content=eyes" \
+                  --jq '[.[] | select(.user.login == "github-actions[bot]")] | length' 2>/dev/null || echo 0)
+                eyes=$(( eyes + ${n:-0} ))
+              done
+            done
+            if [ "$eyes" -gt 0 ]; then
+              echo "PR #$pr: in-progress for ${age_s}s with a live 👀 on a request; a run may still be going"
+              continue
+            fi
+            echo "PR #$pr: review:in-progress for ${age_s}s with no live progress signal; marking stale"
             gh pr edit "$pr" --repo "$REPO" \
               --add-label "review:stale" --remove-label "review:in-progress"
           done
