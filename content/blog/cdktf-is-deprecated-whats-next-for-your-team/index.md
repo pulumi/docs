@@ -109,7 +109,7 @@ You can also use [any Terraform provider](/docs/iac/get-started/terraform/terraf
 
 Pulumi is also different from CDKTF in several ways. One is that rather than transpile your source code to a format like JSON as CDKTF does (and then deploying it separately later), Pulumi uses its own declarative deployment engine that resolves the resource graph at runtime and provisions cloud resources directly, which is much faster and more flexible. You can learn more about the deployment model in [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/).
 
-If you want a smaller first step, [Pulumi HCL](/docs/iac/languages-sdks/hcl/) can run the `.tf` files that `cdktf synth --hcl` produces directly, on Pulumi's engine, without a rewrite. It's a bridge rather than a destination: a way to land your exported HCL on Pulumi's state management and deployment engine now, and move any of it into TypeScript, Python, or another supported language later, on your own schedule.
+If you want a smaller first step, Pulumi now runs your existing Terraform estate as it is. Pulumi Cloud can manage your Terraform state through a standard `backend "remote"` block, Terraform modules can be published to the Pulumi Cloud private registry and consumed from Terraform, OpenTofu, or any Pulumi language, and [Pulumi HCL](/docs/iac/languages-sdks/hcl/) runs the `.tf` files that `cdktf synth --hcl` produces directly on Pulumi's engine, without a rewrite. You land your exported HCL on Pulumi's state management and deployment engine now, and move any of it into TypeScript, Python, or another supported language on your own schedule. The [Pulumi for Terraform users](/terraform/) page covers all three capabilities.
 
 Given the API similarities, the support for all Terraform providers and modules, the ability to [coexist](/docs/iac/guides/migration/#coexistence) alongside Terraform-managed projects, and the built-in support for conversion (which we'll cover next), we think Pulumi is the best alternative for most teams looking to migrate.
 
@@ -199,6 +199,7 @@ If you're moving on from CDKTF and looking for an alternative, there are a few p
 To learn more about how Pulumi works, how it differs from CDKTF and from Terraform, how to handle additional conversion scenarios, and more, we recommend:
 
 * Diving into [the Pulumi docs](/docs/iac/concepts/) to get familiar with core concepts and features of the platform
+* Exploring [Pulumi for Terraform users](/terraform/) to see how Pulumi Cloud manages Terraform state, shares Terraform modules, and runs HCL, so you can adopt Pulumi without a rewrite
 * Reading [Migrating from Terraform or CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for more detailed, Terraform-specific migration guidance
 * Comparing [Pulumi and CDKTF](/docs/iac/comparisons/cdktf/) side by side for a feature-by-feature look at the two platforms
 * Comparing [Pulumi and Terraform](/docs/iac/comparisons/terraform/) if you want a deeper look at how the two platforms differ beyond CDKTF specifically
