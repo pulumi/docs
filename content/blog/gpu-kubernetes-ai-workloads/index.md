@@ -31,7 +31,7 @@ social:
         Here's how to provision and govern GPU capacity on Kubernetes with Pulumi.
 ---
 
-Provisioning GPU infrastructure for AI workloads on Kubernetes means creating GPU-backed node pools, installing a device plugin so the scheduler can see the accelerators, and adding quotas, taints, and cost guardrails so GPU capacity is shared fairly instead of claimed by whichever job launches first. On any major cloud, Pulumi provisions all of it, cluster and node pool alike, in the same program and the same language as everything else you deploy.
+Provisioning GPU infrastructure for AI workloads on Kubernetes means creating GPU-backed node pools, installing a device plugin so the scheduler can see the accelerators, and adding quotas, taints, and cost guardrails so GPU capacity is shared fairly instead of claimed by whichever job launches first. On any major cloud, Pulumi provisions it all, cluster and node pool alike, in the same program and the same language as everything else you deploy.
 
 That is the substrate question. It's a different question from "how do I run an AI agent on Kubernetes," which is about the runtime: agent CRDs, tool-calling controllers, and the orchestration loop that decides what an agent is allowed to do. If that's what you're after, [our post on running AI agents on Kubernetes](/blog/ai-agents-on-kubernetes/) covers it end to end. This post is about the layer underneath: the GPU capacity every agent, model server, and training job ultimately competes for.
 
@@ -68,7 +68,7 @@ The shape is the same across clouds: create (or reference) a cluster, add a node
 2. Add a GPU-backed node pool using a GPU instance type or machine type (for example, `g5.xlarge` on AWS, `a2-highgpu-1g` on Google Cloud, or `Standard_NC24ads_A100_v4` on Azure).
 3. Apply a taint to the GPU node pool, such as `nvidia.com/gpu=present:NoSchedule`, so only pods with a matching toleration are scheduled there.
 4. Install the NVIDIA GPU Operator (or cloud-managed device plugin) with a Helm chart so the scheduler can see and allocate `nvidia.com/gpu` as a resource.
-5. Define a Kueue `ResourceFlavor` and `ClusterQueue` (or a `ResourceQuota`) that caps how many GPUs a namespace or team can claim at once.
+5. Install Kueue (for example, with its Helm chart), then define a `ResourceFlavor` and `ClusterQueue` (or skip Kueue and use a plain `ResourceQuota`) that caps how many GPUs a namespace or team can claim at once.
 6. Deploy a GPU-requesting workload, such as a KServe `InferenceService` or a training Job, with a toleration for the GPU taint and a resource request for `nvidia.com/gpu`.
 
 Here is the node pool and GPU Operator install in TypeScript, targeting AWS EKS:
@@ -173,7 +173,7 @@ A GPU node pool without quotas is a shared resource with no rules, and the first
 - **Per-team quotas.** A Kueue `ClusterQueue` paired with a `ResourceFlavor` scoped to your GPU node pool lets you cap how many GPUs each namespace or team can claim concurrently, with fair-share queuing when demand exceeds supply. A plain Kubernetes `ResourceQuota` on `requests.nvidia.com/gpu` covers simpler cases.
 - **Taints and tolerations, not labels alone.** Labels tell the scheduler what a node *has*; taints tell it what a node *requires*. Use both, so a misconfigured pod without a GPU workload can't accidentally land on (and occupy) an expensive node.
 - **Sharing strategy for partial workloads.** Not every workload needs a full accelerator. Time-slicing lets multiple pods share one GPU's compute cycles for latency-tolerant workloads; NVIDIA MIG partitions a single GPU into isolated, right-sized instances when workloads need dedicated memory and stronger isolation. Pick MIG when noisy-neighbor effects matter, time-slicing when they don't.
-- **Autoscaling floors, not just ceilings.** Set `minSize: 0` on the GPU node pool so idle capacity actually scales to zero between jobs. GPU instances are the line item that makes an unbounded floor expensive fast.
+- **Autoscaling floors, not just ceilings.** Set `minSize: 0` on the GPU node pool and run an autoscaler (Cluster Autoscaler or Karpenter) so idle capacity can scale to zero between jobs. GPU instances are the line item that makes a nonzero floor expensive fast.
 - **Policy as code for anything else.** Enforcing "no GPU pod without a resource request," "no GPU pod without a namespace label," or "no GPU node pool above N nodes without an approval" is a policy-as-code problem, not a code-review problem, once more than one team shares the cluster.
 
 ## How do models and agents actually consume that capacity?
