@@ -52,7 +52,7 @@ You should see output similar to:
 }
 ```
 
-If your AWS user ID, account, and ARN are printed, your configuration is correct. If not, try one of the alternative approaches below.
+If your AWS user ID, account, and ARN are printed, your configuration is correct. If not, try one of the alternative approaches below. If the command returns an error, see the guide to [AWS CLI credential errors like `ExpiredToken` and `InvalidAccessKeyId`](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/) for what each one means and how to fix it.
 
 ### Alternative approaches
 
