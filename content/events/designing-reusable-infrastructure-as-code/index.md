@@ -18,8 +18,7 @@ gated: true
 event_type: workshop
 
 # URL for embedding a URL for ungated events.
-youtube_url: 
-
+youtube_url: https://www.youtube.com/embed/VJHil8O77uI
 # Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2025-05-14T12:00:00-04:00
 

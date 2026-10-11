@@ -92,3 +92,12 @@ swap:
   '(?-i)\bInsights Policy\b': Pulumi Policies
   '(?-i)\bInsights Discovery\b': Discovery
   '(?-i)\bAccount Discovery\b': Discovery
+  # One alternation, so "Pulumi Crosswalk for AWS" is a single finding with a
+  # single replacement rather than overlapping matches. Case-sensitive: a
+  # lowercase "crosswalk" is ordinary English.
+  '(?-i)\b(?:Pulumi )?Crosswalk(?: for AWS)?\b': AWSx
+  # Retired edition name. Hedged tier because the brand guide allows the old
+  # names where content is specifically about customers still on the earlier
+  # pricing ("Organizations on the legacy Business Critical edition ...").
+  # Case-sensitive: "business critical workloads" is ordinary prose.
+  '(?-i)\bBusiness Critical\b': Enterprise

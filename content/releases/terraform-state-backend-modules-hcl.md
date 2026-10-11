@@ -67,7 +67,7 @@ sections:
         description: |
           Run policies against a Terraform plan and block non-compliant resources before they ever reach
           your production environments.
-        link: /docs/discovery-governance/policy/
+        link: /docs/discovery-governance/concepts/policy-as-code/
 
       - variant: text
         icon: pulumi-neo

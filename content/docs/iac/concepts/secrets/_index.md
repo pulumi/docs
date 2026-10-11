@@ -36,7 +36,7 @@ below for how the two work together.
 
 You can create secret values programmatically in two ways:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -74,12 +74,20 @@ You can create secret values programmatically in two ways:
 - Calling `fn::secret` to construct a secret from an existing value.
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+- Setting `sensitive = true` on a `variable` block when reading a value from config.
+- Calling `sensitive(value)` to construct a secret from an existing value.
+
+An `output` block marked `sensitive = true` likewise becomes a secret stack output. `issensitive(value)` reports whether a value is already marked.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 As an example, let’s create an AWS Parameter Store secure value. Parameter Store is an AWS service that stores strings. Those strings can either be secret or not. To create an encrypted value, we need to pass an argument to initialize the store’s `value` property. Unfortunately, the obvious thing to do — passing a raw, unencrypted value — means that the value is also stored in the Pulumi state, unencrypted, so we need to ensure that the value is a secret:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -169,6 +177,22 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "my-secret-value" {
+  type      = string
+  sensitive = true
+}
+
+resource "aws_ssm_parameter" "a_secret_param" {
+  name  = "a-secret-param"
+  type  = "SecureString"
+  value = var.my-secret-value
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -245,7 +269,7 @@ dbPassword                 [secret]
 
 Similarly, if our program attempts to print the value of `dbPassword` to the console — either intentionally or accidentally — Pulumi masks it out:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -301,6 +325,21 @@ outputs:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "dbPassword" {
+  type      = string
+  sensitive = true
+}
+
+output "password" {
+  value     = var.dbPassword
+  sensitive = true
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -336,7 +375,7 @@ To begin, allocate an instance of the `pulumi.Config` object as shown in the cod
 
 The remainder of the code example demonstrates how to access these configuration values in your Pulumi program:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -438,6 +477,22 @@ config:
     type: string
     secret: true
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "name" {
+  type = string
+}
+
+variable "dbPassword" {
+  type      = string
+  sensitive = true
+}
+```
+
+`var.name` is the plain string `BroomeLLC`. `var.dbPassword` carries its secret marking wherever it flows, so any resource property or stack output it reaches is encrypted in state.
 
 {{% /choosable %}}
 

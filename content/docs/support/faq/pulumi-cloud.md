@@ -127,7 +127,7 @@ For more about joining organizations, see [Joining an organization](/docs/admini
 
 ### How can I delete my Pulumi account?
 
-You can delete your personal account from your account settings in [Pulumi Cloud](https://app.pulumi.com/signin).
+You can delete your personal account from your [account settings](https://app.pulumi.com/user/account/settings) in Pulumi Cloud. The **Delete account** button is at the bottom of that page. This is a permanent operation and cannot be undone.
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
 
@@ -182,6 +182,10 @@ Annual contracts are available on Pro and Enterprise only, with invoicing
 payable by bank transfer or check.
 To discuss that, [contact us](/contact/).
 
+### Where can I find my invoices?
+
+If your organization is on a self-serve edition, your invoices are available to download from the bottom of your organization's **Billing & usage** settings page. To get there, select **Settings** > **Billing & usage** in the left navigation bar, or go directly to `https://app.pulumi.com/<org-name>/settings/billing-usage`. Pulumi also emails a receipt for each invoice to your organization's billing email address.
+
 ### What editions are available?
 
 - **Free** covers one user, state management, Pulumi Deployments, basic Pulumi
@@ -204,7 +208,8 @@ To discuss that, [contact us](/contact/).
   and PCI DSS,
   [SCIM](/docs/administration/guides/scim/) user and group sync, unlimited
   custom policy packs, policy remediation, GitHub Enterprise Server support,
-  and unlimited custom roles.
+  GitHub Enterprise Cloud with data residency support, and unlimited custom
+  roles.
 
 For a feature-by-feature comparison, see the [pricing page](/pricing/).
 

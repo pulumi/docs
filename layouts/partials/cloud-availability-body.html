@@ -4,7 +4,7 @@
   (llms.txt, the .md page renditions) can't drift.
 
   Expects a dict:
-    feature  optional; a feature id from data/pulumi_pricing.yaml. The edition
+    feature  optional; a feature id from data/pulumi_editions.yaml. The edition
              named in the sentence is derived from that feature's availability,
              so a feature that moves editions updates the pricing table and
              every page marked with it in one edit. Empty means the feature is
@@ -28,10 +28,10 @@
        through to the "all editions" branch in files nobody reads during
        review. Safe to delete a release after the rename. */ -}}
 {{- with .edition -}}
-  {{- errorf "cloud-availability-body.html was called with edition: %q (in %s). It takes a feature id from data/pulumi_pricing.yaml now — pass `feature` instead." . $.where -}}
+  {{- errorf "cloud-availability-body.html was called with edition: %q (in %s). It takes a feature id from data/pulumi_editions.yaml now — pass `feature` instead." . $.where -}}
 {{- end -}}
 {{- /* `named` leads the sentence with the feature's display name from
-       data/pulumi_pricing.yaml instead of "This … feature", for a section
+       data/pulumi_editions.yaml instead of "This … feature", for a section
        where a page covers something broadly and only one option is gated. */ -}}
 {{- if and .named (not .feature) -}}
   {{- errorf "cloud-availability-body.html was called with named: true but no feature (in %s). The named form needs a feature id to take the name from." .where -}}
@@ -46,29 +46,24 @@
     {{- $editionIds := slice -}}
     {{- range $px.editions -}}{{- $editionIds = $editionIds | append .id -}}{{- end -}}
     {{- if in $editionIds $id -}}
-      {{- errorf "pulumi_cloud_feature: %q is an edition id, not a feature id (in %s). Markers name the feature (for example `rbac` or `audit-logs`) and the edition is derived from data/pulumi_pricing.yaml, so a feature that moves editions is a one-line edit." $id .where -}}
+      {{- errorf "pulumi_cloud_feature: %q is an edition id, not a feature id (in %s). Markers name the feature (for example `rbac` or `audit-logs`) and the edition is derived from data/pulumi_editions.yaml, so a feature that moves editions is a one-line edit." $id .where -}}
     {{- else -}}
       {{- $near := slice -}}
       {{- range $px.ids -}}
         {{- if or (in . $id) (in $id .) -}}{{- $near = $near | append . -}}{{- end -}}
       {{- end -}}
       {{- if $near -}}
-        {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_pricing.yaml (in %s). Did you mean: %s?" $id .where (delimit $near ", ") -}}
+        {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_editions.yaml (in %s). Did you mean: %s?" $id .where (delimit $near ", ") -}}
       {{- else -}}
-        {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_pricing.yaml (in %s). Add it there — with `hidden: true` if it isn't a marketed line item on /pricing/. Known ids: %s" $id .where (delimit $px.ids ", ") -}}
+        {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_editions.yaml (in %s). Add it in pulumi/marketing-web (apps/www/src/data/pricing/features.yaml), and use `hidden: true` if the feature should not be listed in the pricing table. An automated PR will be generated on this repo containing the updated YAML file. Once that PR is merged, you can reference the new feature ID(s). Known ids: %s" $id .where (delimit $px.ids ", ") -}}
       {{- end -}}
     {{- end -}}
   {{- else -}}
     {{- $min := $f.min_edition -}}
     {{- if or (not $min) (eq $min $px.first) -}}
-      {{- errorf "pulumi_cloud_feature: %q resolves to the %s edition (in %s), which gates nothing — drop the marker, or set `requires:` on that feature in data/pulumi_pricing.yaml if its lowest column is really a limited variant." $id $px.first .where -}}
+      {{- errorf "pulumi_cloud_feature: %q resolves to the %s edition (in %s), which gates nothing — drop the marker, or set `requires:` on that feature in pulumi/marketing-web (apps/www/src/data/pricing/features.yaml) if its lowest column is really a limited variant." $id $px.first .where -}}
     {{- end -}}
-    {{- $names := slice -}}
-    {{- $seen := false -}}
-    {{- range $e := $px.editions -}}
-      {{- if eq $e.id $min -}}{{- $seen = true -}}{{- end -}}
-      {{- if $seen -}}{{- $names = $names | append $e.name -}}{{- end -}}
-    {{- end -}}
+    {{- $names := partial "pricing/feature-editions.html" (dict "feature" $id "where" .where) -}}
     {{- $list := "" -}}
     {{- if eq (len $names) 1 -}}
       {{- $list = printf "%s edition" (index $names 0) -}}

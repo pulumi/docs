@@ -468,8 +468,6 @@ function getDefaultExcludedKeywords() {
         "https://www.pulumi.com/docs/cli/commands/pulumi_plugin_install",
         "https://www.pulumi.com/docs/cli/commands/pulumi_schema_check",
         // Old internal URLs with working S3 redirects, flagged on the 2026-06-16 run
-        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/cluster-services/",                    // blog/getting-started-with-k8s-part6, blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/
-        "https://www.pulumi.com/docs/iac/clouds/aws/guides/cloudwatch",                                  // blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws: S3 → /docs/iac/guides/clouds/aws/ (sub-page deleted; anchors no longer apply)
         "https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/",                       // blog/unified-programmatic-approach-...-bmw, docs/reference/cloud-rest-api/organizations (from OpenAPI spec): S3 → /docs/administration/access-identity/oidc-issuers/
         // Old internal URLs with working S3 redirects, recurring false positives after PR #19980 (2026-06-30, 2026-07-02)
         "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/playbooks/",                          // blog/2019-year-at-a-glance, blog/aws-enterprise-container-management, blog/beyond-yaml-kubernetes-2026-automation-era: S3 → /docs/integrations/clouds/kubernetes/ (transient CloudFront cache misses re-flag it)
@@ -503,10 +501,6 @@ function getDefaultExcludedKeywords() {
         "https://github.com/pulumi/pulumi/watchers",                                // referenced from github.com/pulumi/pulumi crawl: GitHub 404s the anonymous /watchers view for every repo; valid in a browser (same pattern as /stargazers above)
         // Recurring false positives flagged on 2026-07-23 — S3 redirects committed, but registry/build overwrites or CloudFront cache-miss re-flags them
         "https://www.pulumi.com/registry/packages/azure/api-docs/voice/",           // blog/azure-v6-release: S3 redirect in scripts/redirects/general-broken-links-redirects.txt (added in #20366) keeps getting overwritten by the registry build
-        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/control-plane",   // blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/ (same family as excluded cluster-services/, playbooks/)
-        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/configure-defaults", // blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/
-        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/app-services",    // blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/
-        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/apps",            // blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/
         "https://ieeexplore.ieee.org/",                                             // blog/aws-iam-access-analyzer-and-crossguard: IEEE returns HTTP 418 (I'm a teapot) to automated clients; loads in browsers
     ];
 }

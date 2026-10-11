@@ -49,6 +49,15 @@ the next index. IDs are the join key across the author comment's checklist,
 REVIEW_STATE, the evidence object, `#update-review` mentions, and the
 Sentinel's red messages.
 
+A re-review continues above the prior high-water mark, read from the live
+author card. `#new-review` clears that card first, so it reads the mark
+beforehand and passes it as the `prior_high_water` dispatch input, which the
+redispatch job forwards. If a forced run errors or times out before its card
+publishes, its failure notice carries `<!-- REVIEW_HIGH_WATER n -->`, and the
+next review takes the larger of the card and any such failure notice
+(`<!-- CLAUDE_PROGRESS -->` from `github-actions[bot]`; other bot comments can
+quote PR text) (`review_state.py high-water-marker`).
+
 ### Buckets
 
 - `outstanding` (🚨 must fix or refute — blocks)
@@ -73,6 +82,13 @@ Lives as an HTML comment in the bot-owned author comment:
 - Dispositions: `fixed | refuted | deferred | accepted | not-applicable`
   (note required for `deferred`/`accepted`/`not-applicable` — same closed set
   as `review-worklist.py`).
+- Completeness: every finding that has left the 🚨/❓ tables carries an
+  entry — `resolve` → `fixed`, `hold` → `refuted`, `accept` → `accepted`,
+  `concede` → `not-applicable` (note `conceded: <reason>`). An id with no
+  entry is open. `concede` used to write nothing, so a card whose findings
+  were all conceded shipped `{}` under a note calling them open (#21790);
+  `apply-update.py` now backfills any ✅ row missing an entry on every
+  refresh, so older cards heal on their next update.
 - Writers: the full-review lane publishes the block with the card; only the
   update lane (`apply-update.py`) records dispositions in it. Runs of the two
   overlap routinely, so the update lane merges per finding-id (latest
@@ -95,7 +111,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 |---|---|---|
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `@claude … #update-review` phrasing |
-| G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of a routing team — any team in `teams:` under `approval.scope: any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, from a repository administrator | the team slug(s) needed |
+| G3 right-approver | an APPROVED latest review at head from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); re-run the failed "Build and deploy testing" run or dispatch it at the branch to retry — **not waivable** |
 | G5 oversized-ack | `review:oversized` PRs: approval body contains `sentinel:oversized-ack` | explains the ack |
 
@@ -214,6 +230,32 @@ default-branch-triggered workflow** — `workflow_run`, `schedule`,
 `workflow_dispatch` entry (`run_id`, optional `pr_number`) backfills a
 status for a deploy that already finished.
 
+## Base-only merges
+
+`restamp-base-merge.py` carries a v3 review across a push that only merges
+the base: every commit after the card's `CLAUDE_REVIEW_HEAD` has two parents
+AND the PR's `+`/`-` lines at the reviewed head equal the ones now (the same
+test `/pr-review` uses in `collect.py`). It moves the card's head carriers —
+the marker and the sub line's `head commit` — and nothing else, so the
+composition stamp still orders it for the stale-publish guard. Callers:
+`claude-code-review.yml`'s `mark-stale` (instead of staling; then pokes the
+Sentinel) and `review-label-reconcile.yml` (before staling, and in its
+un-stale sweep; it re-dispatches the Sentinel after either repair). Any read
+it can't make answers "not base-only", and so does a large or binary file
+(no `patch`) whose blob changed. It re-reads the card just before writing and
+backs off if a refresh published in the meantime. Before it,
+#21673's master merge left a clean review at `review:stale` with nothing
+scheduled to clear it.
+
+**One-time cleanup.** `cleanup-review-leftovers.py --repo pulumi/docs`
+(dry run; `--apply` to write, `--extra-pr 2` to also sweep the stray
+Sentinel status comment the old `workflow_run` resolution posted on #2)
+lists what the pre-fix loop left on open PRs: `review:stale` on a review that
+is current (or current across a base merge), `Review errored` notices from
+before the live card was composed (its `updated` stamp, not the comment's
+edit time), and legacy v2 pages beside a v3 card. Meant to be run
+once by a maintainer, not scheduled.
+
 ## Superseded handoffs
 
 The model job hands its validated review to the credentialed publish job as
@@ -315,14 +357,25 @@ approver to wait for. `mechanical` skips the *model* review at G1 and
 nothing else.
 
 **Who is asked and who can clear it are different questions.** `approval:`
-in the same config decides the second one. Under `approval.scope: any-team`
-(what we run) a member of any team in `teams:` satisfies G3 whatever the
-matrix routed, so a PR spanning three subjects needs one approval rather
-than a three-team quorum — the matrix still picks who gets requested, who
-the SLA sweep chases, and who the brief names. `approval.admins_satisfy`
-additionally lets a repository administrator's approval clear it, which
-concedes what a repo admin can already do at the merge box rather than
-granting anything new. Both default to the strict reading.
+in the same config decides the second one. Under `approval.scope: any-human`
+(what we run) any human with write access to the repo satisfies G3 whatever
+the matrix routed — the same set GitHub's required-review rule counts, read
+off the collaborator-permission endpoint, so a drive-by approval on this
+public repo does not count. The matrix still picks who gets requested, who
+the SLA sweep chases, and who the brief names. `any-team` (any member of a
+team in `teams:`) and `lane` (every matrix-required team) are the narrower
+settings. `approval.admins_satisfy` additionally lets a repository
+administrator's approval clear it under those, which concedes what a repo
+admin can already do at the merge box rather than granting anything new.
+Both default to the strict reading.
+
+**Bots approve only on a named lane.** `bot_approvers:` lists each automated
+process whose bot approval clears G3: the approving login, the PR author,
+and optionally a label the PR must carry. A match overrides the `bots:`
+denylist and the `type == Bot` exclusion for that lane alone; everywhere
+else a bot approval never counts. The live entries are the two workflows
+that post bot approvals today (`auto-approve-for-auto-merge.yml` as
+`github-actions[bot]`, `label-dependabot.yml` as `pulumi-bot`).
 
 That is a reversal, and the reason is worth keeping: the Sentinel is not the
 gate that decides mergeability. GitHub's required-review rule is, and it

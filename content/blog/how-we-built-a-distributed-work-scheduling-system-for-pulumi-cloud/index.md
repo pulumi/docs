@@ -18,7 +18,7 @@ schema_type: auto
 
 ---
 
-Pulumi Cloud orchestrates a growing number of workflow types: [Deployments](/docs/deployments/), [Insights](/docs/discovery-governance/) discovery scans, and [policy evaluations](/docs/discovery-governance/policy/). Some of that work runs on Pulumi's infrastructure, and some of it runs on yours via [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). We needed a scheduling system that could handle all of these workflow types reliably across both environments. In this post, we'll take a look at the system we built.
+Pulumi Cloud orchestrates a growing number of workflow types: [Deployments](/docs/deployments/), [Insights](/docs/discovery-governance/) discovery scans, and [policy evaluations](/docs/discovery-governance/concepts/policy-as-code/). Some of that work runs on Pulumi's infrastructure, and some of it runs on yours via [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). We needed a scheduling system that could handle all of these workflow types reliably across both environments. In this post, we'll take a look at the system we built.
 
 <!--more-->
 

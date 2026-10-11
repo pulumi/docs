@@ -19,8 +19,7 @@ gated: true
 event_type: webinar
 
 # URL for embedding a URL for ungated events.
-youtube_url:
-
+youtube_url: https://www.youtube.com/embed/XF_W6pCBS50
 # Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2026-09-03T09:00:00-07:00
 

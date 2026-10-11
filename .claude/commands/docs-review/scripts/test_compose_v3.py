@@ -731,3 +731,282 @@ def test_author_cell_names_the_claim_and_the_block_carries_the_reason(tmp_path):
     evidence = json.loads((tmp_path / "e.json").read_text())
     f3 = next(f for f in evidence["findings"] if f["id"] == "F3")
     assert len(f3["text"]) > len(quoted), "the evidence record keeps the longer claim text"
+
+
+def test_empty_stance_list_renders_nothing_on_v3_but_explicit_empty_on_v2():
+    cr = _load("cr_stances", HERE / "compose-review.py")
+    assert cr.render_stances([], v3=True) == ""
+    assert cr.STANCES_EMPTY in cr.render_stances([])
+    one = [{"file": "a.md", "line_range": "L3", "text": "the fastest way", "type": "positioning"}]
+    assert cr.STANCES_NOTE_V3 in cr.render_stances(one, v3=True)
+    assert cr.STANCES_NOTE in cr.render_stances(one)
+
+
+def test_author_footer_folds_how_to_answer_only_while_something_blocks():
+    cr = _load("cr_footer", HERE / "compose-review.py")
+    blocking, clear = cr.render_author_footer("u", 2), cr.render_author_footer("u", 0)
+    assert "<summary><strong>How to answer</strong>" in blocking
+    assert "How to answer" not in clear and "</details>" not in clear
+    assert clear.startswith(cr.FOOTER_SENTINEL) and clear.rstrip().endswith("the review's record.")
+
+
+def test_stale_vocabulary_check_skips_text_quoted_from_the_pr():
+    cr = _load("cr_stale", HERE / "compose-review.py")
+    stance = cr.render_stances([{"file": "references/output-format.md", "line_range": "L340",
+                                 "text": "renders a second H4 inside ⚠️ Low-confidence, before the style block",
+                                 "type": "positioning"}], v3=True)
+    assert cr.stale_v2_tokens(stance) == [], "a quoted stance is the PR's text, not composer scaffolding"
+    assert cr.stale_v2_tokens("### ⚠️ Low-confidence\n") == ["⚠️ Low-confidence"], "composer text still trips it"
+
+
+def test_a_rereview_continues_ids_above_the_prior_high_water(tmp_path, v3_outputs):
+    """#21798: a full re-review restarted at F1, so the new F3 inherited the
+    old F3's `fixed` record and the author's reply to "F3" meant the wrong
+    finding. Ids continue from the previous card's high_water."""
+    _, _, base_ev = v3_outputs
+    n = len(base_ev["findings"])
+    assert n > 0
+    author, brief, evidence = tmp_path / "a.md", tmp_path / "b.md", tmp_path / "e.json"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"),
+        "--out-author", str(author), "--out-brief", str(brief), "--out-evidence", str(evidence),
+    ]) + ["--prior-high-water", "7"]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    ev = json.loads(evidence.read_text())
+    ids = sorted(int(f["id"][1:]) for f in ev["findings"])
+    assert ids == list(range(8, 8 + n))
+    assert review_state.parse_state(author.read_text())["high_water"] == 7 + n
+    assert "**F1**" not in author.read_text() + brief.read_text()
+
+
+def test_a_header_only_checks_table_collapses_even_with_the_handoff_hint():
+    """#21948's own brief: every ⚠️ row filed off, the "_Not your area?_"
+    hint left behind, and the header-only table survived the collapse under
+    "Check the ⚠️ items, then approve"."""
+    be = _load("build_evidence_for_handoff", HERE / "build-evidence.py")
+    brief = "\n".join([
+        "## Reviewer's guide v1 — not for the author", "",
+        cr.CHECKS_HEADING, "",
+        cr.FINDING_TABLE_HEADER, cr.FINDING_TABLE_SEPARATOR, "",
+        "_Not your area? Hand it to another member of @pulumi/docs-tools rather than approving on faith._",
+        "", "### ✅ What you can rubber-stamp", "",
+    ])
+    out = be._collapse_empty_tables(brief, be.BRIEF_SECTIONS)
+    assert cr.FINDING_TABLE_HEADER not in out and "Not your area" not in out
+    assert cr._V3_EMPTY_CHECKS in out
+    kept = brief.replace(cr.FINDING_TABLE_SEPARATOR, cr.FINDING_TABLE_SEPARATOR + "\n| **F1** | `x.md` L1 | y |")
+    assert be._collapse_empty_tables(kept, be.BRIEF_SECTIONS) == kept, "a live row keeps its table and hint"
+
+
+# ---- automated-author cards (content-review/* branches) --------------------
+# pulumi-bot opens the content-review PRs and never reads the card, so a card
+# that tells "the PR author" to answer addresses nobody (#21897 sat three days
+# with two open 🚨 items). Those cards carry AUTOMATED_AUTHOR_MARKER and
+# address the requested reviewer instead; the refresh lanes keep that.
+
+def _compose_on_branch(tmp_path, branch: str) -> str:
+    author = tmp_path / "a.md"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"), "--out-author", str(author),
+        "--out-brief", str(tmp_path / "b.md"), "--out-evidence", str(tmp_path / "e.json"),
+    ])
+    cmd[cmd.index("--head-branch") + 1] = branch
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    return author.read_text()
+
+
+def test_automated_branch_detection():
+    assert cr.is_automated_branch("content-review/glowup-docs-x")
+    assert cr.is_automated_branch("content-review/docs-x")
+    assert not cr.is_automated_branch("fix/component-doc")
+    assert not cr.is_automated_branch("")
+
+
+def test_human_card_has_no_automated_marker(v3_outputs):
+    author, _, _ = v3_outputs
+    assert cr.AUTOMATED_AUTHOR_MARKER not in author
+    assert "You = the PR author" in author
+
+
+def test_content_review_card_addresses_the_reviewer(tmp_path):
+    author = _compose_on_branch(tmp_path, "content-review/glowup-docs-x")
+    lines = author.splitlines()
+    assert lines[3] == cr.AUTOFIX_AUTHOR_MARKER
+    assert "autofix" in author
+    assert author.count("CLAUDE_REVIEW_HEAD") == 1
+    assert "You = the PR author" not in author
+    assert "requested reviewer" in author
+
+
+def test_fix_lane_card_promises_no_autofix(tmp_path):
+    author = _compose_on_branch(tmp_path, "content-review/docs-x")
+    assert author.splitlines()[3] == cr.AUTOMATED_AUTHOR_MARKER
+    assert "autofix" not in author.split("<!-- CLAUDE_REVIEW_FOOTER -->")[0].lower()
+    assert "requested reviewer" in author
+
+
+def test_fix_header_keeps_the_automated_audience(tmp_path):
+    be = _load("build_evidence", HERE / "build-evidence.py")
+    author = _compose_on_branch(tmp_path, "content-review/glowup-docs-x")
+    cleared = be._fix_header(author, 0)
+    assert "Automation opened this PR" in cleared
+    assert "You = the PR author" not in cleared
+    reopened = be._fix_header(cleared, 2)
+    assert "requested reviewer" in reopened
+    assert "You = the PR author" not in reopened
+
+
+def test_orient_forms():
+    assert "You = the PR author" in "\n".join(cr.render_author_orient(1))
+    assert "requested reviewer" in "\n".join(cr.render_author_orient(1, automated=True))
+    assert "autofix" not in "\n".join(cr.render_author_orient(1, automated=True))
+    assert "autofix" in "\n".join(cr.render_author_orient(1, automated=True, autofix=True))
+    assert "needs an answer" in "\n".join(cr.render_author_orient(0, automated=True))
+
+
+@pytest.mark.parametrize("scope, teams, expected", [
+    ("lane", "@pulumi/docs-guild",
+     "**Approval needed from:** @pulumi/docs-guild — any member's approval satisfies the merge gate."),
+    ("lane", "@pulumi/docs-guild, @pulumi/docs-tools",
+     "**Approval needed from:** @pulumi/docs-guild, @pulumi/docs-tools — the merge gate needs an approval from a member of each team."),
+    ("any-team", "@pulumi/docs-guild",
+     "**Review requested from:** @pulumi/docs-guild — an approval from a member of any review team satisfies the merge gate."),
+    ("any-human", "@pulumi/docs-guild, @pulumi/docs-marketing-review",
+     "**Review requested from:** @pulumi/docs-guild, @pulumi/docs-marketing-review — an approval from anyone with write access satisfies the merge gate."),
+])
+def test_approval_line_follows_scope(tmp_path, scope, teams, expected):
+    brief = tmp_path / "b.md"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"),
+        "--out-author", str(tmp_path / "a.md"), "--out-brief", str(brief),
+        "--out-evidence", str(tmp_path / "e.json"),
+    ])
+    cmd[cmd.index("--routed-team") + 1] = teams
+    cmd += ["--approval-scope", scope]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    assert expected in brief.read_text().splitlines()
+
+
+# ---- unverifiable claims on lines the PR didn't write ----------------------
+
+# pulumi/docs#22164's shape: the PR edits L31 only; L28 and L34 are hunk
+# context the extractor read anyway.
+_CHANGELOG = "content/docs/administration/self-hosting/changelog.md"
+_UNTOUCHED_DIFF = f"""diff --git a/{_CHANGELOG} b/{_CHANGELOG}
+index 1111111..2222222 100644
+--- a/{_CHANGELOG}
++++ b/{_CHANGELOG}
+@@ -28,7 +28,7 @@ pulumi_cloud_feature: self-hosting
+ Breaking Change: the service stays compatible with 2.x.
+ {{{{< /notes >}}}}
+ 
+-* Added per-feature control of SSRF protection.
++* Added per-feature control of SSRF (server-side request forgery) protection.
+ 
+ {{{{< notes type="warning" >}}}}
+ Breaking Change: add `AGENTS_BYOK` to the list.
+"""
+
+
+def _verdict(cid, line, verdict, text):
+    return {"claim_id": cid, "file": _CHANGELOG, "line_range": line, "text": text,
+            "type": "capability", "route": "pass1", "verdict": verdict,
+            "confidence": "medium", "evidence": "only a sibling docs page says so",
+            "source": "repo:content/docs/administration/self-hosting/components/api.md"}
+
+
+def _compose_untouched(tmp_path, verdicts, diff=_UNTOUCHED_DIFF):
+    vc = tmp_path / "vc.json"
+    vc.write_text(json.dumps({"verdicts": verdicts, "errors": [], "meta": {}}))
+    author, brief, evidence = tmp_path / "a.md", tmp_path / "b.md", tmp_path / "e.json"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"),
+        "--out-author", str(author), "--out-brief", str(brief), "--out-evidence", str(evidence),
+    ])
+    cmd[cmd.index("--verified-claims") + 1] = str(vc)
+    cmd[cmd.index("--diff-files") + 1] = _CHANGELOG
+    if diff is not None:
+        d = tmp_path / "pr.diff"
+        d.write_text(diff)
+        cmd += ["--pr-diff", str(d)]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    assert "self-check failed" not in proc.stderr, proc.stderr
+    return author.read_text(), brief.read_text(), json.loads(evidence.read_text())
+
+
+_UNTOUCHED_VERDICTS = [
+    _verdict("c1", "L28", "unverifiable", "the service stays compatible with OpenSearch 2.x"),
+    _verdict("c2", "L31", "unverifiable", "SSRF control is per feature"),
+    _verdict("c3", "L34", "unverifiable", "AGENTS_BYOK is the Neo scope"),
+    _verdict("c4", "L34", "contradicted", "the deprecated variable still covers Neo"),
+]
+
+
+def test_changed_lines_count_only_what_the_pr_wrote():
+    assert cr.changed_lines_by_file(_UNTOUCHED_DIFF) == {_CHANGELOG: {31}}
+    # A deleted line that itself starts with `--` (a frontmatter fence) is
+    # hunk body, not the next file's header.
+    fence = ("--- a/x.md\n+++ b/x.md\n@@ -1,3 +1,3 @@\n title: a\n----\n+---\n body\n"
+             "--- a/y.md\n+++ b/y.md\n@@ -5,2 +5,1 @@\n keep\n-gone\n")
+    assert cr.changed_lines_by_file(fence) == {"x.md": {2}, "y.md": {6}}
+
+
+def test_untouched_unverifiable_is_preexisting_not_a_question(tmp_path):
+    author, brief, ev = _compose_untouched(tmp_path, _UNTOUCHED_VERDICTS)
+    by_text = {f["text"]: f for f in ev["findings"]}
+    buckets = {t.split(": ", 1)[-1]: f["bucket"] for t, f in by_text.items()}
+    # The two context-line unverifiables leave the author card...
+    assert buckets["the service stays compatible with OpenSearch 2.x"] == "preexisting"
+    assert buckets["AGENTS_BYOK is the Neo scope"] == "preexisting"
+    for f in ev["findings"]:
+        if f["bucket"] == "preexisting":
+            assert f["id"] not in author and f["id"] not in brief
+            assert f["text"].startswith("Unverifiable claim on a line this PR doesn't change")
+    # ...the one on the edited line stays a ❓ the author answers...
+    assert buckets["SSRF control is per feature"] == "author-answer"
+    # ...and a contradiction on an untouched line stays the model's call
+    # (an edit can make another line wrong).
+    assert buckets["the deprecated variable still covers Neo"] == "outstanding"
+    assert "**Pre-existing issues in touched files:** 2 —" in brief
+
+
+def test_untouched_unverifiable_survives_build_evidence(tmp_path):
+    author, brief, ev = _compose_untouched(tmp_path, _UNTOUCHED_VERDICTS)
+    a, b, base = tmp_path / "a2.md", tmp_path / "b2.md", tmp_path / "base.json"
+    a.write_text(author)
+    b.write_text(brief)
+    base.write_text(json.dumps(ev))
+    d = tmp_path / "pr.diff"
+    d.write_text(_UNTOUCHED_DIFF)
+    out = tmp_path / "final.json"
+    proc = subprocess.run(
+        [sys.executable, str(HERE / "build-evidence.py"),
+         "--author-body", str(a), "--brief-body", str(b), "--base", str(base),
+         "--output", str(out), "--pr-diff", str(d),
+         "--author-out", str(tmp_path / "a-clean.md"), "--brief-out", str(tmp_path / "b-clean.md")],
+        capture_output=True, text=True,
+    )
+    assert proc.returncode == 0, proc.stderr
+    final = json.loads(out.read_text())
+    assert {f["id"]: f["bucket"] for f in final["findings"]} == {f["id"]: f["bucket"] for f in ev["findings"]}
+    pre = [f for f in final["findings"] if f["bucket"] == "preexisting"]
+    assert len(pre) == 2 and not any(f.get("anchor_ok") is False for f in pre)
+    assert "**Pre-existing issues in touched files:** 2 —" in (tmp_path / "b-clean.md").read_text()
+
+
+@pytest.mark.parametrize("diff", [None, ""])
+def test_no_diff_keeps_unverifiables_on_the_card(tmp_path, diff):
+    _author, _brief, ev = _compose_untouched(tmp_path, _UNTOUCHED_VERDICTS, diff=diff)
+    assert not any(f["bucket"] == "preexisting" for f in ev["findings"])
+
+
+def test_claim_in_a_file_the_diff_does_not_touch_stays_on_the_card(tmp_path):
+    other = dict(_verdict("c9", "L5", "unverifiable", "a claim elsewhere"),
+                 file="content/docs/other.md")
+    _author, _brief, ev = _compose_untouched(tmp_path, [other])
+    claims = [f for f in ev["findings"] if f["origin"].startswith("verdict:")]
+    assert [f["bucket"] for f in claims] == ["author-answer"]

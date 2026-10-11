@@ -151,6 +151,16 @@ Duration: 2s
 
 Notice that by default, resources imported with the CLI are marked as _protected_ to guard against accidental deletion. If you forgot, for example, to append the generated code to your program before running another `pulumi up`, Pulumi would first interpret the missing code as an intention to delete the new resource, but then fail on the existence of the `protect` property, leaving the resource intact. See the [`protect`](/docs/iac/concepts/resources/options/protect/) documentation to learn more.
 
+### Verify the import
+
+Run `pulumi preview` right after pasting the generated code into your program, before making any other change to it. Because the code came directly from the resource's current state, the preview should report no changes. Any proposed change is a difference the import didn't fully resolve, and it's worth understanding before you run `pulumi up` or edit the code further.
+
+A handful of causes account for most of these diffs. Values the resource never returns at all, such as passwords and other write-only fields, are typically left out of the generated code entirely, so you need to add them back to your program by hand, often as [secrets](/docs/iac/concepts/secrets/), before the two versions actually match. Providers can also normalize or compute values on read in ways the generated code doesn't fully anticipate: the [`aws.s3.Bucket`](/registry/packages/aws/api-docs/s3/bucket/#tagsall_nodejs) resource, for example, computes a `tagsAll` property from `tags` plus the provider's own `defaultTags` configuration, and other resources can surface similar computed or normalized properties of their own. If you're hand-authoring a program to describe an existing resource rather than pasting in the generated code directly, small differences in how you expressed otherwise-equivalent values are a common source too.
+
+Pay particular attention to a diff that proposes `replace` rather than `update`. `pulumi import` marks every resource it creates with the `protect` option, so Pulumi refuses to delete or replace it, and a `pulumi up` that proposes a replacement fails rather than proceeding. Don't remove `protect` to work around that error. Treat a proposed replacement of an imported resource as something to investigate, not something to accept, particularly in production: work out which property is driving the diff and why before you apply it.
+
+The fix in almost every case is to adjust the program so it matches the resource's actual state, the same way you'd resolve any [mismatched state](#mismatched-state) surfaced when importing with the `import` resource option. Reserve [`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/) for properties that are genuinely managed outside your Pulumi program, such as by another team, a separate tool, or the cloud provider itself, rather than as a way to silence a diff before you've worked out what's causing it.
+
 ### Importing a resource managed by a non-default provider
 
 By default, `pulumi import` looks up the resource using the stack's default provider for that resource's package. If the resource you're importing is actually managed by an explicit [provider resource](/docs/iac/concepts/resources/options/provider/) in your program --- for example, a provider configured for a different account, region, or set of credentials than the default --- you need to tell `pulumi import` which provider to use. Otherwise, the import will either fail to locate the resource or bring it under management by the wrong provider, and you'll see a diff or a replacement the next time you run `pulumi preview`.
@@ -253,7 +263,7 @@ $ pulumi import --file ./my-resources.json
 
 After adding the specified resources to the current stack state, Pulumi generates the code necessary for managing the resources from that point forward:
 
-{{< chooser language "typescript,python,csharp,go" >}}
+{{< chooser language "typescript,python,csharp,go,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -485,6 +495,88 @@ class MyStack : Stack
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    aws = {
+      source = "pulumi/aws"
+    }
+  }
+}
+
+resource "aws_ec2_vpc" "application-vpc" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_generated_ipv6_cidr_block = false
+  cidr_block                       = "172.16.0.0/16"
+  enable_dns_support               = true
+  instance_tenancy                 = "default"
+  tags = {
+    "Name"    = "pulumi-vpc"
+    "Owner"   = "pulumi"
+    "Project" = "pulumi-k8s-aws-cluster"
+  }
+}
+
+resource "aws_ec2_subnet" "public-1" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_ipv6_address_on_creation = false
+  cidr_block                      = "172.16.32.0/19"
+  map_public_ip_on_launch         = true
+  tags = {
+    "Name"                   = "pulumi-vpc-public-1"
+    "Owner"                  = "pulumi"
+    "Project"                = "pulumi-k8s-aws-cluster"
+    "kubernetes.io/role/elb" = "1"
+    "type"                   = "public"
+  }
+  vpc_id = "vpc-0ad77710973388316"
+}
+
+resource "aws_ec2_subnet" "private-1" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_ipv6_address_on_creation = false
+  cidr_block                      = "172.16.160.0/19"
+  map_public_ip_on_launch         = false
+  tags = {
+    "Name"                            = "pulumi-vpc-private-1"
+    "Owner"                           = "pulumi"
+    "Project"                         = "pulumi-k8s-aws-cluster"
+    "kubernetes.io/role/internal-elb" = "1"
+    "type"                            = "private"
+  }
+  vpc_id = "vpc-0ad77710973388316"
+}
+```
+
+The import file names resources by Pulumi type tokens such as `aws:ec2/vpc:Vpc`, so the generated program uses the `pulumi/aws` provider and its matching types (`aws_ec2_vpc`, `aws_ec2_subnet`). Keep that provider. The Terraform `aws` provider's `aws_vpc` and `aws_subnet` register under different tokens (`aws:index:Vpc`), so Pulumi would treat them as new resources rather than the ones you just imported.
+
+If the resources you are importing are already described by a Terraform or OpenTofu state file, skip the import file entirely and point the converter at the state file instead:
+
+```bash
+$ pulumi import --from hcl terraform.tfstate
+```
+
+This reads your `.tf` files alongside the state file, so run it from the project directory. See [Keep your code in HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#keep-your-code-in-hcl) for the full workflow.
+
+{{% /choosable %}}
+
 {{% /chooser %}}
 
 ### Import file schema
@@ -521,7 +613,7 @@ Code-based import also differs from the CLI-based approach in that it doesn't im
 
 The following example imports an existing AWS EC2 security group with an assigned cloud provider ID of `sg-04aeda9a214730248`:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -604,6 +696,40 @@ var group = new SecurityGroup("my-sg",
         ImportId = "sg-04aeda9a214730248"
     }
 );
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+
+resource "aws_security_group" "my_sg" {
+  name = "my-sg-62a569b"
+
+  ingress {
+    protocol    = "tcp"
+    from_port   = 80
+    to_port     = 80
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  pulumi {
+    import_id = "sg-04aeda9a214730248"
+  }
+}
+```
+
+A standalone [`import` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#import-blocks) does the same job and leaves the resource body unchanged:
+
+```hcl
+import {
+  to = aws_security_group.my_sg
+  id = "sg-04aeda9a214730248"
+}
 ```
 
 {{% /choosable %}}

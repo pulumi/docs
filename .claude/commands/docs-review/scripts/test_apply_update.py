@@ -372,16 +372,18 @@ def test_reopen_keeps_a_human_disposition_that_landed_meanwhile():
     assert state2["findings"]["F1"]["disposition"] == "accepted" and state2["findings"]["F1"]["actor"] == "alice"
 
 
-def test_resolve_and_concede_on_a_resolved_finding_are_rejected():
+def test_resolve_and_concede_on_a_resolved_finding_are_no_ops():
+    """#21614 run 34988034588: a concurrent refresh resolved six ids while this
+    run's model read the older card, and "already resolved" failed the whole
+    publish. The finding is already where the action would put it."""
     a1, b1 = _resolved_fixture()
     for action, extra in (("resolve", {"annotation": "x"}), ("concede", {"reason": "x"})):
-        up = _update([{"id": "F1", "action": action, **extra}])
-        try:
-            au.apply(a1, b1, up, head_sha="2" * 40, actor="cam", auto=False)
-        except au.UpdateError as exc:
-            assert "already resolved" in str(exc)
-        else:
-            raise AssertionError(f"{action} on a resolved finding must be rejected")
+        up = _update([{"id": "F1", "action": action, **extra},
+                      {"id": "F2", "action": "resolve", "annotation": "fixed in 2cb28d8"}])
+        a2, _, state, _ = au.apply(a1, b1, up, head_sha="2" * 40, actor="cam", auto=False)
+        assert au._collect_resolved(a2).count(next(l for l in au._collect_resolved(a1) if "**F1**" in l)) == 1
+        assert state["findings"]["F1"]["disposition"] == "fixed", "the first resolution stands"
+        assert state["findings"]["F2"]["disposition"] == "fixed", "the rest of the patch still applies"
     up = _update([{"id": "F1", "action": "reopen"}])
     try:
         au.apply(a1, b1, up, head_sha="2" * 40, actor="cam", auto=False)
@@ -520,3 +522,232 @@ def test_empty_or_placeholder_summary_is_treated_as_absent():
         up["summary"] = val
         a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
         assert "<TODO: one sentence" in a_out and "<optional" not in a_out
+
+
+# ---- footers are re-stamped on refresh -------------------------------------
+
+_ALL_ACCEPTED = [{"id": fid, "action": "accept", "reason": "shipping as-is"} for fid in ("F1", "F2", "F3")]
+HOW = "<summary><strong>How to answer</strong>"
+
+
+def _footer(body: str) -> str:
+    return body[body.index(au.cr.FOOTER_SENTINEL):]
+
+
+def test_how_to_answer_fold_leaves_when_nothing_blocks():
+    assert HOW in AUTHOR, "fixture blocks merge, so it carries the fold"
+    a_out, _, _, report = au.apply(AUTHOR, BRIEF, _update(_ALL_ACCEPTED, case="dispute"),
+                                   head_sha=SHA, actor="cam", auto=False, repo="pulumi/docs", pr=999)
+    assert report["blocking"] == 0
+    assert HOW not in a_out and "Every 🚨 and ❓ item" not in a_out
+    assert _footer(a_out).rstrip().endswith("Please don't edit or delete this comment; it's the review's record.")
+
+
+def test_how_to_answer_fold_returns_when_a_finding_reopens():
+    resolve_all = [{"id": fid, "action": "resolve", "annotation": "fixed in 1cb28d8"} for fid in ("F1", "F2", "F3")]
+    a1, b1, _, r1 = au.apply(AUTHOR, BRIEF, _update(resolve_all, case="fix-response"),
+                             head_sha=SHA, actor="update-lane", auto=False, repo="pulumi/docs", pr=999)
+    assert r1["blocking"] == 0 and HOW not in a1
+    prior = {"findings": [{"id": "F1", "bucket": "outstanding", "text": "original F1 text", "file": "content/docs/iac/x.md"}]}
+    a2, _, _, r2 = au.apply(a1, b1, _update([{"id": "F1", "action": "reopen", "reason": "reverted"}], case="re-verify"),
+                            head_sha=SHA, actor="update-lane", auto=False, repo="pulumi/docs", pr=999, prior=prior)
+    assert r2["blocking"] == 1
+    assert _footer(a2).count(HOW) == 1
+    assert "https://github.com/pulumi/docs/blob/master/CONTRIBUTING.md#ai-assisted-contributions" in _footer(a2)
+
+
+def test_old_card_footer_is_replaced_by_the_current_one():
+    # Cards published before the fold shipped carry an expanded
+    # "### How to answer" and the old reviewer footer; a refresh re-stamps both.
+    old_author = AUTHOR[:AUTHOR.index(au.cr.FOOTER_SENTINEL)] + (
+        au.cr.FOOTER_SENTINEL + "\n\n---\n\n### How to answer\n\nEvery 🚨 and ❓ item above needs one "
+        "of these before merge:\n\n1. **Fix it**\n\nPlease don't edit, hide, or delete this comment — "
+        "it is the review's record.\n")
+    old_brief = BRIEF[:BRIEF.index(au.cr.FOOTER_SENTINEL)] + (
+        au.cr.FOOTER_SENTINEL + "\n\n---\n\n**For the reviewer:** the ⚠️ items above are the minutes "
+        "that matter — …\n")
+    up = _update([{"id": "F3", "action": "retext", "text": "sharper question"}])
+    a_out, b_out, _, _ = au.apply(old_author, old_brief, up, head_sha=SHA, actor="cam", auto=False,
+                                  repo="pulumi/docs", pr=999)
+    assert "### How to answer" not in a_out and _footer(a_out).count(HOW) == 1
+    assert "minutes that matter" not in b_out
+    new_tip = "\n".join(au.cr.render_brief_orient())
+    old_brief_tip = old_brief.replace(new_tip, "> [!TIP]\n> **This is the reviewer's guide.** Work through the ⚠️ checklist below.")
+    assert old_brief_tip != old_brief, "fixture carries the current TIP to swap out"
+    _, b_tip, _, _ = au.apply(old_author, old_brief_tip, up, head_sha=SHA, actor="cam", auto=False,
+                              repo="pulumi/docs", pr=999)
+    assert "This is the reviewer's guide" not in b_tip and new_tip in b_tip
+    assert _footer(b_out) == au.cr.render_reviewer_footer("x").rstrip("\n") + "\n"
+
+
+def test_concede_records_a_disposition_so_the_block_is_complete():
+    """pulumi/docs#21790: four conceded findings, a `{}` REVIEW_STATE — and a
+    note under that block saying an id absent from it is OPEN. A conceded
+    finding is closed; the block has to say so."""
+    up = _update([{"id": "F2", "action": "concede", "reason": "author named the source"}], case="dispute")
+    a_out, _, state, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    entry = state["findings"]["F2"]
+    assert entry["disposition"] == "not-applicable"
+    assert entry["actor"] == "update-lane", "a reopen sheds it like a lane `fixed`"
+    assert entry["note"] == "conceded: author named the source"
+    assert "concede: author named the source" in a_out, "the scraper's annotation is unchanged"
+    assert "F2" not in _open_author_ids(a_out)
+
+
+def test_resolved_rows_without_a_disposition_are_backfilled_on_refresh():
+    """Cards published before concede wrote a disposition heal on their next
+    refresh: every ✅ row leaves with an entry, and a human's is untouched."""
+    up = _update([{"id": "F2", "action": "concede", "reason": "fine"},
+                  {"id": "F1", "action": "resolve", "annotation": "fixed in 1cb28d8"}])
+    a1, b1, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha="1" * 40, actor="cam", auto=False)
+    # Simulate the pre-fix card: strip both entries from the block.
+    rs = au.review_state
+    st = rs.parse_state(a1)
+    st["findings"] = {}
+    a1 = rs.replace_block(a1, st)
+    a2, _, state2, _ = au.apply(a1, b1, _update([]), head_sha="2" * 40, actor="cam", auto=False)
+    assert state2["findings"]["F2"]["disposition"] == "not-applicable"
+    assert state2["findings"]["F2"]["note"] == "conceded: fine"
+    assert state2["findings"]["F1"]["disposition"] == "fixed"
+    assert rs.parse_state(a2)["findings"].keys() >= {"F1", "F2"}
+    # A human disposition already present is never overwritten.
+    st = rs.set_disposition(rs.parse_state(a2), "F1", "accepted", actor="cam", note="mine")
+    out = au.backfill_resolved_dispositions(st, au._collect_resolved(a2))
+    assert out["findings"]["F1"]["disposition"] == "accepted"
+
+
+def test_an_invented_id_is_dropped_and_the_rest_applies():
+    """#21785 run 35650017269: the model gave an untracked ⚠️ prose bullet an
+    id the card never had, and the refresh failed outright."""
+    up = _update([{"id": "F42", "action": "resolve", "annotation": "fixed"},
+                  {"id": "F1", "action": "resolve", "annotation": "fixed in 1cb28d8"}])
+    a_out, _, state, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert "F42" not in state["findings"] and state["findings"]["F1"]["disposition"] == "fixed"
+
+
+def test_add_bucket_uses_the_cards_words():
+    """#21761 run 35626815279: `bucket: "blocking"` — the card's header word —
+    failed the whole refresh. It means 🚨."""
+    up = _update([{"action": "add", "bucket": "blocking", "file": "content/docs/iac/x.md",
+                   "lines": [3, 3], "text": "a new problem"}])
+    a_out, _, state, report = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert "a new problem" in a_out.split("### ❓")[0], "landed in 🚨"
+    bad = _update([{"action": "add", "bucket": "whatever", "file": "x.md", "text": "t"}])
+    try:
+        au.apply(AUTHOR, BRIEF, bad, head_sha=SHA, actor="cam", auto=False)
+    except au.UpdateError as exc:
+        assert "bucket" in str(exc)
+    else:
+        raise AssertionError("an unmappable bucket is still a contract violation")
+
+
+_BRIEF_21801 = """<!-- CLAUDE_REVIEW_BRIEF -->
+> [!NOTE]
+> **What this PR changes:**
+>
+> - `from-terraform.md` — adds an HCL tab.
+> - `use-terraform-module.md` — adds an HCL tab for a module.
+>
+> **Review confidence:**
+>
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | mechanics | HIGH | |
+> | facts | MEDIUM | One CLI claim contradicts another page in this same PR — → see F1. |
+> | code correctness | MEDIUM | one AWS argument may not exist — → see the `from-serverless.md` row below. |
+> | cross-sibling | MEDIUM | differ in scoping — → see F7. |
+
+### ⚠️ Check these before approving
+
+_No findings to check._
+"""
+
+
+def test_brief_drift_after_a_rework_is_settled_not_carried():
+    """#21801: a file that left the PR stays in "What this PR changes", and
+    notes point at a conceded F1 and an empty ⚠️ list. A pointer at a still
+    open finding (F7) is kept."""
+    files = ["content/docs/iac/guides/migration/migrating-to-pulumi/from-terraform.md"]
+    out, dropped = au.prune_changes_bullets(_BRIEF_21801, files)
+    assert dropped == ["use-terraform-module.md"] and "`from-terraform.md`" in out
+    assert au.prune_changes_bullets(_BRIEF_21801, None)[0] == _BRIEF_21801, "no file list → untouched"
+    out, n = au.settle_confidence_pointers(out, open_ids={"F7"}, open_checks=False)
+    assert n == 2
+    assert "→ see F1" not in out and "row below" not in out
+    assert "→ see F7" in out
+    assert out.count(au.SETTLED_NOTE) == 2
+    assert au.settle_confidence_pointers(out, {"F7"}, False)[1] == 0, "idempotent"
+
+
+def test_a_summary_naming_open_work_goes_when_nothing_blocks():
+    """#21790: "these four need a source from you" under "nothing blocks
+    merge". Removed only when nothing blocks; a neutral summary stays."""
+    card = ("## Author action guide v3 — nothing blocks merge\n\n"
+            "_This PR adds pricing claims; these four need a source from you before merge._\n\n"
+            "### 🚨 Fix or disagree\n")
+    out, gone = au.drop_stale_summary(card, 0)
+    assert gone and "need a source" not in out and "### 🚨" in out
+    assert au.drop_stale_summary(card, 2) == (card, False)
+    neutral = card.replace("these four need a source from you before merge", "the review checked each claim")
+    assert au.drop_stale_summary(neutral, 0) == (neutral, False)
+
+
+def test_change_bullets_that_do_not_name_a_file_are_kept():
+    """Adversarial review of #21948: a bullet led by a function, a label, or
+    a directory was pruned because no PR path equalled or ended with it.
+    Only a file-looking name is checked against the PR's paths, a directory
+    survives while the PR changes anything under it, and nothing outside the
+    "What this PR changes" block is touched."""
+    brief = ("> [!NOTE]\n"
+             "> **What this PR changes:**\n"
+             ">\n"
+             "> - `restamp_body()` — moves the head markers.\n"
+             "> - `review:stale` — now clears after a base merge.\n"
+             "> - `content/docs/iac/` — retitles three pages.\n"
+             "> - `scripts/review-v3/` — new cleanup script.\n"
+             "> - `gone.py` — removed later.\n"
+             "> - `pinned-comment.sh prune-legacy` — new subcommand.\n"
+             "> - `@pulumi/aws` — bumped to v7.\n"
+             "> - `/docs/iac/concepts/stacks/` — the page this retitles.\n"
+             "> - `old-name.md` — renamed; the REST list carries it as previous_filename.\n"
+             ">\n"
+             "> **Review confidence:**\n"
+             ">\n"
+             "> - `elsewhere.py` — a bullet outside the changes block.\n")
+    files = ["content/docs/iac/concepts/stacks.md",
+             ".claude/commands/docs-review/scripts/pinned-comment.sh",
+             "content/docs/new-name.md", "content/docs/old-name.md"]
+    out, dropped = au.prune_changes_bullets(brief, files)
+    assert dropped == ["scripts/review-v3/", "gone.py"]
+    for kept in ("`restamp_body()`", "`review:stale`", "`content/docs/iac/`",
+                 "`pinned-comment.sh prune-legacy`", "`@pulumi/aws`",
+                 "`/docs/iac/concepts/stacks/`", "`old-name.md`", "`elsewhere.py`"):
+        assert kept in out, kept
+    assert au.prune_changes_bullets(out, files) == (out, []), "idempotent"
+
+
+def test_a_summary_that_reports_settled_checks_is_kept():
+    """Adversarial review of #21948: count words and "need … confirm"
+    matched summaries that describe completed checks, deleting a correct
+    summary on every refresh."""
+    for text in (
+        "the review checked two claims about stack outputs and confirmed both hold",
+        "This PR documents a setting your stacks need; the review confirmed the default",
+        "three findings from the first pass are fixed, and no open findings remain",
+        "The page explains what you need to configure before the first deploy",
+        "the guide notes you have to set PULUMI_ACCESS_TOKEN first",
+        "both claims checked out, so nothing more is needed from you",
+        "It documents the steps that need your input from the IdP console",
+    ):
+        card = ("## Author action guide v3 — nothing blocks merge\n\n"
+                f"_{text}._\n\n### ✅ Resolved\n")
+        assert au.drop_stale_summary(card, 0) == (card, False), text
+    for text in (
+        "these four need a source from you before merge",
+        "only you can confirm these two figures",
+        "two claims still need your confirmation",
+        "three rows are waiting on you",
+    ):
+        card = ("## Author action guide v3 — nothing blocks merge\n\n"
+                f"_{text}._\n\n### ✅ Resolved\n")
+        assert au.drop_stale_summary(card, 0)[1], text

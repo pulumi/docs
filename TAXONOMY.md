@@ -116,7 +116,7 @@ Teams:
 
 **Definition:** Template-driven pages that sell — product pages, solution pages, pricing, comparison/topic landing pages, and ad-campaign landing pages.
 
-- **Lives at:** `content/product/`, `content/solutions/`, `content/topics/`, `content/pricing/`, `content/why-pulumi/`, `content/gads/`, and ~20 similar campaign directories
+- **Lives at:** `content/product/`, `content/solutions/`, `content/topics/`, `content/why-pulumi/`, `content/gads/`, and ~20 similar campaign directories
 - **Owns:** Marketing
 - **Contributes:** Eng/Product (feature accuracy), Docs (technical review)
 - **Consumes:** Evaluators and buyers
@@ -182,7 +182,7 @@ The "guides" collision described at the top of this document has been resolved a
    - The things we currently call "the Getting Started guides" (`content/docs/*/get-started/`). We'll try to call these the Getting Started *tutorials* going forward — that's what they are in the Diátaxis sense.
    - The things that live at [pulumi.com/dev/tutorials](https://www.pulumi.com/dev/tutorials/). The content at pulumi.com/guides is being folded selectively into these.
 1. **Tutorials are Marketing-owned** (specifically Technical Content Marketing), with contribution from everyone welcome.
-1. **The hub at `/dev` has shipped.** It pulls together tutorials, templates, community examples, and a glossary, alongside blog posts categorized [as tutorials](https://www.pulumi.com/blog/category/tutorials/), series, workshops, and Academy programs. Like the Registry and pulumi.com/guides, it is served by a separate web app (pulumi/marketing-web) rather than this repo; `infrastructure/index.ts` proxies `/dev*` to it.
+1. **The hub at `/dev` has shipped.** It pulls together tutorials, templates, community examples, and a glossary, alongside blog posts categorized [as tutorials](https://www.pulumi.com/blog/categories/tutorials/), series, workshops, and Academy programs. Like the Registry and pulumi.com/guides, it is served by a separate web app (pulumi/marketing-web) rather than this repo; `infrastructure/index.ts` proxies `/dev*` to it.
 
 Open items:
 

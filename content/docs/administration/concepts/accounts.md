@@ -7,7 +7,7 @@ menu:
   administration:
     name: Accounts
     parent: administration-concepts
-    weight: 3
+    weight: 4
 aliases:
 - /docs/administration/organizations-teams/accounts/
 - /docs/intro/console/accounts/
@@ -56,7 +56,7 @@ Two attributes identify your account:
 Your username and email are separate from the identities you use to sign in. Adding a GitHub identity to your account does not change your Pulumi username.
 
 {{% notes type="info" %}}
-For accounts synchronized by SCIM, `userName` is immutable once the account exists, and an identity provider that pushes a changed `userName` on an update gets an error. This is a SCIM-specific rule and is distinct from renaming your own account in the console. See [Usernames cannot change](/docs/administration/guides/scim/#usernames-cannot-change).
+For accounts synchronized by SCIM, `userName` is immutable once the account exists, and an identity provider that pushes a changed `userName` on an update gets an error. This is a SCIM-specific rule and is distinct from renaming your own account in the console. See [Usernames cannot change](/docs/administration/concepts/scim/#usernames-cannot-change).
 {{% /notes %}}
 
 ## Renaming your account
@@ -197,9 +197,11 @@ In [self-hosted Pulumi Cloud](/docs/administration/self-hosting/), the Passkeys 
 
 ## Deleting your account
 
-You can delete your account from your account settings in [Pulumi Cloud](https://app.pulumi.com/signin).
+You can delete your account from your [account settings](https://app.pulumi.com/user/account/settings) in Pulumi Cloud. To get there, select your user profile, then **Settings**, in the left navigation bar.
 
-Deleting your account removes your access to every organization you belong to, and deletes your individual organization along with all of its stacks. It does not delete any cloud resources those stacks provisioned — those keep running in your cloud provider account. **Deletion cannot be undone.**
+Scroll to the bottom of the account settings page to find the **Delete account** button.
+
+Deleting your account removes your access to every organization you belong to, and deletes your individual organization along with its stacks. It does not delete any cloud resources those stacks provisioned — those keep running in your cloud provider account. **This is a permanent operation and cannot be undone.**
 
 Before deleting your account, transfer any stacks you want to keep to another organization, and make sure you are not the last admin of an organization that still needs one.
 

@@ -64,7 +64,7 @@ outputFormats:
     notAlternative: true
   # Bare list-rows HTML fragment for a taxonomy term, fetched by the homepage
   # category filter (theme/src/ts/blog-list.ts). Rendered by
-  # layouts/_default/term.rows.html at /blog/category/<id>/rows.html. Not an
+  # layouts/_default/term.rows.html at /blog/categories/<id>/rows.html. Not an
   # alternate representation, so it stays out of <head> alternates and sitemap.
   rows:
     mediaType: "text/html"
@@ -145,18 +145,20 @@ taxonomies:
 
 permalinks:
   term:
-    authors: /blog/author/:slug/
-    tags: /blog/tag/:slug/
-    category: /blog/category/:slug/
+    authors: /blog/authors/:slug/
+    tags: /blog/tags/:slug/
+    category: /blog/categories/:slug/
     series: /blog/series/:slug/
     industry: /customers/industry/:slug/
-  # The category/series/industry taxonomy LIST pages (the directories rendered
-  # by layouts/taxonomy/{category,series,industry}.terms.html). Without these
-  # they would sit at Hugo's default /category/, /series/, and /industry/,
-  # leaving /blog/category/, /blog/series/, and /customers/industry/ 404s even
-  # though every term page lives beneath them.
+  # The taxonomy LIST pages (the directories rendered by
+  # layouts/taxonomy/<singular>.terms.html). Without these they would sit at
+  # Hugo's default /authors/, /tags/, /category/, /series/, and /industry/,
+  # leaving the parent of every term URL (/blog/authors/, /blog/tags/, ...) a 404.
+  # content/{authors,tags}/_index.md alias the old /authors/ and /tags/ URLs.
   taxonomy:
-    category: /blog/category/
+    authors: /blog/authors/
+    tags: /blog/tags/
+    category: /blog/categories/
     series: /blog/series/
     industry: /customers/industry/
 

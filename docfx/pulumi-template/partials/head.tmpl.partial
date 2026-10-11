@@ -1,0 +1,88 @@
+{{!Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license.}}
+{{!
+  Pulumi customization on top of the upstream docfx default template.
+
+  A Mustache comment ends at the first closing double brace, so this
+  comment must never contain one: write about tags in words. Everything
+  after a stray one is rendered into every generated page as text.
+
+  The stock head partial gives every generated page an auto-scraped
+  title ("Class Deployment " — note the trailing space and no brand),
+  no canonical link, and no structured data. Worse, it reads the
+  description through a double-mustache (HTML-escaped) tag, which
+  re-escapes a summary string that docfx's metadata step already
+  HTML-encoded once, so generated descriptions contain literal
+  "&amp;lt;" where a browser or search engine should see "<". This
+  override:
+
+    - brands the <title> and meta title without a stray trailing space
+    - reads the description through a triple-mustache (raw) tag instead,
+      so the pre-encoded summary isn't escaped twice
+    - adds Open Graph title/description/url
+    - adds a canonical <link> and an og:url using the
+      __pulumi_seo_canonical__ placeholder
+    - adds a JSON-LD placeholder comment
+
+  This template is shared by every docfx config in docfx/. A config for
+  an SDK other than the IaC one names itself with _pulumiSdkName in its
+  build.globalMetadata (see esc-docfx.json); without it the title and
+  the fallback description below are the IaC SDK's.
+
+  __pulumi_seo_canonical__ and <!-- PULUMI_SEO_JSONLD_PLACEHOLDER --> are
+  NOT resolved here. docfx's per-page path fields are not guaranteed to
+  reflect the final, lowercased on-disk path at render time (that
+  lowercasing is a filesystem post-pass scripts/run_docfx.sh runs AFTER
+  docfx exits), and hand-building a JSON-LD object with arbitrary
+  doc-comment text in Mustache risks unescaped quotes breaking out of
+  the script block. Both placeholders are resolved by
+  scripts/docfx_seo_postprocess.py, which scripts/run_docfx.sh invokes
+  after the lowercasing pass, once each file's real served path and
+  final rendered <title>/<meta description> are known. The canonical
+  placeholder is lowercase because that pass lowercases every relative
+  href, the canonical link's included, before the placeholder is resolved.
+}}
+
+<head>
+  <meta charset="utf-8">
+  {{#_googleAnalyticsTagId}}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{_googleAnalyticsTagId}}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{_googleAnalyticsTagId}}');
+  </script>
+  {{/_googleAnalyticsTagId}}
+  {{#redirect_url}}
+    <meta http-equiv="refresh" content="0;URL='{{redirect_url}}'">
+  {{/redirect_url}}
+  {{^redirect_url}}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} — {{_pulumiSdkName}}{{^_pulumiSdkName}}Pulumi{{/_pulumiSdkName}} .NET API reference</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} — {{_pulumiSdkName}}{{^_pulumiSdkName}}Pulumi{{/_pulumiSdkName}} .NET API reference">
+    {{#_description}}<meta name="description" content="{{{_description}}}">{{/_description}}
+    {{^_description}}
+    {{#description}}<meta name="description" content="{{{description}}}">{{/description}}
+    {{^description}}<meta name="description" content="API reference for {{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} in {{#_pulumiSdkName}}the {{_pulumiSdkName}} .NET SDK{{/_pulumiSdkName}}{{^_pulumiSdkName}}Pulumi, the infrastructure-as-code platform's .NET SDK{{/_pulumiSdkName}}.">{{/description}}
+    {{/_description}}
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} — {{_pulumiSdkName}}{{^_pulumiSdkName}}Pulumi{{/_pulumiSdkName}} .NET API reference">
+    {{#_description}}<meta property="og:description" content="{{{_description}}}">{{/_description}}
+    {{^_description}}
+    {{#description}}<meta property="og:description" content="{{{description}}}">{{/description}}
+    {{/_description}}
+    <meta property="og:url" content="__pulumi_seo_canonical__">
+    <link rel="canonical" href="__pulumi_seo_canonical__">
+    <link rel="shortcut icon" href="{{_rel}}{{{_appFaviconPath}}}{{^_appFaviconPath}}favicon.ico{{/_appFaviconPath}}">
+    <link rel="stylesheet" href="{{_rel}}styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="{{_rel}}styles/docfx.css">
+    <link rel="stylesheet" href="{{_rel}}styles/main.css">
+    <meta property="docfx:navrel" content="{{_navRel}}">
+    <meta property="docfx:tocrel" content="{{_tocRel}}">
+    {{#_noindex}}<meta name="searchOption" content="noindex">{{/_noindex}}
+    {{#_enableSearch}}<meta property="docfx:rel" content="{{_rel}}">{{/_enableSearch}}
+    {{#_enableNewTab}}<meta property="docfx:newtab" content="true">{{/_enableNewTab}}
+    <!-- PULUMI_SEO_JSONLD_PLACEHOLDER -->
+  {{/redirect_url}}
+</head>

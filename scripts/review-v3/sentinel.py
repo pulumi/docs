@@ -8,10 +8,13 @@ One blocking check-run answers "is this PR mergeable?" from five gates:
                         may stand on triage's prose-check comment)
   G2 findings-answered  every 🚨/❓ finding on the author card carries a
                         REVIEW_STATE disposition (or is checked off)
-  G3 right-approver     a human approver who can clear the lane: a member of
-                        every matrix-required team, or — under
-                        `approval.scope: any-team` — of any routing team, or
-                        a repo admin when `approval.admins_satisfy` is on
+  G3 right-approver     an approver who can clear the lane: under
+                        `approval.scope: any-human`, any human with write
+                        access; under `any-team`, a member of any routing
+                        team; under `lane`, a member of every matrix-required
+                        team (or a repo admin when `approval.admins_satisfy`
+                        is on). A bot clears it only on an automated lane
+                        `bot_approvers` names (approver + author + label)
   G4 deploy-evidence    a change on `staging_evidence.paths` carries a green
                         staging/pulumi-test-io commit status at the current
                         head SHA, posted by a trusted writer. That list is
@@ -88,6 +91,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -146,6 +150,14 @@ STAGING_STATUS_CONTEXT = "staging/pulumi-test-io"
 # evidence. Anyone with push access can write a commit status, so an
 # unattributed one is not evidence of anything.
 STAGING_STATUS_WRITERS = frozenset({BOT_LOGIN, "pulumi-bot"})
+# Who may have posted a page of a legacy (v2) review. The initial lane posts
+# as github-actions[bot], but the v2 update lane runs claude-code-action with
+# PULUMI_BOT_TOKEN, so a page it (re)posted — typically page 2 of a split
+# review that grew on refresh — is pulumi-bot's. Reading only the first login
+# made G2 report "legacy page 2 unreadable" on #21210, #21487 and #21149.
+# The v3 role cards stay github-actions[bot]-only (`_find_comment`): nothing
+# but the deterministic publish job ever writes them.
+LEGACY_PAGE_WRITERS = frozenset({BOT_LOGIN, "pulumi-bot"})
 # The workflow the staging lane dispatches, and the one G4 verifies against
 # directly when the commit status is missing. See `_staging_evidence`.
 STAGING_WORKFLOW_FILE = "testing-build-and-deploy.yml"
@@ -167,6 +179,9 @@ BREAK_GLASS = (
 CHECK_NAME = "Sentinel"
 
 
+RETRY_SLEEP_S = 3
+
+
 class SentinelDataError(Exception):
     """An API read failed in a way that must surface as action_required."""
 
@@ -186,9 +201,18 @@ class Gh:
         if token_env and os.environ.get(token_env):
             env = dict(os.environ)
             env["GH_TOKEN"] = os.environ[token_env]
-        result = subprocess.run(
-            ["gh", *args], text=True, capture_output=True, env=env,
-        )
+        # Reads retry a transient 5xx twice: one GitHub 500 on `pulls/N`
+        # (run 35938827723) was enough to fail a whole evaluation. Writes
+        # never retry — a PATCH that timed out may have landed.
+        is_read = not any(a in ("-X", "--method") for a in args) and "--input" not in args
+        for attempt in range(3 if is_read else 1):
+            result = subprocess.run(
+                ["gh", *args], text=True, capture_output=True, env=env,
+            )
+            if result.returncode == 0 or not re.search(r"HTTP 5\d\d", result.stderr or ""):
+                break
+            if attempt < 2:
+                time.sleep(RETRY_SLEEP_S * (attempt + 1))
         if result.returncode != 0:
             # `check=True` would raise CalledProcessError, whose message is
             # the argv and an exit code — gh's actual explanation goes in
@@ -280,7 +304,8 @@ class Gh:
     def get_repo_permission(self, user: str) -> str:
         """The user's effective permission on the repo: admin/write/read/none.
 
-        Used only by the `approval.admins_satisfy` rule in G3. The endpoint
+        Used by G3 for `approval.scope: any-human` (write or better) and the
+        `approval.admins_satisfy` rule (admin). The endpoint
         wants push access, which the default GITHUB_TOKEN does not have."""
         return self._org_scoped_lookup(
             f"repos/{self.repo}/collaborators/{user}/permission", ".permission",
@@ -427,8 +452,9 @@ def legacy_pages(comments: list[dict]) -> dict | None:
     total = 0
     for c in comments:
         # Bot-authored only, same rule as `_find_comment`: the first-line
-        # anchor below stops a quoted marker, but not a forged page.
-        if (c.get("user") or {}).get("login") != BOT_LOGIN:
+        # anchor below stops a quoted marker, but not a forged page. Both
+        # identities the v2 lanes post under count (LEGACY_PAGE_WRITERS).
+        if (c.get("user") or {}).get("login") not in LEGACY_PAGE_WRITERS:
             continue
         body = c.get("body") or ""
         # A v3 role card opens with a `1/1` marker of its own, so the role
@@ -755,6 +781,23 @@ def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool
 # ---- Evaluation ---------------------------------------------------------
 
 
+# GitHub's effective-permission field (`.permission` on the collaborator
+# permission endpoint) folds `maintain` into `write` and `triage` into `read`;
+# `maintain` is listed anyway so a future API that stops folding it cannot
+# silently turn a maintainer's approval into a miss.
+WRITE_PERMISSIONS = frozenset({"admin", "maintain", "write"})
+
+
+def _stale_clause(stale_approvers: list[dict], head_sha: str) -> str:
+    """The " X approved an earlier commit" tail on a red G3 — the difference
+    between "nobody approved" and "your approval predates the push"."""
+    if not stale_approvers:
+        return ""
+    who = ", ".join(sorted(
+        f"`{(r.get('user') or {}).get('login')}`" for r in stale_approvers))
+    return f" {who} approved an earlier commit; re-approve at `{head_sha[:9]}`."
+
+
 def _stamp_report_only(verdict: Verdict) -> Verdict:
     """Turn a real verdict into its report-only twin, in place.
 
@@ -822,6 +865,12 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     author_card = _find_comment(comments, AUTHOR_MARKER)
     brief = _find_comment(comments, BRIEF_MARKER)
     legacy = _find_legacy_comment(comments) if author_card is None else None
+    # The label is the one source of truth. Computing size here instead
+    # would flip PRs already reviewed and approved under the normal gates
+    # (G1/G2 skipped, G5 newly red), and a forced #new-review could never put
+    # an oversized PR back under them. #21936's race — this evaluation ran
+    # before triage's label landed — is closed on the triage side: it
+    # re-dispatches the Sentinel whenever it moves the label.
     oversized = OVERSIZED_LABEL in labels
     trivial = TRIVIAL_LABEL in labels
     triage_prose = _find_comment(comments, TRIAGE_PROSE_MARKER) if trivial else None
@@ -870,10 +919,15 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             "removes `review:trivial` and pushes.",
         ))
     else:
+        # Not "push to refresh": a push refreshes the review automatically
+        # only when it touches lines a 🚨 finding flagged. On a clean review
+        # (#21840) a push just marks it stale, so the advice sent authors
+        # round a loop that never closed.
         gates.append(Gate(
             "G1 review-ran", "red",
-            f"No current review for `{head_sha[:9]}` — push to refresh, comment "
-            "`@claude #update-review`, or flip the PR to draft and back to ready.",
+            f"No current review for `{head_sha[:9]}` — comment "
+            "`@claude <what changed> #update-review` to refresh it, or "
+            "`@claude #new-review` for a fresh one.",
         ))
 
     # G2 findings-answered ------------------------------------------------
@@ -927,6 +981,19 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                     f"`@claude F3 is wrong because <why> #update-review` or "
                     f"`@claude I know what I'm doing, mark everything resolved #update-review`.",
                 ))
+            elif not _body_matches_head(body, head_sha):
+                # "Every finding answered" about a review of an older diff
+                # is a claim about content that may no longer exist, and it
+                # sat green beside G1's red "no current review" on #21840.
+                # Undecided findings on a stale card stay red above (they
+                # are real until someone answers them); an all-answered
+                # stale card defers to G1 like a missing one does.
+                m = HEAD_MARKER_RE.search(body)
+                at = f" at `{m.group(1)[:9]}`" if m else ""
+                gates.append(Gate(
+                    "G2 findings-answered", "skip",
+                    f"the review{at} is not current — see G1",
+                ))
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "every finding answered"))
     elif legacy:
@@ -958,6 +1025,9 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                     f"{outstanding} 🚨 Outstanding finding(s) on the legacy review — "
                     "work them per CONTRIBUTING §Working the review to zero.",
                 ))
+            elif not _body_matches_head(legacy.get("body") or "", head_sha):
+                gates.append(Gate("G2 findings-answered", "skip",
+                                  "the legacy review is not current — see G1"))
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "legacy review clean"))
     elif trivial_standin:
@@ -974,12 +1044,25 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             # never voids an approval (matching GitHub's own latestReviews
             # semantics); stale-on-push is the ruleset's dismissal job.
             latest[user] = r
-    approvers = [
-        r for r in latest.values()
-        if r.get("state") == "APPROVED"
-        and (r.get("user") or {}).get("type") != "Bot"
-        and (r.get("user") or {}).get("login") not in set(config.bots or [])
-    ]
+    # Humans and bots part ways here. A bot approval counts only on the one
+    # lane `bot_approvers:` names for it (approver + PR author + label); any
+    # other bot approval is dropped before it can reach a lookup, as before.
+    # "Bot" is either test: GitHub's own `type == Bot`, or the `bots:`
+    # denylist, which exists for machine USERS like `pulumi-bot` that the
+    # type test cannot see.
+    approvers: list[dict] = []
+    bot_approvers: list[tuple[dict, str]] = []
+    for r in latest.values():
+        if r.get("state") != "APPROVED":
+            continue
+        u = r.get("user") or {}
+        login = u.get("login") or ""
+        if u.get("type") == "Bot" or login in set(config.bots or []):
+            why = routing.bot_approver_reason(config, login, author, labels)
+            if why:
+                bot_approvers.append((r, why))
+            continue
+        approvers.append(r)
     # An approval is of a COMMIT, not of a PR. The old comment above said
     # "stale-on-push is the ruleset's dismissal job" — but AGENTS.md records
     # that server-side branch protection is not in place yet, and nothing in
@@ -996,8 +1079,12 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # `commit_id` on a review, so an absent one is a malformed payload, and
     # "count it as current" would be fail-open on the gate that guarantees a
     # human. An approval we cannot place at this head does not clear G3.
+    # Bot approvals are held to the same rule: a lane bot that approved the
+    # previous commit has not approved this one.
     stale_approvers = [r for r in approvers if r.get("commit_id") != head_sha]
+    stale_approvers += [r for r, _ in bot_approvers if r.get("commit_id") != head_sha]
     approvers = [r for r in approvers if r.get("commit_id") == head_sha]
+    bot_approvers = [(r, why) for r, why in bot_approvers if r.get("commit_id") == head_sha]
     # The subset of `approvers` whose approval actually clears G3 — filled in
     # below. G5 reads it so the oversized ack cannot come from a bystander.
     qualified_approvers: list[dict] = []
@@ -1012,9 +1099,56 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         gates.append(Gate(
             "G3 right-approver", "skip", "no changed paths to route",
         ))
+    elif bot_approvers:
+        # A configured automated lane. Checked first because it costs no
+        # API calls, and because on these PRs it is the approval that exists.
+        why = bot_approvers[0][1]
+        qualified_approvers.extend(r for r, _ in bot_approvers)
+        gates.append(Gate("G3 right-approver", "ok", f"automated approval: {why}"))
+    elif resolution.any_human:
+        # `approval.scope: any-human`: any human who could merge this PR
+        # anyway. Write access is the bar because it is the one GitHub's
+        # required-review rule applies — an approval from a read-only
+        # account (anyone, on a public repo) does not count at the merge
+        # box, so it must not count here either. The matrix roles are still
+        # who triage requests and the SLA sweep chases.
+        errors: list[str] = []
+        for r in approvers:
+            login = (r.get("user") or {}).get("login") or ""
+            try:
+                perm = gh.get_repo_permission(login)
+            except SentinelDataError as exc:
+                errors.append(str(exc))
+                continue
+            if perm in WRITE_PERMISSIONS:
+                qualified_approvers.append(r)
+                break
+        if qualified_approvers:
+            # No `@` — this message also renders in the pinned status
+            # comment, where a mention would ping the approver on every
+            # re-evaluation.
+            who = (qualified_approvers[0].get("user") or {}).get("login")
+            gates.append(Gate("G3 right-approver", "ok",
+                              f"approved by `{who}`, who has write access"))
+        elif errors:
+            # Only load-bearing failures land here: one approver's lookup
+            # erroring does not poison another approver who qualified.
+            gates.append(Gate(
+                "G3 right-approver", "error",
+                "Couldn't verify the approver's repo permission — re-run the "
+                "check. " + errors[0],
+            ))
+        else:
+            gates.append(Gate(
+                "G3 right-approver", "red",
+                "Needs an approval from anyone with write access to this repo "
+                "— no qualifying human approval at this head (bot approvals "
+                "count only on the automated lanes `bot_approvers` lists)."
+                + _stale_clause(stale_approvers, head_sha),
+            ))
     else:
         missing: list[str] = []
-        errors: list[str] = []
+        errors = []
         # `resolution.any_team` means one team is enough instead of all of
         # them — repo-wide under `approval.scope: any-team`, or for a
         # link-only sweep under `link_only.approval: any-team`. The matrix
@@ -1089,19 +1223,12 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 names += " (" + ", ".join(all_teams) + ")"
             admin_clause = (" or a repository administrator"
                             if routing.admins_satisfy(config) else "")
-            stale_clause = ""
-            if stale_approvers:
-                who = ", ".join(sorted(
-                    f"`{(r.get('user') or {}).get('login')}`" for r in stale_approvers))
-                stale_clause = (
-                    f" {who} approved an earlier commit; re-approve at "
-                    f"`{head_sha[:9]}`."
-                )
             gates.append(Gate(
                 "G3 right-approver", "red",
                 f"Needs approval from a member of {names}{admin_clause} — no "
-                f"qualifying human approval at this head (bot approvals never "
-                f"count).{stale_clause}",
+                f"qualifying human approval at this head (bot approvals count "
+                f"only on the automated lanes `bot_approvers` lists)."
+                + _stale_clause(stale_approvers, head_sha),
             ))
         else:
             gates.append(Gate(

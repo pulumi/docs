@@ -64,6 +64,14 @@ Rules:
    the evidence base, Why from the finding cell, Fix as a bucket-appropriate
    single instruction), placed in row order among the section's blocks.
 
+7. Unnumbered detail blocks (author card only): a `#### F? · Do this`
+   block is removed, row kept (#21892) — model-added rows carry no block.
+8. Missing author section: 🚨 or ❓ deleted while the other stays → it
+   comes back in its explicit-empty form, in skeleton order (#21885).
+9. Vanished findings: a composed id on neither card is re-appended to its
+   bucket's table verbatim from the evidence base (#21885 F9) — only when
+   that table exists.
+
 Usage:
   normalize-v3-draft.py --author-file .review-draft-author.md \
       --brief-file .review-draft-brief.md \
@@ -429,6 +437,127 @@ def _restore_blocks(lines: list[str], evidence_by_id: dict[str, dict],
 
 # ---------------------------------------------------------------- driver --
 
+_AUTHOR_H3 = ("### 🚨 Fix or disagree", "### ❓ Questions for you")
+_AUTHOR_EMPTY = {"### 🚨 Fix or disagree": cr._V3_EMPTY_OUTSTANDING,
+                 "### ❓ Questions for you": cr._V3_EMPTY_QUESTIONS}
+
+
+def _restore_missing_author_section(lines: list[str], rep: Repairs) -> list[str]:
+    """Rule 8: one of 🚨/❓ present, the other deleted → the deleted one comes
+    back in its explicit-empty form, in skeleton order.
+
+    #21885 (run 36077081416): the composed ❓ section was empty and the model
+    removed it, so `v3-section-order` refused the card. Both absent is the
+    composer's own nothing-blocks shape and is left alone."""
+    present = [h for h in _AUTHOR_H3 if any(ln.strip() == h for ln in lines)]
+    if len(present) != 1:
+        return lines
+    missing = next(h for h in _AUTHOR_H3 if h not in present)
+    at_heading = next(i for i, ln in enumerate(lines) if ln.strip() == present[0])
+    block = [missing, "", _AUTHOR_EMPTY[missing], ""]
+    if missing == _AUTHOR_H3[0]:
+        at = at_heading
+    else:
+        at = len(lines)
+        for i in range(at_heading + 1, len(lines)):
+            ln = lines[i]
+            if (ln.startswith("### ") or ln.startswith("#### Style")
+                    or ln.startswith("<!-- REVIEW_STATE") or ln.startswith("<sub>")
+                    or ln.startswith(cr.EVIDENCE_LINE_PREFIXES)
+                    or ln.startswith(cr.V3_BROWSER_HINT_PREFIX)
+                    or ln.startswith("<!-- CLAUDE_REVIEW_FOOTER -->")):
+                at = i
+                break
+    rep.add("missing-author-section", "author", missing.lstrip("# "),
+            "restored the deleted section in its explicit-empty form")
+    return lines[:at] + block + lines[at:]
+
+
+def _restore_vanished_rows(a_lines: list[str], b_lines: list[str] | None,
+                           evidence_by_id: dict[str, dict], rep: Repairs
+                           ) -> tuple[list[str], list[str] | None]:
+    """Rule 9: a composed finding whose id appears on neither card goes back,
+    verbatim from the evidence base, at the end of its composed bucket's table.
+
+    "Never delete a finding — disposition it" is the contract, and the model
+    broke it on #21885 (F9, a ⚠️ row, gone): the validator refused the whole
+    review over an advisory row. Restoring the composed text is exactly what
+    the model was told to leave; it is not an editorial choice. Only when the
+    bucket's section already has a table to append to — an emptied section's
+    placeholder is not rewritten here."""
+    text = "\n".join(a_lines) + "\n" + "\n".join(b_lines or [])
+    headings = {"outstanding": ("author", "🚨 Fix or disagree"),
+                "author-answer": ("author", "❓ Questions for you"),
+                "reviewer-check": ("brief", "⚠️ Check these before approving")}
+    for fid, f in sorted(evidence_by_id.items(), key=lambda kv: int(kv[0][1:]) if kv[0][1:].isdigit() else 0):
+        if not re.match(r"^F\d+$", fid) or f"**{fid}**" in text:
+            continue
+        where = headings.get(f.get("bucket"))
+        if where is None or (where[0] == "brief" and b_lines is None):
+            continue
+        lines = a_lines if where[0] == "author" else b_lines
+        span = vp.find_section("\n".join(lines), where[1])
+        if span is None:
+            continue
+        start, end = span
+        last_row = max((i for i in range(start + 1, end)
+                        if lines[i].startswith("| **F")), default=None)
+        if last_row is None:
+            continue
+        rng = f.get("lines") or []
+        ref = ""
+        if isinstance(rng, list) and rng:
+            ref = f"L{rng[0]}" + (f"-{rng[1]}" if len(rng) > 1 and rng[1] != rng[0] else "")
+        row = cr.render_finding_row(fid, ref=ref, file=f.get("file") or "",
+                                    body=str(f.get("text") or "").strip())
+        if cr.parse_finding_line(row) is None:
+            continue
+        lines.insert(last_row + 1, row)
+        text += "\n" + row
+        rep.add("vanished-finding", where[0], fid,
+                f"restored the composed {f.get('bucket')} row the edit deleted")
+    return a_lines, b_lines
+
+
+_UNNUMBERED_BLOCK_RE = re.compile(r"^#### F\? · Do this\s*$")
+
+
+def _drop_unnumbered_blocks(lines: list[str], rep: Repairs) -> list[str]:
+    """Rule 7: a `#### F? · Do this` block goes; its row stays.
+
+    A model-added row is `F?` until build-evidence.py numbers it after
+    validation, and the contract gives it no detail block — its Finding cell
+    carries it. #21892 (run 36135544570) wrote one anyway and the whole
+    review was refused. The block runs to the next heading, the REVIEW_STATE
+    block, the sub line, the evidence line, or the browser hint — the same
+    terminators `_block_spans` uses — fence-aware."""
+    out: list[str] = []
+    skipping = False
+    fenced = False
+    for line in lines:
+        is_fence = line.lstrip().startswith("```")
+        if skipping:
+            if is_fence:
+                fenced = not fenced
+                continue
+            if not fenced and (line.startswith("### ") or line.startswith("#### ")
+                               or line.startswith("<!-- REVIEW_STATE")
+                               or line.startswith("<sub>") or line.startswith(cr.EVIDENCE_LINE_PREFIXES)
+                               or line.startswith(cr.V3_BROWSER_HINT_PREFIX)):
+                skipping = False
+            else:
+                continue
+        if is_fence:
+            fenced = not fenced
+        elif not fenced and _UNNUMBERED_BLOCK_RE.match(line):
+            skipping = True
+            rep.add("unnumbered-detail-block", "author", "F?",
+                    "dropped a `#### F? · Do this` block (a model-added row carries no block)")
+            continue
+        out.append(line)
+    return out
+
+
 def normalize(author: str, brief: str | None, evidence_base: dict | None,
               rep: Repairs) -> tuple[str, str | None]:
     a_lines = author.splitlines()
@@ -438,11 +567,15 @@ def normalize(author: str, brief: str | None, evidence_base: dict | None,
     for f in (evidence_base or {}).get("findings", []) or []:
         if isinstance(f, dict) and f.get("id"):
             evidence_by_id[str(f["id"])] = f
+    a_lines = _restore_missing_author_section(a_lines, rep)
+    b_lines = (_normalize_tables(brief.splitlines(), BRIEF_SECTIONS, "brief", rep)
+               if brief is not None else None)
+    a_lines, b_lines = _restore_vanished_rows(a_lines, b_lines, evidence_by_id, rep)
     a_lines = _restore_blocks(a_lines, evidence_by_id, rep)
+    a_lines = _drop_unnumbered_blocks(a_lines, rep)
     new_author = "\n".join(a_lines) + ("\n" if author.endswith("\n") else "")
     new_brief = brief
-    if brief is not None:
-        b_lines = _normalize_tables(brief.splitlines(), BRIEF_SECTIONS, "brief", rep)
+    if b_lines is not None:
         new_brief = "\n".join(b_lines) + ("\n" if brief.endswith("\n") else "")
     return new_author, new_brief
 

@@ -55,7 +55,10 @@ preflight ignores it: the approval about to post supersedes it). The row
 carries `sent-back:<date>` and, when the head has not moved since that
 review and the author can answer it, `waiting_on_author: true` with every
 decision button removed — it is the author's turn, and the board groups
-those rows the way it groups handed-off ones. My own PR (`author:self`)
+those rows the way it groups handed-off ones. The approver's own approval
+does the same on a human-authored PR (`approved:<date>`): `--stamp`
+approves those without merging, so with no push since, the merge is the
+author's move, not the approver's. My own PR (`author:self`)
 gets no stamp or send-back either, since GitHub rejects both (422); it
 routes to the lane team and points at `/address-review`.
 
@@ -98,7 +101,7 @@ DUPLICATE_TITLE_RATIO = 0.8
 CROSS_CODE_CAP = 6
 # The row buttons that are decisions (a row takes one); everything else is a
 # side action. A row that is waiting on its author keeps only the side ones.
-DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate", "ask-fix")
+DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate", "ask-fix", "unrequest")
 SENTINEL_CHECK = act.SENTINEL_CHECK
 
 # code -> meaning; the detail after ':' is free text. Rendered as chips.
@@ -139,6 +142,8 @@ REASON_CODES = {
     "warnings": "⚠️ reviewer-check rows still open on the brief (legacy: low-confidence)",
     "outstanding": "🚨/❓ rows still open on the author card",
     "sent-back": "the approver's own changes-requested review, by date; not a blocker (the approval supersedes it). With no push since, the row waits on the author",
+    "approved": "the approver's own approval, by date. On a human-authored PR with no push since, the row waits on the author to merge",
+    "approved-by-owner": "<logins>:<date>: a member of every owning lane team approved the live head. On a human-authored PR the row waits on the author to merge",
     "unblock": "refused:<why>: act.py will not push to this head (dependabot, a generated-docs regen, a fork), so the conflict is the author's to resolve",
     "stances": "the brief lists editorial stances (blocks only with --strict-stances)",
     "mergeable": "GitHub mergeable_state when not clean/blocked",
@@ -155,7 +160,8 @@ REASON_CODES = {
     "size": "changed lines at or over stamp_max_lines",
     "owner": "the PR's domains and their owning roles",
     "route": "the lane this PR should go to; `no-team`: GitHub says the lane's team doesn't exist, so the SLA person is the target; `team-unverified`: the token couldn't read teams, so the config's team is used unchecked",
-    "handed-off": "a human reviewer who isn't me is requested; the row waits on them",
+    "handed-off": "a named reviewer who isn't me is requested (or, on a row outside my lanes, another lane's team); the row waits on them",
+    "requested": "me: I'm a requested reviewer by name (not through a team); `--unrequest` drops the request",
     "merging-over": "an approval or changes-requested review already on the PR",
     "not-governed": "the Sentinel does not gate this PR",
     "author": "author type when human; `generated`: a workflow opened this PR and cannot answer a review, so the row closes rather than goes back; `self`: my own PR, which GitHub lets me neither approve nor send back — it routes to the lane team",
@@ -517,7 +523,7 @@ def team_lanes(slug: str, config: routing.Config) -> set[str]:
     return {d for d, cell in config.matrix.items() if role in (cell.get("mechanical"), cell.get("substantive"))}
 
 
-def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: list[str]) -> list[str]:
+def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: list[str], is_mine: bool = False) -> list[str]:
     """Who this PR is waiting on, when it is not me: the requested human
     reviewers and teams that aren't the approver or one of the approver's
     lanes. Empty when the approver is among the requested reviewers, or when
@@ -525,7 +531,13 @@ def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: li
 
     The review request is the hand-off record: it lives on the PR, every
     session and machine sees it, and GitHub clears it when the reviewer
-    acts, which is exactly when the row should come back."""
+    acts, which is exactly when the row should come back.
+
+    A requested team never hands off a row I own (`is_mine`). The Sentinel
+    needs every lane team's approval, so another lane's team being asked
+    covers nothing of mine; and triage asks teams automatically, so a team
+    request is routing, not a decision to give the row to someone else. A
+    named person is that decision."""
     rr = pr.get("requested_reviewers") or {}
     users = [u for u in rr.get("users") or [] if u]
     teams = [t for t in rr.get("teams") or [] if t]
@@ -533,7 +545,8 @@ def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: li
     if mine and any(norm_login(u) == mine for u in users):
         return []
     others = [f"@{u}" for u in users]
-    others += [f"@{t}" for t in teams if not (set(me) & team_lanes(t, config))]
+    if not is_mine:
+        others += [f"@{t}" for t in teams if not (set(me) & team_lanes(t, config))]
     return others
 
 
@@ -553,6 +566,28 @@ def lanes_for_owner(spec: str | None, config: routing.Config, me: list[str]) -> 
     return {d for d, cell in config.matrix.items() if role in (cell.get("mechanical"), cell.get("substantive"))}
 
 
+def _own_latest_review(pr: dict, approver: str | None) -> dict | None:
+    """The approver's latest APPROVED / CHANGES_REQUESTED / DISMISSED review,
+    or None. A DISMISSED record clears whatever came before it."""
+    me = norm_login(approver) if approver else ""
+    if not me:
+        return None
+    latest = None
+    for r in sorted(pr.get("reviews") or [], key=lambda r: r.get("submitted_at") or ""):
+        if (r.get("user_type") or "") == "Bot" or r.get("state") in ("COMMENTED", "PENDING"):
+            continue
+        if norm_login(r.get("user")) == me:
+            latest = r
+    return latest
+
+
+def _own_review_record(pr: dict, review: dict) -> dict:
+    head = (pr.get("head") or {}).get("sha") or ""
+    cid = review.get("commit_id") or None
+    return {"at": (review.get("submitted_at") or "")[:10] or "unknown", "by": review.get("user") or "",
+            "commit_id": cid, "head_moved": bool(cid and head and cid != head)}
+
+
 def own_send_back(pr: dict, approver: str | None) -> dict | None:
     """The approver's own changes-requested review, when it is their latest
     review on the PR: `{at: YYYY-MM-DD, by, commit_id, head_moved}`. It is
@@ -562,21 +597,59 @@ def own_send_back(pr: dict, approver: str | None) -> dict | None:
     whether the author has pushed since. A queue whose reviews carry no
     `commit_id` (an older collect) reads as not moved, so a second send-back
     is never offered on a guess."""
-    me = norm_login(approver) if approver else ""
-    if not me:
-        return None
-    latest = None
-    for r in sorted(pr.get("reviews") or [], key=lambda r: r.get("submitted_at") or ""):
-        if (r.get("user_type") or "") == "Bot" or r.get("state") in ("COMMENTED", "PENDING"):
-            continue
-        if norm_login(r.get("user")) == me:
-            latest = r  # a DISMISSED record clears an earlier CHANGES_REQUESTED
+    latest = _own_latest_review(pr, approver)
     if not latest or latest.get("state") != "CHANGES_REQUESTED":
         return None
+    return _own_review_record(pr, latest)
+
+
+def own_approval(pr: dict, approver: str | None) -> dict | None:
+    """The approver's own approval, when it is their latest review on the
+    PR: the same `{at, by, commit_id, head_moved}` shape as `own_send_back`.
+    A human-authored PR that `--stamp` approved without merging stays open
+    for its author to merge; with no push since, there is nothing left for
+    the approver to decide, so the row waits on the author."""
+    latest = _own_latest_review(pr, approver)
+    if not latest or latest.get("state") != "APPROVED":
+        return None
+    return _own_review_record(pr, latest)
+
+
+def owner_approval(pr: dict, lanes: dict, ctx: dict) -> dict | None:
+    """Someone else's approval that settles every lane this PR touches:
+    `{by: [logins], at: YYYY-MM-DD}`, or None. Each owning team needs an
+    approval, as the reviewer's latest word and left on the live head, from
+    one of its members (`team_approvers`, collected per approving login).
+
+    GitHub clears the team's review request when a member reviews for it,
+    which used to bring an approved PR back as a route row asking that same
+    team to review it again. The approval is the hand-off record instead:
+    a push puts the row back, since the approval no longer describes it. A
+    review with no `commit_id` (an older collect) or a membership the token
+    couldn't read never counts, so the row stays on the board on a guess."""
+    members = ctx.get("team_approvers") or {}
     head = (pr.get("head") or {}).get("sha") or ""
-    cid = latest.get("commit_id") or None
-    return {"at": (latest.get("submitted_at") or "")[:10] or "unknown", "by": latest.get("user") or "",
-            "commit_id": cid, "head_moved": bool(cid and head and cid != head)}
+    me = norm_login(ctx.get("approver")) if ctx.get("approver") else ""
+    teams = {(lanes.get("owners") or {}).get(d, {}).get("team") for d in lanes.get("domains") or []}
+    if not head or not teams or None in teams:
+        return None
+    latest: dict[str, dict] = {}
+    for r in sorted(pr.get("reviews") or [], key=lambda r: r.get("submitted_at") or ""):
+        if (r.get("user_type") or "") == "Bot" or r.get("state") in ("COMMENTED", "PENDING", "DISMISSED"):
+            continue
+        latest[r["user"]] = r
+    approvals = [r for u, r in latest.items()
+                 if r.get("state") == "APPROVED" and norm_login(u) != me and r.get("commit_id") == head]
+    by: list[str] = []
+    when: list[str] = []
+    for team in sorted(teams):
+        hit = next((r for r in approvals if (members.get(team) or {}).get(r["user"]) is True), None)
+        if hit is None:
+            return None
+        if hit["user"] not in by:
+            by.append(hit["user"])
+        when.append((hit.get("submitted_at") or "")[:10])
+    return {"by": by, "at": max(when) or "unknown"}
 
 
 def unblock_refusal(pr: dict) -> str | None:
@@ -683,7 +756,7 @@ def ownership(pr: dict, ctx: dict) -> dict:
         reasons.append("author:self")
         is_mine = False
     return {"lanes": lanes, "is_mine": is_mine, "reasons": reasons, "author_self": author_self,
-            "handed_off_to": handed_off_to(pr, approver, config, cfg.me)}
+            "handed_off_to": handed_off_to(pr, approver, config, cfg.me, is_mine)}
 
 
 def _quote_safe(text: str) -> str:
@@ -760,6 +833,22 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if sent:
         reasons.append(f"sent-back:{sent['at']}")
         waiting = revisable and not author_self and not sent["head_moved"]
+    # -- my own approval. A human author merges their own PR, so once I have
+    # approved this head the next move is theirs. A bot row is different:
+    # act.py merges those, so an approved-but-open bot row is still mine.
+    approved = own_approval(pr, ctx.get("approver"))
+    pr["approved"] = approved
+    if approved:
+        reasons.append(f"approved:{approved['at']}")
+        if author.get("type") != "bot" and not author_self and not approved["head_moved"]:
+            waiting = True
+    # -- the lane team's approval. Same rule as mine: a human author merges
+    # what the owning team approved, so the row is theirs until a push.
+    if author.get("type") != "bot" and not author_self:
+        owned = owner_approval(pr, lanes, ctx)
+        if owned:
+            reasons.append(f"approved-by-owner:{','.join(owned['by'])}:{owned['at']}")
+            waiting = True
 
     def send_back(label: str, reason: str | None = None):
         """The author's turn, said once per row. A generated row has no
@@ -896,7 +985,17 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
             # button that addresses it, and it parks the row with them.
             add_action({"id": "route", "label": f"ask @{user} to re-review", "cmd": f"--route {n}:@{user}", "targets": [f"@{user}"]})
         elif state == "APPROVED":
+            if me and norm_login(user) == me:
+                continue  # mine: `approved:` above
             reasons.append(f"merging-over:approved-by:{user}")
+    # Someone asked for me by name. Declining is a decision of its own --
+    # the request is the one thing tying this row to me rather than to the
+    # lane -- so it takes the row's decision slot. Team requests aren't mine
+    # to drop: removing myself from a team's request removes the team.
+    requested = (pr.get("requested_reviewers") or {}).get("users") or []
+    if me and not author_self and any(norm_login(u) == me for u in requested):
+        reasons.append("requested:me")
+        add_action({"id": "unrequest", "label": "remove me as reviewer", "cmd": f"--unrequest {n}"})
 
     # -- shape
     for f in pr.get("files") or []:
@@ -1540,7 +1639,7 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
         "cfg": cfg, "config": config, "mine": lanes_for_owner(owner, config, cfg.me),
         "include_infra": include_infra, "strict_stances": strict_stances, "cross": {},
         "today": today or datetime.now(timezone.utc).date(), "approver": approver, "handed_off": set(),
-        "teams": queue.get("teams") or {}, "ownership": {},
+        "teams": queue.get("teams") or {}, "team_approvers": queue.get("team_approvers") or {}, "ownership": {},
     }
     # Ownership first: a cluster's `mine` members are the rows that are mine
     # to sequence, which the per-row pass needs to already know.

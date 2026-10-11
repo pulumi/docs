@@ -192,13 +192,13 @@ Pulumi provides several advantages for AI/ML teams running workloads on Kubernet
 ### 4. Increase Security and Compliance
 
 - Manage credentials and secrets securely with **[Pulumi ESC (Secrets Management)](https://www.pulumi.com/docs/esc/)**.
-- Apply **[policy-as-code](/docs/discovery-governance/policy/)** to enforce security best practices.
+- Apply **[policy-as-code](/docs/discovery-governance/concepts/policy-as-code/)** to enforce security best practices.
 
 ## Get Started with AI/ML on Kubernetes with Pulumi
 
 Pulumi makes it easy to deploy, scale, and manage AI/ML workloads on Kubernetes, leveraging Google Cloud's AI infrastructure. Whether you're serving LLMs, training custom models, or automating ML pipelines, Pulumi provides a developer-friendly, scalable, and secure solution.
 
-- [Explore AI/ML Projects using Pulumi](https://www.pulumi.com/blog/tag/ml/)
+- [Explore AI/ML Projects using Pulumi](https://www.pulumi.com/blog/tags/ml/)
 - [Discover Essential Kubernetes Best Practices](https://www.pulumi.com/blog/kubernetes-best-practices-i-wish-i-had-known-before/)
 - [Get Started with Pulumi on Google Cloud](/docs/integrations/clouds/gcp/)
 - [Sign up for Pulumi ➡️](https://app.pulumi.com/signup)

@@ -26,7 +26,7 @@ lc = _load()
 PROBE_TABLE = {
     "/docs/zzz": "dead-404",
     "/blog/nope": "dead-404",
-    "/blog/author/lee-zen": "live-200",
+    "/blog/authors/lee-zen": "live-200",
     "/blog/series/platform-engineering-pillars": "live-200",
     "/docs/reference/cloud-rest-api/audit-logs": "live-200",
     "/docs/reference/pkg/aws": "live-200",
@@ -123,13 +123,13 @@ def test_image_references_and_asset_targets_are_skipped(tmp_path):
 def test_url_spaces_without_a_content_file_are_live_when_production_says_so(tmp_path):
     root = _repo(tmp_path)
     diff = _one_line_diff(
-        "[author](/blog/author/lee-zen/) [series](/blog/series/platform-engineering-pillars/) "
+        "[author](/blog/authors/lee-zen/) [series](/blog/series/platform-engineering-pillars/) "
         "[adapter](/docs/reference/cloud-rest-api/audit-logs/) [pkg](/docs/reference/pkg/aws/) "
         "[redirected](/blog/tag/neo-things/) [dead](/docs/zzz/)"
     )
     entries = lc.classify(diff, root, fake_probe)
     res = {e["target"]: e["resolution"] for e in entries}
-    assert res["/blog/author/lee-zen/"] == "live-200"
+    assert res["/blog/authors/lee-zen/"] == "live-200"
     assert res["/blog/series/platform-engineering-pillars/"] == "live-200"
     assert res["/docs/reference/cloud-rest-api/audit-logs/"] == "live-200"
     assert res["/docs/reference/pkg/aws/"] == "live-200"
