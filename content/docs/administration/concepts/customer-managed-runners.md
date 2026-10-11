@@ -148,13 +148,13 @@ The agent's AWS credentials need these permissions:
 
 Without a template, jobs run with no execution or task role. The job image must then be public, nothing ships the containers' logs, and the job gets AWS credentials only from its own configuration, such as [ESC](#deployments) or OIDC.
 
-#### How an ECS task runs a job
+#### What the agent creates in your AWS account
 
-Each task starts with a short-lived `pulumi-workflow-prepare` container from the [agent image](#agent-image), which the execution role must be able to pull. It fetches the job from Pulumi Cloud and copies the runner binary into a volume shared with the job's container, then exits. The job's container then runs the job. The prepare container ships its logs with the `pulumi-workflow` container's log configuration.
+Each task runs a short-lived `pulumi-workflow-prepare` container from the [agent image](#agent-image) before the job's container starts. It uses the `pulumi-workflow` container's log configuration, so set logging there to capture setup failures.
 
-The job's credentials reach the task as environment overrides on the `RunTask` call. CloudTrail masks those values, but any principal allowed to call `ecs:DescribeTasks` on the cluster can read them while the job runs. Each task is tagged `pulumi-workflow/id` with its job's ID, and inherits the tags of its task definition. When a job is canceled, the agent stops its task.
+The job's credentials reach the task as `RunTask` environment overrides. CloudTrail masks them, but any principal allowed `ecs:DescribeTasks` on the cluster can read them while the job runs, so limit that permission accordingly.
 
-The agent registers one task definition for each distinct combination of template, job image, and agent image, and reuses it for later jobs. Family names are content hashes, so each task definition is tagged `pulumi-workflow/managed-by=workflow-runner`, plus `pulumi-workflow/job-image` and `pulumi-workflow/agent-image` with the images it runs. Task definitions the agent no longer uses stay `ACTIVE` until you deregister them. If a later job needs a deregistered one, the agent registers it again.
+Each task is tagged `pulumi-workflow/id` with its job's ID and inherits its task definition's tags. The agent registers one task definition for each distinct combination of template, job image, and agent image, and reuses it for later jobs. These are tagged `pulumi-workflow/managed-by=workflow-runner`, and stay `ACTIVE` until you deregister them; the agent registers one again if a later job needs it.
 
 ECS limitations:
 
