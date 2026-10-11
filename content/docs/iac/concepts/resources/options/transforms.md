@@ -261,7 +261,7 @@ Transforms are a replacement for [Transformations](/docs/iac/concepts/resources/
 
 Transforms offer support for the following capabilities that are not supported by Transformations:
 
-- **Support for transforming child resources of packaged components**, such as components in [awsx](/registry/packages/awsx) and [eks](/registry/packages/eks).
+- **Support for transforming child resources of packaged components**, such as components in [awsx](/registry/packages/awsx/) and [eks](/registry/packages/eks/).
 
 - **Support for async transform functions**. In Node.js and Python, transform functions can optionally be `async` and return a `Promise`/`Awaitable` so you can use `await` for async calls in the transform. In .NET, transform functions take a `CancellationToken` as an argument and return a `Task` so you can use `await` for async calls in the transform. In Go, transform functions take a `context.Context` as an argument, allowing access to the async context for tracing/logging/cancellation.
 
@@ -269,4 +269,4 @@ While the Transforms APIs are similar to Transformations, there are some differe
 
 ## Transforms for Packaged Component Resources
 
-Note that a transform will be called twice for packaged component resources (such as those in [awsx](/registry/packages/awsx) and [eks](/registry/packages/eks)). The transform will be called before the component resource is constructed, providing an opportunity to modify inputs and resource options before being passed to the provider that implements the component, and then again when the component resource is actually created in the provider, providing an opportunity to modify any resource options that were configured inside the implementation of the component.
+Note that a transform will be called twice for packaged component resources (such as those in [awsx](/registry/packages/awsx/) and [eks](/registry/packages/eks/)). The transform will be called before the component resource is constructed, providing an opportunity to modify inputs and resource options before being passed to the provider that implements the component, and then again when the component resource is actually created in the provider, providing an opportunity to modify any resource options that were configured inside the implementation of the component.
