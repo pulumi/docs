@@ -1367,7 +1367,7 @@ flowchart TD
 - **check-links.yml**: Daily at 15:00 UTC; manual. Runs `make check_links` against the production site, merges real-404 server-log hits from the reader-signals export into `.broken-links.json` (`scripts/link-checker/merge-404-signal.py`; a no-op until the export exists), then runs `claude-code-action` with the `fix-broken-links` skill, which fixes what it can in one PR and files issues for the rest. The PR link is posted to `#docs-ops`.
 - **check-lighthouse.yml**: Daily at 15:00 UTC; manual. Lighthouse performance, accessibility, best-practices, and SEO scores for the homepage, product, pricing, get-started, concepts, and Registry pages. Slack alert on failure.
 - **check-search-urls.yml**: Manual only. Runs `make check_search_urls` to verify URLs in the Algolia index resolve.
-- **brand-style-sync.yml**: Mondays at 14:20 UTC; manual. Checks the offline Vale mirror (`styles/Pulumi/`) against the brand guide, per `styles/Pulumi/BRAND-SYNC.yaml`, and opens a draft PR when it has drifted. `BRAND_SYNC_ENABLED='0'` turns it off. See `.claude/commands/brand-vale-sync/SKILL.md`.
+- **brand-style-sync.yml**: Mondays at 14:20 UTC; manual. Checks the offline Vale mirror (`styles/Pulumi/`) against the brand guide, per `styles/Pulumi/BRAND-SYNC.yaml`, and opens a PR only when it has drifted (a clean run opens nothing). `BRAND_SYNC_ENABLED='0'` turns it off. See `.claude/commands/brand-vale-sync/SKILL.md`.
 - **auto-label-issues.yml**: New and reopened issues. One Haiku call classifies the issue; if it's confident, it sets the issue Type and `area/*` labels and removes `needs-triage`. It never touches priority, impact, resolution, or PR-pipeline labels.
 - **add-to-project.yml**: Adds new and reopened issues to the Docs GitHub project.
 
