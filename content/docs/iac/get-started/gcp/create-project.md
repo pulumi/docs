@@ -21,7 +21,7 @@ aliases:
 
 ## Create a new project
 
-A [**project**](/docs/iac/concepts/projects) is a program in your chosen language that defines a collection of related
+A [**project**](/docs/iac/concepts/projects/) is a program in your chosen language that defines a collection of related
 cloud resources. In this step, you will create a new project.
 
 ### Initializing your project
@@ -193,7 +193,7 @@ $ pulumi new gcp-hcl
 {{% /choosable %}}
 
 The `pulumi new` command interactively walks through initializing a new project, as well as creating a
-[**stack**](/docs/iac/concepts/stacks) and [**configuring**](/docs/iac/concepts/config) it. A stack is an instance of your
+[**stack**](/docs/iac/concepts/stacks/) and [**configuring**](/docs/iac/concepts/config/) it. A stack is an instance of your
 project and you may have many of them -- like `dev`, `staging`, and `prod` -- each with different configuration settings.
 
 You will be prompted for configuration values such as a Google Cloud project ID. You can hit ENTER to accept the defaults,
@@ -261,12 +261,12 @@ If you list the contents of your directory, you'll see some key files:
 
 - <span>{{< langfile >}}</span> contains your project's main code that declares a Google Cloud Storage bucket
 
-- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project like its name
+- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file/) containing metadata about your project like its name
 
 {{% /choosable %}}
 {{% choosable language "yaml" %}}
 
-- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project, like its name, as well as declaring your project's resources
+- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file/) containing metadata about your project, like its name, as well as declaring your project's resources
 
 {{% /choosable %}}
 
@@ -435,7 +435,7 @@ The `pulumi/gcp` source selects the Pulumi Google Cloud provider from the [Pulum
 
 {{% /choosable %}}
 
-This Pulumi program creates a new storage bucket resource and exports the DNS name of the bucket as a [stack output](/docs/iac/concepts/stacks/#outputs). Resources are just objects in our language of choice with [properties](/docs/iac/concepts/inputs-outputs) capturing their inputs and outputs. Exporting the bucket's DNS name makes it convenient to use afterwards.
+This Pulumi program creates a new storage bucket resource and exports the DNS name of the bucket as a [stack output](/docs/iac/concepts/stacks/#outputs). Resources are just objects in our language of choice with [properties](/docs/iac/concepts/inputs-outputs/) capturing their inputs and outputs. Exporting the bucket's DNS name makes it convenient to use afterwards.
 
 Next, you'll deploy your stack, which will provision your storage bucket.
 

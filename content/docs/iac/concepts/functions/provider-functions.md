@@ -322,7 +322,7 @@ YAML does not distinguish between direct and output forms; both are invoked usin
 
 {{< /chooser >}}
 
-The [Pulumi Registry](/registry) contains authoritative documentation for all provider functions.
+The [Pulumi Registry](/registry/) contains authoritative documentation for all provider functions.
 
 ## Invoke options
 

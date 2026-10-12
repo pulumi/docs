@@ -20,7 +20,7 @@ aliases:
 
 ## Create a new project
 
-A [**project**](/docs/iac/concepts/projects) is a program in your chosen language that defines a collection of related
+A [**project**](/docs/iac/concepts/projects/) is a program in your chosen language that defines a collection of related
 cloud resources. In this step, you will create a new project.
 
 ### Initializing your project
@@ -189,7 +189,7 @@ $ pulumi new aws-hcl
 {{% /choosable %}}
 
 The `pulumi new` command interactively walks through initializing a new project, as well as creating a
-[**stack**](/docs/iac/concepts/stacks) and [**configuring**](/docs/iac/concepts/config) it. A stack is an instance of your
+[**stack**](/docs/iac/concepts/stacks/) and [**configuring**](/docs/iac/concepts/config/) it. A stack is an instance of your
 project and you may have many of them -- like `dev`, `staging`, and `prod` -- each with different configuration settings.
 
 You will be prompted for configuration values such as an AWS region. You can hit ENTER to accept the default of `us-east-1`,
@@ -245,12 +245,12 @@ If you list the contents of your directory, you'll see some key files:
 
 - <span>{{< langfile >}}</span> contains your project's main code that declares a new S3 bucket
 
-- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project like its name
+- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file/) containing metadata about your project like its name
 
 {{% /choosable %}}
 {{% choosable language "yaml" %}}
 
-- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project, like its name, as well as declaring your project's resources
+- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file/) containing metadata about your project, like its name, as well as declaring your project's resources
 
 {{% /choosable %}}
 
@@ -407,8 +407,8 @@ the `pulumi/` prefix, such as `hashicorp/aws`, resolves from the
 {{% /choosable %}}
 
 The program declares an AWS S3 [Bucket](/registry/packages/aws/api-docs/s3/bucket/)
-[resource](/docs/iac/concepts/resources) and exports its ID as a [stack output](/docs/iac/concepts/stacks/#outputs).
-Resources are just objects in our language of choice with [properties](/docs/iac/concepts/inputs-outputs) capturing
+[resource](/docs/iac/concepts/resources/) and exports its ID as a [stack output](/docs/iac/concepts/stacks/#outputs).
+Resources are just objects in our language of choice with [properties](/docs/iac/concepts/inputs-outputs/) capturing
 their inputs and outputs. Exporting the bucket's ID makes it convenient to use afterwards.
 
 Now you're ready for your first deployment!
