@@ -24,7 +24,7 @@ To manage your state with a self-managed backend, such as a cloud storage bucket
 
 To do so, follow these steps:
 
-1. Create a new pool. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow runner pools** tab, click **Add new pool**, and copy the generated access token.
+1. Create a new pool. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow runner pools** tab, select **Add new pool**, and copy the generated access token.
 
 1. Select the **Kubernetes** tab and follow the on-screen instructions to install and configure your Kubernetes-native runner.
 
@@ -34,4 +34,4 @@ To do so, follow these steps:
     |-----------------------------------------|-----------------------------------------| --------------- |
     | `PULUMI_DEPLOY_DEFAULT_IMAGE_REFERENCE` | The Docker image to use for the runner. | `pulumi/pulumi` |
 
-1. Configure your stacks individually to use the deployment pool by navigating to **Settings > Deploy** and choosing the pool from the **Deployment runner pool** dropdown. Click **Save deployment configuration** to apply your settings.
+1. Configure your stacks individually to use the deployment pool by navigating to **Settings > Deploy** and choosing the pool from the **Deployment runner pool** dropdown. Select **Save deployment configuration** to apply your settings.
