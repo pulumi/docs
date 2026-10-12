@@ -136,9 +136,9 @@ This is the foundation for setting the superintelligence flywheel in motion.
 
 The flywheel isn’t theoretical. We're facilitating it daily with thousands of customers:
 
-**Hyper-scale**: [Wiz](https://www.pulumi.com/case-studies/wiz/) manages over one million cloud resources across tens of thousands of Kubernetes clusters in hundreds of data centers across every cloud provider imaginable. They do hundreds of thousands of updates daily across thousands of Kubernetes clusters, leading to 5x faster customer onboarding and entering new markets in days rather than months. They treat infrastructure provisioning as just another service in their distributed system.
+**Hyper-scale**: [Wiz](https://www.pulumi.com/customers/wiz/) manages over one million cloud resources across tens of thousands of Kubernetes clusters in hundreds of data centers across every cloud provider imaginable. They do hundreds of thousands of updates daily across thousands of Kubernetes clusters, leading to 5x faster customer onboarding and entering new markets in days rather than months. They treat infrastructure provisioning as just another service in their distributed system.
 
-**Infrastructure democratization**: [Supabase](https://www.pulumi.com/case-studies/supabase/) achieved the infrastructure velocity needed to keep up with the AI era’s demand for their own product, empowering 20x more teammates to scale infrastructure in TypeScript, the same language as their application code, rather than proprietary DSLs that nobody understood. New regions deploy in about a week, with 43,000 new databases daily and 100,000+ API calls per second. According to their platform team, now thanks to Pulumi, "the infrastructure team acts as groundkeepers, not gatekeepers."
+**Infrastructure democratization**: [Supabase](https://www.pulumi.com/customers/supabase/) achieved the infrastructure velocity needed to keep up with the AI era’s demand for their own product, empowering 20x more teammates to scale infrastructure in TypeScript, the same language as their application code, rather than proprietary DSLs that nobody understood. New regions deploy in about a week, with 43,000 new databases daily and 100,000+ API calls per second. According to their platform team, now thanks to Pulumi, "the infrastructure team acts as groundkeepers, not gatekeepers."
 
 **Frontier science**: We manage infrastructure for organizations including NVIDIA and multiple frontier labs building the models that will define the next decade. The scale requirements for these workloads exceed any we've ever seen and are only getting bigger. Just as many customers democratize infrastructure for their developers, we're seeing frontier labs use Pulumi to accelerate getting science into production with self-service infrastructure for AI researchers.
 
@@ -154,4 +154,4 @@ The superintelligence flywheel is spinning fast, and it’s only going to get fa
 
 *Pulumi provides the infrastructure platform for the superintelligence era: infrastructure as code in general-purpose languages, unified multi-cloud management, and Neo for progressive infrastructure autonomy.*
 
-[*Pulumi Neo*](/product/neo) ・ [*Superintelligence Infrastructure*](/product/superintelligence-infrastructure/) ・ [*Case Studies*](/case-studies/) ・ [*Contact*](/contact)
+[*Pulumi Neo*](/product/neo) ・ [*Superintelligence Infrastructure*](/product/superintelligence-infrastructure/) ・ [*Case Studies*](/customers/) ・ [*Contact*](/contact)

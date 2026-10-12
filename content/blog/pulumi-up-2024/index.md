@@ -26,13 +26,13 @@ At our fourth annual PulumiUP conference, we unveiled a new vision for Pulumi, g
 
 The Pulumi platform solves a broad set of problems that engineering leaders face in the modern cloud era. This spans cloud automation, security, and management, which aligns to our three products: **[Pulumi IaC](/product/infrastructure-as-code/)**, **[Pulumi ESC](/product/secrets-management/)**, and **[Pulumi Insights](/product/pulumi-insights/)**. Our unified approach ensures developers, infrastructure experts, and security teams can collaborate closely and ship faster with high confidence.
 
-In addition to our three products, Pulumi’s platform incorporates three core capabilities that span the entire product suite. **[Pulumi CrossGuard](/crossguard/)** is our policy as code engine which ensures security, compliance, and best practices; **[Pulumi Deployments](/product/pulumi-deployments/)** is our deployment workflow technology that lets us orchestrate infrastructure-oriented tasks; and **[Pulumi Copilot](/product/copilot/)** is our generative AI technology that deeply understands the cloud and infrastructure management and operations.
+In addition to our three products, Pulumi’s platform incorporates three core capabilities that span the entire product suite. **[Pulumi CrossGuard](/crossguard/)** is our policy as code engine which ensures security, compliance, and best practices; **[Pulumi Deployments](/product/pulumi-deployments/)** is our deployment workflow technology that lets us orchestrate infrastructure-oriented tasks; and **[Pulumi Copilot](/product/neo/)** is our generative AI technology that deeply understands the cloud and infrastructure management and operations.
 
 You can see this visually depicted here:
 
 [![Pulumi Platform](platform.png)](/product/)
 
-We’ve now worked with 3,000 customers to help with their cloud journey and have listened to and solved the problems we regularly hear about. That includes Nvidia who is at the forefront of the AI revolution as well as [BMW](/case-studies/bmw/) who is reimagining their entire engineering mindset in a cloud-first world, both leveraging Pulumi. [Unity Games](/case-studies/unity/) now ships **5x faster** from code to cloud, and Tivity Health **saved 71%** of their cloud spend, automating everything and saving $6.5M annually.
+We’ve now worked with 3,000 customers to help with their cloud journey and have listened to and solved the problems we regularly hear about. That includes Nvidia who is at the forefront of the AI revolution as well as [BMW](/customers/bmw/) who is reimagining their entire engineering mindset in a cloud-first world, both leveraging Pulumi. [Unity Games](/customers/unity/) now ships **5x faster** from code to cloud, and Tivity Health **saved 71%** of their cloud spend, automating everything and saving $6.5M annually.
 
 Now let’s dive into the three products and what we announced at PulumiUP:
 
@@ -44,7 +44,7 @@ Now let’s dive into the three products and what we announced at PulumiUP:
 
 We are always improving Pulumi IaC and today is no different. We launched a number of new and exciting IaC features. That includes using any Terraform provider, beyond the nearly 200 providers that Pulumi already supports. We also shipped a new [Pulumi VS Code Extension](/blog/pulumi-vscode-extension/) that enables rich debugging and easier editing of your IaC programs. Pulumi Copilot can now diagnose and fix your IaC errors. And finally, we’ve improved our [Kubernetes support](/registry/packages/kubernetes/) with powerful controls over await logic for more robust cloud native deployments. And we're not slowing down anytime soon.
 
-[Pulumi is open source](https://github.com/pulumi/pulumi), of course, but works best with Pulumi Cloud, the easiest, most secure, and most reliable way to adopt Pulumi IaC. [Starburst](/case-studies/starburst/) **saved 100 days** per year by moving from DIY state management to Pulumi Cloud. By using Pulumi Cloud, you also gain access to the other products in this post. [Try IaC now](/docs/get-started/) and choose the option that suits you best.
+[Pulumi is open source](https://github.com/pulumi/pulumi), of course, but works best with Pulumi Cloud, the easiest, most secure, and most reliable way to adopt Pulumi IaC. [Starburst](/customers/starburst/) **saved 100 days** per year by moving from DIY state management to Pulumi Cloud. By using Pulumi Cloud, you also gain access to the other products in this post. [Try IaC now](/docs/get-started/) and choose the option that suits you best.
 
 ## Pulumi ESC - Centralized Secrets Management and Orchestration that Scales
 

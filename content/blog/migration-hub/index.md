@@ -106,20 +106,20 @@ their entire cloud management and platform needs.
 
 By moving to Pulumi's platform, many customers have seen considerable benefits:
 
-_[Atlassian **significantly increased developer velocity**](/case-studies/atlassian/)_, increasing
+_[Atlassian **significantly increased developer velocity**](/customers/atlassian/)_, increasing
 productivity by more than 2x and substantially decreasing the amount of time spent on maintenance tasks.
 
-_[Mercedes-Benz **got the whole team shipping faster and with more confidence**](/case-studies/mercedes-benz/)_ by building a platform that helped developers be self-serve with
+_[Mercedes-Benz **got the whole team shipping faster and with more confidence**](/customers/mercedes-benz/)_ by building a platform that helped developers be self-serve with
 infrastructure while scaling up to 100s of Kubernetes clusters worldwide.
 
-_[Snowflake **rapidly improved time to market**](/case-studies/snowflake/)_ by betting on Pulumi,
+_[Snowflake **rapidly improved time to market**](/customers/snowflake/)_ by betting on Pulumi,
 empowering their engineers, and delivering the Data Cloud. Snowflake ultimately beat their IPO deadlines and knew legacy
 infrastructure as code wouldn't do it.
 
 _[Washington Trust Bank **modernized their cloud infrastructure and practices**](/blog/how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation)_,
 speeding up internal delivery, while also increasing their confidence thanks to policy as code guardrails.
 
-_[Fauna **adopted a born in the cloud mindset**](/case-studies/fauna/)_ and was able to build a
+_[Fauna **adopted a born in the cloud mindset**](/customers/fauna/)_ and was able to build a
 multi-cloud, highly scalable, modern SaaS application, actually increasing reliability even in the face of growing
 complexity.
 

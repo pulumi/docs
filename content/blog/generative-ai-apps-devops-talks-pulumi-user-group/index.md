@@ -108,7 +108,7 @@ LangChain AI provides an efficient approach to DevOps through continuous monitor
 
 LangChain's AI-driven anomaly detection capabilities are pivotal in identifying deviations from expected behavior in the monitored data. By analyzing historical data patterns, LangChain can learn the normal behavior of the system and its components. When the system encounters an unusual event or behavior, LangChain can promptly detect it as an anomaly. These anomalies could be security threats, performance bottlenecks, code quality, or any irregularities within the system.
 
-Keep in mind that monitoring LLM performance is important to ensure you can rely on the model's accuracy and relevance in real-world applications. Our customer [WhyLabs](https://www.pulumi.com/case-studies/whylabs/) has a great article showing the significance of [monitoring LLMs performance with LangChain and how to get started](https://whylabs.ai/blog/posts/monitoring-llm-performance-with-langchain-and-langkit) with monitoring.
+Keep in mind that monitoring LLM performance is important to ensure you can rely on the model's accuracy and relevance in real-world applications. Our customer [WhyLabs](https://www.pulumi.com/customers/whylabs/) has a great article showing the significance of [monitoring LLMs performance with LangChain and how to get started](https://whylabs.ai/blog/posts/monitoring-llm-performance-with-langchain-and-langkit) with monitoring.
 
 ## Future: AI, Apps, and DevOps
 
@@ -162,7 +162,7 @@ AI and ML are rapidly becoming a necessity, which can greatly enhance and benefi
 
 Patrick Debois is a highly accomplished technologist whose expertise spans the domains of Development (Dev), Security (Sec), and Operations (Ops). Acknowledged as a respected confidant within the developer, security, and operations communities, Patrick is presently deeply engrossed in the realm of Artificial Intelligence and Machine Learning, continually pushing the boundaries of his technical acumen.
 
-He was the organizer of the inaugural DevOpsDays in 2009. He is credited with coining "DevOps" and co-authoring the renowned DevOps Handbook. In the past, Patrick has collaborated with esteemed technology organizations such as [Atlassian](https://www.pulumi.com/case-studies/atlassian/) and Snyk. Currently, he wears dual hats as the Vice President of Engineering and a Distinguished Engineer at Showpad.
+He was the organizer of the inaugural DevOpsDays in 2009. He is credited with coining "DevOps" and co-authoring the renowned DevOps Handbook. In the past, Patrick has collaborated with esteemed technology organizations such as [Atlassian](https://www.pulumi.com/customers/atlassian/) and Snyk. Currently, he wears dual hats as the Vice President of Engineering and a Distinguished Engineer at Showpad.
 
 ### Is LangChain Free?
 

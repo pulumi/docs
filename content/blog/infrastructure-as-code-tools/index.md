@@ -487,7 +487,7 @@ Key Features:
 
 > "We use Pulumi widely at Wiz. It enabled our product to support multi-cloud and to scale quickly — scaling and driving hundreds of thousands of infrastructure updates every day."
 >
-> — Yarin Miran, Senior Software Engineer, [Wiz](https://www.pulumi.com/case-studies/wiz/)
+> — Yarin Miran, Senior Software Engineer, [Wiz](https://www.pulumi.com/customers/wiz/)
 
 Considerations:
 
@@ -1319,7 +1319,7 @@ Real-world migrations demonstrate that adoption can be remarkably fast with prop
 
 > "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
 >
-> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](https://www.pulumi.com/case-studies/starburst/)
+> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](https://www.pulumi.com/customers/starburst/)
 
 ### Migration Tools and Resources
 
