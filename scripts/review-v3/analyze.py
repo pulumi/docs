@@ -1601,8 +1601,8 @@ def _counts(prs: list[dict]) -> dict:
 
 
 def lanes_from_memberships(cfg: pr_review_config.UserConfig, memberships: dict, config: routing.Config) -> pr_review_config.UserConfig:
-    """No config file: take the lanes from the teams this approver is actually
-    on. Three answers, each said out loud, because "every lane is mine" and
+    """No config file, or one with no `me:`: take the lanes from the teams
+    this approver is actually on. Three answers, each said out loud, because "every lane is mine" and
     "no lane is mine" are opposite boards:
       - unreadable (no team answered True, and at least one answered None):
         every lane, the old fallback, and the warning says why;
@@ -1614,7 +1614,7 @@ def lanes_from_memberships(cfg: pr_review_config.UserConfig, memberships: dict, 
     from_teams = pr_review_config.lanes_from_teams(memberships, config)
     hidden = sorted(t for t, v in (memberships or {}).items() if v is None)
     if from_teams is None:
-        return replace(cfg, warnings=[
+        return replace(cfg, source="defaults", warnings=[
             "no config file, and your GitHub team memberships are unreadable (the token lacks read:org, or GitHub answers "
             "404 for a team it hides from it) — every lane counts as mine; create ~/.pr-review.yml to pin your lanes"])
     if not from_teams:
@@ -1630,7 +1630,7 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
             repo_root: Path = _REPO_ROOT, include_infra: bool = False, strict_stances: bool = False,
             owner: str | None = None, aliases: set[str] | None = None, today: date | None = None) -> dict:
     prs = queue.get("prs") or []
-    if cfg.source == "defaults":
+    if not cfg.me_pinned:
         cfg = lanes_from_memberships(cfg, queue.get("my_teams") or {}, config)
     if aliases is None:
         aliases = alias_only_urls(repo_root)
