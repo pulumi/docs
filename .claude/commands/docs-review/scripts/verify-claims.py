@@ -280,7 +280,7 @@ READ_FILE_TOOL = {
         "properties": {
             "path": {"type": "string", "description": "Repo-relative path, e.g. data/docs_menu_sections.yml"},
             "pattern": {"type": "string",
-                        "description": "Optional regex/substring. Returns only matching lines (with line numbers + 2 lines of context) instead of the file head — use it for large structured files like content/pricing/_index.md (a ~40KB feature x tier matrix)."},
+                        "description": "Optional regex/substring. Returns only matching lines (with line numbers + 2 lines of context) instead of the file head — use it for large structured files like data/pulumi_editions.yaml (every Pulumi Cloud feature and the edition it starts in)."},
         },
         "required": ["path"],
     },
@@ -328,7 +328,7 @@ VERIFY_SYSTEM = """You are a fact-checking verifier for Pulumi documentation and
 
 Cheapest first. Stop as soon as a source closes the claim.
 
-1. **Local repo / linked docs** — `read_file` to read other content files, `static/programs/<name>-<lang>/` programs, `data/docs_menu_sections.yml`, `layouts/shortcodes/<name>.html`, the nearest sibling page. Cheapest — always try first. For a **tier / edition / limit / quota** claim, `content/pricing/_index.md` (a large feature x tier matrix) is canonical — read it with a `pattern` (the feature name), and never treat a value as absent from a read marked `[TRUNCATED]`.
+1. **Local repo / linked docs** — `read_file` to read other content files, `static/programs/<name>-<lang>/` programs, `data/docs_menu_sections.yml`, `layouts/shortcodes/<name>.html`, the nearest sibling page. Cheapest — always try first. For a **tier / edition** claim (which edition a feature needs), `data/pulumi_editions.yaml` is canonical — read it with a `pattern` (the feature name), and never treat a value as absent from a read marked `[TRUNCATED]`. Prices, limits, and quotas are no longer in this repo: the /pricing/ page is built by pulumi/marketing-web from `apps/www/src/data/pricing/`, so check the live https://www.pulumi.com/pricing/ page for those.
 2. **GitHub via `gh`** (pass1 lane) — `gh_query` for anything `pulumi/*` OR `pulumi-labs/*` ships. Pulumi HCL lives under `pulumi/pulumi-hcl`, but in-progress providers / SDK experiments still ship under `pulumi-labs/*`; when a claim references a `pulumi-labs/<repo>` package, query BOTH owners before considering escalation:
    - `gh search code --owner pulumi      "<term>"` — main Pulumi org (engine, providers, SDKs)
    - `gh search code --owner pulumi-labs "<term>"` — in-progress providers, SDK experiments

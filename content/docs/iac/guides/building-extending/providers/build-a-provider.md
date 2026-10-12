@@ -43,7 +43,7 @@ Pulumi providers are [gRPC](https://grpc.io/) servers that respond to commands f
 
 ### Configuration, secrets, outputs, and state
 
-Beyond the core functions involved with managing resources, there are a number of other aspects to a Pulumi provider. It is necessary to configure the provider, pass secrets, return output values, and store the state of resources. The Pulumi provider interface has built-in facilities for all of those concerns:
+Beyond the core functions involved with managing resources, a Pulumi provider also needs to handle configuration, pass secrets, return output values, and store the state of resources. The Pulumi provider interface has built-in facilities for each of these concerns:
 
 - **Configuration and Secrets**: Set via [Pulumi ESC](/docs/esc/) [environments](/docs/esc/concepts/environments/) and/or `pulumi config`. Encrypted secrets and configuration values are passed to the provider at runtime. See [Provider configuration](/docs/iac/guides/building-extending/providers/provider-configuration/) for a detailed guide on declaring config keys, secrets, and environment variable defaults.
 - **Outputs**: Providers return outputs from resources, which can be referenced by other resources.
@@ -59,7 +59,7 @@ A provider's [package schema](/docs/iac/guides/building-extending/packages/schem
 
 {{% notes type="info" %}}
 
-Historically it was necessary to hand-author and maintain the `schema.json` file that accompanied your provider implementation, however, now most of this is generated automatically by the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) and the file is no longer necessary.
+The [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) generates most of the schema automatically, so you don't need to hand-author a `schema.json` file. See [Multi-language support](#multi-language-support) for how to inspect the generated schema.
 
 {{% /notes %}}
 
@@ -73,7 +73,7 @@ This guide focuses on building a custom resource. For the library's full capabil
 
 ## Example: Build a custom `file` provider
 
-Let's walk through the implementation of an example provider using the Pulumi Provider SDK. The [`file` provider](https://github.com/pulumi/pulumi-go-provider/blob/main/examples/file/main.go) will demonstrate how to manage local files as resources within Pulumi. It is a minimal but powerful illustration of the provider development process.
+This example walks through the implementation of a provider using the Pulumi Provider SDK. The [`file` provider](https://github.com/pulumi/pulumi-go-provider/blob/main/examples/file/main.go) demonstrates how to manage local files as resources within Pulumi. It's a minimal but powerful illustration of the provider development process.
 
 ### Features of the `file` provider
 
@@ -89,9 +89,9 @@ resources:
         An important piece of information
 ```
 
-In this example, we create a new resource called `managedFile` of type `file:File`. We can specify the path to write it to, and the contents that should be in it. During an update, Pulumi will use the `file` provider to ensure the file exists and has the specified contents.
+This example creates a new resource called `managedFile` of type `file:File`, specifying the path to write it to and the contents that should be in it. During an update, Pulumi uses the `file` provider to ensure the file exists and has the specified contents.
 
-Now let's create the `file` provider that implements this.
+Next, create the `file` provider that implements this.
 
 ### Set up the project
 
@@ -267,17 +267,19 @@ func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileSt
 		return infer.UpdateResponse[FileState]{}, nil
 	}
 
-	f, err := os.Create(req.State.Path)
-	if err != nil {
-		return infer.UpdateResponse[FileState]{}, err
-	}
-	defer f.Close()
-	n, err := f.WriteString(req.Inputs.Content)
-	if err != nil {
-		return infer.UpdateResponse[FileState]{}, err
-	}
-	if n != len(req.Inputs.Content) {
-		return infer.UpdateResponse[FileState]{}, fmt.Errorf("only wrote %d/%d bytes", n, len(req.Inputs.Content))
+	if req.State.Content != req.Inputs.Content {
+		f, err := os.Create(req.State.Path)
+		if err != nil {
+			return infer.UpdateResponse[FileState]{}, err
+		}
+		defer f.Close()
+		n, err := f.WriteString(req.Inputs.Content)
+		if err != nil {
+			return infer.UpdateResponse[FileState]{}, err
+		}
+		if n != len(req.Inputs.Content) {
+			return infer.UpdateResponse[FileState]{}, fmt.Errorf("only wrote %d/%d bytes", n, len(req.Inputs.Content))
+		}
 	}
 
 	return infer.UpdateResponse[FileState]{
@@ -341,7 +343,7 @@ func (File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *FileS
 }
 ```
 
-We'll go through this code in detail in a moment, but for now, let's give it a try in a Pulumi program.
+The [detailed breakdown](#detailed-breakdown-of-provider-implementation) below walks through this code. First, try it in a Pulumi program.
 
 ### Use the provider in a Pulumi program
 
@@ -354,7 +356,7 @@ $ cd use-file-provider
 $ pulumi new yaml
 ```
 
-This will initialize a minimal YAML program. Let's modify the default YAML file:
+This initializes a minimal YAML program. Modify the default `Pulumi.yaml` file:
 
 ***Example:** The `Pulumi.yaml` file*
 
@@ -454,7 +456,7 @@ func main() {
 
 #### Define the `File` resource and implement the provider interface
 
-Next, lets define the `File` resource. Start with a simple empty struct to define the type. Then add a description to the resource using `Annotate`.
+Next, define the `File` resource. Start with an empty struct to define the type. Then add a description to the resource using `Annotate`.
 
 ```go
 type File struct{}
@@ -488,7 +490,7 @@ func (f *FileArgs) Annotate(a infer.Annotator) {
 
 #### Define the resource state
 
-A resource needs to declare and manage its own state within Pulumi, so that Pulumi knows when to perform the create or update operations. Here we define a `FileState` type that indicates the necessary fields to manage. In this case, the state is very similar to the creation arguments, but this may not always be the case.
+A resource needs to declare and manage its own state within Pulumi, so that Pulumi knows when to perform the create or update operations. Here we define a `FileState` type that indicates the necessary fields to manage. In this case, the state closely matches the creation arguments, but this may not always be the case.
 
 As before, the tags in the struct specify the language-neutral property name to store, and we provide descriptions via annotations.
 
@@ -508,17 +510,17 @@ func (f *FileState) Annotate(a infer.Annotator) {
 
 #### Implement the resource CRUD operations
 
-Here's where the business logic of the resource operations happens. In this example, we are going to implement the full interface, with custom implementations for `Create`, `Read`, `Update`, `Delete`, `Check`, and `Diff`. However, the Pulumi Provider SDK provides default implementations for all of these functions other than `Create`, so in many cases, you may only need to implement one or two of these functions to meet your business goals.
+Here's where the business logic of the resource operations happens. This example implements the full interface, with custom implementations for `Create`, `Read`, `Update`, `Delete`, `Check`, and `Diff`. However, `Create` is the only required function: the Pulumi Provider SDK provides default implementations for `Read`, `Delete`, `Check`, and `Diff`. `Update` has no default; without it, any change to the resource's inputs replaces the resource instead of updating it in place. Often, you only need to implement a few of these functions to meet your business goals.
 
 ##### The `Create` operation
 
-The `Create` operation handles the logic of determining if the resource exists or not, and if not, it creates it using the provided argument context. In many providers this is where you would interact with external cloud APIs, databases, and other systems. In this example, we're going to interact with our local filesystem using calls to Go's `os` library.
+The `Create` operation handles the logic of determining if the resource exists or not, and if not, it creates it using the provided argument context. In many providers this is where you would interact with external cloud APIs, databases, and other systems. In this example, the provider interacts with the local filesystem using calls to Go's `os` library.
 
 First, we check to see if the user configured the `force` option. We can access that through the `req.Inputs` collection, which will be an instance of `FileArgs`. If `force` is true, we don't need to check to see if the file exists, otherwise, use `os.Stat` and `os.IsNotExist` to see if the specified directory and filename already exist. If it does, we exit early with an error. This will let Pulumi know that the create operation failed, and it will be propagated up to the end user via the console/log output.
 
-To return an error, we return a null `CreateResponse` instance with an error string. The Provider SDK functions use a request and response pattern for each operation, parameterized by the argument and state types. The next piece of logic checks `req.DryRun` to see if we are in a *preview* mode or an *update* mode. If we are in preview mode, don't take any actions that would mutate the state and just return early.
+To return an error, we return a null `CreateResponse` instance with an error string. The Provider SDK functions use a request and response pattern for each operation, parameterized by the argument and state types. The next piece of logic checks `req.DryRun` to see if we are in a *preview* mode or an *update* mode. If we are in preview mode, don't take any actions that would mutate the state; return early instead.
 
-Now we can implement the core logic of writing to the filesystem using the base library functions.
+Next, implement the core logic of writing to the filesystem using the base library functions.
 
 Finally, the last thing to do is construct the response object for the Create operation, setting the unique ID for the resource, and the new resource state values as outputs. Returning that response object without errors lets the Pulumi engine know that this operation was successful. Recording the state will be handled by the Pulumi engine.
 
@@ -595,7 +597,7 @@ func (File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckRespo
 
 ##### The `Update` operation
 
-The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode or not, we overwrite the file with the new contents. Note that it's not necessary to check if the input contents are different than current state of the content, as this logic is handled by the `Diff` operation.
+The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode or not, it overwrites the file with the new contents. `Diff` also reports an update when only `force` changes, so `Update` compares the input contents to the current state and skips the write when they match.
 
 ```go
 func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileState]) (infer.UpdateResponse[FileState], error) {
@@ -603,8 +605,7 @@ func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileSt
 		return infer.UpdateResponse[FileState]{}, nil
 	}
 
-	_, err := os.Stat(req.Inputs.Path)
-	if req.State.Content != req.Inputs.Content || os.IsNotExist(err) {
+	if req.State.Content != req.Inputs.Content {
 		f, err := os.Create(req.State.Path)
 		if err != nil {
 			return infer.UpdateResponse[FileState]{}, err
@@ -658,7 +659,7 @@ func (File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState]
 }
 ```
 
-#### The `Read` operation
+##### The `Read` operation
 
 The `Read` operation fetches the resource, e.g. to refresh the live state. The `ReadRequest` has a `ID` property that can be used, in this case, to determine the path to the file, and the base library functions can be used to read the file from disk, populating the `Content` field.
 
@@ -688,7 +689,7 @@ func (File) Read(ctx context.Context, req infer.ReadRequest[FileArgs, FileState]
 
 #### Managing resource output fields
 
-Finally, `WireDependencies` defines the outputs that are made available on the resource, logically connecting the inputs and stored state values.
+Finally, `WireDependencies` specifies the dependencies between inputs and outputs: each output field declares which input it depends on, so whether an output is secret or computed follows from the inputs it depends on. The outputs themselves are defined by the `FileState` type.
 
 ```go
 func (File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *FileState) {
@@ -706,9 +707,9 @@ func (File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *FileS
 
 ### Multi-language support
 
-In our above example, we created a provider in Go and used it in YAML. This "just works" by default. However, if you would like to use your provider from the other Pulumi authoring languages (e.g. TypeScript, Python, Java, Go, C#) it will be necessary to generate SDKs for each target language.
+In the [`file` provider example](#example-build-a-custom-file-provider), you created a provider in Go and used it in YAML, which works by default without any extra steps. However, if you would like to use your provider from the other Pulumi authoring languages (e.g. TypeScript, Python, Java, Go, C#) it will be necessary to generate SDKs for each target language.
 
-That is a very streamlined process with the Pulumi Provider SDK. The following command will generate language SDKs for all supported languages:
+The Pulumi Provider SDK streamlines this process. The following command generates language SDKs for all supported languages:
 
 ```sh
 pulumi package gen-sdk <path-to-provider>
@@ -726,6 +727,6 @@ Historically, Pulumi providers required a `schema.json` file. This is now genera
 
 ## Packaging and publishing
 
-Using a provider from another directory on your local filesystem is the easiest way to develop a new custom provider. However, once you're ready to share with others at your company, or with the world, you'll need to explore how to publish and package your provider for consumption. There are many ways to accomplish this, from hosting either publicly or privately in GitHub and GitLab, using a private registry within Pulumi Cloud, or publishing to the public Pulumi registry.
+Using a provider from another directory on your local filesystem is the easiest way to develop a new custom provider. However, once you're ready to share with others at your company, or with the world, you'll need to explore how to publish and package your provider for consumption. Options range from hosting either publicly or privately in GitHub and GitLab, to using a private registry within Pulumi Cloud, or publishing to the public Pulumi Registry.
 
 See the [Pulumi package authoring guide](/docs/iac/guides/building-extending/packages/publishing-packages/) for full details.

@@ -231,7 +231,7 @@ Pulumi recognizes archive files by extension: `.tar`, `.tgz`, `.tar.gz`, `.zip`,
 
 ### `FileArchive`
 
-Takes the contents from a path on disk, which can be either a folder or an existing archive file in one of the supported formats. Pointing it at a folder is the usual choice for a serverless function's source, as in the [AWS Lambda guide](/docs/iac/guides/clouds/aws/lambda/).
+Takes the contents from a path on disk, which can be either a folder or an existing archive file in one of the supported formats. Pointing it at a folder is the usual choice for a serverless function's source, as in the [AWS Lambda guide](/dev/tutorials/aws-lambda/).
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
@@ -537,7 +537,7 @@ resource "aws_s3_bucket_object" "index-html" {
 
 {{< /chooser >}}
 
-An archive is passed the same way, to an input that expects a collection of files. The most common example is a serverless function's code, such as the `code` property of an [AWS Lambda function](/docs/iac/guides/clouds/aws/lambda/).
+An archive is passed the same way, to an input that expects a collection of files. The most common example is a serverless function's code, such as the `code` property of an [AWS Lambda function](/dev/tutorials/aws-lambda/).
 
 ## How Pulumi detects changes {#change-detection}
 
@@ -560,6 +560,6 @@ In Pulumi HCL, the asset and archive functions resolve relative paths against th
 ## Learn more
 
 - [Inputs and outputs](/docs/iac/concepts/inputs-outputs/) explains how resource properties flow through a Pulumi program.
-- [AWS Lambda](/docs/iac/guides/clouds/aws/lambda/) shows archives packaging serverless function code end to end.
+- [AWS Lambda](/dev/tutorials/aws-lambda/) shows archives packaging serverless function code end to end.
 - The full API surface for each language: [TypeScript and JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/asset.html), [Python](/docs/reference/pkg/python/pulumi/#pulumi.Asset), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi#Asset), [.NET](/docs/reference/pkg/dotnet/pulumi/pulumi.asset.html), and [Java](/docs/reference/pkg/java/com/pulumi/asset/package-summary.html).
 - The built-in functions for [YAML](/docs/iac/languages-sdks/yaml/yaml-language-reference/) and [Pulumi HCL](/docs/iac/languages-sdks/hcl/hcl-language-reference/).

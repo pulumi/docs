@@ -888,3 +888,125 @@ def test_approval_line_follows_scope(tmp_path, scope, teams, expected):
     proc = subprocess.run(cmd, capture_output=True, text=True)
     assert proc.returncode == 0, proc.stderr
     assert expected in brief.read_text().splitlines()
+
+
+# ---- unverifiable claims on lines the PR didn't write ----------------------
+
+# pulumi/docs#22164's shape: the PR edits L31 only; L28 and L34 are hunk
+# context the extractor read anyway.
+_CHANGELOG = "content/docs/administration/self-hosting/changelog.md"
+_UNTOUCHED_DIFF = f"""diff --git a/{_CHANGELOG} b/{_CHANGELOG}
+index 1111111..2222222 100644
+--- a/{_CHANGELOG}
++++ b/{_CHANGELOG}
+@@ -28,7 +28,7 @@ pulumi_cloud_feature: self-hosting
+ Breaking Change: the service stays compatible with 2.x.
+ {{{{< /notes >}}}}
+ 
+-* Added per-feature control of SSRF protection.
++* Added per-feature control of SSRF (server-side request forgery) protection.
+ 
+ {{{{< notes type="warning" >}}}}
+ Breaking Change: add `AGENTS_BYOK` to the list.
+"""
+
+
+def _verdict(cid, line, verdict, text):
+    return {"claim_id": cid, "file": _CHANGELOG, "line_range": line, "text": text,
+            "type": "capability", "route": "pass1", "verdict": verdict,
+            "confidence": "medium", "evidence": "only a sibling docs page says so",
+            "source": "repo:content/docs/administration/self-hosting/components/api.md"}
+
+
+def _compose_untouched(tmp_path, verdicts, diff=_UNTOUCHED_DIFF):
+    vc = tmp_path / "vc.json"
+    vc.write_text(json.dumps({"verdicts": verdicts, "errors": [], "meta": {}}))
+    author, brief, evidence = tmp_path / "a.md", tmp_path / "b.md", tmp_path / "e.json"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"),
+        "--out-author", str(author), "--out-brief", str(brief), "--out-evidence", str(evidence),
+    ])
+    cmd[cmd.index("--verified-claims") + 1] = str(vc)
+    cmd[cmd.index("--diff-files") + 1] = _CHANGELOG
+    if diff is not None:
+        d = tmp_path / "pr.diff"
+        d.write_text(diff)
+        cmd += ["--pr-diff", str(d)]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    assert "self-check failed" not in proc.stderr, proc.stderr
+    return author.read_text(), brief.read_text(), json.loads(evidence.read_text())
+
+
+_UNTOUCHED_VERDICTS = [
+    _verdict("c1", "L28", "unverifiable", "the service stays compatible with OpenSearch 2.x"),
+    _verdict("c2", "L31", "unverifiable", "SSRF control is per feature"),
+    _verdict("c3", "L34", "unverifiable", "AGENTS_BYOK is the Neo scope"),
+    _verdict("c4", "L34", "contradicted", "the deprecated variable still covers Neo"),
+]
+
+
+def test_changed_lines_count_only_what_the_pr_wrote():
+    assert cr.changed_lines_by_file(_UNTOUCHED_DIFF) == {_CHANGELOG: {31}}
+    # A deleted line that itself starts with `--` (a frontmatter fence) is
+    # hunk body, not the next file's header.
+    fence = ("--- a/x.md\n+++ b/x.md\n@@ -1,3 +1,3 @@\n title: a\n----\n+---\n body\n"
+             "--- a/y.md\n+++ b/y.md\n@@ -5,2 +5,1 @@\n keep\n-gone\n")
+    assert cr.changed_lines_by_file(fence) == {"x.md": {2}, "y.md": {6}}
+
+
+def test_untouched_unverifiable_is_preexisting_not_a_question(tmp_path):
+    author, brief, ev = _compose_untouched(tmp_path, _UNTOUCHED_VERDICTS)
+    by_text = {f["text"]: f for f in ev["findings"]}
+    buckets = {t.split(": ", 1)[-1]: f["bucket"] for t, f in by_text.items()}
+    # The two context-line unverifiables leave the author card...
+    assert buckets["the service stays compatible with OpenSearch 2.x"] == "preexisting"
+    assert buckets["AGENTS_BYOK is the Neo scope"] == "preexisting"
+    for f in ev["findings"]:
+        if f["bucket"] == "preexisting":
+            assert f["id"] not in author and f["id"] not in brief
+            assert f["text"].startswith("Unverifiable claim on a line this PR doesn't change")
+    # ...the one on the edited line stays a ❓ the author answers...
+    assert buckets["SSRF control is per feature"] == "author-answer"
+    # ...and a contradiction on an untouched line stays the model's call
+    # (an edit can make another line wrong).
+    assert buckets["the deprecated variable still covers Neo"] == "outstanding"
+    assert "**Pre-existing issues in touched files:** 2 —" in brief
+
+
+def test_untouched_unverifiable_survives_build_evidence(tmp_path):
+    author, brief, ev = _compose_untouched(tmp_path, _UNTOUCHED_VERDICTS)
+    a, b, base = tmp_path / "a2.md", tmp_path / "b2.md", tmp_path / "base.json"
+    a.write_text(author)
+    b.write_text(brief)
+    base.write_text(json.dumps(ev))
+    d = tmp_path / "pr.diff"
+    d.write_text(_UNTOUCHED_DIFF)
+    out = tmp_path / "final.json"
+    proc = subprocess.run(
+        [sys.executable, str(HERE / "build-evidence.py"),
+         "--author-body", str(a), "--brief-body", str(b), "--base", str(base),
+         "--output", str(out), "--pr-diff", str(d),
+         "--author-out", str(tmp_path / "a-clean.md"), "--brief-out", str(tmp_path / "b-clean.md")],
+        capture_output=True, text=True,
+    )
+    assert proc.returncode == 0, proc.stderr
+    final = json.loads(out.read_text())
+    assert {f["id"]: f["bucket"] for f in final["findings"]} == {f["id"]: f["bucket"] for f in ev["findings"]}
+    pre = [f for f in final["findings"] if f["bucket"] == "preexisting"]
+    assert len(pre) == 2 and not any(f.get("anchor_ok") is False for f in pre)
+    assert "**Pre-existing issues in touched files:** 2 —" in (tmp_path / "b-clean.md").read_text()
+
+
+@pytest.mark.parametrize("diff", [None, ""])
+def test_no_diff_keeps_unverifiables_on_the_card(tmp_path, diff):
+    _author, _brief, ev = _compose_untouched(tmp_path, _UNTOUCHED_VERDICTS, diff=diff)
+    assert not any(f["bucket"] == "preexisting" for f in ev["findings"])
+
+
+def test_claim_in_a_file_the_diff_does_not_touch_stays_on_the_card(tmp_path):
+    other = dict(_verdict("c9", "L5", "unverifiable", "a claim elsewhere"),
+                 file="content/docs/other.md")
+    _author, _brief, ev = _compose_untouched(tmp_path, [other])
+    claims = [f for f in ev["findings"] if f["origin"].startswith("verdict:")]
+    assert [f["bucket"] for f in claims] == ["author-answer"]

@@ -98,7 +98,7 @@ At this critical juncture, BMW discovered Pulumi. This modern IaC solution offer
 
 ## Embracing Pulumi: Streamlining Infrastructure Management
 
-[BMW's adoption of Pulumi](https://www.pulumi.com/case-studies/bmw/) was a strategic move that aimed to address the growing complexity of its software ecosystem. By transitioning from a patchwork of tools to a unified IaC solution, the company was able to streamline its infrastructure management and improve developer productivity.
+[BMW's adoption of Pulumi](https://www.pulumi.com/customers/bmw/) was a strategic move that aimed to address the growing complexity of its software ecosystem. By transitioning from a patchwork of tools to a unified IaC solution, the company was able to streamline its infrastructure management and improve developer productivity.
 
 ### Shared Modules: Promoting Reusability and Best Practices
 
@@ -117,7 +117,7 @@ BMW used Pydantic, a data validation library, to define schema-based configurati
 ### Policy Enforcement: Ensuring Compliance and Security
 
 One key benefit of [Pulumi's IaC approach](https://www.pulumi.com/product/infrastructure-as-code/) is the ability to define and enforce policies across the organization, ensuring that infrastructure deployments adhere to security and compliance standards.
-BMW has leveraged [Pulumi's policy-as-code](/docs/discovery-governance/policy/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resources.
+BMW has leveraged [Pulumi's policy-as-code](/docs/discovery-governance/concepts/policy-as-code/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resources.
 
 - By integrating these policy checks into their deployment workflows, BMW has shifted security and compliance concerns to the left, addressing issues early in the development process and reducing the risk of costly post-deployment [remediations](https://www.pulumi.com/blog/remediation-policies/).
 

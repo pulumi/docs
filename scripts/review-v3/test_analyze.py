@@ -559,7 +559,10 @@ def test_handed_off_teams_map_through_routing():
              stampable(2, title="Marketing's", requested_teams=["docs-marketing-review"], files=[_file("content/docs/b.md", ["x"])])],
             cfg=cfg(me=["docs"]))
     assert row(q, 1)["handed_off"] is False  # docs-guild owns a lane in me
-    assert row(q, 2)["handed_off_to"] == ["@docs-marketing-review"]
+    assert row(q, 2)["handed_off"] is False  # a docs row is mine whichever team is also asked
+    q = run([stampable(3, title="Blog's", requested_teams=["docs-blog-review"], files=[_file("content/blog/x/index.md", ["x"])])],
+            cfg=cfg(me=["docs"]))
+    assert row(q, 3)["handed_off_to"] == ["@docs-blog-review"]  # not my lane: the team request still hands it off
     assert analyze.team_lanes("docs-tools", CONFIG) == {"infra", "other"} and analyze.team_lanes("nope", CONFIG) == set()
 
 
@@ -1436,3 +1439,18 @@ def test_a_review_that_parsed_into_nothing_is_never_stampable():
     p = row(q, 1)
     assert p["verdict"] == "judge" and "review:parse-confidence:low" in p["gate_fails"]
     assert "review:unreadable" not in p["blockers"]
+
+
+def test_unrequest_offered_only_when_asked_for_by_name():
+    q = run([stampable(1, requested_users=["CamSoper"]),
+             stampable(2, title="Team ask", requested_teams=["docs-guild"], files=[_file("content/docs/b.md", ["x"])]),
+             stampable(3, title="Someone else", requested_users=["cnunciato"], files=[_file("content/docs/c.md", ["x"])]),
+             stampable(4, title="Mine", author="CamSoper", author_type="User", requested_users=["CamSoper"],
+                       files=[_file("content/docs/d.md", ["x"])])])
+    ids = lambda n: [a["id"] for a in row(q, n)["actions"]]
+    assert "unrequest" in ids(1) and "requested:me" in row(q, 1)["reasons"]
+    assert next(a for a in row(q, 1)["actions"] if a["id"] == "unrequest")["cmd"] == "--unrequest 1"
+    assert "unrequest" not in ids(2)  # a team request isn't mine to drop
+    assert "unrequest" not in ids(3)
+    assert "unrequest" not in ids(4)  # my own PR
+    assert "unrequest" in analyze.DECISION_IDS

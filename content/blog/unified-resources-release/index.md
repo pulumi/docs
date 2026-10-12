@@ -78,7 +78,7 @@ When investigating issues, find all relevant information about a resource in one
 
 Unified resources are available now for all Pulumi Cloud users. Ready to see unified resources in action? Check out these resources:
 
-* [Resource search documentation](/docs/discovery-governance/discovery/search/) for search tips and filtering options
+* [Resource search documentation](/docs/discovery-governance/guides/search-resources/) for search tips and filtering options
 * [API reference](/docs/reference/cloud-rest-api/resource-search/) for programmatic access
 * [Pulumi Insights overview](/docs/discovery-governance/) for the complete platform capabilities
 

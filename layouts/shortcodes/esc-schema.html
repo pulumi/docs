@@ -49,6 +49,7 @@
         {{ partial "esc/property-rows.html" (dict
           "properties" $sub.properties
           "required" ($sub.required | default slice)
+          "rotateOnly" ($sub.rotateOnly | default slice)
         ) }}
       </ul>
     {{ else if isset $sub "additionalProperties" }}

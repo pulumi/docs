@@ -10,4 +10,4 @@ When a preview or update runs with a policy pack, the pull request comment and c
 
 The section appears on GitHub, GitLab, Bitbucket, and Azure DevOps, for previews as well as updates. Pull request comments list up to 40 violations; check run details include the full list.
 
-See the [version control integrations](/docs/integrations/version-control/) and [policy](/docs/discovery-governance/policy/) docs for details.
+See the [version control integrations](/docs/integrations/version-control/) and [policy](/docs/discovery-governance/concepts/policy-as-code/) docs for details.

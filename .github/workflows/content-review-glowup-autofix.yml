@@ -59,7 +59,10 @@ concurrency:
 jobs:
   select:
     name: Select PRs (deterministic)
-    if: vars.GLOWUP_AUTOFIX == '1'
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream sync
+    # but must not run it: the glow-up PRs it fixes are opened only by the
+    # pulumi/docs content-review lane.
+    if: github.repository == 'pulumi/docs' && vars.GLOWUP_AUTOFIX == '1'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:

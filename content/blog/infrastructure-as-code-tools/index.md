@@ -214,7 +214,7 @@ Pulumi's approach combines the best of both imperative and declarative paradigms
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
 - **Superior developer experience**: Full IDE support with IntelliSense, debugging, and refactoring
 - **Built-in testing**: [Unit and integration testing](/docs/iac/guides/testing/) for infrastructure code
-- **Policy as Code**: Enforce compliance and security policies with [CrossGuard](/docs/discovery-governance/policy/)
+- **Policy as Code**: Enforce compliance and security policies with [CrossGuard](/docs/discovery-governance/concepts/policy-as-code/)
 - **Component ecosystem**: Rich library of reusable infrastructure components
 
 Universal Language Code Examples:
@@ -487,7 +487,7 @@ Key Features:
 
 > "We use Pulumi widely at Wiz. It enabled our product to support multi-cloud and to scale quickly — scaling and driving hundreds of thousands of infrastructure updates every day."
 >
-> — Yarin Miran, Senior Software Engineer, [Wiz](https://www.pulumi.com/case-studies/wiz/)
+> — Yarin Miran, Senior Software Engineer, [Wiz](https://www.pulumi.com/customers/wiz/)
 
 Considerations:
 
@@ -1319,7 +1319,7 @@ Real-world migrations demonstrate that adoption can be remarkably fast with prop
 
 > "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
 >
-> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](https://www.pulumi.com/case-studies/starburst/)
+> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](https://www.pulumi.com/customers/starburst/)
 
 ### Migration Tools and Resources
 

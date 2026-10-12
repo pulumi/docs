@@ -110,6 +110,10 @@ To update billing information:
 
 If you need to delegate billing-only access to a team member without granting full admin rights, see [Billing Managers](/docs/administration/concepts/billing-managers/).
 
+## Viewing and downloading invoices
+
+If your organization is on a self-serve edition, you can download your invoices from the bottom of your organization's billing page. To get there, select **Settings** > **Billing & usage** in the left navigation bar, or go directly to `https://app.pulumi.com/<org-name>/settings/billing-usage`. Pulumi also emails a receipt for each invoice to your organization's billing email address.
+
 ## Changing the company name on invoices
 
 The company name that appears on Pulumi invoices is sourced from your organization's display name. To change it, update the display name. The updated name will appear on your next invoice, and updates take effect shortly after saving.

@@ -1027,12 +1027,12 @@ const devBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[
 
 if (config.devStack) {
     const devStack = new pulumi.StackReference(config.devStack);
-    const devCDN = devStack.getOutput("cloudFrontDomain");
+    const marketingCDN = devStack.getOutput("cloudFrontDomain");
 
     devOrigins.push(
         {
-            originId: devCDN,
-            domainName: devCDN,
+            originId: marketingCDN,
+            domainName: marketingCDN,
             customOriginConfig: {
                 originProtocolPolicy: "https-only",
                 httpPort: 80,
@@ -1044,14 +1044,14 @@ if (config.devStack) {
     devBehaviors.push(
         {
             ...baseCacheBehavior,
-            targetOriginId: devCDN,
+            targetOriginId: marketingCDN,
             pathPattern: "/dev*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
         {
             ...baseCacheBehavior,
-            targetOriginId: devCDN,
+            targetOriginId: marketingCDN,
             // The Dev Center (Astro) emits root-relative assets under /assets/*
             // (CSS, JS, images), so those must reach the same origin as /dev or
             // the pages render unstyled. pulumi/docs serves its own assets from
@@ -1060,6 +1060,27 @@ if (config.devStack) {
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
+        // /community moved to marketing-web, except /community/team/*, which stays
+        // here (blog bylines link to it). Exact paths, never a "/community*" wildcard:
+        // that would also take /community/team/* and the
+        // /community/community-engineering/* redirect keys away from S3.
+        ...["/community", "/community/", "/community.md", "/community/puluminaries*"].map(
+            (pathPattern) => ({
+                ...baseCacheBehavior,
+                targetOriginId: marketingCDN,
+                pathPattern,
+                cachePolicyId: thirtyMinuteCachePolicy.id,
+                originRequestPolicyId: allViewerExceptHostHeaderId,
+            }),
+        ),
+        // Exact paths: /pricing* would also take the /pricing/open-source-free-tier/ redirect off S3.
+        ...["/pricing", "/pricing/", "/pricing.md"].map((pathPattern) => ({
+            ...baseCacheBehavior,
+            targetOriginId: marketingCDN,
+            pathPattern,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+        })),
     )
 }
 
@@ -1233,8 +1254,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...baseCacheBehavior,
         cachePolicyId: tenMinuteCacheKeyPolicy.id,
         functionAssociations: [
-            // Serves index.md for the homepage, /what-is/, /product/, and /pricing/
-            // via Accept: text/markdown or the .md URL suffix. The viewer-request
+            // Serves index.md for the homepage, /what-is/, and /product/ via
+            // Accept: text/markdown or the .md URL suffix. The viewer-request
             // rewrite lands before the cache lookup, so the rewritten URI is the
             // cache key and no cache policy changes are needed.
             getMarketingMarkdownNegotiationFunctionAssociation(),

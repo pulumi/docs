@@ -18,7 +18,7 @@ aliases:
 
 ## Create a new project
 
-A [**project**](/docs/iac/concepts/projects) is a program in your chosen language that defines a collection of related cloud resources. In this step, you will create a new project.
+A [**project**](/docs/iac/concepts/projects/) is a program in your chosen language that defines a collection of related cloud resources. In this step, you will create a new project.
 
 ### Initializing your project
 
@@ -185,7 +185,7 @@ $ pulumi new kubernetes-hcl
 
 {{% /choosable %}}
 
-The `pulumi new` command interactively walks through initializing a new project, as well as creating a [**stack**](/docs/iac/concepts/stacks) and [**configuring**](/docs/iac/concepts/config) it. A stack is an instance of your project and you may have many of them -- like `dev`, `staging`, and `prod` -- each with different configuration settings.
+The `pulumi new` command interactively walks through initializing a new project, as well as creating a [**stack**](/docs/iac/concepts/stacks/) and [**configuring**](/docs/iac/concepts/config/) it. A stack is an instance of your project and you may have many of them -- like `dev`, `staging`, and `prod` -- each with different configuration settings.
 
 {{< cli-note >}}
 

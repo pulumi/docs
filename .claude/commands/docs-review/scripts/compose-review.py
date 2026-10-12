@@ -538,6 +538,102 @@ def gh_diff_text(pr: str, repo: str | None) -> str:
     return _gh(args)
 
 
+_DIFF_FILE_RE = re.compile(r"^\+\+\+ (?:b/)?(.+)$")
+_DIFF_HUNK_RE = re.compile(r"^@@ -\d+(?:,(\d+))? \+(\d+)(?:,(\d+))? @@")
+
+
+def changed_lines_by_file(diff_text: str) -> dict[str, set[int]]:
+    """{path: head-side line numbers this diff adds or modifies}.
+
+    Only `+` lines count, never the hunk's context lines: the claim extractor
+    sees the context too ("and their immediate surrounding context"), so a
+    hunk span is wider than what the PR wrote. A pure deletion marks the head
+    line it joins onto, so a claim on either side of the cut still reads as
+    touched. Every file in the diff gets a key, even one with no `+` lines.
+    Hunk bodies are consumed by their header counts, so a deleted line that
+    itself starts with `--` is never mistaken for the next file header.
+    """
+    changed: dict[str, set[int]] = {}
+    path = None
+    new_ln = old_left = new_left = 0
+    for line in (diff_text or "").splitlines():
+        if old_left > 0 or new_left > 0:
+            tag = line[:1]
+            if tag == "+":
+                changed[path].add(new_ln)
+                new_ln += 1
+                new_left -= 1
+            elif tag == "-":
+                changed[path].add(new_ln)
+                old_left -= 1
+            elif tag == "\\":
+                pass
+            else:
+                new_ln += 1
+                old_left -= 1
+                new_left -= 1
+            continue
+        m = _DIFF_FILE_RE.match(line)
+        if m:
+            path = None if m.group(1) == "/dev/null" else m.group(1)
+            if path is not None:
+                changed.setdefault(path, set())
+            continue
+        m = _DIFF_HUNK_RE.match(line)
+        if m and path is not None:
+            old_left = int(m.group(1)) if m.group(1) is not None else 1
+            new_ln = int(m.group(2))
+            new_left = int(m.group(3)) if m.group(3) is not None else 1
+    return changed
+
+
+def claim_lines(line_range: str) -> set[int]:
+    """Every head-side line a claim's `line_range` names ('L42', 'L42-47',
+    'L12, L88-90'); empty when nothing parses."""
+    out: set[int] = set()
+    for ref in line_refs(line_range):
+        nums = _lines_from_ref(ref)
+        if nums:
+            out.update(range(nums[0], nums[-1] + 1))
+    return out
+
+
+def split_untouched_unverifiable(stubs: list[dict], changed: dict[str, set[int]] | None
+                                 ) -> tuple[list[dict], list[dict]]:
+    """(kept, preexisting): pull out `unverifiable` claims on lines the PR
+    didn't write.
+
+    The extractor reads each hunk's context lines, so a claim the PR never
+    touched can come back `unverifiable` and land on the author card as a ❓
+    the author must answer before merge. pulumi/docs#22164 (2026-10-07):
+    a glow-up spelled out "SSRF" on L31, and the two breaking-change notes
+    beside it (L28, L34, written by the service engineers weeks earlier)
+    became merge blockers because the verifier can't read the private
+    service repo. An unverifiable is "nobody could check this", which the PR
+    can't have caused on a line it didn't write, so it is pre-existing by
+    definition and goes to the evidence page's 💡 bucket.
+
+    Deliberately narrow. Only `unverifiable`: a `contradicted` or `mismatch`
+    on an untouched line can be the PR's doing (an edit that makes another
+    line wrong), so those stay with the model's pre-existing judgment. Only a
+    file the diff touches, a claim whose lines parse, and a diff we actually
+    have: anything less keeps today's behavior.
+    """
+    if not changed:
+        return list(stubs), []
+    kept: list[dict] = []
+    pre: list[dict] = []
+    for s in stubs:
+        lines = s.get("lines_all") or set()
+        f = s.get("file") or ""
+        if (s.get("verdict") == "unverifiable" and f in changed and lines
+                and not (lines & changed[f])):
+            pre.append(s)
+        else:
+            kept.append(s)
+    return kept, pre
+
+
 # ---- small helpers ---------------------------------------------------------
 
 _L_TOKEN_RE = re.compile(r"L\d+(?:-\d+)?")
@@ -1383,6 +1479,7 @@ def _stub_bullet(v: dict, todo: str) -> dict:
         "origin": origin,
         "framing": redact(trunc(fn, 160)) if fn else "",
         "todo": todo,
+        "lines_all": claim_lines(v.get("line_range") or ""),
     }
 
 
@@ -1586,7 +1683,13 @@ def _prepare(args: argparse.Namespace) -> dict:
     head_sha_short = (args.head_sha_short or "").strip() or (head_sha[:8] if head_sha else "unknown")
     timestamp = (args.timestamp or "").strip() or "unknown"
 
-    if args.diff_files is not None:
+    pr_diff = getattr(args, "pr_diff", "") or ""
+    if pr_diff:
+        diff_text = Path(pr_diff).read_text(encoding="utf-8", errors="replace")
+        diff_files = (gh_diff_name_only("", None, override=args.diff_files)
+                      if args.diff_files is not None else sorted(changed_lines_by_file(diff_text)))
+        diff_unavailable = not diff_files
+    elif args.diff_files is not None:
         diff_files = gh_diff_name_only("", None, override=args.diff_files)
         diff_text = ""
         diff_unavailable = False
@@ -1709,6 +1812,7 @@ def _prepare(args: argparse.Namespace) -> dict:
         "timestamp": timestamp,
         "diff_files": diff_files,
         "diff_unavailable": diff_unavailable,
+        "changed_lines": changed_lines_by_file(diff_text) if diff_text else None,
         "is_blog": is_blog,
         "has_temporal_trigger": has_temporal_trigger,
         "has_fenced_code_in_content": has_fenced_code_in_content,
@@ -2433,7 +2537,9 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     head_sha_short = prep["head_sha_short"]
     n_claims, x_verified, y_unverifiable, z_contradicted = prep["trail_nxyz"]
 
-    author_answer_stubs, reviewer_check_stubs = split_v3_buckets(prep["lowconf_stubs"])
+    lowconf_kept, preexisting_stubs = split_untouched_unverifiable(
+        prep["lowconf_stubs"], prep["changed_lines"])
+    author_answer_stubs, reviewer_check_stubs = split_v3_buckets(lowconf_kept)
 
     link_base = (f"https://github.com/{args.repo}/pull/{args.pr}/files"
                  if args.repo and args.pr else "")
@@ -2508,6 +2614,15 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     for s in reviewer_check_stubs:
         fid, _ = _assign(s, "reviewer-check", s["bullet"])
         check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base))
+
+    # Evidence-page only: build-evidence.py carries a base `preexisting`
+    # finding through without a card row, the same place a model-filed
+    # `**Pre-existing:**` rewrite ends up.
+    for s in preexisting_stubs:
+        _, rec = _assign(s, "preexisting", s["bullet"])
+        rec["text"] = (f"Unverifiable claim on a line this PR doesn't change: "
+                       f"{s.get('text') or rec['text']}")
+    n_preexisting = len(preexisting_stubs)
 
     n_blocking = sum(1 for f in findings if f["bucket"] in ("outstanding", "author-answer"))
     high_water = next_id - 1
@@ -2747,7 +2862,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         f"- **Mechanics:** {'; '.join(mech_bits)}.",
         render_style_line(len(prep["vale_nags"]), 0),
         "",
-        "**Pre-existing issues in touched files:** 0 — details on the evidence page.",
+        f"**Pre-existing issues in touched files:** {n_preexisting} — details on the evidence page.",
         "",
         f"{EVIDENCE_LINE_PREFIX} [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
         "",
@@ -2836,9 +2951,11 @@ def v3_self_check(author_draft: str, brief_draft: str, evidence_base: dict) -> l
     ids = [f["id"] for f in evidence_base.get("findings", [])]
     if len(ids) != len(set(ids)):
         problems.append("duplicate finding ids in evidence base")
-    for fid in ids:
-        if fid not in author_draft and fid not in brief_draft:
-            problems.append(f"finding {fid} in evidence base but rendered in neither draft")
+    for f in evidence_base.get("findings", []):
+        if f.get("bucket") == "preexisting":
+            continue
+        if f["id"] not in author_draft and f["id"] not in brief_draft:
+            problems.append(f"finding {f['id']} in evidence base but rendered in neither draft")
     return problems
 
 
@@ -2945,6 +3062,7 @@ def main() -> int:
     p.add_argument("--readthrough", default=".readthrough-findings.json")
     p.add_argument("--fetched-urls", default=".fetched-urls.json")
     p.add_argument("--diff-files", help="Comma-separated changed-file list (overrides `gh pr diff --name-only`; for testing).")
+    p.add_argument("--pr-diff", default="", help="Unified diff of the PR (overrides `gh pr diff`; for testing).")
     p.add_argument("--no-validate", action="store_true", help="Skip the self-check (local debugging).")
     p.add_argument("--dry-run", action="store_true", help="Don't call gh; emit the draft only.")
     p.add_argument("--surface", choices=("v2", "v3"), default="v2",

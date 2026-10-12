@@ -173,6 +173,7 @@ tags:
     - project-scoped-stacks-in-self-managed-backend
 
   google-cloud:
+    - gcp-v10-release
     - google-cloud-7-0
     - google-cloud-pulumi-import-account-scraper
     - managing-multi-cloud-open-data-noaa
@@ -946,9 +947,11 @@ tags:
     - the-industry-comes-together-for-the-cloud-engineering-summit-2021
 
   gcp:
+    - gcp-v10-release
     - gcp-v8-release
 
   release:
+    - gcp-v10-release
     - eks-v3-release
     - azure-v6-release
     - gcp-v8-release

@@ -97,7 +97,7 @@ The panel discussed key strategies, challenges, and pillars of successful platfo
 
 - **[Developer Experience (DevEx)](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: Provide developers with the tools, frameworks, and abstractions they need to be productive and proactive without getting stuck in infrastructure or operational concerns.
 - **[Reliability and Scalability](https://www.pulumi.com/blog/pulumi-patterns-and-practices/#an-effective-internal-developer-platform)**: Ensure that the platform and infrastructure can support the organization's needs, with the ability to scale up or down as required.
-- **[Security and Compliance](/docs/discovery-governance/policy/)**: Embed robust, accessible security and compliance frameworks into the development lifecycle while making it easy for developers to adhere to these policies.
+- **[Security and Compliance](/docs/discovery-governance/concepts/policy-as-code/)**: Embed robust, accessible security and compliance frameworks into the development lifecycle while making it easy for developers to adhere to these policies.
 - **[Automation and Tooling](/docs/iac/concepts/automation-api/)**: Leverage [Infrastructure as Code (IaC)](https://www.pulumi.com/product/infrastructure-as-code/) and automation to enforce standardized processes and consistency and reduce cognitive load and manual effort.
 - **[Observability and Monitoring](https://www.pulumi.com/product/pulumi-insights/)**: Provide visibility into the platform's health and performance, delivering actionable insights that allow teams to identify and resolve issues quickly.
 
@@ -224,7 +224,7 @@ Learn how Pulumi customers build secure, scalable platforms and empower their de
 
 - **Tivity Health**: [DevSecOps Game-Changer: Security Automation That Delivers Business Results](https://www.pulumi.com/blog/devsecops-strategy-security-automation-tivity-health/)
 - **BMW Group**: [Unified and Programmatic Approach to Infrastructure Management at BMW Using Pulumi](https://www.pulumi.com/blog/unified-programmatic-approach-infrastructure-management-bmw-using-pulumi/)
-- **Lemonade**: [How the DevOps team supports a much larger group of developers](https://www.pulumi.com/case-studies/lemonade/) using by Pulumi to standardize infrastructure components and enforce best practices.
+- **Lemonade**: [How the DevOps team supports a much larger group of developers](https://www.pulumi.com/customers/lemonade/) using by Pulumi to standardize infrastructure components and enforce best practices.
 
 Discover platform engineering best practices in [The Guide to Platform Engineering: 7 Steps to Get It Right](https://www.pulumi.com/blog/the-guide-platform-engineering-idp-steps-best-practices/).
 

@@ -38,7 +38,7 @@ For asynchronous code the coroutine or other awaitable result can also be passed
 
 As covered in [Concepts](/docs/iac/concepts/), when a Pulumi program is run it creates resources and the dependencies or
 connections between them. Consider the following example (taken from the Pulumi
-blog article [Programming the Cloud with Python](/blog/programming-the-cloud-with-python)):
+blog article [Programming the Cloud with Python](/blog/programming-the-cloud-with-python/)):
 
 ```python
 import mimetypes
@@ -129,7 +129,7 @@ mycli_output = pulumi.Output.from_input(mycli_coro)
 If an output needs to be transformed, for example if a blocking call returns a
 complex object from which a value needs to be extracted (itself as a
 `pulumi.Output`) then
-[`pulumi.Output.apply`](/docs/reference/pkg/python/pulumi#pulumi.Output.apply) can
+[`pulumi.Output.apply`](/docs/reference/pkg/python/pulumi/#pulumi.Output.apply) can
 be used to transform an output value
 
 ### Asynchronous Code
@@ -183,7 +183,7 @@ Prefer `pulumi.Output.from_input` when an async value only feeds a resource inpu
 
 The examples above both use calling a local process to demonstrate a pattern that is useful in Python Pulumi programs. This applies to other blocking and async requirements too, for example if you need to call a REST API you might use `requests.get` or an async equivalent such as `httpx.AsyncClient.get`
 
-For running other processes, you can stay entirely within the Pulumi programming model by using the [Command](/registry/packages/command) package. With this package both of the examples above can be
+For running other processes, you can stay entirely within the Pulumi programming model by using the [Command](/registry/packages/command/) package. With this package both of the examples above can be
 simplified to the following:
 
 ```python
@@ -201,7 +201,7 @@ def call_my_cli(foo: str) -> Output[str]:
 mycli_output = call_my_cli('bar')
 ```
 
-If the input to the function needs to be a `pulumi.Output` itself---_i.e._ if it is the result of creating another resource, or calling another command, then we can use [`pulumi.Output.concat`](/docs/reference/pkg/python/pulumi#pulumi.Output.concat) as follows:
+If the input to the function needs to be a `pulumi.Output` itself---_i.e._ if it is the result of creating another resource, or calling another command, then we can use [`pulumi.Output.concat`](/docs/reference/pkg/python/pulumi/#pulumi.Output.concat) as follows:
 
 ```python
 import shlex

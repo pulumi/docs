@@ -198,7 +198,8 @@ def test_redispatch_job_shape():
     wf = _wf()
     job = wf["jobs"]["redispatch"]
     assert job["needs"] == "publish"
-    assert job["if"].strip() == "needs.publish.outputs.action == 'redispatch'"
+    cond = " ".join(job["if"].split())
+    assert cond == "!cancelled() && needs.publish.result == 'success' && needs.publish.outputs.action == 'redispatch'"
     assert "concurrency" not in job, "must sit outside claude-review-<pr>: the dispatched run would cancel it"
     assert job["permissions"]["actions"] == "write"
     assert job["permissions"]["contents"] == "read"
@@ -283,3 +284,24 @@ def test_card_stamp_is_taken_when_the_run_reads_the_pr():
     step = _job("claude-review")["steps"][now]
     assert step["id"] == "now"
     assert "if" not in step, "every later consumer of steps.now assumes it ran"
+
+
+def test_jobs_downstream_of_autofire_gate_survive_its_skip():
+    """autofire-gate is skipped on workflow_dispatch, and a skipped ancestor
+    fails the implicit success() check on every job below it. Without a
+    status function, #new-review and redispatch runs reviewed the PR and then
+    silently skipped publishing (#22182 regressed this)."""
+    jobs = _wf()["jobs"]
+
+    def ancestors(name):
+        needs = jobs[name].get("needs") or []
+        needs = [needs] if isinstance(needs, str) else needs
+        out = set(needs)
+        for n in needs:
+            out |= ancestors(n)
+        return out
+
+    downstream = [n for n in jobs if "autofire-gate" in ancestors(n)]
+    assert {"claude-review", "publish", "redispatch"} <= set(downstream)
+    for name in downstream:
+        assert "!cancelled()" in jobs[name].get("if", ""), name

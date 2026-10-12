@@ -193,8 +193,8 @@ class GhClient:
     def patch(self, path: str, body: dict | None = None):
         return self._request("PATCH", path, body=body or {})
 
-    def delete(self, path: str):
-        return self._request("DELETE", path)
+    def delete(self, path: str, body: dict | None = None):
+        return self._request("DELETE", path, body=body)
 
     def _request(self, method, path, *, params=None, body=None, paginate=False):
         params = dict(params or {})
@@ -458,6 +458,9 @@ class GhClient:
         if team_reviewers:
             body["team_reviewers"] = team_reviewers
         return self.post(f"repos/{self.repo}/pulls/{number}/requested_reviewers", body) or {}
+
+    def remove_requested_reviewers(self, number: int, reviewers: list[str]) -> dict:
+        return self.delete(f"repos/{self.repo}/pulls/{number}/requested_reviewers", {"reviewers": reviewers}) or {}
 
     def rerun_failed_jobs(self, run_id: int) -> dict:
         return self.post(f"repos/{self.repo}/actions/runs/{run_id}/rerun-failed-jobs") or {}

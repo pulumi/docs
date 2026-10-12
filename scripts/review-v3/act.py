@@ -63,6 +63,10 @@ command the board composed, which is why a plan names its PRs one by one:
                      newest run per workflow that concluded failure); the
                      unblock on a red-CI row. A red commit status has no run
                      to re-run, and the step says so instead of guessing.
+  --unrequest N      remove me from the PR's requested reviewers. Only where
+                     I was asked by name: a team request isn't mine to drop.
+                     A decision like --route -- it says the row isn't mine --
+                     and it posts no comment.
   --render N         screenshot the preview pages (screenshot.mjs + Playwright).
   --deploy N         dispatch testing-build-and-deploy.yml at the head branch.
   --reason TEXT | N=TEXT   what to say on a request-changes, refresh, rerun or
@@ -119,7 +123,7 @@ SHOTS_DIR = _REPO_ROOT / ".pr-review-shots"
 PLAN_SCHEMA = 2  # 2: every body is rendered into step.args at plan time; steps can `requires` another
 COMMIT_TRAILER_ENV = "PR_REVIEW_COMMIT_TRAILER"  # e.g. "Co-Authored-By: …"; appended to commits act.py makes
 # A PR takes one decision; two of these on the same PR contradict each other.
-DECISION_KINDS = ("stamp", "request-changes", "close", "route")
+DECISION_KINDS = ("stamp", "request-changes", "close", "route", "unrequest")
 # The steps a --reason can land on. A close with --superseded-by writes its own.
 REASON_KINDS = ("request-changes", "refresh", "rerun", "close")
 # The Sentinel concludes failure until an approval exists, so it can't gate
@@ -466,12 +470,18 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
                                               "triage-prose": "only the triage prose check ran"}.get(status, f"the review is {status}")))
     for n in _listed(args.rerun_checks):
         steps.append(step("rerun-checks", n))
+    for n in _listed(args.unrequest):
+        pr = pr_of(n)
+        if not any(a.get("id") == "unrequest" for a in pr.get("actions") or []):
+            raise ActError(f"--unrequest {n}: you aren't a requested reviewer on #{n} by name "
+                           f"(a team request isn't yours to drop)")
+        steps.append(step("unrequest", n))
     for n in _listed(args.render):
         steps.append(step("render", n, pages=(pr_of(n).get("preview") or {}).get("pages") or []))
     for n in _listed(args.deploy):
         steps.append(step("deploy", n))
     if not steps:
-        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --ask-fix / --refresh / --rerun / --rerun-checks / --render / --deploy")
+        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --ask-fix / --refresh / --rerun / --rerun-checks / --unrequest / --render / --deploy")
     steps = _dedupe(steps)
     _assign_reasons(steps, by, scoped_reasons, bare_reasons)
     for s in steps:
@@ -602,6 +612,9 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
         elif s.kind == "rerun-checks":
             lines.append(f"     preflight: open, head == {head}")
             lines.append(f"     GET actions/runs?head_sha={head}; POST actions/runs/<id>/rerun-failed-jobs for each newest failed run per workflow")
+        elif s.kind == "unrequest":
+            lines.append("     preflight: open")
+            lines.append("     DELETE requested_reviewers: me (no comment)")
         elif s.kind == "render":
             lines.append(f"     screenshot {len(s.args.get('pages') or [])} preview page(s) → {SHOTS_DIR}/{s.pr}/")
         elif s.kind == "deploy":
@@ -922,6 +935,8 @@ def execute(plan_: Plan, gh: GhClient, git: Git | None = None, *, queue: dict | 
                 ok, msg = _mention(gh, s)
             elif s.kind == "rerun-checks":
                 ok, msg = _rerun_checks(gh, s)
+            elif s.kind == "unrequest":
+                ok, msg = _unrequest(gh, s)
             elif s.kind == "render":
                 ok, msg = _render(s, node=node)
             elif s.kind == "deploy":
@@ -1111,6 +1126,24 @@ def _mention(gh: GhClient, s: Step) -> tuple[bool, str]:
     return True, {"refresh": "refresh requested",
                   "ask-fix": f"asked @claude to fix {len(s.args.get('items') or [])} finding(s) and refresh the review",
                   }.get(s.kind, "fresh review requested")
+
+
+def _unrequest(gh: GhClient, s: Step) -> tuple[bool, str]:
+    """Drop my own review request. The head doesn't matter here -- declining
+    a review is about the PR, not a commit -- so only "still open" is
+    checked, and a request that's already gone (I reviewed, or someone else
+    removed it) is a success with nothing to send."""
+    detail = gh.pr(s.pr)
+    if detail.get("state", "open") != "open":
+        return False, f"preflight refused: head-state: PR is {detail.get('state')}"
+    me = gh.me()
+    if not me:
+        return False, "can't tell who I am, so can't tell which request to drop"
+    requested = [u.get("login") for u in detail.get("requested_reviewers") or []]
+    if "requested_reviewers" in detail and not any(norm_login(u) == norm_login(me) for u in requested):
+        return True, "already not a requested reviewer"
+    gh.remove_requested_reviewers(s.pr, [me])
+    return True, f"removed @{me} from the requested reviewers"
 
 
 def _deploy(gh: GhClient, s: Step) -> tuple[bool, str]:
@@ -1321,6 +1354,7 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--reason", action="append", metavar="TEXT | N=TEXT",
                     help="for --refresh / --rerun: what changed; for --request-changes: an opening line; for --close: why. "
                          "N=TEXT scopes it to PR N; bare TEXT needs exactly one step that takes a reason")
+    ap.add_argument("--unrequest", type=int, action="append", help="remove me from N's requested reviewers (only where I was asked by name)")
     ap.add_argument("--render", type=int, action="append")
     ap.add_argument("--deploy", type=int, action="append")
     ap.add_argument("--merge-humans", action="store_true", help="squash-merge human-authored stamps too")

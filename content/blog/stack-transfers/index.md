@@ -33,7 +33,7 @@ category: product
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-Exactly 3 years ago we added support in the [Pulumi Service](/product/pulumi-service) to transfer stacks from an Individual account to a Pulumi organization and between Pulumi organizations. We heard from customers that they love this feature but found it both hard to discover and tedious when moving a large workload from one organization to another and from Individual accounts to organizations. We are excited to announce bulk stack transfer to address this feedback and a new organization set up wizard to improve discovery of the feature.
+Exactly 3 years ago we added support in the [Pulumi Service](/product/) to transfer stacks from an Individual account to a Pulumi organization and between Pulumi organizations. We heard from customers that they love this feature but found it both hard to discover and tedious when moving a large workload from one organization to another and from Individual accounts to organizations. We are excited to announce bulk stack transfer to address this feedback and a new organization set up wizard to improve discovery of the feature.
 
 <!--more-->
 

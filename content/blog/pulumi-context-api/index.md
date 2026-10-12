@@ -43,7 +43,7 @@ Every platform team fields the same questions: What is running? What breaks if w
 
 ## Answers that follow infrastructure relationships
 
-Pulumi already records the resources your programs manage, their dependencies, how stacks consume each other's outputs, and the resources [Pulumi Discovery](/docs/discovery-governance/discovery/) finds outside infrastructure as code (IaC). The Context API connects this data so you can ask questions that depend on the relationships:
+Pulumi already records the resources your programs manage, their dependencies, how stacks consume each other's outputs, and the resources [Pulumi Discovery](/docs/discovery-governance/concepts/discovery/) finds outside infrastructure as code (IaC). The Context API connects this data so you can ask questions that depend on the relationships:
 
 - **Impact**: Which stacks are affected if we upgrade this provider? If this stack changes, what consumes its outputs?
 - **Coverage**: How much of our infrastructure lives outside IaC, and in which accounts?
