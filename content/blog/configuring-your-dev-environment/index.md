@@ -666,13 +666,13 @@ v{{< latest-version >}}
 
 Congratulations! You have a fully configured environment, and you're ready to jump into cloud engineering. You can maintain your development environment using the package manager to add or update your toolset. Your code editor provides a modern development platform that takes advantage of all the advances in software engineering. Your coding experience will be more productive and less frustrating.
 
-What are the next steps? Begin with Pulumi's [Getting Started](/docs/get-started/). You can skip the configuration sections and jump straight into your [first project](/docs/iac/get-started/aws/). Once you're done with your first project, try out example projects on [Github](https://github.com/pulumi/examples). You can start with simple projects using the `pulumi` CLI, such as deploying a web server on AWS with python.
+What are the next steps? Begin with Pulumi's [Getting Started](/docs/get-started/). You can skip the configuration sections and jump straight into your [first project](/docs/iac/get-started/aws/). Once you're done with your first project, try out example projects on [GitHub](https://github.com/pulumi/examples). You can start with simple projects using the `pulumi` CLI, such as deploying a web server on AWS with python.
 
 ```bash
 $ pulumi new https://github.com/pulumi/examples/tree/master/aws-py-webserver
 ```
 
-This command will download the project from Github, create a virtual environment and activate it, and download all the python package dependencies. You're ready to go and deploy with `pulumi up`. Want more? How about deploying Kubernetes on Azure with python?
+This command will download the project from GitHub, create a virtual environment and activate it, and download all the python package dependencies. You're ready to go and deploy with `pulumi up`. Want more? How about deploying Kubernetes on Azure with python?
 
 ```bash
 $ pulumi new https://github.com/pulumi/examples/tree/master/azure-py-aks

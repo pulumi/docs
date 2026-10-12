@@ -24,7 +24,7 @@ It may come as no surprise that we also use Pulumi to manage Cumundi's own infra
 
 This blog post demonstrates a TDD cycle for Pulumi code with a reduced version of the code used to configure the internal infrastructure we provide for each customer. This example focuses on one specific Pulumi resource property: [`aliases`](/docs/iac/concepts/resources/#aliases).
 
-All the code is [available on Github](https://github.com/cumundi/pulumi-refactoring-aliases) if you want to follow along with a full project setup. Every step described here is committed as a separate branch with the starting point on `master`, the default branch.
+All the code is [available on GitHub](https://github.com/cumundi/pulumi-refactoring-aliases) if you want to follow along with a full project setup. Every step described here is committed as a separate branch with the starting point on `master`, the default branch.
 
 ### The Starting Point
 
