@@ -484,6 +484,7 @@ function getDefaultExcludedKeywords() {
         "https://hub.docker.com/",                                                  // blog/docker-containers: 500s to automated clients
         "https://docs.microsoft.com/",                                              // MS redirects to learn.microsoft.com and bot-protects
         "https://www.zdnet.com/",                                                   // aggressive bot protection
+        "https://www.theglobeandmail.com/investing/markets/stocks/ORCL/pressreleases/2410413/", // blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond: 404, no Wayback snapshot or equivalent replacement
         "https://gist.github.com/pulumipus/56d1ee83f295971e2a26a8091880c482",        // deleted gist in blog/automation-api-as-platform
         "https://gist.github.com/pulumipus/61edcdd8ab3f50a42b4bd34a7e1f789b",        // deleted gist in blog/automation-api-workflow
         // Dead/transient third-party links in historical blog posts (#docs-ops 2026-06-01)
