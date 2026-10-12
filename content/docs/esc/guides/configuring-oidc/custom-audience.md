@@ -196,31 +196,62 @@ If the exchange returns `400 Invalid audience`, the token's audience does not ma
 
 ## Aembit
 
-Aembit can identify a workload by an OIDC token and then issue the credentials that the workload's access policy allows.
-
-<!-- TODO(devon): this section is drafted from Aembit's public docs and was not exercised in a live tenant. Verify the trust provider type, attestation method, match rule names, client workload identifier, Edge API URL, and the audience Aembit expects. -->
+Aembit exchanges an OIDC token for an Edge API access token, then issues the credentials that an access policy grants to the workload.
 
 1. In your Aembit tenant, create a trust provider of type **OIDC ID Token**:
     - **Attestation method:** **OIDC Discovery**, with the URL `https://api.pulumi.com/oidc/v2`.
-    - **Match rules:** set **Issuer** to `https://api.pulumi.com/oidc/v2`, **Audience** to the audience you will use, and **Subject** to the subject of your environment.
+    - **Match rules:** set **Issuer** to `https://api.pulumi.com/oidc/v2`, **Audience** to your tenant URL, such as `https://<tenant>.aembit.io`, and **Subject** to the `sub` value from your environment, `pulumi:org:<org-id>:env:<environment-id>`.
 
-1. Create a client workload identified by **OIDC ID Token Subject**, with the same subject.
+    Aembit requires no particular audience and checks `aud` only when the Audience rule exists. Always add the rule, and use the same string in Pulumi ESC.
 
-1. In Pulumi ESC, mint a token with the same audience:
+    Always add the Subject rule too. A trust provider without it accepts tokens from other organizations that use the same audience. Aembit matches the subject exactly and has no wildcard form. To trust every environment in your organization, replace the Subject rule with a custom claim rule that matches the `https://pulumi.com/org_id` claim to your organization ID.
+
+1. Create a client workload identified by **OIDC ID Token Subject**, with the same subject. Do not identify it by audience or issuer: a trust provider without a Subject rule passes authentication for any Pulumi organization, and a workload identified that way then hands out its credentials.
+
+1. Create a credential provider for the credential you want to issue and a server workload for the service that uses it. Then create an access policy that connects the client workload, trust provider, credential provider, and server workload, and make it active.
+
+1. In Pulumi ESC, mint a token with the same audience and export it:
 
     ```yaml
     values:
       aembit:
         login:
           fn::open::oidc:
-            audience: <aembit-audience>
+            audience: https://<tenant>.aembit.io
             identityToken:
               version: v2
       environmentVariables:
         AEMBIT_OIDC_TOKEN: ${aembit.login}
     ```
 
-1. Send the token to the Aembit Edge API, at `https://<your-aembit-edge-url>/edge/v1/auth`, in the request body as `client.oidc.identityToken`, together with your Edge SDK `clientId`. The response contains an `accessToken` to use as a bearer token in later calls.
+1. Exchange the token for an Edge API access token. Replace `<tenant>`, `<region>`, and `<client-id>` with your values:
+
+    ```bash
+    pulumi env run <org>/<project>/<environment> -- sh -c '
+      curl -s -X POST https://<tenant>.ec.<region>.aembit.io/edge/v1/auth \
+        -H "Content-Type: application/json" \
+        -d "{\"clientId\": \"<client-id>\", \"client\": {\"oidc\": {\"identityToken\": \"$AEMBIT_OIDC_TOKEN\"}}}"'
+    ```
+
+    Write `$AEMBIT_OIDC_TOKEN`, not `${AEMBIT_OIDC_TOKEN}`, for the reason given in the Cloudsmith section.
+
+    Your tenant shows the Edge API base URL, `https://<tenant>.ec.<region>.aembit.io/edge/v1`. Call it directly; the tenant URL only redirects to it. The client ID belongs to the trust provider, not the client workload. It has the form `aembit:<region>:<tenant>:identity:oidc_id_token:<trust-provider-id>` and is shown on the trust provider's page.
+
+    The response contains an `accessToken` field. The token is valid for one hour, whatever `duration` you set.
+
+1. Request the credential from `https://<tenant>.ec.<region>.aembit.io/edge/v1/credentials`. Send the access token in the `Authorization: Bearer <token>` header. In the body, send the OIDC token again, with the server workload's host and port and the credential type:
+
+    ```json
+    {
+      "client": {"oidc": {"identityToken": "<oidc-token>"}},
+      "server": {"host": "<server-host>", "port": 443},
+      "credentialType": "ApiKey"
+    }
+    ```
+
+    Aembit checks the OIDC token again on this call. Once that token expires, the access token no longer returns credentials, so `duration` limits how long the workload can fetch credentials without a new token.
+
+If `/edge/v1/auth` returns `401 Failed to authenticate`, check the client ID, then compare the trust provider's match rules with the [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) output. Aembit returns this error for every rejection and does not say which rule failed. Unlike Cloudsmith and JFrog, it checks the discovery URL when you save the trust provider. If `/edge/v1/credentials` returns `credentialType: Unknown`, no active access policy matched; check the client workload's subject and the server host and port. Aembit accepts a token for about five minutes after it expires.
 
 ## Vault and other services
 
