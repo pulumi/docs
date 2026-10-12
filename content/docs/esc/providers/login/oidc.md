@@ -10,13 +10,9 @@ menu:
     weight: 10
 ---
 
-The `oidc` provider mints a short-lived OpenID Connect (OIDC) token for an audience you choose. You can exchange the token with any service that federates OIDC identities, such as an artifact registry, a secrets broker, or a cloud identity service. This feature is called Pulumi ESC (Environments, Secrets, and Configuration) OIDC tokens for custom audiences. The rest of this page calls it `fn::open::oidc`.
+The `oidc` provider mints a short-lived OpenID Connect (OIDC) token for an audience you choose. You can exchange the token with any service that federates OIDC identities, such as an artifact registry, a secrets broker, or a cloud identity service. For the steps to configure a service to trust these tokens, see [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
 
 The vendor login providers, such as [`aws-login`](/docs/esc/providers/login/aws-login/), exchange their token for you and return that vendor's credentials. `fn::open::oidc` returns the signed token itself, so your own code or tool does the exchange.
-
-{{< notes type="info" >}}
-Pulumi is turning on `fn::open::oidc` organization by organization. To have it turned on for your organization, [contact Pulumi](/contact/).
-{{< /notes >}}
 
 ## Examples
 
@@ -142,14 +138,6 @@ To configure a service to trust these tokens, see [Configure a relying party for
 ## Troubleshooting
 
 Pulumi checks the inputs against the schema when you save the environment, and runs the provider's own checks when you open it. Some errors below appear at save, in the console editor or from `esc env edit`, and others only at open.
-
-### Provider not enabled for the organization
-
-**Symptom:** saving or opening the environment fails with `fn::open::oidc is not enabled for organization "<org>"`.
-
-**Cause:** Pulumi has not turned on `fn::open::oidc` for your organization yet.
-
-**Fix:** [contact Pulumi](/contact/) to have it turned on.
 
 ### Environment not saved
 

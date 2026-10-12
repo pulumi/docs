@@ -10,11 +10,7 @@ menu:
     weight: 11
 ---
 
-The `debug-oidc-claims` provider previews the claims of an OpenID Connect (OIDC) token from Pulumi ESC (Environments, Secrets, and Configuration). It signs nothing and returns no credential. Use it to find the `iss`, `sub`, and `aud` values that a relying party must trust before you mint a real token with [`fn::open::oidc`](/docs/esc/providers/login/oidc/).
-
-{{< notes type="info" >}}
-Pulumi is turning on `debug-oidc-claims` together with `fn::open::oidc`, organization by organization. To have them turned on for your organization, [contact Pulumi](/contact/).
-{{< /notes >}}
+The `debug-oidc-claims` provider previews the claims of an OpenID Connect (OIDC) token from Pulumi ESC. It signs nothing and returns no credential. Use it to find the `iss`, `sub`, and `aud` values that a relying party must trust before you mint a real token with [`fn::open::oidc`](/docs/esc/providers/login/oidc/).
 
 ## Workflow
 
@@ -76,7 +72,7 @@ An object keyed by claim name, holding the claims a token would carry. Nothing i
 
 ## Preview the vendor login claims
 
-Without `identityToken`, the provider previews the claims that the vendor login providers, such as [`aws-login`](/docs/esc/providers/login/aws-login/), send from the `https://api.pulumi.com/oidc` issuer. [Default token claim](/docs/esc/guides/configuring-oidc/#default-token-claim) describes those claims. In this form, set `audiencePrefix` (required) and optionally `subjectAttributes`. The provider refuses `audience` and `duration` here. Like the v2 form, this one works only in organizations that have `debug-oidc-claims` turned on.
+Without `identityToken`, the provider previews the claims that the vendor login providers, such as [`aws-login`](/docs/esc/providers/login/aws-login/), send from the `https://api.pulumi.com/oidc` issuer. [Default token claim](/docs/esc/guides/configuring-oidc/#default-token-claim) describes those claims. In this form, set `audiencePrefix` (required) and optionally `subjectAttributes`. The provider refuses `audience` and `duration` here.
 
 ```yaml
 values:

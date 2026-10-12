@@ -10,11 +10,7 @@ menu:
     weight: 8
 ---
 
-Pulumi ESC (Environments, Secrets, and Configuration) OIDC tokens for custom audiences let an environment mint an OpenID Connect (OIDC) token for any service that accepts OIDC identities. You mint the token with [`fn::open::oidc`](/docs/esc/providers/login/oidc/). The service that accepts the token is the relying party. This guide shows how to configure a relying party to trust `fn::open::oidc` tokens, with examples for Cloudsmith, JFrog Artifactory, and Aembit. For AWS, Azure, and Google Cloud, use the vendor login providers such as [`aws-login`](/docs/esc/providers/login/aws-login/) instead; they exchange the token for cloud credentials for you.
-
-{{< notes type="info" >}}
-Pulumi is turning on `fn::open::oidc` organization by organization. To have it turned on for your organization, [contact Pulumi](/contact/).
-{{< /notes >}}
+A Pulumi ESC environment can mint an OpenID Connect (OIDC) token for any service that accepts OIDC identities. You mint the token with [`fn::open::oidc`](/docs/esc/providers/login/oidc/). The service that accepts the token is the relying party. This guide shows how to configure a relying party to trust `fn::open::oidc` tokens, with examples for Cloudsmith, JFrog Artifactory, and Aembit. For AWS, Azure, and Google Cloud, use the vendor login providers such as [`aws-login`](/docs/esc/providers/login/aws-login/) instead; they exchange the token for cloud credentials for you.
 
 `fn::open::oidc` tokens use a different issuer and subject from the tokens that the vendor login providers, such as `aws-login`, send. A relying party that you configured for a vendor login provider does not accept them. For the differences, see [Token issuers](/docs/esc/guides/configuring-oidc/#token-issuers).
 
@@ -45,8 +41,6 @@ To copy the subject for an environment, use one of these methods:
       -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
       https://api.pulumi.com/api/esc/environments/<org>/<project>/<environment>/metadata
     ```
-
-The console and the API show the subject only for organizations that have `fn::open::oidc` turned on.
 
 Copy the subject from the environment that declares the `fn::open::oidc` block. An environment that only imports the block also shows a subject, but no token carries it.
 
