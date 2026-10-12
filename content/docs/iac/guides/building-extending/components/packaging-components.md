@@ -77,7 +77,7 @@ Pulumi Cloud customers can publish versions of the package to the Pulumi IDP Pri
 An executable-based plugin package is a [Pulumi package](/docs/iac/concepts/packages/) whose plugin is a pre-built executable — typically a Pulumi [provider](/docs/iac/concepts/providers/). The executable has no consumer-side runtime dependencies, and the package can expose [components, custom resources, and functions](/docs/iac/concepts/resources/#resources) together. Because the authoring and CI/CD overhead is higher (and most such packages are written in Go), this approach fits very large organizations distributing to many teams and languages, environments where the source-based runtime dependencies aren't acceptable, or components intended for public release in the Pulumi Registry. For more information, see [Authoring an executable plugin package](/docs/iac/guides/building-extending/packages/executable-plugin/).
 
 {{% notes type="info" %}}
-To publish a component for public consumption in the [Pulumi Registry](/registry), author it as an executable-based plugin package in Go and publish per-language SDKs to the public feeds (npmjs.org, PyPI, etc.). See [Publishing Pulumi packages](/docs/iac/guides/building-extending/packages/publishing-packages/).
+To publish a component for public consumption in the [Pulumi Registry](/registry/), author it as an executable-based plugin package in Go and publish per-language SDKs to the public feeds (npmjs.org, PyPI, etc.). See [Publishing Pulumi packages](/docs/iac/guides/building-extending/packages/publishing-packages/).
 {{% /notes %}}
 
 ### Distribution and consumption

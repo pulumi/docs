@@ -1002,7 +1002,7 @@ production stack, `staging` to each staging stack, and so on. Then in Pulumi Clo
 `Tag: environment`.
 
 Tags aren't only for grouping. On the [Pulumi Pro or Enterprise editions](/pricing/), they also drive
-[tag-based (ABAC) rules](/docs/administration/concepts/rbac/roles#tag-based-abac-rules) in Pulumi Cloud RBAC, so
+[tag-based (ABAC) rules](/docs/administration/concepts/rbac/roles/#tag-based-abac-rules) in Pulumi Cloud RBAC, so
 you can grant permissions by tag — for example, giving a team access to every stack tagged `team: payments` — instead of
 enumerating each stack individually. As new stacks pick up the tag, they inherit the access automatically.
 

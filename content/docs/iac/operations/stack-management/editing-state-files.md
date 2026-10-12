@@ -23,7 +23,7 @@ You might need to edit your state file in the following situations:
 
 - You want to move resources between stacks in the course of refactoring your Pulumi codebase(s)
 - You need to unprotect resources from deletion
-- A Pulumi command fails with an error indicating a corrupt state, for example if you see [an I/O error with the text `after mutation of snapshot`](/docs/iac/troubleshooting#post-step-event), which can occur in rare scenarios like a network partition during a state file update.
+- A Pulumi command fails with an error indicating a corrupt state, for example if you see [an I/O error with the text `after mutation of snapshot`](/docs/iac/troubleshooting/#post-step-event), which can occur in rare scenarios like a network partition during a state file update.
 
 ## What to try before editing your state file
 

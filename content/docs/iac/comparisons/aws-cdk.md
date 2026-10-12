@@ -114,7 +114,7 @@ The two can also coexist — see [Adoption](#adoption-coexistence-conversion-and
 
 There are several common paths for adopting Pulumi alongside or in place of AWS CDK, and they can be combined:
 
-1. **Use AWS CDK alongside Pulumi.** The [Pulumi CDK Adapter](https://github.com/pulumi/pulumi-cdk) embeds CDK constructs directly inside Pulumi programs, so existing CDK constructs continue to work while the surrounding program is managed by Pulumi. Outputs flow in both directions between CDK constructs and other Pulumi resources. See [Using Pulumi with AWS CDK](/docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/using-pulumi-cdk/) and the [Pulumi CDK guide](/docs/iac/guides/clouds/aws/cdk/).
+1. **Use AWS CDK alongside Pulumi.** The [Pulumi CDK Adapter](https://github.com/pulumi/pulumi-cdk) embeds CDK constructs directly inside Pulumi programs, so existing CDK constructs continue to work while the surrounding program is managed by Pulumi. Outputs flow in both directions between CDK constructs and other Pulumi resources. See [Using Pulumi with AWS CDK](/docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/using-pulumi-cdk/) and the [Pulumi CDK guide](/dev/tutorials/aws-cdk/).
 1. **Import existing resources.** [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/) bring already-provisioned AWS resources under Pulumi management and generate the corresponding code in your chosen language.
 1. **Automated migration with Pulumi Neo (recommended).** [Pulumi Neo](/product/neo/) automates the conversion of an existing CDK application — converting code, importing existing CloudFormation resources, and running `pulumi preview` to verify zero changes — without downtime. See [Migrating existing AWS CDK applications to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/migrating-existing-cdk-app/).
 
@@ -124,7 +124,7 @@ For a complete walkthrough, see [Migrating from AWS CDK to Pulumi](/docs/iac/gui
 
 ### Can Pulumi run AWS CDK constructs?
 
-Yes. The [Pulumi CDK Adapter](https://github.com/pulumi/pulumi-cdk) embeds CDK constructs directly inside Pulumi programs, so existing CDK constructs and stacks can be referenced from a Pulumi program. Outputs from CDK constructs can feed other Pulumi resources, and outputs from Pulumi resources can feed CDK constructs. See the [Pulumi CDK guide](/docs/iac/guides/clouds/aws/cdk/) for details.
+Yes. The [Pulumi CDK Adapter](https://github.com/pulumi/pulumi-cdk) embeds CDK constructs directly inside Pulumi programs, so existing CDK constructs and stacks can be referenced from a Pulumi program. Outputs from CDK constructs can feed other Pulumi resources, and outputs from Pulumi resources can feed CDK constructs. See the [Pulumi CDK guide](/dev/tutorials/aws-cdk/) for details.
 
 ### How do I migrate from AWS CDK to Pulumi?
 

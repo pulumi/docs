@@ -23,7 +23,7 @@ Each transformation is a callback that gets invoked by the Pulumi runtime. It re
 {{% notes type="warning" %}}
 Transformations will be deprecated in the future in favor of [Transforms](/docs/iac/concepts/resources/options/transforms/).
 
-Transforms support modifying child resources of packaged components (such as those in [awsx](/registry/packages/awsx) and [eks](/registry/packages/eks)) whereas Transformations do not.
+Transforms support modifying child resources of packaged components (such as those in [awsx](/registry/packages/awsx/) and [eks](/registry/packages/eks/)) whereas Transformations do not.
 
 See [Migrating from Transformations to Transforms](#migrating-from-transformations-to-transforms) below for guidance on how to migrate from Transformations to Transforms.
 {{% /notes %}}
