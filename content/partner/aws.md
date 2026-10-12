@@ -43,8 +43,8 @@ sections:
     title: From training clusters to billions of inference requests
     lead: How AI teams scale infrastructure from research to production
     description: Go from rapid research to production-scale training clusters without rebuilding your infrastructure. Pulumi gives you one programmable model for GPUs, Kubernetes, orchestration, and automation across AWS.
-    cta_primary_text: See how teams build AI at scale
-    cta_primary_link: /product/superintelligence-infrastructure/
+    cta_primary_text: Read why AI needs new infrastructure
+    cta_primary_link: /blog/the-superintelligence-flywheel/
     anchor: ai-infrastructure
 
   - type: section_header
