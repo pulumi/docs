@@ -41,7 +41,7 @@ With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC s
 
 ## Why the stored key is the weak link
 
-A stored key for a registry or a secrets broker sits in ESC until someone rotates it. It works for anyone who reads it, from any machine, for as long as it exists. When it leaks, you learn about it from the audit log or the bill, and the fix is a rotation that touches every consumer.
+A stored key for a registry or a secrets broker sits in ESC until someone rotates it. It works for anyone who reads it, from any machine, for as long as it exists. If it leaks, you must rotate the key which affects every consumer of the environment.
 
 An OIDC token works the other way around. ESC mints it at the moment you open the environment, signs it with a key only Pulumi holds, and stamps it with an expiry. The service checks the signature and the claims, then issues a credential with its own lifetime. You store nothing, so you rotate nothing.
 
