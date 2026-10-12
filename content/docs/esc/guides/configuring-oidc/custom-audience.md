@@ -48,7 +48,9 @@ To copy the subject for an environment, use one of these methods:
 
 The console and the API show the subject only for organizations that have `fn::open::oidc` turned on.
 
-The subject uses IDs, not names, so it does not change when you rename the organization or the environment. Because of that, a wildcard such as `pulumi:org:<org-name>:*` does not match anything. To trust every environment in an organization, match the subject prefix `pulumi:org:<org-id>:env:` where the relying party supports prefix or wildcard matching.
+Copy the subject from the environment that declares the `fn::open::oidc` block. An environment that only imports the block also shows a subject, but no token carries it.
+
+The subject uses IDs, not names, so it does not change when you rename the organization or the environment. Because of that, a wildcard such as `pulumi:org:<org-name>:*` does not match anything. To trust every environment in an organization, match the subject prefix `pulumi:org:<org-id>:env:` where the relying party supports prefix or wildcard matching. In Vault, for example, set `bound_claims_type=glob` and bind `sub` to `pulumi:org:<org-id>:env:*`.
 
 ## Token claims
 
@@ -67,6 +69,8 @@ The subject uses IDs, not names, so it does not change when you rename the organ
 | `https://pulumi.com/actor` | The login of the user whose credentials opened the environment. |
 
 Base your trust rules on `iss`, `aud`, and `sub`. Names can change, but IDs do not. The `subjectAttributes` input of the vendor login providers does not apply to these tokens.
+
+Always pin the trust rule to `sub` or to `https://pulumi.com/org_id`. Every Pulumi organization shares this issuer, and any organization can mint a token for any audience. A rule that checks only `iss` and `aud` accepts tokens from every organization that uses the same audience. Some relying parties, AWS IAM among them, cannot read the `https://pulumi.com/` claims and match only `iss`, `aud`, and `sub`. Pin `sub` for those.
 
 ## Verify the claims before you mint a token
 
@@ -171,15 +175,67 @@ Aembit can identify a workload by an OIDC token and then issue the credentials t
 
 ## Vault and other services
 
-<!-- TODO(devon): verify the Vault JWT auth settings (oidc_discovery_url, bound_issuer, bound_audiences, user_claim, bound_subject) and the one-issuer-per-mount statement against HashiCorp's docs. -->
+Most other services accept OIDC tokens through a JSON Web Token (JWT) authentication method. For the [JWT auth method](https://developer.hashicorp.com/vault/docs/auth/jwt) in HashiCorp Vault:
 
-Most other services accept OIDC tokens through a JSON Web Token (JWT) authentication method, such as the [JWT auth method](https://developer.hashicorp.com/vault/docs/auth/jwt) in HashiCorp Vault. Configure it with these values:
+1. Mount the method and point it at the issuer:
 
-- **Discovery URL and bound issuer:** `https://api.pulumi.com/oidc/v2`
-- **Bound audience:** your `audience` input
-- **Subject:** bind the role to the exact `sub` value, or use `sub` as the user claim
+    ```bash
+    vault auth enable -path=pulumi-esc jwt
+    vault write auth/pulumi-esc/config \
+      oidc_discovery_url=https://api.pulumi.com/oidc/v2 \
+      bound_issuer=https://api.pulumi.com/oidc/v2
+    ```
 
-If you already use [`vault-login`](/docs/esc/providers/login/vault-login/), mount a second JWT auth method for these tokens, because one mount trusts one issuer.
+1. Create a role that binds the audience and the subject. Vault requires `bound_audiences`, and `role_type` must be `jwt`:
+
+    ```bash
+    vault write auth/pulumi-esc/role/my-env \
+      role_type=jwt \
+      bound_audiences=<your-audience> \
+      user_claim=sub \
+      bound_subject=pulumi:org:<org-id>:env:<environment-id> \
+      token_policies=<policy> \
+      token_ttl=15m
+    ```
+
+    To trust every environment in the organization, bind the organization ID instead of the subject. Vault takes `bound_claims` only as JSON:
+
+    ```bash
+    vault write auth/pulumi-esc/role/my-org - <<'EOF'
+    {
+      "role_type": "jwt",
+      "bound_audiences": ["<your-audience>"],
+      "user_claim": "sub",
+      "bound_claims": {"https://pulumi.com/org_id": "<org-id>"},
+      "token_policies": ["<policy>"]
+    }
+    EOF
+    ```
+
+    Always set `bound_subject` or `bound_claims`. A role that binds only the audience accepts tokens from any Pulumi organization. `user_claim` names the login entity and restricts nothing.
+
+1. In Pulumi ESC, mint a token with the same audience and export it:
+
+    ```yaml
+    values:
+      vault:
+        login:
+          fn::open::oidc:
+            audience: <your-audience>
+            identityToken:
+              version: v2
+      environmentVariables:
+        VAULT_JWT: ${vault.login}
+    ```
+
+1. Log in with the token:
+
+    ```bash
+    pulumi env run <org>/<project>/<environment> -- sh -c \
+      'vault write auth/pulumi-esc/login role=my-env jwt="$VAULT_JWT"'
+    ```
+
+If you already use [`vault-login`](/docs/esc/providers/login/vault-login/), mount this method at a separate path. The `vault-login` mount is configured for the `https://api.pulumi.com/oidc` issuer, and its roles expect that issuer's subjects.
 
 ## Learn more
 

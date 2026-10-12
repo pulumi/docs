@@ -79,6 +79,8 @@ Tokens from the vendor login providers include the following claims. Most of the
 |:--------------|:------------|
 | aud           | _(Audience)_ The name of the organization associated with the environment prefixed with the provider's platform name (`aws:{org}`, `azure:{org}`, `gcp:{org}`).<br><br>Built from [`context.pulumi.organization.login`](/docs/esc/concepts/builtin-properties/#context-pulumi-organization-login). |
 | iss           | _(Issuer)_ The issuer of the OIDC token: `https://api.pulumi.com/oidc`. |
+| org           | _(Organization)_ The name of the organization associated with the environment.<br><br>Built from [`context.pulumi.organization.login`](/docs/esc/concepts/builtin-properties/#context-pulumi-organization-login). |
+| env           | _(Environment)_ The name of the root environment, without the `default/` project prefix. |
 | current_env   | _(Current Environment)_ The name of the environment where the [ESC OIDC provider configuration](/docs/esc/integrations/) is defined.<br><br>Built from [`context.currentEnvironment.name`](/docs/esc/concepts/builtin-properties/#context-currentEnvironment-name). |
 | root_env      | _(Root Environment)_ The name of the environment that is opened first. This Root Environment in turn opens other imported environments.<br><br>Built from [`context.rootEnvironment.name`](/docs/esc/concepts/builtin-properties/#context-rootEnvironment-name). |
 | trigger_user  | _(Trigger User)_ The user whose credentials are used to open an environment.<br><br>Built from [`context.pulumi.user.login`](/docs/esc/concepts/builtin-properties/#context-pulumi-user-login). |

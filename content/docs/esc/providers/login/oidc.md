@@ -51,6 +51,8 @@ values:
           version: v2
 ```
 
+The relying party applies its own clock-skew allowance, so it may accept a token for a few minutes after `exp`. The lifetime of the credential you exchange the token for is set by the relying party, not by `duration`.
+
 ### Pass the token to a command
 
 Export the token as an environment variable, then run your tool with [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run/):
@@ -66,6 +68,8 @@ values:
   environmentVariables:
     REGISTRY_OIDC_TOKEN: ${registry.login}
 ```
+
+Write `$REGISTRY_OIDC_TOKEN`, not `${REGISTRY_OIDC_TOKEN}`, inside a command you pass to `pulumi env run`. The CLI expands `${NAME}` itself before the command runs, so the shell gets an empty value.
 
 If a tool reads the token from a file, use the [`files`](/docs/esc/concepts/outputs/#files) reserved property instead. `pulumi env run` writes the token to a temporary file and sets the named variable to that file's path:
 
@@ -112,7 +116,7 @@ values:
 
 To see the claims before you mint a token, use [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) with the same inputs.
 
-Each token that `fn::open::oidc` mints adds an entry to your organization's [audit log](/docs/administration/guides/audit-logs/). The entry records the subject, audience, environment, and lifetime of the token.
+Each token that `fn::open::oidc` mints adds an entry to your organization's [audit log](/docs/administration/guides/audit-logs/). The entry records the subject, audience, environment, and lifetime of the token. Its event name is `environment-oidc-token-issued`, shown in the console as **Environment OIDC Token Issued**.
 
 ## Schema reference
 
@@ -137,9 +141,11 @@ To configure a service to trust these tokens, see [Configure a relying party for
 
 ## Troubleshooting
 
+Pulumi checks the inputs against the schema when you save the environment, and runs the provider's own checks when you open it. Some errors below appear at save, in the console editor or from `esc env edit`, and others only at open.
+
 ### Provider not enabled for the organization
 
-**Symptom:** opening the environment fails with `fn::open::oidc is not enabled for organization "<org>"`.
+**Symptom:** saving or opening the environment fails with `fn::open::oidc is not enabled for organization "<org>"`.
 
 **Cause:** Pulumi has not turned on `fn::open::oidc` for your organization yet.
 
@@ -155,17 +161,17 @@ To configure a service to trust these tokens, see [Configure a relying party for
 
 ### Input refused
 
-**Symptom:** opening fails with `fn::open::oidc does not accept subjectAttributes` or `fn::open::oidc does not accept an input named "<name>"`.
+**Symptom:** saving fails with `missing required properties: audience`, `expected a string of at most length 512`, or `expected "v2"`. Opening fails with `fn::open::oidc does not accept subjectAttributes: a v2 token's subject is always the environment's ID`, `fn::open::oidc does not accept an input named "<name>"`, or `audience must not be blank`.
 
-**Cause:** `fn::open::oidc` accepts only `audience`, `identityToken.version`, and `duration`. The vendor login providers accept `subjectAttributes`, but this provider does not.
+**Cause:** `fn::open::oidc` accepts only `audience`, `identityToken.version`, and `duration`, and the `audience` must be 1 to 512 bytes and not blank. The vendor login providers accept `subjectAttributes`, but this provider does not.
 
-**Fix:** remove the input. To restrict which environments the relying party trusts, match the exact `sub` claim instead.
+**Fix:** add the missing input, or remove the refused one. To restrict which environments the relying party trusts, match the exact `sub` claim instead.
 
 ### Duration out of range
 
-**Symptom:** opening fails with `duration must be between 1m0s and 1h0m0s`.
+**Symptom:** saving fails with `string must match the pattern "^([0-9]+h)?([0-9]+m)?([0-9]+s)?$"`, or opening fails with `duration must be between 1m0s and 1h0m0s`.
 
-**Fix:** set `duration` to a value from `1m` to `1h`, or remove it to use the one-hour default.
+**Fix:** write `duration` as hours, minutes, and seconds, such as `15m` or `1h`, from `1m` to `1h`, or remove it to use the one-hour default.
 
 ### Relying party rejects the token
 

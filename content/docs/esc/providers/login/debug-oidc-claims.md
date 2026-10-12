@@ -76,7 +76,7 @@ An object keyed by claim name, holding the claims a token would carry. Nothing i
 
 ## Preview the vendor login claims
 
-Without `identityToken`, the provider previews the claims that the vendor login providers, such as [`aws-login`](/docs/esc/providers/login/aws-login/), send from the `https://api.pulumi.com/oidc` issuer. [Default token claim](/docs/esc/guides/configuring-oidc/#default-token-claim) describes those claims. In this form, set `audiencePrefix` (required) and optionally `subjectAttributes`. The provider refuses `audience` and `duration` here.
+Without `identityToken`, the provider previews the claims that the vendor login providers, such as [`aws-login`](/docs/esc/providers/login/aws-login/), send from the `https://api.pulumi.com/oidc` issuer. [Default token claim](/docs/esc/guides/configuring-oidc/#default-token-claim) describes those claims. In this form, set `audiencePrefix` (required) and optionally `subjectAttributes`. The provider refuses `audience` and `duration` here. Like the v2 form, this one works only in organizations that have `debug-oidc-claims` turned on.
 
 ```yaml
 values:
@@ -84,3 +84,25 @@ values:
     fn::open::debug-oidc-claims:
       audiencePrefix: aws
 ```
+
+This preview omits `iss`, `iat`, and `exp`. The signed vendor tokens carry them.
+
+## Troubleshooting
+
+With `identityToken.version` set to `v2`, the provider refuses the same inputs as `fn::open::oidc`, with `debug-oidc-claims` in the message. See [its troubleshooting section](/docs/esc/providers/login/oidc/#troubleshooting).
+
+### Inputs from the wrong form
+
+**Symptom:** opening fails with `fn::open::debug-oidc-claims accepts audience only with identityToken.version: v2; the legacy v1 preview takes audiencePrefix`, the same message for `duration`, or `audiencePrefix is required for the legacy v1 preview; set identityToken.version: v2 for the v2 preview`.
+
+**Cause:** `identityToken` selects the form. With it, the provider takes the `fn::open::oidc` inputs. Without it, the provider takes `audiencePrefix` and `subjectAttributes`.
+
+**Fix:** to preview a `fn::open::oidc` token, add `identityToken.version: v2` and remove `audiencePrefix`. To preview the vendor login claims, remove `audience` and `duration` and set `audiencePrefix`.
+
+### Environment not saved
+
+**Symptom:** opening fails with `fn::open::debug-oidc-claims cannot run in an unsaved environment document; save the environment and import it`.
+
+**Cause:** the v2 subject uses the environment's ID, and an unsaved environment document has no ID yet.
+
+**Fix:** save the environment that declares the block, then open it.
