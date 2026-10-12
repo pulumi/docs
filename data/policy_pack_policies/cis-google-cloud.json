@@ -864,8 +864,8 @@
       "enforcementLevel": "advisory",
       "framework": {
         "name": "CIS",
-        "reference": "3.3",
-        "specification": "Configure data access control lists based on a user's need to know. Apply data access control lists, also known as access permissions, to local and remote file systems, databases, and applications.",
+        "reference": "3.4",
+        "specification": "Retain data according to the enterprise's documented data management process. Data retention must include both minimum and maximum timelines.",
         "version": "8.1"
       },
       "message": "",
@@ -3107,6 +3107,6 @@
       "severity": "high"
     }
   ],
-  "version": 4,
-  "versionTag": "1.0.3"
+  "version": 5,
+  "versionTag": "1.1.0"
 }

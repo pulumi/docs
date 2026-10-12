@@ -157,7 +157,7 @@
             "type": "string"
           },
           "exemptMethods": {
-            "description": "List of method paths to exempt from encryption requirement",
+            "description": "List of method paths to exempt from encryption requirement, spelled {resource_path}/{http_method} (for example health/GET)",
             "items": {
               "type": "string"
             },
@@ -654,7 +654,7 @@
       },
       "description": "Ensures CloudTrail is enabled with at least one active trail for audit logging.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "CIS",
         "reference": "8.2",
@@ -750,7 +750,7 @@
       },
       "message": "",
       "name": "cloudwatch-log-group-kms-encryption-enabled",
-      "remediationSteps": "## Fix: Enable KMS Encryption for CloudWatch Log Group\n\nAdd a KMS key to your CloudWatch log group resource to enable encryption at rest:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst logGroup = new aws.cloudwatch.LogGroup(\"my-log-group\", {\n    name: \"/aws/my-application\",\n    kmsKeyId: kmsKey.arn,  // Add KMS key ARN to enable encryption\n    retentionInDays: 30,\n});\n```\n",
+      "remediationSteps": "## Fix: Enable KMS Encryption for CloudWatch Log Group\n\nSet `kmsKeyId` on the log group to the ARN of a KMS key to encrypt its log data at rest:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst logGroup = new aws.cloudwatch.LogGroup(\"my-log-group\", {\n    name: \"/aws/my-application\",\n    kmsKeyId: kmsKey.arn,  // Add KMS key ARN to enable encryption\n    retentionInDays: 365,  // cloudwatch-log-retention requires at least 365 days by default\n});\n```\n",
       "severity": "high"
     },
     {
@@ -1022,7 +1022,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures DynamoDB tables have encryption enabled using KMS keys.",
+      "description": "Ensures DynamoDB tables are encrypted with a customer managed KMS key.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -1907,6 +1907,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "Elasticsearch domains exempt from encryption at rest requirements",
             "items": {
               "type": "string"
@@ -2270,7 +2271,7 @@
             "type": "array"
           },
           "exemptSubnets": {
-            "description": "List of subnet IDs to exempt from public subnet check",
+            "description": "List of subnet IDs, or Pulumi resource names, to exempt from public subnet check",
             "items": {
               "type": "string"
             },
@@ -2360,7 +2361,7 @@
       },
       "description": "Ensures AWS GuardDuty is enabled with malware detection capabilities for threat protection.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "CIS",
         "reference": "1.2",
@@ -2551,7 +2552,7 @@
         },
         "type": "object"
       },
-      "description": "Ensure IAM policies do not contain statements with administrative access permissions for enhanced security.",
+      "description": "Ensure IAM policy documents - standalone policies and inline user, role and group policies - do not contain statements granting administrative access, whether through an administrative action, a wildcard action covering one, or NotAction.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -2562,7 +2563,7 @@
       },
       "message": "",
       "name": "iam-policy-no-statements-with-admin-access",
-      "remediationSteps": "## Fix: Avoid Administrative Actions Like \"iam:*\"\n\n```typescript\nconst policy = new aws.iam.Policy(\"limited-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"iam:GetUser\",\n                \"iam:ListAccessKeys\",\n            ],  // Specific IAM actions, not \"iam:*\"\n            Resource: \"arn:aws:iam::*:user/${aws:username}\",\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Avoid Administrative Actions Like \"iam:*\"\n\nList the actions a statement allows. An Allow with NotAction excludes actions instead, so every\nadministrative action it does not name stays granted.\n\n```typescript\nconst policy = new aws.iam.Policy(\"limited-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"iam:GetUser\",\n                \"iam:ListAccessKeys\",\n            ],  // Specific IAM actions, not \"iam:*\"\n            Resource: \"arn:aws:iam::*:user/${aws:username}\",\n        }],\n    }),\n});\n```",
       "severity": "critical"
     },
     {
@@ -2576,6 +2577,14 @@
           "allowedFullAccessActions": {
             "default": [],
             "description": "List of actions that are allowed to have full access (e.g., ['logs:*'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowedWildcardResourceActions": {
+            "default": [],
+            "description": "List of actions (wildcards supported) that may be granted on Resource \"*\", for actions that do not support resource-level permissions (e.g., ['ec2:Describe*']). An action containing a wildcard must also be listed in allowedFullAccessActions, which is a separate claim about the action's breadth.",
             "items": {
               "type": "string"
             },
@@ -2600,7 +2609,7 @@
         },
         "type": "object"
       },
-      "description": "Ensure IAM policies do not contain statements with full access permissions for enhanced security.",
+      "description": "Ensure IAM policy documents - standalone policies and inline user, role and group policies - do not contain statements granting full access, whether through a wildcard action, a wildcard resource, NotAction or NotResource.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -2611,7 +2620,7 @@
       },
       "message": "",
       "name": "iam-policy-no-statements-with-full-access",
-      "remediationSteps": "## Fix: Use Specific Actions Instead of \"service:*\"\n\n```typescript\nconst policy = new aws.iam.Policy(\"limited-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:GetObject\",\n                \"s3:PutObject\",\n                \"s3:ListBucket\",\n            ],  // Specific S3 actions instead of \"s3:*\"\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",\n                \"arn:aws:s3:::my-bucket/*\",\n            ],\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Use Specific Actions Instead of \"service:*\"\n\nList the actions a statement allows and scope Resource to specific ARNs. NotAction and NotResource\ninvert those lists, so everything they do not name stays granted. An action that supports no\nresource-level permissions can only be written against Resource \"*\"; list it in\nallowedWildcardResourceActions, and also in allowedFullAccessActions when the action itself\ncontains a wildcard.\n\n```typescript\nconst policy = new aws.iam.Policy(\"limited-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:GetObject\",\n                \"s3:PutObject\",\n                \"s3:ListBucket\",\n            ],  // Specific S3 actions instead of \"s3:*\"\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",\n                \"arn:aws:s3:::my-bucket/*\",\n            ],\n        }],\n    }),\n});\n```",
       "severity": "critical"
     },
     {
@@ -2655,7 +2664,7 @@
       },
       "description": "Ensure AWS root user has Multi-Factor Authentication (MFA) device configured for enhanced security.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "CIS",
         "reference": "5.2",
@@ -2869,7 +2878,7 @@
         },
         "type": "object"
       },
-      "description": "Ensure IAM user credentials are rotated within 90 days to prevent dormant account usage and enhance security.",
+      "description": "Ensure IAM user access keys are rotated within 90 days.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -3219,7 +3228,7 @@
       "framework": {
         "name": "CIS",
         "reference": "3.11",
-        "specification": "Encrypt Sensitive Data at Rest",
+        "specification": "Encrypt sensitive data at rest on servers, applications, and databases. Storage-layer encryption, also known as server-side encryption, meets the minimum requirement of this Safeguard. Additional encryption methods may include application-layer encryption, also known as client-side encryption, where access to the data storage device(s) does not permit access to the plain-text data.",
         "version": "8.1"
       },
       "message": "",
@@ -3493,7 +3502,7 @@
       },
       "message": "",
       "name": "rds-instance-logging-enabled",
-      "remediationSteps": "## Fix: Enable CloudWatch logs exports\n\nFor standalone RDS instances:\n\n```typescript\nconst dbInstance = new aws.rds.Instance(\"myDb\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    enabledCloudwatchLogsExports: [\"postgresql\"],  // This fixes the violation\n});\n```",
+      "remediationSteps": "## Fix: Enable CloudWatch logs exports\n\nFor standalone RDS instances:\n\n```typescript\nconst dbInstance = new aws.rds.Instance(\"myDb\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    enabledCloudwatchLogsExports: [\"postgresql\", \"upgrade\"],  // This fixes the violation\n});\n```",
       "severity": "medium"
     },
     {
@@ -3608,7 +3617,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures Redshift clusters have automatic snapshots enabled with minimum 7-day retention period.",
+      "description": "Ensures Redshift clusters have automatic snapshots enabled with a configurable minimum retention period (default 7 days).",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -3862,6 +3871,7 @@
             "type": "string"
           },
           "exemptBuckets": {
+            "default": [],
             "description": "List of bucket names exempt from encryption requirements",
             "items": {
               "type": "string"
@@ -3892,7 +3902,7 @@
       },
       "message": "",
       "name": "s3-bucket-encryption",
-      "remediationSteps": "## Fix: Enable S3 Bucket Server-Side Encryption\n\nAdd a `BucketServerSideEncryptionConfigurationV2` resource to enable server-side encryption for your S3 bucket.\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create the S3 bucket\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-bucket-name\",\n});\n\n// Add server-side encryption configuration\nconst encryptionConfig = new aws.s3.BucketServerSideEncryptionConfiguration(\"my-bucket-encryption\", {\n    bucket: bucket.id,\n    rules: [{\n        applyServerSideEncryptionByDefault: {\n            // Use AES256 for AWS-managed keys or \"aws:kms\" for KMS\n            sseAlgorithm: \"aws:kms\",\n            // Specify a customer-managed KMS key (required for compliance)\n            kmsMasterKeyId: kmsKey.arn,\n        },\n        // Enable bucket key to reduce KMS API calls and costs\n        bucketKeyEnabled: true,\n    }],\n});\n```",
+      "remediationSteps": "## Fix: Configure S3 Bucket Server-Side Encryption\n\nCreate a separate `BucketServerSideEncryptionConfigurationV2` resource for your S3 bucket with encryption rules. Use AES256 or KMS encryption:\n\n```typescript\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add encryption configuration resource\nconst bucketEncryption = new aws.s3.BucketServerSideEncryptionConfiguration(\"my-bucket-encryption\", {\n    bucket: bucket.id,\n    rules: [{\n        applyServerSideEncryptionByDefault: {\n            sseAlgorithm: \"aws:kms\", // Enable KMS encryption\n            kmsMasterKeyId: kmsKey.arn, // Specify customer-managed key\n        },\n        bucketKeyEnabled: true, // Enable bucket key for cost optimization\n    }],\n});\n```",
       "severity": "high"
     },
     {
@@ -4066,7 +4076,7 @@
       },
       "message": "",
       "name": "s3-bucket-public-read-prohibited",
-      "remediationSteps": "## Fix: Set Private ACL\n\n```typescript\nconst bucket = new aws.s3.Bucket(\"bucket\", {\n    acl: \"private\",  // Use private, not public-read\n});\n```",
+      "remediationSteps": "## Fix: Set Private ACL\n\nGrant read actions to named principals. An Allow for principal \"*\" with NotAction still grants\nevery read action it does not exclude.\n\n```typescript\nconst bucket = new aws.s3.Bucket(\"bucket\", {\n    acl: \"private\",  // Use private, not public-read\n});\n```",
       "severity": "critical"
     },
     {
@@ -4239,7 +4249,7 @@
       },
       "message": "",
       "name": "s3-bucket-ssl-enforcement-required",
-      "remediationSteps": "## Fix: Add Bucket Policy to Enforce SSL/TLS\n\nAdd a bucket policy that denies all requests made without SSL/TLS encryption:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add bucket policy to enforce SSL/TLS\nconst bucketPolicy = new aws.s3.BucketPolicy(\"my-bucket-policy\", {\n    bucket: bucket.id,\n    policy: bucket.arn.apply(arn => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Sid: \"DenyInsecureTransport\",\n            Effect: \"Deny\",\n            Principal: \"*\",\n            Action: \"s3:*\",\n            Resource: [\n                arn,\n                `${arn}/*`,\n            ],\n            Condition: {\n                Bool: {\n                    \"aws:SecureTransport\": \"false\"  // Deny when SecureTransport is false\n                }\n            }\n        }]\n    }))\n});\n```\n",
+      "remediationSteps": "## Fix: Add Bucket Policy to Enforce SSL/TLS\n\nAdd a bucket policy that denies all requests made without SSL/TLS encryption:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add bucket policy to enforce SSL/TLS\nconst bucketPolicy = new aws.s3.BucketPolicy(\"my-bucket-policy\", {\n    bucket: bucket.id,\n    policy: bucket.arn.apply(arn => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Sid: \"DenyInsecureTransport\",\n            Effect: \"Deny\",\n            Principal: \"*\",\n            Action: \"s3:*\",\n            Resource: [\n                arn,\n                `${arn}/*`,\n            ],\n            Condition: {\n                Bool: {\n                    \"aws:SecureTransport\": \"false\"  // Deny when SecureTransport is false\n                }\n            }\n        }]\n    }))\n});\n```\n\nThe equivalent `policy` written inline on the bucket resource itself is accepted too.\n",
       "severity": "high"
     },
     {
@@ -4457,7 +4467,7 @@
       },
       "description": "Ensures AWS Security Hub is enabled for continuous monitoring and security assessment.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "CIS",
         "reference": "7.1",
@@ -4992,6 +5002,6 @@
       "severity": "medium"
     }
   ],
-  "version": 3,
-  "versionTag": "1.0.2"
+  "version": 4,
+  "versionTag": "1.1.0"
 }
