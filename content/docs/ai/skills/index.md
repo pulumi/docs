@@ -113,6 +113,20 @@ codex plugin marketplace add pulumi/agent-skills
 
 Once the marketplace is registered, run `codex`, open the plugin marketplace, and pick `pulumi-migration`, `pulumi`, `pulumi-delegation`, or `pulumi-package-maintenance`. As with Claude Code, `pulumi` already includes the migration and delegation skills, so don't combine it with `pulumi-migration` or `pulumi-delegation`.
 
+### Gemini CLI
+
+Install the latest published Pulumi extension, which includes the Pulumi, migration, and delegation skills:
+
+```bash
+gemini extensions install https://github.com/pulumi/agent-skills
+```
+
+To update the extension:
+
+```bash
+gemini extensions update pulumi
+```
+
 ### Universal Installation
 
 The universal installer does not read plugin marketplace manifests. Install
