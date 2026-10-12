@@ -326,11 +326,11 @@ cta:
     - title: Pulumi MCP server
       icon: plugs-connected
       desc: Connect Claude Code, Copilot, and your own agents to your infrastructure through the Model Context Protocol.
-      href: /docs/ai/neo/integrations/mcp/
+      href: /docs/ai/integrations/external-mcp-servers/
       cta: Read the docs
     - title: Pulumi Agent Skills
       icon: head-circuit
       desc: Knowledge packages that teach Claude Code, Cursor, and other agents to build and manage infrastructure.
-      href: /docs/ai/skills/
+      href: /docs/ai/concepts/agent-skills/
       cta: Explore skills
 ---

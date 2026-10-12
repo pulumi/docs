@@ -139,7 +139,7 @@ If authorization fails with an error mentioning the redirect URI, the callback U
 
 Separately from the org-level GitHub app, individual users can complete an OAuth flow under **Settings** > **Version control** to grant Pulumi access to their personal GitHub account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
 
-Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level GitHub app continues to handle pull request comments, checks, and push-to-deploy regardless of whether you grant individual access. Triggering a [Neo code review](/docs/ai/neo/code-reviews/) requires individual access, because Neo runs the review on your behalf rather than as the shared app installation; for other Neo tasks it is optional. This option is not available for GitHub Enterprise Server. See [individual user authentication](#individual-user-authentication-for-github-enterprise-server) instead.
+Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level GitHub app continues to handle pull request comments, checks, and push-to-deploy regardless of whether you grant individual access. Triggering a [Neo code review](/docs/ai/concepts/neo/code-reviews/) requires individual access, because Neo runs the review on your behalf rather than as the shared app installation; for other Neo tasks it is optional. This option is not available for GitHub Enterprise Server. See [individual user authentication](#individual-user-authentication-for-github-enterprise-server) instead.
 
 {{% notes type="info" %}}
 To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
@@ -157,7 +157,7 @@ After installing the app, you can configure pull request behavior. Toggle these 
 
 Changes save automatically. Detailed diff requires pull request comments to be enabled. Draft pull request comments is specific to the GitHub app.
 
-[Neo code reviews](/docs/ai/neo/code-reviews/) are configured separately, under **Settings** > **Neo settings** > **Code reviews**, not in the integration settings above.
+[Neo code reviews](/docs/ai/concepts/neo/code-reviews/) are configured separately, under **Settings** > **Neo settings** > **Code reviews**, not in the integration settings above.
 
 To remove an integration, see [Uninstallation](#uninstallation).
 
