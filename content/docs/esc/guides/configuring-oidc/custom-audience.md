@@ -92,9 +92,9 @@ Use [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) to see t
 
 Cloudsmith exchanges an OIDC token for a short-lived Cloudsmith API token that belongs to a service account.
 
-<!-- TODO(devon): verify the Cloudsmith settings path, field names, and exchange request against a live workspace. They come from Cloudsmith's public docs. -->
+1. In Cloudsmith, create the service account that the token should act as. You need the Manager or Owner role in the workspace.
 
-1. In Cloudsmith, open your workspace settings, then **Authentication** > **OpenID Connect**, and create a provider:
+1. Open your workspace settings, then **Authentication** > **OpenID Connect**, create a provider, and enable it:
     - **Provider Name:** a name such as `pulumi-esc`.
     - **Provider URL:** `https://api.pulumi.com/oidc/v2`.
     - **Required OpenID Token Claims:** the `aud` and `sub` values from your environment:
@@ -106,7 +106,11 @@ Cloudsmith exchanges an OIDC token for a short-lived Cloudsmith API token that b
         }
         ```
 
-    - **Service Accounts:** the service account that the token should act as.
+    - **Service Accounts:** the service account from step 1.
+
+    Cloudsmith requires no particular audience; `aud` only has to match the audience you set in Pulumi ESC.
+
+    Always include `sub`. Every Pulumi organization shares the issuer, and any organization can mint a token for any audience, so a provider that requires only `aud` accepts tokens from other organizations. To trust every environment in your organization, end the subject with `.*`, as in `pulumi:org:<org-id>:env:.*`, or require the `https://pulumi.com/org_id` claim instead. Cloudsmith reads `.*` as a prefix match and accepts it only at the end.
 
 1. In Pulumi ESC, mint a token with the same audience and export it:
 
@@ -131,7 +135,11 @@ Cloudsmith exchanges an OIDC token for a short-lived Cloudsmith API token that b
         -d "{\"oidc_token\": \"$CLOUDSMITH_OIDC_TOKEN\", \"service_slug\": \"<service-account-slug>\"}"'
     ```
 
-    The response contains a `token` field. Send it to the Cloudsmith API in the `X-Api-Key: Bearer <token>` header.
+    Write `$CLOUDSMITH_OIDC_TOKEN`, not `${CLOUDSMITH_OIDC_TOKEN}`. `pulumi env run` interpolates the braced form itself, so the shell gets an empty value.
+
+    The response contains a `token` field. The token is valid for about two hours, whatever `duration` you set. Send it to the Cloudsmith API in the `X-Api-Key: Bearer <token>` or `Authorization: Bearer <token>` header.
+
+If the exchange returns `401 Failed to validate token`, check the provider URL, then compare the provider's claims with the [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) output. Cloudsmith returns this error for a wrong provider URL, an expired token, and a claim mismatch alike, and does not check the URL when you save the provider.
 
 ## Aembit
 
