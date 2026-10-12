@@ -343,6 +343,11 @@ class Gh:
              "-f", f"body={body}"]
         )
 
+    def delete_issue_comment(self, comment_id) -> None:
+        self._run(
+            ["api", "--method", "DELETE", f"repos/{self.repo}/issues/comments/{comment_id}"]
+        )
+
 
 # ---- Gate results -------------------------------------------------------
 
@@ -401,7 +406,16 @@ class Verdict:
 
 
 def _find_comment(comments: list[dict], marker: str) -> dict | None:
-    """The bot-authored comment carrying `marker`, oldest first.
+    """The oldest bot-authored comment carrying `marker` (see `_find_comments`)."""
+    found = _find_comments(comments, marker)
+    return found[0] if found else None
+
+
+def _find_comments(comments: list[dict], marker: str) -> list[dict]:
+    """Every bot-authored comment carrying `marker`, oldest first.
+
+    More than one means overlapping writers each created their own copy;
+    `update_status_comment` is the one caller that needs to see them all.
 
     PROVENANCE IS THE WHOLE POINT. This used to match the marker anywhere in
     any comment by anyone, and return the first hit. Comments come back
@@ -423,6 +437,7 @@ def _find_comment(comments: list[dict], marker: str) -> dict | None:
     one place that checked neither, so it is now the only reader and both
     markers come through it.
     """
+    found = []
     for c in comments:
         if (c.get("user") or {}).get("login") != BOT_LOGIN:
             continue
@@ -430,8 +445,8 @@ def _find_comment(comments: list[dict], marker: str) -> dict | None:
         # marker merely quoted inside a body is not a role comment.
         lines = [ln.strip() for ln in (c.get("body") or "").splitlines()[:3]]
         if marker in lines:
-            return c
-    return None
+            found.append(c)
+    return found
 
 
 def legacy_pages(comments: list[dict]) -> dict | None:
@@ -1279,12 +1294,26 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         acked = any(OVERSIZED_ACK in (r.get("body") or "")
                     for r in qualified_approvers)
         if acked:
-            gates.append(Gate("G5 oversized-ack", "ok", "reviewer acknowledged the skipped auto-review"))
+            gates.append(Gate("G5 oversized-ack", "ok",
+                              f"the approver confirmed a hand review with `{OVERSIZED_ACK}`"))
         else:
+            # Say who, where, and what doesn't count. "Include it in the
+            # approval body" left readers guessing which box is the body, and
+            # the near misses (a PR comment, a line comment, an approval from
+            # before the last push) all look like they should work.
+            # The CLI form is spelled out because it can't drift the way
+            # GitHub's review-button labels do.
+            number = pr.get("number") or "<number>"
             gates.append(Gate(
                 "G5 oversized-ack", "red",
-                "Oversized PR skipped auto-review — the approving reviewer must "
-                f"include `{OVERSIZED_ACK}` in the approval body.",
+                "The automated review doesn't count on an oversized PR (that's why "
+                "G1 and G2 are skipped), so whoever approves it for G3 confirms they "
+                "reviewed it by hand: submit an **Approve** review on the latest commit "
+                f"with `{OVERSIZED_ACK}` anywhere in its comment, or run "
+                f"`gh pr review {number} --approve --body {OVERSIZED_ACK}`. Already "
+                "approved? Approve again with it, or edit your approval's comment to "
+                "add it. A PR comment, a line comment, or an approval of an earlier "
+                "commit doesn't count.",
             ))
     else:
         gates.append(Gate("G5 oversized-ack", "skip", "not oversized"))
@@ -1558,17 +1587,52 @@ def render_status_comment(verdict: Verdict) -> str:
 
 def update_status_comment(gh: Gh, verdict: Verdict,
                           comments: list[dict] | None = None) -> bool:
-    """Upsert the pinned status comment. Idempotent; returns True on write."""
+    """Upsert the pinned status comment. Idempotent; returns True on write.
+
+    There is ONE status comment per PR, and overlapping runs are normal (the
+    workflow has no concurrency group), so a plain list-then-POST upsert
+    races: two runs that both list before either posts each create one.
+    That is how 6 of the 100 newest PRs on 2026-10-12 (pulumi/docs#22251,
+    #22154, …) came to carry two, created in the same second by runs that
+    started together (open as draft then mark ready; a bot lane opening and
+    labelling at once). Only the oldest copy is ever patched again, so the
+    other one froze on its first verdict and contradicted the live one for
+    the life of the PR.
+
+    So every write converges instead: keep the oldest bot copy, delete the
+    rest, and after a first POST list once more, because the run we raced
+    may have posted too. Two runs that both see the pair delete the same
+    one (the loser's DELETE 404s, which is fine) and patch the same
+    survivor. A duplicate that slips past that re-read still goes on the
+    next evaluation, which also heals PRs that already have one.
+    """
     comments = comments if comments is not None else gh.list_issue_comments()
     body = render_status_comment(verdict)
-    existing = _find_comment(comments, STATUS_MARKER)
-    if existing is None:
+    existing = _find_comments(comments, STATUS_MARKER)
+    wrote = False
+    if not existing:
         gh.post_issue_comment(body)
-        return True
-    if (existing.get("body") or "").strip() == body.strip():
-        return False
-    gh.patch_issue_comment(existing["id"], body)
-    return True
+        try:
+            existing = _find_comments(gh.list_issue_comments(), STATUS_MARKER)
+        except SentinelDataError:
+            return True  # posted; any duplicate goes on the next run
+        if len(existing) <= 1:
+            return True
+        wrote = True
+    existing = sorted(existing, key=lambda c: int(c.get("id") or 0))
+    keep, extras = existing[0], existing[1:]
+    for c in extras:
+        try:
+            gh.delete_issue_comment(c["id"])
+        except SentinelDataError as exc:
+            if "HTTP 404" not in str(exc):  # 404: the run we raced got it first
+                print(f"::warning::could not delete duplicate status comment "
+                      f"{c['id']}: {exc}", file=sys.stderr)
+        wrote = True
+    if (keep.get("body") or "").strip() != body.strip():
+        gh.patch_issue_comment(keep["id"], body)
+        wrote = True
+    return wrote
 
 
 # ---- CLI ----------------------------------------------------------------
