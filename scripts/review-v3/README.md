@@ -113,7 +113,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `@claude … #update-review` phrasing |
 | G3 right-approver | an APPROVED latest review at head from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); re-run the failed "Build and deploy testing" run or dispatch it at the branch to retry — **not waivable** |
-| G5 oversized-ack | `review:oversized` PRs: approval body contains `sentinel:oversized-ack` | explains the ack |
+| G5 oversized-ack | `review:oversized` PRs: a G3-qualifying approval at head whose comment contains `sentinel:oversized-ack` | where the string goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
 
 **G4's two witnesses.** The commit status is a *report* of the deploy, not
 the deploy: it is a separate API call made after the run completes, so a
@@ -168,7 +168,11 @@ it twice. A red G4 still stands under an authorized waive.
 upsert one `<!-- SENTINEL_STATUS -->` comment per PR: a row per gate with its
 state and, for a red one, the gate's own remediation text. The body is a pure
 function of the verdict — no timestamps, no run ids — so a re-evaluation that
-changes nothing produces a byte-identical body and the PATCH is skipped. The
+changes nothing produces a byte-identical body and the PATCH is skipped.
+"One" is enforced on every write, not assumed: overlapping runs both listing
+before either posts used to leave two copies (pulumi/docs#22251 and five
+others), so the upsert keeps the oldest bot copy, deletes the rest, and
+re-lists once after a first POST to catch the run it raced. The
 comment is maintained on **every** PR the Sentinel evaluates, in both modes.
 In report-only mode the heading reads "(preview)" and a `[!WARNING]` banner
 says both halves: informational and safe to ignore today, enforced soon, when
