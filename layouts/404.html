@@ -151,7 +151,7 @@
               />
             </symbol>
             <filter id="nf-neon-cast" color-interpolation-filters="sRGB">
-                <feFlood></feFlood>
+                <feFlood class="nf-neon-flood"></feFlood>
                 <feComposite in2="SourceGraphic" operator="arithmetic" k1="1"></feComposite>
             </filter>
         </svg>
@@ -324,7 +324,7 @@
                 opacity: 0;
                 transition: opacity 80ms;
             }
-            #nf-neon-cast feFlood {
+            .nf-neon-flood {
                 flood-color: var(--nf-violet-400);
             }
             .nf-filter-defs {
