@@ -50,7 +50,7 @@ The console and the API show the subject only for organizations that have `fn::o
 
 Copy the subject from the environment that declares the `fn::open::oidc` block. An environment that only imports the block also shows a subject, but no token carries it.
 
-The subject uses IDs, not names, so it does not change when you rename the organization or the environment. Because of that, a wildcard such as `pulumi:org:<org-name>:*` does not match anything. To trust every environment in an organization, match the subject prefix `pulumi:org:<org-id>:env:` where the relying party supports prefix or wildcard matching. In Vault, for example, set `bound_claims_type=glob` and bind `sub` to `pulumi:org:<org-id>:env:*`.
+The subject uses IDs, not names, so it does not change when you rename the organization or the environment. Because of that, a wildcard such as `pulumi:org:<org-name>:*` does not match anything. To trust every environment in an organization, match the subject prefix `pulumi:org:<org-id>:env:` where the relying party supports prefix or wildcard matching. In AWS IAM, use a `StringLike` condition on `api.pulumi.com/oidc/v2:sub` with the value `pulumi:org:<org-id>:env:*`. In Vault, set `bound_claims_type=glob` and bind `sub` to the same pattern.
 
 ## Token claims
 

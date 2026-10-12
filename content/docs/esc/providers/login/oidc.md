@@ -51,7 +51,7 @@ values:
           version: v2
 ```
 
-The relying party applies its own clock-skew allowance, so it may accept a token for a few minutes after `exp`. The relying party, not `duration`, sets the lifetime of the credential you exchange the token for.
+The relying party applies its own clock-skew allowance, so it may accept a token for a few minutes after `exp`. AWS allows five minutes, Vault allows one minute by default, and JFrog allows none. The relying party, not `duration`, sets the lifetime of the credential you exchange the token for.
 
 ### Pass the token to a command
 
