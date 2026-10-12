@@ -51,7 +51,7 @@ values:
           version: v2
 ```
 
-The relying party applies its own clock-skew allowance, so it may accept a token for a few minutes after `exp`. The lifetime of the credential you exchange the token for is set by the relying party, not by `duration`.
+The relying party applies its own clock-skew allowance, so it may accept a token for a few minutes after `exp`. The relying party, not `duration`, sets the lifetime of the credential you exchange the token for.
 
 ### Pass the token to a command
 
@@ -116,7 +116,7 @@ values:
 
 To see the claims before you mint a token, use [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) with the same inputs.
 
-Each token that `fn::open::oidc` mints adds an entry to your organization's [audit log](/docs/administration/guides/audit-logs/). The entry records the subject, audience, environment, and lifetime of the token. Its event name is `environment-oidc-token-issued`, shown in the console as **Environment OIDC Token Issued**.
+Each token that `fn::open::oidc` mints adds an entry to your organization's [audit log](/docs/administration/guides/audit-logs/). The entry records the subject, audience, environment, and lifetime of the token. Its event name is `environment-oidc-token-issued`.
 
 ## Schema reference
 

@@ -214,6 +214,8 @@ Most other services accept OIDC tokens through a JSON Web Token (JWT) authentica
 
     Always set `bound_subject` or `bound_claims`. A role that binds only the audience accepts tokens from any Pulumi organization. `user_claim` names the login entity and restricts nothing.
 
+    By default, Vault accepts a token for about a minute after it expires. Set `clock_skew_leeway=-1` on the role to stop that.
+
 1. In Pulumi ESC, mint a token with the same audience and export it:
 
     ```yaml
@@ -235,7 +237,7 @@ Most other services accept OIDC tokens through a JSON Web Token (JWT) authentica
       'vault write auth/pulumi-esc/login role=my-env jwt="$VAULT_JWT"'
     ```
 
-If you already use [`vault-login`](/docs/esc/providers/login/vault-login/), mount this method at a separate path. The `vault-login` mount is configured for the `https://api.pulumi.com/oidc` issuer, and its roles expect that issuer's subjects.
+If you already use [`vault-login`](/docs/esc/providers/login/vault-login/), mount this method at a separate path. The `vault-login` mount trusts the `https://api.pulumi.com/oidc` issuer.
 
 ## Learn more
 
