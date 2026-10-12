@@ -5,12 +5,18 @@
     stamp_max_lines: 40                  # a diff at or above this is never a stamp
     stale_date_days: 3                   # blog `date:` older than this is stale
     link_fixes: mine                     # mine | route — a link-only diff is yours whatever its lane
+    board_url: https://claude.ai/artifact/…   # the board Artifact every run republishes
 
 Routing itself (subject → owning team) comes from `.github/review-routing.yml`
 via routing.py; this file only says which of those lanes the person running
 the queue approves for, so the queue can tell "mine" from "route". It is
-local and never committed. When the file is missing every lane counts as
-mine, with a warning, so the board still renders on first run.
+local and never committed. When the file is missing, or has no `me:`, the
+lanes come from the approver's GitHub team memberships (every lane, with a
+warning, when those can't be read), so the board still renders on first run.
+
+`board_url` is the one key the scripts don't read: the skill does. It names
+the board Artifact so every session republishes the same page instead of
+minting a new link per run.
 """
 
 from __future__ import annotations
@@ -31,6 +37,7 @@ DEFAULT_STAMP_MAX_LINES = 40
 DEFAULT_STALE_DATE_DAYS = 3
 DEFAULT_LINK_FIXES = "mine"
 LINK_FIXES_VALUES = frozenset({"mine", "route"})
+BOARD_URL_PREFIXES = ("https://claude.ai/artifact/", "https://claude.ai/code/artifact/")
 
 
 @dataclass
@@ -39,6 +46,8 @@ class UserConfig:
     stamp_max_lines: int = DEFAULT_STAMP_MAX_LINES
     stale_date_days: int = DEFAULT_STALE_DATE_DAYS
     link_fixes: str = DEFAULT_LINK_FIXES  # "mine": a link-only diff bypasses the lane check; "route": it doesn't
+    board_url: str | None = None  # the board Artifact to republish; read by the skill, not the scripts
+    me_pinned: bool = True  # False: no `me:` was given, so analyze takes the lanes from GitHub teams
     source: str = "defaults"
     warnings: list[str] = field(default_factory=list)
 
@@ -48,6 +57,8 @@ class UserConfig:
             "stamp_max_lines": self.stamp_max_lines,
             "stale_date_days": self.stale_date_days,
             "link_fixes": self.link_fixes,
+            "board_url": self.board_url,
+            "me_pinned": self.me_pinned,
             "source": self.source,
             "warnings": list(self.warnings),
         }
@@ -89,14 +100,15 @@ def parse_config(raw: object, source: str = "<raw>") -> UserConfig:
         raw = {}
     if not isinstance(raw, dict):
         raise ValueError(f"{source}: top level must be a mapping")
-    unknown = set(raw) - {"me", "stamp_max_lines", "stale_date_days", "link_fixes"}
+    unknown = set(raw) - {"me", "stamp_max_lines", "stale_date_days", "link_fixes", "board_url"}
     if unknown:
         raise ValueError(f"{source}: unknown key(s) {sorted(unknown)}")
     me = raw.get("me")
+    me_pinned = me is not None
     warnings: list[str] = []
     if me is None:
         me = sorted(routing.SUBJECTS)
-        warnings.append(f"{source}: no `me:` — treating every lane as mine")
+        warnings.append(f"{source}: no `me:` — taking your lanes from your GitHub teams (every lane, if those can't be read)")
     if isinstance(me, str):
         me = [me]
     if not isinstance(me, list) or not all(isinstance(m, str) for m in me):
@@ -115,11 +127,17 @@ def parse_config(raw: object, source: str = "<raw>") -> UserConfig:
     if link_fixes not in LINK_FIXES_VALUES:
         raise ValueError(f"{source}: `link_fixes` must be one of {sorted(LINK_FIXES_VALUES)}")
 
+    board_url = raw.get("board_url")
+    if board_url is not None and (not isinstance(board_url, str) or not board_url.startswith(BOARD_URL_PREFIXES)):
+        raise ValueError(f"{source}: `board_url` must be a claude.ai artifact link ({' or '.join(BOARD_URL_PREFIXES)}…)")
+
     return UserConfig(
         me=list(dict.fromkeys(me)),
         stamp_max_lines=_int("stamp_max_lines", DEFAULT_STAMP_MAX_LINES),
         stale_date_days=_int("stale_date_days", DEFAULT_STALE_DATE_DAYS),
         link_fixes=link_fixes,
+        board_url=board_url,
+        me_pinned=me_pinned,
         source=source,
         warnings=warnings,
     )
@@ -143,8 +161,14 @@ def self_test() -> int:
     assert cfg.me == ["docs", "infra"] and cfg.stamp_max_lines == 10 and cfg.stale_date_days == 3 and cfg.link_fixes == "mine"
     assert parse_config({"link_fixes": "route"}).link_fixes == "route"
     cfg = parse_config(None)
-    assert set(cfg.me) == set(routing.SUBJECTS) and cfg.warnings
-    for bad in ({"me": ["nope"]}, {"stamp_max_lines": "x"}, {"extra": 1}, ["a"], {"link_fixes": "always"}):
+    assert set(cfg.me) == set(routing.SUBJECTS) and cfg.warnings and not cfg.me_pinned
+    assert parse_config({"me": ["docs"]}).me_pinned and parse_config({"me": ["docs"]}).board_url is None
+    url = "https://claude.ai/artifact/QXsWQ1jRTrViCduA5KNkeJ"
+    cfg = parse_config({"board_url": url})
+    assert cfg.board_url == url and not cfg.me_pinned
+    assert parse_config({"board_url": "https://claude.ai/code/artifact/abc"}).board_url
+    for bad in ({"me": ["nope"]}, {"stamp_max_lines": "x"}, {"extra": 1}, ["a"], {"link_fixes": "always"},
+                {"board_url": "https://example.com/x"}, {"board_url": 3}):
         try:
             parse_config(bad)
             raise AssertionError(f"accepted {bad!r}")
