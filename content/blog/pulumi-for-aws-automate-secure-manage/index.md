@@ -80,7 +80,7 @@ The complexities of modern cloud environments create significant challenges in m
 
 [Pulumi Insights](/product/pulumi-insights/) empowers organizations to tackle cloud complexity by delivering visibility, actionable insights, and AI-assisted optimization for their infrastructure. With Pulumi Insights, companies can scan and sync their entire AWS resource inventory – including resources not managed with Pulumi IaC – ensuring a complete picture of their cloud assets. This Account Discovery capability is [now in public preview](/blog/insights-cloud-account-discovery/).
 
-Compliance checks can also be run against standards such as PCI DSS, ISO 27001, and CIS benchmarks, helping maintain regulatory compliance and mitigate risks. The AI-powered [Pulumi Copilot](/product/copilot/) provides an interactive assistant to gain visibility into a team's activity, discover cost saving opportunities, get compliant, and debug cloud failures. Pulumi Insights enables companies to discover, understand, manage, and improve their cloud infrastructure on their journey towards intelligent infrastructure management.
+Compliance checks can also be run against standards such as PCI DSS, ISO 27001, and CIS benchmarks, helping maintain regulatory compliance and mitigate risks. The AI-powered [Pulumi Copilot](/product/neo/) provides an interactive assistant to gain visibility into a team's activity, discover cost saving opportunities, get compliant, and debug cloud failures. Pulumi Insights enables companies to discover, understand, manage, and improve their cloud infrastructure on their journey towards intelligent infrastructure management.
 
 ### Pulumi ESC: Centralized Secrets Management
 

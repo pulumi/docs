@@ -34,7 +34,7 @@ Building and maintaining your own Infrastructure as Code backend involves a sign
 
 –— Paul Hemberger, Engineering Manager for Materialize’s cloud team
 
-[Learn more](/case-studies/materialize/)
+[Learn more](/customers/materialize/)
 {{% /notes %}}
 
 ### Operational Excellence
@@ -43,7 +43,7 @@ One of the primary functions of IaC backends is managing state. State management
 
 Pulumi Cloud offers total visibility into changes within your organization, allowing you to track who is deploying what, when, and where, down to the individual cloud infrastructure properties being changed and the source commits triggering them. If issues arise and you need to revert to a prior known state, Pulumi Cloud's transactional state checkpointing protocol ensures automatic recovery from failures, and failures are common with transient cloud and networking issues. In contrast, DIY backends require manual human intervention to recover and repair state files, a process that is time-consuming, extends outages, and carries significant risk. Pulumi Cloud also automatically backs up and replicates your state checkpoints, facilitating easy recovery for audits or rollbacks, potentially preventing outages or meeting audit standards.
 
-Managing your infrastructure with IaC demands considerable time and energy. Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering search, analytics, and AI-driven insights over your infrastructure. If you're using a DIY backend, you'll need to build your own search clusters and grep systems. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets. You can also have a conversation with [Pulumi Copilot](/product/copilot/) about your infrastructure in plain English and get
+Managing your infrastructure with IaC demands considerable time and energy. Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering search, analytics, and AI-driven insights over your infrastructure. If you're using a DIY backend, you'll need to build your own search clusters and grep systems. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets. You can also have a conversation with [Pulumi Copilot](/product/neo/) about your infrastructure in plain English and get
 answers to operational questions that would take hours to piece together from other sources.
 
 ![Pulumi Copilot example prompt](copilot.png)
@@ -57,7 +57,7 @@ When you build and operate your own IaC backend, you'll need to dedicate one ful
 
 *"Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance. An equivalent deployment would take more lines of code while yielding IaC that is less reusable."*
 
-[Learn more](/case-studies/unity/)
+[Learn more](/customers/unity/)
 {{% /notes %}}
 
 ### Security and Compliance
@@ -102,13 +102,13 @@ When you’re scaling your organization, you’ll need an IaC backend that makes
 In contrast, Pulumi Cloud offers standardized, well-documented capabilities and integrates seamlessly with identity systems, leading to efficient onboarding and increased productivity for new employees. Pulumi Cloud provides [12x5 or 24x7 support](/pricing/), ensuring your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Furthermore, Pulumi Cloud includes configurable RBAC (Enterprise edition and above), simplifying the onboarding and scaling of new users.
 
 {{% notes type="tip" %}}
-**BMW Group** used Pulumi to build a scalable and resilient hybrid cloud implementation that [manages more than 20,000 cloud resources](/case-studies/bmw/) with Python-based infrastructure code.
+**BMW Group** used Pulumi to build a scalable and resilient hybrid cloud implementation that [manages more than 20,000 cloud resources](/customers/bmw/) with Python-based infrastructure code.
 
 *“When we started to use Terraform to deploy our first cloud services with AWS, it didn’t scale quickly enough for our needs. With Pulumi we’re really speeding up development. We can use any language instead of some special language like HCL and by automating policies, we have compliant and secure systems from the beginning.”*
 
 –— Jan-Peter Alten, DevOps Engineer
 
-[Learn more](/case-studies/bmw/)
+[Learn more](/customers/bmw/)
 {{% /notes %}}
 
 ## Conclusion

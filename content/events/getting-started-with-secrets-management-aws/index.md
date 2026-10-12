@@ -32,7 +32,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    [Pulumi ESC](/product/esc) is a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments. Pulumi ESC is a new category of configuration-as-code product that enables teams to aggregate secrets and configurations from many sources, manage hierarchical collections of configurations and secrets (“environments”), and consume those configurations and secrets from a variety of different infrastructure and application services.
+    [Pulumi ESC](/product/secrets-management/) is a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments. Pulumi ESC is a new category of configuration-as-code product that enables teams to aggregate secrets and configurations from many sources, manage hierarchical collections of configurations and secrets (“environments”), and consume those configurations and secrets from a variety of different infrastructure and application services.
 
 learn:
     - Defining environments, which contain collections of secrets and configuration

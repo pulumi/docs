@@ -55,7 +55,7 @@ Every one of these errors disappears when credentials are generated fresh for ea
 
 ## Using Pulumi ESC for dynamic credentials with AWS
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `pulumi env run` command in particular helps resolve concerns around how to:
+[Pulumi ESC](https://www.pulumi.com/product/secrets-management/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `pulumi env run` command in particular helps resolve concerns around how to:
 
 - Securely share credentials with teammates in a consistent way.
 - Minimize the risks associated with locally configured, long-lived and highly privileged credentials.

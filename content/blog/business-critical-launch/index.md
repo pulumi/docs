@@ -69,7 +69,7 @@ Policy as Code (CrossGuard), a Business Critical feature:
 
 ## Self-Hosted Pulumi Service
 
-We are also announcing today a 30 day trial for self-hosting the [Pulumi Service](/product/pulumi-service/). Self-Hosted Pulumi Service allows you to deploy and manage the Pulumi Service on your own infrastructure, either in the cloud or on-premises.  Self-hosting is an option for organizations that need to maintain complete control over hosting, network isolation, identity, and data ownership in order to satisfy segment-specific compliance requirements. It can take time to install and configure a self-hosted product in your desired deployment option, and we want to make sure there is enough time to assess the product. This is why we have launched a 30 day trial, instead of 14 day like the Pulumi Service. Sign up today for the 30 day trial on our [Self-Hosted Pulumi Service page](/product/self-hosted/).
+We are also announcing today a 30 day trial for self-hosting the [Pulumi Service](/product/). Self-Hosted Pulumi Service allows you to deploy and manage the Pulumi Service on your own infrastructure, either in the cloud or on-premises.  Self-hosting is an option for organizations that need to maintain complete control over hosting, network isolation, identity, and data ownership in order to satisfy segment-specific compliance requirements. It can take time to install and configure a self-hosted product in your desired deployment option, and we want to make sure there is enough time to assess the product. This is why we have launched a 30 day trial, instead of 14 day like the Pulumi Service. Sign up today for the 30 day trial on our [Self-Hosted Pulumi Service page](/product/self-hosted/).
 
 ![Self-Hosted Screenshot](self-hosted.png)
 

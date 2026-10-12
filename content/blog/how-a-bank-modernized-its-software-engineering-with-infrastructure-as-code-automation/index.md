@@ -95,4 +95,4 @@ The DevOps and development teams at Washington Trust Bank rely on Pulumi as a ke
 
 [Sign up for a free account](https://app.pulumi.com/signup) to try deploying infrastructure on any cloud, or [register for an upcoming workshop](https://www.pulumi.com/resources/#upcoming) to learn more about how Pulumi can help you ship cloud infrastructure faster and more safely.
 
-[Go to more case studies](/case-studies/)
+[Go to more case studies](/customers/)

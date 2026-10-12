@@ -228,7 +228,7 @@ and simplifying management.
 {{% /notes %}}
 
 We even take it a step further by using ESO to manage the secrets
-from [Pulumi ESC (Environments, Secrets, and  Configurations)](https://www.pulumi.com/product/esc/) with
+from [Pulumi ESC (Environments, Secrets, and  Configurations)](https://www.pulumi.com/product/secrets-management/) with
 the [Pulumi Provider](https://external-secrets.io/latest/provider/pulumi/) for ESO. This way, we use the Pulumi not only
 for the infrastructure but also for the secrets management reducing the number of tools we need to manage.
 

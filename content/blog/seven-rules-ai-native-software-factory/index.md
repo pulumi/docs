@@ -207,4 +207,4 @@ Tools your agents can actually drive, anything with a solid API and a clean CLI,
 
 ---
 
-*Watch the [original Pulumi webinar](https://www.youtube.com/watch?v=oHNdlWlsR-w). Read the [Compostable AI case study](/case-studies/compostable-ai/), and learn more about [Compostable AI](https://compostable.ai/) and [Pulumi Neo](/product/neo/).*
+*Watch the [original Pulumi webinar](https://www.youtube.com/watch?v=oHNdlWlsR-w). Read the [Compostable AI case study](/customers/compostable-ai/), and learn more about [Compostable AI](https://compostable.ai/) and [Pulumi Neo](/product/neo/).*

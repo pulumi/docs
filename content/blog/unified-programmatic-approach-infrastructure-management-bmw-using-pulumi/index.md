@@ -98,7 +98,7 @@ At this critical juncture, BMW discovered Pulumi. This modern IaC solution offer
 
 ## Embracing Pulumi: Streamlining Infrastructure Management
 
-[BMW's adoption of Pulumi](https://www.pulumi.com/case-studies/bmw/) was a strategic move that aimed to address the growing complexity of its software ecosystem. By transitioning from a patchwork of tools to a unified IaC solution, the company was able to streamline its infrastructure management and improve developer productivity.
+[BMW's adoption of Pulumi](https://www.pulumi.com/customers/bmw/) was a strategic move that aimed to address the growing complexity of its software ecosystem. By transitioning from a patchwork of tools to a unified IaC solution, the company was able to streamline its infrastructure management and improve developer productivity.
 
 ### Shared Modules: Promoting Reusability and Best Practices
 
