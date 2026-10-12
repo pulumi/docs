@@ -1,11 +1,9 @@
 ---
 title: "Pulumi ESC now issues OIDC tokens for any service"
-# TODO(devon): set the launch date. The far-future date keeps the post out of production; the PR preview still renders it.
-date: 2099-01-01
+date: 2026-10-15
 draft: false
 meta_desc: "Pulumi ESC now signs short-lived OIDC tokens for any audience you set, with a stable subject you can pin in each service's trust policy."
-# TODO(devon): render feature.png with /blog-feature-image, or label the PR needs-design, then set feature_image: feature.png.
-feature_image:
+feature_image: feature.png
 authors:
     - devon-grove
 tags:
