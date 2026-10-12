@@ -24,16 +24,18 @@ social:
 
         The new fn::open::oidc provider removes that key. When you open the environment, ESC signs an OIDC token for an audience you choose, from the issuer https://api.pulumi.com/oidc/v2. The service checks the signature, the audience, and a stable subject that names your organization and environment by ID, then issues its own short-lived credential. The token lives for an hour at most, and nothing is stored.
 
-        The post walks through the environment definition, the claims in the token, a worked HashiCorp Vault example, and the one rule every trust policy needs: pin the subject.
+        The post walks through the environment definition, the claims in the token, a worked Aembit example, and the one rule every trust policy needs: pin the subject.
     bluesky: |
         Pulumi ESC can now sign a short-lived OIDC token for any audience you choose. Vault, Cloudsmith, JFrog, Aembit, and AWS STS can all exchange it for their own credential, so the stored API key goes away.
 
         One rule: pin the subject in the trust policy.
 ---
 
-Services such as HashiCorp Vault, Cloudsmith, and JFrog Artifactory accept OpenID Connect (OIDC) tokens from an outside issuer and trade them for their own short-lived credentials. Until now, a [Pulumi ESC](/docs/esc/) environment could sign in that way to a fixed set of clouds. For everything else, it held a stored API key.
+A [Pulumi ESC](/docs/esc/) environment can now mint a short-lived OpenID Connect (OIDC) token for any service that accepts one.
 
-With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC signs an OIDC token for an audience you choose when you open the environment. Any service that trusts the `https://api.pulumi.com/oidc/v2` issuer can exchange it. The token expires after an hour at most, and ESC stores nothing.
+Services such as Aembit, Cloudsmith, JFrog Artifactory, and HashiCorp Vault take an OIDC token from an outside issuer and trade it for their own short-lived credentials. Until now, an ESC environment could sign in that way only to a fixed set of clouds. For everything else, it held a stored API key.
+
+With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC signs the token for an audience you choose when you open the environment. Any service that trusts the `https://api.pulumi.com/oidc/v2` issuer can exchange it. The token expires after an hour at most, and ESC stores nothing.
 
 <!--more-->
 
@@ -49,15 +51,15 @@ Declare the provider in an environment, name the audience the service expects, a
 
 ```yaml
 values:
-  vault:
+  aembit:
     login:
       fn::open::oidc:
-        audience: https://vault.example.com
+        audience: https://acme.aembit.io
         duration: 15m
         identityToken:
           version: v2
   environmentVariables:
-    VAULT_JWT: ${vault.login}
+    AEMBIT_OIDC_TOKEN: ${aembit.login}
 ```
 
 The provider takes three inputs. `audience` becomes the token's `aud` claim, the name the service checks. `identityToken.version` selects the token format; `v2` is the only value, and the input has no default, so an existing environment keeps its meaning if a later format arrives. `duration` sets the lifetime, from one minute to one hour, and defaults to one hour. ESC refuses any other input.
@@ -68,10 +70,10 @@ Opening the environment yields a signed token. Decoded and trimmed, its claims l
 {
   "iss": "https://api.pulumi.com/oidc/v2",
   "sub": "pulumi:org:8a4f0c2e-91d3-4b6a-b7e0-5c2f8d1a9e44:env:2c9d7f61-3e58-4a02-9b8f-6d4e0a7c3b15",
-  "aud": "https://vault.example.com",
+  "aud": "https://acme.aembit.io",
   "exp": 1789000900,
   "https://pulumi.com/org": "acme",
-  "https://pulumi.com/current_env": "vault/login",
+  "https://pulumi.com/current_env": "aembit/login",
   "https://pulumi.com/actor": "alice"
 }
 ```
@@ -84,32 +86,24 @@ To see the exact claims before you touch a trust policy, swap in [`debug-oidc-cl
 
 Every Pulumi organization shares the `/oidc/v2` issuer, and any organization can set any audience. A trust rule that checks only the issuer and the audience accepts tokens from every organization that typed the same audience string. Pin the subject, or the `https://pulumi.com/org_id` claim, in every trust policy you write. Pulumi Cloud shows the subject above the environment editor with a copy button, so you never assemble it by hand.
 
-## Example: HashiCorp Vault
+## Example: Aembit
 
-Mount Vault's JWT auth method, point it at the issuer, and create a role that binds the audience and the subject:
+Aembit identifies a workload by its OIDC token and then hands it the credentials its access policy allows. In your Aembit tenant, create a trust provider of type **OIDC ID Token** that discovers keys from `https://api.pulumi.com/oidc/v2`, with match rules for the issuer, the audience from the environment, and the environment's subject. Then create a client workload identified by **OIDC ID Token Subject** with the same subject, and an access policy that joins the two to the credential provider the workload needs.
 
-```bash
-vault auth enable -path=pulumi-esc jwt
-vault write auth/pulumi-esc/config \
-  oidc_discovery_url=https://api.pulumi.com/oidc/v2 \
-  bound_issuer=https://api.pulumi.com/oidc/v2
-vault write auth/pulumi-esc/role/deploy \
-  role_type=jwt \
-  bound_audiences=https://vault.example.com \
-  user_claim=sub \
-  bound_subject=pulumi:org:<org-id>:env:<environment-id> \
-  token_policies=deploy \
-  token_ttl=15m
+Open the environment and send the token to Aembit's Edge API at `https://<your-edge-url>/edge/v1/auth`, together with your Edge SDK client ID:
+
+```json
+{
+  "clientId": "<client-id>",
+  "client": {
+    "oidc": {
+      "identityToken": "<value of AEMBIT_OIDC_TOKEN>"
+    }
+  }
+}
 ```
 
-Then log in from the environment:
-
-```bash
-pulumi env run acme/vault/login -- sh -c \
-  'vault write auth/pulumi-esc/login role=deploy jwt="$VAULT_JWT"'
-```
-
-Vault returns a token scoped to the `deploy` policy and good for 15 minutes. The same shape works for Cloudsmith, JFrog Artifactory, Aembit, and AWS STS. The [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) has the exact settings for each.
+Aembit answers with an `accessToken` for its later calls, and the ESC token has done its job. The same shape works for Cloudsmith, JFrog Artifactory, HashiCorp Vault, and AWS STS. The [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) has the exact settings for each.
 
 ## Define it once, import it everywhere
 
