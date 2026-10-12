@@ -139,7 +139,7 @@ opts := pulumi.CompositeInvoke(pulumi.Parent(parent), pulumi.Provider(provider))
 pkg.SomeInvoke(nil, opts, pulumi.Version("1.2.3"))
 ```
 
-Learn more in [Add CompositeInvoke Github pull request](https://github.com/pulumi/pulumi/pull/9752).
+Learn more in [Add CompositeInvoke GitHub pull request](https://github.com/pulumi/pulumi/pull/9752).
 
 ### Support Java in `pulumi convert`
 

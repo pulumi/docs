@@ -649,7 +649,7 @@ FROM LANDING_ZONE_WEBHOOKS.GITHUB.REPOSITORY_EVENTS_DIRECT
 ORDER BY ingested_at DESC;
 ```
 
-![Snowflake UI showing the data that streamed from Github directly into Snowflake using the Data Pipeline](select.png)
+![Snowflake UI showing the data that streamed from GitHub directly into Snowflake using the Data Pipeline](select.png)
 
 You should see rows with event types like `star`, `push`, or `issues`, real GitHub events flowing through the entire pipeline. The `METADATA` column includes Firehose metadata like `IngestionTime`, which you can use to track end-to-end latency.
 

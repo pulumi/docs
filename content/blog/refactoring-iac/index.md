@@ -320,4 +320,4 @@ Preparatory refactoring occurs when adding a new feature to a release. It is typ
 
 ## Conclusion
 
-Writing clean and efficient code is part of cloud engineering, and we can achieve this by using well-established refactoring methods used by application developers. Pulumi has many easy-to-understand examples in Node.js, Python, Go, and .Net. Because the examples are written explicitly to make them understandable, some could use refactoring. What code samples can you find in the [Pulumi Github repository](https://github.com/pulumi/examples) that could use some refactoring?
+Writing clean and efficient code is part of cloud engineering, and we can achieve this by using well-established refactoring methods used by application developers. Pulumi has many easy-to-understand examples in Node.js, Python, Go, and .Net. Because the examples are written explicitly to make them understandable, some could use refactoring. What code samples can you find in the [Pulumi GitHub repository](https://github.com/pulumi/examples) that could use some refactoring?

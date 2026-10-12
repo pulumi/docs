@@ -53,7 +53,7 @@ In addition to supporting multiple languages, you can build infrastructure on an
 
 By leveraging infrastructure as code combined with software development practices, engineers can achieve greater productivity while enabling their development teams to be more "self-serve" with appropriate policies and guardrails in place. Pulumi brings cloud security engineering to the infrastructure and development teams. Using one common workflow that spans any cloud environment, whether public, private, or hybrid, security teams can enforce policies that accomplish cloud governance projects of all kinds — security, compliance, cost control, and more.
 
-To see how infrastructure as code simplifies infrastructure deployment, let's look at an example for deploying Kubernetes with python on AWS. The full [example](https://github.com/pulumi/examples/tree/master/aws-py-eks) is available on Github.
+To see how infrastructure as code simplifies infrastructure deployment, let's look at an example for deploying Kubernetes with python on AWS. The full [example](https://github.com/pulumi/examples/tree/master/aws-py-eks) is available on GitHub.
 
 The code breaks up the Kubernetes deployment into python modules:
 

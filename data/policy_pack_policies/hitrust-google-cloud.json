@@ -186,7 +186,7 @@
         },
         "type": "object"
       },
-      "description": "Require Cloud Storage buckets to have access logging enabled for audit trails",
+      "description": "Ensures Cloud Storage buckets have access logging enabled with a log destination bucket",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -197,7 +197,7 @@
       },
       "message": "",
       "name": "bucket-access-logging",
-      "remediationSteps": "## Fix: Enable Access Logging\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    logging: {\n        logBucket: \"my-logging-bucket\",  // Specify the bucket for access logs\n        logObjectPrefix: \"bucket-logs/\", // Optional prefix for log objects\n    },\n    // ... other config\n});\n```",
+      "remediationSteps": "## Fix: Enable Access Logging\n\nSet `logging.logBucket` to the bucket that should receive the access logs. The other settings\nare not this policy's concern; they are here so the example also satisfies the sibling policies\nits packs register.\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    logging: {\n        logBucket: \"my-logging-bucket\",  // Destination bucket for access logs\n        logObjectPrefix: \"bucket-logs/\", // Optional prefix for log objects\n    },\n    uniformBucketLevelAccess: true,\n    publicAccessPrevention: \"enforced\",\n    versioning: { enabled: true },\n    encryption: {\n        defaultKmsKeyName: \"projects/my-project/locations/us/keyRings/my-ring/cryptoKeys/my-key\",\n    },\n    lifecycleRules: [{\n        action: { type: \"SetStorageClass\", storageClass: \"NEARLINE\" },\n        condition: { age: 30 },\n    }],\n    labels: { environment: \"production\", team: \"platform\", owner: \"security\" },\n});\n```",
       "severity": "medium"
     },
     {
@@ -1024,7 +1024,7 @@
         },
         "type": "object"
       },
-      "description": "Require Cloud SQL instances to have backup retention enabled",
+      "description": "Perform automated backups for Cloud SQL instances",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -1035,7 +1035,7 @@
       },
       "message": "",
       "name": "cloudsql-backup",
-      "remediationSteps": "## Fix: Enable Backup Configuration\n\n```typescript\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-sql-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    settings: {\n        backupConfiguration: {\n            enabled: true,  // Enable backups\n            pointInTimeRecoveryEnabled: true,  // Enable PITR for PostgreSQL/MySQL\n        },\n        // ... other config\n    },\n});\n```",
+      "remediationSteps": "## Fix: Enable Automated Backups\n\nSet `backupConfiguration.enabled` to true — an omitted flag is not an enabled backup. On\nPostgreSQL and SQL Server point-in-time recovery is `pointInTimeRecoveryEnabled`; on MySQL it is\n`binaryLogEnabled`. The other settings are not this policy's concern; they are here so the\nexample also satisfies the sibling policies its packs register.\n\n```typescript\nconst instance = new gcp.sql.DatabaseInstance(\"my-db-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    region: \"us-central1\",\n    deletionProtection: true,\n    settings: {\n        tier: \"db-f1-micro\",\n        availabilityType: \"REGIONAL\",\n        backupConfiguration: {\n            enabled: true,\n            pointInTimeRecoveryEnabled: true,\n        },\n        ipConfiguration: {\n            ipv4Enabled: false,\n            privateNetwork: \"projects/my-project/global/networks/my-vpc\",\n            sslMode: \"ENCRYPTED_ONLY\",\n        },\n        maintenanceWindow: { day: 7, hour: 3, updateTrack: \"stable\" },\n        userLabels: { environment: \"production\", team: \"platform\", owner: \"security\" },\n    },\n});\n```",
       "severity": "medium"
     },
     {
@@ -1451,7 +1451,7 @@
       },
       "message": "",
       "name": "environment-label",
-      "remediationSteps": "## Fix: Add Valid Environment Label\n\nAdd an environment label with a valid value (development, staging, or production) to your GCP resources:\n\n```typescript\nconst instance = new gcp.compute.Instance(\"my-instance\", {\n    labels: {\n        environment: \"production\",  // Required: valid environment label\n        // ... other labels\n    },\n    // ... other config\n});\n\n// For Cloud SQL instances, use userLabels within settings\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-database\", {\n    settings: {\n        userLabels: {\n            environment: \"staging\",  // Required: valid environment label\n        },\n        // ... other settings\n    },\n    // ... other config\n});\n\n// For GKE clusters, use resourceLabels\nconst cluster = new gcp.container.Cluster(\"my-cluster\", {\n    resourceLabels: {\n        environment: \"development\",  // Required: valid environment label\n    },\n    // ... other config\n});\n```",
+      "remediationSteps": "## Fix: Add Valid Environment Label\n\nAdd an environment label with a valid value (development, staging, or production). The provider\nkeeps the label bag in a different place per resource; these are the five this policy reads.\nThe `team` and `owner` labels are here because a sibling policy asks for them, not this one.\n\n```typescript\n// Most resources: a top-level labels map\nconst disk = new gcp.compute.Disk(\"my-disk\", {\n    labels: { environment: \"production\", team: \"platform\", owner: \"security\" },\n    diskEncryptionKey: { kmsKeySelfLink: \"projects/my-project/locations/us/keyRings/r/cryptoKeys/k\" },\n});\n\n// Cloud Run: the Knative metadata block\nconst service = new gcp.cloudrun.Service(\"my-service\", {\n    location: \"us-central1\",\n    metadata: { labels: { environment: \"production\", team: \"platform\", owner: \"security\" } },\n});\n\n// Monitoring alert policies: top-level userLabels\nconst alert = new gcp.monitoring.AlertPolicy(\"my-alert\", {\n    displayName: \"my-alert\",\n    combiner: \"OR\",\n    conditions: [{\n        displayName: \"cpu\",\n        conditionThreshold: {\n            filter: `metric.type=\"compute.googleapis.com/instance/cpu/utilization\"`,\n            duration: \"60s\",\n            comparison: \"COMPARISON_GT\",\n        },\n    }],\n    userLabels: { environment: \"production\", team: \"platform\", owner: \"security\" },\n});\n\n// Cloud SQL nests them under settings, GKE calls them resourceLabels\nconst sqlSettings: gcp.types.input.sql.DatabaseInstanceSettings = {\n    tier: \"db-f1-micro\",\n    userLabels: { environment: \"staging\", team: \"platform\", owner: \"security\" },\n};\nconst clusterLabels: gcp.container.ClusterArgs[\"resourceLabels\"] = {\n    environment: \"development\", team: \"platform\", owner: \"security\",\n};\n```",
       "severity": "low"
     },
     {
@@ -2792,6 +2792,6 @@
       "severity": "low"
     }
   ],
-  "version": 7,
-  "versionTag": "2.1.1"
+  "version": 8,
+  "versionTag": "2.2.0"
 }

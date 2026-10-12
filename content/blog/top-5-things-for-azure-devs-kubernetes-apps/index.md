@@ -205,7 +205,7 @@ Use `kubectl get service` to get the load balancer's external IP as we did with 
 
 ## Deploy with Pulumi
 
-The [previous article](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/) in this series showed how to deploy AKS with code. Starting with the [Python example](https://github.com/pulumi/examples/tree/master/azure-py-aks) from Github and add to it to create a complete solution
+The [previous article](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/) in this series showed how to deploy AKS with code. Starting with the [Python example](https://github.com/pulumi/examples/tree/master/azure-py-aks) from GitHub and add to it to create a complete solution
 
 ### Create a container registry and custom container
 

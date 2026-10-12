@@ -312,4 +312,4 @@ func TestInfrastructure(t *testing.T) {
 
 ## Try it out today
 
-We’ve released these features early so that you can try them out before the 2.0 release. To get you started, we've added [full working examples](https://github.com/pulumi/examples#testing) on Github. With the 2.0 release we’ll have more documentation, examples, and blog posts. In the meantime, we would appreciate feedback on our [Community Slack channel](https://pulumi-community.slack.com/).
+We’ve released these features early so that you can try them out before the 2.0 release. To get you started, we've added [full working examples](https://github.com/pulumi/examples#testing) on GitHub. With the 2.0 release we’ll have more documentation, examples, and blog posts. In the meantime, we would appreciate feedback on our [Community Slack channel](https://pulumi-community.slack.com/).

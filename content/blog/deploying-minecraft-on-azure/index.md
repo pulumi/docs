@@ -189,7 +189,7 @@ export("Minecraft Server IP Address", public_ip_addr.ip_address)
 
 This article demonstrates the process to create a virtual machine and provision it with a Minecraft server. However, there's always room for improvement, such as adding Azure Disk Storage to provide durable storage, add a configuration file to customize the server, and automatically updating the server jar file when a new version is released. All these options are available to you when you build your infrastructure with code.
 
-You can download the [code](https://github.com/pulumi/examples/tree/master/azure-py-minecraft-server) from the Pulumi examples repository on Github.
+You can download the [code](https://github.com/pulumi/examples/tree/master/azure-py-minecraft-server) from the Pulumi examples repository on GitHub.
 
 See these resources to learn more about deploying infrastructure on Azure.
 

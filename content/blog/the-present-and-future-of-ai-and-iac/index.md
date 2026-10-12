@@ -17,7 +17,7 @@ Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn 
 
 AI is impacting almost every industry today, and for good reason - we are seeing fundamentally new experiences being made possible across a wide variety of products, and a set of new AI capabilities that promise even more incredible change in the near future.
 
-Software development is among the earliest and most prominent fields to realize the benefits of AI, evidenced by the rapid adoption of tools like Github Copilot which is now one of the most heavily adopted developer tools of all time. Developers are benefiting from an incredible increase in their productivity with better scale and faster time to market.
+Software development is among the earliest and most prominent fields to realize the benefits of AI, evidenced by the rapid adoption of tools like GitHub Copilot which is now one of the most heavily adopted developer tools of all time. Developers are benefiting from an incredible increase in their productivity with better scale and faster time to market.
 
 We’re seeing the impacts of AI in the cloud Infrastructure development space in two impactful and complimentary directions:
 

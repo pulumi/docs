@@ -118,6 +118,11 @@
             },
             "type": "array"
           },
+          "checkOptionsMethods": {
+            "default": false,
+            "description": "Evaluate OPTIONS methods too. OPTIONS is the CORS preflight, which browsers send unauthenticated, so it is skipped by default; enable this only for an API that has no CORS.",
+            "type": "boolean"
+          },
           "enforcementLevel": {
             "enum": [
               "advisory",
@@ -162,7 +167,7 @@
             "type": "string"
           },
           "exemptMethods": {
-            "description": "List of method paths to exempt from encryption requirement",
+            "description": "List of method paths to exempt from encryption requirement, spelled {resource_path}/{http_method} (for example health/GET)",
             "items": {
               "type": "string"
             },
@@ -368,7 +373,7 @@
       },
       "message": "",
       "name": "api-gateway-waf-association",
-      "remediationSteps": "## Fix: Associate WAF Web ACL with API Gateway Stage\n\nCreate a WAF Web ACL association for your API Gateway stage:\n\n```typescript\n// Create a WAF Web ACL association for the API Gateway stage\nconst wafAssociation = new aws.wafv2.WebAclAssociation(\"api-waf-association\", {\n    resourceArn: pulumi.interpolate`arn:aws:apigateway:${region}::/restapis/${restApi.id}/stages/${stage.stageName}`, // Stage ARN\n    webAclArn: webAcl.arn, // Reference the WAF Web ACL ARN\n});\n```",
+      "remediationSteps": "## Fix: Associate WAF Web ACL with API Gateway Stage\n\nCreate a WAF Web ACL association for your API Gateway stage:\n\n```typescript\n// Create a WAF Web ACL association for the API Gateway stage\nconst wafAssociation = new aws.wafv2.WebAclAssociation(\"api-waf-association\", {\n    resourceArn: stage.arn, // The API Gateway *stage* ARN, not the REST API ARN\n    webAclArn: webAcl.arn, // Reference the WAF Web ACL ARN\n});\n```",
       "severity": "critical"
     },
     {
@@ -438,7 +443,7 @@
       },
       "message": "",
       "name": "appflow-connector-profile-configure-customer-managed-key",
-      "remediationSteps": "## Fix: Configure Customer-Managed KMS Key for AppFlow Connector Profile\n\nSet the `kmsArn` property to reference a customer-managed KMS key:\n\n```typescript\nconst connectorProfile = new aws.appflow.ConnectorProfile(\"my-connector-profile\", {\n    connectorProfileName: \"salesforce-connector\",\n    connectorType: \"Salesforce\",\n    connectionMode: \"Public\",\n    kmsArn: kmsKey.arn, // Specify customer-managed KMS key ARN\n    connectorProfileConfig: {\n        connectorProfileCredentials: {\n            salesforce: {\n                accessToken: salesforceAccessToken,\n                refreshToken: salesforceRefreshToken,\n                oauthRequest: {\n                    authCode: authCode,\n                    redirectUri: redirectUri,\n                },\n            },\n        },\n    },\n});\n```",
+      "remediationSteps": "## Fix: Configure Customer-Managed KMS Key for AppFlow Connector Profile\n\nSet the `kmsArn` property to reference a customer-managed KMS key:\n\n```typescript\nconst connectorProfile = new aws.appflow.ConnectorProfile(\"my-connector-profile\", {\n    name: \"salesforce-connector\",\n    connectorType: \"Salesforce\",\n    connectionMode: \"Public\",\n    kmsArn: kmsKey.arn, // Specify customer-managed KMS key ARN\n    connectorProfileConfig: {\n        connectorProfileProperties: {\n            salesforce: {\n                instanceUrl: \"https://my-org.my.salesforce.com\",\n            },\n        },\n        connectorProfileCredentials: {\n            salesforce: {\n                accessToken: salesforceAccessToken,\n                refreshToken: salesforceRefreshToken,\n                oauthRequest: {\n                    authCode: authCode,\n                    redirectUri: redirectUri,\n                },\n            },\n        },\n    },\n});\n```",
       "severity": "low"
     },
     {
@@ -467,7 +472,7 @@
       },
       "message": "",
       "name": "appflow-flow-configure-customer-managed-key",
-      "remediationSteps": "## Fix: Configure Customer-Managed KMS Key for AppFlow Flow\n\nSet the `kmsArn` property to specify a customer-managed KMS key for encrypting the AppFlow Flow:\n\n```typescript\nconst flow = new aws.appflow.Flow(\"my-flow\", {\n    name: \"my-appflow\",\n    kmsArn: kmsKey.arn, // Configure customer-managed KMS key\n    sourceFlowConfig: {\n        connectorType: \"S3\",\n        sourceConnectorProperties: {\n            s3: {\n                bucketName: sourceBucket.bucket,\n                bucketPrefix: \"data/\",\n            },\n        },\n    },\n    destinationFlowConfigs: [{\n        connectorType: \"S3\",\n        destinationConnectorProperties: {\n            s3: {\n                bucketName: destBucket.bucket,\n            },\n        },\n    }],\n    tasks: [{\n        taskType: \"Map_all\",\n        sourceFields: [],\n        connectorOperator: {\n            s3: \"NO_OP\",\n        },\n    }],\n    triggerConfig: {\n        triggerType: \"OnDemand\",\n    },\n});\n```",
+      "remediationSteps": "## Fix: Configure Customer-Managed KMS Key for AppFlow Flow\n\nSet the `kmsArn` property to specify a customer-managed KMS key for encrypting the AppFlow Flow:\n\n```typescript\nconst flow = new aws.appflow.Flow(\"my-flow\", {\n    name: \"my-appflow\",\n    kmsArn: kmsKey.arn, // Configure customer-managed KMS key\n    sourceFlowConfig: {\n        connectorType: \"S3\",\n        sourceConnectorProperties: {\n            s3: {\n                bucketName: sourceBucket.bucket,\n                bucketPrefix: \"data/\",\n            },\n        },\n    },\n    destinationFlowConfigs: [{\n        connectorType: \"S3\",\n        destinationConnectorProperties: {\n            s3: {\n                bucketName: destBucket.bucket,\n            },\n        },\n    }],\n    tasks: [{\n        taskType: \"Map_all\",\n        sourceFields: [],\n        connectorOperators: [{\n            s3: \"NO_OP\",\n        }],\n    }],\n    triggerConfig: {\n        triggerType: \"OnDemand\",\n    },\n});\n```",
       "severity": "low"
     },
     {
@@ -595,7 +600,7 @@
       },
       "message": "",
       "name": "athena-database-disallow-unencrypted-database",
-      "remediationSteps": "## Fix: Enable Encryption for Athena Database\n\nConfigure the `encryptionConfiguration` property to encrypt query results and data catalog:\n\n```typescript\nconst athenaDatabase = new aws.athena.Database(\"my-database\", {\n    name: \"my_database\",\n    bucket: dataBucket.id,\n    encryptionConfiguration: { // Enable encryption\n        encryptionOption: \"SSE_S3\", // Use SSE-S3, SSE-KMS, or CSE-KMS\n    },\n});\n```",
+      "remediationSteps": "## Fix: Enable Encryption for Athena Database\n\nConfigure the `encryptionConfiguration` property to encrypt query results and data catalog:\n\n```typescript\nconst athenaDatabase = new aws.athena.Database(\"my-database\", {\n    name: \"my_database\",\n    bucket: dataBucket.id,\n    encryptionConfiguration: { // Enable encryption\n        // SSE_S3 and CSE_KMS also satisfy this policy, but the sibling\n        // `athena-database-configure-customer-managed-key` runs in the same packs and accepts\n        // only SSE_KMS under a key you own.\n        encryptionOption: \"SSE_KMS\",\n        kmsKey: kmsKey.arn,\n    },\n});\n```",
       "severity": "high"
     },
     {
@@ -624,7 +629,7 @@
       },
       "message": "",
       "name": "athena-workgroup-configure-customer-managed-key",
-      "remediationSteps": "## Fix: Configure Customer-Managed Key Encryption for Athena Workgroup\n\nSet the `encryptionOption` to \"SSE_KMS\" in the workgroup's result configuration to enable customer-managed key encryption:\n\n```typescript\nconst workgroup = new athena.Workgroup(\"my-workgroup\", {\n    name: \"my-workgroup\",\n    configuration: {\n        resultConfiguration: {\n            outputLocation: \"s3://my-bucket/query-results/\",\n            encryptionConfiguration: {\n                encryptionOption: \"SSE_KMS\", // Enable customer-managed key encryption\n                kmsKey: kmsKey.arn, // Optional: specify a specific KMS key\n            },\n        },\n    },\n});\n```",
+      "remediationSteps": "## Fix: Configure Customer-Managed Key Encryption for Athena Workgroup\n\nSet the `encryptionOption` to \"SSE_KMS\" in the workgroup's result configuration to enable customer-managed key encryption:\n\n```typescript\nconst workgroup = new athena.Workgroup(\"my-workgroup\", {\n    name: \"my-workgroup\",\n    configuration: {\n        resultConfiguration: {\n            outputLocation: \"s3://my-bucket/query-results/\",\n            encryptionConfiguration: {\n                encryptionOption: \"SSE_KMS\", // Enable customer-managed key encryption\n                kmsKeyArn: kmsKey.arn, // ARN of the KMS key you create and control\n            },\n        },\n    },\n});\n```",
       "severity": "low"
     },
     {
@@ -653,7 +658,7 @@
       },
       "message": "",
       "name": "athena-workgroup-disallow-unencrypted-workgroup",
-      "remediationSteps": "## Fix: Enable Encryption for Athena Workgroup Query Results\n\nConfigure encryption for query results by adding an `encryptionConfiguration` within the workgroup's `resultConfiguration`:\n\n```typescript\nconst workgroup = new athena.Workgroup(\"my-workgroup\", {\n    name: \"example-workgroup\",\n    configuration: {\n        resultConfiguration: {\n            outputLocation: \"s3://my-query-results-bucket/\",\n            encryptionConfiguration: { // Add encryption configuration\n                encryptionOption: \"SSE_KMS\", // or \"SSE_S3\" or \"CSE_KMS\"\n                kmsKey: kmsKey.arn, // Required when using SSE_KMS or CSE_KMS\n            },\n        },\n    },\n});\n```",
+      "remediationSteps": "## Fix: Enable Encryption for Athena Workgroup Query Results\n\nConfigure encryption for query results by adding an `encryptionConfiguration` within the workgroup's `resultConfiguration`:\n\n```typescript\nconst workgroup = new athena.Workgroup(\"my-workgroup\", {\n    name: \"example-workgroup\",\n    configuration: {\n        resultConfiguration: {\n            outputLocation: \"s3://my-query-results-bucket/\",\n            encryptionConfiguration: { // Add encryption configuration\n                encryptionOption: \"SSE_KMS\", // or \"SSE_S3\" or \"CSE_KMS\"\n                kmsKeyArn: kmsKey.arn, // Required when using SSE_KMS or CSE_KMS\n            },\n        },\n    },\n});\n```",
       "severity": "high"
     },
     {
@@ -682,7 +687,7 @@
       },
       "message": "",
       "name": "athena-workgroup-enforce-configuration",
-      "remediationSteps": "## Fix: Enable Workgroup Configuration Enforcement\n\nSet `enforceWorkgroupConfiguration` to `true` in the Athena Workgroup configuration to ensure clients use the workgroup's settings:\n\n```typescript\nconst workgroup = new athena.Workgroup(\"my-workgroup\", {\n    name: \"my-workgroup\",\n    configuration: {\n        enforceWorkgroupConfiguration: true, // Enforce workgroup configuration on clients\n        resultConfiguration: {\n            outputLocation: \"s3://my-query-results/\",\n        },\n    },\n});\n```",
+      "remediationSteps": "## Fix: Enable Workgroup Configuration Enforcement\n\nSet `enforceWorkgroupConfiguration` to `true` in the Athena Workgroup configuration to ensure clients use the workgroup's settings:\n\n```typescript\nconst workgroup = new athena.Workgroup(\"my-workgroup\", {\n    name: \"my-workgroup\",\n    configuration: {\n        enforceWorkgroupConfiguration: true, // Enforce workgroup configuration on clients\n        resultConfiguration: {\n            outputLocation: \"s3://my-query-results/\",\n            // Required by `athena-workgroup-disallow-unencrypted-workgroup`, which runs in the\n            // same packs: a result configuration with no encryption block is reported there.\n            encryptionConfiguration: {\n                encryptionOption: \"SSE_KMS\",\n                kmsKeyArn: kmsKey.arn,\n            },\n        },\n    },\n});\n```",
       "severity": "high"
     },
     {
@@ -829,7 +834,7 @@
       },
       "message": "",
       "name": "cloudfront-distribution-configure-access-logging",
-      "remediationSteps": "## Fix: Configure CloudFront Access Logging\n\nConfigure the `loggingConfig` property with an S3 bucket to store CloudFront access logs:\n\n```typescript\nconst distribution = new cloudfront.Distribution(\"my-distribution\", {\n    enabled: true,\n    loggingConfig: {\n        bucket: logBucket.bucketDomainName, // S3 bucket for access logs\n        includeCookies: false,\n        prefix: \"cloudfront-logs/\",\n    },\n    // ... other distribution configuration\n});\n```",
+      "remediationSteps": "## Fix: Configure CloudFront Access Logging\n\nEither configure the legacy `loggingConfig` block with an S3 bucket:\n\n```typescript\nconst distribution = new cloudfront.Distribution(\"my-distribution\", {\n    enabled: true,\n    loggingConfig: {\n        bucket: logBucket.bucketDomainName, // S3 bucket for access logs\n        includeCookies: false,\n        prefix: \"cloudfront-logs/\",\n    },\n    // ... other distribution configuration\n});\n```\n\n…or use standard logging v2, which delivers access logs through CloudWatch Logs:\n\n```typescript\nconst source = new aws.cloudwatch.LogDeliverySource(\"cf-access-logs\", {\n    name: \"cf-access-logs\",\n    logType: \"ACCESS_LOGS\",\n    resourceArn: distribution.arn, // the distribution these logs come from\n});\n\nconst destination = new aws.cloudwatch.LogDeliveryDestination(\"cf-access-logs\", {\n    name: \"cf-access-logs\",\n    deliveryDestinationConfiguration: {\n        destinationResourceArn: logGroup.arn,\n    },\n});\n\nnew aws.cloudwatch.LogDelivery(\"cf-access-logs\", {\n    deliverySourceName: source.name,\n    deliveryDestinationArn: destination.arn,\n});\n```",
       "severity": "medium"
     },
     {
@@ -858,7 +863,7 @@
       },
       "message": "",
       "name": "cloudfront-distribution-configure-secure-tls",
-      "remediationSteps": "## Fix: Configure Secure TLS Protocol Version for CloudFront\n\nSet the `minimumProtocolVersion` to \"TLSv1.2_2021\" in the viewer certificate configuration:\n\n```typescript\nconst distribution = new cloudfront.Distribution(\"my-distribution\", {\n    enabled: true,\n    origins: [/* ... */],\n    defaultCacheBehavior: {/* ... */},\n    viewerCertificate: {\n        cloudfrontDefaultCertificate: true,\n        minimumProtocolVersion: \"TLSv1.2_2021\", // Use secure TLS 1.2 with modern cipher suites\n    },\n});\n```",
+      "remediationSteps": "## Fix: Configure Secure TLS Protocol Version for CloudFront\n\n`minimumProtocolVersion` can only be raised on a distribution that serves a **custom**\ncertificate. The provider documents it as *\"Can only be set if `cloudfrontDefaultCertificate =\nfalse`\"*, and *\"If you have specified `cloudfrontDefaultCertificate`, `TLSv1` must be\nspecified\"* — so a distribution on the default `*.cloudfront.net` certificate is pinned to\n`TLSv1` and cannot be fixed by adding the property. Attach an ACM (or IAM) certificate first,\nthen set the security policy:\n\n```typescript\nconst distribution = new cloudfront.Distribution(\"my-distribution\", {\n    enabled: true,\n    aliases: [\"www.example.com\"],\n    origins: [/* ... */],\n    defaultCacheBehavior: {/* ... */},\n    viewerCertificate: {\n        // A custom certificate is what makes a modern TLS floor settable at all.\n        acmCertificateArn: certificate.arn, // must be issued in us-east-1\n        sslSupportMethod: \"sni-only\",\n        minimumProtocolVersion: \"TLSv1.2_2021\", // Use secure TLS 1.2 with modern cipher suites\n    },\n});\n```",
       "severity": "high"
     },
     {
@@ -1090,7 +1095,7 @@
       },
       "message": "",
       "name": "cloudtrail-cloudwatch-logs-integration",
-      "remediationSteps": "## Fix: Configure CloudWatch Logs Integration for CloudTrail\n\nAdd the CloudWatch Logs group ARN and IAM role ARN to your CloudTrail trail configuration:\n\n```typescript\nconst logGroup = new aws.cloudwatch.LogGroup(\"trail-log-group\", {\n    retentionInDays: 90,\n});\n\nconst trailRole = new aws.iam.Role(\"trail-cloudwatch-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { Service: \"cloudtrail.amazonaws.com\" },\n            Action: \"sts:AssumeRole\",\n        }],\n    }),\n});\n\nconst trail = new aws.cloudtrail.Trail(\"my-trail\", {\n    s3BucketName: bucket.id,\n    cloudWatchLogsGroupArn: logGroup.arn,  // Add this field\n    cloudWatchLogsRoleArn: trailRole.arn,  // Add this field\n});\n```",
+      "remediationSteps": "## Fix: Configure CloudWatch Logs Integration for CloudTrail\n\nAdd the CloudWatch Logs group ARN and IAM role ARN to your CloudTrail trail configuration, and\ngrant that role permission to write to the log group — a trail that names a destination the role\ncannot write to is configured but delivers nothing. CloudTrail requires the log stream wildcard\n(`:*`) on the log group ARN, and checks the role's access when the trail is created:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\nimport * as pulumi from \"@pulumi/pulumi\";\n\nconst account = aws.getCallerIdentityOutput();\nconst region = aws.getRegionOutput();\n\n// The key policy must let the regional CloudWatch Logs service encrypt the log group with this key.\nconst logsKey = new aws.kms.Key(\"trail-logs-key\", {\n    description: \"Encrypts the CloudTrail CloudWatch Logs log group\",\n    enableKeyRotation: true,\n    policy: pulumi.all([account.accountId, region.region]).apply(([accountId, regionName]) => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [\n            {\n                Effect: \"Allow\",\n                Principal: { AWS: `arn:aws:iam::${accountId}:root` },\n                Action: [\n                    \"kms:Create*\", \"kms:Describe*\", \"kms:Enable*\", \"kms:List*\", \"kms:Put*\", \"kms:Update*\",\n                    \"kms:Revoke*\", \"kms:Disable*\", \"kms:Get*\", \"kms:Delete*\", \"kms:TagResource\",\n                    \"kms:UntagResource\", \"kms:ScheduleKeyDeletion\", \"kms:CancelKeyDeletion\",\n                ],\n                Resource: \"*\",\n            },\n            {\n                Effect: \"Allow\",\n                Principal: { Service: `logs.${regionName}.amazonaws.com` },\n                Action: [\"kms:Encrypt*\", \"kms:Decrypt*\", \"kms:ReEncrypt*\", \"kms:GenerateDataKey*\", \"kms:Describe*\"],\n                Resource: \"*\",\n                Condition: {\n                    ArnLike: { \"kms:EncryptionContext:aws:logs:arn\": `arn:aws:logs:${regionName}:${accountId}:log-group:*` },\n                },\n            },\n        ],\n    })),\n});\n\nconst logGroup = new aws.cloudwatch.LogGroup(\"trail-log-group\", {\n    retentionInDays: 365,\n    kmsKeyId: logsKey.arn,\n});\n\nconst trailRole = new aws.iam.Role(\"trail-cloudwatch-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { Service: \"cloudtrail.amazonaws.com\" },\n            Action: \"sts:AssumeRole\",\n        }],\n    }),\n});\n\nconst trailRolePolicy = new aws.iam.RolePolicy(\"trail-cloudwatch-policy\", {\n    role: trailRole.id,\n    policy: pulumi.all([logGroup.arn]).apply(([logGroupArn]) => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\"logs:CreateLogStream\", \"logs:PutLogEvents\"],\n            Resource: `${logGroupArn}:*`,\n        }],\n    })),\n});\n\nconst trail = new aws.cloudtrail.Trail(\"my-trail\", {\n    s3BucketName: bucket.id,\n    cloudWatchLogsGroupArn: pulumi.interpolate`${logGroup.arn}:*`,  // CloudTrail requires the log stream wildcard\n    cloudWatchLogsRoleArn: trailRole.arn,  // Add this field\n}, { dependsOn: [trailRolePolicy] });  // The role must be able to write before CloudTrail accepts it\n```",
       "severity": "medium"
     },
     {
@@ -1127,7 +1132,7 @@
       },
       "description": "Ensures CloudTrail is enabled with at least one active trail for audit logging.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.15 Logging",
@@ -1305,7 +1310,7 @@
       },
       "message": "",
       "name": "cloudtrail-s3-data-events-enabled",
-      "remediationSteps": "## Fix: Enable S3 Data Events in CloudTrail\n\nConfigure your CloudTrail trail to log S3 object-level operations by adding event selectors:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst trail = new aws.cloudtrail.Trail(\"my-trail\", {\n    s3BucketName: trailBucket.bucket,\n    // Enable S3 data events for all buckets\n    eventSelectors: [{\n        readWriteType: \"All\", // Log both read and write operations\n        includeManagementEvents: true,\n        dataResources: [{\n            type: \"AWS::S3::Object\",\n            values: [\"arn:aws:s3:::*/*\"], // Monitor all S3 objects\n        }],\n    }],\n});\n```\n\nAlternatively, use advanced event selectors for more granular control:\n\n```typescript\nconst trail = new aws.cloudtrail.Trail(\"my-trail\", {\n    s3BucketName: trailBucket.bucket,\n    advancedEventSelectors: [{\n        name: \"Log S3 data events\",\n        fieldSelectors: [\n            {\n                field: \"eventCategory\",\n                equals: [\"Data\"], // Data events category\n            },\n            {\n                field: \"resources.type\",\n                equals: [\"AWS::S3::Object\"], // S3 object operations\n            },\n        ],\n    }],\n});\n```",
+      "remediationSteps": "## Fix: Enable S3 Data Events in CloudTrail\n\nConfigure your CloudTrail trail to log S3 object-level API activity by adding event selectors or advanced event selectors.\n\nUse `arn:aws:s3` for every bucket in the account, or a bucket's ARN followed by `/` (for example `arn:aws:s3:::my-bucket/`) for all objects in one bucket.\n\n### Using Event Selectors:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst trail = new aws.cloudtrail.Trail(\"my-trail\", {\n    s3BucketName: trailBucket.bucket,\n    eventSelectors: [{\n        readWriteType: \"All\", // Log both read and write operations\n        includeManagementEvents: true,\n        dataResources: [{\n            type: \"AWS::S3::Object\",\n            values: [\"arn:aws:s3\"], // Prefix of every object ARN: covers every bucket in the account\n        }],\n    }],\n});\n```\n\n### Using Advanced Event Selectors (Recommended):\n\n```typescript\nconst trail = new aws.cloudtrail.Trail(\"my-trail\", {\n    s3BucketName: trailBucket.bucket,\n    advancedEventSelectors: [{\n        name: \"Log all S3 data events\",\n        fieldSelectors: [\n            {\n                field: \"eventCategory\",\n                equals: [\"Data\"], // Enable data event logging\n            },\n            {\n                field: \"resources.type\",\n                equals: [\"AWS::S3::Object\"], // Target S3 objects\n            },\n            // No resources.ARN filter, so every bucket in the account is covered.\n        ],\n    }],\n});\n```",
       "severity": "medium"
     },
     {
@@ -1361,7 +1366,7 @@
       },
       "message": "",
       "name": "cloudwatch-alarms-actions-required",
-      "remediationSteps": "## Fix: Enable CloudWatch Alarm Actions\n\nConfigure your CloudWatch alarm to have actions enabled and specify at least one action for the ALARM state:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create SNS topic for alarm notifications\nconst alarmTopic = new aws.sns.Topic(\"alarm-topic\", {\n    displayName: \"CloudWatch Alarm Notifications\",\n});\n\n// Create CloudWatch alarm with actions enabled\nconst alarm = new aws.cloudwatch.MetricAlarm(\"my-alarm\", {\n    comparisonOperator: \"GreaterThanThreshold\",\n    evaluationPeriods: 2,\n    metricName: \"CPUUtilization\",\n    namespace: \"AWS/EC2\",\n    period: 120,\n    statistic: \"Average\",\n    threshold: 80,\n    actionsEnabled: true,  // Enable actions (default: true)\n    alarmActions: [alarmTopic.arn],  // Add SNS topic ARN for ALARM state\n});\n```\n",
+      "remediationSteps": "## Fix: Enable CloudWatch Alarm Actions\n\nLeave `actionsEnabled` unset (it defaults to `true`) or set it to `true`, and give the alarm\nat least one action target, such as an SNS topic, for the ALARM state so the alarm reaches your\nincident response process. If the policy is configured with `requireOkActions` or\n`requireInsufficientDataActions`, set `okActions` or `insufficientDataActions` the same way.\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create SNS topic for alarm notifications\nconst alarmTopic = new aws.sns.Topic(\"alarm-topic\", {\n    displayName: \"CloudWatch Alarm Notifications\",\n});\n\n// Create CloudWatch alarm with actions enabled\nconst alarm = new aws.cloudwatch.MetricAlarm(\"my-alarm\", {\n    comparisonOperator: \"GreaterThanThreshold\",\n    evaluationPeriods: 2,\n    metricName: \"CPUUtilization\",\n    namespace: \"AWS/EC2\",\n    period: 120,\n    statistic: \"Average\",\n    threshold: 80,\n    actionsEnabled: true,  // Enable actions (default: true)\n    alarmActions: [alarmTopic.arn],  // Add SNS topic ARN for ALARM state\n});\n```\n",
       "severity": "medium"
     },
     {
@@ -1402,7 +1407,7 @@
       },
       "message": "",
       "name": "cloudwatch-log-group-kms-encryption-enabled",
-      "remediationSteps": "## Fix: Enable KMS Encryption for CloudWatch Log Group\n\nAdd a KMS key to your CloudWatch log group resource to enable encryption at rest:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst logGroup = new aws.cloudwatch.LogGroup(\"my-log-group\", {\n    name: \"/aws/my-application\",\n    kmsKeyId: kmsKey.arn,  // Add KMS key ARN to enable encryption\n    retentionInDays: 30,\n});\n```\n",
+      "remediationSteps": "## Fix: Enable KMS Encryption for CloudWatch Log Group\n\nSet `kmsKeyId` on the log group to the ARN of a KMS key to encrypt its log data at rest:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst logGroup = new aws.cloudwatch.LogGroup(\"my-log-group\", {\n    name: \"/aws/my-application\",\n    kmsKeyId: kmsKey.arn,  // Add KMS key ARN to enable encryption\n    retentionInDays: 365,  // cloudwatch-log-retention requires at least 365 days by default\n});\n```\n",
       "severity": "high"
     },
     {
@@ -1473,6 +1478,7 @@
             "type": "string"
           },
           "exemptResources": {
+            "default": [],
             "description": "CodeBuild projects exempt from this requirement",
             "items": {
               "type": "string"
@@ -1562,6 +1568,7 @@
             "type": "string"
           },
           "exemptResources": {
+            "default": [],
             "description": "CodeBuild projects exempt from this requirement",
             "items": {
               "type": "string"
@@ -1603,6 +1610,7 @@
             "type": "string"
           },
           "exemptResources": {
+            "default": [],
             "description": "CodeBuild projects exempt from this requirement",
             "items": {
               "type": "string"
@@ -1644,6 +1652,7 @@
             "type": "string"
           },
           "exemptResources": {
+            "default": [],
             "description": "CodeBuild projects exempt from this requirement",
             "items": {
               "type": "string"
@@ -1706,7 +1715,7 @@
       },
       "description": "Ensures AWS Config configuration recorders are enabled for tracking and auditing resource changes.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.9 Configuration management",
@@ -1715,7 +1724,7 @@
       },
       "message": "",
       "name": "config-recorder-enabled",
-      "remediationSteps": "## Fix: Enable AWS Config Recorder\n\nCreate a Config Recorder with RecorderStatus to track all resource changes:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create Config Recorder\nconst recorder = new aws.cfg.Recorder(\"config-recorder\", {\n    recordingGroup: {\n        allSupported: true,  // Record all supported resource types\n        includeGlobalResourceTypes: true,  // Include global resources (IAM, etc.)\n    },\n    roleArn: configRole.arn,  // IAM role with Config permissions\n});\n\n// Activate the recorder\nconst recorderStatus = new aws.cfg.RecorderStatus(\"config-recorder-status\", {\n    name: recorder.name,\n    isEnabled: true,  // Enable the recorder\n});\n```\n",
+      "remediationSteps": "## Fix: Enable AWS Config Recorder\n\nCreate a Config Recorder, the IAM role it assumes, a delivery channel, and a RecorderStatus to\nstart it. AWS will not start a recorder that has no delivery channel:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\nimport * as pulumi from \"@pulumi/pulumi\";\n\n// IAM role AWS Config assumes, with the AWS managed policy for Config attached\nconst configRole = new aws.iam.Role(\"config-role\", {\n    assumeRolePolicy: {\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { Service: \"config.amazonaws.com\" },\n            Action: \"sts:AssumeRole\",\n        }],\n    },\n});\n\nnew aws.iam.RolePolicyAttachment(\"config-role-managed-policy\", {\n    role: configRole.name,\n    policyArn: \"arn:aws:iam::aws:policy/service-role/AWS_ConfigRole\",\n});\n\n// S3 bucket the delivery channel writes configuration history and snapshots to\nconst configBucket = new aws.s3.Bucket(\"config-delivery\");\nconst accountId = aws.getCallerIdentityOutput().accountId;\n\n// Let the role deliver to that bucket\nconst configDeliveryPolicy = new aws.iam.RolePolicy(\"config-delivery-policy\", {\n    role: configRole.name,\n    policy: {\n        Version: \"2012-10-17\",\n        Statement: [\n            {\n                Effect: \"Allow\",\n                Action: [\"s3:PutObject\", \"s3:PutObjectAcl\"],\n                Resource: pulumi.interpolate`${configBucket.arn}/AWSLogs/${accountId}/*`,\n                Condition: { StringLike: { \"s3:x-amz-acl\": \"bucket-owner-full-control\" } },\n            },\n            {\n                Effect: \"Allow\",\n                Action: \"s3:GetBucketAcl\",\n                Resource: configBucket.arn,\n            },\n        ],\n    },\n});\n\n// Create Config Recorder\nconst recorder = new aws.cfg.Recorder(\"config-recorder\", {\n    recordingGroup: {\n        allSupported: true,  // Record all supported resource types\n        includeGlobalResourceTypes: true,  // Include global resources (IAM, etc.)\n    },\n    roleArn: configRole.arn,  // IAM role with Config permissions\n});\n\n// A delivery channel needs the recorder to exist, and the recorder will not start without one\nconst deliveryChannel = new aws.cfg.DeliveryChannel(\"config-delivery-channel\", {\n    s3BucketName: configBucket.bucket,\n}, { dependsOn: [recorder, configDeliveryPolicy] });\n\n// Activate the recorder\nconst recorderStatus = new aws.cfg.RecorderStatus(\"config-recorder-status\", {\n    name: recorder.name,\n    isEnabled: true,  // Enable the recorder\n}, { dependsOn: [deliveryChannel] });\n```\n",
       "severity": "high"
     },
     {
@@ -2187,7 +2196,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures DynamoDB tables have encryption enabled using KMS keys.",
+      "description": "Ensures DynamoDB tables are encrypted with a customer managed KMS key.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -2446,6 +2455,7 @@
             "type": "string"
           },
           "exemptInstances": {
+            "default": [],
             "description": "Instances exempt from IAM profile requirements",
             "items": {
               "type": "string"
@@ -2453,6 +2463,7 @@
             "type": "array"
           },
           "requiredProfiles": {
+            "default": [],
             "description": "Required IAM profile names or patterns",
             "items": {
               "type": "string"
@@ -2746,7 +2757,7 @@
       },
       "message": "",
       "name": "ec2-launch-template-disallow-public-ip",
-      "remediationSteps": "## Fix: Disable Public IP Assignment in Launch Template\n\nSet `associatePublicIpAddress` to `false` (or omit it) in the network interface configuration to prevent instances from receiving public IP addresses:\n\n```typescript\nconst launchTemplate = new aws.ec2.LaunchTemplate(\"my-template\", {\n    imageId: \"ami-12345678\",\n    instanceType: \"t3.micro\",\n    networkInterfaces: [{\n        associatePublicIpAddress: \"false\", // Disable public IP assignment\n        securityGroups: [securityGroup.id],\n        subnetId: privateSubnet.id,\n    }],\n});\n```",
+      "remediationSteps": "## Fix: Disable Public IP Assignment in Launch Template\n\nSet `associatePublicIpAddress` to the string `\"false\"` on the network interface. The provider types this field as a string, and omitting it does not disable the address: the instance then takes the subnet's auto-assign public IP setting.\n\n```typescript\nconst launchTemplate = new aws.ec2.LaunchTemplate(\"my-template\", {\n    imageId: \"ami-12345678\",\n    instanceType: \"t3.micro\",\n    networkInterfaces: [{\n        associatePublicIpAddress: \"false\", // Disable public IP assignment\n        securityGroups: [securityGroup.id],\n        subnetId: privateSubnet.id,\n    }],\n});\n```",
       "severity": "high"
     },
     {
@@ -2796,6 +2807,7 @@
             "type": "string"
           },
           "exemptInstances": {
+            "default": [],
             "description": "Instances exempt from detailed monitoring requirements",
             "items": {
               "type": "string"
@@ -2845,7 +2857,7 @@
       },
       "message": "",
       "name": "ec2-security-group-disallow-inbound-http-traffic",
-      "remediationSteps": "## Fix: Remove HTTP Inbound Traffic Rules\n\nRemove any ingress rules that allow HTTP traffic on port 80, or use HTTPS (port 443) instead:\n\n```typescript\nconst securityGroup = new ec2.SecurityGroup(\"my-sg\", {\n    vpcId: vpc.id,\n    ingress: [\n        {\n            protocol: \"tcp\",\n            fromPort: 443, // Use HTTPS instead of HTTP (port 80)\n            toPort: 443,\n            cidrBlocks: [\"0.0.0.0/0\"],\n        },\n        // Remove any rules with fromPort: 80 or toPort: 80\n    ],\n});\n```",
+      "remediationSteps": "## Fix: Remove HTTP Inbound Traffic Rules\n\nRemove any ingress rules that allow HTTP traffic on port 80, or use HTTPS (port 443) instead:\n\n```typescript\nconst securityGroup = new ec2.SecurityGroup(\"my-sg\", {\n    vpcId: vpc.id,\n    ingress: [\n        {\n            protocol: \"tcp\",\n            fromPort: 443, // Use HTTPS instead of HTTP (port 80)\n            toPort: 443,\n            cidrBlocks: [\"0.0.0.0/0\"],\n        },\n        // Remove any rules whose port range covers 80, and any rule with protocol \"-1\"/\"all\",\n        // which opens every port.\n    ],\n});\n\n// The same applies to standalone rules, which are the provider's current best practice:\nnew aws.vpc.SecurityGroupIngressRule(\"my-sg-https\", {\n    securityGroupId: securityGroup.id,\n    ipProtocol: \"tcp\",\n    fromPort: 443,\n    toPort: 443,\n    cidrIpv4: \"0.0.0.0/0\",\n});\n```",
       "severity": "high"
     },
     {
@@ -2866,6 +2878,7 @@
             "type": "string"
           },
           "exemptInstances": {
+            "default": [],
             "description": "EC2 instances exempt from VPC placement requirements",
             "items": {
               "type": "string"
@@ -3183,7 +3196,7 @@
       },
       "message": "",
       "name": "eks-cluster-disallow-api-endpoint-public-access",
-      "remediationSteps": "## Fix: Disable Public Access to EKS Cluster API Endpoint\n\nSet `endpointPublicAccess` to false and `endpointPrivateAccess` to true in the VPC configuration:\n\n```typescript\nconst cluster = new eks.Cluster(\"my-cluster\", {\n    vpcConfig: {\n        subnetIds: privateSubnetIds,\n        endpointPublicAccess: false, // Disable public access to API endpoint\n        endpointPrivateAccess: true, // Enable private access for internal communication\n    },\n    // ... other configuration\n});\n```",
+      "remediationSteps": "## Fix: Disable Public Access to EKS Cluster API Endpoint\n\nSet `endpointPublicAccess` to false and `endpointPrivateAccess` to true in the VPC configuration:\n\n```typescript\nconst cluster = new aws.eks.Cluster(\"my-cluster\", {\n    roleArn: clusterRole.arn,\n    vpcConfig: {\n        subnetIds: privateSubnetIds,\n        endpointPublicAccess: false, // Disable public access to API endpoint\n        endpointPrivateAccess: true, // Enable private access for internal communication\n    },\n});\n```\n\nIf the public endpoint must stay enabled, set `publicAccessCidrs` to the networks that need access. Leaving it unset or empty allows `0.0.0.0/0`, and a list containing `0.0.0.0/0` or `::/0` is still reported:\n\n```typescript\nconst cluster = new aws.eks.Cluster(\"my-cluster\", {\n    roleArn: clusterRole.arn,\n    vpcConfig: {\n        subnetIds: privateSubnetIds,\n        endpointPublicAccess: true,\n        publicAccessCidrs: [\"203.0.113.0/24\"], // Only the networks that need access\n    },\n});\n```",
       "severity": "critical"
     },
     {
@@ -3486,7 +3499,7 @@
       },
       "message": "",
       "name": "elasticsearch-cloudwatch-logging-enabled",
-      "remediationSteps": "## Fix: Enable CloudWatch Logging for Elasticsearch Domain\n\nConfigure the `logPublishingOptions` property to send audit logs to CloudWatch:\n\n```typescript\nconst logGroup = new aws.cloudwatch.LogGroup(\"es-audit-logs\", {\n    retentionInDays: 7\n});\n\nconst domain = new aws.elasticsearch.Domain(\"my-domain\", {\n    // ... other configuration ...\n    logPublishingOptions: [\n        {\n            logType: \"AUDIT_LOGS\",  // Enable audit logging\n            enabled: true,\n            cloudwatchLogGroupArn: logGroup.arn,\n        },\n    ],\n});\n```",
+      "remediationSteps": "## Fix: Enable CloudWatch Logging for Elasticsearch Domain\n\nAdd a `logPublishingOptions` entry for every required log type (`AUDIT_LOGS` by default; the\n`requiredLogTypes` config can require others), each enabled and directed to a CloudWatch log group:\n\n```typescript\nconst logGroup = new aws.cloudwatch.LogGroup(\"es-audit-logs\", {\n    retentionInDays: 365,\n    kmsKeyId: logsKey.arn, // a KMS key whose policy lets CloudWatch Logs use it\n});\n\n// CloudWatch Logs must allow the Elasticsearch service to write to the log group.\nconst logResourcePolicy = new aws.cloudwatch.LogResourcePolicy(\"es-audit-logs\", {\n    policyName: \"es-audit-logs\",\n    policyDocument: pulumi.jsonStringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { Service: \"es.amazonaws.com\" },\n            Action: [\"logs:PutLogEvents\", \"logs:CreateLogStream\"],\n            Resource: pulumi.interpolate`${logGroup.arn}:*`,\n        }],\n    }),\n});\n\nconst domain = new aws.elasticsearch.Domain(\"my-domain\", {\n    // ... other configuration; AUDIT_LOGS also requires advancedSecurityOptions to be enabled ...\n    logPublishingOptions: [\n        {\n            logType: \"AUDIT_LOGS\",  // Enable audit logging\n            enabled: true,\n            cloudwatchLogGroupArn: logGroup.arn,\n        },\n    ],\n}, { dependsOn: [logResourcePolicy] });\n```",
       "severity": "medium"
     },
     {
@@ -3507,6 +3520,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "Elasticsearch domains exempt from encryption at rest requirements",
             "items": {
               "type": "string"
@@ -3548,6 +3562,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "Elasticsearch domains exempt from HTTPS requirements",
             "items": {
               "type": "string"
@@ -3555,7 +3570,8 @@
             "type": "array"
           },
           "requiredTlsPolicy": {
-            "description": "Required TLS security policy (e.g., 'Policy-Min-TLS-1-2-2019-07')",
+            "default": "Policy-Min-TLS-1-2-PFS-2023-10",
+            "description": "TLS security policy every domain must declare, compared exactly. Defaults to the floor AWS Security Hub control ES-8 requires; set to empty to disable the check.",
             "type": "string"
           }
         },
@@ -3572,7 +3588,7 @@
       },
       "message": "",
       "name": "elasticsearch-https-required",
-      "remediationSteps": "## Fix: Enable HTTPS enforcement for Elasticsearch domain\n\nConfigure the `domainEndpointOptions` property to enforce HTTPS connections:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst domain = new aws.elasticsearch.Domain(\"my-domain\", {\n    domainName: \"my-elasticsearch-domain\",\n    domainEndpointOptions: {\n        enforceHttps: true, // Enable HTTPS enforcement\n        tlsSecurityPolicy: \"Policy-Min-TLS-1-2-2019-07\", // Optional: Set minimum TLS version\n    },\n    // ... other configuration\n});\n```",
+      "remediationSteps": "## Fix: Enable HTTPS enforcement for Elasticsearch domain\n\nConfigure the `domainEndpointOptions` property to enforce HTTPS connections:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst domain = new aws.elasticsearch.Domain(\"my-domain\", {\n    domainName: \"my-elasticsearch-domain\",\n    domainEndpointOptions: {\n        enforceHttps: true, // Enable HTTPS enforcement\n        tlsSecurityPolicy: \"Policy-Min-TLS-1-2-PFS-2023-10\", // Required TLS security policy\n    },\n    // ... other configuration\n});\n```",
       "severity": "high"
     },
     {
@@ -3593,6 +3609,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "Elasticsearch domains exempt from node-to-node encryption requirements",
             "items": {
               "type": "string"
@@ -3634,6 +3651,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "Elasticsearch domains exempt from VPC requirements",
             "items": {
               "type": "string"
@@ -3766,7 +3784,8 @@
           "requiredForTypes": {
             "default": [
               "application",
-              "network"
+              "network",
+              "gateway"
             ],
             "description": "Load balancer types that require deletion protection (application, network, gateway)",
             "items": {
@@ -3818,7 +3837,7 @@
         },
         "type": "object"
       },
-      "description": "Classic Load Balancers must use a defensive or strictest desync mitigation mode.",
+      "description": "Load balancers must use a defensive or strictest desync mitigation mode.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -3829,7 +3848,7 @@
       },
       "message": "",
       "name": "elb-desync-mitigation",
-      "remediationSteps": "## Fix: Set desync mitigation mode\n\nSet `desyncMitigationMode` to `defensive` or `strictest` on the Classic Load Balancer.\n\n```typescript\nconst elb = new aws.elb.LoadBalancer(\"elb\", {\n    availabilityZones: [\"us-east-1a\", \"us-east-1b\"],\n    desyncMitigationMode: \"strictest\",\n    listeners: [{ instancePort: 80, instanceProtocol: \"http\", lbPort: 80, lbProtocol: \"http\" }],\n});\n```",
+      "remediationSteps": "## Fix: Set desync mitigation mode\n\nSet `desyncMitigationMode` to `defensive` or `strictest`, or remove it to take the\n`defensive` default. The property is spelled the same on `aws.elb.LoadBalancer`,\n`aws.lb.LoadBalancer` and `aws.alb.LoadBalancer`.\n\n```typescript\nconst elb = new aws.elb.LoadBalancer(\"elb\", {\n    availabilityZones: [\"us-east-1a\", \"us-east-1b\"],\n    desyncMitigationMode: \"strictest\",\n    listeners: [{ instancePort: 80, instanceProtocol: \"http\", lbPort: 80, lbProtocol: \"http\" }],\n});\n```",
       "severity": "medium"
     },
     {
@@ -3887,7 +3906,7 @@
       },
       "message": "",
       "name": "elb-load-balancer-configure-multi-availability-zone",
-      "remediationSteps": "## Fix: Configure Multiple Availability Zones for Load Balancer\n\nSpecify at least two availability zones in the `availabilityZones` property to ensure high availability:\n\n```typescript\nconst lb = new aws.elb.LoadBalancer(\"my-lb\", {\n    availabilityZones: [\"us-east-1a\", \"us-east-1b\"], // Configure multiple AZs for resilience\n    listeners: [{\n        instancePort: 8000,\n        instanceProtocol: \"http\",\n        lbPort: 80,\n        lbProtocol: \"http\",\n    }],\n});\n```",
+      "remediationSteps": "## Fix: Configure Multiple Availability Zones for Load Balancer\n\nA classic load balancer is placed either by availability zone (EC2-Classic) or by subnet (VPC) —\nthe provider documents that \"Exactly one of `availabilityZones` or `subnets` must be specified\".\nUse whichever matches your deployment, with at least two entries in distinct AZs:\n\n```typescript\n// EC2-Classic: name the availability zones directly.\nconst lb = new aws.elb.LoadBalancer(\"my-lb\", {\n    availabilityZones: [\"us-east-1a\", \"us-east-1b\"], // Configure multiple AZs for resilience\n    listeners: [{\n        instancePort: 8000,\n        instanceProtocol: \"http\",\n        lbPort: 80,\n        lbProtocol: \"http\",\n    }],\n});\n\n// VPC: attach subnets that live in different availability zones.\nconst vpcLb = new aws.elb.LoadBalancer(\"my-vpc-lb\", {\n    subnets: [subnetAzA.id, subnetAzB.id], // Two subnets in two distinct AZs\n    listeners: [{\n        instancePort: 8000,\n        instanceProtocol: \"http\",\n        lbPort: 80,\n        lbProtocol: \"http\",\n    }],\n});\n```",
       "severity": "high"
     },
     {
@@ -4048,6 +4067,7 @@
             "type": "string"
           },
           "exemptClusters": {
+            "default": [],
             "description": "List of cluster names to exempt from public subnet restriction",
             "items": {
               "type": "string"
@@ -4055,6 +4075,7 @@
             "type": "array"
           },
           "exemptSubnets": {
+            "default": [],
             "description": "List of subnet IDs to exempt from public subnet check",
             "items": {
               "type": "string"
@@ -4075,7 +4096,7 @@
       },
       "message": "",
       "name": "emr-no-public-ip",
-      "remediationSteps": "## Fix: Deploy EMR Cluster in Private Subnet\n\n```typescript\nconst privateSubnet = new aws.ec2.Subnet(\"private-subnet\", {\n    vpcId: vpc.id,\n    cidrBlock: \"10.0.1.0/24\",\n    mapPublicIpOnLaunch: false,  // Disable auto-assign public IP\n    availabilityZone: \"us-east-1a\",\n});\n\nconst emrCluster = new aws.emr.Cluster(\"my-cluster\", {\n    releaseLabel: \"emr-6.10.0\",\n    ec2Attributes: {\n        subnetId: privateSubnet.id,  // Use private subnet without public IP auto-assignment\n        emrManagedMasterSecurityGroup: masterSecurityGroup.id,\n        emrManagedSlaveSecurityGroup: slaveSecurityGroup.id,\n    },\n    // ... other cluster configuration\n});\n```",
+      "remediationSteps": "## Fix: Deploy EMR Cluster in Private Subnet\n\n```typescript\nconst privateSubnet = new aws.ec2.Subnet(\"private-subnet\", {\n    vpcId: vpc.id,\n    cidrBlock: \"10.0.1.0/24\",\n    mapPublicIpOnLaunch: false,  // Disable auto-assign public IP\n    availabilityZone: \"us-east-1a\",\n});\n\nconst emrCluster = new aws.emr.Cluster(\"my-cluster\", {\n    releaseLabel: \"emr-6.10.0\",\n    serviceRole: emrServiceRole.arn,\n    ec2Attributes: {\n        subnetId: privateSubnet.id,  // Use private subnet without public IP auto-assignment\n        instanceProfile: emrInstanceProfile.arn,\n        emrManagedMasterSecurityGroup: masterSecurityGroup.id,\n        emrManagedSlaveSecurityGroup: slaveSecurityGroup.id,\n    },\n    // ... other cluster configuration\n});\n```\n\nIf the cluster needs outbound internet access, route the private subnet through a NAT gateway or use VPC endpoints.",
       "severity": "high"
     },
     {
@@ -4233,7 +4254,7 @@
       },
       "description": "Ensures AWS GuardDuty is enabled with malware detection capabilities for threat protection.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.7 Protection against malware; A.8.16 Monitoring activities",
@@ -4271,7 +4292,7 @@
       },
       "message": "",
       "name": "iam-group-policy-least-privilege",
-      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst groupPolicy = new aws.iam.GroupPolicy(\"my-group-policy\", {\n    group: myGroup.name,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"cloudwatch:PutMetricData\",  // Specify exact actions needed\n            ],\n            Resource: \"*\",  // Some AWS services require \"*\" for resource\n            Condition: {\n                StringEquals: {\n                    \"cloudwatch:namespace\": \"MyApp\",  // Use conditions to scope access\n                },\n            },\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst groupPolicy = new aws.iam.GroupPolicy(\"my-group-policy\", {\n    group: myGroup.name,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:ListBucket\",         // Specify exact actions needed\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
       "severity": "high"
     },
     {
@@ -4382,8 +4403,8 @@
             "type": "string"
           },
           "maxAllowedPasswordAge": {
-            "default": 365,
-            "description": "Maximum password age that can be configured",
+            "default": 90,
+            "description": "Upper bound in days for the resource's 'maxPasswordAge': an expiration period longer than this is reported. 90 is what PCI DSS 8.3.9, CIS and AWS FSBP ask for.",
             "type": "integer"
           },
           "maxPasswordAge": {
@@ -4393,7 +4414,7 @@
           },
           "minPasswordAge": {
             "default": 30,
-            "description": "Minimum password age that must be enforced",
+            "description": "Lower bound in days for the resource's 'maxPasswordAge': an expiration period shorter than this is reported. This is not AWS's minimum password age, which aws.iam.AccountPasswordPolicy does not expose.",
             "type": "integer"
           }
         },
@@ -4410,7 +4431,7 @@
       },
       "message": "",
       "name": "iam-password-expiration",
-      "remediationSteps": "## Fix: Configure Password Expiration in IAM Password Policy\n\nSet the `maxPasswordAge` property to enforce password expiration. Passwords should expire within 30-365 days based on your organization's security requirements.\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst accountPasswordPolicy = new aws.iam.AccountPasswordPolicy(\"policy\", {\n    maxPasswordAge: 90,  // Passwords must be changed every 90 days\n    minimumPasswordLength: 14,\n    requireNumbers: true,\n    requireSymbols: true,\n    requireLowercaseCharacters: true,\n    requireUppercaseCharacters: true,\n});\n```\n",
+      "remediationSteps": "## Fix: Configure Password Expiration in IAM Password Policy\n\nSet the `maxPasswordAge` property to enforce password expiration. PCI DSS 8.3.9, CIS and AWS FSBP all\nask for 90 days or fewer; raise `maxAllowedPasswordAge` if your standard allows longer.\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst accountPasswordPolicy = new aws.iam.AccountPasswordPolicy(\"policy\", {\n    maxPasswordAge: 90,  // Passwords must be changed every 90 days\n    minimumPasswordLength: 14,\n    requireNumbers: true,\n    requireSymbols: true,\n    requireLowercaseCharacters: true,\n    requireUppercaseCharacters: true,\n});\n```\n",
       "severity": "high"
     },
     {
@@ -4473,7 +4494,7 @@
       },
       "message": "",
       "name": "iam-password-policy-prevent-reuse",
-      "remediationSteps": "## Fix: Configure Password Reuse Prevention\n\nSet the `passwordReusePrevention` property to 24 to prevent users from reusing their previous 24 passwords:\n\n```typescript\nconst accountPasswordPolicy = new aws.iam.AccountPasswordPolicy(\"password-policy\", {\n    minimumPasswordLength: 14,\n    requireNumbers: true,\n    requireSymbols: true,\n    requireUppercaseCharacters: true,\n    requireLowercaseCharacters: true,\n    passwordReusePrevention: 24, // Prevent reuse of previous 24 passwords\n});\n```",
+      "remediationSteps": "## Fix: Configure Password Reuse Prevention\n\nSet the `passwordReusePrevention` property to 24 to prevent users from reusing their previous 24 passwords:\n\n```typescript\nconst accountPasswordPolicy = new aws.iam.AccountPasswordPolicy(\"password-policy\", {\n    minimumPasswordLength: 14,\n    maxPasswordAge: 90,\n    requireNumbers: true,\n    requireSymbols: true,\n    requireUppercaseCharacters: true,\n    requireLowercaseCharacters: true,\n    passwordReusePrevention: 24, // Prevent reuse of previous 24 passwords\n});\n```",
       "severity": "high"
     },
     {
@@ -4624,7 +4645,7 @@
         "properties": {
           "allowInlineForServiceRoles": {
             "default": false,
-            "description": "Allow inline policies on service-linked roles",
+            "description": "Allow inline policies on roles whose IAM path contains '/service-role/'",
             "type": "boolean"
           },
           "allowPatternMatching": {
@@ -5016,7 +5037,7 @@
       },
       "message": "",
       "name": "iam-user-group-membership-required",
-      "remediationSteps": "## Fix: Add User to IAM Group\n\n```typescript\nconst user = new aws.iam.User(\"developer\", {\n    name: \"developer-user\",\n});\n\nconst group = new aws.iam.Group(\"developers\", {\n    name: \"developers\",\n});\n\n// Add user to group to satisfy group membership requirement\nnew aws.iam.UserGroupMembership(\"developer-membership\", {\n    user: user.name,\n    groups: [group.name],  // Assign user to appropriate groups\n});\n```",
+      "remediationSteps": "## Fix: Add User to IAM Group\n\n```typescript\nconst user = new aws.iam.User(\"developer\", {\n    name: \"developer-user\",\n});\n\nconst group = new aws.iam.Group(\"developers\", {\n    name: \"developers\",\n});\n\n// Add user to group to satisfy group membership requirement\nnew aws.iam.UserGroupMembership(\"developer-membership\", {\n    user: user.name,\n    groups: [group.name],  // Assign user to appropriate groups\n});\n```\n\nAn `aws.iam.GroupMembership` resource, which lists a group's members instead, is equally\nacceptable:\n\n```typescript\nnew aws.iam.GroupMembership(\"developers-members\", {\n    group: group.name,\n    users: [user.name],\n});\n```\n\nAll IAM users should be members of groups, so that the account types in use are defined and\ndocumented and permissions are granted per group rather than per user.\n\nIf this user is a service account or another special-purpose identity that is deliberately not in\nany group, add its name to the `exemptUsers` configuration list instead.",
       "severity": "medium"
     },
     {
@@ -5053,7 +5074,7 @@
       },
       "message": "",
       "name": "iam-user-mfa-console-access",
-      "remediationSteps": "## Fix: Enable MFA for IAM User Console Access\n\nCreate a Virtual MFA Device for each IAM user with console access:\n\n```typescript\nconst user = new aws.iam.User(\"example-user\", {\n    name: \"example-user\",\n});\n\nconst loginProfile = new aws.iam.UserLoginProfile(\"example-login\", {\n    user: user.name,\n});\n\n// Create Virtual MFA Device for the user\nconst mfaDevice = new aws.iam.VirtualMfaDevice(\"example-user-mfa\", {\n    virtualMfaDeviceName: \"example-user-mfa\", // Name must match pattern: <username>-mfa or <username>-mfa-device\n    userName: user.name, // Associate MFA device with the user\n});\n```",
+      "remediationSteps": "## Fix: Enable MFA for IAM User Console Access\n\nCreate a Virtual MFA Device for each IAM user with console access:\n\n```typescript\nconst user = new aws.iam.User(\"example-user\", {\n    name: \"example-user\",\n});\n\nconst loginProfile = new aws.iam.UserLoginProfile(\"example-login\", {\n    user: user.name,\n});\n\n// Create Virtual MFA Device for the user\nconst mfaDevice = new aws.iam.VirtualMfaDevice(\"example-user-mfa\", {\n    virtualMfaDeviceName: \"example-user-mfa\", // Name must match pattern: <username>-mfa or <username>-mfa-device\n});\n```",
       "severity": "high"
     },
     {
@@ -5241,7 +5262,7 @@
       },
       "message": "",
       "name": "kms-grant-access-control",
-      "remediationSteps": "## Fix: Configure KMS Grant with Least Privilege Access Control\n\nSpecify explicit operations for the grant, add constraints for sensitive operations, and define a specific grantee principal:\n\n```typescript\nconst grant = new aws.kms.Grant(\"my-kms-grant\", {\n    keyId: kmsKey.id,\n    granteePrincipal: roleArn, // Specify a specific grantee principal\n    operations: [\"Encrypt\", \"Decrypt\"], // Define specific operations\n    constraints: {\n        encryptionContextSubset: {\n            \"Department\": \"Finance\", // Add constraints for sensitive operations\n        },\n    },\n});\n```",
+      "remediationSteps": "## Fix: Configure KMS Grant with Least Privilege Access Control\n\nSpecify explicit operations for the grant, add constraints for sensitive operations, and define a specific grantee principal:\n\n```typescript\nconst grant = new aws.kms.Grant(\"my-kms-grant\", {\n    keyId: kmsKey.id,\n    granteePrincipal: roleArn, // Specify a specific grantee principal\n    operations: [\"Encrypt\", \"Decrypt\"], // Define specific operations\n    constraints: [{\n        encryptionContextSubset: {\n            \"Department\": \"Finance\", // Add constraints for sensitive operations\n        },\n    }],\n});\n```",
       "severity": "medium"
     },
     {
@@ -5364,7 +5385,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures that all Lambda functions have their environment variables encrypted using AWS KMS",
+      "description": "Ensures that Lambda functions with environment variables encrypt them with a customer-managed AWS KMS key (CMK) rather than the AWS-managed default key",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -5375,7 +5396,7 @@
       },
       "message": "",
       "name": "lambda-environment-variables-encryption",
-      "remediationSteps": "## Fix: Encrypt Lambda Environment Variables with KMS\n\nConfigure a KMS key for Lambda function environment variable encryption by setting the `kmsKeyArn` property:\n\n```typescript\nconst kmsKey = new aws.kms.Key(\"lambda-env-key\", {\n    description: \"KMS key for Lambda environment variable encryption\",\n});\n\nconst lambdaFunction = new aws.lambda.Function(\"my-function\", {\n    runtime: \"nodejs18.x\",\n    handler: \"index.handler\",\n    role: role.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./function\"),\n    }),\n    environment: {\n        variables: {\n            DATABASE_URL: \"postgres://example.com/db\",\n        },\n    },\n    kmsKeyArn: kmsKey.arn, // Encrypt environment variables with KMS\n});\n```",
+      "remediationSteps": "## Fix: Encrypt Lambda Environment Variables with a Customer-Managed KMS Key\n\nLambda encrypts environment variables at rest either way — `kmsKeyArn` is what selects a\n*customer-managed* key instead of the AWS-managed default, keeping key policy, rotation and\nCloudTrail key-usage records under your control.\n\nConfigure a customer-managed KMS key by setting the `kmsKeyArn` property:\n\n```typescript\nconst kmsKey = new aws.kms.Key(\"lambda-env-key\", {\n    description: \"KMS key for Lambda environment variable encryption\",\n});\n\nconst lambdaFunction = new aws.lambda.Function(\"my-function\", {\n    runtime: \"nodejs18.x\",\n    handler: \"index.handler\",\n    role: role.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./function\"),\n    }),\n    environment: {\n        variables: {\n            DATABASE_URL: \"postgres://example.com/db\",\n        },\n    },\n    kmsKeyArn: kmsKey.arn, // Encrypt environment variables with KMS\n});\n```",
       "severity": "high"
     },
     {
@@ -5394,16 +5415,19 @@
             "default": "INFO",
             "description": "Minimum required log level",
             "enum": [
+              "TRACE",
               "DEBUG",
               "INFO",
-              "WARN"
+              "WARN",
+              "ERROR",
+              "FATAL"
             ],
             "type": "string"
           }
         },
         "type": "object"
       },
-      "description": "Ensures that all AWS Lambda functions have logging enabled to track output data processing",
+      "description": "Ensures that AWS Lambda functions do not filter out application logs below the required level of detail",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -5414,7 +5438,7 @@
       },
       "message": "",
       "name": "lambda-function-logging",
-      "remediationSteps": "## Fix: Enable Lambda Function Logging Configuration\n\nAdd the `loggingConfig` property to your Lambda function with an appropriate `applicationLogLevel` (DEBUG, INFO, or WARN):\n\n```typescript\nconst myFunction = new aws.lambda.Function(\"my-function\", {\n    runtime: \"nodejs18.x\",\n    handler: \"index.handler\",\n    role: lambdaRole.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./app\"),\n    }),\n    loggingConfig: {\n        logFormat: \"JSON\",\n        applicationLogLevel: \"INFO\", // Set log level to INFO or DEBUG for adequate logging\n    },\n});\n```",
+      "remediationSteps": "## Fix: Do Not Suppress Lambda Application Logs\n\nLambda already forwards application logs to CloudWatch Logs without any `loggingConfig` block, so\nthere is nothing to switch on. A violation means the function has *opted into* a log-level filter\nthat discards logs the control requires.\n\nEither remove `applicationLogLevel` (all application logs are then forwarded), or raise it to a\nlevel at least as verbose as the configured minimum (`TRACE` > `DEBUG` > `INFO` > `WARN` > `ERROR` > `FATAL`,\nmost verbose first). An adequate level is what gives output data validation and troubleshooting\nsufficient detail:\n\n```typescript\nconst myFunction = new aws.lambda.Function(\"my-function\", {\n    runtime: \"nodejs20.x\",\n    handler: \"index.handler\",\n    role: lambdaRole.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./app\"),\n    }),\n    loggingConfig: {\n        logFormat: \"JSON\",\n        applicationLogLevel: \"INFO\", // not \"ERROR\"/\"FATAL\", which discard INFO and below\n    },\n});\n```",
       "severity": "medium"
     },
     {
@@ -5432,7 +5456,7 @@
         },
         "type": "object"
       },
-      "description": "Checks that lambda function permissions have a source arn specified.",
+      "description": "Checks that lambda function permissions bound the invoker, via sourceArn, sourceAccount, principalOrgId, or an identity-scoped principal.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -5443,7 +5467,7 @@
       },
       "message": "",
       "name": "lambda-permission-configure-source-arn",
-      "remediationSteps": "## Fix: Configure Source ARN for Lambda Permission\n\nAdd the `sourceArn` property to restrict which AWS service or resource can invoke the Lambda function:\n\n```typescript\nconst lambdaPermission = new aws.lambda.Permission(\"my-permission\", {\n    action: \"lambda:InvokeFunction\",\n    function: myFunction.name,\n    principal: \"apigateway.amazonaws.com\",\n    sourceArn: apiGateway.executionArn, // Specify the source ARN to restrict invocation\n});\n```",
+      "remediationSteps": "## Fix: Restrict Who May Invoke the Lambda Permission\n\nAdd the `sourceArn` property to restrict which AWS service or resource can invoke the Lambda function:\n\n```typescript\nconst lambdaPermission = new aws.lambda.Permission(\"my-permission\", {\n    action: \"lambda:InvokeFunction\",\n    function: myFunction.name,\n    principal: \"apigateway.amazonaws.com\",\n    sourceArn: apiGateway.executionArn, // Specify the source ARN to restrict invocation\n});\n```\n\nWhere the invoking resource's ARN is not known at deploy time, `sourceAccount` (single account) or\n`principalOrgId` (an AWS Organization) are accepted alternatives. A permission whose `principal` is\nalready a specific AWS account id or IAM principal ARN is scoped by that principal and needs\nneither.",
       "severity": "critical"
     },
     {
@@ -5464,6 +5488,7 @@
             "type": "string"
           },
           "exemptFunctions": {
+            "default": [],
             "description": "List of function names allowed to have public access",
             "items": {
               "type": "string"
@@ -5484,7 +5509,7 @@
       },
       "message": "",
       "name": "lambda-public-access-restricted",
-      "remediationSteps": "## Fix: Restrict Lambda Function Access to Specific Principals\n\n```typescript\nconst lambdaFunction = new aws.lambda.Function(\"myFunction\", {\n    runtime: \"nodejs18.x\",\n    handler: \"index.handler\",\n    role: role.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./lambda\"),\n    }),\n});\n\n// Grant access to specific AWS service instead of wildcard\nnew aws.lambda.Permission(\"apiGatewayInvoke\", {\n    action: \"lambda:InvokeFunction\",\n    function: lambdaFunction.name,\n    principal: \"apigateway.amazonaws.com\",  // Specify AWS service instead of \"*\"\n    sourceArn: apiGateway.executionArn,\n});\n\n// Or grant access to specific AWS account\nnew aws.lambda.Permission(\"crossAccountInvoke\", {\n    action: \"lambda:InvokeFunction\",\n    function: lambdaFunction.name,\n    principal: \"123456789012\",  // Specify AWS account ID instead of \"*\"\n});\n```",
+      "remediationSteps": "## Fix: Restrict Lambda Function Access to Specific Principals\n\nReplace the wildcard principal with the service or account that invokes the function:\n\n```typescript\n// Grant access to a specific AWS service, scoped to the invoking resource\nnew aws.lambda.Permission(\"apiGatewayInvoke\", {\n    action: \"lambda:InvokeFunction\",\n    function: lambdaFunction.name,\n    principal: \"apigateway.amazonaws.com\",\n    sourceArn: pulumi.interpolate`${api.executionArn}/*`,\n});\n\n// Or grant access to a specific AWS account\nnew aws.lambda.Permission(\"crossAccountInvoke\", {\n    action: \"lambda:InvokeFunction\",\n    function: lambdaFunction.name,\n    principal: \"123456789012\",\n});\n```\n\nA wildcard principal restricted with `principalOrgId` is not reported. A function that must stay\npublicly invocable can be listed in `exemptFunctions`.",
       "severity": "critical"
     },
     {
@@ -5494,17 +5519,20 @@
             "default": [
               "nodejs18.x",
               "nodejs20.x",
+              "nodejs22.x",
               "python3.9",
               "python3.10",
               "python3.11",
               "python3.12",
+              "python3.13",
               "java11",
               "java17",
               "java21",
               "dotnet6",
               "dotnet8",
-              "go1.x",
               "ruby3.2",
+              "ruby3.3",
+              "ruby3.4",
               "provided.al2",
               "provided.al2023"
             ],
@@ -5549,6 +5577,7 @@
             "type": "boolean"
           },
           "allowedSubnetPatterns": {
+            "default": [],
             "description": "List of allowed subnet patterns/IDs (supports regex)",
             "items": {
               "type": "string"
@@ -5556,7 +5585,8 @@
             "type": "array"
           },
           "allowedVpcIds": {
-            "description": "List of allowed VPC IDs for Lambda functions",
+            "default": [],
+            "description": "Accepted for compatibility; not enforced",
             "items": {
               "type": "string"
             },
@@ -5572,6 +5602,7 @@
             "type": "string"
           },
           "exemptFunctions": {
+            "default": [],
             "description": "List of function names exempt from VPC requirements",
             "items": {
               "type": "string"
@@ -5602,7 +5633,7 @@
       },
       "message": "",
       "name": "lambda-vpc-placement-required",
-      "remediationSteps": "## Fix: Configure Lambda Function VPC Placement\n\nAdd a `vpcConfig` to your Lambda function with subnet and security group configurations:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst myFunction = new aws.lambda.Function(\"myFunction\", {\n    runtime: \"nodejs18.x\",\n    handler: \"index.handler\",\n    role: lambdaRole.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./function\"),\n    }),\n    // Add VPC configuration for network isolation\n    vpcConfig: {\n        subnetIds: [\n            privateSubnet1.id,  // Use at least 2 subnets for high availability\n            privateSubnet2.id,\n        ],\n        securityGroupIds: [lambdaSecurityGroup.id],  // Specify security groups for access control\n    },\n});\n```",
+      "remediationSteps": "## Fix: Configure Lambda Function VPC Placement\n\nAdd a `vpcConfig` to your Lambda function with subnet and security group configurations:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\nimport * as pulumi from \"@pulumi/pulumi\";\n\nconst myFunction = new aws.lambda.Function(\"myFunction\", {\n    runtime: \"nodejs18.x\",\n    handler: \"index.handler\",\n    role: lambdaRole.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./function\"),\n    }),\n    // Add VPC configuration for network isolation\n    vpcConfig: {\n        subnetIds: [\n            privateSubnet1.id,  // Use at least 2 subnets for high availability\n            privateSubnet2.id,\n        ],\n        securityGroupIds: [lambdaSecurityGroup.id],  // Specify security groups for access control\n    },\n});\n```",
       "severity": "medium"
     },
     {
@@ -5754,7 +5785,7 @@
       },
       "message": "",
       "name": "load-balancer-waf-association",
-      "remediationSteps": "## Fix: Associate WAF Web ACL with Load Balancer\n\nCreate a WAF Web ACL association to protect your public-facing Load Balancer:\n\n```typescript\n// Create a WAF Web ACL association for the Load Balancer\nconst wafAssociation = new aws.wafv2.WebAclAssociation(\"lb-waf-association\", {\n    resourceArn: loadBalancer.arn, // Reference the Load Balancer ARN\n    webAclArn: webAcl.arn, // Reference the WAF Web ACL ARN\n});\n```",
+      "remediationSteps": "## Fix: Associate WAF Web ACL with Load Balancer\n\nCreate a WAF Web ACL association to protect your public-facing Application Load Balancer:\n\n```typescript\n// Create a WAF Web ACL association for the Load Balancer\nconst wafAssociation = new aws.wafv2.WebAclAssociation(\"lb-waf-association\", {\n    resourceArn: loadBalancer.arn, // Reference the Load Balancer ARN\n    webAclArn: webAcl.arn, // Reference the WAF Web ACL ARN\n});\n```",
       "severity": "critical"
     },
     {
@@ -6043,6 +6074,7 @@
             "type": "string"
           },
           "exemptFirewalls": {
+            "default": [],
             "description": "List of firewall names to exempt from logging requirements",
             "items": {
               "type": "string"
@@ -6084,6 +6116,7 @@
             "type": "string"
           },
           "exemptResources": {
+            "default": [],
             "description": "Firewalls exempt from this requirement",
             "items": {
               "type": "string"
@@ -6125,6 +6158,7 @@
             "type": "string"
           },
           "exemptResources": {
+            "default": [],
             "description": "Firewall policies exempt from this requirement",
             "items": {
               "type": "string"
@@ -6166,6 +6200,7 @@
             "type": "string"
           },
           "exemptResources": {
+            "default": [],
             "description": "Firewall policies exempt from this requirement",
             "items": {
               "type": "string"
@@ -6207,6 +6242,7 @@
             "type": "string"
           },
           "exemptResources": {
+            "default": [],
             "description": "Firewall policies exempt from this requirement",
             "items": {
               "type": "string"
@@ -6248,6 +6284,7 @@
             "type": "string"
           },
           "exemptResources": {
+            "default": [],
             "description": "Rule groups exempt from this requirement",
             "items": {
               "type": "string"
@@ -6311,14 +6348,6 @@
               "disabled"
             ],
             "type": "string"
-          },
-          "excludeResources": {
-            "default": [],
-            "description": "List of resource names to exclude from hardcoded secrets validation",
-            "items": {
-              "type": "string"
-            },
-            "type": "array"
           }
         },
         "type": "object"
@@ -6355,6 +6384,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "OpenSearch domains exempt from fine-grained access control requirements",
             "items": {
               "type": "string"
@@ -6396,6 +6426,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "OpenSearch domains exempt from encryption at rest requirements",
             "items": {
               "type": "string"
@@ -6437,6 +6468,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "OpenSearch domains exempt from HTTPS requirements",
             "items": {
               "type": "string"
@@ -6444,7 +6476,8 @@
             "type": "array"
           },
           "requiredTlsPolicy": {
-            "description": "Required TLS security policy (e.g., 'Policy-Min-TLS-1-2-2019-07')",
+            "default": "Policy-Min-TLS-1-2-PFS-2023-10",
+            "description": "TLS security policy every domain must declare. Left at its default, the policy accepts a set: the floor AWS Security Hub control OpenSearch.8 requires, plus the stronger policies AWS has published since. Set it to another value to require exactly that one, or to empty to stop comparing the policy name. An undeclared domainEndpointOptions block is reported either way.",
             "type": "string"
           }
         },
@@ -6461,7 +6494,7 @@
       },
       "message": "",
       "name": "opensearch-https-required",
-      "remediationSteps": "## Fix: Do not disable HTTPS enforcement for OpenSearch domain\n\nThe AWS provider defaults `enforceHttps` to `true` — never set it to `false`. Optionally pin a minimum TLS policy:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst domain = new aws.opensearch.Domain(\"my-domain\", {\n    domainName: \"my-opensearch-domain\",\n    domainEndpointOptions: {\n        tlsSecurityPolicy: \"Policy-Min-TLS-1-2-2019-07\",\n    },\n    // ... other configuration\n});\n```",
+      "remediationSteps": "## Fix: Enable HTTPS enforcement for OpenSearch domain\n\nConfigure the `domainEndpointOptions` property to enforce HTTPS connections:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst domain = new aws.opensearch.Domain(\"my-domain\", {\n    domainName: \"my-opensearch-domain\",\n    domainEndpointOptions: {\n        enforceHttps: true, // Enable HTTPS enforcement\n        tlsSecurityPolicy: \"Policy-Min-TLS-1-2-PFS-2023-10\", // Required TLS security policy\n    },\n    // ... other configuration\n});\n```",
       "severity": "high"
     },
     {
@@ -6482,6 +6515,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "OpenSearch domains exempt from node-to-node encryption requirements",
             "items": {
               "type": "string"
@@ -6523,6 +6557,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "OpenSearch domains exempt from VPC requirements",
             "items": {
               "type": "string"
@@ -6572,7 +6607,7 @@
       },
       "message": "",
       "name": "pubsub-least-privilege-iam",
-      "remediationSteps": "## Fix: Use Specific Pub/Sub IAM Actions and Resource ARNs\n\nReplace wildcard permissions with specific actions and resource ARNs for Pub/Sub services:\n\n```typescript\nconst queuePolicy = new aws.iam.Policy(\"queue-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"sqs:SendMessage\",      // Use specific actions instead of sqs:*\n                \"sqs:ReceiveMessage\",\n                \"sqs:DeleteMessage\",\n            ],\n            Resource: \"arn:aws:sqs:us-east-1:123456789012:my-queue\", // Use specific ARN instead of *\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Use Specific Pub/Sub IAM Actions and Resource ARNs\n\nReplace wildcard permissions with specific actions and resource ARNs for Pub/Sub services:\n\n```typescript\nconst queuePolicy = new aws.iam.Policy(\"queue-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"sqs:SendMessage\",      // Use specific actions instead of sqs:*\n                \"sqs:ReceiveMessage\",\n                \"sqs:DeleteMessage\",\n            ],\n            Resource: \"arn:aws:sqs:us-east-1:123456789012:my-queue\", // Use specific ARN instead of *\n        }],\n    }),\n    tags: {\n        Environment: \"production\",\n    },\n});\n```",
       "severity": "medium"
     },
     {
@@ -6825,7 +6860,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures RDS clusters use secure credential management instead of hardcoded passwords",
+      "description": "Ensures RDS clusters delegate the master password to AWS Secrets Manager (manageMasterUserPassword) instead of supplying it inline",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -6880,7 +6915,7 @@
           },
           "minimumMonitoringInterval": {
             "default": 60,
-            "description": "Required minimum monitoring interval in seconds (valid: 0, 1, 5, 10, 15, 30, 60)",
+            "description": "Longest monitoring interval in seconds that still counts as compliant; a larger monitoringInterval is reported (valid: 1, 5, 10, 15, 30, 60)",
             "type": "number"
           },
           "requireMonitoringRoleArn": {
@@ -6972,7 +7007,7 @@
       },
       "message": "",
       "name": "rds-clusterinstance-ssl-encryption",
-      "remediationSteps": "## Fix: Configure SSL/TLS Encryption for Aurora Cluster Instance\n\nConfigure a parameter group to enforce SSL/TLS connections for your Aurora cluster instance:\n\n```typescript\nconst clusterParamGroup = new aws.rds.ParameterGroup(\"cluster-params\", {\n    family: \"aurora-postgresql14\",\n    parameters: [\n        {\n            name: \"rds.force_ssl\",\n            value: \"1\", // Enforce SSL/TLS for all connections\n        },\n    ],\n});\n\nconst clusterInstance = new aws.rds.ClusterInstance(\"my-cluster-instance\", {\n    clusterIdentifier: cluster.id,\n    instanceClass: \"db.r5.large\",\n    engine: cluster.engine,\n    dbParameterGroupName: clusterParamGroup.name, // Attach parameter group with SSL enforcement\n});\n```",
+      "remediationSteps": "## Fix: Configure SSL/TLS Encryption for Aurora Cluster Instance\n\nAurora enforces TLS through the **DB cluster parameter group** attached to the cluster, not\nthrough a flag on the instance. The parameter name differs by engine family:\n`require_secure_transport` for MySQL-compatible engines, `rds.force_ssl` for\nPostgreSQL-compatible engines.\n\n```typescript\nconst clusterParamGroup = new aws.rds.ClusterParameterGroup(\"cluster-params\", {\n    family: \"aurora-postgresql14\",\n    parameters: [\n        {\n            name: \"rds.force_ssl\",\n            value: \"1\", // Enforce SSL/TLS for all connections\n        },\n    ],\n});\n\nconst cluster = new aws.rds.Cluster(\"my-cluster\", {\n    engine: \"aurora-postgresql\",\n    dbClusterParameterGroupName: clusterParamGroup.name, // Applies to every instance\n    // ...\n});\n\nconst clusterInstance = new aws.rds.ClusterInstance(\"my-cluster-instance\", {\n    clusterIdentifier: cluster.id,\n    instanceClass: \"db.r5.large\",\n    engine: cluster.engine,\n});\n```\n\nAn instance-level `aws.rds.ParameterGroup` attached through `dbParameterGroupName` — on the\ninstance itself or through the cluster's `dbInstanceParameterGroupName` — is accepted as well.",
       "severity": "high"
     },
     {
@@ -7216,7 +7251,7 @@
           },
           "minimumMonitoringInterval": {
             "default": 60,
-            "description": "Required minimum monitoring interval in seconds (valid: 0, 1, 5, 10, 15, 30, 60)",
+            "description": "Longest monitoring interval in seconds that still counts as compliant; a larger monitoringInterval is reported (valid: 1, 5, 10, 15, 30, 60)",
             "type": "number"
           },
           "requireMonitoringRoleArn": {
@@ -7316,7 +7351,7 @@
       },
       "message": "",
       "name": "rds-instance-logging-enabled",
-      "remediationSteps": "## Fix: Enable CloudWatch logs exports\n\nFor standalone RDS instances:\n\n```typescript\nconst dbInstance = new aws.rds.Instance(\"myDb\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    enabledCloudwatchLogsExports: [\"postgresql\"],  // This fixes the violation\n});\n```",
+      "remediationSteps": "## Fix: Enable CloudWatch logs exports\n\nFor standalone RDS instances:\n\n```typescript\nconst dbInstance = new aws.rds.Instance(\"myDb\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    enabledCloudwatchLogsExports: [\"postgresql\", \"upgrade\"],  // This fixes the violation\n});\n```",
       "severity": "medium"
     },
     {
@@ -7386,7 +7421,7 @@
       },
       "message": "",
       "name": "rds-instance-ssl-encryption",
-      "remediationSteps": "## Fix: Configure SSL/TLS Encryption for RDS Instance\n\nConfigure a parameter group to enforce SSL/TLS connections for your RDS instance:\n\n```typescript\nconst dbParamGroup = new aws.rds.ParameterGroup(\"db-params\", {\n    family: \"mysql8.0\",\n    parameters: [\n        {\n            name: \"require_secure_transport\",\n            value: \"1\", // Enforce SSL/TLS for all connections\n        },\n    ],\n});\n\nconst db = new aws.rds.Instance(\"my-database\", {\n    engine: \"mysql\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    parameterGroupName: dbParamGroup.name, // Attach parameter group with SSL enforcement\n    username: \"admin\",\n    password: dbPassword,\n});\n```",
+      "remediationSteps": "## Fix: Configure SSL/TLS Encryption for RDS Instance\n\nConfigure a parameter group to enforce SSL/TLS connections for your RDS instance. The parameter\nname differs by engine family: `require_secure_transport` for MySQL and MariaDB,\n`rds.force_ssl` for PostgreSQL and SQL Server.\n\n```typescript\nconst dbParamGroup = new aws.rds.ParameterGroup(\"db-params\", {\n    family: \"mysql8.0\",\n    parameters: [\n        {\n            name: \"require_secure_transport\",\n            value: \"1\", // Enforce SSL/TLS for all connections\n        },\n    ],\n});\n\nconst db = new aws.rds.Instance(\"my-database\", {\n    engine: \"mysql\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    parameterGroupName: dbParamGroup.name, // Attach parameter group with SSL enforcement\n    username: \"admin\",\n    manageMasterUserPassword: true,\n});\n```",
       "severity": "high"
     },
     {
@@ -7433,7 +7468,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures RDS instances use secure credential management instead of hardcoded passwords",
+      "description": "Ensures RDS instances delegate the master password to AWS Secrets Manager (manageMasterUserPassword) instead of supplying it inline",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -7481,7 +7516,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures Redshift clusters have automatic snapshots enabled with minimum 7-day retention period.",
+      "description": "Ensures Redshift clusters have automatic snapshots enabled with a configurable minimum retention period (default 7 days).",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -7901,7 +7936,7 @@
       },
       "message": "",
       "name": "s3-bucket-access-logging",
-      "remediationSteps": "## Fix: Enable S3 Bucket Access Logging\n\nCreate a BucketLogging resource with a target bucket and prefix to enable access logging:\n\n```typescript\nconst myBucket = new aws.s3.Bucket(\"my-bucket\", {\n    // Bucket configuration\n});\n\nconst logBucket = new aws.s3.Bucket(\"log-bucket\", {\n    // Configure log bucket settings\n});\n\nconst bucketLogging = new aws.s3.BucketLogging(\"my-bucket-logging\", {\n    bucket: myBucket.id,\n    targetBucket: logBucket.id, // Specify target bucket for logs\n    targetPrefix: \"logs/my-bucket/\", // Specify prefix for organization\n});\n```",
+      "remediationSteps": "## Fix: Enable S3 Bucket Access Logging\n\nCreate a BucketLogging resource with a target bucket and prefix to enable access logging:\n\n```typescript\nconst myBucket = new aws.s3.Bucket(\"my-bucket\", {\n    // Bucket configuration\n});\n\nconst logBucket = new aws.s3.Bucket(\"log-bucket\", {\n    // Configure log bucket settings\n});\n\nconst bucketLogging = new aws.s3.BucketLogging(\"my-bucket-logging\", {\n    bucket: myBucket.id,\n    targetBucket: logBucket.id, // Specify target bucket for logs\n    targetPrefix: \"logs/my-bucket/\", // Specify prefix for organization\n});\n```\n\nThe target bucket must be a separate, dedicated logging bucket, and the target prefix keeps each\nsource bucket's logs separable. The deprecated inline `logging` / `loggings` block on the bucket\nitself is accepted too.",
       "severity": "medium"
     },
     {
@@ -7963,6 +7998,7 @@
             "type": "string"
           },
           "exemptBuckets": {
+            "default": [],
             "description": "List of bucket names exempt from encryption requirements",
             "items": {
               "type": "string"
@@ -7999,6 +8035,26 @@
     {
       "configSchema": {
         "properties": {
+          "allowedPrincipalAccountIds": {
+            "default": [],
+            "description": "AWS account ids whose named principals may hold bucket-control actions without being reported. Empty by default: a bucket policy alone does not say which account owns the bucket.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "blocklistedActions": {
+            "default": [
+              "s3:DeleteBucket",
+              "s3:PutBucketPolicy",
+              "s3:PutObjectAcl"
+            ],
+            "description": "Bucket-control actions reported when granted to a named IAM principal. Matched case-insensitively.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
           "enforcementLevel": {
             "enum": [
               "advisory",
@@ -8051,7 +8107,7 @@
       },
       "message": "",
       "name": "s3-bucket-lifecycle",
-      "remediationSteps": "## Fix: Configure Lifecycle Rules for S3 Bucket\n\nCreate a BucketLifecycleConfiguration resource with at least one enabled rule:\n\n```typescript\nconst myBucket = new aws.s3.Bucket(\"my-bucket\", {\n    // Bucket configuration\n});\n\nconst lifecycleConfig = new aws.s3.BucketLifecycleConfiguration(\"my-bucket-lifecycle\", {\n    bucket: myBucket.id,\n    rules: [\n        {\n            id: \"delete-old-objects\",\n            status: \"Enabled\", // Rule must be enabled\n            expiration: {\n                days: 90, // Define retention period (e.g., expire after 90 days)\n            },\n        },\n    ],\n});\n```",
+      "remediationSteps": "## Fix: Configure Lifecycle Rules for S3 Bucket\n\nCreate a BucketLifecycleConfiguration resource with at least one enabled rule:\n\n```typescript\nconst myBucket = new aws.s3.Bucket(\"my-bucket\", {\n    // Bucket configuration\n});\n\nconst lifecycleConfig = new aws.s3.BucketLifecycleConfiguration(\"my-bucket-lifecycle\", {\n    bucket: myBucket.id,\n    rules: [\n        {\n            id: \"delete-old-objects\",\n            status: \"Enabled\", // Rule must be enabled\n            expiration: {\n                days: 90, // Define retention period (e.g., expire after 90 days)\n            },\n        },\n    ],\n});\n```\n\nEvery rule must be actively enforced and carry at least one retention or disposal action:\nexpiration, transition, noncurrent version management, or abort of incomplete multipart uploads.\nThe deprecated inline `lifecycleRules` block on the bucket itself is accepted too.",
       "severity": "medium"
     },
     {
@@ -8250,6 +8306,7 @@
             "type": "string"
           },
           "exemptBuckets": {
+            "default": [],
             "description": "List of bucket names exempt from replication requirements. Supports wildcard patterns when allowPatternMatching is true (e.g., '*-replica', '*-backup')",
             "items": {
               "type": "string"
@@ -8275,7 +8332,7 @@
       },
       "message": "",
       "name": "s3-bucket-replication",
-      "remediationSteps": "## Fix: Configure Replication for S3 Bucket\n\nCreate a `BucketReplicationConfig` resource with an IAM role and replication rules:\n\n```typescript\n// Create destination bucket\nconst destBucket = new aws.s3.Bucket(\"dest-bucket\", {\n    bucket: \"my-dest-bucket\",\n});\n\n// Create replication IAM role\nconst replicationRole = new aws.iam.Role(\"replication-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { Service: \"s3.amazonaws.com\" },\n            Action: \"sts:AssumeRole\",\n        }],\n    }),\n});\n\n// Enable versioning on source bucket (required for replication)\nconst sourceBucketVersioning = new aws.s3.BucketVersioning(\"source-versioning\", {\n    bucket: sourceBucket.id,\n    versioningConfiguration: { status: \"Enabled\" },\n});\n\n// Configure replication using BucketReplicationConfig\nconst replication = new aws.s3.BucketReplicationConfig(\"replication\", {\n    bucket: sourceBucket.id,\n    role: replicationRole.arn,\n    rules: [{\n        id: \"replicate-all\",\n        status: \"Enabled\",\n        destination: {\n            bucket: destBucket.arn,\n        },\n        filter: {},\n    }],\n}, { dependsOn: [sourceBucketVersioning] });\n```",
+      "remediationSteps": "## Fix: Configure Replication for S3 Bucket\n\nCreate a `BucketReplicationConfig` resource with an IAM role and replication rules:\n\n```typescript\n// Create destination bucket\nconst destBucket = new aws.s3.Bucket(\"dest-bucket\", {\n    bucket: \"my-dest-bucket\",\n});\n\n// Create replication IAM role\nconst replicationRole = new aws.iam.Role(\"replication-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { Service: \"s3.amazonaws.com\" },\n            Action: \"sts:AssumeRole\",\n        }],\n    }),\n});\n\n// Enable versioning on source bucket (required for replication)\nconst sourceBucketVersioning = new aws.s3.BucketVersioning(\"source-versioning\", {\n    bucket: sourceBucket.id,\n    versioningConfiguration: { status: \"Enabled\" },\n});\n\n// Configure replication using BucketReplicationConfig\nconst replication = new aws.s3.BucketReplicationConfig(\"replication\", {\n    bucket: sourceBucket.id,\n    role: replicationRole.arn,\n    rules: [{\n        id: \"replicate-all\",\n        status: \"Enabled\",\n        destination: {\n            bucket: destBucket.arn,\n        },\n        filter: {},\n    }],\n}, { dependsOn: [sourceBucketVersioning] });\n```\n\nAt least one rule must have `status: \"Enabled\"` and name a destination bucket. The deprecated\ninline `replicationConfiguration` / `replicationConfigurations` block is accepted too.",
       "severity": "medium"
     },
     {
@@ -8296,6 +8353,7 @@
             "type": "string"
           },
           "exemptBuckets": {
+            "default": [],
             "description": "List of bucket names exempt from SSL enforcement requirements",
             "items": {
               "type": "string"
@@ -8303,6 +8361,7 @@
             "type": "array"
           },
           "requireTlsVersion": {
+            "default": "",
             "description": "Require specific TLS version (e.g., '1.2')",
             "type": "string"
           }
@@ -8320,7 +8379,7 @@
       },
       "message": "",
       "name": "s3-bucket-ssl-enforcement-required",
-      "remediationSteps": "## Fix: Add Bucket Policy to Enforce SSL/TLS\n\nAdd a bucket policy that denies all requests made without SSL/TLS encryption:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add bucket policy to enforce SSL/TLS\nconst bucketPolicy = new aws.s3.BucketPolicy(\"my-bucket-policy\", {\n    bucket: bucket.id,\n    policy: bucket.arn.apply(arn => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Sid: \"DenyInsecureTransport\",\n            Effect: \"Deny\",\n            Principal: \"*\",\n            Action: \"s3:*\",\n            Resource: [\n                arn,\n                `${arn}/*`,\n            ],\n            Condition: {\n                Bool: {\n                    \"aws:SecureTransport\": \"false\"  // Deny when SecureTransport is false\n                }\n            }\n        }]\n    }))\n});\n```\n",
+      "remediationSteps": "## Fix: Add Bucket Policy to Enforce SSL/TLS\n\nAdd a bucket policy that denies all requests made without SSL/TLS encryption:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add bucket policy to enforce SSL/TLS\nconst bucketPolicy = new aws.s3.BucketPolicy(\"my-bucket-policy\", {\n    bucket: bucket.id,\n    policy: bucket.arn.apply(arn => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Sid: \"DenyInsecureTransport\",\n            Effect: \"Deny\",\n            Principal: \"*\",\n            Action: \"s3:*\",\n            Resource: [\n                arn,\n                `${arn}/*`,\n            ],\n            Condition: {\n                Bool: {\n                    \"aws:SecureTransport\": \"false\"  // Deny when SecureTransport is false\n                }\n            }\n        }]\n    }))\n});\n```\n\nWhen `requireTlsVersion` is configured, add a second `Deny` statement carrying\n`Condition: {\"NumericLessThan\": {\"s3:TlsVersion\": \"1.2\"}}` so connections negotiating an older\nprotocol version are refused. The equivalent `policy` written inline on the bucket resource\nitself is accepted too.\n",
       "severity": "high"
     },
     {
@@ -8341,6 +8400,7 @@
             "type": "string"
           },
           "exemptBuckets": {
+            "default": [],
             "description": "List of bucket names exempt from versioning requirements",
             "items": {
               "type": "string"
@@ -8350,7 +8410,7 @@
         },
         "type": "object"
       },
-      "description": "S3 buckets must have versioning enabled using BucketVersioning resource",
+      "description": "S3 buckets must have versioning enabled",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -8361,7 +8421,7 @@
       },
       "message": "",
       "name": "s3-bucket-versioning",
-      "remediationSteps": "## Fix: Enable S3 Bucket Versioning\n\nCreate a separate `BucketVersioning` resource with status set to \"Enabled\" for each S3 bucket:\n\n```typescript\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-data-bucket\",\n});\n\nconst versioning = new aws.s3.BucketVersioning(\"my-bucket-versioning\", {\n    bucket: bucket.id,\n    versioningConfiguration: {\n        status: \"Enabled\", // Enable versioning for data integrity and recovery\n    },\n});\n```",
+      "remediationSteps": "## Fix: Enable S3 Bucket Versioning\n\nCreate a `BucketVersioningV2` resource with status set to \"Enabled\" for each S3 bucket:\n\n```typescript\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-data-bucket\",\n});\n\nconst versioning = new aws.s3.BucketVersioningV2(\"my-bucket-versioning\", {\n    bucket: bucket.id,\n    versioningConfiguration: {\n        status: \"Enabled\", // Enable versioning for data integrity and recovery\n    },\n});\n```\n\nAny status other than \"Enabled\" -- including \"Suspended\" and \"Disabled\" -- leaves the bucket\nwithout version history. The non-V2 `aws.s3.BucketVersioning` resource is equally acceptable, as\nis the deprecated inline form (`versioning: { enabled: true }` on `aws.s3.Bucket`,\n`versionings: [{ enabled: true }]` on `aws.s3.BucketV2`).",
       "severity": "medium"
     },
     {
@@ -8617,6 +8677,14 @@
             "description": "Allow pattern matching for exempt security groups (e.g., 'bastion-*')",
             "type": "boolean"
           },
+          "authorizedIngressPorts": {
+            "default": [],
+            "description": "TCP ports whose unrestricted ingress is accepted, e.g. [80, 443] for a public web tier. Empty by default, so every unrestricted ingress rule is reported. A rule is only excused when it is TCP and every port in its range is listed; UDP, ICMP and all-protocols rules are never excused. Egress is never filtered.",
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
           "enforcementLevel": {
             "enum": [
               "advisory",
@@ -8627,7 +8695,7 @@
             "type": "string"
           },
           "exemptSecurityGroups": {
-            "description": "Security groups exempt from default deny requirements",
+            "description": "Security groups exempt from default deny requirements. Matched against the security group name for inline rules; for standalone rule resources (aws.ec2.SecurityGroupRule, aws.vpc.SecurityGroupIngressRule, aws.vpc.SecurityGroupEgressRule) the parent group's name is not resolvable at resource scope, so the rule resource's own Pulumi name is matched instead.",
             "items": {
               "type": "string"
             },
@@ -8647,7 +8715,7 @@
       },
       "message": "",
       "name": "security-group-default-deny",
-      "remediationSteps": "## Fix: Replace Unrestricted CIDR Blocks with Specific IP Ranges\n\nReplace 0.0.0.0/0 in ingress and egress rules with specific CIDR blocks or security group references to follow the default deny with explicit allow principle:\n\n```typescript\nconst webSecurityGroup = new aws.ec2.SecurityGroup(\"web-sg\", {\n    vpcId: vpc.id,\n    ingress: [{\n        protocol: \"tcp\",\n        fromPort: 443,\n        toPort: 443,\n        cidrBlocks: [\"10.0.0.0/16\"], // Use specific CIDR block instead of 0.0.0.0/0\n    }],\n    egress: [{\n        protocol: \"tcp\",\n        fromPort: 443,\n        toPort: 443,\n        cidrBlocks: [\"10.0.0.0/16\"], // Use specific CIDR block instead of 0.0.0.0/0\n    }],\n});\n```",
+      "remediationSteps": "## Fix: Replace Unrestricted CIDR Blocks with Specific IP Ranges\n\nReplace 0.0.0.0/0 (and ::/0) in ingress and egress rules with specific CIDR blocks or security group references to follow the default deny with explicit allow principle:\n\n```typescript\nconst webSecurityGroup = new aws.ec2.SecurityGroup(\"web-sg\", {\n    vpcId: vpc.id,\n    ingress: [{\n        protocol: \"tcp\",\n        fromPort: 443,\n        toPort: 443,\n        cidrBlocks: [\"10.0.0.0/16\"], // Use specific CIDR block instead of 0.0.0.0/0\n    }],\n    egress: [{\n        protocol: \"tcp\",\n        fromPort: 443,\n        toPort: 443,\n        cidrBlocks: [\"10.0.0.0/16\"], // Use specific CIDR block instead of 0.0.0.0/0\n    }],\n});\n\n// The same applies to rules declared as standalone resources:\nnew aws.vpc.SecurityGroupIngressRule(\"web-https\", {\n    securityGroupId: webSecurityGroup.id,\n    ipProtocol: \"tcp\",\n    fromPort: 443,\n    toPort: 443,\n    cidrIpv4: \"10.0.0.0/16\", // Not 0.0.0.0/0\n});\n```",
       "severity": "high"
     },
     {
@@ -8672,7 +8740,7 @@
       },
       "description": "Ensures AWS Security Hub is enabled for continuous monitoring and security assessment.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.5.36 Compliance with policies, rules and standards for information security; A.8.16 Monitoring activities",
@@ -8792,7 +8860,7 @@
       },
       "message": "",
       "name": "sqs-encryption",
-      "remediationSteps": "## Fix: Enable Server-Side Encryption for SQS Queue\n\nSet the `kmsMasterKeyId` property to enable server-side encryption with AWS KMS:\n\n```typescript\nconst queue = new aws.sqs.Queue(\"my-queue\", {\n    name: \"my-secure-queue\",\n    kmsMasterKeyId: \"alias/aws/sqs\", // Enable encryption with AWS-managed KMS key\n    // Or use a customer-managed key:\n    // kmsMasterKeyId: customerKey.arn,\n});\n```",
+      "remediationSteps": "## Fix: Enable Server-Side Encryption for SQS Queue\n\nEither remove the explicit `sqsManagedSseEnabled: false` (SSE-SQS is on by default), or select a\nKMS key:\n\n```typescript\n// SSE-SQS with SQS-owned keys - this is also what you get by omitting both properties.\nconst queue = new aws.sqs.Queue(\"my-queue\", {\n    name: \"my-secure-queue\",\n    sqsManagedSseEnabled: true,\n});\n\n// Or SSE-KMS, with the AWS-managed key or a customer-managed key.\nconst kmsQueue = new aws.sqs.Queue(\"my-kms-queue\", {\n    name: \"my-kms-queue\",\n    kmsMasterKeyId: \"alias/aws/sqs\",\n    // kmsMasterKeyId: customerKey.arn,\n});\n```",
       "severity": "high"
     },
     {
@@ -8862,7 +8930,7 @@
       },
       "message": "",
       "name": "subnet-multi-az",
-      "remediationSteps": "## Fix: Distribute Subnets Across Multiple Availability Zones\n\nCreate subnets in at least 2 different availability zones to ensure high availability and fault tolerance:\n\n```typescript\nconst subnet1 = new aws.ec2.Subnet(\"subnet-az1\", {\n    vpcId: vpc.id,\n    cidrBlock: \"10.0.1.0/24\",\n    availabilityZone: \"us-east-1a\", // Specify explicit AZ\n});\n\nconst subnet2 = new aws.ec2.Subnet(\"subnet-az2\", {\n    vpcId: vpc.id,\n    cidrBlock: \"10.0.2.0/24\",\n    availabilityZone: \"us-east-1b\", // Use different AZ for redundancy\n});\n```",
+      "remediationSteps": "## Fix: Distribute Subnets Across Multiple Availability Zones\n\nCreate subnets in at least 2 different availability zones **within the same VPC** to ensure high\navailability and fault tolerance:\n\n```typescript\nconst subnet1 = new aws.ec2.Subnet(\"subnet-az1\", {\n    vpcId: vpc.id,\n    cidrBlock: \"10.0.1.0/24\",\n    availabilityZone: \"us-east-1a\", // Specify explicit AZ\n});\n\nconst subnet2 = new aws.ec2.Subnet(\"subnet-az2\", {\n    vpcId: vpc.id,\n    cidrBlock: \"10.0.2.0/24\",\n    availabilityZone: \"us-east-1b\", // Use different AZ for redundancy\n});\n```\n\nUse `availabilityZone` or `availabilityZoneId` consistently: the two are different namespaces and\nthe mapping between them is account-specific, so mixing them leaves the spread undeterminable.",
       "severity": "high"
     },
     {
@@ -9011,6 +9079,7 @@
             "type": "string"
           },
           "exemptRouteTables": {
+            "default": [],
             "description": "List of route table names to exempt from internet gateway restriction",
             "items": {
               "type": "string"
@@ -9031,7 +9100,7 @@
       },
       "message": "",
       "name": "vpc-route-table-internet-gateway-restricted",
-      "remediationSteps": "## Fix: Restrict Route Table Internet Gateway Access\n\nRemove or restrict overly broad routes to internet gateways in your VPC route table.\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create route table without unrestricted internet access\nconst routeTable = new aws.ec2.RouteTable(\"example\", {\n    vpcId: vpc.id,\n    routes: [\n        // ❌ INCORRECT: Avoid routes with 0.0.0.0/0 to internet gateway\n        // {\n        //     cidrBlock: \"0.0.0.0/0\",\n        //     gatewayId: igw.id,\n        // },\n\n        // ✅ CORRECT: Use specific CIDR blocks or route through NAT gateway instead\n        {\n            cidrBlock: \"10.0.0.0/8\", // Private network range\n            gatewayId: igw.id,\n        },\n        // Or use NAT gateway for controlled outbound access\n        {\n            cidrBlock: \"0.0.0.0/0\",\n            natGatewayId: natGateway.id, // NAT gateway provides controlled egress\n        },\n    ],\n});\n```\n\nAlternatively, exempt specific route tables from this check by configuring the policy.",
+      "remediationSteps": "## Fix: Restrict Route Table Internet Gateway Access\n\nSend outbound traffic from private subnets through a NAT gateway (IPv4) or an egress-only internet\ngateway (IPv6) instead of an internet gateway:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst privateRouteTable = new aws.ec2.RouteTable(\"private\", {\n    vpcId: vpc.id,\n    routes: [\n        { cidrBlock: \"0.0.0.0/0\", natGatewayId: natGateway.id },\n        { ipv6CidrBlock: \"::/0\", egressOnlyGatewayId: egressOnlyGateway.id },\n    ],\n});\n```\n\nA public route table that must reach an internet gateway can be listed in `exemptRouteTables`.",
       "severity": "medium"
     },
     {
@@ -9098,6 +9167,7 @@
             "type": "string"
           },
           "exemptSubnetCidrs": {
+            "default": [],
             "description": "List of subnet CIDR blocks to exempt from public IP restriction",
             "items": {
               "type": "string"
@@ -9105,6 +9175,7 @@
             "type": "array"
           },
           "exemptSubnets": {
+            "default": [],
             "description": "List of subnet names to exempt from public IP restriction",
             "items": {
               "type": "string"
@@ -9206,6 +9277,6 @@
       "severity": "medium"
     }
   ],
-  "version": 2,
-  "versionTag": "1.0.1"
+  "version": 3,
+  "versionTag": "2.0.0"
 }

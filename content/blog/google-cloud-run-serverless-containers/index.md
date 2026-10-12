@@ -223,7 +223,7 @@ $ curl "$(pulumi stack output rubyUrl)"
 Hello Pulumi!
 ```
 
-You can find the complete example in the Pulumi examples [Github repository](https://github.com/pulumi/examples/blob/master/gcp-ts-cloudrun).
+You can find the complete example in the Pulumi examples [GitHub repository](https://github.com/pulumi/examples/blob/master/gcp-ts-cloudrun).
 
 ## Pricing
 

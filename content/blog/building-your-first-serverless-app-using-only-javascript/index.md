@@ -120,7 +120,7 @@ gains from better tooling support. In particular:
 - **Error checking.** Less worry about correctly indented YAML, more
   real error checking.
 - **Versioning and Packaging.** Much improved versioning and packaging
-  scenarios through Github and NPM workflows.
+  scenarios through GitHub and NPM workflows.
 - **Reusable components.** Build on top of base classes, and share for
   easy reuse, standard configurations and so on.
 

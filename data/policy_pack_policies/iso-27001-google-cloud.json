@@ -476,7 +476,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures Cloud Storage buckets have access logging enabled with logBucket and logObjectPrefix configured",
+      "description": "Ensures Cloud Storage buckets have access logging enabled with a log destination bucket",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -487,6 +487,7 @@
       },
       "message": "",
       "name": "bucket-access-logging",
+      "remediationSteps": "## Fix: Enable Access Logging\n\nSet `logging.logBucket` to the bucket that should receive the access logs. The other settings\nare not this policy's concern; they are here so the example also satisfies the sibling policies\nits packs register.\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    logging: {\n        logBucket: \"my-logging-bucket\",  // Destination bucket for access logs\n        logObjectPrefix: \"bucket-logs/\", // Optional prefix for log objects\n    },\n    uniformBucketLevelAccess: true,\n    publicAccessPrevention: \"enforced\",\n    versioning: { enabled: true },\n    encryption: {\n        defaultKmsKeyName: \"projects/my-project/locations/us/keyRings/my-ring/cryptoKeys/my-key\",\n    },\n    lifecycleRules: [{\n        action: { type: \"SetStorageClass\", storageClass: \"NEARLINE\" },\n        condition: { age: 30 },\n    }],\n    labels: { environment: \"production\", team: \"platform\", owner: \"security\" },\n});\n```",
       "severity": "medium"
     },
     {
@@ -2165,7 +2166,7 @@
       },
       "message": "",
       "name": "cloudsql-backup",
-      "remediationSteps": "Enable automated backups by setting backupConfiguration.enabled to true. Configure startTime, pointInTimeRecoveryEnabled, and backupRetentionSettings with at least 7 days retention.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst instance = new gcp.sql.DatabaseInstance(\"my-db-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    region: \"us-central1\",\n    settings: {\n        tier: \"db-f1-micro\",\n        backupConfiguration: {\n            enabled: true,\n            startTime: \"03:00\",\n            pointInTimeRecoveryEnabled: true,\n            backupRetentionSettings: {\n                retainedBackups: 7,\n                retentionUnit: \"COUNT\",\n            },\n        },\n    },\n});\n```",
+      "remediationSteps": "## Fix: Enable Automated Backups\n\nSet `backupConfiguration.enabled` to true — an omitted flag is not an enabled backup. On\nPostgreSQL and SQL Server point-in-time recovery is `pointInTimeRecoveryEnabled`; on MySQL it is\n`binaryLogEnabled`. The other settings are not this policy's concern; they are here so the\nexample also satisfies the sibling policies its packs register.\n\n```typescript\nconst instance = new gcp.sql.DatabaseInstance(\"my-db-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    region: \"us-central1\",\n    deletionProtection: true,\n    settings: {\n        tier: \"db-f1-micro\",\n        availabilityType: \"REGIONAL\",\n        backupConfiguration: {\n            enabled: true,\n            pointInTimeRecoveryEnabled: true,\n        },\n        ipConfiguration: {\n            ipv4Enabled: false,\n            privateNetwork: \"projects/my-project/global/networks/my-vpc\",\n            sslMode: \"ENCRYPTED_ONLY\",\n        },\n        maintenanceWindow: { day: 7, hour: 3, updateTrack: \"stable\" },\n        userLabels: { environment: \"production\", team: \"platform\", owner: \"security\" },\n    },\n});\n```",
       "severity": "high"
     },
     {
@@ -2813,7 +2814,7 @@
       },
       "message": "",
       "name": "environment-label",
-      "remediationSteps": "## Fix: Add Valid Environment Label\n\nAdd an environment label with a valid value (development, staging, or production) to your GCP resources:\n\n```typescript\nconst instance = new gcp.compute.Instance(\"my-instance\", {\n    labels: {\n        environment: \"production\",  // Required: valid environment label\n        // ... other labels\n    },\n    // ... other config\n});\n\n// For Cloud SQL instances, use userLabels within settings\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-database\", {\n    settings: {\n        userLabels: {\n            environment: \"staging\",  // Required: valid environment label\n        },\n        // ... other settings\n    },\n    // ... other config\n});\n\n// For GKE clusters, use resourceLabels\nconst cluster = new gcp.container.Cluster(\"my-cluster\", {\n    resourceLabels: {\n        environment: \"development\",  // Required: valid environment label\n    },\n    // ... other config\n});\n```",
+      "remediationSteps": "## Fix: Add Valid Environment Label\n\nAdd an environment label with a valid value (development, staging, or production). The provider\nkeeps the label bag in a different place per resource; these are the five this policy reads.\nThe `team` and `owner` labels are here because a sibling policy asks for them, not this one.\n\n```typescript\n// Most resources: a top-level labels map\nconst disk = new gcp.compute.Disk(\"my-disk\", {\n    labels: { environment: \"production\", team: \"platform\", owner: \"security\" },\n    diskEncryptionKey: { kmsKeySelfLink: \"projects/my-project/locations/us/keyRings/r/cryptoKeys/k\" },\n});\n\n// Cloud Run: the Knative metadata block\nconst service = new gcp.cloudrun.Service(\"my-service\", {\n    location: \"us-central1\",\n    metadata: { labels: { environment: \"production\", team: \"platform\", owner: \"security\" } },\n});\n\n// Monitoring alert policies: top-level userLabels\nconst alert = new gcp.monitoring.AlertPolicy(\"my-alert\", {\n    displayName: \"my-alert\",\n    combiner: \"OR\",\n    conditions: [{\n        displayName: \"cpu\",\n        conditionThreshold: {\n            filter: `metric.type=\"compute.googleapis.com/instance/cpu/utilization\"`,\n            duration: \"60s\",\n            comparison: \"COMPARISON_GT\",\n        },\n    }],\n    userLabels: { environment: \"production\", team: \"platform\", owner: \"security\" },\n});\n\n// Cloud SQL nests them under settings, GKE calls them resourceLabels\nconst sqlSettings: gcp.types.input.sql.DatabaseInstanceSettings = {\n    tier: \"db-f1-micro\",\n    userLabels: { environment: \"staging\", team: \"platform\", owner: \"security\" },\n};\nconst clusterLabels: gcp.container.ClusterArgs[\"resourceLabels\"] = {\n    environment: \"development\", team: \"platform\", owner: \"security\",\n};\n```",
       "severity": "low"
     },
     {
@@ -3935,7 +3936,7 @@
       },
       "message": "",
       "name": "kms-key-rotation",
-      "remediationSteps": "Enable automatic key rotation for Cloud KMS crypto keys by setting 'rotationPeriod'. Key rotation limits the lifetime of encryption keys and reduces cryptographic risk.\n\nExample - Enable automatic key rotation:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst key = new gcp.kms.CryptoKey(\"my-key\", {\n    name: \"crypto-key\",\n    keyRing: keyring.id,\n    rotationPeriod: \"7776000s\", // 90 days (configurable)\n});\n```\n\nCommon rotation periods:\n- 30 days: \"2592000s\"\n- 60 days: \"5184000s\"\n- 90 days: \"7776000s\" (recommended default)\n- 365 days: \"31536000s\" (maximum recommended)",
+      "remediationSteps": "Enable automatic key rotation for Cloud KMS crypto keys by setting 'rotationPeriod'. Key rotation limits the lifetime of encryption keys and reduces cryptographic risk.\n\nExample - Enable automatic key rotation:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst key = new gcp.kms.CryptoKey(\"my-key\", {\n    name: \"crypto-key\",\n    keyRing: \"projects/my-project/locations/us-central1/keyRings/my-ring\",\n    rotationPeriod: \"7776000s\", // 90 days (configurable)\n});\n```\n\nPeriods this policy accepts out of the box: `2592000s` (30 days), `5184000s` (60 days) and\n`7776000s` (90 days, the `maxRotationPeriod` default). Anything longer needs\n`maxRotationPeriod` raised to match, or it is reported again.",
       "severity": "high"
     },
     {
@@ -5267,6 +5268,6 @@
       "severity": "high"
     }
   ],
-  "version": 1,
-  "versionTag": "1.0.0"
+  "version": 2,
+  "versionTag": "1.1.0"
 }

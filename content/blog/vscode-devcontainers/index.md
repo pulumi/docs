@@ -82,7 +82,7 @@ First edit `devcontainer.json` as follows:
 - Remove the "args" line
 - Replace the "remoteUser" value with `user`
 
-Regardless of your cloud provider, you will have to provide your credentials to deploy resources. If you want to save your project to Github or another repository, you don’t want your credentials stored in the repository. There are several ways to do this securely. Using AWS as an example, you can export them inside the container, e.g.,
+Regardless of your cloud provider, you will have to provide your credentials to deploy resources. If you want to save your project to GitHub or another repository, you don’t want your credentials stored in the repository. There are several ways to do this securely. Using AWS as an example, you can export them inside the container, e.g.,
 
 Linux/macOS:
 

@@ -61,7 +61,7 @@
       "framework": {
         "name": "CIS",
         "reference": "3.3",
-        "specification": "Establish and maintain a data management process. In the process, address data sensitivity, data owner, handling of data, data retention limits, and disposal requirements, based on sensitivity and retention standards for the enterprise. Review and update documentation annually, or when significant enterprise changes occur that could impact this safeguard.",
+        "specification": "Configure data access control lists based on a user's need to know. Apply data access control lists, also known as access permissions, to local and remote file systems, databases, and applications.",
         "version": "8.1"
       },
       "message": "",
@@ -5932,6 +5932,6 @@
       "severity": "high"
     }
   ],
-  "version": 3,
-  "versionTag": "1.0.2"
+  "version": 4,
+  "versionTag": "1.0.3"
 }

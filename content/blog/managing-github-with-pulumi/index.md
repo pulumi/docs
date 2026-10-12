@@ -9,7 +9,7 @@ category: tutorials
 
 {{% notes type="info" %}}
 We recently updated this article to reflect that `parentTeamId` of the `Team` resource accepts a `string` instead of an `int` since v5.9.1 of the
-[Pulumi Github](/registry/packages/github/) package.
+[Pulumi GitHub](/registry/packages/github/) package.
 {{% /notes %}}
 
 Ah, GitHub. The home of all developers. The place where we share code. The world’s most awkward social media site. The secret LinkedIn for techies. The tool we use for company org structure, work planning, code ownership, and permissions…
