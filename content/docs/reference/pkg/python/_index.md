@@ -3,7 +3,7 @@ title: Pulumi Python SDK API Reference
 meta_desc: API reference for the Pulumi Python SDK (pulumi), plus the Policy (pulumi_policy), ESC (pulumi_esc_sdk), and Cloud (pulumi_cloud_sdk) SDKs.
 ---
 
-Each package below has its own auto-generated reference documentation, regenerated independently on every upstream release.
+Each package below has its own auto-generated reference documentation, regenerated independently from each package's releases.
 
 - [**Pulumi SDK** (`pulumi`)](/docs/reference/pkg/python/pulumi/): the core Pulumi SDK for Python.
 - [**Pulumi Policy SDK** (`pulumi_policy`)](/docs/reference/pkg/python/pulumi_policy/): for authoring policy packs for Pulumi Policies in Python.

@@ -19,7 +19,7 @@ Use the Cloud SDK when you want to call Pulumi Cloud from your own code. For exa
 - **Scripts and automation** that query or change Pulumi Cloud, such as auditing stack tags across an organization, rotating access tokens, or triggering deployments.
 - **Internal tools and services** that show Pulumi Cloud data, such as a dashboard of stack updates or a service that opens Neo tasks.
 
-The SDK handles request construction, authentication headers, serialization, and error responses, so you work with typed request and response objects instead of raw HTTP.
+The SDK handles request construction, serialization, and error responses, so you work with typed request and response objects instead of raw HTTP. In every language except Go, it also sets the authentication header from the token you configure.
 
 ## When not to use the SDK
 
@@ -32,7 +32,7 @@ Other tools fit some jobs better:
 
 ## Authentication
 
-The SDK authenticates with a Pulumi [access token](/docs/administration/concepts/access-tokens/), sent with each request in the `Authorization` header. Use a personal access token for scripts that act as you, and an organization, team, or machine token for automation that shouldn't depend on an individual's account. The examples on this page read the token from the `PULUMI_ACCESS_TOKEN` environment variable.
+The SDK authenticates with a Pulumi [access token](/docs/administration/concepts/access-tokens/), sent with each request in the `Authorization` header. Use a personal access token for scripts that act as you, and an organization or team access token (a machine token, not tied to a user account) for automation that shouldn't depend on an individual's account. The examples on this page read the token from the `PULUMI_ACCESS_TOKEN` environment variable.
 
 By default, the SDK calls `https://api.pulumi.com`. If you [self-host Pulumi Cloud](/docs/administration/self-hosting/), point the client at your own API endpoint instead.
 
