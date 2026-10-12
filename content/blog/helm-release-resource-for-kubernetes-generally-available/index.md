@@ -417,4 +417,4 @@ You can learn more about Helm Release from the following sources:
    * [C#](/registry/packages/kubernetes/how-to-guides/kubernetes-cs-helm-release-wordpress)
    * [Go](/registry/packages/kubernetes/how-to-guides/kubernetes-go-helm-release-wordpress/)
 
-If you have questions or run into issues, please don't hesitate to reach out by filing issues on [Github](https://github.com/pulumi/pulumi-kubernetes/issues) or asking questions on [Community Slack](https://slack.pulumi.com). Happy charting!
+If you have questions or run into issues, please don't hesitate to reach out by filing issues on [GitHub](https://github.com/pulumi/pulumi-kubernetes/issues) or asking questions on [Community Slack](https://slack.pulumi.com). Happy charting!

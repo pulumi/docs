@@ -30,7 +30,7 @@ want.
 
 Here's a simple example of using SQS as an event source with Pulumi:
 upon receipt of a message via SQS we post a new message into Slack. The
-full project is available on Github in our
+full project is available on GitHub in our
 [examples repo](https://github.com/pulumi/examples/tree/master/aws-js-sqs-slack),
 and includes the instructions to get this up and running.
 

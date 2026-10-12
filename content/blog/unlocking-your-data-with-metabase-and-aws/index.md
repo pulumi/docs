@@ -720,4 +720,4 @@ outputs:
 
 To get started unlocking your data with Metabase, head on over to the [Metabase Package](/registry/packages/metabase/). Follow the quick walkthrough and have your Metabase service running in 30 minutes or less (in most cases). Once your service is up and running, we recommend popping over the Metabase Documentation to learn [How to Set Up Metabase](https://www.metabase.com/docs/latest/setting-up-metabase.html).
 
-If you encounter an issue or have a feature request, please file an issue in the Package’s [Github Repo](https://github.com/pulumi/pulumi-metabase).
+If you encounter an issue or have a feature request, please file an issue in the Package’s [GitHub Repo](https://github.com/pulumi/pulumi-metabase).

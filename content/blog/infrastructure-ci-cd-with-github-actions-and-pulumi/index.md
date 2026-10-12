@@ -1,5 +1,5 @@
 ---
-title: "Infrastructure CI/CD With Github Actions and Pulumi"
+title: "Infrastructure CI/CD With GitHub Actions and Pulumi"
 date: 2020-12-14
 meta_desc: "See how GitHub Actions and the new Pulumi CI/CD Assistant help you achieve continuous delivery for your cloud applications and infrastructure."
 authors:

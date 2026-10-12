@@ -15,7 +15,7 @@ category: tutorials
 
 Auth0 allows you to simplify your authentication process. The [Auth0 Provider](/registry/packages/auth0/api-docs/) allows you to manage the Auth0 resources, managing Applications, Databases, Social Connections, APIs, and other resources. Here at Credijusto we use it manage authentication from the front-end through all the APIs that serve that request, leveraging the complexity of the authentication to Auth0.
 
-For this article, we will start a new Pulumi project in a fresh Auth0 account and fully configure it for a backend and a single page application and set up a connection to Github which allows you apps to authenticate with it using OAuth.
+For this article, we will start a new Pulumi project in a fresh Auth0 account and fully configure it for a backend and a single page application and set up a connection to GitHub which allows you apps to authenticate with it using OAuth.
 
 <!--more-->
 
@@ -49,7 +49,7 @@ pulumi config set githubClientId github-foo
 pulumi config set githubClientSecret --secret github-bar
 ```
 
-Tip: You can create your Github OAuth Application [here](https://github.com/settings/applications/new).
+Tip: You can create your GitHub OAuth Application [here](https://github.com/settings/applications/new).
 
 ## Configure the Tenant
 
@@ -83,9 +83,9 @@ const frontend = new auth0.Client('frontend', {
 
 Note that the `backend` is set as the `non_interactive` type, this is referred to as `Machine to machine` in the Auth0 console.
 
-## Create the Github connection
+## Create the GitHub connection
 
-With the applications set, we need to create a social connection using Github and allow those applications to use it:
+With the applications set, we need to create a social connection using GitHub and allow those applications to use it:
 
 ```typescript
 const config = new pulumi.Config();

@@ -19,7 +19,7 @@ In a [previous article](/blog/architecture-as-code-intro/), we presented an over
 
 Whether you choose to build a virtual machine using VMWare or from a cloud service provider such as AWS, Azure, or Google Cloud Platform, they require three resources. First, the instance itself must be configured to meet application requirements. Second, network access for maintaining the instance and for applications. Finally, storage for application data.
 
-Let's start with the EC2 provisioner example, which is available on [Github](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners). Make an empty directory and clone the example in the directory using `pulumi new`.
+Let's start with the EC2 provisioner example, which is available on [GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners). Make an empty directory and clone the example in the directory using `pulumi new`.
 
 ```bash
 $ mkdir virtual_machine && cd virtual_machine
@@ -275,7 +275,7 @@ postgres=# \q
 
 ## Conclusion
 
-We can deploy and configure virtual machines programmatically using scripts and a CLI. However, updating existing instances can be onerous because it would require logging into each instance to update them. With Pulumi, we can use a dynamic provider to create a provisioner that can provision and configure an existing virtual machine. In this post, we walked through how to create a virtual machine with storage, starting from an [example on Github](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners). We then installed PostgreSQL using a provisioner that copied configuration files, and an installation script then ran the script, all without creating a new virtual machine.
+We can deploy and configure virtual machines programmatically using scripts and a CLI. However, updating existing instances can be onerous because it would require logging into each instance to update them. With Pulumi, we can use a dynamic provider to create a provisioner that can provision and configure an existing virtual machine. In this post, we walked through how to create a virtual machine with storage, starting from an [example on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners). We then installed PostgreSQL using a provisioner that copied configuration files, and an installation script then ran the script, all without creating a new virtual machine.
 
 We have more virtual machine examples for other cloud providers. Check out:
 
