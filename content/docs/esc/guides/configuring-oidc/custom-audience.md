@@ -10,7 +10,7 @@ menu:
     weight: 8
 ---
 
-Pulumi ESC (Environments, Secrets, and Configuration) OIDC tokens for custom audiences let an environment mint an OpenID Connect (OIDC) token for any service that accepts OIDC identities. You mint the token with [`fn::open::oidc`](/docs/esc/providers/login/oidc/). The service that accepts the token is the relying party. This guide shows how to configure a relying party to trust `fn::open::oidc` tokens, with examples for Cloudsmith and Aembit. For AWS, Azure, and Google Cloud, use the vendor login providers such as [`aws-login`](/docs/esc/providers/login/aws-login/) instead; they exchange the token for cloud credentials for you.
+Pulumi ESC (Environments, Secrets, and Configuration) OIDC tokens for custom audiences let an environment mint an OpenID Connect (OIDC) token for any service that accepts OIDC identities. You mint the token with [`fn::open::oidc`](/docs/esc/providers/login/oidc/). The service that accepts the token is the relying party. This guide shows how to configure a relying party to trust `fn::open::oidc` tokens, with examples for Cloudsmith, JFrog Artifactory, and Aembit. For AWS, Azure, and Google Cloud, use the vendor login providers such as [`aws-login`](/docs/esc/providers/login/aws-login/) instead; they exchange the token for cloud credentials for you.
 
 {{< notes type="info" >}}
 Pulumi is turning on `fn::open::oidc` organization by organization. To have it turned on for your organization, [contact Pulumi](/contact/).
@@ -144,6 +144,61 @@ Cloudsmith exchanges an OIDC token for a short-lived Cloudsmith API token that b
     The response contains a `token` field. The token is valid for about two hours, whatever `duration` you set. Send it to the Cloudsmith API in the `X-Api-Key: Bearer <token>` or `Authorization: Bearer <token>` header.
 
 If the exchange returns `401 Failed to validate token`, check the provider URL, then compare the provider's claims with the [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) output. Cloudsmith returns this error for a wrong provider URL, an expired token, and a claim mismatch alike, and does not check the URL when you save the provider.
+
+## JFrog Artifactory
+
+JFrog exchanges an OIDC token for a short-lived JFrog access token that acts as a JFrog user. OIDC integration needs a JFrog Enterprise X or Enterprise+ subscription.
+
+1. In the JFrog Platform, open **Administration** > **General Management** > **Manage Integrations** and add an OpenID Connect integration:
+    - **Provider Type:** Generic OpenID Connect.
+    - **Provider Name:** a name such as `pulumi-esc`. You send this name in the exchange request.
+    - **Provider URL:** `https://api.pulumi.com/oidc/v2`.
+    - **Audience:** your instance URL, such as `https://<server>.jfrog.io`.
+
+    Always set the audience, and use the same string in Pulumi ESC. JFrog compares it exactly, so a trailing slash or a different value fails. If you leave it blank, JFrog accepts tokens for any audience. JFrog does not check the provider URL when you save the integration; a wrong URL fails at the first exchange.
+
+1. Add an identity mapping to the integration:
+    - **Claims JSON:** the `sub` value from your environment:
+
+        ```json
+        {
+          "sub": "pulumi:org:<org-id>:env:<environment-id>"
+        }
+        ```
+
+    - **Token Scope:** User, and the **User Name** that the token acts as.
+    - **Expiration Time:** the lifetime of the JFrog access token. `duration` does not change it.
+
+    Always include `sub`. A mapping that matches only `aud` accepts tokens from other organizations that use the same audience. JFrog reads claim values as globs over the whole value. To trust every environment in your organization, use `pulumi:org:<org-id>:env:*`, or match the `https://pulumi.com/org_id` claim instead. A value without `*` must match exactly, and `*` alone trusts every Pulumi organization.
+
+1. In Pulumi ESC, mint a token with the same audience and export it:
+
+    ```yaml
+    values:
+      jfrog:
+        oidcToken:
+          fn::open::oidc:
+            audience: https://<server>.jfrog.io
+            identityToken:
+              version: v2
+      environmentVariables:
+        JFROG_OIDC_TOKEN: ${jfrog.oidcToken}
+    ```
+
+1. Exchange the token for a JFrog access token. Replace `<server>` and `pulumi-esc` with your values:
+
+    ```bash
+    pulumi env run <org>/<project>/<environment> -- sh -c '
+      curl -s -X POST https://<server>.jfrog.io/access/api/v1/oidc/token \
+        -H "Content-Type: application/json" \
+        -d "{\"grant_type\": \"urn:ietf:params:oauth:grant-type:token-exchange\", \"subject_token_type\": \"urn:ietf:params:oauth:token-type:id_token\", \"subject_token\": \"$JFROG_OIDC_TOKEN\", \"provider_name\": \"pulumi-esc\"}"'
+    ```
+
+    Write `$JFROG_OIDC_TOKEN`, not `${JFROG_OIDC_TOKEN}`, for the reason given in the Cloudsmith section.
+
+    The response contains an `access_token` field. Send it to Artifactory in the `Authorization: Bearer <token>` header.
+
+If the exchange returns `400 Invalid audience`, the token's audience does not match the integration's. A `403 Forbidden` means no identity mapping matched the token's claims. JFrog rejects a token as soon as it expires and allows no grace period.
 
 ## Aembit
 
