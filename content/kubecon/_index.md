@@ -108,7 +108,7 @@ sections:
         description: |
           41% of AI developers are moving to cloud-native infrastructure. Teams need more control over GPU resources, model deployments, and inference workloads. Pulumi provides the foundation AI teams depend on.
         cta_text: Learn more about AI infrastructure
-        cta_link: /product/superintelligence-infrastructure/
+        cta_link: /blog/the-superintelligence-flywheel/
 
   - type: testimonial
     quote: |
