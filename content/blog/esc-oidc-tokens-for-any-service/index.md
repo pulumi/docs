@@ -62,7 +62,7 @@ values:
     AEMBIT_OIDC_TOKEN: ${aembit.login}
 ```
 
-The provider takes three inputs. `audience` becomes the token's `aud` claim, the name the service checks. `identityToken.version` selects the token format; `v2` is the only value, and the input has no default, so an existing environment keeps its meaning if a later format arrives. `duration` sets the lifetime, from one minute to one hour, and defaults to one hour. ESC refuses any other input.
+The provider takes three inputs. `audience` becomes the token's `aud` claim, the name the service checks. `identityToken.version: v2` selects the token format. `duration` sets the lifetime, from one minute to one hour, and defaults to one hour. ESC refuses any other input.
 
 Opening the environment yields a signed token. Decoded and trimmed, its claims look like this:
 

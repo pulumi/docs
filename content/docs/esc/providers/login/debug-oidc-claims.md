@@ -63,7 +63,7 @@ With `identityToken.version` set to `v2`, the provider takes the same inputs as 
 |---|---|---|---|
 | `audience` | string | Yes | The `aud` claim to preview. One value, 1 to 512 bytes. |
 | `identityToken` | object | Yes | Selects the token to preview. |
-| `identityToken.version` | string | Yes | The token format. Only `v2` is accepted. |
+| `identityToken.version` | string | Yes | The token format. Set `v2`. |
 | `duration` | string | No | Accepted so that the block moves to `fn::open::oidc` unchanged, from `1m` to `1h`. The preview has no lifetime. |
 
 ### Outputs

@@ -122,8 +122,10 @@ Each token that `fn::open::oidc` mints adds an entry to your organization's [aud
 |---|---|---|---|
 | `audience` | string | Yes | The token's `aud` claim. One value, 1 to 512 bytes. It must not be blank. |
 | `identityToken` | object | Yes | The identity token to mint. |
-| `identityToken.version` | string | Yes | The token format. Only `v2` is accepted. |
+| `identityToken.version` | string | Yes | The token format. Set `v2`. |
 | `duration` | string | No | The token's lifetime, from `1m` to `1h`, for example `15m`. Defaults to `1h`. |
+
+`identityToken.version` pins the token format an environment depends on: `v2` is the format this provider mints, with the ID-based subject, and the vendor login providers mint the earlier `v1` format on the `/oidc` issuer. The input has no default so that a later format can ship without changing the tokens an existing environment mints or breaking the trust policies that pin them.
 
 The provider refuses any other input, including `subjectAttributes`. The subject of a `fn::open::oidc` token is always built from the organization ID and the ID of the environment that declares it.
 
