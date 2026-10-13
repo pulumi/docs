@@ -45,6 +45,10 @@ A stored key for a registry or a secrets broker sits in ESC until someone rotate
 
 An OIDC token works the other way around. ESC mints it at the moment you open the environment, signs it with a key only Pulumi holds, and stamps it with an expiry. The service checks it against the trust policy you configured and issues a credential with its own lifetime. You store nothing, so you rotate nothing.
 
+## Why this matters for agents
+
+An AI agent that opens an environment gets whatever the environment holds. A stored key works from anywhere until someone rotates it, and one bad prompt can copy it out. A `fn::open::oidc` token works for one service and expires within the hour, or within minutes if you set `duration`. Put the access an agent needs in its own environment, let Pulumi Cloud permissions decide who may open it, and pin each service's trust policy to that environment's subject. The agent reaches the services you chose and nothing else.
+
 ## How it works
 
 Declare the provider in an environment, name the audience the service expects, and export the token:
