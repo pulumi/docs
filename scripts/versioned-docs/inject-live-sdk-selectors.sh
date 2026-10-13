@@ -30,12 +30,16 @@ inject() { # tool  on-disk-subdir(relative to REF)  live-root
 # before the parent docset pass runs.
 inject nodejs-policy    nodejs/pulumi/policy    /docs/reference/pkg/nodejs/pulumi/policy/
 inject nodejs-esc-sdk   nodejs/pulumi/esc-sdk   /docs/reference/pkg/nodejs/pulumi/esc-sdk/
+inject nodejs-cloud-sdk nodejs/pulumi/cloud-sdk /docs/reference/pkg/nodejs/pulumi/cloud-sdk/
 inject nodejs           nodejs/pulumi           /docs/reference/pkg/nodejs/pulumi/
 inject python-policy    python/pulumi_policy    /docs/reference/pkg/python/pulumi_policy/
 inject python-esc-sdk   python/pulumi_esc_sdk   /docs/reference/pkg/python/pulumi_esc_sdk/
+inject python-cloud-sdk python/pulumi_cloud_sdk /docs/reference/pkg/python/pulumi_cloud_sdk/
 inject python           python/pulumi           /docs/reference/pkg/python/pulumi/
 inject dotnet-esc-sdk   dotnet/esc-sdk          /docs/reference/pkg/dotnet/esc-sdk/
+inject dotnet-cloud-sdk dotnet/cloud-sdk        /docs/reference/pkg/dotnet/cloud-sdk/
 inject dotnet           dotnet                  /docs/reference/pkg/dotnet/
+inject java-cloud-sdk   java/cloud-sdk          /docs/reference/pkg/java/cloud-sdk/
 inject java             java                    /docs/reference/pkg/java/
 
 # Some docset liveRoots are bare DocFX/TypeDoc container dirs with no index.html (the site
@@ -62,5 +66,6 @@ HTML
 }
 redirect_landing nodejs/pulumi  pulumi/
 redirect_landing dotnet/esc-sdk pulumi.esc.sdk/pulumi.esc.sdk.html
+redirect_landing dotnet/cloud-sdk pulumi.cloud.sdk/pulumi.cloud.sdk.html
 
 echo "inject-live-sdk: done"

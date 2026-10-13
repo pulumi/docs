@@ -257,6 +257,31 @@ reference:
     url: /docs/reference/pkg/dotnet/esc-sdk/pulumi.esc.sdk/pulumi.esc.sdk.html
     weight: 11
     identifier: reference-sdks-dotnet-esc
+  - name: TypeScript Cloud SDK ↗
+    parent: reference-sdks
+    url: /docs/reference/pkg/nodejs/pulumi/cloud-sdk/
+    weight: 12
+    identifier: reference-sdks-javascript-cloud
+  - name: Python Cloud SDK ↗
+    parent: reference-sdks
+    url: /docs/reference/pkg/python/pulumi_cloud_sdk/
+    weight: 13
+    identifier: reference-sdks-python-cloud
+  - name: Go Cloud SDK ↗
+    parent: reference-sdks
+    url: https://pkg.go.dev/github.com/pulumi/pulumi-cloud-sdk/go/apiclient
+    weight: 14
+    identifier: reference-sdks-go-cloud
+  - name: .NET Cloud SDK ↗
+    parent: reference-sdks
+    url: /docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.html
+    weight: 15
+    identifier: reference-sdks-dotnet-cloud
+  - name: Java Cloud SDK ↗
+    parent: reference-sdks
+    url: /docs/reference/pkg/java/cloud-sdk/
+    weight: 16
+    identifier: reference-sdks-java-cloud
   - name: CIS
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-cis
