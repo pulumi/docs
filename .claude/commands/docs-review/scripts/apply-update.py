@@ -671,7 +671,23 @@ def _rebuild_detail_block(fid: str, old: list[str], detail: dict) -> list[str]:
     keep = str(detail.get("keep", "")).strip()
     if keep:
         out.append(f"- **If you'd rather keep it:** {keep}")
+    # A group question's claim list (or the pointer a fit left in its place)
+    # isn't part of Why/Fix; carry it over or the retext loses it.
+    tail = _group_list_tail(old)
+    if tail:
+        out += ["", *tail]
     return out
+
+
+def _group_list_tail(block: list[str]) -> list[str]:
+    for i, ln in enumerate(block):
+        if be._GROUP_POINTER_RE.match(ln.strip()):
+            return [ln]
+        if (ln == "<details>" and i + 1 < len(block)
+                and block[i + 1].endswith(cr.GROUP_LIST_SUMMARY_SUFFIX)):
+            end = next((j for j in range(i + 2, len(block)) if block[j] == "</details>"), None)
+            return block[i:end + 1] if end is not None else []
+    return []
 
 
 def _unbullet(line: str) -> str:

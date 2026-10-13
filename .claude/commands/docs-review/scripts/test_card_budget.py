@@ -174,6 +174,77 @@ def test_only_a_404_marks_a_ref_unreadable():
     assert gh.calls.count("pulumi/pulumi-service") == 1, "one probe per repo"
 
 
+def test_a_404_on_stdout_counts_too():
+    gh = _FakeGh({"pulumi/pulumi-service": (1, "")})
+    gh_out = lambda cmd, **kw: subprocess.CompletedProcess(cmd, 1, "HTTP 404: Not Found", "")
+    assert vc.probe_unreadable_refs([UNREADABLE], run=gh_out) == [UNREADABLE]
+    assert vc.probe_unreadable_refs([UNREADABLE], run=gh) == [], "no 404 anywhere → unknown"
+
+
+# ---- verify-claims: don't spend Opus turns on what can't be read -----------
+
+import pytest  # noqa: E402
+
+
+@pytest.fixture
+def unreadable_service():
+    vc.set_unreadable_repos([UNREADABLE])
+    yield
+    vc.set_unreadable_repos([])
+
+
+@pytest.mark.parametrize("args", [
+    ["pr", "diff", "49283", "-R", "pulumi/pulumi-service"],
+    ["pr", "view", "49283", "--repo=pulumi/pulumi-service"],
+    ["api", "repos/pulumi/pulumi-service/pulls/49283/files"],
+    ["api", "repos/Pulumi/Pulumi-Service"],
+    ["search", "code", "repo:pulumi/pulumi-service", "openOIDC"],
+    ["pr", "view", "https://github.com/pulumi/pulumi-service/pull/49283"],
+])
+def test_gh_query_refuses_an_unreadable_repo_without_running_gh(unreadable_service, monkeypatch, args):
+    def boom(*_a, **_kw):
+        raise AssertionError("gh must not run against a repo the probe found unreadable")
+    monkeypatch.setattr(vc.subprocess, "run", boom)
+    out = vc.exec_gh_query({"args": args})
+    assert out.startswith("error: pulumi/pulumi-service is not readable"), out
+    assert "Don't query that repository again" in out
+
+
+@pytest.mark.parametrize("args", [
+    ["api", "repos/pulumi/pulumi/contents/sdk/go/common/resource/stack.go"],
+    ["api", "repos/pulumi/docs/contents/content/docs/esc/providers/login/oidc.md"],
+    ["search", "code", "repo:pulumi/pulumi-service-extras", "x"],
+])
+def test_gh_query_still_runs_everything_else(unreadable_service, monkeypatch, args):
+    ran = []
+    monkeypatch.setattr(vc.subprocess, "run", lambda cmd, **_kw: (
+        ran.append(cmd), subprocess.CompletedProcess(cmd, 0, "ok", ""))[1])
+    assert vc.exec_gh_query({"args": args}) == "ok"
+    assert ran == [["gh", *args]]
+
+
+def test_no_guard_until_a_probe_finds_something(monkeypatch):
+    vc.set_unreadable_repos([])
+    monkeypatch.setattr(vc.subprocess, "run",
+                        lambda cmd, **_kw: subprocess.CompletedProcess(cmd, 0, "ok", ""))
+    assert vc.exec_gh_query({"args": ["pr", "diff", "1", "-R", "pulumi/pulumi-service"]}) == "ok"
+
+
+def test_the_prompt_names_the_unreadable_ref_instead_of_asking_for_it(unreadable_service):
+    claim = {"file": PAGE, "line_range": "L10", "type": "behavior", "text": "x does y"}
+    refs = [UNREADABLE, "pulumi/esc#12"]
+    msg = vc.build_user_message(claim, "pass1", None, impl_refs=refs)
+    read_list = msg.split("This docs PR cites product source")[1].split("This docs PR also cites")[0]
+    assert "- pulumi/esc#12" in read_list and UNREADABLE not in read_list
+    assert f"This docs PR also cites {UNREADABLE}, which this review can't read" in msg
+    assert "return `unverifiable` now" in msg
+    # Only the unreadable ref cited: no read list at all, just the note.
+    only = vc.build_user_message(claim, "pass1", None, impl_refs=[UNREADABLE])
+    assert "cites product source" not in only and "which this review can't read" in only
+    # pass2 reads a pre-fetched page and never gets either block.
+    assert "can't read" not in vc.build_user_message(claim, "pass2", None, impl_refs=refs)
+
+
 # ---- compose: the new-feature group ----------------------------------------
 
 def _carve_out_verdicts() -> list[dict]:
@@ -411,3 +482,67 @@ def test_the_budget_matches_pinned_comment():
     sh = (HERE / "pinned-comment.sh").read_text()
     assert f"DEFAULT_MAX_BYTES={be.CARD_MAX_BYTES}\n" in sh, \
         "build-evidence.CARD_MAX_BYTES and pinned-comment.sh DEFAULT_MAX_BYTES must agree"
+
+
+# ---- the group block is composer-owned -------------------------------------
+
+nv = _load("normalize_v3_draft", HERE / "normalize-v3-draft.py")
+
+
+def _group_draft(tmp_path):
+    author, brief, base = _compose(tmp_path, [_verdict(i) for i in range(1, 6)], [UNREADABLE])
+    gid = next(f["id"] for f in base["findings"] if f.get("members"))
+    return author, brief, base, gid
+
+
+def test_the_base_carries_the_composed_group_block(tmp_path):
+    author, _brief, base, gid = _group_draft(tmp_path)
+    _spans, texts = be.collect_detail_blocks(author)
+    assert next(f for f in base["findings"] if f["id"] == gid)["detail"] == texts[gid]
+
+
+def test_normalize_reverts_a_model_edit_to_the_group_block(tmp_path):
+    author, brief, base, gid = _group_draft(tmp_path)
+    composed = be.collect_detail_blocks(author)[1][gid]
+    # The two edits that would fail validation: a second **Fix:**, and the
+    # claim list gone.
+    mangled = author.replace(
+        f"<summary>The 5{cr.GROUP_LIST_SUMMARY_SUFFIX}",
+        "<summary>stuff</summary>").replace(
+        "- **Fix:** Check them", "- **Fix:** Reply once.\n- **Fix:** Check them", 1)
+    rep = nv.Repairs()
+    fixed, _b = nv.normalize(mangled, brief, base, rep)
+    assert be.collect_detail_blocks(fixed)[1][gid] == composed
+    assert [r["rule"] for r in rep.items] == ["group-block"]
+    # Untouched, it's left alone.
+    rep2 = nv.Repairs()
+    same, _b = nv.normalize(author, brief, base, rep2)
+    assert same == author and not rep2.items
+
+
+def test_normalize_regenerates_a_deleted_group_block_as_composed(tmp_path):
+    author, brief, base, gid = _group_draft(tmp_path)
+    spans, texts = be.collect_detail_blocks(author)
+    s, e = spans[gid]
+    lines = author.splitlines()
+    deleted = "\n".join(lines[:s] + lines[e:]) + "\n"
+    assert f"#### {gid} · Do this" not in deleted
+    fixed, _b = nv.normalize(deleted, brief, base, nv.Repairs())
+    assert be.collect_detail_blocks(fixed)[1][gid] == texts[gid]
+
+
+def test_a_retext_keeps_the_group_claim_list(tmp_path):
+    author, brief, base, gid = _group_draft(tmp_path)
+    ev, a_card, b_card = be.build(_fill_scaffolds(author), brief, base)
+    a_out, _b, _s, _r = au.apply(
+        a_card, b_card,
+        _update([{"id": gid, "action": "retext", "text": "5 claims, still unchecked — verdict: unverifiable",
+                  "detail": {"why": "Still private.", "fix": "Answer once."}}]),
+        head_sha="f" * 40, actor="author", auto=False, repo="pulumi/docs", pr=22200, prior=ev)
+    block = be.collect_detail_blocks(a_out)[1][gid]
+    assert "- **Why:** Still private." in block and "- **Fix:** Answer once." in block
+    assert f"<summary>The 5{cr.GROUP_LIST_SUMMARY_SUFFIX}" in block and block.endswith("</details>")
+    # …and the pointer a fit leaves survives a retext the same way.
+    collapsed = be._collapse_group_lists(a_card)
+    start, end = be.collect_detail_blocks(collapsed)[0][gid]
+    assert au._group_list_tail(collapsed.splitlines()[start:end]) == [be.group_pointer(5)]

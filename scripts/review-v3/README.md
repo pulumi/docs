@@ -92,6 +92,15 @@ Do-this block (pulumi/docs#22200: 85 of them, an 80 KB author card). Now:
   claim). `build-evidence.refresh_facts_line` counts a group as its members, so
   the brief's **Facts** bullet doesn't call them settled. The author answers
   the group with one reply, and REVIEW_STATE holds one disposition for it.
+- The block is composer-owned. The base record's `detail` holds its text, and
+  `normalize-v3-draft.py` (rule 10) restores it before validation if the model
+  edits or deletes it. An update-lane `retext` rebuilds Why/Fix and keeps the
+  claim list.
+- The verifier knows too. `build_user_message` names the unreadable refs
+  instead of listing them to read, and `exec_gh_query` refuses a query against
+  their repositories without running `gh`. On #22200, 98 of 236 claims had
+  tried the private repo (4.3 turns each against 3.5 for other pass1 claims)
+  and accounted for 60% of the run's uncached input tokens.
 
 ## The card size budget
 

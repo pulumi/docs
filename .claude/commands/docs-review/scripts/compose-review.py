@@ -2748,6 +2748,10 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         rec["members"] = member_records
         question_ids.append(fid)
         composed_blocks[fid] = render_group_detail_block(fid, member_records, refs)
+        # The block is composer-owned: normalize-v3-draft.py puts this text
+        # back before validation if the model edits it, so a stray second
+        # **Fix:** can't cost the whole review.
+        rec["detail"] = "\n".join(composed_blocks[fid][1:]).strip()
         question_lines.append(render_finding_row(fid, body=cell))
     for s in author_answer_stubs:
         fid, _ = _assign(s, "author-answer", s["bullet"])

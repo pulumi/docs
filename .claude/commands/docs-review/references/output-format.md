@@ -564,7 +564,9 @@ unverifiables it explains as **one** ❓: a row whose Where cell is `—` and
 whose Finding cell opens with the claim count (`50 claims about Pulumi's own
 behavior, unchecked because the review can't read …`), plus a Do-this block
 the composer has already written in full (Why, one Fix, and a collapsed
-per-file claim list). Leave that row and its block as composed. Don't split
+per-file claim list). Leave that row and its block as composed. The block is
+composer-owned: `normalize-v3-draft.py` puts the composed text back before
+validation, so an edit there is discarded. Don't split
 the group, don't add a `**Line (verbatim):**` bullet (there is no single
 line), and don't re-file its claims as rows of their own. If you verify one of
 its claims yourself, or find one wrong, say so in a new `F?` row that names

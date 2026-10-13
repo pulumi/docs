@@ -522,6 +522,35 @@ def impl_ref_repo(ref: str) -> str:
     return m.group(1) if m else ""
 
 
+# Repos the PR cites that this review's token can't read, set once in main()
+# from probe_unreadable_refs before any verifier runs and only read after that,
+# so the verifier threads share it safely. On pulumi/docs#22200, 98 of 236
+# claims tried to read pulumi/pulumi-service#49283 anyway, at 4.3 Opus turns
+# apiece against 3.5 for the other pass1 claims, and spent 60% of the run's
+# uncached input tokens: build_user_message now says up front that the ref is
+# unreadable, and exec_gh_query refuses a query against it without running gh.
+_UNREADABLE_REPOS: frozenset[str] = frozenset()
+_REPO_MENTION_RE = re.compile(r"(?:^|[\s:/=])(pulumi/[\w.-]+)", re.IGNORECASE)
+
+
+def set_unreadable_repos(refs: list[str]) -> None:
+    global _UNREADABLE_REPOS
+    _UNREADABLE_REPOS = frozenset(r.lower() for r in (impl_ref_repo(x) for x in refs) if r)
+
+
+def _unreadable_repo_in(args: list[str]) -> str:
+    """The unreadable repo a gh_query targets (`-R pulumi/x`, `repos/pulumi/x/…`,
+    `repo:pulumi/x`, a github.com URL), or ""."""
+    if not _UNREADABLE_REPOS:
+        return ""
+    for a in args:
+        for m in _REPO_MENTION_RE.finditer(a):
+            repo = m.group(1).lower().removesuffix(".git")
+            if repo in _UNREADABLE_REPOS:
+                return repo
+    return ""
+
+
 def probe_unreadable_refs(refs: list[str], run=subprocess.run) -> list[str]:
     """The refs whose repository this review's token cannot read.
 
@@ -540,8 +569,11 @@ def probe_unreadable_refs(refs: list[str], run=subprocess.run) -> list[str]:
             try:
                 proc = run(["gh", "api", f"repos/{repo}", "--silent"],
                            capture_output=True, text=True, timeout=GH_TIMEOUT)
-                verdict_by_repo[repo] = (proc.returncode != 0
-                                         and "HTTP 404" in (proc.stderr or ""))
+                # gh prints "gh: Not Found (HTTP 404)" on stderr today; read
+                # both streams so a gh release that moves it doesn't quietly
+                # turn the whole carve-out off.
+                verdict_by_repo[repo] = (proc.returncode != 0 and "HTTP 404" in
+                                         f"{proc.stderr or ''}\n{proc.stdout or ''}")
             except (subprocess.TimeoutExpired, OSError):
                 verdict_by_repo[repo] = False
         if verdict_by_repo[repo]:
@@ -683,6 +715,13 @@ def exec_gh_query(inp: dict) -> str:
     for a in args:
         if _SHELL_META_RE.search(a):
             return f"error: argument {a!r} contains shell metacharacters; pass plain arguments, not a shell string"
+    unreadable = _unreadable_repo_in(args)
+    if unreadable:
+        return (f"error: {unreadable} is not readable with this review's credentials (GitHub "
+                "returned 404 when the review checked it before verification started), so this "
+                "query was not run. Don't query that repository again. Settle the claim from "
+                "sources you can read, or return `unverifiable` and name the unreadable change "
+                "in `evidence`.")
     try:
         proc = subprocess.run(["gh", *args], capture_output=True, text=True, timeout=GH_TIMEOUT)
     except subprocess.TimeoutExpired:
@@ -837,16 +876,27 @@ def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
             str(claim["context"]),
             "```",
         ]
-    if impl_refs and route in ("pass1", "pass3"):
+    readable = [r for r in impl_refs or [] if impl_ref_repo(r).lower() not in _UNREADABLE_REPOS]
+    unreadable = [r for r in impl_refs or [] if r not in readable]
+    if readable and route in ("pass1", "pass3"):
         lines += [
             "",
             "This docs PR cites product source in its description — implementing changes "
             "(read with `gh pr diff <n> -R pulumi/<repo>` or `gh api repos/pulumi/<repo>/commits/<sha>`) "
             "and/or source files. Check the one that covers this claim first; skip any that don't:",
         ]
-        for r in impl_refs:
+        for r in readable:
             hint = impl_ref_read_hint(r) if route == "pass1" else ""
             lines.append(f"- {r}" + (f" — read with {hint}" if hint else ""))
+    if unreadable and route in ("pass1", "pass3"):
+        lines += [
+            "",
+            "This docs PR also cites " + ", ".join(unreadable) + ", which this review can't read: "
+            "its repository returned 404 to the review's credentials before verification started, "
+            "and `gh_query` refuses queries against it. Don't try to read it. Settle the claim from "
+            "sources you can read; if only that change could settle it, return `unverifiable` now "
+            "and name the unreadable change in `evidence`.",
+        ]
     if route == "pass2" and evidence_pack:
         body = (evidence_pack.get("content_text") or "")[:PASS2_BODY_CAP] or "(empty body)"
         lines += [
@@ -1703,6 +1753,7 @@ def main() -> int:
         if impl_refs:
             print(f"verify-claims: linked impl refs from PR body: {', '.join(impl_refs)}", file=sys.stderr)
             impl_refs_unreadable = probe_unreadable_refs(impl_refs)
+            set_unreadable_repos(impl_refs_unreadable)
             if impl_refs_unreadable:
                 print("verify-claims: not readable with this token: "
                       f"{', '.join(impl_refs_unreadable)}", file=sys.stderr)
