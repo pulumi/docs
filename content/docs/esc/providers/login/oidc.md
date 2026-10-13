@@ -110,6 +110,10 @@ values:
 
 `fn::open::oidc` signs its tokens with a separate issuer, `https://api.pulumi.com/oidc/v2`. The subject has the form `pulumi:org:<org-id>:env:<environment-id>` and uses the IDs of the organization and the declaring environment. For the full claim list and the steps to trust the token, see [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
 
+{{< notes type="warning" >}}
+Pin the subject in every trust policy. Every Pulumi organization shares the `https://api.pulumi.com/oidc/v2` issuer, and any organization can mint a token for any audience, so a policy that checks only the issuer and the audience accepts tokens from other organizations. Copy the subject from the **OIDC subject** block above the environment editor.
+{{< /notes >}}
+
 To see the claims before you mint a token, use [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) with the same inputs.
 
 Each token that `fn::open::oidc` mints adds an entry to your organization's [audit log](/docs/administration/guides/audit-logs/). The entry records the subject, audience, environment, and lifetime of the token. Its event name is `environment-oidc-token-issued`.
