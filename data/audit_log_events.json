@@ -1315,7 +1315,7 @@
       "authenticationFailure": false,
       "category": "organization",
       "deprecated": false,
-      "description": "A Pulumi site admin ended the organization's retrial.",
+      "description": "The organization's retrial ended, because it expired or Pulumi ended it.",
       "displayName": "Retrial Ended",
       "event": "retrial-ended",
       "requiresOrgAdmin": true,
