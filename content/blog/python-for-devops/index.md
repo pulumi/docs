@@ -34,7 +34,7 @@ That's where Python really shines. It lets you be the scrappy problem-solver who
 
 This guide covers both ends of that spectrum. I'll show you python packages for "we need it yesterday" moments, and then move into solutions that can grow with your team. And along the way I'll build [a little example service monitor and package capturer](https://github.com/adamgordonbell/service-status-monitor) to demonstrate the python packages I'm covering. I'll wrap it in a CLI, in a web dashboard and deploy it to AWS, all while staying in Python.
 
-So here's my list of Python libraries for DevOps work, starting from #15 to the most important last at number #1. If you want the conceptual overview first, read [what Python for DevOps means](/what-is/python-for-devops/).
+Here's my list of Python libraries for DevOps work, starting from #15 to the most important last at number #1. If you want the conceptual overview first, read [what Python for DevOps means](/what-is/python-for-devops/).
 
 **Updated October 2026.** I re-checked every tool on this list against its latest release. Schedule (no release since May 2024) gave way to APScheduler, the unmaintained `toml` package gave way to the standard library's `tomllib`, the Dagger example uses the current API, and the Airflow entry covers Airflow 3. I also added uv, Ruff, and a short section on exposing your tools to AI agents with MCP. Click, Requests, pytest, Typer, and Dagger now require Python 3.10 or newer, and 3.10 itself reached end of life this month, so target 3.12 or later for new work.
 
@@ -43,7 +43,7 @@ So here's my list of Python libraries for DevOps work, starting from #15 to the 
 Let's start with building web dashboards. Long-term, it's usually better if there's an off-the-shelf tool for that specific dashboard you need. But if you can create a quick visual on a Django endpoint, you can move on to the next issue.
 
 - **15 and 14. Django and Flask:** ([Django](https://www.djangoproject.com/), [Flask](https://flask.palletsprojects.com/)) While tools like Grafana excel at metrics visualization, sometimes you need custom dashboards that integrate with internal systems. These frameworks let you build dashboards to track and visualize various aspects of your systems. I find Django a great fit here, and its 5.2 long-term support release is a stable base for an internal tool (Django 6.x is current). Flask 3.1 is the lighter choice for a single-endpoint dashboard like the one below.
-- **13\. Prometheus:** ([prometheus-client](https://github.com/prometheus/client_python)) This library is a versatile tool for metrics. Want to expose custom metrics to Prometheus? Use the client to create counters, gauges, or histograms. Need to pull data from a weird API and expose it as metrics? Write a quick exporter that fetches from your API every few minutes and translates the responses into Prometheus metrics. It is actively maintained (0.26 as of this writing).
+- **13\. Prometheus:** ([prometheus-client](https://github.com/prometheus/client_python)) This library is a versatile tool for metrics. Want to expose custom metrics to Prometheus? Use the client to create counters, gauges, or histograms. Need to pull data from a weird API and expose it as metrics? Write a quick exporter that fetches from your API every few minutes and translates the responses into Prometheus metrics. Releases are frequent (0.26 as of this writing).
 
 ```python
 from flask import Flask, render_template_string
@@ -121,7 +121,7 @@ if __name__ == "__main__":
 
 When your network issues go beyond what tcpdump can tell you, or when you need to automate security checks, Python is here to help:
 
-- **9\. Scapy:** ([scapy](https://scapy.net/)) The Python alternative to Wireshark for programmatic network traffic analysis. Need to figure out why your microservices aren't talking to each other? Want to check your load balancer? Use it to capture and analyze packets with a few lines of code. Scapy 2.8 is current; HTTP parsing is an optional layer you load explicitly, as in the sample below.
+- **9\. Scapy:** ([scapy](https://scapy.net/)) A Python library for crafting, capturing, and analyzing packets programmatically. Need to figure out why your microservices aren't talking to each other? Want to check your load balancer? Use it to capture and analyze packets with a few lines of code. Scapy 2.8 is current; HTTP parsing is an optional layer you load explicitly, as in the sample below.
 - **8\. Bandit:** ([bandit](https://github.com/PyCQA/bandit)) Security scanning for your CI pipeline. Point it at your Python codebase and it'll flag common issues like hardcoded credentials or unsafe deserialization. Bandit is still actively maintained, and [Ruff](https://docs.astral.sh/ruff/) can also run a subset of the same checks as its `S` rules.
 
 ```python
@@ -152,7 +152,7 @@ if __name__ == "__main__":
 
 Sometimes you need more control over your containers than Dockerfiles can provide. Maybe you need to dynamically build images based on environment variables, or automate container management:
 
-- **7\. Docker SDK for Python:** ([docker-py](https://docker-py.readthedocs.io/)) When you need to automate Docker operations programmatically. I use it to clean up old containers and images, check container health, and build images dynamically from configuration files. More powerful than chaining Docker CLI commands. Version 7.2, the first release in over two years, makes `docker.from_env()` honor your active Docker CLI context and adds `docker.from_context()`, which helps with remote hosts and Docker Desktop alternatives.
+- **7\. Docker SDK for Python:** ([docker-py](https://docker-py.readthedocs.io/)) When you need to automate Docker operations programmatically. I use it to clean up old containers and images, check container health, and build images dynamically from configuration files. More powerful than chaining Docker CLI commands. [Version 7.2](https://github.com/docker/docker-py/releases/tag/7.2.0), the first release in over two years, makes `docker.from_env()` honor your active Docker CLI context and adds `docker.from_context()`, which helps with remote hosts and Docker Desktop alternatives.
 - **6\. Dagger:** ([dagger-io](https://dagger.io/)) Write container build logic in Python instead of Dockerfiles. Need to build multiple similar containers with slight variations? Want to pull in files from different sources based on environment? It lets you programmatically define container contents and build steps. (Bonus: this same code can later be used in CI/CD pipelines.) The SDK now uses `dag` and `dagger.connection()`; the older `dagger.Connection()` client pattern is now considered legacy.
 
 ```python
@@ -177,7 +177,7 @@ if __name__ == "__main__":
 
 <span style="text-align:center">
     <figcaption>
-    <i>Using Dagger makes it easy to stay in Python while building containers.</i>
+    <i>Dagger lets you stay in Python while building containers.</i>
     </figcaption>
 </span>
 
@@ -309,7 +309,7 @@ Define AWS Lambda, ECR, and the rest of your infrastructure with real Python ins
 
 ## Bonus: exposing your tools to AI agents
 
-AI coding agents are now part of many DevOps workflows, and the Model Context Protocol (MCP) is the common way to give them tools. The official [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) and [FastMCP](https://gofastmcp.com/) let you wrap a function you already wrote, like our status check, so an agent can call it:
+AI coding agents are now part of many DevOps workflows, and the Model Context Protocol (MCP) is a widely used way to give them tools. The official [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) and [FastMCP](https://gofastmcp.com/) let you wrap a function you already wrote, like our status check, so an agent can call it:
 
 ```python
 import requests
