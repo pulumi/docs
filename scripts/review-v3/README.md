@@ -71,6 +71,47 @@ mismatches → `reviewer-check`. The model may promote
 (reviewer-check → author-answer → outstanding) with a stated reason, never
 demote.
 
+### Group questions (the new-feature carve-out)
+
+A PR that documents a feature alongside its implementing change cites that
+change in its body, and the verifier reads it. When the review's token can't
+read that repository, every claim about the new behavior comes back
+`unverifiable` for the same reason, and each used to become its own ❓ row and
+Do-this block (pulumi/docs#22200: 85 of them, an 80 KB author card). Now:
+
+- `verify-claims.py` probes each cited implementing ref's repository once and
+  records the ones that 404 in `meta.impl_refs_unreadable`. Only a 404 counts.
+- `compose-review.split_private_source_unverifiable` takes every `ordinary`
+  unverifiable (not turn-cap, source-discipline, or outage) whose final route
+  is pass1 (Pulumi's own product) and, when there are at least
+  `GROUP_MIN_MEMBERS` (3), asks about them as one ❓: one `F<n>`, a Where cell
+  of `—`, and a Do-this block the composer writes in full (Why, one Fix, and a
+  collapsed per-file claim list). pass2/pass3 unverifiables keep their own
+  rows, since a cited page or a public source can answer them.
+- The finding's evidence record carries `members` (`{file, lines?, claim}` per
+  claim). `build-evidence.refresh_facts_line` counts a group as its members, so
+  the brief's **Facts** bullet doesn't call them settled. The author answers
+  the group with one reply, and REVIEW_STATE holds one disposition for it.
+
+## The card size budget
+
+`pinned-comment.sh` refuses a card over 60,000 bytes and never splits a v3
+card. `build-evidence.fit_author_card` measures the finished card in both
+lanes (`build()` for the initial publish, `apply-update.py main()` for a
+refresh) and, while it is over `CARD_BUDGET` (58,000, which leaves headroom for
+the `%%EVIDENCE_URL%%` substitution), sheds in this order: ❓ row links, ✅
+Resolved row links, ❓ Do-this blocks (never a group's), 🚨 row links, a group's
+claim list (it becomes a pointer line), 🚨 Do-this blocks. Rows always stay.
+A shed block leaves an italic note under its table. `fit_brief_card` does the
+same for the brief's ⚠️ links.
+
+Nothing is lost. `build()` mirrors every block into the evidence `detail`
+before fitting, and the evidence page renders each finding's text, detail, and
+members. When a refresh finds a fitted card (`was_fitted`),
+`restore_shed_blocks` rebuilds the missing blocks from that evidence, and the
+fit sheds again only what still doesn't fit. A card that shrinks gets its
+blocks back.
+
 ## The REVIEW_STATE block (disposition source of truth)
 
 Lives as an HTML comment in the bot-owned author comment:

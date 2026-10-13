@@ -101,8 +101,18 @@ Output schema:
       "errors": [ "<per-claim failures>" ],
       "meta": {"n_claims": N, "n_pass0": Z, "n_pass1": A, "n_pass2": B, "n_pass3": C,
                "input_tokens": T, "output_tokens": T,
-               "cache_read_input_tokens": T, "cache_creation_input_tokens": T}
+               "cache_read_input_tokens": T, "cache_creation_input_tokens": T,
+               "impl_refs": ["pulumi/<repo>#<n>", ...],            # optional; the PR body's cited refs
+               "impl_refs_unreadable": ["pulumi/<repo>#<n>", ...]} # optional; the subset whose repo
+                                                                   # this review's token got a 404 on
     }
+
+`impl_refs_unreadable` is what lets the composer tell "a new feature whose
+source is private" apart from an ordinary unverifiable: when a PR's own
+implementing change can't be read, every product-behavior claim it makes
+comes back `unverifiable` for the same reason, and compose-review.py asks the
+author about them once instead of once per claim. Only a definitive 404 counts
+as unreadable; a probe that times out or errors otherwise leaves the ref out.
 
 `n_pass0` claims are resolved with no API call; the review folds them into the
 rendered routed-metadata's `inline` counter (see `references/fact-check.md`
@@ -501,6 +511,42 @@ def parse_impl_refs(text: str) -> list[str]:
                 seen.add(m)
                 refs.append(m)
     return refs[:MAX_IMPL_REFS]
+
+
+_IMPL_REF_REPO_RE = re.compile(r"\b(?:github\.com/)?(pulumi/[\w.-]+?)(?:#\d+|/)", re.IGNORECASE)
+
+
+def impl_ref_repo(ref: str) -> str:
+    """`pulumi/<repo>` for a ref `parse_impl_refs` returns, or "" if none."""
+    m = _IMPL_REF_REPO_RE.search(ref)
+    return m.group(1) if m else ""
+
+
+def probe_unreadable_refs(refs: list[str], run=subprocess.run) -> list[str]:
+    """The refs whose repository this review's token cannot read.
+
+    One `gh api repos/<owner>/<repo>` per distinct repo. GitHub answers a
+    private repo the token can't see with a 404, which is the only result
+    counted: a timeout, a 5xx, or a rate limit says nothing about access, and
+    calling a public repo unreadable would hand the author a question the
+    review could have answered itself. Never raises."""
+    verdict_by_repo: dict[str, bool] = {}
+    unreadable: list[str] = []
+    for ref in refs:
+        repo = impl_ref_repo(ref)
+        if not repo:
+            continue
+        if repo not in verdict_by_repo:
+            try:
+                proc = run(["gh", "api", f"repos/{repo}", "--silent"],
+                           capture_output=True, text=True, timeout=GH_TIMEOUT)
+                verdict_by_repo[repo] = (proc.returncode != 0
+                                         and "HTTP 404" in (proc.stderr or ""))
+            except (subprocess.TimeoutExpired, OSError):
+                verdict_by_repo[repo] = False
+        if verdict_by_repo[repo]:
+            unreadable.append(ref)
+    return unreadable
 
 
 def impl_ref_read_hint(ref: str) -> str:
@@ -1651,10 +1697,15 @@ def main() -> int:
     # pass1/pass3 verifier can confirm a brand-new symbol against the change that
     # ships it. Best-effort and only when a lane that can use it has work.
     impl_refs: list[str] = []
+    impl_refs_unreadable: list[str] = []
     if not args.dry_run and (n_by_route["pass1"] or n_by_route["pass3"]):
         impl_refs = fetch_impl_refs(args.pr or "", args.repo or "")
         if impl_refs:
             print(f"verify-claims: linked impl refs from PR body: {', '.join(impl_refs)}", file=sys.stderr)
+            impl_refs_unreadable = probe_unreadable_refs(impl_refs)
+            if impl_refs_unreadable:
+                print("verify-claims: not readable with this token: "
+                      f"{', '.join(impl_refs_unreadable)}", file=sys.stderr)
 
     verdicts: list[dict] = list(pass0_verdicts)
     errors: list[str] = []
@@ -1686,6 +1737,9 @@ def main() -> int:
     meta["n_pass1"] = n_by_route["pass1"]
     meta["n_pass2"] = n_by_route["pass2"]
     meta["n_pass3"] = n_by_route["pass3"]
+    if impl_refs:
+        meta["impl_refs"] = impl_refs
+        meta["impl_refs_unreadable"] = impl_refs_unreadable
     for v in verdicts:
         mu = v.get("model_usage") or {}
         for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):

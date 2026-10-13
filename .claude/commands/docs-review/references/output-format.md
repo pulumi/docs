@@ -558,6 +558,23 @@ author's job — turn-cap unverifiables included); `framing-drift` and other
 low-confidence stubs → ⚠️ Check these (whether it is really an issue is the
 reviewer's judgment).
 
+**Group questions.** When the PR's implementing change sits in a repository
+the review can't read, the composer asks about the product-behavior
+unverifiables it explains as **one** ❓: a row whose Where cell is `—` and
+whose Finding cell opens with the claim count (`50 claims about Pulumi's own
+behavior, unchecked because the review can't read …`), plus a Do-this block
+the composer has already written in full (Why, one Fix, and a collapsed
+per-file claim list). Leave that row and its block as composed. Don't split
+the group, don't add a `**Line (verbatim):**` bullet (there is no single
+line), and don't re-file its claims as rows of their own. If you verify one of
+its claims yourself, or find one wrong, say so in a new `F?` row that names
+the file and line. The group stays as composed.
+
+**Card size.** The published author card has a byte budget (`build-evidence
+fit_author_card`). Over it, ❓ rows lose their links, then ❓ Do-this blocks
+move to the evidence page with a note under the table, and so on. This runs
+after you. Write every block in full regardless.
+
 ### Nits: the author card's non-blocking lane
 
 ⚠️ Check these is addressed to the **reviewer**, and approving it asserts only

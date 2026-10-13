@@ -712,14 +712,16 @@ def count_verifier_outages(verdicts: list[dict] | None) -> tuple[int, int]:
     carry the markers. Call BEFORE appending Hugo/frontmatter synthetic
     verdicts so preflight verdicts don't dilute the ratio."""
     n_total = len(verdicts or [])
-    n_outage = 0
-    for v in verdicts or []:
-        ev = str(v.get("evidence") or "")
-        if _VERIFIER_OUTAGE_EVIDENCE_MARKER in ev or ev == _FLOOR_DEGRADED_EVIDENCE:
-            n_outage += 1
-        elif v.get("verdict") == "unverifiable" and any(tok in ev for tok in _VERIFIER_OUTAGE_TOKENS):
-            n_outage += 1
+    n_outage = sum(1 for v in verdicts or [] if is_verifier_outage(v))
     return n_outage, n_total
+
+
+def is_verifier_outage(v: dict) -> bool:
+    """One verdict's half of count_verifier_outages."""
+    ev = str(v.get("evidence") or "")
+    if _VERIFIER_OUTAGE_EVIDENCE_MARKER in ev or ev == _FLOOR_DEGRADED_EVIDENCE:
+        return True
+    return v.get("verdict") == "unverifiable" and any(tok in ev for tok in _VERIFIER_OUTAGE_TOKENS)
 
 
 def render_verifier_outage_banner(n_outage: int, n_total: int) -> str:
@@ -1470,7 +1472,7 @@ def _stub_bullet(v: dict, todo: str) -> dict:
     # file/text/origin ride along for the v3 surface's evidence records; the
     # v2 renderers read only ref/bullet/verdict.
     origin = f"preflight:{v.get('type') or 'detector'}" if v.get("route") == "preflight" else f"verdict:{verdict}"
-    return {
+    stub = {
         "ref": ref,
         "bullet": bullet,
         "verdict": verdict,
@@ -1480,7 +1482,20 @@ def _stub_bullet(v: dict, todo: str) -> dict:
         "framing": redact(trunc(fn, 160)) if fn else "",
         "todo": todo,
         "lines_all": claim_lines(v.get("line_range") or ""),
+        "route": str(v.get("route") or ""),
     }
+    if verdict == "unverifiable":
+        # Why nobody could check it — split_private_source_unverifiable only
+        # groups the `ordinary` kind; the other three each carry their own ask.
+        if v.get("turn_cap_exhausted"):
+            stub["unverifiable_kind"] = "turn-cap"
+        elif v.get("source_discipline_gate"):
+            stub["unverifiable_kind"] = "source-gate"
+        elif is_verifier_outage(v):
+            stub["unverifiable_kind"] = "outage"
+        else:
+            stub["unverifiable_kind"] = "ordinary"
+    return stub
 
 
 def author_cell_bullet(stub: dict) -> str:
@@ -1669,7 +1684,9 @@ def _prepare(args: argparse.Namespace) -> dict:
     with compose_v3() so the two surfaces can never disagree about what the
     pre-steps found — only about how it renders.
     """
-    verdicts, vc_errors, _vc_meta = load_verified_claims(args.verified_claims)
+    verdicts, vc_errors, vc_meta = load_verified_claims(args.verified_claims)
+    impl_refs_unreadable = [r for r in (vc_meta.get("impl_refs_unreadable") or [])
+                            if isinstance(r, str) and r.strip()]
     candidate_claims = load_candidate_claims(args.candidate_claims)
     candidate_stances = load_candidate_stances(args.candidate_claims)
     vale_findings = load_vale_findings(args.vale_findings)
@@ -1827,6 +1844,7 @@ def _prepare(args: argparse.Namespace) -> dict:
         "trail_block": trail_block,
         "trail_nxyz": (_n, _x, _y, _z),
         "forced_levels": forced_levels,
+        "impl_refs_unreadable": impl_refs_unreadable,
     }
 
 
@@ -2105,6 +2123,120 @@ def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]
         else:
             reviewer_check.append(s)
     return author_answer, reviewer_check
+
+
+# ---- the new-feature carve-out ----------------------------------------------
+#
+# A PR that documents a feature alongside its implementing change usually cites
+# that change in its body ("Part of pulumi/pulumi-service#49283"), and the
+# verifier reads it to confirm the new behavior (verify-claims.py §Linked
+# implementing change). When that repository is private to this review's token,
+# every claim about the new behavior comes back `unverifiable` for the same
+# reason, and each one used to become its own ❓ row and Do-this block saying
+# the same thing. pulumi/docs#22200 composed 85 of them: an 80 KB author card
+# pinned-comment.sh refused on three runs in a row, and an author asked the
+# same question 85 times.
+#
+# So those claims are asked about once. Membership is deliberately narrow: an
+# `ordinary` unverifiable (a turn-cap, source-discipline, or outage one carries
+# a different ask) whose final route is pass1, the lane for claims about
+# Pulumi's own product (route_claim sends pulumi-internal claims there, and a
+# pass3 verifier escalates there when web search can't read product source).
+# A pass2 or pass3 unverifiable is about a cited page or a public source the
+# author can point to, so it keeps its own row.
+
+GROUP_MIN_MEMBERS = 3
+GROUP_MEMBER_TRUNC = 80
+GROUP_FILE = "(multiple files)"
+
+
+def split_private_source_unverifiable(stubs: list[dict], unreadable_refs: list[str]
+                                      ) -> tuple[list[dict], list[dict]]:
+    """(members, kept): the ❓ stubs the carve-out asks about as one group,
+    and the rest in their original order. No unreadable implementing change,
+    or fewer than GROUP_MIN_MEMBERS qualifying stubs, groups nothing — a
+    group of two is just a harder-to-read pair of rows."""
+    if not unreadable_refs:
+        return [], list(stubs)
+    members = [s for s in stubs
+               if s.get("unverifiable_kind") == "ordinary" and s.get("route") == "pass1"]
+    if len(members) < GROUP_MIN_MEMBERS:
+        return [], list(stubs)
+    grouped = {id(s) for s in members}
+    return members, [s for s in stubs if id(s) not in grouped]
+
+
+def _refs_phrase(refs: list[str]) -> str:
+    named = [f"`{r}`" for r in refs]
+    if len(named) <= 2:
+        return " and ".join(named)
+    return ", ".join(named[:-1]) + ", and " + named[-1]
+
+
+def group_member_records(members: list[dict]) -> list[dict]:
+    """The evidence object's `members` for a group finding: one
+    {file, lines?, claim} per grouped claim, in card order."""
+    out: list[dict] = []
+    for s in members:
+        rec = {"file": s.get("file") or "(unknown)", "claim": s.get("text") or "(empty)"}
+        lines = _lines_from_ref(s.get("ref") or "")
+        if lines:
+            rec["lines"] = lines
+        out.append(rec)
+    return out
+
+
+def render_group_cell(n_members: int, refs: list[str]) -> str:
+    """The group's Finding cell. Its Where cell is `—`: the members span files."""
+    return (f"{n_members} claims about Pulumi's own behavior, unchecked because the "
+            f"review can't read {_refs_phrase(refs)} — verdict: unverifiable")
+
+
+def render_group_detail_block(fid: str, members: list[dict], refs: list[str]) -> list[str]:
+    """The group's Do-this block, composed in full (no TODOs for the model).
+
+    Why and Fix are written once for the whole group, and the member claims
+    follow in a collapsed list grouped by file, so the card names every claim
+    without repeating a path per line. The list sits inside the block on
+    purpose: the update lane carries blocks by id when it re-renders a section,
+    and anything else between the table and the next block would be lost."""
+    noun = "change" if len(refs) == 1 else "changes"
+    out = [
+        f"#### {fid} · Do this",
+        "",
+        f"- **Why:** This PR cites {_refs_phrase(refs)} as its implementing {noun}, which this "
+        "review can't read, so these claims about Pulumi's own behavior had nothing public to be "
+        "checked against. Only you can vouch for them.",
+        f"- **Fix:** Check them against that {noun} or your own test runs, fix any line that "
+        f"turned out wrong, and answer for all of them in one reply: "
+        f"`@claude {fid}: <what you checked them against> #update-review`.",
+        "",
+        *render_group_member_list(members),
+    ]
+    return out
+
+
+GROUP_LIST_SUMMARY_SUFFIX = " claims, by file</summary>"
+
+
+def render_group_member_list(members: list[dict]) -> list[str]:
+    """The collapsed claim list at the end of a group's Do-this block.
+    build-evidence.fit_author_card may swap it for a one-line pointer when
+    the card runs long, and the update lane rebuilds it from the evidence
+    `members` when there is room again."""
+    out = ["<details>", f"<summary>The {len(members)}{GROUP_LIST_SUMMARY_SUFFIX}", ""]
+    by_file: dict[str, list[dict]] = {}
+    for m in members:
+        by_file.setdefault(m["file"], []).append(m)
+    for path, items in by_file.items():
+        out += [f"**`{path}`**", ""]
+        for m in items:
+            lines = m.get("lines") or []
+            where = (f"L{lines[0]}" + (f"-{lines[1]}" if len(lines) > 1 else "")) if lines else "—"
+            out.append(f"- {where} — *{quote(trunc(m['claim'], GROUP_MEMBER_TRUNC))}*")
+        out.append("")
+    out.append("</details>")
+    return out
 
 
 def v3_may_demote(finding: dict) -> bool:
@@ -2540,6 +2672,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     lowconf_kept, preexisting_stubs = split_untouched_unverifiable(
         prep["lowconf_stubs"], prep["changed_lines"])
     author_answer_stubs, reviewer_check_stubs = split_v3_buckets(lowconf_kept)
+    group_members, author_answer_stubs = split_private_source_unverifiable(
+        author_answer_stubs, prep["impl_refs_unreadable"])
 
     link_base = (f"https://github.com/{args.repo}/pull/{args.pr}/files"
                  if args.repo and args.pr else "")
@@ -2604,6 +2738,17 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
 
     question_lines: list[str] = []
     question_ids: list[str] = []
+    composed_blocks: dict[str, list[str]] = {}
+    if group_members:
+        member_records = group_member_records(group_members)
+        refs = prep["impl_refs_unreadable"]
+        cell = render_group_cell(len(member_records), refs)
+        fid, rec = _assign({"file": GROUP_FILE, "text": cell, "origin": "verdict:unverifiable"},
+                           "author-answer", cell)
+        rec["members"] = member_records
+        question_ids.append(fid)
+        composed_blocks[fid] = render_group_detail_block(fid, member_records, refs)
+        question_lines.append(render_finding_row(fid, body=cell))
     for s in author_answer_stubs:
         fid, _ = _assign(s, "author-answer", s["bullet"])
         question_ids.append(fid)
@@ -2748,7 +2893,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     ]
     author += _finding_table(question_lines, _V3_EMPTY_QUESTIONS)
     for fid in question_ids:
-        author += ["", *render_detail_scaffold(fid, framing_by_id.get(fid, ""))]
+        author += ["", *(composed_blocks.get(fid)
+                         or render_detail_scaffold(fid, framing_by_id.get(fid, "")))]
     author += [""]
     if edit_base and (outstanding_lines or question_lines):
         author += [V3_BROWSER_HINT, ""]
