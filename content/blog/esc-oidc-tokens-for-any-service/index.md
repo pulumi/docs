@@ -94,7 +94,7 @@ Pin the subject in every trust policy you write. Every Pulumi organization share
 
 Aembit identifies a workload by its OIDC token and then hands it the credentials its access policy allows. In your Aembit tenant, create a trust provider of type **OIDC ID Token** that discovers keys from `https://api.pulumi.com/oidc/v2`, with match rules for the issuer, the audience from the environment, and the environment's subject. Then create a client workload identified by **OIDC ID Token Subject** with the same subject, and an access policy that joins the two to the credential provider the workload needs.
 
-Open the environment and send the token to the Aembit Edge API at `https://<your-edge-url>/edge/v1/auth`, together with your Edge SDK client ID:
+Open the environment and send the token to the Aembit Edge API at `https://<tenant>.ec.<region>.aembit.io/edge/v1/auth`, together with your Edge SDK client ID:
 
 ```json
 {
