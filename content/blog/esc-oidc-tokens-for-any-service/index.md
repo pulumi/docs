@@ -35,7 +35,7 @@ A [Pulumi ESC](/docs/esc/) environment can now mint a short-lived OpenID Connect
 
 Services such as Aembit, Cloudsmith, and JFrog Artifactory take an OIDC token from an outside issuer and trade it for their own short-lived credentials. Until now, an ESC environment could sign in that way only to a fixed set of clouds. For everything else, it held a stored API key.
 
-With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC signs the token for an audience you choose when you open the environment. Any service that trusts the `https://api.pulumi.com/oidc/v2` issuer can exchange it. The token is short-lived, and ESC stores nothing.
+With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC signs the token for an audience you choose when you open the environment. A service that trusts that environment exchanges the token for its own credential. The token is short-lived, and ESC stores nothing.
 
 <!--more-->
 
@@ -43,7 +43,7 @@ With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC s
 
 A stored key for a registry or a secrets broker sits in ESC until someone rotates it. It works for anyone who reads it, from any machine, for as long as it exists. If it leaks, you must rotate the key which affects every consumer of the environment.
 
-An OIDC token works the other way around. ESC mints it at the moment you open the environment, signs it with a key only Pulumi holds, and stamps it with an expiry. The service checks the signature and the claims, then issues a credential with its own lifetime. You store nothing, so you rotate nothing.
+An OIDC token works the other way around. ESC mints it at the moment you open the environment, signs it with a key only Pulumi holds, and stamps it with an expiry. The service checks it against the trust policy you configured and issues a credential with its own lifetime. You store nothing, so you rotate nothing.
 
 ## How it works
 
@@ -84,7 +84,7 @@ To see the exact claims before you touch a trust policy, swap in [`debug-oidc-cl
 
 ## Pin the subject
 
-Every Pulumi organization shares the `/oidc/v2` issuer, and any organization can set any audience. A trust rule that checks only the issuer and the audience accepts tokens from every organization that typed the same audience string. Pin the subject, or the `https://pulumi.com/org_id` claim, in every trust policy you write. Pulumi Cloud shows the subject above the environment editor with a copy button, so you never assemble it by hand.
+Pin the subject in every trust policy you write. Every Pulumi organization shares the `/oidc/v2` issuer, and whoever mints the token picks the audience, so a policy that checks only those two accepts tokens from any organization that typed the same audience string. The service checks three things: the signature, through the issuer's published keys; the audience, which you chose; and the subject, which names your organization and environment by ID. Pulumi Cloud shows the subject above the environment editor with a copy button, so you never assemble it by hand.
 
 ## Example: Aembit
 
