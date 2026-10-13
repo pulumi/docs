@@ -2,6 +2,8 @@
 
 import * as aws from "@pulumi/aws";
 
+import { marketingWebRedirectCode } from "./cloudfront-functions/marketingWebRedirect";
+
 // CloudFront Function that rewrites docs request URIs to serve clean markdown,
 // either via Accept: text/markdown content negotiation or via a .md URL suffix.
 // Both paths target the per-page index.md artifact Hugo emits alongside index.html.
@@ -130,5 +132,19 @@ export function getApiCatalogContentTypeFunctionAssociation(): aws.types.input.c
     return {
         eventType: "viewer-response",
         functionArn: apiCatalogContentTypeFunction.arn,
+    };
+}
+
+const marketingWebRedirectFunction = new aws.cloudfront.Function("marketing-web-redirect", {
+    runtime: "cloudfront-js-2.0",
+    code: marketingWebRedirectCode,
+    comment: "Trailing-slash and legacy facet redirects for marketing-web paths that keep the query string.",
+});
+
+export function getMarketingWebRedirectFunctionAssociation():
+    aws.types.input.cloudfront.DistributionOrderedCacheBehaviorFunctionAssociation {
+    return {
+        eventType: "viewer-request",
+        functionArn: marketingWebRedirectFunction.arn,
     };
 }
