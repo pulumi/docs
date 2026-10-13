@@ -98,4 +98,4 @@ In conclusion, Starburst's adoption of Pulumi has transformed their infrastructu
 * Previously, Terraform multi-region blue/green deployments took 2 weeks. With Pulumi, these deployments now take only 3 hours, which is 112 times faster than before. This significant improvement is because the infrastructure pipeline orchestration can be fully automated, eliminating the need for manually executing glue scripts.
 * Testing environments are expected to be spun up 2 times faster by using Pulumi Deployments' TTL (Time-to-Live) stacks and Reviews stacks, allowing individual testing environments to be created for each developer.
 * Pulumi AI accelerated development by a factor of 10. Starburst rewrote their AWS provisioning code, a task that would have taken a couple of months, in just a week or two, thanks to the power of Pulumi AI.
-* Pulumi Cloud pays for itself through the savings achieved by identifying and shutting down unused infrastructure using Pulumi Insights and the Cloud dashboard.
+* Pulumi Cloud pays for itself through the savings achieved by identifying and shutting down unused infrastructure using Pulumi Discovery and the Cloud dashboard.
