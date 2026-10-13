@@ -44,7 +44,9 @@ To copy the subject for an environment, use one of these methods:
 
 Copy the subject from the environment that declares the `fn::open::oidc` block. An environment that only imports the block also shows a subject, but no token carries it.
 
-The subject uses IDs, not names, so it does not change when you rename the organization or the environment. Because of that, a wildcard such as `pulumi:org:<org-name>:*` does not match anything. To trust every environment in an organization, match the subject prefix `pulumi:org:<org-id>:env:` where the relying party supports prefix or wildcard matching. In AWS IAM, use a `StringLike` condition on `api.pulumi.com/oidc/v2:sub` with the value `pulumi:org:<org-id>:env:*`. In Vault, set `bound_claims_type=glob` and bind `sub` to the same pattern.
+The subject uses IDs, not names, so it does not change when you rename the organization or the environment, and a wildcard such as `pulumi:org:<org-name>:*` matches nothing.
+
+Pin the exact subject. To share one trust entry across environments, declare the block once and [import](/docs/esc/concepts/imports/) it; every importing environment presents the same subject, and Pulumi Cloud permissions decide who may open each one. A wildcard such as `pulumi:org:<org-id>:env:*` trusts every environment in the organization, including any that a member creates later, so it gives up that boundary. If you need it anyway, use it only where the relying party supports wildcard matching, such as a `StringLike` condition in AWS IAM or `bound_claims_type=glob` in Vault.
 
 ## Token claims
 
@@ -64,7 +66,7 @@ The subject uses IDs, not names, so it does not change when you rename the organ
 
 Base your trust rules on `iss`, `aud`, and `sub`. Names can change, but IDs do not. The `subjectAttributes` input of the vendor login providers does not apply to these tokens.
 
-Always pin the trust rule to `sub` or to `https://pulumi.com/org_id`. Every Pulumi organization shares this issuer, and any organization can mint a token for any audience. A rule that checks only `iss` and `aud` accepts tokens from every organization that uses the same audience. Some relying parties, AWS IAM among them, cannot read the `https://pulumi.com/` claims and match only `iss`, `aud`, and `sub`. Pin `sub` for those.
+Always pin the trust rule to `sub`. Every Pulumi organization shares this issuer, and any organization can mint a token for any audience, so a rule that checks only `iss` and `aud` accepts tokens from every organization that uses the same audience. Every relying party can match `sub`; some, AWS IAM among them, cannot read the `https://pulumi.com/` claims at all.
 
 ## Verify the claims before you mint a token
 
@@ -108,7 +110,7 @@ Cloudsmith exchanges an OIDC token for a short-lived Cloudsmith API token that b
 
     Cloudsmith requires no particular audience; `aud` only has to match the audience you set in Pulumi ESC.
 
-    Always include `sub`. Every Pulumi organization shares the issuer, and any organization can mint a token for any audience, so a provider that requires only `aud` accepts tokens from other organizations. To trust every environment in your organization, end the subject with `.*`, as in `pulumi:org:<org-id>:env:.*`, or require the `https://pulumi.com/org_id` claim instead. Cloudsmith reads `.*` as a prefix match and accepts it only at the end.
+    Always include `sub`. Every Pulumi organization shares the issuer, and any organization can mint a token for any audience, so a provider that requires only `aud` accepts tokens from other organizations. Cloudsmith reads a trailing `.*` as a prefix match, so `pulumi:org:<org-id>:env:.*` trusts every environment in the organization. Read [Find the subject](#find-the-subject) before you widen the rule.
 
 1. In Pulumi ESC, mint a token with the same audience and export it:
 
@@ -163,7 +165,7 @@ JFrog exchanges an OIDC token for a short-lived JFrog access token that acts as 
     - **Token Scope:** User, and the **User Name** that the token acts as.
     - **Expiration Time:** the lifetime of the JFrog access token. `duration` does not change it.
 
-    Always include `sub`. A mapping that matches only `aud` accepts tokens from other organizations that use the same audience. JFrog reads claim values as globs over the whole value. To trust every environment in your organization, use `pulumi:org:<org-id>:env:*`, or match the `https://pulumi.com/org_id` claim instead. A value without `*` must match exactly, and `*` alone trusts every Pulumi organization.
+    Always include `sub`. A mapping that matches only `aud` accepts tokens from other organizations that use the same audience. JFrog reads claim values as globs over the whole value. A value without `*` must match exactly, `pulumi:org:<org-id>:env:*` trusts every environment in the organization, and `*` alone trusts every Pulumi organization. Read [Find the subject](#find-the-subject) before you widen the rule.
 
 1. In Pulumi ESC, mint a token with the same audience and export it:
 
@@ -204,7 +206,7 @@ Aembit exchanges an OIDC token for an Edge API access token, then issues the cre
 
     Aembit requires no particular audience and checks `aud` only when the Audience rule exists. Always add the rule, and use the same string in Pulumi ESC.
 
-    Always add the Subject rule too. A trust provider without it accepts tokens from other organizations that use the same audience. Aembit matches the subject exactly and has no wildcard form. To trust every environment in your organization, replace the Subject rule with a custom claim rule that matches the `https://pulumi.com/org_id` claim to your organization ID.
+    Always add the Subject rule too. A trust provider without it accepts tokens from other organizations that use the same audience. Aembit matches the subject exactly and has no wildcard form. To share one trust provider across environments, import the block from the environment that declares it.
 
 1. Create a client workload identified by **OIDC ID Token Subject**, with the same subject. Do not identify it by audience or issuer: a trust provider without a Subject rule passes authentication for any Pulumi organization, and a workload identified that way then hands out its credentials.
 
@@ -278,7 +280,7 @@ Most other services accept OIDC tokens through a JSON Web Token (JWT) authentica
       token_ttl=15m
     ```
 
-    To trust every environment in the organization, bind the organization ID instead of the subject. Vault takes `bound_claims` only as JSON:
+    To trust every environment in the organization, bind a glob on the subject instead. Read [Find the subject](#find-the-subject) first; the exact subject is the recommended rule. Vault takes `bound_claims` only as JSON:
 
     ```bash
     vault write auth/pulumi-esc/role/my-org - <<'EOF'
@@ -286,7 +288,8 @@ Most other services accept OIDC tokens through a JSON Web Token (JWT) authentica
       "role_type": "jwt",
       "bound_audiences": ["<your-audience>"],
       "user_claim": "sub",
-      "bound_claims": {"https://pulumi.com/org_id": "<org-id>"},
+      "bound_claims_type": "glob",
+      "bound_claims": {"sub": "pulumi:org:<org-id>:env:*"},
       "token_policies": ["<policy>"]
     }
     EOF
