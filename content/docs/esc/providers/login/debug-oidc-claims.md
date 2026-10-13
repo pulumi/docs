@@ -62,8 +62,8 @@ With `identityToken.version` set to `v2`, the provider takes the same inputs as 
 | Property | Type | Required | Description |
 |---|---|---|---|
 | `audience` | string | Yes | The `aud` claim to preview. One value, 1 to 512 bytes. |
-| `identityToken` | object | Yes | Selects the token to preview. |
-| `identityToken.version` | string | Yes | The token format. Set `v2`. |
+| `identityToken` | object | Yes | Selects the claims to preview. |
+| `identityToken.version` | string | Yes | `v2` previews the `fn::open::oidc` claims. `v1` previews the [vendor login claims](#preview-the-vendor-login-claims). |
 | `duration` | string | No | Accepted so that the block moves to `fn::open::oidc` unchanged, from `1m` to `1h`. The preview has no lifetime. |
 
 ### Outputs
@@ -72,13 +72,15 @@ An object keyed by claim name, holding the claims a token would carry. Nothing i
 
 ## Preview the vendor login claims
 
-Without `identityToken`, the provider previews the claims that the vendor login providers, such as [`aws-login`](/docs/esc/providers/login/aws-login/), send from the `https://api.pulumi.com/oidc` issuer. [Default token claim](/docs/esc/guides/configuring-oidc/#default-token-claim) describes those claims. In this form, set `audiencePrefix` (required) and optionally `subjectAttributes`. The provider refuses `audience` and `duration` here.
+With `identityToken.version` set to `v1`, the provider previews the claims that the vendor login providers, such as [`aws-login`](/docs/esc/providers/login/aws-login/), send from the `https://api.pulumi.com/oidc` issuer. [Default token claim](/docs/esc/guides/configuring-oidc/#default-token-claim) describes those claims. In this form, set `audiencePrefix` (required) and optionally `subjectAttributes`. The provider refuses `audience` and `duration` here.
 
 ```yaml
 values:
   preview:
     fn::open::debug-oidc-claims:
       audiencePrefix: aws
+      identityToken:
+        version: v1
 ```
 
 This preview omits `iss`, `iat`, and `exp`. The signed vendor tokens carry them.
@@ -89,11 +91,19 @@ With `identityToken.version` set to `v2`, the provider refuses the same inputs a
 
 ### Inputs from the wrong form
 
-**Symptom:** opening fails with `fn::open::debug-oidc-claims accepts audience only with identityToken.version: v2; the legacy v1 preview takes audiencePrefix`, the same message for `duration`, or `audiencePrefix is required for the legacy v1 preview; set identityToken.version: v2 for the v2 preview`.
+**Symptom:** opening fails with `fn::open::debug-oidc-claims accepts audience only with identityToken.version: v2; identityToken.version: v1 takes audiencePrefix`, the same message for `duration`, or `audiencePrefix is required with identityToken.version: v1; set identityToken.version: v2 for the fn::open::oidc claims`.
 
-**Cause:** `identityToken` selects the form. With it, the provider takes the `fn::open::oidc` inputs. Without it, the provider takes `audiencePrefix` and `subjectAttributes`.
+**Cause:** `identityToken.version` selects the form. With `v2`, the provider takes the `fn::open::oidc` inputs. With `v1`, the provider takes `audiencePrefix` and `subjectAttributes`.
 
-**Fix:** to preview a `fn::open::oidc` token, add `identityToken.version: v2` and remove `audiencePrefix`. To preview the vendor login claims, remove `audience` and `duration` and set `audiencePrefix`.
+**Fix:** to preview a `fn::open::oidc` token, set `identityToken.version: v2` and remove `audiencePrefix`. To preview the vendor login claims, set `identityToken.version: v1`, remove `audience` and `duration`, and set `audiencePrefix`.
+
+### Version not set
+
+**Symptom:** opening fails with `fn::open::debug-oidc-claims requires identityToken.version: v1 for the vendor login claims or v2 for the fn::open::oidc claims`.
+
+**Cause:** the block has no `identityToken.version`. The provider never guesses which claims to preview.
+
+**Fix:** add `identityToken.version: v2` to preview a `fn::open::oidc` token, or `identityToken.version: v1` to preview the vendor login claims.
 
 ### Environment not saved
 
