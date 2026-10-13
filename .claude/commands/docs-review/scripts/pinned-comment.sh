@@ -33,6 +33,8 @@
 set -euo pipefail
 
 MARKER_RE='^<!-- CLAUDE_REVIEW ([0-9]+)/([0-9]+) -->'
+# build-evidence.py CARD_MAX_BYTES mirrors this; its fit_author_card keeps v3
+# cards under it, so the check below is the backstop, not the plan.
 DEFAULT_MAX_BYTES=60000
 
 # The review footer (refresh instructions + the don't-hide-me warning) lives in
@@ -472,7 +474,7 @@ cmd_upsert_role() {
     local bytes
     bytes=$(wc -c <"$body_file")
     (( bytes <= MAX_BYTES )) \
-        || die "$ROLE card is $bytes bytes, over the $MAX_BYTES budget — v3 cards never split; move bulk to the evidence page"
+        || die "$ROLE card is $bytes bytes, over the $MAX_BYTES budget — v3 cards never split, and build-evidence.fit_author_card should have shed enough to fit (see its warning in the build step)"
 
     local row id node_id
     row=$(find_role_comment "$repo" "$pr" "$ROLE")
