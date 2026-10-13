@@ -20,7 +20,7 @@ social:
 
         Set the audience, pin the subject in the service's trust policy, and delete the stored API key.
     linkedin: |
-        Most services that matter to a deploy pipeline accept OpenID Connect tokens from an outside issuer: package registries, secrets brokers, workload identity platforms. Until now, a Pulumi ESC environment could only sign in that way to a fixed set of clouds. For everything else it held a stored API key.
+        Most services that matter to a deploy pipeline accept OpenID Connect tokens from an outside issuer: package registries, secrets brokers, workload identity platforms. Until now, a Pulumi ESC environment could only sign in that way to a fixed set of providers. For everything else it held a stored API key.
 
         The new fn::open::oidc provider removes that key. When you open the environment, ESC signs an OIDC token for an audience you choose, from ESC's general OIDC issuer. The service checks the signature, the audience, and a stable subject that names your organization and environment by ID, then issues its own short-lived credential. The token lives for an hour at most, and nothing is stored.
 
@@ -33,7 +33,7 @@ social:
 
 A [Pulumi ESC](/docs/esc/) environment can now mint a short-lived OpenID Connect (OIDC) token for any service that accepts one.
 
-Services such as Aembit, Cloudsmith, and JFrog Artifactory take an OIDC token from an outside issuer and trade it for their own short-lived credentials. Until now, an ESC environment could sign in that way only to a fixed set of clouds. For everything else, it held a stored API key.
+Services such as Aembit, Cloudsmith, and JFrog Artifactory take an OIDC token from an outside issuer and trade it for their own short-lived credentials. Until now, an ESC environment could sign in that way only to a fixed set of providers. For everything else, it held a stored API key.
 
 With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC signs the token for an audience you choose when you open the environment. A service that trusts that environment exchanges the token for its own credential. The token is short-lived, and ESC stores nothing.
 
