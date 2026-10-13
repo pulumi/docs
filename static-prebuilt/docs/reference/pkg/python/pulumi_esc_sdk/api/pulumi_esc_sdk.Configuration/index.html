@@ -1,0 +1,595 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pulumi_esc_sdk.Configuration — Pulumi ESC SDK Python API reference</title>
+
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/python/pulumi_esc_sdk/api/pulumi_esc_sdk.Configuration/" />
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=0d8f6313"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="pulumi_esc_sdk.CreateEnvironment" href="../pulumi_esc_sdk.CreateEnvironment/" />
+    <link rel="prev" title="pulumi_esc_sdk.CloneEnvironment" href="../pulumi_esc_sdk.CloneEnvironment/" />
+   
+  
+  <meta name="description" content="This class contains various settings of the API client. Base url. Access token. Index to servers configuration. Mapping with string values to replace…" />
+  
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "APIReference",
+  "headline": "pulumi_esc_sdk.Configuration \u2014 Pulumi ESC SDK Python API reference",
+  "description": "This class contains various settings of the API client. Base url. Access token. Index to servers configuration. Mapping with string values to replace\u2026",
+  "url": "https://www.pulumi.com/docs/reference/pkg/python/pulumi_esc_sdk/api/pulumi_esc_sdk.Configuration.html",
+  "programmingLanguage": "Python",
+  "executableLibraryName": "pulumi_esc_sdk",
+  "assemblyVersion": "0.14.0",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "name": "pulumi_esc_sdk",
+    "programmingLanguage": "Python"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pulumi Docs",
+    "url": "https://www.pulumi.com/docs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://www.pulumi.com/"
+  }
+}
+  </script>
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Pulumi ESC SDK
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Access/">pulumi_esc_sdk.Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Accessor/">pulumi_esc_sdk.Accessor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.ApiAttributeError/">pulumi_esc_sdk.ApiAttributeError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.ApiClient/">pulumi_esc_sdk.ApiClient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.ApiException/">pulumi_esc_sdk.ApiException</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.ApiKeyError/">pulumi_esc_sdk.ApiKeyError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.ApiResponse/">pulumi_esc_sdk.ApiResponse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.ApiTypeError/">pulumi_esc_sdk.ApiTypeError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.ApiValueError/">pulumi_esc_sdk.ApiValueError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.CheckEnvironment/">pulumi_esc_sdk.CheckEnvironment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.CloneEnvironment/">pulumi_esc_sdk.CloneEnvironment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pulumi_esc_sdk.Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pulumi_esc_sdk.Configuration"><code class="docutils literal notranslate"><span class="pre">Configuration</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.assert_hostname"><code class="docutils literal notranslate"><span class="pre">Configuration.assert_hostname</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.auth_settings"><code class="docutils literal notranslate"><span class="pre">Configuration.auth_settings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.cert_file"><code class="docutils literal notranslate"><span class="pre">Configuration.cert_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.connection_pool_maxsize"><code class="docutils literal notranslate"><span class="pre">Configuration.connection_pool_maxsize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.date_format"><code class="docutils literal notranslate"><span class="pre">Configuration.date_format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.datetime_format"><code class="docutils literal notranslate"><span class="pre">Configuration.datetime_format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.debug"><code class="docutils literal notranslate"><span class="pre">Configuration.debug</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_api_key_with_prefix"><code class="docutils literal notranslate"><span class="pre">Configuration.get_api_key_with_prefix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_basic_auth_token"><code class="docutils literal notranslate"><span class="pre">Configuration.get_basic_auth_token()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_default"><code class="docutils literal notranslate"><span class="pre">Configuration.get_default()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_default_copy"><code class="docutils literal notranslate"><span class="pre">Configuration.get_default_copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_host_from_settings"><code class="docutils literal notranslate"><span class="pre">Configuration.get_host_from_settings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_host_settings"><code class="docutils literal notranslate"><span class="pre">Configuration.get_host_settings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_proxy_for_url"><code class="docutils literal notranslate"><span class="pre">Configuration.get_proxy_for_url()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.host"><code class="docutils literal notranslate"><span class="pre">Configuration.host</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.key_file"><code class="docutils literal notranslate"><span class="pre">Configuration.key_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.logger"><code class="docutils literal notranslate"><span class="pre">Configuration.logger</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.logger_file"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.logger_file_handler"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_file_handler</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.logger_format"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.logger_stream_handler"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_stream_handler</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.no_proxy"><code class="docutils literal notranslate"><span class="pre">Configuration.no_proxy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.proxy"><code class="docutils literal notranslate"><span class="pre">Configuration.proxy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.proxy_headers"><code class="docutils literal notranslate"><span class="pre">Configuration.proxy_headers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.refresh_api_key_hook"><code class="docutils literal notranslate"><span class="pre">Configuration.refresh_api_key_hook</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.retries"><code class="docutils literal notranslate"><span class="pre">Configuration.retries</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.safe_chars_for_path_param"><code class="docutils literal notranslate"><span class="pre">Configuration.safe_chars_for_path_param</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.server_operation_index"><code class="docutils literal notranslate"><span class="pre">Configuration.server_operation_index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.server_operation_variables"><code class="docutils literal notranslate"><span class="pre">Configuration.server_operation_variables</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.set_default"><code class="docutils literal notranslate"><span class="pre">Configuration.set_default()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.socket_options"><code class="docutils literal notranslate"><span class="pre">Configuration.socket_options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.ssl_ca_cert"><code class="docutils literal notranslate"><span class="pre">Configuration.ssl_ca_cert</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.temp_folder_path"><code class="docutils literal notranslate"><span class="pre">Configuration.temp_folder_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.tls_server_name"><code class="docutils literal notranslate"><span class="pre">Configuration.tls_server_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.to_debug_report"><code class="docutils literal notranslate"><span class="pre">Configuration.to_debug_report()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.verify_ssl"><code class="docutils literal notranslate"><span class="pre">Configuration.verify_ssl</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.CreateEnvironment/">pulumi_esc_sdk.CreateEnvironment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.CreateEnvironmentRevisionTag/">pulumi_esc_sdk.CreateEnvironmentRevisionTag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.CreateEnvironmentTag/">pulumi_esc_sdk.CreateEnvironmentTag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Environment/">pulumi_esc_sdk.Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EnvironmentDefinition/">pulumi_esc_sdk.EnvironmentDefinition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EnvironmentDefinitionValues/">pulumi_esc_sdk.EnvironmentDefinitionValues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EnvironmentDiagnostic/">pulumi_esc_sdk.EnvironmentDiagnostic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EnvironmentDiagnostics/">pulumi_esc_sdk.EnvironmentDiagnostics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EnvironmentRevision/">pulumi_esc_sdk.EnvironmentRevision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EnvironmentRevisionTag/">pulumi_esc_sdk.EnvironmentRevisionTag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EnvironmentRevisionTags/">pulumi_esc_sdk.EnvironmentRevisionTags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EnvironmentTag/">pulumi_esc_sdk.EnvironmentTag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Error/">pulumi_esc_sdk.Error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EscApi/">pulumi_esc_sdk.EscApi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EscClient/">pulumi_esc_sdk.EscClient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.EvaluatedExecutionContext/">pulumi_esc_sdk.EvaluatedExecutionContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Expr/">pulumi_esc_sdk.Expr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.ExprBuiltin/">pulumi_esc_sdk.ExprBuiltin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Interpolation/">pulumi_esc_sdk.Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.ListEnvironmentTags/">pulumi_esc_sdk.ListEnvironmentTags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.OpenApiException/">pulumi_esc_sdk.OpenApiException</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.OpenEnvironment/">pulumi_esc_sdk.OpenEnvironment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.OrgEnvironment/">pulumi_esc_sdk.OrgEnvironment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.OrgEnvironments/">pulumi_esc_sdk.OrgEnvironments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Pos/">pulumi_esc_sdk.Pos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.PropertyAccessor/">pulumi_esc_sdk.PropertyAccessor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Range/">pulumi_esc_sdk.Range</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Reference/">pulumi_esc_sdk.Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Trace/">pulumi_esc_sdk.Trace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.UpdateEnvironmentRevisionTag/">pulumi_esc_sdk.UpdateEnvironmentRevisionTag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.UpdateEnvironmentTag/">pulumi_esc_sdk.UpdateEnvironmentTag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.UpdateEnvironmentTagCurrentTag/">pulumi_esc_sdk.UpdateEnvironmentTagCurrentTag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.UpdateEnvironmentTagNewTag/">pulumi_esc_sdk.UpdateEnvironmentTagNewTag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk.Value/">pulumi_esc_sdk.Value</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Pulumi ESC SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pulumi_esc_sdk.Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pulumi-esc-sdk-configuration">
+<h1>pulumi_esc_sdk.Configuration<a class="headerlink" href="#pulumi-esc-sdk-configuration" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi_esc_sdk.</span></span><span class="sig-name descname"><span class="pre">Configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_operation_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_operation_variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssl_ca_cert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_esc_sdk.Configuration" title="Permalink to this definition"></a></dt>
+<dd><p>This class contains various settings of the API client.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param host<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Base url.</p>
+</dd>
+<dt class="field-even">param access_token<span class="colon">:</span></dt>
+<dd class="field-even"><p>Access token.</p>
+</dd>
+<dt class="field-odd">param server_index<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Index to servers configuration.</p>
+</dd>
+<dt class="field-even">param server_variables<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mapping with string values to replace variables in
+templated server configuration. The validation of enums is performed for
+variables with defined enum values before.</p>
+</dd>
+<dt class="field-odd">param server_operation_index<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Mapping from operation ID to an index
+to server configuration.</p>
+</dd>
+<dt class="field-even">param server_operation_variables<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mapping from operation ID to a
+mapping with string values to replace variables in templated server
+configuration.
+The validation of enums is performed for variables with defined enum
+values before.</p>
+</dd>
+<dt class="field-odd">param ssl_ca_cert<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str - the path to a file of concatenated CA
+certificates in PEM format.</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<p>API Key Authentication Example.
+Given the following security scheme in the OpenAPI specification:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>components:</dt><dd><dl class="simple">
+<dt>securitySchemes:</dt><dd><dl class="simple">
+<dt>cookieAuth:         # name for the security scheme</dt><dd><p>type: apiKey
+in: cookie
+name: JSESSIONID  # cookie name</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>You can programmatically set the cookie:</p>
+</div></blockquote>
+<dl class="simple">
+<dt>conf = pulumi_esc_sdk.Configuration(</dt><dd><p>api_key={‘cookieAuth’: ‘abc123’}
+api_key_prefix={‘cookieAuth’: ‘JSESSIONID’}</p>
+</dd>
+</dl>
+<p>)</p>
+<blockquote>
+<div><dl class="simple">
+<dt>The following cookie will be added to the HTTP request:</dt><dd><p>Cookie: JSESSIONID abc123</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Constructor</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.assert_hostname">
+<span class="sig-name descname"><span class="pre">assert_hostname</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.assert_hostname" title="Permalink to this definition"></a></dt>
+<dd><p>Set this to True/False to enable/disable SSL hostname verification.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.auth_settings">
+<span class="sig-name descname"><span class="pre">auth_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.auth_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Gets Auth Settings dict for api client.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The Auth Settings information dict.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.cert_file">
+<span class="sig-name descname"><span class="pre">cert_file</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.cert_file" title="Permalink to this definition"></a></dt>
+<dd><p>client certificate file</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.connection_pool_maxsize">
+<span class="sig-name descname"><span class="pre">connection_pool_maxsize</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.connection_pool_maxsize" title="Permalink to this definition"></a></dt>
+<dd><p>urllib3 connection pool’s maximum number of connections saved
+per pool. urllib3 uses 1 connection as default value, but this is
+not the best value when you are making a lot of possibly parallel
+requests to the same host, which is often the case here.
+cpu_count * 5 is used as default value to increase performance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.date_format">
+<span class="sig-name descname"><span class="pre">date_format</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.date_format" title="Permalink to this definition"></a></dt>
+<dd><p>date format</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.datetime_format">
+<span class="sig-name descname"><span class="pre">datetime_format</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.datetime_format" title="Permalink to this definition"></a></dt>
+<dd><p>datetime format</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.debug">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.debug" title="Permalink to this definition"></a></dt>
+<dd><p>Debug switch</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.get_api_key_with_prefix">
+<span class="sig-name descname"><span class="pre">get_api_key_with_prefix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.get_api_key_with_prefix" title="Permalink to this definition"></a></dt>
+<dd><p>Gets API key (with prefix if set).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> – The identifier of apiKey.</p></li>
+<li><p><strong>alias</strong> – The alternative identifier of apiKey.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The token for api key authentication.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.get_basic_auth_token">
+<span class="sig-name descname"><span class="pre">get_basic_auth_token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.get_basic_auth_token" title="Permalink to this definition"></a></dt>
+<dd><p>Gets HTTP basic authentication header (string).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The token for basic HTTP authentication.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.get_default">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_default</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.get_default" title="Permalink to this definition"></a></dt>
+<dd><p>Return the default configuration.</p>
+<p>This method returns newly created, based on default constructor,
+object of Configuration class or returns a copy of default
+configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The configuration object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.get_default_copy">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_default_copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.get_default_copy" title="Permalink to this definition"></a></dt>
+<dd><p>Deprecated. Please use <cite>get_default</cite> instead.</p>
+<p>Deprecated. Please use <cite>get_default</cite> instead.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The configuration object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.get_host_from_settings">
+<span class="sig-name descname"><span class="pre">get_host_from_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">servers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.get_host_from_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Gets host URL based on the index and variables
+:param index: array index of the host settings
+:param variables: hash of variable and the corresponding value
+:param servers: an array of host settings or None
+:return: URL based on host settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.get_host_settings">
+<span class="sig-name descname"><span class="pre">get_host_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.get_host_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an array of host settings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An array of host settings</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.get_proxy_for_url">
+<span class="sig-name descname"><span class="pre">get_proxy_for_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.get_proxy_for_url" title="Permalink to this definition"></a></dt>
+<dd><p>Get the proxy URL to use for the given target URL.</p>
+<p>This method considers both the explicit proxy configuration and
+environment variables (HTTPS_PROXY, HTTP_PROXY, NO_PROXY).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> – The target URL.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The proxy URL to use, or None if no proxy should be used.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.host">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">host</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.host" title="Permalink to this definition"></a></dt>
+<dd><p>Return generated host.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.key_file">
+<span class="sig-name descname"><span class="pre">key_file</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.key_file" title="Permalink to this definition"></a></dt>
+<dd><p>client key file</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.logger" title="Permalink to this definition"></a></dt>
+<dd><p>Logging Settings</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.logger_file">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">logger_file</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.logger_file" title="Permalink to this definition"></a></dt>
+<dd><p>Debug file location</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.logger_file_handler">
+<span class="sig-name descname"><span class="pre">logger_file_handler</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">FileHandler</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi_esc_sdk.Configuration.logger_file_handler" title="Permalink to this definition"></a></dt>
+<dd><p>Log file handler</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.logger_format">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">logger_format</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.logger_format" title="Permalink to this definition"></a></dt>
+<dd><p>Log format</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.logger_stream_handler">
+<span class="sig-name descname"><span class="pre">logger_stream_handler</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.logger_stream_handler" title="Permalink to this definition"></a></dt>
+<dd><p>Log stream handler</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.no_proxy">
+<span class="sig-name descname"><span class="pre">no_proxy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi_esc_sdk.Configuration.no_proxy" title="Permalink to this definition"></a></dt>
+<dd><p>List of hosts that should bypass the proxy. If not set, will be
+read from NO_PROXY environment variable when making requests.
+Supports exact matches and suffix matches (e.g., ‘.example.com’
+matches ‘sub.example.com’). Use ‘*’ to bypass all proxies.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.proxy">
+<span class="sig-name descname"><span class="pre">proxy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi_esc_sdk.Configuration.proxy" title="Permalink to this definition"></a></dt>
+<dd><p>Proxy URL. If not set, will be read from environment variables
+(HTTPS_PROXY, HTTP_PROXY, ALL_PROXY) when making requests.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.proxy_headers">
+<span class="sig-name descname"><span class="pre">proxy_headers</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.proxy_headers" title="Permalink to this definition"></a></dt>
+<dd><p>Proxy headers</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.refresh_api_key_hook">
+<span class="sig-name descname"><span class="pre">refresh_api_key_hook</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.refresh_api_key_hook" title="Permalink to this definition"></a></dt>
+<dd><p>function hook to refresh API key if expired</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.retries">
+<span class="sig-name descname"><span class="pre">retries</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.retries" title="Permalink to this definition"></a></dt>
+<dd><p>Adding retries to override urllib3 default value 3</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.safe_chars_for_path_param">
+<span class="sig-name descname"><span class="pre">safe_chars_for_path_param</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.safe_chars_for_path_param" title="Permalink to this definition"></a></dt>
+<dd><p>Safe chars for path_param</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.server_operation_index">
+<span class="sig-name descname"><span class="pre">server_operation_index</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.server_operation_index" title="Permalink to this definition"></a></dt>
+<dd><p>Default server index</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.server_operation_variables">
+<span class="sig-name descname"><span class="pre">server_operation_variables</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.server_operation_variables" title="Permalink to this definition"></a></dt>
+<dd><p>Default server variables</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.set_default">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.set_default" title="Permalink to this definition"></a></dt>
+<dd><p>Set default instance of configuration.</p>
+<p>It stores default configuration, which can be
+returned by get_default_copy method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>default</strong> – object of Configuration</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.socket_options">
+<span class="sig-name descname"><span class="pre">socket_options</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.socket_options" title="Permalink to this definition"></a></dt>
+<dd><p>Options to pass down to the underlying urllib3 socket</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.ssl_ca_cert">
+<span class="sig-name descname"><span class="pre">ssl_ca_cert</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.ssl_ca_cert" title="Permalink to this definition"></a></dt>
+<dd><p>Set this to customize the certificate file to verify the peer.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.temp_folder_path">
+<span class="sig-name descname"><span class="pre">temp_folder_path</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.temp_folder_path" title="Permalink to this definition"></a></dt>
+<dd><p>Temp file folder for downloading files</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.tls_server_name">
+<span class="sig-name descname"><span class="pre">tls_server_name</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.tls_server_name" title="Permalink to this definition"></a></dt>
+<dd><p>SSL/TLS Server Name Indication (SNI)
+Set this to the SNI value expected by the server.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.to_debug_report">
+<span class="sig-name descname"><span class="pre">to_debug_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.to_debug_report" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the essential information for debugging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The report for debugging.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.verify_ssl">
+<span class="sig-name descname"><span class="pre">verify_ssl</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.verify_ssl" title="Permalink to this definition"></a></dt>
+<dd><p>SSL/TLS verification
+Set this to false to skip verifying SSL certificate when calling API
+from https server.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../pulumi_esc_sdk.CloneEnvironment/" class="btn btn-neutral float-left" title="pulumi_esc_sdk.CloneEnvironment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../pulumi_esc_sdk.CreateEnvironment/" class="btn btn-neutral float-right" title="pulumi_esc_sdk.CreateEnvironment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Pulumi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,633 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pulumi.ResourceOptions — Pulumi SDK Python API reference</title>
+
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/python/pulumi/api/pulumi.ResourceOptions/" />
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=82b9e21f"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="pulumi.ResourceTransformArgs" href="../pulumi.ResourceTransformArgs/" />
+    <link rel="prev" title="pulumi.ResourceHookOptions" href="../pulumi.ResourceHookOptions/" />
+   
+  
+  <meta name="description" content="ResourceOptions is a bag of optional settings that control a resource’s behavior. parent (Optional[Resource]) – If provided, the currently-constructing…" />
+  
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "APIReference",
+  "headline": "pulumi.ResourceOptions \u2014 Pulumi SDK Python API reference",
+  "description": "ResourceOptions is a bag of optional settings that control a resource\u2019s behavior. parent (Optional[Resource]) \u2013 If provided, the currently-constructing\u2026",
+  "url": "https://www.pulumi.com/docs/reference/pkg/python/pulumi/api/pulumi.ResourceOptions.html",
+  "programmingLanguage": "Python",
+  "executableLibraryName": "pulumi",
+  "assemblyVersion": "3.268.0",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "name": "pulumi",
+    "programmingLanguage": "Python"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pulumi Docs",
+    "url": "https://www.pulumi.com/docs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://www.pulumi.com/"
+  }
+}
+  </script>
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Pulumi SDK
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.Alias/">pulumi.Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.Archive/">pulumi.Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.Asset/">pulumi.Asset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.AssetArchive/">pulumi.AssetArchive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ComponentResource/">pulumi.ComponentResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.Config/">pulumi.Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ConfigMissingError/">pulumi.ConfigMissingError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ConfigTypeError/">pulumi.ConfigTypeError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.CustomResource/">pulumi.CustomResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.CustomTimeouts/">pulumi.CustomTimeouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ErrorHook/">pulumi.ErrorHook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ErrorHookArgs/">pulumi.ErrorHookArgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.FileArchive/">pulumi.FileArchive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.FileAsset/">pulumi.FileAsset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.InputPropertiesError/">pulumi.InputPropertiesError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.InputPropertyError/">pulumi.InputPropertyError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.InputPropertyErrorDetails/">pulumi.InputPropertyErrorDetails</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.InvokeOptions/">pulumi.InvokeOptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.InvokeOutputOptions/">pulumi.InvokeOutputOptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.InvokeTransformArgs/">pulumi.InvokeTransformArgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.InvokeTransformResult/">pulumi.InvokeTransformResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.Output/">pulumi.Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ProviderResource/">pulumi.ProviderResource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.RemoteArchive/">pulumi.RemoteArchive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.RemoteAsset/">pulumi.RemoteAsset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.Resource/">pulumi.Resource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ResourceHook/">pulumi.ResourceHook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ResourceHookArgs/">pulumi.ResourceHookArgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ResourceHookBinding/">pulumi.ResourceHookBinding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ResourceHookOptions/">pulumi.ResourceHookOptions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pulumi.ResourceOptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pulumi.ResourceOptions"><code class="docutils literal notranslate"><span class="pre">ResourceOptions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.additional_secret_outputs"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.additional_secret_outputs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.aliases"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.aliases</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.custom_timeouts"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.custom_timeouts</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.delete_before_replace"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.delete_before_replace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.deleted_with"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.deleted_with</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.depends_on"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.depends_on</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.env_var_mappings"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.env_var_mappings</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.hide_diffs"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.hide_diffs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.hooks"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.hooks</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.id"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.ignore_changes"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.ignore_changes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.import_"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.import_</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.merge"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.merge()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.parent"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.plugin_download_url"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.plugin_download_url</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.protect"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.protect</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.provider"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.provider</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.providers"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.providers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.replace_on_changes"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.replace_on_changes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.replace_with"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.replace_with</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.replacement_trigger"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.replacement_trigger</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.retain_on_delete"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.retain_on_delete</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.state_migrations"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.state_migrations</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.transformations"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.transformations</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.transforms"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.transforms</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.urn"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.urn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceOptions.version"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.version</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ResourceTransformArgs/">pulumi.ResourceTransformArgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ResourceTransformResult/">pulumi.ResourceTransformResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ResourceTransformationArgs/">pulumi.ResourceTransformationArgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.ResourceTransformationResult/">pulumi.ResourceTransformationResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.RunError/">pulumi.RunError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.StackReference/">pulumi.StackReference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.StackReferenceOutputDetails/">pulumi.StackReferenceOutputDetails</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.Stash/">pulumi.Stash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.StateMigrationArgs/">pulumi.StateMigrationArgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.StateMigrationResult/">pulumi.StateMigrationResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.StringAsset/">pulumi.StringAsset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.contains_unknowns/">pulumi.contains_unknowns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.create_urn/">pulumi.create_urn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.debug/">pulumi.debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.deferred_output/">pulumi.deferred_output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.deprecated/">pulumi.deprecated</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.error/">pulumi.error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.error_hook/">pulumi.error_hook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.export/">pulumi.export</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.get/">pulumi.get</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.get_organization/">pulumi.get_organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.get_project/">pulumi.get_project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.get_root_directory/">pulumi.get_root_directory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.get_stack/">pulumi.get_stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.get_type_token/">pulumi.get_type_token</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.getter/">pulumi.getter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.info/">pulumi.info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.input_type/">pulumi.input_type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.output_type/">pulumi.output_type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.property/">pulumi.property</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.require_pulumi_version/">pulumi.require_pulumi_version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.resource_hook/">pulumi.resource_hook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.run/">pulumi.run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.set/">pulumi.set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.type_token/">pulumi.type_token</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.warn/">pulumi.warn</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.CancelEvent/">pulumi.automation.CancelEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.CommandError/">pulumi.automation.CommandError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.CommandResult/">pulumi.automation.CommandResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.CompilationError/">pulumi.automation.CompilationError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.ConcurrentUpdateError/">pulumi.automation.ConcurrentUpdateError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.ConfigValue/">pulumi.automation.ConfigValue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.Deployment/">pulumi.automation.Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.DestroyResult/">pulumi.automation.DestroyResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.DiagnosticEvent/">pulumi.automation.DiagnosticEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.DiffKind/">pulumi.automation.DiffKind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.EngineEvent/">pulumi.automation.EngineEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.InlineSourceRuntimeError/">pulumi.automation.InlineSourceRuntimeError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.InvalidVersionError/">pulumi.automation.InvalidVersionError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.LocalWorkspace/">pulumi.automation.LocalWorkspace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.LocalWorkspaceOptions/">pulumi.automation.LocalWorkspaceOptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.OpType/">pulumi.automation.OpType</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.OutputValue/">pulumi.automation.OutputValue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.PluginInfo/">pulumi.automation.PluginInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.PolicyEvent/">pulumi.automation.PolicyEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.PreludeEvent/">pulumi.automation.PreludeEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.PreviewResult/">pulumi.automation.PreviewResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.ProjectBackend/">pulumi.automation.ProjectBackend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.ProjectRuntimeInfo/">pulumi.automation.ProjectRuntimeInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.ProjectSettings/">pulumi.automation.ProjectSettings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.ProjectTemplate/">pulumi.automation.ProjectTemplate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.ProjectTemplateConfigValue/">pulumi.automation.ProjectTemplateConfigValue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.PropertyDiff/">pulumi.automation.PropertyDiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.PulumiCommand/">pulumi.automation.PulumiCommand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.RefreshResult/">pulumi.automation.RefreshResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.RemoteGitAuth/">pulumi.automation.RemoteGitAuth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.RemoteStack/">pulumi.automation.RemoteStack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.RemoteWorkspaceOptions/">pulumi.automation.RemoteWorkspaceOptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.ResOpFailedEvent/">pulumi.automation.ResOpFailedEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.ResOutputsEvent/">pulumi.automation.ResOutputsEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.ResourcePreEvent/">pulumi.automation.ResourcePreEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.RuntimeError/">pulumi.automation.RuntimeError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.Secret/">pulumi.automation.Secret</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.Stack/">pulumi.automation.Stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.StackAlreadyExistsError/">pulumi.automation.StackAlreadyExistsError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.StackNotFoundError/">pulumi.automation.StackNotFoundError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.StackSettings/">pulumi.automation.StackSettings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.StackSummary/">pulumi.automation.StackSummary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.StdoutEngineEvent/">pulumi.automation.StdoutEngineEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.StepEventMetadata/">pulumi.automation.StepEventMetadata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.StepEventStateMetadata/">pulumi.automation.StepEventStateMetadata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.SummaryEvent/">pulumi.automation.SummaryEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.UpResult/">pulumi.automation.UpResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.UpdateSummary/">pulumi.automation.UpdateSummary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.WhoAmIResult/">pulumi.automation.WhoAmIResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.Workspace/">pulumi.automation.Workspace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.create_or_select_remote_stack_git_source/">pulumi.automation.create_or_select_remote_stack_git_source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.create_or_select_stack/">pulumi.automation.create_or_select_stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.create_remote_stack_git_source/">pulumi.automation.create_remote_stack_git_source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.create_stack/">pulumi.automation.create_stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.fully_qualified_stack_name/">pulumi.automation.fully_qualified_stack_name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.select_remote_stack_git_source/">pulumi.automation.select_remote_stack_git_source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.automation.select_stack/">pulumi.automation.select_stack</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.dynamic.CheckFailure/">pulumi.dynamic.CheckFailure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.dynamic.CheckResult/">pulumi.dynamic.CheckResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.dynamic.Config/">pulumi.dynamic.Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.dynamic.ConfigureRequest/">pulumi.dynamic.ConfigureRequest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.dynamic.CreateResult/">pulumi.dynamic.CreateResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.dynamic.DiffResult/">pulumi.dynamic.DiffResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.dynamic.ReadResult/">pulumi.dynamic.ReadResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.dynamic.Resource/">pulumi.dynamic.Resource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.dynamic.ResourceProvider/">pulumi.dynamic.ResourceProvider</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.dynamic.UpdateResult/">pulumi.dynamic.UpdateResult</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.provider.CallResult/">pulumi.provider.CallResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.provider.CheckFailure/">pulumi.provider.CheckFailure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.provider.ConstructResult/">pulumi.provider.ConstructResult</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.provider.Provider/">pulumi.provider.Provider</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.provider.main/">pulumi.provider.main</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.MockCallArgs/">pulumi.runtime.MockCallArgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.MockResourceArgs/">pulumi.runtime.MockResourceArgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.Mocks/">pulumi.runtime.Mocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.ResourceModule/">pulumi.runtime.ResourceModule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.ResourcePackage/">pulumi.runtime.ResourcePackage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.Settings/">pulumi.runtime.Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.call/">pulumi.runtime.call</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.call_single/">pulumi.runtime.call_single</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.configure/">pulumi.runtime.configure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.get_config/">pulumi.runtime.get_config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.get_config_env/">pulumi.runtime.get_config_env</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.get_config_env_key/">pulumi.runtime.get_config_env_key</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.get_config_secret_keys_env/">pulumi.runtime.get_config_secret_keys_env</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.get_root_directory/">pulumi.runtime.get_root_directory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.get_root_resource/">pulumi.runtime.get_root_resource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.invoke/">pulumi.runtime.invoke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.invoke_async/">pulumi.runtime.invoke_async</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.invoke_output/">pulumi.runtime.invoke_output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.invoke_output_single/">pulumi.runtime.invoke_output_single</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.invoke_single/">pulumi.runtime.invoke_single</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.is_config_secret/">pulumi.runtime.is_config_secret</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.is_dry_run/">pulumi.runtime.is_dry_run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.register_invoke_transform/">pulumi.runtime.register_invoke_transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.register_package/">pulumi.runtime.register_package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.register_resource_module/">pulumi.runtime.register_resource_module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.register_resource_package/">pulumi.runtime.register_resource_package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.register_resource_transform/">pulumi.runtime.register_resource_transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.register_stack_transform/">pulumi.runtime.register_stack_transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.register_stack_transformation/">pulumi.runtime.register_stack_transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.require_pulumi_version/">pulumi.runtime.require_pulumi_version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.reset_options/">pulumi.runtime.reset_options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.run_in_stack/">pulumi.runtime.run_in_stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.set_all_config/">pulumi.runtime.set_all_config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.set_config/">pulumi.runtime.set_config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.set_mocks/">pulumi.runtime.set_mocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.test/">pulumi.runtime.test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi.runtime.to_json/">pulumi.runtime.to_json</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Pulumi SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pulumi.ResourceOptions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pulumi-resourceoptions">
+<h1>pulumi.ResourceOptions<a class="headerlink" href="#pulumi-resourceoptions" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">ResourceOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><span class="pre">Resource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depends_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><span class="pre">Resource</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><span class="pre">Resource</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protect</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../pulumi.ProviderResource/#pulumi.ProviderResource" title="pulumi.ProviderResource"><span class="pre">ProviderResource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">providers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.ProviderResource/#pulumi.ProviderResource" title="pulumi.ProviderResource"><span class="pre">ProviderResource</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'ProviderResource'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_before_replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_changes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aliases</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.Alias/#pulumi.Alias" title="pulumi.Alias"><span class="pre">Alias</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_secret_outputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">import_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_timeouts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../pulumi.CustomTimeouts/#pulumi.CustomTimeouts" title="pulumi.CustomTimeouts"><span class="pre">CustomTimeouts</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.ResourceTransformationArgs/#pulumi.ResourceTransformationArgs" title="pulumi.resource.ResourceTransformationArgs"><span class="pre">pulumi.resource.ResourceTransformationArgs</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.ResourceTransformationResult/#pulumi.ResourceTransformationResult" title="pulumi.resource.ResourceTransformationResult"><span class="pre">pulumi.resource.ResourceTransformationResult</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.ResourceTransformArgs/#pulumi.ResourceTransformArgs" title="pulumi.resource.ResourceTransformArgs"><span class="pre">pulumi.resource.ResourceTransformArgs</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">collections.abc.Awaitable</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.ResourceTransformResult/#pulumi.ResourceTransformResult" title="pulumi.resource.ResourceTransformResult"><span class="pre">pulumi.resource.ResourceTransformResult</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.ResourceTransformResult/#pulumi.ResourceTransformResult" title="pulumi.resource.ResourceTransformResult"><span class="pre">pulumi.resource.ResourceTransformResult</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">NoneType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hooks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../pulumi.ResourceHookBinding/#pulumi.ResourceHookBinding" title="pulumi.resource_hooks.ResourceHookBinding"><span class="pre">ResourceHookBinding</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_on_changes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replacement_trigger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plugin_download_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retain_on_delete</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deleted_with</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><span class="pre">Resource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_with</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Resource'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hide_diffs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_var_mappings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_migrations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.StateMigrationArgs/#pulumi.StateMigrationArgs" title="pulumi.resource.StateMigrationArgs"><span class="pre">pulumi.resource.StateMigrationArgs</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">collections.abc.Awaitable</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.StateMigrationResult/#pulumi.StateMigrationResult" title="pulumi.resource.StateMigrationResult"><span class="pre">pulumi.resource.StateMigrationResult</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.StateMigrationResult/#pulumi.StateMigrationResult" title="pulumi.resource.StateMigrationResult"><span class="pre">pulumi.resource.StateMigrationResult</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">NoneType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition"></a></dt>
+<dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em>) – If provided, the currently-constructing resource should be the child of
+the provided parent resource.</p></li>
+<li><p><strong>depends_on</strong> (<em>Optional</em><em>[</em><em>Input</em><em>[</em><em>Union</em><em>[</em><em>List</em><em>[</em><em>Input</em><em>[</em><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em><em>]</em><em>,</em><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em><em>]</em><em>]</em>) – If provided, declares that the
+currently-constructing resource depends on the given resources.</p></li>
+<li><p><strong>protect</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource is not allowed to be deleted.</p></li>
+<li><p><strong>provider</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi.ProviderResource/#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em>) – An optional provider to use for this resource’s CRUD operations.
+If no provider is supplied, the default provider for the resource’s package will be used. The default
+provider is pulled from the providers field, then the parent’s provider bag.</p></li>
+<li><p><strong>providers</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../pulumi.ProviderResource/#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>, </em><em>List</em><em>[</em><a class="reference internal" href="../pulumi.ProviderResource/#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em><em>]</em>) – An optional set of
+providers to use for this resource and child resources. Keyed by package name (e.g. “aws”), or just
+provided as a list. In the latter case, the package name will be retrieved from the provider itself.
+Note: Only a list should be used. Mapping keys are not respected.</p></li>
+<li><p><strong>delete_before_replace</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource must be deleted before it is replaced.</p></li>
+<li><p><strong>ignore_changes</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – If provided, a list of property names to ignore for purposes of updates
+or replacements.</p></li>
+<li><p><strong>version</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional version. If provided, the engine loads a provider with exactly the
+requested version to operate on this resource. This version overrides the version information inferred
+from the current package and should rarely be used.</p></li>
+<li><p><strong>aliases</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Input</em><em>[</em><em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../pulumi.Alias/#pulumi.Alias" title="pulumi.Alias"><em>Alias</em></a><em>]</em><em>]</em><em>]</em><em>]</em>) – An optional list of aliases to treat this resource as
+matching.</p></li>
+<li><p><strong>additional_secret_outputs</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – If provided, a list of output property names that should
+also be treated as secret.</p></li>
+<li><p><strong>id</strong> (<em>Optional</em><em>[</em><em>Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – If provided, an existing resource ID to read, rather than create.</p></li>
+<li><p><strong>import_</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – When provided with a resource ID, import indicates that this resource’s provider should
+import its state from the cloud resource with the given ID. The inputs to the resource’s constructor must align
+with the resource’s current state. Once a resource has been imported, the import property must be removed from
+the resource’s options.</p></li>
+<li><p><strong>custom_timeouts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi.CustomTimeouts/#pulumi.CustomTimeouts" title="pulumi.CustomTimeouts"><em>CustomTimeouts</em></a><em>]</em>) – If provided, a config block for custom timeout information.</p></li>
+<li><p><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>ResourceTransformation</em><em>]</em><em>]</em>) – If provided, a list of transformations to apply
+to this resource during construction.</p></li>
+<li><p><strong>transforms</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>ResourceTransform</em><em>]</em><em>]</em>) – If provided, a list of transforms to apply
+to this resource during construction. This is experimental.</p></li>
+<li><p><strong>urn</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The URN of a previously-registered resource of this type to read from the engine.</p></li>
+<li><p><strong>replace_on_changes</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Changes to any of these property paths will force a replacement.
+If this list includes <cite>“*”</cite>, changes to any properties will force a replacement.  Initialization errors
+from previous deployments will require replacement instead of update only if <cite>“*”</cite> is passed.</p></li>
+<li><p><strong>plugin_download_url</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional url. If provided, the engine loads a provider with downloaded
+from the provided url. This url overrides the plugin download url inferred from the current package and should
+rarely be used.</p></li>
+<li><p><strong>retain_on_delete</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If set to True, the providers Delete method will not be called for this resource.</p></li>
+<li><p><strong>deleted_with</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em>) – If set, the providers Delete method will not be called for this resource
+if specified resource is being deleted as well. If the named resource is being replaced, this resource
+will be replaced as well.</p></li>
+<li><p><strong>replace_with</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em><em>]</em>) – If set, this resource will also be replaced whenever any of the provided resources are replaced.</p></li>
+<li><p><strong>hooks</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi.ResourceHookBinding/#pulumi.ResourceHookBinding" title="pulumi.ResourceHookBinding"><em>ResourceHookBinding</em></a><em>]</em>) – Optional resource hooks to bind to this resource. The hooks will be
+invoked during certain step of the lifecycle of the resource.</p></li>
+<li><p><strong>state_migrations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>StateMigration</em><em>]</em><em>]</em>) – Optional list of state migrations to apply to this
+resource’s prior state and its descendants, in order. See <code class="xref py py-obj docutils literal notranslate"><span class="pre">pulumi.StateMigration</span></code> for the callback contract
+and safety restrictions. This API is experimental and may change.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.additional_secret_outputs">
+<span class="sig-name descname"><span class="pre">additional_secret_outputs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.additional_secret_outputs" title="Permalink to this definition"></a></dt>
+<dd><p>The names of outputs for this resource that should be treated as secrets. This augments the list
+that the resource provider and pulumi engine already determine based on inputs to your resource.
+It can be used to mark certain outputs as a secrets on a per resource basis.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.aliases">
+<span class="sig-name descname"><span class="pre">aliases</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.Alias/#pulumi.Alias" title="pulumi.Alias"><span class="pre">Alias</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.aliases" title="Permalink to this definition"></a></dt>
+<dd><p>An optional list of aliases to treat this resource as matching.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.custom_timeouts">
+<span class="sig-name descname"><span class="pre">custom_timeouts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.CustomTimeouts/#pulumi.CustomTimeouts" title="pulumi.CustomTimeouts"><span class="pre">CustomTimeouts</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.custom_timeouts" title="Permalink to this definition"></a></dt>
+<dd><p>An optional customTimeouts config block.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.delete_before_replace">
+<span class="sig-name descname"><span class="pre">delete_before_replace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.delete_before_replace" title="Permalink to this definition"></a></dt>
+<dd><p>If provided and True, this resource must be deleted before it is replaced.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.deleted_with">
+<span class="sig-name descname"><span class="pre">deleted_with</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><span class="pre">Resource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.deleted_with" title="Permalink to this definition"></a></dt>
+<dd><p>If set, the providers Delete method will not be called for this resource
+if specified resource is being deleted as well. If the named resource is
+being replaced, this resource will be replaced as well.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.depends_on">
+<span class="sig-name descname"><span class="pre">depends_on</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><span class="pre">Resource</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><span class="pre">Resource</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.depends_on" title="Permalink to this definition"></a></dt>
+<dd><p>If provided, declares that the currently-constructing resource depends on the given resources.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.env_var_mappings">
+<span class="sig-name descname"><span class="pre">env_var_mappings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.env_var_mappings" title="Permalink to this definition"></a></dt>
+<dd><p>Environment variable mappings for provider resources. Maps source environment variable
+names to target names. If the source variable exists, the provider will see the target
+variable set to its value. For example, {“MY_VAR”: “PROVIDER_VAR”} means if MY_VAR
+is set, the provider sees PROVIDER_VAR with MY_VAR’s value.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.hide_diffs">
+<span class="sig-name descname"><span class="pre">hide_diffs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.hide_diffs" title="Permalink to this definition"></a></dt>
+<dd><p>If set, diffs from the included property paths will not be shown.
+This only affects the diff display, and does not affect update behavior.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.hooks">
+<span class="sig-name descname"><span class="pre">hooks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.ResourceHookBinding/#pulumi.ResourceHookBinding" title="pulumi.resource_hooks.ResourceHookBinding"><span class="pre">ResourceHookBinding</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.hooks" title="Permalink to this definition"></a></dt>
+<dd><p>Optional resource hooks to bind to this resource. The hooks will be invoked during
+certain step of the lifecycle of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.id" title="Permalink to this definition"></a></dt>
+<dd><p>An optional existing ID to load, rather than create.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.ignore_changes">
+<span class="sig-name descname"><span class="pre">ignore_changes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.ignore_changes" title="Permalink to this definition"></a></dt>
+<dd><p>If provided, ignore changes to any of the specified properties.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.import_">
+<span class="sig-name descname"><span class="pre">import_</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.import_" title="Permalink to this definition"></a></dt>
+<dd><p>When provided with a resource ID, import indicates that this resource’s provider should import
+its state from the cloud resource with the given ID. The inputs to the resource’s constructor
+must align with the resource’s current state. Once a resource has been imported, the import
+property must be removed from the resource’s options.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.merge">
+<span class="sig-name descname"><span class="pre">merge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opts2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.resource.ResourceOptions"><span class="pre">ResourceOptions</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.resource.ResourceOptions"><span class="pre">ResourceOptions</span></a></span></span><a class="headerlink" href="#pulumi.ResourceOptions.merge" title="Permalink to this definition"></a></dt>
+<dd><p>merge produces a new ResourceOptions object with the respective attributes of the <cite>opts1</cite>
+instance in it with the attributes of <cite>opts2</cite> merged over them.</p>
+<p>Both the <cite>opts1</cite> instance and the <cite>opts2</cite> instance will be unchanged.  Both of <cite>opts1</cite> and
+<cite>opts2</cite> can be <cite>None</cite>, in which case its attributes are ignored.</p>
+<p>Conceptually attributes merging follows these basic rules:</p>
+<ol class="arabic simple">
+<li><p>If the attributes is a collection, the final value will be a collection containing the
+values from each options object. Both original collections in each options object will
+be unchanged.</p></li>
+<li><p>Simple scalar values from <cite>opts2</cite> (i.e. strings, numbers, bools) will replace the values
+from <cite>opts1</cite>.</p></li>
+<li><p>For the purposes of merging <cite>depends_on</cite> is always treated
+as collections, even if only a single value was provided.</p></li>
+<li><p>Attributes with value ‘None’ will not be copied over.</p></li>
+</ol>
+<p>This method can be called either as static-method like <cite>ResourceOptions.merge(opts1, opts2)</cite>
+or as an instance-method like <cite>opts1.merge(opts2)</cite>.  The former is useful for cases where
+<cite>opts1</cite> may be <cite>None</cite> so the caller does not need to check for this case.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.Resource/#pulumi.Resource" title="pulumi.Resource"><span class="pre">Resource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.parent" title="Permalink to this definition"></a></dt>
+<dd><p>If provided, the currently-constructing resource should be the child of the provided parent
+resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.plugin_download_url">
+<span class="sig-name descname"><span class="pre">plugin_download_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.plugin_download_url" title="Permalink to this definition"></a></dt>
+<dd><p>An optional url. If provided, the engine loads a provider with downloaded from the provided url.
+This url overrides the plugin download url inferred from the current package and should rarely
+be used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.protect">
+<span class="sig-name descname"><span class="pre">protect</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.protect" title="Permalink to this definition"></a></dt>
+<dd><p>If provided and True, this resource is not allowed to be deleted.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.provider">
+<span class="sig-name descname"><span class="pre">provider</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.ProviderResource/#pulumi.ProviderResource" title="pulumi.ProviderResource"><span class="pre">ProviderResource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.provider" title="Permalink to this definition"></a></dt>
+<dd><p>An optional provider to use for this resource’s CRUD operations. If no provider is supplied, the
+default provider for the resource’s package will be used. The default provider is pulled from
+the parent’s provider bag (see also ResourceOptions.providers).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.providers">
+<span class="sig-name descname"><span class="pre">providers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.ProviderResource/#pulumi.ProviderResource" title="pulumi.ProviderResource"><span class="pre">ProviderResource</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.ProviderResource/#pulumi.ProviderResource" title="pulumi.ProviderResource"><span class="pre">ProviderResource</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.providers" title="Permalink to this definition"></a></dt>
+<dd><p>An optional set of providers to use for this resource and child resources. Keyed by package name
+(e.g. “aws”), or just provided as a list. In the latter case, the package name will be retrieved
+from the provider itself.
+Note: Only a list should be used. Mapping keys are not respected.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.replace_on_changes">
+<span class="sig-name descname"><span class="pre">replace_on_changes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.replace_on_changes" title="Permalink to this definition"></a></dt>
+<dd><p>Changes to any of these property paths will force a replacement.  If this list includes <cite>“*”</cite>, changes
+to any properties will force a replacement.  Initialization errors from previous deployments will
+require replacement instead of update only if <cite>“*”</cite> is passed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.replace_with">
+<span class="sig-name descname"><span class="pre">replace_with</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Resource'</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.replace_with" title="Permalink to this definition"></a></dt>
+<dd><p>If set, this resource will also be replaced whenever any of the provided
+resources are replaced.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.replacement_trigger">
+<span class="sig-name descname"><span class="pre">replacement_trigger</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.replacement_trigger" title="Permalink to this definition"></a></dt>
+<dd><p>If set, the engine will diff this with the last recorded value, and trigger
+a replace if they are not equal.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.retain_on_delete">
+<span class="sig-name descname"><span class="pre">retain_on_delete</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.retain_on_delete" title="Permalink to this definition"></a></dt>
+<dd><p>If set to True, the providers Delete method will not be called for this resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.state_migrations">
+<span class="sig-name descname"><span class="pre">state_migrations</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.StateMigrationArgs/#pulumi.StateMigrationArgs" title="pulumi.resource.StateMigrationArgs"><span class="pre">pulumi.resource.StateMigrationArgs</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">collections.abc.Awaitable</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.StateMigrationResult/#pulumi.StateMigrationResult" title="pulumi.resource.StateMigrationResult"><span class="pre">pulumi.resource.StateMigrationResult</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.StateMigrationResult/#pulumi.StateMigrationResult" title="pulumi.resource.StateMigrationResult"><span class="pre">pulumi.resource.StateMigrationResult</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">NoneType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.state_migrations" title="Permalink to this definition"></a></dt>
+<dd><p>Optional list of state migrations to apply to this resource’s prior state and its descendants.
+The migrations are applied in order, each receiving the state produced by earlier callbacks.
+See <code class="xref py py-obj docutils literal notranslate"><span class="pre">pulumi.StateMigration</span></code> for the callback contract and safety restrictions.</p>
+<p>This API is experimental and may change.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.transformations">
+<span class="sig-name descname"><span class="pre">transformations</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.ResourceTransformationArgs/#pulumi.ResourceTransformationArgs" title="pulumi.resource.ResourceTransformationArgs"><span class="pre">pulumi.resource.ResourceTransformationArgs</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.ResourceTransformationResult/#pulumi.ResourceTransformationResult" title="pulumi.resource.ResourceTransformationResult"><span class="pre">pulumi.resource.ResourceTransformationResult</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.transformations" title="Permalink to this definition"></a></dt>
+<dd><p>Optional list of transformations to apply to this resource during construction. The
+transformations are applied in order, and are applied prior to transformation applied to
+parents walking from the resource up to the stack.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.transforms">
+<span class="sig-name descname"><span class="pre">transforms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.ResourceTransformArgs/#pulumi.ResourceTransformArgs" title="pulumi.resource.ResourceTransformArgs"><span class="pre">pulumi.resource.ResourceTransformArgs</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">collections.abc.Awaitable</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulumi.ResourceTransformResult/#pulumi.ResourceTransformResult" title="pulumi.resource.ResourceTransformResult"><span class="pre">pulumi.resource.ResourceTransformResult</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../pulumi.ResourceTransformResult/#pulumi.ResourceTransformResult" title="pulumi.resource.ResourceTransformResult"><span class="pre">pulumi.resource.ResourceTransformResult</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">NoneType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.transforms" title="Permalink to this definition"></a></dt>
+<dd><p>Optional list of transforms to apply to this resource during construction. The
+transforms are applied in order, and are applied prior to transform applied to
+parents walking from the resource up to the stack.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.urn">
+<span class="sig-name descname"><span class="pre">urn</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.urn" title="Permalink to this definition"></a></dt>
+<dd><p>The URN of a previously-registered resource of this type to read from the engine.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceOptions.version">
+<span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.ResourceOptions.version" title="Permalink to this definition"></a></dt>
+<dd><p>An optional version. If provided, the engine loads a provider with exactly the requested version
+to operate on this resource. This version overrides the version information inferred from the
+current package and should rarely be used.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../pulumi.ResourceHookOptions/" class="btn btn-neutral float-left" title="pulumi.ResourceHookOptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../pulumi.ResourceTransformArgs/" class="btn btn-neutral float-right" title="pulumi.ResourceTransformArgs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Pulumi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
