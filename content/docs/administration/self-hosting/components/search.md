@@ -23,7 +23,7 @@ To manage your state with a self-managed backend, such as a cloud storage bucket
 Pulumi Cloud provides resource search features that require an OpenSearch cluster. Self-hosted installations require a compatible OpenSearch cluster -- both v2.x and v3.x are supported -- and changes to the API container configuration to enable these features.
 
 When the service container is launched with a valid search configuration, it will connect to the OpenSearch cluster and automatically index any existing resources managed by the self-hosted Pulumi installation.
-If the OpenSearch cluster is not reachable, then the Pulumi Console will display an error message on the Resources page indicating that the search cluster is unavailable, but will otherwise operate normally.
+If the OpenSearch cluster is not reachable, then the Pulumi Cloud console will display an error message on the Resources page indicating that the search cluster is unavailable, but will otherwise operate normally.
 It is important to note that the search cluster is not in the critical path of Pulumi operations, so an unavailable search cluster will not prevent users from updating Pulumi stacks, and search data can be backfilled easily once the search cluster is available.
 
 ## Prerequisites
