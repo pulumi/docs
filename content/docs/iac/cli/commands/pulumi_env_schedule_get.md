@@ -3,7 +3,7 @@
 title: "pulumi env schedule get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_schedule_get/
-meta_desc: "Learn about the pulumi env schedule get command."
+meta_desc: "Reference for the pulumi env schedule get command: show details for an environment scheduled action. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

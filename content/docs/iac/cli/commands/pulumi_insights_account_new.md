@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_insights_account_create/
   - /docs/iac/cli/commands/pulumi_insights_account_setup/
   - /docs/reference/cli/pulumi_insights_account_setup/
-meta_desc: "Learn about the pulumi insights account new command."
+meta_desc: "Reference for the pulumi insights account new command: create a new Insights account. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

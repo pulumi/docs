@@ -3,7 +3,7 @@
 title: "pulumi policy issue | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_issue/
-meta_desc: "Learn about the pulumi policy issue command."
+meta_desc: "Reference for the pulumi policy issue command: inspect policy issues. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

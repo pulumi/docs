@@ -3,7 +3,7 @@
 title: "pulumi state repair | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_repair/
-meta_desc: "Learn about the pulumi state repair command."
+meta_desc: "Reference for the pulumi state repair command: repair an invalid state. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

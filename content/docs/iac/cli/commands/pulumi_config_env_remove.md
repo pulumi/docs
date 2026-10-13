@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_config_env_rm/
   - /docs/iac/cli/commands/pulumi_config_env_delete/
   - /docs/reference/cli/pulumi_config_env_delete/
-meta_desc: "Learn about the pulumi config env remove command."
+meta_desc: "Reference for the pulumi config env remove command: remove environment from a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

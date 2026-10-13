@@ -3,7 +3,7 @@
 title: "pulumi policy analyze | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_analyze/
-meta_desc: "Learn about the pulumi policy analyze command."
+meta_desc: "Reference for the pulumi policy analyze command: analyze existing resource state against policy packs. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi env version rollback | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_version_rollback/
-meta_desc: "Learn about the pulumi env version rollback command."
+meta_desc: "Reference for the pulumi env version rollback command: roll back to a specific version. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

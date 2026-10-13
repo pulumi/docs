@@ -3,7 +3,7 @@
 title: "pulumi deployment settings | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_deployment_settings/
-meta_desc: "Learn about the pulumi deployment settings command."
+meta_desc: "Reference for the pulumi deployment settings command: manage stack deployment settings. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

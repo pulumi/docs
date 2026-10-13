@@ -3,7 +3,7 @@
 title: "pulumi state promote | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_promote/
-meta_desc: "Learn about the pulumi state promote command."
+meta_desc: "Reference for the pulumi state promote command: promote a snippet from state into Pulumi program code. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

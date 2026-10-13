@@ -3,7 +3,7 @@
 title: "pulumi state protect | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_protect/
-meta_desc: "Learn about the pulumi state protect command."
+meta_desc: "Reference for the pulumi state protect command: protect resource in a stack's state. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

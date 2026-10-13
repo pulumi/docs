@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_webhook_update/
   - /docs/iac/cli/commands/pulumi_org_webhook_modify/
   - /docs/reference/cli/pulumi_org_webhook_modify/
-meta_desc: "Learn about the pulumi org webhook edit command."
+meta_desc: "Reference for the pulumi org webhook edit command: update an organization webhook's configuration. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

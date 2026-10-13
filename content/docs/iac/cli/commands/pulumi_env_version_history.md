@@ -3,7 +3,7 @@
 title: "pulumi env version history | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_version_history/
-meta_desc: "Learn about the pulumi env version history command."
+meta_desc: "Reference for the pulumi env version history command: show revision history. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

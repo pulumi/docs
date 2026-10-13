@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_policy_group_list/
   - /docs/iac/cli/commands/pulumi_policy_group_ls/
   - /docs/reference/cli/pulumi_policy_group_ls/
-meta_desc: "Learn about the pulumi policy group list command."
+meta_desc: "Reference for the pulumi policy group list command: list all Policy Groups for a Pulumi organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

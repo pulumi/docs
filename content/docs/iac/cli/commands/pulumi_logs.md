@@ -3,7 +3,7 @@
 title: "pulumi logs | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_logs/
-meta_desc: "Learn about the pulumi logs command."
+meta_desc: "Reference for the pulumi logs command: show aggregated resource logs for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

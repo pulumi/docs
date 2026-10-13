@@ -3,7 +3,7 @@
 title: "pulumi package add | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package_add/
-meta_desc: "Learn about the pulumi package add command."
+meta_desc: "Reference for the pulumi package add command: add a package to your Pulumi project, plugin, or current directory. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

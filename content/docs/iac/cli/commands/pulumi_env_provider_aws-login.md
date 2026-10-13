@@ -3,7 +3,7 @@
 title: "pulumi env provider aws-login | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_provider_aws-login/
-meta_desc: "Learn about the pulumi env provider aws-login command."
+meta_desc: "Reference for the pulumi env provider aws-login command: add an AWS login provider to an environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

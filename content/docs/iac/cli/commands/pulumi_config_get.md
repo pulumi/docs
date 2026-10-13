@@ -3,7 +3,7 @@
 title: "pulumi config get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_get/
-meta_desc: "Learn about the pulumi config get command."
+meta_desc: "Reference for the pulumi config get command: get a single configuration value. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

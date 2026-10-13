@@ -3,7 +3,7 @@
 title: "pulumi org usage | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_usage/
-meta_desc: "Learn about the pulumi org usage command."
+meta_desc: "Reference for the pulumi org usage command: inspect organization resource usage. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

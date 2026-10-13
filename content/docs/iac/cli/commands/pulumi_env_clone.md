@@ -3,7 +3,7 @@
 title: "pulumi env clone | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_clone/
-meta_desc: "Learn about the pulumi env clone command."
+meta_desc: "Reference for the pulumi env clone command: clone an existing environment into a new environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

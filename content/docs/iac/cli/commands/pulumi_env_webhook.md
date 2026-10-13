@@ -3,7 +3,7 @@
 title: "pulumi env webhook | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_webhook/
-meta_desc: "Learn about the pulumi env webhook command."
+meta_desc: "Reference for the pulumi env webhook command: manage environment webhooks. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

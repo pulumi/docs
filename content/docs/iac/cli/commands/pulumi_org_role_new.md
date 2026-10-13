@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_role_create/
   - /docs/iac/cli/commands/pulumi_org_role_setup/
   - /docs/reference/cli/pulumi_org_role_setup/
-meta_desc: "Learn about the pulumi org role new command."
+meta_desc: "Reference for the pulumi org role new command: create a new custom role for an organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi stack change-secrets-provider | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_change-secrets-provider/
-meta_desc: "Learn about the pulumi stack change-secrets-provider command."
+meta_desc: "Reference for the pulumi stack change-secrets-provider command: change the secrets provider for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

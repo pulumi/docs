@@ -3,7 +3,7 @@
 title: "pulumi api describe | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_api_describe/
-meta_desc: "Learn about the pulumi api describe command."
+meta_desc: "Reference for the pulumi api describe command: show the parameters and schemas for a Pulumi Cloud API operation. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

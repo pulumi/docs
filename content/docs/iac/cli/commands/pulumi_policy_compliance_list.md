@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_policy_compliance_list/
   - /docs/iac/cli/commands/pulumi_policy_compliance_ls/
   - /docs/reference/cli/pulumi_policy_compliance_ls/
-meta_desc: "Learn about the pulumi policy compliance list command."
+meta_desc: "Reference for the pulumi policy compliance list command: list compliance results grouped by entity. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

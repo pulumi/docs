@@ -3,7 +3,7 @@
 title: "pulumi package publish | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package_publish/
-meta_desc: "Learn about the pulumi package publish command."
+meta_desc: "Reference for the pulumi package publish command: publish a package to the Private Registry. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

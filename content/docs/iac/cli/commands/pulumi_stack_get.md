@@ -3,7 +3,7 @@
 title: "pulumi stack get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_get/
-meta_desc: "Learn about the pulumi stack get command."
+meta_desc: "Reference for the pulumi stack get command: retrieve detailed information about a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

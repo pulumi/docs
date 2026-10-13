@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_project_create/
   - /docs/iac/cli/commands/pulumi_project_setup/
   - /docs/reference/cli/pulumi_project_setup/
-meta_desc: "Learn about the pulumi project new command."
+meta_desc: "Reference for the pulumi project new command: create a new Pulumi project. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi env tag get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_get/
-meta_desc: "Learn about the pulumi env tag get command."
+meta_desc: "Reference for the pulumi env tag get command: get an environment tag. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

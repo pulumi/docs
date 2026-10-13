@@ -3,7 +3,7 @@
 title: "pulumi state get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_get/
-meta_desc: "Learn about the pulumi state get command."
+meta_desc: "Reference for the pulumi state get command: show a resource's state. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

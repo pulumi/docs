@@ -187,6 +187,8 @@ jobs:
       - name: generate markdown
         run: |
           PULUMI_EXPERIMENTAL=true pulumi gen-markdown ./content/docs/iac/cli/commands
+      - name: Enrich CLI command meta descriptions
+        run: node scripts/cli-docs/enrich-meta-descriptions.js
       - name: Update latest version
         run: |
           echo -n "${{ env.PULUMI_VERSION }}" > ./static/latest-version

@@ -3,7 +3,7 @@
 title: "pulumi stack tag get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_get/
-meta_desc: "Learn about the pulumi stack tag get command."
+meta_desc: "Reference for the pulumi stack tag get command: get a single stack tag value. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi logs share | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_logs_share/
-meta_desc: "Learn about the pulumi logs share command."
+meta_desc: "Reference for the pulumi logs share command: re-encrypt a log file for sharing with Pulumi support. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

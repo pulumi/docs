@@ -3,7 +3,7 @@
 title: "pulumi env open-request | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_open-request/
-meta_desc: "Learn about the pulumi env open-request command."
+meta_desc: "Reference for the pulumi env open-request command: create a request for opening a protected environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

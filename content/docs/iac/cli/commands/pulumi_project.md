@@ -3,7 +3,7 @@
 title: "pulumi project | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_project/
-meta_desc: "Learn about the pulumi project command."
+meta_desc: "Reference for the pulumi project command: manage Pulumi projects. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

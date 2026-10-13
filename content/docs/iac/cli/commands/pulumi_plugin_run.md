@@ -3,7 +3,7 @@
 title: "pulumi plugin run | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_plugin_run/
-meta_desc: "Learn about the pulumi plugin run command."
+meta_desc: "Reference for the pulumi plugin run command: run a command on a plugin binary. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

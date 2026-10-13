@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_list/
   - /docs/iac/cli/commands/pulumi_stack_ls/
   - /docs/reference/cli/pulumi_stack_ls/
-meta_desc: "Learn about the pulumi stack list command."
+meta_desc: "Reference for the pulumi stack list command: list stacks. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

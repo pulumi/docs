@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_config_copy/
   - /docs/iac/cli/commands/pulumi_config_cp/
   - /docs/reference/cli/pulumi_config_cp/
-meta_desc: "Learn about the pulumi config copy command."
+meta_desc: "Reference for the pulumi config copy command: copy config to another stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi env provider gcp-login | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_provider_gcp-login/
-meta_desc: "Learn about the pulumi env provider gcp-login command."
+meta_desc: "Reference for the pulumi env provider gcp-login command: add a GCP login provider to an environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

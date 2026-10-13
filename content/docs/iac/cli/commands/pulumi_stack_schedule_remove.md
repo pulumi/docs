@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_schedule_rm/
   - /docs/iac/cli/commands/pulumi_stack_schedule_delete/
   - /docs/reference/cli/pulumi_stack_schedule_delete/
-meta_desc: "Learn about the pulumi stack schedule remove command."
+meta_desc: "Reference for the pulumi stack schedule remove command: delete a scheduled deployment action. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

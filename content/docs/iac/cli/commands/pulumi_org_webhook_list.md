@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_webhook_list/
   - /docs/iac/cli/commands/pulumi_org_webhook_ls/
   - /docs/reference/cli/pulumi_org_webhook_ls/
-meta_desc: "Learn about the pulumi org webhook list command."
+meta_desc: "Reference for the pulumi org webhook list command: list all webhooks configured for an organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

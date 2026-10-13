@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_insights_account_scan_list/
   - /docs/iac/cli/commands/pulumi_insights_account_scan_ls/
   - /docs/reference/cli/pulumi_insights_account_scan_ls/
-meta_desc: "Learn about the pulumi insights account scan list command."
+meta_desc: "Reference for the pulumi insights account scan list command: list recent scans for an Insights account. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

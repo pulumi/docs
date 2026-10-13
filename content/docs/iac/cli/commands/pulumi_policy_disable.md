@@ -3,7 +3,7 @@
 title: "pulumi policy disable | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_disable/
-meta_desc: "Learn about the pulumi policy disable command."
+meta_desc: "Reference for the pulumi policy disable command: disable a Policy Pack for a Pulumi organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

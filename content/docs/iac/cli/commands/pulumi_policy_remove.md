@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_policy_rm/
   - /docs/iac/cli/commands/pulumi_policy_delete/
   - /docs/reference/cli/pulumi_policy_delete/
-meta_desc: "Learn about the pulumi policy remove command."
+meta_desc: "Reference for the pulumi policy remove command: removes a Policy Pack from a Pulumi organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

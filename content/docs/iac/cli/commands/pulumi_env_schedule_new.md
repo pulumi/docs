@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_schedule_create/
   - /docs/iac/cli/commands/pulumi_env_schedule_setup/
   - /docs/reference/cli/pulumi_env_schedule_setup/
-meta_desc: "Learn about the pulumi env schedule new command."
+meta_desc: "Reference for the pulumi env schedule new command: create a new scheduled action on an environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

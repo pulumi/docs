@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_schedule_list/
   - /docs/iac/cli/commands/pulumi_stack_schedule_ls/
   - /docs/reference/cli/pulumi_stack_schedule_ls/
-meta_desc: "Learn about the pulumi stack schedule list command."
+meta_desc: "Reference for the pulumi stack schedule list command: list all scheduled actions configured for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

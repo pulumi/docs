@@ -3,7 +3,7 @@
 title: "pulumi config env init | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_env_init/
-meta_desc: "Learn about the pulumi config env init command."
+meta_desc: "Reference for the pulumi config env init command: creates an environment for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

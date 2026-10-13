@@ -3,7 +3,7 @@
 title: "pulumi policy compliance | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_compliance/
-meta_desc: "Learn about the pulumi policy compliance command."
+meta_desc: "Reference for the pulumi policy compliance command: inspect policy compliance results. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

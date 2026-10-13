@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_logs_rm/
   - /docs/iac/cli/commands/pulumi_logs_delete/
   - /docs/reference/cli/pulumi_logs_delete/
-meta_desc: "Learn about the pulumi logs remove command."
+meta_desc: "Reference for the pulumi logs remove command: remove automatic log files. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

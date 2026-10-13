@@ -3,7 +3,7 @@
 title: "pulumi stack select | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_select/
-meta_desc: "Learn about the pulumi stack select command."
+meta_desc: "Reference for the pulumi stack select command: switch the current workspace to the given stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

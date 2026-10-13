@@ -3,7 +3,7 @@
 title: "pulumi config env | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_env/
-meta_desc: "Learn about the pulumi config env command."
+meta_desc: "Reference for the pulumi config env command: manage ESC environments for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

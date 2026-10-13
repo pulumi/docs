@@ -3,7 +3,7 @@
 title: "pulumi env rotate | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_rotate/
-meta_desc: "Learn about the pulumi env rotate command."
+meta_desc: "Reference for the pulumi env rotate command: rotate secrets in an environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 
