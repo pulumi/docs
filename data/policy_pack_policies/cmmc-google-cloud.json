@@ -1650,7 +1650,7 @@
       },
       "message": "",
       "name": "kms-key-rotation",
-      "remediationSteps": "Enable automatic key rotation for Cloud KMS crypto keys by setting 'rotationPeriod'. Key rotation limits the lifetime of encryption keys and reduces cryptographic risk.\n\nExample - Enable automatic key rotation:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst key = new gcp.kms.CryptoKey(\"my-key\", {\n    name: \"crypto-key\",\n    keyRing: \"projects/my-project/locations/us-central1/keyRings/my-ring\",\n    rotationPeriod: \"7776000s\", // 90 days (configurable)\n});\n```\n\nPeriods this policy accepts out of the box: `2592000s` (30 days), `5184000s` (60 days) and\n`7776000s` (90 days, the `maxRotationPeriod` default). Anything longer needs\n`maxRotationPeriod` raised to match, or it is reported again.",
+      "remediationSteps": "Enable automatic key rotation for Cloud KMS crypto keys by setting 'rotationPeriod'. Key rotation limits the lifetime of encryption keys and reduces cryptographic risk.\n\nExample - Enable automatic key rotation:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst key = new gcp.kms.CryptoKey(\"my-key\", {\n    name: \"crypto-key\",\n    keyRing: \"projects/my-project/locations/us-central1/keyRings/my-ring\",\n    rotationPeriod: \"7776000s\", // 90 days (configurable)\n});\n```\n\nAny rotation period up to `maxRotationPeriod` passes; the default is `7776000s` (90 days).\nA longer period needs `maxRotationPeriod` raised to match, or it is reported again.",
       "severity": "high"
     },
     {
@@ -2205,6 +2205,6 @@
       "severity": "high"
     }
   ],
-  "version": 1,
-  "versionTag": "1.0.0"
+  "version": 2,
+  "versionTag": "1.0.1"
 }

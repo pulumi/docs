@@ -476,7 +476,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures Cloud Storage buckets have access logging enabled with logBucket and logObjectPrefix configured",
+      "description": "Ensures Cloud Storage buckets have access logging enabled with a log destination bucket",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -487,6 +487,7 @@
       },
       "message": "",
       "name": "bucket-access-logging",
+      "remediationSteps": "## Fix: Enable Access Logging\n\nSet `logging.logBucket` to the bucket that should receive the access logs. The other settings\nare not this policy's concern; they are here so the example also satisfies the sibling policies\nits packs register.\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    logging: {\n        logBucket: \"my-logging-bucket\",  // Destination bucket for access logs\n        logObjectPrefix: \"bucket-logs/\", // Optional prefix for log objects\n    },\n    uniformBucketLevelAccess: true,\n    publicAccessPrevention: \"enforced\",\n    versioning: { enabled: true },\n    encryption: {\n        defaultKmsKeyName: \"projects/my-project/locations/us/keyRings/my-ring/cryptoKeys/my-key\",\n    },\n    lifecycleRules: [{\n        action: { type: \"SetStorageClass\", storageClass: \"NEARLINE\" },\n        condition: { age: 30 },\n    }],\n    labels: { environment: \"production\", team: \"platform\", owner: \"security\" },\n});\n```",
       "severity": "medium"
     },
     {
@@ -3191,7 +3192,7 @@
       },
       "message": "",
       "name": "kms-key-rotation",
-      "remediationSteps": "Enable automatic key rotation for Cloud KMS crypto keys by setting 'rotationPeriod'. Key rotation limits the lifetime of encryption keys and reduces cryptographic risk.\n\nExample - Enable automatic key rotation:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst key = new gcp.kms.CryptoKey(\"my-key\", {\n    name: \"crypto-key\",\n    keyRing: keyring.id,\n    rotationPeriod: \"7776000s\", // 90 days (configurable)\n});\n```\n\nCommon rotation periods:\n- 30 days: \"2592000s\"\n- 60 days: \"5184000s\"\n- 90 days: \"7776000s\" (recommended default)\n- 365 days: \"31536000s\" (maximum recommended)",
+      "remediationSteps": "Enable automatic key rotation for Cloud KMS crypto keys by setting 'rotationPeriod'. Key rotation limits the lifetime of encryption keys and reduces cryptographic risk.\n\nExample - Enable automatic key rotation:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst key = new gcp.kms.CryptoKey(\"my-key\", {\n    name: \"crypto-key\",\n    keyRing: \"projects/my-project/locations/us-central1/keyRings/my-ring\",\n    rotationPeriod: \"7776000s\", // 90 days (configurable)\n});\n```\n\nAny rotation period up to `maxRotationPeriod` passes; the default is `7776000s` (90 days).\nA longer period needs `maxRotationPeriod` raised to match, or it is reported again.",
       "severity": "high"
     },
     {
@@ -3997,6 +3998,6 @@
       "severity": "high"
     }
   ],
-  "version": 1,
-  "versionTag": "1.0.0"
+  "version": 2,
+  "versionTag": "1.1.1"
 }
