@@ -135,7 +135,7 @@ Cloudsmith exchanges an OIDC token for a short-lived Cloudsmith API token that b
 
     Write `$CLOUDSMITH_OIDC_TOKEN`, not `${CLOUDSMITH_OIDC_TOKEN}`. `pulumi env run` interpolates the braced form itself, so the shell gets an empty value.
 
-    The response contains a `token` field. The token is valid for about two hours, whatever `duration` you set. Send it to the Cloudsmith API in the `X-Api-Key: Bearer <token>` or `Authorization: Bearer <token>` header.
+    The response contains a `token` field. The Cloudsmith token is valid for about two hours, whatever `duration` the `fn::open::oidc` block sets. Send it to the Cloudsmith API in the `X-Api-Key: Bearer <token>` or `Authorization: Bearer <token>` header.
 
 If the exchange returns `401 Failed to validate token`, check the provider URL, then compare the provider's claims with the [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) output. Cloudsmith returns this error for a wrong provider URL, an expired token, and a claim mismatch alike, and does not check the URL when you save the provider.
 
