@@ -3,7 +3,7 @@
 title: "pulumi stack webhook get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_webhook_get/
-meta_desc: "Learn about the pulumi stack webhook get command."
+meta_desc: "Reference for the pulumi stack webhook get command: get the details of a stack webhook. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

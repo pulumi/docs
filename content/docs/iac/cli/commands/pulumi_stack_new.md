@@ -9,7 +9,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_create/
   - /docs/iac/cli/commands/pulumi_stack_setup/
   - /docs/reference/cli/pulumi_stack_setup/
-meta_desc: "Learn about the pulumi stack new command."
+meta_desc: "Reference for the pulumi stack new command: create an empty stack with the given name, ready for updates. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

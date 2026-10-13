@@ -3,7 +3,7 @@
 title: "pulumi org audit-log | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_audit-log/
-meta_desc: "Learn about the pulumi org audit-log command."
+meta_desc: "Reference for the pulumi org audit-log command: inspect organization audit logs. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

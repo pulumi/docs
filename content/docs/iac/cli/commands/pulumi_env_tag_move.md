@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_tag_move/
   - /docs/iac/cli/commands/pulumi_env_tag_mv/
   - /docs/reference/cli/pulumi_env_tag_mv/
-meta_desc: "Learn about the pulumi env tag move command."
+meta_desc: "Reference for the pulumi env tag move command: move an environment tag. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

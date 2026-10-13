@@ -3,7 +3,7 @@
 title: "pulumi package get-schema | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package_get-schema/
-meta_desc: "Learn about the pulumi package get-schema command."
+meta_desc: "Reference for the pulumi package get-schema command: get the schema.json from a package. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

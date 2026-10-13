@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_webhook_create/
   - /docs/iac/cli/commands/pulumi_stack_webhook_setup/
   - /docs/reference/cli/pulumi_stack_webhook_setup/
-meta_desc: "Learn about the pulumi stack webhook new command."
+meta_desc: "Reference for the pulumi stack webhook new command: create a new stack webhook. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

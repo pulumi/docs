@@ -3,7 +3,7 @@
 title: "pulumi package | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package/
-meta_desc: "Learn about the pulumi package command."
+meta_desc: "Reference for the pulumi package command: work with Pulumi packages. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

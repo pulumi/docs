@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_member_update/
   - /docs/iac/cli/commands/pulumi_org_member_modify/
   - /docs/reference/cli/pulumi_org_member_modify/
-meta_desc: "Learn about the pulumi org member edit command."
+meta_desc: "Reference for the pulumi org member edit command: modify a member's role within an organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

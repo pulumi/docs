@@ -3,7 +3,7 @@
 title: "pulumi state untaint | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_untaint/
-meta_desc: "Learn about the pulumi state untaint command."
+meta_desc: "Reference for the pulumi state untaint command: untaint one or more resources in the stack's state. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

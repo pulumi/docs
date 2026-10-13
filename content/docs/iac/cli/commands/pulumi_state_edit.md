@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_state_update/
   - /docs/iac/cli/commands/pulumi_state_modify/
   - /docs/reference/cli/pulumi_state_modify/
-meta_desc: "Learn about the pulumi state edit command."
+meta_desc: "Reference for the pulumi state edit command: edit the current stack's state in your EDITOR. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

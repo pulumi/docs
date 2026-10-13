@@ -3,7 +3,7 @@
 title: "pulumi cancel | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_cancel/
-meta_desc: "Learn about the pulumi cancel command."
+meta_desc: "Reference for the pulumi cancel command: cancel a stack's currently running update, if any. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

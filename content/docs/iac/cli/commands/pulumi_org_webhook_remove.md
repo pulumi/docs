@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_webhook_rm/
   - /docs/iac/cli/commands/pulumi_org_webhook_delete/
   - /docs/reference/cli/pulumi_org_webhook_delete/
-meta_desc: "Learn about the pulumi org webhook remove command."
+meta_desc: "Reference for the pulumi org webhook remove command: delete an organization webhook. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

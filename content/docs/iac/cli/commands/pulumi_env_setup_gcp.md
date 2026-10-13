@@ -3,7 +3,7 @@
 title: "pulumi env setup gcp | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_setup_gcp/
-meta_desc: "Learn about the pulumi env setup gcp command."
+meta_desc: "Reference for the pulumi env setup gcp command: set up GCP OIDC integration for Pulumi ESC. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

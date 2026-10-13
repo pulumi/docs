@@ -3,7 +3,7 @@
 title: "pulumi insights account | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_insights_account/
-meta_desc: "Learn about the pulumi insights account command."
+meta_desc: "Reference for the pulumi insights account command: manage Pulumi Insights accounts. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

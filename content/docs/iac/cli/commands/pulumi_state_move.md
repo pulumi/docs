@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_state_move/
   - /docs/iac/cli/commands/pulumi_state_mv/
   - /docs/reference/cli/pulumi_state_mv/
-meta_desc: "Learn about the pulumi state move command."
+meta_desc: "Reference for the pulumi state move command: move resources from one stack to another. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

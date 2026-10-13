@@ -3,7 +3,7 @@
 title: "pulumi stack output | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_output/
-meta_desc: "Learn about the pulumi stack output command."
+meta_desc: "Reference for the pulumi stack output command: show a stack's output properties. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

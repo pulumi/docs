@@ -3,7 +3,7 @@
 title: "pulumi neo resume | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_neo_resume/
-meta_desc: "Learn about the pulumi neo resume command."
+meta_desc: "Reference for the pulumi neo resume command: resume local tool execution for an existing Pulumi Neo task. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

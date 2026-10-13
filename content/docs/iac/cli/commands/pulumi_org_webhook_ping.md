@@ -3,7 +3,7 @@
 title: "pulumi org webhook ping | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_webhook_ping/
-meta_desc: "Learn about the pulumi org webhook ping command."
+meta_desc: "Reference for the pulumi org webhook ping command: send a test ping to an organization webhook. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

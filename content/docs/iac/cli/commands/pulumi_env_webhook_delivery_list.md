@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_webhook_delivery_list/
   - /docs/iac/cli/commands/pulumi_env_webhook_delivery_ls/
   - /docs/reference/cli/pulumi_env_webhook_delivery_ls/
-meta_desc: "Learn about the pulumi env webhook delivery list command."
+meta_desc: "Reference for the pulumi env webhook delivery list command: list environment webhook deliveries. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

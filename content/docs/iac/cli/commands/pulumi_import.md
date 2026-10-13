@@ -3,7 +3,7 @@
 title: "pulumi import | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_import/
-meta_desc: "Learn about the pulumi import command."
+meta_desc: "Reference for the pulumi import command: import resources into an existing stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

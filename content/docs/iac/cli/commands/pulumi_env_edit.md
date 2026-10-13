@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_update/
   - /docs/iac/cli/commands/pulumi_env_modify/
   - /docs/reference/cli/pulumi_env_modify/
-meta_desc: "Learn about the pulumi env edit command."
+meta_desc: "Reference for the pulumi env edit command: edit an environment definition. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

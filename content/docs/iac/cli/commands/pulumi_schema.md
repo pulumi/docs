@@ -3,7 +3,7 @@
 title: "pulumi schema | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_schema/
-meta_desc: "Learn about the pulumi schema command."
+meta_desc: "Reference for the pulumi schema command: analyze package schemas. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

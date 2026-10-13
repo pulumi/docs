@@ -3,7 +3,7 @@
 title: "pulumi env provider azure-login static | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_provider_azure-login_static/
-meta_desc: "Learn about the pulumi env provider azure-login static command."
+meta_desc: "Reference for the pulumi env provider azure-login static command: add an Azure static-credentials login provider to an environment."
 ---
 
 

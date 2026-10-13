@@ -3,7 +3,7 @@
 title: "pulumi stack schedule get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_schedule_get/
-meta_desc: "Learn about the pulumi stack schedule get command."
+meta_desc: "Reference for the pulumi stack schedule get command: retrieve the configuration of a stack schedule. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

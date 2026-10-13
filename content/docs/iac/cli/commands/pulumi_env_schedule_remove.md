@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_schedule_rm/
   - /docs/iac/cli/commands/pulumi_env_schedule_delete/
   - /docs/reference/cli/pulumi_env_schedule_delete/
-meta_desc: "Learn about the pulumi env schedule remove command."
+meta_desc: "Reference for the pulumi env schedule remove command: remove an environment scheduled action. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi stack unselect | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_unselect/
-meta_desc: "Learn about the pulumi stack unselect command."
+meta_desc: "Reference for the pulumi stack unselect command: resets stack selection from the current workspace. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

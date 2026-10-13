@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_config_rm/
   - /docs/iac/cli/commands/pulumi_config_delete/
   - /docs/reference/cli/pulumi_config_delete/
-meta_desc: "Learn about the pulumi config remove command."
+meta_desc: "Reference for the pulumi config remove command: remove configuration value. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

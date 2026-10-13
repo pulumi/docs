@@ -3,7 +3,7 @@
 title: "pulumi template publish | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_template_publish/
-meta_desc: "Learn about the pulumi template publish command."
+meta_desc: "Reference for the pulumi template publish command: publish a template to the Private Registry. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi org set-default | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_set-default/
-meta_desc: "Learn about the pulumi org set-default command."
+meta_desc: "Reference for the pulumi org set-default command: set the local default organization for the current backend. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

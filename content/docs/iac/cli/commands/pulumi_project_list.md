@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_project_list/
   - /docs/iac/cli/commands/pulumi_project_ls/
   - /docs/reference/cli/pulumi_project_ls/
-meta_desc: "Learn about the pulumi project list command."
+meta_desc: "Reference for the pulumi project list command: list your Pulumi projects. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

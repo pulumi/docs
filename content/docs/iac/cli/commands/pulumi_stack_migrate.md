@@ -3,7 +3,7 @@
 title: "pulumi stack migrate | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_migrate/
-meta_desc: "Learn about the pulumi stack migrate command."
+meta_desc: "Reference for the pulumi stack migrate command: migrate a stack from another backend to the currently logged-in backend."
 ---
 
 

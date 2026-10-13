@@ -3,7 +3,7 @@
 title: "pulumi env provider gcp-login static | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_provider_gcp-login_static/
-meta_desc: "Learn about the pulumi env provider gcp-login static command."
+meta_desc: "Reference for the pulumi env provider gcp-login static command: add a GCP static-credentials login provider to an environment."
 ---
 
 

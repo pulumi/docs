@@ -3,7 +3,7 @@
 title: "pulumi insights account scan | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_insights_account_scan/
-meta_desc: "Learn about the pulumi insights account scan command."
+meta_desc: "Reference for the pulumi insights account scan command: trigger a resource discovery scan for an Insights account."
 ---
 
 

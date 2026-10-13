@@ -3,7 +3,7 @@
 title: "pulumi env open | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_open/
-meta_desc: "Learn about the pulumi env open command."
+meta_desc: "Reference for the pulumi env open command: open the environment with the given name. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

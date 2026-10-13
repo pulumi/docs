@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_webhook_create/
   - /docs/iac/cli/commands/pulumi_org_webhook_setup/
   - /docs/reference/cli/pulumi_org_webhook_setup/
-meta_desc: "Learn about the pulumi org webhook new command."
+meta_desc: "Reference for the pulumi org webhook new command: create a new organization webhook. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

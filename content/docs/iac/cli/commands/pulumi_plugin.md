@@ -3,7 +3,7 @@
 title: "pulumi plugin | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_plugin/
-meta_desc: "Learn about the pulumi plugin command."
+meta_desc: "Reference for the pulumi plugin command: manage language and resource provider plugins. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

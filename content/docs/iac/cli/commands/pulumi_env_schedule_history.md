@@ -3,7 +3,7 @@
 title: "pulumi env schedule history | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_schedule_history/
-meta_desc: "Learn about the pulumi env schedule history command."
+meta_desc: "Reference for the pulumi env schedule history command: show the execution history of an environment scheduled action."
 ---
 
 

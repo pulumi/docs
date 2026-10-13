@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_rm/
   - /docs/iac/cli/commands/pulumi_stack_delete/
   - /docs/reference/cli/pulumi_stack_delete/
-meta_desc: "Learn about the pulumi stack remove command."
+meta_desc: "Reference for the pulumi stack remove command: remove a stack and its configuration. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

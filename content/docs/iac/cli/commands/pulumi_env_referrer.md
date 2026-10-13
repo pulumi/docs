@@ -3,7 +3,7 @@
 title: "pulumi env referrer | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_referrer/
-meta_desc: "Learn about the pulumi env referrer command."
+meta_desc: "Reference for the pulumi env referrer command: manage environment referrers. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

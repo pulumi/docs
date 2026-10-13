@@ -3,7 +3,7 @@
 title: "pulumi insights resource get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_insights_resource_get/
-meta_desc: "Learn about the pulumi insights resource get command."
+meta_desc: "Reference for the pulumi insights resource get command: get a single resource discovered by Pulumi Insights. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

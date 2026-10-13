@@ -3,7 +3,7 @@
 title: "pulumi org | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org/
-meta_desc: "Learn about the pulumi org command."
+meta_desc: "Reference for the pulumi org command: manage Organization configuration. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

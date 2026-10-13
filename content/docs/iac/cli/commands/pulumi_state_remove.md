@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_state_rm/
   - /docs/iac/cli/commands/pulumi_state_delete/
   - /docs/reference/cli/pulumi_state_delete/
-meta_desc: "Learn about the pulumi state remove command."
+meta_desc: "Reference for the pulumi state remove command: deletes one or more resources from a stack's state. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

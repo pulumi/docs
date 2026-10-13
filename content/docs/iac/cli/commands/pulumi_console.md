@@ -3,7 +3,7 @@
 title: "pulumi console | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_console/
-meta_desc: "Learn about the pulumi console command."
+meta_desc: "Reference for the pulumi console command: opens the current stack in the Pulumi Console. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

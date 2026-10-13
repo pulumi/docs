@@ -3,7 +3,7 @@
 title: "pulumi stack tag set | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_set/
-meta_desc: "Learn about the pulumi stack tag set command."
+meta_desc: "Reference for the pulumi stack tag set command: set a stack tag. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

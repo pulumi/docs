@@ -3,7 +3,7 @@
 title: "pulumi deployment cancel | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_deployment_cancel/
-meta_desc: "Learn about the pulumi deployment cancel command."
+meta_desc: "Reference for the pulumi deployment cancel command: cancel an in-progress deployment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

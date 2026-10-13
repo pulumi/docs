@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_member_list/
   - /docs/iac/cli/commands/pulumi_org_member_ls/
   - /docs/reference/cli/pulumi_org_member_ls/
-meta_desc: "Learn about the pulumi org member list command."
+meta_desc: "Reference for the pulumi org member list command: list members of an organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi do show-resources | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_do_show-resources/
-meta_desc: "Learn about the pulumi do show-resources command."
+meta_desc: "Reference for the pulumi do show-resources command: show the identifiers pulumi do will auto-assign to resources in the current stack."
 ---
 
 

@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_package_create/
   - /docs/iac/cli/commands/pulumi_package_setup/
   - /docs/reference/cli/pulumi_package_setup/
-meta_desc: "Learn about the pulumi package new command."
+meta_desc: "Reference for the pulumi package new command: create a new Pulumi package. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

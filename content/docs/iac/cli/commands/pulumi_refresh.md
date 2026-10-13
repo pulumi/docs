@@ -3,7 +3,7 @@
 title: "pulumi refresh | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_refresh/
-meta_desc: "Learn about the pulumi refresh command."
+meta_desc: "Reference for the pulumi refresh command: refresh the resources in a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

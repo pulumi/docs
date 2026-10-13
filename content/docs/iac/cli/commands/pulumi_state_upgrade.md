@@ -3,7 +3,7 @@
 title: "pulumi state upgrade | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_upgrade/
-meta_desc: "Learn about the pulumi state upgrade command."
+meta_desc: "Reference for the pulumi state upgrade command: migrates the current backend to the latest supported version. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

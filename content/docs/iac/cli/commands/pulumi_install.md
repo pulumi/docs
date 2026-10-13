@@ -3,7 +3,7 @@
 title: "pulumi install | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_install/
-meta_desc: "Learn about the pulumi install command."
+meta_desc: "Reference for the pulumi install command: install packages and plugins for the current program or policy pack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_insights_account_list/
   - /docs/iac/cli/commands/pulumi_insights_account_ls/
   - /docs/reference/cli/pulumi_insights_account_ls/
-meta_desc: "Learn about the pulumi insights account list command."
+meta_desc: "Reference for the pulumi insights account list command: list Insights accounts available to the authenticated user."
 ---
 
 

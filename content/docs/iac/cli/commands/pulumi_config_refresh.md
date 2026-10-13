@@ -3,7 +3,7 @@
 title: "pulumi config refresh | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_refresh/
-meta_desc: "Learn about the pulumi config refresh command."
+meta_desc: "Reference for the pulumi config refresh command: update the local configuration based on the most recent deployment of the stack."
 ---
 
 

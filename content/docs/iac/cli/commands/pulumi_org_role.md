@@ -3,7 +3,7 @@
 title: "pulumi org role | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_role/
-meta_desc: "Learn about the pulumi org role command."
+meta_desc: "Reference for the pulumi org role command: manage organization custom roles. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

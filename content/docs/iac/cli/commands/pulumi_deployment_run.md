@@ -3,7 +3,7 @@
 title: "pulumi deployment run | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_deployment_run/
-meta_desc: "Learn about the pulumi deployment run command."
+meta_desc: "Reference for the pulumi deployment run command: launch a deployment job on Pulumi Cloud. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

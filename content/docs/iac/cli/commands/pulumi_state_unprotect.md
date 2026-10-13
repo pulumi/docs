@@ -3,7 +3,7 @@
 title: "pulumi state unprotect | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_unprotect/
-meta_desc: "Learn about the pulumi state unprotect command."
+meta_desc: "Reference for the pulumi state unprotect command: unprotect resources in a stack's state. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

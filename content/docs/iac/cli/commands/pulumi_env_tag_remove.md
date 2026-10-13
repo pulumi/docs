@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_tag_rm/
   - /docs/iac/cli/commands/pulumi_env_tag_delete/
   - /docs/reference/cli/pulumi_env_tag_delete/
-meta_desc: "Learn about the pulumi env tag remove command."
+meta_desc: "Reference for the pulumi env tag remove command: remove an environment tag. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

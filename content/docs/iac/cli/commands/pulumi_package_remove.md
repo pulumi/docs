@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_package_rm/
   - /docs/iac/cli/commands/pulumi_package_delete/
   - /docs/reference/cli/pulumi_package_delete/
-meta_desc: "Learn about the pulumi package remove command."
+meta_desc: "Reference for the pulumi package remove command: delete a package version from the registry. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

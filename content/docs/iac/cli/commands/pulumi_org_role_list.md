@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_role_list/
   - /docs/iac/cli/commands/pulumi_org_role_ls/
   - /docs/reference/cli/pulumi_org_role_ls/
-meta_desc: "Learn about the pulumi org role list command."
+meta_desc: "Reference for the pulumi org role list command: list custom roles for an organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

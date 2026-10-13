@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_version_tag_list/
   - /docs/iac/cli/commands/pulumi_env_version_tag_ls/
   - /docs/reference/cli/pulumi_env_version_tag_ls/
-meta_desc: "Learn about the pulumi env version tag list command."
+meta_desc: "Reference for the pulumi env version tag list command: list tagged versions. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

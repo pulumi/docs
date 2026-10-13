@@ -3,7 +3,7 @@
 title: "pulumi state rename | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_rename/
-meta_desc: "Learn about the pulumi state rename command."
+meta_desc: "Reference for the pulumi state rename command: renames a resource from a stack's state. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

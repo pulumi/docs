@@ -3,7 +3,7 @@
 title: "pulumi env provider aws-login static | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_provider_aws-login_static/
-meta_desc: "Learn about the pulumi env provider aws-login static command."
+meta_desc: "Reference for the pulumi env provider aws-login static command: add an AWS static-credentials login provider to an environment."
 ---
 
 

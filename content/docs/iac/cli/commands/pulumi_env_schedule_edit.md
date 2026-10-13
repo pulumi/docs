@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_schedule_update/
   - /docs/iac/cli/commands/pulumi_env_schedule_modify/
   - /docs/reference/cli/pulumi_env_schedule_modify/
-meta_desc: "Learn about the pulumi env schedule edit command."
+meta_desc: "Reference for the pulumi env schedule edit command: edit an environment scheduled action. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

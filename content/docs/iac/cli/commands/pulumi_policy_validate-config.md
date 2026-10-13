@@ -3,7 +3,7 @@
 title: "pulumi policy validate-config | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_validate-config/
-meta_desc: "Learn about the pulumi policy validate-config command."
+meta_desc: "Reference for the pulumi policy validate-config command: validate a Policy Pack configuration. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 
