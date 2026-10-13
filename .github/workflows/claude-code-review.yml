@@ -1983,6 +1983,66 @@ jobs:
           retention-days: 90
           if-no-files-found: ignore
 
+      # ---- usage telemetry --------------------------------------------------
+      # One usage row per model call (extract ×2, readthrough, verify, the
+      # Opus compose step) and one per verified claim, written to S3 by the
+      # record-usage job below so cost per PR/step/claim outlives the runner.
+      # always(): failed, timed-out and superseded runs were billed too. The
+      # recorder comes from the DEFAULT branch, never the PR head (the head may
+      # predate it, and it's the same trust rule as the publish job). Telemetry
+      # only: every step here is continue-on-error and writes nothing visible.
+      - name: Checkout usage recorder (default branch)
+        if: always() && steps.pr-context.outputs.pr_number != ''
+        continue-on-error: true
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: .review-telemetry-tools
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: scripts/review-telemetry
+
+      - name: Build usage rows
+        if: always() && steps.pr-context.outputs.pr_number != ''
+        continue-on-error: true
+        run: |
+          [ -f .review-telemetry-tools/scripts/review-telemetry/record-usage.py ] \
+            || { echo "usage recorder not on the default branch yet; skipping"; exit 0; }
+          # Efforts mirror EFFORT in readthrough.py / verify-claims.py and the
+          # Opus step's --effort above; change them together.
+          COMPOSE_OUTCOME="${{ steps.claude-review.outcome }}"
+          [ "${{ steps.outcome.outputs.timed_out }}" = "true" ] && COMPOSE_OUTCOME=timeout
+          python3 .review-telemetry-tools/scripts/review-telemetry/record-usage.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --head-sha "${{ steps.pr-context.outputs.head_sha }}" \
+            --job-started-at "${{ steps.job-start.outputs.epoch }}" \
+            --source meta:extract-atomic:.candidate-claims-llm-1.json \
+            --source meta:extract-holistic:.candidate-claims-llm-2.json \
+            --source meta:readthrough:.readthrough-findings.json \
+            --source claims:verify:.verified-claims.json \
+            --source "exec:compose:${{ runner.temp }}/claude-execution-output.json" \
+            --outcome "extract-atomic=${{ steps.extract-claims-llm.outcome }}" \
+            --outcome "extract-holistic=${{ steps.extract-claims-llm.outcome }}" \
+            --outcome "readthrough=${{ steps.readthrough.outcome }}" \
+            --outcome "verify=${{ steps.verify-claims.outcome }}" \
+            --outcome "compose=$COMPOSE_OUTCOME" \
+            --effort readthrough=high --effort verify=medium --effort compose=low \
+            --model compose=claude-opus-5-5 \
+            --started-at "compose=${{ steps.review-start.outputs.epoch }}"
+
+      - name: Upload usage rows
+        if: always() && steps.pr-context.outputs.pr_number != ''
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: docs-agent-usage-${{ github.job }}-attempt${{ github.run_attempt }}
+          path: .docs-agent-usage/
+          include-hidden-files: true
+          overwrite: true
+          retention-days: 30
+          if-no-files-found: ignore
+      # ---- end usage telemetry ----------------------------------------------
+
       # Debug artifacts for the post-edit chain. Capture the validator's
       # fix-me JSON, the splicer's fallback list, and the spliced body so
       # post-mortem on splicer behavior / validator pairing doesn't require
@@ -2875,3 +2935,19 @@ jobs:
             -f ack_target="${{ github.event.inputs.ack_target }}" \
             -f prior_high_water="${{ github.event.inputs.prior_high_water || '0' }}" \
             -f supersede_depth="$NEXT_DEPTH"
+
+  # Copies the usage rows the review job built (and, on the triage-triggered
+  # path, the triage run's prose-check row) to the ledger bucket's `usage/`
+  # prefix. always(): a failed, timed-out or superseded review was still
+  # billed. Not on pull_request: that path is mark-stale/auto-refresh, which
+  # calls no model. See record-docs-agent-usage.yml.
+  record-usage:
+    needs: claude-review
+    if: always() && github.event_name != 'pull_request'
+    uses: ./.github/workflows/record-docs-agent-usage.yml
+    with:
+      extra-run-id: ${{ github.event.workflow_run.id || '' }}
+    permissions:
+      contents: read
+      actions: read
+      id-token: write

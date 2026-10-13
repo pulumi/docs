@@ -1279,6 +1279,73 @@ jobs:
             fi
           fi
 
+      # ---- usage telemetry --------------------------------------------------
+      # The Opus step's usage (one row per model in its execution log), for
+      # the record-usage job below. Until this, the update lane's spend was
+      # visible only in its job log. always(): a failed or superseded refresh
+      # was billed too. Recorder from the DEFAULT branch, never the PR head.
+      - name: Checkout usage recorder (default branch)
+        if: always() && steps.head.outputs.superseded != 'true'
+        continue-on-error: true
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: .review-telemetry-tools
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: scripts/review-telemetry
+
+      - name: Build usage rows
+        if: always() && steps.head.outputs.superseded != 'true'
+        continue-on-error: true
+        env:
+          HEAD_SHA: ${{ steps.head.outputs.sha }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          [ -f .review-telemetry-tools/scripts/review-telemetry/record-usage.py ] \
+            || { echo "usage recorder not on the default branch yet; skipping"; exit 0; }
+          # Exactly one of the two model steps runs; name the row after it.
+          if [ "${{ steps.claude-v3.outcome }}" != "skipped" ] && [ -n "${{ steps.claude-v3.outcome }}" ]; then
+            STEP=update-v3; OUTCOME="${{ steps.claude-v3.outcome }}"
+          else
+            STEP=update-v2; OUTCOME="${{ steps.claude.outcome }}"
+          fi
+          # An `issues` event has no PR head; its row carries no PR.
+          PR_ARGS=()
+          [ -n "$HEAD_SHA" ] && [ -n "$PR" ] && PR_ARGS=(--pr "$PR" --head-sha "$HEAD_SHA")
+          # Effort mirrors the model steps' --effort above; change them together.
+          python3 .review-telemetry-tools/scripts/review-telemetry/record-usage.py \
+            "${PR_ARGS[@]}" \
+            --source "exec:$STEP:${{ runner.temp }}/claude-execution-output.json" \
+            --outcome "$STEP=$OUTCOME" \
+            --effort "$STEP=medium" \
+            --model "$STEP=claude-opus-5-5"
+
+      - name: Upload usage rows
+        if: always() && steps.head.outputs.superseded != 'true'
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: docs-agent-usage-${{ github.job }}-attempt${{ github.run_attempt }}
+          path: .docs-agent-usage/
+          include-hidden-files: true
+          overwrite: true
+          retention-days: 30
+          if-no-files-found: ignore
+      # ---- end usage telemetry ----------------------------------------------
+
+  # Copies the update lane's usage rows to the ledger bucket's `usage/`
+  # prefix. always(): a failed or superseded refresh was still billed.
+  # See record-docs-agent-usage.yml.
+  record-usage:
+    needs: claude-update
+    if: always() && needs.claude-update.result != 'skipped'
+    uses: ./.github/workflows/record-docs-agent-usage.yml
+    permissions:
+      contents: read
+      actions: read
+      id-token: write
+
 env:
   ESC_ACTION_OIDC_AUTH: true
   ESC_ACTION_OIDC_ORGANIZATION: pulumi

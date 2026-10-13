@@ -23,7 +23,9 @@ One JSON object per (PR, head SHA), written by the credentialed record job in
   block; the PR is the disposition source of truth, S3 is the telemetry/audit
   mirror).
 - Other prefixes: `pr-review/waives/` (waive log), `pr-review/state/<pr>.json`
-  (SLA-sweep actions), `pr-review/runs/<date>/` (immutable run records).
+  (SLA-sweep actions), `pr-review/runs/<date>/` (immutable run records),
+  `pr-review/outcomes/<pr>.json` (finding outcomes at close; see
+  `scripts/review-telemetry/`).
 - Degradation contract (same as `scripts/content-review/record-review.py`):
   `PR_REVIEW_EVIDENCE_URI` unset ⇒ write local files + `::warning::`, never
   fail. The record job uploads the local copies as a workflow artifact either

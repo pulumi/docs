@@ -199,6 +199,7 @@ jobs:
       # fallback so initial review still runs correctly.
       - name: Run triage classification
         if: steps.check-access.outputs.has_write_access == 'true'
+        id: classify
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -282,6 +283,10 @@ jobs:
               -H "anthropic-version: 2023-06-01" \
               -H "content-type: application/json" \
               -d "$REQUEST" || echo '{"error":"curl_failed"}')
+            # Keep the call's usage for the usage-telemetry step below; the
+            # rest of the response is discarded as before.
+            printf '%s' "$RESPONSE" | jq -c '{model, usage, type, error}' > .triage-usage.json 2>/dev/null \
+              || rm -f .triage-usage.json
             TEXT=$(echo "$RESPONSE" | jq -r '[.content[]? | select(.type == "text") | .text] | join("")')
             if [[ -n "$TEXT" ]]; then
               PROSE_JSON=$(echo "$TEXT" \
@@ -681,3 +686,45 @@ jobs:
               --repo "${{ github.repository }}" \
               --clear
           fi
+
+      # ---- usage telemetry --------------------------------------------------
+      # The Haiku prose check's usage, as one row for the review's
+      # record-usage job (claude-code-review.yml), which picks up this run's
+      # docs-agent-usage-* artifact on the workflow_run it triggers and copies
+      # it to the ledger bucket. No row when no model call was made (the
+      # common case). Recorder from the DEFAULT branch, never the PR head.
+      - name: Checkout usage recorder (default branch)
+        if: always() && hashFiles('.triage-usage.json') != ''
+        continue-on-error: true
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: .review-telemetry-tools
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: scripts/review-telemetry
+
+      - name: Build usage rows
+        if: always() && hashFiles('.triage-usage.json') != ''
+        continue-on-error: true
+        run: |
+          [ -f .review-telemetry-tools/scripts/review-telemetry/record-usage.py ] \
+            || { echo "usage recorder not on the default branch yet; skipping"; exit 0; }
+          python3 .review-telemetry-tools/scripts/review-telemetry/record-usage.py \
+            --pr "${{ github.event.pull_request.number }}" \
+            --head-sha "${{ github.event.pull_request.head.sha }}" \
+            --source usage:triage-prose:.triage-usage.json \
+            --outcome "triage-prose=${{ steps.classify.outcome }}" \
+            --effort triage-prose=low
+
+      - name: Upload usage rows
+        if: always() && hashFiles('.triage-usage.json') != ''
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: docs-agent-usage-${{ github.job }}-attempt${{ github.run_attempt }}
+          path: .docs-agent-usage/
+          include-hidden-files: true
+          overwrite: true
+          retention-days: 30
+          if-no-files-found: ignore

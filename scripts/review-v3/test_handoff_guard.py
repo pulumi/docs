@@ -304,4 +304,7 @@ def test_jobs_downstream_of_autofire_gate_survive_its_skip():
     downstream = [n for n in jobs if "autofire-gate" in ancestors(n)]
     assert {"claude-review", "publish", "redispatch"} <= set(downstream)
     for name in downstream:
-        assert "!cancelled()" in jobs[name].get("if", ""), name
+        # always() also survives the skip; record-usage uses it because a
+        # cancelled review was still billed.
+        cond = jobs[name].get("if", "")
+        assert "!cancelled()" in cond or "always()" in cond, name
