@@ -432,7 +432,12 @@ def test_a_row_carries_its_age_without_crowding_the_meta_line():
     assert render.age_label({"created_at": "2026-03-01T00:00:00Z"}, now) == "6mo"  # never longer than four chars
     assert render.age_label({"created_at": ""}, now) == "today"  # a missing date reads as new, never as ancient
 
-    q = run([stampable(7), stampable(8, title="Been sitting a while", created_at="2026-01-05T00:00:00Z")])
+    # The board ages rows against the real clock, so the plain row's date has
+    # to be relative too: `stampable`'s fixed default (2026-09-10) turned
+    # amber on 2026-10-10 and this assertion has failed ever since.
+    fresh = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    q = run([stampable(7, created_at=fresh),
+             stampable(8, title="Been sitting a while", created_at="2026-01-05T00:00:00Z")])
     html = render.render_board(q)
     assert f'>{render.age_label(row(q, 7))}</span>' in html
     assert 'class="age old"' in html and 'class="age"' in html  # amber past 30 days, plain before it

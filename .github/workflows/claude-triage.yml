@@ -491,6 +491,8 @@ jobs:
 
           - Split the hand-written source (scripts, workflows, layouts, templates) into its own PR — that PR gets a normal full review.
           - Have a human review this PR by hand, assisted by their own AI subscription seat (for example, Claude Code running \`/docs-review\` locally against this PR). A local session has no job timeout, so it can focus on the hand-written source and spot-check a sample of the generated output.
+
+          **Reviewer:** when you approve after reviewing by hand, put \`sentinel:oversized-ack\` anywhere in your **Approve** review's comment, or run \`gh pr review $PR --approve --body sentinel:oversized-ack\`. That's what tells the Sentinel's G5 gate a human reviewed this PR. A PR comment or a line comment doesn't count, and neither does an approval of an earlier commit, so re-approve with it after a push.
           EOF
           )
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true

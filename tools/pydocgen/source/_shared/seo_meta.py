@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Sphinx extension adding a page-specific meta description, page title, and
 APIReference JSON-LD block to the Pulumi Python SDK reference docs
-(pulumi, pulumi_policy, pulumi_esc_sdk).
+(pulumi, pulumi_policy, pulumi_esc_sdk, pulumi_cloud_sdk).
 
-Shared by all three packages' conf.py via a relative sys.path append; keep
+Shared by all four packages' conf.py via a relative sys.path append; keep
 this file's behavior generic across all of them rather than hardcoding one
 package's specifics.
 

@@ -75,6 +75,7 @@ REPOS=(
     "policy,index.ts,pulumi-policy,sdk/nodejs/policy"
     "pulumi,index.ts,pulumi/sdk/nodejs"
     "esc-sdk,index.ts,esc-sdk/sdk/typescript/esc"
+    "cloud-sdk,src/index.ts,pulumi-cloud-sdk/nodejs"
 )
 
 PIDS=()

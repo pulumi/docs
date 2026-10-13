@@ -1,0 +1,42 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../pulumi-cloud-sdk/dotnet",
+          "files": ["Pulumi.Cloud.Sdk.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Cloud.Sdk"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "src": "metadata",
+        "files": ["**/*.yml"],
+        "dest": "."
+      }
+    ],
+    "overwrite": [],
+    "dest": "../static-prebuilt/docs/reference/pkg/dotnet/cloud-sdk",
+    "globalMetadata": {
+      "_appFooter": "Copyright 2016-2026, Pulumi Corporation.",
+      "_pulumiSdkName": "Pulumi Cloud",
+      "_pulumiSdkLibrary": "Pulumi.Cloud.Sdk",
+      "_pulumiSdkRepository": "https://github.com/pulumi/pulumi-cloud-sdk"
+    },
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "./pulumi-template"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

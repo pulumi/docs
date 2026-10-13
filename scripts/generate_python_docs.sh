@@ -9,7 +9,7 @@
 # other's output.
 #
 # Required env:
-#   PACKAGE  one of: pulumi, pulumi_policy, pulumi_esc_sdk
+#   PACKAGE  one of: pulumi, pulumi_policy, pulumi_esc_sdk, pulumi_cloud_sdk
 #
 # Optional env:
 #   VERSION  pin the primary package ($PACKAGE) to this exact version instead of
@@ -20,14 +20,15 @@
 set -o errexit -o pipefail
 set -x
 
-PACKAGE="${PACKAGE:?Set PACKAGE to one of: pulumi, pulumi_policy, pulumi_esc_sdk}"
+PACKAGE="${PACKAGE:?Set PACKAGE to one of: pulumi, pulumi_policy, pulumi_esc_sdk, pulumi_cloud_sdk}"
 
 case "$PACKAGE" in
   pulumi)         INSTALL=("pulumi") ;;
   pulumi_policy)  INSTALL=("pulumi" "pulumi_policy") ;;
   pulumi_esc_sdk) INSTALL=("pulumi_esc_sdk") ;;
+  pulumi_cloud_sdk) INSTALL=("pulumi_cloud_sdk") ;;
   *)
-    echo "Unknown PACKAGE: $PACKAGE (expected: pulumi, pulumi_policy, pulumi_esc_sdk)" >&2
+    echo "Unknown PACKAGE: $PACKAGE (expected: pulumi, pulumi_policy, pulumi_esc_sdk, pulumi_cloud_sdk)" >&2
     exit 1
     ;;
 esac

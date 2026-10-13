@@ -52,7 +52,14 @@ declare -A WORKFLOW=(
   [nodejs-esc-sdk]=pulumi-esc-sdk-typescript-docs.yml
   [python-esc-sdk]=pulumi-esc-sdk-python-docs.yml
   [dotnet-esc-sdk]=pulumi-esc-sdk-dotnet-docs.yml
+  [nodejs-cloud-sdk]=pulumi-cloud-sdk-typescript-docs.yml
+  [python-cloud-sdk]=pulumi-cloud-sdk-python-docs.yml
+  [dotnet-cloud-sdk]=pulumi-cloud-sdk-dotnet-docs.yml
+  [java-cloud-sdk]=pulumi-cloud-sdk-java-docs.yml
 )
+# The *-cloud-sdk tools are left out of the default set: pulumi-cloud-sdk releases are
+# date-versioned (v<YYYY-MM-DD>--<HHMM> tags), which the per-major.minor tag walk below can't
+# enumerate. Back them up explicitly with --tools ... --versions-from manifest.
 ALL_TOOLS="pulumi-cli nodejs python dotnet java nodejs-policy python-policy nodejs-esc-sdk python-esc-sdk dotnet-esc-sdk"
 
 # Source repo per tool — used by --versions-from tags to enumerate the REAL release history
@@ -69,6 +76,10 @@ declare -A REPO=(
   [nodejs-esc-sdk]=pulumi/esc-sdk
   [python-esc-sdk]=pulumi/esc-sdk
   [dotnet-esc-sdk]=pulumi/esc-sdk
+  [nodejs-cloud-sdk]=pulumi/pulumi-cloud-sdk
+  [python-cloud-sdk]=pulumi/pulumi-cloud-sdk
+  [dotnet-cloud-sdk]=pulumi/pulumi-cloud-sdk
+  [java-cloud-sdk]=pulumi/pulumi-cloud-sdk
 )
 
 ENV=""; SOURCE_BASE="https://www.pulumi-test.io"; TOOLS=""; REF=""

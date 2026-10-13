@@ -179,8 +179,12 @@ We generate reference documentation in two surfaces — language-specific SDK do
 | Pulumi SDK — Java | `pulumi/pulumi-java` | [`pulumi-sdk-java-docs.yml`](.github/workflows/pulumi-sdk-java-docs.yml) | `static-prebuilt/docs/reference/pkg/jvm/` |
 | Pulumi Policy SDK — Python | `pulumi/pulumi-policy`* | [`pulumi-policy-sdk-python-docs.yml`](.github/workflows/pulumi-policy-sdk-python-docs.yml) | `static-prebuilt/docs/reference/pkg/python/pulumi_policy/` |
 | Pulumi ESC SDK — Python | `pulumi/esc-sdk`* | [`pulumi-esc-sdk-python-docs.yml`](.github/workflows/pulumi-esc-sdk-python-docs.yml) | `static-prebuilt/docs/reference/pkg/python/pulumi_esc_sdk/` |
+| Pulumi Cloud SDK — TypeScript | `pulumi/pulumi-cloud-sdk`* | [`pulumi-cloud-sdk-typescript-docs.yml`](.github/workflows/pulumi-cloud-sdk-typescript-docs.yml) | `static-prebuilt/docs/reference/pkg/nodejs/pulumi/cloud-sdk/` |
+| Pulumi Cloud SDK — Python | `pulumi/pulumi-cloud-sdk`* | [`pulumi-cloud-sdk-python-docs.yml`](.github/workflows/pulumi-cloud-sdk-python-docs.yml) | `static-prebuilt/docs/reference/pkg/python/pulumi_cloud_sdk/` |
+| Pulumi Cloud SDK — .NET | `pulumi/pulumi-cloud-sdk`* | [`pulumi-cloud-sdk-dotnet-docs.yml`](.github/workflows/pulumi-cloud-sdk-dotnet-docs.yml) | `static-prebuilt/docs/reference/pkg/dotnet/cloud-sdk/` |
+| Pulumi Cloud SDK — Java | `pulumi/pulumi-cloud-sdk`* | [`pulumi-cloud-sdk-java-docs.yml`](.github/workflows/pulumi-cloud-sdk-java-docs.yml) | `static-prebuilt/docs/reference/pkg/java/cloud-sdk/` |
 
-(\*) These two workflows are `workflow_dispatch`-only today; an upstream `repository_dispatch` from the source repo is a planned follow-up.
+(\*) These workflows are `workflow_dispatch`-only today; an upstream `repository_dispatch` from the source repo is a planned follow-up.
 
 (Go SDK docs aren't generated here — they're hosted at [pkg.go.dev](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi) directly from `pulumi/pulumi`.)
 
@@ -207,6 +211,9 @@ gh workflow run pulumi-sdk-java-docs.yml --repo pulumi/docs --ref master -f vers
 gh workflow run pulumi-policy-sdk-python-docs.yml --repo pulumi/docs --ref master -f version=<policy-version>
 gh workflow run pulumi-esc-sdk-python-docs.yml   --repo pulumi/docs --ref master -f version=<esc-sdk-version>
 
+# Pulumi Cloud SDK (typescript, python, dotnet, java), e.g. version=2026.10.9
+gh workflow run pulumi-cloud-sdk-python-docs.yml --repo pulumi/docs --ref master -f version=<cloud-sdk-version>
+
 # Pulumi CLI markdown
 gh workflow run pulumi-cli-docs.yml --repo pulumi/docs --ref master -f version=3.238.0
 ```
@@ -224,10 +231,11 @@ make update-repos   # Clone sibling pulumi/pulumi (etc.) repos — needed for th
 # TypeScript: pulumi package only
 NOBUILD=true PKGS=pulumi ./scripts/run_typedoc.sh
 
-# Python: pick one package per invocation. Valid PACKAGE values: pulumi, pulumi_policy, pulumi_esc_sdk.
+# Python: pick one package per invocation. Valid PACKAGE values: pulumi, pulumi_policy, pulumi_esc_sdk, pulumi_cloud_sdk.
 PACKAGE=pulumi          ./scripts/generate_python_docs.sh
 PACKAGE=pulumi_policy   ./scripts/generate_python_docs.sh
 PACKAGE=pulumi_esc_sdk  ./scripts/generate_python_docs.sh
+PACKAGE=pulumi_cloud_sdk ./scripts/generate_python_docs.sh
 
 # .NET (requires `dotnet` and the `docfx` global tool on PATH)
 dotnet tool install -g docfx    # one-time
@@ -235,6 +243,8 @@ dotnet tool install -g docfx    # one-time
 
 # Java (requires Java 17 + Gradle; see pulumi-sdk-java-docs.yml for details)
 JAVA_REPO=../pulumi-java ./scripts/gen_javadoc.sh
+# The Pulumi Cloud Java SDK uses the same script with JAVADOC_* overrides; see
+# the env block in pulumi-cloud-sdk-java-docs.yml.
 
 # Pulumi CLI markdown — uses the currently-installed `pulumi` binary, so install
 # the version you're documenting before running.

@@ -43,13 +43,19 @@ name: Sentinel
 # check on the PR ("Sentinel / sentinel — Cancelled"), and a group cancels
 # the older pending job even with cancel-in-progress off, so any burst of
 # triggers put a red ✗ in the merge box (65 of 200 runs, 2026-09-12 → 14).
-# Overlapping runs are cheap (no model, ~50 s) and are made safe by two
+# Overlapping runs are cheap (no model, ~50 s) and are made safe by three
 # things instead: the job-level `if` below ignores label events for labels
 # the evaluator never reads (triage's `domain:*` batch on open was most of
-# the burst), and scripts/review-v3/publish_guard.py refuses to publish a
+# the burst), scripts/review-v3/publish_guard.py refuses to publish a
 # verdict when the PR head has moved or a newer run already published at
-# this head (every check-run carries `external_id = run id`). A guarded-out
-# run concludes success with a ::notice::, never cancelled.
+# this head (every check-run carries `external_id = run id`), and
+# sentinel.py's `update_status_comment` collapses duplicate status comments
+# onto the oldest. That last one is the comment's guard, not the check's:
+# two runs that start together (open as draft then mark ready; a bot lane
+# opening and labelling at once) both find no comment and both post one,
+# and before the collapse the second copy froze on its first verdict
+# (pulumi/docs#22251). A guarded-out run concludes success with a
+# ::notice::, never cancelled.
 
 on:
   pull_request_target:
@@ -87,6 +93,8 @@ permissions:
   # (PR #21642, 2026-09-16) failed with exit 1. `issues: write` is kept
   # because gh's own endpoint naming keeps inviting it back; it is not the
   # one doing the work.
+  # The same scope also covers DELETE on those comments, which is how
+  # `update_status_comment` removes a duplicate status comment.
   pull-requests: write
   issues: write
   contents: read

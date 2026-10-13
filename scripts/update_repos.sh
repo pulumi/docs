@@ -16,6 +16,7 @@ TOOLS_REPOS=(
     "pulumi"
     "pulumi-policy"
     "esc-sdk"
+    "pulumi-cloud-sdk"
 )
 
 update_repo() {

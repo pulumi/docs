@@ -92,6 +92,34 @@ sections:
     link: /docs/reference/pkg/dotnet/esc-sdk/pulumi.esc.sdk/pulumi.esc.sdk.html
 
 - type: button-cards
+  heading: Cloud SDKs
+  cards:
+  - image: /logos/tech/typescript.svg
+    heading: TypeScript Cloud SDK ↗
+    description: API reference for calling the Pulumi Cloud REST API from Node.js with TypeScript or JavaScript.
+    link: /docs/reference/pkg/nodejs/pulumi/cloud-sdk/
+
+  - image: /logos/tech/python.svg
+    heading: Python Cloud SDK ↗
+    description: API reference for calling the Pulumi Cloud REST API from Python.
+    link: /docs/reference/pkg/python/pulumi_cloud_sdk/
+
+  - image: /logos/tech/go.svg
+    heading: Go Cloud SDK ↗
+    description: API reference for calling the Pulumi Cloud REST API from Go.
+    link: https://pkg.go.dev/github.com/pulumi/pulumi-cloud-sdk/go/apiclient
+
+  - image: /logos/tech/dotnet.svg
+    heading: .NET Cloud SDK ↗
+    description: API reference for calling the Pulumi Cloud REST API from .NET.
+    link: /docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.html
+
+  - image: /logos/tech/java.svg
+    heading: Java Cloud SDK ↗
+    description: API reference for calling the Pulumi Cloud REST API from Java.
+    link: /docs/reference/pkg/java/cloud-sdk/
+
+- type: button-cards
   heading: APIs & Configuration
   cards:
   - icon: plug

@@ -1,13 +1,42 @@
 #!/usr/bin/env bash
 
+# Builds a Javadoc docset with gradle and copies it into static-prebuilt/.
+#
+# Configurable via environment variables (defaults build the core Pulumi Java SDK
+# from a pulumi-java checkout):
+#   JAVA_REPO              source repo checkout (default: $HOME/pulumi-java)
+#   JAVA_SDK_VERSION       version passed to gradle, with or without a leading "v"
+#   JAVADOC_PROJECT_DIR    gradle project to run javadoc in (default: $JAVA_REPO/sdk/java)
+#   JAVADOC_SRC            javadoc output to copy (default: <project>/pulumi/build/docs/javadoc)
+#   JAVADOC_DEST           destination (default: static-prebuilt/docs/reference/pkg/java)
+#   JAVADOC_GRADLE         gradle command (default: gradle)
+#   JAVADOC_PRESERVE       space-separated subdirectories of JAVADOC_DEST that hold
+#                          nested docsets with their own runs; they survive the
+#                          wipe below and are skipped by the SEO pass (default: cloud-sdk)
+#   JAVADOC_SDK_NAME, JAVADOC_LIBRARY, JAVADOC_REPOSITORY, JAVADOC_PACKAGE_BLURB
+#                          how the SEO pass names the docset; see
+#                          javadoc_seo_postprocess.py (default: the Pulumi Java SDK)
+
 set -euo pipefail
 REPO="${JAVA_REPO:-$HOME/pulumi-java}"
-SRC=$REPO/sdk/java/pulumi/build/docs/javadoc
-DEST=./static-prebuilt/docs/reference/pkg/java
+PROJECT_DIR="${JAVADOC_PROJECT_DIR:-$REPO/sdk/java}"
+SRC="${JAVADOC_SRC:-$PROJECT_DIR/pulumi/build/docs/javadoc}"
+DEST="${JAVADOC_DEST:-./static-prebuilt/docs/reference/pkg/java}"
+GRADLE="${JAVADOC_GRADLE:-gradle}"
+PRESERVE="${JAVADOC_PRESERVE-cloud-sdk}"
+SDK_VERSION="${JAVA_SDK_VERSION:-}"
+SDK_VERSION="${SDK_VERSION#v}"
 
-(cd "$REPO/sdk/java" && PULUMI_JAVA_SDK_VERSION="${JAVA_SDK_VERSION#v}" gradle javadoc)
-rm -rf "$DEST"
-cp -r "$SRC" "$DEST"
+# pulumi-java reads PULUMI_JAVA_SDK_VERSION; pulumi-cloud-sdk reads PACKAGE_VERSION.
+(cd "$PROJECT_DIR" && PULUMI_JAVA_SDK_VERSION="$SDK_VERSION" PACKAGE_VERSION="$SDK_VERSION" $GRADLE javadoc)
+
+mkdir -p "$DEST"
+KEEP=()
+for dir in $PRESERVE; do
+    KEEP+=(! -name "$dir")
+done
+find "$DEST" -mindepth 1 -maxdepth 1 ${KEEP[@]+"${KEEP[@]}"} -exec rm -rf {} +
+cp -R "$SRC"/. "$DEST"/
 
 # --- SEO/AEO head metadata post-pass --------------------------------------
 # The stock Javadoc doclet has no editable theme template in this repo, so
@@ -15,11 +44,30 @@ cp -r "$SRC" "$DEST"
 # template change, the same approach scripts/run_typedoc.sh takes for the
 # Node.js SDK reference.
 echo "Injecting SEO head metadata (canonical, per-page description, JSON-LD)"
+# The canonical base URL is derived from where the output lands under
+# static-prebuilt/ (served from the site root), as in scripts/run_docfx.sh.
+case "$DEST" in
+    *static-prebuilt/*) ;;
+    *)
+        echo "ERROR: can't derive canonical URLs: JAVADOC_DEST is not under static-prebuilt/: ${DEST}" >&2
+        exit 1
+        ;;
+esac
+SEO_ARGS=()
+for dir in $PRESERVE; do
+    SEO_ARGS+=(--exclude "$dir")
+done
+[ -n "${JAVADOC_SDK_NAME:-}" ] && SEO_ARGS+=(--sdk-name "$JAVADOC_SDK_NAME")
+[ -n "${JAVADOC_LIBRARY:-}" ] && SEO_ARGS+=(--library "$JAVADOC_LIBRARY")
+[ -n "${JAVADOC_REPOSITORY:-}" ] && SEO_ARGS+=(--repository "$JAVADOC_REPOSITORY")
+[ -n "${JAVADOC_PACKAGE_BLURB:-}" ] && SEO_ARGS+=(--package-blurb "$JAVADOC_PACKAGE_BLURB")
 python3 "$(dirname "$0")/javadoc_seo_postprocess.py" \
     "$DEST" \
-    "https://www.pulumi.com/docs/reference/pkg/java"
+    "https://www.pulumi.com/${DEST#*static-prebuilt/}" \
+    ${SEO_ARGS[@]+"${SEO_ARGS[@]}"}
 
-cat > static-prebuilt/docs/reference/pkg/java/search.js <<"EOF"
+# Patches the JDK 11 doclet's search.js, which puts "undefined" in result URLs.
+cat > "$DEST/search.js" <<"EOF"
 /*
  * Copyright (c) 2015, 2018, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.

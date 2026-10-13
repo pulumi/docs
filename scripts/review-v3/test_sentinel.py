@@ -106,7 +106,7 @@ class StubGh:
     ):
         self.pr = pr or {}
         self.files = files or []
-        self.comments = comments or []
+        self.comments = list(comments or [])  # a copy: posts must not leak into a shared fixture
         self.reviews = reviews or []
         self.statuses = statuses or []
         self.memberships = memberships or {}  # (slug, user) -> state
@@ -119,6 +119,7 @@ class StubGh:
         self.workflow_runs_error = workflow_runs_error
         self.patched = []  # (comment_id, body)
         self.posted = []   # body
+        self.deleted = []  # comment_id
 
     def get_pr(self):
         return self.pr
@@ -158,7 +159,16 @@ class StubGh:
         self.patched.append((comment_id, body))
 
     def post_issue_comment(self, body):
+        # Lands in the listing like the real API, so a re-read after a POST
+        # sees it.
         self.posted.append(body)
+        next_id = max((c.get("id") or 0 for c in self.comments), default=0) + 1
+        self.comments.append({"id": next_id, "body": body,
+                              "user": {"login": sentinel.BOT_LOGIN, "type": "Bot"}})
+
+    def delete_issue_comment(self, comment_id):
+        self.deleted.append(comment_id)
+        self.comments = [c for c in self.comments if c.get("id") != comment_id]
 
 
 # ---- Fixture builders ----------------------------------------------------
@@ -1053,6 +1063,75 @@ def test_status_comment_rewrites_when_a_gate_changes():
     assert gh.patched and gh.patched[0][0] == 7
 
 
+def _status_copies(gh):
+    return [c for c in gh.comments
+            if sentinel.STATUS_MARKER in (c.get("body") or "").splitlines()[:3]]
+
+
+class _RacedGh(StubGh):
+    """The run we raced lists, finds nothing, and posts between our listing
+    and our POST, so its copy is the older one."""
+
+    def post_issue_comment(self, body):
+        if not self.posted:
+            self.comments.append({"id": 5, "body": sentinel.STATUS_MARKER + "\nthe other run\n",
+                                  "user": {"login": sentinel.BOT_LOGIN, "type": "Bot"}})
+        super().post_issue_comment(body)
+
+
+def test_racing_first_posts_converge_on_one_status_comment():
+    """pulumi/docs#22251: opened as a draft, marked ready 19 s later, and the
+    two Sentinel runs each listed no status comment and each POSTed one, in
+    the same second. Only the oldest was ever patched after that, so the
+    other sat on its first verdict, contradicting the live one."""
+    gh = _RacedGh(pr=pr_meta(), files=[docs_file_substantive()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert sentinel.update_status_comment(gh, v, comments=[]) is True
+    assert gh.deleted == [6], "our own copy is the newer one, so it goes"
+    assert [c["id"] for c in _status_copies(gh)] == [5]
+    assert gh.patched == [(5, sentinel.render_status_comment(v))], \
+        "the survivor carries this run's verdict"
+
+
+class _AlreadyGoneGh(StubGh):
+    def delete_issue_comment(self, comment_id):
+        raise sentinel.SentinelDataError(
+            f"gh api repos/pulumi/docs/issues/comments/{comment_id} failed (exit 1): "
+            "HTTP 404: Not Found")
+
+
+def test_a_duplicate_the_raced_run_already_deleted_does_not_stop_the_patch():
+    """Both racers see the same pair and delete the same copy; the second
+    DELETE 404s. That must not cost the PATCH that follows it."""
+    two = [{"id": 7, "body": sentinel.STATUS_MARKER + "\nolder\n",
+            "user": {"login": sentinel.BOT_LOGIN}},
+           {"id": 8, "body": sentinel.STATUS_MARKER + "\nnewer\n",
+            "user": {"login": sentinel.BOT_LOGIN}}]
+    gh = _AlreadyGoneGh(pr=pr_meta(), files=[docs_file_substantive()], comments=two)
+    assert sentinel.update_status_comment(gh, sentinel.evaluate(gh, CONFIG),
+                                          comments=gh.comments) is True
+    assert [cid for cid, _ in gh.patched] == [7]
+
+
+def test_existing_duplicate_status_comments_heal_onto_the_oldest():
+    """PRs that already carry two copies converge on their next evaluation,
+    whatever order the listing comes back in, and a contributor's comment
+    quoting the marker is never deleted (it was never ours)."""
+    bot = {"login": sentinel.BOT_LOGIN}
+    comments = [
+        {"id": 8, "body": sentinel.STATUS_MARKER + "\nnewer\n", "user": bot},
+        {"id": 3, "body": sentinel.STATUS_MARKER + "\nmine\n", "user": {"login": "someone"}},
+        {"id": 7, "body": sentinel.STATUS_MARKER + "\nolder\n", "user": bot},
+    ]
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=comments)
+    assert sentinel.update_status_comment(gh, sentinel.evaluate(gh, CONFIG),
+                                          comments=gh.comments) is True
+    assert gh.deleted == [8]
+    assert [cid for cid, _ in gh.patched] == [7]
+    assert gh.posted == []
+    assert any(c["id"] == 3 for c in gh.comments)
+
+
 def test_an_approval_does_not_survive_a_push():
     """An approval is of a COMMIT. Without this, the sequence is: get a
     clean one-line change approved, push the payload, let the review lane
@@ -1287,6 +1366,37 @@ def test_oversized_ack_replaces_g1_g2():
     v2 = sentinel.evaluate(gh2, CONFIG)
     assert _gate(v2, "G5").status == "red"
     assert "sentinel:oversized-ack" in _gate(v2, "G5").message
+
+
+def test_the_oversized_ack_instruction_says_where_the_string_goes():
+    """"Include it in the approval body" left reviewers guessing which box
+    that was, and the near misses all look like they should work. The red
+    message names the box, the fix for an approval given without it, and
+    what doesn't count."""
+    gh = StubGh(pr=pr_meta(labels=["review:oversized"]), files=[docs_file_substantive()],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    msg = _gate(sentinel.evaluate(gh, CONFIG), "G5").message
+    for needle in (sentinel.OVERSIZED_ACK, "**Approve** review", "Approve again",
+                   "earlier commit", "PR comment",
+                   f"gh pr review <number> --approve --body {sentinel.OVERSIZED_ACK}"):
+        assert needle in msg, needle
+
+    numbered = StubGh(pr=dict(pr_meta(labels=["review:oversized"]), number=22251),
+                      files=[docs_file_substantive()], reviews=[approval("guild-member")],
+                      memberships={("docs-guild", "guild-member"): "active"})
+    assert "gh pr review 22251 --approve" in _gate(sentinel.evaluate(numbered, CONFIG), "G5").message
+
+
+def test_approving_again_with_the_ack_clears_g5():
+    """The red message tells a reviewer who approved without the string to
+    approve again with it. That only holds because G3 reads each person's
+    LATEST stateful review, so pin it."""
+    gh = StubGh(pr=pr_meta(labels=["review:oversized"]), files=[docs_file_substantive()],
+                reviews=[approval("guild-member"),
+                         approval("guild-member", body=f"read by hand {sentinel.OVERSIZED_ACK}")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    assert _gate(sentinel.evaluate(gh, CONFIG), "G5").status == "ok"
 
 
 def test_legacy_v2_comment_passes_g1_with_note_and_g2_counts():
