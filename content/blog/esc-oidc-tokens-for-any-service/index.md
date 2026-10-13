@@ -111,7 +111,7 @@ Aembit answers with an `accessToken` for its later calls, and the ESC token has 
 
 ## Define it once, import it everywhere
 
-The subject belongs to the environment that declares the block. Put `fn::open::oidc` in one environment, [import](/docs/esc/concepts/imports/) it from the environments that need the token, and each of them presents the same subject. Your trust policy stays at one entry, and ESC's own permissions decide who may open each importing environment. Each token ESC mints adds an `environment-oidc-token-issued` entry to your organization's [audit log](/docs/administration/guides/audit-logs/) with the subject, the audience, the environment, and the lifetime.
+The subject belongs to the environment that declares the block. Put `fn::open::oidc` in one environment, [import](/docs/esc/concepts/imports/) it from the environments that need the token, and each of them presents the same subject. Your trust policy stays at one entry. ESC checks open permission on every environment it loads, imports included, so only someone who can open the declaring environment can mint a token with that subject. Each token ESC mints adds an `environment-oidc-token-issued` entry to your organization's [audit log](/docs/administration/guides/audit-logs/) with the subject, the audience, the environment, and the lifetime.
 
 ## What stays the same
 
