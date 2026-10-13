@@ -80,7 +80,8 @@ Opening the environment yields a signed token. Decoded and trimmed, its claims l
   "exp": 1789000900,
   "https://pulumi.com/org": "acme",
   "https://pulumi.com/current_env": "aembit/login",
-  "https://pulumi.com/actor": "alice"
+  "https://pulumi.com/actor": "alice",
+  "https://pulumi.com/actor_id": "5f3a9c0d-7e21-4b8a-9d6c-1e0f2a3b4c5d"
 }
 ```
 

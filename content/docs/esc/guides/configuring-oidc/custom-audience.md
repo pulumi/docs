@@ -58,11 +58,14 @@ Pin the exact subject. To share one trust entry across environments, declare the
 | `iat`, `nbf`, `exp`, `jti` | Issued-at time, not-before time, expiry time, and a unique token ID. |
 | `https://pulumi.com/org` | The organization name. |
 | `https://pulumi.com/org_id` | The organization ID. |
-| `https://pulumi.com/current_env` | The name of the environment that declares the block, as `<project>/<environment>`. |
+| `https://pulumi.com/current_env` | The name of the environment that declares the block, as `<project>/<environment>`. The project is always present, including `default`, however the import was written. |
 | `https://pulumi.com/current_env_id` | The ID of that environment. |
+| `https://pulumi.com/current_env_version` | The version the import pinned: a revision number, a tag, or `draft:<id>`. Omitted when the import pinned nothing. |
 | `https://pulumi.com/root_env` | The name of the environment that was opened, as `<project>/<environment>`. |
 | `https://pulumi.com/root_env_id` | The ID of the environment that was opened. Omitted when that environment has no ID. |
-| `https://pulumi.com/actor` | The login of the user whose credentials opened the environment. |
+| `https://pulumi.com/root_env_version` | The revision number the open requested, or `draft:<id>` for a draft. Omitted when the open used the latest revision. |
+| `https://pulumi.com/actor` | The login of the identity that opened the environment: a user's login, `team-account:<team-id>` for a team token, or `service-account:<org-id>` for an organization token, a scheduled rotation, or a deployment with no triggering user. A user can change their login, so pin on `actor_id` instead. |
+| `https://pulumi.com/actor_id` | The ID of the identity that opened the environment. It does not change. |
 
 Base your trust rules on `iss`, `aud`, and `sub`. Names can change, but IDs do not. The `subjectAttributes` input of the vendor login providers does not apply to these tokens.
 

@@ -34,6 +34,7 @@ The `debug-oidc-claims` provider previews the claims of an OpenID Connect (OIDC)
         "login": {
           "aud": "https://registry.example.com",
           "https://pulumi.com/actor": "<user-login>",
+          "https://pulumi.com/actor_id": "<user-id>",
           "https://pulumi.com/current_env": "<project>/<environment>",
           "https://pulumi.com/current_env_id": "<environment-id>",
           "https://pulumi.com/org": "<org-name>",
