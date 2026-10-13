@@ -43,7 +43,7 @@ Pulumi ESC signs OIDC tokens under two issuers. Each issuer has its own signing 
 | `https://api.pulumi.com/oidc` | The vendor login providers, such as `aws-login`, `azure-login`, `gcp-login`, and `vault-login` | `pulumi:environments:org:<org-name>:env:<project>/<environment>`, customizable with `subjectAttributes` |
 | `https://api.pulumi.com/oidc/v2` | [`fn::open::oidc`](/docs/esc/providers/login/oidc/), which mints a token for an audience you choose | `pulumi:org:<org-id>:env:<environment-id>`, not customizable |
 
-The rest of this page, and the per-provider guides below, describe the `https://api.pulumi.com/oidc` issuer, except where a section names `fn::open::oidc`. For `fn::open::oidc` tokens, also called OIDC v2 tokens, see [Custom-audience token claims](#custom-audience-token-claims) and [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
+The rest of this page, and the per-provider guides below, describe the `https://api.pulumi.com/oidc` issuer, except where a section names `fn::open::oidc`. For `fn::open::oidc` tokens, the general OIDC feature in ESC, see [Custom-audience token claims](#custom-audience-token-claims) and [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
 
 ## Configuring OpenID with your cloud provider
 

@@ -22,7 +22,7 @@ social:
     linkedin: |
         Most services that matter to a deploy pipeline accept OpenID Connect tokens from an outside issuer: package registries, secrets brokers, workload identity platforms. Until now, a Pulumi ESC environment could only sign in that way to a fixed set of clouds. For everything else it held a stored API key.
 
-        The new fn::open::oidc provider removes that key. When you open the environment, ESC signs an OIDC token for an audience you choose, from Pulumi's OIDC v2 issuer. The service checks the signature, the audience, and a stable subject that names your organization and environment by ID, then issues its own short-lived credential. The token lives for an hour at most, and nothing is stored.
+        The new fn::open::oidc provider removes that key. When you open the environment, ESC signs an OIDC token for an audience you choose, from ESC's general OIDC issuer. The service checks the signature, the audience, and a stable subject that names your organization and environment by ID, then issues its own short-lived credential. The token lives for an hour at most, and nothing is stored.
 
         The post walks through the environment definition, the claims in the token, a worked Aembit example, and the one rule every trust policy needs: pin the subject.
     bluesky: |

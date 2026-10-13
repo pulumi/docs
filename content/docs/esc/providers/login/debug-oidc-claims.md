@@ -99,6 +99,6 @@ With `identityToken.version` set to `v2`, the provider refuses the same inputs a
 
 **Symptom:** opening fails with `fn::open::debug-oidc-claims cannot run in an unsaved environment document; save the environment and import it`.
 
-**Cause:** the v2 subject uses the environment's ID, and an unsaved environment document has no ID yet.
+**Cause:** the `fn::open::oidc` subject uses the environment's ID, and an unsaved environment document has no ID yet.
 
 **Fix:** save the environment that declares the block, then open it.
