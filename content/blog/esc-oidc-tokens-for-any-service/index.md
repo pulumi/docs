@@ -1,6 +1,6 @@
 ---
 title: "Pulumi ESC now issues OIDC tokens for any service"
-date: 2026-10-15
+date: 2026-10-14
 draft: false
 meta_desc: "Pulumi ESC now signs short-lived OIDC tokens for any audience you set, with a stable subject you can pin in each service's trust policy."
 feature_image: feature.png
