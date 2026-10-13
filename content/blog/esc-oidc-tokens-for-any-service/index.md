@@ -16,7 +16,7 @@ schema_type: auto
 
 social:
     twitter: |
-        Pulumi ESC can now mint a short-lived OIDC token for any service that accepts one: HashiCorp Vault, Cloudsmith, JFrog Artifactory, Aembit, AWS STS.
+        Pulumi ESC can now mint a short-lived OIDC token for any service that accepts one: Aembit, Cloudsmith, JFrog Artifactory, and more.
 
         Set the audience, pin the subject in the service's trust policy, and delete the stored API key.
     linkedin: |
@@ -26,14 +26,14 @@ social:
 
         The post walks through the environment definition, the claims in the token, a worked Aembit example, and the one rule every trust policy needs: pin the subject.
     bluesky: |
-        Pulumi ESC can now sign a short-lived OIDC token for any audience you choose. Vault, Cloudsmith, JFrog, Aembit, and AWS STS can all exchange it for their own credential, so the stored API key goes away.
+        Pulumi ESC can now sign a short-lived OIDC token for any audience you choose. Aembit, Cloudsmith, and JFrog can each exchange it for their own credential, so the stored API key goes away.
 
         One rule: pin the subject in the trust policy.
 ---
 
 A [Pulumi ESC](/docs/esc/) environment can now mint a short-lived OpenID Connect (OIDC) token for any service that accepts one.
 
-Services such as Aembit, Cloudsmith, JFrog Artifactory, and HashiCorp Vault take an OIDC token from an outside issuer and trade it for their own short-lived credentials. Until now, an ESC environment could sign in that way only to a fixed set of clouds. For everything else, it held a stored API key.
+Services such as Aembit, Cloudsmith, and JFrog Artifactory take an OIDC token from an outside issuer and trade it for their own short-lived credentials. Until now, an ESC environment could sign in that way only to a fixed set of clouds. For everything else, it held a stored API key.
 
 With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC signs the token for an audience you choose when you open the environment. Any service that trusts the `https://api.pulumi.com/oidc/v2` issuer can exchange it. The token expires after an hour at most, and ESC stores nothing.
 
@@ -103,7 +103,7 @@ Open the environment and send the token to the Aembit Edge API at `https://<your
 }
 ```
 
-Aembit answers with an `accessToken` for its later calls, and the ESC token has done its job. The same shape works for Cloudsmith, JFrog Artifactory, HashiCorp Vault, and AWS STS. The [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) has the exact settings for each.
+Aembit answers with an `accessToken` for its later calls, and the ESC token has done its job. Cloudsmith and JFrog Artifactory follow the same shape, and the [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) walks through each of them.
 
 ## Define it once, import it everywhere
 
@@ -121,4 +121,4 @@ The `aws-login`, `azure-login`, `gcp-login`, and `vault-login` providers keep us
 1. Copy the **OIDC subject** shown above the environment editor into the service's trust policy, together with the `https://api.pulumi.com/oidc/v2` issuer and the audience.
 1. Open the environment with [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run/) and exchange the token.
 
-The [provider reference](/docs/esc/providers/login/oidc/) lists the inputs and the troubleshooting steps, and the [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) walks through Cloudsmith, JFrog Artifactory, Aembit, and Vault. Questions and feedback are welcome in the [Pulumi Community Slack](https://slack.pulumi.com/).
+The [provider reference](/docs/esc/providers/login/oidc/) lists the inputs and the troubleshooting steps, and the [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) walks through Cloudsmith, JFrog Artifactory, and Aembit. Questions and feedback are welcome in the [Pulumi Community Slack](https://slack.pulumi.com/).
