@@ -887,7 +887,7 @@ from pulumi_kubernetes.apps.v1 import Deployment
 from pulumi_kubernetes.core.v1 import Service
 
 # Instantiate a Kubernetes Provider and specify the render directory.
-render_provider = Provider('k8s-yaml-rendered',
+render_provider = Provider('k8s-yaml-renderer',
     render_yaml_to_directory='yaml')
 
 # Create an NGINX Deployment and load-balanced Service that use it.
@@ -1063,7 +1063,7 @@ terraform {
 
 # Instantiate a Kubernetes provider and specify the render directory.
 provider "kubernetes" {
-  alias                    = "renderer"
+  alias                    = "k8s-yaml-renderer"
   render_yaml_to_directory = "yaml"
 }
 
@@ -1073,7 +1073,7 @@ locals {
 
 # Create an NGINX Deployment and load-balanced Service that use it.
 resource "kubernetes_apps_v1_deployment" "nginx-dep" {
-  provider = kubernetes.renderer
+  provider = kubernetes.k8s-yaml-renderer
 
   spec = {
     selector = { match_labels = local.labels }
@@ -1091,7 +1091,7 @@ resource "kubernetes_apps_v1_deployment" "nginx-dep" {
 }
 
 resource "kubernetes_core_v1_service" "nginx-svc" {
-  provider = kubernetes.renderer
+  provider = kubernetes.k8s-yaml-renderer
 
   metadata = { labels = local.labels }
 
@@ -1114,11 +1114,11 @@ Next, just run `pulumi up`:
 ```bash
 $ pulumi up
 Updating (dev):
-     Type                            Name               Status
- +   pulumi:pulumi:Stack             k8s-render-dev     created
- +   ├─ pulumi:providers:kubernetes  k8s-yaml-renderer  created
- +   ├─ kubernetes:core:Service      nginx-svc          created
- +   └─ kubernetes:apps:Deployment   nginx-dep          created
+     Type                              Name               Status
+ +   pulumi:pulumi:Stack               k8s-render-dev     created
+ +   ├─ pulumi:providers:kubernetes    k8s-yaml-renderer  created
+ +   ├─ kubernetes:core/v1:Service     nginx-svc          created
+ +   └─ kubernetes:apps/v1:Deployment  nginx-dep          created
 
 Resources:
     + 4 created
