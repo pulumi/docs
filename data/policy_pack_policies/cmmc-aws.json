@@ -384,6 +384,35 @@
         },
         "type": "object"
       },
+      "description": "Checks that EC2 instances do not launch with an instance profile whose role holds the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "ec2-instance-no-admin-access",
+      "remediationSteps": "## Fix: Launch with a Role Holding a Scoped Policy\n\nAttach a policy scoped to the workload's job to the instance profile's role, instead of AdministratorAccess, and launch the instance with that profile's name in `iamInstanceProfile`:\n\n```typescript\nconst role = new aws.iam.Role(\"app\", {\n    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: \"ec2.amazonaws.com\" }),\n});\n\nnew aws.iam.RolePolicyAttachment(\"app-read-only\", {\n    role: role.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n\nconst profile = new aws.iam.InstanceProfile(\"app\", { role: role.name });\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
       "description": "Check that EC2 Security Groups do not allow inbound HTTP traffic.",
       "displayName": "",
       "enforcementLevel": "advisory",
@@ -613,6 +642,93 @@
         },
         "type": "object"
       },
+      "description": "Checks that IAM group policy attachments do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-group-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the group's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.GroupPolicyAttachment(\"readers-read-only\", {\n    group: group.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that exclusive IAM group policy attachments do not include the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-group-policy-attachments-exclusive-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the group's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.GroupPolicyAttachmentsExclusive(\"readers-policies\", {\n    groupName: group.name,\n    policyArns: [aws.iam.ManagedPolicy.ReadOnlyAccess],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM instance profiles do not carry a role holding the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-instance-profile-no-admin-access",
+      "remediationSteps": "## Fix: Give the Profile's Role a Scoped Policy\n\nAttach a policy scoped to the workload's job to the role, instead of AdministratorAccess:\n\n```typescript\nconst role = new aws.iam.Role(\"app\", {\n    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: \"ec2.amazonaws.com\" }),\n});\n\nnew aws.iam.RolePolicyAttachment(\"app-read-only\", {\n    role: role.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n\nconst profile = new aws.iam.InstanceProfile(\"app\", { role: role.name });\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
       "description": "Ensure IAM password policy requires minimum length of 14 or greater.",
       "displayName": "",
       "enforcementLevel": "advisory",
@@ -659,6 +775,35 @@
       "message": "",
       "name": "iam-password-policy-prevent-reuse",
       "remediationSteps": "## Fix: Configure Password Reuse Prevention\n\nSet the `passwordReusePrevention` property to 24 to prevent users from reusing their previous 24 passwords:\n\n```typescript\nconst accountPasswordPolicy = new aws.iam.AccountPasswordPolicy(\"password-policy\", {\n    minimumPasswordLength: 14,\n    maxPasswordAge: 90,\n    requireNumbers: true,\n    requireSymbols: true,\n    requireUppercaseCharacters: true,\n    requireLowercaseCharacters: true,\n    passwordReusePrevention: 24, // Prevent reuse of previous 24 passwords\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM policy attachments do not attach the AWS managed AdministratorAccess policy to users, roles or groups.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the job, or a customer-managed policy granting only the actions needed:\n\n```typescript\nnew aws.iam.PolicyAttachment(\"app-read-only\", {\n    roles: [role.name],\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
       "severity": "high"
     },
     {
@@ -753,7 +898,94 @@
       },
       "message": "",
       "name": "iam-role-least-privilege",
-      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources in inline policies with explicit, scoped permissions:\n\n```typescript\nconst role = new aws.iam.Role(\"my-role\", {\n    assumeRolePolicy: assumePolicyDoc,\n    inlinePolicies: [{\n        name: \"my-inline-policy\",\n        policy: JSON.stringify({\n            Version: \"2012-10-17\",\n            Statement: [{\n                Effect: \"Allow\",\n                Action: [\n                    \"dynamodb:GetItem\",    // Specify exact actions needed\n                    \"dynamodb:PutItem\",\n                ],\n                Resource: [\n                    \"arn:aws:dynamodb:us-east-1:123456789012:table/MyTable\",  // Scope to specific resources\n                ],\n            }],\n        }),\n    }],\n});\n```",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions in a managed policy attached to the role:\n\n```typescript\nconst role = new aws.iam.Role(\"my-role\", {\n    assumeRolePolicy: assumePolicyDoc,\n});\n\nconst tablePolicy = new aws.iam.Policy(\"my-table-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"dynamodb:GetItem\",    // Specify exact actions needed\n                \"dynamodb:PutItem\",\n            ],\n            Resource: [\n                \"arn:aws:dynamodb:us-east-1:123456789012:table/MyTable\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n\nnew aws.iam.RolePolicyAttachment(\"my-role-table-policy\", {\n    role: role.name,\n    policyArn: tablePolicy.arn,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM roles do not list the AWS managed AdministratorAccess policy in managedPolicyArns.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-role-managed-policy-arns-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nList an AWS managed policy scoped to the role's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nconst role = new aws.iam.Role(\"app\", {\n    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: \"ec2.amazonaws.com\" }),\n    managedPolicyArns: [aws.iam.ManagedPolicy.ReadOnlyAccess],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM role policy attachments do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-role-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the role's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.RolePolicyAttachment(\"app-read-only\", {\n    role: role.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that exclusive IAM role policy attachments do not include the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-role-policy-attachments-exclusive-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the role's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.RolePolicyAttachmentsExclusive(\"app-policies\", {\n    roleName: role.name,\n    policyArns: [aws.iam.ManagedPolicy.ReadOnlyAccess],\n});\n```",
       "severity": "high"
     },
     {
@@ -782,7 +1014,7 @@
       },
       "message": "",
       "name": "iam-role-policy-least-privilege",
-      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst rolePolicy = new aws.iam.RolePolicy(\"my-role-policy\", {\n    role: myRole.id,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"ec2:DescribeInstances\",   // Specify exact actions needed\n                \"ec2:StartInstances\",\n                \"ec2:StopInstances\",\n            ],\n            Resource: [\n                \"arn:aws:ec2:us-east-1:123456789012:instance/*\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions in a managed policy attached to the role:\n\n```typescript\nconst instancePolicy = new aws.iam.Policy(\"my-instance-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"ec2:DescribeInstances\",   // Specify exact actions needed\n                \"ec2:StartInstances\",\n                \"ec2:StopInstances\",\n            ],\n            Resource: [\n                \"arn:aws:ec2:us-east-1:123456789012:instance/*\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n\nnew aws.iam.RolePolicyAttachment(\"my-role-instance-policy\", {\n    role: myRole.name,\n    policyArn: instancePolicy.arn,\n});\n```",
       "severity": "high"
     },
     {
@@ -822,6 +1054,7 @@
             "additionalProperties": {
               "type": "number"
             },
+            "default": {},
             "description": "Role name to maximum duration mapping for specific role overrides",
             "type": "object"
           },
@@ -901,6 +1134,64 @@
         },
         "type": "object"
       },
+      "description": "Checks that IAM user policy attachments do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-user-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nGrant the user a scoped policy through a group rather than attaching `AdministratorAccess`:\n\n```typescript\nconst group = new aws.iam.Group(\"readers\");\nnew aws.iam.GroupPolicyAttachment(\"readers-read-only\", {\n    group: group.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\nnew aws.iam.UserGroupMembership(\"user-readers\", {\n    user: user.name,\n    groups: [group.name],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that exclusive IAM user policy attachments do not include the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-user-policy-attachments-exclusive-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nGrant the user a scoped policy through a group rather than attaching `AdministratorAccess`:\n\n```typescript\nconst group = new aws.iam.Group(\"readers\");\nnew aws.iam.GroupPolicyAttachment(\"readers-read-only\", {\n    group: group.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\nnew aws.iam.UserGroupMembership(\"user-readers\", {\n    user: user.name,\n    groups: [group.name],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
       "description": "Ensures IAM user policies follow least privilege principles",
       "displayName": "",
       "enforcementLevel": "advisory",
@@ -912,7 +1203,7 @@
       },
       "message": "",
       "name": "iam-user-policy-least-privilege",
-      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst userPolicy = new aws.iam.UserPolicy(\"my-user-policy\", {\n    user: myUser.name,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:ListBucket\",         // Specify exact actions needed\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst listPolicy = new aws.iam.Policy(\"my-list-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:ListBucket\",         // Specify exact actions needed\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n\n// Grant it through a group rather than to the user directly\nconst readers = new aws.iam.Group(\"readers\");\nnew aws.iam.GroupPolicyAttachment(\"readers-list-policy\", {\n    group: readers.name,\n    policyArn: listPolicy.arn,\n});\nnew aws.iam.UserGroupMembership(\"my-user-readers\", {\n    user: myUser.name,\n    groups: [readers.name],\n});\n```",
       "severity": "high"
     },
     {
@@ -1109,6 +1400,77 @@
       "name": "lambda-function-logging",
       "remediationSteps": "## Fix: Do Not Suppress Lambda Application Logs\n\nLambda already forwards application logs to CloudWatch Logs without any `loggingConfig` block, so\nthere is nothing to switch on. A violation means the function has *opted into* a log-level filter\nthat discards logs the control requires.\n\nEither remove `applicationLogLevel` (all application logs are then forwarded), or raise it to a\nlevel at least as verbose as the configured minimum (`TRACE` > `DEBUG` > `INFO` > `WARN` > `ERROR` > `FATAL`,\nmost verbose first). An adequate level is what gives output data validation and troubleshooting\nsufficient detail:\n\n```typescript\nconst myFunction = new aws.lambda.Function(\"my-function\", {\n    runtime: \"nodejs20.x\",\n    handler: \"index.handler\",\n    role: lambdaRole.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./app\"),\n    }),\n    loggingConfig: {\n        logFormat: \"JSON\",\n        applicationLogLevel: \"INFO\", // not \"ERROR\"/\"FATAL\", which discard INFO and below\n    },\n});\n```",
       "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures Lambda function URLs require IAM authentication",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.22 Control CUI on publicly accessible systems",
+        "specification": "Control CUI posted or processed on publicly accessible systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "lambda-function-url-no-public-access",
+      "remediationSteps": "## Fix: Require IAM Authentication on the Function URL\n\n```typescript\nnew aws.lambda.FunctionUrl(\"function-url\", {\n    functionName: lambdaFunction.name,\n    authorizationType: \"AWS_IAM\",\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt function names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFunctions": {
+            "default": [],
+            "description": "List of function names allowed to have public access",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Lambda functions must restrict public access through resource-based policies",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.22 Control CUI on publicly accessible systems",
+        "specification": "Control CUI posted or processed on publicly accessible systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "lambda-public-access-restricted",
+      "remediationSteps": "## Fix: Restrict Lambda Function Access to Specific Principals\n\nReplace the wildcard principal with the service or account that invokes the function:\n\n```typescript\n// Grant access to a specific AWS service, scoped to the invoking resource\nnew aws.lambda.Permission(\"apiGatewayInvoke\", {\n    action: \"lambda:InvokeFunction\",\n    function: lambdaFunction.name,\n    principal: \"apigateway.amazonaws.com\",\n    sourceArn: pulumi.interpolate`${api.executionArn}/*`,\n});\n\n// Or grant access to a specific AWS account\nnew aws.lambda.Permission(\"crossAccountInvoke\", {\n    action: \"lambda:InvokeFunction\",\n    function: lambdaFunction.name,\n    principal: \"123456789012\",\n});\n```\n\nA wildcard principal restricted with `principalOrgId` is not reported. A function that must stay\npublicly invocable can be listed in `exemptFunctions`.",
+      "severity": "high"
     },
     {
       "configSchema": {
@@ -1678,6 +2040,35 @@
         },
         "type": "object"
       },
+      "description": "Checks that IAM Identity Center permission sets do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "ssoadmin-managed-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Managed Policy to the Permission Set\n\nAttach an AWS managed policy scoped to the job the permission set grants, instead of AdministratorAccess:\n\n```typescript\nnew aws.ssoadmin.ManagedPolicyAttachment(\"read-only\", {\n    instanceArn: permissionSet.instanceArn,\n    permissionSetArn: permissionSet.arn,\n    managedPolicyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
       "description": "Ensures subnets are distributed across multiple availability zones",
       "displayName": "",
       "enforcementLevel": "advisory",
@@ -1816,6 +2207,6 @@
       "severity": "critical"
     }
   ],
-  "version": 3,
-  "versionTag": "1.1.0"
+  "version": 4,
+  "versionTag": "1.2.0"
 }
