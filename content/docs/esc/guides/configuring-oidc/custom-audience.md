@@ -88,7 +88,11 @@ Use [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) to see t
 
 1. Change `fn::open::debug-oidc-claims` to `fn::open::oidc` and save. The environment now returns a signed token, and you reference it as `${registry.login}`.
 
-## Cloudsmith
+## Examples
+
+Any service that accepts OIDC tokens works the same way: give it the issuer, the audience, and the subject from above. The examples below were each run end to end.
+
+### Cloudsmith
 
 Cloudsmith exchanges an OIDC token for a short-lived Cloudsmith API token that belongs to a service account.
 
@@ -141,7 +145,7 @@ Cloudsmith exchanges an OIDC token for a short-lived Cloudsmith API token that b
 
 If the exchange returns `401 Failed to validate token`, check the provider URL, then compare the provider's claims with the [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) output. Cloudsmith returns this error for a wrong provider URL, an expired token, and a claim mismatch alike, and does not check the URL when you save the provider.
 
-## JFrog Artifactory
+### JFrog Artifactory
 
 JFrog exchanges an OIDC token for a short-lived JFrog access token that acts as a JFrog user. OIDC integration needs a JFrog Enterprise X or Enterprise+ subscription.
 
@@ -196,7 +200,7 @@ JFrog exchanges an OIDC token for a short-lived JFrog access token that acts as 
 
 If the exchange returns `400 Invalid audience`, the token's audience does not match the integration's. A `403 Forbidden` means no identity mapping matched the token's claims. JFrog rejects a token as soon as it expires and allows no grace period.
 
-## Aembit
+### Aembit
 
 Aembit exchanges an OIDC token for an Edge API access token, then issues the credentials that an access policy grants to the workload.
 
@@ -255,9 +259,9 @@ Aembit exchanges an OIDC token for an Edge API access token, then issues the cre
 
 If `/edge/v1/auth` returns `401 Failed to authenticate`, check the client ID, then compare the trust provider's match rules with the [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) output. Aembit returns this error for every rejection and does not say which rule failed. Unlike Cloudsmith and JFrog, it checks the discovery URL when you save the trust provider. If `/edge/v1/credentials` returns `credentialType: Unknown`, no active access policy matched; check the client workload's subject and the server host and port. Aembit accepts a token for about five minutes after it expires.
 
-## Vault and other services
+### HashiCorp Vault
 
-Most other services accept OIDC tokens through a JSON Web Token (JWT) authentication method. For the [JWT auth method](https://developer.hashicorp.com/vault/docs/auth/jwt) in HashiCorp Vault:
+Vault accepts the token through its [JWT auth method](https://developer.hashicorp.com/vault/docs/auth/jwt). If you only need Vault credentials, [`vault-login`](/docs/esc/providers/login/vault-login/) does this exchange for you; use `fn::open::oidc` when your workload needs the token itself. To configure the JWT auth method:
 
 1. Mount the method and point it at the issuer:
 
