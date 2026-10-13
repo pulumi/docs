@@ -65,7 +65,7 @@ If Neo doesn't support your specific use case or you prefer manual control over 
 Before running any tools, it is important to plan your migration strategy. Migrating involves two distinct parts: converting your **Code** (logic) and migrating your **State** (live resources).
 
 {{% notes type="info" %}}
-**Consider Neo first**: For most CDK applications, [Neo](#neo-the-automated-migration-path-recommended) automates both code conversion and state migration with zero downtime. The manual approaches below are best for edge cases or when you need specific control over the migration process.
+**Consider Neo first**: For most CDK applications, [Neo](#pulumi-neo-recommended) automates both code conversion and state migration with zero downtime. The manual approaches below are best for edge cases or when you need specific control over the migration process.
 {{% /notes %}}
 
 ### Strategy: Convert vs. Rewrite
@@ -346,7 +346,7 @@ If you write your component code first, you can import directly into the hierarc
 
 Once you have a plan, choose the execution path that fits your goals:
 
-* [Neo: Fully Automated Migration (Recommended)](#neo-the-automated-migration-path-recommended) - Use Neo for zero-downtime automated migration
+* [Neo: Fully Automated Migration (Recommended)](#pulumi-neo-recommended) - Use Neo for zero-downtime automated migration
 * [Approach A: Semi-Automated Path](#approach-a-the-semi-automated-path) - Use tools like `cdk2pulumi` and `cdk-importer` with manual steps
 * [Approach B: Manual Migration](#approach-b-manual-migration) - Full manual control over the migration process
 
@@ -458,10 +458,9 @@ Use the [Pulumi CDK importer tool](https://github.com/pulumi/pulumi-tool-cdk-imp
 pulumi plugin install tool cdk-importer
 
 pulumi plugin run cdk-importer -- program iterate \
-  --local \
   --stack MyStack-dev \
-  --input ./converted-project \
-  --out ./import.json
+  --program-dir ./converted-project \
+  --import-file ./import.json
 ```
 
 #### 4. Import Resources
@@ -471,8 +470,7 @@ Once you are happy with `program iterate`, use `program import` to import the pr
 ```shell
 pulumi plugin run cdk-importer -- program import \
   --stack MyStack-dev \
-  --input ./converted-project \
-  --file ./import.json
+  --program-dir ./converted-project
 ```
 
 Always run `pulumi preview` immediately after import to ensure there are no pending changes.
