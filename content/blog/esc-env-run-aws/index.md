@@ -156,7 +156,7 @@ $ aws s3 ls
 Unable to locate credentials. You can configure credentials by running "aws configure".
 ```
 
-Now run the command using `pulumi env run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+This is one of [several AWS CLI credential errors that stale or missing keys produce](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/). Now run the command using `pulumi env run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
 pulumi env run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls
