@@ -34,7 +34,7 @@ values:
 
 In this example we have an environment definition and ARN that identifies us to AWS. We're requesting a short term token that will live for 1 hour for the session `sessionName: esc-${context.pulumi.user.login}`. This token will be used to provide access to the AWS services defined in the permissions policies set for the role.
 
-## Token issuers
+## Token formats
 
 Pulumi ESC signs OIDC tokens under two issuers. Each issuer has its own signing keys, subject format, and claims, so a relying party that trusts one issuer does not accept tokens from the other.
 
