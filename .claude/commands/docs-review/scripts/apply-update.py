@@ -671,7 +671,23 @@ def _rebuild_detail_block(fid: str, old: list[str], detail: dict) -> list[str]:
     keep = str(detail.get("keep", "")).strip()
     if keep:
         out.append(f"- **If you'd rather keep it:** {keep}")
+    # A group question's claim list (or the pointer a fit left in its place)
+    # isn't part of Why/Fix; carry it over or the retext loses it.
+    tail = _group_list_tail(old)
+    if tail:
+        out += ["", *tail]
     return out
+
+
+def _group_list_tail(block: list[str]) -> list[str]:
+    for i, ln in enumerate(block):
+        if be._GROUP_POINTER_RE.match(ln.strip()):
+            return [ln]
+        if (ln == "<details>" and i + 1 < len(block)
+                and block[i + 1].endswith(cr.GROUP_LIST_SUMMARY_SUFFIX)):
+            end = next((j for j in range(i + 2, len(block)) if block[j] == "</details>"), None)
+            return block[i:end + 1] if end is not None else []
+    return []
 
 
 def _unbullet(line: str) -> str:
@@ -713,8 +729,17 @@ def apply(
     # A nothing-for-you card publishes without 🚨/❓; restore them so a
     # reopened, added, or promoted row has a section to land in.
     author_body = be.ensure_author_sections(author_body)
+    fitted = be.was_fitted(author_body)
     author_body, detail_blocks = _strip_detail_blocks(author_body)
     rows = _collect_rows(author_body, brief_body)
+    if fitted:
+        # The last publish ran over budget and shed blocks; bring them back
+        # from evidence, and main() sheds again only what still doesn't fit.
+        detail_blocks = be.restore_shed_blocks(
+            detail_blocks,
+            [fid for fid, r in rows.items()
+             if r["doc"] == "author" and r["bucket"] in ("outstanding", "author-answer")],
+            prior_findings)
     resolved_rows = _collect_resolved(author_body)
     resolved_by_id = _collect_resolved_rows(author_body)
     reopened: list[str] = []
@@ -1048,6 +1073,8 @@ def assemble_evidence(
         detail = detail_texts.get(fid) or carried.get("detail")
         if detail:
             record["detail"] = detail
+        if carried.get("members"):
+            record["members"] = carried["members"]
         findings.append(record)
     # ✅ rows and prior preexisting carry through with their terminal status.
     resolved_ids = set()
@@ -1058,7 +1085,7 @@ def assemble_evidence(
         resolved_ids.add(parsed["id"])
         carried = prior_findings.get(parsed["id"], {})
         conceded = "concede" in parsed["body"].lower()
-        findings.append({
+        resolved = {
             "id": parsed["id"],
             "bucket": carried.get("bucket") or "outstanding",
             "file": parsed["file"] or carried.get("file") or "(unknown)",
@@ -1066,7 +1093,10 @@ def assemble_evidence(
             "origin": carried.get("origin") or "model",
             "status": "conceded" if conceded else "resolved",
             "disposition": merged_state["findings"].get(parsed["id"]) or carried.get("disposition"),
-        })
+        }
+        if carried.get("members"):
+            resolved["members"] = carried["members"]
+        findings.append(resolved)
     for fid, f in prior_findings.items():
         if f.get("bucket") == "preexisting" and fid not in rows and fid not in resolved_ids:
             findings.append(f)
@@ -1169,6 +1199,10 @@ def main() -> int:
         brief_out = be.refresh_style_line(brief_out, *be.count_style_bullets(author_out))
         author_out = set_evidence_url(author_out, args.evidence_url)
         brief_out = set_evidence_url(brief_out, args.evidence_url)
+        # After the evidence (which keeps every block) and the URL (so the
+        # measurement is the published size).
+        author_out = be.fit_and_report("author", author_out, be.fit_author_card)
+        brief_out = be.fit_and_report("brief", brief_out, be.fit_brief_card)
     except UpdateError as exc:
         print(f"apply-update: contract violation: {exc}", file=sys.stderr)
         return 2

@@ -743,7 +743,7 @@ jobs:
             The user invoked you with `#update-review` on `${{ github.repository }}` PR #${{ steps.pr-context.outputs.pr_number }}. This PR carries a v3 review (author card + reviewer brief). Your job is to ADJUDICATE, not to render: you write exactly one file, `.review-update.json`, and deterministic tooling re-renders and publishes the cards from it. Do not post comments, do not edit the cards, do not call pinned-comment.sh.
 
             Inputs on disk:
-            - `.review-card-author.md` — the author card (table rows `| **F<n>** | … |` under 🚨/❓ with a `#### F<n> · Do this` block each, REVIEW_STATE block)
+            - `.review-card-author.md` — the author card (table rows `| **F<n>** | … |` under 🚨/❓ with a `#### F<n> · Do this` block each, REVIEW_STATE block). A card over its size budget carries an italic note where its ❓ blocks were (they're on the evidence page, and the publish step restores them when there's room). A ❓ row whose Where is `—` is a group question: one answer covers every claim its block lists, so the mention answering it is one `concede` (or `accept`) for that one id.
             - `.review-card-brief.md` — the reviewer brief (⚠️ rows, "Waiting on the author" table)
             - `.claude-mention-body.txt` — the triggering mention from @${{ steps.check-access.outputs.author }}; read it FIRST
             - `.vale-findings.json` — current style findings (context only on this lane)

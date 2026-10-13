@@ -95,7 +95,11 @@ FINDING_REQUIRED = {"id", "bucket", "file", "text", "origin", "status"}
 # outside the PR's own changed lines for a file the PR touches. Advisory by
 # design -- a bad anchor breaks auto-refresh, not the review -- so nothing
 # here requires them or acts on them.
-FINDING_OPTIONAL = {"lines", "disposition", "detail", "anchor_ok", "anchor_note"}
+# `members` is set only on a group finding (compose-review's new-feature
+# carve-out): the claims it asks about in one ❓, each {file, lines?, claim}.
+FINDING_OPTIONAL = {"lines", "disposition", "detail", "anchor_ok", "anchor_note", "members"}
+MEMBER_REQUIRED = {"file", "claim"}
+MEMBER_OPTIONAL = {"lines"}
 
 DISPOSITION_REQUIRED = {"disposition", "actor", "updated_at"}
 DISPOSITION_OPTIONAL = {"note", "sha", "bulk"}
@@ -266,6 +270,27 @@ def validate_evidence(obj) -> list[str]:
             errors.append(f"{where}.anchor_note must be a non-empty string")
         if f.get("anchor_ok") is False and not _nonempty_str(f.get("anchor_note")):
             errors.append(f"{where}.anchor_note is required when anchor_ok is False")
+
+        if "members" in f:
+            members = f["members"]
+            if not (isinstance(members, list) and members):
+                errors.append(f"{where}.members must be a non-empty array")
+                members = []
+            for j, m in enumerate(members):
+                mwhere = f"{where}.members[{j}]"
+                if not isinstance(m, dict):
+                    errors.append(f"{mwhere} must be an object")
+                    continue
+                errors += _check_keys(m, MEMBER_REQUIRED, MEMBER_OPTIONAL, mwhere)
+                for key in ("file", "claim"):
+                    if key in m and not _nonempty_str(m[key]):
+                        errors.append(f"{mwhere}.{key} must be a non-empty string")
+                mlines = m.get("lines")
+                if mlines is not None and not (
+                        isinstance(mlines, list) and 1 <= len(mlines) <= 2
+                        and all(isinstance(n, int) and not isinstance(n, bool) and n >= 1
+                                for n in mlines)):
+                    errors.append(f"{mwhere}.lines must be [start] or [start, end] of positive integers")
 
         lines = f.get("lines")
         if lines is not None:
@@ -600,6 +625,29 @@ def self_test() -> int:
     check("empty anchor_note rejected",
           any("anchor_note must be" in e
               for e in validate_evidence(_with_finding(anchor_ok=False, anchor_note="  "))))
+
+    group_members = [{"file": "content/docs/a.md", "lines": [3], "claim": "x does y"},
+                     {"file": "content/docs/b.md", "claim": "z is w"}]
+    check("group finding members accepted",
+          validate_evidence(_with_finding(members=group_members)) == [])
+
+    check("empty members rejected",
+          any("members must be a non-empty array" in e
+              for e in validate_evidence(_with_finding(members=[]))))
+
+    check("member without a claim rejected",
+          any(".members[0]" in e and "claim" in e
+              for e in validate_evidence(_with_finding(members=[{"file": "a.md"}]))))
+
+    check("member with bad lines rejected",
+          any(".members[0].lines" in e
+              for e in validate_evidence(_with_finding(
+                  members=[{"file": "a.md", "claim": "c", "lines": [0]}]))))
+
+    check("unknown member key rejected",
+          any(".members[0]" in e
+              for e in validate_evidence(_with_finding(
+                  members=[{"file": "a.md", "claim": "c", "verdict": "x"}]))))
 
     check("investigation_log with non-string value rejected",
           any("investigation_log" in e for e in validate_evidence({
