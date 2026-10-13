@@ -168,16 +168,30 @@ def legacy_command(body: str) -> str | None:
 def convert(body: str, command: str) -> str:
     """`body` rewritten as `/<command>`, with the request text kept as-is.
 
-    Only the `@claude` and hashtag tokens go; every other character the
-    author wrote stays, so the update lane reads the same request it would
-    have. One plain line rides on the command's line; anything longer, or
-    starting with markdown that would change meaning there, goes under it.
+    Only the live `@claude` and hashtag tokens go, wherever they sit — the
+    two are often paragraphs apart, or in either order. Every other
+    character the author wrote stays, code and quotes included, so the
+    update lane reads the same request it would have. One plain line rides
+    on the command's line; anything longer, or starting with markdown that
+    would change meaning there, goes under it.
     """
+    raw = _normalize(body)
+    # Find the tokens in a copy where code and quotes are blanked out
+    # character for character, so offsets still line up with `raw`.
+    masked = raw
+    for rx in (_FENCE_RE, _UNCLOSED_FENCE_RE, _INLINE_RE, _QUOTE_LINE_RE):
+        masked = rx.sub(lambda m: re.sub(r"[^\n]", "\0", m.group(0)), masked)
+    pieces, pos = [], 0
+    for m in _LEGACY_STRIP_RE.finditer(masked):
+        pieces += [raw[pos:m.start()], " "]
+        pos = m.end()
+    pieces.append(raw[pos:])
+
+    # The token pattern never crosses a newline, so the lines stay aligned.
     lines = []
-    for line in _normalize(body).split("\n"):
-        stripped = _LEGACY_STRIP_RE.sub(" ", line)
-        lines.append(stripped.strip() if stripped != line else line.rstrip())
-    text = "\n".join(lines).strip("\n").strip()
+    for before, after in zip(raw.split("\n"), "".join(pieces).split("\n")):
+        lines.append(after.strip() if after != before else before)
+    text = "\n".join(lines).strip()
     if not text:
         return f"/{command}"
     if "\n" in text or _BLOCK_START_RE.match(text):
@@ -398,6 +412,20 @@ def _self_test() -> int:
     check("convert leaves untouched lines alone",
           convert("@claude F1: see\n\n    indented code\n#update-review", U)
           == "/update-review\nF1: see\n\n    indented code")
+    apart = "@claude a few things:\n\nF1: fixed in abc123.\n\nF3: intentional, the API returns 7.\n\n#update-review"
+    check("tokens paragraphs apart are still the old shape", legacy_command(apart) == U)
+    check("convert keeps everything between them",
+          convert(apart, U) == "/update-review\na few things:\n\nF1: fixed in abc123.\n\nF3: intentional, the API returns 7.")
+    check("hashtag first, mention last", legacy_command("#update-review\n\nF2: sourced.\n\n@claude") == U)
+    check("convert of the reversed order", convert("#update-review\n\nF2: sourced.\n\n@claude", U)
+          == "/update-review F2: sourced.")
+    fenced = "@claude F2: output:\n\n```\n$ grep '#update-review' log\n```\n\nSee above. #update-review"
+    check("a fence between the tokens doesn't hide them", legacy_command(fenced) == U)
+    check("convert leaves the tokens inside code alone",
+          convert(fenced, U) == "/update-review\nF2: output:\n\n```\n$ grep '#update-review' log\n```\n\nSee above.")
+    check("convert leaves quoted and inline-code tokens alone",
+          convert("@claude per `@claude #update-review`:\n> @claude F1 #update-review\nok #update-review", U)
+          == "/update-review\nper `@claude #update-review`:\n> @claude F1 #update-review\nok")
     reply = render_redirect("@claude F1: ```x``` #update-review", U, "alice", "https://example.test/c#review-commands")
     check("reply carries the marker", reply.startswith(REDIRECT_MARKER))
     check("reply names the author", "@alice —" in reply)
