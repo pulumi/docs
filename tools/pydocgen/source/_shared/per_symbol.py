@@ -72,6 +72,8 @@ def _generate(app: Sphinx) -> None:
     for modname in modules:
         symbols = _public_symbols(modname, app.config.per_symbol_honor_all)
         overview.append(f"{modname}\n{'=' * len(modname)}\n")
+        # Restores the legacy #module-<modname> anchors and py-modindex/.
+        overview.append(f".. py:module:: {modname}\n")
         overview.append(f"Classes and functions in ``{modname}``.\n")
         overview.append(".. list-table::\n   :widths: 35 65\n")
         entries = []
@@ -105,12 +107,13 @@ def _finish(app: Sphinx, exception: Exception | None) -> None:
     xml.append("</urlset>")
     (out / "sitemap.xml").write_text("\n".join(xml) + "\n", encoding="utf-8")
 
-    legacy = {}
-    for name, entry in app.env.domaindata["py"]["objects"].items():
-        if entry.docname != "index":
-            legacy[name] = "" if entry.docname == "index" else entry.docname + "/"
-    for name, entry in app.env.domaindata["py"]["modules"].items():
-        pass
+    # Symbols that moved off the landing page; anchors that stay on index
+    # (module-<name>) need no redirect.
+    legacy = {
+        name: entry.docname + "/"
+        for name, entry in app.env.domaindata["py"]["objects"].items()
+        if entry.docname != "index"
+    }
     (out / "_static" / "legacy-anchors.json").write_text(json.dumps(legacy, sort_keys=True, separators=(",", ":")), encoding="utf-8")
 
 
