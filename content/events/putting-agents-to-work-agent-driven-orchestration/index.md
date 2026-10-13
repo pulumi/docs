@@ -4,10 +4,8 @@ title: "Putting agents to work: Agent-driven orchestration you can govern, trust
 allow_long_title: true
 meta_desc: Learn how to give AI agents context and scoped credentials so every infrastructure change is previewed, governed, and approved.
 
-# Social card. Left blank so the build generates the on-brand event card
-# (landscape + square) from this frontmatter.
-# meta_image:
-# meta_image_square:
+meta_image: /events/putting-agents-to-work-agent-driven-orchestration/meta.png
+meta_image_square: /events/putting-agents-to-work-agent-driven-orchestration/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
