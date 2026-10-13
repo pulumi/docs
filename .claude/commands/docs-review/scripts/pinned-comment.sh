@@ -199,8 +199,8 @@ find_role_comment() {
 # collapses it in the UI. The REST list endpoint still returns it, body intact,
 # so upsert would happily PATCH a comment nobody can see: the refresh job runs
 # green, posts its progress comment, and the updated review is invisible. That
-# is exactly what happened on pulumi/docs#20533 -- an `#update-review` reported
-# success at 14:12 and the PR showed nothing until a `#new-review` six hours
+# is exactly what happened on pulumi/docs#20533 -- an `/update-review` reported
+# success at 14:12 and the PR showed nothing until a `/new-review` six hours
 # later. Unhide before patching so the update lands somewhere visible.
 #
 # Non-fatal on failure: unminimizeComment can be refused by the token's scopes,
@@ -484,7 +484,7 @@ cmd_upsert_role() {
 
         # ---- stale-publish guard ----------------------------------------
         # Two review runs on one PR are normal (a push trips the auto-refresh
-        # gate while a `#update-review` mention dispatches the update lane;
+        # gate while a `/update-review` comment dispatches the update lane;
         # triage chains re-dispatch; a human mentions twice). Nothing
         # serializes them, so the run that finishes WRITING last wins even
         # when it composed its card first — and because the author card
@@ -502,7 +502,7 @@ cmd_upsert_role() {
         # newer run already published; this is that rule for the cards.
         #
         # The discriminator is COMPOSITION TIME, not the `vN` revision. A
-        # `#new-review` regeneration legitimately republishes v1 over a v2
+        # `/new-review` regeneration legitimately republishes v1 over a v2
         # card, so a revision comparison would block the one flow that is
         # supposed to reset — while its composition time is, correctly,
         # newer than what it replaces.
@@ -722,7 +722,7 @@ cmd_clear() {
     pr="${PR:?--pr required}"
     # Union of the v2 sequence and both v3 role cards, deduped: the author
     # card carries the legacy 1/1 alias, so it appears in BOTH lists and must
-    # be deleted exactly once. `#new-review` depends on clear leaving nothing.
+    # be deleted exactly once. `/new-review` depends on clear leaving nothing.
     local ids
     ids=$(
         {

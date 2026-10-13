@@ -391,7 +391,7 @@ def test_newer_card_still_publishes_over_older(env):
 
 
 def test_new_review_regeneration_is_not_blocked(env):
-    """`#new-review` legitimately republishes v1 over a v2 card. The guard
+    """`/new-review` legitimately republishes v1 over a v2 card. The guard
     compares composition time, not revision, so the reset still lands."""
     stub_dir, _ = env
     set_comments(stub_dir, [comment(11, stamped_author_card("2026-09-21T20:49:07Z", rev=2))])

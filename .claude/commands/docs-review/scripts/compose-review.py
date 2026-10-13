@@ -2209,7 +2209,7 @@ def render_group_detail_block(fid: str, members: list[dict], refs: list[str]) ->
         "checked against. Only you can vouch for them.",
         f"- **Fix:** Check them against that {noun} or your own test runs, fix any line that "
         f"turned out wrong, and answer for all of them in one reply: "
-        f"`@claude {fid}: <what you checked them against> #update-review`.",
+        f"`/update-review {fid}: <what you checked them against>`.",
         "",
         *render_group_member_list(members),
     ]
@@ -2430,8 +2430,8 @@ def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool
             lead,
             ">",
             "> **To settle an item:** push a fix, or reply "
-            "`@claude F1: <what you fixed, why it's wrong, or \"accepting as-is — why\"> #update-review`. "
-            "A reply without the `#update-review` tag doesn't count. "
+            "`/update-review F1: <what you fixed, why it's wrong, or \"accepting as-is — why\">`. "
+            "A reply without `/update-review` at the start of a line doesn't count. "
             "Examples: **How to answer** at the bottom.",
         ]
     if automated:
@@ -2446,8 +2446,8 @@ def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool
             "> **You = the PR author.** Answer every item below before this PR can merge.",
             ">",
             "> **To answer:** push a fix, or reply "
-            "`@claude F1: <what you fixed, why it's wrong, or \"accepting as-is — why\"> #update-review`. "
-            "A reply without the `#update-review` tag doesn't count. "
+            "`/update-review F1: <what you fixed, why it's wrong, or \"accepting as-is — why\">`. "
+            "A reply without `/update-review` at the start of a line doesn't count. "
             "Examples: **How to answer** at the bottom.",
         ]
     return [
@@ -2655,7 +2655,7 @@ def empty_checks_sentinel(stances_follow: bool) -> str:
 # and detail-block walkers in build-evidence.py / apply-update.py must treat it
 # as a boundary: a detail block that swallowed it, and a section span that ran
 # through the 📎 line behind it, cost the author card its evidence link on the
-# first live #update-review (2026-09-01).
+# first live /update-review (2026-09-01).
 V3_BROWSER_HINT_PREFIX = "_Editing in the browser?"
 V3_BROWSER_HINT = (V3_BROWSER_HINT_PREFIX + " ✏️ opens the file in GitHub's editor; "
                    "Ctrl+F for the quoted line._")

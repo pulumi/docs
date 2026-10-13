@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """apply-update.py — deterministic renderer for the v3 update lane.
 
-On a v3 PR, `#update-review` inverts the v2 contract: the model ADJUDICATES
+On a v3 PR, `/update-review` inverts the v2 contract: the model ADJUDICATES
 (it writes one structured patch, `.review-update.json`) and this script
 RENDERS AND PUBLISHES — the model never touches the published comments. That
 deletes the whole class of freehand-render failures the v2 lane needed
@@ -55,7 +55,7 @@ classifier, which this must never contradict):
     still fix it.
 
 The REVIEW_STATE race: another review run can publish the author card while
-the model works — a full review triage auto-fired, a `#new-review`, another
+the model works — a full review triage auto-fired, a `/new-review`, another
 update dispatch (#21785, #21871). The publish chain re-fetches the live
 author card just before calling this script, and this script parses
 REVIEW_STATE from that fresh body and merges its own action-implied

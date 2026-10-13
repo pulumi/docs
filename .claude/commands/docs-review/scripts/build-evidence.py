@@ -69,7 +69,7 @@ _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2, "pree
 # between the last table and the REVIEW_STATE block (the browser hint, the 📎
 # evidence line, the <sub> stamp, the marker comments) can be swallowed into a
 # section span and dropped on re-render — which is exactly what took the 📎
-# line off the author card on the first live #update-review (2026-09-01).
+# line off the author card on the first live /update-review (2026-09-01).
 _SECTION_TERMINATORS = (
     "### ", "#### ", "<!-- REVIEW_STATE", "<!-- AUTHOR_STATE", "<!-- CLAUDE_REVIEW",
     "<sub>", *cr.EVIDENCE_LINE_PREFIXES,

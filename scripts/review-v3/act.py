@@ -49,7 +49,7 @@ command the board composed, which is why a plan names its PRs one by one:
                      the send-back for a workflow-authored PR, which has no
                      author to answer a review. Repeatable; `--superseded-by
                      N:M` scopes M to one of several closes.
-  --ask-fix N        comment `@claude fix <ids> #update-review`, naming the
+  --ask-fix N        comment `/update-review fix <ids>`, naming the
                      row's open findings: the second way out of a PR whose
                      author will never answer its review. `/address-review`
                      is the interactive one -- you walk the findings and push
@@ -57,8 +57,8 @@ command the board composed, which is why a plan names its PRs one by one:
                      agent already watching the PR and asks it to refresh the
                      review after. One comment, no push, so unlike the
                      handoff it batches with everything else.
-  --refresh N        post `@claude <reason> #update-review`.
-  --rerun N          post `@claude <reason> #new-review` (fresh review from scratch).
+  --refresh N        post `/update-review <reason>`.
+  --rerun N          post `/new-review <reason>` (fresh review from scratch).
   --rerun-checks N   re-run the failed jobs of the head's workflow runs (the
                      newest run per workflow that concluded failure); the
                      unblock on a red-CI row. A red commit status has no run
@@ -537,9 +537,9 @@ def _render_bodies(s: Step, pr: dict) -> None:
     elif s.kind == "ask-fix":
         s.args["comment"] = ask_fix_body(pr, s.args["items"])
     elif s.kind == "refresh":
-        s.args["comment"] = with_footer(f"@claude {s.args['reason']} #update-review")
+        s.args["comment"] = with_footer(f"/update-review {s.args['reason']}")
     elif s.kind == "rerun":
-        s.args["comment"] = with_footer(f"@claude {s.args['reason']} #new-review")
+        s.args["comment"] = with_footer(f"/new-review {s.args['reason']}")
 
 
 def _body_head(body, width: int = 100) -> str:
@@ -875,7 +875,7 @@ def request_changes_body(pr: dict, note: str = "") -> str:
         lines = ["Thanks for this. A few things before it can merge:", ""] + lines + ["", "Mention @claude if you need help."]
     elif atype == "bot":
         lines.append("")
-        lines.append("Answer each with `@claude F<n>: <reason> #update-review`, or push the fix.")
+        lines.append("Answer each with `/update-review F<n>: <reason>`, or push the fix.")
     return "\n".join(lines).strip()
 
 
@@ -999,7 +999,7 @@ def unanswered_blockers(review: dict) -> list[str]:
     human author) are an approver's call to make; an open 🚨 is the review
     still waiting on the author, and squash-merging past it destroys the
     only chance to hear from them. The author answers — a fix, or
-    `@claude <why> #update-review` — and the approver's judgments never
+    `/update-review <why>` — and the approver's judgments never
     stand in for that.
     """
     return [i["id"] for i in review.get("items") or []
@@ -1012,7 +1012,7 @@ def refuse_merge_over_findings(n: int, open_ids: list[str]) -> str:
     `review:waived`, the Sentinel's logged break-glass."""
     return (f"#{n} has {len(open_ids)} unanswered blocking review finding(s): {', '.join(open_ids)}. "
             f"Merging would walk over the review, and --force does not cover this. "
-            f"The author answers them (a fix, or `@claude <why> #update-review`): "
+            f"The author answers them (a fix, or `/update-review <why>`): "
             f"`--request-changes {n}` sends it back, or `--ask-fix {n}` / `--close {n}` on a PR a workflow opened. "
             f"To approve without merging, `--stamp {n}:no-merge`.")
 
@@ -1022,11 +1022,11 @@ FINDING_ID_RE = re.compile(r"F\d+")
 
 
 def ask_fix_items(pr: dict) -> list[dict]:
-    """The open findings an `@claude fix …` mention should name.
+    """The open findings an `/update-review fix …` comment should name.
 
     The review's own open rows: no disposition, and never a style or
     pre-existing one. Those two buckets are marked optional by the review
-    itself, and a mention that asked for them would turn "take it or leave
+    itself, and a comment that asked for them would turn "take it or leave
     it" into a push."""
     review = pr.get("review") or {}
     items = review.get("items") or []
@@ -1052,14 +1052,14 @@ def _and_join(parts: list[str]) -> str:
 
 
 def ask_fix_body(pr: dict, items: list[dict]) -> str:
-    """`@claude fix F1 and F3 #update-review`, then what each id is.
+    """`/update-review fix F1 and F3`, then what each id is.
 
-    The ids go on the mention line because that is the instruction; the
+    The ids go on the command line because that is the instruction; the
     summaries follow it so a person scrolling the thread can read what was
-    asked for without opening the card. One mention does both halves -- fix,
-    then re-review -- which is what the pipeline's `#update-review` is for."""
+    asked for without opening the card. One comment does both halves -- fix,
+    then re-review -- which is what the pipeline's `/update-review` is for."""
     ids = _and_join([i["id"] for i in items])
-    lines = [f"@claude fix {ids} #update-review", ""]
+    lines = [f"/update-review fix {ids}", ""]
     for i in items:
         summary = " ".join((i["summary"] or "").split())
         lines.append(f"- **{i['id']}**" + (f" — {summary[:200]}{'…' if len(summary) > 200 else ''}" if summary else ""))
@@ -1124,7 +1124,7 @@ def _mention(gh: GhClient, s: Step) -> tuple[bool, str]:
         return False, f"preflight refused: {msg}"
     gh.comment(s.pr, s.args["comment"])
     return True, {"refresh": "refresh requested",
-                  "ask-fix": f"asked @claude to fix {len(s.args.get('items') or [])} finding(s) and refresh the review",
+                  "ask-fix": f"asked /update-review to fix {len(s.args.get('items') or [])} finding(s) and refresh the review",
                   }.get(s.kind, "fresh review requested")
 
 
@@ -1346,10 +1346,10 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--superseded-by", action="append", metavar="M | N:M",
                     help="M with exactly one --close, or N:M to say which close (repeatable)")
     ap.add_argument("--ask-fix", type=int, action="append", dest="ask_fix", metavar="N",
-                    help="comment `@claude fix <ids> #update-review`: ask the PR-side agent to fix the row's open "
+                    help="comment `/update-review fix <ids>`: ask the PR-side agent to fix the row's open "
                          "findings and refresh the review, instead of running /address-review yourself")
     ap.add_argument("--refresh", type=int, action="append")
-    ap.add_argument("--rerun", type=int, action="append", help="post `@claude <reason> #new-review`: a fresh review from scratch")
+    ap.add_argument("--rerun", type=int, action="append", help="post `/new-review <reason>`: a fresh review from scratch")
     ap.add_argument("--rerun-checks", type=int, action="append", help="re-run the failed jobs of the head's workflow runs")
     ap.add_argument("--reason", action="append", metavar="TEXT | N=TEXT",
                     help="for --refresh / --rerun: what changed; for --request-changes: an opening line; for --close: why. "

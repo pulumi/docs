@@ -283,7 +283,7 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
             n = first or "Some"
             ids = detail.partition(":")[2]
             text = (f"{n} blocking finding{'s' if n != '1' else ''} still open on the author card"
-                    + (f" ({ids})" if ids else "") + ". The author answers them — a fix, or @claude #update-review — before this merges.")
+                    + (f" ({ids})" if ids else "") + ". The author answers them — a fix, or /update-review — before this merges.")
         elif code == "cluster":
             cid = first
             rest = detail.partition(":")[2]
@@ -423,11 +423,11 @@ ACTION_HELP = {
     "unrequest": ("Remove you from this PR's requested reviewers. You were asked by name, not through a team, so "
                   "this is yours to decline. No comment is posted; whoever asked sees the request disappear."),
     "unblock": "Merge master into this branch as a merge commit and push, so it stops conflicting. A conflicted merge is aborted and reported, never resolved blind.",
-    "ask-fix": ("Comment `@claude fix <ids> #update-review` on the PR, naming this row's open findings, so the agent "
-                "watching the PR fixes them and refreshes the review. The batched alternative to running "
+    "ask-fix": ("Comment `/update-review fix <ids>` on the PR, naming this row's open findings, so the review's "
+                "update lane fixes them and refreshes the review. The batched alternative to running "
                 "/address-review yourself: one comment, no push from here, and it rides in the command below."),
-    "refresh": "Ask the existing review to update itself against the current head (@claude #update-review).",
-    "rerun": "Throw the current review away and run a fresh one from scratch (@claude #new-review).",
+    "refresh": "Ask the existing review to update itself against the current head (/update-review).",
+    "rerun": "Throw the current review away and run a fresh one from scratch (/new-review).",
     "rerun-checks": "Re-run the failed jobs of the head commit's workflow runs (the newest failed run per workflow), without a push, for a CI failure that looks flaky. A red commit status has no run to re-run, and the step says so. Nothing merges, and the review is not touched.",
     "fix": "Apply the drafted description correction and any one-click suggestions, then commit and push.",
     "render": "Every PR gets its own deployed copy of the site. This opens each page this PR changes on that preview and saves a full-page screenshot to .pr-review-shots/, for when you want to see the rendered page rather than the diff. It writes nothing to GitHub.",
@@ -888,7 +888,7 @@ def pending_judgment(queue: dict, pr: dict) -> str:
         # one on a PR a workflow opened.
         who = ("No author will answer them here: fix the branch, ask @claude on the PR, or close it out."
                if not (pr.get("author") or {}).get("can_revise", True) else "They are the author&#x27;s to answer: a fix, or "
-               "<code>@claude &lt;why&gt; #update-review</code>.")
+               "<code>/update-review &lt;why&gt;</code>.")
         return "".join(rows) + f'<p class="jfoot">{len(items)} open finding{plural} holding this row. {who}</p>'
     return ("".join(rows)
             + f'<p class="jfoot">{len(items)} finding{plural} nobody has ruled on yet. '
@@ -960,7 +960,7 @@ def action_bar(pr: dict, queue: dict, *, expanded: bool = False) -> str:
 def exclusive_attr(action: dict) -> str:
     """Two buttons that do the same job by different means belong to one
     exclusive group, and lighting either puts the other out. "fix it
-    yourself" and "ask @claude to fix them" are the pair: the first is an
+    yourself" and "ask Claude to fix them" are the pair: the first is an
     interactive run on your machine, the second a comment in the batch, and
     picking both would ask for the same fixes twice. The handoff is not a
     decision, so `clearRow` alone cannot pair them."""
@@ -1016,7 +1016,7 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
                     'pushed since, so its buttons are off: it is the author\'s turn, not yours.">waiting on the author</span>')
         body.append(f'<div class="jbox stop"><div class="q">Blocked: {esc(", ".join(pr.get("blockers") or []) or "no blocker named")}{tail}</div></div>')
         # The findings holding it, under the blocker that names them: a
-        # send-back, a close, or "ask @claude to fix them" is a decision
+        # send-back, a close, or "ask Claude to fix them" is a decision
         # about these, and the terminal already lists them.
         if not pr.get("judgments") and not expanded:
             body.append(pending_judgment(queue, pr))
@@ -1156,7 +1156,7 @@ HELP_SECTIONS = [
         "A collision cluster's move sits on the row it belongs to. <b>approve &amp; merge, then unblock #N</b> is on the chain's lead, and only where the collision is the one thing holding it back: it merges the lead through the stamp gates, then merges master into #N so it can follow, so it marks #N <i>covered</i> while it is lit. <b>ask … for one consolidated PR</b> is on the newest of a bot's overlapping sweeps.",
         "<b>your own PR</b> has no approve or send-back button: route it, and answer its findings with <code>/address-review</code>. A PR you already sent back waits under <i>Waiting on the author</i> until a commit lands.",
         "<b>fix it yourself</b> (amber, dashed) is on a PR a workflow opened that still has open findings: nobody will ever answer its review, so this is the way out that isn't closing it. It composes <code>/address-review N</code> on its own line above the command — an interactive run, never part of the batch.",
-        "<b>ask @claude to fix them</b> is the same row's other way out: one comment naming the open findings (<code>@claude fix F1 and F3 #update-review</code>) that asks the agent already on the PR to fix them and re-review. It is a write, so it rides in the <code>--act</code> command like everything else. The two are alternatives — lighting either puts the other out.",
+        "<b>ask Claude to fix them</b> is the same row's other way out: one comment naming the open findings (<code>/update-review fix F1 and F3</code>) that asks the review's update lane to fix them and re-review. It is a write, so it rides in the <code>--act</code> command like everything else. The two are alternatives — lighting either puts the other out.",
         "The button says whether approving merges: a bot row leads with <i>approve &amp; merge</i>, a person's row with <i>approve, no merge</i>, because merging their PR is their call.",
     ]),
     ("Judgment badges", [
@@ -1792,7 +1792,7 @@ SCRIPT = r"""
   function clearRow(pr, keep){
     document.querySelectorAll('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]').forEach(function(o){ if (o !== keep) setSel(o, false); });
   }
-  // "Fix it yourself" and "ask @claude to fix them" are the same job by two
+  // "Fix it yourself" and "ask Claude to fix them" are the same job by two
   // routes, so they share an exclusive group and lighting either puts the
   // other out. clearRow cannot do it: the handoff is deliberately not a
   // decision, so it is invisible to the one-decision-per-row rule.
