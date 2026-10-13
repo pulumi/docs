@@ -503,13 +503,22 @@ function getDefaultExcludedKeywords() {
         // Recurring false positives flagged on 2026-07-23 — S3 redirects committed, but registry/build overwrites or CloudFront cache-miss re-flags them
         "https://www.pulumi.com/registry/packages/azure/api-docs/voice/",           // blog/azure-v6-release: S3 redirect in scripts/redirects/general-broken-links-redirects.txt (added in #20366) keeps getting overwritten by the registry build
         "https://ieeexplore.ieee.org/",                                             // blog/aws-iam-access-analyzer-and-crossguard: IEEE returns HTTP 418 (I'm a teapot) to automated clients; loads in browsers
+        // Recurring ERRNO_ECONNREFUSED false positives (flagged on at least 4 runs between 2026-09-19 and 2026-10-13) —
+        // web.archive.org intermittently refuses connections under crawl load; both resolve 200 on recheck. Excluding
+        // the specific snapshot URLs rather than the whole archive.org domain so a genuinely dead snapshot still gets caught.
+        "https://web.archive.org/web/20260415184227/https://www.cs.colostate.edu/~fsieker/misc/debug/DEBUG.html",        // blog/next-level-iac-breakpoint-debugging
+        "https://web.archive.org/web/20240301073955/https://engineering.statefarm.com/blog/terraform-s3-upload-with-mime/", // blog/next-level-iac-package-ecosystems
     ];
 }
 
 // Filters out transient errors that needn't fail a link-check run.
 function excludeAcceptable(links) {
-    // HTTP status codes to filter out for external sites (bot protection, auth walls, timeouts)
-    const externalErrorReasons = ["HTTP_403", "HTTP_401", "HTTP_202", "HTTP_undefined"];
+    // HTTP status codes to filter out for external sites (bot protection, auth walls, timeouts).
+    // HTTP_406 added after leg.colorado.gov/bills/sb25b-004 (blog/agent-sprawl-iac-platform-is-the-answer)
+    // recurred as a false positive across at least 8 runs between 2026-09-19 and 2026-10-13: the site
+    // 406s the crawler's bare Accept/User-Agent headers but returns 200 for a browser-like request, the
+    // same content-negotiation bot-protection pattern HTTP_403/401/415 already cover below.
+    const externalErrorReasons = ["HTTP_403", "HTTP_401", "HTTP_202", "HTTP_undefined", "HTTP_406"];
 
     return (links
         // Ignore GitHub and npm 429s (rate-limited). We should really be handling these more
