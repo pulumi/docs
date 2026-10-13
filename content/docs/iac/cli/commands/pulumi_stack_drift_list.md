@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_drift_list/
   - /docs/iac/cli/commands/pulumi_stack_drift_ls/
   - /docs/reference/cli/pulumi_stack_drift_ls/
-meta_desc: "Learn about the pulumi stack drift list command."
+meta_desc: "Reference for the pulumi stack drift list command: list drift detection runs for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

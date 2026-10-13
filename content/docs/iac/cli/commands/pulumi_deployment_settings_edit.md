@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_deployment_settings_update/
   - /docs/iac/cli/commands/pulumi_deployment_settings_modify/
   - /docs/reference/cli/pulumi_deployment_settings_modify/
-meta_desc: "Learn about the pulumi deployment settings edit command."
+meta_desc: "Reference for the pulumi deployment settings edit command: create or update deployment settings for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

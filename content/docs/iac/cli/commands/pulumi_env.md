@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_env/
   - /docs/iac/cli/commands/pulumi_esc/
   - /docs/reference/cli/pulumi_esc/
-meta_desc: "Learn about the pulumi env command."
+meta_desc: "Reference for the pulumi env command: manage environments. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

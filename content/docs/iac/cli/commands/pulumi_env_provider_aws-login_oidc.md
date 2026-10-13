@@ -3,7 +3,7 @@
 title: "pulumi env provider aws-login oidc | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_provider_aws-login_oidc/
-meta_desc: "Learn about the pulumi env provider aws-login oidc command."
+meta_desc: "Reference for the pulumi env provider aws-login oidc command: add an AWS OIDC login provider to an environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

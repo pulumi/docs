@@ -3,7 +3,7 @@
 title: "pulumi schema check | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_schema_check/
-meta_desc: "Learn about the pulumi schema check command."
+meta_desc: "Reference for the pulumi schema check command: check a Pulumi package schema for errors. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

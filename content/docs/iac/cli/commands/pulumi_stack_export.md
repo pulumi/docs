@@ -3,7 +3,7 @@
 title: "pulumi stack export | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_export/
-meta_desc: "Learn about the pulumi stack export command."
+meta_desc: "Reference for the pulumi stack export command: export a stack's deployment to standard out. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi deployment | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_deployment/
-meta_desc: "Learn about the pulumi deployment command."
+meta_desc: "Reference for the pulumi deployment command: manage stack deployments on Pulumi Cloud. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

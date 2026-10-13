@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_deployment_list/
   - /docs/iac/cli/commands/pulumi_deployment_ls/
   - /docs/reference/cli/pulumi_deployment_ls/
-meta_desc: "Learn about the pulumi deployment list command."
+meta_desc: "Reference for the pulumi deployment list command: list deployments for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

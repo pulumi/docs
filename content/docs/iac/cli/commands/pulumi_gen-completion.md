@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_gen-completion/
   - /docs/iac/cli/commands/pulumi_completion/
   - /docs/reference/cli/pulumi_completion/
-meta_desc: "Learn about the pulumi gen-completion command."
+meta_desc: "Reference for the pulumi gen-completion command: generate completion scripts for the Pulumi CLI. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

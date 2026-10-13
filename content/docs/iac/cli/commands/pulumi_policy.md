@@ -3,7 +3,7 @@
 title: "pulumi policy | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy/
-meta_desc: "Learn about the pulumi policy command."
+meta_desc: "Reference for the pulumi policy command: manage resource policies. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

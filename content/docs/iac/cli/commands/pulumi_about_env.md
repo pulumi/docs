@@ -3,7 +3,7 @@
 title: "pulumi about env | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_about_env/
-meta_desc: "Learn about the pulumi about env command."
+meta_desc: "Reference for the pulumi about env command: an overview of the environmental variables used by pulumi. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

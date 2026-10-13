@@ -3,7 +3,7 @@
 title: "pulumi template | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_template/
-meta_desc: "Learn about the pulumi template command."
+meta_desc: "Reference for the pulumi template command: work with Pulumi templates. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

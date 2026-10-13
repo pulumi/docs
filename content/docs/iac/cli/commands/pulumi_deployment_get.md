@@ -3,7 +3,7 @@
 title: "pulumi deployment get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_deployment_get/
-meta_desc: "Learn about the pulumi deployment get command."
+meta_desc: "Reference for the pulumi deployment get command: get details for a specific deployment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

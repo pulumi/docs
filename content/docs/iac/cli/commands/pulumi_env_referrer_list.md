@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_referrer_list/
   - /docs/iac/cli/commands/pulumi_env_referrer_ls/
   - /docs/reference/cli/pulumi_env_referrer_ls/
-meta_desc: "Learn about the pulumi env referrer list command."
+meta_desc: "Reference for the pulumi env referrer list command: list entities that reference an environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

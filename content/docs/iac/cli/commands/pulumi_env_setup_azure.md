@@ -3,7 +3,7 @@
 title: "pulumi env setup azure | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_setup_azure/
-meta_desc: "Learn about the pulumi env setup azure command."
+meta_desc: "Reference for the pulumi env setup azure command: set up Azure OIDC integration for Pulumi ESC. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

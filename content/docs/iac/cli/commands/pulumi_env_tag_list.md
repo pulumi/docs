@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_tag_list/
   - /docs/iac/cli/commands/pulumi_env_tag_ls/
   - /docs/reference/cli/pulumi_env_tag_ls/
-meta_desc: "Learn about the pulumi env tag list command."
+meta_desc: "Reference for the pulumi env tag list command: list environment tags. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

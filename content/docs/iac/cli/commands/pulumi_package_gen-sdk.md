@@ -3,7 +3,7 @@
 title: "pulumi package gen-sdk | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package_gen-sdk/
-meta_desc: "Learn about the pulumi package gen-sdk command."
+meta_desc: "Reference for the pulumi package gen-sdk command: generate SDK(s) from a package or schema. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

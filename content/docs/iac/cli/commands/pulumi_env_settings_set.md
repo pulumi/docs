@@ -3,7 +3,7 @@
 title: "pulumi env settings set | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_settings_set/
-meta_desc: "Learn about the pulumi env settings set command."
+meta_desc: "Reference for the pulumi env settings set command: set an environment setting. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

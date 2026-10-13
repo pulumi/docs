@@ -3,7 +3,7 @@
 title: "pulumi do | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_do/
-meta_desc: "Learn about the pulumi do command."
+meta_desc: "Reference for the pulumi do command: interact directly with cloud resources. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

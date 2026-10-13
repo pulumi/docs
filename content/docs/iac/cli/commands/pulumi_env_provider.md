@@ -3,7 +3,7 @@
 title: "pulumi env provider | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_provider/
-meta_desc: "Learn about the pulumi env provider command."
+meta_desc: "Reference for the pulumi env provider command: manage login providers within an environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi env get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_get/
-meta_desc: "Learn about the pulumi env get command."
+meta_desc: "Reference for the pulumi env get command: get a value within an environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

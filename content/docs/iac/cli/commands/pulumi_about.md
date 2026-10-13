@@ -3,7 +3,7 @@
 title: "pulumi about | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_about/
-meta_desc: "Learn about the pulumi about command."
+meta_desc: "Reference for the pulumi about command: print information about the Pulumi environment. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

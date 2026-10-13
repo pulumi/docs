@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_role_update/
   - /docs/iac/cli/commands/pulumi_org_role_modify/
   - /docs/reference/cli/pulumi_org_role_modify/
-meta_desc: "Learn about the pulumi org role edit command."
+meta_desc: "Reference for the pulumi org role edit command: update a custom role's name, description, or permissions. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

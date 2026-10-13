@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_audit-log_list/
   - /docs/iac/cli/commands/pulumi_org_audit-log_ls/
   - /docs/reference/cli/pulumi_org_audit-log_ls/
-meta_desc: "Learn about the pulumi org audit-log list command."
+meta_desc: "Reference for the pulumi org audit-log list command: list audit log events for an organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

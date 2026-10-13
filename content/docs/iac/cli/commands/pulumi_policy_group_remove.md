@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_policy_group_rm/
   - /docs/iac/cli/commands/pulumi_policy_group_delete/
   - /docs/reference/cli/pulumi_policy_group_delete/
-meta_desc: "Learn about the pulumi policy group remove command."
+meta_desc: "Reference for the pulumi policy group remove command: delete a Policy Group. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

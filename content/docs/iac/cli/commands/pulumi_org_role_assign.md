@@ -3,7 +3,7 @@
 title: "pulumi org role assign | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_role_assign/
-meta_desc: "Learn about the pulumi org role assign command."
+meta_desc: "Reference for the pulumi org role assign command: assign a role to a team. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

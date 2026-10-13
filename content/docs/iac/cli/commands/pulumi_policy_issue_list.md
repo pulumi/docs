@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_policy_issue_list/
   - /docs/iac/cli/commands/pulumi_policy_issue_ls/
   - /docs/reference/cli/pulumi_policy_issue_ls/
-meta_desc: "Learn about the pulumi policy issue list command."
+meta_desc: "Reference for the pulumi policy issue list command: list all policy issues for an organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi config set-all | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_set-all/
-meta_desc: "Learn about the pulumi config set-all command."
+meta_desc: "Reference for the pulumi config set-all command: set multiple configuration values. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

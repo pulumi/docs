@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_org_role_rm/
   - /docs/iac/cli/commands/pulumi_org_role_delete/
   - /docs/reference/cli/pulumi_org_role_delete/
-meta_desc: "Learn about the pulumi org role remove command."
+meta_desc: "Reference for the pulumi org role remove command: delete a custom role from an organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

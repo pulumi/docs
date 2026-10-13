@@ -3,7 +3,7 @@
 title: "pulumi policy group | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_group/
-meta_desc: "Learn about the pulumi policy group command."
+meta_desc: "Reference for the pulumi policy group command: manage policy groups. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

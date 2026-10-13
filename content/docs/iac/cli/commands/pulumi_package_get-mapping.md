@@ -3,7 +3,7 @@
 title: "pulumi package get-mapping | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package_get-mapping/
-meta_desc: "Learn about the pulumi package get-mapping command."
+meta_desc: "Reference for the pulumi package get-mapping command: get the mapping information for a given key from a package. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

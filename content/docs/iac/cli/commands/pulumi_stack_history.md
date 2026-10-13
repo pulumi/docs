@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_history/
   - /docs/iac/cli/commands/pulumi_stack_hist/
   - /docs/reference/cli/pulumi_stack_hist/
-meta_desc: "Learn about the pulumi stack history command."
+meta_desc: "Reference for the pulumi stack history command: display history for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

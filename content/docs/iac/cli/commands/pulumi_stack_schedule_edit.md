@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_schedule_update/
   - /docs/iac/cli/commands/pulumi_stack_schedule_modify/
   - /docs/reference/cli/pulumi_stack_schedule_modify/
-meta_desc: "Learn about the pulumi stack schedule edit command."
+meta_desc: "Reference for the pulumi stack schedule edit command: update the configuration of a scheduled deployment action. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

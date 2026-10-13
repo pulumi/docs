@@ -3,7 +3,7 @@
 title: "pulumi api | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_api/
-meta_desc: "Learn about the pulumi api command."
+meta_desc: "Reference for the pulumi api command: call any Pulumi Cloud API endpoint. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

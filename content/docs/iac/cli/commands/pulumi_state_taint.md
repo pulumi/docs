@@ -3,7 +3,7 @@
 title: "pulumi state taint | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_taint/
-meta_desc: "Learn about the pulumi state taint command."
+meta_desc: "Reference for the pulumi state taint command: taint one or more resources in the stack's state. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

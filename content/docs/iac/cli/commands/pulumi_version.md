@@ -3,7 +3,7 @@
 title: "pulumi version | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_version/
-meta_desc: "Learn about the pulumi version command."
+meta_desc: "Reference for the pulumi version command: print Pulumi's version number. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

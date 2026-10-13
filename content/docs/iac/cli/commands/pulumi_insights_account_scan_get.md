@@ -3,7 +3,7 @@
 title: "pulumi insights account scan get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_insights_account_scan_get/
-meta_desc: "Learn about the pulumi insights account scan get command."
+meta_desc: "Reference for the pulumi insights account scan get command: get details for a specific Insights scan. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

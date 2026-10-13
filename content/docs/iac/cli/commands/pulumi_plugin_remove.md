@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_plugin_rm/
   - /docs/iac/cli/commands/pulumi_plugin_delete/
   - /docs/reference/cli/pulumi_plugin_delete/
-meta_desc: "Learn about the pulumi plugin remove command."
+meta_desc: "Reference for the pulumi plugin remove command: remove one or more plugins from the download cache. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

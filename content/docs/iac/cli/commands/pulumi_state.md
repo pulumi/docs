@@ -3,7 +3,7 @@
 title: "pulumi state | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state/
-meta_desc: "Learn about the pulumi state command."
+meta_desc: "Reference for the pulumi state command: edit the current stack's state. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

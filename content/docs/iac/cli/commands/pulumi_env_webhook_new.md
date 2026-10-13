@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_webhook_create/
   - /docs/iac/cli/commands/pulumi_env_webhook_setup/
   - /docs/reference/cli/pulumi_env_webhook_setup/
-meta_desc: "Learn about the pulumi env webhook new command."
+meta_desc: "Reference for the pulumi env webhook new command: create a new environment webhook. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_config_rm-all/
   - /docs/iac/cli/commands/pulumi_config_delete-all/
   - /docs/reference/cli/pulumi_config_delete-all/
-meta_desc: "Learn about the pulumi config remove-all command."
+meta_desc: "Reference for the pulumi config remove-all command: remove multiple configuration values. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

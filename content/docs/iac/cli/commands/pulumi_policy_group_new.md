@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_policy_group_create/
   - /docs/iac/cli/commands/pulumi_policy_group_setup/
   - /docs/reference/cli/pulumi_policy_group_setup/
-meta_desc: "Learn about the pulumi policy group new command."
+meta_desc: "Reference for the pulumi policy group new command: create a new Policy Group. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi policy publish | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_publish/
-meta_desc: "Learn about the pulumi policy publish command."
+meta_desc: "Reference for the pulumi policy publish command: publish a Policy Pack to the Pulumi Cloud. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

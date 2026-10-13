@@ -3,7 +3,7 @@
 title: "pulumi package info | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package_info/
-meta_desc: "Learn about the pulumi package info command."
+meta_desc: "Reference for the pulumi package info command: show information about a package. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

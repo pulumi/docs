@@ -3,7 +3,7 @@
 title: "pulumi stack webhook ping | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_webhook_ping/
-meta_desc: "Learn about the pulumi stack webhook ping command."
+meta_desc: "Reference for the pulumi stack webhook ping command: send a test ping to a stack webhook. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi env provider azure-login oidc | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_provider_azure-login_oidc/
-meta_desc: "Learn about the pulumi env provider azure-login oidc command."
+meta_desc: "Reference for the pulumi env provider azure-login oidc command: add an Azure OIDC login provider to an environment."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi org member | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_member/
-meta_desc: "Learn about the pulumi org member command."
+meta_desc: "Reference for the pulumi org member command: manage organization members. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

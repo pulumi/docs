@@ -3,7 +3,7 @@
 title: "pulumi stack import | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_import/
-meta_desc: "Learn about the pulumi stack import command."
+meta_desc: "Reference for the pulumi stack import command: import a deployment from standard in into an existing stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

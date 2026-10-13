@@ -3,7 +3,7 @@
 title: "pulumi org usage get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_usage_get/
-meta_desc: "Learn about the pulumi org usage get command."
+meta_desc: "Reference for the pulumi org usage get command: fetch the resources-under-management summary for an organization. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

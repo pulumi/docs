@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_init/
   - /docs/iac/cli/commands/pulumi_env_new/
   - /docs/reference/cli/pulumi_env_new/
-meta_desc: "Learn about the pulumi env init command."
+meta_desc: "Reference for the pulumi env init command: create an empty environment with the given name. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

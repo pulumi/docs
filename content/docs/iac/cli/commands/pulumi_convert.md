@@ -3,7 +3,7 @@
 title: "pulumi convert | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_convert/
-meta_desc: "Learn about the pulumi convert command."
+meta_desc: "Reference for the pulumi convert command: convert Pulumi programs from a supported source program into other supported languages."
 ---
 
 

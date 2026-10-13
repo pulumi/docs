@@ -3,7 +3,7 @@
 title: "pulumi config set | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_set/
-meta_desc: "Learn about the pulumi config set command."
+meta_desc: "Reference for the pulumi config set command: set configuration value. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

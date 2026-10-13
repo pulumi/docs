@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_env_list/
   - /docs/iac/cli/commands/pulumi_env_ls/
   - /docs/reference/cli/pulumi_env_ls/
-meta_desc: "Learn about the pulumi env list command."
+meta_desc: "Reference for the pulumi env list command: list environments. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_plugin_list/
   - /docs/iac/cli/commands/pulumi_plugin_ls/
   - /docs/reference/cli/pulumi_plugin_ls/
-meta_desc: "Learn about the pulumi plugin list command."
+meta_desc: "Reference for the pulumi plugin list command: list plugins. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

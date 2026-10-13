@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_tag_list/
   - /docs/iac/cli/commands/pulumi_stack_tag_ls/
   - /docs/reference/cli/pulumi_stack_tag_ls/
-meta_desc: "Learn about the pulumi stack tag list command."
+meta_desc: "Reference for the pulumi stack tag list command: list all stack tags. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi logs decrypt | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_logs_decrypt/
-meta_desc: "Learn about the pulumi logs decrypt command."
+meta_desc: "Reference for the pulumi logs decrypt command: decrypt and display automatic logs. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

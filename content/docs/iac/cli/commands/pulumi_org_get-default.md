@@ -3,7 +3,7 @@
 title: "pulumi org get-default | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_get-default/
-meta_desc: "Learn about the pulumi org get-default command."
+meta_desc: "Reference for the pulumi org get-default command: get the default org for the current backend. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

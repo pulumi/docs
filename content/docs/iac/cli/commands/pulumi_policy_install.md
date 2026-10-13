@@ -3,7 +3,7 @@
 title: "pulumi policy install | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_install/
-meta_desc: "Learn about the pulumi policy install command."
+meta_desc: "Reference for the pulumi policy install command: install required policy packs for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

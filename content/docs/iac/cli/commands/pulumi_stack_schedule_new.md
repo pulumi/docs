@@ -7,7 +7,7 @@ aliases:
   - /docs/reference/cli/pulumi_stack_schedule_create/
   - /docs/iac/cli/commands/pulumi_stack_schedule_setup/
   - /docs/reference/cli/pulumi_stack_schedule_setup/
-meta_desc: "Learn about the pulumi stack schedule new command."
+meta_desc: "Reference for the pulumi stack schedule new command: create a scheduled deployment action for a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

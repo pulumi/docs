@@ -3,7 +3,7 @@
 title: "pulumi config env add | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_env_add/
-meta_desc: "Learn about the pulumi config env add command."
+meta_desc: "Reference for the pulumi config env add command: add environments to a stack. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

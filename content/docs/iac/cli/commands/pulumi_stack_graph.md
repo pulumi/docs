@@ -3,7 +3,7 @@
 title: "pulumi stack graph | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_graph/
-meta_desc: "Learn about the pulumi stack graph command."
+meta_desc: "Reference for the pulumi stack graph command: export a stack's dependency graph to a file. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

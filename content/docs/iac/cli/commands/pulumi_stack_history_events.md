@@ -3,7 +3,7 @@
 title: "pulumi stack history events | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_history_events/
-meta_desc: "Learn about the pulumi stack history events command."
+meta_desc: "Reference for the pulumi stack history events command: retrieve engine events for an update. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

@@ -3,7 +3,7 @@
 title: "pulumi stack webhook delivery | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_webhook_delivery/
-meta_desc: "Learn about the pulumi stack webhook delivery command."
+meta_desc: "Reference for the pulumi stack webhook delivery command: inspect stack webhook deliveries. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

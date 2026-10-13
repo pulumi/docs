@@ -3,7 +3,7 @@
 title: "pulumi env setup aws | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_setup_aws/
-meta_desc: "Learn about the pulumi env setup aws command."
+meta_desc: "Reference for the pulumi env setup aws command: set up AWS OIDC integration for Pulumi ESC. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

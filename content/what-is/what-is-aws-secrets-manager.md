@@ -23,7 +23,7 @@ AWS Secrets Manager is a cloud service for managing, retrieving, and storing sen
 
 ## Creating AWS Secrets Manager secrets
 
-AWS Secrets Manager secrets can be created via the AWS CLI. Before creating secrets in AWS, you must first make sure you have the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) installed. Once you have installed the AWS CLI, run the `aws configure` command to [set up your AWS credentials](https://docs.aws.amazon.com/cli/latest/reference/configure/).
+AWS Secrets Manager secrets can be created via the AWS CLI. Before creating secrets in AWS, you must first make sure you have the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) installed. Once you have installed the AWS CLI, run the `aws configure` command to [set up your AWS credentials](https://docs.aws.amazon.com/cli/latest/reference/configure/). If those credentials later expire or stop validating, the guide to [what each AWS CLI credential error means and how to clear it](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/) covers the common failure modes.
 
 ```bash
 $ aws configure

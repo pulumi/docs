@@ -3,7 +3,7 @@
 title: "pulumi env setup | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_setup/
-meta_desc: "Learn about the pulumi env setup command."
+meta_desc: "Reference for the pulumi env setup command: set up cloud provider OIDC integrations. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 

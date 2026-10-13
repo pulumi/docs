@@ -5,7 +5,7 @@ aliases:
   - /docs/reference/cli/pulumi_logs_list/
   - /docs/iac/cli/commands/pulumi_logs_ls/
   - /docs/reference/cli/pulumi_logs_ls/
-meta_desc: "Learn about the pulumi logs list command."
+meta_desc: "Reference for the pulumi logs list command: list automatic log files. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 
