@@ -11,7 +11,6 @@ tags:
     - features
     - insights
     - pulumi-cloud
-canonical_url: https://www.pulumi.com/docs/discovery-governance/concepts/discovery/discovered-stacks/
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
