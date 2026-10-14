@@ -5,7 +5,7 @@ title: "Who Spent All the Tokens? Per-Team AI Cost Control as Code"
 meta_image: /events/per-team-ai-cost-control/meta.png
 meta_image_square: /events/per-team-ai-cost-control/meta-square.png
 
-meta_desc: Track Amazon Bedrock token spend per team with Pulumi — tagged inference profiles, token metrics, policy guardrails, alarms, and budgets as code.
+meta_desc: Track Amazon Bedrock token spend per team with Pulumi: tagged inference profiles, token metrics, policy guardrails, alarms, and budgets, all as code.
 
 # A featured event displays first in the list.
 featured: false
@@ -34,9 +34,9 @@ location: virtual
 
 # Markdown description.
 description: |
-    Agents don't make one model call. They make hundreds, and they make them all day. When several teams share one Amazon Bedrock account, the bill arrives as a single line, and nobody can say who spent the tokens or stop the next surprise before it lands.
+    One agent task can fire off hundreds of model calls. When several teams share one Amazon Bedrock account, the bill shows up as one line item, and nobody can tell you which team burned the tokens, let alone rein it in.
 
-    In this live workshop, we'll build per-team AI cost control as code with Pulumi. Each team gets its own Bedrock application inference profile, tagged with a team and a cost center, and an IAM role that can call only that profile. Bedrock invocation logging feeds CloudWatch, where metric filters turn every request into per-team input and output token counts. Pulumi Policies stop untagged profiles and wildcard invoke grants before they ever deploy, a CloudWatch alarm fires when one team's output tokens spike, and an AWS Budget tracks spend by team. Credentials come from Pulumi ESC over OIDC, so there are no static keys anywhere.
+    In this live workshop, we'll build per-team AI cost control as code with Pulumi. Each team gets its own Bedrock application inference profile, tagged with a team and a cost center, and an IAM role that can call only that profile. Bedrock invocation logging feeds CloudWatch, where metric filters turn every request into per-team input and output token counts. Pulumi Policies block untagged profiles and wildcard invoke grants before they deploy. When one team's output tokens spike, a CloudWatch alarm fires. Credentials come from Pulumi ESC over OIDC, so there are no static access keys.
 
     Adding a team is one line of config. The code is open source, so you can clone it after the session and run it in your own AWS account.
 learn:
