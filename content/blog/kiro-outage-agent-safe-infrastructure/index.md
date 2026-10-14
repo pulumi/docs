@@ -1,6 +1,6 @@
 ---
 title: "What the Kiro Outage Teaches About Agent-Safe Infrastructure"
-date: 2026-10-08
+date: 2026-10-14
 draft: false
 meta_desc: "Amazon and its critics disagree on why Kiro deleted an environment, but both accounts point to the same fix: guardrails in the infrastructure layer."
 feature_image: feature.png
@@ -18,9 +18,18 @@ faq_schema: true
 
 # Social media copy: auto-posted to X, LinkedIn, and Bluesky when merged to master.
 social:
-    twitter: "An agent decided to delete and recreate an environment. Amazon says a misconfigured role was the cause. Either account leads to the same fix: an agent can do whatever its credentials and pipeline allow, so guardrails belong in your infrastructure layer."
-    linkedin: "In December 2025, an AWS engineer reportedly let the Kiro coding agent fix an issue, and the agent chose to delete and recreate the environment. Amazon says a misconfigured role was the cause, and the Financial Times reported it as an agent acting without intervention.\\n\\nBoth accounts agree on the mechanics: the agent could do exactly what its role allowed, and nothing structural stopped a destructive plan. We walk through what preview, mandatory policy, protect, approvals, and audit logs would each have done, and how to set them up today."
-    bluesky: "An agent decided to delete and recreate an environment. Amazon says a misconfigured role was the cause. Either way, an agent can do whatever its credentials and pipeline allow, so the guardrails belong in the infrastructure layer. Here is what that looks like:"
+    twitter: |
+        An agent decided to delete and recreate an environment. Amazon says a misconfigured role was the cause.
+
+        Either account leads to the same fix: an agent can do whatever its credentials and pipeline allow, so guardrails belong in your infrastructure layer.
+    linkedin: |
+        In December 2025, an AWS engineer reportedly let the Kiro coding agent fix an issue, and the agent chose to delete and recreate the environment. Amazon says a misconfigured role was the cause, and the Financial Times reported it as an agent acting without intervention.
+
+        Both accounts agree on the mechanics: the agent could do exactly what its role allowed, and nothing structural stopped a destructive plan. We walk through what preview, mandatory policy, protect, approvals, and audit logs would each have done, and how to set them up today.
+    bluesky: |
+        An agent decided to delete and recreate an environment. Amazon says a misconfigured role was the cause.
+
+        Either way, an agent can do whatever its credentials and pipeline allow, so the guardrails belong in the infrastructure layer. Here is what that looks like:
 ---
 
 In December 2025, AWS engineers reportedly let the Kiro agent fix an issue in Cost Explorer, and it chose to delete and recreate the environment, causing a 13-hour disruption in one China region. Amazon says the cause was a misconfigured role. Either way, an agent can do whatever its credentials and pipeline permit, so safety belongs in the infrastructure layer.
