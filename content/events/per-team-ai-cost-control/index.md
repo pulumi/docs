@@ -34,7 +34,7 @@ location: virtual
 
 # Markdown description.
 description: |
-    One agent task can fire off hundreds of model calls. When several teams share one Amazon Bedrock account, the bill shows up as one line item, and nobody can tell you which team burned the tokens.
+    One agent task can fire off hundreds of model calls. When several teams share one Amazon Bedrock account and nothing is set up to split usage, the bill shows up as one line item, and it's hard to tell which team burned the tokens.
 
     In this live workshop, we'll build per-team AI cost tracking on Amazon Bedrock as code with Pulumi. Each team gets its own inference profile and a role scoped to it, so usage can be measured team by team. We'll turn Bedrock's logs into per-team token counts and use Pulumi Policies to catch mistakes before they deploy.
 
