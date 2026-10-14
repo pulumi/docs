@@ -21,7 +21,6 @@ meta_desc: Pulumi Cloud launches new Restore Stacks feature for Enterprise and B
 # has been provided for you.
 
 # Point search engines to the docs page as the authoritative source for this content.
-canonical_url: "https://www.pulumi.com/docs/iac/operations/stack-management/restoring-deleted-stacks/"
 
 # At least one author is required.
 # The values in this list correspond with the `id` properties

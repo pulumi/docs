@@ -7,7 +7,6 @@ authors:
 tags:
     - automation-api
 category: product
-canonical_url: "https://www.pulumi.com/docs/iac/using-pulumi/automation-api/"
 ---
 
 Today’s [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platforms let organizations build rich, reliable, and complex cloud-based applications and architectures. But as teams move to modern cloud technologies,  they continue to search for ways to drive increased software-driven automation. Although modern infrastructure as code tools bring key software engineering benefits to cloud engineering, they remain focused on human-driven workflows. For example, a person running `pulumi up` at their terminal or wiring the Pulumi CLI into their CI/CD system.
