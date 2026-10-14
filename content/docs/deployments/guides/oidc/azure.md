@@ -46,10 +46,10 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 In the navigation pane of the [Microsoft Entra console](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview):
 
-1. Select **App registrations** and then click **New registration**.
+1. Select **App registrations** and then select **New registration**.
 1. Provide a name for your application (ex: `pulumi-deployments-oidc-app`).
 1. In the **Supported account types** section, select **Accounts in this organizational directory only**.
-1. Click **Register**.
+1. Select **Register**.
 
 After the Microsoft Entra application has been created, take note of the following details:
 
@@ -65,7 +65,7 @@ Once you have created your new application registration, you will be redirected 
 
 1. Navigate to the **Certificates & secrets** pane.
 1. Select the **Federated credentials** tab.
-1. Click on the **Add credential** button. This will start the "Add a credential" wizard.
+1. Select the **Add credential** button. This will start the "Add a credential" wizard.
 1. In the wizard, select **Other Issuer** as the **Federated credential scenario**.
 1. Fill in the remaining form fields as follows:
     * **Issuer:** `https://api.pulumi.com/oidc`
@@ -88,13 +88,13 @@ To provide Pulumi services the ability to deploy, manage, and interact with Azur
 
 1. Navigate to the [Subscriptions](https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV1) page of the Azure portal.
 1. Select the subscription to create the service principal in.
-    * If you want to limit access to a specific resource group, go to the [Resource Groups](https://portal.azure.com/#view/HubsExtension/BrowseResourceGroups) page instead and select the desired resource group.
+    * If you want to limit access to a specific resource group, navigate to the [Resource Groups](https://portal.azure.com/#view/HubsExtension/BrowseResourceGroups) page instead and select the desired resource group.
 1. In the left navigation menu, select **Access control (IAM)**.
-1. Click **Add** > **Add role assignment** to be taken to the **Add role assignment** wizard.
-1. Under the **Job function roles** tab, select the desired role from the list, then click **Next**.
-1. Select **User, group, or service principal**, then click **Select members**
-1. Enter the name of the application you created in a previous step, select it from the list, then click **Select**.
-1. Click **Next** and then **Review + assign**.
+1. Select **Add** > **Add role assignment** to be taken to the **Add role assignment** wizard.
+1. Under the **Job function roles** tab, select the desired role from the list, then select **Next**.
+1. Select **User, group, or service principal**, then select **Select members**
+1. Enter the name of the application you created in a previous step, select it from the list, then select **Select**.
+1. Select **Next** and then **Review + assign**.
 
 ### Using infrastructure as code
 
@@ -126,7 +126,7 @@ const contributorRoleId = "b24988ac-6180-42a0-ab88-20f7382dd24c";
 const subscriptionScope = pulumi.interpolate`/subscriptions/${current.subscriptionId}`;
 
 new authorization.RoleAssignment("pulumi-deployments-contributor", {
-    principalId: servicePrincipal.id,
+    principalId: servicePrincipal.objectId,
     principalType: "ServicePrincipal",
     roleDefinitionId: pulumi.interpolate`${subscriptionScope}/providers/Microsoft.Authorization/roleDefinitions/${contributorRoleId}`,
     scope: subscriptionScope,
