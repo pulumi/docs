@@ -10,7 +10,7 @@ menu:
     weight: 10
 ---
 
-The `oidc` provider mints a short-lived OpenID Connect (OIDC) token for an audience you choose. You can exchange the token with any service that federates OIDC identities, such as an artifact registry, a secrets broker, or a cloud identity service. For the steps to configure a service to trust these tokens, see [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
+The `oidc` provider mints a short-lived OpenID Connect (OIDC) token for an audience you choose. You can exchange the token with any service that federates OIDC identities, such as Cloudsmith, JFrog Artifactory, or Aembit. For the steps to configure a service to trust these tokens, see [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
 
 The vendor login providers, such as [`aws-login`](/docs/esc/providers/login/aws-login/), exchange their token for you and return that vendor's credentials. `fn::open::oidc` returns the signed token itself, so your own code or tool does the exchange.
 

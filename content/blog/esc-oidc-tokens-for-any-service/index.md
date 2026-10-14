@@ -20,7 +20,7 @@ social:
 
         Set the audience, pin the subject in the service's trust policy, and delete the stored API key.
     linkedin: |
-        Most services that matter to a deploy pipeline accept OpenID Connect tokens from an outside issuer: package registries, secrets brokers, workload identity platforms. Until now, a Pulumi ESC environment could only sign in that way to a fixed set of providers. For everything else it held a stored API key.
+        Most services that matter to a deploy pipeline accept OpenID Connect tokens from an outside issuer, from package registries such as Cloudsmith and JFrog Artifactory to workload access platforms such as Aembit. Until now, a Pulumi ESC environment could only sign in that way to a fixed set of providers. For everything else it held a stored API key.
 
         The new fn::open::oidc provider removes that key. When you open the environment, ESC signs an OIDC token for an audience you choose, from ESC's general OIDC issuer. The service checks the signature, the audience, and a stable subject that names your organization and environment by ID, then issues its own short-lived credential. The token lives for an hour at most, and nothing is stored.
 
@@ -33,7 +33,7 @@ social:
 
 A [Pulumi ESC](/docs/esc/) environment can now mint a short-lived OpenID Connect (OIDC) token for any service that accepts one.
 
-Every pipeline and agent that touches your infrastructure eventually needs credentials for a wide array of other services, including package registries, secrets brokers, and workload identity platforms. The default historically has been to store a long-lived API key that sits in an environment, which presents a much higher risk of exposure than short-lived credentials.
+Every pipeline and agent that touches your infrastructure eventually needs credentials for services beyond your cloud: a package registry such as Cloudsmith or JFrog Artifactory, or a workload access platform such as Aembit. The default historically has been to store a long-lived API key that sits in an environment, which presents a much higher risk of exposure than short-lived credentials.
 
 OIDC effectively solves this problem by having the environment prove its identity with a signed token that expires within the hour, which the service exchanges for a credential of its own, and ESC stores nothing.
 
@@ -43,7 +43,7 @@ With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC s
 
 ## Why the stored key is the weak link
 
-A stored key for a registry or a secrets broker sits in ESC until someone rotates it. It works for anyone who reads it, from any machine, for as long as it exists. If it leaks, you rotate it, and every consumer of the environment breaks until it picks up the new one.
+A stored key for a registry or an access platform sits in ESC until someone rotates it. It works for anyone who reads it, from any machine, for as long as it exists. If it leaks, you rotate it, and every consumer of the environment breaks until it picks up the new one.
 
 An OIDC token works the other way around. ESC mints it at the moment you open the environment, signs it with a key only Pulumi holds, and stamps it with an expiry. The service checks it against the trust policy you configured and issues a credential with its own lifetime. You store nothing, so you rotate nothing.
 
