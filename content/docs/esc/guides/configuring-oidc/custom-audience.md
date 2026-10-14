@@ -65,7 +65,7 @@ Pin the exact subject. To share one trust entry across environments, declare the
 | `https://pulumi.com/root_env_id` | The ID of the environment that was opened. Omitted when that environment has no ID. |
 | `https://pulumi.com/root_env_version` | The version the open requested: a revision number, a tag, or `draft:<id>` for a draft. Omitted when the open used the latest revision. |
 | `https://pulumi.com/actor` | The login of the identity that opened the environment: a user's login, `team-account:<team-id>` for a team token, or `service-account:<org-id>` for an organization token, a scheduled rotation, or a deployment with no triggering user. A user can change their login, so pin on `actor_id` instead. |
-| `https://pulumi.com/actor_id` | The ID of the identity that opened the environment. It does not change. |
+| `https://pulumi.com/actor_id` | The ID of what `actor` names: the user's ID, the team's ID for a team token, or the organization's ID for an organization token. It does not change. |
 
 Base your trust rules on `iss`, `aud`, and `sub`. Names can change, but IDs do not. The `subjectAttributes` input of the vendor login providers does not apply to these tokens.
 
