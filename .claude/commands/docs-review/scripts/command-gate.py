@@ -188,14 +188,28 @@ def convert(body: str, command: str) -> str:
     pieces.append(raw[pos:])
 
     # The token pattern never crosses a newline, so the lines stay aligned.
-    lines = []
+    # A line that held nothing but the tokens goes, and so does the blank
+    # line it leaves doubled, so a trailing `#update-review` paragraph
+    # doesn't leave a gap behind.
+    lines: list[str] = []
+    dropped = False
     for before, after in zip(raw.split("\n"), "".join(pieces).split("\n")):
-        lines.append(after.strip() if after != before else before)
+        if after == before:
+            if not (dropped and not before.strip() and lines and not lines[-1].strip()):
+                lines.append(before)
+            dropped = False
+        elif after.strip():
+            lines.append(after.strip())
+            dropped = False
+        else:
+            dropped = True
     text = "\n".join(lines).strip()
     if not text:
         return f"/{command}"
+    # Anything longer than one plain line starts a paragraph of its own, so
+    # nothing under it (a `---`, a list) can restyle the command line.
     if "\n" in text or _BLOCK_START_RE.match(text):
-        return f"/{command}\n{text}"
+        return f"/{command}\n\n{text}"
     return f"/{command} {text}"
 
 
@@ -405,27 +419,32 @@ def _self_test() -> int:
     check("convert of a bare request", convert("@claude #new-review\r\n", N) == "/new-review")
     check("convert keeps a multi-line request under the command",
           convert("@claude fix F1 and F3\n\n- F1: typo\n- F3: link #update-review", U)
-          == "/update-review\nfix F1 and F3\n\n- F1: typo\n- F3: link")
+          == "/update-review\n\nfix F1 and F3\n\n- F1: typo\n- F3: link")
     check("convert puts block markdown under the command",
           convert("@claude - accepting all open items #update-review", U)
-          == "/update-review\n- accepting all open items")
+          == "/update-review\n\n- accepting all open items")
     check("convert leaves untouched lines alone",
           convert("@claude F1: see\n\n    indented code\n#update-review", U)
-          == "/update-review\nF1: see\n\n    indented code")
+          == "/update-review\n\nF1: see\n\n    indented code")
     apart = "@claude a few things:\n\nF1: fixed in abc123.\n\nF3: intentional, the API returns 7.\n\n#update-review"
     check("tokens paragraphs apart are still the old shape", legacy_command(apart) == U)
     check("convert keeps everything between them",
-          convert(apart, U) == "/update-review\na few things:\n\nF1: fixed in abc123.\n\nF3: intentional, the API returns 7.")
+          convert(apart, U) == "/update-review\n\na few things:\n\nF1: fixed in abc123.\n\nF3: intentional, the API returns 7.")
     check("hashtag first, mention last", legacy_command("#update-review\n\nF2: sourced.\n\n@claude") == U)
     check("convert of the reversed order", convert("#update-review\n\nF2: sourced.\n\n@claude", U)
           == "/update-review F2: sourced.")
     fenced = "@claude F2: output:\n\n```\n$ grep '#update-review' log\n```\n\nSee above. #update-review"
     check("a fence between the tokens doesn't hide them", legacy_command(fenced) == U)
     check("convert leaves the tokens inside code alone",
-          convert(fenced, U) == "/update-review\nF2: output:\n\n```\n$ grep '#update-review' log\n```\n\nSee above.")
+          convert(fenced, U) == "/update-review\n\nF2: output:\n\n```\n$ grep '#update-review' log\n```\n\nSee above.")
+    check("a hashtag-only paragraph leaves no gap behind",
+          convert("@claude F1: fixed.\n\nF2: accepting as-is.\n\n#update-review\n\nthanks", U)
+          == "/update-review\n\nF1: fixed.\n\nF2: accepting as-is.\n\nthanks")
+    check("a rule under the request can't turn the command into a heading",
+          convert("@claude #new-review\n\n---\n_footer_", N) == "/new-review\n\n---\n_footer_")
     check("convert leaves quoted and inline-code tokens alone",
           convert("@claude per `@claude #update-review`:\n> @claude F1 #update-review\nok #update-review", U)
-          == "/update-review\nper `@claude #update-review`:\n> @claude F1 #update-review\nok")
+          == "/update-review\n\nper `@claude #update-review`:\n> @claude F1 #update-review\nok")
     reply = render_redirect("@claude F1: ```x``` #update-review", U, "alice", "https://example.test/c#review-commands")
     check("reply carries the marker", reply.startswith(REDIRECT_MARKER))
     check("reply names the author", "@alice —" in reply)
