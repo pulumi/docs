@@ -62,7 +62,7 @@ With `identityToken.version` set to `v2`, the provider takes the same inputs as 
 
 | Property | Type | Required | Description |
 |---|---|---|---|
-| `audience` | string | Yes | The `aud` claim to preview. One value, 1 to 512 bytes. |
+| `audience` | string | Yes | The `aud` claim to preview. One value, 1 to 255 bytes. |
 | `identityToken` | object | Yes | Selects the claims to preview. |
 | `identityToken.version` | string | Yes | `v2` previews the `fn::open::oidc` claims. `v1` previews the [vendor login claims](#preview-the-vendor-login-claims). |
 | `duration` | string | No | Accepted so that the block moves to `fn::open::oidc` unchanged, from `1m` to `1h`. The preview has no lifetime. |

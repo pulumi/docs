@@ -124,7 +124,7 @@ Each token that `fn::open::oidc` mints adds an entry to your organization's [aud
 
 | Property | Type | Required | Description |
 |---|---|---|---|
-| `audience` | string | Yes | The token's `aud` claim. One value, 1 to 512 bytes. It must not be blank. |
+| `audience` | string | Yes | The token's `aud` claim. One value, 1 to 255 bytes. It must not be blank. |
 | `identityToken` | object | Yes | The identity token to mint. |
 | `identityToken.version` | string | Yes | The token format. Set `v2`. |
 | `duration` | string | No | The token's lifetime, from `1m` to `1h`, for example `15m`. Defaults to `1h`. |
@@ -155,9 +155,9 @@ Pulumi checks the inputs against the schema when you save the environment, and r
 
 ### Input refused
 
-**Symptom:** saving fails with `missing required properties: audience`, `expected a string of at most length 512`, or `expected "v2"`. Opening fails with `fn::open::oidc does not accept subjectAttributes: a v2 token's subject is always the environment's ID`, `fn::open::oidc does not accept an input named "<name>"`, or `audience must not be blank`.
+**Symptom:** saving fails with `missing required properties: audience`, `expected a string of at most length 255`, or `expected "v2"`. Opening fails with `fn::open::oidc does not accept subjectAttributes: a v2 token's subject is always the environment's ID`, `fn::open::oidc does not accept an input named "<name>"`, or `audience must not be blank`.
 
-**Cause:** `fn::open::oidc` accepts only `audience`, `identityToken.version`, and `duration`, and the `audience` must be 1 to 512 bytes and not blank. The vendor login providers accept `subjectAttributes`, but this provider does not.
+**Cause:** `fn::open::oidc` accepts only `audience`, `identityToken.version`, and `duration`, and the `audience` must be 1 to 255 bytes and not blank. The vendor login providers accept `subjectAttributes`, but this provider does not.
 
 **Fix:** add the missing input, or remove the refused one. To restrict which environments the relying party trusts, match the exact `sub` claim instead.
 
