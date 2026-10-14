@@ -9,7 +9,7 @@ menu:
     ai:
         name: Usage limits
         parent: ai-neo
-        weight: 55
+        weight: 110
         identifier: ai-usage-limits
 ---
 

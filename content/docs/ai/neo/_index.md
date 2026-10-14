@@ -1,29 +1,23 @@
 ---
 title: Pulumi Neo
-title_tag: Pulumi Neo | Infrastructure AI
+title_tag: Pulumi Neo | Pulumi Agents
 h1: Pulumi Neo
-meta_desc: Pulumi Neo is a purpose-built infrastructure agent that investigates your live infrastructure, explains what it finds, and can propose changes to your IaC code.
+meta_desc: Neo is the pre-built personal agent in Pulumi Agents. Investigate infrastructure and make changes from Pulumi Cloud, your terminal, or your editor.
 aliases:
 - /docs/pulumi-cloud/neo/
 - /docs/iac/neo/
 - /docs/neo/
 menu:
     ai:
-        name: Pulumi Neo
-        parent: ai-home
+        name: Neo
+        parent: ai-guides
         identifier: ai-neo
-        weight: 1
+        weight: 20
 ---
 
-Pulumi Neo is Pulumi's own infrastructure agent, powered by Anthropic's Claude
-family of models accessed via Amazon Bedrock. It ships with the Pulumi Agent
-Skills catalog built in, and adds organizational context, policy guardrails,
-human-in-the-loop approvals, and scheduled autonomous work.
+Neo is the pre-built personal agent in Pulumi Agents. Use it to investigate infrastructure, preview changes, and update your Pulumi code with your own Pulumi Cloud permissions. Work in Pulumi Cloud, your terminal, or your editor.
 
-Neo works on infrastructure the way a teammate would: it reads your
-organization's live state in Pulumi Cloud, and depending on what you asked for,
-it might answer a question, hand back an investigation, review a change, or
-open a pull request against your IaC code.
+These guides cover Neo's tasks, controls, and supported interfaces. To set up an agent with saved instructions and its own role, see [Create and manage agents](/docs/ai/agents/create-and-manage/).
 
 ## What Neo does
 
@@ -87,5 +81,4 @@ the context a task needs.
 [Plan Mode](/docs/ai/neo/tasks/#plan-mode) makes Neo agree on a plan with you
 before it acts, [task modes](/docs/ai/neo/tasks/#task-modes) control which steps
 need your approval, and
-[read-only mode](/docs/ai/neo/get-started/#read-only-mode) removes its ability
-to change anything at all. Neo never has more access than you do, only less.
+[read-only mode](/docs/ai/neo/get-started/#read-only-mode) restricts Pulumi Cloud writes. Credentials for connected tools govern access to those tools separately; see [Neo permissions](/docs/ai/neo/permissions/).

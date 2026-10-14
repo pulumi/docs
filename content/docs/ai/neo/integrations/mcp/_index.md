@@ -7,9 +7,9 @@ aliases:
 - /docs/ai/integrations/mcp/
 menu:
     ai:
-        name: External MCP servers
-        parent: ai-integrations
-        weight: 1
+        name: External MCP integrations
+        parent: ai-agents-integrations
+        weight: 30
         identifier: ai-integrations-mcp
 ---
 
@@ -24,13 +24,13 @@ MCP integrations are configured at the organization level by an administrator. O
 
 MCP integrations give Neo direct access to the systems your team uses to define, observe, and operate infrastructure: issue trackers, observability platforms, runbook wikis, and on-call tooling. Neo can pick up a ticket from Linear or Jira and write the matching infrastructure changes; during an investigation it can query real traces and metrics rather than reasoning from documentation; and runbooks, incident records, and on-call schedules are first-class inputs rather than things someone has to paste in.
 
-Supported integrations are Atlassian (Jira and Confluence), Datadog, Honeycomb, Linear, PagerDuty, and Supabase. Each one becomes a set of tools Neo can call during a task, with credentials managed centrally in Pulumi Cloud.
+Supported integrations are Atlassian (Jira and Confluence), Dash0, Datadog, Honeycomb, Linear, New Relic, PagerDuty, and Supabase. Each one becomes a set of tools Neo can call during a task, with credentials managed centrally in Pulumi Cloud.
 
 ## Enabling an MCP integration
 
 To enable an integration, navigate to **Neo Settings**, select **Integrations**, select the integration, and provide the required credentials.
 
-Each MCP integration connects Neo to the service's MCP server, which means Neo can use the full set of tools that service exposes through MCP.
+Each MCP integration connects to the service's MCP server. Available tools depend on the credentials and authentication method the service supports.
 
 ## Credential storage
 
@@ -44,7 +44,9 @@ Disabling an integration deletes its stored credentials and immediately prevents
 
 ## Per-task control
 
-By default, every task inherits all integrations the organization has enabled. If you want to narrow Neo's focus for a specific task (for example, running a deployment review without giving Neo access to your issue tracker), you can toggle individual integrations off from the task composer before starting the conversation. The toggles only affect the current task; the org-level configuration is unchanged.
+For tasks started from an agent you configure, [select MCP integrations in the agent configuration](/docs/ai/agents/configure/#connect-the-tools-it-needs). The saved selection applies across that agent's tasks.
+
+Neo tasks inherit all integrations enabled by the organization. Before starting a task, turn off any integrations it does not need in the task composer. This selection applies only to that task.
 
 ## If an integration fails
 
@@ -64,13 +66,17 @@ If Neo tries to use an integration that isn't available (for example, because th
 1. Create a credential for the service account with type **API** and assign the necessary roles
 1. In Neo, enter the **Service Account API Token** and your **Site URL** (e.g., `https://yoursite.atlassian.net`)
 
+### Dash0
+
+1. In Dash0, open **Settings**, then **Endpoints**, and copy the **MCP** endpoint URL for your organization.
+1. Under **Settings**, open **Auth Tokens** and create an organization auth token. Grant **Reading** permissions for the datasets the agent needs.
+1. In the Dash0 integration, enter the **MCP Endpoint URL** and **Organization Auth Token**.
+
+Use your organization's regional endpoint. See Dash0's [auth token documentation](https://www.dash0.com/docs/dash0/miscellaneous/glossary/auth-tokens) to scope the token's permissions.
+
 ### Datadog
 
-1. In **Organization Settings**, open **Service Accounts** and create a service account with read-only access
-1. On the service account's details page, create an **App Key** and make sure to include the MCP read scope
-1. In **Organization Settings**, open **API Keys** and create an **API Key**
-1. Identify your Datadog site, the domain you use to access Datadog (for example, `datadoghq.com` is `us1`, `datadoghq.eu` is `eu1`). Supported codes: `us1`, `us3`, `us5`, `eu1`, `ap1`, `ap2`.
-1. In Neo, enter the **Datadog site** code, **API Key**, and **App Key**
+Follow [Connect Datadog](/docs/ai/agents/integrations/datadog/) to create a service account, set its permissions, and connect it to Pulumi.
 
 ### Honeycomb
 
@@ -85,7 +91,7 @@ If Neo tries to use an integration that isn't available (for example, because th
 ### Linear
 
 {{% notes type="info" %}}
-Linear API keys are personal tokens. All actions Neo takes through this integration are attributed to the user who created the token, regardless of who creates the Neo task. OAuth support is planned for a future release.
+Linear API keys are personal tokens. All actions Neo takes through this integration are attributed to the user who created the token, regardless of who creates the Neo task. This tool connection is separate from installing an agent in a Linear workspace.
 {{% /notes %}}
 
 1. In Linear, open **Settings**, then **Security & Access**
@@ -95,6 +101,14 @@ Linear API keys are personal tokens. All actions Neo takes through this integrat
     - **Write** or **Admin**: required if you want Neo to update or delete existing issues
 1. Optionally limit the key to specific teams using the team-access controls
 1. In Neo, enter the **API Key**
+
+### New Relic
+
+1. Have an administrator enable **New Relic MCP Server > API Keys** in **Feature Control Manager** and grant MCP read access to a centrally managed automation account.
+1. Create a **User API Key** for that account.
+1. In the New Relic integration, enter your account's **Region** (`us`, `eu`, or `jp`) and the **User API Key**.
+
+The key uses the automation account's permissions. Tools that require OAuth are unavailable through this API-key integration. See [New Relic MCP authentication](https://docs.newrelic.com/docs/agentic-ai/mcp/overview/#authentication-options).
 
 ### PagerDuty
 

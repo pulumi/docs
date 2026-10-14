@@ -11,7 +11,7 @@ menu:
     ai:
         name: Tasks
         parent: ai-neo
-        weight: 20
+        weight: 10
         identifier: ai-tasks
 ---
 

@@ -5,10 +5,10 @@ h1: Neo in Your Editor (ACP)
 meta_desc: Use Pulumi Neo directly inside Zed, JetBrains IDEs, VS Code, and Cursor through the Agent Client Protocol (ACP).
 menu:
     ai:
-        name: Neo in your editor (ACP)
+        name: Use Neo in your editor
         identifier: ai-editors
         parent: ai-neo
-        weight: 16
+        weight: 50
 ---
 
 Neo can run directly inside your editor's agent panel. You chat with Neo, review its plans, and watch its edits in the same window as your code, with no separate terminal session or browser tab.

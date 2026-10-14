@@ -8,8 +8,8 @@ aliases:
 menu:
     ai:
         name: Slack
-        parent: ai-integrations
-        weight: 3
+        parent: ai-agents-integrations
+        weight: 40
         identifier: ai-integrations-slack
 pulumi_cloud_feature: neo-slack
 ---

@@ -9,9 +9,9 @@ aliases:
 - /docs/ai/pull-requests/
 menu:
     ai:
-        name: Pull Requests
+        name: Pull requests
         parent: ai-neo
-        weight: 30
+        weight: 60
         identifier: ai-pull-requests
 ---
 

@@ -187,6 +187,10 @@ features:
     name: Context API
     min_edition: pro
     hidden: true
+  - id: pulumi-agents
+    name: Pulumi Agents
+    min_edition: pro
+    hidden: true
   - id: neo
     name: Pulumi Neo
     min_edition: essentials
