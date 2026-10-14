@@ -5,7 +5,7 @@ title: "Who Spent All the Tokens? Per-Team AI Cost Control as Code"
 meta_image: /events/per-team-ai-cost-control/meta.png
 meta_image_square: /events/per-team-ai-cost-control/meta-square.png
 
-meta_desc: Track Amazon Bedrock token spend per team with Pulumi: tagged inference profiles, token metrics, policy guardrails, alarms, and budgets, all as code.
+meta_desc: See which team is spending your Amazon Bedrock tokens, and put guardrails around it, with Pulumi infrastructure as code.
 
 # A featured event displays first in the list.
 featured: false
@@ -34,28 +34,29 @@ location: virtual
 
 # Markdown description.
 description: |
-    One agent task can fire off hundreds of model calls. When several teams share one Amazon Bedrock account, the bill shows up as one line item, and nobody can tell you which team burned the tokens, let alone rein it in.
+    One agent task can fire off hundreds of model calls. When several teams share one Amazon Bedrock account, the bill shows up as one line item, and nobody can tell you which team burned the tokens.
 
-    In this live workshop, we'll build per-team AI cost control as code with Pulumi. Each team gets its own Bedrock application inference profile, tagged with a team and a cost center, and an IAM role that can call only that profile. Bedrock invocation logging feeds CloudWatch, where metric filters turn every request into per-team input and output token counts. Pulumi Policies block untagged profiles and wildcard invoke grants before they deploy. When one team's output tokens spike, a CloudWatch alarm fires. Credentials come from Pulumi ESC over OIDC, so there are no static access keys.
+    In this live workshop, we'll build per-team AI cost tracking on Amazon Bedrock as code with Pulumi. Each team gets its own inference profile and a role scoped to it, so usage can be measured team by team. We'll turn Bedrock's logs into per-team token counts and use Pulumi Policies to catch mistakes before they deploy.
 
-    Adding a team is one line of config. The code is open source, so you can clone it after the session and run it in your own AWS account.
+    The code is open source, so you can take it home and run it in your own AWS account.
 learn:
-    - How to give each team its own Amazon Bedrock inference profile and an IAM role that can invoke only that profile.
-    - How to turn Bedrock invocation logs into per-team token metrics with CloudWatch metric filters.
-    - How Pulumi Policies block untagged profiles and wildcard invoke permissions before they deploy.
-    - How to alert on token spikes with a CloudWatch alarm and track spend per team with AWS Budgets.
-    - How Pulumi ESC supplies short-lived AWS credentials over OIDC instead of static access keys.
+    - How to give each team its own Amazon Bedrock inference profile with access scoped to it.
+    - How to measure token usage per team from Bedrock's logs.
+    - How Pulumi Policies catch cost and access mistakes before they deploy.
 
 # Speakers.
 presenters:
     - name: Adam Gordon Bell
       role: Community Engineer, Pulumi
       photo: /images/team/adam-gordon-bell.jpg
+    - name: Engin Diri
+      role: Principal Solutions Architect, Pulumi
+      photo: /images/team/engin-diri.jpg
 
 # Used for filtering on the event list page.
 tags:
     level: Intermediate # Beginner | Intermediate | Advanced
-    topics: ["AI", "Policy as Code", "Pulumi ESC"]
+    topics: ["AI", "Policy as Code"]
     languages: ["TypeScript"]
     clouds: ["AWS"]
 
