@@ -1,5 +1,6 @@
 ---
 title: "Neo Security: Securing Infrastructure in the Agentic Era"
+title_tag: "Pulumi Neo Security: Threat Modeling for Cloud"
 date: 2026-08-28
 meta_desc: "Pulumi Neo Security threat models and traces attack paths across your entire cloud estate. Find and fix problems before the bad actors do."
 feature_image: feature.png

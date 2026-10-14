@@ -1,5 +1,6 @@
 ---
 title: "YOLO Mode Is the Right Default. Your Laptop Is the Wrong Place for It."
+title_tag: "YOLO Mode for Coding Agents: Sandbox It"
 allow_long_title: true
 date: 2026-08-04
 draft: false
