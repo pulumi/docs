@@ -35,9 +35,7 @@ A [Pulumi ESC](/docs/esc/) environment can now mint a short-lived OpenID Connect
 
 Every pipeline and agent that touches your infrastructure eventually needs credentials for services beyond your cloud: a package registry such as Cloudsmith or JFrog Artifactory, or a workload access platform such as Aembit. The default historically has been to store a long-lived API key that sits in an environment, which presents a much higher risk of exposure than short-lived credentials.
 
-OIDC effectively solves this problem by having the environment prove its identity with a signed token that expires within the hour, which the service exchanges for a credential of its own, and ESC stores nothing.
-
-With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC signs that token for an audience you choose when you open the environment, and any service that trusts that environment can exchange it.
+With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC signs a short-lived token for the audience you choose when you open the environment. The service named in that audience checks the signature and exchanges the token for a credential of its own. The token expires within the hour, and ESC stores nothing.
 
 <!--more-->
 
