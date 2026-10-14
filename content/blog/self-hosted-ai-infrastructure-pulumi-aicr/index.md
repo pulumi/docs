@@ -3,7 +3,7 @@ title: "Self-hosted AI infrastructure with Pulumi AICR"
 date: 2026-10-14
 draft: false
 meta_desc: "Stand up validated GPU inference clusters on any cloud with Pulumi and the NVIDIA AI Cluster Runtime (AICR), using a few lines of Python."
-feature_image:
+feature_image: feature.png
 authors:
     - peter-yoakum
 tags:
