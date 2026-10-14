@@ -39,4 +39,4 @@ Give the connection a name that identifies its purpose, such as `staging-azure`.
 
 ## Use the connection
 
-Select the connection in the task composer's **CLI integrations** menu. In the task, identify the subscription and resources the agent should work with. See [Tasks and collaboration](/docs/ai/agents/tasks/) to assign work and review the results.
+In the task, name the connection and identify the subscription and resources the agent should work with. See [Tasks and collaboration](/docs/ai/agents/tasks/) to assign work and review the results.

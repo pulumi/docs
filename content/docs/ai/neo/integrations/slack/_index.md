@@ -16,6 +16,8 @@ pulumi_cloud_feature: neo-slack
 
 Mention `@Neo` in any channel where Neo has been added to start a Neo [task](/docs/ai/neo/tasks/) without leaving Slack. The response lands in the same thread, and follow-up messages continue the conversation, so the full exchange stays where the discussion is already happening.
 
+To assign work to an agent your team has configured, follow [Work from Slack](/docs/ai/agents/tasks/#work-from-slack). Both use the Slack app and account-linking steps below.
+
 ## What you can do with `@Neo`
 
 Neo has the same capabilities it does anywhere else: it can check stack state, investigate failures, walk through what a change will do, and carry out actions the team has agreed on. The difference is that the conversation happens in a Slack thread instead of the Pulumi Cloud console, which means the rest of the channel has visibility into what was asked and what Neo found.
@@ -44,7 +46,9 @@ _Slack will prompt you to add Neo to the channel if it's not there already._
 
 ## How permissions work
 
-Tasks started from Slack run with the [RBAC permissions](/docs/administration/concepts/rbac/) of the Pulumi Cloud user linked to your Slack identity.
+Neo tasks use the Pulumi Cloud permissions of the user linked to your Slack identity. Tasks assigned to an agent your team has configured use that agent's role.
+
+To contribute to a configured agent's task, each participant must link their Pulumi account and have permission to contribute. Joining a Slack channel does not grant Pulumi Cloud access. See [Permissions](/docs/ai/agents/permissions/) for agent roles and access to connected tools.
 
 ## Limitations
 

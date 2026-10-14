@@ -47,11 +47,11 @@ Saved agent instructions replace the organization's AI preference instructions. 
 
 Expand the integrations selector beside **System prompt** and select the connected MCP services the agent needs. Deselect integrations unrelated to its responsibility.
 
-By default, agents can use all MCP and CLI integrations connected to your organization, including ones added later. Selecting or deselecting an MCP integration saves a fixed list for that agent's tasks. Update that list when the agent needs another MCP integration.
+Creating an agent saves the selected MCP integrations. To give it access to an integration connected later, edit the agent and add that integration to its selection.
 
 If a service is missing, select **Manage integrations**, or ask an administrator to connect it. Return to the setup form and select the integration. See [Integrations](/docs/ai/agents/integrations/) for setup requirements.
 
-CLI integrations, such as AWS, are selected separately for each task. The saved MCP selection does not restrict them. See [CLI integrations](/docs/ai/neo/integrations/cli/) for setup.
+CLI integrations, such as AWS, are available from the organization's connections without a per-task selection. The agent's role must allow it to open each connection's ESC environment. See [CLI integrations](/docs/ai/neo/integrations/cli/) for setup and access requirements.
 
 Reference documents in the instructions by path or URL. The agent also needs access to the repository or tool that holds them; a link alone does not grant access.
 
@@ -79,7 +79,7 @@ Under **How do you want to invoke this agent?**, choose:
 
 Select **Create agent** after completing the configuration. For a webhook trigger, finish the connection steps shown after saving.
 
-On the agent's page, enter an assignment in **Describe the task for this agent** and select the relevant repository or stack context. Check the response for access errors or missing information.
+On the agent's page, enter an assignment in **Describe the task for this agent**. Include the repository URL or stack name when relevant. Check the response for access errors or missing information.
 
 See [Tasks and collaboration](/docs/ai/agents/tasks/) to continue the assignment and collaborate with teammates.
 

@@ -69,7 +69,7 @@ integration_groups:
 
 Connect the tools an agent needs to do its work, such as a repository for code changes or Datadog for an investigation. Choose a tool below for setup instructions. See [Permissions](/docs/ai/agents/permissions/#design-access-around-the-job) to choose the access to grant.
 
-Connections are shared across Neo and the agents you configure. Some setup guides are in the Neo documentation; those connection steps apply to both.
+Connections are shared across Neo and the agents you configure. The guides below explain how to connect each tool and grant an agent access.
 
 ## Connect your tools
 
@@ -89,7 +89,9 @@ For AWS, Google Cloud, Azure, and Kubernetes, configure credentials in Pulumi ES
 
 ## Give an agent access
 
-Select MCP integrations in the [agent's configuration](/docs/ai/agents/configure/#connect-the-tools-it-needs). Select CLI integrations, such as an AWS connection, in the task composer.
+Select MCP integrations in the [agent's configuration](/docs/ai/agents/configure/#connect-the-tools-it-needs). Edit that selection to add integrations connected later.
+
+CLI connections are available to the agent without a per-task selection. Its role must grant access to open the backing ESC environments. For Neo, access depends on your Pulumi Cloud permissions, and you can [select CLI connections for each task](/docs/ai/neo/integrations/cli/#per-task-selection).
 
 Give the agent only the permissions it needs for its work. Selecting an integration does not restrict its credentials. See [Permissions](/docs/ai/agents/permissions/) for how to scope access.
 

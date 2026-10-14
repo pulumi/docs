@@ -51,9 +51,9 @@ Follow the shared setup steps to [connect tools](/docs/ai/agents/configure/#conn
 
 ## Assign a task
 
-[Save the agent](/docs/ai/agents/configure/#save-and-assign-a-task), select the repository, and give it a specific assignment. For example:
+[Save the agent](/docs/ai/agents/configure/#save-and-assign-a-task) and give it a specific assignment. Include the repository URL and stack name. For example:
 
-> Check the staging stack for missing cost-allocation tags. Propose a pull request using the tag requirements and values documented in this repository.
+> Check the staging stack in `<repository URL>` for missing cost-allocation tags. Propose a pull request using the tag requirements and values documented in docs/tagging.md.
 
 Review the proposed changes and check results before merging. If the agent lacks information, add it to the task. Update the saved instructions when a correction should apply to future tasks, too.
 
