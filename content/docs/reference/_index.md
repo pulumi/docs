@@ -23,7 +23,7 @@ sections:
     link: /docs/iac/cli/
 
 - type: button-cards
-  heading: Language SDKs
+  heading: Pulumi SDKs
   cards:
   - image: /logos/tech/typescript.svg
     heading: TypeScript (Node.js) ↗
@@ -92,7 +92,7 @@ sections:
     link: /docs/reference/pkg/dotnet/esc-sdk/pulumi.esc.sdk/pulumi.esc.sdk.html
 
 - type: button-cards
-  heading: Cloud SDKs
+  heading: Pulumi Cloud SDKs
   cards:
   - image: /logos/tech/typescript.svg
     heading: TypeScript Cloud SDK ↗
