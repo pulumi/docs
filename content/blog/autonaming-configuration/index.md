@@ -9,7 +9,6 @@ tags:
     - features
     - releases
 category: product
-canonical_url: "https://www.pulumi.com/docs/iac/concepts/resources/names/"
 social:
     twitter: |
         🎉 New in Pulumi: Flexible Resource Auto-naming!
