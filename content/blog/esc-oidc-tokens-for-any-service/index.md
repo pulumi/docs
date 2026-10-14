@@ -89,7 +89,7 @@ To see the exact claims before you touch a trust policy, swap in [`debug-oidc-cl
 
 ## Pin the subject
 
-Pin the subject in every trust policy you write. Every Pulumi organization shares the `/oidc/v2` issuer, and whoever mints the token picks the audience, so a policy that checks only those two accepts tokens from any organization that typed the same audience string. The service checks three things: the signature, through the issuer's published keys; the audience, which you chose; and the subject, which names your organization and environment by ID. Pulumi Cloud shows the subject above the environment editor with a copy button, so you never assemble it by hand.
+Pin the subject in every trust policy you write. Configure the policy with the issuer, the audience, and the subject. The service checks the signature against the issuer's published keys. The issuer and the audience confirm the token came from Pulumi and was meant for this service, and the subject confirms it came from your environment. Without the subject, the policy accepts a token from any Pulumi organization that typed the same audience string, since every organization shares the `/oidc/v2` issuer. Pulumi Cloud shows the subject above the environment editor with a copy button, so you never assemble it by hand.
 
 ## Example: Aembit
 
