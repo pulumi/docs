@@ -10,7 +10,7 @@ menu:
     weight: 8
 ---
 
-A Pulumi ESC environment can mint an OpenID Connect (OIDC) token for any service that accepts OIDC identities. You mint the token with [`fn::open::oidc`](/docs/esc/providers/login/oidc/). The service that accepts the token is the relying party. This guide shows how to configure a relying party to trust `fn::open::oidc` tokens, with examples for Cloudsmith, JFrog Artifactory, and Aembit. For AWS, Azure, and Google Cloud, use the vendor login providers such as [`aws-login`](/docs/esc/providers/login/aws-login/) instead; they exchange the token for cloud credentials for you.
+A Pulumi ESC environment can mint an OpenID Connect (OIDC) token for any service that accepts OIDC identities. You mint the token with [`fn::open::oidc`](/docs/esc/providers/login/oidc/). The service that accepts the token is the relying party. This guide shows how to configure a relying party to trust `fn::open::oidc` tokens, with examples for Anthropic, Cloudsmith, JFrog Artifactory, and Aembit. For AWS, Azure, and Google Cloud, use the vendor login providers such as [`aws-login`](/docs/esc/providers/login/aws-login/) instead; they exchange the token for cloud credentials for you.
 
 `fn::open::oidc` tokens use a different issuer and subject from the tokens that the vendor login providers, such as `aws-login`, send. A relying party that you configured for a vendor login provider does not accept them. For the differences, see [Token formats](/docs/esc/guides/configuring-oidc/#token-formats).
 
@@ -93,7 +93,7 @@ Use [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) to see t
 
 ## Examples
 
-Any service that accepts OIDC tokens works the same way: give it the issuer, the audience, and the subject from above. The examples below were each run end to end.
+Any service that accepts OIDC tokens works the same way: give it the issuer, the audience, and the subject from above. The Cloudsmith, JFrog Artifactory, and Aembit examples were each run end to end.
 
 ### Cloudsmith
 
@@ -202,6 +202,56 @@ JFrog exchanges an OIDC token for a short-lived JFrog access token that acts as 
     The response contains an `access_token` field. Send it to Artifactory in the `Authorization: Bearer <token>` header.
 
 If the exchange returns `400 Invalid audience`, the token's audience does not match the integration's. A `403 Forbidden` means no identity mapping matched the token's claims. JFrog rejects a token as soon as it expires and allows no grace period.
+
+### Anthropic
+
+Anthropic's [workload identity federation](https://platform.claude.com/docs/en/manage-claude/workload-identity-federation) exchanges an OIDC token for a short-lived Claude API access token that acts as a service account in your Anthropic organization.
+
+1. In the Claude Console, open [Workload identity](https://platform.claude.com/settings/workload-identity-federation), select **Connect workload**, then **Custom OIDC**. The wizard creates a federation issuer, a service account, and a federation rule. Use these values:
+    - **Federation issuer:** issuer URL `https://api.pulumi.com/oidc/v2`, JWKS source **discovery**. Anthropic reads the discovery document at that URL and fetches the signing keys it names.
+    - **Service account:** the identity the access token acts as. Make it a member of the workspace whose rate limits and usage attribution should apply.
+    - **Federation rule:** set **Subject prefix** to the `sub` value from your environment, `pulumi:org:<org-id>:env:<environment-id>`, with no trailing `*`, and **Audience** to `https://api.anthropic.com`. Keep the scope at `workspace:developer`, or choose `workspace:inference` for a workload that only calls the Messages API. Set the token lifetime to the `duration` of your ESC token, one hour unless you set it shorter.
+
+    Note the rule ID (`fdrl_...`), the service account ID (`svac_...`), your Anthropic organization ID (on the Organization settings page), and the workspace ID (`wrkspc_...`). The workload sends all four with every exchange.
+
+    Anthropic matches the subject exactly unless the value ends in `*`. Never end it with `*` here: `pulumi:org:<org-id>:*` accepts a token from any environment in your organization. Anthropic requires no particular audience; `https://api.anthropic.com` is the value its own guides use, and the rule must name one.
+
+1. In Pulumi ESC, mint a token with the same audience and export it beside the four IDs:
+
+    ```yaml
+    values:
+      anthropic:
+        login:
+          fn::open::oidc:
+            audience: https://api.anthropic.com
+            identityToken:
+              version: v2
+      environmentVariables:
+        ANTHROPIC_IDENTITY_TOKEN: ${anthropic.login}
+        ANTHROPIC_FEDERATION_RULE_ID: fdrl_...
+        ANTHROPIC_ORGANIZATION_ID: <anthropic-org-id>
+        ANTHROPIC_SERVICE_ACCOUNT_ID: svac_...
+        ANTHROPIC_WORKSPACE_ID: wrkspc_...
+    ```
+
+    Leave `duration` at its default of one hour, or shorter. Anthropic rejects a token whose lifetime exceeds the issuer's maximum, which is one hour unless you raise it on the issuer.
+
+1. Run the workload under the environment. Every Claude SDK reads those five variables and exchanges the token itself, so the code constructs the client with no API key. To see the exchange, run it by hand:
+
+    ```bash
+    pulumi env run <org>/<project>/<environment> -- sh -c '
+      curl -s https://api.anthropic.com/v1/oauth/token \
+        -H "Content-Type: application/json" \
+        -d "{\"grant_type\": \"urn:ietf:params:oauth:grant-type:jwt-bearer\", \"assertion\": \"$ANTHROPIC_IDENTITY_TOKEN\", \"federation_rule_id\": \"$ANTHROPIC_FEDERATION_RULE_ID\", \"organization_id\": \"$ANTHROPIC_ORGANIZATION_ID\", \"service_account_id\": \"$ANTHROPIC_SERVICE_ACCOUNT_ID\", \"workspace_id\": \"$ANTHROPIC_WORKSPACE_ID\"}"'
+    ```
+
+    Write `$ANTHROPIC_IDENTITY_TOKEN`, not `${ANTHROPIC_IDENTITY_TOKEN}`, for the reason given in the Cloudsmith section.
+
+    The response contains an `access_token` beginning `sk-ant-oat01-` and `expires_in` in seconds. Send the token to the Claude API in the `Authorization: Bearer <token>` header. Its lifetime is the lesser of the rule's token lifetime and twice the ESC token's remaining lifetime.
+
+    Make sure `ANTHROPIC_API_KEY` is not set anywhere the workload runs. The SDK prefers it over federation, and an empty value still wins.
+
+Anthropic answers every rejected exchange with `401 Authentication failed` and records the reason on the Console's [authentication history](https://platform.claude.com/settings/workload-identity-federation?tab=history) page: `match_subject_prefix` when the subject did not match the rule, `jti_reused` when the same token was exchanged twice. Each ESC token carries a `jti`, and Anthropic accepts it once. The SDK refreshes the access token by presenting the same token again, so a process that outlives the rule's token lifetime fails with `jti_reused`; open the environment again to mint a fresh token instead. Turning off `check_jti` on the issuer removes that limit and the replay protection with it. If the history shows no entry at all, the rule ID is wrong or the rule was archived. Compare the rule's match block against the [`debug-oidc-claims`](/docs/esc/providers/login/debug-oidc-claims/) output. Anthropic allows 30 seconds of clock skew.
 
 ### Aembit
 

@@ -16,24 +16,24 @@ schema_type: auto
 
 social:
     twitter: |
-        Pulumi ESC can now mint a short-lived OIDC token for any service that accepts one: Aembit, Cloudsmith, JFrog Artifactory, and more.
+        Pulumi ESC can now mint a short-lived OIDC token for any service that accepts one: Anthropic, Cloudsmith, JFrog Artifactory, and more.
 
         Set the audience, pin the subject in the service's trust policy, and delete the stored API key.
     linkedin: |
-        Most services that matter to a deploy pipeline accept OpenID Connect tokens from an outside issuer, from package registries such as Cloudsmith and JFrog Artifactory to workload access platforms such as Aembit. Until now, a Pulumi ESC environment could only sign in that way to a fixed set of providers. For everything else it held a stored API key.
+        Most services that matter to a deploy pipeline accept OpenID Connect tokens from an outside issuer, from package registries such as Cloudsmith and JFrog Artifactory to the Claude API through Anthropic's workload identity federation. Until now, a Pulumi ESC environment could only sign in that way to a fixed set of providers. For everything else it held a stored API key.
 
         The new fn::open::oidc provider removes that key. When you open the environment, ESC signs an OIDC token for an audience you choose, from ESC's general OIDC issuer. The service checks the signature, the audience, and a stable subject that names your organization and environment by ID, then issues its own short-lived credential. The token lives for an hour at most, and nothing is stored.
 
-        The post walks through the environment definition, the claims in the token, a worked Aembit example, and the one rule every trust policy needs: pin the subject.
+        The post walks through the environment definition, the claims in the token, a worked Anthropic example, and the one rule every trust policy needs: pin the subject.
     bluesky: |
-        Pulumi ESC can now sign a short-lived OIDC token for any audience you choose. Aembit, Cloudsmith, and JFrog can each exchange it for their own credential, so the stored API key goes away.
+        Pulumi ESC can now sign a short-lived OIDC token for any audience you choose. Anthropic, Cloudsmith, and JFrog can each exchange it for their own credential, so the stored API key goes away.
 
         One rule: pin the subject in the trust policy.
 ---
 
 A [Pulumi ESC](/docs/esc/) environment can now mint a short-lived OpenID Connect (OIDC) token for any service that accepts one.
 
-Every pipeline and agent that touches your infrastructure eventually needs credentials for services beyond your cloud: a package registry such as Cloudsmith or JFrog Artifactory, or a workload access platform such as Aembit. The default historically has been to store a long-lived API key that sits in an environment, which presents a much higher risk of exposure than short-lived credentials.
+Every pipeline and agent that touches your infrastructure eventually needs credentials for services beyond your cloud: a package registry such as Cloudsmith or JFrog Artifactory, an AI platform such as Anthropic, or a workload access platform such as Aembit. The default historically has been to store a long-lived API key that sits in an environment, which presents a much higher risk of exposure than short-lived credentials.
 
 With the new [`fn::open::oidc`](/docs/esc/providers/login/oidc/) provider, ESC signs a short-lived token for the audience you choose when you open the environment. The service named in that audience checks the signature and exchanges the token for a credential of its own. The token expires within the hour, and ESC stores nothing.
 
@@ -91,24 +91,31 @@ To see the exact claims before you touch a trust policy, swap in [`debug-oidc-cl
 
 Pin the subject in every trust policy you write. Configure the policy with the issuer, the audience, and the subject. The service checks the signature against the issuer's published keys. The issuer and the audience confirm the token came from Pulumi and was meant for this service, and the subject confirms it came from your environment. Without the subject, the policy accepts a token from any Pulumi organization that typed the same audience string, since every organization shares the `/oidc/v2` issuer. Pulumi Cloud shows the subject above the environment editor with a copy button, so you never assemble it by hand.
 
-## Example: Aembit
+## Example: Anthropic
 
-Aembit identifies a workload by its OIDC token and then hands it the credentials its access policy allows. In your Aembit tenant, create a trust provider of type **OIDC ID Token** that discovers keys from `https://api.pulumi.com/oidc/v2`, with match rules for the issuer, the audience from the environment, and the environment's subject. Then create a client workload identified by **OIDC ID Token Subject** with the same subject, and an access policy that joins the two to the credential provider the workload needs.
+Anthropic's [workload identity federation](https://platform.claude.com/docs/en/manage-claude/workload-identity-federation) lets a workload call the Claude API with a short-lived token from an issuer you trust instead of an `sk-ant-...` API key. In the Claude Console, open **Workload identity**, choose **Connect workload**, and pick **Custom OIDC**. Register `https://api.pulumi.com/oidc/v2` as the issuer with key discovery, create a service account, and create a federation rule that matches the environment's subject exactly and the audience `https://api.anthropic.com`.
 
-Open the environment and send the token to the Aembit Edge API at `https://<tenant>.ec.<region>.aembit.io/edge/v1/auth`, together with your Edge SDK client ID:
+Mint a token for that audience and export it beside the IDs the wizard shows you:
 
-```json
-{
-  "clientId": "<client-id>",
-  "client": {
-    "oidc": {
-      "identityToken": "<value of AEMBIT_OIDC_TOKEN>"
-    }
-  }
-}
+```yaml
+values:
+  anthropic:
+    login:
+      fn::open::oidc:
+        audience: https://api.anthropic.com
+        identityToken:
+          version: v2
+  environmentVariables:
+    ANTHROPIC_IDENTITY_TOKEN: ${anthropic.login}
+    ANTHROPIC_FEDERATION_RULE_ID: fdrl_...
+    ANTHROPIC_ORGANIZATION_ID: <anthropic-org-id>
+    ANTHROPIC_SERVICE_ACCOUNT_ID: svac_...
+    ANTHROPIC_WORKSPACE_ID: wrkspc_...
 ```
 
-Aembit answers with an `accessToken` for its later calls, and the ESC token has done its job. Cloudsmith and JFrog Artifactory follow the same shape, and the [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) walks through each of them.
+Run the workload under the environment and every Claude SDK does the rest: it reads those variables, posts the token to `https://api.anthropic.com/v1/oauth/token`, and calls the API with the `sk-ant-oat01-...` access token it gets back. The code constructs the client with no key at all. Anthropic accepts each token once, so the access token lasts as long as the ESC token did; open the environment again for the next one.
+
+Cloudsmith, JFrog Artifactory, and Aembit follow the same shape, and the [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) walks through each of them.
 
 ## Define it once, import it everywhere
 
@@ -126,4 +133,4 @@ The `aws-login`, `azure-login`, `gcp-login`, and `vault-login` providers keep us
 1. Copy the **OIDC subject** shown above the environment editor into the service's trust policy, together with the `https://api.pulumi.com/oidc/v2` issuer and the audience.
 1. Open the environment with [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run/) and exchange the token.
 
-The [provider reference](/docs/esc/providers/login/oidc/) lists the inputs and the troubleshooting steps, and the [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) walks through Cloudsmith, JFrog Artifactory, and Aembit. Questions and feedback are welcome in the [Pulumi Community Slack](https://slack.pulumi.com/).
+The [provider reference](/docs/esc/providers/login/oidc/) lists the inputs and the troubleshooting steps, and the [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) walks through Anthropic, Cloudsmith, JFrog Artifactory, and Aembit. Questions and feedback are welcome in the [Pulumi Community Slack](https://slack.pulumi.com/).
