@@ -74,7 +74,7 @@ sections:
         title: Neo code reviews
         description: |
           Pulumi Neo, our infrastructure agent, can review every pull request and tell you whether it's safe to merge. Fully compatible with Terraform and OpenTofu programs.
-        link: /docs/ai/neo/code-reviews/
+        link: /docs/ai/concepts/neo/code-reviews/
 
   - anchor: terraform-modules
     label: Terraform modules consumable across languages

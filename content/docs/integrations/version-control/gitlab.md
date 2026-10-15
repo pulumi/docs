@@ -78,7 +78,7 @@ Comments are idempotent: updates to the same stack edit the existing comment rat
 
 For [review stacks](#review-stacks), comments show the review stack status and outputs instead of a standard preview summary.
 
-These comments come from Pulumi Deployments. [Neo code reviews](/docs/ai/neo/code-reviews/), which analyze a pull request and leave inline feedback, are available on GitHub only — Neo does not comment on GitLab merge requests.
+These comments come from Pulumi Deployments. [Neo code reviews](/docs/ai/concepts/neo/code-reviews/), which analyze a pull request and leave inline feedback, are available on GitHub only — Neo does not comment on GitLab merge requests.
 
 ### Commit status checks
 

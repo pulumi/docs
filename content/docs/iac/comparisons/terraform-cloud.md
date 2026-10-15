@@ -45,7 +45,7 @@ HCP Terraform is priced by Resources Under Management (RUM), the number of resou
 | Resource inventory | [Pulumi Discovery](/docs/discovery-governance/) inventories cloud resources across accounts and providers, including resources not managed by any infrastructure as code tool | Explorer reports on workspaces, modules, providers, and Terraform versions across the organization |
 | Access control and audit | [Role-based access control](/docs/administration/concepts/rbac/), SAML SSO, SCIM, and [audit logs](/docs/administration/concepts/audit-logs/) | Team-based permissions, SSO, and audit trails |
 | Programmatic API | REST API, plus the [Automation API](/docs/iac/concepts/automation-api/), an SDK for driving Pulumi operations from application code | REST API, with the `go-tfe` client and the `tfe` Terraform provider |
-| AI assistance | [Pulumi Neo](/docs/ai/), [Agent Skills](/docs/ai/skills/), and the [Pulumi MCP server](/docs/ai/mcp-server/) | HashiCorp publishes a Terraform MCP server for AI assistants |
+| AI assistance | [Pulumi Neo](/docs/ai/), [Agent Skills](/docs/ai/concepts/agent-skills/), and the [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) | HashiCorp publishes a Terraform MCP server for AI assistants |
 | Self-hosted option | [Self-hosted Pulumi Cloud](/docs/administration/self-hosting/) | Terraform Enterprise |
 | Pricing model | Editions with a monthly base price and Pulumi Credits consumed across IaC resources, Deployments, ESC, and Neo; see [pricing](/pricing/) | Resources Under Management (RUM), with a Free tier up to 500 managed resources |
 
@@ -65,7 +65,7 @@ Pulumi Cloud can manage Terraform and OpenTofu configurations without converting
 * Access is governed by the same [RBAC](/docs/administration/concepts/rbac/) as other Pulumi Cloud stacks.
 * Backend configuration and OIDC credentials can come from [Pulumi ESC](/docs/esc/), and root module outputs are exposed as stack outputs for other stacks to consume.
 * [Preventative policies](/docs/discovery-governance/concepts/policy-as-code/) run against the Terraform plan on remotely executed stacks and can block a non-compliant apply.
-* Terraform-managed resources appear in [Pulumi Discovery](/docs/discovery-governance/) alongside Pulumi-managed ones, and [Neo](/docs/ai/neo/code-reviews/) can review Terraform and OpenTofu pull requests.
+* Terraform-managed resources appear in [Pulumi Discovery](/docs/discovery-governance/) alongside Pulumi-managed ones, and [Neo](/docs/ai/concepts/neo/code-reviews/) can review Terraform and OpenTofu pull requests.
 
 Pulumi programs in any language can also [consume Terraform modules](/docs/integrations/terraform/modules/) with `pulumi package add hcl module <source> [version]`, resolving from the Terraform Registry, a private registry, or a local path.
 
@@ -152,7 +152,7 @@ You can move state without changing code by using [Pulumi Cloud as a Terraform b
 
 ### Does Pulumi work with AI coding agents?
 
-Yes. Coding agents such as Claude Code, Codex, Cursor, and GitHub Copilot can write Pulumi programs, and [Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/) give them Pulumi-specific context. [Pulumi Neo](/docs/ai/) is Pulumi's infrastructure agent; it runs inside Pulumi Cloud and can run previews, investigate failed updates, and review Terraform and OpenTofu pull requests. Most teams get the most out of using Neo alongside the coding agent they already use.
+Yes. Coding agents such as Claude Code, Codex, Cursor, and GitHub Copilot can write Pulumi programs, and [Agent Skills](/docs/ai/concepts/agent-skills/) and the [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) give them Pulumi-specific context. [Pulumi Neo](/docs/ai/) is Pulumi's infrastructure agent; it runs inside Pulumi Cloud and can run previews, investigate failed updates, and review Terraform and OpenTofu pull requests. Most teams get the most out of using Neo alongside the coding agent they already use.
 
 ## Next steps
 

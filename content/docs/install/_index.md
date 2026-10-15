@@ -663,7 +663,7 @@ npx skills add pulumi/agent-skills/migration --skill '*'
 npx skills add pulumi/agent-skills/delegation --skill '*'
 ```
 
-You can also connect your assistant to the [Pulumi MCP server](/docs/ai/mcp-server/) for live access to your Pulumi Cloud stacks, resources, and the Pulumi Registry.
+You can also connect your assistant to the [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) for live access to your Pulumi Cloud stacks, resources, and the Pulumi Registry.
 
 ## Uninstalling Pulumi
 
