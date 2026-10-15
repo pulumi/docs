@@ -210,6 +210,7 @@ jobs:
           SENTINEL_MODE: ${{ vars.REVIEW_V3_SENTINEL }}
         run: |
           set -euo pipefail
+          echo "started=$(date +%s)" >> "$GITHUB_OUTPUT"
 
           # 1. Gather PR state.
           PR_DATA=$(gh pr view "$PR" --repo "$REPO" \
@@ -715,7 +716,8 @@ jobs:
             --head-sha "${{ github.event.pull_request.head.sha }}" \
             --source usage:triage-prose:.triage-usage.json \
             --outcome "triage-prose=${{ steps.classify.outcome }}" \
-            --effort triage-prose=low
+            --effort triage-prose=low \
+            --started-at "triage-prose=${{ steps.classify.outputs.started }}"
 
       - name: Upload usage rows
         if: always() && hashFiles('.triage-usage.json') != ''

@@ -133,6 +133,11 @@ jobs:
       id-token: write
       actions: write # read CI results on PRs; dispatch review-sentinel.yml after a publish, claude-code-review.yml for a fresh v3 review
     steps:
+      # started_at for the usage row; first so checkout time counts.
+      - name: Record job start
+        id: job-start
+        run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+
       # Resolve the PR head SHA before checkout so the working tree
       # reflects PR content, not the base branch. Without this, Vale
       # below runs against base prose and produces empty findings.
@@ -1319,7 +1324,8 @@ jobs:
             --source "exec:$STEP:${{ runner.temp }}/claude-execution-output.json" \
             --outcome "$STEP=$OUTCOME" \
             --effort "$STEP=medium" \
-            --model "$STEP=claude-opus-5-5"
+            --model "$STEP=claude-opus-5-5" \
+            --job-started-at "${{ steps.job-start.outputs.epoch }}"
 
       - name: Upload usage rows
         if: always() && steps.head.outputs.superseded != 'true'
