@@ -1,5 +1,6 @@
 ---
 title: "Kubernetes Agent Sandbox: What It Is and How to Deploy It with Pulumi"
+title_tag: "Kubernetes Agent Sandbox: Deploy with Pulumi"
 date: 2026-07-21
 draft: false
 meta_desc: "Agent Sandbox gives AI agents kernel-isolated, disposable environments as Kubernetes resources. Here's what it is and how to deploy it on GKE with Pulumi."

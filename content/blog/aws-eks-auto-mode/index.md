@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with Amazon EKS Auto Mode in Pulumi"
+title_tag: "Getting Started with Amazon EKS Auto Mode"
 date: 2024-12-16T23:26:21+01:00
 draft: false
 meta_desc: "Learn how to use Amazon EKS Auto Mode with Pulumi to streamline your Kubernetes cluster management"
