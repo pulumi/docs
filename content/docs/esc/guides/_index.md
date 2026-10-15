@@ -17,6 +17,7 @@ For first-party ESC integrations (the Pulumi Service Provider, Automation API, t
 ## Authentication
 
 - [Configuring OIDC](/docs/esc/guides/configuring-oidc/) — set up OpenID Connect trust between ESC and AWS, Azure, GCP, Doppler, Infisical, or Vault.
+- [Custom audiences](/docs/esc/guides/configuring-oidc/custom-audience/) — configure any other service that accepts OpenID Connect tokens, such as Cloudsmith, JFrog Artifactory, or Aembit, to trust tokens from the [`oidc` provider](/docs/esc/providers/login/oidc/).
 
 ## Use with Pulumi IaC
 

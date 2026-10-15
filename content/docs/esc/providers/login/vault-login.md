@@ -67,3 +67,5 @@ values:
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Vault, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/vault/) documentation.
+
+If you need a raw OIDC token to exchange with another service yourself, use [`fn::open::oidc`](/docs/esc/providers/login/oidc/) instead.
