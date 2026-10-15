@@ -1,5 +1,6 @@
 ---
 title: "Pulumi + Bun: Supercharge Your Infrastructure Dependencies"
+title_tag: "Bun Package Manager with Pulumi"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
