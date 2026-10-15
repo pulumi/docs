@@ -1483,6 +1483,7 @@ def test_update_strip_insert_replace_clear():
     assert sentinel.update_strip(gh, v, comments=[card]) is True
     _, patched = gh.patched[-1]
     assert "⛔" in patched and sentinel.STRIP_OPEN in patched
+    assert "fix and push" in patched and "/update-review" in patched
 
     card2 = dict(card, body=patched)
     assert sentinel.update_strip(gh, v, comments=[card2]) is False  # idempotent
@@ -1494,6 +1495,38 @@ def test_update_strip_insert_replace_clear():
 
     fresh_no_strip = author_card([], state=_state_with([]))
     assert sentinel.update_strip(gh, ok, comments=[fresh_no_strip]) is False
+
+
+def test_strip_without_blocking_findings_says_what_merge_waits_on():
+    """Only an approver can clear G3. A strip reading "⛔ merge is blocked — fix
+    and push, or reply /update-review" over a card reading "nothing blocks
+    merge" contradicted the card and sent the author after nothing. It names
+    the gate the merge waits on, and links the status comment, which sits
+    above the card, not below it."""
+    url = "https://github.com/pulumi/docs/pull/1#issuecomment-5"
+    status = {"id": 5, "body": sentinel.STATUS_MARKER + "\n## Sentinel\n",
+              "user": {"login": sentinel.BOT_LOGIN}, "html_url": url}
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[status, card])
+    v = sentinel.Verdict(
+        conclusion="failure", title="", summary="", head_sha=HEAD,
+        gates=[sentinel.Gate("G1 review-ran", "ok", "current"),
+               sentinel.Gate("G3 right-approver", "red", "needs approval"),
+               sentinel.Gate("G4 infra-evidence", "skip", "n/a")])
+    assert sentinel.update_strip(gh, v, comments=[status, card]) is True
+    _, patched = gh.patched[-1]
+    strip = patched.split(sentinel.STRIP_OPEN)[1].split(sentinel.STRIP_CLOSE)[0]
+    assert "Merge is waiting on G3 right-approver." in strip, strip
+    assert f"[the Sentinel status]({url})" in strip, strip
+    for wrong in ("blocked", "⛔", "fix and push", "/update-review", "below"):
+        assert wrong not in strip, (wrong, strip)
+
+    two = sentinel.Verdict(conclusion="failure", title="", summary="", head_sha=HEAD,
+                           gates=v.gates + [sentinel.Gate("G5 oversized-ack", "red", "x")])
+    sentinel.update_strip(gh, two, comments=[card])  # no status comment yet: no link
+    strip = gh.patched[-1][1].split(sentinel.STRIP_OPEN)[1].split(sentinel.STRIP_CLOSE)[0]
+    assert "waiting on G3 right-approver and G5 oversized-ack." in strip, strip
+    assert "Details: the Sentinel status comment." in strip, strip
 
 
 def test_frontend_routes_to_marketing_without_staging():
