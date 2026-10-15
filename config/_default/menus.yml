@@ -314,6 +314,10 @@ ai:
     parent: ai-home
     identifier: ai-guides
     weight: 30
+  - name: Use Neo
+    parent: ai-guides
+    identifier: ai-neo
+    weight: 20
   - name: Reference
     parent: ai-home
     identifier: ai-reference
