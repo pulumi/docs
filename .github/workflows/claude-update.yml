@@ -1,11 +1,14 @@
 name: Pre-merge Review (update-review)
 
-# Re-entrant pinned-review refresh, dispatched by the explicit hashtag
-# `#update-review` on an `@claude` mention. Hashtag-driven routing means
-# this workflow only fires when the user explicitly asks for a review
-# refresh -- bare `@claude` mentions go to claude.yml (off-the-shelf tag
-# mode) and `@claude #new-review` goes to claude-new.yml (regenerate).
-# The compound-mention contract is documented inline in the prompt.
+# Re-entrant pinned-review refresh, run by the `/update-review` slash
+# command at the start of a line in a PR comment, inline review comment, or
+# review body. Text around the command is the request (a fix to make, a
+# dispute, an accept) and reaches the model verbatim; the contract is
+# documented inline in the prompt. `@claude` plays no part in routing:
+# a bare `@claude` goes to claude.yml (off-the-shelf tag mode),
+# `/new-review` goes to claude-new.yml (regenerate), and the retired
+# `@claude … #update-review` shape gets a how-to reply from
+# review-command-redirect.yml and runs nothing.
 #
 # A second entry point exists for the stale-review auto-refresh: the
 # auto-refresh job in claude-code-review.yml dispatches this workflow
@@ -16,7 +19,7 @@ name: Pre-merge Review (update-review)
 # body; there is no human mention author.
 #
 # Two jobs: `gate` decides whether the event is a real request (outside
-# the per-PR concurrency group, so a declined mention can't cancel a live
+# the per-PR concurrency group, so a declined comment can't cancel a live
 # refresh), and `claude-update` does the work.
 
 on:
@@ -30,7 +33,7 @@ on:
     types: [submitted]
   # Dispatched by claude-code-review.yml's auto-refresh job (auto=true).
   # Humans with write access can also dispatch manually from the Actions
-  # UI as an alternative to commenting `@claude #update-review`.
+  # UI as an alternative to commenting `/update-review`.
   workflow_dispatch:
     inputs:
       pr_number:
@@ -49,57 +52,57 @@ on:
         default: false
 
 jobs:
-  # The mention gate runs as its own job, OUTSIDE the per-PR concurrency
+  # The command gate runs as its own job, OUTSIDE the per-PR concurrency
   # group. The job-level `if:` below is a substring match, which is all a
   # GitHub expression can do — it fires on a comment that merely *quotes*
-  # the reply pattern in backticks or a blockquote (#21535), including the
+  # the command in backticks or a blockquote (#21535), including the
   # review's own progress and card comments. When the gate lived inside
   # the worker job, every such no-op run still entered the concurrency
   # group and cancelled a real in-flight refresh (#21585: the review's
   # own comment cancelled workprentice's update mid-Claude). Here a
-  # declined mention ends in this cheap job and never touches the worker.
+  # declined comment ends in this cheap job and never touches the worker.
   # The script comes from the default branch, never the PR head, and reads
   # the body from an env var, never argv. Dispatched runs skip it — there
   # is no comment to judge — and fire unconditionally.
   gate:
     # Trigger requires:
-    #   1. `@claude` mention.
-    #   2. `#update-review` hashtag.
-    #   3. `#new-review` is NOT screened here. A substring test can't tell
-    #      a live hashtag from a quoted one, so excluding it here dropped
-    #      any update request that merely quoted `#new-review`, while
+    #   1. `/update-review` somewhere in the body (the command gate below
+    #      checks it starts a line outside code and quotes).
+    #   2. `/new-review` is NOT screened here. A substring test can't tell
+    #      a live command from a quoted one, so excluding it here dropped
+    #      any update request that merely quoted `/new-review`, while
     #      claude-new.yml's gate declined the same comment as a quote --
-    #      and neither lane ran. The mention-gate step below applies
-    #      `--exclude new-review` to the live text only: a live
-    #      #new-review still wins, a quoted one no longer suppresses.
-    #   4. Author is not claude[bot] itself -- the pinned-review footer
-    #      contains literal "@claude" instructions which would otherwise
-    #      re-trigger on every review post.
+    #      and neither lane ran (#21909). The command-gate step below
+    #      applies `--exclude new-review` to the live text only: a live
+    #      /new-review still wins, a quoted one no longer suppresses.
+    #   3. Author is not claude[bot] itself -- the pinned-review footer
+    #      quotes the command, which would otherwise re-trigger on every
+    #      review post.
     if: |
       ((github.event_name == 'workflow_dispatch') ||
-       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && github.event.comment.user.login != 'claude[bot]') ||
-       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && github.event.comment.user.login != 'claude[bot]') ||
-       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && contains(github.event.review.body, '#update-review') && github.event.review.user.login != 'claude[bot]') ||
-       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && (contains(github.event.issue.body, '#update-review') || contains(github.event.issue.title, '#update-review')) && github.event.issue.user.login != 'claude[bot]'))
+       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '/update-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '/update-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '/update-review') && github.event.review.user.login != 'claude[bot]') ||
+       (github.event_name == 'issues' && (contains(github.event.issue.body, '/update-review') || contains(github.event.issue.title, '/update-review')) && github.event.issue.user.login != 'claude[bot]'))
     runs-on: ubuntu-latest
     permissions:
       contents: read
     outputs:
-      fire: ${{ steps.mention-gate.outputs.fire }}
-      reason: ${{ steps.mention-gate.outputs.reason }}
+      fire: ${{ steps.command-gate.outputs.fire }}
+      reason: ${{ steps.command-gate.outputs.reason }}
     steps:
-      - name: Checkout mention gate (default branch, sparse)
+      - name: Checkout command gate (default branch, sparse)
         if: github.event_name != 'workflow_dispatch'
         uses: actions/checkout@v7
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 1
-          path: .mention-gate
-          sparse-checkout: .claude/commands/docs-review/scripts/mention-gate.py
+          path: .command-gate
+          sparse-checkout: .claude/commands/docs-review/scripts/command-gate.py
           sparse-checkout-cone-mode: false
 
-      - name: Mention gate (a quoted protocol is not a request)
-        id: mention-gate
+      - name: Command gate (a quoted command is not a request)
+        id: command-gate
         env:
           BODY: ${{ github.event.comment.body || github.event.review.body || github.event.issue.body }}
           TITLE: ${{ github.event_name == 'issues' && github.event.issue.title || '' }}
@@ -109,15 +112,15 @@ jobs:
             echo "reason=workflow_dispatch" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          python3 .mention-gate/.claude/commands/docs-review/scripts/mention-gate.py check \
-            --hashtag update-review --exclude new-review \
+          python3 .command-gate/.claude/commands/docs-review/scripts/command-gate.py check \
+            --command update-review --exclude new-review \
             --body-env BODY --title-env TITLE | tee -a "$GITHUB_OUTPUT"
 
   claude-update:
     needs: gate
     if: needs.gate.outputs.fire == 'true'
     # One update per PR at a time; a newer trigger (another push through the
-    # auto-refresh gate, or a fresh #update-review mention) cancels the
+    # auto-refresh gate, or a fresh /update-review comment) cancels the
     # in-flight run — the newest head wins. Also the once-per-push dedup for
     # the auto path: stacked synchronize events collapse here. Only runs
     # that passed the gate job enter this group.
@@ -259,9 +262,9 @@ jobs:
           # refreshes on this repo are whitelisted by name instead.
           # `workprentice` is Joe Duffy's docs-automation identity (the Docs
           # Groundskeeper agent) and is trusted like an internal author: it
-          # opens PRs, addresses the pinned-review findings, and then mentions
-          # `@claude #update-review` to re-verify them — which is exactly what
-          # this workflow does. Without this, that mention hits the
+          # opens PRs, addresses the pinned-review findings, and then comments
+          # `/update-review` to re-verify them — which is exactly what
+          # this workflow does. Without this, that comment hits the
           # collaborator lookup, resolves to "none", and the refresh silently
           # no-ops. The author string differs by source: this workflow reads
           # the comment/review/issue `user.login` (`workprentice[bot]`) while
@@ -361,7 +364,7 @@ jobs:
           # The v2 freehand prompt's "produce an initial review" fallback
           # would post a v2 monolith here — that is what happened on #21585
           # when the author followed the review:error comment's advice to
-          # mention `#update-review`. Instead this run dispatches the
+          # refresh the review. Instead this run dispatches the
           # initial lane (force=true) and stops. A PR that already carries
           # a legacy v2 review (HAS_PINNED without the two cards) keeps the
           # v2 refresh path — grandfathered until it is regenerated.
@@ -385,7 +388,7 @@ jobs:
 
       # Flip the PR's state label to review:in-progress for the duration of
       # the refresh — mirrors claude-code-review.yml's early step on the
-      # auto-fire / #new-review path. Without this, a #update-review mention
+      # auto-fire / /new-review path. Without this, an /update-review comment
       # leaves the PR's prior terminal label (outstanding-issues /
       # no-blockers) visible the entire 5-10 min the refresh takes — so the
       # author has no signal that a fresh review is in flight. The
@@ -618,12 +621,12 @@ jobs:
           # workflow with GITHUB_TOKEN, which makes the run's actor
           # github-actions[bot] (type=Bot) — rejected by
           # claude-code-action@v1 by default. Same allowance
-          # claude-code-review.yml makes for its bot-dispatched #new-review
+          # claude-code-review.yml makes for its bot-dispatched /new-review
           # path.
           #
-          # workprentice is also listed so that its own `@claude
-          # #update-review` mentions (issue_comment events whose actor is the
-          # bot) reach the action. Without it, those mentions clear this
+          # workprentice is also listed so that its own `/update-review`
+          # comments (issue_comment events whose actor is the
+          # bot) reach the action. Without it, those comments clear this
           # workflow's own check-access whitelist (the workprentice[bot]
           # branch above) and then get bounced by claude-code-action's
           # independent bot guard. The trust decision is already made for the
@@ -638,22 +641,22 @@ jobs:
           additional_permissions: |
             actions: read
 
-          # Single-path prompt: the hashtag did the routing work, so
-          # there's no in-prompt classification. The compound-mention
+          # Single-path prompt: the slash command did the routing work, so
+          # there's no in-prompt classification. The compound-request
           # contract handles fix-and-refresh and dispute-and-refresh
           # cases by addressing embedded asks inline before re-rendering
           # the pinned review.
           prompt: |
-            The user invoked you with `#update-review` on `${{ github.repository }}`. The hashtag means: refresh the pinned review.
+            The user invoked you with the `/update-review` command on `${{ github.repository }}`. The command means: refresh the pinned review.
 
             Context:
             - Pull request #${{ steps.pr-context.outputs.pr_number }}
             - Mention author: @${{ steps.check-access.outputs.author }}
             - Pinned Claude review: ${{ steps.pr-context.outputs.has_pinned == 'true' && 'EXISTS on this PR' || 'does not exist yet' }}
 
-            **Read the triggering mention text from `.claude-mention-body.txt` first.** It is the body of the comment, review, or issue that invoked you.
+            **Read the triggering request from `.claude-mention-body.txt` first.** It is the body of the comment, review, or issue that invoked you; the `/update-review` token is the command, and the text around it is the request.
 
-            The mention may also contain:
+            The request may also contain:
             - Code changes to make ("fix the typo and then update")
             - Questions about specific findings ("why did you flag X?")
             - Disputes ("this is intentional because Y")
@@ -674,7 +677,7 @@ jobs:
 
             **Inline-suggestion sidecar.** After you have published the refreshed review, Write `.style-suggestions.json` at the workspace root (a JSON array; write `[]` if none qualify) staging the ADVISORY style findings whose rewrite is a clear improvement. Schema per entry: `{"file": "<path>", "line": <n>, "original": "<exact text on that line>", "replacement": "<new text>", "category": "<category>", "note": "<≤10-word reason>"}`. A workflow step validates each entry against the diff and file content, posts them as one-click GitHub `suggestion` comments, and reconciles the pinned comment's ✏️ marks — you never post them yourself. Convert a finding ONLY when ALL hold: (a) the rewrite preserves meaning exactly — a hedge that is factually load-bearing ("usually completes in five minutes") is NOT a conversion candidate, deleting it would overpromise; (b) the fix is contained on the single flagged line; (c) you are confident the result reads better, not just shorter. Cap at 10. `original` must be the exact substring on that line in the checked-out file, or validation drops the entry. Do NOT remove the corresponding `[style]` bullet — the block stays the complete record. Blocker findings are never suggestions, and neither is anything sharing a LINE with one — a suggestion replaces the whole line, so it would re-commit the blocking text. **Stage the full qualifying set every run, not just the new ones:** the step deletes the previous run's suggestion comments before posting, so a finding you omit loses its button. **Write `[]` (not nothing) when the answer is none — this is load-bearing, not bookkeeping.** An explicit `[]` is authoritative and clears the previous run's buttons; an absent file means "unknown" and leaves them all standing, so a refresh where you simply forget the sidecar strands stale buttons on findings you no longer report. Writing the file is how you say which one you mean.
 
-            Advisory style findings are **not** tracked across reviews. Each `#update-review` run generates a fresh `.vale-findings.json` against the current PR head; render those findings each time, drop them silently when they disappear, do NOT move resolved advisory nits into ✅ Resolved. Blocker-tier `[style-blocker]` bullets ARE tracked like regular findings: when a fix-push resolves one, move it to ✅ Resolved. The diff-tracking rules in `update.md` (Case 1 fix-response: move resolved to ✅) apply to human-grade catches and `[style-blocker]` bullets, not advisory `[style]` bullets.
+            Advisory style findings are **not** tracked across reviews. Each `/update-review` run generates a fresh `.vale-findings.json` against the current PR head; render those findings each time, drop them silently when they disappear, do NOT move resolved advisory nits into ✅ Resolved. Blocker-tier `[style-blocker]` bullets ARE tracked like regular findings: when a fix-push resolves one, move it to ✅ Resolved. The diff-tracking rules in `update.md` (Case 1 fix-response: move resolved to ✅) apply to human-grade catches and `[style-blocker]` bullets, not advisory `[style]` bullets.
 
           # Model and effort are set from the 2026-08-10 campaign
           # (`2026-08-10-update-lane-model-config` in pulumi/docs-review-benchmarks),
@@ -740,12 +743,12 @@ jobs:
           additional_permissions: |
             actions: read
           prompt: |
-            The user invoked you with `#update-review` on `${{ github.repository }}` PR #${{ steps.pr-context.outputs.pr_number }}. This PR carries a v3 review (author card + reviewer brief). Your job is to ADJUDICATE, not to render: you write exactly one file, `.review-update.json`, and deterministic tooling re-renders and publishes the cards from it. Do not post comments, do not edit the cards, do not call pinned-comment.sh.
+            The user invoked you with the `/update-review` command on `${{ github.repository }}` PR #${{ steps.pr-context.outputs.pr_number }}. This PR carries a v3 review (author card + reviewer brief). Your job is to ADJUDICATE, not to render: you write exactly one file, `.review-update.json`, and deterministic tooling re-renders and publishes the cards from it. Do not post comments, do not edit the cards, do not call pinned-comment.sh.
 
             Inputs on disk:
             - `.review-card-author.md` — the author card (table rows `| **F<n>** | … |` under 🚨/❓ with a `#### F<n> · Do this` block each, REVIEW_STATE block). A card over its size budget carries an italic note where its ❓ blocks were (they're on the evidence page, and the publish step restores them when there's room). A ❓ row whose Where is `—` is a group question: one answer covers every claim its block lists, so the mention answering it is one `concede` (or `accept`) for that one id.
             - `.review-card-brief.md` — the reviewer brief (⚠️ rows, "Waiting on the author" table)
-            - `.claude-mention-body.txt` — the triggering mention from @${{ steps.check-access.outputs.author }}; read it FIRST
+            - `.claude-mention-body.txt` — the triggering `/update-review` comment from @${{ steps.check-access.outputs.author }} (the command token, then the request); read it FIRST
             - `.vale-findings.json` — current style findings (context only on this lane)
 
             Follow `.claude/commands/docs-review/references/update.md` §The v3 surface for the full contract. In short — inspect the mention and the PR's new diff (`gh pr diff ${{ steps.pr-context.outputs.pr_number }}`), address any embedded asks (file edits → `gh pr checkout`, edit, push), then adjudicate each open finding into actions:
@@ -1143,7 +1146,7 @@ jobs:
       # the PR's. Consequence: a PR that changes the card format cannot
       # self-refresh through this lane before it merges (the default branch's
       # validator rejects the new-format card it published; pulumi/docs#21908
-      # hit exactly this). Use `@claude #new-review` there: the initial lane
+      # hit exactly this). Use `/new-review` there: the initial lane
       # (workflow_run) keeps the PR's own scripts.
       - name: Finalize progress signal
         if: always() && steps.progress.outputs.signal != ''
@@ -1181,9 +1184,9 @@ jobs:
             fi
             clear_progress
             if [ "$AUTHOR" = "auto-refresh" ]; then
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Couldn't start a fresh review (dispatch failed). Mention @claude #new-review to retry.")
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Couldn't start a fresh review (dispatch failed). Comment \`/new-review\` to retry.")
             else
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — couldn't start a fresh review (dispatch failed). Mention @claude #new-review to retry.")
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — couldn't start a fresh review (dispatch failed). Comment \`/new-review\` to retry.")
             fi
             gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
             exit 0
@@ -1230,9 +1233,9 @@ jobs:
           else
             clear_progress
             if [ "$AUTHOR" = "auto-refresh" ]; then
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Automatic review refresh errored; the review is still marked stale. Mention @claude #update-review to refresh it.")
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Automatic review refresh errored; the review is still marked stale. Comment \`/update-review\` to refresh it.")
             else
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — review errored. Mention @claude #update-review again to retry.")
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — review errored. Comment \`/update-review\` again to retry.")
             fi
             gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
           fi

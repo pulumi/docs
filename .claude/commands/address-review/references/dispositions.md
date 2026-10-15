@@ -10,7 +10,7 @@ Every item on the worklist ends in exactly one of five states. "We talked about 
 | Disposition | Means | Note required | Evidence that it happened |
 |---|---|:---:|---|
 | `fixed` | The diff changed; the finding no longer applies | no | The commit |
-| `refuted` | Disputed with evidence; the model conceded | no | The `#update-review` mention + the concede annotation |
+| `refuted` | Disputed with evidence; the model conceded | no | The `/update-review` comment + the concede annotation |
 | `deferred` | Real, but out of scope for this PR | **yes** | A filed issue, linked in the note |
 | `accepted` | Knowingly shipping as-is | **yes** | The note (and, for a blocker, a PR comment) |
 | `not-applicable` | The finding misreads the change; nothing to do and nothing to argue | **yes** | The note |
@@ -23,9 +23,9 @@ Every item on the worklist ends in exactly one of five states. "We talked about 
 
 On the v3 surface the ledger is the `<!-- REVIEW_STATE … -->` block on the author card. It is the PR's own record: the Sentinel reads it to score G2, the reviewer brief renders it in the **Waiting on the author** list, and `review-worklist.py` seeds from it. A finding id absent from that block is **open**, whatever any comment says.
 
-Only the update lane records dispositions in it: a push the auto-refresh gate recognizes, or an `@claude <reasoning> #update-review` mention. The model adjudicates every answer — it concedes a dispute, holds it, or records an acceptance — so an author's word on their own finding is weighed rather than just filed. The update lane has one verb for knowingly shipping a finding (`accept`); a deferral is an acceptance whose reason names the issue.
+Only the update lane records dispositions in it: a push the auto-refresh gate recognizes, or an `/update-review <reasoning>` comment. The model adjudicates every answer — it concedes a dispute, holds it, or records an acceptance — so an author's word on their own finding is weighed rather than just filed. The update lane has one verb for knowingly shipping a finding (`accept`); a deferral is an acceptance whose reason names the issue.
 
-On the legacy v2 surface there is no `REVIEW_STATE`; `#update-review` and the local state file are all you have.
+On the legacy v2 surface there is no `REVIEW_STATE`; `/update-review` and the local state file are all you have.
 
 `.review-worklist-<PR>.json` at the repo root (gitignored) stays useful either way — it's where style items (which carry no `F<n>`) and your in-progress notes live:
 
@@ -47,7 +47,7 @@ Write it as each decision is made, not at the end. On v3 it is a cache the enume
 
 The ordinary path. Make the change, keep it minimal, and keep it to what the finding actually asks for — a review fix is not an invitation to rewrite the section.
 
-- Apply to the working tree during the walk; push once at the end (Step 5). A single small fix-push that lands only on the lines a 🚨 or ❓ finding anchors is what `auto-refresh-gate.py` recognizes: the card shows a 🔄 banner within a minute and refreshes itself with no mention needed. Only those two buckets anchor it, so a push that also fixes a ⚠️ or ✏️ item is declined as a whole and needs `#update-review` — worth knowing before you batch an advisory fix into a blocker's push.
+- Apply to the working tree during the walk; push once at the end (Step 5). A single small fix-push that lands only on the lines a 🚨 or ❓ finding anchors is what `auto-refresh-gate.py` recognizes: the card shows a 🔄 banner within a minute and refreshes itself with no comment needed. Only those two buckets anchor it, so a push that also fixes a ⚠️ or ✏️ item is declined as a whole and needs `/update-review` — worth knowing before you batch an advisory fix into a blocker's push.
 - The v3 card usually writes the fix for you. Each blocking finding carries an `F<n> · Do this` block with the verbatim line, why it's wrong, and a replacement — often with an **If you'd rather keep it** alternative. Confirm the line still matches the file, then apply it.
 - For a `[style-blocker]` bullet in 🚨 (wrong product name, banned term, misspelling): fix it. These come from Vale's blocker allowlist, they are deterministic, and they are not worth disputing.
 - For an inline ✏️ one-click suggestion: either the user clicks it in the Files-changed tab **or** you edit the line locally. Never both — the second one conflicts with the first.
@@ -56,7 +56,7 @@ The ordinary path. Make the change, keep it minimal, and keep it to what the fin
 
 Use when the finding is wrong, not when it's inconvenient. Refuting well is a service: it tunes the pipeline. Refuting lazily poisons the outcome telemetry.
 
-Dispute in the same `@claude #update-review` mention as the fixes, naming the finding by its id and saying why. The update path classifies the dispute three ways, and what counts as evidence differs:
+Dispute in the same `/update-review` comment as the fixes, naming the finding by its id and saying why. The update path classifies the dispute three ways, and what counts as evidence differs:
 
 - **Domain-knowledge** ("this pattern is intentional; the team decided it") — the model defaults to conceding, and maintainer write access is itself sufficient evidence for design intent. Say plainly that it's a design decision.
 - **Verifiable claim** ("that was added in 3.261", "the docs already say this elsewhere") — author authority proves nothing here. Bring the link, the file:line, or the command output, or the model will hold.
@@ -78,7 +78,7 @@ Knowingly shipping with the finding standing. Always available, never free.
 
 - The note must say *why*, in terms someone reading the PR later can evaluate: "house voice — we say 'simply' in tutorials deliberately", not "won't fix".
 - For a 🚨 blocker, also post the reason as a PR comment. A blocker accepted silently reads to the scraper as `ignored_outstanding`, and to a maintainer as an oversight.
-- This is the disposition to use when the user says "just merge it." One `@claude accepting all open findings as-is: <their reason> #update-review` mention records it across every open finding (the update lane flags it `bulk`). That is the honest ledger entry. Each accepted row moves to the reviewer brief's ⚠️ list, where the approver sees it.
+- This is the disposition to use when the user says "just merge it." One `/update-review accepting all open findings as-is: <their reason>` comment records it across every open finding (the update lane flags it `bulk`). That is the honest ledger entry. Each accepted row moves to the reviewer brief's ⚠️ list, where the approver sees it.
 
 ## `not-applicable`
 

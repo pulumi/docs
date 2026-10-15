@@ -81,18 +81,62 @@ def test_review_uploads_raw_claim_artifacts():
     assert step.get("continue-on-error") is True
 
 
-def test_update_lane_trigger_leaves_new_review_to_the_mention_gate():
+def test_update_lane_trigger_leaves_new_review_to_the_command_gate():
     """A job-level `if:` is a substring match and can't see quoting. When the
     update lane's excluded `#new-review` there, a comment that only quoted
-    that hashtag ran neither lane: claude-new.yml's gate declined it as a
+    that command ran neither lane: claude-new.yml's gate declined it as a
     quote, and this one never reached its own gate (#21909). The exclusion
-    belongs to mention-gate.py's `--exclude new-review`, which reads only
+    belongs to command-gate.py's `--exclude new-review`, which reads only
     live text."""
     wf = _WF_DIR / "claude-update.yml"
     gate = yaml.safe_load(wf.read_text())["jobs"]["gate"]
-    assert "#new-review" not in gate["if"], "the trigger must not screen #new-review by substring"
+    assert "new-review" not in gate["if"], "the trigger must not screen /new-review by substring"
     runs = "\n".join(s.get("run") or "" for s in gate.get("steps") or [])
-    assert "--hashtag update-review --exclude new-review" in runs, "the mention gate must still apply the exclusion"
+    assert "--command update-review --exclude new-review" in runs, "the command gate must still apply the exclusion"
+
+
+_COMMAND_LANES = {
+    "claude-update.yml": ("gate", "update-review"),
+    "claude-new.yml": ("claude-new", "new-review"),
+    "claude-social-review.yml": ("command", "social-review"),
+}
+
+
+def test_review_commands_are_slash_commands_not_mentions():
+    """Review commands are `/command` at the start of a line; `@claude` is
+    only ever the general assistant. A lane whose trigger still needs
+    `@claude` would make every review request also ping the Claude GitHub
+    App (the stray second 👀 on pulumi/docs#22200), and one that matched a
+    hashtag would run the retired shape the redirect workflow answers."""
+    for name, (job, command) in _COMMAND_LANES.items():
+        data = yaml.safe_load((_WF_DIR / name).read_text())
+        cond = data["jobs"][job]["if"]
+        assert f"'/{command}'" in cond, f"{name}: trigger must match /{command}"
+        assert "@claude" not in cond and f"#{command}" not in cond, f"{name}: trigger must not need a mention or hashtag"
+        runs = "\n".join(s.get("run") or "" for s in data["jobs"][job].get("steps") or [])
+        assert f"command-gate.py check" in runs and f"--command {command}" in runs, \
+            f"{name}: the shared command gate must judge the body"
+
+
+def test_retired_review_shapes_reach_only_the_redirect():
+    """`@claude … #update-review` / `#new-review` run nothing. claude.yml
+    screens them out so the chat agent doesn't take them, and
+    review-command-redirect.yml answers them with the slash form."""
+    chat = yaml.safe_load((_WF_DIR / "claude.yml").read_text())["jobs"]["claude"]
+    for tag in ("#update-review", "#new-review"):
+        assert f"!contains(github.event.comment.body, '{tag}')" in chat["if"]
+    steps = {s.get("id"): s for s in chat["steps"] if s.get("id")}
+    assert "route" in steps and "command-gate.py" in steps["route"]["run"]
+    claude_step = next(s for s in chat["steps"] if s.get("name") == "Run Claude Code")
+    assert "steps.route.outputs.skip != 'true'" in claude_step["if"]
+
+    redirect = yaml.safe_load((_WF_DIR / "review-command-redirect.yml").read_text())
+    job = next(iter(redirect["jobs"].values()))
+    for tag in ("#update-review", "#new-review"):
+        assert tag in job["if"]
+    assert "claude[bot]" in job["if"], "the review's own cards must never be answered"
+    runs = "\n".join(s.get("run") or "" for s in job["steps"])
+    assert "command-gate.py legacy" in runs
 
 
 _BOT_ALLOWLIST_RE = __import__("re").compile(r'"\$AUTHOR" == "([^"]+)"')

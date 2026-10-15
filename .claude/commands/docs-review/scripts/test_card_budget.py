@@ -276,7 +276,7 @@ def test_pass1_unverifiables_become_one_group_question(tmp_path):
     block = texts[gid]
     assert "<TODO" not in block
     assert sum(1 for ln in block.splitlines() if ln.startswith("- **Fix:**")) == 1
-    assert f"`@claude {gid}: <what you checked them against> #update-review`" in block
+    assert f"`/update-review {gid}: <what you checked them against>`" in block
     assert f"<summary>The 7{cr.GROUP_LIST_SUMMARY_SUFFIX}" in block
     assert f"**`{BLOG}`**" in block and "- L17 — " in block
     # The group leads ❓; the other unverifiables keep their own rows.

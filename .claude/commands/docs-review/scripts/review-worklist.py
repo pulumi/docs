@@ -18,7 +18,7 @@ undecided*. Nothing here writes to GitHub.
 Disposition vocabulary (closed set, see `address-review:references:dispositions`):
 
     fixed       — the diff changed; the finding no longer applies
-    refuted     — disputed with evidence via `@claude #update-review`
+    refuted     — disputed with evidence via `/update-review`
     deferred    — real but out of scope; tracked in a filed issue (note required)
     accepted    — knowingly shipping as-is (note required)
     not-applicable — the finding misreads the change; nothing to do (note required)

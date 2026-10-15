@@ -25,7 +25,7 @@ diff no longer contains).
 A row with unanswered 🚨 blocking findings is `blocked`, not `judge`: it
 cannot merge until the review is answered, and `blocked` is the one lane
 --force never reaches. Answering them is the author's job (a fix, or
-`@claude <why> #update-review`); the approver's judgments are board notes
+`/update-review <why>`); the approver's judgments are board notes
 and never answer a finding.
 
 The stamp bar (every gate required):
@@ -878,7 +878,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         blocked.append("review:stale")
         add_action({"id": "refresh", "label": "refresh review", "cmd": f"--refresh {n}"})
     elif status == "ERROR":
-        # The pipeline's own escape hatch: `#new-review` clears the cards
+        # The pipeline's own escape hatch: `/new-review` clears the cards
         # and dispatches a fresh initial review, bypassing the skips.
         blocked.append("review:error")
         add_action({"id": "rerun", "label": "re-run the review", "cmd": f"--rerun {n}"})
@@ -931,7 +931,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         # Blocked, not judge. An unanswered 🚨 is the review still waiting on
         # the author, and no approver's call substitutes for their answer —
         # so the row must not sit in a lane --force can reach. The author
-        # answers with a fix or `@claude <why> #update-review`; the row
+        # answers with a fix or `/update-review <why>`; the row
         # leaves this lane on the next collect.
         gate_fail(f"outstanding:{len(blockers)}:{','.join(blockers)}")
         blocked.append(f"outstanding:{len(blockers)}")
@@ -1119,10 +1119,10 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         # of to you. It is one comment, so unlike the handoff it is an
         # ordinary act.py fragment and rides in the batch; the two are
         # alternatives, and the board's toggles put one out when the other
-        # lights. Offered only when there are ids to name -- an `@claude fix`
+        # lights. Offered only when there are ids to name -- a `/update-review fix`
         # with nothing after it asks for nothing.
         if act.ask_fix_items(pr):
-            add_action({"id": "ask-fix", "label": "ask @claude to fix them", "cmd": f"--ask-fix {n}",
+            add_action({"id": "ask-fix", "label": "ask Claude to fix them", "cmd": f"--ask-fix {n}",
                         "exclusive": "fix"})
 
     if author_self:
@@ -1442,9 +1442,9 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
         "unblock": ("stuck behind a merge conflict",
                     "Merges master into each branch as a merge commit and pushes, so CI re-runs. A conflicted merge is aborted and reported, never resolved blind."),
         "refresh": ("carrying a review that describes an older commit",
-                    "Asks each review to update itself against the current head (@claude #update-review). Nothing merges."),
+                    "Asks each review to update itself against the current head (/update-review). Nothing merges."),
         "rerun": ("carrying a review that errored",
-                  "Throws each stale card away and runs a fresh review from scratch (@claude #new-review). Nothing merges."),
+                  "Throws each stale card away and runs a fresh review from scratch (/new-review). Nothing merges."),
         "rerun-checks": ("stuck behind red CI",
                          "Re-runs the failed jobs of each head's workflow runs. Nothing merges; a real failure comes back red."),
     }

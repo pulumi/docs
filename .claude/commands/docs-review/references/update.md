@@ -12,7 +12,7 @@ Shared primitive for "previous review + new commits/mention = updated review." E
 ## Inputs
 
 - `PR_NUMBER`
-- (Optional) `MENTION_BODY` -- the text of the `@claude` mention that triggered the run, when applicable
+- (Optional) `MENTION_BODY` -- the text of the `/update-review` comment that triggered the run, when applicable: the command token, then the request. "The mention" below means this comment.
 - (Optional) `MENTION_AUTHOR` -- the GitHub username who left the mention
 
 The skill loads everything else for itself:
@@ -77,7 +77,7 @@ When `gh pr view` reports `isDraft: true`, **prepend** the pinned-comment body w
 
 > *Reviewing a draft; findings may change as you iterate.*
 
-Explicit `@claude` mention on a draft is explicit consent to run, so the skill does not abort -- but the author should not be surprised that findings surface on still-evolving content. The note is removed automatically on the next re-entrant run once the PR is marked Ready for review.
+An explicit `/update-review` on a draft is explicit consent to run, so the skill does not abort -- but the author should not be surprised that findings surface on still-evolving content. The note is removed automatically on the next re-entrant run once the PR is marked Ready for review.
 
 ---
 
@@ -112,7 +112,7 @@ The author pushed commits that look like fixes for the previous 🚨 Outstanding
 
 The bucket update is the communication. The reader sees fewer 🚨 items and more ✅ items; they do not need a prose recap.
 
-**When the "fix" is you implementing a suggested rewrite** (`@claude implement the suggested rewrite …`, or the author asking you to apply a finding's suggestion block): the rewrite was composed against the review's evidence, and that evidence includes the cross-sibling lane, which is a **mismatch detector, not ground truth**. Before pushing, re-check the result against the sibling pages the finding cited (the "per `<sibling>.md` L<a>–<b>" provenance in the suggestion) — read the cited lines, confirm each borrowed clause is true of *this* page's subject, and drop or reword any that isn't. PR #21293 applied a rewrite verbatim and inherited two clauses from `any-terraform-provider.md`, one of them wrong. A rewrite that cites no source for borrowed wording is not ready to implement; ask for the source first.
+**When the "fix" is you implementing a suggested rewrite** (`/update-review implement the suggested rewrite …`, or the author asking you to apply a finding's suggestion block): the rewrite was composed against the review's evidence, and that evidence includes the cross-sibling lane, which is a **mismatch detector, not ground truth**. Before pushing, re-check the result against the sibling pages the finding cited (the "per `<sibling>.md` L<a>–<b>" provenance in the suggestion) — read the cited lines, confirm each borrowed clause is true of *this* page's subject, and drop or reword any that isn't. PR #21293 applied a rewrite verbatim and inherited two clauses from `any-terraform-provider.md`, one of them wrong. A rewrite that cites no source for borrowed wording is not ready to implement; ask for the source first.
 
 ### Case 2 — dispute
 
@@ -159,9 +159,9 @@ The author or another reviewer pushed back on a previous finding *without* a fix
 
 ### Case 3 — re-verify
 
-A `@claude` mention with no specific request, or a generic "please re-review." Signals:
+An `/update-review` with no specific request, or a generic "please re-review." Signals:
 
-- Mention body is short and non-specific ("/claude refresh" / "@claude take another look").
+- Mention body is short and non-specific (a bare "/update-review" / "/update-review take another look").
 - New commits may or may not be present.
 
 **Action:**
@@ -172,7 +172,7 @@ A `@claude` mention with no specific request, or a generic "please re-review." S
 
 **Failure-mode example:**
 
-> Previous review had 3 outstanding findings (A, B, C). Author pushed no commits, no new mention beyond "@claude refresh."
+> Previous review had 3 outstanding findings (A, B, C). Author pushed no commits, no request beyond a bare "/update-review."
 >
 > ❌ *Do not:* list A, B, C again as a new narrative ("I re-reviewed the PR. The following findings remain: A, B, C."). They are already visible in the pinned comment. Repeating them is the noisiest possible output.
 > ✅ *Do:* append one 📜 Review history line ("<timestamp> — re-verified; 3 outstanding unchanged") and update the timestamp at the top of the 1/M comment (plus the `<!-- CLAUDE_REVIEW_HEAD -->` sentinel when the head moved). That is the full output. The bucket contents do not change.
@@ -333,7 +333,7 @@ disputes or raise findings.
 
 - The v3 refresh does not regenerate advisory style suggestions (the author
   card keeps its style block from the last full compose, and existing
-  one-click buttons stand). A full re-style pass is `@claude #new-review`.
+  one-click buttons stand). A full re-style pass is `/new-review`.
 - For the same reason a refresh can't add a `[nit]` (output-format §Nits):
   `add` only creates finding rows. A mechanical nit you notice on a refresh is
   **not** a `reviewer-check` row — that's the misroute the nit lane exists to

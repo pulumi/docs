@@ -432,7 +432,7 @@ def _run_build_evidence(author: str, brief: str, base: dict, tmp_path: Path) -> 
 
 
 def _update_round(prior: dict, author: str, brief: str) -> dict:
-    """One `#update-review` round: apply-update rebuilds the evidence object
+    """One `/update-review` round: apply-update rebuilds the evidence object
     from the prior record (and validates it before returning)."""
     up = {"schema": 1, "case": "mixed", "history_summary": "round trip",
           "findings": [{"id": "F1", "action": "resolve", "annotation": "fixed in e7e8e9"}]}

@@ -18,7 +18,7 @@ Don't watch a PR that will never post one.
 | Frontmatter-only | `review:frontmatter-only` | Same as above. |
 | Oversized | `review:oversized` | Triage posted a `<!-- TRIAGE_OVERSIZED -->` advisory suggesting a split. Offer to split the hand-written source into its own PR — that PR gets a real review. |
 | Bot-authored PR | author is `pulumi-bot` / `dependabot[bot]` | Review skips bot PRs. |
-| `review:error` | Workflow failed before publishing | Watching won't help. Read the Actions log; `@claude #new-review` reruns from scratch. |
+| `review:error` | Workflow failed before publishing | Watching won't help. Read the Actions log; `/new-review` reruns from scratch. |
 
 A short-circuited PR is not an ungoverned one. Where the Sentinel is enforcing, a mechanical lane skips the *model* review but never the approver — G1/G2 pass on triage's `<!-- TRIAGE_PROSE -->` comment, and the team named in `.github/review-routing.yml` still has to approve. So "no review is coming" means "nothing here for us to work," not "merge it."
 
@@ -70,8 +70,8 @@ Past the 40-minute ceiling with no cards and no `review:error`:
 
 1. Check the workflow run for the head SHA — a cancelled or timed-out job leaves no comment.
 1. Check whether the PR is still marked ready (a draft transition mid-run kills it).
-1. Re-trigger with `@claude #new-review`, which bypasses the skip paths, or transition draft → ready.
+1. Re-trigger with `/new-review`, which bypasses the skip paths, or transition draft → ready.
 
-`#new-review` is also the only thing that will regenerate a legacy v2 monolith as v3 cards — `#update-review` refreshes a v2 review in place, by design. Don't reach for it as a retry on a PR that already has a working review unless the user wants that migration and knows it costs a full review round.
+`/new-review` is also the only thing that will regenerate a legacy v2 monolith as v3 cards — `/update-review` refreshes a v2 review in place, by design. Don't reach for it as a retry on a PR that already has a working review unless the user wants that migration and knows it costs a full review round.
 
 Report what happened rather than waiting again. Two silent 40-minute waits is worse than one clear "the review job timed out; want me to retrigger it?"

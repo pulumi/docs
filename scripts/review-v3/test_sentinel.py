@@ -389,7 +389,7 @@ def test_substantive_no_review_g1_red():
     v = sentinel.evaluate(gh, CONFIG)
     assert v.conclusion == "failure"
     assert _gate(v, "G1").status == "red"
-    assert "#update-review" in _gate(v, "G1").message
+    assert "/update-review" in _gate(v, "G1").message
 
 
 def test_findings_undecided_g2_red_lists_ids():
@@ -400,7 +400,7 @@ def test_findings_undecided_g2_red_lists_ids():
     v = sentinel.evaluate(gh, CONFIG)
     g2 = _gate(v, "G2")
     assert g2.status == "red" and "F1" in g2.message and "F2" in g2.message
-    assert "@claude" in g2.message and "/resolve" not in g2.message
+    assert "/update-review" in g2.message and "/resolve" not in g2.message and "@claude" not in g2.message
     assert v.conclusion == "failure"
     assert v.blocking_ids == ["F1", "F2"]
 
@@ -789,7 +789,7 @@ def test_trivial_prose_flagged_without_triage_comment_names_the_fix():
     v = sentinel.evaluate(gh, CONFIG)
     g1 = _gate(v, "G1")
     assert g1.status == "red"
-    assert "#new-review" in g1.message and "review:trivial" in g1.message
+    assert "/new-review" in g1.message and "review:trivial" in g1.message
     assert _gate(v, "G2").status == "skip"
     # A comment from someone other than the triage bot is not the stand-in.
     gh = StubGh(pr=pr_meta(labels=labels), files=[docs_file_mechanical()],
@@ -1188,12 +1188,12 @@ def test_the_oversized_ack_must_come_from_a_qualifying_approver():
 
     bystander = sentinel.evaluate(StubGh(**dict(base, reviews=[
         approval("guild"),
-        approval("randomer", body=f"lgtm {sentinel.OVERSIZED_ACK}"),
+        approval("randomer", body=f"lgtm\n{sentinel.OVERSIZED_ACK}"),
     ])), CONFIG)
     assert _gate(bystander, "G5").status == "red"
 
     proper = sentinel.evaluate(StubGh(**dict(base, reviews=[
-        approval("guild", body=f"read it all {sentinel.OVERSIZED_ACK}"),
+        approval("guild", body=f"read it all\n{sentinel.OVERSIZED_ACK}"),
     ])), CONFIG)
     assert _gate(proper, "G5").status == "ok"
 
@@ -1353,7 +1353,7 @@ def test_the_status_comment_is_maintained_for_every_pr_in_report_only():
 
 def test_oversized_ack_replaces_g1_g2():
     gh = StubGh(pr=pr_meta(labels=["review:oversized"]), files=[docs_file_substantive()],
-                reviews=[approval("guild-member", body="LGTM sentinel:oversized-ack")],
+                reviews=[approval("guild-member", body="LGTM\r\n/oversized-ack")],
                 memberships={("docs-guild", "guild-member"): "active"})
     v = sentinel.evaluate(gh, CONFIG)
     assert _gate(v, "G1").status == "skip"
@@ -1365,7 +1365,25 @@ def test_oversized_ack_replaces_g1_g2():
                  memberships={("docs-guild", "guild-member"): "active"})
     v2 = sentinel.evaluate(gh2, CONFIG)
     assert _gate(v2, "G5").status == "red"
-    assert "sentinel:oversized-ack" in _gate(v2, "G5").message
+    assert "/oversized-ack" in _gate(v2, "G5").message
+
+
+def test_oversized_ack_is_a_slash_command_not_a_substring():
+    """`/oversized-ack` follows the review-command grammar: it starts a line.
+    Mid-sentence, or spelled as the retired `sentinel:oversized-ack` token,
+    it records no hand review."""
+    def g5(body):
+        gh = StubGh(pr=pr_meta(labels=["review:oversized"]), files=[docs_file_substantive()],
+                    reviews=[approval("guild-member", body=body)],
+                    memberships={("docs-guild", "guild-member"): "active"})
+        return _gate(sentinel.evaluate(gh, CONFIG), "G5").status
+
+    assert g5("/oversized-ack") == "ok"
+    assert g5("Read every file.\n/oversized-ack") == "ok"
+    assert g5("/Oversized-Ack") == "ok"
+    assert g5("LGTM /oversized-ack") == "red"
+    assert g5("LGTM sentinel:oversized-ack") == "red"
+    assert g5("/oversized-acknowledged") == "red"
 
 
 def test_the_oversized_ack_instruction_says_where_the_string_goes():
@@ -1394,7 +1412,7 @@ def test_approving_again_with_the_ack_clears_g5():
     LATEST stateful review, so pin it."""
     gh = StubGh(pr=pr_meta(labels=["review:oversized"]), files=[docs_file_substantive()],
                 reviews=[approval("guild-member"),
-                         approval("guild-member", body=f"read by hand {sentinel.OVERSIZED_ACK}")],
+                         approval("guild-member", body=f"read by hand\n{sentinel.OVERSIZED_ACK}")],
                 memberships={("docs-guild", "guild-member"): "active"})
     assert _gate(sentinel.evaluate(gh, CONFIG), "G5").status == "ok"
 
@@ -2129,7 +2147,7 @@ def test_g2_does_not_call_a_stale_card_answered():
     gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()],
                 comments=[author_card(head=old), brief_comment()])
     v = sentinel.evaluate(gh, CONFIG)
-    assert _gate(v, "G1").status == "red" and "#update-review" in _gate(v, "G1").message
+    assert _gate(v, "G1").status == "red" and "/update-review" in _gate(v, "G1").message
     assert "push to refresh" not in _gate(v, "G1").message
     assert _gate(v, "G2").status == "skip" and "not current" in _gate(v, "G2").message
 

@@ -11,7 +11,7 @@ name: "Scheduled jobs: Glow-up autofix (post-open)"
 # (scripts/content-review/glowup-autofix.py). A pass fixes, refutes, or
 # reverts each open 🚨/❓ finding, re-verifies its own change with
 # preverify-glowup.py (withdrawing any change that doesn't verify), pushes as
-# pulumi-bot, and answers the card with one `@claude … #update-review`
+# pulumi-bot, and answers the card with one `/update-review …`
 # comment, exactly as /address-review would. The update lane then refreshes
 # the card; a card current at the NEW head can start pass 2. Whatever is
 # still open after that is handed to the routed approver team by name, once.
@@ -458,7 +458,7 @@ jobs:
             --commit "$COMMIT" --body ../body.md --teams "$TEAMS" --out-dir ../.autofix-answer
           # The answer goes out right after the push. The push's own
           # auto-refresh takes minutes to reach its gate, and that gate
-          # yields to an explicit #update-review already in flight, so the
+          # yields to an explicit /update-review already in flight, so the
           # refresh that runs is the one carrying these dispositions.
           gh pr comment "$PR" --repo "$REPO" --body-file ../.autofix-answer/answer.md
           gh pr edit "$PR" --repo "$REPO" --body-file ../.autofix-answer/body.md \

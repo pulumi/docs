@@ -143,7 +143,7 @@ OUTCOME_KEYS = (
 # dispositions (`accepted`/`deferred`/`not-applicable`) that are an active,
 # adjudicated answer rather than something merged over unaddressed.
 # `bulk_accepted` is the honesty-metric counter: how many of those answers
-# came from one accept-everything `#update-review` mention (the update lane's
+# came from one accept-everything `/update-review` comment (the update lane's
 # `bulk: true`) rather than a per-finding decision.
 V3_ONLY_OUTCOME_KEYS = (
     "ignored_author_answer",

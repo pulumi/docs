@@ -1018,7 +1018,7 @@ def test_fix_mode_never_posts_a_span_mismatched_splice(tmp_path, line, quote, fe
 
 
 def test_fix_comment_with_renumbered_ids_is_reposted(fix_repo, monkeypatch):
-    """Review finding 2026-09-25: a #new-review renumbers from F1; keeping the
+    """Review finding 2026-09-25: a /new-review renumbers from F1; keeping the
     live `**F2** blocks merge` comment would point at the wrong finding."""
     entries, _ = pss.derive_fix_entries(FIX_CARD, fix_repo)
     valid, _ = pss.validate_entries(entries, pss._vff.added_lines_per_file(_fix_patch()), fix_repo)

@@ -18,7 +18,7 @@ name: Pre-merge Review (triage)
 # same thing as a re-request.
 # review-state staleness on push is still claude-code-review.yml's
 # mark-stale job, unchanged. It does NOT run on reopen — reopening is
-# usually administrative; the explicit `@claude #new-review` path is the
+# usually administrative; the explicit `/new-review` command is the
 # way to request a fresh review on an existing PR.
 #
 # The synchronize pass is Phase 3 of the v3 rollout and runs only while the
@@ -492,7 +492,7 @@ jobs:
           - Split the hand-written source (scripts, workflows, layouts, templates) into its own PR — that PR gets a normal full review.
           - Have a human review this PR by hand, assisted by their own AI subscription seat (for example, Claude Code running \`/docs-review\` locally against this PR). A local session has no job timeout, so it can focus on the hand-written source and spot-check a sample of the generated output.
 
-          **Reviewer:** when you approve after reviewing by hand, put \`sentinel:oversized-ack\` anywhere in your **Approve** review's comment, or run \`gh pr review $PR --approve --body sentinel:oversized-ack\`. That's what tells the Sentinel's G5 gate a human reviewed this PR. A PR comment or a line comment doesn't count, and neither does an approval of an earlier commit, so re-approve with it after a push.
+          **Reviewer:** when you approve after reviewing by hand, put \`/oversized-ack\` at the start of a line in your **Approve** review's comment, or run \`gh pr review $PR --approve --body /oversized-ack\`. That's what tells the Sentinel's G5 gate a human reviewed this PR. A PR comment or a line comment doesn't count, and neither does an approval of an earlier commit, so re-approve with it after a push.
           EOF
           )
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true

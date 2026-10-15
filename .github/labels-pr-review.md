@@ -35,7 +35,7 @@ Load-bearing — these gate workflow execution.
 | `review:in-progress` | `fbca04` | Claude review is currently running for this PR's current state. |
 | `review:outstanding-issues` | `b60205` | Claude review completed and 🚨 Outstanding contains at least one author-actionable finding. |
 | `review:no-blockers` | `0e8a16` | Claude review completed cleanly — 🚨 Outstanding is empty. |
-| `review:stale` | `ededed` | New commits landed since the last Claude review; refresh on next ready-transition or `@claude` mention. Also where a run rests when the head moved while it was reviewing: the publish guard refuses the stale handoff, sets this, and re-dispatches at the live head (at most twice in a row, then it waits for a mention). |
+| `review:stale` | `ededed` | New commits landed since the last Claude review; refresh on next ready-transition or `/update-review`. Also where a run rests when the head moved while it was reviewing: the publish guard refuses the stale handoff, sets this, and re-dispatches at the live head (at most twice in a row, then it waits for a mention). |
 | `review:error` | `e11d21` | Workflow failed before publishing a review. See the Actions logs. |
 | `needs-author-response` | `f7c6c7` | Review surfaced unverifiable claims; author needs to provide sources or fix. Applied by a maintainer from `/pr-review` (the route action's request-changes path). |
 | `review:waived` | `d93f0b` | **Break-glass.** A human deliberately waived the v3 merge gates (Sentinel concludes success, except infra staging evidence, which is never waivable). Actor and reason are logged to the waive ledger and the waive rate is tracked — apply it on purpose, in an incident, not to skip the answer loop. Applied by humans only; never by automation. |
@@ -77,7 +77,7 @@ gh label create "review:triaging"        --color e8db95 --description "Claude Tr
 gh label create "review:in-progress"     --color fbca04 --description "Claude review is currently running"
 gh label create "review:outstanding-issues" --color b60205 --description "Claude review completed; 🚨 Outstanding has author-actionable findings"
 gh label create "review:no-blockers"     --color 0e8a16 --description "Claude review completed cleanly; 🚨 Outstanding is empty"
-gh label create "review:stale"           --color ededed --description "New commits since last Claude review; refresh on next ready-transition or @claude mention"
+gh label create "review:stale"           --color ededed --description "New commits since last Claude review; refresh on next ready-transition or /update-review"
 gh label create "review:error"           --color e11d21 --description "Workflow failed before publishing a review; see Actions logs"
 gh label create "needs-author-response"  --color f7c6c7 --description "Review surfaced unverifiable claims; author owes a response"
 gh label create "review:waived"          --color d93f0b --description "Break-glass: a human waived the v3 merge gates; actor and reason are logged"

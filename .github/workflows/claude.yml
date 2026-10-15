@@ -4,10 +4,12 @@ name: Claude Code (chat)
 # the action auto-post its animated tracking comment with per-tool-call
 # updates -- the most common path for ad-hoc questions / fixes.
 #
-# This workflow fires only on bare `@claude` mentions. Hashtag-driven
-# routing sends review-bearing intents to:
-#   - `@claude #update-review` → claude-update.yml (refresh pinned)
-#   - `@claude #new-review`    → claude-new.yml    (regenerate from scratch)
+# This workflow fires only on `@claude` mentions. Review work runs on
+# slash commands, not mentions:
+#   - `/update-review` → claude-update.yml (refresh pinned)
+#   - `/new-review`    → claude-new.yml    (regenerate from scratch)
+# The retired `@claude #update-review` / `@claude #new-review` shapes are
+# screened out below and answered by review-command-redirect.yml.
 
 on:
   issue_comment:
@@ -23,11 +25,14 @@ jobs:
   claude:
     # Trigger requires:
     #   1. `@claude` mention.
-    #   2. NEITHER `#update-review` NOR `#new-review` -- those hashtags
-    #      route to claude-update.yml / claude-new.yml respectively.
-    #   3. Author is not claude[bot] itself -- the pinned-review footer
-    #      contains literal "@claude" instructions which would otherwise
-    #      re-trigger on every review post.
+    #   2. NEITHER `#update-review` NOR `#new-review` -- the retired review
+    #      shapes; review-command-redirect.yml answers those.
+    #   3. Author is not claude[bot] itself -- review cards mention
+    #      @claude, which would otherwise re-trigger on every review post.
+    # A comment that also carries a live `/update-review` or `/new-review`
+    # passes this filter and stands down in the "Leave review commands to
+    # their lanes" step: that lane reads the whole comment, @claude ask
+    # included, and two agents pushing to one branch would collide.
     if: |
       ((github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && !contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
        (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && !contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
@@ -95,8 +100,27 @@ jobs:
             echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
 
-      - name: Run Claude Code
+      # `/update-review` and `/new-review` own every comment that runs
+      # them, `@claude` or not. Same parser the lanes' own gates use, from
+      # the default-branch checkout above.
+      - name: Leave review commands to their lanes
+        id: route
         if: steps.check-access.outputs.has_write_access == 'true'
+        env:
+          BODY: ${{ github.event.comment.body || github.event.review.body || github.event.issue.body }}
+        run: |
+          GATE=.claude/commands/docs-review/scripts/command-gate.py
+          for c in update-review new-review; do
+            if python3 "$GATE" check --command "$c" --body-env BODY 2>/dev/null | grep -qx 'fire=true'; then
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+              echo "/$c runs this comment; standing down"
+              exit 0
+            fi
+          done
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Run Claude Code
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.route.outputs.skip != 'true'
         id: claude
         uses: anthropics/claude-code-action@v1
         with:

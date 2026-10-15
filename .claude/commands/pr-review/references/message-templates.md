@@ -24,7 +24,7 @@ These rules apply even on PRs that triggered heightened scrutiny or AI-suspect. 
 
 ## Footer
 
-The approval review body carries **no footer** -- it is a maintainer's one-liner. Every other comment `act.py` posts (the route comment with the defects, the close cross-links, the `#update-review` refresh mention) ends with the Claude Code attribution footer so readers know it was machine-posted:
+The approval review body carries **no footer** -- it is a maintainer's one-liner. Every other comment `act.py` posts (the route comment with the defects, the close cross-links, the `/update-review` refresh comment) ends with the Claude Code attribution footer so readers know it was machine-posted:
 
 ```text
 

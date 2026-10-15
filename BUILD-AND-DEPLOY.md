@@ -1026,12 +1026,12 @@ The repository has 63 workflows in `.github/workflows/`. They fall into five fam
 flowchart LR
   A1(["`Push to master`"])
   A2(["`PR opened or pushed`"])
-  A3(["`@claude comment or review`"])
+  A3(["`PR comment or review`"])
   A4(["`Cron schedule`"])
   A5(["`Upstream repo releases`"])
   F1["`Ship (8)`"]
   F2["`PR checks and preview (10)`"]
-  F3["`AI review and merge gate (10)`"]
+  F3["`AI review and merge gate (11)`"]
   F4["`Content upkeep (10)`"]
   F5["`Generated reference docs (22)`"]
   O1[("`www.pulumi.com`")]
@@ -1296,15 +1296,16 @@ flowchart TD
 |----------|---------|---------|
 | `claude-triage.yml` | PR opened (non-draft) or ready for review | Applies `domain:*` and skip labels (`review:trivial`, `review:frontmatter-only`), runs a Haiku and Vale prose check, and requests the review team that `.github/review-routing.yml` routes the PR to. With `REVIEW_V3_ROUTING=1` it also runs a label-only pass on every push. Skips pulumi-bot and Dependabot PRs except `content-review/*` branches. |
 | `claude-code-review.yml` | `workflow_run` after triage; PR `synchronize`; `workflow_dispatch` | The full review. On a push, `mark-stale` flips the label to `review:stale`, and `auto-refresh` dispatches `claude-update.yml` when `auto-refresh-gate.py` proves the push only touched lines carrying blocking findings. |
-| `claude-update.yml` | `@claude #update-review`; auto-refresh dispatch | Refreshes the pinned review in place. A cheap `gate` job rejects quoted or self-authored mentions before the worker's concurrency group, so a declined mention can't cancel a live refresh. |
-| `claude-new.yml` | `@claude #new-review` | Deletes the pinned review and re-dispatches `claude-code-review.yml` with `force=true`. For corrupted or deleted reviews. |
-| `claude.yml` | Bare `@claude` in an issue or PR | Ad-hoc help from `claude-code-action` in tag mode. |
+| `claude-update.yml` | `/update-review` comment; auto-refresh dispatch | Refreshes the pinned review in place. A cheap `gate` job rejects quoted or self-authored commands before the worker's concurrency group, so a declined comment can't cancel a live refresh. |
+| `claude-new.yml` | `/new-review` comment | Deletes the pinned review and re-dispatches `claude-code-review.yml` with `force=true`. For corrupted or deleted reviews. |
+| `claude.yml` | `@claude` in an issue or PR | Ad-hoc help from `claude-code-action` in tag mode. Stands down when the same comment runs `/update-review` or `/new-review`. |
+| `review-command-redirect.yml` | A comment in the retired `@claude … #update-review` / `#new-review` shape | Replies with the same request rewritten as a slash command. Runs nothing else. |
 | `claude-social-review.yml` | PRs touching `content/blog/*/index.md`; comments; `workflow_dispatch` | Reviews the social copy in blog frontmatter and posts a PASS/FAIL comment. Doesn't re-run when the copy is unchanged. |
 | `review-label-reconcile.yml` | Every 2 hours at :23 | Repairs `review:*` labels when a push fired no events (pushes with `GITHUB_TOKEN` or by the Copilot agent) and clears `review:in-progress` left by a run that died. |
 | `review-sla-sweep.yml` | Every 2 hours at :53, when `REVIEW_V3_SLA=1` | Reviewer-wait SLA escalations and author-staleness warnings and closes, per the `sla:` and `author_staleness:` blocks in `review-routing.yml`. |
 | `weekly-digest.yml` | Mondays 14:00 UTC | Posts two Slack messages to `#docs-ops`: the PR review queue and the issue backlog. |
 
-The workflows that act on `@claude` mentions all check that the commenter has write access. The `review:*` labels follow this state machine:
+The workflows that run review commands or answer `@claude` all check that the commenter has write access. The [review commands](CONTRIBUTING.md#review-commands) are slash commands at the start of a line, judged by `command-gate.py`; `@claude` is only the general assistant. The `review:*` labels follow this state machine:
 
 ```mermaid
 stateDiagram-v2
@@ -1555,9 +1556,10 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `auto-approve-for-auto-merge.yml` | PR checks | Pull request | Approve `automation/merge` bot PRs |
 | `claude-triage.yml` | AI review | Pull request | Labels, prose check, team request |
 | `claude-code-review.yml` | AI review | After triage, PR push, manual | Full pre-merge review |
-| `claude-update.yml` | AI review | `@claude #update-review`, auto-refresh | Refresh the pinned review |
-| `claude-new.yml` | AI review | `@claude #new-review` | Regenerate the pinned review |
+| `claude-update.yml` | AI review | `/update-review`, auto-refresh | Refresh the pinned review |
+| `claude-new.yml` | AI review | `/new-review` | Regenerate the pinned review |
 | `claude.yml` | AI review | `@claude` | Ad-hoc help |
+| `review-command-redirect.yml` | AI review | Comment in a retired `@claude #…-review` shape | Reply with the slash-command form |
 | `claude-social-review.yml` | AI review | Pull request (blog paths), comment, manual | Social copy review |
 | `review-sentinel.yml` | AI review | `pull_request_target`, reviews, after review lanes, manual | Merge gate check |
 | `review-label-reconcile.yml` | AI review | Every 2 h, manual | Repair `review:*` labels |

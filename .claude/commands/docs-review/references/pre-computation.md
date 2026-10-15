@@ -82,7 +82,7 @@ Anything that requires reading two prose passages and judging their relationship
 5. **Update the spec.** Add a "Pre-step artifact `<name>.json`" paragraph in the relevant `references/*.md` section. Spec what the artifact contains, mandate "read this first," surface the structural floor, and call out known false-positive scenarios.
 6. **Optionally add a validator rule.** If the artifact carries findings the reviewer must surface, `validate-pinned.py` can flag drift (artifact says X, rendered review doesn't include X) — same pattern as `editorial-balance-counts-faithful`.
 7. **Self-test on representative fixtures.** Run on PRs that should trip + PRs that should pass. False-positive rate should be near zero.
-8. **Spike-test in CI.** Fire `@claude #new-review` on the test PR and confirm the artifact reaches the agent (model should cite the artifact name in the trail).
+8. **Spike-test in CI.** Fire `/new-review` on the test PR and confirm the artifact reaches the agent (model should cite the artifact name in the trail).
 
 ## When to consider per-step agents (not pre-steps)
 
