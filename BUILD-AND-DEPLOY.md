@@ -1031,7 +1031,7 @@ flowchart LR
   A5(["`Upstream repo releases`"])
   F1["`Ship (8)`"]
   F2["`PR checks and preview (10)`"]
-  F3["`AI review and merge gate (11)`"]
+  F3["`AI review and merge gate (12)`"]
   F4["`Content upkeep (10)`"]
   F5["`Generated reference docs (22)`"]
   O1[("`www.pulumi.com`")]
@@ -1300,6 +1300,7 @@ flowchart TD
 | `claude-new.yml` | `/new-review` comment | Deletes the pinned review and re-dispatches `claude-code-review.yml` with `force=true`. For corrupted or deleted reviews. |
 | `claude.yml` | `@claude` in an issue or PR | Ad-hoc help from `claude-code-action` in tag mode. Stands down when the same comment runs `/update-review` or `/new-review`. |
 | `review-command-redirect.yml` | A comment in the retired `@claude … #update-review` / `#new-review` shape | Replies with the same request rewritten as a slash command. Runs nothing else. |
+| `review-command-text-migration.yml` | Manual, one-off | Rewrites the retired command text on the review comments already on open PRs (`migrate-command-text.py`); dry run unless `apply` is checked. Delete it once it has run. |
 | `claude-social-review.yml` | PRs touching `content/blog/*/index.md`; comments; `workflow_dispatch` | Reviews the social copy in blog frontmatter and posts a PASS/FAIL comment. Doesn't re-run when the copy is unchanged. |
 | `review-label-reconcile.yml` | Every 2 hours at :23 | Repairs `review:*` labels when a push fired no events (pushes with `GITHUB_TOKEN` or by the Copilot agent) and clears `review:in-progress` left by a run that died. |
 | `review-sla-sweep.yml` | Every 2 hours at :53, when `REVIEW_V3_SLA=1` | Reviewer-wait SLA escalations and author-staleness warnings and closes, per the `sla:` and `author_staleness:` blocks in `review-routing.yml`. |
@@ -1560,6 +1561,7 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `claude-new.yml` | AI review | `/new-review` | Regenerate the pinned review |
 | `claude.yml` | AI review | `@claude` | Ad-hoc help |
 | `review-command-redirect.yml` | AI review | Comment in a retired `@claude #…-review` shape | Reply with the slash-command form |
+| `review-command-text-migration.yml` | AI review | Manual (one-off) | Move existing review comments to the slash-command text |
 | `claude-social-review.yml` | AI review | Pull request (blog paths), comment, manual | Social copy review |
 | `review-sentinel.yml` | AI review | `pull_request_target`, reviews, after review lanes, manual | Merge gate check |
 | `review-label-reconcile.yml` | AI review | Every 2 h, manual | Repair `review:*` labels |

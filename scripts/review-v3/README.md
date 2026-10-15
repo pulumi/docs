@@ -223,9 +223,11 @@ changes nothing produces a byte-identical body and the PATCH is skipped.
 before either posts used to leave two copies (pulumi/docs#22251 and five
 others), so the upsert keeps the oldest bot copy, deletes the rest, and
 re-lists once after a first POST to catch the run it raced. The
-comment is maintained on **every** PR the Sentinel evaluates, in both modes.
-In report-only mode the heading reads "(preview)" and a `[!WARNING]` banner
-says both halves: informational and safe to ignore today, enforced soon, when
+comment is maintained on **every** PR the Sentinel evaluates, in both modes,
+and every body ends with `STATUS_HELP_FOOTER`, which points readers at
+`#docs`; enforcing mode has no banner, so the footer is its only pointer to
+a person. In report-only mode the heading reads "(preview)" and a
+`[!WARNING]` banner says both halves: informational and safe to ignore today, enforced soon, when
 every row has to be green to merge. Neither half calls a red row the author's
 homework — G3 is an approval and G4 a deploy. That banner is what makes a repo-wide dry run
 safe, and repo-wide is what makes it worth running — the `sentinel:preview`
