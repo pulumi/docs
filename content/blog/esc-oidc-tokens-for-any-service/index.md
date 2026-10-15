@@ -93,9 +93,9 @@ Pin the subject in every trust policy you write. Configure the policy with the i
 
 ## Example: Anthropic
 
-Anthropic's [workload identity federation](https://platform.claude.com/docs/en/manage-claude/workload-identity-federation) lets a workload call the Claude API with a short-lived token from an issuer you trust instead of an `sk-ant-...` API key. In the Claude Console, open **Workload identity**, choose **Connect workload**, and pick **Custom OIDC**. Register `https://api.pulumi.com/oidc/v2` as the issuer with key discovery, create a service account, and create a federation rule that matches the environment's subject exactly and the audience `https://api.anthropic.com`.
+Anthropic's [workload identity federation](https://platform.claude.com/docs/en/manage-claude/workload-identity-federation) lets a workload call the Claude API with a short-lived token from an issuer you trust instead of an `sk-ant-...` API key. In the Claude Console, open **Workload identity**, choose **Connect workload**, and pick **Custom OIDC**. Register `https://api.pulumi.com/oidc/v2` as the issuer URL with JWKS source **OIDC discovery**, create a service account, and create a federation rule that matches the environment's subject exactly. Anthropic only accepts tokens whose `aud` is `https://api.anthropic.com`, so use exactly that audience in the `fn::open::oidc` block.
 
-Mint a token for that audience and export it beside the IDs the wizard shows you:
+Mint a token for that audience and export it beside the IDs the rule's detail page shows you. The workspace ID is needed only when the rule spans more than one workspace.
 
 ```yaml
 values:
@@ -113,7 +113,9 @@ values:
     ANTHROPIC_WORKSPACE_ID: wrkspc_...
 ```
 
-Run the workload under the environment and every Claude SDK does the rest: it reads those variables, posts the token to `https://api.anthropic.com/v1/oauth/token`, and calls the API with the `sk-ant-oat01-...` access token it gets back. The code constructs the client with no key at all. Anthropic accepts each token once, so the access token lasts as long as the ESC token did; open the environment again for the next one.
+Run the workload under the environment and every Claude SDK does the rest: it reads those variables, posts the token to `https://api.anthropic.com/v1/oauth/token`, and calls the API with the `sk-ant-oat01-...` access token it gets back. The code constructs the client with no key at all.
+
+Anthropic accepts each identity token once. The access token it returns lasts for the rule's token lifetime, 10 minutes by default in the Console, and the SDK cannot refresh it from the same `ANTHROPIC_IDENTITY_TOKEN` value. A job that finishes inside that window needs nothing more. A long-running agent must open the environment again before each refresh, or write a fresh token to the path in `ANTHROPIC_IDENTITY_TOKEN_FILE`, which the SDK re-reads on every exchange.
 
 Cloudsmith, JFrog Artifactory, and Aembit follow the same shape, and the [relying-party guide](/docs/esc/guides/configuring-oidc/custom-audience/) walks through each of them.
 
