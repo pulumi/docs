@@ -1426,6 +1426,16 @@ def _waive_actor(gh: Gh) -> str:
 # ---- Status strip -------------------------------------------------------
 
 
+def _status_link(comments: list[dict]) -> str:
+    # The strip used to say "the Sentinel check below", but the status comment
+    # is usually ABOVE the card: the Sentinel posts it when the PR opens, and
+    # the review lands later. Link the copy `update_status_comment` keeps (the
+    # oldest). No copy yet means no link; the next evaluation adds it.
+    found = sorted(_find_comments(comments, STATUS_MARKER), key=lambda c: int(c.get("id") or 0))
+    url = found[0].get("html_url") if found else None
+    return f"[the Sentinel status]({url})" if url else "the Sentinel status comment"
+
+
 def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -> bool:
     """Patch the one-line ⛔ strip into the author card. Idempotent."""
     comments = comments if comments is not None else gh.list_issue_comments()
@@ -1435,10 +1445,22 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
     body = card.get("body") or ""
     if verdict.conclusion in ("failure", "action_required"):
         n = len(verdict.blocking_ids)
-        what = f"{n} item(s) block merge" if n else "merge is blocked"
-        strip = (f"{STRIP_OPEN}\n⛔ **{what}** — fix and push, or reply "
-                 f"`/update-review <your reasoning>`. "
-                 f"Details: the Sentinel check below.\n{STRIP_CLOSE}")
+        details = f"Details: {_status_link(comments)}."
+        if n:
+            line = (f"⛔ **{n} item(s) block merge** — fix and push, or reply "
+                    f"`/update-review <your reasoning>`. {details}")
+        else:
+            # No finding blocks, so the card right under this line says "nothing
+            # blocks merge" and has nothing to fix or answer. "⛔ merge is
+            # blocked — fix and push, or reply /update-review" contradicted it
+            # and sent authors (workprentice included) after gates only an
+            # approver or a deploy can clear. Say what the merge is waiting on;
+            # that gate's row in the status comment says who acts.
+            red = [g.name for g in verdict.gates if g.status in ("red", "error")]
+            what = (" and ".join([", ".join(red[:-1]), red[-1]]) if len(red) > 1
+                    else red[0] if red else "the merge gate")
+            line = f"⏳ **Merge is waiting on {what}.** {details}"
+        strip = f"{STRIP_OPEN}\n{line}\n{STRIP_CLOSE}"
     else:
         if STRIP_OPEN not in body:
             return False  # nothing to clear; don't insert an empty pair

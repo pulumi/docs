@@ -250,7 +250,11 @@ surface itself is `REVIEW_V3_COMMENTS` (repo-wide; the per-PR `surface:v3`
 opt-in label and `REVIEW_V3_BOT_PRS` were retired 2026-09-14 once the
 variable had soaked). The
 check summary embeds the reviewer brief (merge-box delivery), and on red the
-sentinel PATCHes a ⛔ strip into the author card naming the exact commands.
+sentinel PATCHes a strip into the author card, linking the status comment.
+With blocking findings it reads "⛔ N item(s) block merge" and names the reply
+that answers them; with none, the card already says nothing blocks merge, so
+the strip reads "⏳ Merge is waiting on" the red gate (an approval or a deploy
+is nothing the author can fix or answer).
 
 **SLA sweep** (`sla-sweep.py`, `review-sla-sweep.yml`, cron every 2 h): its own
 switch is `REVIEW_V3_SLA` — the job runs only while it is `'1'` (a manual
