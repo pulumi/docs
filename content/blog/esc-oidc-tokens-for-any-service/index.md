@@ -47,7 +47,7 @@ An OIDC token works the other way around. ESC mints it at the moment you open th
 
 ## Why this matters for agents
 
-An AI agent that opens an environment gets whatever the environment holds. A stored key works from anywhere until someone rotates it, and one bad prompt can copy it out. A `fn::open::oidc` token works for one service and expires within the hour, or within minutes if you set `duration`. Put the access an agent needs in its own environment, let Pulumi Cloud permissions decide who may open it, and pin each service's trust policy to that environment's subject. The agent reaches the services you chose and nothing else.
+An AI agent that opens an environment gets whatever the environment holds. A stored key works from anywhere until someone rotates it, and one bad prompt can copy it out. A `fn::open::oidc` token is tightly scoped and short-lived so your agents will only access what they need and nothing more. 
 
 ## How it works
 
