@@ -1318,6 +1318,19 @@ def test_status_comment_banners_report_only_and_flags_the_unwaivable_gate():
         sentinel.evaluate(gh, CONFIG)), "enforcing mode has nothing to disclaim"
 
 
+def test_every_status_comment_ends_with_the_help_footer():
+    """Enforcing mode has no banner, so the footer is the one place a reader
+    stuck on a red row learns where to ask. Every body carries it (gated or
+    gateless, preview or enforcing) and names `#docs` exactly once."""
+    for make in (lambda: StubGh(pr=pr_meta(), files=[infra_file()]),
+                 lambda: StubGh(pr=pr_meta(author="dependabot[bot]"))):
+        for report_only in (False, True):
+            body = sentinel.render_status_comment(
+                sentinel.evaluate(make(), CONFIG, report_only=report_only))
+            assert body.endswith(f"\n\n---\n\n{sentinel.STATUS_HELP_FOOTER}\n"), body[-200:]
+            assert body.count("#docs") == 1, body
+
+
 def test_a_waived_pr_takes_the_waived_branch_in_preview_too():
     """`conclusion` is always `neutral` in preview, so the branch reads
     `would_be`. Without that a waived PR fell through to the "gates need
