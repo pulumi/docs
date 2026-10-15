@@ -141,6 +141,10 @@ HISTORY_SHA_RE = re.compile(r"\(([0-9a-f]{7,40})\)")
 STRIP_OPEN = "<!-- SENTINEL_STRIP -->"
 STRIP_CLOSE = "<!-- /SENTINEL_STRIP -->"
 STATUS_MARKER = "<!-- SENTINEL_STATUS -->"
+# Ends every status comment, in both modes and on gateless bodies too. The
+# preview banner used to be the only place that named a human channel, so
+# enforcing mode — the one where a red row actually blocks — had none.
+STATUS_HELP_FOOTER = "Need help, or think a gate got it wrong? Ask in `#docs` on Slack."
 # Every role comment the Sentinel reads — author card, reviewer brief,
 # legacy pages, its own status comment — must come from the bot that writes
 # them. See `_find_comment` for what a missing provenance check cost.
@@ -1514,23 +1518,20 @@ def render_status_comment(verdict: Verdict) -> str:
         # The enforcement half promises "every row below", so it only goes
         # above a gate table. A gateless comment (not governed) has no rows
         # to turn green, and nothing about it changes on enforcement day.
+        # Where to ask about a row is the footer's job, not the banner's.
         if verdict.governed and verdict.gates:
             lines += [
                 "> **This will be enforced in the near future.** Once it is, every row below "
                 "has to be green before this PR can merge. The rows are the sign-offs a merge "
-                "needs — some yours, some a reviewer's or a deploy's. Tell us in `#docs` if one "
-                "looks wrong.",
+                "needs — some yours, some a reviewer's or a deploy's.",
             ]
         else:
-            lines += [
-                "> **This will be enforced in the near future.** Tell us in `#docs` if "
-                "anything here looks wrong.",
-            ]
+            lines += ["> **This will be enforced in the near future.**"]
         lines += [""]
 
     if not verdict.governed or not verdict.gates:
         lines += [(verdict.base_summary or verdict.summary).split("\n\n")[0], ""]
-        return "\n".join(lines).rstrip() + "\n"
+        return _with_help_footer(lines)
 
     blocking = [g for g in verdict.gates if g.status in ("red", "error")]
     # In preview mode `conclusion` is always `neutral` and the real answer
@@ -1592,7 +1593,14 @@ def render_status_comment(verdict: Verdict) -> str:
         lines += ["_Infra staging evidence has no waiver._", ""]
 
     lines += [f"<sub>Evaluated at head `{verdict.head_sha[:9]}`.</sub>"]
-    return "\n".join(lines).rstrip() + "\n"
+    return _with_help_footer(lines)
+
+
+def _with_help_footer(lines: list[str]) -> str:
+    # The blank line before `---` is load-bearing: directly under a paragraph
+    # it turns that paragraph into a setext heading instead of a rule.
+    body = "\n".join(lines).rstrip()
+    return f"{body}\n\n---\n\n{STATUS_HELP_FOOTER}\n"
 
 
 def update_status_comment(gh: Gh, verdict: Verdict,
