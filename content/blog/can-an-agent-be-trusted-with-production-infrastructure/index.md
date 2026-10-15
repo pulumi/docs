@@ -41,13 +41,13 @@ A "Claude Code for Infrastructure" thread on [Hacker News](https://news.ycombina
 
 ## The "pyramid scheme" comment deserves a straight answer
 
-The top comment in that thread did not attack the project. It said: "All these tools to build something, but nothing to build. I feel like I am part of a Pyramid Scheme where every product is about building something else, but nothing reaches the end user." The commenter added that they had nothing against the tool itself.
+The [top comment](https://news.ycombinator.com/item?id=46890881) in that thread did not attack the project. It said: "All these tools to build something, but nothing to build. I feel like I am part of a Pyramid Scheme where every product is about building something else, but nothing reaches the end user." The commenter added that they had nothing against the tool itself.
 
 A lot of agent tooling does fit that description. Tools exist to build tools, and demos end at the terminal. Infrastructure is where that stops being true, because infrastructure is the part that end users actually touch. A bad change to a database or a load balancer reaches them within minutes. Production is the test of whether an agent is useful or just busy.
 
-Other commenters pressed harder. One wrote that "we have IaC, reviews, and promotion for a reason" and that infrastructure decisions look too high risk for agents today. The project's own author conceded the point: "I don't want LLMs on prod at all." The tool works against cloned sandboxes instead of production. Another commenter replied that models are already good at writing infrastructure code, and that CI/CD with a manual approval step would work better than a sandbox clone.
+Other commenters pressed harder. One [wrote](https://news.ycombinator.com/item?id=46894184) that "we have IaC, reviews, and promotion for a reason" and that infrastructure decisions look too high risk for agents today. The project's author [conceded the point](https://news.ycombinator.com/item?id=46892035): "I don't want LLMs on prod at all." The tool works against cloned sandboxes instead of production. Another [argued](https://news.ycombinator.com/item?id=46895020) that CI/CD with a manual approval step would work better, since infrastructure is code like anything else, and a third [questioned](https://news.ycombinator.com/item?id=46893044) whether a production clone is realistic at all.
 
-Both camps are describing the same gap. Nobody doubts that an agent can write a change. The open question is what has to be true before it is allowed to apply one.
+Both camps are describing the same gap. Few people doubt that an agent can write a change. The open question is what has to be true before it is allowed to apply one.
 
 ## What has to be true before an agent changes production?
 
@@ -104,7 +104,6 @@ Adapt this table to your environment. The first column is a signal you can read 
 | Deletes or replaces in the preview | None | One or more |
 | Stateful resources (databases, volumes, queues) | None touched | Any touched |
 | IAM, network, or encryption boundaries | Untouched | Touched |
-| Environment | Dev or staging | Production |
 | Reversibility | Redeploying the old version fully restores it | Needs a restore from backup |
 | Policy result | Clean | Any advisory violation, or any mandatory failure (which blocks the update outright) |
 
@@ -114,7 +113,7 @@ The rule is conjunctive. The agent applies on its own only if every row is in th
 
 **Change A: add cost-allocation tags to about 40 resources.** The preview shows 40 in-place updates, zero replaces, zero deletes. Tags do not alter traffic, identity, or data. Redeploying the old tags restores the prior state exactly. Every row is in the left column, so an agent can apply this autonomously in production, with a notification to the owning team and the usual audit record.
 
-**Change B: modify a managed database's identifier or storage settings.** The preview shows one resource, marked `replace`. That is one line in the diff and the largest blast radius on the page: a replacement destroys the old database and creates a new one. Rollback is a backup restore, not a redeploy. Three rows land on the right. The agent's job here is to prepare the pull request, attach the preview, and propose a snapshot-and-cutover plan. A human approves and runs it.
+**Change B: enable storage encryption on an existing managed database.** On Amazon RDS this forces replacement, so the preview shows one resource, marked `replace`. That is one line in the diff and the largest blast radius on the page: a replacement destroys the old database and creates a new one. Rollback is a backup restore, not a redeploy. Four rows land on the right: replaces, stateful data, the encryption boundary, and reversibility. The agent's job here is to prepare the pull request, attach the preview, and propose a snapshot-and-cutover plan. A human approves and runs it.
 
 **A gray case: tighten a security group's ingress rule.** One resource, one in-place update, no data. By count it looks like Change A. But it sits on a traffic path, and a rule that is too tight cuts off a service that nobody mentioned to the agent. The network row sends it to approval. The reviewer's job is the question the preview cannot answer: what else talks to this?
 
