@@ -215,7 +215,7 @@ For a feature-by-feature comparison, see the [pricing page](/pricing/).
 
 ### How can I update my payment information?
 
-Self-serve organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
+Self-serve organization admins and billing managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
 
 If you need to delegate billing-only access, see [Billing Managers](/docs/administration/concepts/billing-managers/).
 
