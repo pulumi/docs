@@ -55,8 +55,7 @@ To configure OIDC for your cloud provider, refer to one of our guides:
 * [Configuring OIDC for Google Cloud](/docs/esc/guides/configuring-oidc/gcp/)
 * [Configuring OIDC for Infisical](/docs/esc/guides/configuring-oidc/infisical/)
 * [Configuring OIDC for Vault](/docs/esc/guides/configuring-oidc/vault/)
-
-To trust tokens from `fn::open::oidc` in any other service, see [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
+* [Configuring OIDC for any other service](/docs/esc/guides/configuring-oidc/custom-audience/), using the [`oidc` provider](/docs/esc/providers/login/oidc/)
 
 ## Configuring trust relationships
 
