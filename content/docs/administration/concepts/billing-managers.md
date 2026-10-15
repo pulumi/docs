@@ -20,7 +20,7 @@ The Billing Manager role gives customers the ability to have someone in their Pu
 
 Any Organization Admin can view, invite, and remove Billing Managers from their organization.
 
-The Essentials edition is limited to 1 Billing Manager at a time; the Pro and Enterprise editions allow unlimited Billing Managers.
+The Essentials, Pro, and Enterprise editions allow unlimited Billing Managers. Organizations still on the legacy Team Pro plan are limited to one Billing Manager at a time.
 
 ## Inviting a Billing Manager to an Organization
 
