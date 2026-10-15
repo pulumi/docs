@@ -130,6 +130,7 @@ them out of its default tag-walk set.
 - `dotnet` snapshots currently include the `esc-sdk/` and `cloud-sdk/` subtrees, and `java`
   snapshots the `cloud-sdk/` subtree (each also archived separately as its own tool); add an
   exclude if the duplication matters.
-- Live **SDK** pages don't show the selector (only archives + live CLI pages do); injecting
-  it would add a `<script>` to every generated SDK file, which we skipped to avoid commit
-  churn. Revisit if wanted.
+- Live **SDK** pages show the selector in latest mode: `scripts/build-site.sh` runs
+  `inject-live-sdk-selectors.sh` against `public/` at build time, so nothing is committed to
+  the generated files under `static-prebuilt/`. Any change to the selector's behavior
+  therefore reaches live SDK pages as well as every archive.
