@@ -2,8 +2,8 @@
 """auto-refresh-gate.py — deterministic gate for the stale-review auto-refresh.
 
 Decides whether a `synchronize` push qualifies for an automatic scoped review
-refresh (the `#update-review` path in claude-update.yml) without the author
-having to mention `@claude`. The qualifying shape is the "I fixed what you
+refresh (the `/update-review` path in claude-update.yml) without the author
+having to comment `/update-review`. The qualifying shape is the "I fixed what you
 flagged" push: every hunk of the push diff lands on (or right next to) a line
 range carried by a 🚨 Outstanding finding in the pinned review, and the push
 is small. Everything else — new files, large diffs, hunks outside flagged

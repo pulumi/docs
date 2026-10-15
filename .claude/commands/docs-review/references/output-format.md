@@ -95,8 +95,8 @@ _No triaged findings._
 
 ---
 
-- **Refresh this review** — comment `@claude #update-review`. …
-- **Ask for anything else** — comment `@claude` with no hashtag …
+- **Refresh this review** — comment `/update-review`. …
+- **Ask for anything else** — comment `@claude` …
 
 > [!IMPORTANT]
 > Please don't hide, resolve, or delete this comment! It breaks things!
@@ -411,7 +411,7 @@ These rules apply to every review, regardless of entry point or domain. Do not s
 2. **No speculative future-proofing.** "What if a future caller does Y?" is not a finding. Stick to current behavior.
 3. **No unsolicited drafts** of marketing copy, social posts, alternate titles, or tagline rewrites.
 4. **No nanny feedback on colloquialisms.** Words like "overkill," "kill," "blow away," "destroy" are fine in technical context. Do not flag.
-5. **No `@claude` trailer on every comment.** The mention prompt at the bottom of the 1/M comment is enough; do not add it to every section.
+5. **No command trailer on every comment.** The `/update-review` prompt at the bottom of the 1/M comment is enough; do not add it to every section.
 6. **No "informational only" findings.** If a finding is not actionable, it does not belong in the output.
 7. **No findings markdownlint or Prettier catches.** Specifically: trailing newlines, heading case, trailing whitespace. The lint job runs in parallel; double-flagging is noise. (Image alt text and fenced-code-block language specifiers are *not* linter-caught -- flag those per `docs-review:references:image-review` and `docs-review:references:code-examples`. Ordered-list `1.`-numbering style is *not* lint-caught either — `markdownlint`'s MD029 uses `one_or_ordered` and `.md` is in `.prettierignore` — so it stays in scope per `docs-review:references:shared-criteria` §Ordered-list numbering.) Vale findings from `.vale-findings.json` ARE in scope -- blocker-tier entries render in 🚨 Outstanding, advisory entries under ⚠️ Low-confidence (see Style suggestions below).
 8. **No pre-existing findings from files the PR doesn't touch.** Pre-existing extraction is scoped to the PR's changed files only.
@@ -441,8 +441,8 @@ Domain files may bump scrutiny internally for whole-file rewrites or new pages.
 > fresh review renders these cards. Everything above this section describes
 > the v2 single-comment surface, which is no longer produced for new reviews
 > but stays valid for PRs reviewed before the flip: those keep their monolith,
-> and `#update-review` refreshes it in place until someone runs
-> `@claude #new-review` to regenerate it as cards. The v3 architecture
+> and `/update-review` refreshes it in place until someone runs
+> `/new-review` to regenerate it as cards. The v3 architecture
 > reference is `scripts/review-v3/README.md`.
 
 Under v3 the composer emits **two comments plus a machine-owned evidence
@@ -459,7 +459,7 @@ the `%%EVIDENCE_URL%%` token (substituted at publish).
 <!-- CLAUDE_REVIEW_AUTHOR -->
 <!-- CLAUDE_REVIEW_HEAD <sha> -->         ← the ONLY machine-read head carrier
 ## Author action guide vN — N item(s) block merge     ← vN = review revision; no timestamps here
-> [!IMPORTANT] orienting alert            ← composed; what the card demands + the one reply shape (`@claude F1: … #update-review`)
+> [!IMPORTANT] orienting alert            ← composed; what the card demands + the one reply shape (`/update-review F1: …`)
 _<one sentence: what the PR is and what the review checked>_
 ### 🚨 Fix or disagree
 | ID | Where | Finding |

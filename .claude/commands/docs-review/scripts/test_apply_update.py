@@ -102,7 +102,7 @@ def _open_author_ids(a_out: str) -> set[str]:
 
 
 def test_last_section_rerender_keeps_evidence_line_and_hint():
-    # Regression: the first live #update-review (fork PR 242, 2026-09-01) lost
+    # Regression: the first live /update-review (fork PR 242, 2026-09-01) lost
     # the 📎 line — the ❓ section's detail block swallowed the browser hint and
     # the section span ran through the 📎 line behind it.
     up = _update([{"id": "F3", "action": "retext", "text": "*\"x\"* — sharper, still open"}])

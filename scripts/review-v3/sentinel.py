@@ -24,7 +24,7 @@ One blocking check-run answers "is this PR mergeable?" from five gates:
                         the matrix answers who reviews, this answers what
                         must be applied to be believed
   G5 oversized-ack      review:oversized PRs replace G1/G2 with an explicit
-                        `sentinel:oversized-ack` in the approving review body
+                        `/oversized-ack` in the approving review body
 
 One config-driven shortcut sits around the gates
 (`.github/review-routing.yml`): `not_governed` lanes (Dependabot, the
@@ -161,7 +161,17 @@ LEGACY_PAGE_WRITERS = frozenset({BOT_LOGIN, "pulumi-bot"})
 # The workflow the staging lane dispatches, and the one G4 verifies against
 # directly when the commit status is missing. See `_staging_evidence`.
 STAGING_WORKFLOW_FILE = "testing-build-and-deploy.yml"
-OVERSIZED_ACK = "sentinel:oversized-ack"
+# A review slash command, like `/update-review`: it counts only at the start
+# of a line of the approving review's comment (command-gate.py's grammar,
+# restated here because this file runs from a sparse checkout of
+# scripts/review-v3 and can't import it). It replaced the bare
+# `sentinel:oversized-ack` token, which matched anywhere.
+OVERSIZED_ACK = "/oversized-ack"
+_OVERSIZED_ACK_RE = re.compile(r"^[ \t]{0,3}/oversized-ack(?![\w-])", re.M | re.I)
+
+
+def _has_oversized_ack(body: str) -> bool:
+    return bool(_OVERSIZED_ACK_RE.search((body or "").replace("\r\n", "\n")))
 # The pinned status comment is maintained on EVERY PR the Sentinel evaluates,
 # report-only included — see `render_status_comment` for the preview banner
 # that carries the "this is not blocking you yet" disclaimer. There used to be
@@ -882,7 +892,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     legacy = _find_legacy_comment(comments) if author_card is None else None
     # The label is the one source of truth. Computing size here instead
     # would flip PRs already reviewed and approved under the normal gates
-    # (G1/G2 skipped, G5 newly red), and a forced #new-review could never put
+    # (G1/G2 skipped, G5 newly red), and a forced /new-review could never put
     # an oversized PR back under them. #21936's race — this evaluation ran
     # before triage's label landed — is closed on the triage side: it
     # re-dispatches the Sentinel whenever it moves the label.
@@ -930,7 +940,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             "G1 review-ran", "red",
             f"No current review for `{head_sha[:9]}` — the review lane skipped this "
             "PR as `review:trivial`, and triage's prose-check comment is missing. "
-            "Comment `@claude #new-review` to run a full review, or a maintainer "
+            "Comment `/new-review` to run a full review, or a maintainer "
             "removes `review:trivial` and pushes.",
         ))
     else:
@@ -941,8 +951,8 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         gates.append(Gate(
             "G1 review-ran", "red",
             f"No current review for `{head_sha[:9]}` — comment "
-            "`@claude <what changed> #update-review` to refresh it, or "
-            "`@claude #new-review` for a fresh one.",
+            "`/update-review <what changed>` to refresh it, or "
+            "`/new-review` for a fresh one.",
         ))
 
     # G2 findings-answered ------------------------------------------------
@@ -978,7 +988,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                     f"{len(unnumbered)} blocking finding(s) still carry the "
                     "`F?` placeholder, so they have no id to answer — the "
                     "review did not finish numbering. Re-run it with "
-                    "`@claude #new-review`.",
+                    "`/new-review`.",
                 ))
                 state = None
         if state is not None:
@@ -993,8 +1003,8 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                     "G2 findings-answered", "red",
                     f"{len(undecided)} finding(s) undecided ({ids}) — fix and push, "
                     f"or reply with your reasoning, e.g. "
-                    f"`@claude F3 is wrong because <why> #update-review` or "
-                    f"`@claude I know what I'm doing, mark everything resolved #update-review`.",
+                    f"`/update-review F3 is wrong because <why>` or "
+                    f"`/update-review I know what I'm doing, mark everything resolved`.",
                 ))
             elif not _body_matches_head(body, head_sha):
                 # "Every finding answered" about a review of an older diff
@@ -1024,7 +1034,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 "G2 findings-answered", "error",
                 f"the legacy review is {legacy['review_pages']} comments and "
                 f"page(s) {', '.join(str(k) for k in missing)} could not be read — "
-                "re-run the review (`@claude #new-review`) rather than merge over an unread one.",
+                "re-run the review (`/new-review`) rather than merge over an unread one.",
             ))
         else:
             try:
@@ -1291,7 +1301,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         # team member clicked plain Approve, and a self-applied
         # `review:oversized` (nothing verifies the PR is oversized) had
         # already skipped G1 and G2.
-        acked = any(OVERSIZED_ACK in (r.get("body") or "")
+        acked = any(_has_oversized_ack(r.get("body") or "")
                     for r in qualified_approvers)
         if acked:
             gates.append(Gate("G5 oversized-ack", "ok",
@@ -1309,7 +1319,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 "The automated review doesn't count on an oversized PR (that's why "
                 "G1 and G2 are skipped), so whoever approves it for G3 confirms they "
                 "reviewed it by hand: submit an **Approve** review on the latest commit "
-                f"with `{OVERSIZED_ACK}` anywhere in its comment, or run "
+                f"with `{OVERSIZED_ACK}` at the start of a line in its comment, or run "
                 f"`gh pr review {number} --approve --body {OVERSIZED_ACK}`. Already "
                 "approved? Approve again with it, or edit your approval's comment to "
                 "add it. A PR comment, a line comment, or an approval of an earlier "
@@ -1423,7 +1433,7 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
         n = len(verdict.blocking_ids)
         what = f"{n} item(s) block merge" if n else "merge is blocked"
         strip = (f"{STRIP_OPEN}\n⛔ **{what}** — fix and push, or reply "
-                 f"`@claude <your reasoning> #update-review`. "
+                 f"`/update-review <your reasoning>`. "
                  f"Details: the Sentinel check below.\n{STRIP_CLOSE}")
     else:
         if STRIP_OPEN not in body:
