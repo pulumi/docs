@@ -71,13 +71,13 @@ The same concept appears under a few names across Pulumi tools:
 
 A workflow runner is a long-lived agent process. It polls Pulumi Cloud for pending work, claims one job at a time through an exclusive claim, launches an isolated runner environment to execute that job, streams the results back to Pulumi Cloud, and then discards the per-job environment. The agent itself keeps running and polls for the next job.
 
-The [`deploy_target`](#configuration-reference) setting controls *how* the agent creates that per-job environment. It has two values — `docker` and `kubernetes` — and the choice determines the isolation model, the prerequisites, and how you scale.
+The [`deploy_target`](#configuration-reference) setting controls *how* the agent creates that per-job environment. It has three values — `docker`, `kubernetes`, and `ecs` — and the choice determines the isolation model, the prerequisites, and how you scale.
 
 ```mermaid
 sequenceDiagram
     participant Agent as Runner agent
     participant Cloud as Pulumi Cloud
-    participant Env as Per-job container or Pod
+    participant Env as Per-job container, Pod, or ECS task
 
     loop Until a job is available
         Agent->>Cloud: Poll for pending work
@@ -107,23 +107,78 @@ This mode requires only a Docker daemon on the host, which makes it the simplest
 
 ### Kubernetes
 
-With `deploy_target: kubernetes`, the agent uses the in-cluster Kubernetes API to launch a **runner Pod for each job**, so every job gets Pod-level isolation and is scheduled by Kubernetes across your cluster. In this mode the agent runs as a Kubernetes Deployment, and its configuration is supplied as environment variables on that Deployment or through a configuration file mounted into the agent Pod. The Kubernetes-specific [`PULUMI_AGENT_IMAGE_PULL_POLICY`](#kubernetes-managed-workflow-runners) controls the runner image pull policy.
+With `deploy_target: kubernetes`, the agent uses the in-cluster Kubernetes API to launch a **runner Pod for each job**, so every job gets Pod-level isolation and is scheduled by Kubernetes across your cluster. In this mode the agent runs as a Kubernetes Deployment, and its configuration is supplied as environment variables on that Deployment or through a configuration file mounted into the agent Pod. Each runner Pod copies the runner binary from the [agent image](#agent-image), and the Kubernetes-specific [`PULUMI_AGENT_IMAGE_PULL_POLICY`](#kubernetes-managed-runners) controls that image's pull policy.
 
 This mode fits environments that already run Kubernetes and want the cluster to handle scheduling and resource limits. It also enables ephemeral, per-job runners: set [`single_run: true`](#configuration-reference) so the agent exits after one job, and drive it with a Kubernetes `Job` or `CronJob` so a fresh agent starts for each job.
+
+### Amazon ECS
+
+{{% notes type="info" %}}
+The `ecs` deploy target requires `customer-managed-workflow-agent` v2.3.0 or later.
+{{% /notes %}}
+
+With `deploy_target: ecs`, the agent calls the Amazon ECS API to run each job as a **one-off ECS task**. By default, tasks run on AWS Fargate, which gives every job its own microVM. The agent itself can run anywhere with AWS credentials and network access to Pulumi Cloud, such as an ECS service, an EC2 instance, or a host outside AWS. ECS settings go in the [`ecs`](#configuration-reference) block of the agent configuration:
+
+```yaml
+deploy_target: ecs
+ecs:
+  cluster: workflow-jobs
+  subnets: [subnet-0123, subnet-4567]
+  security_groups: [sg-0123]
+  task_definition_template_file: /etc/pulumi/worker-task-definition.json
+```
+
+The agent's AWS credentials need these permissions:
+
+- `ecs:RegisterTaskDefinition`, `ecs:DescribeTaskDefinition`, and `ecs:TagResource`
+- `ecs:RunTask`, `ecs:DescribeTasks`, and `ecs:StopTask`
+- `ecs:DescribeClusters`, which the agent calls at startup to check that the cluster exists
+- `iam:PassRole` on the roles in the task definition template
+
+#### Task definition template
+
+`task_definition_template_file` points to a base task definition, in the shape that `aws ecs register-task-definition --cli-input-json` accepts (not a `describe-task-definition` response). Use it to set:
+
+- The **execution role**, which pulls the job image and ships container logs.
+- The **task role**, which gives the job its AWS credentials.
+- Task `cpu` and `memory`. On Fargate, the default is 1 vCPU and 4 GiB.
+- `runtimePlatform`, and any sidecar containers.
+
+`networkMode` must be `awsvpc` (the default), whichever launch type you use. To configure the job's own container, for example its log configuration, include a container named `pulumi-workflow`; the agent sets that container's image, entry point, command, and runner mount. Other container and volume names that start with `pulumi-workflow-` are reserved for the agent.
+
+Without a template, jobs run with no execution or task role. The job image must then be public, nothing ships the containers' logs, and the job gets AWS credentials only from its own configuration, such as [ESC](#deployments) or OIDC.
+
+#### What the agent creates in your AWS account
+
+Each task runs a short-lived `pulumi-workflow-prepare` container from the [agent image](#agent-image) before the job's container starts. It uses the `pulumi-workflow` container's log configuration, so set logging there to capture setup failures.
+
+The job's credentials reach the task as `RunTask` environment overrides. CloudTrail masks them, but any principal allowed `ecs:DescribeTasks` on the cluster can read them while the job runs, so limit that permission accordingly.
+
+Each task is tagged `pulumi-workflow/id` with its job's ID and inherits its task definition's tags. The agent registers one task definition for each distinct combination of template, job image, and agent image, and reuses it for later jobs. These are tagged `pulumi-workflow/managed-by=workflow-runner`, and stay `ACTIVE` until you deregister them; the agent registers one again if a later job needs it.
+
+ECS limitations:
+
+- **Image pulls**: Fargate pulls the job image for every job; there is no image cache between tasks.
+- **Registry credentials**: the execution role must be able to pull the job image. Registry credentials set on the job aren't supported.
+- **No Docker daemon**: Fargate doesn't provide one, so jobs that build container images need a rootless builder or an external build service.
+
+### Agent image
+
+The `kubernetes` and `ecs` deploy targets copy the runner binary into each job from the agent's container image, `pulumi/customer-managed-workflow-agent`. By default, the agent uses its own release of that image, for example `pulumi/customer-managed-workflow-agent:v2.3.0` for agent v2.3.0. Agents before v2.3.0 default to the `latest` tag. To use a mirror, for example in a private registry or an AWS GovCloud (US) ECR repository, set the `PULUMI_AGENT_IMAGE` environment variable on the agent to your mirror of the same release. The agent and the runner binary in the image hand each job off between them, so the image must match the agent's release.
 
 ### One job per runner
 
 Regardless of the deploy target, each agent process runs **one deployment at a time** — plus, optionally, one Discovery scan or policy evaluation in parallel — and has no internal worker pool to configure. To run more jobs concurrently, add more agents to the pool rather than trying to scale a single agent. For the full set of scaling patterns, per-organization concurrency limits, and crash-recovery behavior, see [Scaling and concurrency](/docs/administration/guides/customer-managed-runners/#scaling-and-concurrency) in the setup guide.
 
-### Choosing between Docker and Kubernetes
+### Choosing a deploy target
 
-| | Docker (`deploy_target: docker`) | Kubernetes (`deploy_target: kubernetes`) |
-|---|---|---|
-| **Prerequisite** | A Docker daemon on the host | A Kubernetes cluster |
-| **Per-job unit** | A runner container launched via the Docker socket | A runner Pod launched via the in-cluster API |
-| **Isolation** | Container-level, sharing the host Docker daemon | Pod-level, scheduled and isolated by the cluster |
-| **Scaling** | Run more agent processes (for example, more hosts or systemd units) | Run more agent replicas, or use `single_run` with a `Job`/`CronJob` for ephemeral per-job runners |
-| **Best fit** | A single VM or host where you want the simplest setup | An existing Kubernetes environment that should schedule and bound runner resources |
+| | Docker (`deploy_target: docker`) | Kubernetes (`deploy_target: kubernetes`) | Amazon ECS (`deploy_target: ecs`) |
+|---|---|---|---|
+| **Prerequisite** | A Docker daemon on the host | A Kubernetes cluster | An ECS cluster, and AWS credentials for the agent |
+| **Per-job unit** | A runner container launched via the Docker socket | A runner Pod launched via the in-cluster API | An ECS task launched via the ECS API |
+| **Isolation** | Container-level, sharing the host Docker daemon | Pod-level, scheduled and isolated by the cluster | A microVM per job on Fargate |
+| **Scaling** | Run more agent processes (for example, more hosts or systemd units) | Run more agent replicas, or use `single_run` with a `Job`/`CronJob` for ephemeral per-job runners | Run more agent processes |
+| **Best fit** | A single VM or host where you want the simplest setup | An existing Kubernetes environment that should schedule and bound runner resources | AWS environments that need per-job isolation without managing hosts or a cluster |
 
 ## Providing cloud credentials to runners
 
@@ -215,9 +270,11 @@ working_directory: "<location of customer-managed-workflow-agent binary>"
 # Environment variable override: PULUMI_AGENT_SHARED_VOLUME_DIRECTORY
 shared_volume_directory: ""
 
-# Where workflow jobs are executed. One of: docker, kubernetes.
+# Where workflow jobs are executed. One of: docker, kubernetes, ecs.
 # - docker: the agent launches runner containers via the local Docker socket.
 # - kubernetes: the agent launches runner Pods via the in-cluster Kubernetes API.
+# - ecs: the agent runs each job as an Amazon ECS task (agent v2.3.0 and later).
+#   Configure it in the ecs settings below.
 # See the "Execution model" section above for how each target runs a job.
 # Environment variable override: PULUMI_AGENT_DEPLOY_TARGET
 deploy_target: "docker"
@@ -250,6 +307,42 @@ enabled_workflow_types:
 # Environment variable format is space-separated:
 #   PULUMI_AGENT_ENV_FORWARD_ALLOWLIST="VAR1 VAR2"
 env_forward_allowlist: []
+
+## Amazon ECS settings
+## Used only when deploy_target is ecs. See the "Amazon ECS" section above.
+ecs:
+  # ECS cluster to run job tasks in. Required.
+  # Environment variable override: PULUMI_AGENT_ECS_CLUSTER
+  cluster: ""
+
+  # Subnets for each task's awsvpc network interface. Required.
+  # Environment variable override: PULUMI_AGENT_ECS_SUBNETS
+  # Environment variable format is space-separated:
+  #   PULUMI_AGENT_ECS_SUBNETS="subnet-0123 subnet-4567"
+  subnets: []
+
+  # Security groups for each task's network interface. If empty, ECS uses the
+  # VPC's default security group.
+  # Environment variable override: PULUMI_AGENT_ECS_SECURITY_GROUPS
+  # Environment variable format is space-separated:
+  #   PULUMI_AGENT_ECS_SECURITY_GROUPS="sg-0123 sg-4567"
+  security_groups: []
+
+  # ECS launch type for job tasks: FARGATE or EC2. EC2 tasks share their
+  # container instance with other tasks, so they don't get a microVM per job.
+  # Environment variable override: PULUMI_AGENT_ECS_LAUNCH_TYPE
+  launch_type: "FARGATE"
+
+  # If true, give each task a public IP address. Tasks in private subnets need
+  # a NAT gateway or VPC endpoints instead, to reach Pulumi Cloud and pull images.
+  # Environment variable override: PULUMI_AGENT_ECS_ASSIGN_PUBLIC_IP
+  assign_public_ip: false
+
+  # Path to a base task definition for job tasks, in the shape that
+  # `aws ecs register-task-definition --cli-input-json` accepts. If empty, jobs
+  # run with no execution or task role.
+  # Environment variable override: PULUMI_AGENT_ECS_TASK_DEFINITION_TEMPLATE_FILE
+  task_definition_template_file: ""
 
 ## OpenID Connect (OIDC) settings
 ## See the "Leveraging OpenID authentication" section. When oidc_token_file is set,
@@ -346,3 +439,5 @@ The following Kubernetes-specific configuration options are available:
 # Kubernetes image pull policy https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy
 PULUMI_AGENT_IMAGE_PULL_POLICY: IfNotPresent
 ```
+
+The `kubernetes` and `ecs` deploy targets also read `PULUMI_AGENT_IMAGE`, the image that each job copies the runner binary from. It defaults to the agent's own release; set it only to use a mirror of that release. See [Agent image](#agent-image).
