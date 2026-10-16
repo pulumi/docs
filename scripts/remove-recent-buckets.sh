@@ -64,11 +64,11 @@ remove_bucket() {
         return 0
     fi
 
-    # s5cmd's rm silently skips keys that end in "/" (it treats them as directories), so the
-    # bucket can still hold objects after it reports success. Fall back to the AWS CLI, which
-    # deletes whatever is left before removing the bucket. On a bucket s5cmd has emptied,
-    # that's one short listing. The pause gives S3 a moment in case it's just slow to see the
-    # bucket as empty.
+    # s5cmd's rm can exit 0 and still leave objects behind. In production it left hundreds of
+    # ordinary keys in contiguous runs, and it also silently skips any key that ends in "/"
+    # (it treats those as directories). Fall back to the AWS CLI, which deletes whatever is
+    # left before removing the bucket. On a bucket s5cmd has emptied, that's one short
+    # listing. The pause gives S3 a moment in case it's just slow to see the bucket as empty.
     echo "Retrying the removal of ${bucket} with the AWS CLI..."
     sleep 10
     if aws s3 rb "s3://${bucket}" --force --region "$region"; then
