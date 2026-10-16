@@ -3,6 +3,9 @@ name = "Thomas Kappler"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Thomas Kappler, a Software Engineer, writes about Azure and security on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

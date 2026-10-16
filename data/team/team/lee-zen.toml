@@ -1,6 +1,9 @@
 id = "lee-zen"
 name = "Lee Zen"
 
+bio = """
+<p>Lee Zen contributed posts on AWS and testing to the Pulumi blog between 2020 and 2021.</p>
+"""
 status = "inactive"
 
 [social]

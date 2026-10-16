@@ -3,6 +3,9 @@ name = "Eron Wright"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Eron Wright, a Software Engineer, writes about Kubernetes, continuous delivery, and infrastructure as code on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

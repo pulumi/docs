@@ -2,6 +2,9 @@ id = "idp-team"
 name = "Pulumi IDP Team"
 title = "Product Team"
 company = "Pulumi"
+bio = """
+<p>Pulumi IDP Team is a Pulumi team byline covering internal developer platforms, platform engineering, and Pulumi Cloud.</p>
+"""
 status = "active"
 
 # This byline is a group, not a natural person -- schema.org Person denotes an

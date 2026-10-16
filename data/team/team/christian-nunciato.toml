@@ -3,6 +3,9 @@ name = "Christian Nunciato"
 title = "Senior Technical Content Engineer"
 weight = 1
 
+bio = """
+<p>Christian Nunciato, a Senior Technical Content Engineer, writes about AWS, cloud engineering, and Terraform on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

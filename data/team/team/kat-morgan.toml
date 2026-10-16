@@ -3,6 +3,9 @@ name = "Kat Morgan"
 title = "Senior Community Engineer"
 company = "Pulumi"
 
+bio = """
+<p>Kat Morgan is a Senior Community Engineer at Pulumi who writes about AI, infrastructure as code, and DevOps on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

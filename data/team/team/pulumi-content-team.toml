@@ -14,6 +14,9 @@ title = "Content Team"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Pulumi Content Team is a Pulumi team byline covering infrastructure as code, platform engineering, and DevOps.</p>
+"""
 status = "active"
 
 # This byline is a group, not a natural person -- schema.org Person denotes an

@@ -16,6 +16,13 @@
       {{ $author = merge $author (dict "@id" (printf "https://www.pulumi.com/authors/%s/#%s" .id (cond $isOrg "organization" "person"))) }}
       {{ $author = merge $author (dict "name" .name) }}
 
+      {{/* Short prose bio from the team record, as plain text. Omitted
+           entirely when the record has no bio. */}}
+      {{ with .bio }}
+        {{ $desc := . | plainify | replaceRE `\s+` " " | strings.TrimSpace }}
+        {{ if $desc }}{{ $author = merge $author (dict "description" $desc) }}{{ end }}
+      {{ end }}
+
       {{/* Job title and worksFor are Person-only -- a group byline doesn't
            hold a job title or "work for" itself; it gets parentOrganization
            further down instead. */}}

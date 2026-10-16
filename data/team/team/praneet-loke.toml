@@ -3,6 +3,9 @@ name = "Praneet Loke"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Praneet Loke contributed posts on continuous delivery, AWS, and Azure to the Pulumi blog between 2018 and 2023.</p>
+"""
 status = "inactive"
 
 [social]

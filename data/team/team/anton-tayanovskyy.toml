@@ -3,6 +3,9 @@ name = "Anton Tayanovskyy"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Anton Tayanovskyy, a Software Engineer, writes about Terraform, infrastructure as code, and migration on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

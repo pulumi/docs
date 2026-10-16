@@ -1,6 +1,9 @@
 id = "alex-mullans"
 name = "Alex Mullans"
 
+bio = """
+<p>Alex Mullans contributed posts on security, cloud engineering, and continuous delivery to the Pulumi blog in 2021.</p>
+"""
 status = "inactive"
 
 [social]

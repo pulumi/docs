@@ -2,6 +2,9 @@ id = "insights-team"
 name = "Pulumi Discovery Team"
 title = "Product Team"
 company = "Pulumi"
+bio = """
+<p>Pulumi Discovery Team is a Pulumi team byline covering Pulumi Insights, Pulumi Cloud, and Google Cloud.</p>
+"""
 status = "active"
 
 # This byline is a group, not a natural person -- schema.org Person denotes an

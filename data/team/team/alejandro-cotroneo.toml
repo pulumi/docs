@@ -4,6 +4,9 @@ title = "Software Engineer"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Alejandro Cotroneo is a Software Engineer at Pulumi who writes about Pulumi Cloud, AWS, and Pulumi Insights on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

@@ -3,6 +3,9 @@ name = "Komal Ali"
 title = "Software Engineering Manager"
 weight = 1
 
+bio = """
+<p>Komal Ali, a Software Engineering Manager, writes about Pulumi Cloud, Pulumi Deployments, and Pulumi ESC on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

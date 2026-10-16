@@ -2,6 +2,9 @@ id = "erin-krengel"
 name = "Erin Krengel"
 title = "Software Engineer"
 
+bio = """
+<p>Erin Krengel contributed posts on policy as code, AWS, and AWS Lambda to the Pulumi blog between 2019 and 2020.</p>
+"""
 status = "inactive"
 
 [social]

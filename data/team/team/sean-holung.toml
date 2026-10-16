@@ -1,6 +1,9 @@
 id = "sean-holung"
 name = "Sean Holung"
 
+bio = """
+<p>Sean Holung writes about components, AWS, and Azure on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

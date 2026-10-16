@@ -4,6 +4,9 @@ title = "Software Engineer"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Bryce Lampe is a Software Engineer at Pulumi who writes about Docker, Kubernetes, and Pulumi Cloud on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

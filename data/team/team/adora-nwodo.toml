@@ -1,6 +1,9 @@
 id = "adora-nwodo"
 name = "Adora Nwodo"
 title = "Community Engineer"
+bio = """
+<p>Adora Nwodo, a Community Engineer, writes about AI and infrastructure as code on the Pulumi blog.</p>
+"""
 status = "active"
 [social]
 github = "adoranwodo"

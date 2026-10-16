@@ -3,6 +3,9 @@ name = "Mike Metral"
 title = "Software Architect & Engineer"
 weight = 1
 
+bio = """
+<p>Mike Metral contributed posts on Kubernetes, Amazon EKS, and AWS to the Pulumi blog between 2019 and 2020.</p>
+"""
 status = "inactive"
 
 [social]

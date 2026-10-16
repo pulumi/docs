@@ -1,6 +1,9 @@
 id = "alex-clemmer"
 name = "Alex Clemmer"
 
+bio = """
+<p>Alex Clemmer contributed posts on Kubernetes, Azure, and TypeScript to the Pulumi blog between 2018 and 2019.</p>
+"""
 status = "inactive"
 
 [social]

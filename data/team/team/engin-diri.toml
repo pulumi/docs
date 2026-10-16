@@ -1,5 +1,8 @@
 id = "engin-diri"
 name = "Engin Diri"
+bio = """
+<p>Engin Diri, a Principal Solutions Architect, writes about AI, platform engineering, and DevOps on the Pulumi blog.</p>
+"""
 status = "active"
 title = "Principal Solutions Architect"
 weight = 1

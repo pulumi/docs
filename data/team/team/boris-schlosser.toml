@@ -4,6 +4,9 @@ title = "Senior Software Engineer"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Boris Schlosser is a Senior Software Engineer at Pulumi who writes about Pulumi ESC, security, and OIDC on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

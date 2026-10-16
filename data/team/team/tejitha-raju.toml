@@ -4,6 +4,9 @@ title = "Product Manager"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Tejitha Raju is a Product Manager at Pulumi who writes about AWS, Pulumi ESC, and platform engineering on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

@@ -3,4 +3,7 @@ name = "Davide Massarenti"
 title = "Software Architect"
 weight = 1
 
+bio = """
+<p>Davide Massarenti, a Software Architect, writes about Pulumi Cloud, access control, and identity and access management on the Pulumi blog.</p>
+"""
 status = "active"

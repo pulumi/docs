@@ -4,6 +4,9 @@ title = "Customer Success Architect"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Elisabeth Lichtie is a Customer Success Architect at Pulumi who writes about AWS, GitOps, and Kubernetes on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

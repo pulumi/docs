@@ -1,6 +1,9 @@
 id = "vova-ivanov"
 name = "Vova Ivanov"
 
+bio = """
+<p>Vova Ivanov contributed posts on AWS, Docker, and containers to the Pulumi blog in 2020.</p>
+"""
 status = "inactive"
 
 [social]

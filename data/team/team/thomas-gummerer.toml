@@ -3,6 +3,9 @@ name = "Thomas Gummerer"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Thomas Gummerer, a Software Engineer, writes about Pulumi Cloud on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

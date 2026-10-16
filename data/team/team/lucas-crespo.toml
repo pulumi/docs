@@ -4,6 +4,9 @@ title = "Data Engineer"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Lucas Crespo is a Data Engineer at Pulumi who writes about data and analytics, AI, and AWS on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

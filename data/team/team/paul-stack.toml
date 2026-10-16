@@ -3,6 +3,9 @@ name = "Paul Stack"
 title = "Engineering Manager"
 weight = 1
 
+bio = """
+<p>Paul Stack contributed posts on AWS, AWS Lambda, and GitHub Actions to the Pulumi blog between 2019 and 2022.</p>
+"""
 status = "inactive"
 
 [social]

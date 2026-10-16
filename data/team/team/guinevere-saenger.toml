@@ -4,6 +4,9 @@ title = "Software Engineer"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Guinevere Saenger is a Software Engineer at Pulumi who writes about Google Cloud, Kubernetes, and Docker on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

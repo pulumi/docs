@@ -3,6 +3,9 @@ name = "Matt Jeffryes"
 title = "Software Engineering Manager"
 weight = 1
 
+bio = """
+<p>Matt Jeffryes, a Software Engineering Manager, writes about AWS and Terraform on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

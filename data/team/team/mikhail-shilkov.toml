@@ -3,6 +3,9 @@ name = "Mikhail Shilkov"
 title = "Engineering Manager"
 weight = 1
 
+bio = """
+<p>Mikhail Shilkov, an Engineering Manager, writes about Azure, serverless, and infrastructure as code on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

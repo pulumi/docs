@@ -3,6 +3,9 @@ name = "Zaid Ajaj"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Zaid Ajaj, a Software Engineer, writes about .NET, AWS, and Azure on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

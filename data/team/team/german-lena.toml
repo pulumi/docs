@@ -4,6 +4,9 @@ title = "Software Engineer"
 company = "Pulumi"
 weight = 1
 
+bio = """
+<p>Germán Lena is a Software Engineer at Pulumi who writes about OIDC, Pulumi Cloud, and access control on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

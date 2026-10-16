@@ -3,6 +3,9 @@ name = "Tom Harding"
 title = "Software Engineer"
 weight = 1
 
+bio = """
+<p>Tom Harding, a Software Engineer, writes about infrastructure as code on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]

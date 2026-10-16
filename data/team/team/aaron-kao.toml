@@ -3,6 +3,9 @@ name = "Aaron Kao"
 title = "VP Marketing"
 weight = 1
 
+bio = """
+<p>Aaron Kao, a VP Marketing, writes about infrastructure as code, AWS, and platform engineering on the Pulumi blog.</p>
+"""
 status = "active"
 
 [social]
