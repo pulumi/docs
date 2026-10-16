@@ -29,13 +29,13 @@ social:
 
         That works until someone creates a new production stack and nobody remembers to add it to the production group.
 
-        We changed how stacks and accounts join a policy group. Production stacks pick up your mandatory policies, development stacks stay advisory, and nobody has to edit the group when a new one appears.
+        We changed how stacks and accounts join a policy group, so nobody has to edit the group when a new one appears.
 
         We wrote up how it works, with examples for production stacks and PCI-scoped cloud accounts.
     bluesky: |
-        Pulumi policy groups can now find their own members. Tag a new stack env: prod and it joins your production policy group automatically, with no one editing the group.
+        Pulumi policy groups can now find their own members, so new stacks get the right policies without anyone editing the group.
 
-        The same works for cloud accounts in audit groups. Here's what that looks like.
+        The same works for cloud accounts in audit groups. Here's how it works.
 ---
 
 [Policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) decide which [policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/) apply to which stacks and cloud accounts. Until now, stacks and accounts were added to policy groups individually, so every new stack required opting into their correct group by hand. Policy groups membership can now be managed by tags, so new infrastructure gets the right policy coverage automatically as it's created.
