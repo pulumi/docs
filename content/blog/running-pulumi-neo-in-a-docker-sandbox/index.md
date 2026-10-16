@@ -57,23 +57,29 @@ social:
         Engin Diri recaps the Neo in a Docker Sandbox workshop: the Pulumi controls, the sandbox boundaries, and what changed since August.
 ---
 
-On April 24, 2026, a Cursor agent running Claude Opus 4.6 hit a credential mismatch during a routine staging task for PocketOS, Jer Crane's software company for rental businesses, and decided on its own to delete a Railway volume.
+In April, a coding agent on a routine staging task for PocketOS deleted the company's production volume in 9 seconds. According to [founder Jer Crane's account](https://www.theregister.com/software/2026/04/27/cursor-opus-agent-snuffs-out-startups-production-database/5224442), it used an API token it found in an unrelated file. Its explanation afterward: "I guessed that deleting a staging volume via the API would be scoped to staging only. I didn't verify." Railway recovered the data two days later.
 
-According to [Crane's account](https://www.theregister.com/software/2026/04/27/cursor-opus-agent-snuffs-out-startups-production-database/5224442), it used an API token from an unrelated file, created to manage custom domains but able, like every Railway token, to call any API operation. One `volumeDelete` call wiped the production volume and its volume-level backups in 9 seconds. The agent's explanation: "I guessed that deleting a staging volume via the API would be scoped to staging only. I didn't verify."
+Crane's conclusion was "System prompts are advisory, not enforcing." That is the premise of Neo in a Docker Sandbox, the workshop Adam Gordon Bell and I ran with Mike Coleman from Docker. If the prompt can't stop an agent, the limits have to sit where the agent can't negotiate with them. So we gave [Pulumi Neo](/docs/ai/neo/) two layers. A Docker Sandbox runs it in its own microVM, routes every outbound connection through a proxy, and injects the Pulumi token on the way out, so Neo never sees the real credential. Pulumi decides what Neo may change and when it has to ask.
 
-Railway recovered the data two days later. Crane concluded: "System prompts are advisory, not enforcing." The agent was trying to be helpful, the way coding agents do. My job is making sure helpful can't reach prod.
-
-I wrote about [why YOLO mode belongs in a sandbox](/blog/sandboxing-coding-agents-yolo-mode/) in August. Since then, Docker Sandboxes has changed, and Adam Gordon Bell and I have run [Pulumi Neo](/docs/ai/neo/) in one live in our workshop, with Mike Coleman from Docker as our guest.
+This post walks through that setup and the demo. For why YOLO mode belongs in a sandbox at all, see [my August post](/blog/sandboxing-coding-agents-yolo-mode/).
 
 <!--more-->
+
+**Mike Coleman** is a Principal Solutions Architect at Docker. Mike's running joke about agents is that "they want to be helpful".
+
+In the workshop, he told a story about exactly that:
+
+{{< say author="mike-coleman" >}}
+So yeah, I think that's actually one of the cooler things, because the thing I talk to people about agents a lot is [that] they just really want to please you. I don't know how many times I've done a demo. We have some other features that are enterprise features around governance for MCP servers, for instance. And so I'll be demoing this enterprise feature, and I'll be like, "Can you write to my Notion page?" And there will be a policy applied to the sandbox that says it can't. But I have a connector enabled in Claude somewhere. And it's like, "Well, not with that MCP server, but I can use this thing over here to do it."
+
+And so the more you can create an environment where these alternate avenues are roadblocked, the safer you're gonna be with agentic workflows. And that's where we're coming at with the sandboxes: how do we take something that is as powerful as an agent, allow it to run as close to its full potential as possible, but avoid a bunch of catastrophic things, like the examples you talked about, the deleted database.
+{{< /say >}}
 
 {{< youtube "aTimO_kMS0c" >}}
 
 ## A deleted database scores the same as a failed task
 
-**Adam Gordon Bell** is a community engineer at Pulumi and hosts the [CoRecursive](https://corecursive.com/) podcast.
-
-His explanation of why a capable agent does this starts with how it's trained.
+Adam's explanation of why a capable agent does this starts with how it's trained.
 
 {{< say author="adam-gordon-bell" >}}
 But it's just a plus one or a zero. In the training environment the LLMs are trained in, if you solve a task, you get one point. If you don't solve the task, you get zero. But there's no in-between. If you destroy the entire repo, if you delete prod, that's the same thing. You got the task or you failed the task. There's no asymmetric downside.
@@ -92,8 +98,6 @@ Open recipes such as [DeepSWE](https://www.together.ai/blog/deepswe) do use exac
 His rule is to let agents act only when there are no side effects, when someone reviews the change, or when there's an easy way to recover. The PocketOS agent started inside that box, in staging, and left it.
 
 ## Six questions before an agent gets your cloud account
-
-**Engin Diri** (me) is a Principal Solutions Architect at Pulumi.
 
 I opened the workshop with these questions:
 
@@ -126,16 +130,6 @@ Pulumi answers who, what, when, and what stops it. The sandbox answers where, an
 1. **Pulumi ESC replaces stored cloud keys.** It mints short-lived AWS credentials through [OpenID Connect (OIDC)](/docs/esc/guides/configuring-oidc/aws/) for each run. They still reach the CLI, so they limit a leak's damage rather than prevent it.
 
 ## What a Docker Sandbox isolates
-
-**Mike Coleman** is a Principal Solutions Architect at Docker. Mike's running joke about agents is that "they want to be helpful".
-
-In the workshop, he told a story about exactly that:
-
-{{< say author="mike-coleman" >}}
-So yeah, I think that's actually one of the cooler things, because the thing I talk to people about agents a lot is [that] they just really want to please you. I don't know how many times I've done a demo. We have some other features that are enterprise features around governance for MCP servers, for instance. And so I'll be demoing this enterprise feature, and I'll be like, "Can you write to my Notion page?" And there will be a policy applied to the sandbox that says it can't. But I have a connector enabled in Claude somewhere. And it's like, "Well, not with that MCP server, but I can use this thing over here to do it."
-
-And so the more you can create an environment where these alternate avenues are roadblocked, the safer you're gonna be with agentic workflows. And that's where we're coming at with the sandboxes: how do we take something that is as powerful as an agent, allow it to run as close to its full potential as possible, but avoid a bunch of catastrophic things, like the examples you talked about, the deleted database.
-{{< /say >}}
 
 Each agent gets its own microVM, kernel, and Docker Engine. Only the workspace is mounted (plus a read-only skills store for supported agents), but SSH agent forwarding is on by default. All outbound TCP goes through a host proxy that injects proxy-managed credentials such as the Pulumi token. The `sbx` CLI and local sandboxes are free; centralized sandbox, network, and Model Context Protocol (MCP) controls are part of Docker's paid AI Governance.
 
