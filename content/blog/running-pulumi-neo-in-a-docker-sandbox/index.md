@@ -3,11 +3,12 @@ title: "Your agent will try to be helpful. Make sure helpful can't reach prod"
 allow_long_title: true
 date: 2026-10-16
 draft: false
-meta_desc: "Coding agents try to be helpful, and sometimes that deletes prod. What two live workshop runs taught us about boxing in Pulumi Neo with Docker Sandboxes."
+meta_desc: "Coding agents try to be helpful, and sometimes that deletes prod. What our live workshop taught us about boxing in Pulumi Neo with Docker Sandboxes and ESC."
 feature_image: feature.png
 authors:
     - engin-diri
     - adam-gordon-bell
+    - mike-coleman
 tags:
     - ai
     - ai-agents
@@ -23,7 +24,7 @@ schema_type: auto
 resource_links:
     - type: video
       url: https://www.youtube.com/watch?v=aTimO_kMS0c
-      text: "Watch the US run"
+      text: "Watch the recording"
     - type: github
       url: https://github.com/pulumi/workshops/tree/main/neo-in-a-docker-sandbox
       text: "Workshop repo"
@@ -49,16 +50,12 @@ social:
     linkedin: |
         In April, a coding agent fixing a staging credential mismatch used a token it found in an unrelated file and deleted a production volume. PocketOS founder Jer Crane concluded: "System prompts are advisory, not enforcing."
 
-        Engin Diri, Adam Gordon Bell, and Docker's Mike Coleman ran the Neo in a Docker Sandbox workshop twice, in September and October. The recap covers Adam's explanation for why agents do this (in training, a deleted database scores the same as an unfinished task), what Pulumi Neo's modes actually limit (read-only stops Pulumi Cloud writes, not everything), and what changed in Docker Sandboxes since August: global secrets that now reach running sandboxes, sandbox environment files, and cloud sandboxes.
+        Engin Diri, Adam Gordon Bell, and Docker's Mike Coleman ran the Neo in a Docker Sandbox workshop. The recap covers Adam's explanation for why agents do this (in training, a deleted database scores the same as an unfinished task), what Pulumi Neo's modes actually limit (read-only stops Pulumi Cloud writes, not everything), and what changed in Docker Sandboxes since August: global secrets that now reach running sandboxes, sandbox environment files, and cloud sandboxes.
     bluesky: |
         Why would a capable coding agent delete prod? Adam Gordon Bell's answer: in training, a deleted database scores the same as an unfinished task.
 
-        Engin Diri recaps two live runs of the Neo in a Docker Sandbox workshop: the Pulumi controls, the sandbox boundaries, and what changed since August.
+        Engin Diri recaps the Neo in a Docker Sandbox workshop: the Pulumi controls, the sandbox boundaries, and what changed since August.
 ---
-
-*Recorded September 16 and October 14, 2026. Quotes are lightly edited for clarity.*
-
-<!--more-->
 
 On April 24, 2026, a Cursor agent running Claude Opus 4.6 hit a credential mismatch during a routine staging task for PocketOS, Jer Crane's software company for rental businesses, and decided on its own to delete a Railway volume.
 
@@ -66,13 +63,15 @@ According to [Crane's account](https://www.theregister.com/software/2026/04/27/c
 
 Railway recovered the data two days later. Crane concluded: "System prompts are advisory, not enforcing." The agent was trying to be helpful, the way coding agents do. My job is making sure helpful can't reach prod.
 
-I wrote about [why YOLO mode belongs in a sandbox](/blog/sandboxing-coding-agents-yolo-mode/) in August. Since then, Docker Sandboxes has changed, and we've run [Pulumi Neo](/docs/ai/neo/) in one live, twice. I presented the US run on September 16 and Adam Gordon Bell the EU run on October 14, with Mike Coleman from Docker as our guest in both.
+I wrote about [why YOLO mode belongs in a sandbox](/blog/sandboxing-coding-agents-yolo-mode/) in August. Since then, Docker Sandboxes has changed, and Adam Gordon Bell and I have run [Pulumi Neo](/docs/ai/neo/) in one live in our workshop, with Mike Coleman from Docker as our guest.
+
+<!--more-->
 
 {{< youtube "aTimO_kMS0c" >}}
 
 ## A deleted database scores the same as a failed task
 
-**Adam Gordon Bell** is a community engineer at Pulumi, hosts the [CoRecursive](https://corecursive.com/) podcast, and presented the EU run.
+**Adam Gordon Bell** is a community engineer at Pulumi and hosts the [CoRecursive](https://corecursive.com/) podcast.
 
 His explanation of why a capable agent does this starts with how it's trained.
 
@@ -96,7 +95,7 @@ His rule is to let agents act only when there are no side effects, when someone 
 
 **Engin Diri** (me) is a Principal Solutions Architect at Pulumi.
 
-I opened the US run with these questions:
+I opened the workshop with these questions:
 
 {{< say author="engin-diri" >}}
 So let's go through some questioning: before we give an agent a cloud account, what should be fulfilled?
@@ -130,7 +129,7 @@ Pulumi answers who, what, when, and what stops it. The sandbox answers where, an
 
 **Mike Coleman** is a Principal Solutions Architect at Docker. Mike's running joke about agents is that "they want to be helpful".
 
-In the EU run, he told a story about exactly that:
+In the workshop, he told a story about exactly that:
 
 {{< say author="mike-coleman" >}}
 So yeah, I think that's actually one of the cooler things, because the thing I talk to people about agents a lot is [that] they just really want to please you. I don't know how many times I've done a demo. We have some other features that are enterprise features around governance for MCP servers, for instance. And so I'll be demoing this enterprise feature, and I'll be like, "Can you write to my Notion page?" And there will be a policy applied to the sandbox that says it can't. But I have a connector enabled in Claude somewhere. And it's like, "Well, not with that MCP server, but I can use this thing over here to do it."
@@ -139,8 +138,6 @@ And so the more you can create an environment where these alternate avenues are 
 {{< /say >}}
 
 Each agent gets its own microVM, kernel, and Docker Engine. Only the workspace is mounted (plus a read-only skills store for supported agents), but SSH agent forwarding is on by default. All outbound TCP goes through a host proxy that injects proxy-managed credentials such as the Pulumi token. The `sbx` CLI and local sandboxes are free; centralized sandbox, network, and Model Context Protocol (MCP) controls are part of Docker's paid AI Governance.
-
-Two corrections to my August post: Docker documents [five isolation layers](https://docs.docker.com/ai/sandboxes/security/isolation/), not four, and in clone mode the agent works on a private clone inside the VM that you [`git fetch sandbox-<name>`](https://docs.docker.com/ai/sandboxes/workflows/git/) from.
 
 ## What changed in Docker Sandboxes since August
 
@@ -152,7 +149,7 @@ Three changes matter here:
 
 ## Running Neo inside a Docker Sandbox
 
-Here's the US demo, condensed (every script is in the [workshop repo](https://github.com/pulumi/workshops/tree/main/neo-in-a-docker-sandbox)). Store the token on the host, then start the sandbox from [my kit](https://github.com/dirien/infrastructure-sandbox-kit) plus a mixin for the demo's AWS region:
+Here's the demo, condensed (every script is in the [workshop repo](https://github.com/pulumi/workshops/tree/main/neo-in-a-docker-sandbox)). Store the token on the host, then start the sandbox from [my kit](https://github.com/dirien/infrastructure-sandbox-kit) plus a mixin for the demo's AWS region:
 
 ```bash
 sbx secret set pulumi
@@ -190,11 +187,11 @@ Then start Neo:
 pulumi neo
 ```
 
-Inside the sandbox, I think auto approval mode is defensible for throwaway work. But allowed hosts, AWS included, still receive whatever Neo sends, and ESC's short-lived credentials do reach the CLI, so keep the Pulumi controls on. We'd planned a last step, Neo trying to tear the stack down and `protect: true` refusing, but neither run got to it live.
+Inside the sandbox, I think auto approval mode is defensible for throwaway work. But allowed hosts, AWS included, still receive whatever Neo sends, and ESC's short-lived credentials do reach the CLI, so keep the Pulumi controls on. We'd planned a last step, Neo trying to tear the stack down and `protect: true` refusing, but we didn't get to it live.
 
 ## Where to start
 
-In an informal poll I ran during the EU session, 8 of the 11 people who voted said they don't currently use a sandbox for their agents. If that's you, start closed: pick [Locked Down](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/) when the first start asks for a network preset. Read the denials in the terminal dashboard (`sbx` with no subcommand) or with `sbx policy log`, then approve them or add rules with `sbx policy allow network <host>`.
+In an informal poll I ran at the end of the workshop, 8 of the 11 people who voted said they don't currently use a sandbox for their agents. If that's you, start closed: pick [Locked Down](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/) when the first start asks for a network preset. Read the denials in the terminal dashboard (`sbx` with no subcommand) or with `sbx policy log`, then approve them or add rules with `sbx policy allow network <host>`.
 
 On the Pulumi side, run Neo [read-only, or at least with balanced approval](/docs/ai/neo/permissions/), near production, and back the stack with an [ESC environment that uses OIDC](/docs/esc/guides/configuring-oidc/aws/).
 
