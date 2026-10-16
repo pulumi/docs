@@ -898,14 +898,19 @@ def my_team_memberships(gh: GhClient, repo_root: Path | None, login: str | None)
 def approver_team_memberships(gh: GhClient, repo_root: Path | None, prs: list[dict],
                               me: str | None) -> dict[str, dict[str, bool | None]]:
     """`{"org/slug": {login: is a member}}` for every human who has approved
-    an open PR, against every team review-routing.yml names. The analyzer
-    reads it to tell an approval from the lane's own team — after which a
-    human-authored PR is its author's to merge — from a drive-by one. GitHub
-    clears the team's review request when a member reviews for it, so the
-    request alone can't carry that. None means the token couldn't read it."""
+    an open PR or is requested on one by name, against every team
+    review-routing.yml names. The analyzer reads it to tell an approval from
+    the lane's own team — after which a human-authored PR is its author's to
+    merge — from a drive-by one. GitHub clears the team's review request when
+    a member reviews for it, so the request alone can't carry that. It also
+    tells a named reviewer who can approve my lanes (a real hand-off) from a
+    subject-matter reviewer who can't. None means the token couldn't read it."""
+    mine = (me or "").lower()
     logins = sorted({r["user"] for pr in prs for r in pr.get("reviews") or []
                      if r.get("state") == "APPROVED" and r.get("user") and r.get("user_type") != "Bot"
-                     and r["user"].lower() != (me or "").lower()})
+                     and r["user"].lower() != mine}
+                    | {u for pr in prs for u in (pr.get("requested_reviewers") or {}).get("users") or []
+                       if u and u.lower() != mine})
     if not logins:
         return {}
     path = (repo_root or _REPO_ROOT) / ".github" / "review-routing.yml"

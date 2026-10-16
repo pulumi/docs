@@ -46,7 +46,7 @@ $ gcloud config list
 
 If your active account and project are printed, your configuration is correct. If not, read on:
 
-```
+```output
 [core]
 account = user@example.com
 disable_usage_reporting = True
@@ -85,7 +85,7 @@ $ export GOOGLE_CREDENTIALS="$(cat ~/path/to/service-account-key.json)"
 
 {{% /choosable %}}
 
-{{% choosable os windows %}}
+{{% choosable os "windows" %}}
 
 ```powershell
 > $env:GOOGLE_CREDENTIALS = (Get-Content -Path "C:\path\to\service-account-key.json" -Raw)
@@ -103,7 +103,7 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/path/to/service-account-key.json"
 
 {{% /choosable %}}
 
-{{% choosable os windows %}}
+{{% choosable os "windows" %}}
 
 ```powershell
 > $env:GOOGLE_APPLICATION_CREDENTIALS = "C:\path\to\service-account-key.json"
@@ -126,7 +126,7 @@ $ export GOOGLE_PROJECT="<YOUR_PROJECT_ID>"
 
 {{% /choosable %}}
 
-{{% choosable os windows %}}
+{{% choosable os "windows" %}}
 
 ```powershell
 > $env:GOOGLE_PROJECT = "<YOUR_PROJECT_ID>"
@@ -134,6 +134,6 @@ $ export GOOGLE_PROJECT="<YOUR_PROJECT_ID>"
 
 {{% /choosable %}}
 
-For detailed information on Pulumi's use of Google Cloud credentials, see [Google Cloud Setup](/registry/packages/gcp/installation-configuration/).
+For detailed information on Pulumi's use of Google Cloud credentials, see [Google Cloud installation and configuration](/registry/packages/gcp/installation-configuration/).
 
 {{< get-started-stepper >}}
