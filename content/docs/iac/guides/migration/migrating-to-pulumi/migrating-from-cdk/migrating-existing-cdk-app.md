@@ -245,7 +245,7 @@ pulumi config set instanceType db.r6g.medium
 
 #### Code organization
 
-Converters typically output a single file. For maintainability, plan to split your resources into logical groups:
+Converted code can land in a single large file. For maintainability, plan to split your resources into logical groups:
 
 ```text
 my-infrastructure/
@@ -421,7 +421,7 @@ CDK uses Assets and Bundling to handle deployment artifacts like Lambda code, Do
 |------------|-----------|------------------|
 | Docker image | `dockerImages` in assets.json | Use `docker-build.Image` to build and push. Replace hard-coded ECR URI with image output. |
 | Static file | `files` without `executable`, no bundling in CDK source | Use `pulumi.FileArchive` or `pulumi.FileAsset` |
-| File with build command | `files` with `executable` field | Build command needs setup in Pulumi (see the bundling options after this table) |
+| File with build command | `files` entry whose `source` has an `executable` command instead of a `path` | Build command needs setup in Pulumi (see the bundling options after this table) |
 | Bundled file | `files` without `executable`, but CDK source uses bundling | Bundling needs setup in Pulumi (see the bundling options after this table) |
 
 **Handling bundled assets:**
