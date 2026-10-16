@@ -3,8 +3,8 @@
   "source": {
     "path": "pkg/codegen/schema/pulumi.json",
     "repo": "pulumi/pulumi",
-    "url": "https://github.com/pulumi/pulumi/blob/v3.269.0/pkg/codegen/schema/pulumi.json",
-    "version": "v3.269.0"
+    "url": "https://github.com/pulumi/pulumi/blob/v3.270.0/pkg/codegen/schema/pulumi.json",
+    "version": "v3.270.0"
   },
   "types": [
     {
