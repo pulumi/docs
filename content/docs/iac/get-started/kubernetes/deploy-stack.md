@@ -52,11 +52,11 @@ Do you want to perform this update?
   details
 ```
 
-No changes have been made yet. Select `details` to see more information about the proposed update, like your deployment's properties.
+No changes have been made yet. You may decline to proceed by selecting `no` or choose `details` to see more information about the proposed update like your deployment's properties.
 
 ### Performing the update
 
-To proceed and deploy your new NGINX deployment, select `yes`. This begins an **update**:
+To proceed and deploy your NGINX deployment, select `yes`. This begins an **update**:
 
 ```
 Do you want to perform this update? yes

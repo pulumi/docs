@@ -45,7 +45,8 @@ Do you want to perform this update?
   details
 ```
 
-No changes have been made yet. Select `details` to see more information about the proposed update, like your bucket's properties.
+No changes have been made yet. You may decline to proceed by selecting `no` or choose `details` to
+see more information about the proposed update like your bucket's properties.
 
 ### Performing the update
 
