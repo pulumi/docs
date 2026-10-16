@@ -37,7 +37,9 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 
 ## Creating an organization
 
-Creating an organization will start a free trial that has access to all features.
+You create your first organization right after you sign up, and you choose then between a Free organization for a personal project and a free trial for working with your team. See [Accounts and organizations](/docs/administration/concepts/accounts/#accounts-and-organizations).
+
+Every organization you create after that starts a free trial that has access to all features.
 At the end of the trial, choose the edition that fits your needs. Free supports
 one user. Essentials, Pro, and Enterprise support multiple users.
 Learn more about what each one includes on the [pricing page](/pricing/).
@@ -88,7 +90,7 @@ Pulumi organization administrators can monitor current organization members and 
 
 ## Switching between organizations
 
-The organization menu displays your individual organization and all of the organizations you belong to.
+The organization menu displays all of the organizations you belong to.
 
 To switch to a different organization:
 
@@ -129,7 +131,7 @@ If you need a legal entity name on invoices that is different from your organiza
 
 ## Transferring stacks
 
-Stack admins can transfer stacks one at a time between their individual organization and a shared organization, or between shared organizations. Organization admins can transfer stacks in bulk.
+Stack admins can transfer stacks one at a time between organizations, including from a Free organization to one shared with other people. Organization admins can transfer stacks in bulk.
 
 Transferring a stack requires two permissions: the right to transfer the stack from its current owner, and the right to create stacks in the destination organization. Both are configured through your organization's access controls — see [Role-based access control](/docs/administration/concepts/rbac/) for details.
 

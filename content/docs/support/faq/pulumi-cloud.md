@@ -89,11 +89,11 @@ name with the organization name. For example:
 $ pulumi stack init acme-corp/widget-server
 ```
 
-### How do I migrate stacks from an individual account to an organization account?
+### How do I move stacks from my Free organization to my team's organization?
 
-[Pulumi Cloud](https://app.pulumi.com/signin) lets you transfer stacks from your individual account to any organization account you belong to as an administrator.
+[Pulumi Cloud](https://app.pulumi.com/signin) lets you transfer stacks from one organization to any other organization you belong to as an administrator.
 
-To transfer a stack from your individual account to an organization, navigate to the Stacks page and select **Transfer stacks**.
+To transfer stacks, open the organization that holds them, navigate to the Stacks page, and select **Transfer stacks**.
 
 From there, select the transfer destination and tick any stacks you'd like to transfer.
 
@@ -127,9 +127,9 @@ For more about joining organizations, see [Joining an organization](/docs/admini
 
 ### How can I delete my Pulumi account?
 
-You can delete your personal account from your [account settings](https://app.pulumi.com/user/account/settings) in Pulumi Cloud. The **Delete account** button is at the bottom of that page. This is a permanent operation and cannot be undone.
+You can delete your account from your [account settings](https://app.pulumi.com/user/account/settings) in Pulumi Cloud. The **Delete account** button is at the bottom of that page. This is a permanent operation and cannot be undone.
 
-Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
+Before deleting your account, make sure you are not the only admin of any organization, including a Free organization you created. See [Deleting your account](/docs/administration/concepts/accounts/#deleting-your-account).
 
 For more information, see [Deleting your account](/docs/administration/concepts/accounts/#deleting-your-account).
 
