@@ -46,13 +46,13 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 1. Navigate to the [Workload Identity Pools page](https://console.cloud.google.com/projectselector2/iam-admin/workload-identity-pools) in the Google Cloud console.
 1. Select your Google Cloud project.
-1. Click the **Create Pool** button.
-1. Provide a name and an optional description, then click **Continue**
+1. Select the **Create Pool** button.
+1. Provide a name and an optional description, then select **Continue**
 1. In the **Add a provider to pool** dropdown, select **OpenID Connect (OIDC)**.
 1. Provide a name for the provider.
 1. In the **Issuer** field, enter `https://api.pulumi.com/oidc`.
-1. In the **Audiences** section, select the **Allowed audiences** radio button. Enter the name of your Pulumi organization. Then click **Continue**.
-1. In the **Configure provider attributes** section, provide the value of `assertion.sub` in the **OIDC 1** field. Then click **Save**.
+1. In the **Audiences** section, select the **Allowed audiences** radio button. Enter the name of your Pulumi organization. Then select **Continue**.
+1. In the **Configure provider attributes** section, provide the value of `assertion.sub` in the **OIDC 1** field. Then select **Save**.
 
 #### Configure a service account
 
@@ -62,19 +62,19 @@ Once you have created your workload identity pool and provider, you will be dire
 
 1. Navigate to the [Service Accounts](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts) page.
 1. Select your Google Cloud project.
-1. Click "Create Service Account".
-1. Enter a value for the **Service account name** field. Then click **Create And Continue**
+1. Select "Create Service Account".
+1. Enter a value for the **Service account name** field. Then select **Create And Continue**
     * The **Service account ID** field will auto-populate based on this value.
-1. In the **Grant this service account access to project** section, select the role(s) that provides the relevant access to Pulumi Cloud. Then click **Continue**.
-1. Leave the values in the next section blank and click **Done**.
+1. In the **Grant this service account access to project** section, select the role(s) that provides the relevant access to Pulumi Cloud. Then select **Continue**.
+1. Leave the values in the next section blank and select **Done**.
 
 ##### Grant access to the service account
 
-1. In your workload identity pool's details page, click the **Grant Access** button.
+1. In your workload identity pool's details page, select the **Grant Access** button.
 1. In the **Select service account** dropdown, select the desired service account to associate with the pool.
-1. Under the **Select principals** section, click the **Only identities matching the filter** radio button.
+1. Under the **Select principals** section, select the **Only identities matching the filter** radio button.
 1. In the **Attribute name** dropdown, select **Subject**.
-1. In the **Attribute value** field, provide a valid subject claim (see examples at the end of this section). Then click **Save**.
+1. In the **Attribute value** field, provide a valid subject claim (see examples at the end of this section). Then select **Save**.
 
 Make a note of the project number, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
 
