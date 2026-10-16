@@ -162,7 +162,7 @@ Each agent gets its own microVM, kernel, and Docker Engine. Only the workspace i
 
 ## Running Neo inside a Docker Sandbox
 
-Every script is in the [workshop repo](https://github.com/pulumi/workshops/tree/main/neo-in-a-docker-sandbox). Store the token on the host, then start the sandbox from [my kit](https://github.com/dirien/infrastructure-sandbox-kit) plus a mixin for the demo's AWS region:
+Every script is in the [workshop repo](https://github.com/pulumi/workshops/tree/main/neo-in-a-docker-sandbox). Store the token on the host, allow `ghcr.io/dirien/` in `kit.allowedSources`, then start the sandbox from [my kit](https://github.com/dirien/infrastructure-sandbox-kit) plus a mixin for the demo's AWS region:
 
 ```bash
 sbx secret set pulumi
@@ -170,7 +170,7 @@ sbx run --name neo-demo --kit ./01-sandbox/region-kit \
     ghcr.io/dirien/infrastructure-sandbox-kit:v0.10.0 ./02-app
 ```
 
-A GHCR kit needs `ghcr.io/dirien/` in `kit.allowedSources` first. Neo isn't a built-in `sbx` agent, so the sandbox opens a shell, where `pulumi whoami -v` works through the injected token while the variable holds a placeholder:
+Neo isn't a built-in `sbx` agent, so the sandbox opens a shell, where `pulumi whoami -v` works through the injected token while the variable holds a placeholder:
 
 ```bash
 echo "$PULUMI_ACCESS_TOKEN"
