@@ -2,7 +2,7 @@
 title: "Your agent will try to be helpful. Make sure helpful can't reach prod"
 allow_long_title: true
 date: 2026-10-16
-draft: false
+draft: true
 meta_desc: "Coding agents try to be helpful, and sometimes that deletes prod. What our live workshop taught us about boxing in Pulumi Neo with Docker Sandboxes and ESC."
 feature_image: feature.png
 authors:
