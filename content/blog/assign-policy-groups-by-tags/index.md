@@ -50,6 +50,30 @@ To add one, open a policy group in Pulumi Cloud and select **Match by tags**.
 
 ![Adding a tag rule that matches stacks and accounts tagged env: prod, with a preview of the matching entities](add-tag-rule.png)
 
+Or define it in code with the [Pulumi Service Provider](/registry/packages/pulumiservice/):
+
+```typescript
+import * as pulumiservice from "@pulumi/pulumiservice";
+
+new pulumiservice.api.PolicyGroup("payments-production", {
+    orgName: "my-org",
+    name: "payments-production",
+    mode: "preventative",
+    stackMatchRule: pulumiservice.buildStackMatchRuleOutput({
+        rules: [{ conditions: [{ key: "env", value: "prod" }, { key: "team", value: "payments" }] }],
+    }).matchRule,
+});
+
+new pulumiservice.api.PolicyGroup("pci-accounts", {
+    orgName: "my-org",
+    name: "pci-accounts",
+    mode: "audit",
+    accountMatchRule: pulumiservice.buildAccountMatchRuleOutput({
+        rules: [{ conditions: [{ key: "env", value: "prod" }, { key: "compliance", value: "pci" }] }],
+    }).matchRule,
+});
+```
+
 ## Example: enforcement by environment
 
 A common pattern is one policy group per environment tier, with stricter enforcement in production:
