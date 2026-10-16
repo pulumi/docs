@@ -190,7 +190,7 @@
       "pkg/codegen/nodejs/importer.go"
     ],
     "repo": "pulumi/pulumi",
-    "url": "https://github.com/pulumi/pulumi/tree/v3.269.0",
-    "version": "v3.269.0"
+    "url": "https://github.com/pulumi/pulumi/tree/v3.270.0",
+    "version": "v3.270.0"
   }
 }
