@@ -58,6 +58,10 @@ echo "== pytest: weekly digest"
 run "pytest scripts/weekly-digest/" \
     python3 -m pytest scripts/weekly-digest/ -q -p no:cacheprovider
 
+echo "== pytest: review telemetry"
+run "pytest scripts/review-telemetry/" \
+    python3 -m pytest scripts/review-telemetry/ -q -p no:cacheprovider
+
 echo "== standalone harnesses"
 for f in scripts/content-review/test_*.py scripts/blog-review/test_*.py; do
     [ -e "$f" ] || continue
@@ -66,7 +70,7 @@ done
 
 echo "== --self-test suites"
 for f in scripts/content-review/*.py scripts/blog-review/*.py \
-         scripts/review-v3/*.py \
+         scripts/review-v3/*.py scripts/review-telemetry/*.py \
          .claude/commands/docs-review/scripts/*.py; do
     [ -e "$f" ] || continue
     # Match the argparse registration, not any mention of the flag — a script

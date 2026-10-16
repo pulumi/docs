@@ -1,0 +1,160 @@
+name: Record docs-agent usage
+
+# Reusable: copies the `docs-agent-usage-*` artifacts that
+# scripts/review-telemetry/record-usage.py left in a run to the content-review
+# ledger bucket's `usage/` prefix, where the data team loads them.
+#
+# Why a separate job instead of a step in each Claude job: the jobs that call
+# Claude run PR-head code and most hold no AWS credentials, and the ones that
+# do only acquire them on their success path. Usage has to be recorded for
+# failed, timed-out and superseded runs too, since those tokens were billed.
+# So each Claude job builds its rows (with `if: always()`) and uploads them as
+# an artifact; the caller then runs this workflow as a final `if: always()`
+# job. Nothing here executes code from the PR: it lists artifacts, downloads
+# them, and runs `aws s3 cp`.
+#
+# Caller contract:
+#   record-usage:
+#     needs: <the Claude job>
+#     if: always()
+#     uses: ./.github/workflows/record-docs-agent-usage.yml
+#     with:
+#       extra-run-id: <optional: another run whose usage to record>
+#     permissions:
+#       contents: read
+#       actions: read
+#       id-token: write
+#
+# Two jobs so a run with nothing to record never enters the `production`
+# environment (which would add a deployment entry for no reason).
+on:
+  workflow_call:
+    inputs:
+      extra-run-id:
+        description: >-
+          Another workflow run whose usage artifacts to record beside this
+          run's own (the review records the triage run that triggered it).
+        type: string
+        required: false
+        default: ''
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      count: ${{ steps.collect.outputs.count }}
+    steps:
+      # actions/download-artifact rather than `gh run download`: this run is
+      # still in progress, and only the action reads a live run's artifacts.
+      - name: Download this run's usage artifacts
+        continue-on-error: true
+        uses: actions/download-artifact@v8
+        with:
+          pattern: docs-agent-usage-*
+          path: .docs-agent-usage
+          merge-multiple: true
+
+      - name: Download the triggering run's usage artifacts
+        if: inputs.extra-run-id != ''
+        continue-on-error: true
+        uses: actions/download-artifact@v8
+        with:
+          pattern: docs-agent-usage-*
+          path: .docs-agent-usage
+          merge-multiple: true
+          run-id: ${{ inputs.extra-run-id }}
+          github-token: ${{ github.token }}
+
+      - name: Count usage files
+        id: collect
+        run: |
+          mkdir -p .docs-agent-usage
+          COUNT=$(find .docs-agent-usage -name '*.ndjson' -type f | wc -l | tr -d ' ')
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "usage files: $COUNT"
+          find .docs-agent-usage -name '*.ndjson' -type f | sed 's/^/  /'
+
+      - name: Hand the files to the record job
+        if: steps.collect.outputs.count != '0' && steps.collect.outputs.count != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: usage-collected-attempt${{ github.run_attempt }}
+          path: .docs-agent-usage/
+          include-hidden-files: true
+          overwrite: true
+          retention-days: 7
+
+  record:
+    needs: collect
+    if: needs.collect.outputs.count != '0' && needs.collect.outputs.count != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # `environment: production` for PULUMI_STACK_NAME (environment-scoped) and
+    # the OIDC trust on the ContinuousDelivery role, same as the evidence
+    # record job in claude-code-review.yml.
+    environment: production
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      ESC_ACTION_OIDC_AUTH: true
+      ESC_ACTION_OIDC_ORGANIZATION: pulumi
+      ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+      ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+      ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+    steps:
+      # Only for `pulumi stack output`; never the PR head.
+      - name: Checkout infrastructure (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: infrastructure
+
+      - name: Download collected usage
+        uses: actions/download-artifact@v8
+        with:
+          name: usage-collected-attempt${{ github.run_attempt }}
+          path: .docs-agent-usage
+
+      - name: Fetch ESC secrets
+        id: esc-secrets
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Configure AWS Credentials
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: docs-agent-usage
+          aws-region: us-west-2
+
+      - uses: pulumi/actions@v7
+        continue-on-error: true
+
+      # The artifacts stay behind as the fallback record (30 days), so a
+      # failed copy is a warning, not a failed run.
+      - name: Copy usage rows to the ledger bucket
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          LEDGER=""
+          for i in 1 2 3; do
+            LEDGER=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
+              --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+            [ -n "$LEDGER" ] && break
+            [ "$i" -lt 3 ] && sleep $((i * 5))
+          done
+          if [ -z "$LEDGER" ]; then
+            echo "::warning::ledger bucket unresolved; usage rows stay in the run's docs-agent-usage-* artifacts only"
+            exit 0
+          fi
+          aws s3 cp --recursive .docs-agent-usage "s3://$LEDGER/usage/" \
+            --exclude '*' --include '*.ndjson' --content-type application/x-ndjson \
+            || echo "::warning::copy to s3://$LEDGER/usage/ failed; usage rows stay in the run's artifacts"
