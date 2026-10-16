@@ -47,16 +47,16 @@ Resources:
     + 2 to create
 
 Do you want to perform this update?
-> yes
-  no
+  yes
+> no
   details
 ```
 
-No changes have been made yet. You may decline to proceed by selecting `no` or choose `details` to see more information about the proposed update like your deployment's properties.
+No changes have been made yet. Select `details` to see more information about the proposed update, like your deployment's properties.
 
 ### Performing the update
 
-To proceed and deploy your NGINX deployment, select `yes`. This begins an **update**:
+The prompt selects `no` by default, so pressing Enter cancels the update. To deploy your new NGINX deployment, use the arrow keys to select `yes`, then press Enter. This begins an **update**:
 
 ```
 Do you want to perform this update? yes

@@ -49,17 +49,16 @@ Resources:
     + 2 to create
 
 Do you want to perform this update?
-> yes
-  no
+  yes
+> no
   details
 ```
 
-No changes have been made yet. Select `no` to decline the update, or `details` to see more
-information about the proposed update, like your bucket's properties.
+No changes have been made yet. Select `details` to see more information about the proposed update, like your bucket's properties.
 
 ### Performing the update
 
-To proceed and deploy your new S3 bucket, select `yes`. This begins an **update**:
+The prompt selects `no` by default, so pressing Enter cancels the update. To deploy your new S3 bucket, use the arrow keys to select `yes`, then press Enter. This begins an **update**:
 
 ```
 Do you want to perform this update? yes

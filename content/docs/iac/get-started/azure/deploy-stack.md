@@ -40,17 +40,16 @@ Resources:
     + 3 to create
 
 Do you want to perform this update?
-> yes
-  no
+  yes
+> no
   details
 ```
 
-No changes have been made yet. You may decline to proceed by selecting `no` or choose `details` to
-see more information about the proposed update like your storage account's properties.
+No changes have been made yet. Select `details` to see more information about the proposed update, like your storage account's properties.
 
 ### Performing the update
 
-To proceed and deploy your new storage account, select `yes`. This begins an **update**:
+The prompt selects `no` by default, so pressing Enter cancels the update. To deploy your new storage account, use the arrow keys to select `yes`, then press Enter. This begins an **update**:
 
 ```
 Do you want to perform this update? yes
