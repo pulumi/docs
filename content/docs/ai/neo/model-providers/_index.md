@@ -7,7 +7,7 @@ menu:
     ai:
         name: Model providers (BYOK)
         parent: ai-neo
-        weight: 52
+        weight: 100
         identifier: ai-neo-model-providers
 ---
 

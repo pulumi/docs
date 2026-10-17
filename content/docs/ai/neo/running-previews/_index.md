@@ -11,7 +11,7 @@ menu:
     ai:
         name: Previews
         parent: ai-neo
-        weight: 40
+        weight: 80
         identifier: ai-running-previews
 ---
 

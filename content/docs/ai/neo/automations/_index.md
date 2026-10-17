@@ -10,7 +10,7 @@ menu:
         name: Automations
         identifier: ai-automations
         parent: ai-neo
-        weight: 25
+        weight: 30
 pulumi_cloud_feature: neo-scheduled-tasks
 ---
 

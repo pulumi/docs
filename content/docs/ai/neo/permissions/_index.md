@@ -5,13 +5,15 @@ h1: Neo's permissions model
 meta_desc: What Pulumi Neo can do, which identity it acts as on each surface, how permission and approval modes constrain it, and how to scope its access.
 menu:
     ai:
-        name: Permissions model
+        name: Permissions
         parent: ai-neo
         identifier: ai-permissions
-        weight: 12
+        weight: 20
 ---
 
 This page is the canonical reference for Neo's permissions model: what Neo can do, which identity it acts as on each surface, what constrains it, and how to scope it down. If you are a security reviewer or platform admin working out what Neo can do, as whom, and how to constrain it, start here.
+
+To scope credentials for cloud accounts and other integrations, see [Design access around the job](/docs/ai/agents/permissions/#design-access-around-the-job).
 
 ## The core invariant
 

@@ -9,7 +9,7 @@ menu:
     ai:
         name: Settings
         parent: ai-neo
-        weight: 50
+        weight: 90
         identifier: ai-settings
 ---
 

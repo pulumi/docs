@@ -9,9 +9,9 @@ aliases:
 - /docs/ai/get-started/
 menu:
     ai:
-        name: Get started with Neo
-        parent: ai-neo
-        weight: 10
+        name: Use Neo
+        parent: ai-start
+        weight: 20
         identifier: ai-get-started
 ---
 

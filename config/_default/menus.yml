@@ -340,3 +340,36 @@ discovery-governance:
     url: /docs/iac/cli/commands/pulumi_policy/
     identifier: dg-reference-policy-cli
     weight: 10
+
+# Infrastructure AI
+ai:
+  - name: Get started
+    parent: ai-home
+    identifier: ai-start
+    weight: 10
+  - name: Concepts
+    parent: ai-home
+    identifier: ai-concepts
+    weight: 20
+  - name: Guides
+    parent: ai-home
+    identifier: ai-guides
+    weight: 30
+  - name: Use Neo
+    parent: ai-guides
+    identifier: ai-neo
+    weight: 20
+  - name: Reference
+    parent: ai-home
+    identifier: ai-reference
+    weight: 50
+  - name: Version control
+    parent: ai-agents-integrations
+    identifier: ai-integrations-version-control
+    url: /docs/ai/agents/integrations/#repositories
+    weight: 10
+  - name: Pulumi MCP tools
+    parent: ai-reference
+    identifier: ai-mcp-tools
+    url: /docs/ai/mcp-server/#tools
+    weight: 20
