@@ -5,6 +5,11 @@ on:
     # Run every day at 3:00PM UTC.
     - cron: '0 15 * * *'
   workflow_dispatch: null
+# One cleanup at a time. Overlapping runs (say, a re-run of yesterday's that is still going
+# when today's starts) pick the same buckets and fail on each other's deletes.
+concurrency:
+  group: bucket-cleanup-testing
+  cancel-in-progress: false
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
