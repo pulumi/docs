@@ -536,9 +536,7 @@ During preview, some values are unknown:
 ```python
 def _is_unknown(self, value):
     """Check if a value is unknown (not yet computed)."""
-    if isinstance(value, dict):
-        return value.get('4dabf18193072939515e22adb298388d') == '04da6b54-80e4-46f7-96ec-b56ff0331ba9'
-    return False
+    return value == '04da6b54-80e4-46f7-96ec-b56ff0331ba9'
 ```
 
 Handle unknowns in your Diff implementation by skipping comparison for unknown values.
@@ -560,10 +558,10 @@ import sys
 print("Debug message", file=sys.stderr)
 ```
 
-You can also test individual methods with a gRPC client, or use the `PULUMI_DEBUG_PROVIDERS` environment variable:
+You can also test individual methods with a gRPC client, or use the `PULUMI_DEBUG_PROVIDERS` environment variable to attach the engine to a provider you've already started. The format is `<provider-name>:<port>`:
 
 ```bash
-PULUMI_DEBUG_PROVIDERS="myfiles" pulumi up
+PULUMI_DEBUG_PROVIDERS="myfiles:12345" pulumi up
 ```
 
 ## Complete example
