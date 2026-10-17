@@ -16,6 +16,24 @@
 {{ seo_jsonld|safe }}
   </script>
   {% endif %}
+  {% if pagename == 'index' and per_symbol_modules_enabled %}
+  {# Legacy deep links such as /pulumi/#pulumi.Output.apply pointed at anchors
+     on the old single-page reference. Map them to the per-symbol page. #}
+  <script>
+  (function () {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    fetch("{{ pathto('_static/legacy-anchors.json', 1) }}")
+      .then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (m) {
+        if (Object.prototype.hasOwnProperty.call(m, id)) {
+          location.replace(m[id] + "#" + id);
+        }
+      })
+      .catch(function () {});
+  })();
+  </script>
+  {% endif %}
 {% endblock %}
 
 {# When seo_page_title is set, it already names the package (e.g. "pulumi
