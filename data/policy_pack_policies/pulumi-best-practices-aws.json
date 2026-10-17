@@ -1,5 +1,5 @@
 {
-  "applied": false,
+  "applied": true,
   "displayName": "",
   "name": "pulumi-best-practices-aws",
   "policies": [
