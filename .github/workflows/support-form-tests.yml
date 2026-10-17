@@ -1,4 +1,4 @@
-name: Support form tests
+name: Support form and CloudFront Functions tests
 
 # Runs the unit suites for the support form -- both halves. The server suite
 # covers the /api/support Lambda (payload validation, the handler's status
@@ -6,6 +6,10 @@ name: Support form tests
 # support-form.ts against jsdom (draft recovery, query-param prefill,
 # validation, submission). They are separate packages with separate
 # toolchains, so they run as separate steps.
+#
+# The CloudFront Functions suite (infrastructure/cloudfront-functions/) runs
+# here as a third step: this job already installs and compiles infrastructure/,
+# and that suite is as dependency-free as the server one.
 #
 # The suite existed before this workflow did, and nothing ran it: `make test`
 # covers only the example programs, and `make ci_pull_request` previews the
@@ -67,7 +71,7 @@ concurrency:
 
 jobs:
   test:
-    name: Run support-form test suite
+    name: Run support-form and CloudFront Functions test suites
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -103,10 +107,16 @@ jobs:
           set -o pipefail
           yarn --cwd theme test-support-form 2>&1 | tee /tmp/support-form-client-tests.log
 
-      - name: Assert both suites actually ran
+      - name: Run CloudFront Functions suite
         shell: bash
         run: |
-          for suite in server:/tmp/support-form-tests.log client:/tmp/support-form-client-tests.log; do
+          set -o pipefail
+          yarn --cwd infrastructure test-cloudfront-functions 2>&1 | tee /tmp/cloudfront-functions-tests.log
+
+      - name: Assert every suite actually ran
+        shell: bash
+        run: |
+          for suite in server:/tmp/support-form-tests.log client:/tmp/support-form-client-tests.log cloudfront-functions:/tmp/cloudfront-functions-tests.log; do
             name=${suite%%:*}
             log=${suite#*:}
             count=$(grep -oP '^# tests \K\d+|^ℹ tests \K\d+' "$log" | tail -1)

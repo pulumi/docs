@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
-import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
+import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation, getMarketingWebRedirectFunctionAssociation } from "./cloudfrontFunctions";
 import { SupportFormApi } from "./supportForm";
 import { SupportRedirect } from "./supportRedirect";
 
@@ -1048,6 +1048,7 @@ if (config.devStack) {
             pathPattern: "/dev*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
+            functionAssociations: [getMarketingWebRedirectFunctionAssociation()],
         },
         {
             ...baseCacheBehavior,
@@ -1071,6 +1072,7 @@ if (config.devStack) {
                 pathPattern,
                 cachePolicyId: thirtyMinuteCachePolicy.id,
                 originRequestPolicyId: allViewerExceptHostHeaderId,
+                functionAssociations: [getMarketingWebRedirectFunctionAssociation()],
             }),
         ),
         // Exact paths: /pricing* would also take the /pricing/open-source-free-tier/ redirect off S3.
@@ -1080,6 +1082,7 @@ if (config.devStack) {
             pathPattern,
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
+            functionAssociations: [getMarketingWebRedirectFunctionAssociation()],
         })),
     )
 }
