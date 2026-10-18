@@ -24,7 +24,7 @@ Users can easily define schedules for any stack with Pulumi Deployments configur
 
 Schedules run in UTC unless the cron expression starts with `CRON_TZ=` followed by an [IANA time zone name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For example, `CRON_TZ=America/New_York 0 9 * * *` runs at 9:00 AM New York time and follows daylight saving time changes. Pulumi Cloud rejects an expression whose time zone name it doesn't recognize.
 
-The same rule applies to every Pulumi Cloud schedule that takes a cron expression, including [drift detection](/docs/deployments/concepts/drift/) and [ESC secret rotation](/docs/esc/concepts/rotators/) schedules. The cron field in the Pulumi Cloud console accepts only the five-field expression, so set a time zone through the REST API or the Pulumi Cloud provider.
+The same rule applies to every Pulumi Cloud schedule that takes a cron expression, including [drift detection](/docs/deployments/concepts/drift/) and [ESC secret rotation](/docs/esc/concepts/rotators/) schedules.
 
 ## Pulumi Cloud UI
 
