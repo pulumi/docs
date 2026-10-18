@@ -98,12 +98,12 @@
       "lastmod": "2026-05-13"
     },
     "Organizations": {
-      "hash": "3eb160b1d3dbb807db41b7498c4da605043f5be983fa87ec0071e5abcb6f611f",
-      "lastmod": "2026-10-15"
+      "hash": "54d9448a720174e3c3bca601fb79da8cfbe6e16577bc989f75615764ef45bae5",
+      "lastmod": "2026-10-18"
     },
     "PolicyGroups": {
-      "hash": "63b1b39ee932c73c1a0d4985b88e55658fb7f4e76e0303bb8dd468bfd3f618da",
-      "lastmod": "2026-10-15"
+      "hash": "3126859e969a48ab64efc48156fa0d98654adcdd71891f38f4b08ac25998d40c",
+      "lastmod": "2026-10-18"
     },
     "PolicyPacks": {
       "hash": "b8010264de5600bc940400e03fc9a47657f8dab2be54fe1e4fd785b65bd032d8",
@@ -304,8 +304,8 @@
       "hash": "50fa0455b29f79af30e125d47d516462da72e42fd0c804161c2843912f080532"
     },
     "AgentConsoleEventUserInput": {
-      "hash": "5e5eeae0113782eb38b22cb69fa9459d96c64cc1448747201a7ea4021353a0cf",
-      "lastmod": "2026-10-15"
+      "hash": "3e70190bdc8b8c73568be6104a629f4da30d200f73d121f645b4de94065f0732",
+      "lastmod": "2026-10-18"
     },
     "AgentEntity": {
       "hash": "e675ce563ba29255a09bfd433672e20a262798124971f6f633e63b5cab7798fe"
@@ -782,8 +782,8 @@
       "lastmod": "2026-09-15"
     },
     "AppUpdatePolicyGroupRequest": {
-      "hash": "3bff79b68828f81eed3de99cd2be49b40680337f8dfe7da44955955fa04b9d99",
-      "lastmod": "2026-10-16"
+      "hash": "19e02aa0105fe65dcf12029fb22d7d761f718605a236b9d106296f90ff97d6b4",
+      "lastmod": "2026-10-18"
     },
     "AppUpdateProgramRequest": {
       "hash": "20c3baf6b02a82c6a0d227c0701993cde2b83456c044a3c139a1a87aae430003",
@@ -2245,8 +2245,8 @@
       "lastmod": "2026-09-15"
     },
     "NewPolicyGroupRequest": {
-      "hash": "162406e3425a6f8cc60dfb5f2fe5683fa5db567a3a86dc13ec9589f30a24f29a",
-      "lastmod": "2026-10-15"
+      "hash": "276443fa09347b9f8331d6b8290bd39bf04b775bc573839962cfd87979f58dc1",
+      "lastmod": "2026-10-18"
     },
     "OidcIssuerRegistrationRequest": {
       "hash": "984e773717cb32a6e51b262bb502b2fdbe3c7dc5bd5f9eae3b4a7b88bf463831",
@@ -2533,8 +2533,8 @@
       "lastmod": "2026-09-15"
     },
     "PolicyGroup": {
-      "hash": "ff20848c640f77c6ea6ebcdb6379553c82e235543f0d3acd5434188053371253",
-      "lastmod": "2026-10-15"
+      "hash": "f64ab29b366a51f9d2d639b6412815b213ea15f6a88f53826e7746ccb452e67c",
+      "lastmod": "2026-10-18"
     },
     "PolicyGroupMetadata": {
       "hash": "9a0a3074a882c5b389aed169f6d2c7991ea18e2a7a7bd4533853d7f7f9ee3b38"
@@ -3116,8 +3116,8 @@
       "lastmod": "2026-09-15"
     },
     "UpdatePolicyGroupRequest": {
-      "hash": "d58e95473823b6aa23349acae950300e341dff2180f301d0a18c67249a42f69c",
-      "lastmod": "2026-10-15"
+      "hash": "0179fa81003e6ef0afba06b3542a984d79f2155a1caf126a37caeaba1abee74d",
+      "lastmod": "2026-10-18"
     },
     "UpdatePolicyIssueRequest": {
       "hash": "db772f1e8ec2ce9e71c4f1e78d9c98f6ba4b7c7cd1904eeace2279bea114637e",
