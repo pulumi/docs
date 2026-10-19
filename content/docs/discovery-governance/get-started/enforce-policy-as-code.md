@@ -87,7 +87,7 @@ To create a policy group for stacks:
 
 1. Select **Create preventative policy group**
 1. **Name**: Enter a descriptive name for the policy group
-1. **Entities**: Select **Choose stacks** to select which stacks this group will govern
+1. **Entities**: Select **Choose stacks** or **Match by tags** to select which stacks this group will govern
 1. **Policy Packs**: Select **Select policy packs** to choose which policy packs to enforce
 1. Configure enforcement level (Advisory or Mandatory) for each policy pack
 1. Select **Save Policy Group**
@@ -98,7 +98,7 @@ To create a policy group for cloud accounts:
 
 1. Select **Create audit policy group**
 1. **Name**: Enter a descriptive name for the policy group
-1. **Entities**: Select **Choose accounts** to select which cloud accounts this group will scan
+1. **Entities**: Select **Choose accounts** or **Match by tags** to select which cloud accounts this group will scan
 1. **Policy Packs**: Select **Select policy packs** to choose which policy packs to enforce
 1. Configure enforcement level (Advisory or Mandatory) for each policy pack
 1. Select **Save Policy Group**
