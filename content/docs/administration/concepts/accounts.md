@@ -198,12 +198,10 @@ Deleting your account removes your access to every organization you belong to. *
 
 ### Before you delete your account
 
-Pulumi Cloud deletes your account only when you are not the only admin of any organization. This includes a Free organization, because its single member is also its admin. Organizations whose membership is managed by GitHub, GitLab, or Bitbucket are not checked.
+Pulumi Cloud deletes your account only when you are not the only admin of any organization, including a Free organization you own. If you are the only admin of one or more organizations, Pulumi Cloud doesn't delete your account and lists the organizations involved. For each one, do one of the following, then try again:
 
-If you are the only admin of one or more organizations, Pulumi Cloud doesn't delete your account and lists the organizations involved. For each one, do one of the following, then try again:
-
-- [Make another member an admin](/docs/administration/concepts/organizations/#organization-roles) of the organization.
-- [Delete the organization](/docs/administration/concepts/organizations/#deleting-an-organization). Deleting an organization does not delete any cloud resources its stacks provisioned — those keep running in your cloud provider account.
+- [Make another member an admin](/docs/administration/concepts/organizations/#organization-roles) of the organization. A Free organization supports only one member, so this option isn't available for it.
+- [Delete the organization](/docs/administration/concepts/organizations/#deleting-an-organization). You need to cancel its subscription first.
 
 If you sign in with an email address and password, Pulumi Cloud also asks for your password before it deletes your account.
 

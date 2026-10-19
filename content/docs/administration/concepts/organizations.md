@@ -167,12 +167,14 @@ To restore a stack:
 
 Organization deletion is a permanent action and can only be performed by an organization admin.
 
+Before deleting an organization, make sure you have [transferred any stacks](#transferring-stacks) you want to keep to another organization. Deleting an organization does not delete any cloud resources its stacks provisioned — those keep running in your cloud provider account.
+
 To delete an organization:
 
-1. Navigate to **Settings**.
-1. Select **Delete organization**.
+1. Navigate to **Settings** > **Billing & usage** (`https://app.pulumi.com/<org-name>/settings/billing-usage`) and select **Cancel subscription**. Pulumi Cloud doesn't delete an organization while its subscription is active.
+1. Navigate to **Settings** > **General** (`https://app.pulumi.com/<org-name>/settings/general`) and select **Delete organization**.
 
-Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization.
+Replace `<org-name>` with your organization's name.
 
 For more information, see [How can I delete a Pulumi organization?](/docs/support/faq/pulumi-cloud/#how-can-i-delete-a-pulumi-organization)
 

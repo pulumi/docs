@@ -103,7 +103,7 @@ To learn more about this process, see [Transferring stacks](/docs/administration
 
 Organization deletion is a permanent action and can only be performed by an organization admin.
 
-In [Pulumi Cloud](https://app.pulumi.com/signin), open your organization, navigate to **Settings**, and select the **Delete organization** option.
+In [Pulumi Cloud](https://app.pulumi.com/signin), open your organization, cancel its subscription under **Settings** > **Billing & usage** (`https://app.pulumi.com/<org-name>/settings/billing-usage`), then select **Delete organization** under **Settings** > **General** (`https://app.pulumi.com/<org-name>/settings/general`). Replace `<org-name>` with your organization's name.
 
 If you don't see this option, confirm you're an organization admin.
 
