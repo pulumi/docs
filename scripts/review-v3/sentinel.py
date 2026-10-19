@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """The Sentinel — deterministic merge-gate evaluator for the v3 review workflow.
 
-One blocking check-run answers "is this PR mergeable?" from five gates:
+One blocking check-run answers "is this PR mergeable?" from five gates, plus
+a sixth on the PRs the shared queue labels as colliding:
 
   G1 review-ran         a current review exists at head SHA (or none is
                         required: mechanical PRs, fork PRs; a trivial PR
@@ -25,6 +26,10 @@ One blocking check-run answers "is this PR mergeable?" from five gates:
                         must be applied to be believed
   G5 oversized-ack      review:oversized PRs replace G1/G2 with an explicit
                         `/oversized-ack` in the approving review body
+  G6 no-collision       only on a PR the shared queue labelled
+                        `queue:collides-with-#N` (pr_queue.py): red while #N
+                        is open, when enforced (`--collision-gate`); an
+                        advisory row otherwise. Absent on every other PR
 
 One config-driven shortcut sits around the gates
 (`.github/review-routing.yml`): `not_governed` lanes (Dependabot, the
@@ -244,6 +249,11 @@ class Gh:
 
     def get_pr(self) -> dict:
         return json.loads(self._run(["api", f"repos/{self.repo}/pulls/{self.pr}"]))
+
+    def get_pr_state(self, number: int) -> str:
+        """`open` / `closed` for another PR (G6 reads the PRs a collision
+        label names)."""
+        return self._run(["api", f"repos/{self.repo}/pulls/{number}", "--jq", ".state"]).strip()
 
     def list_files(self) -> list[dict]:
         out = self._run(["api", "--paginate", f"repos/{self.repo}/pulls/{self.pr}/files"])
@@ -585,6 +595,59 @@ TRIVIAL_LABEL = "review:trivial"
 # instead of restating it.
 OVERSIZED_LABEL = "review:oversized"
 TRIAGE_PROSE_MARKER = "<!-- TRIAGE_PROSE -->"
+# The shared queue (pr_queue.py, pr-queue.yml) puts `queue:collides-with-#N`
+# on the PR that should wait for open #N — one side of an overlapping pair,
+# never both. A family, so the workflow's label filter matches its prefix.
+COLLIDES_LABEL_PREFIX = "queue:collides-with-#"
+_COLLIDES_RE = re.compile(r"^" + re.escape(COLLIDES_LABEL_PREFIX) + r"(\d+)$")
+
+
+def collides_with(labels: set[str]) -> list[int]:
+    """The PR numbers this PR's `queue:collides-with-#N` labels name."""
+    out = []
+    for l in labels:
+        m = _COLLIDES_RE.match(l or "")
+        if m:
+            out.append(int(m.group(1)))
+    return sorted(set(out))
+
+
+def _collision_gate(gh: "Gh", labels: set[str], *, enforce: bool) -> Gate | None:
+    """G6 no-collision. None (no row at all) when the PR carries no
+    collides-with label, so the five-gate table every other PR shows is
+    unchanged. Red only while a named PR is still open AND enforcement is
+    on (`--collision-gate`, the REVIEW_V3_COLLISION_GATE switch); before
+    that it is an advisory `skip` row that says what it would block on,
+    which is how the gate gets measured before it can stop anything. A
+    failed state lookup is an `error` (action_required) only when enforcing
+    — an advisory row must not turn a check orange."""
+    targets = collides_with(labels)
+    if not targets:
+        return None
+    still_open, unreadable = [], []
+    for n in targets:
+        try:
+            state = gh.get_pr_state(n)
+        except SentinelDataError as exc:
+            unreadable.append((n, str(exc)))
+            continue
+        if state == "open":
+            still_open.append(n)
+    if unreadable:
+        names = ", ".join(f"#{n}" for n, _ in unreadable)
+        if enforce:
+            return Gate("G6 no-collision", "error", f"couldn't read the state of {names}: {unreadable[0][1][:200]}")
+        return Gate("G6 no-collision", "skip", f"advisory (not enforced): couldn't read the state of {names}")
+    if not still_open:
+        closed = ", ".join(f"#{n}" for n in targets)
+        return Gate("G6 no-collision", "ok", f"the PR it collided with ({closed}) is no longer open")
+    names = ", ".join(f"#{n}" for n in still_open)
+    msg = (f"this PR's changes overlap {names}, which the shared queue merges first. Let {names} merge, then "
+           f"merge master into this branch and re-check the overlap; the `{COLLIDES_LABEL_PREFIX}N` label clears "
+           f"on the queue's next pass (hourly, or when {names} closes)")
+    if enforce:
+        return Gate("G6 no-collision", "red", msg)
+    return Gate("G6 no-collision", "skip", f"advisory (not enforced yet): {msg}")
 
 
 def _is_external(pr_detail: dict) -> bool:
@@ -849,7 +912,8 @@ def _stamp_report_only(verdict: Verdict) -> Verdict:
     return verdict
 
 
-def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Verdict:
+def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False,
+             collision_gate: bool = False) -> Verdict:
     pr = gh.get_pr()
     head_sha = (pr.get("head") or {}).get("sha") or ""
     labels = {(l.get("name") or "") for l in (pr.get("labels") or [])}
@@ -1332,6 +1396,11 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     else:
         gates.append(Gate("G5 oversized-ack", "skip", "not oversized"))
 
+    # G6 no-collision (only when the shared queue labelled one) -----------
+    g6 = _collision_gate(gh, labels, enforce=collision_gate)
+    if g6 is not None:
+        gates.append(g6)
+
     # ---- Conclusion -----------------------------------------------------
     waived, waive_note = _waive_state(gh, config, labels)
     any_error = any(g.status == "error" for g in gates)
@@ -1590,6 +1659,10 @@ def render_status_comment(verdict: Verdict) -> str:
     for g in verdict.gates:
         if g.status in ("red", "error"):
             need = g.message
+        elif g.status == "skip" and g.message.startswith("advisory"):
+            # An unenforced gate's row (G6 before its switch flips) is not
+            # "doesn't apply" — it applies and would block; it just doesn't yet.
+            need = g.message[0].upper() + g.message[1:] + "."
         else:
             # "Nothing to do: matrix-required approval present." — the blurb
             # answers the column, the gate's own message says why, and a
@@ -1686,6 +1759,11 @@ def main() -> int:
     parser.add_argument("--report-only", action="store_true")
     parser.add_argument("--update-strip", action="store_true")
     parser.add_argument(
+        "--collision-gate", action="store_true",
+        help="Enforce G6 (a `queue:collides-with-#N` naming an open PR is red). "
+             "Without it G6 is an advisory row.",
+    )
+    parser.add_argument(
         "--status-comment", action="store_true",
         help="Maintain the pinned gate-status comment. Both modes do, on every "
              "PR; in report-only mode the comment leads with a preview banner "
@@ -1715,7 +1793,8 @@ def main() -> int:
     # still stands. The docstring above promises action_required for exactly
     # this; it was only true for errors raised *inside* a gate.
     try:
-        verdict = evaluate(gh, config, report_only=args.report_only)
+        verdict = evaluate(gh, config, report_only=args.report_only,
+                           collision_gate=args.collision_gate)
     except SentinelDataError as exc:
         verdict = Verdict(
             conclusion="action_required",

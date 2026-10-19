@@ -219,6 +219,10 @@ Inside the step there is no question to ask. Planning is read-only — one local
 
 After acting, run collect (`--pr` for the touched PRs is enough) → analyze (`--judgments` again) → render, and update the same Artifact. Merged and closed PRs drop out; the board is the report.
 
+## The shared queue (phase 2)
+
+`.github/workflows/pr-queue.yml` runs collect → analyze → render once an hour for everyone (`collect.py --shared`, `analyze.py --owner any`, no judge step) and `scripts/review-v3/pr_queue.py` stamps the shared verdict on each PR as `queue:stamp` / `queue:judge` / `queue:blocked`, the deciding team as `queue:route:<role>`, and `queue:collides-with-#N` on the PR that should merge after #N (the Sentinel's G6 reads that one). The queue and board land in the `pr-review-queue` artifact and under `pr-review/queue/` in the evidence ledger. Those labels are the shared board's verdict, not yours: this skill still collects and analyzes for **you** (your lanes, your own PRs, your send-backs), so a row can read `stamp` here and wear `queue:judge`, or the reverse. Trust the run you just made; the label is what a teammate without the skill sees in GitHub's UI.
+
 ## Hand-offs
 
 - Author work (an open 🚨/❓ item, a fix the author should make): tell them to run `/address-review N`; that is where dispositions get recorded with the outcome the post-merge scrape reads.

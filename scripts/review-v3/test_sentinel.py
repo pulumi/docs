@@ -103,6 +103,7 @@ class StubGh:
         label_events=None,
         workflow_runs=None,
         workflow_runs_error=False,
+        pr_states=None,
     ):
         self.pr = pr or {}
         self.files = files or []
@@ -117,12 +118,21 @@ class StubGh:
         self.label_events = label_events or []
         self.workflow_runs = workflow_runs or []
         self.workflow_runs_error = workflow_runs_error
+        self.pr_states = pr_states or {}  # other PR number -> open/closed, or an Exception
+        self.state_calls = []
         self.patched = []  # (comment_id, body)
         self.posted = []   # body
         self.deleted = []  # comment_id
 
     def get_pr(self):
         return self.pr
+
+    def get_pr_state(self, number):
+        self.state_calls.append(number)
+        st = self.pr_states.get(number, "open")
+        if isinstance(st, Exception):
+            raise st
+        return st
 
     def list_files(self):
         return self.files
@@ -1722,6 +1732,9 @@ def test_label_event_filter_covers_every_label_the_evaluator_reads():
 
     missing = [l for l in sorted(read_by_evaluator)
                if f"github.event.label.name == '{l}'" not in wf]
+    # …and the label family G6 reads, matched by prefix.
+    if f"startsWith(github.event.label.name, '{sentinel.COLLIDES_LABEL_PREFIX}')" not in wf:
+        missing.append(sentinel.COLLIDES_LABEL_PREFIX + "*")
     assert not missing, (
         "labels the evaluator reads that the workflow's label-event filter "
         f"drops (they only take effect on the next unrelated event): {missing}"
@@ -2057,6 +2070,76 @@ def test_g4_reads_the_deploy_run_when_no_status_was_written():
 
     got = sentinel._staging_evidence(_Gh(), "a" * 40)
     assert got and "succeeded" in got and "run 1" in got
+
+
+# ---- G6 no-collision (the shared queue's label) ---------------------------
+
+
+def _green_with(labels=(), **kw):
+    """test_dispositions_flip_g2_green's PR — every gate green — plus labels."""
+    st = _state_with(["F1"])
+    card = author_card([("F1", "must")], state=st)
+    return StubGh(pr=pr_meta(labels=labels), files=[docs_file_substantive()], comments=[card],
+                  reviews=[approval("guild-member")],
+                  memberships={("docs-guild", "guild-member"): "active"}, **kw)
+
+
+def test_g6_is_absent_without_a_collision_label():
+    gh = _green_with(labels=("queue:judge", "queue:route:docs-guild"))
+    v = sentinel.evaluate(gh, CONFIG, collision_gate=True)
+    assert not any(g.name.startswith("G6") for g in v.gates)
+    assert v.conclusion == "success" and gh.state_calls == []
+
+
+def test_g6_red_while_the_named_pr_is_open_and_enforced():
+    gh = _green_with(labels=("queue:collides-with-#7",), pr_states={7: "open"})
+    v = sentinel.evaluate(gh, CONFIG, collision_gate=True)
+    g6 = _gate(v, "G6")
+    assert g6.status == "red" and "#7" in g6.message
+    assert v.conclusion == "failure"
+    # red non-G4 gates carry the break-glass pointer, so a waive covers G6
+    assert "review:waived" in v.summary
+
+
+def test_g6_green_once_the_named_pr_closes():
+    gh = _green_with(labels=("queue:collides-with-#7", "queue:collides-with-#8"), pr_states={7: "closed", 8: "closed"})
+    v = sentinel.evaluate(gh, CONFIG, collision_gate=True)
+    assert _gate(v, "G6").status == "ok" and v.conclusion == "success"
+    assert sorted(gh.state_calls) == [7, 8]
+
+
+def test_g6_unenforced_is_an_advisory_row_that_never_blocks():
+    gh = _green_with(labels=("queue:collides-with-#7",), pr_states={7: "open"})
+    v = sentinel.evaluate(gh, CONFIG)
+    g6 = _gate(v, "G6")
+    assert g6.status == "skip" and g6.message.startswith("advisory") and "#7" in g6.message
+    assert v.conclusion == "success"
+    body = sentinel.render_status_comment(v)
+    row = next(l for l in body.splitlines() if "**G6 no-collision**" in l)
+    assert "Advisory (not enforced yet)" in row and "Doesn't apply" not in row
+
+
+def test_g6_lookup_failure_is_action_required_only_when_enforced():
+    boom = sentinel.SentinelDataError("HTTP 502")
+    v = sentinel.evaluate(_green_with(labels=("queue:collides-with-#7",), pr_states={7: boom}), CONFIG,
+                          collision_gate=True)
+    assert _gate(v, "G6").status == "error" and v.conclusion == "action_required"
+    v = sentinel.evaluate(_green_with(labels=("queue:collides-with-#7",), pr_states={7: boom}), CONFIG)
+    assert _gate(v, "G6").status == "skip" and v.conclusion == "success"
+
+
+def test_g6_is_waivable():
+    gh = _green_with(labels=("queue:collides-with-#7", "review:waived"), pr_states={7: "open"},
+                     label_events=[{"event": "labeled", "label": {"name": "review:waived"}, "actor": {"login": "guild-member"}}])
+    v = sentinel.evaluate(gh, CONFIG, collision_gate=True)
+    assert _gate(v, "G6").status == "red"
+    assert v.conclusion == "success" and v.waived
+
+
+def test_g6_ignores_labels_that_only_look_like_collisions():
+    gh = _green_with(labels=("queue:collides-with-#abc", "queue:collides-with-7"))
+    v = sentinel.evaluate(gh, CONFIG, collision_gate=True)
+    assert not any(g.name.startswith("G6") for g in v.gates)
 
 
 def run_standalone() -> int:

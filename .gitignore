@@ -169,6 +169,12 @@ _vendor/
 # sees them.
 /.pr-review-evidence/
 /.pr-review-state/
+# pr_queue.py (the shared queue, pr-queue.yml): the published copies, the
+# label plan, the terminal rendering, and the PRs whose G6 input moved.
+/.pr-review-queue-publish/
+/.pr-review-queue-labels.json
+/.pr-review-terminal.txt
+/.pr-queue-changed.txt
 
 # Glow-up lane equivalents (`.glowup-backlog.json`, the composed work list,
 # and `.glowup-scope-report.json`, the scope gate's report). Both are written

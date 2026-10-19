@@ -56,6 +56,18 @@ The six `review:*` state labels are **mutually exclusive**. Setting one removes 
 | `content-review/judgment` | `bfd4f2` | At least one judgment-class fix; opens un-armed and needs a human eye. |
 | `content-review/glow-up` | `d4c5f9` | A whole-article glow-up from the glow-up lane. |
 
+## Shared queue labels (set by `pr-queue.yml`)
+
+Phase 2 of `/pr-review` (pulumi/docs#21641): `pr-queue.yml` computes the queue once for everyone (`collect.py --shared` → `analyze.py --owner any`) and `scripts/review-v3/pr_queue.py` stamps the verdict on each open, non-draft PR. Only `queue:*` labels are ever touched; a PR converted to draft loses them, a closed PR keeps whatever it had. Written only while the `PR_QUEUE` repo variable is `'1'` (`'report'` prints the plan). `pr_queue.py` creates a label before it applies it (a missing label fails the whole `POST`), so these need no manual setup — the commands below are for pinning colors and descriptions ahead of time.
+
+| Label | Color | Description |
+|---|---|---|
+| `queue:stamp` | `0e8a16` | Every stamp gate passes on the shared board; approving asserts nothing beyond what CI verified. Exactly one of the three verdict labels is on every queued PR. |
+| `queue:judge` | `fbca04` | Decidable from the board; something needs a human's call. Judge rows are published **unjudged** — the judge step is a model call and stays in the skill. |
+| `queue:blocked` | `b60205` | Can't merge regardless: unanswered findings, conflict, red CI, stale or errored review, changes requested. |
+| `queue:route:<role>` | `c5def5` | The team that owes a decision (`docs-guild`, `blog`, `marketing`, `tools` — the roles in `.github/review-routing.yml`). On `queue:stamp` / `queue:judge` rows only, one per owning role; a blocked row's next move is the author's. Not a verdict: the shared board owns every lane, so it never computes `route`. |
+| `queue:collides-with-#N` | `d93f0b` | This PR overlaps open #N (hunks touch on the base side, or it adds links to an alias-only URL #N removes) and should merge **after** it. Only ever on the PR that waits, never on both sides of a pair, so no set of these can deadlock two PRs. Read by the Sentinel's **G6** — advisory until `REVIEW_V3_COLLISION_GATE` is `'1'`, then red while #N is open. Cleared on the queue's next pass (hourly, or when #N closes); `pr_queue.py` deletes the definitions whose #N has closed. |
+
 ## Create them all (`gh` one-liner)
 
 Run from a clone of `pulumi/docs` with `gh` authenticated as a user with write access:
@@ -85,6 +97,13 @@ gh label create "review:author-stalled"  --color fad8c7 --description "Waiting o
 gh label create "content-review/deterministic" --color c5def5 --description "Content-review PR whose fixes are all deterministic-class (links, Vale, frontmatter)"
 gh label create "content-review/judgment"      --color bfd4f2 --description "Content-review PR containing judgment-class fixes (needs a human eye)"
 gh label create "content-review/glow-up"       --color d4c5f9 --description "Content glow-up PR (whole-article polish)"
+gh label create "queue:stamp"            --color 0e8a16 --description "Shared /pr-review queue: every stamp gate passes; approving asserts nothing beyond CI"
+gh label create "queue:judge"            --color fbca04 --description "Shared /pr-review queue: decidable from the board, needs a human's call"
+gh label create "queue:blocked"          --color b60205 --description "Shared /pr-review queue: can't merge yet (findings, conflict, red CI, stale review)"
+for role in docs-guild blog marketing tools; do
+  gh label create "queue:route:$role"    --color c5def5 --description "Shared /pr-review queue: this team owes the decision"
+done
+# queue:collides-with-#N is per-PR; pr_queue.py creates and prunes those itself.
 ```
 
 ## Retired labels

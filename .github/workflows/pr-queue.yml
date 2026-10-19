@@ -1,0 +1,278 @@
+name: PR queue
+
+# Phase 2 of /pr-review (pulumi/docs#21641): the queue, computed once for
+# everyone instead of on every approver's machine. It runs the SAME phase-1
+# scripts the skill runs — scripts/review-v3/collect.py (`--shared`: no
+# approver), analyze.py (`--owner any`: every lane), render.py — and then
+# scripts/review-v3/pr_queue.py, which only maps the analyzed verdicts onto
+# two outputs that outlive the run:
+#
+#   1. the published queue: queue.json + board.html under `pr-review/queue/`
+#      in the evidence-ledger bucket (plus an immutable `runs/<date>/<ts>.json`
+#      per run, the measurement the issue asked phase 1 to be), the board as a
+#      workflow artifact, and the terminal rendering in the run summary;
+#   2. `queue:*` labels on each open PR — `queue:stamp|judge|blocked`,
+#      `queue:route:<role>` (who decides a stamp/judge row) and
+#      `queue:collides-with-#N` (wait for #N), which the Sentinel's G6 reads.
+#
+# The judge step (the skill's one model call) stays OUT of CI: judge rows
+# publish unjudged, and an approver's /pr-review judges them on demand.
+#
+# SECURITY: nothing here checks out or executes PR code. The heavy job runs
+# only on `schedule` and `workflow_dispatch` (default branch), reads every PR
+# through the GitHub API as data, and checks out the default branch for the
+# scripts and the content tree analyze.py's alias map reads.
+#
+# Why PR events go through a dispatch. A `pull_request_target` run shows up
+# as a check on the PR that fired it, and a concurrency group cancels the
+# older pending run — so a burst of pushes would paint cancelled ✗ checks
+# across unrelated PRs (review-sentinel.yml's header has the numbers). So the
+# PR-event job is a ~5 s `poke` that only dispatches this workflow; the
+# dispatched `queue` run is on the default branch, attached to no PR, and its
+# concurrency group (cancel-in-progress) plus a short settle sleep collapse a
+# burst of events into one recompute. That also keeps the API budget sane:
+# one recompute per burst, not one per event.
+#
+# Rollout switch — repo variable PR_QUEUE, tri-state, literal comparisons
+# only (`!= '0'` is TRUE for unset; see review-sla-sweep.yml):
+#   unset    → dark. No scheduled run, no pokes. A manual dispatch still
+#              computes and publishes, and writes labels only when its
+#              `apply_labels` input says so.
+#   'report' → scheduled + event-driven runs compute and publish the queue;
+#              the label plan is printed, never written.
+#   '1'      → as 'report', and the labels are written.
+# G6's enforcement is a separate switch (REVIEW_V3_COLLISION_GATE, read by
+# review-sentinel.yml), so labels can soak before they can block a merge.
+
+on:
+  schedule:
+    - cron: '17 * * * *'   # hourly, off the :00/:30 rush
+  pull_request_target:
+    # open / push / reopen / ready / close are the events that change what a
+    # collision is between. `labeled` is left out on purpose: our own label
+    # writes fire no event, and a human's label change moves no collision —
+    # the hourly run picks up whatever it does move.
+    types: [opened, reopened, ready_for_review, synchronize, converted_to_draft, closed]
+  workflow_dispatch:
+    inputs:
+      apply_labels:
+        description: 'Write queue:* labels (otherwise follow the PR_QUEUE variable; dark = plan only)'
+        type: boolean
+        required: false
+        default: false
+      settle_seconds:
+        description: 'Wait this long first, so a burst of events collapses into one run'
+        type: string
+        required: false
+        default: '0'
+
+permissions:
+  contents: read
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+
+jobs:
+  poke:
+    # PR events only: dispatch the queue run and stop. No checkout, no PR
+    # data in a shell — the one thing it runs is a fixed `gh workflow run`.
+    if: >-
+      github.event_name == 'pull_request_target' &&
+      github.repository == 'pulumi/docs' &&
+      (vars.PR_QUEUE == 'report' || vars.PR_QUEUE == '1')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      actions: write
+    steps:
+      - name: Dispatch the queue run
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          gh workflow run pr-queue.yml --repo "$REPO" --ref "$DEFAULT_BRANCH" -f settle_seconds=90 \
+            || echo "::warning::could not dispatch the queue run; the hourly run will catch up"
+
+  queue:
+    name: Compute and publish the shared queue
+    if: >-
+      github.repository == 'pulumi/docs' &&
+      (github.event_name == 'workflow_dispatch' ||
+       (github.event_name == 'schedule' && (vars.PR_QUEUE == 'report' || vars.PR_QUEUE == '1')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # One recompute at a time; a newer one supersedes a queued or running
+    # one. Safe to cancel: every output is re-derived from scratch next run,
+    # and label writes are idempotent. These runs are attached to no PR, so
+    # a cancellation paints nothing on one.
+    concurrency:
+      group: pr-queue
+      cancel-in-progress: true
+    # PULUMI_STACK_NAME is environment-scoped (same as review-sla-sweep.yml).
+    environment: production
+    permissions:
+      contents: read
+      pull-requests: write   # queue:* labels on PRs
+      issues: write          # repo label definitions (create / prune)
+      actions: write         # dispatch the Sentinel for PRs whose G6 input changed
+      checks: read
+      statuses: read
+      id-token: write        # ESC OIDC + AWS
+    steps:
+      - name: Settle
+        env:
+          SETTLE: ${{ github.event.inputs.settle_seconds }}
+        run: |
+          case "${SETTLE:-0}" in
+            ''|*[!0-9]*) SETTLE=0 ;;
+          esac
+          [ "$SETTLE" -gt 300 ] && SETTLE=300
+          [ "$SETTLE" -gt 0 ] && sleep "$SETTLE" || true
+
+      - name: Resolve label mode
+        id: mode
+        env:
+          EVENT: ${{ github.event_name }}
+          INPUT_APPLY: ${{ github.event.inputs.apply_labels }}
+          PR_QUEUE: ${{ vars.PR_QUEUE }}
+        run: |
+          APPLY=false
+          if [ "$PR_QUEUE" = "1" ]; then
+            APPLY=true
+          elif [ "$EVENT" = "workflow_dispatch" ] && [ "$INPUT_APPLY" = "true" ]; then
+            APPLY=true
+          fi
+          echo "apply=$APPLY" >> "$GITHUB_OUTPUT"
+          echo "label writes: $APPLY (PR_QUEUE=${PR_QUEUE:-unset}, event=$EVENT)"
+
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Checkout (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: python3 -m pip install --quiet pyyaml
+
+      # Files, comments and commits only change when a PR does; collect.py
+      # keys them by (head SHA, updated_at), so yesterday's cache is still
+      # right for every PR nobody touched. Most of the API budget is here.
+      - name: Restore the collect cache
+        uses: actions/cache@v6
+        with:
+          path: .pr-review-cache
+          key: pr-queue-cache-${{ github.run_id }}
+          restore-keys: pr-queue-cache-
+
+      - name: Collect
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/review-v3/collect.py --repo "${{ github.repository }}" --shared \
+            --out .pr-review-queue.json --cache-dir .pr-review-cache --gc
+
+      - name: Analyze
+        run: python3 scripts/review-v3/analyze.py --in .pr-review-queue.json --owner any
+
+      - name: Render
+        run: |
+          python3 scripts/review-v3/render.py --in .pr-review-queue.json --board .pr-review-board.html
+          {
+            echo "## Shared PR queue"
+            echo
+            echo "The board is in this run's \`pr-review-queue\` artifact; judge rows are unjudged (run \`/pr-review\` to judge them)."
+            echo
+            echo '```text'
+            # The summary is capped at 1 MiB; cut from a file, not a pipe
+            # (pipefail would fail the step on head's SIGPIPE).
+            python3 scripts/review-v3/render.py --in .pr-review-queue.json --terminal > .pr-review-terminal.txt
+            head -c 900000 .pr-review-terminal.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Stamp queue labels
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APPLY: ${{ steps.mode.outputs.apply }}
+        run: |
+          ARGS=(labels --in .pr-review-queue.json --repo "${{ github.repository }}"
+                --changed-out .pr-queue-changed.txt --summary-out .pr-review-queue-labels.json)
+          if [ "$APPLY" = "true" ]; then
+            ARGS+=(--apply)
+          fi
+          python3 scripts/review-v3/pr_queue.py "${ARGS[@]}"
+
+      # Labels written with GITHUB_TOKEN fire no `labeled` event, so the
+      # Sentinel would not re-read G6 until something else happened on the
+      # PR. Dispatch it for exactly the PRs whose collision labels changed.
+      - name: Re-evaluate the Sentinel where G6 moved
+        if: vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          [ -s .pr-queue-changed.txt ] || { echo "no collision labels changed"; exit 0; }
+          while read -r PR; do
+            case "$PR" in ''|*[!0-9]*) continue ;; esac
+            gh workflow run review-sentinel.yml --repo "$REPO" --ref "$DEFAULT_BRANCH" -f pr_number="$PR" \
+              || echo "::warning::could not dispatch the Sentinel for #$PR"
+          done < .pr-queue-changed.txt
+
+      - name: Configure AWS credentials
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: pr-queue
+          aws-region: us-west-2
+
+      - name: Install Pulumi CLI
+        uses: pulumi/actions@v7
+
+      - name: Resolve evidence bucket
+        id: bucket
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
+            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+          if [ -n "$BUCKET" ]; then
+            echo "evidence_uri=s3://$BUCKET/pr-review" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::ledger bucket unresolved; the queue publishes as the workflow artifact only"
+          fi
+
+      - name: Publish the queue
+        env:
+          PR_REVIEW_EVIDENCE_URI: ${{ steps.bucket.outputs.evidence_uri }}
+        run: |
+          python3 scripts/review-v3/pr_queue.py publish --in .pr-review-queue.json \
+            --board .pr-review-board.html --out-dir .pr-review-queue-publish
+          cp .pr-review-queue-labels.json .pr-review-queue-publish/labels.json
+
+      - name: Upload the queue artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: pr-review-queue
+          path: .pr-review-queue-publish/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 14

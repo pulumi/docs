@@ -149,6 +149,34 @@ def test_concat_json_docs_flattens_gh_paginate_output():
     assert gh_client._concat_json_docs("") is None
 
 
+def test_gh_backend_carries_the_http_status_so_a_403_on_teams_reads_as_unknown():
+    """`gh` reports the status only in stderr. A 403 used to arrive with
+    status None, so team_exists() re-raised it and collect died — exactly
+    what a repo-scoped GITHUB_TOKEN gets on `orgs/<org>/teams/<slug>`
+    (pr-queue.yml's shared collect)."""
+    import subprocess  # noqa: PLC0415
+
+    def fake_run(args, **kw):
+        path = args[2]
+        code = "403" if "teams" in path else "404"
+        raise subprocess.CalledProcessError(1, args, output="", stderr=f"gh: Resource not accessible (HTTP {code})")
+
+    real = gh_client.subprocess.run
+    gh_client.subprocess.run = fake_run
+    try:
+        gh = GhClient("pulumi/docs", "gh")
+        assert gh.team_exists("pulumi", "docs-guild") is None
+        assert gh.team_member("pulumi", "docs-guild", "someone") is None
+        try:
+            gh.get("repos/pulumi/docs/pulls/1")
+        except GhNotFound as exc:
+            assert exc.status == 404
+        else:
+            raise AssertionError("a 404 must raise GhNotFound")
+    finally:
+        gh_client.subprocess.run = real
+
+
 def run_standalone() -> int:
     """The --self-test harness; test list bound at call time (test_sentinel.py)."""
     import inspect  # noqa: PLC0415

@@ -130,6 +130,12 @@ jobs:
     # and then arms auto-merge, so the Sentinel stayed red on a bot regen
     # nobody pushes to and auto-merge never completed.
     #
+    # `queue:collides-with-#N` is a family (one label per blocking PR), so
+    # it is matched by prefix. The shared queue writes it with the
+    # workflow's GITHUB_TOKEN, which fires no event, so pr-queue.yml also
+    # dispatches this workflow for every PR whose collision labels changed;
+    # the prefix here covers a human adding or removing one by hand.
+    #
     # `test_label_event_filter_covers_every_label_the_evaluator_reads`
     # derives this list from the evaluator's constants and review-routing.yml
     # rather than restating it, so a further label cannot go missing the same way.
@@ -141,7 +147,8 @@ jobs:
        github.event.label.name == 'review:oversized' ||
        github.event.label.name == 'review:trivial' ||
        github.event.label.name == 'review:prose-flagged' ||
-       github.event.label.name == 'automation/merge') &&
+       github.event.label.name == 'automation/merge' ||
+       startsWith(github.event.label.name, 'queue:collides-with-#')) &&
       (github.event_name != 'pull_request_review' ||
        github.event.action != 'edited' ||
        github.event.review.state == 'approved')
@@ -247,6 +254,11 @@ jobs:
           # a missing/expired token degrades loud, not wrong.
           GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
+          # G6's own switch. The gate only exists on a PR the shared queue
+          # (pr-queue.yml) labelled `queue:collides-with-#N`, and until this
+          # is '1' its row is advisory: it says what it would block on and
+          # never turns the check red. Literal comparison (see the header).
+          COLLISION_GATE: ${{ vars.REVIEW_V3_COLLISION_GATE == '1' }}
         run: |
           # --status-comment is passed unconditionally on purpose: the
           # evaluator maintains the pinned comment in both modes, on every PR
@@ -260,6 +272,9 @@ jobs:
             ARGS+=(--report-only)
           else
             ARGS+=(--update-strip)
+          fi
+          if [ "$COLLISION_GATE" = "true" ]; then
+            ARGS+=(--collision-gate)
           fi
           python3 scripts/review-v3/sentinel.py "${ARGS[@]}" > verdict.json
           cat verdict.json

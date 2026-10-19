@@ -930,10 +930,16 @@ def approver_team_memberships(gh: GhClient, repo_root: Path | None, prs: list[di
 def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str] | None = None,
             since: str | None = None, cache_dir: Path | None = DEFAULT_CACHE_DIR,
             repo_root: Path = _REPO_ROOT, ai_override: str | None = None, workers: int = 6,
-            allowlist_path: Path | None = None, approver: str | None = None) -> dict:
+            allowlist_path: Path | None = None, approver: str | None = None, shared: bool = False) -> dict:
     listed = gh.list_open_prs()
     chosen = select_prs(listed, numbers=numbers, authors=authors, since=parse_since(since))
-    if not approver:
+    if shared:
+        # The shared queue (pr-queue.yml) is nobody's board: no approver, so
+        # no row is "my own PR", "sent back by me" or "approved by me". Never
+        # ask the token who it is — a PAT in that seat would quietly turn the
+        # team's board into one person's.
+        approver = None
+    elif not approver:
         approver = gh.me()  # who "me" is for the handed-off rule; None on a snapshot without GET/user.json
     errors: list[dict] = []
 
@@ -957,6 +963,7 @@ def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str
         "repo": gh.repo,
         "backend": gh.backend,
         "approver": approver,
+        "shared": shared,
         "my_teams": my_team_memberships(gh, repo_root, approver),
         "teams": routing_teams(gh, repo_root),
         "team_approvers": approver_team_memberships(gh, repo_root, prs, approver),
@@ -1000,6 +1007,8 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--gc", action="store_true", help="drop cache entries for PRs no longer open")
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--approver", help="the approver's login, echoed into queue.json")
+    ap.add_argument("--shared", action="store_true",
+                    help="the shared queue (pr-queue.yml): no approver, and the token is never asked who it is")
     ap.add_argument("--self-test", action="store_true")
     return ap
 
@@ -1012,7 +1021,8 @@ def main(argv: list[str] | None = None) -> int:
     gh = GhClient(args.repo, args.backend, snapshot_dir=args.snapshot_dir, record_dir=args.record_dir)
     cache_dir = None if args.no_cache else Path(args.cache_dir)
     queue = collect(gh, numbers=args.pr, authors=args.author, since=args.since, cache_dir=cache_dir,
-                    ai_override=args.ai_override, workers=args.workers, approver=args.approver)
+                    ai_override=args.ai_override, workers=args.workers, approver=args.approver,
+                    shared=args.shared)
     if args.gc and cache_dir:
         n = gc_cache(cache_dir, {p["number"] for p in gh.list_open_prs()})
         print(f"cache: removed {n} stale file(s)", file=sys.stderr)

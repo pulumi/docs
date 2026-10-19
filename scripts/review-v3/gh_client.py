@@ -249,7 +249,15 @@ class GhClient:
             out = subprocess.run(args, text=True, capture_output=True, check=True, input=stdin).stdout
         except subprocess.CalledProcessError as exc:
             stderr = (exc.stderr or "").strip()
-            status = 404 if ("HTTP 404" in stderr or "Not Found" in stderr) else None
+            # gh prints the status as "(HTTP 403)". Parse it, not just 404:
+            # team_exists / team_member read a 403 as "can't see teams"
+            # (None), and on this backend every non-404 used to arrive with
+            # status None and crash collect — a GITHUB_TOKEN in CI
+            # (pr-queue.yml) cannot read org teams.
+            m = re.search(r"HTTP (\d{3})", stderr)
+            status = int(m.group(1)) if m else None
+            if status is None and "Not Found" in stderr:
+                status = 404
             cls = GhNotFound if status == 404 else GhError
             raise cls(f"gh api {method} {path} failed: {stderr[:300]}", status) from exc
         return _concat_json_docs(out) if out.strip() else None

@@ -166,6 +166,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 | G3 right-approver | an APPROVED latest review at head from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); re-run the failed "Build and deploy testing" run or dispatch it at the branch to retry — **not waivable** |
 | G5 oversized-ack | `review:oversized` PRs: a G3-qualifying approval at head whose comment has `/oversized-ack` at the start of a line | where the command goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
+| G6 no-collision | only present on a PR the shared queue labelled `queue:collides-with-#N`: green once every named PR has closed; red while one is open **and** `REVIEW_V3_COLLISION_GATE` is `'1'` (`--collision-gate`). Unenforced, it is an advisory `skip` row saying what it would block on | let #N merge, merge master in, and the label clears on the queue's next pass — waivable like G1–G3/G5 |
 
 **G4's two witnesses.** The commit status is a *report* of the deploy, not
 the deploy: it is a separate API call made after the run completes, so a
@@ -491,7 +492,7 @@ the per-row judgment calls, as a JSON file the analyzer merges.
 | `screenshot.mjs` | Playwright screenshot helper (`NODE_PATH=/opt/node22/lib/node_modules` on a web session). |
 
 Tests: `test_gh_client.py`, `test_collect.py`, `test_analyze.py`,
-`test_render.py`, `test_act.py` — pytest, and each script's `--self-test`
+`test_render.py`, `test_act.py`, `test_pr_queue.py` — pytest, and each script's `--self-test`
 runs the matching file's `run_standalone()`. Fixtures come from
 `.claude/commands/docs-review/scripts/testdata/` (the v3 author/brief pair,
 the legacy monolith, the normalize-pr* triples) plus in-module PR specs
@@ -501,3 +502,49 @@ every suite sees exactly the record `collect.py` writes.
 The queue never runs a local review refresh: a stale v3 review is a blocked
 row with a `--refresh` action (`/update-review …`), and `pinned-
 comment.sh upsert` is never called on a v3 PR.
+
+## The shared queue (phase 2, pulumi/docs#21641)
+
+`.github/workflows/pr-queue.yml` runs the same three phase-1 scripts once
+for everyone, hourly and after PR open / push / reopen / ready / draft /
+close, and `pr_queue.py` maps the result onto two outputs. Nothing in it
+computes a verdict or a collision: those stay in `analyze.py`.
+
+- **Inputs.** `collect.py --shared` (no approver: no row is anyone's "own
+  PR", "sent back" or "approved by me", and the token is never asked who it
+  is) → `analyze.py --owner any` (every lane is the board's, so the shared
+  board never computes `route`). The judge step stays out of CI: judge rows
+  publish unjudged and `/pr-review` judges them on demand.
+- **Published queue.** `pr_queue.py publish` writes `queue.json` and
+  `board.html` to `.pr-review-queue-publish/` always (the `pr-review-queue`
+  workflow artifact), and with `PR_REVIEW_EVIDENCE_URI` set uploads
+  `pr-review/queue/queue.json`, `pr-review/queue/board.html`, and an
+  immutable `pr-review/queue/runs/<date>/<ts>.json` per run — the record
+  for tuning `analyze.py` against what approvers actually did. Same
+  degradation contract as `record-evidence.py`. The run summary carries
+  the `--terminal` rendering. The board goes to the private ledger only:
+  it renders AI-suspect chips about human contributors, so publishing it
+  on the public evidence-page bucket is a separate decision.
+- **Labels.** `pr_queue.py labels [--apply]`: one of `queue:stamp` /
+  `queue:judge` / `queue:blocked` per queued PR, `queue:route:<role>` per
+  owning role on stamp/judge rows, and `queue:collides-with-#N` on the PR
+  that should wait (`.github/labels-pr-review.md` has the taxonomy). The
+  wait edges: an `overlap` pair puts the later PR in analyze.py's merge
+  order (fewest changed lines first, then number) behind the earlier; a
+  directional conflict puts the link-adder behind the remover. Overlap
+  edges follow one total order, and a directional edge that would close a
+  cycle is dropped and reported, so no labelling can deadlock two PRs.
+  Only `queue:*` labels are touched; an errored collect leaves a PR's
+  labels alone; a draft loses them. Labels written with GITHUB_TOKEN fire
+  no event, so the workflow dispatches the Sentinel for each PR whose
+  collision labels changed.
+- **Switches.** `PR_QUEUE`: unset = dark (manual dispatch only, labels
+  only on its `apply_labels` input), `'report'` = compute + publish + print
+  the label plan, `'1'` = also write labels. G6 enforcement is
+  `REVIEW_V3_COLLISION_GATE`, separate so the labels can soak before they
+  can block a merge.
+- **Event plumbing.** PR events run a ~5 s `poke` job that only dispatches
+  the workflow; the heavy `queue` job runs on dispatch/schedule, attached to
+  no PR, under one cancel-in-progress concurrency group with a 90 s settle,
+  so a burst of pushes is one recompute and paints no cancelled check on
+  any PR. The collect cache persists across runs through `actions/cache`.
