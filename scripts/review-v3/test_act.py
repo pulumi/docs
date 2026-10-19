@@ -82,6 +82,10 @@ class Env:
         self._edit(f"repos/pulumi/docs/commits/{sha}/check-runs", {"per_page": 100},
                    fn=lambda d: {"total_count": len(runs), "check_runs": runs})
 
+    def set_statuses(self, number: int, statuses: list[dict]) -> None:
+        sha = row(self.queue, number)["head"]["sha"]
+        self._edit(f"repos/pulumi/docs/commits/{sha}/statuses", fn=lambda d: statuses)
+
     def set_review_comments(self, number: int, comments: list[dict]) -> None:
         self._edit(f"repos/pulumi/docs/pulls/{number}/comments", fn=lambda d: comments)
 
@@ -1027,6 +1031,51 @@ def test_own_changes_requested_review_is_not_a_blocker():
             ok, msg, _ = act.preflight(env.gh, s)
             assert ok is want, msg
         assert "changes requested by cnunciato" in msg and "CamSoper" not in msg
+    finally:
+        env.close()
+
+
+def test_the_sentinel_status_is_left_out_of_the_preflight_and_polled_before_the_merge():
+    """The Sentinel publishes a commit status (a check-run it published could
+    land in a superseded suite and vanish: pulumi/docs#22308). Same contract
+    as the check-run: red before the approval is no preflight blocker, and
+    the post-approval wait reads the newest of the job and the status."""
+    st = lambda state, at: {"context": "Sentinel", "state": state, "description": "d",  # noqa: E731
+                            "created_at": at, "updated_at": at}
+    job = lambda status, concl, at: {"name": "sentinel", "status": status,  # noqa: E731
+                                     "conclusion": concl, "started_at": at}
+    build = {"name": "build", "status": "completed", "conclusion": "success"}
+    env = Env([stampable(1)])
+    try:
+        p = act.plan(env.queue, args(stamp=["1"]))
+        env.set_check_runs(1, [build, job("completed", "success", "2026-10-19T10:00:00Z")])
+        env.set_statuses(1, [st("failure", "2026-10-19T10:00:30Z"),
+                             {"context": "Update Changelog", "state": "success"}])
+        res = act.execute(p, env.gh, queue=env.queue, sleep=lambda s: None)
+        assert res[0].ok is False and "Sentinel check concluded failure" in res[0].message, res[0].message
+        assert [w["path"] for w in res[0].writes] == ["repos/pulumi/docs/pulls/1/reviews"]
+        # the re-evaluation lands green: newer than both the job and the red status
+        env.add_review(1, "APPROVED", commit_id=row(env.queue, 1)["head"]["sha"])
+        env.set_statuses(1, [st("success", "2026-10-19T10:05:30Z"), st("failure", "2026-10-19T10:00:30Z")])
+        res = act.execute(p, env.gh, queue=env.queue, sleep=lambda s: None)
+        assert res[0].ok and "squash-merged" in res[0].message, res[0].message
+    finally:
+        env.close()
+    env = Env([stampable(1)])
+    try:
+        p = act.plan(env.queue, args(stamp=["1"]))
+        # a re-run still going is newer than the last status: wait, then refuse
+        env.set_check_runs(1, [build, job("in_progress", None, "2026-10-19T10:06:00Z")])
+        env.set_statuses(1, [st("success", "2026-10-19T10:05:30Z")])
+        naps = []
+        res = act.execute(p, env.gh, queue=env.queue, sleep=naps.append)
+        assert res[0].ok is False and "still pending" in res[0].message, res[0].message
+        assert naps
+        # an `error` status (couldn't evaluate) refuses the merge
+        env.set_check_runs(1, [build])
+        env.set_statuses(1, [st("error", "2026-10-19T10:07:00Z")])
+        res = act.execute(p, env.gh, queue=env.queue, sleep=lambda s: None)
+        assert res[0].ok is False and "concluded action_required" in res[0].message, res[0].message
     finally:
         env.close()
 
