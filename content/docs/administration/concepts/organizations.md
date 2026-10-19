@@ -42,6 +42,7 @@ You create your first organization right after you sign up, and you choose then 
 Every organization you create after that starts a free trial that has access to all features.
 At the end of the trial, choose the edition that fits your needs. Free supports
 one user. Essentials, Pro, and Enterprise support multiple users.
+You can own only one Free organization at a time, so if you already own one, choose a paid edition for any other organization.
 Learn more about what each one includes on the [pricing page](/pricing/).
 
 {{% notes type="info" %}}

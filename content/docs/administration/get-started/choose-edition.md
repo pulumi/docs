@@ -22,7 +22,7 @@ Choose an edition based on the collaboration, automation, and governance capabil
 
 ### Free
 
-Choose Free when one person needs core infrastructure as code, state management, Pulumi Deployments, and basic Pulumi ESC. Free has no managed-resource limit. It does not include Pulumi Neo, Resource Search, or Property Search.
+Choose Free when one person needs core infrastructure as code, state management, Pulumi Deployments, and basic Pulumi ESC. Free has no managed-resource limit. It does not include Pulumi Neo, Resource Search, or Property Search. You can own only one Free organization at a time.
 
 ### Essentials
 

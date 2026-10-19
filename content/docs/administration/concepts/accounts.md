@@ -29,9 +29,9 @@ An account is not the same thing as an [organization](/docs/administration/conce
 Signing up creates your account, not an organization. Because stacks are addressed as `<organization>/<project>/<stack>`, you need an organization before you can create a stack, so right after signup Pulumi Cloud asks how you plan to use it and creates your first organization from your answer:
 
 - **I'm building a product for work** creates an organization with the name you choose and starts a 14-day free trial that has access to all features. No credit card is required. At the end of the trial, choose the edition that fits your needs.
-- **I'm working on a personal project** creates an organization on the Free edition. Its name defaults to one derived from your username, and you can change it before you continue.
+- **I'm working on a personal project** creates an organization on the Free edition. Its name defaults to one derived from your username, and you can change it before you continue. Note that you can own only one Free organization at a time.
 
-A Free organization supports one member, needs no payment method, and does not expire. You can own one Free organization at a time. To work with other people, upgrade it to a paid edition from the organization's billing settings, or [create another organization](/docs/administration/concepts/organizations/#creating-an-organization), which starts a free trial. See [pricing](/pricing/) for what each edition includes.
+A Free organization supports one member, needs no payment method, and does not expire. To work with other people, upgrade it to a paid edition from the organization's billing settings, or [create another organization](/docs/administration/concepts/organizations/#creating-an-organization), which starts a free trial for a paid edition. See [pricing](/pricing/) for what each edition includes.
 
 {{% notes type="info" %}}
 Users provisioned and managed by an organization — through [SCIM](/docs/administration/guides/scim/) or a [SAML identity provider](/docs/administration/guides/saml/) — do not go through signup and do not create an organization of their own. Their account exists only within the organizations that manage it.
@@ -196,7 +196,23 @@ Scroll to the bottom of the account settings page to find the **Delete account**
 
 Deleting your account removes your access to every organization you belong to. **This is a permanent operation and cannot be undone.**
 
-Pulumi Cloud refuses to delete your account while you are the only admin of an organization, and lists the organizations involved. This includes a Free organization, which has a single admin. Add another admin to each of those organizations, or [delete the organization](/docs/administration/concepts/organizations/#deleting-an-organization), before you delete your account. Deleting an organization does not delete any cloud resources its stacks provisioned — those keep running in your cloud provider account.
+### Before you delete your account
+
+Pulumi Cloud deletes your account only when you are not the only admin of any organization. This includes a Free organization, because its single member is also its admin. Organizations whose membership is managed by GitHub, GitLab, or Bitbucket are not checked.
+
+If you are the only admin of one or more organizations, Pulumi Cloud doesn't delete your account and lists the organizations involved. For each one, do one of the following, then try again:
+
+- [Make another member an admin](/docs/administration/concepts/organizations/#organization-roles) of the organization.
+- [Delete the organization](/docs/administration/concepts/organizations/#deleting-an-organization). Deleting an organization does not delete any cloud resources its stacks provisioned — those keep running in your cloud provider account.
+
+If you sign in with an email address and password, Pulumi Cloud also asks for your password before it deletes your account.
+
+### What happens when you delete your account
+
+- You are removed from every organization you belong to, along with your team memberships and stack permissions.
+- Your access tokens are revoked.
+- Stacks you created stay in their organizations.
+- Deleting your account does not delete any cloud resources you provisioned.
 
 ## See also
 
