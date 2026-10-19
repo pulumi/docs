@@ -65,7 +65,7 @@ make clean                # Remove build artifacts and dependencies
 **Required Tools:**
 
 - Node.js 24.x
-- Hugo 0.157.0
+- Hugo, extended edition (version pinned in `mise.toml`)
 - Yarn 1.22.x (not strictly enforced in CI)
 - Go 1.26.x (for documentation generation)
 - Python 3.12 (for testing workflows) and 3.13 (for SDK documentation generation)
@@ -209,10 +209,9 @@ This project uses [mise](https://mise.jdx.dev/installing-mise.html) to manage to
 ```bash
 mise install
 
-# Hugo 0.157.0
-# macOS:
-brew install hugo@0.157.0
-# Linux: Download from https://github.com/gohugoio/hugo/releases/tag/v0.157.0
+# Hugo: installed by `mise install` above. Without mise, install the extended
+# edition of the version `scripts/hugo-version.sh` prints (pinned in mise.toml)
+# from https://github.com/gohugoio/hugo/releases
 
 # Pulumi CLI
 curl -fsSL https://get.pulumi.com | sh
@@ -473,7 +472,7 @@ Installs and verifies all required dependencies.
 
 1. Checks for required tools:
    - Node.js 24.x
-   - Hugo 0.157.0
+   - Hugo (the version pinned in `mise.toml`, read via `scripts/hugo-version.sh`)
    - Yarn 1.22.x
 
 2. Installs dependencies for:
@@ -1116,7 +1115,7 @@ Pushes to an open PR rebuild the preview, mark the pinned review `review:stale`,
 
 **Jobs:**
 
-1. **buildSite**: checks out full history (blobless, so Hugo's `enableGitInfo` can read each file's last commit date), sets up Node 24, Go 1.26, Hugo 0.157.0, s5cmd, Vale, and the Pulumi CLI, restores the meta-image and Hugo resource caches, then runs `make ci_push`. Afterwards it alerts Slack if a successful build ran longer than 20 minutes (`scripts/ci-build-duration-alert.sh`, which subtracts time spent queued) and archives Cypress videos and `origin-bucket-metadata.json`.
+1. **buildSite**: checks out full history (blobless, so Hugo's `enableGitInfo` can read each file's last commit date), sets up Node 24, Go 1.26, Hugo (via `.github/actions/setup-hugo`), s5cmd, Vale, and the Pulumi CLI, restores the meta-image and Hugo resource caches, then runs `make ci_push`. Afterwards it alerts Slack if a successful build ran longer than 20 minutes (`scripts/ci-build-duration-alert.sh`, which subtracts time spent queued) and archives Cypress videos and `origin-bucket-metadata.json`.
 1. **notify**: posts to `#docs-ops` on failure.
 
 `make ci_push` runs `make ensure` and then `scripts/ci-push.sh`:
@@ -1139,7 +1138,7 @@ Key points:
 - **A deploy never modifies the live bucket.** `sync-and-test-bucket.sh` creates a new origin bucket for every run (`deploy_bucket_name()` in `scripts/common.sh` adds a per-run token, so two runs at the same commit don't collide). `infrastructure/index.ts` reads the bucket name from `origin-bucket-metadata.json`, so `pulumi up` on `www-production` *is* the publish step.
 - **Two guards keep deploys in order.** `scripts/await-in-progress.js` waits for runs with a lower run ID but gives up after 45 minutes. `scripts/check-publish-ordering.js`, called from `run-pulumi.sh` immediately before `pulumi up`, refuses to point the live origin at an older run's bucket. Set `allow_out_of_order_publish` on a manual run only if you're deliberately rolling back and another run may publish first. A revert-and-push doesn't need it.
 - **Stack lock conflicts are retried.** `run-pulumi.sh` retries only `[409] Conflict: Another update is currently in progress`, up to five attempts (about 7.5 minutes). Any other failure fails fast.
-- **Caches are keyed on the Hugo version.** The `hugo-resources-*` key is derived from `hugo version`, so upgrading Hugo invalidates it automatically. The version pin itself (`hugo-version: '0.157.0'`) is repeated in each building workflow and in `scripts/ensure.sh`, and must be bumped in all of them.
+- **Caches are keyed on the Hugo version.** The `hugo-resources-*` key is derived from `hugo version`, so upgrading Hugo invalidates it automatically. The version pin itself lives in one place, `mise.toml`: every workflow installs Hugo through the `.github/actions/setup-hugo` composite action and `scripts/ensure.sh` checks against it, both via `scripts/hugo-version.sh`, which fails loudly on a missing or unparseable pin (an empty version would make `peaceiris/actions-hugo` install the latest Hugo). To upgrade, change the two Hugo lines in `mise.toml` and the Hugo feature in `.devcontainer/devcontainer.json`; `make lint` runs `scripts/hugo-version.sh --check`, which fails if those disagree or a workflow pins Hugo on its own.
 
 **Typical duration:** 8-12 minutes
 
@@ -1245,7 +1244,7 @@ Runs `make ci_pull_request_closed`, which deletes every bucket matching `*-pr-{P
 
 **Platform:** GitHub-hosted runner (ubuntu-latest), with [jlumbroso/free-disk-space](https://github.com/jlumbroso/free-disk-space) to reclaim disk space before tests run (`tool-cache: false`, `dotnet: false` to preserve caches later setup steps use).
 
-**Setup:** Go, Node.js, Python, .NET, and Java runtimes, Hugo 0.157.0, the latest Pulumi CLI, and a Kubernetes KinD cluster. AWS credentials via OIDC, GCP via workload identity federation, and Azure credentials from ESC.
+**Setup:** Go, Node.js, Python, .NET, and Java runtimes, Hugo (the `mise.toml` pin), the latest Pulumi CLI, and a Kubernetes KinD cluster. AWS credentials via OIDC, GCP via workload identity federation, and Azure credentials from ESC.
 
 **Scope:** On PRs, the job first asks the API which files changed and only tests programs the PR touched. Content-only PRs finish in seconds, but the job still reports so the required check name exists. The nightly run tests all ~425 programs across TypeScript, Python, Go, .NET, Java, and YAML on AWS, GCP, Azure, and Kubernetes. Dependabot PRs are skipped because they can't reach ESC.
 
@@ -2970,17 +2969,17 @@ Common issues and their solutions.
 # Check Hugo version
 hugo version
 
-# Should be: hugo v0.157.0
+# Should match the pinned version
+./scripts/hugo-version.sh
 
 # Update if different
-# macOS:
-brew upgrade hugo
+mise install
 
-# Verify in workflows that Hugo version matches
-grep "hugo-version" .github/workflows/*.yml
+# Verify every restatement of the pin agrees (also part of `make lint`)
+./scripts/hugo-version.sh --check
 ```
 
-> **Note:** Hugo version must match **exactly** across all workflows. Version mismatches cause template compatibility issues.
+> **Note:** CI installs exactly the pinned version through `.github/actions/setup-hugo`, which fails the job if the installed Hugo doesn't match. Version mismatches cause template compatibility issues.
 
 #### Node.js Memory Issues
 
@@ -3514,28 +3513,21 @@ git commit -m "Update Node.js dependencies"
 
 #### Hugo Version Updates
 
-> **Warning:** Hugo updates require changes in **multiple locations**.
+The Hugo version is pinned once, in `mise.toml`. Workflows install it through `.github/actions/setup-hugo` and `scripts/ensure.sh` checks against it, both via `scripts/hugo-version.sh`, so no workflow restates the version.
 
 **Files to Update:**
 
-1. `.github/workflows/build-and-deploy.yml`
-2. `.github/workflows/testing-build-and-deploy.yml`
-3. `.github/workflows/pull-request.yml`
-4. `.github/workflows/pulumi-cli.yml`
-5. `.github/workflows/scheduled-test.yml`
-6. `scripts/ensure.sh`
-7. Dev container configuration (if applicable)
+1. `mise.toml`: both Hugo lines (`hugo = { version = "X.Y.Z" ... }` for Linux and `"asdf:NeoHsu/asdf-hugo" = { version = "extended_X.Y.Z" ... }` for macOS)
+1. `.devcontainer/devcontainer.json`: the Hugo feature's `version` (plain JSON, so it can't read the pin)
 
 **Process:**
 
 ```bash
-# Update Hugo version in all workflow files
-find .github/workflows -name "*.yml" -exec sed -i 's/hugo-version: 0.157.0/hugo-version: 0.155.0/g' {} +
-
-# Update ensure.sh
-sed -i 's/0.157.0/0.155.0/g' scripts/ensure.sh
+# Edit the files above, then confirm every restatement agrees (also part of `make lint`)
+./scripts/hugo-version.sh --check
 
 # Test locally
+mise install
 make clean
 make ensure
 make build
@@ -4253,7 +4245,7 @@ Complete reference of all build and deployment scripts.
 | Dependency | Version | Purpose |
 |------------|---------|---------|
 | **Node.js** | 24.x | Runtime for build tools |
-| **Hugo** | 0.157.0 | Static site generator |
+| **Hugo** | pinned in `mise.toml` | Static site generator |
 | **Yarn** | 1.22.x | Package manager |
 | **Go** | 1.26+ | Doc generation |
 | **Python** | 3.13+ | Doc generation |

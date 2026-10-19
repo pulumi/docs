@@ -161,12 +161,9 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
 
-      - name: Install Hugo
+      - name: Install Hugo (version pinned in mise.toml)
         if: steps.gate.outputs.programs != 'false'
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: "0.157.0"
-          extended: true
+        uses: ./.github/actions/setup-hugo
 
       - name: Install Pulumi
         if: steps.gate.outputs.programs != 'false'
