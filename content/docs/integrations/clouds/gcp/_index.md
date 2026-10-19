@@ -76,6 +76,7 @@ For Google Cloud:
 - [PCI DSS for Google Cloud](/docs/reference/pre-built-policy-packs/pci-dss/google-cloud/)
 - [HITRUST CSF for Google Cloud](/docs/reference/pre-built-policy-packs/hitrust/google-cloud/)
 - [ISO/IEC 27001 for Google Cloud](/docs/reference/pre-built-policy-packs/iso-27001/google-cloud/)
+- [CMMC 2.0 for Google Cloud](/docs/reference/pre-built-policy-packs/cmmc/google-cloud/)
 - [CIS Kubernetes Benchmark on Google Cloud](/docs/reference/pre-built-policy-packs/cis-kubernetes/google-cloud/) — for GKE clusters.
 
 ## Migration
