@@ -845,6 +845,18 @@ const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-log
     },
 });
 
+// RFC 8288 Link header pointing agents at the RFC 9727 API catalog. Carried by
+// DefaultCachePolicy (the homepage, where agent-discovery scanners look, and other
+// top-level pages) and by DocsResponseHeadersPolicy, because agents mostly enter on
+// deep /docs/ URLs from search and never see the homepage. `Link` is multi-valued,
+// so override: false composes with any Link the origin sends. Not on the versioned
+// docs archive: those are frozen snapshots, not entry points to the live API catalog.
+const apiCatalogLinkHeaderItem = {
+    header: "Link",
+    value: "</.well-known/api-catalog>; rel=\"api-catalog\"",
+    override: false,
+};
+
 const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
@@ -852,14 +864,7 @@ const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cac
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
             override: true,
-        }, {
-            // RFC 8288 Link header pointing agents at the RFC 9727 API catalog.
-            // Rides the default behavior, so it's present on the homepage (where
-            // agent-discovery scanners look) and other top-level pages.
-            header: "Link",
-            value: "</.well-known/api-catalog>; rel=\"api-catalog\"",
-            override: false,
-        }],
+        }, apiCatalogLinkHeaderItem],
     },
 });
 
@@ -886,7 +891,8 @@ const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable
 });
 
 // Docs pages add Vary: Accept so downstream caches (browsers, proxies) know the
-// response may differ based on the Accept header (HTML vs markdown). This policy
+// response may differ based on the Accept header (HTML vs markdown), plus the same
+// api-catalog Link header as DefaultCachePolicy (see apiCatalogLinkHeaderItem). This policy
 // replaces DefaultCachePolicy on the /docs/* behavior (see below), so it must carry
 // its own Cache-Control item too — otherwise docs pages send no Cache-Control header
 // at all and fall back to CloudFront/S3 defaults, unlike every other page on the site.
@@ -903,7 +909,7 @@ const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
             override: true,
-        }],
+        }, apiCatalogLinkHeaderItem],
     },
 });
 
