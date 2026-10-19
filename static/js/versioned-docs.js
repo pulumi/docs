@@ -375,7 +375,7 @@
       if (latest) {
         var a = document.createElement("a");
         a.className = "vdocs-bar-link";
-        a.href = cfg.liveRoot + cfg.rel;
+        a.href = cfg.liveRoot + cfg.rel + location.hash;
         a.textContent = "View latest";
         a.addEventListener("click", function (ev) {
           ev.preventDefault();
@@ -395,8 +395,16 @@
     // Measured (not hard-coded) so a wrapped two-line bar on narrow viewports still fits.
     var root = document.documentElement;
     root.classList.add("vdocs-has-bar");
+    var lastH = -1;
     var applyHeight = function () {
-      root.style.setProperty("--vdocs-bar-h", bar.offsetHeight + "px");
+      var h = bar.offsetHeight;
+      if (h === lastH) return;
+      lastH = h;
+      root.style.setProperty("--vdocs-bar-h", h + "px");
+      // The browser jumped to the URL's #anchor before the bar existed, so the target now
+      // sits under it. scroll-padding-top (in the CSS) fixes later in-page jumps; re-scroll
+      // here for the initial one, and again whenever the bar's height settles.
+      reScrollToHash(h);
     };
     applyHeight();
     // The stylesheet that gives the bar its real height (/js/versioned-docs.css) is
@@ -417,12 +425,44 @@
     if (window.addEventListener) window.addEventListener("resize", applyHeight);
   }
 
+  function hashTarget() {
+    var id = location.hash ? location.hash.slice(1) : "";
+    if (!id) return null;
+    try {
+      id = decodeURIComponent(id);
+    } catch (e) {
+      /* malformed escape: use the raw fragment */
+    }
+    return document.getElementById(id) || document.getElementsByName(id)[0] || null;
+  }
+
+  // Only move the page when the anchor target is actually hidden under the bar, so a reader
+  // who has already scrolled away (or a target the browser couldn't scroll to the top) is
+  // left alone.
+  function reScrollToHash(barH) {
+    try {
+      var t = hashTarget();
+      if (!t) return;
+      var top = t.getBoundingClientRect().top;
+      if (top < -1 || top >= barH) return;
+      window.scrollBy(0, top - barH);
+    } catch (e) {
+      /* fail silent */
+    }
+  }
+
   // target = base + rel. Pages don't always exist across versions, so HEAD-probe and
-  // fall back to the version/live root on a non-200 — bounds page-path drift.
+  // fall back to the version/live root on a non-200 — bounds page-path drift. The current
+  // #fragment rides along either way. A per-symbol Sphinx page (rel "api/<dotted.name>/")
+  // that's missing from the other version falls back to the monolithic root anchored at
+  // that symbol, unless the URL already carries a (more specific) hash.
   function navigate(base, rel) {
+    var hash = location.hash || "";
     var target = base + (rel || "");
+    var sym = /^api\/([^/]+)\/$/.exec(rel || "");
+    var fallback = base + (hash || (sym ? "#" + sym[1] : ""));
     fetch(target, { method: "HEAD", credentials: "omit" })
-      .then(function (r) { window.location.href = r.ok ? target : base; })
-      .catch(function () { window.location.href = base; });
+      .then(function (r) { window.location.href = r.ok ? target + hash : fallback; })
+      .catch(function () { window.location.href = fallback; });
   }
 })();

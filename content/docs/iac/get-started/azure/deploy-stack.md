@@ -51,8 +51,8 @@ Resources:
     + 3 to create
 
 Do you want to perform this update?
-> yes
-  no
+  yes
+> no
   details
 ```
 
