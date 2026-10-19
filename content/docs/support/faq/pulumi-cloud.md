@@ -89,7 +89,7 @@ name with the organization name. For example:
 $ pulumi stack init acme-corp/widget-server
 ```
 
-### How do I move stacks from my Free organization to my team's organization?
+### How do I move stacks from one organization to another?
 
 [Pulumi Cloud](https://app.pulumi.com/signin) lets you transfer stacks from one organization to any other organization you belong to as an administrator.
 
