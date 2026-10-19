@@ -18,7 +18,7 @@ aliases:
 pulumi_cloud_feature: preventative-policies
 ---
 
-Policy groups organize one or more policy packs and apply them to specific stacks or cloud accounts. They determine when and where policies are enforced across your organization.
+Policy groups organize one or more policy packs and apply them to specific stacks or cloud accounts. They determine when and where policies are enforced across your organization. You can add stacks and accounts to a group individually, or add every stack or account with matching tags by using a [tag rule](#tag-rules).
 
 ## Types of policy groups
 
@@ -38,6 +38,12 @@ At a glance:
 | **Blocks deployments** | Yes, with `mandatory` enforcement | No, findings are reported for you to act on |
 
 For guidance on which type to use, how to set enforcement levels, and how to roll policies out across an organization, see [Best practices](#best-practices).
+
+## Tag rules
+
+A tag rule adds every stack or cloud account with matching tags to a policy group, and keeps its membership current as tags change. For example, a rule matching `env: prod` adds each new production stack to your production policy group automatically.
+
+To add a tag rule, open the policy group in the Pulumi Cloud console and select **Match by tags**.
 
 ## Default policy groups
 
@@ -75,7 +81,7 @@ The default groups are fixed in identity and mutable only in membership. You can
 | Change the group's type, for example from audit to preventative | No: [an update request](/docs/reference/cloud-rest-api/policy-groups/#patch-apiorgsorgnamepolicygroupspolicygroup) has no field for it | No |
 | Delete the group | No: [`DELETE`](/docs/reference/cloud-rest-api/policy-groups/#delete-apiorgsorgnamepolicygroupspolicygroup) rejects a default group | No |
 
-With the REST API, a single [`PATCH`](/docs/reference/cloud-rest-api/policy-groups/#patch-apiorgsorgnamepolicygroupspolicygroup) request adds or removes stacks, accounts, and policy packs. Note that the `stacks`, `policyPacks`, and `insightsAccounts` fields replace the group's entire list, so use the `add*` and `remove*` fields to change one membership at a time. To apply several changes at once, [`PATCH .../batch`](/docs/reference/cloud-rest-api/policy-groups/#patch-apiorgsorgnamepolicygroupspolicygroupbatch) accepts an array of the same request bodies.
+With the REST API, a single [`PATCH`](/docs/reference/cloud-rest-api/policy-groups/#patch-apiorgsorgnamepolicygroupspolicygroup) request adds or removes stacks, accounts, and policy packs, one membership per `add*` or `remove*` field. To apply several changes at once, [`PATCH .../batch`](/docs/reference/cloud-rest-api/policy-groups/#patch-apiorgsorgnamepolicygroupspolicygroupbatch) accepts an array of the same request bodies.
 
 With Pulumi IaC, each attachment resource manages a single membership, so you can declare one against a default group without taking ownership of the group itself. The provider has no resource for attaching a policy pack to an existing policy group, so policy pack membership on a default group has to be managed from the console, the CLI, or the REST API. The provider also cannot rename a default group or change its type: both properties force a replacement on the `PolicyGroup` resource, and replacing a group means deleting it first, which Pulumi Cloud rejects for a default group.
 
@@ -132,7 +138,7 @@ In development, test, and other lower environments, advisory enforcement is usua
 
 Reserve mandatory enforcement for environments that genuinely need strong controls: those holding sensitive data, serving production traffic, or falling within the scope of an audit. There, the cost of a violation reaching the environment is high enough to justify stopping the deployment.
 
-Because enforcement levels are set per policy pack, and per policy within a pack, the usual way to express this is with a separate policy group for each environment tier: one group covering lower-environment stacks where the packs are advisory, and another covering production stacks where the critical packs are mandatory.
+Because enforcement levels are set per policy pack, and per policy within a pack, the usual way to express this is with a separate policy group for each environment tier: one group covering lower-environment stacks where the packs are advisory, and another covering production stacks where the critical packs are mandatory. Give each group a [tag rule](#tag-rules) on an environment tag, such as `env`, so new stacks land in the right tier as soon as they're tagged.
 
 ### Adopting policy across an organization
 
