@@ -1,8 +1,8 @@
 ---
-title: "Self-hosted AI infrastructure with Pulumi AICR"
-date: 2026-10-14
+title: "AI infrastructure on tap with the Pulumi AICR provider"
+date: 2026-10-19
 draft: false
-meta_desc: "Stand up validated GPU inference clusters on any cloud with Pulumi and the NVIDIA AI Cluster Runtime (AICR), using a few lines of Python."
+meta_desc: "The Pulumi NVIDIA AI Cluster Runtime (AICR) provider deploys pre-validated GPU training and inference clusters across clouds in a few lines of Python."
 feature_image: feature.png
 authors:
     - peter-yoakum
@@ -12,12 +12,12 @@ tags:
     - python
     - multi-cloud
     - infrastructure-as-code
-category: engineering
+category: product
 schema_type: auto
 
 resource_links:
     - type: github
-      url: https://github.com/pulumi-labs/aicr-chatbot-demo
+      url: https://github.com/pulumi/pulumi-nvidia-aicr
     - type: slack
       url: https://slack.pulumi.com/
 ---
@@ -26,18 +26,18 @@ Recently, some members of the Pulumi team spent time in San Francisco attending 
 
 ![Members of the Pulumi team at the CoreWeave Fully Connected 2026 conference](fully-connected.jpg)
 
-A frequent topic of conversation was open weight models and self-hosted inference. Whether AI is integrated into your platform, your product, or your productivity pipelines, rising token costs have decision makers everywhere taking a closer look at open weight models, in exchange for the promise of tighter control over spend and greater domain expertise.
+A frequent topic of conversation was open weight models and self-hosted inference. Whether AI is integrated into your platform, your product, or your productivity pipelines, rising token costs have decision makers everywhere giving open weight models a closer look, in exchange for the promise of tighter control over spend and greater domain expertise.
 
 If you are actively exploring the space or building with AI yourself, you may already have seen the challenges that come with serving inference at scale:
 
-- Model stability and reliability can differ (sometimes dramatically) across hardware architectures and at different traffic volumes.
-- Model performance and throughput can change depending on your workload type or model configuration.
-- Cost differences and commitments across providers can make tracking spend challenging.
-- Supply constraints and capacity shortages mean teams can't source hardware when they need it most.
+- *Model stability and reliability can differ (sometimes dramatically) across hardware architectures and at different traffic volumes.*
+- *Model performance and throughput can change depending on your workload type or model configuration.*
+- *Cost differences and commitments across providers can make tracking spend challenging.*
+- *Supply constraints and capacity shortages mean teams can't source hardware when they need it most.*
 
 Many teams naturally gravitate toward multicloud strategies that combine hyperscalers with specialized GPU clouds as a way of balancing spend, performance, and reliability. One thing we've seen is that developers everywhere are choosing Pulumi to help them navigate the fragmented hardware ecosystem and maintain consistent environments, even when the provider is different.
 
-As part of our commitment to giving builders better tools, [we're sharing our AICR demo project from the Pulumi Labs GitHub organization](https://github.com/pulumi-labs/aicr-chatbot-demo). It shows how you can use Pulumi to spin up inference endpoints configured with the NVIDIA AI Cluster Runtime (AICR) SDK and deploy them across a number of cloud providers.
+As part of our ongoing commitment to building better tools for builders, we're excited to announce [the Pulumi NVIDIA AI Cluster Runtime (AICR) provider](https://github.com/pulumi/pulumi-nvidia-aicr) to help make your ideal self-hosted AI infrastructure available on demand. The Pulumi AICR provider lets you spin up workload-specific training and inference endpoints on demand. Configured using the NVIDIA AI Cluster Runtime (AICR) SDK with pre-validated recipes, you can match your workload demand with the right hardware across a number of cloud-based GPU providers.
 
 ## AI performance engineering team as code
 
@@ -45,7 +45,7 @@ Deploying a cluster of GPU nodes as a production AI platform is a complex and ti
 
 In addition to bundling a complex technology stack, Pulumi makes it simple to deploy with minimal verbosity. `pulumi preview` shows every component the recipe expands into (namespaces, operators, schedulers, metrics, training runtime) before anything is applied. `pulumi up` then deploys them as children of a single resource, with a full day-2 lifecycle: diff, update, drift detection, and destroy.
 
-This short Python snippet shows how little it takes to deploy a simple, intent-based inference endpoint that is prevalidated by AICR, so you aren't wasting time or resources on configuration and can start serving immediately.
+This short Python snippet shows how easy it is to use AICR to deploy a simple pre-validated inference endpoint without wasting time or resources on guess-and-check configuration, so you can get started serving production traffic immediately.
 
 ```python
 import pulumi
@@ -75,7 +75,9 @@ gpu_stack = aicr.ClusterStack("nvidia-aicr",
 )
 ```
 
-Behind the scenes, the recipe resolves that into the full list of Kubernetes components, version-pinned and wired together in dependency order. Recipes are tested and validated by NVIDIA across a broad matrix (EKS, GKE, and AKS; A100 through GB200; Ubuntu, RHEL, COS, and Talos; Kubeflow, NIM, Dynamo, Slurm, and Run:ai). Because AICR is open source, the SDK lends itself to configuration by new providers, giving you a future-forward inference solution that performs in all of the areas that count:
+*Example of the Pulumi CoreWeave provider*
+
+Behind the scenes, the recipe resolves our code into the full list of Kubernetes components. Recipes are tested and validated by NVIDIA across a broad matrix of both hardware (EKS, GKE, and AKS; A100 through GB200; Ubuntu, RHEL, COS, and Talos; Kubeflow, NIM, Dynamo, Slurm, and Run:ai) and cloud provider permutations. Because AICR is open source, the SDK lends itself to configuration by new providers, giving you a future-forward inference solution that performs in all of the areas that count:
 
 - **Deployment:** does the running cluster match the recipe? Operator health, GPU visibility via `nvidia-smi`, and metrics flowing.
 - **Conformance:** dynamic resource allocation, gang scheduling, and job-level networking behave as required.
