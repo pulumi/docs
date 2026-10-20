@@ -55,5 +55,5 @@ Besides its validation logic, a policy carries fields that describe it: a unique
 ## Next steps
 
 - [Use pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) to apply policies that Pulumi maintains, with no code to write.
-- [Write a policy pack](/docs/discovery-governance/guides/write-a-policy-pack/) in TypeScript, JavaScript, or Python.
+- [Write a policy pack](/docs/discovery-governance/guides/write-a-policy-pack/) in TypeScript, JavaScript, Python, or OPA.
 - [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/) in Rego.

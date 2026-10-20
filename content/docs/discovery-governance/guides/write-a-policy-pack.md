@@ -1232,7 +1232,7 @@ config_schema=PolicyConfigSchema(
 
 {{% choosable language opa %}}
 
-OPA policy packs don't currently support configuration schemas. Rules that read `data.config` don't fire when a value is missing, so test your rules with and without configuration. See [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/#configuration).
+Rules that read `data.config` don't fire when a value is missing, so test your rules with and without configuration. See [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/#configuration).
 
 {{% /choosable %}}
 
