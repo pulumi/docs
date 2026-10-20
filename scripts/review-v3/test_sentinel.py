@@ -1732,10 +1732,10 @@ def test_label_event_filter_covers_every_label_the_evaluator_reads():
 
 def test_workflow_publishes_a_status_not_a_check_run():
     """`POST /check-runs` can't choose a check suite. GitHub filed the
-    Sentinel's run into the oldest Actions suite at the head; when that was
-    this workflow's own first run, the next run for the same event
-    superseded it, and branch protection read "Expected — Waiting for status
-    to be reported" on green, approved PRs (pulumi/docs#22308). A commit
+    Sentinel's run into the oldest Actions suite at the head, whichever
+    workflow created it; when that workflow ran again for the same event,
+    the suite was superseded, and branch protection read "Expected — Waiting
+    for status to be reported" on green, approved PRs (pulumi/docs#22308). A commit
     status belongs to no suite. The guard reads the run id back out of the
     status's `target_url`, so the publisher has to put the run URL there."""
     wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()

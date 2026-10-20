@@ -3,9 +3,9 @@
 
 The Sentinel used to publish a check-run (`POST /check-runs` with the job's
 GITHUB_TOKEN). That API can't choose a check suite, so GitHub files the run
-into the OLDEST GitHub Actions suite at the head SHA. When that suite is the
-Sentinel workflow's own first run (it wins the suite-creation race on PR
-open) and the workflow later runs again for the same event (`opened` then
+into the OLDEST GitHub Actions suite at the head SHA: whichever workflow won
+the suite-creation race on PR open. When that workflow runs again for the
+same event (this one, or staging-deploy-auto.yml, on `opened` then
 `ready_for_review`), GitHub treats the first suite as superseded and hides
 its runs. Every later verdict lands in the hidden suite too, so branch
 protection reads "Sentinel: Expected — Waiting for status to be reported"

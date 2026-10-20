@@ -8,11 +8,12 @@ name: Sentinel
 # (scripts/review-v3/publish_verdict.py).
 #
 # A status, not a check-run: `POST /check-runs` can't pick a check suite, so
-# GitHub filed the Sentinel's run into the oldest Actions suite at the head.
-# When that was this workflow's own first run, the next run for the same
-# event superseded it and the verdict vanished from the merge box: "Expected
-# — Waiting for status to be reported" on green, approved PRs
-# (pulumi/docs#22308). A status belongs to no suite.
+# GitHub filed the Sentinel's run into the oldest Actions suite at the head,
+# whichever workflow won the race to create it on PR open. When that
+# workflow ran again for the same event (this one, or staging-deploy-auto on
+# `ready_for_review`), the old suite was superseded and the verdict vanished
+# from the merge box: "Expected — Waiting for status to be reported" on
+# green, approved PRs (pulumi/docs#22308). A status belongs to no suite.
 #
 # SECURITY INVARIANT: this runs on `pull_request_target`, which carries
 # write permissions and secrets on events a fork PR can trigger. It is safe
