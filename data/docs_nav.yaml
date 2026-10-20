@@ -21,7 +21,6 @@ items:
   - label: Pulumi Neo
     href: /product/neo/
     icon: custom/pulumi-neo
-    iconWeight: fill
     track: header-ai
     showAt: lg
   - label: Slack
