@@ -474,7 +474,7 @@ cmd_upsert_role() {
     local bytes
     bytes=$(wc -c <"$body_file")
     (( bytes <= MAX_BYTES )) \
-        || die "$ROLE card is $bytes bytes, over the $MAX_BYTES budget — v3 cards never split, and build-evidence.fit_author_card should have shed enough to fit (see its warning in the build step)"
+        || die "$ROLE card is $bytes bytes, over the $MAX_BYTES budget — v3 cards never split, and build-evidence.fit_author_card should have shed enough to fit (see its warnings in the build and publish steps)"
 
     local row id node_id
     row=$(find_role_comment "$repo" "$pr" "$ROLE")

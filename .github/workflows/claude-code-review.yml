@@ -2677,6 +2677,15 @@ jobs:
           EVIDENCE_URL: ${{ steps.evidence-page.outputs.url }}
         run: |
           PR="${{ steps.current.outputs.pr }}"
+          # The cards were built by the PR head's build-evidence.py, and a
+          # branch cut before the card budget landed (#22269) never fits
+          # them: #22287's 110 KB author card was refused below after the
+          # whole model pass. Fit again with this checkout's copy; a card
+          # that already fits is left alone. Best-effort: the size check in
+          # pinned-comment.sh still stands behind it.
+          python3 .claude/commands/docs-review/scripts/build-evidence.py \
+            --fit .review-author.md .review-brief.md \
+            || echo "::warning::card fit failed; publishing the cards as built"
           sed -i "s|%%EVIDENCE_URL%%|$EVIDENCE_URL|g" .review-brief.md .review-author.md
           bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
             --role brief --pr "$PR" --body-file .review-brief.md
