@@ -129,8 +129,8 @@ For more about joining organizations, see [Joining an organization](/docs/admini
 
 You can delete your account from your [account settings](https://app.pulumi.com/user/account/settings) in Pulumi Cloud. The **Delete account** button is at the bottom of that page. This is a permanent operation and cannot be undone.
 
-Before deleting your account, make sure you are not the only admin of any organization, including a Free organization you created. See [Deleting your account](/docs/administration/concepts/accounts/#deleting-your-account).
 Before deleting your account, make sure you are not the only admin of any organization, including a Free organization you created.
+
 For more information, see [Deleting your account](/docs/administration/concepts/accounts/#deleting-your-account).
 
 ## Pricing

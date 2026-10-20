@@ -203,6 +203,8 @@ Pulumi Cloud deletes your account only when you are not the only admin of any or
 - [Make another member an admin](/docs/administration/concepts/organizations/#organization-roles) of the organization. A Free organization supports only one member, so this option isn't available for it.
 - [Delete the organization](/docs/administration/concepts/organizations/#deleting-an-organization). You need to cancel its subscription first.
 
+Before you delete an organization, [transfer any stacks](/docs/administration/concepts/organizations/#transferring-stacks) you want to keep.
+
 If you sign in with an email address and password, Pulumi Cloud also asks for your password before it deletes your account.
 
 ### What happens when you delete your account
