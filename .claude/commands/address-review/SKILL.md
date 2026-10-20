@@ -25,7 +25,7 @@ The v3 surface is on repo-wide for pulumi/docs (`REVIEW_V3_COMMENTS`), so **ever
 | Finding ids | `F1`, `F2`, … — stable across re-reviews, never reused | Synthetic `outstanding:L40`, `low:L12`, invented per run |
 | Dispositions recorded in | `<!-- REVIEW_STATE … -->` on the author card (**source of truth**) | Nowhere — the ✅ Resolved prose is the only trace |
 | Buckets | 🚨 outstanding · ❓ author-answer (both block) · ⚠️ reviewer-check (brief, advisory) · ✏️ style · 💡 pre-existing | 🚨 outstanding · ⚠️ low-confidence · ✏️ style · 💡 pre-existing |
-| Merge gate | the **Sentinel** check run | none — the labels are advisory |
+| Merge gate | the **Sentinel** status check | none — the labels are advisory |
 | Answer lanes | push · `/update-review …` | push · `/update-review …` |
 
 A PR reviewed before the flip **keeps its v2 monolith forever** — a `/update-review` on it refreshes v2 in place (`claude-update.yml` grandfathers it deliberately). Only `/new-review` regenerates it as cards. Detect the surface, don't assume it from the PR's age.
@@ -200,7 +200,7 @@ python3 .claude/commands/docs-review/scripts/review-worklist.py --pr "$PR" \
 
 Report in one block: what was fixed (with the commit), what was refuted (and how the model adjudicated), what was deferred (with issue links), what was accepted (with reasons), and anything still open. Then say what's next.
 
-**`--require-clean` is the author's bar, not the merge gate.** Where the Sentinel runs, a PR is done when its check passes: findings answered (G2), the team named in `.github/review-routing.yml` has approved (G3), CI green, no conflict. Read the check run rather than inferring:
+**`--require-clean` is the author's bar, not the merge gate.** Where the Sentinel runs, a PR is done when its check passes: findings answered (G2), the team named in `.github/review-routing.yml` has approved (G3), CI green, no conflict. Read the check rather than inferring:
 
 ```bash
 gh pr checks "$PR" | grep -i sentinel
@@ -210,7 +210,7 @@ gh pr checks "$PR" | grep -i sentinel
 - **Clean but Sentinel red on G3** — nothing is yours. It's waiting on a human approver; say so once and stop. A push cannot add an approval and can dismiss the ones already given.
 - **Not clean** — name exactly what's left and offer to keep going. Don't call a PR ready while the exit code says otherwise.
 
-The Sentinel is behind `REVIEW_V3_SENTINEL` (unset = dark, `report` = report-only, `1` = enforcing). That's a repo variable, so which mode is live can't be read from the repo — read the check run itself instead of trusting any sentence about the rollout, this one included. A `neutral` conclusion means the verdict rides inside the summary rather than gating: either report-only mode (`REPORT-ONLY — would be: …`) or a draft PR. `success` / `failure` means it's enforcing. Report-only mode maintains the gate-status *comment* only on `sentinel:preview` PRs, so no comment doesn't mean no check. When there's no Sentinel check on the PR at all, `--require-clean` is the whole bar — say that rather than implying a gate that isn't running.
+The Sentinel is behind `REVIEW_V3_SENTINEL` (unset = dark, `report` = report-only, `1` = enforcing). That's a repo variable, so which mode is live can't be read from the repo — read the check itself instead of trusting any sentence about the rollout, this one included. A passing check whose description starts `Preview — would be: …` is report-only mode, and `Draft — not evaluated` is a draft PR; in both the verdict rides along rather than gating. Any other `success` / `failure` means it's enforcing. (PRs from before 2026-10 can still carry the old Sentinel *check run*, which reports `neutral` for those two cases.) Report-only mode maintains the gate-status *comment* only on `sentinel:preview` PRs, so no comment doesn't mean no check. When there's no Sentinel check on the PR at all, `--require-clean` is the whole bar — say that rather than implying a gate that isn't running.
 
 ---
 

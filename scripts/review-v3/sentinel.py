@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The Sentinel — deterministic merge-gate evaluator for the v3 review workflow.
 
-One blocking check-run answers "is this PR mergeable?" from five gates:
+One blocking commit status answers "is this PR mergeable?" from five gates:
 
   G1 review-ran         a current review exists at head SHA (or none is
                         required: mechanical PRs, fork PRs; a trivial PR
@@ -397,7 +397,7 @@ class Verdict:
     # Whether `review:waived` was honored. The pinned status comment used to
     # read only `gates`, so on a waived PR it announced "2 of 5 gates need
     # attention before this can merge" and recommended the label that was
-    # already applied and already working — while the check-run next to it
+    # already applied and already working — while the status next to it
     # said success. A gate surface that contradicts the gate is the failure
     # the `_GATE_BLURB` phrasebook exists to prevent.
     waived: bool = False
@@ -830,9 +830,10 @@ def _stale_clause(stale_approvers: list[dict], head_sha: str) -> str:
 def _stamp_report_only(verdict: Verdict) -> Verdict:
     """Turn a real verdict into its report-only twin, in place.
 
-    Report-only has three surfaces and they have to agree: the check-run's
-    conclusion (`neutral`, which GitHub counts as passing), its title and
-    summary in the merge box, and the pinned status comment. `would_be` is
+    Report-only has three surfaces and they have to agree: the published
+    status (`neutral`, which publish_verdict.py posts as a passing
+    `success`), its description in the merge box, and the pinned status
+    comment. `would_be` is
     what every one of them reports, and the only place the true conclusion
     survives, so it is set before `conclusion` is overwritten.
     """
@@ -1531,8 +1532,8 @@ def render_status_comment(verdict: Verdict) -> str:
             "> [!WARNING]",
             "> ## ⚠️ Preview mode — this check is NOT blocking your merge",
             "> ",
-            f"> The Sentinel is in **preview (report-only) mode**: its check-run concludes "
-            f"`neutral` whatever the gates below say, so nothing here gates this PR. The rows "
+            f"> The Sentinel is in **preview (report-only) mode**: its status check passes "
+            f"whatever the gates below say, so nothing here gates this PR. The rows "
             f"are informational and **safe to ignore for now**. It *would* have concluded "
             f"`{verdict.would_be}`.",
             "> ",
@@ -1562,7 +1563,7 @@ def render_status_comment(verdict: Verdict) -> str:
     # waive branch exists to prevent.
     effective = verdict.would_be or verdict.conclusion
     if verdict.waived and effective == "success":
-        # Say what the check-run says. The rows below still show what the
+        # Say what the status says. The rows below still show what the
         # gates found — that is the audit trail a waive is supposed to leave
         # — but the headline must not tell an author they are blocked when
         # they are not, nor recommend the break-glass twice.
@@ -1708,8 +1709,8 @@ def main() -> int:
     # A read failure must PUBLISH action_required, not kill the process.
     # Without this, an uncaught SentinelDataError from get_pr / list_files /
     # list_issue_comments / list_reviews failed the step, so the publish
-    # steps were skipped and NOTHING was written — and because check-runs
-    # are keyed on (name, head sha), whatever was published earlier at this
+    # steps were skipped and NOTHING was written — and because the verdict
+    # is keyed on (name, head sha), whatever was published earlier at this
     # head stayed the latest. The fail-open sequence: PR green at head H, an
     # approval is dismissed, the re-run 502s, and the stale `success` at H
     # still stands. The docstring above promises action_required for exactly
@@ -1727,12 +1728,12 @@ def main() -> int:
         )
         print(json.dumps(verdict.to_json(), indent=2))
         return 0
-    # publish_guard.py protects the CHECK-RUN, and runs as a later workflow
+    # publish_guard.py protects the STATUS, and runs as a later workflow
     # step — but the two comment writes below happen inside this process,
     # before the guard has said anything. So a run evaluating head A while
     # the author pushes B could finish second and rewrite both comments to
     # A's verdict, after which the guard correctly declined to publish the
-    # check-run: a green check next to two comments saying the opposite, and
+    # status: a green check next to two comments saying the opposite, and
     # nothing rewrites them until an unrelated event, because
     # `render_status_comment` is a pure function of the verdict.
     #

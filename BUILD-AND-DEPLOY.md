@@ -1328,7 +1328,7 @@ stateDiagram-v2
 
 ### Sentinel merge gate and staging evidence
 
-`review-sentinel.yml` publishes one check run, **Sentinel**, that answers whether a PR can merge. The evaluator, `scripts/review-v3/sentinel.py`, is deterministic (no model, no AWS) and reads PR state only through the GitHub API.
+`review-sentinel.yml` publishes one commit status, **Sentinel**, that answers whether a PR can merge. The evaluator, `scripts/review-v3/sentinel.py`, is deterministic (no model, no AWS) and reads PR state only through the GitHub API. It's a status rather than a check run because GitHub files an API-created check run into the oldest Actions check suite on the commit, and when a later run of the same workflow supersedes that suite, the check disappears from the merge box ("Expected — Waiting for status to be reported"). A status doesn't belong to a suite.
 
 ```mermaid
 flowchart LR
@@ -1341,7 +1341,7 @@ flowchart LR
 ```
 
 - **Triggers:** `pull_request_target` (open, ready, push, reopen, label changes), `pull_request_review` (submitted, dismissed, and edits to approving reviews), `workflow_run` after either review lane, and `workflow_dispatch`.
-- **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` concludes `neutral` with the would-be verdict; `'1'` enforces.
+- **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` always passes, with the would-be verdict in the status description; `'1'` enforces.
 - **Security invariant:** `pull_request_target` carries secrets and a write token even for fork PRs. The workflow is safe only because it never checks out or runs PR code, and `test_sentinel.py` enforces that. Don't add a head checkout.
 - **No concurrency group, on purpose:** a cancelled run shows as a failing check. Overlapping runs are cheap, and `scripts/review-v3/publish_guard.py` drops a verdict if the head moved or a newer run already published.
 - **Break-glass:** the `review:waived` label, which is logged. G4 can't be waived.

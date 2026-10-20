@@ -552,37 +552,45 @@ def search_count(qualifier):
 SENTINEL_CHECK = "Sentinel"
 
 
-def sentinel_state(check_runs):
-    """Pure transform: a head commit's check runs -> the Sentinel's verdict
-    for that PR: ready | blocked | none.
+def sentinel_state(check_runs, statuses=()):
+    """Pure transform: a head commit's check runs and commit statuses -> the
+    Sentinel's verdict for that PR: ready | blocked | none.
 
     Reads what the merge gate itself concluded, so "ready to merge" can't
-    mean something different here than on the PR page. The gate runs in
-    preview (report-only) mode for now, concluding `neutral` with the real
-    verdict in its title ("Preview — would be: success"); an enforcing run
-    concludes `success` outright. Both read as ready. The newest run wins,
-    since each gate event re-posts the check.
+    mean something different here than on the PR page. The gate publishes a
+    commit status (it published a check-run before 2026-10, and a PR open
+    across the switch can carry both). In preview (report-only) mode it
+    passes with the real verdict in its title or description ("Preview —
+    would be: success"); an enforcing run passes or fails outright. The
+    newest verdict wins, since each gate event re-posts it.
     """
-    runs = [r for r in check_runs or [] if r.get("name") == SENTINEL_CHECK and r.get("status") == "completed"]
-    if not runs:
+    verdicts = [(r.get("completed_at") or "", r.get("conclusion") == "success",
+                 (r.get("output") or {}).get("title") or "")
+                for r in check_runs or [] if r.get("name") == SENTINEL_CHECK and r.get("status") == "completed"]
+    verdicts += [(s.get("updated_at") or s.get("created_at") or "", s.get("state") == "success",
+                  s.get("description") or "")
+                 for s in statuses or [] if s.get("context") == SENTINEL_CHECK and s.get("state") != "pending"]
+    if not verdicts:
         return "none"
-    latest = max(runs, key=lambda r: r.get("completed_at") or "")
-    title = ((latest.get("output") or {}).get("title") or "").lower()
-    if latest.get("conclusion") == "success" or "would be: success" in title:
-        return "ready"
-    return "blocked"
+    _, passed, title = max(verdicts, key=lambda v: v[0])
+    title = title.lower()
+    if "would be:" in title:
+        return "ready" if "would be: success" in title else "blocked"
+    return "ready" if passed else "blocked"
 
 
 def collect_sentinel(prs):
-    """Attach each non-draft PR's Sentinel verdict (one check-runs read per
-    PR head). A failed read is "unknown", never "blocked": the renderer
-    must not report a PR as not-ready on missing data."""
+    """Attach each non-draft PR's Sentinel verdict (a check-runs and a
+    statuses read per PR head). A failed read is "unknown", never "blocked":
+    the renderer must not report a PR as not-ready on missing data."""
     for pr in prs:
         if pr.get("isDraft") or not pr.get("head_sha"):
             continue
-        out = run_gh(["api", f"repos/{REPO}/commits/{pr['head_sha']}/check-runs?check_name={SENTINEL_CHECK}&per_page=20"])
+        runs = run_gh(["api", f"repos/{REPO}/commits/{pr['head_sha']}/check-runs?check_name={SENTINEL_CHECK}&per_page=20"])
+        statuses = run_gh(["api", f"repos/{REPO}/commits/{pr['head_sha']}/statuses?per_page=100"])
         try:
-            pr["sentinel"] = sentinel_state(json.loads(out).get("check_runs")) if out.strip() else "unknown"
+            pr["sentinel"] = (sentinel_state(json.loads(runs).get("check_runs"), json.loads(statuses))
+                              if runs.strip() and statuses.strip() else "unknown")
         except (json.JSONDecodeError, AttributeError):
             pr["sentinel"] = "unknown"
 

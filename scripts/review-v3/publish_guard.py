@@ -7,10 +7,13 @@ group even with cancel-in-progress off). Overlapping runs for one PR are
 therefore normal, and this guard is what keeps a stale verdict from
 overwriting a fresh one:
 
-  * Every published check-run carries `external_id = <workflow run id>`.
+  * Every published `Sentinel` commit status carries the workflow run's URL
+    as its `target_url` (`.../actions/runs/<run id>`). Check-runs published
+    before the switch to a status carry the run id as `external_id`, and
+    are still read so a PR open across the switch keeps its ordering.
   * A run publishes only if (a) the PR head still equals the head it
     evaluated, and (b) no newer run (higher run id) has already published a
-    Sentinel check-run at that head.
+    Sentinel verdict at that head.
 
 Both refusals conclude the job `success` with a notice — the newer run (or
 the `synchronize` run for the new head) owns the verdict. Deterministic, no
@@ -21,25 +24,33 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 
 CHECK_NAME = "Sentinel"
+RUN_URL_RE = re.compile(r"/actions/runs/(\d+)(?:/|$)")
 
 
-def latest_published_run_id(check_runs: list[dict]) -> int | None:
-    """Highest run id recorded in `external_id` across the Sentinel check-runs."""
-    best: int | None = None
+def run_id_from_url(url: str | None) -> int | None:
+    """The workflow run id in a status's `target_url`, or None."""
+    m = RUN_URL_RE.search(url or "")
+    return int(m.group(1)) if m else None
+
+
+def latest_published_run_id(check_runs: list[dict], statuses: list[dict] = ()) -> int | None:
+    """Highest run id across the Sentinel statuses (`target_url`) and any
+    legacy Sentinel check-runs (`external_id`)."""
+    ids: list[int] = []
     for c in check_runs:
-        if c.get("name") != CHECK_NAME:
-            continue
         ext = str(c.get("external_id") or "").strip()
-        if not ext.isdigit():
-            continue
-        rid = int(ext)
-        if best is None or rid > best:
-            best = rid
-    return best
+        if c.get("name") == CHECK_NAME and ext.isdigit():
+            ids.append(int(ext))
+    for s in statuses:
+        rid = run_id_from_url(s.get("target_url"))
+        if s.get("context") == CHECK_NAME and rid is not None:
+            ids.append(rid)
+    return max(ids, default=None)
 
 
 def head_moved(verdict_head: str, pr_head: str | None) -> str | None:
@@ -58,12 +69,12 @@ def head_moved(verdict_head: str, pr_head: str | None) -> str | None:
 
 
 def decide(my_run_id: int, verdict_head: str, pr_head: str | None,
-           check_runs: list[dict]) -> tuple[bool, str]:
+           check_runs: list[dict], statuses: list[dict] = ()) -> tuple[bool, str]:
     """(publish?, reason). Fail toward publishing when the PR head is unknown."""
     moved = head_moved(verdict_head, pr_head)
     if moved:
         return False, moved
-    newest = latest_published_run_id(check_runs)
+    newest = latest_published_run_id(check_runs, statuses)
     if newest is not None and newest > my_run_id:
         return False, (f"superseded: run {newest} already published a verdict at "
                        f"`{verdict_head[:9]}` after this run ({my_run_id}) started")
@@ -100,7 +111,14 @@ def main(argv: list[str] | None = None) -> int:
     except Exception as exc:
         print(f"::warning::publish-guard: could not list check-runs ({exc}); publishing")
         check_runs = []
-    publish, reason = decide(a.run_id, head, pr_head, check_runs)
+    try:
+        # Newest first, so the first page holds any run that published after
+        # this one started.
+        statuses = _gh_json(["api", f"repos/{a.repo}/commits/{head}/statuses?per_page=100"]) or []
+    except Exception as exc:
+        print(f"::warning::publish-guard: could not list statuses ({exc}); publishing")
+        statuses = []
+    publish, reason = decide(a.run_id, head, pr_head, check_runs, statuses)
     print(f"publish-guard: publish={'true' if publish else 'false'} — {reason}")
     if not publish:
         print(f"::notice::Sentinel run {a.run_id} did not publish — {reason}")
@@ -123,6 +141,15 @@ def _self_test() -> int:
     assert decide(10, H, None, [cr(9)])[0] is True                    # unknown PR head → publish
     assert decide(10, H, H.upper(), [])[0] is True                    # case-insensitive
     assert latest_published_run_id([cr(3), cr(12), cr("x")]) == 12
+    st = lambda rid, ctx=CHECK_NAME: {"context": ctx, "target_url": f"https://github.com/o/r/actions/runs/{rid}"}
+    assert decide(10, H, H, [], [st(11)])[0] is False                 # a newer status wins
+    assert decide(10, H, H, [], [st(9)])[0] is True
+    assert decide(10, H, H, [], [st(11, "Update Changelog")])[0] is True  # other contexts ignored
+    assert decide(10, H, H, [], [{"context": CHECK_NAME, "target_url": None}])[0] is True
+    assert decide(10, H, H, [cr(12)], [st(9)])[0] is False            # legacy check-run still counts
+    assert latest_published_run_id([cr(3)], [st(12), st(7)]) == 12
+    assert run_id_from_url("https://github.com/o/r/actions/runs/38986448930/job/1") == 38986448930
+    assert run_id_from_url("https://github.com/o/r/pull/5") is None
     print("all publish_guard self-tests passed")
     return 0
 
