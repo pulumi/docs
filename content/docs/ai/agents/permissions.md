@@ -35,11 +35,17 @@ If an integration uses Pulumi ESC, the agent also needs permission to open the e
 
 ## Separate approvals from access
 
-Approval settings determine when an agent must ask before taking an action. Approving an action does not grant additional permissions.
+Set **Default mode** to control when the agent asks for approval. In **Auto** mode, actions do not require your approval. If no mode is set, the agent uses **Auto**. Approving an action does not grant permissions beyond the agent's role and connected credentials.
 
-**Read-only** restricts Pulumi Cloud writes, but doesn't make external credentials read-only.
+For Neo, see [permission and approval modes](/docs/ai/neo/permissions/#permission-mode-and-approval-mode).
 
-For an agent you configure, set **Permissions** and **Default mode** on the agent. For Neo, see [permission and approval modes](/docs/ai/neo/permissions/#permission-mode-and-approval-mode).
+## Give teammates access
+
+To start a task, a teammate needs `agent_task:create` and access to the agent. For an agent with an assigned role, the teammate must hold that role directly or through a team, or have `organization:update`. The default **Agent Read Only** role does not need to be assigned to teammates. See [Roles](/docs/administration/concepts/rbac/roles/) for role assignments.
+
+For tasks started directly, teammates with access to the agent can view and contribute to its tasks. For tasks started by an organization-owned automation, `agent_automations:read` grants viewing access, and `agent_automations:update` grants access to reply and approve actions. Holding the agent's role alone does not grant access to these automated tasks.
+
+Task owners and teammates with task-specific permissions can also access tasks. For example, `agent_task:read` grants viewing access, while `agent_task:contribute` allows replies. A personal schedule does not grant other teammates access to its tasks just because it runs a shared agent.
 
 ## Review and remove access
 

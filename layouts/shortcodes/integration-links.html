@@ -1,9 +1,14 @@
 {{ $items := index .Page.Params.integration_groups (.Get 0) }}
 <div class="tiles flex flex-wrap items-stretch">
     {{ range $items }}
+        {{ $darkImage := replaceRE `\.svg$` "-on-dark.svg" .image }}
+        {{ $hasDarkImage := and (ne $darkImage .image) (fileExists (printf "static%s" $darkImage)) }}
         <div class="w-full md:w-1/3 pb-4 md:pr-4">
             <a href="{{ .link }}" class="tile flex items-center gap-2 p-3 h-full">
-                <img src="{{ .image }}" alt="" width="24" height="24" class="h-6 w-6 object-contain flex-shrink-0 m-0">
+                <img src="{{ .image }}" alt="" width="24" height="24" class="{{ if $hasDarkImage }}docs-logo-light {{ end }}h-6 w-6 object-contain flex-shrink-0 m-0">
+                {{ if $hasDarkImage }}
+                    <img src="{{ $darkImage }}" alt="" width="24" height="24" class="docs-logo-dark h-6 w-6 object-contain flex-shrink-0 m-0">
+                {{ end }}
                 <span>{{ .name }}</span>
             </a>
         </div>

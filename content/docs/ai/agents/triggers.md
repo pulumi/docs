@@ -13,6 +13,8 @@ menu:
 
 Configure an agent to start tasks automatically when a Pulumi operation completes, an external tool sends a webhook, or a schedule runs. Choose which events or schedule should start the task, and provide the assignment the agent should carry out.
 
+Add automations to an existing agent from **Automations**. To configure its first trigger while creating it, follow [Choose how the agent starts](/docs/ai/agents/configure/#choose-how-the-agent-starts).
+
 For Neo's scheduled tasks, see [Neo automations](/docs/ai/neo/automations/).
 
 ## Write the assignment
@@ -23,27 +25,31 @@ Use trigger settings to select which events start tasks. Instructions in the ass
 
 ## Connect a Pulumi operation
 
-In Pulumi Cloud, open **Automations** and select **Set up trigger**. In the form:
+In Pulumi Cloud, open **Automations** and select **Set up trigger**:
 
+1. Enter a **Name** for the automation.
 1. Set **Runs** to **When a Pulumi operation completes**.
 1. Choose the **Agent**.
+1. In **Prompt**, write the assignment for each run.
 1. Select the **Operations**, **Results**, and **Stacks** that should start tasks.
 1. Select **Create automation**.
 
 For example, select failed operations on production stacks to investigate deployment failures without creating tasks for development activity. Matching stacks are added to the task context automatically.
 
-The first matching event starts work immediately. Later events are grouped and sent to the running task together.
+The first matching event starts a task. Later matching events join that task while its batch window is open. Events that arrive while the agent is working are combined and delivered when it can accept more input.
 
-Set **Follow-up batch window (seconds)** to control how long to wait after the most recent event before sending the group. Each new event restarts that wait, up to a maximum of one hour. This setting controls delivery timing; the **Operations**, **Results**, and **Stacks** settings determine which events qualify.
+**Follow-up batch window (seconds)** sets how long the batch stays open after the most recent event, up to one hour after the first event. Once the batch closes, the next matching event starts a new task. The window does not delay delivery to an available task.
 
 ## Connect an external webhook
 
-In Pulumi Cloud, open **Automations** and select **Set up trigger**. In the form:
+In Pulumi Cloud, open **Automations** and select **Set up trigger**:
 
+1. Enter a **Name** for the automation.
 1. Set **Runs** to **When a webhook event arrives**.
 1. Choose the **Agent**.
+1. In **Prompt**, write the assignment for each run.
 1. Under **Webhook preset**, select **Generic webhook** or **PagerDuty**.
-1. Save the automation and copy the **Webhook URL** and **Required header** from the setup panel.
+1. Select **Create automation**, then copy the **Webhook URL** and **Required header** from the setup panel.
 1. Configure the sender to use that URL and include `X-Pulumi-Trigger-Secret` with the displayed secret value on every request.
 
 The Pulumi secret is shown once. Save it before closing the panel. If it is lost, rotate it from the automation details page.
@@ -58,12 +64,13 @@ If signature verification is enabled, paste the PagerDuty signing secret into **
 
 ## Schedule recurring work
 
-In Pulumi Cloud, open **Automations** and select **New automation**. In the form:
+In Pulumi Cloud, open **Automations** and select **New automation**, then **Start with a blank automation**:
 
+1. Enter a **Name** for the automation.
 1. Choose the **Agent**.
 1. Set **Runs** to **On a schedule**.
 1. Set **Frequency**.
-1. Write the assignment for each run, such as reviewing dependency upgrades in a specific repository.
+1. In **Prompt**, write the assignment for each run, such as reviewing dependency upgrades in a specific repository.
 1. Select **Create automation**.
 
 Each task uses the agent's saved instructions and access settings.

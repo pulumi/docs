@@ -37,6 +37,10 @@ As an organization administrator:
 
 Give the connection a name that identifies its purpose, such as `staging-azure`. Include the subscription ID and relevant resource groups in its notes.
 
+The Azure CLI requires an explicit [service principal sign-in](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli-service-principal). Setting the environment variables does not sign it in. Add this instruction to the connection notes, replacing `<subscription-id>` with the subscription ID:
+
+> Run Azure sign-in inside a shell launched by `pulumi env run` for this connection. Pass `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`, and `AZURE_TENANT_ID` to `az login --service-principal` as the username, password, and tenant. Expand these variables only inside that shell; do not print the environment or credentials. Before querying resources, run `az account show --subscription <subscription-id>` and confirm its tenant and subscription match this connection. Use `--subscription <subscription-id>` for subsequent subscription-scoped commands.
+
 ## Use the connection
 
 In the task, name the connection and identify the subscription and resources the agent should work with. See [Tasks and collaboration](/docs/ai/agents/tasks/) to assign work and review the results.

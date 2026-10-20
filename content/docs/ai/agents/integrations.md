@@ -27,6 +27,9 @@ integration_groups:
           image: /logos/tech/git.svg
           link: /docs/integrations/version-control/custom-vcs/
     cloud:
+        - name: Cloudflare
+          image: /logos/agents/cloudflare.svg
+          link: /docs/ai/neo/integrations/mcp/#cloudflare
         - name: AWS
           image: /logos/pkg/aws.svg
           link: /docs/ai/agents/integrations/aws/
@@ -61,15 +64,18 @@ integration_groups:
         - name: New Relic
           image: /logos/agents/newrelic.svg
           link: /docs/ai/neo/integrations/mcp/#new-relic
+        - name: Sentry
+          image: /logos/agents/sentry.svg
+          link: /docs/ai/neo/integrations/mcp/#sentry
         - name: PagerDuty
           image: /logos/agents/pagerduty.svg
           link: /docs/ai/neo/integrations/mcp/#pagerduty
 
 ---
 
-Connect the tools an agent needs to do its work, such as a repository for code changes or Datadog for an investigation. Choose a tool below for setup instructions. See [Permissions](/docs/ai/agents/permissions/#design-access-around-the-job) to choose the access to grant.
+Connect the tools an agent needs to do its work, such as a repository for code changes or Datadog for an investigation. See [Permissions](/docs/ai/agents/permissions/#design-access-around-the-job) to choose the access to grant.
 
-Connections are shared across Neo and the agents you configure. The guides below explain how to connect each tool and grant an agent access.
+Connections are shared across Neo and the agents you configure.
 
 ## Connect your tools
 

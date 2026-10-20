@@ -33,8 +33,6 @@ Your Pulumi Cloud permissions determine which stacks and ESC environments Neo ca
 
 [Start your first task](/docs/ai/neo/get-started/) in Pulumi Cloud, or use Neo from your [terminal](/docs/ai/neo/pulumi-cli/) or [editor](/docs/ai/neo/editors/).
 
-The guides cover how to:
-
 - [Work through a task](/docs/ai/neo/tasks/) and review actions that need approval.
 - [Prepare pull requests](/docs/ai/neo/pull-requests/) and [run previews](/docs/ai/neo/running-previews/).
 - [Review code](/docs/ai/neo/code-reviews/) and [schedule recurring work](/docs/ai/neo/automations/).

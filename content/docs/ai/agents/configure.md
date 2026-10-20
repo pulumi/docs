@@ -12,11 +12,11 @@ menu:
         weight: 20
 ---
 
-Choose a pre-built agent, tailor its instructions, and give it access to the tools it needs. Then assign a task to check that it can do the work. To define a new responsibility from scratch, [build a custom agent](/docs/ai/agents/custom/).
+Pre-built agents include instructions for common infrastructure work. You can edit those instructions and choose which tools and resources the agent can access.
 
 ## Before you begin
 
-You need permission to create agents in your Pulumi Cloud organization. If the agent will read code or prepare pull requests, [connect your version control provider](/docs/integrations/version-control/) and grant access to the relevant repositories. You can connect other tools as you configure the agent.
+You need permission to create agents in your Pulumi Cloud organization. [Connect your version control provider](/docs/integrations/version-control/) and grant access to the relevant repositories. You can connect other tools as you configure the agent.
 
 ## Start with a pre-built agent
 
@@ -33,7 +33,7 @@ In the agent catalog, choose an agent and select **Set up agent**. The form open
 
 ## Build your own agent
 
-See [Build a custom agent](/docs/ai/agents/custom/) to define its job and write its instructions, then use the setup steps below to connect tools and assign access.
+See [Build a custom agent](/docs/ai/agents/custom/) to define its job and write its instructions.
 
 ## Customize the instructions
 
@@ -57,23 +57,25 @@ Reference documents in the instructions by path or URL. The agent also needs acc
 
 ## Set its access
 
-Review these settings before saving:
-
 | Setting | What to check |
 | --- | --- |
-| **Role** | Select a custom Pulumi Cloud role whose grants cover the agent's responsibility |
-| **Default mode** | Choose when actions require approval. Automatic approval does not grant additional access |
+| **Role** | Select a Pulumi Cloud role whose grants cover the agent's responsibility |
+| **Default mode** | Choose when the agent asks for approval. In **Auto** mode, actions do not require your approval |
 
 Give the agent only the permissions it needs for its work. Apply this to its Pulumi Cloud role and every integration you connect, limiting both the resources it can access and the actions it can perform.
 
-Choose a role to limit Pulumi Cloud access. A suggested role must already exist; check its grants rather than relying on its name. See [Permissions](/docs/ai/agents/permissions/) for the relationship between roles, permission modes, and external credentials.
+If you leave **Role** at **Agent Read Only**, Pulumi creates or reuses that role when you save. You can instead select **Member** or a custom role, provided its permissions do not exceed your own. Check the role's grants rather than relying on its name. See [Permissions](/docs/ai/agents/permissions/) for access and approval controls.
 
 ## Choose how the agent starts
 
 Under **How do you want to invoke this agent?**, choose:
 
 - **Manually** to assign tasks directly. You can add events and schedules later.
-- **Configure a trigger** to start tasks from Pulumi operations, external webhooks, or a recurring schedule. Select **Continue** to configure the trigger. See [Events and schedules](/docs/ai/agents/triggers/) for the setup steps.
+- **Configure a trigger** to start tasks from Pulumi operations, external webhooks, or a recurring schedule. Select **Continue** to configure the trigger.
+
+On the trigger step, choose a **Trigger preset**. Set the event filters or schedule, then expand **Task instructions and context** to review the **Trigger name** and **Prompt**. The prompt is the assignment for each run. Select **Create agent** when you finish.
+
+To add an event or schedule to an agent you have already saved, follow [Events and schedules](/docs/ai/agents/triggers/).
 
 ## Save and assign a task
 

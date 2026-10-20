@@ -29,44 +29,30 @@ When an agent decides to use the CLI, it runs the equivalent of:
 pulumi env run <orgLogin>/<escProject>/<escEnvironment> -- <cli> <args>
 ```
 
-ESC opens the environment, materializes its environment variables and files, runs the CLI, and tears the environment back down. **Pulumi Cloud never stores cloud credentials for CLI integrations.** ESC owns the credentials and decrypts them only at task time.
+The CLI connection stores a reference to the ESC environment. When the command runs, ESC opens the environment and supplies its variables and temporary files to the CLI.
 
 ## Supported CLIs
 
 | CLI | Tool | Required environment variables | Optional |
 |---|---|---|---|
 | `aws` | AWS CLI (`aws`) | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` | `AWS_SESSION_TOKEN` (temporary credentials), `AWS_REGION` |
-| `gcp` | Google Cloud CLI (`gcloud`) | `GOOGLE_APPLICATION_CREDENTIALS` (path to a service-account key file) | `CLOUDSDK_CORE_PROJECT` |
+| `gcp` | Google Cloud CLI (`gcloud`) | `CLOUDSDK_AUTH_ACCESS_TOKEN` (access token) | `CLOUDSDK_CORE_PROJECT` |
 | `azure` | Azure CLI (`az`) | `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`, `AZURE_TENANT_ID` | `AZURE_SUBSCRIPTION_ID` |
 | `kubernetes` | Kubernetes CLI (`kubectl`) | `KUBECONFIG` (path to a kubeconfig file) | None |
 
 ### Recommended credential setup
 
-Each CLI has a well-supported ESC pattern that issues short-lived credentials at task time, so you don't end up storing long-lived secrets anywhere. For AWS, Google Cloud, and Azure there are two paths: the Login Provider Setup wizard does the work for you, or you can set up the trust relationship by hand. For Kubernetes, you write the ESC environment yourself.
+- [AWS](/docs/ai/agents/integrations/aws/): use ESC's `aws-login` provider to issue temporary credentials for an IAM role.
+- [Google Cloud](/docs/ai/agents/integrations/google-cloud/): export the `gcp-login` provider's access token as `CLOUDSDK_AUTH_ACCESS_TOKEN`.
+- [Azure](/docs/ai/agents/integrations/azure/): supply service principal credentials and include the Azure CLI sign-in instructions in the connection notes.
 
-#### Recommended path: Login Provider Setup wizard (AWS, GCP, Azure)
-
-{{% notes type="tip" %}}
-**Recommended for first-time setup.** Pulumi Cloud can automate the OIDC trust setup and create a ready-to-use ESC environment in one flow. From the **Environments** page, select **Create environment**, then choose your cloud provider under **Login Provider Setup**. The wizard handles the IAM role or workload-identity-federation setup and writes the ESC environment for you. When it finishes, your environment is ready to use and you can skip ahead to [Connect the integration in Neo](#2-connect-the-integration-in-neo).
-
-See the [ESC onboarding blog post](/blog/esc-new-onboarding/) for a walkthrough with screenshots.
-{{% /notes %}}
-
-#### Manual cloud setup (AWS, GCP, Azure)
-
-If you didn't use the wizard, or you'd rather configure the trust relationship explicitly, set up the cloud-side trust and the ESC environment yourself:
-
-- **AWS: use OIDC with the [`aws-login`](/docs/esc/providers/login/aws-login/) provider.** Pulumi Cloud federates with AWS IAM via OpenID Connect; the `aws-login` provider exchanges a Pulumi-issued OIDC token for short-lived AWS credentials at task time. Follow [Configuring OpenID Connect for AWS](/docs/esc/guides/configuring-oidc/aws/) to set up the IAM role and trust policy.
-- **Google Cloud: use OIDC with the [`gcp-login`](/docs/esc/providers/login/gcp-login/) provider.** Uses [workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation). Follow [Configuring OpenID Connect for Google Cloud](/docs/esc/guides/configuring-oidc/gcp/) to set up the workload identity pool and provider.
-- **Azure: use OIDC with the [`azure-login`](/docs/esc/providers/login/azure-login/) provider.** Uses workload identity federation against a Microsoft Entra App. Follow [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/) to set up the federated credential.
-
-If you can't use OIDC (for example, while you're getting started), the same `*-login` providers also accept static credentials. See each provider's documentation for the static-credentials syntax.
+The **Login Provider Setup** wizard on the **Environments** page can create cloud trust relationships and ESC environments. Check the environment's outputs against the CLI requirements above before connecting it. An environment configured for a Pulumi provider may use different variables from its cloud CLI.
 
 #### Kubernetes
 
 The [Kubernetes Cluster Access](/docs/esc/guides/integrate-with/kubernetes-cluster-access/) guide walks through both options:
 
-- **Stack-output kubeconfig (recommended for Pulumi-managed clusters).** Use the [`pulumi-stacks`](/docs/esc/providers/iac/pulumi-stacks/) ESC provider to read the kubeconfig from an EKS, AKS, or GKE stack output, then materialize it through `files.KUBECONFIG`. This way the cluster Neo connects to is always the cluster Pulumi just deployed, with no manual config drift.
+- **Stack-output kubeconfig (recommended for Pulumi-managed clusters).** Use the [`pulumi-stacks`](/docs/esc/providers/iac/pulumi-stacks/) ESC provider to read the kubeconfig from an EKS, AKS, or GKE stack output, then materialize it through `files.KUBECONFIG`. The connection reads the kubeconfig from the stack output when the environment is opened.
 - **Static kubeconfig.** Drop a kubeconfig directly into `files.KUBECONFIG` for clusters not managed by a Pulumi program.
 
 ## Setting up a CLI integration

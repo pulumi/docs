@@ -332,3 +332,48 @@ ai:
     identifier: ai-mcp-tools
     url: /docs/ai/mcp-server/#tools
     weight: 20
+  - name: Atlassian
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-atlassian-jira-and-confluence
+    url: /docs/ai/neo/integrations/mcp/#atlassian-jira-and-confluence
+    weight: 10
+  - name: Cloudflare
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-cloudflare
+    url: /docs/ai/neo/integrations/mcp/#cloudflare
+    weight: 20
+  - name: Dash0
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-dash0
+    url: /docs/ai/neo/integrations/mcp/#dash0
+    weight: 30
+  - name: Honeycomb
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-honeycomb
+    url: /docs/ai/neo/integrations/mcp/#honeycomb
+    weight: 50
+  - name: Linear
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-linear
+    url: /docs/ai/neo/integrations/mcp/#linear
+    weight: 60
+  - name: New Relic
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-new-relic
+    url: /docs/ai/neo/integrations/mcp/#new-relic
+    weight: 70
+  - name: PagerDuty
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-pagerduty
+    url: /docs/ai/neo/integrations/mcp/#pagerduty
+    weight: 80
+  - name: Sentry
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-sentry
+    url: /docs/ai/neo/integrations/mcp/#sentry
+    weight: 90
+  - name: Supabase
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-supabase
+    url: /docs/ai/neo/integrations/mcp/#supabase
+    weight: 100

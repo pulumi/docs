@@ -2,7 +2,7 @@
 title: Tasks and collaboration
 title_tag: Tasks and collaboration | Pulumi Agents
 h1: Tasks and collaboration
-meta_desc: Start Pulumi Agent tasks from Pulumi Cloud, Slack, or Linear, and collaborate with your team.
+meta_desc: Start Pulumi Agent tasks from Pulumi Cloud or Slack, and collaborate with your team.
 menu:
     ai:
         name: Tasks and collaboration
@@ -11,7 +11,7 @@ menu:
         weight: 40
 ---
 
-Start a task by giving an agent an assignment in [Pulumi Cloud](#start-a-task-in-pulumi-cloud), [Slack](#work-from-slack), or [Linear](#assign-work-from-linear), or configure an [event or schedule](/docs/ai/agents/triggers/) to start tasks automatically. Each task contains the agent's work and results. You and your teammates can reply to answer questions, add context, or ask for changes.
+Start a task by giving an agent an assignment in [Pulumi Cloud](#start-a-task-in-pulumi-cloud) or [Slack](#work-from-slack), or configure an [event or schedule](/docs/ai/agents/triggers/) to start tasks automatically. Each task contains the agent's work and results. You and your teammates can reply to answer questions, add context, or ask for changes.
 
 These instructions apply to agents created for your organization. For personal tasks with Neo, see [Neo tasks](/docs/ai/neo/tasks/).
 
@@ -29,17 +29,11 @@ The task uses the agent's saved configuration. [Edit the agent](/docs/ai/agents/
 
 Follow the [Slack installation and account-linking steps](/docs/ai/neo/integrations/slack/#setting-up-the-integration). Mention the installed Pulumi app in a channel and ask it to list your agents. Address an agent by name, for example, `ask Incident investigator to investigate errors in the checkout service`.
 
-Continue the assignment in its Slack thread. Each participant must link their own Pulumi account and have permission to contribute; channel membership alone does not grant that permission.
-
-## Assign work from Linear
-
-Delegate a Linear issue to the connected Pulumi agent to start a task. The agent uses the issue description and your message as context. Continue the conversation in Linear, and open the task in Pulumi Cloud when an action needs approval.
-
-Your Linear account must be linked to your Pulumi account, with permission to use the agent.
+Continue the assignment in its Slack thread. Each participant must link their own Pulumi account and have [permission to contribute](/docs/ai/agents/permissions/#give-teammates-access); channel membership alone does not grant that permission.
 
 ## Work with teammates
 
-Teammates with permission to contribute can reply in the task to add evidence, answer questions, or request changes.
+Teammates with [permission to contribute](/docs/ai/agents/permissions/#give-teammates-access) can reply in the task to add evidence, answer questions, or request changes.
 
 ## Next steps
 

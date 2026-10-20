@@ -1,7 +1,7 @@
 ---
 title: Settings
-title_tag: Neo Settings
-h1: Neo Settings
+title_tag: Neo settings
+h1: Neo settings
 meta_desc: Configure Neo instructions, model providers, integrations, access controls, task modes, and notification preferences.
 aliases:
 - /docs/ai/settings/
@@ -212,7 +212,7 @@ When you have selected a slash command in a new or existing Neo task, click on t
 
 ### Slash command best practices
 
-- Create commands for frequently-used prompts that have proven effective
+- Create commands for frequently used prompts that have proven effective
 - Use clear, descriptive names that indicate what the command does
 
 ## Task modes
@@ -251,13 +251,13 @@ Task modes control approvals during execution. [Plan Mode](/docs/ai/neo/tasks/#p
 Notifications are user-level settings: each person configures their own preferences from their account settings, independent of any organization. They alert you when Neo needs your attention on a task while the Pulumi Cloud tab is in the background. Browser and audio notifications are both off by default.
 
 {{% notes type="info" %}}
-The "Neo settings" panel only appears for users whose organization has Neo enabled.
+The "Neo Settings" panel only appears for users whose organization has Neo enabled.
 {{% /notes %}}
 
 To configure notifications:
 
 1. Navigate to your account settings in Pulumi Cloud
-1. Locate the "Neo settings" panel
+1. Locate the "Neo Settings" panel
 1. Turn browser notifications and audio notifications on or off independently
 
 Notifications fire when Neo completes a response or requests your approval before continuing. To avoid interrupting you while you're actively watching a task, Neo suppresses both notification types whenever the Pulumi Cloud tab has focus.

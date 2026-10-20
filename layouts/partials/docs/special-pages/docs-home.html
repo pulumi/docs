@@ -57,29 +57,16 @@
                     </a>
                 {{ end }}
             </div>
-        {{ else if eq .type "text-columns" }}
-            <div class="docs-home-section">
-                {{ with .heading }}<h2 id="{{ anchorize . }}">{{ . }}</h2>{{ end }}
-                <div class="flex flex-wrap">
-                    {{ range .items }}
-                    <div class="w-full md:w-1/3 pb-4 md:pr-4 flex flex-col gap-4">
-                        <h3 id="{{ anchorize .heading }}">{{ .heading }}</h3>
-                        <p>{{ .description }}</p>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
         {{ else if eq .type "button-cards" }}
         <div class="docs-home-section">
             <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
 
             <div class="tiles flex-wrap justify-left items-stretch mt-4">
-                {{ $cardWidth := cond (eq .columns 3) "md:w-1/3" "md:w-1/2" }}
                 {{ range .cards }}
-                <div class="pb-4 md:pr-4 {{ $cardWidth }}">
+                <div class="pb-4 md:pr-4 md:w-1/2">
                     <div class="tile h-full">
                         <div class="block p-3 h-full flex flex-col">
-                            {{ if .link }}<a href="{{ .link }}">{{ else }}<div>{{ end }}
+                            <a href="{{ .link }}">
                                 <h4 class="no-anchor">
                                     {{ if .icon }}
                                         <span class="text-violet-primary mr-2 inline-flex align-top">{{ partial "icon.html" (dict "name" .icon "weight" "duotone") }}</span>
@@ -115,7 +102,7 @@
                                 {{ .description | safeHTML }}
                             {{ end }}
                             </p>
-                        {{ if .link }}</a>{{ else }}</div>{{ end }}
+                        </a>
                         <div class="flex space-x-2 flex-grow items-end">
                                 {{ if .primary_button_link }}
                                 <a href="{{ .primary_button_link }}" class="btn btn-primary">{{ .primary_button_label }}</a>

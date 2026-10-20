@@ -21,7 +21,7 @@ sections:
   - icon: rocket-launch
     heading: Delegate work to Pulumi Agents
     link: /docs/ai/agents/
-    description: Pulumi Agents investigate incidents, diagnose deployment failures, and prepare fixes for your team to review. Use pre-built or custom agents for individual tasks and recurring work.
+    description: Pulumi Agents are managed AI agents that run in Pulumi Cloud. Give them ongoing responsibilities, such as investigating incidents or maintaining infrastructure dependencies, with instructions and access tailored to your team.
   - icon: terminal
     heading: Use Pulumi with your coding agent
     link: /docs/ai/coding-agents/

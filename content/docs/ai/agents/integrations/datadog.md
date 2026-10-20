@@ -7,7 +7,7 @@ menu:
     ai:
         name: Datadog
         parent: ai-integrations-mcp
-        weight: 20
+        weight: 40
 ---
 
 Connect Datadog so an agent can query monitoring data during an investigation. Neo and agents you configure share the organization's connection, which uses a Datadog API key and application key.
