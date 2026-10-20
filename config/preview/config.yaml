@@ -1,0 +1,11 @@
+# Preview/testing environment. scripts/build-site.sh runs Hugo with `-e preview`
+# for PR previews and for the shared www.pulumi-test.io staging deploy, so this
+# is where the OneTrust integration is exercised before any production cutover.
+#
+# The OneTrust *test* domain script id lives here (not in _default) on purpose:
+# the default and production configs must not carry it. The production id (the
+# same value without the "-test" suffix) is introduced only during the separate,
+# approved production cutover.
+params:
+    consentProvider: onetrust
+    oneTrustDomainScript: 01a130f0-6a68-7792-88bc-358bc07fe42b-test

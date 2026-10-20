@@ -77,6 +77,13 @@ export class HubspotForm {
     @State()
     didLoad: boolean = false;
 
+    // True while the form is waiting on Functional (C0003) consent before it can
+    // load. Shows a placeholder with a link into Cookie Settings. Under the
+    // Segment provider runWithPulumiConsent runs immediately, so this never
+    // sticks; under OneTrust it stays set until the visitor allows C0003.
+    @State()
+    awaitingConsent: boolean = false;
+
     @Element()
     el: HTMLElement;
 
@@ -103,19 +110,40 @@ export class HubspotForm {
         this.messageHandler = this.onMessage.bind(this);
         window.addEventListener("message", this.messageHandler);
 
-        // Lazy-load HubSpot script when the form scrolls into view.
-        this.observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                this.observer.disconnect();
-                const hubspotGlobal = window["hbspt"];
-                if (hubspotGlobal) {
-                    this.createForm(hubspotGlobal);
-                } else {
-                    this.loadHubSpotFormsScript();
+        // Lazy-load HubSpot script when the form scrolls into view, gated on
+        // Functional (C0003) consent.
+        this.observer = new IntersectionObserver(
+            entries => {
+                if (entries[0].isIntersecting) {
+                    this.observer.disconnect();
+                    this.gateAndLoad();
                 }
-            }
-        }, { rootMargin: "200px" });
+            },
+            { rootMargin: "200px" },
+        );
         this.observer.observe(this.el);
+    }
+
+    // Load the HubSpot forms library once Functional (C0003) consent is granted.
+    // runWithPulumiConsent runs the loader immediately under Segment and only
+    // after C0003 under OneTrust; while it's withheld we show the placeholder.
+    private gateAndLoad() {
+        const runWithConsent = (window as any).runWithPulumiConsent;
+        const start = () => {
+            this.awaitingConsent = false;
+            const hubspotGlobal = window["hbspt"];
+            if (hubspotGlobal) {
+                this.createForm(hubspotGlobal);
+            } else {
+                this.loadHubSpotFormsScript();
+            }
+        };
+        if (typeof runWithConsent === "function") {
+            this.awaitingConsent = true;
+            runWithConsent("C0003", start);
+        } else {
+            start();
+        }
     }
 
     disconnectedCallback() {
@@ -213,7 +241,8 @@ export class HubspotForm {
         const analytics = (window as any).analytics;
         const analyticsAvailable = analytics && analytics.track && typeof analytics.track === "function";
 
-        if (analyticsAvailable && emailAddress !== "") { // Don't track empty email addresses
+        if (analyticsAvailable && emailAddress !== "") {
+            // Don't track empty email addresses
             const submissionData = {
                 formId: this.formId,
                 email: emailAddress,
@@ -395,7 +424,7 @@ export class HubspotForm {
         return (
             <span class="inline-flex h-9 items-center justify-center text-gray-500" role="status" aria-label="Loading">
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-5 animate-spin" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
-                    <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-78.36,60.66-95.27a8,8,0,0,1,6.68,14.54C60.15,75.42,40,105.69,40,128a88,88,0,0,0,176,0c0-22.31-20.15-52.58-51.34-80.73a8,8,0,0,1,6.68-14.54C208.19,49.64,232,87,232,128Z"/>
+                    <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-78.36,60.66-95.27a8,8,0,0,1,6.68,14.54C60.15,75.42,40,105.69,40,128a88,88,0,0,0,176,0c0-22.31-20.15-52.58-51.34-80.73a8,8,0,0,1,6.68-14.54C208.19,49.64,232,87,232,128Z" />
                 </svg>
             </span>
         );
@@ -410,7 +439,25 @@ export class HubspotForm {
         );
     }
 
+    // Shown when the form is blocked awaiting Functional (C0003) consent. The
+    // link opens the site's Cookie Settings (the OneTrust preference center).
+    private renderConsentBlocked() {
+        return (
+            <p>
+                This form needs functional cookies to load.{" "}
+                <button type="button" class="underline" onClick={() => (window as any).consentManager?.openConsentManager?.()}>
+                    Open Cookie Settings
+                </button>{" "}
+                to enable it.
+            </p>
+        );
+    }
+
     render() {
-        return <div id={this.hubspotFormTargetId}>{!this.didLoad && !this.isLoading ? this.renderFailedToLoadForm() : this.renderIsLoadingForm()}</div>;
+        return (
+            <div id={this.hubspotFormTargetId}>
+                {this.awaitingConsent ? this.renderConsentBlocked() : !this.didLoad && !this.isLoading ? this.renderFailedToLoadForm() : this.renderIsLoadingForm()}
+            </div>
+        );
     }
 }

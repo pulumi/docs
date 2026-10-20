@@ -18,6 +18,8 @@
     "files": [
         "src/ts/node-test-shims.d.ts",
         "src/ts/support-form.ts",
-        "src/ts/support-form.test.ts"
+        "src/ts/support-form.test.ts",
+        "src/ts/consent-manager/onetrust.ts",
+        "src/ts/consent-manager/onetrust.test.ts"
     ]
 }

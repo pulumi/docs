@@ -9,11 +9,24 @@ export const gb = new GrowthBook({
     enableDevMode: (window as any).growthbook_dev_mode,
 });
 
-gb.init({ streaming: true });
+// GrowthBook's init() opens a streaming connection to the GrowthBook CDN, which
+// is Performance (C0002) data collection. Gate it behind consent via the shared
+// runWithPulumiConsent bridge (defined in layouts/partials/head.html): under
+// OneTrust it waits for C0002; under Segment it runs immediately, preserving
+// existing behavior. The guard keeps this working if the bridge is ever absent.
+function initGrowthBook() {
+    gb.init({ streaming: true });
+}
+
+if (typeof (window as any).runWithPulumiConsent === "function") {
+    (window as any).runWithPulumiConsent("C0002", initGrowthBook);
+} else {
+    initGrowthBook();
+}
 
 // Hook up GrowthBook to analytics when ready. The optional chain keeps this module
 // loadable when the analytics snippet is absent (e.g., in the test environment).
-(window as any).analytics?.ready(function() {
+(window as any).analytics?.ready(function () {
     gb.setTrackingCallback((experiment, result) => {
         (window as any).analytics.track("Experiment Viewed", {
             experimentId: experiment.key,
@@ -22,8 +35,8 @@ gb.init({ streaming: true });
     });
 
     gb.setAttributes({
-    // Set Anon/UserId for GB
-    ...gb.getAttributes(),
+        // Set Anon/UserId for GB
+        ...gb.getAttributes(),
         id: (window as any).analytics.user().anonymousId(),
         userId: (window as any).analytics.user().id(),
         url: (window as any).location.href,
@@ -35,9 +48,8 @@ gb.init({ streaming: true });
         utmMedium: getQueryVariable("utm_medium"),
         utmTerm: getQueryVariable("utm_term"),
         utmContent: getQueryVariable("utm_content"),
-    })
-})
-    
+    });
+});
 
 // Extracts a query string variable from the browser's location.
 export function getQueryVariable(paramKey: string): string | null {
