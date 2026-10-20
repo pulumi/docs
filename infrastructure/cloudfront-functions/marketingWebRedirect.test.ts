@@ -3,6 +3,7 @@
 import * as assert from "assert";
 import { test } from "node:test";
 
+import { marketingWebPagePaths } from "../marketingWebPaths";
 import { marketingWebRedirectCode } from "./marketingWebRedirect";
 
 const handler: (event: any) => any = new Function(`${marketingWebRedirectCode}; return handler;`)();
@@ -25,8 +26,13 @@ function location(result: any): string {
 
 const utms = "utm_source=a&utm_campaign=b";
 
+const pagePaths = marketingWebPagePaths.map((pattern) => pattern.replace(/\*$/, ""));
+const barePagePaths = pagePaths.filter((uri) => !uri.endsWith("/") && !uri.includes("."));
+const slashOrFilePagePaths = pagePaths.filter((uri) => !barePagePaths.includes(uri));
+
 test("adds the trailing slash and keeps the query", () => {
-    for (const uri of ["/pricing", "/community", "/community/puluminaries", "/dev", "/dev/browse", "/dev/glossary"]) {
+    assert.ok(barePagePaths.length > 0);
+    for (const uri of [...barePagePaths, "/dev/browse", "/dev/glossary"]) {
         assert.strictEqual(location(handler(request(`${uri}?${utms}`))), `${uri}/?${utms}`, uri);
     }
 });
@@ -64,7 +70,8 @@ test("redirects legacy facet URLs even for markdown requests", () => {
 });
 
 test("passes through URLs that already end in a slash or name a file", () => {
-    for (const uri of ["/pricing/", "/dev/", "/dev/browse/", "/pricing.md", "/dev/foo.md", "/dev/browse/bogus/x/"]) {
+    assert.ok(slashOrFilePagePaths.length > 0);
+    for (const uri of [...slashOrFilePagePaths, "/dev/", "/dev/browse/", "/dev/foo.md", "/dev/browse/bogus/x/"]) {
         const event = request(`${uri}?${utms}`);
         assert.strictEqual(handler(event), event.request, uri);
     }

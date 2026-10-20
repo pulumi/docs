@@ -101,7 +101,7 @@ Some pulumi.com pages are **not** in this repo. They ship from [pulumi/marketing
 - **`/community`**: the community landing page and `/community/puluminaries/`. The proxied paths are exactly `/community`, `/community/`, `/community.md`, and `/community/puluminaries*`, because `/community/team/*` (the author pages blog bylines link to) is still built here from `content/community/team/` and `data/team/`.
 - **`/pricing`**: the pricing page, including the edition cards, prices, comparison table, calculator, and FAQ, all from `apps/www/src/data/pricing/`. This repo keeps only the generated `data/pulumi_editions.yaml` that docs callouts read (see "Edition data" below). The proxied paths are exactly `/pricing`, `/pricing/`, and `/pricing.md`, so redirects under `/pricing/` still come from S3.
 
-`invalidate-dev-cache.yml` flushes these paths from CloudFront when marketing-web deploys. When another page moves over, add its paths to that workflow's defaults and to this list.
+The proxied path patterns are declared once in `infrastructure/marketingWebPaths.ts`, and `invalidate-dev-cache.yml` flushes them from CloudFront when marketing-web deploys. When another page moves over, add its paths to that file, to that workflow's defaults, and to this list. `yarn --cwd infrastructure test-cloudfront-functions` fails if the workflow misses one.
 
 ### The Dev Center
 

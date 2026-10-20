@@ -26,6 +26,7 @@
         "support-form/intercom.ts",
         "support-form/validation.test.ts",
         "support-form/intercom.test.ts",
-        "cloudfront-functions/marketingWebRedirect.test.ts"
+        "cloudfront-functions/marketingWebRedirect.test.ts",
+        "cloudfront-functions/marketingWebPaths.test.ts"
     ]
 }

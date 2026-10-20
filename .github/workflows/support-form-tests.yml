@@ -60,6 +60,8 @@ on:
       - 'theme/package.json'
       # The client suite asserts the layout still provides the ids it binds to.
       - 'layouts/page/support-new.html'
+      # The CloudFront Functions suite checks its default paths against infrastructure/marketingWebPaths.ts.
+      - '.github/workflows/invalidate-dev-cache.yml'
       - '.github/workflows/support-form-tests.yml'
 
 permissions:
