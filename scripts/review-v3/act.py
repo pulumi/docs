@@ -748,7 +748,21 @@ def preflight_head(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
 
 
 def _is_sentinel(run: dict) -> bool:
-    return (run.get("name") or "").strip().lower() == SENTINEL_CHECK
+    """The Sentinel's job check-run, its commit status (`context`), or a
+    check-run it published before it switched to a status."""
+    return (run.get("name") or run.get("context") or "").strip().lower() == SENTINEL_CHECK
+
+
+def _status_as_run(s: dict) -> dict:
+    """A commit status in check-run shape, so the Sentinel wait can order it
+    against the job's own check-run and read it the same way."""
+    state = s.get("state") or ""
+    return {"name": s.get("context"),
+            "status": "in_progress" if state == "pending" else "completed",
+            "conclusion": {"success": "success", "failure": "failure",
+                           "error": "action_required"}.get(state),
+            "started_at": s.get("created_at") or "", "completed_at": s.get("updated_at") or "",
+            "id": s.get("id") or 0}
 
 
 def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
@@ -762,7 +776,8 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
     if ms not in STAMP_STATES:
         return False, f"mergeable_state={ms}", detail
     runs = [r for r in gh.check_runs(head) if not _is_sentinel(r)]
-    checks = collect.checks_rollup(runs, gh.commit_statuses(head), gh.workflow_paths(head))
+    statuses = [st for st in gh.commit_statuses(head) if not _is_sentinel(st)]
+    checks = collect.checks_rollup(runs, statuses, gh.workflow_paths(head))
     if checks["state"] != "green":
         return False, f"checks {checks['state']}: {', '.join(checks['failing'] or checks['pending'])}", detail
     # Latest review per user wins. The approver's own changes-requested is
@@ -811,7 +826,8 @@ def wait_for_sentinel(gh: GhClient, head: str, sleep=time.sleep) -> tuple[bool, 
     refuses — re-running the step retries the merge without re-approving."""
     attempts = SENTINEL_WAIT_S // SENTINEL_POLL_S
     for attempt in range(attempts + 1):
-        runs = [r for r in gh.check_runs(head) if _is_sentinel(r)]
+        runs = ([r for r in gh.check_runs(head) if _is_sentinel(r)]
+                + [_status_as_run(st) for st in gh.commit_statuses(head) if _is_sentinel(st)])
         if not runs:
             return True, "no Sentinel check on the head"
         run = max(runs, key=collect._run_order)

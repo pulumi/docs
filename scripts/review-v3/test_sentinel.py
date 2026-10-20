@@ -1727,8 +1727,22 @@ def test_label_event_filter_covers_every_label_the_evaluator_reads():
         f"drops (they only take effect on the next unrelated event): {missing}"
     )
     assert "publish_guard.py" in wf
-    assert "external_id: $run_id" in wf
     assert "steps.guard.outputs.publish == 'true'" in wf
+
+
+def test_workflow_publishes_a_status_not_a_check_run():
+    """`POST /check-runs` can't choose a check suite. GitHub filed the
+    Sentinel's run into the oldest Actions suite at the head, whichever
+    workflow created it; when that workflow ran again for the same event,
+    the suite was superseded, and branch protection read "Expected — Waiting
+    for status to be reported" on green, approved PRs (pulumi/docs#22308). A commit
+    status belongs to no suite. The guard reads the run id back out of the
+    status's `target_url`, so the publisher has to put the run URL there."""
+    wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
+    assert "statuses: write" in wf
+    assert "publish_verdict.py" in wf
+    assert "--run-url \"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"" in wf
+    assert not re.search(r"--method POST[^\n]*check-runs", wf), "the Sentinel must not POST a check-run"
 
 
 def test_workflow_never_checks_out_pr_code():

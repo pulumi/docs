@@ -155,7 +155,9 @@ Lives as an HTML comment in the bot-owned author comment:
 ## The Sentinel
 
 `sentinel.py` + `.github/workflows/review-sentinel.yml` publish the one
-blocking check-run ("Sentinel"). Deterministic, no model, no AWS, and —
+blocking commit status ("Sentinel", via `publish_verdict.py` — a status,
+not a check-run, because an API-created check-run can land in a check suite
+GitHub later supersedes and hides). Deterministic, no model, no AWS, and —
 because the workflow runs on `pull_request_target` — **never checks out or
 executes PR code** (test-enforced). Gates, each red message naming its fix:
 

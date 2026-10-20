@@ -244,6 +244,25 @@ def test_sentinel_state_reads_the_gate():
     assert digest.sentinel_state([{"name": "sentinel", "status": "completed", "conclusion": "success"}]) == "none"
 
 
+def test_sentinel_state_reads_the_status():
+    """The gate publishes a commit status now (pulumi/docs#22308). Report-only
+    posts `success` whatever the verdict, so the description decides."""
+    st = lambda state, desc, at="2026-10-19T10:00:00Z": {
+        "context": "Sentinel", "state": state, "description": desc, "updated_at": at}
+    assert digest.sentinel_state([], [st("success", "All gates green")]) == "ready"
+    assert digest.sentinel_state([], [st("failure", "2 gate(s) red")]) == "blocked"
+    assert digest.sentinel_state([], [st("error", "Couldn't evaluate — action required")]) == "blocked"
+    assert digest.sentinel_state([], [st("success", "Preview — would be: success (not enforced yet)")]) == "ready"
+    assert digest.sentinel_state([], [st("success", "Preview — would be: failure (not enforced yet)")]) == "blocked"
+    assert digest.sentinel_state([], [st("pending", "x")]) == "none"
+    assert digest.sentinel_state([], [{"context": "Update Changelog", "state": "success"}]) == "none"
+    # across the switch: the newest of a check-run and a status wins
+    old_run = {"name": "Sentinel", "status": "completed", "conclusion": "failure",
+               "completed_at": "2026-10-19T09:00:00Z", "output": {"title": "1 gate(s) red"}}
+    assert digest.sentinel_state([old_run], [st("success", "All gates green")]) == "ready"
+    assert digest.sentinel_state([old_run], [st("success", "All gates green", "2026-10-19T08:00:00Z")]) == "blocked"
+
+
 def test_ready_line_lists_humans_and_counts_bots():
     msg = render.render(base_digest(), None)
     line = next(l for l in msg.splitlines() if l.startswith("*Ready to merge*"))
