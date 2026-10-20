@@ -30,10 +30,10 @@ A frequent topic of conversation was open weight models and self-hosted inferenc
 
 If you are actively exploring the space or building with AI yourself, you may already have seen the challenges that come with serving inference at scale:
 
-- *Model stability and reliability can differ (sometimes dramatically) across hardware architectures and at different traffic volumes.*
-- *Model performance and throughput can change depending on your workload type or model configuration.*
-- *Cost differences and commitments across providers can make tracking spend challenging.*
-- *Supply constraints and capacity shortages mean teams can't source hardware when they need it most.*
+- Model stability and reliability can differ (sometimes dramatically) across hardware architectures and at different traffic volumes.
+- Model performance and throughput can change depending on your workload type or model configuration.
+- Cost differences and commitments across providers can make tracking spend challenging.
+- Supply constraints and capacity shortages mean teams can't source hardware when they need it most.
 
 Many teams naturally gravitate toward multicloud strategies that combine hyperscalers with specialized GPU clouds as a way of balancing spend, performance, and reliability. One thing we've seen is that developers everywhere are choosing Pulumi to help them navigate the fragmented hardware ecosystem and maintain consistent environments, even when the provider is different.
 
