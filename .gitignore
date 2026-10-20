@@ -159,6 +159,9 @@ _vendor/
 /.pr-review-queue.json
 /.pr-review-judgments.json
 /.pr-review-plan.json
+/.pr-review-plan.executed.json
+/.pr-review-preview.txt
+/.pr-review-last-run.txt
 /.pr-review-board.html
 /.pr-review-shots/
 /.pr-review-cache/

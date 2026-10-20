@@ -5,7 +5,7 @@ description: How to read the /pr-review board — every element on the page, wha
 
 # Reading the board
 
-The board is a **worksheet, not a control panel**. Nothing on the page talks to GitHub. Every button is a toggle that adds a fragment to the command at the bottom; when you are happy with that command you copy it, or ask Claude to run it. Until then you can click anything and change your mind. Claude stops when the page is published and does nothing further until you hand a command back, so a board you never read can't approve anything.
+The board is a **worksheet, not a control panel**. Nothing on the page talks to GitHub. Every button is a toggle that adds a fragment to the command at the bottom; when you are happy with that command you copy it, send it to Claude from the page, or paste it to Claude. Until then you can click anything and change your mind. Claude stops when the page is published and does nothing further until you hand a command back, so a board you never read can't approve anything. Even sent from the page, a command is only planned until you press **confirm & run** on the preview it comes back with (see "Sending it from the page").
 
 One run of `/pr-review` renders one board. Re-running re-renders it, and publishing updates the same page.
 
@@ -139,6 +139,17 @@ It is read off the lit buttons every time one changes, so it can never lag a cli
 
 Copy it and run it, or hand it to Claude. Invoking it *is* the yes: `act.py` plans it, prints a preview of every write with its exact body, and executes — the reading you did on this page is what the command carries, so nothing asks you to confirm it a second time. (`--dry-run` runs the preflights and lists every write it would make without sending one, if you want to look first; it never runs git.) Every write is preceded by a re-read of the PR (still open, head unchanged since the plan); an approval also checks mergeable, CI green, and no changes-requested review from anyone but you — your own is superseded by the approval it posts. A PR that fails preflight is skipped and the rest of the batch continues.
 
+## Sending it from the page
+
+When a Claude session is watching the board, the command bar grows two buttons. Both post a comment on the board and send it to that session. The page reads no reply: the session answers by republishing the board.
+
+- **send to Claude** sends the composed command. Claude plans it, which is read-only, and the board reloads with a **Planned, waiting for you** panel at the top: the plan's digest and the full preview, every write with its exact body. Nothing has reached GitHub yet.
+- **confirm & run** in that panel sends the digest back, and that press is the yes. The session runs exactly that plan through `act.py --execute --expect-digest`, which refuses a plan that was re-planned since, is over an hour old, or has already run. The plan is spent before its first write, so pressing Confirm twice sends nothing the second time. Every step still runs its usual preflight. The board then reloads with the results under **Last run from this board**.
+- **discard** throws the plan away. Nothing is written.
+- **refresh board** asks for a fresh collect, analyze and render. Read-only.
+
+The buttons are hidden when the page can't comment (a saved copy, or a viewer without access). They show disabled, with the reason beside them, when no session is watching or you aren't an editor of the board. The copy button always works, and the pending panel prints the `act.py --expect-digest` line to run yourself. The first send asks you to let the page comment as you; until you allow it, nothing is posted.
+
 ## Waiting on others
 
 A PR whose requested reviewer is a named person who isn't you is waiting on them, not on you. A requested team only parks a row that touches none of your lanes; on a row in your lane, another team being asked covers nothing of yours, so the row stays on the board. Those rows collapse into a compact list at the bottom. `--include-handed-off` brings them back as full rows. Routing a PR is also how you say "don't show me this again": the review request lives on GitHub, so every future run sees it, and GitHub clears it when the reviewer acts.
@@ -149,6 +160,6 @@ A PR you already sent back — your changes-requested review is the latest word,
 
 ## What is not on the board
 
-- Anything that talks to GitHub. The page is inert.
+- Anything that talks to GitHub. The page itself is inert: its only outbound move is a relay comment to the Claude session watching it, and the session decides what runs.
 - Anyone else's decisions. Judgments are written fresh each run and are not shared between approvers.
 - Draft PRs, unless you asked for one by number.
