@@ -39,7 +39,7 @@ Many teams naturally gravitate toward multicloud strategies that combine hypersc
 
 As part of our ongoing commitment to building better tools for builders, we're excited to announce [the Pulumi NVIDIA AI Cluster Runtime (AICR) provider](https://github.com/pulumi/pulumi-nvidia-aicr) to help make your ideal self-hosted AI infrastructure available on demand. The Pulumi AICR provider lets you spin up workload-specific training and inference endpoints on demand. Configured using the NVIDIA AI Cluster Runtime (AICR) SDK with pre-validated recipes, you can match your workload demand with the right hardware across a number of cloud-based GPU providers.
 
-## AI performance engineering team as code
+## AI performance-engineering team as code
 
 Deploying a cluster of GPU nodes as a production AI platform is a complex and time-consuming exercise that often requires specialized expertise. NVIDIA's AICR offers a collection of validated GPU infrastructure recipes for various cloud providers. By building a provider around AICR, Pulumi offers an efficient and reliable way to manage your GPU clusters, dramatically shortening time to first token.
 
