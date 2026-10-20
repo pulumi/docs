@@ -8,7 +8,6 @@ authors:
 tags:
     - policy-as-code
 category: best-practices
-canonical_url: "https://www.pulumi.com/docs/iac/using-pulumi/crossguard/"
 ---
 
 > [!INFO]

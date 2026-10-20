@@ -90,7 +90,7 @@ announcements:
       href: "/events/beyond-the-hyperscalers-sovereignty-panel/"
     dismissible: true
   - id: blog-pulumi-neo-security-2026-08-Nx9vQ7
-    active: true
+    active: false
     display: both
     icon: shield-check
     text: "**Identify weaknesses before attackers do.** Neo Security finds and fixes exploitable flaws in your infrastructure. Now in research preview."

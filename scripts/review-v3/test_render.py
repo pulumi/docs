@@ -432,7 +432,12 @@ def test_a_row_carries_its_age_without_crowding_the_meta_line():
     assert render.age_label({"created_at": "2026-03-01T00:00:00Z"}, now) == "6mo"  # never longer than four chars
     assert render.age_label({"created_at": ""}, now) == "today"  # a missing date reads as new, never as ancient
 
-    q = run([stampable(7), stampable(8, title="Been sitting a while", created_at="2026-01-05T00:00:00Z")])
+    # The board ages rows against the real clock, so the plain row's date has
+    # to be relative too: `stampable`'s fixed default (2026-09-10) turned
+    # amber on 2026-10-10 and this assertion has failed ever since.
+    fresh = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    q = run([stampable(7, created_at=fresh),
+             stampable(8, title="Been sitting a while", created_at="2026-01-05T00:00:00Z")])
     html = render.render_board(q)
     assert f'>{render.age_label(row(q, 7))}</span>' in html
     assert 'class="age old"' in html and 'class="age"' in html  # amber past 30 days, plain before it
@@ -724,7 +729,7 @@ def test_rows_waiting_on_the_author_and_rows_with_no_unblock_are_never_silent():
     full = render.render_board(q, include_handed_off=True)
     assert ">waiting on the author</span>" in full and full.count(">no action available</span>") == 1   # #4 only
     assert "<b>1</b><span>blocked, no action</span>" in full
-    assert "#update-review" in render.chip_title("outstanding:2:F1,F2")
+    assert "/update-review" in render.chip_title("outstanding:2:F1,F2")
     # the new chips read as words, stay out of the fold, and explain themselves
     row1 = html.split('data-pr="1"')[1].split('class="acts"')[0]
     assert ">your own PR<" in row1.split("<summary>why")[0]
@@ -855,7 +860,7 @@ def test_a_stuck_workflow_row_offers_an_interactive_fix_off_the_act_command():
 
 
 def test_the_two_ways_to_fix_a_stuck_row_put_each_other_out():
-    """"fix it yourself" and "ask @claude to fix them" do the same job by
+    """"fix it yourself" and "ask Claude to fix them" do the same job by
     different routes, so they share one exclusive group and the composer
     lights only one. The handoff is deliberately not a decision, so the
     one-decision-per-row rule cannot pair them on its own."""
@@ -865,7 +870,7 @@ def test_the_two_ways_to_fix_a_stuck_row_put_each_other_out():
     hand = html.split('class="btn hand"')[1].split("</button>")[0]
     assert 'data-exclusive="fix"' in hand, hand
     ask = html.split('data-cmd="--ask-fix 18"')[1].split("</button>")[0]
-    assert 'data-exclusive="fix"' in ask and ">ask @claude to fix them" in ask, ask
+    assert 'data-exclusive="fix"' in ask and ">ask Claude to fix them" in ask, ask
     # the ask is a write, so unlike the handoff it is an --act fragment
     assert 'data-kind="decision"' in ask
     assert "clearExclusive" in html
@@ -874,7 +879,7 @@ def test_the_two_ways_to_fix_a_stuck_row_put_each_other_out():
 
 def test_a_blocked_row_shows_the_findings_holding_it():
     """A row blocked on open findings shows them under the blocker. Every way
-    out it offers -- send back, close, ask @claude to fix them, fix it
+    out it offers -- send back, close, ask Claude to fix them, fix it
     yourself -- is a decision about those findings, so the board has to say
     what they are, as the terminal already does."""
     q = run([stampable(18, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="pulumi-bot", author_type="User",

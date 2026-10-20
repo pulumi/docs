@@ -1,11 +1,12 @@
 ---
 title: Pulumi Node.js SDK API Reference
-meta_desc: API reference for the Pulumi Node.js SDK (@pulumi/pulumi) for TypeScript and JavaScript, plus the Policy SDK and ESC SDK, regenerated on every release.
+meta_desc: API reference for the Pulumi Node.js SDK (@pulumi/pulumi) for TypeScript and JavaScript, plus the Policy, ESC, and Cloud SDKs, regenerated on every release.
 ---
 
 * [**Pulumi SDK** (`@pulumi/pulumi`)](/docs/reference/pkg/nodejs/pulumi/pulumi/) — the core Pulumi SDK for Node.js.
 * [**Pulumi Policy SDK** (`@pulumi/policy`)](/docs/reference/pkg/nodejs/pulumi/policy/) — for authoring policy packs for Pulumi Policies in TypeScript or JavaScript.
 * [**Pulumi ESC SDK** (`@pulumi/esc-sdk`)](/docs/reference/pkg/nodejs/pulumi/esc-sdk/) — for programmatically interacting with Pulumi ESC (Environments, Secrets, and Configuration).
+* [**Pulumi Cloud SDK** (`@pulumi/cloud-sdk`)](/docs/reference/pkg/nodejs/pulumi/cloud-sdk/) — for calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) from your own code. See [Pulumi Cloud SDK](/docs/administration/concepts/cloud-sdk/) for an overview.
 
 ## Related guides and concepts
 

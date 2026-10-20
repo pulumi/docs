@@ -1,5 +1,5 @@
 {
-  "applied": false,
+  "applied": true,
   "displayName": "",
   "name": "hitrust-aws",
   "policies": [
@@ -547,6 +547,18 @@
       "configSchema": {
         "properties": {
           "allowedAgents": {
+            "default": [
+              "amazon-cloudwatch-agent",
+              "awslogs",
+              "td-agent",
+              "fluentd",
+              "filebeat",
+              "fluent-bit",
+              "logstash",
+              "rsyslog",
+              "syslog-ng",
+              "vector"
+            ],
             "description": "Optional list of allowed logging agent strings to check for in userData. Defaults to common logging agents if not specified.",
             "items": {
               "type": "string"
@@ -1041,6 +1053,35 @@
       "message": "",
       "name": "ec2-instance-disallow-unencrypted-root-block-device",
       "remediationSteps": "## Fix: Enable Encryption for Root Block Device\n\nSet the `encrypted` property to true in the `rootBlockDevice` configuration:\n\n```typescript\nconst instance = new aws.ec2.Instance(\"my-instance\", {\n    instanceType: \"t3.micro\",\n    ami: \"ami-12345678\",\n    rootBlockDevice: {\n        encrypted: true, // Enable encryption for root volume\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EC2 instances do not launch with an instance profile whose role holds the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "ec2-instance-no-admin-access",
+      "remediationSteps": "## Fix: Launch with a Role Holding a Scoped Policy\n\nAttach a policy scoped to the workload's job to the instance profile's role, instead of AdministratorAccess, and launch the instance with that profile's name in `iamInstanceProfile`:\n\n```typescript\nconst role = new aws.iam.Role(\"app\", {\n    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: \"ec2.amazonaws.com\" }),\n});\n\nnew aws.iam.RolePolicyAttachment(\"app-read-only\", {\n    role: role.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n\nconst profile = new aws.iam.InstanceProfile(\"app\", { role: role.name });\n```",
       "severity": "high"
     },
     {
@@ -1751,6 +1792,64 @@
         },
         "type": "object"
       },
+      "description": "Checks that IAM group policy attachments do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "iam-group-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the group's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.GroupPolicyAttachment(\"readers-read-only\", {\n    group: group.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that exclusive IAM group policy attachments do not include the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "iam-group-policy-attachments-exclusive-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the group's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.GroupPolicyAttachmentsExclusive(\"readers-policies\", {\n    groupName: group.name,\n    policyArns: [aws.iam.ManagedPolicy.ReadOnlyAccess],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
       "description": "Ensures IAM group policies follow least privilege principles",
       "displayName": "",
       "enforcementLevel": "advisory",
@@ -1762,7 +1861,36 @@
       },
       "message": "",
       "name": "iam-group-policy-least-privilege",
-      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst groupPolicy = new aws.iam.GroupPolicy(\"my-group-policy\", {\n    group: myGroup.name,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:ListBucket\",         // Specify exact actions needed\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst listPolicy = new aws.iam.Policy(\"my-list-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:ListBucket\",         // Specify exact actions needed\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n\nnew aws.iam.GroupPolicyAttachment(\"my-group-list-policy\", {\n    group: myGroup.name,\n    policyArn: listPolicy.arn,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM instance profiles do not carry a role holding the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "iam-instance-profile-no-admin-access",
+      "remediationSteps": "## Fix: Give the Profile's Role a Scoped Policy\n\nAttach a policy scoped to the workload's job to the role, instead of AdministratorAccess:\n\n```typescript\nconst role = new aws.iam.Role(\"app\", {\n    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: \"ec2.amazonaws.com\" }),\n});\n\nnew aws.iam.RolePolicyAttachment(\"app-read-only\", {\n    role: role.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n\nconst profile = new aws.iam.InstanceProfile(\"app\", { role: role.name });\n```",
       "severity": "high"
     },
     {
@@ -1826,6 +1954,35 @@
       "message": "",
       "name": "iam-password-policy-prevent-reuse",
       "remediationSteps": "## Fix: Configure Password Reuse Prevention\n\nSet the `passwordReusePrevention` property to 24 to prevent users from reusing their previous 24 passwords:\n\n```typescript\nconst accountPasswordPolicy = new aws.iam.AccountPasswordPolicy(\"password-policy\", {\n    minimumPasswordLength: 14,\n    maxPasswordAge: 90,\n    requireNumbers: true,\n    requireSymbols: true,\n    requireUppercaseCharacters: true,\n    requireLowercaseCharacters: true,\n    passwordReusePrevention: 24, // Prevent reuse of previous 24 passwords\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM policy attachments do not attach the AWS managed AdministratorAccess policy to users, roles or groups.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "iam-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the job, or a customer-managed policy granting only the actions needed:\n\n```typescript\nnew aws.iam.PolicyAttachment(\"app-read-only\", {\n    roles: [role.name],\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
       "severity": "high"
     },
     {
@@ -1920,7 +2077,94 @@
       },
       "message": "",
       "name": "iam-role-least-privilege",
-      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources in inline policies with explicit, scoped permissions:\n\n```typescript\nconst role = new aws.iam.Role(\"my-role\", {\n    assumeRolePolicy: assumePolicyDoc,\n    inlinePolicies: [{\n        name: \"my-inline-policy\",\n        policy: JSON.stringify({\n            Version: \"2012-10-17\",\n            Statement: [{\n                Effect: \"Allow\",\n                Action: [\n                    \"dynamodb:GetItem\",    // Specify exact actions needed\n                    \"dynamodb:PutItem\",\n                ],\n                Resource: [\n                    \"arn:aws:dynamodb:us-east-1:123456789012:table/MyTable\",  // Scope to specific resources\n                ],\n            }],\n        }),\n    }],\n});\n```",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions in a managed policy attached to the role:\n\n```typescript\nconst role = new aws.iam.Role(\"my-role\", {\n    assumeRolePolicy: assumePolicyDoc,\n});\n\nconst tablePolicy = new aws.iam.Policy(\"my-table-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"dynamodb:GetItem\",    // Specify exact actions needed\n                \"dynamodb:PutItem\",\n            ],\n            Resource: [\n                \"arn:aws:dynamodb:us-east-1:123456789012:table/MyTable\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n\nnew aws.iam.RolePolicyAttachment(\"my-role-table-policy\", {\n    role: role.name,\n    policyArn: tablePolicy.arn,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM roles do not list the AWS managed AdministratorAccess policy in managedPolicyArns.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "iam-role-managed-policy-arns-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nList an AWS managed policy scoped to the role's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nconst role = new aws.iam.Role(\"app\", {\n    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: \"ec2.amazonaws.com\" }),\n    managedPolicyArns: [aws.iam.ManagedPolicy.ReadOnlyAccess],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM role policy attachments do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "iam-role-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the role's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.RolePolicyAttachment(\"app-read-only\", {\n    role: role.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that exclusive IAM role policy attachments do not include the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "iam-role-policy-attachments-exclusive-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the role's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.RolePolicyAttachmentsExclusive(\"app-policies\", {\n    roleName: role.name,\n    policyArns: [aws.iam.ManagedPolicy.ReadOnlyAccess],\n});\n```",
       "severity": "high"
     },
     {
@@ -1949,7 +2193,7 @@
       },
       "message": "",
       "name": "iam-role-policy-least-privilege",
-      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst rolePolicy = new aws.iam.RolePolicy(\"my-role-policy\", {\n    role: myRole.id,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"ec2:DescribeInstances\",   // Specify exact actions needed\n                \"ec2:StartInstances\",\n                \"ec2:StopInstances\",\n            ],\n            Resource: [\n                \"arn:aws:ec2:us-east-1:123456789012:instance/*\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions in a managed policy attached to the role:\n\n```typescript\nconst instancePolicy = new aws.iam.Policy(\"my-instance-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"ec2:DescribeInstances\",   // Specify exact actions needed\n                \"ec2:StartInstances\",\n                \"ec2:StopInstances\",\n            ],\n            Resource: [\n                \"arn:aws:ec2:us-east-1:123456789012:instance/*\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n\nnew aws.iam.RolePolicyAttachment(\"my-role-instance-policy\", {\n    role: myRole.name,\n    policyArn: instancePolicy.arn,\n});\n```",
       "severity": "high"
     },
     {
@@ -1989,6 +2233,7 @@
             "additionalProperties": {
               "type": "number"
             },
+            "default": {},
             "description": "Role name to maximum duration mapping for specific role overrides",
             "type": "object"
           },
@@ -2068,6 +2313,64 @@
         },
         "type": "object"
       },
+      "description": "Checks that IAM user policy attachments do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "iam-user-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nGrant the user a scoped policy through a group rather than attaching `AdministratorAccess`:\n\n```typescript\nconst group = new aws.iam.Group(\"readers\");\nnew aws.iam.GroupPolicyAttachment(\"readers-read-only\", {\n    group: group.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\nnew aws.iam.UserGroupMembership(\"user-readers\", {\n    user: user.name,\n    groups: [group.name],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that exclusive IAM user policy attachments do not include the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "iam-user-policy-attachments-exclusive-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nGrant the user a scoped policy through a group rather than attaching `AdministratorAccess`:\n\n```typescript\nconst group = new aws.iam.Group(\"readers\");\nnew aws.iam.GroupPolicyAttachment(\"readers-read-only\", {\n    group: group.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\nnew aws.iam.UserGroupMembership(\"user-readers\", {\n    user: user.name,\n    groups: [group.name],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
       "description": "Ensures IAM user policies follow least privilege principles",
       "displayName": "",
       "enforcementLevel": "advisory",
@@ -2079,7 +2382,7 @@
       },
       "message": "",
       "name": "iam-user-policy-least-privilege",
-      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst userPolicy = new aws.iam.UserPolicy(\"my-user-policy\", {\n    user: myUser.name,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:ListBucket\",         // Specify exact actions needed\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst listPolicy = new aws.iam.Policy(\"my-list-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:ListBucket\",         // Specify exact actions needed\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n\n// Grant it through a group rather than to the user directly\nconst readers = new aws.iam.Group(\"readers\");\nnew aws.iam.GroupPolicyAttachment(\"readers-list-policy\", {\n    group: readers.name,\n    policyArn: listPolicy.arn,\n});\nnew aws.iam.UserGroupMembership(\"my-user-readers\", {\n    user: myUser.name,\n    groups: [readers.name],\n});\n```",
       "severity": "high"
     },
     {
@@ -2443,6 +2746,35 @@
         },
         "type": "object"
       },
+      "description": "Ensures Lambda function URLs require IAM authentication",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "lambda-function-url-no-public-access",
+      "remediationSteps": "## Fix: Require IAM Authentication on the Function URL\n\n```typescript\nnew aws.lambda.FunctionUrl(\"function-url\", {\n    functionName: lambdaFunction.name,\n    authorizationType: \"AWS_IAM\",\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
       "description": "Checks that lambda function permissions bound the invoker, via sourceArn, sourceAccount, principalOrgId, or an identity-scoped principal.",
       "displayName": "",
       "enforcementLevel": "advisory",
@@ -2456,6 +2788,48 @@
       "name": "lambda-permission-configure-source-arn",
       "remediationSteps": "## Fix: Restrict Who May Invoke the Lambda Permission\n\nAdd the `sourceArn` property to restrict which AWS service or resource can invoke the Lambda function:\n\n```typescript\nconst lambdaPermission = new aws.lambda.Permission(\"my-permission\", {\n    action: \"lambda:InvokeFunction\",\n    function: myFunction.name,\n    principal: \"apigateway.amazonaws.com\",\n    sourceArn: apiGateway.executionArn, // Specify the source ARN to restrict invocation\n});\n```\n\nWhere the invoking resource's ARN is not known at deploy time, `sourceAccount` (single account) or\n`principalOrgId` (an AWS Organization) are accepted alternatives. A permission whose `principal` is\nalready a specific AWS account id or IAM principal ARN is scoped by that principal and needs\nneither.",
       "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt function names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFunctions": {
+            "default": [],
+            "description": "List of function names allowed to have public access",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Lambda functions must restrict public access through resource-based policies",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "lambda-public-access-restricted",
+      "remediationSteps": "## Fix: Restrict Lambda Function Access to Specific Principals\n\nReplace the wildcard principal with the service or account that invokes the function:\n\n```typescript\n// Grant access to a specific AWS service, scoped to the invoking resource\nnew aws.lambda.Permission(\"apiGatewayInvoke\", {\n    action: \"lambda:InvokeFunction\",\n    function: lambdaFunction.name,\n    principal: \"apigateway.amazonaws.com\",\n    sourceArn: pulumi.interpolate`${api.executionArn}/*`,\n});\n\n// Or grant access to a specific AWS account\nnew aws.lambda.Permission(\"crossAccountInvoke\", {\n    action: \"lambda:InvokeFunction\",\n    function: lambdaFunction.name,\n    principal: \"123456789012\",\n});\n```\n\nA wildcard principal restricted with `principalOrgId` is not reported. A function that must stay\npublicly invocable can be listed in `exemptFunctions`.",
+      "severity": "high"
     },
     {
       "configSchema": {
@@ -2679,7 +3053,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures EC2 instance userData does not contain hardcoded secrets",
+      "description": "Ensures user data on EC2 instances, launch templates, launch configurations, spot requests, spot fleets, Image Builder recipes and Lightsail instances does not contain hardcoded secrets",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -2690,7 +3064,7 @@
       },
       "message": "",
       "name": "no-hardcoded-secrets",
-      "remediationSteps": "## Fix: Remove Hardcoded Secrets\n\nRemove hardcoded secrets from userData scripts.\n\n## Example Violation\n\n```typescript\nconst instance = new aws.ec2.Instance(\"web-server\", {\n    instanceType: \"t3.micro\",\n    ami: \"ami-12345678\",\n    userData: `#!/bin/bash\nexport DATABASE_PASSWORD=\"mySecretPassword123\"\nexport API_KEY=\"sk_live_abc123def456789\"\nmysql -u admin -p\"hardcodedPassword\" -h db.example.com\n`,\n});\n```",
+      "remediationSteps": "## Fix: Remove Hardcoded Secrets\n\nRemove hardcoded secrets from user data and fetch them at boot from AWS Secrets Manager or SSM Parameter Store instead. This applies to EC2 instances, launch templates, launch configurations, spot requests, spot fleets, Image Builder recipes and Lightsail instances.\n\n## Example Violation\n\n```typescript\nconst instance = new aws.ec2.Instance(\"web-server\", {\n    instanceType: \"t3.micro\",\n    ami: \"ami-12345678\",\n    userData: `#!/bin/bash\nexport DATABASE_PASSWORD=\"mySecretPassword123\"\nexport API_KEY=\"sk_live_abc123def456789\"\nmysql -u admin -p\"hardcodedPassword\" -h db.example.com\n`,\n});\n```",
       "severity": "critical"
     },
     {
@@ -3353,6 +3727,22 @@
             "type": "string"
           },
           "restrictedUserNames": {
+            "default": [
+              "root",
+              "admin",
+              "administrator",
+              "default",
+              "user",
+              "guest",
+              "test",
+              "demo",
+              "service",
+              "system",
+              "aws",
+              "awsuser",
+              "ec2-user",
+              "ubuntu"
+            ],
             "description": "List of restricted user names that cannot be used for IAM users",
             "items": {
               "type": "string"
@@ -3978,6 +4368,35 @@
         },
         "type": "object"
       },
+      "description": "Checks that IAM Identity Center permission sets do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "ssoadmin-managed-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Managed Policy to the Permission Set\n\nAttach an AWS managed policy scoped to the job the permission set grants, instead of AdministratorAccess:\n\n```typescript\nnew aws.ssoadmin.ManagedPolicyAttachment(\"read-only\", {\n    instanceArn: permissionSet.instanceArn,\n    permissionSetArn: permissionSet.arn,\n    managedPolicyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
       "description": "Ensures subnets are distributed across multiple availability zones",
       "displayName": "",
       "enforcementLevel": "advisory",
@@ -4116,6 +4535,6 @@
       "severity": "critical"
     }
   ],
-  "version": 20,
-  "versionTag": "3.0.0"
+  "version": 21,
+  "versionTag": "3.1.0"
 }

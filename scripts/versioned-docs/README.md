@@ -120,13 +120,17 @@ every historical version. The TypeScript/.NET/Java workflows are fine — they c
 source repo at the version tag.
 
 ## Tool ids
-`pulumi-cli`, `nodejs`, `nodejs-policy`, `nodejs-esc-sdk`, `python`, `python-policy`,
-`python-esc-sdk`, `dotnet`, `dotnet-esc-sdk`, `java`. (ESC CLI is not included — those docs
-are no longer part of the site.)
+`pulumi-cli`, `nodejs`, `nodejs-policy`, `nodejs-esc-sdk`, `nodejs-cloud-sdk`, `python`,
+`python-policy`, `python-esc-sdk`, `python-cloud-sdk`, `dotnet`, `dotnet-esc-sdk`,
+`dotnet-cloud-sdk`, `java`, `java-cloud-sdk`. (ESC CLI is not included — those docs are no
+longer part of the site.) The `*-cloud-sdk` tools are date-versioned, so `backfill.sh` leaves
+them out of its default tag-walk set.
 
 ## Known follow-ups
-- `dotnet` snapshots currently include the `esc-sdk/` subtree (also archived separately as
-  `dotnet-esc-sdk`); add an exclude if the duplication matters.
-- Live **SDK** pages don't show the selector (only archives + live CLI pages do); injecting
-  it would add a `<script>` to every generated SDK file, which we skipped to avoid commit
-  churn. Revisit if wanted.
+- `dotnet` snapshots currently include the `esc-sdk/` and `cloud-sdk/` subtrees, and `java`
+  snapshots the `cloud-sdk/` subtree (each also archived separately as its own tool); add an
+  exclude if the duplication matters.
+- Live **SDK** pages show the selector in latest mode: `scripts/build-site.sh` runs
+  `inject-live-sdk-selectors.sh` against `public/` at build time, so nothing is committed to
+  the generated files under `static-prebuilt/`. Any change to the selector's behavior
+  therefore reaches live SDK pages as well as every archive.

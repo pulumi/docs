@@ -118,9 +118,9 @@ def test_publish_guard_resets_the_label_and_uses_the_script():
     run = _step(_job("publish"), "Verify handoff is still current")["run"]
     assert "handoff_guard.py decide" in run
     assert "--label review:stale" in run, "a superseded publish must not leave review:in-progress"
-    assert "dispatcher_comment_id" in run, "a superseded #new-review must clean up its confirmation comment"
+    assert "dispatcher_comment_id" in run, "a superseded /new-review must clean up its confirmation comment"
     # The rest path rewrites the spinner rather than deleting it.
-    assert "gh api --method PATCH" in run and "#new-review" in run
+    assert "gh api --method PATCH" in run and "/new-review" in run
 
 
 def test_publish_guard_fails_loudly_when_the_script_does():
@@ -255,10 +255,10 @@ def test_reconcile_sweeps_orphaned_in_progress():
     assert "-lt 1800" in wf  # 30-minute minimum age
 
 
-# ---- same-head race: auto-fired full review vs. #update-review ------------
+# ---- same-head race: auto-fired full review vs. /update-review ------------
 #
 # pulumi/docs#21871, three times in a day: the author pushes, then comments
-# `#update-review` seconds later. The update lane flips the PR to
+# `/update-review` seconds later. The update lane flips the PR to
 # review:in-progress before triage's workflow_run reaches the pr-context
 # gate, so the auto-fired full review proceeded; it finished minutes after
 # the update and republished v1 over the author's resolved card at the same
@@ -289,7 +289,7 @@ def test_card_stamp_is_taken_when_the_run_reads_the_pr():
 def test_jobs_downstream_of_autofire_gate_survive_its_skip():
     """autofire-gate is skipped on workflow_dispatch, and a skipped ancestor
     fails the implicit success() check on every job below it. Without a
-    status function, #new-review and redispatch runs reviewed the PR and then
+    status function, /new-review and redispatch runs reviewed the PR and then
     silently skipped publishing (#22182 regressed this)."""
     jobs = _wf()["jobs"]
 
@@ -304,4 +304,7 @@ def test_jobs_downstream_of_autofire_gate_survive_its_skip():
     downstream = [n for n in jobs if "autofire-gate" in ancestors(n)]
     assert {"claude-review", "publish", "redispatch"} <= set(downstream)
     for name in downstream:
-        assert "!cancelled()" in jobs[name].get("if", ""), name
+        # always() also survives the skip; record-usage uses it because a
+        # cancelled review was still billed.
+        cond = jobs[name].get("if", "")
+        assert "!cancelled()" in cond or "always()" in cond, name

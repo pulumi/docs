@@ -7,7 +7,6 @@ meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes 
 authors: ["mike-metral"]
 tags: [kubernetes, cloud-native]
 category: general
-canonical_url: "https://www.pulumi.com/docs/iac/clouds/kubernetes/"
 ---
 
 > [!INFO]

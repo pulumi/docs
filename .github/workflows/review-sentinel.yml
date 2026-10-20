@@ -1,10 +1,19 @@
 name: Sentinel
 
-# The v3 merge gate. One check-run ("Sentinel") answers "is this PR
+# The v3 merge gate. One commit status ("Sentinel") answers "is this PR
 # mergeable?": review ran at head, every finding answered, the matrix-named
 # human approved, infra changes carry staging evidence. scripts/review-v3/
 # sentinel.py is the evaluator (deterministic, no model, no AWS); this
-# workflow only gathers a PR number, runs it, and publishes the check-run.
+# workflow only gathers a PR number, runs it, and publishes the status
+# (scripts/review-v3/publish_verdict.py).
+#
+# A status, not a check-run: `POST /check-runs` can't pick a check suite, so
+# GitHub filed the Sentinel's run into the oldest Actions suite at the head,
+# whichever workflow won the race to create it on PR open. When that
+# workflow ran again for the same event (this one, or staging-deploy-auto on
+# `ready_for_review`), the old suite was superseded and the verdict vanished
+# from the merge box: "Expected — Waiting for status to be reported" on
+# green, approved PRs (pulumi/docs#22308). A status belongs to no suite.
 #
 # SECURITY INVARIANT: this runs on `pull_request_target`, which carries
 # write permissions and secrets on events a fork PR can trigger. It is safe
@@ -27,9 +36,10 @@ name: Sentinel
 #              review lanes' "Re-evaluate Sentinel" pokes are skipped. This
 #              is the state the workflow file merges in (Phase 0/1): merging
 #              must change nothing a contributor can see.
-#   'report' → report-only (Phase 2). The check concludes `neutral` with
-#              the real verdict in its title and summary ("Preview — would be:
-#              …"), and the pinned status comment is maintained on EVERY PR it
+#   'report' → report-only (Phase 2). The status passes (`neutral` is
+#              posted as `success`) with the real verdict in its description
+#              ("Preview — would be: …"), and the pinned status comment is
+#              maintained on EVERY PR it
 #              evaluates, leading with a banner that says it blocks nothing
 #              yet and that it soon will. Report-only is a visible dry run on
 #              purpose: the surface only gets tested if the readers do.
@@ -43,21 +53,27 @@ name: Sentinel
 # check on the PR ("Sentinel / sentinel — Cancelled"), and a group cancels
 # the older pending job even with cancel-in-progress off, so any burst of
 # triggers put a red ✗ in the merge box (65 of 200 runs, 2026-09-12 → 14).
-# Overlapping runs are cheap (no model, ~50 s) and are made safe by two
+# Overlapping runs are cheap (no model, ~50 s) and are made safe by three
 # things instead: the job-level `if` below ignores label events for labels
 # the evaluator never reads (triage's `domain:*` batch on open was most of
-# the burst), and scripts/review-v3/publish_guard.py refuses to publish a
+# the burst), scripts/review-v3/publish_guard.py refuses to publish a
 # verdict when the PR head has moved or a newer run already published at
-# this head (every check-run carries `external_id = run id`). A guarded-out
-# run concludes success with a ::notice::, never cancelled.
+# this head (every check-run carries `external_id = run id`), and
+# sentinel.py's `update_status_comment` collapses duplicate status comments
+# onto the oldest. That last one is the comment's guard, not the check's:
+# two runs that start together (open as draft then mark ready; a bot lane
+# opening and labelling at once) both find no comment and both post one,
+# and before the collapse the second copy froze on its first verdict
+# (pulumi/docs#22251). A guarded-out run concludes success with a
+# ::notice::, never cancelled.
 
 on:
   pull_request_target:
     types: [opened, ready_for_review, synchronize, reopened, labeled, unlabeled]
   pull_request_review:
-    # `edited` matters: G5 reads `sentinel:oversized-ack` out of the approving
+    # `edited` matters: G5 reads `/oversized-ack` out of the approving
     # review's BODY, so the natural human sequence — approve, see the red gate
-    # explaining the magic string, edit the review to add it — fired no event
+    # explaining the command, edit the review to add it — fired no event
     # at all. The gate stayed red on a PR that satisfied it, and an oversized
     # PR is exactly the one you do not want re-pushed to shake an event loose.
     # Narrowed in the job `if:` below: only an APPROVING review's edit can
@@ -75,6 +91,10 @@ on:
         required: true
 
 permissions:
+  statuses: write
+  # Only for mirroring each verdict onto a `Sentinel` check-run published
+  # before the switch to a status (publish_verdict.py). Drop it once no open
+  # PR's head carries one.
   checks: write
   # `pull-requests: write`, not `issues: write`, is what lets this job write
   # the pinned status comment and the ⛔ strip. Both go through
@@ -87,6 +107,8 @@ permissions:
   # (PR #21642, 2026-09-16) failed with exit 1. `issues: write` is kept
   # because gh's own endpoint naming keeps inviting it back; it is not the
   # one doing the work.
+  # The same scope also covers DELETE on those comments, which is how
+  # `update_status_comment` removes a duplicate status comment.
   pull-requests: write
   issues: write
   contents: read
@@ -102,7 +124,7 @@ env:
 jobs:
   sentinel:
     # No `name:`. The job shows up as "sentinel" beside the "Sentinel"
-    # check-run it publishes, and /pr-review (act.py `_is_sentinel`,
+    # status it publishes, and /pr-review (act.py `_is_sentinel`,
     # analyze.py) filters both by that name: a display name here would count
     # the job as an ordinary pending check and stall every stamp preflight.
     # Label events re-evaluate only for the labels the evaluator reads; every
@@ -269,21 +291,12 @@ jobs:
             --repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}" \
             --run-id "${{ github.run_id }}" --verdict verdict.json
 
-      - name: Publish check-run
+      - name: Publish verdict
         if: steps.pr.outputs.pr != '' && steps.guard.outputs.publish == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # A verdict with no head SHA is an evaluation that could not read
-          # the PR at all (sentinel.py's SentinelDataError path). Posting it
-          # is a guaranteed `422 No commit found for SHA:` that reads as a
-          # publish bug; say what actually happened instead.
-          if [ -z "$(jq -r '.head_sha // ""' verdict.json)" ]; then
-            echo "::error::The Sentinel could not read PR #${{ steps.pr.outputs.pr }} (see the Evaluate step); no check-run to publish. Re-run this job."
-            exit 1
-          fi
-          jq --arg run_id "${{ github.run_id }}" \
-             '{name: "Sentinel", head_sha: .head_sha, status: "completed",
-               conclusion: .conclusion, external_id: $run_id,
-               output: {title: .title, summary: .summary}}' verdict.json \
-          | gh api --method POST "repos/${{ github.repository }}/check-runs" --input -
+          python3 scripts/review-v3/publish_verdict.py \
+            --repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}" \
+            --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            --verdict verdict.json

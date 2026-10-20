@@ -202,61 +202,102 @@ reference:
     parent: reference-home
     identifier: reference-pre-built-policy-packs
     weight: 3
-  - name: TypeScript ↗
+  - name: Pulumi SDK
     parent: reference-sdks
+    identifier: reference-sdks-pulumi
+    weight: 1
+  - name: Policy SDK
+    parent: reference-sdks
+    identifier: reference-sdks-policy
+    weight: 2
+  - name: ESC SDK
+    parent: reference-sdks
+    identifier: reference-sdks-esc
+    weight: 3
+  - name: Pulumi Cloud SDK
+    parent: reference-sdks
+    identifier: reference-sdks-cloud
+    weight: 4
+  - name: TypeScript ↗
+    parent: reference-sdks-pulumi
     url: /docs/reference/pkg/nodejs/pulumi/pulumi/
     weight: 1
     identifier: reference-sdks-javascript
   - name: Python ↗
-    parent: reference-sdks
+    parent: reference-sdks-pulumi
     url: /docs/reference/pkg/python/pulumi/
     weight: 2
     identifier: reference-sdks-python
   - name: Go ↗
-    parent: reference-sdks
+    parent: reference-sdks-pulumi
     url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
     weight: 3
     identifier: reference-sdks-go
   - name: .NET ↗
-    parent: reference-sdks
+    parent: reference-sdks-pulumi
     url: /docs/reference/pkg/dotnet/pulumi/pulumi.html
     weight: 4
     identifier: reference-sdks-dotnet
   - name: Java ↗
-    parent: reference-sdks
+    parent: reference-sdks-pulumi
     url: /docs/reference/pkg/java/
     weight: 5
     identifier: reference-sdks-java
-  - name: TypeScript Policy SDK ↗
-    parent: reference-sdks
+  - name: TypeScript ↗
+    parent: reference-sdks-policy
     url: /docs/reference/pkg/nodejs/pulumi/policy
-    weight: 6
+    weight: 1
     identifier: reference-sdks-javascript-policy
-  - name: Python Policy SDK ↗
-    parent: reference-sdks
+  - name: Python ↗
+    parent: reference-sdks-policy
     url: /docs/reference/pkg/python/pulumi_policy/
-    weight: 7
+    weight: 2
     identifier: reference-sdks-python-policy
-  - name: TypeScript ESC SDK ↗
-    parent: reference-sdks
+  - name: TypeScript ↗
+    parent: reference-sdks-esc
     url: /docs/reference/pkg/nodejs/pulumi/esc-sdk/
-    weight: 8
+    weight: 1
     identifier: reference-sdks-javascript-esc
-  - name: Python ESC SDK ↗
-    parent: reference-sdks
+  - name: Python ↗
+    parent: reference-sdks-esc
     url: /docs/reference/pkg/python/pulumi_esc_sdk/
-    weight: 9
+    weight: 2
     identifier: reference-sdks-python-esc
-  - name: Go ESC SDK ↗
-    parent: reference-sdks
+  - name: Go ↗
+    parent: reference-sdks-esc
     url: https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk/go
-    weight: 10
+    weight: 3
     identifier: reference-sdks-go-esc
-  - name: .NET ESC SDK ↗
-    parent: reference-sdks
+  - name: .NET ↗
+    parent: reference-sdks-esc
     url: /docs/reference/pkg/dotnet/esc-sdk/pulumi.esc.sdk/pulumi.esc.sdk.html
-    weight: 11
+    weight: 4
     identifier: reference-sdks-dotnet-esc
+  - name: TypeScript ↗
+    parent: reference-sdks-cloud
+    url: /docs/reference/pkg/nodejs/pulumi/cloud-sdk/
+    weight: 1
+    identifier: reference-sdks-javascript-cloud
+  - name: Python ↗
+    parent: reference-sdks-cloud
+    url: /docs/reference/pkg/python/pulumi_cloud_sdk/
+    weight: 2
+    identifier: reference-sdks-python-cloud
+  - name: Go ↗
+    parent: reference-sdks-cloud
+    url: https://pkg.go.dev/github.com/pulumi/pulumi-cloud-sdk/go/apiclient
+    weight: 3
+    identifier: reference-sdks-go-cloud
+  - name: .NET ↗
+    parent: reference-sdks-cloud
+    url: /docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.html
+    weight: 4
+    identifier: reference-sdks-dotnet-cloud
+  - name: Java ↗
+    parent: reference-sdks-cloud
+    url: /docs/reference/pkg/java/cloud-sdk/
+    weight: 5
+    identifier: reference-sdks-java-cloud
   - name: CIS
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-cis

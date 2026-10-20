@@ -463,6 +463,26 @@
     },
     {
       "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "A user was granted a permission set on a stack, an ESC environment or an Insights account.",
+      "displayName": "User Assignment Granted",
+      "event": "entity-user-assignment-granted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "A user's permission set on a stack, an ESC environment or an Insights account was removed.",
+      "displayName": "User Assignment Revoked",
+      "event": "entity-user-assignment-revoked",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
       "category": "environments",
       "deprecated": false,
       "description": "An ESC environment was cloned into a new environment.",
@@ -1315,7 +1335,7 @@
       "authenticationFailure": false,
       "category": "organization",
       "deprecated": false,
-      "description": "A Pulumi site admin ended the organization's retrial.",
+      "description": "The organization's retrial ended, because it expired or Pulumi ended it.",
       "displayName": "Retrial Ended",
       "event": "retrial-ended",
       "requiresOrgAdmin": true,

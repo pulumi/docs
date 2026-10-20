@@ -1,0 +1,478 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>X509Certificate | @pulumi/cloud-sdk - v2026.10.9</title><meta name="description" content="Class X509Certificate in the @pulumi/cloud-sdk Node.js SDK API reference for Pulumi infrastructure as code."/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script defer src="../assets/custom.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script><link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/cloud-sdk/classes/Models.X509Certificate.html"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"APIReference","headline":"Class X509Certificate","description":"Class X509Certificate in the @pulumi/cloud-sdk Node.js SDK API reference for Pulumi infrastructure as code.","url":"https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/cloud-sdk/classes/Models.X509Certificate.html","programmingLanguage":"TypeScript","executableLibraryName":"@pulumi/cloud-sdk","about":{"@type":"SoftwareSourceCode","name":"@pulumi/cloud-sdk","programmingLanguage":"TypeScript"},"isPartOf":{"@type":"WebSite","name":"Pulumi Docs","url":"https://www.pulumi.com/docs/"},"publisher":{"@type":"Organization","name":"Pulumi","url":"https://www.pulumi.com/"}}</script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">@pulumi/cloud-sdk - v2026.10.9</a>
+<div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
+<ul role="listbox" id="tsd-search-results"></ul>
+<div id="tsd-search-status" aria-live="polite" aria-atomic="true">
+<div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header>
+<div class="container container-main">
+<div class="col-content">
+<div class="tsd-page-title">
+<ul class="tsd-breadcrumb" aria-label="Breadcrumb">
+<li><a href="../modules/Models.html">Models</a></li>
+<li><a href="" aria-current="page">X509Certificate</a></li></ul>
+<h1>Class X509Certificate</h1></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L23">model/X509Certificate.ts:23</a></li></ul></aside>
+<section class="tsd-panel-group tsd-index-group">
+<section class="tsd-panel tsd-index-panel">
+<details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h5 class="tsd-index-heading uppercase">Index</h5></summary>
+<div class="tsd-accordion-details">
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="constructors">Constructors<a href="#constructors" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="properties">Properties<a href="#properties" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#authoritykeyid" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Authority<wbr/>Key<wbr/>Id</span></a>
+<a href="#basicconstraintsvalid" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Basic<wbr/>Constraints<wbr/>Valid</span></a>
+<a href="#crldistributionpoints" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>CRL<wbr/>Distribution<wbr/>Points</span></a>
+<a href="#dnsnames" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>DNS<wbr/>Names</span></a>
+<a href="#emailaddresses" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Email<wbr/>Addresses</span></a>
+<a href="#excludeddnsdomains" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Excluded<wbr/>DNS<wbr/>Domains</span></a>
+<a href="#excludedemailaddresses" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Excluded<wbr/>Email<wbr/>Addresses</span></a>
+<a href="#excludedipranges" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Excluded<wbr/>IP<wbr/>Ranges</span></a>
+<a href="#excludeduridomains" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Excluded<wbr/>URI<wbr/>Domains</span></a>
+<a href="#extensions" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Extensions</span></a>
+<a href="#extkeyusage" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Ext<wbr/>Key<wbr/>Usage</span></a>
+<a href="#extraextensions" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Extra<wbr/>Extensions</span></a>
+<a href="#inhibitanypolicy" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Inhibit<wbr/>Any<wbr/>Policy</span></a>
+<a href="#inhibitanypolicyzero" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Inhibit<wbr/>Any<wbr/>Policy<wbr/>Zero</span></a>
+<a href="#inhibitpolicymapping" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Inhibit<wbr/>Policy<wbr/>Mapping</span></a>
+<a href="#inhibitpolicymappingzero" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Inhibit<wbr/>Policy<wbr/>Mapping<wbr/>Zero</span></a>
+<a href="#ipaddresses" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>IP<wbr/>Addresses</span></a>
+<a href="#isca" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Is<wbr/>CA</span></a>
+<a href="#issuer" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Issuer</span></a>
+<a href="#issuingcertificateurl" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Issuing<wbr/>Certificate<wbr/>URL</span></a>
+<a href="#keyusage" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Key<wbr/>Usage</span></a>
+<a href="#maxpathlen" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Max<wbr/>Path<wbr/>Len</span></a>
+<a href="#maxpathlenzero" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Max<wbr/>Path<wbr/>Len<wbr/>Zero</span></a>
+<a href="#notafter" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Not<wbr/>After</span></a>
+<a href="#notbefore" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Not<wbr/>Before</span></a>
+<a href="#ocspserver" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>OCSP<wbr/>Server</span></a>
+<a href="#permitteddnsdomains" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Permitted<wbr/>DNS<wbr/>Domains</span></a>
+<a href="#permitteddnsdomainscritical" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Permitted<wbr/>DNS<wbr/>Domains<wbr/>Critical</span></a>
+<a href="#permittedemailaddresses" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Permitted<wbr/>Email<wbr/>Addresses</span></a>
+<a href="#permittedipranges" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Permitted<wbr/>IP<wbr/>Ranges</span></a>
+<a href="#permitteduridomains" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Permitted<wbr/>URI<wbr/>Domains</span></a>
+<a href="#policies" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Policies</span></a>
+<a href="#policyidentifiers" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Policy<wbr/>Identifiers</span></a>
+<a href="#policymappings" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Policy<wbr/>Mappings</span></a>
+<a href="#publickey" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Public<wbr/>Key</span></a>
+<a href="#publickeyalgorithm" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Public<wbr/>Key<wbr/>Algorithm</span></a>
+<a href="#raw" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Raw</span></a>
+<a href="#rawissuer" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Raw<wbr/>Issuer</span></a>
+<a href="#rawsubject" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Raw<wbr/>Subject</span></a>
+<a href="#rawsubjectpublickeyinfo" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Raw<wbr/>Subject<wbr/>Public<wbr/>Key<wbr/>Info</span></a>
+<a href="#rawtbscertificate" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Raw<wbr/>TBS<wbr/>Certificate</span></a>
+<a href="#requireexplicitpolicy" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Require<wbr/>Explicit<wbr/>Policy</span></a>
+<a href="#requireexplicitpolicyzero" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Require<wbr/>Explicit<wbr/>Policy<wbr/>Zero</span></a>
+<a href="#serialnumber" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Serial<wbr/>Number</span></a>
+<a href="#signature" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Signature</span></a>
+<a href="#signaturealgorithm" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Signature<wbr/>Algorithm</span></a>
+<a href="#subject" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Subject</span></a>
+<a href="#subjectkeyid" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Subject<wbr/>Key<wbr/>Id</span></a>
+<a href="#unhandledcriticalextensions" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Unhandled<wbr/>Critical<wbr/>Extensions</span></a>
+<a href="#unknownextkeyusage" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Unknown<wbr/>Ext<wbr/>Key<wbr/>Usage</span></a>
+<a href="#uris" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>UR<wbr/>Is</span></a>
+<a href="#version" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Version</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="methods">Methods<a href="#methods" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#fixupfields" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fixup<wbr/>Fields</span></a>
+<a href="#getfixupprototypefunction" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Fixup<wbr/>Prototype<wbr/>Function</span></a>
+<a href="#deepclone" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>deep<wbr/>Clone</span></a>
+<a href="#fixupprototype" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fixup<wbr/>Prototype</span></a>
+<a href="#newinstance" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>new<wbr/>Instance</span></a>
+<a href="#setprototype" class="tsd-index-link tsd-is-protected"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Prototype</span></a>
+</div></section></div></details></section></section>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="constructors-1">Constructors<a href="#constructors-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="constructor"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="constructorx509certificate"><span class="tsd-signature-keyword">new</span> <span class="tsd-kind-constructor-signature">X509Certificate</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a><a href="#constructorx509certificate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a></h4></div></li></ul></section></section></details>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="properties-1">Properties<a href="#properties-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="authoritykeyid"><span>Authority<wbr/>Key<wbr/>Id</span><a href="#authoritykeyid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">AuthorityKeyId</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Base64-encoded bytes.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L58">model/X509Certificate.ts:58</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="basicconstraintsvalid"><span>Basic<wbr/>Constraints<wbr/>Valid</span><a href="#basicconstraintsvalid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">BasicConstraintsValid</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L51">model/X509Certificate.ts:51</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="crldistributionpoints"><span>CRL<wbr/>Distribution<wbr/>Points</span><a href="#crldistributionpoints" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">CRLDistributionPoints</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L75">model/X509Certificate.ts:75</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="dnsnames"><span>DNS<wbr/>Names</span><a href="#dnsnames" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">DNSNames</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L61">model/X509Certificate.ts:61</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="emailaddresses"><span>Email<wbr/>Addresses</span><a href="#emailaddresses" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">EmailAddresses</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L62">model/X509Certificate.ts:62</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="excludeddnsdomains"><span>Excluded<wbr/>DNS<wbr/>Domains</span><a href="#excludeddnsdomains" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">ExcludedDNSDomains</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L68">model/X509Certificate.ts:68</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="excludedemailaddresses"><span>Excluded<wbr/>Email<wbr/>Addresses</span><a href="#excludedemailaddresses" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">ExcludedEmailAddresses</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L72">model/X509Certificate.ts:72</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="excludedipranges"><span>Excluded<wbr/>IP<wbr/>Ranges</span><a href="#excludedipranges" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">ExcludedIPRanges</span><span class="tsd-signature-symbol">:</span> <a href="Models.NetIPNet.html" class="tsd-signature-type tsd-kind-class">NetIPNet</a><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L70">model/X509Certificate.ts:70</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="excludeduridomains"><span>Excluded<wbr/>URI<wbr/>Domains</span><a href="#excludeduridomains" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">ExcludedURIDomains</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L74">model/X509Certificate.ts:74</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="extensions"><span>Extensions</span><a href="#extensions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">Extensions</span><span class="tsd-signature-symbol">:</span> <a href="Models.PkixExtension.html" class="tsd-signature-type tsd-kind-class">PkixExtension</a><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L46">model/X509Certificate.ts:46</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="extkeyusage"><span>Ext<wbr/>Key<wbr/>Usage</span><a href="#extkeyusage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">ExtKeyUsage</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L49">model/X509Certificate.ts:49</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="extraextensions"><span>Extra<wbr/>Extensions</span><a href="#extraextensions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">ExtraExtensions</span><span class="tsd-signature-symbol">:</span> <a href="Models.PkixExtension.html" class="tsd-signature-type tsd-kind-class">PkixExtension</a><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L47">model/X509Certificate.ts:47</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="inhibitanypolicy"><span>Inhibit<wbr/>Any<wbr/>Policy</span><a href="#inhibitanypolicy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">InhibitAnyPolicy</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L78">model/X509Certificate.ts:78</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="inhibitanypolicyzero"><span>Inhibit<wbr/>Any<wbr/>Policy<wbr/>Zero</span><a href="#inhibitanypolicyzero" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">InhibitAnyPolicyZero</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L79">model/X509Certificate.ts:79</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="inhibitpolicymapping"><span>Inhibit<wbr/>Policy<wbr/>Mapping</span><a href="#inhibitpolicymapping" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">InhibitPolicyMapping</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L80">model/X509Certificate.ts:80</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="inhibitpolicymappingzero"><span>Inhibit<wbr/>Policy<wbr/>Mapping<wbr/>Zero</span><a href="#inhibitpolicymappingzero" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">InhibitPolicyMappingZero</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L81">model/X509Certificate.ts:81</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="ipaddresses"><span>IP<wbr/>Addresses</span><a href="#ipaddresses" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">IPAddresses</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>Base64-encoded bytes.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L64">model/X509Certificate.ts:64</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="isca"><span>Is<wbr/>CA</span><a href="#isca" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">IsCA</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L52">model/X509Certificate.ts:52</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="issuer"><span>Issuer</span><a href="#issuer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">Issuer</span><span class="tsd-signature-symbol">:</span> <a href="Models.PkixName.html" class="tsd-signature-type tsd-kind-class">PkixName</a></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L41">model/X509Certificate.ts:41</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="issuingcertificateurl"><span>Issuing<wbr/>Certificate<wbr/>URL</span><a href="#issuingcertificateurl" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">IssuingCertificateURL</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L60">model/X509Certificate.ts:60</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="keyusage"><span>Key<wbr/>Usage</span><a href="#keyusage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">KeyUsage</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L45">model/X509Certificate.ts:45</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="maxpathlen"><span>Max<wbr/>Path<wbr/>Len</span><a href="#maxpathlen" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">MaxPathLen</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L53">model/X509Certificate.ts:53</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="maxpathlenzero"><span>Max<wbr/>Path<wbr/>Len<wbr/>Zero</span><a href="#maxpathlenzero" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">MaxPathLenZero</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L54">model/X509Certificate.ts:54</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="notafter"><span>Not<wbr/>After</span><a href="#notafter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">NotAfter</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L44">model/X509Certificate.ts:44</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="notbefore"><span>Not<wbr/>Before</span><a href="#notbefore" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">NotBefore</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L43">model/X509Certificate.ts:43</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="ocspserver"><span>OCSP<wbr/>Server</span><a href="#ocspserver" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">OCSPServer</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L59">model/X509Certificate.ts:59</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="permitteddnsdomains"><span>Permitted<wbr/>DNS<wbr/>Domains</span><a href="#permitteddnsdomains" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PermittedDNSDomains</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L67">model/X509Certificate.ts:67</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="permitteddnsdomainscritical"><span>Permitted<wbr/>DNS<wbr/>Domains<wbr/>Critical</span><a href="#permitteddnsdomainscritical" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PermittedDNSDomainsCritical</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L66">model/X509Certificate.ts:66</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="permittedemailaddresses"><span>Permitted<wbr/>Email<wbr/>Addresses</span><a href="#permittedemailaddresses" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PermittedEmailAddresses</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L71">model/X509Certificate.ts:71</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="permittedipranges"><span>Permitted<wbr/>IP<wbr/>Ranges</span><a href="#permittedipranges" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PermittedIPRanges</span><span class="tsd-signature-symbol">:</span> <a href="Models.NetIPNet.html" class="tsd-signature-type tsd-kind-class">NetIPNet</a><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L69">model/X509Certificate.ts:69</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="permitteduridomains"><span>Permitted<wbr/>URI<wbr/>Domains</span><a href="#permitteduridomains" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PermittedURIDomains</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L73">model/X509Certificate.ts:73</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="policies"><span>Policies</span><a href="#policies" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">Policies</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L77">model/X509Certificate.ts:77</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="policyidentifiers"><span>Policy<wbr/>Identifiers</span><a href="#policyidentifiers" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PolicyIdentifiers</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L76">model/X509Certificate.ts:76</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="policymappings"><span>Policy<wbr/>Mappings</span><a href="#policymappings" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PolicyMappings</span><span class="tsd-signature-symbol">:</span> <a href="Models.X509PolicyMapping.html" class="tsd-signature-type tsd-kind-class">X509PolicyMapping</a><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L84">model/X509Certificate.ts:84</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="publickey"><span>Public<wbr/>Key</span><a href="#publickey" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PublicKey</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L38">model/X509Certificate.ts:38</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="publickeyalgorithm"><span>Public<wbr/>Key<wbr/>Algorithm</span><a href="#publickeyalgorithm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">PublicKeyAlgorithm</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L37">model/X509Certificate.ts:37</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="raw"><span>Raw</span><a href="#raw" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">Raw</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Base64-encoded bytes.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L25">model/X509Certificate.ts:25</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="rawissuer"><span>Raw<wbr/>Issuer</span><a href="#rawissuer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">RawIssuer</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Base64-encoded bytes.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L33">model/X509Certificate.ts:33</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="rawsubject"><span>Raw<wbr/>Subject</span><a href="#rawsubject" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">RawSubject</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Base64-encoded bytes.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L31">model/X509Certificate.ts:31</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="rawsubjectpublickeyinfo"><span>Raw<wbr/>Subject<wbr/>Public<wbr/>Key<wbr/>Info</span><a href="#rawsubjectpublickeyinfo" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">RawSubjectPublicKeyInfo</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Base64-encoded bytes.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L29">model/X509Certificate.ts:29</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="rawtbscertificate"><span>Raw<wbr/>TBS<wbr/>Certificate</span><a href="#rawtbscertificate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">RawTBSCertificate</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Base64-encoded bytes.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L27">model/X509Certificate.ts:27</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="requireexplicitpolicy"><span>Require<wbr/>Explicit<wbr/>Policy</span><a href="#requireexplicitpolicy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">RequireExplicitPolicy</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L82">model/X509Certificate.ts:82</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="requireexplicitpolicyzero"><span>Require<wbr/>Explicit<wbr/>Policy<wbr/>Zero</span><a href="#requireexplicitpolicyzero" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">RequireExplicitPolicyZero</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L83">model/X509Certificate.ts:83</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="serialnumber"><span>Serial<wbr/>Number</span><a href="#serialnumber" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">SerialNumber</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L40">model/X509Certificate.ts:40</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="signature"><span>Signature</span><a href="#signature" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">Signature</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Base64-encoded bytes.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L35">model/X509Certificate.ts:35</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="signaturealgorithm"><span>Signature<wbr/>Algorithm</span><a href="#signaturealgorithm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">SignatureAlgorithm</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L36">model/X509Certificate.ts:36</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="subject"><span>Subject</span><a href="#subject" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">Subject</span><span class="tsd-signature-symbol">:</span> <a href="Models.PkixName.html" class="tsd-signature-type tsd-kind-class">PkixName</a></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L42">model/X509Certificate.ts:42</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="subjectkeyid"><span>Subject<wbr/>Key<wbr/>Id</span><a href="#subjectkeyid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">SubjectKeyId</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Base64-encoded bytes.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L56">model/X509Certificate.ts:56</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="unhandledcriticalextensions"><span>Unhandled<wbr/>Critical<wbr/>Extensions</span><a href="#unhandledcriticalextensions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">UnhandledCriticalExtensions</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L48">model/X509Certificate.ts:48</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="unknownextkeyusage"><span>Unknown<wbr/>Ext<wbr/>Key<wbr/>Usage</span><a href="#unknownextkeyusage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">UnknownExtKeyUsage</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L50">model/X509Certificate.ts:50</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="uris"><span>UR<wbr/>Is</span><a href="#uris" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">URIs</span><span class="tsd-signature-symbol">:</span> <a href="Models.NetURL.html" class="tsd-signature-type tsd-kind-class">NetURL</a><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L65">model/X509Certificate.ts:65</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="version"><span>Version</span><a href="#version" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">Version</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L39">model/X509Certificate.ts:39</a></li></ul></aside></section></section></details>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="methods-1">Methods<a href="#methods-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="fixupfields"><span>fixup<wbr/>Fields</span><a href="#fixupfields" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="fixupfields-1"><span class="tsd-kind-call-signature">fixupFields</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#fixupfields-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L114">model/X509Certificate.ts:114</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="getfixupprototypefunction"><span>get<wbr/>Fixup<wbr/>Prototype<wbr/>Function</span><a href="#getfixupprototypefunction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="getfixupprototypefunction-1"><span class="tsd-kind-call-signature">getFixupPrototypeFunction</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">obj</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a><span class="tsd-signature-symbol">)</span> <span class="tsd-signature-symbol">=&gt;</span> <span class="tsd-signature-type">void</span><a href="#getfixupprototypefunction-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">obj</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a><span class="tsd-signature-symbol">)</span> <span class="tsd-signature-symbol">=&gt;</span> <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L86">model/X509Certificate.ts:86</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="deepclone"><code class="tsd-tag">Static</code><span>deep<wbr/>Clone</span><a href="#deepclone" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="deepclone-1"><span class="tsd-kind-call-signature">deepClone</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">model</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span><a href="#deepclone-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">model</span>: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a><span class="tsd-signature-symbol">&gt;</span></span></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L96">model/X509Certificate.ts:96</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="fixupprototype"><code class="tsd-tag">Static</code><span>fixup<wbr/>Prototype</span><a href="#fixupprototype" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="fixupprototype-1"><span class="tsd-kind-call-signature">fixupPrototype</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">obj</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#fixupprototype-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">obj</span>: <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a></span></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L101">model/X509Certificate.ts:101</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="newinstance"><code class="tsd-tag">Static</code><span>new<wbr/>Instance</span><a href="#newinstance" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="newinstance-1"><span class="tsd-kind-call-signature">newInstance</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">model</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a><a href="#newinstance-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">model</span>: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a><span class="tsd-signature-symbol">&gt;</span></span></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L90">model/X509Certificate.ts:90</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-protected">
+<h3 class="tsd-anchor-link" id="setprototype"><code class="tsd-tag">Protected</code> <code class="tsd-tag">Static</code><span>set<wbr/>Prototype</span><a href="#setprototype" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-protected">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="setprototype-1"><span class="tsd-kind-call-signature">setPrototype</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">obj</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><a href="#setprototype-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">obj</span>: <a href="" class="tsd-signature-type tsd-kind-class">X509Certificate</a></span></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/nodejs/src/model/X509Certificate.ts#L109">model/X509Certificate.ts:109</a></li></ul></aside></div></li></ul></section></section></details></div>
+<div class="col-sidebar">
+<div class="page-menu">
+<div class="tsd-navigation settings">
+<details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></div>
+<div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>On This Page</h3></summary>
+<div class="tsd-accordion-details">
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Constructors</summary>
+<div><a href="#constructor"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a></div></details>
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
+<div><a href="#authoritykeyid"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Authority<wbr/>Key<wbr/>Id</span></a><a href="#basicconstraintsvalid"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Basic<wbr/>Constraints<wbr/>Valid</span></a><a href="#crldistributionpoints"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>CRL<wbr/>Distribution<wbr/>Points</span></a><a href="#dnsnames"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>DNS<wbr/>Names</span></a><a href="#emailaddresses"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Email<wbr/>Addresses</span></a><a href="#excludeddnsdomains"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Excluded<wbr/>DNS<wbr/>Domains</span></a><a href="#excludedemailaddresses"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Excluded<wbr/>Email<wbr/>Addresses</span></a><a href="#excludedipranges"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Excluded<wbr/>IP<wbr/>Ranges</span></a><a href="#excludeduridomains"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Excluded<wbr/>URI<wbr/>Domains</span></a><a href="#extensions"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Extensions</span></a><a href="#extkeyusage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Ext<wbr/>Key<wbr/>Usage</span></a><a href="#extraextensions"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Extra<wbr/>Extensions</span></a><a href="#inhibitanypolicy"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Inhibit<wbr/>Any<wbr/>Policy</span></a><a href="#inhibitanypolicyzero"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Inhibit<wbr/>Any<wbr/>Policy<wbr/>Zero</span></a><a href="#inhibitpolicymapping"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Inhibit<wbr/>Policy<wbr/>Mapping</span></a><a href="#inhibitpolicymappingzero"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Inhibit<wbr/>Policy<wbr/>Mapping<wbr/>Zero</span></a><a href="#ipaddresses"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>IP<wbr/>Addresses</span></a><a href="#isca"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Is<wbr/>CA</span></a><a href="#issuer"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Issuer</span></a><a href="#issuingcertificateurl"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Issuing<wbr/>Certificate<wbr/>URL</span></a><a href="#keyusage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Key<wbr/>Usage</span></a><a href="#maxpathlen"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Max<wbr/>Path<wbr/>Len</span></a><a href="#maxpathlenzero"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Max<wbr/>Path<wbr/>Len<wbr/>Zero</span></a><a href="#notafter"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Not<wbr/>After</span></a><a href="#notbefore"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Not<wbr/>Before</span></a><a href="#ocspserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>OCSP<wbr/>Server</span></a><a href="#permitteddnsdomains"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Permitted<wbr/>DNS<wbr/>Domains</span></a><a href="#permitteddnsdomainscritical"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Permitted<wbr/>DNS<wbr/>Domains<wbr/>Critical</span></a><a href="#permittedemailaddresses"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Permitted<wbr/>Email<wbr/>Addresses</span></a><a href="#permittedipranges"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Permitted<wbr/>IP<wbr/>Ranges</span></a><a href="#permitteduridomains"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Permitted<wbr/>URI<wbr/>Domains</span></a><a href="#policies"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Policies</span></a><a href="#policyidentifiers"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Policy<wbr/>Identifiers</span></a><a href="#policymappings"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Policy<wbr/>Mappings</span></a><a href="#publickey"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Public<wbr/>Key</span></a><a href="#publickeyalgorithm"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Public<wbr/>Key<wbr/>Algorithm</span></a><a href="#raw"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Raw</span></a><a href="#rawissuer"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Raw<wbr/>Issuer</span></a><a href="#rawsubject"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Raw<wbr/>Subject</span></a><a href="#rawsubjectpublickeyinfo"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Raw<wbr/>Subject<wbr/>Public<wbr/>Key<wbr/>Info</span></a><a href="#rawtbscertificate"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Raw<wbr/>TBS<wbr/>Certificate</span></a><a href="#requireexplicitpolicy"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Require<wbr/>Explicit<wbr/>Policy</span></a><a href="#requireexplicitpolicyzero"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Require<wbr/>Explicit<wbr/>Policy<wbr/>Zero</span></a><a href="#serialnumber"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Serial<wbr/>Number</span></a><a href="#signature"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Signature</span></a><a href="#signaturealgorithm"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Signature<wbr/>Algorithm</span></a><a href="#subject"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Subject</span></a><a href="#subjectkeyid"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Subject<wbr/>Key<wbr/>Id</span></a><a href="#unhandledcriticalextensions"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Unhandled<wbr/>Critical<wbr/>Extensions</span></a><a href="#unknownextkeyusage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Unknown<wbr/>Ext<wbr/>Key<wbr/>Usage</span></a><a href="#uris"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>UR<wbr/>Is</span></a><a href="#version"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>Version</span></a></div></details>
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
+<div><a href="#fixupfields"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fixup<wbr/>Fields</span></a><a href="#getfixupprototypefunction"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Fixup<wbr/>Prototype<wbr/>Function</span></a><a href="#deepclone"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>deep<wbr/>Clone</span></a><a href="#fixupprototype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fixup<wbr/>Prototype</span></a><a href="#newinstance"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>new<wbr/>Instance</span></a><a href="#setprototype" class="tsd-is-protected"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Prototype</span></a></div></details></div></details></div>
+<div class="site-menu">
+<nav class="tsd-navigation"><a href="../index.html">@pulumi/cloud-sdk - v2026.10.9</a>
+<ul class="tsd-small-nested-navigation" id="tsd-nav-container">
+<li>Loading...</li></ul></nav></div></div></div><footer>
+<p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer>
+<div class="overlay"></div></body></html>

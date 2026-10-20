@@ -73,6 +73,6 @@ Policy enforcement works in any CI/CD system that can run the Pulumi CLI, with n
 
 ## Best practices
 
-- **Use policy groups to vary enforcement by environment.** Apply stricter (mandatory) policies to production stacks and advisory policies to development stacks. See [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) for details.
+- **Use policy groups to vary enforcement by environment.** Apply stricter (mandatory) policies to production stacks and advisory policies to development stacks. A [tag rule](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#tag-rules) on an environment tag keeps each group's membership current as stacks are created. See [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) for details.
 - **Test policy changes before enforcing.** Publish policy pack updates and test them in advisory mode before switching to mandatory enforcement.
 - **Run `pulumi preview` in pull request checks.** This catches policy violations early, before changes are merged.

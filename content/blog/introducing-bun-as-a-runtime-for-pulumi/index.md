@@ -1,6 +1,6 @@
 ---
 title: "Introducing Bun as a Runtime for Pulumi"
-title_tag: "Run Pulumi TypeScript Programs on the Bun Runtime"
+title_tag: "Bun Runtime for Pulumi TypeScript Programs"
 date: 2026-04-08
 draft: false
 meta_desc: "Run Pulumi TypeScript programs on Bun. Set runtime to bun in Pulumi.yaml to drop Node.js, with setup steps, ESM caveats, and known limitations."

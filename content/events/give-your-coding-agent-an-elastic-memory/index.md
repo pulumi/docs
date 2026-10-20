@@ -54,6 +54,9 @@ presenters:
     - name: Engin Diri
       role: Principal Solutions Architect, Pulumi
       photo: /images/team/engin-diri.jpg
+    - name: David Pilato
+      role: Principal Developer Advocate, Elastic
+      photo: /images/people/david-pilato.jpg
 
 # Used for filtering on the event list page.
 tags:

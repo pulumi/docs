@@ -1,0 +1,81 @@
+name: Review command redirect
+
+# Review commands are slash commands (`/update-review`, `/new-review`,
+# `/social-review`, and `/oversized-ack` in an approval); `@claude` is only
+# ever the general assistant. The old `@claude … #update-review` and
+# `@claude … #new-review` shapes run nothing now: claude.yml screens them
+# out, and the review lanes trigger on the slash command alone. This
+# workflow is the one place that still recognizes the old shapes, so
+# nobody's request vanishes without a word. It replies at once with the
+# same request rewritten as a slash command, ready to paste as a new
+# comment.
+#
+# It never runs the request itself. Answering with the conversion keeps a
+# single trigger per lane and teaches the new shape on the first try; it
+# costs the requester one paste. Delete this workflow once the old shape
+# stops turning up.
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  redirect:
+    # A substring prefilter; command-gate.py's `legacy` decides precisely
+    # (live text only, not code or quotes, and no slash command alongside).
+    # claude[bot] is the review itself and never asks for one;
+    # github-actions[bot] is this workflow's own reply, which quotes the
+    # old shape (its comments can't start runs anyway, so that one is
+    # belt and braces).
+    if: |
+      (github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '@claude') && (contains(github.event.comment.body, '#update-review') || contains(github.event.comment.body, '#new-review')) && github.event.comment.user.login != 'claude[bot]' && github.event.comment.user.login != 'github-actions[bot]') ||
+      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && (contains(github.event.comment.body, '#update-review') || contains(github.event.comment.body, '#new-review')) && github.event.comment.user.login != 'claude[bot]' && github.event.comment.user.login != 'github-actions[bot]') ||
+      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && (contains(github.event.review.body, '#update-review') || contains(github.event.review.body, '#new-review')) && github.event.review.user.login != 'claude[bot]' && github.event.review.user.login != 'github-actions[bot]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout command gate (default branch, sparse)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          path: .command-gate
+          sparse-checkout: .claude/commands/docs-review/scripts/command-gate.py
+          sparse-checkout-cone-mode: false
+
+      - name: Recognize the old shape
+        id: legacy
+        env:
+          BODY: ${{ github.event.comment.body || github.event.review.body }}
+          AUTHOR: ${{ github.event.comment.user.login || github.event.review.user.login }}
+          DOCS_URL: ${{ github.server_url }}/${{ github.repository }}/blob/${{ github.event.repository.default_branch }}/CONTRIBUTING.md#review-commands
+        run: |
+          python3 .command-gate/.claude/commands/docs-review/scripts/command-gate.py legacy \
+            --body-env BODY --author-env AUTHOR --docs-url "$DOCS_URL" \
+            --out "$RUNNER_TEMP/redirect.md" | tee -a "$GITHUB_OUTPUT"
+
+      # An inline review comment gets its answer in its own thread; a PR
+      # comment or a review body gets a PR comment.
+      - name: Reply with the slash command
+        if: steps.legacy.outputs.reply == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          EVENT_NAME: ${{ github.event_name }}
+          PR: ${{ github.event.issue.number || github.event.pull_request.number }}
+          COMMENT_ID: ${{ github.event.comment.id }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request_review_comment" ]; then
+            ENDPOINT="repos/$REPO/pulls/$PR/comments/$COMMENT_ID/replies"
+          else
+            ENDPOINT="repos/$REPO/issues/$PR/comments"
+          fi
+          jq -n --rawfile body "$RUNNER_TEMP/redirect.md" '{body: $body}' \
+            | gh api "$ENDPOINT" --input - >/dev/null
+          echo "answered the retired #${{ steps.legacy.outputs.command }} shape on #$PR" >> "$GITHUB_STEP_SUMMARY"
