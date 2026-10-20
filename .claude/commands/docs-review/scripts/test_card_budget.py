@@ -407,6 +407,36 @@ def test_the_brief_sheds_its_check_links(tmp_path):
     assert f"| **F1** | `{PAGE}` L3 | maybe wrong |" in out
 
 
+# ---- the publish job: a card an older PR head never fitted -----------------
+
+def _publish_fit(author: str, brief: str, tmp_path: Path) -> tuple[str, str]:
+    a, b = tmp_path / "pub-a.md", tmp_path / "pub-b.md"
+    a.write_text(author)
+    b.write_text(brief)
+    proc = subprocess.run([sys.executable, str(HERE / "build-evidence.py"), "--fit", str(a), str(b)],
+                          capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    return a.read_text(), b.read_text()
+
+
+def test_the_publish_job_fits_a_card_an_older_head_built(tmp_path, monkeypatch):
+    """#22287: its branch was cut before the budget landed, so the PR head's
+    build-evidence.py handed over a 110 KB card and pinned-comment.sh refused it."""
+    author, brief, base = _big(tmp_path)
+    with monkeypatch.context() as m:
+        m.setattr(be, "fit_author_card", lambda body, budget=be.CARD_BUDGET: (body, []))
+        _ev, a_old, b_old = be.build(_fill_scaffolds(author), brief, base)
+    assert be.card_bytes(a_old) > be.CARD_MAX_BYTES, "the fixture must reproduce the failure"
+    a_out, b_out = _publish_fit(a_old, b_old, tmp_path)
+    assert be.card_bytes(a_out) <= be.CARD_BUDGET
+    assert _row_ids(a_out, "author-answer") == _row_ids(a_old, "author-answer")
+    assert _row_ids(a_out, "outstanding") == _row_ids(a_old, "outstanding")
+    proc = _validate_card(a_out, b_out, tmp_path)
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+    # A card that already fits, the norm on a current branch, is left alone.
+    assert _publish_fit(a_out, b_out, tmp_path) == (a_out, b_out)
+
+
 # ---- the update lane: shed again, and restore when there's room ------------
 
 def _update(actions) -> dict:
