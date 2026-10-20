@@ -5,12 +5,18 @@
     meta-image-url.html's precedence:
 
       1. A page-level `meta_image_square` (custom override — always wins).
-      2. A build-time generated square card at
+      2. Blog posts: a 628x628 center crop of the post's `feature_image`, or of
+         the generic blog plate (the same art the landscape card falls back to)
+         when it has none. No title — it's the thumbnail Slack/LinkedIn show in
+         small unfurls, where they'd otherwise center-crop the landscape card
+         and slice its title.
+      3. A build-time generated square card at
          assets/images/generated/<content-path>.square.png, if one exists
-         (events only today). Suppressed when the page sets a custom
-         `meta_image`, since a custom landscape override has no matching square
-         and the generator skips such pages anyway.
-      3. "" (no second og:image is emitted).
+         (events only today).
+      4. "" (no second og:image is emitted).
+
+    2 and 3 are suppressed when the page sets a custom `meta_image`, since a
+    custom landscape override has no matching square.
 */ -}}
 {{- $img := "" -}}
 {{- if .Params.meta_image_square -}}
@@ -20,9 +26,16 @@
         {{- $img = .Params.meta_image_square -}}
     {{- end -}}
 {{- else if not .Params.meta_image -}}
-    {{- with partial "meta-image-key.html" . -}}
-        {{- with resources.Get (printf "images/generated/%s.square.png" .) -}}
-            {{- $img = .RelPermalink -}}
+    {{- if and (eq .Section "blog") (eq .Kind "page") -}}
+        {{- $src := "" -}}
+        {{- with .Params.feature_image -}}{{- $src = $.Resources.GetMatch . -}}{{- end -}}
+        {{- if not $src -}}{{- $src = resources.Get "images/blog/feature-generic.png" -}}{{- end -}}
+        {{- with $src -}}{{- $img = (.Fill "628x628 Center png").RelPermalink -}}{{- end -}}
+    {{- else -}}
+        {{- with partial "meta-image-key.html" . -}}
+            {{- with resources.Get (printf "images/generated/%s.square.png" .) -}}
+                {{- $img = .RelPermalink -}}
+            {{- end -}}
         {{- end -}}
     {{- end -}}
 {{- end -}}

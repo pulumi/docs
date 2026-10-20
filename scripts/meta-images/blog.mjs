@@ -11,13 +11,14 @@
 // the right so it bleeds off the right edge; a left-to-right violet-black gradient
 // scrim fades it into the dark field; the "Blog" badge, the fitted title, and the
 // Pulumi wordmark sit in the cleared left column. Posts with no feature_image fall
-// back to a bundled generic art plate (blog-generic.png) — changing that asset is
-// NOT reflected in the cache key (it isn't a field), so bump OG_TEMPLATE_VERSION
-// if you swap it.
+// back to the generic art plate (assets/images/blog/feature-generic.png, also the
+// source of the square og:image crop in meta-image-square-url.html) — changing
+// that asset is NOT reflected in the cache key (it isn't a field), so bump
+// OG_TEMPLATE_VERSION if you swap it.
 
 import { join } from "path"
 import {
-  REPO_ROOT, ASSET_DIR, clean, h, fitTitle, clampText, titleTextStyle,
+  REPO_ROOT, clean, h, fitTitle, clampText, titleTextStyle,
   titleFont, badge, svgDataUri, fileToImage, once,
 } from "./lib.mjs"
 
@@ -44,9 +45,9 @@ const LOGO_W = Math.round((425 / 106) * LOGO_H) // 176
 // left column so the badge/title/logo read on the dark field.
 const SCRIM = "linear-gradient(90deg, rgba(35,31,51,1) 0%, rgba(35,31,51,1) 37.5%, rgba(35,31,51,0) 54.5%)"
 
-// Bundled generic feature plate (1884x1256) for posts with no feature_image.
+// Generic feature plate (1884x1256) for posts with no feature_image.
 const genericImage = once(() =>
-  fileToImage(join(ASSET_DIR, "blog-generic.png"), { fit: false }))
+  fileToImage(join(REPO_ROOT, "assets", "images", "blog", "feature-generic.png"), { fit: false }))
 
 const LEFT = 90 // left margin (matches the retired composite)
 const TOP_PAD = 64 // top padding (mirrors the left margin)

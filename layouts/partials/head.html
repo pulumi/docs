@@ -160,7 +160,7 @@
         Optional second og:image: a square (1:1) card for surfaces that prefer
         it. Best-effort — most scrapers use the first og:image (the landscape
         card above), which also stays the twitter:image. Resolved by
-        partials/meta-image-square-url.html (events auto-generate one; any page
+        partials/meta-image-square-url.html (events and blog posts get one; any page
         can set meta_image_square).
     */ -}}
     {{ $squareImage := partial "meta-image-square-url.html" . }}
