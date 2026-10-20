@@ -1,6 +1,9 @@
 # Preview/testing environment. scripts/build-site.sh runs Hugo with `-e preview`
-# for PR previews and for the shared www.pulumi-test.io staging deploy, so this
-# is where the OneTrust integration is exercised before any production cutover.
+# for both PR previews and the shared www.pulumi-test.io staging deploy. The
+# OneTrust integration is exercised on the staging deploy, which is where this
+# config applies as written; PR preview and on-demand dev builds run on
+# ephemeral S3 origins OneTrust doesn't recognize, so build-site.sh overrides
+# consentProvider back to "segment" for those (HUGO_PARAMS_CONSENTPROVIDER).
 #
 # The OneTrust *test* domain script id lives here (not in _default) on purpose:
 # the default and production configs must not carry it. The production id (the
