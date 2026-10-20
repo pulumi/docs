@@ -1058,4 +1058,5 @@ var refreshPreview = stack.refresh(RefreshOptions.builder().previewOnly(true).bu
 You've now seen how to define, configure, and deploy an inline program with Automation API. To go further:
 
 - Review the [Automation API concepts](/docs/iac/concepts/automation-api/) to understand workspaces, stacks, and the difference between inline and local programs.
+- Browse the Automation API SDK reference for [TypeScript](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/automation.html), [Python](/docs/reference/pkg/python/pulumi/#module-pulumi.automation), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto), [C#](/docs/reference/pkg/dotnet/pulumi.automation/pulumi.automation.html), or [Java](/docs/reference/pkg/java/com/pulumi/automation/package-summary.html).
 - Explore the [`automation-api-examples` repository](https://github.com/pulumi/automation-api-examples) for runnable examples in every supported language, covering patterns such as cross-language programs, database migrations, and exposing Pulumi over HTTP.
