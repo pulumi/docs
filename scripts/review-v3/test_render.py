@@ -668,6 +668,43 @@ def test_the_composer_reads_the_lit_buttons():
 
 
 
+def test_the_relay_sends_only_what_the_board_composed():
+    """The comment relay under jsdom with a fake `claude.use("comments")`:
+    hidden without the capability, disabled with no session watching, and
+    when a session is there, a send carries the composed command, confirm
+    and discard carry only the server-rendered digest, refresh carries
+    nothing else, and a refused send gives the buttons back."""
+    import shutil  # noqa: PLC0415
+    import subprocess  # noqa: PLC0415
+    import tempfile  # noqa: PLC0415
+    repo = HERE.parent.parent
+    node = shutil.which("node")
+    if not node or not (repo / "node_modules" / "jsdom" / "package.json").is_file():
+        print("  skip: test_the_relay_sends_only_what_the_board_composed (needs node and jsdom from `make ensure`)")
+        return
+    q = run([stampable(11, files=[_file("content/docs/a.md", ["x"], ["o"])])], cfg=cfg(me=["docs"]))
+    relay_ = {"digest": "0123456789abcdef", "thread": "thread-7", "preview": "Plan · pulumi/docs · 1 step(s)", "planned_at": "now"}
+    with tempfile.TemporaryDirectory() as td:
+        board = Path(td) / "board.html"
+        board.write_text(render.render_board(q, relay=relay_))
+        res = subprocess.run([node, str(HERE / "test_render_relay.js"), str(board),
+                              json.dumps({"digest": relay_["digest"], "thread": relay_["thread"], "stamp": "11"})],
+                             cwd=repo, capture_output=True, text=True, timeout=120)
+    assert res.returncode == 0, res.stdout + res.stderr
+
+
+def test_the_relay_panels_are_escaped_and_absent_by_default():
+    q = run([stampable(11, files=[_file("content/docs/a.md", ["x"], ["o"])])], cfg=cfg(me=["docs"]))
+    plain = render.render_board(q)
+    assert 'id="relaypending"' not in plain and "Last run from this board" not in plain
+    assert 'id="relayrun"' in plain and 'id="relayrun" type="button" hidden' in plain   # hidden until the capability answers
+    html_ = render.render_board(q, relay={"digest": "0123456789abcdef", "preview": "<script>x</script>", "last_run": "✓ stamp #1 & done"})
+    assert 'data-digest="0123456789abcdef"' in html_
+    assert "<script>x</script>" not in html_ and "&lt;script&gt;x&lt;/script&gt;" in html_
+    assert "✓ stamp #1 &amp; done" in html_
+    assert "--expect-digest 0123456789abcdef" in html_   # the no-session fallback names the same gate
+
+
 def test_the_terminal_carries_everything_the_board_shows():
     # --terminal used to cut each row at 110 characters, print blockers
     # nowhere, print actions for judge rows only, hide open findings on an
