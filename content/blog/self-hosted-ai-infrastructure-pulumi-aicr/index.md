@@ -77,7 +77,7 @@ gpu_stack = aicr.ClusterStack("nvidia-aicr",
 
 *Example of the Pulumi CoreWeave provider*
 
-Behind the scenes, the recipe resolves our code into the full list of Kubernetes components. Recipes are tested and validated by NVIDIA across a broad matrix of both hardware (EKS, GKE, and AKS; A100 through GB200; Ubuntu, RHEL, COS, and Talos; Kubeflow, NIM, Dynamo, Slurm, and Run:ai) and cloud provider permutations. Because AICR is open source, the SDK lends itself to configuration by new providers, giving you a future-forward inference solution that performs in all of the areas that count:
+Behind the scenes, the recipe resolves the code into the full list of Kubernetes components. Recipes are tested and validated by NVIDIA across a broad matrix of both hardware (EKS, GKE, and AKS; A100 through GB200; Ubuntu, RHEL, COS, and Talos; Kubeflow, NIM, Dynamo, Slurm, and Run:ai) and cloud provider permutations. Because AICR is open source, the SDK lends itself to configuration by new providers, giving you a future-forward inference solution that performs in all of the areas that count:
 
 - **Deployment:** does the running cluster match the recipe? Operator health, GPU visibility via `nvidia-smi`, and metrics flowing.
 - **Conformance:** dynamic resource allocation, gang scheduling, and job-level networking behave as required.
