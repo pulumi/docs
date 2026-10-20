@@ -51,6 +51,8 @@ For stacks:
 
 The next preview or update of the stack with fail due to the policy violation. The stack will need to be fixed before it can be updated. A stack with out-of-compliance resources can be destroyed.
 
+If the resource can't be fixed right away, a [policy exception](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) can allow the violation on that resource, with a recorded reason, so the stack can be updated again.
+
 For accounts:
 
 A policy violation will be added to any account resources that are out of compliance. Policy violations for discovered resources are informational rather than preventative since the resource state is discovered, but not managed, by Pulumi.
