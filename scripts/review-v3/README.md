@@ -116,6 +116,12 @@ claim list (it becomes a pointer line), 🚨 Do-this blocks. Rows always stay.
 A shed block leaves an italic note under its table. `fit_brief_card` does the
 same for the brief's ⚠️ links.
 
+The publish job fits both cards once more (`build-evidence.py --fit`) before
+`pinned-comment.sh` sees them. `build()` runs from the PR head, so a branch cut
+before the budget landed hands over a card nothing measured (#22287's was
+110 KB). The publish job's copy comes from the default branch, and a card that
+already fits comes back untouched.
+
 Nothing is lost. `build()` mirrors every block into the evidence `detail`
 before fitting, and the evidence page renders each finding's text, detail, and
 members. When a refresh finds a fitted card (`was_fitted`),

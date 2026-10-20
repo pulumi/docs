@@ -750,6 +750,12 @@ def restamp_footer(body: str, footer: str) -> str:
 # and REVIEW_STATE join on. The evidence object keeps every block (build()
 # mirrors them into `detail` before this runs) and the evidence page renders
 # them, so what the card sheds is a click away rather than gone.
+#
+# The publish job fits once more (`--fit`) with the default branch's copy.
+# The initial lane runs build() from the PR head, so a branch cut before this
+# code landed hands over a card nothing measured: pulumi/docs#22287's came in
+# at 110 KB and was refused after the whole model pass. A card that already
+# fits comes back untouched.
 
 CARD_MAX_BYTES = 60_000  # pinned-comment.sh DEFAULT_MAX_BYTES; keep the two in step
 # What can still grow after this runs: publish substitutes %%EVIDENCE_URL%%
@@ -1215,9 +1221,17 @@ def main() -> int:
     ap.add_argument("--brief-out", help="cleaned brief body for publish (optional)")
     ap.add_argument("--pr-diff", help="unified diff of the PR; enables the advisory "
                                       "anchor check (never fails the build)")
+    ap.add_argument("--fit", nargs=2, metavar=("AUTHOR", "BRIEF"),
+                    help="fit two finished cards to the size budget in place and exit "
+                         "(the publish job's pass; see the card size budget comment)")
     args = ap.parse_args()
     if args.self_test:
         return _self_test()
+    if args.fit:
+        for role, path, fit in (("author", Path(args.fit[0]), fit_author_card),
+                                ("brief", Path(args.fit[1]), fit_brief_card)):
+            path.write_text(fit_and_report(role, path.read_text(), fit))
+        return 0
     if not (args.author_body and args.brief_body and args.base and args.output):
         ap.error("--author-body, --brief-body, --base, --output are required")
     try:
