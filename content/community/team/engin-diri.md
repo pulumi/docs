@@ -276,7 +276,7 @@ talks:
   slides: null
 - event: AWS Community Day UAE 2023
   title: AWS self-service infrastructure with Backstage and Pulumi
-  url: https://awsmena.community/cdu-2023#
+  url: https://web.archive.org/web/20260704131426/https://awsmena.community/cdu-2023
   date: 2023-10-21T10:00:00.000-07:00
   slides: null
 - event: "KubeCon + CloudNativeCon + Open Source Summit China 2023"
