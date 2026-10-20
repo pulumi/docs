@@ -4,6 +4,7 @@
     act.py --in .pr-review-queue.json --stamp 21550,21577 --route 21431:@cnunciato \\
            --unblock 21525 --plan-out .pr-review-plan.json          # plan + preview
     act.py --execute .pr-review-plan.json [--dry-run]                # run it
+    act.py --execute .pr-review-plan.json --expect-digest D         # the board's Confirm (relay.py)
 
 Actions (each a `Step`; every one goes through the same preview, comment
 templates and attribution footer). Nothing here is reachable without an
@@ -1380,6 +1381,10 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--plan-out", default=str(_REPO_ROOT / ".pr-review-plan.json"))
     ap.add_argument("--execute", metavar="PLAN.json", help="run a plan written earlier")
     ap.add_argument("--dry-run", action="store_true", help="run the preflights and list every write without sending one; never runs git")
+    ap.add_argument("--expect-digest", metavar="D",
+                    help="with --execute: run the plan only if its file still hashes to D (the board's Confirm), is fresh, and has not run; "
+                         "the plan is moved aside afterwards so the same Confirm cannot run it twice (relay.py)")
+    ap.add_argument("--preview-out", metavar="TXT", help="also write the preview to this file (the board shows it beside Confirm)")
     ap.add_argument("--backend", default="auto", choices=("auto", "gh", "rest", "snapshot"))
     ap.add_argument("--snapshot-dir")
     ap.add_argument("--self-test", action="store_true")
@@ -1394,10 +1399,22 @@ def main(argv: list[str] | None = None) -> int:
     queue = json.loads(Path(args.inp).read_text()) if Path(args.inp).exists() else {}
     if args.execute:
         try:
+            if args.expect_digest:
+                import relay  # noqa: PLC0415
+                try:
+                    relay.check_confirmable(args.execute, args.expect_digest)
+                except relay.RelayError as exc:
+                    raise ActError(str(exc)) from exc
             plan_ = Plan.from_json(json.loads(Path(args.execute).read_text()))
         except ActError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2
+        if args.expect_digest and not args.dry_run:
+            # Spent before the first write, not after the last: a batch that
+            # dies halfway must not be runnable again from the same Confirm.
+            spent = Path(args.execute).with_suffix(".executed.json")
+            Path(args.execute).replace(spent)
+            print(f"plan {args.expect_digest} spent → {spent}", file=sys.stderr)
         gh = GhClient(plan_.repo, args.backend, snapshot_dir=args.snapshot_dir)
         results = execute(plan_, gh, queue=queue, dry_run=args.dry_run)
         sys.stdout.write(report(results, writes=args.dry_run))
@@ -1408,7 +1425,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"error: {exc}", file=sys.stderr)
         return 2
     Path(args.plan_out).write_text(json.dumps(plan_.to_json(), indent=1) + "\n")
-    sys.stdout.write(preview(plan_, queue))
+    text = preview(plan_, queue)
+    if args.preview_out:
+        Path(args.preview_out).write_text(text)
+    sys.stdout.write(text)
     print(f"plan → {args.plan_out}", file=sys.stderr)
     return 0
 
