@@ -452,7 +452,7 @@ $ pulumi plugin install tool cdk-importer
 **2. Run the tool, passing in the name of the CDK stack you want to import**
 
 ```console
-$ pulumi plugin run cdk-importer -- -stack $StackName
+$ pulumi plugin run cdk-importer -- runtime --stack $StackName
 ```
 
 **3. Run `pulumi preview` to ensure there are no diffs**
