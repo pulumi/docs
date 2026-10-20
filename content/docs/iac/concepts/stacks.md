@@ -664,7 +664,7 @@ locals {
 
 {{< /chooser >}}
 
-Stack names must be fully qualified, including the organization, project, and stack name components, in the format `<organization>/<project>/<stack>`.
+Use the fully qualified stack name, including the organization, project, and stack name components, in the format `<organization>/<project>/<stack>`.
 
 For example, suppose you need to define a cluster's infrastructure in one project and consume it from another.
 One project, `infra`, defines a Kubernetes cluster and another, `services`, deploys

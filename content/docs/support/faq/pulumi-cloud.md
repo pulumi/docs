@@ -91,7 +91,7 @@ $ pulumi stack init acme-corp/widget-server
 
 ### How do I move stacks from one organization to another?
 
-[Pulumi Cloud](https://app.pulumi.com/signin) lets you transfer stacks from one organization to any other organization you belong to as an administrator.
+[Pulumi Cloud](https://app.pulumi.com/signin) lets you transfer stacks between organizations you belong to. Stack admins can transfer stacks one at a time, and organization admins can transfer stacks in bulk. You also need permission to create stacks in the destination organization.
 
 To transfer stacks, open the organization that holds them, navigate to the Stacks page, and select **Transfer stacks**.
 

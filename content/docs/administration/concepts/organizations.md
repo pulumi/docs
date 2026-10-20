@@ -42,7 +42,7 @@ You create your first organization right after you sign up, and you choose then 
 Every organization you create after that starts a free trial that has access to all features.
 At the end of the trial, choose the edition that fits your needs. Free supports
 one user. Essentials, Pro, and Enterprise support multiple users.
-Not that you can own only one Free organization at a time.
+Note that you can own only one Free organization at a time.
 Learn more about what each one includes on the [pricing page](/pricing/).
 
 {{% notes type="info" %}}
@@ -91,7 +91,7 @@ Pulumi organization administrators can monitor current organization members and 
 
 ## Switching between organizations
 
-The organization menu displays all of the organizations you belong to.
+The organization menu displays all the organizations you belong to.
 
 To switch to a different organization:
 

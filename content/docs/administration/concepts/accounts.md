@@ -41,7 +41,7 @@ Users provisioned and managed by an organization — through [SCIM](/docs/admini
 
 An account comes into existence in one of several ways:
 
-- **Someone signs up.** A person creates their own account at [app.pulumi.com](https://app.pulumi.com/signup) using any of the identities listed under [Signing in](#signing-in). This is the common case, and it is the path that ends with creating your first organization.
+- **Someone signs up.** A person creates their own account at [app.pulumi.com](https://app.pulumi.com/signup) using any of the identities listed under [Signing in](#signing-in). This is the common case, and it ends with creating your first organization.
 - **An organization invites them.** An organization admin [invites a member](/docs/administration/concepts/organizations/#inviting-members-to-an-organization) by email address or invite link. The invitee still completes signup themselves; the invitation grants membership once they do.
 - **A SAML identity provider provisions them.** When an organization is backed by SAML SSO, a user who signs in through the identity provider for the first time gets an account created for them. Your organization admin configures this, not you.
 - **SCIM provisions them.** An organization on the Enterprise edition can [sync users and groups from its identity provider](/docs/administration/guides/scim/). SCIM creates accounts ahead of first login and deactivates them when the user is removed upstream.
