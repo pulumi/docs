@@ -117,7 +117,6 @@ PagerDuty User API Tokens are tied to a single user account. All actions an agen
 
 1. In PagerDuty, open your user profile and select **User Settings**
 1. Select **Create API User Token** and give it a name (e.g., "Pulumi Agents"). The token inherits the user's existing PagerDuty permissions, so its access matches whatever the user can already see in the PagerDuty UI.
-1. Check **Read-only API Key** if the agent does not need to create or modify incidents, schedules, or escalation policies
 1. Copy the token
 1. In the integration form, enter the **User API Token**
 

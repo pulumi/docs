@@ -79,7 +79,7 @@ To add an event or schedule to an agent you have already saved, follow [Events a
 
 ## Save and assign a task
 
-Select **Create agent** after completing the configuration. For a webhook trigger, finish the connection steps shown after saving.
+If you chose **Manually**, select **Create agent**. For a webhook trigger, finish the connection steps shown after saving.
 
 On the agent's page, enter an assignment in **Describe the task for this agent**. Include the repository URL or stack name when relevant. Check the response for access errors or missing information.
 
