@@ -496,4 +496,4 @@ In addition to the Pulumi code above, each template includes a simple website th
 
 From here, you're ready to drop in your own application code. Pulumi has already handled the boring work for you, complying with best practices from the beginning so you only have to worry about building your own application, not how to get the infrastructure online!
 
-[Pulumi Architecture Templates](/templates/) exist for a variety of applications and common use-cases, including containerized applications and kubernetes, with more being added over time. Keep an eye out for new additions and ways to make engineering for the cloud less painful!
+[Pulumi Architecture Templates](/dev/templates/) exist for a variety of applications and common use-cases, including containerized applications and kubernetes, with more being added over time. Keep an eye out for new additions and ways to make engineering for the cloud less painful!
