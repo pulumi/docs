@@ -37,7 +37,7 @@ If you are actively exploring the space or building with AI yourself, you may al
 
 Many teams naturally gravitate toward multicloud strategies that combine hyperscalers with specialized GPU clouds as a way of balancing spend, performance, and reliability. One thing we've seen is that developers everywhere are choosing Pulumi to help them navigate the fragmented hardware ecosystem and maintain consistent environments, even when the provider is different.
 
-As part of our ongoing commitment to building better tools for builders, we're excited to announce [the Pulumi NVIDIA AI Cluster Runtime (AICR) provider](https://github.com/pulumi/pulumi-nvidia-aicr) to help make your ideal self-hosted AI infrastructure available on demand. The Pulumi AICR provider lets you spin up workload-specific training and inference endpoints as you need them, configured with pre-validated recipes to match your workload with the right hardware across a number of cloud-based GPU providers.
+As part of our ongoing commitment to building better tools for builders, we're excited to announce [the Pulumi NVIDIA AI Cluster Runtime (AICR) provider](https://github.com/pulumi-labs/pulumi-nvidia-aicr) to help make your ideal self-hosted AI infrastructure available on demand. The Pulumi AICR provider lets you spin up workload-specific training and inference endpoints as you need them, configured with pre-validated recipes to match your workload with the right hardware across a number of cloud-based GPU providers.
 
 ## AI performance-engineering team as code
 
