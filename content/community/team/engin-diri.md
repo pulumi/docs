@@ -9,6 +9,10 @@ aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "KCD UK Edinburgh 2026"
+  title: "Your AI Agent Needs More Than a Pod"
+  url: "https://community2.cncf.io/events/details/cncf-kcd-uk-presents-kubernetes-community-days-uk-edinburgh-2026/cohost-kcd-uk/"
+  date: 2026-10-19T16:50:00.000+01:00
 - event: "AI Agents NYC: Coding Agents with Elastic Memory + The Evolution to Stateless Serverless"
   title: "Give Your Coding Agent an (Elastic) Memory"
   url: "https://luma.com/ai-agents-nyc"
