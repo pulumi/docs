@@ -3,7 +3,7 @@ title: "Make policies mandatory without blocking your pipelines"
 # TODO(launch-date): set the real publish date before undrafting.
 date: 2026-11-03
 draft: true
-meta_desc: "Policy exceptions let teams make policies mandatory and unblock themselves with scoped, reasoned exceptions that stay visible and auditable."
+meta_desc: "Make policies mandatory, and accept known violations with a written reason. Each policy exception records who created it, why, and where it applied."
 # TODO(feature-image): generate one with /blog-feature-image, or label the PR needs-design.
 feature_image:
 authors:
@@ -34,22 +34,22 @@ social:
     twitter: |
         Mandatory policies prevent misconfiguration, but turning one on can block every pipeline with an old violation.
 
-        Policy exceptions, now in public preview: teams unblock themselves with a scoped exception and a reason, and the finding stays visible.
+        Policy exceptions, now in public preview: accept a known violation with a written reason, and keep a record of who allowed it and where it applied.
     linkedin: |
         Advisory policies warn. Mandatory policies prevent misconfiguration. Most teams know which one they want, and still stop at advisory, because making a policy mandatory means fixing every existing violation overnight or blocking entire pipelines.
 
-        Policy exceptions, now in public preview in Pulumi Policies, remove that trade-off. Teams request an exception scoped to one policy pack, specific policies, and exact resources, with a reason. The violation is still reported, marked as allowed, so nothing is hidden.
+        Policy exceptions, now in public preview in Pulumi Policies, remove that trade-off. An exception accepts specific resources against specific policies, with a written reason, and works with any policy pack, including the pre-built compliance packs. The violation is still reported, marked as allowed, so nothing is hidden.
 
-        Reviewers get a full list of active and removed exceptions, where each one applied, and audit log events. Remove an exception at any time, and the next preview or update reports those violations again.
+        Every exception leaves a record: the reason, who requested and approved it, where it applied, and audit log events. Removed exceptions stay listed. Remove one at any time, and the next preview or update reports those violations again.
 
         Here's how it works, and a rollout that ends at mandatory.
     bluesky: |
         Making a policy mandatory shouldn't mean blocking every pipeline that has an old violation.
 
-        Policy exceptions in Pulumi Policies, now in public preview: scope an exception to exact policies and resources, give a reason, and keep the finding visible. Remove it any time.
+        Policy exceptions in Pulumi Policies, now in public preview: accept exact resources against exact policies, with a written reason, and keep a record of who allowed it and where it applied.
 ---
 
-Policy exceptions, now in public preview in [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/), let you make policies mandatory without blocking your pipelines. When a deployment hits a violation it can't fix yet, the team requests an exception scoped to one [policy pack](/docs/discovery-governance/concepts/policy-as-code/policy-packs/), specific policies, and exact resources, with a reason. If your organization doesn't require approval, they create it directly. The violation is still reported, marked as allowed, so nothing is hidden. See the [policy exceptions documentation](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) for the full reference.
+Policy exceptions, now in public preview in [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/), let you make policies mandatory without blocking your pipelines. An exception accepts specific resources as they are against specific policies in one [policy pack](/docs/discovery-governance/concepts/policy-as-code/policy-packs/), with a written reason: a bucket that has to be public, or a resource that predates the policy and can't be fixed yet. Teams request their own exceptions, and the violations an exception covers are still reported, marked as allowed. Every exception leaves a record of who created it, why, and where it applied. See the [policy exceptions documentation](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) for the full reference.
 
 <!--more-->
 
@@ -59,7 +59,9 @@ Mandatory policies are what actually prevent misconfiguration. An advisory polic
 
 Turning one on is the hard part. A new mandatory policy applies to every stack at once, including the resources that were deployed long before the policy existed. That leaves two bad options: ask every team to fix every existing violation overnight, or accept that entire pipelines are blocked until they do.
 
-Some violations also aren't mistakes. A bucket that serves a static website has to be public. A log target bucket has to allow the log delivery group. Without a way to record those cases, the usual answer is to keep the policy advisory forever, and an advisory policy doesn't prevent anything.
+Some violations also aren't mistakes. A bucket that serves a static website has to be public. A log target bucket has to allow the log delivery group.
+
+Teams that push ahead anyway reach for workarounds. They clone a policy group to turn off one rule, which works per stack, so the copies multiply. They mark a finding as ignored, which needs no reason and doesn't survive the next scan. Or they write exemption config by hand inside their own policy packs. None of these leaves a record a reviewer can rely on, so the usual answer is to keep the policy advisory forever, and an advisory policy doesn't prevent anything.
 
 ## What does a policy exception allow?
 
@@ -68,7 +70,9 @@ A policy exception allows the violations of specific policies on specific resour
 - **A reason** that explains why it's safe to allow the violations. Reviewers and auditors read it.
 - **Match entries**, each listing one or more policies and one or more resource URNs. A violation is allowed only when its policy and its resource URN both appear in the same entry.
 
-Matching is exact: no wildcards, and no entry that matches every policy in a pack. An exception for the website bucket doesn't quietly cover the next bucket someone deploys.
+In the public preview, matching is exact: entries name policies and resource URNs, with no wildcards, and no entry matches every policy in a pack.
+
+Exceptions work with any policy pack, including the [pre-built compliance packs](/docs/discovery-governance/guides/pre-built-policy-packs/). Pulumi matches the violations a pack reports against your exceptions itself, so there's no pack to clone or edit.
 
 An allowed violation doesn't fail the operation, even when its policy is mandatory, but it's still reported. The CLI summarizes allowed violations under `Policies:`, and `--show-policy-exceptions` lists each exception's ID, reason, and the resources it allowed. In Pulumi Cloud, the [policy findings](/docs/discovery-governance/operations/policy-findings/) that an exception allowed show its ID, so anyone reading the finding can see why it didn't block.
 
@@ -110,13 +114,20 @@ flowchart LR
 1. **Make the policies mandatory, with self-service exceptions.** Set exceptions to **Auto-approved**. Teams that hit a violation they can't fix yet create an exception with a reason and keep deploying, instead of waiting on you.
 1. **Require approval.** Once the backlog is under control, switch to **With approval**. New exceptions need a reviewer through a change request, and you remove existing ones as teams fix their resources.
 
-The policy is mandatory from step three on. Every violation that doesn't block is one that someone explained in writing, and any other violation, including one on a resource deployed tomorrow, blocks until it's fixed or excepted.
+The policy is mandatory from step three on. Every violation that doesn't block is one that someone explained in writing, and any violation that no exception covers blocks until it's fixed.
 
-## How do reviewers audit and remove exceptions?
+## What record does every exception leave?
 
-The **Exceptions** tab lists every exception in your organization, active and removed, with its status, policy pack, stacks, and reason. Open one to see who requested it, whether it needed approval, and where it applied: for each policy and resource, when the exception last allowed a violation in a stack update.
+For regulated teams, the exception itself is the artifact an auditor asks for. Each one records:
 
-Creating and removing exceptions is also recorded in the [audit logs](/docs/administration/concepts/audit-logs/) as `policy-exception-created` and `policy-exception-removed` events, alongside the rest of your organization's activity.
+- **The reason**, written by the requester.
+- **Who requested it, and who approved it.** With approval required, the request is a change request, so the approval is recorded with it.
+- **Where it applied**: for each policy and resource, when the exception last allowed a violation in a stack update.
+- **Audit log events**: creating and removing exceptions is recorded in the [audit logs](/docs/administration/concepts/audit-logs/) as `policy-exception-created` and `policy-exception-removed`, alongside the rest of your organization's activity.
+
+The **Exceptions** tab lists every exception in your organization, active and removed, with its status, policy pack, stacks, and reason.
+
+That record is what makes **Auto-approved** safe to run. Security becomes a trailing reviewer: teams create exceptions and keep deploying, and security reads the reasons afterward instead of blocking deploys while it reviews.
 
 You can remove any exception at any time, from the console or with `pulumi policy exception remove`. From the next preview or update, the violations it allowed are reported again, and mandatory ones block. A removed exception stays in the list with the **Removed** status, so the record of what was allowed, and why, doesn't disappear with it.
 

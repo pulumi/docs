@@ -101,7 +101,7 @@ The top-level keys of a version 2 file are:
 
 | Key | Description |
 |:----|:------------|
-| `version` | Required. Must be `2`. |
+| `version` | Required. The number `2`. A higher number is an error that asks you to upgrade the Pulumi CLI. A `version` that isn't a number is read as the configuration of a policy named `version`, as in an unversioned file. |
 | `policies` | The pack's configuration, in the same shape as an unversioned config file: `all` sets the enforcement level of every policy, and each other key configures one policy. |
 | `exceptions` | An object that maps exception IDs to exceptions. An ID can contain letters, digits, `-`, `.`, and `_`. |
 | `environments` | Optional. [Pulumi ESC](/docs/esc/) environments to read configuration from. |
@@ -110,7 +110,7 @@ Each exception has a required `reason` and a required `match` list with at least
 
 Pulumi validates the file before the operation runs:
 
-- An unknown key or field, an empty reason, an empty list, or an invalid URN is an error, and the operation doesn't run.
+- An empty reason, an empty list, or an invalid URN is an error, and the operation doesn't run. Unknown keys and fields are ignored.
 - A policy name that isn't in the pack is a warning, so a file keeps working when a pack version drops a policy.
 - A policy pack that doesn't accept configuration still accepts a file with only `version` and `exceptions`.
 
