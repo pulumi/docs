@@ -11,7 +11,7 @@ menu:
         weight: 20
 ---
 
-Give each agent only the access it needs for its work. Its Pulumi Cloud role controls access to Pulumi resources, such as stacks and ESC environments. Credentials for connected tools control what it can access and change in those tools.
+Give each agent only the access it needs. For agents your team creates, assign a Pulumi Cloud role to control access to stacks and ESC environments. Neo uses your existing Pulumi Cloud permissions. Credentials for connected tools control access to those tools.
 
 ## Design access around the job
 

@@ -12,16 +12,16 @@ menu:
 integration_groups:
     repositories:
         - name: GitHub
-          image: /logos/agents/github.svg
+          image: /logos/tech/github.svg
           link: /docs/integrations/version-control/github-app/
         - name: GitLab
-          image: /logos/agents/gitlab.svg
+          image: /logos/tech/gitlab.svg
           link: /docs/integrations/version-control/gitlab/
         - name: Bitbucket
           image: /logos/tech/bitbucket.svg
           link: /docs/integrations/version-control/bitbucket/
         - name: Azure DevOps
-          image: /logos/agents/azuredevops.svg
+          image: /logos/tech/ci-cd/azure-devops.svg
           link: /docs/integrations/version-control/azure-devops-integration/
         - name: Other Git servers
           image: /logos/tech/git.svg
@@ -34,13 +34,13 @@ integration_groups:
           image: /logos/pkg/aws.svg
           link: /docs/ai/agents/integrations/aws/
         - name: Google Cloud
-          image: /logos/agents/gcp.svg
+          image: /logos/tech/gcp-logo.svg
           link: /docs/ai/agents/integrations/google-cloud/
         - name: Azure
-          image: /logos/agents/azure.svg
+          image: /logos/tech/azure-logo.svg
           link: /docs/ai/agents/integrations/azure/
         - name: Kubernetes
-          image: /logos/agents/kubernetes.svg
+          image: /logos/tech/kubernetes.svg
           link: /docs/ai/neo/integrations/cli/#kubernetes
         - name: Supabase
           image: /logos/agents/supabase.svg

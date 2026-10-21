@@ -27,7 +27,7 @@ The task uses the agent's saved configuration. [Edit the agent](/docs/ai/agents/
 
 ## Work from Slack
 
-Follow the [Slack installation and account-linking steps](/docs/ai/neo/integrations/slack/#setting-up-the-integration). Mention the installed Pulumi app in a channel and ask it to list your agents. Address an agent by name, for example, `ask Incident investigator to investigate errors in the checkout service`.
+Follow the [Slack installation and account-linking steps](/docs/ai/neo/integrations/slack/#setting-up-the-integration). Mention `@pulumi` in a channel with your request, such as “Investigate errors in the checkout service.” If prompted to choose an agent, select its name to start the task.
 
 Continue the assignment in its Slack thread. Each participant must link their own Pulumi account and have [permission to contribute](/docs/ai/agents/permissions/#give-teammates-access); channel membership alone does not grant that permission.
 
