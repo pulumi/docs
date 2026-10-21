@@ -565,6 +565,16 @@
       "authenticationFailure": false,
       "category": "environments",
       "deprecated": false,
+      "description": "An ESC environment was opened as an import of another environment.",
+      "displayName": "Environment Import Open",
+      "event": "environment-import-open",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "deprecated": false,
       "description": "An ESC environment minted an OIDC token for an external service through the fn::open::oidc provider.",
       "displayName": "Environment OIDC Token Issued",
       "event": "environment-oidc-token-issued",
