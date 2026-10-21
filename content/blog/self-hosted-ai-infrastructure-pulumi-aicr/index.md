@@ -17,7 +17,7 @@ schema_type: auto
 
 resource_links:
     - type: github
-      url: https://github.com/pulumi/pulumi-nvidia-aicr
+      url: https://github.com/pulumi-labs/pulumi-nvidia-aicr
     - type: slack
       url: https://slack.pulumi.com/
 ---
