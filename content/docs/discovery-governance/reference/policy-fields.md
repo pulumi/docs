@@ -199,8 +199,8 @@ The OPA analyzer reads these annotations and maps them to policy fields:
 |-----|--------------|-------|
 | Rule name | `name` | For example, `deny_unencrypted_rds`. |
 | Rule name prefix | `enforcementLevel` | `deny` or `violation` for mandatory rules, `warn` for advisory rules. |
-| `title` | `displayName` | Defaults to the name of the `.rego` file, without its extension. |
+| `title` | `displayName` | Defaults to the `.rego` file's path within the pack, without its extension. |
 | `description` | `description` | |
 | `custom.message` | Violation message | Shown with each violation of the rule. |
 
-A `title` annotation with package scope sets the pack's display name. OPA policies don't support `severity`, `remediationSteps`, `url`, `tags`, or `framework`, and they declare configuration schemas in a `config-schema.json` file instead of an annotation. For more on writing OPA policies, see [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/).
+A `title` annotation with package scope sets the pack's display name. OPA policies don't support `severity`, `remediationSteps`, `url`, `tags`, `framework`, or `configSchema`. For more on writing OPA policies, see [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/).

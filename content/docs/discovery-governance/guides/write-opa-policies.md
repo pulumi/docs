@@ -22,13 +22,7 @@ OPA policies have a few limits compared with TypeScript and Python policies:
 
 ## Prerequisites
 
-- [Pulumi CLI](/docs/install/) v3.227.0 or later.
-- The OPA language plugin. Install it with:
-
-    ```bash
-    pulumi plugin install language opa
-    ```
-
+- [Pulumi CLI](/docs/install/) v3.269.0 or later. The CLI downloads the OPA language plugin the first time you run an OPA policy pack. Where automatic downloads are disabled, such as on air-gapped machines, install it with `pulumi plugin install language opa`.
 - Optional: the [OPA CLI](https://www.openpolicyagent.org/docs/latest/#running-opa), to [test your policies](#test-your-policies).
 
 ## Create a policy pack
@@ -42,7 +36,7 @@ mkdir policy-pack && cd policy-pack
 pulumi policy new aws-opa
 ```
 
-To follow this guide, create the files by hand instead. Create a `PulumiPolicy.yaml` file:
+To follow this guide, create the files by hand instead. Run `mkdir policy-pack && cd policy-pack`, then create a `PulumiPolicy.yaml` file:
 
 ```yaml
 runtime: opa
@@ -145,12 +139,12 @@ When Pulumi evaluates a resource rule, `input` holds the resource. Here's the `i
 | `__properties` | The resource's properties, as an object. `__props` is an alias. |
 | Each property | The resource's properties are also copied to the top level of `input`, such as `input.length`. |
 
-Each field is also available without the `__` prefix, such as `input.type` and `input.name`. Prefer the `__` forms: a resource property with the same name, such as a property called `type`, can collide with the unprefixed field.
+Each field is also available without the `__` prefix, such as `input.type` and `input.name`. Prefer the `__` forms: a resource property with the same name, such as a property called `type`, can collide with the field without the prefix.
 
 Keep these details in mind when you match resources:
 
 - **Use the full type token.** Rules compare `__type` against the full token, such as `random:index/randomString:RandomString`. The `pulumi preview` output shows a shorter form, `random:index:RandomString`, which never matches. To find a resource's full type token, see its API documentation in the [Pulumi Registry](/registry/).
-- **Only the properties your program sets are present during a preview.** Provider defaults and output properties aren't in `input` until after the resource is created. A rule that checks for a property your program doesn't set sees it as undefined.
+- **Only input properties are present during a preview.** `input` holds the resource's inputs after the provider checks them, which can include defaults the provider fills in, such as auto-generated names. Output properties aren't in `input` until after the resource is created, so a rule that checks an output property sees it as undefined.
 
 ## Stack-level rules
 
@@ -190,7 +184,7 @@ deny_short_strings contains msg if {
 
 | Annotation | Purpose |
 |------------|---------|
-| `title` | The policy's display name in Pulumi Cloud. Defaults to the name of the `.rego` file, without its extension. |
+| `title` | The policy's display name in Pulumi Cloud. Defaults to the `.rego` file's path within the pack, without its extension. |
 | `description` | A short description of what the policy checks. |
 | `custom.message` | A message shown with the policy's violations in Pulumi Cloud, such as how to fix them. |
 
@@ -228,7 +222,7 @@ Provide the values in a JSON file, with each rule's values directly under its na
 }
 ```
 
-A rule that reads a configuration value doesn't fire when the value isn't set, because the lookup is undefined. When no configuration is provided at all, `data.config` itself is undefined, so `object.get(data.config, ...)` with a default value doesn't help. If a rule must always run, read the value through a helper rule with a `default`:
+A rule that reads a configuration value doesn't fire when the value isn't set, because the lookup is undefined. When no configuration is provided at all, `data.config` itself is undefined, so `object.get(data.config, ...)` with a default value doesn't help. If a rule must always run, use this version of `deny_short_strings` instead, which reads the value through a helper rule with a `default`. The rest of this guide uses the configuration-only version above:
 
 ```rego
 default min_length := 12
@@ -357,7 +351,7 @@ resources:
       length: 32
 ```
 
-Save the configuration from the [Configuration](#configuration) section as `policy-config.json`, then run a preview with the policy pack:
+Save the first configuration file from the [Configuration](#configuration) section, the one that sets only `minLength`, as `policy-config.json`, then run a preview with the policy pack:
 
 ```bash
 pulumi preview --policy-pack ../policy-pack --policy-pack-config policy-config.json
@@ -396,11 +390,11 @@ To apply the policy pack across your organization without passing `--policy-pack
 pulumi policy publish
 ```
 
-Then add the pack to a [policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/). Every machine that runs Pulumi against a stack in that group, including CI runners, needs the OPA language plugin installed with `pulumi plugin install language opa`. A preventative policy group checks stacks during `pulumi preview` and `pulumi up`, and an audit policy group checks discovered cloud resources. For the full workflow, see [Enforce policy as code](/docs/discovery-governance/get-started/enforce-policy-as-code/).
+Then add the pack to a [policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/). Every machine that runs Pulumi against a stack in that group, including CI runners, needs Pulumi CLI v3.269.0 or later, which downloads the OPA language plugin automatically. A preventative policy group checks stacks during `pulumi preview` and `pulumi up`, and an audit policy group checks discovered cloud resources. For the full workflow, see [Enforce policy as code](/docs/discovery-governance/get-started/enforce-policy-as-code/).
 
 ## Reuse OPA Gatekeeper policies
 
-If you have Rego policies written for [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/), you can run them against Pulumi's Kubernetes resources without changing them. Set `inputFormat: kubernetes-admission` in `PulumiPolicy.yaml`, and Pulumi presents each resource in the admission review structure that Gatekeeper policies expect. A pack uses one input format for all its rules, so keep Gatekeeper policies in their own pack. For the details, see [`inputFormat`](/docs/discovery-governance/reference/policy-project-file/#inputformat).
+If you have Rego policies written for [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/), you can often run them against Pulumi's Kubernetes resources with few changes. Set `inputFormat: kubernetes-admission` in `PulumiPolicy.yaml`, and Pulumi presents each resource in the admission review structure that Gatekeeper policies expect. Rules must still use the `violation` or `deny` prefixes and share one package, `input.parameters` comes from the pack's [configuration](#configuration), and `input.review.oldObject`, `input.review.userInfo`, and `data.inventory` aren't available. A pack uses one input format for all its rules, so keep Gatekeeper policies in their own pack. For the details, see [`inputFormat`](/docs/discovery-governance/reference/policy-project-file/#inputformat).
 
 ## Troubleshooting
 
@@ -408,7 +402,7 @@ If a rule never reports a violation:
 
 - **Check the rule's name.** Look for `warning[opa/unrecognized-rule]` in the `pulumi preview` output. See [Rule names and enforcement levels](#rule-names-and-enforcement-levels).
 - **Check the type token.** Compare against the full token, such as `random:index/randomString:RandomString`, not the short form shown in `pulumi preview` output.
-- **Check that the property is present.** During a preview, `input` contains only the properties your program sets.
+- **Check that the property is present.** During a preview, `input` contains only input properties, not outputs.
 - **Check the configuration.** A rule that reads `data.config` doesn't fire without its configuration value. Configuration values go directly under the rule's name, not under a `properties` key.
 - **Inspect the input.** Add a temporary rule that reports `json.marshal(input)`, as shown in [Test your policies](#test-your-policies).
 

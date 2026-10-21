@@ -56,7 +56,7 @@ Select your policy pack runtime to see the relevant attributes and examples:
 
 {{% choosable language opa %}}
 
-[OPA (Open Policy Agent)](https://github.com/pulumi/pulumi-policy-opa) policy packs let you write policies in [Rego](https://www.openpolicyagent.org/docs/latest/policy-language/) instead of TypeScript or Python. OPA packs need the OPA language plugin, which you install with `pulumi plugin install language opa`. For a walkthrough, see [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/).
+[OPA (Open Policy Agent)](https://github.com/pulumi/pulumi-policy-opa) policy packs let you write policies in [Rego](https://www.openpolicyagent.org/docs/latest/policy-language/) instead of TypeScript or Python. OPA packs need the OPA language plugin, which the CLI downloads on first use. Where automatic downloads are disabled, install it with `pulumi plugin install language opa`. For a walkthrough, see [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/).
 
 | Name | Required | Description |
 | - | - | - |

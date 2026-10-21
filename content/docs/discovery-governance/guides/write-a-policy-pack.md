@@ -359,7 +359,7 @@ Pulumi policies validate at two scopes:
 
 ### Resource validation policies
 
-Resource validation policies run during `pulumi preview` or `pulumi up`, examining each resource before creation or update. These policies execute **before** the desired state is sent to the engine, which means they can block non-compliant resources during both preview and update operations.
+Resource validation policies run during `pulumi preview` or `pulumi up`, examining each resource before creation or update. These policies execute **before** the engine sends the resource to the provider, which means they can block non-compliant resources during both preview and update operations.
 
 Use resource validation policies when you need to:
 
@@ -647,7 +647,7 @@ A few behaviors are specific to remediation:
 
 ## Writing policies for dynamic providers
 
-[Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) allow you to create custom resource types directly in your Pulumi programs. When writing policies for dynamic providers, you need to account for a key constraint: **all dynamic resources share the same resource type** (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python).
+[Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) allow you to create custom resource types directly in your Pulumi programs. When writing policies for dynamic providers, you need to account for a key constraint: **by default, all dynamic resources share the same resource type** (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python).
 
 Since you cannot rely on the resource type alone to identify which dynamic provider a resource uses, you must inspect the resource's properties to differentiate between different dynamic provider implementations.
 
@@ -1085,7 +1085,7 @@ As shorthand, specify enforcement levels directly:
 <a id="remediate"></a>
 **Enforcement levels:**
 
-In Pulumi Cloud, Essentials reports organization-managed policies in advisory mode. Pro adds mandatory enforcement, and Enterprise adds automatic remediation.
+In Pulumi Cloud, Essentials reports organization-managed policies in advisory mode, and Pro adds mandatory enforcement.
 
 - **advisory** - Issues warnings but allows deployments to proceed
 - **mandatory** - Blocks deployments when violations are detected
@@ -1232,7 +1232,7 @@ config_schema=PolicyConfigSchema(
 
 {{% choosable language opa %}}
 
-Rules that read `data.config` don't fire when a value is missing, so test your rules with and without configuration. See [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/#configuration).
+OPA policy packs don't currently support configuration schemas. Rules that read `data.config` don't fire when a value is missing, so test your rules with and without configuration. See [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/#configuration).
 
 {{% /choosable %}}
 
@@ -1303,7 +1303,7 @@ Policy packs can also receive configuration and secrets from [Pulumi ESC](/docs/
 
 {{< pulumi-cloud "policy-enforcement" />}}
 
-After local validation, publish your policy pack to Pulumi Cloud. Policy enforcement runs automatically during `preview` and `update` for any stack using Pulumi Cloud.
+After local validation, publish your policy pack to Pulumi Cloud. Policy enforcement runs automatically during `preview` and `update` for every stack in a preventative policy group that includes the pack.
 
 Pulumi Cloud versions policy packs, enabling updates, rollbacks, and gradual rollouts.
 
@@ -1313,7 +1313,7 @@ Pulumi Cloud versions policy packs, enabling updates, rollbacks, and gradual rol
     $ pulumi policy publish <org-name>
     ```
 
-    Pulumi Cloud assigns a monotonic version number:
+    Pulumi Cloud publishes the pack under the version you set:
 
     ```
     Obtaining policy metadata from policy plugin
