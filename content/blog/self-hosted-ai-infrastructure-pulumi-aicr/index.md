@@ -55,7 +55,7 @@ config = pulumi.Config()
 service = config.get("service") or "lke"
 accelerator = config.get("accelerator") or "rtx-pro-6000"
 
-# The CKS kubeconfig is a plain token config downloaded from the CoreWeave
+# The Coreweave Kubernetes Service (CKS) kubeconfig is a plain token config downloaded from the CoreWeave
 # console and placed in the same directory as this script (gitignored).
 with open("kubeconfig.yaml") as f:
     kubeconfig = f.read()
