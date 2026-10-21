@@ -248,7 +248,7 @@ Pulumi Cloud records the IP address of the client behind a request, for example 
 
 By default, it reads the `X-Forwarded-For` header from right to left, skipping addresses that belong to your trusted proxies. The first address outside the trusted ranges is the client. A client can add entries of its own to the left of the header, but it can't get past the entries your proxies append on the right, so the recorded address can't be forged this way. If the header is missing, or every address in it is trusted, the service uses the address of the connection itself.
 
-This works without configuration when your proxy or load balancer connects from a private address, as one inside your VPC usually does. Two settings cover the other cases.
+By default, all internal ranges are trusted. You may need to configure this further if you have load balancers in public address spaces, or if you want to prevent some internal clients from spoofing headers. Two settings cover these cases.
 
 ### Trusted proxy ranges
 
