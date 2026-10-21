@@ -1,6 +1,6 @@
 ---
 title: "AI infrastructure on tap with the Pulumi AICR provider"
-date: 2026-10-19
+date: 2026-10-21
 draft: false
 meta_desc: "The Pulumi NVIDIA AI Cluster Runtime (AICR) provider deploys pre-validated GPU training and inference clusters across clouds in a few lines of Python."
 feature_image: feature.png
