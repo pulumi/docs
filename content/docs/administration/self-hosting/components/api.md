@@ -246,11 +246,25 @@ Only required if using GitLab as the backing identity provider for your organiza
 
 Pulumi Cloud records the IP address of the client behind a request, for example in audit logs. When the API service sits behind a proxy or load balancer, the address of the connection is the proxy's, so the service reads the client's address from request headers instead.
 
-By default, it reads the `X-Forwarded-For` header from right to left, skipping addresses that belong to your trusted proxies. The first address outside the trusted ranges is the client. A client can add entries of its own to the left of the header, but it can't get past the entries your proxies append on the right, so the recorded address can't be forged this way. If the header is missing, or every address in it is trusted, the service uses the address of the connection itself.
+Two settings control how the service finds that address. If a CDN or proxy in front of the API already puts the client's address in a header of its own, point the service at that header and it skips `X-Forwarded-For` parsing altogether. Otherwise, the service parses `X-Forwarded-For`, and you tell it which proxies to trust.
 
-By default, all internal ranges are trusted. You may need to configure this further if you have load balancers in public address spaces, or if you want to prevent some internal clients from spoofing headers. Two settings cover these cases.
+### Real IP header
+
+Set `PULUMI_REAL_IP_HEADER` when a CDN or proxy puts the client's address in a header of its own, such as `CloudFront-Viewer-Address`, `CF-Connecting-IP`, or `X-Real-IP`. When that header is present and holds a valid IP, the service uses it and doesn't parse `X-Forwarded-For` at all. If the header is absent or doesn't hold a valid IP, the service falls back to `X-Forwarded-For`. A trailing port, as in `CloudFront-Viewer-Address`, is stripped.
+
+```bash
+PULUMI_REAL_IP_HEADER=CloudFront-Viewer-Address
+```
+
+Set it only if that CDN or proxy is the sole way to reach the API and replaces any value a client sends for the header. Otherwise clients can set the header themselves and forge their recorded address.
+
+The API service fails to start if the value is `X-Forwarded-For` or `Forwarded`, which are handled separately.
 
 ### Trusted proxy ranges
+
+Without a real IP header, the service reads the `X-Forwarded-For` header from right to left, skipping addresses that belong to your trusted proxies. The first address outside the trusted ranges is the client. A client can add entries of its own to the left of the header, but it can't get past the entries your proxies append on the right, so the recorded address can't be forged this way. If the header is missing, or every address in it is trusted, the service uses the address of the connection itself.
+
+By default, all internal ranges are trusted. You may need to configure this further if you have load balancers in public address spaces, or if you want to prevent some internal clients from spoofing headers.
 
 Set `PULUMI_TRUSTED_PROXY_IP_RANGES` when a proxy or load balancer in front of the API connects from a public or otherwise non-default address. Without it, the service takes that proxy's address for the client's.
 
@@ -261,18 +275,6 @@ PULUMI_TRUSTED_PROXY_IP_RANGES=203.0.113.0/24,10.0.0.0/8
 ```
 
 The API service fails to start if an entry is invalid or the list contains no ranges.
-
-### Real IP header
-
-Set `PULUMI_REAL_IP_HEADER` when a CDN or proxy puts the client's address in a header of its own, such as `CloudFront-Viewer-Address`, `CF-Connecting-IP`, or `X-Real-IP`. The service uses that header first and falls back to `X-Forwarded-For` if the header is absent or doesn't contain a valid IP. A trailing port, as in `CloudFront-Viewer-Address`, is stripped.
-
-```bash
-PULUMI_REAL_IP_HEADER=CloudFront-Viewer-Address
-```
-
-Set it only if that CDN or proxy is the sole way to reach the API and replaces any value a client sends for the header. Otherwise clients can set the header themselves and forge their recorded address.
-
-The API service fails to start if the value is `X-Forwarded-For` or `Forwarded`, which are handled separately.
 
 ## SSRF protection
 
