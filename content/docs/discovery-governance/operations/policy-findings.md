@@ -93,11 +93,13 @@ For each issue, you can set:
 
 These fields can be edited directly from the Issues tab or from the individual issue detail view.
 
-### Findings allowed by exceptions
+### Findings exempted by exceptions
 
-A finding that a [policy exception](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) allowed in its latest run stays in the Issues tab, with the exception's ID in the **Exception** column and **Allowed by EXC-n** in the issue details. To accept a known violation, create an exception for it: findings can't be set to an Ignored status.
+A finding that a [policy exception](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) exempted in its latest run stays in the Issues tab, with the exception's ID in the **Exception** column and **Allowed by EXC-n** in the issue details. To accept a known violation, create an exception for it: findings can't be set to an Ignored status.
 
-<!-- TODO(decision): whether allowed findings count in the compliance scores (today they do). The Open or In Progress status list assumes the service change that rejects Ignored ships with policy exceptions. -->
+<!-- TODO(console): the console still says "Allowed by"; update when it says "Exempted by" -->
+
+<!-- TODO(decision): whether exempted findings count in the compliance scores (today they do). The Open or In Progress status list assumes the service change that rejects Ignored ships with policy exceptions. -->
 
 ### Issue details
 

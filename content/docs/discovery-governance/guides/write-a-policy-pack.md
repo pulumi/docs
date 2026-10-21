@@ -1264,7 +1264,7 @@ Pass configuration via JSON file:
 pulumi preview --policy-pack <path-to-policy-pack> --policy-pack-config config.json
 ```
 
-To allow specific violations, use version 2 of the file format, which nests the configuration under `policies` and adds `exceptions`:
+To exempt specific violations, use version 2 of the file format, which nests the configuration under `policies` and adds `exceptions`:
 
 ```json
 {

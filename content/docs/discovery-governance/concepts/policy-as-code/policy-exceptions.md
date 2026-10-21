@@ -2,7 +2,7 @@
 title: Policy exceptions
 title_tag: "Policy exceptions | Pulumi Policies"
 h1: Policy exceptions
-meta_desc: Allow specific policy violations on specific resources with a recorded reason, so you can make policies mandatory without blocking teams.
+meta_desc: Exempt specific policy violations on specific resources with a recorded reason, so you can make policies mandatory without blocking teams.
 menu:
   discovery-governance:
     name: Policy exceptions
@@ -16,12 +16,12 @@ Policy exceptions are in public preview.
 
 <!-- TODO(decision): minimum Pulumi CLI version. The service sends exceptions to CLI v3.268.0 or later (policyExceptionsMinCLIVersion), but the CLI changes target v3.271.0 or later. State the released version here and in "Limitations in the public preview". -->
 
-A policy exception allows the violations of specific policies on specific resources. Each exception belongs to one policy pack and has:
+A policy exception exempts the violations of specific policies on specific resources. Each exception belongs to one policy pack and has:
 
-- **A reason** that explains why it's safe to allow the violations. Reviewers and auditors read it.
-- **Match entries**, each listing one or more policies and one or more resource URNs. A violation is allowed when its policy and its resource URN both appear in the same entry.
+- **A reason** that explains why it's safe to exempt the violations. Reviewers and auditors read it.
+- **Match entries**, each listing one or more policies and one or more resource URNs. A violation is exempted when its policy and its resource URN both appear in the same entry.
 
-An allowed violation is still reported, but it doesn't fail the operation, even when its policy is mandatory. The finding stays visible, marked with the exception that allowed it, so nothing is hidden.
+An exempted violation is still reported, but it doesn't fail the operation, even when its policy is mandatory. The finding stays visible, marked with the exception that exempted it, so nothing is hidden.
 
 Exceptions let you make a policy mandatory before every existing violation is fixed. Teams that hit a violation with a legitimate reason, such as a bucket that has to be public, can unblock themselves with an exception instead of waiting for the policy to be relaxed.
 
@@ -37,25 +37,35 @@ Pulumi checks each policy violation against the exceptions for its policy pack:
 - **Matching is exact.** The policy name and the resource URN must both match an entry exactly. Entries don't support wildcards, and an entry can't match every policy in a pack.
 - **Stack-level violations** that aren't tied to a resource are matched against the URN of the stack's root resource, which has the form `urn:pulumi:<stack>::<project>::pulumi:pulumi:Stack::<project>-<stack>`.
 - **One violation can match several exceptions.** Pulumi records every exception that matches. Where a single exception is shown, it's the first by ID, with numbers compared by value, so `EXC-2` comes before `EXC-10`.
-- **Enforcement levels.** An allowed mandatory violation no longer blocks the operation. Advisory violations can match exceptions too, and are summarized with the other allowed violations. A `remediate` policy that still reports a violation can be excepted like a mandatory one.
+- **Enforcement levels.** An exempted mandatory violation no longer blocks the operation. Advisory violations can match exceptions too, and are summarized with the other exempted violations. A `remediate` policy that still reports a violation can be exempted like a mandatory one.
 
-During `pulumi preview` and `pulumi up`, allowed violations are summarized under `Policies:` with one line per policy:
+During `pulumi preview` and `pulumi up`, exempted violations are summarized under `Policies:` with one line per policy and a count of its exempted violations. They're listed after the other violations, and they don't count toward the policy pack's status icon:
+
+<!-- TODO(cli): matches pulumi/pulumi#25290 at f10021d267; recheck when it merges -->
 
 ```output
 Policies:
     ⚠️ aws-guard@v1.0.0
         - [advisory]  bucket-versioning  (aws:s3:Bucket: logs-bucket)
           Buckets should enable versioning
-        · no-public-read  excepted for 1 resource
-        · vpc-flow-logs  excepted for 1 resource
+        · [exempted]  no-public-read  (1 violation)
+        · [exempted]  vpc-flow-logs  (1 violation)
 ```
 
-To list each exception's ID and reason, and the resources it allowed, pass `--show-policy-exceptions` to `pulumi preview`, `pulumi up`, or `pulumi policy analyze`:
+To list each exempted violation instead, pass `--show-policy-exceptions` to `pulumi preview` or `pulumi up`. Each violation is tagged `[exempted]` before its enforcement level, and its message is followed by the ID and reason of every exception that exempts it. `pulumi policy analyze` always lists violations this way:
 
 ```output
-        · no-public-read (mandatory)  excepted for 1 resource
-            EXC-42: Log target buckets must allow the log delivery group
-              - aws:s3:Bucket: logs-bucket (also: EXC-50)
+Policies:
+    ⚠️ aws-guard@v1.0.0
+        - [advisory]  bucket-versioning  (aws:s3:Bucket: logs-bucket)
+          Buckets should enable versioning
+        · [exempted] [mandatory]  no-public-read  (aws:s3:Bucket: logs-bucket)
+          Buckets must not be publicly readable
+          EXC-42: Log target bucket
+          EXC-50: Legacy ACL
+        · [exempted] [mandatory]  vpc-flow-logs  (pulumi:pulumi:Stack: policyproject-dev)
+          A stack with a VPC must also have VPC flow logs
+          EXC-7: Flow logs are only required in prod
 ```
 
 The `--show-policy-exceptions` flag isn't supported with `--remote`.
@@ -118,7 +128,7 @@ A few things to keep in mind:
 
 - In an unversioned file, an `exceptions` key is read as the configuration of a policy named `exceptions`, and no exceptions apply. Add `"version": 2` and move the configuration under `policies`.
 - CLI versions without exception support reject a version 2 file with an error such as `parsing "version": 2 is not a valid value; must be a string or object`.
-- Exceptions in a file passed to `pulumi policy enable --config` are ignored. To except violations of a policy pack your organization enforces, create the exception in Pulumi Cloud.
+- Exceptions in a file passed to `pulumi policy enable --config` are ignored. To exempt violations of a policy pack your organization enforces, create the exception in Pulumi Cloud.
 
 To find the URN of a resource, run `pulumi stack --show-urns`.
 
@@ -142,7 +152,7 @@ To request an exception from the Pulumi Cloud console:
 
 1. Open the stack, and on its **Overview** page find the **Policy exceptions** card.
 1. Select **Request exception**. When your organization doesn't require approval, the button reads **Create exception**.
-1. Select the findings to except from the stack's latest run. They must all come from one policy pack.
+1. Select the findings to exempt from the stack's latest run. They must all come from one policy pack.
 1. Enter the exception reason. When approval is required, you can also add a note to the approver. The note starts the request's comments and isn't kept with the exception.
 1. Select **Request exception** or **Create exception**.
 
@@ -192,11 +202,13 @@ A rollout can start with **Auto-approved**, so teams unblock themselves while a 
 
 <!-- TODO(edition): pulumi-cloud "policy-exceptions" callout goes on the line after this heading. -->
 
-The **Exceptions** tab lists every exception in your organization, with its status, policy pack, stacks, and reason. Select an exception to see who requested it, whether it needed approval, and where it applied: for each policy and resource, when the exception last allowed a violation in a stack update. Only updates count, not previews.
+The **Exceptions** tab lists every exception in your organization, with its status, policy pack, stacks, and reason. Select an exception to see who requested it, whether it needed approval, and where it applied: for each policy and resource, when the exception last exempted a violation in a stack update. Only updates count, not previews.
 
-Findings that an exception allowed show the exception's ID in the **Exception** column of policy findings, and **Allowed by EXC-n** in the finding's details and on the stack update page.
+Findings that an exception exempted show the exception's ID in the **Exception** column of policy findings, and **Allowed by EXC-n** in the finding's details and on the stack update page.
 
-To remove an exception, open it and select **Remove exception**. From the next preview or update, the violations it allowed are reported again, and mandatory ones block the update. A removed exception stays in the list with the **Removed** status. To remove one from the CLI, run `pulumi policy exception remove <id>`.
+<!-- TODO(console): the console still says "Allowed by"; update when it says "Exempted by" -->
+
+To remove an exception, open it and select **Remove exception**. From the next preview or update, the violations it exempted are reported again, and mandatory ones block the update. A removed exception stays in the list with the **Removed** status. To remove one from the CLI, run `pulumi policy exception remove <id>`.
 
 Exceptions can't be edited. To change one, remove it and create a new one.
 
@@ -251,7 +263,7 @@ An exception changes enforcement rather than only how a finding is tracked. The 
 - Exceptions apply to preventative policy groups only. Audit policy groups don't apply them, so their findings for the same resources stay open.
 - Older CLI versions don't apply Pulumi Cloud exceptions. They print a warning that the exceptions won't apply to the run.
 
-<!-- TODO(decision): whether audit policy groups apply exceptions at launch, and whether allowed findings count in the compliance scores. Today allowed findings are still counted. -->
+<!-- TODO(decision): whether audit policy groups apply exceptions at launch, and whether exempted findings count in the compliance scores. Today exempted findings are still counted. -->
 
 ## Next steps
 

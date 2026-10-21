@@ -81,7 +81,7 @@ The two cases above correspond to Pulumi's two enforcement modes. These are Pulu
 - **Preventative** policy groups evaluate IaC-managed resources during `pulumi preview` and `pulumi up`, and can block a deployment.
 - **Audit** policy groups evaluate discovered resources and the latest state of stacks, and report violations without blocking anything.
 
-Each policy also has an **enforcement level**, which is specific to Pulumi as well: `advisory` reports a violation as a warning, `mandatory` blocks the deployment, `remediate` fixes the resource automatically, and `disabled` turns the policy off. Audit policy groups report violations rather than blocking them, whatever the enforcement level. For how to choose between them, see [Policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#best-practices). To allow specific violations on specific resources without relaxing a policy, use a [policy exception](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/).
+Each policy also has an **enforcement level**, which is specific to Pulumi as well: `advisory` reports a violation as a warning, `mandatory` blocks the deployment, `remediate` fixes the resource automatically, and `disabled` turns the policy off. Audit policy groups report violations rather than blocking them, whatever the enforcement level. For how to choose between them, see [Policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#best-practices). To exempt specific violations on specific resources without relaxing a policy, use a [policy exception](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/).
 
 ### Local execution and Pulumi Cloud
 
