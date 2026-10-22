@@ -29,6 +29,7 @@ These guides walk through common Discovery & governance tasks. Each one is self-
 - [Use pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/): Apply ready-made compliance packs for frameworks such as CIS, PCI DSS, and HITRUST.
 - [Enforce AWS Organizations tag policies](/docs/discovery-governance/guides/aws-organizations-tag-policies/): Block deployments that are missing the tags your AWS Organizations tag policies require.
 - [Write a policy pack](/docs/discovery-governance/guides/write-a-policy-pack/): Author custom policies in TypeScript, Python, or OPA.
+- [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/): Write policies in Rego with Open Policy Agent.
 - [Enforce policies in CI/CD](/docs/discovery-governance/guides/policies-in-ci-cd/): Run policy checks in your pipelines before changes deploy.
 
 ## Context API
