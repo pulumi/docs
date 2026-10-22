@@ -57,7 +57,6 @@ This Pulumi program uses `ConfigFile` to read that YAML file and provision the r
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
-// Create resources from standard Kubernetes guestbook YAML example.
 const guestbook = new k8s.yaml.v2.ConfigFile("guestbook", {
     file: "guestbook-all-in-one.yaml",
 });
@@ -69,7 +68,6 @@ const guestbook = new k8s.yaml.v2.ConfigFile("guestbook", {
 ```python
 from pulumi_kubernetes.yaml.v2 import ConfigFile
 
-# Create resources from standard Kubernetes guestbook YAML example.
 guestbook = ConfigFile("guestbook", file="guestbook-all-in-one.yaml")
 ```
 
@@ -86,7 +84,6 @@ import (
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create resources from standard Kubernetes guestbook YAML example.
         _, err := yamlv2.NewConfigFile(ctx, "guestbook", &yamlv2.ConfigFileArgs{
             File: pulumi.String("guestbook-all-in-one.yaml"),
         })
@@ -114,7 +111,6 @@ class Program
     {
         return Pulumi.Deployment.RunAsync(() =>
         {
-            // Create resources from standard Kubernetes guestbook YAML example.
             var guestbook = new ConfigFile("guestbook", new ConfigFileArgs
             {
                 File = "guestbook-all-in-one.yaml",
@@ -141,7 +137,6 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        // Create resources from standard Kubernetes guestbook YAML example.
         var guestbook = new ConfigFile("guestbook",
             ConfigFileArgs.builder()
                 .file("guestbook-all-in-one.yaml")
@@ -175,7 +170,6 @@ terraform {
   }
 }
 
-# Create resources from standard Kubernetes guestbook YAML example.
 resource "kubernetes_yaml_v2_config_file" "guestbook" {
   file = "guestbook-all-in-one.yaml"
 }
@@ -242,7 +236,6 @@ This Pulumi program uses `ConfigGroup` to read these YAML files and provision th
 import * as k8s from "@pulumi/kubernetes";
 import * as path from "path";
 
-// Create resources from standard Kubernetes guestbook YAML example.
 const guestbook = new k8s.yaml.v2.ConfigGroup("guestbook", {
     files: [ path.join("yaml", "*.yaml") ],
 });
@@ -254,7 +247,6 @@ const guestbook = new k8s.yaml.v2.ConfigGroup("guestbook", {
 ```python
 from pulumi_kubernetes.yaml.v2 import ConfigGroup
 
-# Create resources from standard Kubernetes guestbook YAML example.
 guestbook = ConfigGroup("guestbook", files=["yaml/*.yaml"])
 ```
 
@@ -273,7 +265,6 @@ import (
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create resources from standard Kubernetes guestbook YAML example.
         _, err := yamlv2.NewConfigGroup(ctx, "guestbook", &yamlv2.ConfigGroupArgs{
             Files: pulumi.StringArray{pulumi.String(filepath.Join("yaml", "*.yaml"))},
         })
@@ -302,7 +293,6 @@ class Program
     {
         return Pulumi.Deployment.RunAsync(() =>
         {
-            // Create resources from standard Kubernetes guestbook YAML example.
             var guestbook = new ConfigGroup("guestbook", new ConfigGroupArgs
             {
                 Files = { Path.Combine("yaml", "*.yaml") },
@@ -329,7 +319,6 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        // Create resources from standard Kubernetes guestbook YAML example.
         var guestbook = new ConfigGroup("guestbook",
             ConfigGroupArgs.builder()
                 .files("yaml/*.yaml")
@@ -364,7 +353,6 @@ terraform {
   }
 }
 
-# Create resources from standard Kubernetes guestbook YAML example.
 resource "kubernetes_yaml_v2_config_group" "guestbook" {
   files = ["yaml/*.yaml"]
 }
@@ -1100,8 +1088,6 @@ The Kubernetes Guestbook by default does not assign a load balancer for the fron
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
-// Create resources from standard Kubernetes guestbook YAML example,
-// changing the frontend service to a load balancer.
 const guestbook = new k8s.yaml.v2.ConfigFile("guestbook", {
     file: "guestbook-all-in-one.yaml",
 }, {
@@ -1135,8 +1121,6 @@ def make_frontend_public(args):
         props["spec"] = spec
         return pulumi.ResourceTransformResult(props=props, opts=args.opts)
 
-# Create resources from standard Kubernetes guestbook YAML example,
-# changing the frontend service to a load balancer.
 guestbook = ConfigFile("guestbook",
     file="guestbook-all-in-one.yaml",
     opts=pulumi.ResourceOptions(transforms=[make_frontend_public]))
@@ -1157,8 +1141,6 @@ import (
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create resources from standard Kubernetes guestbook YAML example,
-        // changing the frontend service to a load balancer.
         _, err := yamlv2.NewConfigFile(ctx, "guestbook", &yamlv2.ConfigFileArgs{
             File: pulumi.String("guestbook-all-in-one.yaml"),
         }, pulumi.Transforms([]pulumi.ResourceTransform{
@@ -1204,8 +1186,6 @@ class Program
     {
         return Pulumi.Deployment.RunAsync(() =>
         {
-            // Create resources from standard Kubernetes guestbook YAML example,
-            // changing the frontend service to a load balancer.
             var guestbook = new ConfigFile("guestbook", new ConfigFileArgs
             {
                 File = "guestbook-all-in-one.yaml",
@@ -1268,6 +1248,8 @@ $ kubectl get service frontend
 NAME       TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
 frontend   LoadBalancer   10.107.35.136   127.0.0.1     80:31533/TCP   24s
 ```
+
+On minikube, `minikube tunnel` assigns `127.0.0.1` as the external IP address. Some providers, like AWS, report a hostname instead of an IP address; on those clusters, replace `ip` with `hostname` in the `jsonpath` expression below.
 
 Afterwards, we can `curl` that address and see the Guestbook page:
 
