@@ -1139,8 +1139,8 @@
       "hash": "ddf3250e2c751cbbfa2c8cfb8d846550e0c3c781d3e208b6f5e4dc6c11f6d818"
     },
     "CreateAgentTaskRequest": {
-      "hash": "5b6820d61633ab859e33650cf56858367c9532ebdb0d5f954ded35f34c27635e",
-      "lastmod": "2026-09-15"
+      "hash": "0c1e019e8c4d90109fd47b226f3c7d0a76c886f5ba71fa644c81d44752a72ac5",
+      "lastmod": "2026-10-22"
     },
     "CreateAgentTaskResponse": {
       "hash": "189e01ba3af168421c1cf7eee1e30b92cd741d12727755d3111367cfa17fdb6e"
