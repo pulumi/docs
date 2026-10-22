@@ -1,9 +1,8 @@
 ---
-title: "Your agent will try to be helpful. Make sure helpful can't reach prod"
-allow_long_title: true
-date: 2026-10-16
-draft: true
-meta_desc: "Coding agents try to be helpful, and sometimes that deletes prod. What our live workshop taught us about boxing in Pulumi Neo with Docker Sandboxes and ESC."
+title: "Running Pulumi Neo in a Docker Sandbox: workshop recap"
+date: 2026-10-21
+draft: false
+meta_desc: "Pulumi Neo can take on real infrastructure work once its limits sit outside the prompt. What our Docker workshop taught us about running Neo in a sandbox."
 feature_image: feature.png
 authors:
     - engin-diri
@@ -44,22 +43,22 @@ resource_links:
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        An agent on a staging task used a token from an unrelated file and wiped a production volume in 9 seconds, PocketOS's founder says. Then it wrote: "I didn't verify."
+        The more an agent can do on its own, the more infrastructure work you can hand it, as long as its limits hold when it gets something wrong.
 
-        Engin Diri, Adam Gordon Bell, and Docker's Mike Coleman on boxing in Pulumi Neo.
+        Engin Diri, Adam Gordon Bell, and Docker's Mike Coleman on running Pulumi Neo in a Docker Sandbox.
     linkedin: |
-        In April, a coding agent fixing a staging credential mismatch used a token it found in an unrelated file and deleted a production volume. PocketOS founder Jer Crane concluded: "System prompts are advisory, not enforcing."
+        Coding agents can now finish hours of software work on their own. How much infrastructure work you can hand them depends on where their limits sit. A system prompt isn't one of those places: "System prompts are advisory, not enforcing," as PocketOS founder Jer Crane put it after an agent deleted the company's production volume.
 
-        Engin Diri, Adam Gordon Bell, and Docker's Mike Coleman ran the Neo in a Docker Sandbox workshop. The recap covers Adam's explanation for why agents do this (in training, a deleted database scores the same as an unfinished task), what Pulumi Neo's modes actually limit (read-only stops Pulumi Cloud writes, not everything), and what changed in Docker Sandboxes since August: global secrets that now reach running sandboxes, sandbox environment files, and cloud sandboxes.
+        Engin Diri, Adam Gordon Bell, and Docker's Mike Coleman ran the Neo in a Docker Sandbox workshop. The recap covers Adam's explanation for why agents overreach (in training, a deleted database scores the same as an unfinished task), which Pulumi Neo controls live outside the prompt, and what changed in Docker Sandboxes since August: global secrets that now reach running sandboxes, sandbox environment files, and cloud sandboxes.
     bluesky: |
-        Why would a capable coding agent delete prod? Adam Gordon Bell's answer: in training, a deleted database scores the same as an unfinished task.
+        You can hand a coding agent real infrastructure work once its limits sit somewhere it can't negotiate with them.
 
-        Engin Diri recaps the Neo in a Docker Sandbox workshop: the Pulumi controls, the sandbox boundaries, and what changed since August.
+        Engin Diri recaps the Neo in a Docker Sandbox workshop with Adam Gordon Bell and Docker's Mike Coleman: the Pulumi controls, the sandbox boundaries, and what changed since August.
 ---
 
-In April, a coding agent on a routine staging task for PocketOS deleted the company's production volume in 9 seconds. According to [founder Jer Crane's account](https://www.theregister.com/software/2026/04/27/cursor-opus-agent-snuffs-out-startups-production-database/5224442), it used an API token it found in an unrelated file. Its explanation afterward: "I guessed that deleting a staging volume via the API would be scoped to staging only. I didn't verify." Railway recovered the data two days later.
+The more an agent can do on its own, the more infrastructure work you can hand it, as long as its limits hold when it gets something wrong. In April, they didn't hold for PocketOS. A coding agent on a routine staging task deleted the company's production volume in 9 seconds. According to [founder Jer Crane's account](https://www.theregister.com/software/2026/04/27/cursor-opus-agent-snuffs-out-startups-production-database/5224442), it used an API token it found in an unrelated file. Its explanation afterward: "I guessed that deleting a staging volume via the API would be scoped to staging only. I didn't verify." Railway recovered the data two days later.
 
-The agent had been told not to. "System prompts are advisory, not enforcing," Crane wrote afterward. If the prompt can't stop an agent, the limits have to sit where the agent can't negotiate with them. That was the premise of Neo in a Docker Sandbox, the workshop Adam Gordon Bell and I ran with Mike Coleman from Docker. So we gave [Pulumi Neo](/docs/ai/neo/) two layers. The first is a Docker Sandbox. Neo runs in its own microVM and reaches only the files and hosts we allow. The Pulumi token gets injected by a proxy on the way out, so Neo never holds the real credential. The second is Pulumi itself, which decides what Neo may change and when it has to ask.
+The agent had been told not to. "System prompts are advisory, not enforcing," Crane wrote afterward. If the prompt can't stop an agent, the limits have to sit where the agent can't negotiate with them. That was the premise of Neo in a Docker Sandbox, the workshop Adam Gordon Bell and I ran with Mike Coleman from Docker. So we gave [Pulumi Neo](/docs/ai/neo/) two layers. The first is a Docker Sandbox. Neo runs in its own microVM and reaches only the files and hosts we allow. The Pulumi token gets injected by a proxy on the way out, so Neo never holds the real credential. The second is Pulumi itself, which decides what Neo may change and when it has to ask. With both in place, you can let Neo work without approving every step.
 
 For why YOLO mode belongs in a sandbox at all, see [my August post](/blog/sandboxing-coding-agents-yolo-mode/).
 
@@ -116,7 +115,9 @@ Published coding-agent training runs such as [DeepSWE](https://www.together.ai/b
     <figcaption><em>Training happens in the top row. Production work lives in the bottom right.</em></figcaption>
 </figure>
 
-Adam's rule is to let agents act only when there are no side effects, when someone reviews the change, or when there's an easy way to recover. The PocketOS agent was working in staging, which felt safe. The token it found let it leave staging without anyone noticing.
+Adam's rule is that agents can act on their own when there are no side effects, when someone reviews the change, or when there's an easy way to recover. The PocketOS agent was working in staging, which felt safe. The token it found let it leave staging without anyone noticing.
+
+Infrastructure as code moves production work toward those conditions. An agent's change becomes a diff you can preview, check against policy, and review before it reaches the cloud.
 
 ## Six questions before an agent gets your cloud account
 
@@ -206,8 +207,8 @@ Inside the sandbox, I think auto approval mode is defensible for throwaway work.
 
 In an informal poll at the end of the workshop, 8 of the 11 people who voted said they don't use a sandbox for their agents. If that's you, start closed: pick [Locked Down](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/) when the first start asks for a network preset. Read the denials in the terminal dashboard (`sbx` with no subcommand) or with `sbx policy log`, then approve them or add rules with `sbx policy allow network <host>`.
 
-On the Pulumi side, run Neo [read-only, or at least with balanced approval](/docs/ai/neo/permissions/), near production, and back the stack with an [ESC environment that uses OIDC](/docs/esc/guides/configuring-oidc/aws/).
+On the Pulumi side, start Neo with [balanced approval](/docs/ai/neo/permissions/) near production, so it works freely but asks before `pulumi up`, and back the stack with an [ESC environment that uses OIDC](/docs/esc/guides/configuring-oidc/aws/).
 
 {{< blog/card "/events/neo-in-a-docker-sandbox/" >}}
 
-And if your agent has already been helpful in production, tell me in the [Pulumi Community Slack](https://slack.pulumi.com/). I'm still collecting these.
+If you sandbox your agents differently, tell me how in the [Pulumi Community Slack](https://slack.pulumi.com/).

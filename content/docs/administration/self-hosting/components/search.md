@@ -28,32 +28,32 @@ It is important to note that the search cluster is not in the critical path of P
 
 ## Prerequisites
 
-* Provide a compatible OpenSearch cluster (see Minimum System Requirements below).
+* Provide a compatible OpenSearch cluster (see [Minimum system requirements](#minimum-system-requirements)).
 * Update the API container to set environment variables for the OpenSearch cluster.
 
-## Minimum System Requirements
+## Minimum system requirements
 
 | Type       | Properties           | Notes                                                                                                          |
 |------------|----------------------|----------------------------------------------------------------------------------------------------------------|
 | OpenSearch | v2.x or v3.x cluster | Pulumi Cloud runs OpenSearch v3.7. We recommend the latest patch release of either the v2.19.x or the v3.x line. |
 
-## API Environment Variables
+## API environment variables
 
 The following environment variables must be set on the API container for Pulumi Cloud.
 
-| Variable Name          | Description                                                 |
-|------------------------|-------------------------------------------------------------|
-| PULUMI_SEARCH_DOMAIN   | The URL of the OpenSearch cluster API, including the port.  |
-| PULUMI_SEARCH_USER     | The administrator user for the OpenSearch cluster.          |
-| PULUMI_SEARCH_PASSWORD | The administrator password for the OpenSearch cluster.      |
+| Variable name            | Description                                                |
+|--------------------------|------------------------------------------------------------|
+| `PULUMI_SEARCH_DOMAIN`   | The URL of the OpenSearch cluster API, including the port. |
+| `PULUMI_SEARCH_USER`     | The administrator user for the OpenSearch cluster.         |
+| `PULUMI_SEARCH_PASSWORD` | The administrator password for the OpenSearch cluster.     |
 
-## OpenSearch Cluster Administration
+## OpenSearch cluster administration
 
-### Index Rotation
+### Index rotation
 
 Pulumi Cloud automatically triggers the OpenSearch cluster to reindex resource search results on a weekly basis.
 
-### Backfilling Data
+### Backfilling data
 
 If a reindex operation is needed outside the normal weekly rotation, users with an `admin` role in a self-hosted
 organization have access to a menu under `Settings -> Self-hosted`. This menu contains a `Reindex search cluster`

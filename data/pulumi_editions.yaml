@@ -77,7 +77,7 @@ features:
     min_edition: enterprise
   - id: github-enterprise-cloud-data-residency
     name: GitHub Enterprise Cloud with data residency support
-    min_edition: enterprise
+    min_edition: pro
   - id: gated-deployments
     name: Gated deployments
     min_edition: pro
