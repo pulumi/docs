@@ -19,7 +19,7 @@ social:
     twitter: |
         EU proposals are moving data residency from a contract clause into procurement policy. For infrastructure teams the question becomes: can you prove where data lives, continuously?
 
-        What residency requires technically, and how policy as code checks it:
+        What residency requires technically, and how policy as code checks it.
     linkedin: |
         In May 2026, the European Commission was reported to be considering rules on where sensitive government data can be processed. In June it proposed the Cloud and AI Development Act, which includes sovereignty assurance levels for cloud services. The proposal still has to go through Parliament and Council, but the direction is clear: data residency is moving from a clause a few regulated buyers asked for into policy and procurement criteria.
 
@@ -29,7 +29,9 @@ social:
 
         Our new post covers what the EU is weighing, what residency requires technically, and how policy as code and multi-region deployment enforce it.
     bluesky: |
-        EU proposals are moving data residency from a contract clause into procurement policy. For infra teams, the question becomes: can you prove where data lives, continuously? What residency requires technically and how policy as code checks it.
+        EU proposals are moving data residency from a contract clause into procurement policy. For infra teams, the question becomes: can you prove where data lives, continuously?
+
+        What residency requires technically and how policy as code checks it.
 ---
 
 The European Commission is weighing rules that would limit where sensitive public-sector data can be processed, and its June 2026 sovereignty package proposes tiered assurance levels for cloud services. If those proposals advance, data residency stops being a clause a few regulated buyers asked for and becomes a procurement requirement. For infrastructure teams, the question becomes whether you can show, continuously, where data actually lives.
@@ -42,14 +44,14 @@ This post stays in the technical lane. It does not take a side in the policy deb
 
 In May 2026, [CNBC reported](https://www.cnbc.com/2026/05/07/eu-commission-cloud-sensitive-data.html) that the European Commission was considering proposals that would restrict the use of U.S. cloud platforms for processing sensitive government data across EU countries. According to the report, the core idea is defining sectors that must be hosted on European cloud capacity. The proposals would not prohibit overseas cloud platforms from government contracts entirely. They would limit their use for sensitive data at public sector organizations, depending on the level of sensitivity. The report ties the discussion to the 2018 U.S. CLOUD Act, under which U.S. law enforcement can request data from American companies regardless of where the data is stored.
 
-On June 3, 2026, the Commission put a formal proposal on the table as part of its European Technological Sovereignty Package, which includes a Cloud and AI Development Act. A [Jones Day summary](https://www.legal500.com/intelligence/european-union/media-telecoms-it-entertainment/eu-proposes-tech-sovereignty-package-with-major-implications-for-digital-markets) describes a single EU-wide sovereignty framework with four assurance levels for cloud services. It would require Member States to run sovereignty risk assessments, and it would require public authorities to host sensitive data on services controlled by EU entities. It also introduces "Union added-value" award criteria in public procurement. The same summary notes that the proposal now goes to the European Parliament and the Council, and that adoption could take 18 to 24 months. [Tech.eu](https://tech.eu/2026/06/03/eu-says-tech-sovereignty-package-about-protecting-citizens/) reports that the package includes sovereignty requirements for cloud providers in sensitive sectors such as banking, energy, and healthcare.
+On June 3, 2026, the Commission put a formal proposal on the table as part of its European Technological Sovereignty Package, which includes a Cloud and AI Development Act. A [Jones Day summary](https://www.legal500.com/intelligence/european-union/media-telecoms-it-entertainment/eu-proposes-tech-sovereignty-package-with-major-implications-for-digital-markets) describes a single EU-wide sovereignty framework with four assurance levels for cloud services. It would require Member States to run sovereignty risk assessments, and it would require public authorities to host sensitive data on services controlled by EU entities. It also introduces "Union added-value" award criteria in public procurement. The same summary notes that the proposal now goes to the European Parliament and the Council, and that a timeline of 18 to 24 months to final adoption would not be unusual for proposals of this scope. [Tech.eu](https://tech.eu/2026/06/03/eu-says-tech-sovereignty-package-about-protecting-citizens/) reports that the package includes sovereignty requirements for cloud providers in sensitive sectors such as banking, energy, and healthcare.
 
 Several things are still moving, and the final text may differ from the proposal. Supporters point to legal exposure and dependence on a small number of providers. Critics point to cost, capacity, and the risk of protectionism. Whichever way the text lands, buyers who write sovereignty into their requirements will need evidence.
 
 The proposal also builds on earlier threads:
 
-- **GDPR Chapter V** already governs transfers of personal data to third countries. It sets conditions for transfers and does not require data to stay in the EU. The [EU-US Data Privacy Framework](https://www.legal500.com/intelligence/belgium/privacy/eu-general-court-upholds-eu%E2%80%93us-data-privacy-framework) survived a General Court challenge in September 2025.
-- **The Data Act** made cloud switching rules applicable in September 2025, with [switching charges prohibited from January 2027](https://cms.law/en/fra/legal-updates/eu-data-act-focus-on-cloud-services-switching-charges-who-should-shoulder-the-cost).
+- **[GDPR Chapter V](https://eur-lex.europa.eu/eli/reg/2016/679/oj)** (Articles 44 to 49) already governs transfers of personal data to third countries. It sets conditions for transfers and does not require data to stay in the EU. The [EU-US Data Privacy Framework](https://www.legal500.com/intelligence/belgium/privacy/eu-general-court-upholds-eu%E2%80%93us-data-privacy-framework) survived a General Court challenge in September 2025.
+- **The [Data Act](https://eur-lex.europa.eu/eli/reg/2023/2854/oj)** made cloud switching rules applicable in September 2025, with [switching charges prohibited from January 2027](https://cms.law/en/fra/legal-updates/eu-data-act-focus-on-cloud-services-switching-charges-who-should-shoulder-the-cost).
 - **National programs** already exist. France's SecNumCloud qualification is one example, and [S3NS has received SecNumCloud 3.2 qualification](https://www.s3ns.io/en/offers/premi3ns-trusted-cloud) for its PREMI3NS offer. In Germany, [Schleswig-Holstein completed a migration of its mail system](https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/I/Presse/PI/2025/cds/251006_cds_ox) in October 2025.
 - **Providers have responded** with dedicated offerings. The [AWS European Sovereign Cloud](https://aws.amazon.com/blogs/aws/opening-the-aws-european-sovereign-cloud/) is generally available, described by AWS as physically and logically separate infrastructure with a first Region in Brandenburg, Germany.
 
@@ -74,7 +76,7 @@ Residency is the part infrastructure code can check most directly, so it is the 
 | Replication | Objects replicate to a bucket in another Region | [S3 replication](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html) |
 | Backups | Backup copies are written to a vault in another Region | [AWS Backup cross-Region copy](https://docs.aws.amazon.com/aws-backup/latest/devguide/cross-region-backup.html) |
 | Audit logs | Multi-Region trails deliver log files from several Regions to one place | [CloudTrail multi-Region trails](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) |
-| AI inference | Requests can be routed to another Region to improve throughput | [Bedrock cross-Region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html), [Azure deployment types](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/deployment-types) |
+| AI inference | Requests can be routed to another Region | [Bedrock cross-Region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html), [Azure deployment types](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/deployment-types) |
 | Geo-redundant storage | A secondary copy lives in a paired Region | [Azure storage redundancy](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy) |
 | Global services | Some services are global and not tied to one Region | [AWS service endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) |
 
@@ -119,7 +121,7 @@ Run it against a program with `pulumi preview --policy-pack ./data-residency`. A
 
 Enforcement levels support a gradual rollout. Policies can be advisory, mandatory, remediate, or disabled, so a team can start in advisory mode, see what would have failed, and move to mandatory once the existing estate is clean. Pre-built packs cover frameworks such as CIS, HITRUST, ISO 27001, NIST, PCI DSS, and CMMC, and policy groups apply packs to specific stacks or cloud accounts. That maps well to residency, where a regulated workload may carry a stricter rule than the rest of the estate. See [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) and the guide to [writing a policy pack](/docs/discovery-governance/guides/write-a-policy-pack/).
 
-Preventative checks only see what goes through your pipeline. Resources created some other way need a second mechanism. According to the documentation, Discovery scans your cloud accounts on a schedule and finds every resource in them, whether it was created with Pulumi, CloudFormation, Terraform, or the cloud console. Audit policy groups evaluate those discovered resources and report violations without blocking anything. The first mechanism stops new violations. The second finds the ones that already exist. Together they produce the thing a procurement reviewer asks for: a current inventory with locations and a record of what was checked. For more on that pattern, see [enforcing policy as code on discovered resources](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/). Teams with accounts in sovereign partitions can also read about [scanning every AWS partition with Pulumi Insights](/blog/scan-aws-govcloud-china-with-pulumi-insights/).
+Preventative checks only see what goes through your pipeline. Resources created some other way need a second mechanism. According to the [Discovery documentation](/docs/discovery-governance/concepts/discovery/), Discovery scans your cloud accounts on a schedule and finds every resource in them, whether it was created with Pulumi, CloudFormation, Terraform, or the cloud console. Audit policy groups evaluate those discovered resources and report violations without blocking anything. The first mechanism stops new violations. The second finds the ones that already exist. Together they produce the thing a procurement reviewer asks for: a current inventory with locations and a record of what was checked. For more on that pattern, see [enforcing policy as code on discovered resources](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/). Teams with accounts in sovereign partitions can also read about [scanning every AWS partition with Pulumi Discovery](/blog/scan-aws-govcloud-china-with-pulumi-insights/).
 
 Layer this with the native controls from the previous section. Region deny and organization policies block at the provider's API. Pulumi policies block earlier, in the preview, with an error message written for the person who made the change.
 
@@ -137,11 +139,11 @@ Policy tells you what is allowed. Deployment architecture decides how cheaply yo
 You do not need to wait for the final text of any regulation to make progress. These steps are useful under almost any outcome:
 
 1. **Inventory what you have.** Run discovery across every cloud account and list resources by location. Expect surprises.
-2. **Classify the data.** Decide which workloads hold data that could fall under a sensitive category, and which locations are approved for each.
-3. **Write the location policy in advisory mode.** One policy per resource type that stores or processes data. Read the violations before you enforce anything.
-4. **Cover the leak paths.** Add policies for replication, backup copies, log destinations, AI inference configuration, and geo-redundant storage.
-5. **Decide on keys.** Pick where encryption keys live and who can use them, and write a policy that requires it.
-6. **Move to mandatory and keep the evidence.** Switch enforcement on, keep preview results and scan reports, and make them available to the people who answer procurement questionnaires.
+1. **Classify the data.** Decide which workloads hold data that could fall under a sensitive category, and which locations are approved for each.
+1. **Write the location policy in advisory mode.** One policy per resource type that stores or processes data. Read the violations before you enforce anything.
+1. **Cover the leak paths.** Add policies for replication, backup copies, log destinations, AI inference configuration, and geo-redundant storage.
+1. **Decide on keys.** Pick where encryption keys live and who can use them, and write a policy that requires it.
+1. **Move to mandatory and keep the evidence.** Switch enforcement on, keep preview results and scan reports, and make them available to the people who answer procurement questionnaires.
 
 ## What should you do this quarter?
 
