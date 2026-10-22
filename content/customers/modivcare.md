@@ -17,7 +17,7 @@ quote_block:
   headline: cost savings by eliminating redundant resources
 
 exec_summary: |
-    [Modivcare](https://www.modivcare.com/) is a technology-enabled healthcare services company that provides a suite of integrated supportive care solutions for public and private payors and their members. Built through strategic acquisitions, Modivcare consolidated multiple healthcare service organizations, each bringing different operational practices and infrastructure approaches. Using Pulumi Insights, Pulumi ESC, and a developer portal integration, Modivcare transformed from disconnected infrastructure implementations into a unified platform supporting their healthcare mission—all without disrupting critical healthcare services.
+    [Modivcare](https://www.modivcare.com/) is a technology-enabled healthcare services company that provides a suite of integrated supportive care solutions for public and private payors and their members. Built through strategic acquisitions, Modivcare consolidated multiple healthcare service organizations, each bringing different operational practices and infrastructure approaches. Using Pulumi Discovery, Pulumi ESC, and a developer portal integration, Modivcare transformed from disconnected infrastructure implementations into a unified platform supporting their healthcare mission—all without disrupting critical healthcare services.
 
 sections:
     - label: Exec Summary
@@ -53,9 +53,9 @@ The newly formed platform engineering team had to onboard legacy AWS accounts, i
 
 ## Gaining visibility into the unknown
 
-Rather than forcing immediate migrations, Modivcare's platform team started with visibility. They deployed Pulumi Insights across their fragmented AWS environment to understand what infrastructure they actually had.
+Rather than forcing immediate migrations, Modivcare's platform team started with visibility. They deployed Pulumi Discovery across their fragmented AWS environment to understand what infrastructure they actually had.
 
-Pulumi Insights revealed exactly which resources were managed through infrastructure as code versus manually provisioned. For the first time, teams could see their complete AWS footprint and identify at-risk infrastructure. Equally important, Pulumi's comprehensive provider ecosystem and import capabilities meant teams could continue using their preferred programming languages and existing tools while bringing resources under proper management without disruption.
+Pulumi Discovery revealed exactly which resources were managed through infrastructure as code versus manually provisioned. For the first time, teams could see their complete AWS footprint and identify at-risk infrastructure. Equally important, Pulumi's comprehensive provider ecosystem and import capabilities meant teams could continue using their preferred programming languages and existing tools while bringing resources under proper management without disruption.
 
 "We could start to see quickly with Insights what portion of resources are managed versus what portion of resources are expressed as an infrastructure as code process."
 
@@ -121,6 +121,6 @@ For healthcare organizations or any company growing through acquisitions, Modivc
 
 ### Key lessons: what made the difference
 
-- **Start with visibility, not migration**: Understanding existing infrastructure drove informed decisions. Pulumi Insights provided the foundation for strategic planning.
+- **Start with visibility, not migration**: Understanding existing infrastructure drove informed decisions. Pulumi Discovery provided the foundation for strategic planning.
 - **Meet teams where they are**: Incremental adoption through targeted use cases built trust and demonstrated value before requesting bigger commitments.
 - **Listen to actual usage patterns**: Data-driven understanding of developer needs led to more effective solutions than assumptions.

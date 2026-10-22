@@ -181,6 +181,33 @@ def render_trail(trail: list[dict]) -> str:
 """
 
 
+def _finding_more(f: dict) -> str:
+    """The finding's text, its Do-this block, and a group's member claims.
+
+    The author card can only hold so much (pinned-comment.sh refuses a card
+    over 60,000 bytes, and build-evidence.fit_author_card sheds Do-this
+    blocks and a group's claim list to stay under it), and what it sheds is
+    promised to the reader here. So this page carries all of it whether or
+    not the card did."""
+    parts = []
+    if f.get("text"):
+        parts.append(f'<div class="finding-text">{esc(f["text"])}</div>')
+    if f.get("detail"):
+        parts.append('<details class="finding-detail"><summary>Do this</summary>'
+                     f'<div class="finding-detail-body">{esc(f["detail"])}</div></details>')
+    members = f.get("members") or []
+    if members:
+        items = []
+        for m in members:
+            loc = _file_lines(m)
+            items.append(f'<li><span class="trail-loc">{esc(loc)}</span> '
+                         f'<span class="trail-claim">{esc(m.get("claim"))}</span></li>')
+        noun = "claim" if len(members) == 1 else "claims"
+        parts.append(f'<details class="finding-members" open><summary>{len(members)} {noun} '
+                     f'asked about together</summary><ul>{"".join(items)}</ul></details>')
+    return "".join(parts)
+
+
 def render_findings(findings: list[dict]) -> str:
     if not findings:
         return '<section id="findings"><h2>Findings</h2><p class="empty">No findings.</p></section>'
@@ -191,13 +218,17 @@ def render_findings(findings: list[dict]) -> str:
         if disp.get("note"):
             disp_text += f" — {disp['note']}"
         rows.append(f"""
-    <tr>
+    <tr class="finding-row" id="finding-{esc(f.get('id'))}">
       <td>{esc(f.get('id'))}</td>
       <td>{esc(BUCKET_LABEL.get(f.get('bucket'), f.get('bucket')))}</td>
       <td>{esc(_file_lines(f))}</td>
       <td>{esc(f.get('status'))}</td>
       <td>{esc(disp_text)}</td>
     </tr>""")
+        more = _finding_more(f)
+        if more:
+            rows.append(f"""
+    <tr class="finding-more"><td></td><td colspan="4">{more}</td></tr>""")
     return f"""
 <section id="findings">
   <h2>Findings</h2>
@@ -351,6 +382,12 @@ h2 { font-size: 16px; margin: 0 0 12px; }
 table { border-collapse: collapse; width: 100%; min-width: 480px; }
 th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
 th { background: var(--surface); position: sticky; top: 0; }
+.finding-row:target, .finding-row:target + .finding-more { background: var(--surface); }
+.finding-more td { border-top: 0; padding-top: 0; }
+.finding-text { margin-bottom: 4px; }
+.finding-detail-body { white-space: pre-wrap; font-size: 13px; color: var(--muted); margin-top: 4px; }
+.finding-members ul { margin: 6px 0 0; padding-left: 18px; }
+.finding-members li { margin-bottom: 4px; }
 .ilog { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; }
 .ilog dt { color: var(--muted); font-size: 13px; }
 .ilog dd { margin: 0; }

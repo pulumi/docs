@@ -11,6 +11,7 @@ directly. Additional general purpose packages can be used across all cloud platf
 * [**Pulumi SDK** (`Pulumi`)](/docs/reference/pkg/dotnet/pulumi/pulumi.html)
 * [**Pulumi F# SDK** (`Pulumi.FSharp`)](/docs/reference/pkg/dotnet/pulumi.fsharp/pulumi.fsharp.html)
 * [**Pulumi Automation API SDK** (`Pulumi.Automation`)](/docs/reference/pkg/dotnet/pulumi.automation/pulumi.automation.html)
+* [**Pulumi Cloud SDK** (`Pulumi.Cloud.Sdk`)](/docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.html): for calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) from your own code. See [Pulumi Cloud SDK](/docs/administration/concepts/cloud-sdk/) for an overview.
 
 ## Related guides and concepts
 

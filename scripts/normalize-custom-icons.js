@@ -5,6 +5,7 @@
  * Source: assets/icons/custom/_inbox/<FolderName>/Format=Outline, Weight=<X>.svg
  * Output: assets/icons/custom/<slug>.svg          (regular)
  *         assets/icons/custom/<slug>-bold.svg     (bold)
+ *         assets/icons/custom/<slug>-fill.svg     (fill)
  *         assets/icons/custom/<slug>-duotone.svg  (duotone)
  *
  * Normalization applied to each SVG:
@@ -26,6 +27,14 @@ const OUT = path.join(ROOT, "assets/icons/custom");
 // Folder-name → output slug mapping
 const ICON_MAP = {
     PulumiNeo: "pulumi-neo",
+    PulumiAgentCost: "pulumi-agent-cost",
+    PulumiAgentCustom: "pulumi-agent-custom",
+    PulumiAgentDeploy: "pulumi-agent-deploy",
+    PulumiAgentDrift: "pulumi-agent-drift",
+    PulumiAgentInvestigate: "pulumi-agent-investigate",
+    PulumiAgentMigrate: "pulumi-agent-migrate",
+    PulumiAgentSecurity: "pulumi-agent-security",
+    PulumiAgentUpgrade: "pulumi-agent-upgrade",
     PulumiInfrastructureCode: "pulumi-iac",
     PulumiInsightsGovernance: "pulumi-insights",
     PulumiInternalDeveloperPlatform: "pulumi-idp",

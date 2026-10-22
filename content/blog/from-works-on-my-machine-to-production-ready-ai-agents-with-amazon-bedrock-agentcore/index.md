@@ -1,5 +1,6 @@
 ---
 title: "From 'Works on My Machine' to Production-Ready: Building AI Agents with Amazon Bedrock AgentCore"
+title_tag: "Production AI Agents with Bedrock AgentCore"
 date: 2025-12-15T00:00:00+02:00
 draft: false
 meta_desc: "Transform local AI agent prototypes into production-ready deployments using Amazon Bedrock AgentCore, Strands SDK, and Pulumi."

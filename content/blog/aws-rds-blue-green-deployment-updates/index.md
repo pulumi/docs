@@ -1,5 +1,6 @@
 ---
 title: "AWS RDS - Blue/Green Deployments for Low-Downtime Updates"
+title_tag: "AWS RDS Blue/Green Deployments with Pulumi"
 h1: "How to Achieve Low Downtime Updates on RDS with Blue/Green Deployments"
 authors:
   - "elisabeth-lichtie"

@@ -10,7 +10,7 @@ mirrors it one-way into `pr-review/<pr>/latest.json` for telemetry.
 
 Two lanes publish the author card, and this block with it: the full-review
 lane (claude-code-review.yml — a ready-transition, triage's auto-fire,
-`#new-review`) and the update lane (`apply-update.py`), which is the only one
+`/new-review`) and the update lane (`apply-update.py`), which is the only one
 that records dispositions. Their runs overlap routinely (#21785, #21871), and
 the update lane's model step can take ~10 minutes between fetching the card
 and writing it back. So it MUST merge rather than overwrite: per finding-id,
@@ -266,7 +266,7 @@ def high_water_of(body: str) -> int:
         return 0
 
 
-# A forced `#new-review` clears the author card before its replacement is
+# A forced `/new-review` clears the author card before its replacement is
 # composed, so the card's high_water lives only in the dispatch input until
 # the new card publishes. A run that errors or times out in between would
 # lose it, and the next review would restart at F1 (#21798). The failure

@@ -71,6 +71,11 @@ Rules:
 9. Vanished findings: a composed id on neither card is re-appended to its
    bucket's table verbatim from the evidence base (#21885 F9) — only when
    that table exists.
+10. Group blocks (author card only): a group question's `#### F<n> · Do
+    this` block (compose-review's new-feature carve-out, an evidence-base
+    finding carrying `members`) is composer-owned, so any model edit to it is
+    reverted to the base's `detail`, and rule 6 regenerates a deleted one from
+    that text rather than from the row.
 
 Usage:
   normalize-v3-draft.py --author-file .review-draft-author.md \
@@ -363,7 +368,17 @@ def _why_from_row(body: str) -> str:
     return rest or body.strip()
 
 
+def _composed_group_block(fid: str, evidence: dict | None) -> list[str] | None:
+    """A group finding's block exactly as the composer wrote it, or None."""
+    if not (evidence and evidence.get("members") and str(evidence.get("detail") or "").strip()):
+        return None
+    return [f"#### {fid} · Do this", "", *str(evidence["detail"]).strip().splitlines()]
+
+
 def _render_block(fid: str, heading: str, parsed: dict, evidence: dict | None) -> list[str]:
+    group = _composed_group_block(fid, evidence)
+    if group is not None:
+        return group
     # The evidence record's claim text first: an author-card cell carries
     # only a short excerpt (compose-review.AUTHOR_CELL_TRUNC), and this
     # bullet promises the line verbatim.
@@ -432,6 +447,21 @@ def _restore_blocks(lines: list[str], evidence_by_id: dict[str, dict],
             body = "\n".join(out)
             span = vp.find_section(body, heading)
             start, end = span if span else (start, end)
+    return out
+
+
+def _restore_group_blocks(lines: list[str], evidence_by_id: dict[str, dict],
+                          rep: Repairs) -> list[str]:
+    """Rule 10: a group question's block (compose-review's new-feature
+    carve-out) is composer-owned. Whatever the model did to it, it goes back
+    to the composed text: a second **Fix:** or a dropped claim list there
+    would otherwise fail validation and cost the whole review."""
+    out = list(lines)
+    for fid, start, end in reversed(_block_spans(out, 0, len(out))):
+        want = _composed_group_block(fid, evidence_by_id.get(fid))
+        if want is not None and out[start:end] != want:
+            out[start:end] = want
+            rep.add("group-block", "author", fid, "restored the composer-owned group block")
     return out
 
 
@@ -572,6 +602,7 @@ def normalize(author: str, brief: str | None, evidence_base: dict | None,
                if brief is not None else None)
     a_lines, b_lines = _restore_vanished_rows(a_lines, b_lines, evidence_by_id, rep)
     a_lines = _restore_blocks(a_lines, evidence_by_id, rep)
+    a_lines = _restore_group_blocks(a_lines, evidence_by_id, rep)
     a_lines = _drop_unnumbered_blocks(a_lines, rep)
     new_author = "\n".join(a_lines) + ("\n" if author.endswith("\n") else "")
     new_brief = brief

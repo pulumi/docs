@@ -5,11 +5,18 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class InputMap&lt;TValue&gt; </title>
+      <title>Class InputMap&lt;TValue&gt; — Pulumi .NET API reference</title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class InputMap&lt;TValue&gt; ">
+      <meta name="title" content="Class InputMap&lt;TValue&gt; — Pulumi .NET API reference">
     
-    <meta name="description" content="A mapping of s to values that can be passed in as the arguments to a . The individual values are themselves s.  i.e. the individual values can be concrete values or s.   differs from a normal  in that it is itself an .  For example, a  that accepts an  will accept not just a dictionary but an  of a dictionary as well.  This is important for cases where the  map from some  needs to be passed into another . Or for cases where creating the map invariably produces an  because its resultant value is dependent on other s.  This benefit of  is also a limitation.  Because it represents a list of values that may eventually be created, there is no way to simply iterate over, or access the elements of the map synchronously.   is designed to be easily used in object and collection initializers.  For example, a resource that accepts a map of values can be written easily in this form:  new SomeResource(&quot;name&quot;, new SomeResourceArgs {     MapProperty = {         { Key1, Value1 },         { Key2, Value2 },         { Key3, Value3 },     }, });">
+    <meta name="description" content="A mapping of s to values that can be passed in as the arguments to a . The individual values are themselves s. i.e. the individual values can be concrete…">
+    
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Class InputMap&lt;TValue&gt; — Pulumi .NET API reference">
+    
+    <meta property="og:description" content="A mapping of s to values that can be passed in as the arguments to a . The individual values are themselves s. i.e. the individual values can be concrete…">
+      <meta property="og:url" content="https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.inputmap-1.html">
+      <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.inputmap-1.html">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -19,6 +26,34 @@
     
     
     
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "APIReference",
+  "headline": "Class InputMap<TValue> \u2014 Pulumi .NET API reference",
+  "url": "https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.inputmap-1.html",
+  "programmingLanguage": ".NET",
+  "executableLibraryName": "Pulumi",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "name": "Pulumi",
+    "programmingLanguage": ".NET",
+    "codeRepository": "https://github.com/pulumi/pulumi-dotnet"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pulumi Docs",
+    "url": "https://www.pulumi.com/docs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://www.pulumi.com/"
+  },
+  "assemblyVersion": "3.115.0",
+  "description": "A mapping of s to values that can be passed in as the arguments to a . The individual values are themselves s. i.e. the individual values can be concrete\u2026"
+}
+</script>
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
@@ -649,7 +684,7 @@ both input maps.</p>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.114.1</p>
+    <p class="sdk-version">Version 3.115.0</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>

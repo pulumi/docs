@@ -284,6 +284,7 @@ NOBUILD=true PKGS=pulumi ./scripts/run_typedoc.sh
 PACKAGE=pulumi          ./scripts/generate_python_docs.sh
 PACKAGE=pulumi_policy   ./scripts/generate_python_docs.sh
 PACKAGE=pulumi_esc_sdk  ./scripts/generate_python_docs.sh
+PACKAGE=pulumi_cloud_sdk ./scripts/generate_python_docs.sh
 
 # Pulumi CLI reference (uses the currently-installed `pulumi` binary)
 PULUMI_EXPERIMENTAL=true pulumi gen-markdown ./content/docs/iac/cli/commands
@@ -933,6 +934,10 @@ The docs site includes auto-generated API reference documentation from multiple 
    - Source: pulumi/esc-sdk repository
    - Output: `static-prebuilt/docs/reference/pkg/nodejs/pulumi/esc-sdk/`
 
+4. **cloud-sdk** - Pulumi Cloud SDK
+   - Source: pulumi/pulumi-cloud-sdk repository (`nodejs/`)
+   - Output: `static-prebuilt/docs/reference/pkg/nodejs/pulumi/cloud-sdk/`
+
 **Configuration:**
 
 - TypeDoc version: 0.28.15
@@ -961,6 +966,7 @@ gh workflow run pulumi-sdk-typescript-docs.yml --repo pulumi/docs --ref master -
 - `pulumi` (Pulumi SDK)
 - `pulumi_policy` (Pulumi Policy SDK)
 - `pulumi_esc_sdk` (Pulumi ESC SDK)
+- `pulumi_cloud_sdk` (Pulumi Cloud SDK)
 
 Each package is built by a dedicated workflow that calls this script with the appropriate `PACKAGE` value. `pulumi_terraform` was previously built here but moved to the Pulumi Registry; see `scripts/redirects/pulumi-terraform-python-redirects.txt`.
 
@@ -976,6 +982,7 @@ Each package is built by a dedicated workflow that calls this script with the ap
 PACKAGE=pulumi          ./scripts/generate_python_docs.sh
 PACKAGE=pulumi_policy   ./scripts/generate_python_docs.sh
 PACKAGE=pulumi_esc_sdk  ./scripts/generate_python_docs.sh
+PACKAGE=pulumi_cloud_sdk ./scripts/generate_python_docs.sh
 ```
 
 Or trigger a workflow:
@@ -984,6 +991,7 @@ Or trigger a workflow:
 gh workflow run pulumi-sdk-python-docs.yml         --repo pulumi/docs --ref master -f version=<version>
 gh workflow run pulumi-policy-sdk-python-docs.yml  --repo pulumi/docs --ref master -f version=<version>
 gh workflow run pulumi-esc-sdk-python-docs.yml     --repo pulumi/docs --ref master -f version=<version>
+gh workflow run pulumi-cloud-sdk-python-docs.yml   --repo pulumi/docs --ref master -f version=<version>
 ```
 
 #### Pulumi CLI - Command Reference
@@ -1018,12 +1026,12 @@ The repository has 63 workflows in `.github/workflows/`. They fall into five fam
 flowchart LR
   A1(["`Push to master`"])
   A2(["`PR opened or pushed`"])
-  A3(["`@claude comment or review`"])
+  A3(["`PR comment or review`"])
   A4(["`Cron schedule`"])
   A5(["`Upstream repo releases`"])
   F1["`Ship (8)`"]
   F2["`PR checks and preview (10)`"]
-  F3["`AI review and merge gate (10)`"]
+  F3["`AI review and merge gate (11)`"]
   F4["`Content upkeep (10)`"]
   F5["`Generated reference docs (22)`"]
   O1[("`www.pulumi.com`")]
@@ -1288,15 +1296,16 @@ flowchart TD
 |----------|---------|---------|
 | `claude-triage.yml` | PR opened (non-draft) or ready for review | Applies `domain:*` and skip labels (`review:trivial`, `review:frontmatter-only`), runs a Haiku and Vale prose check, and requests the review team that `.github/review-routing.yml` routes the PR to. With `REVIEW_V3_ROUTING=1` it also runs a label-only pass on every push. Skips pulumi-bot and Dependabot PRs except `content-review/*` branches. |
 | `claude-code-review.yml` | `workflow_run` after triage; PR `synchronize`; `workflow_dispatch` | The full review. On a push, `mark-stale` flips the label to `review:stale`, and `auto-refresh` dispatches `claude-update.yml` when `auto-refresh-gate.py` proves the push only touched lines carrying blocking findings. |
-| `claude-update.yml` | `@claude #update-review`; auto-refresh dispatch | Refreshes the pinned review in place. A cheap `gate` job rejects quoted or self-authored mentions before the worker's concurrency group, so a declined mention can't cancel a live refresh. |
-| `claude-new.yml` | `@claude #new-review` | Deletes the pinned review and re-dispatches `claude-code-review.yml` with `force=true`. For corrupted or deleted reviews. |
-| `claude.yml` | Bare `@claude` in an issue or PR | Ad-hoc help from `claude-code-action` in tag mode. |
+| `claude-update.yml` | `/update-review` comment; auto-refresh dispatch | Refreshes the pinned review in place. A cheap `gate` job rejects quoted or self-authored commands before the worker's concurrency group, so a declined comment can't cancel a live refresh. |
+| `claude-new.yml` | `/new-review` comment | Deletes the pinned review and re-dispatches `claude-code-review.yml` with `force=true`. For corrupted or deleted reviews. |
+| `claude.yml` | `@claude` in an issue or PR | Ad-hoc help from `claude-code-action` in tag mode. Stands down when the same comment runs `/update-review` or `/new-review`. |
+| `review-command-redirect.yml` | A comment in the retired `@claude … #update-review` / `#new-review` shape | Replies with the same request rewritten as a slash command. Runs nothing else. |
 | `claude-social-review.yml` | PRs touching `content/blog/*/index.md`; comments; `workflow_dispatch` | Reviews the social copy in blog frontmatter and posts a PASS/FAIL comment. Doesn't re-run when the copy is unchanged. |
 | `review-label-reconcile.yml` | Every 2 hours at :23 | Repairs `review:*` labels when a push fired no events (pushes with `GITHUB_TOKEN` or by the Copilot agent) and clears `review:in-progress` left by a run that died. |
 | `review-sla-sweep.yml` | Every 2 hours at :53, when `REVIEW_V3_SLA=1` | Reviewer-wait SLA escalations and author-staleness warnings and closes, per the `sla:` and `author_staleness:` blocks in `review-routing.yml`. |
 | `weekly-digest.yml` | Mondays 14:00 UTC | Posts two Slack messages to `#docs-ops`: the PR review queue and the issue backlog. |
 
-The workflows that act on `@claude` mentions all check that the commenter has write access. The `review:*` labels follow this state machine:
+The workflows that run review commands or answer `@claude` all check that the commenter has write access. The [review commands](CONTRIBUTING.md#review-commands) are slash commands at the start of a line, judged by `command-gate.py`; `@claude` is only the general assistant. The `review:*` labels follow this state machine:
 
 ```mermaid
 stateDiagram-v2
@@ -1319,7 +1328,7 @@ stateDiagram-v2
 
 ### Sentinel merge gate and staging evidence
 
-`review-sentinel.yml` publishes one check run, **Sentinel**, that answers whether a PR can merge. The evaluator, `scripts/review-v3/sentinel.py`, is deterministic (no model, no AWS) and reads PR state only through the GitHub API.
+`review-sentinel.yml` publishes one commit status, **Sentinel**, that answers whether a PR can merge. The evaluator, `scripts/review-v3/sentinel.py`, is deterministic (no model, no AWS) and reads PR state only through the GitHub API. It's a status rather than a check run because GitHub files an API-created check run into the oldest Actions check suite on the commit, and when a later run of the same workflow supersedes that suite, the check disappears from the merge box ("Expected — Waiting for status to be reported"). A status doesn't belong to a suite.
 
 ```mermaid
 flowchart LR
@@ -1332,7 +1341,7 @@ flowchart LR
 ```
 
 - **Triggers:** `pull_request_target` (open, ready, push, reopen, label changes), `pull_request_review` (submitted, dismissed, and edits to approving reviews), `workflow_run` after either review lane, and `workflow_dispatch`.
-- **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` concludes `neutral` with the would-be verdict; `'1'` enforces.
+- **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` always passes, with the would-be verdict in the status description; `'1'` enforces.
 - **Security invariant:** `pull_request_target` carries secrets and a write token even for fork PRs. The workflow is safe only because it never checks out or runs PR code, and `test_sentinel.py` enforces that. Don't add a head checkout.
 - **No concurrency group, on purpose:** a cancelled run shows as a failing check. Overlapping runs are cheap, and `scripts/review-v3/publish_guard.py` drops a verdict if the head moved or a newer run already published.
 - **Break-glass:** the `review:waived` label, which is logged. G4 can't be waived.
@@ -1416,6 +1425,7 @@ All pushes use `PULUMI_BOT_TOKEN`; a `GITHUB_TOKEN` push would never trigger the
 | `pulumi-sdk-dotnet-docs.yml`, `package-schema-docs-dotnet.yml` | `repository_dispatch: pulumi-dotnet-sdk`; manual | .NET SDK reference and the .NET schema extension |
 | `pulumi-sdk-java-docs.yml`, `package-schema-docs-java.yml` | `repository_dispatch: pulumi-java-sdk`; manual | Java SDK reference and the Java schema extension |
 | `pulumi-esc-sdk-{dotnet,python,typescript}-docs.yml` | Manual | ESC SDK references |
+| `pulumi-cloud-sdk-{dotnet,java,python,typescript}-docs.yml` | Manual | Pulumi Cloud SDK references. `version` is the package version (e.g. `2026.10.9`); the workflow resolves the matching `v<YYYY-MM-DD>--<HHMM>` release tag itself |
 | `pulumi-policy-sdk-{python,typescript}-docs.yml` | Manual | Policy SDK references |
 | `pulumi-cli-dev-version.yml` | `repository_dispatch: pulumi-cli-dev-version`; manual | `static/latest-dev-version` |
 | `esc-cli.yml` | `repository_dispatch: esc-cli`; manual | `static/esc/latest-version`, which `pulumi/esc-action` v1 and v2 read at runtime to pick an ESC version |
@@ -1546,9 +1556,10 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `auto-approve-for-auto-merge.yml` | PR checks | Pull request | Approve `automation/merge` bot PRs |
 | `claude-triage.yml` | AI review | Pull request | Labels, prose check, team request |
 | `claude-code-review.yml` | AI review | After triage, PR push, manual | Full pre-merge review |
-| `claude-update.yml` | AI review | `@claude #update-review`, auto-refresh | Refresh the pinned review |
-| `claude-new.yml` | AI review | `@claude #new-review` | Regenerate the pinned review |
+| `claude-update.yml` | AI review | `/update-review`, auto-refresh | Refresh the pinned review |
+| `claude-new.yml` | AI review | `/new-review` | Regenerate the pinned review |
 | `claude.yml` | AI review | `@claude` | Ad-hoc help |
+| `review-command-redirect.yml` | AI review | Comment in a retired `@claude #…-review` shape | Reply with the slash-command form |
 | `claude-social-review.yml` | AI review | Pull request (blog paths), comment, manual | Social copy review |
 | `review-sentinel.yml` | AI review | `pull_request_target`, reviews, after review lanes, manual | Merge gate check |
 | `review-label-reconcile.yml` | AI review | Every 2 h, manual | Repair `review:*` labels |
@@ -1576,6 +1587,10 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `pulumi-esc-sdk-dotnet-docs.yml` | Generated docs | Manual | ESC .NET SDK reference |
 | `pulumi-esc-sdk-python-docs.yml` | Generated docs | Manual | ESC Python SDK reference |
 | `pulumi-esc-sdk-typescript-docs.yml` | Generated docs | Manual | ESC TypeScript SDK reference |
+| `pulumi-cloud-sdk-dotnet-docs.yml` | Generated docs | Manual | Pulumi Cloud .NET SDK reference |
+| `pulumi-cloud-sdk-java-docs.yml` | Generated docs | Manual | Pulumi Cloud Java SDK reference |
+| `pulumi-cloud-sdk-python-docs.yml` | Generated docs | Manual | Pulumi Cloud Python SDK reference |
+| `pulumi-cloud-sdk-typescript-docs.yml` | Generated docs | Manual | Pulumi Cloud TypeScript SDK reference |
 | `pulumi-policy-sdk-python-docs.yml` | Generated docs | Manual | Policy Python SDK reference |
 | `pulumi-policy-sdk-typescript-docs.yml` | Generated docs | Manual | Policy TypeScript SDK reference |
 | `pulumi-cli-dev-version.yml` | Generated docs | `repository_dispatch`, manual | CLI dev version pointer |

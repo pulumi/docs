@@ -1155,7 +1155,7 @@ Duration: 13s
 Now test out your new NGINX service -- it works like before, just with a tidier codebase now!
 
 {{% notes type="info" %}}
-**If using Minikube:** Minikube does not support type `LoadBalancer`. Instead, forward the NGINX service:
+**If using Minikube:** Minikube doesn't expose `LoadBalancer` services externally by default. Instead, forward the NGINX service:
 
 ```bash
 $ kubectl get service

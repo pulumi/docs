@@ -33,13 +33,16 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
 | All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Stacks](/docs/iac/concepts/stacks/). |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
-| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/iac/operations/continuous-delivery/). |
+| Settings | Organization settings including subscription and payment information and history, billing managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/iac/operations/continuous-delivery/). |
 
 ## Creating an organization
 
-Creating an organization will start a free trial that has access to all features.
+You create your first organization right after you sign up, and you choose then between a Free organization for a personal project and a free trial for working with your team. See [Accounts and organizations](/docs/administration/concepts/accounts/#accounts-and-organizations).
+
+Every organization you create after that starts a free trial that has access to all features.
 At the end of the trial, choose the edition that fits your needs. Free supports
 one user. Essentials, Pro, and Enterprise support multiple users.
+Note that you can own only one Free organization at a time.
 Learn more about what each one includes on the [pricing page](/pricing/).
 
 {{% notes type="info" %}}
@@ -88,7 +91,7 @@ Pulumi organization administrators can monitor current organization members and 
 
 ## Switching between organizations
 
-The organization menu displays your individual organization and all of the organizations you belong to.
+The organization menu displays all the organizations you belong to.
 
 To switch to a different organization:
 
@@ -101,7 +104,7 @@ Every member of an organization has a role: the built-in Admin, Member, or Billi
 
 ## Updating billing information
 
-Organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
+Organization admins and billing managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
 
 To update billing information:
 
@@ -129,7 +132,7 @@ If you need a legal entity name on invoices that is different from your organiza
 
 ## Transferring stacks
 
-Stack admins can transfer stacks one at a time between their individual organization and a shared organization, or between shared organizations. Organization admins can transfer stacks in bulk.
+Stack admins can transfer stacks one at a time between organizations, including from a Free organization to one shared with other people. Organization admins can transfer stacks in bulk.
 
 Transferring a stack requires two permissions: the right to transfer the stack from its current owner, and the right to create stacks in the destination organization. Both are configured through your organization's access controls — see [Role-based access control](/docs/administration/concepts/rbac/) for details.
 
@@ -164,12 +167,14 @@ To restore a stack:
 
 Organization deletion is a permanent action and can only be performed by an organization admin.
 
+Before deleting an organization, make sure you have [transferred any stacks](#transferring-stacks) you want to keep to another organization. Deleting an organization does not delete any cloud resources its stacks provisioned — those keep running in your cloud provider account.
+
 To delete an organization:
 
-1. Navigate to **Settings**.
-1. Select **Delete organization**.
+1. Navigate to **Settings** > **Billing & usage** (`https://app.pulumi.com/<org-name>/settings/billing-usage`) and select **Cancel subscription**. Pulumi Cloud doesn't delete an organization while its subscription is active.
+1. Navigate to **Settings** > **General** (`https://app.pulumi.com/<org-name>/settings/general`) and select **Delete organization**.
 
-Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization.
+Replace `<org-name>` with your organization's name.
 
 For more information, see [How can I delete a Pulumi organization?](/docs/support/faq/pulumi-cloud/#how-can-i-delete-a-pulumi-organization)
 

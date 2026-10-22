@@ -86,6 +86,8 @@
  */
 html.vdocs-has-bar {
   padding-top: var(--vdocs-bar-h, 44px);
+  /* Keep #anchor jumps from landing under the fixed bar. */
+  scroll-padding-top: var(--vdocs-bar-h, 44px);
 }
 html.vdocs-has-bar .wy-nav-side,        /* Sphinx Read-the-Docs sidebar (fixed) */
 html.vdocs-has-bar header,              /* DocFX (.NET / ESC .NET): the position:fixed <header> wrapping the navbar — this, NOT .navbar-fixed-top, is what DocFX fixes. Also matches TypeDoc's <header class="tsd-page-toolbar"> (same offset, harmless); Sphinx has no <header> and Javadoc's is static, so both are unaffected. */
