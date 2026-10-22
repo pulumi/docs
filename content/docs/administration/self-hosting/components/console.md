@@ -1,5 +1,5 @@
 ---
-title_tag: Pulumi Console | Self-Hosting Pulumi
+title_tag: Pulumi Cloud console | Self-Hosting Pulumi
 title: Pulumi console
 h1: Pulumi Cloud self-hosted console
 meta_desc: Pulumi console is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Pulumi Enterprise edition.
@@ -17,7 +17,7 @@ pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note >}}
-To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
+To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
 Pulumi Cloud allows users to view the stacks they have created and see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
@@ -30,20 +30,20 @@ The Console service depends on the API service. It relies on the API service for
 
 ## Prerequisites
 
-* Provide a server or virtual machine to install and run the Pulumi components (see Minimum System Requirements below).
+* Provide a server or virtual machine to install and run the Pulumi components (see [Minimum system requirements](#minimum-system-requirements)).
 
-You can run this container on the same host that your API container is running or on a different host. If you are running this container on a separate host than the API, be sure to set the appropriate environment variables (more on that below) in order for the Console to be able to reach the API service.
+You can run this container on the same host as your API container or on a different host. If you run this container on a different host from the API, set the appropriate [environment variables](#primary-environment-variables) so that the Console can reach the API service.
 
-## Minimum System Requirements
+## Minimum system requirements
 
 | Type | Properties | Notes |
 | ---- | ---------- | ----- |
 | Compute | 1 CPU core w/ 1 GB memory | |
 
-## What's In The Container?
+## What's in the container?
 
 {{% notes type="info" %}}
-The container image repository is private. [Contact us](/contact/) if you would like to evaluate the Self-Hosted Pulumi Cloud.
+The Console container image is published on Docker Hub as [`pulumi/console`](https://hub.docker.com/r/pulumi/console/). [Contact us](/contact/) if you would like to evaluate self-hosted Pulumi Cloud.
 {{% /notes %}}
 
 The Console container runs a web server using a Node 18-based image.
@@ -52,11 +52,13 @@ The Console container runs a web server using a Node 18-based image.
 
 The container runs a single web server which handles delivering UI static assets to your web browser, as well as handling authentication callbacks. The console will be served using port `3000` over HTTP by default. If [TLS](#tls-environment-variables) is configured the console will instead be served using port `3443` over HTTPS.
 
-## Primary Environment Variables
+## Primary environment variables
 
 The following are the core environment variables that are required at a minimum.
 
-> **Tip**: The quickstart solutions set reasonable default values for these variables, so you can get started without worrying about configuration.
+{{% notes type="tip" %}}
+The quickstart solutions set reasonable default values for these variables, so you can get started without worrying about configuration.
+{{% /notes %}}
 
 | Variable Name | Description |
 | ------------- | ----------- |
@@ -65,12 +67,14 @@ The following are the core environment variables that are required at a minimum.
 | PULUMI_CONSOLE_DOMAIN | `PULUMI_CONSOLE_DOMAIN` is used to redirect the user after they have **signed-in** using a social identity or SAML SSO e.g., "pulumi.example.com"  |
 | PULUMI_HOMEPAGE_DOMAIN | `PULUMI_HOMEPAGE_DOMAIN` is used to redirect the user after they have **signed-out** e.g., "pulumi.example.com" |
 
-### Environment Variables For Identities
+The subsections that follow cover variables for specific sign-in methods and for TLS. Set the ones that apply to your deployment.
+
+### Environment variables for identities
 
 | Variable Name | Description |
 | ------------- | ----------- |
-| RECAPTCHA_SITE_KEY | Used for password reset requests by users. [Create a Cloudflare Turnstile Widget](https://www.cloudflare.com/application-services/products/turnstile/) to generate the `Site Key`. See also [API Component](/docs/administration/self-hosting/components/api#other-env-vars). |
-| SAML_SSO_ENABLED | Default is `false`. Set to `true` to enable the SAML SSO signin/signup option. Before enabling, make sure you have completed the steps in the [Enabling SAML SSO](/docs/administration/self-hosting/saml-sso/) guide. |
+| RECAPTCHA_SITE_KEY | Used for password reset requests by users. [Create a Cloudflare Turnstile Widget](https://www.cloudflare.com/application-services/products/turnstile/) to generate the `Site Key`. See also [API component](/docs/administration/self-hosting/components/api/#other-env-vars). |
+| SAML_SSO_ENABLED | Default is `false`. Set to `true` to enable the SAML SSO sign-in/sign-up option. Before enabling, make sure you have completed the steps in the [Enabling SAML SSO](/docs/administration/self-hosting/saml-sso/) guide. |
 
 ### GitHub OAuth
 
@@ -99,10 +103,10 @@ The following are the core environment variables that are required at a minimum.
 
 | Variable Name | Description |
 | ------------- | ----------- |
-| PULUMI_HIDE_EMAIL_LOGIN | When `true`, hides the email identity as a login option but does not disable the API handler. To disable the API handler for email logins set the API container environment variable `PULUMI_DISABLE_EMAIL_LOGIN`. Refer to the API container [environment variables](/docs/administration/self-hosting/components/api#other-env-vars) for more information. |
-| PULUMI_HIDE_EMAIL_SIGNUP | When `true` hides the email identity as a signup option but does not disable the API handler. To disable the API handler for email signups set the API container environment variable `PULUMI_DISABLE_EMAIL_SIGNUP`. Refer to the API container [environment variables](/docs/administration/self-hosting/components/api#other-env-vars) for more information. |
+| PULUMI_HIDE_EMAIL_LOGIN | When `true`, hides the email identity as a login option but does not disable the API handler. To disable the API handler for email logins, set the API container environment variable `PULUMI_DISABLE_EMAIL_LOGIN`. Refer to the API container [environment variables](/docs/administration/self-hosting/components/api/#other-env-vars) for more information. |
+| PULUMI_HIDE_EMAIL_SIGNUP | When `true`, hides the email identity as a sign-up option but does not disable the API handler. To disable the API handler for email sign-ups, set the API container environment variable `PULUMI_DISABLE_EMAIL_SIGNUP`. Refer to the API container [environment variables](/docs/administration/self-hosting/components/api/#other-env-vars) for more information. |
 
-### TLS Environment Variables
+### TLS environment variables
 
 The following environment variables must be configured to enable TLS. The values of the environment variables may either be a filepath or the actual value of the entity. If these variables are set, the console will be served over HTTPS (i.e. using TLS) using port `3443`. If the following variables are not set the console will default to serving over HTTP using port `3000`.
 
@@ -130,16 +134,7 @@ console:
     - ./certs/api-ca.pem:/etc/pulumi/certs/api-ca.pem:ro
 ```
 
-> Note: Self-signed certificates may be used to configure TLS in the event the need for a trusted entity is not necessary. A self-signed cert and private key may be generated using OpenSSL. The following command uses OpenSSL to generate a self-signed certificate. This example will output two files, the certificate (cert.pem) and the private key (key.pem) used to sign it.
-
->
-```
-openssl \
-  req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem \
-  -days { days_until_expiration } -nodes -subj "/CN={ common_name }"
-```
-
-## Optional Environment Variables
+## Optional environment variables
 
 The following are optional environment variables not required in all usage scenarios.
 

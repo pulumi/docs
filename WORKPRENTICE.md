@@ -12,7 +12,7 @@ Fixing or improving pages we already own: go ahead. Proposing a whole new catego
 
 ## Refresh the review after you push a reviewer's change
 
-A push only refreshes the pinned review on its own when it fixes lines a 🚨 finding flagged. Anything else, including a change a human reviewer asked for, leaves the review stale and the Sentinel's G1 red. After such a push, comment `@claude <one line on what changed> #update-review`. (Merging the base branch is the exception: an unchanged diff carries the review across automatically.)
+A push only refreshes the pinned review on its own when it fixes lines a 🚨 finding flagged. Anything else, including a change a human reviewer asked for, leaves the review stale and the Sentinel's G1 red. After such a push, comment `/update-review <one line on what changed>` (the command starts the comment; the old `@claude … #update-review` shape runs nothing). (Merging the base branch is the exception: an unchanged diff carries the review across automatically.)
 
 ## The M&Ms clause
 

@@ -452,7 +452,7 @@ $ pulumi plugin install tool cdk-importer
 **2. Run the tool, passing in the name of the CDK stack you want to import**
 
 ```console
-$ pulumi plugin run cdk-importer -- -stack $StackName
+$ pulumi plugin run cdk-importer -- runtime --stack $StackName
 ```
 
 **3. Run `pulumi preview` to ensure there are no diffs**
@@ -461,4 +461,4 @@ If there are any issues with importing, the tool can be run again to try the imp
 
 ## More info
 
-For more info on using Pulumi CDK check out the [Pulumi CDK guide](/docs/iac/guides/clouds/aws/cdk/) or the [Pulumi CDK GitHub repository](https://github.com/pulumi/pulumi-cdk) for more info.
+For more info on using Pulumi CDK check out the [Pulumi CDK guide](/dev/tutorials/aws-cdk/) or the [Pulumi CDK GitHub repository](https://github.com/pulumi/pulumi-cdk) for more info.

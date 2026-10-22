@@ -21,7 +21,7 @@ What do many of the most innovative companies in the modern cloud era have in co
 
 ![S3 buckets open to public](Slurp-Amazon-AWS-S3-Bucket-Enumerator.png)
 
-Pulumi's CrossGuard helps customers adhere to security best practices by checking the final state of a deployment against a set of policies and revealing any non-compliant services. CrossGuard is an SDK for writing policies for services, and it includes best practices playbooks for cloud providers such as AWS, Azure, and Google Cloud Platform. The [Getting Started with PaC](/docs/discovery-governance/policy/get-started/) covers the case of leaking S3 buckets, but let’s do a quick review with an example showing how we can detect a leaky bucket before it gets deployed.
+Pulumi's CrossGuard helps customers adhere to security best practices by checking the final state of a deployment against a set of policies and revealing any non-compliant services. CrossGuard is an SDK for writing policies for services, and it includes best practices playbooks for cloud providers such as AWS, Azure, and Google Cloud Platform. The [Getting Started with PaC](/docs/discovery-governance/get-started/enforce-policy-as-code/) covers the case of leaking S3 buckets, but let’s do a quick review with an example showing how we can detect a leaky bucket before it gets deployed.
 
 > Note: If you haven’t installed Pulumi, follow the [Pulumi Getting Started](/docs/install/)
 Start by creating an S3 bucket with Pulumi.
@@ -168,4 +168,4 @@ AWSGuard flagged two recommended Elasticsearch best practices, encryption and de
 
 The examples in this article demonstrate how to avoid common security pitfalls experienced by even large organizations. We’ve looked at the out of the box capability of CrossGuard by securing an S3 bucket and showed how best practices encoded in AWSGuard can warn of common configuration errors before deploying infrastructure. These examples provide a preview of how IaC can improve deployments by keeping your infrastructure secure.
 
-As mentioned previously, CrossGuard is currently a technology preview. It will be GA with the release of Pulumi 2.0 with even more features, such as [OPA](https://www.openpolicyagent.org/) integration, and more policy packs. We invite you to try it out and send us feedback either through [Github issues](https://github.com/pulumi/pulumi-policy) or on the [Pulumi Community Slack Channel](https://slack.pulumi.com/).
+As mentioned previously, CrossGuard is currently a technology preview. It will be GA with the release of Pulumi 2.0 with even more features, such as [OPA](https://www.openpolicyagent.org/) integration, and more policy packs. We invite you to try it out and send us feedback either through [GitHub issues](https://github.com/pulumi/pulumi-policy) or on the [Pulumi Community Slack Channel](https://slack.pulumi.com/).

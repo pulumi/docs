@@ -10,7 +10,7 @@ Open new PRs as **drafts** while you iterate. Automated review (style, accuracy,
 
 While you're iterating, consider running `/docs-review` locally — it runs the same style/accuracy pipeline as the automated bot, but stays in your conversation and never posts to GitHub. Catching findings here is cheaper than catching them after the pinned review fires.
 
-When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward mark the review **stale**. A small push that only touches the lines the review flagged refreshes the review automatically; anything larger won't auto-rerun — mention `@claude #update-review` in a comment to refresh, or transition through draft and back to ready.
+When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward mark the review **stale**. A small push that only touches the lines the review flagged refreshes the review automatically; anything larger won't auto-rerun — comment `/update-review` to refresh, or transition through draft and back to ready.
 
 If your change is genuinely trivial (a typo, a one-line fix), opening directly as ready is fine — the pipeline will short-circuit on the `review:trivial` label.
 
@@ -18,21 +18,36 @@ If your change is genuinely trivial (a typo, a one-line fix), opening directly a
 
 The repository runs a tiered review pipeline on every PR. AI-assisted contributors should know how it works so they can collaborate with it instead of fighting it.
 
+### Review commands
+
+You drive the review with slash commands. Put the command at the start of a line in a PR comment, an inline review comment, or a review's comment box; the rest of the comment is your request, and the review reads it as written. A command inside a code span, a code block, or a quote doesn't run, so you can talk about one without firing it.
+
+| Command | Where | What it does |
+|---|---|---|
+| `/update-review [request]` | Any PR comment or review | Refreshes the review against the current head. The rest of the comment is the request: a fix you pushed, a dispute, an acceptance, or something to change first. See [After review](#after-review--three-paths-to-refresh). |
+| `/new-review [note]` | Any PR comment or review | Throws the review away and runs a fresh one from scratch. Wins over `/update-review` when a comment has both. See [the escape hatch](#power-user-escape-hatch-new-review). |
+| `/social-review` | A PR comment | Re-runs the social copy review of a blog post's `social:` front matter. |
+| `/oversized-ack` | Your **Approve** review's comment, on a `review:oversized` PR | Records that you reviewed the PR by hand (the Sentinel's G5 gate). |
+
+The commands need write access to the repository (`/social-review`: an org member or collaborator). A command runs when its comment is posted, so editing an old comment into one does nothing; post a new one. `/oversized-ack` is the exception: the Sentinel rereads your approval, so editing it in works.
+
+`@claude` isn't a command. On its own it asks Claude for ad-hoc help, and it never touches the review. The old `@claude … #update-review` and `@claude … #new-review` shapes are retired: they run nothing, and a bot reply shows the same request rewritten as a slash command.
+
 ### The v3 review surface (staged rollout)
 
-The review has moved from one monolithic pinned comment to the **v3 surface**, enabled by the `REVIEW_V3_COMMENTS` repo variable (on for pulumi/docs). Every fresh review now renders the v3 cards; a PR reviewed before the flip keeps its legacy monolith until someone comments `@claude #new-review`, which regenerates it as cards. Where the sections below say "the pinned comment", read "the author card" on a v3 PR. What v3 changed:
+The review has moved from one monolithic pinned comment to the **v3 surface**, enabled by the `REVIEW_V3_COMMENTS` repo variable (on for pulumi/docs). Every fresh review now renders the v3 cards; a PR reviewed before the flip keeps its legacy monolith until someone comments `/new-review`, which regenerates it as cards. Where the sections below say "the pinned comment", read "the author card" on a v3 PR. What v3 changed:
 
 - **Two comments instead of one.** An **author card** ("Author action guide") lists only what you must act on — one-line `🚨 Fix or disagree` and `❓ Questions for you` rows (both block merge), each with a `#### F<n> · Do this` block underneath (the flagged line verbatim, why, and exactly one required fix — replacement text in a copyable fenced block), plus inline ✏️ style suggestions. A separate **reviewer's guide** tells your reviewer what the PR contains, what's still waiting on you, what to check, and what's machine-verified. The bulk — the verification trail, investigation log, review history — lives on a linked **evidence page**, not in the comments.
 - **Every finding has a stable ID** (`F1`, `F2`, …) and every blocking finding needs an answer before merge — fix, disagree, or accept. Fix it and push (the card shows a 🔄 banner within a minute when your push triggers the automatic re-review), or reply naming the ID:
 
   ```
-  @claude F2: the 40% figure comes from the Q3 interview series #update-review
-  @claude F2: accepting as-is — shipping for the launch, follow-up filed #update-review
-  @claude accepting all open items — <reason> #update-review
+  /update-review F2: the 40% figure comes from the Q3 interview series
+  /update-review F2: accepting as-is — shipping for the launch, follow-up filed
+  /update-review accepting all open items — <reason>
   ```
 
-  Either way your answer counts: the review marks the item resolved, or holds it with a 🛡️ note for your reviewer — it stops blocking merge in both cases. The `#update-review` hashtag is what routes the reply; a bare `@claude` is ad-hoc help and unblocks nothing.
-- **The Sentinel check** is the one merge gate: review ran at your head SHA, every blocking finding answered, a human with write access approved (per `.github/review-routing.yml` — every PR gets a team requested as its reviewer, but any human with write access can clear the gate, and a change small enough to skip the automated review still needs that approval), and a change that could break `pulumi up` (the Pulumi program, `run-pulumi.sh`, the `make ci_push` chain into it, the deploy workflows — `staging_evidence.paths` in that same file) carries a green staging deploy. Build scripts are *not* on that list: your PR already runs the same pipeline in preview mode, so it has proved them; what a preview can't do is apply. Its red states name the exact fix, and a member of any team listed in that file's `teams:` can apply `review:waived` as the logged break-glass (infra staging evidence excepted — that has no waiver). While `REVIEW_V3_SENTINEL` is `report` the check runs in **preview mode**: it posts a pinned gate-status comment on every PR it evaluates, showing the verdict it *would* have reached, but the check-run concludes `neutral` and blocks nothing — the rows are informational and safe to ignore for now. Enforcement is coming, and once it lands every row has to be green before the PR can merge — it's the checklist of what has to be signed off, not all of it the author's. Tell us in `#docs` if a row looks wrong. Unset, the check does not run at all.
+  Either way your answer counts: the review marks the item resolved, or holds it with a 🛡️ note for your reviewer — it stops blocking merge in both cases. The `/update-review` command is what routes the reply; a bare `@claude` is ad-hoc help and unblocks nothing.
+- **The Sentinel check** is the one merge gate: review ran at your head SHA, every blocking finding answered, a human with write access approved (per `.github/review-routing.yml` — every PR gets a team requested as its reviewer, but any human with write access can clear the gate, and a change small enough to skip the automated review still needs that approval), and a change that could break `pulumi up` (the Pulumi program, `run-pulumi.sh`, the `make ci_push` chain into it, the deploy workflows — `staging_evidence.paths` in that same file) carries a green staging deploy. Build scripts are *not* on that list: your PR already runs the same pipeline in preview mode, so it has proved them; what a preview can't do is apply. Its red states name the exact fix, and a member of any team listed in that file's `teams:` can apply `review:waived` as the logged break-glass (infra staging evidence excepted — that has no waiver). Every PR it evaluates gets a pinned gate-status comment: one row per gate, the checklist of what has to be signed off (not all of it the author's), ending with a pointer to `#docs` on Slack for help. With `REVIEW_V3_SENTINEL` set to `1` the check enforces, so every row has to be green before the PR can merge. Set to `report`, it runs in **preview mode**: the same comment under a banner, but the status always passes and blocks nothing. Unset, the check does not run at all.
 - **Truly mechanical changes skip the model review, not the approver** — they still route to the lane team and still need its approval. The tightened bar in `classify_mechanical` (`triage-classify.py`) is what earns the skip: ≤10 added / ≤30 deleted lines, ≤2 docs/blog files, no structural or code changes, only resolving internal-link additions, frontmatter keys limited to `updated`/`tags`, and no prose-claim signal. Miss any of them and the PR gets the full review as well.
 
 The disposition vocabulary, the outcome table, and "work the review to zero" below all apply unchanged — v3 just gives each finding an ID and a one-line way to answer it.
@@ -52,22 +67,22 @@ If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`C
 
 ### After review — three paths to refresh
 
-A pinned review goes **stale** when you push new commits after it ran. One case refreshes itself: when the review had outstanding findings and your push is small (≤80 changed lines) and touches only the flagged lines — the "I fixed what you flagged" push — a deterministic gate auto-fires the scoped `#update-review` path with no mention needed. Merging the base branch into your PR doesn't count as a change: when the diff the review read is unchanged, the review is carried across to the new head. Everything else stays stale until you refresh explicitly. Three ways:
+A pinned review goes **stale** when you push new commits after it ran. One case refreshes itself: when the review had outstanding findings and your push is small (≤80 changed lines) and touches only the flagged lines — the "I fixed what you flagged" push — a deterministic gate auto-fires the scoped `/update-review` path with no comment needed. Merging the base branch into your PR doesn't count as a change: when the diff the review read is unchanged, the review is carried across to the new head. Everything else stays stale until you refresh explicitly. Three ways:
 
-1. **`@claude` mention** — hashtag-driven routing. The re-entrant pipeline branches on what you put after `@claude`:
-    - **`@claude #update-review`** — refresh the pinned review against the current PR head. Runs `claude-opus-5`. Three patterns the update path understands, all of which can appear in the same mention (the pipeline addresses any embedded asks inline before re-rendering the review):
-        - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
-        - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
-        - **Re-verify** (no specific request beyond the hashtag): re-checks outstanding findings only.
+1. **`/update-review`** — refresh the pinned review against the current PR head. Runs `claude-opus-5`. Three patterns the update path understands, all of which can appear in the same comment (the pipeline addresses any embedded asks inline before re-rendering the review):
+    - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
+    - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
+    - **Re-verify** (a bare `/update-review`): re-checks outstanding findings only.
 
-        While it works, your comment gets a 👀; when the card is updated, the 👀 becomes a 🚀. A failed refresh comments back to you with how to retry. `#new-review` signals the same way.
-    - **`@claude` alone, no hashtag** — ad-hoc questions, code fixes, or one-off requests. Tag mode: the action handles it directly with its own animated tracking comment. Doesn't touch the pinned review. Use this when you want help, not a re-review.
+    While it works, your comment gets a 👀; when the card is updated, the 👀 becomes a 🚀. A failed refresh comments back to you with how to retry. `/new-review` signals the same way.
+
+    For anything that isn't a re-review (questions, code fixes, one-off requests), mention `@claude` instead. It runs in tag mode with its own animated tracking comment and doesn't touch the pinned review. A comment that mentions `@claude` *and* runs `/update-review` belongs to the update lane, which handles the ask itself.
 1. **Transition through draft and back to ready** — re-triggers the full initial review. Use this when the PR has changed substantially since the last review.
-1. **Wait for the human reviewer** — the reviewer's guide is their source of truth, and the Sentinel check tells them (and you) whether anything still blocks. A reviewer who wants a fresh look asks for one with `@claude #update-review`, same as you.
+1. **Wait for the human reviewer** — the reviewer's guide is their source of truth, and the Sentinel check tells them (and you) whether anything still blocks. A reviewer who wants a fresh look asks for one with `/update-review`, same as you.
 
-#### Power-user escape hatch: `@claude #new-review`
+#### Power-user escape hatch: `/new-review`
 
-Rare. Use when the pinned-review state is corrupted (the 1/M comment was manually deleted, the comment sequence is malformed, the review is stuck in a wrong state that `#update-review` can't reconcile). Clears every existing review comment (the v3 cards, or a legacy `<!-- CLAUDE_REVIEW N/M -->` sequence) and dispatches a fresh initial review from scratch — same workflow that fires on ready-for-review, just bypassing the trivial / frontmatter-only / draft / bot-author skips. Don't use it for routine refreshes; `#update-review` is the right tool for those.
+Rare. Use when the pinned-review state is corrupted (the 1/M comment was manually deleted, the comment sequence is malformed, the review is stuck in a wrong state that `/update-review` can't reconcile). Clears every existing review comment (the v3 cards, or a legacy `<!-- CLAUDE_REVIEW N/M -->` sequence) and dispatches a fresh initial review from scratch — same workflow that fires on ready-for-review, just bypassing the trivial / frontmatter-only / draft / bot-author skips. Don't use it for routine refreshes; `/update-review` is the right tool for those.
 
 ### Working the review to zero
 
@@ -78,14 +93,14 @@ Five outcomes count as done, and no others:
 | Outcome | When | What it takes |
 |---|---|---|
 | **Fixed** | The finding is right | Push the change. A small push that lands only on flagged lines refreshes the review by itself |
-| **Refuted** | The finding is wrong | Dispute it in a `@claude #update-review` mention, with evidence. The model concedes cleanly or explains why it's holding |
+| **Refuted** | The finding is wrong | Dispute it in an `/update-review` comment, with evidence. The model concedes cleanly or explains why it's holding |
 | **Deferred** | Real, but out of scope here | File an issue and link it in the PR thread |
 | **Accepted** | Shipping as-is on purpose | Say why, in the PR. An accepted blocker that nobody explained reads as an oversight |
 | **Not applicable** | The finding mis-anchored | Say what it actually points at. Several of these in one review usually means the review went stale — refresh it |
 
 This matters past your own PR. After a PR closes, `scrape-review-outcomes.py` derives what happened to each finding and aggregates it into the Monday `#docs-ops` digest, which is how the review's severity rules get tuned. A finding you fixed but never refreshed scrapes as ignored; a finding you disagreed with but never disputed scrapes as ignored too. Both push the pipeline toward flagging *more*, not less.
 
-Working the list by hand is fine. If you'd rather not, **`/address-review`** does it with you: it watches for the review to land, enumerates every item — inline style suggestions included — into one checklist, walks them a finding at a time with a proposed fix for each, batches the fixes into a single push, and writes the `#update-review` mention. It won't call the PR done while anything is undecided. The same check standalone:
+Working the list by hand is fine. If you'd rather not, **`/address-review`** does it with you: it watches for the review to land, enumerates every item — inline style suggestions included — into one checklist, walks them a finding at a time with a proposed fix for each, batches the fixes into a single push, and writes the `/update-review` comment. It won't call the PR done while anything is undecided. The same check standalone:
 
 ```bash
 python3 .claude/commands/docs-review/scripts/review-worklist.py --pr <N> \
@@ -94,9 +109,9 @@ python3 .claude/commands/docs-review/scripts/review-worklist.py --pr <N> \
 
 ### Don't fight the review comments
 
-The review comments are managed by the pipeline: on a v3 PR the author card and the reviewer's guide (`<!-- CLAUDE_REVIEW_AUTHOR -->` / `<!-- CLAUDE_REVIEW_BRIEF -->`), on an older PR the `<!-- CLAUDE_REVIEW N/M -->` sequence. Don't delete them — the re-entrant lanes expect to find and edit them in place, and the author card's `REVIEW_STATE` block is where your answers are recorded. If one goes missing, `@claude #new-review` regenerates from scratch; recoverable but ugly.
+The review comments are managed by the pipeline: on a v3 PR the author card and the reviewer's guide (`<!-- CLAUDE_REVIEW_AUTHOR -->` / `<!-- CLAUDE_REVIEW_BRIEF -->`), on an older PR the `<!-- CLAUDE_REVIEW N/M -->` sequence. Don't delete them — the re-entrant lanes expect to find and edit them in place, and the author card's `REVIEW_STATE` block is where your answers are recorded. If one goes missing, `/new-review` regenerates from scratch; recoverable but ugly.
 
-**Don't hide them either.** Marking a card resolved (**Hide** → *Resolved*) collapses it but leaves it in place, so a later `#update-review` edits a comment nobody can see: the job runs green, posts its "🤖 Review updated" progress note, and the refreshed review never appears. The publish path now unhides the comment before patching, but the mutation can be refused by the token's scopes — if a refresh looks like a no-op, check whether the card is collapsed and unhide it. Use the ✅ Resolved section inside the card to track what you've addressed; that's what it's for.
+**Don't hide them either.** Marking a card resolved (**Hide** → *Resolved*) collapses it but leaves it in place, so a later `/update-review` edits a comment nobody can see: the job runs green, posts its "🤖 Review updated" progress note, and the refreshed review never appears. The publish path now unhides the comment before patching, but the mutation can be refused by the token's scopes — if a refresh looks like a no-op, check whether the card is collapsed and unhide it. Use the ✅ Resolved section inside the card to track what you've addressed; that's what it's for.
 
 The author card is also the pipeline's outcome ledger (the S3 evidence record mirrors it): after a PR closes, a weekly scrape derives what happened to each finding (fixed, conceded, disputed, or merged over) and aggregates it into the Monday `#docs-ops` digest, which is how the review's severity rules get tuned over time.
 
@@ -106,9 +121,11 @@ Three label-driven short-circuits skip the full Claude review (linters still run
 
 - **`review:trivial`** — ≤10 added lines, prose-only body changes, ≤2 docs/blog `.md` files, no frontmatter changes, no link changes, no code blocks. Typo fixes, wording polish, small same-claim sweeps across siblings, and removal-dominant cleanup (no upper bound on deletions). Marketing/website pages (`domain:website`) get full review regardless of size.
 - **`review:frontmatter-only`** — any number of docs/blog `.md` files where every change is inside the frontmatter block. Aliases sweeps, `draft: false` flips, `meta_desc` rewrites, social copy edits.
-- **`review:oversized`** — more than 15K changed lines, or more than 150 changed files. At that scale the bulk is invariably generated output: the review can't finish inside its job timeout and wouldn't add value to generated lines anyway. Triage posts a `<!-- TRIAGE_OVERSIZED -->` advisory comment suggesting the hand-written source be split into its own PR, or that a human review it by hand, assisted by their own AI subscription seat (for example, Claude Code running `/docs-review` locally).
+- **`review:oversized`** — more than 15K changed lines, or more than 150 changed files. At that scale the bulk is invariably generated output: the review can't finish inside its job timeout and wouldn't add value to generated lines anyway. Triage posts a `<!-- TRIAGE_OVERSIZED -->` advisory comment suggesting the hand-written source be split into its own PR, or that a human review it by hand, assisted by their own AI subscription seat (for example, Claude Code running `/docs-review` locally). The reviewer who approves it records that hand review with the `/oversized-ack` [review command](#review-commands) at the start of a line in their **Approve** review's comment (or by running `gh pr review <number> --approve --body /oversized-ack`). The Sentinel's G5 gate reads it only there, and only from an approval of the latest commit.
 
 For both categories, triage runs a focused spelling/grammar pass on the relevant diff slice. If it finds anything, it posts a single advisory comment listing the concerns AND applies `review:prose-flagged` so reviewers don't miss it. The short-circuit label still applies and the full review still skips. This is a guard against rubber-stamping — a typo "fix" that introduces a typo, or a `meta_desc` rewrite with a wrong-word substitution, gets flagged before merge.
+
+With no review to wait for, the Sentinel's G1 gate passes a trivial or frontmatter-only PR on its own: it re-checks that the diff really has that shape, and the human approval G3 asks for is the review. If the diff doesn't fit the label (someone applied it by hand, say), G1 stays red until you comment `/new-review`.
 
 Classification is deterministic and lives in `.claude/commands/docs-review/scripts/triage-classify.py` — domain (path-precedence), triviality, and frontmatter-only detection are all path/grep rules. The model is invoked only for the prose check, only when the shell pre-classifies as trivial or frontmatter-only.
 

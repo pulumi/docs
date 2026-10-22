@@ -301,7 +301,9 @@ function getDefaultExcludedKeywords() {
         "https://github.com/pulumi/docs/issues/new",
         "https://github.com/pulumi/registry/edit/master",
         "https://github.com/pulumi/registry/issues/new",
+        "https://github.com/pulumi/pulumi-azure-native/actions/workflows/nightly-sdk-generation.yml", // blog/pulumiup-native-providers: workflow was removed from the repo (HTTP 404), no equivalent replacement. Blog prose is historical.
         "https://github.com/pulumi/ci-workflow-templates", // blog/{infrastructure-ci-cd-with-github-actions-and-pulumi,pulumiup-ci-cd-assistant-all-plans}: repo is private + archived, so its issue-template link 404s for readers. Blog prose is historical; tracked in #20911.
+        "https://github.com/pulumi/pulumi-azure-native/actions/workflows/nightly-sdk-generation.yml", // blog/pulumiup-native-providers: 404, workflow was removed from the repo; no equivalent replacement.
         "https://www.linkedin.com/",
         "https://linkedin.com/",
         "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task",
@@ -484,6 +486,7 @@ function getDefaultExcludedKeywords() {
         "https://hub.docker.com/",                                                  // blog/docker-containers: 500s to automated clients
         "https://docs.microsoft.com/",                                              // MS redirects to learn.microsoft.com and bot-protects
         "https://www.zdnet.com/",                                                   // aggressive bot protection
+        "https://www.theglobeandmail.com/investing/markets/stocks/ORCL/pressreleases/2410413/", // blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond: 404, no Wayback snapshot or equivalent replacement
         "https://gist.github.com/pulumipus/56d1ee83f295971e2a26a8091880c482",        // deleted gist in blog/automation-api-as-platform
         "https://gist.github.com/pulumipus/61edcdd8ab3f50a42b4bd34a7e1f789b",        // deleted gist in blog/automation-api-workflow
         // Dead/transient third-party links in historical blog posts (#docs-ops 2026-06-01)
@@ -502,13 +505,22 @@ function getDefaultExcludedKeywords() {
         // Recurring false positives flagged on 2026-07-23 — S3 redirects committed, but registry/build overwrites or CloudFront cache-miss re-flags them
         "https://www.pulumi.com/registry/packages/azure/api-docs/voice/",           // blog/azure-v6-release: S3 redirect in scripts/redirects/general-broken-links-redirects.txt (added in #20366) keeps getting overwritten by the registry build
         "https://ieeexplore.ieee.org/",                                             // blog/aws-iam-access-analyzer-and-crossguard: IEEE returns HTTP 418 (I'm a teapot) to automated clients; loads in browsers
+        // Recurring ERRNO_ECONNREFUSED false positives (flagged on at least 4 runs between 2026-09-19 and 2026-10-13) —
+        // web.archive.org intermittently refuses connections under crawl load; both resolve 200 on recheck. Excluding
+        // the specific snapshot URLs rather than the whole archive.org domain so a genuinely dead snapshot still gets caught.
+        "https://web.archive.org/web/20260415184227/https://www.cs.colostate.edu/~fsieker/misc/debug/DEBUG.html",        // blog/next-level-iac-breakpoint-debugging
+        "https://web.archive.org/web/20240301073955/https://engineering.statefarm.com/blog/terraform-s3-upload-with-mime/", // blog/next-level-iac-package-ecosystems
     ];
 }
 
 // Filters out transient errors that needn't fail a link-check run.
 function excludeAcceptable(links) {
-    // HTTP status codes to filter out for external sites (bot protection, auth walls, timeouts)
-    const externalErrorReasons = ["HTTP_403", "HTTP_401", "HTTP_202", "HTTP_undefined"];
+    // HTTP status codes to filter out for external sites (bot protection, auth walls, timeouts).
+    // HTTP_406 added after leg.colorado.gov/bills/sb25b-004 (blog/agent-sprawl-iac-platform-is-the-answer)
+    // recurred as a false positive across at least 8 runs between 2026-09-19 and 2026-10-13: the site
+    // 406s the crawler's bare Accept/User-Agent headers but returns 200 for a browser-like request, the
+    // same content-negotiation bot-protection pattern HTTP_403/401/415 already cover below.
+    const externalErrorReasons = ["HTTP_403", "HTTP_401", "HTTP_202", "HTTP_undefined", "HTTP_406"];
 
     return (links
         // Ignore GitHub and npm 429s (rate-limited). We should really be handling these more

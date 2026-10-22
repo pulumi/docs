@@ -4,6 +4,7 @@
     act.py --in .pr-review-queue.json --stamp 21550,21577 --route 21431:@cnunciato \\
            --unblock 21525 --plan-out .pr-review-plan.json          # plan + preview
     act.py --execute .pr-review-plan.json [--dry-run]                # run it
+    act.py --execute .pr-review-plan.json --expect-digest D         # the board's Confirm (relay.py)
 
 Actions (each a `Step`; every one goes through the same preview, comment
 templates and attribution footer). Nothing here is reachable without an
@@ -49,7 +50,7 @@ command the board composed, which is why a plan names its PRs one by one:
                      the send-back for a workflow-authored PR, which has no
                      author to answer a review. Repeatable; `--superseded-by
                      N:M` scopes M to one of several closes.
-  --ask-fix N        comment `@claude fix <ids> #update-review`, naming the
+  --ask-fix N        comment `/update-review fix <ids>`, naming the
                      row's open findings: the second way out of a PR whose
                      author will never answer its review. `/address-review`
                      is the interactive one -- you walk the findings and push
@@ -57,12 +58,16 @@ command the board composed, which is why a plan names its PRs one by one:
                      agent already watching the PR and asks it to refresh the
                      review after. One comment, no push, so unlike the
                      handoff it batches with everything else.
-  --refresh N        post `@claude <reason> #update-review`.
-  --rerun N          post `@claude <reason> #new-review` (fresh review from scratch).
+  --refresh N        post `/update-review <reason>`.
+  --rerun N          post `/new-review <reason>` (fresh review from scratch).
   --rerun-checks N   re-run the failed jobs of the head's workflow runs (the
                      newest run per workflow that concluded failure); the
                      unblock on a red-CI row. A red commit status has no run
                      to re-run, and the step says so instead of guessing.
+  --unrequest N      remove me from the PR's requested reviewers. Only where
+                     I was asked by name: a team request isn't mine to drop.
+                     A decision like --route -- it says the row isn't mine --
+                     and it posts no comment.
   --render N         screenshot the preview pages (screenshot.mjs + Playwright).
   --deploy N         dispatch testing-build-and-deploy.yml at the head branch.
   --reason TEXT | N=TEXT   what to say on a request-changes, refresh, rerun or
@@ -119,7 +124,7 @@ SHOTS_DIR = _REPO_ROOT / ".pr-review-shots"
 PLAN_SCHEMA = 2  # 2: every body is rendered into step.args at plan time; steps can `requires` another
 COMMIT_TRAILER_ENV = "PR_REVIEW_COMMIT_TRAILER"  # e.g. "Co-Authored-By: …"; appended to commits act.py makes
 # A PR takes one decision; two of these on the same PR contradict each other.
-DECISION_KINDS = ("stamp", "request-changes", "close", "route")
+DECISION_KINDS = ("stamp", "request-changes", "close", "route", "unrequest")
 # The steps a --reason can land on. A close with --superseded-by writes its own.
 REASON_KINDS = ("request-changes", "refresh", "rerun", "close")
 # The Sentinel concludes failure until an approval exists, so it can't gate
@@ -466,12 +471,18 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
                                               "triage-prose": "only the triage prose check ran"}.get(status, f"the review is {status}")))
     for n in _listed(args.rerun_checks):
         steps.append(step("rerun-checks", n))
+    for n in _listed(args.unrequest):
+        pr = pr_of(n)
+        if not any(a.get("id") == "unrequest" for a in pr.get("actions") or []):
+            raise ActError(f"--unrequest {n}: you aren't a requested reviewer on #{n} by name "
+                           f"(a team request isn't yours to drop)")
+        steps.append(step("unrequest", n))
     for n in _listed(args.render):
         steps.append(step("render", n, pages=(pr_of(n).get("preview") or {}).get("pages") or []))
     for n in _listed(args.deploy):
         steps.append(step("deploy", n))
     if not steps:
-        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --ask-fix / --refresh / --rerun / --rerun-checks / --render / --deploy")
+        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --ask-fix / --refresh / --rerun / --rerun-checks / --unrequest / --render / --deploy")
     steps = _dedupe(steps)
     _assign_reasons(steps, by, scoped_reasons, bare_reasons)
     for s in steps:
@@ -527,9 +538,9 @@ def _render_bodies(s: Step, pr: dict) -> None:
     elif s.kind == "ask-fix":
         s.args["comment"] = ask_fix_body(pr, s.args["items"])
     elif s.kind == "refresh":
-        s.args["comment"] = with_footer(f"@claude {s.args['reason']} #update-review")
+        s.args["comment"] = with_footer(f"/update-review {s.args['reason']}")
     elif s.kind == "rerun":
-        s.args["comment"] = with_footer(f"@claude {s.args['reason']} #new-review")
+        s.args["comment"] = with_footer(f"/new-review {s.args['reason']}")
 
 
 def _body_head(body, width: int = 100) -> str:
@@ -602,6 +613,9 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
         elif s.kind == "rerun-checks":
             lines.append(f"     preflight: open, head == {head}")
             lines.append(f"     GET actions/runs?head_sha={head}; POST actions/runs/<id>/rerun-failed-jobs for each newest failed run per workflow")
+        elif s.kind == "unrequest":
+            lines.append("     preflight: open")
+            lines.append("     DELETE requested_reviewers: me (no comment)")
         elif s.kind == "render":
             lines.append(f"     screenshot {len(s.args.get('pages') or [])} preview page(s) → {SHOTS_DIR}/{s.pr}/")
         elif s.kind == "deploy":
@@ -735,7 +749,21 @@ def preflight_head(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
 
 
 def _is_sentinel(run: dict) -> bool:
-    return (run.get("name") or "").strip().lower() == SENTINEL_CHECK
+    """The Sentinel's job check-run, its commit status (`context`), or a
+    check-run it published before it switched to a status."""
+    return (run.get("name") or run.get("context") or "").strip().lower() == SENTINEL_CHECK
+
+
+def _status_as_run(s: dict) -> dict:
+    """A commit status in check-run shape, so the Sentinel wait can order it
+    against the job's own check-run and read it the same way."""
+    state = s.get("state") or ""
+    return {"name": s.get("context"),
+            "status": "in_progress" if state == "pending" else "completed",
+            "conclusion": {"success": "success", "failure": "failure",
+                           "error": "action_required"}.get(state),
+            "started_at": s.get("created_at") or "", "completed_at": s.get("updated_at") or "",
+            "id": s.get("id") or 0}
 
 
 def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
@@ -749,7 +777,8 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
     if ms not in STAMP_STATES:
         return False, f"mergeable_state={ms}", detail
     runs = [r for r in gh.check_runs(head) if not _is_sentinel(r)]
-    checks = collect.checks_rollup(runs, gh.commit_statuses(head), gh.workflow_paths(head))
+    statuses = [st for st in gh.commit_statuses(head) if not _is_sentinel(st)]
+    checks = collect.checks_rollup(runs, statuses, gh.workflow_paths(head))
     if checks["state"] != "green":
         return False, f"checks {checks['state']}: {', '.join(checks['failing'] or checks['pending'])}", detail
     # Latest review per user wins. The approver's own changes-requested is
@@ -798,7 +827,8 @@ def wait_for_sentinel(gh: GhClient, head: str, sleep=time.sleep) -> tuple[bool, 
     refuses — re-running the step retries the merge without re-approving."""
     attempts = SENTINEL_WAIT_S // SENTINEL_POLL_S
     for attempt in range(attempts + 1):
-        runs = [r for r in gh.check_runs(head) if _is_sentinel(r)]
+        runs = ([r for r in gh.check_runs(head) if _is_sentinel(r)]
+                + [_status_as_run(st) for st in gh.commit_statuses(head) if _is_sentinel(st)])
         if not runs:
             return True, "no Sentinel check on the head"
         run = max(runs, key=collect._run_order)
@@ -862,7 +892,7 @@ def request_changes_body(pr: dict, note: str = "") -> str:
         lines = ["Thanks for this. A few things before it can merge:", ""] + lines + ["", "Mention @claude if you need help."]
     elif atype == "bot":
         lines.append("")
-        lines.append("Answer each with `@claude F<n>: <reason> #update-review`, or push the fix.")
+        lines.append("Answer each with `/update-review F<n>: <reason>`, or push the fix.")
     return "\n".join(lines).strip()
 
 
@@ -922,6 +952,8 @@ def execute(plan_: Plan, gh: GhClient, git: Git | None = None, *, queue: dict | 
                 ok, msg = _mention(gh, s)
             elif s.kind == "rerun-checks":
                 ok, msg = _rerun_checks(gh, s)
+            elif s.kind == "unrequest":
+                ok, msg = _unrequest(gh, s)
             elif s.kind == "render":
                 ok, msg = _render(s, node=node)
             elif s.kind == "deploy":
@@ -984,7 +1016,7 @@ def unanswered_blockers(review: dict) -> list[str]:
     human author) are an approver's call to make; an open 🚨 is the review
     still waiting on the author, and squash-merging past it destroys the
     only chance to hear from them. The author answers — a fix, or
-    `@claude <why> #update-review` — and the approver's judgments never
+    `/update-review <why>` — and the approver's judgments never
     stand in for that.
     """
     return [i["id"] for i in review.get("items") or []
@@ -997,7 +1029,7 @@ def refuse_merge_over_findings(n: int, open_ids: list[str]) -> str:
     `review:waived`, the Sentinel's logged break-glass."""
     return (f"#{n} has {len(open_ids)} unanswered blocking review finding(s): {', '.join(open_ids)}. "
             f"Merging would walk over the review, and --force does not cover this. "
-            f"The author answers them (a fix, or `@claude <why> #update-review`): "
+            f"The author answers them (a fix, or `/update-review <why>`): "
             f"`--request-changes {n}` sends it back, or `--ask-fix {n}` / `--close {n}` on a PR a workflow opened. "
             f"To approve without merging, `--stamp {n}:no-merge`.")
 
@@ -1007,11 +1039,11 @@ FINDING_ID_RE = re.compile(r"F\d+")
 
 
 def ask_fix_items(pr: dict) -> list[dict]:
-    """The open findings an `@claude fix …` mention should name.
+    """The open findings an `/update-review fix …` comment should name.
 
     The review's own open rows: no disposition, and never a style or
     pre-existing one. Those two buckets are marked optional by the review
-    itself, and a mention that asked for them would turn "take it or leave
+    itself, and a comment that asked for them would turn "take it or leave
     it" into a push."""
     review = pr.get("review") or {}
     items = review.get("items") or []
@@ -1037,14 +1069,14 @@ def _and_join(parts: list[str]) -> str:
 
 
 def ask_fix_body(pr: dict, items: list[dict]) -> str:
-    """`@claude fix F1 and F3 #update-review`, then what each id is.
+    """`/update-review fix F1 and F3`, then what each id is.
 
-    The ids go on the mention line because that is the instruction; the
+    The ids go on the command line because that is the instruction; the
     summaries follow it so a person scrolling the thread can read what was
-    asked for without opening the card. One mention does both halves -- fix,
-    then re-review -- which is what the pipeline's `#update-review` is for."""
+    asked for without opening the card. One comment does both halves -- fix,
+    then re-review -- which is what the pipeline's `/update-review` is for."""
     ids = _and_join([i["id"] for i in items])
-    lines = [f"@claude fix {ids} #update-review", ""]
+    lines = [f"/update-review fix {ids}", ""]
     for i in items:
         summary = " ".join((i["summary"] or "").split())
         lines.append(f"- **{i['id']}**" + (f" — {summary[:200]}{'…' if len(summary) > 200 else ''}" if summary else ""))
@@ -1109,8 +1141,26 @@ def _mention(gh: GhClient, s: Step) -> tuple[bool, str]:
         return False, f"preflight refused: {msg}"
     gh.comment(s.pr, s.args["comment"])
     return True, {"refresh": "refresh requested",
-                  "ask-fix": f"asked @claude to fix {len(s.args.get('items') or [])} finding(s) and refresh the review",
+                  "ask-fix": f"asked /update-review to fix {len(s.args.get('items') or [])} finding(s) and refresh the review",
                   }.get(s.kind, "fresh review requested")
+
+
+def _unrequest(gh: GhClient, s: Step) -> tuple[bool, str]:
+    """Drop my own review request. The head doesn't matter here -- declining
+    a review is about the PR, not a commit -- so only "still open" is
+    checked, and a request that's already gone (I reviewed, or someone else
+    removed it) is a success with nothing to send."""
+    detail = gh.pr(s.pr)
+    if detail.get("state", "open") != "open":
+        return False, f"preflight refused: head-state: PR is {detail.get('state')}"
+    me = gh.me()
+    if not me:
+        return False, "can't tell who I am, so can't tell which request to drop"
+    requested = [u.get("login") for u in detail.get("requested_reviewers") or []]
+    if "requested_reviewers" in detail and not any(norm_login(u) == norm_login(me) for u in requested):
+        return True, "already not a requested reviewer"
+    gh.remove_requested_reviewers(s.pr, [me])
+    return True, f"removed @{me} from the requested reviewers"
 
 
 def _deploy(gh: GhClient, s: Step) -> tuple[bool, str]:
@@ -1313,14 +1363,15 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--superseded-by", action="append", metavar="M | N:M",
                     help="M with exactly one --close, or N:M to say which close (repeatable)")
     ap.add_argument("--ask-fix", type=int, action="append", dest="ask_fix", metavar="N",
-                    help="comment `@claude fix <ids> #update-review`: ask the PR-side agent to fix the row's open "
+                    help="comment `/update-review fix <ids>`: ask the PR-side agent to fix the row's open "
                          "findings and refresh the review, instead of running /address-review yourself")
     ap.add_argument("--refresh", type=int, action="append")
-    ap.add_argument("--rerun", type=int, action="append", help="post `@claude <reason> #new-review`: a fresh review from scratch")
+    ap.add_argument("--rerun", type=int, action="append", help="post `/new-review <reason>`: a fresh review from scratch")
     ap.add_argument("--rerun-checks", type=int, action="append", help="re-run the failed jobs of the head's workflow runs")
     ap.add_argument("--reason", action="append", metavar="TEXT | N=TEXT",
                     help="for --refresh / --rerun: what changed; for --request-changes: an opening line; for --close: why. "
                          "N=TEXT scopes it to PR N; bare TEXT needs exactly one step that takes a reason")
+    ap.add_argument("--unrequest", type=int, action="append", help="remove me from N's requested reviewers (only where I was asked by name)")
     ap.add_argument("--render", type=int, action="append")
     ap.add_argument("--deploy", type=int, action="append")
     ap.add_argument("--merge-humans", action="store_true", help="squash-merge human-authored stamps too")
@@ -1330,6 +1381,10 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--plan-out", default=str(_REPO_ROOT / ".pr-review-plan.json"))
     ap.add_argument("--execute", metavar="PLAN.json", help="run a plan written earlier")
     ap.add_argument("--dry-run", action="store_true", help="run the preflights and list every write without sending one; never runs git")
+    ap.add_argument("--expect-digest", metavar="D",
+                    help="with --execute: run the plan only if its file still hashes to D (the board's Confirm), is fresh, and has not run; "
+                         "the plan is moved aside afterwards so the same Confirm cannot run it twice (relay.py)")
+    ap.add_argument("--preview-out", metavar="TXT", help="also write the preview to this file (the board shows it beside Confirm)")
     ap.add_argument("--backend", default="auto", choices=("auto", "gh", "rest", "snapshot"))
     ap.add_argument("--snapshot-dir")
     ap.add_argument("--self-test", action="store_true")
@@ -1344,10 +1399,22 @@ def main(argv: list[str] | None = None) -> int:
     queue = json.loads(Path(args.inp).read_text()) if Path(args.inp).exists() else {}
     if args.execute:
         try:
+            if args.expect_digest:
+                import relay  # noqa: PLC0415
+                try:
+                    relay.check_confirmable(args.execute, args.expect_digest)
+                except relay.RelayError as exc:
+                    raise ActError(str(exc)) from exc
             plan_ = Plan.from_json(json.loads(Path(args.execute).read_text()))
         except ActError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2
+        if args.expect_digest and not args.dry_run:
+            # Spent before the first write, not after the last: a batch that
+            # dies halfway must not be runnable again from the same Confirm.
+            spent = Path(args.execute).with_suffix(".executed.json")
+            Path(args.execute).replace(spent)
+            print(f"plan {args.expect_digest} spent → {spent}", file=sys.stderr)
         gh = GhClient(plan_.repo, args.backend, snapshot_dir=args.snapshot_dir)
         results = execute(plan_, gh, queue=queue, dry_run=args.dry_run)
         sys.stdout.write(report(results, writes=args.dry_run))
@@ -1358,7 +1425,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"error: {exc}", file=sys.stderr)
         return 2
     Path(args.plan_out).write_text(json.dumps(plan_.to_json(), indent=1) + "\n")
-    sys.stdout.write(preview(plan_, queue))
+    text = preview(plan_, queue)
+    if args.preview_out:
+        Path(args.preview_out).write_text(text)
+    sys.stdout.write(text)
     print(f"plan → {args.plan_out}", file=sys.stderr)
     return 0
 

@@ -16,7 +16,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js?v=82b9e21f"></script>
+        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js?v=5cd6ff7c"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
   "url": "https://www.pulumi.com/docs/reference/pkg/python/pulumi/index.html",
   "programmingLanguage": "Python",
   "executableLibraryName": "pulumi",
-  "assemblyVersion": "3.268.0",
+  "assemblyVersion": "3.272.0",
   "about": {
     "@type": "SoftwareSourceCode",
     "name": "pulumi",
@@ -70,7 +70,7 @@
             Pulumi SDK
           </a>
               <div class="version">
-                3.268.0
+                3.272.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search/" method="get">
@@ -679,6 +679,7 @@
 <li><a class="reference internal" href="#pulumi.runtime.call"><code class="docutils literal notranslate"><span class="pre">call()</span></code></a></li>
 <li><a class="reference internal" href="#pulumi.runtime.call_single"><code class="docutils literal notranslate"><span class="pre">call_single()</span></code></a></li>
 <li><a class="reference internal" href="#pulumi.runtime.configure"><code class="docutils literal notranslate"><span class="pre">configure()</span></code></a></li>
+<li><a class="reference internal" href="#pulumi.runtime.exists_resource"><code class="docutils literal notranslate"><span class="pre">exists_resource()</span></code></a></li>
 <li><a class="reference internal" href="#pulumi.runtime.get_config"><code class="docutils literal notranslate"><span class="pre">get_config()</span></code></a></li>
 <li><a class="reference internal" href="#pulumi.runtime.get_config_env"><code class="docutils literal notranslate"><span class="pre">get_config_env()</span></code></a></li>
 <li><a class="reference internal" href="#pulumi.runtime.get_config_env_key"><code class="docutils literal notranslate"><span class="pre">get_config_env_key()</span></code></a></li>
@@ -1951,9 +1952,9 @@ dependency graph to be changed.</p>
 <span class="sig-name descname"><span class="pre">recover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Exception</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T_co</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Awaitable</span><span class="p"><span class="pre">[</span></span><span class="pre">T_co</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pulumi.Output" title="pulumi.output.Output"><span class="pre">Output</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pulumi.Output" title="pulumi.output.Output"><span class="pre">Output</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T_co</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pulumi.Output.recover" title="Permalink to this definition"></a></dt>
 <dd><p>Returns an Output that yields this Output’s value, or — if this Output
 faulted with an exception — the value produced by calling <code class="docutils literal notranslate"><span class="pre">func</span></code>.</p>
-<p>When recovery happens, the original faulted Output is removed from the
-runtime’s tracking set so it no longer causes the program to error at
-exit. <code class="docutils literal notranslate"><span class="pre">func</span></code> is only invoked if this Output failed.</p>
+<p>This Output is removed from the runtime’s tracking set, so a fault in it
+no longer causes the program to error at exit. <code class="docutils literal notranslate"><span class="pre">func</span></code> is only invoked
+if this Output failed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>func</strong> (<em>Callable</em><em>[</em><em>[</em><em>Exception</em><em>]</em><em>,</em><em>Input</em><em>[</em><em>T_co</em><em>]</em><em>]</em>) – A thunk producing a replacement value
@@ -6357,6 +6358,16 @@ can be a bag of computed values (Ts or Awaitable[T]s).</p>
 <dt class="sig sig-object py" id="pulumi.runtime.configure">
 <span class="sig-prename descclassname"><span class="pre">pulumi.runtime.</span></span><span class="sig-name descname"><span class="pre">configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi.runtime.Settings" title="pulumi.runtime.settings.Settings"><span class="pre">Settings</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.runtime.configure" title="Permalink to this definition"></a></dt>
 <dd><p>Configure sets the current ambient settings bag to the one given.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pulumi.runtime.exists_resource">
+<span class="sig-prename descclassname"><span class="pre">pulumi.runtime.</span></span><span class="sig-name descname"><span class="pre">exists_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><span class="pre">Resource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ty</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><span class="pre">ResourceOptions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Awaitable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output"><span class="pre">Output</span></a><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pulumi.runtime.exists_resource" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether a resource with the given ID exists.</p>
+<p>Returns an Output[bool] that resolves to True if the resource exists, False otherwise.</p>
+<p><cite>res</cite> is an optional backing resource used to resolve the provider and parent. It is None when there
+is no backing resource, e.g. for the PCL <cite>resourceExists</cite> builtin, in which case the engine resolves
+the default provider.</p>
 </dd></dl>
 
 <dl class="py function">

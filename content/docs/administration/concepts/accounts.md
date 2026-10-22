@@ -26,21 +26,22 @@ An account is not the same thing as an [organization](/docs/administration/conce
 
 ## Accounts and organizations
 
-When you sign up for Pulumi Cloud, Pulumi creates an _individual organization_ for you automatically. It is named after your username, and it is the organization your work lands in until you create or join one with other people in it. It appears in the organization menu alongside every collaborative organization you belong to.
+Signing up creates your account, not an organization. Because stacks are addressed as `<organization>/<project>/<stack>`, you need an organization before you can create a stack, so right after signup Pulumi Cloud asks how you plan to use it and creates your first organization from your answer:
 
-Because stacks are addressed as `<organization>/<project>/<stack>`, your individual organization's name is the first segment of any stack you create outside a shared organization. Your username is therefore part of your stack names — see [Renaming your account](#renaming-your-account) if you need to change it.
+- **I'm building a product for work** creates an organization with the name you choose and starts a 14-day free trial that has access to all features. No credit card is required. At the end of the trial, choose the edition that fits your needs.
+- **I'm working on a personal project** creates an organization on the Free edition. Its name defaults to one derived from your username, and you can change it before you continue. Note that you can own only one Free organization at a time.
 
-An individual organization is always on the Free edition, and that cannot be changed. It covers a single user, so there is nothing to upgrade in place: to work with other people, [create an organization](/docs/administration/concepts/organizations/#creating-an-organization), which starts a free trial of the paid editions. See [pricing](/pricing/) for what each edition includes.
+A Free organization supports one member, needs no payment method, and does not expire. To work with other people, upgrade it to a paid edition from the organization's billing settings, or [create another organization](/docs/administration/concepts/organizations/#creating-an-organization), which starts a free trial for a paid edition. See [pricing](/pricing/) for what each edition includes.
 
 {{% notes type="info" %}}
-Users provisioned and managed by an organization — through [SCIM](/docs/administration/guides/scim/) or a [SAML identity provider](/docs/administration/guides/saml/) — do not get an individual organization. Their account exists only within the organizations that manage it, so the sections below that concern an individual organization do not apply to them.
+Users provisioned and managed by an organization — through [SCIM](/docs/administration/guides/scim/) or a [SAML identity provider](/docs/administration/guides/saml/) — do not go through signup and do not create an organization of their own. Their account exists only within the organizations that manage it.
 {{% /notes %}}
 
 ## How accounts are created
 
 An account comes into existence in one of several ways:
 
-- **Someone signs up.** A person creates their own account at [app.pulumi.com](https://app.pulumi.com/signup) using any of the identities listed under [Signing in](#signing-in). This is the common case, and it is the only path that creates an individual organization.
+- **Someone signs up.** A person creates their own account at [app.pulumi.com](https://app.pulumi.com/signup) using any of the identities listed under [Signing in](#signing-in). This is the common case, and it ends with creating your first organization.
 - **An organization invites them.** An organization admin [invites a member](/docs/administration/concepts/organizations/#inviting-members-to-an-organization) by email address or invite link. The invitee still completes signup themselves; the invitation grants membership once they do.
 - **A SAML identity provider provisions them.** When an organization is backed by SAML SSO, a user who signs in through the identity provider for the first time gets an account created for them. Your organization admin configures this, not you.
 - **SCIM provisions them.** An organization on the Enterprise edition can [sync users and groups from its identity provider](/docs/administration/guides/scim/). SCIM creates accounts ahead of first login and deactivates them when the user is removed upstream.
@@ -50,7 +51,7 @@ An account comes into existence in one of several ways:
 
 Two attributes identify your account:
 
-- **Username.** Your username is unique across Pulumi Cloud, and it is the name of your individual organization. Pulumi derives it when your account is created — from your handle at the identity provider you signed up with, or from your email address if you signed up with one — and adjusts it if that name is already taken. You do not pick it during signup, but you can [rename your account](#renaming-your-account) afterwards.
+- **Username.** Your username is unique across Pulumi Cloud. Pulumi derives it when your account is created — from your handle at the identity provider you signed up with, or from your email address if you signed up with one — and adjusts it if that name is already taken. You do not pick it during signup, but you can [rename your account](#renaming-your-account) afterwards.
 - **Email address.** Your email address is how Pulumi reaches you and how organization admins invite you. Your display name, avatar, and email address are taken from the identity provider you signed up with.
 
 Your username and email are separate from the identities you use to sign in. Adding a GitHub identity to your account does not change your Pulumi username.
@@ -61,15 +62,7 @@ For accounts synchronized by SCIM, `userName` is immutable once the account exis
 
 ## Renaming your account
 
-You can rename your account from your account settings in [Pulumi Cloud](https://app.pulumi.com/signin). Renaming your account also renames your individual organization, because the two share a name.
-
-Renaming affects only your individual organization. Stacks in shared organizations you belong to are untouched, because those organizations have their own names. Before you rename:
-
-- Update anything that addresses a stack in your individual organization by its fully qualified name — CI/CD workflows, and any [`pulumi.StackReference`](/docs/iac/concepts/stacks/#stackreferences) pointing at one of those stacks. Existing references do not follow the rename.
-- Make sure no updates are in progress. Renaming is refused while one is running.
-- Expect a few minutes during which updates are not allowed.
-
-Renaming does not affect any cloud resources you have provisioned.
+You can rename your account from your account settings in [Pulumi Cloud](https://app.pulumi.com/signin). Renaming your account changes your username only. Organizations have their own names, so no organization or stack is renamed, even an organization whose name was derived from your username.
 
 Renaming is unavailable to users whose accounts are managed by a SAML identity provider — their name comes from the identity provider, so change it there.
 
@@ -197,11 +190,29 @@ In [self-hosted Pulumi Cloud](/docs/administration/self-hosting/), the Passkeys 
 
 ## Deleting your account
 
-You can delete your account from your account settings in [Pulumi Cloud](https://app.pulumi.com/signin).
+You can delete your account from your [account settings](https://app.pulumi.com/user/account/settings) in Pulumi Cloud. To get there, select your user profile, then **Settings**, in the left navigation bar.
 
-Deleting your account removes your access to every organization you belong to, and deletes your individual organization along with all of its stacks. It does not delete any cloud resources those stacks provisioned — those keep running in your cloud provider account. **Deletion cannot be undone.**
+Scroll to the bottom of the account settings page to find the **Delete account** button.
 
-Before deleting your account, transfer any stacks you want to keep to another organization, and make sure you are not the last admin of an organization that still needs one.
+Deleting your account removes your access to every organization you belong to. **This is a permanent operation and cannot be undone.**
+
+### Before you delete your account
+
+Pulumi Cloud deletes your account only when you are not the only admin of any organization, including a Free organization you own. If you are the only admin of one or more organizations, Pulumi Cloud doesn't delete your account and lists the organizations involved. For each one, do one of the following, then try again:
+
+- [Make another member an admin](/docs/administration/concepts/organizations/#organization-roles) of the organization. A Free organization supports only one member, so this option isn't available for it.
+- [Delete the organization](/docs/administration/concepts/organizations/#deleting-an-organization). You need to cancel its subscription first.
+
+Before you delete an organization, [transfer any stacks](/docs/administration/concepts/organizations/#transferring-stacks) you want to keep.
+
+If you sign in with an email address and password, Pulumi Cloud also asks for your password before it deletes your account.
+
+### What happens when you delete your account
+
+- You are removed from every organization you belong to, along with your team memberships and stack permissions.
+- Your access tokens are revoked.
+- Stacks you created stay in their organizations.
+- Deleting your account does not delete any cloud resources you provisioned.
 
 ## See also
 

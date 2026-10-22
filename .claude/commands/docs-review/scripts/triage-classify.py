@@ -87,9 +87,9 @@ CONTENT_DATA_EXACT = {
     "data/blog_link_types.yaml": "domain:blog",
     "data/customers_industries.yaml": "domain:blog",
     "data/customers.yaml": "domain:blog",
-    # website: the pricing matrix (also PRICING_SENSITIVE) and site chrome /
-    # marketing data rendered on landing pages
-    "data/pulumi_pricing.yaml": "domain:website",
+    # website: the edition availability data (also PRICING_SENSITIVE) and site
+    # chrome / marketing data rendered on landing pages
+    "data/pulumi_editions.yaml": "domain:website",
     "data/announcements.yml": "domain:website",
     "data/header_nav.yaml": "domain:website",
     "data/footer.yml": "domain:website",
@@ -538,11 +538,10 @@ MECHANICAL_CLAIMS_EXEMPT_LINE_RE = re.compile(r"^(?:(?:updated|tags):(?:\s|$)|- 
 # availability markers" / "Pricing data" — AND stacks the marketing
 # approver via the routing claims overlay (route-pr.py / sentinel.py key
 # the overlay on the "pricing-sensitive" reason prefix).
-PRICING_SENSITIVE_EXACT = {
-    "data/pulumi_pricing.yaml",
+PRICING_SENSITIVE = {
+    "data/pulumi_editions.yaml",
     "content/docs/administration/get-started/choose-edition.md",
 }
-PRICING_SENSITIVE_PREFIXES = ("content/pricing/",)
 
 # Pages that routinely state what each Pulumi Cloud edition includes, where a
 # two-line rewrite of a feature list reads as "mechanical" by shape (2026-09-11
@@ -558,7 +557,7 @@ EDITION_SENSITIVE_PREFIXES = ("content/docs/support/faq/", "content/what-is/")
 # "edition(s)" in the same line as a feature verb ("available in ... editions",
 # "the Enterprise edition adds ..."). Layer A's claim regexes don't cover
 # these (they key on numbers, versions, and links), and they are exactly the
-# sentences data/pulumi_pricing.yaml exists to be the single source of truth
+# sentences data/pulumi_editions.yaml exists to be the single source of truth
 # for.
 EDITION_NAME_RE = re.compile(
     r"\b(?:Individual|Team|Enterprise|Business Critical)\s+editions?\b"
@@ -574,9 +573,7 @@ EDITION_FEATURE_RE = re.compile(
 
 
 def _is_pricing_sensitive(path: str) -> bool:
-    return path in PRICING_SENSITIVE_EXACT or any(
-        path.startswith(p) for p in PRICING_SENSITIVE_PREFIXES
-    )
+    return path in PRICING_SENSITIVE
 
 
 def _is_edition_sensitive(path: str) -> bool:

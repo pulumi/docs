@@ -559,8 +559,83 @@ def test_handed_off_teams_map_through_routing():
              stampable(2, title="Marketing's", requested_teams=["docs-marketing-review"], files=[_file("content/docs/b.md", ["x"])])],
             cfg=cfg(me=["docs"]))
     assert row(q, 1)["handed_off"] is False  # docs-guild owns a lane in me
-    assert row(q, 2)["handed_off_to"] == ["@docs-marketing-review"]
+    assert row(q, 2)["handed_off"] is False  # a docs row is mine whichever team is also asked
+    q = run([stampable(3, title="Blog's", requested_teams=["docs-blog-review"], files=[_file("content/blog/x/index.md", ["x"])])],
+            cfg=cfg(me=["docs"]))
+    assert row(q, 3)["handed_off_to"] == ["@docs-blog-review"]  # not my lane: the team request still hands it off
     assert analyze.team_lanes("docs-tools", CONFIG) == {"infra", "other"} and analyze.team_lanes("nope", CONFIG) == set()
+
+
+def test_a_named_reviewer_hands_off_only_when_they_can_approve_my_lanes():
+    """A named request hands a row I own to someone else only when that
+    person sits on every owning team for my lanes in it. A subject-matter
+    reviewer who can't approve my lane leaves the Sentinel still waiting on
+    me, so the row stays. Unknown membership keeps the old rule."""
+    docs, blog = _file("content/docs/a.md", ["x"]), _file("content/blog/r/index.md", ["x"])
+    members = {"pulumi/docs-guild": {"guildie": True, "sme": False, "hidden": None},
+               "pulumi/docs-marketing-review": {"guildie": False, "sme": False, "hidden": None}}
+    q = run([stampable(1, title="Guild member asked", requested_users=["guildie"], files=[docs]),
+             stampable(2, title="SME asked", requested_users=["sme"], files=[_file("content/docs/b.md", ["x"])]),
+             stampable(3, title="Both asked", requested_users=["guildie", "sme"], files=[_file("content/docs/c.md", ["x"])]),
+             stampable(4, title="Membership unreadable", requested_users=["hidden"], files=[_file("content/docs/d.md", ["x"])]),
+             stampable(5, title="Not in the data", requested_users=["stranger"], files=[_file("content/docs/e.md", ["x"])]),
+             stampable(6, title="Docs and blog", requested_users=["guildie"], files=[_file("content/docs/f.md", ["x"]), blog])],
+            cfg=cfg(me=["docs", "blog"]), team_approvers=members)
+    assert row(q, 1)["handed_off_to"] == ["@guildie"]
+    assert row(q, 2)["handed_off"] is False and row(q, 2)["handed_off_to"] == []
+    assert row(q, 3)["handed_off_to"] == ["@guildie"]  # the one who can approve still takes it
+    assert row(q, 4)["handed_off_to"] == ["@hidden"]    # can't tell: the request stands
+    assert row(q, 5)["handed_off_to"] == ["@stranger"]
+    # guildie covers docs but not the blog lane, which is mine too
+    assert row(q, 6)["handed_off"] is False
+    # a row outside my lanes still hands off to any named person
+    q = run([stampable(7, title="Blog only", requested_users=["sme"], files=[blog])],
+            cfg=cfg(me=["docs"]), team_approvers=members)
+    assert row(q, 7)["handed_off_to"] == ["@sme"]
+
+
+def test_collect_reads_memberships_for_named_reviewers():
+    """The hand-off rule needs the requested people's memberships, not just
+    the approvers'. The approver themself is never looked up."""
+    looked = []
+
+    class Fake:
+        def team_member(self, org, slug, login):
+            looked.append(login)
+            return False
+
+    prs = [{"reviews": [], "requested_reviewers": {"users": ["sme", "CamSoper"], "teams": []}}]
+    out = collect.approver_team_memberships(Fake(), Path(__file__).resolve().parents[2], prs, "camsoper")
+    assert out and all(set(v) == {"sme"} for v in out.values())
+    assert set(looked) == {"sme"}
+
+
+def test_a_waiver_turns_a_review_state_blocker_into_a_judgment():
+    """`review:waived` is the Sentinel's break-glass. A stale, errored or
+    running review stops blocking once it is on the PR: the row becomes a
+    judge row (never a stamp). An open 🚨 and an unreadable review still
+    block, because act.py refuses those merges waiver or not."""
+    waived = ["review:waived", "domain:docs"]
+    pages = tc.legacy_pages(total=3)
+    q = run([fresh(1, title="Errored", labels=["review:error", *waived]),
+             fresh(2, title="Running", labels=["review:in-progress", *waived]),
+             stampable(3, title="Stale", head_sha="f" * 40, labels=["review:stale", *waived],
+                       files=[_file("content/docs/s.md", ["x"])]),
+             fresh(4, title="Errored, not waived", labels=["review:error", "domain:docs"]),
+             stampable(5, title="Open finding", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       labels=["review:outstanding-issues", *waived], files=[_file("content/docs/h.md", ["x"])]),
+             stampable(6, title="Unreadable", comments=[comment(pages[0])], labels=["review:no-blockers", *waived],
+                       files=[_file("content/docs/u.md", ["x"])])])
+    for n in (1, 2, 3):
+        p = row(q, n)
+        assert p["verdict"] == "judge", (n, p["verdict"], p["blockers"])
+        assert "review:waived" in p["reasons"]
+        assert not [b for b in p["blockers"] if b.startswith("review:")], n
+    assert row(q, 4)["verdict"] == "blocked" and "review:error" in row(q, 4)["blockers"]
+    assert "review:waived" not in row(q, 4)["reasons"]
+    assert row(q, 5)["verdict"] == "blocked" and any(b.startswith("outstanding:") for b in row(q, 5)["blockers"])
+    assert row(q, 6)["verdict"] == "blocked" and "review:unreadable" in row(q, 6)["blockers"]
+    assert_every_row_has_a_button(q)
 
 
 def test_collision_with_a_handed_off_pr_is_advisory():
@@ -1436,3 +1511,18 @@ def test_a_review_that_parsed_into_nothing_is_never_stampable():
     p = row(q, 1)
     assert p["verdict"] == "judge" and "review:parse-confidence:low" in p["gate_fails"]
     assert "review:unreadable" not in p["blockers"]
+
+
+def test_unrequest_offered_only_when_asked_for_by_name():
+    q = run([stampable(1, requested_users=["CamSoper"]),
+             stampable(2, title="Team ask", requested_teams=["docs-guild"], files=[_file("content/docs/b.md", ["x"])]),
+             stampable(3, title="Someone else", requested_users=["cnunciato"], files=[_file("content/docs/c.md", ["x"])]),
+             stampable(4, title="Mine", author="CamSoper", author_type="User", requested_users=["CamSoper"],
+                       files=[_file("content/docs/d.md", ["x"])])])
+    ids = lambda n: [a["id"] for a in row(q, n)["actions"]]
+    assert "unrequest" in ids(1) and "requested:me" in row(q, 1)["reasons"]
+    assert next(a for a in row(q, 1)["actions"] if a["id"] == "unrequest")["cmd"] == "--unrequest 1"
+    assert "unrequest" not in ids(2)  # a team request isn't mine to drop
+    assert "unrequest" not in ids(3)
+    assert "unrequest" not in ids(4)  # my own PR
+    assert "unrequest" in analyze.DECISION_IDS

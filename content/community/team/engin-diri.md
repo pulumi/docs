@@ -9,6 +9,14 @@ aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "KCD UK Edinburgh 2026"
+  title: "Your AI Agent Needs More Than a Pod"
+  url: "https://community2.cncf.io/events/details/cncf-kcd-uk-presents-kubernetes-community-days-uk-edinburgh-2026/cohost-kcd-uk/"
+  date: 2026-10-19T16:50:00.000+01:00
+- event: "AI Agents NYC: Coding Agents with Elastic Memory + The Evolution to Stateless Serverless"
+  title: "Give Your Coding Agent an (Elastic) Memory"
+  url: "https://luma.com/ai-agents-nyc"
+  date: 2026-10-06T18:00:00.000-04:00
 - event: "London Platform User Group (LOPUG)"
   title: "Stop Wasting GPUs: How We Built a Golden Path for GPU Sharing on Kubernetes"
   url: "https://www.meetup.com/london-platform-user-group-lopug/events/313277993/"
@@ -272,7 +280,7 @@ talks:
   slides: null
 - event: AWS Community Day UAE 2023
   title: AWS self-service infrastructure with Backstage and Pulumi
-  url: https://awsmena.community/cdu-2023#
+  url: https://web.archive.org/web/20260704131426/https://awsmena.community/cdu-2023
   date: 2023-10-21T10:00:00.000-07:00
   slides: null
 - event: "KubeCon + CloudNativeCon + Open Source Summit China 2023"

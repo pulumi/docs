@@ -53,7 +53,7 @@ Visual Import is a guided three-step workflow within the Pulumi Cloud console:
 
 ![Visual Import Code Generation](visual-import.png)
 
-Throughout the workflow, you maintain full control. Select what you need, tweak it as required, and integrate on your terms.  You can find full documentation and usage details in the [Visual Import docs](/docs/discovery-governance/discovery/visual-import/).
+Throughout the workflow, you maintain full control. Select what you need, tweak it as required, and integrate on your terms.  You can find full documentation and usage details in the [Visual Import docs](/docs/discovery-governance/guides/visual-import/).
 
 ## Key Benefits
 

@@ -184,9 +184,6 @@ class KubernetesNginxService(pulumi.ComponentResource):
 package main
 
 import (
-	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/apps/v1"
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/meta/v1"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -251,19 +248,24 @@ public class KubernetesNginxService : Pulumi.ComponentResource
 ```java
 package myproject;
 
+import com.pulumi.core.Output;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
-import com.pulumi.core.Output;
+import com.pulumi.resources.ResourceArgs;
 
-public class KubernetesNginxServiceArgs {
+class KubernetesNginxServiceArgs extends ResourceArgs {
     public boolean isMinikube;
     public KubernetesNginxServiceArgs(boolean isMinikube) {
         this.isMinikube = isMinikube;
     }
 }
 
-public class KubernetesNginxService extends ComponentResource {
+class KubernetesNginxService extends ComponentResource {
     public Output<String> ip;
+
+    public KubernetesNginxService(String name, KubernetesNginxServiceArgs args) {
+        this(name, args, null);
+    }
 
     public KubernetesNginxService(String name, KubernetesNginxServiceArgs args, ComponentResourceOptions opts) {
         super("quickstart:index:KubernetesNginxService", name, args, opts);
@@ -751,8 +753,13 @@ class KubernetesNginxService extends ComponentResource {
                 .build())
             .build(), CustomResourceOptions.builder().parent(this).build());
 
-        // Export the service cluster IP (available for both ClusterIP and LoadBalancer types)
-        this.ip = frontend.spec().applyValue(spec -> spec.clusterIP().orElse("pending"));
+        // Capture the cluster IP when isMinikube is true, or the load balancer's external address otherwise
+        this.ip = args.isMinikube
+            ? frontend.spec().applyValue(spec -> spec.clusterIP().orElse(""))
+            : frontend.status().applyValue(status -> {
+                var ingress = status.get().loadBalancer().get().ingress().get(0);
+                return ingress.ip().orElse(ingress.hostname().orElse(""));
+            });
         this.registerOutputs(Map.of("ip", this.ip));
     }
 }
@@ -1155,7 +1162,7 @@ Duration: 13s
 Now test out your new NGINX service -- it works like before, just with a tidier codebase now!
 
 {{% notes type="info" %}}
-**If using Minikube:** Minikube does not support type `LoadBalancer`. Instead, forward the NGINX service:
+**If using Minikube:** Minikube doesn't expose `LoadBalancer` services externally by default. Instead, forward the NGINX service:
 
 ```bash
 $ kubectl get service
@@ -1187,7 +1194,7 @@ $ $(pulumi config get isMinikube) && curl "http://localhost:8080" || curl $(pulu
 {{% choosable os "windows" %}}
 
 ```powershell
-> if (pulumi config get isMinikube) { curl "http://localhost:8080" } else { curl $(pulumi stack output ip) }
+> if ((pulumi config get isMinikube) -eq "true") { curl "http://localhost:8080" } else { curl $(pulumi stack output ip) }
 ```
 
 {{% /choosable %}}

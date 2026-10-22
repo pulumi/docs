@@ -24,7 +24,7 @@ Why a direct API call (not `claude-code-action`): we need a strict tool
 schema, explicit thinking/effort control (Opus 5.5 at `medium`, adaptive
 thinking, `tool_choice: auto`), and a small bounded loop, none of which
 `claude-code-action` exposes. `extract-claims-llm.py` (Sonnet 5.5, no
-thinking) and `claude-triage.yml` (Haiku 4.5) also call `/v1/messages`.
+thinking) and `claude-triage.yml` (Haiku 5.5) also call `/v1/messages`.
 
 Routing (first match wins):
   0. **pass0** (`pass0_resolve()`, zero model calls) — a regex-floor-only entry
@@ -101,8 +101,18 @@ Output schema:
       "errors": [ "<per-claim failures>" ],
       "meta": {"n_claims": N, "n_pass0": Z, "n_pass1": A, "n_pass2": B, "n_pass3": C,
                "input_tokens": T, "output_tokens": T,
-               "cache_read_input_tokens": T, "cache_creation_input_tokens": T}
+               "cache_read_input_tokens": T, "cache_creation_input_tokens": T,
+               "impl_refs": ["pulumi/<repo>#<n>", ...],            # optional; the PR body's cited refs
+               "impl_refs_unreadable": ["pulumi/<repo>#<n>", ...]} # optional; the subset whose repo
+                                                                   # this review's token got a 404 on
     }
+
+`impl_refs_unreadable` is what lets the composer tell "a new feature whose
+source is private" apart from an ordinary unverifiable: when a PR's own
+implementing change can't be read, every product-behavior claim it makes
+comes back `unverifiable` for the same reason, and compose-review.py asks the
+author about them once instead of once per claim. Only a definitive 404 counts
+as unreadable; a probe that times out or errors otherwise leaves the ref out.
 
 `n_pass0` claims are resolved with no API call; the review folds them into the
 rendered routed-metadata's `inline` counter (see `references/fact-check.md`
@@ -280,7 +290,7 @@ READ_FILE_TOOL = {
         "properties": {
             "path": {"type": "string", "description": "Repo-relative path, e.g. data/docs_menu_sections.yml"},
             "pattern": {"type": "string",
-                        "description": "Optional regex/substring. Returns only matching lines (with line numbers + 2 lines of context) instead of the file head — use it for large structured files like content/pricing/_index.md (a ~40KB feature x tier matrix)."},
+                        "description": "Optional regex/substring. Returns only matching lines (with line numbers + 2 lines of context) instead of the file head — use it for large structured files like data/pulumi_editions.yaml (every Pulumi Cloud feature and the edition it starts in)."},
         },
         "required": ["path"],
     },
@@ -328,7 +338,7 @@ VERIFY_SYSTEM = """You are a fact-checking verifier for Pulumi documentation and
 
 Cheapest first. Stop as soon as a source closes the claim.
 
-1. **Local repo / linked docs** — `read_file` to read other content files, `static/programs/<name>-<lang>/` programs, `data/docs_menu_sections.yml`, `layouts/shortcodes/<name>.html`, the nearest sibling page. Cheapest — always try first. For a **tier / edition / limit / quota** claim, `content/pricing/_index.md` (a large feature x tier matrix) is canonical — read it with a `pattern` (the feature name), and never treat a value as absent from a read marked `[TRUNCATED]`.
+1. **Local repo / linked docs** — `read_file` to read other content files, `static/programs/<name>-<lang>/` programs, `data/docs_menu_sections.yml`, `layouts/shortcodes/<name>.html`, the nearest sibling page. Cheapest — always try first. For a **tier / edition** claim (which edition a feature needs), `data/pulumi_editions.yaml` is canonical — read it with a `pattern` (the feature name), and never treat a value as absent from a read marked `[TRUNCATED]`. Prices, limits, and quotas are no longer in this repo: the /pricing/ page is built by pulumi/marketing-web from `apps/www/src/data/pricing/`, so check the live https://www.pulumi.com/pricing/ page for those.
 2. **GitHub via `gh`** (pass1 lane) — `gh_query` for anything `pulumi/*` OR `pulumi-labs/*` ships. Pulumi HCL lives under `pulumi/pulumi-hcl`, but in-progress providers / SDK experiments still ship under `pulumi-labs/*`; when a claim references a `pulumi-labs/<repo>` package, query BOTH owners before considering escalation:
    - `gh search code --owner pulumi      "<term>"` — main Pulumi org (engine, providers, SDKs)
    - `gh search code --owner pulumi-labs "<term>"` — in-progress providers, SDK experiments
@@ -503,6 +513,74 @@ def parse_impl_refs(text: str) -> list[str]:
     return refs[:MAX_IMPL_REFS]
 
 
+_IMPL_REF_REPO_RE = re.compile(r"\b(?:github\.com/)?(pulumi/[\w.-]+?)(?:#\d+|/)", re.IGNORECASE)
+
+
+def impl_ref_repo(ref: str) -> str:
+    """`pulumi/<repo>` for a ref `parse_impl_refs` returns, or "" if none."""
+    m = _IMPL_REF_REPO_RE.search(ref)
+    return m.group(1) if m else ""
+
+
+# Repos the PR cites that this review's token can't read, set once in main()
+# from probe_unreadable_refs before any verifier runs and only read after that,
+# so the verifier threads share it safely. On pulumi/docs#22200, 98 of 236
+# claims tried to read pulumi/pulumi-service#49283 anyway, at 4.3 Opus turns
+# apiece against 3.5 for the other pass1 claims, and spent 60% of the run's
+# uncached input tokens: build_user_message now says up front that the ref is
+# unreadable, and exec_gh_query refuses a query against it without running gh.
+_UNREADABLE_REPOS: frozenset[str] = frozenset()
+_REPO_MENTION_RE = re.compile(r"(?:^|[\s:/=])(pulumi/[\w.-]+)", re.IGNORECASE)
+
+
+def set_unreadable_repos(refs: list[str]) -> None:
+    global _UNREADABLE_REPOS
+    _UNREADABLE_REPOS = frozenset(r.lower() for r in (impl_ref_repo(x) for x in refs) if r)
+
+
+def _unreadable_repo_in(args: list[str]) -> str:
+    """The unreadable repo a gh_query targets (`-R pulumi/x`, `repos/pulumi/x/…`,
+    `repo:pulumi/x`, a github.com URL), or ""."""
+    if not _UNREADABLE_REPOS:
+        return ""
+    for a in args:
+        for m in _REPO_MENTION_RE.finditer(a):
+            repo = m.group(1).lower().removesuffix(".git")
+            if repo in _UNREADABLE_REPOS:
+                return repo
+    return ""
+
+
+def probe_unreadable_refs(refs: list[str], run=subprocess.run) -> list[str]:
+    """The refs whose repository this review's token cannot read.
+
+    One `gh api repos/<owner>/<repo>` per distinct repo. GitHub answers a
+    private repo the token can't see with a 404, which is the only result
+    counted: a timeout, a 5xx, or a rate limit says nothing about access, and
+    calling a public repo unreadable would hand the author a question the
+    review could have answered itself. Never raises."""
+    verdict_by_repo: dict[str, bool] = {}
+    unreadable: list[str] = []
+    for ref in refs:
+        repo = impl_ref_repo(ref)
+        if not repo:
+            continue
+        if repo not in verdict_by_repo:
+            try:
+                proc = run(["gh", "api", f"repos/{repo}", "--silent"],
+                           capture_output=True, text=True, timeout=GH_TIMEOUT)
+                # gh prints "gh: Not Found (HTTP 404)" on stderr today; read
+                # both streams so a gh release that moves it doesn't quietly
+                # turn the whole carve-out off.
+                verdict_by_repo[repo] = (proc.returncode != 0 and "HTTP 404" in
+                                         f"{proc.stderr or ''}\n{proc.stdout or ''}")
+            except (subprocess.TimeoutExpired, OSError):
+                verdict_by_repo[repo] = False
+        if verdict_by_repo[repo]:
+            unreadable.append(ref)
+    return unreadable
+
+
 def impl_ref_read_hint(ref: str) -> str:
     """How to read a cited blob URL with `gh_query`, or "" for any other ref.
     The raw media type returns the file itself rather than base64 JSON, and the
@@ -637,6 +715,13 @@ def exec_gh_query(inp: dict) -> str:
     for a in args:
         if _SHELL_META_RE.search(a):
             return f"error: argument {a!r} contains shell metacharacters; pass plain arguments, not a shell string"
+    unreadable = _unreadable_repo_in(args)
+    if unreadable:
+        return (f"error: {unreadable} is not readable with this review's credentials (GitHub "
+                "returned 404 when the review checked it before verification started), so this "
+                "query was not run. Don't query that repository again. Settle the claim from "
+                "sources you can read, or return `unverifiable` and name the unreadable change "
+                "in `evidence`.")
     try:
         proc = subprocess.run(["gh", *args], capture_output=True, text=True, timeout=GH_TIMEOUT)
     except subprocess.TimeoutExpired:
@@ -791,16 +876,27 @@ def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
             str(claim["context"]),
             "```",
         ]
-    if impl_refs and route in ("pass1", "pass3"):
+    readable = [r for r in impl_refs or [] if impl_ref_repo(r).lower() not in _UNREADABLE_REPOS]
+    unreadable = [r for r in impl_refs or [] if r not in readable]
+    if readable and route in ("pass1", "pass3"):
         lines += [
             "",
             "This docs PR cites product source in its description — implementing changes "
             "(read with `gh pr diff <n> -R pulumi/<repo>` or `gh api repos/pulumi/<repo>/commits/<sha>`) "
             "and/or source files. Check the one that covers this claim first; skip any that don't:",
         ]
-        for r in impl_refs:
+        for r in readable:
             hint = impl_ref_read_hint(r) if route == "pass1" else ""
             lines.append(f"- {r}" + (f" — read with {hint}" if hint else ""))
+    if unreadable and route in ("pass1", "pass3"):
+        lines += [
+            "",
+            "This docs PR also cites " + ", ".join(unreadable) + ", which this review can't read: "
+            "its repository returned 404 to the review's credentials before verification started, "
+            "and `gh_query` refuses queries against it. Don't try to read it. Settle the claim from "
+            "sources you can read; if only that change could settle it, return `unverifiable` now "
+            "and name the unreadable change in `evidence`.",
+        ]
     if route == "pass2" and evidence_pack:
         body = (evidence_pack.get("content_text") or "")[:PASS2_BODY_CAP] or "(empty body)"
         lines += [
@@ -1651,10 +1747,16 @@ def main() -> int:
     # pass1/pass3 verifier can confirm a brand-new symbol against the change that
     # ships it. Best-effort and only when a lane that can use it has work.
     impl_refs: list[str] = []
+    impl_refs_unreadable: list[str] = []
     if not args.dry_run and (n_by_route["pass1"] or n_by_route["pass3"]):
         impl_refs = fetch_impl_refs(args.pr or "", args.repo or "")
         if impl_refs:
             print(f"verify-claims: linked impl refs from PR body: {', '.join(impl_refs)}", file=sys.stderr)
+            impl_refs_unreadable = probe_unreadable_refs(impl_refs)
+            set_unreadable_repos(impl_refs_unreadable)
+            if impl_refs_unreadable:
+                print("verify-claims: not readable with this token: "
+                      f"{', '.join(impl_refs_unreadable)}", file=sys.stderr)
 
     verdicts: list[dict] = list(pass0_verdicts)
     errors: list[str] = []
@@ -1686,6 +1788,9 @@ def main() -> int:
     meta["n_pass1"] = n_by_route["pass1"]
     meta["n_pass2"] = n_by_route["pass2"]
     meta["n_pass3"] = n_by_route["pass3"]
+    if impl_refs:
+        meta["impl_refs"] = impl_refs
+        meta["impl_refs_unreadable"] = impl_refs_unreadable
     for v in verdicts:
         mu = v.get("model_usage") or {}
         for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):

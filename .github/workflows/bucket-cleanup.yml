@@ -4,6 +4,11 @@ on:
     # * is a special character in YAML so you have to quote this string.
     # Run every day at 3:00PM UTC.
     - cron: '0 15 * * *'
+# One cleanup at a time. Overlapping runs (say, a re-run of yesterday's that is still going
+# when today's starts) pick the same buckets and fail on each other's deletes.
+concurrency:
+  group: bucket-cleanup
+  cancel-in-progress: false
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
@@ -35,6 +40,17 @@ jobs:
           role-session-name: docs-cleanup
           role-duration-seconds: 7200
           aws-region: us-west-2
+
+      - name: Install s5cmd v2.3.0 for fast S3 deletes
+        run: |
+          S5CMD_VERSION="2.3.0"
+          S5CMD_SHA256="de0fdbfa3aceae55e069ba81a0fc17b2026567637603734a387b2fca06c299b4"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
+          echo "${S5CMD_SHA256}  /tmp/s5cmd.tar.gz" | sha256sum -c -
+          sudo tar -xz -C /usr/local/bin s5cmd -f /tmp/s5cmd.tar.gz
+          rm /tmp/s5cmd.tar.gz
 
       - name: Run make ci_bucket_cleanup
         run: make ci_bucket_cleanup

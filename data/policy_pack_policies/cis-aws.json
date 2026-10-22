@@ -157,7 +157,7 @@
             "type": "string"
           },
           "exemptMethods": {
-            "description": "List of method paths to exempt from encryption requirement",
+            "description": "List of method paths to exempt from encryption requirement, spelled {resource_path}/{http_method} (for example health/GET)",
             "items": {
               "type": "string"
             },
@@ -654,7 +654,7 @@
       },
       "description": "Ensures CloudTrail is enabled with at least one active trail for audit logging.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "CIS",
         "reference": "8.2",
@@ -750,7 +750,7 @@
       },
       "message": "",
       "name": "cloudwatch-log-group-kms-encryption-enabled",
-      "remediationSteps": "## Fix: Enable KMS Encryption for CloudWatch Log Group\n\nAdd a KMS key to your CloudWatch log group resource to enable encryption at rest:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst logGroup = new aws.cloudwatch.LogGroup(\"my-log-group\", {\n    name: \"/aws/my-application\",\n    kmsKeyId: kmsKey.arn,  // Add KMS key ARN to enable encryption\n    retentionInDays: 30,\n});\n```\n",
+      "remediationSteps": "## Fix: Enable KMS Encryption for CloudWatch Log Group\n\nSet `kmsKeyId` on the log group to the ARN of a KMS key to encrypt its log data at rest:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst logGroup = new aws.cloudwatch.LogGroup(\"my-log-group\", {\n    name: \"/aws/my-application\",\n    kmsKeyId: kmsKey.arn,  // Add KMS key ARN to enable encryption\n    retentionInDays: 365,  // cloudwatch-log-retention requires at least 365 days by default\n});\n```\n",
       "severity": "high"
     },
     {
@@ -881,6 +881,7 @@
             "type": "string"
           },
           "exemptProjects": {
+            "default": [],
             "description": "List of CodeBuild project names to exempt from this policy",
             "items": {
               "type": "string"
@@ -1022,7 +1023,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures DynamoDB tables have encryption enabled using KMS keys.",
+      "description": "Ensures DynamoDB tables are encrypted with a customer managed KMS key.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -1189,6 +1190,7 @@
             "type": "string"
           },
           "exemptInstances": {
+            "default": [],
             "description": "Instances exempt from EBS optimization requirements",
             "items": {
               "type": "string"
@@ -1324,6 +1326,7 @@
             "type": "string"
           },
           "exemptVolumes": {
+            "default": [],
             "description": "List of volume names to exempt from backup plan requirements",
             "items": {
               "type": "string"
@@ -1533,6 +1536,7 @@
             "type": "string"
           },
           "exemptInstances": {
+            "default": [],
             "description": "EC2 instances exempt from VPC placement requirements",
             "items": {
               "type": "string"
@@ -1554,6 +1558,35 @@
       "message": "",
       "name": "ec2-instance-in-vpc",
       "remediationSteps": "## Fix: Place EC2 Instance in a VPC Subnet\n\nAdd the `subnetId` property to your EC2 instance resource to ensure it's deployed within a VPC for proper network isolation.\n\n```typescript\nnew aws.ec2.Instance(\"my-instance\", {\n    ami: \"ami-12345678\",\n    instanceType: \"t3.micro\",\n    subnetId: mySubnet.id, // Specify a subnet to place instance in VPC\n    // ... other configuration\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EC2 instances do not launch with an instance profile whose role holds the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "ec2-instance-no-admin-access",
+      "remediationSteps": "## Fix: Launch with a Role Holding a Scoped Policy\n\nAttach a policy scoped to the workload's job to the instance profile's role, instead of AdministratorAccess, and launch the instance with that profile's name in `iamInstanceProfile`:\n\n```typescript\nconst role = new aws.iam.Role(\"app\", {\n    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: \"ec2.amazonaws.com\" }),\n});\n\nnew aws.iam.RolePolicyAttachment(\"app-read-only\", {\n    role: role.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n\nconst profile = new aws.iam.InstanceProfile(\"app\", { role: role.name });\n```",
       "severity": "high"
     },
     {
@@ -1857,6 +1890,7 @@
             "type": "string"
           },
           "exemptEnvironments": {
+            "default": [],
             "description": "Environments exempt from managed updates requirements",
             "items": {
               "type": "string"
@@ -1864,6 +1898,7 @@
             "type": "array"
           },
           "preferredMaintenanceWindow": {
+            "default": "",
             "description": "Preferred maintenance window start time (e.g., 'sun:02:00')",
             "type": "string"
           },
@@ -1907,6 +1942,7 @@
             "type": "string"
           },
           "exemptDomains": {
+            "default": [],
             "description": "Elasticsearch domains exempt from encryption at rest requirements",
             "items": {
               "type": "string"
@@ -2270,7 +2306,7 @@
             "type": "array"
           },
           "exemptSubnets": {
-            "description": "List of subnet IDs to exempt from public subnet check",
+            "description": "List of subnet IDs, or Pulumi resource names, to exempt from public subnet check",
             "items": {
               "type": "string"
             },
@@ -2360,7 +2396,7 @@
       },
       "description": "Ensures AWS GuardDuty is enabled with malware detection capabilities for threat protection.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "CIS",
         "reference": "1.2",
@@ -2409,6 +2445,93 @@
     {
       "configSchema": {
         "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM group policy attachments do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "iam-group-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the group's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.GroupPolicyAttachment(\"readers-read-only\", {\n    group: group.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that exclusive IAM group policy attachments do not include the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "iam-group-policy-attachments-exclusive-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the group's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.GroupPolicyAttachmentsExclusive(\"readers-policies\", {\n    groupName: group.name,\n    policyArns: [aws.iam.ManagedPolicy.ReadOnlyAccess],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM instance profiles do not carry a role holding the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "iam-instance-profile-no-admin-access",
+      "remediationSteps": "## Fix: Give the Profile's Role a Scoped Policy\n\nAttach a policy scoped to the workload's job to the role, instead of AdministratorAccess:\n\n```typescript\nconst role = new aws.iam.Role(\"app\", {\n    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: \"ec2.amazonaws.com\" }),\n});\n\nnew aws.iam.RolePolicyAttachment(\"app-read-only\", {\n    role: role.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n\nconst profile = new aws.iam.InstanceProfile(\"app\", { role: role.name });\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
           "allowPatternMatching": {
             "default": false,
             "description": "Allow wildcard matching for exempt role/user names",
@@ -2452,6 +2575,35 @@
       "message": "",
       "name": "iam-no-inline-policy-check",
       "remediationSteps": "## Fix: Use Managed Policies Instead of Inline\n\n```typescript\n// Create a managed policy\nconst policy = new aws.iam.Policy(\"my-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\"s3:GetObject\"],\n            Resource: \"arn:aws:s3:::my-bucket/*\",\n        }],\n    }),\n});\n\n// Attach to user instead of inline\nconst attachment = new aws.iam.UserPolicyAttachment(\"user-attachment\", {\n    user: myUser.name,\n    policyArn: policy.arn,  // Use managed policy, not inline\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM policy attachments do not attach the AWS managed AdministratorAccess policy to users, roles or groups.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "iam-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the job, or a customer-managed policy granting only the actions needed:\n\n```typescript\nnew aws.iam.PolicyAttachment(\"app-read-only\", {\n    roles: [role.name],\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
       "severity": "high"
     },
     {
@@ -2551,7 +2703,7 @@
         },
         "type": "object"
       },
-      "description": "Ensure IAM policies do not contain statements with administrative access permissions for enhanced security.",
+      "description": "Ensure IAM policy documents - standalone policies and inline user, role and group policies - do not contain statements granting administrative access, whether through an administrative action, a wildcard action covering one, or NotAction.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -2562,7 +2714,7 @@
       },
       "message": "",
       "name": "iam-policy-no-statements-with-admin-access",
-      "remediationSteps": "## Fix: Avoid Administrative Actions Like \"iam:*\"\n\n```typescript\nconst policy = new aws.iam.Policy(\"limited-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"iam:GetUser\",\n                \"iam:ListAccessKeys\",\n            ],  // Specific IAM actions, not \"iam:*\"\n            Resource: \"arn:aws:iam::*:user/${aws:username}\",\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Avoid Administrative Actions Like \"iam:*\"\n\nList the actions a statement allows. An Allow with NotAction excludes actions instead, so every\nadministrative action it does not name stays granted.\n\n```typescript\nconst policy = new aws.iam.Policy(\"limited-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"iam:GetUser\",\n                \"iam:ListAccessKeys\",\n            ],  // Specific IAM actions, not \"iam:*\"\n            Resource: \"arn:aws:iam::*:user/${aws:username}\",\n        }],\n    }),\n});\n```",
       "severity": "critical"
     },
     {
@@ -2576,6 +2728,14 @@
           "allowedFullAccessActions": {
             "default": [],
             "description": "List of actions that are allowed to have full access (e.g., ['logs:*'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowedWildcardResourceActions": {
+            "default": [],
+            "description": "List of actions (wildcards supported) that may be granted on Resource \"*\", for actions that do not support resource-level permissions (e.g., ['ec2:Describe*']). An action containing a wildcard must also be listed in allowedFullAccessActions, which is a separate claim about the action's breadth.",
             "items": {
               "type": "string"
             },
@@ -2600,7 +2760,7 @@
         },
         "type": "object"
       },
-      "description": "Ensure IAM policies do not contain statements with full access permissions for enhanced security.",
+      "description": "Ensure IAM policy documents - standalone policies and inline user, role and group policies - do not contain statements granting full access, whether through a wildcard action, a wildcard resource, NotAction or NotResource.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -2611,8 +2771,95 @@
       },
       "message": "",
       "name": "iam-policy-no-statements-with-full-access",
-      "remediationSteps": "## Fix: Use Specific Actions Instead of \"service:*\"\n\n```typescript\nconst policy = new aws.iam.Policy(\"limited-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:GetObject\",\n                \"s3:PutObject\",\n                \"s3:ListBucket\",\n            ],  // Specific S3 actions instead of \"s3:*\"\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",\n                \"arn:aws:s3:::my-bucket/*\",\n            ],\n        }],\n    }),\n});\n```",
+      "remediationSteps": "## Fix: Use Specific Actions Instead of \"service:*\"\n\nList the actions a statement allows and scope Resource to specific ARNs. NotAction and NotResource\ninvert those lists, so everything they do not name stays granted. An action that supports no\nresource-level permissions can only be written against Resource \"*\"; list it in\nallowedWildcardResourceActions, and also in allowedFullAccessActions when the action itself\ncontains a wildcard.\n\n```typescript\nconst policy = new aws.iam.Policy(\"limited-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:GetObject\",\n                \"s3:PutObject\",\n                \"s3:ListBucket\",\n            ],  // Specific S3 actions instead of \"s3:*\"\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",\n                \"arn:aws:s3:::my-bucket/*\",\n            ],\n        }],\n    }),\n});\n```",
       "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM roles do not list the AWS managed AdministratorAccess policy in managedPolicyArns.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "iam-role-managed-policy-arns-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nList an AWS managed policy scoped to the role's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nconst role = new aws.iam.Role(\"app\", {\n    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: \"ec2.amazonaws.com\" }),\n    managedPolicyArns: [aws.iam.ManagedPolicy.ReadOnlyAccess],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM role policy attachments do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "iam-role-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the role's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.RolePolicyAttachment(\"app-read-only\", {\n    role: role.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that exclusive IAM role policy attachments do not include the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "iam-role-policy-attachments-exclusive-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nAttach an AWS managed policy scoped to the role's job, or a customer-managed policy granting only the actions it needs:\n\n```typescript\nnew aws.iam.RolePolicyAttachmentsExclusive(\"app-policies\", {\n    roleName: role.name,\n    policyArns: [aws.iam.ManagedPolicy.ReadOnlyAccess],\n});\n```",
+      "severity": "high"
     },
     {
       "configSchema": {
@@ -2655,7 +2902,7 @@
       },
       "description": "Ensure AWS root user has Multi-Factor Authentication (MFA) device configured for enhanced security.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "CIS",
         "reference": "5.2",
@@ -2797,6 +3044,7 @@
             "type": "string"
           },
           "exemptUsers": {
+            "default": [],
             "description": "List of user names to exempt from this policy",
             "items": {
               "type": "string"
@@ -2812,6 +3060,64 @@
       "message": "",
       "name": "iam-user-no-policies-check",
       "remediationSteps": "## Fix: Use GroupMembership Instead of Direct Attachment\n\n```typescript\nconst group = new aws.iam.Group(\"developers-group\", {\n    name: \"Developers\",\n    // ... other required config\n});\n\nconst groupPolicyAttachment = new aws.iam.GroupPolicyAttachment(\"group-policy\", {\n    group: group.name,\n    policyArn: \"arn:aws:iam::aws:policy/ReadOnlyAccess\",\n});\n\nconst user = new aws.iam.User(\"my-user\", {\n    name: \"john.doe\",\n    // ... other required config\n});\n\nconst groupMembership = new aws.iam.GroupMembership(\"group-members\", {\n    group: group.name,\n    users: [user.name],  // Add users to group instead of direct policy attachment\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM user policy attachments do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "iam-user-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nGrant the user a scoped policy through a group rather than attaching `AdministratorAccess`:\n\n```typescript\nconst group = new aws.iam.Group(\"readers\");\nnew aws.iam.GroupPolicyAttachment(\"readers-read-only\", {\n    group: group.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\nnew aws.iam.UserGroupMembership(\"user-readers\", {\n    user: user.name,\n    groups: [group.name],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that exclusive IAM user policy attachments do not include the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "iam-user-policy-attachments-exclusive-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Policy Instead of AdministratorAccess\n\nGrant the user a scoped policy through a group rather than attaching `AdministratorAccess`:\n\n```typescript\nconst group = new aws.iam.Group(\"readers\");\nnew aws.iam.GroupPolicyAttachment(\"readers-read-only\", {\n    group: group.name,\n    policyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\nnew aws.iam.UserGroupMembership(\"user-readers\", {\n    user: user.name,\n    groups: [group.name],\n});\n```",
       "severity": "high"
     },
     {
@@ -2869,7 +3175,7 @@
         },
         "type": "object"
       },
-      "description": "Ensure IAM user credentials are rotated within 90 days to prevent dormant account usage and enhance security.",
+      "description": "Ensure IAM user access keys are rotated within 90 days.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -3054,6 +3360,35 @@
     {
       "configSchema": {
         "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures Lambda function URLs require IAM authentication",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "3.3; 12.2",
+        "specification": "Configure data access control lists based on a user's need to know. Apply data access control lists, also known as access permissions, to local and remote file systems, databases, and applications.; Design and maintain a secure network architecture. A secure network architecture must address segmentation, least privilege, and availability, at a minimum. Example implementations may include documentation, policy, and design components.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "lambda-function-url-no-public-access",
+      "remediationSteps": "## Fix: Require IAM Authentication on the Function URL\n\n```typescript\nnew aws.lambda.FunctionUrl(\"function-url\", {\n    functionName: lambdaFunction.name,\n    authorizationType: \"AWS_IAM\",\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
           "allowPatternMatching": {
             "default": false,
             "description": "Allow wildcard pattern matching for exempt function names",
@@ -3219,7 +3554,7 @@
       "framework": {
         "name": "CIS",
         "reference": "3.11",
-        "specification": "Encrypt Sensitive Data at Rest",
+        "specification": "Encrypt sensitive data at rest on servers, applications, and databases. Storage-layer encryption, also known as server-side encryption, meets the minimum requirement of this Safeguard. Additional encryption methods may include application-layer encryption, also known as client-side encryption, where access to the data storage device(s) does not permit access to the plain-text data.",
         "version": "8.1"
       },
       "message": "",
@@ -3493,7 +3828,7 @@
       },
       "message": "",
       "name": "rds-instance-logging-enabled",
-      "remediationSteps": "## Fix: Enable CloudWatch logs exports\n\nFor standalone RDS instances:\n\n```typescript\nconst dbInstance = new aws.rds.Instance(\"myDb\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    enabledCloudwatchLogsExports: [\"postgresql\"],  // This fixes the violation\n});\n```",
+      "remediationSteps": "## Fix: Enable CloudWatch logs exports\n\nFor standalone RDS instances:\n\n```typescript\nconst dbInstance = new aws.rds.Instance(\"myDb\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    enabledCloudwatchLogsExports: [\"postgresql\", \"upgrade\"],  // This fixes the violation\n});\n```",
       "severity": "medium"
     },
     {
@@ -3608,7 +3943,7 @@
         },
         "type": "object"
       },
-      "description": "Ensures Redshift clusters have automatic snapshots enabled with minimum 7-day retention period.",
+      "description": "Ensures Redshift clusters have automatic snapshots enabled with a configurable minimum retention period (default 7 days).",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -3862,6 +4197,7 @@
             "type": "string"
           },
           "exemptBuckets": {
+            "default": [],
             "description": "List of bucket names exempt from encryption requirements",
             "items": {
               "type": "string"
@@ -3892,7 +4228,7 @@
       },
       "message": "",
       "name": "s3-bucket-encryption",
-      "remediationSteps": "## Fix: Enable S3 Bucket Server-Side Encryption\n\nAdd a `BucketServerSideEncryptionConfigurationV2` resource to enable server-side encryption for your S3 bucket.\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create the S3 bucket\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-bucket-name\",\n});\n\n// Add server-side encryption configuration\nconst encryptionConfig = new aws.s3.BucketServerSideEncryptionConfiguration(\"my-bucket-encryption\", {\n    bucket: bucket.id,\n    rules: [{\n        applyServerSideEncryptionByDefault: {\n            // Use AES256 for AWS-managed keys or \"aws:kms\" for KMS\n            sseAlgorithm: \"aws:kms\",\n            // Specify a customer-managed KMS key (required for compliance)\n            kmsMasterKeyId: kmsKey.arn,\n        },\n        // Enable bucket key to reduce KMS API calls and costs\n        bucketKeyEnabled: true,\n    }],\n});\n```",
+      "remediationSteps": "## Fix: Configure S3 Bucket Server-Side Encryption\n\nCreate a separate `BucketServerSideEncryptionConfigurationV2` resource for your S3 bucket with encryption rules. Use AES256 or KMS encryption:\n\n```typescript\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add encryption configuration resource\nconst bucketEncryption = new aws.s3.BucketServerSideEncryptionConfiguration(\"my-bucket-encryption\", {\n    bucket: bucket.id,\n    rules: [{\n        applyServerSideEncryptionByDefault: {\n            sseAlgorithm: \"aws:kms\", // Enable KMS encryption\n            kmsMasterKeyId: kmsKey.arn, // Specify customer-managed key\n        },\n        bucketKeyEnabled: true, // Enable bucket key for cost optimization\n    }],\n});\n```",
       "severity": "high"
     },
     {
@@ -4001,6 +4337,7 @@
             "type": "string"
           },
           "exemptBuckets": {
+            "default": [],
             "description": "List of bucket names to exempt from this policy",
             "items": {
               "type": "string"
@@ -4066,7 +4403,7 @@
       },
       "message": "",
       "name": "s3-bucket-public-read-prohibited",
-      "remediationSteps": "## Fix: Set Private ACL\n\n```typescript\nconst bucket = new aws.s3.Bucket(\"bucket\", {\n    acl: \"private\",  // Use private, not public-read\n});\n```",
+      "remediationSteps": "## Fix: Set Private ACL\n\nGrant read actions to named principals. An Allow for principal \"*\" with NotAction still grants\nevery read action it does not exclude.\n\n```typescript\nconst bucket = new aws.s3.Bucket(\"bucket\", {\n    acl: \"private\",  // Use private, not public-read\n});\n```",
       "severity": "critical"
     },
     {
@@ -4115,7 +4452,7 @@
         "properties": {
           "allowPatternMatching": {
             "default": false,
-            "description": "Allow wildcard matching for exempt bucket names",
+            "description": "Allow wildcard pattern matching for exempt bucket names",
             "type": "boolean"
           },
           "enforcementLevel": {
@@ -4128,7 +4465,8 @@
             "type": "string"
           },
           "exemptBuckets": {
-            "description": "List of bucket names to exempt from replication requirements",
+            "default": [],
+            "description": "List of bucket names exempt from replication requirements. Supports wildcard patterns when allowPatternMatching is true (e.g., '*-replica', '*-backup')",
             "items": {
               "type": "string"
             },
@@ -4142,7 +4480,7 @@
         },
         "type": "object"
       },
-      "description": "Ensure S3 buckets have replication enabled for automated backup to different regions.",
+      "description": "Ensures S3 buckets have replication configured for enhanced availability",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -4153,7 +4491,7 @@
       },
       "message": "",
       "name": "s3-bucket-replication",
-      "remediationSteps": "## Fix: Enable Replication\n\n```typescript\n// Create destination bucket\nconst destBucket = new aws.s3.Bucket(\"dest-bucket\", {\n    bucket: \"my-dest-bucket\",\n});\n\n// Create replication IAM role\nconst replicationRole = new aws.iam.Role(\"replication-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { Service: \"s3.amazonaws.com\" },\n            Action: \"sts:AssumeRole\",\n        }],\n    }),\n});\n\n// Enable versioning on source bucket (required for replication)\nconst sourceBucketVersioning = new aws.s3.BucketVersioning(\"source-versioning\", {\n    bucket: sourceBucket.id,\n    versioningConfiguration: { status: \"Enabled\" },\n});\n\n// Configure replication using BucketReplicationConfig\nconst replication = new aws.s3.BucketReplicationConfig(\"replication\", {\n    bucket: sourceBucket.id,\n    role: replicationRole.arn,\n    rules: [{\n        id: \"replicate-all\",\n        status: \"Enabled\",\n        destination: {\n            bucket: destBucket.arn,\n        },\n        filter: {},\n    }],\n}, { dependsOn: [sourceBucketVersioning] });\n```",
+      "remediationSteps": "## Fix: Configure Replication for S3 Bucket\n\nCreate a `BucketReplicationConfig` resource with an IAM role and replication rules:\n\n```typescript\n// Create destination bucket\nconst destBucket = new aws.s3.Bucket(\"dest-bucket\", {\n    bucket: \"my-dest-bucket\",\n});\n\n// Create replication IAM role\nconst replicationRole = new aws.iam.Role(\"replication-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { Service: \"s3.amazonaws.com\" },\n            Action: \"sts:AssumeRole\",\n        }],\n    }),\n});\n\n// Enable versioning on source bucket (required for replication)\nconst sourceBucketVersioning = new aws.s3.BucketVersioning(\"source-versioning\", {\n    bucket: sourceBucket.id,\n    versioningConfiguration: { status: \"Enabled\" },\n});\n\n// Configure replication using BucketReplicationConfig\nconst replication = new aws.s3.BucketReplicationConfig(\"replication\", {\n    bucket: sourceBucket.id,\n    role: replicationRole.arn,\n    rules: [{\n        id: \"replicate-all\",\n        status: \"Enabled\",\n        destination: {\n            bucket: destBucket.arn,\n        },\n        filter: {},\n    }],\n}, { dependsOn: [sourceBucketVersioning] });\n```\n\nAt least one rule must have `status: \"Enabled\"` and name a destination bucket. The deprecated\ninline `replicationConfiguration` / `replicationConfigurations` block is accepted too.",
       "severity": "medium"
     },
     {
@@ -4239,7 +4577,7 @@
       },
       "message": "",
       "name": "s3-bucket-ssl-enforcement-required",
-      "remediationSteps": "## Fix: Add Bucket Policy to Enforce SSL/TLS\n\nAdd a bucket policy that denies all requests made without SSL/TLS encryption:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add bucket policy to enforce SSL/TLS\nconst bucketPolicy = new aws.s3.BucketPolicy(\"my-bucket-policy\", {\n    bucket: bucket.id,\n    policy: bucket.arn.apply(arn => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Sid: \"DenyInsecureTransport\",\n            Effect: \"Deny\",\n            Principal: \"*\",\n            Action: \"s3:*\",\n            Resource: [\n                arn,\n                `${arn}/*`,\n            ],\n            Condition: {\n                Bool: {\n                    \"aws:SecureTransport\": \"false\"  // Deny when SecureTransport is false\n                }\n            }\n        }]\n    }))\n});\n```\n",
+      "remediationSteps": "## Fix: Add Bucket Policy to Enforce SSL/TLS\n\nAdd a bucket policy that denies all requests made without SSL/TLS encryption:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add bucket policy to enforce SSL/TLS\nconst bucketPolicy = new aws.s3.BucketPolicy(\"my-bucket-policy\", {\n    bucket: bucket.id,\n    policy: bucket.arn.apply(arn => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Sid: \"DenyInsecureTransport\",\n            Effect: \"Deny\",\n            Principal: \"*\",\n            Action: \"s3:*\",\n            Resource: [\n                arn,\n                `${arn}/*`,\n            ],\n            Condition: {\n                Bool: {\n                    \"aws:SecureTransport\": \"false\"  // Deny when SecureTransport is false\n                }\n            }\n        }]\n    }))\n});\n```\n\nThe equivalent `policy` written inline on the bucket resource itself is accepted too.\n",
       "severity": "high"
     },
     {
@@ -4457,7 +4795,7 @@
       },
       "description": "Ensures AWS Security Hub is enabled for continuous monitoring and security assessment.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "CIS",
         "reference": "7.1",
@@ -4653,6 +4991,35 @@
     {
       "configSchema": {
         "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that IAM Identity Center permission sets do not attach the AWS managed AdministratorAccess policy.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.6; 5.4",
+        "specification": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.; Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user's primary, non-privileged account.",
+        "version": "8.1"
+      },
+      "message": "",
+      "name": "ssoadmin-managed-policy-attachment-no-admin-access",
+      "remediationSteps": "## Fix: Attach a Scoped Managed Policy to the Permission Set\n\nAttach an AWS managed policy scoped to the job the permission set grants, instead of AdministratorAccess:\n\n```typescript\nnew aws.ssoadmin.ManagedPolicyAttachment(\"read-only\", {\n    instanceArn: permissionSet.instanceArn,\n    permissionSetArn: permissionSet.arn,\n    managedPolicyArn: aws.iam.ManagedPolicy.ReadOnlyAccess,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
           "allowPatternMatching": {
             "default": false,
             "description": "Allow wildcard pattern matching for exempt subnet names",
@@ -4798,6 +5165,7 @@
             "type": "string"
           },
           "exemptAcls": {
+            "default": [],
             "description": "List of Network ACL names or IDs to exempt from this policy",
             "items": {
               "type": "string"
@@ -4881,6 +5249,7 @@
             "type": "string"
           },
           "exemptSecurityGroups": {
+            "default": [],
             "description": "List of security group names to exempt from this policy",
             "items": {
               "type": "string"
@@ -4955,7 +5324,7 @@
         "properties": {
           "allowPatternMatching": {
             "default": false,
-            "description": "Allow wildcard matching for exempt web ACL names",
+            "description": "Allow wildcard pattern matching for exempt Web ACL names",
             "type": "boolean"
           },
           "enforcementLevel": {
@@ -4967,8 +5336,17 @@
             ],
             "type": "string"
           },
+          "exemptWebAclArns": {
+            "default": [],
+            "description": "List of Web ACL ARNs to exempt from logging requirement",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
           "exemptWebAcls": {
-            "description": "List of WAFv2 web ACL names to exempt from this policy",
+            "default": [],
+            "description": "List of Web ACL names to exempt from logging requirement",
             "items": {
               "type": "string"
             },
@@ -4977,7 +5355,7 @@
         },
         "type": "object"
       },
-      "description": "Ensure WAFv2 web ACLs have logging enabled for security monitoring and analysis.",
+      "description": "Ensures WAFv2 Web ACLs have logging configurations enabled for audit and monitoring purposes.",
       "displayName": "",
       "enforcementLevel": "advisory",
       "framework": {
@@ -4988,10 +5366,10 @@
       },
       "message": "",
       "name": "wafv2-logging-enabled",
-      "remediationSteps": "## Fix: Enable WAFv2 Logging\n\n```typescript\n// Create Kinesis Firehose delivery stream for logs\nconst deliveryStream = new aws.kinesis.FirehoseDeliveryStream(\"waf-logs\", {\n    destination: \"extended_s3\",\n    extendedS3Configuration: {\n        bucketArn: s3Bucket.arn,\n        prefix: \"waf-logs/\",\n    },\n});\n\n// Configure WAFv2 logging\nconst loggingConfig = new aws.wafv2.WebAclLoggingConfiguration(\"logging\", {\n    resourceArn: webAcl.arn,\n    logDestinationConfigs: [deliveryStream.arn],\n});\n```",
-      "severity": "medium"
+      "remediationSteps": "## Fix: Enable WAFv2 Web ACL Logging\n\nCreate a `WebAclLoggingConfiguration` resource to enable logging for your WAFv2 Web ACL:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create a Kinesis Data Firehose delivery stream for WAF logs\nconst wafLogStream = new aws.kinesis.FirehoseDeliveryStream(\"waf-logs\", {\n    destination: \"extended_s3\",\n    extendedS3Configuration: {\n        roleArn: logRole.arn,\n        bucketArn: logBucket.arn,\n        prefix: \"waf-logs/\",\n    },\n});\n\n// Enable logging for the Web ACL\nconst webAclLogging = new aws.wafv2.WebAclLoggingConfiguration(\"web-acl-logging\", {\n    resourceArn: myWebAcl.arn, // Reference to your Web ACL\n    logDestinationConfigs: [\n        wafLogStream.arn, // Link to Kinesis Firehose stream\n    ],\n});\n```\n\nAlternatively, you can log directly to CloudWatch Logs or S3.",
+      "severity": "high"
     }
   ],
-  "version": 3,
-  "versionTag": "1.0.2"
+  "version": 5,
+  "versionTag": "1.2.0"
 }

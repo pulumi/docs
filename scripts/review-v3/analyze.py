@@ -25,7 +25,7 @@ diff no longer contains).
 A row with unanswered 🚨 blocking findings is `blocked`, not `judge`: it
 cannot merge until the review is answered, and `blocked` is the one lane
 --force never reaches. Answering them is the author's job (a fix, or
-`@claude <why> #update-review`); the approver's judgments are board notes
+`/update-review <why>`); the approver's judgments are board notes
 and never answer a finding.
 
 The stamp bar (every gate required):
@@ -101,7 +101,7 @@ DUPLICATE_TITLE_RATIO = 0.8
 CROSS_CODE_CAP = 6
 # The row buttons that are decisions (a row takes one); everything else is a
 # side action. A row that is waiting on its author keeps only the side ones.
-DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate", "ask-fix")
+DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate", "ask-fix", "unrequest")
 SENTINEL_CHECK = act.SENTINEL_CHECK
 
 # code -> meaning; the detail after ':' is free text. Rendered as chips.
@@ -137,7 +137,7 @@ REASON_CODES = {
     "risk": "risk tier from the diff shape (typo/minor/standard/major/infra)",
     "scrutiny": "heightened content scrutiny (AI-suspect) — caps at judge",
     "ai-suspect": "which AI-suspect signal fired",
-    "review": "pinned review status when not CURRENT (stale/absent/in-progress/error/triage-prose); base-merged: the head moved only by merging the base, so the reviewed diff still stands; unreadable:<why>: the review did not arrive whole (a missing page of a split review, or a tally declaring more findings than parsed) — blocked, never judge; parse-confidence:low: it parsed into no findings and nothing corroborates that",
+    "review": "pinned review status when not CURRENT (stale/absent/in-progress/error/triage-prose); base-merged: the head moved only by merging the base, so the reviewed diff still stands; unreadable:<why>: the review did not arrive whole (a missing page of a split review, or a tally declaring more findings than parsed) — blocked, never judge; parse-confidence:low: it parsed into no findings and nothing corroborates that; waived: `review:waived` is on the PR, so a stale, errored, running or missing review no longer blocks the row (it is judge at best, never stamp; open 🚨 rows and an unreadable review still block)",
     "label": "the review:* state label; `card-clean`: the label lags a base merge, but the card itself says nothing blocks, so it stands in for review:no-blockers",
     "warnings": "⚠️ reviewer-check rows still open on the brief (legacy: low-confidence)",
     "outstanding": "🚨/❓ rows still open on the author card",
@@ -160,7 +160,8 @@ REASON_CODES = {
     "size": "changed lines at or over stamp_max_lines",
     "owner": "the PR's domains and their owning roles",
     "route": "the lane this PR should go to; `no-team`: GitHub says the lane's team doesn't exist, so the SLA person is the target; `team-unverified`: the token couldn't read teams, so the config's team is used unchecked",
-    "handed-off": "a human reviewer who isn't me is requested; the row waits on them",
+    "handed-off": "a named reviewer who isn't me is requested (or, on a row outside my lanes, another lane's team); the row waits on them",
+    "requested": "me: I'm a requested reviewer by name (not through a team); `--unrequest` drops the request",
     "merging-over": "an approval or changes-requested review already on the PR",
     "not-governed": "the Sentinel does not gate this PR",
     "author": "author type when human; `generated`: a workflow opened this PR and cannot answer a review, so the row closes rather than goes back; `self`: my own PR, which GitHub lets me neither approve nor send back — it routes to the lane team",
@@ -522,7 +523,8 @@ def team_lanes(slug: str, config: routing.Config) -> set[str]:
     return {d for d, cell in config.matrix.items() if role in (cell.get("mechanical"), cell.get("substantive"))}
 
 
-def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: list[str]) -> list[str]:
+def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: list[str], is_mine: bool = False,
+                  lanes: dict | None = None, members: dict | None = None) -> list[str]:
     """Who this PR is waiting on, when it is not me: the requested human
     reviewers and teams that aren't the approver or one of the approver's
     lanes. Empty when the approver is among the requested reviewers, or when
@@ -530,15 +532,39 @@ def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: li
 
     The review request is the hand-off record: it lives on the PR, every
     session and machine sees it, and GitHub clears it when the reviewer
-    acts, which is exactly when the row should come back."""
+    acts, which is exactly when the row should come back.
+
+    A requested team never hands off a row I own (`is_mine`). The Sentinel
+    needs every lane team's approval, so another lane's team being asked
+    covers nothing of mine; and triage asks teams automatically, so a team
+    request is routing, not a decision to give the row to someone else. A
+    named person is that decision -- but only when their approval can stand
+    in for mine. On a row I own, a named reviewer hands it off only if they
+    are a member of every owning team for my lanes in it (`members`, the
+    collected `team_approvers`). A subject-matter reviewer outside those
+    teams can't approve my lane, so the Sentinel still needs me and the row
+    stays. When membership is unknown (no data, or the token couldn't read
+    it), the request still hands the row off, as it did before."""
     rr = pr.get("requested_reviewers") or {}
     users = [u for u in rr.get("users") or [] if u]
     teams = [t for t in rr.get("teams") or [] if t]
     mine = norm_login(approver) if approver else ""
     if mine and any(norm_login(u) == mine for u in users):
         return []
+    if is_mine and lanes:
+        owners = lanes.get("owners") or {}
+        my_teams = {(owners.get(d) or {}).get("team") for d in lanes.get("domains") or [] if d in me}
+        my_teams.discard(None)
+        if my_teams:
+            members = members or {}
+
+            def cannot_cover(login: str) -> bool:
+                known = [(members.get(t) or {}).get(login) for t in my_teams]
+                return any(k is False for k in known) and None not in known
+            users = [u for u in users if not cannot_cover(u)]
     others = [f"@{u}" for u in users]
-    others += [f"@{t}" for t in teams if not (set(me) & team_lanes(t, config))]
+    if not is_mine:
+        others += [f"@{t}" for t in teams if not (set(me) & team_lanes(t, config))]
     return others
 
 
@@ -748,7 +774,7 @@ def ownership(pr: dict, ctx: dict) -> dict:
         reasons.append("author:self")
         is_mine = False
     return {"lanes": lanes, "is_mine": is_mine, "reasons": reasons, "author_self": author_self,
-            "handed_off_to": handed_off_to(pr, approver, config, cfg.me)}
+            "handed_off_to": handed_off_to(pr, approver, config, cfg.me, is_mine, lanes, ctx.get("team_approvers"))}
 
 
 def _quote_safe(text: str) -> str:
@@ -864,21 +890,39 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
             reasons.append(f"label:{l}")
     if review.get("base_merged"):
         reasons.append("review:base-merged")
+    # `review:waived` is the Sentinel's logged break-glass: it skips every
+    # gate but staging evidence. Once someone has waived, a review that is
+    # stale, errored or still running is no longer what stands between the
+    # row and a merge, so it stops blocking. It still fails the stamp gate (a
+    # waiver is a judgment call, never a stamp). Open 🚨 rows and an
+    # unreadable review stay blocked: act.py's preflight refuses to merge
+    # over either one, waiver or not, so a judge row there would offer a
+    # button that can only fail.
+    # The Sentinel checks who applied the label; act.py waits for it before
+    # merging, so an unauthorized waive still can't carry a merge through.
+    waived = "review:waived" in labels
+    if waived:
+        reasons.append("review:waived")
+
+    def review_block(code: str) -> None:
+        if not waived:
+            blocked.append(code)
+
     if status != "CURRENT":
         gate_fail(f"review:{status.lower().replace('_', '-')}")
     if status == "STALE":
-        blocked.append("review:stale")
+        review_block("review:stale")
         add_action({"id": "refresh", "label": "refresh review", "cmd": f"--refresh {n}"})
     elif status == "ERROR":
-        # The pipeline's own escape hatch: `#new-review` clears the cards
+        # The pipeline's own escape hatch: `/new-review` clears the cards
         # and dispatches a fresh initial review, bypassing the skips.
-        blocked.append("review:error")
+        review_block("review:error")
         add_action({"id": "rerun", "label": "re-run the review", "cmd": f"--rerun {n}"})
     elif status == "IN_PROGRESS":
         # Usually a wait. But a crashed run leaves the label with no run
         # behind it (test_handoff_guard.py), so the fresh review is the way
         # out when the wait never ends.
-        blocked.append("review:in-progress")
+        review_block("review:in-progress")
         add_action({"id": "rerun", "label": "re-run the review (if it never lands)", "cmd": f"--rerun {n}"})
     elif status in ("ABSENT", "TRIAGE_PROSE"):
         # No review ran (trivial / frontmatter-only / draft / bot skip);
@@ -923,7 +967,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         # Blocked, not judge. An unanswered 🚨 is the review still waiting on
         # the author, and no approver's call substitutes for their answer —
         # so the row must not sit in a lane --force can reach. The author
-        # answers with a fix or `@claude <why> #update-review`; the row
+        # answers with a fix or `/update-review <why>`; the row
         # leaves this lane on the next collect.
         gate_fail(f"outstanding:{len(blockers)}:{','.join(blockers)}")
         blocked.append(f"outstanding:{len(blockers)}")
@@ -980,6 +1024,14 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
             if me and norm_login(user) == me:
                 continue  # mine: `approved:` above
             reasons.append(f"merging-over:approved-by:{user}")
+    # Someone asked for me by name. Declining is a decision of its own --
+    # the request is the one thing tying this row to me rather than to the
+    # lane -- so it takes the row's decision slot. Team requests aren't mine
+    # to drop: removing myself from a team's request removes the team.
+    requested = (pr.get("requested_reviewers") or {}).get("users") or []
+    if me and not author_self and any(norm_login(u) == me for u in requested):
+        reasons.append("requested:me")
+        add_action({"id": "unrequest", "label": "remove me as reviewer", "cmd": f"--unrequest {n}"})
 
     # -- shape
     for f in pr.get("files") or []:
@@ -1103,10 +1155,10 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         # of to you. It is one comment, so unlike the handoff it is an
         # ordinary act.py fragment and rides in the batch; the two are
         # alternatives, and the board's toggles put one out when the other
-        # lights. Offered only when there are ids to name -- an `@claude fix`
+        # lights. Offered only when there are ids to name -- a `/update-review fix`
         # with nothing after it asks for nothing.
         if act.ask_fix_items(pr):
-            add_action({"id": "ask-fix", "label": "ask @claude to fix them", "cmd": f"--ask-fix {n}",
+            add_action({"id": "ask-fix", "label": "ask Claude to fix them", "cmd": f"--ask-fix {n}",
                         "exclusive": "fix"})
 
     if author_self:
@@ -1426,9 +1478,9 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
         "unblock": ("stuck behind a merge conflict",
                     "Merges master into each branch as a merge commit and pushes, so CI re-runs. A conflicted merge is aborted and reported, never resolved blind."),
         "refresh": ("carrying a review that describes an older commit",
-                    "Asks each review to update itself against the current head (@claude #update-review). Nothing merges."),
+                    "Asks each review to update itself against the current head (/update-review). Nothing merges."),
         "rerun": ("carrying a review that errored",
-                  "Throws each stale card away and runs a fresh review from scratch (@claude #new-review). Nothing merges."),
+                  "Throws each stale card away and runs a fresh review from scratch (/new-review). Nothing merges."),
         "rerun-checks": ("stuck behind red CI",
                          "Re-runs the failed jobs of each head's workflow runs. Nothing merges; a real failure comes back red."),
     }
@@ -1585,8 +1637,8 @@ def _counts(prs: list[dict]) -> dict:
 
 
 def lanes_from_memberships(cfg: pr_review_config.UserConfig, memberships: dict, config: routing.Config) -> pr_review_config.UserConfig:
-    """No config file: take the lanes from the teams this approver is actually
-    on. Three answers, each said out loud, because "every lane is mine" and
+    """No config file, or one with no `me:`: take the lanes from the teams
+    this approver is actually on. Three answers, each said out loud, because "every lane is mine" and
     "no lane is mine" are opposite boards:
       - unreadable (no team answered True, and at least one answered None):
         every lane, the old fallback, and the warning says why;
@@ -1598,7 +1650,7 @@ def lanes_from_memberships(cfg: pr_review_config.UserConfig, memberships: dict, 
     from_teams = pr_review_config.lanes_from_teams(memberships, config)
     hidden = sorted(t for t, v in (memberships or {}).items() if v is None)
     if from_teams is None:
-        return replace(cfg, warnings=[
+        return replace(cfg, source="defaults", warnings=[
             "no config file, and your GitHub team memberships are unreadable (the token lacks read:org, or GitHub answers "
             "404 for a team it hides from it) — every lane counts as mine; create ~/.pr-review.yml to pin your lanes"])
     if not from_teams:
@@ -1614,7 +1666,7 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
             repo_root: Path = _REPO_ROOT, include_infra: bool = False, strict_stances: bool = False,
             owner: str | None = None, aliases: set[str] | None = None, today: date | None = None) -> dict:
     prs = queue.get("prs") or []
-    if cfg.source == "defaults":
+    if not cfg.me_pinned:
         cfg = lanes_from_memberships(cfg, queue.get("my_teams") or {}, config)
     if aliases is None:
         aliases = alias_only_urls(repo_root)

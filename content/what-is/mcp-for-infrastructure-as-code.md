@@ -62,7 +62,7 @@ Pulumi ships MCP support in two forms, a local server and a hosted one, so teams
 | Requires Pulumi CLI installed | Yes | No |
 | Typical fit | Local development, CI runners you already control | Editors and agents you don't want to provision a CLI on |
 
-The local server's tool names are prefixed to keep them unambiguous inside a host that may be connected to multiple servers at once: `pulumi-registry-list-resources`, `pulumi-registry-list-functions`, `pulumi-registry-get-resource`, `pulumi-registry-get-function`, `pulumi-registry-get-type`, `pulumi-cli-preview`, `pulumi-cli-up`, `pulumi-cli-stack-output`, `pulumi-cli-refresh`, `pulumi-resource-search`, and `neo-task-launcher`, plus a `deploy-to-aws` prompt for a common starting workflow. The hosted server exposes an unprefixed set with the same intent, including `get-stacks` and `resource-search`. Full parameter-level documentation lives on the [Pulumi MCP server docs page](/docs/ai/mcp-server/).
+The local server's tool names are prefixed to keep them unambiguous inside a host that may be connected to multiple servers at once: `pulumi-registry-list-resources`, `pulumi-registry-list-functions`, `pulumi-registry-get-resource`, `pulumi-registry-get-function`, `pulumi-registry-get-type`, `pulumi-cli-preview`, `pulumi-cli-up`, `pulumi-cli-stack-output`, `pulumi-cli-refresh`, `pulumi-resource-search`, and `neo-task-launcher`, plus a `deploy-to-aws` prompt for a common starting workflow. The hosted server exposes an unprefixed set with the same intent, including `get-stacks` and `resource-search`. Full parameter-level documentation lives on the [Pulumi MCP server docs page](/docs/ai/guides/set-up-mcp-server/).
 
 ### Pulumi's MCP server by the numbers
 
@@ -75,7 +75,7 @@ The local server's tool names are prefixed to keep them unambiguous inside a hos
 | Tools exposed, hosted server | 14 tools, 6 prompts | 2026-09-12 |
 | Cloud providers reachable through Pulumi's IaC engine | [Hundreds](/registry/) | 2026-09-12 |
 
-Download and pull counts come from the [npm registry](https://www.npmjs.com/package/@pulumi/mcp-server) and [Docker Hub](https://hub.docker.com/r/mcp/pulumi) on the dates shown; the tool and prompt counts are the sets enumerated on the [Pulumi MCP server docs page](/docs/ai/mcp-server/). Package-manager download counts include CI and automation traffic alongside interactive use, so treat them as a usage floor rather than a headcount of engineers.
+Download and pull counts come from the [npm registry](https://www.npmjs.com/package/@pulumi/mcp-server) and [Docker Hub](https://hub.docker.com/r/mcp/pulumi) on the dates shown; the tool and prompt counts are the sets enumerated on the [Pulumi MCP server docs page](/docs/ai/guides/set-up-mcp-server/). Package-manager download counts include CI and automation traffic alongside interactive use, so treat them as a usage floor rather than a headcount of engineers.
 
 ## What can AI agents do with it?
 
@@ -141,7 +141,7 @@ Richard Genthner, Chief Information Security Officer at Boost Insurance, frames 
 
 ## How does Neo relate to MCP?
 
-[Neo](/product/neo/) is Pulumi's infrastructure engineering agent, and MCP is one of the ways it connects to the rest of your toolchain, alongside its own direct integrations. Where the MCP server exposes granular tools, preview, deploy, search, that any MCP-compatible host can call one at a time, Neo is built specifically to plan and execute multi-step infrastructure work: migrating a Terraform codebase to Pulumi, proposing a fix when a deployment fails, or carrying out a policy change across many stacks, then opening a pull request for review. The `neo-task-launcher` tool in Pulumi's MCP server is the bridge, letting any MCP host hand a task to Neo rather than trying to orchestrate every step itself. For a deeper look at how MCP fits alongside Pulumi's other agent integrations, see [External MCP Servers](/docs/ai/neo/integrations/mcp/) and [CLI for AI Agents](/docs/ai/cli-for-agents/).
+[Neo](/product/neo/) is Pulumi's infrastructure engineering agent, and MCP is one of the ways it connects to the rest of your toolchain, alongside its own direct integrations. Where the MCP server exposes granular tools, preview, deploy, search, that any MCP-compatible host can call one at a time, Neo is built specifically to plan and execute multi-step infrastructure work: migrating a Terraform codebase to Pulumi, proposing a fix when a deployment fails, or carrying out a policy change across many stacks, then opening a pull request for review. The `neo-task-launcher` tool in Pulumi's MCP server is the bridge, letting any MCP host hand a task to Neo rather than trying to orchestrate every step itself. For a deeper look at how MCP fits alongside Pulumi's other agent integrations, see [External MCP Servers](/docs/ai/integrations/external-mcp-servers/) and [CLI for AI Agents](/docs/ai/concepts/cli-for-agents/).
 
 ## Frequently asked questions
 
@@ -184,10 +184,10 @@ Yes, through the local server's `pulumi-cli-up` tool. The hosted server doesn't 
 ## Learn more
 
 - [Best MCP Servers for Infrastructure and DevOps in 2026](/blog/best-mcp-servers-infrastructure-devops/)
-- [Pulumi MCP Server documentation](/docs/ai/mcp-server/)
+- [Pulumi MCP Server documentation](/docs/ai/guides/set-up-mcp-server/)
 - [AI-Assisted IaC with Pulumi's MCP Server](/blog/mcp-server-ai-assistants/)
 - [Announcing Pulumi Remote MCP Server](/blog/remote-mcp-server/)
-- [External MCP Servers for Neo](/docs/ai/neo/integrations/mcp/)
-- [CLI for AI Agents](/docs/ai/cli-for-agents/)
+- [External MCP Servers for Neo](/docs/ai/integrations/external-mcp-servers/)
+- [CLI for AI Agents](/docs/ai/concepts/cli-for-agents/)
 - [What is Agentic Infrastructure?](/what-is/what-is-agentic-infrastructure/)
 - [What is an Internal Developer Platform?](/what-is/what-is-an-internal-developer-platform/)

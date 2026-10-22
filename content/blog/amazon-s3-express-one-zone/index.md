@@ -1,5 +1,6 @@
 ---
 title: "10x Your Storage Performance with Amazon S3 Express One Zone and Pulumi"
+title_tag: "Amazon S3 Express One Zone with Pulumi"
 allow_long_title: True
 authors: ["joe-duffy"]
 tags: ["aws", "s3"]

@@ -1,5 +1,6 @@
 ---
 title: "Change Management with the Pulumi Kubernetes Operator and Kargo"
+title_tag: "Kargo and the Pulumi Kubernetes Operator"
 h1: "Change Management with the Pulumi Kubernetes Operator and Kargo"
 authors: 
   - "elisabeth-lichtie"

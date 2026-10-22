@@ -370,7 +370,7 @@ We can reproduce this process in code with C#, Go, Python, Typescript, or in any
     {{% /choosable %}}
 {{< /chooser >}}
 
-The complete examples for [C#](https://github.com/pulumi/examples/tree/master/azure-cs-static-website), [Go](https://github.com/pulumi/examples/blob/master/azure-go-static-website/), [Python](https://github.com/pulumi/examples/blob/master/azure-py-static-website/), and [Typescript](https://github.com/pulumi/examples/blob/master/azure-ts-static-website/index.ts) are on Github.
+The complete examples for [C#](https://github.com/pulumi/examples/tree/master/azure-cs-static-website), [Go](https://github.com/pulumi/examples/blob/master/azure-go-static-website/), [Python](https://github.com/pulumi/examples/blob/master/azure-py-static-website/), and [TypeScript](https://github.com/pulumi/examples/blob/master/azure-ts-static-website/index.ts) are on GitHub.
 
 ## Azure Static Web Apps
 

@@ -116,7 +116,7 @@ Teams:
 
 **Definition:** Template-driven pages that sell — product pages, solution pages, pricing, comparison/topic landing pages, and ad-campaign landing pages.
 
-- **Lives at:** `content/product/`, `content/solutions/`, `content/topics/`, `content/pricing/`, `content/why-pulumi/`, `content/gads/`, and ~20 similar campaign directories
+- **Lives at:** `content/product/`, `content/solutions/`, `content/topics/`, `content/why-pulumi/`, `content/gads/`, and ~20 similar campaign directories
 - **Owns:** Marketing
 - **Contributes:** Eng/Product (feature accuracy), Docs (technical review)
 - **Consumes:** Evaluators and buyers

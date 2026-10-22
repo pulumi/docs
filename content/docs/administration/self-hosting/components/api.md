@@ -28,7 +28,7 @@ The Pulumi API is one of the components required for self-hosting Pulumi Cloud i
 * Provide a persistent volume for the service to store checkpoint objects.
 * Provider a persistent volume for the MySQL data (optional if you are providing your own DB.)
 * If you are providing your own DB instance, ensure that it is accessible within the same Docker network that the service and the UI containers will be running in.
-    * The default DB endpoint is `pulumi-db:3306`. If you wish to change this, set `PULUMI_LOCAL_DATABASE_NAME` and `PULUMI_LOCAL_DATABASE_PORT` accordingly (see Script Variables.)
+    * The default DB endpoint is `pulumi-db:3306`. If you wish to change this, set `PULUMI_LOCAL_DATABASE_HOST` and `PULUMI_LOCAL_DATABASE_PORT` accordingly (see Script Variables.)
     * If you do not create this network prior to running `run-ee.sh`, it will create only a bridged network on your local host. Ensure that the DB can be accessed by the API service container.
 * Provide an external load balancer with TLS termination.
 
@@ -129,7 +129,7 @@ You only need to configure one of the support services.
 
 | Variable Name     | Description                                                                                                         |
 |-------------------|---------------------------------------------------------------------------------------------------------------------|
-| PULUMI_LOCAL_KEYS | Folder path that contains a random 32-byte key. Ensure that this path is highly available, and backed-up regularly. |
+| PULUMI_LOCAL_KEYS | Path to a file that contains a random 32-byte key. Ensure that this path is highly available, and backed-up regularly. |
 
 ### AWS KMS
 
@@ -249,7 +249,7 @@ If a feature needs to reach a service on the same host or private network as you
 | Scope         | Outbound requests it covers                                                                                                  |
 |---------------|------------------------------------------------------------------------------------------------------------------------------|
 | `ESC`         | Pulumi ESC providers and rotators that call a URL you configure: Vault, Infisical, Terraform state, GitHub login, and external providers and rotators. |
-| `AGENTS_BYOK` | Pulumi Neo requests to a [custom model provider](/docs/ai/neo/model-providers/).                                             |
+| `AGENTS_BYOK` | Pulumi Neo requests to a [custom model provider](/docs/ai/concepts/neo/model-providers/).                                             |
 | `OIDC_ISSUER` | Registering an OIDC issuer and fetching its signing keys. |
 | `VCS`         | Refreshing a member's GitHub Enterprise Server token when [individual user authentication](/docs/integrations/version-control/github-app/#individual-user-authentication-for-github-enterprise-server) is enabled. |
 | `WEBHOOKS`    | Webhook delivery. |

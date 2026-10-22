@@ -25,10 +25,10 @@ The v3 surface is on repo-wide for pulumi/docs (`REVIEW_V3_COMMENTS`), so **ever
 | Finding ids | `F1`, `F2`, … — stable across re-reviews, never reused | Synthetic `outstanding:L40`, `low:L12`, invented per run |
 | Dispositions recorded in | `<!-- REVIEW_STATE … -->` on the author card (**source of truth**) | Nowhere — the ✅ Resolved prose is the only trace |
 | Buckets | 🚨 outstanding · ❓ author-answer (both block) · ⚠️ reviewer-check (brief, advisory) · ✏️ style · 💡 pre-existing | 🚨 outstanding · ⚠️ low-confidence · ✏️ style · 💡 pre-existing |
-| Merge gate | the **Sentinel** check run | none — the labels are advisory |
-| Answer lanes | push · `@claude … #update-review` | push · `@claude … #update-review` |
+| Merge gate | the **Sentinel** status check | none — the labels are advisory |
+| Answer lanes | push · `/update-review …` | push · `/update-review …` |
 
-A PR reviewed before the flip **keeps its v2 monolith forever** — a `#update-review` on it refreshes v2 in place (`claude-update.yml` grandfathers it deliberately). Only `@claude #new-review` regenerates it as cards. Detect the surface, don't assume it from the PR's age.
+A PR reviewed before the flip **keeps its v2 monolith forever** — a `/update-review` on it refreshes v2 in place (`claude-update.yml` grandfathers it deliberately). Only `/new-review` regenerates it as cards. Detect the surface, don't assume it from the PR's age.
 
 Everything below is the v3 path unless a step says otherwise; **§Legacy v2 PRs** covers the differences.
 
@@ -80,7 +80,7 @@ Classify from the labels — the five state labels are mutually exclusive (`set-
 | `review:outstanding-issues` | Review posted, blocking findings > 0 | Step 3 |
 | `review:no-blockers` | Review posted, no blocking findings | Step 3 — ⚠️ and ✏️ items still need dispositions |
 | `review:stale` | Pushed since the review ran (or a run's head moved mid-review and its re-dispatch is pending or capped) | Refresh first (see Step 6), then Step 3 |
-| `review:error` | Workflow failed before publishing | Check the Actions run; `@claude #new-review` to retry from scratch |
+| `review:error` | Workflow failed before publishing | Check the Actions run; `/new-review` to retry from scratch |
 | `review:author-stalled` | The SLA sweep warned the author that items have sat unanswered | Work the list now; it's the clock, not a new finding |
 | `review:waived` | Someone used the Sentinel break-glass | The gate is bypassed and logged. Findings still deserve dispositions — ask before treating the PR as done |
 | `review:trivial` / `review:frontmatter-only` / `review:oversized` | Full review short-circuited | No review cards. If `review:prose-flagged` is also set, triage's advisory comment **is** the worklist — walk it the same way |
@@ -168,15 +168,15 @@ There are two lanes, for agents and humans alike:
 
 | Lane | Use it for | Cost |
 |---|---|---|
-| **Push a fix** | `fixed`. A small fix-push (≤80 changed lines, every hunk within ±3 lines of a finding's `[L…]` anchor) trips `auto-refresh-gate.py`: the card shows a 🔄 banner within a minute and refreshes itself. Wait for it rather than double-posting. **Only the author card's 🚨 and ❓ findings anchor a refresh** — a hunk fixing a ⚠️ brief item or a ✏️ suggestion falls outside every anchor and declines the whole push, so a mixed fix-push needs the mention below. | free |
-| **`@claude <reasoning> #update-review`** | Everything a push doesn't answer: a dispute, a fix the gate didn't catch, a question answered in prose, an acceptance or deferral (say which findings and why — a deferral names its issue). The model adjudicates: it concedes, holds, or records the acceptance. | a model run |
+| **Push a fix** | `fixed`. A small fix-push (≤80 changed lines, every hunk within ±3 lines of a finding's `[L…]` anchor) trips `auto-refresh-gate.py`: the card shows a 🔄 banner within a minute and refreshes itself. Wait for it rather than double-posting. **Only the author card's 🚨 and ❓ findings anchor a refresh** — a hunk fixing a ⚠️ brief item or a ✏️ suggestion falls outside every anchor and declines the whole push, so a mixed fix-push needs the comment below. | free |
+| **`/update-review <reasoning>`** | Everything a push doesn't answer: a dispute, a fix the gate didn't catch, a question answered in prose, an acceptance or deferral (say which findings and why — a deferral names its issue). The model adjudicates: it concedes, holds, or records the acceptance. | a model run |
 
 An acceptance or a held dispute stops blocking merge but moves the row to the reviewer brief's ⚠️ list with the reason attached, so the human approver weighs it. Tell the user that before they pick *Accept* or *Refute*.
 
-Put fixes, disputes, and acceptances in the *same* mention — the update path handles all of them:
+Put fixes, disputes, and acceptances in the *same* comment — the update path handles all of them:
 
 ```text
-@claude #update-review
+/update-review
 
 Fixed: F1, the language count on L40 (now "six"), and the 6 advisory Vale
 suggestions.
@@ -200,7 +200,7 @@ python3 .claude/commands/docs-review/scripts/review-worklist.py --pr "$PR" \
 
 Report in one block: what was fixed (with the commit), what was refuted (and how the model adjudicated), what was deferred (with issue links), what was accepted (with reasons), and anything still open. Then say what's next.
 
-**`--require-clean` is the author's bar, not the merge gate.** Where the Sentinel runs, a PR is done when its check passes: findings answered (G2), the team named in `.github/review-routing.yml` has approved (G3), CI green, no conflict. Read the check run rather than inferring:
+**`--require-clean` is the author's bar, not the merge gate.** Where the Sentinel runs, a PR is done when its check passes: findings answered (G2), the team named in `.github/review-routing.yml` has approved (G3), CI green, no conflict. Read the check rather than inferring:
 
 ```bash
 gh pr checks "$PR" | grep -i sentinel
@@ -210,7 +210,7 @@ gh pr checks "$PR" | grep -i sentinel
 - **Clean but Sentinel red on G3** — nothing is yours. It's waiting on a human approver; say so once and stop. A push cannot add an approval and can dismiss the ones already given.
 - **Not clean** — name exactly what's left and offer to keep going. Don't call a PR ready while the exit code says otherwise.
 
-The Sentinel is behind `REVIEW_V3_SENTINEL` (unset = dark, `report` = report-only, `1` = enforcing). That's a repo variable, so which mode is live can't be read from the repo — read the check run itself instead of trusting any sentence about the rollout, this one included. A `neutral` conclusion means the verdict rides inside the summary rather than gating: either report-only mode (`REPORT-ONLY — would be: …`) or a draft PR. `success` / `failure` means it's enforcing. Report-only mode maintains the gate-status *comment* only on `sentinel:preview` PRs, so no comment doesn't mean no check. When there's no Sentinel check on the PR at all, `--require-clean` is the whole bar — say that rather than implying a gate that isn't running.
+The Sentinel is behind `REVIEW_V3_SENTINEL` (unset = dark, `report` = report-only, `1` = enforcing). That's a repo variable, so which mode is live can't be read from the repo — read the check itself instead of trusting any sentence about the rollout, this one included. A passing check whose description starts `Preview — would be: …` is report-only mode, and `Draft — not evaluated` is a draft PR; in both the verdict rides along rather than gating. Any other `success` / `failure` means it's enforcing. (PRs from before 2026-10 can still carry the old Sentinel *check run*, which reports `neutral` for those two cases.) Report-only mode maintains the gate-status *comment* only on `sentinel:preview` PRs, so no comment doesn't mean no check. When there's no Sentinel check on the PR at all, `--require-clean` is the whole bar — say that rather than implying a gate that isn't running.
 
 ---
 
@@ -219,9 +219,9 @@ The Sentinel is behind `REVIEW_V3_SENTINEL` (unset = dark, `report` = report-onl
 A PR still carrying the monolith works the same way with four differences:
 
 1. **Ids are synthetic** (`outstanding:L40-50`, `low:L12`, `pre-existing:L7`) and get re-invented on every refresh, so a stale local state file can mismatch. Re-run Step 3 after any refresh rather than trusting `--resume` across one.
-1. **There is no `REVIEW_STATE`.** Every non-`fixed` disposition still goes through `@claude … #update-review`, and the local state file is the only ledger.
+1. **There is no `REVIEW_STATE`.** Every non-`fixed` disposition still goes through `/update-review …`, and the local state file is the only ledger.
 1. **The bucket order is** 🚨 Outstanding → ⚠️ Low-confidence → ✏️ Style → 💡 Pre-existing. There is no ❓ bucket; ⚠️ here is low-confidence findings addressed to *you*, not reviewer checks.
-1. **The Sentinel scores it by counting 🚨 bullets** on the current head. A v2 PR with open blockers can only clear G2 by having them disappear from the comment — there is no disposition lane to answer them with. If the user wants to answer rather than fix, the honest move is `@claude #new-review` to regenerate as cards; say so plainly, and note it costs a full review.
+1. **The Sentinel scores it by counting 🚨 bullets** on the current head. A v2 PR with open blockers can only clear G2 by having them disappear from the comment — there is no disposition lane to answer them with. If the user wants to answer rather than fix, the honest move is `/new-review` to regenerate as cards; say so plainly, and note it costs a full review.
 
 Offer the migration when it buys something (open blockers the user wants to dispute, or a long-lived PR that will see several more rounds). Don't offer it on a PR with nothing outstanding — a green v2 review is grandfathered by G1 and merges fine.
 
@@ -231,7 +231,7 @@ Offer the migration when it buys something (open blockers the user wants to disp
 
 - **Never** mark an item resolved because it looks minor. Style suggestions get a disposition like everything else — `accepted` with "house voice, leaving it" is a fine answer; silence is not.
 - **Never** delete, hide, or resolve the review's own comments — the `<!-- CLAUDE_REVIEW_AUTHOR -->` card, the `<!-- CLAUDE_REVIEW_BRIEF -->` brief, or a legacy `<!-- CLAUDE_REVIEW N/M -->` monolith. Hiding one makes later refreshes edit a comment nobody can see, and the author card carries `REVIEW_STATE` — delete it and every disposition on the PR is gone.
-- **Never** hand-edit `REVIEW_STATE`. Write it through `#update-review`, which re-fetches the card immediately before writing; a hand-edit races the update lane's model step and loses.
+- **Never** hand-edit `REVIEW_STATE`. Write it through `/update-review`, which re-fetches the card immediately before writing; a hand-edit races the update lane's model step and loses.
 - **Never** push a fix without confirming the review caught up afterward.
 - **Never** invent a finding's resolution in the PR thread that the diff doesn't support. The cards are scraped after merge into the `#docs-ops` digest; a false "fixed" corrupts the tuning data the review's severity rules are built from.
 - **Never** hold the user hostage. Pushy means asking once, clearly, with the cost stated. It does not mean refusing to proceed.

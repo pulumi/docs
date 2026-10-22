@@ -51,7 +51,7 @@ name: Review Label Reconcile
 # Which card: `pinned-comment.sh last-reviewed-sha`, which prefers the v3
 # author card. This job used to take the first `CLAUDE_REVIEW 1/` comment,
 # and on #21066 that was a legacy monolith left from August: every run
-# re-staled a PR whose v3 card was current, undoing each `#update-review`
+# re-staled a PR whose v3 card was current, undoing each `/update-review`
 # two hours later.
 #
 # Deterministic — no model calls. Mutations are label transitions and the
@@ -69,6 +69,9 @@ permissions:
 
 jobs:
   reconcile:
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream sync
+    # but must not run it: the scheduled lane belongs to pulumi/docs alone.
+    if: github.repository == 'pulumi/docs'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout review scripts (default branch)

@@ -40,8 +40,8 @@ Previously we identified the [essential qualities of an effective IDP](https://w
 
 * **Consistency**: [component resources](https://www.pulumi.com/learn/abstraction-encapsulation/component-resources/), [organization templates](/docs/idp/concepts/organization-templates/), [drift detection](/docs/deployments/concepts/drift/)
 * **Reproducibility**: [stacks](https://www.pulumi.com/learn/building-with-pulumi/understanding-stacks/), [deployments](/docs/deployments/concepts/), [versioned data](/registry/packages/snowflake/api-docs/dynamictable/)
-* **Visibility**: [Pulumi Insights](https://www.pulumi.com/product/pulumi-insights/), [Pulumi Copilot](https://www.pulumi.com/product/copilot/)
-* **Security and Compliance**: [RBAC](/docs/administration/concepts/rbac/teams/), [GitHub Teams](/docs/administration/concepts/rbac/teams/#github-based-teams), [SAML-SSO](/docs/administration/guides/saml/), [Pulumi ESC](https://www.pulumi.com/product/esc/), [Pulumi Crossguard](https://www.pulumi.com/crossguard/)
+* **Visibility**: [Pulumi Insights](https://www.pulumi.com/product/pulumi-insights/), [Pulumi Copilot](https://www.pulumi.com/product/neo/)
+* **Security and Compliance**: [RBAC](/docs/administration/concepts/rbac/teams/), [GitHub Teams](/docs/administration/concepts/rbac/teams/#github-based-teams), [SAML-SSO](/docs/administration/guides/saml/), [Pulumi ESC](https://www.pulumi.com/product/secrets-management/), [Pulumi Crossguard](https://www.pulumi.com/crossguard/)
 * **Auditability**: [audit logging](/docs/administration/concepts/audit-logs/)
 * **Developer Experience**: [Python/Go/JavaScript/C#](/docs/iac/languages-sdks/), [popular IDE support](https://www.pulumi.com/blog/next-level-iac-breakpoint-debugging/), [command-line tools](/docs/iac/cli/), [deeply hackable](https://www.pulumi.com/automation/)
 
@@ -190,14 +190,14 @@ Policies:
 
 This allows you to implement company-specific policies that can be as simple or complex as you need them to be.
 
-To apply this across your entire organization, you can [publish this policy pack to Pulumi Cloud](https://www.pulumi.com/docs/discovery-governance/policy/policy-packs/authoring/#publishing-to-your-organization), with the following commands:
+To apply this across your entire organization, you can [publish this policy pack to Pulumi Cloud](https://www.pulumi.com/docs/discovery-governance/guides/write-a-policy-pack/#publishing-to-your-organization), with the following commands:
 
 ```shell
 $ pulumi policy publish myorg
 $ pulumi policy enable myorg/my-policy-pack latest
 ```
 
-Some other great features of Crossguard are the ability to [version policies](https://www.pulumi.com/docs/support/faq/policies/#how-do-i-version-a-policy-pack), define multiple [policy groups](https://www.pulumi.com/docs/discovery-governance/policy/policy-groups/), and create [remediation policies](https://www.pulumi.com/blog/remediation-policies/) that automatically fix policy violations when possible. We will cover these topics in a future post where we go deeper on how to use policies effectively.
+Some other great features of Crossguard are the ability to [version policies](https://www.pulumi.com/docs/support/faq/policies/#how-do-i-version-a-policy-pack), define multiple [policy groups](https://www.pulumi.com/docs/discovery-governance/concepts/policy-as-code/policy-groups/), and create [remediation policies](https://www.pulumi.com/blog/remediation-policies/) that automatically fix policy violations when possible. We will cover these topics in a future post where we go deeper on how to use policies effectively.
 
 ## Multi-Language Components (MLC)
 

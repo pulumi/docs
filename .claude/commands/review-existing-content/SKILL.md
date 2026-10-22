@@ -766,13 +766,13 @@ withdrawn and its finding reported `unresolved`, whatever you wrote.
 
 Every id in `select.json`'s `open` gets exactly one entry; a missing or
 malformed entry is recorded `unresolved`. The workflow, not you, commits and
-pushes as pulumi-bot, posts one `@claude … #update-review` comment with your
+pushes as pulumi-bot, posts one `/update-review …` comment with your
 dispositions (the update lane then refreshes the card), records them in the
 PR body's **Post-open review findings** table, and hands every `unresolved`
 finding to the routed team by name. There are at most two passes per PR and
 never two on the same head. The autofix stands down on any PR a person has
-pushed to or answered a finding on (`@claude F3: … #update-review`; a bare
-`@claude #update-review` refresh doesn't count): from then on it is theirs.
+pushed to or answered a finding on (`/update-review F3: …`; a bare
+`/update-review` refresh doesn't count): from then on it is theirs.
 
 ## Report-only mode — no model runs
 

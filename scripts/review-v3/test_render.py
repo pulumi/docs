@@ -432,7 +432,12 @@ def test_a_row_carries_its_age_without_crowding_the_meta_line():
     assert render.age_label({"created_at": "2026-03-01T00:00:00Z"}, now) == "6mo"  # never longer than four chars
     assert render.age_label({"created_at": ""}, now) == "today"  # a missing date reads as new, never as ancient
 
-    q = run([stampable(7), stampable(8, title="Been sitting a while", created_at="2026-01-05T00:00:00Z")])
+    # The board ages rows against the real clock, so the plain row's date has
+    # to be relative too: `stampable`'s fixed default (2026-09-10) turned
+    # amber on 2026-10-10 and this assertion has failed ever since.
+    fresh = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    q = run([stampable(7, created_at=fresh),
+             stampable(8, title="Been sitting a while", created_at="2026-01-05T00:00:00Z")])
     html = render.render_board(q)
     assert f'>{render.age_label(row(q, 7))}</span>' in html
     assert 'class="age old"' in html and 'class="age"' in html  # amber past 30 days, plain before it
@@ -663,6 +668,43 @@ def test_the_composer_reads_the_lit_buttons():
 
 
 
+def test_the_relay_sends_only_what_the_board_composed():
+    """The comment relay under jsdom with a fake `claude.use("comments")`:
+    hidden without the capability, disabled with no session watching, and
+    when a session is there, a send carries the composed command, confirm
+    and discard carry only the server-rendered digest, refresh carries
+    nothing else, and a refused send gives the buttons back."""
+    import shutil  # noqa: PLC0415
+    import subprocess  # noqa: PLC0415
+    import tempfile  # noqa: PLC0415
+    repo = HERE.parent.parent
+    node = shutil.which("node")
+    if not node or not (repo / "node_modules" / "jsdom" / "package.json").is_file():
+        print("  skip: test_the_relay_sends_only_what_the_board_composed (needs node and jsdom from `make ensure`)")
+        return
+    q = run([stampable(11, files=[_file("content/docs/a.md", ["x"], ["o"])])], cfg=cfg(me=["docs"]))
+    relay_ = {"digest": "0123456789abcdef", "thread": "thread-7", "preview": "Plan · pulumi/docs · 1 step(s)", "planned_at": "now"}
+    with tempfile.TemporaryDirectory() as td:
+        board = Path(td) / "board.html"
+        board.write_text(render.render_board(q, relay=relay_))
+        res = subprocess.run([node, str(HERE / "test_render_relay.js"), str(board),
+                              json.dumps({"digest": relay_["digest"], "thread": relay_["thread"], "stamp": "11"})],
+                             cwd=repo, capture_output=True, text=True, timeout=120)
+    assert res.returncode == 0, res.stdout + res.stderr
+
+
+def test_the_relay_panels_are_escaped_and_absent_by_default():
+    q = run([stampable(11, files=[_file("content/docs/a.md", ["x"], ["o"])])], cfg=cfg(me=["docs"]))
+    plain = render.render_board(q)
+    assert 'id="relaypending"' not in plain and "Last run from this board" not in plain
+    assert 'id="relayrun"' in plain and 'id="relayrun" type="button" hidden' in plain   # hidden until the capability answers
+    html_ = render.render_board(q, relay={"digest": "0123456789abcdef", "preview": "<script>x</script>", "last_run": "✓ stamp #1 & done"})
+    assert 'data-digest="0123456789abcdef"' in html_
+    assert "<script>x</script>" not in html_ and "&lt;script&gt;x&lt;/script&gt;" in html_
+    assert "✓ stamp #1 &amp; done" in html_
+    assert "--expect-digest 0123456789abcdef" in html_   # the no-session fallback names the same gate
+
+
 def test_the_terminal_carries_everything_the_board_shows():
     # --terminal used to cut each row at 110 characters, print blockers
     # nowhere, print actions for judge rows only, hide open findings on an
@@ -724,7 +766,7 @@ def test_rows_waiting_on_the_author_and_rows_with_no_unblock_are_never_silent():
     full = render.render_board(q, include_handed_off=True)
     assert ">waiting on the author</span>" in full and full.count(">no action available</span>") == 1   # #4 only
     assert "<b>1</b><span>blocked, no action</span>" in full
-    assert "#update-review" in render.chip_title("outstanding:2:F1,F2")
+    assert "/update-review" in render.chip_title("outstanding:2:F1,F2")
     # the new chips read as words, stay out of the fold, and explain themselves
     row1 = html.split('data-pr="1"')[1].split('class="acts"')[0]
     assert ">your own PR<" in row1.split("<summary>why")[0]
@@ -855,7 +897,7 @@ def test_a_stuck_workflow_row_offers_an_interactive_fix_off_the_act_command():
 
 
 def test_the_two_ways_to_fix_a_stuck_row_put_each_other_out():
-    """"fix it yourself" and "ask @claude to fix them" do the same job by
+    """"fix it yourself" and "ask Claude to fix them" do the same job by
     different routes, so they share one exclusive group and the composer
     lights only one. The handoff is deliberately not a decision, so the
     one-decision-per-row rule cannot pair them on its own."""
@@ -865,7 +907,7 @@ def test_the_two_ways_to_fix_a_stuck_row_put_each_other_out():
     hand = html.split('class="btn hand"')[1].split("</button>")[0]
     assert 'data-exclusive="fix"' in hand, hand
     ask = html.split('data-cmd="--ask-fix 18"')[1].split("</button>")[0]
-    assert 'data-exclusive="fix"' in ask and ">ask @claude to fix them" in ask, ask
+    assert 'data-exclusive="fix"' in ask and ">ask Claude to fix them" in ask, ask
     # the ask is a write, so unlike the handoff it is an --act fragment
     assert 'data-kind="decision"' in ask
     assert "clearExclusive" in html
@@ -874,7 +916,7 @@ def test_the_two_ways_to_fix_a_stuck_row_put_each_other_out():
 
 def test_a_blocked_row_shows_the_findings_holding_it():
     """A row blocked on open findings shows them under the blocker. Every way
-    out it offers -- send back, close, ask @claude to fix them, fix it
+    out it offers -- send back, close, ask Claude to fix them, fix it
     yourself -- is a decision about those findings, so the board has to say
     what they are, as the terminal already does."""
     q = run([stampable(18, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="pulumi-bot", author_type="User",

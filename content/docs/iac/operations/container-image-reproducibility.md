@@ -1299,4 +1299,4 @@ That doesn't make `docker.Image` a poor choice for programs already built on it.
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) and [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/) — CI/CD workflow patterns this guide builds on.
 - [Stacks and stack references](/docs/iac/concepts/stacks/#stackreferences) — the mechanism behind the build/deploy split above.
 - [State and backends](/docs/iac/concepts/state-and-backends/) — why Pulumi Cloud is the recommended backend for multi-stack workflows like this one.
-- [AWS ECS](/docs/iac/guides/clouds/aws/ecs/) — deploying containerized applications to Amazon ECS with Pulumi.
+- [AWS ECS](/dev/tutorials/aws-ecs/) — deploying containerized applications to Amazon ECS with Pulumi.

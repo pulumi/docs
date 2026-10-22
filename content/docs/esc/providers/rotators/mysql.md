@@ -18,7 +18,7 @@ The `mysql` rotator enables you to rotate user credentials for a MySQL database 
 There are 2 methods to use this rotator:
 
 - **Direct Connect rotation** - when your database is publicly accessible
-- **Connector rotation** - when your database is in a private network. This method requires you setup a [rotation connector](/docs/esc/concepts/rotators#rotation-connectors) in your network.
+- **Connector rotation** - when your database is in a private network. This method requires you setup a [rotation connector](/docs/esc/concepts/rotators/#rotation-connectors) in your network.
 
 {{< pulumi-cloud "esc-db-secrets-rotation-private" >}}
 That applies to **Connector rotation** only — **Direct Connect rotation** works on every edition.
@@ -27,8 +27,8 @@ That applies to **Connector rotation** only — **Direct Connect rotation** work
 ## Prerequisites
 
 - A running database instance in AWS
-- [Database users setup for rotation](/docs/esc/operations/rotation/db-user-setup)
-- (If you are using Connector rotation) [AWS Lambda Rotation Connector setup](/docs/esc/operations/rotation/aws-lambda)
+- [Database users setup for rotation](/docs/esc/operations/rotation/db-user-setup/)
+- (If you are using Connector rotation) [AWS Lambda Rotation Connector setup](/docs/esc/operations/rotation/aws-lambda/)
 
 ## Example
 
@@ -134,14 +134,14 @@ When you open the environment after a rotation, you should see output similar to
 
 | Symptom | Likely cause | Resolution |
 |---------|--------------|------------|
-| Rotation fails to connect to the database | The `host` or `port` is wrong, or the database is in a private network without a connector. | Verify `host` and `port`. For databases in a private network, configure a [rotation connector](/docs/esc/operations/rotation/aws-lambda) and set `database.connector`. |
-| Rotation fails with a permissions or authentication error | The `managingUser` may lack the privileges needed to change the rotated users' passwords. | Grant the managing user the privileges described in [database user setup](/docs/esc/operations/rotation/db-user-setup), then rotate again. |
+| Rotation fails to connect to the database | The `host` or `port` is wrong, or the database is in a private network without a connector. | Verify `host` and `port`. For databases in a private network, configure a [rotation connector](/docs/esc/operations/rotation/aws-lambda/) and set `database.connector`. |
+| Rotation fails with a permissions or authentication error | The `managingUser` may lack the privileges needed to change the rotated users' passwords. | Grant the managing user the privileges described in [database user setup](/docs/esc/operations/rotation/db-user-setup/), then rotate again. |
 | Applications fail to authenticate after a rotation | Apps may be reading the `previous` credentials, or rotation may run more frequently than apps refresh their configuration. | Configure applications to read `current`, and ensure the rotation schedule is less frequent than the application configuration refresh interval. |
 
 ## Related
 
 - [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
 - [Rotation connectors](/docs/esc/operations/rotation/) - Reach databases in a private network
-- [Database user setup](/docs/esc/operations/rotation/db-user-setup) - Prepare database users for rotation
+- [Database user setup](/docs/esc/operations/rotation/db-user-setup/) - Prepare database users for rotation
 - [postgres rotator](/docs/esc/providers/rotators/postgres/) - Rotate credentials for a PostgreSQL database
 - [aws-login](/docs/esc/providers/login/aws-login/) - Authenticate with AWS for connector-based rotation

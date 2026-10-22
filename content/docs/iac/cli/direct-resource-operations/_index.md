@@ -44,7 +44,7 @@ pulumi do <package:module:function> [flags]
 pulumi do <package:module:type> <operation> [<name>|<id>] [flags]
 ```
 
-The `create`, `delete` and `patch` operations take the resource's [logical name](/docs/iac/concepts/resources/names), while the `read` operation takes the provider-assigned [physical ID](/docs/iac/concepts/resources/names). With `--stateless`, `create` takes no argument and `delete` and `patch` take the provider-assigned ID instead of the name.
+The `create`, `delete` and `patch` operations take the resource's [logical name](/docs/iac/concepts/resources/names/), while the `read` operation takes the provider-assigned [physical ID](/docs/iac/concepts/resources/names/). With `--stateless`, `create` takes no argument and `delete` and `patch` take the provider-assigned ID instead of the name.
 
 The package, module, and type/function segments come directly from the provider schema. Pass `--help` at any level of the command tree to discover available subcommands.
 

@@ -1,13 +1,14 @@
 ---
 title: Pulumi Python SDK API Reference
-meta_desc: API reference for the Pulumi Python SDK (pulumi), the Policy SDK (pulumi_policy), and the ESC SDK (pulumi_esc_sdk), regenerated on every release.
+meta_desc: API reference for the Pulumi Python SDK (pulumi), plus the Policy (pulumi_policy), ESC (pulumi_esc_sdk), and Cloud (pulumi_cloud_sdk) SDKs.
 ---
 
-Each package below has its own auto-generated reference documentation, regenerated independently on every upstream release.
+Each package below has its own auto-generated reference documentation, regenerated independently from each package's releases.
 
 - [**Pulumi SDK** (`pulumi`)](/docs/reference/pkg/python/pulumi/): the core Pulumi SDK for Python.
 - [**Pulumi Policy SDK** (`pulumi_policy`)](/docs/reference/pkg/python/pulumi_policy/): for authoring policy packs for Pulumi Policies in Python.
 - [**Pulumi ESC SDK** (`pulumi_esc_sdk`)](/docs/reference/pkg/python/pulumi_esc_sdk/): for programmatically interacting with Pulumi ESC (Environments, Secrets, and Configuration).
+- [**Pulumi Cloud SDK** (`pulumi_cloud_sdk`)](/docs/reference/pkg/python/pulumi_cloud_sdk/): for calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) from your own code. See [Pulumi Cloud SDK](/docs/administration/concepts/cloud-sdk/) for an overview.
 
 The reference for the Pulumi Terraform Bridge Python package has moved — see [Terraform on the Pulumi Registry](/registry/packages/terraform/api-docs/).
 

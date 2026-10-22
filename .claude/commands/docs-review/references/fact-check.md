@@ -362,7 +362,8 @@ If the inline check fails to resolve a claim that was classified `pulumi-interna
 | Sibling-pattern (frontmatter, file location, alias) | Nearest sibling under `content/docs/<closest>/` |
 | Resource schema / API surface | `pulumi/pulumi-<provider>` |
 | New symbol (flag/command/API) the docs PR links an implementing PR for | The linked `pulumi/*` PR/commit — `gh pr diff <n> -R pulumi/<repo>` — authoritative for a feature not yet on `master` or in the published reference |
-| Pricing / edition / tier / limit / quota | `content/pricing/_index.md` — a large feature×tier matrix; **grep it for the feature name**, don't trust a truncated head-read (a value deep in the table reads as absent otherwise) |
+| Edition / tier (which edition a feature needs) | `data/pulumi_editions.yaml` — every Pulumi Cloud feature and its lowest edition, generated from pulumi/marketing-web; **grep it for the feature name**, don't trust a truncated head-read |
+| Pricing / limit / quota | The live https://www.pulumi.com/pricing/ page. It is built by pulumi/marketing-web from `apps/www/src/data/pricing/`, not by this repo |
 | Shortcode | `layouts/shortcodes/<name>.html` |
 | Alias / redirect | `aliases:` frontmatter + `scripts/redirects/*` |
 | Frontmatter field semantics | An existing page in the same content tree that uses the field |

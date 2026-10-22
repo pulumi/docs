@@ -63,7 +63,7 @@ OIDC Trust seamlessly integrate with [Pulumi ESC](/docs/esc/), providing a compr
 
 ## Demo
 
-In this demo, we are going to use Github Actions to retrieve Pulumi credentials and use them to list all the Pulumi ESC Environments in our organization.
+In this demo, we are going to use GitHub Actions to retrieve Pulumi credentials and use them to list all the Pulumi ESC Environments in our organization.
 
 <!-- markdownlint-disable ol-prefix -->
 1. Go to the OIDC Issuers Page.
@@ -123,5 +123,5 @@ jobs:
 ## Next steps
 
 * [OIDC Trust Relationships overview](/docs/pulumi-cloud/oidc/client/)
-* [Configuring OIDC for Github](/docs/pulumi-cloud/oidc/client/github/)
+* [Configuring OIDC for GitHub](/docs/pulumi-cloud/oidc/client/github/)
 * [Configuring OpenID Connect for Google Kubernetes Engine](/docs/pulumi-cloud/oidc/client/kubernetes-gke/)

@@ -10,8 +10,10 @@
 # following .claude/commands/brand-vale-sync/SKILL.md) re-reads each listed
 # brand section through the brand MCP server, compares it against the rule it
 # feeds, and opens a PR when they've drifted — e.g. a newly retired product
-# name that Substitutions/DeprecatedProductNames don't know about yet. After a
-# verified sync (drift fixed, or confirmed none), it updates last_synced.
+# name that Substitutions/DeprecatedProductNames don't know about yet. A sync
+# that fixes drift updates last_synced; a clean run changes nothing and opens
+# no PR, so last_synced is the date the mirror last changed, not the date it
+# was last checked (the workflow's run history has that).
 #
 # When YOU change one of these rules by hand, ask first whether the change
 # belongs upstream in the brand guide; the mirror never leads, it follows.
@@ -67,7 +69,7 @@
 # both carry `action: replace`, so a duplicate offers two one-click fixes with
 # different replacements on the same span.
 
-last_synced: "2026-09-28"
+last_synced: "2026-10-12"
 
 sections:
   # get_guidelines({section: "terminology"}) / brand.pulumi.com/voice/names-and-terminology/

@@ -784,7 +784,7 @@ $ pulumi stack init my-stack \
 
 ### Changing the secrets provider for a stack
 
-To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`](/docs/iac/cli/commands/pulumi_stack_change-secrets-provider) command.
+To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`](/docs/iac/cli/commands/pulumi_stack_change-secrets-provider/) command.
 
 ```bash
 $ pulumi stack change-secrets-provider "<secrets-provider>"

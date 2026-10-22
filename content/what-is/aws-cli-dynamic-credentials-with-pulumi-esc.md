@@ -47,6 +47,10 @@ Most AWS CLI credential errors, such as `ExpiredToken`, `InvalidAccessKeyId`, `I
 
 "An error occurred (SignatureDoesNotMatch) when calling the ListBuckets operation" means AWS could not verify the cryptographic signature computed from the secret access key. This usually points to a secret key that was copied incorrectly, is out of sync with its access key ID, or a system clock that has drifted enough to invalidate the signed request.
 
+### UnrecognizedClientException
+
+An `UnrecognizedClientException` (HTTP 403) means the X.509 certificate or AWS access key ID in the request does not exist in AWS's records. The [AWS STS common errors reference](https://docs.aws.amazon.com/STS/latest/APIReference/CommonErrors.html) lists this error and advises verifying that the credentials are valid and have not expired. Double-check that the key has not been rotated or deleted, and that the request is reaching the intended region.
+
 ### Unable to locate credentials
 
 The AWS CLI and SDKs raise "Unable to locate credentials" when they cannot find any credentials at all in the usual places: environment variables, the shared credentials file, an EC2 instance profile, or an assumed role. It is the default failure when nothing has been configured yet.
@@ -55,7 +59,7 @@ Every one of these errors disappears when credentials are generated fresh for ea
 
 ## Using Pulumi ESC for dynamic credentials with AWS
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `pulumi env run` command in particular helps resolve concerns around how to:
+[Pulumi ESC](https://www.pulumi.com/product/secrets-management/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `pulumi env run` command in particular helps resolve concerns around how to:
 
 - Securely share credentials with teammates in a consistent way.
 - Minimize the risks associated with locally configured, long-lived and highly privileged credentials.
@@ -163,6 +167,10 @@ Both errors mean AWS could not validate the access key or token it received, eit
 ### Why does AWS return SignatureDoesNotMatch?
 
 This error means AWS could not verify the request's cryptographic signature, usually because a secret access key was copied incorrectly, is mismatched with its access key ID, or the system clock has drifted. Dynamic credentials from Pulumi ESC avoid the problem entirely, since the access key and secret are generated together and used immediately.
+
+### What does the UnrecognizedClientException error mean in AWS?
+
+It means the X.509 certificate or AWS access key ID used to sign the request does not exist in AWS's records. AWS lists it as a common error with HTTP status code 403 and advises verifying that the credentials are valid and have not expired ([AWS STS common errors](https://docs.aws.amazon.com/STS/latest/APIReference/CommonErrors.html)). The fix is the same as for the other credential errors above: generate a fresh, valid key or session token rather than trying to repair the one that failed, and confirm the request is targeting the correct region.
 
 ### What does "Unable to locate credentials" mean and how do I fix it?
 

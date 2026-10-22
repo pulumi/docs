@@ -1,7 +1,7 @@
 name: Auto-label new issues
 
 # Replaces add-triage-label.yml. When an issue is opened or reopened, one
-# cheap Haiku call reads the issue title/body plus the repo's real area/* label
+# cheap Haiku 5.5 call reads the issue title/body plus the repo's real area/* label
 # menu and the org's issue-type menu, and classifies the issue. Shell enforces
 # the result deterministically: a confident classification sets the issue Type
 # and any area/* labels (and removes needs-triage); otherwise needs-triage stays
@@ -91,6 +91,16 @@ jobs:
           ALLOWED_TYPES=$(echo "$TYPES_JSON" | jq -r '.[].name')
 
           # 3. One Anthropic call (smallest capable model; small max_tokens).
+          #    Haiku 5.5 with thinking off at low effort (2026-10-07 benchmark,
+          #    60 human-labeled issues x 2 reps; campaign 2026-10-07-haiku55-fitness
+          #    in pulumi/docs-review-benchmarks): 74 of 120 classifications fully
+          #    correct vs 56 on Haiku 4.5, area-label precision 73% vs 59%, at
+          #    about a tenth of the cost. Haiku 5.5 thinks by default, and a
+          #    thinking block arrives first, so a bare model swap leaves
+          #    .content[0].text empty and every issue falls back to needs-triage.
+          #    Thinking stays explicitly off here; the parse below also selects
+          #    text blocks by type so it can never read a thinking block.
+          #    No temperature/top_p/top_k: Haiku 5.5 rejects non-default values.
           #    The request is built entirely with jq -n so the menus, title, and
           #    body are JSON-escaped safely (same pattern as claude-triage.yml).
           #    The model only suggests; it picks from the menus and returns
@@ -103,8 +113,10 @@ jobs:
             --arg title "$TITLE" \
             --arg body "$BODY" \
             '{
-              model: "claude-haiku-4-5-20251001",
-              max_tokens: 200,
+              model: "claude-haiku-5-5",
+              max_tokens: 400,
+              thinking: {type: "disabled"},
+              output_config: {effort: "low"},
               messages: [{
                 role: "user",
                 content: ($instructions
@@ -123,7 +135,7 @@ jobs:
           # 4. Parse defensively. Strip markdown fences, validate JSON. On any
           #    failure, the suggestions stay empty and CONFIDENT stays false →
           #    fallback.
-          TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+          TEXT=$(echo "$RESPONSE" | jq -r '[.content[]? | select(.type == "text") | .text] | join("")')
           SUGGESTED_LABELS=""
           SUGGESTED_TYPE=""
           CONFIDENT="false"

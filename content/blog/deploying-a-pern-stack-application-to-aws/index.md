@@ -348,4 +348,4 @@ In this example, I explained the basic principles behind PERN stack applications
 
 Next week, I'll demonstrate how to integrate applications with Kubernetes, and seamlessly deploy them to EKS using Pulumi.
 
-The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/master/aws-ts-pern-voting-app).
+The blog post's code can be [found on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-pern-voting-app).

@@ -53,7 +53,7 @@
 #
 # Menu group headers (`menu:` below) are defined in config/_default/menus.yml.
 #
-# `feature:` is the data/pulumi_pricing.yaml feature id that decides which edition
+# `feature:` is the data/pulumi_editions.yaml feature id that decides which edition
 # the generated pages' Pulumi Cloud callout names. Pulumi Best Practices is the only
 # section here on Essentials and above; the compliance frameworks are Enterprise.
 
@@ -134,6 +134,13 @@ sections:
         h1: CMMC 2.0 - AWS
         metaDesc: Complete list of CMMC 2.0 compliance policies for AWS.
         weight: 1
+      - pack: cmmc-google-cloud
+        source: packs/cmmc/gcp
+        slug: google-cloud
+        title: Google Cloud
+        h1: CMMC 2.0 - Google Cloud
+        metaDesc: Complete list of CMMC 2.0 compliance policies for Google Cloud.
+        weight: 3
 
   - id: hitrust
     menu: reference-pre-built-policy-packs-hitrust

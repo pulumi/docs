@@ -22,10 +22,16 @@ aliases:
 
 The plugin provides:
 
-- **Stack Activity View**: A Pulumi tab that displays stack activity for Backstage projects containing Pulumi stacks
-- **Scaffolding Actions**: Two scaffolding actions for the Backstage template system:
+- **Pulumi cards and activity view**: Cards for Backstage components and systems that show the Pulumi stack, organization, project, and stack outputs, along with a stack activity view. Entities with multiple stacks or organizations display them as tabs.
+- **Pulumi Dashboard**: An optional standalone page showing organization-wide metrics, recent stack updates, deployments, and resource trends.
+- **Scaffolding actions**: Actions for the Backstage template system:
   - `pulumi:new` - Create new Pulumi projects from [organization templates](/docs/idp/concepts/organization-templates)
-  - `pulumi:up` - Trigger Pulumi stack updates
+  - `pulumi:up` - Run a Pulumi stack update
+  - `pulumi:preview` - Preview the changes a stack update would make
+  - `pulumi:destroy` - Destroy the resources in a stack
+  - `pulumi:deployment:config` - Configure [Pulumi Deployments](/docs/deployments/) settings for a stack
+  - `pulumi:deployment:run` - Run a Pulumi deployment
+- **Catalog provider**: A catalog backend module that imports Pulumi stacks into the Backstage software catalog as Resource entities.
 
 ## Installation
 

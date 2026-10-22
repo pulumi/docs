@@ -393,4 +393,4 @@ export const URL = clientsideListener.status.loadBalancer.ingress[0].hostname;
 
 In this example, we showed how to change a PERN stack-based application to use MERN, and demonstrated the ease with which a designer can swap out different components. The isolated nature of containerized applications allows for a great deal of modularity. It can significantly reduce the amount of time spent renovating previously written code to fit any added new components.
 
-The MERN application code is [on Github](https://github.com/pulumi/examples/tree/master/aws-ts-k8s-mern-voting-app).
+The MERN application code is [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-k8s-mern-voting-app).

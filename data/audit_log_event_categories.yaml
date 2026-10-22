@@ -90,10 +90,13 @@
 
 - id: organization
   name: Organization and members
-  description: Organization settings, invitations, membership, custom roles, service accounts, and trials.
+  description: Organization settings, invitations, membership, custom roles and role assignments, service accounts, and trials.
   match:
     prefixes:
       - custom-role-
+      # Granting or revoking a user's role on an entity
+      # (`entity-user-assignment-granted`, `entity-user-assignment-revoked`).
+      - entity-user-assignment-
       - member-
       - organization-
       - retrial-
