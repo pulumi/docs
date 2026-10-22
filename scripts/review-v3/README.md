@@ -169,7 +169,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 
 | Gate | Green when | Red says |
 |---|---|---|
-| G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note) | push / `/update-review` / `/new-review` |
+| G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | push / `/update-review` / `/new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `/update-review …` phrasing |
 | G3 right-approver | an APPROVED latest review at head from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); re-run the failed "Build and deploy testing" run or dispatch it at the branch to retry — **not waivable** |
@@ -246,10 +246,16 @@ because a surface only workflow-authored PRs carry tests the renderer and no
 reader. `--update-strip` stays enforcing-only: the ⛔ strip edits the author
 card, which is someone else's comment. External contributors (fork head repo — never the
 author's permission level, which is `none` for GitHub Apps like workprentice)
-skip G1/G2 per config — the approving reviewer's review is the review. A
-`review:trivial` PR that isn't mechanical (prose-flagged) passes G1/G2 on
-triage's `<!-- TRIAGE_PROSE -->` comment instead of a review; G3 still needs
-the human approver the demotion asked for.
+skip G1/G2 per config — the approving reviewer's review is the review. The
+same holds for the PRs the review lane skips by policy, as long as they never
+got a review: a `review:trivial` or `review:frontmatter-only` PR whose diff
+really has that shape (the Sentinel re-runs triage's `classify_pr` on the
+diff rather than trust a label anyone with triage access can apply), and a
+`pulumi-bot` or Dependabot PR on a branch the lane doesn't review (anything
+but `content-review/`, `fix/broken-links-`, `vale/brand-sync-`). Triage's
+`<!-- TRIAGE_PROSE -->` comment rides along as advisory nits; it is required
+only under `review:prose-flagged`, whose nits nobody can see without it. G3
+still needs the human approver in every case.
 
 Every label the evaluator reads must also appear in `review-sentinel.yml`'s label-event filter, or it only takes effect on the next unrelated event. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
