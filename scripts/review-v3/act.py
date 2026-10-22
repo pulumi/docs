@@ -129,9 +129,11 @@ DECISION_KINDS = ("stamp", "request-changes", "close", "route", "unrequest")
 REASON_KINDS = ("request-changes", "refresh", "rerun", "close")
 # The Sentinel concludes failure until an approval exists, so it can't gate
 # the approval it waits for. It is left out of the pre-approval rollup and
-# polled on its own between the approval and the merge.
+# polled on its own between the approval and the merge. The wait is for the
+# verdict the approval triggers, which can sit queued for minutes behind a
+# batch of other runs: 90 s refused merges that went green moments later.
 SENTINEL_CHECK = "sentinel"
-SENTINEL_WAIT_S = 90
+SENTINEL_WAIT_S = 600
 SENTINEL_POLL_S = 10
 # A conflicted --unblock used to fail into the run's stdout and nowhere else:
 # nothing was written, so the next collect saw the same `mergeable:dirty` and
@@ -820,12 +822,18 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
     return True, "ok", detail
 
 
-def wait_for_sentinel(gh: GhClient, head: str, sleep=time.sleep) -> tuple[bool, str]:
+def wait_for_sentinel(gh: GhClient, head: str, sleep=time.sleep, since: str = "") -> tuple[bool, str]:
     """After the approval, before the merge: the Sentinel re-evaluates on the
-    review event, so give it a bounded wait and refuse the merge if it lands
+    review event, so wait for that verdict and refuse the merge if it lands
     red. Absent, neutral or green all proceed; still pending at the deadline
-    refuses — re-running the step retries the merge without re-approving."""
+    refuses — re-running the step retries the merge without re-approving.
+
+    `since` is the approval's `submitted_at`. A red verdict that completed
+    before it is the pre-approval one, which is red by construction, so the
+    wait keeps polling for the re-evaluation instead of refusing on it. A
+    verdict with no timestamp to compare is taken at its word."""
     attempts = SENTINEL_WAIT_S // SENTINEL_POLL_S
+    stale = False
     for attempt in range(attempts + 1):
         runs = ([r for r in gh.check_runs(head) if _is_sentinel(r)]
                 + [_status_as_run(st) for st in gh.commit_statuses(head) if _is_sentinel(st)])
@@ -834,11 +842,17 @@ def wait_for_sentinel(gh: GhClient, head: str, sleep=time.sleep) -> tuple[bool, 
         run = max(runs, key=collect._run_order)
         if run.get("status") == "completed":
             c = run.get("conclusion") or ""
-            if c in collect.FAILED_CONCLUSIONS:
+            if c not in collect.FAILED_CONCLUSIONS:
+                return True, f"Sentinel {c or 'completed'}"
+            done = run.get("completed_at") or ""
+            stale = bool(since and done and done < since)
+            if not stale:
                 return False, f"Sentinel check concluded {c}"
-            return True, f"Sentinel {c or 'completed'}"
         if attempt < attempts:
             sleep(SENTINEL_POLL_S)
+    if stale:
+        return False, (f"Sentinel had not re-evaluated since the approval after {SENTINEL_WAIT_S}s; "
+                       "re-run the step to retry the merge")
     return False, f"Sentinel check still pending after {SENTINEL_WAIT_S}s; re-run the step to retry the merge"
 
 
@@ -991,17 +1005,21 @@ def _stamp(gh: GhClient, s: Step, *, dry_run: bool = False, sleep=time.sleep) ->
     me = norm_login(gh.me())
     skipped = []
     approval = s.args.get("body") or approval_body(s.author_type, "high", s.args.get("note", ""))
-    if _already_approved(gh.reviews(s.pr), me, head):
+    reviews = gh.reviews(s.pr)
+    if _already_approved(reviews, me, head):
         skipped.append("already approved at this head")
+        approved_at = max((r.get("submitted_at") or "" for r in reviews
+                           if norm_login((r.get("user") or {}).get("login")) == me
+                           and r.get("state") == "APPROVED"), default="")
     else:
-        gh.create_review(s.pr, "APPROVE", approval)
+        approved_at = (gh.create_review(s.pr, "APPROVE", approval) or {}).get("submitted_at") or ""
     tail = f" [{'; '.join(skipped)}]" if skipped else ""
     if not s.args.get("merge"):
         return True, "approved (not merged)" + tail, False
     if dry_run:
         tail += " [Sentinel wait skipped: no approval was posted]"
     else:
-        ok, why = wait_for_sentinel(gh, head, sleep)
+        ok, why = wait_for_sentinel(gh, head, sleep, since=approved_at)
         if not ok:
             return False, f"approved, not merged: {why}" + tail, False
     gh.merge(s.pr, head, "squash")
