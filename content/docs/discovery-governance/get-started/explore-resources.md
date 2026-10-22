@@ -59,6 +59,6 @@ AI Assist is also useful during a security review. **"show me all s3 public buck
 type:"aws:s3/bucket:Bucket" .acl:public-read
 ```
 
-AI Assist's queries are a starting point: review them, and refine the query if it doesn't quite match what you meant. To ask broader questions about your infrastructure, you can also use [Pulumi Neo](/docs/ai/neo/).
+AI Assist's queries are a starting point: review them, and refine the query if it doesn't quite match what you meant. To ask broader questions about your infrastructure, you can also use [Pulumi Neo](/docs/ai/concepts/neo/).
 
 {{< get-started-stepper >}}

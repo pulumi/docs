@@ -109,7 +109,7 @@ link = "/docs/iac/concepts/how-pulumi-works/"
 [[entries]]
 term = "MCP Server"
 description = "Pulumi's Model Context Protocol server, which exposes Pulumi capabilities (registry lookups, deployments, [resource search](#resource-search), and more) to MCP-compatible AI clients such as Claude Desktop, Cursor, and [Pulumi Neo](#pulumi-neo)."
-link = "/docs/ai/mcp-server/"
+link = "/docs/ai/guides/set-up-mcp-server/"
 
 [[entries]]
 term = "Native language package"
@@ -204,7 +204,7 @@ link = "/docs/ai/"
 [[entries]]
 term = "Pulumi Neo Task"
 description = "A single agent invocation in [Pulumi Neo](#pulumi-neo). A task captures the request, the agent's plan and tool calls, and the resulting changes, and can be reviewed and replayed from [Pulumi Cloud](#pulumi-cloud)."
-link = "/docs/ai/neo/tasks/"
+link = "/docs/ai/concepts/neo/tasks/"
 
 [[entries]]
 term = "Pulumi Registry"
