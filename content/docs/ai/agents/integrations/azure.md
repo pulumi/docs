@@ -31,7 +31,7 @@ Store the client secret as a secret in ESC. The agent also needs [permission to 
 
 ## Connect the environment
 
-As an organization administrator:
+With permission to manage organization integrations (`org_integrations:update`):
 
 {{% agent-cli-connection tool="Azure" %}}
 
@@ -39,7 +39,7 @@ Give the connection a name that identifies its purpose, such as `staging-azure`.
 
 The Azure CLI requires an explicit [service principal sign-in](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli-service-principal). Setting the environment variables does not sign it in. Add this instruction to the connection notes, replacing `<subscription-id>` with the subscription ID:
 
-> Run Azure sign-in inside a shell launched by `pulumi env run` for this connection. Pass `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`, and `AZURE_TENANT_ID` to `az login --service-principal` as the username, password, and tenant. Expand these variables only inside that shell; do not print the environment or credentials. Before querying resources, run `az account show --subscription <subscription-id>` and confirm its tenant and subscription match this connection. Use `--subscription <subscription-id>` for subsequent subscription-scoped commands.
+> Run Azure sign-in inside a shell launched by `pulumi env run` for this connection. Pass `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`, and `AZURE_TENANT_ID` to `az login --service-principal` as the username, password, and tenant. Expand these variables only inside that shell; do not print the environment or credentials. Before querying resources, run `az account show --subscription <subscription-id>` and confirm its tenant and subscription match this connection. Use `--subscription <subscription-id>` for later subscription-scoped commands.
 
 ## Use the connection
 

@@ -45,7 +45,7 @@ See [Events and schedules](/docs/ai/agents/triggers/) for setup instructions.
 
 ## The agent cannot access a resource
 
-- Confirm that the required integration is connected. For an MCP integration, check that it is selected in the agent's configuration.
+- Confirm that the required integration is connected. For an MCP integration, check that you've selected it in the agent's configuration.
 - Confirm that the agent's role grants access to the relevant Pulumi Cloud resources, including any ESC environment that supplies credentials.
 - Check that the integration's credentials are valid.
 - Confirm that the credentials grant access to the resource the agent needs.

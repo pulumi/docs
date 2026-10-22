@@ -73,7 +73,7 @@ Under **How do you want to invoke this agent?**, choose:
 - **Manually** to assign tasks directly. You can add events and schedules later.
 - **Configure a trigger** to start tasks from Pulumi operations, external webhooks, or a recurring schedule. Select **Continue** to configure the trigger.
 
-On the trigger step, choose a **Trigger preset**. Set the event filters or schedule, then expand **Task instructions and context** to review the **Trigger name** and **Prompt**. The prompt is the assignment for each run. Select **Create agent** when you finish.
+On the trigger step, choose a **Trigger type**. Set the event filters or schedule, then expand **Task instructions and context** to review the **Trigger name** and **Prompt**. The prompt is the assignment for each run. Select **Create agent** when you finish.
 
 To add an event or schedule to an agent you have already saved, follow [Events and schedules](/docs/ai/agents/triggers/).
 

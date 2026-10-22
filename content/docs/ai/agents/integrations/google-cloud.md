@@ -18,13 +18,13 @@ Use a service account with access to the projects and resources the agent needs.
 
 ## Prepare an ESC environment
 
-Use the [Google Cloud login provider](/docs/esc/providers/login/gcp-login/) to obtain a temporary access token. Under [environmentVariables](/docs/esc/concepts/outputs/#environmentvariables), export its `accessToken` output as `CLOUDSDK_AUTH_ACCESS_TOKEN`. Set `CLOUDSDK_CORE_PROJECT` to the project ID the agent should use. The login provider's example shows the complete `gcloud` configuration.
+Use the [Google Cloud login provider](/docs/esc/providers/login/gcp-login/) to get a temporary access token. Under [environmentVariables](/docs/esc/concepts/outputs/#environmentvariables), export its `accessToken` output as `CLOUDSDK_AUTH_ACCESS_TOKEN`. Set `CLOUDSDK_CORE_PROJECT` to the project ID the agent should use. The login provider's example shows the complete `gcloud` configuration.
 
 The agent also needs [permission to open the environment](/docs/ai/agents/permissions/#scope-pulumi-cloud-access).
 
 ## Connect the environment
 
-As an organization administrator:
+With permission to manage organization integrations (`org_integrations:update`):
 
 {{% agent-cli-connection tool="Google Cloud" %}}
 

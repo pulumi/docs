@@ -28,7 +28,7 @@ The agent also needs [permission to open the environment](/docs/ai/agents/permis
 
 ## Connect the environment
 
-As an organization administrator:
+With permission to manage organization integrations (`org_integrations:update`):
 
 {{% agent-cli-connection tool="AWS" %}}
 

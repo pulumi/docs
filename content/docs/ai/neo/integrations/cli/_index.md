@@ -57,7 +57,7 @@ The [Kubernetes Cluster Access](/docs/esc/guides/integrate-with/kubernetes-clust
 
 ## Setting up a CLI integration
 
-An organization administrator connects each CLI to an ESC environment. The connection is shared across agents, but using it requires permission to open that environment:
+A teammate with permission to manage organization integrations (`org_integrations:update`) connects each CLI to an ESC environment. The connection is shared across agents, but using it requires permission to open that environment:
 
 - For an agent your team configures, grant access through the agent's Pulumi Cloud role.
 - For Neo, the user running the task needs access.
@@ -96,11 +96,11 @@ The submenu also includes a **Manage CLI integrations** shortcut that takes you 
 
 ## Disconnecting an integration
 
-To remove a CLI integration, navigate to **Neo Settings**, **Integrations**, **CLI tools**, find the connected row, select **Manage integration**, then select **Disconnect integration**. Disconnecting:
+To remove a CLI integration, navigate to **Agent Settings**, **Integrations**, **CLI tools**, find the connected row, select **Manage integration**, then select **Disconnect integration**. Disconnecting:
 
 - Removes the connection's reference to the ESC environment. **It does not modify or delete the ESC environment itself.** That remains under your control.
 - Immediately prevents new tasks from using the integration.
-- Tasks that are already running will lose access to the integration the next time the agent tries to use it.
+- Existing tasks reload the available connections when the agent next resumes work. Disconnecting does not revoke permission to open the ESC environment or credentials already issued by it.
 
 ## Auditing
 

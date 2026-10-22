@@ -13,7 +13,7 @@ menu:
         identifier: ai-integrations-mcp
 ---
 
-MCP integrations let Pulumi Agents use tools from external providers through [Model Context Protocol](https://modelcontextprotocol.io/) servers. An organization administrator connects each provider with credentials stored in Pulumi Cloud. Agents can use these tools to query monitoring data, read runbooks, and work with issues during a task.
+MCP integrations let Pulumi Agents use tools from external providers through [Model Context Protocol](https://modelcontextprotocol.io/) servers. A teammate with permission to manage organization integrations (`org_integrations:update`) connects each provider with credentials stored in Pulumi Cloud. Agents can use these tools to query monitoring data, read runbooks, and work with issues during a task.
 
 > [!INFO]
 > To give an external coding agent access to Pulumi context, see the [Pulumi MCP server](/docs/ai/mcp-server/).
@@ -22,7 +22,7 @@ Supported integrations are Atlassian (Jira and Confluence), Cloudflare, Dash0, D
 
 ## Enabling an MCP integration
 
-To enable an integration, navigate to **Neo Settings**, select **Integrations**, open **MCP servers**, find the provider under **Available**, and select **Authorize**. Enter the required credentials, then select **Save**.
+To enable an integration, navigate to **Agent Settings**, select **Integrations**, open **MCP servers**, find the provider under **Available**, and select **Authorize**. Enter the required credentials, then select **Save**.
 
 Each MCP integration connects to the service's MCP server. Available tools depend on the credentials and authentication method the service supports.
 
@@ -32,9 +32,9 @@ Integration credentials are encrypted at rest in Pulumi Cloud using a per-organi
 
 ## Disabling an integration
 
-To remove an integration from your organization, navigate to **Neo Settings**, select **Integrations**, open **MCP servers**, find the integration, and select **Manage integration**, then **Disconnect integration**.
+To remove an integration from your organization, navigate to **Agent Settings**, select **Integrations**, open **MCP servers**, find the integration, and select **Manage integration**, then **Disconnect integration**.
 
-Disabling an integration deletes its stored credentials and immediately prevents any new tasks from using it. Tasks that are already running will lose access to the integration the next time the agent tries to use it.
+Disabling an integration deletes its stored credentials and immediately prevents any new tasks from using it. Existing tasks reload the available integrations when the agent next resumes work. To revoke credentials already in use, revoke them at the provider.
 
 ## Per-task control
 
@@ -44,7 +44,7 @@ Neo tasks inherit all integrations enabled by the organization. Before starting 
 
 ## If an integration fails
 
-If an integration fails, check that its credentials are valid, that they grant access to the requested data, and that the provider's MCP server is reachable. To replace expired credentials, disconnect the integration, then authorize it again with new credentials.
+If an integration fails, check that its credentials are valid, that they grant access to the requested data, and that the provider's MCP server is reachable. To replace expired credentials, disconnect the integration, then connect it again with new credentials.
 
 Some connection failures leave other tools available. A failure to retrieve or decrypt stored credentials can prevent a task from starting or continuing.
 
@@ -52,12 +52,12 @@ Some connection failures leave other tools available. A failure to retrieve or d
 
 ### Atlassian (Jira and Confluence)
 
-1. In **admin.atlassian.com**, open **Rovo MCP**
-    - Enable **API token authentication**
-1. Open **Directory**, then **Service Accounts**
-1. Create a service account and give it user access to each product the agent needs
-1. Create a credential for the service account with type **API** and assign the necessary roles
-1. In the integration form, enter the **Service Account API Token** and your **Site URL** (e.g., `https://yoursite.atlassian.net`)
+1. In Atlassian Administration, select your organization, then open **Connectors** > **Atlassian MCP server**. Under **Authentication**, turn on **API token**.
+1. Open **Directory** > **Service accounts**, create or select a service account, and give it access to the products the agent needs.
+1. Select **Create credentials** > **API token**. Choose an expiration date and the scopes the agent needs, then copy the token.
+1. In the Pulumi integration form, enter the **Service Account API Token** and your **Site URL**, such as `https://yoursite.atlassian.net`.
+
+See Atlassian's [MCP authentication settings](https://support.atlassian.com/security-and-access-policies/docs/control-atlassian-mcp-server-settings/#Configure-authentication) and [service account API tokens](https://support.atlassian.com/user-management/docs/manage-api-tokens-for-service-accounts/).
 
 ### Cloudflare
 
@@ -84,7 +84,7 @@ Follow [Connect Datadog](/docs/ai/agents/integrations/datadog/) to create a serv
 1. Choose the **Model Context Protocol** and **Environments** scopes, then grant permissions:
     - **Read**: Required for all Honeycomb MCP operations. Make sure to grant read for both MCP and Environments.
     - **Write**: Required for the `create_board` tool.
-1. Copy the **Key ID** and **Key Secret**. You will not be able to see them again.
+1. Copy the **Key ID** and **Key Secret**. You will not be able to see the Key Secret again.
 1. In the integration form, enter the **Key ID** and **Key Secret** in the corresponding fields
 
 ### Linear
@@ -126,7 +126,7 @@ PagerDuty User API Tokens are tied to a single user account. All actions an agen
 1. Grant **Read** access to **Organization**, **Project**, **Team**, and **Issue & Event**, then copy the token.
 1. In the Sentry integration, enter the **Internal integration token** and **Organization Slug**, such as `my-organization` from `my-organization.sentry.io`.
 
-This integration connects to Sentry SaaS.
+This integration connects to Sentry SaaS using its [explicit-token authentication](https://github.com/getsentry/toolkit#remote-with-an-explicit-sentry-token).
 
 ### Supabase
 

@@ -20,7 +20,7 @@ For Neo's scheduled tasks, see [Neo automations](/docs/ai/neo/automations/).
 
 ## Write the assignment
 
-Describe what the agent should do each time the trigger fires or the schedule runs. Keep instructions that apply across all of the agent's tasks in its [configuration](/docs/ai/agents/configure/). Create separate agents when different types of work need their own instructions, integrations, or permissions.
+Describe what the agent should do each time the trigger fires or the schedule runs. Keep instructions that apply across all the agent's tasks in its [configuration](/docs/ai/agents/configure/). Create separate agents when different types of work need their own instructions, integrations, or permissions.
 
 Use trigger settings to select which events start tasks. Instructions in the assignment do not filter incoming events.
 
@@ -53,7 +53,7 @@ In Pulumi Cloud, open **Automations** and select **Set up trigger**:
 1. Select **Create automation**, then copy the **Webhook URL** and **Required header** from the setup panel.
 1. Configure the sender to use that URL and include `X-Pulumi-Trigger-Secret` with the displayed secret value on every request.
 
-The Pulumi secret is shown once. Save it before closing the panel. If it is lost, rotate it from the automation details page.
+The Pulumi secret is shown once. Save it before closing the panel. If you lose it, rotate it from the automation details page.
 
 A webhook delivers the event payload. To retrieve more information, the agent also needs an [integration](/docs/ai/agents/integrations/) with the sending system. For example, a PagerDuty webhook delivers incident details, and the PagerDuty MCP integration lets the agent query the incident.
 
@@ -78,6 +78,6 @@ Each task uses the agent's saved instructions and access settings.
 
 ## Stop future runs
 
-Disable the automation to stop it from creating tasks. To stop new work across all of an agent's triggers and schedules, [pause the agent](/docs/ai/agents/manage/#pause-future-work-and-stop-current-work).
+Disable the automation to stop it from creating tasks. To stop new work across all an agent's triggers and schedules, [pause the agent](/docs/ai/agents/manage/#pause-future-work-and-stop-current-work).
 
 To stop work already in progress, cancel the running task separately.

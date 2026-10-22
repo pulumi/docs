@@ -45,7 +45,7 @@ To start a task, a teammate needs `agent_task:create` and access to the agent. F
 
 For tasks started directly, teammates with access to the agent can view and contribute to its tasks. For tasks started by an organization-owned automation, `agent_automations:read` grants viewing access, and `agent_automations:update` grants access to reply and approve actions. Holding the agent's role alone does not grant access to these automated tasks.
 
-Task owners and teammates with task-specific permissions can also access tasks. For example, `agent_task:read` grants viewing access, while `agent_task:contribute` allows replies. A personal schedule does not grant other teammates access to its tasks just because it runs a shared agent.
+Task owners and teammates with task-specific permissions can also access tasks. For example, `agent_task:read` grants viewing access, while `agent_task:contribute` allows replies. Running a shared agent from a personal schedule does not give other teammates access to the resulting tasks.
 
 ## Review and remove access
 
