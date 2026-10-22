@@ -18,7 +18,7 @@ howto_schema: true
 itemlist_name: "MCP Servers for Infrastructure and DevOps"
 itemlist:
     - name: "Pulumi MCP Server"
-      url: "https://www.pulumi.com/docs/ai/mcp-server/"
+      url: "https://www.pulumi.com/docs/ai/guides/set-up-mcp-server/"
     - name: "HashiCorp Terraform MCP Server"
       url: "https://developer.hashicorp.com/terraform/mcp-server"
     - name: "HashiCorp Vault MCP Server"
@@ -101,7 +101,7 @@ The read/write boundary is the one to lead with. A server that only answers ques
 
 **Maintainer:** Pulumi. **Transport:** stdio (local `@pulumi/mcp-server`) or Streamable HTTP (hosted at `mcp.ai.pulumi.com`). **Auth:** access token env var locally, OAuth on the hosted endpoint. **Read-only mode:** the registry and Pulumi Cloud tools are read-only by nature; the CLI tools (`pulumi-cli-up`, `pulumi-cli-refresh`) can write, gated by Pulumi's own preview step. **Maturity:** shipping product feature, both forms actively maintained.
 
-Pulumi ships two forms so you can choose the operating model: a local server for CLI-driven workflows (preview, up, refresh, stack outputs) and a hosted server for organization-wide tools like policy-violation queries and Neo task delegation, no CLI install required. The full tool list, client setup for Cursor, Claude Code, Claude Desktop, Windsurf, and Kiro, and the local-versus-hosted tradeoffs are covered in the [Pulumi MCP server documentation](/docs/ai/mcp-server/); we won't re-list every tool here.
+Pulumi ships two forms so you can choose the operating model: a local server for CLI-driven workflows (preview, up, refresh, stack outputs) and a hosted server for organization-wide tools like policy-violation queries and Neo task delegation, no CLI install required. The full tool list, client setup for Cursor, Claude Code, Claude Desktop, Windsurf, and Kiro, and the local-versus-hosted tradeoffs are covered in the [Pulumi MCP server documentation](/docs/ai/guides/set-up-mcp-server/); we won't re-list every tool here.
 
 **Best for:** teams already on Pulumi who want an agent to query stacks, resources, and policy state, and optionally hand deployment work to Neo with a preview gate in front of it.
 
@@ -264,14 +264,14 @@ An MCP server and an AI agent are different layers. The server is an access and 
 
 ### Does Pulumi's MCP server work with servers from other vendors?
 
-Yes. Any MCP-compatible host, Cursor, Claude Code, Claude Desktop, and others, can connect to Pulumi's server alongside other MCP servers in the same session; MCP standardizes the connection rather than tying an agent to one vendor's server. See the [Pulumi MCP server documentation](/docs/ai/mcp-server/) for supported clients.
+Yes. Any MCP-compatible host, Cursor, Claude Code, Claude Desktop, and others, can connect to Pulumi's server alongside other MCP servers in the same session; MCP standardizes the connection rather than tying an agent to one vendor's server. See the [Pulumi MCP server documentation](/docs/ai/guides/set-up-mcp-server/) for supported clients.
 
 ## Learn more
 
 - [MCP for Infrastructure as Code: What It Means for Pulumi Users](/what-is/mcp-for-infrastructure-as-code/)
-- [Pulumi MCP Server documentation](/docs/ai/mcp-server/)
+- [Pulumi MCP Server documentation](/docs/ai/guides/set-up-mcp-server/)
 - [Announcing Pulumi Remote MCP Server](/blog/remote-mcp-server/)
 - [AI-Assisted IaC with Pulumi's MCP Server](/blog/mcp-server-ai-assistants/)
-- [Neo External MCP Server Integrations](/docs/ai/neo/integrations/mcp/)
+- [Neo External MCP Server Integrations](/docs/ai/integrations/external-mcp-servers/)
 - [Pulumi Neo](/product/neo/)
 - [Best AI Infrastructure Tools in 2026](/blog/ai-infrastructure-tools/)
