@@ -5,11 +5,18 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class API </title>
+      <title>Class API — Pulumi .NET API reference</title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class API ">
+      <meta name="title" content="Class API — Pulumi .NET API reference">
     
     <meta name="description" content="Runs Pulumi CLI commands, one method per command. The invocation itself is provided by the boilerplate half of this partial class.">
+    
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Class API — Pulumi .NET API reference">
+    
+    <meta property="og:description" content="Runs Pulumi CLI commands, one method per command. The invocation itself is provided by the boilerplate half of this partial class.">
+      <meta property="og:url" content="https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi.automation/pulumi.automation.commands.api.html">
+      <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi.automation/pulumi.automation.commands.api.html">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -19,6 +26,34 @@
     
     
     
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "APIReference",
+  "headline": "Class API \u2014 Pulumi .NET API reference",
+  "url": "https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi.automation/pulumi.automation.commands.api.html",
+  "programmingLanguage": ".NET",
+  "executableLibraryName": "Pulumi",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "name": "Pulumi",
+    "programmingLanguage": ".NET",
+    "codeRepository": "https://github.com/pulumi/pulumi-dotnet"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pulumi Docs",
+    "url": "https://www.pulumi.com/docs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://www.pulumi.com/"
+  },
+  "assemblyVersion": "3.115.0",
+  "description": "Runs Pulumi CLI commands, one method per command. The invocation itself is provided by the boilerplate half of this partial class."
+}
+</script>
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
@@ -139,6 +174,104 @@
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L24">View Source</a>
   </span>
+  <a id="Pulumi_Automation_Commands_API_AboutAsync_" data-uid="Pulumi.Automation.Commands.API.AboutAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_AboutAsync_Pulumi_Automation_Commands_PulumiAboutOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.AboutAsync(Pulumi.Automation.Commands.PulumiAboutOptions,System.Threading.CancellationToken)">AboutAsync(PulumiAboutOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi about</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; AboutAsync(PulumiAboutOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiaboutoptions.html">PulumiAboutOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_AboutEnvAsync_" data-uid="Pulumi.Automation.Commands.API.AboutEnvAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_AboutEnvAsync_Pulumi_Automation_Commands_PulumiAboutEnvOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.AboutEnvAsync(Pulumi.Automation.Commands.PulumiAboutEnvOptions,System.Threading.CancellationToken)">AboutEnvAsync(PulumiAboutEnvOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi about env</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; AboutEnvAsync(PulumiAboutEnvOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiaboutenvoptions.html">PulumiAboutEnvOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L214">View Source</a>
+  </span>
   <a id="Pulumi_Automation_Commands_API_CancelAsync_" data-uid="Pulumi.Automation.Commands.API.CancelAsync*"></a>
   <h4 id="Pulumi_Automation_Commands_API_CancelAsync_System_String_Pulumi_Automation_Commands_PulumiCancelOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.CancelAsync(System.String,Pulumi.Automation.Commands.PulumiCancelOptions,System.Threading.CancellationToken)">CancelAsync(string?, PulumiCancelOptions?, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Runs the <code>pulumi cancel</code> command.</p>
@@ -191,7 +324,689 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L307">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigAsync_Pulumi_Automation_Commands_PulumiConfigOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigAsync(Pulumi.Automation.Commands.PulumiConfigOptions,System.Threading.CancellationToken)">ConfigAsync(PulumiConfigOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigAsync(PulumiConfigOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigoptions.html">PulumiConfigOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L404">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigCopyAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigCopyAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigCopyAsync_System_String_Pulumi_Automation_Commands_PulumiConfigCopyOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigCopyAsync(System.String,Pulumi.Automation.Commands.PulumiConfigCopyOptions,System.Threading.CancellationToken)">ConfigCopyAsync(string?, PulumiConfigCopyOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config copy</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigCopyAsync(string? key = null, PulumiConfigCopyOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigcopyoptions.html">PulumiConfigCopyOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L529">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigEnvAddAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigEnvAddAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigEnvAddAsync_System_Collections_Generic_IEnumerable_System_String__Pulumi_Automation_Commands_PulumiConfigEnvAddOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigEnvAddAsync(System.Collections.Generic.IEnumerable{System.String},Pulumi.Automation.Commands.PulumiConfigEnvAddOptions,System.Threading.CancellationToken)">ConfigEnvAddAsync(IEnumerable&lt;string&gt;, PulumiConfigEnvAddOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config env add</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigEnvAddAsync(IEnumerable&lt;string&gt; environmentName, PulumiConfigEnvAddOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">environmentName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigenvaddoptions.html">PulumiConfigEnvAddOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L645">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigEnvInitAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigEnvInitAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigEnvInitAsync_Pulumi_Automation_Commands_PulumiConfigEnvInitOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigEnvInitAsync(Pulumi.Automation.Commands.PulumiConfigEnvInitOptions,System.Threading.CancellationToken)">ConfigEnvInitAsync(PulumiConfigEnvInitOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config env init</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigEnvInitAsync(PulumiConfigEnvInitOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigenvinitoptions.html">PulumiConfigEnvInitOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L760">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigEnvListAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigEnvListAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigEnvListAsync_Pulumi_Automation_Commands_PulumiConfigEnvListOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigEnvListAsync(Pulumi.Automation.Commands.PulumiConfigEnvListOptions,System.Threading.CancellationToken)">ConfigEnvListAsync(PulumiConfigEnvListOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config env list</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigEnvListAsync(PulumiConfigEnvListOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigenvlistoptions.html">PulumiConfigEnvListOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L860">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigEnvRemoveAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigEnvRemoveAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigEnvRemoveAsync_System_String_Pulumi_Automation_Commands_PulumiConfigEnvRemoveOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigEnvRemoveAsync(System.String,Pulumi.Automation.Commands.PulumiConfigEnvRemoveOptions,System.Threading.CancellationToken)">ConfigEnvRemoveAsync(string, PulumiConfigEnvRemoveOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config env remove</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigEnvRemoveAsync(string environmentName, PulumiConfigEnvRemoveOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">environmentName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigenvremoveoptions.html">PulumiConfigEnvRemoveOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L972">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigGetAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigGetAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigGetAsync_System_String_Pulumi_Automation_Commands_PulumiConfigGetOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigGetAsync(System.String,Pulumi.Automation.Commands.PulumiConfigGetOptions,System.Threading.CancellationToken)">ConfigGetAsync(string, PulumiConfigGetOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config get</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigGetAsync(string key, PulumiConfigGetOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfiggetoptions.html">PulumiConfigGetOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L1083">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigRefreshAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigRefreshAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigRefreshAsync_Pulumi_Automation_Commands_PulumiConfigRefreshOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigRefreshAsync(Pulumi.Automation.Commands.PulumiConfigRefreshOptions,System.Threading.CancellationToken)">ConfigRefreshAsync(PulumiConfigRefreshOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config refresh</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigRefreshAsync(PulumiConfigRefreshOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigrefreshoptions.html">PulumiConfigRefreshOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L1301">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigRemoveAllAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigRemoveAllAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigRemoveAllAsync_System_Collections_Generic_IEnumerable_System_String__Pulumi_Automation_Commands_PulumiConfigRemoveAllOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigRemoveAllAsync(System.Collections.Generic.IEnumerable{System.String},Pulumi.Automation.Commands.PulumiConfigRemoveAllOptions,System.Threading.CancellationToken)">ConfigRemoveAllAsync(IEnumerable&lt;string&gt;, PulumiConfigRemoveAllOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config remove-all</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigRemoveAllAsync(IEnumerable&lt;string&gt; key, PulumiConfigRemoveAllOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigremovealloptions.html">PulumiConfigRemoveAllOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L1186">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigRemoveAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigRemoveAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigRemoveAsync_System_String_Pulumi_Automation_Commands_PulumiConfigRemoveOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigRemoveAsync(System.String,Pulumi.Automation.Commands.PulumiConfigRemoveOptions,System.Threading.CancellationToken)">ConfigRemoveAsync(string, PulumiConfigRemoveOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config remove</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigRemoveAsync(string key, PulumiConfigRemoveOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigremoveoptions.html">PulumiConfigRemoveOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L1561">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigSetAllAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigSetAllAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigSetAllAsync_Pulumi_Automation_Commands_PulumiConfigSetAllOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigSetAllAsync(Pulumi.Automation.Commands.PulumiConfigSetAllOptions,System.Threading.CancellationToken)">ConfigSetAllAsync(PulumiConfigSetAllOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config set-all</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigSetAllAsync(PulumiConfigSetAllOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigsetalloptions.html">PulumiConfigSetAllOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L1420">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConfigSetAsync_" data-uid="Pulumi.Automation.Commands.API.ConfigSetAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConfigSetAsync_System_String_System_String_Pulumi_Automation_Commands_PulumiConfigSetOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConfigSetAsync(System.String,System.String,Pulumi.Automation.Commands.PulumiConfigSetOptions,System.Threading.CancellationToken)">ConfigSetAsync(string, string?, PulumiConfigSetOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi config set</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConfigSetAsync(string key, string? value = null, PulumiConfigSetOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconfigsetoptions.html">PulumiConfigSetOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L1687">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_ConvertAsync_" data-uid="Pulumi.Automation.Commands.API.ConvertAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_ConvertAsync_System_Collections_Generic_IEnumerable_System_String__Pulumi_Automation_Commands_PulumiConvertOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ConvertAsync(System.Collections.Generic.IEnumerable{System.String},Pulumi.Automation.Commands.PulumiConvertOptions,System.Threading.CancellationToken)">ConvertAsync(IEnumerable&lt;string&gt;?, PulumiConvertOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi convert</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; ConvertAsync(IEnumerable&lt;string&gt;? arg = null, PulumiConvertOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">arg</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiconvertoptions.html">PulumiConvertOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L1819">View Source</a>
   </span>
   <a id="Pulumi_Automation_Commands_API_ImportAsync_" data-uid="Pulumi.Automation.Commands.API.ImportAsync*"></a>
   <h4 id="Pulumi_Automation_Commands_API_ImportAsync_System_Collections_Generic_IEnumerable_System_String__Pulumi_Automation_Commands_PulumiImportOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.ImportAsync(System.Collections.Generic.IEnumerable{System.String},Pulumi.Automation.Commands.PulumiImportOptions,System.Threading.CancellationToken)">ImportAsync(IEnumerable&lt;string&gt;?, PulumiImportOptions?, CancellationToken)</h4>
@@ -245,7 +1060,56 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L351">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L2053">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_InstallAsync_" data-uid="Pulumi.Automation.Commands.API.InstallAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_InstallAsync_Pulumi_Automation_Commands_PulumiInstallOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.InstallAsync(Pulumi.Automation.Commands.PulumiInstallOptions,System.Threading.CancellationToken)">InstallAsync(PulumiInstallOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi install</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; InstallAsync(PulumiInstallOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiinstalloptions.html">PulumiInstallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L2153">View Source</a>
   </span>
   <a id="Pulumi_Automation_Commands_API_NewAsync_" data-uid="Pulumi.Automation.Commands.API.NewAsync*"></a>
   <h4 id="Pulumi_Automation_Commands_API_NewAsync_System_String_Pulumi_Automation_Commands_PulumiNewOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.NewAsync(System.String,Pulumi.Automation.Commands.PulumiNewOptions,System.Threading.CancellationToken)">NewAsync(string?, PulumiNewOptions?, CancellationToken)</h4>
@@ -299,7 +1163,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L533">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L2335">View Source</a>
   </span>
   <a id="Pulumi_Automation_Commands_API_OrgAsync_" data-uid="Pulumi.Automation.Commands.API.OrgAsync*"></a>
   <h4 id="Pulumi_Automation_Commands_API_OrgAsync_Pulumi_Automation_Commands_PulumiOrgOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.OrgAsync(Pulumi.Automation.Commands.PulumiOrgOptions,System.Threading.CancellationToken)">OrgAsync(PulumiOrgOptions?, CancellationToken)</h4>
@@ -348,7 +1212,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L607">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L2409">View Source</a>
   </span>
   <a id="Pulumi_Automation_Commands_API_OrgGetDefaultAsync_" data-uid="Pulumi.Automation.Commands.API.OrgGetDefaultAsync*"></a>
   <h4 id="Pulumi_Automation_Commands_API_OrgGetDefaultAsync_Pulumi_Automation_Commands_PulumiOrgGetDefaultOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.OrgGetDefaultAsync(Pulumi.Automation.Commands.PulumiOrgGetDefaultOptions,System.Threading.CancellationToken)">OrgGetDefaultAsync(PulumiOrgGetDefaultOptions?, CancellationToken)</h4>
@@ -397,7 +1261,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L789">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L2591">View Source</a>
   </span>
   <a id="Pulumi_Automation_Commands_API_OrgSearchAIAsync_" data-uid="Pulumi.Automation.Commands.API.OrgSearchAIAsync*"></a>
   <h4 id="Pulumi_Automation_Commands_API_OrgSearchAIAsync_Pulumi_Automation_Commands_PulumiOrgSearchAIOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.OrgSearchAIAsync(Pulumi.Automation.Commands.PulumiOrgSearchAIOptions,System.Threading.CancellationToken)">OrgSearchAIAsync(PulumiOrgSearchAIOptions?, CancellationToken)</h4>
@@ -446,7 +1310,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L682">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L2484">View Source</a>
   </span>
   <a id="Pulumi_Automation_Commands_API_OrgSearchAsync_" data-uid="Pulumi.Automation.Commands.API.OrgSearchAsync*"></a>
   <h4 id="Pulumi_Automation_Commands_API_OrgSearchAsync_Pulumi_Automation_Commands_PulumiOrgSearchOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.OrgSearchAsync(Pulumi.Automation.Commands.PulumiOrgSearchOptions,System.Threading.CancellationToken)">OrgSearchAsync(PulumiOrgSearchOptions?, CancellationToken)</h4>
@@ -495,7 +1359,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L894">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L2696">View Source</a>
   </span>
   <a id="Pulumi_Automation_Commands_API_OrgSetDefaultAsync_" data-uid="Pulumi.Automation.Commands.API.OrgSetDefaultAsync*"></a>
   <h4 id="Pulumi_Automation_Commands_API_OrgSetDefaultAsync_System_String_Pulumi_Automation_Commands_PulumiOrgSetDefaultOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.OrgSetDefaultAsync(System.String,Pulumi.Automation.Commands.PulumiOrgSetDefaultOptions,System.Threading.CancellationToken)">OrgSetDefaultAsync(string, PulumiOrgSetDefaultOptions?, CancellationToken)</h4>
@@ -548,12 +1412,159 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L2779">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_RefreshAsync_" data-uid="Pulumi.Automation.Commands.API.RefreshAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_RefreshAsync_Pulumi_Automation_Commands_PulumiRefreshOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.RefreshAsync(Pulumi.Automation.Commands.PulumiRefreshOptions,System.Threading.CancellationToken)">RefreshAsync(PulumiRefreshOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi refresh</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; RefreshAsync(PulumiRefreshOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumirefreshoptions.html">PulumiRefreshOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L3054">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_VersionAsync_" data-uid="Pulumi.Automation.Commands.API.VersionAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_VersionAsync_Pulumi_Automation_Commands_PulumiVersionOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.VersionAsync(Pulumi.Automation.Commands.PulumiVersionOptions,System.Threading.CancellationToken)">VersionAsync(PulumiVersionOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi version</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; VersionAsync(PulumiVersionOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiversionoptions.html">PulumiVersionOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Commands.cs/#L3128">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_API_WhoamiAsync_" data-uid="Pulumi.Automation.Commands.API.WhoamiAsync*"></a>
+  <h4 id="Pulumi_Automation_Commands_API_WhoamiAsync_Pulumi_Automation_Commands_PulumiWhoamiOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Commands.API.WhoamiAsync(Pulumi.Automation.Commands.PulumiWhoamiOptions,System.Threading.CancellationToken)">WhoamiAsync(PulumiWhoamiOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs the <code>pulumi whoami</code> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CommandResult&gt; WhoamiAsync(PulumiWhoamiOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.automation.commands.pulumiwhoamioptions.html">PulumiWhoamiOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.automation.commands.commandresult.html">CommandResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.114.1</p>
+    <p class="sdk-version">Version 3.115.0</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
