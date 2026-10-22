@@ -77,7 +77,7 @@ features:
     min_edition: enterprise
   - id: github-enterprise-cloud-data-residency
     name: GitHub Enterprise Cloud with data residency support
-    min_edition: enterprise
+    min_edition: pro
   - id: gated-deployments
     name: Gated deployments
     min_edition: pro
@@ -185,6 +185,10 @@ features:
     min_edition: essentials
   - id: context-api
     name: Context API
+    min_edition: pro
+    hidden: true
+  - id: pulumi-agents
+    name: Pulumi Agents
     min_edition: pro
     hidden: true
   - id: neo
