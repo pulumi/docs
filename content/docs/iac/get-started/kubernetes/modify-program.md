@@ -388,8 +388,14 @@ public class App {
                     .build())
                 .build());
 
-            // Export the service cluster IP (available for both ClusterIP and LoadBalancer types)
-            ctx.export("ip", frontend.spec().applyValue(spec -> spec.clusterIP().orElse("pending")));
+            // Export the cluster IP when isMinikube is true, or the load balancer's external address otherwise
+            var ip = isMinikube
+                ? frontend.spec().applyValue(spec -> spec.clusterIP().orElse(""))
+                : frontend.status().applyValue(status -> {
+                    var ingress = status.get().loadBalancer().get().ingress().get(0);
+                    return ingress.ip().orElse(ingress.hostname().orElse(""));
+                });
+            ctx.export("ip", ip);
         });
     }
 }
@@ -662,7 +668,7 @@ $ $(pulumi config get isMinikube) && curl "http://localhost:8080" || curl $(pulu
 {{% choosable "os" "windows" %}}
 
 ```powershell
-> if (pulumi config get isMinikube) { curl "http://localhost:8080" } else { curl $(pulumi stack output ip) }
+> if ((pulumi config get isMinikube) -eq "true") { curl "http://localhost:8080" } else { curl $(pulumi stack output ip) }
 ```
 
 {{% /choosable %}}
