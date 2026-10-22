@@ -145,6 +145,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiAboutEnvOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiaboutenvoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiAboutEnvOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiAboutEnvOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi about env</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiAboutOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiaboutoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiAboutOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiAboutOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi about</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiCancelOptions.yml",
       "output": {
         ".html": {
@@ -173,6 +201,188 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigCopyOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigcopyoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigCopyOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigCopyOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config copy</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigEnvAddOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigenvaddoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigEnvAddOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigEnvAddOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config env add</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigEnvInitOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigenvinitoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigEnvInitOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigEnvInitOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config env init</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigEnvListOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigenvlistoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigEnvListOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigEnvListOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config env list</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigEnvRemoveOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigenvremoveoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigEnvRemoveOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigEnvRemoveOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config env remove</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigGetOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfiggetoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigGetOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigGetOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config get</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigRefreshOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigrefreshoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigRefreshOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigRefreshOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config refresh</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigRemoveAllOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigremovealloptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigRemoveAllOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigRemoveAllOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config remove-all</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigRemoveOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigremoveoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigRemoveOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigRemoveOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config remove</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigSetAllOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigsetalloptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigSetAllOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigSetAllOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config set-all</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigSetOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconfigsetoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConfigSetOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConfigSetOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi config set</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConvertOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiconvertoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiConvertOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConvertOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi convert</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiImportOptions.yml",
       "output": {
         ".html": {
@@ -184,6 +394,20 @@
       "IsMRef": true,
       "Title": "Pulumi.Automation.Commands.PulumiImportOptions",
       "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiImportOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi import</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiInstallOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiinstalloptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiInstallOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiInstallOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi install</code> command.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -268,6 +492,48 @@
       "IsMRef": true,
       "Title": "Pulumi.Automation.Commands.PulumiOrgSetDefaultOptions",
       "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgSetDefaultOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org set-default</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiRefreshOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumirefreshoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiRefreshOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiRefreshOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi refresh</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiVersionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiversionoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiVersionOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiVersionOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi version</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiWhoamiOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiwhoamioptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiWhoamiOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiWhoamiOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi whoami</code> command.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3389,6 +3655,48 @@
       "IsMRef": true,
       "Title": "Pulumi.StashArgs",
       "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.StashArgs.yml\" sourcestartlinenumber=\"1\">The set of arguments for constructing a <xref href=\"Pulumi.Stash\" data-throw-if-not-resolved=\"false\"></xref> resource.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.StateMigration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.statemigration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.StateMigration",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.StateMigration.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.StateMigration\" data-throw-if-not-resolved=\"false\"></xref> is the callback signature for the <xref href=\"Pulumi.ResourceOptions.StateMigrations\" data-throw-if-not-resolved=\"false\"></xref>\nresource option.</p>\n<p>\nThis API is experimental and may change.\n</p>\n<p>\nA callback receives the prior state of the resource and its descendants, and may return a replacement subtree\nfor the engine to use before diffing those resources. Returning <a href=\"https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null\">null</a> leaves the callback's\ninput state unchanged and allows later callbacks to run. Callbacks must be idempotent.\n</p>\n<p>\nMigrations run during updates and previews when prior state exists, including state matched through aliases.\nMigrations rewrite state only, they do not create, import, or modify physical resources.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.StateMigrationArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.statemigrationargs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.StateMigrationArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.StateMigrationArgs.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.StateMigrationArgs\" data-throw-if-not-resolved=\"false\"></xref> contains the prior state of the resource and its descendants in\n<a href=\"https://pulumi-developer-docs.readthedocs.io/latest/docs/references/deployment-schema.html#pulumi-resource-state\">checkpoint resource format</a>.</p>\n<p>\nThis API is experimental and may change.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.StateMigrationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.statemigrationresult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.StateMigrationResult",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.StateMigrationResult.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.StateMigrationResult\" data-throw-if-not-resolved=\"false\"></xref> is returned by a state migration callback when it changes the state.\nEvery resource present in the old state must either be returned in <xref href=\"Pulumi.StateMigrationResult.NewState\" data-throw-if-not-resolved=\"false\"></xref> under the same URN\nor have an entry in <xref href=\"Pulumi.StateMigrationResult.Successors\" data-throw-if-not-resolved=\"false\"></xref>, but not both.</p>\n<p>\nThis API is experimental and may change.\n</p>\n"
     },
     {
       "type": "ManagedReference",
