@@ -1080,6 +1080,44 @@ def test_the_sentinel_status_is_left_out_of_the_preflight_and_polled_before_the_
         env.close()
 
 
+def test_a_red_verdict_older_than_the_approval_is_waited_out_not_obeyed():
+    """The red verdict on the head right after approving is the pre-approval
+    one. The wait keeps polling for the re-evaluation (2026-10-22: six
+    approvals refused on it, every one green minutes later)."""
+    st = lambda state, at: {"context": "Sentinel", "state": state, "description": "d",  # noqa: E731
+                            "created_at": at, "updated_at": at}
+    env = Env([stampable(1, check_runs=[{"name": "build", "status": "completed", "conclusion": "success"}])])
+    try:
+        p = act.plan(env.queue, args(stamp=["1"]))
+        env.add_review(1, "APPROVED", commit_id=row(env.queue, 1)["head"]["sha"])
+        env.set_statuses(1, [st("failure", "2026-09-14T23:59:00Z")])
+        polls = []
+
+        def nap(s):
+            polls.append(s)
+            if len(polls) == 3:
+                env.set_statuses(1, [st("success", "2026-09-15T00:02:00Z"), st("failure", "2026-09-14T23:59:00Z")])
+
+        res = act.execute(p, env.gh, queue=env.queue, sleep=nap)
+        assert res[0].ok and "squash-merged" in res[0].message, res[0].message
+        assert len(polls) == 3
+    finally:
+        env.close()
+    env = Env([stampable(1, check_runs=[{"name": "build", "status": "completed", "conclusion": "success"}])])
+    try:
+        p = act.plan(env.queue, args(stamp=["1"]))
+        env.add_review(1, "APPROVED", commit_id=row(env.queue, 1)["head"]["sha"])
+        env.set_statuses(1, [st("failure", "2026-09-14T23:59:00Z")])
+        res = act.execute(p, env.gh, queue=env.queue, sleep=lambda s: None)
+        assert res[0].ok is False and "had not re-evaluated since the approval" in res[0].message, res[0].message
+        # a red verdict that landed after the approval is the answer
+        env.set_statuses(1, [st("failure", "2026-09-15T00:01:00Z")])
+        res = act.execute(p, env.gh, queue=env.queue, sleep=lambda s: None)
+        assert res[0].ok is False and "Sentinel check concluded failure" in res[0].message, res[0].message
+    finally:
+        env.close()
+
+
 def test_sentinel_is_left_out_of_the_preflight_and_polled_before_the_merge():
     """Finding 13: an enforcing Sentinel is red until the approval exists, so
     it can't gate the approval; after approving, a bounded poll decides the merge."""
@@ -1101,7 +1139,7 @@ def test_sentinel_is_left_out_of_the_preflight_and_polled_before_the_merge():
         naps = []
         p = act.plan(env.queue, args(stamp=["1"], force=True))  # a pending check makes the row a judge row
         res = act.execute(p, env.gh, queue=env.queue, sleep=naps.append)
-        assert res[0].ok is False and "still pending after 90s" in res[0].message
+        assert res[0].ok is False and f"still pending after {act.SENTINEL_WAIT_S}s" in res[0].message
         assert naps == [act.SENTINEL_POLL_S] * (act.SENTINEL_WAIT_S // act.SENTINEL_POLL_S)
         assert [w["method"] for w in env.writes()] == ["POST"]  # approval only
     finally:

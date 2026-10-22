@@ -1021,9 +1021,41 @@ def test_a_red_sentinel_alone_is_not_red_ci():
     # The Sentinel concludes failure until an approval exists; act.py's
     # preflight leaves it out, and so does the board. #21598's own shape.
     p = row(run([stampable(1, check_runs=_red("sentinel"))]), 1)
-    assert p["verdict"] == "stamp" and "checks:sentinel:failing" in p["reasons"] and "checks:red" not in p["blockers"]
+    assert p["verdict"] == "stamp" and "checks:red" not in p["blockers"]
+    assert not any(r.startswith(("checks:", "sentinel:")) for r in p["reasons"]), p["reasons"]
     p = row(run([stampable(1, check_runs=_red("sentinel") + _red("lint"))]), 1)
     assert p["verdict"] == "blocked" and "checks:red:lint" in p["reasons"]
+
+
+SENTINEL_STATUS = """<!-- SENTINEL_STATUS -->
+## Sentinel — merge gate status
+
+| | Gate | What it needs |
+|---|---|---|
+| ✅ | **G1 review-ran** | Nothing to do: review current at `aaaabbbbc`. |
+| ✅ | **G2 findings-answered** | Nothing to do: no blocking findings. |
+| 🔴 | **G3 right-approver** | Needs an approval from `@pulumi/docs-guild`. |
+| ➖ | **G4 infra-evidence** | Doesn't apply to this PR: no changed path affects the deploy. |
+| ➖ | **G5 oversized-ack** | Doesn't apply to this PR: not oversized. |
+
+<sub>Evaluated at head `{head}`.</sub>
+"""
+
+
+def test_the_sentinel_chip_counts_passing_gates_out_of_the_ones_that_apply():
+    import render  # noqa: PLC0415
+    status = comment(SENTINEL_STATUS.replace("{head}", HEAD_V3[:9]), cid=99)
+    p = row(run([stampable(1, check_runs=_red("sentinel"),
+                           comments=[comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR), status])]), 1)
+    assert p["verdict"] == "stamp" and "sentinel:2/3" in p["reasons"], p["reasons"]
+    html = render.chips(p["reasons"], p)
+    assert "sentinel 2/3" in html and "failing" not in html
+    assert "✗ G3 right-approver: Needs an approval from @pulumi/docs-guild." in html
+    assert "G4" not in html  # a gate that doesn't apply stays out of the count and the tooltip
+    # a status comment from an older head says nothing about this one
+    stale = comment(SENTINEL_STATUS.replace("{head}", "0123456789"), cid=99)
+    p = row(run([stampable(1, comments=[comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR), stale])]), 1)
+    assert not any(r.startswith("sentinel:") for r in p["reasons"]), p["reasons"]
 
 
 def test_own_changes_requested_is_not_a_blocker_and_waits_on_the_author():

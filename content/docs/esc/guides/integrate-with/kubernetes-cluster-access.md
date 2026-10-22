@@ -81,8 +81,8 @@ values:
     KUBECONFIG: ${kubeconfig}
 ```
 
-This definition loads a Pulumi stack named `eks-cluster/demo`, parses the `kubeconfig` output as a JSON object,
-and then defines a file named `KUBECONFIG` with the object.
+This definition loads a Pulumi stack named `eks-cluster/demo`, serializes the `kubeconfig` output to a JSON string,
+and then defines a file named `KUBECONFIG` with that string.
 
 ## Use the kubeconfig in a Pulumi IaC program
 
