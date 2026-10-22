@@ -125,6 +125,8 @@ Three label-driven short-circuits skip the full Claude review (linters still run
 
 For both categories, triage runs a focused spelling/grammar pass on the relevant diff slice. If it finds anything, it posts a single advisory comment listing the concerns AND applies `review:prose-flagged` so reviewers don't miss it. The short-circuit label still applies and the full review still skips. This is a guard against rubber-stamping — a typo "fix" that introduces a typo, or a `meta_desc` rewrite with a wrong-word substitution, gets flagged before merge.
 
+With no review to wait for, the Sentinel's G1 gate passes a trivial or frontmatter-only PR on its own: it re-checks that the diff really has that shape, and the human approval G3 asks for is the review. If the diff doesn't fit the label (someone applied it by hand, say), G1 stays red until you comment `/new-review`.
+
 Classification is deterministic and lives in `.claude/commands/docs-review/scripts/triage-classify.py` — domain (path-precedence), triviality, and frontmatter-only detection are all path/grep rules. The model is invoked only for the prose check, only when the shell pre-classifies as trivial or frontmatter-only.
 
 ## Documentation structure
