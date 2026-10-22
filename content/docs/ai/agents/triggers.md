@@ -2,6 +2,7 @@
 title: Events and schedules
 title_tag: Events and schedules | Pulumi Agents
 h1: Events and schedules
+pulumi_cloud_feature: pulumi-agents
 meta_desc: Start agent tasks from Pulumi events, external webhooks, or recurring schedules, and control future runs.
 menu:
     ai:

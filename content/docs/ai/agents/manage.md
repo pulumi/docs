@@ -2,6 +2,7 @@
 title: Manage and troubleshoot agents
 title_tag: Manage and troubleshoot | Pulumi Agents
 h1: Manage and troubleshoot agents
+pulumi_cloud_feature: pulumi-agents
 meta_desc: Update agent configuration, stop future or current work, and diagnose missing context, failed integrations, and tasks that do not start.
 menu:
     ai:

@@ -2,6 +2,7 @@
 title: Tasks and collaboration
 title_tag: Tasks and collaboration | Pulumi Agents
 h1: Tasks and collaboration
+pulumi_cloud_feature: pulumi-agents
 meta_desc: Start Pulumi Agent tasks from Pulumi Cloud or Slack, and collaborate with your team.
 menu:
     ai:

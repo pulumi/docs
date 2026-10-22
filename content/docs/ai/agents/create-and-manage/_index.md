@@ -2,6 +2,7 @@
 title: Create and manage agents
 title_tag: Create and manage agents | Pulumi Agents
 h1: Create and manage agents
+pulumi_cloud_feature: pulumi-agents
 meta_desc: Set up a pre-built or custom agent with saved instructions and a role, assign tasks, and manage its work.
 menu:
     ai:
