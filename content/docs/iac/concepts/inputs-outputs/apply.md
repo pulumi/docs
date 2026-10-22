@@ -417,7 +417,7 @@ An easier way to access deeply nested properties is by using _lifting_. Lifting 
 Lifting is handled automatically by Pulumi's type system, so in most cases you don't need to think about it. When you access a property or array element on an output value, Pulumi automatically "lifts" that access into the output context, returning a new output that will resolve to that nested value. This approach is easier to read and write and does not lose any important dependency information that is needed to properly create and maintain the stack.
 
 {{% notes type="info" %}}
-Lifting works in most scenarios for accessing nested properties and array elements. However, you may occasionally encounter runtime errors with lifting depending on your language. For example, in TypeScript, if an output resolves to `undefined`, using lifting to reference `outputThatResolvesToUndefined.someProperty` would cause a runtime error. In such cases, use `apply` with appropriate null checking instead.
+Lifting works in most scenarios for accessing nested properties and array elements. However, you may occasionally encounter runtime errors with lifting depending on your language. For example, in TypeScript, if an output resolves to `undefined`, using lifting to reference `outputThatResolvesToUndefined.someProperty` doesn't raise an error; it returns an output that also resolves to `undefined`. When you need to detect or handle a missing value, use `apply` with appropriate null checking instead.
 {{% /notes %}}
 
 Returning to the certificate validation example from the previous section, you can use lifting to simplify the code as shown below:

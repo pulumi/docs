@@ -44,7 +44,7 @@ The ECS-hosted installation of Pulumi deploys the following services:
 * S3 - Object storage for checkpoints and policy packs.
 * CloudWatch Logs - Centralized logging for all cluster pods.
 * Route53 - Managed DNS records.
-* NLB - Managed L4/application traffic and TLS termination.
+* ALB - Managed application traffic and TLS termination.
 * ACM - Managed Public TLS certificates.
 
 ### Pulumi deploying Pulumi
@@ -81,5 +81,6 @@ The installer configures the RDS backend database for replication and checkpoint
 The service automatically creates backups of checkpoint (i.e. state) files. However the customer may want to enable AWS Backup to periodically backup the S3 buckets created by the installer.
 The buckets will have names of the form:
 
-* `pulumi-checkpoint-XXX`
-* `pulumi-policy-XXX`
+* `pulumi-checkpoints-XXX`
+* `pulumi-policypacks-XXX`
+* `pulumi-service-metadata-XXX`

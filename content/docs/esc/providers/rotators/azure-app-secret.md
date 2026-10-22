@@ -149,7 +149,7 @@ Owner access alone suffices only for **delegated** logins (a user identity). An 
 | Rotation fails for an application-only (OIDC) login that owns the app | For application-only tokens, Owner access alone may not be sufficient. | Also grant `Application.ReadWrite.OwnedBy` with admin consent, as described in the [permissions](#permissions) note. |
 | New secrets expire sooner than expected | `lifetimeInDays` is unset or shorter than intended. | Set `lifetimeInDays` to the desired validity (default 180, maximum 730). |
 
-## Related
+## Learn more
 
 * [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
 * [azure-login](/docs/esc/providers/login/azure-login/) - Authenticate with Azure via OIDC or a client secret
