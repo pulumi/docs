@@ -14,13 +14,17 @@ menu:
 
 Pulumi Agents are managed AI agents that run in Pulumi Cloud. Each agent has saved instructions, connected tools, and permissions for its work. Use a pre-built agent or build your own to take on ongoing infrastructure responsibilities, such as investigating incidents or maintaining dependencies.
 
+[Neo](/docs/ai/neo/) is your pre-built personal agent. It works on your behalf using your existing Pulumi Cloud access. You do not need to create it or assign it a separate role.
+
 ## Use pre-built agents
+
+{{< pulumi-cloud "pulumi-agents" />}}
 
 Pulumi provides agents for incident investigation, drift response, deployment troubleshooting, and other infrastructure work. [Choose an agent](/docs/ai/agents/configure/#start-with-a-pre-built-agent), connect the tools it needs, and adapt its instructions to your team.
 
-[Neo](/docs/ai/neo/) is your pre-built personal agent. It works on your behalf using your existing Pulumi Cloud access. You do not need to create it or assign it a separate role.
-
 ## Build custom agents
+
+{{< pulumi-cloud "pulumi-agents" />}}
 
 [Build an agent](/docs/ai/agents/custom/) around your team's infrastructure and operating procedures. For example, an agent investigating checkout failures can correlate application errors with recent deployments and cloud configuration, follow your incident runbook, and prepare a fix for review. Give it your service's runbooks and access to the relevant logs, resources, and repositories.
 
