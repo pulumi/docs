@@ -147,7 +147,8 @@ REASON_CODES = {
     "unblock": "refused:<why>: act.py will not push to this head (dependabot, a generated-docs regen, a fork), so the conflict is the author's to resolve",
     "stances": "the brief lists editorial stances (blocks only with --strict-stances)",
     "mergeable": "GitHub mergeable_state when not clean/blocked",
-    "checks": "check rollup when not green; `sentinel:failing`: only the Sentinel is red, which it is until an approval exists, so it is not a CI failure",
+    "checks": "check rollup when not green, the Sentinel left out (it is red until an approval exists, so it is not a CI failure)",
+    "sentinel": "<passing>/<applicable>: the Sentinel's merge gates at this head, from its status comment; skipped gates don't count",
     "cluster": "member of a collision cluster: overlap (hunks intersect; position in the merge order), same-file (any order), or theirs",
     "directional": "adds links to an alias-only URL another open PR removes links from",
     "duplicate": "looks like a duplicate of another open PR",
@@ -998,12 +999,17 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     checks = pr.get("checks") or {}
     failing = list(checks.get("failing") or [])
     real_failures = [f for f in failing if (f or "").strip().lower() != SENTINEL_CHECK]
-    if checks.get("state") == "red" and not real_failures:
-        # The Sentinel concludes failure until an approval exists, so it can't
-        # gate the approval it waits for. act.py's preflight leaves it out
-        # and polls it between the approval and the merge; the board agrees.
-        reasons.append("checks:sentinel:failing")
-    elif checks.get("state") != "green":
+    gates = [g for g in ((pr.get("sentinel") or {}).get("gates") or []) if g.get("state") != "skip"]
+    if gates:
+        # The Sentinel concludes failure until an approval exists, so "failing"
+        # said nothing a row didn't already say. The count of gates that pass
+        # out of the ones that apply does, and the tooltip names the rest.
+        reasons.append(f"sentinel:{sum(g.get('state') == 'ok' for g in gates)}/{len(gates)}")
+    # A red rollup with only the Sentinel in it is not a CI failure: act.py's
+    # preflight leaves the Sentinel out and waits for it between the approval
+    # and the merge, and the board agrees.
+    sentinel_only = checks.get("state") == "red" and not real_failures
+    if checks.get("state") != "green" and not sentinel_only:
         gate_fail(f"checks:{checks.get('state')}:{','.join((real_failures or checks.get('pending') or [])[:3])}")
         if checks.get("state") == "red":
             blocked.append("checks:red")
