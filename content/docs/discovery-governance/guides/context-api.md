@@ -31,7 +31,7 @@ Pulumi Cloud [role-based access control (RBAC)](/docs/administration/concepts/rb
 
 ## Ask questions through an AI agent
 
-You can use [Pulumi Neo](/docs/ai/neo/), Claude Code, Cursor, Codex, or another agent that can run authenticated Pulumi CLI commands. Neo uses the Context API out of the box. To equip another agent, give it this command to fetch the current Markdown primer:
+You can use [Pulumi Neo](/docs/ai/concepts/neo/), Claude Code, Cursor, Codex, or another agent that can run authenticated Pulumi CLI commands. Neo uses the Context API out of the box. To equip another agent, give it this command to fetch the current Markdown primer:
 
 ```bash
 pulumi api GetGraphQuerySchema

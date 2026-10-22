@@ -32,7 +32,7 @@ sections:
     description: |
       **Enterprise-grade AI for cloud automation.**
 
-      Pulumi's code-first platform already works great with the coding agents your team loves — Claude Code, Codex, Cursor, and more — and our [agent skills](/docs/ai/skills/) make them even better. Want the best infrastructure agent right out of the box? That's Neo: the industry's first AI agent built from the ground up to execute, govern, and optimize complex cloud automation at enterprise scale. Neo understands infrastructure dependencies, respects your policies, and works within your existing Pulumi governance.
+      Pulumi's code-first platform already works great with the coding agents your team loves — Claude Code, Codex, Cursor, and more — and our [agent skills](/docs/ai/concepts/agent-skills/) make them even better. Want the best infrastructure agent right out of the box? That's Neo: the industry's first AI agent built from the ground up to execute, govern, and optimize complex cloud automation at enterprise scale. Neo understands infrastructure dependencies, respects your policies, and works within your existing Pulumi governance.
     cards:
       - icon: code
         title: Faster provisioning
@@ -114,6 +114,6 @@ sections:
         cta_primary_text: See Neo in Action
         cta_primary_link: https://www.youtube.com/watch?v=9GB9M2l1OgY
         cta_text: Read the Docs
-        cta_link: /docs/ai/neo/
+        cta_link: /docs/ai/concepts/neo/
     anchor: get-started
 ---

@@ -19,7 +19,7 @@ Visual Import builds on the inventory that Discovery keeps for your [cloud accou
 
 1. **You select unmanaged resources.** Visual Import lists only resources that Discovery has found and that no Pulumi stack manages.
 1. **Visual Import adds related resources.** Discovery records the relationships between resources, so Visual Import can suggest the resources your selection depends on and the resources that depend on it. Importing related resources together keeps a service's infrastructure in one program.
-1. **Visual Import generates code.** It writes a program in the language you choose: TypeScript, Python, Go, C#, Java, or YAML. You can have [Pulumi Neo](/docs/ai/neo/) refine the generated code, for example to use more meaningful names or to reference related resources instead of hard-coding their IDs.
+1. **Visual Import generates code.** It writes a program in the language you choose: TypeScript, Python, Go, C#, Java, or YAML. You can have [Pulumi Neo](/docs/ai/concepts/neo/) refine the generated code, for example to use more meaningful names or to reference related resources instead of hard-coding their IDs.
 1. **You run the program.** You add the code to a new or existing stack and run `pulumi up`.
 
 ## How resources become managed

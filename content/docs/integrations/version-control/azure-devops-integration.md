@@ -108,7 +108,7 @@ For [review stacks](#review-stacks), comments show the review stack status and o
 
 Draft pull requests do not trigger deployments, so no preview runs and no comment is posted until the pull request is published. Azure DevOps is the exception here: [GitLab](/docs/integrations/version-control/gitlab/) and [Bitbucket](/docs/integrations/version-control/bitbucket/) treat drafts like any other request, and [GitHub](/docs/integrations/version-control/github-app/) makes draft comments a setting you can turn off.
 
-These comments come from Pulumi Deployments. [Neo code reviews](/docs/ai/neo/code-reviews/), which analyze a pull request and leave inline feedback, are available on GitHub only — Neo does not comment on Azure DevOps pull requests.
+These comments come from Pulumi Deployments. [Neo code reviews](/docs/ai/concepts/neo/code-reviews/), which analyze a pull request and leave inline feedback, are available on GitHub only — Neo does not comment on Azure DevOps pull requests.
 
 ### Commit status checks
 

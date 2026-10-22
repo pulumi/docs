@@ -71,7 +71,7 @@ Paste this prompt into your coding agent of choice to install Pulumi, configure 
 Fetch https://www.pulumi.com/onboard.md and follow its instructions to get me started with Pulumi.
 {{< /copy-prompt >}}
 
-To go further with agents, see [Agent Skills](/docs/ai/skills/), the [Pulumi MCP server](/docs/ai/mcp-server/), and [Pulumi Neo](/docs/ai/neo/), Pulumi's purpose-built infrastructure agent.
+To go further with agents, see [Agent Skills](/docs/ai/concepts/agent-skills/), the [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/), and [Pulumi Neo](/docs/ai/concepts/neo/), Pulumi's purpose-built infrastructure agent.
 
 ## Learn more
 

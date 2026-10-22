@@ -178,7 +178,7 @@ Pulumi typically serves as the provisioning and orchestration layer—defining g
 
 AI coding agents are becoming active participants in software delivery, and IDPs are where that plays out for infrastructure. A well-designed platform gives agents the same golden paths, guardrails, and service catalog that developers use—so an agent can propose and provision infrastructure within policy rather than inventing one-off configurations.
 
-Code-first platforms have an edge here: agents reason far better about real programming languages than about bespoke DSLs or click-through UIs. Standards like the [Model Context Protocol (MCP)](/docs/ai/mcp-server/) and [Agent Skills](/docs/ai/skills/) let agents such as Claude Code, Cursor, and others discover and safely operate a platform's capabilities. The goal isn't to replace the platform team—it's to let both humans and agents travel the same paved roads.
+Code-first platforms have an edge here: agents reason far better about real programming languages than about bespoke DSLs or click-through UIs. Standards like the [Model Context Protocol (MCP)](/docs/ai/guides/set-up-mcp-server/) and [Agent Skills](/docs/ai/concepts/agent-skills/) let agents such as Claude Code, Cursor, and others discover and safely operate a platform's capabilities. The goal isn't to replace the platform team—it's to let both humans and agents travel the same paved roads.
 
 ## Common pitfalls to avoid
 

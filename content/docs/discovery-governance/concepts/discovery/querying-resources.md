@@ -27,7 +27,7 @@ A resource can come from more than one source: a stack might manage a bucket tha
 ## Ways to query
 
 - **Search queries**: Search by name, type, stack, project, or resource property, combine terms with logical operators, and group the results, for example by cloud account and region. For the syntax, see [Search resources](/docs/discovery-governance/guides/search-resources/).
-- **Natural language**: Ask a question in plain language, such as "How many VPCs do I have?", and Pulumi Cloud writes the search query for you. You can also ask [Pulumi Neo](/docs/ai/neo/) questions about your resources.
+- **Natural language**: Ask a question in plain language, such as "How many VPCs do I have?", and Pulumi Cloud writes the search query for you. You can also ask [Pulumi Neo](/docs/ai/concepts/neo/) questions about your resources.
 - **Export and API**: Download the results as CSV, or query resources from your own tools with the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/resource-search/). See [Export resource data](/docs/discovery-governance/guides/export-resource-data/).
 - **Relationship queries**: To follow dependencies between resources, stacks, and their consumers, use the [Context API](/docs/discovery-governance/concepts/context-api/).
 

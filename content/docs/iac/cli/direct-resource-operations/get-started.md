@@ -174,7 +174,7 @@ bucket-9f7f27f
 $ pulumi do aws:s3:Bucket delete bucket-9f7f27f --stateless --yes
 ```
 
-Keeping this same command shape and output format across all Pulumi providers makes `pulumi do` work especially well for coding agents, too. See [Pulumi CLI for agents](/docs/ai/cli-for-agents/) to learn more.
+Keeping this same command shape and output format across all Pulumi providers makes `pulumi do` work especially well for coding agents, too. See [Pulumi CLI for agents](/docs/ai/concepts/cli-for-agents/) to learn more.
 
 ## Next steps
 

@@ -75,7 +75,7 @@ In these cases, the CLI uses the existing credentials. If multiple agents run on
 ## See also
 
 - [Pulumi Cloud accounts](/docs/administration/concepts/accounts/)
-- [Pulumi Agent Skills](/docs/ai/skills/)
-- [Pulumi MCP server](/docs/ai/mcp-server/)
+- [Pulumi Agent Skills](/docs/ai/concepts/agent-skills/)
+- [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/)
 - [The agentic infrastructure era](/blog/the-agentic-infrastructure-era/) (blog post)
 - [Direct resource operations](/docs/iac/cli/direct-resource-operations/)

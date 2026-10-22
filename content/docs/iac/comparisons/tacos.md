@@ -48,7 +48,7 @@ The tools don't all cover the same ground. [HCP Terraform](https://www.hashicorp
 | Policy as code | [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) in Python, TypeScript, or Open Policy Agent Rego; open source, with [compliance packs](/docs/discovery-governance/guides/pre-built-policy-packs/) in Pulumi Cloud | Policy enforcement with Open Policy Agent Rego, or Sentinel on HCP Terraform |
 | Secrets management | [First-class encrypted secrets](/docs/iac/concepts/secrets/) plus [Pulumi ESC](/docs/esc/) for centralized secrets and configuration | Encrypted variables, with integrations for external secret stores |
 | Access control | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) teams, role-based access control, SSO/SAML, and audit logs | Per-scope RBAC and SSO/SAML, varying by vendor and tier |
-| AI and agents | [Pulumi Neo](/product/neo/), the [Pulumi MCP server](/docs/ai/mcp-server/), and [Agent Skills](/docs/ai/skills/); author with any coding agent | Emerging and vendor-specific, such as [Spacelift Intelligence and Intent](https://spacelift.io/platform/intelligence) |
+| AI and agents | [Pulumi Neo](/product/neo/), the [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/), and [Agent Skills](/docs/ai/concepts/agent-skills/); author with any coding agent | Emerging and vendor-specific, such as [Spacelift Intelligence and Intent](https://spacelift.io/platform/intelligence) |
 | Open source | Yes — CLI, SDKs, and providers under [Apache 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | Mixed — Atlantis is open source; HCP Terraform, Spacelift, env0, and Scalr are commercial |
 | Commercial option | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) | Commercial across the category, aside from self-hosted Atlantis |
 
@@ -74,7 +74,7 @@ Teams reach for a TACOS because they already have Terraform and need to operate 
 
 ### AI and agents
 
-AI is arriving across the category. Spacelift has added [Intelligence and Intent](https://spacelift.io/platform/intelligence) for natural-language provisioning and a hosted [MCP server](https://docs.spacelift.io/integrations/api-development-with-mcp), and other vendors are moving the same way. Pulumi approaches it from the authoring side: because infrastructure is code in general-purpose languages, the coding agents your team already uses — Claude Code, Cursor, Codex — can work with it through [Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/), and [Pulumi Neo](/product/neo/) is a purpose-built infrastructure agent for deeper, governed automation. Use your own agent, use Neo, or use both.
+AI is arriving across the category. Spacelift has added [Intelligence and Intent](https://spacelift.io/platform/intelligence) for natural-language provisioning and a hosted [MCP server](https://docs.spacelift.io/integrations/api-development-with-mcp), and other vendors are moving the same way. Pulumi approaches it from the authoring side: because infrastructure is code in general-purpose languages, the coding agents your team already uses — Claude Code, Cursor, Codex — can work with it through [Agent Skills](/docs/ai/concepts/agent-skills/) and the [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/), and [Pulumi Neo](/product/neo/) is a purpose-built infrastructure agent for deeper, governed automation. Use your own agent, use Neo, or use both.
 
 ## When to use Pulumi or a TACOS
 
