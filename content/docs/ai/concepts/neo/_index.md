@@ -88,5 +88,5 @@ the context a task needs.
 [Plan Mode](/docs/ai/concepts/neo/tasks/#plan-mode) makes Neo agree on a plan with you
 before it acts, [task modes](/docs/ai/concepts/neo/tasks/#task-modes) control which steps
 need your approval, and
-[read-only mode](/docs/ai/get-started/neo/#read-only-mode) removes its ability
-to change anything at all. Neo never has more access than you do, only less.
+[read-only mode](/docs/ai/get-started/neo/#read-only-mode) stops it from
+making changes in Pulumi Cloud. Neo never has more access than you do, only less.

@@ -40,9 +40,9 @@ Neo is one agent reachable from the surfaces below. Whichever surface starts a t
 | [Slack](/docs/ai/integrations/slack/) | The Pulumi user linked to your Slack identity | Requires connecting your Slack identity in Neo settings first. |
 | PR mentions / [code reviews](/docs/ai/concepts/neo/code-reviews/) | The Pulumi user matched to your VCS identity | Neo matches your GitHub identity to your Pulumi user. |
 | [Scheduled automations](/docs/ai/concepts/neo/automations/) | The user who scheduled the automation | RBAC is evaluated at execution time — if that user's permissions change, the new permissions apply. |
-| API / [MCP](/docs/ai/integrations/external-mcp-servers/)-created tasks | The Pulumi user whose token created the task | The task runs with that user's RBAC, exactly as if they had started it in the console. |
+| API / [MCP](/docs/ai/guides/set-up-mcp-server/)-created tasks | The Pulumi user whose token created the task | The task runs with that user's RBAC, exactly as if they had started it in the console. |
 
-These identities govern what Neo does in Pulumi Cloud. Writes to your version control provider are a separate matter: Neo authenticates as the shared app installation for its VCS interactions no matter which surface started the task (see [VCS identity per provider](#vcs-identity-per-provider)).
+These identities govern what Neo does in Pulumi Cloud. Writes to your version control provider are a separate matter: for most VCS interactions, Neo authenticates as the shared app installation no matter which surface started the task. Creating repositories, and GitHub Enterprise Server with individual authentication enabled, are exceptions (see [VCS identity per provider](#vcs-identity-per-provider)).
 
 Because a task's Pulumi RBAC is evaluated at execution time, it never runs with stale permissions: if the acting user is deactivated or loses access, the task loses that access immediately, including in the middle of a running task.
 
@@ -114,8 +114,6 @@ Every lever that shapes what a Neo task can do, and who sets it:
 | Integration enablement and credentials | Per integration | Org admin | [Integrations](/docs/ai/integrations/) |
 
 For scheduled automations, settings resolve in this order: the per-automation setting, then the org-level default, then the built-in fallback (auto approval and read-only permissions).
-
-Org-level defaults for permission and approval mode set the starting point for new tasks; a user can override them per task.
 
 [CLI integrations](/docs/ai/integrations/cli-integrations/) are a distinct, admin-controlled capability: an organization admin points a CLI at an ESC environment, and every task in the organization is then offered that integration unless the user turns it off for the task. Being offered an integration is not the same as being able to use it. Neo invokes the CLI with `pulumi env run`, as the acting user, so the integration only works for users who can open the backing environment — for anyone else, the call fails with a permission error rather than handing over the environment's credentials. Connecting an integration doesn't widen anyone's access; it makes an environment the user could already open convenient for Neo to reach. Scope each integration's ESC environment to what Neo needs — prefer a read-only cloud role and broaden it deliberately.
 

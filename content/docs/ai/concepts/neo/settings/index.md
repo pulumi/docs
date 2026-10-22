@@ -56,8 +56,6 @@ If you'd rather keep Neo on but disable specific capabilities, use the per-featu
 
 To disable [Neo code reviews](/docs/ai/concepts/neo/code-reviews/), select the "Code reviews" tab in Neo Settings and turn off "Enable code reviews".
 
-![Neo access settings](toggle-neo-access.png)
-
 {{% notes type="info" %}}
 If Neo was previously disabled, it will need to be enabled as outlined above.
 {{% /notes %}}
@@ -80,7 +78,7 @@ The **Organization instructions** tab and the slash commands section of the **Ge
 
 Neo can connect to third-party services like issue trackers, observability platforms, and incident response tools, giving tasks the ability to query external tools alongside your infrastructure. Integrations are configured in the **Integrations** tab of Neo Settings, where administrators can enable services and provide credentials.
 
-See [Integrations](/docs/ai/integrations/) for the full list of available integrations, setup instructions, and credential storage details.
+See [Integrations](/docs/ai/integrations/) for the available integrations and how to set them up, and [credential storage](/docs/ai/integrations/external-mcp-servers/#credential-storage) for how Neo stores their credentials.
 
 ## Task modes
 

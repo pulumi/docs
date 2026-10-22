@@ -54,19 +54,6 @@ When you ask Neo to create resources, it automatically applies your organization
 - Update instructions as your team's practices evolve
 - Test instructions in individual prompts before rolling out broadly
 
-### Bootstrapping repository instructions
-
-Neo reads `AGENTS.md` files when it enters a repository, but it needs to clone the repository first. To ensure Neo picks up your repository instructions early in every task, add a bootstrapping instruction to your Custom Instructions:
-
-```text
-When working on a task, immediately clone the associated repository
-(and any additional repositories involved) and look for an AGENTS.md
-file. Follow any setup instructions it contains before proceeding
-with the task.
-```
-
-This ensures that environment setup, git hooks, and coding standards defined in `AGENTS.md` are applied before Neo starts working.
-
 ## Configuration precedence
 
 Neo applies configuration in layers, with later layers taking priority:
@@ -91,8 +78,6 @@ Common uses for `AGENTS.md` include:
 - **Environment setup**: Required tool versions, environment variables, and runtime configuration
 - **Git hooks**: Hook paths and setup commands that must run before committing
 - **Coding standards**: Language preferences, naming conventions, and style requirements
-
-Use `AGENTS.md` to capture conventions that aren't enforced by linters or formatters: coding standards, naming conventions, how to run tests, or any other guidance your team needs.
 
 ### Example
 
@@ -121,6 +106,19 @@ Always run `git config core.hooksPath .githooks` before committing.
 ### Subdirectory support
 
 You can place `AGENTS.md` files in subdirectories for more specific instructions. When Neo works in a subdirectory, it reads the nearest `AGENTS.md` file, with subdirectory files taking precedence over parent files. This lets you define general project-wide conventions at the root while providing specialized guidance for specific areas of your codebase.
+
+### Bootstrapping repository instructions
+
+Neo reads `AGENTS.md` files when it enters a repository, but it needs to clone the repository first. To ensure Neo picks up your repository instructions early in every task, add a bootstrapping instruction to your Custom Instructions:
+
+```text
+When working on a task, immediately clone the associated repository
+(and any additional repositories involved) and look for an AGENTS.md
+file. Follow any setup instructions it contains before proceeding
+with the task.
+```
+
+This ensures that environment setup, git hooks, and coding standards defined in `AGENTS.md` are applied before Neo starts working.
 
 ### Repository instructions best practices
 
