@@ -85,6 +85,12 @@ const config = {
     // SupportFormApiArgs in supportForm.ts.
     enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
 
+    // pricingApiStack is the pricing calculator API stack (infrastructure/pricing-calculator-api),
+    // e.g. "pulumi/pricing-calculator-api/production". When set, /api/pricing on this domain
+    // proxies to that stack's Lambda Function URL, giving the API an address that survives the
+    // Lambda being replaced. Unset (e.g. dev stacks, PR previews) = no origin or behavior added.
+    pricingApiStack: stackConfig.get("pricingApiStack") || undefined,
+
     // supportRedirectDomain is a retired hostname (e.g. support.pulumi.com) permanently redirected to the
     // support-request form at /support/new/ via a dedicated CloudFront distribution — see supportRedirect.ts.
     // Unset means no redirect infrastructure. DNS for the hostname is managed by the pulumi-service repo, not here.
@@ -918,7 +924,7 @@ const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPol
     },
 });
 
-// API responses (currently just /api/support*) must never be cached by browsers
+// API responses (/api/support* and /api/pricing*) must never be cached by browsers
 // or intermediaries. DefaultCachePolicy would stamp max-age=60 on them, so this
 // policy overrides Cache-Control to no-store while keeping the security headers.
 const ApiResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy("api-response-headers", {
@@ -1197,6 +1203,68 @@ if (config.enableSupportForm) {
     });
 }
 
+// The pricing calculator API (its own stack; see infrastructure/pricing-calculator-api),
+// served at /api/pricing. Additive and fully optional — when pricingApiStack is unset,
+// nothing here runs and the distribution is unchanged.
+//
+// Unlike /api/support there's no origin secret: the handler only does arithmetic, has
+// no secrets or side effects, and its Function URL is meant to stay directly callable.
+// Requests through this path still get the WAF's per-IP rate limit (the link-checker
+// exemption excludes /api/), and the Lambda's reserved concurrency caps the rest.
+const pricingApiOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const pricingApiBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+
+if (config.pricingApiStack) {
+    const pricingApiStack = new pulumi.StackReference(config.pricingApiStack);
+    const pricingApiOriginId = "pricing-calculator-api";
+
+    pricingApiOrigins.push({
+        originId: pricingApiOriginId,
+        // Function URLs are "https://<id>.lambda-url.<region>.on.aws/";
+        // CloudFront wants just the hostname.
+        domainName: pricingApiStack.getOutput("url").apply(url => new URL(url).hostname),
+        customOriginConfig: {
+            originProtocolPolicy: "https-only",
+            httpPort: 80,
+            httpsPort: 443,
+            originSslProtocols: ["TLSv1.2"],
+        },
+    });
+
+    // The estimate's inputs are query parameters on a GET, so every query string is
+    // forwarded. Headers are a whitelist, as for /api/support: content-type for POST
+    // bodies, plus the three CORS request headers the Function URL's own CORS config
+    // needs to answer browser preflights. Host is dropped by construction, which Lambda
+    // Function URL origins require.
+    const pricingApiOriginRequestPolicy = new aws.cloudfront.OriginRequestPolicy("pricing-api-origin-request", {
+        comment: "/api/pricing: forwards query strings, the content type, and CORS request headers.",
+        cookiesConfig: { cookieBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "all" },
+        headersConfig: {
+            headerBehavior: "whitelist",
+            headers: {
+                items: ["content-type", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"],
+            },
+        },
+    });
+
+    pricingApiBehaviors.push({
+        ...baseCacheBehavior,
+        targetOriginId: pricingApiOriginId,
+        pathPattern: "/api/pricing*",
+        // The API takes GET and POST, and CloudFront's only POST-capable set is all
+        // seven; the handler 405s the rest. Estimates are cheap and rates change on
+        // deploy, so nothing is cached.
+        allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
+        cachedMethods: ["GET", "HEAD"],
+        cachePolicyId: noCacheKeyPolicy.id,
+        originRequestPolicyId: pricingApiOriginRequestPolicy.id,
+        responseHeadersPolicyId: ApiResponseHeadersPolicy.id,
+        lambdaFunctionAssociations: [],
+        functionAssociations: [],
+    });
+}
+
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
@@ -1252,6 +1320,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...answersOrigins,
         ...versionedDocsOrigins,
         ...supportFormOrigins,
+        ...pricingApiOrigins,
     ],
 
     // Default object to serve when no path is given.
@@ -1274,9 +1343,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     orderedCacheBehaviors: [
-        // The support-form API endpoint. /api/support* overlaps no other
-        // pattern; listed first because it's the only non-content behavior.
+        // The API endpoints. /api/support* and /api/pricing* overlap no other
+        // pattern; listed first because they're the only non-content behaviors.
         ...supportFormBehaviors,
+        ...pricingApiBehaviors,
 
         ...registryBehaviors,
         ...devBehaviors,
