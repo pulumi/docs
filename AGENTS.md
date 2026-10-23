@@ -100,6 +100,7 @@ Some pulumi.com pages are **not** in this repo. They ship from [pulumi/marketing
 - **`/dev`**: the Dev Center (tutorials, templates, community examples, and the glossary). See below.
 - **`/community`**: the community landing page and `/community/puluminaries/`. The proxied paths are exactly `/community`, `/community/`, `/community.md`, and `/community/puluminaries*`, because `/community/team/*` (the author pages blog bylines link to) is still built here from `content/community/team/` and `data/team/`.
 - **`/pricing`**: the pricing page, including the edition cards, prices, comparison table, calculator, and FAQ, all from `apps/www/src/data/pricing/`. This repo keeps only the generated `data/pulumi_editions.yaml` that docs callouts read (see "Edition data" below). The proxied paths are exactly `/pricing`, `/pricing/`, and `/pricing.md`, so redirects under `/pricing/` still come from S3.
+- **`/up`**: the getting-started wizard, which is being A/B tested against `/docs/get-started/`. Every wizard page is `noindex`. The proxied paths are exactly `/up`, `/up/`, and `/up/*`, so a future page such as `/upgrade` or `/updates` would still come from S3.
 
 `invalidate-dev-cache.yml` flushes these paths from CloudFront when marketing-web deploys. When another page moves over, add its paths to that workflow's defaults and to this list.
 
