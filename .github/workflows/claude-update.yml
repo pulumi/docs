@@ -276,7 +276,8 @@ jobs:
           # claude-code-review.yml reads `gh pr view` (`app/workprentice`), so
           # both forms are listed. Keep this list in sync with the matching
           # checks in claude-code-review.yml and claude-triage.yml.
-          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "app/github-copilot" \
+             || "$AUTHOR" == "eon-pulumi-agent[bot]" || "$AUTHOR" == "app/eon-pulumi-agent" \
              || "$AUTHOR" == "workprentice[bot]" || "$AUTHOR" == "app/workprentice" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "author=$AUTHOR" >> $GITHUB_OUTPUT
