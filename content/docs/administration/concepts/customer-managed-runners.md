@@ -128,6 +128,8 @@ ecs:
   task_definition_template_file: /etc/pulumi/worker-task-definition.json
 ```
 
+The agent finds its AWS credentials and region the way other AWS tools do, from its environment, an AWS profile, or the role it runs under. An agent that runs as an ECS task gets its region automatically. Anywhere else, set `AWS_REGION` on the agent or use a profile that sets a region.
+
 The agent's AWS credentials need these permissions:
 
 - `ecs:RegisterTaskDefinition`, `ecs:DescribeTaskDefinition`, and `ecs:TagResource`
@@ -146,13 +148,16 @@ The agent's AWS credentials need these permissions:
 
 `networkMode` must be `awsvpc` (the default), whichever launch type you use. To configure the job's own container, for example its log configuration, include a container named `pulumi-workflow`; the agent sets that container's image, entry point, command, and runner mount. Other container and volume names that start with `pulumi-workflow-` are reserved for the agent.
 
-Without a template, jobs run with no execution or task role. The job image must then be public, nothing ships the containers' logs, and the job gets AWS credentials only from its own configuration, such as [ESC](#deployments) or OIDC.
+Without a template, jobs run with no execution or task role. The job image must then be public, and nothing ships the containers' logs.
 
 #### What the agent creates in your AWS account
 
 Each task runs a short-lived `pulumi-workflow-prepare` container from the [agent image](#agent-image) before the job's container starts. It uses the `pulumi-workflow` container's log configuration, so set logging there to capture setup failures.
 
-The job's credentials reach the task as `RunTask` environment overrides. CloudTrail masks them, but any principal allowed `ecs:DescribeTasks` on the cluster can read them while the job runs, so limit that permission accordingly.
+The job's credentials, including the token it uses to authenticate to Pulumi Cloud, reach the task as `RunTask` environment overrides. CloudTrail masks them, but they appear in clear text in two other places:
+
+- `DescribeTasks` responses, including for stopped tasks that ECS still lists. Limit `ecs:DescribeTasks` on the cluster accordingly.
+- The `ECS Task State Change` events that ECS sends to Amazon EventBridge. Every target of a rule that matches these events, such as a SIEM or log pipeline, receives the credentials, so check which rules match events from the cluster.
 
 Each task is tagged `pulumi-workflow/id` with its job's ID and inherits its task definition's tags. The agent registers one task definition for each distinct combination of template, job image, and agent image, and reuses it for later jobs. These are tagged `pulumi-workflow/managed-by=workflow-runner`, and stay `ACTIVE` until you deregister them; the agent registers one again if a later job needs it.
 
@@ -162,9 +167,19 @@ ECS limitations:
 - **Registry credentials**: the execution role must be able to pull the job image. Registry credentials set on the job aren't supported.
 - **No Docker daemon**: Fargate doesn't provide one, so jobs that build container images need a rootless builder or an external build service.
 
+#### Troubleshooting ECS jobs
+
+To check that the agent's AWS credentials can reach the configured cluster, run `customer-managed-workflow-agent debug ecs` on the agent's host.
+
+When a job fails before its first step, its **Setup** step log in Pulumi Cloud says why:
+
+- **AWS API errors**: if registering the task definition or running the task fails, for example because of a missing permission or `iam:PassRole`, the log shows the AWS error.
+- **Override size**: `RunTask` accepts at most 8 KiB of container overrides. The job's credentials and the host variables forwarded with [`env_forward_allowlist`](#forwarding-host-environment-variables) all count toward that limit, so forward fewer variables if a job hits it.
+- **Setup container failures**: if the `pulumi-workflow-prepare` container fails, the log says that preparing the job failed and gives the container's exit code. The container's own output goes wherever the `pulumi-workflow` container's log configuration sends it.
+
 ### Agent image
 
-The `kubernetes` and `ecs` deploy targets copy the runner binary into each job from the agent's container image, `pulumi/customer-managed-workflow-agent`. By default, the agent uses its own release of that image, for example `pulumi/customer-managed-workflow-agent:v2.3.0` for agent v2.3.0. Agents before v2.3.0 default to the `latest` tag. To use a mirror, for example in a private registry or an AWS GovCloud (US) ECR repository, set the `PULUMI_AGENT_IMAGE` environment variable on the agent to your mirror of the same release. The agent and the runner binary in the image hand each job off between them, so the image must match the agent's release.
+The `kubernetes` and `ecs` deploy targets copy the runner binary into each job from the agent's container image, `pulumi/customer-managed-workflow-agent`. By default, the agent uses its own release of that image, for example `pulumi/customer-managed-workflow-agent:v2.3.0` for agent v2.3.0. Agents before v2.3.0 default to the `latest` tag. To use a mirror, for example in a private registry or an AWS GovCloud (US) ECR repository, set the `PULUMI_AGENT_IMAGE` environment variable on the agent to your mirror of the same release. With the `ecs` target, the task's execution role pulls the agent image, so use a mirror that role can pull from, such as ECR. The agent and the runner binary in the image hand each job off between them, so the image must match the agent's release.
 
 ### One job per runner
 
