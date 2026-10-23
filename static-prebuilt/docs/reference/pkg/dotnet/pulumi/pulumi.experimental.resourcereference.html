@@ -50,7 +50,7 @@
     "name": "Pulumi",
     "url": "https://www.pulumi.com/"
   },
-  "assemblyVersion": "3.115.0",
+  "assemblyVersion": "3.116.0",
   "description": "API reference for Struct ResourceReference in Pulumi, the infrastructure-as-code platform's .NET SDK."
 }
 </script>
@@ -133,15 +133,15 @@
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Experimental_ResourceReference__ctor_" data-uid="Pulumi.Experimental.ResourceReference.#ctor*"></a>
-  <h4 id="Pulumi_Experimental_ResourceReference__ctor_Pulumi_Urn_Pulumi_Experimental_PropertyValue_System_String_" data-uid="Pulumi.Experimental.ResourceReference.#ctor(Pulumi.Urn,Pulumi.Experimental.PropertyValue,System.String)">ResourceReference(Urn, PropertyValue?, string)</h4>
+  <h4 id="Pulumi_Experimental_ResourceReference__ctor_Pulumi_Urn_System_String_System_String_Pulumi_Experimental_PropertyValue_System_String_" data-uid="Pulumi.Experimental.ResourceReference.#ctor(Pulumi.Urn,System.String,System.String,Pulumi.Experimental.PropertyValue,System.String)">ResourceReference(Urn, string, string, PropertyValue?, string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public ResourceReference(Urn urn, PropertyValue? id, string version)</code></pre>
+    <pre><code class="lang- hljs">public ResourceReference(Urn urn, string type, string name, PropertyValue? id, string version)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,6 +159,16 @@
         <td></td>
       </tr>
       <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="pulumi.experimental.propertyvalue.html">PropertyValue</a></td>
         <td><span class="parametername">id</span></td>
         <td></td>
@@ -173,7 +183,7 @@
   <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Experimental_ResourceReference_Id_" data-uid="Pulumi.Experimental.ResourceReference.Id*"></a>
   <h4 id="Pulumi_Experimental_ResourceReference_Id" data-uid="Pulumi.Experimental.ResourceReference.Id">Id</h4>
@@ -201,6 +211,32 @@
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L35">View Source</a>
   </span>
+  <a id="Pulumi_Experimental_ResourceReference_Name_" data-uid="Pulumi.Experimental.ResourceReference.Name*"></a>
+  <h4 id="Pulumi_Experimental_ResourceReference_Name" data-uid="Pulumi.Experimental.ResourceReference.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L37">View Source</a>
+  </span>
   <a id="Pulumi_Experimental_ResourceReference_PackageVersion_" data-uid="Pulumi.Experimental.ResourceReference.PackageVersion*"></a>
   <h4 id="Pulumi_Experimental_ResourceReference_PackageVersion" data-uid="Pulumi.Experimental.ResourceReference.PackageVersion">PackageVersion</h4>
   <div class="markdown level1 summary"></div>
@@ -208,6 +244,32 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang- hljs">public string PackageVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_ResourceReference_Type_" data-uid="Pulumi.Experimental.ResourceReference.Type*"></a>
+  <h4 id="Pulumi_Experimental_ResourceReference_Type" data-uid="Pulumi.Experimental.ResourceReference.Type">Type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,7 +315,7 @@
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Experimental_ResourceReference_Equals_" data-uid="Pulumi.Experimental.ResourceReference.Equals*"></a>
   <h4 id="Pulumi_Experimental_ResourceReference_Equals_Pulumi_Experimental_ResourceReference_" data-uid="Pulumi.Experimental.ResourceReference.Equals(Pulumi.Experimental.ResourceReference)">Equals(ResourceReference)</h4>
@@ -299,7 +361,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Experimental_ResourceReference_Equals_" data-uid="Pulumi.Experimental.ResourceReference.Equals*"></a>
   <h4 id="Pulumi_Experimental_ResourceReference_Equals_System_Object_" data-uid="Pulumi.Experimental.ResourceReference.Equals(System.Object)">Equals(object?)</h4>
@@ -347,7 +409,7 @@
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a></div>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Experimental_ResourceReference_GetHashCode_" data-uid="Pulumi.Experimental.ResourceReference.GetHashCode*"></a>
   <h4 id="Pulumi_Experimental_ResourceReference_GetHashCode" data-uid="Pulumi.Experimental.ResourceReference.GetHashCode">GetHashCode()</h4>
@@ -379,7 +441,7 @@
   <h3 id="operators">Operators
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Experimental_ResourceReference_op_Equality_" data-uid="Pulumi.Experimental.ResourceReference.op_Equality*"></a>
   <h4 id="Pulumi_Experimental_ResourceReference_op_Equality_Pulumi_Experimental_ResourceReference_Pulumi_Experimental_ResourceReference_" data-uid="Pulumi.Experimental.ResourceReference.op_Equality(Pulumi.Experimental.ResourceReference,Pulumi.Experimental.ResourceReference)">operator ==(ResourceReference, ResourceReference)</h4>
@@ -427,7 +489,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/PropertyValue.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Experimental_ResourceReference_op_Inequality_" data-uid="Pulumi.Experimental.ResourceReference.op_Inequality*"></a>
   <h4 id="Pulumi_Experimental_ResourceReference_op_Inequality_Pulumi_Experimental_ResourceReference_Pulumi_Experimental_ResourceReference_" data-uid="Pulumi.Experimental.ResourceReference.op_Inequality(Pulumi.Experimental.ResourceReference,Pulumi.Experimental.ResourceReference)">operator !=(ResourceReference, ResourceReference)</h4>
@@ -483,7 +545,7 @@
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.115.0</p>
+    <p class="sdk-version">Version 3.116.0</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
