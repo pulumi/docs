@@ -45,7 +45,10 @@ const QUANTITY_FIELDS = {
     insights_resources: "insightsResources",
 } as const;
 
-const KNOWN_KEYS = new Set(["edition", "unit", ...Object.keys(QUANTITY_FIELDS)]);
+// A plain array, not a Set: the handler is shipped through Pulumi's closure
+// serialization (aws.lambda.CallbackFunction), which doesn't preserve Set
+// instances. handler.test.ts runs the serialized handler to catch this.
+const KNOWN_KEYS = ["edition", "unit", ...Object.keys(QUANTITY_FIELDS)];
 
 type Parsed = { ok: true; usage: Usage } | { ok: false; fields: Record<string, string> };
 
@@ -69,7 +72,7 @@ export function parseUsage(input: Record<string, unknown>, rates: PricingRates =
     const fields: Record<string, string> = {};
 
     for (const key of Object.keys(input)) {
-        if (!KNOWN_KEYS.has(key)) {
+        if (!KNOWN_KEYS.includes(key)) {
             fields[key] = "unknown field";
         }
     }

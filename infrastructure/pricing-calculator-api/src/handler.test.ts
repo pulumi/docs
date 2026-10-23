@@ -5,6 +5,8 @@
 import * as assert from "assert";
 import { test } from "node:test";
 
+import * as pulumi from "@pulumi/pulumi";
+
 import { FunctionUrlEvent, MAX_BODY_BYTES, pricingHandler, ratesFromEnv } from "./handler";
 import { DEFAULT_RATES } from "./pricing";
 
@@ -80,4 +82,16 @@ test("uses the rates the deploy passes in PRICING_RATES", async () => {
 test("falls back to the built-in rates when PRICING_RATES is unset or invalid", () => {
     assert.strictEqual(ratesFromEnv({}), DEFAULT_RATES);
     assert.strictEqual(ratesFromEnv({ PRICING_RATES: "{" }), DEFAULT_RATES);
+});
+
+// The deployed handler isn't this module: aws.lambda.CallbackFunction ships it
+// through Pulumi's closure serialization, which can change captured values (it
+// turns a Set into a plain object, for one). Run the serialized copy too.
+test("works after Pulumi's closure serialization", async () => {
+    const serialized = await pulumi.runtime.serializeFunction(pricingHandler);
+    const mod: { exports: Record<string, typeof pricingHandler> } = { exports: {} };
+    new Function("module", "exports", "require", serialized.text)(mod, mod.exports, require);
+    const res = await mod.exports[serialized.exportName](get({ edition: "essentials", iac_resources: "1000" }));
+    assert.strictEqual(res.statusCode, 200, res.body);
+    assert.strictEqual(JSON.parse(res.body).estimate.totalUsd, 131.25);
 });
