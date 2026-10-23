@@ -7,7 +7,10 @@
 //
 // This is its own stack, separate from the www.pulumi.com stack in
 // infrastructure/index.ts, so it can be deployed and torn down without touching
-// the site. The Function URL is public (authorizationType NONE); the handler
+// the site. That stack serves it at /api/pricing when its pricingApiStack config
+// names this stack, reading the `url` output below; use that address for anything
+// long-lived (such as an Intercom Fin data connector), since the Function URL
+// changes if the Lambda is ever replaced. The Function URL is public (authorizationType NONE); the handler
 // has no secrets or side effects, and reserved concurrency caps what a flood of
 // requests can cost.
 //
