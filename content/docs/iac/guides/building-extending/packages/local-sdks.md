@@ -78,51 +78,43 @@ Refer to the [Any Terraform Provider documentation](/docs/iac/concepts/providers
 
 ## Using generated SDKs
 
-After adding a local SDK, reference it in your project:
+`pulumi package add` links the generated SDK into your project and prints the import statement to use, so you can use the package like any other Pulumi package. For example, after running `pulumi package add terraform-provider hashicorp/random 3.5.1`:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
 
-```bash
-npm install ./sdks/my-package
-```
-
 ```typescript
-import * as myPackage from "my-package";
+import * as random from "@pulumi/random";
 
-const example = new myPackage.ExampleResource("example");
+const pet = new random.Pet("example");
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
-```bash
-pip install -e ./sdks/my-package
-```
-
 ```python
-import my_package
+import pulumi_random as random
 
-example = my_package.ExampleResource("example")
+pet = random.Pet("example")
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
-```bash
-go get my-package@file:sdks/my-package
-```
+`pulumi package add` adds a `replace` directive for the SDK to `go.mod`. Run `go mod tidy` to add the matching `require` entry, and import the package by the module path in the generated `sdks/random/go.mod`:
 
 ```go
+package main
+
 import (
+	"github.com/pulumi/pulumi-terraform-provider/sdks/go/random/v3/random"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/my-package/sdk/go/my_package"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example := my_package.NewExampleResource("example", nil)
-		return nil
+		_, err := random.NewPet(ctx, "example", nil)
+		return err
 	})
 }
 ```
@@ -130,24 +122,24 @@ func main() {
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-```bash
-dotnet add package my-package --source ./sdks/my-package
+Add the `DefaultItemExcludes` line that `pulumi package add` prints to a `<PropertyGroup>` in your program's `.csproj`, so the SDK's source files aren't compiled into your program:
+
+```xml
+<DefaultItemExcludes>$(DefaultItemExcludes);sdks/**/*.cs</DefaultItemExcludes>
 ```
 
 ```csharp
 using Pulumi;
-using MyPackage;
+using Pulumi.Random;
 
-await Deployment.RunAsync(ctx =>
+return await Deployment.RunAsync(() =>
 {
-  var example = new ExampleResource("example");
+    var pet = new Pet("example");
 });
 ```
 
 {{% /choosable %}}
-{{% /chooser %}}
-
-You can then import and use the package in your code just like any other Pulumi package.
+{{< /chooser >}}
 
 ## Managing generated SDKs
 
@@ -228,13 +220,13 @@ A typical workflow for teams using local SDKs:
 ## Versioning considerations
 
 - For native providers (e.g., `azure-native`, `aws-native`), versioning is managed via the language package manager (e.g., `npm`, `pip`, etc.).
-- For the `terraform-provider` specifically, you can specify a version with the `--version` flag:
-  
+- For the `terraform-provider` specifically, you can specify a version as the argument after the provider name:
+
   ```bash
-  pulumi package add terraform-provider hashicorp/random --version=3.5.1
+  pulumi package add terraform-provider hashicorp/random 3.5.1
   ```
 
-  This version information will be stored in your `Pulumi.yaml` file, ensuring that anyone using your project gets the same provider version. The `--version` flag is only supported for parameterized providers.
+  This version information will be stored in your `Pulumi.yaml` file, ensuring that anyone using your project gets the same provider version.
 - Document the version of the source provider you're using:
   - In your project documentation, note the specific version used.
   - Include version information in your README to help others understand compatibility requirements.
@@ -267,13 +259,13 @@ When creating a component that contains a local SDK, you must ensure the generat
 
 - Any Terraform provider via [`terraform-provider`](/registry/packages/terraform-provider/)
 - Another component that itself contains a local SDK
-- Any other Pulumi plugin that generates code in the `sdk` folder
+- Any other Pulumi plugin that generates code in the `sdks` folder
 
 ### Requirements
 
 1. You must be using Pulumi 3.200.0 or later.
 1. In your component code, run `pulumi package add` to generate the upstream SDK.
-1. Ensure the generated code in the `sdk` folder is committed to version control.
+1. Ensure the generated code in the `sdks` folder is committed to version control.
 
 ### Why this is necessary
 
@@ -286,7 +278,7 @@ If you're building a component that uses a Terraform provider:
 ```bash
 cd my-component
 pulumi package add terraform-provider hashicorp/random 3.5.1
-git add sdk/
+git add sdks/
 git commit -m "Add generated SDK for terraform-provider random"
 ```
 
