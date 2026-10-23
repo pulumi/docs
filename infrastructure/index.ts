@@ -1081,6 +1081,14 @@ if (config.devStack) {
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         })),
+        // Exact paths: /up* would also take the /updateplans/ alias off S3.
+        ...["/up", "/up/", "/up/*"].map((pathPattern) => ({
+            ...baseCacheBehavior,
+            targetOriginId: marketingCDN,
+            pathPattern,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+        })),
     )
 }
 
