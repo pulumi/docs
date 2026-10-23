@@ -95,14 +95,14 @@ The left nav is data-driven from `data/docs_menu_sections.yml`, which is consume
 
 ## Pages that live in pulumi/marketing-web
 
-Some pulumi.com pages are **not** in this repo. They ship from [pulumi/marketing-web](https://github.com/pulumi/marketing-web) (`apps/www`, an Astro build with its own S3 + CloudFront), and `infrastructure/index.ts` proxies the paths listed in `infrastructure/marketingWebPaths.ts` to that distribution the same way it proxies `/registry` and `/guides`. To change one of them, edit it there:
+Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi/marketing-web) (`apps/www`, an Astro build with its own S3 bucket and CloudFront distribution). `infrastructure/index.ts` proxies the paths in `infrastructure/marketingWebPaths.ts` to that distribution, and `invalidate-marketing-web-cache.yml` flushes them from CloudFront when marketing-web deploys. To change one of these pages, edit it there:
 
 - **`/dev`**: the Dev Center (tutorials, templates, community examples, and the glossary). See below.
 - **`/community`**: the community landing page and `/community/puluminaries/`. `/community/team/*` (the author pages blog bylines link to) is still built here from `content/community/team/` and `data/team/`.
-- **`/pricing`**: the pricing page, including the edition cards, prices, comparison table, calculator, and FAQ, all from `apps/www/src/data/pricing/`. This repo keeps only the generated `data/pulumi_editions.yaml` that docs callouts read (see "Edition data" below). Redirects under `/pricing/` still come from S3.
-- **`/up`**: the getting-started wizard, which is being A/B tested against `/docs/get-started/`. Every wizard page is `noindex`.
+- **`/pricing`**: the pricing page, built from `apps/www/src/data/pricing/`. This repo keeps only the generated `data/pulumi_editions.yaml` that docs callouts read (see "Edition data" below). Redirects under `/pricing/` still come from S3.
+- **`/up`**: the getting-started wizard.
 
-`invalidate-marketing-web-cache.yml` flushes those paths from CloudFront when marketing-web deploys, reading them from the `marketingWebPaths` stack output. When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list.
+When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list.
 
 ### The Dev Center
 
