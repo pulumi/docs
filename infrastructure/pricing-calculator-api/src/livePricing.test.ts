@@ -91,12 +91,14 @@ test("rates built from a changed page use the page's values", () => {
         assert.strictEqual(result.rates.editions.essentials.iac_resource_month, 0.2);
         const usage = {
             edition: "essentials",
-            unit: "month" as const,
             iacResources: 1000,
+            iacResourceHours: 0,
             escSecrets: 0,
+            escSecretHours: 0,
             workflowMinutes: 0,
             neoMillionTokens: 0,
             insightsResources: 0,
+            insightsResourceHours: 0,
         };
         assert.strictEqual(estimate(usage, result.rates).totalUsd, 140);
     }

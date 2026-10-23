@@ -25,17 +25,31 @@ test("estimates from GET query parameters", async () => {
 });
 
 test("estimates from a POST JSON body", async () => {
-    const body = { edition: "essentials", unit: "hour", iac_resources: 730000 };
+    const body = { edition: "essentials", iac_resource_hours: 730000 };
     const res = await pricingHandler(post(JSON.stringify(body)));
     assert.strictEqual(res.statusCode, 200);
     assert.strictEqual(JSON.parse(res.body).estimate.totalUsd, 131.25);
 });
 
+test("combines resources and resource-hours", async () => {
+    const query = { edition: "essentials", iac_resources: "400", iac_resource_hours: "146000" };
+    const res = await pricingHandler(get(query));
+    assert.strictEqual(res.statusCode, 200);
+    assert.strictEqual(JSON.parse(res.body).estimate.totalUsd, 58.25);
+});
+
+test("explains that unit was replaced by the _hours fields", async () => {
+    const res = await pricingHandler(get({ edition: "essentials", unit: "hour", iac_resources: "730000" }));
+    assert.strictEqual(res.statusCode, 400);
+    assert.match(JSON.parse(res.body).fields.unit, /iac_resource_hours/);
+});
+
 test("reports every invalid field", async () => {
-    const res = await pricingHandler(get({ edition: "free", unit: "day", iac_resources: "-1", esc_secrets: "lots", typo: "1" }));
+    const query = { edition: "free", iac_resource_hours: "-1", esc_secrets: "lots", typo: "1" };
+    const res = await pricingHandler(get(query));
     assert.strictEqual(res.statusCode, 400);
     const { fields } = JSON.parse(res.body);
-    for (const key of ["edition", "unit", "iac_resources", "esc_secrets", "typo"]) {
+    for (const key of ["edition", "iac_resource_hours", "esc_secrets", "typo"]) {
         assert.ok(fields[key], `expected an error for ${key}`);
     }
 });

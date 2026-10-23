@@ -10,12 +10,14 @@ import { estimate, Usage } from "./pricing";
 function usage(overrides: Partial<Usage>): Usage {
     return {
         edition: "essentials",
-        unit: "month",
         iacResources: 0,
+        iacResourceHours: 0,
         escSecrets: 0,
+        escSecretHours: 0,
         workflowMinutes: 0,
         neoMillionTokens: 0,
         insightsResources: 0,
+        insightsResourceHours: 0,
         ...overrides,
     };
 }
@@ -37,12 +39,26 @@ test("resources beyond the included tranche are charged the list rate", () => {
 // Only IaC: the published hourly ESC and Insights rates are rounded, so their
 // full-month figures drift slightly from the monthly rates (Insights on
 // Essentials is $0.000025 x 730 = $0.01825, against $0.0185/mo).
-test("switching IaC to hourly doesn't change the monthly total", () => {
+test("a full month of IaC resource-hours costs the same as the resources", () => {
     for (const [edition, count] of [["essentials", 1000], ["pro", 3000], ["enterprise", 6000]] as const) {
         const monthly = estimate(usage({ edition, iacResources: count }));
-        const hourly = estimate(usage({ edition, unit: "hour", iacResources: count * 730 }));
+        const hourly = estimate(usage({ edition, iacResourceHours: count * 730 }));
         assert.strictEqual(hourly.totalUsd, monthly.totalUsd, edition);
     }
+});
+
+test("resources and resource-hours share the included tranche", () => {
+    // 400 resources + 100 resources' worth of hours exactly fills Essentials' 500.
+    assert.strictEqual(estimate(usage({ iacResources: 400, iacResourceHours: 73000 })).totalUsd, 40);
+    // 600 resources' worth: 73,000 hours past the tranche at $0.00025.
+    const mixed = estimate(usage({ iacResources: 400, iacResourceHours: 146000 }));
+    assert.strictEqual(mixed.totalUsd, 58.25);
+    assert.strictEqual(mixed.totalUsd, estimate(usage({ iacResources: 600 })).totalUsd);
+});
+
+test("secret and discovered-resource hours are priced at the hourly rates", () => {
+    const e = estimate(usage({ iacResources: 1000, escSecretHours: 730, insightsResourceHours: 1000 }));
+    assert.strictEqual(e.creditsUsed, 131.25 + 0.50005 + 0.025);
 });
 
 test("other meters draw from the same credit pool", () => {
@@ -53,7 +69,8 @@ test("other meters draw from the same credit pool", () => {
 test("flags volume pricing above the contact-sales threshold", () => {
     assert.strictEqual(estimate(usage({ iacResources: 4750 })).volumePricingLikely, false);
     assert.strictEqual(estimate(usage({ iacResources: 4751 })).volumePricingLikely, true);
-    assert.strictEqual(estimate(usage({ unit: "hour", iacResources: 4751 * 730 })).volumePricingLikely, true);
+    assert.strictEqual(estimate(usage({ iacResourceHours: 4751 * 730 })).volumePricingLikely, true);
+    assert.strictEqual(estimate(usage({ iacResources: 4000, iacResourceHours: 751 * 730 })).volumePricingLikely, true);
 });
 
 test("rejects an unknown edition", () => {

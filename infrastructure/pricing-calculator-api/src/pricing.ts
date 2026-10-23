@@ -94,23 +94,26 @@ export const DEFAULT_RATES: PricingRates = {
     contactSalesResources: CONTACT_SALES_RESOURCES,
 };
 
-// With unit "month", iacResources, escSecrets, and insightsResources are counts
-// held for the full month; with unit "hour" they are unit-hours (count x 730
-// for a full month). Workflow minutes and Neo tokens are billed per use, so the
-// unit doesn't apply to them.
+// iacResources, escSecrets, and insightsResources are counts held for the whole
+// month, priced at the monthly rates. The matching *Hours fields are
+// unit-hours, priced at the hourly rates, and a request can use both: a
+// resource that existed for only part of the month goes in iacResourceHours.
+// Workflow minutes and Neo tokens are billed per use, so they have no hourly
+// form.
 export interface Usage {
     edition: string;
-    unit: RateUnit;
     iacResources: number;
+    iacResourceHours: number;
     escSecrets: number;
+    escSecretHours: number;
     workflowMinutes: number;
     neoMillionTokens: number;
     insightsResources: number;
+    insightsResourceHours: number;
 }
 
 export interface Estimate {
     edition: string;
-    unit: RateUnit;
     creditsUsed: number;
     includedCredits: number;
     baseUsd: number;
@@ -134,6 +137,18 @@ export function creditsForResources(quantity: number, edition: EditionRates, uni
 
 const roundCents = (n: number): number => Math.round(n * 100) / 100;
 
+// Resources and resource-hours share one included tranche, so they're pooled
+// as resource-hours before it applies: on Essentials, 400 resources plus 73,000
+// resource-hours (100 resources' worth) exactly fill the 500 included. A
+// request with no hours is priced in months, which keeps a month-only estimate
+// on the monthly rates.
+export function iacCredits(resources: number, hours: number, edition: EditionRates): number {
+    if (hours === 0) {
+        return creditsForResources(resources, edition, "month");
+    }
+    return creditsForResources(resources * HOURS_PER_MONTH + hours, edition, "hour");
+}
+
 export function estimate(usage: Usage, rates: PricingRates = DEFAULT_RATES): Estimate {
     const e = Object.prototype.hasOwnProperty.call(rates.editions, usage.edition)
         ? rates.editions[usage.edition]
@@ -141,20 +156,19 @@ export function estimate(usage: Usage, rates: PricingRates = DEFAULT_RATES): Est
     if (!e) {
         throw new Error(`unknown edition ${JSON.stringify(usage.edition)}`);
     }
-    const hourly = usage.unit === "hour";
 
-    let credits = creditsForResources(usage.iacResources, e, usage.unit);
-    credits += usage.escSecrets * (hourly ? e.esc_secret_hour : e.esc_secret_month);
+    let credits = iacCredits(usage.iacResources, usage.iacResourceHours, e);
+    credits += usage.escSecrets * e.esc_secret_month + usage.escSecretHours * e.esc_secret_hour;
     credits += usage.workflowMinutes * rates.meters.workflow_minute;
     credits += usage.neoMillionTokens * rates.meters.neo_tokens_per_million;
-    credits += usage.insightsResources * (hourly ? e.insights_resource_hour : e.insights_resource_month);
+    credits += usage.insightsResources * e.insights_resource_month +
+        usage.insightsResourceHours * e.insights_resource_hour;
 
     const overage = Math.max(0, credits - e.included_credits);
-    const monthlyResources = usage.iacResources / (hourly ? HOURS_PER_MONTH : 1);
+    const monthlyResources = usage.iacResources + usage.iacResourceHours / HOURS_PER_MONTH;
 
     return {
         edition: usage.edition,
-        unit: usage.unit,
         creditsUsed: Math.round(credits * 1e6) / 1e6,
         includedCredits: e.included_credits,
         baseUsd: e.base_usd,

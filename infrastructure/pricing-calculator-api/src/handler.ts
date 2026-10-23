@@ -5,17 +5,21 @@
 // names in both:
 //
 //     GET /?edition=essentials&iac_resources=1000
-//     POST / {"edition": "pro", "unit": "hour", "iac_resources": 1460000}
+//     GET /?edition=essentials&iac_resources=400&iac_resource_hours=146000
+//     POST / {"edition": "pro", "iac_resource_hours": 1460000}
 //
 // Fields: edition (essentials | pro | enterprise, or whatever editions the
-// deployed rates list; required), unit (month |
-// hour, default month), iac_resources, esc_secrets, workflow_minutes,
-// neo_million_tokens, insights_resources (non-negative numbers, default 0).
+// deployed rates list; required), and these non-negative numbers, default 0:
+// iac_resources, iac_resource_hours, esc_secrets, esc_secret_hours,
+// insights_resources, insights_resource_hours, workflow_minutes, and
+// neo_million_tokens. The plain fields are counts for the whole month; the
+// _hours fields are unit-hours, and the two can be combined (see
+// src/pricing.ts).
 //
 // It's pure computation with no secrets or side effects, so unlike
 // support-form/handler.ts there's no origin check.
 
-import { DEFAULT_RATES, estimate, PricingRates, RateUnit, Usage } from "./pricing";
+import { DEFAULT_RATES, estimate, PricingRates, Usage } from "./pricing";
 
 export interface FunctionUrlEvent {
     body?: string;
@@ -39,16 +43,19 @@ export const MAX_BODY_BYTES = 4096;
 
 const QUANTITY_FIELDS = {
     iac_resources: "iacResources",
+    iac_resource_hours: "iacResourceHours",
     esc_secrets: "escSecrets",
+    esc_secret_hours: "escSecretHours",
     workflow_minutes: "workflowMinutes",
     neo_million_tokens: "neoMillionTokens",
     insights_resources: "insightsResources",
+    insights_resource_hours: "insightsResourceHours",
 } as const;
 
 // A plain array, not a Set: the handler is shipped through Pulumi's closure
 // serialization (aws.lambda.CallbackFunction), which doesn't preserve Set
 // instances. handler.test.ts runs the serialized handler to catch this.
-const KNOWN_KEYS = ["edition", "unit", ...Object.keys(QUANTITY_FIELDS)];
+const KNOWN_KEYS = ["edition", ...Object.keys(QUANTITY_FIELDS)];
 
 type Parsed = { ok: true; usage: Usage } | { ok: false; fields: Record<string, string> };
 
@@ -72,7 +79,10 @@ export function parseUsage(input: Record<string, unknown>, rates: PricingRates =
     const fields: Record<string, string> = {};
 
     for (const key of Object.keys(input)) {
-        if (!KNOWN_KEYS.includes(key)) {
+        if (key === "unit") {
+            fields.unit = "no longer supported; send hours in iac_resource_hours, esc_secret_hours, " +
+                "and insights_resource_hours";
+        } else if (!KNOWN_KEYS.includes(key)) {
             fields[key] = "unknown field";
         }
     }
@@ -80,11 +90,6 @@ export function parseUsage(input: Record<string, unknown>, rates: PricingRates =
     const edition = input.edition;
     if (typeof edition !== "string" || !Object.prototype.hasOwnProperty.call(rates.editions, edition)) {
         fields.edition = `must be one of ${Object.keys(rates.editions).join(", ")}`;
-    }
-
-    const unit = input.unit === undefined ? "month" : input.unit;
-    if (unit !== "month" && unit !== "hour") {
-        fields.unit = "must be month or hour";
     }
 
     const quantities: Record<string, number> = {};
@@ -109,12 +114,14 @@ export function parseUsage(input: Record<string, unknown>, rates: PricingRates =
         ok: true,
         usage: {
             edition: edition as string,
-            unit: unit as RateUnit,
             iacResources: quantities.iacResources,
+            iacResourceHours: quantities.iacResourceHours,
             escSecrets: quantities.escSecrets,
+            escSecretHours: quantities.escSecretHours,
             workflowMinutes: quantities.workflowMinutes,
             neoMillionTokens: quantities.neoMillionTokens,
             insightsResources: quantities.insightsResources,
+            insightsResourceHours: quantities.insightsResourceHours,
         },
     };
 }
