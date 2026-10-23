@@ -9,10 +9,8 @@ as the review ledger, under a `claims/` prefix), keyed by the entity keying
 `merge-claims.py` stamps via `entity_key.py`.
 
 The index is the foundation for event-driven freshness (pulumi/docs#20078
-§4.1): the nightly `reverify-claims.py` job re-checks volatile entities
-(versions, prices, limits) straight from the index — no re-extraction — and
-release-triggered / contradiction-detection consumers join pages on
-`entity_key`.
+§4.1): consumers join pages on `entity_key` without re-extracting anything.
+`scripts/review-admin/` browses it today.
 
 Writer discipline: ONLY this per-article worker writes the claims index. Its
 runs are whole-page snapshots, so overwriting `<slug>.json` is always correct;
@@ -64,7 +62,7 @@ slugify = _select.slugify
 
 SCHEMA_VERSION = 1
 # `framing-drift` persists: it's a decided source-vs-claim outcome (value
-# accurate, published meaning drifted) the reverify lane should track, unlike
+# accurate, published meaning drifted) worth keeping on record, unlike
 # `unverifiable`/`not-a-claim` which carry no decided state.
 KEPT_VERDICTS = {"verified", "matches", "contradicted", "mismatch", "framing-drift"}
 

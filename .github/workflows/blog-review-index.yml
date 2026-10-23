@@ -44,7 +44,7 @@ name: "Scheduled jobs: Blog review index"
 # downstream consumer (the noindex decision process this index feeds) does not
 # exist yet. Nothing here is blocked — set the variable to a positive count, or
 # delete it, to start the sweep. The sibling claims-reverify lane, which shared
-# the same gate bug, WAS turned on at the same time.
+# the same gate bug, WAS turned on at the same time (and removed in 2026-10).
 
 on:
   schedule:

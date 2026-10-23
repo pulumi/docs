@@ -1565,9 +1565,8 @@ jobs:
             --claude-outcome "${{ needs.review.outputs.claude_outcome }}"
 
       # Persist the page's verified claims to the claims index (same bucket,
-      # claims/ prefix) — the whole-page snapshot the nightly volatile
-      # re-verification (claims-reverify.yml) reads. This worker is the index's
-      # ONLY writer: its runs are whole-page, so overwriting <slug>.json is
+      # claims/ prefix) — one whole-page snapshot per page, browsable with
+      # scripts/review-admin/. This worker is the index's ONLY writer: its runs are whole-page, so overwriting <slug>.json is
       # always correct; the pre-merge PR review is partial-page and must never
       # write here. Inputs come from the pre-model guardrail snapshot (not the
       # model-writable handoff artifact), so the index records exactly what
@@ -1590,10 +1589,9 @@ jobs:
 
       # Report-only lane: say what the claim check FOUND. Recording to the
       # index is not enough on a page's first pass, and the first pass is where
-      # the findings are — the nightly re-verify only re-checks *volatile*
-      # entities, and there is no model on this lane to read the verdicts and
-      # act on them. Routing is the nightly lane's own (fix_route +
-      # upstream-claims.yaml), so a finding arrives with a prefilled issue
+      # the findings are — nothing re-reads the index later, and there is no
+      # model on this lane to read the verdicts and act on them. Routing
+      # (fix_route + upstream-claims.yaml) means a finding arrives with a prefilled issue
       # against the repo that owns the text, and one a human already filed
       # stays quiet. Inputs are the PRE-MODEL snapshot; the tiers and
       # upstream registry come from this job's own clean checkout.
@@ -1614,8 +1612,7 @@ jobs:
             --slack-out .report-slack.txt \
             --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
-      # The lane's durable evidence, same posture as the nightly re-verify's
-      # report: the run log masks the org name in source URLs and ages out with
+      # The lane's durable evidence: the run log masks the org name in source URLs and ages out with
       # the run. Long retention because these are the claim lists for a tree
       # nobody had ever checked, and the cost sizing is read off them.
       - name: Upload report findings
@@ -1632,8 +1629,8 @@ jobs:
           retention-days: 90
 
       # Only NEW findings page anyone: a contradiction already filed upstream
-      # (references/upstream-claims.yaml) is known, and re-announcing it nightly
-      # is how a channel learns to ignore the bot.
+      # (references/upstream-claims.yaml) is known, and re-announcing it on
+      # every review is how a channel learns to ignore the bot.
       - name: Post report findings to Slack
         if: always() && github.event.inputs.mode == 'report' && hashFiles('.report-slack.txt') != ''
         continue-on-error: true

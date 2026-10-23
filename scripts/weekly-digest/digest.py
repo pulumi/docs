@@ -68,7 +68,6 @@ SWITCHES = [
     ("content review", "CONTENT_REVIEW_COUNT", "ne0", "3"),
     ("glow-up", "GLOWUP_COUNT", "ne0", "1"),
     ("blog review index", "BLOG_REVIEW_COUNT", "ne0", "5"),
-    ("claims re-verify", "CLAIMS_REVERIFY_COUNT", "ne0", "25"),
     ("brand sync", "BRAND_SYNC_ENABLED", "ne0", None),
 ]
 

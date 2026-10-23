@@ -24,10 +24,10 @@
 #                was never fact-checked once — 254 pages, 30% of content/docs/.
 #                `editable: false` + `reviewable: true` queues the tree for the
 #                report-only lane: extract and verify its claims, record them
-#                to the claims index for the nightly re-verify, change nothing.
-#                Contradictions found there route upstream to the repo that
-#                owns the text (references/upstream-claims.yaml), never to a
-#                stale-claims marker no PR in this repo could ever retire.
+#                to the claims index, change nothing. Contradictions found
+#                there route upstream to the repo that owns the text
+#                (references/upstream-claims.yaml), since no PR in this repo
+#                could fix them.
 #   no_retire — hard veto: review must never propose retiring a matching page,
 #               regardless of evidence. This is the PRIMARY retirement
 #               guardrail (retirement is no longer gated to a lane). Tier 1
@@ -98,17 +98,14 @@ tiers:
       built at request time by _content.gotmpl from data/policy_pack_policies/,
       which update-policy-packs.yml refetches from the Pulumi Cloud API nightly.
       There are no .md files to edit; this entry should have landed with #20274
-      (2026-07-16), which deleted them. NOTE the nightly claims re-verify still
-      fact-checks these pages' claims and should keep doing so — the sync keeps
-      them FRESH, not CORRECT, and every confirmed user-facing misstatement the
-      lane has found came from this tree. Contradictions here route to
-      references/upstream-claims.yaml, not to a marker. Tier 0 only keeps the
-      fix lane from spending a slot on a page it cannot edit.
+      (2026-07-16), which deleted them. The sync keeps these pages FRESH, not
+      CORRECT: the confirmed misstatements in references/upstream-claims.yaml
+      all came from this tree. Tier 0 only keeps the fix lane from spending a
+      slot on a page it cannot edit.
       NOT `reviewable: true` (#20996) for a mechanical reason rather than a
       policy one: the selector globs content/docs/**/*.md and there are no
-      files here to find. Its claims are in the index only because the tree
-      was reviewed the day before #20274 deleted them. Refreshing them needs
-      a different intake that can render the adapter's pages first — the same
+      files here to find, so nothing fact-checks this tree today. Covering it
+      needs a different intake that can render the adapter's pages first — the same
       gap reference/cloud-rest-api/ has.
 
   # -- Tier 1: flagship (onboarding + core concepts; implies no_retire) ------

@@ -81,7 +81,6 @@ jobs:
              "CONTENT_REVIEW_COUNT": "${{ vars.CONTENT_REVIEW_COUNT }}",
              "GLOWUP_COUNT": "${{ vars.GLOWUP_COUNT }}",
              "BLOG_REVIEW_COUNT": "${{ vars.BLOG_REVIEW_COUNT }}",
-             "CLAIMS_REVERIFY_COUNT": "${{ vars.CLAIMS_REVERIFY_COUNT }}",
              "BRAND_SYNC_ENABLED": "${{ vars.BRAND_SYNC_ENABLED }}"}
         run: |
           set -euo pipefail

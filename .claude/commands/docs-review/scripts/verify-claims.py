@@ -863,19 +863,6 @@ def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
         lines.append(f"- source_hint: {claim['source_hint']}")
     if claim.get("found_by"):
         lines.append(f"- found_by: {', '.join(str(x) for x in claim['found_by'])}")
-    # Set by callers that verify from the claims index (reverify-claims.py),
-    # where the claim arrives without the page: the extracted sentence may
-    # have lost the scope its heading establishes, and this puts it back.
-    if claim.get("context"):
-        lines += [
-            "",
-            "Where the page makes this claim — the heading it sits under and the "
-            "surrounding prose. The claim's scope is whatever this establishes; "
-            "judge the claim as the page states it there, not the sentence alone:",
-            "```",
-            str(claim["context"]),
-            "```",
-        ]
     readable = [r for r in impl_refs or [] if impl_ref_repo(r).lower() not in _UNREADABLE_REPOS]
     unreadable = [r for r in impl_refs or [] if r not in readable]
     if readable and route in ("pass1", "pass3"):
@@ -1063,14 +1050,11 @@ _REPO_PATH_RE = re.compile(
 # classified as `own-file-only` (about 95 of 1,172 in the #21733 audit). It needs
 # a directory component: a bare name is the page's own example talking
 # (`Pulumi.yaml`, `index.ts`, `Node.js`, `__main__.py`), not a file anyone read.
-# reverify-claims.py's `_PATH_RE` is deliberately looser: it only has to tell
-# `content/` paths from everything else.
 _ANY_PATH_RE = re.compile(
     r"(?<![\w/-])[\w][\w.@-]*/[\w./@-]*\.(?:json|ya?ml|md|mdx|go|ts|tsx|js|py|cs|java|tf|toml|proto|gotmpl|html)\b")
 # `pulumi/<repo>` as citations write it (`-R pulumi/pulumi`, `repos/pulumi/pulumi-aws/
 # contents`, `pulumi/pulumi:pkg/...`, "the pulumi/esc README"), but not a path segment,
-# import path, or npm scope (`@pulumi/aws`) that merely contains it. Same pattern as reverify-claims.py's
-# _PULUMI_REPO_RE, which learned this first; keep the two in step.
+# import path, or npm scope (`@pulumi/aws`) that merely contains it.
 _PULUMI_REPO_RE = re.compile(r"(?:\brepos/|(?<![\w./@-]))pulumi/([\w.-]+)")
 # A line anchor on a cited path: `page.md#L99`, `page.md#L10-L20`, `page.md:346`, `page.md:L57`.
 _LINE_ANCHOR_RE = re.compile(r"(?:#L\d+(?:-L?\d+)?|:L?\d+(?:-L?\d+)?)$")
