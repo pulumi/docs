@@ -34,6 +34,7 @@ As a multi-language infrastructure as code tool, Pulumi supports many of today's
 - [C#, VB, F# (.NET)](/docs/iac/languages-sdks/dotnet/)
 - [Java](/docs/iac/languages-sdks/java/)
 - [Pulumi YAML](/docs/iac/languages-sdks/yaml/)
+- [HCL](/docs/iac/languages-sdks/hcl/)
 
 {{< notes >}}
 If you don't see your favorite language listed, it may be on its way soon. [Pulumi is open source](https://github.com/pulumi/pulumi), and it is possible to add your own language. For additional language questions, visit [Pulumi's languages and SDK docs](/docs/iac/languages-sdks/).
@@ -43,7 +44,7 @@ If you don't see your favorite language listed, it may be on its way soon. [Pulu
 
 You write a Pulumi program against a language SDK and run it with the Pulumi CLI, which drives a deployment engine. Three components do the work:
 
-- **Software development kit (SDK)**: The Pulumi SDK provides bindings for each resource type that a provider can manage, along with the libraries you use to define and manage cloud resources on any cloud and with any provider.
+- **Software development kit (SDK)**: The Pulumi SDK provides bindings for each resource type that a [resource provider](/docs/iac/concepts/providers/) can manage (a provider handles communication with a cloud service to create, read, update, and delete resources), along with the libraries you use to define and manage cloud resources on any cloud and with any provider.
 
 - **Command-line interface (CLI)**: You control Pulumi primarily through the [CLI](/docs/iac/cli/). It works with [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) to deploy changes to your cloud apps and infrastructure, and it records who on your team updated what, and when. The CLI is designed both for a fast inner development loop and for continuous integration and delivery.
 
@@ -55,9 +56,9 @@ The following diagram shows how the building blocks you write relate to each oth
 
 ![Diagram of the Pulumi programming model: a project contains a program that declares three resources chained by inputs and outputs, deployed into dev, qa, and prod stacks.](/images/docs/pulumi-programming-model-diagram.svg)
 
-Pulumi *programs*, written in general-purpose [programming languages](/docs/iac/languages-sdks/), describe how your cloud infrastructure should be composed. To declare new infrastructure in your program, you allocate *resource* objects whose properties correspond to the desired state of your infrastructure. These properties are also used between resources to handle any necessary dependencies and can be exported outside of the stack, if needed.
+Pulumi *programs*, written in general-purpose [programming languages](/docs/iac/languages-sdks/), describe how your cloud infrastructure should be composed. To declare new infrastructure in your program, you allocate *resource* objects whose properties correspond to the desired state of your infrastructure. These properties are also used between resources to handle any necessary dependencies and can be exported as outputs, if needed.
 
-Programs live in a *project*, which is a directory that contains source code for the program and metadata on how to run the program. After writing your program, you run the [Pulumi CLI](/docs/iac/cli/) command `pulumi up` from within your project directory. This command creates an isolated and configurable instance of your program, known as a *stack*. Stacks are similar to different deployment environments that you use when testing and rolling out application updates. For instance, you can have distinct development, staging, and production stacks that you create and test against.
+Programs live in a *project*, which is a directory that contains source code for the program and metadata on how to run the program. After writing your program, you run the [Pulumi CLI](/docs/iac/cli/) command `pulumi up` from within your project directory. This command creates or updates resources in a *stack*, an isolated and independently configurable instance of your program. Stacks are similar to different deployment environments that you use when testing and rolling out application updates. For instance, you can have distinct development, staging, and production stacks that you create and test against.
 
 ### Example
 
@@ -87,7 +88,7 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 - [Configuration](/docs/iac/concepts/config/) — Learn how to configure stacks for different deployment scenarios.
 - [Secrets](/docs/iac/concepts/secrets/) — Learn how to handle sensitive data and store secret encrypted settings in Pulumi.
 - [Environments (ESC)](/docs/esc/concepts/) — Learn how to configure your deployment environments with Pulumi ESC.
-- [State and backends](/docs/iac/concepts/state-and-backends/) — Learn how Pulumi stores state and manages concurrency.
+- [State and backends](/docs/iac/concepts/state-and-backends/) — Learn how Pulumi stores state and which backend options it supports.
 - [Update plans](/docs/iac/operations/stack-management/update-plans/) — Learn about how to constrain your deployments with update plans.
 
 ### Reference

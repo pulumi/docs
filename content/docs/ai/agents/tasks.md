@@ -14,7 +14,7 @@ menu:
 
 Start a task by giving an agent an assignment in [Pulumi Cloud](#start-a-task-in-pulumi-cloud) or [Slack](#work-from-slack), or configure an [event or schedule](/docs/ai/agents/triggers/) to start tasks automatically. Each task contains the agent's work and results. You and your teammates can reply to answer questions, add context, or ask for changes.
 
-These instructions apply to agents created for your organization. For personal tasks with Neo, see [Neo tasks](/docs/ai/neo/tasks/).
+These instructions apply to agents created for your organization. For personal tasks with Neo, see [Neo tasks](/docs/ai/concepts/neo/tasks/).
 
 ## Start a task in Pulumi Cloud
 
@@ -28,7 +28,7 @@ The task uses the agent's saved configuration. [Edit the agent](/docs/ai/agents/
 
 ## Work from Slack
 
-Follow the [Slack installation and account-linking steps](/docs/ai/neo/integrations/slack/#setting-up-the-integration). Mention `@pulumi` in a channel with your request, such as “Investigate errors in the checkout service.” If prompted to choose an agent, select its name to start the task.
+Follow the [Slack installation and account-linking steps](/docs/ai/integrations/slack/#setting-up-the-integration). Mention `@pulumi` in a channel with your request, such as “Investigate errors in the checkout service.” If prompted to choose an agent, select its name to start the task.
 
 Continue the assignment in its Slack thread. Each participant must link their own Pulumi account and have [permission to contribute](/docs/ai/agents/permissions/#give-teammates-access); channel membership alone does not grant that permission.
 

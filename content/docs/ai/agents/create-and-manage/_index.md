@@ -14,7 +14,7 @@ menu:
 
 Create agents with saved instructions, integrations, and a Pulumi Cloud role. Start with a pre-built agent or write your own instructions. Teammates can assign tasks to the agent without repeating its setup.
 
-These guides cover agents created for your organization. For Neo, the pre-built personal agent that uses your permissions, see the [Neo guides](/docs/ai/neo/#use-neo).
+These guides cover agents created for your organization. For Neo, the pre-built personal agent that uses your permissions, see the [Neo guides](/docs/ai/concepts/neo/#use-neo).
 
 ## Set up an agent
 

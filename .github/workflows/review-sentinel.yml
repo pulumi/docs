@@ -154,6 +154,7 @@ jobs:
        github.event.label.name == 'review:waived' ||
        github.event.label.name == 'review:oversized' ||
        github.event.label.name == 'review:trivial' ||
+       github.event.label.name == 'review:frontmatter-only' ||
        github.event.label.name == 'review:prose-flagged' ||
        github.event.label.name == 'automation/merge') &&
       (github.event_name != 'pull_request_review' ||

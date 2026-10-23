@@ -11,6 +11,6 @@ menu:
         weight: 40
 ---
 
-The `pulumi-neo-handoff` skill lets a coding agent start Neo through `pulumi neo`. Install it from the [delegation plugin](/docs/ai/skills/#delegation-plugin).
+The `pulumi-neo-handoff` skill lets a coding agent start Neo through `pulumi neo`. Install it from the [delegation plugin](/docs/ai/concepts/agent-skills/#delegation-plugin).
 
-See [Neo in the Pulumi CLI](/docs/ai/neo/pulumi-cli/#agent-handoff) for local execution, permissions, and setup.
+See [Neo in the Pulumi CLI](/docs/ai/concepts/neo/neo-in-the-cli/#agent-handoff) for local execution, permissions, and setup.

@@ -29,7 +29,7 @@ integration_groups:
     cloud:
         - name: Cloudflare
           image: /logos/agents/cloudflare.svg
-          link: /docs/ai/neo/integrations/mcp/#cloudflare
+          link: /docs/ai/integrations/external-mcp-servers/#cloudflare
         - name: AWS
           image: /logos/pkg/aws.svg
           link: /docs/ai/agents/integrations/aws/
@@ -41,35 +41,35 @@ integration_groups:
           link: /docs/ai/agents/integrations/azure/
         - name: Kubernetes
           image: /logos/tech/kubernetes.svg
-          link: /docs/ai/neo/integrations/cli/#kubernetes
+          link: /docs/ai/integrations/cli-integrations/#kubernetes
         - name: Supabase
           image: /logos/agents/supabase.svg
-          link: /docs/ai/neo/integrations/mcp/#supabase
+          link: /docs/ai/integrations/external-mcp-servers/#supabase
     tools:
         - name: Atlassian
           image: /logos/agents/atlassian.svg
-          link: /docs/ai/neo/integrations/mcp/#atlassian-jira-and-confluence
+          link: /docs/ai/integrations/external-mcp-servers/#atlassian-jira-and-confluence
         - name: Dash0
           image: /logos/agents/dash0.svg
-          link: /docs/ai/neo/integrations/mcp/#dash0
+          link: /docs/ai/integrations/external-mcp-servers/#dash0
         - name: Datadog
           image: /logos/agents/datadog.svg
           link: /docs/ai/agents/integrations/datadog/
         - name: Honeycomb
           image: /logos/agents/honeycomb.svg
-          link: /docs/ai/neo/integrations/mcp/#honeycomb
+          link: /docs/ai/integrations/external-mcp-servers/#honeycomb
         - name: Linear
           image: /logos/agents/linear.svg
-          link: /docs/ai/neo/integrations/mcp/#linear
+          link: /docs/ai/integrations/external-mcp-servers/#linear
         - name: New Relic
           image: /logos/agents/newrelic.svg
-          link: /docs/ai/neo/integrations/mcp/#new-relic
+          link: /docs/ai/integrations/external-mcp-servers/#new-relic
         - name: Sentry
           image: /logos/agents/sentry.svg
-          link: /docs/ai/neo/integrations/mcp/#sentry
+          link: /docs/ai/integrations/external-mcp-servers/#sentry
         - name: PagerDuty
           image: /logos/agents/pagerduty.svg
-          link: /docs/ai/neo/integrations/mcp/#pagerduty
+          link: /docs/ai/integrations/external-mcp-servers/#pagerduty
 
 ---
 
@@ -87,7 +87,7 @@ Connections are shared across Neo and the agents you configure.
 
 {{< integration-links "cloud" >}}
 
-For AWS, Google Cloud, Azure, and Kubernetes, configure credentials in Pulumi ESC, then [connect the environment to a CLI tool](/docs/ai/neo/integrations/cli/#setting-up-a-cli-integration).
+For AWS, Google Cloud, Azure, and Kubernetes, configure credentials in Pulumi ESC, then [connect the environment to a CLI tool](/docs/ai/integrations/cli-integrations/#setting-up-a-cli-integration).
 
 ### Monitoring and issue tracking
 
@@ -97,7 +97,7 @@ For AWS, Google Cloud, Azure, and Kubernetes, configure credentials in Pulumi ES
 
 Select MCP integrations in the [agent's configuration](/docs/ai/agents/configure/#connect-the-tools-it-needs). Edit that selection to add integrations connected later.
 
-CLI connections are available to the agent without a per-task selection. Its role must grant access to open the backing ESC environments. For Neo, access depends on your Pulumi Cloud permissions, and you can [select CLI connections for each task](/docs/ai/neo/integrations/cli/#per-task-selection).
+CLI connections are available to the agent without a per-task selection. Its role must grant access to open the backing ESC environments. For Neo, access depends on your Pulumi Cloud permissions, and you can [select CLI connections for each task](/docs/ai/integrations/cli-integrations/#per-task-selection).
 
 Give the agent only the permissions it needs for its work. Selecting an integration does not restrict its credentials. See [Permissions](/docs/ai/agents/permissions/) for how to scope access.
 

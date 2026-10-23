@@ -14,7 +14,9 @@ menu:
 
 This guide walks through migrating an existing AWS CDK application to a Pulumi program that manages the same infrastructure.
 
-## Pulumi Neo (Recommended)
+## Pulumi Neo (recommended)
+
+[Pulumi Neo](/docs/ai/concepts/neo/) is Pulumi's purpose-built infrastructure agent. For a CDK migration, it provides:
 
 * **Automated conversion**: Neo converts your CDK code to Pulumi and generates import mappings automatically
 * **Safety verification**: Neo runs `pulumi preview` to prove no changes before you commit
@@ -32,7 +34,7 @@ This guide walks through migrating an existing AWS CDK application to a Pulumi p
    "Help me migrate my CDK application to Pulumi"
    ```
 
-3. **Neo will**:
+3. **What Neo does**:
    * Synthesize your CDK application
    * Inventory all CloudFormation resources
    * Convert CDK code to Pulumi
@@ -54,21 +56,21 @@ While Neo handles most CDK applications automatically, you might need manual mig
 * Complex cross-stack dependencies requiring specific handling
 * Scenarios where you want to fundamentally restructure during migration
 
-Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
+If Neo doesn't fit your specific needs, continue with the manual migration approaches in the following sections.
 
-## Manual Migration Approaches
+## Manual migration approaches
 
-If Neo doesn't support your specific use case or you prefer manual control over the migration process, the following sections provide comprehensive guidance for manual migration.
+If Neo doesn't support your specific use case or you prefer manual control over the migration process, the following sections cover how to plan a manual migration. The migration approaches themselves are in [Execution strategies](#execution-strategies).
 
-### Planning your Migration
+### Planning your migration
 
-Before running any tools, it is important to plan your migration strategy. Migrating involves two distinct parts: converting your **Code** (logic) and migrating your **State** (live resources).
+Before running any tools, plan your migration strategy. Migrating involves two distinct parts: converting your **Code** (logic) and migrating your **State** (live resources).
 
 {{% notes type="info" %}}
 **Consider Neo first**: For most CDK applications, [Neo](#pulumi-neo-recommended) automates both code conversion and state migration with zero downtime. The manual approaches below are best for edge cases or when you need specific control over the migration process.
 {{% /notes %}}
 
-### Strategy: Convert vs. Rewrite
+### Strategy: Convert vs. rewrite
 
 How much of your existing code structure do you want to keep?
 
@@ -76,14 +78,14 @@ How much of your existing code structure do you want to keep?
 * **Hybrid / Refactor (Recommended)**: Generate a working baseline (manually or via `cdk2pulumi`), then refactor the code into idiomatic Pulumi [Components](/docs/iac/concepts/components/) before or after importing state. This balances speed with long-term maintainability.
 * **Rewrite**: Manually write your Pulumi program from scratch. This is best if your CDK app has significant technical debt or if you want to fundamentally re-architect your infrastructure.
 
-### Strategy: Import vs. Rehydrate
+### Strategy: Import vs. rehydrate
 
 How do you want to handle your live resources?
 
-* **Import**: Bring your existing AWS resources under Pulumi management without downtime. This is essential for stateful resources like Databases, periodic/retained S3 buckets, and VPCs.
+* **Import**: Bring your existing AWS resources under Pulumi management without downtime. This is essential for stateful resources like databases, periodic/retained S3 buckets, and VPCs.
 * **Rehydrate (Blue/Green)**: Deploy a fresh copy of your infrastructure alongside the old one, switch traffic over, and delete the old stack. This is ideal for stateless applications or when you want to verify the new system with zero risk to the old one.
 
-### Best Practices
+### Best practices
 
 Regardless of your strategy, follow these core principles:
 
@@ -92,17 +94,17 @@ Regardless of your strategy, follow these core principles:
 1. **Verify after every import**: Run `pulumi preview` after each import and confirm zero changes before continuing. Any unexpected diff is a stop signal.
 1. **Retire CloudFormation last**: Only delete CloudFormation stacks after Pulumi manages them with clean previews. Keeping the old state intact gives you a rollback path.
 
-### Target Structure
+### Target structure
 
 The migration tools can import resources and generate code, but they don’t organize code for long-term maintainability. You should decide on your target structure early.
 
-#### Consolidate multiple CDK Stacks
+#### Consolidate multiple CDK stacks
 
-CDK applications typically organize resources into multiple Stacks per environment to manage blast radius and resource limits. Pulumi Stacks are more powerful and scalable, often allowing you to consolidate multiple CDK stacks into a single Pulumi Stack.
+CDK applications typically organize resources into multiple stacks per environment to manage blast radius and resource limits. Pulumi stacks are more powerful and scalable, often allowing you to consolidate multiple CDK stacks into a single Pulumi stack.
 
-For example, a `StatefulStack` (RDS) and `AppStack` (Lambda) in CDK can be combined into one Pulumi Stack with `[protect: true](/docs/iac/concepts/resources/options/protect/)` enabled on the critical resources. This simplifies dependency management and deployment.
+For example, a `StatefulStack` (RDS) and `AppStack` (Lambda) in CDK can be combined into one Pulumi stack with [`protect: true`](/docs/iac/concepts/resources/options/protect/) enabled on the critical resources. This simplifies dependency management and deployment.
 
-Consider a common scenario of creating your stateful resources (e.g. an RDS database) in one stack and your non-stateful resources (e.g. a Lambda Function) in a separate Stack.
+Consider a common scenario of creating your stateful resources (e.g. an RDS database) in one stack and your non-stateful resources (e.g. a Lambda Function) in a separate stack.
 
 ```typescript
 import * as cdk from 'aws-cdk-lib/core';
@@ -147,9 +149,9 @@ When this is converted to a Pulumi program you would have a single Pulumi stack 
 
 #### Handling CDK stages
 
-AWS CDK Stages represent a group of stacks deployed to an environment (dev, prod). These directly map to [Pulumi Stacks](/docs/iac/concepts/stacks/). Similar to CDK stages, Pulumi stacks can be used to deploy groups of resources to different environments.
+AWS CDK Stages represent a group of stacks deployed to an environment (dev, prod). These directly map to [Pulumi stacks](/docs/iac/concepts/stacks/). Like CDK stages, Pulumi stacks can be used to deploy groups of resources to different environments.
 
-In AWS CDK applications differences in configuration between environments are typically configured through input parameters on the stage. In the example below, the `DatabaseCluster` uses a different `InstanceType` between the `dev` and `prod` environments. When we convert this application to Pulumi, we will move this configuration from the stage input properties to [stack configuration](/docs/iac/concepts/config/).
+In AWS CDK applications differences in configuration between environments are typically configured through input parameters on the stage. In the following example, the `DatabaseCluster` uses a different `InstanceType` between the `dev` and `prod` environments. When you convert this application to Pulumi, move this configuration from the stage input properties to [stack configuration](/docs/iac/concepts/config/).
 
 ```typescript
 import * as cdk from 'aws-cdk-lib/core';
@@ -219,9 +221,9 @@ new MyStage(app, 'prod', {
 });
 ```
 
-When we convert the AWS CDK application we will:
+To convert the AWS CDK application:
 
-* Combining the stacks like we did in the [Consolidate multiple CDK stacks](#consolidate-multiple-cdk-stacks) example
+* Combine the stacks as in the [Consolidate multiple CDK stacks](#consolidate-multiple-cdk-stacks) example
 * Read the instance type from the [Pulumi configuration](/docs/iac/concepts/config/).
 
 ```typescript
@@ -243,9 +245,9 @@ pulumi config set instanceType db.r6g.medium
 
 #### Code organization
 
-Converters typically output a single file. For maintainability, plan to split your resources into logical groups:
+Converted code can land in a single large file. For maintainability, plan to split your resources into logical groups:
 
-```shell
+```text
 my-infrastructure/
 ├── index.ts           # Main entry point, exports
 ├── network.ts         # VPC, subnets, security groups
@@ -299,10 +301,9 @@ After converting the code, if you choose to organize into Pulumi components you 
 
 **Option 1: Import first, then refactor into components**
 
-This is the simpler approach. Import resources flat, then reorganize. After importing resources using the approaches above, create a component class and move resources inside it. Add aliases to indicate the resources used to be at the root level:
+This is the simpler approach. Import resources flat, then reorganize. After importing resources using one of the [execution strategies](#execution-strategies), create a component class and move resources inside it. Add aliases to tell Pulumi the resources used to be at the root level:
 
 ```typescript
-
 class MyVpc extends pulumi.ComponentResource {
     public vpc: aws.ec2.Vpc;
 
@@ -342,27 +343,27 @@ If you write your component code first, you can import directly into the hierarc
 }
 ```
 
-## Execution Strategies
+## Execution strategies
 
 Once you have a plan, choose the execution path that fits your goals:
 
-* [Neo: Fully Automated Migration (Recommended)](#pulumi-neo-recommended) - Use Neo for zero-downtime automated migration
-* [Approach A: Semi-Automated Path](#approach-a-the-semi-automated-path) - Use tools like `cdk2pulumi` and `cdk-importer` with manual steps
-* [Approach B: Manual Migration](#approach-b-manual-migration) - Full manual control over the migration process
+* [Neo: Fully automated migration (recommended)](#pulumi-neo-recommended) - Use Neo for zero-downtime automated migration
+* [Approach A: Semi-automated path](#approach-a-the-semi-automated-path) - Use tools like `cdk2pulumi` and `cdk-importer` with manual steps
+* [Approach B: Manual migration](#approach-b-manual-migration) - Full manual control over the migration process
 
-### Approach A: The Semi-Automated Path
+### Approach A: The semi-automated path
 
 This path uses `cdk2pulumi` to convert your code and the `cdk-importer` tool to automatically generate the import mapping. This approach provides more control than Neo while still automating key parts of the migration.
 
-**The Workflow:**
+**The workflow:**
 
-1. **Convert Code**: Generate a baseline Pulumi program.
-1. **Verify Code**: Test the code on a fresh ephemeral stack.
-1. **Generate Import**: Create an automated `import.json` mapping your new code to your existing AWS resources.
-1. **Perform Import**: Bring the resources into Pulumi state.
+1. **Convert code**: Generate a baseline Pulumi program.
+1. **Verify code**: Test the code on a fresh ephemeral stack.
+1. **Generate import**: Create an automated `import.json` mapping your new code to your existing AWS resources.
+1. **Perform import**: Bring the resources into Pulumi state.
 1. **Refactor**: Clean up the code structure (optional but recommended).
 
-#### 1. Convert Code
+#### 1. Convert code
 
 Use `cdk2pulumi` to convert your CDK code to Pulumi.
 
@@ -381,7 +382,7 @@ This generates a `Pulumi.yaml` which you can then convert to your language of ch
 pulumi convert --from yaml --generate-only --language typescript --out ./converted-project
 ```
 
-##### Handling Custom Resources
+##### Handling custom resources
 
 CDK uses Lambda-backed Custom Resources for functionality not available in CloudFormation. In synthesized CloudFormation, these appear as resources with type `AWS::CloudFormation::CustomResource` or `Custom::<name>`.
 
@@ -416,12 +417,12 @@ CDK uses Assets and Bundling to handle deployment artifacts like Lambda code, Do
 
 **Migration strategies by asset type:**
 
-| Asset Type | Detection | Pulumi Migration |
+| Asset type | Detection | Pulumi migration |
 |------------|-----------|------------------|
 | Docker image | `dockerImages` in assets.json | Use `docker-build.Image` to build and push. Replace hard-coded ECR URI with image output. |
 | Static file | `files` without `executable`, no bundling in CDK source | Use `pulumi.FileArchive` or `pulumi.FileAsset` |
-| File with build command | `files` with `executable` field | Build command needs setup in Pulumi (see below) |
-| Bundled file | `files` without `executable`, but CDK source uses bundling | Bundling needs setup in Pulumi (see below) |
+| File with build command | `files` entry whose `source` has an `executable` command instead of a `path` | Build command needs setup in Pulumi (see the bundling options after this table) |
+| Bundled file | `files` without `executable`, but CDK source uses bundling | Bundling needs setup in Pulumi (see the bundling options after this table) |
 
 **Handling bundled assets:**
 
@@ -450,7 +451,7 @@ pulumi stack rm dev-test
 
 This ensures your code produces valid infrastructure before you try to map it to production resources.
 
-#### 3. Generate Import File
+#### 3. Generate import file
 
 Use the [Pulumi CDK importer tool](https://github.com/pulumi/pulumi-tool-cdk-importer) in `program iterate` mode. This inspects your converted program and your logical AWS resources to generate an `import.json` file **without modifying state**.
 
@@ -463,7 +464,7 @@ pulumi plugin run cdk-importer -- program iterate \
   --import-file ./import.json
 ```
 
-#### 4. Import Resources
+#### 4. Import resources
 
 Once you are happy with `program iterate`, use `program import` to import the program into your stack state.
 
@@ -479,25 +480,25 @@ Always run `pulumi preview` immediately after import to ensure there are no pend
 
 Now that your resources are imported and your state matches your code, you can safely refactor. You can move resources into ComponentResources, rename logical IDs, or split files. Refer to [Target Structure](#target-structure) for guidance on organizing your new Pulumi program.
 
-* If you change a resource's name or parent component in your code, Pulumi will see it as a "Create new / Delete old" operation.
+* If you change a resource's name or parent component in your code, Pulumi sees it as a "Create new / Delete old" operation.
 * To prevent this, use [aliases](/docs/iac/concepts/resources/options/aliases/) to tell Pulumi "this new resource is actually that old resource".
 
-### Approach B: Manual Migration
+### Approach B: Manual migration
 
 Use this approach if the automated tools fail for your specific pattern, or if you are rewriting your application from scratch.
 
-1. **Write Code**: Manually write the Pulumi code to match your existing infrastructure.
-1. **Import One-by-One**: Use the CLI to bring resources into state.
+1. **Write code**: Manually write the Pulumi code to match your existing infrastructure.
+1. **Import one by one**: Use the CLI to bring resources into state.
 
-```shell
-pulumi import aws:s3/bucket:Bucket my-bucket my-bucket-name
-```
+   ```shell
+   pulumi import aws:s3/bucket:Bucket my-bucket my-bucket-name
+   ```
 
-1. **Import in Bulk**: Create a manual `import.json` file.
+1. **Import in bulk**: Create a manual `import.json` file.
 
-```shell
-pulumi import --file import.json
-```
+   ```shell
+   pulumi import --file import.json
+   ```
 
 See [Finding AWS import IDs](/docs/iac/guides/migration/aws-import-ids/) for help identifying resource IDs.
 
@@ -511,13 +512,13 @@ Don’t delete source state early. Keep your CloudFormation stacks intact until 
 
 Don’t refactor while migrating. Get the migration working first, then optimize. Trying to improve code structure, switch providers, or clean up resources during the initial import creates compound problems. Decouple these concerns: first make it work, then make it better.
 
-Don’t quit early. Iterate until your preview is completely clean with no diffs, no updates, and no replacements. “Close enough” isn’t good enough when the goal is zero disruption.
+Don’t quit early. Iterate until your preview is clean with no diffs, no updates, and no replacements. “Close enough” isn’t good enough when the goal is zero disruption.
 
-## The Golden Path: Recommended Workflow
+## The golden path: Recommended workflow
 
 In summary, the most reliable way to migrate is:
 
-### Option 1: Use Neo (Recommended for most users)
+### Option 1: Use Neo (recommended for most users)
 
 1. **Prepare**: Ensure your CDK app synthesizes cleanly and configure AWS credentials in Pulumi ESC.
 1. **Migrate**: Ask Neo to migrate your CDK application—it handles conversion, import, and verification automatically.
@@ -525,11 +526,11 @@ In summary, the most reliable way to migrate is:
 1. **Commit**: Commit your new Pulumi program and optionally refactor for better organization.
 1. **Retire CloudFormation**: Delete the old stacks after confirming Pulumi manages everything correctly.
 
-### Option 2: Semi-automated migration (When Neo doesn't fit)
+### Option 2: Semi-automated migration (when Neo doesn't fit)
 
 1. **Plan**: Decide on your target structure and strategy.
 1. **Convert**: Use `cdk2pulumi` to get a working baseline of code.
-1. **Verify Code**: Deploy to a disposable test stack to prove compilation and logic.
+1. **Verify code**: Deploy to a disposable test stack to prove compilation and logic.
 1. **Import**: Use `cdk-importer` to bring production state into Pulumi.
 1. **Refactor**: Clean up the code into components and proper modules, using aliases to migrate state.
 1. **Retire CloudFormation**: Only delete the old CFN stacks after Pulumi shows a clean preview and you have successfully deployed an update.

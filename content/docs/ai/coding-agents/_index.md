@@ -15,12 +15,12 @@ Use Pulumi with Claude Code, Codex, Cursor, and other coding agents. Pulumi prov
 
 ## Pulumi Agent Skills
 
-Skills teach your coding agent Pulumi workflows, including writing components, managing secrets, and migrating infrastructure. See [Pulumi Agent Skills](/docs/ai/skills/) for the available skills and installation instructions.
+Skills teach your coding agent Pulumi workflows, including writing components, managing secrets, and migrating infrastructure. See [Pulumi Agent Skills](/docs/ai/concepts/agent-skills/) for the available skills and installation instructions.
 
 ## Pulumi MCP server
 
-The MCP server lets your coding agent query stacks and resources in Pulumi Cloud and look up resource schemas in the Pulumi Registry. See [Pulumi MCP server](/docs/ai/mcp-server/) for client configuration, authentication, and supported tools.
+The MCP server lets your coding agent query stacks and resources in Pulumi Cloud and look up resource schemas in the Pulumi Registry. See [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) for client configuration, authentication, and supported tools.
 
 ## Pulumi CLI
 
-Coding agents that can run shell commands can use the Pulumi CLI to preview and deploy infrastructure. See [CLI for agents](/docs/ai/cli-for-agents/) for CLI features such as structured JSON output and direct resource operations.
+Coding agents that can run shell commands can use the Pulumi CLI to preview and deploy infrastructure. See [CLI for agents](/docs/ai/concepts/cli-for-agents/) for CLI features such as structured JSON output and direct resource operations.

@@ -25,7 +25,7 @@ The [integration guides](/docs/ai/agents/integrations/) apply these choices to e
 
 Select a role in the agent's **Role** field that grants only the access its work requires, including access to relevant stacks and ESC environments. This role applies across the agent's tasks. To change it, [edit the agent's access settings](/docs/ai/agents/configure/#set-its-access).
 
-Neo uses the acting user's Pulumi Cloud access, subject to its task settings. See [Neo permissions](/docs/ai/neo/permissions/) for its execution identity and controls.
+Neo uses the acting user's Pulumi Cloud access, subject to its task settings. See [Neo permissions](/docs/ai/concepts/neo/permissions/) for its execution identity and controls.
 
 ## Scope credentials for connected tools
 
@@ -37,7 +37,7 @@ If an integration uses Pulumi ESC, the agent also needs permission to open the e
 
 Set **Default mode** to control when the agent asks for approval. In **Auto** mode, actions do not require your approval. If no mode is set, the agent uses **Auto**. Approving an action does not grant permissions beyond the agent's role and connected credentials.
 
-For Neo, see [permission and approval modes](/docs/ai/neo/permissions/#permission-mode-and-approval-mode).
+For Neo, see [permission and approval modes](/docs/ai/concepts/neo/permissions/#permission-mode-and-approval-mode).
 
 ## Give teammates access
 
@@ -51,4 +51,4 @@ Task owners and teammates with task-specific permissions can also access tasks. 
 
 When the job changes, remove unneeded access. Before revoking shared credentials, check which other tasks or agents use them.
 
-To stop work already running, follow the [agent task controls](/docs/ai/agents/manage/#pause-future-work-and-stop-current-work) or [Neo task controls](/docs/ai/neo/tasks/#interruptions-and-resuming).
+To stop work already running, follow the [agent task controls](/docs/ai/agents/manage/#pause-future-work-and-stop-current-work) or [Neo task controls](/docs/ai/concepts/neo/tasks/#interruptions-and-resuming).

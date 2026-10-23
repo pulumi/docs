@@ -16,7 +16,7 @@ Configure an agent to start tasks automatically when a Pulumi operation complete
 
 Add automations to an existing agent from **Automations**. To configure its first trigger while creating it, follow [Choose how the agent starts](/docs/ai/agents/configure/#choose-how-the-agent-starts).
 
-For Neo's scheduled tasks, see [Neo automations](/docs/ai/neo/automations/).
+For Neo's scheduled tasks, see [Neo automations](/docs/ai/concepts/neo/automations/).
 
 ## Write the assignment
 

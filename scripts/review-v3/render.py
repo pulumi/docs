@@ -69,7 +69,7 @@ BUCKET_LABEL = {
 }
 HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
-PRIMARY_CODES = ("warnings", "outstanding", "cluster", "directional", "duplicate", "mergeable", "checks",
+PRIMARY_CODES = ("warnings", "outstanding", "cluster", "directional", "duplicate", "mergeable", "checks", "sentinel",
                  "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate",
                  "sent-back", "approved", "approved-by-owner", "unblock")
 # Whole codes (not families) that change what you'd click: `author:self`
@@ -379,15 +379,43 @@ def is_config_chip(r: str) -> bool:
     return r.startswith(CONFIG_CODES)
 
 
-def _chip(r: str) -> str:
+_GATE_MARK = {"ok": "✓", "red": "✗", "error": "?"}
+
+
+def sentinel_title(r: str, sentinel_info: dict | None) -> str:
+    """The `sentinel:P/E` tooltip: the count, then one line per gate that
+    applies, with the Sentinel's own words for the ones not passing."""
+    passing, _, applicable = r.partition(":")[2].partition("/")
+    lines = [f"{passing} of {applicable} Sentinel merge gates that apply to this PR pass at its head "
+             "(gates that don't apply are left out). The Sentinel is red until an approval exists, "
+             "so a missing approval alone is not a problem."]
+    for g in (sentinel_info or {}).get("gates") or []:
+        if g.get("state") == "skip":
+            continue
+        line = f"{_GATE_MARK.get(g.get('state'), '?')} {g.get('id')} {g.get('name')}"
+        if g.get("state") != "ok" and g.get("detail"):
+            line += f": {re.sub(r'[`*]', '', g['detail'])}"
+        lines.append(line)
+    return "\n".join(lines) + f" ({r})"
+
+
+def _chip(r: str, pr: dict | None = None) -> str:
     code = r.split(":", 1)[0]
     cls = f"chip r-{esc(code)}" + (" theirs" if r.endswith(":theirs") else "") + (" cfg" if is_config_chip(r) else "")
-    text = CHIP_LABEL.get(r) or (r if len(r) <= 48 else r[:45] + "…")
+    if code == "sentinel":
+        passing, _, applicable = r.partition(":")[2].partition("/")
+        if passing != applicable:
+            cls += " short"
+        text = f"sentinel {passing}/{applicable}"
+        title = sentinel_title(r, (pr or {}).get("sentinel"))
+    else:
+        text = CHIP_LABEL.get(r) or (r if len(r) <= 48 else r[:45] + "…")
+        title = chip_title(r)
     marker = '<span class="cfgdot" aria-hidden="true">·cfg</span>' if is_config_chip(r) else ""
-    return f'<span class="{cls}" title="{esc(chip_title(r))}">{esc(text)}{marker}</span>'
+    return f'<span class="{cls}" title="{esc(title)}">{esc(text)}{marker}</span>'
 
 
-def chips(reasons: list[str]) -> str:
+def chips(reasons: list[str], pr: dict | None = None) -> str:
     """Two tiers: actionable chips inline, informational ones behind a
     "why" fold so a row reads as a decision, not a wall of tags."""
     primary, info = [], []
@@ -397,11 +425,11 @@ def chips(reasons: list[str]) -> str:
         code = r.split(":", 1)[0]
         is_primary = (code in PRIMARY_CODES and not (code == "merging-over" and ":approved-by:" in r)) or r in PRIMARY_VALUES
         (primary if is_primary else info).append(r)
-    out = "".join(_chip(r) for r in primary)
+    out = "".join(_chip(r, pr) for r in primary)
     if info:
         out += (f'<details class="why" title="{len(info)} more reasons for this verdict that would not change what you click. '
                 'Open it to see them.">'
-                f'<summary>why · {len(info)}</summary>') + "".join(_chip(r) for r in info) + "</details>"
+                f'<summary>why · {len(info)}</summary>') + "".join(_chip(r, pr) for r in info) + "</details>"
     return out
 
 
@@ -1007,7 +1035,7 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
         "<div>",
         f'<h4>{esc(pr.get("title"))} {verdict_chip(pr)}</h4>',
         f'<div class="meta">{meta_line(pr)}</div>',
-        f'<div class="chips">{chips(pr.get("reasons") or [])}</div>',
+        f'<div class="chips">{chips(pr.get("reasons") or [], pr)}</div>',
         f'<p class="sum">{esc(pr.get("summary") or "")}</p>' if pr.get("summary") else "",
         guide_block(queue, pr),
         preview_links(pr),
@@ -1697,6 +1725,7 @@ button.pr.rowfold{cursor:pointer;color:var(--ink-3);font-weight:500;font-size:11
 .chips{display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 6px}
 .chip{font-size:10.5px;border:1px solid var(--line-2);border-radius:2px;padding:1px 6px;color:var(--ink-2);background:var(--surface-2);white-space:nowrap}
 .chip.r-collision,.chip.r-directional,.chip.r-duplicate,.chip.r-checks,.chip.r-mergeable{border-color:var(--stop);color:var(--stop)}
+.chip.r-sentinel{border-color:var(--go);color:var(--go)}.chip.r-sentinel.short{border-color:var(--hold);color:var(--hold)}
 .empty{margin:1rem 0;color:var(--ink-2);font-size:.95rem}.empty .btn{margin-left:.5rem}
 .chip.r-warnings,.chip.r-outstanding,.chip.r-scrutiny,.chip.r-blog,.chip.r-size,.chip.r-shape,.chip.r-review{border-color:var(--hold);color:var(--hold)}
 .chip.r-route{border-color:var(--route);color:var(--route)}

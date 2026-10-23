@@ -249,7 +249,7 @@ If a feature needs to reach a service on the same host or private network as you
 | Scope         | Outbound requests it covers                                                                                                  |
 |---------------|------------------------------------------------------------------------------------------------------------------------------|
 | `ESC`         | Pulumi ESC providers and rotators that call a URL you configure: Vault, Infisical, Terraform state, GitHub login, and external providers and rotators. |
-| `AGENTS_BYOK` | Pulumi Neo requests to a [custom model provider](/docs/ai/neo/model-providers/).                                             |
+| `AGENTS_BYOK` | Pulumi Neo requests to a [custom model provider](/docs/ai/concepts/neo/model-providers/).                                             |
 | `OIDC_ISSUER` | Registering an OIDC issuer and fetching its signing keys. |
 | `VCS`         | Refreshing a member's GitHub Enterprise Server token when [individual user authentication](/docs/integrations/version-control/github-app/#individual-user-authentication-for-github-enterprise-server) is enabled. |
 | `WEBHOOKS`    | Webhook delivery. |

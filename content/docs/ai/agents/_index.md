@@ -14,7 +14,7 @@ menu:
 
 Pulumi Agents are managed AI agents that run in Pulumi Cloud. Each agent has saved instructions, connected tools, and permissions for its work. Use a pre-built agent or build your own to take on ongoing infrastructure responsibilities, such as investigating incidents or maintaining dependencies.
 
-[Neo](/docs/ai/neo/) is your pre-built personal agent. It works on your behalf using your existing Pulumi Cloud access. You do not need to create it or assign it a separate role.
+[Neo](/docs/ai/concepts/neo/) is your pre-built personal agent. It works on your behalf using your existing Pulumi Cloud access. You do not need to create it or assign it a separate role.
 
 ## Use pre-built agents
 
@@ -46,4 +46,4 @@ Control which stacks, cloud accounts, and repositories an agent can access, and 
 
 ## Use Pulumi Agents
 
-[Create and manage agents](/docs/ai/agents/create-and-manage/) for your team, or [assign work to an existing agent](/docs/ai/agents/tasks/). For personal tasks, follow the [Neo guides](/docs/ai/neo/#use-neo).
+[Create and manage agents](/docs/ai/agents/create-and-manage/) for your team, or [assign work to an existing agent](/docs/ai/agents/tasks/). For personal tasks, follow the [Neo guides](/docs/ai/concepts/neo/#use-neo).
