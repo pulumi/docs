@@ -2,7 +2,8 @@
 pulumi_esc_sdk
 **************
 
-.. automodule:: pulumi_esc_sdk
-    :ignore-module-all:
-    :members:
-    :imported-members:
+Python SDK reference for Pulumi ESC (Environments, Secrets, and Configuration).
+Each class and function below has its own page with full signatures, parameters,
+and methods.
+
+.. include:: api/overview.inc

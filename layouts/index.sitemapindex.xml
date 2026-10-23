@@ -21,4 +21,16 @@
     <loc>{{ .Site.Params.canonicalURL }}/sitemap.xml</loc>
     <lastmod>{{ safeHTML ( site.Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
   </sitemap>
+  {{- /*
+  Python SDK reference sitemaps are emitted by Sphinx (tools/pydocgen/source/_shared/per_symbol.py)
+  into static-prebuilt, which Hugo copies into public/ untouched. Listed only when the
+  generated file exists, so a package that has not been regenerated is skipped cleanly.
+  */ -}}
+  {{ range slice "pulumi" "pulumi_policy" "pulumi_esc_sdk" "pulumi_cloud_sdk" }}
+  {{- if fileExists (printf "static-prebuilt/docs/reference/pkg/python/%s/sitemap.xml" .) }}
+  <sitemap>
+    <loc>{{ $.Site.Params.canonicalURL }}/docs/reference/pkg/python/{{ . }}/sitemap.xml</loc>
+  </sitemap>
+  {{- end }}
+  {{- end }}
 </sitemapindex>
