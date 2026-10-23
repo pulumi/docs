@@ -43,8 +43,7 @@ jobs:
     # this job shipped with, and every scheduled run from 2026-08-31 through
     # 2026-09-21 skipped on it. format() renders null as '', and '' != '0' is a
     # string comparison, so unset means ON as intended. Same fix and same note
-    # as blog-review-index.yml, review-existing-content.yml and
-    # claims-reverify.yml.
+    # as blog-review-index.yml and review-existing-content.yml.
     if: github.repository == 'pulumi/docs' && format('{0}', vars.BRAND_SYNC_ENABLED) != '0'
     timeout-minutes: 20
     steps:

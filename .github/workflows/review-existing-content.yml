@@ -53,8 +53,6 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # the end of the review job track each signal's state in the ledger bucket
 # under health/ and post a one-line-per-signal note to #docs-ops once a signal
 # has been degraded for a week (see scripts/content-review/signal-health.py).
-# claims-reverify.yml contributes a fourth signal (`reverify`) to the same
-# state object; this workflow neither observes nor overwrites it.
 
 on:
   schedule:
@@ -559,8 +557,7 @@ jobs:
       # worker runs in mode=report: it extracts and verifies the page's claims,
       # writes them to the claims index, and changes nothing. No model turn, no
       # branch, no PR. Contradictions are reported to #docs-ops with a
-      # prefilled upstream issue; they never become stale-claims markers,
-      # because no PR in this repo could ever retire one.
+      # prefilled upstream issue, because no PR in this repo could fix them.
       #
       # Why this lane exists: tier 0 meant "never select", and selection is the
       # only thing that ever writes a page's claim list — so 254 pages, 30% of
