@@ -6,16 +6,14 @@ generator owns — the 248-page CLI command reference today — and records the
 result to the S3 claims index. Recording alone is not enough on the FIRST pass
 over a page, and that first pass is where the findings are:
 
-  * the nightly `reverify-claims.py` only re-checks *volatile* entities, so a
-    contradicted claim that isn't a version pin, price, or limit would sit in
-    the index forever without anyone being told;
+  * nothing re-reads the index later, so a contradicted claim recorded
+    without a report would sit there forever without anyone being told;
   * on the fix lane the model reads the verdicts and acts on them. There is no
     model on this lane — nothing edits a file a generator overwrites — so if
     this script doesn't report the contradiction, nothing does.
 
 So: read the same pre-model `.verified-claims.json` snapshot the claims index
-is built from, keep the decided-wrong verdicts, and route each one exactly the
-way the nightly lane routes its own — through `reverify-claims.py`'s
+is built from, keep the decided-wrong verdicts, and route each one through
 `fix_route` and `references/upstream-claims.yaml`, so a finding arrives with a
 prefilled issue against the repo that owns the text, and a finding a human has
 already filed stays quiet.
@@ -66,14 +64,13 @@ DEFAULT_KNOWN_UPSTREAM = (
 )
 
 SCHEMA_VERSION = 1
-# Same vocabulary the nightly lane treats as "the source says otherwise".
+# The verdicts that mean "the source says otherwise".
 CONTRADICTED_VERDICTS = {"contradicted", "mismatch", "framing-drift"}
-# Names this lane in the prefilled issue body. Worth saying: unlike a nightly
-# re-check of a claim already in the index, this is the first time anyone has
-# checked the page at all.
+# Names this lane in the prefilled issue body. Worth saying: this is the first
+# time anyone has checked the page at all.
 ISSUE_ORIGIN = "report-only content review (the first fact-check of this page)"
 
-_REVERIFY = None
+_SELECT = None
 
 
 def log(msg: str) -> None:
@@ -84,18 +81,150 @@ def warn(msg: str) -> None:
     print(f"::warning::report-claims-findings: {msg}", file=sys.stderr)
 
 
-def reverify():
-    """reverify-claims.py imported by path, so the routing rules, the known-
-    upstream registry, and the prefilled-issue link have exactly one
-    definition. Its main() is guarded, so importing has no side effects."""
-    global _REVERIFY
-    if _REVERIFY is None:
+# ---- upstream routing --------------------------------------------------------
+
+
+def _policy_for(path: str, rules: list[dict]):
+    """select-articles.policy_for, imported by path so the tier semantics have
+    exactly one definition (same pattern check-retire-veto.py uses)."""
+    global _SELECT
+    if _SELECT is None:
         spec = importlib.util.spec_from_file_location(
-            "reverify_claims", HERE / "reverify-claims.py")
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
-        _REVERIFY = mod
-    return _REVERIFY
+            "select_articles", HERE / "select-articles.py")
+        _SELECT = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(_SELECT)
+    return _SELECT.policy_for(path, rules)
+
+
+def load_tier_rules(tiers_file: Path | None) -> list[dict]:
+    """Tier rules, or [] when unreadable. Failing to [] means every page looks
+    editable, which reports the finding as route=local (a visible tiers-file
+    problem) rather than dropping it."""
+    if tiers_file is None or not tiers_file.is_file():
+        return []
+    try:
+        _policy_for("content/docs/x.md", [])  # force the import, surface errors here
+        return _SELECT.load_tiers(tiers_file)
+    except Exception as e:  # noqa: BLE001
+        warn(f"could not load tiers from {tiers_file} ({e}); "
+             f"generated trees will route by file existence alone")
+        return []
+
+
+def fix_route(assertions: list[dict], repo_root: Path | None,
+              tier_rules: list[dict] | None = None) -> str:
+    """Where a contradicted claim about these pages can actually be fixed.
+
+    Returns "local", "generated", or "missing". Two distinct ways to have no
+    page a PR here can edit, and the file check alone catches only the first:
+
+    * "missing" — no markdown in the tree. A Hugo content adapter builds the
+      page from `data/` at request time (the pre-built policy packs).
+    * "generated" — the markdown exists but is machine-written and clobbered
+      on the next generator run, so an edit to it is thrown away. The CLI
+      command reference is 248 such files. `strategic-tiers.yaml` already
+      states exactly this as `editable: false`, so that file is the authority
+      rather than a second list to keep in sync. Note it is the EDITABLE flag,
+      not the tier: since #20996 the CLI tree is tier 3 and `reviewable: true`
+      (this lane records its claims), and those claims must still route
+      upstream.
+
+    A claim asserted on several pages is fixable if ANY of them is.
+
+    `repo_root=None` (and no rules) means "assume local", for pure-logic
+    callers and the self-tests.
+    """
+    if repo_root is None and not tier_rules:
+        return "local"
+    reasons: list[str] = []
+    for a in assertions:
+        path = a["path"]
+        editable = True
+        if tier_rules:
+            editable = _policy_for(path, tier_rules).editable
+        exists = repo_root is None or (repo_root / path).is_file()
+        if exists and editable:
+            return "local"
+        reasons.append("generated" if not editable else "missing")
+    # Prefer the more specific reason when a claim spans both kinds.
+    return "generated" if "generated" in reasons else "missing"
+
+
+def load_known_upstream(path: Path | None) -> dict[str, dict]:
+    """{entity_key: entry} from upstream-claims.yaml, or {} when absent.
+
+    Never raises: a malformed or missing file means "nothing is known yet",
+    which costs a duplicate Slack line and never suppresses a real finding.
+    That is the safe direction — this file can only ever quiet a notification,
+    so failing open on it can only make the lane noisier, not blinder.
+    """
+    if path is None or not path.is_file():
+        return {}
+    try:
+        import yaml  # local: only this path needs it
+        data = yaml.safe_load(path.read_text()) or {}
+    except Exception as e:  # noqa: BLE001 - any parse failure is non-fatal
+        warn(f"could not read {path} ({e}); every upstream finding will report as new")
+        return {}
+    out: dict[str, dict] = {}
+    for entry in (data.get("known") or []):
+        if isinstance(entry, dict) and entry.get("entity_key"):
+            out[str(entry["entity_key"])] = entry
+    return out
+
+
+def load_upstream_repos(path: Path | None) -> list[dict]:
+    """[{prefix, repo}, ...] from upstream-claims.yaml, longest prefix first."""
+    if path is None or not path.is_file():
+        return []
+    try:
+        import yaml
+        data = yaml.safe_load(path.read_text()) or {}
+    except Exception:  # noqa: BLE001 - a missing link is not worth a failed run
+        return []
+    rows = [r for r in (data.get("repos") or [])
+            if isinstance(r, dict) and r.get("prefix") and r.get("repo")]
+    return sorted(rows, key=lambda r: len(r["prefix"]), reverse=True)
+
+
+def file_issue_url(finding: dict, claim_text: str, repos: list[dict]) -> str | None:
+    """A prefilled GitHub new-issue URL for an unfiled upstream finding.
+
+    Returns None when no mapping owns the page — the finding still reports and
+    still pages #docs-ops, it just arrives without a one-click filing.
+
+    Everything the reader needs to judge the finding rides in the body, so the
+    human decision is "is this right?" rather than "let me go reconstruct what
+    the bot saw". Fields are truncated because the whole thing travels as a
+    query string; GitHub starts dropping it a few KB in, and a link that
+    silently loses its body is worse than a short one.
+    """
+    page = finding["pages"][0]["path"] if finding.get("pages") else ""
+    repo = next((r["repo"] for r in repos if page.startswith(r["prefix"])), None)
+    if not repo:
+        return None
+
+    def clip(s: str, n: int) -> str:
+        s = " ".join(str(s or "").split())
+        return s if len(s) <= n else s[: n - 1] + "…"
+
+    title = f"Docs claim contradicted: {clip(finding['entity_key'], 90)}"
+    body = (
+        f"Found by the pulumi/docs {ISSUE_ORIGIN}. The page is generated, "
+        f"so there is nothing to fix in pulumi/docs — the text comes from here.\n\n"
+        f"**Claim as published:** {clip(claim_text, 600)}\n\n"
+        f"**What the check found:** {clip(finding.get('evidence'), 900)}\n\n"
+        f"**Source consulted:** {clip(finding.get('source'), 300)}\n\n"
+        f"**Rendered from:** `{page}`\n"
+        f"**Entity key:** `{finding['entity_key']}`\n\n"
+        f"---\n"
+        f"Filed by a human from a #docs-ops notification; the check is automated, "
+        f"the judgment is not. If this is wrong, say so on the issue — that is a "
+        f"useful signal for the verifier's targeting."
+    )
+    from urllib.parse import urlencode
+    return (f"https://github.com/{repo}/issues/new?"
+            + urlencode({"title": title, "body": body}))
 
 
 # ---- inputs ------------------------------------------------------------------
@@ -182,19 +311,16 @@ def measure_cost(artifacts_dir: Path | None) -> dict:
 def build_findings(article: dict, verdicts: list[dict], repo_root: Path | None,
                    tier_rules: list[dict], known: dict[str, dict],
                    repos: list[dict]) -> list[dict]:
-    """One entry per decided-wrong verdict, routed the way the nightly lane
-    routes its own findings.
+    """One entry per decided-wrong verdict, routed to where it can be fixed.
 
     `route` is `fix_route`'s answer for this page: "generated" or "missing" is
     the expected case here (that is what the lane runs on) and carries the
-    upstream treatment — never filed as a stale-claims marker, because no PR in
-    this repo could ever retire one. A "local" route means the page turned out
+    upstream treatment, because no PR in this repo could fix it. A "local" route means the page turned out
     to be editable after all, which is a tiers-file bug rather than a finding
     to route upstream; it is reported as such rather than silently reshaped.
     """
-    rv = reverify()
     path = article["path"]
-    route = rv.fix_route([{"path": path}], repo_root, tier_rules)
+    route = fix_route([{"path": path}], repo_root, tier_rules)
     findings = []
     for v in verdicts:
         if v.get("verdict") not in CONTRADICTED_VERDICTS:
@@ -217,8 +343,7 @@ def build_findings(article: dict, verdicts: list[dict], repo_root: Path | None,
             "issue": (known.get(entity_key) or {}).get("issue") if entity_key else None,
         }
         if finding["new"]:
-            finding["file_issue_url"] = rv.file_issue_url(
-                finding, finding["text"], repos, origin=ISSUE_ORIGIN)
+            finding["file_issue_url"] = file_issue_url(finding, finding["text"], repos)
         findings.append(finding)
     return sorted(findings, key=lambda f: (f["entity_key"], str(f["claim_id"])))
 
@@ -226,9 +351,9 @@ def build_findings(article: dict, verdicts: list[dict], repo_root: Path | None,
 def slack_text(article: dict, findings: list[dict], run_url: str | None) -> str:
     """The #docs-ops line for a page that came back with NEW findings.
 
-    Counts and one line per finding, with the prefilled filing link — the same
-    contract the nightly lane's upstream line has: a human reads it, judges it,
-    and files it with one click and their own name on the issue.
+    Counts and one line per finding, with the prefilled filing link: a human
+    reads it, judges it, and files it with one click and their own name on the
+    issue.
     """
     new = [f for f in findings if f["new"]]
     url = article.get("url") or article["path"]
@@ -242,8 +367,7 @@ def slack_text(article: dict, findings: list[dict], run_url: str | None) -> str:
         lines.append(f"  • [{f['route']}] {label} ({f['verdict']})")
         lines.append(f"      {' '.join((f['evidence'] or '').split())[:240]}")
         if f.get("file_issue_url"):
-            # Long URL on its own line, same shape as the nightly lane's
-            # upstream Slack block — Slack renders it as the link text.
+            # Long URL on its own line — Slack renders it as the link text.
             lines.append(f"      <{f['file_issue_url']}|file it upstream>")
     tail = f"Page: {url}"
     if run_url:
@@ -269,11 +393,10 @@ def write_github_output(report: dict) -> None:
 def run(args) -> int:
     article = load_article(Path(args.queue))
     verdicts, errors, usable = load_verdicts(Path(args.verified))
-    rv = reverify()
-    tier_rules = rv.load_tier_rules(Path(args.tiers) if args.tiers else None)
-    known = rv.load_known_upstream(
+    tier_rules = load_tier_rules(Path(args.tiers) if args.tiers else None)
+    known = load_known_upstream(
         Path(args.known_upstream) if args.known_upstream else None)
-    repos = rv.load_upstream_repos(
+    repos = load_upstream_repos(
         Path(args.known_upstream) if args.known_upstream else None)
 
     findings = (
@@ -347,6 +470,7 @@ def main() -> int:
 
 def self_test() -> int:
     import tempfile
+    from urllib.parse import unquote_plus
 
     failures: list[str] = []
 
@@ -434,6 +558,88 @@ def self_test() -> int:
               "file it upstream" in text and "issues/new" in text and "Run log" in text)
         check("the prefilled issue says which lane found it",
               "report-only+content+review" in by_key["numerical/fresh-one"]["file_issue_url"])
+
+    # Routing: the file check alone can't tell a generated page from an
+    # editable one, and a claim spanning both kinds routes to the fixable one.
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        (root / "content/docs").mkdir(parents=True)
+        (root / "content/docs/real.md").write_text("# real\n")
+        (root / "content/docs/iac/cli/commands").mkdir(parents=True)
+        (root / "content/docs/iac/cli/commands/pulumi-up.md").write_text("# gen\n")
+        rules = [{"prefix": "content/docs/iac/cli/commands/", "tier": 0}]
+        local = [{"path": "content/docs/real.md"}]
+        absent = [{"path": "content/docs/reference/pre-built-policy-packs/cis/aws.md"}]
+        gen = [{"path": "content/docs/iac/cli/commands/pulumi-up.md"}]
+        check("an editable page routes local", fix_route(local, root, rules) == "local")
+        check("a page with no source routes missing",
+              fix_route(absent, root, rules) == "missing")
+        check("a tier-0 page with a real file still routes generated",
+              fix_route(gen, root, rules) == "generated")
+        check("one fixable asserting page wins", fix_route(gen + local, root, rules) == "local")
+        check("generated beats missing when a claim spans both",
+              fix_route(gen + absent, root, rules) == "generated")
+        report_rules = [{"prefix": "content/docs/iac/cli/commands/", "tier": 3,
+                         "editable": False, "reviewable": True}]
+        check("a reviewable-but-not-editable page routes generated, not local",
+              fix_route(gen, root, report_rules) == "generated")
+        check("no root and no rules -> assume local (pure-logic callers)",
+              fix_route(absent, None, None) == "local")
+        check("unreadable tiers file -> no rules, never fatal",
+              load_tier_rules(root / "nope.yaml") == [])
+
+        # The known-upstream file only ever quiets a repeat notification.
+        ku = root / "upstream-claims.yaml"
+        ku.write_text(
+            "known:\n"
+            "  - entity_key: numerical/known-one\n"
+            "    issue: https://github.com/pulumi/pulumi/issues/1\n")
+        check("known-upstream parses to a key map",
+              set(load_known_upstream(ku)) == {"numerical/known-one"})
+        check("missing known-upstream file is empty, not fatal",
+              load_known_upstream(root / "nope.yaml") == {})
+        (root / "bad.yaml").write_text("known: [{{{\n")
+        check("malformed known-upstream fails open (noisier, never blinder)",
+              load_known_upstream(root / "bad.yaml") == {})
+
+    # Prefilled filing links: mapped tree gets one, unmapped tree gets None
+    # (still reported, still paged — just no one-click).
+    pp_repos = [{"prefix": "content/docs/reference/pre-built-policy-packs/",
+                 "repo": "pulumi/policy-packs-internal"}]
+    finding = {"entity_key": "numerical/iam-user-unused-credentials-90",
+               "evidence": "AWS Config's rule covers UNUSED credentials, not rotation.",
+               "source": "https://docs.aws.amazon.com/config/latest/developerguide/x.html",
+               "pages": [{"path": "content/docs/reference/pre-built-policy-packs/cis/aws.md"}]}
+    url = file_issue_url(finding, "The policy ensures credentials are rotated within 90 days.",
+                         pp_repos)
+    check("mapped tree yields a filing link",
+          url is not None and url.startswith("https://github.com/pulumi/policy-packs-internal/issues/new?"))
+    check("link carries the claim, the finding, the source, and the page",
+          all(t in unquote_plus(url) for t in
+              ("rotated within 90 days", "UNUSED credentials", "docs.aws.amazon.com",
+               "content/docs/reference/pre-built-policy-packs/cis/aws.md")))
+    check("unmapped tree yields no link",
+          file_issue_url({**finding, "pages": [{"path": "content/docs/iac/concepts/x.md"}]},
+                         "t", pp_repos) is None)
+    check("a finding with no pages yields no link",
+          file_issue_url({**finding, "pages": []}, "t", pp_repos) is None)
+    # A body that silently loses its tail is worse than a short one, so the
+    # fields are clipped; guard the total against GitHub's query-string limit.
+    huge = file_issue_url({**finding, "evidence": "E" * 20000, "source": "S" * 20000},
+                          "C" * 20000, pp_repos)
+    check(f"oversized finding still yields a usable URL ({len(huge)} chars)", len(huge) < 8000)
+
+    # The shipped file itself: every entry needs a tracking issue, or it is a
+    # mute button with nobody behind it.
+    check("shipped repo map parses and covers the policy-pack tree",
+          any(r["prefix"] == "content/docs/reference/pre-built-policy-packs/"
+              for r in load_upstream_repos(DEFAULT_KNOWN_UPSTREAM)))
+    if DEFAULT_KNOWN_UPSTREAM.is_file():
+        entries = load_known_upstream(DEFAULT_KNOWN_UPSTREAM)
+        check("every shipped entry cites an upstream issue",
+              all(str(e.get("issue") or "").startswith("http") for e in entries.values()))
+        check("every shipped entry says what is wrong",
+              all(str(e.get("what") or "").strip() for e in entries.values()))
 
     print()
     if failures:

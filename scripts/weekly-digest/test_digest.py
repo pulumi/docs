@@ -99,14 +99,14 @@ def base_digest(**over):
 def test_switch_semantics_match_each_workflow():
     by = {s["var"]: s for s in digest.shape_switches({
         "REVIEW_V3_SLA": "", "REVIEW_V3_SENTINEL": "report", "CONTENT_REVIEW_COUNT": "",
-        "GLOWUP_COUNT": "0", "BLOG_REVIEW_COUNT": "0", "CLAIMS_REVERIFY_COUNT": "10",
+        "GLOWUP_COUNT": "0", "BLOG_REVIEW_COUNT": "10",
         "BRAND_SYNC_ENABLED": ""})}
     assert by["REVIEW_V3_SLA"]["state"] == "off"            # == '1' switch: unset is off
     assert by["REVIEW_V3_SENTINEL"]["state"] == "report"
     assert by["CONTENT_REVIEW_COUNT"]["state"] == "on"      # != '0' switch: unset is ON
     assert by["CONTENT_REVIEW_COUNT"]["value"] == "3"       # ...at the workflow's default count
     assert by["GLOWUP_COUNT"]["state"] == "off"
-    assert by["CLAIMS_REVERIFY_COUNT"]["value"] == "10"
+    assert by["BLOG_REVIEW_COUNT"]["value"] == "10"
     assert by["BRAND_SYNC_ENABLED"]["state"] == "on"
 
 

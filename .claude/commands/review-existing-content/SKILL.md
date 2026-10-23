@@ -55,16 +55,6 @@ Read `.content-review-queue.json` from the repo root (written by
         "feedback": { "yes": 4, "no": 9, "neg_rate": 0.6923, "multiplier": 1.27 }
       },
       "last_reviewed": null,
-      "stale_claims": 1,
-      "stale_claim_markers": [
-        { "entity_key": "version/pulumi-package",
-          "claim_text": "Package source is saved to `packages` in Pulumi.yaml as of Pulumi 3.157.0.",
-          "verdict": "contradicted",
-          "evidence": "CHANGELOG lists \"Save package source to `packages` in Pulumi.yaml on `package add`\" under 3.163.0, not 3.157.0.",
-          "source": "gh api repos/pulumi/pulumi/releases",
-          "checked_at": "2026-08-15",
-          "unresolved_reviews": 0 }
-      ],
       "score": 0.91 }
   ]
 }
@@ -75,36 +65,6 @@ Read `.content-review-queue.json` from the repo root (written by
   never reaches you: that lane runs no model (see §Report-only mode).
 - `editable` — false only on generated trees, which is why they are never in a
   `fix` queue. Nothing you do should ever need to check it.
-- `stale_claims` (when present) — count of this page's volatile claims the
-  nightly re-verification found contradicted (see §Claims index below). A
-  non-zero count is why the page jumped the queue.
-- `stale_claim_markers` (when present) — **those findings in full**, each with
-  the `entity_key`, the `claim_text` (the exact sentence the nightly verifier
-  checked — search the page for it; a marker without one predates 2026-09 and
-  names only the entity), the `verdict`, the `evidence` the nightly verifier
-  recorded, the `source` it reached, and `unresolved_reviews` (how many prior
-  reviews saw this marker and left it unresolved). **These are the highest-
-  priority findings in your queue and you must address every one of them.**
-  The nightly lane has already done the expensive part — it identified the
-  entity, reached an authoritative source, and wrote down what that source
-  says — so start here rather than waiting to see whether your own claim
-  extraction happens to re-derive the same finding. It may not: a page boosted
-  for a contradicted version pin was once reviewed, reported "0 contradicted"
-  across 74 re-extracted claims, and merged an unrelated one-line repair while
-  the flagged bug stayed on master.
-  A marker carrying `"escalated": true` has already survived two reviews
-  unresolved, so it no longer jumps the page to the front of the queue and a
-  human may be looking at it — but it is still a live finding and still yours
-  to resolve if you can. Treat it like any other marker.
-  For each marker, either apply the fix, or establish that the flag was wrong
-  (the nightly verdicts are single-sample and do produce false positives —
-  a synthetic module path for a locally generated SDK was once flagged as a
-  broken import). Then list its `entity_key` in the verdict sentinel's
-  `resolved_claims`. A marker you do not resolve is carried onto the next
-  review with `unresolved_reviews` incremented, and after two such rounds it
-  is escalated for a human — so silently skipping one does not make it go
-  away, it just delays it. (That next review is not tomorrow's: the boost
-  sits out a five-day cooldown after any completed review of the page.)
 - `no_retire` — when true, retirement must never be proposed for this page.
   This is the **hard veto** on retirement — honor it regardless of evidence.
 - `reader_signals` / `signals` — Search Console and feedback-widget figures
@@ -117,7 +77,7 @@ Read `.content-review-queue.json` from the repo root (written by
 - `traffic.available: false` is not your problem to fix: the dispatcher's
   degradation-health lane (`scripts/content-review/signal-health.py`) tracks
   it — along with pulumi/pulumi-service (console-source) access, the
-  holiday feed, and the nightly claims re-verify — and alerts
+  holiday feed, and ledger writes — and alerts
   #docs-ops after a week of continuous degradation.
 
 Process articles **sequentially**, one at a time, completing each article's
@@ -449,7 +409,6 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
   "skipped_findings": 2,
   "retirement": false,
   "clarity_flag": true,
-  "resolved_claims": ["version/pulumi-package"],
   "applied": [
     { "category": "claim", "file": "content/docs/iac/concepts/stacks/_index.md",
       "lines": [42, 43], "source": "verified-claims:c3" },
@@ -478,12 +437,6 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
   `len(applied)`. The workflow's scope gate cross-checks these against the
   artifacts and the branch diff; for link fixes (which have no artifact) the
   declared lines must actually carry the link in the pre-fix file.
-- `resolved_claims`: optional; the `entity_key` of every
-  `stale_claim_markers` entry you resolved this run — fixed, or shown to be a
-  false positive (say which, in the PR body). Omit or leave empty when the
-  queue item carried no markers. Anything you leave out is carried forward to
-  the next review rather than cleared, so this list is the only way a marker
-  retires.
 - `clarity_flag`: optional; `true` when you flagged a readthrough `reconception`
   for this page. Carries onto the ledger record so the page's structural
   follow-up is durable even when the verdict is `clean` or `fixed` (the
@@ -622,12 +575,7 @@ Each banked item is split in two, and the split is the point:
    resolved the page's readthrough reconception, `true` while one still
    stands. Omitting it carries the page's existing flag forward unchanged —
    which is the right default, since the flag is usually why the page was
-   selected, but it means only you can put it down. If the
-   queue article carries `stale_claim_markers`, they are must-address
-   findings here exactly as in a fix review: resolve each (fix it, or
-   establish the flag was wrong) and list its `entity_key` in the sentinel's
-   `resolved_claims`, or it carries forward with `unresolved_reviews`
-   incremented.
+   selected, but it means only you can put it down.
 
 ### Pre-verification (the workflow's, after you finish)
 
@@ -801,14 +749,11 @@ The run is the deterministic claim pipeline and nothing else:
    produced verdicts. A degraded verify writes no sentinel, so the ledger
    records the page `incomplete` and it stays due; stamping it `reported`
    would advance the staleness clock on a page nothing had checked.
-1. `record-claims.py` persists the claim list to the claims index, which is
-   what puts these pages into the nightly volatile re-verify for the first
-   time.
-1. `report-claims-findings.py` reports the contradictions. They route through
-   the same upstream lane the nightly re-verify uses — never marked (no PR here
-   could retire the marker), always re-checked, and announced to #docs-ops with
-   a prefilled issue against the repo that owns the text, unless
-   `references/upstream-claims.yaml` says a human has already filed it.
+1. `record-claims.py` persists the claim list to the claims index.
+1. `report-claims-findings.py` reports the contradictions. No PR here could
+   fix them, so each is announced to #docs-ops with a prefilled issue against
+   the repo that owns the text, unless `references/upstream-claims.yaml` says
+   a human has already filed it.
 1. The publish gate enforces the rest: a `reported` verdict with a non-empty
    patch fails closed, and no branch or PR is ever created.
 
@@ -858,7 +803,7 @@ draft are your only outputs. The workflow publishes the branch, records the
 ledger, and drives the docs review from them — there is no results file to
 write.
 
-## Claims index and stale-claim boosts
+## Claims index
 
 Alongside the ledger record, the workflow persists the page's
 `.verified-claims.json` to a **claims index** — one snapshot object per page
@@ -872,18 +817,6 @@ Pages a generator owns reach the index through the **report-only lane**
 described above rather than through a review like yours — same script, same
 snapshot shape, no edits.
 
-The nightly `claims-reverify.yml` workflow re-checks volatile entities
-(version pins, prices, limits) straight from this index
-(`scripts/content-review/reverify-claims.py`). When an entity re-verifies
-contradicted, every page asserting it gets a `stale_claims` marker in its
-ledger entry, and `select-articles.py` boosts those pages to the front of the
-next sweep — that is how a page can arrive in your queue the day after a
-release changed a fact it states. The boost never fires within five days of
-the page's last completed review, so a marker one review leaves unresolved
-comes back after the cooldown rather than the next morning.
-
 None of this is yours to write: this worker's whole-page runs are the index's
 **only** writer, and the workflow runs `record-claims.py` itself after your
-review. The markers clear automatically when your review's ledger and claims
-rewrites land. Do not create, edit, or upload `claims/` objects or
-`stale_claims` fields.
+review. Do not create, edit, or upload `claims/` objects.
