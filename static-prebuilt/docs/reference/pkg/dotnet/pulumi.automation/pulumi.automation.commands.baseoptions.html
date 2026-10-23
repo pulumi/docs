@@ -50,7 +50,7 @@
     "name": "Pulumi",
     "url": "https://www.pulumi.com/"
   },
-  "assemblyVersion": "3.115.0",
+  "assemblyVersion": "3.116.0",
   "description": "The invocation configuration shared by every command: where to run the CLI, what environment to run it with, and where to send its output. Every generated\u2026"
 }
 </script>
@@ -129,6 +129,65 @@ carries both the command's flags and its invocation configuration.</p>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiconfigsetalloptions.html">PulumiConfigSetAllOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiconfigsetoptions.html">PulumiConfigSetOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiconvertoptions.html">PulumiConvertOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestapplyoptions.html">PulumiEnvChangeRequestApplyOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestapproveoptions.html">PulumiEnvChangeRequestApproveOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestcloseoptions.html">PulumiEnvChangeRequestCloseOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestcommentoptions.html">PulumiEnvChangeRequestCommentOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestdiffoptions.html">PulumiEnvChangeRequestDiffOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestgetoptions.html">PulumiEnvChangeRequestGetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestlistoptions.html">PulumiEnvChangeRequestListOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestlogoptions.html">PulumiEnvChangeRequestLogOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestrebaseoptions.html">PulumiEnvChangeRequestRebaseOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestunapproveoptions.html">PulumiEnvChangeRequestUnapproveOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvcloneoptions.html">PulumiEnvCloneOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvdiffoptions.html">PulumiEnvDiffOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienveditoptions.html">PulumiEnvEditOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvgetoptions.html">PulumiEnvGetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvinitoptions.html">PulumiEnvInitOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvlistoptions.html">PulumiEnvListOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvopenoptions.html">PulumiEnvOpenOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvopenrequestoptions.html">PulumiEnvOpenRequestOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvproviderawsloginoidcoptions.html">PulumiEnvProviderAwsLoginOidcOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvproviderawsloginstaticoptions.html">PulumiEnvProviderAwsLoginStaticOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvproviderazureloginoidcoptions.html">PulumiEnvProviderAzureLoginOidcOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvproviderazureloginstaticoptions.html">PulumiEnvProviderAzureLoginStaticOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvprovidergcploginoidcoptions.html">PulumiEnvProviderGcpLoginOidcOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvprovidergcploginstaticoptions.html">PulumiEnvProviderGcpLoginStaticOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvreferrerlistoptions.html">PulumiEnvReferrerListOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvremoveoptions.html">PulumiEnvRemoveOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvrotateoptions.html">PulumiEnvRotateOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvrunoptions.html">PulumiEnvRunOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvscheduleeditoptions.html">PulumiEnvScheduleEditOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvschedulegetoptions.html">PulumiEnvScheduleGetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvschedulehistoryoptions.html">PulumiEnvScheduleHistoryOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvschedulelistoptions.html">PulumiEnvScheduleListOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvschedulenewoptions.html">PulumiEnvScheduleNewOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvscheduleremoveoptions.html">PulumiEnvScheduleRemoveOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvsetoptions.html">PulumiEnvSetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvsettingsgetoptions.html">PulumiEnvSettingsGetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvsettingssetoptions.html">PulumiEnvSettingsSetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvsetupawsoptions.html">PulumiEnvSetupAwsOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvsetupazureoptions.html">PulumiEnvSetupAzureOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvsetupgcpoptions.html">PulumiEnvSetupGcpOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvtaggetoptions.html">PulumiEnvTagGetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvtaglistoptions.html">PulumiEnvTagListOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvtagmoveoptions.html">PulumiEnvTagMoveOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvtagoptions.html">PulumiEnvTagOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvtagremoveoptions.html">PulumiEnvTagRemoveOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvversionhistoryoptions.html">PulumiEnvVersionHistoryOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvversionoptions.html">PulumiEnvVersionOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvversionretractoptions.html">PulumiEnvVersionRetractOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvversionrollbackoptions.html">PulumiEnvVersionRollbackOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvversiontaglistoptions.html">PulumiEnvVersionTagListOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvversiontagoptions.html">PulumiEnvVersionTagOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvversiontagremoveoptions.html">PulumiEnvVersionTagRemoveOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvwebhookdeliverylistoptions.html">PulumiEnvWebhookDeliveryListOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvwebhookeditoptions.html">PulumiEnvWebhookEditOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvwebhookgetoptions.html">PulumiEnvWebhookGetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvwebhooklistoptions.html">PulumiEnvWebhookListOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvwebhooknewoptions.html">PulumiEnvWebhookNewOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvwebhookpingoptions.html">PulumiEnvWebhookPingOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvwebhookremoveoptions.html">PulumiEnvWebhookRemoveOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiimportoptions.html">PulumiImportOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinstalloptions.html">PulumiInstallOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.puluminewoptions.html">PulumiNewOptions</a></div>
@@ -138,6 +197,18 @@ carries both the command's flags and its invocation configuration.</p>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiorgsearchoptions.html">PulumiOrgSearchOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiorgsetdefaultoptions.html">PulumiOrgSetDefaultOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumirefreshoptions.html">PulumiRefreshOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistateeditoptions.html">PulumiStateEditOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistategetoptions.html">PulumiStateGetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistatemoveoptions.html">PulumiStateMoveOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistatepromoteoptions.html">PulumiStatePromoteOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistateprotectoptions.html">PulumiStateProtectOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistateremoveoptions.html">PulumiStateRemoveOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistaterenameoptions.html">PulumiStateRenameOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistaterepairoptions.html">PulumiStateRepairOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistatetaintoptions.html">PulumiStateTaintOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistateunprotectoptions.html">PulumiStateUnprotectOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistateuntaintoptions.html">PulumiStateUntaintOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumistateupgradeoptions.html">PulumiStateUpgradeOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiversionoptions.html">PulumiVersionOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiwhoamioptions.html">PulumiWhoamiOptions</a></div>
   </div>
@@ -288,7 +359,7 @@ current process directory when null.</p>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.115.0</p>
+    <p class="sdk-version">Version 3.116.0</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
