@@ -87,9 +87,16 @@ export function parseUsage(input: Record<string, unknown>, rates: PricingRates =
         }
     }
 
-    const edition = input.edition;
-    if (typeof edition !== "string" || !Object.prototype.hasOwnProperty.call(rates.editions, edition)) {
-        fields.edition = `must be one of ${Object.keys(rates.editions).join(", ")}`;
+    // Callers such as an Intercom Fin data connector fill this in from free
+    // text, so case, surrounding whitespace, and wrapping quotes are ignored
+    // ("Pro", " pro", "\"pro\"" all mean pro). The error echoes what arrived,
+    // since a value that only looks right is otherwise hard to diagnose.
+    const edition = typeof input.edition === "string"
+        ? input.edition.trim().replace(/^["']+|["']+$/g, "").trim().toLowerCase()
+        : undefined;
+    if (edition === undefined || !Object.prototype.hasOwnProperty.call(rates.editions, edition)) {
+        const received = input.edition === undefined ? "nothing" : JSON.stringify(input.edition);
+        fields.edition = `must be one of ${Object.keys(rates.editions).join(", ")}; received ${received}`;
     }
 
     const quantities: Record<string, number> = {};

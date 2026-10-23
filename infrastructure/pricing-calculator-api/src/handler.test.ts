@@ -54,6 +54,21 @@ test("reports every invalid field", async () => {
     }
 });
 
+test("accepts an edition in any case, with whitespace or quotes", async () => {
+    for (const edition of ["Pro", "PRO", " pro ", "\"pro\"", "'Pro'"]) {
+        const res = await pricingHandler(get({ edition, iac_resources: "2000" }));
+        assert.strictEqual(res.statusCode, 200, `${JSON.stringify(edition)}: ${res.body}`);
+        assert.strictEqual(JSON.parse(res.body).estimate.edition, "pro");
+        assert.strictEqual(JSON.parse(res.body).estimate.totalUsd, 400);
+    }
+});
+
+test("echoes an unrecognized edition in the error", async () => {
+    const res = await pricingHandler(get({ edition: "{{edition}}" }));
+    assert.strictEqual(res.statusCode, 400);
+    assert.match(JSON.parse(res.body).fields.edition, /received "\{\{edition\}\}"/);
+});
+
 test("requires an edition", async () => {
     const res = await pricingHandler(get({ iac_resources: "10" }));
     assert.strictEqual(res.statusCode, 400);
