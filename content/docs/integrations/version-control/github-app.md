@@ -59,6 +59,25 @@ Multiple GitHub organizations can be connected to a single Pulumi organization. 
 Mapping a single GitHub organization to multiple Pulumi organizations requires contacting [Pulumi support](/support/new/). This option is only available for Pro and Enterprise customers.
 {{% /notes %}}
 
+### Permissions
+
+The Pulumi GitHub app requests the following repository and organization permissions. GitHub shows the same list when you install or update the app, and you can review what an installation currently holds under **Settings** > **Applications** > **Installed GitHub Apps** in GitHub.
+
+| Permission | Access | What Pulumi uses it for |
+|---|---|---|
+| Metadata | Read | Look up the repositories and organization the installation covers. GitHub grants this to every app. |
+| Contents | Read and write | Clone repositories for deployments and let [Neo](/docs/ai/) push commits. |
+| Pull requests | Read and write | Post preview results as pull request comments and let Neo open pull requests. |
+| Checks | Read and write | Report [update status](#checks) on commits and pull requests. |
+| Deployments | Read and write | Report deployment status to GitHub. |
+| Environments | Read and write | Work with GitHub environments for deployments. |
+| Workflows | Read and write | Allow commits that modify GitHub Actions workflow files. |
+| Organization members | Read | Match GitHub organization members to Pulumi users. |
+
+If you [enable GitHub triggers for Neo](/docs/ai/), Neo also expects read and write access to issues.
+
+On GitHub Enterprise Server and GitHub Enterprise Cloud with data residency, you create the app yourself, and Pulumi's install wizard requests this same set of permissions in the app manifest. Because you own the app, you can review and adjust its permissions in your GitHub Enterprise settings, but removing a permission disables the features that depend on it.
+
 ### GitHub Enterprise Server support
 
 {{< pulumi-cloud "github-enterprise-server" />}}
@@ -197,10 +216,10 @@ You can also deploy on git tag pushes — for example, on every `v*` release tag
 
 When [Pulumi Deployments](/docs/deployments/) runs a deployment whose source repository is connected through the GitHub app, Pulumi automatically injects a `GITHUB_TOKEN` environment variable into the deployment. Your Pulumi program and [pre-run commands](/docs/deployments/concepts/settings/pre-run-commands/) can use it to authenticate to GitHub — for example, to install a private module or clone another repository — without configuring a token yourself. This is why deploying from a GitHub-connected repository "just works" for GitHub-hosted dependencies.
 
-The value is a short-lived GitHub App installation access token: it is valid for about an hour and re-minted for each deployment. If you instead configured the source with your own personal access token, that token is promoted to `GITHUB_TOKEN` as-is.
+The value is a short-lived GitHub App installation access token, valid for up to an hour. Pulumi may reuse the same token across deployments that use the same installation during that time. If you instead configured the source with your own personal access token, that token is promoted to `GITHUB_TOKEN` as-is.
 
 {{% notes type="warning" %}}
-The token is **not** limited to the source repository. It carries the full scope of the Pulumi GitHub App installation: every repository you granted the app, with the same permissions the app holds — which include write access to repository contents. In practice a deployment can therefore read from and write to any repository the installation can reach, so treat `GITHUB_TOKEN` as a broadly privileged credential. If you need a narrower credential, set your own `GITHUB_TOKEN` (or another token) through [custom environment variables](/docs/deployments/concepts/settings/environment-variables/); an explicit value always overrides the one Pulumi provides.
+The token is **not** limited to the source repository. It carries the full scope of the Pulumi GitHub App installation: every repository you granted the app, with every [permission the app holds](#permissions), including write access to repository contents and workflows. In practice a deployment can therefore read from and write to any repository the installation can reach, so treat `GITHUB_TOKEN` as a broadly privileged credential. If you need a narrower credential, set your own `GITHUB_TOKEN` (or another token) through [custom environment variables](/docs/deployments/concepts/settings/environment-variables/); an explicit value always overrides the one Pulumi provides.
 {{% /notes %}}
 
 On GitHub Enterprise Server, Pulumi additionally sets `GH_HOST`, `GITHUB_ENTERPRISE_TOKEN`, and `GH_ENTERPRISE_TOKEN` so the [`gh` CLI](https://cli.github.com/) and other tooling authenticate against your server.
