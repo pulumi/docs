@@ -1165,6 +1165,26 @@
       "authenticationFailure": false,
       "category": "policy",
       "deprecated": false,
+      "description": "A policy exception was created.",
+      "displayName": "Policy Exception Created",
+      "event": "policy-exception-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "deprecated": false,
+      "description": "An active policy exception was removed.",
+      "displayName": "Policy Exception Removed",
+      "event": "policy-exception-removed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "deprecated": false,
       "description": "A policy group was created.",
       "displayName": "Policy Group Created",
       "event": "policy-group-created",
