@@ -20,6 +20,10 @@ pulumi_cloud_feature: self-hosting
 
 ## 2026
 
+### October
+
+* Security: The API service no longer trusts eight compromised eMudhra intermediate certificates. The release updates the bundled CA certificates and builds with Go 1.27.3. Upgrade to stop trusting certificates issued under them. For background, see [Cloudflare's summary of the eMudhra compromise](https://blog.cloudflare.com/emudhra-certificate-compromise/).
+
 ### September
 
 * Upgraded OpenSearch to 3.7.0 across the self-hosted installers, matching the version Pulumi Cloud runs
