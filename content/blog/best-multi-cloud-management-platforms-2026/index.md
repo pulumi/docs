@@ -40,7 +40,7 @@ related_posts:
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        "Multi-cloud management platform" covers at least five different jobs: provisioning, IaC orchestration, Kubernetes control planes, hybrid self-service, and FinOps.
+        "Multi-cloud management platform" covers six different jobs: provisioning, IaC orchestration, Kubernetes control planes, hybrid self-service, FinOps, and provider-native hybrid.
 
         We sorted 14 tools by job and compared them honestly, including Pulumi's own tradeoffs.
     linkedin: |
@@ -50,10 +50,10 @@ social:
 
         Each entry covers strengths, limits, and best fit, with a comparison table, a section on what portability across clouds really takes, and an FAQ.
     bluesky: |
-        "Multi-cloud management platform" spans provisioning, IaC orchestration, Kubernetes control planes, hybrid self-service, and FinOps. We sorted 14 tools by job and compared them honestly, Pulumi's tradeoffs included.
+        "Multi-cloud management platform" spans provisioning, IaC orchestration, Kubernetes control planes, hybrid self-service, FinOps, and provider-native hybrid. We sorted 14 tools by job and compared them honestly, Pulumi's tradeoffs included.
 ---
 
-The best multi-cloud management platform depends on the job. Pulumi, Terraform, and OpenTofu provision infrastructure. Spacelift, Scalr, and env zero orchestrate IaC runs. Crossplane and GKE Enterprise manage Kubernetes fleets. HPE Morpheus and CloudBolt handle hybrid self-service. CloudHealth and Flexera cover cost. Most teams combine two or three.
+The best multi-cloud management platform depends on the job. Pulumi, Terraform, and OpenTofu provision infrastructure. Spacelift, Scalr, and env zero orchestrate IaC runs. Crossplane and GKE Enterprise manage Kubernetes fleets. HPE Morpheus and CloudBolt handle hybrid self-service. CloudHealth and Flexera cover cost. Many teams combine two or three.
 
 <!--more-->
 
@@ -63,11 +63,11 @@ We build Pulumi, so Pulumi is on the list and we say where it fits and where it 
 
 ## What is a multi-cloud management platform?
 
-A multi-cloud management platform is software that lets a team provision, govern, or observe infrastructure across two or more cloud providers from one place. The label covers several categories: IaC tools that create resources, orchestrators that run IaC safely, control planes that manage clusters, self-service portals for hybrid estates, and FinOps tools that track spend.
+A multi-cloud management platform is software that lets a team provision, govern, or observe infrastructure across two or more cloud providers from one place. The label covers several categories: IaC tools that create resources, orchestrators that run IaC safely, control planes that manage clusters, self-service portals for hybrid estates, FinOps tools that track spend, and provider-native hybrid options.
 
-No single product covers all five well. A practical stack picks one tool per job that matters to your team and avoids paying for overlap.
+No single product covers all of them well. A practical stack picks one tool per job that matters to your team and avoids paying for overlap.
 
-## Five jobs hide behind one label
+## Six jobs hide behind one label
 
 Sort tools by job before comparing features. Two products in different categories rarely compete, and two in the same category usually differ on how you define infrastructure and who runs it.
 
@@ -89,7 +89,7 @@ Sort tools by job before comparing features. Two products in different categorie
 | OpenTofu | Provision | Terraform-compatible providers | HCL | Yes | Free | Terraform-style IaC under neutral governance |
 | Spacelift | Orchestrate | Terraform, OpenTofu, Pulumi, and others | Whatever the underlying tool uses | No | Free plan; paid by quote | Platform teams running several IaC tools |
 | Scalr | Orchestrate | Terraform and OpenTofu | HCL | No | Free to 50 runs/month, then per run | Teams that want per-run billing |
-| env zero | Orchestrate, self-service | Terraform, OpenTofu, Pulumi, and others | Whatever the underlying tool uses | No | Free tier (250 runs/month); paid by quote | Self-service environments with cost guardrails |
+| env zero | Orchestrate, self-service | Terraform, OpenTofu, and others | Whatever the underlying tool uses | No | Free tier (250 runs/month); paid by quote | Self-service environments with cost guardrails |
 | Crossplane | Kubernetes control plane | AWS, Azure, Google Cloud via providers | Kubernetes YAML and compositions | Yes (CNCF graduated) | Free; commercial via Upbound | Kubernetes-centric platform teams |
 | HPE Morpheus Software | Hybrid self-service | VMs, containers, private and public cloud | Catalogs, blueprints, automation | No | Per-socket subscription | VMware-estate modernization |
 | CloudBolt | Hybrid self-service, FinOps | Hybrid and multi-cloud | Catalogs and blueprints | No | By quote | Governed self-service across estates |
@@ -105,9 +105,9 @@ Pricing details change often, so confirm against each vendor's pricing page befo
 
 ### Pulumi lets you define multi-cloud infrastructure in general-purpose languages
 
-[Pulumi](https://www.pulumi.com/) is an open source IaC platform where you write infrastructure in TypeScript, Python, Go, C#, Java, or YAML. One program and one state model can create resources in AWS, Azure, Google Cloud, Kubernetes, and SaaS providers, drawing on 180+ providers in the [Pulumi Registry](https://www.pulumi.com/registry/). Because the code is a real language, you get loops, functions, tests, package managers, and IDE support.
+[Pulumi](https://www.pulumi.com/) is an open source IaC platform where you write infrastructure in TypeScript, Python, Go, C#, Java, or YAML. One program and one state model can create resources in AWS, Azure, Google Cloud, Kubernetes, and SaaS providers, drawing on hundreds of packages in the [Pulumi Registry](https://www.pulumi.com/registry/). Because the code is a real language, you get loops, functions, tests, package managers, and IDE support.
 
-Pulumi Cloud adds the platform layer: managed state, [Pulumi ESC](https://www.pulumi.com/docs/esc/) for secrets and configuration, Pulumi Insights for inventory and policy scanning across accounts and clouds, policy as code, deployments, and Neo, an infrastructure agent that proposes changes and opens pull requests with human approval. Components and templates let platform teams publish reusable building blocks that developers consume as libraries.
+Pulumi Cloud adds the platform layer: managed state, [Pulumi ESC](https://www.pulumi.com/docs/esc/) for secrets and configuration, Pulumi Discovery for inventory and scanning across accounts and clouds, Pulumi Policies for policy as code, deployments, and Neo, an infrastructure agent that proposes changes and opens pull requests with human approval. Components and templates let platform teams publish reusable building blocks that developers consume as libraries.
 
 - **Strengths:** abstraction and testing in languages teams already know; one workflow across clouds; strong fit for AI coding agents that already work in those languages.
 - **Watch out for:** the module ecosystem is smaller than Terraform's, teams need some comfort with a programming language, and Pulumi Cloud pricing is credit-based, so size it before you commit.
@@ -119,7 +119,7 @@ Pulumi Cloud adds the platform layer: managed state, [Pulumi ESC](https://www.pu
 [Terraform](https://developer.hashicorp.com/terraform) uses HCL, a domain-specific language, and reaches nearly any cloud or SaaS product through its provider registry. [HCP Terraform](https://developer.hashicorp.com/terraform/cloud-docs/overview) adds managed runs, policy through Sentinel or OPA, and a private registry. HashiCorp is now part of IBM, and the Terraform CLI has been under the Business Source License since 2023.
 
 - **Strengths:** the deepest talent pool, module library, and third-party tooling in the category.
-- **Watch out for:** HCL limits abstraction and native testing, the license matters to some buyers, and paid HCP Terraform plans are metered by managed resources.
+- **Watch out for:** HCL offers less abstraction than a general-purpose language and its testing is limited to the built-in `terraform test` framework, the license matters to some buyers, and paid HCP Terraform plans are metered by managed resources.
 - **Best for:** organizations already standardized on Terraform that want first-party managed runs and enterprise support.
 
 ### OpenTofu is the vendor-neutral Terraform fork
@@ -152,9 +152,9 @@ These tools sit above an IaC tool. They run plans and applies, enforce policy, d
 
 ### env zero focuses on self-service environments with cost controls
 
-[env zero](https://www.envzero.com/) (formerly env0) manages IaC deployments with self-service environments, time-to-live settings, cost guardrails, and drift management across Terraform, OpenTofu, Pulumi, and other tools. Its [pricing page](https://www.envzero.com/pricing) lists a free tier with 250 runs per month and 30 active environments; paid plans are custom.
+[env zero](https://www.envzero.com/) (formerly env0) manages IaC deployments with self-service environments, guardrails and policies, and drift management across Terraform, OpenTofu, and other tools. Its [pricing page](https://www.envzero.com/pricing) lists a free tier with 250 runs per month and 30 active environments; paid plans are custom.
 
-- **Strengths:** developer self-service with budget controls; a generous free tier.
+- **Strengths:** developer self-service with governance guardrails; a generous free tier.
 - **Watch out for:** paid pricing is not public, and like the others it needs an IaC tool beneath it.
 - **Best for:** teams that want developers to spin up governed, expiring environments.
 
@@ -233,8 +233,8 @@ These tools sit above an IaC tool. They run plans and applies, enforce policy, d
 IaC lowers the cost of moving between clouds. It does not remove it. Three things decide how portable a setup really is.
 
 1. **How infrastructure is defined.** If every resource is a provider-specific block, a move means rewriting each one. If you wrap provider resources in components with a stable interface, such as a "database" or "cluster" component, you swap the implementation behind the interface and keep the callers unchanged. Real programming languages make this pattern ordinary software engineering. Our [multi-cloud application walkthrough](https://www.pulumi.com/blog/multicloud-app/) shows the idea in code.
-2. **How state, secrets, and policy are managed.** If these live in one system with one workflow, changing clouds changes the resources and leaves the process intact. Policy written once and applied to every cloud keeps guardrails consistent, as described in [multi-cloud policy as code](https://www.pulumi.com/blog/multicloud-policy-as-code/).
-3. **Which services you depend on.** Managed databases, queues, identity systems, and machine learning services have different APIs and behavior on each cloud. Portable code does not make those equivalent.
+1. **How state, secrets, and policy are managed.** If these live in one system with one workflow, changing clouds changes the resources and leaves the process intact. Policy written once and applied to every cloud keeps guardrails consistent, as described in [multi-cloud policy as code](https://www.pulumi.com/blog/multicloud-policy-as-code/).
+1. **Which services you depend on.** Managed databases, queues, identity systems, and machine learning services have different APIs and behavior on each cloud. Portable code does not make those equivalent.
 
 Data is the other hard limit. Moving terabytes between providers involves egress fees and downtime planning that no tool automates away. Treat portability as a way to reduce rewrite effort and negotiating risk, and plan data moves separately.
 
@@ -265,7 +265,7 @@ Public case studies show the scale teams reach:
 
 ### What is a multi-cloud management platform?
 
-A multi-cloud management platform is software that lets teams provision, govern, or monitor infrastructure across two or more cloud providers from one place. The term spans IaC tools, IaC orchestrators, Kubernetes control planes, hybrid self-service portals, and FinOps tools. Most organizations combine two or three rather than relying on one.
+A multi-cloud management platform is software that lets teams provision, govern, or monitor infrastructure across two or more cloud providers from one place. The term spans IaC tools, IaC orchestrators, Kubernetes control planes, hybrid self-service portals, and FinOps tools. Many organizations combine two or three rather than relying on one.
 
 ### What is the difference between multi-cloud and hybrid cloud?
 
@@ -273,7 +273,7 @@ Multi-cloud means using services from more than one public cloud provider, such 
 
 ### Is Terraform a multi-cloud management tool?
 
-Terraform is a multi-cloud provisioning tool. It creates and changes resources on any cloud with a provider, using HCL. It does not cover cost management, hybrid self-service catalogs, or Kubernetes fleet control, so teams usually pair it with other tools. Pulumi and OpenTofu fill the same provisioning role.
+Terraform is a multi-cloud provisioning tool. It creates and changes resources on any cloud with a provider, using HCL. It is not a FinOps platform, a hybrid self-service catalog, or a Kubernetes fleet manager, so teams usually pair it with other tools for those jobs. Pulumi and OpenTofu fill the same provisioning role.
 
 ### Do I need a cloud management platform if I already use IaC?
 
@@ -285,7 +285,7 @@ Pulumi (SDK and engine), OpenTofu, Crossplane, and the core of Ansible are open 
 
 ### How do I control costs across multiple clouds?
 
-Start with tagging and allocation standards enforced through policy as code, then add a FinOps tool such as CloudHealth or Flexera One for reporting and forecasting. Orchestrators like env zero can also expire temporary environments automatically. Provisioning tools help by making cost-relevant settings explicit and reviewable in code.
+Start with tagging and allocation standards enforced through policy as code, then add a FinOps tool such as CloudHealth or Flexera One for reporting and forecasting. Orchestrators with environment guardrails, such as env zero, can also help limit spend. Provisioning tools help by making cost-relevant settings explicit and reviewable in code.
 
 ### Can AI agents manage multi-cloud infrastructure?
 
