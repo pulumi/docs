@@ -121,9 +121,9 @@ runtime:
   options:
     packagemanager: npm
 packages:
-  s3-bucket:
+  s3-bucket-aws:
     source: hcl
-    version: 0.13.0
+    version: 0.18.4
     parameters:
       - module
       - terraform-aws-modules/s3-bucket/aws
@@ -134,15 +134,15 @@ packages:
 
 {{% choosable language typescript %}}
 
-Since this was a TypeScript project, Pulumi generated a TypeScript SDK for the module, making it available as `@pulumi/s3-bucket`. We can now use the Terraform module directly in our code:
+Since this was a TypeScript project, Pulumi generated a TypeScript SDK for the module, making it available as `@pulumi/s3-bucket-aws`. We can now use the Terraform module directly in our code:
 
 **Example:** index.ts
 
 ```typescript
-import * as s3Bucket from "@pulumi/s3-bucket";
+import * as s3BucketAws from "@pulumi/s3-bucket-aws";
 
 // Create an S3 bucket using the Terraform module
-const bucket = new s3Bucket.Module("my-bucket", {
+const bucket = new s3BucketAws.Module("my-bucket", {
     bucketPrefix: "my-example-bucket",
     tags: {
         Environment: "dev",
@@ -158,16 +158,16 @@ export const bucketId = bucket.s3BucketId;
 
 {{% choosable language python %}}
 
-Since this was a Python project, Pulumi generated a Python SDK for the module, making it available as `pulumi_s3_bucket`. We can now use the Terraform module directly in our code:
+Since this was a Python project, Pulumi generated a Python SDK for the module, making it available as `pulumi_s3_bucket_aws`. We can now use the Terraform module directly in our code:
 
 **Example:** `__main__.py`
 
 ```python
 import pulumi
-import pulumi_s3_bucket as s3bucket
+import pulumi_s3_bucket_aws as s3_bucket_aws
 
 # Create an S3 bucket using the Terraform module
-bucket = s3bucket.Module("my-bucket",
+bucket = s3_bucket_aws.Module("my-bucket",
     bucket_prefix="my-example-bucket",
     tags={
         "Environment": "dev",
@@ -182,7 +182,7 @@ pulumi.export("bucket_id", bucket.s3_bucket_id)
 
 {{% choosable language go %}}
 
-Since this was a Go project, Pulumi generated a Go SDK for the module. We can now use the Terraform module directly in our code:
+Since this was a Go project, Pulumi generated a Go SDK for the module and added a `replace` directive for it to `go.mod`. Run `go mod tidy` to add the matching `require` entry. We can now use the Terraform module directly in our code:
 
 **Example:** `main.go`
 
@@ -190,14 +190,14 @@ Since this was a Go project, Pulumi generated a Go SDK for the module. We can no
 package main
 
 import (
-	"example.com/pulumi-s3-bucket/sdk/go/s3bucket"
+	"example.com/pulumi-s3-bucket-aws/sdk/go/v4/s3bucketaws"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// Create an S3 bucket using the Terraform module
-		bucket, err := s3bucket.NewModule(ctx, "my-bucket", &s3bucket.ModuleArgs{
+		bucket, err := s3bucketaws.NewModule(ctx, "my-bucket", &s3bucketaws.ModuleArgs{
 			BucketPrefix: pulumi.String("my-example-bucket"),
 			Tags: pulumi.StringMap{
 				"Environment": pulumi.String("dev"),
@@ -218,14 +218,14 @@ func main() {
 
 {{% choosable language csharp %}}
 
-Since this was a C# project, Pulumi generated a C# SDK for the module, making it available as `Pulumi.S3Bucket`. We can now use the Terraform module directly in our code:
+Since this was a C# project, Pulumi generated a C# SDK for the module, making it available as `Pulumi.S3BucketAws`. As the command's output instructs, add `<DefaultItemExcludes>$(DefaultItemExcludes);sdks/**/*.cs</DefaultItemExcludes>` to a `<PropertyGroup>` in your program's `.csproj` so the SDK's source files aren't compiled into your program. We can now use the Terraform module directly in our code:
 
 **Example:** `Program.cs`
 
 ```csharp
 using System.Collections.Generic;
 using Pulumi;
-using Pulumi.S3Bucket;
+using Pulumi.S3BucketAws;
 
 return await Deployment.RunAsync(() =>
 {
@@ -252,7 +252,7 @@ return await Deployment.RunAsync(() =>
 
 {{% choosable language java %}}
 
-Since this was a Java project, Pulumi generated a Java SDK for the module, making it available as `com.pulumi.s3bucket`. We can now use the Terraform module directly in our code:
+Since this was a Java project, Pulumi generated a Java SDK for the module, making it available as `com.pulumi.s3bucketaws`. Java SDKs aren't linked automatically: follow the steps the command prints to copy the SDK's sources into your project's `src` directory and add its dependencies to your `pom.xml`. We can now use the Terraform module directly in our code:
 
 **Example:** `App.java`
 
@@ -260,8 +260,8 @@ Since this was a Java project, Pulumi generated a Java SDK for the module, makin
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.s3bucket.Module;
-import com.pulumi.s3bucket.ModuleArgs;
+import com.pulumi.s3bucketaws.Module;
+import com.pulumi.s3bucketaws.ModuleArgs;
 import java.util.Map;
 
 public class App {
@@ -297,7 +297,7 @@ description: Use a Terraform module in Pulumi
 resources:
   # Create an S3 bucket using the Terraform module
   my-bucket:
-    type: s3-bucket:index:Module
+    type: s3-bucket-aws:index:Module
     properties:
       bucketPrefix: my-example-bucket
       tags:
@@ -309,9 +309,9 @@ outputs:
   bucketId: ${my-bucket.s3BucketId}
 
 packages:
-  s3-bucket:
+  s3-bucket-aws:
     source: hcl
-    version: 0.13.0
+    version: 0.18.4
     parameters:
       - module
       - terraform-aws-modules/s3-bucket/aws
