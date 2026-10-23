@@ -55,7 +55,7 @@ Let's say you already have infrastructure provisioned by an existing tool, such 
 * Perhaps that infrastructure is managed by a different team who will keep using their own tool.
 * Or it could be that this infrastructure is slated to be retired after your current project anyway.
 
-In these cases, new infrastructure can coexist with old infrastructure in two ways, letting you keep your existing infrastructure as-is while building new infrastructure under Pulumi's management. The following techniques can be used:
+In these cases, new infrastructure can coexist with old infrastructure in three ways, letting you keep your existing infrastructure as-is while building new infrastructure under Pulumi's management. The following techniques can be used:
 
 * [**Resource Getters**](/docs/iac/concepts/functions/get-functions/) available on every resource let you read all the details for a resource from the cloud provider based just on its ID.
 

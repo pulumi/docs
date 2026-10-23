@@ -77,4 +77,4 @@ indexDocument: The file to use for top-level pages: (index.html)
 
 ## Test Templates Yourself
 
-There are already a number of templates built, and more are coming over the next weeks and months. We'll be exploring more templates in detail here on the blog and on [PulumiTV](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw/) in the future. Review all the currently available architecture templates at [our templates page](/templates/). We'd love to hear what you think!
+There are already a number of templates built, and more are coming over the next weeks and months. We'll be exploring more templates in detail here on the blog and on [PulumiTV](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw/) in the future. Review all the currently available architecture templates at [our templates page](/dev/templates/). We'd love to hear what you think!

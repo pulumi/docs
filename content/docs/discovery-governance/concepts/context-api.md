@@ -64,6 +64,8 @@ The Context API is in public preview. The availability notice at the top of this
 - Pulumi CLI v3.243.0 or later, authenticated with `pulumi login`, or a Pulumi access token for direct REST requests.
 - A role that grants the [`resources:search` permission](/docs/administration/reference/rbac-scopes/org-settings/#resources). The default Member and Admin roles grant this permission.
 
+Self-hosted installations also need a configured search cluster. See [Context API on self-hosted Pulumi Cloud](/docs/administration/self-hosting/components/search/#context-api).
+
 Use `pulumi api GraphQuery` to call the API from the CLI, or send a request to the Graph Query endpoint through the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/). Most people start by [asking a question through an AI agent](/docs/discovery-governance/guides/context-api/#ask-questions-through-an-ai-agent). To see how a selector maps to an API response, [walk through a representative query](/docs/discovery-governance/guides/context-api/#walk-through-a-representative-query).
 
 ## Interpret answers with care

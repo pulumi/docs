@@ -20,7 +20,7 @@ pulumi_cloud_feature: self-hosting
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
-Pulumi Cloud provides resource search features that require an OpenSearch cluster. Self-hosted installations require a compatible OpenSearch cluster -- both v2.x and v3.x are supported -- and changes to the API container configuration to enable these features.
+Pulumi Cloud provides resource search features, including the [Context API](/docs/discovery-governance/concepts/context-api/), that require an OpenSearch cluster. Self-hosted installations require a compatible OpenSearch cluster -- both v2.x and v3.x are supported -- and changes to the API container configuration to enable these features.
 
 When the service container is launched with a valid search configuration, it will connect to the OpenSearch cluster and automatically index any existing resources managed by the self-hosted Pulumi installation.
 If the OpenSearch cluster is not reachable, then the Pulumi Cloud console will display an error message on the Resources page indicating that the search cluster is unavailable, but will otherwise operate normally.
@@ -46,6 +46,19 @@ The following environment variables must be set on the API container for Pulumi 
 | `PULUMI_SEARCH_DOMAIN`   | The URL of the OpenSearch cluster API, including the port. |
 | `PULUMI_SEARCH_USER`     | The administrator user for the OpenSearch cluster.         |
 | `PULUMI_SEARCH_PASSWORD` | The administrator password for the OpenSearch cluster.     |
+
+## Context API
+
+The [Context API](/docs/discovery-governance/concepts/context-api/) queries the same index as resource search, so it becomes available once the API container has a valid search configuration. Your license key includes the Context API by default. A license key that explicitly disables the `graph-query-api` feature turns it off; contact your Pulumi representative for a key that includes it.
+
+To verify that the Context API is live, log in to your installation with `pulumi login <your-api-url>` and run a query, as shown in [Walk through a representative query](/docs/discovery-governance/guides/context-api/#walk-through-a-representative-query). Fetching the schema with `pulumi api GetGraphQuerySchema` does not prove the query endpoint works, because the schema is served even when no search cluster is configured.
+
+If a query fails, the status code tells you which prerequisite is missing:
+
+| Status code       | Cause                                                                                                   |
+|-------------------|---------------------------------------------------------------------------------------------------------|
+| `404 Not Found`   | No search cluster is configured. Set the [API environment variables](#api-environment-variables).      |
+| `409 Conflict`    | The license key disables the Context API. The error message names the `graph-query-api` feature.        |
 
 ## OpenSearch cluster administration
 

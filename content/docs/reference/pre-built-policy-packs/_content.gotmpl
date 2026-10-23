@@ -146,7 +146,10 @@
     {{ if not $section.feature }}
         {{ errorf "policy packs: section %q in data/policy_packs.yaml has no `feature:` — the generated pages need it to state which edition includes the pack." $section.id }}
     {{ end }}
+    {{/* "title" is the short nav label (e.g. "AWS"), identical across frameworks, so it
+         makes a poor <title>. title_tag gives each page a distinct, searchable title. */}}
     {{ $pageParams := dict
+        "title_tag" (printf "%s Policy Pack for %s" $section.framework $entry.title)
         "h1" $entry.h1
         "meta_desc" $entry.metaDesc
         "pulumi_cloud_feature" $section.feature

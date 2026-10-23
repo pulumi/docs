@@ -11,7 +11,7 @@ tags:
 category: tutorials
 ---
 
-Last month, we released our first set of [architecture templates](/templates/) --- configurable Pulumi projects designed to make it easy to bootstrap new stacks for common cloud architectures like [static websites](/templates/static-website/), [containers](/templates/container-service/), [virtual machines](/templates/virtual-machine/), and [Kubernetes clusters](/templates/kubernetes/). Architecture templates are a great way to get a new project up and running quickly, and they've already grown quite popular with our users, several of whom have asked if whether it's possible to create templates of their own.
+Last month, we released our first set of [architecture templates](/dev/templates/) --- configurable Pulumi projects designed to make it easy to bootstrap new stacks for common cloud architectures like [static websites](/templates/static-website/), [containers](/templates/container-service/), [virtual machines](/templates/virtual-machine/), and [Kubernetes clusters](/templates/kubernetes/). Architecture templates are a great way to get a new project up and running quickly, and they've already grown quite popular with our users, several of whom have asked if whether it's possible to create templates of their own.
 
 It's not only possible, it's surprisingly easy! So in this post, I'll show you how. It all starts with a Pulumi project --- a template is really just a Pulumi project with a few extra lines of config --- so we'll start with one of those, add a few resources, and turn the project into a template. When it's ready to go, we'll test it out locally, and then finally, we'll publish it so that anyone with Pulumi can use our template to kickstart their own projects.
 
@@ -311,7 +311,7 @@ You can watch this [Modern Infrastructure video](https://www.youtube.com/playlis
 
 As you can see, creating a template is both simple and powerful, and I hope this post encourages you to experiment with a few of your own. Feel free to peruse the following links for inspiration:
 
-* [Pulumi Templates](/templates/)
+* [Pulumi Templates](/dev/templates/)
 * The [pulumi/templates repository](https://github.com/pulumi/templates) on GitHub
 * [Pulumi project file reference](/docs/iac/concepts/projects/project-file/)
 * [`pulumi new` reference](/docs/iac/cli/commands/pulumi_new/)

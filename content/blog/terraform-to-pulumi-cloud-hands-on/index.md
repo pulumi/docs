@@ -443,7 +443,7 @@ Now you've seen it all come together: You can back your Terraform state with Pul
 
 A few next steps to keep the learning going:
 
-* Explore our [architecture templates](/templates/) to bootstrap new HCL projects easily
+* Explore our [architecture templates](/dev/templates/) to bootstrap new HCL projects easily
 * Read up on [Terraform state](/docs/iac/get-started/terraform/terraform-state-backend/), [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/), and [Terraform modules](/docs/idp/concepts/terraform-modules/) in Pulumi Cloud
 * Dive into [Pulumi and HCL](/docs/iac/languages-sdks/hcl/)
 * Check out the [full set of features](/releases/terraform-state-backend-modules-hcl/) in this release
