@@ -116,6 +116,7 @@ exceptions:
   - GitLab
   - Git
   - Bitbucket
+  - Cursor Origin
   - Jenkins
   - Actions
   - VCS
