@@ -130,6 +130,12 @@ packages:
       - 4.1.2
 ```
 
+The module creates AWS resources, so the stack needs an AWS region. If `AWS_REGION` isn't set in your environment, set one for the stack:
+
+```bash
+$ pulumi config set aws:region us-west-2
+```
+
 {{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
@@ -280,6 +286,10 @@ public class App {
     }
 }
 ```
+
+{{% notes type="warning" %}}
+Deploying this example from Java currently fails with `Expected List but got 'java.lang.String'`. The generated SDK types the module's `s3_bucket_lifecycle_configuration_rules` output as a list, but the module returns an empty string when the bucket has no lifecycle rules. Until [pulumi-hcl#744](https://github.com/pulumi/pulumi-hcl/issues/744) is fixed, [load the module at runtime](#load-a-module-at-runtime) instead.
+{{% /notes %}}
 
 {{% /choosable %}}
 
@@ -436,7 +446,7 @@ return await Deployment.RunAsync(() =>
 {{% choosable language "java" %}}
 
 ```java
-package myapp;
+package myproject;
 
 import com.pulumi.Pulumi;
 import com.pulumi.hcl.Module;
