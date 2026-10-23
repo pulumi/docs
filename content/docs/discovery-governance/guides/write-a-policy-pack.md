@@ -1261,6 +1261,30 @@ Pass configuration via JSON file:
 pulumi preview --policy-pack <path-to-policy-pack> --policy-pack-config config.json
 ```
 
+To exempt specific violations, use version 2 of the file format, which nests the configuration under `policies` and adds `exceptions`:
+
+```json
+{
+    "version": 2,
+    "policies": {
+        "all": "mandatory"
+    },
+    "exceptions": {
+        "log-buckets": {
+            "reason": "Log target buckets must allow the log delivery group",
+            "match": [
+                {
+                    "policies": ["s3-no-public-read"],
+                    "targets": ["urn:pulumi:prod::web::aws:s3/bucket:Bucket::logs"]
+                }
+            ]
+        }
+    }
+}
+```
+
+For the format and how exceptions apply, see [Policy exceptions](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/#exceptions-in-a-local-policy-pack-config-file).
+
 #### Pulumi Cloud configuration
 
 {{< pulumi-cloud "policy-enforcement" />}}
