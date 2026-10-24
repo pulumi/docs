@@ -9,9 +9,9 @@ aliases:
 menu:
     ai:
         name: Usage limits
-        parent: ai-concepts-neo
+        parent: ai-neo
+        weight: 110
         identifier: ai-usage-limits
-        weight: 70
 ---
 
 A Neo usage limit caps what your organization spends on [Neo](/docs/ai/) in a monthly billing period. When usage reaches the limit, Neo pauses until the next period resets. You set a limit for the whole organization, and optionally a separate limit for individual members.

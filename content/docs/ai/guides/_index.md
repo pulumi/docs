@@ -8,7 +8,7 @@ menu:
         name: Guides
         parent: ai-home
         identifier: ai-guides
-        weight: 25
+        weight: 30
 ---
 
 These guides walk through common tasks for using AI agents with Pulumi.

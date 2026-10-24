@@ -11,9 +11,9 @@ aliases:
 menu:
     ai:
         name: Previews
-        parent: ai-concepts-neo
+        parent: ai-neo
+        weight: 80
         identifier: ai-running-previews
-        weight: 45
 ---
 
 Neo can run [preview](/docs/iac/cli/commands/pulumi_preview/) directly from Pulumi Cloud to validate proposed infrastructure changes before creating pull requests. This capability provides confidence that suggested modifications do not result in unexpected resource changes and comply with [policies](/docs/discovery-governance/concepts/policy-as-code/).
