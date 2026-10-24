@@ -1,0 +1,17 @@
+# Indexable pulumi.com pages that are served by pulumi/marketing-web (apps/www)
+# and proxied by infrastructure/index.ts. Hugo never sees these pages, so they
+# are not in the generated sitemap unless listed here.
+#
+# layouts/_default/sitemap.xml appends one <url> per entry.
+#
+# Rules:
+# - Paths start and end with "/".
+# - Leave out noindex pages (for example the /up/ wizard).
+# - No lastmod is emitted: this build has no honest modification signal for
+#   pages it does not own (see layouts/index.sitemapindex.xml).
+# - When another page moves to marketing-web, add it here as well as to
+#   invalidate-dev-cache.yml and AGENTS.md.
+paths:
+  - /pricing/
+  - /community/
+  - /community/puluminaries/
