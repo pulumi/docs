@@ -1244,7 +1244,7 @@ Runs `make ci_pull_request_closed`, which deletes every bucket matching `*-pr-{P
 
 **Platform:** GitHub-hosted runner (ubuntu-latest), with [jlumbroso/free-disk-space](https://github.com/jlumbroso/free-disk-space) to reclaim disk space before tests run (`tool-cache: false`, `dotnet: false` to preserve caches later setup steps use).
 
-**Setup:** Go, Node.js, Python, .NET, and Java runtimes, Hugo (the `mise.toml` pin), the latest Pulumi CLI, and a Kubernetes KinD cluster. AWS credentials via OIDC, GCP via workload identity federation, and Azure credentials from ESC.
+**Setup:** Go, Node.js, Python, .NET, and Java runtimes, Hugo (the `mise.toml` pin), the latest Pulumi CLI, and a Kubernetes KinD cluster. AWS credentials from static access-key secrets that assume a CI role (the role ARN comes from ESC), GCP via workload identity federation, and Azure credentials from ESC.
 
 **Scope:** On PRs, the job first asks the API which files changed and only tests programs the PR touched. Content-only PRs finish in seconds, but the job still reports so the required check name exists. The nightly run tests all ~425 programs across TypeScript, Python, Go, .NET, Java, and YAML on AWS, GCP, Azure, and Kubernetes. Dependabot PRs are skipped because they can't reach ESC.
 
