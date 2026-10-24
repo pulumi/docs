@@ -28,6 +28,7 @@ For first-party ESC integrations (the Pulumi Service Provider, Automation API, t
 
 ## Run commands
 
+- [Fetch secrets at runtime with the ESC SDK](/docs/esc/guides/fetch-secrets-at-runtime/) — read secrets and configuration from an environment inside a running application.
 - [Run commands with pulumi env run](/docs/esc/guides/running-commands/) — inject environment values into any command or script.
 - [Migrate from the ESC CLI](/docs/esc/guides/migrate-from-esc-cli/) — map every `esc` command to its `pulumi env` equivalent now that the standalone CLI is retired.
 

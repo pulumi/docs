@@ -22,6 +22,8 @@ aliases:
 
 Since version `0.9.13` External Secrets Operator supports [Pulumi ESC as a secret provider](https://external-secrets.io/latest/provider/pulumi/).
 
+If your application can call Pulumi Cloud directly, you can also [fetch secrets at runtime with the ESC SDK](/docs/esc/guides/fetch-secrets-at-runtime/) instead of delivering them as Kubernetes Secrets.
+
 ## Authentication
 
 Pulumi [Access Tokens](/docs/administration/concepts/access-tokens/) are recommended to access Pulumi ESC.
