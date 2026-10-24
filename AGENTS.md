@@ -102,7 +102,7 @@ Some pulumi.com pages are **not** in this repo. They ship from [pulumi/marketing
 - **`/pricing`**: the pricing page, including the edition cards, prices, comparison table, calculator, and FAQ, all from `apps/www/src/data/pricing/`. This repo keeps only the generated `data/pulumi_editions.yaml` that docs callouts read (see "Edition data" below). The proxied paths are exactly `/pricing`, `/pricing/`, and `/pricing.md`, so redirects under `/pricing/` still come from S3.
 - **`/up`**: the getting-started wizard, which is being A/B tested against `/docs/get-started/`. Every wizard page is `noindex`. The proxied paths are exactly `/up`, `/up/`, and `/up/*`, so a future page such as `/upgrade` or `/updates` would still come from S3.
 
-`invalidate-dev-cache.yml` flushes these paths from CloudFront when marketing-web deploys. When another page moves over, add its paths to that workflow's defaults and to this list.
+`invalidate-dev-cache.yml` flushes these paths from CloudFront when marketing-web deploys. When another page moves over, add its paths to that workflow's defaults and to this list. Also add each indexable path to `data/marketing_web_sitemap.yaml`; Hugo can't see these pages, so that file is the only way they reach `sitemap.xml`. Leave out noindex pages such as `/up/`.
 
 ### The Dev Center
 

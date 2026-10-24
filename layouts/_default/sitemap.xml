@@ -26,4 +26,13 @@
   </url>
   {{ end }}
   {{ end }}
+  {{ $hugoPaths := slice }}
+  {{ range .Data.Pages }}{{ $hugoPaths = $hugoPaths | append .RelPermalink }}{{ end }}
+  {{ range site.Data.marketing_web_sitemap.paths }}
+  {{ if not (in $hugoPaths .) }}
+  <url>
+    <loc>{{ site.Params.canonicalURL }}{{ . }}</loc>
+  </url>
+  {{ end }}
+  {{ end }}
 </urlset>
