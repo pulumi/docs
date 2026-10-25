@@ -95,11 +95,8 @@ jobs:
         with:
           java-version: '17'
           distribution: temurin
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.157.0'
-          extended: true
+      - name: Install Hugo (version pinned in mise.toml)
+        uses: ./docs/.github/actions/setup-hugo
       - name: Install node
         uses: actions/setup-node@v7
         with:

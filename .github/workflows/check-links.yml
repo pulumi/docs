@@ -39,11 +39,8 @@ jobs:
             infrastructure/yarn.lock
             theme/yarn.lock
             theme/stencil/yarn.lock
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.157.0'
-          extended: true
+      - name: Install Hugo (version pinned in mise.toml)
+        uses: ./.github/actions/setup-hugo
       # The reader-signals export (see review-existing-content.yml) carries a
       # `not_found` section: real 404 hits from server logs — URLs readers
       # actually request that no crawl of our own pages can see (external
