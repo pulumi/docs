@@ -15,7 +15,7 @@ category: product
 Azure Classic v7, the latest major version of our Azure Classic provider, is now available. It's bridged from [Terraform AzureRM provider v5.9.0](https://registry.terraform.io/providers/hashicorp/azurerm/5.9.0) and brings more consistent APIs, safer defaults, and a cleanup of properties deprecated during v6. This post covers the improvements first, then the breaking changes to plan for when you upgrade.
 
 {{% notes type="info" %}}
-Starting a new project? We recommend using our own [Azure Native provider](/registry/packages/azure-native/), which is better supported andgenerated directly from the Azure Resource Manager API specifications and is our recommended provider for new Azure work. Azure Classic remains fully supported.
+Starting a new project? We recommend using our own [Azure Native provider](/registry/packages/azure-native/), which is better supported and generated directly from the Azure Resource Manager API specifications and is our recommended provider for new Azure work. Azure Classic remains fully supported.
 {{% /notes %}}
 
 
