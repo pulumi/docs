@@ -1,11 +1,11 @@
-name: Invalidate /dev cache
-run-name: Invalidate /dev cache
+name: Invalidate marketing-web cache
+run-name: Invalidate marketing-web cache
 
-# Invalidates the Dev Center cache, which lives at `/dev` behind the CloudFront CDN managed by pulumi/docs.
-# We do this with a workflow dispatch because the Dev Center deploys on its own schedule (so its cache needs
-# to be cleared independently of pulumi/docs deployments), and it makes more sense for the Dev Center to
-# notify pulumi/docs of this event (so it can handle the event on its own), rather than for us to reach into its
-# live, running infrastructure from the outside.
+# Invalidates the pages pulumi/marketing-web serves behind the CloudFront CDN managed by pulumi/docs
+# (the paths in infrastructure/marketingWebPaths.ts). We do this with a workflow dispatch because
+# marketing-web deploys on its own schedule (so its cache needs to be cleared independently of pulumi/docs
+# deployments), and it makes more sense for marketing-web to notify pulumi/docs of this event (so it can
+# handle the event on its own), rather than for us to reach into its live, running infrastructure from the outside.
 on:
   repository_dispatch:
     types: [dev-deployed]
@@ -13,9 +13,8 @@ on:
   workflow_dispatch:
     inputs:
       paths:
-        # Keep in sync with the PATHS fallback below.
-        description: Space-separated CloudFront paths to invalidate
-        default: "/dev /dev/ /dev/* /assets /assets/ /assets/* /community /community/ /community.md /community/puluminaries* /pricing /pricing/ /pricing.md /up /up/ /up/*"
+        description: "Space-separated CloudFront paths to invalidate (default: the marketingWebPaths stack output)"
+        default: ""
 
 permissions:
   id-token: write # OIDC for the AWS + ESC logins
@@ -24,12 +23,12 @@ permissions:
 concurrency:
   # Collapse a burst of marketing-web deploys into a single in-flight
   # invalidation rather than firing one per deploy.
-  group: invalidate-dev-cache
+  group: invalidate-marketing-web-cache
   cancel-in-progress: false
 
 jobs:
   invalidate:
-    name: Invalidate CloudFront /dev cache
+    name: Invalidate CloudFront marketing-web cache
     runs-on: ubuntu-latest
     environment: production
     steps:
@@ -48,27 +47,24 @@ jobs:
           # Same delivery role build-and-deploy.yml uses; it already carries
           # cloudfront:CreateInvalidation on this distribution.
           role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
-          role-session-name: dev-cache-invalidation
+          role-session-name: marketing-web-cache-invalidation
           aws-region: us-west-2
 
-      - name: Invalidate /dev paths
+      - name: Invalidate marketing-web paths
         env:
           PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
           PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
-          # Default flushes both surfaces the distribution proxies to the Dev Center:
-          # /dev* (the pages) and /assets* (its root-relative CSS/JS/images). The
-          # assets are content-hashed so they don't strictly need flushing, but
-          # clearing them is cheap and keeps the surface consistent. It also flushes
-          # /community and /community/puluminaries*, /pricing, and the /up wizard,
-          # which marketing-web serves too; not /community/*, since /community/team/*
-          # is still Hugo. A dispatch
-          # caller may narrow/override the paths via client_payload.paths.
-          #
-          # "/dev/" is listed on its own because "/dev/*" matches everything below
-          # /dev/ but not /dev/ itself, which left the landing page uninvalidated.
-          PATHS: ${{ github.event.client_payload.paths || github.event.inputs.paths || '/dev /dev/ /dev/* /assets /assets/ /assets/* /community /community/ /community.md /community/puluminaries* /pricing /pricing/ /pricing.md /up /up/ /up/*' }}
+          PATHS: ${{ github.event.client_payload.paths || github.event.inputs.paths }}
         run: |
-          set -o errexit -o pipefail
+          # noglob keeps paths like /dev/* from expanding against the runner's filesystem.
+          set -o errexit -o pipefail -o noglob
+          if [ -z "$PATHS" ]; then
+            PATHS=$(pulumi -C infrastructure stack output marketingWebPaths --json --stack "$PULUMI_STACK_NAME" | jq -r 'join(" ")')
+          fi
+          if [ -z "$PATHS" ]; then
+            echo "Could not resolve marketingWebPaths from stack $PULUMI_STACK_NAME" >&2
+            exit 1
+          fi
           DISTRIBUTION_ID=$(pulumi -C infrastructure stack output cloudFrontDistributionId --stack "$PULUMI_STACK_NAME")
           if [ -z "$DISTRIBUTION_ID" ]; then
             echo "Could not resolve cloudFrontDistributionId from stack $PULUMI_STACK_NAME" >&2
