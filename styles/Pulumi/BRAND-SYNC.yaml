@@ -69,7 +69,7 @@
 # both carry `action: replace`, so a duplicate offers two one-click fixes with
 # different replacements on the same span.
 
-last_synced: "2026-10-12"
+last_synced: "2026-10-26"
 
 sections:
   # get_guidelines({section: "terminology"}) / brand.pulumi.com/voice/names-and-terminology/

@@ -258,7 +258,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Authenticate to Pulumi
-        uses: pulumi/auth-actions@v1
+        uses: pulumi/auth-actions@v2
         with:
           organization: ${{ env.PULUMI_ORG }}
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -269,7 +269,7 @@ jobs:
           aws-region: us-west-2
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Run Preview
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: preview
           work-dir: tests/integration
@@ -286,7 +286,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Go ✨
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v6
         with:
           go-version: '1.24'
       - name: Downloading dependencies 📦
@@ -342,7 +342,7 @@ jobs:
           fetch-depth: 0 # Ensures the build matches the git tag.
 
       - name: Authenticate to Pulumi
-        uses: pulumi/auth-actions@v1
+        uses: pulumi/auth-actions@v2
         with:
           organization: ${{ env.PULUMI_ORG }}
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -375,7 +375,7 @@ This workflow will be automatically triggered any time a tag is pushed. The easi
 Similarly to the testing workflow, we use a mix of Pulumi-specific GitHub Actions, as well as some off-the-shelf standard actions:
 
 - `actions/checkout@v4` - check out the code into the GitHub runner
-- `pulumi/auth-actions@v1` - authenticate with Pulumi Cloud
+- `pulumi/auth-actions@v2` - authenticate with Pulumi Cloud
 
 However, `pulumi/actions` doesn't support the `publish` subcommand, so we set that step up manually via a `run` step. Use the `PULUMI_ORG` variable to set the `--publisher` and the GitHub Actions-internal `github.repository` variable to get the name of the repository.
 

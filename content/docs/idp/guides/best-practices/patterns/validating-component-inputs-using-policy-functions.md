@@ -82,7 +82,7 @@ Use the policy function in a Policy Pack:
 // policies/database-policy.ts
 import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
 import { validateDatabaseInputs } from "./database-validation";
-import { aws } from "@pulumi/aws";
+import * as aws from "@pulumi/aws";
 
 new PolicyPack("database-policies", {
   policies: [{

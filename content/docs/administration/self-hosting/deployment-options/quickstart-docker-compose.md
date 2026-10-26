@@ -22,9 +22,9 @@ The Pulumi Cloud Docker container images can be run using any OCI-compatible con
 
 In addition to the environment variables that each container exposes, the following can be set when using either of the quickstart solutions below. These are used by the `run-ee.sh` script provided to you as part of the self-evaluation package. If any of these variables are not set when you run `run-ee.sh`, the default values will be used.
 
-`PULUMI_DATA_PATH`: The persistent path where the service should store the checkpoint objects. Default uses `/tmp/pulumi-ee/data`.
+`PULUMI_DATA_PATH`: The persistent path where the service should store the checkpoint objects. Default uses `${HOME}/pulumi-self-hosted-installers/data`.
 
-`PULUMI_LOCAL_DATABASE_NAME`: The database instance’s hostname. Default is `pulumi-db`.
+`PULUMI_LOCAL_DATABASE_HOST`: The database instance’s hostname. Default is `pulumi-db`.
 
 `PULUMI_LOCAL_DATABASE_PORT`: The database instance’s port. Default is `3306`.
 
@@ -46,7 +46,7 @@ Environment variables should be set in the `./all-in-one/docker-compose.yml` fil
 
 ### Option #2 - Provide your own Database
 
-The service is tested against a MySQL version 8.0 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`.
+The service is tested against a MySQL version 8.0 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-self-hosted-installers`.
 
 {{% notes type="info" %}}
 You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance.

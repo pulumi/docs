@@ -101,3 +101,11 @@ swap:
   # pricing ("Organizations on the legacy Business Critical edition ...").
   # Case-sensitive: "business critical workloads" is ordinary prose.
   '(?-i)\bBusiness Critical\b': Enterprise
+  # Self-hosted Pulumi Cloud must be written in full; "self-hosted Pulumi" blurs
+  # it with a DIY backend. The lookahead skips phrases where "Pulumi" is
+  # followed by a different product or concept: "self-hosted Pulumi
+  # Deployments agents", "self-hosted Pulumi ESC", "a self-managed Pulumi
+  # backend" (DIY backend, not the Cloud product), and "Pulumi Service"
+  # (already flagged by DeprecatedProductNames). Hedged tier: historical posts
+  # name the old self-hosted product legitimately.
+  '\bself-(?:hosted|managed) Pulumi(?: IaC)?\b(?!\s+(?:Cloud|Deployments|ESC|Services?|backends?|state|Enterprise|installation)\b)': self-hosted Pulumi Cloud
