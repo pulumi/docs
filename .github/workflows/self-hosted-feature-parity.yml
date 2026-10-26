@@ -3,9 +3,9 @@
 # pulumi/pulumi-service repo, and opens a PR when the page changes.
 # See scripts/self-hosted-feature-parity/README.md.
 #
-# Unlike the CLI and SDK docs regens, the PR isn't auto-merged: the page mixes
-# computed statuses with hand-written details, so a status change needs a
-# person to check that the details still match.
+# Like the CLI and SDK docs regens, the PR auto-merges, with one exception: if
+# a row with hand-written Details changes status, the PR waits for a person to
+# check the Details still match. So does a manual run against another branch.
 #
 # This repo's workflow logs are public. The generator's internal outputs
 # (scripts/self-hosted-feature-parity/generated/) name internal flags and
@@ -43,6 +43,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has_changes: ${{ steps.commit.outputs.has_changes }}
+      auto_merge: ${{ steps.changes.outputs.needs_review == 'false' && github.event.inputs.pulumi_service_branch == '' }}
+      changes: ${{ steps.changes.outputs.changes }}
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
@@ -93,6 +95,13 @@ jobs:
           go run scripts/update-feature-parity.go --generate-raw
           go run scripts/update-feature-parity.go --update-summary
           go run scripts/update-feature-parity.go --publish
+      - name: List status changes
+        id: changes
+        working-directory: docs
+        run: |
+          page=content/docs/administration/self-hosting/feature-parity.md
+          git show "HEAD:$page" > "$RUNNER_TEMP/feature-parity-before.md"
+          python3 scripts/self-hosted-feature-parity/status-changes.py "$RUNNER_TEMP/feature-parity-before.md" "$page"
       - name: git status
         working-directory: docs
         run: git status && git diff -- content/docs/administration/self-hosting/feature-parity.md
@@ -123,6 +132,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v7
       - name: Open pull request
+        id: create-pr
         uses: repo-sync/pull-request@v2
         with:
           source_branch: "self-hosted-feature-parity/${{ github.run_id }}-${{ github.run_number }}"
@@ -131,10 +141,20 @@ jobs:
           pr_body: |
             Automated regeneration of the [self-hosted feature parity page](/docs/administration/self-hosting/feature-parity/) from pulumi-service by the [Self-hosted feature parity](https://github.com/${{ github.repository }}/blob/master/.github/workflows/self-hosted-feature-parity.yml) workflow.
 
-            A feature's status changed in pulumi-service. Before merging, check that each changed row's Details text still matches its new status, and update `public_notes` in `scripts/self-hosted-feature-parity/feature-publish-config.json` (then rerun `make generate-feature-parity`) if it doesn't.
+            Status changes:
+
+            ${{ needs.update-feature-parity.outputs.changes }}
+
+            ${{ needs.update-feature-parity.outputs.auto_merge == 'true' && 'No changed row has hand-written Details, so this PR merges on its own.' || 'A changed row has hand-written Details (or this run read a non-default pulumi-service branch), so this PR needs a review: check each flagged row''s Details still match its new status, and if not, update `public_notes` in `scripts/self-hosted-feature-parity/feature-publish-config.json` and rerun `make generate-feature-parity`.' }}
 
             Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          pr_label: ${{ needs.update-feature-parity.outputs.auto_merge == 'true' && 'automation/merge' || '' }}
           github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Enable auto-merge
+        if: steps.create-pr.outputs.pr_created == 'true' && needs.update-feature-parity.outputs.auto_merge == 'true'
+        run: gh pr merge ${{ steps.create-pr.outputs.pr_number }} --auto --squash
+        env:
+          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
   notify:
     if: failure()
     name: Send slack notification
