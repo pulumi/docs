@@ -18,4 +18,5 @@ export const marketingWebPaths = [
     "/up",
     "/up/",
     "/up/*",
+    "/sitemap-www-*",
 ];

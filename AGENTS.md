@@ -102,7 +102,7 @@ Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi
 - **`/pricing`**: the pricing page, built from `apps/www/src/data/pricing/`. This repo keeps only the generated `data/pulumi_editions.yaml` that docs callouts read (see "Edition data" below). Redirects under `/pricing/` still come from S3.
 - **`/up`**: the getting-started wizard.
 
-When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list.
+When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list. marketing-web publishes its own sitemap at `/sitemap-www-index.xml` (listed in `layouts/robots.txt`), so if the page should be indexed, also add it to `PROXIED_PAGES` in marketing-web's `apps/www/src/lib/sitemap.ts`.
 
 ### The Dev Center
 
