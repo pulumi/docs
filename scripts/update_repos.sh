@@ -17,6 +17,7 @@ TOOLS_REPOS=(
     "pulumi-policy"
     "esc-sdk"
     "pulumi-cloud-sdk"
+    "pulumi-service"
 )
 
 update_repo() {
@@ -25,11 +26,36 @@ update_repo() {
     echo -e "\033[0;95m--- Updating repo pulumi/${repo} ---\033[0m"
     pushd . >/dev/null 2>&1
     mkdir -p "../${repo}" && cd "../${repo}"
-    git remote -v || git clone "git@github.com:pulumi/${repo}.git" .
+
+    # Check if repo exists, if not try to clone
+    if ! git remote -v >/dev/null 2>&1; then
+        echo -e "\033[0;93mCloning repository...\033[0m"
+        if ! git clone "git@github.com:pulumi/${repo}.git" . 2>/dev/null; then
+            # Clone failed - likely a private repo without access
+            if [ "$repo" = "pulumi-service" ]; then
+                echo -e "\033[0;93mWarning: Could not clone pulumi-service (private repository).\033[0m"
+                echo -e "\033[0;93mThis is expected for community contributors. Skipping.\033[0m"
+                popd >/dev/null 2>&1
+                return 0
+            else
+                echo -e "\033[0;91mError: Failed to clone ${repo}\033[0m"
+                popd >/dev/null 2>&1
+                return 1
+            fi
+        fi
+    fi
+
     echo -e "\033[0;93mPulling changes\033[0m"
     default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4)
     git checkout ${default_branch} >/dev/null
     git pull origin ${default_branch} >/dev/null
+    # pulumi-service stays on its default branch HEAD for feature parity tracking
+    if [ "${repo}" = "pulumi-service" ] && [ -z "${requested_tag}" ]; then
+        echo -e "\033[0;93mUsing ${default_branch} HEAD (for feature parity tracking)\033[0m"
+        echo -e "\033[0;96m${default_branch} @ $(git rev-parse --short HEAD)\033[0m"
+        popd >/dev/null 2>&1
+        return
+    fi
     git fetch --tags >/dev/null
     if [ -n "${requested_tag}" ]; then
         echo -e "\033[0;93mChecking out requested tag ${requested_tag}\033[0m"

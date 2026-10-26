@@ -72,6 +72,11 @@ review-admin-dashboard:
 	@echo -e "\033[0;32mGenerating review-ledger dashboard...\033[0m"
 	python3 scripts/review-admin/review-admin.py html --open
 
+.PHONY: generate-feature-parity
+generate-feature-parity:
+	@echo -e "\033[0;32mGenerating self-hosted feature parity docs...\033[0m"
+	$(MISE) go run scripts/update-feature-parity.go --all
+
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
