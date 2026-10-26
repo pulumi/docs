@@ -17,13 +17,13 @@ aliases:
     - /docs/migration/
 ---
 
-If you've fallen in love with Pulumi, it might not be obvious how to adopt it. For brand new projects, it's easy: start writing your infrastructure as code using Pulumi from the start. But what if you already have infrastructure stood up? And perhaps even actively serving a critical business need? In these cases, you may wonder, is it even possible to adopt Pulumi, without downtime or a major disturbance to your existing infrastructure? The answer is **yes**!
+If you've fallen in love with Pulumi, it might not be obvious how to adopt it. For new projects, write your infrastructure as code using Pulumi from the start. But what if you already have infrastructure stood up? And perhaps even actively serving a critical business need? In these cases, you may wonder, is it even possible to adopt Pulumi, without downtime or a major disturbance to your existing infrastructure? The answer is **yes**!
 
-This user guide offers a tour of tried-and-true tools and techniques that can be used to migrate any infrastructure to Pulumi, regardless of how that infrastructure was originally provisioned in the [cloud tooling ecosystem](/docs/iac/comparisons/). These techniques range from coexisting with this infrastructure &mdash; either temporarily or permanently &mdash; as well as adopting infrastructure and/or converting existing infrastructure as code projects.
+This user guide offers a tour of tried-and-true tools and techniques that can be used to migrate any infrastructure to Pulumi, regardless of how that infrastructure was originally provisioned in the [cloud tooling ecosystem](/docs/iac/comparisons/). These techniques range from coexisting with this infrastructure &mdash; either temporarily or permanently &mdash; to adopting infrastructure and converting existing infrastructure as code projects.
 
-Below we will review some basic concepts, but feel free to jump straight to a specific guide:
+This page reviews some basic concepts. To go straight to a specific guide, choose one of the following:
 
-* [**Importing Infrastructure**](/docs/iac/guides/migration/import/): for any cloud, no matter how it's provisioned
+* [**Importing infrastructure**](/docs/iac/guides/migration/import/): for any cloud, no matter how it's provisioned
 * [**From Terraform or CDKTF**](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/): coexist with existing workspaces or convert your HCL
 * [**From AWS CDK**](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/): migrate with Neo, coexist via stack outputs, or use the Pulumi CDK adapter
 * [**From AWS CloudFormation**](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/): coexist with, deploy, or convert your templates and stacks
@@ -49,7 +49,7 @@ Support for these techniques differs based on how your existing infrastructure w
 
 ### Coexistence
 
-Let's say you already have infrastructure provisioned by an existing tool, such as Terraform, AWS CloudFormation, or Azure Resource Manager (ARM) templates, but don't want to convert it right now. This could be for any number of reasons:
+Suppose you already have infrastructure provisioned by an existing tool, such as Terraform, AWS CloudFormation, or Azure Resource Manager (ARM) templates, but don't want to convert it right now. This could be for any number of reasons:
 
 * Maybe you aren't ready to take on that effort yet and want to focus on new infrastructure.
 * Perhaps that infrastructure is managed by a different team who will keep using their own tool.
@@ -57,28 +57,28 @@ Let's say you already have infrastructure provisioned by an existing tool, such 
 
 In these cases, new infrastructure can coexist with old infrastructure in three ways, letting you keep your existing infrastructure as-is while building new infrastructure under Pulumi's management. The following techniques can be used:
 
-* [**Resource Getters**](/docs/iac/concepts/functions/get-functions/) available on every resource let you read all the details for a resource from the cloud provider based just on its ID.
+* [**Resource getters**](/docs/iac/concepts/functions/get-functions/) available on every resource let you read all the details for a resource from the cloud provider using only its ID.
 
-* [**Stack References**](/docs/iac/concepts/stacks/#stackreferences) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](/docs/iac/guides/basics/organizing-projects-stacks/).
+* [**Stack references**](/docs/iac/concepts/stacks/#stackreferences) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is useful for [organizing projects and stacks](/docs/iac/guides/basics/organizing-projects-stacks/).
 
-* **External State References** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack. Many infrastructure as code tools have the notion of "outputs," which are values exported for easy consumption. This might be VPC IDs, auto-assigned IP addresses, and so on. Examples include [Terraform state files and workspaces](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/), [AWS CloudFormation stacks](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/), and [Azure Resource Manager (ARM) deployments](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/).
+* **External state references** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack. Many infrastructure as code tools have the notion of "outputs," which are values a stack exports for others to use. This might be VPC IDs, auto-assigned IP addresses, and so on. Examples include [Terraform state files and workspaces](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/), [AWS CloudFormation stacks](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/), and [Azure Resource Manager (ARM) deployments](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/).
 
-Together, these make it easy to reference existing infrastructure regardless of how it was provisioned, without Pulumi taking over control of its ongoing management.
+Together, these let you reference existing infrastructure regardless of which tool provisioned it, without Pulumi taking over control of its ongoing management.
 
-### Importing Infrastructure
+### Importing infrastructure
 
-Pulumi can adopt existing infrastructure so that, going forward, it is under the control of Pulumi. This is called _importing_, and it is a great way to adopt Pulumi fully without needing to perturb or recreate existing infrastructure.
+Pulumi can adopt existing infrastructure so that Pulumi controls it going forward. This process is called _importing_. It lets you adopt Pulumi fully without needing to perturb or recreate existing infrastructure.
 
-In the above coexistence scenarios, Pulumi _reads_ your existing infrastructure, but won't assume control of managing it. As such, Pulumi will never modify or delete infrastructure that is still managed outside of Pulumi. In the case of importing infrastructure, on the other hand, that won't be true. After the import process, all resources are entirely managed by Pulumi.
+In the coexistence scenarios above, Pulumi _reads_ your existing infrastructure but doesn't assume control of managing it, so Pulumi never modifies or deletes infrastructure that is still managed outside of Pulumi. Importing is different: after the import process, all resources are entirely managed by Pulumi.
 
-Furthermore, Pulumi doesn't care where the infrastructure originally came from. You could have manually provisioned it in your cloud's console UI, from the CLI, using Terraform, your cloud's built-in templating mechanism, and so on. In all cases, after the import process, you'll be left with a working Pulumi program, and all subsequent infrastructure updates can be made with Pulumi. You can then retire the old way of managing your infrastructure. This works even if you've lost the original scripts or templates that created the infrastructure.
+Furthermore, Pulumi doesn't care where the infrastructure originally came from. You could have manually provisioned it in your cloud's console UI, from the CLI, using Terraform, your cloud's built-in templating mechanism, and so on. In all cases, after the import process, you'll be left with a working Pulumi program, and all future infrastructure updates can be made with Pulumi. You can then retire the old way of managing your infrastructure. This works even if you've lost the original scripts or templates that created the infrastructure.
 
 To learn more about how to import resources in this manner, refer to the [import guide](/docs/iac/guides/migration/import/).
 
 ### Conversion
 
-The final approach is to convert an existing infrastructure as code program to Pulumi. This preserves existing program structure &mdash; which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. This can be difficult if not impossible to reverse-engineer automatically during the import process.
+The final approach is to convert an existing infrastructure as code program to Pulumi. This preserves existing program structure &mdash; which may be important if you carefully designed the names, modules, and configurability of your existing infrastructure as code layout. This can be difficult if not impossible to reverse-engineer automatically during the import process.
 
-Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. This is usually still combined with importing so that you not only get a new program that provisions the right infrastructure, but also adopt existing infrastructure under the management of Pulumi too.
+Conversion takes care of the static program structure and automatically generates a new Pulumi program based on the source infrastructure as code program. This is usually still combined with importing so that you not only get a new program that provisions the right infrastructure, but also adopt existing infrastructure under the management of Pulumi too.
 
-There are conversion tools available for [Terraform HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi), [Kubernetes YAML](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/#converting-kubernetes-yaml), and [Azure Resource Manager (ARM) templates](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/#convert-arm-templates-to-pulumi).
+Conversion tools are available for [Terraform HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi), [Kubernetes YAML](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/#converting-kubernetes-yaml), and [Azure Resource Manager (ARM) templates](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/#convert-arm-templates-to-pulumi). For [AWS CDK](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/#choosing-a-cdk-migration-path), [AWS CloudFormation](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/#converting-stacks-and-resources), and [Serverless Framework](/docs/iac/guides/migration/migrating-to-pulumi/from-serverless/#choosing-a-migration-path), see the conversion options in each guide.
