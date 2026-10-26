@@ -1,7 +1,11 @@
 # Regenerates content/docs/administration/self-hosting/feature-parity.md from
 # the feature definitions and LaunchDarkly checks in the private
-# pulumi/pulumi-service repo, and opens an auto-merge PR when the page changes.
+# pulumi/pulumi-service repo, and opens a PR when the page changes.
 # See scripts/self-hosted-feature-parity/README.md.
+#
+# Unlike the CLI and SDK docs regens, the PR isn't auto-merged: the page mixes
+# computed statuses with hand-written details, so a status change needs a
+# person to check that the details still match.
 #
 # This repo's workflow logs are public. The generator's internal outputs
 # (scripts/self-hosted-feature-parity/generated/) name internal flags and
@@ -19,17 +23,18 @@ env:
   ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
 
 name: Self-hosted feature parity
+
+concurrency:
+  group: self-hosted-feature-parity
+  cancel-in-progress: false
+
 on:
   workflow_dispatch:
     inputs:
-      pulumi_service_ref:
-        description: "pulumi-service branch, tag, or SHA to read (defaults to its default branch)"
+      pulumi_service_branch:
+        description: "pulumi-service branch to read (defaults to its default branch)"
         required: false
         default: ""
-      skip_auto_merge:
-        description: "Skip enabling auto-merge on the generated PR (for testing)"
-        type: boolean
-        default: false
   schedule:
     # Nightly at 07:45 UTC, after the other data-committing jobs (06:45-07:30).
     - cron: "45 7 * * *"
@@ -42,6 +47,18 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v3
+      # Branches only: checking out a SHA or tag detaches HEAD, and git then
+      # logs the private commit's subject line.
+      - name: Check the pulumi-service branch
+        if: github.event.inputs.pulumi_service_branch != ''
+        env:
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          BRANCH: ${{ github.event.inputs.pulumi_service_branch }}
+        run: |
+          if ! gh api "repos/pulumi/pulumi-service/branches/${BRANCH}" --silent; then
+            echo "::error::pulumi_service_branch must name an existing pulumi-service branch"
+            exit 1
+          fi
       - name: Check out the docs repo
         uses: actions/checkout@v7
         with:
@@ -53,15 +70,18 @@ jobs:
         uses: actions/checkout@v7
         with:
           repository: pulumi/pulumi-service
-          ref: ${{ github.event.inputs.pulumi_service_ref }}
+          ref: ${{ github.event.inputs.pulumi_service_branch }}
           path: pulumi-service
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          persist-credentials: false
           sparse-checkout: |
             cmd
             pkg
+      # The generator parses pulumi-service's Go, so it needs a toolchain at
+      # least as new as the one pulumi-service uses.
       - uses: actions/setup-go@v7
         with:
-          go-version: 1.26.x
+          go-version-file: pulumi-service/go.mod
           cache: false
       # Each step is run by name rather than with --all, which skips quietly
       # when there's no pulumi-service clone. --enrich is left out on purpose.
@@ -103,7 +123,6 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v7
       - name: Open pull request
-        id: create-pr
         uses: repo-sync/pull-request@v2
         with:
           source_branch: "self-hosted-feature-parity/${{ github.run_id }}-${{ github.run_number }}"
@@ -112,14 +131,10 @@ jobs:
           pr_body: |
             Automated regeneration of the [self-hosted feature parity page](/docs/administration/self-hosting/feature-parity/) from pulumi-service by the [Self-hosted feature parity](https://github.com/${{ github.repository }}/blob/master/.github/workflows/self-hosted-feature-parity.yml) workflow.
 
+            A feature's status changed in pulumi-service. Before merging, check that each changed row's Details text still matches its new status, and update `public_notes` in `scripts/self-hosted-feature-parity/feature-publish-config.json` (then rerun `make generate-feature-parity`) if it doesn't.
+
             Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          pr_label: "automation/merge"
           github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-      - name: Enable auto-merge
-        if: steps.create-pr.outputs.pr_created == 'true' && github.event.inputs.skip_auto_merge != 'true'
-        run: gh pr merge ${{ steps.create-pr.outputs.pr_number }} --auto --squash
-        env:
-          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
   notify:
     if: failure()
     name: Send slack notification

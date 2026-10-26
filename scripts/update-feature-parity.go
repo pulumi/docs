@@ -211,6 +211,11 @@ func parseFeatures(servicePath string) map[string]*FeatureInfo {
 		return true
 	})
 
+	if len(features) == 0 {
+		fmt.Fprintf(os.Stderr, "Error: no features found in %s; has pulumiFeaturesByKey moved?\n", featuresPath)
+		os.Exit(1)
+	}
+
 	return features
 }
 
@@ -544,14 +549,15 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 	flagDir := filepath.Join(servicePath, "cmd/service/services/featureflag")
 	data, err := os.ReadFile(filepath.Join(flagDir, "launch_darkly.go"))
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Warning: Failed to read LaunchDarkly keys, skipping LaunchDarkly gates: %v\n", err)
-		return
+		fmt.Fprintf(os.Stderr, "Error reading LaunchDarkly keys: %v\n", err)
+		os.Exit(1)
 	}
 	// pkg/featureflags defines a second set of keys, read with featureflags.Enabled and its variants
 	if pkgData, err := os.ReadFile(filepath.Join(servicePath, "pkg/featureflags/flags.go")); err == nil {
 		data = append(append(data, '\n'), pkgData...)
 	} else {
-		fmt.Fprintf(os.Stderr, "Warning: Failed to read pkg/featureflags keys, skipping their checks: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error reading pkg/featureflags keys: %v\n", err)
+		os.Exit(1)
 	}
 	flagValues := make(map[string]string) // LDKey constant -> flag name
 	keysByValue := make(map[string]string)
@@ -562,6 +568,11 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 
 	// Service-wide helpers such as TFModulesRegistryEnabled() wrap getBool(key, context, default)
 	helpers := parseLaunchDarklyHelpers(filepath.Join(flagDir, "flags.go"))
+	if len(flagValues) == 0 || len(helpers) == 0 {
+		// A layout change upstream would otherwise silently drop every direct check
+		fmt.Fprintf(os.Stderr, "Error: found %d LaunchDarkly keys and %d helpers in %s; has the featureflag package moved?\n", len(flagValues), len(helpers), flagDir)
+		os.Exit(1)
+	}
 
 	flagKey := func(expr ast.Expr) string {
 		switch v := expr.(type) {
@@ -584,6 +595,7 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 	}
 
 	checks := make(map[string][]ldCheck)
+	parseFailures := 0
 	fset := token.NewFileSet()
 	for _, dir := range []string{"cmd", "pkg"} {
 		filepath.WalkDir(filepath.Join(servicePath, dir), func(path string, d os.DirEntry, err error) error {
@@ -603,6 +615,8 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 			}
 			file, err := parser.ParseFile(fset, path, nil, 0)
 			if err != nil {
+				// Counted, not named: paths in pulumi-service can name unreleased features, and CI logs are public
+				parseFailures++
 				return nil
 			}
 			ast.Inspect(file, func(n ast.Node) bool {
@@ -654,6 +668,10 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 			})
 			return nil
 		})
+	}
+	if parseFailures > 0 {
+		fmt.Fprintf(os.Stderr, "Error: %d Go files in pulumi-service failed to parse, so their LaunchDarkly checks would be missed\n", parseFailures)
+		os.Exit(1)
 	}
 
 	// Flags already attached to a features.go entry
@@ -1023,7 +1041,9 @@ func applyMetadata(mf *MarketingFeature, metadata *FeatureMetadata, existing map
 	if metadata != nil {
 		mf.Notes = metadata.Notes
 		mf.Summary = metadata.Summary
-		if metadata.Status != "" {
+		// An override refines a computed status but can't revive a feature the
+		// code turns off on self-hosted, or the page would hide a regression
+		if metadata.Status != "" && mf.Status != "N" {
 			mf.Status = metadata.Status
 		}
 	}
@@ -1285,6 +1305,24 @@ func generatePublicDoc(features map[string]*FeatureInfo) {
 	// Filter and transform for public consumption
 	publicFeatures := filterForPublish(marketingFeatures, publishConfig)
 
+	// A published row that no longer comes out of the metadata was renamed or
+	// removed upstream; fail rather than silently drop it from the page
+	rendered := make(map[string]bool)
+	for _, f := range publicFeatures {
+		rendered[f.MarketingName] = true
+	}
+	var missing []string
+	for name, conf := range publishConfig.Features {
+		if conf.Publish && !rendered[name] {
+			missing = append(missing, name)
+		}
+	}
+	if len(missing) > 0 {
+		sort.Strings(missing)
+		fmt.Fprintf(os.Stderr, "Error: published rows with no matching feature: %s\n", strings.Join(missing, ", "))
+		os.Exit(1)
+	}
+
 	// Generate public content
 	content := generatePublicContent(publicFeatures, publishConfig)
 
@@ -1326,10 +1364,11 @@ func generatePublicContent(features []*MarketingFeature, publishConfig *FeatureP
 	sb.WriteString("    parent: administration-self-hosting\n")
 	sb.WriteString("    weight: 8\n")
 	sb.WriteString("    identifier: administration-self-hosted-feature-parity\n")
+	sb.WriteString("pulumi_cloud_feature: self-hosting\n")
 	sb.WriteString("---\n\n")
 
 	sb.WriteString("{{< self-hosting-trial-note />}}\n\n")
-	sb.WriteString("The table below shows whether key Pulumi Cloud features are available in self-hosted Pulumi Cloud. Features that aren't listed work the same way in self-hosted Pulumi Cloud as in Pulumi Cloud, although some depend on how your installation is configured. The [status key](#status-key) below the table explains what each status means.\n\n")
+	sb.WriteString("The table below shows whether selected Pulumi Cloud features are available in self-hosted Pulumi Cloud, and what they need. It isn't a complete list of Pulumi Cloud features: to check one that isn't listed, [contact us](/contact/). The [status key](#status-key) below the table explains what each status means.\n\n")
 
 	type publicRow struct {
 		name, docsURL, status, notes string

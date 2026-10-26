@@ -4,7 +4,7 @@ This directory configures the generator for the self-hosted feature parity page,
 
 ## Generating
 
-Like the SDK and CLI doc generators, this reads a sibling clone of its source repo. `make update-repos` clones or updates `pulumi-service` next to this repo along with the others. Unlike them, `pulumi-service` stays on its default branch rather than a release tag, so the table tracks what's merged. To update only that clone:
+Like the SDK and CLI doc generators, this reads a sibling clone of its source repo. Unlike them, `pulumi-service` isn't part of `make update-repos`, because it's private and is often a clone you work in. It stays on its default branch rather than a release tag, so the table tracks what's merged. To clone it, or to update a clean clone that's on its default branch (anything else is left alone):
 
 ```bash
 ./scripts/update_repos.sh pulumi-service
@@ -31,13 +31,15 @@ PULUMI_SERVICE_REPO=/path/to/pulumi-service make generate-feature-parity
 | History | `--enrich` | Adds a History column to the internal summary with the PR that introduced each feature. Needs the `gh` CLI, and is skipped if `gh` isn't installed |
 | Public page | `--publish` | `content/docs/administration/self-hosting/feature-parity.md` |
 
+The generator fails rather than write a partial page: when the metadata or a LaunchDarkly source file is missing, when it finds no features or no flag helpers, when any Go file in `pulumi-service` fails to parse, or when a published row no longer comes out of the metadata. Parsing needs the Go toolchain `pulumi-service` uses, so `make generate-feature-parity` sets `GOTOOLCHAIN` from its `go.mod`.
+
 `--full-report` prints a quick availability comparison to stdout for debugging. It skips the dependency and metadata logic, so use the internal summary for actual status.
 
 Everything in `generated/` is gitignored because it contains internal information. Copy the internal summary to the internal Notion page by hand after regenerating.
 
 ### In CI
 
-The [Self-hosted feature parity](../../.github/workflows/self-hosted-feature-parity.yml) workflow regenerates the page nightly and on demand, the same way the CLI and SDK docs workflows do: it checks out `pulumi-service` with pulumi-bot's token, runs the raw, internal summary, and public page steps, and opens an auto-merge PR when the page changes. Because this repo's workflow logs are public, it doesn't run `--enrich` or `--full-report`, and it never uploads `generated/`. Run it with a `pulumi_service_ref` input to regenerate from another branch.
+The [Self-hosted feature parity](../../.github/workflows/self-hosted-feature-parity.yml) workflow regenerates the page nightly and on demand, the same way the CLI and SDK docs workflows do: it checks out `pulumi-service` with pulumi-bot's token, runs the raw, internal summary, and public page steps, and opens a PR when the page changes. Unlike those workflows, it doesn't auto-merge: the page's statuses are computed but its details are hand-written, so whoever reviews the PR checks that each changed row's details still match. Because this repo's workflow logs are public, it doesn't run `--enrich` or `--full-report`, and it never uploads `generated/`. To regenerate from another `pulumi-service` branch, run it by hand with the `pulumi_service_branch` input; it takes branch names only.
 
 ## How status is decided
 
@@ -48,7 +50,7 @@ Status follows how the service evaluates a feature on self-hosted:
 1. Dependencies, from `featureDependencies` in `features.go` plus `depends_on` in `self-hosted-parity.json`. A feature whose dependency is unavailable is left out, because the dependency's own row covers it. A dependency that needs a license toggle makes the feature `Y (has toggle)`.
 1. Direct LaunchDarkly checks. LaunchDarkly flags attached to `features.go` entries only matter on Pulumi Cloud, but code can also check a flag directly. Self-hosted can't reach LaunchDarkly, so those checks return the default written at the call site. A `false` default turns the behavior off whatever the license says, so the feature is `N`.
 
-Anything no flag controls runs the same code on self-hosted as on Pulumi Cloud, so it isn't listed. The public page says so. Some of those features still need installation configuration; list them as hand-maintained rows (see below) when that's worth calling out.
+Anything no flag controls runs the same code on self-hosted as on Pulumi Cloud, so it isn't listed. The public page shows only the rows chosen in `feature-publish-config.json` and says it isn't a complete list. Some of those features still need installation configuration; list them as hand-maintained rows (see below) when that's worth calling out.
 
 ### Direct LaunchDarkly checks
 
@@ -70,7 +72,7 @@ Controls the internal summary. Entries are keyed by feature key (`PulumiFeature.
 | `feature_keys` | Combines several flags into one row. The first key is used to find the row's history. The row is `N` only if all are unavailable, or if any is turned off by a direct LaunchDarkly check. |
 | `include_in_table` | `false` hides the row. Defaults to `true`. |
 | `depends_on` | Dependencies that `features.go` doesn't declare, such as Neo sub-features on `PulumiFeatureAIAgents`. |
-| `status` | Overrides the computed status, such as `Y (needs config)` for features that work once the installation is configured. |
+| `status` | Overrides the computed status, such as `Y (needs config)` for features that work once the installation is configured. A computed `N` always wins, so an override can't hide a feature the code turns off. |
 | `summary` | Internal description for the Summary column. |
 | `default_eta` | ETA for a new row. ETAs already in the generated internal summary are kept on regeneration. |
 | `notes` | Internal notes. Used as the ETA for rows that aren't `Y` and have no ETA. |

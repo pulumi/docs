@@ -4,7 +4,7 @@
       "marketing_name": "Neo",
       "publish": true,
       "public_name": "Pulumi Neo",
-      "docs_url": "/docs/ai/neo/",
+      "docs_url": "/docs/ai/concepts/neo/",
       "public_notes": "Not available yet. Features built on Neo, such as Neo tasks, aren't available either."
     },
     "Approvals": {
@@ -43,10 +43,6 @@
       "publish": true,
       "public_name": "Discovery & governance",
       "docs_url": "/docs/discovery-governance/"
-    },
-    "New Project Wizard/Templates": {
-      "marketing_name": "New Project Wizard/Templates",
-      "publish": true
     },
     "Webhooks": {
       "marketing_name": "Webhooks",

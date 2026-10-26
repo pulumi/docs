@@ -75,7 +75,8 @@ review-admin-dashboard:
 .PHONY: generate-feature-parity
 generate-feature-parity:
 	@echo -e "\033[0;32mGenerating self-hosted feature parity docs...\033[0m"
-	$(MISE) go run scripts/update-feature-parity.go --all
+	@# Parse pulumi-service with its own Go toolchain; an older one can't read its newer syntax
+	$(MISE) env GOTOOLCHAIN=$$(sed -n 's/^toolchain //p' "$${PULUMI_SERVICE_REPO:-../pulumi-service}/go.mod" 2>/dev/null) go run scripts/update-feature-parity.go --all
 
 .PHONY: build
 build:
