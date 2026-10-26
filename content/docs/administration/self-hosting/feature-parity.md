@@ -24,7 +24,6 @@ The table below shows whether key Pulumi Cloud features are available in self-ho
 | [ESC approvals](/docs/esc/concepts/approvals/) | Available |  |
 | [Pulumi ESC](/docs/esc/) | Available |  |
 | [Pulumi Neo](/docs/ai/neo/) | Not available | Not available yet. Features built on Neo, such as Neo tasks, aren't available either. |
-| Theming | Requires enablement | Off by default. Contact Pulumi support to turn it on. |
 | [Webhooks](/docs/deployments/concepts/webhooks/) | Available |  |
 
 ## Status key
