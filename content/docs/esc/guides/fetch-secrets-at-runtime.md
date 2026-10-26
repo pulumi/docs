@@ -36,7 +36,11 @@ The SDK is one of several ways to deliver ESC values to a workload. Pick the one
       fn::secret: my-api-key-value
   ```
 
-- A Pulumi access token that can read and open that environment. Create a dedicated [organization or team token](/docs/administration/concepts/access-tokens/) for the application rather than reusing a personal token, and grant its team access only to the environments the application needs.
+- A Pulumi access token that can open that environment. Create a dedicated machine token for the application rather than reusing a personal token:
+  - A [team token](/docs/administration/concepts/access-tokens/#team-access-tokens) for a team that has the `Environment Open` permission set on only the environments the application needs. Teams are available in {{< pulumi-cloud-editions "teams" >}}.
+  - An [organization token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) assigned a [custom role](/docs/administration/concepts/rbac/roles/#custom-roles) that grants the same access. Organization tokens are available in {{< pulumi-cloud-editions "org-team-access-tokens" >}}, and custom roles in {{< pulumi-cloud-editions "custom-roles" >}}.
+
+  A team token also receives your organization's default Member permissions, and an organization token created without a role receives the Member role. If your [organization-wide role settings](/docs/administration/concepts/rbac/roles/#organization-wide-role-settings) give members access to environments, the token can open those environments too, so set **Environment permissions** there to **None** if you rely on the token's team or role to limit what it can read.
 - The name of your Pulumi organization.
 
 The SDK reads credentials from the `PULUMI_ACCESS_TOKEN` environment variable, and the backend URL from `PULUMI_BACKEND_URL`, which defaults to `https://api.pulumi.com`. The examples read the organization name from a `PULUMI_ORG` environment variable.
@@ -148,7 +152,10 @@ func main() {
 	if !ok {
 		log.Fatal("databaseUrl is missing or is not a string")
 	}
-	apiKey, _ := values["apiKey"].(string)
+	apiKey, ok := values["apiKey"].(string)
+	if !ok {
+		log.Fatal("apiKey is missing or is not a string")
+	}
 
 	// Pass the values to your database client, HTTP client, and so on.
 	_ = databaseURL
@@ -193,7 +200,7 @@ For the full list of client options, such as passing an access token explicitly 
 
 ## Handle failures and refresh values
 
-Opening an environment makes a network call to Pulumi Cloud and can fail if the token is invalid, the token's team cannot access the environment, or the service is unreachable. Decide ahead of time what your application should do in each case:
+Opening an environment makes a network call to Pulumi Cloud and can fail if the token is invalid, the token doesn't have permission to open the environment, or the service is unreachable. Decide ahead of time what your application should do in each case:
 
 - **At startup**, fail fast if the environment cannot be opened, so that your orchestrator restarts the workload and surfaces the problem instead of running without credentials.
 - **While running**, keep using the values you already have if a refresh fails, and retry with backoff.
@@ -206,7 +213,9 @@ Avoid opening the environment on every request. Open it once at startup, hold th
 
 The application still needs a Pulumi access token to call Pulumi Cloud, so deliver that single token through the mechanism your platform provides for secrets, such as a managed secret store or an encrypted deployment variable, and expose it to the process as `PULUMI_ACCESS_TOKEN`. Every other secret then lives in ESC, where you can audit access, rotate values, and change them without redeploying the application.
 
-The token can itself be scoped narrowly: a team-based token that can read only the environment for this application limits the exposure if the token is ever compromised.
+Scope the token as described in [Prerequisites](#prerequisites), so that a leaked token exposes only the environments this application uses.
+
+If your application runs on a platform that issues OIDC tokens to its workloads, such as Amazon EKS, Google Kubernetes Engine, or GitHub Actions, you can avoid storing a long-lived Pulumi token at all. Register the platform as an [OIDC issuer](/docs/administration/concepts/oidc-issuers/), have the application exchange its ID token for a short-lived Pulumi access token at startup, and pass that token to the SDK client. The exchanged token expires, so repeat the exchange before you open the environment again.
 
 ## Next steps
 
