@@ -513,6 +513,16 @@ var ldMethodsWithDefaultArg = map[string]bool{
 	"GetFlagStringValueForOrgByID":           true,
 }
 
+// pkgFlagFuncs are the pkg/featureflags functions that read a flag. Each takes (ctx, key, default)
+// and reads the same offline client, so on self-hosted they return the default too.
+var pkgFlagFuncs = map[string]bool{
+	"Enabled":             true,
+	"EnabledWithDuration": true,
+	"EnabledWithFloat":    true,
+	"EnabledWithInt":      true,
+	"EnabledWithString":   true,
+}
+
 // ldCheck is a flag read found in pulumi-service code, with the value it returns on self-hosted.
 type ldCheck struct {
 	defaultValue string // What the offline client returns: "false", "true", or a non-boolean default
@@ -530,6 +540,12 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Warning: Failed to read LaunchDarkly keys, skipping LaunchDarkly gates: %v\n", err)
 		return
+	}
+	// pkg/featureflags defines a second set of keys, read with featureflags.Enabled and its variants
+	if pkgData, err := os.ReadFile(filepath.Join(servicePath, "pkg/featureflags/flags.go")); err == nil {
+		data = append(append(data, '\n'), pkgData...)
+	} else {
+		fmt.Fprintf(os.Stderr, "Warning: Failed to read pkg/featureflags keys, skipping their checks: %v\n", err)
 	}
 	flagValues := make(map[string]string) // LDKey constant -> flag name
 	keysByValue := make(map[string]string)
@@ -570,8 +586,8 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 			}
 			if d.IsDir() {
 				switch d.Name() {
-				// features is where license-gated flags are evaluated; featureflag defines the client
-				case "featureflag", "features", "mocks", "node_modules", "vendor", "testdata":
+				// features is where license-gated flags are evaluated; featureflag and featureflags define the clients
+				case "featureflag", "featureflags", "features", "mocks", "node_modules", "vendor", "testdata":
 					return filepath.SkipDir
 				}
 				return nil
@@ -598,6 +614,14 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 
 				if helper, ok := helpers[sel.Sel.Name]; ok && len(call.Args) == 0 {
 					checks[helper.key] = append(checks[helper.key], ldCheck{defaultValue: helper.defaultValue, location: location})
+					return true
+				}
+				if pkg, ok := sel.X.(*ast.Ident); ok && pkg.Name == "featureflags" && pkgFlagFuncs[sel.Sel.Name] {
+					if len(call.Args) == 3 {
+						if key := flagKey(call.Args[1]); key != "" {
+							checks[key] = append(checks[key], ldCheck{defaultValue: selfHostedValue(call.Args[2]), location: location})
+						}
+					}
 					return true
 				}
 				if !ldCheckMethods[sel.Sel.Name] {
@@ -699,6 +723,17 @@ func parseLaunchDarklyHelpers(path string) map[string]ldHelper {
 		})
 	}
 	return helpers
+}
+
+// selfHostedValue resolves a default that depends on the deployment, such as
+// enterpriseConfig.IsSelfHostedEnterprise(), to what it returns on self-hosted.
+func selfHostedValue(expr ast.Expr) string {
+	if call, ok := expr.(*ast.CallExpr); ok {
+		if sel, ok := call.Fun.(*ast.SelectorExpr); ok && sel.Sel.Name == "IsSelfHostedEnterprise" {
+			return "true"
+		}
+	}
+	return exprSource(expr)
 }
 
 func exprSource(expr ast.Expr) string {

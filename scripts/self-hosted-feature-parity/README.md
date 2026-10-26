@@ -48,7 +48,7 @@ Anything no flag controls runs the same code on self-hosted as on Pulumi Cloud, 
 
 ### Direct LaunchDarkly checks
 
-The generator parses `pulumi-service` for calls that read a LaunchDarkly flag, including the service-wide helpers in `featureflag/flags.go` and flags passed as plain strings, and records each default. The raw report lists every check with its default, whether it's on or off on self-hosted, the row it affects, and where it's called.
+The generator parses `pulumi-service` for calls that read a LaunchDarkly flag, including the service-wide helpers in `featureflag/flags.go`, `featureflags.Enabled` and its variants from `pkg/featureflags`, and flags passed as plain strings, and records each default. A default of `IsSelfHostedEnterprise()` counts as `true`, because that's what it returns on self-hosted. The raw report lists every check with its default, whether it's on or off on self-hosted, the row it affects, and where it's called.
 
 - A flag already attached to a `features.go` entry marks that entry `N` when a check defaults to `false`.
 - Any other flag needs an entry in `feature-metadata.json`, keyed by its `LDKey...` constant (or the flag string if there's no constant). Give it a `marketing_name` to show it as its own row, add it to another entry's `feature_keys` to make that row `N` (as Dependency Caching and Terraform Module Registry do), or set `include_in_table: false` for operational and rollout flags.

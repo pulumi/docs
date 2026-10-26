@@ -17,6 +17,7 @@ The table below shows whether key Pulumi Cloud features are available in self-ho
 
 | Feature | Self-hosted | Details |
 |---|---|---|
+| [Context API](/docs/discovery-governance/concepts/context-api/) | Requires configuration | Needs a self-hosted release from late October 2026 or later, and the [OpenSearch cluster](/docs/administration/self-hosting/components/search/) that resource search uses. |
 | [Custom roles](/docs/administration/concepts/rbac/roles/) | Available |  |
 | [Deployments](/docs/administration/self-hosting/components/deployments/) | Requires configuration | There's no Pulumi-hosted runner pool. Deployments run on [customer-managed agents](/docs/administration/concepts/customer-managed-runners/) that you register to an agent pool, and so do discovery scans and policy evaluations. Terraform remote execution and module conversion aren't supported. |
 | [Discovery & governance](/docs/discovery-governance/) | Available |  |
@@ -24,6 +25,9 @@ The table below shows whether key Pulumi Cloud features are available in self-ho
 | [ESC approvals](/docs/esc/concepts/approvals/) | Available |  |
 | [Pulumi ESC](/docs/esc/) | Available |  |
 | [Pulumi Neo](/docs/ai/neo/) | Not available | Not available yet. Features built on Neo, such as Neo tasks, aren't available either. |
+| [Terraform module registry](/docs/integrations/terraform/module-registry/) | Not available | Not available yet, so modules can't be published to the registry or converted into Pulumi packages. |
+| [Terraform remote execution](/docs/integrations/terraform/remote-execution/) | Not available | Not available yet. Workspaces set to remote execution run locally instead. |
+| [Terraform state backend](/docs/integrations/terraform/state-backend/) | Requires configuration | Set `PULUMI_TFE_DOMAIN` to a hostname of its own, separate from `PULUMI_API_DOMAIN`, and use that hostname in place of `tf.pulumi.com`. |
 | [Webhooks](/docs/deployments/concepts/webhooks/) | Available |  |
 
 ## Status key
