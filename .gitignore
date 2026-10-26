@@ -126,10 +126,7 @@ _vendor/
 /.traffic-snapshot
 /.reader-signals.json
 /.synthetic.patch
-# Volatile-claim re-verification (claims-reverify.yml) and the shared
-# signal-health state both lanes read-modify-write.
-/.claims-reverify-report.json
-/.claims-cache/
+# Signal-health state the content-review dispatcher read-modify-writes.
 /.health-state.json
 /.health-alert.txt
 # Local cache for scripts/review-admin (synced S3 ledgers, exports, dashboard).

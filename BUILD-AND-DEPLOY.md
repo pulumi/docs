@@ -1357,8 +1357,7 @@ Scheduled jobs that review content nobody is currently editing.
 
 ```mermaid
 flowchart TD
-  CR["`claims-reverify.yml, nightly`"] -->|stale_claims markers| LED[("`S3 content-review ledger`")]
-  LED --> DISP["`review-existing-content.yml, weekdays: picks articles by importance and staleness`"]
+  LED[("`S3 content-review ledger`")] --> DISP["`review-existing-content.yml, weekdays: picks articles by importance and staleness`"]
   DISP -->|one dispatch per article| RV
   subgraph W["`content-review-article.yml`"]
     direction TB
@@ -1370,8 +1369,7 @@ flowchart TD
   CL["`check-links.yml, daily`"] --> FBL["`Claude runs the fix-broken-links skill`"] --> LPR["`Bot PR`"]
 ```
 
-- **review-existing-content.yml / content-review-article.yml**: Daily (workdays, 14:00 UTC) existing-content review. Deterministic selection fans out one per-article worker per page. Three lanes, each with its own count variable: `fix` (`CONTENT_REVIEW_COUNT`, unset = 3/run) reviews an editable page and opens a PR for what it fixed — with its **first slot reserved** for the oldest page no review has ever completed on (`NEVER_REVIEWED_RESERVE`, fix lane only, disabled at count 1), because `importance x staleness` alone never reaches the cold end of the corpus; `glowup` (`GLOWUP_COUNT`, unset = 1/run) rehabs one page from its banked findings backlog — and, because a page can carry a banked *count* with nothing behind it (no findings record and no review PR to scrape), it also dispatches up to one **fix-lane repair** per run (`GLOWUP_REPAIRS_PER_RUN`) for such a page, since a fix review needs no ledger and writes the findings record a later glow-up needs; `report` (`REPORT_REVIEW_COUNT`, **unset = off**) fact-checks a page a generator owns — it runs the claim pipeline, writes the page's claims to the S3 claims index, and changes nothing. The report lane has no model step at all (nothing to fix, no PR body to write) and its verdict is written by the workflow; contradictions it finds are reported to #docs-ops with a prefilled upstream issue, never as stale-claims markers no PR here could retire. Which lane a page belongs to comes from `editable` / `reviewable` in `strategic-tiers.yaml` (pulumi/docs#20996 — before that split, "a generator owns this file" also meant "never look at it", hiding 30% of `content/docs/` from the fact-check entirely). Fix PRs open ready (draft only on lint failure) and go through the normal triage, review, and Sentinel chain. Deterministic-class fixes (links, Vale-named fixes, frontmatter) arm auto-merge, which still needs a human approval; judgment-class fixes open un-armed.
-- **claims-reverify.yml**: Nightly (07:00 UTC) re-verification of volatile claims (version pins, prices, limits) from the S3 claims index. Contradicted entities get a `stale_claims` marker on their pages' ledger objects, which moves those pages to the front of the next day's content-review queue. Never edits content or opens PRs. `CLAIMS_REVERIFY_COUNT` (unset = 25 entities/night, `'0'` = off).
+- **review-existing-content.yml / content-review-article.yml**: Daily (workdays, 14:00 UTC) existing-content review. Deterministic selection fans out one per-article worker per page. Three lanes, each with its own count variable: `fix` (`CONTENT_REVIEW_COUNT`, unset = 3/run) reviews an editable page and opens a PR for what it fixed — with its **first slot reserved** for the oldest page no review has ever completed on (`NEVER_REVIEWED_RESERVE`, fix lane only, disabled at count 1), because `importance x staleness` alone never reaches the cold end of the corpus; `glowup` (`GLOWUP_COUNT`, unset = 1/run) rehabs one page from its banked findings backlog — and, because a page can carry a banked *count* with nothing behind it (no findings record and no review PR to scrape), it also dispatches up to one **fix-lane repair** per run (`GLOWUP_REPAIRS_PER_RUN`) for such a page, since a fix review needs no ledger and writes the findings record a later glow-up needs; `report` (`REPORT_REVIEW_COUNT`, **unset = off**) fact-checks a page a generator owns — it runs the claim pipeline, writes the page's claims to the S3 claims index, and changes nothing. The report lane has no model step at all (nothing to fix, no PR body to write) and its verdict is written by the workflow; contradictions it finds are reported to #docs-ops with a prefilled upstream issue, since no PR here could fix them. Which lane a page belongs to comes from `editable` / `reviewable` in `strategic-tiers.yaml` (pulumi/docs#20996 — before that split, "a generator owns this file" also meant "never look at it", hiding 30% of `content/docs/` from the fact-check entirely). Fix PRs open ready (draft only on lint failure) and go through the normal triage, review, and Sentinel chain. Deterministic-class fixes (links, Vale-named fixes, frontmatter) arm auto-merge, which still needs a human approval; judgment-class fixes open un-armed.
 - **blog-review-index.yml**: Daily (workdays, 14:30 UTC) blog known-issues indexing — deterministic selection (`scripts/blog-review/select-posts.py`), one unprivileged model review per post (matrix), one deterministic record job. FLAG-ONLY: findings land in S3 (`blog-review/` prefix in the content-review ledger bucket: `ledger/`, `index/`, `runs/`, `index/_summary.json`); no content edits, no PRs. On/off/cadence via the `BLOG_REVIEW_COUNT` repo variable (unset = 5/run, `'0'` = off). The index is evidence for a future noindex decision process (`block_external_search_index: true` on rotted, low-value posts).
 - **check-links.yml**: Daily at 15:00 UTC; manual. Runs `make check_links` against the production site, merges real-404 server-log hits from the reader-signals export into `.broken-links.json` (`scripts/link-checker/merge-404-signal.py`; a no-op until the export exists), then runs `claude-code-action` with the `fix-broken-links` skill, which fixes what it can in one PR and files issues for the rest. The PR link is posted to `#docs-ops`.
 - **check-lighthouse.yml**: Daily at 15:00 UTC; manual. Lighthouse performance, accessibility, best-practices, and SEO scores for the homepage, product, pricing, get-started, concepts, and Registry pages. Slack alert on failure.
@@ -1475,7 +1473,7 @@ Two workflows are gated on `github.repository != 'pulumi/docs'` and only do anyt
 The mirror carries every workflow file pulumi/docs has, so the repository gate above is the exception, not the rule. As of 2026-10-07 on docs-private:
 
 - **Disabled** (`disabled_manually` in the Actions API), 19 workflows: `add-to-project`, `bucket-cleanup`, `bucket-cleanup-testing`, `build-and-deploy`, `check-lighthouse`, `check-links`, `check-search-urls`, `esc-cli`, `esc-update-schemas`, `pr-closed`, `pulumi-cli`, `pulumi-cli-dev-version`, `schedule-social`, `scheduled-test`, `scheduled-upgrade-programs`, `testing-build-and-deploy`, `update-audit-log-events`, `update-openapi-lastmod`, `update-search-index`.
-- **Active and doing work on a schedule:** `review-label-reconcile`, `blog-review-index`, `claims-reverify`, `review-existing-content` (which dispatches `content-review-article`), `update-policy-packs`, and `warm-build-cache`. The content-review lane opens `pulumi-bot` "Content review: …" PRs against the mirror's `master` that never merge (for example docs-private #300, #302, #307, and #314).
+- **Active and doing work on a schedule:** `review-label-reconcile`, `blog-review-index`, `review-existing-content` (which dispatches `content-review-article`), `update-policy-packs`, and `warm-build-cache`. The content-review lane opens `pulumi-bot` "Content review: …" PRs against the mirror's `master` that never merge (for example docs-private #300, #302, #307, and #314).
 - **Active but skipped by their own gates:** `weekly-digest` and `brand-style-sync` (gated to pulumi/docs), and `review-sla-sweep`, `staging-status`, and `content-review-glowup-autofix` (gated on `REVIEW_V3_SLA`, `REVIEW_V3_SENTINEL`, and `GLOWUP_AUTOFIX`, which aren't set there). Their runs fire and every job is skipped.
 
 ### Launch branches
@@ -1495,7 +1493,6 @@ These repository variables turn automation on, off, or up and down without a cod
 | `CONTENT_REVIEW_COUNT` | Existing-content fix lane, articles per run | 3; `'0'` turns the whole dispatcher off |
 | `GLOWUP_COUNT` | Glow-up lane, articles per run | 1 |
 | `REPORT_REVIEW_COUNT` | Report-only lane for generated pages | Off |
-| `CLAIMS_REVERIFY_COUNT` | Volatile claims re-verified per night | 25; `'0'` off |
 | `BLOG_REVIEW_COUNT` | Blog posts indexed per run | 5; `'0'` off |
 | `BRAND_SYNC_ENABLED` | Weekly Vale mirror drift check | On; `'0'` off |
 | `REVIEW_V3_COMMENTS` | v3 author card and reviewer brief instead of the single legacy review comment | Legacy (it's set repo-wide) |
@@ -1519,7 +1516,7 @@ All cron expressions are UTC. Eastern times shift by an hour when daylight savin
 | Every 2 h at :53 | `review-sla-sweep.yml` (when `REVIEW_V3_SLA=1`) | Daily |
 | Every 6 h at :23 | `warm-build-cache.yml` (mirrors only) | Daily |
 | 06:45 | `update-openapi-lastmod.yml` | Daily |
-| 07:00 | `claims-reverify.yml`, `esc-update-schemas.yml` | Daily |
+| 07:00 | `esc-update-schemas.yml` | Daily |
 | 07:15 | `update-audit-log-events.yml` | Daily |
 | 07:30 | `update-policy-packs.yml` | Daily |
 | 08:00 | `scheduled-test.yml` (about 3 hours) | Daily |
@@ -1567,7 +1564,6 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `weekly-digest.yml` | AI review | Mondays, manual | Slack digests |
 | `review-existing-content.yml` | Content upkeep | Weekdays, manual | Content review dispatcher |
 | `content-review-article.yml` | Content upkeep | Dispatched | Review one article |
-| `claims-reverify.yml` | Content upkeep | Daily, manual | Re-verify volatile claims |
 | `blog-review-index.yml` | Content upkeep | Weekdays, manual | Blog known-issues index |
 | `check-links.yml` | Content upkeep | Daily, manual | Broken links and fix PR |
 | `check-lighthouse.yml` | Content upkeep | Daily, manual | Lighthouse scores |

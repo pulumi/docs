@@ -57,7 +57,17 @@ remove_bucket() {
     # metadata.json is deleted last, rather than letting "rb --force" delete objects in
     # arbitrary order, so a removal that is interrupted (for example by expired credentials)
     # partway through the objects stops with that file still in place.
-    s5cmd --log error rm --exclude "metadata.json" "s3://${bucket}/*" || return 1
+    #
+    # A DeleteObjects request can succeed as a whole while reporting that individual keys
+    # failed with "InternalError: We encountered an internal error. Please try again." The
+    # SDK doesn't retry that, so s5cmd exits non-zero. Try the deletes once more after a
+    # pause rather than giving up on the bucket: the second pass only lists the keys that are
+    # left (and exits 0 if there are none), and a persistent error still fails the bucket.
+    if ! s5cmd --log error rm --exclude "metadata.json" "s3://${bucket}/*"; then
+        echo "Retrying the object deletes for ${bucket}..."
+        sleep 10
+        s5cmd --log error rm --exclude "metadata.json" "s3://${bucket}/*" || return 1
+    fi
     s5cmd --log error rm "s3://${bucket}/metadata.json" || return 1
 
     if s5cmd --log error rb "s3://${bucket}"; then
