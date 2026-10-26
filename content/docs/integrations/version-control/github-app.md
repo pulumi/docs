@@ -68,13 +68,12 @@ The Pulumi GitHub app requests the following repository and organization permiss
 | Metadata | Read | Look up the repositories and organization the installation covers. GitHub grants this to every app. |
 | Contents | Read and write | Clone repositories for deployments and let [Neo](/docs/ai/) push commits. |
 | Pull requests | Read and write | Post preview results as pull request comments and let Neo open pull requests. |
+| Issues | Read and write | Let Neo work with issues when you [enable GitHub triggers for Neo](/docs/ai/). |
 | Checks | Read and write | Report [update status](#checks) on commits and pull requests. |
 | Deployments | Read and write | Report deployment status to GitHub. |
 | Environments | Read and write | Work with GitHub environments for deployments. |
 | Workflows | Read and write | Allow commits that modify GitHub Actions workflow files. |
 | Organization members | Read | Match GitHub organization members to Pulumi users. |
-
-If you [enable GitHub triggers for Neo](/docs/ai/), Neo also expects read and write access to issues.
 
 On GitHub Enterprise Server and GitHub Enterprise Cloud with data residency, you create the app yourself, and Pulumi's install wizard requests this same set of permissions in the app manifest. Because you own the app, you can review and adjust its permissions in your GitHub Enterprise settings, but removing a permission disables the features that depend on it.
 
