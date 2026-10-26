@@ -84,7 +84,7 @@ func loadFeatureConfig() *FeatureConfig {
 	data, err := os.ReadFile(metadataPath)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error reading feature metadata: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Hint: the pulumi-service clone may predate %s; pull its default branch.\n", metadataFile)
+		fmt.Fprintf(os.Stderr, "Hint: the pulumi-service checkout may predate %s. It reaches the production branch, which the nightly workflow reads, with the next pulumi-service release; locally, pull the branch you're generating from.\n", metadataFile)
 		os.Exit(1)
 	}
 
