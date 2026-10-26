@@ -75,7 +75,7 @@ The Pulumi GitHub app requests the following repository and organization permiss
 | Workflows | Read and write | Allow commits that modify GitHub Actions workflow files. |
 | Organization members | Read | Match GitHub organization members to Pulumi users. |
 
-On GitHub Enterprise Server and GitHub Enterprise Cloud with data residency, you create the app yourself, and Pulumi's install wizard requests this same set of permissions in the app manifest. Because you own the app, you can review and adjust its permissions in your GitHub Enterprise settings, but removing a permission disables the features that depend on it.
+On GitHub Enterprise Server and GitHub Enterprise Cloud with data residency, you create the app yourself, and Pulumi's install wizard requests the same permissions in the app manifest, except Issues. Because you own the app, you can review and adjust its permissions in your GitHub Enterprise settings, but removing a permission disables the features that depend on it.
 
 ### GitHub Enterprise Server support
 
