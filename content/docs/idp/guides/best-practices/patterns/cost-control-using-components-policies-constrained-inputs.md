@@ -116,7 +116,7 @@ Enforce cost policies organization-wide:
 // policies/cost-control-policy.ts
 import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
 import { InstanceSize, Environment, validateCostConstraints } from "../types/cost-controls";
-import { aws } from "@pulumi/aws";
+import * as aws from "@pulumi/aws";
 
 new PolicyPack("cost-control-policies", {
   policies: [{
