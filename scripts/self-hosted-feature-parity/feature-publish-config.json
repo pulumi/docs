@@ -1,0 +1,85 @@
+{
+  "features": {
+    "Neo": {
+      "marketing_name": "Neo",
+      "publish": true,
+      "public_name": "Pulumi Neo",
+      "docs_url": "/docs/ai/neo/",
+      "public_notes": "Not available yet. Features built on Neo, such as Neo tasks, aren't available either."
+    },
+    "Approvals": {
+      "marketing_name": "Approvals",
+      "publish": true,
+      "public_name": "ESC approvals",
+      "docs_url": "/docs/esc/concepts/approvals/"
+    },
+    "AuthZ - Custom Roles": {
+      "marketing_name": "AuthZ - Custom Roles",
+      "publish": true,
+      "public_name": "Custom roles",
+      "docs_url": "/docs/administration/concepts/rbac/roles/"
+    },
+    "Deployments": {
+      "marketing_name": "Deployments",
+      "publish": true,
+      "docs_url": "/docs/administration/self-hosting/components/deployments/",
+      "public_notes": "There's no Pulumi-hosted runner pool. Deployments run on [customer-managed agents](/docs/administration/concepts/customer-managed-runners/) that you register to an agent pool, and so do discovery scans and policy evaluations. Terraform remote execution and module conversion aren't supported."
+    },
+    "Drift Detection": {
+      "marketing_name": "Drift Detection",
+      "publish": true,
+      "public_name": "Drift detection",
+      "docs_url": "/docs/deployments/concepts/drift/",
+      "public_notes": "Off by default. Contact Pulumi support to turn it on. Scheduled drift runs and automatic remediation also need Deployments set up. You can always detect drift from the CLI with `pulumi refresh --preview-only`."
+    },
+    "ESC": {
+      "marketing_name": "ESC",
+      "publish": true,
+      "public_name": "Pulumi ESC",
+      "docs_url": "/docs/esc/"
+    },
+    "Insights 2.0": {
+      "marketing_name": "Insights 2.0",
+      "publish": true,
+      "public_name": "Discovery & governance",
+      "docs_url": "/docs/discovery-governance/"
+    },
+    "New Project Wizard/Templates": {
+      "marketing_name": "New Project Wizard/Templates",
+      "publish": true
+    },
+    "Webhooks": {
+      "marketing_name": "Webhooks",
+      "publish": true,
+      "docs_url": "/docs/deployments/concepts/webhooks/"
+    },
+    "Context API (graph query)": {
+      "marketing_name": "Context API (graph query)",
+      "publish": true,
+      "public_name": "Context API",
+      "docs_url": "/docs/discovery-governance/concepts/context-api/",
+      "public_notes": "Needs a self-hosted release from late October 2026 or later, and the [OpenSearch cluster](/docs/administration/self-hosting/components/search/) that resource search uses."
+    },
+    "Terraform - Remote Execution": {
+      "marketing_name": "Terraform - Remote Execution",
+      "publish": true,
+      "public_name": "Terraform remote execution",
+      "docs_url": "/docs/integrations/terraform/remote-execution/",
+      "public_notes": "Not available yet. Workspaces set to remote execution run locally instead."
+    },
+    "Terraform - State Backend": {
+      "marketing_name": "Terraform - State Backend",
+      "publish": true,
+      "public_name": "Terraform state backend",
+      "docs_url": "/docs/integrations/terraform/state-backend/",
+      "public_notes": "Set `PULUMI_TFE_DOMAIN` to a hostname of its own, separate from `PULUMI_API_DOMAIN`, and use that hostname in place of `tf.pulumi.com`."
+    },
+    "Terraform Module Registry": {
+      "marketing_name": "Terraform Module Registry",
+      "publish": true,
+      "public_name": "Terraform module registry",
+      "docs_url": "/docs/integrations/terraform/module-registry/",
+      "public_notes": "Not available yet, so modules can't be published to the registry or converted into Pulumi packages."
+    }
+  }
+}

@@ -75,37 +75,39 @@ type FeaturePublishConfig struct {
 	Features map[string]PublishConfig `json:"features"` // Key is marketing name
 }
 
-func loadFeatureConfig() *FeatureConfig {
-	configPath := "scripts/self-hosted-feature-parity/feature-metadata.json"
+// metadataPath is the feature metadata in the pulumi-service clone, set in main.
+// It lives in pulumi-service, not here, because it names internal flags and
+// unreleased features.
+var metadataPath string
 
-	data, err := os.ReadFile(configPath)
+func loadFeatureConfig() *FeatureConfig {
+	data, err := os.ReadFile(metadataPath)
 	if err != nil {
-		// Config is optional - return empty config
-		return &FeatureConfig{Features: make(map[string]FeatureMetadata)}
+		fmt.Fprintf(os.Stderr, "Error reading feature metadata: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Hint: the pulumi-service clone may predate %s; pull its default branch.\n", metadataFile)
+		os.Exit(1)
 	}
 
 	var config FeatureConfig
 	if err := json.Unmarshal(data, &config); err != nil {
-		fmt.Fprintf(os.Stderr, "Warning: Failed to parse config file: %v\n", err)
-		return &FeatureConfig{Features: make(map[string]FeatureMetadata)}
+		fmt.Fprintf(os.Stderr, "Error parsing %s: %v\n", metadataPath, err)
+		os.Exit(1)
 	}
 
 	return &config
 }
 
 func loadPublishConfig() *FeaturePublishConfig {
-	configPath := "scripts/self-hosted-feature-parity/feature-publish-config.json"
-
-	data, err := os.ReadFile(configPath)
+	data, err := os.ReadFile(publishConfigFile)
 	if err != nil {
-		// If config doesn't exist, publish all features by default
-		return &FeaturePublishConfig{Features: make(map[string]PublishConfig)}
+		fmt.Fprintf(os.Stderr, "Error reading publish config: %v\n", err)
+		os.Exit(1)
 	}
 
 	var config FeaturePublishConfig
 	if err := json.Unmarshal(data, &config); err != nil {
-		fmt.Fprintf(os.Stderr, "Warning: Failed to parse publish config file: %v\n", err)
-		return &FeaturePublishConfig{Features: make(map[string]PublishConfig)}
+		fmt.Fprintf(os.Stderr, "Error parsing %s: %v\n", publishConfigFile, err)
+		os.Exit(1)
 	}
 
 	return &config
@@ -145,6 +147,8 @@ func main() {
 		os.Exit(1)
 	}
 
+	metadataPath = filepath.Join(servicePath, metadataFile)
+
 	if err := os.MkdirAll(generatedDir, 0755); err != nil {
 		fmt.Fprintf(os.Stderr, "Error creating %s: %v\n", generatedDir, err)
 		os.Exit(1)
@@ -177,8 +181,10 @@ func main() {
 }
 
 const (
-	featuresFile = "cmd/service/api/features/features.go"
-	generatedDir = "scripts/self-hosted-feature-parity/generated"
+	featuresFile      = "cmd/service/api/features/features.go"
+	metadataFile      = "cmd/service/api/features/self-hosted-parity.json"
+	publishConfigFile = "scripts/self-hosted-feature-parity/feature-publish-config.json"
+	generatedDir      = "scripts/self-hosted-feature-parity/generated"
 )
 
 func parseFeatures(servicePath string) map[string]*FeatureInfo {
@@ -431,7 +437,7 @@ func generateRawContent(features map[string]*FeatureInfo) string {
 	sb.WriteString("These LaunchDarkly flags are checked directly in pulumi-service code, outside features.go. ")
 	sb.WriteString("Self-hosted can't reach LaunchDarkly, so each check returns its default: a `false` default turns the gated behavior off whatever the license says, ")
 	sb.WriteString("and a `true` default leaves it on. Making an off flag available on self-hosted needs a license key in features.go.\n\n")
-	sb.WriteString("A flag that a features.go entry already uses marks that entry as off. Any other flag shows in the internal summary once its key is added to `feature-metadata.json`; ")
+	sb.WriteString("A flag that a features.go entry already uses marks that entry as off. Any other flag shows in the internal summary once its key is added to `self-hosted-parity.json` in pulumi-service; ")
 	sb.WriteString("set `include_in_table: false` for operational and rollout flags that aren't product features.\n\n")
 	sb.WriteString("| LD Key | Flag | Default | Self Hosted | Applies to | Checked at |\n")
 	sb.WriteString("| :---- | :---- | :---- | :---- | :---- | :---- |\n")
@@ -856,7 +862,7 @@ func buildMarketingFeatures(features map[string]*FeatureInfo, existing map[strin
 			continue
 		}
 		metadata := featureToMetadata[featureKey]
-		// LaunchDarkly-only gates appear only once feature-metadata.json names them;
+		// LaunchDarkly-only gates appear only once self-hosted-parity.json names them;
 		// the raw report lists the rest
 		if feature.LaunchDarklyOnly && metadata == nil {
 			continue
@@ -966,7 +972,7 @@ type selfHostedState struct {
 // resolveSelfHostedStates mirrors how the service evaluates a feature on self-hosted:
 // LaunchDarkly flags are never consulted, only SelfHosted.Available, the license toggle
 // (SelfHosted.Default when absent), and every dependency in featureDependencies.
-// depends_on in feature-metadata.json adds dependencies that features.go doesn't declare.
+// depends_on in self-hosted-parity.json adds dependencies that features.go doesn't declare.
 func resolveSelfHostedStates(features map[string]*FeatureInfo, featureToMetadata map[string]*FeatureMetadata) map[string]selfHostedState {
 	states := make(map[string]selfHostedState)
 	visiting := make(map[string]bool)
@@ -1296,14 +1302,11 @@ func filterForPublish(features []*MarketingFeature, publishConfig *FeaturePublis
 	var result []*MarketingFeature
 
 	for _, f := range features {
-		// Check if feature has explicit publish config
-		if pubConf, exists := publishConfig.Features[f.MarketingName]; exists {
-			if !pubConf.Publish {
-				continue // Skip features marked publish: false
-			}
+		// Only rows listed in the public config are published, so a new flag
+		// can't reach the public page before someone decides it should
+		if pubConf, exists := publishConfig.Features[f.MarketingName]; exists && pubConf.Publish {
+			result = append(result, f)
 		}
-		// If no config exists, include by default
-		result = append(result, f)
 	}
 
 	return result
