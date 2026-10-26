@@ -23,9 +23,10 @@ To use a DIY backend, specify a storage endpoint URL as `pulumi login`'s `<backe
 Inside the `.pulumi` folder, we access the following subdirectories:
 
 1. `meta.yaml`: This is the metadata file. It does not hold information about the stacks but rather information about the backend itself.
-1. `stacks/`: Active state files for each stack (e.g. `dev.json` or `proj/dev.json` if the stack is scoped to a project).
-1. `locks/`: Lock files for each stack if the stack is currently being operated on by a Pulumi operation (e.g. `dev/$lock.json` or `proj/dev/$lock.json` where `$lock` is a unique identifier for the lock).
-1. `history/`: History for each stack (e.g. `dev/dev-$timestamp.history.json` or `proj/dev/dev-$timestamp.history.json` where `$timestamp` records the time the history file was created).
+1. `stacks/`: Active state files for each stack (e.g., `dev.json` or `proj/dev.json` if the stack is scoped to a project).
+1. `locks/`: Lock files for each stack if the stack is currently being operated on by a Pulumi operation (e.g., `dev/$lock.json` or `organization/proj/dev/$lock.json` if the stack is scoped to a project, where `$lock` is a unique identifier for the lock).
+1. `history/`: History for each stack (e.g., `dev/dev-$timestamp.history.json` or `proj/dev/dev-$timestamp.history.json` where `$timestamp` records the time the history file was created). Each has a matching `.checkpoint.json` file with the stack's state from that update.
+1. `backups/`: Backup copies of each stack's state file (e.g., `dev/dev.$timestamp.json` or `proj/dev/dev.$timestamp.json`).
 
 The detailed format of the `<backend-url>` differs by backend and each has different options such as how to authenticate. See the per-backend sections that follow.
 
@@ -37,11 +38,12 @@ To use the filesystem backend to store your state files locally on your machine,
 $ pulumi login --local
 ```
 
-You will see `Logged into <my-machine> as <my-user> (file://~)` as a result where `<my-machine>` and `<my-user>` are your configured machine and user names, respectively. Stack state will be stored as JSON files locally on your machine.
+You will see `Logged in to <my-machine> as <my-user> (file://~)` as a result where `<my-machine>` and `<my-user>` are your configured machine and user names, respectively. Stack state will be stored as JSON files locally on your machine.
 
-The default directory for these JSON files is `~/.pulumi`. To store state files in an alternative location, specify a `file://<path>` URL instead, where `<path>` is the full path to the target directory where state files will be stored. For instance, to store state underneath `/app/data/.pulumi/` instead, run:
+The default directory for these JSON files is `~/.pulumi`. To store state files in an alternative location, specify a `file://<path>` URL instead, where `<path>` is the full path to the target directory where state files will be stored. The directory must already exist. For instance, to store state underneath `/app/data/.pulumi/` instead, run:
 
 ```sh
+$ mkdir -p /app/data
 $ pulumi login file:///app/data
 ```
 
@@ -60,10 +62,10 @@ $ pulumi login s3://<bucket-name>
 ```
 
 {{% notes type="info" %}}
-As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile, add `awssdk=v2` along with the region and profile to the query string. The URL should be quoted to escape the shell operator `&`, and used as follows:
+To use a named AWS profile, add the region and profile to the query string, and quote the URL so the shell doesn't interpret `&`:
 
 ```sh
-pulumi login 's3://<bucket-name>?region=us-east-1&awssdk=v2&profile=<profile-name>'
+pulumi login 's3://<bucket-name>?region=us-east-1&profile=<profile-name>'
 ```
 
 {{% /notes %}}
@@ -72,7 +74,7 @@ pulumi login 's3://<bucket-name>?region=us-east-1&awssdk=v2&profile=<profile-nam
 The `bucket-name` value can include multiple folders, such as `my-bucket/app/project1`. This is useful when storing multiple projects' state in the same bucket.
 {{% /notes %}}
 
-To configure credentials and authorize access, please see the [AWS Session documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/). For additional configuration options, see [AWS Setup](/registry/packages/aws/installation-configuration/). If you're new to AWS S3, see [the AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html).
+To configure credentials and authorize access, see the [AWS SDK for Go v2 configuration documentation](https://docs.aws.amazon.com/sdk-for-go/v2/developer-guide/configure-gosdk.html). For additional configuration options, see [AWS Setup](/registry/packages/aws/installation-configuration/). If you're new to AWS S3, see [the AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html).
 
 This backend also supports [alternative object storage servers with AWS S3 compatible REST APIs](https://en.wikipedia.org/wiki/Amazon_S3#S3_API_and_competing_services), including [Minio](https://www.minio.io/), [Ceph](https://ceph.io/), or [SeaweedFS](https://github.com/chrislusf/seaweedfs). To use such a server, you may pass `endpoint`, `disableSSL`, and `s3ForcePathStyle` querystring parameters to your `<backend-url>`, as follows:
 
@@ -172,7 +174,11 @@ For additional configuration options, see the [README ↗](https://github.com/pu
 
 Versions of Pulumi before v3.61.0 placed stacks in a global namespace in DIY backends. This meant that you couldn't share stack names (e.g. `dev`, `prod`, `staging`) across multiple projects in the same DIY backend. With Pulumi v3.61.0 and later, stacks created in new or empty DIY backends are scoped by project by default—same as the Pulumi Cloud backend.
 
-Existing DIY backends will continue to use the global namespace for stacks. You can upgrade an existing DIY backend to use project-scoped stacks using the `pulumi state upgrade` command. This command will upgrade all stacks in the backend to be scoped by project.
+DIY backends that still use the global namespace are deprecated, and Pulumi commands fail against them until you run `pulumi state upgrade`, which scopes every stack in the backend by project. The deprecation error blocks that command too, so set `PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR=1` when you run it:
+
+```sh
+$ PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR=1 pulumi state upgrade
+```
 
 {{% notes type="info" %}}
 `pulumi state upgrade` will make upgraded stacks inaccessible to older versions of Pulumi. This is a one-way operation. Once you have upgraded your backend, you cannot downgrade to the previous version.
@@ -185,12 +191,11 @@ Existing DIY backends will continue to use the global namespace for stacks. You 
 When the Pulumi CLI can't access your DIY backend's storage, you'll see an error similar to one of these when you run `pulumi login`, `pulumi config`, or another command that reads state:
 
 ```
-error: read ".pulumi\\meta.yaml": blob (key ".pulumi/meta.yaml") (code=Unknown): AccessDenied: Access Denied
-        status code: 403
+error: read ".pulumi/meta.yaml": blob (key ".pulumi/meta.yaml") (code=PermissionDenied): operation error S3: GetObject, https response error StatusCode: 403, RequestID: <request-id>, HostID: <host-id>, api error AccessDenied: Access Denied
 ```
 
 ```
-error: read ".pulumi\\meta.yaml": blob (key ".pulumi/meta.yaml") (code=Unknown): MissingRegion: could not find region configuration
+error: read ".pulumi/meta.yaml": blob (key ".pulumi/meta.yaml") (code=Unknown): operation error S3: GetObject, resolve auth scheme: resolve endpoint: endpoint rule error, Invalid region: region was not a valid DNS name.
 ```
 
 `meta.yaml` is the first file Pulumi reads from a DIY backend, so this error almost always means the CLI reached the storage provider but couldn't authenticate or wasn't configured correctly—not that the file itself is missing or corrupt. The error is surfaced directly from the cloud provider's SDK, which is why it can be hard to interpret. Common causes:
