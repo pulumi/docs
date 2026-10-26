@@ -70,3 +70,4 @@ what-is/what-is-soc-2/index.html|/topics/secrets-and-security/what-is-soc-2/
 what-is/what-is-terraform-state/index.html|/topics/infrastructure-as-code/what-is-terraform-state/
 what-is/what-is-terragrunt/index.html|/topics/infrastructure-as-code/what-is-terragrunt/
 what-is/what-is-yaml/index.html|/topics/infrastructure-as-code/what-is-yaml/
+why-is-python-so-popular/index.html|/topics/infrastructure-as-code/why-is-python-so-popular/

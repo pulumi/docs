@@ -104,7 +104,6 @@ const titleSection = (name, recursive, label) => ({
 // id is the content-relative path with .md and trailing /_index stripped, e.g.
 // "what-is/what-is-yaml" or "docs/iac/concepts/inputs-outputs".
 const SECTIONS = [
-  titleSection("what-is", false),
   {
     name: "customers",
     template: (fm, id) => (id === "customers" ? "title" : "case-study"),
