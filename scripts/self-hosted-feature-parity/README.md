@@ -4,7 +4,7 @@ This directory configures the generator for the self-hosted feature parity page,
 
 ## Generating
 
-Like the SDK and CLI doc generators, this reads a sibling clone of its source repo. Unlike them, `pulumi-service` isn't part of `make update-repos`, because it's private and is often a clone you work in. It stays on its default branch rather than a release tag, so the table tracks what's merged. To clone it, or to update a clean clone that's on its default branch (anything else is left alone):
+Like the SDK and CLI doc generators, this reads a sibling clone of its source repo. Unlike them, `pulumi-service` isn't part of `make update-repos`, because it's private and is often a clone you work in. Locally it stays on its default branch, so the table tracks what's merged; the nightly workflow reads `production` instead (see [In CI](#in-ci)), so to match the published page, check out `production` in your clone. To clone it, or to update a clean clone that's on its default branch (anything else is left alone):
 
 ```bash
 ./scripts/update_repos.sh pulumi-service
@@ -39,7 +39,7 @@ Everything in `generated/` is gitignored because it contains internal informatio
 
 ### In CI
 
-The [Self-hosted feature parity](../../.github/workflows/self-hosted-feature-parity.yml) workflow regenerates the page nightly and on demand, the same way the CLI and SDK docs workflows do: it checks out `pulumi-service` with pulumi-bot's token, runs the raw, internal summary, and public page steps, and opens a PR when the page changes, listing each status change. Like those workflows, the PR auto-merges, with one exception: the page's statuses are computed but its Details are hand-written, so when a row with Details changes status, `status-changes.py` flags it and the PR waits for someone to check the Details still match (and fix `public_notes` if they don't). A manual run against another branch never auto-merges either. Because this repo's workflow logs are public, it doesn't run `--enrich` or `--full-report`, and it never uploads `generated/`. To regenerate from another `pulumi-service` branch, run it by hand with the `pulumi_service_branch` input; it takes branch names only.
+The [Self-hosted feature parity](../../.github/workflows/self-hosted-feature-parity.yml) workflow regenerates the page nightly and on demand, the same way the CLI and SDK docs workflows do: it checks out `pulumi-service` with pulumi-bot's token, runs the raw, internal summary, and public page steps, and opens a PR when the page changes, listing each status change. Like those workflows, the PR auto-merges, with one exception: the page's statuses are computed but its Details are hand-written, so when a row with Details changes status, `status-changes.py` flags it and the PR waits for someone to check the Details still match (and fix `public_notes` if they don't). A manual run against another branch never auto-merges either. Because this repo's workflow logs are public, it doesn't run `--enrich` or `--full-report`, and it never uploads `generated/`. It reads `pulumi-service`'s `production` branch, which is what `pulumi/service:latest` and the dated Docker Hub tags are built from, so the page matches what customers can install; `master` only becomes the `edge` images. To regenerate from another branch, run it by hand with the `pulumi_service_branch` input; it takes branch names only.
 
 ## How status is decided
 
