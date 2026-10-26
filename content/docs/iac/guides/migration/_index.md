@@ -77,7 +77,7 @@ To learn more about how to import resources in this manner, refer to the [import
 
 ### Conversion
 
-The final approach is to convert an existing infrastructure as code program to Pulumi. This preserves existing program structure &mdash; which may be important if you carefully designed the names, modules, and configurability of your existing infrastructure as code layout. This can be difficult if not impossible to reverse-engineer automatically during the import process.
+The final approach is to convert an existing infrastructure as code program to Pulumi. This largely preserves existing program structure &mdash; which may be important if you carefully designed the names, modules, and configurability of your existing infrastructure as code layout. This can be difficult if not impossible to reverse-engineer automatically during the import process. How much of that structure carries over varies by converter.
 
 Conversion takes care of the static program structure and automatically generates a new Pulumi program based on the source infrastructure as code program. This is usually still combined with importing so that you not only get a new program that provisions the right infrastructure, but also adopt existing infrastructure under the management of Pulumi too.
 
