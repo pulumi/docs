@@ -262,9 +262,9 @@ The API service fails to start if the value is `X-Forwarded-For` or `Forwarded`,
 
 ### Trusted proxy ranges
 
-Without a real IP header, the service reads the `X-Forwarded-For` header from right to left, skipping addresses that belong to your trusted proxies. The first address outside the trusted ranges is the client. A client can add entries of its own to the left of the header, but it can't get past the entries your proxies append on the right, so the recorded address can't be forged this way. If the header is missing, or every address in it is trusted, the service uses the address of the connection itself.
+Without a real IP header, the service reads the `X-Forwarded-For` header from right to left, skipping addresses that belong to your trusted proxies. The first address outside the trusted ranges is the client. A client can add entries of its own to the left of the header, but it can't get past the entries your proxies append on the right, so the recorded address can't be forged this way. If every address in the header is trusted and the connection itself is trusted too, as in a deployment that sits entirely on a private network, the service records the leftmost address in the header. If the header is missing, an entry in it isn't a valid IP, or the connection isn't trusted, the service uses the address of the connection itself.
 
-By default, all internal ranges are trusted. You may need to configure this further if you have load balancers in public address spaces, or if you want to prevent some internal clients from spoofing headers.
+By default, all internal ranges are trusted, and a trusted host can choose the address recorded for its own requests by sending an `X-Forwarded-For` header. You may need to configure this further if you have load balancers in public address spaces, or if you want to prevent some internal clients from spoofing headers.
 
 Set `PULUMI_TRUSTED_PROXY_IP_RANGES` when a proxy or load balancer in front of the API connects from a public or otherwise non-default address. Without it, the service takes that proxy's address for the client's.
 
