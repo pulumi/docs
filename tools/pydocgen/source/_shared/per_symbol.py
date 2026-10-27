@@ -16,6 +16,10 @@ It also, at build-finished:
 conf.py options:
   per_symbol_modules   list of dotted module names to split.
   per_symbol_honor_all bool; when True a module's __all__ limits the symbols.
+  per_symbol_grouped_modules dict {module: 'helper_module:function'}; the function returns (slug, title, symbols)
+                       groups and each group becomes one page instead of one page per symbol.
+  per_symbol_undoc_members list of modules whose classes are documented with :undoc-members:.
+  per_symbol_redirect_pages list of landing page names that redirect legacy #anchors (default ['index']).
   per_symbol_sitemap_min_words int; generated pages with fewer rendered words are left out of sitemap.xml (default 25).
 """
 from __future__ import annotations
@@ -69,6 +73,54 @@ def _first_line(modname: str, name: str) -> str:
     return re.sub(r"([\\*_|])", r"\\\1", line)
 
 
+def _directive(app: Sphinx, modname: str, kind: str, name: str) -> str:
+    full = f"{modname}.{name}"
+    directive = {"class": "autoclass", "exception": "autoexception"}.get(kind, "autofunction")
+    body = f".. {directive}:: {full}\n"
+    if kind != "function":
+        body += "   :members:\n"
+        if modname in app.config.per_symbol_undoc_members:
+            body += "   :undoc-members:\n"
+    return body
+
+
+def _table(rows: list[tuple[str, str]], widths: str = "35 65") -> str:
+    out = f".. list-table::\n   :class: per-symbol-index\n   :widths: {widths}\n\n"
+    return out + "".join(f"   * - {a}\n     - {b}\n" for a, b in rows)
+
+
+def _write_page(api: Path, docname: str, title: str, body: str) -> None:
+    (api / f"{docname}.rst").write_text(f"{title}\n{'=' * len(title)}\n\n{body}", encoding="utf-8")
+
+
+def _module_block(app: Sphinx, api: Path, modname: str) -> str:
+    """Write the stub pages for one module and return its overview table + hidden toctree."""
+    symbols = _public_symbols(modname, app.config.per_symbol_honor_all)
+    grouper = app.config.per_symbol_grouped_modules.get(modname)
+    docs: list[str] = []
+    rows: list[tuple[str, str]] = []
+    if grouper:
+        func_mod, func_name = grouper.split(":")
+        groups = getattr(importlib.import_module(func_mod), func_name)(modname, symbols)
+        for slug, title, members in groups:
+            docname = f"{modname}.{slug}"
+            intro = f"{len(members)} classes in ``{modname}``, grouped by the API area that uses them.\n\n"
+            _write_page(api, docname, title, intro + "\n".join(_directive(app, modname, k, n) for k, n in members))
+            docs.append(docname)
+            sample = ", ".join(f"``{n}``" for _, n in members[:4])
+            rows.append((f":doc:`{title} <api/{docname}>`", f"{len(members)} classes, including {sample}"))
+        table = _table(rows)
+    else:
+        for kind, name in symbols:
+            full = f"{modname}.{name}"
+            _write_page(api, full, full, _directive(app, modname, kind, name))
+            docs.append(full)
+            rows.append((f":doc:`{full} <api/{full}>`", _first_line(modname, name)))
+        table = _table(rows)
+    toc = f".. toctree::\n   :hidden:\n   :caption: {modname}\n\n" + "".join(f"   api/{d}\n" for d in docs)
+    return f"{table}\n{toc}"
+
+
 def _generate(app: Sphinx) -> None:
     modules = app.config.per_symbol_modules
     if not modules:
@@ -78,26 +130,16 @@ def _generate(app: Sphinx) -> None:
         shutil.rmtree(api)
     api.mkdir()
     overview = []
-    for modname in modules:
-        symbols = _public_symbols(modname, app.config.per_symbol_honor_all)
+    for modname in modules + list(app.config.per_symbol_grouped_modules):
+        block = _module_block(app, api, modname)
+        # api/<modname>.overview.inc: table + toctree only, for pages that include a single module.
+        (api / f"{modname}.overview.inc").write_text(block, encoding="utf-8")
         overview.append(f"{modname}\n{'=' * len(modname)}\n")
         # Restores the legacy #module-<modname> anchors and py-modindex/.
         overview.append(f".. py:module:: {modname}\n")
         overview.append(f"Classes and functions in ``{modname}``.\n")
-        overview.append(".. list-table::\n   :class: per-symbol-index\n   :widths: 35 65\n")
-        entries = []
-        for kind, name in symbols:
-            full = f"{modname}.{name}"
-            directive = {"class": "autoclass", "exception": "autoexception"}.get(kind, "autofunction")
-            body = f".. {directive}:: {full}\n"
-            if kind != "function":
-                body += "   :members:\n"
-            title = f"{full}"
-            (api / f"{full}.rst").write_text(f"{title}\n{'=' * len(title)}\n\n{body}", encoding="utf-8")
-            entries.append(full)
-            overview.append(f"   * - :doc:`{full} <api/{full}>`\n     - {_first_line(modname, name)}\n")
-        overview.append(f"\n.. toctree::\n   :hidden:\n   :caption: {modname}\n\n" + "".join(f"   api/{e}\n" for e in entries))
-    (Path(app.srcdir) / "api" / "overview.inc").write_text("\n".join(overview), encoding="utf-8")
+        overview.append(block)
+    (api / "overview.inc").write_text("\n".join(overview), encoding="utf-8")
 
 
 def _is_thin(app: Sphinx, docname: str, min_words: int) -> bool:
@@ -129,10 +171,11 @@ def _finish(app: Sphinx, exception: Exception | None) -> None:
 
     # Symbols that moved off the landing page; anchors that stay on index
     # (module-<name>) need no redirect.
+    landing = set(app.config.per_symbol_redirect_pages)
     legacy = {
         name: entry.docname + "/"
         for name, entry in app.env.domaindata["py"]["objects"].items()
-        if entry.docname != "index"
+        if entry.docname not in landing
     }
     (out / "_static" / "legacy-anchors.json").write_text(json.dumps(legacy, sort_keys=True, separators=(",", ":")), encoding="utf-8")
 
@@ -144,6 +187,7 @@ def _page_url(app: Sphinx, pagename: str, templatename: str, context: dict, doct
     yields a canonical that does not match the served URL. Override it.
     """
     context["per_symbol_modules_enabled"] = bool(app.config.per_symbol_modules)
+    context["per_symbol_redirect"] = bool(app.config.per_symbol_modules) and pagename in app.config.per_symbol_redirect_pages
     if not app.config.html_baseurl or app.builder.name != "dirhtml":
         return
     base = app.config.html_baseurl.rstrip("/") + "/"
@@ -162,6 +206,9 @@ def _add_static(app: Sphinx, config: Any) -> None:
 def setup(app: Sphinx) -> dict[str, Any]:
     app.add_config_value("per_symbol_modules", [], "env")
     app.add_config_value("per_symbol_honor_all", False, "env")
+    app.add_config_value("per_symbol_grouped_modules", {}, "env")
+    app.add_config_value("per_symbol_undoc_members", [], "env")
+    app.add_config_value("per_symbol_redirect_pages", ["index"], "env")
     app.add_config_value("per_symbol_sitemap_min_words", 25, "env")
     app.connect("config-inited", _add_static)
     app.add_css_file("per_symbol.css")
