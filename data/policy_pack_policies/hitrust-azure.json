@@ -1,5 +1,5 @@
 {
-  "applied": true,
+  "applied": false,
   "displayName": "",
   "name": "hitrust-azure",
   "policies": [
@@ -4661,6 +4661,6 @@
       "severity": "high"
     }
   ],
-  "version": 8,
-  "versionTag": "2.2.1"
+  "version": 9,
+  "versionTag": "2.3.0"
 }

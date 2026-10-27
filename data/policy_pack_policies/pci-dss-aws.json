@@ -5272,7 +5272,7 @@
       },
       "message": "",
       "name": "s3-bucket-encryption",
-      "remediationSteps": "## Fix: Configure S3 Bucket Server-Side Encryption\n\nCreate a separate `BucketServerSideEncryptionConfigurationV2` resource for your S3 bucket with encryption rules. Use AES256 or KMS encryption:\n\n```typescript\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add encryption configuration resource\nconst bucketEncryption = new aws.s3.BucketServerSideEncryptionConfiguration(\"my-bucket-encryption\", {\n    bucket: bucket.id,\n    rules: [{\n        applyServerSideEncryptionByDefault: {\n            sseAlgorithm: \"aws:kms\", // Enable KMS encryption\n            kmsMasterKeyId: kmsKey.arn, // Specify customer-managed key\n        },\n        bucketKeyEnabled: true, // Enable bucket key for cost optimization\n    }],\n});\n```",
+      "remediationSteps": "## Fix: Configure S3 Bucket Server-Side Encryption\n\nCreate a separate `BucketServerSideEncryptionConfiguration` resource for your S3 bucket with encryption rules. Use AES256 or KMS encryption:\n\n```typescript\nconst bucket = new aws.s3.Bucket(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add encryption configuration resource\nconst bucketEncryption = new aws.s3.BucketServerSideEncryptionConfiguration(\"my-bucket-encryption\", {\n    bucket: bucket.id,\n    rules: [{\n        applyServerSideEncryptionByDefault: {\n            sseAlgorithm: \"aws:kms\", // Enable KMS encryption\n            kmsMasterKeyId: kmsKey.arn, // Specify customer-managed key\n        },\n        bucketKeyEnabled: true, // Enable bucket key for cost optimization\n    }],\n});\n```\n\nOn provider 6.x, use `aws.s3.BucketV2` with `aws.s3.BucketServerSideEncryptionConfigurationV2`; those and an inline encryption\nblock naming a customer-managed key are still accepted.",
       "severity": "high"
     },
     {
@@ -5426,7 +5426,7 @@
       },
       "message": "",
       "name": "s3-bucket-ssl-enforcement-required",
-      "remediationSteps": "## Fix: Add Bucket Policy to Enforce SSL/TLS\n\nAdd a bucket policy that denies all requests made without SSL/TLS encryption:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add bucket policy to enforce SSL/TLS\nconst bucketPolicy = new aws.s3.BucketPolicy(\"my-bucket-policy\", {\n    bucket: bucket.id,\n    policy: bucket.arn.apply(arn => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Sid: \"DenyInsecureTransport\",\n            Effect: \"Deny\",\n            Principal: \"*\",\n            Action: \"s3:*\",\n            Resource: [\n                arn,\n                `${arn}/*`,\n            ],\n            Condition: {\n                Bool: {\n                    \"aws:SecureTransport\": \"false\"  // Deny when SecureTransport is false\n                }\n            }\n        }]\n    }))\n});\n```\n\nWhen `requireTlsVersion` is configured, add a second `Deny` statement carrying\n`Condition: {\"NumericLessThan\": {\"s3:TlsVersion\": \"1.2\"}}` so connections negotiating an older\nprotocol version are refused. The equivalent `policy` written inline on the bucket resource\nitself is accepted too.\n",
+      "remediationSteps": "## Fix: Add Bucket Policy to Enforce SSL/TLS\n\nAdd a bucket policy that denies all requests made without SSL/TLS encryption:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst bucket = new aws.s3.Bucket(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add bucket policy to enforce SSL/TLS\nconst bucketPolicy = new aws.s3.BucketPolicy(\"my-bucket-policy\", {\n    bucket: bucket.id,\n    policy: bucket.arn.apply(arn => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Sid: \"DenyInsecureTransport\",\n            Effect: \"Deny\",\n            Principal: \"*\",\n            Action: \"s3:*\",\n            Resource: [\n                arn,\n                `${arn}/*`,\n            ],\n            Condition: {\n                Bool: {\n                    \"aws:SecureTransport\": \"false\"  // Deny when SecureTransport is false\n                }\n            }\n        }]\n    }))\n});\n```\n\nWhen `requireTlsVersion` is configured, add a second `Deny` statement carrying\n`Condition: {\"NumericLessThan\": {\"s3:TlsVersion\": \"1.2\"}}` so connections negotiating an older\nprotocol version are refused. The equivalent `policy` written inline on the bucket resource\nitself is accepted too. On provider 6.x, use `aws.s3.BucketV2`; it is still accepted.\n",
       "severity": "high"
     },
     {
@@ -6189,6 +6189,6 @@
       "severity": "high"
     }
   ],
-  "version": 6,
-  "versionTag": "3.1.0"
+  "version": 7,
+  "versionTag": "3.1.1"
 }

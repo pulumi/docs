@@ -1,5 +1,5 @@
 {
-  "applied": true,
+  "applied": false,
   "displayName": "",
   "name": "pulumi-best-practices-azure",
   "policies": [
@@ -1685,6 +1685,6 @@
       "severity": "medium"
     }
   ],
-  "version": 5,
-  "versionTag": "1.1.1"
+  "version": 6,
+  "versionTag": "1.1.2"
 }

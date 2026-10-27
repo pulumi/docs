@@ -1421,7 +1421,7 @@
       },
       "message": "",
       "name": "cloud-storage-bucket-public-write-prohibited",
-      "remediationSteps": "Remove IAM policy bindings that grant write permissions to allUsers or allAuthenticatedUsers. Ensure bucket ACLs do not grant WRITE or FULL_CONTROL to public principals.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst bucket = new gcp.storage.Bucket(\"secure-bucket\", {\n    location: \"US\",\n    uniformBucketLevelAccess: true,\n    publicAccessPrevention: \"enforced\",\n});\n\n// Do NOT add IAM bindings like this:\n// new gcp.storage.BucketIAMMember(\"bad-binding\", {\n//     bucket: bucket.name,\n//     role: \"roles/storage.objectCreator\",\n//     member: \"allUsers\",  // NEVER use allUsers/allAuthenticatedUsers\n// });\n```",
+      "remediationSteps": "Remove IAM policy bindings that grant write permissions to allUsers or allAuthenticatedUsers. Ensure bucket ACLs do not grant WRITE or FULL_CONTROL to public principals. Do not apply the `publicReadWrite` predefined ACL.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst bucket = new gcp.storage.Bucket(\"secure-bucket\", {\n    location: \"US\",\n    uniformBucketLevelAccess: true,\n    publicAccessPrevention: \"enforced\",\n});\n\n// Do NOT add IAM bindings like this:\n// new gcp.storage.BucketIAMMember(\"bad-binding\", {\n//     bucket: bucket.name,\n//     role: \"roles/storage.objectCreator\",\n//     member: \"allUsers\",  // NEVER use allUsers/allAuthenticatedUsers\n// });\n```",
       "severity": "critical"
     },
     {
@@ -2692,6 +2692,7 @@
       "configSchema": {
         "properties": {
           "additionalBlockedRoles": {
+            "default": [],
             "description": "Extra roles to block beyond the default set",
             "items": {
               "type": "string"
@@ -2699,6 +2700,7 @@
             "type": "array"
           },
           "allowedFullAccessRoles": {
+            "default": [],
             "description": "Roles that are exempt from the block list for this policy pack",
             "items": {
               "type": "string"
@@ -3998,6 +4000,6 @@
       "severity": "high"
     }
   ],
-  "version": 2,
-  "versionTag": "1.1.1"
+  "version": 3,
+  "versionTag": "1.2.0"
 }

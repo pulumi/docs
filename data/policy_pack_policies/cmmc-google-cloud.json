@@ -1211,6 +1211,7 @@
       "configSchema": {
         "properties": {
           "additionalBlockedRoles": {
+            "default": [],
             "description": "Extra roles to block beyond the default set",
             "items": {
               "type": "string"
@@ -1218,6 +1219,7 @@
             "type": "array"
           },
           "allowedFullAccessRoles": {
+            "default": [],
             "description": "Roles that are exempt from the block list for this policy pack",
             "items": {
               "type": "string"
@@ -2205,6 +2207,6 @@
       "severity": "high"
     }
   ],
-  "version": 2,
-  "versionTag": "1.0.1"
+  "version": 3,
+  "versionTag": "1.1.0"
 }
