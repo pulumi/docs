@@ -116,6 +116,12 @@ claim list (it becomes a pointer line), 🚨 Do-this blocks. Rows always stay.
 A shed block leaves an italic note under its table. `fit_brief_card` does the
 same for the brief's ⚠️ links.
 
+The publish job fits both cards once more (`build-evidence.py --fit`) before
+`pinned-comment.sh` sees them. `build()` runs from the PR head, so a branch cut
+before the budget landed hands over a card nothing measured (#22287's was
+110 KB). The publish job's copy comes from the default branch, and a card that
+already fits comes back untouched.
+
 Nothing is lost. `build()` mirrors every block into the evidence `detail`
 before fitting, and the evidence page renders each finding's text, detail, and
 members. When a refresh finds a fitted card (`was_fitted`),
@@ -155,13 +161,15 @@ Lives as an HTML comment in the bot-owned author comment:
 ## The Sentinel
 
 `sentinel.py` + `.github/workflows/review-sentinel.yml` publish the one
-blocking check-run ("Sentinel"). Deterministic, no model, no AWS, and —
+blocking commit status ("Sentinel", via `publish_verdict.py` — a status,
+not a check-run, because an API-created check-run can land in a check suite
+GitHub later supersedes and hides). Deterministic, no model, no AWS, and —
 because the workflow runs on `pull_request_target` — **never checks out or
 executes PR code** (test-enforced). Gates, each red message naming its fix:
 
 | Gate | Green when | Red says |
 |---|---|---|
-| G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note) | push / `/update-review` / `/new-review` |
+| G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | push / `/update-review` / `/new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `/update-review …` phrasing |
 | G3 right-approver | an APPROVED latest review at head from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); re-run the failed "Build and deploy testing" run or dispatch it at the branch to retry — **not waivable** |
@@ -238,10 +246,16 @@ because a surface only workflow-authored PRs carry tests the renderer and no
 reader. `--update-strip` stays enforcing-only: the ⛔ strip edits the author
 card, which is someone else's comment. External contributors (fork head repo — never the
 author's permission level, which is `none` for GitHub Apps like workprentice)
-skip G1/G2 per config — the approving reviewer's review is the review. A
-`review:trivial` PR that isn't mechanical (prose-flagged) passes G1/G2 on
-triage's `<!-- TRIAGE_PROSE -->` comment instead of a review; G3 still needs
-the human approver the demotion asked for.
+skip G1/G2 per config — the approving reviewer's review is the review. The
+same holds for the PRs the review lane skips by policy, as long as they never
+got a review: a `review:trivial` or `review:frontmatter-only` PR whose diff
+really has that shape (the Sentinel re-runs triage's `classify_pr` on the
+diff rather than trust a label anyone with triage access can apply), and a
+`pulumi-bot` or Dependabot PR on a branch the lane doesn't review (anything
+but `content-review/`, `fix/broken-links-`, `vale/brand-sync-`). Triage's
+`<!-- TRIAGE_PROSE -->` comment rides along as advisory nits; it is required
+only under `review:prose-flagged`, whose nits nobody can see without it. G3
+still needs the human approver in every case.
 
 Every label the evaluator reads must also appear in `review-sentinel.yml`'s label-event filter, or it only takes effect on the next unrelated event. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
@@ -488,10 +502,11 @@ the per-row judgment calls, as a JSON file the analyzer merges.
 | `analyze.py` | One verdict per PR (`stamp` / `judge` / `route` / `blocked`), reason codes (`REASON_CODES`), row actions — every verdict carries one; cross-PR collision clusters (overlap vs same-file), directional link conflicts against the Hugo `aliases:` map (`frontmatter-validate.build_global_maps`), duplicates, stale blog dates, stale brief summaries. A PR whose requested reviewers are humans other than the approver (`GET /user`, or `--approver`) is `handed_off`: it keeps its verdict but the renderer folds it into a "Waiting on others" list, and collisions against it are advisory (`:theirs`). A PR the approver already sent back with nothing pushed since is `waiting_on_author` (`sent-back:<date>`) and folds into "Waiting on the author"; the approver's own PR is `author:self` (route only). `--judgments FILE` merges the model's judge output without lowering a verdict, except that judging every open 🚨 with a resolvable disposition and a note lifts a `blocked` row. A review that did not arrive whole — a missing page, or a card whose tally declares more findings than its sections parsed into (`counts_shortfall`) — is `blocked` with `review:unreadable:<why>` and a `--rerun` unblock, never `judge`, where `--force` would merge over findings nobody saw; a review that merely parsed into nothing with nothing to corroborate it gets the weaker `review:parse-confidence:low` stamp gate. Each cluster carries a recommendation (consolidate / chain / ignore / theirs), and `attach_cluster_actions` puts it on the row it belongs to as a decision: the chain (`--chain C1`, `covers: [next]`) on its lead, only where `only_collisions_hold()` — `gate_fails` records every stamp gate a row missed, and `--chain` approves the lead with `--force`, so a lead held by anything but the cross-PR gates gets no chain button; the consolidation on the newest sweep. `do_next` lists the same moves plus the send-back / close / route / stamp batches and a batch per mechanical unblock (`unblock` / `refresh` / `rerun` / `rerun-checks`), one command each; only `--terminal` prints it — the board has no batch strip. Two invariants hold over `do_next`: no entry names a row the board does not render (built from the same set `render_board` groups), and no entry offers an approval that needed a judgment call. A row a workflow opened (`author:generated`) that still carries open findings and whose branch `act.push_allowed` permits also gets a `handoffs` entry: `/address-review N`, an interactive run rather than an `act.py` fragment. |
 | `render.py` | Board HTML (published as an Artifact), one PR's detail page, or `--terminal`. Server-side rendered, one `esc()`, queue inlined as JSON, no network. Rows are grouped owner → domain and ordered by PR number inside a group. The board's buttons compose one `--act` command (approve buttons fold into a single `--stamp` list, reasons are scoped as `--reason "N=…"`, no fragment repeats); a `handoffs` button composes on a second line of its own (`/address-review N`) and never joins `--act`. There is no batch strip: every decision is a row button, and a chain button (`data-covers`) marks the next link "covered" while it is lit and goes out if a decision is picked there. A blocked row with no unblock says "no action available" and is tallied. `--terminal` carries the same facts — wrapped reasons, blockers, open findings, judgments, every action's fragment, the `do_next` batch commands, cluster members, both waiting lists. Fenced code blocks in a finding render as `<pre>`. |
 | `act.py` | Plan → preview → execute (plan schema 2: every comment, review body and suggestion is rendered into the step at plan time, and execute sends exactly that; identical fragments dedupe, two decisions on one PR are refused). Every write is preceded by a preflight that re-reads the PR (open, head unchanged); a failed one skips that step and the batch continues; `--dry-run` runs the preflights and lists the writes, sending none and never running git. `--stamp` (repeatable, `N:merge` / `N:no-merge` per PR; per-PR preflight immediately before each squash-merge — mergeable, checks green with the Sentinel polled separately after the approval, no changes-requested by anyone else, no unanswered 🚨 on a live re-read of the cards; humans approve-only without `--merge-humans`; `--approve-note` appends a sentence), `--request-changes` (a changes-requested review from the row's judgments), `--chain C1` (the first link through `--stamp`'s own path, the next link's unblock `requires` that merge), `--route`, `--unblock` and `--fix` (a temporary detached worktree, `push HEAD:<branch>`, merge commits only, never the person's checkout; `--fix` re-reads the raw review comments, skips outdated suggestions, applies bottom-up), `--close` (repeatable; `--superseded-by M` or `N:M`), `--reason "N=text"`, `--ask-fix` (one `/update-review fix <ids>` comment naming the row's open findings — the batched counterpart to the `/address-review` handoff; refused when nothing is open), `--refresh`, `--rerun`, `--rerun-checks`, `--render` (`screenshot.mjs`), `--deploy`. A conflicted `--unblock` posts the conflicted files on the PR under `<!-- PR_REVIEW_UNBLOCK_CONFLICT -->`, keyed to the head it tried, so the abort is on the record rather than only in stdout; `collect.unblock_conflict` reads it back while it still describes the head, and the row then carries `unblock:refused:conflict` instead of re-offering a merge that will stop on the same files. Attribution footer on every posted comment except the approval body. |
+| `relay.py` | The board's comment relay. Published with the `comments` capability, the board's **send to Claude**, **confirm & run**, **discard** and **refresh board** buttons post a relay comment to the watching Claude session; `parse()` is the closed grammar those comments are read against (`plan` + one `/pr-review --act` line, validated by `act.build_parser()` with the operator's flags — `--in`, `--plan-out`, `--execute`, `--backend`, `--snapshot-dir`, `--dry-run` — refused; `confirm`/`cancel` + a 16-hex plan digest; `refresh`). `plan_digest()` hashes the plan file's bytes; `act.py --execute PLAN --expect-digest D` runs a plan only while it still hashes to D and is under `MAX_AGE_S` old, and moves it to `*.executed.json` before the first write, so a second Confirm runs nothing. `render.py --pending-plan/--pending-preview/--relay-thread/--last-run` puts the preview and the last report on the board. |
 | `screenshot.mjs` | Playwright screenshot helper (`NODE_PATH=/opt/node22/lib/node_modules` on a web session). |
 
 Tests: `test_gh_client.py`, `test_collect.py`, `test_analyze.py`,
-`test_render.py`, `test_act.py` — pytest, and each script's `--self-test`
+`test_render.py`, `test_act.py`, `test_relay.py` (plus the jsdom harnesses `test_render_composer.js` and `test_render_relay.js`, run from `test_render.py`) — pytest, and each script's `--self-test`
 runs the matching file's `run_standalone()`. Fixtures come from
 `.claude/commands/docs-review/scripts/testdata/` (the v3 author/brief pair,
 the legacy monolith, the normalize-pr* triples) plus in-module PR specs

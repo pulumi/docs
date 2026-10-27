@@ -111,21 +111,15 @@ The `go.mod` file defines the Go project. It sets up the name of the Go module, 
 ```go
 module example.com/file-provider
 
-go 1.24
-
-toolchain go1.24.0
+go 1.26.6
 
 require (
-	github.com/pulumi/pulumi-go-provider v1.0.0
-	github.com/pulumi/pulumi/sdk/v3 v3.167.0
+	github.com/pulumi/pulumi-go-provider v1.7.0
+	github.com/pulumi/pulumi/sdk/v3 v3.271.0
 )
 ```
 
-Once that file is created, download the dependencies using `go get`:
-
-```sh
-$ go get example.com/file-provider
-```
+You'll download these dependencies after you write the provider code.
 
 #### Create `PulumiPlugin.yaml` file
 
@@ -267,7 +261,8 @@ func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileSt
 		return infer.UpdateResponse[FileState]{}, nil
 	}
 
-	if req.State.Content != req.Inputs.Content {
+	_, statErr := os.Stat(req.State.Path)
+	if req.State.Content != req.Inputs.Content || os.IsNotExist(statErr) {
 		f, err := os.Create(req.State.Path)
 		if err != nil {
 			return infer.UpdateResponse[FileState]{}, err
@@ -341,6 +336,12 @@ func (File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *FileS
 	f.OutputField(&state.Force).DependsOn(f.InputField(&args.Force))
 	f.OutputField(&state.Path).DependsOn(f.InputField(&args.Path))
 }
+```
+
+Now that the code exists, download the dependencies and record their checksums in `go.sum`:
+
+```sh
+$ go mod tidy
 ```
 
 The [detailed breakdown](#detailed-breakdown-of-provider-implementation) below walks through this code. First, try it in a Pulumi program.
@@ -597,7 +598,7 @@ func (File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckRespo
 
 ##### The `Update` operation
 
-The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode or not, it overwrites the file with the new contents. `Diff` also reports an update when only `force` changes, so `Update` compares the input contents to the current state and skips the write when they match.
+The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode or not, it overwrites the file with the new contents. `Diff` also reports an update when only `force` changes, so `Update` compares the input contents to the current state and skips the write when they match and the file still exists.
 
 ```go
 func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileState]) (infer.UpdateResponse[FileState], error) {
@@ -605,7 +606,8 @@ func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileSt
 		return infer.UpdateResponse[FileState]{}, nil
 	}
 
-	if req.State.Content != req.Inputs.Content {
+	_, statErr := os.Stat(req.State.Path)
+	if req.State.Content != req.Inputs.Content || os.IsNotExist(statErr) {
 		f, err := os.Create(req.State.Path)
 		if err != nil {
 			return infer.UpdateResponse[FileState]{}, err
@@ -632,7 +634,7 @@ func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileSt
 
 ##### The `Diff` operation
 
-The `Diff` operation compares a resource's recorded state (if any) to the current input values for the resource, to determine what kind of changes need to be made. The `diff` object is a map of property names to the kind of diff operation (if any) that a property needs to have made. The logic of this function is straightforward: compare `req.Inputs.<propertyName>` to `req.State.<propertyName>` and if they aren't equal, add to the diff that this property needs to be updated using `p.PropertyDiff{Kind: p.Update}`. Only include the properties that need to change in the `diff` map. Finally return a `DiffResponse` containing the `diff` map, and set a few other options to configure the update behavior.
+The `Diff` operation compares a resource's recorded state (if any) to the current input values for the resource, to determine what kind of changes need to be made. The `diff` object is a map of property names to the kind of diff operation (if any) that a property needs to have made. The logic of this function is straightforward: compare `req.Inputs.<propertyName>` to `req.State.<propertyName>` and if they aren't equal, add to the diff that this property needs to be updated using `p.PropertyDiff{Kind: p.Update}`. Only include the properties that need to change in the `diff` map. If the path hasn't changed but the file no longer exists on disk, `Diff` reports `path` as added so that `Update` recreates the file. Finally return a `DiffResponse` containing the `diff` map, and set a few other options to configure the update behavior.
 
 ```go
 func (File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState]) (infer.DiffResponse, error) {

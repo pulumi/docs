@@ -111,7 +111,7 @@ Platform team creates policy to enforce current component versions:
 ```typescript
 // policies/component-version-policy.ts
 import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
-import { aws } from "@pulumi/aws";
+import * as aws from "@pulumi/aws";
 
 const MINIMUM_COMPONENT_VERSIONS = {
   "SecureDatabase": "1.2.0",

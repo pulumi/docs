@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-16",
+  "generated": "2026-10-22",
   "source": {
     "path": "pkg/codegen/schema/pulumi.json",
     "repo": "pulumi/pulumi",
-    "url": "https://github.com/pulumi/pulumi/blob/v3.270.0/pkg/codegen/schema/pulumi.json",
-    "version": "v3.270.0"
+    "url": "https://github.com/pulumi/pulumi/blob/v3.272.0/pkg/codegen/schema/pulumi.json",
+    "version": "v3.272.0"
   },
   "types": [
     {

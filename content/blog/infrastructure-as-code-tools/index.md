@@ -6,7 +6,6 @@ updated: 2026-09-21
 draft: false
 meta_desc: "Compare 10 IaC tools for 2026 on pricing, licensing, release cadence, and AI-agent readiness: Pulumi, Terraform, OpenTofu, CDK, Bicep, and more."
 authors:
-    - asaf-ashirov
     - isaac-harris
 tags:
     - infrastructure-as-code
@@ -1095,7 +1094,7 @@ nginx:
 License: Apache 2.0  
 Best For: Container-native infrastructure and application management
 
-While primarily a [container orchestration](/topics/containers/) platform, Kubernetes itself serves as an infrastructure as code tool through its declarative YAML manifests and API-driven resource management.
+While primarily a [container orchestration](/docs/integrations/clouds/kubernetes/) platform, Kubernetes itself serves as an infrastructure as code tool through its declarative YAML manifests and API-driven resource management.
 
 Key Features:
 

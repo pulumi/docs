@@ -5,11 +5,18 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class Deployment </title>
+      <title>Class Deployment — Pulumi .NET API reference</title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class Deployment ">
+      <meta name="title" content="Class Deployment — Pulumi .NET API reference">
     
-    <meta name="description" content="is the entry-point to a Pulumi application. .NET applications should perform all startup logic they need in their Main method and then end with:   static Task&amp;lt;int&amp;gt; Main(string[] args) {     // program initialization code ... return Deployment.Run(async () =&amp;gt; {     // Code that creates resources. });  }   Importantly: Cloud resources cannot be created outside of the lambda passed to any of the  overloads.  Because cloud Resource construction is inherently asynchronous, the result of this function is a  which should then be returned or awaited.  This will ensure that any problems that are encountered during the running of the program are properly reported.  Failure to do this may lead to the program ending early before all resources are properly registered.">
+    <meta name="description" content="is the entry-point to a Pulumi application. .NET applications should perform all startup logic they need in their Main method and then end with: static…">
+    
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Class Deployment — Pulumi .NET API reference">
+    
+    <meta property="og:description" content="is the entry-point to a Pulumi application. .NET applications should perform all startup logic they need in their Main method and then end with: static…">
+      <meta property="og:url" content="https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.deployment.html">
+      <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.deployment.html">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -19,6 +26,34 @@
     
     
     
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "APIReference",
+  "headline": "Class Deployment \u2014 Pulumi .NET API reference",
+  "url": "https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.deployment.html",
+  "programmingLanguage": ".NET",
+  "executableLibraryName": "Pulumi",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "name": "Pulumi",
+    "programmingLanguage": ".NET",
+    "codeRepository": "https://github.com/pulumi/pulumi-dotnet"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pulumi Docs",
+    "url": "https://www.pulumi.com/docs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://www.pulumi.com/"
+  },
+  "assemblyVersion": "3.116.1",
+  "description": "is the entry-point to a Pulumi application. .NET applications should perform all startup logic they need in their Main method and then end with: static\u2026"
+}
+</script>
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
@@ -156,7 +191,7 @@ passed to <a class="xref" href="pulumi.deployment.html#Pulumi_Deployment_RunAsyn
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Deployment/Deployment.cs/#L372">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Deployment/Deployment.cs/#L373">View Source</a>
   </span>
   <a id="Pulumi_Deployment_AwaitPendingRegistrations_" data-uid="Pulumi.Deployment.AwaitPendingRegistrations*"></a>
   <h4 id="Pulumi_Deployment_AwaitPendingRegistrations" data-uid="Pulumi.Deployment.AwaitPendingRegistrations">AwaitPendingRegistrations()</h4>
@@ -1068,11 +1103,11 @@ must run serially; parallel execution is not supported.</p>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.114.1</p>
+    <p class="sdk-version">Version 3.116.1</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Deployment/Deployment_SignalAndWaitForShutdown.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Deployment/Deployment_StateMigration.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

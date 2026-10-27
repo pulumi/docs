@@ -1,5 +1,6 @@
 ---
 title: "AWS"
+title_tag: "AWS Organizations Tag Policies Pack for AWS"
 meta_desc: AWS Organizations Tag Policies pack enforces tag policies configured in AWS Organizations.
 h1: "AWS Organizations Tag Policies"
 menu:

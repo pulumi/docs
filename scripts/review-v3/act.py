@@ -4,6 +4,7 @@
     act.py --in .pr-review-queue.json --stamp 21550,21577 --route 21431:@cnunciato \\
            --unblock 21525 --plan-out .pr-review-plan.json          # plan + preview
     act.py --execute .pr-review-plan.json [--dry-run]                # run it
+    act.py --execute .pr-review-plan.json --expect-digest D         # the board's Confirm (relay.py)
 
 Actions (each a `Step`; every one goes through the same preview, comment
 templates and attribution footer). Nothing here is reachable without an
@@ -128,9 +129,11 @@ DECISION_KINDS = ("stamp", "request-changes", "close", "route", "unrequest")
 REASON_KINDS = ("request-changes", "refresh", "rerun", "close")
 # The Sentinel concludes failure until an approval exists, so it can't gate
 # the approval it waits for. It is left out of the pre-approval rollup and
-# polled on its own between the approval and the merge.
+# polled on its own between the approval and the merge. The wait is for the
+# verdict the approval triggers, which can sit queued for minutes behind a
+# batch of other runs: 90 s refused merges that went green moments later.
 SENTINEL_CHECK = "sentinel"
-SENTINEL_WAIT_S = 90
+SENTINEL_WAIT_S = 600
 SENTINEL_POLL_S = 10
 # A conflicted --unblock used to fail into the run's stdout and nowhere else:
 # nothing was written, so the next collect saw the same `mergeable:dirty` and
@@ -748,7 +751,21 @@ def preflight_head(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
 
 
 def _is_sentinel(run: dict) -> bool:
-    return (run.get("name") or "").strip().lower() == SENTINEL_CHECK
+    """The Sentinel's job check-run, its commit status (`context`), or a
+    check-run it published before it switched to a status."""
+    return (run.get("name") or run.get("context") or "").strip().lower() == SENTINEL_CHECK
+
+
+def _status_as_run(s: dict) -> dict:
+    """A commit status in check-run shape, so the Sentinel wait can order it
+    against the job's own check-run and read it the same way."""
+    state = s.get("state") or ""
+    return {"name": s.get("context"),
+            "status": "in_progress" if state == "pending" else "completed",
+            "conclusion": {"success": "success", "failure": "failure",
+                           "error": "action_required"}.get(state),
+            "started_at": s.get("created_at") or "", "completed_at": s.get("updated_at") or "",
+            "id": s.get("id") or 0}
 
 
 def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
@@ -762,7 +779,8 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
     if ms not in STAMP_STATES:
         return False, f"mergeable_state={ms}", detail
     runs = [r for r in gh.check_runs(head) if not _is_sentinel(r)]
-    checks = collect.checks_rollup(runs, gh.commit_statuses(head), gh.workflow_paths(head))
+    statuses = [st for st in gh.commit_statuses(head) if not _is_sentinel(st)]
+    checks = collect.checks_rollup(runs, statuses, gh.workflow_paths(head))
     if checks["state"] != "green":
         return False, f"checks {checks['state']}: {', '.join(checks['failing'] or checks['pending'])}", detail
     # Latest review per user wins. The approver's own changes-requested is
@@ -804,24 +822,37 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
     return True, "ok", detail
 
 
-def wait_for_sentinel(gh: GhClient, head: str, sleep=time.sleep) -> tuple[bool, str]:
+def wait_for_sentinel(gh: GhClient, head: str, sleep=time.sleep, since: str = "") -> tuple[bool, str]:
     """After the approval, before the merge: the Sentinel re-evaluates on the
-    review event, so give it a bounded wait and refuse the merge if it lands
+    review event, so wait for that verdict and refuse the merge if it lands
     red. Absent, neutral or green all proceed; still pending at the deadline
-    refuses — re-running the step retries the merge without re-approving."""
+    refuses — re-running the step retries the merge without re-approving.
+
+    `since` is the approval's `submitted_at`. A red verdict that completed
+    before it is the pre-approval one, which is red by construction, so the
+    wait keeps polling for the re-evaluation instead of refusing on it. A
+    verdict with no timestamp to compare is taken at its word."""
     attempts = SENTINEL_WAIT_S // SENTINEL_POLL_S
+    stale = False
     for attempt in range(attempts + 1):
-        runs = [r for r in gh.check_runs(head) if _is_sentinel(r)]
+        runs = ([r for r in gh.check_runs(head) if _is_sentinel(r)]
+                + [_status_as_run(st) for st in gh.commit_statuses(head) if _is_sentinel(st)])
         if not runs:
             return True, "no Sentinel check on the head"
         run = max(runs, key=collect._run_order)
         if run.get("status") == "completed":
             c = run.get("conclusion") or ""
-            if c in collect.FAILED_CONCLUSIONS:
+            if c not in collect.FAILED_CONCLUSIONS:
+                return True, f"Sentinel {c or 'completed'}"
+            done = run.get("completed_at") or ""
+            stale = bool(since and done and done < since)
+            if not stale:
                 return False, f"Sentinel check concluded {c}"
-            return True, f"Sentinel {c or 'completed'}"
         if attempt < attempts:
             sleep(SENTINEL_POLL_S)
+    if stale:
+        return False, (f"Sentinel had not re-evaluated since the approval after {SENTINEL_WAIT_S}s; "
+                       "re-run the step to retry the merge")
     return False, f"Sentinel check still pending after {SENTINEL_WAIT_S}s; re-run the step to retry the merge"
 
 
@@ -974,17 +1005,21 @@ def _stamp(gh: GhClient, s: Step, *, dry_run: bool = False, sleep=time.sleep) ->
     me = norm_login(gh.me())
     skipped = []
     approval = s.args.get("body") or approval_body(s.author_type, "high", s.args.get("note", ""))
-    if _already_approved(gh.reviews(s.pr), me, head):
+    reviews = gh.reviews(s.pr)
+    if _already_approved(reviews, me, head):
         skipped.append("already approved at this head")
+        approved_at = max((r.get("submitted_at") or "" for r in reviews
+                           if norm_login((r.get("user") or {}).get("login")) == me
+                           and r.get("state") == "APPROVED"), default="")
     else:
-        gh.create_review(s.pr, "APPROVE", approval)
+        approved_at = (gh.create_review(s.pr, "APPROVE", approval) or {}).get("submitted_at") or ""
     tail = f" [{'; '.join(skipped)}]" if skipped else ""
     if not s.args.get("merge"):
         return True, "approved (not merged)" + tail, False
     if dry_run:
         tail += " [Sentinel wait skipped: no approval was posted]"
     else:
-        ok, why = wait_for_sentinel(gh, head, sleep)
+        ok, why = wait_for_sentinel(gh, head, sleep, since=approved_at)
         if not ok:
             return False, f"approved, not merged: {why}" + tail, False
     gh.merge(s.pr, head, "squash")
@@ -1364,6 +1399,10 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--plan-out", default=str(_REPO_ROOT / ".pr-review-plan.json"))
     ap.add_argument("--execute", metavar="PLAN.json", help="run a plan written earlier")
     ap.add_argument("--dry-run", action="store_true", help="run the preflights and list every write without sending one; never runs git")
+    ap.add_argument("--expect-digest", metavar="D",
+                    help="with --execute: run the plan only if its file still hashes to D (the board's Confirm), is fresh, and has not run; "
+                         "the plan is moved aside afterwards so the same Confirm cannot run it twice (relay.py)")
+    ap.add_argument("--preview-out", metavar="TXT", help="also write the preview to this file (the board shows it beside Confirm)")
     ap.add_argument("--backend", default="auto", choices=("auto", "gh", "rest", "snapshot"))
     ap.add_argument("--snapshot-dir")
     ap.add_argument("--self-test", action="store_true")
@@ -1378,10 +1417,22 @@ def main(argv: list[str] | None = None) -> int:
     queue = json.loads(Path(args.inp).read_text()) if Path(args.inp).exists() else {}
     if args.execute:
         try:
+            if args.expect_digest:
+                import relay  # noqa: PLC0415
+                try:
+                    relay.check_confirmable(args.execute, args.expect_digest)
+                except relay.RelayError as exc:
+                    raise ActError(str(exc)) from exc
             plan_ = Plan.from_json(json.loads(Path(args.execute).read_text()))
         except ActError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2
+        if args.expect_digest and not args.dry_run:
+            # Spent before the first write, not after the last: a batch that
+            # dies halfway must not be runnable again from the same Confirm.
+            spent = Path(args.execute).with_suffix(".executed.json")
+            Path(args.execute).replace(spent)
+            print(f"plan {args.expect_digest} spent → {spent}", file=sys.stderr)
         gh = GhClient(plan_.repo, args.backend, snapshot_dir=args.snapshot_dir)
         results = execute(plan_, gh, queue=queue, dry_run=args.dry_run)
         sys.stdout.write(report(results, writes=args.dry_run))
@@ -1392,7 +1443,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"error: {exc}", file=sys.stderr)
         return 2
     Path(args.plan_out).write_text(json.dumps(plan_.to_json(), indent=1) + "\n")
-    sys.stdout.write(preview(plan_, queue))
+    text = preview(plan_, queue)
+    if args.preview_out:
+        Path(args.preview_out).write_text(text)
+    sys.stdout.write(text)
     print(f"plan → {args.plan_out}", file=sys.stderr)
     return 0
 

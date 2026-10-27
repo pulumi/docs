@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """The Sentinel — deterministic merge-gate evaluator for the v3 review workflow.
 
-One blocking check-run answers "is this PR mergeable?" from five gates:
+One blocking commit status answers "is this PR mergeable?" from five gates:
 
   G1 review-ran         a current review exists at head SHA (or none is
-                        required: mechanical PRs, fork PRs; a trivial PR
-                        may stand on triage's prose-check comment)
+                        required: mechanical PRs, fork PRs, and the PRs
+                        the review lane skips by policy — see below)
   G2 findings-answered  every 🚨/❓ finding on the author card carries a
                         REVIEW_STATE disposition (or is checked off)
   G3 right-approver     an approver who can clear the lane: under
@@ -68,12 +68,35 @@ same-repo branches that get the full review, and treating those as
 external skipped G1/G2 on every one of them (2026-09-12 → 09-14). A PR
 whose head-repo fact can't be read is internal (the stricter gates).
 
-`review:trivial` short-circuits the review lane, and `review:prose-flagged`
-(triage's Haiku/Vale pass) demotes the PR from mechanical — so without a
-stand-in G1 would stay red forever on a PR nothing will ever review. The
-stand-in is triage's own `<!-- TRIAGE_PROSE -->` comment: with it present
-G1/G2 pass (advisory nits only, nothing to answer) and G3 still wants the
-human approver the demotion asked for.
+G1 asks for the review the pipeline means to run, never for one it has
+decided not to. claude-code-review.yml skips ready PRs by policy, and each
+skip needs its own answer here, or G1 stays red forever on a PR nothing
+will ever review, and the only ways out are a waive or a forced full
+review of a one-line change (#22417 was waived over a `date:` bump; #22429,
+a clean trivial fix, sat red):
+
+  - `review:trivial` / `review:frontmatter-only`. The label is triage's
+    word, but anyone with triage access can apply it, so the Sentinel
+    re-derives the shape from the diff with triage's own `classify_pr` and
+    passes G1 only when the diff really is one of the two. A diff that
+    doesn't fit is red, with the fix (`/new-review`). Neither shape implies
+    mechanical: that bar is stricter (a deletions cap, the claims signal,
+    only `updated`/`tags` in frontmatter), so "a clean trivial PR is
+    mechanical anyway" was never safe to assume. Triage posts its
+    `<!-- TRIAGE_PROSE -->` comment only when the prose check finds
+    something, so the comment is advisory rather than evidence — except
+    under `review:prose-flagged`, which promises nits only the comment can
+    show, so a flagged PR whose comment is gone stays red.
+  - Bot authors the lane skips (`REVIEW_LANE_SKIPPED_BOTS`) on branches it
+    doesn't review (`REVIEW_LANE_REVIEWED_BOT_BRANCHES`), e.g. the
+    marketing-web editions sync. Mirrored from the workflow; a test pins
+    the two together.
+  - `review:oversized`, which G5 owns.
+
+Every one of them still needs G3's human approver: a skipped review moves
+the reading to the approver, it never removes it. A review card at any
+head keeps a PR on the review track instead, because a stale card with an
+open finding must not pass on a skip label.
 
 I/O lives behind the `Gh` wrapper (subprocess `gh api`) so tests
 substitute a stub. Team-membership
@@ -397,7 +420,7 @@ class Verdict:
     # Whether `review:waived` was honored. The pinned status comment used to
     # read only `gates`, so on a waived PR it announced "2 of 5 gates need
     # attention before this can merge" and recommended the label that was
-    # already applied and already working — while the check-run next to it
+    # already applied and already working — while the status next to it
     # said success. A gate surface that contradicts the gate is the failure
     # the `_GATE_BLURB` phrasebook exists to prevent.
     waived: bool = False
@@ -580,6 +603,12 @@ def _strip_brief_for_summary(body: str) -> str:
 
 PROSE_FLAGGED_LABEL = "review:prose-flagged"
 TRIVIAL_LABEL = "review:trivial"
+FRONTMATTER_ONLY_LABEL = "review:frontmatter-only"
+# claude-code-review.yml's bot-author skip, verbatim: these authors' PRs get
+# no review unless the head branch starts with one of these prefixes.
+# `test_bot_skip_mirrors_the_review_lane` pins both to the workflow text.
+REVIEW_LANE_SKIPPED_BOTS = ("pulumi-bot", "dependabot[bot]")
+REVIEW_LANE_REVIEWED_BOT_BRANCHES = ("content-review/", "fix/broken-links-", "vale/brand-sync-")
 # Named, not inlined, so `test_label_event_filter_covers_every_label_the_
 # evaluator_reads` can derive the workflow's trigger list from the evaluator
 # instead of restating it.
@@ -638,6 +667,39 @@ def _mechanical_and_claims(
         return ok, claims, reasons
     except Exception as exc:  # noqa: BLE001 — fail closed, never crash the gate
         return False, False, [f"classifier error (treated as substantive): {exc}"]
+
+
+def _shortcut_shape(pr_detail: dict, files: list[dict]) -> str | None:
+    """The review-lane shortcut the diff itself qualifies for under triage's
+    own bar (`classify_pr`): "trivial", "frontmatter-only", or None.
+
+    The skip labels are triage's verdict on this same bar, so re-deriving it
+    is what lets G1 honor a skip without trusting a label anyone with triage
+    access can apply. Fail-closed: a file GitHub sends without a patch reads
+    as binary (no shortcut), and a classifier error is None.
+    """
+    try:
+        diff_text = _replay.build_pr_diff(files)
+        pr_data = _replay.build_pr_data(pr_detail, files)
+        tc = _replay.tc
+        file_flags = [tc.classify_file(p, d) for p, d in tc.split_files(diff_text)]
+        shape = tc.classify_pr(pr_data, file_flags)
+    except Exception:  # noqa: BLE001 — fail closed, never crash the gate
+        return None
+    if shape.get("trivial"):
+        return "trivial"
+    if shape.get("frontmatter_only"):
+        return "frontmatter-only"
+    return None
+
+
+def _review_lane_skipped_bot(pr_detail: dict) -> str | None:
+    """The author, when the review lane's bot-author rule skips this PR."""
+    author = (pr_detail.get("user") or {}).get("login") or ""
+    branch = (pr_detail.get("head") or {}).get("ref") or ""
+    if author in REVIEW_LANE_SKIPPED_BOTS and not branch.startswith(REVIEW_LANE_REVIEWED_BOT_BRANCHES):
+        return author
+    return None
 
 
 def _author_card_nothing_blocks(body: str) -> bool:
@@ -830,9 +892,10 @@ def _stale_clause(stale_approvers: list[dict], head_sha: str) -> str:
 def _stamp_report_only(verdict: Verdict) -> Verdict:
     """Turn a real verdict into its report-only twin, in place.
 
-    Report-only has three surfaces and they have to agree: the check-run's
-    conclusion (`neutral`, which GitHub counts as passing), its title and
-    summary in the merge box, and the pinned status comment. `would_be` is
+    Report-only has three surfaces and they have to agree: the published
+    status (`neutral`, which publish_verdict.py posts as a passing
+    `success`), its description in the merge box, and the pinned status
+    comment. `would_be` is
     what every one of them reports, and the only place the true conclusion
     survives, so it is set before `conclusion` is overwritten.
     """
@@ -901,15 +964,32 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # before triage's label landed — is closed on the triage side: it
     # re-dispatches the Sentinel whenever it moves the label.
     oversized = OVERSIZED_LABEL in labels
-    trivial = TRIVIAL_LABEL in labels
-    triage_prose = _find_comment(comments, TRIAGE_PROSE_MARKER) if trivial else None
-    trivial_standin = False  # set when triage's prose comment satisfies G1
+    # The lanes the review pipeline skips by policy (module docstring). Only
+    # for a PR that never got a review: a card or legacy comment at any head
+    # keeps it on the review track.
+    never_reviewed = author_card is None and legacy is None
+    skip_label = next((lbl for lbl in (TRIVIAL_LABEL, FRONTMATTER_ONLY_LABEL) if lbl in labels), None)
+    triage_prose = _find_comment(comments, TRIAGE_PROSE_MARKER) if skip_label else None
+    skipped_bot = _review_lane_skipped_bot(pr)
+    skip_standin = ""  # names the skipped lane when it satisfies G1
+    skip_note = ""     # and the summary line that says so
 
     gates: list[Gate] = []
     blocking_ids: list[str] = []
 
     # G1 review-ran -------------------------------------------------------
-    if oversized:
+    if not files:
+        # GitHub hasn't computed the diff yet, or the branch nets to nothing.
+        # First, because every lane below would otherwise wave it through:
+        # the review lane skips it (`empty-diff`), G3 has nothing to route,
+        # and on a fork PR G1/G2 skip too — a fully green Sentinel with nobody
+        # involved, and on a transient empty read, over a real diff.
+        gates.append(Gate(
+            "G1 review-ran", "red",
+            "This PR changes no files, so there is nothing to review. If the diff "
+            "is still being computed, push again to re-evaluate.",
+        ))
+    elif oversized:
         gates.append(Gate("G1 review-ran", "skip", "oversized — see G5"))
     elif "review-ran" in skip_gates:
         gates.append(Gate(
@@ -926,27 +1006,54 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             "G1 review-ran", "ok",
             "legacy (v2) review current at head (grandfathered)",
         ))
-    elif trivial and triage_prose is not None and author_card is None and legacy is None:
-        # The review lane skipped this PR as trivial; prose-flagged (or a
-        # classifier disagreement) keeps it out of the mechanical lane. Triage
-        # posted the prose nits it found — that comment is the review. Only
-        # for a PR that never got a review: a card or legacy comment at any
-        # head keeps the PR on the review track (a stale card with open
-        # findings must not pass on the trivial label).
-        trivial_standin = True
+    elif skip_label and never_reviewed:
+        # The review lane skipped this PR on the label, and it is not
+        # mechanical (that bar is stricter). The diff, not the label, decides
+        # whether the skip was legitimate.
+        shape = _shortcut_shape(pr, files)
+        if shape is None:
+            gates.append(Gate(
+                "G1 review-ran", "red",
+                f"No current review for `{head_sha[:9]}` — the review lane skipped this "
+                f"PR as `{skip_label}`, but its diff is neither trivial nor "
+                "frontmatter-only, so it needs the review. Comment `/new-review` to run it.",
+            ))
+        elif PROSE_FLAGGED_LABEL in labels and triage_prose is None:
+            gates.append(Gate(
+                "G1 review-ran", "red",
+                f"No current review for `{head_sha[:9]}` — the review lane skipped this "
+                f"PR as `{skip_label}`, and triage flagged prose issues "
+                f"(`{PROSE_FLAGGED_LABEL}`) but its prose-check comment is missing, so "
+                "nobody can see them. Comment `/new-review` to run a full review.",
+            ))
+        else:
+            skip_standin = f"{shape} change"
+            if triage_prose is not None:
+                gates.append(Gate(
+                    "G1 review-ran", "ok",
+                    f"{skip_standin} — the review lane skipped it (`{skip_label}`); triage's "
+                    "prose check stands in for the review (advisory nits in the triage comment)",
+                ))
+                skip_note = (f"_{skip_standin.capitalize()}: triage's prose-check comment stands "
+                             "in for the review; a human approver is still required._")
+            else:
+                gates.append(Gate(
+                    "G1 review-ran", "ok",
+                    f"{skip_standin} — the review lane skipped it (`{skip_label}`) and "
+                    "triage's prose check left no nits",
+                ))
+                skip_note = (f"_{skip_standin.capitalize()}: the review lane skips these, so the "
+                             "approving reviewer's review is the review._")
+    elif skipped_bot and never_reviewed:
+        branch = (pr.get("head") or {}).get("ref") or ""
+        skip_standin = f"`{skipped_bot}` automation PR"
         gates.append(Gate(
             "G1 review-ran", "ok",
-            "trivial change — triage's prose check stands in for the review "
-            "(advisory nits in the triage comment)",
+            f"the review lane does not review `{skipped_bot}` PRs from `{branch}`, so "
+            "the approver's review is the review",
         ))
-    elif trivial and author_card is None and legacy is None:
-        gates.append(Gate(
-            "G1 review-ran", "red",
-            f"No current review for `{head_sha[:9]}` — the review lane skipped this "
-            "PR as `review:trivial`, and triage's prose-check comment is missing. "
-            "Comment `/new-review` to run a full review, or a maintainer "
-            "removes `review:trivial` and pushes.",
-        ))
+        skip_note = (f"_Automation PR: the review lane does not review `{skipped_bot}` PRs "
+                     "from this branch, so the approving reviewer's review is the review._")
     else:
         # Not "push to refresh": a push refreshes the review automatically
         # only when it touches lines a 🚨 finding flagged. On a clean review
@@ -1059,8 +1166,8 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                                   "the legacy review is not current — see G1"))
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "legacy review clean"))
-    elif trivial_standin:
-        gates.append(Gate("G2 findings-answered", "ok", "trivial — no findings to answer"))
+    elif skip_standin:
+        gates.append(Gate("G2 findings-answered", "ok", f"{skip_standin} — no findings to answer"))
     else:
         gates.append(Gate("G2 findings-answered", "skip", "no review present — see G1"))
 
@@ -1387,11 +1494,8 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             "_Classified mechanical under the tightened bar — no model review required. "
             "A human approver is still required._"
         )
-    if trivial_standin:
-        parts.append(
-            "_Trivial change: triage's prose-check comment stands in for the review; "
-            "a human approver is still required._"
-        )
+    if skip_note:
+        parts.append(skip_note)
     table = ["| Gate | Status | Detail |", "|---|---|---|"]
     icon = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
     for g in gates:
@@ -1531,8 +1635,8 @@ def render_status_comment(verdict: Verdict) -> str:
             "> [!WARNING]",
             "> ## ⚠️ Preview mode — this check is NOT blocking your merge",
             "> ",
-            f"> The Sentinel is in **preview (report-only) mode**: its check-run concludes "
-            f"`neutral` whatever the gates below say, so nothing here gates this PR. The rows "
+            f"> The Sentinel is in **preview (report-only) mode**: its status check passes "
+            f"whatever the gates below say, so nothing here gates this PR. The rows "
             f"are informational and **safe to ignore for now**. It *would* have concluded "
             f"`{verdict.would_be}`.",
             "> ",
@@ -1562,7 +1666,7 @@ def render_status_comment(verdict: Verdict) -> str:
     # waive branch exists to prevent.
     effective = verdict.would_be or verdict.conclusion
     if verdict.waived and effective == "success":
-        # Say what the check-run says. The rows below still show what the
+        # Say what the status says. The rows below still show what the
         # gates found — that is the audit trail a waive is supposed to leave
         # — but the headline must not tell an author they are blocked when
         # they are not, nor recommend the break-glass twice.
@@ -1708,8 +1812,8 @@ def main() -> int:
     # A read failure must PUBLISH action_required, not kill the process.
     # Without this, an uncaught SentinelDataError from get_pr / list_files /
     # list_issue_comments / list_reviews failed the step, so the publish
-    # steps were skipped and NOTHING was written — and because check-runs
-    # are keyed on (name, head sha), whatever was published earlier at this
+    # steps were skipped and NOTHING was written — and because the verdict
+    # is keyed on (name, head sha), whatever was published earlier at this
     # head stayed the latest. The fail-open sequence: PR green at head H, an
     # approval is dismissed, the re-run 502s, and the stale `success` at H
     # still stands. The docstring above promises action_required for exactly
@@ -1727,12 +1831,12 @@ def main() -> int:
         )
         print(json.dumps(verdict.to_json(), indent=2))
         return 0
-    # publish_guard.py protects the CHECK-RUN, and runs as a later workflow
+    # publish_guard.py protects the STATUS, and runs as a later workflow
     # step — but the two comment writes below happen inside this process,
     # before the guard has said anything. So a run evaluating head A while
     # the author pushes B could finish second and rewrite both comments to
     # A's verdict, after which the guard correctly declined to publish the
-    # check-run: a green check next to two comments saying the opposite, and
+    # status: a green check next to two comments saying the opposite, and
     # nothing rewrites them until an unrelated event, because
     # `render_status_comment` is a pure function of the verdict.
     #

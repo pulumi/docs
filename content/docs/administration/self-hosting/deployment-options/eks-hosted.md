@@ -16,72 +16,72 @@ aliases:
 pulumi_cloud_feature: self-hosting
 ---
 
-The [EKS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted) installer is used to deploy the self-hosted Pulumi Cloud in Amazon Elastic Kubernetes Service (EKS).
+The [EKS-hosted installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted) deploys the self-hosted Pulumi Cloud in Amazon Elastic Kubernetes Service (EKS).
 
 ## Prerequisites
 
-The customer is required to provide and manage the following:
+You must provide and manage the following:
 
-* Route53 hosted zone.
+* An Amazon Route 53 hosted zone.
 
-## EKS-Hosted Deployment
+## EKS-hosted deployment
 
 The EKS-hosted installation of Pulumi deploys the following services:
 
-* EKS - Managed Amazon Elastic Kubernetes Service Cluster
-* RDS Aurora - Managed MySQL DB for persistent state and automated replication and snapshotting.
+* EKS - Managed Amazon Elastic Kubernetes Service cluster.
+* RDS Aurora - Managed MySQL database for persistent state, with automated replication and snapshotting.
 * S3 - Object storage for checkpoints and policy packs.
 * CloudWatch Logs - Centralized logging for all cluster pods.
-* Route53 - Managed DNS records.
-* ALB - Managed L4/application traffic and TLS termination.
-* ACM - Managed Public TLS certificates.
+* Route 53 - Managed DNS records.
+* ALB - Managed application load balancing and TLS termination.
+* ACM - Managed public TLS certificates.
 
 ### Pulumi deploying Pulumi
 
-This installer uses Pulumi to deploy Pulumi Cloud. In this case, use the Pulumi CLI with a DIY backend (e.g. S3) to deploy all services listed above to stand up the self-hosted Pulumi Cloud. The installation package includes Pulumi project code so that you can deploy the service by running `pulumi up`.
+This installer uses Pulumi to deploy Pulumi Cloud. You use the Pulumi CLI with a DIY backend (for example, S3) to deploy all services listed above. The installation package is a set of Pulumi projects, and you deploy each one by running `pulumi up` from its folder.
 
-To this end, you need to set up the following:
+Before you start, set up the following:
 
-* [Download and install the Pulumi CLI](/docs/install/) on your workstation
-* [Login to S3-compatible backend](/docs/iac/concepts/state-and-backends/#logging-into-and-out-of-state-backends)
+* [Download and install the Pulumi CLI](/docs/install/) on your workstation.
+* [Log in to an S3-compatible backend](/docs/iac/operations/stack-management/using-a-diy-backend/#aws-s3).
 
-### Deployment Steps
+### Deployment steps
 
 See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted/README.md) file provided with the installer package for detailed deployment steps.
 
-## EKS-Hosted System Management and Maintenance
+## EKS-hosted system management and maintenance
 
-### Pulumi Cloud Updates
+### Pulumi Cloud updates
 
 When deploying the service, it is recommended to pin the Pulumi Cloud image tag to a specific version. See the installer's [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted/README.md) file to set the `imageTag` configuration property for the installer to use.
 
-When ready to update the Pulumi Cloud containers to use a different version, do the following:
+When you're ready to update the Pulumi Cloud containers to a different version, run the following from the installer's `90-pulumi-service` project folder:
 
-* `pulumi login` to the DIY backend as chosen above when installing the self-hosted service.
-* `pulumi config set imageTag {image tag}` to set the version you want to use.
-* `pulumi up` to deploy the updates.
+1. `pulumi login` to the DIY backend you chose when installing the self-hosted service.
+1. `pulumi config set imageTag {image tag}` to set the version you want to use.
+1. `pulumi up` to deploy the updates.
 
-### Database Maintenance
+### Database maintenance
 
-The installer configures the RDS backend database for replication and checkpointing. So no additional maintenance is needed by the customer.
+The installer configures the RDS backend database for replication and automated backups, so the customer doesn't need to perform additional database maintenance.
 
-### Blob Storage Maintenance
+### Blob storage maintenance
 
 The service automatically creates backups of checkpoint files. However, the customer may want to enable AWS Backup to periodically backup the S3 buckets created by the installer.
 The buckets will have names of the form:
 
-* `pulumi-checkpoint-XXX`
-* `pulumi-policy-XXX`
+* `{baseName}-checkpoints-XXX`
+* `{baseName}-policypacks-XXX`
+* `{baseName}-events-XXX`
 
-### Updating the EKS Cluster Kubernetes Version
+### Updating the EKS cluster Kubernetes version
 
-If your EKS-hosted installation was deployed on Kubernetes version 1.19 or later, you can update the `clusterConfig:ClusterVersion` configuration property to the desired version.
-Then, rerun the `npm run install -- update --` command to update the cluster with the new version.
+The Kubernetes version of the EKS cluster is set by the `clusterVersion` configuration property of the installer's `05-eks-cluster` project. To update the cluster to a new version, run the following from the `05-eks-cluster` project folder:
+
+1. `pulumi login` to the DIY backend you chose when installing the self-hosted service.
+1. `pulumi config set clusterVersion {version}` to set the Kubernetes version you want to use.
+1. `pulumi up` to update the cluster.
 
 {{% notes type="info" %}}
-AWS requires moving one Kubernetes release at a time. So if moving from 1.19 to 1.21, perform the steps twice: once to move to 1.20 and wait for that to complete before moving to 1.21.
-{{% /notes %}}
-
-{{% notes type="info" %}}
-If running Pulumi Cloud with Kubernetes version 1.18, please refer to the installation package README for details on how to upgrade to V2.0 of the EKS installer before upgrading the Kubernetes version.
+AWS requires moving one Kubernetes release at a time. For example, to move from 1.19 to 1.21, perform the steps twice: once to move to 1.20, and then, after that update completes, again to move to 1.21.
 {{% /notes %}}

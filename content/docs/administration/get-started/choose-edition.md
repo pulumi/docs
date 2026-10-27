@@ -22,7 +22,7 @@ Choose an edition based on the collaboration, automation, and governance capabil
 
 ### Free
 
-Choose Free when one person needs core infrastructure as code, state management, Pulumi Deployments, and basic Pulumi ESC. Free has no managed-resource limit. It does not include Pulumi Neo, Resource Search, or Property Search.
+Choose Free when one person needs core infrastructure as code, state management, Pulumi Deployments, and basic Pulumi ESC. Free has no managed-resource limit. It does not include Pulumi Neo, Resource Search, or Property Search. You can own only one Free organization at a time.
 
 ### Essentials
 
@@ -77,7 +77,7 @@ Pay monthly with a credit card. This option provides flexibility and is ideal fo
 Annual commitment pricing is available on Pro and Enterprise only. Pay upfront with invoicing for a committed amount of usage. [Contact us](/contact/) to discuss commitment pricing.
 
 {{% notes type="info" %}}
-Both billing options include detailed usage insights through the Billing & usage page in your organization settings. Track IaC resources, deployment minutes, ESC secrets, and download usage history. You can also set [Neo usage limits](/docs/ai/neo/usage-limits/) to cap spend on Pulumi Neo. Only organization administrators and designated [billing administrators](/docs/administration/concepts/billing-managers/) can access these pages. You'll also receive monthly usage reports via email.
+Both billing options include detailed usage insights through the Billing & usage page in your organization settings. Track IaC resources, deployment minutes, ESC secrets, and download usage history. You can also set [Neo usage limits](/docs/ai/concepts/neo/usage-limits/) to cap spend on Pulumi Neo. Only organization administrators and designated [billing administrators](/docs/administration/concepts/billing-managers/) can access these pages. You'll also receive monthly usage reports via email.
 {{% /notes %}}
 
 ## Getting started with your chosen model

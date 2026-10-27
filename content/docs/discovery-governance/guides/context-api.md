@@ -25,13 +25,13 @@ The Context API is in public preview. The availability notice at the top of this
 
 - You have [Pulumi CLI](/docs/install/) v3.243.0 or later and are logged in with `pulumi login`.
 - Your role grants the [`resources:search` permission](/docs/administration/reference/rbac-scopes/org-settings/#resources). The default Member and Admin roles grant this permission.
-- The organization used for the request has Context API access. `pulumi api` uses the organization for your currently selected stack, or your default organization when no stack is selected. Check the default with `pulumi org get-default` and change it with `pulumi org set-default <your-org>`. If the selected organization does not have access, the API returns `402 Payment Required` and lists any of your other organizations that do.
+- The organization used for the request has Context API access. `pulumi api` uses the organization for your currently selected stack, or your default organization when no stack is selected. Check the default with `pulumi org get-default` and change it with `pulumi org set-default <your-org>`. If the selected organization does not have access, the API returns `402 Payment Required` and lists any of your other organizations that do. On a self-hosted installation, see [Context API on self-hosted Pulumi Cloud](/docs/administration/self-hosting/components/search/#context-api) for its prerequisites and error codes.
 
 Pulumi Cloud [role-based access control (RBAC)](/docs/administration/concepts/rbac/) filters each response to the resources, stacks, and cloud accounts that the user or token making the request is permitted to read.
 
 ## Ask questions through an AI agent
 
-You can use [Pulumi Neo](/docs/ai/neo/), Claude Code, Cursor, Codex, or another agent that can run authenticated Pulumi CLI commands. Neo uses the Context API out of the box. To equip another agent, give it this command to fetch the current Markdown primer:
+You can use [Pulumi Neo](/docs/ai/concepts/neo/), Claude Code, Cursor, Codex, or another agent that can run authenticated Pulumi CLI commands. Neo uses the Context API out of the box. To equip another agent, give it this command to fetch the current Markdown primer:
 
 ```bash
 pulumi api GetGraphQuerySchema
@@ -82,6 +82,8 @@ curl -X POST "https://api.pulumi.com/api/insights/$(pulumi org get-default)/grap
     -H "Content-Type: application/json" \
     --data @query.json
 ```
+
+On a self-hosted installation, replace `https://api.pulumi.com` with your API endpoint.
 
 The example responses on this page are deliberately small. They show valid response shapes with fictional IDs and values, and their `resultCount` values match the entries shown. A real response can contain many more array entries. This editorial shortening is different from `meta.resultMode: "truncated"`, which means an engine cap was reached or the search backend returned a partial answer, so the API cannot certify the underlying result as complete. The example `schemaVersion` is also illustrative.
 

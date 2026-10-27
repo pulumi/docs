@@ -23,7 +23,7 @@ The [GKE-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installe
 The GKE-hosted installation of Pulumi deploys the following services:
 
 * Virtual Network and Subnets
-* SQL Server and DB for persistent state and automated replication and snapshotting
+* MySQL server and database for persistent state and automated snapshotting
 * Buckets for checkpoints and policy packs
 
 ### Pulumi deploying Pulumi

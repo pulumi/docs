@@ -6,7 +6,7 @@ h1: Languages & SDKs
 docs_home: true
 notitle: true
 norightnav: true
-description: <p>The Pulumi ESC SDKs let you manage environments and read their configuration and secrets from your own code. For what the SDKs are for and when to use config instead, see <a href="/docs/esc/concepts/sdks/">SDKs</a>.</p>
+description: <p>The Pulumi ESC SDKs let you manage environments and read their configuration and secrets from your own code. For what the SDKs are for and when to use config instead, see <a href="/docs/esc/concepts/sdks/">SDKs</a>. To read secrets from a running application, see <a href="/docs/esc/guides/fetch-secrets-at-runtime/">Fetch secrets at runtime with the ESC SDK</a>.</p>
 menu:
   esc:
     identifier: esc-languages-sdks

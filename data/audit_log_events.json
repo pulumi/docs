@@ -565,6 +565,16 @@
       "authenticationFailure": false,
       "category": "environments",
       "deprecated": false,
+      "description": "An ESC environment was opened as an import of another environment.",
+      "displayName": "Environment Import Open",
+      "event": "environment-import-open",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "deprecated": false,
       "description": "An ESC environment minted an OIDC token for an external service through the fn::open::oidc provider.",
       "displayName": "Environment OIDC Token Issued",
       "event": "environment-oidc-token-issued",
@@ -1149,6 +1159,26 @@
       "displayName": "Personal Token Created for OIDC Issuer",
       "event": "personal-token-created-for-oidc-issuer",
       "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "deprecated": false,
+      "description": "A policy exception was created.",
+      "displayName": "Policy Exception Created",
+      "event": "policy-exception-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "deprecated": false,
+      "description": "An active policy exception was removed.",
+      "displayName": "Policy Exception Removed",
+      "event": "policy-exception-removed",
+      "requiresOrgAdmin": true,
       "requiresStackAdmin": false
     },
     {

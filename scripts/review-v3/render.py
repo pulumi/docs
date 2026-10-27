@@ -15,6 +15,15 @@ from queue.json (a `<script type="application/json">` block, the
 render-evidence-html.py pattern), and the only thing it produces is a
 command for the person to run.
 
+Published with the `comments` capability, the board can also hand that
+command to the Claude session watching it (relay.py): **send to Claude**
+posts it as a relay comment, the session plans it and republishes the board
+with the plan's preview and digest (`--pending-plan`), and **confirm & run**
+sends that digest back, which is the only thing that executes a plan from
+the page. **refresh board** asks for a fresh collect. Without the capability,
+or with no session watching, the buttons stay hidden or disabled and the
+board is the copy-paste worksheet it always was.
+
 Every value that reaches the page goes through `esc()` exactly once,
 server-side; the vanilla JS only toggles `hidden` and concatenates
 `data-cmd` attributes it never parses. Theme-aware through CSS custom
@@ -60,7 +69,7 @@ BUCKET_LABEL = {
 }
 HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
-PRIMARY_CODES = ("warnings", "outstanding", "cluster", "directional", "duplicate", "mergeable", "checks",
+PRIMARY_CODES = ("warnings", "outstanding", "cluster", "directional", "duplicate", "mergeable", "checks", "sentinel",
                  "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate",
                  "sent-back", "approved", "approved-by-owner", "unblock")
 # Whole codes (not families) that change what you'd click: `author:self`
@@ -370,15 +379,43 @@ def is_config_chip(r: str) -> bool:
     return r.startswith(CONFIG_CODES)
 
 
-def _chip(r: str) -> str:
+_GATE_MARK = {"ok": "✓", "red": "✗", "error": "?"}
+
+
+def sentinel_title(r: str, sentinel_info: dict | None) -> str:
+    """The `sentinel:P/E` tooltip: the count, then one line per gate that
+    applies, with the Sentinel's own words for the ones not passing."""
+    passing, _, applicable = r.partition(":")[2].partition("/")
+    lines = [f"{passing} of {applicable} Sentinel merge gates that apply to this PR pass at its head "
+             "(gates that don't apply are left out). The Sentinel is red until an approval exists, "
+             "so a missing approval alone is not a problem."]
+    for g in (sentinel_info or {}).get("gates") or []:
+        if g.get("state") == "skip":
+            continue
+        line = f"{_GATE_MARK.get(g.get('state'), '?')} {g.get('id')} {g.get('name')}"
+        if g.get("state") != "ok" and g.get("detail"):
+            line += f": {re.sub(r'[`*]', '', g['detail'])}"
+        lines.append(line)
+    return "\n".join(lines) + f" ({r})"
+
+
+def _chip(r: str, pr: dict | None = None) -> str:
     code = r.split(":", 1)[0]
     cls = f"chip r-{esc(code)}" + (" theirs" if r.endswith(":theirs") else "") + (" cfg" if is_config_chip(r) else "")
-    text = CHIP_LABEL.get(r) or (r if len(r) <= 48 else r[:45] + "…")
+    if code == "sentinel":
+        passing, _, applicable = r.partition(":")[2].partition("/")
+        if passing != applicable:
+            cls += " short"
+        text = f"sentinel {passing}/{applicable}"
+        title = sentinel_title(r, (pr or {}).get("sentinel"))
+    else:
+        text = CHIP_LABEL.get(r) or (r if len(r) <= 48 else r[:45] + "…")
+        title = chip_title(r)
     marker = '<span class="cfgdot" aria-hidden="true">·cfg</span>' if is_config_chip(r) else ""
-    return f'<span class="{cls}" title="{esc(chip_title(r))}">{esc(text)}{marker}</span>'
+    return f'<span class="{cls}" title="{esc(title)}">{esc(text)}{marker}</span>'
 
 
-def chips(reasons: list[str]) -> str:
+def chips(reasons: list[str], pr: dict | None = None) -> str:
     """Two tiers: actionable chips inline, informational ones behind a
     "why" fold so a row reads as a decision, not a wall of tags."""
     primary, info = [], []
@@ -388,11 +425,11 @@ def chips(reasons: list[str]) -> str:
         code = r.split(":", 1)[0]
         is_primary = (code in PRIMARY_CODES and not (code == "merging-over" and ":approved-by:" in r)) or r in PRIMARY_VALUES
         (primary if is_primary else info).append(r)
-    out = "".join(_chip(r) for r in primary)
+    out = "".join(_chip(r, pr) for r in primary)
     if info:
         out += (f'<details class="why" title="{len(info)} more reasons for this verdict that would not change what you click. '
                 'Open it to see them.">'
-                f'<summary>why · {len(info)}</summary>') + "".join(_chip(r) for r in info) + "</details>"
+                f'<summary>why · {len(info)}</summary>') + "".join(_chip(r, pr) for r in info) + "</details>"
     return out
 
 
@@ -998,7 +1035,7 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
         "<div>",
         f'<h4>{esc(pr.get("title"))} {verdict_chip(pr)}</h4>',
         f'<div class="meta">{meta_line(pr)}</div>',
-        f'<div class="chips">{chips(pr.get("reasons") or [])}</div>',
+        f'<div class="chips">{chips(pr.get("reasons") or [], pr)}</div>',
         f'<p class="sum">{esc(pr.get("summary") or "")}</p>' if pr.get("summary") else "",
         guide_block(queue, pr),
         preview_links(pr),
@@ -1405,7 +1442,37 @@ def waiting_on_author_html(prs: list[dict], queue: dict | None = None) -> str:
             '<ul>' + items + "</ul></section>")
 
 
-def render_board(queue: dict, *, artifact: bool = False, include_handed_off: bool = False) -> str:
+def relay_html(relay: dict | None) -> str:
+    """The pending plan the session wrote after a **send to Claude**, and the
+    report of the last batch the board confirmed. Both are server-rendered
+    text: the page shows them and sends back nothing but the digest."""
+    if not relay:
+        return ""
+    out = ""
+    if relay.get("digest"):
+        d = esc(relay["digest"])
+        manual = esc(f"python3 scripts/review-v3/act.py --execute .pr-review-plan.json --expect-digest {relay['digest']}")
+        out += (f'<section class="relay pending" id="relaypending" data-digest="{d}" data-thread="{esc(relay.get("thread") or "")}">'
+                f'<div class="sec-head"><h2>Planned, waiting for you</h2><span class="count">plan {d}</span>'
+                f'<span class="note">planned {esc(relay.get("planned_at") or "")}</span></div>'
+                '<p class="note">Claude planned the command you sent. These are the exact writes, bodies included, and nothing has gone to '
+                'GitHub yet. <b>confirm &amp; run</b> executes this plan and only this one: a re-plan, an hour passing, or a second '
+                'confirm is refused. Every step still re-reads its PR first, so a PR that moved since is skipped, not forced.</p>'
+                f'<pre class="relaypreview">{esc(relay.get("preview") or "")}</pre>'
+                '<div class="acts"><button class="btn p p-go" type="button" data-relay="confirm" disabled '
+                'title="Send the digest of this plan to the Claude session watching the board, which then executes exactly the writes above.">confirm &amp; run</button>'
+                '<button class="btn" type="button" data-relay="cancel" disabled title="Tell the session to throw this plan away. Nothing is written.">discard</button>'
+                '<span class="relaystatus" aria-live="polite"></span></div>'
+                f'<p class="note relayfallback">No session watching? Run it yourself: <code>{manual}</code></p>'
+                '</section>')
+    if relay.get("last_run"):
+        out += ('<details class="relay done" open><summary>Last run from this board'
+                f'{" · " + esc(relay.get("ran_at")) if relay.get("ran_at") else ""}</summary>'
+                f'<pre class="relaypreview">{esc(relay["last_run"])}</pre></details>')
+    return out
+
+
+def render_board(queue: dict, *, artifact: bool = False, include_handed_off: bool = False, relay: dict | None = None) -> str:
     all_prs = queue.get("prs") or []
     prs = all_prs if include_handed_off else [p for p in all_prs if not parked(p)]
     counts = queue.get("counts") or {}
@@ -1440,11 +1507,11 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         tally=f'<div class="tally">{tally}</div>' + help_html() + '<div class="progress" id="progress"></div>',
         filters=filter_bar({**queue, "prs": prs}),
         clusters="",
-        body=("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + clusters_html(queue)
+        body=relay_html(relay) + ("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + clusters_html(queue)
              + ("" if include_handed_off else waiting_html(all_prs, queue) + waiting_on_author_html(all_prs, queue)),
         cmd=cmd_footer(),
         payload=payload,
-        script=SCRIPT,
+        script=SCRIPT + RELAY_SCRIPT,
     )
 
 
@@ -1482,7 +1549,13 @@ def cmd_footer() -> str:
             '<div class="cmd" id="handcmd"></div>'
             '<button class="btn" id="copyhand">copy</button></div>'
             '<div class="cmdrow"><div class="cmd" id="cmd">$ /pr-review --act</div>'
-            '<button class="btn" id="copy">copy</button><button class="btn" id="clear">clear</button></div>'
+            '<button class="btn" id="copy">copy</button><button class="btn" id="clear">clear</button>'
+            '<button class="btn p" id="relayrun" type="button" hidden title="Post this command as a comment and send it to the Claude '
+            'session watching the board. Claude plans it -- read-only -- and the board reloads with every write it would make and a '
+            'confirm button. Nothing reaches GitHub until you confirm.">send to Claude</button>'
+            '<button class="btn" id="relayrefresh" type="button" hidden title="Ask the Claude session watching the board to collect '
+            'the queue again and republish this page. Read-only.">refresh board</button></div>'
+            '<div class="cmdrow relayrow" id="relayrow" hidden><span class="relaystate" id="relaystate" aria-live="polite"></span></div>'
             '</div>')
 
 
@@ -1652,6 +1725,7 @@ button.pr.rowfold{cursor:pointer;color:var(--ink-3);font-weight:500;font-size:11
 .chips{display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 6px}
 .chip{font-size:10.5px;border:1px solid var(--line-2);border-radius:2px;padding:1px 6px;color:var(--ink-2);background:var(--surface-2);white-space:nowrap}
 .chip.r-collision,.chip.r-directional,.chip.r-duplicate,.chip.r-checks,.chip.r-mergeable{border-color:var(--stop);color:var(--stop)}
+.chip.r-sentinel{border-color:var(--go);color:var(--go)}.chip.r-sentinel.short{border-color:var(--hold);color:var(--hold)}
 .empty{margin:1rem 0;color:var(--ink-2);font-size:.95rem}.empty .btn{margin-left:.5rem}
 .chip.r-warnings,.chip.r-outstanding,.chip.r-scrutiny,.chip.r-blog,.chip.r-size,.chip.r-shape,.chip.r-review{border-color:var(--hold);color:var(--hold)}
 .chip.r-route{border-color:var(--route);color:var(--route)}
@@ -1741,6 +1815,13 @@ td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top;color:
 .cmd{flex:1;background:var(--ink);color:var(--ground);border-radius:3px;padding:8px 12px;font-size:12.5px;overflow-x:auto;white-space:nowrap}
 .empty{color:var(--ink-3)}
 @media (max-width:600px){.mrow{grid-template-columns:1fr}.mrow>div:last-child{grid-column:1/-1}}
+.relay{margin:18px 0;background:var(--surface);border:1px solid var(--line-2);border-left:3px solid var(--go);border-radius:3px;padding:12px 14px;box-shadow:var(--shadow)}
+.relay.done{border-left-color:var(--ink-3);padding:8px 14px}
+.relay.done>summary{cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2)}
+.relaypreview{max-height:420px;overflow:auto}
+.relaystatus,.relaystate{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3)}
+.relaystatus.err,.relaystate.err{color:var(--stop)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
 """
 
 SCRIPT = r"""
@@ -1970,6 +2051,107 @@ SCRIPT = r"""
 })();
 """
 
+# The comment relay (relay.py). Everything here is behind
+# `claude.use("comments")`: a page served without the capability, a saved
+# copy, and jsdom all get null (or no window.claude at all), and the buttons
+# simply never appear. The page sends three things and nothing else -- the
+# composed command, a plan digest it was handed server-side, or "refresh" --
+# and it never reads a reply: the session answers by republishing the board.
+RELAY_SCRIPT = r"""
+(function(){
+  var PREFIX = 'pr-review relay: ';
+  var cmdEl = document.getElementById('cmd');
+  var run = document.getElementById('relayrun'), refresh = document.getElementById('relayrefresh');
+  var row = document.getElementById('relayrow'), state = document.getElementById('relaystate');
+  var pending = document.getElementById('relaypending');
+  var pbtns = pending ? [].slice.call(pending.querySelectorAll('button[data-relay]')) : [];
+  var pstatus = pending ? pending.querySelector('.relaystatus') : null;
+  var comments = null, busy = false;
+  function say(el, text, err){
+    if (!el) return;
+    el.textContent = text; el.classList.toggle('err', !!err);
+    if (el === state) { delete el.dataset.reason; if (row) row.hidden = !text; }
+  }
+  var REASONS = {
+    no_session: 'No Claude session is watching this board, so there is no one to send to. Open /pr-review in Claude Code, or copy the command.',
+    writers_only: 'Only the board’s editors can send it to Claude. Copy the command instead.'
+  };
+  function setAvail(avail, why){
+    [run, refresh].forEach(function(b){ if (!b) return; b.hidden = avail === 'off'; b.disabled = busy || avail !== 'available'; b.dataset.why = why || ''; });
+    pbtns.forEach(function(b){ b.disabled = busy || avail !== 'available'; });
+    // Only a reason this function wrote is cleared here: a send's own
+    // error stays on screen until the next send replaces it.
+    if (avail !== 'available' && avail !== 'off') { say(state, why || '', false); if (state) state.dataset.reason = '1'; }
+    else if (state && state.dataset.reason) { delete state.dataset.reason; say(state, '', false); }
+  }
+  function check(){
+    if (!comments || typeof comments.canSendToClaude !== 'function' || typeof comments.sendToClaude !== 'function') { setAvail('off'); return Promise.resolve('off'); }
+    return comments.canSendToClaude().then(function(v){
+      var known = v === 'available' || v === 'no_session' || v === 'writers_only';
+      setAvail(known ? v : 'off', REASONS[v]);
+      return known ? v : 'off';
+    }, function(){ setAvail('off'); return 'off'; });
+  }
+  var ERRORS = {
+    consent_required: 'Not sent: the page needs your OK to comment as you. Press again and allow it.',
+    forbidden: 'Commenting from the page is off here. Copy the command instead.',
+    claude_unavailable: 'Not sent: no Claude session could take it. Nothing was posted.',
+    rate_limited: 'Not sent: too many sends in a row. Wait a moment.',
+    invalid: 'Not sent: the message was refused as malformed.'
+  };
+  function send(text, target, el, okText){
+    if (busy) return;
+    busy = true; [run, refresh].concat(pbtns).forEach(function(b){ if (b) b.disabled = true; });
+    say(el, 'sending…', false);
+    var go = target.threadId ? Promise.resolve({ threadId: target.threadId, text: text })
+                             : comments.anchorFor(target.el).then(function(a){ return { anchor: a, text: text }; });
+    go.then(function(t){ return comments.sendToClaude(t); }).then(function(){
+      say(el, okText, false);
+    }, function(e){
+      busy = false;
+      var code = e && e.code;
+      say(el, ERRORS[code] || ('Not sent' + (code ? ' (' + code + ')' : '') + '. Copy the command instead.'), true);
+      if (code === 'forbidden') { setAvail('off'); return; }
+      check();
+    });
+  }
+  function command(){ return cmdEl ? cmdEl.textContent.replace(/^\$ /, '') : ''; }
+  if (run) run.addEventListener('click', function(){
+    var c = command();
+    if (!/ --/.test(c.replace(/^\/pr-review --act/, ''))) { say(state, 'Nothing is lit: pick a decision on a row first.', true); return; }
+    check().then(function(v){
+      if (v !== 'available') return;
+      send(PREFIX + 'plan\n' + c, { el: cmdEl }, state, 'Sent. Claude is planning it (read-only); the board reloads with the preview and a confirm button.');
+    });
+  });
+  if (refresh) refresh.addEventListener('click', function(){
+    check().then(function(v){
+      if (v !== 'available') return;
+      send(PREFIX + 'refresh', { el: refresh }, state, 'Sent. Claude is collecting the queue again; the board reloads when it is done.');
+    });
+  });
+  pbtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var kind = b.dataset.relay, digest = pending.dataset.digest, thread = pending.dataset.thread;
+      check().then(function(v){
+        if (v !== 'available') return;
+        send(PREFIX + kind + ' ' + digest, thread ? { threadId: thread } : { el: pending }, pstatus,
+             kind === 'confirm' ? 'Confirmed. Claude is running plan ' + digest + '; the board reloads with the results.'
+                                : 'Discarded. Claude is throwing the plan away.');
+      });
+    });
+  });
+  var use = window.claude && typeof window.claude.use === 'function' ? window.claude.use('comments') : null;
+  if (!use) return;
+  Promise.resolve(use).then(function(c){
+    comments = c;
+    check();
+    window.addEventListener('focus', function(){ if (!busy) check(); });
+    document.addEventListener('visibilitychange', function(){ if (!document.hidden && !busy) check(); });
+  }, function(){});
+})();
+"""
+
 # The page comes in two wrappings from one body: a standalone document
 # (what render.py writes to disk and screenshot.mjs opens), and the
 # fragment form the Artifact tool publishes — it supplies the document
@@ -2014,8 +2196,27 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--artifact", action="store_true", help="emit the fragment form the Artifact tool wraps (no html/head/body)")
     ap.add_argument("--include-handed-off", action="store_true", help="show PRs waiting on another reviewer as full rows")
     ap.add_argument("--pr", type=int, help="with --terminal: one row")
+    ap.add_argument("--pending-plan", metavar="PLAN.json", help="board: show this plan's preview and a confirm button (the relay's plan step)")
+    ap.add_argument("--pending-preview", metavar="TXT", help="the preview act.py wrote with --preview-out for --pending-plan")
+    ap.add_argument("--relay-thread", metavar="ID", help="the comment thread the plan came from; confirm replies into it")
+    ap.add_argument("--last-run", metavar="TXT", help="board: show this act.py report as the last run from the board")
     ap.add_argument("--self-test", action="store_true")
     return ap
+
+
+def relay_state(args: argparse.Namespace) -> dict | None:
+    out: dict = {}
+    if args.pending_plan:
+        import relay  # noqa: PLC0415
+        plan = json.loads(Path(args.pending_plan).read_text())
+        out.update(digest=relay.plan_digest(args.pending_plan), planned_at=plan.get("created_at"),
+                   preview=Path(args.pending_preview).read_text() if args.pending_preview else "",
+                   thread=args.relay_thread or "")
+    if args.last_run:
+        lr = Path(args.last_run)
+        out.update(last_run=lr.read_text(),
+                   ran_at=datetime.fromtimestamp(lr.stat().st_mtime, timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
+    return out or None
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -2026,7 +2227,8 @@ def main(argv: list[str] | None = None) -> int:
     queue = json.loads(Path(args.inp).read_text())
     did = False
     if args.board:
-        Path(args.board).write_text(render_board(queue, artifact=args.artifact, include_handed_off=args.include_handed_off))
+        relay_ = relay_state(args)
+        Path(args.board).write_text(render_board(queue, artifact=args.artifact, include_handed_off=args.include_handed_off, relay=relay_))
         print(f"board → {args.board}", file=sys.stderr)
         did = True
     if args.detail is not None:

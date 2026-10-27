@@ -5,11 +5,18 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Namespace Pulumi </title>
+      <title>Namespace Pulumi — Pulumi .NET API reference</title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Namespace Pulumi ">
+      <meta name="title" content="Namespace Pulumi — Pulumi .NET API reference">
     
     
+    <meta name="description" content="API reference for Namespace Pulumi in Pulumi, the infrastructure-as-code platform&#x27;s .NET SDK.">
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Namespace Pulumi — Pulumi .NET API reference">
+    
+    
+      <meta property="og:url" content="https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.html">
+      <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.html">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -19,6 +26,34 @@
     
     
     
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "APIReference",
+  "headline": "Namespace Pulumi \u2014 Pulumi .NET API reference",
+  "url": "https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.html",
+  "programmingLanguage": ".NET",
+  "executableLibraryName": "Pulumi",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "name": "Pulumi",
+    "programmingLanguage": ".NET",
+    "codeRepository": "https://github.com/pulumi/pulumi-dotnet"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pulumi Docs",
+    "url": "https://www.pulumi.com/docs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://www.pulumi.com/"
+  },
+  "assemblyVersion": "3.116.1",
+  "description": "API reference for Namespace Pulumi in Pulumi, the infrastructure-as-code platform's .NET SDK."
+}
+</script>
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
@@ -498,6 +533,21 @@ At most one of Value and SecretValue will be set.</p>
       <h4><a class="xref" href="pulumi.stashargs.html">StashArgs</a></h4>
       <section><p>The set of arguments for constructing a <a class="xref" href="pulumi.stash.html">Stash</a> resource.</p>
 </section>
+      <h4><a class="xref" href="pulumi.statemigrationargs.html">StateMigrationArgs</a></h4>
+      <section><p><a class="xref" href="pulumi.statemigrationargs.html">StateMigrationArgs</a> contains the prior state of the resource and its descendants in
+<a href="https://pulumi-developer-docs.readthedocs.io/latest/docs/references/deployment-schema.html#pulumi-resource-state">checkpoint resource format</a>.</p>
+<p>
+This API is experimental and may change.
+</p>
+</section>
+      <h4><a class="xref" href="pulumi.statemigrationresult.html">StateMigrationResult</a></h4>
+      <section><p><a class="xref" href="pulumi.statemigrationresult.html">StateMigrationResult</a> is returned by a state migration callback when it changes the state.
+Every resource present in the old state must either be returned in <a class="xref" href="pulumi.statemigrationresult.html#Pulumi_StateMigrationResult_NewState">NewState</a> under the same URN
+or have an entry in <a class="xref" href="pulumi.statemigrationresult.html#Pulumi_StateMigrationResult_Successors">Successors</a>, but not both.</p>
+<p>
+This API is experimental and may change.
+</p>
+</section>
       <h4><a class="xref" href="pulumi.stringasset.html">StringAsset</a></h4>
       <section><p>StringAsset is a kind of asset produced from an in-memory UTF8-encoded string.</p>
 </section>
@@ -562,13 +612,29 @@ actually being created. The effect will be as though those <code>properties</cod
 constructor.  If the transformation returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, this indicates that the
 resource will not be transformed.</p>
 </section>
+      <h4><a class="xref" href="pulumi.statemigration.html">StateMigration</a></h4>
+      <section><p><a class="xref" href="pulumi.statemigration.html">StateMigration</a> is the callback signature for the <a class="xref" href="pulumi.resourceoptions.html#Pulumi_ResourceOptions_StateMigrations">StateMigrations</a>
+resource option.</p>
+<p>
+This API is experimental and may change.
+</p>
+<p>
+A callback receives the prior state of the resource and its descendants, and may return a replacement subtree
+for the engine to use before diffing those resources. Returning <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> leaves the callback's
+input state unchanged and allows later callbacks to run. Callbacks must be idempotent.
+</p>
+<p>
+Migrations run during updates and previews when prior state exists, including state matched through aliases.
+Migrations rewrite state only, they do not create, import, or modify physical resources.
+</p>
+</section>
 
 
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.114.1</p>
+    <p class="sdk-version">Version 3.116.1</p>
               <div class="contribution">
                 <ul class="nav">
                 </ul>

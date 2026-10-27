@@ -31,7 +31,6 @@ items:
             href: /product/neo/
             description: Meet Neo, our AI-powered infrastructure engineering agent
             icon: custom/pulumi-neo
-            iconWeight: fill
             track: header-product-neo
           - label: Secrets & configuration
             href: /product/secrets-management/

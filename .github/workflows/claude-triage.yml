@@ -157,7 +157,8 @@ jobs:
           # while claude-code-review.yml reads `gh pr view` (`app/workprentice`),
           # so both forms are listed in every file. Keep this list in sync with
           # the matching checks in claude-code-review.yml and claude-update.yml.
-          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "app/github-copilot" \
+             || "$AUTHOR" == "eon-pulumi-agent[bot]" || "$AUTHOR" == "app/eon-pulumi-agent" \
              || "$AUTHOR" == "workprentice[bot]" || "$AUTHOR" == "app/workprentice" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "✓ Bot $AUTHOR is whitelisted for triage"
@@ -407,17 +408,20 @@ jobs:
           if (( ${#ARGS[@]} > 0 )); then
             gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}" || true
           fi
-          # 7b. The Sentinel reads review:oversized and review:trivial, and
-          # listens for their `labeled` events -- but a GITHUB_TOKEN label
-          # write fires none. Its `opened` run beat this label on #21936, so
-          # G5 said "not oversized" beside the label for good. The label is
-          # the Sentinel's source of truth (a size computed there would flip
-          # PRs already reviewed and approved under the normal gates), so
-          # triage re-evaluates it whenever that label moves.
+          # 7b. The Sentinel reads review:oversized, review:trivial,
+          # review:frontmatter-only, and review:prose-flagged, and listens for
+          # their `labeled` events -- but a GITHUB_TOKEN label write fires
+          # none. Its `opened` run beat this label on #21936, so G5 said "not
+          # oversized" beside the label for good. The label is the Sentinel's
+          # source of truth (a size computed there would flip PRs already
+          # reviewed and approved under the normal gates), so triage
+          # re-evaluates it whenever one of those labels moves.
           # (review:oversized is re-added on every run -- see step 5 -- so
           # "moved" means it wasn't on the PR before this run.)
           MOVED=""
-          [[ " ${ADD_LIST[*]:-} ${REMOVE_LIST[*]:-} " == *" review:trivial "* ]] && MOVED=1
+          for SENTINEL_LABEL in review:trivial review:frontmatter-only review:prose-flagged; do
+            [[ " ${ADD_LIST[*]:-} ${REMOVE_LIST[*]:-} " == *" $SENTINEL_LABEL "* ]] && MOVED=1
+          done
           if [[ "$OVERSIZED" == "true" ]] \
              && ! echo "$PR_DATA" | jq -e '.labels[] | select(.name == "review:oversized")' >/dev/null; then
             MOVED=1

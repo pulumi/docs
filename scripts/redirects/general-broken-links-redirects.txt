@@ -1,9 +1,9 @@
 containers/index.html|/docs/integrations/clouds/kubernetes/
 docs/guides/index.html|/docs/iac/
 docs/iac/guides/index.html|/docs/iac/
-docs/iac/guides/ai-integration/index.html|/docs/ai/mcp-server/
+docs/iac/guides/ai-integration/index.html|/docs/ai/guides/set-up-mcp-server/
 docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/index.html|/docs/iac/guides/migration/
-what-is/infrastructure-as-code/index.html|/what-is/what-is-infrastructure-as-code/
+what-is/infrastructure-as-code/index.html|/topics/infrastructure-as-code/
 docs/support/troubleshooting/debugging/images/automatic-1.png|/docs/iac/operations/debugging/images/automatic-1.png
 docs/support/troubleshooting/debugging/images/automatic-2.png|/docs/iac/operations/debugging/images/automatic-2.png
 docs/support/troubleshooting/debugging/images/stack-selection-1.png|/docs/iac/operations/debugging/images/stack-selection-1.png

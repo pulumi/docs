@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Delegate StateMigration — Pulumi .NET API reference</title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Delegate StateMigration — Pulumi .NET API reference">
+    
+    <meta name="description" content="is the callback signature for the resource option. This API is experimental and may change. A callback receives the prior state of the resource and its…">
+    
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Delegate StateMigration — Pulumi .NET API reference">
+    
+    <meta property="og:description" content="is the callback signature for the resource option. This API is experimental and may change. A callback receives the prior state of the resource and its…">
+      <meta property="og:url" content="https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.statemigration.html">
+      <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.statemigration.html">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "APIReference",
+  "headline": "Delegate StateMigration \u2014 Pulumi .NET API reference",
+  "url": "https://www.pulumi.com/docs/reference/pkg/dotnet/pulumi/pulumi.statemigration.html",
+  "programmingLanguage": ".NET",
+  "executableLibraryName": "Pulumi",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "name": "Pulumi",
+    "programmingLanguage": ".NET",
+    "codeRepository": "https://github.com/pulumi/pulumi-dotnet"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pulumi Docs",
+    "url": "https://www.pulumi.com/docs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://www.pulumi.com/"
+  },
+  "assemblyVersion": "3.116.1",
+  "description": "is the callback signature for the resource option. This API is experimental and may change. A callback receives the prior state of the resource and its\u2026"
+}
+</script>
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.StateMigration">
+
+
+  <h1 id="Pulumi_StateMigration" data-uid="Pulumi.StateMigration" class="text-break">Delegate StateMigration</h1>
+  <div class="markdown level0 summary"><p><a class="xref" href="pulumi.statemigration.html">StateMigration</a> is the callback signature for the <a class="xref" href="pulumi.resourceoptions.html#Pulumi_ResourceOptions_StateMigrations">StateMigrations</a>
+resource option.</p>
+<p>
+This API is experimental and may change.
+</p>
+<p>
+A callback receives the prior state of the resource and its descendants, and may return a replacement subtree
+for the engine to use before diffing those resources. Returning <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> leaves the callback's
+input state unchanged and allows later callbacks to run. Callbacks must be idempotent.
+</p>
+<p>
+Migrations run during updates and previews when prior state exists, including state matched through aliases.
+Migrations rewrite state only, they do not create, import, or modify physical resources.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.dll</h6>
+  <h5 id="Pulumi_StateMigration_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate Task&lt;StateMigrationResult?&gt; StateMigration(StateMigrationArgs args, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.statemigrationargs.html">StateMigrationArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td>is the callback signature for the  resource option.  This API is experimental and may change.   A callback receives the prior state of the resource and its descendants, and may return a replacement subtree for the engine to use before diffing those resources. Returning null leaves the callback's input state unchanged and allows later callbacks to run. Callbacks must be idempotent.   Migrations run during updates and previews when prior state exists, including state matched through aliases. Migrations rewrite state only, they do not create, import, or modify physical resources.</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td>is the callback signature for the  resource option.  This API is experimental and may change.   A callback receives the prior state of the resource and its descendants, and may return a replacement subtree for the engine to use before diffing those resources. Returning null leaves the callback's input state unchanged and allows later callbacks to run. Callbacks must be idempotent.   Migrations run during updates and previews when prior state exists, including state matched through aliases. Migrations rewrite state only, they do not create, import, or modify physical resources.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.statemigrationresult.html">StateMigrationResult</a>&gt;</td>
+        <td>is the callback signature for the  resource option.  This API is experimental and may change.   A callback receives the prior state of the resource and its descendants, and may return a replacement subtree for the engine to use before diffing those resources. Returning null leaves the callback's input state unchanged and allows later callbacks to run. Callbacks must be idempotent.   Migrations run during updates and previews when prior state exists, including state matched through aliases. Migrations rewrite state only, they do not create, import, or modify physical resources.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Pulumi_StateMigration_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The callback receives plaintext secret values inside their secret envelopes and must not log or otherwise
+expose them. It must not perform Pulumi runtime operations or wait for unresolved Outputs. Every resource omitted
+from the returned state must identify a returned successor. Provider resource states must remain unchanged,
+and custom resources must preserve their physical identity and lifecycle safety flags.</p>
+</div>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+    <p class="sdk-version">Version 3.116.1</p>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StateMigration.cs/#L34" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2023, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

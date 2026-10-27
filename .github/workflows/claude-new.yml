@@ -107,7 +107,8 @@ jobs:
           # ended in a green run that did nothing (pulumi/docs#21936, run
           # 36421951663). Keep it identical to the other three —
           # test_workflow_sanity.py fails when the four lists drift.
-          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "app/github-copilot" \
+             || "$AUTHOR" == "eon-pulumi-agent[bot]" || "$AUTHOR" == "app/eon-pulumi-agent" \
              || "$AUTHOR" == "workprentice[bot]" || "$AUTHOR" == "app/workprentice" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "✓ Bot $AUTHOR is whitelisted for review regeneration"
