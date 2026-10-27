@@ -101,6 +101,7 @@ Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi
 - **`/community`**: the community landing page and `/community/puluminaries/`. `/community/team/*` (the author pages blog bylines link to) is still built here from `content/community/team/` and `data/team/`.
 - **`/pricing`**: the pricing page, built from `apps/www/src/data/pricing/`. This repo keeps only the generated `data/pulumi_editions.yaml` that docs callouts read (see "Edition data" below). Redirects under `/pricing/` still come from S3.
 - **`/up`**: the getting-started wizard.
+- **`/topics`**: the explainer section that replaced `/what-is`, built from `apps/www/src/content/topics/`. `scripts/redirects/topics-redirects.txt` 301s the old `/what-is/` URLs (and the legacy URLs those pages carried) straight to their `/topics/` pages.
 
 When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list.
 

@@ -1094,7 +1094,7 @@ nginx:
 License: Apache 2.0  
 Best For: Container-native infrastructure and application management
 
-While primarily a [container orchestration](/topics/containers/) platform, Kubernetes itself serves as an infrastructure as code tool through its declarative YAML manifests and API-driven resource management.
+While primarily a [container orchestration](/docs/integrations/clouds/kubernetes/) platform, Kubernetes itself serves as an infrastructure as code tool through its declarative YAML manifests and API-driven resource management.
 
 Key Features:
 
