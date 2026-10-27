@@ -54,6 +54,8 @@ To set up drift detection and remediation in the Pulumi Cloud console, follow th
 6. Save the schedule.
 <!-- markdownlint-enable ol-prefix -->
 
+Drift detection schedules run in UTC unless the cron expression sets a time zone. See [Time zones](/docs/deployments/concepts/schedules/#time-zones).
+
 ### Configuring notifications for drift detection
 
 You can route drift notifications to Slack, Microsoft Teams, and more using the Pulumi [Webhooks](/docs/deployments/concepts/webhooks/) integration.
@@ -119,7 +121,7 @@ const driftDetectionSchedule = new pulumiservice.DriftSchedule("driftDetectionSc
     organization: organizationName,
     project: projectName,
     stack: stackName,
-    scheduleCron: "0 0 * * *", // Run drift detection daily at midnight
+    scheduleCron: "0 0 * * *", // Run drift detection daily at midnight UTC
     autoRemediate: true, // Automatically remediate any drift detected
 });
 
@@ -144,7 +146,7 @@ drift_detection_schedule = pulumiservice.DriftSchedule("driftDetectionSchedule",
     organization=organization_name,
     project=project_name,
     stack=stack_name,
-    schedule_cron="0 0 * * *",  # Run drift detection daily at midnight
+    schedule_cron="0 0 * * *",  # Run drift detection daily at midnight UTC
     auto_remediate=True)  # Automatically remediate any drift detected
 
 pulumi.export('driftScheduleId', drift_detection_schedule.schedule_id)
@@ -169,7 +171,7 @@ func main() {
             Organization: pulumi.String("my-org"),
             Project: pulumi.String("my-project"),
             Stack: pulumi.String("production"),
-            ScheduleCron: pulumi.String("0 0 * * *"),  // Run drift detection daily at midnight
+            ScheduleCron: pulumi.String("0 0 * * *"),  // Run drift detection daily at midnight UTC
             AutoRemediate: pulumi.Bool(true),  // Automatically remediate any drift detected
         })
         if err != nil {
@@ -199,7 +201,7 @@ class Program
             Organization = "my-org",
             Project = "my-project",
             Stack = "production",
-            ScheduleCron = "0 0 * * *",  // Run drift detection daily at midnight
+            ScheduleCron = "0 0 * * *",  // Run drift detection daily at midnight UTC
             AutoRemediate = true,  // Automatically remediate any drift detected
         });
 
@@ -232,7 +234,7 @@ public class App {
             .organization("my-org")
             .project("my-project")
             .stack("production")
-            .scheduleCron("0 0 * * *") // Run drift detection daily at midnight
+            .scheduleCron("0 0 * * *") // Run drift detection daily at midnight UTC
             .autoRemediate(true) // Automatically remediate any drift detected
             .build());
 
@@ -258,7 +260,7 @@ resources:
       organization: my-org
       project: my-project
       stack: production
-      scheduleCron: "0 0 * * *" # Run drift detection daily at midnight
+      scheduleCron: "0 0 * * *" # Run drift detection daily at midnight UTC
       autoRemediate: true # Automatically remediate any drift detected
 
 outputs:
@@ -294,7 +296,7 @@ resource "pulumiservice_drift_schedule" "drift_detection_schedule" {
   project      = "my-project"
   stack        = "production"
 
-  schedule_cron  = "0 0 * * *" # Run drift detection daily at midnight
+  schedule_cron  = "0 0 * * *" # Run drift detection daily at midnight UTC
   auto_remediate = true        # Automatically remediate any drift detected
 }
 
