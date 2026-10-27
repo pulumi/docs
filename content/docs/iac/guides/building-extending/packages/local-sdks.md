@@ -101,7 +101,7 @@ pet = random.Pet("example")
 {{% /choosable %}}
 {{% choosable language go %}}
 
-Import the package by the module path in the generated `sdks/random/go.mod`:
+Import the package from its directory under the module path declared in the generated `sdks/random/go.mod`:
 
 ```go
 package main
