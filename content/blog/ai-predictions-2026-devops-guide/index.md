@@ -1,5 +1,5 @@
 ---
-title: "AI Predictions for 2027: A DevOps Engineer's Guide, With a 2026 Scorecard"
+title: "AI Predictions for 2027, With a 2026 Scorecard"
 date: 2025-12-11
 updated: 2026-10-27
 meta_desc: "We scored our nine AI predictions for 2026 (1 right, 5 partly right, 3 wrong), then made five new ones for 2027 on agents, Kubernetes, and sovereignty."
@@ -89,7 +89,7 @@ But here's the hot take: I don't think OpenAI is going to come out on top with a
 
 For DevOps teams, this specialization means you'll need infrastructure that's model-agnostic and supports multiple AI backends. Plan for secrets management across multiple LLM providers and design your systems to swap models based on the task at hand.
 
-**Verdict: Right.** The specialization half of the call held up. Based on [Menlo Ventures survey data](https://www.sentisight.ai/openai-vs-anthropic-sales-success/) as reported in September 2026, Anthropic holds about 40% of enterprise LLM API spending against OpenAI's 27%, and Claude commands roughly 54% of enterprise AI coding usage against about 21% for Codex. The hot take that OpenAI would not win through specialization needs a caveat. The same report puts OpenAI at more than 900 million weekly ChatGPT users and annualized revenue above $40 billion in August 2026, so it is far from out. It just is not the specialist leader in coding. We also found no 2026 adoption data for Amazon's Nova niche, so we are not scoring that part.
+**Verdict: Right.** The specialization half of the call held up. Menlo Ventures' [December 2025 enterprise report](https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/), as repeated in [September 2026 coverage](https://www.sentisight.ai/openai-vs-anthropic-sales-success/), has Anthropic holding about 40% of enterprise LLM API spending against OpenAI's 27%, and Claude commands roughly 54% of enterprise AI coding usage against about 21% for Codex. The hot take that OpenAI would not win through specialization needs a caveat. The same September coverage puts OpenAI at more than 900 million weekly ChatGPT users earlier in 2026 and annualized revenue above $40 billion by August 2026, so it is far from out. It just is not the specialist leader in coding. We also found no 2026 adoption data for Amazon's Nova niche, so we are not scoring that part.
 
 ### The local AI breakthrough
 
@@ -147,7 +147,7 @@ For DevOps, this translates to modular infrastructure definitions, on-demand cap
 Give Claude Code, Cursor, or any coding agent working Pulumi patterns through Agent Skills and the Pulumi MCP server, so it generates infrastructure that deploys.
 {{< /blog/cta-card >}}
 
-**Verdict: Partially right.** Progressive disclosure won. In October 2026 Anthropic [donated the Agent Skills standard to the Linux Foundation's Agentic AI Foundation](https://simonwillison.net/2026/Oct/22/donating-agent-skills/), saying it is "committed to keeping Agent Skills open, community-driven, and vendor-neutral." Code execution also reached production scale. Cloudflare reports that its Code Mode MCP server "has scaled up to thousands of requests per second and served billions of tool calls." Tool calling did not go away, however. Cloudflare's [MCP update](https://blog.cloudflare.com/mcp-v2) says the 2026-07-28 spec makes MCP "a fully stateless protocol," so the standard tool interface got stronger while code execution layered on top of it. "Replacing" overstated it.
+**Verdict on code execution: Partially right.** Progressive disclosure won. In October 2026 Anthropic [donated the Agent Skills standard to the Linux Foundation's Agentic AI Foundation](https://simonwillison.net/2026/Oct/22/donating-agent-skills/), saying it is "committed to keeping Agent Skills open, community-driven, and vendor-neutral." Code execution also reached production scale. Cloudflare reports that its Code Mode MCP server "has scaled up to thousands of requests per second and served billions of tool calls." Tool calling did not go away, however. Cloudflare's [MCP update](https://blog.cloudflare.com/mcp-v2) says the 2026-07-28 spec makes MCP "a fully stateless protocol," so the standard tool interface got stronger while code execution layered on top of it. "Replacing" overstated it.
 
 ### Agent-to-agent protocols are finally happening
 
@@ -177,7 +177,7 @@ When we want to do a rigorous code review, traditionally, we look line by line a
 
 [Amazon Nova Act](https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/) takes this further. It enables AI agents to automate browser-based tasks like form filling, QA testing, and workflow validation with over 90% reliability. The service includes built-in observability through live viewing, CloudTrail logging, and session replay, making it possible to review what an agent actually did rather than parsing through code changes.
 
-**Verdict: Wrong so far.** Agents do produce artifacts now, but we found no evidence that artifact review replaced diff review. The industry moved the other way after incidents. Following outages tied to AI coding tools, [Amazon was reported](https://tech.yahoo.com/articles/ai-code-wreaked-havoc-amazon-160849695.html) to require that "engineers must get two people to review changes before deployment." Futurum's analysis of Cursor 3.2 also flags that [governance and observability gaps](https://futurumgroup.com/insights/cursor-3-2-reframes-the-ide-as-an-agent-execution-runtime/) "widen as parallel subagents fan out." Artifacts are useful evidence, and review practice is getting stricter rather than lighter.
+**Verdict: Wrong so far.** Agents do produce artifacts now, but we found no evidence that artifact review replaced diff review. The industry moved the other way after incidents. Following outages tied to AI coding tools, [Amazon was reported](https://tech.yahoo.com/articles/ai-code-wreaked-havoc-amazon-160849695.html) to require two people to review changes before deployment. Futurum's analysis of Cursor 3.2 also flags that [governance and observability gaps](https://futurumgroup.com/insights/cursor-3-2-reframes-the-ide-as-an-agent-execution-runtime/) "widen as parallel subagents fan out." Artifacts are useful evidence, and review practice is getting stricter rather than lighter.
 
 ### Shipping code you've never read
 
@@ -189,7 +189,7 @@ I presented on this exact topic at [the Tel Aviv Pulumi User Group meetup at Qod
 
 The claim kept the human in the loop: we would trust our systems and run a validation process that includes us, without necessarily reading the code ourselves. Tools like Pulumi Neo create pull requests with clear documentation of changes, run previews to validate infrastructure modifications, and provide the transparency needed to ship with confidence.
 
-**Verdict: Wrong so far.** This was the boldest call and the data does not support it as a norm. Only about 7 percent of developers in the [Stack Overflow survey](https://www.theregister.com/software/2026/10/10/stack-overflow-survey-finds-devs-hooked-on-ai-but-not-totally-sold-on-its-judgment/5301662/) trusted AI output for important work decisions. The best-known 2026 incident, which [Yahoo Tech's recap](https://tech.yahoo.com/articles/ai-code-wreaked-havoc-amazon-160849695.html) says caused 120,000 lost orders and 1.6 million website errors on March 2, 2026, led to more human sign-off, not less. Some engineers certainly ship code they have not read. It has not become the accepted practice for experienced teams.
+**Verdict: Wrong so far.** This was the boldest call and the data does not support it as a norm. The trust figures above point the other way. The best-known 2026 incident, which [Yahoo Tech's recap](https://tech.yahoo.com/articles/ai-code-wreaked-havoc-amazon-160849695.html) says caused 120,000 lost orders and 1.6 million website errors on March 2, 2026, led to more human sign-off, not less. Some engineers certainly ship code they have not read. It has not become the accepted practice for experienced teams.
 
 ## AI predictions for 2027
 
@@ -203,7 +203,7 @@ The numbers are already moving. Pulumi's [State of Agentic Infrastructure 2026](
 
 An infrastructure agent like [Pulumi Neo](/product/neo/) fits this shape: it plans, runs previews, and opens pull requests, while approval modes decide how much a human signs off. Expect the approval gates to become the product surface that teams argue about.
 
-The risk is cost and quality. [Gartner predicts](https://www.langchain.com/blog/what-is-an-agent) that more than 40% of agentic AI projects will be canceled by the end of 2027 because of escalating costs, unclear business value, or inadequate risk controls. Teams with previews, tests, and policy in place will be on the right side of that line.
+The risk is cost and quality. [Gartner predicts](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) that over 40% of agentic AI projects will be canceled by the end of 2027. Teams with previews, tests, and policy in place will be on the right side of that line.
 
 **How we'll score this in 2027:** Right if a comparable late-2027 survey shows agents authoring infrastructure code as a top-three agent use (it trailed every other use at 29% in the 2026 survey) while the autonomous share of production changes stays under 40%.
 
@@ -231,7 +231,7 @@ Taken together, teams will be asked to prove where workloads run and to keep the
 
 Every serious agent deployment in 2027 will have its own identity, scoped short-lived credentials, and an audit trail, because the 2026 incidents made the cost of skipping them visible. This follows directly from the scorecard: low trust is rational.
 
-Only about 7 percent of developers in the [Stack Overflow 2026 survey](https://www.theregister.com/software/2026/10/10/stack-overflow-survey-finds-devs-hooked-on-ai-but-not-totally-sold-on-its-judgment/5301662/) trusted AI output for important work decisions. After AI coding tools contributed to a March 2026 incident with 120,000 lost orders, [Amazon was reported](https://tech.yahoo.com/articles/ai-code-wreaked-havoc-amazon-160849695.html) to have added formal approval processes and stricter automated checks. The Pulumi survey above shows the same gap from the other side: trust in agents is high, while guardrails lag.
+The scorecard's trust numbers and the March 2026 Amazon incident, after which [Amazon was reported](https://tech.yahoo.com/articles/ai-code-wreaked-havoc-amazon-160849695.html) to have added formal approval processes and stricter automated checks, point the same way. The Pulumi survey above shows the same gap from the other side: trust in agents is high, while guardrails lag.
 
 Infrastructure teams own the fix. Secrets and configuration need to hand agents the minimum credentials for the task, and policy needs to evaluate what an agent proposes before it applies. Teams that treat an agent like a service account with a reviewer, rather than a colleague with admin rights, will have fewer incidents to explain.
 
@@ -241,7 +241,7 @@ Infrastructure teams own the fix. Secrets and configuration need to hand agents 
 
 Agent protocols will keep consolidating under the Linux Foundation, and no single payment protocol will win in 2027. This is the correction to two of our 2026 calls.
 
-On standards, MCP, and now [Agent Skills](https://simonwillison.net/2026/Oct/22/donating-agent-skills/), sit under the Linux Foundation's Agentic AI Foundation, and A2A has reached 1.0. Neutral governance lowers the risk of building on them, which is what enterprise adoption needs. On payments, the [x402 Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-operational-launch-of-x402-foundation-to-standardize-internet-native-payments-for-ai-agents-and-applications) launched with 40 members, but one [October 2026 roundup](https://www.patechlabs.com/news/ai-agent-payments-guide-x402-ap2-mpp-visa-mastercard) describes several competing agent payment protocols, including Google's AP2 and card-network efforts, with volumes still small in dollar terms.
+On standards, MCP, and now [Agent Skills](https://simonwillison.net/2026/Oct/22/donating-agent-skills/), sit under the Linux Foundation's Agentic AI Foundation, and [A2A has reached 1.0](https://github.com/a2aproject/A2A/releases). Neutral governance lowers the risk of building on them, which is what enterprise adoption needs. On payments, the [x402 Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-operational-launch-of-x402-foundation-to-standardize-internet-native-payments-for-ai-agents-and-applications) launched with 40 members, but one [October 2026 roundup](https://www.patechlabs.com/news/ai-agent-payments-guide-x402-ap2-mpp-visa-mastercard) describes several competing agent payment protocols, including Google's AP2 and card-network efforts, with volumes still small in dollar terms.
 
 For DevOps teams, the practical advice is to build on the standards under neutral governance and keep payment integrations behind an interface you can swap.
 
