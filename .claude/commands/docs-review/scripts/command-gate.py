@@ -81,8 +81,12 @@ _QUOTE_LINE_RE = re.compile(r"^[ \t]{0,3}>.*$", re.M)
 
 # A command starts a line (up to three spaces of indent; four is an indented
 # code block) and ends at whitespace or the end of the line, so
-# `/update-reviewer` is not `/update-review`.
-_COMMAND_RE = re.compile(r"^[ \t]{0,3}/(" + "|".join(COMMANDS) + r")(?![\w-])", re.M | re.I)
+# `/update-reviewer` is not `/update-review`. A leading `@claude` is allowed:
+# habit from the retired shape types it, and the intent is unambiguous
+# (pulumi/docs#22286 got `@claude /update-review …` three times, each fell
+# to the chat lane, which answered with the retired instructions).
+_COMMAND_RE = re.compile(
+    r"^[ \t]{0,3}(?:@claude[ \t]+)?/(" + "|".join(COMMANDS) + r")(?![\w-])", re.M | re.I)
 # The same token anywhere, as long as it isn't the tail of a path or URL.
 _ANYWHERE_RE = {c: re.compile(r"(?<![\w/.-])/" + c + r"(?![\w-])", re.I) for c in COMMANDS}
 
