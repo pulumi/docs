@@ -6,7 +6,6 @@ updated: 2026-09-21
 draft: false
 meta_desc: "Compare 10 IaC tools for 2026 on pricing, licensing, release cadence, and AI-agent readiness: Pulumi, Terraform, OpenTofu, CDK, Bicep, and more."
 authors:
-    - asaf-ashirov
     - isaac-harris
 tags:
     - infrastructure-as-code
