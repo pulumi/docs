@@ -68,12 +68,14 @@ The token type on an allow policy determines what the issued access token can do
 
 | Token type | Issued token acts as | Policy names | Available in |
 |---|---|---|---|
-| Personal | the named user, with that user's permissions | the user | {{< pulumi-cloud-editions "oidc" >}} |
+| Personal | the named user, with that user's permissions in the issuer's organization | the user | {{< pulumi-cloud-editions "oidc" >}} |
 | Organization | an [organization access token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) | nothing further | {{< pulumi-cloud-editions "org-team-access-tokens" >}} |
 | Team | a [team access token](/docs/administration/concepts/access-tokens/#team-access-tokens), with that team's permissions | the team | {{< pulumi-cloud-editions "teams" >}} |
 | Deployment runner | a [customer-managed workflow runner](/docs/deployments/concepts/customer-managed-runners/) | the runner | {{< pulumi-cloud-editions "customer-managed-runners" >}} |
 
 When requesting a team or personal token, the workload names the same team or user in the exchange request's scope (`team:<team-name>` or `user:<user-login>`), and Pulumi Cloud issues the token only if an allow policy grants it.
+
+A personal token issued this way works only within the organization that registered the issuer. Pulumi Cloud rejects it for any other organization the user belongs to. It also can't act on the user's account: it can't create or delete access tokens, change the account's email, password, or MFA settings, or link identities.
 
 Tokens issued through OIDC exchange don't receive admin privileges unless the exchange explicitly requests the admin scope. See [OIDC issued tokens](/docs/administration/concepts/access-tokens/#oidc-issued-tokens).
 
