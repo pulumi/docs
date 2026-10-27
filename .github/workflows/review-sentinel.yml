@@ -112,6 +112,7 @@ permissions:
   pull-requests: write
   issues: write
   contents: read
+  actions: read        # G4: staging deploy runs and the staging workflow's enabled state
   id-token: write      # ESC OIDC for the org-scoped team-membership token
 
 env:

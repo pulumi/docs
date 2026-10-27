@@ -30,9 +30,14 @@ name: Staging deploy (auto, infra PRs)
 #   handled below by warning rather than failing.
 # - THIS JOB CANNOT FAIL A PR. It produces evidence; it does not judge. The
 #   Sentinel is the gate, and a missing deploy already shows up there as a
-#   red G4 that says what to do about it. A second red X from the producer
-#   is noise on top of a signal the author already has, so everything here
-#   degrades to `::warning::` and exits 0.
+#   red G4 that says what to do about it, so everything here exits 0.
+#   One exception to staying quiet: a deploy that could not be DISPATCHED
+#   writes `staging/pulumi-test-io` = error with the reason. On
+#   pulumi/docs#22524 the testing workflow was disabled, every dispatch
+#   422'd, and the only trace was a `::warning::` inside a green job, so
+#   nobody could see why G4 never moved. The status sits in the merge box
+#   next to the deploy it's about, the Sentinel's G4 row quotes it, and the
+#   next successful deploy at the head replaces it.
 # - SKIP WHEN EVIDENCE ALREADY EXISTS. Re-running the same head buys
 #   nothing and costs a real deploy of a shared stack; a `synchronize`
 #   that didn't move the head (a base merge, a label) finds the green
@@ -215,6 +220,9 @@ jobs:
           REPO: ${{ github.repository }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           set -uo pipefail
           # The script comes from the BASE checkout (see the header). A PR
@@ -225,8 +233,39 @@ jobs:
             echo "::warning::staging-deploy.sh is not present on the base branch yet — no staging deploy dispatched. Sentinel G4 will stay red until this PR merges, or until someone dispatches testing-build-and-deploy.yml at this branch."
             exit 0
           fi
-          scripts/review-v3/staging-deploy.sh \
-            --repo "$REPO" \
-            --head-sha "$HEAD_SHA" \
-            --head-ref "$HEAD_REF" \
-            || echo "::warning::staging deploy could not be dispatched; Sentinel G4 stays red until a testing-build-and-deploy.yml run succeeds at this head"
+          LOG=$(mktemp)
+          if scripts/review-v3/staging-deploy.sh \
+               --repo "$REPO" \
+               --head-sha "$HEAD_SHA" \
+               --head-ref "$HEAD_REF" 2>&1 | tee "$LOG"; then
+            exit 0
+          fi
+          # staging-deploy.sh also exits 1 when the dispatch went through
+          # but the new run didn't show up within 60 s. A deploy is running
+          # then, so saying "not dispatched" would be false; the sweep
+          # records its outcome.
+          if grep -q "could not locate the dispatched testing deploy run" "$LOG"; then
+            echo "::warning::the staging deploy was dispatched, but its run didn't appear within 60 s; the sweep will record the outcome"
+            exit 0
+          fi
+          # Visible, not fatal: see the header. The description is what the
+          # merge box and the Sentinel's G4 row show, so it names the cause
+          # when we know it (140 characters max).
+          if grep -q "disabled workflow" "$LOG"; then
+            DESC="Not dispatched: testing-build-and-deploy.yml is disabled. Re-enable it, then re-run."
+          else
+            DESC="Staging deploy could not be dispatched. See details for the error."
+          fi
+          echo "::error::$DESC"
+          gh api "repos/$REPO/statuses/$HEAD_SHA" \
+            -f state=error \
+            -f context=staging/pulumi-test-io \
+            -f description="$DESC" \
+            -f target_url="$RUN_URL" > /dev/null \
+            || { echo "::warning::could not write the staging/pulumi-test-io status"; exit 0; }
+          # The Sentinel already ran for this push, before the status above
+          # existed. Re-score it so G4's row quotes the reason. Pinned to the
+          # default branch, like staging-status.yml's poke.
+          gh workflow run review-sentinel.yml --repo "$REPO" \
+            --ref "$DEFAULT_BRANCH" -f pr_number="$PR_NUMBER" \
+            || echo "::warning::could not re-run the Sentinel; G4 picks the status up on its next run"

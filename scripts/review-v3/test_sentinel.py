@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Truth-table tests for sentinel.py — every gate ok/red/error individually,
 the conclusion mapping (the fails-open trap: errors are action_required,
-never neutral), the waive semantics (G4 has no waiver), the external and
+never neutral), the waive semantics (a waive clears every gate, G4 too), the external and
 legacy lanes, and the workflow's no-PR-code security invariant.
 
 Runs under pytest (make test-review-pipeline) and standalone via
@@ -103,6 +103,8 @@ class StubGh:
         label_events=None,
         workflow_runs=None,
         workflow_runs_error=False,
+        workflow_state="active",
+        workflow_state_error=False,
     ):
         self.pr = pr or {}
         self.files = files or []
@@ -117,6 +119,8 @@ class StubGh:
         self.label_events = label_events or []
         self.workflow_runs = workflow_runs or []
         self.workflow_runs_error = workflow_runs_error
+        self.workflow_state = workflow_state
+        self.workflow_state_error = workflow_state_error
         self.patched = []  # (comment_id, body)
         self.posted = []   # body
         self.deleted = []  # comment_id
@@ -154,6 +158,11 @@ class StubGh:
         if self.workflow_runs_error:
             raise RuntimeError("actions API unavailable")
         return self.workflow_runs
+
+    def get_workflow_state(self, workflow_file):
+        if self.workflow_state_error:
+            raise RuntimeError("actions API unavailable")
+        return self.workflow_state
 
     def patch_issue_comment(self, comment_id, body):
         self.patched.append((comment_id, body))
@@ -1133,13 +1142,21 @@ def test_waive_with_unreadable_actor_is_refused():
     assert "NOT honored" in v.summary
 
 
-def test_waive_never_covers_infra_evidence():
+def test_waive_covers_infra_evidence():
+    """#22524: the staging workflow was disabled, so G4 could never go green,
+    and a waive that stopped at G4 left two approvers with no lever. A waive
+    clears G4 like any other gate, and the summary says what was skipped."""
     gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[infra_file()],
                 label_events=_waive_events("cam"),
                 memberships={("docs-tools", "cam"): "active"})
     v = sentinel.evaluate(gh, CONFIG)
-    assert v.conclusion == "failure"
-    assert "no waiver" in v.title.lower() or "NOT waivable" in v.summary
+    assert _gate(v, "G4").status == "red", "the row still records what was bypassed"
+    assert v.conclusion == "success", v.to_json()
+    assert v.title == "WAIVED"
+    assert "G4 was red" in v.summary
+    body = sentinel.render_status_comment(v)
+    assert "Waived — this PR can merge." in body
+    assert "no waiver" not in body.lower()
 
 
 # ---- G4: the deploy run is evidence, not just the status ----------------
@@ -1208,8 +1225,8 @@ def test_an_unattributed_staging_status_is_not_evidence():
         gh api repos/OWNER/REPO/statuses/SHA -f state=success \
           -f context=staging/pulumi-test-io
 
-    …which made the gate review-routing.yml calls "no waiver, no shortcut" a
-    one-line bypass. The run record cannot be forged that way.
+    …which made G4 a one-line bypass that, unlike a waive, leaves no trace.
+    The run record cannot be forged that way.
     """
     base = dict(pr=pr_meta(), files=[infra_file()],
                 comments=[author_card([], state=_state_with([]))])
@@ -1229,7 +1246,7 @@ def test_an_unattributed_staging_status_is_not_evidence():
     assert _gate(real, "G4").status == "ok"
 
 
-def test_a_waive_clears_an_error_but_never_g4():
+def test_a_waive_clears_an_error_and_g4():
     """`any_error` used to be tested before `waived`, so the break-glass was
     inert in exactly the outage it exists for: an expired team-read token
     errors G3 on every PR, so every PR sat at action_required and no waive
@@ -1247,10 +1264,78 @@ def test_a_waive_clears_an_error_but_never_g4():
     assert errored.conclusion == "success", errored.to_json()
     assert "WAIVED" in errored.title
 
-    # G4 is still not waivable.
     infra = sentinel.evaluate(StubGh(**dict(base, files=[infra_file()])), CONFIG)
-    assert infra.conclusion == "failure"
-    assert "infra evidence has no waiver" in infra.title
+    assert infra.conclusion == "success", infra.to_json()
+    assert infra.title == "WAIVED"
+
+
+def test_g4_says_when_the_staging_workflow_is_disabled():
+    """#22524: every dispatch 422'd on a disabled workflow, and the gate kept
+    saying "dispatched automatically — no action needed"."""
+    gh = StubGh(pr=pr_meta(branch="cnunciato/proxy-topics"), files=[infra_file()],
+                workflow_state="disabled_manually")
+    g4 = _gate(sentinel.evaluate(gh, CONFIG), "G4")
+    assert g4.status == "red"
+    assert "staging workflow is disabled" in g4.message
+    assert "`disabled_manually`" in g4.message
+    assert "gh workflow enable testing-build-and-deploy.yml" in g4.message
+    assert "gh workflow run testing-build-and-deploy.yml --ref cnunciato/proxy-topics" in g4.message
+    assert "dispatched automatically" not in g4.message
+
+
+def test_g4_names_the_branch_and_warns_off_the_production_workflow():
+    """The two deploy workflows sit side by side with near-identical names;
+    on #22524 someone looking for staging dispatched production instead."""
+    for kwargs in ({}, {"workflow_state_error": True}):
+        gh = StubGh(pr=pr_meta(branch="me/topic"), files=[infra_file()], **kwargs)
+        g4 = _gate(sentinel.evaluate(gh, CONFIG), "G4")
+        assert g4.status == "red"
+        assert "gh workflow run testing-build-and-deploy.yml --ref me/topic" in g4.message
+        assert "`build-and-deploy.yml`" in g4.message and "production" in g4.message
+        assert "actions/workflows/testing-build-and-deploy.yml" in g4.message
+        assert "disabled" not in g4.message, "active or unreadable state: no false alarm"
+        assert "<branch>" not in g4.message
+
+
+def test_g4_quotes_the_last_failed_staging_attempt():
+    """A failed dispatch or deploy writes its reason to the staging status;
+    the G4 row leads with it instead of leaving it in a job log."""
+    failed = {"context": "staging/pulumi-test-io", "state": "error",
+              "creator": {"login": "github-actions[bot]"},
+              "description": "Not dispatched: testing-build-and-deploy.yml is disabled.",
+              "target_url": "https://github.com/pulumi/docs/actions/runs/7"}
+    gh = StubGh(pr=pr_meta(), files=[infra_file()], statuses=[failed])
+    g4 = _gate(sentinel.evaluate(gh, CONFIG), "G4")
+    assert g4.status == "red"
+    assert g4.message.startswith(
+        "**Last staging attempt: Not dispatched: testing-build-and-deploy.yml is disabled.**")
+    assert "actions/runs/7" in g4.message
+
+    # Only the NEWEST trusted status speaks: a newer green one is evidence,
+    # and an untrusted failure is ignored like an untrusted success.
+    newer_green = dict(failed, state="success", description="staging deploy green")
+    assert _gate(sentinel.evaluate(StubGh(pr=pr_meta(), files=[infra_file()],
+                                          statuses=[newer_green, failed]), CONFIG),
+                 "G4").status == "ok"
+    forged = dict(failed, creator={"login": "someone"})
+    g4 = _gate(sentinel.evaluate(StubGh(pr=pr_meta(), files=[infra_file()],
+                                        statuses=[forged]), CONFIG), "G4")
+    assert "Last staging attempt" not in g4.message
+
+
+def test_g4_never_puts_a_cell_breaking_branch_name_in_the_row():
+    for bad in ("a`b", "a|b"):
+        gh = StubGh(pr=pr_meta(branch=bad), files=[infra_file()])
+        g4 = _gate(sentinel.evaluate(gh, CONFIG), "G4")
+        assert bad not in g4.message
+        assert "--ref <branch>" in g4.message
+
+
+def test_g4_ok_never_reads_the_workflow_state():
+    """The state read is advice for a red gate, not part of the verdict."""
+    gh = StubGh(pr=pr_meta(), files=[infra_file()], workflow_runs=[_deploy_run()],
+                workflow_state_error=True)
+    assert _gate(sentinel.evaluate(gh, CONFIG), "G4").status == "ok"
 
 
 def test_g4_run_lookup_failure_blocks_rather_than_erroring():
@@ -1537,11 +1622,12 @@ def test_status_comment_says_why_a_satisfied_gate_is_satisfied():
     assert "no changed path affects the deploy" in g4, g4
 
 
-def test_status_comment_banners_report_only_and_flags_the_unwaivable_gate():
+def test_status_comment_banners_report_only_and_offers_the_waive_for_g4():
     gh = StubGh(pr=pr_meta(), files=[infra_file()])
     body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG, report_only=True))
     assert "> [!WARNING]" in body, "report-only leads with the preview banner"
-    assert "no waiver" in body
+    assert "_Break glass:" in body, "a red G4 alone still offers the waive"
+    assert "no waiver" not in body.lower()
     assert "> [!WARNING]" not in sentinel.render_status_comment(
         sentinel.evaluate(gh, CONFIG)), "enforcing mode has nothing to disclaim"
 
