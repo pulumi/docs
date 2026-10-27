@@ -31,7 +31,7 @@ You drive the review with slash commands. Put the command at the start of a line
 
 The commands need write access to the repository (`/social-review`: an org member or collaborator). A command runs when its comment is posted, so editing an old comment into one does nothing; post a new one. `/oversized-ack` is the exception: the Sentinel rereads your approval, so editing it in works.
 
-`@claude` isn't a command. On its own it asks Claude for ad-hoc help, and it never touches the review. The old `@claude … #update-review` and `@claude … #new-review` shapes are retired: they run nothing, and a bot reply shows the same request rewritten as a slash command.
+`@claude` isn't a command. On its own it asks Claude for ad-hoc help, and it never touches the review. The old `@claude … #update-review` and `@claude … #new-review` shapes are retired, and a command typed after the mention (`@claude /update-review …`) isn't a command either: they run nothing, and a bot reply shows the same request rewritten as a slash command.
 
 ### The v3 review surface (staged rollout)
 
