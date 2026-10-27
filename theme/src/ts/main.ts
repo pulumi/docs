@@ -13,7 +13,6 @@ import "./docs-feedback";
 import "./blog-list";
 import "./blog-post";
 import "./blog-lightbox";
-import "./customers-list";
 import "./details-dropdown";
 import "./copybutton";
 import "./copy-text";

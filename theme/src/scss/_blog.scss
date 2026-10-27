@@ -36,10 +36,8 @@
 }
 
 // Active state for the homepage category filter pill (default "All", moved by
-// blog-list.ts) and the /customers/ industry pill (moved by customers-list.ts).
-// Styled to match the mockup's selected pill.
-[data-blog-filter] .is-active,
-[data-customer-filter] .is-active {
+// blog-list.ts). Styled to match the mockup's selected pill.
+[data-blog-filter] .is-active {
     @apply border-gray-500 bg-gray-100;
 }
 

@@ -848,9 +848,8 @@ Hugo processes 46+ content directories:
 - `/content/docs/` → Documentation
 - `/content/blog/` → Blog posts
 - `/content/product/` → Product pages
-- `/content/customers/` → Customer stories (the customer registry lives in `data/customers.yaml`)
 
-> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary) is served the same way, from pulumi/marketing-web.
+> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary) and `/customers` (the customer board and case studies) are served the same way, from pulumi/marketing-web.
 
 Templates are in `/layouts/` with various shortcodes for:
 
@@ -1157,7 +1156,7 @@ Key points:
 
 **Triggers:** `workflow_run` when `Build and deploy` or `Build and deploy testing` completes successfully; manual `workflow_dispatch`.
 
-Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/dev` and `/topics` proxy hops to pulumi/marketing-web. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
+Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/dev`, `/topics`, and `/customers` proxy hops to pulumi/marketing-web. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
 
 #### schedule-social.yml
 
@@ -1187,7 +1186,7 @@ Runs `make ci_update_search_index`, which indexes this repo's content and merges
 
 #### invalidate-marketing-web-cache.yml
 
-**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, `/pricing`, the `/up` getting-started wizard, and `/topics`) from CloudFront when it deploys.
+**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, `/pricing`, the `/up` getting-started wizard, `/topics`, and `/customers`) from CloudFront when it deploys.
 
 **Triggers:** `repository_dispatch` (`dev-deployed`) from pulumi/marketing-web; manual `workflow_dispatch`.
 
@@ -1813,7 +1812,7 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | 30 minutes | Dynamic content, origin-proxied |
 | /guides/* | Guides | 30 minutes | Dynamic content, origin-proxied |
-| Paths in `infrastructure/marketingWebPaths.ts` (/dev*, /assets*, /community, /pricing, /up, /topics*) | pulumi/marketing-web | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
+| Paths in `infrastructure/marketingWebPaths.ts` (/dev*, /assets*, /community, /pricing, /up, /topics*, /customers*) | pulumi/marketing-web | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
 | /docs/* | S3 Main | 10 min | Content negotiation for Accept: text/markdown |
 | /docs/reference/pkg/dotnet/* | S3 Main | 10 min | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
 | /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |

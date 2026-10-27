@@ -12,10 +12,8 @@
   {{- errorf "data/customers_industries.yaml is missing or has no `industries:` list." -}}
 {{- end -}}
 {{- $industryIds := slice -}}
-{{- $industryNames := dict -}}
 {{- range $industries -}}
   {{- $industryIds = $industryIds | append .id -}}
-  {{- $industryNames = merge $industryNames (dict .id .name) -}}
 {{- end -}}
 {{- $industryList := delimit $industryIds ", " -}}
 
@@ -69,6 +67,11 @@
       {{- errorf "%s: customer %q has a quote without both `text` and `author`." $where $id -}}
     {{- end -}}
   {{- end -}}
+  {{- with $c.case_study -}}
+    {{- if not .href -}}
+      {{- errorf "%s: customer %q has a case_study without an `href`." $where $id -}}
+    {{- end -}}
+  {{- end -}}
 
   {{- $isRaster := in $raster $id -}}
   {{- $logo := "" -}}
@@ -83,10 +86,10 @@
     {{- $logo = resources.Get (printf "%s/%s.svg" $logoDir $id) -}}
     {{- $onDark = resources.Get (printf "%s/%s-on-dark.svg" $logoDir $id) -}}
     {{- if not $logo -}}
-      {{- errorf "%s: customer %q has no logo at assets/%s/%s.svg. Every customer needs a light-background SVG; see the ADDING A CUSTOMER checklist in that file." $where $id $logoDir $id -}}
+      {{- errorf "%s: customer %q has no logo at assets/%s/%s.svg. Every customer needs a light-background SVG." $where $id $logoDir $id -}}
     {{- end -}}
     {{- if not $onDark -}}
-      {{- errorf "%s: customer %q has no on-dark logo at assets/%s/%s-on-dark.svg. Derive one with `node scripts/customers/derive-on-dark.mjs %s` and check it on a dark background." $where $id $logoDir $id $id -}}
+      {{- errorf "%s: customer %q has no on-dark logo at assets/%s/%s-on-dark.svg. Copy it from pulumi/marketing-web (apps/www/src/assets/customers/)." $where $id $logoDir $id -}}
     {{- end -}}
   {{- end -}}
 
@@ -131,11 +134,9 @@
       "light_fill" $lightFill
       "logo_w" (math.Round $logoW)
       "logo_h" (math.Round $logoH)
-      "logo_aspect_root" (div (math.Round (mul (math.Sqrt (div $logoW $logoH)) 100)) 100.0)
-      "industry_name" (index $industryNames $c.industry)) -}}
+      "logo_aspect_root" (div (math.Round (mul (math.Sqrt (div $logoW $logoH)) 100)) 100.0)) -}}
   {{- $list = $list | append $expanded -}}
   {{- $scratch.SetInMap "byId" $id $expanded -}}
-  {{- $scratch.Add (printf "count-%s" $c.industry) 1 -}}
 {{- end -}}
 
 {{- range $raster -}}
@@ -144,17 +145,7 @@
   {{- end -}}
 {{- end -}}
 
-{{- $counts := dict -}}
-{{- $withCounts := slice -}}
-{{- range $industries -}}
-  {{- $count := $scratch.Get (printf "count-%s" .id) | default 0 -}}
-  {{- $counts = merge $counts (dict .id $count) -}}
-  {{- $withCounts = $withCounts | append (merge . (dict "count" $count)) -}}
-{{- end -}}
-
 {{- return (dict
     "list" $list
     "byId" ($scratch.Get "byId")
-    "ids" (sort $ids)
-    "industries" $withCounts
-    "counts" $counts) -}}
+    "ids" (sort $ids)) -}}

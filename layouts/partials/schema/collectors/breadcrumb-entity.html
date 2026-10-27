@@ -266,33 +266,6 @@
     ) }}
   {{ end }}
 
-{{/* Case studies: mirror layouts/customers/single.html, which adds an
-     industry crumb (looked up from data/customers_industries.yaml) between
-     "Customers" and the page itself. */}}
-{{ else if eq .Section "customers" }}
-  {{ $position = add $position 1 }}
-  {{ $breadcrumbs = $breadcrumbs | append (dict
-    "@type" "ListItem"
-    "position" $position
-    "name" "Customers"
-    "item" "https://www.pulumi.com/customers/"
-  ) }}
-
-  {{ with .Params.industry }}
-    {{ $industry := . }}
-    {{ range site.Data.customers_industries.industries }}
-      {{ if eq .id $industry }}
-        {{ $position = add $position 1 }}
-        {{ $breadcrumbs = $breadcrumbs | append (dict
-          "@type" "ListItem"
-          "position" $position
-          "name" .name
-          "item" (printf "https://www.pulumi.com/customers/industry/%s/" $industry)
-        ) }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-
 {{/* Remaining sections that only need a single section-level crumb before the
      page itself. "migrate" and "partner" are intentionally excluded: both
      sections' index pages redirect elsewhere (/migrate/ -> /docs/iac/guides/migration/,
@@ -320,7 +293,7 @@
   ) }}
 {{ end }}
 
-{{/* A section's own index page (e.g. /docs/, /product/, /customers/, the new
+{{/* A section's own index page (e.g. /docs/, /product/, the new
      /events/, /security/, etc.) already gets a crumb pointing at itself from the
      logic above; appending a second "current page" crumb for that same page
      produces a duplicate node (e.g. "Home > Documentation > Documentation" on
