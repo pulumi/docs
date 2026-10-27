@@ -288,18 +288,19 @@ def test_a_status_in_another_context_is_ignored():
         h.close()
 
 
-# ---- when NOT to poke ---------------------------------------------------
+# ---- what a failure does, and when NOT to poke ----------------------------
 
 
-def test_a_failed_deploy_records_the_status_but_never_pokes():
-    """G4 is already red and stays red; re-scoring tells the PR nothing."""
+def test_a_failed_deploy_records_the_status_and_pokes():
+    """G4 quotes the newest failed staging status, so a failure is worth a
+    re-score: that's how the reason reaches the PR."""
     h = Harness([run(SHA_A, conclusion="failure")], statuses={SHA_A: []},
                 prs={BRANCH: _pr(21789, SHA_A)})
     try:
         rec = h.sweep()
         assert rec["finalized"][0]["state"] == "failure"
-        assert rec["finalized"][0]["poked"] is None
-        assert h.writes(contains="review-sentinel") == []
+        assert rec["finalized"][0]["poked"] == 21789
+        assert len(h.writes(contains="review-sentinel")) == 1
         body = h.writes(contains=f"statuses/{SHA_A}")[0]["body"]
         assert body["target_url"] == f"https://github.com/{REPO}/actions/runs/1", \
             "a failed deploy has no deployed site to link to"

@@ -46,8 +46,8 @@ WHAT IT DOES, per sweep:
     would read, so a retry after a failure resolves to success;
   - writes the terminal `staging/pulumi-test-io` status when the SHA does
     not already carry that verdict from an authorized writer;
-  - pokes `review-sentinel.yml` with an explicit `pr_number` when the deploy
-    SUCCEEDED and that SHA is still the open PR's current head.
+  - pokes `review-sentinel.yml` with an explicit `pr_number` when that SHA
+    is still the open PR's current head, whatever the deploy's outcome.
 
 IDEMPOTENCE IS THE WHOLE CONTRACT, because this runs every few minutes over
 an overlapping window. The key is the status itself: a SHA whose authorized
@@ -62,8 +62,10 @@ cycle rather than being sealed off by a status that says "handled".
 pathological retry loop: a run whose status write keeps failing drops out of
 the window rather than being re-poked forever.
 
-ONLY A SUCCESS POKES. A failed deploy leaves G4 red, which it already was,
-so re-running the evaluator tells the PR nothing it is not already showing.
+A FAILURE POKES TOO. It used to be success-only, on the grounds that a
+failed deploy leaves G4 red, which it already was. But G4's row now quotes
+the newest failed staging status, so re-scoring is how the reason reaches
+the PR instead of staying one click away in a run log.
 
 An unresolvable PR is not an error: the status belongs to the SHA, not to
 the PR, so a closed or renamed branch still gets its verdict recorded. Same
@@ -262,7 +264,7 @@ def sweep(gh: GhClient, *, default_branch: str, now: datetime,
         # Poke BEFORE the status write: the status is this sweep's
         # idempotence key, so sealing it before the poke lands would make a
         # failed poke permanent. G4 is only re-scored when the Sentinel runs.
-        if is_success and poke_sentinel:
+        if poke_sentinel:
             try:
                 pr = open_pr_for_branch(gh, fact["branch"])
             except Exception as exc:  # noqa: BLE001 — retried next cycle

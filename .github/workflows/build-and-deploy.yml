@@ -41,6 +41,12 @@ jobs:
   # separate job, so a refused ref never enters the `production` environment.
   # Refs whose commit is on master still pass: dispatching at an older ref is
   # the documented "re-publish an older build" rollback.
+  #
+  # This is defense in depth, not the control. `workflow_dispatch` runs the
+  # workflow file AT the dispatched ref, so a branch cut before this job
+  # existed (or one that edits it out) doesn't have it. What holds for every
+  # ref is the `production` environment's deployment-branch rule, a repo
+  # setting.
   guard:
     name: Refuse refs that aren't on master
     runs-on: ubuntu-latest

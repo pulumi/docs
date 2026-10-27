@@ -1110,7 +1110,7 @@ Pushes to an open PR rebuild the preview, mark the pinned review `review:stale`,
 
 - Push to `master`
 - Scheduled: 11:17, 12:43, and 20:23 UTC (7:17 AM, 8:43 AM, and 4:23 PM Eastern during daylight saving time). The rebuilds publish future-dated content. The 12:43 run is a fallback in case GitHub drops the 11:17 one, and both land before scheduled social posts fire at 10 AM Eastern.
-- Manual: `workflow_dispatch`, with an optional `allow_out_of_order_publish` input (see below). A `guard` job runs first and fails the run unless the dispatched ref's commit is already on `master`, so an unmerged branch can never reach the `production` environment. Dispatching at an older ref that's on `master` (the rollback below) still works.
+- Manual: `workflow_dispatch`, with an optional `allow_out_of_order_publish` input (see below). A `guard` job runs first and fails the run unless the dispatched ref's commit is already on `master`, so an unmerged branch can't reach the `production` environment. Dispatching at an older ref that's on `master` (the rollback below) still works. The guard is defense in depth: a dispatch runs the workflow file from the dispatched ref, so a branch cut before the guard existed doesn't carry it. The `production` environment's deployment-branch rule is the control that applies to every ref.
 
 **Environment:** Production (AWS account `388588623842`)
 

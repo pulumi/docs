@@ -221,6 +221,8 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           HEAD_REF: ${{ github.event.pull_request.head.ref }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           set -uo pipefail
           # The script comes from the BASE checkout (see the header). A PR
@@ -252,4 +254,10 @@ jobs:
             -f context=staging/pulumi-test-io \
             -f description="$DESC" \
             -f target_url="$RUN_URL" > /dev/null \
-            || echo "::warning::could not write the staging/pulumi-test-io status"
+            || { echo "::warning::could not write the staging/pulumi-test-io status"; exit 0; }
+          # The Sentinel already ran for this push, before the status above
+          # existed. Re-score it so G4's row quotes the reason. Pinned to the
+          # default branch, like staging-status.yml's poke.
+          gh workflow run review-sentinel.yml --repo "$REPO" \
+            --ref "$DEFAULT_BRANCH" -f pr_number="$PR_NUMBER" \
+            || echo "::warning::could not re-run the Sentinel; G4 picks the status up on its next run"
