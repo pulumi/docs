@@ -16,6 +16,7 @@ It also, at build-finished:
 conf.py options:
   per_symbol_modules   list of dotted module names to split.
   per_symbol_honor_all bool; when True a module's __all__ limits the symbols.
+  per_symbol_sitemap_min_words int; generated pages with fewer rendered words are left out of sitemap.xml (default 25).
 """
 from __future__ import annotations
 
@@ -45,19 +46,27 @@ def _public_symbols(modname: str, honor_all: bool) -> list[tuple[str, str]]:
             continue
         if not str(getattr(obj, "__module__", "")).startswith(root):
             continue
-        out.append(("class" if inspect.isclass(obj) else "function", name))
+        if inspect.isclass(obj):
+            kind = "exception" if issubclass(obj, BaseException) else "class"
+        else:
+            kind = "function"
+        out.append((kind, name))
     return out
 
 
 def _first_line(modname: str, name: str) -> str:
-    doc = inspect.getdoc(getattr(importlib.import_module(modname), name)) or ""
+    obj = getattr(importlib.import_module(modname), name)
+    if inspect.isclass(obj):
+        # Own docstring only; an inherited one (for example a mixin's __repr__
+        # text) would describe a different class.
+        doc = inspect.cleandoc(obj.__dict__.get("__doc__") or "")
+    else:
+        doc = inspect.getdoc(obj) or ""
     line = doc.strip().split("\n\n")[0].replace("\n", " ").strip()
+    line = re.sub(r":\w+:`~?([^`]*)`", r"\1", line).replace("`", "")
     if len(line) > 140:
         line = line[:137].rsplit(" ", 1)[0] + "..."
-    line = re.sub(r":\w+:`~?([^`]*)`", r"\1", line)
-    for ch in "`*|\\":
-        line = line.replace(ch, "")
-    return re.sub(r"(?<!\w)_|_(?!\w)", "", line)
+    return re.sub(r"([\\*_|])", r"\\\1", line)
 
 
 def _generate(app: Sphinx) -> None:
@@ -75,20 +84,30 @@ def _generate(app: Sphinx) -> None:
         # Restores the legacy #module-<modname> anchors and py-modindex/.
         overview.append(f".. py:module:: {modname}\n")
         overview.append(f"Classes and functions in ``{modname}``.\n")
-        overview.append(".. list-table::\n   :widths: 35 65\n")
+        overview.append(".. list-table::\n   :class: per-symbol-index\n   :widths: 35 65\n")
         entries = []
         for kind, name in symbols:
             full = f"{modname}.{name}"
-            directive = "autoclass" if kind == "class" else "autofunction"
+            directive = {"class": "autoclass", "exception": "autoexception"}.get(kind, "autofunction")
             body = f".. {directive}:: {full}\n"
-            if kind == "class":
+            if kind != "function":
                 body += "   :members:\n"
             title = f"{full}"
             (api / f"{full}.rst").write_text(f"{title}\n{'=' * len(title)}\n\n{body}", encoding="utf-8")
             entries.append(full)
             overview.append(f"   * - :doc:`{full} <api/{full}>`\n     - {_first_line(modname, name)}\n")
-        overview.append("\n.. toctree::\n   :hidden:\n\n" + "".join(f"   api/{e}\n" for e in entries))
+        overview.append(f"\n.. toctree::\n   :hidden:\n   :caption: {modname}\n\n" + "".join(f"   api/{e}\n" for e in entries))
     (Path(app.srcdir) / "api" / "overview.inc").write_text("\n".join(overview), encoding="utf-8")
+
+
+def _is_thin(app: Sphinx, docname: str, min_words: int) -> bool:
+    """True for generated per-symbol pages with too little rendered text to be worth indexing.
+
+    The pages are still built and linked; they are only left out of sitemap.xml.
+    """
+    if not docname.startswith("api/") or min_words <= 0:
+        return False
+    return len(app.env.get_doctree(docname).astext().split()) < min_words
 
 
 def _finish(app: Sphinx, exception: Exception | None) -> None:
@@ -96,7 +115,8 @@ def _finish(app: Sphinx, exception: Exception | None) -> None:
         return
     base = (app.config.html_baseurl or "").rstrip("/") + "/"
     out = Path(app.outdir)
-    docs = sorted(d for d in app.env.found_docs if d != "search")
+    min_words = app.config.per_symbol_sitemap_min_words
+    docs = sorted(d for d in app.env.found_docs if d != "search" and not _is_thin(app, d, min_words))
     urls = []
     for d in docs:
         path = "" if d == "index" else d + "/"
@@ -135,9 +155,16 @@ def _page_url(app: Sphinx, pagename: str, templatename: str, context: dict, doct
         context["pageurl"] = base + pagename + "/"
 
 
+def _add_static(app: Sphinx, config: Any) -> None:
+    config.html_static_path.append(str(Path(__file__).parent / "static"))
+
+
 def setup(app: Sphinx) -> dict[str, Any]:
     app.add_config_value("per_symbol_modules", [], "env")
     app.add_config_value("per_symbol_honor_all", False, "env")
+    app.add_config_value("per_symbol_sitemap_min_words", 25, "env")
+    app.connect("config-inited", _add_static)
+    app.add_css_file("per_symbol.css")
     app.connect("builder-inited", _generate)
     app.connect("build-finished", _finish)
     app.connect("html-page-context", _page_url)
