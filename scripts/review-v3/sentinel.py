@@ -929,6 +929,16 @@ def _tree_sha(commit: dict) -> str:
     return ((commit.get("commit") or {}).get("tree") or {}).get("sha") or ""
 
 
+def _changes_nothing(c: dict, prev: dict) -> bool:
+    """`c` is a merge, or a one-parent commit on `prev` with `prev`'s tree."""
+    parents = c.get("parents") or []
+    if len(parents) >= 2:
+        return True
+    tree = _tree_sha(c)
+    return (bool(tree) and tree == _tree_sha(prev) and len(parents) == 1
+            and bool(prev.get("sha")) and parents[0].get("sha") == prev.get("sha"))
+
+
 def changes_nothing_since(commits: list[dict], sha: str) -> bool:
     """True when `sha` is in the PR's commit list, is not its last commit,
     and every later commit is a merge (two parents) or changes nothing (the
@@ -939,12 +949,7 @@ def changes_nothing_since(commits: list[dict], sha: str) -> bool:
                None)
     if idx is None or idx == len(shas) - 1:
         return False
-    prev = _tree_sha(commits[idx])
-    for c in commits[idx + 1:]:
-        if len(c.get("parents") or []) < 2 and not (prev and _tree_sha(c) == prev):
-            return False
-        prev = _tree_sha(c)
-    return True
+    return all(_changes_nothing(commits[i], commits[i - 1]) for i in range(idx + 1, len(commits)))
 
 
 def changed_lines(files: list[dict]) -> dict[str, list[str]]:
@@ -1011,10 +1016,9 @@ class _Carry:
         commits, newest first, head excluded. Bounded: each costs reads."""
         commits, out = self.commits(), []
         for i in range(len(commits) - 1, 0, -1):
-            c, prev = commits[i], commits[i - 1]
-            if len(c.get("parents") or []) < 2 and not (_tree_sha(c) and _tree_sha(c) == _tree_sha(prev)):
+            if not _changes_nothing(commits[i], commits[i - 1]):
                 break
-            out.append(prev.get("sha") or "")
+            out.append(commits[i - 1].get("sha") or "")
         return [s for s in out if s][:limit]
 
     def unchanged_since(self, sha: str) -> bool:

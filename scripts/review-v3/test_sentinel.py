@@ -1365,8 +1365,10 @@ def _based_pr():
     return meta
 
 
-def _treed(sha, tree, parents=1):
-    return {"sha": sha, "parents": [{"sha": "p"}] * parents, "commit": {"tree": {"sha": tree}}}
+def _treed(sha, tree, parents=1, on="p"):
+    """`on`: the first parent. An empty commit must sit on the one before it."""
+    return {"sha": sha, "parents": [{"sha": on}] + [{"sha": "base"}] * (parents - 1),
+            "commit": {"tree": {"sha": tree}}}
 
 
 def _moved(f):
@@ -1391,9 +1393,12 @@ def test_an_approval_carries_across_update_branch():
     assert "only base merges or no-op commits" in _gate(merged, "G3").message
     assert merged.conclusion == "success"
 
-    empty = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t1")]),
+    empty = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t1", on=EARLIER)]),
                               HUMAN_CONFIG)
     assert _gate(empty, "G3").status == "ok", "an empty kick commit changes nothing"
+    elsewhere = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t1")]),
+                                  HUMAN_CONFIG)
+    assert _gate(elsewhere, "G3").status == "red", "same tree, but not on the commit before it"
 
 
 def test_an_approval_does_not_carry_across_a_real_change():
