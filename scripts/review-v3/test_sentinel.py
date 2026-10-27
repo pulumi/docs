@@ -1297,6 +1297,32 @@ def test_g4_names_the_branch_and_warns_off_the_production_workflow():
         assert "<branch>" not in g4.message
 
 
+def test_g4_quotes_the_last_failed_staging_attempt():
+    """A failed dispatch or deploy writes its reason to the staging status;
+    the G4 row leads with it instead of leaving it in a job log."""
+    failed = {"context": "staging/pulumi-test-io", "state": "error",
+              "creator": {"login": "github-actions[bot]"},
+              "description": "Not dispatched: testing-build-and-deploy.yml is disabled.",
+              "target_url": "https://github.com/pulumi/docs/actions/runs/7"}
+    gh = StubGh(pr=pr_meta(), files=[infra_file()], statuses=[failed])
+    g4 = _gate(sentinel.evaluate(gh, CONFIG), "G4")
+    assert g4.status == "red"
+    assert g4.message.startswith(
+        "**Last staging attempt: Not dispatched: testing-build-and-deploy.yml is disabled.**")
+    assert "actions/runs/7" in g4.message
+
+    # Only the NEWEST trusted status speaks: a newer green one is evidence,
+    # and an untrusted failure is ignored like an untrusted success.
+    newer_green = dict(failed, state="success", description="staging deploy green")
+    assert _gate(sentinel.evaluate(StubGh(pr=pr_meta(), files=[infra_file()],
+                                          statuses=[newer_green, failed]), CONFIG),
+                 "G4").status == "ok"
+    forged = dict(failed, creator={"login": "someone"})
+    g4 = _gate(sentinel.evaluate(StubGh(pr=pr_meta(), files=[infra_file()],
+                                        statuses=[forged]), CONFIG), "G4")
+    assert "Last staging attempt" not in g4.message
+
+
 def test_g4_ok_never_reads_the_workflow_state():
     """The state read is advice for a red gate, not part of the verdict."""
     gh = StubGh(pr=pr_meta(), files=[infra_file()], workflow_runs=[_deploy_run()],

@@ -846,6 +846,31 @@ def _staging_evidence(gh: Gh, head_sha: str) -> str | None:
     return None
 
 
+def _last_staging_failure(gh: Gh, head_sha: str) -> str:
+    """The newest trusted `staging/pulumi-test-io` status at this head, as
+    a sentence, when it says the deploy failed or never started; else ''.
+
+    The sweep writes failure/error for a deploy that finished badly, and the
+    auto lane writes error for one it couldn't dispatch. Either way the
+    reason belongs on the G4 row, not one click away in a job log.
+    """
+    try:
+        statuses = gh.get_commit_statuses(head_sha)
+    except Exception:  # noqa: BLE001 — advice only; see _g4_red_message
+        return ""
+    for s in statuses:  # newest first
+        if s.get("context") != STAGING_STATUS_CONTEXT:
+            continue
+        if ((s.get("creator") or {}).get("login") or "") not in STAGING_STATUS_WRITERS:
+            continue
+        if s.get("state") not in ("failure", "error"):
+            return ""
+        desc = (s.get("description") or "staging deploy failed").rstrip(".")
+        url = s.get("target_url")
+        return f"**Last staging attempt: {desc}.**" + (f" ([details]({url}))" if url else "") + " "
+    return ""
+
+
 def _g4_red_message(gh: Gh, pr: dict, head_sha: str) -> str:
     """What to do about a red G4, specific to why it can't be green.
 
@@ -864,12 +889,13 @@ def _g4_red_message(gh: Gh, pr: dict, head_sha: str) -> str:
         f"Use [Build and deploy testing]({workflow_url}), never \"Build and deploy\" "
         f"(`{PRODUCTION_WORKFLOW_FILE}`), which deploys production."
     )
+    last = _last_staging_failure(gh, head_sha)
     try:
         state = gh.get_workflow_state(STAGING_WORKFLOW_FILE)
     except Exception:  # noqa: BLE001 — see docstring
         state = ""
     if state and state != "active":
-        return (
+        return last + (
             f"This PR changes the deploy itself, and needs a successful staging deploy "
             f"at `{head_sha[:9]}`, but **the staging workflow is disabled** "
             f"([`{STAGING_WORKFLOW_FILE}`]({workflow_url}) is `{state}`), so no staging "
@@ -878,7 +904,7 @@ def _g4_red_message(gh: Gh, pr: dict, head_sha: str) -> str:
             f"(`gh workflow enable {STAGING_WORKFLOW_FILE}`) and dispatch it at this "
             f"branch: {dispatch}. {not_prod}"
         )
-    return (
+    return last + (
         f"This PR changes the deploy itself: no successful staging deploy at "
         f"`{head_sha[:9]}`. One is dispatched automatically when such a PR opens or "
         "pushes (`staging-deploy-auto.yml`), and a deploy that finishes is picked up "

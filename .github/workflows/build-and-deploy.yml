@@ -33,7 +33,42 @@ permissions:
   id-token: write # This is required for requesting the JWT
   contents: read # This is required for actions/checkout
 jobs:
+  # Production deploys only code that's already on master. `workflow_dispatch`
+  # takes any branch, and the Actions sidebar lists this workflow right next to
+  # "Build and deploy testing" -- on pulumi/docs#22524 someone looking for the
+  # staging deploy dispatched this one at an unmerged PR branch, and it got as
+  # far as assuming the production deploy role before a manual cancel. A
+  # separate job, so a refused ref never enters the `production` environment.
+  # Refs whose commit is on master still pass: dispatching at an older ref is
+  # the documented "re-publish an older build" rollback.
+  guard:
+    name: Refuse refs that aren't on master
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check that this commit is on master
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          REF: ${{ github.ref }}
+          SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if [ "$REF" = "refs/heads/master" ]; then
+            exit 0
+          fi
+          # base...head: "behind" or "identical" means $SHA is already in master.
+          STATUS=$(gh api "repos/$REPO/compare/master...$SHA" --jq .status)
+          case "$STATUS" in
+            identical|behind)
+              echo "$REF @ ${SHA:0:9} is on master -- OK to deploy" ;;
+            *)
+              echo "::error::Refusing to deploy $REF @ ${SHA:0:9} to production: that commit isn't on master (compare status: $STATUS). For a PR's staging deploy, run \"Build and deploy testing\" (testing-build-and-deploy.yml) instead."
+              exit 1 ;;
+          esac
+
   buildSite:
+    needs: guard
     env:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
