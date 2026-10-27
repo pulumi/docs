@@ -5,10 +5,9 @@ h1: Pulumi Agent Skills
 meta_desc: Learn how Pulumi Agent Skills teach Claude Code, Cursor, GitHub Copilot, and JetBrains Junie to work with Pulumi. Neo ships with them built in.
 menu:
     ai:
-        name: Agent Skills
+        name: Agent skills
         parent: ai-concepts
-        identifier: ai-concepts-agent-skills
-        weight: 10
+        weight: 30
 aliases:
 - /docs/ai/agent-skills/
 - /docs/ai/skills/

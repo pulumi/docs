@@ -1,0 +1,104 @@
+---
+title: Integrations
+title_tag: Integrations | Pulumi Agents
+h1: Integrations
+meta_desc: Connect Pulumi Agents to repositories, cloud providers, monitoring tools, and issue trackers.
+menu:
+    ai:
+        name: Integrations
+        parent: ai-home
+        identifier: ai-agents-integrations
+        weight: 40
+integration_groups:
+    repositories:
+        - name: GitHub
+          image: /logos/tech/github.svg
+          link: /docs/integrations/version-control/github-app/
+        - name: GitLab
+          image: /logos/tech/gitlab.svg
+          link: /docs/integrations/version-control/gitlab/
+        - name: Bitbucket
+          image: /logos/tech/bitbucket.svg
+          link: /docs/integrations/version-control/bitbucket/
+        - name: Azure DevOps
+          image: /logos/tech/ci-cd/azure-devops.svg
+          link: /docs/integrations/version-control/azure-devops-integration/
+        - name: Other Git servers
+          image: /logos/tech/git.svg
+          link: /docs/integrations/version-control/custom-vcs/
+    cloud:
+        - name: Cloudflare
+          image: /logos/agents/cloudflare.svg
+          link: /docs/ai/integrations/external-mcp-servers/#cloudflare
+        - name: AWS
+          image: /logos/pkg/aws.svg
+          link: /docs/ai/agents/integrations/aws/
+        - name: Google Cloud
+          image: /logos/tech/gcp-logo.svg
+          link: /docs/ai/agents/integrations/google-cloud/
+        - name: Azure
+          image: /logos/tech/azure-logo.svg
+          link: /docs/ai/agents/integrations/azure/
+        - name: Kubernetes
+          image: /logos/tech/kubernetes.svg
+          link: /docs/ai/integrations/cli-integrations/#kubernetes
+        - name: Supabase
+          image: /logos/agents/supabase.svg
+          link: /docs/ai/integrations/external-mcp-servers/#supabase
+    tools:
+        - name: Atlassian
+          image: /logos/agents/atlassian.svg
+          link: /docs/ai/integrations/external-mcp-servers/#atlassian-jira-and-confluence
+        - name: Dash0
+          image: /logos/agents/dash0.svg
+          link: /docs/ai/integrations/external-mcp-servers/#dash0
+        - name: Datadog
+          image: /logos/agents/datadog.svg
+          link: /docs/ai/agents/integrations/datadog/
+        - name: Honeycomb
+          image: /logos/agents/honeycomb.svg
+          link: /docs/ai/integrations/external-mcp-servers/#honeycomb
+        - name: Linear
+          image: /logos/agents/linear.svg
+          link: /docs/ai/integrations/external-mcp-servers/#linear
+        - name: New Relic
+          image: /logos/agents/newrelic.svg
+          link: /docs/ai/integrations/external-mcp-servers/#new-relic
+        - name: Sentry
+          image: /logos/agents/sentry.svg
+          link: /docs/ai/integrations/external-mcp-servers/#sentry
+        - name: PagerDuty
+          image: /logos/agents/pagerduty.svg
+          link: /docs/ai/integrations/external-mcp-servers/#pagerduty
+
+---
+
+Connect the tools an agent needs to do its work, such as a repository for code changes or Datadog for an investigation. See [Permissions](/docs/ai/agents/permissions/#design-access-around-the-job) to choose the access to grant.
+
+Connections are shared across Neo and the agents you configure.
+
+## Connect your tools
+
+### Repositories
+
+{{< integration-links "repositories" >}}
+
+### Cloud accounts and Kubernetes
+
+{{< integration-links "cloud" >}}
+
+For AWS, Google Cloud, Azure, and Kubernetes, configure credentials in Pulumi ESC, then [connect the environment to a CLI tool](/docs/ai/integrations/cli-integrations/#setting-up-a-cli-integration).
+
+### Monitoring and issue tracking
+
+{{< integration-links "tools" >}}
+
+## Give an agent access
+
+Select MCP integrations in the [agent's configuration](/docs/ai/agents/configure/#connect-the-tools-it-needs). Edit that selection to add integrations connected later.
+
+CLI connections are available to the agent without a per-task selection. Its role must grant access to open the backing ESC environments. For Neo, access depends on your Pulumi Cloud permissions, and you can [select CLI connections for each task](/docs/ai/integrations/cli-integrations/#per-task-selection).
+
+Give the agent only the permissions it needs for its work. Selecting an integration does not restrict its credentials. See [Permissions](/docs/ai/agents/permissions/) for how to scope access.
+
+To work with an agent from Slack, see [Tasks and collaboration](/docs/ai/agents/tasks/). For automatic runs, see [Events and schedules](/docs/ai/agents/triggers/).

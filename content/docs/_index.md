@@ -31,7 +31,7 @@ sections:
     link: /docs/iac/
   - icon: pulumi-neo
     heading: Infrastructure AI
-    description: Bring your own coding agent or use Pulumi Neo, the purpose-built infrastructure agent.
+    description: Investigate incidents and maintain infrastructure with Pulumi Agents, or write Pulumi code with your coding agent.
     link: /docs/ai/
   - icon: rocket-launch
     heading: Deployments & Workflows

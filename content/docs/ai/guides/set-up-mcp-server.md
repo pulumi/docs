@@ -5,10 +5,9 @@ title: MCP server
 h1: Pulumi Model Context Protocol server
 menu:
     ai:
-        name: Set up the MCP server
+        name: Set up the Pulumi MCP server
         parent: ai-guides
-        identifier: ai-guides-mcp-server
-        weight: 10
+        weight: 30
 aliases:
 - /docs/iac/using-pulumi/mcp-server/
 - /docs/iac/guides/mcp-server.md

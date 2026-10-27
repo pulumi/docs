@@ -9,9 +9,9 @@ aliases:
 menu:
     ai:
         name: Automations
-        parent: ai-concepts-neo
         identifier: ai-automations
-        weight: 20
+        parent: ai-neo
+        weight: 30
 pulumi_cloud_feature: neo-scheduled-tasks
 ---
 

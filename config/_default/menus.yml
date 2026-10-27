@@ -340,3 +340,60 @@ discovery-governance:
     url: /docs/iac/cli/commands/pulumi_policy/
     identifier: dg-reference-policy-cli
     weight: 10
+
+# Infrastructure AI
+ai:
+  - name: Use Neo
+    parent: ai-guides
+    identifier: ai-neo
+    weight: 20
+  - name: Version control
+    parent: ai-agents-integrations
+    identifier: ai-integrations-version-control
+    url: /docs/ai/agents/integrations/#repositories
+    weight: 10
+  - name: Atlassian
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-atlassian-jira-and-confluence
+    url: /docs/ai/integrations/external-mcp-servers/#atlassian-jira-and-confluence
+    weight: 10
+  - name: Cloudflare
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-cloudflare
+    url: /docs/ai/integrations/external-mcp-servers/#cloudflare
+    weight: 20
+  - name: Dash0
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-dash0
+    url: /docs/ai/integrations/external-mcp-servers/#dash0
+    weight: 30
+  - name: Honeycomb
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-honeycomb
+    url: /docs/ai/integrations/external-mcp-servers/#honeycomb
+    weight: 50
+  - name: Linear
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-linear
+    url: /docs/ai/integrations/external-mcp-servers/#linear
+    weight: 60
+  - name: New Relic
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-new-relic
+    url: /docs/ai/integrations/external-mcp-servers/#new-relic
+    weight: 70
+  - name: PagerDuty
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-pagerduty
+    url: /docs/ai/integrations/external-mcp-servers/#pagerduty
+    weight: 80
+  - name: Sentry
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-sentry
+    url: /docs/ai/integrations/external-mcp-servers/#sentry
+    weight: 90
+  - name: Supabase
+    parent: ai-integrations-mcp
+    identifier: ai-integrations-mcp-supabase
+    url: /docs/ai/integrations/external-mcp-servers/#supabase
+    weight: 100
