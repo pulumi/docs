@@ -1152,11 +1152,13 @@ def test_waive_covers_infra_evidence():
     v = sentinel.evaluate(gh, CONFIG)
     assert _gate(v, "G4").status == "red", "the row still records what was bypassed"
     assert v.conclusion == "success", v.to_json()
-    assert v.title == "WAIVED"
+    assert v.title == "Waived by cam"
     assert "G4 was red" in v.summary
     body = sentinel.render_status_comment(v)
-    assert "Waived — this PR can merge." in body
+    assert "Waived by `cam` — the Sentinel passes." in body
+    assert "GitHub's own required approval still applies" in body
     assert "no waiver" not in body.lower()
+    assert "@cam" not in body, "a re-rendered comment must not ping"
 
 
 # ---- G4: the deploy run is evidence, not just the status ----------------
@@ -1247,10 +1249,10 @@ def test_an_unattributed_staging_status_is_not_evidence():
 
 
 def test_a_waive_clears_an_error_and_g4():
-    """`any_error` used to be tested before `waived`, so the break-glass was
-    inert in exactly the outage it exists for: an expired team-read token
-    errors G3 on every PR, so every PR sat at action_required and no waive
-    could move any of them — under a summary still claiming WAIVED."""
+    """`any_error` used to be tested before `waived`, so a gate that errored
+    held an honored waive at action_required under a summary claiming
+    WAIVED. This models ONE approver's lookup failing; a full outage of the
+    org token refuses the waive too (see the next test)."""
     waive_events = [{"event": "labeled", "label": {"name": "review:waived"},
                      "actor": {"login": "boss"}}]
     base = dict(pr=pr_meta(labels=["review:waived"]),
@@ -1262,11 +1264,69 @@ def test_a_waive_clears_an_error_and_g4():
     errored = sentinel.evaluate(StubGh(**dict(
         base, reviews=[approval("flaky")], membership_error_users={"flaky"})), CONFIG)
     assert errored.conclusion == "success", errored.to_json()
-    assert "WAIVED" in errored.title
+    assert errored.title == "Waived by boss"
 
     infra = sentinel.evaluate(StubGh(**dict(base, files=[infra_file()])), CONFIG)
     assert infra.conclusion == "success", infra.to_json()
-    assert infra.title == "WAIVED"
+    assert infra.title == "Waived by boss"
+
+
+def test_an_org_token_outage_refuses_the_waive_and_g3_names_the_admin_merge():
+    """The waive's authorization reads the same org-scoped token G3 does, so
+    a full outage refuses both. Fail-closed on purpose; the G3 row says the
+    way through, and the comment doesn't recommend a waive that can't work."""
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
+                comments=[card], reviews=[approval("chris")], label_events=_waive_events("chris"),
+                membership_error_users={"chris"}, permission_error_users={"chris"})
+    v = sentinel.evaluate(gh, HUMAN_CONFIG)
+    assert v.conclusion == "action_required" and not v.waived
+    assert "repo admin merging past the check" in _gate(v, "G3").message
+    assert v.title.startswith("review:waived refused · Couldn't check the approval")
+    body = sentinel.render_status_comment(v)
+    assert "was not honored" in body and "@chris" not in body
+    assert "Break glass" not in body
+
+
+def test_merge_box_title_says_what_the_merge_waits_on():
+    """#22524: "2 gate(s) red" sent people to a Details page that started
+    with the reviewer brief. The title is the only line most people read."""
+    stale = author_card([], state=_state_with([]), head="b" * 40)
+    v = sentinel.evaluate(StubGh(pr=pr_meta(), files=[infra_file()], comments=[stale],
+                                 reviews=[approval("chris", commit_id="b" * 40)]), HUMAN_CONFIG)
+    assert v.title == ("Waiting on a current review (/update-review); "
+                       "an approval of the latest commit; a staging deploy"), v.title
+    assert len(v.title) <= 140
+
+    findings = author_card([("F1", "must"), ("F2", "answer")])
+    v2 = sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                                  comments=[findings, brief_comment()]), HUMAN_CONFIG)
+    assert "answers to 2 findings (/update-review)" in v2.title, v2.title
+    assert v2.summary.index("| Gate |") < v2.summary.index("Summary text."), "table first"
+
+
+def test_refused_waive_shows_where_people_look():
+    gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
+                label_events=_waive_events("rob"))
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.title.startswith("review:waived refused · Waiting on"), v.title
+    body = sentinel.render_status_comment(v)
+    assert "`review:waived` is on this PR but was not honored:** `rob` is not an active member" in body
+    assert "removes the label and applies it again" in body
+    assert "@rob" not in body
+
+
+def test_break_glass_is_offered_on_an_error_it_can_clear():
+    """A corrupt REVIEW_STATE errors G2 with no red gate; the waive clears it,
+    so the comment has to say it exists."""
+    card = author_card([("F1", "must")])
+    card["body"] = card["body"].replace("<!-- REVIEW_STATE ", "<!-- REVIEW_STATE {broken ")
+    v = sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                                 comments=[card]), CONFIG)
+    assert v.conclusion == "action_required"
+    assert v.title.startswith("Couldn't check the review's answers"), v.title
+    assert "Break glass" in sentinel.render_status_comment(v)
+    assert sentinel.BREAK_GLASS in v.summary
 
 
 def test_g4_says_when_the_staging_workflow_is_disabled():
@@ -1830,7 +1890,7 @@ def test_strip_without_blocking_findings_says_what_merge_waits_on():
     assert sentinel.update_strip(gh, v, comments=[status, card]) is True
     _, patched = gh.patched[-1]
     strip = patched.split(sentinel.STRIP_OPEN)[1].split(sentinel.STRIP_CLOSE)[0]
-    assert "Merge is waiting on G3 right-approver." in strip, strip
+    assert "Merge is waiting on an approval of the latest commit.**" in strip, strip
     assert f"[the Sentinel status]({url})" in strip, strip
     for wrong in ("blocked", "⛔", "fix and push", "/update-review", "below"):
         assert wrong not in strip, (wrong, strip)
@@ -1839,7 +1899,7 @@ def test_strip_without_blocking_findings_says_what_merge_waits_on():
                            gates=v.gates + [sentinel.Gate("G5 oversized-ack", "red", "x")])
     sentinel.update_strip(gh, two, comments=[card])  # no status comment yet: no link
     strip = gh.patched[-1][1].split(sentinel.STRIP_OPEN)[1].split(sentinel.STRIP_CLOSE)[0]
-    assert "waiting on G3 right-approver and G5 oversized-ack." in strip, strip
+    assert "waiting on an approval of the latest commit and /oversized-ack in an approval.**" in strip, strip
     assert "Details: the Sentinel status comment." in strip, strip
 
 

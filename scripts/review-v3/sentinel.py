@@ -223,6 +223,56 @@ BREAK_GLASS = (
     "can apply `review:waived` (logged)"
 )
 
+
+# G3's error rows. When the org-scoped token is what failed, the waive is
+# refused by the same lookup, so the one way through is an admin's merge.
+_G3_TOKEN_HINT = (
+    "If a re-run fails the same way, the org-scoped token (`PULUMI_BOT_TOKEN`, "
+    "from ESC) is likely down; `review:waived` can't be verified without it "
+    "either, so a repo admin merging past the check is the way through. "
+)
+
+
+def _waive_can_clear(g: Gate) -> bool:
+    """Whether recommending the waive for this gate would work. Every red
+    gate, and every error but G3's: G3 errors when the org-scoped token
+    can't read permissions, and the waive's own authorization reads them
+    with the same token, so offering it there sends people in a circle."""
+    return g.status == "red" or (g.status == "error" and not g.name.startswith("G3"))
+
+
+# The merge box shows the status description and nothing else, so it has to
+# answer "why can't I merge?" by itself, in words for someone who has never
+# opened this file. "2 gate(s) red" sent people (pulumi/docs#22524) to a
+# Details page whose gate table started two-thirds of the way down. Each
+# phrase completes "Waiting on …"; the gate's row in the status comment says
+# who acts and how. Shared with the author-card strip so the two agree.
+def _waiting_on(g: Gate, n_blocking: int) -> str:
+    gate = g.name.split()[0]
+    cmd = next((f" ({c})" for c in ("/update-review", "/new-review") if c in g.message), "")
+    if gate == "G1":
+        if "changes no files" in g.message:
+            return "a diff to review"
+        return f"a current review{cmd}"
+    if gate == "G2":
+        n = n_blocking or "open"
+        return f"answers to {n} finding{'' if n_blocking == 1 else 's'} (/update-review)"
+    if gate == "G3":
+        return "an approval of the latest commit"
+    if gate == "G4":
+        return "a staging deploy"
+    if gate == "G5":
+        return f"{OVERSIZED_ACK} in an approval"
+    return g.name
+
+
+_PLAIN_GATE = {"G1": "the review", "G2": "the review's answers", "G3": "the approval",
+               "G4": "the staging deploy", "G5": "the oversized ack"}
+
+
+def _plain_join(items: list[str]) -> str:
+    return " and ".join([", ".join(items[:-1]), items[-1]]) if len(items) > 1 else (items or [""])[0]
+
 CHECK_NAME = "Sentinel"
 
 
@@ -440,6 +490,11 @@ class Verdict:
     # said success. A gate surface that contradicts the gate is the failure
     # the `_GATE_BLURB` phrasebook exists to prevent.
     waived: bool = False
+    # Who applied an honored waive, or why the label was refused. A refusal
+    # used to reach only the job summary, so the merge box and the status
+    # comment kept inviting the person who had just applied the label to
+    # apply it.
+    waive_note: str = ""
 
     def to_json(self) -> dict:
         return {
@@ -452,6 +507,7 @@ class Verdict:
             "blocking_ids": self.blocking_ids,
             "mechanical": self.mechanical,
             "governed": self.governed,
+            "waive_note": self.waive_note,
         }
 
 
@@ -941,7 +997,7 @@ def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool
         return False, ""
     actor = _waive_actor(gh)
     if actor == "unknown":
-        return False, "could not read who applied the waive label — not honored"
+        return False, "could not read who applied the waive label"
     for team_ref in sorted(set(config.teams.values())):
         org, slug = _team_org_slug(team_ref)
         try:
@@ -950,11 +1006,11 @@ def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool
         except SentinelDataError:
             return False, (
                 f"could not verify whether @{actor} may waive (team lookup "
-                "failed) — not honored"
+                "failed)"
             )
     return False, (
         f"@{actor} is not an active member of any routing team "
-        "(`.github/review-routing.yml` `teams:`) — waive not honored"
+        "(`.github/review-routing.yml` `teams:`)"
     )
 
 
@@ -1361,7 +1417,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             gates.append(Gate(
                 "G3 right-approver", "error",
                 "Couldn't verify the approver's repo permission — re-run the "
-                "check. " + errors[0],
+                "check. " + _G3_TOKEN_HINT + errors[0],
             ))
         else:
             gates.append(Gate(
@@ -1432,7 +1488,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             gates.append(Gate(
                 "G3 right-approver", "error",
                 "Couldn't verify the approver's team membership or repo role — "
-                "re-run the check. " + errors[0],
+                "re-run the check. " + _G3_TOKEN_HINT + errors[0],
             ))
         elif admin_approver:
             gates.append(Gate(
@@ -1523,24 +1579,34 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     infra_red = any(g.name.startswith("G4") and g.status == "red" for g in gates)
 
     # `waived` is tested BEFORE `any_error` on purpose. It used to be the
-    # other way round, which made the break-glass inert in exactly the
-    # outage it exists for: an expired PULUMI_BOT_TOKEN errors G3 on every
-    # PR, so every PR sat at action_required and no waive could move any of
-    # them — while the summary still printed a "WAIVED / gates bypassed"
-    # banner over a blocked conclusion. A waive clears every gate, G4 too
-    # (see the module docstring for why G4 lost its exemption).
+    # other way round, so a gate that errored (one approver's lookup hitting
+    # a 5xx, a REVIEW_STATE block that won't parse) held the PR at
+    # action_required with an honored waive on it, under a summary printing
+    # "WAIVED / gates bypassed". A waive clears every gate, G4 too (see the
+    # module docstring for why G4 lost its exemption).
+    #
+    # What the order can NOT rescue is an outage of the org-scoped token
+    # itself (GH_TOKEN_TEAM_READ unset or expired): `_waive_state` checks the
+    # waiver's team membership with that token, so it refuses the waive in
+    # the same breath as G3 errors. That is fail-closed on purpose — a label
+    # anyone with triage could apply must not skip every gate unverified —
+    # and it leaves a repo admin's merge as the way through. G3's error text
+    # says so.
     if waived:
         conclusion = "success"
-        title = "WAIVED"
+        title = f"Waived by {waive_note}"
     elif any_error:
         conclusion = "action_required"
-        title = "Couldn't evaluate — action required"
+        errs = [_PLAIN_GATE.get(g.name.split()[0], g.name) for g in gates if g.status == "error"]
+        title = f"Couldn't check {_plain_join(errs)} — re-run the Sentinel check"
     elif reds:
         conclusion = "failure"
-        title = f"{len(reds)} gate(s) red"
+        title = "Waiting on " + "; ".join(_waiting_on(g, len(blocking_ids)) for g in reds)
     else:
         conclusion = "success"
         title = "All gates green"
+    if waive_note and not waived:
+        title = f"review:waived refused · {title}"
 
     # ---- Summary --------------------------------------------------------
     parts: list[str] = []
@@ -1558,8 +1624,15 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         parts.append(
             f"## ⚠️ `review:waived` NOT honored\n\n{waive_note}. The gates below stand."
         )
-    if brief:
-        parts.append(_strip_brief_for_summary(brief.get("body") or ""))
+    # The gate table comes before the brief: the merge box's Details link
+    # lands here, and on #22524 the table started two-thirds of the way down,
+    # under a brief whose first line was "Check the ⚠️ items, then approve."
+    table = ["| Gate | Status | Detail |", "|---|---|---|"]
+    icon = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
+    for g in gates:
+        msg = g.message + (f" — {BREAK_GLASS}" if not waived and _waive_can_clear(g) else "")
+        table.append(f"| {g.name} | {icon[g.status]} {g.status} | {msg} |")
+    parts.append("\n".join(table))
     if external:
         parts.append(
             "_External contribution: the automated review does not run for external "
@@ -1572,18 +1645,14 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         )
     if skip_note:
         parts.append(skip_note)
-    table = ["| Gate | Status | Detail |", "|---|---|---|"]
-    icon = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
-    for g in gates:
-        msg = g.message + (f" — {BREAK_GLASS}" if g.status == "red" else "")
-        table.append(f"| {g.name} | {icon[g.status]} {g.status} | {msg} |")
-    parts.append("\n".join(table))
+    if brief:
+        parts.append(_strip_brief_for_summary(brief.get("body") or ""))
     summary = "\n\n".join(p for p in parts if p)
 
     verdict = Verdict(
         conclusion=conclusion, title=title, summary=summary,
         head_sha=head_sha, gates=gates, blocking_ids=blocking_ids,
-        mechanical=mechanical, waived=waived,
+        mechanical=mechanical, waived=waived, waive_note=waive_note,
     )
 
     if report_only:
@@ -1636,9 +1705,13 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
             # and sent authors (workprentice included) after gates only an
             # approver or a deploy can clear. Say what the merge is waiting on;
             # that gate's row in the status comment says who acts.
-            red = [g.name for g in verdict.gates if g.status in ("red", "error")]
-            what = (" and ".join([", ".join(red[:-1]), red[-1]]) if len(red) > 1
-                    else red[0] if red else "the merge gate")
+            # In words, not gate ids: "waiting on G1 review-ran" told nobody
+            # what to do.
+            what = _plain_join(
+                [_waiting_on(g, n) for g in verdict.gates if g.status == "red"]
+                + [f"a re-run of the Sentinel check ({_PLAIN_GATE.get(g.name.split()[0], g.name)} "
+                   "couldn't be checked)" for g in verdict.gates if g.status == "error"]
+            ) or "the merge gate"
             line = f"⏳ **Merge is waiting on {what}.** {details}"
         strip = f"{STRIP_OPEN}\n{line}\n{STRIP_CLOSE}"
     else:
@@ -1746,12 +1819,21 @@ def render_status_comment(verdict: Verdict) -> str:
         # gates found — that is the audit trail a waive is supposed to leave
         # — but the headline must not tell an author they are blocked when
         # they are not, nor recommend the break-glass twice.
+        # "This PR can merge" over-promised: the waive clears the Sentinel,
+        # not GitHub's own required approving review (#22527 waited on one).
         lines += [
-            "**Waived — this PR can merge.** `review:waived` is applied and "
-            "honored; the gates below are the record of what it bypassed.",
+            f"**Waived by `{verdict.waive_note}` — the Sentinel passes.** `review:waived` "
+            "is honored and logged; the gates below are the record of what it bypassed. "
+            "GitHub's own required approval still applies.",
             "",
         ]
     elif blocking:
+        if verdict.waive_note:
+            # No `@`: this comment is re-rendered, and a mention pings.
+            note = re.sub(r"@([\w-]+(?:\[bot\])?)", r"`\1`", verdict.waive_note)
+            lines += [f"**`review:waived` is on this PR but was not honored:** "
+                      f"{note}. To retry, a routing-team member removes "
+                      "the label and applies it again.", ""]
         # Tense matters here, and only here: in preview nothing is blocking
         # anything, so a headline reading "before this can merge" hands the
         # banner directly above it a contradiction to lose.
@@ -1780,7 +1862,7 @@ def render_status_comment(verdict: Verdict) -> str:
         lines.append(f"| {_STATUS_ICON[g.status]} | **{g.name}** | {need} |")
     lines.append("")
 
-    if not verdict.waived and any(g.status == "red" for g in blocking):
+    if not verdict.waived and any(_waive_can_clear(g) for g in blocking):
         # Not BREAK_GLASS verbatim — that string is written to follow a gate
         # message ("… — override: a member of …") and reads as a doubled
         # "override:" when it opens a sentence of its own.
