@@ -22,4 +22,5 @@ export const marketingWebPaths = [
     "/topics*",
     // Hides every S3 object under /customers/, so marketing-web 301s the old case-study stubs and /customers/industry/{,blockchain/} itself.
     "/customers*",
+    "/sitemap-www-*",
 ];

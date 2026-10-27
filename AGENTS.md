@@ -104,7 +104,7 @@ Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi
 - **`/topics`**: the explainer section that replaced `/what-is`, built from `apps/www/src/content/topics/`. `scripts/redirects/topics-redirects.txt` 301s the old `/what-is/` URLs (and the legacy URLs those pages carried) straight to their `/topics/` pages.
 - **`/customers`**: the customer board, its industry pages, and every case study, built from `apps/www/src/data/customers/` and `apps/www/src/content/customers/`. `scripts/redirects/customers-redirects.txt` 301s the old `/case-studies/` URLs. This repo keeps a frozen copy of the registry for the pages that still show customers (see "Customers" below).
 
-When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list.
+When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list. marketing-web's sitemap at `/sitemap-www-index.xml` (listed in `layouts/robots.txt`) lists every page it builds that isn't noindex, so ship the proxy path in the same release as the page.
 
 ### The Dev Center
 
