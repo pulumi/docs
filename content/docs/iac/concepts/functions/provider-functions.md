@@ -459,12 +459,12 @@ using Aws = Pulumi.Aws;
 return await Deployment.RunAsync(async () =>
 {
     // GetAmiIds.InvokeAsync returns a Task<GetAmiIdsResult>; await it for a plain value.
-    var candidates = await Aws.Ec2.GetAmiIds.InvokeAsync(new Aws.Ec2.GetAmiIdsInvokeArgs
+    var candidates = await Aws.Ec2.GetAmiIds.InvokeAsync(new Aws.Ec2.GetAmiIdsArgs
     {
         Owners = { "amazon" },
         Filters =
         {
-            new Aws.Ec2.Inputs.GetAmiIdsFilterInputArgs
+            new Aws.Ec2.Inputs.GetAmiIdsFilterArgs
             {
                 Name = "name",
                 Values = { "amzn2-ami-hvm-*-x86_64-gp3" },
@@ -497,8 +497,8 @@ import com.pulumi.Pulumi;
 import com.pulumi.aws.ec2.Ec2Functions;
 import com.pulumi.aws.ec2.Instance;
 import com.pulumi.aws.ec2.InstanceArgs;
-import com.pulumi.aws.ec2.inputs.GetAmiIdsArgs;
-import com.pulumi.aws.ec2.inputs.GetAmiIdsFilterArgs;
+import com.pulumi.aws.ec2.inputs.GetAmiIdsFilter;
+import com.pulumi.aws.ec2.inputs.GetAmiIdsPlainArgs;
 
 public class App {
     public static void main(String[] args) {
@@ -507,9 +507,9 @@ public class App {
 
     public static void stack(Context ctx) {
         // getAmiIdsPlain returns a CompletableFuture<GetAmiIdsResult>; join() for a plain value.
-        var candidates = Ec2Functions.getAmiIdsPlain(GetAmiIdsArgs.builder()
+        var candidates = Ec2Functions.getAmiIdsPlain(GetAmiIdsPlainArgs.builder()
                 .owners("amazon")
-                .filters(GetAmiIdsFilterArgs.builder()
+                .filters(GetAmiIdsFilter.builder()
                         .name("name")
                         .values("amzn2-ami-hvm-*-x86_64-gp3")
                         .build())

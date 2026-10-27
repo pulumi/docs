@@ -1431,6 +1431,11 @@
             "type": "string"
           },
           "validEnvironments": {
+            "default": [
+              "development",
+              "staging",
+              "production"
+            ],
             "description": "List of valid environment values (default: ['development', 'staging', 'production'])",
             "items": {
               "type": "string"
@@ -1766,6 +1771,9 @@
       "configSchema": {
         "properties": {
           "blockedRoles": {
+            "default": [
+              "roles/owner"
+            ],
             "description": "List of IAM roles to block (default: ['roles/owner'])",
             "items": {
               "type": "string"
@@ -2792,6 +2800,6 @@
       "severity": "low"
     }
   ],
-  "version": 8,
-  "versionTag": "2.2.0"
+  "version": 9,
+  "versionTag": "2.3.0"
 }
