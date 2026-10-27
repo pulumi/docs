@@ -106,23 +106,6 @@ outputs:
     - rows
     - RSS
 
-cascade:
-  - _target:
-      kind: term
-      path: /industry/**
-    outputs:
-      - HTML
-  - _target:
-      kind: taxonomy
-      path: /industry/**
-    outputs:
-      - HTML
-  - _target:
-      kind: taxonomy
-      path: /industry
-    outputs:
-      - HTML
-
 taxonomies:
   tag: tags
   author: authors
@@ -136,12 +119,6 @@ taxonomies:
   # pages land at /blog/series/:slug/. See layouts/taxonomy/series.html and
   # data/blog_series.yml (single source of truth for series titles/desc).
   series: series
-  # Plural is intentionally "industry" (not "industries") so Hugo reads the
-  # scalar `industry:` front matter on customers and casts it to a one-term
-  # list. Term pages land at /customers/industry/:slug/. See
-  # layouts/taxonomy/industry.html and data/customers_industries.yaml (single
-  # source of truth for term titles/desc). Non-blog: no RSS (scoped above).
-  industry: industry
 
 permalinks:
   term:
@@ -149,10 +126,9 @@ permalinks:
     tags: /blog/tags/:slug/
     category: /blog/categories/:slug/
     series: /blog/series/:slug/
-    industry: /customers/industry/:slug/
   # The taxonomy LIST pages (the directories rendered by
   # layouts/taxonomy/<singular>.terms.html). Without these they would sit at
-  # Hugo's default /authors/, /tags/, /category/, /series/, and /industry/,
+  # Hugo's default /authors/, /tags/, /category/, and /series/,
   # leaving the parent of every term URL (/blog/authors/, /blog/tags/, ...) a 404.
   # content/{authors,tags}/_index.md alias the old /authors/ and /tags/ URLs.
   taxonomy:
@@ -160,7 +136,6 @@ permalinks:
     tags: /blog/tags/
     category: /blog/categories/
     series: /blog/series/
-    industry: /customers/industry/
 
 # Built-in Related Content, used by layouts/partials/blog/related-posts.html to
 # top up a post's related list. Tags dominate; category and recency break ties.

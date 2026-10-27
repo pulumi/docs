@@ -66,14 +66,6 @@
       {{/* Product pages get SoftwareApplication schema */}}
       {{ $entity = partial "schema/collectors/product-entity.html" . }}
 
-    {{ else if eq .Section "customers" }}
-      {{/* Case studies get Article schema; the section index gets CollectionPage + ItemList, same split as /what-is/ above. */}}
-      {{ if .IsPage }}
-        {{ $entity = partial "schema/collectors/article-entity.html" . }}
-      {{ else }}
-        {{ $entity = partial "schema/collectors/collection-entity.html" . }}
-      {{ end }}
-
     {{ else if and (eq .Kind "term") (eq .Data.Singular "author") }}
       {{/* Author archive term pages (/blog/authors/{slug}/) get a Person (or
            Organization, for a house byline) main entity, built by the same
