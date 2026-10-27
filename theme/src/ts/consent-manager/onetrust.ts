@@ -4,8 +4,8 @@
 // decision into the two things the Pulumi website needs:
 //
 //   1. runWithPulumiConsent(category, callback) — the single gate every
-//      directly-loaded integration (Common Room, OpenAI, Floqer, GrowthBook,
-//      HubSpot forms, YouTube embeds) calls. It runs the callback once the
+//      directly-loaded integration (Common Room, OpenAI, Floqer, HubSpot forms,
+//      YouTube embeds) calls. It runs the callback once the
 //      visitor has allowed the requested OneTrust category, queues it until
 //      then, and fails closed (never runs an optional-category callback) when
 //      OneTrust is unavailable or consent can't be determined.
@@ -80,6 +80,11 @@ export function getActiveGroups(win: Window = window): Set<string> {
 export function isOneTrustAvailable(win: Window = window): boolean {
     const w = win as unknown as Record<string, unknown>;
     return typeof w.OnetrustActiveGroups === "string" || typeof w.OptanonActiveGroups === "string";
+}
+
+// True when a category active in `before` is no longer active in `after`.
+export function hasRevokedGroup(before: Set<string>, after: Set<string>): boolean {
+    return Array.from(before).some(group => !after.has(group));
 }
 
 interface MinimalDestination {

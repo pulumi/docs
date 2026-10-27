@@ -13,7 +13,7 @@
 import * as assert from "assert";
 import { test } from "node:test";
 
-import { ConsentEngine, STRICTLY_NECESSARY, SEGMENT_DESTINATION_CATEGORIES, categoryForDestination, parseActiveGroups, destinationPreferencesFromGroups } from "./onetrust";
+import { ConsentEngine, STRICTLY_NECESSARY, SEGMENT_DESTINATION_CATEGORIES, categoryForDestination, parseActiveGroups, destinationPreferencesFromGroups, hasRevokedGroup } from "./onetrust";
 
 test("parseActiveGroups handles OneTrust's comma-wrapped string", () => {
     const groups = parseActiveGroups(",C0001,C0003,");
@@ -144,4 +144,16 @@ test("a throwing loader does not block other queued integrations", () => {
     });
     engine.setGroups(new Set(["C0002"]), true);
     assert.strictEqual(second, true);
+});
+
+test("hasRevokedGroup only reports withdrawn categories, so grants and repeat events don't reload", () => {
+    const before = parseActiveGroups(",C0001,C0002,");
+    // Same decision re-announced (OneTrust fires on page load too).
+    assert.strictEqual(hasRevokedGroup(before, parseActiveGroups(",C0001,C0002,")), false);
+    // A grant.
+    assert.strictEqual(hasRevokedGroup(before, parseActiveGroups(",C0001,C0002,C0004,")), false);
+    // First resolution from the unresolved (empty) state.
+    assert.strictEqual(hasRevokedGroup(new Set(), before), false);
+    // A withdrawal.
+    assert.strictEqual(hasRevokedGroup(before, parseActiveGroups(",C0001,")), true);
 });

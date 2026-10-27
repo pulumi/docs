@@ -9,8 +9,8 @@
 // Under the Segment provider the partial renders a normal src, so there is
 // nothing to promote and this module is a no-op.
 
-function activateConsentMedia() {
-    const runWithConsent = (window as any).runWithPulumiConsent as ((category: string, callback: () => void) => void) | undefined;
+export function activateConsentMedia() {
+    const runWithConsent = (window as any).runWithPulumiConsent as (category: string, callback: () => void) => void;
     const iframes = Array.from(document.querySelectorAll<HTMLIFrameElement>("iframe[data-pulumi-consent-src]"));
 
     for (const iframe of iframes) {
@@ -23,11 +23,7 @@ function activateConsentMedia() {
             delete iframe.dataset.pulumiConsentSrc;
         };
 
-        if (typeof runWithConsent === "function") {
-            runWithConsent("C0004", load);
-        } else {
-            load();
-        }
+        runWithConsent("C0004", load);
     }
 }
 
@@ -36,5 +32,3 @@ if (document.readyState === "loading") {
 } else {
     activateConsentMedia();
 }
-
-export {};
