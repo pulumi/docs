@@ -20,5 +20,7 @@ export const marketingWebPaths = [
     "/up/*",
     // Also takes /topics/containers/ off S3, so its old 301 to the Kubernetes docs no longer fires.
     "/topics*",
+    // Hides every S3 object under /customers/, so marketing-web 301s the old case-study stubs and /customers/industry/{,blockchain/} itself.
+    "/customers*",
     "/sitemap-www-*",
 ];

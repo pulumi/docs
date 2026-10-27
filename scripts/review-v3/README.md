@@ -172,7 +172,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | push / `/update-review` / `/new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `/update-review …` phrasing |
 | G3 right-approver | an APPROVED latest review at head from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
-| G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); re-run the failed "Build and deploy testing" run or dispatch it at the branch to retry — **not waivable** |
+| G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); to retry, dispatch "Build and deploy testing" at the branch (never "Build and deploy", which is production). If the staging workflow is disabled, the row says so and names the fix, and a failed deploy or dispatch is quoted at the top of the row |
 | G5 oversized-ack | `review:oversized` PRs: a G3-qualifying approval at head whose comment has `/oversized-ack` at the start of a line | where the command goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
 
 **G4's two witnesses.** The commit status is a *report* of the deploy, not
@@ -213,7 +213,7 @@ REVIEW_STATE, a team-membership lookup failure) concludes `action_required`
 checks.
 
 **`review:waived` is authorized, not just labelled.** A waive skips every
-gate but G4, so applying one has to be at least as privileged as approving
+gate, G4 included, so applying one has to be at least as privileged as approving
 something: `_waive_state` reads the actor off the label event and honors the
 waive only when they are an **active member of any team in `teams:`** — any
 of them, not just the one the PR routes to. Scoping it to the required team
@@ -222,7 +222,9 @@ kills the case it most needs to cover (the required approver is the author).
 It fails closed at every step — unreadable actor, failed membership lookup,
 actor on no routing team — and an unauthorized waive is *refused out loud*
 in the summary rather than silently ignored, so the same person doesn't try
-it twice. A red G4 still stands under an authorized waive.
+it twice. A waive over a red G4 says so in the summary: the deploy change
+hasn't been applied on staging, so the first production deploy is its first
+real run.
 
 **The pinned status comment.** `render_status_comment` / `update_status_comment`
 upsert one `<!-- SENTINEL_STATUS -->` comment per PR: a row per gate with its

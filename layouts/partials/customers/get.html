@@ -13,7 +13,7 @@
   {{- if $near -}}
     {{- errorf "customer: %q is not in data/customers.yaml (in %s). Did you mean: %s?" $id $where (delimit $near ", ") -}}
   {{- else -}}
-    {{- errorf "customer: %q is not in data/customers.yaml (in %s). Add an entry there — see the ADDING A CUSTOMER checklist at the top of that file." $id $where -}}
+    {{- errorf "customer: %q is not in data/customers.yaml (in %s). New customers are added in pulumi/marketing-web first; see the header of that file." $id $where -}}
   {{- end -}}
 {{- end -}}
 {{- return $customer -}}

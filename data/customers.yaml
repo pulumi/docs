@@ -1,86 +1,50 @@
-# Customers — the single source of truth for every customer Pulumi shows publicly.
+# Customers — a frozen, read-only copy of the customer registry.
 #
-# One entry per customer: the name, the link, the vertical, the brand color, and
-# (by convention, not by key) the two logo files. Every surface that renders a
-# customer reads this file and nothing else, so a name change, a rebrand, or a
-# new logo is a one-line edit here rather than a hunt through front matter.
+# pulumi/marketing-web owns the registry (apps/www/src/data/customers/) and
+# builds /customers/, its industry pages, and every case study. This copy stays
+# only for the Hugo pages here that still show customers: the homepage, product
+# pages, gads pages, /enterprise, /solutions, and others. Nothing syncs it.
+#
+# To add or change a customer, do it in marketing-web (apps/www/docs/customers.md).
+# Edit this file only when a page built here needs the change too.
 #
 # Consumers:
 #   - layouts/partials/customers/data.html — expands and validates this file once
 #     per build; every other consumer goes through it.
 #   - layouts/partials/customer-logo.html — renders a customer's logo anywhere.
-#   - layouts/partials/customers/{board,cell,tile,filter-bar}.html — /customers/
-#     and the /customers/industry/<id>/ term pages.
+#   - layouts/partials/customers/href.html — a customer's case-study link.
 #   - the template-page partials: logo carousel, logo banner, testimonials,
 #     case-study cards and grids.
-#   - scripts/lint/lint-markdown.js (checkCustomerRef) — `make lint` fails a
-#     page under content/customers/ whose `customer:` is missing or unknown.
-#
-# ADDING A CUSTOMER
-#   1. Add an entry below, in the position you want it to occupy on /customers/
-#      (file order is the page order — see "ORDER" below).
-#   2. Add two SVGs to assets/fingerprinted/logos/customers/:
-#        <id>.svg          for light backgrounds (the grid, testimonials, banners)
-#        <id>-on-dark.svg  for the brand-color tile and dark surfaces
-#      If the company ships no white variant, derive one:
-#        node scripts/customers/derive-on-dark.mjs <id>
-#      and check it against a dark background — a derived variant flattens a
-#      two-tone mark into one white shape.
-#   3. Optional: give a case study `customer: <id>` in its front matter. Case
-#      studies are NOT listed here; /customers/ finds them by scanning
-#      content/customers/ for that key.
-#   4. Run `make build`. The validation partial fails the build on a bad id,
-#      an unknown industry, a malformed color, or a missing logo file.
 #
 # FIELDS
-#   id          Stable lowercase-kebab slug. Unique. Names both logo files and
-#               is what every page, shortcode, and case study refers to.
+#   id          Stable lowercase-kebab slug. Unique. Names both logo files in
+#               assets/fingerprinted/logos/customers/ (<id>.svg and
+#               <id>-on-dark.svg) and is what every page and shortcode refers to.
 #   name        Display name, exactly as the company writes it.
 #   url         The company's website. Used for the outbound link on surfaces
 #               that link out; never rendered as bare text.
-#   industry    An id from data/customers_industries.yaml. A customer belongs to
-#               exactly one vertical.
+#   industry    An id from data/customers_industries.yaml.
 #   color       The brand color the logo tile is painted with, as "#RRGGBB".
-#               Omit it and the tile is neutral gray — which is better than a
-#               guessed color, so omit rather than invent.
-#   logo_scale  Optional multiplier on the logo's rendered size. Surfaces size
-#               every logo to the same optical area, derived from its aspect
-#               ratio, which is right for a wordmark and wrong for a dense
-#               lockup whose type goes unreadable at that size. Use it sparingly
-#               and only for those — it is a correction, not a preference.
-#   fill_text   `light` or `dark`: which way the type goes on a surface filled
-#               with `color`. Omit it and the color decides, by a luminance
-#               reading of where white type stops being readable. Set it when
-#               the brand has its own view — Snowflake's blue reads as light by
-#               that measure but their own material puts white on it.
-#   tile_logo   Set to `light` when the brand color is light enough that the
-#               on-dark (white) logo would disappear on it. Default: the tile
-#               shows <id>-on-dark.svg. A customer with no `color` always gets
-#               the light logo, since the fallback tile is gray.
-#   quote       Optional canonical testimonial: `text`, `author`, `title`. Used
-#               on /customers/ for a customer who has no case study (the cell
-#               widens to two columns and renders the quote), and as the
+#               Omitted means a neutral gray tile.
+#   logo_scale  Optional multiplier on the logo's rendered size, for dense
+#               lockups whose type goes unreadable at the default optical size.
+#   fill_text   `light` or `dark`: which way the type goes on a `color` fill.
+#               Omit it and the color's luminance decides.
+#   tile_logo   `light` when the brand color is light enough that the white
+#               on-dark logo would disappear on it.
+#   quote       Optional canonical testimonial: `text`, `author`, `title`. The
 #               fallback for a testimonial section that names the customer but
-#               supplies no quote of its own. Product pages keep their own
-#               product-specific quote text — this is the customer's, not a
-#               page's.
-#
-# ORDER
-#   File order is the only ordering mechanism, at every level. There is no
-#   `weight` and nothing sorts. /customers/ renders these entries top to bottom,
-#   so the most recognizable customers belong at the top.
-#
-# VOCABULARY
-#   "Customer", never "logo", "account", or "case study". A case study is a page
-#   about a customer; a customer is an entry here, with or without one.
+#               supplies no quote of its own.
+#   case_study  Optional. What the case-study cards and grids show, copied from
+#               the case study when it moved to marketing-web: `href` (required;
+#               the case study's URL, or wherever it lives if not on
+#               /customers/), `title`, `stat`, `stat_label`, `quote`,
+#               `attribution`.
 #
 # RASTER HOLDOUTS
 #   `raster_holdouts` lists the customers whose logo is still a PNG (<id>.png)
 #   because no SVG could be sourced. They render from the raster and get their
-#   dark-surface treatment from a CSS filter instead of a second file. This list
-#   exists to make the exceptions visible and must only ever SHRINK: when you
-#   find an SVG for one, add the two SVGs, delete the PNG, and remove the id.
-#   Do not add to it — a customer with no obtainable SVG stays out of the file.
+#   dark-surface treatment from a CSS filter instead of a second file.
 #
 raster_holdouts:
   - 4ir
@@ -107,6 +71,13 @@ customers:
       text: "When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked."
       author: Raman Hariharan
       title: Director of Cloud Platform Engineering
+    case_study:
+      href: /customers/snowflake/
+      title: "Snowflake: Testable, Repeatable Infrastructure"
+      stat: "1.5 weeks > 1 day"
+      stat_label: "reduced deployment time"
+      quote: '"There’s no question that, if we had gone down the traditional infrastructure automation route, it would have taken us a week or a week and a half to do one deployment of the cluster [...] When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked."'
+      attribution: "Raman Hariharan, Director of Cloud Platform Engineering, Snowflake"
   - id: nvidia
     name: NVIDIA
     url: https://www.nvidia.com/
@@ -121,6 +92,12 @@ customers:
     # The corporate lockup carries three marques beside the wordmark, so it
     # needs the extra width to stay legible.
     logo_scale: 1.25
+    case_study:
+      href: /customers/bmw/
+      title: "Unified Infrastructure and Application Management"
+      stat: "20,000+"
+      stat_label: "cloud resources managed across multiple stacks"
+      quote: "Software Factory manages over 20,000 cloud resources using Python-based infrastructure code integrated with existing CI/CD workflows."
   - id: mercedes-benz
     name: "Mercedes-Benz R&D NA"
     url: https://mbrdna.com/
@@ -129,11 +106,24 @@ customers:
     # The division name sits on a second line in type half the wordmark's size;
     # at its fair area that line is unreadable.
     logo_scale: 1.5
+    case_study:
+      href: /customers/mercedes-benz/
+      title: "Mercedes-Benz: Programming the Cloud"
+      stat: "Unified toolset"
+      stat_label: "taming the complexity of many teams and many clouds"
+      quote: "“What really stands out in Pulumi is the ability to apply program language constructs and best practices to your cloud infrastructure code,”"
+      attribution: "Dinesh Ramamurthy, Engineering Manager, MBRDNA"
   - id: unity
     name: Unity
     url: https://unity.com/
     industry: gaming-entertainment
     color: "#000000"
+    case_study:
+      href: /customers/unity/
+      title: "Unity Technologies Modernizes Infrastructure Management"
+      stat: "80%"
+      stat_label: "reduction in deployment times, from weeks to hours"
+      quote: "\"Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance.\nAn equivalent deployment would take more lines of code while yielding IaC that is less reusable.\""
   - id: atlassian
     name: Atlassian
     url: https://www.atlassian.com/
@@ -143,6 +133,13 @@ customers:
       text: "With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With Pulumi, it's Python. It's five lines of code. If you want to add a new database, add one line, and you're good to go."
       author: Mike Corsaro
       title: Senior Software Engineer
+    case_study:
+      href: /customers/atlassian/
+      title: "Atlassian: Increasing Developer Productivity"
+      stat: "50%"
+      stat_label: "reduction in time spent on maintenance"
+      quote: "\"With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With\nPulumi, it’s Python. It’s five lines of code. If you want to add a new database, add one line, and you’re good to go.\""
+      attribution: "Mike Corsaro, Senior Software Engineer, Atlassian"
   - id: docker
     name: Docker
     url: https://www.docker.com/
@@ -163,6 +160,13 @@ customers:
     url: https://supabase.com/
     industry: data-analytics
     color: "#3ECF8E"
+    case_study:
+      href: /customers/supabase/
+      title: "Supabase Democratizes Infrastructure Across Every Engineering Team"
+      stat: "1 week"
+      stat_label: "infrastructure readiness for new region deployment"
+      quote: '"The infrastructure team acts as groundkeepers of our Pulumi practices, not gatekeepers, but promoters for the entire org."'
+      attribution: "Paul Cioanca, Platform Engineer at Supabase"
   - id: wiz
     name: Wiz
     url: https://www.wiz.io/
@@ -172,6 +176,13 @@ customers:
       text: "We use Pulumi widely at Wiz. It enabled our product to support multi-cloud and to scale quickly — scaling and driving hundreds of thousands of infrastructure updates every day."
       author: Yarin Miran
       title: Senior Software Engineer
+    case_study:
+      href: /customers/wiz/
+      title: "How Wiz Operates Kubernetes at Global Scale with Pulumi"
+      stat: "1M+"
+      stat_label: "cloud resources managed across thousands of Kubernetes clusters"
+      quote: '"We use Pulumi widely at Wiz. It enabled our product to support multi-cloud and to scale quickly - scaling and driving hundreds of thousands of infrastructure updates every day."'
+      attribution: "Yarin Miran, Senior Software Engineer, Wiz"
   - id: webflow
     name: Webflow
     url: https://webflow.com/
@@ -192,6 +203,13 @@ customers:
     url: https://www.lemonade.com/
     industry: financial-services
     color: "#FF0083"
+    case_study:
+      href: /customers/lemonade/
+      title: "Lemonade: Accelerating Innovation with Pulumi"
+      stat: "Lower costs"
+      stat_label: "by maximizing reuse of infrastructure code"
+      quote: '“Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies for logging, permissions, resource tagging, and security."'
+      attribution: "Igor Shapiro, Principal Engineer, Lemonade"
   - id: nubank
     name: Nubank
     url: https://nubank.com.br/
@@ -235,6 +253,13 @@ customers:
     url: https://www.clearme.com/
     industry: security
     color: "#041A55"
+    case_study:
+      href: /customers/clear/
+      title: "CLEAR: A 90% Smaller Infrastructure Codebase with Pulumi"
+      stat: "~90%"
+      stat_label: "projected reduction in lines of infrastructure code"
+      quote: '"For that ''batteries included'' experience we wanted to provide, being able to have the full power of Python at our fingertips to handle all those sorts of specialized cases is really, really powerful."'
+      attribution: "James Forcier, Staff Software Engineer, CLEAR"
   - id: globant
     name: Globant
     url: https://globant.com/
@@ -272,6 +297,13 @@ customers:
     url: https://sourcegraph.com/
     industry: developer-tools
     color: "#A112FF"
+    case_study:
+      href: /customers/sourcegraph/
+      title: "Sourcegraph: Deploying GKEs in a Snap with Pulumi"
+      stat: "Zero"
+      stat_label: "deployment errors that previously meant hours of debugging"
+      quote: "“Pulumi has changed how our team works by giving us deployment superpowers. It’s great to run ‘pulumi up’ and not have to worry about deploying an invalid configuration.”"
+      attribution: "Beyang Liu, CTO, Sourcegraph"
   - id: cockroach-labs
     name: Cockroach Labs
     url: https://www.cockroachlabs.com/
@@ -292,26 +324,62 @@ customers:
     url: https://sst.dev/
     industry: developer-tools
     color: "#303055"
+    case_study:
+      href: https://sst.dev/blog/moving-away-from-cdk
+      title: "SST: Moving Away from CDK"
   - id: materialize
     name: Materialize
     url: https://materialize.com/
     industry: data-analytics
     color: "#472F85"
+    case_study:
+      href: /customers/materialize/
+      title: "Materialize Streamlines Multi-Region Kubernetes Operations"
+      stat: "75%"
+      stat_label: "more productivity for new engineers, with faster release cycles"
+      quote: '"Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all in one stack. It has hugely benefited productivity and our service''s reliability. Without Pulumi, we know that scaling and maintaining Materialize would be much harder for the team."'
+      attribution: "Paul Hemberger, Engineering Manager, Materialize"
   - id: starburst
     name: Starburst
     url: https://www.starburst.io/
     industry: data-analytics
     color: "#9747FF"
+    case_study:
+      href: /customers/starburst/
+      title: "Starburst: 112x Deployment Acceleration"
+      stat: "3 hours"
+      stat_label: "deployment time reduced from two weeks"
+      quote: '"When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that''s how much of an improvement Pulumi gave us on our deployment time."'
+      attribution: "Matt Stephenson, Senior Principal Software Engineer"
   - id: panther-labs
     name: Panther Labs
     url: https://panther.com/
     industry: security
     color: "#040C36"
+    case_study:
+      href: /customers/panther-labs/
+      title: "Panther Labs: Increasing Velocity & Innovation"
+      stat: "10x"
+      stat_label: "faster for simple code changes"
+      quote: '"We are now in the best position to deliver new innovative solutions to our customers and to do so quickly, which is huge for a startup such as ours that needs to accelerate our efforts and to do so efficiently and seamlessly."'
+      attribution: "Joren McReynolds, Vice President of Engineering, Panther Labs"
   - id: descope
     name: Descope
     url: https://descope.com/
     industry: security
     color: "#111111"
+  - id: aptos
+    name: Aptos Labs
+    url: https://aptoslabs.com/
+    industry: technology
+    color: "#000000"
+    case_study:
+      href: /customers/aptos/
+      title: "Aptos Labs Transforms Development Process"
+      stat: "10x"
+      stat_label: "faster development cycles"
+      quote: "“Terraform was slowing down our growing team of engineers. Switching to Pulumi for our IaC needs helped us massively accelerate development velocity, while upgrading the security, compliance, and cost control policies.”"
+      attribution: "Christian Theilemann, Staff Software Engineer, Aptos Labs"
   - id: tetrate
     name: Tetrate
     url: https://tetrate.io/
@@ -329,11 +397,6 @@ customers:
       text: "Our goal has always been to minimize the time it takes an engineer to go from an idea to an experiment in production. We're excited to see Pulumi pushing automation further."
       author: Jk Jensen
       title: Software Engineering Team Lead
-  - id: aptos
-    name: Aptos Labs
-    url: https://aptoslabs.com/
-    industry: technology
-    color: "#000000"
   - id: dutchie
     name: Dutchie
     url: https://dutchie.com/
@@ -348,11 +411,25 @@ customers:
     url: https://www.sans.org/
     industry: education
     color: "#064C70"
+    case_study:
+      href: /customers/sans-institute/
+      title: "SANS Institute: Reducing Deployment Times by 70%"
+      stat: "70%"
+      stat_label: "reduced deployment time"
+      quote: '"The Pulumi Automation API made [deploying the application and its infrastructure] a much cleaner process. With the old architecture, it was much more manual, stitched together with bash scripts, and then wrapped in another tool with its DSL."'
+      attribution: "Tyler Mulligan, Senior DevOps Engineer, SANS Institute"
   - id: xm-cyber
     name: XM Cyber
     url: https://xmcyber.com/
     industry: security
     color: "#000035"
+    case_study:
+      href: /customers/xm_cyber/
+      title: "XM Cyber: Multi-Cloud Infrastructure Management with Pulumi"
+      stat: "100%"
+      stat_label: "full access to the TypeScript and Python ecosystems"
+      quote: '"When implementing Pulumi, we noticed also by using the Pulumi Cloud that we can easily see what''s going on, we can easily find what resources are up and what are down. We can easily manage our stacks and everything is very, very comfortable."'
+      attribution: "Tech Lead, DevOps Team, XM Cyber"
   - id: oleria
     name: Oleria
     url: https://www.oleria.com/
@@ -368,11 +445,21 @@ customers:
     url: https://fauna.com/
     industry: data-analytics
     color: "#3A1AB6"
+    case_study:
+      href: /customers/fauna/
+      title: "Fauna: Building Region Groups with Pulumi"
   - id: whylabs
     name: WhyLabs
     url: https://whylabs.ai/
     industry: ai-ml
     color: "#228798"
+    case_study:
+      href: /customers/whylabs/
+      title: "WhyLabs: Shifting Infrastructure to the Left"
+      stat: "Faster"
+      stat_label: "time to market for new features"
+      quote: "“I was blown away by the multi-language experience as well as the various innovations, such as its best-in-class support for Kubernetes. Those qualities, as well as support for multiple cloud providers made me decide to go with Pulumi.”"
+      attribution: "Andy Dang, Lead Engineer & Co-founder, WhyLabs"
   - id: maven-agi
     name: Maven AGI
     url: https://www.mavenagi.com/
@@ -398,11 +485,21 @@ customers:
     url: https://www.elkjopnordic.com/
     industry: retail
     color: "#1E1B58"
+    case_study:
+      href: /blog/how-elkjop-nordic-enables-developers-to-self-serve-infrastructure/
+      title: "How Elkjøp Nordic enables self-service infrastructure"
   - id: modivcare
     name: Modivcare
     url: https://www.modivcare.com/
     industry: healthcare
     color: "#002A3A"
+    case_study:
+      href: /customers/modivcare/
+      title: "Modivcare: Self-Service and Governance Create a Competitive Advantage"
+      stat: "25%"
+      stat_label: "cost savings by eliminating redundant resources"
+      quote: '"Pulumi ESC has been fundamentally game-changing in how we want to bring that apart, not just in solving that disconnected set of Terragrunt files, but also in normalizing a lot of those Terragrunt files."'
+      attribution: "Zachary Cook, Senior Manager, DevOps at Modivcare"
   - id: mindbody
     name: Mindbody
     url: https://www.mindbodyonline.com/
@@ -419,11 +516,17 @@ customers:
     url: https://skai.io/
     industry: marketing-adtech
     color: "#406EF1"
+    case_study:
+      href: /blog/kenshoo-migrates-to-aws-with-pulumi/
+      title: "Skai Migrates to AWS with Pulumi"
   - id: washington-trust-bank
     name: Washington Trust Bank
     url: https://www.watrust.com/
     industry: financial-services
     color: "#004163"
+    case_study:
+      href: /blog/how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation/
+      title: "How a Bank Modernized Its Software Engineering With Infrastructure as Code Automation"
   - id: fenergo
     name: Fenergo
     url: https://www.fenergo.com/
@@ -465,34 +568,83 @@ customers:
     name: Boost Insurance
     url: https://boostinsurance.com/
     industry: financial-services
+    case_study:
+      href: /customers/boost-insurance/
+      title: "How Boost Insurance Eliminates Data Breach Risk with Pulumi"
+      stat: "Zero"
+      stat_label: "production data on developer laptops, eliminating breach risk"
+      quote: '"You''re telling me I don''t have to store 400 gigs worth of database backups on my laptop in order to debug production?"'
+      attribution: "Richard Genthner, CISO at Boost Insurance"
   - id: credijusto
     name: Credijusto
     url: https://www.covalto.com/
     industry: financial-services
+    case_study:
+      href: /customers/credijusto/
+      title: "Credijusto: Taming Network Configuration Complexity"
+      stat: "90%"
+      stat_label: "reduction in network configuration code"
+      quote: "\"Once you use a familiar programming language to tackle a problem, you see that you can do way more in less time.\nPulumi was a natural choice based on the background and skills of our people in DevOps.\""
+      attribution: "Fernando Carlietti, Lead DevOps Engineer"
   - id: menta-network
     name: Menta Network
     url: https://menta.global/
     industry: retail
+    case_study:
+      href: /customers/menta-network/
+      title: "Menta Network: Reducing Operating Costs by 60%"
+      stat: "60%"
+      stat_label: "reduced operating costs"
+      quote: '"We tried Terraform but found that Pulumi was far easier to use given its Python support. Ultimately, Pulumi is just as robust as Terraform and has the added benefit of reducing the complexity of managing many configurations and environments."'
+      attribution: "Ernesto Mendoza, CTO, Menta Network"
   - id: imagine-learning
     name: Imagine Learning
     url: https://www.imaginelearning.com/
     industry: education
     color: "#00007C"
+    case_study:
+      href: /customers/imagine-learning/
+      title: "Imagine Learning: Modern IDP with Pulumi"
+      stat: "90%"
+      stat_label: "faster deployments compared to legacy platform"
+      quote: '"Building new environments takes hours now; it doesn''t take weeks or even months."'
+      attribution: "Blake Romano, Senior Software Engineer, Imagine Learning"
   - id: learning-machine
     name: Learning Machine
     url: https://www.hyland.com/
     industry: education
     color: "#151828"
+    case_study:
+      href: /customers/learning-machine/
+      title: "Learning Machine: Expediting Customer Deployments"
+      stat: "3 weeks > 1 hour"
+      stat_label: "reduction in new customer provisioning time"
+      quote: "“Jump in with both feet — the sooner the better. The payback is immediate and the confidence you gain from having a predictable development pipeline is immeasurable. Our industry moves with incredible speed and using tools like Pulumi are absolutely essential to providing teams with the agility that they require.”"
+      attribution: "Dan Hughes, CTO, Learning Machine"
   - id: nexxiot
     name: Nexxiot
     url: https://nexxiot.com/
     industry: iot-transportation
     color: "#6357FF"
+    case_study:
+      href: /customers/nexxiot/
+      title: "Nexxiot: Infrastructure Management for IoT Operations"
+      stat: "100%"
+      stat_label: "infrastructure reliability since adoption"
+      quote: "You will run into limits with Terraform. \nYou will run into limits with CDK. \nYour biggest chance to not run into troubles and limitations is to use Pulumi. It is the most powerful and versatile tool out there."
+      attribution: "Alexander Berger, Site Reliability Engineer, Nexxiot"
   - id: greenpark-sports
     name: GreenPark Sports
     url: https://greenparksports.com/
     industry: gaming-entertainment
     color: "#000000"
+    case_study:
+      href: /customers/greenpark-sports/
+      title: "GreenPark Sports: Increasing Cloud Deployments by 70%"
+      stat: "70%"
+      stat_label: "increased cloud deployments"
+      quote: '"I took a look at Pulumi and that started a much happier time in my life."'
+      attribution: "Jacob Foard, Tech Lead, Platform Team, Green Park Sports"
   - id: alkira
     name: Alkira
     url: https://www.alkira.com/
@@ -503,12 +655,6 @@ customers:
     url: https://www.tonkean.com/
     industry: technology
     color: "#34393E"
-  - id: mighty
-    name: Mighty
-    url: https://www.mighty.app/
-    industry: technology
-    color: "#00D563"
-    tile_logo: light
   - id: flux
     name: Flux
     url: https://www.flux.ai/
@@ -539,6 +685,13 @@ customers:
     url: https://spear.ai/
     industry: ai-ml
     color: "#000031"
+    case_study:
+      href: /customers/spear-ai/
+      title: "Spear AI: Achieving Government ATO in 3 Months"
+      stat: "6x"
+      stat_label: "faster time to achieve Authority to Operate (ATO)"
+      quote: "“We gave our auditors access to our policy packs because it’s far easier to understand and prove controls in code than in docs and diagrams. With Pulumi’s Policy as Code approach, that manual review process has gone away. We’ve reduced our Authority to Operate (ATO) timeline from a year and a half to expecting approval in three months.”"
+      attribution: "Michael Hunter, CEO, Spear AI"
   - id: typesafe-ai
     name: Typesafe AI
     url: https://typesafe.ai/
@@ -550,6 +703,13 @@ customers:
     industry: ai-ml
     color: "#E9ECEF"
     tile_logo: light
+    case_study:
+      href: /customers/compostable-ai/
+      title: "Compostable AI: Building an AI Software Factory"
+      stat: "90 minutes"
+      stat_label: "to provision and deploy a new customer tenant to production"
+      quote: '"Pulumi is a key component of our strategy to pick the best tools that will help us grow on this agentic journey."'
+      attribution: "Ewan Dawson, CTO, Compostable AI"
   - id: circuitry
     name: Circuitry.ai
     url: https://circuitry.ai/
@@ -607,10 +767,20 @@ customers:
     url: https://4ir.cloud/
     industry: manufacturing
     color: "#0085E4"
+    case_study:
+      href: /customers/4ir/
+      title: "Case Study: Modernizing Manufacturing with 4IR and Pulumi"
+      stat: "$75K"
+      stat_label: "saved annually, with deployments reduced from days to hours"
+      quote: "\"Pulumi has emerged as a key element in our strategy, creating tangible value for us by reducing infrastructure\ndeployment time, up-skilling our team, and accelerating our time to market.\""
+      attribution: "Joseph Dolivo, CTO, 4IR Solutions"
   - id: ncics
     name: NCICS (NOAA)
     url: https://ncics.org/
     industry: public-sector
+    case_study:
+      href: /blog/managing-multi-cloud-open-data-noaa/
+      title: "Managing NOAA Open Data across Multiple Clouds with Pulumi"
   - id: toptal
     name: Toptal
     url: https://www.toptal.com/
