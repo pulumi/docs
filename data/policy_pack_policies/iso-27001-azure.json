@@ -360,7 +360,7 @@
       },
       "description": "Ensure Activity Log encryption is enabled for data protection.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.5.33 Protection of records; A.8.15 Logging; A.8.24 Use of cryptography",
@@ -423,7 +423,7 @@
       },
       "description": "Ensure Activity Log file integrity monitoring is enabled for security monitoring.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.15 Logging",
@@ -461,7 +461,7 @@
           },
           "minimumRetentionDays": {
             "default": 730,
-            "description": "Minimum retention days for advanced log analysis",
+            "description": "Retained for compatibility; has no effect, because Azure retired diagnostic-setting storage retention",
             "type": "number"
           },
           "requireAdvancedAnalytics": {
@@ -506,7 +506,7 @@
       },
       "description": "Ensure Activity Log is integrated with advanced monitoring solutions for comprehensive log analysis.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.15 Logging; A.8.16 Monitoring activities",
@@ -544,7 +544,7 @@
           },
           "minimumRetentionDays": {
             "default": 365,
-            "description": "Minimum retention days for diagnostic settings",
+            "description": "Retained for compatibility; has no effect, because Azure retired diagnostic-setting storage retention",
             "type": "number"
           },
           "requireLogAnalytics": {
@@ -575,7 +575,7 @@
       },
       "description": "Ensure Activity Log monitoring is properly configured.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.15 Logging; A.8.16 Monitoring activities",
@@ -584,7 +584,7 @@
       },
       "message": "",
       "name": "activity-log-monitoring",
-      "remediationSteps": "## Fix: Enable Activity Log Monitoring Integration\n\nYour Activity Log needs to send data to a monitoring solution for centralized audit trail visibility.\n\n**Configure Activity Log diagnostic settings:**\n\n```typescript\nconst activityLogDiagnostic = new azure.monitor.DiagnosticSetting(\"activityLogDiag\", {\n    name: \"activity-log-monitoring\",\n    resourceUri: pulumi.interpolate`/subscriptions/${subscriptionId}`,\n    workspaceId: workspace.id,  // Required: Log Analytics workspace\n    storageAccountId: storageAccount.id,  // Optional: for long-term retention\n    logs: [\n        { category: \"Administrative\", enabled: true },\n        { category: \"Security\", enabled: true },\n        { category: \"Alert\", enabled: true },\n        { category: \"Policy\", enabled: true },\n    ],\n    retentionPolicy: {\n        enabled: true,\n        days: 365,  // Minimum 365 days recommended\n    },\n});\n```\n\n**Ensure a Log Analytics workspace exists:**\n\n```typescript\nconst workspace = new azure.operationalinsights.Workspace(\"monitoringWorkspace\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"PerGB2018\" },\n    retentionInDays: 365,\n});\n```\n\n**Note:** Activity Log monitoring provides audit trail visibility and enables security analysis per CIS Controls v8 IG2 3.8. Include all critical log categories (Administrative, Security, Alert, Policy) for comprehensive monitoring.",
+      "remediationSteps": "## Fix: Enable Activity Log Monitoring Integration\n\nYour Activity Log needs to send data to a monitoring solution for centralized audit trail visibility.\n\n**Configure Activity Log diagnostic settings:**\n\n```typescript\nconst activityLogDiagnostic = new azure.monitor.DiagnosticSetting(\"activityLogDiag\", {\n    name: \"activity-log-monitoring\",\n    resourceUri: pulumi.interpolate`/subscriptions/${subscriptionId}`,\n    workspaceId: workspace.id,  // Required: Log Analytics workspace\n    storageAccountId: storageAccount.id,  // Optional: for long-term retention\n    logs: [\n        { category: \"Administrative\", enabled: true },\n        { category: \"Security\", enabled: true },\n        { category: \"Alert\", enabled: true },\n        { category: \"Policy\", enabled: true },\n    ],\n});\n```\n\n**Ensure a Log Analytics workspace exists:**\n\n```typescript\nconst workspace = new azure.operationalinsights.Workspace(\"monitoringWorkspace\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"PerGB2018\" },\n    retentionInDays: 365,\n});\n```\n\n**Note:** Activity Log monitoring provides audit trail visibility and enables security analysis per CIS Controls v8 IG2 3.8. Include all critical log categories (Administrative, Security, Alert, Policy) for comprehensive monitoring.",
       "severity": "medium"
     },
     {
@@ -668,7 +668,7 @@
       },
       "description": "Ensure Activity Log multi-region trail is enabled for resilience and compliance.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.5.33 Protection of records; A.8.14 Redundancy of information processing facilities",
@@ -706,7 +706,7 @@
           },
           "minimumRetentionDays": {
             "default": 365,
-            "description": "Minimum retention days for security trail",
+            "description": "Retained for compatibility; has no effect, because Azure retired diagnostic-setting storage retention",
             "type": "number"
           },
           "requireAllSecurityCategories": {
@@ -732,7 +732,7 @@
       },
       "description": "Ensure Activity Log security trail is enabled for security monitoring and compliance.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.15 Logging",
@@ -741,7 +741,7 @@
       },
       "message": "",
       "name": "activity-log-security-trail-enabled",
-      "remediationSteps": "## Fix: Enable Activity Log Security Trail\n\nYour Activity Log needs to capture security events and administrative actions for compliance and security monitoring.\n\n**Configure Activity Log diagnostic settings with security categories:**\n\n```typescript\nconst activityLogDiagnostic = new azure.monitor.DiagnosticSetting(\"activityLogSecurityTrail\", {\n    name: \"activity-log-security-trail\",\n    resourceUri: pulumi.interpolate`/subscriptions/${subscriptionId}`,\n    workspaceId: workspace.id,  // Send to Log Analytics workspace\n    storageAccountId: storageAccount.id,  // Optional: for archival\n    logs: [\n        { category: \"Security\", enabled: true },         // Required: Security events\n        { category: \"Administrative\", enabled: true },   // Required: Admin actions\n        { category: \"Policy\", enabled: true },           // Policy evaluation events\n        { category: \"Alert\", enabled: true },            // Alert events\n    ],\n    retentionPolicy: {\n        enabled: true,\n        days: 365,  // Minimum 365 days for security trail\n    },\n});\n```\n\n**Ensure at least one destination is configured:**\n\n```typescript\n// Option 1: Log Analytics workspace (recommended)\nconst workspace = new azure.operationalinsights.Workspace(\"securityWorkspace\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"PerGB2018\" },\n    retentionInDays: 365,\n});\n\n// Option 2: Storage Account for archival\nconst storageAccount = new azure.storage.StorageAccount(\"securityLogs\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"Standard_GRS\" },\n    kind: \"StorageV2\",\n});\n\n// Option 3: Event Hub for real-time processing\nconst eventHub = new azure.eventhub.EventHub(\"securityEvents\", {\n    // ... configure Event Hub\n});\n```\n\n**Note:** Security trail captures security-relevant events including authentication, authorization, resource changes, and policy violations per CIS Controls v8 IG1 4.1. Both Security and Administrative categories are required for comprehensive audit trails.",
+      "remediationSteps": "## Fix: Enable Activity Log Security Trail\n\nYour Activity Log needs to capture security events and administrative actions for compliance and security monitoring.\n\n**Configure Activity Log diagnostic settings with security categories:**\n\n```typescript\nconst activityLogDiagnostic = new azure.monitor.DiagnosticSetting(\"activityLogSecurityTrail\", {\n    name: \"activity-log-security-trail\",\n    resourceUri: pulumi.interpolate`/subscriptions/${subscriptionId}`,\n    workspaceId: workspace.id,  // Send to Log Analytics workspace\n    storageAccountId: storageAccount.id,  // Optional: for archival\n    logs: [\n        { category: \"Security\", enabled: true },         // Required: Security events\n        { category: \"Administrative\", enabled: true },   // Required: Admin actions\n        { category: \"Policy\", enabled: true },           // Policy evaluation events\n        { category: \"Alert\", enabled: true },            // Alert events\n    ],\n});\n```\n\n**Ensure at least one destination is configured:**\n\n```typescript\n// Option 1: Log Analytics workspace (recommended)\nconst workspace = new azure.operationalinsights.Workspace(\"securityWorkspace\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"PerGB2018\" },\n    retentionInDays: 365,\n});\n\n// Option 2: Storage Account for archival\nconst storageAccount = new azure.storage.StorageAccount(\"securityLogs\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"Standard_GRS\" },\n    kind: \"StorageV2\",\n});\n\n// Option 3: Event Hub for real-time processing\nconst eventHub = new azure.eventhub.EventHub(\"securityEvents\", {\n    // ... configure Event Hub\n});\n```\n\n**Note:** Security trail captures security-relevant events including authentication, authorization, resource changes, and policy violations per CIS Controls v8 IG1 4.1. Both Security and Administrative categories are required for comprehensive audit trails.",
       "severity": "high"
     },
     {
@@ -770,7 +770,7 @@
           },
           "minimumRetentionDays": {
             "default": 365,
-            "description": "Minimum retention days for diagnostic settings",
+            "description": "Retained for compatibility; has no effect, because Azure retired diagnostic-setting storage retention",
             "type": "number"
           },
           "requireEventHub": {
@@ -805,7 +805,7 @@
       },
       "description": "Ensure Activity Log captures Storage Account data events for comprehensive log analysis.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.15 Logging",
@@ -814,7 +814,7 @@
       },
       "message": "",
       "name": "activity-log-storage-dataevents",
-      "remediationSteps": "## Fix: Enable Storage Account Data Events Logging\n\nYour Storage Accounts need data plane diagnostic settings to capture data access events for comprehensive log analysis.\n\n**Configure diagnostic settings for Storage Account blob service:**\n\n```typescript\nconst blobDiagnostic = new azure.monitor.DiagnosticSetting(\"blobDataEvents\", {\n    name: \"blob-data-events\",\n    resourceUri: pulumi.interpolate`${storageAccount.id}/blobServices/default`,\n    workspaceId: workspace.id,  // Send to Log Analytics\n    logs: [\n        { category: \"StorageRead\", enabled: true },\n        { category: \"StorageWrite\", enabled: true },\n        { category: \"StorageDelete\", enabled: true },\n    ],\n    metrics: [\n        { category: \"Transaction\", enabled: true },\n    ],\n});\n```\n\n**Tag your Storage Account to indicate data event logging:**\n\n```typescript\nconst storageAccount = new azure.storage.StorageAccount(\"myStorage\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"Standard_LRS\" },\n    kind: \"StorageV2\",\n    tags: {\n        DataEventLogging: \"enabled\",\n        StorageDataEvents: \"enabled\",\n        AuditDataAccess: \"enabled\",\n    },\n});\n```\n\n**Configure Activity Log to capture subscription-level storage events:**\n\n```typescript\nconst activityLogDiagnostic = new azure.monitor.DiagnosticSetting(\"activityLogDiag\", {\n    name: \"activity-log-storage-events\",\n    resourceUri: pulumi.interpolate`/subscriptions/${subscriptionId}`,\n    workspaceId: workspace.id,\n    logs: [\n        { category: \"Administrative\", enabled: true },  // Captures storage account management operations\n        { category: \"Security\", enabled: true },\n    ],\n    retentionPolicy: {\n        enabled: true,\n        days: 365,\n    },\n});\n```\n\n**Optional: Configure Event Grid for real-time storage events:**\n\n```typescript\nconst eventSubscription = new azure.eventgrid.EventSubscription(\"storageEvents\", {\n    scope: storageAccount.id,\n    destination: {\n        endpointType: \"eventhub\",\n        // ... configure destination\n    },\n    filter: {\n        includedEventTypes: [\n            \"Microsoft.Storage.BlobCreated\",\n            \"Microsoft.Storage.BlobDeleted\",\n        ],\n    },\n});\n```\n\n**Note:** Data plane logging captures individual blob read/write/delete operations. This provides comprehensive audit trails for data access monitoring per CIS Controls v8 IG3 3.14. Configure for blob, file, table, and queue services as needed.",
+      "remediationSteps": "## Fix: Enable Storage Account Data Events Logging\n\nYour Storage Accounts need data plane diagnostic settings to capture data access events for comprehensive log analysis.\n\n**Configure diagnostic settings for Storage Account blob service:**\n\n```typescript\nconst blobDiagnostic = new azure.monitor.DiagnosticSetting(\"blobDataEvents\", {\n    name: \"blob-data-events\",\n    resourceUri: pulumi.interpolate`${storageAccount.id}/blobServices/default`,\n    workspaceId: workspace.id,  // Send to Log Analytics\n    logs: [\n        { category: \"StorageRead\", enabled: true },\n        { category: \"StorageWrite\", enabled: true },\n        { category: \"StorageDelete\", enabled: true },\n    ],\n    metrics: [\n        { category: \"Transaction\", enabled: true },\n    ],\n});\n```\n\n**Tag your Storage Account to indicate data event logging:**\n\n```typescript\nconst storageAccount = new azure.storage.StorageAccount(\"myStorage\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"Standard_LRS\" },\n    kind: \"StorageV2\",\n    tags: {\n        DataEventLogging: \"enabled\",\n        StorageDataEvents: \"enabled\",\n        AuditDataAccess: \"enabled\",\n    },\n});\n```\n\n**Configure Activity Log to capture subscription-level storage events:**\n\n```typescript\nconst activityLogDiagnostic = new azure.monitor.DiagnosticSetting(\"activityLogDiag\", {\n    name: \"activity-log-storage-events\",\n    resourceUri: pulumi.interpolate`/subscriptions/${subscriptionId}`,\n    workspaceId: workspace.id,\n    logs: [\n        { category: \"Administrative\", enabled: true },  // Captures storage account management operations\n        { category: \"Security\", enabled: true },\n    ],\n});\n```\n\n**Optional: Configure Event Grid for real-time storage events:**\n\n```typescript\nconst eventSubscription = new azure.eventgrid.EventSubscription(\"storageEvents\", {\n    scope: storageAccount.id,\n    destination: {\n        endpointType: \"eventhub\",\n        // ... configure destination\n    },\n    filter: {\n        includedEventTypes: [\n            \"Microsoft.Storage.BlobCreated\",\n            \"Microsoft.Storage.BlobDeleted\",\n        ],\n    },\n});\n```\n\n**Note:** Data plane logging captures individual blob read/write/delete operations. This provides comprehensive audit trails for data access monitoring per CIS Controls v8 IG3 3.14. Configure for blob, file, table, and queue services as needed.",
       "severity": "medium"
     },
     {
@@ -843,7 +843,7 @@
           },
           "minimumRetentionDays": {
             "default": 365,
-            "description": "Minimum number of days to retain Activity Log data",
+            "description": "Retained for compatibility; has no effect, because Azure retired diagnostic-setting storage retention",
             "type": "number"
           },
           "requireEventHub": {
@@ -883,7 +883,7 @@
       },
       "description": "Collect audit logs from Activity Log trails.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.15 Logging; A.8.16 Monitoring activities",
@@ -892,7 +892,7 @@
       },
       "message": "",
       "name": "activity-log-trail-enabled",
-      "remediationSteps": "## Fix: Enable Activity Log Trail Collection\n\nYour subscription needs Activity Log diagnostic settings configured to collect comprehensive audit trails.\n\n**Configure Activity Log diagnostic settings at subscription level:**\n\n```typescript\nconst activityLogDiagnostic = new azure.monitor.DiagnosticSetting(\"activityLogTrail\", {\n    name: \"activity-log-audit-trail\",\n    resourceUri: pulumi.interpolate`/subscriptions/${subscriptionId}`,\n    workspaceId: workspace.id,  // Required: Log Analytics workspace\n    storageAccountId: storageAccount.id,  // Optional: for long-term archival\n    eventHubAuthorizationRuleId: eventHubRule.id,  // Optional: for real-time streaming\n    logs: [\n        { category: \"Administrative\", enabled: true },\n        { category: \"Security\", enabled: true },\n        { category: \"Alert\", enabled: true },\n        { category: \"Policy\", enabled: true },\n        { category: \"Recommendation\", enabled: true },\n        { category: \"ResourceHealth\", enabled: true },\n        { category: \"ServiceHealth\", enabled: true },\n        { category: \"Autoscale\", enabled: true },\n    ],\n    metrics: [\n        { category: \"AllMetrics\", enabled: true },\n    ],\n    retentionPolicy: {\n        enabled: true,\n        days: 365,  // Minimum 365 days recommended\n    },\n});\n```\n\n**Create required destination resources:**\n\n```typescript\n// Log Analytics workspace for analysis\nconst workspace = new azure.operationalinsights.Workspace(\"auditWorkspace\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"PerGB2018\" },\n    retentionInDays: 365,\n});\n\n// Storage Account for archival (optional)\nconst storageAccount = new azure.storage.StorageAccount(\"auditLogs\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"Standard_GRS\" },\n    kind: \"StorageV2\",\n});\n```\n\n**Optional: Configure Activity Log alerts for critical events:**\n\n```typescript\nconst criticalAlert = new azure.monitor.ActivityLogAlert(\"criticalEvents\", {\n    resourceGroupName: resourceGroup.name,\n    scopes: [pulumi.interpolate`/subscriptions/${subscriptionId}`],\n    condition: {\n        allOf: [\n            { field: \"category\", equals: \"Security\" },\n            { field: \"level\", equals: \"Critical\" },\n        ],\n    },\n    actions: {\n        actionGroups: [actionGroup.id],\n    },\n});\n```\n\n**Note:** Activity Log trails provide comprehensive audit logs for all subscription-level activities per CIS Controls v8 IG1 8.2. Enable all relevant categories and configure at least one destination (Log Analytics, Storage Account, or Event Hub).",
+      "remediationSteps": "## Fix: Enable Activity Log Trail Collection\n\nYour subscription needs Activity Log diagnostic settings configured to collect comprehensive audit trails.\n\n**Configure Activity Log diagnostic settings at subscription level:**\n\n```typescript\nconst activityLogDiagnostic = new azure.monitor.DiagnosticSetting(\"activityLogTrail\", {\n    name: \"activity-log-audit-trail\",\n    resourceUri: pulumi.interpolate`/subscriptions/${subscriptionId}`,\n    workspaceId: workspace.id,  // Required: Log Analytics workspace\n    storageAccountId: storageAccount.id,  // Optional: for long-term archival\n    eventHubAuthorizationRuleId: eventHubRule.id,  // Optional: for real-time streaming\n    logs: [\n        { category: \"Administrative\", enabled: true },\n        { category: \"Security\", enabled: true },\n        { category: \"Alert\", enabled: true },\n        { category: \"Policy\", enabled: true },\n        { category: \"Recommendation\", enabled: true },\n        { category: \"ResourceHealth\", enabled: true },\n        { category: \"ServiceHealth\", enabled: true },\n        { category: \"Autoscale\", enabled: true },\n    ],\n});\n```\n\n**Create required destination resources:**\n\n```typescript\n// Log Analytics workspace for analysis\nconst workspace = new azure.operationalinsights.Workspace(\"auditWorkspace\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"PerGB2018\" },\n    retentionInDays: 365,\n});\n\n// Storage Account for archival (optional)\nconst storageAccount = new azure.storage.StorageAccount(\"auditLogs\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n    sku: { name: \"Standard_GRS\" },\n    kind: \"StorageV2\",\n});\n```\n\n**Optional: Configure Activity Log alerts for critical events:**\n\n```typescript\nconst criticalAlert = new azure.monitor.ActivityLogAlert(\"criticalEvents\", {\n    resourceGroupName: resourceGroup.name,\n    scopes: [pulumi.interpolate`/subscriptions/${subscriptionId}`],\n    condition: {\n        allOf: [\n            { field: \"category\", equals: \"Security\" },\n            { field: \"level\", equals: \"Critical\" },\n        ],\n    },\n    actions: {\n        actionGroups: [actionGroup.id],\n    },\n});\n```\n\n**Note:** Activity Log trails provide comprehensive audit logs for all subscription-level activities per CIS Controls v8 IG1 8.2. Enable all relevant categories and configure at least one destination (Log Analytics, Storage Account, or Event Hub).",
       "severity": "high"
     },
     {
@@ -1273,7 +1273,7 @@
       },
       "message": "",
       "name": "api-management-diagnostic-settings-exist",
-      "remediationSteps": "## Fix: Enable Execution Logging for API Management\n\nYour API Management service needs advanced execution logging. Configure detailed logging with Log Analytics:\n\n```typescript\nconst diagnostics = new azure.insights.DiagnosticSetting(\"apimExecutionLogs\", {\n    name: \"apim-execution-diagnostics\",\n    resourceUri: apimService.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    logs: [\n        {\n            category: \"GatewayLogs\",  // Request/response execution logs\n            enabled: true,\n            retentionPolicy: { enabled: true, days: 365 },\n        },\n        {\n            category: \"WebSocketConnectionLogs\",  // WebSocket execution\n            enabled: true,\n            retentionPolicy: { enabled: true, days: 365 },\n        },\n    ],\n    metrics: [{\n        category: \"AllMetrics\",  // Performance metrics\n        enabled: true,\n    }],\n});\n```\n\n**Note**: This policy checks that diagnostic settings exist. Use the 'diagnostic-setting-configuration' resource policy to validate the configuration details of diagnostic settings.",
+      "remediationSteps": "## Fix: Enable Execution Logging for API Management\n\nYour API Management service needs advanced execution logging. Configure detailed logging with Log Analytics:\n\n```typescript\nconst diagnostics = new azure.insights.DiagnosticSetting(\"apimExecutionLogs\", {\n    name: \"apim-execution-diagnostics\",\n    resourceUri: apimService.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    logs: [\n        {\n            category: \"GatewayLogs\",  // Request/response execution logs\n            enabled: true,\n        },\n        {\n            category: \"WebSocketConnectionLogs\",  // WebSocket execution\n            enabled: true,\n        },\n    ],\n    metrics: [{\n        category: \"AllMetrics\",  // Performance metrics\n        enabled: true,\n    }],\n});\n```\n\n**Note**: This policy checks that diagnostic settings exist. Use the 'diagnostic-setting-configuration' resource policy to validate the configuration details of diagnostic settings.",
       "severity": "medium"
     },
     {
@@ -2013,7 +2013,7 @@
           },
           "minimumLogRetentionDays": {
             "default": 30,
-            "description": "Minimum log retention period in days",
+            "description": "Retained for compatibility; has no effect, because Azure retired diagnostic-setting storage retention",
             "minimum": 1,
             "type": "number"
           },
@@ -2048,7 +2048,7 @@
       },
       "message": "",
       "name": "cdn-distribution-logging-enabled",
-      "remediationSteps": "## Fix: Enable CDN Distribution Logging\n\nYour CDN needs audit logging configured. Enable diagnostic settings to collect access logs:\n\n```typescript\nconst cdnProfile = new azure.cdn.Profile(\"myCdnProfile\", {\n    // ... other properties\n    tags: {\n        \"LoggingEnabled\": \"enabled\",\n        \"CDNLogging\": \"true\",\n    },\n});\n\n// Configure diagnostic settings for the CDN profile\nconst cdnDiagnostics = new azure.insights.DiagnosticSetting(\"cdnDiagnostics\", {\n    name: \"cdn-logging\",\n    resourceUri: cdnProfile.id,\n    workspaceId: logAnalyticsWorkspace.id,  // Send logs to Log Analytics\n    logs: [\n        {\n            category: \"AzureCdnAccessLog\",  // Access logs for standard CDN\n            enabled: true,\n            retentionPolicy: { enabled: true, days: 90 },\n        },\n    ],\n});\n```\n\nFor Azure Front Door (modern CDN):\n\n```typescript\nlogs: [\n    {\n        category: \"FrontDoorAccessLog\",  // Access logs\n        enabled: true,\n    },\n    {\n        category: \"FrontDoorHealthProbeLog\",  // Health probe logs\n        enabled: true,\n    },\n],\n```",
+      "remediationSteps": "## Fix: Enable CDN Distribution Logging\n\nYour CDN needs audit logging configured. Enable diagnostic settings to collect access logs:\n\n```typescript\nconst cdnProfile = new azure.cdn.Profile(\"myCdnProfile\", {\n    // ... other properties\n    tags: {\n        \"LoggingEnabled\": \"enabled\",\n        \"CDNLogging\": \"true\",\n    },\n});\n\n// Configure diagnostic settings for the CDN profile\nconst cdnDiagnostics = new azure.insights.DiagnosticSetting(\"cdnDiagnostics\", {\n    name: \"cdn-logging\",\n    resourceUri: cdnProfile.id,\n    workspaceId: logAnalyticsWorkspace.id,  // Send logs to Log Analytics\n    logs: [\n        {\n            category: \"AzureCdnAccessLog\",  // Access logs for standard CDN\n            enabled: true,\n        },\n    ],\n});\n```\n\nFor Azure Front Door Standard or Premium:\n\n```typescript\nlogs: [\n    {\n        category: \"FrontDoorAccessLog\",  // Access logs\n        enabled: true,\n    },\n    {\n        category: \"FrontDoorHealthProbeLog\",  // Health probe logs\n        enabled: true,\n    },\n],\n```\n\nA classic Front Door has no health probe log; enable its `FrontdoorAccessLog` category.",
       "severity": "medium"
     },
     {
@@ -3992,7 +3992,7 @@
           },
           "minimumRetentionDays": {
             "default": 365,
-            "description": "Minimum retention days for diagnostic settings",
+            "description": "Retained for compatibility; has no effect, because Azure retired diagnostic-setting storage retention",
             "type": "number"
           },
           "requireEventHub": {
@@ -4012,8 +4012,7 @@
           },
           "requiredLogCategories": {
             "default": [
-              "LoadBalancerAlertEvent",
-              "LoadBalancerProbeHealthStatus"
+              "LoadBalancerHealthEvent"
             ],
             "description": "List of required log categories",
             "items": {
@@ -4035,7 +4034,7 @@
       },
       "message": "",
       "name": "load-balancer-logging",
-      "remediationSteps": "## Fix: Enable Diagnostic Logging for Load Balancer\n\nYour Load Balancer doesn't have diagnostic settings configured. Enable logging to monitor load balancer health, performance, and security events.\n\n### Configure Diagnostic Settings\n\n```typescript\nconst logAnalyticsWorkspace = new azure.operationalinsights.Workspace(\"logs\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: { name: \"PerGB2018\" },\n});\n\nconst loadBalancer = new azure.network.LoadBalancer(\"myLB\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    // ... other load balancer configuration\n});\n\nconst diagnosticSetting = new azure.monitor.DiagnosticSetting(\"lb-diagnostics\", {\n    resourceUri: loadBalancer.id,\n    workspaceId: logAnalyticsWorkspace.id,\n\n    logs: [\n        {\n            category: \"LoadBalancerAlertEvent\",\n            enabled: true,\n            retentionPolicy: {\n                enabled: true,\n                days: 365,\n            },\n        },\n        {\n            category: \"LoadBalancerProbeHealthStatus\",\n            enabled: true,\n            retentionPolicy: {\n                enabled: true,\n                days: 365,\n            },\n        },\n    ],\n\n    metrics: [{\n        category: \"AllMetrics\",\n        enabled: true,\n        retentionPolicy: {\n            enabled: true,\n            days: 365,\n        },\n    }],\n});\n```\n\n### Send Logs to Multiple Destinations\n\nFor comprehensive monitoring, send logs to multiple destinations:\n\n```typescript\nconst diagnosticSetting = new azure.monitor.DiagnosticSetting(\"lb-diagnostics\", {\n    resourceUri: loadBalancer.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    storageAccountId: storageAccount.id,  // Long-term storage\n    eventHubAuthorizationRuleId: eventHubRule.id,  // Real-time processing\n\n    logs: [\n        { category: \"LoadBalancerAlertEvent\", enabled: true },\n        { category: \"LoadBalancerProbeHealthStatus\", enabled: true },\n    ],\n    metrics: [{ category: \"AllMetrics\", enabled: true }],\n});\n```\n\n**Note**: Standard Load Balancers support diagnostic logging. Basic SKU load balancers have limited logging capabilities - consider upgrading to Standard.",
+      "remediationSteps": "## Fix: Enable Diagnostic Logging for Load Balancer\n\nYour Load Balancer doesn't have diagnostic settings configured. Enable logging to monitor load balancer health, performance, and security events.\n\n### Configure Diagnostic Settings\n\n```typescript\nconst logAnalyticsWorkspace = new azure.operationalinsights.Workspace(\"logs\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: { name: \"PerGB2018\" },\n});\n\nconst loadBalancer = new azure.network.LoadBalancer(\"myLB\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    // ... other load balancer configuration\n});\n\nconst diagnosticSetting = new azure.monitor.DiagnosticSetting(\"lb-diagnostics\", {\n    resourceUri: loadBalancer.id,\n    workspaceId: logAnalyticsWorkspace.id,\n\n    logs: [\n        {\n            category: \"LoadBalancerHealthEvent\",\n            enabled: true,\n        },\n    ],\n\n    metrics: [{\n        category: \"AllMetrics\",\n        enabled: true,\n    }],\n});\n```\n\n### Send Logs to Multiple Destinations\n\nFor comprehensive monitoring, send logs to multiple destinations:\n\n```typescript\nconst diagnosticSetting = new azure.monitor.DiagnosticSetting(\"lb-diagnostics\", {\n    resourceUri: loadBalancer.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    storageAccountId: storageAccount.id,  // Long-term storage\n    eventHubAuthorizationRuleId: eventHubRule.id,  // Real-time processing\n\n    logs: [\n        { category: \"LoadBalancerHealthEvent\", enabled: true },\n    ],\n    metrics: [{ category: \"AllMetrics\", enabled: true }],\n});\n```\n\n**Note**: Standard Load Balancers support diagnostic logging. Basic SKU load balancers have limited logging capabilities - consider upgrading to Standard.",
       "severity": "medium"
     },
     {
@@ -5760,7 +5759,7 @@
           },
           "minimumRetentionDays": {
             "default": 365,
-            "description": "Minimum retention days for diagnostic settings",
+            "description": "Retained for compatibility; has no effect, because Azure retired diagnostic-setting storage retention",
             "type": "number"
           },
           "requireEventHub": {
@@ -5780,8 +5779,7 @@
           },
           "requiredLogCategories": {
             "default": [
-              "OperationLogs",
-              "SearchSlow"
+              "OperationLogs"
             ],
             "description": "List of required log categories",
             "items": {
@@ -5803,7 +5801,7 @@
       },
       "message": "",
       "name": "search-service-logs-monitor",
-      "remediationSteps": "## Fix: Enable Logging for Search Service\n\nYour Search Service needs diagnostic logging configured:\n\n```typescript\nconst diagnostics = new azure.insights.DiagnosticSetting(\"searchDiagnostics\", {\n    name: \"search-logging\",\n    resourceUri: searchService.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    logs: [\n        {\n            category: \"OperationLogs\",  // Search operations\n            enabled: true,\n            retentionPolicy: { enabled: true, days: 365 },\n        },\n        {\n            category: \"SearchSlowLogs\",  // Slow query logs\n            enabled: true,\n            retentionPolicy: { enabled: true, days: 365 },\n        },\n    ],\n    metrics: [{\n        category: \"AllMetrics\",\n        enabled: true,\n    }],\n});\n```\n\nAdd tags to track logging configuration:\n```typescript\ntags: {\n    \"LoggingEnabled\": \"true\",\n    \"LogAnalytics\": logAnalyticsWorkspace.id,\n}\n```",
+      "remediationSteps": "## Fix: Enable Logging for Search Service\n\nYour Search Service needs diagnostic logging configured:\n\n```typescript\nconst diagnostics = new azure.insights.DiagnosticSetting(\"searchDiagnostics\", {\n    name: \"search-logging\",\n    resourceUri: searchService.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    logs: [\n        {\n            category: \"OperationLogs\",  // Search operations\n            enabled: true,\n        },\n    ],\n    metrics: [{\n        category: \"AllMetrics\",\n        enabled: true,\n    }],\n});\n```\n\nAdd tags to track logging configuration:\n```typescript\ntags: {\n    \"LoggingEnabled\": \"true\",\n    \"LogAnalytics\": logAnalyticsWorkspace.id,\n}\n```",
       "severity": "medium"
     },
     {
@@ -5907,7 +5905,7 @@
       },
       "description": "Ensure Security Center is enabled for vulnerability management.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.8 Management of technical vulnerabilities; A.8.16 Monitoring activities",
@@ -5916,7 +5914,7 @@
       },
       "message": "",
       "name": "security-center-enabled",
-      "remediationSteps": "## Fix: Enable Azure Security Center\n\nYour subscription needs Azure Security Center configured for vulnerability management:\n\n```typescript\n// Enable Security Center pricing for services\nconst vmPricing = new azure.security.Pricing(\"vmPricing\", {\n    pricingName: \"VirtualMachines\",\n    pricingTier: \"Standard\",  // or \"Free\" for basic protection\n});\n\nconst storagePricing = new azure.security.Pricing(\"storagePricing\", {\n    pricingName: \"StorageAccounts\",\n    pricingTier: \"Standard\",\n});\n\n// Configure security contacts\nconst securityContact = new azure.security.SecurityContact(\"securityContact\", {\n    securityContactName: \"default1\",\n    emails: \"security@example.com\",\n    notificationsByRole: {\n        state: \"On\",  // Enable email notifications\n        roles: [\"Owner\"],  // Notify subscription admins\n    },\n});\n\n// Enable auto-provisioning of security agents\nconst autoProvisioning = new azure.security.AutoProvisioningSetting(\"autoProvision\", {\n    settingName: \"default\",\n    autoProvision: \"On\",  // Automatically deploy agents\n});\n```",
+      "remediationSteps": "## Fix: Enable Azure Security Center\n\nYour subscription needs Azure Security Center configured for vulnerability management:\n\n```typescript\n// Enable Security Center pricing for services\nconst vmPricing = new azure.security.Pricing(\"vmPricing\", {\n    scopeId: \"/subscriptions/00000000-0000-0000-0000-000000000000\",  // your subscription\n    pricingName: \"VirtualMachines\",\n    pricingTier: \"Standard\",  // or \"Free\" for basic protection\n});\n\nconst storagePricing = new azure.security.Pricing(\"storagePricing\", {\n    scopeId: \"/subscriptions/00000000-0000-0000-0000-000000000000\",\n    pricingName: \"StorageAccounts\",\n    pricingTier: \"Standard\",\n});\n\n// Configure security contacts\nconst securityContact = new azure.security.SecurityContact(\"securityContact\", {\n    securityContactName: \"default1\",\n    emails: \"security@example.com\",\n    notificationsByRole: {\n        state: \"On\",  // Enable email notifications\n        roles: [\"Owner\"],  // Notify subscription admins\n    },\n});\n```",
       "severity": "high"
     },
     {
@@ -7302,7 +7300,7 @@
       },
       "description": "Ensure subscription is part of Management Groups for proper governance hierarchy.",
       "displayName": "",
-      "enforcementLevel": "advisory",
+      "enforcementLevel": "disabled",
       "framework": {
         "name": "ISO/IEC 27001",
         "reference": "A.8.9 Configuration management",
@@ -7402,7 +7400,7 @@
           },
           "minimumRetentionDays": {
             "default": 365,
-            "description": "Minimum retention days for Synapse configuration logs",
+            "description": "Retained for compatibility; has no effect, because Azure retired diagnostic-setting storage retention",
             "type": "number"
           },
           "requireAuditLogging": {
@@ -7459,7 +7457,7 @@
       },
       "message": "",
       "name": "synapse-configuration-logging",
-      "remediationSteps": "## Fix: Enable Synapse Workspace Configuration Logging\n\nYour Synapse workspace doesn't have diagnostic settings configured. Enable comprehensive logging to Log Analytics:\n\n```typescript\nimport * as azure from \"@pulumi/azure-native\";\n\nconst diagnostics = new azure.monitor.DiagnosticSetting(\"synapseDiagnostics\", {\n    resourceUri: workspace.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    logs: [\n        { category: \"SynapseRbacOperations\", enabled: true },\n        { category: \"GatewayApiRequests\", enabled: true },\n        { category: \"BuiltinSqlReqsEnded\", enabled: true },\n        { category: \"IntegrationPipelineRuns\", enabled: true },\n        { category: \"IntegrationActivityRuns\", enabled: true },\n        { category: \"IntegrationTriggerRuns\", enabled: true },\n    ],\n    metrics: [\n        { category: \"AllMetrics\", enabled: true },\n    ],\n});\n```\n\nFor long-term retention, also send logs to a storage account:\n\n```typescript\nconst diagnostics = new azure.monitor.DiagnosticSetting(\"synapseDiagnostics\", {\n    resourceUri: workspace.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    storageAccountId: storageAccount.id,\n    logs: [\n        { category: \"SynapseRbacOperations\", enabled: true, retentionPolicy: { enabled: true, days: 365 } },\n        { category: \"GatewayApiRequests\", enabled: true, retentionPolicy: { enabled: true, days: 365 } },\n        { category: \"BuiltinSqlReqsEnded\", enabled: true, retentionPolicy: { enabled: true, days: 365 } },\n    ],\n    metrics: [{ category: \"AllMetrics\", enabled: true }],\n});\n```\n\nThis captures RBAC operations, API requests, SQL queries, and pipeline executions for security analysis and compliance.",
+      "remediationSteps": "## Fix: Enable Synapse Workspace Configuration Logging\n\nYour Synapse workspace doesn't have diagnostic settings configured. Enable comprehensive logging to Log Analytics:\n\n```typescript\nimport * as azure from \"@pulumi/azure-native\";\n\nconst diagnostics = new azure.monitor.DiagnosticSetting(\"synapseDiagnostics\", {\n    resourceUri: workspace.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    logs: [\n        { category: \"SynapseRbacOperations\", enabled: true },\n        { category: \"GatewayApiRequests\", enabled: true },\n        { category: \"BuiltinSqlReqsEnded\", enabled: true },\n        { category: \"IntegrationPipelineRuns\", enabled: true },\n        { category: \"IntegrationActivityRuns\", enabled: true },\n        { category: \"IntegrationTriggerRuns\", enabled: true },\n    ],\n    metrics: [\n        { category: \"AllMetrics\", enabled: true },\n    ],\n});\n```\n\nFor long-term retention, also send logs to a storage account:\n\n```typescript\nconst diagnostics = new azure.monitor.DiagnosticSetting(\"synapseDiagnostics\", {\n    resourceUri: workspace.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    storageAccountId: storageAccount.id,\n    logs: [\n        { category: \"SynapseRbacOperations\", enabled: true },\n        { category: \"GatewayApiRequests\", enabled: true },\n        { category: \"BuiltinSqlReqsEnded\", enabled: true },\n    ],\n    metrics: [{ category: \"AllMetrics\", enabled: true }],\n});\n```\n\nThis captures RBAC operations, API requests, SQL queries, and pipeline executions for security analysis and compliance.",
       "severity": "medium"
     },
     {
@@ -8356,8 +8354,8 @@
             "type": "boolean"
           },
           "requireNetworkWatcher": {
-            "default": true,
-            "description": "Require Network Watcher to be enabled for flow logs",
+            "default": false,
+            "description": "Require a Network Watcher resource in the stack. Off by default because Azure enables Network Watcher automatically in each region where a virtual network is created",
             "type": "boolean"
           }
         },
@@ -8374,7 +8372,7 @@
       },
       "message": "",
       "name": "vnet-flow-logs-enabled",
-      "remediationSteps": "## Fix: Enable VNet Flow Logs for Network Monitoring\n\nYour Virtual Network does not have flow logs configured for security monitoring and audit collection. Enable flow logs to track network traffic:\n\n### Step 1: Create a Network Watcher (if not exists)\n\n```typescript\nconst networkWatcher = new azure.network.NetworkWatcher(\"myNetworkWatcher\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n});\n```\n\n### Step 2: Create a Storage Account for Flow Logs\n\n```typescript\nconst storageAccount = new azure.storage.StorageAccount(\"flowlogsstorage\", {\n    resourceGroupName: resourceGroup.name,\n    kind: \"StorageV2\",\n    sku: { name: \"Standard_LRS\" },\n});\n```\n\n### Step 3: Create a Log Analytics Workspace (recommended)\n\n```typescript\nconst workspace = new azure.operationalinsights.Workspace(\"myWorkspace\", {\n    resourceGroupName: resourceGroup.name,\n    sku: { name: \"PerGB2018\" },\n    retentionInDays: 30,\n});\n```\n\n### Step 4: Enable Flow Logs on Your VNet/NSG\n\n```typescript\nconst flowLog = new azure.network.FlowLog(\"myFlowLog\", {\n    networkWatcherName: networkWatcher.name,\n    resourceGroupName: resourceGroup.name,\n    targetResourceId: nsg.id,  // Or vnet.id for VNet flow logs\n    storageId: storageAccount.id,\n    enabled: true,\n    retentionPolicy: {\n        enabled: true,\n        days: 30,\n    },\n    flowAnalyticsConfiguration: {\n        networkWatcherFlowAnalyticsConfiguration: {\n            enabled: true,\n            workspaceResourceId: workspace.id,\n            trafficAnalyticsInterval: 10,\n        },\n    },\n});\n```\n\nThis captures all network traffic for security analysis and compliance audit trails.",
+      "remediationSteps": "## Fix: Enable VNet Flow Logs for Network Monitoring\n\nYour Virtual Network does not have flow logs configured for security monitoring and audit collection. A VNet flow log also covers the network security groups on the VNet's subnets; NSG flow logs are retired and can no longer be created.\n\n### Step 1: Create a Network Watcher (if not exists)\n\n```typescript\nconst networkWatcher = new azure.network.NetworkWatcher(\"myNetworkWatcher\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"eastus\",\n});\n```\n\n### Step 2: Create a Storage Account for Flow Logs\n\n```typescript\nconst storageAccount = new azure.storage.StorageAccount(\"flowlogsstorage\", {\n    resourceGroupName: resourceGroup.name,\n    kind: \"StorageV2\",\n    sku: { name: \"Standard_LRS\" },\n});\n```\n\n### Step 3: Create a Log Analytics Workspace (recommended)\n\n```typescript\nconst workspace = new azure.operationalinsights.Workspace(\"myWorkspace\", {\n    resourceGroupName: resourceGroup.name,\n    sku: { name: \"PerGB2018\" },\n    retentionInDays: 30,\n});\n```\n\n### Step 4: Enable Flow Logs on Your VNet\n\n```typescript\nconst flowLog = new azure.network.FlowLog(\"myFlowLog\", {\n    networkWatcherName: networkWatcher.name,\n    resourceGroupName: resourceGroup.name,\n    targetResourceId: vnet.id,\n    storageId: storageAccount.id,\n    enabled: true,\n    retentionPolicy: {\n        enabled: true,\n        days: 30,\n    },\n    flowAnalyticsConfiguration: {\n        networkWatcherFlowAnalyticsConfiguration: {\n            enabled: true,\n            workspaceResourceId: workspace.id,\n            trafficAnalyticsInterval: 10,\n        },\n    },\n});\n```\n\nThis captures all network traffic for security analysis and compliance audit trails.",
       "severity": "medium"
     },
     {
@@ -8526,13 +8524,13 @@
           },
           "minimumLogRetentionDays": {
             "default": 30,
-            "description": "Minimum log retention period in days",
+            "description": "Retained for compatibility; has no effect, because Azure retired diagnostic-setting storage retention",
             "minimum": 1,
             "type": "number"
           },
           "requireFirewallPolicyLogging": {
             "default": true,
-            "description": "Require firewall policy-level logging configuration",
+            "description": "Retained for compatibility; has no effect, because a WAF policy is judged by the firewall log of the Application Gateways it is attached to",
             "type": "boolean"
           },
           "requireLogAnalyticsIntegration": {
@@ -8566,7 +8564,7 @@
       },
       "message": "",
       "name": "wafv2-logging-enabled",
-      "remediationSteps": "## Fix: Enable WAF v2 Audit Logging\n\nYour Application Gateway WAF v2 doesn't have comprehensive audit logging configured. WAF logs are essential for threat detection and compliance.\n\n### Configure WAF v2 Diagnostic Settings\n\n```typescript\nconst logAnalyticsWorkspace = new azure.operationalinsights.Workspace(\"logs\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: { name: \"PerGB2018\" },\n});\n\nconst appGateway = new azure.network.ApplicationGateway(\"myGateway\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n\n    // Use WAF_v2 SKU\n    sku: {\n        name: \"WAF_v2\",\n        tier: \"WAF_v2\",\n        capacity: 2,\n    },\n\n    webApplicationFirewallConfiguration: {\n        enabled: true,\n        firewallMode: \"Prevention\",\n        ruleSetType: \"OWASP\",\n        ruleSetVersion: \"3.2\",\n    },\n});\n\nconst diagnosticSetting = new azure.monitor.DiagnosticSetting(\"waf-diagnostics\", {\n    resourceUri: appGateway.id,\n    workspaceId: logAnalyticsWorkspace.id,\n\n    logs: [\n        {\n            category: \"ApplicationGatewayAccessLog\",\n            enabled: true,\n            retentionPolicy: { enabled: true, days: 30 },\n        },\n        {\n            category: \"ApplicationGatewayFirewallLog\",\n            enabled: true,\n            retentionPolicy: { enabled: true, days: 30 },\n        },\n        {\n            category: \"ApplicationGatewayPerformanceLog\",\n            enabled: true,\n            retentionPolicy: { enabled: true, days: 30 },\n        },\n    ],\n\n    metrics: [{\n        category: \"AllMetrics\",\n        enabled: true,\n    }],\n});\n```\n\n### Add Storage Account for Long-Term Retention\n\n```typescript\nconst storageAccount = new azure.storage.StorageAccount(\"waflogstorage\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: { name: \"Standard_LRS\" },\n    kind: \"StorageV2\",\n});\n\nconst diagnosticSetting = new azure.monitor.DiagnosticSetting(\"waf-diagnostics\", {\n    resourceUri: appGateway.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    storageAccountId: storageAccount.id,  // For long-term retention\n\n    logs: [\n        { category: \"ApplicationGatewayAccessLog\", enabled: true },\n        { category: \"ApplicationGatewayFirewallLog\", enabled: true },\n        { category: \"ApplicationGatewayPerformanceLog\", enabled: true },\n    ],\n});\n```\n\n**Note**: WAF v2 provides enhanced threat detection. Ensure your Application Gateway uses the WAF_v2 SKU tier for full functionality.",
+      "remediationSteps": "## Fix: Enable WAF v2 Audit Logging\n\nYour Application Gateway WAF v2 doesn't have comprehensive audit logging configured. WAF logs are essential for threat detection and compliance.\n\n### Configure WAF v2 Diagnostic Settings\n\n```typescript\nconst logAnalyticsWorkspace = new azure.operationalinsights.Workspace(\"logs\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: { name: \"PerGB2018\" },\n});\n\nconst appGateway = new azure.network.ApplicationGateway(\"myGateway\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n\n    // Use WAF_v2 SKU\n    sku: {\n        name: \"WAF_v2\",\n        tier: \"WAF_v2\",\n        capacity: 2,\n    },\n\n    webApplicationFirewallConfiguration: {\n        enabled: true,\n        firewallMode: \"Prevention\",\n        ruleSetType: \"OWASP\",\n        ruleSetVersion: \"3.2\",\n    },\n});\n\nconst diagnosticSetting = new azure.monitor.DiagnosticSetting(\"waf-diagnostics\", {\n    resourceUri: appGateway.id,\n    workspaceId: logAnalyticsWorkspace.id,\n\n    logs: [\n        {\n            category: \"ApplicationGatewayAccessLog\",\n            enabled: true,\n        },\n        {\n            category: \"ApplicationGatewayFirewallLog\",\n            enabled: true,\n        },\n        {\n            category: \"ApplicationGatewayPerformanceLog\",\n            enabled: true,\n        },\n    ],\n\n    metrics: [{\n        category: \"AllMetrics\",\n        enabled: true,\n    }],\n});\n```\n\n### Add Storage Account for Long-Term Retention\n\n```typescript\nconst storageAccount = new azure.storage.StorageAccount(\"waflogstorage\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: { name: \"Standard_LRS\" },\n    kind: \"StorageV2\",\n});\n\nconst diagnosticSetting = new azure.monitor.DiagnosticSetting(\"waf-diagnostics\", {\n    resourceUri: appGateway.id,\n    workspaceId: logAnalyticsWorkspace.id,\n    storageAccountId: storageAccount.id,  // For long-term retention\n\n    logs: [\n        { category: \"ApplicationGatewayAccessLog\", enabled: true },\n        { category: \"ApplicationGatewayFirewallLog\", enabled: true },\n        { category: \"ApplicationGatewayPerformanceLog\", enabled: true },\n    ],\n});\n```\n\n**Note**: WAF v2 provides enhanced threat detection. Ensure your Application Gateway uses the WAF_v2 SKU tier for full functionality.",
       "severity": "high"
     },
     {
@@ -8656,6 +8654,6 @@
       "severity": "high"
     }
   ],
-  "version": 1,
-  "versionTag": "1.0.0"
+  "version": 2,
+  "versionTag": "1.1.0"
 }

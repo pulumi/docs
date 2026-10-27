@@ -986,7 +986,7 @@
       },
       "message": "",
       "name": "cloud-sql-enhanced-networking-enabled",
-      "remediationSteps": "Enable private IP by setting ipv4Enabled to false and configuring privateNetwork. Set requireSsl to true to enforce encrypted connections.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst instance = new gcp.sql.DatabaseInstance(\"secure-db\", {\n    databaseVersion: \"POSTGRES_15\",\n    region: \"us-central1\",\n    settings: {\n        tier: \"db-f1-micro\",\n        ipConfiguration: {\n            ipv4Enabled: false,\n            privateNetwork: vpc.id,\n            requireSsl: true,\n        },\n    },\n});\n```",
+      "remediationSteps": "Enable private IP by setting ipv4Enabled to false and configuring privateNetwork. Set sslMode to ENCRYPTED_ONLY to enforce encrypted connections.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst instance = new gcp.sql.DatabaseInstance(\"secure-db\", {\n    databaseVersion: \"POSTGRES_15\",\n    region: \"us-central1\",\n    settings: {\n        tier: \"db-f1-micro\",\n        ipConfiguration: {\n            ipv4Enabled: false,\n            privateNetwork: vpc.id,\n            sslMode: \"ENCRYPTED_ONLY\",\n        },\n    },\n});\n```",
       "severity": "medium"
     },
     {
@@ -1392,7 +1392,7 @@
       },
       "message": "",
       "name": "cloud-storage-bucket-public-write-prohibited",
-      "remediationSteps": "Remove IAM policy bindings that grant write permissions to allUsers or allAuthenticatedUsers. Ensure bucket ACLs do not grant WRITE or FULL_CONTROL to public principals.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst bucket = new gcp.storage.Bucket(\"secure-bucket\", {\n    location: \"US\",\n    uniformBucketLevelAccess: true,\n    publicAccessPrevention: \"enforced\",\n});\n\n// Do NOT add IAM bindings like this:\n// new gcp.storage.BucketIAMMember(\"bad-binding\", {\n//     bucket: bucket.name,\n//     role: \"roles/storage.objectCreator\",\n//     member: \"allUsers\",  // NEVER use allUsers/allAuthenticatedUsers\n// });\n```",
+      "remediationSteps": "Remove IAM policy bindings that grant write permissions to allUsers or allAuthenticatedUsers. Ensure bucket ACLs do not grant WRITE or FULL_CONTROL to public principals. Do not apply the `publicReadWrite` predefined ACL.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst bucket = new gcp.storage.Bucket(\"secure-bucket\", {\n    location: \"US\",\n    uniformBucketLevelAccess: true,\n    publicAccessPrevention: \"enforced\",\n});\n\n// Do NOT add IAM bindings like this:\n// new gcp.storage.BucketIAMMember(\"bad-binding\", {\n//     bucket: bucket.name,\n//     role: \"roles/storage.objectCreator\",\n//     member: \"allUsers\",  // NEVER use allUsers/allAuthenticatedUsers\n// });\n```",
       "severity": "critical"
     },
     {
@@ -3107,6 +3107,6 @@
       "severity": "high"
     }
   ],
-  "version": 5,
-  "versionTag": "1.1.0"
+  "version": 6,
+  "versionTag": "1.2.0"
 }
