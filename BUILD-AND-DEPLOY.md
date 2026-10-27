@@ -1157,7 +1157,7 @@ Key points:
 
 **Triggers:** `workflow_run` when `Build and deploy` or `Build and deploy testing` completes successfully; manual `workflow_dispatch`.
 
-Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/dev` proxy hops to pulumi/marketing-web. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
+Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/dev` and `/topics` proxy hops to pulumi/marketing-web. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
 
 #### schedule-social.yml
 
@@ -1187,7 +1187,7 @@ Runs `make ci_update_search_index`, which indexes this repo's content and merges
 
 #### invalidate-marketing-web-cache.yml
 
-**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, `/pricing`, and the `/up` getting-started wizard) from CloudFront when it deploys.
+**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, `/pricing`, the `/up` getting-started wizard, and `/topics`) from CloudFront when it deploys.
 
 **Triggers:** `repository_dispatch` (`dev-deployed`) from pulumi/marketing-web; manual `workflow_dispatch`.
 
@@ -1538,7 +1538,7 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `post-deployment-health-check.yml` | Ship | After a successful deploy, manual | Live-site smoke checks |
 | `schedule-social.yml` | Ship | After a successful production deploy, manual | Schedule blog social posts |
 | `update-search-index.yml` | Ship | Hourly, manual | Refresh Algolia |
-| `invalidate-marketing-web-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/dev`, `/community`, `/pricing`, and `/up` from CloudFront |
+| `invalidate-marketing-web-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/dev`, `/community`, `/pricing`, `/up`, and `/topics` from CloudFront |
 | `bucket-cleanup.yml` | Ship | Daily | Delete old production buckets |
 | `bucket-cleanup-testing.yml` | Ship | Daily, manual | Delete old testing and preview buckets |
 | `pull-request.yml` | PR checks | Pull request | Lint, test, preview build and deploy |
@@ -1813,7 +1813,7 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | 30 minutes | Dynamic content, origin-proxied |
 | /guides/* | Guides | 30 minutes | Dynamic content, origin-proxied |
-| Paths in `infrastructure/marketingWebPaths.ts` (/dev*, /assets*, /community, /pricing, /up) | pulumi/marketing-web | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
+| Paths in `infrastructure/marketingWebPaths.ts` (/dev*, /assets*, /community, /pricing, /up, /topics*) | pulumi/marketing-web | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
 | /docs/* | S3 Main | 10 min | Content negotiation for Accept: text/markdown |
 | /docs/reference/pkg/dotnet/* | S3 Main | 10 min | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
 | /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |

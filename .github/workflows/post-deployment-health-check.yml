@@ -136,7 +136,8 @@ jobs:
           check_endpoint "/docs/get-started/" "Getting started"
           check_endpoint "/docs/iac/cli/commands/" "CLI reference"
           check_endpoint "/blog/" "Blog landing"
-          check_endpoint "/what-is/" "What-is landing"
+          check_endpoint "/what-is/" "What-is landing (redirects to /topics/)"
+          check_endpoint "/topics/" "Topics landing"
           check_endpoint "/customers/" "Customers landing"
 
           # /dev/tutorials/ and /dev/templates/ are proxied here from

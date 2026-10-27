@@ -18,8 +18,14 @@ Sitemap: https://www.pulumi.com/sitemap-index.xml
 
 Sitemap: https://www.pulumi.com/dev/sitemap-index.xml
 
+Sitemap: https://www.pulumi.com/topics/sitemap.xml
+
 Sitemap: https://www.pulumi.com/registry/sitemap.xml
 
 # Dev Center, for agents:
 #   llms.txt index:    https://www.pulumi.com/dev/llms.txt
 #   Per-page markdown: append `.md` to any /dev detail URL
+
+# Topics (cloud and infrastructure explainers), for agents:
+#   llms.txt index:    https://www.pulumi.com/topics/llms.txt
+#   Per-page markdown: append `.md` to any /topics page URL

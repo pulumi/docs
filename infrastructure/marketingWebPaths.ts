@@ -18,4 +18,6 @@ export const marketingWebPaths = [
     "/up",
     "/up/",
     "/up/*",
+    // Also takes /topics/containers/ off S3, so its old 301 to the Kubernetes docs no longer fires.
+    "/topics*",
 ];

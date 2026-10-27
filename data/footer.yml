@@ -78,7 +78,7 @@ columns:
         href: /kubernetes/
         track: footer-kubernetes
       - label: Infrastructure as code
-        href: /what-is/what-is-infrastructure-as-code/
+        href: /topics/infrastructure-as-code/
         track: footer-what-is-infrastructure-as-code
       - label: AI/ML workloads
         href: /solutions/ai/

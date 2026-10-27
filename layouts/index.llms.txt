@@ -102,7 +102,7 @@ This llms.txt covers www.pulumi.com, which includes:
 - [Infrastructure AI](https://www.pulumi.com/docs/ai/): Investigate incidents and maintain infrastructure with [Pulumi Agents](https://www.pulumi.com/docs/ai/agents/), or write Pulumi code with [your coding agent](https://www.pulumi.com/docs/ai/coding-agents/)
 - [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
 - [Dev Center](https://www.pulumi.com/dev/): Tutorials, templates, community examples, and a glossary. Has an index of its own at [/dev/llms.txt](https://www.pulumi.com/dev/llms.txt), and every detail page has a markdown twin at its URL plus `.md`
-- [What is...](https://www.pulumi.com/what-is/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)
+- [Topics](https://www.pulumi.com/topics/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)
 - [Customers](https://www.pulumi.com/customers/): Companies running their infrastructure on Pulumi, and the case studies behind them
 - [Automation API](https://www.pulumi.com/automation/): Program-driven Pulumi for embedding infrastructure as code into applications and platforms
 - [Whitepapers](https://www.pulumi.com/whitepapers/): Long-form educational and technical content
