@@ -892,7 +892,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if review.get("base_merged"):
         reasons.append("review:base-merged")
     # `review:waived` is the Sentinel's logged break-glass: it skips every
-    # gate but staging evidence. Once someone has waived, a review that is
+    # gate, staging evidence included. Once someone has waived, a review that is
     # stale, errored or still running is no longer what stands between the
     # row and a merge, so it stops blocking. It still fails the stamp gate (a
     # waiver is a judgment call, never a stamp). Open 🚨 rows and an

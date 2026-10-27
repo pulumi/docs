@@ -193,8 +193,13 @@ def group_by_head(runs: list[dict]) -> dict[str, dict]:
     return grouped
 
 
-def existing_verdict(statuses: list[dict]) -> str | None:
-    """The state of the newest AUTHORIZED staging status, or None.
+def existing_verdict(statuses: list[dict]) -> tuple[str, str] | None:
+    """(state, description) of the newest AUTHORIZED staging status, or None.
+
+    The description is part of the key because two writers share a state:
+    the auto lane's "Not dispatched…" error and a cancelled deploy's
+    "staging deploy cancelled" are both `error`, and keying on state alone
+    left the dispatch reason standing after a later run was cancelled.
 
     Unauthorized statuses are skipped rather than trusted: a commit status
     needs only push access to write, and treating a hand-written one as
@@ -207,7 +212,7 @@ def existing_verdict(statuses: list[dict]) -> str | None:
             continue
         if ((s.get("creator") or {}).get("login") or "") not in STAGING_STATUS_WRITERS:
             continue
-        return s.get("state")
+        return s.get("state"), s.get("description") or ""
     return None
 
 
@@ -254,7 +259,7 @@ def sweep(gh: GhClient, *, default_branch: str, now: datetime,
             log(f"::warning::could not read statuses at {sha[:9]}: {exc}")
             record["skipped"].append({"sha": sha, "reason": "statuses-unreadable"})
             continue
-        if existing_verdict(statuses) == state:
+        if existing_verdict(statuses) == (state, description):
             record["skipped"].append({"sha": sha, "reason": "already-recorded", "state": state})
             continue
 
@@ -286,8 +291,14 @@ def sweep(gh: GhClient, *, default_branch: str, now: datetime,
                     entry["poked"] = pr["number"]
                 except Exception as exc:  # noqa: BLE001 — retried next cycle
                     log(f"::warning::could not poke the Sentinel for #{pr['number']}: {exc}")
-                    record["skipped"].append({"sha": sha, "reason": "poke-failed"})
-                    continue
+                    # A success holds its status back so the poke is
+                    # retried: G4 is waiting on it. A failure doesn't. G4
+                    # is red either way, and recording why matters more
+                    # than re-scoring.
+                    if is_success:
+                        record["skipped"].append({"sha": sha, "reason": "poke-failed"})
+                        continue
+                    entry["poked"] = "poke-failed"
 
         target_url = DEPLOYED_SITE_URL if is_success else fact["run_url"]
         try:

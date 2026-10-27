@@ -1225,8 +1225,8 @@ def test_an_unattributed_staging_status_is_not_evidence():
         gh api repos/OWNER/REPO/statuses/SHA -f state=success \
           -f context=staging/pulumi-test-io
 
-    …which made the gate review-routing.yml calls "no waiver, no shortcut" a
-    one-line bypass. The run record cannot be forged that way.
+    …which made G4 a one-line bypass that, unlike a waive, leaves no trace.
+    The run record cannot be forged that way.
     """
     base = dict(pr=pr_meta(), files=[infra_file()],
                 comments=[author_card([], state=_state_with([]))])
@@ -1321,6 +1321,14 @@ def test_g4_quotes_the_last_failed_staging_attempt():
     g4 = _gate(sentinel.evaluate(StubGh(pr=pr_meta(), files=[infra_file()],
                                         statuses=[forged]), CONFIG), "G4")
     assert "Last staging attempt" not in g4.message
+
+
+def test_g4_never_puts_a_cell_breaking_branch_name_in_the_row():
+    for bad in ("a`b", "a|b"):
+        gh = StubGh(pr=pr_meta(branch=bad), files=[infra_file()])
+        g4 = _gate(sentinel.evaluate(gh, CONFIG), "G4")
+        assert bad not in g4.message
+        assert "--ref <branch>" in g4.message
 
 
 def test_g4_ok_never_reads_the_workflow_state():

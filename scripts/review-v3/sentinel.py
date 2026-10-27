@@ -865,7 +865,7 @@ def _last_staging_failure(gh: Gh, head_sha: str) -> str:
             continue
         if s.get("state") not in ("failure", "error"):
             return ""
-        desc = (s.get("description") or "staging deploy failed").rstrip(".")
+        desc = (s.get("description") or "staging deploy failed").rstrip(".").replace("|", "/")
         url = s.get("target_url")
         return f"**Last staging attempt: {desc}.**" + (f" ([details]({url}))" if url else "") + " "
     return ""
@@ -882,6 +882,11 @@ def _g4_red_message(gh: Gh, pr: dict, head_sha: str) -> str:
     read degrades to the generic text: this is advice, not the verdict.
     """
     branch = (pr.get("head") or {}).get("ref") or "<branch>"
+    # Author-controlled, and the row is one markdown table cell inside a
+    # code span: a backtick would end the span (and could carry an
+    # @mention out of it), a `|` would split the cell.
+    if "`" in branch or "|" in branch or "\n" in branch:
+        branch = "<branch>"
     repo = ((pr.get("base") or {}).get("repo") or {}).get("full_name") or "pulumi/docs"
     workflow_url = f"https://github.com/{repo}/actions/workflows/{STAGING_WORKFLOW_FILE}"
     dispatch = f"`gh workflow run {STAGING_WORKFLOW_FILE} --ref {branch}`"
