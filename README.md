@@ -263,6 +263,10 @@ With `make serve-static` running, browse to <http://localhost:8080/docs>:
 * Choose **Languages & SDKs** → your language → scroll to the package you're interested in.
 * Choose **Pulumi CLI** → **Commands**.
 
+### Self-hosted feature parity docs
+
+`make generate-feature-parity` regenerates the [self-hosted feature parity page](content/docs/administration/self-hosting/feature-parity.md) from the feature definitions in the [pulumi-service](https://github.com/pulumi/pulumi-service) repository, which must be cloned as a sibling to this repo. See [`scripts/self-hosted-feature-parity/README.md`](scripts/self-hosted-feature-parity/README.md) for details.
+
 ### Checking in generated docs
 
 All generated docs (CLI markdown + Node.js, Python, .NET, Java SDK reference) are checked into this repository. In normal operation the workflows above create the commits and PRs automatically; you don't need to commit generated output yourself.
