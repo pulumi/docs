@@ -1110,7 +1110,7 @@ Pushes to an open PR rebuild the preview, mark the pinned review `review:stale`,
 
 - Push to `master`
 - Scheduled: 11:17, 12:43, and 20:23 UTC (7:17 AM, 8:43 AM, and 4:23 PM Eastern during daylight saving time). The rebuilds publish future-dated content. The 12:43 run is a fallback in case GitHub drops the 11:17 one, and both land before scheduled social posts fire at 10 AM Eastern.
-- Manual: `workflow_dispatch`, with an optional `allow_out_of_order_publish` input (see below)
+- Manual: `workflow_dispatch`, with an optional `allow_out_of_order_publish` input (see below). A `guard` job runs first and fails the run unless the dispatched ref's commit is already on `master`, so an unmerged branch can't reach the `production` environment. Dispatching at an older ref that's on `master` (the rollback below) still works. The guard only covers refs that carry it: a dispatch runs the workflow file from the dispatched ref, so a branch cut before the guard existed doesn't have it. The `production` environment has no deployment-branch rule to fall back on, and can't take a master-only one, because PR workflows such as `claude-code-review.yml` use that environment for their secrets.
 
 **Environment:** Production (AWS account `388588623842`)
 
@@ -1336,7 +1336,7 @@ flowchart LR
   SE --> G1["`G1: review ran at head`"]
   SE --> G2["`G2: every finding answered`"]
   SE --> G3["`G3: human with write access approved`"]
-  SE --> G4["`G4: staging deploy at head (infra PRs, not waivable)`"]
+  SE --> G4["`G4: staging deploy at head (infra PRs)`"]
   SE --> G5["`G5: oversized PR acknowledged`"]
 ```
 
@@ -1344,11 +1344,11 @@ flowchart LR
 - **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` always passes, with the would-be verdict in the status description; `'1'` enforces.
 - **Security invariant:** `pull_request_target` carries secrets and a write token even for fork PRs. The workflow is safe only because it never checks out or runs PR code, and `test_sentinel.py` enforces that. Don't add a head checkout.
 - **No concurrency group, on purpose:** a cancelled run shows as a failing check. Overlapping runs are cheap, and `scripts/review-v3/publish_guard.py` drops a verdict if the head moved or a newer run already published.
-- **Break-glass:** the `review:waived` label, which is logged. G4 can't be waived.
+- **Break-glass:** the `review:waived` label, which is logged and clears every gate, G4 included.
 
 G4 needs a successful pulumi-test.io deploy at the PR's current head:
 
-- **staging-deploy-auto.yml** (pull request events): runs `route-pr.py` from the default branch. If it reports `staging_evidence_required`, it dispatches `testing-build-and-deploy.yml` at the PR's head branch. Same-repo PRs only. It never checks out PR code and never fails a PR. To retry, re-run the failed deploy or run `gh workflow run testing-build-and-deploy.yml --ref <branch>`.
+- **staging-deploy-auto.yml** (pull request events): runs `route-pr.py` from the default branch. If it reports `staging_evidence_required`, it dispatches `testing-build-and-deploy.yml` at the PR's head branch. Same-repo PRs only. It never checks out PR code and never fails a PR. If the dispatch itself fails (for example, the testing workflow is disabled), it writes `staging/pulumi-test-io` = error with the reason, which shows in the merge box and on the Sentinel's G4 row. To retry, re-run the failed deploy or run `gh workflow run testing-build-and-deploy.yml --ref <branch>`.
 - **staging-status.yml** (every 10 minutes; `workflow_run` after the testing deploy; manual): writes the terminal `staging/pulumi-test-io` commit status and pokes the Sentinel. The schedule is the trigger that actually fires: runs dispatched with `GITHUB_TOKEN` never produce `workflow_run` events, so the listener almost never fires for staging deploys.
 
 ### Content upkeep automation
@@ -1738,7 +1738,7 @@ rather than skip, because a skipped check reads exactly like a passing one.
 **Overriding it for a deliberate rollback:** the ordinary rollback (`git revert` and
 push) needs nothing — a revert is a new commit in a newer run. To re-publish an *older*
 build as-is, dispatch a *new* "Build and deploy" run via `workflow_dispatch` at that
-ref: a new run has a newer run id, so it publishes normally. Re-running the old run
+ref (its commit has to be on `master`, or the `guard` job refuses it): a new run has a newer run id, so it publishes normally. Re-running the old run
 won't work, because a re-run keeps its old run id. Check the **Publish even if a newer
 deploy already published** input only if another run may publish while yours waits
 its turn. From a laptop, set `ALLOW_OUT_OF_ORDER_PUBLISH=true`. Pinning
