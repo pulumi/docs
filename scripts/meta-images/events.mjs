@@ -116,7 +116,7 @@ function speakerCluster(speakers, S, s, dir = "row") {
 const landscapeShift = (n) => (n <= 3 ? 20 : n === 4 ? 40 : 65)
 
 // --- Logo lockup (Pulumi + optional company logos), scaled to logoH, joined by
-// a muted "+" the way the co-branded case-study card does. If the row would
+// a muted "+". If the row would
 // overrun the text column (several partners in a tight square/portrait stack),
 // the whole lockup shrinks uniformly to fit; rows that already fit render
 // exactly as before. ----------------------------------------------------------

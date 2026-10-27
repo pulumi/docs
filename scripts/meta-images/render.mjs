@@ -25,7 +25,7 @@ const COLORS = {
   divider: "#492e8e", // violet muted (dark)
 }
 
-// --- Brand colors (light cards: "title" + "case-study"). Tokens from the Figma
+// --- Brand colors (light "title" cards). Tokens from the Figma
 // "Social assets — banners" light frames (file LL0EBmlsbsDRXFQbWnM16n). --------
 const LIGHT = {
   bg: "#f5f5ff", // violet background
@@ -36,11 +36,9 @@ const LIGHT = {
   divider: "#dedbff", // violet muted — header divider
 }
 
-// Role-based palettes for the shared docs-style template (infoTree). INFO_DARK
-// reproduces the original docs card byte-for-byte; INFO_LIGHT is the tutorials
-// variant. logo is bundled in since the dark/light cards use different marks.
+// Role-based palette for the docs-style template (infoTree); reproduces the
+// original docs card byte-for-byte.
 const INFO_DARK = { bg: COLORS.bg, fg: COLORS.fg, badgeBg: COLORS.violet, badgeFg: COLORS.serviceBlack, desc: COLORS.violet, divider: COLORS.divider, subLabel: COLORS.fg, logo: null }
-const INFO_LIGHT = { bg: LIGHT.bg, fg: LIGHT.fg, badgeBg: LIGHT.badgeBg, badgeFg: LIGHT.badgeFg, desc: LIGHT.muted, divider: LIGHT.divider, subLabel: LIGHT.fg, logo: null }
 
 // --- Bundled SVG assets ------------------------------------------------------
 const ACCENTS = svgDataUri("og-bg.svg")
@@ -48,9 +46,8 @@ const LINES_BOTTOM = svgDataUri("lines-bottom.svg")
 const LOGO = svgDataUri("pulumi-logo-horizontal-color-dark.svg") // light text → dark cards
 const LOGO_LIGHT = svgDataUri("pulumi-logo-horizontal-color-light.svg") // dark text → light cards
 INFO_DARK.logo = LOGO
-INFO_LIGHT.logo = LOGO_LIGHT
 
-// --- Template: "title" (what-is, migrate, partner, topics, customers index)
+// --- Template: "title" (migrate, partner, topics, whitepapers, events index)
 // — centered title on the light brand field. ----------------------------------
 const T_PAD_X = 152
 const T_BOX_W = CANVAS_W - 2 * T_PAD_X
@@ -85,8 +82,7 @@ async function titleTree(fields) {
 }
 
 // --- Template: docs-style card — section-label badge, optional corner label,
-// title, description. Palette-driven: INFO_DARK = "info" (docs); INFO_LIGHT =
-// "tutorial" (tutorials). -----------------------------------------------------
+// title, description. Palette-driven; INFO_DARK = "info" (docs). ---------------
 const I_LEFT = 30
 const I_W = 1140
 const I_HEADER_TOP = 25 // scooted up 20px from the Figma 45
@@ -119,37 +115,11 @@ async function infoTree(fields, P) {
       descText ? h("div", { style: { display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 3, overflow: "hidden", fontSize: 32, fontWeight: 400, lineHeight: 1.3, color: P.desc, width: 1088 } }, descText) : null))
 }
 
-// --- Template: "case-study" — co-branded header (Pulumi + customer logo on the
-// left, "CASE STUDY" badge right) on the light field, with a large title that
-// fills the area below the divider (no description). ---------------------------
-async function caseStudyTree(fields) {
-  const { title, companyLogo } = fields // companyLogo: { uri, w, h } | null
-  const font = await titleFont()
-  const fit = fitTitle(font, title, { maxFont: 92, minFont: 44, boxW: I_W, maxLines: 3 })
-  const titleText = clampText(font, title, fit.fontSize, I_W * 0.98, fit.lineClamp)
-  return h("div", { style: { width: CANVAS_W, height: CANVAS_H, position: "relative", display: "flex", backgroundColor: LIGHT.bg, fontFamily: "Inter" } },
-    h("img", { src: LINES_BOTTOM, width: CANVAS_W, height: 159, style: { position: "absolute", left: 0, top: I_LINES_TOP, width: CANVAS_W, height: 159 } }),
-    // Header: Pulumi + "+" + customer logo (left), "CASE STUDY" badge (right).
-    h("div", { style: { position: "absolute", top: I_HEADER_TOP, left: I_LEFT, width: I_W, display: "flex", flexDirection: "column", gap: 24 } },
-      h("div", { style: { display: "flex", width: I_W, alignItems: "center", justifyContent: "space-between", height: 60 } },
-        h("div", { style: { display: "flex", alignItems: "center", gap: 24 } },
-          h("img", { src: LOGO_LIGHT, height: 52, style: { height: 52 } }),
-          companyLogo ? h("div", { style: { fontSize: 36, fontWeight: 400, lineHeight: 1, color: LIGHT.muted } }, "+") : null,
-          companyLogo ? h("img", { src: companyLogo.uri, width: companyLogo.w, height: companyLogo.h, style: { width: companyLogo.w, height: companyLogo.h } }) : null),
-        badge("Case Study", LIGHT.badgeBg, LIGHT.badgeFg)),
-      h("div", { style: { width: I_W, height: 1, backgroundColor: LIGHT.divider } })),
-    // Body: title only, vertically centered between header and bottom lines.
-    h("div", { style: { position: "absolute", left: I_LEFT, top: I_HEADER_BOTTOM, width: I_W, height: I_LINES_TOP - I_HEADER_BOTTOM, display: "flex", flexDirection: "column", justifyContent: "center" } },
-      h("div", { style: { display: "flex", fontSize: fit.fontSize, fontWeight: 600, lineHeight: 1.1, letterSpacing: -fit.fontSize * 0.05, color: LIGHT.fg } }, titleText)))
-}
-
 // Every template takes (fields, { w, h }). The fixed-size light/dark cards
 // ignore the size arg (they hard-code CANVAS_W/H); only "events" honors it.
 const TEMPLATES = {
   title: titleTree,
   info: (f) => infoTree(f, INFO_DARK),
-  tutorial: (f) => infoTree(f, INFO_LIGHT),
-  "case-study": caseStudyTree,
   events: eventsTree,
   blog: blogTree,
 }

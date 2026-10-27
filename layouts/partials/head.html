@@ -212,14 +212,12 @@
         {{ end }}
     {{ end }}
 
-    {{/* Taxonomy term pages (blog category/tag/author/series, customer
-        industry) carry no front-matter title/meta_title, so without this
-        branch they fall through to the site-wide default below. Source the
-        same human display name the <title> tag uses further down instead. */}}
+    {{/* Taxonomy term pages (blog category/tag/author/series) carry no
+        front-matter title/meta_title, so without this branch they fall
+        through to the site-wide default below. Source the same human display
+        name the <title> tag uses further down instead. */}}
     {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
         <meta property="og:title" content="{{ partial "blog/term-name.html" . }}" />
-    {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
-        <meta property="og:title" content="{{ partial "customers/industry-name.html" .Data.Term }}" />
     {{ else if .Params.meta_title }}
         <meta property="og:title" content="{{ .Params.meta_title }}" />
     {{ else if .Params.title }}
@@ -234,10 +232,9 @@
     {{ else if and .IsHome .Site.Params.meta_desc }}
         <meta name="description" content="{{ .Site.Params.meta_desc }}" />
         <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
-    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "industry" "author") .Data.Singular) }}
-        {{/* Blog taxonomy term pages (category, tag, series, author) and the
-            customer industry taxonomy have no .Summary; source their
-            description from the data files so they don't fall through to an
+    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "author") .Data.Singular) }}
+        {{/* Blog taxonomy term pages (category, tag, series, author) have no
+            .Summary; source their description from the data files so they don't fall through to an
             empty meta description. Author term pages below the post-count
             floor in taxonomy-indexable.html are noindexed anyway, so a
             generic description here is harmless for them and correct for the
@@ -253,10 +250,6 @@
             {{ end }}{{ end }}
         {{ else if eq .Data.Singular "tag" }}
             {{ $desc = printf "Pulumi blog posts about %s." ($.Data.Term | humanize | lower) }}
-        {{ else if eq .Data.Singular "industry" }}
-            {{ range site.Data.customers_industries.industries }}
-                {{ if eq .id $.Data.Term }}{{ $desc = .description }}{{ end }}
-            {{ end }}
         {{ else if eq .Data.Singular "author" }}
             {{ $authorName := .Data.Term | humanize }}
             {{ with index site.Data.team.team .Data.Term }}{{ $authorName = .name }}{{ end }}
@@ -288,17 +281,10 @@
              Blog" doesn't. $blogTerm drives the suffix branch. */ -}}
         {{ $blogTerm := false }}
         {{ $seriesTerm := false }}
-        {{ $industryTerm := false }}
         {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
             {{ $blogTerm = true }}
             {{ $title = partial "blog/term-name.html" . }}
             {{ if eq .Data.Singular "series" }}{{ $seriesTerm = true }}{{ end }}
-        {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
-            {{- /* Customer industry term page: use the display name from the
-                 data-file source of truth instead of Hugo's slug-derived .Title
-                 ("Developer-Tools"), and suffix "| Customers" below. */ -}}
-            {{ $industryTerm = true }}
-            {{ $title = partial "customers/industry-name.html" .Data.Term }}
         {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "category") }}
             {{ $blogTerm = true }}
             {{ $title = "Categories" }}
@@ -351,8 +337,6 @@
             <title>{{ $title }} | Pulumi Docs</title>
         {{ else if eq .Type "registry" }}
             <title>{{ replace $title "/" "." }} | Pulumi Registry</title>
-        {{ else if $industryTerm }}
-            <title>{{ $title }} | Customers | Pulumi</title>
         {{ else }}
             <title>{{ $title }} | Pulumi</title>
         {{ end }}

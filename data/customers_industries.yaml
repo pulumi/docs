@@ -1,37 +1,14 @@
-# Customer industries — the "what vertical is this customer in" taxonomy.
+# Customer industries — a frozen, read-only copy of pulumi/marketing-web's
+# apps/www/src/data/customers/industries.yaml, which owns the set and builds the
+# /customers/industry/<id>/ pages. Nothing syncs it.
 #
-# This file is the single source of truth for the set of industries a customer
-# may be filed under. It is consumed by:
-#   - data/customers.yaml, through layouts/partials/customers/data.html: every
-#     registry entry's `industry:` has to be an id listed here.
-#   - scripts/lint/lint-markdown.js (checkCaseStudyIndustry): `make lint` fails
-#     any content/customers/*.md whose `industry:` is missing, is a list, or is
-#     a value not listed here.
-#   - layouts/taxonomy/industry.html and industry.terms.html: term-page title and
-#     the /customers/industry/ directory both read from here.
-#   - layouts/partials/customers/filter-bar.html: the industry filter pills.
-#
-# Industry is SINGULAR and REQUIRED: every customer declares exactly one
-# `industry:` value (a YAML scalar, e.g. `industry: healthcare`). Never a list —
-# a customer belongs to one vertical. The set is CLOSED; to add, rename, or
-# retire an industry, edit THIS file in a PR (the id is the stable slug, so
-# changing it changes the /customers/industry/<slug>/ URL — add an alias if
-# you rename one).
-#
-# Industry stub pages live at content/industry/<id>/_index.md, one per id here,
-# so every term page exists whether or not any case study lands in it.
-# `make lint` (checkIndustryTermStubs) keeps the two sets equal.
-#
-# This is a dedicated, non-blog taxonomy: term pages live under /customers/,
-# not /blog/, and emit no RSS (scoped to HTML-only in config/_default/config.yml).
+# Here it only validates data/customers.yaml: layouts/partials/customers/data.html
+# fails the build on a registry entry whose `industry:` isn't an id listed here.
 #
 # FIELDS
-#   id          Stable slug used in front matter, by the linter, and in the URL.
-#   name        Human-readable display name (term-page heading, nav label).
-#   description Metadata-only blurb: sourced into the term page's
-#               <meta name="description"> / og:description (layouts/partials/
-#               head.html). No template renders it in the page body; omit it
-#               and the term page falls back to no description at all.
+#   id          Stable slug, matching marketing-web's.
+#   name        Human-readable display name.
+#   description Blurb carried over from the old term pages; nothing here reads it.
 #
 industries:
   - id: financial-services
