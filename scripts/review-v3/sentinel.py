@@ -1009,6 +1009,10 @@ class _Carry:
                 self._commits = self.gh.list_commits()
             except Exception:  # noqa: BLE001 — fail closed: no carry
                 self._commits = []
+            # A list that doesn't end at the head (read just after a push)
+            # can't say what came after; treat it as unreadable.
+            if not self._commits or (self._commits[-1].get("sha") or "") != self.head:
+                self._commits = []
         return self._commits
 
     def predecessors(self, limit: int = 3) -> list[str]:

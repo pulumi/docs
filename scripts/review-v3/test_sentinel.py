@@ -1418,6 +1418,9 @@ def test_an_approval_does_not_carry_across_a_real_change():
 
     unreadable = sentinel.evaluate(StubGh(**base), HUMAN_CONFIG)
     assert _gate(unreadable, "G3").status == "red", "no commit list: fail closed"
+    lagging = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(MERGED, "t2", 2)],
+                                       compare={EARLIER: [_moved(docs_file_substantive())]}), HUMAN_CONFIG)
+    assert _gate(lagging, "G3").status == "red", "a list that doesn't reach the head says nothing"
 
 
 def test_a_staging_deploy_carries_across_update_branch():
