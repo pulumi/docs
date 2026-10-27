@@ -38,7 +38,7 @@ description: |
 
     In this live workshop, we'll build per-team AI cost tracking on Amazon Bedrock as code with Pulumi. Each team gets its own inference profile and a role scoped to it, so usage can be measured team by team. We'll turn Bedrock's logs into per-team token counts and use Pulumi Policies to catch mistakes before they deploy.
 
-    The code is open source, so you can take it home and run it in your own AWS account.
+    The [code is open source](https://github.com/pulumi/workshops), so you can take it home and run it in your own AWS account.
 learn:
     - How to give each team its own Amazon Bedrock inference profile with access scoped to it.
     - How to measure token usage per team from Bedrock's logs.
@@ -61,8 +61,7 @@ tags:
     clouds: ["AWS"]
 
 # Registration form (only rendered when gated: true).
-# TODO: HubSpot form ID and Salesforce campaign ID pending.
 form:
-    hubspot_form_id: ""
-    salesforce_campaign_id: ""
+    hubspot_form_id: "c9c3dc2b-a637-4d75-9f4b-09902131b312"
+    salesforce_campaign_id: "701PQ000011bzD9YAI"
 ---
