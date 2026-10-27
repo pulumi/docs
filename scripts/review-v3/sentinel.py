@@ -444,6 +444,9 @@ class Gh:
             "api", f"repos/{self.repo}/actions/workflows/{workflow_file}", "--jq", ".state",
         ]).strip()
 
+    def get_issue_comment(self, comment_id) -> dict:
+        return json.loads(self._run(["api", f"repos/{self.repo}/issues/comments/{comment_id}"]))
+
     def patch_issue_comment(self, comment_id, body: str) -> None:
         self._run(
             ["api", "--method", "PATCH", f"repos/{self.repo}/issues/comments/{comment_id}",
@@ -1890,18 +1893,40 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
             return False  # nothing to clear; don't insert an empty pair
         strip = f"{STRIP_OPEN}\n{STRIP_CLOSE}"
 
-    if STRIP_OPEN in body and STRIP_CLOSE in body:
-        pattern = re.compile(re.escape(STRIP_OPEN) + r".*?" + re.escape(STRIP_CLOSE), re.DOTALL)
-        new_body = pattern.sub(lambda _: strip, body, count=1)
-    else:
-        lines = body.splitlines()
+    def with_strip(text: str) -> str:
+        if STRIP_OPEN in text and STRIP_CLOSE in text:
+            return _STRIP_RE.sub(lambda _: strip, text, count=1)
+        lines = text.splitlines()
         insert_at = next((i + 1 for i, l in enumerate(lines) if l.startswith("## ")), 0)
         lines[insert_at:insert_at] = ["", strip]
-        new_body = "\n".join(lines)
-    if new_body != body:
+        return "\n".join(lines)
+
+    if with_strip(body) == body:
+        return False
+    # The PATCH replaces the whole body, and on the push that starts this run
+    # restamp-base-merge.py moves the same card's head marker. Writing from
+    # the listing read at the start of the run put the old head back, and G1
+    # sat red on a base merge until the 2-hourly reconcile sweep (fork test of
+    # pulumi/docs#22555). Re-read, and lay the strip onto what is there now.
+    try:
+        fresh = gh.get_issue_comment(card["id"]).get("body") or body
+    except Exception:  # noqa: BLE001 — the old behavior, not a failure
+        fresh = body
+    new_body = with_strip(fresh)
+    if new_body != fresh:
         gh.patch_issue_comment(card["id"], new_body)
         return True
     return False
+
+
+_STRIP_RE = re.compile(re.escape(STRIP_OPEN) + r".*?" + re.escape(STRIP_CLOSE), re.DOTALL)
+
+
+def without_strip(body: str) -> str:
+    """`body` with the strip's contents dropped: what the review wrote. The
+    strip is the Sentinel's, so a change confined to it is not a change to
+    the review (restamp-base-merge.py compares cards this way)."""
+    return _STRIP_RE.sub(STRIP_OPEN + STRIP_CLOSE, body or "")
 
 
 # ---- Pinned status comment ----------------------------------------------
@@ -2002,9 +2027,10 @@ def render_status_comment(verdict: Verdict) -> str:
         if verdict.waive_note:
             # No `@`: this comment is re-rendered, and a mention pings.
             note = re.sub(r"@([\w-]+(?:\[bot\])?)", r"`\1`", verdict.waive_note)
-            lines += [f"**`review:waived` is on this PR but was not honored:** "
-                      f"{note}. To retry, a routing-team member removes "
-                      "the label and applies it again.", ""]
+            retry = ("While that lookup fails, a re-applied waive fails the same way; see the "
+                     "G3 row." if "lookup failed" in note else
+                     "To retry, a routing-team member removes the label and applies it again.")
+            lines += [f"**`review:waived` is on this PR but was not honored:** {note}. {retry}", ""]
         # Tense matters here, and only here: in preview nothing is blocking
         # anything, so a headline reading "before this can merge" hands the
         # banner directly above it a contradiction to lose.

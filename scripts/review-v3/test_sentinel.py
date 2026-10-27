@@ -188,6 +188,11 @@ class StubGh:
             raise RuntimeError("actions API unavailable")
         return self.workflow_state
 
+    def get_issue_comment(self, comment_id):
+        if getattr(self, "fresh_bodies", None) and comment_id in self.fresh_bodies:
+            return {"id": comment_id, "body": self.fresh_bodies[comment_id]}
+        return next(c for c in self.comments if c.get("id") == comment_id)
+
     def patch_issue_comment(self, comment_id, body):
         self.patched.append((comment_id, body))
 
@@ -1309,6 +1314,7 @@ def test_an_org_token_outage_refuses_the_waive_and_g3_names_the_admin_merge():
     assert v.title.startswith("review:waived refused · Couldn't check the approval")
     body = sentinel.render_status_comment(v)
     assert "was not honored" in body and "@chris" not in body
+    assert "a re-applied waive fails the same way" in body, "retrying can't help in an outage"
     assert "Break glass" not in body
 
 
@@ -2018,6 +2024,29 @@ def test_strip_without_blocking_findings_says_what_merge_waits_on():
     strip = gh.patched[-1][1].split(sentinel.STRIP_OPEN)[1].split(sentinel.STRIP_CLOSE)[0]
     assert "waiting on an approval of the latest commit and /oversized-ack in an approval.**" in strip, strip
     assert "Details: the Sentinel status comment." in strip, strip
+
+
+def test_strip_lands_on_the_card_as_it_is_now_not_as_first_read():
+    """Fork test of #22555: on a base merge the restamp moved the card's head
+    marker while this run held an older copy, and writing the strip from that
+    copy put the old head back, so G1 stayed red until the 2-hourly sweep."""
+    old = author_card([], state=_state_with([]), head="b" * 40)
+    restamped = dict(old, body=old["body"].replace("b" * 40, HEAD))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[old])
+    gh.fresh_bodies = {old["id"]: restamped["body"]}
+    v = sentinel.Verdict(conclusion="failure", title="", summary="", head_sha=HEAD,
+                         gates=[sentinel.Gate("G3 right-approver", "red", "needs approval")])
+    assert sentinel.update_strip(gh, v, comments=[old]) is True
+    _, written = gh.patched[-1]
+    assert f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->" in written and "b" * 40 not in written
+    assert sentinel.STRIP_OPEN in written
+
+
+def test_without_strip_ignores_only_the_strip():
+    a = "## h\n\n<!-- SENTINEL_STRIP -->\n⏳ one\n<!-- /SENTINEL_STRIP -->\n\nbody"
+    b = a.replace("⏳ one", "⏳ two")
+    assert sentinel.without_strip(a) == sentinel.without_strip(b)
+    assert sentinel.without_strip(a) != sentinel.without_strip(b.replace("body", "edited"))
 
 
 def test_frontend_routes_to_marketing_without_staging():

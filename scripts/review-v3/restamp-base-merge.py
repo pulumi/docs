@@ -107,10 +107,15 @@ def run(gh: GhClient, pr: int, *, dry_run: bool = False) -> dict:
             # synchronize or reconcile pass re-decides against the new card.
             path = f"repos/{gh.repo}/issues/comments/{card['id']}"
             fresh = gh.get(path) or {}
-            if (fresh.get("body") or "") != body:
+            fresh_body = fresh.get("body") or ""
+            # The Sentinel's strip changes on the same push (it reports the
+            # very G1 this restamp is about to clear), and backing off on that
+            # left G1 red until the 2-hourly reconcile sweep. Only a change
+            # outside the strip is a refresh to stand aside for.
+            if sentinel.without_strip(fresh_body) != sentinel.without_strip(body):
                 return {"restamped": False, "reason": "card changed while deciding; left for the next pass",
                         "head": head_sha}
-            gh.patch(path, {"body": new_body})
+            gh.patch(path, {"body": restamp_body(fresh_body, head_sha)})
     return {"restamped": ok, "reason": reason, "head": head_sha}
 
 

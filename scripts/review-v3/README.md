@@ -337,7 +337,12 @@ Sentinel) and `review-label-reconcile.yml` (before staling, and in its
 un-stale sweep; it re-dispatches the Sentinel after either repair). Any read
 it can't make answers "not base-only", and so does a large or binary file
 (no `patch`) whose blob changed. It re-reads the card just before writing and
-backs off if a refresh published in the meantime. Before it,
+backs off if a refresh published in the meantime; a change confined to the
+Sentinel's strip doesn't count (the Sentinel rewrites it on the same push),
+and the restamp is written onto the fresh body. `update_strip` likewise
+re-reads the card before its PATCH. Without both, the two writers raced on
+every base merge and the loser left G1 red until the 2-hourly reconcile
+sweep (caught fork-testing #22555). Before it,
 #21673's master merge left a clean review at `review:stale` with nothing
 scheduled to clear it.
 

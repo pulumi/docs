@@ -163,3 +163,17 @@ def test_an_empty_kick_commit_carries_the_review():
     assert rb.run(FakeGh(card(), changed, FILES, FILES), 1)["restamped"] is False
     untreed = [_treed(REVIEWED, "t1"), commit(HEAD)]
     assert rb.run(FakeGh(card(), untreed, FILES, FILES), 1)["restamped"] is False, "no tree → fail closed"
+
+
+def test_a_strip_written_mid_decision_does_not_stop_the_restamp():
+    """Fork test of #22555: the Sentinel rewrote the card's strip on the same
+    push, the restamp backed off, and G1 sat red until the 2-hourly sweep. A
+    change confined to the strip is the Sentinel's, not a review refresh."""
+    body = card().replace("nothing blocks merge\n",
+                          "nothing blocks merge\n\n<!-- SENTINEL_STRIP -->\n⏳ old\n<!-- /SENTINEL_STRIP -->\n")
+    gh = FakeGh(body, [commit(REVIEWED), commit(HEAD, 2)], FILES, FILES_AFTER_MERGE)
+    gh.body_at_write = body.replace("⏳ old", "⏳ new")
+    assert rb.run(gh, 1)["restamped"] is True
+    (_, written), = gh.patched
+    assert "⏳ new" in written, "the fresh strip survives"
+    assert f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->" in written
