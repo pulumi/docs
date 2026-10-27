@@ -16,18 +16,25 @@
 {{ seo_jsonld|safe }}
   </script>
   {% endif %}
-  {% if pagename == 'index' and per_symbol_modules_enabled %}
+  {% if per_symbol_redirect %}
   {# Legacy deep links such as /pulumi/#pulumi.Output.apply pointed at anchors
-     on the old single-page reference. Map them to the per-symbol page. #}
+     on the old single-page reference. Map them to the per-symbol page. The
+     target is resolved against the package root so this works from any
+     landing page (index, apis, models). #}
   <script>
   (function () {
     var id = decodeURIComponent(location.hash.slice(1));
     if (!id) return;
-    fetch("{{ pathto('_static/legacy-anchors.json', 1) }}")
+    var mapUrl = new URL("{{ pathto('_static/legacy-anchors.json', 1) }}", location.href).href;
+    var root = mapUrl.replace(/_static\/legacy-anchors\.json$/, "");
+    fetch(mapUrl)
       .then(function (r) { return r.ok ? r.json() : {}; })
       .then(function (m) {
         if (Object.prototype.hasOwnProperty.call(m, id)) {
-          location.replace(m[id] + "#" + id);
+          var target = new URL(m[id], root);
+          if (target.pathname !== location.pathname) {
+            location.replace(target.href + "#" + id);
+          }
         }
       })
       .catch(function () {});

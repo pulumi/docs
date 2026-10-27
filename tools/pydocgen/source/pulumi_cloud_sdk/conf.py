@@ -24,6 +24,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx_rtd_theme',
     'seo_meta',
+    'per_symbol',
 ]
 
 source_suffix = '.rst'
@@ -47,3 +48,11 @@ seo_pypi_name = 'pulumi_cloud_sdk'
 
 autoclass_content = 'both'
 autosummary_generate = True
+
+# One page per API class and per top-level symbol; the 950+ field-list-only models are grouped by
+# the API area that uses them (see cloud_sdk_groups.py and _shared/per_symbol.py).
+per_symbol_modules = ['pulumi_cloud_sdk', 'pulumi_cloud_sdk.apis']
+per_symbol_grouped_modules = {'pulumi_cloud_sdk.models': 'cloud_sdk_groups:group_models'}
+per_symbol_undoc_members = ['pulumi_cloud_sdk', 'pulumi_cloud_sdk.apis']
+per_symbol_honor_all = True
+per_symbol_redirect_pages = ['index', 'apis', 'models']
