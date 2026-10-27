@@ -7,8 +7,8 @@ menu:
     ai:
         name: Get started
         parent: ai-home
-        identifier: ai-get-started
-        weight: 1
+        identifier: ai-start
+        weight: 10
 ---
 
 Pulumi works with the AI agent your team already uses, and with Pulumi Neo, Pulumi's own infrastructure agent. Many teams use both. Start with whichever path fits how you work.

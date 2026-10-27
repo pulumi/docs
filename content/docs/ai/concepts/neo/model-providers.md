@@ -6,9 +6,9 @@ meta_desc: Run Pulumi Neo with Anthropic's Claude models through your own Anthro
 menu:
     ai:
         name: Model providers (BYOK)
-        parent: ai-concepts-neo
+        parent: ai-neo
+        weight: 100
         identifier: ai-neo-model-providers
-        weight: 60
 aliases:
 - /docs/ai/neo/model-providers/
 ---
