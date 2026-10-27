@@ -17,7 +17,7 @@ menu:
 This page explains how permissions work in Pulumi Deployments and how to configure them for your deployment needs.
 
 {{% notes type="info" %}}
-This page contains information on the actions your Deployment is allowed to perform _within Pulumi Cloud_, like opening an ESC environment. To enable your Deployment to manage resources in your cloud, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/guides/cloud-credentials/)
+This page mostly covers the actions your Deployment is allowed to perform _within Pulumi Cloud_, like opening an ESC environment. For the GitHub credential that deployments from a GitHub-connected source receive, see [Version control credentials](#version-control-credentials). To enable your Deployment to manage resources in your cloud, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/guides/cloud-credentials/)
 {{% /notes %}}
 
 ## Default Deployment Permissions
@@ -26,6 +26,12 @@ By default, the permissions that are granted to a deployment depend on how the d
 
 - If the deployment is created via the **REST API** or by using the **Actions buttons** in the Pulumi Cloud console, it is granted the permissions of the user that has executed the action.
 - If a deployment is created because of a **`git push`** or a **pull request**, it uses an ephemeral stack token that has admin permissions on only the stack itself, but nothing else.
+
+## Version control credentials
+
+The Pulumi Cloud token described above is not the only credential a deployment can receive. When a deployment's source is connected through the [Pulumi GitHub app](/docs/integrations/version-control/github-app/), Pulumi also injects a `GITHUB_TOKEN` environment variable. This token is a GitHub App installation token with the installation's full scope, not a token limited to the source repository. It can reach every repository you granted the app and holds every permission the app holds, including write access to repository contents and workflows. Treat it as a broadly privileged credential. For the list of permissions and details on the token's lifetime, see [GitHub token in deployments](/docs/integrations/version-control/github-app/#github-token-in-deployments).
+
+To give a deployment a narrower GitHub credential, set your own `GITHUB_TOKEN` in the stack's [environment variables](/docs/deployments/concepts/settings/environment-variables/), for example a fine-grained personal access token limited to the repositories the deployment needs. A value you set always overrides the one Pulumi provides. If you configure the source with your own personal access token, Pulumi uses that token as `GITHUB_TOKEN` instead.
 
 ## Permissions Impact
 

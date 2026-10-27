@@ -21,6 +21,8 @@ Select a connected integration to deploy from a repository it manages. Every int
 - **Branch** (required): the branch to deploy.
 - **Pulumi.yaml folder**: the path, relative to the repository root, to the directory that contains your `Pulumi.yaml`. Leave it blank when the project lives at the repository root.
 
+When the source is connected through the Pulumi GitHub app, Pulumi injects a `GITHUB_TOKEN` into the deployment with the full scope of the app installation, not just the source repository. See [GitHub token in deployments](/docs/integrations/version-control/github-app/#github-token-in-deployments) for what it can do and how to replace it.
+
 A set of toggles controls which repository events trigger a deployment. (GitLab labels these in terms of "merge requests" where other providers say "pull requests"; the behavior is the same.)
 
 - **Run previews for pull requests**: run a `pulumi preview` when a pull request is opened against the configured branch, and post the result as a comment on the request.
