@@ -1478,9 +1478,9 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             continue
         approvers.append(r)
     # An approval is of a COMMIT, not of a PR. The old comment above said
-    # "stale-on-push is the ruleset's dismissal job" — but AGENTS.md records
-    # that server-side branch protection is not in place yet, and nothing in
-    # `.github/` configures dismissal, so nothing was doing that job.
+    # "stale-on-push is the ruleset's dismissal job" — but branch protection
+    # on master doesn't dismiss stale approvals, and nothing in `.github/`
+    # configures dismissal, so nothing was doing that job.
     # Without this, the sequence is: get a clean one-line change approved,
     # push the payload, let the review lane post a fresh card, and all five
     # gates are green on an approval nobody re-gave.

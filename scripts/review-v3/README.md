@@ -221,8 +221,11 @@ would make a waive exactly as hard to get as the approval it bypasses, which
 kills the case it most needs to cover (the required approver is the author).
 It fails closed at every step — unreadable actor, failed membership lookup,
 actor on no routing team — and an unauthorized waive is *refused out loud*
-in the summary rather than silently ignored, so the same person doesn't try
-it twice. A waive over a red G4 says so in the summary: the deploy change
+in the status title, the status comment and the summary rather than silently
+ignored, so the same person doesn't try it twice. The membership lookup uses
+the org-scoped token G3 uses, so an outage of that token refuses the waive
+too; G3's error row then names a repo admin's merge as the way through, and
+the status comment doesn't offer a waive that can't work. A waive over a red G4 says so in the summary: the deploy change
 hasn't been applied on staging, so the first production deploy is its first
 real run.
 
@@ -263,7 +266,10 @@ Every label the evaluator reads must also appear in `review-sentinel.yml`'s labe
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
-summary), `'1'` = enforcing. `staging-deploy-auto.yml` follows the same switch. The
+summary), `'1'` = enforcing. Dark is not an off switch once branch protection requires
+the Sentinel status, as it does on `master` (for everyone but repo admins):
+no status holds every PR. Stand the gate down with `'report'`.
+`staging-deploy-auto.yml` follows the same switch. The
 surface itself is `REVIEW_V3_COMMENTS` (repo-wide; the per-PR `surface:v3`
 opt-in label and `REVIEW_V3_BOT_PRS` were retired 2026-09-14 once the
 variable had soaked). The
