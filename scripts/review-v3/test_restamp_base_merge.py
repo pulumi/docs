@@ -144,3 +144,21 @@ def test_a_patchless_file_must_keep_its_blob_to_count_as_unchanged():
     no_sha = FakeGh(card(), [commit(REVIEWED), commit(HEAD, 2)],
                     [{"filename": "static/big.json"}], [{"filename": "static/big.json"}])
     assert rb.run(no_sha, 1)["restamped"] is False, "no blob sha → fail closed"
+
+
+def _treed(sha, tree, parents=1):
+    return {**commit(sha, parents), "commit": {"tree": {"sha": tree}}}
+
+
+def test_an_empty_kick_commit_carries_the_review():
+    """#22524: an empty "kick CI" commit (same tree as its parent) reset a
+    clean review, and the PR went from one red gate to two."""
+    empty = [_treed(REVIEWED, "t1"), _treed(HEAD, "t1")]
+    gh = FakeGh(card(), empty, FILES, FILES)
+    assert rb.run(gh, 1)["restamped"] is True
+    after_merge = [_treed(REVIEWED, "t1"), _treed(MERGE, "t2", 2), _treed(HEAD, "t2")]
+    assert rb.run(FakeGh(card(), after_merge, FILES, FILES_AFTER_MERGE), 1)["restamped"] is True
+    changed = [_treed(REVIEWED, "t1"), _treed(HEAD, "t9")]
+    assert rb.run(FakeGh(card(), changed, FILES, FILES), 1)["restamped"] is False
+    untreed = [_treed(REVIEWED, "t1"), commit(HEAD)]
+    assert rb.run(FakeGh(card(), untreed, FILES, FILES), 1)["restamped"] is False, "no tree → fail closed"

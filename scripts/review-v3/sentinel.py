@@ -408,6 +408,16 @@ class Gh:
             f"repos/{self.repo}/collaborators/{user}/permission", ".permission",
             f"repo permission ({self.repo}/{user})")
 
+    def list_commits(self) -> list[dict]:
+        out = self._run(["api", "--paginate", f"repos/{self.repo}/pulls/{self.pr}/commits"])
+        return json.loads(out)
+
+    def compare_files(self, base: str, sha: str) -> list[dict]:
+        """The files `sha` changes against its merge base with `base` — the
+        PR's diff as it stood at that commit."""
+        out = self._run(["api", f"repos/{self.repo}/compare/{base}...{sha}"])
+        return json.loads(out).get("files") or []
+
     def get_label_events(self) -> list[dict]:
         out = self._run(
             ["api", "--paginate", f"repos/{self.repo}/issues/{self.pr}/timeline"]
@@ -902,6 +912,129 @@ def _staging_evidence(gh: Gh, head_sha: str) -> str | None:
     return None
 
 
+# ---- Pushes that change nothing the gates looked at ----------------------
+#
+# A merge of the base, or a commit that changes nothing (the "kick CI" empty
+# commit), moves the head without changing what the PR does. G1 has carried
+# its review across a base merge since restamp-base-merge.py; G3 and G4 asked
+# for the exact head, so clicking "Update branch" on an approved PR reset
+# the approval and spent another ~10-minute staging deploy (#22506), and an
+# empty commit reset the review and the deploy (#22524). GitHub itself keeps
+# the approval: branch protection here doesn't dismiss stale reviews. These
+# helpers are the one test all three gates use; collect.py and
+# restamp-base-merge.py read them from here.
+
+
+def _tree_sha(commit: dict) -> str:
+    return ((commit.get("commit") or {}).get("tree") or {}).get("sha") or ""
+
+
+def changes_nothing_since(commits: list[dict], sha: str) -> bool:
+    """True when `sha` is in the PR's commit list, is not its last commit,
+    and every later commit is a merge (two parents) or changes nothing (the
+    same tree as the commit before it). Whether a merge brought in only the
+    base is `same_diff`'s question, not this one's."""
+    shas = [c.get("sha") or "" for c in commits]
+    idx = next((i for i, s in enumerate(shas) if s and sha and (s.startswith(sha) or sha.startswith(s))),
+               None)
+    if idx is None or idx == len(shas) - 1:
+        return False
+    prev = _tree_sha(commits[idx])
+    for c in commits[idx + 1:]:
+        if len(c.get("parents") or []) < 2 and not (prev and _tree_sha(c) == prev):
+            return False
+        prev = _tree_sha(c)
+    return True
+
+
+def changed_lines(files: list[dict]) -> dict[str, list[str]]:
+    """Per file, the sorted `+`/`-` lines of its patch. Hunk headers and
+    context are left out because they move whenever the base moves; the
+    changed lines themselves only move when the PR's content does."""
+    out: dict[str, list[str]] = {}
+    for f in files:
+        name = f.get("filename") or f.get("path") or ""
+        lines = [ln for ln in (f.get("patch") or "").splitlines()
+                 if ln[:1] in "+-" and not ln.startswith(("+++", "---"))]
+        out[name] = sorted(lines)
+    return out
+
+
+def same_diff(files_then: list[dict], files_now: list[dict]) -> bool:
+    """Whether two snapshots of a PR's files carry the same changes. A merge
+    of the base that resolved a conflict by editing a line the PR adds
+    changes the content the review read, and must not count as base-only."""
+    return changed_lines(files_then) == changed_lines(files_now)
+
+
+def patchless_file_changed(files_then: list[dict], files_now: list[dict]) -> bool:
+    """`same_diff` reads `patch`, which GitHub omits for large and binary
+    files, so two patchless snapshots compare equal whatever changed. For
+    those, the blob `sha` has to match on both sides; a missing one fails
+    closed."""
+    then = {(f.get("filename") or f.get("path") or ""): f for f in files_then}
+    for f in files_now:
+        if f.get("patch"):
+            continue
+        t = then.get(f.get("filename") or f.get("path") or "")
+        if t is None or not f.get("sha") or f.get("sha") != t.get("sha"):
+            return True
+    return False
+
+
+_CARRY_CLAUSE = ("since then only base merges or no-op commits, and the PR's own "
+                 "changes are identical")
+
+
+class _Carry:
+    """Answers "is the PR at `sha` the PR at head?" for G3 and G4, reading
+    the commit list once and only when a gate would otherwise be red. Any
+    read that fails answers no, which leaves the gate as strict as before."""
+
+    def __init__(self, gh: Gh, pr: dict, files_now: list[dict]):
+        self.gh, self.files_now = gh, files_now
+        self.base = (pr.get("base") or {}).get("ref") or ""
+        self.head = (pr.get("head") or {}).get("sha") or ""
+        self._commits: list[dict] | None = None
+        self._answers: dict[str, bool] = {}
+
+    def commits(self) -> list[dict]:
+        if self._commits is None:
+            try:
+                self._commits = self.gh.list_commits()
+            except Exception:  # noqa: BLE001 — fail closed: no carry
+                self._commits = []
+        return self._commits
+
+    def predecessors(self, limit: int = 3) -> list[str]:
+        """The commits the head reaches by nothing but merges and no-op
+        commits, newest first, head excluded. Bounded: each costs reads."""
+        commits, out = self.commits(), []
+        for i in range(len(commits) - 1, 0, -1):
+            c, prev = commits[i], commits[i - 1]
+            if len(c.get("parents") or []) < 2 and not (_tree_sha(c) and _tree_sha(c) == _tree_sha(prev)):
+                break
+            out.append(prev.get("sha") or "")
+        return [s for s in out if s][:limit]
+
+    def unchanged_since(self, sha: str) -> bool:
+        if sha not in self._answers:
+            self._answers[sha] = self._unchanged_since(sha)
+        return self._answers[sha]
+
+    def _unchanged_since(self, sha: str) -> bool:
+        if not sha or not self.base or sha == self.head:
+            return False
+        if not changes_nothing_since(self.commits(), sha):
+            return False
+        try:
+            files_then = self.gh.compare_files(self.base, sha)
+        except Exception:  # noqa: BLE001 — fail closed: no carry
+            return False
+        return same_diff(files_then, self.files_now) and not patchless_file_changed(
+            files_then, self.files_now)
+
+
 def _last_staging_failure(gh: Gh, head_sha: str) -> str:
     """The newest trusted `staging/pulumi-test-io` status at this head, as
     a sentence, when it says the deploy failed or never started; else ''.
@@ -1362,10 +1495,22 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # human. An approval we cannot place at this head does not clear G3.
     # Bot approvals are held to the same rule: a lane bot that approved the
     # previous commit has not approved this one.
-    stale_approvers = [r for r in approvers if r.get("commit_id") != head_sha]
-    stale_approvers += [r for r, _ in bot_approvers if r.get("commit_id") != head_sha]
+    stale_humans = [r for r in approvers if r.get("commit_id") != head_sha]
+    stale_approvers = stale_humans + [r for r, _ in bot_approvers if r.get("commit_id") != head_sha]
     approvers = [r for r in approvers if r.get("commit_id") == head_sha]
     bot_approvers = [(r, why) for r, why in bot_approvers if r.get("commit_id") == head_sha]
+    # Except a human approval of a commit the PR has since only merged the
+    # base into, or pushed nothing onto: that approved exactly this diff
+    # (see `_Carry`). Asked only when nobody approved the head itself, so the
+    # ordinary PR spends no reads on it. Bot lanes re-approve on their own.
+    carry = _Carry(gh, pr, files)
+    carried: dict[str, str] = {}  # login -> the commit they approved
+    if not approvers and not bot_approvers:
+        for r in stale_humans:
+            if carry.unchanged_since(r.get("commit_id") or ""):
+                approvers.append(r)
+                carried[(r.get("user") or {}).get("login") or ""] = r.get("commit_id") or ""
+        stale_approvers = [r for r in stale_approvers if r not in approvers]
     # The subset of `approvers` whose approval actually clears G3 — filled in
     # below. G5 reads it so the oversized ack cannot come from a bystander.
     qualified_approvers: list[dict] = []
@@ -1517,9 +1662,27 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 "a routing-team member approved" if resolution.any_team
                 else "matrix-required approval present"))
 
+    g3 = next((g for g in gates if g.name.startswith("G3")), None)
+    if g3 and g3.status == "ok" and qualified_approvers:
+        via = carried.get((qualified_approvers[0].get("user") or {}).get("login") or "")
+        if via:
+            g3.message += f" (approved `{via[:9]}`; {_CARRY_CLAUSE})"
+
     # G4 infra-evidence ---------------------------------------------------
     if resolution.staging_evidence_required:
         witness = _staging_evidence(gh, head_sha)
+        if not witness:
+            # A deploy of a commit the head only merged the base into (or
+            # pushed nothing onto) deployed this PR's change; another ~10
+            # minutes on the shared stack would re-prove nothing.
+            for sha in carry.predecessors():
+                try:
+                    earlier = _staging_evidence(gh, sha)
+                except Exception:  # noqa: BLE001 — fail closed: no carry
+                    earlier = None
+                if earlier and carry.unchanged_since(sha):
+                    witness = f"{earlier}; {_CARRY_CLAUSE}"
+                    break
         if witness:
             gates.append(Gate("G4 infra-evidence", "ok", witness))
         else:

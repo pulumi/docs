@@ -105,6 +105,10 @@ class StubGh:
         workflow_runs_error=False,
         workflow_state="active",
         workflow_state_error=False,
+        commits=None,
+        compare=None,
+        statuses_by_sha=None,
+        workflow_runs_by_sha=None,
     ):
         self.pr = pr or {}
         self.files = files or []
@@ -121,6 +125,11 @@ class StubGh:
         self.workflow_runs_error = workflow_runs_error
         self.workflow_state = workflow_state
         self.workflow_state_error = workflow_state_error
+        self.commits = commits  # None: the read fails, as an unstubbed API would
+        self.compare = compare or {}  # sha -> files at that commit
+        self.statuses_by_sha = statuses_by_sha  # sha -> statuses; overrides `statuses`
+        self.workflow_runs_by_sha = workflow_runs_by_sha
+        self.compare_calls = []
         self.patched = []  # (comment_id, body)
         self.posted = []   # body
         self.deleted = []  # comment_id
@@ -138,7 +147,20 @@ class StubGh:
         return self.reviews
 
     def get_commit_statuses(self, sha):
+        if self.statuses_by_sha is not None:
+            return self.statuses_by_sha.get(sha, [])
         return self.statuses
+
+    def list_commits(self):
+        if self.commits is None:
+            raise sentinel.SentinelDataError("commits not stubbed")
+        return self.commits
+
+    def compare_files(self, base, sha):
+        self.compare_calls.append(sha)
+        if sha not in self.compare:
+            raise sentinel.SentinelDataError(f"compare {sha} not stubbed")
+        return self.compare[sha]
 
     def get_team_membership(self, org, team_slug, user):
         if user in self.membership_error_users:
@@ -157,6 +179,8 @@ class StubGh:
     def get_workflow_runs(self, workflow_file, head_sha):
         if self.workflow_runs_error:
             raise RuntimeError("actions API unavailable")
+        if self.workflow_runs_by_sha is not None:
+            return self.workflow_runs_by_sha.get(head_sha, [])
         return self.workflow_runs
 
     def get_workflow_state(self, workflow_file):
@@ -1327,6 +1351,91 @@ def test_break_glass_is_offered_on_an_error_it_can_clear():
     assert v.title.startswith("Couldn't check the review's answers"), v.title
     assert "Break glass" in sentinel.render_status_comment(v)
     assert sentinel.BREAK_GLASS in v.summary
+
+
+# ---- Pushes that change nothing: G3 and G4 carry like G1 ----------------
+
+EARLIER = "c" * 40
+MERGED = "d" * 40
+
+
+def _based_pr():
+    meta = pr_meta()
+    meta["base"]["ref"] = "master"
+    return meta
+
+
+def _treed(sha, tree, parents=1):
+    return {"sha": sha, "parents": [{"sha": "p"}] * parents, "commit": {"tree": {"sha": tree}}}
+
+
+def _moved(f):
+    """The same change after the base moved: new hunk header and context,
+    the PR's own +/- lines untouched."""
+    lines = f["patch"].splitlines()
+    body = [ln if ln[:1] in "+-" else " moved context" for ln in lines[1:]]
+    return dict(f, patch="\n".join(["@@ -90,2 +90,3 @@"] + body))
+
+
+def test_an_approval_carries_across_update_branch():
+    """#22506: Chris approved, someone clicked "Update branch", and G3 went red
+    on an approval GitHub still showed — the review carried, the approval
+    didn't, and he had to approve the same diff again."""
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=_based_pr(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("chris", commit_id=EARLIER)], permissions={"chris": "write"},
+                compare={EARLIER: [_moved(docs_file_substantive())]})
+    merged = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t2", 2)]),
+                               HUMAN_CONFIG)
+    assert _gate(merged, "G3").status == "ok", merged.to_json()
+    assert "only base merges or no-op commits" in _gate(merged, "G3").message
+    assert merged.conclusion == "success"
+
+    empty = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t1")]),
+                              HUMAN_CONFIG)
+    assert _gate(empty, "G3").status == "ok", "an empty kick commit changes nothing"
+
+
+def test_an_approval_does_not_carry_across_a_real_change():
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=_based_pr(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("chris", commit_id=EARLIER)], permissions={"chris": "write"})
+    pushed = StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t9")],
+                    compare={EARLIER: [docs_file_substantive()]})
+    v = sentinel.evaluate(pushed, HUMAN_CONFIG)
+    assert _gate(v, "G3").status == "red" and "re-approve" in _gate(v, "G3").message
+    assert pushed.compare_calls == [], "a content commit is decided from the commit list alone"
+
+    edited = dict(docs_file_substantive(), patch="@@ -40,2 +40,3 @@\n context\n+Something else.\n context")
+    conflict = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t2", 2)],
+                                        compare={EARLIER: [edited]}), HUMAN_CONFIG)
+    assert _gate(conflict, "G3").status == "red", "a merge that changed the PR's own lines"
+
+    unreadable = sentinel.evaluate(StubGh(**base), HUMAN_CONFIG)
+    assert _gate(unreadable, "G3").status == "red", "no commit list: fail closed"
+
+
+def test_a_staging_deploy_carries_across_update_branch():
+    """#22506 also spent a second ~10-minute deploy of the shared stack to
+    re-prove a change the first deploy had already applied."""
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=_based_pr(), files=[infra_file()], comments=[card],
+                reviews=[approval("chris")], permissions={"chris": "write"},
+                statuses_by_sha={}, workflow_runs_by_sha={EARLIER: [_deploy_run()]})
+    v = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t2", 2)],
+                                 compare={EARLIER: [_moved(infra_file())]}), HUMAN_CONFIG)
+    g4 = _gate(v, "G4")
+    assert g4.status == "ok" and "only base merges or no-op commits" in g4.message, g4
+    assert f"at `{EARLIER[:9]}`" in g4.message
+    assert v.conclusion == "success", v.to_json()
+
+    changed = dict(infra_file(), patch="@@ -1,1 +1,1 @@\n-echo a\n+echo c")
+    v2 = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t2", 2)],
+                                  compare={EARLIER: [changed]}), HUMAN_CONFIG)
+    assert _gate(v2, "G4").status == "red"
+    v3 = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t9")],
+                                  compare={EARLIER: [infra_file()]}), HUMAN_CONFIG)
+    assert _gate(v3, "G4").status == "red", "a content commit needs its own deploy"
 
 
 def test_g4_says_when_the_staging_workflow_is_disabled():
