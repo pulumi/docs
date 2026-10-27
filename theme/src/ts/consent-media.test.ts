@@ -27,15 +27,16 @@ interface Harness {
     setGroups: (groups: string) => void;
     installBridge: () => void;
     rescan: () => void;
+    mod: any;
 }
 
 let previousWindow: any;
 
-async function mount(): Promise<Harness> {
+async function mount(extraAttrs = ""): Promise<Harness> {
     if (previousWindow) {
         previousWindow.close();
     }
-    const dom = new JSDOM(`<!doctype html><body><iframe title="video" data-pulumi-consent-src="${VIDEO_URL}"></iframe></body>`, {
+    const dom = new JSDOM(`<!doctype html><body><iframe title="video" data-pulumi-consent-src="${VIDEO_URL}" ${extraAttrs}></iframe></body>`, {
         url: "https://www.pulumi.com/blog/some-post/",
     });
     const win = dom.window;
@@ -88,6 +89,7 @@ async function mount(): Promise<Harness> {
         },
         installBridge: () => installOneTrustBridge(win),
         rescan: () => mod.activateConsentMedia(),
+        mod,
     };
 }
 
@@ -139,4 +141,39 @@ test("repeated grants, revoke/regrant, and rescans assign src only once", async 
     h.rescan();
     assert.deepStrictEqual(h.srcWrites, [VIDEO_URL]);
     assert.strictEqual(h.iframe.getAttribute("src"), VIDEO_URL);
+});
+
+test("a placeholder fills the iframe until C0004, then is removed", async () => {
+    const h = await mount();
+    h.installBridge();
+    h.setGroups(",C0001,");
+    assert.strictEqual(h.iframe.getAttribute("srcdoc"), h.mod.PLACEHOLDER_HTML);
+    h.setGroups(",C0001,C0004,");
+    assert.strictEqual(h.iframe.hasAttribute("srcdoc"), false);
+});
+
+test("an embed's own srcdoc thumbnail is replaced until C0004, then restored", async () => {
+    const thumbnail = "<a href='https://www.youtube.com/embed/abc123?autoplay=1'>play</a>";
+    const h = await mount(`srcdoc="${thumbnail}"`);
+    h.installBridge();
+    h.setGroups(",C0001,");
+    assert.strictEqual(h.iframe.getAttribute("srcdoc"), h.mod.PLACEHOLDER_HTML);
+    h.setGroups(",C0001,C0004,");
+    assert.strictEqual(h.iframe.getAttribute("srcdoc"), thumbnail);
+});
+
+test("placeholder buttons grant C0004 through OneTrust and open Cookie Settings", async () => {
+    const h = await mount();
+    const updates: string[][] = [];
+    let opened = 0;
+    h.win.OneTrust = { UpdateConsent: (...args: string[]) => updates.push(args) };
+    h.win.consentManager = { openConsentManager: () => opened++ };
+
+    const doc = new JSDOM(h.mod.PLACEHOLDER_HTML).window.document;
+    h.mod.wirePlaceholder(doc);
+    doc.querySelector("[data-consent-allow]").click();
+    doc.querySelector("[data-consent-settings]").click();
+
+    assert.deepStrictEqual(updates, [["Category", "C0004:1"]]);
+    assert.strictEqual(opened, 1);
 });
