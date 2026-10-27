@@ -1336,7 +1336,7 @@ flowchart LR
   SE --> G1["`G1: review ran at head`"]
   SE --> G2["`G2: every finding answered`"]
   SE --> G3["`G3: human with write access approved`"]
-  SE --> G4["`G4: staging deploy at head (infra PRs, not waivable)`"]
+  SE --> G4["`G4: staging deploy at head (infra PRs)`"]
   SE --> G5["`G5: oversized PR acknowledged`"]
 ```
 
@@ -1344,7 +1344,7 @@ flowchart LR
 - **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` always passes, with the would-be verdict in the status description; `'1'` enforces.
 - **Security invariant:** `pull_request_target` carries secrets and a write token even for fork PRs. The workflow is safe only because it never checks out or runs PR code, and `test_sentinel.py` enforces that. Don't add a head checkout.
 - **No concurrency group, on purpose:** a cancelled run shows as a failing check. Overlapping runs are cheap, and `scripts/review-v3/publish_guard.py` drops a verdict if the head moved or a newer run already published.
-- **Break-glass:** the `review:waived` label, which is logged. G4 can't be waived.
+- **Break-glass:** the `review:waived` label, which is logged and clears every gate, G4 included.
 
 G4 needs a successful pulumi-test.io deploy at the PR's current head:
 
