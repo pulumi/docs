@@ -3,7 +3,7 @@ title: "Faster Pulumi deployments, part 1: Measure and cache"
 # TODO: Replace the series placeholder dates before publication.
 date: 2099-01-01
 draft: true
-meta_desc: "Measure deployment setup time, enable Pulumi Deployments dependency caching, and test cache reuse across stacks running the same program."
+meta_desc: "Measure deployment setup time, enable Pulumi Deployments dependency caching, and compare first and repeated runs on separate stacks."
 feature_image:
 authors:
     - jonathan-davenport
@@ -92,13 +92,15 @@ Repeat the deployment with the same commit and stack configuration. Record the c
 
 Leave dependency installation enabled for this experiment. A cache supplies files that the existing installation process can reuse. [Skipping installation](/docs/deployments/concepts/settings/skip-dependency-installation/) removes that process entirely, so you must first supply everything it would have prepared.
 
-## Verify that new stacks can reuse the cache
+## Compare new-stack and repeat-run cache behavior
 
 Deploy `bench-b` using the same source revision and lock files. Confirm that caching is enabled for this stack too.
 
-Enable caching on both stacks, and check the restore log rather than assuming the second stack starts with a warm cache. A repeated deployment of one stack and the first deployment of another stack are separate test cases, even when the program and lock files match.
+Managed dependency caches are scoped to individual stacks. Enabling caching on `bench-b` does not let it restore an entry populated by `bench-a`, even when both stacks belong to the same project and use identical lock files. This separation matters for a platform that mostly creates new environments: each new stack must populate its own cache.
 
-If `bench-b` reports `No cache to restore, skipping...`, record that as a cold run. Wait for its **Save cache** step to finish, then repeat the deployment and compare the logs. A cache hit on that repeat establishes reuse within the stack; it does not establish that newly created stacks will benefit. The artifact and image approaches in later parts provide an explicit way to share prepared code across environments.
+Expect the first `bench-b` run to report `No cache to restore, skipping...`. Wait for its **Save cache** step to finish, then repeat the deployment and compare the logs. The repeat should restore the entry saved by that stack. The artifact and image approaches in later parts provide an explicit way to share prepared code across environments without relying on another stack's managed cache.
+
+Use an update to populate the cache for this comparison. Previews can restore an existing cache for their stack, but they do not save new entries. A preview with changed dependencies can therefore remain cold until an update populates the corresponding entry.
 
 Next, make a deliberate dependency update on a test branch and repeat the measurement. A changed lock file produces a different cache key. Record the first run after that change separately from warm runs.
 
