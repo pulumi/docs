@@ -1,6 +1,6 @@
 ---
 title_tag: "Enable SAML SSO for Self-hosted Environments"
-meta_desc: Learn how to make the self-hosted Pulumi ready for SAML SSO with any IdP. Self-hosting is available on the Enterprise edition.
+meta_desc: Learn how to make the self-hosted Pulumi Cloud ready for SAML SSO with any IdP. Self-hosting is available on the Enterprise edition.
 title: SAML SSO
 h1: SAML SSO for self-hosted Pulumi Cloud
 menu:
@@ -45,7 +45,7 @@ openssl \
 If you also want to additionally specify an SAN (Subject Alternative Name) for your public cert, you can do so by passing the `-addext` flag as shown below.
 
 {{% notes type="info" %}}
-For this to work, you'll need to install _at least_ version 1.1. Once installed, ensure that the 1.1 version is on your path when you run the command. Otherwise `-addext` will not be recognized as a valid flag.
+For this to work, you'll need to install _at least_ version 1.1.1. Once installed, ensure that version 1.1.1 or later is on your path when you run the command. Otherwise `-addext` will not be recognized as a valid flag.
 {{% /notes %}}
 
 ```bash
