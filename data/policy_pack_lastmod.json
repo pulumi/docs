@@ -14,8 +14,8 @@
     "cis-kubernetes-google-cloud": "2026-10-27",
     "cmmc-aws": "2026-10-27",
     "cmmc-google-cloud": "2026-10-27",
-    "hitrust-aws": "2026-10-27",
-    "hitrust-azure": "2026-10-27",
+    "hitrust-aws": "2026-10-28",
+    "hitrust-azure": "2026-10-28",
     "hitrust-google-cloud": "2026-10-27",
     "iso-27001-aws": "2026-10-27",
     "iso-27001-azure": "2026-10-27",
@@ -26,8 +26,8 @@
     "pci-dss-aws": "2026-10-27",
     "pci-dss-azure": "2026-10-27",
     "pci-dss-google-cloud": "2026-10-27",
-    "pulumi-best-practices-aws": "2026-10-27",
-    "pulumi-best-practices-azure": "2026-10-27",
+    "pulumi-best-practices-aws": "2026-10-28",
+    "pulumi-best-practices-azure": "2026-10-28",
     "pulumi-best-practices-google-cloud": "2026-10-27"
   }
 }
