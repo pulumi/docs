@@ -90,17 +90,16 @@ values:
       port: 5432
 ```
 
-Your Pulumi program can then compose this shared base with a stage-specific environment:
+Each stack then composes the shared base with its stage-specific environment. Environments are referenced as `<project>/<environment>`, and you list them under the `environment` key of the stack configuration file. For example, assuming the environments above live in an ESC project named `web-app`, the production stack's configuration file looks like this:
 
 ```yaml
-# pulumi.yaml for production deployment
-name: web-app
-runtime: nodejs
-
+# Pulumi.production.yaml
 environment:
-  - base-config
-  - production
+  - web-app/base-config
+  - web-app/production
 ```
+
+Later environments in the list override earlier ones, so stage-specific values take precedence over the shared base.
 
 This allows consistent base configuration while enabling stage-specific customization.
 
