@@ -31,7 +31,7 @@ At Pulumi, we understand the importance of keeping up with the ever-evolving clo
 Join Pulumi, Azure, and GitHub on Tuesday, September 19, 2023 for a live workshop on [getting started with infrastructure as code on azure](/events/azure-github-workshop/). You'll learn how to use the Azure Native Provider and set up an automated deployment workflow through GitHub.
 {{% /notes %}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XfBTjYhb0G4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< youtube-iframe src="https://www.youtube.com/embed/XfBTjYhb0G4" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true" >}}
 
 ## Reduced SDK Size for Faster Development
 

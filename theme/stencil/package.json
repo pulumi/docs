@@ -6,6 +6,7 @@
         "build": "stencil build",
         "start": "stencil build --dev --watch --serve --no-open",
         "test": "stencil test --spec --e2e",
+        "test-consent": "stencil test --spec -- src/components/hubspot-form",
         "test.watch": "stencil test --spec --e2e --watchAll",
         "generate": "stencil generate",
         "postinstall": "node scripts/patch-stencil-redux.js"

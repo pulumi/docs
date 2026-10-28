@@ -1,0 +1,12 @@
+{{- /*
+  Overrides Hugo's built-in `youtube` shortcode so Markdown embeds go through the
+  consent-aware youtube-src.html partial. The markup matches the built-in's
+  default output, so the Segment (production) rendering is unchanged.
+  Usage: {{< youtube "VIDEO_ID" >}} or {{< youtube id="VIDEO_ID" title="..." start="SECONDS" >}}
+*/ -}}
+{{- $id := cond .IsNamedParams (.Get "id") (.Get 0) -}}
+{{- $title := cond .IsNamedParams (.Get "title") "" | default "YouTube video" -}}
+{{- $start := cond .IsNamedParams (.Get "start") "" | default 0 -}}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" {{ partial "youtube-src.html" (dict "url" (printf "https://www.youtube.com/embed/%s?autoplay=0&controls=1&end=0&loop=0&mute=0&start=%v" $id $start)) }} style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="{{ $title }}"></iframe>
+</div>

@@ -48,6 +48,7 @@
         "lint": "prettier --check .",
         "lint-fix": "prettier --write .",
         "gen:hero-text": "node scripts/gen-hero-text.mjs",
-        "test-support-form": "tsc -p tsconfig.test.json && node ../scripts/check-test-suites-compiled.js src/ts bin-test theme/tsconfig.test.json && node --test bin-test/*.test.js"
+        "test-ts": "tsc -p tsconfig.test.json && node ../scripts/check-test-suites-compiled.js src/ts bin-test theme/tsconfig.test.json --recursive && node --test \"bin-test/**/*.test.js\"",
+        "test-support-form": "yarn test-ts"
     }
 }

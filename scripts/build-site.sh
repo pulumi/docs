@@ -58,6 +58,14 @@ fi
 
 if [ "${1:-}" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
+    # PR preview and on-demand dev builds run on ephemeral S3 origins that are
+    # not registered with OneTrust, so its SDK can't resolve consent there (and
+    # throws a cross-origin error that fails the browser tests). Force the
+    # Segment consent provider for these builds even though config/preview
+    # selects OneTrust; OneTrust is exercised on the registered
+    # www.pulumi-test.io staging deploy (the testing branch below) and, later,
+    # in production.
+    export HUGO_PARAMS_CONSENTPROVIDER=segment
     hugo --minify --buildFuture --templateMetrics -e "preview"
 else
     if [ "$DEPLOYMENT_ENVIRONMENT" == "testing" ]; then

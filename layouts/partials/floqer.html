@@ -1,12 +1,12 @@
 {{- /*
   Floqer (RB2B) visitor identification — https://floqer.com
-  Consent-gated: loads only after the site's consent-managed Segment analytics is
-  ready (window.analytics.ready). The consent manager (theme/src/ts/consent-manager)
-  only initializes analytics once the visitor's Marketing & Analytics consent is
-  satisfied — EU visitors must opt in via the banner; non-EU load by default. This is
-  fail-closed: if consent-managed analytics never loads, Floqer never loads.
-  Scoped per page via the `include_floqer: true` front-matter flag (wired in head.html),
-  and production-only. Loads the exact Floqer contact-tracker tag unchanged.
+  Targeting (C0004) consent-gated. The vendor contact-tracker tag is unchanged;
+  only the gate differs by consent provider (passed in as .consentProvider):
+    - onetrust: loads only after the visitor allows C0004, via runWithPulumiConsent.
+    - segment:  loads after the site's consent-managed Segment analytics is ready
+      (window.analytics.ready) — EU visitors must opt in via the banner; non-EU
+      load by default. Fail-closed: if consent is never satisfied, Floqer never loads.
+  Scoped per page via the `include_floqer: true` front-matter flag (wired in head.html).
 */ -}}
 <script>
     (function () {
@@ -18,9 +18,13 @@
             var f = document.getElementsByTagName("script")[0];
             f.parentNode.insertBefore(s, f);
         }
+        {{- if eq .consentProvider "onetrust" }}
+        window.runWithPulumiConsent("C0004", loadFloqer);
+        {{- else }}
         if (window.analytics && typeof window.analytics.ready === "function") {
             // ready() fires only after the consent-managed analytics loads.
             window.analytics.ready(loadFloqer);
         }
+        {{- end }}
     })();
 </script>
