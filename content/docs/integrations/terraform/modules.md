@@ -188,7 +188,7 @@ pulumi.export("bucket_id", bucket.s3_bucket_id)
 
 {{% choosable language go %}}
 
-Since this was a Go project, Pulumi generated a Go SDK for the module and added a `replace` directive for it to `go.mod`. Run `go mod tidy` to add the matching `require` entry. We can now use the Terraform module directly in our code:
+Since this was a Go project, Pulumi generated a Go SDK for the module and added a `replace` directive for it to `go.mod`. We can now use the Terraform module directly in our code:
 
 **Example:** `main.go`
 
@@ -218,6 +218,12 @@ func main() {
 		return nil
 	})
 }
+```
+
+Before you deploy, run `go mod tidy`. The `replace` directive doesn't add the `require` entry your import needs:
+
+```bash
+go mod tidy
 ```
 
 {{% /choosable %}}

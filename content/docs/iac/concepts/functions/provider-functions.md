@@ -75,7 +75,7 @@ instance = aws.ec2.Instance(
 package main
 
 import (
- "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+ "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
  "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -224,6 +224,8 @@ resources:
 
 {{< /chooser >}}
 
+The TypeScript, Python, and Go examples above call the direct form of the function, and the C# and Java examples call the output form. [Direct form and output form](#direct-form-and-output-form) explains the difference.
+
 {{% notes type="info" %}}
 Bridged providers, which take a Terraform provider as an underlying dependency, expose Terraform data sources in the upstream Terraform provider as provider functions in the corresponding Pulumi provider.
 {{% /notes %}}
@@ -236,7 +238,7 @@ In most languages, the two variations take the form of **two separately named fu
 
 ### Direct form
 
-The **direct form** accepts plain arguments (e.g., `string`, as opposed to `pulumi.Input<string>`):
+The **direct form** accepts plain arguments (for example, `string`, as opposed to `pulumi.Input<string>`):
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -332,27 +334,27 @@ Besides function arguments, provider functions accept "invoke options", in the s
 * `parent`: Supply a parent resource for this function call. Much like the [parent resource option](/docs/iac/concepts/resources/options/parent/), the parent will be consulted when determining the provider to use.
 * `provider`: Pass an [explicitly configured provider](/docs/iac/concepts/providers/#explicit-provider-configuration) to use for this function call, instead of using the default provider. This is useful, for example, if you want to invoke a function in each of a set of AWS regions.
 
-The following options are also available, but are deprecated and should not be used in modern Pulumi programs as the functionality they control are commonly handled when you install a provider package:
+The following options are also available, but modern Pulumi programs rarely need them, because installing a provider package commonly handles the functionality they control:
 
 * `pluginDownloadURL`: Pass a URL from which the provider plugin should be fetched. This may be necessary for third-party packages such as those not hosted at [https://get.pulumi.com](https://get.pulumi.com).
 * `version`: Pass a provider plugin version that should be used when invoking the function.
-* `async`: _This option is deprecated and will be removed in a future release_.
+* `async`: Controls whether the function is invoked asynchronously. _Invoking provider functions synchronously is deprecated and will be removed in a future release._
 
 ## When your function will execute
 
-While the direct and output forms of a provider function will both return the same data when they are invoked, the two forms differ in when they are executed when running your Pulumi program:
+While the direct and output forms of a provider function both return the same data when they are invoked, the two forms differ in when they execute during your Pulumi program's run:
 
-* Direct form functions execute like any other function call in your Pulumi program's language. Since direct form functions do not accept Pulumi Inputs and Outputs, they are not tracked by the Pulumi engine the way resources are, and do not participate in the dependency graph.
+* Direct form functions execute like any other function call in your Pulumi program's language. Because direct form functions do not accept Pulumi Inputs and Outputs, they are not tracked by the Pulumi engine the way resources are, and do not participate in the dependency graph.
 * Output form functions take Inputs as arguments and return Outputs as return values, so the Pulumi engine tracks them and they participate in the dependency graph. Pulumi resolves all input values to the function before invoking it. (This is why `dependsOn` is only an option for the output form of a function.)
 
 ## Choosing between direct form and output form
 
-Two common scenarios call for one form over the other:
+Pulumi recommends the output form of a function unless you have a specific need for the direct form; the note at the end of this section explains why. Two common scenarios call for one form over the other:
 
 * **If you need a provider function's result to determine whether a resource should be created at all, you must use the direct form.** The direct form of a function executes _while_ the Pulumi engine is formulating the dependency graph (that is, determining what resources need to be created, updated, or deleted), so the decision about whether a resource belongs in the graph at all has to always be calculated up front.
 * **If you need resources to be created or updated before the function is invoked, you should use the output form.** (You _can_ use the direct form in this case, but it requires wrapping the call in an `apply`, which can be awkward from a readability standpoint.) Dependencies in the output form of a function are tracked identically to resources: all inputs to the function must be resolved before the function executes. If you need to specify a dependency that isn't already implied by an input to the function's arguments, you can use the `dependsOn` function option to specify additional dependencies (just like you can with resources).
 
-The following examples illustrate both scenarios. The first uses the direct form so that the lookup result can gate whether the instance resource is added to the stack at all. The second uses the output form to pass a secret config value directly into the lookup's filter — no apply call required to pass the secret into the filter.
+The following examples show each form. The first uses the direct form so that the lookup result can gate whether the instance resource is added to the stack at all. The second uses the output form to pass a secret config value directly into the lookup's filter — no apply call required to pass the secret into the filter.
 
 **Using the direct form:**
 
@@ -414,7 +416,7 @@ if candidates.ids:
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -596,7 +598,7 @@ aws.ec2.Instance(
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
@@ -751,9 +753,9 @@ resources:
 {{< /chooser >}}
 
 {{% notes type="info" %}}
-Pulumi recommends you choose the output form of a function unless you have a specific need for the direct form. We make this recommendation because:
+Pulumi recommends the output form of a function unless you have a specific need for the direct form, because:
 
-1. The output form reduces mental overhead in that it allows your program to stick with a single programming model (Pulumi Inputs and Outputs) as opposed to also having to manage language-specific return types (e.g., `Promise` in TypeScript, `Task` in .NET, `CompletableFuture` in Java, or synchronous returns in Python and Go).
+1. The output form reduces mental overhead in that it allows your program to stick with a single programming model (Pulumi Inputs and Outputs) as opposed to also having to manage language-specific return types (for example, `Promise` in TypeScript, `Task` in .NET, `CompletableFuture` in Java, or synchronous returns in Python and Go).
 1. Syntactically, it's slightly more terse.
 
 Assuming there is no specific reason to choose one or the other, the choice between the two forms is ultimately a preference: there is no significant difference in either performance or code maintainability between the two forms.
