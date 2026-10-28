@@ -549,7 +549,7 @@ To let Terraform and OpenTofu use your self-hosted Pulumi Cloud as a [state back
 |-------------------|-------------|
 | PULUMI_TFE_DOMAIN | The domain that serves the Terraform-compatible API, for example `tf.pulumiapi.acmecorp.com`. When unset, the Terraform-compatible API is disabled and its routes aren't registered. |
 
-Point the DNS record for this domain at the same host that serves `PULUMI_API_DOMAIN`. A separate domain keeps the Terraform-compatible API distinct from the Pulumi API, but it isn't required: you can set `PULUMI_TFE_DOMAIN` to the same value as `PULUMI_API_DOMAIN` if you don't want a second DNS record.
+Point the DNS record for this domain at the same host that serves `PULUMI_API_DOMAIN`. `PULUMI_TFE_DOMAIN` must be a different hostname from `PULUMI_API_DOMAIN`: the API service answers every request to the Terraform domain with the Terraform-compatible API only, so if the two are the same, Pulumi API requests to that hostname return `404 Not Found`.
 
 In the Terraform or OpenTofu configuration, the `terraform login` or `tofu login` command, and the `TF_TOKEN_*` variable name, use the `PULUMI_TFE_DOMAIN` value wherever the [state backend guide](/docs/integrations/terraform/state-backend/) uses `tf.pulumi.com`.
 
