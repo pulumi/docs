@@ -438,7 +438,7 @@ export class HubspotForm {
     // link opens the site's Cookie Settings (the OneTrust preference center).
     private renderConsentBlocked() {
         return (
-            <p>
+            <p data-consent-blocked>
                 This form needs functional cookies to load.{" "}
                 <button type="button" class="underline" onClick={() => (window as any).consentManager?.openConsentManager?.()}>
                     Open Cookie Settings

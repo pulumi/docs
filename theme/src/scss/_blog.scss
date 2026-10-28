@@ -96,6 +96,12 @@
     }
 }
 
+// The header slot is too small for the form's "needs functional cookies"
+// notice, so hide it there; the footer newsletter form still shows it.
+.blog-header .newsletter-header [data-consent-blocked] {
+    @apply hidden;
+}
+
 // Compact newsletter in the blog header (left of search). The input + button are
 // joined into one control: the button overlaps the input by 1px (-ml-px) so
 // their two borders collapse into a single hairline instead of a double line;
