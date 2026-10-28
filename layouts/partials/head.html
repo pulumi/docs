@@ -35,6 +35,9 @@
     </script>
 
     {{- if eq $consentProvider "onetrust" }}
+    {{- if not site.Params.oneTrustDomainScript }}
+        {{- errorf "consentProvider is \"onetrust\" but params.oneTrustDomainScript is not set" }}
+    {{- end }}
     <!-- OneTrust CMP (loaded before Segment and all optional integrations).
          Auto-Blocking stays off; consent is enforced by explicit checks in the
          site code via runWithPulumiConsent. The domain script id comes from the
