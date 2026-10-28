@@ -62,7 +62,7 @@ dev
 In some contexts, stack names will be presented in their fully qualified format (`orgName/projectName/stackName`) even if provided using shorthand (`stackName` or `orgName/stackName`) as input.
 
 {{% notes type="info" %}}
-While stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, these files are not created by `pulumi stack init`. They are created and managed with [`pulumi config`](/docs/iac/cli/commands/pulumi_config/). For information on how to populate your stack configuration files, see [Configuration](/docs/iac/concepts/config/).
+While stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, `pulumi stack init` creates one only when the stack's secrets provider stores its settings there, such as the passphrase provider's encryption salt or a cloud KMS provider's encrypted key. Otherwise, these files are created and managed with [`pulumi config`](/docs/iac/cli/commands/pulumi_config/). For information on how to populate your stack configuration files, see [Configuration](/docs/iac/concepts/config/).
 {{% /notes %}}
 
 ## Listing stacks
@@ -173,22 +173,30 @@ To view details of the currently selected stack, run `pulumi stack` with no argu
 
 ```bash
 $ pulumi stack
-Current stack is jane-dev:
-    Last updated 1 week ago (2018-03-02 10:26:09.850357 -0800 PST)
-    Pulumi version v0.11.0
-    Plugin nodejs [language] version 0.11.0
-    Plugin aws [resource] version 0.11.0
-
-Current stack resources (3):
-    TYPE                                             NAME
-    pulumi:pulumi:Stack                              webserver-jane-dev
-    aws:ec2/securityGroup:SecurityGroup              web-secgrp
-    aws:ec2/instance:Instance                        web-server-www
+Current stack is acmecorp/dev:
+    Owner: acmecorp
+    Version: 4
+    Active update: 0e9cb36d-3f4f-4c3a-9a8b-5d1c6c8b2f31
+    Tags:
+        pulumi:project           webserver
+        pulumi:runtime           nodejs
+        pulumi:secrets_provider  service
+    Last updated: 1 week ago (2026-10-21 10:26:09.850357 -0700 PDT)
+    Pulumi version used: v3.272.0
+    Secrets provider: service
+Current stack resources (4):
+    TYPE                                    NAME
+    pulumi:pulumi:Stack                     webserver-dev
+    ├─ aws:ec2/securityGroup:SecurityGroup  web-secgrp
+    ├─ aws:ec2/instance:Instance            web-server-www
+    └─ pulumi:providers:aws                 default_7_52_1
 
 Current stack outputs (2):
-    OUTPUT                                           VALUE
-    publicDns                                        ec2-18-218-85-197.us-east-2.compute.amazonaws.com
-    publicIp                                         18.218.85.197
+    OUTPUT     VALUE
+    publicDns  ec2-203-0-113-12.us-west-2.compute.amazonaws.com
+    publicIp   203.0.113.12
+
+More information at: https://app.pulumi.com/acmecorp/webserver/dev
 
 Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 ```
@@ -628,7 +636,7 @@ var otherOutput = other.GetOutput("x");
 
 ```java
 var other = new StackReference("acmecorp/infra/other");
-var otherOutput = other.getOutput(Output.of("x"));
+var otherOutput = other.output("x");
 ```
 
 {{% /choosable %}}
@@ -806,6 +814,7 @@ func main() {
 
 ```csharp
 using Pulumi;
+using Pulumi.Kubernetes;
 using Pulumi.Kubernetes.Core.V1;
 
 class AppStack : Stack
@@ -815,7 +824,7 @@ class AppStack : Stack
         var cluster = new StackReference($"mycompany/infra/{Deployment.Instance.StackName}");
         var kubeConfig = cluster.RequireOutput("KubeConfig").Apply(v => v.ToString());
         var provider = new Provider("k8s", new ProviderArgs { KubeConfig = kubeConfig });
-        var options = new ComponentResourceOptions { Provider = provider };
+        var options = new CustomResourceOptions { Provider = provider };
         var service = new Service(..., ..., options);
     }
 }
@@ -828,15 +837,14 @@ class AppStack : Stack
 package myproject;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 
 import com.pulumi.core.Output;
 import com.pulumi.kubernetes.Provider;
 import com.pulumi.kubernetes.ProviderArgs;
-import com.pulumi.kubernetes.core_v1.Service;
-import com.pulumi.kubernetes.core_v1.ServiceArgs;
-import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.kubernetes.core.v1.Service;
+import com.pulumi.kubernetes.core.v1.ServiceArgs;
+import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.StackReference;
 
 
@@ -847,9 +855,9 @@ public class App {
 
     public static void stack(Context ctx) {
         var cluster = new StackReference(String.format("mycompany/infra/%s", ctx.stackName()));
-        var kubeconfig = cluster.requireOutput(Output.of("KubeConfig")).applyValue(String::valueOf);
+        var kubeconfig = cluster.requireOutput(Output.of("kubeConfig")).applyValue(String::valueOf);
         var provider = new Provider("k8s", ProviderArgs.builder().kubeconfig(kubeconfig).build());
-        var options = ComponentResourceOptions.builder()
+        var options = CustomResourceOptions.builder()
             .provider(provider)
             .build();
         var service = new Service("app-service", ServiceArgs.builder()
@@ -864,7 +872,7 @@ public class App {
 
 ```yaml
 variables:
-  kubeConfig: ${my-stack-reference.outputs["KubeConfig"]}
+  kubeConfig: ${my-stack-reference.outputs["kubeConfig"]}
 resources:
   my-stack-reference:
     type: pulumi:pulumi:StackReference
@@ -873,7 +881,7 @@ resources:
   provider:
     type: pulumi:providers:kubernetes
     properties:
-      kubeConfig: kubeConfig
+      kubeConfig: ${kubeConfig}
   service:
     type: some:resource:type
     properties: ...
@@ -972,7 +980,7 @@ if err != nil {
 }
 
 // Fails at deployment time if "vpcId" is not in the referenced stack's exports.
-vpcId := infra.RequireOutput(pulumi.String("vpcId"))
+vpcId := infra.GetStringOutput(pulumi.String("vpcId"))
 ```
 
 {{% /choosable %}}
@@ -992,7 +1000,7 @@ var vpcId = infra.RequireOutput("vpcId");
 StackReference infra = new StackReference("acmecorp/infra/prod");
 
 // Fails at deployment time if "vpcId" is not in the referenced stack's exports.
-Output<Object> vpcId = infra.requireOutput("vpcId");
+Output<?> vpcId = infra.requireOutput("vpcId");
 ```
 
 {{% /choosable %}}
@@ -1058,10 +1066,10 @@ const logFile: aws.s3.BucketObject = new aws.s3.BucketObject("log", {
 infra = StackReference(...)
 ip = infra.get_output("privateIp")
 log_key = ip.apply(lambda ip: f"logs/{ip}.log")
-log_file = aws.s3.BucketObject("log", {
+log_file = aws.s3.BucketObject("log",
     # ...
-    key: log_key
-})
+    key=log_key,
+)
 ```
 
 {{% /choosable %}}
@@ -1072,11 +1080,11 @@ infra, err := pulumi.NewStackReference(ctx, ...)
 if err != nil {
     return err
 }
-ip := infra.GetOutput("privateIp")
-logKey := ip.ApplyT(func(ip string) string {
-    return fmt.Sprintf("logs/%s.log", ip)
-}).(StringOutput)
-logFile := s3.NewBucketObject(ctx, "log", &s3.BucketObjectArgs{
+ip := infra.GetOutput(pulumi.String("privateIp"))
+logKey := ip.ApplyT(func(ip interface{}) string {
+    return fmt.Sprintf("logs/%v.log", ip)
+}).(pulumi.StringOutput)
+logFile, err := s3.NewBucketObject(ctx, "log", &s3.BucketObjectArgs{
     // ...
     Key: logKey,
 })
@@ -1101,9 +1109,10 @@ var logFile = new Aws.S3.BucketObject("log", new Aws.S3.BucketObjectArgs
 
 ```java
 StackReference infra = new StackReference(...);
-Output<String> ip = infra.getOutput("privateIp");
-Output<String> logKey = ip.apply(ip -> String.format("logs/%s.log", ip));
+Output<?> ip = infra.output("privateIp");
+Output<String> logKey = ip.applyValue(value -> String.format("logs/%s.log", value));
 BucketObject logFile = new BucketObject("log", new BucketObjectArgs.Builder()
+    // ...
     .key(logKey)
     .build());
 ```
