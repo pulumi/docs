@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud: RBAC Scopes - Cloud accounts"
-meta_desc: Learn about the available RBAC scopes in Pulumi Cloud.
+meta_desc: "Reference list of Pulumi Cloud RBAC scopes you can assign to specific cloud accounts or sets of cloud accounts in Pulumi Insights."
 title: "RBAC Scopes: Cloud Accounts"
 h1: "RBAC Scopes: Cloud Accounts"
 menu:

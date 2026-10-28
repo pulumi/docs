@@ -2,7 +2,7 @@
 title: fn::rotate
 title_tag: fn::rotate
 h1: fn::rotate
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "The fn::rotate built-in function in Pulumi ESC invokes a rotator to rotate secrets such as database and cloud credentials. See syntax and rotate-only inputs."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-rotate/
   - /docs/esc/reference/builtin-functions/fn-rotate/

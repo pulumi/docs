@@ -2,7 +2,7 @@
 title: fn::toJSON
 title_tag: fn::toJSON
 h1: fn::toJSON
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Use fn::toJSON in Pulumi ESC to encode a value as a JSON string for fields that only accept strings. Secret inputs stay secret. See syntax and examples."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-to-json/
   - /docs/esc/reference/builtin-functions/fn-to-json/

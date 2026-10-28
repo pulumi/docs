@@ -2,7 +2,7 @@
 title: fn::secret
 title_tag: fn::secret
 h1: fn::secret
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Use fn::secret in Pulumi ESC to store encrypted secrets in an environment. Learn how to set secrets from the CLI and console, and how ESC encrypts them on save."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-secret/
   - /docs/esc/reference/builtin-functions/fn-secret/
