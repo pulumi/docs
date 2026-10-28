@@ -152,6 +152,27 @@ test("a placeholder fills the iframe until C0004, then is removed", async () => 
     assert.strictEqual(h.iframe.hasAttribute("srcdoc"), false);
 });
 
+test("no placeholder before OneTrust resolves, and none at all when C0004 is already granted", async () => {
+    const h = await mount();
+    const srcdocWrites: string[] = [];
+    const desc = Object.getOwnPropertyDescriptor(h.win.HTMLIFrameElement.prototype, "srcdoc")!;
+    Object.defineProperty(h.iframe, "srcdoc", {
+        configurable: true,
+        get() {
+            return desc.get!.call(this);
+        },
+        set(value: string) {
+            srcdocWrites.push(value);
+            desc.set!.call(this, value);
+        },
+    });
+    h.installBridge();
+    assert.strictEqual(h.iframe.getAttribute("srcdoc"), null);
+    h.setGroups(",C0001,C0004,");
+    assert.strictEqual(h.iframe.getAttribute("src"), VIDEO_URL);
+    assert.deepStrictEqual(srcdocWrites, []);
+});
+
 test("an embed's own srcdoc thumbnail is replaced until C0004, then restored", async () => {
     const thumbnail = "<a href='https://www.youtube.com/embed/abc123?autoplay=1'>play</a>";
     const h = await mount(`srcdoc="${thumbnail}"`);
