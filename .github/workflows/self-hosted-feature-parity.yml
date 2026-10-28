@@ -40,6 +40,9 @@ on:
     - cron: "45 7 * * *"
 jobs:
   update-feature-parity:
+    # The page is generated here and synced to the mirrors, so a mirror run
+    # would only open a PR against its own master that never merges.
+    if: github.repository == 'pulumi/docs'
     runs-on: ubuntu-latest
     outputs:
       has_changes: ${{ steps.commit.outputs.has_changes }}
@@ -82,15 +85,38 @@ jobs:
           sparse-checkout: |
             cmd
             pkg
+      # The feature metadata reaches production with a pulumi-service release,
+      # so a branch can predate it. Skip only in that case: once any commit on
+      # the branch has touched the file, a missing file fails the job.
+      - name: Check for the feature metadata
+        id: metadata
+        env:
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          REF: ${{ github.event.inputs.pulumi_service_branch || 'production' }}
+          METADATA: cmd/service/api/features/self-hosted-parity.json
+        run: |
+          if [ -f "pulumi-service/$METADATA" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          touched=$(gh api "repos/pulumi/pulumi-service/commits?sha=${REF}&path=${METADATA}&per_page=1" --jq 'length')
+          if [ "$touched" != "0" ]; then
+            echo "::error::pulumi-service ${REF} no longer has ${METADATA}"
+            exit 1
+          fi
+          echo "::notice::pulumi-service ${REF} predates ${METADATA}; skipping until a pulumi-service release brings it there"
+          echo "ready=false" >> "$GITHUB_OUTPUT"
       # The generator parses pulumi-service's Go, so it needs a toolchain at
       # least as new as the one pulumi-service uses.
       - uses: actions/setup-go@v7
+        if: steps.metadata.outputs.ready == 'true'
         with:
           go-version-file: pulumi-service/go.mod
           cache: false
       # Each step is run by name rather than with --all, which skips quietly
       # when there's no pulumi-service clone. --enrich is left out on purpose.
       - name: Regenerate the feature parity page
+        if: steps.metadata.outputs.ready == 'true'
         working-directory: docs
         env:
           PULUMI_SERVICE_REPO: ${{ github.workspace }}/pulumi-service
@@ -99,6 +125,7 @@ jobs:
           go run scripts/update-feature-parity.go --update-summary
           go run scripts/update-feature-parity.go --publish
       - name: List status changes
+        if: steps.metadata.outputs.ready == 'true'
         id: changes
         working-directory: docs
         run: |
@@ -106,9 +133,11 @@ jobs:
           git show "HEAD:$page" > "$RUNNER_TEMP/feature-parity-before.md"
           python3 scripts/self-hosted-feature-parity/status-changes.py "$RUNNER_TEMP/feature-parity-before.md" "$page"
       - name: git status
+        if: steps.metadata.outputs.ready == 'true'
         working-directory: docs
         run: git status && git diff -- content/docs/administration/self-hosting/feature-parity.md
       - name: Commit changes
+        if: steps.metadata.outputs.ready == 'true'
         id: commit
         working-directory: docs
         run: |
