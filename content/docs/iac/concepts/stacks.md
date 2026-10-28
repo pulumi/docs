@@ -881,7 +881,7 @@ resources:
   provider:
     type: pulumi:providers:kubernetes
     properties:
-      kubeConfig: ${kubeConfig}
+      kubeconfig: ${kubeConfig}
   service:
     type: some:resource:type
     properties: ...
