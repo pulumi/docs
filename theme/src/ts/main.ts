@@ -37,6 +37,7 @@ import "./console-banner";
 import "./announcement-banner";
 import "./statuspage";
 import "./intercom-identity";
+import "./consent-media";
 
 // Register all Stencil components.
 defineCustomElements();

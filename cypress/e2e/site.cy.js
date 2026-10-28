@@ -1,17 +1,26 @@
 /**
  * Handle uncaught exceptions from third-party scripts.
- * 
- * The vector.co pixel.js script throws an uncaught exception when it detects a cloud provider environment.
- * This happens in the GitHub Actions runner but not locally, causing tests to fail in CI.
- * 
- * We catch and ignore this specific error while still allowing other legitimate errors to fail the tests.
+ *
+ * - The vector.co pixel.js script throws "Cloud provider detected" in the
+ *   GitHub Actions runner (but not locally), which would fail tests in CI.
+ * - The OneTrust CMP is a cross-origin script that resolves consent only on its
+ *   registered public domains; on an S3 origin, preview host, or localhost it
+ *   throws an opaque "Script error." with no stack. The smoke tests run against
+ *   the raw S3 origin, so this would otherwise fail every suite in a before
+ *   each hook.
+ *
+ * We ignore those specific third-party cases while still letting genuine
+ * same-origin application errors fail the tests.
  */
 Cypress.on('uncaught:exception', (err) => {
-    // Return false to prevent the error from failing the test
+    // Return false to prevent the error from failing the test.
     if (err.message.includes('Cloud provider detected')) {
         return false;
     }
-    // Return true for other errors to fail the test
+    if (err.message.includes('Script error')) {
+        return false;
+    }
+    // Return true for other errors to fail the test.
     return true;
 });
 

@@ -45,7 +45,7 @@ One of the constant challenges for teams working in the cloud is finding specifi
 
 Pulumi AI addresses this need in a direct way.  Instead of having to create every possible example by hand, users can just ask Pulumi AI to generate an example that suits their unique needs, no matter how specific and bespoke the request might be.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xdTUEStC8I0?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< youtube-iframe src="https://www.youtube.com/embed/xdTUEStC8I0?rel=0" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true" >}}
 
 ## Discovering, Learning, and Building with Pulumi AI
 
