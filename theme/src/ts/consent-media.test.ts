@@ -120,14 +120,6 @@ test("iframe src is set from data-pulumi-consent-src once C0004 is granted", asy
     assert.deepStrictEqual(h.srcWrites, [VIDEO_URL]);
 });
 
-test("the YouTube general vendor alone loads the iframe, without C0004", async () => {
-    const h = await mount();
-    h.installBridge();
-    h.setGroups(",C0001,V11,");
-    assert.strictEqual(h.iframe.getAttribute("src"), VIDEO_URL);
-    assert.deepStrictEqual(h.srcWrites, [VIDEO_URL]);
-});
-
 test("a call queued before the bridge installs loads when C0004 is granted", async () => {
     // The module ran against the bootstrap queue; the bridge replays it.
     const h = await mount();
@@ -170,7 +162,7 @@ test("an embed's own srcdoc thumbnail is replaced until C0004, then restored", a
     assert.strictEqual(h.iframe.getAttribute("srcdoc"), thumbnail);
 });
 
-test("placeholder buttons grant the YouTube vendor through OneTrust and open Cookie Settings", async () => {
+test("placeholder buttons grant C0004 through OneTrust and open Cookie Settings", async () => {
     const h = await mount();
     const updates: string[][] = [];
     let opened = 0;
@@ -182,6 +174,6 @@ test("placeholder buttons grant the YouTube vendor through OneTrust and open Coo
     doc.querySelector("[data-consent-allow]").click();
     doc.querySelector("[data-consent-settings]").click();
 
-    assert.deepStrictEqual(updates, [["General Vendor", "V11:1"]]);
+    assert.deepStrictEqual(updates, [["Category", "C0004:1"]]);
     assert.strictEqual(opened, 1);
 });
