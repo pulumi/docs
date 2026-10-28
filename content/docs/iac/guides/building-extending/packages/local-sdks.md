@@ -78,7 +78,7 @@ Refer to the [Any Terraform Provider documentation](/docs/iac/concepts/providers
 
 ## Using generated SDKs
 
-`pulumi package add` links the generated SDK into your project and prints the import statement to use, so you can use the package like any other Pulumi package. For example, after running `pulumi package add terraform-provider hashicorp/random 3.5.1`:
+`pulumi package add` generates the SDK in your project's `sdks` directory. In TypeScript and Python, it also links the SDK so you can import it like any other Pulumi package, and Go and C# need one more step. For example, after running `pulumi package add terraform-provider hashicorp/random 3.5.1`:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
@@ -101,7 +101,7 @@ pet = random.Pet("example")
 {{% /choosable %}}
 {{% choosable language go %}}
 
-`pulumi package add` adds a `replace` directive for the SDK to `go.mod`. Run `go mod tidy` to add the matching `require` entry, and import the package by the module path in the generated `sdks/random/go.mod`:
+Import the package from its directory under the module path declared in the generated `sdks/random/go.mod`:
 
 ```go
 package main
@@ -117,6 +117,12 @@ func main() {
 		return err
 	})
 }
+```
+
+Before you deploy, run `go mod tidy`. `pulumi package add` adds a `replace` directive for the SDK to `go.mod`, but not the `require` entry your import needs:
+
+```bash
+go mod tidy
 ```
 
 {{% /choosable %}}
