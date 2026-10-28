@@ -1,9 +1,9 @@
 {{- /*
-  Consent-aware YouTube iframe source. Emits the attribute an <iframe> should
+  Consent-aware YouTube iframe source. Returns the attribute an <iframe> should
   carry for a YouTube embed URL, honoring the site's consent provider:
 
     - onetrust: data-pulumi-consent-src="<url>" (no src), so the YouTube iframe
-      does not load — and sets no YouTube cookies — until the visitor allows
+      does not load, and sets no YouTube cookies, until the visitor allows
       Targeting (C0004). theme/src/ts/consent-media.ts promotes it to src then.
     - segment:  src="<url>", today's behavior.
 
@@ -11,11 +11,11 @@
       <iframe {{ partial "youtube-src.html" (dict "url" $embedURL) }} ...>
 
   The partial reads consentProvider from the site params itself, so callers only
-  pass the URL.
+  pass the URL. It returns a safeHTMLAttr value rather than printing text:
+  html/template only accepts an HTMLAttr in attribute-name position inside a
+  tag, and replaces anything else (including a partial's plain output) with
+  "ZgotmplZ".
 */ -}}
 {{- $provider := site.Params.consentProvider | default "segment" -}}
-{{- if eq $provider "onetrust" -}}
-data-pulumi-consent-src="{{ .url }}"
-{{- else -}}
-src="{{ .url }}"
-{{- end -}}
+{{- $attr := cond (eq $provider "onetrust") "data-pulumi-consent-src" "src" -}}
+{{- return (printf `%s="%s"` $attr (htmlEscape .url) | safeHTMLAttr) -}}

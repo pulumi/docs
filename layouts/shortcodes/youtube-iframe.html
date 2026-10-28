@@ -1,0 +1,20 @@
+{{- /*
+  A YouTube <iframe> for Markdown, which can't call the consent-aware
+  youtube-src.html partial directly. Use it in place of a raw
+  <iframe src="https://www.youtube.com/embed/...">: `src` is the embed URL, and
+  the other params map to the same-named iframe attributes, so an existing
+  embed keeps its exact size and presentation. For a plain responsive embed,
+  prefer {{< youtube "VIDEO_ID" >}}.
+
+  Usage:
+      {{< youtube-iframe src="https://www.youtube.com/embed/VIDEO_ID" width="560" height="315" title="..." allowfullscreen="true" >}}
+*/ -}}
+<iframe {{ partial "youtube-src.html" (dict "url" (.Get "src")) }}
+    {{- with .Get "width" }} width="{{ . }}"{{ end }}
+    {{- with .Get "height" }} height="{{ . }}"{{ end }}
+    {{- with .Get "style" }} style="{{ . | safeCSS }}"{{ end }}
+    {{- with .Get "title" }} title="{{ . }}"{{ end }}
+    {{- with .Get "frameborder" }} frameborder="{{ . }}"{{ end }}
+    {{- with .Get "allow" }} allow="{{ . }}"{{ end }}
+    {{- with .Get "srcdoc" }} srcdoc="{{ . }}"{{ end }}
+    {{- if eq (.Get "allowfullscreen") "true" }} allowfullscreen{{ end }}></iframe>

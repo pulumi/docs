@@ -2,7 +2,7 @@ import { ConsentManagerConfig, Destination } from "./types";
 import { getPreferences, savePreferences } from "./cookies";
 import { fetchDestinations, conditionallyLoadAnalytics } from "./analytics";
 import { renderBanner, renderPreferencesDialog } from "./banner";
-import { installOneTrustBridge, getActiveGroups, destinationPreferencesFromGroups } from "./onetrust";
+import { installOneTrustBridge, getActiveGroups, destinationPreferencesFromGroups, hasRevokedGroup } from "./onetrust";
 
 let container: HTMLElement | null = null;
 let destinations: Destination[] = [];
@@ -113,6 +113,19 @@ async function initOneTrust(cfg: ConsentManagerConfig) {
         openConsentManager: () => window.OneTrust?.ToggleInfoDisplay?.(),
     };
 
+    // Revoking a category can't unload third-party code that already started, so
+    // reload when one is withdrawn. Only a withdrawal reloads: OneTrust also fires
+    // this event on page load and for grants, and reloading on those would loop.
+    let seenGroups = getActiveGroups();
+    window.addEventListener("OneTrustGroupsUpdated", () => {
+        const active = getActiveGroups();
+        if (hasRevokedGroup(seenGroups, active)) {
+            window.location.reload();
+            return;
+        }
+        seenGroups = active;
+    });
+
     if (!cfg.writeKey || !cfg.cdnHost) {
         // No Segment config: the bridge still gates direct integrations.
         return;
@@ -125,29 +138,20 @@ async function initOneTrust(cfg: ConsentManagerConfig) {
         console.warn("Consent manager: failed to fetch destinations", e);
     }
 
-    let loadedWithConsent = false;
-
-    const applyConsent = () => {
-        const active = getActiveGroups();
-        const prefs = destinationPreferencesFromGroups(fetchedDestinations, active);
-        const anyAllowed = Object.keys(prefs).some(id => prefs[id]);
-
-        // Once Segment has loaded a set of destinations, revoking a category
-        // can't unload already-running third-party code — reload to stop it.
-        if (loadedWithConsent && window.analytics && window.analytics.initialized) {
-            window.location.reload();
-            return;
-        }
-
+    // Segment can only be loaded once per page, so the first decision that
+    // allows any destination wins. Destinations granted later on this page take
+    // effect from the next page view.
+    let segmentLoaded = false;
+    const loadSegment = () => {
+        if (segmentLoaded) return;
+        const prefs = destinationPreferencesFromGroups(fetchedDestinations, getActiveGroups());
         conditionallyLoadAnalytics(cfg.writeKey, fetchedDestinations, prefs, true);
-        if (anyAllowed) {
-            loadedWithConsent = true;
-        }
+        segmentLoaded = Object.keys(prefs).some(id => prefs[id]);
     };
 
-    window.addEventListener("OneTrustGroupsUpdated", applyConsent as EventListener);
+    window.addEventListener("OneTrustGroupsUpdated", loadSegment);
     // Catch a decision OneTrust may already have resolved before this ran.
-    applyConsent();
+    loadSegment();
 }
 
 const activeConfig = window.consentManagerConfig as ConsentManagerConfig;

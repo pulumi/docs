@@ -128,7 +128,6 @@ export class HubspotForm {
     // runWithPulumiConsent runs the loader immediately under Segment and only
     // after C0003 under OneTrust; while it's withheld we show the placeholder.
     private gateAndLoad() {
-        const runWithConsent = (window as any).runWithPulumiConsent;
         const start = () => {
             this.awaitingConsent = false;
             const hubspotGlobal = window["hbspt"];
@@ -138,12 +137,8 @@ export class HubspotForm {
                 this.loadHubSpotFormsScript();
             }
         };
-        if (typeof runWithConsent === "function") {
-            this.awaitingConsent = true;
-            runWithConsent("C0003", start);
-        } else {
-            start();
-        }
+        this.awaitingConsent = true;
+        (window as any).runWithPulumiConsent("C0003", start);
     }
 
     disconnectedCallback() {
@@ -443,7 +438,7 @@ export class HubspotForm {
     // link opens the site's Cookie Settings (the OneTrust preference center).
     private renderConsentBlocked() {
         return (
-            <p>
+            <p data-consent-blocked>
                 This form needs functional cookies to load.{" "}
                 <button type="button" class="underline" onClick={() => (window as any).consentManager?.openConsentManager?.()}>
                     Open Cookie Settings

@@ -7,7 +7,7 @@
 
     {{- /* Consent gate bootstrap (all environments). Defines
            window.runWithPulumiConsent before any integration (Segment, Common
-           Room, OpenAI, Floqer, GrowthBook, HubSpot, YouTube) can initialize, so
+           Room, OpenAI, Floqer, HubSpot, YouTube) can initialize, so
            an early caller is captured rather than lost. Under "segment" the gate
            runs the callback immediately (today's behavior); under "onetrust" it
            queues until the consent-manager bundle's OneTrust bridge drains the
@@ -35,6 +35,9 @@
     </script>
 
     {{- if eq $consentProvider "onetrust" }}
+    {{- if not site.Params.oneTrustDomainScript }}
+        {{- errorf "consentProvider is \"onetrust\" but params.oneTrustDomainScript is not set" }}
+    {{- end }}
     <!-- OneTrust CMP (loaded before Segment and all optional integrations).
          Auto-Blocking stays off; consent is enforced by explicit checks in the
          site code via runWithPulumiConsent. The domain script id comes from the

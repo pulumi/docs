@@ -9,7 +9,7 @@
 
                 <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
                     <iframe
-                        src="//www.youtube.com/embed/kFHb8f2fk9k?rel=0"
+                        {{ partial "youtube-src.html" (dict "url" "//www.youtube.com/embed/kFHb8f2fk9k?rel=0") }}
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
                         allowfullscreen=""
                         title="Automation API Overview"

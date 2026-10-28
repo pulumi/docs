@@ -9,20 +9,11 @@ export const gb = new GrowthBook({
     enableDevMode: (window as any).growthbook_dev_mode,
 });
 
-// GrowthBook's init() opens a streaming connection to the GrowthBook CDN, which
-// is Performance (C0002) data collection. Gate it behind consent via the shared
-// runWithPulumiConsent bridge (defined in layouts/partials/head.html): under
-// OneTrust it waits for C0002; under Segment it runs immediately, preserving
-// existing behavior. The guard keeps this working if the bridge is ever absent.
-function initGrowthBook() {
-    gb.init({ streaming: true });
-}
-
-if (typeof (window as any).runWithPulumiConsent === "function") {
-    (window as any).runWithPulumiConsent("C0002", initGrowthBook);
-} else {
-    initGrowthBook();
-}
+// Not consent-gated: GrowthBook only assigns variations and does no tracking of
+// its own. Experiment exposures are reported through Segment (below), which is
+// consent-gated, so gating init() would only break A/B tests for visitors who
+// haven't consented.
+gb.init({ streaming: true });
 
 // Hook up GrowthBook to analytics when ready. The optional chain keeps this module
 // loadable when the analytics snippet is absent (e.g., in the test environment).
