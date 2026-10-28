@@ -59,6 +59,8 @@ For stacks that receive frequent commits, enable [Skip intermediate deployments]
 
 Test this on a disposable stack. While one operation runs, queue several operations of the same type. When the active operation finishes, confirm that Pulumi runs the newest queued operation and skips the intermediate ones.
 
+Wait until the first deployment is running before submitting the queued operations. If it finishes before the next request arrives, every deployment may run normally and the test says nothing about queue consolidation. A temporary `sleep 45` pre-run command on the first test deployment provides time to queue two more updates. Remove the delay from the later requests, then verify that the middle request is marked **Skipped** and the newest request completes.
+
 Let the active deployment finish. This setting combines queued operations of the same type; it does not cancel work already in progress. An update also does not replace a queued destroy, because the operation types differ.
 
 Skipping intermediate deployments is appropriate when reaching the latest desired state is the purpose of the queued work. It is less appropriate when each revision represents an operation that must happen, rather than another description of the state you ultimately want. A requirement to retain a deployment record for every commit is also a reason to keep the individual runs. Check these assumptions before treating the skipped jobs as redundant.

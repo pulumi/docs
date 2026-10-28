@@ -55,12 +55,12 @@ spec:
 
 Choose capacity from your dependency sizes, and create the claim in the namespace used for runner jobs. Understand the access mode before increasing concurrency: `ReadWriteOnce` permits read-write mounting from one node, not necessarily one Pod. If jobs run on different nodes, they may need different storage or separate caches.
 
-Customize the runner job's Pod template to mount the claim. Merge these Kubernetes fields into the existing template, preserving the agent's other required settings:
+The following wiring was tested with customer-managed workflow agent `v2.3.2`. Its execution container is named `pulumi-workflow`, and the agent reads a template from `/mnt/worker-pod.json`. The file accepts YAML despite its extension. Save this template as `worker-pod.yaml`; it is a merge patch for generated job Pods, not a standalone Pod to apply:
 
 ```yaml
 spec:
   containers:
-    - name: <existing-execution-container-name>
+    - name: pulumi-workflow
       env:
         - name: npm_config_cache
           value: /cache/npm
@@ -73,7 +73,46 @@ spec:
         claimName: pulumi-package-cache
 ```
 
-Confirm the Pod-template configuration supported by your agent version. Preserve its existing command, environment, and mounts. Set ownership or the Pod security context so the execution user can write to `/cache`.
+The container name is significant: strategic merge uses it to update the existing execution container. A different name adds another container instead of configuring the one that runs Pulumi.
+
+If you installed the agent with the [provided Kubernetes component](https://github.com/pulumi/customer-managed-workflow-agent/tree/main/kubernetes#loading-pod-specification-into-the-agent), pass this template through its `podTemplate` argument and update that installation. The component creates and mounts the template ConfigMap. For a manually managed agent Deployment, create a ConfigMap from the file:
+
+```bash
+kubectl --context <test-context> --namespace <runner-namespace> \
+    create configmap workflow-cache-template \
+    --from-file=worker-pod.json=worker-pod.yaml \
+    --dry-run=client -o yaml | \
+    kubectl --context <test-context> --namespace <runner-namespace> apply -f -
+```
+
+Save the following as `agent-template-mount.yaml`, using the agent's actual container name. This mounts the template on the agent; the template itself mounts the cache on each job Pod:
+
+```yaml
+spec:
+  template:
+    spec:
+      containers:
+        - name: agent
+          volumeMounts:
+            - name: workflow-cache-template
+              mountPath: /mnt/worker-pod.json
+              subPath: worker-pod.json
+              readOnly: true
+      volumes:
+        - name: workflow-cache-template
+          configMap:
+            name: workflow-cache-template
+```
+
+If the agent already mounts a template at that path, extend the existing template instead of adding a competing mount. Otherwise, apply the mount patch to your manually managed Deployment:
+
+```bash
+kubectl --context <test-context> --namespace <runner-namespace> \
+    patch deployment <agent-deployment> --type=strategic \
+    --patch-file agent-template-mount.yaml
+```
+
+Preserve the agent's existing command, environment, and other mounts. Set ownership or the Pod security context so the execution user can write to `/cache`. After changing a ConfigMap mounted with `subPath`, restart the agent Deployment so it sees the new file.
 
 Inspect an actual job Pod after changing the template. Confirm that it has the mount and that `npm config get cache` reports `/cache/npm`. Check this in the job container, not the agent container.
 
@@ -99,6 +138,8 @@ pulumi env run <org>/build/artifactory -- npm ci
 Give the deployment identity permission to open the ESC environment used by this command. Referencing that environment only from stack configuration does not make its values available to the earlier installation step, which is why the explicit invocation matters. Also keep the two download mechanisms distinct: an npm token authenticates package-manager requests, not separate provider plugin requests to another endpoint.
 
 Run a job to populate the cache, then repeat it in a new job Pod. Verify that the second Pod sees the same claim. Compare installation durations and network activity rather than assuming a mounted directory guarantees a cache hit.
+
+For a diagnostic run, `npm ci --offline` can verify that the new Pod has the package data it needs without fetching packages from the registry. Run `npm cache verify` to inspect the persisted cache. Use the ordinary installation command for the normal workflow; offline mode will fail when a dependency change requires an uncached package. Provider plugin downloads are separate and may still occur during the Pulumi operation.
 
 For Python, direct the package manager's cache to its own directory on the volume. For Go programs that still compile during deployment, persist both `GOMODCACHE` and `GOCACHE`. Change one cache at a time and repeat the same measurement.
 

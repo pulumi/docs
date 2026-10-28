@@ -32,6 +32,20 @@ For this experiment, keep the source repository connected to Pulumi Deployments 
 
 You need a build environment, permission to publish to that bucket, and an executor image containing the AWS CLI. This example targets Linux on `amd64`; use the platform of your runner.
 
+Check the AWS CLI prerequisite before configuring the deployment. The `pulumi/pulumi-go` image used in this walkthrough does not include it. For a Linux `amd64` runner, this Dockerfile extends the tested base image with the download tools:
+
+```dockerfile
+FROM pulumi/pulumi-go:3.259.0
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends unzip \
+    && curl -fsSL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o /tmp/awscliv2.zip \
+    && unzip -q /tmp/awscliv2.zip -d /tmp \
+    && /tmp/aws/install \
+    && rm -rf /tmp/aws /tmp/awscliv2.zip /var/lib/apt/lists/*
+```
+
+Use the CLI version selected for your comparison, and use the matching AWS CLI installer if your runner uses another architecture. Build and publish this tools image to your registry, then select it in the stack's [custom executor image settings](/docs/deployments/concepts/settings/custom-executor-images/). Verify the image can run `aws --version`. Treat this image change as a separate preparation cost if your baseline used the default image.
+
 Create an [ESC environment with AWS credentials](/docs/esc/providers/login/aws-login/) for artifact retrieval. It must expose credentials through `environmentVariables` and grant access to the release objects. Give the deployment identity permission to open that environment.
 
 Use separate permissions for publishing artifacts, retrieving artifacts, and changing infrastructure. A deployment runner needs read access to its executable release, not permission to replace it. Keep your existing infrastructure credentials unchanged during this experiment.
@@ -69,6 +83,8 @@ test -x ./bin/infra
 This script runs in the Pulumi project directory and expects Linux tools, including `sha256sum`. The checksum detects transfer corruption; control writes to the release objects so an unauthorized publisher cannot replace both files.
 
 Commit the runtime setting and preparation script. Add `bin/` and generated release files to your project's ignore rules.
+
+Run the build and preparation commands from the directory containing `Pulumi.yaml`. If the project is in a repository subdirectory, configure that directory as the deployment's **Pulumi.yaml folder**. The artifact path uses the full commit returned by `git rev-parse HEAD`, including when the project occupies only part of the repository.
 
 ## Publish before you deploy
 

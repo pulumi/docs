@@ -42,9 +42,32 @@ acme 1.2.3 plugins/pulumi-resource-acme-v1.2.3-linux-amd64.tar.gz
 
 Replace this illustrative entry with your program's actual providers. Add one line per required plugin version, without a header or comments. Keep the manifest alongside the source so changes receive review.
 
+For the Random-provider project suggested in part 1, inspect the SDK version with:
+
+```bash
+go list -m github.com/pulumi/pulumi-random/sdk/v4
+```
+
+The validation example used `v4.18.2`, so its manifest entry was:
+
+```text
+random 4.18.2 plugins/pulumi-resource-random-v4.18.2-linux-amd64.tar.gz
+```
+
+Use the version returned for your project rather than replacing it with this example's version. End the manifest with a newline so the shell loop below reads its final entry.
+
 ## Publish the program and plugins as one release
 
 Download the provider archives from their release pipeline or your approved artifact store. Each archive must match the runner's operating system and architecture. For custom providers, follow the [executable plugin archive layout](/docs/iac/guides/building-extending/packages/executable-plugin/#binary-naming-and-archive-layout): the executable belongs at the archive root.
+
+For the example Random provider version, the Linux archive can be retrieved with:
+
+```bash
+mkdir -p plugins
+curl --fail --location \
+    https://get.pulumi.com/releases/plugins/pulumi-resource-random-v4.18.2-linux-amd64.tar.gz \
+    --output plugins/pulumi-resource-random-v4.18.2-linux-amd64.tar.gz
+```
 
 In the Linux build job from part 2, place the archives under `plugins/`. Replace the archive creation command with:
 

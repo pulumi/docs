@@ -43,7 +43,7 @@ Use the verified `bin/infra`, `plugins.txt`, and `plugins/` from part 3 as the b
 Create this Dockerfile in the build directory:
 
 ```dockerfile
-ARG PULUMI_VERSION
+ARG PULUMI_VERSION=3.259.0
 FROM pulumi/pulumi-go:${PULUMI_VERSION} AS plugin-installer
 
 ENV PULUMI_HOME=/opt/pulumi-home

@@ -43,6 +43,15 @@ Each of these changes comes with a tradeoff. A dependency cache takes time to re
 
 Use a Go project that already deploys successfully through [Pulumi Deployments](/docs/deployments/get-started/). Choose two disposable stacks in the same Pulumi Cloud project, running the same source revision with different stack configuration. This series calls them `bench-a` and `bench-b`; use your own stack names in commands.
 
+If you need a small project to check the mechanics first, the `random-go` template provides a working provider-backed program without provisioning cloud infrastructure:
+
+```bash
+pulumi new random-go --name fleet-infra --stack <org>/fleet-infra/bench-a
+pulumi stack init <org>/fleet-infra/bench-b
+```
+
+Put the generated project in a Git repository and [connect both stacks to Pulumi Deployments](/docs/deployments/get-started/deployments-using-cli/#configure-deployment-settings). The Random provider is useful for checking the build and execution steps, but its timings do not represent a larger infrastructure program. Use representative infrastructure for performance conclusions.
+
 Use a program that represents your actual infrastructure rather than choosing the smallest example that can complete a deployment. An output-only program is useful for demonstrating configuration behavior, but it leaves out the provider dependencies that may account for much of your setup time. A test is useful only if the work it measures resembles the work you want to improve.
 
 For this first part, use Pulumi-managed runners. If your organization requires customer-managed runners, follow the measurement method here, then use the cache implementation in [part 5](/blog/cache-pulumi-kubernetes-runners/). The managed cache setting has no effect on customer-managed runner pools.
@@ -87,9 +96,9 @@ Leave dependency installation enabled for this experiment. A cache supplies file
 
 Deploy `bench-b` using the same source revision and lock files. Confirm that caching is enabled for this stack too.
 
-The distinction between the setting and the cache is important here. Although you enable caching separately for each stack, the entries belong to the project and can be reused by stacks with identical lock files. This means a newly created stack can use preparation completed by another stack running the same program. That reuse stays within the organization; a cache populated in one organization is not available to another.
+Enable caching on both stacks, and check the restore log rather than assuming the second stack starts with a warm cache. A repeated deployment of one stack and the first deployment of another stack are separate test cases, even when the program and lock files match.
 
-This tests whether a new stack can reuse preparation completed for an existing stack running the same program. Check the restore log on `bench-b`; do not infer reuse from total duration alone.
+If `bench-b` reports `No cache to restore, skipping...`, record that as a cold run. Wait for its **Save cache** step to finish, then repeat the deployment and compare the logs. A cache hit on that repeat establishes reuse within the stack; it does not establish that newly created stacks will benefit. The artifact and image approaches in later parts provide an explicit way to share prepared code across environments.
 
 Next, make a deliberate dependency update on a test branch and repeat the measurement. A changed lock file produces a different cache key. Record the first run after that change separately from warm runs.
 
