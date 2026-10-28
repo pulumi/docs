@@ -23,7 +23,7 @@ button{font:inherit;cursor:pointer;border-radius:6px;padding:6px 14px;margin:4px
 button[data-consent-allow]{background:#fff;color:#1a1036}
 </style></head><body><div>
 <p>This video is hosted on YouTube, which sets targeting cookies. Allowing it turns on targeting cookies across the site.</p>
-<button type="button" data-consent-allow>Allow targeting cookies</button>
+<button type="button" data-consent-allow>Allow cookies to load video</button>
 <button type="button" data-consent-settings>Cookie settings</button>
 </div></body></html>`;
 
