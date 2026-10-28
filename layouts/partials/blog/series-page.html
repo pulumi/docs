@@ -10,7 +10,10 @@
 {{- $series := .series -}}
 {{- $page := .page -}}
 {{- $slug := $series.slug -}}
-{{- $parts := (where (where site.RegularPages "Params.series" $slug) "Date" "lt" now).ByDate -}}
+{{- $parts := (where site.RegularPages "Params.series" $slug).ByDate -}}
+{{- if not hugo.IsServer -}}
+    {{- $parts = where $parts "Date" "lt" now -}}
+{{- end -}}
 {{- $count := len $parts -}}
 
 {{ partial "blog/header.html" (dict "title" "Series" "url" "/blog/series/" "context" $page "heading" false) }}

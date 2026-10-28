@@ -6,6 +6,10 @@
 # used as a post tag; `make lint` enforces this.
 # Ordered by most recent post date (newest first).
 series:
+  - slug: "faster-pulumi-deployments"
+    title: "Faster Pulumi deployments"
+    description: "Reduce deployment setup time across environments with dependency caches, compiled Go programs, versioned plugins, and prebuilt images. Supply configuration at runtime through Git and Pulumi ESC."
+    prefix: "Faster Pulumi deployments, part "
   - slug: "neo-things"
     title: "Things You Can Do With Neo"
     description: "Real workflows platform teams are handing to Pulumi Neo: one-off deploys, incident triage, IAM audits, drift checks, runtime upgrades, and compliance fixes that run on a schedule."
