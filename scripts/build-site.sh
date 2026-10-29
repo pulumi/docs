@@ -63,8 +63,8 @@ if [ "${1:-}" == "preview" ]; then
     # throws a cross-origin error that fails the browser tests). Force the
     # Segment consent provider for these builds even though config/preview
     # selects OneTrust; OneTrust is exercised on the registered
-    # www.pulumi-test.io staging deploy (the testing branch below) and, later,
-    # in production.
+    # www.pulumi-test.io staging deploy (the testing branch below) and in
+    # production.
     export HUGO_PARAMS_CONSENTPROVIDER=segment
     hugo --minify --buildFuture --templateMetrics -e "preview"
 else

@@ -6,9 +6,8 @@
 # consentProvider back to "segment" for those (HUGO_PARAMS_CONSENTPROVIDER).
 #
 # The OneTrust *test* domain script id lives here (not in _default) on purpose:
-# the default and production configs must not carry it. The production id (the
-# same value without the "-test" suffix) is introduced only during the separate,
-# approved production cutover.
+# the default and production configs must not carry it. Production uses its own
+# id in config/production/config.yaml.
 params:
     consentProvider: onetrust
     oneTrustDomainScript: 01a130f0-6a68-7792-88bc-358bc07fe42b-test
