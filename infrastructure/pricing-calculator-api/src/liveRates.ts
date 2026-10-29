@@ -9,7 +9,7 @@
 // It fails safe: if the page can't be fetched or doesn't parse into a complete
 // set of rates (toRates is all or nothing), the handler keeps serving the last
 // good rates, which start as the deployed ones, and logs
-// "pricing_rates_refresh_failed". index.ts turns that log line into an alarm.
+// "pricing_rates_refresh_failed" to CloudWatch.
 
 import { comparePricing, fetchLivePricing, LivePricing, toRates } from "./livePricing";
 import { PricingRates } from "./pricing";

@@ -33,14 +33,11 @@
 // Between deploys, the Lambda re-reads the same page at most once every
 // rateRefreshSeconds (src/liveRates.ts), keeping the last good rates when the
 // page can't be read, so a price change reaches callers without a redeploy.
-//
-// Alarms go to the SNS topic exported as alarmTopicArn: Lambda errors,
-// throttling, and failed rate refreshes. Set alarmEmail to subscribe an
-// address (AWS emails it a confirmation link first).
+// Failures are logged, not alarmed: see README.md for the log lines to look
+// for.
 //
 //     pricingUrl          defaults to https://www.pulumi.com/pricing.md
 //     rateRefreshSeconds  defaults to 3600; 0 turns the runtime refresh off
-//     alarmEmail          optional
 //     reservedConcurrency defaults to 10
 //
 //     yarn install && pulumi stack select testing && pulumi up
@@ -58,7 +55,6 @@ const reservedConcurrency = config.getNumber("reservedConcurrency") ?? 10;
 const pricingCheck = config.get("pricingCheck") || "update";
 const pricingUrl = config.get("pricingUrl") || DEFAULT_PRICING_URL;
 const rateRefreshSeconds = config.getNumber("rateRefreshSeconds") ?? 3600;
-const alarmEmail = config.get("alarmEmail");
 
 const name = "pricing-calculator-api";
 
@@ -198,74 +194,9 @@ export = async () => {
         functionUrlAuthType: "NONE",
     });
 
-    const alarmTopic = new aws.sns.Topic(`${name}-alarms`);
-    if (alarmEmail) {
-        const alarmSubscription = new aws.sns.TopicSubscription(`${name}-alarm-email`, {
-            topic: alarmTopic.arn,
-            protocol: "email",
-            endpoint: alarmEmail,
-        });
-    }
-
-    const alarm = (alarmName: string, args: Partial<aws.cloudwatch.MetricAlarmArgs>) =>
-        new aws.cloudwatch.MetricAlarm(`${name}-${alarmName}`, {
-            comparisonOperator: "GreaterThanOrEqualToThreshold",
-            evaluationPeriods: 1,
-            statistic: "Sum",
-            threshold: 1,
-            treatMissingData: "notBreaching",
-            alarmActions: [alarmTopic.arn],
-            okActions: [alarmTopic.arn],
-            ...args,
-        });
-
-    // A thrown error is a bug: validation failures are 400s, not errors.
-    alarm("errors", {
-        alarmDescription: `${functionName} threw an error. Its CloudWatch logs have the stack trace.`,
-        namespace: "AWS/Lambda",
-        metricName: "Errors",
-        dimensions: { FunctionName: func.name },
-        period: 300,
-    });
-
-    // Callers got 429s because reservedConcurrency was full. A few is a burst;
-    // sustained, it's either abuse or a limit that needs raising.
-    alarm("throttles", {
-        alarmDescription: `${functionName} is throttling requests at its reserved concurrency ` +
-            `(${reservedConcurrency}).`,
-        namespace: "AWS/Lambda",
-        metricName: "Throttles",
-        dimensions: { FunctionName: func.name },
-        period: 300,
-        threshold: 10,
-    });
-
-    // The pricing page couldn't be read or parsed, so the API is serving the
-    // last good rates, which may now be stale. Usually the page's format
-    // changed; fix the parser in src/livePricing.ts. A deploy fails the same
-    // way until then (see pricingCheck).
-    const refreshFailedMetric = { namespace: "PricingCalculatorApi", name: `RateRefreshFailed-${functionName}` };
-    const refreshFailedFilter = new aws.cloudwatch.LogMetricFilter(`${name}-refresh-failed`, {
-        logGroupName: logGroup.name,
-        pattern: "\"pricing_rates_refresh_failed\"",
-        metricTransformation: {
-            namespace: refreshFailedMetric.namespace,
-            name: refreshFailedMetric.name,
-            value: "1",
-            defaultValue: "0",
-        },
-    });
-    alarm("refresh-failed", {
-        alarmDescription: `${functionName} couldn't read rates from ${pricingUrl} and is serving its last good rates.`,
-        namespace: refreshFailedMetric.namespace,
-        metricName: refreshFailedMetric.name,
-        period: 3600,
-    });
-
     return {
         url: functionUrl.functionUrl,
         lambdaFunctionName: func.name,
         ratesSource: source,
-        alarmTopicArn: alarmTopic.arn,
     };
 };

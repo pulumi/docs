@@ -38,7 +38,7 @@ Whoever shows an estimate to a customer should pass `disclaimer` along with it. 
 pulumi/marketing-web owns the prices. The API reads them from `https://www.pulumi.com/pricing.md` in two places:
 
 - **At deploy:** `pulumi preview` and `pulumi up` parse the page and compare it with `src/pricing.ts`. By default (`pricingCheck: update`) the deploy uses the page's rates and warns about any difference. It fails if the page can't be read or parsed.
-- **While running:** the Lambda re-reads the page at most once an hour (`rateRefreshSeconds`). If that fails, it keeps serving the last good rates and raises the `refresh-failed` alarm.
+- **While running:** the Lambda re-reads the page at most once an hour (`rateRefreshSeconds`). If that fails, it keeps serving the last good rates and logs `pricing_rates_refresh_failed`.
 
 A price change on `/pricing/` therefore reaches callers within the hour, with no deploy. Update `src/pricing.ts` when the deploy warns, so the built-in fallback stays current.
 
@@ -53,7 +53,6 @@ The parser depends on the wording of the page's "Cost estimation" section and th
 | `pricingUrl` | `https://www.pulumi.com/pricing.md` | |
 | `rateRefreshSeconds` | `3600` | `0` turns the runtime refresh off. |
 | `reservedConcurrency` | `10` | Caps concurrent invocations; requests beyond it get a 429. |
-| `alarmEmail` | | Subscribes an address to the alarm topic. AWS emails it a confirmation link first. |
 
 ## Rollout
 
@@ -77,13 +76,15 @@ Each `{{...}}` has to be the connector's data input, inserted with Intercom's pi
 
 Every request is logged as one `pricing_request` line, holding the method, query string, and the first 500 characters of any body (usage numbers only, no personal data). Logs are kept 30 days in `/aws/lambda/pricing-calculator-api-<stack>`. When a caller gets an unexpected 400, its request line shows what it actually sent.
 
-Alarms publish to the SNS topic in the `alarmTopicArn` output:
+There are no alarms: failures are logged, and nothing notifies anyone. When something looks wrong, search the log group for:
 
-| Alarm | Fires when | What to do |
+| Log line | Means | What to do |
 |---|---|---|
-| `errors` | The handler threw | A bug. The log group has the stack trace. |
-| `throttles` | 10+ requests in 5 minutes hit `reservedConcurrency` | Check the request log for abuse; otherwise raise the limit. |
-| `refresh-failed` | The pricing page couldn't be read or parsed | The API is serving its last good rates. Usually the page changed format: update `src/livePricing.ts` and the test snapshot. |
+| `Invoke Error` | The handler threw, and the caller got a 500 | A bug. The line has the stack trace. |
+| `pricing_rates_refresh_failed` | The pricing page couldn't be read or parsed | The API is serving its last good rates. Usually the page changed format: update `src/livePricing.ts` and the test snapshot. |
+| `pricing_rates_refreshed` | The page's rates changed and the API picked them up | Nothing; update `src/pricing.ts` at the next deploy. |
+
+Requests beyond `reservedConcurrency` are rejected with a 429 before they reach the handler, so they don't appear in the log group. The Lambda's `Throttles` metric in CloudWatch counts them.
 
 ## Development
 
