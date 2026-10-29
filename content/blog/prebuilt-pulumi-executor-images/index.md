@@ -22,7 +22,7 @@ social:
 
 A container image provides another way to distribute the executable environment that a deployment needs. Instead of downloading an archive and installing its plugins in every job, prepare those files while building the image. The resulting image can contain the Pulumi CLI, the program, and the matching provider plugins, with the container runtime handling their distribution and layer reuse.
 
-This approach works particularly well as a release model when many stacks use the same program, but only if their differences remain outside the image. Baking each environment's configuration into a separate image would require another build whenever those values changed. Keeping configuration in Git and ESC lets you reuse one executable release while each stack retains its own inputs.
+For the platform engineer managing deployments across hundreds of accounts, the image becomes a reusable release of the execution tools and infrastructure program. Its value depends on keeping account-specific differences outside that release. Baking each environment's configuration into a separate image would require another build whenever those values changed. Keeping configuration in Git and ESC lets you promote the same image while each stack retains its own inputs and credentials.
 
 <!--more-->
 

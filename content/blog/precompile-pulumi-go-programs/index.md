@@ -22,7 +22,7 @@ social:
 
 Once a program revision has been built and tested, rebuilding it for each environment adds another preparation step to every deployment. Go lets you publish the executable instead, and Pulumi can run that executable while continuing to supply configuration for the selected stack. This gives the deployment process a specific artifact to promote, rather than a set of instructions for reconstructing it each time.
 
-The [cache from part 1](/blog/speed-up-pulumi-deployments/) already reduces repeated compilation work, so a separate build pipeline needs to improve on that result. Its strongest use case is a program deployed repeatedly across many environments, where the initial build can be reused instead of repeated.
+For the platform team deploying across hundreds of accounts, this turns compilation into a release task rather than an environment-by-environment expense. The [cache from part 1](/blog/speed-up-pulumi-deployments/) already reduces repeated compilation within a stack, so a separate build pipeline needs to improve on that result. Its additional value is reuse across stacks: every environment can receive the same tested executable, with its differences supplied through configuration.
 
 <!--more-->
 

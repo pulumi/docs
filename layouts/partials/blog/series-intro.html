@@ -1,0 +1,10 @@
+{{- $slug := .Params.series -}}
+{{- with $slug -}}
+    {{- range site.Data.blog_series.series -}}
+        {{- if eq .slug $slug -}}
+            {{- with .intro -}}
+                <p data-series-intro><em>{{ . | markdownify }}</em></p>
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}

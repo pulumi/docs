@@ -22,7 +22,7 @@ social:
 
 A compiled Pulumi program is only part of the executable software involved in a deployment. The program declares resources through provider SDKs, while separate provider processes perform the corresponding operations. If the runner has the program but lacks those providers, it must still retrieve them before it can complete the deployment.
 
-The next step is to make those provider executables part of the [release prepared in part 2](/blog/precompile-pulumi-go-programs/). This gives you an explicit record of the plugin versions that belong with the program, rather than relying on preparation during every deployment. Once the release supplies everything the program needs, the remaining package-manager installation can be removed.
+For a platform team distributing one program across many accounts, the provider executables belong in the same controlled release process as the program itself. Extend the [release prepared in part 2](/blog/precompile-pulumi-go-programs/) to include them, with an explicit record of the plugin versions that match its SDKs. This reduces repeated preparation and gives the team a defined set of provider binaries to verify before promotion. Once the release supplies everything the program needs, the remaining package-manager installation can be removed.
 
 <!--more-->
 

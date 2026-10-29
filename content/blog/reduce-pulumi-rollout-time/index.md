@@ -22,7 +22,7 @@ social:
 
 After reducing preparation time, it is worth examining why jobs enter the queue and how long they wait there. A monorepo can trigger stacks after unrelated changes, while a busy branch can enqueue several revisions before the first deployment finishes. Those jobs consume capacity even when the desired outcome is already represented by a later revision.
 
-Adding runners can reduce the wait, but first determine whether the queue contains work that needs to run at all. Avoiding an unnecessary deployment removes its execution cost instead of assigning that cost to another machine. Once the remaining work is understood, you can measure how much capacity it needs without carrying unrelated jobs through the comparison.
+Across hundreds of accounts, the platform team's goal is a faster, predictable rollout at an appropriate runner cost. Adding runners can reduce the wait, but first determine whether the queue contains work that needs to run at all. Avoiding an unnecessary deployment removes its execution cost instead of assigning that cost to another machine. Once the remaining work is understood, you can measure how much capacity it needs while continuing to promote the same tested artifacts and environment-specific configuration.
 
 <!--more-->
 

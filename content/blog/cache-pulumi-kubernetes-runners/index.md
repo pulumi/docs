@@ -22,7 +22,7 @@ social:
 
 Ephemeral job Pods are useful because each deployment begins with a separate execution environment and can discard it when the job finishes. The same lifecycle becomes wasteful, however, when dependencies downloaded into that environment disappear even though the next deployment needs identical files. Persistent cache storage separates the lifetime of those reusable files from the lifetime of an individual job.
 
-For teams already using customer-managed Kubernetes runners, this provides a way to retain preparation without giving up per-job workspaces. It also applies to TypeScript and Python programs that continue to install dependencies during deployment. You can keep the program in its existing language while reusing files that earlier jobs have already downloaded.
+For a platform team running deployments inside its own network, customer-managed Kubernetes runners provide control over where that reusable preparation lives. Persistent caches can reduce repeated downloads across jobs without requiring a shared working directory or a rewrite of the infrastructure program. This applies to TypeScript and Python programs as well as Go, so teams can keep their existing components while reducing the work repeated for each environment.
 
 <!--more-->
 
