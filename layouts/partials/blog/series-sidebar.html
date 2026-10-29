@@ -19,7 +19,7 @@
             {{ $title := $post.Title }}
             {{ with $seriesData }}{{ with .prefix }}{{ if strings.HasPrefix $title . }}{{ $title = strings.TrimPrefix . $title }}{{ end }}{{ end }}{{ end }}
             {{ $current := eq $post.RelPermalink $.Page.RelPermalink }}
-            {{ $future := and (not hugo.IsServer) ($post.Date.After now) }}
+            {{ $future := and hugo.IsProduction ($post.Date.After now) }}
             {{- /* Color is set per element, not on the <li>: a global `a` color
                 would override the inherited color on the link rows otherwise. */ -}}
             {{ $color := cond $current "text-violet-primary" (cond $future "text-gray-400" "text-gray-950") }}

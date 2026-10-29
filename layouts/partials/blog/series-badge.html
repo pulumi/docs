@@ -12,7 +12,7 @@
     {{- $seriesData := false -}}
     {{- with site.Data.blog_series }}{{ range .series }}{{ if eq .slug $slug }}{{ $seriesData = . }}{{ end }}{{ end }}{{ end -}}
     {{- with $seriesData -}}
-        {{- $parts := (where (where site.RegularPages "Params.series" $slug) "Date" "lt" now).ByDate -}}
+        {{- $parts := partial "blog/series-parts.html" $slug -}}
         {{- $num := 0 -}}
         {{- range $i, $p := $parts }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $num = add $i 1 }}{{ end }}{{ end -}}
         {{- if $num -}}
