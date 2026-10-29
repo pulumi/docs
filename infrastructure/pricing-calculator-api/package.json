@@ -3,7 +3,7 @@
     "license": "Apache-2.0",
     "scripts": {
         "lint": "tslint --project tsconfig.json",
-        "test": "tsc -p tsconfig.json && node --test bin/src/*.test.js"
+        "test": "tsc -p tsconfig.json && node ../../scripts/check-test-suites-compiled.js src bin/src infrastructure/pricing-calculator-api/tsconfig.json && node --test bin/src/*.test.js"
     },
     "devDependencies": {
         "@types/node": "^25.9.8",

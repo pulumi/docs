@@ -198,8 +198,8 @@ export function toRates(live: LivePricing): RatesResult {
     return { ok: true, rates: { editions, meters, contactSalesResources: live.contactSalesResources as number } };
 }
 
-export async function fetchLivePricing(url: string = DEFAULT_PRICING_URL): Promise<LivePricing> {
-    const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
+export async function fetchLivePricing(url: string = DEFAULT_PRICING_URL, timeoutMs = 15000): Promise<LivePricing> {
+    const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) });
     if (!res.ok) {
         throw new Error(`GET ${url} returned ${res.status}`);
     }

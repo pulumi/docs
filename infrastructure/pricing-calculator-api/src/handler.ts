@@ -16,12 +16,20 @@
 // _hours fields are unit-hours, and the two can be combined (see
 // src/pricing.ts).
 //
+// A 200 response is {"ok": true, "estimate": {...}, "disclaimer": "...",
+// "rates": {"source": "live" | "deployed", "refreshedAt": "<ISO time>"}}.
+// Callers presenting the estimate to a customer, such as Fin, should pass the
+// disclaimer on with it.
+//
 // It's pure computation with no secrets or side effects, so unlike
 // support-form/handler.ts there's no origin check.
 
+import { currentRates, RateCache, refreshConfigFromEnv } from "./liveRates";
 import { DEFAULT_RATES, estimate, PricingRates, Usage } from "./pricing";
 
 export interface FunctionUrlEvent {
+    rawPath?: string;
+    rawQueryString?: string;
     body?: string;
     isBase64Encoded?: boolean;
     headers?: Record<string, string | undefined>;
@@ -40,6 +48,14 @@ export interface FunctionUrlResult {
 }
 
 export const MAX_BODY_BYTES = 4096;
+
+export const DISCLAIMER = "Estimate at list prices. Excludes taxes, committed-use discounts, and volume " +
+    "pricing; Pro and Enterprise rates decrease with volume, so larger estimates are an upper bound. " +
+    "For a quote, contact sales: https://www.pulumi.com/contact/?form=sales";
+
+// Rates refreshed from the live pricing page (see liveRates.ts), shared by the
+// invocations a warm container serves.
+const RATE_CACHE: RateCache = { source: "deployed" };
 
 const QUANTITY_FIELDS = {
     iac_resources: "iacResources",
@@ -148,6 +164,21 @@ function jsonResponse(statusCode: number, body: object, extraHeaders: Record<str
 export async function pricingHandler(event: FunctionUrlEvent): Promise<FunctionUrlResult> {
     const method = (event.requestContext?.http?.method || "").toUpperCase();
 
+    // One line per request, so a caller whose inputs don't arrive where they
+    // should (an integration that sends them somewhere other than the query
+    // string or a JSON body) can be diagnosed from CloudWatch. Pricing inputs
+    // are usage counts, not personal data; the body is truncated regardless.
+    console.log(JSON.stringify({
+        type: "pricing_request",
+        method,
+        path: event.rawPath,
+        query: event.rawQueryString,
+        contentType: event.headers?.["content-type"],
+        userAgent: event.headers?.["user-agent"],
+        body: event.body ? event.body.slice(0, 500) : undefined,
+        isBase64Encoded: event.isBase64Encoded,
+    }));
+
     let input: unknown;
     if (method === "GET") {
         input = { ...(event.queryStringParameters || {}) };
@@ -176,10 +207,18 @@ export async function pricingHandler(event: FunctionUrlEvent): Promise<FunctionU
         return jsonResponse(400, { ok: false, error: "invalid_body" });
     }
 
-    const rates = ratesFromEnv();
+    const { rates, source, refreshedAt } = await currentRates(RATE_CACHE, ratesFromEnv(), refreshConfigFromEnv());
     const parsed = parseUsage(input as Record<string, unknown>, rates);
     if (!parsed.ok) {
         return jsonResponse(400, { ok: false, error: "validation_failed", fields: parsed.fields });
     }
-    return jsonResponse(200, { ok: true, estimate: estimate(parsed.usage, rates) });
+    return jsonResponse(200, {
+        ok: true,
+        estimate: estimate(parsed.usage, rates),
+        disclaimer: DISCLAIMER,
+        rates: {
+            source,
+            refreshedAt: refreshedAt === undefined ? undefined : new Date(refreshedAt).toISOString(),
+        },
+    });
 }

@@ -38,6 +38,10 @@ on:
     paths:
       - 'infrastructure/**'
       - '!infrastructure/versioned-docs/**'
+      # Excluded for the same reason as versioned-docs: a separate Pulumi
+      # program this job never compiles. pricing-calculator-api-tests.yml
+      # covers it.
+      - '!infrastructure/pricing-calculator-api/**'
       # The shared "did every suite actually run" guard, used by both halves.
       - 'scripts/check-test-suites-compiled.js'
       - 'theme/src/ts/support-form.ts'

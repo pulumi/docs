@@ -22,8 +22,10 @@
         "src/pricing.ts",
         "src/handler.ts",
         "src/livePricing.ts",
+        "src/liveRates.ts",
         "src/pricing.test.ts",
         "src/handler.test.ts",
-        "src/livePricing.test.ts"
+        "src/livePricing.test.ts",
+        "src/liveRates.test.ts"
     ]
 }
