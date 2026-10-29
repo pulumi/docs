@@ -1,3 +1,0 @@
-name: pricing-calculator-api
-description: HTTP endpoint that estimates a Pulumi Cloud monthly bill from usage, using the /pricing/ calculator's formula.
-runtime: nodejs

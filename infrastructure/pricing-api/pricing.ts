@@ -4,9 +4,9 @@
 // theme/src/ts/pricing-calculator.ts and the `calculator:` block of
 // data/pulumi_pricing.yaml (both removed in 812ea928fe when /pricing moved to
 // pulumi/marketing-web). marketing-web's apps/www/src/data/pricing/ owns the
-// list prices now. A deploy picks up changed prices from the live page on its
-// own, but keep EDITIONS and METERS in step so the fallback and the deploy-time
-// diff stay meaningful.
+// list prices now. The running Lambda picks up changed prices from the live
+// page on its own (liveRates.ts), but keep EDITIONS and METERS in step: they're
+// what it serves until the first refresh, and whenever the page can't be read.
 //
 // Everything is denominated in Pulumi Credits (1 credit = $1) drawn from one
 // shared pool, and the monthly base buys the first tranche of it.
@@ -79,9 +79,8 @@ export const EDITIONS: Record<string, EditionRates> = {
 };
 
 // Everything an estimate depends on. DEFAULT_RATES is the copy kept in this
-// file; a deploy can replace it with the rates read from the live pricing page
-// (see index.ts and src/livePricing.ts), which the Lambda then receives in its
-// PRICING_RATES environment variable.
+// file; the running Lambda replaces it with the rates read from the live
+// pricing page when it can (see liveRates.ts).
 export interface PricingRates {
     editions: Record<string, EditionRates>;
     meters: MeterRates;

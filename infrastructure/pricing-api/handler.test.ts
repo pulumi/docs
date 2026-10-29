@@ -1,22 +1,55 @@
 // Copyright 2016-2026, Pulumi Corporation.  All rights reserved.
 
-// Run from this directory with `yarn test`.
+// Run from the infrastructure directory with `yarn test-pricing-api`.
 
 import * as assert from "assert";
 import { test } from "node:test";
 
 import * as pulumi from "@pulumi/pulumi";
 
-import { FunctionUrlEvent, MAX_BODY_BYTES, pricingHandler, ratesFromEnv } from "./handler";
-import { DEFAULT_RATES } from "./pricing";
+import { DISCLAIMER, FunctionUrlEvent, MAX_BODY_BYTES, originSecretOk, pricingHandler } from "./handler";
 
-function get(query: Record<string, string>): FunctionUrlEvent {
-    return { queryStringParameters: query, requestContext: { http: { method: "GET" } } };
+// What CloudFront stamps on every origin request (see pricingApi.ts).
+const SECRET = "test-origin-secret";
+process.env.PRICING_API_ORIGIN_SECRET = SECRET;
+
+function get(query: Record<string, string>, headers: Record<string, string> = { "x-origin-verify": SECRET }) {
+    const event: FunctionUrlEvent = {
+        queryStringParameters: query,
+        headers,
+        requestContext: { http: { method: "GET" } },
+    };
+    return event;
 }
 
 function post(body: string, contentType = "application/json"): FunctionUrlEvent {
-    return { body, headers: { "content-type": contentType }, requestContext: { http: { method: "POST" } } };
+    const headers = { "content-type": contentType, "x-origin-verify": SECRET };
+    return { body, headers, requestContext: { http: { method: "POST" } } };
 }
+
+test("rejects requests that didn't come through CloudFront", async () => {
+    const attempts: Record<string, string>[] = [{}, { "x-origin-verify": "wrong" }, { "x-origin-verify": "" }];
+    for (const headers of attempts) {
+        const res = await pricingHandler(get({ edition: "essentials" }, headers));
+        assert.strictEqual(res.statusCode, 403, JSON.stringify(headers));
+    }
+});
+
+test("checks the origin secret against a rotation list, and fails closed without one", () => {
+    assert.strictEqual(originSecretOk("new", "old, new"), true);
+    assert.strictEqual(originSecretOk("old", "old, new"), true);
+    assert.strictEqual(originSecretOk("other", "old, new"), false);
+    assert.strictEqual(originSecretOk("anything", undefined), false);
+    assert.strictEqual(originSecretOk("anything", ""), false);
+    assert.strictEqual(originSecretOk(undefined, "old"), false);
+});
+
+test("includes the disclaimer and the rates' source", async () => {
+    const body = JSON.parse((await pricingHandler(get({ edition: "pro" }))).body);
+    assert.strictEqual(body.disclaimer, DISCLAIMER);
+    // No PRICING_URL in the test environment, so the refresh is off.
+    assert.deepStrictEqual(body.rates, { source: "built-in" });
+});
 
 test("estimates from GET query parameters", async () => {
     const res = await pricingHandler(get({ edition: "essentials", iac_resources: "1000" }));
@@ -89,28 +122,8 @@ test("rejects malformed POSTs", async () => {
 });
 
 test("rejects other methods", async () => {
-    const res = await pricingHandler({ requestContext: { http: { method: "DELETE" } } });
+    const res = await pricingHandler({ headers: { "x-origin-verify": SECRET }, requestContext: { http: { method: "DELETE" } } });
     assert.strictEqual(res.statusCode, 405);
-});
-
-test("uses the rates the deploy passes in PRICING_RATES", async () => {
-    const rates = {
-        ...DEFAULT_RATES,
-        editions: { ...DEFAULT_RATES.editions, team: { ...DEFAULT_RATES.editions.essentials, base_usd: 100 } },
-    };
-    process.env.PRICING_RATES = JSON.stringify(rates);
-    try {
-        const res = await pricingHandler(get({ edition: "team" }));
-        assert.strictEqual(res.statusCode, 200);
-        assert.strictEqual(JSON.parse(res.body).estimate.totalUsd, 100);
-    } finally {
-        delete process.env.PRICING_RATES;
-    }
-});
-
-test("falls back to the built-in rates when PRICING_RATES is unset or invalid", () => {
-    assert.strictEqual(ratesFromEnv({}), DEFAULT_RATES);
-    assert.strictEqual(ratesFromEnv({ PRICING_RATES: "{" }), DEFAULT_RATES);
 });
 
 // The deployed handler isn't this module: aws.lambda.CallbackFunction ships it

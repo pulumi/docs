@@ -1,10 +1,9 @@
 // Copyright 2016-2026, Pulumi Corporation.  All rights reserved.
 
-// Reads the rates from the live /pricing/ page, so a deploy can't ship an
-// estimator that quotes stale prices: index.ts either deploys with the live
-// rates (toRates) or stops when they differ from ./pricing.ts (comparePricing).
-// It runs before any resources are declared, which means on every `pulumi
-// preview` and `pulumi up`.
+// Parses the rates from the live /pricing/ page, so the estimator doesn't
+// quote stale prices. liveRates.ts calls it from the running Lambda: toRates
+// builds the rates to serve, and comparePricing reports what changed against
+// the built-in copy in pricing.ts.
 //
 // The source is /pricing.md, the Markdown rendering of the page that
 // pulumi/marketing-web publishes for agents. Two parts of it are read:
@@ -17,7 +16,7 @@
 //     estimation section doesn't list ("$0.00025/hour ($0.1825/month)").
 //
 // A value the parser can't find is reported as a failure too: it means the
-// page's format changed, and the check would otherwise pass by checking nothing.
+// page's format changed, and refreshing would otherwise succeed by reading nothing.
 
 import { DEFAULT_RATES, EditionRates, EDITIONS, MeterRates, METERS, PricingRates } from "./pricing";
 
@@ -119,7 +118,7 @@ export function comparePricing(live: LivePricing, expected: PricingRates = DEFAU
         if (actual === undefined) {
             problems.push(`${what}: not found on the pricing page (expected ${want})`);
         } else if (actual !== want) {
-            problems.push(`${what}: src/pricing.ts has ${want}, the pricing page has ${actual}`);
+            problems.push(`${what}: pricing-api/pricing.ts has ${want}, the pricing page has ${actual}`);
         }
     };
 
@@ -135,7 +134,7 @@ export function comparePricing(live: LivePricing, expected: PricingRates = DEFAU
 
     for (const id of liveEditionIds(live)) {
         if (!(id in expected.editions)) {
-            problems.push(`${id}: edition is on the pricing page but not in src/pricing.ts`);
+            problems.push(`${id}: edition is on the pricing page but not in pricing-api/pricing.ts`);
         }
     }
 

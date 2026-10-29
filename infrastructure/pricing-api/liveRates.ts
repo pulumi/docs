@@ -1,20 +1,23 @@
 // Copyright 2016-2026, Pulumi Corporation.  All rights reserved.
 
-// Keeps a running Lambda's rates current between deploys. The deploy bakes in
-// the rates it read (PRICING_RATES; see index.ts), and on top of that the
-// handler re-reads the pricing page at most once per PRICING_REFRESH_SECONDS,
-// so a price change on /pricing/ reaches callers within the hour without anyone
-// running `pulumi up`.
+// Keeps a running Lambda's rates current. The handler starts from the rates
+// built into pricing.ts and re-reads the pricing page at most once per
+// PRICING_REFRESH_SECONDS, so a price change on /pricing/ reaches callers
+// within the hour without a deploy.
+//
+// This is deliberately the only place the page is read. The site stack's
+// deploy doesn't fetch it, so an unreachable or reformatted pricing page can
+// never block a website deploy.
 //
 // It fails safe: if the page can't be fetched or doesn't parse into a complete
 // set of rates (toRates is all or nothing), the handler keeps serving the last
-// good rates, which start as the deployed ones, and logs
+// good rates, which start as the built-in ones, and logs
 // "pricing_rates_refresh_failed" to CloudWatch.
 
 import { comparePricing, fetchLivePricing, LivePricing, toRates } from "./livePricing";
 import { PricingRates } from "./pricing";
 
-export type RatesSource = "deployed" | "live";
+export type RatesSource = "built-in" | "live";
 
 export interface RefreshConfig {
     url?: string;
@@ -49,17 +52,17 @@ export function refreshConfigFromEnv(env: Record<string, string | undefined> = p
 
 export async function currentRates(
     cache: RateCache,
-    deployed: PricingRates,
+    builtIn: PricingRates,
     config: RefreshConfig,
     now: number = Date.now(),
     fetchPricing: (url: string, timeoutMs: number) => Promise<LivePricing> = fetchLivePricing,
 ): Promise<CurrentRates> {
     const current = (): CurrentRates => cache.rates
         ? { rates: cache.rates, source: cache.source, refreshedAt: cache.refreshedAt }
-        : { rates: deployed, source: "deployed" };
+        : { rates: builtIn, source: "built-in" };
 
     if (!config.url || config.ttlMs <= 0) {
-        return { rates: deployed, source: "deployed" };
+        return { rates: builtIn, source: "built-in" };
     }
     if (cache.checkedAt !== undefined && now - cache.checkedAt < config.ttlMs) {
         return current();
@@ -72,7 +75,7 @@ export async function currentRates(
     try {
         const result = toRates(await fetchPricing(config.url, config.fetchTimeoutMs));
         if (result.ok) {
-            const changed = comparePricing(fromRates(result.rates), cache.rates || deployed);
+            const changed = comparePricing(fromRates(result.rates), cache.rates || builtIn);
             if (changed.length > 0) {
                 console.log(JSON.stringify({ type: "pricing_rates_refreshed", url: config.url, changed }));
             }

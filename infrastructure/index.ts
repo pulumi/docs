@@ -6,6 +6,7 @@ import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
+import { PricingApi } from "./pricingApi";
 import { SupportFormApi } from "./supportForm";
 import { SupportRedirect } from "./supportRedirect";
 
@@ -85,11 +86,10 @@ const config = {
     // SupportFormApiArgs in supportForm.ts.
     enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
 
-    // pricingApiStack is the pricing calculator API stack (infrastructure/pricing-calculator-api),
-    // e.g. "pulumi/pricing-calculator-api/production". When set, /api/pricing on this domain
-    // proxies to that stack's Lambda Function URL, giving the API an address that survives the
-    // Lambda being replaced. Unset (e.g. dev stacks, PR previews) = no origin or behavior added.
-    pricingApiStack: stackConfig.get("pricingApiStack") || undefined,
+    // enablePricingApi toggles the /api/pricing endpoint (see pricingApi.ts), which estimates a
+    // Pulumi Cloud monthly bill from usage for Intercom's Fin and other callers. Needs no secrets
+    // or other config; see pricing-api/README.md.
+    enablePricingApi: stackConfig.getBoolean("enablePricingApi") || false,
 
     // supportRedirectDomain is a retired hostname (e.g. support.pulumi.com) permanently redirected to the
     // support-request form at /support/new/ via a dedicated CloudFront distribution — see supportRedirect.ts.
@@ -1203,39 +1203,25 @@ if (config.enableSupportForm) {
     });
 }
 
-// The pricing calculator API (its own stack; see infrastructure/pricing-calculator-api),
-// served at /api/pricing. Additive and fully optional — when pricingApiStack is unset,
-// nothing here runs and the distribution is unchanged.
-//
-// Unlike /api/support there's no origin secret: the handler only does arithmetic, has
-// no secrets or side effects, and its Function URL is meant to stay directly callable.
-// Requests through this path still get the WAF's per-IP rate limit (the link-checker
-// exemption excludes /api/), and the Lambda's reserved concurrency caps the rest.
+// The pricing estimate endpoint (see pricingApi.ts). Additive and fully optional —
+// dev stacks and PR previews without enablePricingApi get no origin or behavior.
+// Requests through it get the WAF's per-IP rate limit (the link-checker exemption
+// excludes /api/), and the Lambda's reserved concurrency caps the rest.
 const pricingApiOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const pricingApiBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+let pricingApi: PricingApi | undefined;
 
-if (config.pricingApiStack) {
-    const pricingApiStack = new pulumi.StackReference(config.pricingApiStack);
-    const pricingApiOriginId = "pricing-calculator-api";
+if (config.enablePricingApi) {
+    pricingApi = new PricingApi("pricing-api");
 
-    pricingApiOrigins.push({
-        originId: pricingApiOriginId,
-        // Function URLs are "https://<id>.lambda-url.<region>.on.aws/";
-        // CloudFront wants just the hostname.
-        domainName: pricingApiStack.getOutput("url").apply(url => new URL(url).hostname),
-        customOriginConfig: {
-            originProtocolPolicy: "https-only",
-            httpPort: 80,
-            httpsPort: 443,
-            originSslProtocols: ["TLSv1.2"],
-        },
-    });
+    pricingApiOrigins.push(pricingApi.getOrigin());
 
     // The estimate's inputs are query parameters on a GET, so every query string is
     // forwarded. Headers are a whitelist, as for /api/support: content-type for POST
     // bodies, plus the three CORS request headers the Function URL's own CORS config
     // needs to answer browser preflights. Host is dropped by construction, which Lambda
-    // Function URL origins require.
+    // Function URL origins require. The x-origin-verify secret is unaffected — it is an
+    // origin customHeaders entry (see PricingApi.getOrigin), added regardless of this policy.
     const pricingApiOriginRequestPolicy = new aws.cloudfront.OriginRequestPolicy("pricing-api-origin-request", {
         comment: "/api/pricing: forwards query strings, the content type, and CORS request headers.",
         cookiesConfig: { cookieBehavior: "none" },
@@ -1250,11 +1236,11 @@ if (config.pricingApiStack) {
 
     pricingApiBehaviors.push({
         ...baseCacheBehavior,
-        targetOriginId: pricingApiOriginId,
+        targetOriginId: "pricing-api",
         pathPattern: "/api/pricing*",
         // The API takes GET and POST, and CloudFront's only POST-capable set is all
-        // seven; the handler 405s the rest. Estimates are cheap and rates change on
-        // deploy, so nothing is cached.
+        // seven; the handler 405s the rest. Estimates are cheap and the rates can
+        // change hourly, so nothing is cached.
         allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
         cachedMethods: ["GET", "HEAD"],
         cachePolicyId: noCacheKeyPolicy.id,
@@ -1717,5 +1703,6 @@ export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
 export const wafWebAclArn = webAcl?.arn;
 export const supportFormFunctionName = supportForm?.getFunctionName();
+export const pricingApiFunctionName = pricingApi?.getFunctionName();
 export const supportRedirectDistributionDomain = supportRedirect?.getDistributionDomainName();
 export const readme = fs.readFileSync("./README.md").toString();

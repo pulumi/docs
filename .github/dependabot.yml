@@ -134,28 +134,6 @@ updates:
     commit-message:
       prefix: "deps(versioned-docs)"
 
-  # The pricing calculator API behind /api/pricing: a separate Pulumi program
-  # with its own yarn.lock, like versioned-docs above.
-  - package-ecosystem: "npm"
-    directory: "/infrastructure/pricing-calculator-api"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 1
-    groups:
-      all-dependencies:
-        patterns: ["*"]
-      security:
-        applies-to: security-updates
-        patterns: ["*"]
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
-    labels: ["dependencies"]
-    commit-message:
-      prefix: "deps(pricing-calculator-api)"
-
   # snippet-sweep. The repo's only package-lock.json; everything else is yarn.
   - package-ecosystem: "npm"
     directory: "/scripts/snippet-sweep"

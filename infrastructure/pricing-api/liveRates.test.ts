@@ -11,7 +11,7 @@ import { LivePricing, parseLivePricing } from "./livePricing";
 import { currentRates, RateCache, RefreshConfig, refreshConfigFromEnv } from "./liveRates";
 import { DEFAULT_RATES } from "./pricing";
 
-const snapshot = fs.readFileSync(path.join(__dirname, "../../src/testdata/pricing.md"), "utf8");
+const snapshot = fs.readFileSync(path.join(__dirname, "../../pricing-api/testdata/pricing.md"), "utf8");
 const changedPage = snapshot.replace("| IaC resource, per month | $0.1825 |", "| IaC resource, per month | $0.2 |");
 
 const config: RefreshConfig = { url: "https://example.test/pricing.md", ttlMs: 60_000, fetchTimeoutMs: 1000 };
@@ -40,24 +40,24 @@ function quietly<T>(fn: () => Promise<T>): Promise<T> {
     });
 }
 
-test("uses the deployed rates when refresh is disabled", async () => {
+test("uses the built-in rates when refresh is disabled", async () => {
     const { calls, fetchPricing } = fakeFetch({ markdown: changedPage });
-    const result = await currentRates({ source: "deployed" }, DEFAULT_RATES, { ...config, ttlMs: 0 }, 0, fetchPricing);
-    assert.strictEqual(result.source, "deployed");
+    const result = await currentRates({ source: "built-in" }, DEFAULT_RATES, { ...config, ttlMs: 0 }, 0, fetchPricing);
+    assert.strictEqual(result.source, "built-in");
     assert.strictEqual(result.rates, DEFAULT_RATES);
     assert.strictEqual(calls.length, 0);
 });
 
 test("picks up a changed price from the page", async () => {
     const { fetchPricing } = fakeFetch({ markdown: changedPage });
-    const result = await quietly(() => currentRates({ source: "deployed" }, DEFAULT_RATES, config, 0, fetchPricing));
+    const result = await quietly(() => currentRates({ source: "built-in" }, DEFAULT_RATES, config, 0, fetchPricing));
     assert.strictEqual(result.source, "live");
     assert.strictEqual(result.rates.editions.essentials.iac_resource_month, 0.2);
     assert.strictEqual(result.refreshedAt, 0);
 });
 
 test("reads the page at most once per TTL", async () => {
-    const cache: RateCache = { source: "deployed" };
+    const cache: RateCache = { source: "built-in" };
     const { calls, fetchPricing } = fakeFetch({ markdown: snapshot });
     await currentRates(cache, DEFAULT_RATES, config, 0, fetchPricing);
     await currentRates(cache, DEFAULT_RATES, config, 59_999, fetchPricing);
@@ -66,11 +66,11 @@ test("reads the page at most once per TTL", async () => {
     assert.strictEqual(calls.length, 2);
 });
 
-test("keeps the deployed rates when the page can't be read", async () => {
-    const cache: RateCache = { source: "deployed" };
+test("keeps the built-in rates when the page can't be read", async () => {
+    const cache: RateCache = { source: "built-in" };
     const { calls, fetchPricing } = fakeFetch({ error: "GET returned 503" });
     const result = await quietly(() => currentRates(cache, DEFAULT_RATES, config, 0, fetchPricing));
-    assert.strictEqual(result.source, "deployed");
+    assert.strictEqual(result.source, "built-in");
     assert.strictEqual(result.rates, DEFAULT_RATES);
     // A failing page isn't retried on every request.
     await quietly(() => currentRates(cache, DEFAULT_RATES, config, 1000, fetchPricing));
@@ -78,7 +78,7 @@ test("keeps the deployed rates when the page can't be read", async () => {
 });
 
 test("keeps the last good rates when the page stops parsing", async () => {
-    const cache: RateCache = { source: "deployed" };
+    const cache: RateCache = { source: "built-in" };
     const page: { markdown?: string; error?: string } = { markdown: changedPage };
     const { fetchPricing } = fakeFetch(page);
     await quietly(() => currentRates(cache, DEFAULT_RATES, config, 0, fetchPricing));
@@ -96,7 +96,7 @@ test("logs a failed refresh with the type the alarm matches", async () => {
     const { error } = console;
     console.error = (line: string) => lines.push(line);
     try {
-        await currentRates({ source: "deployed" }, DEFAULT_RATES, config, 0, fetchPricing);
+        await currentRates({ source: "built-in" }, DEFAULT_RATES, config, 0, fetchPricing);
     } finally {
         console.error = error;
     }

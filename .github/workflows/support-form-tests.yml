@@ -1,6 +1,8 @@
 name: Support form tests
 
-# Runs the unit suites for the support form -- both halves. The server suite
+# Runs the unit suites for the support form -- both halves -- and for the
+# /api/pricing endpoint (infrastructure/pricing-api/), which shares the support
+# form's shape: a Lambda behind a Function URL in the same Pulumi program. The server suite
 # covers the /api/support Lambda (payload validation, the handler's status
 # paths, the Intercom client); the client suite drives theme/src/ts/
 # support-form.ts against jsdom (draft recovery, query-param prefill,
@@ -38,10 +40,6 @@ on:
     paths:
       - 'infrastructure/**'
       - '!infrastructure/versioned-docs/**'
-      # Excluded for the same reason as versioned-docs: a separate Pulumi
-      # program this job never compiles. pricing-calculator-api-tests.yml
-      # covers it.
-      - '!infrastructure/pricing-calculator-api/**'
       # The shared "did every suite actually run" guard, used by both halves.
       - 'scripts/check-test-suites-compiled.js'
       - 'theme/src/ts/support-form.ts'
@@ -107,10 +105,16 @@ jobs:
           set -o pipefail
           yarn --cwd theme test-support-form 2>&1 | tee /tmp/support-form-client-tests.log
 
-      - name: Assert both suites actually ran
+      - name: Run pricing API suite
         shell: bash
         run: |
-          for suite in server:/tmp/support-form-tests.log client:/tmp/support-form-client-tests.log; do
+          set -o pipefail
+          yarn --cwd infrastructure test-pricing-api 2>&1 | tee /tmp/pricing-api-tests.log
+
+      - name: Assert every suite actually ran
+        shell: bash
+        run: |
+          for suite in server:/tmp/support-form-tests.log client:/tmp/support-form-client-tests.log pricing-api:/tmp/pricing-api-tests.log; do
             name=${suite%%:*}
             log=${suite#*:}
             count=$(grep -oP '^# tests \K\d+|^ℹ tests \K\d+' "$log" | tail -1)

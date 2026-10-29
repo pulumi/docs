@@ -1260,9 +1260,8 @@ To reproduce a failure locally: `ONLY_TEST="program-name" ./scripts/programs/tes
 | Workflow | Runs when a PR touches | What it does |
 |----------|------------------------|--------------|
 | `review-pipeline-tests.yml` | `scripts/content-review/`, `scripts/blog-review/`, `scripts/review-v3/`, `.claude/commands/docs-review/scripts/`, `.github/review-routing.yml`, and a few related paths | `make test-review-pipeline` |
-| `support-form-tests.yml` | `infrastructure/**` (except `versioned-docs/` and `pricing-calculator-api/`), the support form TypeScript and page | Compiles and runs the support form and infrastructure test suites |
+| `support-form-tests.yml` | `infrastructure/**` (except `versioned-docs/`), the support form TypeScript and page | Compiles and runs the support form, pricing API, and infrastructure test suites |
 | `versioned-docs-check.yml` | `infrastructure/versioned-docs/**` | Typechecks the versioned-docs Pulumi program |
-| `pricing-calculator-api-tests.yml` | `infrastructure/pricing-calculator-api/**` | Lints, compiles, and runs the pricing calculator API test suite |
 
 If you add a script to a review pipeline outside the paths above, add its path to `review-pipeline-tests.yml`.
 
@@ -1549,9 +1548,8 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `pr-closed.yml` | PR checks | PR closed | Delete preview buckets |
 | `scheduled-test.yml` | PR checks | Pull request, daily, manual | Example program tests |
 | `review-pipeline-tests.yml` | PR checks | Pull request (paths) | Review pipeline test suites |
-| `support-form-tests.yml` | PR checks | Pull request (paths) | Support form and infra tests |
+| `support-form-tests.yml` | PR checks | Pull request (paths) | Support form, pricing API, and infra tests |
 | `versioned-docs-check.yml` | PR checks | Pull request (paths) | Typecheck the versioned-docs program |
-| `pricing-calculator-api-tests.yml` | PR checks | Pull request (paths) | Pricing calculator API tests |
 | `staging-deploy-auto.yml` | PR checks | Pull request | Staging deploy for infra PRs |
 | `staging-status.yml` | PR checks | Every 10 min, after testing deploy, manual | Staging commit status and Sentinel poke |
 | `label-dependabot.yml` | PR checks | Pull request, manual | Dependabot labels and auto-merge |
@@ -3640,7 +3638,7 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 
 **Ecosystems:**
 
-- npm — root, `/theme`, `/theme/stencil`, `/infrastructure`, `/infrastructure/versioned-docs`, `/infrastructure/pricing-calculator-api`, `/scripts/snippet-sweep`
+- npm — root, `/theme`, `/theme/stencil`, `/infrastructure`, `/infrastructure/versioned-docs`, `/scripts/snippet-sweep`
 - GitHub Actions
 - pip — `/scripts/python`, `/scripts/image-borders`, `/tools/pydocgen`. (The root `Pipfile` declares no packages; it only pins `python_version`.) **Only `/tools/pydocgen` is expected to produce updates today**: it is the sole directory with real version constraints (`sphinx >=7.1,<7.2`) and a `Pipfile.lock`. The other two pin every package as `"*"` and ship no lock, so there is no resolved version for Dependabot to bump or to match against an advisory range — the same "matches nothing" failure as the old `/scripts` entry, one level subtler. Committing a `Pipfile.lock` for those two directories is what would make them live.
 - devcontainers — `.devcontainer/devcontainer.json`
