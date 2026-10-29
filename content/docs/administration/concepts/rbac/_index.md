@@ -15,26 +15,26 @@ menu:
     identifier: administration-concepts-rbac
 ---
 
-Role-Based Access Control (RBAC) in Pulumi Cloud controls who can access which resources in your organization and what actions they can take. You compose access from reusable building blocks — scopes, permission sets, and roles — and assign it to users, teams, and machine tokens. [Organization-wide role settings](/docs/administration/concepts/rbac/roles#organization-wide-role-settings) establish the baseline permissions that every member receives by default.
+Role-Based Access Control (RBAC) in Pulumi Cloud controls who can access which resources in your organization and what actions they can take. You compose access from reusable building blocks — scopes, permission sets, and roles — and assign it to users, teams, and machine tokens.
 
 {{% notes type="info" %}}
-Pulumi Cloud's configurable RBAC features — custom roles, custom permission sets, teams, and tag-based (ABAC) rules — are only available in the Pulumi Pro or Enterprise editions. The built-in roles (Admin, Member, and Billing Manager) and [organization-wide role settings](/docs/administration/concepts/rbac/roles#organization-wide-role-settings) are available in all editions, including Essentials. To learn more, see the [pricing page](/pricing/).
+Pulumi Cloud's configurable RBAC features — custom roles, custom permission sets, teams, and tag-based (ABAC) rules — are only available in the Pulumi Pro or Enterprise editions. The built-in roles (Reader, Builder, Maintainer, Admin, and Billing Manager) are available in all editions, including Essentials. To learn more, see the [pricing page](/pricing/).
 {{% /notes %}}
 
 This model lets you:
 
 - Define precise access levels for each type of resource.
 - Reuse permission sets and roles instead of configuring access one resource at a time.
-- Set organization-wide defaults that every member inherits through the built-in Member role.
+- Choose a [default role](/docs/administration/concepts/rbac/default-roles/) that every member gets unless you give them another one.
 - Enforce least-privilege access across the organization.
 
 ## Where roles apply
 
 Roles apply to these kinds of principals in Pulumi Cloud:
 
-- **Users**: Each organization member has exactly one organization role (Admin, Member, Billing Manager, or a custom role).
+- **Users**: Each organization member has exactly one organization role: the organization's default role, another built-in role, or a custom role.
 - **[Teams](/docs/administration/concepts/rbac/teams/)**: A team can be granted access two ways — through **roles** and through **entity access** granted directly on specific stacks, environments, and cloud accounts (outside of any role). Members of a team receive the union of the team's roles, its direct entity access grants, and their own user role.
-- **[Team tokens](/docs/administration/concepts/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team — they are not assigned a role directly — and they also inherit the organization's default Member permissions configured in [Organization-wide role settings](/docs/administration/concepts/rbac/roles#organization-wide-role-settings).
+- **[Team tokens](/docs/administration/concepts/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team — they are not assigned a role directly — and they also inherit the baseline [permissions for tokens without a role](/docs/administration/concepts/access-tokens/#organization-wide-role-settings).
 - **[Organization access tokens](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token)**: Machine tokens that are assigned exactly one role defining the token's permissions across the organization.
 
 ## How permissions accumulate for users
@@ -49,7 +49,7 @@ For example, a member who belongs to two teams accumulates the permissions of th
 
 ```mermaid
 flowchart LR
-    UR["User role<br/>(e.g. Member)"] --> EFF["Effective permissions<br/>(union of all grants)"]
+    UR["User role<br/>(e.g. Builder)"] --> EFF["Effective permissions<br/>(union of all grants)"]
     TA["Team A roles<br/>+ entity access"] --> EFF
     TB["Team B roles<br/>+ entity access"] --> EFF
     CG["Creator grants<br/>(Stack Admin on<br/>stacks they create)"] --> EFF
@@ -57,7 +57,7 @@ flowchart LR
 
 ### User role
 
-Every member of a Pulumi organization has a user role — a built-in role (Admin, Member, or Billing Manager) or a custom role. New members will receive the specified default role for the organization.
+Every member of a Pulumi organization has a user role: a built-in role such as Builder, Admin, or Billing Manager, or a custom role. Members follow the organization's [default role](/docs/administration/concepts/rbac/default-roles/) unless an admin assigns them another one.
 
 ### Team roles and entity access grants
 
