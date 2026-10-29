@@ -8,7 +8,7 @@
 series:
   - slug: "faster-pulumi-deployments"
     title: "Faster Pulumi deployments"
-    description: "Reduce deployment setup time across environments with dependency caches, compiled Go programs, versioned plugins, and prebuilt images. Supply configuration at runtime through Git and Pulumi ESC."
+    description: "Deploy reusable infrastructure across hundreds of AWS accounts with less repeated preparation. Build programs and dependencies centrally, package tools and plugins in images, and use caches while keeping each environment configurable through stack settings and Pulumi ESC."
     prefix: "Faster Pulumi deployments, part "
   - slug: "neo-things"
     title: "Things You Can Do With Neo"

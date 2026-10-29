@@ -20,15 +20,19 @@ social:
     bluesky:
 ---
 
-If you use one Pulumi program to provision many environments, you may spend considerable deployment time preparing code that has not changed. Each runner needs the program's dependencies and provider plugins, and a Go program normally needs to be compiled before it runs. Those steps are necessary somewhere in the process, but repeating them for every stack does not necessarily produce anything new.
+Imagine you are a platform engineer responsible for infrastructure deployments across hundreds of AWS accounts. Your team has captured its infrastructure patterns in Pulumi components and template programs, with environment-specific values kept in stack configuration. Developers reuse those building blocks instead of designing and implementing the same infrastructure for every application. That investment is already saving development time and giving your organization a more consistent way to deploy infrastructure.
 
-Consider a platform that creates an environment for each customer. The customers need separate infrastructure and configuration, but they may all use exactly the same version of the program. Preparing that program once, then supplying each customer's configuration when it runs, avoids repeating work that is independent of the customer. The same reasoning applies to regional deployments and the promotion of one release through development, testing, and production.
+Now you want to improve the deployment process itself. Each environment may use the same program revision, yet its runner still downloads dependencies, installs provider plugins, and compiles code before managing any resources. Across hundreds of accounts, that repeated preparation consumes runner time and repeats dependency retrieval for code you have already built and tested.
 
 <!--more-->
 
-Go supports this separation because compilation does not prevent a program from reading configuration at runtime. The executable contains the program and its SDK dependencies; Pulumi supplies the selected stack's configuration when it starts the program. Pulumi ESC can manage those values and credentials separately from the build. Provider plugins need their own preparation, since compiling a provider SDK into the program does not include the executable that performs provider operations.
+The goal is to make deployments faster and more repeatable while reducing runner costs and improving control over your dependency supply chain. A centralized build can establish which dependency versions belong to a release and produce artifacts that every environment reuses. With pinned versions and controlled publication, you can identify and verify what will execute instead of reconstructing the execution environment separately for every stack. Caching can reduce the preparation that remains, especially for programs that continue to install dependencies at deployment time.
 
-This series develops that approach through six practical changes:
+This tutorial series develops that process with Pulumi Deployments and Pulumi ESC. It covers building Go programs and their SDK dependencies centrally, packaging matching provider plugins, and distributing the executable release in a container image. It also covers persistent caches for customer-managed runners, including programs written in other languages. Each stage builds on the previous one so you can measure whether the change improves your workload.
+
+The program remains configurable throughout. Compiling a Go program includes its SDK dependencies, but Pulumi still supplies the selected stack's configuration when the executable runs. ESC can manage those values and credentials separately from the build, allowing the same tested artifact to serve different accounts and environments. Provider plugins remain separate executables, so they must be prepared alongside the program and matched to the SDK versions it uses.
+
+The six parts follow this sequence:
 
 1. **Measure before optimizing.** Establish a baseline and test dependency caching in this post.
 1. **[Build each program revision once](/blog/precompile-pulumi-go-programs/).** Reuse the executable across stacks while keeping configuration specific to each environment.
