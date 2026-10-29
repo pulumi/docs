@@ -68,7 +68,7 @@ This guide uses Python's built-in [`unittest`](https://docs.python.org/3/library
 This guide uses the built-in `go test` command, along with [testify](https://github.com/stretchr/testify) for assertions:
 
 ```bash
-go get github.com/stretchr/testify
+go get github.com/stretchr/testify/assert
 ```
 
 {{% /choosable %}}
@@ -86,6 +86,12 @@ dotnet add package FluentAssertions
 dotnet add package Microsoft.NET.Test.Sdk
 dotnet add package Pulumi
 dotnet add package Pulumi.Aws
+```
+
+`Microsoft.NET.Test.Sdk` generates its own `Main` method, which replaces your program's entry point, so `pulumi up` would no longer run your program. To keep your program's entry point, add this line to a `<PropertyGroup>` in your `.csproj`:
+
+```xml
+<GenerateProgramFile>false</GenerateProgramFile>
 ```
 
 {{% /choosable %}}
@@ -304,7 +310,7 @@ namespace UnitTesting
 {{% /choosable %}}
 {{% choosable language "java" %}}
 
-{{< code-filename file="Ec2Tests.java" />}}
+{{< code-filename file="MyMocks.java" />}}
 
 ```java
 package myproject;
@@ -322,6 +328,10 @@ class MyMocks implements Mocks {
     @Override
     public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
         var state = new HashMap<>(args.inputs);
+        if ("aws:ec2/securityGroup:SecurityGroup".equals(args.type)) {
+            // Mock output properties that may be used in tests
+            state.putIfAbsent("name", args.name + "-sg");
+        }
         return CompletableFuture.completedFuture(
             ResourceResult.of(Optional.of(args.name + "_id"), state)
         );
@@ -796,8 +806,16 @@ The structure and scaffolding look like any ordinary JUnit 5 test class. Call `P
 ```java
 package myproject;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.SecurityGroup;
 import com.pulumi.test.PulumiTest;
 import com.pulumi.test.TestOptions;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -902,12 +920,12 @@ void instanceMustHaveNameTag() {
     var instances = result.resources().stream()
         .filter(r -> r instanceof Instance)
         .map(r -> (Instance) r)
-        .toList();
+        .collect(Collectors.toList());
 
     assertFalse(instances.isEmpty(), "EC2 Instance not found");
     for (var instance : instances) {
         var urn = PulumiTest.extractValue(instance.urn());
-        var tags = PulumiTest.extractValue(instance.tags());
+        var tags = PulumiTest.extractValue(instance.tags()).orElse(null);
         assertNotNull(tags, "Server " + urn + " must have tags");
         assertTrue(tags.containsKey("Name"), "Server " + urn + " must have a Name tag");
     }
@@ -965,9 +983,9 @@ class TestingWithMocks(unittest.IsolatedAsyncioTestCase):
 // check 2: Instances must not use an inline userData script.
 pulumi.All(infra.server.URN(), infra.server.UserData).ApplyT(func(all []interface{}) error {
 	urn := all[0].(pulumi.URN)
-	userData := all[1].(string)
+	userData := all[1].(*string)
 
-	assert.Emptyf(t, userData, "illegal use of userData on server %v", urn)
+	assert.Nilf(t, userData, "illegal use of userData on server %v", urn)
 	wg.Done()
 	return nil
 })
@@ -1013,7 +1031,7 @@ void instanceMustNotUseInlineUserData() {
 
     assertNotNull(instance, "EC2 Instance not found");
     var urn = PulumiTest.extractValue(instance.urn());
-    var userData = PulumiTest.extractValue(instance.userData());
+    var userData = PulumiTest.extractValue(instance.userData()).orElse(null);
     assertNull(userData, "Illegal use of userData on server " + urn);
 }
 ```
@@ -1128,13 +1146,14 @@ void securityGroupMustNotHaveSshOpenToInternet() {
         .runTest(App::stack);
 
     for (var resource : result.resources()) {
-        if (resource instanceof SecurityGroup group) {
+        if (resource instanceof SecurityGroup) {
+            var group = (SecurityGroup) resource;
             var urn = PulumiTest.extractValue(group.urn());
             var ingress = PulumiTest.extractValue(group.ingress());
             if (ingress != null) {
                 for (var rule : ingress) {
-                    var fromPort = PulumiTest.extractValue(rule.fromPort());
-                    var cidrBlocks = PulumiTest.extractValue(rule.cidrBlocks());
+                    var fromPort = rule.fromPort();
+                    var cidrBlocks = rule.cidrBlocks();
                     boolean sshOpen = fromPort != null && fromPort == 22
                         && cidrBlocks != null && cidrBlocks.contains("0.0.0.0/0");
                     assertFalse(sshOpen, "Illegal SSH port 22 open to the internet "
@@ -1162,9 +1181,10 @@ npx mocha --require tsx ec2tests.ts
 
 {{% /choosable %}}
 {{% choosable language "python" %}}
-Run the Python tests with:
+Run the Python tests from your project's virtual environment. Projects created with `pulumi new` keep it in the `venv` directory:
 
 ```bash
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 python -m unittest
 ```
 
@@ -1246,7 +1266,7 @@ FAILED (failures=3)
         	Test:       	TestInfrastructure
         	Messages:   	illegal use of userData on server urn:pulumi:stack::project::aws:ec2/instance:Instance::web-server-www
 ...
-        	Error:      	"map[]" does not contain "Name"
+        	Error:      	map[string]string(nil) does not contain "Name"
         	Test:       	TestInfrastructure
         	Messages:   	missing a Name tag on server urn:pulumi:stack::project::aws:ec2/instance:Instance::web-server-www
 FAIL	testing-unit-go	0.501s
@@ -1256,32 +1276,31 @@ FAIL	testing-unit-go	0.501s
 {{% choosable language "csharp" %}}
 
 ```output
-X InstanceHasNameTag [387ms]
+  Failed InstanceHasNameTag [112 ms]
   Error Message:
    Expected tags not to be <null> because Tags are not defined.
-
-X InstanceMustNotUseInlineUserData [17ms]
+...
+  Failed InstanceMustNotUseInlineUserData [10 ms]
   Error Message:
    Expected tags to be <null>, but found "#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &".
-
-X SecurityGroupMustNotHaveSshPortsOpenToInternet [11ms]
+...
+  Failed SecurityGroupMustNotHaveSshPortsOpenToInternet [5 ms]
   Error Message:
-   Expected boolean to be false because Illegal SSH port 22 open to the internet (CIDR 0.0.0.0/0) on group urn:pulumi:stack::project::pulumi:pulumi:Stack$aws:ec2/securityGroup:SecurityGroup::web-secgrp, but found True.
-
-Test Run Failed.
-Total tests: 3
-     Failed: 3
+   Expected (rule.FromPort == 22 && rule.CidrBlocks.Any(b => b == "0.0.0.0/0")) to be False because Illegal SSH port 22 open to the internet (CIDR 0.0.0.0/0) on group urn:pulumi:stack::project::pulumi:pulumi:Stack$aws:ec2/securityGroup:SecurityGroup::web-secgrp, but found True.
+...
+Failed!  - Failed:     3, Passed:     0, Skipped:     0, Total:     3, Duration: 126 ms - unit-testing-webserver-csharp.dll (net8.0)
 ```
 
 {{% /choosable %}}
 {{% choosable language "java" %}}
 
 ```output
+[ERROR] Failures:
+[ERROR]   Ec2Tests.instanceMustHaveNameTag:42 Server urn:...::web-server-www must have tags ==> expected: not <null>
+[ERROR]   Ec2Tests.instanceMustNotUseInlineUserData:65 Illegal use of userData on server urn:...::web-server-www ==> expected: <null> but was: <#!/bin/bash ...>
+[ERROR]   Ec2Tests.securityGroupMustNotHaveSshOpenToInternet:89 Illegal SSH port 22 open to the internet (CIDR 0.0.0.0/0) on group urn:...::web-secgrp ==> expected: <false> but was: <true>
 [ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0
-[ERROR] Ec2Tests.instanceMustHaveNameTag -- AssertionFailedError: Server ... must have a Name tag
-[ERROR] Ec2Tests.instanceMustNotUseInlineUserData -- AssertionFailedError: Illegal use of userData on server ...
-[ERROR] Ec2Tests.securityGroupMustNotHaveSshOpenToInternet -- AssertionFailedError: Illegal SSH port 22 open to the internet (CIDR 0.0.0.0/0) on group ...
-[ERROR] BUILD FAILURE
+[INFO] BUILD FAILURE
 ```
 
 {{% /choosable %}}
@@ -1410,12 +1429,18 @@ func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
 {{% /choosable %}}
 {{% choosable language "csharp" %}}
 
-{{< code-filename file="WebserverStack.cs" />}}
+{{< code-filename file="Program.cs" />}}
 
 ```csharp
 using Pulumi;
 using Pulumi.Aws.Ec2;
 using Pulumi.Aws.Ec2.Inputs;
+using System.Threading.Tasks;
+
+class Program
+{
+    static Task<int> Main() => Deployment.RunAsync<WebserverStack>();
+}
 
 public class WebserverStack : Stack
 {
@@ -1470,6 +1495,7 @@ import com.pulumi.aws.ec2.inputs.GetAmiArgs;
 import com.pulumi.aws.ec2.inputs.GetAmiFilterArgs;
 import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
 import com.pulumi.aws.ec2.outputs.GetAmiResult;
+import java.util.List;
 import java.util.Map;
 
 public class App {
@@ -1497,7 +1523,7 @@ public class App {
 
         var server = new Instance("web-server-www", InstanceArgs.builder()
             .instanceType("t2.micro")
-            .securityGroups(group.name())  // reference the group object above
+            .securityGroups(group.name().applyValue(List::of))  // reference the group object above
             .ami(ami.applyValue(GetAmiResult::id))
             .tags(Map.of("Name", "webserver")) // name tag
             .build());
@@ -1512,14 +1538,14 @@ Then rerun the tests:
 {{% choosable language "typescript" %}}
 
 ```output
-Infrastructure
+  Infrastructure
     #server
-      ✓ must have a name tag
-      ✓ must not use userData (use an AMI instead)
+      ✔ must have a name tag
+      ✔ must not use userData (use an AMI instead)
     #group
-      ✓ must not open port 22 (SSH) to the internet
+      ✔ must not open port 22 (SSH) to the internet
 
-  3 passing (454ms)
+  3 passing (108ms)
 ```
 
 {{% /choosable %}}
@@ -1544,9 +1570,7 @@ ok  	testing-unit-go	0.704s
 {{% choosable language "csharp" %}}
 
 ```output
-Test Run Successful.
-Total tests: 3
-     Passed: 3
+Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 94 ms - unit-testing-webserver-csharp.dll (net8.0)
 ```
 
 {{% /choosable %}}
