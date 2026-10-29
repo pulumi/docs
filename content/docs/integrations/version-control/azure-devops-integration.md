@@ -51,7 +51,7 @@ Authorization is a single Microsoft Entra ID flow that grants Pulumi two sets of
 The Microsoft Graph consent requires the `Application.ReadWrite.All` permission. This is an admin-consented permission, so if your tenant restricts user consent, an Entra ID administrator must approve it before the integration can be created.
 {{% /notes %}}
 
-Once the integration exists, Pulumi authenticates to Azure DevOps for deployments using Microsoft Entra ID **federated credentials** rather than a stored access token, so no long-lived secret is kept. This is configured automatically when you connect the integration — there is nothing to set up, and no issuer, subject, or audience for you to supply.
+Once the integration exists, Pulumi authenticates to Azure DevOps for deployments using Microsoft Entra ID **federated credentials** rather than a stored access token, so no long-lived secret is kept. When Pulumi creates the app for you, it configures the credential too. If you [connect with an app you manage](#connect-with-an-app-you-manage), your identity team adds the credential to that app.
 
 #### What Pulumi creates in your tenant and project
 
@@ -72,6 +72,36 @@ In the connected Azure DevOps project, Pulumi creates a group named **Pulumi Ser
 During setup the service principal is temporarily added to **Project Administrators** so it can create that group and assign its permissions, then removed from Project Administrators once the scoped group is in place.
 
 Deleting the integration removes the service hooks, the service principal and its group, and the Entra ID application registration.
+
+### Connect with an app you manage
+
+The standard setup creates the Entra ID app registration for you, which needs the `Application.ReadWrite.All` consent described above. If your organization doesn't grant that, your identity team can create the app instead. You then connect the integration to their app, and Pulumi never asks for Microsoft Graph access.
+
+Before you start, you need:
+
+- An Entra ID app registration with a service principal, created by your identity team.
+- An account in the app's Entra ID tenant that you use to sign in to Azure DevOps.
+- Membership in **Project Administrators** for the Azure DevOps project. You don't need permission to create or manage Entra ID apps.
+
+To connect:
+
+1. Navigate to **Settings** > **Version control** and start the Azure DevOps setup.
+1. Under **Use an app your identity team manages**, select **Set up with an app you manage**, then sign in to Azure DevOps.
+1. Select the Azure DevOps organization and project, configure your [integration settings](#integration-settings), and select **Next**.
+1. Copy the federated credential values the wizard shows. Your identity team adds a federated credential to the app with exactly these values. In the Microsoft Entra admin center, this is the **Other issuer** scenario.
+1. Enter the app's **Application (client) ID**, a GUID from the app registration's overview page, and select **Connect**.
+
+The values are specific to your project and follow this pattern:
+
+| Field | Value |
+|---|---|
+| Issuer | Your Pulumi Cloud API URL followed by `/oidc`, for example `https://api.pulumi.com/oidc` |
+| Subject identifier | `pulumi:ado:org:<your-pulumi-org>:project:<azure-devops-project-id>` |
+| Audience | `azure:<your-pulumi-org>` |
+
+Pulumi checks the credential by signing in as the app. It then sets up the app's service principal in Azure DevOps the same way it does for an app it creates: it adds the service principal to the organization, creates the **Pulumi Service (`<your-pulumi-org>`)** group, and registers the service hooks.
+
+Deleting the integration never deletes the app, its service principal, or its federated credential. Pulumi removes only the Azure DevOps access it added. Access the service principal had before you connected stays in place. Pulumi also keeps the service principal in the Azure DevOps organization while another connected project uses the same app.
 
 ### Individual user setup
 
@@ -216,4 +246,5 @@ If deployments aren't triggering on push or pull request events:
 |---|---|
 | "Azure DevOps not enabled for tenant" (AADSTS650052) | An Entra ID administrator must enable Azure DevOps access for your tenant |
 | Consent error mentioning `Application.ReadWrite.All` | An Entra ID administrator must grant consent for the Microsoft Graph permission on the Pulumi application |
+| "Could not sign in as application" when connecting an app you manage | Check that the app's federated credential uses exactly the issuer, subject identifier, and audience the wizard shows, and that you signed in to Azure DevOps with an account in the tenant that owns the app |
 | "Remove all integrations before disconnecting" | Delete all Azure DevOps integrations before disconnecting your Azure DevOps identity |
