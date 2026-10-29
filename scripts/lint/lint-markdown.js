@@ -23,29 +23,6 @@ const BLOG_CATEGORIES = (function () {
     }
 })();
 
-const CUSTOMER_INDUSTRIES = (function () {
-    try {
-        const p = path.resolve(__dirname, "../../data/customers_industries.yaml");
-        const doc = yaml.load(fs.readFileSync(p, "utf8"));
-        return (doc.industries || []).map(i => i.id);
-    } catch (e) {
-        console.warn(`Warning: could not load customer industries: ${e.message}`);
-        return [];
-    }
-})();
-
-const CUSTOMERS = (function () {
-    try {
-        const p = path.resolve(__dirname, "../../data/customers.yaml");
-        const doc = yaml.load(fs.readFileSync(p, "utf8"));
-        return Object.fromEntries((doc.customers || []).map(c => [c.id, c]));
-    } catch (e) {
-        console.warn(`Warning: could not load customers: ${e.message}`);
-        return {};
-    }
-})();
-const CUSTOMER_IDS = Object.keys(CUSTOMERS).sort();
-
 const EDITION_DATA = (function () {
     const empty = { editions: [], names: {}, features: {}, loadError: null };
     try {
@@ -133,10 +110,7 @@ function checkPageTitle(title, allowLongTitle) {
  *
  * @param {string} meta The meta description for a given page
  */
-function checkPageMetaDescription(meta, fullPath) {
-    if (fullPath && /[/\\]content[/\\]industry[/\\][^/\\]+[/\\]_index\.md$/.test(fullPath)) {
-        return null;
-    }
+function checkPageMetaDescription(meta) {
     if (!meta) {
         return "Missing meta description";
     } else if (typeof meta === "string") {
@@ -584,90 +558,6 @@ function checkBlogCategory(category, legacyCategories, fullPath) {
     }
 
     return null;
-}
-
-/**
- * checkCaseStudyIndustry validates the `industry:` front matter on case studies
- * against the closed set in data/case_study_industries.yaml. It applies ONLY to
- * individual case-study pages (content/customers/<slug>.md), not the section
- * index (_index.md) or any other content.
- *
- * Industry is REQUIRED and SINGULAR: every case study declares exactly one
- * `industry:` scalar value from the allowed set — a customer belongs to one
- * vertical. A list value, a missing value, or a value outside the set is an
- * error. `industry` is a dedicated Hugo taxonomy (see config.yml), so any value
- * generates a public term page at /customers/industry/<slug>/; a typo would
- * silently ship an orphan URL, which this guard prevents.
- *
- * @param {*} industry The `industry` front matter value.
- * @param {string} fullPath The absolute path of the file being linted.
- */
-function checkCaseStudyIndustry(industry, fullPath) {
-    const isCaseStudy =
-        fullPath.includes("/content/customers/") && path.basename(fullPath) !== "_index.md";
-    if (!isCaseStudy) {
-        return null;
-    }
-
-    if (Array.isArray(industry)) {
-        return "Case study 'industry' must be a single scalar value, not a list (e.g. 'industry: security'). See data/customers_industries.yaml.";
-    }
-    if (!industry) {
-        return "Case study is missing a required 'industry' value. Add exactly one industry from data/customers_industries.yaml.";
-    }
-    if (!CUSTOMER_INDUSTRIES.includes(industry)) {
-        return `Invalid case-study industry value: '${industry}'. Allowed: ${CUSTOMER_INDUSTRIES.join(", ")}. See data/customers_industries.yaml.`;
-    }
-
-    return null;
-}
-
-function checkCustomerRef(obj, fullPath) {
-    const isCaseStudy =
-        fullPath.includes("/content/customers/") && path.basename(fullPath) !== "_index.md";
-    if (!isCaseStudy) {
-        return null;
-    }
-
-    const errors = [];
-    const RETIRED = {
-        customer_name: "name",
-        customer_url: "url",
-        customer_logo: "the <id>.svg logo file",
-        card_logo: "the <id>-on-dark.svg logo file",
-        logo_bg_color: "color",
-        logo_style: "the light/on-dark logo pair",
-        logo_size: "the logo file itself",
-    };
-    for (const [key, replacement] of Object.entries(RETIRED)) {
-        if (obj[key] !== undefined) {
-            errors.push(
-                `'${key}' is no longer read: ${replacement} comes from data/customers.yaml. Remove it and set 'customer: <id>'.`,
-            );
-        }
-    }
-
-    const customer = obj.customer;
-    if (Array.isArray(customer)) {
-        errors.push("Case study 'customer' must be a single scalar value, not a list (e.g. 'customer: snowflake').");
-    } else if (!customer) {
-        errors.push(
-            "Case study is missing a required 'customer' value. Add the id of an entry in data/customers.yaml (see the ADDING A CUSTOMER checklist there).",
-        );
-    } else if (!CUSTOMERS[customer]) {
-        const near = CUSTOMER_IDS.filter(id => id.includes(customer) || customer.includes(id));
-        errors.push(
-            near.length
-                ? `Unknown customer '${customer}'. Did you mean: ${near.join(", ")}? See data/customers.yaml.`
-                : `Unknown customer '${customer}'. Add an entry to data/customers.yaml (see the ADDING A CUSTOMER checklist there).`,
-        );
-    } else if (obj.industry && CUSTOMERS[customer].industry !== obj.industry) {
-        errors.push(
-            `Industry mismatch: this page says '${obj.industry}' but data/customers.yaml files '${customer}' under '${CUSTOMERS[customer].industry}'. Change one so they agree.`,
-        );
-    }
-
-    return errors.length > 0 ? errors.join(" ") : null;
 }
 
 /**
@@ -1265,47 +1155,6 @@ function checkChangelogAssets() {
     return errors;
 }
 
-function checkIndustryTermStubs() {
-    const dir = path.resolve(__dirname, "../../content/industry");
-    let present;
-    try {
-        present = fs
-            .readdirSync(dir, { withFileTypes: true })
-            .filter(e => e.isDirectory())
-            .map(e => e.name);
-    } catch (e) {
-        return [
-            {
-                path: "content/industry/",
-                errors: [
-                    {
-                        lineNumber: "Directory",
-                        ruleDescription: `content/industry/ does not exist, so no /customers/industry/<id>/ term page is generated. Add one _index.md stub per id in data/customers_industries.yaml.`,
-                    },
-                ],
-            },
-        ];
-    }
-
-    const expected = CUSTOMER_INDUSTRIES;
-    const missing = expected.filter(id => !present.includes(id));
-    const extra = present.filter(id => !expected.includes(id));
-    const errors = [];
-    if (missing.length > 0) {
-        errors.push({
-            lineNumber: "Directory",
-            ruleDescription: `Missing industry term stub(s): ${missing.join(", ")}. Add content/industry/<id>/_index.md for each, or drop the id from data/customers_industries.yaml — without a stub, /customers/industry/<id>/ 404s while the filter bar still links to it.`,
-        });
-    }
-    if (extra.length > 0) {
-        errors.push({
-            lineNumber: "Directory",
-            ruleDescription: `Industry term stub(s) with no entry in data/customers_industries.yaml: ${extra.join(", ")}. Add the industry there or delete the stub — a stub with no entry renders an untitled term page.`,
-        });
-    }
-    return errors.length > 0 ? [{ path: "content/industry/", errors }] : [];
-}
-
 /**
  * The Stencil chooser component, which is the single source of truth for which
  * chooser types exist and which option keys each one accepts. The lint check
@@ -1600,15 +1449,13 @@ function searchForMarkdown(paths) {
                 result.frontMatter[fullPath] = {
                     error: null,
                     title: checkPageTitle(obj.title, allowLongTitle),
-                    metaDescription: checkPageMetaDescription(obj.meta_desc, fullPath),
+                    metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
                     featureImageDimensions: checkFeatureImageDimensions(obj.feature_image, fullPath),
                     featureImageBackground: checkFeatureImageBackground(obj.feature_image, fullPath),
                     featureImageSoftware: checkFeatureImageSoftware(obj.feature_image, fullPath),
                     featureImageC2pa: checkFeatureImageC2pa(obj.feature_image, fullPath),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
-                    caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
-                    customerRef: checkCustomerRef(obj, fullPath),
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     eventSessions: checkEventSessions(obj, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
@@ -1762,18 +1609,6 @@ function groupLintErrorOutput(result) {
                     ruleDescription: frontMatterErrors.blogCategory,
                 });
             }
-            if (frontMatterErrors.caseStudyIndustry) {
-                lintErrors.push({
-                    lineNumber: "File Header",
-                    ruleDescription: frontMatterErrors.caseStudyIndustry,
-                });
-            }
-            if (frontMatterErrors.customerRef) {
-                lintErrors.push({
-                    lineNumber: "File Header",
-                    ruleDescription: frontMatterErrors.customerRef,
-                });
-            }
             if (frontMatterErrors.seriesConsistency) {
                 lintErrors.push({
                     lineNumber: "File Header",
@@ -1913,9 +1748,6 @@ const errors = groupLintErrorOutput(result);
 if (filesFromArgs.length === 0) {
     checkChangelogAssets().forEach(function (assetError) {
         errors.push(assetError);
-    });
-    checkIndustryTermStubs().forEach(function (stubError) {
-        errors.push(stubError);
     });
 }
 

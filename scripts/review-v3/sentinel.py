@@ -57,9 +57,13 @@ yet and that it soon will (`render_status_comment`). Only the ⛔ author-card
 strip stays enforcing-only — that one edits someone else's comment.
 
 `review:waived` is the break-glass: the check concludes success with a loud
-banner naming the waiving actor — except gate G4, which has no waiver (the
-proposal's "no waiver, no shortcut" for infra; the incident path when
-staging itself is broken is an admin-bypass merge, which rulesets log).
+banner naming the waiving actor, whatever is red — G4 included. G4 used to
+have no waiver, on the theory that the incident path when staging itself is
+broken is an admin-bypass merge. That left a PR whose staging deploy could
+not run (the testing workflow had been disabled, #22524) with no lever any
+non-admin could pull, and two humans with approvals stuck behind it. A
+waive is logged and names who applied it; that is the audit trail, and the
+gates still run and still block by default.
 
 "External contribution" means the head repo is a fork (or a deleted
 fork) — never the author's permission level: a GitHub App such as
@@ -188,6 +192,12 @@ LEGACY_PAGE_WRITERS = frozenset({BOT_LOGIN, "pulumi-bot"})
 # The workflow the staging lane dispatches, and the one G4 verifies against
 # directly when the commit status is missing. See `_staging_evidence`.
 STAGING_WORKFLOW_FILE = "testing-build-and-deploy.yml"
+# The PRODUCTION deploy, which sits next to the staging one in the Actions
+# sidebar with a near-identical name ("Build and deploy" vs "Build and
+# deploy testing"). G4's instructions name it only to warn people off it:
+# on #22524 someone looking for the staging deploy dispatched this one at an
+# unmerged branch, and only a manual cancel kept it from shipping.
+PRODUCTION_WORKFLOW_FILE = "build-and-deploy.yml"
 # A review slash command, like `/update-review`: it counts only at the start
 # of a line of the approving review's comment (command-gate.py's grammar,
 # restated here because this file runs from a sparse checkout of
@@ -367,6 +377,12 @@ class Gh:
             f"?head_sha={head_sha}&status=completed&per_page=100",
         ])
         return json.loads(out).get("workflow_runs") or []
+
+    def get_workflow_state(self, workflow_file: str) -> str:
+        """`active`, `disabled_manually`, `disabled_inactivity`, …"""
+        return self._run([
+            "api", f"repos/{self.repo}/actions/workflows/{workflow_file}", "--jq", ".state",
+        ]).strip()
 
     def patch_issue_comment(self, comment_id, body: str) -> None:
         self._run(
@@ -808,8 +824,8 @@ def _staging_evidence(gh: Gh, head_sha: str) -> str | None:
         # A commit status needs only push access to write:
         #   gh api repos/OWNER/REPO/statuses/SHA -f state=success \
         #     -f context=staging/pulumi-test-io
-        # …which made the one gate the config calls "no waiver, no shortcut"
-        # a one-line bypass. The run record below cannot be forged that way,
+        # …which made G4 a one-line bypass that, unlike a waive, nobody
+        # sees. The run record below cannot be forged that way,
         # and review-routing.yml already calls it "the authoritative one".
         # Keep the status as a fast path, but only from an identity that
         # could actually have run the deploy.
@@ -830,11 +846,84 @@ def _staging_evidence(gh: Gh, head_sha: str) -> str | None:
     return None
 
 
+def _last_staging_failure(gh: Gh, head_sha: str) -> str:
+    """The newest trusted `staging/pulumi-test-io` status at this head, as
+    a sentence, when it says the deploy failed or never started; else ''.
+
+    The sweep writes failure/error for a deploy that finished badly, and the
+    auto lane writes error for one it couldn't dispatch. Either way the
+    reason belongs on the G4 row, not one click away in a job log.
+    """
+    try:
+        statuses = gh.get_commit_statuses(head_sha)
+    except Exception:  # noqa: BLE001 — advice only; see _g4_red_message
+        return ""
+    for s in statuses:  # newest first
+        if s.get("context") != STAGING_STATUS_CONTEXT:
+            continue
+        if ((s.get("creator") or {}).get("login") or "") not in STAGING_STATUS_WRITERS:
+            continue
+        if s.get("state") not in ("failure", "error"):
+            return ""
+        desc = (s.get("description") or "staging deploy failed").rstrip(".").replace("|", "/")
+        url = s.get("target_url")
+        return f"**Last staging attempt: {desc}.**" + (f" ([details]({url}))" if url else "") + " "
+    return ""
+
+
+def _g4_red_message(gh: Gh, pr: dict, head_sha: str) -> str:
+    """What to do about a red G4, specific to why it can't be green.
+
+    The generic text promised "dispatched automatically — no action needed",
+    which was false for a day on #22524: the staging workflow had been
+    disabled, every automatic dispatch failed with a 422 the auto lane logs
+    only as a warning, and nobody could tell from here why the gate never
+    moved. So read the workflow's state and say so when it's off. A failed
+    read degrades to the generic text: this is advice, not the verdict.
+    """
+    branch = (pr.get("head") or {}).get("ref") or "<branch>"
+    # Author-controlled, and the row is one markdown table cell inside a
+    # code span: a backtick would end the span (and could carry an
+    # @mention out of it), a `|` would split the cell.
+    if "`" in branch or "|" in branch or "\n" in branch:
+        branch = "<branch>"
+    repo = ((pr.get("base") or {}).get("repo") or {}).get("full_name") or "pulumi/docs"
+    workflow_url = f"https://github.com/{repo}/actions/workflows/{STAGING_WORKFLOW_FILE}"
+    dispatch = f"`gh workflow run {STAGING_WORKFLOW_FILE} --ref {branch}`"
+    not_prod = (
+        f"Use [Build and deploy testing]({workflow_url}), never \"Build and deploy\" "
+        f"(`{PRODUCTION_WORKFLOW_FILE}`), which deploys production."
+    )
+    last = _last_staging_failure(gh, head_sha)
+    try:
+        state = gh.get_workflow_state(STAGING_WORKFLOW_FILE)
+    except Exception:  # noqa: BLE001 — see docstring
+        state = ""
+    if state and state != "active":
+        return last + (
+            f"This PR changes the deploy itself, and needs a successful staging deploy "
+            f"at `{head_sha[:9]}`, but **the staging workflow is disabled** "
+            f"([`{STAGING_WORKFLOW_FILE}`]({workflow_url}) is `{state}`), so no staging "
+            "deploy can run, automatic or manual. Someone usually disables it to keep a "
+            "branch build on pulumi-test.io, so check with them, then re-enable it "
+            f"(`gh workflow enable {STAGING_WORKFLOW_FILE}`) and dispatch it at this "
+            f"branch: {dispatch}. {not_prod}"
+        )
+    return last + (
+        f"This PR changes the deploy itself: no successful staging deploy at "
+        f"`{head_sha[:9]}`. One is dispatched automatically when such a PR opens or "
+        "pushes (`staging-deploy-auto.yml`), and a deploy that finishes is picked up "
+        "within ~10 minutes by `staging-status.yml`'s sweep, which re-runs this check. "
+        f"If it never ran or it failed, dispatch it at this branch: {dispatch}. "
+        f"{not_prod}"
+    )
+
+
 def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool, str]:
     """Is the waive label present AND applied by someone entitled to apply it?
 
-    The label alone is not the waive. A waive skips every gate but G4, so
-    the authority to apply one has to be at least the authority to approve
+    The label alone is not the waive. A waive skips every gate, so the
+    authority to apply one has to be at least the authority to approve
     something: the actor must be an ACTIVE member of a team named in
     `teams:` — any of them, not just the one this PR routes to. Scoping it
     to the required team would make a waive exactly as hard to get as the
@@ -1378,19 +1467,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         if witness:
             gates.append(Gate("G4 infra-evidence", "ok", witness))
         else:
-            gates.append(Gate(
-                "G4 infra-evidence", "red",
-                f"This PR changes the deploy itself: no successful staging "
-                f"deploy at `{head_sha[:9]}`. One is dispatched automatically "
-                "when such a PR opens or pushes (`staging-deploy-auto.yml`). A "
-                "deploy that has *finished* since this gate was last scored is "
-                "picked up within ~10 minutes by `staging-status.yml`'s sweep, "
-                "which re-runs this check — no action needed. If it never ran "
-                "or it failed, re-run the \"Build and deploy testing\" run, or "
-                "dispatch it at this branch: "
-                "`gh workflow run testing-build-and-deploy.yml --ref <branch>`. "
-                "(Not waivable.)",
-            ))
+            gates.append(Gate("G4 infra-evidence", "red", _g4_red_message(gh, pr, head_sha)))
     else:
         # NOT "no infra paths": `domain:infra` and
         # `staging_evidence.paths` are different questions now, and a PR can
@@ -1450,14 +1527,11 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # outage it exists for: an expired PULUMI_BOT_TOKEN errors G3 on every
     # PR, so every PR sat at action_required and no waive could move any of
     # them — while the summary still printed a "WAIVED / gates bypassed"
-    # banner over a blocked conclusion. G4 remains unwaivable either way.
+    # banner over a blocked conclusion. A waive clears every gate, G4 too
+    # (see the module docstring for why G4 lost its exemption).
     if waived:
-        if infra_red:
-            conclusion = "failure"
-            title = "Waived, but infra evidence has no waiver"
-        else:
-            conclusion = "success"
-            title = "WAIVED"
+        conclusion = "success"
+        title = "WAIVED"
     elif any_error:
         conclusion = "action_required"
         title = "Couldn't evaluate — action required"
@@ -1474,7 +1548,9 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         parts.append(f"## ⚠️ WAIVED by @{waive_note}\n\nMerge gates bypassed via `review:waived` "
                      "(logged). The table below shows what the verdict would have been.")
         if infra_red:
-            parts.append("**Infra staging evidence is NOT waivable** — gate G4 stands red.")
+            parts.append("**G4 was red:** this change to the deploy has not been applied "
+                         "on staging, so the first production deploy after merge is its "
+                         "first real run. Watch it.")
     elif waive_note:
         # The label is on the PR but didn't authorize. Say so loudly: a
         # refused waive that reads as "nothing happened" invites a second
@@ -1499,7 +1575,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     table = ["| Gate | Status | Detail |", "|---|---|---|"]
     icon = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
     for g in gates:
-        msg = g.message + (f" — {BREAK_GLASS}" if g.status == "red" and not g.name.startswith("G4") else "")
+        msg = g.message + (f" — {BREAK_GLASS}" if g.status == "red" else "")
         table.append(f"| {g.name} | {icon[g.status]} {g.status} | {msg} |")
     parts.append("\n".join(table))
     summary = "\n\n".join(p for p in parts if p)
@@ -1704,8 +1780,7 @@ def render_status_comment(verdict: Verdict) -> str:
         lines.append(f"| {_STATUS_ICON[g.status]} | **{g.name}** | {need} |")
     lines.append("")
 
-    if (not verdict.waived
-            and any(g.status == "red" and not g.name.startswith("G4") for g in blocking)):
+    if not verdict.waived and any(g.status == "red" for g in blocking):
         # Not BREAK_GLASS verbatim — that string is written to follow a gate
         # message ("… — override: a member of …") and reads as a doubled
         # "override:" when it opens a sentence of its own.
@@ -1715,9 +1790,6 @@ def render_status_comment(verdict: Verdict) -> str:
             "which is logged._",
             "",
         ]
-    if any(g.name.startswith("G4") and g.status == "red" for g in verdict.gates):
-        lines += ["_Infra staging evidence has no waiver._", ""]
-
     lines += [f"<sub>Evaluated at head `{verdict.head_sha[:9]}`.</sub>"]
     return _with_help_footer(lines)
 

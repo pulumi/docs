@@ -3,6 +3,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
+    {{- $consentProvider := site.Params.consentProvider | default "segment" }}
+
+    {{- /* Consent gate bootstrap (all environments). Defines
+           window.runWithPulumiConsent before any integration (Segment, Common
+           Room, OpenAI, Floqer, HubSpot, YouTube) can initialize, so
+           an early caller is captured rather than lost. Under "segment" the gate
+           runs the callback immediately (today's behavior); under "onetrust" it
+           queues until the consent-manager bundle's OneTrust bridge drains the
+           queue once OneTrust resolves the visitor's categories. See
+           theme/src/ts/consent-manager/onetrust.ts. */ -}}
+    <script>
+        (function () {
+            {{- if eq $consentProvider "onetrust" }}
+            var queue = (window.__pulumiConsentQueue = window.__pulumiConsentQueue || []);
+            window.runWithPulumiConsent = function (category, callback) {
+                queue.push({ category: category, callback: callback });
+            };
+            // OneTrust requires this global to exist when its SDK loads, and
+            // invokes it after load and on every save. Re-dispatch as an event
+            // the bridge listens for; the bundle chains onto this handler.
+            window.OptanonWrapper = function () {
+                window.dispatchEvent(new Event("OneTrustGroupsUpdated"));
+            };
+            {{- else }}
+            window.runWithPulumiConsent = function (category, callback) {
+                callback();
+            };
+            {{- end }}
+        })();
+    </script>
+
+    {{- if eq $consentProvider "onetrust" }}
+    {{- if not site.Params.oneTrustDomainScript }}
+        {{- errorf "consentProvider is \"onetrust\" but params.oneTrustDomainScript is not set" }}
+    {{- end }}
+    <!-- OneTrust CMP (loaded before Segment and all optional integrations).
+         Auto-Blocking stays off; consent is enforced by explicit checks in the
+         site code via runWithPulumiConsent. The domain script id comes from the
+         environment config (oneTrustDomainScript) and is never stored in the
+         default config. -->
+    <link rel="preconnect" href="https://cdn.cookielaw.org" crossorigin />
+    <script
+        src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+        type="text/javascript"
+        charset="UTF-8"
+        data-domain-script="{{ site.Params.oneTrustDomainScript }}"></script>
+    {{- end }}
+
     <!-- GrowthBook / Segment keys -->
     <script>
         {{- if eq hugo.Environment "production" }}
@@ -212,14 +260,12 @@
         {{ end }}
     {{ end }}
 
-    {{/* Taxonomy term pages (blog category/tag/author/series, customer
-        industry) carry no front-matter title/meta_title, so without this
-        branch they fall through to the site-wide default below. Source the
-        same human display name the <title> tag uses further down instead. */}}
+    {{/* Taxonomy term pages (blog category/tag/author/series) carry no
+        front-matter title/meta_title, so without this branch they fall
+        through to the site-wide default below. Source the same human display
+        name the <title> tag uses further down instead. */}}
     {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
         <meta property="og:title" content="{{ partial "blog/term-name.html" . }}" />
-    {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
-        <meta property="og:title" content="{{ partial "customers/industry-name.html" .Data.Term }}" />
     {{ else if .Params.meta_title }}
         <meta property="og:title" content="{{ .Params.meta_title }}" />
     {{ else if .Params.title }}
@@ -234,10 +280,9 @@
     {{ else if and .IsHome .Site.Params.meta_desc }}
         <meta name="description" content="{{ .Site.Params.meta_desc }}" />
         <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
-    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "industry" "author") .Data.Singular) }}
-        {{/* Blog taxonomy term pages (category, tag, series, author) and the
-            customer industry taxonomy have no .Summary; source their
-            description from the data files so they don't fall through to an
+    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "author") .Data.Singular) }}
+        {{/* Blog taxonomy term pages (category, tag, series, author) have no
+            .Summary; source their description from the data files so they don't fall through to an
             empty meta description. Author term pages below the post-count
             floor in taxonomy-indexable.html are noindexed anyway, so a
             generic description here is harmless for them and correct for the
@@ -253,10 +298,6 @@
             {{ end }}{{ end }}
         {{ else if eq .Data.Singular "tag" }}
             {{ $desc = printf "Pulumi blog posts about %s." ($.Data.Term | humanize | lower) }}
-        {{ else if eq .Data.Singular "industry" }}
-            {{ range site.Data.customers_industries.industries }}
-                {{ if eq .id $.Data.Term }}{{ $desc = .description }}{{ end }}
-            {{ end }}
         {{ else if eq .Data.Singular "author" }}
             {{ $authorName := .Data.Term | humanize }}
             {{ with index site.Data.team.team .Data.Term }}{{ $authorName = .name }}{{ end }}
@@ -288,17 +329,10 @@
              Blog" doesn't. $blogTerm drives the suffix branch. */ -}}
         {{ $blogTerm := false }}
         {{ $seriesTerm := false }}
-        {{ $industryTerm := false }}
         {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
             {{ $blogTerm = true }}
             {{ $title = partial "blog/term-name.html" . }}
             {{ if eq .Data.Singular "series" }}{{ $seriesTerm = true }}{{ end }}
-        {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
-            {{- /* Customer industry term page: use the display name from the
-                 data-file source of truth instead of Hugo's slug-derived .Title
-                 ("Developer-Tools"), and suffix "| Customers" below. */ -}}
-            {{ $industryTerm = true }}
-            {{ $title = partial "customers/industry-name.html" .Data.Term }}
         {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "category") }}
             {{ $blogTerm = true }}
             {{ $title = "Categories" }}
@@ -351,8 +385,6 @@
             <title>{{ $title }} | Pulumi Docs</title>
         {{ else if eq .Type "registry" }}
             <title>{{ replace $title "/" "." }} | Pulumi Registry</title>
-        {{ else if $industryTerm }}
-            <title>{{ $title }} | Customers | Pulumi</title>
         {{ else }}
             <title>{{ $title }} | Pulumi</title>
         {{ end }}
@@ -486,11 +518,38 @@
         })();
     </script>
 
-    <!-- Segment Consent Manager (production only - the banner and its analytics
-         gating are suppressed on local dev and PR preview builds). -->
-    {{- if eq hugo.Environment "production" }}
+    {{- /* Consent manager bundle. Two providers:
+           - onetrust: OneTrust owns the banner/decision; the bundle installs the
+             runWithPulumiConsent bridge and drives the Segment loader from the
+             OneTrust categories. Loaded in every environment the OneTrust
+             provider is selected in (today: preview / www.pulumi-test.io).
+           - segment: the custom consent manager renders the banner and gates
+             analytics. Production only \u2014 suppressed on local dev and PR
+             previews, exactly as before. */ -}}
+    {{- if eq $consentProvider "onetrust" }}
     <script>
         window.consentManagerConfig = {
+            provider: "onetrust",
+            writeKey: segmentWriteKey,
+            cdnHost: "evs.analytics.pulumi.com",
+            container: "#segment-consent-manager"
+        };
+    </script>
+
+    {{ $jsManifest := $.Site.Data.js_manifest }}
+    <script>
+        window.addEventListener('load', function() {
+            var s = document.createElement('script');
+            s.src = '/js/{{ index $jsManifest "consent-manager" }}';
+            document.body.appendChild(s);
+        });
+    </script>
+    {{- else if eq hugo.Environment "production" }}
+    <!-- Segment Consent Manager (production only - the banner and its analytics
+         gating are suppressed on local dev and PR preview builds). -->
+    <script>
+        window.consentManagerConfig = {
+            provider: "segment",
             writeKey: segmentWriteKey,
             cdnHost: "evs.analytics.pulumi.com",
             container: "#segment-consent-manager",
@@ -516,47 +575,67 @@
     {{- if eq hugo.Environment "production" }}
         <!-- Facebook Domain Verification -->
         <meta name="facebook-domain-verification" content="phlf6qes2bxa9ufzk8zt2es0qivg8j" />
+    {{- end }}
 
+    {{- /* Directly-loaded optional integrations. Rendered in production (Segment
+           provider) and wherever the OneTrust provider is selected (preview /
+           www.pulumi-test.io), so they can be exercised during staging QA. The
+           vendor loaders are unchanged; only how they're gated differs:
+             - onetrust: gated on C0004 Targeting via runWithPulumiConsent.
+             - segment:  today's behavior (Common Room on load; OpenAI/Floqer
+               after window.analytics.ready). */ -}}
+    {{- if or (eq $consentProvider "onetrust") (eq hugo.Environment "production") }}
         <!-- Common Room (deferred to window.load to avoid blocking first paint) -->
         <script>
             window.addEventListener('load', function() {
-                if (typeof window.signals !== 'undefined') return;
-                var script = document.createElement('script');
-                script.src = 'https://cdn.cr-relay.com/v1/site/a725b5ba-75f1-44dc-b250-11023fc10b9d/signals.js';
-                script.async = true;
-                window.signals = Object.assign(
-                    [],
-                    ['page', 'identify', 'form'].reduce(function (acc, method){
-                        acc[method] = function () {
-                        signals.push([method, arguments]);
-                        return signals;
-                        };
-                        return acc;
-                    }, {})
-                );
-                document.head.appendChild(script);
+                function loadCommonRoom() {
+                    if (typeof window.signals !== 'undefined') return;
+                    var script = document.createElement('script');
+                    script.src = 'https://cdn.cr-relay.com/v1/site/a725b5ba-75f1-44dc-b250-11023fc10b9d/signals.js';
+                    script.async = true;
+                    window.signals = Object.assign(
+                        [],
+                        ['page', 'identify', 'form'].reduce(function (acc, method){
+                            acc[method] = function () {
+                            signals.push([method, arguments]);
+                            return signals;
+                            };
+                            return acc;
+                        }, {})
+                    );
+                    document.head.appendChild(script);
+                }
+                {{- if eq $consentProvider "onetrust" }}
+                window.runWithPulumiConsent("C0004", loadCommonRoom);
+                {{- else }}
+                loadCommonRoom();
+                {{- end }}
             });
         </script>
 
-        <!-- OpenAI ad pixel (deferred to window.load to avoid blocking first paint) — Marketing & Analytics
-             consent-gated: loads only after the consent-managed Segment analytics is ready
-             (window.analytics.ready), same as the Floqer integration below. Fail-closed: if
-             consent-managed analytics never loads, the pixel never loads. -->
+        <!-- OpenAI ad pixel (deferred to window.load to avoid blocking first paint) — Targeting (C0004)
+             consent-gated. Under Segment it loads after the consent-managed analytics is ready
+             (window.analytics.ready); under OneTrust it loads only after C0004 is granted. Fail-closed
+             either way: if consent is never satisfied, the pixel never loads. -->
         <script>
             window.addEventListener('load', function() {
                 function loadOaiq() {
                     !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
                     oaiq("init",{pixelId:"7KRuATZtZE3j5BSAZErZAb",debug:false});
                 }
+                {{- if eq $consentProvider "onetrust" }}
+                window.runWithPulumiConsent("C0004", loadOaiq);
+                {{- else }}
                 if (window.analytics && typeof window.analytics.ready === "function") {
                     window.analytics.ready(loadOaiq);
                 }
+                {{- end }}
             });
         </script>
 
-        <!-- Floqer (RB2B) visitor identification — Marketing & Analytics consent-gated (see partials/floqer.html). Page-scoped via `include_floqer` front matter. -->
+        <!-- Floqer (RB2B) visitor identification — Targeting (C0004) consent-gated (see partials/floqer.html). Page-scoped via `include_floqer` front matter. -->
         {{ if .Params.include_floqer }}
-        {{ partial "floqer.html" . }}
+        {{ partial "floqer.html" (dict "page" . "consentProvider" $consentProvider) }}
         {{ end }}
 
     {{- end }}

@@ -202,4 +202,4 @@ If you would like to learn more about Pulumi, here are some links you may find i
 * Visit our [Getting Started](/docs/get-started/) to quickly get up and running with Pulumi.
 * View the GitHub repo for the [Azure static website component](https://github.com/pulumi/pulumi-aws-static-website).
 * Visit our [registry page](/registry/) to more components we have available for you to consume.
-* Check out our new [templates](/templates/) that make it quick and easy to deploy common cloud architectures.
+* Check out our new [templates](/dev/templates/) that make it quick and easy to deploy common cloud architectures.

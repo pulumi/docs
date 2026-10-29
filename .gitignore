@@ -98,6 +98,9 @@ redirects.txt
 # (written by scripts/await-in-progress.js, read by the build-duration alert).
 /.build-queue-wait-seconds
 
+# Ignore feature parity tracking files
+scripts/self-hosted-feature-parity/generated/
+
 # Ignore vendored Hugo modules.
 _vendor/
 
@@ -126,10 +129,7 @@ _vendor/
 /.traffic-snapshot
 /.reader-signals.json
 /.synthetic.patch
-# Volatile-claim re-verification (claims-reverify.yml) and the shared
-# signal-health state both lanes read-modify-write.
-/.claims-reverify-report.json
-/.claims-cache/
+# Signal-health state the content-review dispatcher read-modify-writes.
 /.health-state.json
 /.health-alert.txt
 # Local cache for scripts/review-admin (synced S3 ledgers, exports, dashboard).

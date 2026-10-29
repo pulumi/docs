@@ -202,7 +202,7 @@ REVIEW_HELP = {
     "triage-prose": "Only the cheap triage prose check ran, not a full review. It catches wording, not correctness.",
     "base-merged": "The head commit moved, but only because master was merged into the branch. The diff the review read is unchanged, so the review still stands and this row is not stale.",
     "unreadable": "The review did not arrive whole. Either a page of a split review is missing, or the card's own tally declares more findings than its sections parsed into. A long review's 🚨 rows are the tail of the document, so what is missing is exactly where they live — the row is blocked rather than approvable, and a fresh review is the way out.",
-    "waived": "Someone applied review:waived, the Sentinel's logged break-glass. A stale, errored or running review no longer blocks this row, so it is a judgment call: read the diff yourself, because no current review vouches for it. Open 🚨 findings and an unreadable review still block, and staging evidence for deploy changes is never waived.",
+    "waived": "Someone applied review:waived, the Sentinel's logged break-glass. A stale, errored or running review no longer blocks this row, so it is a judgment call: read the diff yourself, because no current review vouches for it. Open 🚨 findings and an unreadable review still block here. The waiver also clears the Sentinel's staging-evidence gate, so a deploy change may merge without a staging run.",
     "parse-confidence": "The review's body parsed into no findings and nothing corroborates that: a v2 card with no tally table, or a v3 card missing its head sentinel or carrying a broken REVIEW_STATE. Not a blocker — nothing says there are findings — but not stampable either. Read the comment itself.",
 }
 MERGEABLE_HELP = {

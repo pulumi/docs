@@ -125,8 +125,12 @@ $sitenav-offset: calc($sitenav-height + 16px);
     // Round all YouTube embeds. The `youtube` shortcode and youtube.html partial
     // render a full-bleed iframe in a bare wrapper, so putting the radius on the
     // iframe itself clips its corners regardless of the surrounding markup.
+    // An embed still awaiting consent carries its URL in data-pulumi-consent-src
+    // (layouts/partials/youtube-src.html), so match that too.
     iframe[src*="youtube.com/embed"],
-    iframe[src*="youtube-nocookie.com/embed"] {
+    iframe[src*="youtube-nocookie.com/embed"],
+    iframe[data-pulumi-consent-src*="youtube.com/embed"],
+    iframe[data-pulumi-consent-src*="youtube-nocookie.com/embed"] {
         @apply rounded-lg;
     }
 }

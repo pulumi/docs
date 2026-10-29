@@ -6,6 +6,7 @@ import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
+import { marketingWebPaths } from "./marketingWebPaths";
 import { PricingApi } from "./pricingApi";
 import { SupportFormApi } from "./supportForm";
 import { SupportRedirect } from "./supportRedirect";
@@ -1048,47 +1049,7 @@ if (config.devStack) {
         }
     );
     devBehaviors.push(
-        {
-            ...baseCacheBehavior,
-            targetOriginId: marketingCDN,
-            pathPattern: "/dev*",
-            cachePolicyId: thirtyMinuteCachePolicy.id,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-        },
-        {
-            ...baseCacheBehavior,
-            targetOriginId: marketingCDN,
-            // The Dev Center (Astro) emits root-relative assets under /assets/*
-            // (CSS, JS, images), so those must reach the same origin as /dev or
-            // the pages render unstyled. pulumi/docs serves its own assets from
-            // /css and /js, so /assets is free to hand to marketing-web.
-            pathPattern: "/assets*",
-            cachePolicyId: thirtyMinuteCachePolicy.id,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-        },
-        // /community moved to marketing-web, except /community/team/*, which stays
-        // here (blog bylines link to it). Exact paths, never a "/community*" wildcard:
-        // that would also take /community/team/* and the
-        // /community/community-engineering/* redirect keys away from S3.
-        ...["/community", "/community/", "/community.md", "/community/puluminaries*"].map(
-            (pathPattern) => ({
-                ...baseCacheBehavior,
-                targetOriginId: marketingCDN,
-                pathPattern,
-                cachePolicyId: thirtyMinuteCachePolicy.id,
-                originRequestPolicyId: allViewerExceptHostHeaderId,
-            }),
-        ),
-        // Exact paths: /pricing* would also take the /pricing/open-source-free-tier/ redirect off S3.
-        ...["/pricing", "/pricing/", "/pricing.md"].map((pathPattern) => ({
-            ...baseCacheBehavior,
-            targetOriginId: marketingCDN,
-            pathPattern,
-            cachePolicyId: thirtyMinuteCachePolicy.id,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-        })),
-        // Exact paths: /up* would also take the /updateplans/ alias off S3.
-        ...["/up", "/up/", "/up/*"].map((pathPattern) => ({
+        ...marketingWebPaths.map((pathPattern) => ({
             ...baseCacheBehavior,
             targetOriginId: marketingCDN,
             pathPattern,
@@ -1699,6 +1660,7 @@ export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
 export const cloudFrontDistributionId = cdn.id;
+export { marketingWebPaths };
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
 export const wafWebAclArn = webAcl?.arn;

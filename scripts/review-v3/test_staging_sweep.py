@@ -55,9 +55,14 @@ def run(sha=SHA_A, *, conclusion="success", event="workflow_dispatch",
             "html_url": f"https://github.com/{REPO}/actions/runs/{rid}"}
 
 
+_DESCRIPTIONS = {"success": "staging deploy green", "failure": "staging deploy failed",
+                 "error": "staging deploy cancelled"}
+
+
 def status_entry(state="success", creator=BOT,
-                 context=staging_sweep.STAGING_STATUS_CONTEXT):
-    return {"context": context, "state": state, "creator": {"login": creator}}
+                 context=staging_sweep.STAGING_STATUS_CONTEXT, description=None):
+    return {"context": context, "state": state, "creator": {"login": creator},
+            "description": description or _DESCRIPTIONS.get(state, "")}
 
 
 class Harness:
@@ -288,23 +293,60 @@ def test_a_status_in_another_context_is_ignored():
         h.close()
 
 
-# ---- when NOT to poke ---------------------------------------------------
+# ---- what a failure does, and when NOT to poke ----------------------------
 
 
-def test_a_failed_deploy_records_the_status_but_never_pokes():
-    """G4 is already red and stays red; re-scoring tells the PR nothing."""
+def test_a_failed_deploy_records_the_status_and_pokes():
+    """G4 quotes the newest failed staging status, so a failure is worth a
+    re-score: that's how the reason reaches the PR."""
     h = Harness([run(SHA_A, conclusion="failure")], statuses={SHA_A: []},
                 prs={BRANCH: _pr(21789, SHA_A)})
     try:
         rec = h.sweep()
         assert rec["finalized"][0]["state"] == "failure"
-        assert rec["finalized"][0]["poked"] is None
-        assert h.writes(contains="review-sentinel") == []
+        assert rec["finalized"][0]["poked"] == 21789
+        assert len(h.writes(contains="review-sentinel")) == 1
         body = h.writes(contains=f"statuses/{SHA_A}")[0]["body"]
         assert body["target_url"] == f"https://github.com/{REPO}/actions/runs/1", \
             "a failed deploy has no deployed site to link to"
     finally:
         h.close()
+
+
+def test_a_cancelled_run_replaces_the_auto_lanes_not_dispatched_error():
+    """Same state, different story: the auto lane's "Not dispatched" error
+    must not read as the cancelled run's verdict already being recorded."""
+    h = Harness([run(SHA_A, conclusion="cancelled")],
+                statuses={SHA_A: [status_entry(
+                    "error", description="Not dispatched: testing-build-and-deploy.yml is disabled.")]},
+                prs={BRANCH: _pr(21789, SHA_A)})
+    try:
+        rec = h.sweep()
+        assert [e["state"] for e in rec["finalized"]] == ["error"]
+        body = h.writes(contains=f"statuses/{SHA_A}")[0]["body"]
+        assert body["description"] == "staging deploy cancelled"
+    finally:
+        h.close()
+
+
+def test_a_failed_poke_holds_back_a_success_but_not_a_failure():
+    """A success waits for its poke (G4 is waiting on it); a failure's
+    status is the point, so it's recorded even when the poke fails."""
+    def boom(*_a, **_k):
+        raise RuntimeError("dispatch refused")
+    for conclusion, recorded in (("success", False), ("failure", True)):
+        h = Harness([run(SHA_A, conclusion=conclusion)], statuses={SHA_A: []},
+                    prs={BRANCH: _pr(21789, SHA_A)})
+        try:
+            h.gh.dispatch_workflow = boom
+            rec = h.sweep()
+            assert bool(h.writes(contains=f"statuses/{SHA_A}")) is recorded, conclusion
+            if recorded:
+                assert rec["finalized"][0]["poked"] == "poke-failed"
+            else:
+                assert rec["skipped"] == [{"sha": SHA_A, "reason": "poke-failed"}]
+        finally:
+            h.close()
 
 
 def test_a_moved_head_records_the_status_but_never_pokes():

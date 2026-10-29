@@ -848,9 +848,8 @@ Hugo processes 46+ content directories:
 - `/content/docs/` → Documentation
 - `/content/blog/` → Blog posts
 - `/content/product/` → Product pages
-- `/content/customers/` → Customer stories (the customer registry lives in `data/customers.yaml`)
 
-> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary) is served the same way, from pulumi/marketing-web.
+> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary) and `/customers` (the customer board and case studies) are served the same way, from pulumi/marketing-web.
 
 Templates are in `/layouts/` with various shortcodes for:
 
@@ -1110,7 +1109,7 @@ Pushes to an open PR rebuild the preview, mark the pinned review `review:stale`,
 
 - Push to `master`
 - Scheduled: 11:17, 12:43, and 20:23 UTC (7:17 AM, 8:43 AM, and 4:23 PM Eastern during daylight saving time). The rebuilds publish future-dated content. The 12:43 run is a fallback in case GitHub drops the 11:17 one, and both land before scheduled social posts fire at 10 AM Eastern.
-- Manual: `workflow_dispatch`, with an optional `allow_out_of_order_publish` input (see below)
+- Manual: `workflow_dispatch`, with an optional `allow_out_of_order_publish` input (see below). A `guard` job runs first and fails the run unless the dispatched ref's commit is already on `master`, so an unmerged branch can't reach the `production` environment. Dispatching at an older ref that's on `master` (the rollback below) still works. The guard only covers refs that carry it: a dispatch runs the workflow file from the dispatched ref, so a branch cut before the guard existed doesn't have it. The `production` environment has no deployment-branch rule to fall back on, and can't take a master-only one, because PR workflows such as `claude-code-review.yml` use that environment for their secrets.
 
 **Environment:** Production (AWS account `388588623842`)
 
@@ -1157,7 +1156,7 @@ Key points:
 
 **Triggers:** `workflow_run` when `Build and deploy` or `Build and deploy testing` completes successfully; manual `workflow_dispatch`.
 
-Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/dev` proxy hops to pulumi/marketing-web. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
+Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/dev`, `/topics`, and `/customers` proxy hops to pulumi/marketing-web. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
 
 #### schedule-social.yml
 
@@ -1185,13 +1184,13 @@ Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page c
 
 Runs `make ci_update_search_index`, which indexes this repo's content and merges in Registry and Dev Center records. A Dev Center fetch failure is non-fatal. See [Search Index Management](#search-index-management).
 
-#### invalidate-dev-cache.yml
+#### invalidate-marketing-web-cache.yml
 
-**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, `/pricing`, and the `/up` getting-started wizard) from CloudFront when it deploys.
+**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, `/pricing`, the `/up` getting-started wizard, `/topics`, and `/customers`) from CloudFront when it deploys.
 
 **Triggers:** `repository_dispatch` (`dev-deployed`) from pulumi/marketing-web; manual `workflow_dispatch`.
 
-Invalidates `/dev*`, `/assets*`, `/community`, `/community/`, `/community.md`, `/community/puluminaries*`, `/pricing`, `/pricing/`, `/pricing.md`, `/up`, `/up/`, and `/up/*` using the same delivery role as `build-and-deploy.yml`. A concurrency group collapses a burst of deploys into one in-flight invalidation.
+Invalidates the paths in `infrastructure/marketingWebPaths.ts`, read from the `marketingWebPaths` stack output (a dispatch can override them with `client_payload.paths`), using the same delivery role as `build-and-deploy.yml`. A concurrency group collapses a burst of deploys into one in-flight invalidation.
 
 #### bucket-cleanup.yml and bucket-cleanup-testing.yml
 
@@ -1336,7 +1335,7 @@ flowchart LR
   SE --> G1["`G1: review ran at head`"]
   SE --> G2["`G2: every finding answered`"]
   SE --> G3["`G3: human with write access approved`"]
-  SE --> G4["`G4: staging deploy at head (infra PRs, not waivable)`"]
+  SE --> G4["`G4: staging deploy at head (infra PRs)`"]
   SE --> G5["`G5: oversized PR acknowledged`"]
 ```
 
@@ -1344,11 +1343,11 @@ flowchart LR
 - **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` always passes, with the would-be verdict in the status description; `'1'` enforces.
 - **Security invariant:** `pull_request_target` carries secrets and a write token even for fork PRs. The workflow is safe only because it never checks out or runs PR code, and `test_sentinel.py` enforces that. Don't add a head checkout.
 - **No concurrency group, on purpose:** a cancelled run shows as a failing check. Overlapping runs are cheap, and `scripts/review-v3/publish_guard.py` drops a verdict if the head moved or a newer run already published.
-- **Break-glass:** the `review:waived` label, which is logged. G4 can't be waived.
+- **Break-glass:** the `review:waived` label, which is logged and clears every gate, G4 included.
 
 G4 needs a successful pulumi-test.io deploy at the PR's current head:
 
-- **staging-deploy-auto.yml** (pull request events): runs `route-pr.py` from the default branch. If it reports `staging_evidence_required`, it dispatches `testing-build-and-deploy.yml` at the PR's head branch. Same-repo PRs only. It never checks out PR code and never fails a PR. To retry, re-run the failed deploy or run `gh workflow run testing-build-and-deploy.yml --ref <branch>`.
+- **staging-deploy-auto.yml** (pull request events): runs `route-pr.py` from the default branch. If it reports `staging_evidence_required`, it dispatches `testing-build-and-deploy.yml` at the PR's head branch. Same-repo PRs only. It never checks out PR code and never fails a PR. If the dispatch itself fails (for example, the testing workflow is disabled), it writes `staging/pulumi-test-io` = error with the reason, which shows in the merge box and on the Sentinel's G4 row. To retry, re-run the failed deploy or run `gh workflow run testing-build-and-deploy.yml --ref <branch>`.
 - **staging-status.yml** (every 10 minutes; `workflow_run` after the testing deploy; manual): writes the terminal `staging/pulumi-test-io` commit status and pokes the Sentinel. The schedule is the trigger that actually fires: runs dispatched with `GITHUB_TOKEN` never produce `workflow_run` events, so the listener almost never fires for staging deploys.
 
 ### Content upkeep automation
@@ -1357,8 +1356,7 @@ Scheduled jobs that review content nobody is currently editing.
 
 ```mermaid
 flowchart TD
-  CR["`claims-reverify.yml, nightly`"] -->|stale_claims markers| LED[("`S3 content-review ledger`")]
-  LED --> DISP["`review-existing-content.yml, weekdays: picks articles by importance and staleness`"]
+  LED[("`S3 content-review ledger`")] --> DISP["`review-existing-content.yml, weekdays: picks articles by importance and staleness`"]
   DISP -->|one dispatch per article| RV
   subgraph W["`content-review-article.yml`"]
     direction TB
@@ -1370,8 +1368,7 @@ flowchart TD
   CL["`check-links.yml, daily`"] --> FBL["`Claude runs the fix-broken-links skill`"] --> LPR["`Bot PR`"]
 ```
 
-- **review-existing-content.yml / content-review-article.yml**: Daily (workdays, 14:00 UTC) existing-content review. Deterministic selection fans out one per-article worker per page. Three lanes, each with its own count variable: `fix` (`CONTENT_REVIEW_COUNT`, unset = 3/run) reviews an editable page and opens a PR for what it fixed — with its **first slot reserved** for the oldest page no review has ever completed on (`NEVER_REVIEWED_RESERVE`, fix lane only, disabled at count 1), because `importance x staleness` alone never reaches the cold end of the corpus; `glowup` (`GLOWUP_COUNT`, unset = 1/run) rehabs one page from its banked findings backlog — and, because a page can carry a banked *count* with nothing behind it (no findings record and no review PR to scrape), it also dispatches up to one **fix-lane repair** per run (`GLOWUP_REPAIRS_PER_RUN`) for such a page, since a fix review needs no ledger and writes the findings record a later glow-up needs; `report` (`REPORT_REVIEW_COUNT`, **unset = off**) fact-checks a page a generator owns — it runs the claim pipeline, writes the page's claims to the S3 claims index, and changes nothing. The report lane has no model step at all (nothing to fix, no PR body to write) and its verdict is written by the workflow; contradictions it finds are reported to #docs-ops with a prefilled upstream issue, never as stale-claims markers no PR here could retire. Which lane a page belongs to comes from `editable` / `reviewable` in `strategic-tiers.yaml` (pulumi/docs#20996 — before that split, "a generator owns this file" also meant "never look at it", hiding 30% of `content/docs/` from the fact-check entirely). Fix PRs open ready (draft only on lint failure) and go through the normal triage, review, and Sentinel chain. Deterministic-class fixes (links, Vale-named fixes, frontmatter) arm auto-merge, which still needs a human approval; judgment-class fixes open un-armed.
-- **claims-reverify.yml**: Nightly (07:00 UTC) re-verification of volatile claims (version pins, prices, limits) from the S3 claims index. Contradicted entities get a `stale_claims` marker on their pages' ledger objects, which moves those pages to the front of the next day's content-review queue. Never edits content or opens PRs. `CLAIMS_REVERIFY_COUNT` (unset = 25 entities/night, `'0'` = off).
+- **review-existing-content.yml / content-review-article.yml**: Daily (workdays, 14:00 UTC) existing-content review. Deterministic selection fans out one per-article worker per page. Three lanes, each with its own count variable: `fix` (`CONTENT_REVIEW_COUNT`, unset = 3/run) reviews an editable page and opens a PR for what it fixed — with its **first slot reserved** for the oldest page no review has ever completed on (`NEVER_REVIEWED_RESERVE`, fix lane only, disabled at count 1), because `importance x staleness` alone never reaches the cold end of the corpus; `glowup` (`GLOWUP_COUNT`, unset = 1/run) rehabs one page from its banked findings backlog — and, because a page can carry a banked *count* with nothing behind it (no findings record and no review PR to scrape), it also dispatches up to one **fix-lane repair** per run (`GLOWUP_REPAIRS_PER_RUN`) for such a page, since a fix review needs no ledger and writes the findings record a later glow-up needs; `report` (`REPORT_REVIEW_COUNT`, **unset = off**) fact-checks a page a generator owns — it runs the claim pipeline, writes the page's claims to the S3 claims index, and changes nothing. The report lane has no model step at all (nothing to fix, no PR body to write) and its verdict is written by the workflow; contradictions it finds are reported to #docs-ops with a prefilled upstream issue, since no PR here could fix them. Which lane a page belongs to comes from `editable` / `reviewable` in `strategic-tiers.yaml` (pulumi/docs#20996 — before that split, "a generator owns this file" also meant "never look at it", hiding 30% of `content/docs/` from the fact-check entirely). Fix PRs open ready (draft only on lint failure) and go through the normal triage, review, and Sentinel chain. Deterministic-class fixes (links, Vale-named fixes, frontmatter) arm auto-merge, which still needs a human approval; judgment-class fixes open un-armed.
 - **blog-review-index.yml**: Daily (workdays, 14:30 UTC) blog known-issues indexing — deterministic selection (`scripts/blog-review/select-posts.py`), one unprivileged model review per post (matrix), one deterministic record job. FLAG-ONLY: findings land in S3 (`blog-review/` prefix in the content-review ledger bucket: `ledger/`, `index/`, `runs/`, `index/_summary.json`); no content edits, no PRs. On/off/cadence via the `BLOG_REVIEW_COUNT` repo variable (unset = 5/run, `'0'` = off). The index is evidence for a future noindex decision process (`block_external_search_index: true` on rotted, low-value posts).
 - **check-links.yml**: Daily at 15:00 UTC; manual. Runs `make check_links` against the production site, merges real-404 server-log hits from the reader-signals export into `.broken-links.json` (`scripts/link-checker/merge-404-signal.py`; a no-op until the export exists), then runs `claude-code-action` with the `fix-broken-links` skill, which fixes what it can in one PR and files issues for the rest. The PR link is posted to `#docs-ops`.
 - **check-lighthouse.yml**: Daily at 15:00 UTC; manual. Lighthouse performance, accessibility, best-practices, and SEO scores for the homepage, product, pricing, get-started, concepts, and Registry pages. Slack alert on failure.
@@ -1475,7 +1472,7 @@ Two workflows are gated on `github.repository != 'pulumi/docs'` and only do anyt
 The mirror carries every workflow file pulumi/docs has, so the repository gate above is the exception, not the rule. As of 2026-10-07 on docs-private:
 
 - **Disabled** (`disabled_manually` in the Actions API), 19 workflows: `add-to-project`, `bucket-cleanup`, `bucket-cleanup-testing`, `build-and-deploy`, `check-lighthouse`, `check-links`, `check-search-urls`, `esc-cli`, `esc-update-schemas`, `pr-closed`, `pulumi-cli`, `pulumi-cli-dev-version`, `schedule-social`, `scheduled-test`, `scheduled-upgrade-programs`, `testing-build-and-deploy`, `update-audit-log-events`, `update-openapi-lastmod`, `update-search-index`.
-- **Active and doing work on a schedule:** `review-label-reconcile`, `blog-review-index`, `claims-reverify`, `review-existing-content` (which dispatches `content-review-article`), `update-policy-packs`, and `warm-build-cache`. The content-review lane opens `pulumi-bot` "Content review: …" PRs against the mirror's `master` that never merge (for example docs-private #300, #302, #307, and #314).
+- **Active and doing work on a schedule:** `review-label-reconcile`, `blog-review-index`, `review-existing-content` (which dispatches `content-review-article`), `update-policy-packs`, and `warm-build-cache`. The content-review lane opens `pulumi-bot` "Content review: …" PRs against the mirror's `master` that never merge (for example docs-private #300, #302, #307, and #314).
 - **Active but skipped by their own gates:** `weekly-digest` and `brand-style-sync` (gated to pulumi/docs), and `review-sla-sweep`, `staging-status`, and `content-review-glowup-autofix` (gated on `REVIEW_V3_SLA`, `REVIEW_V3_SENTINEL`, and `GLOWUP_AUTOFIX`, which aren't set there). Their runs fire and every job is skipped.
 
 ### Launch branches
@@ -1495,7 +1492,6 @@ These repository variables turn automation on, off, or up and down without a cod
 | `CONTENT_REVIEW_COUNT` | Existing-content fix lane, articles per run | 3; `'0'` turns the whole dispatcher off |
 | `GLOWUP_COUNT` | Glow-up lane, articles per run | 1 |
 | `REPORT_REVIEW_COUNT` | Report-only lane for generated pages | Off |
-| `CLAIMS_REVERIFY_COUNT` | Volatile claims re-verified per night | 25; `'0'` off |
 | `BLOG_REVIEW_COUNT` | Blog posts indexed per run | 5; `'0'` off |
 | `BRAND_SYNC_ENABLED` | Weekly Vale mirror drift check | On; `'0'` off |
 | `REVIEW_V3_COMMENTS` | v3 author card and reviewer brief instead of the single legacy review comment | Legacy (it's set repo-wide) |
@@ -1519,7 +1515,7 @@ All cron expressions are UTC. Eastern times shift by an hour when daylight savin
 | Every 2 h at :53 | `review-sla-sweep.yml` (when `REVIEW_V3_SLA=1`) | Daily |
 | Every 6 h at :23 | `warm-build-cache.yml` (mirrors only) | Daily |
 | 06:45 | `update-openapi-lastmod.yml` | Daily |
-| 07:00 | `claims-reverify.yml`, `esc-update-schemas.yml` | Daily |
+| 07:00 | `esc-update-schemas.yml` | Daily |
 | 07:15 | `update-audit-log-events.yml` | Daily |
 | 07:30 | `update-policy-packs.yml` | Daily |
 | 08:00 | `scheduled-test.yml` (about 3 hours) | Daily |
@@ -1541,7 +1537,7 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `post-deployment-health-check.yml` | Ship | After a successful deploy, manual | Live-site smoke checks |
 | `schedule-social.yml` | Ship | After a successful production deploy, manual | Schedule blog social posts |
 | `update-search-index.yml` | Ship | Hourly, manual | Refresh Algolia |
-| `invalidate-dev-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/dev`, `/community`, `/pricing`, and `/up` from CloudFront |
+| `invalidate-marketing-web-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/dev`, `/community`, `/pricing`, `/up`, and `/topics` from CloudFront |
 | `bucket-cleanup.yml` | Ship | Daily | Delete old production buckets |
 | `bucket-cleanup-testing.yml` | Ship | Daily, manual | Delete old testing and preview buckets |
 | `pull-request.yml` | PR checks | Pull request | Lint, test, preview build and deploy |
@@ -1567,7 +1563,6 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `weekly-digest.yml` | AI review | Mondays, manual | Slack digests |
 | `review-existing-content.yml` | Content upkeep | Weekdays, manual | Content review dispatcher |
 | `content-review-article.yml` | Content upkeep | Dispatched | Review one article |
-| `claims-reverify.yml` | Content upkeep | Daily, manual | Re-verify volatile claims |
 | `blog-review-index.yml` | Content upkeep | Weekdays, manual | Blog known-issues index |
 | `check-links.yml` | Content upkeep | Daily, manual | Broken links and fix PR |
 | `check-lighthouse.yml` | Content upkeep | Daily, manual | Lighthouse scores |
@@ -1742,7 +1737,7 @@ rather than skip, because a skipped check reads exactly like a passing one.
 **Overriding it for a deliberate rollback:** the ordinary rollback (`git revert` and
 push) needs nothing — a revert is a new commit in a newer run. To re-publish an *older*
 build as-is, dispatch a *new* "Build and deploy" run via `workflow_dispatch` at that
-ref: a new run has a newer run id, so it publishes normally. Re-running the old run
+ref (its commit has to be on `master`, or the `guard` job refuses it): a new run has a newer run id, so it publishes normally. Re-running the old run
 won't work, because a re-run keeps its old run id. Check the **Publish even if a newer
 deploy already published** input only if another run may publish while yours waits
 its turn. From a laptop, set `ALLOW_OUT_OF_ORDER_PUBLISH=true`. Pinning
@@ -1817,10 +1812,7 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | 30 minutes | Dynamic content, origin-proxied |
 | /guides/* | Guides | 30 minutes | Dynamic content, origin-proxied |
-| /dev* | Dev Center (pulumi/marketing-web) | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
-| /community, /community/, /community.md, /community/puluminaries* | Community pages (pulumi/marketing-web) | 30 minutes | Origin-proxied; exact paths so /community/team/* stays on S3 |
-| /pricing, /pricing/, /pricing.md | Pricing page (pulumi/marketing-web) | 30 minutes | Origin-proxied; exact paths so redirects under /pricing/ stay on S3 |
-| /up, /up/, /up/* | Getting-started wizard (pulumi/marketing-web) | 30 minutes | Origin-proxied; exact paths so the /updateplans/ alias stays on S3 |
+| Paths in `infrastructure/marketingWebPaths.ts` (/dev*, /assets*, /community, /pricing, /up, /topics*, /customers*) | pulumi/marketing-web | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
 | /docs/* | S3 Main | 10 min | Content negotiation for Accept: text/markdown |
 | /docs/reference/pkg/dotnet/* | S3 Main | 10 min | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
 | /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |

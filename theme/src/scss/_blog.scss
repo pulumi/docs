@@ -36,12 +36,8 @@
 }
 
 // Active state for the homepage category filter pill (default "All", moved by
-// blog-list.ts), the /what-is/ section filter pill (moved by what-is-list.ts),
-// and the /customers/ industry pill (moved by customers-list.ts).
-// Styled to match the mockup's selected pill.
-[data-blog-filter] .is-active,
-[data-what-is-filter] .is-active,
-[data-customer-filter] .is-active {
+// blog-list.ts). Styled to match the mockup's selected pill.
+[data-blog-filter] .is-active {
     @apply border-gray-500 bg-gray-100;
 }
 
@@ -96,6 +92,12 @@
             @apply border-violet-primary outline-none ring-2 ring-violet-primary/30;
         }
     }
+}
+
+// The header slot is too small for the form's "needs functional cookies"
+// notice, so hide it there; the footer newsletter form still shows it.
+.blog-header .newsletter-header [data-consent-blocked] {
+    @apply hidden;
 }
 
 // Compact newsletter in the blog header (left of search). The input + button are

@@ -69,7 +69,7 @@
          set of people in it — so the speakers row is everyone who appeared at any
          session (events/presenters.html). */}}
     <div class="rounded-lg overflow-hidden" style="position: relative; padding-bottom: 56.25%; height: 0;">
-        <iframe src="{{ .Params.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
+        <iframe {{ partial "youtube-src.html" (dict "url" .Params.youtube_url) }} style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
     </div>
 
     <hr class="m-0 h-px border-0 bg-gray-200" />
@@ -146,7 +146,7 @@
                              whole-event on-demand one. */}}
                         <h3 class="heading-3 mb-4">Watch the recording</h3>
                         <div class="rounded-lg overflow-hidden" style="position: relative; padding-bottom: 56.25%; height: 0;">
-                            <iframe src="{{ .youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
+                            <iframe {{ partial "youtube-src.html" (dict "url" .youtube_url) }} style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
                         </div>
                     {{ else if $timePassed }}
                         <div class="card p-8 text-center">

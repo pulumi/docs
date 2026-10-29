@@ -388,8 +388,7 @@ def main() -> int:
         # did not, so on 2026-09-08 both lanes dispatched elb.md within a
         # minute of each other. The glow-up worker lost the race to the fix
         # PR, hit the open-PR pre-check, and its `skipped` record overwrote
-        # the fix review's ledger entry (putting back two stale-claim markers
-        # that review had just resolved) and its findings record.
+        # the fix review's ledger entry and its findings record.
         if path in exclude_paths:
             continue
         if _select.is_draft(repo / path):
@@ -462,12 +461,6 @@ def main() -> int:
             "last_reviewed": entry.get("reviewed_at"),
             "skipped_findings": int(entry.get("skipped_findings") or 0),
             "clarity_flag": bool(entry.get("clarity_flag")),
-            # Stale-claim markers ride EVERY queue that can reach record-review:
-            # it rebuilds the ledger entry from the queue article, so a glow-up
-            # run on a marked page would otherwise silently drop the markers —
-            # the exact carry-forward bug #20968 fixed for --paths reviews.
-            "stale_claims": len(_select.all_markers(entry)),
-            "stale_claim_markers": _select.all_markers(entry),
             # The banked-findings source: the ledger entry's latest review PR.
             # Carried on the queue because the worker has no ledger cache —
             # build-glowup-backlog.py reads it from here.
