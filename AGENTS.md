@@ -103,6 +103,7 @@ Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi
 - **`/up`**: the getting-started wizard.
 - **`/topics`**: the explainer section that replaced `/what-is`, built from `apps/www/src/content/topics/`. `scripts/redirects/topics-redirects.txt` 301s the old `/what-is/` URLs (and the legacy URLs those pages carried) straight to their `/topics/` pages.
 - **`/customers`**: the customer board, its industry pages, and every case study, built from `apps/www/src/data/customers/` and `apps/www/src/content/customers/`. `scripts/redirects/customers-redirects.txt` 301s the old `/case-studies/` URLs. This repo keeps a frozen copy of the registry for the pages that still show customers (see "Customers" below).
+- **`/pulumi-for-startups`, `/extend-trial`, `/confirmation`**: landing pages built from `apps/www/src/content/section-pages/`. `scripts/redirects/landing-page-redirects.txt` 301s the old `/microsoft-for-startups/` alias. HubSpot workshop forms redirect to `/confirmation/workshop/` and the Pulumi Cloud trial banner links to `/extend-trial/?org=…&email=…`, so neither URL can change.
 
 When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list. marketing-web's sitemap at `/sitemap-www-index.xml` (listed in `layouts/robots.txt`) lists every page it builds that isn't noindex, so ship the proxy path in the same release as the page.
 
