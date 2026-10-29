@@ -3,7 +3,7 @@
 # pulumi/marketing-web owns the registry (apps/www/src/data/customers/) and
 # builds /customers/, its industry pages, and every case study. This copy stays
 # only for the Hugo pages here that still show customers: the homepage, product
-# pages, gads pages, /enterprise, /solutions, and others. Nothing syncs it.
+# pages, /enterprise, /solutions, and others. Nothing syncs it.
 #
 # To add or change a customer, do it in marketing-web (apps/www/docs/customers.md).
 # Edit this file only when a page built here needs the change too.
