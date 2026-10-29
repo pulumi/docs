@@ -40,9 +40,9 @@
     {{- end }}
     <!-- OneTrust CMP (loaded before Segment and all optional integrations).
          Auto-Blocking stays off; consent is enforced by explicit checks in the
-         site code via runWithPulumiConsent. The domain script id comes from the
-         environment config (oneTrustDomainScript) and is never stored in the
-         default config. -->
+         site code via runWithPulumiConsent. The domain script id comes from
+         params.oneTrustDomainScript: config/production has the www.pulumi.com
+         id and config/preview the test id. -->
     <link rel="preconnect" href="https://cdn.cookielaw.org" crossorigin />
     <script
         src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
@@ -577,9 +577,8 @@
         <meta name="facebook-domain-verification" content="phlf6qes2bxa9ufzk8zt2es0qivg8j" />
     {{- end }}
 
-    {{- /* Directly-loaded optional integrations. Rendered in production (Segment
-           provider) and wherever the OneTrust provider is selected (preview /
-           www.pulumi-test.io), so they can be exercised during staging QA. The
+    {{- /* Directly-loaded optional integrations. Rendered in production and
+           wherever the OneTrust provider is selected (www.pulumi-test.io). The
            vendor loaders are unchanged; only how they're gated differs:
              - onetrust: gated on C0004 Targeting via runWithPulumiConsent.
              - segment:  today's behavior (Common Room on load; OpenAI/Floqer
