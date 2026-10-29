@@ -277,7 +277,7 @@ abstraction you can manage stacks of AI infrastructure as code.
 ***Pulumi makes it trivial to take local AI development to production in
 the cloud.***
 
-[Read more >>](/solutions/ai/)
+[Read more >>](/blog/the-superintelligence-flywheel/)
 
 ### Why is Pulumi better than the alternatives?
 
