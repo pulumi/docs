@@ -3,7 +3,7 @@ title: "Faster Pulumi deployments, part 4: Use a prebuilt image"
 # TODO: Replace the series placeholder dates before publication.
 date: 2099-01-04
 draft: true
-meta_desc: "Build a custom Pulumi executor image with the program and provider plugins, while keeping stack configuration and ESC credentials outside the image."
+meta_desc: "Package a prepared Pulumi program and matching plugins in an executor image while keeping stack configuration and credentials outside it."
 feature_image:
 authors:
     - jonathan-davenport
@@ -20,147 +20,60 @@ social:
     bluesky:
 ---
 
-A container image provides another way to distribute the executable environment that a deployment needs. Instead of downloading an archive and installing its plugins in every job, prepare those files while building the image. The resulting image can contain the Pulumi CLI, the program, and the matching provider plugins, with the container runtime handling their distribution and layer reuse.
+A container image provides another way to distribute the executable environment that a deployment needs. Instead of downloading an archive and installing its plugins in every job, prepare those files while building the image. The resulting image contains the Pulumi CLI, the program's runtime dependencies, and the matching provider plugins.
 
-For the platform engineer managing deployments across hundreds of accounts, the image becomes a reusable release of the execution tools and infrastructure program. Its value depends on keeping account-specific differences outside that release. Baking each environment's configuration into a separate image would require another build whenever those values changed. Keeping configuration in Git and ESC lets you promote the same image while each stack retains its own inputs and credentials.
+For a platform engineer managing deployments across hundreds of accounts, the image can become one reusable release of the execution environment. Keep account-specific configuration outside that release so changes to an environment do not require rebuilding the code it runs.
 
 <!--more-->
 
-## Separate the executable release from configuration
+## Build the image for the selected language
 
-Use the [verified release from part 3](/blog/version-pulumi-deployment-artifacts/) as the image's build input. Keep `Pulumi.yaml` and the stack configuration files in a Git repository connected to Pulumi Deployments. Use ESC for environment-specific values and credentials. The image supplies what executes; Git and ESC supply the inputs for the selected stack.
-
-The repository can remain the existing program repository for this experiment. A separate, smaller configuration repository is an option later; changing repositories now would also change source-fetch time.
-
-With this arrangement, the image digest and configuration revision identify different parts of the deployment. The digest specifies the executable release, while Git identifies the project and stack files that select its inputs. ESC supplies the values from the environments those files import. Record these relationships together so an operator can determine what ran without assuming that the configuration commit also identifies the program's source.
-
-External configuration brings its own versioning decision. An ESC environment can change independently of Git, so recording the Git commit alone may not be enough to reproduce the inputs later. If your process requires that level of repeatability, record or pin the [ESC environment version](/docs/esc/concepts/versioning/) as well. Using current environment values may be appropriate, but it should be a deliberate choice rather than an assumption that Git has captured everything.
-
-## Build an image from the verified release
-
-Use the verified `bin/infra`, `plugins.txt`, and `plugins/` from part 3 as the build inputs. Keep the Pulumi CLI version unchanged from your previous experiment.
-
-Create this Dockerfile in the build directory:
-
-```dockerfile
-ARG PULUMI_VERSION=3.259.0
-FROM pulumi/pulumi-go:${PULUMI_VERSION} AS plugin-installer
-
-ENV PULUMI_HOME=/opt/pulumi-home
-WORKDIR /tmp/release
-COPY plugins.txt ./plugins.txt
-COPY plugins/ ./plugins/
-RUN set -eu; \
-    while read -r name version archive; do \
-        pulumi plugin install resource "$name" "$version" \
-            --exact --file "$archive"; \
-    done < plugins.txt
-
-FROM pulumi/pulumi-go:${PULUMI_VERSION}
-ARG PROGRAM_REVISION
-LABEL org.opencontainers.image.revision=${PROGRAM_REVISION}
-
-ENV PULUMI_HOME=/opt/pulumi-home
-COPY --from=plugin-installer /opt/pulumi-home/plugins/ /opt/pulumi-home/plugins/
-COPY bin/infra /opt/pulumi-program/infra
-RUN test -x /opt/pulumi-program/infra
-```
-
-Install plugins during the image build, then copy their installed files into the final image. This avoids repeating installation on every deployment and leaves the original archives out of the runtime image. The explicit `COPY` instructions also keep stack files and credentials out of the image.
-
-Start with the language-specific Pulumi base image so you have a known execution environment, including the CLI and its runtime tools. Although removing unused build tools may eventually produce a smaller image, changing the base at this point introduces another variable into the comparison. First establish whether distributing the prepared release as an image helps; then investigate whether reducing that image's size improves the result further.
-
-If the program reads runtime assets, add explicit `COPY` instructions for them. Resolve their paths from the image location or through configuration. The deployment's working directory will contain the checked-out configuration, not necessarily the directory containing the executable.
-
-Build for the same platform used in part 3. Replace the CLI version, registry path, and release tag:
+The [companion image lab](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/labs/04-executor-images) provides a shared Dockerfile and a builder that selects the appropriate runtime base. From the workshop directory:
 
 ```bash
-docker build --platform linux/amd64 \
-    --build-arg PULUMI_VERSION="<tested-cli-version>" \
-    --build-arg PROGRAM_REVISION="<program-source-commit>" \
-    --tag "<registry>/<repository>:<release>" .
+PLATFORM=linux/amd64 make image LANGUAGE=typescript
 ```
 
-The program revision must identify the source used to build `bin/infra`. A separate image or configuration repository can have a different commit.
+Select `typescript`, `python`, `go`, `dotnet`, or `java`, and match the platform to your runner. The build happens inside Linux, avoiding accidental inclusion of a host-platform Go executable or Python wheel set.
 
-Inspect the installed plugins before publishing:
+The [Dockerfile](https://github.com/pulumi/workshops/blob/workshop/faster-pulumi-deployments/faster-pulumi-deployments/images/Dockerfile) prepares the language-specific artifact in a build stage and installs the matching plugins. Its final stage contains the runtime files and CLI, but excludes the project file and stack configuration. Python's virtual environment is created at its final path inside the image instead of being relocated from another machine.
 
-```bash
-docker run --rm --platform linux/amd64 \
-    --entrypoint pulumi \
-    "<registry>/<repository>:<release>" plugin ls
-```
+These examples retain SDK and build tools in the base image. That gives you a working comparison before trying to minimize the runtime image. Removing tools can reduce transfer size, but it is a separate change that needs testing; it should not obscure whether prebuilding the program helped.
 
-Compare the output with `plugins.txt`, then push the image:
+## Keep the executable release separate from configuration
 
-```bash
-docker push "<registry>/<repository>:<release>"
-```
+The image builder creates an external project configuration workspace under `workspaces/image/<language>`. Its `Pulumi.yaml` selects the program inside the image: the Go executable, .NET DLL, Java JAR, JavaScript entry point, or Python program directory.
 
-Use the registry's digest in deployment settings: `<registry>/<repository>@sha256:<digest>`. Tags are useful for naming releases, but a tag can be moved to another image without changing the reference stored in a stack's settings. The digest gives the deployment a fixed executable input, which is the same property the immutable artifact path provided in the earlier approach.
+Keep that project definition and the stack files in Git. Use stack configuration or ESC to supply the environment-specific values. The example programs all use the standard configuration API, so the selected account or environment does not have to be compiled into the program.
 
-## Point the project at the image's program
+This arrangement gives the deployment two independently versioned inputs. The image digest identifies the executable release, and the Git revision identifies the project and stack files. If those files import ESC environments that can change independently, record or pin the environment revisions when exact configuration replay matters.
 
-In the Git-backed `Pulumi.yaml`, preserve the existing project name and other settings. Change the binary path from the downloaded file to the image's absolute path:
+A fixed image digest does not freeze values fetched from an unversioned environment. That flexibility can be useful, but it should be deliberate rather than an assumption that the image or Git commit captured every deployment input.
 
-```yaml
-runtime:
-  name: go
-  options:
-    binary: /opt/pulumi-program/infra
-```
+## Configure Pulumi Deployments
 
-Keep the existing stack files in this repository. If you use ESC, a stack file can contain its environment import:
+Publish the image to a registry your runner can access and record its digest. In **Settings** → **Deploy**, select **Use a custom executor image** and use the digest-qualified reference. A mutable tag can move to a different image; a digest identifies the release you tested.
 
-```yaml
-environment:
-  - fleet/bench-a
-```
+Keep Git configured as the source of the project and stack files. The companion includes a `Pulumi.image.yaml` for each program directory. Its lab shows how to select that definition while preserving the external stack configuration.
 
-The other test stack imports `fleet/bench-b`. For a project named `fleet-infra`, the first ESC environment could supply:
+Skip automatic package-manager dependency installation once the image contains everything the selected program requires. Remove the artifact-download command from part 3, since retrieving another copy would repeat preparation the image already provides. Keep the image's plugin location consistent with the `PULUMI_HOME` used by the operation.
 
-```yaml
-values:
-  pulumiConfig:
-    fleet-infra:environment: bench-a
-```
+Private registry authentication must work before the container starts. A pre-run command inside the container cannot authenticate the earlier image pull. Use [registry credentials supported by Pulumi-managed runners](/docs/deployments/concepts/settings/custom-executor-images/) or the authentication mechanism configured for customer-managed runners.
 
-Use your actual project name in the configuration key. Keep the configuration lookup and exported `environment` value from part 2. Remove any explicit stack value that would override the ESC value.
+## Test configuration changes without rebuilding
 
-Let the compiled program read these values through the configuration API when Pulumi executes it. Avoid generating environment-specific binaries or images for values that can be supplied at runtime. Doing so would replace one reusable release with a collection of builds that must be maintained separately.
+Deploy the same image digest to two disposable stacks with different `environment` values. Both should execute the prepared program and report their own configuration. Check the logs for unexpected compilation, dependency installation, or provider downloads.
 
-## Configure Pulumi Deployments to use the image
+Next, change only one stack's ESC value and redeploy with the existing image reference. Confirm that the selected stack changes while the other retains its value. If the stack pins an ESC revision, select the new revision before deploying.
 
-For each test stack, open **Settings** → **Deploy** and enable **Use a custom executor image**. Set **Image reference** to the digest you recorded.
+Repeat the exercise with a Git stack-file change and the same image digest. These tests establish the property the multi-account release process depends on: the executable can remain constant while the selected environment's inputs change.
 
-Keep the Git source configured. The image contains executable code, but the runner still needs the project and stack files from Git. Selecting **None** would remove the source of those files rather than remove redundant work.
-
-Keep **Skip package manager dependency installation** enabled, since the image supplies the compiled program and plugins. Remove the artifact-download pre-run command from part 3. Keep any other pre-run commands that your program requires.
-
-Use the image's `PULUMI_HOME` consistently. Remove conflicting deployment settings that would point the Pulumi operation at another plugin directory. The execution user must be able to read the plugins and write to its Pulumi home.
-
-Disable managed dependency caching for this experiment because the image supplies these dependencies. If caching remained enabled at the end of part 3, measure that change separately before comparing delivery methods.
-
-Private image authentication happens earlier than the artifact authentication used in part 3. The runner must retrieve the image before it can execute a pre-run command inside that image, so an ESC-wrapped command cannot solve this earlier requirement. Configure [custom image registry credentials](/docs/deployments/concepts/settings/custom-executor-images/) for Pulumi-managed runners, or use the registry authentication configured for your customer-managed infrastructure.
-
-## Prove that configuration can change independently
-
-Deploy the same digest to `bench-a` and `bench-b`. Confirm that the logs show no release download or per-job plugin installation. Check that the two stacks export their own `environment` values.
-
-Next, change only `fleet-infra:environment` in the ESC environment for `bench-a`. Trigger another deployment without changing the image reference or building a new image.
-
-Confirm that `bench-a` reports the new value and `bench-b` retains its existing value. If you pinned an ESC revision, update that reference to select the new revision before deploying.
-
-For Git-backed values, change the stack configuration file and deploy its new commit with the existing image digest. This tests the same property through a different configuration source: environment-specific behavior changes while the executable release stays constant.
-
-Rebuild when the program, plugins, CLI, or included runtime tools change. Keep ordinary configuration changes in Git or ESC so they do not require image publication. This distinction becomes more useful as the same program serves more environments.
+Rebuild when the program, plugins, CLI, or included runtime tools change. Ordinary configuration changes should remain in Git or ESC so that adding another environment does not also require another image build.
 
 ## Include cold image pulls in the comparison
 
-Repeat the operations measured in part 3. Record image preparation time and total elapsed time. Check results on a fresh runner as well as a runner with cached layers; a repeated deployment is not proof of layer reuse.
+Measure image preparation and the complete operation, not only the time after the container starts. Pulumi-managed runners already cache the default executor image; a fresh runner must pull your custom image. A large image can therefore cost more to transfer than the smaller artifact from part 3.
 
-The default executor image has an advantage worth accounting for: Pulumi-managed runners already cache it. Your custom image introduces a pull on a fresh runner, potentially transferring much more data than the program archive alone. Preinstalled plugins remove work inside the job, but that does not establish that the complete deployment is faster. Include image preparation in the comparison rather than measuring only what happens after the container starts.
+Include the initial image build and publication when comparing a rollout across many stacks. Layer reuse can reduce repeated transfer, but its benefit depends on runner placement and cache lifetime. A second deployment is not proof that it reached a runner with the image cached.
 
-Compare equivalent versions and include the one-time image build and push when measuring the full rollout. Across many stacks, reuse of the same image layers can reduce repeated preparation. The benefit depends on runner placement and cache lifetime.
-
-Keep the image approach when its measured behavior fits your workload. Release consistency may also be useful, but report that separately from a speed improvement. Continue to [part 5](/blog/cache-pulumi-kubernetes-runners/) for customer-managed Kubernetes caches, or [part 6](/blog/reduce-pulumi-rollout-time/) to reduce queue time.
+Keep the image approach when it improves the measured workload or provides useful release consistency, and distinguish those two outcomes. Continue to [part 5](/blog/cache-pulumi-kubernetes-runners/) for persistent customer-managed runner caches, or [part 6](/blog/reduce-pulumi-rollout-time/) for scheduling improvements.

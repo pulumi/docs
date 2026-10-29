@@ -1,15 +1,15 @@
 ---
-title: "Faster Pulumi deployments, part 2: Compile Go once"
+title: "Faster Pulumi deployments, part 2: Build once"
 # TODO: Replace the series placeholder dates before publication.
 date: 2099-01-02
 draft: true
-meta_desc: "Build a Pulumi Go program once, retrieve it through ESC, and deploy the same executable to multiple stacks with runtime configuration."
+meta_desc: "Prepare Pulumi programs once in TypeScript, Python, Go, C#, or Java, then reuse the output across stacks with runtime configuration."
 feature_image:
 authors:
     - jonathan-davenport
 tags:
     - pulumi-deployments
-    - go
+    - platform-engineering
     - esc
 category: tutorials
 series: faster-pulumi-deployments
@@ -20,157 +20,66 @@ social:
     bluesky:
 ---
 
-Once a program revision has been built and tested, rebuilding it for each environment adds another preparation step to every deployment. Go lets you publish the executable instead, and Pulumi can run that executable while continuing to supply configuration for the selected stack. This gives the deployment process a specific artifact to promote, rather than a set of instructions for reconstructing it each time.
+Once a program revision has been built and tested, preparing it again for every environment adds another step to each deployment. The form of that preparation depends on the language: compilation for some programs, dependency installation for others. The platform-engineering opportunity is the same in each case. Prepare what can be shared, then supply the selected stack's configuration when the program executes.
 
-For the platform team deploying across hundreds of accounts, this turns compilation into a release task rather than an environment-by-environment expense. The [cache from part 1](/blog/speed-up-pulumi-deployments/) already reduces repeated compilation within a stack, so a separate build pipeline needs to improve on that result. Its additional value is reuse across stacks: every environment can receive the same tested executable, with its differences supplied through configuration.
+The [cache from part 1](/blog/speed-up-pulumi-deployments/) reduces repeated work within a stack. A release artifact goes further by giving other stacks something explicit to reuse. Your team can keep its existing language while changing where compilation or dependency preparation happens.
 
 <!--more-->
 
-## Give each executable an immutable release path
+## Prepare an artifact that fits your language
 
-For this experiment, keep the source repository connected to Pulumi Deployments and let it supply the project files and executable-retrieval script. The executable itself will live in an existing private S3 bucket, under a path containing the source commit that produced it. Using the commit in the path establishes a relationship between the source selected for deployment and the code the runner retrieves.
+The [companion's build lab](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/labs/02-build-once) contains complete programs in TypeScript, Python, Go, C#, and Java. Each implements the same small provider-backed workload and reads the same configuration key. This lets you test the release mechanics before applying them to a larger infrastructure program.
 
-You need a build environment, permission to publish to that bucket, and an executor image containing the AWS CLI. This example targets Linux on `amd64`; use the platform of your runner.
+| Language | Prepared output | What remains at execution time |
+| --- | --- | --- |
+| TypeScript | JavaScript and installed runtime packages | Node.js and the prepared packages |
+| Python | Locked requirements and compatible wheels | Python and an environment installed at its destination |
+| Go | Native executable containing imported Go packages | A compatible operating system and architecture |
+| C#/.NET | Published assembly and dependency files | A compatible .NET runtime |
+| Java | Runnable JAR containing its dependencies | A compatible JVM |
 
-Check the AWS CLI prerequisite before configuring the deployment. The `pulumi/pulumi-go` image used in this walkthrough does not include it. For a Linux `amd64` runner, this Dockerfile extends the tested base image with the download tools:
+Every row also needs the Pulumi CLI, provider plugins, and configuration. A prebuilt program does not contain the entire deployment system.
 
-```dockerfile
-FROM pulumi/pulumi-go:3.259.0
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends unzip \
-    && curl -fsSL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o /tmp/awscliv2.zip \
-    && unzip -q /tmp/awscliv2.zip -d /tmp \
-    && /tmp/aws/install \
-    && rm -rf /tmp/aws /tmp/awscliv2.zip /var/lib/apt/lists/*
-```
+TypeScript compilation removes runtime transpilation, but the emitted JavaScript still loads packages and runs under Node.js. The companion sets `typescript: false` and points Pulumi at the JavaScript entry point. It preserves the package metadata and runtime dependencies instead of assuming that an arbitrary single-file bundle will work.
 
-Use the CLI version selected for your comparison, and use the matching AWS CLI installer if your runner uses another architecture. Build and publish this tools image to your registry, then select it in the stack's [custom executor image settings](/docs/deployments/concepts/settings/custom-executor-images/). Verify the image can run `aws --version`. Treat this image change as a separate preparation cost if your baseline used the default image.
+For .NET and Java, Pulumi's `binary` option selects the published DLL or runnable JAR. The companion preserves the .NET publish directory and packages Java dependencies with the JAR. These are managed-runtime artifacts; neither example depends on Native AOT or a Java native-image toolchain.
 
-Create an [ESC environment with AWS credentials](/docs/esc/providers/login/aws-login/) for artifact retrieval. It must expose credentials through `environmentVariables` and grant access to the release objects. Give the deployment identity permission to open that environment.
+Go provides a convenient native executable model, particularly when designing a new shared program. It is an optional choice, not a reason to rewrite a working program before optimizing its deployment. Python takes a different approach: prepare the wheels, then install them at the destination without downloading them again. Copying an existing virtual environment between machines would introduce path and platform assumptions that this workflow avoids.
 
-Use separate permissions for publishing artifacts, retrieving artifacts, and changing infrastructure. A deployment runner needs read access to its executable release, not permission to replace it. Keep your existing infrastructure credentials unchanged during this experiment.
+## Build the selected track
 
-## Tell Pulumi to use the executable
-
-In `Pulumi.yaml`, preserve your existing project name and other settings. Replace `runtime: go` with:
-
-```yaml
-runtime:
-  name: go
-  options:
-    binary: ./bin/infra
-```
-
-Use the [`binary` option](/docs/iac/languages-sdks/go/#program-entrypoint) to tell Pulumi which executable to run. The Pulumi CLI still supplies the execution context and manages stack state and resource operations. Only compilation moves out of the deployment.
-
-Add `scripts/prepare-program.sh` to the program repository with this content:
+From the companion directory, choose your language:
 
 ```bash
-#!/usr/bin/env bash
-set -euo pipefail
-
-: "${ARTIFACT_BUCKET:?Set ARTIFACT_BUCKET in deployment settings}"
-revision="$(git rev-parse HEAD)"
-release="s3://${ARTIFACT_BUCKET}/releases/${revision}/linux-amd64"
-
-aws s3 cp "${release}/infra.tar.gz" ./infra.tar.gz
-aws s3 cp "${release}/SHA256SUMS" ./SHA256SUMS
-sha256sum --check SHA256SUMS
-tar -xzf infra.tar.gz
-test -x ./bin/infra
+make build LANGUAGE=typescript
+make config LANGUAGE=typescript
 ```
 
-This script runs in the Pulumi project directory and expects Linux tools, including `sha256sum`. The checksum detects transfer corruption; control writes to the release objects so an unauthorized publisher cannot replace both files.
+The [build script](https://github.com/pulumi/workshops/blob/workshop/faster-pulumi-deployments/faster-pulumi-deployments/scripts/build.sh) contains the complete commands for each track. It writes prepared files under `dist/<language>` and creates a separate workspace for stack configuration. Rebuilding the artifact does not remove that configuration or include it in a release.
 
-Commit the runtime setting and preparation script. Add `bin/` and generated release files to your project's ignore rules.
+Use the toolchain and dependency resolution files committed with your program. For Go executables and Python wheels, the output must match the deployment platform. Native dependencies can impose the same requirement on Node.js programs. A successful build on a Mac does not establish that its output will run in a Linux container; the image lab builds within the target Linux environment.
 
-Run the build and preparation commands from the directory containing `Pulumi.yaml`. If the project is in a repository subdirectory, configure that directory as the deployment's **Pulumi.yaml folder**. The artifact path uses the full commit returned by `git rev-parse HEAD`, including when the project occupies only part of the repository.
+The Python track includes an additional destination-installation command in its lab instructions. That step creates the virtual environment where it will actually run and installs from the prepared wheel directory. It removes package retrieval from execution, while preserving the interpreter and installation work the program still requires.
 
-## Publish before you deploy
+## Keep environment differences outside the artifact
 
-In a clean Linux build environment, check out the commit you will deploy. Authenticate to the artifact bucket using your build system's credentials. Set `ARTIFACT_BUCKET` to its name, then run:
+All five programs use their language's Pulumi configuration API to read `environment`. Create two disposable stacks in the external configuration workspace and set different values:
 
 ```bash
-set -euo pipefail
-: "${ARTIFACT_BUCKET:?Set ARTIFACT_BUCKET}"
-revision="$(git rev-parse HEAD)"
-release="s3://${ARTIFACT_BUCKET}/releases/${revision}/linux-amd64"
-
-go mod download
-GOOS=linux GOARCH=amd64 go build -trimpath -o bin/infra .
-tar -czf infra.tar.gz bin/infra
-sha256sum infra.tar.gz > SHA256SUMS
-aws s3 cp infra.tar.gz "${release}/infra.tar.gz"
-aws s3 cp SHA256SUMS "${release}/SHA256SUMS"
+pulumi config set environment development --stack <org>/faster-pulumi-deployments/bench-a
+pulumi config set environment production --stack <org>/faster-pulumi-deployments/bench-b
 ```
 
-Use a compatible toolchain if your program uses `cgo` or native libraries. The archive above contains only the executable. Include any runtime files your program reads, such as manifests or templates, at their expected paths.
+Deploy both stacks using the same prepared output. Their exported environment values should differ even though you did not rebuild between deployments. Apply the same separation to resource inputs such as region or capacity, and use the appropriate secret configuration methods for sensitive values.
 
-Once published, treat the revision path as immutable. If a build overwrites it, two stacks can request the same release and receive different executables, undermining the repeatability this process is intended to provide. Keep the published artifact for later stacks and record its Go toolchain and module versions. If the build inputs need to change, publish a new release rather than silently replacing the old one.
+The [ESC examples](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/esc) supply those values through `pulumiConfig`. Each stack can import a different environment while continuing to run the same program. Remove conflicting explicit stack values when moving configuration into ESC, since local stack configuration takes precedence.
 
-The release process must also establish an order between publication and deployment. A source commit can trigger a runner before its executable has been uploaded, even when both jobs eventually succeed. For this experiment, disable push-triggered updates on the test stacks and trigger deployments manually after publication completes. The automated pipeline should enforce the same dependency: only a successfully published release is eligible for deployment.
+The companion records which build and execution paths have been tested in its [validation notes](https://github.com/pulumi/workshops/blob/workshop/faster-pulumi-deployments/faster-pulumi-deployments/VALIDATION.md). The examples establish that these artifacts can execute with different configuration; their small workload does not establish comparative performance between languages.
 
-## Retrieve the program with an ESC pre-run command
+## Count preparation once and retrieval for every deployment
 
-Set `ARTIFACT_BUCKET` in each stack's deployment environment variables. Add this [pre-run command](/docs/deployments/concepts/settings/pre-run-commands/), replacing the ESC environment path:
+Include the initial build when comparing the complete rollout. Moving a build into another job does not remove its cost. The saving comes from reusing its output across enough stacks to justify the build, publication, and retrieval process.
 
-```bash
-pulumi env run <org>/build/artifact-reader -- bash scripts/prepare-program.sh
-```
+A warm dependency cache may already make preparation inexpensive for a frequently updated stack. An artifact can be more useful when the same revision is deployed to many new stacks, each of which would otherwise start cold. Measure both cases before deciding how much of the release process to centralize.
 
-Credential access depends on when each step runs. An ESC environment imported by stack configuration is not automatically open when the pre-run command retrieves the executable. Opening the artifact-reader environment explicitly gives the script credentials at the point where it needs them. Since separate pre-run commands execute in separate shells, keep the related operations in that script rather than relying on an earlier `export`.
-
-Keep dependency installation and caching unchanged from part 1. This isolates the effect of running a compiled program. Part 3 will supply plugins explicitly and remove the remaining package-manager installation step.
-
-Deploy the built commit to `bench-a`, then `bench-b`. Confirm that each preparation step retrieves the same revision path and verifies the archive successfully.
-
-## Keep environment-specific values in runtime configuration
-
-A compiled program remains parameterizable because configuration lookup is part of executing the program, not compiling it. The binary contains the code that requests a value; the Pulumi CLI supplies that value for the selected stack when the program runs. Consequently, changing a region or capacity setting does not require recompiling the configuration API or the resource constructors that use it. Keep those environment differences in configuration so every environment can use the same tested executable.
-
-For a visible check, add a configuration lookup inside your existing `pulumi.Run` callback, using the `github.com/pulumi/pulumi/sdk/v3/go/pulumi/config` package:
-
-```go
-cfg := config.New(ctx, "")
-ctx.Export("environment", pulumi.String(cfg.Require("environment")))
-```
-
-Build and publish this program revision once. Set `environment` to different values in the two test stacks, using each stack's fully qualified name:
-
-```bash
-pulumi config set environment bench-a --stack <org>/<project>/bench-a
-pulumi config set environment bench-b --stack <org>/<project>/bench-b
-```
-
-Commit the resulting stack configuration files if your deployment reads them from Git, then build and publish that final commit before deploying it. Both stacks must deploy that same commit and artifact.
-
-You can also supply the values through an [ESC environment's `pulumiConfig`](/docs/esc/guides/pulumi-iac/). For a project named `fleet-infra`, the first environment would contain:
-
-```yaml
-values:
-  pulumiConfig:
-    fleet-infra:environment: bench-a
-```
-
-Import that environment in the corresponding stack file:
-
-```yaml
-environment:
-  - fleet/bench-a
-```
-
-Create the equivalent environment for `bench-b`. If you move a value into ESC, remove the corresponding local stack value; explicit stack configuration takes precedence.
-
-Check the stack outputs after both deployments. The `environment` output should differ even though the executable checksum is identical. This verifies the property the release process depends on: the code can remain constant while environment-specific behavior changes. Apply the same pattern to resource arguments such as capacity or region, and use secret configuration methods for sensitive values.
-
-ESC lets you change runtime configuration without recompiling. In this example, release paths follow the Git commit, so a Git-only configuration change still needs an artifact at the selected revision path. A later pipeline can explicitly map multiple configuration revisions to one verified program artifact.
-
-## Count the build once and retrieval for every deployment
-
-Repeat the same operations measured in part 1. Record artifact download and extraction as preparation time. Compare them with the compilation work removed from the Pulumi operation.
-
-Include the release build when measuring the total cost across environments. Moving a build to another job does not eliminate its cost. The saving comes from reusing its result instead of paying that cost for every stack.
-
-For a program deployed once, publishing and retrieving a separate artifact may cost more than compiling it on the runner. With many deployments of the same revision, however, the initial build serves every stack while each deployment pays only the retrieval cost. The useful comparison is therefore the complete rollout, including its build, rather than an individual job with the build moved elsewhere.
-
-The Go executable includes its SDK dependencies, but provider plugins remain separate. [Part 3](/blog/version-pulumi-deployment-artifacts/) makes those plugins part of the same versioned release.
+Once the prepared program works, make its required provider plugins part of the same release. [Part 3](/blog/version-pulumi-deployment-artifacts/) addresses that separate dependency boundary.

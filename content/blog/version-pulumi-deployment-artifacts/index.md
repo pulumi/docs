@@ -3,13 +3,13 @@ title: "Faster Pulumi deployments, part 3: Prepare plugins"
 # TODO: Replace the series placeholder dates before publication.
 date: 2099-01-03
 draft: true
-meta_desc: "Package matching provider plugins with a compiled Pulumi program, install them from release artifacts, and skip redundant dependency installation."
+meta_desc: "Package matching provider plugins with a prepared Pulumi program, publish a versioned release, and remove repeated dependency retrieval."
 feature_image:
 authors:
     - jonathan-davenport
 tags:
     - pulumi-deployments
-    - go
+    - platform-engineering
     - providers
 category: tutorials
 series: faster-pulumi-deployments
@@ -20,108 +20,64 @@ social:
     bluesky:
 ---
 
-A compiled Pulumi program is only part of the executable software involved in a deployment. The program declares resources through provider SDKs, while separate provider processes perform the corresponding operations. If the runner has the program but lacks those providers, it must still retrieve them before it can complete the deployment.
+A prepared Pulumi program is only part of the executable software involved in a deployment. The program declares resources through provider SDKs, while separate provider processes perform the corresponding operations. If the runner has the program but lacks those providers, it must still retrieve them before completing the deployment.
 
-For a platform team distributing one program across many accounts, the provider executables belong in the same controlled release process as the program itself. Extend the [release prepared in part 2](/blog/precompile-pulumi-go-programs/) to include them, with an explicit record of the plugin versions that match its SDKs. This reduces repeated preparation and gives the team a defined set of provider binaries to verify before promotion. Once the release supplies everything the program needs, the remaining package-manager installation can be removed.
+For a platform team distributing one program across many accounts, those provider executables belong in the same controlled release process as the program. Extend the [artifact from part 2](/blog/precompile-pulumi-go-programs/) with the matching plugins so the release describes what will execute, regardless of the language used to write the program.
 
 <!--more-->
 
 ## Match plugins to the SDKs used in the build
 
-A provider SDK gives your program Go types and resource constructors. The provider plugin implements the corresponding resource operations in a separate process. Both belong to the deployment, but compiling the SDK does not embed the plugin. Prepare them as related parts of the release.
+The Pulumi CLI, core SDK, and resource providers have separate version histories. The CLI version does not tell you which AWS or custom provider version your program requires. Record each provider version requested by the SDK, including any explicit override in the program.
 
-For each provider, use the version requested by the SDK compiled into the program, accounting for any explicit provider-version override in the code. It is tempting to treat the Pulumi version as one number that applies to the entire deployment, but these components have separate release histories. The CLI version identifies the engine and tools; it does not tell you which AWS or custom provider version your program requires.
-
-Existing stacks add a qualification to this rule. During upgrades or resource removal, resources recorded in state may require a plugin that the new program no longer uses. A release that deploys successfully to an empty stack can therefore still be incomplete for an update. If your process supports both cases, test both rather than treating a successful new-stack deployment as proof that all dependencies are present.
-
-Create a release manifest named `plugins.txt`. Each line contains the plugin name, version, and archive path. For a custom provider named `acme`, it could contain:
-
-```text
-acme 1.2.3 plugins/pulumi-resource-acme-v1.2.3-linux-amd64.tar.gz
-```
-
-Replace this illustrative entry with your program's actual providers. Add one line per required plugin version, without a header or comments. Keep the manifest alongside the source so changes receive review.
-
-For the Random-provider project suggested in part 1, inspect the SDK version with:
+The companion uses a shared [provider manifest](https://github.com/pulumi/workshops/blob/workshop/faster-pulumi-deployments/faster-pulumi-deployments/provider-plugins.txt). Its [version check](https://github.com/pulumi/workshops/blob/workshop/faster-pulumi-deployments/faster-pulumi-deployments/scripts/check-versions.py) compares that manifest with the SDK dependency declared in each of the five example programs:
 
 ```bash
-go list -m github.com/pulumi/pulumi-random/sdk/v4
+make check
 ```
 
-The validation example used `v4.18.2`, so its manifest entry was:
+That check is specific to the sample's Random provider. Apply the same principle to your actual provider set rather than assuming that one manually selected plugin version covers every program.
 
-```text
-random 4.18.2 plugins/pulumi-resource-random-v4.18.2-linux-amd64.tar.gz
-```
+Existing stacks require an additional check. During upgrades or resource removal, resources already in state may need a plugin that the new program no longer uses. A release that works against an empty stack may therefore still be incomplete for an update. Test both when your process supports both.
 
-Use the version returned for your project rather than replacing it with this example's version. End the manifest with a newline so the shell loop below reads its final entry.
+## Publish a complete release
 
-## Publish the program and plugins as one release
-
-Download the provider archives from their release pipeline or your approved artifact store. Each archive must match the runner's operating system and architecture. For custom providers, follow the [executable plugin archive layout](/docs/iac/guides/building-extending/packages/executable-plugin/#binary-naming-and-archive-layout): the executable belongs at the archive root.
-
-For the example Random provider version, the Linux archive can be retrieved with:
+The [release lab](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/labs/03-release-artifacts) contains the complete packaging, publication, and retrieval steps. From the companion root:
 
 ```bash
-mkdir -p plugins
-curl --fail --location \
-    https://get.pulumi.com/releases/plugins/pulumi-resource-random-v4.18.2-linux-amd64.tar.gz \
-    --output plugins/pulumi-resource-random-v4.18.2-linux-amd64.tar.gz
+make package LANGUAGE=typescript
 ```
 
-In the Linux build job from part 2, place the archives under `plugins/`. Replace the archive creation command with:
+The builder prepares the selected program, downloads matching provider archives, and creates a release archive with a SHA-256 checksum. The archive includes the prebuilt project definition and dependencies, but excludes stack configuration. Python environments are installed at the destination rather than copied from the build machine.
+
+Use the same operating system and architecture for the program and plugins. The companion's local packaging path targets the build machine, while its image path builds inside the selected Linux environment. Mixing a macOS executable with Linux provider archives does not produce a usable Linux release.
+
+Publish under a new immutable path that identifies the source revision, language, and platform. The companion demonstrates S3, but Artifactory or another controlled artifact store can serve the same role. Keep one authoritative manifest and promote the same artifact instead of overwriting a release after some environments have already consumed it.
+
+## Retrieve the release with ESC credentials
+
+The runner needs artifact credentials before the Pulumi operation starts. Stack-imported ESC environments are not automatically open at this point, so explicitly open the reader environment around the preparation script:
 
 ```bash
-tar -czf infra.tar.gz bin/infra plugins.txt plugins/
-sha256sum infra.tar.gz > SHA256SUMS
+pulumi env run <org>/build/artifact-reader -- bash ../../scripts/prepare-release.sh
 ```
 
-Publish both files under the new source revision using the same S3 upload commands. Preserve any runtime files your program requires when extending this archive.
+This command assumes the deployment's project directory is the selected program directory in the companion. The lab specifies the exact source path, required runtime tools, and `RELEASE_URI` setting. The [preparation script](https://github.com/pulumi/workshops/blob/workshop/faster-pulumi-deployments/faster-pulumi-deployments/scripts/prepare-release.sh) verifies and extracts the artifact, then installs its plugins from local archives.
 
-S3 is a hosting choice, not a requirement of the release model. If you use Artifactory, publish the same versioned files there and replace the download client in the preparation script. Keep one authoritative plugin manifest so the storage service does not determine which versions are deployed.
+Keep publication credentials separate from retrieval credentials. The runner needs access to the selected release, not permission to replace it. A checksum detects changed content in transit; it does not establish publisher identity when an attacker can replace both the artifact and checksum.
 
-## Install plugins from the downloaded release
+For Artifactory, replace the storage client and test its authentication independently. An npm registry token does not automatically authenticate separate provider-plugin downloads.
 
-After the extraction step in `scripts/prepare-program.sh`, add:
+## Skip preparation only after its replacement is complete
 
-```bash
-while read -r name version archive; do
-    pulumi plugin install resource "$name" "$version" \
-        --exact \
-        --file "$archive"
-done < plugins.txt
-```
+Once the release supplies everything required at execution, enable **Skip package manager dependency installation** in deployment settings. Test with a fresh runner so an existing cache cannot hide an omitted dependency. Check the logs for unexpected downloads and verify the provider versions used by the operation.
 
-[`pulumi plugin install --file`](/docs/iac/cli/commands/pulumi_plugin_install/) installs a local archive instead of downloading it from the provider's default host. `--exact` requires that specific version for installation. Ensure the manifest agrees with the versions requested by the program; installing a plugin does not rewrite those requests.
+A language SDK and a component implementation may have different runtime requirements. A Go program can consume a component whose implementation runs in TypeScript; compiling the caller does not package that implementation into Go. Include remote component providers and their dependencies in the release design.
 
-Run preparation with the same user and `PULUMI_HOME` as the Pulumi operation. The operation will not find a plugin installed in another home directory.
+If you maintain your own Pulumi packages, generate and publish consumer SDKs as part of their release process. Component discovery and documentation in the private registry are separate from the storage and preparation of executable artifacts. Test the consumption path you intend to use, including usage tracking, rather than relying on local source imports as an equivalent test.
 
-Validate the release on a clean runner, where an existing plugin cache cannot compensate for an incomplete manifest. A development machine often has dependencies left over from earlier work, making it possible to test a release without noticing what it omits. Check the actual plugin versions in the logs and investigate any unexpected download before removing automatic installation from the process.
+## Compare transfer costs with preparation saved
 
-## Skip installation only after the release is complete
+The complete archive is larger than the program alone, and installing plugins from it still takes time. Measure those costs alongside the downloads and package-manager work removed from each deployment. Also test an existing stack update before promoting the release across environments.
 
-Once release preparation supplies every dependency, enable **Skip package manager dependency installation** in each test stack's **Settings** → **Deploy** page.
-
-Run `bench-a` again. The runner retrieves the release, installs its plugins locally, and executes the Go binary. Downloading Go modules would prepare for a compilation that no longer happens, so that work can be removed.
-
-Keep managed caching enabled for this first comparison. Measure its restore and save costs, then run a separate comparison with caching disabled. If the complete release makes the managed cache redundant, removing cache transfer can reduce preparation time further.
-
-### Include dependencies of component providers
-
-A native Go component compiles into its caller. A TypeScript component consumed through a Pulumi package runs through its component provider and can still need Node.js and npm dependencies.
-
-This is an important exception to the idea that a Go deployment needs only its compiled program and binary providers. A Go program can call a component whose implementation still runs in TypeScript, so the top-level language does not describe every runtime involved. Include that component's dependencies in the preparation strategy before disabling installation. Otherwise, compilation has removed one build step while leaving another runtime unprepared.
-
-For a Go-authored component package, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) supports an executable provider model. Build the plugin and generate consumer SDKs during the package release. Consumers can then install published SDKs rather than generate them during deployment.
-
-Set `pluginDownloadURL` in your package schema to its binary host. For an existing mirror, [`PULUMI_PLUGIN_DOWNLOAD_URL_OVERRIDES`](/docs/iac/cli/environment-variables/) can redirect plugin requests. Neither setting configures npm authentication.
-
-The [private registry](/docs/idp/concepts/private-registry/) can provide discovery and documentation while your artifact store supplies the executable files. These are related responsibilities, but choosing where to list a package does not by itself determine how quickly it will execute. Usage tracking also depends on how the component is consumed, since importing local source does not create the package provider resource used for registry matching. Test the package-based consumption path you intend to deploy rather than assuming a local import exercises the same mechanism.
-
-## Verify the release on both clean and existing stacks
-
-Compare this run with part 2 using the same operation and test conditions. The archive is larger now, and its plugins still need local installation. Count those costs before claiming a saving from removing external downloads and package-manager work.
-
-Deploy the same release to `bench-b` without rebuilding it. Confirm the executable checksum and provider versions match, while each stack still receives its own configuration. If you also support existing stacks, repeat the test against a representative earlier release and check that the update finds every required plugin.
-
-Next, put the program and installed plugins in a custom executor image while keeping stack configuration outside it. Continue to [part 4: Use a prebuilt image](/blog/prebuilt-pulumi-executor-images/) to compare image pulls with artifact download and extraction.
+The next option is to install the program and plugins during an image build, letting the container runtime distribute the prepared filesystem. [Part 4](/blog/prebuilt-pulumi-executor-images/) compares that approach while keeping stack configuration external.

@@ -28,6 +28,8 @@ Across hundreds of accounts, the platform team's goal is a faster, predictable r
 
 ## Measure the full rollout
 
+Use the [companion rollout lab](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/labs/06-rollout) for the test sequence and source-filter example. These checks apply to every language track; keep the artifact and configuration constant while changing how deployments are scheduled.
+
 Trigger equivalent operations for your test stacks at the same time. Record when each job was requested, when execution began, and when it completed.
 
 Total runner time and elapsed rollout time answer different questions. The earlier artifact and cache changes can reduce how much work each stack performs, while additional concurrency lets independent stacks perform their work simultaneously. A rollout can therefore finish sooner without consuming fewer runner minutes. Decide which outcome you need, and report both so a change in scheduling is not mistaken for a reduction in execution cost.

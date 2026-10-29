@@ -38,96 +38,23 @@ Start with one agent and serial test jobs. First establish that one job can reus
 
 The first thing to establish is where the program actually executes. The long-lived agent creates a separate runner Pod for each job, and those Pods do not automatically inherit volumes mounted on the agent. Adding storage to the agent Deployment may therefore leave the deployment's filesystem unchanged. Configure the job template, then inspect an actual execution container to verify that the cache is mounted where the package manager expects it.
 
-Create a [persistent volume claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) using a storage class suitable for your cluster. For example, this claim uses the cluster's default storage class:
+The [Kubernetes cache lab](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/labs/05-kubernetes-cache) contains the complete application commands and three configuration files: a persistent volume claim, a worker Pod template, and an agent mount patch. Use those files with a dedicated test cluster and your actual runner namespace.
 
-```yaml
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: pulumi-package-cache
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 10Gi
-```
+Choose storage capacity from your dependency sizes. Understand the access mode before increasing concurrency: `ReadWriteOnce` permits read-write mounting from one node, not necessarily one Pod. Jobs on different nodes may need different storage or separate caches.
 
-Choose capacity from your dependency sizes, and create the claim in the namespace used for runner jobs. Understand the access mode before increasing concurrency: `ReadWriteOnce` permits read-write mounting from one node, not necessarily one Pod. If jobs run on different nodes, they may need different storage or separate caches.
+The template interface was tested with customer-managed workflow agent `v2.3.2`. Its execution container is named `pulumi-workflow`, and the agent reads `/mnt/worker-pod.json`. The container name matters because strategic merge uses it to modify the existing container; a different name adds another container instead of configuring the one that executes Pulumi.
 
-The following wiring was tested with customer-managed workflow agent `v2.3.2`. Its execution container is named `pulumi-workflow`, and the agent reads a template from `/mnt/worker-pod.json`. The file accepts YAML despite its extension. Save this template as `worker-pod.yaml`; it is a merge patch for generated job Pods, not a standalone Pod to apply:
+The [worker template](https://github.com/pulumi/workshops/blob/workshop/faster-pulumi-deployments/faster-pulumi-deployments/kubernetes/worker-pod.yaml) mounts the cache on each job Pod and sets npm's cache directory. The separate agent patch mounts that template on the agent. Mounting the template and mounting the dependency cache are two distinct operations, which is why configuring only the agent's filesystem does not solve the problem.
 
-```yaml
-spec:
-  containers:
-    - name: pulumi-workflow
-      env:
-        - name: npm_config_cache
-          value: /cache/npm
-      volumeMounts:
-        - name: package-cache
-          mountPath: /cache
-  volumes:
-    - name: package-cache
-      persistentVolumeClaim:
-        claimName: pulumi-package-cache
-```
+If your installation already uses a template, extend it instead of adding a competing mount. Preserve the generated command and required mounts, and give the execution user write access to the cache directory. A ConfigMap mounted with `subPath` requires an agent restart after changes.
 
-The container name is significant: strategic merge uses it to update the existing execution container. A different name adds another container instead of configuring the one that runs Pulumi.
-
-If you installed the agent with the [provided Kubernetes component](https://github.com/pulumi/customer-managed-workflow-agent/tree/main/kubernetes#loading-pod-specification-into-the-agent), pass this template through its `podTemplate` argument and update that installation. The component creates and mounts the template ConfigMap. For a manually managed agent Deployment, create a ConfigMap from the file:
-
-```bash
-kubectl --context <test-context> --namespace <runner-namespace> \
-    create configmap workflow-cache-template \
-    --from-file=worker-pod.json=worker-pod.yaml \
-    --dry-run=client -o yaml | \
-    kubectl --context <test-context> --namespace <runner-namespace> apply -f -
-```
-
-Save the following as `agent-template-mount.yaml`, using the agent's actual container name. This mounts the template on the agent; the template itself mounts the cache on each job Pod:
-
-```yaml
-spec:
-  template:
-    spec:
-      containers:
-        - name: agent
-          volumeMounts:
-            - name: workflow-cache-template
-              mountPath: /mnt/worker-pod.json
-              subPath: worker-pod.json
-              readOnly: true
-      volumes:
-        - name: workflow-cache-template
-          configMap:
-            name: workflow-cache-template
-```
-
-If the agent already mounts a template at that path, extend the existing template instead of adding a competing mount. Otherwise, apply the mount patch to your manually managed Deployment:
-
-```bash
-kubectl --context <test-context> --namespace <runner-namespace> \
-    patch deployment <agent-deployment> --type=strategic \
-    --patch-file agent-template-mount.yaml
-```
-
-Preserve the agent's existing command, environment, and other mounts. Set ownership or the Pod security context so the execution user can write to `/cache`. After changing a ConfigMap mounted with `subPath`, restart the agent Deployment so it sees the new file.
-
-Inspect an actual job Pod after changing the template. Confirm that it has the mount and that `npm config get cache` reports `/cache/npm`. Check this in the job container, not the agent container.
+Inspect a real job Pod after applying the configuration. Verify that it has the expected mount and that `npm config get cache` reports `/cache/npm`. Check this in the execution container rather than inferring it from the agent's configuration.
 
 ## Share downloaded packages and keep installations separate
 
 For a Node.js project, a committed `package-lock.json` and `npm ci` give each job a defined installation to create in its own workspace. The download cache can be shared without requiring the installed dependency tree to be shared as well. This distinction matters once jobs run concurrently: reusing downloaded packages is different from allowing two installers to change the same `node_modules` directory. Start with the download cache, where the reuse is easier to separate from each job's working files.
 
-If packages come from Artifactory, store the npm token in an ESC environment and expose it as `NPM_TOKEN`. Configure the project's `.npmrc` to reference that variable:
-
-```ini
-@acme:registry=https://<artifactory-host>/artifactory/api/npm/<npm-repository>/
-//<artifactory-host>/artifactory/api/npm/<npm-repository>/:_authToken=${NPM_TOKEN}
-```
-
-Replace the scope, host, and repository with your settings. The file contains the variable reference, not the token.
+If packages come from Artifactory, store the npm token in an ESC environment and expose it as `NPM_TOKEN`. The companion's [npm configuration example](https://github.com/pulumi/workshops/blob/workshop/faster-pulumi-deployments/faster-pulumi-deployments/config/npmrc.example) references that variable without containing the token. Replace its scope, host, and repository with your settings, then test authentication against your actual registry.
 
 Move the private package installation into a pre-run command so you can open its ESC environment explicitly. Automatic dependency installation happens earlier, before that command can supply credentials. Enable **Skip package manager dependency installation**, then add:
 

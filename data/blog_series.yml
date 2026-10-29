@@ -10,7 +10,7 @@ series:
   - slug: "faster-pulumi-deployments"
     title: "Faster Pulumi deployments"
     description: "Deploy reusable infrastructure across hundreds of AWS accounts with less repeated preparation. Build programs and dependencies centrally, package tools and plugins in images, and use caches while keeping each environment configurable through stack settings and Pulumi ESC."
-    intro: "This series follows a platform engineer deploying reusable Pulumi programs across hundreds of AWS accounts. Reusing builds, provider plugins, container images, and dependency caches can reduce runner costs and improve release repeatability and dependency supply-chain control. Stack configuration and Pulumi ESC keep each environment configurable. [Explore the full series](/blog/series/faster-pulumi-deployments/)."
+    intro: "This series follows a platform engineer deploying reusable Pulumi programs across hundreds of AWS accounts. Reusing builds, provider plugins, container images, and dependency caches can reduce runner costs and improve release repeatability and dependency supply-chain control. Stack configuration and Pulumi ESC keep each environment configurable. [Explore the series](/blog/series/faster-pulumi-deployments/) or use the [runnable companion](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments)."
     prefix: "Faster Pulumi deployments, part "
   - slug: "neo-things"
     title: "Things You Can Do With Neo"
