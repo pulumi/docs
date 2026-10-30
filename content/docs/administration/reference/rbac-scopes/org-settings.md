@@ -85,6 +85,10 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 
 | Value | Description |
 |-------|-------------|
+| `policy_exceptions:approve` | Approve policy exception requests, when an approval rule names this permission. See [Policy exceptions](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/#approval-modes).<br><br>**Granted by default roles**: `Admin` |
+| `policy_exceptions:create` | Create policy exceptions, or request them when approval is required.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `policy_exceptions:delete` | Remove policy exceptions. A removed exception is kept for auditing.<br><br>**Granted by default roles**: `Admin` |
+| `policy_exceptions:read` | View policy exceptions.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `policy_groups:create` | Create a new group of infrastructure as code policies. This allows organizing related policies for better management and enforcement.<br><br>**Granted by default roles**: `Admin` |
 | `policy_groups:delete` | Remove an existing group of infrastructure as code policies. This permanently deletes the policy group and its configurations.<br><br>**Granted by default roles**: `Admin` |
 | `policy_groups:read` | View infrastructure as code policy group configurations. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Member`, `Admin` |

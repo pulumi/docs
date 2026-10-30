@@ -87,6 +87,8 @@ View the policy packs and policy groups associated with a specific stack.
 
 - [Stack Policy API reference](/docs/reference/cloud-rest-api/stack-policy/)
 
+<!-- TODO(api-reference): add a "Policy exceptions" subsection linking to the PolicyExceptions REST reference page once it's generated from the OpenAPI spec. -->
+
 ## Pulumi Service Provider
 
 {{< pulumi-cloud "policy-enforcement" />}}

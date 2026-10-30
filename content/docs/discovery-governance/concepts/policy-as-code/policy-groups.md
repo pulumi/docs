@@ -148,7 +148,9 @@ Rolling policy out in stages gives teams time to absorb each change and gives yo
 
 1. **Move to a preventative policy group with everything advisory.** Once the backlog is manageable, add the packs to a preventative group with every policy set to advisory. Developers begin seeing violations at deployment time, and you learn which rules are noisy or produce false positives without anyone being stopped.
 
-1. **Make specific policies mandatory.** Promote policies to mandatory selectively, starting with the ones where a violation is genuinely unacceptable and the fix is well understood. Expand from there as teams build familiarity.
+1. **Make policies mandatory and let teams create exceptions.** Promote policies to mandatory selectively, starting with the ones where a violation is genuinely unacceptable and the fix is well understood. Expand from there as teams build familiarity. Teams that hit a violation they can't fix yet unblock themselves with a [policy exception](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) that records why.
+
+1. **Require approval for new exceptions.** Once the backlog is under control, switch policy exceptions to require approval, so each new exception gets a reviewer.
 
 ## Next steps
 

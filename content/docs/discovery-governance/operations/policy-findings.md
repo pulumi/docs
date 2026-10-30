@@ -87,11 +87,19 @@ For organizations with access to Pulumi Neo, you can select multiple issues and 
 
 For each issue, you can set:
 
-- **Status:** Open, In Progress, or Ignored
+- **Status:** Open or In Progress
 - **Priority:** P0 (critical) through P4 (low)
 - **Assignment:** Assign to specific team members in your organization
 
 These fields can be edited directly from the Issues tab or from the individual issue detail view.
+
+### Findings exempted by exceptions
+
+A finding that a [policy exception](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) exempted in its latest run stays in the Issues tab, with the exception's ID in the **Exception** column and **Allowed by EXC-n** in the issue details. To accept a known violation, create an exception for it: findings can't be set to an Ignored status.
+
+<!-- TODO(console): the console still says "Allowed by"; update when it says "Exempted by" -->
+
+<!-- TODO(decision): whether exempted findings count in the compliance scores (today they do). The Open or In Progress status list assumes the service change that rejects Ignored ships with policy exceptions. -->
 
 ### Issue details
 
