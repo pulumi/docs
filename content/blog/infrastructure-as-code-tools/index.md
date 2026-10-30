@@ -502,12 +502,7 @@ Considerations:
 
 Organizations moving to programming-language-based IaC report deployment-time reductions ranging from roughly 70% to 99% — SANS at 70%, Unity at 80%, and Starburst at 99% (two weeks down to about three hours). These improvements typically occur when transitioning from manual processes or basic template systems to automated approaches with comprehensive testing, IDE integration, and code reusability. Results vary based on starting point, team expertise, infrastructure complexity, and specific use cases.
 
-> **Try Pulumi in your own cloud account.** The shortest path from reading to running code:
->
-> 1. [Install the Pulumi CLI](/docs/install/).
-> 2. [Work through the AWS get-started tutorial](/docs/iac/get-started/aws/) to deploy and update a real stack, or [start with Azure, Google Cloud, or Kubernetes](/docs/get-started/).
-> 3. Moving off HCL? [Read the Pulumi vs. Terraform comparison](/docs/iac/comparisons/terraform/).
-> 4. [Explore Pulumi Neo](/product/neo/) to hand routine infrastructure changes to an AI agent, with previews and policy checks built in.
+> **Ready to try Pulumi?** Run the [AWS get-started tutorial](/docs/iac/get-started/aws/) to deploy your first stack in the language you already use.
 
 ### 2. Terraform
 
