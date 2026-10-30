@@ -21,7 +21,7 @@ gated: true
 event_type: workshop
 
 # Track this event belongs to (see data/event_tracks.yml).
-track: agent-driven-infrastructure
+track: unleash-your-agents
 
 # URL for embedding a URL for ungated events.
 youtube_url:

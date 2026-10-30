@@ -8,7 +8,7 @@ featured: false
 unlisted: false
 gated: true
 event_type: workshop
-track: agent-driven-infrastructure
+track: unleash-your-agents
 youtube_url:
 sortable_date: 2027-01-20T09:00:00.000-08:00
 duration: 60 minutes
