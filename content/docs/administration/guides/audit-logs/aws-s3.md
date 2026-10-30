@@ -16,26 +16,27 @@ aliases:
 
 Pulumi Cloud can continuously export audit log events to an Amazon S3 bucket. Once configured, new events are delivered automatically — no manual downloads or API polling required.
 
-## Configure export using the console
+## Configure export to Amazon S3
 
 1. Navigate to the organization's **Settings**.
 1. Navigate to **Audit Logs**.
-1. Use the three-dot menu and select **Configure Audit Logs to S3**.
+1. Use the three-dot menu and select **Configure export to Amazon S3 / S3-compatible**.
 
    <img src="/images/docs/reference/console/ale-menu.png" alt="Audit log export menu showing the Configure Audit Logs to S3 option">
 
+1. Select **Amazon S3**.
 1. Follow the instructions to create an AWS S3 bucket.
-1. Provide a bucket name and a filepath where Pulumi audit logs will be exported, e.g., `Pulumi-audit-logs`.
+1. Provide an **S3 bucket name** and a **File path prefix** where Pulumi audit logs will be exported, e.g., `Pulumi-audit-logs`.
 1. Copy the provided policy.
 1. In the AWS console create an IAM role.
 1. Select **Another AWS Account** and check **Require external ID**.
 1. Provide the Account ID and External ID, then attach the policy you created.
-1. Provide the ARN of the IAM role.
+1. Provide the **ARN of IAM role**.
 1. Test your configuration.
 
    <img src="/images/docs/reference/console/test-ale-configuration.png" alt="Testing the audit log export configuration">
 
-1. After a successful test, select **Save and Apply**.
+1. After a successful test, select **Save and apply configuration**.
 1. After an hour, verify that logs have successfully started exporting.
 
    <img src="/images/docs/reference/console/ale-success.png" alt="Successful audit log export configuration">
@@ -54,6 +55,7 @@ Pulumi Cloud can also export audit logs to a storage service that implements the
 1. Create an access key that can write objects under the file path prefix, then provide its **Access key ID** and **Secret access key**.
 1. Test your configuration.
 1. After a successful test, select **Save and apply configuration**.
+1. After an hour, verify that logs have successfully started exporting.
 
 Pulumi Cloud encrypts the secret access key and never shows it again. To change other settings later, leave **Secret access key** empty and Pulumi Cloud keeps the saved secret. If you change the endpoint URL or the access key ID, you must provide the secret access key again.
 
