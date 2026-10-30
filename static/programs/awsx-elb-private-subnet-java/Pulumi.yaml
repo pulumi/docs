@@ -1,3 +1,0 @@
-name: awsx-elb-private-subnet-java
-runtime: java
-description: An example that deploys an ApplicationLoadBalancer listening on a private subnet.

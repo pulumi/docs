@@ -1,3 +1,0 @@
-name: aws-eks-cluster-go
-runtime: go
-description: An example that deploys a Kubernetes cluster on AWS.

@@ -1,3 +1,0 @@
-name: aws-eks-cluster-default-typescript
-runtime: nodejs
-description: An example that creates an EKS cluster with default configuration.

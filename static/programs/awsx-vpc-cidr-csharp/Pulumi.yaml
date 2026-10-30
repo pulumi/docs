@@ -1,3 +1,0 @@
-name: awsx-vpc-cidr-csharp
-runtime: dotnet
-description: An example that creates a new VPC and configuring a custom CIDR block.
