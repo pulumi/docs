@@ -40,11 +40,17 @@ The best infrastructure as code (IaC) tools in 2026 are Pulumi, Terraform, OpenT
 
 {{% hcl-note %}}
 
+> **Want to try one of these tools today?** Pulumi is free to start and runs from your own machine in minutes. Pick the next step that matches where you are:
+>
+> - **Install the CLI:** [Download and install Pulumi](/docs/install/) on macOS, Windows, or Linux.
+> - **Deploy something real:** [Follow the get-started tutorial](/docs/iac/get-started/aws/) to create, preview, and deploy an AWS stack in the language you already use, or [choose another cloud](/docs/get-started/).
+> - **Already using Terraform?** [Compare Pulumi and Terraform](/docs/iac/comparisons/terraform/) side by side, including how existing HCL converts.
+> - **Want an AI agent on the team?** [See Pulumi Neo](/product/neo/), the infrastructure agent that proposes changes, runs previews, and opens pull requests.
+
 As infrastructure complexity grows, teams increasingly seek approaches that provide the same developer productivity tools they use for application development. While template-based and domain-specific language approaches serve many use cases effectively, teams with complex requirements or programming backgrounds often find that general-purpose programming languages offer advantages in testing, abstraction, and collaboration.
 
 This comprehensive guide examines the most effective infrastructure as code tools available today, providing detailed analysis of core IaC platforms, complementary tools, and related technologies through the lens of software engineering best practices. Whether you're starting fresh with IaC or evaluating alternatives to overcome limitations in your current toolchain, we'll help you navigate this complex landscape and choose solutions that truly bring software engineering to infrastructure.
 
-Ready to try one of these approaches yourself? [Get started with Pulumi for free](/docs/install/) and provision your first resource in minutes, or [see Pulumi Neo in action](/product/neo/) to explore how an AI agent can manage infrastructure changes alongside your team.
 
 ## What is Infrastructure as Code?
 
@@ -496,7 +502,12 @@ Considerations:
 
 Organizations moving to programming-language-based IaC report deployment-time reductions ranging from roughly 70% to 99% — SANS at 70%, Unity at 80%, and Starburst at 99% (two weeks down to about three hours). These improvements typically occur when transitioning from manual processes or basic template systems to automated approaches with comprehensive testing, IDE integration, and code reusability. Results vary based on starting point, team expertise, infrastructure complexity, and specific use cases.
 
-> **Ready to get started?** [Experience Pulumi's programming language approach](/docs/get-started/) and see how familiar languages can transform your infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.
+> **Try Pulumi in your own cloud account.** The shortest path from reading to running code:
+>
+> 1. [Install the Pulumi CLI](/docs/install/).
+> 2. [Work through the AWS get-started tutorial](/docs/iac/get-started/aws/) to deploy and update a real stack, or [start with Azure, Google Cloud, or Kubernetes](/docs/get-started/).
+> 3. Moving off HCL? [Read the Pulumi vs. Terraform comparison](/docs/iac/comparisons/terraform/).
+> 4. [Explore Pulumi Neo](/product/neo/) to hand routine infrastructure changes to an AI agent, with previews and policy checks built in.
 
 ### 2. Terraform
 
