@@ -171,8 +171,8 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 |---|---|---|
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | push / `/update-review` / `/new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `/update-review …` phrasing |
-| G3 right-approver | an APPROVED latest review at head from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
-| G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); to retry, dispatch "Build and deploy testing" at the branch (never "Build and deploy", which is production). If the staging workflow is disabled, the row says so and names the fix, and a failed deploy or dispatch is quoted at the top of the row |
+| G3 right-approver | an APPROVED latest review at head (or at a commit the head has only merged the base into or pushed no-op commits onto since, with the PR's own `+`/`-` lines unchanged — see Base-only merges) from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
+| G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded; or, the same, at a commit the head has only merged the base into since (Base-only merges) | the deploy is dispatched automatically (`staging-deploy-auto.yml`); to retry, dispatch "Build and deploy testing" at the branch (never "Build and deploy", which is production). If the staging workflow is disabled, the row says so and names the fix, and a failed deploy or dispatch is quoted at the top of the row |
 | G5 oversized-ack | `review:oversized` PRs: a G3-qualifying approval at head whose comment has `/oversized-ack` at the start of a line | where the command goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
 
 **G4's two witnesses.** The commit status is a *report* of the deploy, not
@@ -221,8 +221,11 @@ would make a waive exactly as hard to get as the approval it bypasses, which
 kills the case it most needs to cover (the required approver is the author).
 It fails closed at every step — unreadable actor, failed membership lookup,
 actor on no routing team — and an unauthorized waive is *refused out loud*
-in the summary rather than silently ignored, so the same person doesn't try
-it twice. A waive over a red G4 says so in the summary: the deploy change
+in the status title, the status comment and the summary rather than silently
+ignored, so the same person doesn't try it twice. The membership lookup uses
+the org-scoped token G3 uses, so an outage of that token refuses the waive
+too; G3's error row then names a repo admin's merge as the way through, and
+the status comment doesn't offer a waive that can't work. A waive over a red G4 says so in the summary: the deploy change
 hasn't been applied on staging, so the first production deploy is its first
 real run.
 
@@ -263,7 +266,10 @@ Every label the evaluator reads must also appear in `review-sentinel.yml`'s labe
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
-summary), `'1'` = enforcing. `staging-deploy-auto.yml` follows the same switch. The
+summary), `'1'` = enforcing. Dark is not an off switch once branch protection requires
+the Sentinel status, as it does on `master` (for everyone but repo admins):
+no status holds every PR. Stand the gate down with `'report'`.
+`staging-deploy-auto.yml` follows the same switch. The
 surface itself is `REVIEW_V3_COMMENTS` (repo-wide; the per-PR `surface:v3`
 opt-in label and `REVIEW_V3_BOT_PRS` were retired 2026-09-14 once the
 variable had soaked). The
@@ -311,9 +317,19 @@ status for a deploy that already finished.
 ## Base-only merges
 
 `restamp-base-merge.py` carries a v3 review across a push that only merges
-the base: every commit after the card's `CLAUDE_REVIEW_HEAD` has two parents
-AND the PR's `+`/`-` lines at the reviewed head equal the ones now (the same
-test `/pr-review` uses in `collect.py`). It moves the card's head carriers —
+the base: every commit after the card's `CLAUDE_REVIEW_HEAD` is a merge or
+changes nothing (an empty "kick CI" commit, same tree as its parent) AND the
+PR's `+`/`-` lines at the reviewed head equal the ones now (the same
+test `/pr-review` uses in `collect.py`). The test lives in `sentinel.py`
+(`changes_nothing_since`, `same_diff`, `patchless_file_changed`), because the
+Sentinel applies it too: G3 carries a human approval, and G4 a staging
+deploy, from such a commit to the head. Before that, clicking "Update
+branch" on an approved PR reset the approval GitHub still showed and spent
+a second staging deploy (#22506), and an empty commit reset the review and
+the deploy (#22524). Both reads happen only when the gate would otherwise
+be red, and any read that fails leaves it red. `staging-deploy-auto.yml`
+does not apply the carry, so it still dispatches a (redundant) deploy for
+such a push; G4 doesn't wait for it. It moves the card's head carriers —
 the marker and the sub line's `head commit` — and nothing else, so the
 composition stamp still orders it for the stale-publish guard. Callers:
 `claude-code-review.yml`'s `mark-stale` (instead of staling; then pokes the
@@ -321,7 +337,12 @@ Sentinel) and `review-label-reconcile.yml` (before staling, and in its
 un-stale sweep; it re-dispatches the Sentinel after either repair). Any read
 it can't make answers "not base-only", and so does a large or binary file
 (no `patch`) whose blob changed. It re-reads the card just before writing and
-backs off if a refresh published in the meantime. Before it,
+backs off if a refresh published in the meantime; a change confined to the
+Sentinel's strip doesn't count (the Sentinel rewrites it on the same push),
+and the restamp is written onto the fresh body. `update_strip` likewise
+re-reads the card before its PATCH. Without both, the two writers raced on
+every base merge and the loser left G1 red until the 2-hourly reconcile
+sweep (caught fork-testing #22555). Before it,
 #21673's master merge left a clean review at `review:stale` with nothing
 scheduled to clear it.
 

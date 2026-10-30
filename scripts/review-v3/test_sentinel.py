@@ -105,6 +105,10 @@ class StubGh:
         workflow_runs_error=False,
         workflow_state="active",
         workflow_state_error=False,
+        commits=None,
+        compare=None,
+        statuses_by_sha=None,
+        workflow_runs_by_sha=None,
     ):
         self.pr = pr or {}
         self.files = files or []
@@ -121,6 +125,11 @@ class StubGh:
         self.workflow_runs_error = workflow_runs_error
         self.workflow_state = workflow_state
         self.workflow_state_error = workflow_state_error
+        self.commits = commits  # None: the read fails, as an unstubbed API would
+        self.compare = compare or {}  # sha -> files at that commit
+        self.statuses_by_sha = statuses_by_sha  # sha -> statuses; overrides `statuses`
+        self.workflow_runs_by_sha = workflow_runs_by_sha
+        self.compare_calls = []
         self.patched = []  # (comment_id, body)
         self.posted = []   # body
         self.deleted = []  # comment_id
@@ -138,7 +147,20 @@ class StubGh:
         return self.reviews
 
     def get_commit_statuses(self, sha):
+        if self.statuses_by_sha is not None:
+            return self.statuses_by_sha.get(sha, [])
         return self.statuses
+
+    def list_commits(self):
+        if self.commits is None:
+            raise sentinel.SentinelDataError("commits not stubbed")
+        return self.commits
+
+    def compare_files(self, base, sha):
+        self.compare_calls.append(sha)
+        if sha not in self.compare:
+            raise sentinel.SentinelDataError(f"compare {sha} not stubbed")
+        return self.compare[sha]
 
     def get_team_membership(self, org, team_slug, user):
         if user in self.membership_error_users:
@@ -157,12 +179,19 @@ class StubGh:
     def get_workflow_runs(self, workflow_file, head_sha):
         if self.workflow_runs_error:
             raise RuntimeError("actions API unavailable")
+        if self.workflow_runs_by_sha is not None:
+            return self.workflow_runs_by_sha.get(head_sha, [])
         return self.workflow_runs
 
     def get_workflow_state(self, workflow_file):
         if self.workflow_state_error:
             raise RuntimeError("actions API unavailable")
         return self.workflow_state
+
+    def get_issue_comment(self, comment_id):
+        if getattr(self, "fresh_bodies", None) and comment_id in self.fresh_bodies:
+            return {"id": comment_id, "body": self.fresh_bodies[comment_id]}
+        return next(c for c in self.comments if c.get("id") == comment_id)
 
     def patch_issue_comment(self, comment_id, body):
         self.patched.append((comment_id, body))
@@ -1152,11 +1181,13 @@ def test_waive_covers_infra_evidence():
     v = sentinel.evaluate(gh, CONFIG)
     assert _gate(v, "G4").status == "red", "the row still records what was bypassed"
     assert v.conclusion == "success", v.to_json()
-    assert v.title == "WAIVED"
+    assert v.title == "Waived by cam"
     assert "G4 was red" in v.summary
     body = sentinel.render_status_comment(v)
-    assert "Waived — this PR can merge." in body
+    assert "Waived by `cam` — the Sentinel passes." in body
+    assert "GitHub's own required approval still applies" in body
     assert "no waiver" not in body.lower()
+    assert "@cam" not in body, "a re-rendered comment must not ping"
 
 
 # ---- G4: the deploy run is evidence, not just the status ----------------
@@ -1247,10 +1278,10 @@ def test_an_unattributed_staging_status_is_not_evidence():
 
 
 def test_a_waive_clears_an_error_and_g4():
-    """`any_error` used to be tested before `waived`, so the break-glass was
-    inert in exactly the outage it exists for: an expired team-read token
-    errors G3 on every PR, so every PR sat at action_required and no waive
-    could move any of them — under a summary still claiming WAIVED."""
+    """`any_error` used to be tested before `waived`, so a gate that errored
+    held an honored waive at action_required under a summary claiming
+    WAIVED. This models ONE approver's lookup failing; a full outage of the
+    org token refuses the waive too (see the next test)."""
     waive_events = [{"event": "labeled", "label": {"name": "review:waived"},
                      "actor": {"login": "boss"}}]
     base = dict(pr=pr_meta(labels=["review:waived"]),
@@ -1262,11 +1293,163 @@ def test_a_waive_clears_an_error_and_g4():
     errored = sentinel.evaluate(StubGh(**dict(
         base, reviews=[approval("flaky")], membership_error_users={"flaky"})), CONFIG)
     assert errored.conclusion == "success", errored.to_json()
-    assert "WAIVED" in errored.title
+    assert errored.title == "Waived by boss"
 
     infra = sentinel.evaluate(StubGh(**dict(base, files=[infra_file()])), CONFIG)
     assert infra.conclusion == "success", infra.to_json()
-    assert infra.title == "WAIVED"
+    assert infra.title == "Waived by boss"
+
+
+def test_an_org_token_outage_refuses_the_waive_and_g3_names_the_admin_merge():
+    """The waive's authorization reads the same org-scoped token G3 does, so
+    a full outage refuses both. Fail-closed on purpose; the G3 row says the
+    way through, and the comment doesn't recommend a waive that can't work."""
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
+                comments=[card], reviews=[approval("chris")], label_events=_waive_events("chris"),
+                membership_error_users={"chris"}, permission_error_users={"chris"})
+    v = sentinel.evaluate(gh, HUMAN_CONFIG)
+    assert v.conclusion == "action_required" and not v.waived
+    assert "repo admin merging past the check" in _gate(v, "G3").message
+    assert v.title.startswith("review:waived refused · Couldn't check the approval")
+    body = sentinel.render_status_comment(v)
+    assert "was not honored" in body and "@chris" not in body
+    assert "a re-applied waive fails the same way" in body, "retrying can't help in an outage"
+    assert "Break glass" not in body
+
+
+def test_merge_box_title_says_what_the_merge_waits_on():
+    """#22524: "2 gate(s) red" sent people to a Details page that started
+    with the reviewer brief. The title is the only line most people read."""
+    stale = author_card([], state=_state_with([]), head="b" * 40)
+    v = sentinel.evaluate(StubGh(pr=pr_meta(), files=[infra_file()], comments=[stale],
+                                 reviews=[approval("chris", commit_id="b" * 40)]), HUMAN_CONFIG)
+    assert v.title == ("Waiting on a current review (/update-review); "
+                       "an approval of the latest commit; a staging deploy"), v.title
+    assert len(v.title) <= 140
+
+    findings = author_card([("F1", "must"), ("F2", "answer")])
+    v2 = sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                                  comments=[findings, brief_comment()]), HUMAN_CONFIG)
+    assert "answers to 2 findings (/update-review)" in v2.title, v2.title
+    assert v2.summary.index("| Gate |") < v2.summary.index("Summary text."), "table first"
+
+
+def test_refused_waive_shows_where_people_look():
+    gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
+                label_events=_waive_events("rob"))
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.title.startswith("review:waived refused · Waiting on"), v.title
+    body = sentinel.render_status_comment(v)
+    assert "`review:waived` is on this PR but was not honored:** `rob` is not an active member" in body
+    assert "removes the label and applies it again" in body
+    assert "@rob" not in body
+
+
+def test_break_glass_is_offered_on_an_error_it_can_clear():
+    """A corrupt REVIEW_STATE errors G2 with no red gate; the waive clears it,
+    so the comment has to say it exists."""
+    card = author_card([("F1", "must")])
+    card["body"] = card["body"].replace("<!-- REVIEW_STATE ", "<!-- REVIEW_STATE {broken ")
+    v = sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                                 comments=[card]), CONFIG)
+    assert v.conclusion == "action_required"
+    assert v.title.startswith("Couldn't check the review's answers"), v.title
+    assert "Break glass" in sentinel.render_status_comment(v)
+    assert sentinel.BREAK_GLASS in v.summary
+
+
+# ---- Pushes that change nothing: G3 and G4 carry like G1 ----------------
+
+EARLIER = "c" * 40
+MERGED = "d" * 40
+
+
+def _based_pr():
+    meta = pr_meta()
+    meta["base"]["ref"] = "master"
+    return meta
+
+
+def _treed(sha, tree, parents=1, on="p"):
+    """`on`: the first parent. An empty commit must sit on the one before it."""
+    return {"sha": sha, "parents": [{"sha": on}] + [{"sha": "base"}] * (parents - 1),
+            "commit": {"tree": {"sha": tree}}}
+
+
+def _moved(f):
+    """The same change after the base moved: new hunk header and context,
+    the PR's own +/- lines untouched."""
+    lines = f["patch"].splitlines()
+    body = [ln if ln[:1] in "+-" else " moved context" for ln in lines[1:]]
+    return dict(f, patch="\n".join(["@@ -90,2 +90,3 @@"] + body))
+
+
+def test_an_approval_carries_across_update_branch():
+    """#22506: Chris approved, someone clicked "Update branch", and G3 went red
+    on an approval GitHub still showed — the review carried, the approval
+    didn't, and he had to approve the same diff again."""
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=_based_pr(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("chris", commit_id=EARLIER)], permissions={"chris": "write"},
+                compare={EARLIER: [_moved(docs_file_substantive())]})
+    merged = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t2", 2)]),
+                               HUMAN_CONFIG)
+    assert _gate(merged, "G3").status == "ok", merged.to_json()
+    assert "only base merges or no-op commits" in _gate(merged, "G3").message
+    assert merged.conclusion == "success"
+
+    empty = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t1", on=EARLIER)]),
+                              HUMAN_CONFIG)
+    assert _gate(empty, "G3").status == "ok", "an empty kick commit changes nothing"
+    elsewhere = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t1")]),
+                                  HUMAN_CONFIG)
+    assert _gate(elsewhere, "G3").status == "red", "same tree, but not on the commit before it"
+
+
+def test_an_approval_does_not_carry_across_a_real_change():
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=_based_pr(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("chris", commit_id=EARLIER)], permissions={"chris": "write"})
+    pushed = StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t9")],
+                    compare={EARLIER: [docs_file_substantive()]})
+    v = sentinel.evaluate(pushed, HUMAN_CONFIG)
+    assert _gate(v, "G3").status == "red" and "re-approve" in _gate(v, "G3").message
+    assert pushed.compare_calls == [], "a content commit is decided from the commit list alone"
+
+    edited = dict(docs_file_substantive(), patch="@@ -40,2 +40,3 @@\n context\n+Something else.\n context")
+    conflict = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t2", 2)],
+                                        compare={EARLIER: [edited]}), HUMAN_CONFIG)
+    assert _gate(conflict, "G3").status == "red", "a merge that changed the PR's own lines"
+
+    unreadable = sentinel.evaluate(StubGh(**base), HUMAN_CONFIG)
+    assert _gate(unreadable, "G3").status == "red", "no commit list: fail closed"
+    lagging = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(MERGED, "t2", 2)],
+                                       compare={EARLIER: [_moved(docs_file_substantive())]}), HUMAN_CONFIG)
+    assert _gate(lagging, "G3").status == "red", "a list that doesn't reach the head says nothing"
+
+
+def test_a_staging_deploy_carries_across_update_branch():
+    """#22506 also spent a second ~10-minute deploy of the shared stack to
+    re-prove a change the first deploy had already applied."""
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=_based_pr(), files=[infra_file()], comments=[card],
+                reviews=[approval("chris")], permissions={"chris": "write"},
+                statuses_by_sha={}, workflow_runs_by_sha={EARLIER: [_deploy_run()]})
+    v = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t2", 2)],
+                                 compare={EARLIER: [_moved(infra_file())]}), HUMAN_CONFIG)
+    g4 = _gate(v, "G4")
+    assert g4.status == "ok" and "only base merges or no-op commits" in g4.message, g4
+    assert f"at `{EARLIER[:9]}`" in g4.message
+    assert v.conclusion == "success", v.to_json()
+
+    changed = dict(infra_file(), patch="@@ -1,1 +1,1 @@\n-echo a\n+echo c")
+    v2 = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t2", 2)],
+                                  compare={EARLIER: [changed]}), HUMAN_CONFIG)
+    assert _gate(v2, "G4").status == "red"
+    v3 = sentinel.evaluate(StubGh(**base, commits=[_treed(EARLIER, "t1"), _treed(HEAD, "t9")],
+                                  compare={EARLIER: [infra_file()]}), HUMAN_CONFIG)
+    assert _gate(v3, "G4").status == "red", "a content commit needs its own deploy"
 
 
 def test_g4_says_when_the_staging_workflow_is_disabled():
@@ -1830,7 +2013,7 @@ def test_strip_without_blocking_findings_says_what_merge_waits_on():
     assert sentinel.update_strip(gh, v, comments=[status, card]) is True
     _, patched = gh.patched[-1]
     strip = patched.split(sentinel.STRIP_OPEN)[1].split(sentinel.STRIP_CLOSE)[0]
-    assert "Merge is waiting on G3 right-approver." in strip, strip
+    assert "Merge is waiting on an approval of the latest commit.**" in strip, strip
     assert f"[the Sentinel status]({url})" in strip, strip
     for wrong in ("blocked", "⛔", "fix and push", "/update-review", "below"):
         assert wrong not in strip, (wrong, strip)
@@ -1839,8 +2022,31 @@ def test_strip_without_blocking_findings_says_what_merge_waits_on():
                            gates=v.gates + [sentinel.Gate("G5 oversized-ack", "red", "x")])
     sentinel.update_strip(gh, two, comments=[card])  # no status comment yet: no link
     strip = gh.patched[-1][1].split(sentinel.STRIP_OPEN)[1].split(sentinel.STRIP_CLOSE)[0]
-    assert "waiting on G3 right-approver and G5 oversized-ack." in strip, strip
+    assert "waiting on an approval of the latest commit and /oversized-ack in an approval.**" in strip, strip
     assert "Details: the Sentinel status comment." in strip, strip
+
+
+def test_strip_lands_on_the_card_as_it_is_now_not_as_first_read():
+    """Fork test of #22555: on a base merge the restamp moved the card's head
+    marker while this run held an older copy, and writing the strip from that
+    copy put the old head back, so G1 stayed red until the 2-hourly sweep."""
+    old = author_card([], state=_state_with([]), head="b" * 40)
+    restamped = dict(old, body=old["body"].replace("b" * 40, HEAD))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[old])
+    gh.fresh_bodies = {old["id"]: restamped["body"]}
+    v = sentinel.Verdict(conclusion="failure", title="", summary="", head_sha=HEAD,
+                         gates=[sentinel.Gate("G3 right-approver", "red", "needs approval")])
+    assert sentinel.update_strip(gh, v, comments=[old]) is True
+    _, written = gh.patched[-1]
+    assert f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->" in written and "b" * 40 not in written
+    assert sentinel.STRIP_OPEN in written
+
+
+def test_without_strip_ignores_only_the_strip():
+    a = "## h\n\n<!-- SENTINEL_STRIP -->\n⏳ one\n<!-- /SENTINEL_STRIP -->\n\nbody"
+    b = a.replace("⏳ one", "⏳ two")
+    assert sentinel.without_strip(a) == sentinel.without_strip(b)
+    assert sentinel.without_strip(a) != sentinel.without_strip(b.replace("body", "edited"))
 
 
 def test_frontend_routes_to_marketing_without_staging():

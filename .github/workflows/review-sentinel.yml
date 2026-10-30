@@ -35,7 +35,10 @@ name: Sentinel
 #   unset    → DARK. The job never runs, no check-run is posted, and the
 #              review lanes' "Re-evaluate Sentinel" pokes are skipped. This
 #              is the state the workflow file merges in (Phase 0/1): merging
-#              must change nothing a contributor can see.
+#              must change nothing a contributor can see. NOT an off switch
+#              once branch protection requires the Sentinel status, as it
+#              does on master: no status is a held PR for everyone but repo
+#              admins. Stand the gate down with 'report'.
 #   'report' → report-only (Phase 2). The status passes (`neutral` is
 #              posted as `success`) with the real verdict in its description
 #              ("Preview — would be: …"), and the pinned status comment is

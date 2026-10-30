@@ -9,7 +9,8 @@ merge left a clean review stale, and the Sentinel's G1 red, until someone
 asked for a refresh the diff didn't need).
 
 The test is the one `/pr-review` already uses (collect.py): every commit
-after the card's CLAUDE_REVIEW_HEAD has two parents, AND the PR's `+`/`-`
+after the card's CLAUDE_REVIEW_HEAD is a merge or changes nothing (an empty
+"kick CI" commit, same tree as its parent), AND the PR's `+`/`-`
 lines at the reviewed head equal the ones now — a merge that resolved a
 conflict by editing a line the PR adds changed what the review read, and is
 a real change. When both hold, the author card's head carriers (the
@@ -52,19 +53,7 @@ def restamp_body(author_body: str, head_sha: str) -> str:
     return _SUB_HEAD_RE.sub(lambda m: f"{m.group(1)}{head_sha[:7]}{m.group(2)}", body, count=1)
 
 
-def _patchless_file_changed(files_then: list[dict], files_now: list[dict]) -> bool:
-    """`collect.same_diff` reads `patch`, which GitHub omits for large and
-    binary files, so two patchless snapshots compare equal whatever changed.
-    For those, the blob `sha` has to match on both sides; a missing one
-    fails closed."""
-    then = {(f.get("filename") or f.get("path") or ""): f for f in files_then}
-    for f in files_now:
-        if f.get("patch"):
-            continue
-        t = then.get(f.get("filename") or f.get("path") or "")
-        if t is None or not f.get("sha") or f.get("sha") != t.get("sha"):
-            return True
-    return False
+_patchless_file_changed = sentinel.patchless_file_changed
 
 
 def decide(author_body: str, head_sha: str, commits: list[dict],
@@ -76,7 +65,7 @@ def decide(author_body: str, head_sha: str, commits: list[dict],
     if head_sha.startswith(reviewed) or reviewed.startswith(head_sha):
         return False, "card already current"
     if not collect.only_merges_since(commits, author_body):
-        return False, "a non-merge commit (or an unknown reviewed head) since the review"
+        return False, "a commit that changes something (or an unknown reviewed head) since the review"
     if files_then is None:
         return False, "could not read the diff at the reviewed head"
     if not collect.same_diff(files_then, files_now):
@@ -118,10 +107,15 @@ def run(gh: GhClient, pr: int, *, dry_run: bool = False) -> dict:
             # synchronize or reconcile pass re-decides against the new card.
             path = f"repos/{gh.repo}/issues/comments/{card['id']}"
             fresh = gh.get(path) or {}
-            if (fresh.get("body") or "") != body:
+            fresh_body = fresh.get("body") or ""
+            # The Sentinel's strip changes on the same push (it reports the
+            # very G1 this restamp is about to clear), and backing off on that
+            # left G1 red until the 2-hourly reconcile sweep. Only a change
+            # outside the strip is a refresh to stand aside for.
+            if sentinel.without_strip(fresh_body) != sentinel.without_strip(body):
                 return {"restamped": False, "reason": "card changed while deciding; left for the next pass",
                         "head": head_sha}
-            gh.patch(path, {"body": new_body})
+            gh.patch(path, {"body": restamp_body(fresh_body, head_sha)})
     return {"restamped": ok, "reason": reason, "head": head_sha}
 
 

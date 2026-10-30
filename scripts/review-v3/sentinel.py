@@ -223,6 +223,56 @@ BREAK_GLASS = (
     "can apply `review:waived` (logged)"
 )
 
+
+# G3's error rows. When the org-scoped token is what failed, the waive is
+# refused by the same lookup, so the one way through is an admin's merge.
+_G3_TOKEN_HINT = (
+    "If a re-run fails the same way, the org-scoped token (`PULUMI_BOT_TOKEN`, "
+    "from ESC) is likely down; `review:waived` can't be verified without it "
+    "either, so a repo admin merging past the check is the way through. "
+)
+
+
+def _waive_can_clear(g: Gate) -> bool:
+    """Whether recommending the waive for this gate would work. Every red
+    gate, and every error but G3's: G3 errors when the org-scoped token
+    can't read permissions, and the waive's own authorization reads them
+    with the same token, so offering it there sends people in a circle."""
+    return g.status == "red" or (g.status == "error" and not g.name.startswith("G3"))
+
+
+# The merge box shows the status description and nothing else, so it has to
+# answer "why can't I merge?" by itself, in words for someone who has never
+# opened this file. "2 gate(s) red" sent people (pulumi/docs#22524) to a
+# Details page whose gate table started two-thirds of the way down. Each
+# phrase completes "Waiting on …"; the gate's row in the status comment says
+# who acts and how. Shared with the author-card strip so the two agree.
+def _waiting_on(g: Gate, n_blocking: int) -> str:
+    gate = g.name.split()[0]
+    cmd = next((f" ({c})" for c in ("/update-review", "/new-review") if c in g.message), "")
+    if gate == "G1":
+        if "changes no files" in g.message:
+            return "a diff to review"
+        return f"a current review{cmd}"
+    if gate == "G2":
+        n = n_blocking or "open"
+        return f"answers to {n} finding{'' if n_blocking == 1 else 's'} (/update-review)"
+    if gate == "G3":
+        return "an approval of the latest commit"
+    if gate == "G4":
+        return "a staging deploy"
+    if gate == "G5":
+        return f"{OVERSIZED_ACK} in an approval"
+    return g.name
+
+
+_PLAIN_GATE = {"G1": "the review", "G2": "the review's answers", "G3": "the approval",
+               "G4": "the staging deploy", "G5": "the oversized ack"}
+
+
+def _plain_join(items: list[str]) -> str:
+    return " and ".join([", ".join(items[:-1]), items[-1]]) if len(items) > 1 else (items or [""])[0]
+
 CHECK_NAME = "Sentinel"
 
 
@@ -358,6 +408,16 @@ class Gh:
             f"repos/{self.repo}/collaborators/{user}/permission", ".permission",
             f"repo permission ({self.repo}/{user})")
 
+    def list_commits(self) -> list[dict]:
+        out = self._run(["api", "--paginate", f"repos/{self.repo}/pulls/{self.pr}/commits"])
+        return json.loads(out)
+
+    def compare_files(self, base: str, sha: str) -> list[dict]:
+        """The files `sha` changes against its merge base with `base` — the
+        PR's diff as it stood at that commit."""
+        out = self._run(["api", f"repos/{self.repo}/compare/{base}...{sha}"])
+        return json.loads(out).get("files") or []
+
     def get_label_events(self) -> list[dict]:
         out = self._run(
             ["api", "--paginate", f"repos/{self.repo}/issues/{self.pr}/timeline"]
@@ -383,6 +443,9 @@ class Gh:
         return self._run([
             "api", f"repos/{self.repo}/actions/workflows/{workflow_file}", "--jq", ".state",
         ]).strip()
+
+    def get_issue_comment(self, comment_id) -> dict:
+        return json.loads(self._run(["api", f"repos/{self.repo}/issues/comments/{comment_id}"]))
 
     def patch_issue_comment(self, comment_id, body: str) -> None:
         self._run(
@@ -440,6 +503,11 @@ class Verdict:
     # said success. A gate surface that contradicts the gate is the failure
     # the `_GATE_BLURB` phrasebook exists to prevent.
     waived: bool = False
+    # Who applied an honored waive, or why the label was refused. A refusal
+    # used to reach only the job summary, so the merge box and the status
+    # comment kept inviting the person who had just applied the label to
+    # apply it.
+    waive_note: str = ""
 
     def to_json(self) -> dict:
         return {
@@ -452,6 +520,7 @@ class Verdict:
             "blocking_ids": self.blocking_ids,
             "mechanical": self.mechanical,
             "governed": self.governed,
+            "waive_note": self.waive_note,
         }
 
 
@@ -846,6 +915,137 @@ def _staging_evidence(gh: Gh, head_sha: str) -> str | None:
     return None
 
 
+# ---- Pushes that change nothing the gates looked at ----------------------
+#
+# A merge of the base, or a commit that changes nothing (the "kick CI" empty
+# commit), moves the head without changing what the PR does. G1 has carried
+# its review across a base merge since restamp-base-merge.py; G3 and G4 asked
+# for the exact head, so clicking "Update branch" on an approved PR reset
+# the approval and spent another ~10-minute staging deploy (#22506), and an
+# empty commit reset the review and the deploy (#22524). GitHub itself keeps
+# the approval: branch protection here doesn't dismiss stale reviews. These
+# helpers are the one test all three gates use; collect.py and
+# restamp-base-merge.py read them from here.
+
+
+def _tree_sha(commit: dict) -> str:
+    return ((commit.get("commit") or {}).get("tree") or {}).get("sha") or ""
+
+
+def _changes_nothing(c: dict, prev: dict) -> bool:
+    """`c` is a merge, or a one-parent commit on `prev` with `prev`'s tree."""
+    parents = c.get("parents") or []
+    if len(parents) >= 2:
+        return True
+    tree = _tree_sha(c)
+    return (bool(tree) and tree == _tree_sha(prev) and len(parents) == 1
+            and bool(prev.get("sha")) and parents[0].get("sha") == prev.get("sha"))
+
+
+def changes_nothing_since(commits: list[dict], sha: str) -> bool:
+    """True when `sha` is in the PR's commit list, is not its last commit,
+    and every later commit is a merge (two parents) or changes nothing (the
+    same tree as the commit before it). Whether a merge brought in only the
+    base is `same_diff`'s question, not this one's."""
+    shas = [c.get("sha") or "" for c in commits]
+    idx = next((i for i, s in enumerate(shas) if s and sha and (s.startswith(sha) or sha.startswith(s))),
+               None)
+    if idx is None or idx == len(shas) - 1:
+        return False
+    return all(_changes_nothing(commits[i], commits[i - 1]) for i in range(idx + 1, len(commits)))
+
+
+def changed_lines(files: list[dict]) -> dict[str, list[str]]:
+    """Per file, the sorted `+`/`-` lines of its patch. Hunk headers and
+    context are left out because they move whenever the base moves; the
+    changed lines themselves only move when the PR's content does."""
+    out: dict[str, list[str]] = {}
+    for f in files:
+        name = f.get("filename") or f.get("path") or ""
+        lines = [ln for ln in (f.get("patch") or "").splitlines()
+                 if ln[:1] in "+-" and not ln.startswith(("+++", "---"))]
+        out[name] = sorted(lines)
+    return out
+
+
+def same_diff(files_then: list[dict], files_now: list[dict]) -> bool:
+    """Whether two snapshots of a PR's files carry the same changes. A merge
+    of the base that resolved a conflict by editing a line the PR adds
+    changes the content the review read, and must not count as base-only."""
+    return changed_lines(files_then) == changed_lines(files_now)
+
+
+def patchless_file_changed(files_then: list[dict], files_now: list[dict]) -> bool:
+    """`same_diff` reads `patch`, which GitHub omits for large and binary
+    files, so two patchless snapshots compare equal whatever changed. For
+    those, the blob `sha` has to match on both sides; a missing one fails
+    closed."""
+    then = {(f.get("filename") or f.get("path") or ""): f for f in files_then}
+    for f in files_now:
+        if f.get("patch"):
+            continue
+        t = then.get(f.get("filename") or f.get("path") or "")
+        if t is None or not f.get("sha") or f.get("sha") != t.get("sha"):
+            return True
+    return False
+
+
+_CARRY_CLAUSE = ("since then only base merges or no-op commits, and the PR's own "
+                 "changes are identical")
+
+
+class _Carry:
+    """Answers "is the PR at `sha` the PR at head?" for G3 and G4, reading
+    the commit list once and only when a gate would otherwise be red. Any
+    read that fails answers no, which leaves the gate as strict as before."""
+
+    def __init__(self, gh: Gh, pr: dict, files_now: list[dict]):
+        self.gh, self.files_now = gh, files_now
+        self.base = (pr.get("base") or {}).get("ref") or ""
+        self.head = (pr.get("head") or {}).get("sha") or ""
+        self._commits: list[dict] | None = None
+        self._answers: dict[str, bool] = {}
+
+    def commits(self) -> list[dict]:
+        if self._commits is None:
+            try:
+                self._commits = self.gh.list_commits()
+            except Exception:  # noqa: BLE001 — fail closed: no carry
+                self._commits = []
+            # A list that doesn't end at the head (read just after a push)
+            # can't say what came after; treat it as unreadable.
+            if not self._commits or (self._commits[-1].get("sha") or "") != self.head:
+                self._commits = []
+        return self._commits
+
+    def predecessors(self, limit: int = 3) -> list[str]:
+        """The commits the head reaches by nothing but merges and no-op
+        commits, newest first, head excluded. Bounded: each costs reads."""
+        commits, out = self.commits(), []
+        for i in range(len(commits) - 1, 0, -1):
+            if not _changes_nothing(commits[i], commits[i - 1]):
+                break
+            out.append(commits[i - 1].get("sha") or "")
+        return [s for s in out if s][:limit]
+
+    def unchanged_since(self, sha: str) -> bool:
+        if sha not in self._answers:
+            self._answers[sha] = self._unchanged_since(sha)
+        return self._answers[sha]
+
+    def _unchanged_since(self, sha: str) -> bool:
+        if not sha or not self.base or sha == self.head:
+            return False
+        if not changes_nothing_since(self.commits(), sha):
+            return False
+        try:
+            files_then = self.gh.compare_files(self.base, sha)
+        except Exception:  # noqa: BLE001 — fail closed: no carry
+            return False
+        return same_diff(files_then, self.files_now) and not patchless_file_changed(
+            files_then, self.files_now)
+
+
 def _last_staging_failure(gh: Gh, head_sha: str) -> str:
     """The newest trusted `staging/pulumi-test-io` status at this head, as
     a sentence, when it says the deploy failed or never started; else ''.
@@ -941,7 +1141,7 @@ def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool
         return False, ""
     actor = _waive_actor(gh)
     if actor == "unknown":
-        return False, "could not read who applied the waive label — not honored"
+        return False, "could not read who applied the waive label"
     for team_ref in sorted(set(config.teams.values())):
         org, slug = _team_org_slug(team_ref)
         try:
@@ -950,11 +1150,11 @@ def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool
         except SentinelDataError:
             return False, (
                 f"could not verify whether @{actor} may waive (team lookup "
-                "failed) — not honored"
+                "failed)"
             )
     return False, (
         f"@{actor} is not an active member of any routing team "
-        "(`.github/review-routing.yml` `teams:`) — waive not honored"
+        "(`.github/review-routing.yml` `teams:`)"
     )
 
 
@@ -1289,9 +1489,9 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             continue
         approvers.append(r)
     # An approval is of a COMMIT, not of a PR. The old comment above said
-    # "stale-on-push is the ruleset's dismissal job" — but AGENTS.md records
-    # that server-side branch protection is not in place yet, and nothing in
-    # `.github/` configures dismissal, so nothing was doing that job.
+    # "stale-on-push is the ruleset's dismissal job" — but branch protection
+    # on master doesn't dismiss stale approvals, and nothing in `.github/`
+    # configures dismissal, so nothing was doing that job.
     # Without this, the sequence is: get a clean one-line change approved,
     # push the payload, let the review lane post a fresh card, and all five
     # gates are green on an approval nobody re-gave.
@@ -1306,10 +1506,22 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # human. An approval we cannot place at this head does not clear G3.
     # Bot approvals are held to the same rule: a lane bot that approved the
     # previous commit has not approved this one.
-    stale_approvers = [r for r in approvers if r.get("commit_id") != head_sha]
-    stale_approvers += [r for r, _ in bot_approvers if r.get("commit_id") != head_sha]
+    stale_humans = [r for r in approvers if r.get("commit_id") != head_sha]
+    stale_approvers = stale_humans + [r for r, _ in bot_approvers if r.get("commit_id") != head_sha]
     approvers = [r for r in approvers if r.get("commit_id") == head_sha]
     bot_approvers = [(r, why) for r, why in bot_approvers if r.get("commit_id") == head_sha]
+    # Except a human approval of a commit the PR has since only merged the
+    # base into, or pushed nothing onto: that approved exactly this diff
+    # (see `_Carry`). Asked only when nobody approved the head itself, so the
+    # ordinary PR spends no reads on it. Bot lanes re-approve on their own.
+    carry = _Carry(gh, pr, files)
+    carried: dict[str, str] = {}  # login -> the commit they approved
+    if not approvers and not bot_approvers:
+        for r in stale_humans:
+            if carry.unchanged_since(r.get("commit_id") or ""):
+                approvers.append(r)
+                carried[(r.get("user") or {}).get("login") or ""] = r.get("commit_id") or ""
+        stale_approvers = [r for r in stale_approvers if r not in approvers]
     # The subset of `approvers` whose approval actually clears G3 — filled in
     # below. G5 reads it so the oversized ack cannot come from a bystander.
     qualified_approvers: list[dict] = []
@@ -1361,7 +1573,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             gates.append(Gate(
                 "G3 right-approver", "error",
                 "Couldn't verify the approver's repo permission — re-run the "
-                "check. " + errors[0],
+                "check. " + _G3_TOKEN_HINT + errors[0],
             ))
         else:
             gates.append(Gate(
@@ -1432,7 +1644,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             gates.append(Gate(
                 "G3 right-approver", "error",
                 "Couldn't verify the approver's team membership or repo role — "
-                "re-run the check. " + errors[0],
+                "re-run the check. " + _G3_TOKEN_HINT + errors[0],
             ))
         elif admin_approver:
             gates.append(Gate(
@@ -1461,9 +1673,27 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 "a routing-team member approved" if resolution.any_team
                 else "matrix-required approval present"))
 
+    g3 = next((g for g in gates if g.name.startswith("G3")), None)
+    if g3 and g3.status == "ok" and qualified_approvers:
+        via = carried.get((qualified_approvers[0].get("user") or {}).get("login") or "")
+        if via:
+            g3.message += f" (approved `{via[:9]}`; {_CARRY_CLAUSE})"
+
     # G4 infra-evidence ---------------------------------------------------
     if resolution.staging_evidence_required:
         witness = _staging_evidence(gh, head_sha)
+        if not witness:
+            # A deploy of a commit the head only merged the base into (or
+            # pushed nothing onto) deployed this PR's change; another ~10
+            # minutes on the shared stack would re-prove nothing.
+            for sha in carry.predecessors():
+                try:
+                    earlier = _staging_evidence(gh, sha)
+                except Exception:  # noqa: BLE001 — fail closed: no carry
+                    earlier = None
+                if earlier and carry.unchanged_since(sha):
+                    witness = f"{earlier}; {_CARRY_CLAUSE}"
+                    break
         if witness:
             gates.append(Gate("G4 infra-evidence", "ok", witness))
         else:
@@ -1523,24 +1753,34 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     infra_red = any(g.name.startswith("G4") and g.status == "red" for g in gates)
 
     # `waived` is tested BEFORE `any_error` on purpose. It used to be the
-    # other way round, which made the break-glass inert in exactly the
-    # outage it exists for: an expired PULUMI_BOT_TOKEN errors G3 on every
-    # PR, so every PR sat at action_required and no waive could move any of
-    # them — while the summary still printed a "WAIVED / gates bypassed"
-    # banner over a blocked conclusion. A waive clears every gate, G4 too
-    # (see the module docstring for why G4 lost its exemption).
+    # other way round, so a gate that errored (one approver's lookup hitting
+    # a 5xx, a REVIEW_STATE block that won't parse) held the PR at
+    # action_required with an honored waive on it, under a summary printing
+    # "WAIVED / gates bypassed". A waive clears every gate, G4 too (see the
+    # module docstring for why G4 lost its exemption).
+    #
+    # What the order can NOT rescue is an outage of the org-scoped token
+    # itself (GH_TOKEN_TEAM_READ unset or expired): `_waive_state` checks the
+    # waiver's team membership with that token, so it refuses the waive in
+    # the same breath as G3 errors. That is fail-closed on purpose — a label
+    # anyone with triage could apply must not skip every gate unverified —
+    # and it leaves a repo admin's merge as the way through. G3's error text
+    # says so.
     if waived:
         conclusion = "success"
-        title = "WAIVED"
+        title = f"Waived by {waive_note}"
     elif any_error:
         conclusion = "action_required"
-        title = "Couldn't evaluate — action required"
+        errs = [_PLAIN_GATE.get(g.name.split()[0], g.name) for g in gates if g.status == "error"]
+        title = f"Couldn't check {_plain_join(errs)} — re-run the Sentinel check"
     elif reds:
         conclusion = "failure"
-        title = f"{len(reds)} gate(s) red"
+        title = "Waiting on " + "; ".join(_waiting_on(g, len(blocking_ids)) for g in reds)
     else:
         conclusion = "success"
         title = "All gates green"
+    if waive_note and not waived:
+        title = f"review:waived refused · {title}"
 
     # ---- Summary --------------------------------------------------------
     parts: list[str] = []
@@ -1558,8 +1798,15 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         parts.append(
             f"## ⚠️ `review:waived` NOT honored\n\n{waive_note}. The gates below stand."
         )
-    if brief:
-        parts.append(_strip_brief_for_summary(brief.get("body") or ""))
+    # The gate table comes before the brief: the merge box's Details link
+    # lands here, and on #22524 the table started two-thirds of the way down,
+    # under a brief whose first line was "Check the ⚠️ items, then approve."
+    table = ["| Gate | Status | Detail |", "|---|---|---|"]
+    icon = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
+    for g in gates:
+        msg = g.message + (f" — {BREAK_GLASS}" if not waived and _waive_can_clear(g) else "")
+        table.append(f"| {g.name} | {icon[g.status]} {g.status} | {msg} |")
+    parts.append("\n".join(table))
     if external:
         parts.append(
             "_External contribution: the automated review does not run for external "
@@ -1572,18 +1819,14 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         )
     if skip_note:
         parts.append(skip_note)
-    table = ["| Gate | Status | Detail |", "|---|---|---|"]
-    icon = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
-    for g in gates:
-        msg = g.message + (f" — {BREAK_GLASS}" if g.status == "red" else "")
-        table.append(f"| {g.name} | {icon[g.status]} {g.status} | {msg} |")
-    parts.append("\n".join(table))
+    if brief:
+        parts.append(_strip_brief_for_summary(brief.get("body") or ""))
     summary = "\n\n".join(p for p in parts if p)
 
     verdict = Verdict(
         conclusion=conclusion, title=title, summary=summary,
         head_sha=head_sha, gates=gates, blocking_ids=blocking_ids,
-        mechanical=mechanical, waived=waived,
+        mechanical=mechanical, waived=waived, waive_note=waive_note,
     )
 
     if report_only:
@@ -1636,9 +1879,13 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
             # and sent authors (workprentice included) after gates only an
             # approver or a deploy can clear. Say what the merge is waiting on;
             # that gate's row in the status comment says who acts.
-            red = [g.name for g in verdict.gates if g.status in ("red", "error")]
-            what = (" and ".join([", ".join(red[:-1]), red[-1]]) if len(red) > 1
-                    else red[0] if red else "the merge gate")
+            # In words, not gate ids: "waiting on G1 review-ran" told nobody
+            # what to do.
+            what = _plain_join(
+                [_waiting_on(g, n) for g in verdict.gates if g.status == "red"]
+                + [f"a re-run of the Sentinel check ({_PLAIN_GATE.get(g.name.split()[0], g.name)} "
+                   "couldn't be checked)" for g in verdict.gates if g.status == "error"]
+            ) or "the merge gate"
             line = f"⏳ **Merge is waiting on {what}.** {details}"
         strip = f"{STRIP_OPEN}\n{line}\n{STRIP_CLOSE}"
     else:
@@ -1646,18 +1893,40 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
             return False  # nothing to clear; don't insert an empty pair
         strip = f"{STRIP_OPEN}\n{STRIP_CLOSE}"
 
-    if STRIP_OPEN in body and STRIP_CLOSE in body:
-        pattern = re.compile(re.escape(STRIP_OPEN) + r".*?" + re.escape(STRIP_CLOSE), re.DOTALL)
-        new_body = pattern.sub(lambda _: strip, body, count=1)
-    else:
-        lines = body.splitlines()
+    def with_strip(text: str) -> str:
+        if STRIP_OPEN in text and STRIP_CLOSE in text:
+            return _STRIP_RE.sub(lambda _: strip, text, count=1)
+        lines = text.splitlines()
         insert_at = next((i + 1 for i, l in enumerate(lines) if l.startswith("## ")), 0)
         lines[insert_at:insert_at] = ["", strip]
-        new_body = "\n".join(lines)
-    if new_body != body:
+        return "\n".join(lines)
+
+    if with_strip(body) == body:
+        return False
+    # The PATCH replaces the whole body, and on the push that starts this run
+    # restamp-base-merge.py moves the same card's head marker. Writing from
+    # the listing read at the start of the run put the old head back, and G1
+    # sat red on a base merge until the 2-hourly reconcile sweep (fork test of
+    # pulumi/docs#22555). Re-read, and lay the strip onto what is there now.
+    try:
+        fresh = gh.get_issue_comment(card["id"]).get("body") or body
+    except Exception:  # noqa: BLE001 — the old behavior, not a failure
+        fresh = body
+    new_body = with_strip(fresh)
+    if new_body != fresh:
         gh.patch_issue_comment(card["id"], new_body)
         return True
     return False
+
+
+_STRIP_RE = re.compile(re.escape(STRIP_OPEN) + r".*?" + re.escape(STRIP_CLOSE), re.DOTALL)
+
+
+def without_strip(body: str) -> str:
+    """`body` with the strip's contents dropped: what the review wrote. The
+    strip is the Sentinel's, so a change confined to it is not a change to
+    the review (restamp-base-merge.py compares cards this way)."""
+    return _STRIP_RE.sub(STRIP_OPEN + STRIP_CLOSE, body or "")
 
 
 # ---- Pinned status comment ----------------------------------------------
@@ -1746,12 +2015,22 @@ def render_status_comment(verdict: Verdict) -> str:
         # gates found — that is the audit trail a waive is supposed to leave
         # — but the headline must not tell an author they are blocked when
         # they are not, nor recommend the break-glass twice.
+        # "This PR can merge" over-promised: the waive clears the Sentinel,
+        # not GitHub's own required approving review (#22527 waited on one).
         lines += [
-            "**Waived — this PR can merge.** `review:waived` is applied and "
-            "honored; the gates below are the record of what it bypassed.",
+            f"**Waived by `{verdict.waive_note}` — the Sentinel passes.** `review:waived` "
+            "is honored and logged; the gates below are the record of what it bypassed. "
+            "GitHub's own required approval still applies.",
             "",
         ]
     elif blocking:
+        if verdict.waive_note:
+            # No `@`: this comment is re-rendered, and a mention pings.
+            note = re.sub(r"@([\w-]+(?:\[bot\])?)", r"`\1`", verdict.waive_note)
+            retry = ("While that lookup fails, a re-applied waive fails the same way; see the "
+                     "G3 row." if "lookup failed" in note else
+                     "To retry, a routing-team member removes the label and applies it again.")
+            lines += [f"**`review:waived` is on this PR but was not honored:** {note}. {retry}", ""]
         # Tense matters here, and only here: in preview nothing is blocking
         # anything, so a headline reading "before this can merge" hands the
         # banner directly above it a contradiction to lose.
@@ -1780,7 +2059,7 @@ def render_status_comment(verdict: Verdict) -> str:
         lines.append(f"| {_STATUS_ICON[g.status]} | **{g.name}** | {need} |")
     lines.append("")
 
-    if not verdict.waived and any(g.status == "red" for g in blocking):
+    if not verdict.waived and any(_waive_can_clear(g) for g in blocking):
         # Not BREAK_GLASS verbatim — that string is written to follow a gate
         # message ("… — override: a member of …") and reads as a doubled
         # "override:" when it opens a sentence of its own.

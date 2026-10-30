@@ -858,6 +858,39 @@ def test_fix_header_keeps_the_automated_audience(tmp_path):
     assert "You = the PR author" not in reopened
 
 
+def _with_sentinel_strip(card: str, line: str) -> str:
+    """Insert the strip where sentinel.update_strip does: under the header."""
+    lines = card.splitlines()
+    at = next(i + 1 for i, ln in enumerate(lines) if ln.startswith("## "))
+    lines[at:at] = ["", "<!-- SENTINEL_STRIP -->", line, "<!-- /SENTINEL_STRIP -->"]
+    return "\n".join(lines) + "\n"
+
+
+@pytest.mark.parametrize("strip_line", ["⏳ **Merge is waiting on G4 infra-evidence.**", ""])
+def test_fix_header_swaps_the_callout_past_a_sentinel_strip(tmp_path, strip_line):
+    # pulumi/docs#22524: the strip sat between header and callout, the swap
+    # stopped at it, and the card read "nothing blocks merge" over "Answer
+    # every item below". An empty pair (a cleared strip) must not stop it either.
+    be = _load("build_evidence", HERE / "build-evidence.py")
+    card = _with_sentinel_strip(_compose_on_branch(tmp_path, "fix/component-doc"), strip_line)
+    assert "You = the PR author" in card
+    cleared = be._fix_header(card, 0)
+    assert "nothing blocks merge" in cleared
+    assert "You = the PR author" not in cleared
+    assert f"<!-- SENTINEL_STRIP -->\n{strip_line}\n<!-- /SENTINEL_STRIP -->" in cleared
+    reopened = be._fix_header(cleared, 2)
+    assert "2 items block merge" in reopened
+    assert "You = the PR author" in reopened
+    assert reopened.count("> [!") == card.count("> [!")
+
+
+def test_sentinel_strip_markers_match_the_sentinel():
+    be = _load("build_evidence", HERE / "build-evidence.py")
+    src = (REPO_ROOT / "scripts" / "review-v3" / "sentinel.py").read_text()
+    assert f'STRIP_OPEN = "{be._SENTINEL_STRIP_OPEN}"' in src
+    assert f'STRIP_CLOSE = "{be._SENTINEL_STRIP_CLOSE}"' in src
+
+
 def test_orient_forms():
     assert "You = the PR author" in "\n".join(cr.render_author_orient(1))
     assert "requested reviewer" in "\n".join(cr.render_author_orient(1, automated=True))

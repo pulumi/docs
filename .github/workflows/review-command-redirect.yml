@@ -4,9 +4,11 @@ name: Review command redirect
 # `/social-review`, and `/oversized-ack` in an approval); `@claude` is only
 # ever the general assistant. The old `@claude … #update-review` and
 # `@claude … #new-review` shapes run nothing now: claude.yml screens them
-# out, and the review lanes trigger on the slash command alone. This
-# workflow is the one place that still recognizes the old shapes, so
-# nobody's request vanishes without a word. It replies at once with the
+# out, and the review lanes trigger on the slash command alone. So does
+# the hybrid `@claude /update-review …` (a slash command that doesn't start
+# its line), which claude.yml's route step hands over here. This workflow
+# is the one place that still recognizes those shapes, so nobody's request
+# vanishes without a word. It replies at once with the
 # same request rewritten as a slash command, ready to paste as a new
 # comment.
 #
@@ -32,9 +34,9 @@ jobs:
     # old shape (its comments can't start runs anyway, so that one is
     # belt and braces).
     if: |
-      (github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '@claude') && (contains(github.event.comment.body, '#update-review') || contains(github.event.comment.body, '#new-review')) && github.event.comment.user.login != 'claude[bot]' && github.event.comment.user.login != 'github-actions[bot]') ||
-      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && (contains(github.event.comment.body, '#update-review') || contains(github.event.comment.body, '#new-review')) && github.event.comment.user.login != 'claude[bot]' && github.event.comment.user.login != 'github-actions[bot]') ||
-      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && (contains(github.event.review.body, '#update-review') || contains(github.event.review.body, '#new-review')) && github.event.review.user.login != 'claude[bot]' && github.event.review.user.login != 'github-actions[bot]')
+      (github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '@claude') && (contains(github.event.comment.body, '#update-review') || contains(github.event.comment.body, '#new-review') || contains(github.event.comment.body, '/update-review') || contains(github.event.comment.body, '/new-review')) && github.event.comment.user.login != 'claude[bot]' && github.event.comment.user.login != 'github-actions[bot]') ||
+      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && (contains(github.event.comment.body, '#update-review') || contains(github.event.comment.body, '#new-review') || contains(github.event.comment.body, '/update-review') || contains(github.event.comment.body, '/new-review')) && github.event.comment.user.login != 'claude[bot]' && github.event.comment.user.login != 'github-actions[bot]') ||
+      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && (contains(github.event.review.body, '#update-review') || contains(github.event.review.body, '#new-review') || contains(github.event.review.body, '/update-review') || contains(github.event.review.body, '/new-review')) && github.event.review.user.login != 'claude[bot]' && github.event.review.user.login != 'github-actions[bot]')
     runs-on: ubuntu-latest
     permissions:
       contents: read
