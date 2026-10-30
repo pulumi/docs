@@ -2,7 +2,7 @@
 title_tag: Create a component | Azure
 title: Create a component
 h1: "Get started with Pulumi and Azure"
-meta_desc: This page provides an overview on how to create infrastructure abstractions with Pulumi.
+meta_desc: Learn how to package your Azure static website into a reusable Pulumi component, an infrastructure abstraction you can share and reuse.
 weight: 7
 menu:
     iac:
@@ -21,8 +21,8 @@ aliases:
 [**Components**](/docs/iac/concepts/components/) are infrastructure abstractions that encapsulate
 complexity and enable sharing and reuse. Instead of copy-pasting common patterns, you can encode them as components.
 
-You will now create your first component that packages up your Azure static website so you can easily stamp out
-entire websites in just a few lines of code:
+You will now create your first component that packages up your Azure static website so you can stamp out
+entire websites in a few lines of code:
 
 {{% choosable language typescript %}}
 
@@ -178,25 +178,25 @@ import (
 )
 
 type AzureStaticWebsite struct {
-    pulumi.ResourceState
-    Url pulumi.StringOutput // the website url.
+	pulumi.ResourceState
+	Url pulumi.StringOutput // the website url.
 }
 
 type AzureStaticWebsiteArgs struct {
-    Files []string // a list of files to serve.
+	Files []string // a list of files to serve.
 }
 
 func NewAzureStaticWebsite(ctx *pulumi.Context, name string, args AzureStaticWebsiteArgs, opts ...pulumi.ResourceOption) (*AzureStaticWebsite, error) {
-    self := &AzureStaticWebsite{}
-    err := ctx.RegisterComponentResource("quickstart:index:AzureStaticWebsite", name, self, opts...)
-    if err != nil {
-        return nil, err
-    }
+	self := &AzureStaticWebsite{}
+	err := ctx.RegisterComponentResource("quickstart:index:AzureStaticWebsite", name, self, opts...)
+	if err != nil {
+		return nil, err
+	}
 
-    // Component initialization will go here next...
+	// Component initialization will go here next...
 
-    ctx.RegisterResourceOutputs(self, pulumi.Map{}) // Signal component completion.
-    return self, nil
+	ctx.RegisterResourceOutputs(self, pulumi.Map{}) // Signal component completion.
+	return self, nil
 }
 ```
 
@@ -319,13 +319,13 @@ Next, make three changes:
 1. Generalize the creation of blobs by looping over the list of `files` with `for_each`
 1. Return the resulting website URL as the module's `url` output
 
-Nothing needs reparenting: everything a module declares is automatically a child of the component resource that
-Pulumi creates for the module instance.
+You don't need to set a `parent` on any resource: everything a module declares is automatically a child of the
+component resource that Pulumi creates for the module instance.
 
 {{% /choosable %}}
 
 The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
-to get a feel for things, or simply paste the contents of this into {{< compfile >}}:
+to get a feel for things, or paste the contents of this into {{< compfile >}}:
 
 {{% choosable language typescript %}}
 
@@ -764,8 +764,8 @@ output "url" {
 }
 ```
 
-Naming the storage account explicitly matters here: Azure requires storage account names to be lowercase
-alphanumerics of at most 24 characters, which the module-prefixed name would violate.
+Naming the storage account explicitly matters here: Azure requires storage account names to contain only
+lowercase letters and numbers and to be at most 24 characters long, which the module-prefixed name would violate.
 
 {{% /choosable %}}
 
@@ -820,21 +820,20 @@ import (
 )
 
 func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create an instance of the component with the same files as before:
-        website, err := NewAzureStaticWebsite(ctx, "my-website", AzureStaticWebsiteArgs{
-            Files: []string{"index.html"},
-        })
-        if err != nil {
-            return err
-        }
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create an instance of the component with the same files as before:
+		website, err := NewAzureStaticWebsite(ctx, "my-website", AzureStaticWebsiteArgs{
+			Files: []string{"index.html"},
+		})
+		if err != nil {
+			return err
+		}
 
-        // And export its autoassigned URL:
-        ctx.Export("url", website.Url)
-        return nil
-	  })
+		// And export its autoassigned URL:
+		ctx.Export("url", website.Url)
+		return nil
+	})
 }
-
 ```
 
 {{% /choosable %}}
@@ -855,11 +854,11 @@ return await Pulumi.Deployment.RunAsync(() =>
         Files = new[] { "index.html" }
     });
 
-   // And export its autoassigned URL:
-   return new Dictionary<string, object?>
-   {
-      ["url"] = website.Url
-   };
+    // And export its autoassigned URL:
+    return new Dictionary<string, object?>
+    {
+        ["url"] = website.Url
+    };
 });
 ```
 
