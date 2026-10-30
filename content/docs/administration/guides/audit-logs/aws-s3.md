@@ -16,7 +16,7 @@ aliases:
 
 Pulumi Cloud can continuously export audit log events to an Amazon S3 bucket. Once configured, new events are delivered automatically — no manual downloads or API polling required.
 
-## Configure export to Amazon S3
+## Configure export using the console
 
 1. Navigate to the organization's **Settings**.
 1. Navigate to **Audit Logs**.
@@ -26,12 +26,12 @@ Pulumi Cloud can continuously export audit log events to an Amazon S3 bucket. On
 
 1. Select **Amazon S3**.
 1. Follow the instructions to create an AWS S3 bucket.
-1. Provide an **S3 bucket name** and a **File path prefix** where Pulumi audit logs will be exported, e.g., `Pulumi-audit-logs`.
+1. Provide a bucket name and a filepath where Pulumi audit logs will be exported, e.g., `Pulumi-audit-logs`.
 1. Copy the provided policy.
 1. In the AWS console create an IAM role.
 1. Select **Another AWS Account** and check **Require external ID**.
 1. Provide the Account ID and External ID, then attach the policy you created.
-1. Provide the **ARN of IAM role**.
+1. Provide the ARN of the IAM role.
 1. Test your configuration.
 
    <img src="/images/docs/reference/console/test-ale-configuration.png" alt="Testing the audit log export configuration">
