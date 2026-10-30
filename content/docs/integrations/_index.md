@@ -48,6 +48,10 @@ sections:
     heading: Azure DevOps
     description: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and post PR summaries.
     link: /docs/integrations/version-control/azure-devops-integration/
+  - icon: brand/cursor
+    heading: Cursor Origin
+    description: Connect Origin repositories for pull request previews, push-to-deploy, review stacks, and Pulumi check results and comments.
+    link: /docs/integrations/version-control/cursor-origin/
 
 - type: button-cards
   heading: Terraform & OpenTofu

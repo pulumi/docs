@@ -1,11 +1,11 @@
 ---
-title_tag: "Continuous Delivery for the Cloud"
+title_tag: "Continuous delivery for the cloud"
 meta_desc: Pulumi models cloud infrastructure as source code, so infrastructure changes flow through the same CI/CD pipeline as your application code.
-title: Continuous Delivery
-h1: Pulumi and Continuous Delivery
+title: Continuous delivery
+h1: Pulumi and continuous delivery
 menu:
     iac:
-        name: Continuous Delivery
+        name: Continuous delivery
         parent: iac-operations
         weight: 20
         identifier: iac-operations-cicd
@@ -66,6 +66,8 @@ Pulumi also provides its own continuous delivery mechanisms:
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request and destroyed when it closes.
 - [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) — manages Pulumi stacks from within a Kubernetes cluster using a custom resource.
 
+For Origin-hosted repositories, the [Cursor Origin integration](/docs/integrations/version-control/cursor-origin/) connects push and pull request events to Pulumi Deployments and reports the results as Origin checks and comments.
+
 ## Third-party CI/CD systems
 
 Pulumi has guides for running in the following CI/CD systems:
@@ -89,7 +91,7 @@ Pulumi has guides for running in the following CI/CD systems:
 If the system you use isn't listed, see [adding support for CI/CD systems](#adding-support-for-cicd-systems).
 
 {{% notes %}}
-For Pulumi-maintained version control integrations — including the GitHub App, GitLab, Bitbucket, and Azure DevOps — see [Version Control](/docs/integrations/version-control/).
+For Pulumi-maintained version control integrations — including the GitHub App, GitLab, Bitbucket, Azure DevOps, and Cursor Origin — see [Version control](/docs/integrations/version-control/).
 {{% /notes %}}
 
 ## Adding support for CI/CD systems
