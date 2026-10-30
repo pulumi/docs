@@ -6,8 +6,9 @@
 #
 # redirect_to sends it to the homepage: head.html emits a zero-delay meta
 # refresh, which scripts/translate-redirects.js turns into a real S3 301 keyed
-# to gads/index.html alone. The landing pages under /gads/* are separate files
-# and are unaffected.
+# to gads/index.html alone. /gads/infrastructure-as-code/ is served by
+# pulumi/marketing-web (infrastructure/marketingWebPaths.ts), and the retired
+# pages redirect from scripts/redirects/gads-redirects.txt.
 #
 # block_external_search_index adds a noindex tag and drops the page from the
 # sitemap and the on-site search index, so it stays out of search results even
