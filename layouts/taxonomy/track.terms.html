@@ -7,7 +7,6 @@
         {{ partial "breadcrumb.html" (dict "crumbs" (slice (dict "name" "Events and Workshops" "url" "/events/"))) }}
         <section>
             <h1 class="heading-xl m-0 mb-4 text-black">{{ .Title }}</h1>
-            {{ with .Params.meta_desc }}<p class="body-lg m-0 max-w-3xl text-gray-700">{{ . }}</p>{{ end }}
         </section>
     </div>
 
