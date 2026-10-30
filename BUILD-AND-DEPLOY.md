@@ -1259,7 +1259,7 @@ To reproduce a failure locally: `ONLY_TEST="program-name" ./scripts/programs/tes
 | Workflow | Runs when a PR touches | What it does |
 |----------|------------------------|--------------|
 | `review-pipeline-tests.yml` | `scripts/content-review/`, `scripts/blog-review/`, `scripts/review-v3/`, `.claude/commands/docs-review/scripts/`, `.github/review-routing.yml`, and a few related paths | `make test-review-pipeline` |
-| `support-form-tests.yml` | `infrastructure/**` (except `versioned-docs/`), the support form TypeScript and page | Compiles and runs the support form and infrastructure test suites |
+| `support-form-tests.yml` | `infrastructure/**` (except `versioned-docs/`), the support form TypeScript and page | Compiles and runs the support form, pricing API, and infrastructure test suites |
 | `versioned-docs-check.yml` | `infrastructure/versioned-docs/**` | Typechecks the versioned-docs Pulumi program |
 
 If you add a script to a review pipeline outside the paths above, add its path to `review-pipeline-tests.yml`.
@@ -1544,7 +1544,7 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `pr-closed.yml` | PR checks | PR closed | Delete preview buckets |
 | `scheduled-test.yml` | PR checks | Pull request, daily, manual | Example program tests |
 | `review-pipeline-tests.yml` | PR checks | Pull request (paths) | Review pipeline test suites |
-| `support-form-tests.yml` | PR checks | Pull request (paths) | Support form and infra tests |
+| `support-form-tests.yml` | PR checks | Pull request (paths) | Support form, pricing API, and infra tests |
 | `versioned-docs-check.yml` | PR checks | Pull request (paths) | Typecheck the versioned-docs program |
 | `staging-deploy-auto.yml` | PR checks | Pull request | Staging deploy for infra PRs |
 | `staging-status.yml` | PR checks | Every 10 min, after testing deploy, manual | Staging commit status and Sentinel poke |
