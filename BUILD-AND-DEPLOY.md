@@ -1340,10 +1340,11 @@ flowchart LR
 ```
 
 - **Triggers:** `pull_request_target` (open, ready, push, reopen, label changes), `pull_request_review` (submitted, dismissed, and edits to approving reviews), `workflow_run` after either review lane, and `workflow_dispatch`.
-- **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` always passes, with the would-be verdict in the status description; `'1'` enforces.
+- **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` always passes, with the would-be verdict in the status description; `'1'` enforces. Branch protection on `master` requires the Sentinel status for everyone but repo admins, so unset (or a disabled `review-sentinel.yml`) holds every PR: stand the gate down with `'report'`.
 - **Security invariant:** `pull_request_target` carries secrets and a write token even for fork PRs. The workflow is safe only because it never checks out or runs PR code, and `test_sentinel.py` enforces that. Don't add a head checkout.
 - **No concurrency group, on purpose:** a cancelled run shows as a failing check. Overlapping runs are cheap, and `scripts/review-v3/publish_guard.py` drops a verdict if the head moved or a newer run already published.
-- **Break-glass:** the `review:waived` label, which is logged and clears every gate, G4 included.
+- **Break-glass:** the `review:waived` label, which is logged and clears every gate, G4 included. Only a member of a team in `review-routing.yml`'s `teams:` can apply one that counts, and the Sentinel checks that with the org-scoped token, so an outage of that token refuses the waive along with G3.
+- **When the Sentinel never reports:** re-run it from **Actions › Sentinel › Run workflow** with the PR number. If it still can't conclude, a repo admin can merge past it; branch protection exempts admins.
 
 G4 needs a successful pulumi-test.io deploy at the PR's current head:
 
@@ -1496,7 +1497,7 @@ These repository variables turn automation on, off, or up and down without a cod
 | `BRAND_SYNC_ENABLED` | Weekly Vale mirror drift check | On; `'0'` off |
 | `REVIEW_V3_COMMENTS` | v3 author card and reviewer brief instead of the single legacy review comment | Legacy (it's set repo-wide) |
 | `REVIEW_V3_ROUTING` | Triage label-only pass on every push | Off; `'1'` on |
-| `REVIEW_V3_SENTINEL` | Sentinel check | Doesn't run; `'report'` is a neutral preview; `'1'` enforces |
+| `REVIEW_V3_SENTINEL` | Sentinel check | Doesn't run, which holds every PR for non-admins because `master` requires the status; `'report'` is a neutral preview; `'1'` enforces |
 | `REVIEW_V3_SLA` | Reviewer SLA escalations and author-staleness closes | Off; `'1'` on |
 | `DEPS_AUTO_MERGE` | Dependabot auto-approve and auto-merge | Off; `'true'` on |
 

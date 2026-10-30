@@ -90,8 +90,15 @@ _ANYWHERE_RE = {c: re.compile(r"(?<![\w/.-])/" + c + r"(?![\w-])", re.I) for c i
 # triggers matched `@Claude` too.
 _MENTION_RE = re.compile(r"(?<![\w/.-])@claude(?![\w-])", re.I)
 _LEGACY_TAG_RE = re.compile(r"(?<![\w-])#(" + "|".join(LEGACY_COMMANDS) + r")(?![\w-])", re.I)
+# The hybrid: a slash command typed after a mention, `@claude /update-review
+# …`. Not a command (it doesn't start the line), so it used to fall to the
+# chat lane, which answered with the retired instructions (pulumi/docs#22286,
+# three times). It gets the redirect's reply instead, like the hashtag shape.
+_MENTION_SLASH_RE = re.compile(
+    r"^[ \t]{0,3}@claude[ \t]+/(" + "|".join(LEGACY_COMMANDS) + r")(?![\w-])", re.M | re.I)
 _LEGACY_STRIP_RE = re.compile(
-    r"[ \t]*(?:(?<![\w/.-])@claude|(?<![\w-])#(?:" + "|".join(LEGACY_COMMANDS) + r"))(?![\w-])[ \t]*", re.I)
+    r"[ \t]*(?:(?<![\w/.-])@claude(?:[ \t]+/(?:" + "|".join(LEGACY_COMMANDS) + r"))?"
+    r"|(?<![\w-])#(?:" + "|".join(LEGACY_COMMANDS) + r"))(?![\w-])[ \t]*", re.I)
 # Text a command can't share a line with without changing what it means.
 _BLOCK_START_RE = re.compile(r"^(?:`{3,}|~{3,}|>|#{1,6}\s|[-*+]\s|\d+[.)]\s|\|)")
 
@@ -151,13 +158,16 @@ def legacy_command(body: str) -> str | None:
     """The retired command `body` asks for, or None.
 
     A live `@claude` plus a live `#update-review` / `#new-review` is the old
-    shape (`#new-review` wins, as it did). A body that also carries a live
-    `/update-review` or `/new-review` already runs, so it needs no redirect.
+    shape (`#new-review` wins, as it did), and so is a line that starts
+    `@claude /update-review` or `@claude /new-review`. A body that also
+    carries a live `/update-review` or `/new-review` already runs, so it
+    needs no redirect.
     """
     live = strip_quoted(body)
     if not _MENTION_RE.search(live):
         return None
     tags = {m.group(1).lower() for m in _LEGACY_TAG_RE.finditer(live)}
+    tags |= {m.group(1).lower() for m in _MENTION_SLASH_RE.finditer(live)}
     if not tags:
         return None
     if set(commands_in(body)) & set(LEGACY_COMMANDS):
@@ -222,11 +232,15 @@ def render_redirect(body: str, command: str, author: str, docs_url: str) -> str:
     suggestion = convert(body, command)
     fence = _fence_for(suggestion)
     who = f"@{author} — " if author else ""
+    if _MENTION_SLASH_RE.search(strip_quoted(body)):
+        lead = (f"🤖 {who}nothing ran: a review command has to start the line on its own, "
+                f"without `@claude` in front. `@claude` is just for asking Claude something. ")
+    else:
+        lead = (f"🤖 {who}`@claude … #{command}` is retired, so nothing ran. Review commands are "
+                "slash commands now; `@claude` is just for asking Claude something. ")
     lines = [
         REDIRECT_MARKER,
-        f"🤖 {who}`@claude … #{command}` is retired, so nothing ran. Review commands are "
-        "slash commands now; `@claude` is just for asking Claude something. "
-        "To run it, post this as a **new** comment (editing the old one won't trigger it):",
+        lead + "To run it, post this as a **new** comment (editing the old one won't trigger it):",
         "",
         fence,
         suggestion,
@@ -414,6 +428,15 @@ def _self_test() -> int:
     check("a live slash command needs no redirect",
           legacy_command("@claude #update-review\n/update-review F1: fixed") is None)
     check("@claudette is not @claude", legacy_command("@claudette #update-review") is None)
+    hybrid = "@claude /update-review F10 F12: accepting as-is"
+    check("mention-first slash command runs nothing", not decide(hybrid, U, N)[0])
+    check("mention-first slash command is legacy", legacy_command(hybrid) == U)
+    check("mention-first /new-review is legacy", legacy_command("@Claude /new-review") == N)
+    check("convert drops the mention and keeps one command",
+          convert(hybrid, U) == "/update-review F10 F12: accepting as-is")
+    check("mid-sentence slash command is not the hybrid",
+          legacy_command("@claude please run /update-review") is None)
+    check("quoted hybrid is not legacy", legacy_command("`@claude /update-review`") is None)
     check("convert keeps the request on one line",
           convert("@claude F2: the figure is from Q3 #update-review", U) == "/update-review F2: the figure is from Q3")
     check("convert of a bare request", convert("@claude #new-review\r\n", N) == "/new-review")

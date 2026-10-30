@@ -74,6 +74,20 @@ def test_new_review_wins_only_when_live():
     assert cg.decide("/update-review F1 fixed (not `/new-review`)", "update-review", "new-review")[0] is True
 
 
+def test_a_mention_before_the_command_gets_the_redirect_not_a_run():
+    """#22286: `@claude /update-review …` three times, each answered by the
+    chat lane with the retired instructions. It runs nothing and gets the
+    redirect's paste-ready reply, like the hashtag shape."""
+    body = "@claude /update-review F10 F12: accepting as-is, covered in the follow-up"
+    assert cg.decide(body, "update-review", "new-review")[0] is False
+    assert cg.legacy_command(body) == "update-review"
+    assert cg.convert(body, "update-review") == \
+        "/update-review F10 F12: accepting as-is, covered in the follow-up"
+    reply = cg.render_redirect(body, "update-review", "cnunciato", "")
+    assert "without `@claude` in front" in reply and "is retired" not in reply
+    assert cg.legacy_command("@claude please run /update-review") is None
+
+
 def test_retired_shape_is_not_a_command():
     assert cg.decide("@claude F1: fixed #update-review", "update-review", "new-review")[0] is False
     assert cg.decide("@claude #new-review", "new-review")[0] is False

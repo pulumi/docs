@@ -6,7 +6,7 @@
 
 > **Note:** For comprehensive details on the build system, deployment infrastructure, and CI/CD workflows, see `BUILD-AND-DEPLOY.md`. This file is large, so read only specific sections as needed to conserve tokens.
 
-> **Never push directly to `master`.** Always create a branch and open a PR. Direct pushes to `master` bypass review and CI checks. (Server-side branch protection is planned but not yet in place.)
+> **Never push directly to `master`.** Always create a branch and open a PR. Direct pushes to `master` bypass review and CI checks. (Branch protection on `master` requires the build and Sentinel checks, but it exempts repo admins, so it won't stop an admin's direct push.)
 
 Agents must use these exact commands:
 
@@ -319,7 +319,7 @@ Before starting any documentation task, check `.claude/commands/` for a relevant
 
 ## PR Lifecycle for AI-Assisted Contributions
 
-Open as draft, mark ready when done. Each ready-transition fires one full review; thrashing draft → ready → draft burns budget. Leave AI authoring trailers in commits (`Co-Authored-By: Claude ...`) — stripping them is bad form and changes nothing about which review runs. Don't delete `<!-- CLAUDE_REVIEW N/M -->` comments — the re-entrant pipeline edits them in place. A small push that only touches lines carrying outstanding findings refreshes the stale review automatically; otherwise, comment `/update-review` (fix-response / dispute / re-verify) or transition through draft and back to ready. Review commands are slash commands at the start of a line (`/update-review`, `/new-review`, `/social-review`, and `/oversized-ack` in an approval; reference: `CONTRIBUTING.md` §Review commands). `@claude` is for ad-hoc help, never for refreshing the review, and the retired `@claude … #update-review` shape runs nothing.
+Open as draft, mark ready when done. Each ready-transition fires one full review; thrashing draft → ready → draft burns budget. Leave AI authoring trailers in commits (`Co-Authored-By: Claude ...`) — stripping them is bad form and changes nothing about which review runs. Don't delete `<!-- CLAUDE_REVIEW N/M -->` comments — the re-entrant pipeline edits them in place. A small push that only touches lines carrying outstanding findings refreshes the stale review automatically; otherwise, comment `/update-review` (fix-response / dispute / re-verify) or transition through draft and back to ready. Review commands are slash commands at the start of a line (`/update-review`, `/new-review`, `/social-review`, and `/oversized-ack` in an approval; reference: `CONTRIBUTING.md` §Review commands). `@claude` is for ad-hoc help, never for refreshing the review, and the retired `@claude … #update-review` shape runs nothing (neither does `@claude /update-review`; both get a paste-ready reply).
 
 **Shipping a PR includes finishing its review.** A PR is done when every finding the pre-merge review raised — 🚨 blockers, ⚠️ low-confidence findings, and ✏️ style suggestions alike — has been fixed, refuted, deferred to a filed issue, or explicitly accepted with a stated reason. Clearing 🚨 and stopping is not a shortcut; it is the failure mode the pipeline's own outcome telemetry measures (`ignored_low_confidence` in `scrape-review-outcomes.py`).
 

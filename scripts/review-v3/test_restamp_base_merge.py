@@ -144,3 +144,36 @@ def test_a_patchless_file_must_keep_its_blob_to_count_as_unchanged():
     no_sha = FakeGh(card(), [commit(REVIEWED), commit(HEAD, 2)],
                     [{"filename": "static/big.json"}], [{"filename": "static/big.json"}])
     assert rb.run(no_sha, 1)["restamped"] is False, "no blob sha → fail closed"
+
+
+def _treed(sha, tree, parents=1, on="p"):
+    return {"sha": sha, "parents": [{"sha": on}] + [{"sha": "base"}] * (parents - 1),
+            "commit": {"tree": {"sha": tree}}}
+
+
+def test_an_empty_kick_commit_carries_the_review():
+    """#22524: an empty "kick CI" commit (same tree as its parent) reset a
+    clean review, and the PR went from one red gate to two."""
+    empty = [_treed(REVIEWED, "t1"), _treed(HEAD, "t1", on=REVIEWED)]
+    gh = FakeGh(card(), empty, FILES, FILES)
+    assert rb.run(gh, 1)["restamped"] is True
+    after_merge = [_treed(REVIEWED, "t1"), _treed(MERGE, "t2", 2), _treed(HEAD, "t2", on=MERGE)]
+    assert rb.run(FakeGh(card(), after_merge, FILES, FILES_AFTER_MERGE), 1)["restamped"] is True
+    changed = [_treed(REVIEWED, "t1"), _treed(HEAD, "t9", on=REVIEWED)]
+    assert rb.run(FakeGh(card(), changed, FILES, FILES), 1)["restamped"] is False
+    untreed = [_treed(REVIEWED, "t1"), commit(HEAD)]
+    assert rb.run(FakeGh(card(), untreed, FILES, FILES), 1)["restamped"] is False, "no tree → fail closed"
+
+
+def test_a_strip_written_mid_decision_does_not_stop_the_restamp():
+    """Fork test of #22555: the Sentinel rewrote the card's strip on the same
+    push, the restamp backed off, and G1 sat red until the 2-hourly sweep. A
+    change confined to the strip is the Sentinel's, not a review refresh."""
+    body = card().replace("nothing blocks merge\n",
+                          "nothing blocks merge\n\n<!-- SENTINEL_STRIP -->\n⏳ old\n<!-- /SENTINEL_STRIP -->\n")
+    gh = FakeGh(body, [commit(REVIEWED), commit(HEAD, 2)], FILES, FILES_AFTER_MERGE)
+    gh.body_at_write = body.replace("⏳ old", "⏳ new")
+    assert rb.run(gh, 1)["restamped"] is True
+    (_, written), = gh.patched
+    assert "⏳ new" in written, "the fresh strip survives"
+    assert f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->" in written
