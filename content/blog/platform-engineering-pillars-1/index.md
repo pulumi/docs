@@ -26,7 +26,7 @@ social:
 ---
 Software drives innovation. Development teams face pressure to ship features faster. But speed collides with infrastructure complexity. Developers struggle with cloud setups, juggle scattered tools, and wait on operations teams for resources. The result is friction and slower innovation.
 
-This is where [Platform Engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) comes in. It helps developers move faster by creating tools that actually work. A good internal platform lets teams self-serve infrastructure, find documentation, follow best practices, and focus on what they do best: writing useful software.
+This is where [Platform Engineering](https://www.pulumi.com/topics/platform-engineering/) comes in. It helps developers move faster by creating tools that actually work. A good internal platform lets teams self-serve infrastructure, find documentation, follow best practices, and focus on what they do best: writing useful software.
 
 <!--more-->
 {{< youtube "AUCt28gVR6Y?rel=0" >}}
@@ -39,7 +39,7 @@ Building a platform isn't about finding one perfect tool. It's about assembling 
 
 ### **Problem: Infrastructure chaos and bottlenecks**
 
-Developers face many pain points with manual provisioning, which is why [infrastructure as code](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/) has become so essential:
+Developers face many pain points with manual provisioning, which is why [infrastructure as code](https://www.pulumi.com/topics/infrastructure-as-code/) has become so essential:
 
 * **Inconsistent environments**: Dev, staging, and production drift apart. "Works on my machine" becomes everyone's excuse.
 * **Slow processes**: Console clicking and waiting on ops creates bottlenecks. Developers wait days for basic infrastructure.

@@ -18,7 +18,7 @@ aliases:
     - /docs/tour/
 ---
 
-Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) (IaC) platform that lets you use familiar programming languages and tools to automate, secure and manage everything you run in the cloud.
+Pulumi is a modern [infrastructure as code](/topics/infrastructure-as-code/) (IaC) platform that lets you use familiar programming languages and tools to automate, secure and manage everything you run in the cloud.
 
 Pulumi IaC is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) to make managing infrastructure secure, reliable, and hassle-free.
 

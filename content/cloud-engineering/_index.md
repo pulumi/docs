@@ -15,7 +15,7 @@ best_practices:
     title: Best practices
     description: |
         Cloud Engineering teams build, deploy, and manage modern cloud applications
-        and [infrastructure as software](/what-is/what-is-infrastructure-as-software/)
+        and [infrastructure as software](/topics/infrastructure-as-code/what-is-infrastructure-as-software/)
         written in general purpose languages, including the application logic, cloud infrastructure,
         and cloud policies.
 

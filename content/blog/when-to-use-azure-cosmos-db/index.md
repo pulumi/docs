@@ -189,7 +189,7 @@ Your exact numbers may vary, but by my back-of-the-napkin math, Cosmos DB is che
 | **Cosmos DB**    | ~$227.28/month                                        | Request Units (RUs) based, scales with document size and operations |
 
 {{% notes type="info" %}}
-See also [Cosmos DB vs MongoDB, Know The Differences](/what-is/cosmos-db-vs-mongodb-know-the-differences/)
+See also [Cosmos DB vs MongoDB, Know The Differences](/topics/infrastructure-as-code/cosmos-db-vs-mongodb-know-the-differences/)
 {{% /notes %}}
 
 ## Cosmos DB Vs Cassandra
@@ -271,7 +271,7 @@ Again, using some back-of-the-napkin math, DynamoDB in provisioned Mode is more 
 | **Cosmos DB**        | 500 reads/sec, 50 writes/sec               | $227.28/month           | $212.92/month     |     |
 
 {{% notes type="info" %}}
-See also [Cosmos DB vs DynamoDB, Know The Differences](/what-is/database-comparison-cosmos-db-vs-dynamodb/)
+See also [Cosmos DB vs DynamoDB, Know The Differences](/topics/infrastructure-as-code/database-comparison-cosmos-db-vs-dynamodb/)
 {{% /notes %}}
 
 ## Tangent: Azure Table Storage vs. Cosmos DB

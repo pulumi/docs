@@ -571,7 +571,7 @@ If you want to go further with AI on Pulumi, here are some related guides:
 - [Deploy LangServe Apps with Pulumi on AWS (RAG & Chatbot)](/blog/easy-ai-apps-with-langserve-and-pulumi/) — Build a retrieval-augmented chatbot that could front-end this Ollama instance.
 - [Deploy AI Models on Amazon SageMaker using Pulumi Python IaC](/blog/mlops-huggingface-llm-aws-sagemaker-python/) — A SageMaker alternative when you'd rather not manage the EC2 host yourself.
 - [Build an AI Slack Bot on AWS Using Embedchain & Pulumi](/blog/ai-slack-bot-to-chat-using-embedchain-and-pulumi-on-aws/) — Wire an LLM into Slack as an internal assistant.
-- [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code/) — Background on the IaC approach used throughout this guide.
+- [What is Infrastructure as Code?](/topics/infrastructure-as-code/) — Background on the IaC approach used throughout this guide.
 
 {{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
 

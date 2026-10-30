@@ -12,7 +12,7 @@ meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock ne
 Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/iac/concepts/testing/) for the updated overview and tutorials.
 {{% /notes %}}
 
-Using Pulumi and general purpose languages for [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
+Using Pulumi and general purpose languages for [infrastructure as code](/topics/infrastructure-as-code/)
 comes with many benefits: leveraging existing skills and knowledge,
 eliminating boilerplate through abstraction, and using the same
 ecosystem of tools like IDEs and linters that your team already knows

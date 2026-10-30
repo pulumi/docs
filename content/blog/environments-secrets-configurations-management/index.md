@@ -69,7 +69,7 @@ As we looked at solving these problems for Pulumi we quickly realized that none 
 * __Duplication and Copy/Paste__: Secrets are duplicated in many places. Frequently coupled to application/system-specific configuration stores.
 * __Too Many Long-lived Static Secrets__: Long lived static credentials are over-used, exposing companies to significant security risk.  Rotation is operationally challenging. Not all systems support direct integration with OIDC and other dynamic secrets provisioning systems.
 
-While customers frequently had good solutions for pure [secrets management](/what-is/what-is-secrets-management/) (AWS Secrets Manager, HashiCorp Vault, etc.), none of these solutions extended into managing the complexities of actually getting these secrets as well as non-secret configuration into the collection of logical environments that define how they will be consumed in infrastructure and applications.  Customers struggled with too many walled gardens for secrets management and configuration, and lack of any consistent set of tools and workflows to help manage the complexity of how secrets and configuration flow between these systems.
+While customers frequently had good solutions for pure [secrets management](/topics/secrets-and-security/) (AWS Secrets Manager, HashiCorp Vault, etc.), none of these solutions extended into managing the complexities of actually getting these secrets as well as non-secret configuration into the collection of logical environments that define how they will be consumed in infrastructure and applications.  Customers struggled with too many walled gardens for secrets management and configuration, and lack of any consistent set of tools and workflows to help manage the complexity of how secrets and configuration flow between these systems.
 
 Pulumi ESC was born to address these problems and needs head on.  It does so through a few core design principles:
 
@@ -229,7 +229,7 @@ environment:
   - shopping-service-staging
 ```
 
-If I run `pulumi preview` now on my Pulumi IaC project (in this case, a project which just outputs the configuration values), we will see that configuration values for `aws:region`, `numInstances`, and `dbPassword` are all available. I didn’t have to copy them into this stack, they were automatically pulled out of the environment in Pulumi ESC.  And note that the secretness of the `dbPassword` configuration value flowed through into Pulumi IaC’s config system to ensure this value is encrypted in any place it is used within our [infrastructure as code](/what-is/what-is-infrastructure-as-code/).
+If I run `pulumi preview` now on my Pulumi IaC project (in this case, a project which just outputs the configuration values), we will see that configuration values for `aws:region`, `numInstances`, and `dbPassword` are all available. I didn’t have to copy them into this stack, they were automatically pulled out of the environment in Pulumi ESC.  And note that the secretness of the `dbPassword` configuration value flowed through into Pulumi IaC’s config system to ensure this value is encrypted in any place it is used within our [infrastructure as code](/topics/infrastructure-as-code/).
 
 ```
 Previewing update (pulumi/staging)

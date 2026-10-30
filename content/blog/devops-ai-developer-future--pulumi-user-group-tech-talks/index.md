@@ -40,7 +40,7 @@ In the Fireside chat, Luke Hoban expressed his enthusiasm for incorporating AI i
 
 When considering the adoption of AI and AI engineering, such as prompt engineering and other specific disciplines, AI engineers rely heavily on the cloud. Many AI-based systems are built around cloud-native tools, practices, and managed services.
 
-The extensive use of cloud-native primitives means that AI is fundamentally a cloud adoption story. Consequently, established DevOps and [infrastructure as code](/what-is/what-is-infrastructure-as-code/) tooling and best practices play an important role in AI engineering, in what is being done, and in leveraging its use.
+The extensive use of cloud-native primitives means that AI is fundamentally a cloud adoption story. Consequently, established DevOps and [infrastructure as code](/topics/infrastructure-as-code/) tooling and best practices play an important role in AI engineering, in what is being done, and in leveraging its use.
 
 ## What is AI in DevOps
 
@@ -64,7 +64,7 @@ AI assists DevOps teams to refine their operations by detecting inefficiencies a
 
 AI-driven automation can also help the software development process with code generation. The operations teams from both departments quickly pinpoint any issues in their workflows while speeding up decision-making processes.
 
-In the long term, the AI may use cloud credentials to create and autonomously automate deployment and management and perform DevOps tasks on behalf of the DevOps or [platform engineering](/what-is/what-is-platform-engineering/) team. In the near term, it is used to assist humans, from DevOps professionals to developers.
+In the long term, the AI may use cloud credentials to create and autonomously automate deployment and management and perform DevOps tasks on behalf of the DevOps or [platform engineering](/topics/platform-engineering/) team. In the near term, it is used to assist humans, from DevOps professionals to developers.
 
 > ***“In the near term, AI usage in DevOps is about how do you keep the human in the loop, how do you use it as a learning tool, as a code generation tool, and for auditing to provide actionable notifications, all of which are still very human-dependent. There is so much more it can be used for. Currently, it's a tool serving humans. But it is fascinating to imagine it in the future when it can be trusted to be an autonomous agent.”*** - *Luke Hoban, CTO of Pulumi and co-creator of TypeScript*
 

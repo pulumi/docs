@@ -224,4 +224,4 @@ If you're already familiar with Terraform, many concepts and CLI commands have d
 * [Using Pulumi Cloud as a Terraform state backend](/docs/integrations/terraform/state-backend/)
 * [Pulumi vs. Terraform Cloud (HCP Terraform)](/docs/iac/comparisons/terraform-cloud/)
 * [Pulumi vs. OpenTofu](/docs/iac/comparisons/opentofu/)
-* [OpenTofu vs. Terraform](/what-is/opentofu-vs-terraform/)
+* [OpenTofu vs. Terraform](/topics/infrastructure-as-code/opentofu-vs-terraform/)
