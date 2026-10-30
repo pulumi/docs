@@ -51,7 +51,6 @@ As infrastructure complexity grows, teams increasingly seek approaches that prov
 
 This comprehensive guide examines the most effective infrastructure as code tools available today, providing detailed analysis of core IaC platforms, complementary tools, and related technologies through the lens of software engineering best practices. Whether you're starting fresh with IaC or evaluating alternatives to overcome limitations in your current toolchain, we'll help you navigate this complex landscape and choose solutions that truly bring software engineering to infrastructure.
 
-
 ## What is Infrastructure as Code?
 
 [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/) is an approach to automating the provisioning and management of infrastructure using software engineering principles, approaches, and tools. Rather than manually configuring servers, networks, and cloud resources through user interfaces or command-line tools, IaC enables you to define your entire infrastructure declaratively through code.
