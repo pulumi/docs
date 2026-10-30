@@ -27,6 +27,7 @@
       just the contents and the stretched link. For laying cards out *inside* a
       card (a release page's related events panel), where a card on a card reads
       as a box in a box.
+    - hideTrack: true drops the track line, for the track page, where it repeats.
 */}}
 
 {{ $data := .page }}
@@ -34,6 +35,7 @@
 {{ $title := $data.Params.title }}
 {{ $onDemand := $data.Params.youtube_url }}
 {{ $session := .session }}
+{{ $past := and (not $onDemand) (not (partial "events/is-current.html" (dict "page" $data))) }}
 
 {{ $datetime := $data.Params.sortable_date }}
 {{/* Conferences and the like ("event") are all-day or multi-day: the frontmatter
@@ -84,12 +86,15 @@
                     {{ with $label }}
                         {{ partial "badge.html" (dict "text" . "variant" "ghost") }}
                     {{ end }}
-                    {{ if not $onDemand }}
+                    {{ if not (or $onDemand $past) }}
                         {{/* Populated client-side (see resources.ts): a build-time "in X days"
                              would go stale between builds and ignores the visitor's timezone. */}}
                         <span data-event-countdown data-event-date="{{ $datetime | time.Format "2006-01-02T15:04:05Z07:00" }}" hidden></span>
                     {{ end }}
                 </div>
+                {{ with and (not .hideTrack) (partial "events/track.html" (dict "page" $data)) }}{{ if ge .index 0 }}
+                    <p class="m-0 mb-1.5 font-overline-sm text-violet-primary">{{ .track.title }} · {{ add .index 1 }} of {{ len .parts }}</p>
+                {{ end }}{{ end }}
                 <h3 class="m-0 heading-3 leading-snug text-service-black transition-colors group-hover:text-violet-primary">
                     {{ $title }}
                     {{ if $target }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-4 ml-1 opacity-50") }}{{ end }}
@@ -134,7 +139,7 @@
 
             <div class="flex items-end justify-between gap-3">
                 {{ partial "template-partials/event-card-tags.html" $data }}
-                {{ partial "template-partials/event-card-cta.html" (dict "onDemand" $onDemand) }}
+                {{ partial "template-partials/event-card-cta.html" (dict "onDemand" $onDemand "past" $past) }}
             </div>
         </div>
     </a>

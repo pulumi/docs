@@ -1,0 +1,5 @@
+# Parts are numbered by sortable_date, so a track's order follows the calendar.
+tracks:
+  - slug: "agent-driven-infrastructure"
+    title: "Agent-driven infrastructure"
+    description: "Three workshops on using AI agents with Pulumi. First, you direct an agent and approve each change. Next, agents open pull requests for your team to review. Last, you set identity, policy, and audit rules for many agents at once."
