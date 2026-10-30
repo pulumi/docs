@@ -17,7 +17,7 @@
                 {{ $count := len .parts }}
                 {{ with site.GetPage (printf "/track/%s" $track.slug) }}
                     <a href="{{ .RelPermalink }}" class="card card-hover flex flex-col gap-3 bg-white p-6 md:p-7 no-underline">
-                        <p class="font-overline-sm m-0 text-violet-primary">Track · {{ $count }} {{ cond (eq $count 1) "event" "events" }}</p>
+                        <div>{{ partial "badge.html" (dict "text" (printf "Track · %d %s" $count (cond (eq $count 1) "event" "events")) "variant" "brand") }}</div>
                         <h2 class="heading-3 m-0 text-service-black">{{ $track.title }}</h2>
                         <p class="body-base m-0 line-clamp-3 text-gray-700">{{ $track.description }}</p>
                     </a>
