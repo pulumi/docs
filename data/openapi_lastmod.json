@@ -101,6 +101,9 @@
       "hash": "b172b93a3b2179edf90226b926a13766871b6a955291a8ed6b939dedc9817d03",
       "lastmod": "2026-10-23"
     },
+    "PolicyFindings": {
+      "hash": "45db7a488d9edd980c0113eaadc10d41ed8f361fbcd17cb7ba305eed04e065e9"
+    },
     "PolicyGroups": {
       "hash": "ab804204f3781d40040691f5ad8d0b03960df56d839e3b140328e3bac9aa579d",
       "lastmod": "2026-10-27"
@@ -110,8 +113,8 @@
       "lastmod": "2026-08-02"
     },
     "PolicyResults": {
-      "hash": "6e816f4b7f755279207997c37f4cbf44ff3f81015a66696b310a9d6aed9cb435",
-      "lastmod": "2026-08-02"
+      "hash": "de29ae552588874175f91681dad185e5833786470fa98bd8b7224c7bb6c4e3a7",
+      "lastmod": "2026-10-30"
     },
     "Registry": {
       "hash": "8f55382add966514367ee6b55762c7b2f564872bfa466fed540b7c4e76129f56",
@@ -162,8 +165,8 @@
       "lastmod": "2026-09-15"
     },
     "VCS Integrations": {
-      "hash": "5c48b84dc4e255f62b6b61ff3352846269b8b0e0ce8b030ea095b51dd5ae4774",
-      "lastmod": "2026-08-25"
+      "hash": "736c2991c5df00ef68055ec42bd8b8d3d71377e5e7cee9c0dd6b0085b1e56091",
+      "lastmod": "2026-10-30"
     },
     "Webhooks": {
       "hash": "fda2095a9c22c0543987a16f6d43dc3ccb2535a8e163f4e38b6b119bb0c29d7d",
@@ -311,13 +314,17 @@
       "lastmod": "2026-10-19"
     },
     "AgentEntity": {
-      "hash": "e675ce563ba29255a09bfd433672e20a262798124971f6f633e63b5cab7798fe"
+      "hash": "e56e55d07a80165a56d7024f6fbd788f44b6fe98d46f70a0b12749cb502e2066",
+      "lastmod": "2026-10-30"
     },
     "AgentEntityDiff": {
       "hash": "89fe6f53d349eecf6d9a21f24ca1c5d0350d584e135aafe48775a91621dfc93d"
     },
     "AgentEntityPR": {
       "hash": "e34032528bf0d3ac23e01bdb1cff37c2be498709639289409e6343d1ececaa92"
+    },
+    "AgentEntityPolicyFinding": {
+      "hash": "de74cb7f39826805590815d4da84a305d2bf85d764150c355d11a15047aee2b7"
     },
     "AgentEntityPolicyIssue": {
       "hash": "3e0cf423921c41948a59023a83565dc3e7273cc4621f8de79a0d7adda5c56639"
@@ -887,6 +894,9 @@
       "hash": "c07641461bf57dbb169b866c0fd1edb98482e4426a669b3844c9169fba392ce7",
       "lastmod": "2026-09-15"
     },
+    "AzureDevOpsFederatedCredentialClaims": {
+      "hash": "6cae440fad7a7fe485f706cf796484ba2d80e6e16d20c408b58cd156b288b98b"
+    },
     "AzureDevOpsIntegrationDetails": {
       "hash": "c2113525648e17a5aa6d6ab7765a5af86005ee1d2935eb968336c194c4bbaa8a",
       "lastmod": "2026-09-15"
@@ -1015,16 +1025,16 @@
       "hash": "9a319f19e0aeff30963646a639cdccd42dd999d365f11c2c19dcbcecc1313175"
     },
     "ChangeGateTargetInput": {
-      "hash": "881eadb72b16e1188c86d554f08c53ef17005b287283753683e33defaf16d15b",
-      "lastmod": "2026-08-25"
+      "hash": "6cf366ea57d92196c4eebf9668e50880acef3dc85e0488d2c5bd285f11bd02e1",
+      "lastmod": "2026-10-30"
     },
     "ChangeGateTargetOutput": {
-      "hash": "f596502e64e7991bdc90fb4ef166534a0b9d785cc467d40a1c816ac0f09318e3",
-      "lastmod": "2026-08-25"
+      "hash": "6cea536ef6c888635e27ec6ef12356eb5e4d6c97e824b4e3d431d6bce742bd29",
+      "lastmod": "2026-10-30"
     },
     "ChangeRequest": {
-      "hash": "9b15225239df3de1ddb378f0991aeed00f120706aebaa34df650fb3157f61ad2",
-      "lastmod": "2026-09-15"
+      "hash": "50a9e02f80890d0cae43776e7aaad4babefba761446c94938ccf0c61df1082a3",
+      "lastmod": "2026-10-30"
     },
     "ChangeRequestApplyResult": {
       "hash": "46bbf65dc2f76aa9f35924ad3a842ede029f90013237e40892b33f752067d637"
@@ -2928,11 +2938,15 @@
       "hash": "7d1352b49d9c6b8cba7179225bc6f3d9c4fe14b26a2e9e29727bc4a7bdd53a3c"
     },
     "TargetEntity": {
-      "hash": "673dfe8eeb5cda012b706cb3d23601c756794e617ed4072b00589f065369f172"
+      "hash": "ae1024e20ac7570e72b85a9532cf7d42f1c3252dee0c8f0d1a7fa94e74566f23",
+      "lastmod": "2026-10-30"
     },
     "TargetEntityEnvironment": {
       "hash": "b766a35e8ddbfbfc5214026bddf755e52951c146d2910432cd6dbfd07b3cd852",
       "lastmod": "2026-05-13"
+    },
+    "TargetEntityPolicyExceptions": {
+      "hash": "291ce6f3a14dd9a5c6dbd2ce43101d433e3fb8535b5024f680653dde4d670cf1"
     },
     "Team": {
       "hash": "34ae409035fa23c8149264299c8ddeceb2928f9b3f22264d9f623ffe0e3e6e14",
@@ -3089,8 +3103,8 @@
       "hash": "9a634a767cb0b4c488dd8fd231a8144ee22d014aae7bb2a1091be4d6f1f81ac9"
     },
     "UpdateAzureDevOpsAppIntegrationRequest": {
-      "hash": "19deba58366c158b21fdea526a355f960e4a7e6af3a778e59e91717b30a89a78",
-      "lastmod": "2026-05-13"
+      "hash": "116c252e1c752366e5fc7dd07ac4589e0a083ab954eb0587adaa543a5833597d",
+      "lastmod": "2026-10-30"
     },
     "UpdateChangeGateRequest": {
       "hash": "d5a9fd854a11fb2263b38c47e4d0cfd1c5085cb1d65094389c078524a7ece6d5"
