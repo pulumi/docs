@@ -7,7 +7,7 @@ draft: false
 title_tag: "Kubernetes Best Practices for 2026 (v1.37)"
 meta_title: "Kubernetes Best Practices for 2026 (v1.37)"
 meta_desc: |
-  Kubernetes best practices checked against v1.37: in-place Pod resize, native sidecars, Gateway API, RBAC, NetworkPolicy, autoscaling, GitOps, and supply-chain security.
+  Kubernetes best practices checked against v1.37: in-place resize, native sidecars, Gateway API, RBAC, NetworkPolicy, autoscaling, GitOps, and supply chain.
 
 
 authors:
@@ -38,26 +38,26 @@ faq_schema: true
 
 ## TL;DR: 20 Kubernetes best practices for 2026
 
-1. Set resource **requests and limits** on every container, and resize them **in place** (GA in v1.35) instead of restarting Pods.
-2. Use **namespaces** plus **ResourceQuota** and **LimitRange** for isolation.
-3. Run **one container per Pod** unless you need a sidecar, and declare sidecars as **native sidecars** (`restartPolicy: Always` on an init container).
-4. Manage manifests with **Helm, Kustomize, or Pulumi** — never raw copies.
-5. Use the **Gateway API** for north-south traffic. ingress-nginx is retired and its repository is archived.
-6. Configure **liveness, readiness, and startup probes** for every workload.
-7. Enforce **RBAC** with the principle of least privilege from day one.
-8. Apply **Pod Security Admission** at the `restricted` level by default, and set `hostUsers: false` (user namespaces, GA in v1.36) where workloads allow it.
-9. Lock down east-west traffic with **NetworkPolicy** (default-deny).
-10. Store secrets in an **external secret manager** (Pulumi ESC, Vault, AWS Secrets Manager) — not as plain Kubernetes Secrets.
-11. Autoscale with **HPA, VPA (`InPlaceOrRecreate` or `Off`), and Cluster Autoscaler / Karpenter**.
-12. Monitor with **Prometheus, Grafana, and OpenTelemetry**; alert before users do.
-13. Deploy with **GitOps** (Argo CD or Flux) — Git is the only source of truth.
-14. Gate every change with **policy-as-code** (Pulumi Policies, ValidatingAdmissionPolicy, OPA/Gatekeeper, Kyverno).
-15. Generate and verify an **SBOM** for every image; sign with **Sigstore/cosign**.
-16. Manage cost with **FinOps** practices: right-size, schedule, and chargeback by namespace.
-17. Keep clusters and add-ons **patched** on a documented cadence, always on one of the three supported minor versions.
-18. Use **labels and annotations** consistently for ownership, cost, and SLO tracking.
-19. Separate **dev, staging, and prod** clusters — or virtualize with vCluster.
-20. Treat clusters as **cattle, not pets**: rebuild from code, never edit live.
+- Set resource **requests and limits** on every container, and resize them **in place** (GA in v1.35) instead of restarting Pods.
+- Use **namespaces** plus **ResourceQuota** and **LimitRange** for isolation.
+- Run **one container per Pod** unless you need a sidecar, and declare sidecars as **native sidecars** (`restartPolicy: Always` on an init container).
+- Manage manifests with **Helm, Kustomize, or Pulumi** — never raw copies.
+- Use the **Gateway API** for north-south traffic. ingress-nginx is retired and its repository is archived.
+- Configure **liveness, readiness, and startup probes** for every workload.
+- Enforce **RBAC** with the principle of least privilege from day one.
+- Apply **Pod Security Admission** at the `restricted` level by default, and set `hostUsers: false` (user namespaces, GA in v1.36) where workloads allow it.
+- Lock down east-west traffic with **NetworkPolicy** (default-deny).
+- Store secrets in an **external secret manager** (Pulumi ESC, Vault, AWS Secrets Manager) — not as plain Kubernetes Secrets.
+- Autoscale with **HPA, VPA (`InPlaceOrRecreate` or `Off`), and Cluster Autoscaler / Karpenter**.
+- Monitor with **Prometheus, Grafana, and OpenTelemetry**; alert before users do.
+- Deploy with **GitOps** (Argo CD or Flux) — Git is the only source of truth.
+- Gate every change with **policy-as-code** (Pulumi Policies, ValidatingAdmissionPolicy, OPA/Gatekeeper, Kyverno).
+- Generate and verify an **SBOM** for every image; sign with **Sigstore/cosign**.
+- Manage cost with **FinOps** practices: right-size, schedule, and chargeback by namespace.
+- Keep clusters and add-ons **patched** on a documented cadence, always on one of the three supported minor versions.
+- Use **labels and annotations** consistently for ownership, cost, and SLO tracking.
+- Separate **dev, staging, and prod** clusters — or virtualize with vCluster.
+- Treat clusters as **cattle, not pets**: rebuild from code, never edit live.
 
 > **Last updated October 30, 2026** — rechecked every practice against Kubernetes v1.37. Added a version-support section and a "what changed" table; updated resource sizing for in-place Pod resize and VPA's new modes; moved sidecars to the native model; rewrote the ingress guidance now that ingress-nginx is archived; added the cgroup v2 and containerd 2 prerequisites to upgrades; and added scanner-pinning and Bitnami image guidance.
 
@@ -74,7 +74,7 @@ faq_schema: true
 | v1.35 | December 17, 2025 | February 28, 2027 | Supported |
 | v1.34 | August 27, 2025 | October 27, 2026 | End of life |
 
-The next minor, v1.38, is planned for December 16, 2026. See the official [Kubernetes releases page](https://kubernetes.io/releases/) for current patch versions.
+The next minor, v1.38, is expected in December 2026. See the official [Kubernetes releases page](https://kubernetes.io/releases/) for current patch versions.
 
 ### What changed since Kubernetes v1.32?
 
@@ -113,7 +113,7 @@ Kubernetes best practices are the operational patterns that keep workloads avail
 | `kubectl apply -f` from a laptop | No history, no review, no rollback | GitOps with Argo CD or Flux; Git is the source of truth |
 | Manual `latest` image tags | Non-reproducible deploys, supply-chain risk | Pinned digests (`@sha256:...`) with cosign verification |
 | Ingress-nginx in 2026 | Retired in March 2026 and archived: existing installs keep running but get no security fixes | Migrate to the Gateway API (Envoy Gateway, Istio, kgateway) |
-| Sidecars declared as regular containers | Jobs never complete, sidecars start after the app and stop before it | Native sidecars: init container with `restartPolicy: Always` |
+| Sidecars declared as regular containers | Jobs never complete, and sidecars have no guaranteed start or stop order relative to the app | Native sidecars: init container with `restartPolicy: Always` |
 | cgroup v1 nodes or containerd 1.x | kubelet fails to start on cgroup v1 since v1.35; blocks upgrades past v1.35 | Cgroup v2 nodes and containerd 2.0 or later |
 | VPA `updateMode: Auto` | Deprecated mode that evicts Pods to apply changes | `InPlaceOrRecreate` where workloads tolerate resize, otherwise `Off` |
 | Hand-rolled YAML in dozens of repos | Drift, copy-paste bugs, no testing | [Pulumi](/docs/iac/get-started/kubernetes/), Helm, or Kustomize with reviews |
@@ -178,8 +178,6 @@ If you are already managing cloud infrastructure with code, extending the same P
 </div>
 
 {{% notes type="info" %}}
-ingress-nginx retired in March 2026 and its repository is archived.
-
 Here is a guide on [How to Move to the Gateway API: post ingress-nginx Retirement](/blog/ingress-nginx-to-gateway-api-kgateway/).
 {{% /notes %}}
 
@@ -262,7 +260,7 @@ Kubernetes ships three minor releases a year (v1.35 in December 2025, v1.36 in A
 - Test upgrades in a non-prod cluster, run a [conformance test](https://github.com/cncf/k8s-conformance), then promote.
 - Back up etcd before control-plane changes; managed services (EKS, GKE, AKS) handle most of this for you.
 - Upgrade add-ons (CNI, CSI, Gateway controller, cert-manager, metrics-server) on the same cadence — pin versions in code so the upgrade is auditable.
-- Watch the [Kubernetes deprecation guide](https://kubernetes.io/docs/reference/using-api/deprecation-guide/) and run [`pluto`](https://github.com/FairwindsOps/pluto) to find deprecated APIs before they break. `kubent` still works but has had no release since August 2024.
+- Watch the [Kubernetes deprecation guide](https://kubernetes.io/docs/reference/using-api/deprecation-guide/) and run [`pluto`](https://github.com/FairwindsOps/pluto) to find deprecated APIs before they break. [`kubent`](https://github.com/doitintl/kube-no-trouble/releases) still works but has had no release since August 2024.
 
 ## 11. How should you label and annotate Kubernetes resources?
 
@@ -291,14 +289,14 @@ Provision your clusters, their cloud resources, and the workloads on them from o
 - Build with **multi-stage Dockerfiles** so build tools never ship in the final image.
 - Pin the base image **by digest** (`@sha256:...`), not by tag — `latest` and `1.21` move under you.
 - Scan every image with **[Trivy](https://trivy.dev/latest/)**, [Grype](https://github.com/anchore/grype), or your registry's built-in scanner. Block builds on `Critical`/`High` CVEs.
-- **Pin the scanner itself** by version digest or commit SHA. In March 2026 attackers published malicious Trivy v0.69.4 binaries and images and force-pushed `trivy-action` tags, which hit every pipeline that referenced a mutable tag. See [the incident write-up](https://www.legitsecurity.com/blog/the-trivy-supply-chain-compromise-what-happened-and-playbooks-to-respond).
+- **Pin the scanner itself** by version digest or commit SHA. In March 2026 attackers published malicious Trivy v0.69.4 binaries and images and force-pushed `trivy-action` tags, which hit pipelines that referenced a mutable tag. See [the incident write-up](https://www.legitsecurity.com/blog/the-trivy-supply-chain-compromise-what-happened-and-playbooks-to-respond).
 - **Audit charts that pull `docker.io/bitnami/*`.** Bitnami removed its public image catalog in September 2025; old tags live in `bitnamilegacy/` with no updates. Switch to maintained images or a paid source ([details](https://github.com/bitnami/charts/issues/36215)).
-- Put a **pull-through cache or registry mirror** in front of Docker Hub, which tightened anonymous pull limits in April 2025.
+- Put a **pull-through cache or registry mirror** in front of Docker Hub so anonymous pull rate limits can't stall node scale-ups.
 - Smaller images mean faster pulls, faster autoscaling, and a smaller attack surface.
 
 ## 14. What's a reliable Kubernetes logging strategy?
 
-- **Centralize** to Loki, Elastic/OpenSearch, or a managed service via Fluent Bit or the OpenTelemetry Collector running as a DaemonSet.
+- **Centralize** with a log collector running as a DaemonSet on every node (see the logs stack in section 8).
 - **Structure** logs as JSON with consistent field names (`trace_id`, `span_id`, `service`, `level`).
 - **Retain** by tier — 7 days hot, 30–90 days warm, archive to object storage for compliance.
 - **Redact** secrets and PII at the collector, not after the fact.
@@ -311,11 +309,11 @@ Provision your clusters, their cloud resources, and the workloads on them from o
 
 **What is the Vertical Pod Autoscaler?** The **VPA** adjusts a Pod's CPU and memory *requests* over time based on observed usage. Run it with `updateMode: Off` (recommendation-only) and apply the recommendations through your IaC tool, or use `InPlaceOrRecreate` (GA in VPA 1.6) where workloads tolerate in-place resize. The older `Auto` mode is deprecated.
 
-**What are Cluster Autoscaler and Karpenter?** **Cluster Autoscaler** adds and removes nodes to match Pod demand. **[Karpenter](https://karpenter.sh/)** is a faster, group-less node provisioner widely used on EKS. AKS offers a Karpenter-based Node Auto Provisioning feature, and community providers cover other clouds.
+**What are Cluster Autoscaler and Karpenter?** **Cluster Autoscaler** adds and removes nodes to match Pod demand. **[Karpenter](https://karpenter.sh/)** is a faster, group-less node provisioner widely used on EKS. AKS offers a Karpenter-based [Node Auto Provisioning](https://learn.microsoft.com/en-us/azure/aks/node-auto-provisioning) feature, and community providers cover other clouds.
 
 **The rule:** every production workload has an HPA. Every cluster has a node-level autoscaler. Set sensible `min`/`max` replicas, define a `PodDisruptionBudget`, and gate scale-down behavior so traffic spikes don't pile up at restart time. Pair with **KEDA** for event-driven scaling (queues, Kafka lag, scheduled scale).
 
-Two recent additions help. HPA configurable tolerance went GA in v1.37, so you can replace the fixed 10% scaling tolerance per workload, and HPA scale-to-zero is in beta in v1.37. For GPU and accelerator workloads, Dynamic Resource Allocation has been GA since v1.34. See [running AI agents on Kubernetes](/blog/ai-agents-on-kubernetes/) for an example.
+Two recent additions help. HPA configurable tolerance went GA in v1.37, so you can replace the fixed 10% scaling tolerance per workload, and HPA scale-to-zero is in beta in v1.37. For GPU and accelerator workloads, Dynamic Resource Allocation has been GA since v1.34. See [running AI agents on Kubernetes](/blog/ai-agents-on-kubernetes/) for the wider ecosystem.
 
 ## 16. How do you enforce policy-as-code on Kubernetes?
 
@@ -368,8 +366,8 @@ Native YAML stops scaling at a certain team size. Once you have more than a hand
 - **Real languages** — TypeScript, Python, Go, Java, .NET — through the [Pulumi Kubernetes provider](/registry/packages/kubernetes/) for [type-safe, testable Kubernetes infrastructure](/docs/iac/languages-sdks/). Loops, conditionals, and unit tests instead of templating.
 - **One stack, full topology** — manage the cloud (EKS/GKE/AKS, VPC, IAM, DNS) and the workloads in it together. See [easily create and manage AWS EKS clusters with Pulumi](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/).
 - **Reusable components** — abstract platform patterns into [Pulumi packages](/docs/iac/concepts/packages/) other teams `import` instead of copy-pasting.
-- **GitOps reconciliation** — the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) reconciles a cluster to a Pulumi stack on every Git push.
-- **Policy-as-code** built in — [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) block non-compliant changes before `pulumi up`.
+- **GitOps reconciliation** — the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) reconciles a cluster to a Pulumi stack whenever the tracked Git branch changes.
+- **Policy-as-code** built in — [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) block non-compliant changes during `pulumi preview` and `pulumi up`, before anything changes in your cloud.
 - **Secrets done right** — [Pulumi ESC](/docs/esc/) federates secrets and configuration across stacks, environments, and Kubernetes clusters.
 
 For a deeper comparison of hand-written YAML, Terraform, and Pulumi for Kubernetes, see [YAML, Terraform, Pulumi: what's the smart choice for deployment automation with Kubernetes](/blog/yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes/), and the [beyond YAML](/blog/beyond-yaml-kubernetes-2026-automation-era/) write-up on where Kubernetes automation is heading in 2026.
