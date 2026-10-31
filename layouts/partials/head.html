@@ -264,8 +264,14 @@
         front-matter title/meta_title, so without this branch they fall
         through to the site-wide default below. Source the same human display
         name the <title> tag uses further down instead. */}}
+    {{ $eventTrack := false }}
+    {{ if and (eq .Kind "term") (eq .Data.Singular "track") }}
+        {{ with partial "events/track.html" (dict "slug" .Data.Term) }}{{ $eventTrack = .track }}{{ end }}
+    {{ end }}
     {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
         <meta property="og:title" content="{{ partial "blog/term-name.html" . }}" />
+    {{ else if $eventTrack }}
+        <meta property="og:title" content="{{ $eventTrack.title }}" />
     {{ else if .Params.meta_title }}
         <meta property="og:title" content="{{ .Params.meta_title }}" />
     {{ else if .Params.title }}
@@ -280,6 +286,9 @@
     {{ else if and .IsHome .Site.Params.meta_desc }}
         <meta name="description" content="{{ .Site.Params.meta_desc }}" />
         <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
+    {{ else if and $eventTrack $eventTrack.description }}
+        <meta name="description" content="{{ $eventTrack.description }}" />
+        <meta property="og:description" content="{{ $eventTrack.description }}" />
     {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "author") .Data.Singular) }}
         {{/* Blog taxonomy term pages (category, tag, series, author) have no
             .Summary; source their description from the data files so they don't fall through to an
@@ -333,6 +342,8 @@
             {{ $blogTerm = true }}
             {{ $title = partial "blog/term-name.html" . }}
             {{ if eq .Data.Singular "series" }}{{ $seriesTerm = true }}{{ end }}
+        {{ else if $eventTrack }}
+            {{ $title = printf "%s track" $eventTrack.title }}
         {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "category") }}
             {{ $blogTerm = true }}
             {{ $title = "Categories" }}
