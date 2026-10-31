@@ -49,7 +49,7 @@ use_cases:
             Easily provision and maintain machine learning (ML) batch jobs and data processing pipelines. Pulumi provides an easy and automated way to deploy ML stacks
             for data scientists and developers.
 
-            [Learn more about AI and ML](/solutions/ai/)
+            [Learn more about AI and ML](/blog/the-superintelligence-flywheel/)
 
         - name: Migrate from an existing infrastructure tool
           description: |
