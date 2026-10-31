@@ -31,7 +31,7 @@ Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allow or
 By default, all organization admins can create new teams.
 
 {{% notes type="info" %}}
-To allow all organization members to create teams, enable the **Allow organization members to create teams** toggle in [Organization-wide role settings](/docs/administration/concepts/rbac/roles#organization-wide-role-settings).
+To let other members create teams, give them a [custom role](/docs/administration/concepts/rbac/roles/#custom-roles) that includes the `team:create` scope.
 {{% /notes %}}
 
 To create a team:
@@ -151,7 +151,7 @@ curl -s -X PATCH \
 
 The endpoint returns `204 No Content` on success. These operations require a Pulumi access token scoped to a user with team administration rights; organization admins always have this access. The `projectName` field refers to the ESC project in which the environment resides — this is the project specified when the environment was created (for example, `default` if no explicit project was given).
 
-## Related resources
+## Learn more
 
 - [Roles](/docs/administration/concepts/rbac/roles): Collections of permission sets applied to entities and combined with an organization access level. You can assign roles to a team so its members inherit them.
 - [Permission sets](/docs/administration/concepts/rbac/permission-sets): Reusable bundles of related scopes for a single entity type. You grant them on entities or use them to set a role's organization access level.

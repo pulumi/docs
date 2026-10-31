@@ -1,0 +1,2 @@
+default-roles/index.html|/docs/administration/concepts/rbac/default-roles/#member-legacy
+default-roles/self-hosted/index.html|/docs/administration/concepts/rbac/default-roles/#self-hosted
