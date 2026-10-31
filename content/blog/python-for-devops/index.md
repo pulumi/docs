@@ -34,7 +34,7 @@ That's where Python really shines. It lets you be the scrappy problem-solver who
 
 This guide covers both ends of that spectrum. I'll show you python packages for "we need it yesterday" moments, and then move into solutions that can grow with your team. And along the way I'll build [a little example service monitor and package capturer](https://github.com/adamgordonbell/service-status-monitor) to demonstrate the python packages I'm covering. I'll wrap it in a CLI, in a web dashboard and deploy it to AWS, all while staying in Python.
 
-Here's my list of Python libraries for DevOps work, starting from #15 to the most important last at number #1. If you want the conceptual overview first, read [what Python for DevOps means](/what-is/python-for-devops/).
+Here's my list of Python libraries for DevOps work, starting from #15 to the most important last at number #1. If you want the conceptual overview first, read [what Python for DevOps means](/topics/platform-engineering/python-for-devops/).
 
 **Updated October 2026.** I re-checked every tool on this list against its latest release. Schedule (no release since May 2024) gave way to APScheduler, the unmaintained `toml` package gave way to the standard library's `tomllib`, the Dagger example uses the current API, and the Airflow entry covers Airflow 3. I also added uv, Ruff, and a short section on exposing your tools to AI agents with MCP. Click, Requests, pytest, Typer, and Dagger now require Python 3.10 or newer, and 3.10 itself reached end of life this month, so target 3.12 or later for new work.
 

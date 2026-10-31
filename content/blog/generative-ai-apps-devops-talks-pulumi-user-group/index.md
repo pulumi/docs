@@ -112,7 +112,7 @@ Keep in mind that monitoring LLM performance is important to ensure you can rely
 
 ## Future: AI, Apps, and DevOps
 
-[Platform engineering](/what-is/what-is-platform-engineering/), DevOps, or MLOps may be the next steps in the AI-driven software development future. AI tools are the gateway to giving developers access to big language models that allow them to create highly sophisticated solutions.
+[Platform engineering](/topics/platform-engineering/), DevOps, or MLOps may be the next steps in the AI-driven software development future. AI tools are the gateway to giving developers access to big language models that allow them to create highly sophisticated solutions.
 
 ### Accelerating Development with AI-Powered Tools
 

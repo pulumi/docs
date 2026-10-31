@@ -53,7 +53,7 @@ itemlist:
       url: "https://github.com/bitnami-labs/sealed-secrets"
 ---
 
-[Secrets management](/what-is/what-is-secrets-management/) tools store, distribute, and rotate the credentials your applications depend on: database passwords, API keys, TLS certificates, and the tokens that let one service talk to another. The right tool depends less on which one has the longest feature list and more on how many clouds you run, how much operational overhead your team can absorb, and whether you're trying to replace a secret store or orchestrate the ones you already have.
+[Secrets management](/topics/secrets-and-security/) tools store, distribute, and rotate the credentials your applications depend on: database passwords, API keys, TLS certificates, and the tokens that let one service talk to another. The right tool depends less on which one has the longest feature list and more on how many clouds you run, how much operational overhead your team can absorb, and whether you're trying to replace a secret store or orchestrate the ones you already have.
 
 <!--more-->
 
@@ -93,7 +93,7 @@ Orchestration platforms connect and coordinate multiple secret sources rather th
 
 The platform's [configuration-as-code approach](/docs/esc/concepts/) defines hierarchical YAML environments that cascade from base configuration through development, staging, and production. Define common settings once, inherit them everywhere, and keep appropriate security boundaries between environments.
 
-ESC provides [audit logging](/docs/esc/administration/audit-logs/) with user identity, timestamp, access method, and resource detail on every access, supporting compliance frameworks like SOC 2 and GDPR. Dynamic credential generation is the bigger differentiator: instead of storing long-lived AWS access keys or Azure service principal secrets, ESC provisions short-lived OIDC tokens on demand through its [provider model](/docs/esc/providers/), so credentials expire automatically rather than sitting around waiting to be misused. Short-lived credentials also sidestep the [AWS CLI credential errors that long-lived keys eventually cause](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/).
+ESC provides [audit logging](/docs/esc/administration/audit-logs/) with user identity, timestamp, access method, and resource detail on every access, supporting compliance frameworks like SOC 2 and GDPR. Dynamic credential generation is the bigger differentiator: instead of storing long-lived AWS access keys or Azure service principal secrets, ESC provisions short-lived OIDC tokens on demand through its [provider model](/docs/esc/providers/), so credentials expire automatically rather than sitting around waiting to be misused. Short-lived credentials also sidestep the [AWS CLI credential errors that long-lived keys eventually cause](/dev/tutorials/run-aws-sts-get-caller-identity-with-dynamic-credentials/).
 
 The platform keeps a zero-lock-in posture through its [open-source engine](https://github.com/pulumi/esc) and [SDK support](/docs/esc/languages-sdks/) for TypeScript, Python, Go, and .NET.
 
@@ -115,7 +115,7 @@ Enterprise vaults prioritize maximum flexibility, extensibility, and compliance 
 
 ### HashiCorp Vault
 
-[HashiCorp Vault](/what-is/what-is-hashicorp-vault/) is still the reference point for enterprise secrets management, with dynamic secrets generation and a wide range of authentication methods and secret engines. Two changes matter for anyone budgeting or evaluating Vault today. First, HashiCorp is now HashiCorp, an IBM Company: IBM's roughly $6.4 billion acquisition closed February 27, 2025, and Vault ships under IBM's stewardship going forward. Second, Vault moved off the open-source MPL 2.0 license to the Business Source License (BSL) 1.1 announced in August 2023 and first applied in v1.15.0 (September 2023), so Vault today is source-available rather than OSI-approved open source. HCP Vault Dedicated, the managed offering, bills by the cluster-hour; a production-grade cluster commonly runs well over $1,000/month, so confirm current numbers directly with HashiCorp before you budget against an old figure.
+[HashiCorp Vault](/topics/secrets-and-security/what-is-hashicorp-vault/) is still the reference point for enterprise secrets management, with dynamic secrets generation and a wide range of authentication methods and secret engines. Two changes matter for anyone budgeting or evaluating Vault today. First, HashiCorp is now HashiCorp, an IBM Company: IBM's roughly $6.4 billion acquisition closed February 27, 2025, and Vault ships under IBM's stewardship going forward. Second, Vault moved off the open-source MPL 2.0 license to the Business Source License (BSL) 1.1 announced in August 2023 and first applied in v1.15.0 (September 2023), so Vault today is source-available rather than OSI-approved open source. HCP Vault Dedicated, the managed offering, bills by the cluster-hour; a production-grade cluster commonly runs well over $1,000/month, so confirm current numbers directly with HashiCorp before you budget against an old figure.
 
 Vault remains the right call for organizations that need maximum flexibility, run genuinely complex multi-cloud environments, and have the DevOps expertise to operate it well.
 
@@ -137,17 +137,17 @@ Cloud-native managers trade portability for tight integration with one provider'
 
 ### AWS Secrets Manager
 
-[AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/) integrates natively with more than 50 AWS services, with automatic rotation built in for RDS, Aurora, and several other databases. The newest addition is **Managed External Secrets (MES)**, launched November 2025, which extends AWS's zero-code rotation model to third-party SaaS credentials rather than just AWS-native ones. At launch it covered Salesforce, BigID, and Snowflake; AWS has been adding partners through 2026, including Datadog, Jenkins/SonarQube integrations, and further SaaS providers, so check the [MES partner list](https://aws.amazon.com/about-aws/whats-new/2025/11/aws-secrets-manager-managed-external-secrets/) for your specific vendor before assuming coverage. Pricing is unchanged: $0.40 per secret per month plus $0.05 per 10,000 API calls.
+[AWS Secrets Manager](/topics/secrets-and-security/what-is-aws-secrets-manager/) integrates natively with more than 50 AWS services, with automatic rotation built in for RDS, Aurora, and several other databases. The newest addition is **Managed External Secrets (MES)**, launched November 2025, which extends AWS's zero-code rotation model to third-party SaaS credentials rather than just AWS-native ones. At launch it covered Salesforce, BigID, and Snowflake; AWS has been adding partners through 2026, including Datadog, Jenkins/SonarQube integrations, and further SaaS providers, so check the [MES partner list](https://aws.amazon.com/about-aws/whats-new/2025/11/aws-secrets-manager-managed-external-secrets/) for your specific vendor before assuming coverage. Pricing is unchanged: $0.40 per secret per month plus $0.05 per 10,000 API calls.
 
 AWS Secrets Manager is the default choice for [AWS-native organizations](/docs/integrations/clouds/aws/) that want rotation handled for them rather than built by hand.
 
 ### Azure Key Vault
 
-[Azure Key Vault](/what-is/what-is-azure-key-vault/) manages secrets, keys, and certificates with Azure Active Directory-based access control and certificate lifecycle management with automatic renewal. Its cryptographic validation has moved forward: Premium tier and Managed HSM now run on **FIPS 140-3 Level 3** validated hardware, a step up from the FIPS 140-2 Level 2 figure still floating around in older comparisons. Standard tier pricing runs on a per-10,000-operations basis; confirm the current rate directly against [Azure's pricing page](https://azure.microsoft.com/pricing/details/key-vault/) since Microsoft revises these more often than the marketing pages update. Azure Key Vault is the natural fit for [Azure-centric organizations](/docs/integrations/clouds/azure/) and government contractors who need FIPS-validated HSMs without standing up their own.
+[Azure Key Vault](/topics/secrets-and-security/what-is-azure-key-vault/) manages secrets, keys, and certificates with Azure Active Directory-based access control and certificate lifecycle management with automatic renewal. Its cryptographic validation has moved forward: Premium tier and Managed HSM now run on **FIPS 140-3 Level 3** validated hardware, a step up from the FIPS 140-2 Level 2 figure still floating around in older comparisons. Standard tier pricing runs on a per-10,000-operations basis; confirm the current rate directly against [Azure's pricing page](https://azure.microsoft.com/pricing/details/key-vault/) since Microsoft revises these more often than the marketing pages update. Azure Key Vault is the natural fit for [Azure-centric organizations](/docs/integrations/clouds/azure/) and government contractors who need FIPS-validated HSMs without standing up their own.
 
 ### Google Secret Manager
 
-[Google Secret Manager](/what-is/what-is-google-cloud-secret-manager/) is built for high-volume, globally distributed workloads, with automatic replication across GCP regions and IAM-based, condition-aware permissions. One thing hasn't changed: Secret Manager still has no built-in rotation *execution*. Its "rotation" feature only fires a Pub/Sub notification on schedule; you still have to write the Cloud Function (or equivalent) that actually rotates the credential and no dynamic secrets generation exists at all. Pricing runs about $0.06 per secret-version per month plus $0.03 per 10,000 access operations after a small free tier. It's the right pick for [GCP-native teams](/docs/integrations/clouds/gcp/) prioritizing scale and low latency who are comfortable owning their own rotation logic.
+[Google Secret Manager](/topics/secrets-and-security/what-is-google-cloud-secret-manager/) is built for high-volume, globally distributed workloads, with automatic replication across GCP regions and IAM-based, condition-aware permissions. One thing hasn't changed: Secret Manager still has no built-in rotation *execution*. Its "rotation" feature only fires a Pub/Sub notification on schedule; you still have to write the Cloud Function (or equivalent) that actually rotates the credential and no dynamic secrets generation exists at all. Pricing runs about $0.06 per secret-version per month plus $0.03 per 10,000 access operations after a small free tier. It's the right pick for [GCP-native teams](/docs/integrations/clouds/gcp/) prioritizing scale and low latency who are comfortable owning their own rotation logic.
 
 ## Developer-focused tools
 
@@ -225,7 +225,7 @@ AWS Secrets Manager is a managed, AWS-only service with native rotation for AWS 
 
 ### Is base64 encoding in Kubernetes Secrets actually secure?
 
-No. Base64 is an encoding, not encryption, and anyone with read access to etcd or the Kubernetes API can decode a [Kubernetes Secret](/what-is/what-are-kubernetes-secrets/) trivially. Kubernetes Secrets need encryption at rest enabled on etcd plus an external tool — Sealed Secrets, SOPS, or External Secrets Operator pulling from a real vault — to be meaningfully protected.
+No. Base64 is an encoding, not encryption, and anyone with read access to etcd or the Kubernetes API can decode a [Kubernetes Secret](/topics/secrets-and-security/what-are-kubernetes-secrets/) trivially. Kubernetes Secrets need encryption at rest enabled on etcd plus an external tool — Sealed Secrets, SOPS, or External Secrets Operator pulling from a real vault — to be meaningfully protected.
 
 ### What are the best secrets management tools for a self-hosted, small team setup?
 
@@ -233,7 +233,7 @@ Passbolt, Bitwarden Secrets Manager, and Infisical's self-hosted open-source edi
 
 ### What's the best way to manage secrets in GitHub Actions?
 
-Use [GitHub's native encrypted repository or organization secrets](/what-is/what-is-a-github-action-secret/) for simple cases, and OIDC federation to your cloud provider (AWS, Azure, GCP) instead of long-lived cloud credentials wherever possible. For larger organizations already running Vault, Pulumi ESC, or Doppler, pull secrets into the workflow at runtime through that platform's GitHub Action rather than duplicating them into GitHub's own secret store.
+Use [GitHub's native encrypted repository or organization secrets](/topics/secrets-and-security/what-is-a-github-action-secret/) for simple cases, and OIDC federation to your cloud provider (AWS, Azure, GCP) instead of long-lived cloud credentials wherever possible. For larger organizations already running Vault, Pulumi ESC, or Doppler, pull secrets into the workflow at runtime through that platform's GitHub Action rather than duplicating them into GitHub's own secret store.
 
 ### How often should secrets actually be rotated?
 
@@ -263,7 +263,7 @@ Yes, and most organizations of any size end up doing exactly that: a cloud-nativ
 
 Secrets management has moved from simple storage to orchestration, and the practical test for any tool on this list is whether it reduces the number of places a credential can leak from. Start with the decision framework above rather than the feature list: a single-cloud team gains little from Vault's flexibility, and a multi-cloud team will eventually regret standardizing on a single provider's native tool.
 
-Whatever you land on, prioritize dynamic and short-lived credentials over static ones wherever your tooling supports it, keep AI agents on the same narrow, auditable access as any other non-human identity, and treat secrets management as infrastructure orchestration rather than a single point product. [Pulumi ESC](/docs/esc/) is built for exactly that orchestration layer — pulling from AWS Secrets Manager, Azure Key Vault, Vault, or whatever you already run, and adding [configuration-as-code](/what-is/what-is-infrastructure-as-code/) and dynamic credentials on top without asking you to migrate away from anything first.
+Whatever you land on, prioritize dynamic and short-lived credentials over static ones wherever your tooling supports it, keep AI agents on the same narrow, auditable access as any other non-human identity, and treat secrets management as infrastructure orchestration rather than a single point product. [Pulumi ESC](/docs/esc/) is built for exactly that orchestration layer — pulling from AWS Secrets Manager, Azure Key Vault, Vault, or whatever you already run, and adding [configuration-as-code](/topics/infrastructure-as-code/) and dynamic credentials on top without asking you to migrate away from anything first.
 
 ---
 

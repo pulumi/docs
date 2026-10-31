@@ -50,7 +50,7 @@ There are quite a few [listicles](https://en.wikipedia.org/wiki/Listicle) out th
 
 Pulumi has a broad surface area of [products and features](https://www.pulumi.com/product/) that address these needs. Designed with integration in mind from the beginning, our tools orchestrate well, presenting a smooth and streamlined workflow for both operations teams and developer teams.
 
-We have an idea of how you can use all the Pulumi products together to deliver a comprehensive internal platform for security, infrastructure management, and deployments. Call it an [internal platform for developer platform engineers](https://www.pulumi.com/what-is/what-is-platform-engineering/) (IPfDPE), if you want. We call it the realization of a vision we've been working hard to build for many years.
+We have an idea of how you can use all the Pulumi products together to deliver a comprehensive internal platform for security, infrastructure management, and deployments. Call it an [internal platform for developer platform engineers](https://www.pulumi.com/topics/platform-engineering/) (IPfDPE), if you want. We call it the realization of a vision we've been working hard to build for many years.
 
 **Pulumi Patterns and Practices Platform (P3)** is a reference architecture that we will be describing, and providing code for, through this series of articles. We'll be diving deep into not just what you can do with our tools, but how to do it, and provide code for a reference implementation that you can use to jump start the process.
 

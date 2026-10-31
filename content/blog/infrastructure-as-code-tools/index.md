@@ -48,7 +48,7 @@ Ready to try one of these approaches yourself? [Get started with Pulumi for free
 
 ## What is Infrastructure as Code?
 
-[Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/) is an approach to automating the provisioning and management of infrastructure using software engineering principles, approaches, and tools. Rather than manually configuring servers, networks, and cloud resources through user interfaces or command-line tools, IaC enables you to define your entire infrastructure declaratively through code.
+[Infrastructure as Code (IaC)](/topics/infrastructure-as-code/) is an approach to automating the provisioning and management of infrastructure using software engineering principles, approaches, and tools. Rather than manually configuring servers, networks, and cloud resources through user interfaces or command-line tools, IaC enables you to define your entire infrastructure declaratively through code.
 
 This approach brings the same benefits that have revolutionized software development—version control, automated testing, code reviews, and CI/CD pipelines—to infrastructure management.
 
@@ -1506,7 +1506,7 @@ Template-based tools like Terraform and OpenTofu continue to serve teams effecti
 
 Evidence of Success Across Approaches:
 
-Organizations achieve significant improvements regardless of their chosen path—the key is selecting tools that align with team expertise and infrastructure requirements. Understanding [what DevOps is](/what-is/what-is-devops/) and [platform engineering concepts](/what-is/what-is-platform-engineering/) helps inform these decisions. Success stories span the entire ecosystem, from Terraform's widespread enterprise adoption to programming language approaches enabling dramatic productivity gains at companies like Unity, Snowflake, and Starburst.
+Organizations achieve significant improvements regardless of their chosen path—the key is selecting tools that align with team expertise and infrastructure requirements. Understanding [what DevOps is](/topics/platform-engineering/what-is-devops/) and [platform engineering concepts](/topics/platform-engineering/) helps inform these decisions. Success stories span the entire ecosystem, from Terraform's widespread enterprise adoption to programming language approaches enabling dramatic productivity gains at companies like Unity, Snowflake, and Starburst.
 
 Choosing Your Path:
 

@@ -101,7 +101,7 @@ Engineering teams that have good developer experiences are more productive and e
 
 {{< figure alt="Survey by GitHub on a typical experience for developers. Credit: GitHub" src="/blog/developer-experience-business-critical/github-study-what-developers-spend-themost-time-on-daily.png" width=60%  caption="Survey by GitHub on a typical experience for developers. Credit: GitHub" >}}
 
-Without the proper tools, progress may slow down the development process and hinder developer productivity. It becomes crucial to implement appropriate measures to avoid disruptions that could impact everyone involved, including the developers themselves. Although not often mentioned, [DevOps](https://www.pulumi.com/what-is/what-is-devops/) and [Platform Engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) also aim to enhance the developer experience and achieve the associated benefits.
+Without the proper tools, progress may slow down the development process and hinder developer productivity. It becomes crucial to implement appropriate measures to avoid disruptions that could impact everyone involved, including the developers themselves. Although not often mentioned, [DevOps](https://www.pulumi.com/topics/platform-engineering/what-is-devops/) and [Platform Engineering](https://www.pulumi.com/topics/platform-engineering/) also aim to enhance the developer experience and achieve the associated benefits.
 
 ## How does DevEx intersect with DevOps?
 

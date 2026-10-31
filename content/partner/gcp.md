@@ -11,7 +11,7 @@ sections:
     layout: split
     title: Cloud engineering on Google Cloud
     description: |
-      Pulumi's [infrastructure as code](/what-is/what-is-infrastructure-as-code/) SDK helps create, deploy, and manage Google Cloud Platform containers, serverless functions, and infrastructure using real programming languages.
+      Pulumi's [infrastructure as code](/topics/infrastructure-as-code/) SDK helps create, deploy, and manage Google Cloud Platform containers, serverless functions, and infrastructure using real programming languages.
     cta_primary_text: Get started
     cta_primary_link: /docs/iac/clouds/gcp/
     cta_secondary_text: Try Pulumi Cloud

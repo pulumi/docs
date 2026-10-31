@@ -61,7 +61,7 @@ The problem isn't whether you choose Backstage or Pulumi IDP.
 The real question is: **Will your platform treat infrastructure as a first-class concern, or as an afterthought?**
 
 According to Gartner, **80% of large enterprises will deploy [internal developer platforms](/docs/idp/concepts/) within the next two years**.
-But without a strong [infrastructure foundation](/what-is/what-is-infrastructure-as-code/), those platforms risk becoming expensive, hard-to-maintain bottlenecks instead of accelerators.
+But without a strong [infrastructure foundation](/topics/infrastructure-as-code/), those platforms risk becoming expensive, hard-to-maintain bottlenecks instead of accelerators.
 
 ## Why platform engineering efforts fail: Common mistakes
 
@@ -117,7 +117,7 @@ Originally built by Spotify, it excels at unifying tools, services, and document
 
 ## Pulumi IDP: the infrastructure-first platform engineering approach
 
-Pulumi IDP brings **[Infrastructure Platform Engineering](/what-is/what-is-platform-engineering/) (IPE)** to the forefront by embedding scalable, secure, cost-aware infrastructure into the platform from day one.
+Pulumi IDP brings **[Infrastructure Platform Engineering](/topics/platform-engineering/) (IPE)** to the forefront by embedding scalable, secure, cost-aware infrastructure into the platform from day one.
 
 ### Strengths
 

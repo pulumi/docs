@@ -190,7 +190,7 @@ With the right approach and mindset, your platform engineering efforts will beco
 
 There are many definitions for platform engineering, one of which is designing, building, and maintaining internal platforms that streamline software delivery by providing reusable tools, services, and workflows for developers. It focuses on scalability, efficiency, and self-service capabilities for internal teams.
 
-For a more in-depth explanation of real-world use cases, see [What is platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/).
+For a more in-depth explanation of real-world use cases, see [What is platform engineering](https://www.pulumi.com/topics/platform-engineering/).
 
 ### Who are the Platform Customers?
 
@@ -212,7 +212,7 @@ A platform feature that allows development teams to provision, configure, and ma
 
 The process of managing and provisioning infrastructure through code, allowing infrastructure to be versioned, automated, and managed consistently across environments.
 
-For a more in-depth explanation, see the [What is infrastructure as code? page](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/).
+For a more in-depth explanation, see the [What is infrastructure as code? page](https://www.pulumi.com/topics/infrastructure-as-code/).
 
 ### What is Policy as Code (PaC)?
 
