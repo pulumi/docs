@@ -2,7 +2,7 @@
 title: fn::open
 title_tag: fn::open
 h1: fn::open
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "The fn::open built-in function in Pulumi ESC calls a provider to fetch values from outside ESC, such as cloud credentials and secrets. See syntax and examples."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-open/
   - /docs/esc/reference/builtin-functions/fn-open/

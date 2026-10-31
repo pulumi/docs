@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud: RBAC Scopes - Stacks"
-meta_desc: Learn about the available RBAC scopes in Pulumi Cloud.
+meta_desc: "Reference list of Pulumi Cloud RBAC scopes you can assign to specific stacks or sets of stacks, with a description of each scope."
 title: "RBAC Scopes"
 h1: "RBAC Scopes"
 menu:
