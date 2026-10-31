@@ -4,8 +4,14 @@
 # /blog/series/<slug>/ (layouts/taxonomy/series.html), and all series are listed
 # at /blog/series/ (layouts/taxonomy/series.terms.html). A slug must NOT also be
 # used as a post tag; `make lint` enforces this.
+# Optional `intro` text appears in italics above the body of each article.
 # Ordered by most recent post date (newest first).
 series:
+  - slug: "faster-pulumi-deployments"
+    title: "Faster Pulumi deployments"
+    description: "Deploy reusable infrastructure across hundreds of AWS accounts with less repeated preparation. Build programs and dependencies centrally, package tools and plugins in images, and use caches while keeping each environment configurable through stack settings and Pulumi ESC."
+    intro: "This series follows a platform engineer deploying reusable Pulumi programs across hundreds of AWS accounts. Reusing builds, provider plugins, container images, and dependency caches can reduce runner costs and improve release repeatability and dependency supply-chain control. Stack configuration and Pulumi ESC keep each environment configurable. [Explore the series](/blog/series/faster-pulumi-deployments/) or use the [runnable companion](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments)."
+    prefix: "Faster Pulumi deployments, part "
   - slug: "neo-things"
     title: "Things You Can Do With Neo"
     description: "Real workflows platform teams are handing to Pulumi Neo: one-off deploys, incident triage, IAM audits, drift checks, runtime upgrades, and compliance fixes that run on a schedule."

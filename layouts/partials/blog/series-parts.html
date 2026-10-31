@@ -1,0 +1,5 @@
+{{- $parts := (where site.RegularPages "Params.series" .).ByDate -}}
+{{- if hugo.IsProduction -}}
+    {{- $parts = where $parts "Date" "lt" now -}}
+{{- end -}}
+{{- return $parts -}}

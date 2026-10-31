@@ -10,7 +10,7 @@
 {{- $series := .series -}}
 {{- $page := .page -}}
 {{- $slug := $series.slug -}}
-{{- $parts := (where (where site.RegularPages "Params.series" $slug) "Date" "lt" now).ByDate -}}
+{{- $parts := partial "blog/series-parts.html" $slug -}}
 {{- $count := len $parts -}}
 
 {{ partial "blog/header.html" (dict "title" "Series" "url" "/blog/series/" "context" $page "heading" false) }}
