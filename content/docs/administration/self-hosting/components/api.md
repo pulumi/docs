@@ -231,6 +231,8 @@ Only required if using GitLab as the backing identity provider for your organiza
 | PULUMI_DATABASE_USER_PASSWORD | Password of the database user Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                 |
 | PULUMI_CORS_ALLOWED_ORIGINS   | Comma-separated list of browser origins allowed to call the API cross-origin, each written as `<scheme>://<host>[:<port>]` with no path and no default port (`https://pulumiconsole.acmecorp.com`, not `https://pulumiconsole.acmecorp.com:443`). Two keywords are accepted: `*` allows every origin, and `localhost` allows any `http` or `https` origin on a loopback host regardless of port. Default is `*`, which will answer every cross-origin request. Set it to the origin of your Console (the `PULUMI_CONSOLE_DOMAIN` value with its scheme) to reject other sites' browser requests; add further entries only for other web apps you run that call the API from a browser. Requests that carry no `Origin` header, such as the `pulumi` CLI and server-to-server callers, are unaffected. Each rejected request is logged as `CORS origin mismatch` and counted by the `cors.origin_mismatch` metric. |
 | PULUMI_CORS_ENFORCE           | When `false`, requests whose `Origin` is not in `PULUMI_CORS_ALLOWED_ORIGINS` are still logged and counted but are answered as if the list were `*`. Use it to audit a candidate allowlist without affecting users, then unset it (or set `true`, the default) to enforce. |
+| PULUMI_TRUSTED_PROXY_IP_RANGES | Comma-separated CIDR ranges of the proxies and load balancers in front of the API. Defaults to the private, loopback, and carrier-grade NAT ranges. See [Detecting Client IPs](#detecting-client-ips). |
+| PULUMI_REAL_IP_HEADER         | Name of a request header, set by a CDN or proxy, that carries the client IP, such as `CloudFront-Viewer-Address`. Unset by default. See [Detecting Client IPs](#detecting-client-ips). |
 | PULUMI_DISABLE_EMAIL_LOGIN    | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/components/console#email-identity) for the Console.   |
 | PULUMI_DISABLE_EMAIL_SIGNUP   | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/components/console#email-identity) for the Console. |
 | PULUMI_DISABLE_SSRF_PROTECTION | Comma-separated list of features whose SSRF protection is switched off: `ESC`, `AGENTS_BYOK`, `OIDC_ISSUER`, `VCS`, `WEBHOOKS`. Unset by default, which keeps the protection on for every feature. See [SSRF protection](#ssrf-protection). |
@@ -239,6 +241,40 @@ Only required if using GitLab as the backing identity provider for your organiza
 | RECAPTCHA_SECRET_KEY          | Used for password reset requests by users. [Create a Cloudflare Turnstile Widget](https://www.cloudflare.com/application-services/products/turnstile/) to generate the `Secret Key`. See also [Console Component](/docs/administration/self-hosting/components/console#environment-variables-for-identities).                                                                                          |
 | SAML_CERTIFICATE_PUBLIC_KEY   | Public key used by the IdP to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY](/docs/administration/self-hosting/saml-sso/).                                                                                |
 | SAML_CERTIFICATE_PRIVATE_KEY  | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY](/docs/administration/self-hosting/saml-sso/).                                                                                       |
+
+## Detecting Client IPs
+
+Pulumi Cloud records the IP address of the client behind a request, for example in audit logs. When the API service sits behind a proxy or load balancer, the address of the connection is the proxy's, so the service reads the client's address from request headers instead.
+
+Two settings control how the service finds that address. If a CDN or proxy in front of the API already puts the client's address in a header of its own, point the service at that header and it skips `X-Forwarded-For` parsing altogether. Otherwise, the service parses `X-Forwarded-For`, and you tell it which proxies to trust.
+
+### Real IP header
+
+Set `PULUMI_REAL_IP_HEADER` when a CDN or proxy puts the client's address in a header of its own, such as `CloudFront-Viewer-Address`, `CF-Connecting-IP`, or `X-Real-IP`. When that header is present and holds a valid IP, the service uses it and doesn't parse `X-Forwarded-For` at all. If the header is absent or doesn't hold a valid IP, the service falls back to `X-Forwarded-For`. A trailing port, as in `CloudFront-Viewer-Address`, is stripped.
+
+```bash
+PULUMI_REAL_IP_HEADER=CloudFront-Viewer-Address
+```
+
+Set it only if that CDN or proxy is the sole way to reach the API and replaces any value a client sends for the header. Otherwise clients can set the header themselves and forge their recorded address.
+
+The API service fails to start if the value is `X-Forwarded-For` or `Forwarded`, which are handled separately.
+
+### Trusted proxy ranges
+
+Without a real IP header, the service reads the `X-Forwarded-For` header from right to left, skipping addresses that belong to your trusted proxies. The first address outside the trusted ranges is the client. A client can add entries of its own to the left of the header, but it can't get past the entries your proxies append on the right, so the recorded address can't be forged this way. If every address in the header is trusted and the connection itself is trusted too, as in a deployment that sits entirely on a private network, the service records the leftmost address in the header. If the header is missing, an entry in it isn't a valid IP, or the connection isn't trusted, the service uses the address of the connection itself.
+
+By default, all internal ranges are trusted, and a trusted host can choose the address recorded for its own requests by sending an `X-Forwarded-For` header. You may need to configure this further if you have load balancers in public address spaces, or if you want to prevent some internal clients from spoofing headers.
+
+Set `PULUMI_TRUSTED_PROXY_IP_RANGES` when a proxy or load balancer in front of the API connects from a public or otherwise non-default address. Without it, the service takes that proxy's address for the client's.
+
+The value is a comma-separated list of CIDR ranges. Write a single host with a `/32` suffix (`192.168.1.1/32`); a bare address is rejected. Your list replaces the defaults rather than adding to them, so include the private ranges your other proxies connect from. The defaults are `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`, loopback (`127.0.0.0/8`), carrier-grade NAT (`100.64.0.0/10`), and the IPv6 equivalents `fc00::/7`, `fe80::/10`, and `::1/128`.
+
+```bash
+PULUMI_TRUSTED_PROXY_IP_RANGES=203.0.113.0/24,10.0.0.0/8
+```
+
+The API service fails to start if an entry is invalid or the list contains no ranges.
 
 ## SSRF protection
 
