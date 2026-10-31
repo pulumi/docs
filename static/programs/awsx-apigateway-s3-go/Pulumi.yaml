@@ -1,3 +1,0 @@
-name: awsx-apigateway-s3-go
-runtime: go
-description: An example that uses API Gateway to serve static content from Amazon S3.

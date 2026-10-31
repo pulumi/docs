@@ -1,3 +1,0 @@
-name: awsx-apigateway-custom-domain-go
-runtime: go
-description: An example that deploys an API Gateway REST API with a custom domain from Route53.

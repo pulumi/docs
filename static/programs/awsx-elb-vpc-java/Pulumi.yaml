@@ -1,3 +1,0 @@
-name: awsx-elb-vpc-java
-runtime: java
-description: An example that deploys an ApplicationLoadBalancer in a VPC.
