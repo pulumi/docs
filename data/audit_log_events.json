@@ -1015,6 +1015,46 @@
       "authenticationFailure": false,
       "category": "organization",
       "deprecated": false,
+      "description": "An organization claimed an email domain.",
+      "displayName": "Email Domain Claimed",
+      "event": "org-domain-claimed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "The sign-in policy of a claimed email domain changed.",
+      "displayName": "Email Domain Policy Changed",
+      "event": "org-domain-policy-changed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "An organization released a claimed email domain.",
+      "displayName": "Email Domain Removed",
+      "event": "org-domain-removed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "An organization proved control of a claimed email domain.",
+      "displayName": "Email Domain Verified",
+      "event": "org-domain-verified",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
       "description": "An expired-trial organization was downgraded to the Free plan. The downgrading admin became the owner and all other members were suspended.",
       "displayName": "Organization Downgraded To Free",
       "event": "org-downgraded-to-free",
