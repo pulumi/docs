@@ -121,7 +121,7 @@ class PulumiServiceWebhook: Stack
             DisplayName = "example webhook",
             OrganizationName = "example",
             PayloadUrl = "https://example.com/webhook"
-        })
+        });
     }
 }
 ```
@@ -192,7 +192,7 @@ The following table describes the various event filters available and the contex
 | `destroy_succeeded`               | `stack_update`              | Organization or Stack      | When a stack `destroy` succeeds.                 |
 | `destroy_failed`                  | `stack_update`              | Organization or Stack      | When a stack `destroy` fails.                    |
 | `refresh_succeeded`               | `stack_update`              | Organization or Stack      | When a stack `refresh` succeeds.                 |
-| `refresh failed`                  | `stack_update`              | Organization or Stack      | When a stack `refresh` fails.                    |
+| `refresh_failed`                  | `stack_update`              | Organization or Stack      | When a stack `refresh` fails.                    |
 | `deployment_queued`               | `deployment`                | Organization or Stack      | When a deployment is queued.                     |
 | `deployment_started`              | `deployment`                | Organization or Stack      | When a deployment starts running.                |
 | `deployment_succeeded`            | `deployment`                | Organization or Stack      | When a deployment succeeds.                      |
@@ -426,7 +426,7 @@ const sharedSecret = ...
 const payload = req.body.toString();
 
 var hmacAlg = crypto.createHmac('sha256', sharedSecret);
-var expectedSignature = hmac.update(payloadBody).digest('hex');
+var expectedSignature = hmacAlg.update(payload).digest('hex');
 ```
 
 {{% /choosable %}}
