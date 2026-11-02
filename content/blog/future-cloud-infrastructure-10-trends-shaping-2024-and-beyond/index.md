@@ -69,7 +69,7 @@ According to McKinsey & Company's "[In search of cloud value](https://www.mckins
 - **Asia leads in projected cloud value**, followed by the US and Europe.
 - High-ROI organizations excel by aligning cloud strategy with business priorities, building strong cloud foundations, and using modern operating models.
 
-Teams succeeding in this transition increasingly use infrastructure as code, automation, and unified governance frameworks like [Pulumi Insights + Policies](https://www.pulumi.com/product/insights-governance/) to operationalize this value.
+Teams succeeding in this transition increasingly use infrastructure as code, automation, and unified governance frameworks like [Pulumi Insights + Policies](https://www.pulumi.com/product/discovery-governance/) to operationalize this value.
 
 ## 2. Hyperscalers Accelerate AI-Driven Cloud Expansion
 
@@ -102,7 +102,7 @@ Modern cloud teams use:
 - **Reusable components and internal platforms** to define scalable architecture patterns and accelerate delivery across Kubernetes, AI/ML pipelines, and hybrid environments
 - **Policy-driven guardrails** to maintain cost, security, and compliance across environments, supporting cloud governance automation and modern cloud cost governance
 
-Pulumi enables all three through its [multi-cloud IaC model](https://www.pulumi.com/docs/iac/), [Pulumi Policies](https://www.pulumi.com/product/insights-governance#video), and [internal developer platform capabilities](https://www.pulumi.com/product/internal-developer-platforms/#video).
+Pulumi enables all three through its [multi-cloud IaC model](https://www.pulumi.com/docs/iac/), [Pulumi Policies](https://www.pulumi.com/product/discovery-governance/#video), and [internal developer platform capabilities](https://www.pulumi.com/product/internal-developer-platforms/#video).
 
 ## 4. Enterprises Rebuild Their Cloud Foundations to Operationalize AI
 
@@ -126,7 +126,7 @@ To support this shift, Pulumi's perspective on [Superintelligence Infrastructure
 
 - [Pulumi IaC](https://www.pulumi.com/docs/iac/) for standardized AI infrastructure
 - [Pulumi ESC](https://www.pulumi.com/product/secrets-management/) to manage all secrets and configuration at scale
-- [Pulumi Insights](https://www.pulumi.com/product/insights-governance/) for visibility and misconfiguration analysis
+- [Pulumi Insights](https://www.pulumi.com/product/discovery-governance/) for visibility and misconfiguration analysis
 - [Pulumi Policies](https://www.pulumi.com/docs/discovery-governance/concepts/policy-as-code/) for AI-specific guardrails in code, cost detection, and to provide automated compliance protections
 
 ## 5. IaC Drives Scalable Cloud, Multi-Cloud, and AI Operations
@@ -149,7 +149,7 @@ As organizations scale both traditional cloud workloads and AI-driven systems, I
 
 As AI becomes embedded across cloud-native systems, DevSecOps is entering a new era. [Gartner predicts](https://www.gartner.com/en/newsroom/press-releases/2026-03-17-gartner-predicts-ai-applications-will-drive-50-percent-of-cybersecurity-incident-response-efforts-by-2028) that by **2028, over 50% of enterprises will use AI security platforms** to secure third-party AI service usage and protect custom-built AI applications, and separately [forecasts that total spending on securing AI will reach almost $4.8 billion in 2027](https://www.gartner.com/en/newsroom/press-releases/2026-08-26-gartner-forecasts-the-market-for-securing-ai-will-reach-almost-5-billion-in-2027), a 68.7% increase over 2026. Below are the 3 key predictions for the future of DevSecOps:
 
-1. **AI-driven security automation**: Teams will increasingly rely on AI to detect threats, enforce policies, and generate secure infrastructure patches. See Pulumi’s capabilities in [AI-powered remediation](https://www.pulumi.com/product/insights-governance/#video).
+1. **AI-driven security automation**: Teams will increasingly rely on AI to detect threats, enforce policies, and generate secure infrastructure patches. See Pulumi’s capabilities in [AI-powered remediation](https://www.pulumi.com/product/discovery-governance/#video).
 
 2. **More focus on secrets management**: With AI systems accessing more sensitive data, secure secret storage will be essential. [Pulumi ESC](https://www.pulumi.com/product/secrets-management/) helps teams centralize and govern credentials, keys, and tokens safely.
 

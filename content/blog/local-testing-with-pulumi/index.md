@@ -12,7 +12,7 @@ tags:
 category: tutorials
 ---
 
-If you've been following along with our [IaC Recommended Practices series](https://www.pulumi.com/blog/iac-recommended-practices-code-organization-and-stacks/), then you're already familiar with Zephyr Archaeotech Emporium, the fictional company at the center of the series. Today, you'll get an inside look at how Zephyr starts using Pulumi for locally testing the application code for their online store and accelerating the inner dev loop for their development team.
+If you've been following along with our [IaC Recommended Practices series](https://www.pulumi.com/blog/iac-best-practices-understanding-code-organization-stacks/), then you're already familiar with Zephyr Archaeotech Emporium, the fictional company at the center of the series. Today, you'll get an inside look at how Zephyr starts using Pulumi for locally testing the application code for their online store and accelerating the inner dev loop for their development team.
 
 <!--more-->
 

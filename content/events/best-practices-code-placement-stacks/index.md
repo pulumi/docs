@@ -33,7 +33,7 @@ location: virtual
 description: |
     The first in a series of videos, we'll use a fictional company named Zephyr to explore common questions that users ask when working with Pulumi. Zephyr wants to increase development velocity and flexibly scale different aspects of its online store. The demo will show deploying Zephyr's application, their online store.
 
-    ► Read the related [blog article](https://www.pulumi.com/blog/iac-recommended-practices-code-organization-and-stacks/)
+    ► Read the related [blog article](https://www.pulumi.com/blog/iac-best-practices-understanding-code-organization-stacks/)
 
     ✅ [Get Started with Pulumi](https://pulumip.us/Get-Started)
 

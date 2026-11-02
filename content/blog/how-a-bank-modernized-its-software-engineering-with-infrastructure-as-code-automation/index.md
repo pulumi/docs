@@ -93,6 +93,6 @@ Pulumi also gave the bank total confidence in being able to rapidly recover its 
 
 The DevOps and development teams at Washington Trust Bank rely on Pulumi as a key tool in their cloud modernization, while maintaining high security and quality standards. Pulumi played a vital role in streamlining their cloud infrastructure management, enabling their developers to be more productive, and improving the security and reliability of its cloud infrastructure.
 
-[Sign up for a free account](https://app.pulumi.com/signup) to try deploying infrastructure on any cloud, or [register for an upcoming workshop](https://www.pulumi.com/resources/#upcoming) to learn more about how Pulumi can help you ship cloud infrastructure faster and more safely.
+[Sign up for a free account](https://app.pulumi.com/signup) to try deploying infrastructure on any cloud, or [register for an upcoming workshop](https://www.pulumi.com/events/#upcoming) to learn more about how Pulumi can help you ship cloud infrastructure faster and more safely.
 
 [Go to more case studies](/customers/)

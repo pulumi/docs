@@ -168,7 +168,7 @@ As your platform matures, the ultimate goal is to empower your application teams
 When implementing self-service capabilities, keep the following platform engineering best practices in mind:
 
 - **Start small and iterate**: Don't try to boil the ocean. Begin with a few well-defined use cases, such as CI/CD pipelines or database provisioning, and gradually expand the self-service offerings as your platform team gains experience and confidence.
-- **[Focus on user experience](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: Ensure that the self-service interfaces, whether web-based or command-line, are intuitive and easy to use. Gather feedback from application teams and continuously refine the user experience.
+- **[Focus on user experience](https://www.pulumi.com/blog/developer-experience-business-critical/)**: Ensure that the self-service interfaces, whether web-based or command-line, are intuitive and easy to use. Gather feedback from application teams and continuously refine the user experience.
 - **Maintain stability and reliability**: Even with self-service, the platform team is responsible for ensuring the underlying infrastructure and services remain stable and reliable. Implement robust monitoring, alerting, and incident response processes to maintain platform health.
 - **Embrace a product mindset**: Treat the [platform as a product](https://www.pulumi.com/blog/platform-engineering-cncf-maturity-model/#platforms-as-products-driving-success), with the application teams as your customers. Continuously gather feedback, measure key performance indicators, and iterate on the platform's capabilities to meet evolving needs.
 
@@ -222,4 +222,4 @@ Policy as Code (PaC) defines security, compliance, and [operational policies](/d
 
 The overall experience developers have with using the platform, tools, and workflows provided by platform engineering. Optimizing DevEx ensures that developers can work more efficiently and effectively.
 
-For a more in-depth explanation, read [Beyond Productivity: Developer Experience is Business Critical.](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)
+For a more in-depth explanation, read [Beyond Productivity: Developer Experience is Business Critical.](https://www.pulumi.com/blog/developer-experience-business-critical/)
