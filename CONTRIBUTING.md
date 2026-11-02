@@ -14,6 +14,14 @@ When you're ready, use the **Ready for review** button on the PR page. Triage ru
 
 If your change is genuinely trivial (a typo, a one-line fix), opening directly as ready is fine — the pipeline will short-circuit on the `review:trivial` label.
 
+## Inactive pull requests close after 30 days
+
+Any open PR, drafts included, closes automatically after 30 days without activity. Activity means a commit, or a comment, review, or reopen from a person; labels and bot comments don't count. A heads-up comment lands a week before the close, and nothing is lost when it happens: the branch stays put and reopening is one click.
+
+If a PR is meant to sit for a while (it's waiting on a release, say), add the `long-running` label. That stretches the window to 90 days without activity. It's a longer grace period, not an exemption, so a labeled PR still closes if nobody touches it for three months. If yours was closed and you meant to keep it, reopen it and add the label.
+
+The policy lives in the `stale_prs:` block of `.github/review-routing.yml`, and `.github/workflows/stale-pr-sweep.yml` enforces it.
+
 ## AI-assisted contributions
 
 The repository runs a tiered review pipeline on every PR. AI-assisted contributors should know how it works so they can collaborate with it instead of fighting it.

@@ -2,8 +2,9 @@
 
 Scripts here implement the v3 review surface: S3-resident evidence, the two
 pinned comments (author card + reviewer brief), the Sentinel merge gate, lane
-routing, and the SLA sweep. Everything in this directory is deterministic —
-no model calls. Model output enters only as validated artifacts.
+routing, and the SLA and stale-PR sweeps. Everything in this directory is
+deterministic — no model calls. Model output enters only as validated
+artifacts.
 
 Covered by `make test-review-pipeline` (pytest + standalone `test_*.py`
 harnesses + `--self-test` flags), same contract as `scripts/content-review/`
@@ -289,6 +290,25 @@ keyed by clock epoch) and `pr-review/runs/<date>/<ts>.json` (immutable run
 records the weekly digest reduces). **Before flipping the switch, create the
 `review:author-stalled` label** (`.github/labels-pr-review.md` has the
 `gh label create` line) — the sweep applies it on the first author warn.
+
+**Stale PR sweep** (`stale-pr-sweep.py`, `stale-pr-sweep.yml`, daily): the
+blunt backstop under the SLA sweep. Every open PR (drafts, bot PRs, and PRs
+the review never ran on included) closes after `stale_prs.close_days` (30)
+without movement, or `extended_close_days` (90) while it wears
+`extended_label` (`long-running`). A heads-up comment lands `notice_days` (7)
+before, and a close always waits until that heads-up is that old, so the
+first run against a backlog only warns. Movement is any commit or
+force-push, or a comment, review, reopen, draft/ready toggle, or retitle by
+a human; bots (the routing config's `bots:`, `type: Bot`, `[bot]` logins),
+labels, and review requests never count. No state of its own: the heads-up
+comment carries `<!-- STALE_PR_SWEEP:warn close_days=N -->`, which is
+enough to answer "warned since it last moved, for this window" from the
+timeline alone. Its switch is `STALE_PR_SWEEP` (`'1'` on; a manual dispatch
+defaults to `dry_run` and writes the would-be actions to the step summary).
+**Before flipping it, create the `long-running` label** — the close comment
+tells people to apply it. It runs as pulumi-bot so its closes fire
+`pr-closed.yml` (cleanup and the review-outcome record), which is also why
+its comment copy must never contain a review command or `@claude`.
 
 One lane makes G4's evidence, and a second records it.
 `staging-deploy-auto.yml` dispatches a deploy for every same-repo PR on
