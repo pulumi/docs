@@ -48,7 +48,7 @@ Organization-level operations — billing, member management, audit logs, integr
 Organization-level access also covers **meta-permissions**: actions that can't be attached to an existing entity because the entity doesn't exist yet. Creating a stack (`stack:create`), a team (`team:create`), or a cloud account (`insights_account:create`) is governed at the organization level rather than per-entity — there's no specific stack, team, or account to grant access on until it's created.
 
 {{% notes type="info" %}}
-**Organization-level scopes vs. org-wide capability toggles**: Organization-level scopes (e.g. `stack:create`, `team:create`) are granted through a role's organization access level. These are separate from the toggles in the [permissions for tokens without a role](/docs/administration/concepts/access-tokens/#organization-wide-role-settings) (e.g. "Allow these tokens to create stacks"), which apply only to organization tokens without a role and to team tokens.
+**Organization-level scopes vs. org-wide capability toggles**: Organization-level scopes (e.g. `stack:create`, `team:create`) are granted through a role's organization access level. These are separate from the toggles in the [permissions for tokens without a role](/docs/administration/concepts/access-tokens/#organization-wide-role-settings) (e.g. "Allow these tokens to create stacks"), which apply only to organization tokens without a role.
 {{% /notes %}}
 
 ## Learn more
