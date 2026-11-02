@@ -35,7 +35,7 @@ For supported runtimes, the managed archive also includes provider plugins and p
 
 These managed caches are scoped to individual stacks. A new stack cannot reuse another stack's entry. For Go, the cache key uses `go.sum`, falling back to `go.mod`. A changed dependency file can select a new entry even when most dependencies remain unchanged.
 
-The [measurement lab](https://github.com/pulumi/workshops/tree/d05579c/faster-pulumi-deployments/labs/01-measure-and-cache) shows how to enable caching and verify restoration in deployment logs. Measure a source edit as well as an unchanged repeat. Otherwise, you cannot tell whether the cache helps the changes your team normally makes.
+The [measurement lab](https://github.com/pulumi/workshops/tree/c99c458/faster-pulumi-deployments/labs/01-measure-and-cache) shows how to enable caching and verify restoration in deployment logs. Measure a source edit as well as an unchanged repeat. Otherwise, you cannot tell whether the cache helps the changes your team normally makes.
 
 Go is the measured example here, not a recommendation to change languages. Managed caching also supports Node.js, Python, and .NET, but the cached contents differ. Package stores, installed environments, and compiled outputs avoid different kinds of work. Java currently lacks this managed cache support. The companion includes functional examples in TypeScript, Python, Go, C#, and Java; the Go timings do not establish their relative performance.
 
@@ -73,7 +73,7 @@ A compiled Go program contains its imported Go packages, including the Pulumi SD
 
 Some of these ship together in the standard Pulumi distribution, but they remain separate from your compiled program. Precompiling the program alone can leave the runner downloading providers or preparing other tools.
 
-A versioned release bundle or executor image can distribute those dependencies together. The [artifact lab](https://github.com/pulumi/workshops/tree/d05579c/faster-pulumi-deployments/labs/03-release-artifacts) packages a program with its required provider plugins. The [image lab](https://github.com/pulumi/workshops/tree/d05579c/faster-pulumi-deployments/labs/04-executor-images) prepares the execution environment inside an image. Skip automatic dependency installation only after the release supplies what that step would prepare.
+A versioned release bundle or executor image can distribute those dependencies together. The [artifact lab](https://github.com/pulumi/workshops/tree/c99c458/faster-pulumi-deployments/labs/03-release-artifacts) packages a program with its required provider plugins. The [image lab](https://github.com/pulumi/workshops/tree/c99c458/faster-pulumi-deployments/labs/04-executor-images) prepares the execution environment inside an image. Skip automatic dependency installation only after the release supplies what that step would prepare.
 
 Keep account-specific configuration and credentials outside the release. Stack configuration and Pulumi ESC can supply environment differences while every stack executes the same prepared program. Pin the image digest or artifact version, and record configuration revisions when you need to reproduce a deployment exactly.
 
@@ -83,7 +83,7 @@ That separation also supports release consistency. Promoting the executable you 
 
 The same distinction applies when you control the runners. On customer-managed Kubernetes runners, a volume mounted into job Pods can preserve Go or package-manager caches. Kubernetes nodes separately cache executor image layers. Replacing a job Pod can retain both kinds of reusable data, but replacing a node can lose its image cache.
 
-The [Kubernetes lab](https://github.com/pulumi/workshops/tree/d05579c/faster-pulumi-deployments/labs/05-kubernetes-cache) covers worker mounts and image-pull settings. A stable runner pool can reuse image layers across stacks. A nearby registry or pre-pulling can help distribution, but include their costs in your measurements.
+The [Kubernetes lab](https://github.com/pulumi/workshops/tree/c99c458/faster-pulumi-deployments/labs/05-kubernetes-cache) covers worker mounts and image-pull settings. A stable runner pool can reuse image layers across stacks. A nearby registry or pre-pulling can help distribution, but include their costs in your measurements.
 
 GitHub Actions has separate caches too. `actions/setup-go` can restore Go modules and build outputs, while BuildKit caching can reuse image-build work. Neither automatically populates a remote deployment runner's cache. Cache restoration, image construction, and image pulling are distinct operations.
 
@@ -91,6 +91,6 @@ GitHub Actions has separate caches too. `actions/setup-go` can restore Go module
 
 Start with caching where supported. Measure configuration-only changes, source edits, dependency updates, and first deployments to new stacks separately. Consider a prepared release when many deployments would otherwise repeat preparation, or when promoting a controlled execution environment is valuable in its own right.
 
-Keep queue time separate from job execution. If waiting dominates, dependency tuning addresses only part of the problem; the [rollout lab](https://github.com/pulumi/workshops/tree/d05579c/faster-pulumi-deployments/labs/06-rollout) covers triggers and concurrency.
+Keep queue time separate from job execution. If waiting dominates, dependency tuning addresses only part of the problem; the [rollout lab](https://github.com/pulumi/workshops/tree/c99c458/faster-pulumi-deployments/labs/06-rollout) covers triggers and concurrency.
 
-Use the [runnable companion](https://github.com/pulumi/workshops/tree/d05579c/faster-pulumi-deployments) to try these strategies in your existing language. The goal is to stop repeating preparation that your deployments can usefully share. Keep the simplest approach that delivers that benefit for your workload.
+Use the [runnable companion](https://github.com/pulumi/workshops/tree/c99c458/faster-pulumi-deployments) to try these strategies in your existing language. The goal is to stop repeating preparation that your deployments can usefully share. Keep the simplest approach that delivers that benefit for your workload.
