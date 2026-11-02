@@ -53,7 +53,7 @@ Organizations used to give members a configurable `Member` role. They moved to R
 
 ### Member (legacy) {#member-legacy}
 
-`Member (legacy)` is read-only. To move your organization to a built-in role, which any edition can do:
+You can't edit `Member (legacy)`. To move your organization to a built-in role, which any edition can do:
 
 1. Open `Member (legacy)` and compare it with the built-in role you want, usually `Builder`. Note what members can do today that the built-in role doesn't cover, such as changing stacks or environments that other people created.
 1. Give those permissions to the members who need them before you switch, for example through [teams](/docs/administration/concepts/rbac/teams) that own those stacks and environments.
