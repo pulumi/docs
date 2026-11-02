@@ -417,6 +417,29 @@ overrides:
 # is when it closes the PR as stale. Both are positive integers.
 #
 # -----------------------------------------------------------------------------
+# STALE PRS
+# -----------------------------------------------------------------------------
+# `stale_prs:` is the blunt backstop under all of the above, and it applies to
+# EVERY open PR -- drafts, bot PRs, and PRs the review never ran on included.
+# A PR with no movement in `close_days` gets closed by the stale-PR sweep
+# (`scripts/review-v3/stale-pr-sweep.py`, `.github/workflows/stale-pr-sweep.yml`).
+# A heads-up comment lands `notice_days` before that, and a close always waits
+# until that heads-up is at least `notice_days` old, so nobody is closed cold
+# (including the first time the sweep runs against a pile of old PRs).
+#
+# "Movement" is a commit or force-push, or a comment, review, reopen,
+# ready/draft toggle, or retitle by a human (not anything in `bots:`, not a
+# `[bot]` account). Labels, review requests, and bot comments -- the sweep's
+# own heads-up included -- don't count.
+#
+# `extended_label` is the one way to buy more time, and it is a bigger grace
+# period, not an exemption: a PR wearing it closes after
+# `extended_close_days` without movement instead. `extended_close_days` must
+# be greater than `close_days`; `notice_days` must be less than `close_days`.
+# Create the label before turning the sweep on (`.github/labels-pr-review.md`)
+# -- the close comment tells people to apply it.
+#
+# -----------------------------------------------------------------------------
 # WAIVE
 # -----------------------------------------------------------------------------
 # `waive:` names the label a maintainer applies to bypass the merge gate
@@ -537,6 +560,12 @@ sla:
   marketing: { business_days: 3, escalate_to: "cnunciato" }
 
 author_staleness: { warn_days: 14, close_days: 21 }
+
+stale_prs:
+  close_days: 30
+  notice_days: 7
+  extended_label: long-running
+  extended_close_days: 90
 
 waive: { label: "review:waived", log_prefix: "pr-review/waives/" }
 
