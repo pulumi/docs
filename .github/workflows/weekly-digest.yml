@@ -77,6 +77,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DIGEST_VARS: >-
             {"REVIEW_V3_SLA": "${{ vars.REVIEW_V3_SLA }}",
+             "STALE_PR_SWEEP": "${{ vars.STALE_PR_SWEEP }}",
              "REVIEW_V3_SENTINEL": "${{ vars.REVIEW_V3_SENTINEL }}",
              "CONTENT_REVIEW_COUNT": "${{ vars.CONTENT_REVIEW_COUNT }}",
              "GLOWUP_COUNT": "${{ vars.GLOWUP_COUNT }}",
