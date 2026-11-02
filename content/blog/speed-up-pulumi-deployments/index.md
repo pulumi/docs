@@ -1,9 +1,9 @@
 ---
-title: "Faster Pulumi deployments, part 1: Measure and cache"
-# TODO: Replace the series placeholder dates before publication.
+title: "Faster Pulumi deployments: Reuse preparation across environments"
+# TODO: Set the publication date before publication.
 date: 2099-01-01
 draft: true
-meta_desc: "Measure deployment setup time, enable Pulumi Deployments dependency caching, and compare first and repeated runs on separate stacks."
+meta_desc: "Choose between dependency caching and prepared Pulumi releases. Compare measured results, include build costs, and try runnable examples in five languages."
 feature_image:
 authors:
     - jonathan-davenport
@@ -11,8 +11,7 @@ tags:
     - pulumi-deployments
     - platform-engineering
     - esc
-category: tutorials
-series: faster-pulumi-deployments
+category: best-practices
 schema_type: auto
 social:
     twitter:
@@ -20,95 +19,80 @@ social:
     bluesky:
 ---
 
-Imagine you are a platform engineer responsible for infrastructure deployments across hundreds of AWS accounts. Your team has captured its infrastructure patterns in Pulumi components and template programs, with environment-specific values kept in stack configuration. Developers reuse those building blocks instead of designing and implementing the same infrastructure for every application. That investment is already saving development time and giving your organization a more consistent way to deploy infrastructure.
+If your platform team deploys reusable infrastructure across hundreds of accounts, preparation can become a significant part of the work. Each runner may download language dependencies, install provider plugins, and compile a program that another environment already uses. Reducing that repetition can save execution time and give you more control over the software deployed across those accounts.
 
-Now you want to improve the deployment process itself. Each environment may use the same program revision, yet its runner still downloads dependencies, installs provider plugins, and compiles code before managing any resources. Across hundreds of accounts, that repeated preparation consumes runner time and repeats dependency retrieval for code you have already built and tested.
+The useful question is where that reusable work should live. A cache can preserve dependencies and build outputs for later jobs. A prepared release can distribute the same executable environment across stacks. Both help, but a program change does not automatically make a prepared release the better choice.
 
 <!--more-->
 
-The goal is to make deployments faster and more repeatable while reducing runner costs and improving control over your dependency supply chain. A centralized build can establish which dependency versions belong to a release and produce artifacts that every environment reuses. With pinned versions and controlled publication, you can identify and verify what will execute instead of reconstructing the execution environment separately for every stack. Caching can reduce the preparation that remains, especially for programs that continue to install dependencies at deployment time.
+Tests with a small Go program illustrate the distinction. A source edit retained most cached build work. Updating one dependency caused a managed cache miss on every source stack. The right recommendation depended on what changed and how many deployments reused the release.
 
-This tutorial series develops that process with Pulumi Deployments and Pulumi ESC. It covers building programs or preparing dependencies in your existing language, packaging matching provider plugins, and distributing the release in a container image. Persistent caches offer another way to reduce preparation on customer-managed runners. Each stage builds on the previous one so you can measure whether the change improves your workload.
+## Start by reusing cached work
 
-The program remains configurable throughout. Whether the release contains JavaScript, Python dependencies, a Go executable, a .NET assembly, or a Java JAR, Pulumi supplies configuration when it executes. ESC can manage those values and credentials separately from the build, allowing the same tested artifact to serve different accounts and environments. Provider plugins remain separate executables and must match the SDK versions the program uses.
+Go keeps downloaded modules in `GOMODCACHE` and compiled package outputs in `GOCACHE`. When you edit application code, Go checks its build inputs and rebuilds affected packages. Unchanged dependencies can remain reusable. Running from source does not mean compiling everything again.
 
-The six parts follow this sequence:
+With dependency caching enabled on Pulumi-managed Deployments runners, Pulumi Cloud stores an archive of both caches. Later deployments restore that archive onto their runner. Go still decides which compiled outputs are valid; Pulumi Cloud preserves the files between jobs.
 
-1. **Measure before optimizing.** Establish a baseline and test dependency caching in this post.
-1. **[Build or prepare each program revision once](/blog/precompile-pulumi-go-programs/).** Reuse the prepared program across stacks while keeping configuration specific to each environment.
-1. **[Release the matching plugins with the program](/blog/version-pulumi-deployment-artifacts/).** Make the required versions explicit and remove redundant installation work.
-1. **[Package the executable release in a container image](/blog/prebuilt-pulumi-executor-images/).** Reuse image layers while keeping configuration outside the image.
-1. **[Persist caches on customer-managed Kubernetes runners](/blog/cache-pulumi-kubernetes-runners/).** Retain dependencies after job Pods exit, including for programs in other languages.
-1. **[Reduce unnecessary deployments and queue time](/blog/reduce-pulumi-rollout-time/).** Schedule the work you need and provide enough capacity to run it.
+For supported runtimes, the managed archive also includes provider plugins and policy packs.
 
-Each of these changes comes with a tradeoff. A dependency cache takes time to restore, an artifact takes time to download, and a custom image takes time to pull. Moving work out of the deployment only helps when the replacement costs less, or when enough deployments reuse the result to justify the preparation. For that reason, the series introduces one change at a time and compares it with the preceding version of the process.
+These managed caches are scoped to individual stacks. A new stack cannot reuse another stack's entry. For Go, the cache key uses `go.sum`, falling back to `go.mod`. A changed dependency file can select a new entry even when most dependencies remain unchanged.
 
-## Use a representative program and control the comparison
+The [measurement lab](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/labs/01-measure-and-cache) shows how to enable caching and verify restoration in deployment logs. Measure a source edit as well as an unchanged repeat. Otherwise, you cannot tell whether the cache helps the changes your team normally makes.
 
-Use a project that already deploys successfully through [Pulumi Deployments](/docs/deployments/get-started/), or start with a language track in the [runnable companion](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments). It contains equivalent TypeScript, Python, Go, C#, and Java programs, complete build recipes, and numbered labs. The articles explain the decisions; the companion supplies the files you execute.
+Go is the measured example here, not a recommendation to change languages. Managed caching also supports Node.js, Python, and .NET, but the cached contents differ. Package stores, installed environments, and compiled outputs avoid different kinds of work. Java currently lacks this managed cache support. The companion includes functional examples in TypeScript, Python, Go, C#, and Java; the Go timings do not establish their relative performance.
 
-Choose two disposable stacks in the same Pulumi Cloud project, running the same source revision with different stack configuration. This series calls them `bench-a` and `bench-b`; use your own names in commands. The companion's Random-provider example checks the mechanics without provisioning AWS resources, but its timings do not represent a larger infrastructure program.
+## Build once when deployments can share the preparation
 
-Use a program that represents your actual infrastructure rather than choosing the smallest example that can complete a deployment. An output-only program is useful for demonstrating configuration behavior, but it leaves out the provider dependencies that may account for much of your setup time. A test is useful only if the work it measures resembles the work you want to improve.
+A cache helps where its contents are available and useful. A prepared release lets you reuse work across stacks that would otherwise prepare the program independently. That can matter when creating new environments or deploying a dependency update across many existing environments.
 
-For this first part, use Pulumi-managed runners. If your organization requires customer-managed runners, follow the measurement method here, then use the cache implementation in [part 5](/blog/cache-pulumi-kubernetes-runners/). The managed cache setting has no effect on customer-managed runner pools.
+Include the release build and publication in that decision. Moving work into another job does not remove its cost. Compare one release's preparation plus its deployments against preparing the program separately for every deployment. Greater reuse can spread the release cost across more environments.
 
-The comparison also depends on controlling the inputs. Record the program commit, Pulumi CLI version, language toolchain, and executor image. Keep the committed dependency resolution files unchanged during the comparison, along with the runner configuration and cloud credentials. If several inputs change together, a shorter deployment leaves you uncertain about which change helped.
+The [changed-program experiment](https://github.com/pulumi/workshops/tree/d05579c/faster-pulumi-deployments/benchmarks/results/2026-10-30-changes) tested three source stacks and three image stacks. Each received the same baseline, source edit, and dependency update. The source edit changed an exported value without changing resource inputs or dependency files. The dependency update changed one imported library.
 
-Later parts use S3 for artifacts. If you plan to follow that path, include the AWS CLI in your execution tools before collecting this baseline. Otherwise, measure that image change separately when you reach the artifact-distribution lab.
+All three source stacks restored their cache after the source edit. All three missed it after the dependency update. Including the image release's preparation produced these cumulative elapsed-stage totals:
 
-## Record the baseline without caching
+| Change deployed to three stacks | Run from source | Build and publish once, then run the image |
+| --- | ---: | ---: |
+| Source-only edit | 168.6 seconds | 178.8 seconds |
+| Dependency update | 603.0 seconds | 175.0 seconds |
 
-Open **Settings** → **Deploy** for each test stack. Leave **Cache dependencies to speed up deployments** disabled. Keep automatic dependency installation enabled.
+The source totals include each job's preparation and execution. The image totals include one build and publication plus three deployment jobs. Both exclude queue delays and baseline setup. Full phase breakdowns and sample ranges are in the report.
 
-Run a deployment of `bench-a`, then repeat it without changing the program or configuration. Open each deployment's logs and record the durations of runner preparation, dependency installation, and the Pulumi operation. Record queue time separately from execution time.
+For the small source edit, cached source remained efficient. For the dependency update, the prepared image avoided repeated work.
 
-Use this worksheet for each experiment. Enter measured values rather than estimates:
+The builder also benefited from caching: it retained Go caches across the dependency change, while managed Deployments selected a new archive key. The result combines retained build work with reuse of the executable across stacks. It does not isolate the contribution of each. A source-based runner with persistent Go caches could retain useful work across dependency changes too.
 
-| Run | Queue | Runner and source setup | Cache restore/save | Dependency installation | Pulumi operation | Total elapsed |
-| --- | --- | --- | --- | --- | --- | --- |
-| Cache disabled, first run | | | | | | |
-| Cache disabled, repeat | | | | | | |
-| Cache enabled, first run | | | | | | |
-| Cache enabled, repeat | | | | | | |
-| Second stack, same lock files | | | | | | |
+These measurements used a small Random-provider program and an emulated Linux AMD64 builder on an ARM64 host. Cloud comparisons resumed while a service incident was in monitoring. They are not billing measurements or a production break-even rule. They show why source edits and dependency changes deserve separate tests.
 
-Be careful about what the total duration represents. Creating a new database and updating a stack with no changes are different workloads, even if both execute the same program. Keep new-stack results separate from repeated updates, and use no-change previews to understand setup and evaluation without the cost of resource creation. Otherwise, the apparent improvement may come from asking the provider to do less work.
+## Package the complete execution environment
 
-Repeat the comparisons and keep the slower results as well as the typical ones. A warm runner can make a process look attractive while hiding the preparation that a new runner must perform. This matters particularly for platforms that mostly create new environments, where the steady-state behavior of an existing stack may be the less relevant measurement.
+A compiled Go program contains its imported Go packages, including the Pulumi SDK. It does not contain every executable required for a deployment. Pulumi's architecture also uses:
 
-## Reuse dependencies before changing how you build
+- The Pulumi CLI and engine.
+- A language host, such as `pulumi-language-go`.
+- Resource provider plugins that perform resource operations.
+- Any component providers, additional runtimes, and tools required by the program.
 
-For both stacks, open **Settings** → **Deploy** and enable **Cache dependencies to speed up deployments**. Save the settings, then deploy `bench-a` again.
+Some of these ship together in the standard Pulumi distribution, but they remain separate from your compiled program. Precompiling the program alone can leave the runner downloading providers or preparing other tools.
 
-[Managed dependency caching](/docs/deployments/concepts/settings/dependency-caching/) is a useful starting point for Go, .NET, Node.js, and Python because it leaves the program and build process intact. It includes the supported language dependencies, provider plugins, and policy packs. Java and YAML do not have this managed cache support; those teams can use the artifact, image, or customer-managed cache paths instead.
+A versioned release bundle or executor image can distribute those dependencies together. The [artifact lab](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/labs/03-release-artifacts) packages a program with its required provider plugins. The [image lab](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/labs/04-executor-images) prepares the execution environment inside an image. Skip automatic dependency installation only after the release supplies what that step would prepare.
 
-For supported runtimes, the first update can prepare an entry that later deployments restore instead of retrieving the same dependencies individually. You still use the existing installation process, but give it previously prepared files to work with.
+Keep account-specific configuration and credentials outside the release. Stack configuration and Pulumi ESC can supply environment differences while every stack executes the same prepared program. Pin the image digest or artifact version, and record configuration revisions when you need to reproduce a deployment exactly.
 
-In the **Restore cache** log, look for `Cache restored successfully` or `No cache to restore, skipping...`. In **Save cache**, check that Pulumi captured and uploaded the cache. A `Skipping caching step` message needs investigation before you attribute a result to caching.
+That separation also supports release consistency. Promoting the executable you tested makes it easier to identify which software versions reached each environment. This can justify a prepared release even when its speed advantage is small.
 
-Repeat the deployment with the same commit and stack configuration. Record the cache transfer time as well as any reduction in dependency installation or program execution.
+## Put each cache where its work happens
 
-Leave dependency installation enabled for this experiment. A cache supplies files that the existing installation process can reuse. [Skipping installation](/docs/deployments/concepts/settings/skip-dependency-installation/) removes that process entirely, so you must first supply everything it would have prepared.
+The same distinction applies when you control the runners. On customer-managed Kubernetes runners, a volume mounted into job Pods can preserve Go or package-manager caches. Kubernetes nodes separately cache executor image layers. Replacing a job Pod can retain both kinds of reusable data, but replacing a node can lose its image cache.
 
-## Compare new-stack and repeat-run cache behavior
+The [Kubernetes lab](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/labs/05-kubernetes-cache) covers worker mounts and image-pull settings. A stable runner pool can reuse image layers across stacks. A nearby registry or pre-pulling can help distribution, but include their costs in your measurements.
 
-Deploy `bench-b` using the same source revision and lock files. Confirm that caching is enabled for this stack too.
+GitHub Actions has separate caches too. `actions/setup-go` can restore Go modules and build outputs, while BuildKit caching can reuse image-build work. Neither automatically populates a remote deployment runner's cache. Cache restoration, image construction, and image pulling are distinct operations.
 
-Managed dependency caches are scoped to individual stacks. Enabling caching on `bench-b` does not let it restore an entry populated by `bench-a`, even when both stacks belong to the same project and use identical lock files. This separation matters for a platform that mostly creates new environments: each new stack must populate its own cache.
+## Choose with your own deployment changes
 
-Expect the first `bench-b` run to report `No cache to restore, skipping...`. Wait for its **Save cache** step to finish, then repeat the deployment and compare the logs. The repeat should restore the entry saved by that stack. The artifact and image approaches in later parts provide an explicit way to share prepared code across environments without relying on another stack's managed cache.
+Start with caching where supported. Measure configuration-only changes, source edits, dependency updates, and first deployments to new stacks separately. Consider a prepared release when many deployments would otherwise repeat preparation, or when promoting a controlled execution environment is valuable in its own right.
 
-Use an update to populate the cache for this comparison. Previews can restore an existing cache for their stack, but they do not save new entries. A preview with changed dependencies can therefore remain cold until an update populates the corresponding entry.
+Keep queue time separate from job execution. If waiting dominates, dependency tuning addresses only part of the problem; the [rollout lab](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments/labs/06-rollout) covers triggers and concurrency.
 
-Next, make a deliberate dependency update on a test branch and repeat the measurement. A changed lock file produces a different cache key. Record the first run after that change separately from warm runs.
-
-Avoid clearing the cache on a production project for this experiment. The **Clear cache** action clears entries for the whole project, not only the selected stack.
-
-## Keep the cache when it saves more time than it costs
-
-Compare the baseline and warm runs for the same operation. Include cache restoration and saving in the total. If caching adds time, inspect archive size and the work that was actually avoided.
-
-Also keep the deployment's execution time separate from the time an entire rollout takes to finish. Two shorter jobs can still wait for the same runner, so reducing preparation may save runner time without eliminating the queue. That is a useful result, but it points to a different next step than further cache tuning.
-
-If compilation or dependency preparation still accounts for meaningful execution time, move that work into the release build. [Part 2](/blog/precompile-pulumi-go-programs/) develops the appropriate artifact for each language, using the same program and test stacks for comparison.
+Use the [runnable companion](https://github.com/pulumi/workshops/tree/workshop/faster-pulumi-deployments/faster-pulumi-deployments) to try these strategies in your existing language. The goal is to stop repeating preparation that your deployments can usefully share. Keep the simplest approach that delivers that benefit for your workload.
