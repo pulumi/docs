@@ -36,71 +36,19 @@ flowchart LR
     ROLE --> PR["Assigned to principals<br/>(users, teams, tokens)"]
 ```
 
-## Pulumi-defined roles
+## Built-in roles {#pulumi-defined-roles}
 
 Pulumi Cloud provides several roles that you can use to quickly get started:
 
 | <div style="width: 200px;">Role</div>| Description |
 |------|-------------|
+| `Reader` | Read the organization's stacks, environments, and cloud accounts. |
+| `Builder` | Everything Reader allows, plus create stacks, environments, cloud accounts, services, and Pulumi Neo tasks. Members manage what they create. |
+| `Maintainer` | Everything Builder allows, plus change every stack, environment, cloud account, and service, and work with deployments, integrations, and Neo automations. |
 | `Admin` | Full access to all organization resources and settings. Can manage members, roles, and organization-wide configurations. |
-| `Member` | Basic access to view organization resources and participate in stack operations. Cannot modify organization settings. The baseline permissions every member receives are configured in [Organization-wide role settings](#organization-wide-role-settings). |
 | `Billing Manager` | Access to view and manage billing information. Cannot modify other organization settings or resources. |
 
-{{% notes type="info" %}}
-By default, new members of a Pulumi Cloud organization have the Member role. To change the default, select a role and choose **Actions** > **Set as organization default role**.
-{{% /notes %}}
-
-### Organization-wide role settings
-
-Organization-wide role settings configure the built-in **Member** role: its default access levels for stacks, environments, and accounts, plus a few org-wide capabilities. They adjust part of the Member role — the role also carries a fixed baseline of permissions that this panel doesn't expose. These settings apply only to members on the Member role who have not been given an explicit custom role; a member with an assigned custom role uses that role instead.
-
-Only organization admins can change these settings. To open them, navigate to **Settings** > **Access management**, select the **Roles** tab, and choose **View organization-wide role settings**.
-
-{{% notes type="info" %}}
-Organization-wide role settings are a leftover from Pulumi Cloud's pre-RBAC permission system, retained for backward compatibility. For new, fine-grained access control, use [custom roles](#custom-roles) and [permission sets](/docs/administration/concepts/rbac/permission-sets) instead.
-{{% /notes %}}
-
-#### Stack permissions
-
-The **Stack permissions** dropdown sets the access level that members on the Member role have to all [stacks](/docs/iac/concepts/stacks/) in the organization:
-
-- **None** — Members have no default access to stacks. They can only access stacks granted to them through a role, a team, or a [creator grant](/docs/administration/concepts/rbac/#creator-grants) — the automatic Stack Admin permission set that whoever creates a stack receives on it. Creator grants are not configurable here; to remove one, delete it from the stack's **Access** tab.
-- **Read** — Members can view stacks, including their resources and state.
-- **Write** — Members can view stacks and run updates on them, including `pulumi up` and `pulumi destroy`. Removing a stack itself (`pulumi stack rm`) is *not* included — that requires the `stack:delete` [scope](/docs/administration/reference/rbac-scopes/stacks), which is granted by the Stack Admin permission set and gated by the **Allow stack admins to delete stacks** toggle below.
-
-This group also includes the following capability toggles:
-
-- **Allow organization members to create stacks and transfer stacks to this organization** — When enabled, members on the Member role can create new stacks and transfer existing stacks into the organization. When disabled, only members whose role includes the `stack:create` scope can do so.
-- **Allow stack admins to transfer stacks to another organization** — When enabled, stack admins can move stacks out of the organization.
-- **Allow stack admins to delete stacks** — When enabled, stack admins can delete the stacks they administer.
-
-#### Environment permissions
-
-The **Environment permissions** dropdown sets the access level that members on the Member role have to all [environments](/docs/esc/) (Pulumi ESC):
-
-- **None** — Members have no default access to environments.
-- **Read** — Members can view environment definitions.
-- **Open** — Members can open environments, resolving and decrypting their values for use.
-- **Write** — Members can create and edit environment definitions.
-
-#### Account permissions
-
-The **Account permissions** dropdown sets the access level that members on the Member role have to all [cloud accounts](/docs/discovery-governance/):
-
-- **None** — Members have no default access to accounts.
-- **Read** — Members can view accounts, their scan configurations, and scan results.
-- **Write** — Members can update existing accounts and run and manage their scans (start, cancel, pause, and resume). Write does *not* include creating or deleting accounts: creating is governed by the **Allow organization members to create accounts** toggle below, and deleting requires **Admin**.
-- **Admin** — Full control: everything **Write** allows, plus deleting accounts and managing who else can access them.
-
-This group also includes a capability toggle:
-
-- **Allow organization members to create accounts** — When enabled, members on the Member role can create new cloud accounts. When disabled, only members whose role includes the `insights_account:create` scope can do so.
-
-#### Team permissions
-
-This group includes a single capability toggle:
-
-- **Allow organization members to create teams** — When enabled, members on the Member role can create new [teams](/docs/administration/concepts/rbac/teams). When disabled, only members whose role includes the `team:create` scope can do so.
+Reader, Builder, and Maintainer are designed to be the organization's [default role](/docs/administration/concepts/rbac/default-roles/), which members follow unless an admin assigns them another one. Some organizations also have a read-only `Member (legacy)` role; see [Member (legacy)](/docs/administration/concepts/rbac/default-roles/#member-legacy).
 
 ## Custom roles
 
@@ -109,7 +57,7 @@ This group includes a single capability toggle:
 {{% notes type="info" %}}
 The Pro edition allows up to 25 custom roles; the Enterprise edition allows unlimited custom roles.
 
-The baseline permissions for members who have not been given an explicit custom role are configured in [Organization-wide role settings](#organization-wide-role-settings).
+Members who don't have a role picked for them get the organization's [default role](/docs/administration/concepts/rbac/default-roles/).
 {{% /notes %}}
 
 You can create and manage custom roles to define more granular access controls for your organization. Custom roles combine entity access rules (direct, global, or tag-based) with an organization access level.
@@ -178,7 +126,7 @@ Follow the process to [create an organization token](/docs/administration/concep
 
 ### Users
 
-Each organization member has exactly **one** organization role (Admin, Member, Billing Manager, or a custom role). When your organization has custom roles enabled, admins can replace a member's role with any custom role. Members who have the Member organization role and have not been given an explicit custom role receive the baseline permissions defined in [Organization-wide role settings](#organization-wide-role-settings).
+Each organization member has exactly **one** organization role. Members follow the organization's [default role](/docs/administration/concepts/rbac/default-roles/) unless an admin assigns them another one. In editions with custom roles, an admin can assign any built-in or custom role; in other editions, members follow the default role or are admins or billing managers.
 
 ### Teams
 
@@ -195,7 +143,7 @@ When working with roles in Pulumi Cloud, consider these best practices:
 1. **Regular review**: Periodically schedule reviews of role assignments and scopes.
 1. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.
 
-## Related resources
+## Learn more
 
 - [Scopes](/docs/administration/concepts/rbac/scopes): The most granular access rights in Pulumi Cloud, written as `object:action`. Each scope belongs to one entity type and is the building block of permission sets.
 - [Permission sets](/docs/administration/concepts/rbac/permission-sets): Reusable bundles of related scopes for a single entity type. You grant them on entities or use them to set a role's organization access level.
