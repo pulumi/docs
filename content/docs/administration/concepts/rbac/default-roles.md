@@ -27,7 +27,7 @@ Managing members, teams, and organization settings stays with the `Admin` role. 
 
 ## Choosing a default role
 
-New organizations start with `Maintainer` as their default role.
+New organizations come with a default role already set, and admins can change it.
 
 In editions with [custom roles](/docs/administration/concepts/rbac/roles/#custom-roles) ({{< pulumi-cloud-editions "custom-roles" >}}), admins choose the default role and can assign individual members a different role. For most of these organizations, we recommend `Builder`: members create and manage their own infrastructure, and get permissions on everyone else's through [teams](/docs/administration/concepts/rbac/teams) or [grants on individual entities](/docs/administration/concepts/rbac/entities/#entity-access), so permissions on shared resources are something you grant on purpose. Choose `Reader` if most members only need to look, and `Maintainer` if every member should be able to change everything. A custom role can also be the default.
 
@@ -46,7 +46,7 @@ You can also open a role and choose **Actions** > **Set as default organization 
 ## Moving from the Member role {#moving-from-member}
 
 {{% notes type="info" %}}
-Pulumi Cloud organizations moved from the `Member` role to Reader, Builder, and Maintainer in November 2026. [Self-hosted installations](#self-hosted) move when they upgrade.
+Pulumi Cloud organizations moved from the `Member` role to Reader, Builder, and Maintainer in November 2026.
 {{% /notes %}}
 
 Organizations used to give members a configurable `Member` role. They moved to Reader, Builder, and Maintainer without losing any permissions. Each one got the three roles, and its default role became the built-in role matching what members could already do. Where none matched, the default role became `Member (legacy)`, a copy of those permissions, and an organization that already had a custom default role kept it. Custom roles, teams, and access tokens kept their permissions, and a custom role that was already named `Reader`, `Builder`, or `Maintainer` was renamed, for example to `Builder (custom)`.
@@ -61,7 +61,3 @@ Organizations used to give members a configurable `Member` role. They moved to R
 1. Sign in as a member, or ask one, to check that day-to-day work still succeeds.
 
 If something stops working, switch the default role back to `Member (legacy)` while you sort out the missing permissions.
-
-### Self-hosted Pulumi Cloud {#self-hosted}
-
-Self-hosted installations move to Reader, Builder, and Maintainer when they upgrade to the release that adds them. The upgrade finishes as usual, and organizations then move in the background, one at a time, as described in [Moving from the Member role](#moving-from-member). Each organization works exactly as before until it moves, and personal accounts stay as they are. To follow progress, a site admin can open **Site admin** > **Background activities** and select the **StoredDefaultRoles** activity, which lists any organization that couldn't move and why. Those organizations keep their permissions and are retried automatically.

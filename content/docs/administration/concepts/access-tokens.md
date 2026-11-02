@@ -95,10 +95,6 @@ Team tokens are machine tokens scoped to the resources and permissions of a spec
 
 A team token's effective permissions are the union of all [roles assigned to that team](/docs/administration/concepts/rbac/teams/), evaluated at the time of each request. If the team's role assignments change — for example, the team is granted access to a new set of stacks — the token's capabilities update automatically without any token recreation. This makes team tokens a good fit for long-lived automation where access needs may evolve over time.
 
-{{% notes type="info" %}}
-In addition to the team's role assignments, a team token also receives the baseline [permissions for tokens without a role](#organization-wide-role-settings). For example, if **Stack permissions** there is set to **Read**, a team token can read every stack in the organization, not just the stacks the team has been granted. Keep this in mind when relying on a team token to scope automation to a single team's resources.
-{{% /notes %}}
-
 As with organization tokens, team token activity is recorded in audit logs with the token's name, keeping actions traceable without exposing individual users.
 
 ### Who can manage team tokens
@@ -109,7 +105,7 @@ Deleting a token immediately revokes its access. The token name is permanently r
 
 ## Permissions for tokens without a role {#organization-wide-role-settings}
 
-These settings decide the permissions of organization access tokens without a role, and add baseline permissions to every team access token.
+These settings decide the permissions of organization access tokens without a role.
 
 | Setting | What it controls |
 |---------|------------------|
@@ -182,7 +178,7 @@ Before roles could be assigned to organization tokens, each token was either sta
 Admin organization tokens have elevated permissions; please use them with caution.
 {{% /notes %}}
 
-For new automation, assign a [custom role](/docs/administration/concepts/rbac/roles/) that grants only the scopes your automation needs.
+For new automation, assign a [role](/docs/administration/concepts/rbac/roles/), built-in or custom, that grants only the scopes your automation needs.
 
 ## OIDC issued tokens
 

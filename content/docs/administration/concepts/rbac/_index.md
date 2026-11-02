@@ -32,9 +32,9 @@ This model lets you:
 
 Roles apply to these kinds of principals in Pulumi Cloud:
 
-- **Users**: Each organization member has exactly one organization role: the organization's default role, another built-in role, or a custom role.
+- **Users**: Each organization member has exactly one organization role: the organization's default role, another built-in role, or a custom role. A member can also be [given a permission set directly](/docs/administration/concepts/rbac/entities/#entity-access) on specific stacks, environments, and cloud accounts.
 - **[Teams](/docs/administration/concepts/rbac/teams/)**: A team can be granted access two ways — through **roles** and through **entity access** granted directly on specific stacks, environments, and cloud accounts (outside of any role). Members of a team receive the union of the team's roles, its direct entity access grants, and their own user role.
-- **[Team tokens](/docs/administration/concepts/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team — they are not assigned a role directly — and they also inherit the baseline [permissions for tokens without a role](/docs/administration/concepts/access-tokens/#organization-wide-role-settings).
+- **[Team tokens](/docs/administration/concepts/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team.
 - **[Organization access tokens](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token)**: Machine tokens that are assigned exactly one role defining the token's permissions across the organization.
 
 ## How permissions accumulate for users
