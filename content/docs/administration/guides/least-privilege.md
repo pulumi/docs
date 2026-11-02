@@ -64,11 +64,7 @@ Pulumi Cloud [RBAC](/docs/administration/concepts/rbac/) decides who can view an
 
 ### Start from conservative defaults
 
-Set your organization's default stack permission to None or Read, so people start with little and receive more only when they need it. The [roles documentation](/docs/administration/concepts/rbac/roles/#organization-wide-role-settings) covers where to configure this and how the built-in Member role interacts with custom roles.
-
-{{% notes type="info" %}}
-Organization-wide role settings are retained from Pulumi Cloud's pre-RBAC permission system for backward compatibility. For new, fine-grained access control, prefer custom roles and permission sets.
-{{% /notes %}}
+Set your organization's [default role](/docs/administration/concepts/rbac/default-roles/) to `Reader` or `Builder`, so people start with only read permissions, or permissions on what they create, and receive more through [teams](/docs/administration/concepts/rbac/teams/) when they need it.
 
 ### Grant access explicitly through permission sets and teams
 
