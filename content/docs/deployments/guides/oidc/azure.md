@@ -28,7 +28,7 @@ This document outlines the steps required to configure Pulumi Deployments to use
 Configuring OIDC for Azure involves two sides:
 
 1. **Azure** — register a Microsoft Entra application with federated credentials that trust Pulumi Cloud, and grant its service principal access to your resources. You can do this in the [Azure portal](#using-the-azure-portal) or [programmatically](#using-infrastructure-as-code).
-1. **Pulumi Deployments** — enable the Azure OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that application. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/reference/cloud-rest-api/deployments/#patch-settings).
+1. **Pulumi Deployments** — enable the Azure OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that application. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/reference/cloud-rest-api/deployments/).
 
 ## Prerequisites
 
@@ -151,13 +151,13 @@ export const subscriptionId = current.subscriptionId;
 
 ## Configure Pulumi Deployments
 
-Azure OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/reference/cloud-rest-api/deployments/#patch-settings). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
+Azure OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/reference/cloud-rest-api/deployments/). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
 
 For new stacks, Pulumi recommends using [Pulumi ESC](/docs/esc/) instead, which supports [OIDC for Azure](/docs/esc/guides/configuring-oidc/azure/) alongside broader secrets and configuration management than Deployments OIDC alone provides. See [Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC](/docs/deployments/guides/cloud-credentials/#choosing-between-pulumi-esc-environments-and-pulumi-deployments-oidc) for guidance.
 
 ### Using infrastructure as code
 
-You can manage the same deployment settings in source control with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource (the OIDC configuration is set under `operationContext.oidc.azure`). Deployment settings can also be configured via the [REST API](/docs/reference/cloud-rest-api/deployments/#patch-settings).
+You can manage the same deployment settings in source control with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource (the OIDC configuration is set under `operationContext.oidc.azure`). Deployment settings can also be configured via the [REST API](/docs/reference/cloud-rest-api/deployments/).
 
 ```typescript
 import * as pulumiservice from "@pulumi/pulumiservice";

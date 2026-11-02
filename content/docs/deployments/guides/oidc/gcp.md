@@ -28,7 +28,7 @@ This document outlines the steps required to configure Pulumi Deployments to use
 Configuring OIDC for Google Cloud involves two sides:
 
 1. **Google Cloud** — create a workload identity pool and OIDC provider that trust Pulumi Cloud, and a service account your deployments can impersonate. You can do this in the [Google Cloud console](#using-the-google-cloud-console) or [programmatically](#using-infrastructure-as-code).
-1. **Pulumi Deployments** — enable the Google Cloud OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that service account. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/reference/cloud-rest-api/deployments/#patch-settings).
+1. **Pulumi Deployments** — enable the Google Cloud OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that service account. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/reference/cloud-rest-api/deployments/).
 
 ## Prerequisites
 
@@ -151,7 +151,7 @@ export const serviceAccountEmail = account.email;
 
 ## Configure Pulumi Deployments
 
-Google Cloud OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/reference/cloud-rest-api/deployments/#patch-settings). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
+Google Cloud OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/reference/cloud-rest-api/deployments/). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
 
 For new stacks, Pulumi recommends using [Pulumi ESC](/docs/esc/) instead, which supports [OIDC for Google Cloud](/docs/esc/guides/configuring-oidc/gcp/) alongside broader secrets and configuration management than Deployments OIDC alone provides. See [Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC](/docs/deployments/guides/cloud-credentials/#choosing-between-pulumi-esc-environments-and-pulumi-deployments-oidc) for guidance.
 
