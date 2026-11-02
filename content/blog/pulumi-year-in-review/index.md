@@ -123,7 +123,7 @@ Pulumi's vibrant community has been at the heart of everything we've accomplishe
 
 - **Global [Pulumi User Groups](https://luma.com/pulumi) (PUGs)**: With 20 groups across 9 countries, including new meetups in [Chicago](https://luma.com/pulumi), [Columbus](https://luma.com/pulumi), [São Paulo](https://luma.com/pulumi), and [Tel Aviv](https://luma.com/pulumi), our community continues to grow. These meetups collectively hosted over 6,396 members.
 - **PulumiUP 2024**: Over 8,000 registrants globally, with nearly 1,000 for the first-ever PulumiUP Europe.
-- **[Workshops](https://www.pulumi.com/resources/#upcoming)**: 72 workshops with 14,500+ registrations from engineers wanting to learn Pulumi.
+- **[Workshops](https://www.pulumi.com/events/#upcoming)**: 72 workshops with 14,500+ registrations from engineers wanting to learn Pulumi.
 - **22,000 GitHub Stars**: A testament to our community's passion and dedication.
 
 ## Looking Ahead to 2025
