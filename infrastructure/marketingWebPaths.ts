@@ -29,5 +29,8 @@ export const marketingWebPaths = [
     "/extend-trial/",
     // marketing-web 301s /confirmation/ to / at its own CDN, as the Hugo page's redirect_to did.
     "/confirmation*",
+    // Exact paths: /gads* would also take the /gads/ redirect and the retired gads pages' redirects off S3.
+    "/gads/infrastructure-as-code",
+    "/gads/infrastructure-as-code/",
     "/sitemap-www-*",
 ];

@@ -139,6 +139,7 @@ jobs:
           check_endpoint "/what-is/" "What-is landing (redirects to /topics/)"
           check_endpoint "/topics/" "Topics landing"
           check_endpoint "/customers/" "Customers landing"
+          check_endpoint "/gads/infrastructure-as-code/" "Google Ads IaC landing"
           check_endpoint "/pulumi-for-startups/" "Pulumi for Startups"
           check_endpoint "/extend-trial/" "Extend trial"
           check_endpoint "/confirmation/workshop/" "Workshop confirmation"
