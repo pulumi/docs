@@ -136,7 +136,7 @@ That’s not where configuration ends, however. Some of our configuration may en
 $ pulumi config set dbPassword --secret [redacted]
 ```
 
-Finally, Pulumi gives you tools to manage your projects and stacks according to your own requirements, similar to how git can be used for many different source control philosophies such as monorepos. For a description of the tradeoffs involved, see the [“Organizing Projects and Stacks” user guide](/docs/iac/guides/basics/organizing-projects-stacks/) or the [IaC Recommended Best Practices blog series](/blog/iac-recommended-practices-structuring-pulumi-projects/). For complex systems, we will likely want a separation of concerns between pieces of our infrastructure, which means it is possible for one stack to depend on another.
+Finally, Pulumi gives you tools to manage your projects and stacks according to your own requirements, similar to how git can be used for many different source control philosophies such as monorepos. For a description of the tradeoffs involved, see the [“Organizing Projects and Stacks” user guide](/docs/iac/guides/basics/organizing-projects-stacks/) or the [IaC Recommended Best Practices blog series](/blog/iac-best-practices-structuring-pulumi-projects/). For complex systems, we will likely want a separation of concerns between pieces of our infrastructure, which means it is possible for one stack to depend on another.
 
 For example, there could be a base networking and security layer, a data stack and a Kubernetes cluster that consume information from a lower-level layer but are provisioned separately, with applications above that depending on different assortments of all of the above.
 

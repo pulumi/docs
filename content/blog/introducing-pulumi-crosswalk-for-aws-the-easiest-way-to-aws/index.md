@@ -8,7 +8,7 @@ category: product
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 
 Amazon Web Services provides an incredible platform for developers to
@@ -23,7 +23,7 @@ of minutes or hours. And AWS building block services frequently leave
 you to re-implement (and re-discover) best-practices instead of
 providing these as smart defaults.
 
-[Pulumi Crosswalk for AWS](/docs/iac/clouds/aws/guides/) is a
+[Pulumi Crosswalk for AWS](/docs/iac/guides/clouds/aws/) is a
 new open source library of infrastructure-as-code components that make
 it easier to get from zero to production on AWS, easier to adopt AWS
 best practices by default, and easier to evolve your AWS infrastructure
@@ -59,7 +59,7 @@ enterprise application to cloud-native infrastructure, or delivering a
 new service as part of an established cloud application, Crosswalk for
 AWS provides the easiest way to get from zero to production, and to then
 evolve with your projects' needs. You can
-[get started with Crosswalk for AWS](/docs/iac/clouds/aws/guides/) today!
+[get started with Crosswalk for AWS](/docs/iac/guides/clouds/aws/) today!
 
 > *Note:* Crosswalk for AWS projects are authored using the Pulumi
 > infrastructure-as-code tools. Pulumi allows you to define your
@@ -303,11 +303,11 @@ deploy natively in the cloud will unlock creativity and empower
 developers to take advantage of more of the rich capabilities of AWS. We
 can't wait to see what you build with Crosswalk!
 
-Crosswalk for AWS is free and open source, and you can [get started today](/docs/iac/clouds/aws/guides/).
+Crosswalk for AWS is free and open source, and you can [get started today](/docs/iac/guides/clouds/aws/).
 
 For more on Crosswalk for AWS see:
 
-- [Pulumi Crosswalk for AWS documentation](/docs/iac/clouds/aws/guides/)
+- [Pulumi Crosswalk for AWS documentation](/docs/iac/guides/clouds/aws/)
 - [Get Started with Docker on AWS Fargate using Pulumi](/blog/get-started-with-docker-on-aws-fargate-using-pulumi/)
 - [Easy Serverless Apps and Infrastructure -- Real Events, Real Code](/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/)
 - [Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/)

@@ -160,7 +160,7 @@ Execution used to be the dividing line between these tools; it no longer is. By 
 
 A few things that set it apart in practice:
 
-**Policy automation and compliance.** Neo is integrated with [Pulumi Insights and Governance](/product/insights-governance/), which ships pre-built policy packs for CIS benchmarks, HITRUST CSF, NIST SP 800-53, and PCI DSS. Detection and remediation run in the same loop: Neo finds a violation, generates a fix, and (subject to approvals) applies it. You can batch-remediate across stacks and accounts with prompts like "find and fix all unencrypted S3 buckets across our AWS accounts."
+**Policy automation and compliance.** Neo is integrated with [Pulumi Insights and Governance](/product/discovery-governance/), which ships pre-built policy packs for CIS benchmarks, HITRUST CSF, NIST SP 800-53, and PCI DSS. Detection and remediation run in the same loop: Neo finds a violation, generates a fix, and (subject to approvals) applies it. You can batch-remediate across stacks and accounts with prompts like "find and fix all unencrypted S3 buckets across our AWS accounts."
 
 **Works with infrastructure you didn't create with Pulumi.** Neo's governance applies to Pulumi-managed resources, Terraform state, CloudFormation stacks, and resources someone clicked together in the AWS console. That matters because the realistic adoption path is to point Neo at what you have, audit it, and gradually bring it under management, not to migrate everything first.
 

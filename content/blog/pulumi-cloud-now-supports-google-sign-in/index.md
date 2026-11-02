@@ -64,6 +64,6 @@ Google sign-in is available now for all new and existing Pulumi Cloud users:
 * **New users**: [Sign up with Google](https://app.pulumi.com/signup) on the Pulumi Cloud sign-up page.
 * **Existing users**: [Connect your Google account](https://app.pulumi.com/account/settings) in your account settings.
 
-For more details, see the [Pulumi Cloud accounts documentation](/docs/administration/organizations-teams/accounts/).
+For more details, see the [Pulumi Cloud accounts documentation](/docs/administration/concepts/accounts/).
 
 We'd love to hear your feedback. Join the conversation in the [Pulumi Community Slack](https://slack.pulumi.com) or open an issue on [GitHub](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).

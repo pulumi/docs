@@ -8,7 +8,7 @@ category: tutorials
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 
 > Update: Check out the [Learning Machine Case Study](/customers/learning-machine/) where provisioning went from 3 weeks to 1 hour with Pulumi and AWS.

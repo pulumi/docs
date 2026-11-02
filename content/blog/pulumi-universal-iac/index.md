@@ -13,7 +13,7 @@ category: product
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 
 Over the last year since the launch of Pulumi 3.0, we’ve seen incredible growth in adoption and usage of the Pulumi open source project and Cloud Engineering platform, with more than a thousand new open source contributors, tens of thousands of new users, and millions of new cloud infrastructure resources being managed by Pulumi. Pulumi’s infrastructure as code tools are enabling teams to scale up their cloud infrastructure with robust software engineering tools and practices to get the most value out of their cloud platform investments.
@@ -94,7 +94,7 @@ You can get started with Pulumi YAML today in the [Pulumi Getting Started](/docs
 
 ## Crosswalk for AWS in All Pulumi Languages
 
-[Crosswalk for AWS](/docs/iac/clouds/aws/guides/) is a collection of libraries that use automatic well-architected best practices to make common infrastructure as code tasks in AWS easier and more secure. This includes libraries for EKS and API Gateway as well as the AWSX library that provides VPC, ECS, LoadBalancing and more.  All of these libraries are now available in the Pulumi Registry for all Pulumi languages.  The AWSX library, which was previously only available for Pulumi TypeScript users has become one of the most used libraries in the Pulumi ecosystem.  With today’s release, it is now available to the entirety of the Pulumi language ecosystem - including Java and YAML!
+[Crosswalk for AWS](/docs/iac/guides/clouds/aws/) is a collection of libraries that use automatic well-architected best practices to make common infrastructure as code tasks in AWS easier and more secure. This includes libraries for EKS and API Gateway as well as the AWSX library that provides VPC, ECS, LoadBalancing and more.  All of these libraries are now available in the Pulumi Registry for all Pulumi languages.  The AWSX library, which was previously only available for Pulumi TypeScript users has become one of the most used libraries in the Pulumi ecosystem.  With today’s release, it is now available to the entirety of the Pulumi language ecosystem - including Java and YAML!
 
 For example - to run a Docker container in ECS using default network and cluster settings, users can use the `awsx.ecs.FargateService` class along with an Application Load Balancer listening on port 80 at a stable address - with just a few lines of code:
 
@@ -279,7 +279,7 @@ outputs:
 
 {{% /choosable %}}
 
-You can get started with Crosswalk for AWS in the [Pulumi Crosswalk for AWS Guides](/docs/iac/clouds/aws/guides/), now available with examples in all languages.
+You can get started with Crosswalk for AWS in the [Pulumi Crosswalk for AWS Guides](/docs/iac/guides/clouds/aws/), now available with examples in all languages.
 
 👉 Read more in the [Pulumi Crosswalk for AWS support for all Pulumi Languages](/blog/crosswalk-for-aws-all-languages/)  blog post.
 
@@ -287,7 +287,7 @@ You can get started with Crosswalk for AWS in the [Pulumi Crosswalk for AWS Guid
 
 The AWS Cloud Development Kit (CDK) offers a [large collection](https://docs.aws.amazon.com/cdk/api/v2/) of higher-level libraries ("constructs") for working with the AWS platform, built by service teams at AWS and by the AWS CDK community.  These libraries are available in the same set of general purpose programming languages that Pulumi supports, with the primary difference being that AWS CDK compiles infrastructure programs into CloudFormation, and uses CloudFormation to drive deployments.
 
-With the new [AWS CDK on Pulumi](https://github.com/pulumi/pulumi-cdk) project, available in public preview today, we are opening up the ability to use AWS CDK constructs from within a Pulumi deployment.  For developers already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering [improved deployment speed](https://www.pulumi.com/customers/panther-labs/#proving-pulumis-advantages), integration with the full set of features of the Pulumi Cloud Engineering Platform (like [Policy as Code](/docs/discovery-governance/concepts/policy-as-code/), [Audit Logs](/docs/administration/security-compliance/audit-logs/), [Secrets](/docs/iac/concepts/secrets/), and much more). But even better, you can also now combine AWS CDK and Pulumi resources in a single Pulumi infrastructure as code project - passing outputs from Pulumi resources into AWS CDK constructs, and outputs from AWS CDK constructs into Pulumi resources.  This allows you to work across the >80 cloud and SaaS providers that Pulumi offers access to, while still benefiting from high level libraries from the AWS CDK project.
+With the new [AWS CDK on Pulumi](https://github.com/pulumi/pulumi-cdk) project, available in public preview today, we are opening up the ability to use AWS CDK constructs from within a Pulumi deployment.  For developers already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering [improved deployment speed](https://www.pulumi.com/customers/panther-labs/#proving-pulumis-advantages), integration with the full set of features of the Pulumi Cloud Engineering Platform (like [Policy as Code](/docs/discovery-governance/concepts/policy-as-code/), [Audit Logs](/docs/administration/concepts/audit-logs/), [Secrets](/docs/iac/concepts/secrets/), and much more). But even better, you can also now combine AWS CDK and Pulumi resources in a single Pulumi infrastructure as code project - passing outputs from Pulumi resources into AWS CDK constructs, and outputs from AWS CDK constructs into Pulumi resources.  This allows you to work across the >80 cloud and SaaS providers that Pulumi offers access to, while still benefiting from high level libraries from the AWS CDK project.
 
 ```typescript
 import * as fs from 'fs';
@@ -376,13 +376,13 @@ Since launching the [Pulumi Registry](/registry/) last fall, we’ve added more 
 
 ![New Packages in the Pulumi Registry](new-packages.png)
 
-Every package in the Pulumi Registry supports all Pulumi programming languages, including Java and YAML. Documentation and getting started guides for every package are available from the Registry. Contributions to the Registry are now simpler than ever, with enhanced guides for [authoring and publishing](/docs/iac/packages-and-automation/pulumi-packages/authoring/) your own package in the Pulumi Registry.
+Every package in the Pulumi Registry supports all Pulumi programming languages, including Java and YAML. Documentation and getting started guides for every package are available from the Registry. Contributions to the Registry are now simpler than ever, with enhanced guides for [authoring and publishing](/docs/iac/guides/building-extending/packages/publishing-packages/) your own package in the Pulumi Registry.
 
 ## New Provider for the Pulumi Service
 
 Pulumi’s users love managing __*all*__ of their cloud infrastructure using Pulumi, and that includes managing the state of the [Pulumi Service](/product/) itself.
 
-Today, we released a new [Pulumi provider for the Pulumi Service](/registry/packages/pulumiservice/), supporting configuration of [Teams](/docs/pulumi-cloud/access-management/teams/), [Access Tokens](/docs/administration/concepts/access-tokens/), [Stack Tags](/docs/iac/cli/commands/pulumi_stack_tag/) and [Webhooks](/docs/pulumi-cloud/webhooks/) using infrastructure as code.
+Today, we released a new [Pulumi provider for the Pulumi Service](/registry/packages/pulumiservice/), supporting configuration of [Teams](/docs/administration/concepts/rbac/teams/), [Access Tokens](/docs/administration/concepts/access-tokens/), [Stack Tags](/docs/iac/cli/commands/pulumi_stack_tag/) and [Webhooks](/docs/deployments/concepts/webhooks/) using infrastructure as code.
 
 For example, you can create a webhook that is notified whenever a Pulumi Update completes, and log it using an AWS Lambda, with just a few lines of code using the new Pulumi Service provider along with the API Gateway package.
 

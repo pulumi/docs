@@ -32,7 +32,7 @@ social:
         Here are 10 more.
 ---
 
-Last fall, after launching [Pulumi Neo](/neo/), we wrote up [10 things you could do with it](/blog/10-things-you-can-do-with-neo/). In the months that followed, as platform teams handed Neo more real work, we watched and listened, shipping a steady stream of features like [plan mode](/blog/neo-plan-mode/), [read-only mode](/blog/neo-read-only-mode/), [AGENTS.md](/blog/pulumi-neo-now-supports-agentsmd/), an [integration catalog](/blog/neo-integration-catalog/), [cross-cloud migration](/blog/neo-migration/), and [task sharing](/blog/neo-task-sharing/). With [today's release](/releases/agentic-infrastructure-era/), Neo extends beyond the Pulumi Cloud console into the Pulumi CLI, GitHub, and Slack.
+Last fall, after launching [Pulumi Neo](/neo/), we wrote up [10 things you could do with it](/blog/10-things-you-can-do-with-neo/). In the months that followed, as platform teams handed Neo more real work, we watched and listened, shipping a steady stream of features like [plan mode](/blog/neo-plan-mode/), [read-only mode](/blog/neo-read-only-mode/), [AGENTS.md](/blog/pulumi-neo-now-supports-agentsmd/), an [integration catalog](/blog/neo-integrations/), [cross-cloud migration](/blog/neo-migration/), and [task sharing](/blog/neo-task-sharing/). With [today's release](/releases/agentic-infrastructure-era/), Neo extends beyond the Pulumi Cloud console into the Pulumi CLI, GitHub, and Slack.
 
 So here are **10 more** things you can do with Neo.
 
@@ -61,7 +61,7 @@ With Neo, that work collapses into a prompt. Point Neo at a repo and ask:
 
 Production incidents often involve multiple tools. When the `checkout` endpoint's p95 latency climbs from 200ms to 1.2s, the metric is in Datadog, but the cause might be somewhere in your AWS account: maybe RDS is out of IOPS, maybe the connection pool is too small, maybe the autoscaler isn't keeping up. Connecting "this metric looks bad" to a recent backend change and then to a one-line fix in your Pulumi program is an exercise in detective work.
 
-Neo's [integration catalog](/blog/neo-integration-catalog/) bridges this gap. With built-in Datadog APM, PagerDuty, and Honeycomb integrations sitting alongside your Pulumi state, Neo can read traces and metrics from the tools your team already uses and take action.
+Neo's [integration catalog](/blog/neo-integrations/) bridges this gap. With built-in Datadog APM, PagerDuty, and Honeycomb integrations sitting alongside your Pulumi state, Neo can read traces and metrics from the tools your team already uses and take action.
 
 Ask Neo:
 
@@ -174,7 +174,7 @@ Ask Neo:
 
 > Containerize the `billing-api` service and write its Kubernetes manifests, following our K8s migration runbook in Confluence.
 
-Neo reads the source repo and the runbook in Confluence via the [integration catalog](/blog/neo-integration-catalog/) and starts working on your request.
+Neo reads the source repo and the runbook in Confluence via the [integration catalog](/blog/neo-integrations/) and starts working on your request.
 
 You can save this as a Neo skill that splits the work into multiple PRs — Dockerfile first, ECR config next, Deployment/Service/Ingress manifests after — and link back to each runbook convention for ease of review. The output reflects your conventions: the labels you actually use, the ingress class you've standardized on, and the External Secrets Operator config your team prefers.
 
@@ -256,7 +256,7 @@ What was missing wasn't the appetite. It was an agent with enough organizational
 
 The theme across these tasks is clear. A thing platform engineers used to keep in their heads becomes a task you delegate, then becomes work that runs without you. Neo isn't generating infrastructure from a template. It's a teammate who knows your code, your providers, your conventions, your production metrics, and can raise PRs for you to review.
 
-Neo now lives in your terminal, in your pull requests, in your Slack workspace, and in Pulumi Cloud. Pick one of these workflows and [give it a try](/docs/ai/neo/).
+Neo now lives in your terminal, in your pull requests, in your Slack workspace, and in Pulumi Cloud. Pick one of these workflows and [give it a try](/docs/ai/concepts/neo/).
 
 [^compostable]: For a concrete example, see [Seven Rules for Building an AI-Native Software Factory](/blog/seven-rules-ai-native-software-factory/): Ewan Dawson, CTO of Compostable AI, runs nineteen client deployments with five engineers, using Pulumi Neo to handle most of the infrastructure work.
 

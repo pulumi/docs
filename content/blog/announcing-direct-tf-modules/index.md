@@ -31,7 +31,7 @@ social:
 ---
 
 {{% notes type="warning" %}}
-This post describes the deprecated [pulumi-terraform-module](https://github.com/pulumi/pulumi-terraform-module) provider and its `pulumi package add terraform-module` command. Terraform module support is now provided by [Pulumi HCL](https://github.com/pulumi/pulumi-hcl/) via `pulumi package add hcl module`. See [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for current instructions.
+This post describes the deprecated [pulumi-terraform-module](https://github.com/pulumi/pulumi-terraform-module) provider and its `pulumi package add terraform-module` command. Terraform module support is now provided by [Pulumi HCL](https://github.com/pulumi/pulumi-hcl/) via `pulumi package add hcl module`. See [Use a Terraform Module in Pulumi](/docs/integrations/terraform/modules/) for current instructions.
 {{% /notes %}}
 
 Today, we're excited to announce a major advancement in Pulumi's mission to make modern infrastructure as code accessible to every developer: **direct support for executing Terraform modules**. This new capability addresses one of the most significant challenges our users face when migrating from Terraform to Pulumi—complex projects with extensive module dependencies.
@@ -711,7 +711,7 @@ With AI developer tools making code conversion easier than ever, we're committed
 
 The Terraform module support is available immediately. [Install the latest Pulumi CLI](/docs/install/) and try it out with your existing Terraform modules. We've prepared comprehensive [examples](https://github.com/pulumi/pulumi-terraform-module/tree/main/examples) showcasing real-world scenarios, from simple VPC deployments to complex multi-module architectures.
 
-For detailed documentation on using Terraform modules in Pulumi, including advanced configuration options, troubleshooting guides, and best practices, see our [comprehensive guide](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+For detailed documentation on using Terraform modules in Pulumi, including advanced configuration options, troubleshooting guides, and best practices, see our [comprehensive guide](/docs/integrations/terraform/modules/).
 
 If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/pulumi/pulumi-terraform-module/issues/new/choose) or reach out in our [Community Slack](https://slack.pulumi.com/). Your feedback is invaluable as we continue to evolve this capability.
 
