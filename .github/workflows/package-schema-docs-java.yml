@@ -57,7 +57,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: Check out the repo
         uses: actions/checkout@v7
         with:
@@ -99,7 +99,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: Check out the repo
         uses: actions/checkout@v7
       - name: Set the pulumi-java version
@@ -135,7 +135,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

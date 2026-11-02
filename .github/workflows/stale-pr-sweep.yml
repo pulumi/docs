@@ -69,7 +69,7 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         continue-on-error: true
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
 
       - name: Checkout (default branch)
         uses: actions/checkout@v7

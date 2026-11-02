@@ -639,7 +639,7 @@ jobs:
           && steps.route.outputs.pending != ''
         id: esc-secrets
         continue-on-error: true
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
 
       - name: Request lane reviewers (v3 routing)
         if: >-

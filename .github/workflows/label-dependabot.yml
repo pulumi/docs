@@ -403,7 +403,7 @@ jobs:
         id: esc-secrets
         if: github.event_name == 'pull_request'
         continue-on-error: true
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
 
       - name: Report ESC token availability
         if: github.event_name == 'pull_request'

@@ -1166,7 +1166,7 @@ jobs:
       # draft→ready transition fire the downstream triage/review workflows.
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: Checkout repository
         uses: actions/checkout@v7
         with:

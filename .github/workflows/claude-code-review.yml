@@ -2572,7 +2572,7 @@ jobs:
         if: steps.current.outputs.superseded == 'false'
         id: esc-secrets
         continue-on-error: true
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
 
       - name: Configure AWS Credentials
         if: steps.current.outputs.superseded == 'false'
