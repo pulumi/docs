@@ -270,8 +270,7 @@
      page itself. "migrate" and "partner" are intentionally excluded: both
      sections' index pages redirect elsewhere (/migrate/ -> /docs/iac/guides/migration/,
      /partner/ -> /registry/packages/) so a crumb pointing at them would point at
-     a redirect target rather than a real page. "gads" is excluded because those
-     pages are noindexed paid-landing pages. */}}
+     a redirect target rather than a real page. */}}
 {{ else if in (slice "releases" "whitepapers" "solutions" "community" "topics" "about" "security" "why-pulumi" "legal") .Section }}
   {{ $sectionNames := dict
     "releases" "Releases"

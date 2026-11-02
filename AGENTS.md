@@ -104,6 +104,7 @@ Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi
 - **`/topics`**: the explainer section that replaced `/what-is`, built from `apps/www/src/content/topics/`. `scripts/redirects/topics-redirects.txt` 301s the old `/what-is/` URLs (and the legacy URLs those pages carried) straight to their `/topics/` pages.
 - **`/customers`**: the customer board, its industry pages, and every case study, built from `apps/www/src/data/customers/` and `apps/www/src/content/customers/`. `scripts/redirects/customers-redirects.txt` 301s the old `/case-studies/` URLs. This repo keeps a frozen copy of the registry for the pages that still show customers (see "Customers" below).
 - **`/pulumi-for-startups`, `/extend-trial`, `/confirmation`**: landing pages built from `apps/www/src/content/section-pages/`. `scripts/redirects/landing-page-redirects.txt` 301s the old `/microsoft-for-startups/` alias. HubSpot workshop forms redirect to `/confirmation/workshop/` and the Pulumi Cloud trial banner links to `/extend-trial/?org=…&email=…`, so neither URL can change.
+- **`/gads/infrastructure-as-code`**: the Google Ads landing page, built from `apps/www/src/content/section-pages/gads/infrastructure-as-code.yaml`. The other Google Ads pages are retired; `scripts/redirects/gads-redirects.txt` 301s them to `/`, and `content/gads/_index.md` keeps `/gads/` itself redirecting to `/`.
 
 When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list. marketing-web's sitemap at `/sitemap-www-index.xml` (listed in `layouts/robots.txt`) lists every page it builds that isn't noindex, so ship the proxy path in the same release as the page.
 
@@ -205,7 +206,7 @@ A scheduled workflow (`.github/workflows/blog-review-index.yml`) reviews a few e
 
 ## Customers
 
-pulumi/marketing-web owns the customer registry and builds `/customers/` (see "Pages that live in pulumi/marketing-web" above). `data/customers.yaml`, `data/customers_industries.yaml`, and the logos in `assets/fingerprinted/logos/customers/` are a **frozen, read-only copy** for the Hugo pages here that still show customers: the homepage logo carousel and case-study cards, product pages, gads pages, `/enterprise`, `/solutions`, the logo banners and walls, and the testimonial sections. Every one of them reads it through `layouts/partials/customers/data.html`. Nothing syncs it.
+pulumi/marketing-web owns the customer registry and builds `/customers/` (see "Pages that live in pulumi/marketing-web" above). `data/customers.yaml`, `data/customers_industries.yaml`, and the logos in `assets/fingerprinted/logos/customers/` are a **frozen, read-only copy** for the Hugo pages here that still show customers: the homepage logo carousel and case-study cards, product pages, `/enterprise`, `/solutions`, the logo banners and walls, and the testimonial sections. Every one of them reads it through `layouts/partials/customers/data.html`. Nothing syncs it.
 
 - **Add or change a customer in marketing-web first**, following `apps/www/docs/customers.md` there. Copy the entry and both logo files here only when a page built here needs it.
 - **Reference a customer by id, never by path.** `{{ partial "customer-logo.html" (dict "customer" "snowflake") }}`, `customer: snowflake` in a testimonial or case-study card, `logos: [snowflake, bmw]` in a carousel.
