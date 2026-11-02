@@ -533,4 +533,4 @@ But traffic to other domains should be blocked:
 
 The hub-and-spoke architecture gives us several key advantages when our organization has multiple VPCs: cost savings via centralized egress and the ability to provide traffic inspection and apply network policies in a single place. While this architecture can be difficult to implement due to the resources needed, Pulumi's approach of enabling practitioners to use real programming languages makes it easier to define complex, real-world infrastructure.
 
-If you enjoyed this content, [sign up for an upcoming workshop](https://www.pulumi.com/resources/) to learn more about how Pulumi can help you tame the complexity of the modern cloud, and join our community in the [Pulumi Community Slack](https://slack.pulumi.com/)!
+If you enjoyed this content, [sign up for an upcoming workshop](https://www.pulumi.com/events/) to learn more about how Pulumi can help you tame the complexity of the modern cloud, and join our community in the [Pulumi Community Slack](https://slack.pulumi.com/)!
