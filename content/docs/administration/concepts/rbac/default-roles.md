@@ -35,7 +35,7 @@ In other editions, the default role is `Maintainer`, and members follow it or ar
 
 ## Changing the default role
 
-You must be an organization admin, in an edition with custom roles, to change the default role.
+You must be an organization admin, in an edition with custom roles, to change the default role, except to move off `Member (legacy)`, which any edition can do.
 
 1. Navigate to **Settings** > **Access management** and select the **Roles** tab.
 1. In **Default organization role**, choose the role you want as the default.
