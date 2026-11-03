@@ -133,7 +133,7 @@ jobs:
           check_endpoint "/docs/reference/pkg/python/pulumi/" "Python SDK"
           check_endpoint "/docs/reference/pkg/dotnet/pulumi/pulumi.html" ".NET SDK"
           check_endpoint "/docs/reference/pkg/java/" "Java SDK"
-          check_endpoint "/docs/get-started/" "Getting started"
+          check_endpoint "/up/" "Get started wizard"
           check_endpoint "/docs/iac/cli/commands/" "CLI reference"
           check_endpoint "/blog/" "Blog landing"
           check_endpoint "/what-is/" "What-is landing (redirects to /topics/)"
@@ -291,7 +291,7 @@ jobs:
           echo ""
           echo "Testing legacy-path redirects (S3 routing rules + Hugo aliases)..."
           check_redirect "/docs/cli/commands/" "/docs/iac/cli/commands/" "CLI docs redirect"
-          check_redirect "/docs/iac/get-started/" "/docs/get-started/" "Getting started redirect"
+          check_redirect "/docs/get-started/" "/up/" "Getting started redirect"
           check_redirect "/tutorials/" "/dev/tutorials/" "Tutorials redirect"
           check_redirect "/templates/" "/dev/templates/" "Templates redirect"
 

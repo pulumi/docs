@@ -229,4 +229,4 @@ If you want a managed experience that handles orchestration for you, [Pulumi Neo
 
 Pick one and give it a project. You will know within an hour whether it fixes your particular failure mode.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

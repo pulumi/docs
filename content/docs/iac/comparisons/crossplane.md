@@ -146,7 +146,6 @@ The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulum
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/get-started/)
-- [Get started with Pulumi and Kubernetes](/docs/iac/get-started/kubernetes/)
+- [Get started with Pulumi](/up/)
 - [Pulumi Kubernetes provider](/registry/packages/kubernetes/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)

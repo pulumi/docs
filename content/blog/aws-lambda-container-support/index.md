@@ -506,4 +506,4 @@ Next steps:
 - Read the [Pulumi AWS Lambda guide](/docs/iac/guides/clouds/aws/lambda/) for event sources, IAM patterns, and packaging tips.
 - See [AWS Lambda SnapStart with Pulumi](/blog/aws-lambda-snapstart/) if you need faster cold starts on a ZIP-packaged Java, Python, or .NET function.
 - Cut x86 costs with [Lambda functions powered by Graviton2](/blog/aws-lambda-functions-powered-by-graviton2/).
-- [Get started](/docs/iac/get-started/aws/) with Pulumi for AWS today.
+- [Get started](/up/?cloud=aws) with Pulumi for AWS today.

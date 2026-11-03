@@ -496,7 +496,7 @@ Considerations:
 
 Organizations moving to programming-language-based IaC report deployment-time reductions ranging from roughly 70% to 99% — SANS at 70%, Unity at 80%, and Starburst at 99% (two weeks down to about three hours). These improvements typically occur when transitioning from manual processes or basic template systems to automated approaches with comprehensive testing, IDE integration, and code reusability. Results vary based on starting point, team expertise, infrastructure complexity, and specific use cases.
 
-> **Ready to get started?** [Experience Pulumi's programming language approach](/docs/get-started/) and see how familiar languages can transform your infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.
+> **Ready to get started?** [Experience Pulumi's programming language approach](/up/) and see how familiar languages can transform your infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.
 
 ### 2. Terraform
 
@@ -1404,7 +1404,7 @@ Absolutely! Many organizations use complementary tools for different aspects of 
 Pulumi + Configuration Management:
 
 - Pulumi + Ansible: Infrastructure provisioning + server configuration ([example](/blog/deploy-wordpress-aws-pulumi-ansible/))
-- Pulumi + Chef/Puppet: [Cloud resources](/docs/get-started/) + complex configuration management
+- Pulumi + Chef/Puppet: [Cloud resources](/up/) + complex configuration management
 
 Pulumi + Native Cloud Tools:
 

@@ -152,4 +152,4 @@ maintaining performance, moving the feature to a well-maintained footing, and ex
 every platform Pulumi supports.
 
 Give [`pulumi watch`](/docs/iac/cli/commands/pulumi_watch/) a try with our
-[getting started guide](/docs/get-started/)!
+[getting started guide](/up/)!

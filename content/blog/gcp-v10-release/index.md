@@ -26,7 +26,7 @@ We are happy to announce the next major version of the Pulumi Google Cloud provi
 
 Here are a few links to help you get started if you are new to Pulumi:
 
-- [Getting Started](/docs/iac/get-started/gcp/): a guided walkthrough for creating your first project
+- [Getting Started](/up/): a guided walkthrough for creating your first project
 - [Setup & Install](/registry/packages/gcp/installation-configuration/): how to install the Google Cloud provider
 - [How-to guides](/registry/packages/gcp/how-to-guides/): how to provision specific resources with the Google Cloud provider
 - [Pulumi Neo](/product/neo/): ask Pulumi Neo to help you with your project

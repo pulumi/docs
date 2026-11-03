@@ -6,7 +6,7 @@ cta:
       style: secondary
       track: footer-cta-contact-us
     - label: Get started
-      href: https://app.pulumi.com/signup
+      href: /up/
       style: primary
       track: footer-signup
 

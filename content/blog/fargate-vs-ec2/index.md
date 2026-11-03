@@ -213,7 +213,7 @@ With Pulumi, you get:
 
 Ready to streamline your EKS infrastructure management?
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}
 
 ## Why Not Both
 

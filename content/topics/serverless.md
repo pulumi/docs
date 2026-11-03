@@ -101,7 +101,7 @@ examples:
 
           exports.endpoint = endpoint.url;
       cta:
-          url: /docs/get-started/
+          url: /up/
           label: Get Started
 
     - id: code-bucket
@@ -125,7 +125,7 @@ examples:
           // Export the bucket name.
           exports.bucketName = videos.bucket;
       cta:
-          url: /docs/get-started/
+          url: /up/
           label: Get Started
 
     - id: code-table
@@ -154,7 +154,7 @@ examples:
               }).end();
           });
       cta:
-          url: /docs/get-started/
+          url: /up/
           label: Get Started
 
     - id: code-timer
@@ -193,7 +193,7 @@ examples:
               arn: fn.arn,
           });
       cta:
-          url: /docs/get-started/
+          url: /up/
           label: Get Started
 
     - id: code-queue
@@ -229,7 +229,7 @@ examples:
 
           export const queueURL = queue.id;
       cta:
-          url: /docs/get-started/
+          url: /up/
           label: Get Started
 
     - id: code-topic
@@ -257,7 +257,7 @@ examples:
               }
           });
       cta:
-          url: /docs/get-started/
+          url: /up/
           label: Get Started
 
 contact_us_form:

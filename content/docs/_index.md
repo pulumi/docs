@@ -20,7 +20,7 @@ cascade:
 link_buttons:
   primary:
     label: Get Started
-    link: /docs/get-started/
+    link: /up/
 sections:
 - type: button-cards
   heading: Capabilities

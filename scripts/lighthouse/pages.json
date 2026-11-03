@@ -10,8 +10,8 @@
         "path": "/docs/install/"
     },
     {
-        "key": "aws-get-started",
-        "name": "AWS Get Started",
-        "path": "/docs/iac/get-started/aws/"
+        "key": "concepts-resources",
+        "name": "Resources concept",
+        "path": "/docs/iac/concepts/resources/"
     }
 ]

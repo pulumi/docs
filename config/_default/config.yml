@@ -185,7 +185,7 @@ params:
         primary:
             label: "Get started"
             label_short: "Sign up"
-            href: "https://app.pulumi.com/signup"
+            href: "/up/"
         secondary:
             label: "Contact us"
             href: "/contact/?form=sales"

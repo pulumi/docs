@@ -6,7 +6,7 @@
       cta:
         primary:
           label: "Get Started"
-          href: "https://app.pulumi.com/signup"
+          href: "/up/"
 
   Usage:
     {{ partial "cta-get-started" (dict "style" "width:fit-content") }}
@@ -20,6 +20,6 @@
 {{ $class := .class | default "btn btn-primary btn-xl" }}
 {{ $style := .style | default "" }}
 {{ $label := .label | default (site.Params.cta.primary.label | default "Get Started") }}
-{{ $href := site.Params.cta.primary.href | default "/docs/get-started/" }}
+{{ $href := site.Params.cta.primary.href | default "/up/" }}
 
 <a href="{{ $href }}" class="{{ $class }}" data-role="cta-get-started"{{ with $style }} style="{{ . }}"{{ end }}>{{ $label }}</a>

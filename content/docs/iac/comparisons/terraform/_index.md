@@ -219,7 +219,7 @@ If you're already familiar with Terraform, many concepts and CLI commands have d
 
 ## Next steps
 
-* [Get started with Pulumi](/docs/get-started/)
+* [Get started with Pulumi](/up/)
 * [Pulumi HCL: run Terraform HCL on Pulumi](/docs/iac/languages-sdks/hcl/)
 * [Using Pulumi Cloud as a Terraform state backend](/docs/integrations/terraform/state-backend/)
 * [Pulumi vs. Terraform Cloud (HCP Terraform)](/docs/iac/comparisons/terraform-cloud/)

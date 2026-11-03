@@ -34,7 +34,7 @@ Before you begin, make sure you have:
 
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A GitLab project.
-1. A Pulumi program committed to that project. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
+1. A Pulumi program committed to that project. If you don't have one yet, follow the [get-started guide](/up/).
 
 ## Authenticate with Pulumi Cloud
 

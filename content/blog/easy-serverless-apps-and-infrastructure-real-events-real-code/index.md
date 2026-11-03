@@ -376,10 +376,10 @@ The simplest answer here is to create a new resource in your Pulumi
 program using `new`, as we saw above. Because Pulumi is an
 infrastructure as code platform, any resources in any cloud are
 available --
-[AWS](/docs/iac/get-started/aws/),
-[Azure](/docs/iac/get-started/azure/),
-[GCP](/docs/iac/get-started/gcp/),
-[Kubernetes](/docs/iac/get-started/kubernetes/), etc. When
+[AWS](/up/?cloud=aws),
+[Azure](/up/?cloud=azure),
+[GCP](/up/?cloud=gcp),
+[Kubernetes](/up/?cloud=kubernetes), etc. When
 you `new` one up, Pulumi understands how to provision and manage it.
 
 We saw simple examples of this earlier:

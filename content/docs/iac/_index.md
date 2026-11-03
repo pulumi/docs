@@ -14,7 +14,7 @@ description: <p>Define and manage cloud infrastructure using familiar programmin
 link_buttons:
   primary:
     label: Get Started
-    link: /docs/get-started/
+    link: /up/
 
 sections:
 - type: cards-logo-label-link

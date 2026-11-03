@@ -259,7 +259,7 @@ The following table summarizes which provider to use for common Azure tasks:
 
 ## Next steps
 
-- [Get started with Azure](/docs/iac/get-started/azure/)
+- [Get started with Azure](/up/?cloud=azure)
 - [Azure Native API reference](/registry/packages/azure-native/api-docs/)
 - [Azure Native installation and configuration](/registry/packages/azure-native/installation-configuration/)
 - [Migrate from Azure Classic to Azure Native](/registry/packages/azure-native/from-classic/)

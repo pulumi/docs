@@ -105,7 +105,7 @@ So now that we've made a case for how Pulumi can be applied to meet the most pre
 
 Stay tuned for the following series of posts where we will use Pulumi to implement the P3 reference architecture for a fully-featured internal developer platform (IDP, or IPfDPE if you prefer). That said, you may already have invested in some popular in cloud-native tools like [Backstage](https://www.pulumi.com/blog/pulumi-in-a-cloud-native-world/#the-kebap-stack-reference-architecture) or [Kubernetes](https://www.pulumi.com/blog/kubernetes-4-0-even-more-kubernetes-native/). Pulumi plays well with others, and you will be delighted to see [how you can use Pulumi to cover the gaps](https://www.pulumi.com/blog/pulumi-in-a-cloud-native-world) in the [CNCF](https://www.cncf.io/) ecosystem.
 
-And if you are already ready to get your hands on Pulumi after this introduction, feel free to [create an account](https://www.pulumi.com/signup/) and follow some of our [Getting Started](https://www.pulumi.com/docs/get-started/) guides to see how easy simple use cases are and begin to imagine how that same developer experience will scale up to your entire organization.
+And if you are already ready to get your hands on Pulumi after this introduction, feel free to [create an account](https://www.pulumi.com/signup/) and follow some of our [Getting Started](/up/) guides to see how easy simple use cases are and begin to imagine how that same developer experience will scale up to your entire organization.
 
 To learn more, you can watch the following video which provides a high level overview of how Pulumi works:
 

@@ -54,7 +54,7 @@ items:
       - columns: 2
         items:
           - label: Get started
-            href: /docs/get-started/
+            href: /up/
             description: Install Pulumi and deploy your first project in minutes
             icon: rocket-launch
             track: header-engineers-get-started

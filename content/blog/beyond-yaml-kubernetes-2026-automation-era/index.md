@@ -177,7 +177,7 @@ This hybrid approach enables modernization without disrupting existing CI/CD pip
 
 For teams preparing for the next phase of Kubernetes management in 2026:
 
-1. [Get Started with Kubernetes](https://www.pulumi.com/docs/iac/get-started/kubernetes/) to create your first Pulumi program.
+1. [Get Started with Kubernetes](/up/?cloud=kubernetes) to create your first Pulumi program.
 2. Add the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) to enable infrastructure deployments from within your clusters.
 3. Integrate GitOps workflows with Argo CD, Flux, or Jenkins X.
 4. [Apply policy guardrails](https://www.pulumi.com/docs/discovery-governance/concepts/policy-as-code/) to enforce security and compliance automatically.
@@ -201,4 +201,4 @@ Watch [*Agentic Workflows for Production-ready Kubernetes*](https://www.pulumi.c
 Kubernetes in 2026 and beyond is not just for platform engineers. It is for DevOps professionals, SREs, and cloud teams, big and small, responsible for maintaining infrastructure security, reliability, and performance.
 Pulumi unifies infrastructure as code, secrets management, policy governance, and AI automation into a single platform, enabling every team to adopt an intelligent, code-driven approach to Kubernetes that scales across workloads, clouds, and the AI-driven future.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

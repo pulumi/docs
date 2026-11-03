@@ -167,7 +167,7 @@ With Pulumi, you get:
 
 Ready to bring some sanity to your container deployment strategy? Get started with Pulumi:
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}
 
 ## The final word
 

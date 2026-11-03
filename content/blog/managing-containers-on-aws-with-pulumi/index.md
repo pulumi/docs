@@ -148,7 +148,7 @@ export const kubeconfig = cluster.kubeconfig;
 
 ## Build!
 
-Let’s put it all together for both ECS and EKS. To get started, follow the [Pulumi AWS documentation](/docs/iac/get-started/aws/) to install Pulumi, [install AWS Client](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html) set your [AWS environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and [create a new project](/docs/iac/get-started/aws/) in Typescript.
+Let’s put it all together for both ECS and EKS. To get started, follow the [Pulumi AWS documentation](/docs/integrations/clouds/aws/) to install Pulumi, [install AWS Client](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html) set your [AWS environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and [create a new project](/up/) in Typescript.
 
 ```bash
 $ mkdir get-started && cd get-started
@@ -346,4 +346,4 @@ As with the ECS example, run `pulumi up` to deploy the application. To check the
 
 ## Want to know more?
 
-Although these examples are simple, they demonstrate the basic building blocks for building, storing, and managing AWS Containers. They also show how to create ECS or EKS clusters for deploying apps. To get started with AWS and Pulumi check out the [AWS Guide](/docs/iac/get-started/aws/) for core services and the [Crosswalk for AWS guide](/docs/iac/guides/clouds/aws/) for convenience APIs that simplify deploying infrastructure as code. For a deeper dive into managing containers on AWS, check out our blogs on [ECS vs Fargate vs EKS: The Lowdown on Containers in AWS](https://www.pulumi.com/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/) and [How to Scale Your Amazon EKS Cluster: EC2, Managed Node Groups, and Fargate](/blog/aws-eks-managed-nodes-fargate).
+Although these examples are simple, they demonstrate the basic building blocks for building, storing, and managing AWS Containers. They also show how to create ECS or EKS clusters for deploying apps. To get started with AWS and Pulumi check out the [AWS Guide](/up/?cloud=aws) for core services and the [Crosswalk for AWS guide](/docs/iac/guides/clouds/aws/) for convenience APIs that simplify deploying infrastructure as code. For a deeper dive into managing containers on AWS, check out our blogs on [ECS vs Fargate vs EKS: The Lowdown on Containers in AWS](https://www.pulumi.com/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/) and [How to Scale Your Amazon EKS Cluster: EC2, Managed Node Groups, and Fargate](/blog/aws-eks-managed-nodes-fargate).

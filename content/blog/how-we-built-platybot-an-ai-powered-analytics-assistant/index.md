@@ -255,8 +255,8 @@ Accuracy is harder to quantify, but the semantic layer gives us confidence. Beca
 If you're building something similar, here are the resources that helped us:
 
 - [Cube](https://cube.dev/) for building a semantic layer on top of your data warehouse
-- [Pulumi IaC getting started](/docs/get-started/) for deploying your infrastructure
+- [Pulumi IaC getting started](/up/) for deploying your infrastructure
 - [Pulumi Community Slack](https://slack.pulumi.com) for questions and conversation
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}
 -->

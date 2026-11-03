@@ -573,7 +573,7 @@ If you want to go further with AI on Pulumi, here are some related guides:
 - [Build an AI Slack Bot on AWS Using Embedchain & Pulumi](/blog/ai-slack-bot-to-chat-using-embedchain-and-pulumi-on-aws/) — Wire an LLM into Slack as an internal assistant.
 - [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code/) — Background on the IaC approach used throughout this guide.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}
 
 ---
 

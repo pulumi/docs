@@ -239,4 +239,4 @@ Taken together, these shifts point to a new model of cloud operations that is in
 
 Organizations that invest now in **modern IaC**, **unified governance**, **reusable components**, and **policy frameworks**, all core capabilities of the Pulumi Cloud platform, will be positioned to lead in an AI-first world. The gap between teams that modernize and those that do not will widen rapidly in 2027 and beyond.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}
