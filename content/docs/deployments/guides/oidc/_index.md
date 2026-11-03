@@ -76,6 +76,10 @@ As part of the process that exchanges your deployment's OIDC token for cloud pro
 
 The Subject and custom claims are particularly useful for configuring trust relationships, as they allow you to set very fine-grained conditions for credentials.
 
+### Before you rename or delete an organization
+
+The subject, audience, and `org` claims carry the organization name, so a trust policy that matches on them follows the name rather than the organization. Pulumi frees a name as soon as the organization that held it is renamed or deleted, and a trust policy you leave behind keeps matching tokens from whichever organization registers that name next. Before you rename or delete an organization, remove or update the trust policies in each cloud provider that name it. The console lists the stacks with OIDC settings when you open the rename or delete dialog.
+
 ## Cloud Provider Setup
 
 To configure OIDC for your cloud provider with Pulumi Deployments, refer to one of these guides:

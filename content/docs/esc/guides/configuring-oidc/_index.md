@@ -45,6 +45,12 @@ Pulumi ESC signs OIDC tokens under two issuers. Each issuer has its own signing 
 
 The rest of this page, and the per-provider guides below, describe the `https://api.pulumi.com/oidc` issuer, except where a section names `fn::open::oidc`. For `fn::open::oidc` tokens, the general OIDC feature in ESC, see [Custom-audience token claims](#custom-audience-token-claims) and [Configure a relying party for custom-audience OIDC tokens](/docs/esc/guides/configuring-oidc/custom-audience/).
 
+## Before you rename or delete an organization
+
+Tokens from the `https://api.pulumi.com/oidc` issuer carry the organization name in their subject and audience, and a trust policy that matches on either claim follows the name rather than the organization. Pulumi frees a name as soon as the organization that held it is renamed or deleted, so a trust policy you leave behind keeps matching tokens from whichever organization registers that name next.
+
+Before you rename or delete an organization, remove or update the trust policies that name it in each relying party, such as AWS IAM roles, Entra federated credentials, Google Cloud workload identity pools, and Vault auth roles. The console lists the environments, stacks, customer-managed keys, and Azure DevOps integrations that mint these tokens when you open the rename or delete dialog. Tokens from [`fn::open::oidc`](/docs/esc/providers/login/oidc/) carry IDs instead of names and are not affected.
+
 ## Configuring OpenID with your cloud provider
 
 To configure OIDC for your cloud provider, refer to one of our guides:
