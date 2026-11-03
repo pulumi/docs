@@ -65,7 +65,7 @@ describe("www.pulumi.com", () => {
         describe("when an OS is selected", () => {
 
             beforeEach(() => {
-                cy.get(`pulumi-chooser[type="os"] li:last`).click();
+                cy.get(`pulumi-chooser[type="os"]`).first().find("li").last().click();
             });
 
             it("activates the selected OS", () => {
