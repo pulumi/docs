@@ -1738,6 +1738,21 @@ def test_the_oversized_ack_counts_from_any_qualifying_approver_not_just_the_firs
     v = human([approval("plain"), approval("randomer", body=ack)])
     assert _gate(v, "G5").status == "red"
 
+    # the admin fallback follows the same rules: a second admin's ack counts,
+    # and a failed ack-hunt lookup after an admin qualified doesn't unsettle G3
+    def admin(reviews, **kw):
+        return sentinel.evaluate(StubGh(
+            pr=pr_meta(labels=["review:oversized"]), files=[docs_file_substantive()],
+            comments=[card], reviews=reviews, memberships={},
+            permissions={"boss": "admin", "boss2": "admin"}, **kw), LOOSE_CONFIG)
+
+    v = admin([approval("boss"), approval("boss2", body=ack)])
+    assert _gate(v, "G3").status == "ok" and _gate(v, "G5").status == "ok"
+    v = admin([approval("boss"), approval("flaky", body=ack)],
+              permission_error_users={"flaky"})
+    assert _gate(v, "G3").status == "ok", _gate(v, "G3").message
+    assert _gate(v, "G5").status == "red"
+
 
 def test_a_zero_file_pr_does_not_manufacture_an_approver():
     """G3 reported `ok` for a PR with no changed paths — the one gate that

@@ -1656,7 +1656,10 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                         if _ack_settled():
                             break
                 except SentinelDataError as exc:
-                    errors.append(str(exc))
+                    # Same rule as the team loop: once an admin has cleared
+                    # G3, further lookups only hunt for G5's ack.
+                    if not admin_approver:
+                        errors.append(str(exc))
         # `errors and not satisfied_any`: a transient 5xx on ONE approver's
         # membership lookup used to poison a verdict another approver had
         # already settled — the gate reported `error`/action_required with a
