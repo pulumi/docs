@@ -6,7 +6,7 @@
     "seeded_at": "2026-08-15"
   },
   "packs": {
-    "cis-aws": "2026-10-27",
+    "cis-aws": "2026-11-03",
     "cis-azure": "2026-10-27",
     "cis-google-cloud": "2026-10-27",
     "cis-kubernetes-aws": "2026-10-27",
