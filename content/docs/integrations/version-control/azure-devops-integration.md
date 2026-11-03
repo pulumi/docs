@@ -246,5 +246,5 @@ If deployments aren't triggering on push or pull request events:
 |---|---|
 | "Azure DevOps not enabled for tenant" (AADSTS650052) | An Entra ID administrator must enable Azure DevOps access for your tenant |
 | Consent error mentioning `Application.ReadWrite.All` | An Entra ID administrator must grant consent for the Microsoft Graph permission on the Pulumi application |
-| "Could not sign in as application" when connecting an app you manage | Check that the app's federated credential uses exactly the issuer, subject identifier, and audience the wizard shows, and that you signed in to Azure DevOps with an account in the tenant that owns the app |
+| "could not sign in as application" when connecting an app you manage | Check that the app's federated credential uses exactly the issuer, subject identifier, and audience the wizard shows, and that you signed in to Azure DevOps with an account in the tenant that owns the app |
 | "Remove all integrations before disconnecting" | Delete all Azure DevOps integrations before disconnecting your Azure DevOps identity |
