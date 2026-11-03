@@ -593,7 +593,7 @@ Outputs:
 Resources:
     + 2 created
     ~ 1 updated
-    2 unchanged
+    1 unchanged
 
 Duration: 8s
 ```

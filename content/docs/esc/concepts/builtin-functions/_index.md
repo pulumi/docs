@@ -2,7 +2,7 @@
 title: Built-in Functions
 title_tag: Built-in Functions
 h1: Built-in Functions
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Reference for Pulumi ESC built-in functions such as fn::secret, fn::open, fn::join, and fn::toJSON, used to transform and fetch values in environments."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/
   - /docs/esc/reference/builtin-functions/

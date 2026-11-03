@@ -1141,6 +1141,11 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
             add_action({"id": "fix", "label": "apply fixes", "cmd": f"--fix {n}"})
         if (pr.get("preview") or {}).get("pages"):
             add_action({"id": "render", "label": "screenshot the preview", "cmd": f"--render {n}"})
+    # Every bot-authored row can be closed outright, whatever its verdict: a
+    # bot PR is cheap to reopen (its lane re-queues it, or the agent opens a
+    # fresh one), so closing is always a fair way to clear it off the board.
+    if author.get("type") == "bot" and not author_self:
+        add_action({"id": "close", "label": "close PR", "cmd": f"--close {n}"})
     # A workflow opened this PR, so no author will ever answer its review:
     # the send-back is unread and closing it only re-queues the same page on
     # the next run. The remaining way out is to fix the branch yourself --
@@ -1812,11 +1817,16 @@ def merge_judgments(queue: dict, judgments: dict, *, ctx: dict | None = None) ->
         if rec == "request-changes" and pr.get("author_self"):
             rejected = "request-changes: GitHub refuses a send-back on your own PR"
         elif rec in VERDICTS + ("request-changes", "close") and pr.get("verdict") == "judge":
-            if rec == "close" and not any(a["id"] == "close" for a in pr["actions"]):
+            existing = next((a for a in pr["actions"] if a["id"] == "close"), None)
+            # The bare close every bot row carries gives way to the one that
+            # closes with the judgments; a duplicate's close stays put.
+            if rec == "close" and (existing is None or existing["cmd"] == f"--close {n}"):
                 a = _close_with_judgments(pr)
-                if a:
+                if a and existing:
+                    pr["actions"][pr["actions"].index(existing)] = a
+                elif a:
                     pr["actions"].append(a)
-                else:
+                elif existing is None:
                     rejected = "close: no judgment carries an ask to close with"
             elif rec == "route" and not any(a["id"] == "route" for a in pr["actions"]):
                 targets, _ = route_targets(pr.get("domains") or [], pr.get("owners") or {}, ctx or {})

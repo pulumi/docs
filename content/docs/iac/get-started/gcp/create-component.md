@@ -2,7 +2,7 @@
 title_tag: Create a component | Google Cloud
 title: Create a component
 h1: "Get started with Pulumi and Google Cloud"
-meta_desc: This page provides an overview on how to create infrastructure abstractions with Pulumi.
+meta_desc: "Create a reusable Pulumi component that packages your Google Cloud Storage website for reuse. Part of the Pulumi Google Cloud get started guide."
 weight: 7
 menu:
     iac:

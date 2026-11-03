@@ -190,6 +190,8 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Pulumi;
 using PulumiService = Pulumi.PulumiService;
 

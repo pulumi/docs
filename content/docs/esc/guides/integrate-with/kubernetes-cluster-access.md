@@ -1,7 +1,7 @@
 ---
 title: Kubernetes Cluster Access
-title_tag: Kubernetes Cluster Access | Pulumi ESC
-h1: "Pulumi ESC: Kubernetes Cluster Access"
+title_tag: Kubernetes cluster access | Pulumi ESC
+h1: "Pulumi ESC: Kubernetes cluster access"
 meta_desc: Pulumi ESC integrates with Kubernetes to manage configurations, credentials, and kubeconfig files, with kubectl and helm, and Pulumi Kubernetes provider.
 weight: 2
 menu:
@@ -53,13 +53,22 @@ values:
         name: docker-desktop
 ```
 
+To try it, create an environment with [`pulumi env init`](/docs/iac/cli/commands/pulumi_env_init/), then open it with
+[`pulumi env edit`](/docs/iac/cli/commands/pulumi_env_edit/) and paste in the definition. You can also create and edit
+environments in the Pulumi Cloud console.
+
+```bash
+$ pulumi env init <your-project-name>/<your-environment-name>
+$ pulumi env edit <your-project-name>/<your-environment-name>
+```
+
 The Kubernetes configuration is picked up automatically by the `kubectl` command:
 
 ```bash
 $ pulumi env run <your-project-name>/<your-environment-name> -- kubectl get namespaces
 ```
 
-This command opens the environment you just created, renders the kubeconfig as a temporary file, sets
+This command opens the environment you created, renders the kubeconfig as a temporary file, sets
 the `KUBECONFIG` environment variable to refer to the file, and then runs a `kubectl` command.
 
 ### Use stack outputs to generate a kubeconfig file
@@ -103,11 +112,10 @@ values:
     kubernetes:kubeconfig: ${kubeconfig}
 ```
 
-In practice, your environment should define both a kubeconfig file and a provider configuration in order to reuse the same environment for both CLI access and Pulumi IaC.
+In practice, your environment should define both a kubeconfig file and a provider configuration to reuse the same environment for both CLI access and Pulumi IaC.
 
-Next, you will need to import your environment file into your Pulumi project. To do this,
-open your `Pulumi.<your-stack-name>.yaml` file and update it to import your environment as shown below,
-making sure to replace the value of `<your-project-name>/<your-environment-name>` with the identifier of your own environment:
+Next, import your environment into your Pulumi project. Open your `Pulumi.<your-stack-name>.yaml` file and add an
+`environment` entry, replacing `<your-project-name>/<your-environment-name>` with the identifier of your own environment:
 
 ```yaml
 environment:
@@ -117,7 +125,7 @@ environment:
 ## Authenticate to a Kubernetes cluster
 
 ESC enables you to connect to your Kubernetes cluster using credentials obtained from an ESC provider. For example,
-to connect to an AWS EKS cluster using AWS OIDC credentials returned by the [aws-login](/docs/esc/providers/login/aws-login/) provider.
+you can connect to an Amazon EKS cluster using AWS OIDC credentials returned by the [aws-login](/docs/esc/providers/login/aws-login/) provider.
 
 Kubernetes tools typically execute an external command to obtain user credentials
 (see [documentation](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins)).
@@ -126,7 +134,10 @@ up the necessary values.
 
 ### Configure AWS credentials
 
-Taking an EKS cluster as an example, your environment can produce temporary AWS credentials using the `aws-login` provider. The choice of AWS and EKS is only for the purposes of this example. Pulumi ESC has similar plugins to obtain temporary credentials for [Microsoft Azure](/docs/esc/providers/login/azure-login/) and [Google Cloud](/docs/esc/providers/login/gcp-login/).
+Taking an EKS cluster as an example, your environment can produce temporary AWS credentials using the `aws-login` provider. The choice of AWS and EKS is only for the purposes of this example. Pulumi ESC has similar providers to get temporary credentials for [Microsoft Azure](/docs/esc/providers/login/azure-login/) and [Google Cloud](/docs/esc/providers/login/gcp-login/).
+
+Save the following definition as its own environment, for example `demos/aws-access`, so that other environments can
+import it (see [Import another environment](#import-another-environment)).
 
 ```yaml
 values:
@@ -149,10 +160,10 @@ This assumes that the kubeconfig is configured appropriately to use the authenti
 
 ### Import another environment
 
-A good practice is to compose an environment by importing other environment(s). Consider encapsulating your cloud
+A good practice is to compose an environment by importing other environments. Consider encapsulating your cloud
 credentials in a separate environment file, and reference the environment as necessary.
 
-The following environment imports an environment named `aws-access` within the `demos` project to incorporate credentials, and then prepares
+The following environment imports the `demos/aws-access` environment from [Configure AWS credentials](#configure-aws-credentials) to incorporate credentials, and then prepares
 a kubeconfig for `kubectl` and for the Pulumi Kubernetes provider.
 
 ```yaml

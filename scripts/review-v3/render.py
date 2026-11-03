@@ -454,9 +454,9 @@ ACTION_HELP = {
     "stamp-merge": "Approve and squash-merge, even though the author is a person and would normally merge their own PR.",
     "stamp-no-merge": "Approve without merging, leaving the merge to someone else.",
     "request-changes": "Post a changes-requested review built from this row's findings and label it needs-author-response. Nothing merges; the author's turn.",
-    "close": ("Close this PR with a comment carrying the row's findings. A workflow opened it, so nobody is waiting on an "
-              "answer and the lane re-queues the page on its next run. Not the only option: you can fix the branch "
-              "yourself or ask Claude on the PR instead."),
+    "close": ("Close this PR with a comment carrying the row's findings. Offered on every bot-authored row: a workflow "
+              "lane re-queues the page on its next run, and an agent can open a fresh PR. On a person's PR it needs a "
+              "--reason saying why."),
     "route": "Request a review from the lane's owner and post what the queue flagged as a comment. Nothing merges, and the row moves to 'waiting on others'.",
     "unrequest": ("Remove you from this PR's requested reviewers. You were asked by name, not through a team, so "
                   "this is yours to decline. No comment is posted; whoever asked sees the request disappear."),
