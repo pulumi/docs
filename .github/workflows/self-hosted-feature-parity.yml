@@ -40,6 +40,9 @@ on:
     - cron: "45 7 * * *"
 jobs:
   update-feature-parity:
+    # The page is generated here and synced to the mirrors, so a mirror run
+    # would only open a PR against its own master that never merges.
+    if: github.repository == 'pulumi/docs'
     runs-on: ubuntu-latest
     outputs:
       has_changes: ${{ steps.commit.outputs.has_changes }}
