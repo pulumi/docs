@@ -2,7 +2,7 @@
 title: fn::final
 title_tag: fn::final
 h1: fn::final
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "The fn::final built-in function in Pulumi ESC marks a value as final so child environments cannot override it. See the syntax and an example."
 aliases:
   - /docs/esc/environments/syntax/builtin-functions/fn-final/
 menu:

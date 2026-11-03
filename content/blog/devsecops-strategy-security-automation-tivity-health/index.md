@@ -130,5 +130,5 @@ Tivity Health's journey with Pulumi is a powerful example of how the right tool,
 To learn more about Pulumi and how it can transform your software development and infrastructure management:
 
 - Get started with [Pulumi Tutorials](https://www.pulumi.com/tutorials/)
-- Attend an [upcoming workshop](https://www.pulumi.com/resources/#upcoming)
+- Attend an [upcoming workshop](https://www.pulumi.com/events/#upcoming)
 - Try out the [Pulumi Neo](https://www.pulumi.com/product/neo/) code assistant to accelerate your infrastructure as code journey

@@ -47,7 +47,7 @@ A template is a Pulumi project that has the required `Pulumi.yaml` file describi
 
 A large number of templates are provided by Pulumi in [https://github.com/pulumi/examples](https://github.com/pulumi/examples) and [https://github.com/pulumi/templates](https://github.com/pulumi/templates).
 
-To learn more about building your own custom templates, see [Custom Templates](/docs/idp/concepts/templates).
+To learn more about building your own custom templates, see [Custom Templates](/docs/idp/concepts/organization-templates/).
 
 ### Testing
 

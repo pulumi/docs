@@ -65,7 +65,7 @@ The whole spec fits on a page, and that's deliberate. The announcement names thr
 
 The pushback writes itself: there is almost nothing here. Folder indexes and five suggested frontmatter fields, on top of a pattern the community already had. True. Also the point.
 
-The standards that stick are embarrassingly small. [MCP](/docs/ai/mcp-server/) didn't model your tools; it standardized the socket they plug into. `AGENTS.md` fixed nothing but a filename, and that was enough for [Neo to read the same conventions file as every other agent](/blog/pulumi-neo-now-supports-agentsmd/). [Agent Skills](/docs/ai/skills/) gave procedure a place to live, and docs sites settled on [/llms.txt](/llms.txt) for published content. Knowledge was the layer still missing its boring little standard. Whether OKF specifically is the one that survives matters less than the shape it commits to: markdown, frontmatter, git. Every other layer of the agent stack already landed there, so that bet is safe.
+The standards that stick are embarrassingly small. [MCP](/docs/ai/guides/set-up-mcp-server/) didn't model your tools; it standardized the socket they plug into. `AGENTS.md` fixed nothing but a filename, and that was enough for [Neo to read the same conventions file as every other agent](/blog/pulumi-neo-now-supports-agentsmd/). [Agent Skills](/docs/ai/concepts/agent-skills/) gave procedure a place to live, and docs sites settled on [/llms.txt](/llms.txt) for published content. Knowledge was the layer still missing its boring little standard. Whether OKF specifically is the one that survives matters less than the shape it commits to: markdown, frontmatter, git. Every other layer of the agent stack already landed there, so that bet is safe.
 
 ## Knowledge as code
 
@@ -102,7 +102,7 @@ timestamp: 2026-07-01T09:30:00Z
 ---
 ```
 
-Now the runbook names the exact resource it operates on. An agent planning a change to that database can walk from the URN to the runbook to the decision record that explains the constraint, before it proposes anything. In the loop post I said [skills](/docs/ai/skills/) are intent written down, the conventions an agent reads instead of guessing. A knowledge bundle is the other half: experience written down. Tools give the loop hands, skills give it habits, and the bundle is what it gets to remember.
+Now the runbook names the exact resource it operates on. An agent planning a change to that database can walk from the URN to the runbook to the decision record that explains the constraint, before it proposes anything. In the loop post I said [skills](/docs/ai/concepts/agent-skills/) are intent written down, the conventions an agent reads instead of guessing. A knowledge bundle is the other half: experience written down. Tools give the loop hands, skills give it habits, and the bundle is what it gets to remember.
 
 Before writing any of that down, I ran the test. A fresh agent got two inputs, the spec and this bundle, and one question: which services touch the payments database, and how do I rotate its credentials without downtime? It read six files and answered correctly, down to why rotating a second time too soon is the dangerous move. What sold me was the file it didn't read. It left the CNI decision record closed, because the cross-links mark that page as a cluster concern, not a database one.
 

@@ -486,10 +486,10 @@ outputs:
 
 {{< /chooser >}}
 
-If you want strongly typed SDKs for your Terraform modules, you can generate them with [`pulumi package add`](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+If you want strongly typed SDKs for your Terraform modules, you can generate them with [`pulumi package add`](/docs/integrations/terraform/modules/).
 
 ## Conclusion
 
 This has been a brief survey of how we have mapped Terraform's semantics onto Pulumi's engine. Providers are bridged into Pulumi, resource options are translated or handled directly in the Pulumi HCL interpreter, and modules are components... in any language.
 
-If you want to try it yourself, start with the [get-started guide](/docs/iac/get-started/terraform/). And if you find a program that works in OpenTofu but not in Pulumi, that's a bug: [file an issue](https://github.com/pulumi/pulumi-hcl/issues) and we would love to fix it.
+If you want to try it yourself, start with the [get-started guide](/docs/integrations/terraform/). And if you find a program that works in OpenTofu but not in Pulumi, that's a bug: [file an issue](https://github.com/pulumi/pulumi-hcl/issues) and we would love to fix it.

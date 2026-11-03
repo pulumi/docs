@@ -72,6 +72,7 @@ TOP_LEVEL_KEYS = frozenset({
     "schema", "teams", "bots", "matrix", "overrides", "staging_evidence",
     "claims_overlay", "approval", "external_contributors", "sla",
     "author_staleness", "waive", "not_governed", "link_only", "bot_approvers",
+    "stale_prs",
 })
 STAGING_EVIDENCE_KEYS = frozenset({"paths"})
 OVERRIDE_KEYS = frozenset({"paths", "role", "why"})
@@ -79,6 +80,7 @@ CLAIMS_OVERLAY_KEYS = frozenset({"add"})
 EXTERNAL_CONTRIBUTORS_KEYS = frozenset({"skip_gates"})
 SLA_ENTRY_KEYS = frozenset({"business_days", "escalate_to"})
 AUTHOR_STALENESS_KEYS = frozenset({"warn_days", "close_days"})
+STALE_PRS_KEYS = frozenset({"close_days", "notice_days", "extended_label", "extended_close_days"})
 WAIVE_KEYS = frozenset({"label", "log_prefix"})
 NOT_GOVERNED_KEYS = frozenset({"authors", "author_label_pairs"})
 AUTHOR_LABEL_PAIR_KEYS = frozenset({"author", "label"})
@@ -143,6 +145,9 @@ class Config:
     # Optional (absent == empty): the bot identities whose approval clears G3
     # on one automated lane each. See BOT APPROVERS in the yaml header.
     bot_approvers: list = field(default_factory=list)
+    # Optional (absent == empty, and stale-pr-sweep.py refuses to run): the
+    # no-movement close policy for every open PR. See STALE PRS in the yaml.
+    stale_prs: dict = field(default_factory=dict)
     warnings: list[str] = field(default_factory=list)
 
 
@@ -452,6 +457,38 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                 f"close_days ({close_days})"
             )
 
+    # ---- stale_prs (optional) ---------------------------------------------
+    stale_prs = raw.get("stale_prs", {})
+    if stale_prs is None:
+        stale_prs = {}
+    if not isinstance(stale_prs, dict):
+        errors.append("stale_prs must be a mapping when present")
+        stale_prs = {}
+    elif stale_prs:
+        _check_unknown_keys(stale_prs, STALE_PRS_KEYS, "stale_prs", errors)
+        days = {}
+        for key in ("close_days", "notice_days", "extended_close_days"):
+            value = stale_prs.get(key)
+            if not isinstance(value, int) or isinstance(value, bool) or value <= 0:
+                errors.append(f"stale_prs.{key} must be a positive integer, got {value!r}")
+            else:
+                days[key] = value
+        if not _is_nonempty_str(stale_prs.get("extended_label")):
+            errors.append("stale_prs.extended_label must be a non-empty string")
+        if "close_days" in days and "notice_days" in days and days["notice_days"] >= days["close_days"]:
+            errors.append(
+                f"stale_prs.notice_days ({days['notice_days']}) must be less than "
+                f"close_days ({days['close_days']})"
+            )
+        if (
+            "close_days" in days and "extended_close_days" in days
+            and days["extended_close_days"] <= days["close_days"]
+        ):
+            errors.append(
+                f"stale_prs.extended_close_days ({days['extended_close_days']}) must be greater "
+                f"than close_days ({days['close_days']}) -- the label only ever buys more time"
+            )
+
     # ---- waive ----------------------------------------------------------
     waive = raw.get("waive")
     if not isinstance(waive, dict):
@@ -560,6 +597,7 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         link_only=link_only,
         approval=approval_cfg,
         bot_approvers=bot_approvers,
+        stale_prs=stale_prs,
         warnings=warnings,
     )
     return config, errors, warnings
@@ -895,6 +933,8 @@ def self_test() -> int:
               all(cell[ct] != "none" for cell in real.matrix.values() for ct in CHANGE_TYPES))
         check("real config lists every PR-opening bot",
               {"pulumi-bot", "workprentice[bot]"} <= set(real.bots))
+        check("real config carries a stale_prs policy",
+              real.stale_prs.get("close_days", 0) > 0 and bool(real.stale_prs.get("extended_label")))
     except RoutingConfigError as e:
         check(f"real .github/review-routing.yml loads ({e.errors})", False)
 
@@ -1123,6 +1163,26 @@ def self_test() -> int:
     bad["author_staleness"] = {"warn_days": 21, "close_days": 14}
     _, errs, _ = validate_raw(bad)
     check("warn_days >= close_days rejected", any("must be less than" in e for e in errs))
+
+    ok_stale = {"close_days": 30, "notice_days": 7, "extended_label": "long-running",
+                "extended_close_days": 90}
+    good = copy.deepcopy(_CANNED_CONFIG)
+    good["stale_prs"] = dict(ok_stale)
+    cfg, errs, _ = validate_raw(good)
+    check("valid stale_prs accepted", errs == [] and cfg.stale_prs["close_days"] == 30)
+    check("absent stale_prs is empty", config.stale_prs == {})
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["stale_prs"] = {**ok_stale, "extended_close_days": 30}
+    _, errs, _ = validate_raw(bad)
+    check("stale_prs extended window <= base window rejected",
+          any("extended_close_days" in e and "greater" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["stale_prs"] = {**ok_stale, "notice_days": 30}
+    _, errs, _ = validate_raw(bad)
+    check("stale_prs notice_days >= close_days rejected",
+          any("stale_prs.notice_days" in e for e in errs))
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)

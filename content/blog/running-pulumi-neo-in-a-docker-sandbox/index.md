@@ -58,7 +58,7 @@ social:
 
 The more an agent can do on its own, the more infrastructure work you can hand it, as long as its limits hold when it gets something wrong. In April, they didn't hold for PocketOS. A coding agent on a routine staging task deleted the company's production volume in 9 seconds. According to [founder Jer Crane's account](https://www.theregister.com/software/2026/04/27/cursor-opus-agent-snuffs-out-startups-production-database/5224442), it used an API token it found in an unrelated file. Its explanation afterward: "I guessed that deleting a staging volume via the API would be scoped to staging only. I didn't verify." Railway recovered the data two days later.
 
-The agent had been told not to. "System prompts are advisory, not enforcing," Crane wrote afterward. If the prompt can't stop an agent, the limits have to sit where the agent can't negotiate with them. That was the premise of Neo in a Docker Sandbox, the workshop Adam Gordon Bell and I ran with Mike Coleman from Docker. So we gave [Pulumi Neo](/docs/ai/neo/) two layers. The first is a Docker Sandbox. Neo runs in its own microVM and reaches only the files and hosts we allow. The Pulumi token gets injected by a proxy on the way out, so Neo never holds the real credential. The second is Pulumi itself, which decides what Neo may change and when it has to ask. With both in place, you can let Neo work without approving every step.
+The agent had been told not to. "System prompts are advisory, not enforcing," Crane wrote afterward. If the prompt can't stop an agent, the limits have to sit where the agent can't negotiate with them. That was the premise of Neo in a Docker Sandbox, the workshop Adam Gordon Bell and I ran with Mike Coleman from Docker. So we gave [Pulumi Neo](/docs/ai/concepts/neo/) two layers. The first is a Docker Sandbox. Neo runs in its own microVM and reaches only the files and hosts we allow. The Pulumi token gets injected by a proxy on the way out, so Neo never holds the real credential. The second is Pulumi itself, which decides what Neo may change and when it has to ask. With both in place, you can let Neo work without approving every step.
 
 For why YOLO mode belongs in a sandbox at all, see [my August post](/blog/sandboxing-coding-agents-yolo-mode/).
 
@@ -142,11 +142,11 @@ Pulumi answers who, what, when, and what stops it. The sandbox answers where, an
 
 ## Pulumi controls that live outside the prompt
 
-[`pulumi neo`](/docs/ai/neo/pulumi-cli/) runs Neo in your terminal (Essentials, Pro, and Enterprise editions). Its controls live in Pulumi:
+[`pulumi neo`](/docs/ai/concepts/neo/neo-in-the-cli/) runs Neo in your terminal (Essentials, Pro, and Enterprise editions). Its controls live in Pulumi:
 
-1. **Neo runs as you.** It uses your `pulumi login` and [role-based access control (RBAC)](/docs/ai/neo/permissions/) permissions, and its file and shell tool calls run locally, inside the sandbox.
+1. **Neo runs as you.** It uses your `pulumi login` and [role-based access control (RBAC)](/docs/ai/concepts/neo/permissions/) permissions, and its file and shell tool calls run locally, inside the sandbox.
 1. **Approval mode sets when it asks.** `--approval-mode manual`, the default, asks before every tool call, `balanced` only before `pulumi up`, and `auto` never.
-1. **Read-only blocks Pulumi Cloud writes only.** With `--permission-mode read-only`, Neo can't trigger writes such as `pulumi up`, but it can still open ESC environments and reach the cloud accounts behind them. To [keep it out of an environment](/docs/ai/neo/permissions/#esc-secrets-and-downstream-cloud-access), don't grant your user or role `environment:open` on it.
+1. **Read-only blocks Pulumi Cloud writes only.** With `--permission-mode read-only`, Neo can't trigger writes such as `pulumi up`, but it can still open ESC environments and reach the cloud accounts behind them. To [keep it out of an environment](/docs/ai/concepts/neo/permissions/#esc-secrets-and-downstream-cloud-access), don't grant your user or role `environment:open` on it.
 1. **`protect: true` guards against accidental deletes.** A deployment that would delete a [protected resource](/docs/iac/concepts/resources/options/protect/) fails. `protect: false`, `pulumi state unprotect`, or `--ignore-protect` still gets past it.
 1. **Pulumi Policies blocks unsafe changes.** Mandatory policies in a [preventative policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) (Pro and Enterprise editions) run on every `pulumi preview` and `pulumi up`, Neo's included, and stop a violating change before anything reaches the cloud. The workshop's pack included `s3-no-public-acl`.
 1. **Pulumi ESC replaces stored cloud keys.** It mints short-lived AWS credentials through [OpenID Connect (OIDC)](/docs/esc/guides/configuring-oidc/aws/) for each run. They still reach the CLI, so they limit a leak's damage rather than prevent it.
@@ -207,7 +207,7 @@ Inside the sandbox, I think auto approval mode is defensible for throwaway work.
 
 In an informal poll at the end of the workshop, 8 of the 11 people who voted said they don't use a sandbox for their agents. If that's you, start closed: pick [Locked Down](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/) when the first start asks for a network preset. Read the denials in the terminal dashboard (`sbx` with no subcommand) or with `sbx policy log`, then approve them or add rules with `sbx policy allow network <host>`.
 
-On the Pulumi side, start Neo with [balanced approval](/docs/ai/neo/permissions/) near production, so it works freely but asks before `pulumi up`, and back the stack with an [ESC environment that uses OIDC](/docs/esc/guides/configuring-oidc/aws/).
+On the Pulumi side, start Neo with [balanced approval](/docs/ai/concepts/neo/permissions/) near production, so it works freely but asks before `pulumi up`, and back the stack with an [ESC environment that uses OIDC](/docs/esc/guides/configuring-oidc/aws/).
 
 {{< blog/card "/events/neo-in-a-docker-sandbox/" >}}
 

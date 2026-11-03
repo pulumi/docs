@@ -35,7 +35,7 @@ The bar we set was that both developers and coding agents should be able to gues
 
 Branches in the tree are now singular nouns like `stack`, `env`, `org`, and `deployment`. Leaves are now verbs from a canonical vocabulary — `list`, `get`, `set`, `new`, `edit`, `remove` — and they mean the same thing wherever they're used. `edit` always means _modify an existing thing_. Wherever the old vocabulary differed, though, the old name still works: `ls`, `rm`, `update`, and `open` are all aliased to preserve backward compatibility.
 
-For the most part, product names have also been replaced with familiar nouns. Users (human or otherwise) don't think in product names; they think in terms of resources, stacks, environments. For example, take [Pulumi ESC](/esc/): the product may be named ESC (and for a while the command was too), but nobody thinks _I need to initialize a new ESC_ — they think _I need to create a new environment_. The command is therefore `pulumi env new`, with `esc init` preserved as an alias to avoid disrupting anyone's existing workflows.
+For the most part, product names have also been replaced with familiar nouns. Users (human or otherwise) don't think in product names; they think in terms of resources, stacks, environments. For example, take [Pulumi ESC](/product/secrets-management/): the product may be named ESC (and for a while the command was too), but nobody thinks _I need to initialize a new ESC_ — they think _I need to create a new environment_. The command is therefore `pulumi env new`, with `esc init` preserved as an alias to avoid disrupting anyone's existing workflows.
 
 ```bash
 $ pulumi env new my-project my-env

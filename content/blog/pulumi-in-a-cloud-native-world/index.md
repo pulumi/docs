@@ -501,4 +501,4 @@ Continue to upskill and learn about platform engineering:
 
 * Read [Pulumi Patterns and Practices (P3): A Pulumi-based reference architecture for large-scale organizations](https://www.pulumi.com/blog/pulumi-patterns-and-practices/)
 * [Learn how to build Developer Portals with Pulumi](/docs/idp/concepts/).
-* Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).
+* Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/events/#upcoming).
