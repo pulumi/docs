@@ -90,7 +90,7 @@ const kibana = new helm.v2.Chart("kibana", {
 ```
 
 Check out the [Kubernetes
-overview](/up/) docs, the [API
+overview](/docs/integrations/clouds/kubernetes/) docs, the [API
 documentation](/registry/packages/kubernetes/api-docs)
 and the [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
 GitHub project for additional details.

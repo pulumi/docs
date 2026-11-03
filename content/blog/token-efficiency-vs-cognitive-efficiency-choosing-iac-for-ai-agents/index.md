@@ -194,6 +194,6 @@ Pulumi covers the full iteration loop, from generation through repair to refacto
 
 ## Get started
 
-Ready to explore how AI agents work with Pulumi? Check out [Pulumi AI](/ai/) to see LLM-powered infrastructure generation in action, or get started with [Pulumi's documentation](/up/).
+Ready to explore how AI agents work with Pulumi? Check out [Pulumi AI](/ai/) to see LLM-powered infrastructure generation in action, or [get started with Pulumi](/up/).
 
 Join the conversation in the [Pulumi Community Slack](https://slack.pulumi.com/) or [Pulumi Community Discussions](https://github.com/pulumi/pulumi/discussions).
