@@ -1,21 +1,21 @@
 ---
-title_tag: "Dependency Caching | Pulumi Deployments"
+title_tag: "Dependency caching | Pulumi Deployments"
 meta_desc: Speed up Pulumi Deployments by caching downloaded dependencies between runs on Pulumi-managed workflow runners
-title: "Dependency Caching"
-h1: "Dependency Caching"
+title: "Dependency caching"
+h1: "Dependency caching"
 menu:
   deployments:
-    name: Dependency Caching
+    name: Dependency caching
     parent: deployments-concepts-settings
     identifier: deployments-concepts-settings-dependency-caching
     weight: 90
 ---
 
-When using Pulumi-managed workflow runners, you can speed up deployments with dependency caching.
+When using Pulumi-managed workflow runners, you can speed up deployments with dependency caching. Cache entries belong to individual stacks.
 
 Dependency caching covers more than your language packages. A cache entry bundles three things a deployment would otherwise download every run: your language dependencies (including the Pulumi SDKs, which are cached as ordinary package-manager packages), the Pulumi [resource plugins](/docs/iac/concepts/plugins/) your program uses, and any [policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/). In practice the plugins are usually the largest and slowest to fetch, so caching them is where most of the time savings come from.
 
-The mechanism is straightforward. On the first deployment, the runner detects these items — using your lock files for the language dependencies — archives them, and stores the archive in blob storage. On later deployments, the runner pulls that archive down and unpacks it, saving the time it would otherwise spend downloading everything again. When your dependencies change, the runner invalidates the old cache and creates a new one.
+When caching is enabled, the runner uses lock files to calculate a cache key. An update can save a new entry in blob storage. Later deployments of the same stack can restore that entry instead of downloading the dependencies again. Changed lock files select a different key, which needs its own entry.
 
 {{% notes type="info" %}}
 Dependency caching is unavailable on stacks that use a [customer-managed runner pool](/docs/administration/concepts/customer-managed-runners/#not-supported-on-customer-managed-runners), because you already control the lifetime and contents of those runners.
@@ -31,16 +31,18 @@ Dependency caching is off by default. You can enable it per stack:
 
 Dependency caching is not available on stacks backed by Terraform state.
 
-Because caching is a per-stack setting but the cache itself is shared across the project, stacks in the same project can have it enabled and disabled independently:
+Cache entries are scoped per stack. Stacks in the same project can enable or disable caching independently:
 
-- A stack with caching **disabled** runs no cache steps at all. It neither reads from nor writes to the project's cache, so it can't benefit from it and can't disturb it.
-- A stack with caching **enabled** reads and writes the shared project cache, keyed by the contents of its lock files.
-- Two caching-enabled stacks with identical lock files share the same cache entries and warm the cache for each other.
+- A stack with caching **disabled** runs no cache steps. It neither restores nor saves cache entries.
+- A stack with caching **enabled** can restore and populate its own cache, keyed by the contents of its lock files.
+- Two stacks with identical lock files have separate cache entries. Each stack must populate its own entry before it can restore it.
 - Disabling caching on a stack does not delete anything. [Clearing the cache](#clearing-the-cache) is a separate, project-wide action.
+
+Previews and drift-detection runs can restore existing entries, but they do not save new ones. Use an update to populate an entry.
 
 ## What gets cached
 
-In addition to the dependencies below, every cache entry includes the downloaded Pulumi plugins (`~/.pulumi/plugins`) and policy packs (`~/.pulumi/policies`). Language SDKs are not handled specially — they are cached as part of your normal package manager dependencies.
+Every cache entry includes the dependencies below, downloaded Pulumi plugins (`~/.pulumi/plugins`), and policy packs (`~/.pulumi/policies`). Language SDKs are not handled specially — they are cached as part of your normal package manager dependencies.
 
 | Runtime | Detected using | Cached directories |
 |---------|----------------|--------------------|
@@ -92,18 +94,18 @@ If a deployment isn't getting faster, the most common cause is a `Skipping cachi
 
 ## Clearing the cache
 
-Pulumi invalidates the cache automatically whenever your lock files change, so clearing it by hand is rarely necessary. If you need to force a cold rebuild, you can:
+Changed lock files select a different cache key, so clearing the cache by hand is rarely necessary. If you need to force a cold rebuild, you can:
 
 - **Pulumi Cloud**: use the **Clear cache** action on the stack's **Deployments** page.
 - **REST API**: send `DELETE /api/stacks/{organization}/{project}/{stack}/deployments/cache`.
 
-Both clear the cache for the **entire project**, not just the selected stack. Every stack in the project will rebuild its cache on its next deployment.
+Both actions clear cache entries for **all stacks in the project**. Each stack must populate its own entries again.
 
 ## Limits and constraints
 
-- Caches are shared at the project level, so all stacks within a project can share the same cache. Caches are fully isolated and never shared between organizations.
+- Cache entries are isolated per stack. Stacks cannot share entries, even within the same project or organization.
 - Cache archives are limited to 5 GB compressed. A larger archive is skipped with a warning rather than failing the deployment.
 - **A cache failure never fails a deployment.** Every problem with caching is a warning and a skip, which is why an unexpectedly slow deployment is worth checking against the log lines above.
-- Cache keys are matched exactly. Unlike some CI systems, there is no partial or fallback key match, so any change to a lock file produces a completely cold cache.
+- Cache keys are matched exactly. Unlike some CI systems, there is no partial or fallback key match, so any change to a lock file produces a cold cache.
 - Caches that go unread for roughly a month are evicted. A cache in regular use stays warm.
-- The **Save cache** step does not run when a `destroy` operation is configured to delete the stack afterward.
+- The **Save cache** step does not run for previews or drift detection, or when a `destroy` operation deletes the stack afterward.
