@@ -87,7 +87,7 @@ To remove a provider, select **Remove**, then **Confirm remove**. If you remove 
 
 Your model provider bills you for requests served through BYOK. Pulumi does not charge Neo tokens for those requests. Other Pulumi usage, such as deployments that Neo starts, remains subject to your edition's pricing and contract.
 
-BYOK does not change how Agent workers are billed. When an agent task runs on an Agent worker, the worker's run time is billed as [workflow minutes](/pricing/), with or without BYOK.
+BYOK does not change how Agent workers are billed. When an agent task runs on an Agent worker, the worker's run time is now billed as [workflow minutes](/pricing/), with or without BYOK.
 
 ## Next steps
 
