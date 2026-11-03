@@ -2,7 +2,7 @@
 title: fn::validate
 title_tag: fn::validate
 h1: fn::validate
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Use fn::validate in Pulumi ESC to check a value against a JSON Schema and block saving environments that do not conform. See syntax and examples."
 aliases:
   - /docs/esc/environments/syntax/builtin-functions/fn-conform/
   - /docs/esc/environments/syntax/builtin-functions/fn-validate/

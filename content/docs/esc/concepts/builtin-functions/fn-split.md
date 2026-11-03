@@ -2,7 +2,7 @@
 title: fn::split
 title_tag: fn::split
 h1: fn::split
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Use fn::split in Pulumi ESC to split a string into a list of strings with a delimiter. Secret inputs yield a secret result. See syntax and examples."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-split/
   - /docs/esc/reference/builtin-functions/fn-split/

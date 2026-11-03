@@ -2,7 +2,7 @@
 title: fn::join
 title_tag: fn::join
 h1: fn::join
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Use fn::join in Pulumi ESC to join a list of strings with a delimiter into a single string. Secret inputs yield a secret result. See syntax and examples."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-join/
   - /docs/esc/reference/builtin-functions/fn-join/
