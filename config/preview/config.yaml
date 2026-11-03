@@ -10,4 +10,4 @@
 # id in config/production/config.yaml.
 params:
     consentProvider: onetrust
-    oneTrustDomainScript: 01a130f0-6a68-7792-88bc-358bc07fe42b-test
+    oneTrustDomainScript: 01a090cf-8fe9-7448-94a1-4b90a7c501d4-test

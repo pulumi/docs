@@ -42,9 +42,12 @@
          Auto-Blocking stays off; consent is enforced by explicit checks in the
          site code via runWithPulumiConsent. The domain script id comes from
          params.oneTrustDomainScript: config/production has the www.pulumi.com
-         id and config/preview the test id. -->
+         id and config/preview the test id. Its scripts load without CORS and
+         its JSON with CORS, so each kind of connection gets a preconnect. -->
+    <link rel="preconnect" href="https://cdn.cookielaw.org" />
     <link rel="preconnect" href="https://cdn.cookielaw.org" crossorigin />
     <script
+        async
         src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
         type="text/javascript"
         charset="UTF-8"
