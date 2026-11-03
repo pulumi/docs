@@ -21,9 +21,9 @@ since launching:
     [Getting Started guide](/up/).
 - [A native Kubernetes provider with 100% Kubernetes API/version coverage.](/blog/pulumi-a-better-way-to-kubernetes)
 - A steady stream of improvements across
-    [AWS](/up/),
-    [Azure](/up/), and
-    [Google Cloud](/up/) providers.
+    [AWS](/docs/integrations/clouds/aws/),
+    [Azure](/docs/integrations/clouds/azure/), and
+    [Google Cloud](/docs/integrations/clouds/gcp/) providers.
 - Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.
 - Over 20 additional providers, including
     [CloudFlare](https://github.com/pulumi/pulumi-cloudflare),

@@ -222,7 +222,7 @@ sync.
 Pulumi is open source and free to use. For more information on Getting
 Started, check out:
 
-1. [AWS QuickStart](/up/)
+1. [AWS QuickStart](/up/?cloud=aws)
 2. [Pulumi Crosswalk for AWS Announcement](/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws/)
 3. [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS](/blog/mapbox-iot-as-code-with-pulumi-crosswalk-for-aws/)
 4. [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more](/docs/iac/guides/clouds/aws/)

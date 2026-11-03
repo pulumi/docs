@@ -115,7 +115,7 @@ As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --f
 
 Don't worry though - "manual" imports using Pulumi is still rather easy to perform, albeit a bit time consuming. Here's how I did it.
 
-I started by testing out the [AWS getting started guide](/up/) to get a feel for how Pulumi worked. This was a great move and I recommend everyone else to do the same.
+I started by testing out the [AWS getting started guide](/up/?cloud=aws) to get a feel for how Pulumi worked. This was a great move and I recommend everyone else to do the same.
 
 I was then ready to start importing my existing resources. The general workflow was to look at my existing Terraform code, rewrite it using Pulumi, and then import the existing resources. It was a bit time consuming in the beginning, but I got a lot faster at it after a few hours.
 

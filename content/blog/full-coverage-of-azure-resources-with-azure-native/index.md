@@ -11,7 +11,7 @@ category: product
 
 Last September, we [announced the beta release of Pulumi Azure NextGen](/blog/announcing-nextgen-azure-provider/): a new Microsoft Azure provider for Pulumi that combines same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) with the excellent Pulumi experience you know and love, including version-less resources, auto-naming, and auto-location.
 
-Today, we’re excited to announce that this new provider is now the default way to manage Azure resources with Pulumi. We’re also excited to announce its final name: the native Azure provider for Pulumi, or “Azure-Native” for short. You can get started with the new provider using our newly-updated [getting started guide](/up/).
+Today, we’re excited to announce that this new provider is now the default way to manage Azure resources with Pulumi. We’re also excited to announce its final name: the native Azure provider for Pulumi, or “Azure-Native” for short. You can get started with the new provider using our newly-updated [getting started guide](/up/?cloud=azure).
 
 <!--more-->
 

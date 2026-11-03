@@ -177,7 +177,7 @@ This hybrid approach enables modernization without disrupting existing CI/CD pip
 
 For teams preparing for the next phase of Kubernetes management in 2026:
 
-1. [Get Started with Kubernetes](/up/) to create your first Pulumi program.
+1. [Get Started with Kubernetes](/up/?cloud=kubernetes) to create your first Pulumi program.
 2. Add the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) to enable infrastructure deployments from within your clusters.
 3. Integrate GitOps workflows with Argo CD, Flux, or Jenkins X.
 4. [Apply policy guardrails](https://www.pulumi.com/docs/discovery-governance/concepts/policy-as-code/) to enforce security and compliance automatically.

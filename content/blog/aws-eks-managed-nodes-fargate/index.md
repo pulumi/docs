@@ -346,6 +346,6 @@ In this article, we've seen the full range of EKS cluster management options:
 
 We're excited to offer support for this full range of options the same week of AWS re:Invent, including not just the building block support, but the simpler interface provided by [our open source EKS package](https://github.com/pulumi/pulumi-eks).
 
-To get started with Pulumi and kick the tires with EKS today, check out our [Getting Started guide](/up/). There are both [AWS](/up/) and [Kubernetes](/up/) versions available.
+To get started with Pulumi and kick the tires with EKS today, check out our [Getting Started guide](/up/). There are both [AWS](/up/?cloud=aws) and [Kubernetes](/up/?cloud=kubernetes) versions available.
 
 Happy Fargating!

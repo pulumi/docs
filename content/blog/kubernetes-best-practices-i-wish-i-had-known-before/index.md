@@ -305,7 +305,7 @@ This is what regulators and customers ask for in 2026 — Executive Order 14028,
 - **Schedule** non-prod clusters off overnight and on weekends.
 - **Spot/preemptible nodes** for fault-tolerant workloads; use Karpenter's consolidation to compact bin-packing.
 - **Show back / charge back** by namespace and label using [OpenCost](https://www.opencost.io/) or [Kubecost](https://www.kubecost.io/). Without per-team attribution, no team owns cost.
-- **Provision the underlying cluster with IaC** — see [Pulumi for Kubernetes](/up/) — so node types, autoscaling limits, and reserved capacity are reviewable artifacts. Pulumi's [hidden-cost analysis](/blog/hidden-costs-of-infrastructure-management/) walks through where the money actually goes.
+- **Provision the underlying cluster with IaC** — see [Pulumi for Kubernetes](/up/?cloud=kubernetes) — so node types, autoscaling limits, and reserved capacity are reviewable artifacts. Pulumi's [hidden-cost analysis](/blog/hidden-costs-of-infrastructure-management/) walks through where the money actually goes.
 
 ## 19. Why should you treat Kubernetes clusters as cattle, not pets?
 

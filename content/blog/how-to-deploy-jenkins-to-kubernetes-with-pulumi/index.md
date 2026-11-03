@@ -45,7 +45,7 @@ code as an included class.
 
 Follow the steps in
 [Pulumi Installation and Setup](/docs/install/) and
-[Configuring Pulumi Kubernetes](/up/)
+[Configuring Pulumi Kubernetes](/docs/integrations/clouds/kubernetes/)
 to get setup with Pulumi and Kubernetes.
 
 > *Note*: The code in this repo assumes you are deploying to a cluster

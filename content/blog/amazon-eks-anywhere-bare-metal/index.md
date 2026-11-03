@@ -71,7 +71,7 @@ const page = new eksa.metal.Cluster("cluster", {
 
 To use the component, take the following steps:
 
-1. Make sure you’ve followed the steps to [setup Pulumi and AWS](/up/)
+1. Make sure you’ve followed the steps to [setup Pulumi and AWS](/docs/integrations/clouds/aws/)
 
 1. Grab the EKS-A component and example code on [Pulumiverse](https://github.com/pulumiverse/pulumi-aws-eksa).
 

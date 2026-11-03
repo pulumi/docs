@@ -14,7 +14,7 @@ meta_desc: "Learn about some of Pulumi's progress rounding out our .NET and Go S
 
 ## .NET
 
-[Our .NET SDK](/docs/iac/languages-sdks/dotnet/) has come a long way. We recently tidied up the API surface area to feel more familiar to .NET developers, added C# getting started guides for [AWS](/up/), [Azure](/up/), [GCP](/up/), and [Kubernetes](/up/), and added many new examples. We also closed the gap on core Pulumi features missing from the initial release, including [aliases](/docs/iac/concepts/resources/#aliases), [transformations](/docs/iac/concepts/resources/#transformations), [StackReference](/docs/iac/concepts/stacks/#stackreferences), and .NET versions of the [Kubernetes](https://github.com/pulumi/pulumi-kubernetes), [Docker](https://github.com/pulumi/pulumi-docker), and [Terraform remote state](https://github.com/pulumi/pulumi-terraform) packages.
+[Our .NET SDK](/docs/iac/languages-sdks/dotnet/) has come a long way. We recently tidied up the API surface area to feel more familiar to .NET developers, added C# getting started guides for [AWS](/up/?cloud=aws), [Azure](/up/?cloud=azure), [GCP](/up/?cloud=gcp), and [Kubernetes](/up/?cloud=kubernetes), and added many new examples. We also closed the gap on core Pulumi features missing from the initial release, including [aliases](/docs/iac/concepts/resources/#aliases), [transformations](/docs/iac/concepts/resources/#transformations), [StackReference](/docs/iac/concepts/stacks/#stackreferences), and .NET versions of the [Kubernetes](https://github.com/pulumi/pulumi-kubernetes), [Docker](https://github.com/pulumi/pulumi-docker), and [Terraform remote state](https://github.com/pulumi/pulumi-terraform) packages.
 
 The remaining areas to improve for the .NET SDK include making the API documentation available in C# (details are below in the "still to come" section), migrating to .NET Core 3.1, and enabling you to test your infrastructure using familiar C# tools more easily.
 
@@ -24,7 +24,7 @@ We completely overhauled [our Go SDK](/docs/iac/languages-sdks/go/) to be more i
 
 The major change in the Go SDK is that we previously used `map[string]interface{}` types in many places instead of properly-typed data structures. No more! Instead, you now get strong typing for all Go resource APIs across all providers, including AWS, Azure, GCP, and Kubernetes. The improvements here are huge, as you can see [in this before/after PR](https://github.com/pulumi/examples/commit/b88f385a8951f81fe41cb4f40eb940b074e9263b#diff-07803f7bc3bff97871e6e3eea7287cb8). Examples and documentation have been updated to this new style.
 
-[GoDocs are now here](/docs/reference/pkg?language=golang ) for all of our providers and we've also added Go versions to our getting started guides for [AWS](/up/), [Azure](/up/), and [GCP](/up/), and have many more improvements on the way.
+[GoDocs are now here](/docs/reference/pkg?language=golang ) for all of our providers and we've also added Go versions to our getting started guides for [AWS](/up/?cloud=aws), [Azure](/up/?cloud=azure), and [GCP](/up/?cloud=gcp), and have many more improvements on the way.
 
 We've also added support for core Pulumi features, including [aliases](/docs/iac/concepts/resources/#aliases) and [transformations](/docs/iac/concepts/resources/#transformations). A few remain to flesh out like adding Go support for our Kubernetes, Docker, and Terraform remote state packages. The biggest change to come is retiring Dep in favor of Go modules everywhere.
 
