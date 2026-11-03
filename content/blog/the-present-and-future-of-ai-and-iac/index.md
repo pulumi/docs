@@ -68,7 +68,7 @@ Tightening the feedback loop for tools like Pulumi AI will continue to enable AI
 |:-:|
 | *An early prototype of interactive AI infrastructure development* |
 
-AI-based tooling will also extend well beyond just creating and managing infrastructure, most importantly to the operational tooling used to understand, support, and diagnose that infrastructure, including policy enforcement across cost, compliance, and security. Giving AI-based tools and agents the ability to access things like cloud [resource search](/blog/resource-search/), the ability to run operational CLI commands inside target [environments](/blog/environments-secrets-configurations-management/), [policy definition](/crossguard/), and the opportunity to trigger [deployment workflows](/blog/pulumi-deployments/) will empower these tools to support and ultimately automated broad classes of cloud infrastructure management tasks.
+AI-based tooling will also extend well beyond just creating and managing infrastructure, most importantly to the operational tooling used to understand, support, and diagnose that infrastructure, including policy enforcement across cost, compliance, and security. Giving AI-based tools and agents the ability to access things like cloud [resource search](/blog/resource-search/), the ability to run operational CLI commands inside target [environments](/blog/environments-secrets-configurations-management/), [policy definition](/product/discovery-governance/), and the opportunity to trigger [deployment workflows](/blog/pulumi-deployments/) will empower these tools to support and ultimately automated broad classes of cloud infrastructure management tasks.
 
 ## Infrastructure as Code transforming AI
 

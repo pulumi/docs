@@ -53,7 +53,7 @@ If Pulumi Registry doesn’t yet have a native provider for your preferred cloud
 
 We also invite the entire Pulumi community to contribute new Providers to Pulumi Registry. You can enable your customers to manage your cloud service or cloud resources using Pulumi’s modern infrastructure-as-code by authoring a Native Provider, or by bridging an existing Terraform provider into the Pulumi ecosystem, and publishing it to the Pulumi Registry. We’ve also seen passionate customers and community members author Native Providers for cloud services with public, well-known APIs! Pulumi Registry will enable fully self-service publishing in 2022, but until then, we’re happy to work with you to publish your Provider.
 
-👉 [Build and publish a Pulumi Provider](/docs/iac/packages-and-automation/pulumi-packages/authoring/)
+👉 [Build and publish a Pulumi Provider](/docs/iac/guides/building-extending/packages/publishing-packages/)
 
 ## Pulumi Components: Prebuilt IaC for Faster Cloud Deployments
 
@@ -324,7 +324,7 @@ class MyStack : Stack
 
 Want to share your own best practices and cloud configurations with the Pulumi community? You can author a Pulumi Component and publish it to Pulumi Registry. We’ll have fully self-service publishing in 2022, but until then, we’re happy to work with you to publish your Component. You can get started using the link below.
 
-👉 [Build and publish a Pulumi Component](/docs/iac/packages-and-automation/pulumi-packages/authoring/)
+👉 [Build and publish a Pulumi Component](/docs/iac/guides/building-extending/packages/publishing-packages/)
 
 ## What's Next for Pulumi Registry?
 

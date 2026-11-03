@@ -22,7 +22,7 @@ Cloud computing’s greatest strength and weakness is the proliferation of a mas
 
 ## Cloud Security Posture
 
-AWS likes to talk about a [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/), their friendly way of saying, “we’ve got our stuff covered, and if you’re compromised, it’s almost certainly your fault.”  They have built up practices and recommendations, like the AWS Well-Architected Framework. Their pillars of architecture philosophy give you your best chances to securely use their resources (following these recommendations is easy with [Crosswalk for AWS](/docs/iac/clouds/aws/guides/) from Pulumi). Increasing high-profile attacks against private and open-source software supply chains have developers increasingly on high alert and conscious of incorporating more security into their DevOps.
+AWS likes to talk about a [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/), their friendly way of saying, “we’ve got our stuff covered, and if you’re compromised, it’s almost certainly your fault.”  They have built up practices and recommendations, like the AWS Well-Architected Framework. Their pillars of architecture philosophy give you your best chances to securely use their resources (following these recommendations is easy with [Crosswalk for AWS](/docs/iac/guides/clouds/aws/) from Pulumi). Increasing high-profile attacks against private and open-source software supply chains have developers increasingly on high alert and conscious of incorporating more security into their DevOps.
 
 Risks associated with maintaining a good cloud security posture extend to your infrastructure as code with Pulumi and it’s important to leverage the features and capabilities of the Pulumi platform along with good industry practices to secure your code, configuration and secrets.
 
@@ -30,11 +30,11 @@ Risks associated with maintaining a good cloud security posture extend to your i
 
 Pulumi has three levels to consider access for: users, teams and organizations.
 
-[Organizations](/docs/administration/organizations-teams/organizations/) are a space for you to collaborate on shared projects and stacks.  You may have multiple cloud accounts from a single cloud provider or multiple cloud provider accounts tied to an organization in any combination.  It’s recommended that you segment organizations and cloud accounts to limit access and the “blast radius” of security or financial events that may occur within them.
+[Organizations](/docs/administration/concepts/organizations/) are a space for you to collaborate on shared projects and stacks.  You may have multiple cloud accounts from a single cloud provider or multiple cloud provider accounts tied to an organization in any combination.  It’s recommended that you segment organizations and cloud accounts to limit access and the “blast radius” of security or financial events that may occur within them.
 
-[Teams](/docs/pulumi-cloud/access-management/teams/) are groups of users within an organization with specific permissions to stacks.  Consider using these to break up access to environments such as dev, staging and production.  You should look to mirror your code repository or IAM teams/groups as much as possible.
+[Teams](/docs/administration/concepts/rbac/teams/) are groups of users within an organization with specific permissions to stacks.  Consider using these to break up access to environments such as dev, staging and production.  You should look to mirror your code repository or IAM teams/groups as much as possible.
 
-[Users](/docs/administration/organizations-teams/accounts/) are tied to personal identities, often with an identity provider and should be used wherever a human is using Pulumi.  These identities should not be used for any systems, tools or pipeline-based provisioning.
+[Users](/docs/administration/concepts/accounts/) are tied to personal identities, often with an identity provider and should be used wherever a human is using Pulumi.  These identities should not be used for any systems, tools or pipeline-based provisioning.
 
 ## Security Best Practices with Pulumi
 
@@ -64,7 +64,7 @@ Leveraging [Automation API](/docs/iac/concepts/automation-api/) as the programma
 
 ### Log Everything
 
-Track key system events such as user and pipeline activity, attempted and restricted activity, and identity and access control changes. Use Pulumi audit logs to simplify this process out of the box. If applicable, we would suggest automatically exporting [Pulumi Audit Logs](/docs/administration/security-compliance/audit-logs/#automated-export) to your systems.
+Track key system events such as user and pipeline activity, attempted and restricted activity, and identity and access control changes. Use Pulumi audit logs to simplify this process out of the box. If applicable, we would suggest automatically exporting [Pulumi Audit Logs](/docs/administration/concepts/audit-logs/#automated-export) to your systems.
 
 ### Use Tokens
 
@@ -80,7 +80,7 @@ Scoped to the [stack access](/docs/administration/concepts/access-tokens/#team-a
 
 #### Personal Access Tokens
 
-Scoped to [individual users](/docs/pulumi-cloud/accounts#access-tokens). Used whenever a developer deploys from their local machine.  Be sure your users are part of a Pulumi team to simplify their role-based access within the platform.
+Scoped to [individual users](/docs/administration/concepts/accounts/#access-tokens). Used whenever a developer deploys from their local machine.  Be sure your users are part of a Pulumi team to simplify their role-based access within the platform.
 
 ### Rotate the Tokens
 

@@ -10,7 +10,7 @@ meta_desc: "See how Pulumi Crosswalk for AWS lets you use infrastructure as code
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 
 Amazon Elastic Container Registry ([ECR](https://aws.amazon.com/ecr/))
@@ -24,7 +24,7 @@ need to operate your own container repositories or worry about scaling
 the underlying infrastructure. ECR hosts your images in a highly
 available and scalable architecture, allowing you to reliably deploy
 containers for your applications. In this article, we'll see how
-[Pulumi Crosswalk for AWS](/docs/iac/clouds/aws/guides/) lets you use
+[Pulumi Crosswalk for AWS](/docs/iac/guides/clouds/aws/) lets you use
 infrastructure as code to easily build, publish, and pull from private
 ECR repositories.
 <!--more-->
@@ -209,7 +209,7 @@ manually going and cleaning up the stale garbage in the future.
 
 ## Next Steps
 
-We've shown how [Pulumi Crosswalk for AWS](/docs/iac/clouds/aws/guides/)
+We've shown how [Pulumi Crosswalk for AWS](/docs/iac/guides/clouds/aws/)
 can create a tight developer inner
 loop for building, publishing, and consuming Docker images, using
 private ECR repositories, while keeping all your ECS or EKS services and
@@ -225,7 +225,7 @@ Started, check out:
 1. [AWS QuickStart](/up/)
 2. [Pulumi Crosswalk for AWS Announcement](/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws/)
 3. [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS](/blog/mapbox-iot-as-code-with-pulumi-crosswalk-for-aws/)
-4. [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more](/docs/iac/clouds/aws/guides/)
+4. [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more](/docs/iac/guides/clouds/aws/)
 
 We think there's no easier way to do containers in a tight inner
 development loop, and we hope you agree!

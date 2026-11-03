@@ -9,7 +9,7 @@ meta_desc: "Use Pulumi's infrastructure-as-code approach to simplify working wit
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 {{% notes type="info" %}}
 An updated breakdown of when to prefer Fargate and when EC2 can be found in  [Fargate vs EC2](https://www.pulumi.com/blog/fargate-vs-ec2/)
