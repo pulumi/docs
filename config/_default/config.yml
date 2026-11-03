@@ -173,6 +173,13 @@ markup:
       xhtml: false
 
 params:
+    # Consent provider for cookie/consent management. "segment" uses the custom
+    # Segment consent manager (theme/src/ts/consent-manager); "onetrust" loads
+    # the OneTrust SDK and bridges its consent decision into Segment and the
+    # directly-loaded integrations. The default is "segment"; production and
+    # preview override it to "onetrust", each with its own domain script id.
+    consentProvider: segment
+
     # CTA configuration
     cta:
         primary:

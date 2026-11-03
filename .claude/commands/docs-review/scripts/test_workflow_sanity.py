@@ -127,12 +127,14 @@ def test_retired_review_shapes_reach_only_the_redirect():
         assert f"!contains(github.event.comment.body, '{tag}')" in chat["if"]
     steps = {s.get("id"): s for s in chat["steps"] if s.get("id")}
     assert "route" in steps and "command-gate.py" in steps["route"]["run"]
+    assert "command-gate.py\" legacy" in steps["route"]["run"] or '"$GATE" legacy' in steps["route"]["run"], \
+        "the chat lane must leave `@claude /update-review` to the redirect (#22286)"
     claude_step = next(s for s in chat["steps"] if s.get("name") == "Run Claude Code")
     assert "steps.route.outputs.skip != 'true'" in claude_step["if"]
 
     redirect = yaml.safe_load((_WF_DIR / "review-command-redirect.yml").read_text())
     job = next(iter(redirect["jobs"].values()))
-    for tag in ("#update-review", "#new-review"):
+    for tag in ("#update-review", "#new-review", "/update-review", "/new-review"):
         assert tag in job["if"]
     assert "claude[bot]" in job["if"], "the review's own cards must never be answered"
     runs = "\n".join(s.get("run") or "" for s in job["steps"])

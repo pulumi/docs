@@ -95,11 +95,11 @@ The panel discussed key strategies, challenges, and pillars of successful platfo
 
 [Platform engineering teams](https://www.pulumi.com/blog/the-guide-platform-engineering-idp-steps-best-practices/) comprise multiple professionals with many responsibilities and focus areas. According to our panel of experts, the core pillars of platform engineering include:
 
-- **[Developer Experience (DevEx)](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: Provide developers with the tools, frameworks, and abstractions they need to be productive and proactive without getting stuck in infrastructure or operational concerns.
+- **[Developer Experience (DevEx)](https://www.pulumi.com/blog/developer-experience-business-critical/)**: Provide developers with the tools, frameworks, and abstractions they need to be productive and proactive without getting stuck in infrastructure or operational concerns.
 - **[Reliability and Scalability](https://www.pulumi.com/blog/pulumi-patterns-and-practices/#an-effective-internal-developer-platform)**: Ensure that the platform and infrastructure can support the organization's needs, with the ability to scale up or down as required.
 - **[Security and Compliance](/docs/discovery-governance/concepts/policy-as-code/)**: Embed robust, accessible security and compliance frameworks into the development lifecycle while making it easy for developers to adhere to these policies.
 - **[Automation and Tooling](/docs/iac/concepts/automation-api/)**: Leverage [Infrastructure as Code (IaC)](https://www.pulumi.com/product/infrastructure-as-code/) and automation to enforce standardized processes and consistency and reduce cognitive load and manual effort.
-- **[Observability and Monitoring](https://www.pulumi.com/product/pulumi-insights/)**: Provide visibility into the platform's health and performance, delivering actionable insights that allow teams to identify and resolve issues quickly.
+- **[Observability and Monitoring](https://www.pulumi.com/product/discovery-governance/)**: Provide visibility into the platform's health and performance, delivering actionable insights that allow teams to identify and resolve issues quickly.
 
 These pillars work together to create a platform that empowers developers to innovate and deliver value to the organization and customers while maintaining the necessary controls and safeguards.
 
@@ -140,7 +140,7 @@ By automating these tasks, platform engineering teams can reduce the risk of hum
 Effective security requires visibility into the health and performance of the platform. Platform engineering teams should invest in robust observability and monitoring solutions to:
 
 - [Detect and respond](https://www.pulumi.com/blog/drift-detection/) to security incidents and anomalies in real-time
-- [Gain insights](https://www.pulumi.com/product/pulumi-insights/) into the behavior and usage patterns of the platform
+- [Gain insights](https://www.pulumi.com/product/discovery-governance/) into the behavior and usage patterns of the platform
 - [Identify and address](https://www.pulumi.com/blog/unified-programmatic-approach-infrastructure-management-bmw-using-pulumi/#policy-enforcement-ensuring-compliance-and-security) vulnerabilities or misconfigurations proactively
 
 By integrating security-focused monitoring and alerting into the platform, organizations can quickly identify and mitigate threats while also providing developers with the necessary context to understand and address security-related issues.

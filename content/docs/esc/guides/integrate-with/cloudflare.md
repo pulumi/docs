@@ -190,7 +190,7 @@ Learn how to:
 In addition to the [prerequisites above](#prerequisites), ensure you have:
 
 - installed [Pulumi CLI](https://www.pulumi.com/docs/install/)
-- installed a [Pulumi-supported programming language](https://www.pulumi.com/docs/languages-sdks/)
+- installed a [Pulumi-supported programming language](https://www.pulumi.com/docs/iac/languages-sdks/)
 
 {{< notes type="info" >}}
 **New to Pulumi IaC?** Complete the [Getting Started tutorial](https://developers.cloudflare.com/pulumi/tutorial/hello-world/).

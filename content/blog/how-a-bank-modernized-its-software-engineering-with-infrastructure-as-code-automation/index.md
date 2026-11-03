@@ -51,7 +51,7 @@ As an FDIC-governed financial institution, it is imperative for the bank to main
 
 Embracing an infrastructure as code approach would allow them to automate building and deploying their cloud infrastructure, eliminate infrastructure provisioning as a bottleneck, and empower developers to self-service infrastructure and increase productivity.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Q63ZaX340M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< youtube-iframe src="https://www.youtube.com/embed/Q63ZaX340M4" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true" >}}
 
 ## Background
 
@@ -93,6 +93,6 @@ Pulumi also gave the bank total confidence in being able to rapidly recover its 
 
 The DevOps and development teams at Washington Trust Bank rely on Pulumi as a key tool in their cloud modernization, while maintaining high security and quality standards. Pulumi played a vital role in streamlining their cloud infrastructure management, enabling their developers to be more productive, and improving the security and reliability of its cloud infrastructure.
 
-[Sign up for a free account](https://app.pulumi.com/signup) to try deploying infrastructure on any cloud, or [register for an upcoming workshop](https://www.pulumi.com/resources/#upcoming) to learn more about how Pulumi can help you ship cloud infrastructure faster and more safely.
+[Sign up for a free account](https://app.pulumi.com/signup) to try deploying infrastructure on any cloud, or [register for an upcoming workshop](https://www.pulumi.com/events/#upcoming) to learn more about how Pulumi can help you ship cloud infrastructure faster and more safely.
 
 [Go to more case studies](/customers/)

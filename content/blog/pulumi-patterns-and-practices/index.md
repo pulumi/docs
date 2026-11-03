@@ -77,13 +77,13 @@ You can use Pulumi programs to capture ***all*** of the necessary resources for 
 
 ### Visibility
 
-Every resource under management by Pulumi is visible within [Pulumi Insights](https://www.pulumi.com/product/pulumi-insights/). From this single-pane-of-glass interface, you can search for resources across all cloud environments. [Pulumi Copilot](https://www.pulumi.com/product/neo/) provides a state-of-the-art AI chat interface to ask complex questions and get immediate results. Pulumi Insight's analytics gives you the ability to identify anomalies or trends in resource usage and dig into cost, security, and compliance concerns.
+Every resource under management by Pulumi is visible within [Pulumi Insights](https://www.pulumi.com/product/discovery-governance/). From this single-pane-of-glass interface, you can search for resources across all cloud environments. [Pulumi Copilot](https://www.pulumi.com/product/neo/) provides a state-of-the-art AI chat interface to ask complex questions and get immediate results. Pulumi Insight's analytics gives you the ability to identify anomalies or trends in resource usage and dig into cost, security, and compliance concerns.
 
 {{< figure src="https://www.pulumi.com/uploads/pulumi-insights-search.gif" caption="Figure: Search for any resource with Pulumi Insights">}}
 
 ### Security and Compliance
 
-In the modern parlance, when you say DevOps, you mean DevSecOps. Pulumi is designed to be secure by default. Pulumi Cloud offers full [role-based access control (RBAC) functionality](/docs/administration/concepts/rbac/teams/) including deep integration with [GitHub teams](/docs/administration/concepts/rbac/teams/#github-based-teams) and [SAML-based SSO](/docs/administration/guides/saml/), managed secrets and flexibly-defined secure environments with [Pulumi ESC](https://www.pulumi.com/product/secrets-management/), and policy-as-code provided by [Pulumi Crossguard](https://www.pulumi.com/crossguard/). Most importantly all of these features are deeply integrated across the platform, creating an air-tight system with all the guardrails you need for managing security and access.
+In the modern parlance, when you say DevOps, you mean DevSecOps. Pulumi is designed to be secure by default. Pulumi Cloud offers full [role-based access control (RBAC) functionality](/docs/administration/concepts/rbac/teams/) including deep integration with [GitHub teams](/docs/administration/concepts/rbac/teams/#github-based-teams) and [SAML-based SSO](/docs/administration/guides/saml/), managed secrets and flexibly-defined secure environments with [Pulumi ESC](https://www.pulumi.com/product/secrets-management/), and policy-as-code provided by [Pulumi Crossguard](https://www.pulumi.com/product/discovery-governance/). Most importantly all of these features are deeply integrated across the platform, creating an air-tight system with all the guardrails you need for managing security and access.
 
 ### Auditability
 
@@ -95,7 +95,7 @@ Every action a user takes in Pulumi can be tracked via the [audit log](/docs/adm
 
 Probably the most compelling aspect of Pulumi is the developer experience. [Developers love Pulumi](https://www.pulumi.com/testimonials/), because they get to use their preferred tools. General purpose programming languages, visual IDEs, command-line tools, and products with an API-driven architecture are what developers want, and it's what Pulumi delivers in spades.
 
-With Pulumi templates and custom internal component resources in place, [developers can drive their own DevOps](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/#how-does-devex-intersect-with-devops), provisioning their own infrastructure resources and managing their own deployments directly, reducing bottlenecks in platform teams. Product engineering teams can self-service with a stream-lined workflow that stays compliant with company policy by default. Deep in the code of their favorite programming languages, your developers will never even know they are following the company rules.
+With Pulumi templates and custom internal component resources in place, [developers can drive their own DevOps](https://www.pulumi.com/blog/developer-experience-business-critical/#how-does-devex-intersect-with-devops), provisioning their own infrastructure resources and managing their own deployments directly, reducing bottlenecks in platform teams. Product engineering teams can self-service with a stream-lined workflow that stays compliant with company policy by default. Deep in the code of their favorite programming languages, your developers will never even know they are following the company rules.
 
 {{< figure src="pulumi-ide.png" caption="Figure: Using C# to write a Pulumi program in VS Code">}}
 
@@ -110,13 +110,7 @@ And if you are already ready to get your hands on Pulumi after this introduction
 To learn more, you can watch the following video which provides a high level overview of how Pulumi works:
 
 <div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
-    <iframe
-        src="//www.youtube.com/embed/Q8tw6YTD3ac?rel=0"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-        allowfullscreen=""
-        title="Introduction to Pulumi in Three Minutes"
-        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>">
-    </iframe>
+    {{< youtube-iframe src="//www.youtube.com/embed/Q8tw6YTD3ac?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="Introduction to Pulumi in Three Minutes" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>" allowfullscreen="true" >}}
 </div>
 
 ## Pulumi Cloud

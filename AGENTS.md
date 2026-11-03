@@ -6,7 +6,7 @@
 
 > **Note:** For comprehensive details on the build system, deployment infrastructure, and CI/CD workflows, see `BUILD-AND-DEPLOY.md`. This file is large, so read only specific sections as needed to conserve tokens.
 
-> **Never push directly to `master`.** Always create a branch and open a PR. Direct pushes to `master` bypass review and CI checks. (Server-side branch protection is planned but not yet in place.)
+> **Never push directly to `master`.** Always create a branch and open a PR. Direct pushes to `master` bypass review and CI checks. (Branch protection on `master` requires the build and Sentinel checks, but it exempts repo admins, so it won't stop an admin's direct push.)
 
 Agents must use these exact commands:
 
@@ -103,6 +103,8 @@ Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi
 - **`/up`**: the getting-started wizard.
 - **`/topics`**: the explainer section that replaced `/what-is`, built from `apps/www/src/content/topics/`. `scripts/redirects/topics-redirects.txt` 301s the old `/what-is/` URLs (and the legacy URLs those pages carried) straight to their `/topics/` pages.
 - **`/customers`**: the customer board, its industry pages, and every case study, built from `apps/www/src/data/customers/` and `apps/www/src/content/customers/`. `scripts/redirects/customers-redirects.txt` 301s the old `/case-studies/` URLs. This repo keeps a frozen copy of the registry for the pages that still show customers (see "Customers" below).
+- **`/pulumi-for-startups`, `/extend-trial`, `/confirmation`**: landing pages built from `apps/www/src/content/section-pages/`. `scripts/redirects/landing-page-redirects.txt` 301s the old `/microsoft-for-startups/` alias. HubSpot workshop forms redirect to `/confirmation/workshop/` and the Pulumi Cloud trial banner links to `/extend-trial/?org=…&email=…`, so neither URL can change.
+- **`/gads/infrastructure-as-code`**: the Google Ads landing page, built from `apps/www/src/content/section-pages/gads/infrastructure-as-code.yaml`. The other Google Ads pages are retired; `scripts/redirects/gads-redirects.txt` 301s them to `/`, and `content/gads/_index.md` keeps `/gads/` itself redirecting to `/`.
 
 When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list. marketing-web's sitemap at `/sitemap-www-index.xml` (listed in `layouts/robots.txt`) lists every page it builds that isn't noindex, so ship the proxy path in the same release as the page.
 
@@ -204,7 +206,7 @@ A scheduled workflow (`.github/workflows/blog-review-index.yml`) reviews a few e
 
 ## Customers
 
-pulumi/marketing-web owns the customer registry and builds `/customers/` (see "Pages that live in pulumi/marketing-web" above). `data/customers.yaml`, `data/customers_industries.yaml`, and the logos in `assets/fingerprinted/logos/customers/` are a **frozen, read-only copy** for the Hugo pages here that still show customers: the homepage logo carousel and case-study cards, product pages, gads pages, `/enterprise`, `/solutions`, the logo banners and walls, and the testimonial sections. Every one of them reads it through `layouts/partials/customers/data.html`. Nothing syncs it.
+pulumi/marketing-web owns the customer registry and builds `/customers/` (see "Pages that live in pulumi/marketing-web" above). `data/customers.yaml`, `data/customers_industries.yaml`, and the logos in `assets/fingerprinted/logos/customers/` are a **frozen, read-only copy** for the Hugo pages here that still show customers: the homepage logo carousel and case-study cards, product pages, `/enterprise`, `/solutions`, the logo banners and walls, and the testimonial sections. Every one of them reads it through `layouts/partials/customers/data.html`. Nothing syncs it.
 
 - **Add or change a customer in marketing-web first**, following `apps/www/docs/customers.md` there. Copy the entry and both logo files here only when a page built here needs it.
 - **Reference a customer by id, never by path.** `{{ partial "customer-logo.html" (dict "customer" "snowflake") }}`, `customer: snowflake` in a testimonial or case-study card, `logos: [snowflake, bmw]` in a carousel.
@@ -318,7 +320,7 @@ Before starting any documentation task, check `.claude/commands/` for a relevant
 
 ## PR Lifecycle for AI-Assisted Contributions
 
-Open as draft, mark ready when done. Each ready-transition fires one full review; thrashing draft → ready → draft burns budget. Leave AI authoring trailers in commits (`Co-Authored-By: Claude ...`) — stripping them is bad form and changes nothing about which review runs. Don't delete `<!-- CLAUDE_REVIEW N/M -->` comments — the re-entrant pipeline edits them in place. A small push that only touches lines carrying outstanding findings refreshes the stale review automatically; otherwise, comment `/update-review` (fix-response / dispute / re-verify) or transition through draft and back to ready. Review commands are slash commands at the start of a line (`/update-review`, `/new-review`, `/social-review`, and `/oversized-ack` in an approval; reference: `CONTRIBUTING.md` §Review commands). `@claude` is for ad-hoc help, never for refreshing the review, and the retired `@claude … #update-review` shape runs nothing.
+Open as draft, mark ready when done. Each ready-transition fires one full review; thrashing draft → ready → draft burns budget. Leave AI authoring trailers in commits (`Co-Authored-By: Claude ...`) — stripping them is bad form and changes nothing about which review runs. Don't delete `<!-- CLAUDE_REVIEW N/M -->` comments — the re-entrant pipeline edits them in place. A small push that only touches lines carrying outstanding findings refreshes the stale review automatically; otherwise, comment `/update-review` (fix-response / dispute / re-verify) or transition through draft and back to ready. Review commands are slash commands at the start of a line (`/update-review`, `/new-review`, `/social-review`, and `/oversized-ack` in an approval; reference: `CONTRIBUTING.md` §Review commands). `@claude` is for ad-hoc help, never for refreshing the review, and the retired `@claude … #update-review` shape runs nothing (neither does `@claude /update-review`; both get a paste-ready reply).
 
 **Shipping a PR includes finishing its review.** A PR is done when every finding the pre-merge review raised — 🚨 blockers, ⚠️ low-confidence findings, and ✏️ style suggestions alike — has been fixed, refuted, deferred to a filed issue, or explicitly accepted with a stated reason. Clearing 🚨 and stopping is not a shortcut; it is the failure mode the pipeline's own outcome telemetry measures (`ignored_low_confidence` in `scrape-review-outcomes.py`).
 

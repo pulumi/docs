@@ -10,7 +10,7 @@ meta_desc: "In February, Pulumi & Learning Machine hosted a webinar with AWS Far
 
 Pulumi is hosting a webinar with AWS Fargate **on
 February 5th, 10AM PST** (register
-[here](https://www.pulumi.com/resources/#upcoming)).
+[here](https://www.pulumi.com/events/#upcoming)).
 We'll be chatting about how to implement cloud native infrastructure
 across your organization using [AWS and Pulumi](/docs/iac/clouds/aws/guides/): general purpose programming
 languages to deliver everything from VMs to Kubernetes to Serverless.
@@ -18,7 +18,7 @@ languages to deliver everything from VMs to Kubernetes to Serverless.
 
 ## Register Now
 
-[Registration link](https://www.pulumi.com/resources/#upcoming).
+[Registration link](https://www.pulumi.com/events/#upcoming).
 Specifically, you will learn:
 
 - How using general-purpose programming languages provides familiar
@@ -44,7 +44,7 @@ techniques.
 
 This webinar will be useful to developers, System Architects, IT
 managers and DevOps managers. (register
-[here](https://www.pulumi.com/resources/#upcoming)).
+[here](https://www.pulumi.com/events/#upcoming)).
 
 Ask any questions you have to our speakers, Trevor Hansen (Startup
 Partner Solutions Architect), Luke Hoban (CTO, Pulumi), and Kim Hamilton

@@ -67,6 +67,6 @@ An agent that runs the CLI still needs somewhere to store state. [Agent accounts
 ## Next steps
 
 - [Agent Skills](/docs/ai/concepts/agent-skills/) — teach your agent proven Pulumi workflows it can apply on top of the CLI.
-- [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/): query Pulumi Cloud and the Pulumi Registry through the [Model Context Protocol](/what-is/mcp-for-infrastructure-as-code/).
+- [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/): query Pulumi Cloud and the Pulumi Registry through the [Model Context Protocol](/topics/agentic-infrastructure/mcp-for-infrastructure-as-code/).
 - [Agent accounts](/docs/administration/concepts/agent-accounts/) — ephemeral Pulumi Cloud accounts provisioned automatically for agents.
 - [Pulumi CLI reference](/docs/iac/cli/) — the full command set behind everything above.

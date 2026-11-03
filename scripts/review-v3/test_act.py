@@ -128,10 +128,11 @@ def test_approval_body_follows_message_templates_and_footer_rule():
 
 
 def test_plan_guards():
-    env = Env([stampable(1), stampable(2, mergeable_state="dirty"), stampable(3, labels=["review:trivial"])])
+    env = Env([stampable(1), stampable(2, mergeable_state="dirty"), stampable(3, labels=["review:trivial"]),
+               stampable(4, author="alice", author_type="User")])
     try:
         for bad, msg in ((args(stamp="3"), "not stamp"), (args(stamp="2", force=True), "blocked"), (args(stamp="9"), "not in the queue"),
-                         (args(close=1), "--superseded-by"), (args(fix=[1]), "nothing to apply"), (args(), "nothing to do"),
+                         (args(close=4), "--superseded-by"), (args(fix=[1]), "nothing to apply"), (args(), "nothing to do"),
                          (args(route=["1:"]), "no target")):
             try:
                 act.plan(env.queue, bad)
@@ -1346,5 +1347,19 @@ def test_unrequest_is_a_decision():
         raise AssertionError("expected refusal: two decisions on one PR")
     except act.ActError as exc:
         assert "contradict" in str(exc)
+    finally:
+        env.close()
+
+
+def test_a_bot_row_closes_without_a_reason():
+    """Every bot row carries a bare close on the board, so the plan has to
+    accept one: an agent bot's close writes its own comment, like a
+    workflow's."""
+    env = Env([stampable(1)])
+    try:
+        assert any(a["cmd"] == "--close 1" for a in env.queue["prs"][0]["actions"])
+        p = act.plan(env.queue, args(close=1))
+        step = next(s for s in p.steps if s.kind == "close")
+        assert step.args["reason"].startswith("Closing this out")
     finally:
         env.close()

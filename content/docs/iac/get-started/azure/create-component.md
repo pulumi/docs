@@ -2,7 +2,7 @@
 title_tag: Create a component | Azure
 title: Create a component
 h1: "Get started with Pulumi and Azure"
-meta_desc: This page provides an overview on how to create infrastructure abstractions with Pulumi.
+meta_desc: "Create a reusable Pulumi component that packages your Azure static website so you can stamp out copies. Part of the Pulumi Azure get started guide."
 weight: 7
 menu:
     iac:

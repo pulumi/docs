@@ -22,5 +22,15 @@ export const marketingWebPaths = [
     "/topics*",
     // Hides every S3 object under /customers/, so marketing-web 301s the old case-study stubs and /customers/industry/{,blockchain/} itself.
     "/customers*",
+    "/pulumi-for-startups",
+    "/pulumi-for-startups/",
+    "/pulumi-for-startups.md",
+    "/extend-trial",
+    "/extend-trial/",
+    // marketing-web 301s /confirmation/ to / at its own CDN, as the Hugo page's redirect_to did.
+    "/confirmation*",
+    // Exact paths: /gads* would also take the /gads/ redirect and the retired gads pages' redirects off S3.
+    "/gads/infrastructure-as-code",
+    "/gads/infrastructure-as-code/",
     "/sitemap-www-*",
 ];

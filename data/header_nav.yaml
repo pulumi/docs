@@ -74,7 +74,7 @@ items:
             icon: compass
             track: header-engineers-learn
           - label: Events and workshops
-            href: /events#upcoming
+            href: /events/#upcoming
             description: Live sessions and workshops
             icon: calendar-blank
             track: header-engineers-events

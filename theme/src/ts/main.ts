@@ -23,7 +23,6 @@ import "./resources";
 import "./event-sessions";
 import "./releases";
 import "./packages";
-import "./extend-trial";
 import "./support-form";
 import "./developer-advocates";
 import "./docs-main";
@@ -37,6 +36,7 @@ import "./console-banner";
 import "./announcement-banner";
 import "./statuspage";
 import "./intercom-identity";
+import "./consent-media";
 
 // Register all Stencil components.
 defineCustomElements();

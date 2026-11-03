@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud: RBAC Scopes - Environments"
-meta_desc: Learn about the available RBAC scopes in Pulumi Cloud.
+meta_desc: "Reference list of Pulumi Cloud RBAC scopes you can assign to specific environments or sets of environments, with a description of each scope."
 title: "RBAC Scopes: Environments"
 h1: "RBAC Scopes: Environments"
 menu:

@@ -849,7 +849,7 @@ Hugo processes 46+ content directories:
 - `/content/blog/` → Blog posts
 - `/content/product/` → Product pages
 
-> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary) and `/customers` (the customer board and case studies) are served the same way, from pulumi/marketing-web.
+> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary), `/customers` (the customer board and case studies), and the `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, and `/gads/infrastructure-as-code` landing pages are served the same way, from pulumi/marketing-web.
 
 Templates are in `/layouts/` with various shortcodes for:
 
@@ -1156,7 +1156,7 @@ Key points:
 
 **Triggers:** `workflow_run` when `Build and deploy` or `Build and deploy testing` completes successfully; manual `workflow_dispatch`.
 
-Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/dev`, `/topics`, and `/customers` proxy hops to pulumi/marketing-web. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
+Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/dev`, `/topics`, `/customers`, `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, and `/gads/infrastructure-as-code` proxy hops to pulumi/marketing-web. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
 
 #### schedule-social.yml
 
@@ -1186,7 +1186,7 @@ Runs `make ci_update_search_index`, which indexes this repo's content and merges
 
 #### invalidate-marketing-web-cache.yml
 
-**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, `/pricing`, the `/up` getting-started wizard, `/topics`, and `/customers`) from CloudFront when it deploys.
+**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, `/pricing`, the `/up` getting-started wizard, `/topics`, `/customers`, `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, and `/gads/infrastructure-as-code`) from CloudFront when it deploys.
 
 **Triggers:** `repository_dispatch` (`dev-deployed`) from pulumi/marketing-web; manual `workflow_dispatch`.
 
@@ -1302,6 +1302,7 @@ flowchart TD
 | `claude-social-review.yml` | PRs touching `content/blog/*/index.md`; comments; `workflow_dispatch` | Reviews the social copy in blog frontmatter and posts a PASS/FAIL comment. Doesn't re-run when the copy is unchanged. |
 | `review-label-reconcile.yml` | Every 2 hours at :23 | Repairs `review:*` labels when a push fired no events (pushes with `GITHUB_TOKEN` or by the Copilot agent) and clears `review:in-progress` left by a run that died. |
 | `review-sla-sweep.yml` | Every 2 hours at :53, when `REVIEW_V3_SLA=1` | Reviewer-wait SLA escalations and author-staleness warnings and closes, per the `sla:` and `author_staleness:` blocks in `review-routing.yml`. |
+| `stale-pr-sweep.yml` | Daily at 14:41, when `STALE_PR_SWEEP=1` | Closes any open PR, drafts included, after 30 days without activity (90 with the `long-running` label), with a heads-up comment a week before, per the `stale_prs:` block in `review-routing.yml`. Runs as pulumi-bot so its closes fire `pr-closed.yml`. |
 | `weekly-digest.yml` | Mondays 14:00 UTC | Posts two Slack messages to `#docs-ops`: the PR review queue and the issue backlog. |
 
 The workflows that run review commands or answer `@claude` all check that the commenter has write access. The [review commands](CONTRIBUTING.md#review-commands) are slash commands at the start of a line, judged by `command-gate.py`; `@claude` is only the general assistant. The `review:*` labels follow this state machine:
@@ -1340,10 +1341,11 @@ flowchart LR
 ```
 
 - **Triggers:** `pull_request_target` (open, ready, push, reopen, label changes), `pull_request_review` (submitted, dismissed, and edits to approving reviews), `workflow_run` after either review lane, and `workflow_dispatch`.
-- **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` always passes, with the would-be verdict in the status description; `'1'` enforces.
+- **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` always passes, with the would-be verdict in the status description; `'1'` enforces. Branch protection on `master` requires the Sentinel status for everyone but repo admins, so unset (or a disabled `review-sentinel.yml`) holds every PR: stand the gate down with `'report'`.
 - **Security invariant:** `pull_request_target` carries secrets and a write token even for fork PRs. The workflow is safe only because it never checks out or runs PR code, and `test_sentinel.py` enforces that. Don't add a head checkout.
 - **No concurrency group, on purpose:** a cancelled run shows as a failing check. Overlapping runs are cheap, and `scripts/review-v3/publish_guard.py` drops a verdict if the head moved or a newer run already published.
-- **Break-glass:** the `review:waived` label, which is logged and clears every gate, G4 included.
+- **Break-glass:** the `review:waived` label, which is logged and clears every gate, G4 included. Only a member of a team in `review-routing.yml`'s `teams:` can apply one that counts, and the Sentinel checks that with the org-scoped token, so an outage of that token refuses the waive along with G3.
+- **When the Sentinel never reports:** re-run it from **Actions › Sentinel › Run workflow** with the PR number. If it still can't conclude, a repo admin can merge past it; branch protection exempts admins.
 
 G4 needs a successful pulumi-test.io deploy at the PR's current head:
 
@@ -1473,7 +1475,7 @@ The mirror carries every workflow file pulumi/docs has, so the repository gate a
 
 - **Disabled** (`disabled_manually` in the Actions API), 19 workflows: `add-to-project`, `bucket-cleanup`, `bucket-cleanup-testing`, `build-and-deploy`, `check-lighthouse`, `check-links`, `check-search-urls`, `esc-cli`, `esc-update-schemas`, `pr-closed`, `pulumi-cli`, `pulumi-cli-dev-version`, `schedule-social`, `scheduled-test`, `scheduled-upgrade-programs`, `testing-build-and-deploy`, `update-audit-log-events`, `update-openapi-lastmod`, `update-search-index`.
 - **Active and doing work on a schedule:** `review-label-reconcile`, `blog-review-index`, `review-existing-content` (which dispatches `content-review-article`), `update-policy-packs`, and `warm-build-cache`. The content-review lane opens `pulumi-bot` "Content review: …" PRs against the mirror's `master` that never merge (for example docs-private #300, #302, #307, and #314).
-- **Active but skipped by their own gates:** `weekly-digest`, `brand-style-sync`, and `self-hosted-feature-parity` (gated to pulumi/docs), and `review-sla-sweep`, `staging-status`, and `content-review-glowup-autofix` (gated on `REVIEW_V3_SLA`, `REVIEW_V3_SENTINEL`, and `GLOWUP_AUTOFIX`, which aren't set there). Their runs fire and every job is skipped.
+- **Active but skipped by their own gates:** `weekly-digest`, `brand-style-sync`, `stale-pr-sweep`, and `self-hosted-feature-parity` (gated to pulumi/docs), and `review-sla-sweep`, `staging-status`, and `content-review-glowup-autofix` (gated on `REVIEW_V3_SLA`, `REVIEW_V3_SENTINEL`, and `GLOWUP_AUTOFIX`, which aren't set there). Their runs fire and every job is skipped.
 
 ### Launch branches
 
@@ -1496,8 +1498,9 @@ These repository variables turn automation on, off, or up and down without a cod
 | `BRAND_SYNC_ENABLED` | Weekly Vale mirror drift check | On; `'0'` off |
 | `REVIEW_V3_COMMENTS` | v3 author card and reviewer brief instead of the single legacy review comment | Legacy (it's set repo-wide) |
 | `REVIEW_V3_ROUTING` | Triage label-only pass on every push | Off; `'1'` on |
-| `REVIEW_V3_SENTINEL` | Sentinel check | Doesn't run; `'report'` is a neutral preview; `'1'` enforces |
+| `REVIEW_V3_SENTINEL` | Sentinel check | Doesn't run, which holds every PR for non-admins because `master` requires the status; `'report'` is a neutral preview; `'1'` enforces |
 | `REVIEW_V3_SLA` | Reviewer SLA escalations and author-staleness closes | Off; `'1'` on |
+| `STALE_PR_SWEEP` | Heads-ups and closes for PRs with no activity in 30 days (90 with `long-running`) | Off; `'1'` on |
 | `DEPS_AUTO_MERGE` | Dependabot auto-approve and auto-merge | Off; `'true'` on |
 
 Scheduled review lanes also run a `holiday-check` job and skip company holidays.
@@ -1524,6 +1527,7 @@ All cron expressions are UTC. Eastern times shift by an hour when daylight savin
 | 14:00 | `weekly-digest.yml` | Mondays |
 | 14:20 | `brand-style-sync.yml` | Mondays |
 | 14:30 | `blog-review-index.yml` | Weekdays |
+| 14:41 | `stale-pr-sweep.yml` (when `STALE_PR_SWEEP=1`) | Daily |
 | 15:00 | `bucket-cleanup.yml`, `bucket-cleanup-testing.yml`, `check-links.yml`, `check-lighthouse.yml` | Daily |
 
 ### Workflow inventory
@@ -1537,7 +1541,7 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `post-deployment-health-check.yml` | Ship | After a successful deploy, manual | Live-site smoke checks |
 | `schedule-social.yml` | Ship | After a successful production deploy, manual | Schedule blog social posts |
 | `update-search-index.yml` | Ship | Hourly, manual | Refresh Algolia |
-| `invalidate-marketing-web-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/dev`, `/community`, `/pricing`, `/up`, and `/topics` from CloudFront |
+| `invalidate-marketing-web-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/dev`, `/community`, `/pricing`, `/up`, `/topics`, `/customers`, `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, and `/gads/infrastructure-as-code` from CloudFront |
 | `bucket-cleanup.yml` | Ship | Daily | Delete old production buckets |
 | `bucket-cleanup-testing.yml` | Ship | Daily, manual | Delete old testing and preview buckets |
 | `pull-request.yml` | PR checks | Pull request | Lint, test, preview build and deploy |
@@ -1560,6 +1564,7 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `review-sentinel.yml` | AI review | `pull_request_target`, reviews, after review lanes, manual | Merge gate check |
 | `review-label-reconcile.yml` | AI review | Every 2 h, manual | Repair `review:*` labels |
 | `review-sla-sweep.yml` | AI review | Every 2 h, manual | Review SLAs and stale PRs |
+| `stale-pr-sweep.yml` | AI review | Daily, manual | Close PRs with no activity in 30 days (90 with `long-running`) |
 | `weekly-digest.yml` | AI review | Mondays, manual | Slack digests |
 | `review-existing-content.yml` | Content upkeep | Weekdays, manual | Content review dispatcher |
 | `content-review-article.yml` | Content upkeep | Dispatched | Review one article |
@@ -1812,7 +1817,7 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | 30 minutes | Dynamic content, origin-proxied |
 | /guides/* | Guides | 30 minutes | Dynamic content, origin-proxied |
-| Paths in `infrastructure/marketingWebPaths.ts` (/dev*, /assets*, /community, /pricing, /up, /topics*, /customers*) | pulumi/marketing-web | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
+| Paths in `infrastructure/marketingWebPaths.ts` (/dev*, /assets*, /community, /pricing, /up, /topics*, /customers*, /pulumi-for-startups, /extend-trial, /confirmation*, /gads/infrastructure-as-code) | pulumi/marketing-web | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
 | /docs/* | S3 Main | 10 min | Content negotiation for Accept: text/markdown |
 | /docs/reference/pkg/dotnet/* | S3 Main | 10 min | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
 | /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |

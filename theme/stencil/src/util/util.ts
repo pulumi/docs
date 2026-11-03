@@ -9,11 +9,15 @@ export const gb = new GrowthBook({
     enableDevMode: (window as any).growthbook_dev_mode,
 });
 
+// Not consent-gated: GrowthBook only assigns variations and does no tracking of
+// its own. Experiment exposures are reported through Segment (below), which is
+// consent-gated, so gating init() would only break A/B tests for visitors who
+// haven't consented.
 gb.init({ streaming: true });
 
 // Hook up GrowthBook to analytics when ready. The optional chain keeps this module
 // loadable when the analytics snippet is absent (e.g., in the test environment).
-(window as any).analytics?.ready(function() {
+(window as any).analytics?.ready(function () {
     gb.setTrackingCallback((experiment, result) => {
         (window as any).analytics.track("Experiment Viewed", {
             experimentId: experiment.key,
@@ -22,8 +26,8 @@ gb.init({ streaming: true });
     });
 
     gb.setAttributes({
-    // Set Anon/UserId for GB
-    ...gb.getAttributes(),
+        // Set Anon/UserId for GB
+        ...gb.getAttributes(),
         id: (window as any).analytics.user().anonymousId(),
         userId: (window as any).analytics.user().id(),
         url: (window as any).location.href,
@@ -35,9 +39,8 @@ gb.init({ streaming: true });
         utmMedium: getQueryVariable("utm_medium"),
         utmTerm: getQueryVariable("utm_term"),
         utmContent: getQueryVariable("utm_content"),
-    })
-})
-    
+    });
+});
 
 // Extracts a query string variable from the browser's location.
 export function getQueryVariable(paramKey: string): string | null {

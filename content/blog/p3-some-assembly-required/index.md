@@ -40,8 +40,8 @@ Previously we identified the [essential qualities of an effective IDP](https://w
 
 * **Consistency**: [component resources](https://www.pulumi.com/learn/abstraction-encapsulation/component-resources/), [organization templates](/docs/idp/concepts/organization-templates/), [drift detection](/docs/deployments/concepts/drift/)
 * **Reproducibility**: [stacks](https://www.pulumi.com/learn/building-with-pulumi/understanding-stacks/), [deployments](/docs/deployments/concepts/), [versioned data](/registry/packages/snowflake/api-docs/dynamictable/)
-* **Visibility**: [Pulumi Insights](https://www.pulumi.com/product/pulumi-insights/), [Pulumi Copilot](https://www.pulumi.com/product/neo/)
-* **Security and Compliance**: [RBAC](/docs/administration/concepts/rbac/teams/), [GitHub Teams](/docs/administration/concepts/rbac/teams/#github-based-teams), [SAML-SSO](/docs/administration/guides/saml/), [Pulumi ESC](https://www.pulumi.com/product/secrets-management/), [Pulumi Crossguard](https://www.pulumi.com/crossguard/)
+* **Visibility**: [Pulumi Insights](https://www.pulumi.com/product/discovery-governance/), [Pulumi Copilot](https://www.pulumi.com/product/neo/)
+* **Security and Compliance**: [RBAC](/docs/administration/concepts/rbac/teams/), [GitHub Teams](/docs/administration/concepts/rbac/teams/#github-based-teams), [SAML-SSO](/docs/administration/guides/saml/), [Pulumi ESC](https://www.pulumi.com/product/secrets-management/), [Pulumi Crossguard](https://www.pulumi.com/product/discovery-governance/)
 * **Auditability**: [audit logging](/docs/administration/concepts/audit-logs/)
 * **Developer Experience**: [Python/Go/JavaScript/C#](/docs/iac/languages-sdks/), [popular IDE support](https://www.pulumi.com/blog/next-level-iac-breakpoint-debugging/), [command-line tools](/docs/iac/cli/), [deeply hackable](https://www.pulumi.com/automation/)
 
@@ -324,13 +324,7 @@ And if you are already ready to get your hands on Pulumi after this introduction
 To learn more, you can watch the following video which provides a high level overview of how Pulumi works:
 
 <div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
-    <iframe
-        src="//www.youtube.com/embed/Q8tw6YTD3ac?rel=0"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-        allowfullscreen=""
-        title="Introduction to Pulumi in Three Minutes"
-        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>">
-    </iframe>
+    {{< youtube-iframe src="//www.youtube.com/embed/Q8tw6YTD3ac?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="Introduction to Pulumi in Three Minutes" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>" allowfullscreen="true" >}}
 </div>
 
 ## Pulumi Cloud

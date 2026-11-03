@@ -205,7 +205,7 @@
         <div class="xl:w-1/2 w-full">
             <div class="relative rounded-xl overflow-hidden aspect-video">
                 <iframe
-                    src="https://www.youtube.com/embed/{{ $videoYouTubeId }}?rel=0"
+                    {{ partial "youtube-src.html" (dict "url" (printf "https://www.youtube.com/embed/%s?rel=0" $videoYouTubeId)) }}
                     class="absolute top-0 left-0 w-full h-full border-0"
                     allowfullscreen=""
                     title="{{ $videoTitle }}"></iframe>
@@ -271,7 +271,7 @@
         <div class="product-hero-visual flex justify-center w-full">
             <div class="relative rounded-xl overflow-hidden w-full max-w-4xl aspect-video">
                 <iframe
-                    src="https://www.youtube.com/embed/{{ $videoYouTubeId }}?rel=0"
+                    {{ partial "youtube-src.html" (dict "url" (printf "https://www.youtube.com/embed/%s?rel=0" $videoYouTubeId)) }}
                     class="absolute top-0 left-0 w-full h-full border-0"
                     allowfullscreen=""
                     title="{{ $videoTitle }}"></iframe>

@@ -64,6 +64,7 @@ ROUTING_CONFIG = Path(__file__).resolve().parents[2] / ".github/review-routing.y
 #     "mode"  sentinel: "1" enforcing, "report" report-only, else off
 SWITCHES = [
     ("SLA sweep", "REVIEW_V3_SLA", "eq1", None),
+    ("stale PR sweep", "STALE_PR_SWEEP", "eq1", None),
     ("Sentinel", "REVIEW_V3_SENTINEL", "mode", None),
     ("content review", "CONTENT_REVIEW_COUNT", "ne0", "3"),
     ("glow-up", "GLOWUP_COUNT", "ne0", "1"),
