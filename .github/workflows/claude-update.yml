@@ -709,11 +709,12 @@ jobs:
           # dangles, because the prior pass is the comment it just overwrote. One
           # rep of three collapsed to 11 of 40 lines and held exactly 11 through
           # the next refresh. The loss is permanent — later updates merge from the
-          # prior comment — and invisible, because this workflow runs only
-          # `validate-pinned.py count-buckets`, never the validate → splice →
-          # validator-fix chain. Don't re-add it without wiring in full validation
-          # first; the composer lane in claude-code-review.yml is a different job
-          # shape and keeps its low effort.
+          # prior comment — and this workflow has no validate → splice →
+          # validator-fix chain to catch it before publish (the "Warn on
+          # structural damage" step below only flags it afterwards). Don't re-add
+          # it without wiring in full validation first; the composer lane in
+          # claude-code-review.yml is a different job shape and keeps its low
+          # effort.
           # The public Pulumi brand MCP server (voice/writing-style/terminology
           # source of truth) is wired via `claude_args --mcp-config`; its tools
           # are in --allowed-tools. No auth: the server is public.
@@ -1115,6 +1116,59 @@ jobs:
             cat /tmp/provenance.md
           elif [ $rc -ne 0 ]; then
             echo "provenance check: validator exited $rc; skipping."
+          fi
+          exit 0
+
+      # Structural spot-check of the PUBLISHED body (pulumi/docs#20596). This lane
+      # has no validate -> splice -> validator-fix chain: the model upserts the
+      # body itself, so there is no pre-publish point a gate could hold. What it
+      # does have is the evidence-spine floor (pinned-comment.sh upsert ->
+      # splice-spine.py), which restores the 🔍 Verification trail, 📊 Editorial
+      # balance and investigation log when a re-render drops them. This step is
+      # the alarm for everything that floor doesn't cover -- or a floor that
+      # stood down or errored: it runs the validator's structural rules over the
+      # body as published and warns, naming each violation, when a mandatory H3
+      # is missing or out of order, the investigation-log block is gone or
+      # malformed, or the count table no longer matches the bullets. Those are
+      # the losses the 2026-07-30 regression battery saw publish silently.
+      #
+      # WARNING-ONLY, same reasoning as the provenance check above: the review
+      # has already published, so a red X here would only mark work the author
+      # can see is fine. The point is that a structurally broken refresh is no
+      # longer invisible.
+      - name: Warn on structural damage to the refreshed review
+        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set +e
+          if [ ! -s .pinned-body.md ]; then
+            gh api "repos/$REPO/issues/$PR/comments" --paginate \
+              --jq '.[] | select(.body | startswith("<!-- CLAUDE_REVIEW ")) | .body' \
+              > .pinned-body.md 2>/dev/null
+          fi
+          if [ ! -s .pinned-body.md ]; then
+            echo "structural check: no pinned review body found; nothing to check."
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+            --body-file .pinned-body.md \
+            --only-rule mandatory-h3-order \
+            --only-rule investigation-log \
+            --only-rule count-table \
+            --pr "$PR" --repo "$REPO" \
+            --output-json /tmp/structure.json \
+            --output-markdown /tmp/structure.md
+          rc=$?
+          if [ $rc -eq 1 ]; then
+            rules=$(jq -r '[.violations[]?.rule_id] | unique | join(", ")' /tmp/structure.json 2>/dev/null)
+            echo "::warning::The refreshed review published with structural violations (${rules:-see log}). A mandatory section or the investigation log may have been dropped, and later refreshes merge from this body. Re-render it with /new-review. Details below."
+            cat /tmp/structure.md
+          elif [ $rc -ne 0 ]; then
+            echo "structural check: validator exited $rc; skipping."
           fi
           exit 0
 

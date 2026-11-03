@@ -74,7 +74,7 @@ That's the whole setup on every platform.
 
 If you don't use mise, **you're responsible for installing these tools yourself and having them on your `PATH`**. The Makefile and scripts will use whatever versions they find; `make ensure` warns when versions don't match the pinned ones but doesn't fail.
 
-* [Hugo](https://gohugo.io/installation/) 0.157.0 (extended)
+* [Hugo](https://gohugo.io/installation/), extended edition, at the version pinned in `mise.toml` (`./scripts/hugo-version.sh` prints it)
 * [Node.js](https://nodejs.org/en/download/package-manager) 24
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) 1.x
 * [Go](https://golang.org/) 1.26 (only needed for SDK doc builds and example-program tests)
