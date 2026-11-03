@@ -683,4 +683,4 @@ This post demonstrated how to modernize Jenkins deployment using Pulumi and [Kub
 
 If you want to explore more modern CI/CD approaches or dive deeper into infrastructure automation with Pulumi, check out our [documentation](/docs/) and try building your own infrastructure-as-code solutions. For more insights on DevOps best practices, explore our [guide on IaC best practices](/blog/iac-best-practices-summarizing-key-learnings/).
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

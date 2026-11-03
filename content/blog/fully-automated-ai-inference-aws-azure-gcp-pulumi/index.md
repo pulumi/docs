@@ -670,4 +670,4 @@ Declaring an AI inference server as code buys you the same thing it buys for any
 
 That is the line worth carrying to the next thing you deploy. Not every step in a runbook is a resource. A GPU box and a firewall rule are; waiting for a download to finish is not. Draw that line first, and the program gets shorter on its own.
 
-If you run into issues or have questions, drop by the [Pulumi Community Slack](https://slack.pulumi.com/) or [GitHub Discussions](https://github.com/pulumi/pulumi/discussions). New to Pulumi? [Get started here](/docs/get-started/).
+If you run into issues or have questions, drop by the [Pulumi Community Slack](https://slack.pulumi.com/) or [GitHub Discussions](https://github.com/pulumi/pulumi/discussions). New to Pulumi? [Get started here](/up/).

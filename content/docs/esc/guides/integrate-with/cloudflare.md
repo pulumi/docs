@@ -177,7 +177,7 @@ Using infrastructure as code (IaC) to manage Workers? See the next section to se
 
 ## Manage Cloudflare Worker Secrets in IaC
 
-Pulumi ESC works hand-in-hand with [Pulumi IaC](https://www.pulumi.com/docs/get-started/) to simplify configuration management.
+Pulumi ESC works hand-in-hand with [Pulumi IaC](/up/) to simplify configuration management.
 
 Learn how to:
 

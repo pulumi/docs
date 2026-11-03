@@ -56,22 +56,22 @@ describe("www.pulumi.com", () => {
         });
     });
 
-    describe("getting started", () => {
+    describe("install", () => {
 
         beforeEach(() => {
-            cy.visit("/docs/iac/get-started/aws/begin");
+            cy.visit("/docs/install/");
         });
 
         describe("when an OS is selected", () => {
 
             beforeEach(() => {
-                cy.get(`pulumi-chooser[type="os"] li:last`).click();
+                cy.get(`pulumi-chooser[type="os"]`).first().find("li").last().click();
             });
 
             it("activates the selected OS", () => {
-                cy.get(`pulumi-choosable[type="os"][value="macos"] > div`)
+                cy.get(`pulumi-choosable[type="os"][values="macos"] > div`)
                     .should("not.have.class", "active");
-                cy.get(`pulumi-choosable[type="os"][value="linux"] > div`)
+                cy.get(`pulumi-choosable[type="os"][values="linux"] > div`)
                     .should("have.class", "active");
             });
         });

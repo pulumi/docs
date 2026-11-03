@@ -400,4 +400,4 @@ You can find detailed information about all current available Pulumi ESC Kuberne
 
 Let us know what you think about the `Secret Store CSI Driver` and how you are managing secrets in your Kubernetes clusters. We would love to hear your feedback and experiences.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

@@ -34,4 +34,4 @@ And we like to think that our mascot, Pulumipus, is also pretty cool.
 
 Although Pulumi is cool, we have hundreds of organizations worldwide that have decided to run their production infrastructure using Pulumi. [Check out some select stories here](/customers/).
 
-Be one of the cool kids today by [giving Pulumi a try today](/docs/get-started/) -- it’s not just cool, but the future of infrastructure as code and, we think, the way all developers and operations teams will collaborate in the future.
+Be one of the cool kids today by [giving Pulumi a try today](/up/) -- it’s not just cool, but the future of infrastructure as code and, we think, the way all developers and operations teams will collaborate in the future.

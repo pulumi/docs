@@ -2,10 +2,6 @@
 # IaC Languages & SDKs Menus
 # -------------------------------------
 iac:
-  - name: Get Started
-    parent: iac-home
-    identifier: iac-get-started
-    weight: 10
   - name: Guides
     parent: iac-home
     identifier: iac-using-pulumi

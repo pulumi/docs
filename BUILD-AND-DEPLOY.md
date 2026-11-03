@@ -2692,7 +2692,7 @@ make check_search_urls
 - Homepage (<www.pulumi.com>)
 - Product page (/product/)
 - Pricing (/pricing/)
-- Get Started (/docs/get-started/)
+- Get started wizard (/up/)
 - Documentation concepts (/docs/intro/concepts/resources/)
 - Registry (/registry/)
 - Registry package (/registry/packages/aws/api-docs/s3/bucket/)

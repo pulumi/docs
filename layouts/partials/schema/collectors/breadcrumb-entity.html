@@ -181,19 +181,9 @@
       "item" "https://www.pulumi.com/docs/install/"
     ) }}
 
-  {{/* Add Get Started if in the docs/get-started section */}}
-  {{ else if in .RelPermalink "/docs/get-started/" }}
-    {{ $position = add $position 1 }}
-    {{ $breadcrumbs = $breadcrumbs | append (dict
-      "@type" "ListItem"
-      "position" $position
-      "name" "Get Started"
-      "item" "https://www.pulumi.com/docs/get-started/"
-    ) }}
-
   {{/* End of main docs sections (IaC, Discovery, ESC, Pulumi Cloud, Administration,
        Deployments & Workflows, IDP, Integrations, Infrastructure AI, Reference,
-       Support & Troubleshooting, Install, Get Started) */}}
+       Support & Troubleshooting, Install) */}}
   {{ end }}
 
   {{/* Additional nesting for IaC Clouds section only - this is separate from the main section logic above */}}

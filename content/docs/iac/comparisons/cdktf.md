@@ -139,7 +139,7 @@ The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulum
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/get-started/)
+- [Get started with Pulumi](/up/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 - [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)
 - [Migrating from Terraform or CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)
