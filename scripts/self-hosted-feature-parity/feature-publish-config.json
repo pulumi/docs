@@ -76,6 +76,26 @@
       "public_name": "Terraform module registry",
       "docs_url": "/docs/integrations/terraform/module-registry/",
       "public_notes": "Not available yet, so modules can't be published to the registry or converted into Pulumi packages."
+    },
+    "Core - Policy as Code (PaC)": {
+      "marketing_name": "Core - Policy as Code (PaC)",
+      "publish": true,
+      "public_name": "Pulumi Policies",
+      "docs_url": "/docs/discovery-governance/concepts/policy-as-code/"
+    },
+    "Policy - Pre-built Policy Packs": {
+      "marketing_name": "Policy - Pre-built Policy Packs",
+      "publish": true,
+      "public_name": "Pre-built policy packs",
+      "docs_url": "/docs/discovery-governance/guides/pre-built-policy-packs/",
+      "public_notes": "Not installed out of the box. Contact Pulumi support for the packs, then [publish them](/docs/iac/cli/commands/pulumi_policy_publish/) to your organization and add them to a policy group like any custom pack."
+    },
+    "Policy - Tag-Based Policy Groups": {
+      "marketing_name": "Policy - Tag-Based Policy Groups",
+      "publish": true,
+      "public_name": "Policy group tag rules",
+      "docs_url": "/docs/discovery-governance/concepts/policy-as-code/policy-groups/#tag-rules",
+      "public_notes": "Not available yet. Add stacks and accounts to policy groups individually instead."
     }
   }
 }
