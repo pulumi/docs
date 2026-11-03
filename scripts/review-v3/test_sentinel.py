@@ -1694,6 +1694,51 @@ def test_the_oversized_ack_must_come_from_a_qualifying_approver():
     assert _gate(proper, "G5").status == "ok"
 
 
+def test_the_oversized_ack_counts_from_any_qualifying_approver_not_just_the_first():
+    """pulumi/docs#22622: one committer clicked plain Approve, a second
+    approved with `/oversized-ack`, and G5 stayed red. G3 stopped at the
+    first qualifying approver, so `qualified_approvers` never held the one
+    carrying the ack. Every qualifier must be visible to G5, in both the
+    any-human and the team-routed paths, whichever order they approved in."""
+    ack = f"reviewed by hand\n{sentinel.OVERSIZED_ACK}"
+    card = author_card([], state=_state_with([]))
+
+    def human(reviews):
+        return sentinel.evaluate(StubGh(
+            pr=pr_meta(labels=["review:oversized"]), files=[docs_file_substantive()],
+            comments=[card], reviews=reviews,
+            permissions={"plain": "write", "acker": "write"}), HUMAN_CONFIG)
+
+    for reviews in ([approval("plain"), approval("acker", body=ack)],
+                    [approval("acker", body=ack), approval("plain")]):
+        v = human(reviews)
+        assert _gate(v, "G3").status == "ok", _gate(v, "G3").message
+        assert _gate(v, "G5").status == "ok", _gate(v, "G5").message
+    # G3 still names the first qualifier, as it always has
+    assert "`plain`" in _gate(human([approval("plain"), approval("acker", body=ack)]),
+                              "G3").message
+
+    def team(reviews, **kw):
+        return sentinel.evaluate(StubGh(
+            pr=pr_meta(labels=["review:oversized"]), files=[docs_file_substantive()],
+            reviews=reviews,
+            memberships={("docs-guild", "plain"): "active",
+                         ("docs-guild", "acker"): "active"}, **kw), CONFIG)
+
+    v = team([approval("plain"), approval("acker", body=ack)])
+    assert _gate(v, "G5").status == "ok", _gate(v, "G5").message
+
+    # the ack-hunt lookups past a satisfied team don't unsettle G3
+    v = team([approval("plain"), approval("flaky", body=ack)],
+             membership_error_users={"flaky"})
+    assert _gate(v, "G3").status == "ok", _gate(v, "G3").message
+    assert _gate(v, "G5").status == "red"
+
+    # and the bystander rule still holds: an ack from a non-qualifier is no ack
+    v = human([approval("plain"), approval("randomer", body=ack)])
+    assert _gate(v, "G5").status == "red"
+
+
 def test_a_zero_file_pr_does_not_manufacture_an_approver():
     """G3 reported `ok` for a PR with no changed paths — the one gate that
     guarantees a human, passing with no human. Combined with a forged card

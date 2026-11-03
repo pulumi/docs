@@ -1524,7 +1524,23 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         stale_approvers = [r for r in stale_approvers if r not in approvers]
     # The subset of `approvers` whose approval actually clears G3 — filled in
     # below. G5 reads it so the oversized ack cannot come from a bystander.
+    # It has to hold EVERY approver who qualifies, not just the first one G3
+    # finds: G5 asks whether any of them carries `/oversized-ack`, and a
+    # first-match list made a plain Approve from one committer hide a later
+    # acking approval from another (pulumi/docs#22622 sat red on exactly
+    # that).
     qualified_approvers: list[dict] = []
+
+    def _qualify(r: dict) -> None:
+        if not any(q is r for q in qualified_approvers):
+            qualified_approvers.append(r)
+
+    def _ack_settled() -> bool:
+        # Whether G3 may stop asking about further approvers: always on an
+        # ordinary PR (the first qualifier is all G3 needs), and on an
+        # oversized one only once a qualifier has supplied the ack G5 wants.
+        return not oversized or any(
+            _has_oversized_ack(q.get("body") or "") for q in qualified_approvers)
     if not resolution.roles:
         # A zero-file PR (a branch whose commits net to no diff, or one
         # already merged into base) is the only way here. It used to report
@@ -1558,8 +1574,9 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 errors.append(str(exc))
                 continue
             if perm in WRITE_PERMISSIONS:
-                qualified_approvers.append(r)
-                break
+                _qualify(r)
+                if _ack_settled():
+                    break
         if qualified_approvers:
             # No `@` — this message also renders in the pinned status
             # comment, where a mention would ping the approver on every
@@ -1606,13 +1623,17 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 try:
                     if gh.get_team_membership(org, slug, login) == "active":
                         satisfied = True
-                        qualified_approvers.append(r)
-                        break
+                        _qualify(r)
+                        if _ack_settled():
+                            break
                 except SentinelDataError as exc:
-                    errors.append(str(exc))
+                    # Once the team is satisfied, further lookups only hunt
+                    # for G5's ack; a failure there must not unsettle G3.
+                    if not satisfied:
+                        errors.append(str(exc))
             if satisfied:
                 satisfied_any = True
-                if resolution.any_team:
+                if resolution.any_team and _ack_settled():
                     break  # one team clears it; no need to ask about the rest
             elif not errors:
                 missing.append(team_ref)
@@ -1630,9 +1651,10 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 login = (r.get("user") or {}).get("login") or ""
                 try:
                     if gh.get_repo_permission(login) == "admin":
-                        admin_approver = login
-                        qualified_approvers.append(r)
-                        break
+                        admin_approver = admin_approver or login
+                        _qualify(r)
+                        if _ack_settled():
+                            break
                 except SentinelDataError as exc:
                     errors.append(str(exc))
         # `errors and not satisfied_any`: a transient 5xx on ONE approver's
