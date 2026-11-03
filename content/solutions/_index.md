@@ -86,7 +86,7 @@ architectures:
             - customer: learning-machine
 
         - name: Server-based
-          cta_link: /registry/packages/aws/how-to-guides/ec2-webserver
+          cta_link: /dev/tutorials/ec2-webserver/
           cta_text: Learn More
           description: |
             Define and manage cloud infrastructure using server-based architectures, such as compute and database instances.
