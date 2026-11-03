@@ -49,7 +49,7 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 | Environments | Workspaces or separate configurations | [Pulumi stacks](https://www.pulumi.com/docs/iac/concepts/stacks/) model environments with per-stack config, secrets, history, and outputs | Stack boundaries still need thoughtful design |
 | Code reuse | Modules and HCL composition patterns | Pulumi components and packages use normal language abstractions | Over-abstracted components can become hard to use |
 | Imports and migration | Import blocks, generated config, and state operations | [`pulumi import`](https://www.pulumi.com/docs/iac/guides/migration/import/) and migration tooling support gradual adoption | Imported code still needs review and cleanup |
-| Terraform state | S3, Azure Blob, or Terraform Cloud backends | [Pulumi Cloud can serve as a Terraform state backend](https://www.pulumi.com/docs/iac/get-started/terraform/terraform-state-backend/) with encrypted storage, locking, history, and RBAC, while you keep using the Terraform or OpenTofu CLI | State still needs a clean migration plan as resources move to Pulumi |
+| Terraform state | S3, Azure Blob, or Terraform Cloud backends | [Pulumi Cloud can serve as a Terraform state backend](https://www.pulumi.com/docs/integrations/terraform/state-backend/) with encrypted storage, locking, history, and RBAC, while you keep using the Terraform or OpenTofu CLI | State still needs a clean migration plan as resources move to Pulumi |
 | Provider wiring | Provider inheritance and aliases inside modules | Explicit [provider resources](https://www.pulumi.com/docs/iac/concepts/providers/) make multi-region and multi-account wiring visible in code review | Provider versions and bugs can still affect deployments |
 | Testing | Validation, plan review, and external test harnesses | Pulumi programs can use normal [unit and integration test frameworks](https://www.pulumi.com/docs/iac/guides/testing/) | Tests complement previews, they do not replace them |
 | Drift detection | Refresh and refresh-only plans, plus external scheduling | [`pulumi refresh`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_refresh/) reconciles state, and Pulumi Cloud adds [scheduled drift detection and remediation](https://www.pulumi.com/docs/deployments/concepts/drift/) on a configurable cadence | Detection still depends on provider behavior and a healthy state backend |
@@ -260,7 +260,7 @@ terraform {
 
 From there, Pulumi can also read outputs from that state, so a new Pulumi stack can consume Terraform-managed values such as VPC IDs and subnet IDs while you migrate one piece at a time. When you're ready to bring resources fully across, [`pulumi import --from terraform`](https://www.pulumi.com/docs/iac/guides/migration/import/) reads a `.tfstate` file and generates matching declarations, and `pulumi convert --from terraform` translates the surrounding configuration into your chosen language.
 
-[Storing Terraform state in Pulumi Cloud](https://www.pulumi.com/docs/iac/get-started/terraform/terraform-state-backend/) keeps both tools pointed at one system of record, which is what makes a gradual, low-risk migration practical.
+[Storing Terraform state in Pulumi Cloud](https://www.pulumi.com/docs/integrations/terraform/state-backend/) keeps both tools pointed at one system of record, which is what makes a gradual, low-risk migration practical.
 
 ## What Pulumi does not magically fix
 

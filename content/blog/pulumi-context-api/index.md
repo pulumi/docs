@@ -37,7 +37,7 @@ social:
         Here's a brief tour.
 ---
 
-Every platform team fields the same questions: What is running? What breaks if we change this? What can we safely delete? The answers exist, but they're scattered across state files, cloud consoles, and the memories of whoever set things up. Today we're launching the [Pulumi Context API](/docs/discovery-governance/context-api/), a read-only API that connects Pulumi-managed and discovered resources, stacks, and their relationships into a graph. It's designed agent-first: [Pulumi Neo](/product/neo/), our infrastructure agent, uses it out of the box, and other agents can fetch the current graph vocabulary and query guidance on demand. It's available in public preview for organizations on the Enterprise and Business Critical editions.
+Every platform team fields the same questions: What is running? What breaks if we change this? What can we safely delete? The answers exist, but they're scattered across state files, cloud consoles, and the memories of whoever set things up. Today we're launching the [Pulumi Context API](/docs/discovery-governance/concepts/context-api/), a read-only API that connects Pulumi-managed and discovered resources, stacks, and their relationships into a graph. It's designed agent-first: [Pulumi Neo](/product/neo/), our infrastructure agent, uses it out of the box, and other agents can fetch the current graph vocabulary and query guidance on demand. It's available in public preview for organizations on the Enterprise and Business Critical editions.
 
 <!--more-->
 
@@ -120,12 +120,12 @@ The primer explains the current graph vocabulary, query grammar, engine limits, 
 
 ## Available in public preview
 
-The Context API is available now for every organization on the Enterprise and Business Critical editions. The [`pulumi api` access requirements](/docs/discovery-governance/context-api/#get-access) include [Pulumi CLI](/docs/install/) v3.243.0 or later, an authenticated session, and a role with the [`resources:search` permission](/docs/administration/reference/rbac-scopes/org-settings/#resources). The default Member and Admin roles grant this permission. Pulumi Cloud [role-based access control](/docs/administration/concepts/rbac/) limits responses to the resources, stacks, and cloud accounts the caller can read.
+The Context API is available now for every organization on the Enterprise and Business Critical editions. The [`pulumi api` access requirements](/docs/discovery-governance/concepts/context-api/#get-access) include [Pulumi CLI](/docs/install/) v3.243.0 or later, an authenticated session, and a role with the [`resources:search` permission](/docs/administration/reference/rbac-scopes/org-settings/#resources). The default Member and Admin roles grant this permission. Pulumi Cloud [role-based access control](/docs/administration/concepts/rbac/) limits responses to the resources, stacks, and cloud accounts the caller can read.
 
 During public preview, the graph vocabulary and limits may change. Fetch the [deployed schema](/docs/discovery-governance/guides/context-api/#get-the-deployed-schema) when you need the current contract. We also plan to connect more Pulumi Cloud data, including [Pulumi ESC](/docs/esc/) environments, teams and roles, cloud accounts, and service catalog concepts from [Pulumi IDP](/docs/idp/). Feedback during preview will shape the relationships and data sources we add next.
 
 ## Get started
 
-Start with the [Context API overview](/docs/discovery-governance/context-api/), then follow the [agent workflow](/docs/discovery-governance/guides/context-api/#ask-questions-through-an-ai-agent) to equip your agent. Ask a natural-language question such as, "Which stacks consume outputs from the `payments/prod` stack?"
+Start with the [Context API overview](/docs/discovery-governance/concepts/context-api/), then follow the [agent workflow](/docs/discovery-governance/guides/context-api/#ask-questions-through-an-ai-agent) to equip your agent. Ask a natural-language question such as, "Which stacks consume outputs from the `payments/prod` stack?"
 
 Give it a try today, and share your feedback in the [Pulumi Community Slack](https://slack.pulumi.com/) or through your account team.

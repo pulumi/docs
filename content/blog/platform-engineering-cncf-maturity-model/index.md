@@ -88,7 +88,7 @@ A cloud-native platform is a strategic business initiative that enables organiza
 
 - **Vendor-neutrality**: A cloud-native platform should be open and agnostic, allowing organizations to leverage various technologies and services without being locked into a single vendor.
 **Scalability and flexibility**: The platform should be designed to accommodate the organization's growing and changing needs, with the ability to add or remove components as needed easily.
-- **[Developer-centricity](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: The platform should empower developers to be more productive by providing self-service capabilities, streamlined workflows, and a consistent developer experience.
+- **[Developer-centricity](https://www.pulumi.com/blog/developer-experience-business-critical/)**: The platform should empower developers to be more productive by providing self-service capabilities, streamlined workflows, and a consistent developer experience.
 - **[Operational efficiency](https://www.pulumi.com/blog/developer-portal-platform-teams/)**: The platform should simplify and automate the management and maintenance of the underlying infrastructure, allowing the organization to focus on delivering value to customers.
 - **Continuous improvement**: The platform should be designed with a mindset of continuous evolution, with regular updates and enhancements to address emerging needs and technologies.
 

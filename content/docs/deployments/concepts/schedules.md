@@ -41,7 +41,7 @@ In order to set up a deployment schedule in the Pulumi Cloud console, follow the
 
 ### Setting it up in the API
 
-For those who prefer to automate and script their infrastructure tasks, Time-to-Live schedules can be configured programmatically using simple HTTP requests.
+For those who prefer to automate and script their infrastructure tasks, scheduled deployments can be configured programmatically using simple HTTP requests.
 
 - Create a schedule
 - Get a schedule for a stack
@@ -136,7 +136,7 @@ func main() {
             return err
         }
 
-        ctx.Export("scheduleId", rawSchedule.ScheduleID)
+        ctx.Export("scheduleId", rawSchedule.ScheduleId)
         return nil
     })
 }
@@ -147,6 +147,8 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Pulumi;
 using PulumiService = Pulumi.PulumiService;
 
@@ -185,7 +187,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    private static to stack(Context ctx) {
+    private static void stack(Context ctx) {
         var rawSchedule = new DeploymentSchedule("rawSchedule", DeploymentScheduleArgs.builder()
             .organization("my-org")
             .project("my-project")
@@ -194,7 +196,7 @@ public class App {
             .pulumiOperation(com.pulumi.pulumiservice.PulumiOperation.update())
             .build());
 
-        ctx.export("scheduleId", rawSchedule.name());
+        ctx.export("scheduleId", rawSchedule.scheduleId());
     }
 }
 ```

@@ -33,7 +33,7 @@ With dependency caching enabled on Pulumi-managed Deployments runners, Pulumi Cl
 
 For supported runtimes, the managed archive also includes provider plugins and policy packs.
 
-These managed caches are [scoped to individual stacks](https://github.com/pulumi/docs/issues/22593). A new stack cannot reuse another stack's entry. For Go, the [cache key](/docs/deployments/concepts/settings/dependency-caching/#what-gets-cached) uses `go.sum`, falling back to `go.mod`. A changed dependency file can select a new entry even when most dependencies remain unchanged.
+These managed caches are [scoped to individual stacks](/docs/deployments/concepts/settings/dependency-caching/#enabling-dependency-caching). A new stack cannot reuse another stack's entry. For Go, the [cache key](/docs/deployments/concepts/settings/dependency-caching/#what-gets-cached) uses `go.sum`, falling back to `go.mod`. A changed dependency file can select a new entry even when most dependencies remain unchanged.
 
 The [measurement lab](https://github.com/pulumi/workshops/blob/e1a2316/faster-pulumi-deployments/labs/01-measure-and-cache/README.md) shows how to enable caching and verify restoration in deployment logs. Measure a source edit as well as an unchanged repeat. Otherwise, you cannot tell whether the cache helps the changes your team normally makes.
 

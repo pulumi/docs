@@ -1106,7 +1106,7 @@ def test_unblock_is_replaced_where_act_refuses_to_push():
         assert act.push_allowed(p)[0] is False  # the board and the act layer agree
     assert [a["id"] for a in row(q, 1)["actions"]] == ["close"]
     assert row(q, 2)["actions"][0]["cmd"] == '--request-changes 2 --reason "2=This branch conflicts with master and can\'t be updated from here; please merge master into it."'
-    assert [a["cmd"] for a in row(q, 4)["actions"]] == ["--unblock 4"] and "unblock:refused" not in " ".join(row(q, 4)["reasons"])
+    assert [a["cmd"] for a in row(q, 4)["actions"]] == ["--unblock 4", "--close 4"] and "unblock:refused" not in " ".join(row(q, 4)["reasons"])
 
 
 def test_a_blocked_row_never_carries_approve_anyway():
@@ -1116,14 +1116,14 @@ def test_a_blocked_row_never_carries_approve_anyway():
     blog = dict(labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/p/index.md", ["A new sentence."], ["An old one."])])
     q = run([stampable(1, **blog), stampable(2, title="Dirty", mergeable_state="dirty", **blog)], cfg=cfg(me=["docs"]))
     ids = lambda n: [a["id"] for a in row(q, n)["actions"] if a["id"] != "render"]  # noqa: E731
-    assert row(q, 1)["verdict"] == "route" and ids(1) == ["route", "stamp", "stamp-no-merge"]
-    assert row(q, 2)["verdict"] == "blocked" and ids(2) == ["unblock", "route"]
+    assert row(q, 1)["verdict"] == "route" and ids(1) == ["route", "stamp", "stamp-no-merge", "close"]
+    assert row(q, 2)["verdict"] == "blocked" and ids(2) == ["unblock", "route", "close"]
 
 
 def test_someone_elses_changes_requested_asks_them_to_re_review():
     p = row(run([stampable(1, reviews=[CR("cnunciato")])]), 1)
     assert p["verdict"] == "blocked" and "changes-requested" in p["blockers"]
-    assert [a["cmd"] for a in p["actions"]] == ["--route 1:@cnunciato"] and p["route_targets"] == ["@cnunciato"]
+    assert [a["cmd"] for a in p["actions"]] == ["--route 1:@cnunciato", "--close 1"] and p["route_targets"] == ["@cnunciato"]
     # on a routed row the lane team rides along in the same request
     blog = dict(labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/p/index.md", ["A new sentence."], ["An old one."])])
     p = row(run([stampable(2, reviews=[CR("jdoe")], **blog)], cfg=cfg(me=["docs"]), teams={"pulumi/docs-marketing-review": True}), 2)
@@ -1228,7 +1228,7 @@ def test_judging_the_blockers_never_lifts_the_row_out_of_blocked():
 
 def test_close_and_route_recommendations_add_their_buttons():
     judge = dict(comments=[comment(V3_BRIEF), comment(CLEAN_AUTHOR)])
-    q = run([stampable(1, **judge),
+    q = run([stampable(1, author="alice", author_type="User", **judge),
              stampable(2, title="Generated", author="pulumi-bot", author_type="User", files=[_file("content/docs/b.md", ["x"])], **judge),
              stampable(3, title="Route me", files=[_file("content/docs/c.md", ["x"])], **judge)], teams={"pulumi/docs-guild": True})
     # a person's close needs a reason, written from the judgments' asks
@@ -1467,7 +1467,7 @@ def test_a_conflicted_unblock_is_not_offered_twice():
     assert not any(a["id"] == "unblock" for a in p["actions"]), p["actions"]
     assert any(a["id"] == "request-changes" for a in p["actions"]), p["actions"]
     # the row next to it has no such record, so it keeps the button
-    assert [a["cmd"] for a in row(q, 2)["actions"]] == ["--unblock 2"]
+    assert [a["cmd"] for a in row(q, 2)["actions"]] == ["--unblock 2", "--close 2"]
 
 
 def test_a_hand_fix_is_never_offered_where_the_fix_would_be_thrown_away():
@@ -1558,3 +1558,13 @@ def test_unrequest_offered_only_when_asked_for_by_name():
     assert "unrequest" not in ids(3)
     assert "unrequest" not in ids(4)  # my own PR
     assert "unrequest" in analyze.DECISION_IDS
+
+
+def test_every_bot_row_offers_close():
+    """A bot PR is cheap to reopen, so every bot row can be closed outright,
+    whatever its verdict; a person's PR never gets the bare button."""
+    q = run([stampable(1), stampable(2, title="Dirty", mergeable_state="dirty", files=[_file("content/docs/b.md", ["x"])]),
+             stampable(3, title="Human", author="alice", author_type="User", files=[_file("content/docs/c.md", ["x"])])])
+    assert any(a["cmd"] == "--close 1" for a in row(q, 1)["actions"])
+    assert any(a["cmd"] == "--close 2" for a in row(q, 2)["actions"])
+    assert not any(a["id"] == "close" for a in row(q, 3)["actions"])

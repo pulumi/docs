@@ -2,7 +2,7 @@
 title_tag: Create a component | AWS
 title: Create a component
 h1: "Get started with Pulumi and AWS"
-meta_desc: This page provides an overview on how to create infrastructure abstractions with Pulumi.
+meta_desc: "Create a reusable Pulumi component that packages your AWS S3 static website so you can stamp out copies. Part of the Pulumi AWS get started guide."
 weight: 7
 menu:
     iac:
