@@ -42,7 +42,7 @@ Previews and drift-detection runs can restore existing entries, but they do not 
 
 ## What gets cached
 
-Every cache entry includes the dependencies below, downloaded Pulumi plugins (`~/.pulumi/plugins`), and policy packs (`~/.pulumi/policies`). Language SDKs are not handled specially — they are cached as part of your normal package manager dependencies.
+For supported runtimes, the cache collects the language dependency paths below, plus the Pulumi plugin and policy directories when present. Those directories default to `~/.pulumi/plugins` and `~/.pulumi/policies`. If `PULUMI_HOME` is set, the cache uses its `plugins` and `policies` subdirectories instead. Missing directories are skipped. Language SDKs use the normal package manager cache paths rather than a separate SDK cache.
 
 | Runtime | Detected using | Cached directories |
 |---------|----------------|--------------------|
@@ -64,7 +64,7 @@ A few constraints are worth knowing before you turn caching on:
 - **For pip, the virtual environment must be named `venv`.** A virtual environment named `.venv` or `env` is not cached.
 - **For Node.js**, a `packageManager` field in `package.json` determines the package manager. Without that field, Pulumi infers it from the lock file, and multiple lock files cause caching to be skipped.
 - **Custom executor images must include your package manager.** Pulumi asks the package manager (`npm`, `yarn`, `pnpm`, `uv`, or `poetry`) where its cache lives, so the binary has to be on the `PATH`. If it isn't, caching is skipped. See [Deployment execution environment](/docs/deployments/guides/custom-images/).
-- **Overriding `PULUMI_HOME` disables plugin caching.** The plugin and policy paths are fixed at `~/.pulumi`, so if you point `PULUMI_HOME` elsewhere with a custom environment variable, those directories are not cached. Your language dependencies are still cached.
+- **Plugin and policy paths follow `PULUMI_HOME`.** If you override it, the cache captures its `plugins` and `policies` subdirectories when present. Without an override, the cache uses `~/.pulumi`.
 
 ## Verifying and troubleshooting
 
@@ -106,6 +106,6 @@ Both actions clear cache entries for **all stacks in the project**. Each stack m
 - Cache entries are isolated per stack. Stacks cannot share entries, even within the same project or organization.
 - Cache archives are limited to 5 GB compressed. A larger archive is skipped with a warning rather than failing the deployment.
 - **A cache failure never fails a deployment.** Every problem with caching is a warning and a skip, which is why an unexpectedly slow deployment is worth checking against the log lines above.
-- Cache keys are matched exactly. Unlike some CI systems, there is no partial or fallback key match, so any change to a lock file produces a cold cache.
+- Cache keys are matched exactly, with no partial or fallback key match. Changed lock files select another key. That key produces a miss unless an entry already exists for it.
 - Caches that go unread for roughly a month are evicted. A cache in regular use stays warm.
 - The **Save cache** step does not run for previews or drift detection, or when a `destroy` operation deletes the stack afterward.
