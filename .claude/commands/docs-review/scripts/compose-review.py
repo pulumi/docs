@@ -804,37 +804,47 @@ def render_investigation_log(
     # Hugo/frontmatter/readthrough) are NOT fact-check claims; exclude them so
     # they don't inflate the "X of Y claims verified" counts (route_counts is
     # filtered to match, so I+P+F+S still sums to Y).
+    #
+    # No claims is rendered as the full canonical skeleton with zero counts, not
+    # as `not run (no claims in this diff)` (pulumi/docs#20596). The reviewer may
+    # legitimately add in-review claims, and then rewrites this bullet into the
+    # `X of Y claims verified` form -- at which point the dispatch- and
+    # routed-metadata rules apply to a line that had no segments to preserve, so
+    # it published with violations validator-fix can't reliably reconstruct.
+    # With the skeleton in place, an in-review addition increments counts that
+    # already exist. `0 of 0` is exempt from the metadata rules
+    # (validate-pinned.py `_external_claim_line`), so the zero form validates.
     fact_verdicts = [v for v in verdicts if v.get("route") != "preflight"]
-    if not fact_verdicts:
-        bullets.append("- **External claim verification:** not run (no claims in this diff)")
-    else:
-        y = len(fact_verdicts)
-        x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
-        n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
-        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
-        n_drift = sum(1 for v in fact_verdicts if v.get("verdict") in DRIFT_VERDICTS)
-        i_inline = route_counts.get("inline", 0)
-        p1 = route_counts.get("pass1", 0)
-        f2 = route_counts.get("pass2", 0)
-        s3 = route_counts.get("pass3", 0)
-        k_corr = route_counts.get("k_corr", 0)
-        seg = (
-            f"- **External claim verification:** {x} of {y} claims verified "
-            f"({n_unver} unverifiable, {n_contra} contradicted"
-            f"{f', {n_drift} framing-drift' if n_drift else ''}) · "
-            f"4 specialists (numerical, cross-reference, capability, framing); "
-            f"{k_corr} cross-specialist corroborations · "
-            f"routed: {i_inline} inline, {p1} Pass 1, {f2} Pass 2"
-        )
-        if f2 > 0:
-            v2, c2, u2 = route_counts.get("pass2_vcu", (0, 0, 0))
-            seg += f" (verified {v2}, contradicted {c2}, unverifiable {u2})"
-        seg += f", {s3} Pass 3"
-        if s3 > 0:
-            v3, c3, u3 = route_counts.get("pass3_vcu", (0, 0, 0))
-            seg += f" (verified {v3}, contradicted {c3}, unverifiable {u3})"
-        seg += "."
-        bullets.append(seg)
+    # With no claims, every count is zero by construction; don't trust a
+    # route_counts that was computed over detector-only verdicts.
+    claim_routes = route_counts if fact_verdicts else {}
+    y = len(fact_verdicts)
+    x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
+    n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
+    n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
+    n_drift = sum(1 for v in fact_verdicts if v.get("verdict") in DRIFT_VERDICTS)
+    i_inline = claim_routes.get("inline", 0)
+    p1 = claim_routes.get("pass1", 0)
+    f2 = claim_routes.get("pass2", 0)
+    s3 = claim_routes.get("pass3", 0)
+    k_corr = claim_routes.get("k_corr", 0)
+    seg = (
+        f"- **External claim verification:** {x} of {y} claims verified "
+        f"({n_unver} unverifiable, {n_contra} contradicted"
+        f"{f', {n_drift} framing-drift' if n_drift else ''}) · "
+        f"4 specialists (numerical, cross-reference, capability, framing); "
+        f"{k_corr} cross-specialist corroborations · "
+        f"routed: {i_inline} inline, {p1} Pass 1, {f2} Pass 2"
+    )
+    if f2 > 0:
+        v2, c2, u2 = claim_routes.get("pass2_vcu", (0, 0, 0))
+        seg += f" (verified {v2}, contradicted {c2}, unverifiable {u2})"
+    seg += f", {s3} Pass 3"
+    if s3 > 0:
+        v3, c3, u3 = claim_routes.get("pass3_vcu", (0, 0, 0))
+        seg += f" (verified {v3}, contradicted {c3}, unverifiable {u3})"
+    seg += "."
+    bullets.append(seg)
 
     # 3. Cited-claim spot-checks.
     n_cited = sum(1 for v in verdicts if v.get("route") == "pass2")
