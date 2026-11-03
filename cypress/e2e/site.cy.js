@@ -69,9 +69,9 @@ describe("www.pulumi.com", () => {
             });
 
             it("activates the selected OS", () => {
-                cy.get(`pulumi-choosable[type="os"][value="macos"] > div`)
+                cy.get(`pulumi-choosable[type="os"][values="macos"] > div`)
                     .should("not.have.class", "active");
-                cy.get(`pulumi-choosable[type="os"][value="linux"] > div`)
+                cy.get(`pulumi-choosable[type="os"][values="linux"] > div`)
                     .should("have.class", "active");
             });
         });
