@@ -1,3 +1,0 @@
-name: aws-eks-helm-wordpress-typescript
-runtime: nodejs
-description: An example that deploys a WordPress Helm chart to an EKS cluster.

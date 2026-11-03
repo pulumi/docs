@@ -1,3 +1,0 @@
-name: aws-eks-k8s-configgroup-typescript
-runtime: nodejs
-description: An example that deploys Kubernetes YAML resources to an EKS cluster.
