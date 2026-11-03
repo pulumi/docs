@@ -416,5 +416,5 @@ For teams already using Pulumi Cloud, Neo with auto mode might be the fastest pa
 - [Claude Code documentation](https://docs.anthropic.com/claude-code/)
 - [Pulumi Neo Tasks](/docs/ai/neo/tasks/)
 - [Pulumi MCP Server for AI assistants](/blog/mcp-server-ai-assistants/)
-- [Getting started with Pulumi on AWS](/docs/iac/get-started/aws/)
+- [Getting started with Pulumi on AWS](/up/)
 - [Testing Pulumi programs](/docs/iac/concepts/testing/)

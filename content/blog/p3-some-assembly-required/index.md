@@ -319,7 +319,7 @@ While setting up the Pulumi Patterns and Practices Platform (P3) reference archi
 
 The next few posts in this series will go beyond these simple examples, showing much more complicated implementations of all of these pieces, and recommend some best practices for managing your infrastructure with this platform.
 
-And if you are already ready to get your hands on Pulumi after this introduction, feel free to [create an account](https://www.pulumi.com/signup/) and follow some of our [Getting Started](https://www.pulumi.com/docs/get-started/) guides to see how easy simple use cases are and begin to imagine how that same developer experience will scale up to your entire organization.
+And if you are already ready to get your hands on Pulumi after this introduction, feel free to [create an account](https://www.pulumi.com/signup/) and follow some of our [Getting Started](/up/) guides to see how easy simple use cases are and begin to imagine how that same developer experience will scale up to your entire organization.
 
 To learn more, you can watch the following video which provides a high level overview of how Pulumi works:
 

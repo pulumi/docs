@@ -197,4 +197,4 @@ records the combined state in your [Pulumi Cloud](https://app.pulumi.com) backen
 - [AWS API Gateway documentation](/registry/packages/aws-apigateway/)
 - [Amazon EKS documentation](/registry/packages/eks/)
 - [Pulumi CDK adapter tutorial](/dev/tutorials/aws-cdk/)
-- [Get started with AWS](/docs/iac/get-started/aws/)
+- [Get started with AWS](/up/)

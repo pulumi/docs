@@ -83,7 +83,7 @@ Kubernetes best practices are the operational patterns that keep workloads avail
 | `kubectl apply -f` from a laptop | No history, no review, no rollback | GitOps with Argo CD or Flux; Git is the source of truth |
 | Manual `latest` image tags | Non-reproducible deploys, supply-chain risk | Pinned digests (`@sha256:...`) with cosign verification |
 | Ingress-nginx in 2026 | Project retired March 2026 — no security fixes | Migrate to the Gateway API (Envoy Gateway, Istio, Kgateway) |
-| Hand-rolled YAML in dozens of repos | Drift, copy-paste bugs, no testing | [Pulumi](/docs/iac/get-started/kubernetes/), Helm, or Kustomize with reviews |
+| Hand-rolled YAML in dozens of repos | Drift, copy-paste bugs, no testing | [Pulumi](/up/), Helm, or Kustomize with reviews |
 | One shared `prod` cluster for everything | Blast radius spans every team | Separate clusters or [vCluster](https://www.vcluster.com/) virtual clusters |
 
 ## 1. How do you set Kubernetes resource requests and limits?
@@ -122,7 +122,7 @@ This is the smallest unit that gives you predictable cost, blast-radius containm
 
 - **[Helm](https://helm.sh/)** — Go-templated charts; the de-facto distribution format for off-the-shelf software (Prometheus, cert-manager, Argo CD).
 - **[Kustomize](https://kustomize.io/)** — overlay-based, no templating; ships in `kubectl`. Best for "same app, different environment" diffs.
-- **[Pulumi](/docs/iac/get-started/kubernetes/)** — real programming languages (TypeScript, Python, Go, Java, .NET) for Kubernetes plus the cloud resources around it (EKS, GKE, AKS, DNS, IAM). Type checking, tests, and the Pulumi [Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) for GitOps-style reconciliation.
+- **[Pulumi](/up/)** — real programming languages (TypeScript, Python, Go, Java, .NET) for Kubernetes plus the cloud resources around it (EKS, GKE, AKS, DNS, IAM). Type checking, tests, and the Pulumi [Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) for GitOps-style reconciliation.
 
 If you are already managing cloud infrastructure with code, extending the same Pulumi program to Kubernetes is the smallest cognitive jump — the cluster, its IAM, its DNS, and its workloads live in one stack and one review.
 
@@ -242,7 +242,7 @@ Provision your clusters, their cloud resources, and the workloads on them from o
 - **Separate clusters per environment** is the safe default. With managed control planes (EKS, GKE, AKS) the cost is small.
 - **Virtual clusters** with [vCluster](https://www.vcluster.com/) give each team a Kubernetes API of their own without the operational cost of a real cluster.
 - **Namespace-only segregation** can work for dev/staging if you enforce strict NetworkPolicy, RBAC, and ResourceQuota boundaries.
-- Provision all of them from the same [Pulumi](/docs/iac/get-started/kubernetes/) program with different stacks — `dev`, `staging`, `prod` — so promotion is a config change, not a copy.
+- Provision all of them from the same [Pulumi](/up/) program with different stacks — `dev`, `staging`, `prod` — so promotion is a config change, not a copy.
 
 ## 13. How do you optimize Kubernetes container images?
 
@@ -305,13 +305,13 @@ This is what regulators and customers ask for in 2026 — Executive Order 14028,
 - **Schedule** non-prod clusters off overnight and on weekends.
 - **Spot/preemptible nodes** for fault-tolerant workloads; use Karpenter's consolidation to compact bin-packing.
 - **Show back / charge back** by namespace and label using [OpenCost](https://www.opencost.io/) or [Kubecost](https://www.kubecost.io/). Without per-team attribution, no team owns cost.
-- **Provision the underlying cluster with IaC** — see [Pulumi for Kubernetes](/docs/iac/get-started/kubernetes/) — so node types, autoscaling limits, and reserved capacity are reviewable artifacts. Pulumi's [hidden-cost analysis](/blog/hidden-costs-of-infrastructure-management/) walks through where the money actually goes.
+- **Provision the underlying cluster with IaC** — see [Pulumi for Kubernetes](/up/) — so node types, autoscaling limits, and reserved capacity are reviewable artifacts. Pulumi's [hidden-cost analysis](/blog/hidden-costs-of-infrastructure-management/) walks through where the money actually goes.
 
 ## 19. Why should you treat Kubernetes clusters as cattle, not pets?
 
 The old "cattle, not pets" adage applies more strictly to Kubernetes than to VMs. Manual edits to a live cluster will be reconciled away, drift between environments, or vanish on the next Pod restart.
 
-- Fix problems in code — YAML, Helm chart, or [Pulumi program](/docs/iac/get-started/kubernetes/) — and let the controller redeploy.
+- Fix problems in code — YAML, Helm chart, or [Pulumi program](/up/) — and let the controller redeploy.
 - If you can't redeploy a cluster from Git in under an hour, you have a pet.
 - Use ephemeral preview environments for PRs; use blue/green or progressive delivery (Argo Rollouts, Flagger) for production cutovers.
 
@@ -346,4 +346,4 @@ Pick the three weakest spots in your environment and fix those first. Then promo
 
 Want to learn how to put these practices into action? Meet us at [KubeCon Europe 2026 (Booth 784)](https://www.pulumi.com/kubecon/) or register for our upcoming [Zero to Production in Kubernetes](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) workshop.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

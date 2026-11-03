@@ -157,7 +157,7 @@ No. Pulumi is an infrastructure as code platform, not a Kubernetes package manag
 
 ## Next steps
 
-- [Get started with Pulumi on Kubernetes](/docs/iac/get-started/kubernetes/)
+- [Get started with Pulumi on Kubernetes](/up/)
 - [Pulumi Kubernetes provider](/registry/packages/kubernetes/)
 - [Pulumi vs. Kubernetes YAML and DSLs](/docs/iac/comparisons/k8s-yaml-dsls/)
 - [Migrating from Kubernetes YAML or Helm Charts to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/)

@@ -224,7 +224,7 @@ and CloudWatch. It's possible to use any of these services without
 Pulumi, but there are [many benefits to Pulumi's infrastructure as code](/why-pulumi).
 
 In short, to get your containers up on AWS, in an easy yet
-production-ready way, [get started for free with Pulumi for AWS today](/docs/iac/get-started/aws/)!
+production-ready way, [get started for free with Pulumi for AWS today](/up/)!
 
 After getting started, here are some additional resources to go deeper
 on specific topics:

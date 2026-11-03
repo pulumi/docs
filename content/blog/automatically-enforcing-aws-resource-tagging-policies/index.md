@@ -744,7 +744,7 @@ In this post, we've seen some ways to enforce AWS tagging best practices. This i
 
 Check out these resources to get started with Pulumi's open source platform:
 
-* [AWS getting started guide](/docs/iac/get-started/aws/)
+* [AWS getting started guide](/up/)
 * [Policy as Code getting started guide](/docs/discovery-governance/get-started/enforce-policy-as-code/)
 * [Full example code used in this post](https://github.com/joeduffy/aws-tags-example)
 

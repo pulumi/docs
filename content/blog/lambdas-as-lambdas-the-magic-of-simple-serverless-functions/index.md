@@ -102,7 +102,7 @@ application code that runs as a function.
 First, we're just defining two simple resources: 1) an `s3.Bucket`,
 where we expect new video files to be uploaded to, and 2) a
 `cloud.Topic` that will inform interested parties when new videos are
-uploaded. (The full surface area of AWS is available in [the aws package](/docs/iac/get-started/aws/), and
+uploaded. (The full surface area of AWS is available in [the aws package](/up/), and
 [the cloud package](https://github.com/pulumi/pulumi-cloud) offers
 multi-cloud abstractions that work at a higher level of abstraction.)
 Right after defining the resources, we start creating our first FaaS

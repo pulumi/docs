@@ -113,7 +113,7 @@ The Pulumi Cloud `refresh` command can be used to detect drift and then you can 
 
 ## Learn more about infrastructure as code
 
-The Pulumi [Getting Started guide](/docs/get-started/) is the easiest way to get up and running with infrastructure as code. In addition to that, plus exploring the Pulumi Templates and Examples, we recommend some additional resources:
+The Pulumi [Getting Started guide](/up/) is the easiest way to get up and running with infrastructure as code. In addition to that, plus exploring the Pulumi Templates and Examples, we recommend some additional resources:
 
 The tutorial series, [Infrastructure as Code Recommended Practices](/blog/iac-recommended-practices-code-organization-and-stacks/), is a great overview of many concerns you will encounter along your infrastructure as code journey. This ranges from how to organize your project code and stacks, how to do local development and testing of your code, how to evolve these structures as your needs change, automation scenarios and more.
 

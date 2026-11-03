@@ -22,7 +22,7 @@ The provider is open source and available on GitHub so you can always follow alo
 
 Here are a few links to help you get started if you are new to Pulumi:
 
-- [Getting Started](https://www.pulumi.com/docs/iac/get-started/azure/) - A guided walkthrough for creating your first project
+- [Getting Started](/up/) - A guided walkthrough for creating your first project
 - [Setup & Install](https://www.pulumi.com/registry/packages/azure/installation-configuration/) - Instructions on installing the Azure Classic provider
 - [Examples](/dev/examples/) - Browse runnable Pulumi programs across clouds and languages
 - [Pulumi Neo](https://www.pulumi.com/product/neo/) - Ask Pulumi Neo to create a new project

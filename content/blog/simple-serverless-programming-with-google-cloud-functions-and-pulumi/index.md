@@ -227,7 +227,7 @@ create, update, and maintain.
 
 To check things out, get started today:
 
-- [Get Started with Pulumi on GCP](/docs/iac/get-started/gcp/)
+- [Get Started with Pulumi on GCP](/up/)
 - [Deploy a Minimal Google Cloud Function Application](https://github.com/pulumi/examples/tree/master/gcp-ts-functions)
 
 PS: If you're interested in how Pulumi manages to take a

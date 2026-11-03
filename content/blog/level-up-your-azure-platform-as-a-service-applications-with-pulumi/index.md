@@ -455,9 +455,9 @@ language.
 
 You can get going with these resources:
 
-- [Getting Started with Pulumi](/docs/get-started/)
-- [Setup Pulumi to work with Azure](/docs/iac/get-started/azure/)
-- [Walkthroughs and Examples](/docs/iac/get-started/azure/)
+- [Getting Started with Pulumi](/up/)
+- [Setup Pulumi to work with Azure](/up/)
+- [Walkthroughs and Examples](/up/)
 
 Pulumi enables developers to define cloud infrastructure using general
 purpose programming languages. Pulumi works with multiple cloud

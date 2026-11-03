@@ -153,7 +153,7 @@ Yes — and this is one of the more common adoption patterns. Pulumi can read ou
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/get-started/)
+- [Get started with Pulumi](/up/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 - [Pulumi terms and command equivalents for OpenTofu users](/docs/iac/comparisons/terraform/#terraform-terms-and-command-equivalents)
 - [Using any Terraform or OpenTofu provider with Pulumi](/docs/iac/concepts/providers/any-terraform-provider/)

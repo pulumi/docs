@@ -132,5 +132,5 @@ Pulumi gives you the tools to manage Azure the way you manage software: modular,
 If you’re already building with C# and .NET, you’re 90% of the way there. Why suffer through another slow, error-prone ARM deployment?
 
 - [Try Pulumi Open Source](https://app.pulumi.com/signup)
-- [Get Started with Azure + Pulumi Docs](https://www.pulumi.com/docs/iac/get-started/azure/)
+- [Get Started with Azure + Pulumi Docs](/up/)
 - [Browse the Pulumi examples catalog](/dev/examples/)

@@ -198,9 +198,9 @@ If you’re curious and want to learn more about Pulumi and the AWS Static Websi
 * If you want to quickly try out the component, this [GitHub repo](https://github.com/sean1588/create-react-app-pulumi) houses a complete React example project that you can clone.
 * If you want to learn about other Pulumi components, take a look at the [registry page](/registry/), which catalogs them all.
 * If you want to view more examples of how to use Pulumi, take a look at the Pulumi [examples](https://github.com/pulumi/examples) repo.
-* If you want to delve deeper into Pulumi, the [Getting Started](/docs/get-started/) guide is a good first step.
+* If you want to delve deeper into Pulumi, the [Getting Started](/up/) guide is a good first step.
 * If you’re interested in learning more about Pulumi concepts, try the [Concepts](/docs/iac/concepts/) page.
 
 ## <a name="install"></a> Install Pulumi
 
-To install Pulumi for AWS, go to [Before You Begin](/docs/iac/get-started/aws/). There are instructions for macOS, Windows and Linux. You need to have an AWS account.
+To install Pulumi for AWS, go to [Before You Begin](/up/). There are instructions for macOS, Windows and Linux. You need to have an AWS account.

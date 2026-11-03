@@ -56,10 +56,10 @@ describe("www.pulumi.com", () => {
         });
     });
 
-    describe("getting started", () => {
+    describe("install", () => {
 
         beforeEach(() => {
-            cy.visit("/docs/iac/get-started/aws/begin");
+            cy.visit("/docs/install/");
         });
 
         describe("when an OS is selected", () => {

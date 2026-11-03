@@ -90,7 +90,7 @@ const kibana = new helm.v2.Chart("kibana", {
 ```
 
 Check out the [Kubernetes
-overview](/docs/iac/get-started/kubernetes/) docs, the [API
+overview](/up/) docs, the [API
 documentation](/registry/packages/kubernetes/api-docs)
 and the [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
 GitHub project for additional details.
@@ -273,7 +273,7 @@ it and configure it with your CI system, please [read the documentation](/docs/i
 We're excited about all the new features in this release and the new
 scenarios they enable for the Pulumi community . If you are new to
 Pulumi, [download the tools and get started
-today](/docs/get-started/), or [join us in Slack](https://slack.pulumi.com). A big thanks to all the users and
+today](/up/), or [join us in Slack](https://slack.pulumi.com). A big thanks to all the users and
 contributors who have helped shape this release -- we can't wait to see
 what you build next !
 
