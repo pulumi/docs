@@ -200,13 +200,13 @@ url = "https://info.pulumi.com/press-release/pulumi-announces-15m-in-series-a-fu
 date = "12th September 2018"
 title = "Pulumi’s Cloud Native SDK Lets Teams Easily Define and Deliver Cloud Native Infrastructure as Code for Kubernetes in Any Cloud Using Real Languages"
 summary = "Company joins CNCF to accelerate cloud native programming models for Kubernetes."
-url = "https://info.pulumi.com/press-release/pulumi-cloud-native-sdk-delivers-cloud-native-infrastructure-as-code-for-kubernetes/"
+url = "https://info.pulumi.com/press-release/pulumi-cloud-native-sdk-delivers-cloud-native-infrastructure-as-code-for-kubernetes"
 
 [[releases]]
 date = "18th June 2018"
 title = "Pulumi Launches Cloud Development Platform to Help Teams Get Code to the Cloud Faster"
 summary = "Company funded by Madrona Venture Group and Tola Capital to help companies accelerate cloud application development and infrastructure delivery. "
-url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
+url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster"
 
 [[coverage]]
 date = "6th November 2025"
