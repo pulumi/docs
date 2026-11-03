@@ -7,6 +7,7 @@ import * as fs from "fs";
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
 import { marketingWebPaths } from "./marketingWebPaths";
+import { PricingApi } from "./pricingApi";
 import { SupportFormApi } from "./supportForm";
 import { SupportRedirect } from "./supportRedirect";
 
@@ -85,6 +86,11 @@ const config = {
     // conversations. Requires the intercomApiKey stack config value — see
     // SupportFormApiArgs in supportForm.ts.
     enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
+
+    // enablePricingApi toggles the /api/pricing endpoint (see pricingApi.ts), which estimates a
+    // Pulumi Cloud monthly bill from usage for Intercom's Fin and other callers. Needs no secrets
+    // or other config; see pricing-api/README.md.
+    enablePricingApi: stackConfig.getBoolean("enablePricingApi") || false,
 
     // supportRedirectDomain is a retired hostname (e.g. support.pulumi.com) permanently redirected to the
     // support-request form at /support/new/ via a dedicated CloudFront distribution — see supportRedirect.ts.
@@ -919,7 +925,7 @@ const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPol
     },
 });
 
-// API responses (currently just /api/support*) must never be cached by browsers
+// API responses (/api/support* and /api/pricing*) must never be cached by browsers
 // or intermediaries. DefaultCachePolicy would stamp max-age=60 on them, so this
 // policy overrides Cache-Control to no-store while keeping the security headers.
 const ApiResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy("api-response-headers", {
@@ -1158,6 +1164,54 @@ if (config.enableSupportForm) {
     });
 }
 
+// The pricing estimate endpoint (see pricingApi.ts). Additive and fully optional —
+// dev stacks and PR previews without enablePricingApi get no origin or behavior.
+// Requests through it get the WAF's per-IP rate limit (the link-checker exemption
+// excludes /api/), and the Lambda's reserved concurrency caps the rest.
+const pricingApiOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const pricingApiBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+let pricingApi: PricingApi | undefined;
+
+if (config.enablePricingApi) {
+    pricingApi = new PricingApi("pricing-api");
+
+    pricingApiOrigins.push(pricingApi.getOrigin());
+
+    // The estimate's inputs are query parameters on a GET, so every query string is
+    // forwarded. Headers are a whitelist, as for /api/support: content-type for POST
+    // bodies, plus the three CORS request headers the Function URL's own CORS config
+    // needs to answer browser preflights. Host is dropped by construction, which Lambda
+    // Function URL origins require. The x-origin-verify secret is unaffected — it is an
+    // origin customHeaders entry (see PricingApi.getOrigin), added regardless of this policy.
+    const pricingApiOriginRequestPolicy = new aws.cloudfront.OriginRequestPolicy("pricing-api-origin-request", {
+        comment: "/api/pricing: forwards query strings, the content type, and CORS request headers.",
+        cookiesConfig: { cookieBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "all" },
+        headersConfig: {
+            headerBehavior: "whitelist",
+            headers: {
+                items: ["content-type", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"],
+            },
+        },
+    });
+
+    pricingApiBehaviors.push({
+        ...baseCacheBehavior,
+        targetOriginId: "pricing-api",
+        pathPattern: "/api/pricing*",
+        // The API takes GET and POST, and CloudFront's only POST-capable set is all
+        // seven; the handler 405s the rest. Estimates are cheap and the rates can
+        // change hourly, so nothing is cached.
+        allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
+        cachedMethods: ["GET", "HEAD"],
+        cachePolicyId: noCacheKeyPolicy.id,
+        originRequestPolicyId: pricingApiOriginRequestPolicy.id,
+        responseHeadersPolicyId: ApiResponseHeadersPolicy.id,
+        lambdaFunctionAssociations: [],
+        functionAssociations: [],
+    });
+}
+
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
@@ -1213,6 +1267,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...answersOrigins,
         ...versionedDocsOrigins,
         ...supportFormOrigins,
+        ...pricingApiOrigins,
     ],
 
     // Default object to serve when no path is given.
@@ -1235,9 +1290,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     orderedCacheBehaviors: [
-        // The support-form API endpoint. /api/support* overlaps no other
-        // pattern; listed first because it's the only non-content behavior.
+        // The API endpoints. /api/support* and /api/pricing* overlap no other
+        // pattern; listed first because they're the only non-content behaviors.
         ...supportFormBehaviors,
+        ...pricingApiBehaviors,
 
         ...registryBehaviors,
         ...devBehaviors,
@@ -1609,5 +1665,6 @@ export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
 export const wafWebAclArn = webAcl?.arn;
 export const supportFormFunctionName = supportForm?.getFunctionName();
+export const pricingApiFunctionName = pricingApi?.getFunctionName();
 export const supportRedirectDistributionDomain = supportRedirect?.getDistributionDomainName();
 export const readme = fs.readFileSync("./README.md").toString();
