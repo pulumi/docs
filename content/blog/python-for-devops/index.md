@@ -278,7 +278,7 @@ With Pulumi, you get:
 
 - [Automation API](/docs/iac/concepts/automation-api/) for running deployments from inside your own Python programs
 
-[Pulumi Neo](/docs/ai/neo/), the infrastructure agent in Pulumi Cloud, can also draft and preview changes to code like this for you to review.
+[Pulumi Neo](/docs/ai/concepts/neo/), the infrastructure agent in Pulumi Cloud, can also draft and preview changes to code like this for you to review.
 
 ```python
 # Create a Lambda function

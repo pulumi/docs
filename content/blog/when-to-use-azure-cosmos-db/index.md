@@ -327,7 +327,7 @@ With Pulumi, you get:
 
 - [Rich Azure database provisioning](/docs/integrations/clouds/azure/) capabilities for Cosmos DB, PostgreSQL, and Azure SQL
 - [Automated configuration management](/docs/iac/concepts/config/) to handle connection strings and secrets securely
-- [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your database configuration before deployment
+- [Infrastructure testing capabilities](/docs/iac/guides/testing/) to validate your database configuration before deployment
 - [Stack references](/docs/iac/concepts/stacks/#stackreferences) for managing multiple database environments
 - [Custom components](/docs/iac/concepts/components/) for creating reusable database infrastructure patterns
 

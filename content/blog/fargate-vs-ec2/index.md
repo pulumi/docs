@@ -202,13 +202,13 @@ But really, pure compute cost calculations are an insufficient metric for making
 
 ## Managing Container Orchestration with Pulumi
 
-Whether you choose EC2 or Fargate, Pulumi makes it easy to manage in your favorite programming languages. With its rich AWS support and infrastructure as code capabilities, you can define, deploy, and manage your entire Kubernetes infrastructure using familiar tools and practices. Pulumi's [AWS provider](/docs/iac/clouds/aws/) helps you implement the right solution for your needs.
+Whether you choose EC2 or Fargate, Pulumi makes it easy to manage in your favorite programming languages. With its rich AWS support and infrastructure as code capabilities, you can define, deploy, and manage your entire Kubernetes infrastructure using familiar tools and practices. Pulumi's [AWS provider](/docs/integrations/clouds/aws/) helps you implement the right solution for your needs.
 
 With Pulumi, you get:
 
 - [Complete control over EKS cluster configuration](/docs/iac/clouds/aws/guides/eks/), including node types, scaling policies, and networking setup
 - [Built-in support for both EC2 node groups and Fargate profiles](/docs/integrations/clouds/kubernetes/) within the same cluster
-- [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your cluster configuration before deployment
+- [Infrastructure testing capabilities](/docs/iac/guides/testing/) to validate your cluster configuration before deployment
 - [Automation APIs](/docs/iac/concepts/automation-api/) for programmatic infrastructure management and custom tooling
 
 Ready to streamline your EKS infrastructure management?

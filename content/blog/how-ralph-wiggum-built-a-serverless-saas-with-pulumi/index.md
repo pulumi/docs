@@ -394,7 +394,7 @@ Just make sure you have billing alerts set up. Ralph Wiggum does not know when t
 
 ## Or try Pulumi Neo: Ralph built-in
 
-If setting up the Ralph Wiggum plugin feels like too much ceremony, Pulumi has something similar built right into [Pulumi Neo](/docs/ai/neo/tasks/).
+If setting up the Ralph Wiggum plugin feels like too much ceremony, Pulumi has something similar built right into [Pulumi Neo](/docs/ai/concepts/neo/tasks/).
 
 Neo Tasks work on the same principle: you describe what you want, and Neo plans and executes the infrastructure changes. The key is **auto mode**. When you set a task to auto mode, Neo runs without requesting approvals. It plans, executes, validates with `pulumi preview`, and iterates until the task is complete.
 
@@ -414,7 +414,7 @@ For teams already using Pulumi Cloud, Neo with auto mode might be the fastest pa
 
 - [Geoffrey Huntley's original Ralph Wiggum post](https://ghuntley.com/ralph/)
 - [Claude Code documentation](https://docs.anthropic.com/claude-code/)
-- [Pulumi Neo Tasks](/docs/ai/neo/tasks/)
+- [Pulumi Neo Tasks](/docs/ai/concepts/neo/tasks/)
 - [Pulumi MCP Server for AI assistants](/blog/mcp-server-ai-assistants/)
 - [Getting started with Pulumi on AWS](/docs/iac/get-started/aws/)
-- [Testing Pulumi programs](/docs/iac/concepts/testing/)
+- [Testing Pulumi programs](/docs/iac/guides/testing/)

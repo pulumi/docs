@@ -9,7 +9,7 @@ meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock ne
 ---
 
 {{% notes type="warning" %}}
-Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/iac/concepts/testing/) for the updated overview and tutorials.
+Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/iac/guides/testing/) for the updated overview and tutorials.
 {{% /notes %}}
 
 Using Pulumi and general purpose languages for [infrastructure as code](/what-is/what-is-infrastructure-as-code/)

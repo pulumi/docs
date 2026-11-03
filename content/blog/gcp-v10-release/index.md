@@ -37,7 +37,7 @@ The [migration guide](/registry/packages/gcp/how-to-guides/10-0-migration/) acco
 
 ### Use an agent to assist with your upgrade
 
-We have updated the `provider-upgrade` skill in [Pulumi Agent Skills](/blog/pulumi-agent-skills/) to cover the upgrade from v9. You can use it from [Pulumi Neo](/docs/ai/neo/) or from any popular coding agent. Before it bumps the provider, it scans your stack and code for the changes that affect you, and it stops to ask before anything that would replace or delete live infrastructure. Then it upgrades the dependency, runs `pulumi preview` until the diff is explained, and leaves `pulumi up` to you.
+We have updated the `provider-upgrade` skill in [Pulumi Agent Skills](/blog/pulumi-agent-skills/) to cover the upgrade from v9. You can use it from [Pulumi Neo](/docs/ai/concepts/neo/) or from any popular coding agent. Before it bumps the provider, it scans your stack and code for the changes that affect you, and it stops to ask before anything that would replace or delete live infrastructure. Then it upgrades the dependency, runs `pulumi preview` until the diff is explained, and leaves `pulumi up` to you.
 
 In Neo, ask: "Upgrade this project to pulumi-gcp v10." Neo picks the `provider-upgrade` skill for you; there is nothing to install or name.
 

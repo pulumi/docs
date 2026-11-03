@@ -53,7 +53,7 @@ After [shipping 1.0 last year](/blog/pulumi-1-0/), we've been hard at work helpi
 
 * **Policy**. [Our new policy as code framework, CrossGuard](/docs/discovery-governance/concepts/policy-as-code/), lets you define policies using familiar languages and then apply those policies at deployment-time. This prevents mistakes from ever getting out the door, including cost, security, and compliance. [Configurable policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/) let you write a single policy and apply it flexibly across your projects.
 
-* **Testing**. Many customers are using a spectrum of techniques to [validate their infrastructure in new ways](/docs/iac/concepts/testing/). This includes [unit testing using familiar frameworks and new mocking capabilities](/docs/iac/guides/testing/unit/) through [integration testing for short- and long-lived environments](/docs/iac/guides/testing/integration/).
+* **Testing**. Many customers are using a spectrum of techniques to [validate their infrastructure in new ways](/docs/iac/guides/testing/). This includes [unit testing using familiar frameworks and new mocking capabilities](/docs/iac/guides/testing/unit/) through [integration testing for short- and long-lived environments](/docs/iac/guides/testing/integration/).
 
 ## Welcome to the Team, Pulumipus!
 

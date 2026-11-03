@@ -100,7 +100,7 @@ to scale up from there depending on your needs.
 Over time, Pulumi is becoming a more comprehensive platform, with new services like
 [Pulumi Deployments](/blog/pulumi-deployments) for multi-cloud deployment workflows and
 [Pulumi Insights](/blog/pulumi-insights) for search, analytics, and AI for your cloud infrastructure.
-Pulumi also offers [policies](/crossguard) and [secrets](/docs/iac/concepts/secrets/) as
+Pulumi also offers [policies](/product/discovery-governance/) and [secrets](/docs/iac/concepts/secrets/) as
 core features of the platform. [Enterprises](/enterprise) are increasingly betting on Pulumi for
 their entire cloud management and platform needs.
 

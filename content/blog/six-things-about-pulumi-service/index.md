@@ -21,7 +21,7 @@ tags:
 category: product
 ---
 
-As a reader of this blog, you've probably heard of [Pulumi Cloud](/product/), the default state-management [backend](/docs/iac/concepts/state-and-backends/) of the Pulumi CLI. If that's the case, there's also a good chance you've heard of several of its key features, like helping you organize your [projects and stacks](/docs/iac/concepts/stacks/), collaborate with others with the help of [organizations](/docs/administration/organizations-teams/organizations/), or handle sensitive data securely with built-in support for [encrypted secrets](https://www.pulumi.com/docs/iac/concepts/secrets/).
+As a reader of this blog, you've probably heard of [Pulumi Cloud](/product/), the default state-management [backend](/docs/iac/concepts/state-and-backends/) of the Pulumi CLI. If that's the case, there's also a good chance you've heard of several of its key features, like helping you organize your [projects and stacks](/docs/iac/concepts/stacks/), collaborate with others with the help of [organizations](/docs/administration/concepts/organizations/), or handle sensitive data securely with built-in support for [encrypted secrets](https://www.pulumi.com/docs/iac/concepts/secrets/).
 
 What you might not know, though, is that we're adding new features to Pulumi Cloud all the time, and that some of these features can  be fairly easy to miss. So in this post, we'll highlight a handful of the features you might _not_ be aware of, and that we think make it even easier to manage your infrastructure with Pulumi.
 

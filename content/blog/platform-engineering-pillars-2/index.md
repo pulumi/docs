@@ -54,7 +54,7 @@ Let’s explore how platform engineering teams can achieve this by version-contr
 * **No Clear File Structure:** Throwing all configs into a single file or folder obscures dependencies. Organize by environment, service, or module.
 * **Skipping Peer Reviews:** Infrastructure mistakes can be costly. A simple pull request process can catch errors before deployment.
 
-#### 💡 Tip: Read our list of [IaC Best Practices](/blog/iac-recommended-practices-code-organization-and-stacks/) 💡
+#### 💡 Tip: Read our list of [IaC Best Practices](/blog/iac-best-practices-understanding-code-organization-stacks/) 💡
 
 {{% /notes %}}
 
