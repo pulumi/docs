@@ -25,7 +25,7 @@ Here's a recap of the news:
 **Can we help you build an internal cloud platform?** Although the new capabilities are easy to use, we're happy to give you a demo, discuss architecture, or even help you build out your internal platform. [Get in touch](/contact).
 {{% /notes %}}
 
-These launches build on our "multi-product" momentum from our [**Pulumi Insights**](/product/pulumi-insights) product launch earlier this year. Insights applies the power of generative AI to all things cloud giving you an intelligent interface to your infrastructure. We are taking infrastructure as code to many new places. We've processed over 130,000 prompts since launch --- it's free to use, so [give it a try today](/ai)!
+These launches build on our "multi-product" momentum from our [**Pulumi Insights**](/product/discovery-governance/) product launch earlier this year. Insights applies the power of generative AI to all things cloud giving you an intelligent interface to your infrastructure. We are taking infrastructure as code to many new places. We've processed over 130,000 prompts since launch --- it's free to use, so [give it a try today](/ai)!
 
 ## Series C Fundraise
 
@@ -33,7 +33,7 @@ Last but not least, we announced our [**Series C**](/blog/series-c). This fundra
 
 ## Let Us Know What You Think
 
-We can't wait to hear what you think. [Get Started with Pulumi](/start), [join our Community Slack](https://slack.pulumi.com), and let us know how you're using these new capabilities and any feedback you have.
+We can't wait to hear what you think. [Get Started with Pulumi](/docs/get-started/), [join our Community Slack](https://slack.pulumi.com), and let us know how you're using these new capabilities and any feedback you have.
 
 From the entire Pulumi team, thank you!
 

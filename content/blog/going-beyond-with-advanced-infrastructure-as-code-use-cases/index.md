@@ -56,7 +56,7 @@ Next up is integration testing. For Infrastructure as Code, the typical meaning 
 
 Finally, lots of more exotic tests are possible. For instance, you can fuzz-test your infrastructure as code by adding randomization to ensure the infrastructure behaves correctly in the face of strange inputs. You can chaos test your infrastructure by disabling instances or scaling key services below their typical thresholds to understand how your application behaves. You can stress test your infrastructure by placing unreasonable demands and seeing what breaks. The possibilities here are endless, but by using infrastructure as code in a general-purpose language, you have a lot more tools than is typically available to you.
 
-To learn more about testing infrastructure as code more generally, with specific code examples, please see the [Automated Testing of Pulumi Programs](/docs/iac/concepts/testing/) user guide.
+To learn more about testing infrastructure as code more generally, with specific code examples, please see the [Automated Testing of Pulumi Programs](/docs/iac/guides/testing/) user guide.
 
 ## Enforcing Security, Compliance, Cost and More with Policy as Code
 
@@ -115,7 +115,7 @@ The Pulumi Cloud `refresh` command can be used to detect drift and then you can 
 
 The Pulumi [Getting Started guide](/docs/get-started/) is the easiest way to get up and running with infrastructure as code. In addition to that, plus exploring the Pulumi Templates and Examples, we recommend some additional resources:
 
-The tutorial series, [Infrastructure as Code Recommended Practices](/blog/iac-recommended-practices-code-organization-and-stacks/), is a great overview of many concerns you will encounter along your infrastructure as code journey. This ranges from how to organize your project code and stacks, how to do local development and testing of your code, how to evolve these structures as your needs change, automation scenarios and more.
+The tutorial series, [Infrastructure as Code Recommended Practices](/blog/iac-best-practices-understanding-code-organization-stacks/), is a great overview of many concerns you will encounter along your infrastructure as code journey. This ranges from how to organize your project code and stacks, how to do local development and testing of your code, how to evolve these structures as your needs change, automation scenarios and more.
 
 The [Using Pulumi](/docs/iac/) page is a collection of tutorials and getting started guides on specific infrastructure as code topics, such as deeper dives into fundamental concepts, how to simplify your infrastructure projects, and more.
 

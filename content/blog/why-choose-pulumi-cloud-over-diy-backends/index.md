@@ -47,7 +47,7 @@ There are speed benefits that customers typically experience across three areas:
 
 Pulumi Cloud streamlines the software delivery pipeline with [Pulumi Deployments](/product/pulumi-deployments/) and a wide range of 3rd party [CI/CD integrations](/docs/iac/operations/continuous-delivery/).
 
-Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering search, analytics, and AI-driven insights over your infrastructure. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets, reducing the operational time it takes to find needles in haystacks.
+Pulumi Cloud provides [Pulumi Insights](/product/discovery-governance/), offering search, analytics, and AI-driven insights over your infrastructure. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets, reducing the operational time it takes to find needles in haystacks.
 
 ### Scale
 
@@ -65,7 +65,7 @@ Pulumi Cloud further enhances security with Pulumi ESC, a centralized [secrets m
 
 ### Savings
 
-Building a platform and managing cloud infrastructure demands considerable time and energy. As discussed above, [Pulumi Insights](/product/pulumi-insights/) X-Rays your entire cloud footprint, so you can observe, plan, and drive changes across your infrastructure. With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, which can lead to substantial cost savings.
+Building a platform and managing cloud infrastructure demands considerable time and energy. As discussed above, [Pulumi Insights](/product/discovery-governance/) X-Rays your entire cloud footprint, so you can observe, plan, and drive changes across your infrastructure. With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, which can lead to substantial cost savings.
 
 You can also have a conversation with [Pulumi Copilot](/product/neo/) about your infrastructure in natural language and get answers to operational questions that would take hours to piece together from other sources.
 

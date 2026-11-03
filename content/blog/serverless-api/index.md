@@ -360,7 +360,7 @@ The cool thing about using Pulumi and lambdas is that they make complex infrastr
 
 - Want to increase the Lambda memory? Change one number and run `pulumi up`.
 - You get [complete AWS Lambda and API Gateway management](/registry/packages/aws/) for your low-traffic REST APIs
-- And [Infrastructure testing capabilities](/docs/iac/concepts/testing/) mean you can validate your serverless configuration before deployment
+- And [Infrastructure testing capabilities](/docs/iac/guides/testing/) mean you can validate your serverless configuration before deployment
 
 You can find the full code in the [service status monitor repo](https://github.com/adamgordonbell/service-status-monitor) from my [Python devops article](https://www.pulumi.com/blog/python-for-devops/). A larger version with rolling updates is coming soon.
 

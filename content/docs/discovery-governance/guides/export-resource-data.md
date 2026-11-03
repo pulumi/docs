@@ -24,7 +24,7 @@ There are two ways to perform a data export:
 
 1. In the Pulumi Cloud console, by selecting **Download CSV** on the **Resources** page.
 
-1. Programmatically, by calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/cloud-rest-api/#data-export)
+1. Programmatically, by calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/#data-export)
 
 ## CSV format
 
