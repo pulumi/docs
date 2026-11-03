@@ -2,7 +2,7 @@
 title_tag: Make an Update | Google Cloud
 title: Make an update
 h1: "Get started with Pulumi and Google Cloud"
-meta_desc: This page provides an overview on how to update a Google Cloud project from a Pulumi program.
+meta_desc: Update your Pulumi Google Cloud program to serve a static website from a Cloud Storage bucket, deploy the change with pulumi up, and verify the site.
 weight: 6
 menu:
     iac:
@@ -20,8 +20,8 @@ aliases:
 
 ## Make an update
 
-Now you will update your project to serve a static website out of your Google Cloud Storage bucket. You will change
-your code and then re-run `pulumi up` which will update your infrastructure.
+Now you'll update your project to serve a static website out of your Google Cloud Storage bucket. You'll change
+your code and then re-run `pulumi up`, which updates your infrastructure.
 
 ### Add new resources
 
@@ -195,12 +195,12 @@ In {{< langfile >}}, create the `BucketObject` right below the bucket itself.
 ```yaml
 # Upload the file
 index-html:
-    type: gcp:storage:BucketObject
-    properties:
-        bucket: ${my-bucket}
-        name: index.html
-        source:
-            fn::fileAsset: ./index.html
+  type: gcp:storage:BucketObject
+  properties:
+    bucket: ${my-bucket.name}
+    name: index.html
+    source:
+      fn::fileAsset: ./index.html
 ```
 
 {{% /choosable %}}
@@ -224,6 +224,8 @@ one), so the resource is labeled `index-html` and the `name` attribute names the
 {{% /choosable %}}
 
 Notice how you provide the name of the bucket you created earlier as an input for the bucket object. This tells Pulumi which bucket the object should live in.
+
+### Make the bucket public
 
 Below the bucket object, add an IAM binding allowing the contents of the bucket to be viewed anonymously over the internet:
 
@@ -333,6 +335,8 @@ examples later in this tutorial show how to add explicit dependencies between re
 
 {{% /notes %}}
 
+### Configure the bucket as a website
+
 Now that `index.html` exists in the bucket, modify the bucket to serve the file as a static website.
 
 To do that, update the bucket definition to configure its website property. Then, to align with Google Cloud Storage recommendations, set its uniform bucket-level access property to `true`:
@@ -388,7 +392,7 @@ pulumi.export("bucket_name", bucket.url)
 pulumi.export(
     "url",
     pulumi.Output.concat(
-        "http://storage.googleapis.com/", bucket.id, "/", bucket_object.name
+        "http://storage.googleapis.com/", bucket.name, "/", bucket_object.name
     ),
 )
 ```
@@ -527,12 +531,13 @@ output "url" {
 
 {{% /choosable %}}
 
-You prepend `http://` because the bucket's URL is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
-that Google Cloud assigns at deployment time, not a raw string, meaning its value is not known in advance.
+The bucket and object names are [output properties](/docs/iac/concepts/inputs-outputs/#outputs), so their values aren't
+known until the resources are provisioned. That's why each example builds the URL with an output-aware string helper or
+interpolation instead of joining plain strings.
 
 ### Deploy the changes
 
-To deploy the changes, run `pulumi up` again and it will figure out the deltas:
+To deploy the changes, run `pulumi up` again. Pulumi figures out the deltas:
 
 {{% choosable os "linux,macos" %}}
 
@@ -549,7 +554,7 @@ $ pulumi up
 
 {{% /choosable %}}
 
-Just like the first time you will see a preview of the changes before they happen:
+As with your first deployment, you'll see a preview of the changes before they happen:
 
 ```
 Previewing update (dev):
