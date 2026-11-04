@@ -66,8 +66,8 @@
       "lastmod": "2026-05-13"
     },
     "Deployments": {
-      "hash": "1197d58d85430efbfe998f194e3238b061406d677f7f017aac37bc16244d6f59",
-      "lastmod": "2026-09-29"
+      "hash": "45a759d52d931fec53bce030ed2d5d7080ef6a40bd58512802e8c6e11cf60787",
+      "lastmod": "2026-11-04"
     },
     "Environments": {
       "hash": "7545d4be751e9c109da90fc3872628a3ce2247e3768e66cd0f44a6211c6931bd",
@@ -133,8 +133,8 @@
       "lastmod": "2026-08-02"
     },
     "Schedules": {
-      "hash": "901c7b81c6609cdfa8d266b268f5a94a5b4141091970f60f20b86c0150025891",
-      "lastmod": "2026-08-02"
+      "hash": "675d2d697f67c0d007b10f6d49ec9285a319f541b56353e5d187afbb9659f77e",
+      "lastmod": "2026-11-04"
     },
     "Services": {
       "hash": "cb4ff5915227992d241173863eaa91fc2b039819c86ef3fdb63228630667567d",
@@ -165,8 +165,8 @@
       "lastmod": "2026-09-15"
     },
     "VCS Integrations": {
-      "hash": "736c2991c5df00ef68055ec42bd8b8d3d71377e5e7cee9c0dd6b0085b1e56091",
-      "lastmod": "2026-10-30"
+      "hash": "29c5eed049195cb6fd5158bf0908ccf7220608e64a06e3bd34c7bcced4b61688",
+      "lastmod": "2026-11-04"
     },
     "Webhooks": {
       "hash": "fda2095a9c22c0543987a16f6d43dc3ccb2535a8e163f4e38b6b119bb0c29d7d",
@@ -216,8 +216,8 @@
       "lastmod": "2026-05-13"
     },
     "AddOrganizationMemberRequest": {
-      "hash": "69d5a06f2569a21127809b13bbbd89b132f0395cedcbb8804bae2cc641dcdb61",
-      "lastmod": "2026-08-25"
+      "hash": "94032f8dc4f25fe20c24c7d16c0a33417b0c1216e2c02afa09e32dc19ccee49b",
+      "lastmod": "2026-11-04"
     },
     "AddServiceItem": {
       "hash": "0feb46c9fd63b1b3cfd01a02572c8dbf393457bf42c52a541693e76fcb7b6b6f"
@@ -387,8 +387,8 @@
       "hash": "36e1f7036fefadc0a3a47ea32a7aa9e179acf4677baaeac19d88c1f596fd8455"
     },
     "AgentTask": {
-      "hash": "5d34fac5d8d2f503b21ed6bc6902ee4e71c199e196a0c3748f65bd542fde66db",
-      "lastmod": "2026-09-22"
+      "hash": "5184b3b40506cf13964e90491ca1e37dc0ef85c7b1f941d1447de7f1b1bd4ae1",
+      "lastmod": "2026-11-04"
     },
     "AgentTaskIntegrationRef": {
       "hash": "b05a08fca109dbfd03a0975e1a7dd6fd63b4946c794a6603c617893bd2248539",
@@ -1134,6 +1134,9 @@
     "CompleteOAuthResponse": {
       "hash": "0e347e00daee8828ce5fe9b1af997ef4d4c86afe481769e70968a42c7ed8828c"
     },
+    "CompleteOriginSetupRequest": {
+      "hash": "eeca3186f8f71158db493451b414aa8b44866965e13dc55cc3eb75280754bc94"
+    },
     "ConsoleUpdateSummary": {
       "hash": "75f8a54d48ecd10d8917d4f4ac5e80ff6742f609b65d948ec32efa41a5d2df77"
     },
@@ -1265,15 +1268,15 @@
       "lastmod": "2026-09-15"
     },
     "CreateOrgAccessTokenRequest": {
-      "hash": "70302c779dc63fe69db72483b21d3187739fe2d53644a6444aaac830720d8018",
-      "lastmod": "2026-09-15"
+      "hash": "362a4b199abb1caa02c807a7f38f40b285aa26c482ea4c6793d3abf95a73ea0d",
+      "lastmod": "2026-11-04"
     },
     "CreateOrgAgentPoolRequest": {
       "hash": "1fc6dee57791e853910af9cd562e8551dcf9132ce0dbc257c3e13baa5f3fb0c0"
     },
     "CreateOrganizationInviteRequest": {
-      "hash": "18aeaeba6a5f249c2692c58fa767ab3e4055cc63e5cb89cba9c5898d7fbc96cf",
-      "lastmod": "2026-08-02"
+      "hash": "4f69f3cf4f864d91640bad9812da8d0873c0a404cd348068966b315b557135f3",
+      "lastmod": "2026-11-04"
     },
     "CreateOrganizationInviteResponse": {
       "hash": "7772946936c457c72b84a772a6bb9cec3518977cd7d34054e7dd8ac1541b54f9",
@@ -1305,7 +1308,8 @@
       "lastmod": "2026-09-15"
     },
     "CreateTeamAccessTokenRequest": {
-      "hash": "91472a8d17f6476b3599daf524ef70583244f013c3bb0d4555500e4e6b02c84a"
+      "hash": "a4b4ba86e8110b29602070147ad1eefae3d615aa22912c7bff3311d42ce564ed",
+      "lastmod": "2026-11-04"
     },
     "CreateTriggeredAgentAutomationV2Request": {
       "hash": "b508f7475cd16ff9f43ff54b43fe0b699aa75fd495389ed2480f6cc4c6a1fadf"
@@ -1379,8 +1383,8 @@
       "lastmod": "2026-09-15"
     },
     "DeploymentSettings": {
-      "hash": "73334b62c89b7d2fe24f684444ec9a2463246589b21728df2262fd0bb49717ef",
-      "lastmod": "2026-09-15"
+      "hash": "4dfa59960b3f0abeccf2dac408acdfab9f9fca0cb45ce6dcdbaaf7b394f91b8a",
+      "lastmod": "2026-11-04"
     },
     "DeploymentSettingsGitHub": {
       "hash": "5ea0431c1f2ab78564df240efb7303af5f7ee4d7e2c89f82e4f6f83bc02be6f2",
@@ -1395,8 +1399,8 @@
       "lastmod": "2026-09-15"
     },
     "DeploymentSettingsVCS": {
-      "hash": "69492eff788eb9bf421eb4ddf287656477f256d0382f24c48bae2d3bec18be48",
-      "lastmod": "2026-09-15"
+      "hash": "8f4b06fed015ddf99fed915f3f3dec57bef71082a10ba59c1d5a64e64f22943c",
+      "lastmod": "2026-11-04"
     },
     "DeploymentSettingsVCSAzureDevOps": {
       "hash": "da380829228c80871bd9b20455861d09337e57e3c686fba44c7ee002b4b7d5c0"
@@ -1416,6 +1420,9 @@
     "DeploymentSettingsVCSGitLab": {
       "hash": "7e4d8f57287f621146c578aa77ed0a34ae3f56d25c5bb0846e4b94b8c97685ab",
       "lastmod": "2026-05-13"
+    },
+    "DeploymentSettingsVCSOrigin": {
+      "hash": "3a078d0ad4611a78f3771341e56d6085820c31bc8aeb06aebeaf93341873df46"
     },
     "DeploymentSource": {
       "hash": "4bbd81744fbee810895d69c99b7861bcae9ccc99ce50c6b2b235d03a580955e4",
@@ -2165,8 +2172,8 @@
       "hash": "37ffa1ebd93073ad9f1fbda95285fa8029c707780ae3cccc94c58094f63e7215"
     },
     "ListMemberStackPermissionsResponse": {
-      "hash": "19747576940ddce2efc46e9fe7c44f1c0215db2ec06a79943afb37b38fdca00b",
-      "lastmod": "2026-08-25"
+      "hash": "1be5ac2f31c15e688cfe8bd86b8a2a70ba3491073cc85487c2a2fa187e7dde55",
+      "lastmod": "2026-11-04"
     },
     "ListNotificationDestinationsResponse": {
       "hash": "a2e55c58e499a4591dc7a657c8d0e0cf478afaf10aa4855fab428ac419e3df33"
@@ -2185,6 +2192,9 @@
     "ListOrganizationProjectsResponsev3": {
       "hash": "fc033a5ca6de855eacf56773e80e1f7bc026f32ce549a6917adc258dc59fe02c",
       "lastmod": "2026-09-15"
+    },
+    "ListOriginIntegrationsResponse": {
+      "hash": "68e284739f9b32e90f505692124607410ea6ca18eaada53797cf53756e169860"
     },
     "ListPackagesResponse": {
       "hash": "c14ae92d4230887804b45fdd040e705d978e981b89c200f7f79cf3518c204ff2",
@@ -2422,24 +2432,33 @@
       "lastmod": "2026-10-29"
     },
     "OrganizationFeatures": {
-      "hash": "38cb00cd1b541ce2816ea17cf23b08786b1b38654f6f883d8dae2fa76c07b073",
-      "lastmod": "2026-11-03"
+      "hash": "b073e42f59d74aa0ba278cd3febcfad88ffb64ea48f3a64c9551d37943b39a10",
+      "lastmod": "2026-11-04"
     },
     "OrganizationMember": {
-      "hash": "1fec9350fa9b77907b96ea90c4b589dd1218feee7227e93ab4dc53da25bee0de",
-      "lastmod": "2026-10-31"
+      "hash": "63580abab554fb9a2782c1471b6ebafc55c5d78f3cb323452095db640a968fef",
+      "lastmod": "2026-11-04"
     },
     "OrganizationMetadata": {
-      "hash": "c8141ea4d4eb84c4b6382ec39fe2d426e6ef7c40a25eb6e2560b80f48f18f463",
-      "lastmod": "2026-10-29"
+      "hash": "d4701fe56b6c6dbae5f64e9aa3223a556f4839e796f382476e127eefcd43af55",
+      "lastmod": "2026-11-04"
     },
     "OrganizationSummary": {
       "hash": "5529ba2a664bda97d8dbc38499656af56d98ce9834b3545fbf56c87ee589cbe9",
       "lastmod": "2026-09-15"
     },
     "OrganizationSummaryWithRole": {
-      "hash": "c8c26c0563119f38653ff6d4cfa4045ea3e7c765ec304d329b3b88f1d445ec76",
-      "lastmod": "2026-08-25"
+      "hash": "5ee85207665d2f57d88616706962ad9039667dabacf07d034c18af22c402b7e2",
+      "lastmod": "2026-11-04"
+    },
+    "OriginIntegrationDetails": {
+      "hash": "2bfe7962fd7ef906a573fb66d794ade48832662922e88d11a098b3d3c8b3047b"
+    },
+    "OriginIntegrationSettings": {
+      "hash": "4dfe8c6e03e54548f0ca71bf0f96343926e4f91bc86cc1aa7912d2858d28ee14"
+    },
+    "OriginSetupResponse": {
+      "hash": "60dc7e61020fcb9ec6c8e0fb616bb7799d6eb41a9874de2d168fc11dcd6699e4"
     },
     "PackageMetadata": {
       "hash": "e2e76ffc332a600166e231cd75d0ef002e76d3b71ce39906984b204be1ad4106",
@@ -2469,8 +2488,8 @@
       "hash": "6bc651abf13f848ec2fbb513cfec475a22321a8d5a60309ebebb1baf2a40eb50"
     },
     "PendingOrganizationInvite": {
-      "hash": "78930dfaa34343fd8b714aadeba7f5e90bc4577147ec77577ea9b24b8abe08dc",
-      "lastmod": "2026-09-15"
+      "hash": "c4255299018fb2d6194e364f29f992243602b3a1880429d521077f5152f8a415",
+      "lastmod": "2026-11-04"
     },
     "PermissionBooleanExpression": {
       "hash": "7d508bc7cd99628ee9c369f8234eb9cd11eb9240dc2119fec264ac57399ad988"
@@ -3237,8 +3256,8 @@
       "lastmod": "2026-10-29"
     },
     "UpdateOrganizationMemberRequest": {
-      "hash": "eafc832f2b462ca4f0640f57bd518c6d8de0545774473a2aa967d9ef23f392a6",
-      "lastmod": "2026-09-15"
+      "hash": "3fc9e9b9b7b1b014ec0dd18de9a56864da23a78c1ebc892c2da4211c93cab65d",
+      "lastmod": "2026-11-04"
     },
     "UpdateOrganizationRequest": {
       "hash": "8f904b6aad33392463e00d37264200ce5c7acd23ceb72feca176d6fa75be979a",
@@ -3334,8 +3353,8 @@
       "hash": "74a0092584a66fce1199ed27f4897a5024381d713ac3776ace8b7586f4dbb31a"
     },
     "VCSIntegrationSummary": {
-      "hash": "e34a7831decf6314b7779942200d5e79f59dde7a1d824d5dcddbfccba4cb640b",
-      "lastmod": "2026-08-25"
+      "hash": "a8f78856ad8958e82b269c62b880b07dfd60d817b96460987f35c5fb9f635112",
+      "lastmod": "2026-11-04"
     },
     "VCSRepo": {
       "hash": "e1aba8c1d0ea96d4decd5c56dad3d8f43501c676401fc95e90d7c6139f3edd1e",
