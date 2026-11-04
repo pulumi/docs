@@ -47,24 +47,22 @@ social:
         Policy exceptions, now in public preview in Pulumi Policies: enforce every policy, document every exception. Here's how they work.
 ---
 
-Policy exceptions, now in public preview in [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/), let you require policies without blocking teams that have a valid reason to break them. An exception lets specific resources bypass specific policies, with a written reason. You can also require approval and set an expiry. Policies block everything not covered by an exception, while teams can unblock themselves without waiting for a policy change. Each exception records who created it, why, and which resources it covers.
+Policy exceptions in [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) let you keep a policy mandatory while letting specific resources break it for a valid reason. Each exception identifies the resources and policies it applies to, and records who created it and why. You can require approval before it takes effect and set an expiry date so it doesn't last forever. Everything the exception doesn't cover must still comply.
 
 <!--more-->
 
 ## Why do mandatory policies stall?
 
-Mandatory policies prevent misconfigurations. Advisory policies only show warnings that busy developers may miss. Mandatory policies stop `pulumi preview` or `pulumi up` before a public bucket or open security group reaches production.
+An advisory policy only warns. A mandatory policy blocks `pulumi preview` or `pulumi up` before a public bucket or an open security group reaches production. That difference matters more as coding agents build more of your infrastructure: agents make changes faster than people can review them, and a warning gets lost in a long preview. A mandatory policy forbids the misconfiguration entirely, so the code must comply before any change is applied, whether a developer or an agent wrote it.
 
-The gap widens as coding agents build more of your infrastructure. Agents make changes faster than people can review them, and advisory warnings in long previews are easy to miss. A mandatory policy forbids the misconfiguration entirely: the code must comply before any change is applied, whether a developer or an agent wrote it.
+The hard part is turning it on. The new required policy applies to every stack, including resources created before the policy existed. Some violations are intentional: a static website bucket needs to be public, and a log bucket needs to allow the log delivery group. The policy is still correct, but it needs a few known exceptions.
 
-The hard part is turning one on. A new required policy applies to every stack, including resources created before it existed. Some violations are intentional: a bucket hosting a static website must be public, and a log bucket must allow the log delivery group. The policy is still correct; it needs to permit a few known exceptions.
-
-Without a governed way to allow them, what happens in practice is a workaround, and each one gives up either enforcement or the record:
+Without a governed way to allow them, configuring everything exactly right rarely works out in practice, so we often see one of these situations:
 
 - **Leaving the policy advisory or disabled.** Nothing is blocked, so nothing is prevented.
-- **Turning off the policy for a few stacks.** A copied policy group with one rule disabled affects every resource in those stacks, not only the one that needs it, creating more copies.
-- **Relaxing the policy for one deployment.** Someone switches it to advisory, deploys, then switches it back. The deployment proceeds, but there’s no record of which resource needed it or why.
-- **Keeping the decision elsewhere**, in a chat thread, a ticket, or a spreadsheet that may be difficult to trace back to the resource.
+- **Turning off the policy for a few stacks.** A copied policy group with one rule disabled exempts every resource in those stacks, not only the one that needs it, and the copies multiply.
+
+Either way, the reason a policy was skipped ends up in a chat thread, a ticket, or someone's memory, where it's hard to trace back to the resource.
 
 ## What changes with policy exceptions?
 
@@ -76,7 +74,7 @@ Exceptions work with any policy pack, including the [pre-built compliance packs]
 
 ### Teams unblock themselves, on terms you set
 
-If a deployment hits a violation that the developer can’t fix yet, they can request an exception directly from the pulumi CLI or the failed stack page and explain why. The organization settings decide whether exceptions can be created immediately, with a full audit trail maintained, or require approval from designated people.
+If a deployment hits a violation that the developer can’t fix yet, they can request an exception directly from the Pulumi CLI or the failed stack page and explain why. The organization settings decide whether exceptions can be created immediately, with a full audit trail maintained, or require approval from designated people.
 
 An exception can expire. If a team plans to fix a violation, set an expiry to keep the exception temporary. Once it expires, the exception is removed, and the violation blocks again on the next update. Without an expiry, the exception can become part of the policy, so set one whenever a fix is planned.
 
