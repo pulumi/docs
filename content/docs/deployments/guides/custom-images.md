@@ -120,7 +120,7 @@ The default image is pre-cached on Pulumi-hosted workflow runners. Custom images
 To reduce cold-start time on Pulumi-managed runners:
 
 - Start from a small base (`pulumi-base` or a single-language variant), because pull time scales with image size.
-- Host the image in a registry that supports [static credentials](#static-credentials-only) or needs none, and that has good network performance from the runner. Pulumi-hosted runners run in AWS `us-west-2`, so a registry with low latency to that region, such as [Amazon ECR Public](https://gallery.ecr.aws/), pulls faster than one that is far away.
+- Host the image in a registry that supports [static credentials](#static-credentials-only) or needs none, such as a public image on [Amazon ECR Public](https://gallery.ecr.aws/), and prefer one with good network performance.
 - Pin the image to a digest or a specific version tag rather than a floating tag such as `latest`. Pinning doesn't speed up the pull, but it keeps the image your deployments run from changing unexpectedly.
 - Move rarely changing tools into the image and keep the remaining setup short, so you pay the pull cost once per deployment rather than also running long pre-run installs.
 
