@@ -123,7 +123,9 @@ To find the URN of a resource, run `pulumi stack --show-urns`.
 
 ## Exceptions in Pulumi Cloud
 
-<!-- TODO(edition): put the pulumi-cloud callout for the "policy-exceptions" feature id on the line right after this heading (and after each Cloud-only heading below) once that feature is added to marketing-web's features.yaml and synced into data/pulumi_editions.yaml. Until then the id fails make lint. Exceptions go wherever Policy findings is; requiring approval needs Approvals. -->
+{{< pulumi-cloud "policy-enforcement" />}}
+
+<!-- TODO(edition): policy-enforcement (Essentials) stands in until a policy-exceptions feature id syncs from marketing-web; esc-change-requests stands in for approvals. Swap both. -->
 
 In Pulumi Cloud, exceptions belong to your organization. Pulumi Cloud sends the active exceptions for a stack's required policy packs to the CLI when `pulumi preview` or `pulumi up` starts, so they apply to [preventative policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#preventative-policy-groups) without local configuration. This requires Pulumi CLI v3.272.0 or later.
 
@@ -147,8 +149,6 @@ Exceptions are listed on the **Applied exceptions** tab of the **Policy configur
 
 ### Configure exceptions for your organization
 
-<!-- TODO(edition): pulumi-cloud "policy-exceptions" callout goes on the line after this heading; approvals need the "approvals" feature. -->
-
 Exceptions are on for every organization that has the feature, and need no approval until an admin requires it. To change either, select **Configure Exceptions for this organization** on the **Applied exceptions** tab.
 
 #### Turn exceptions on or off
@@ -156,6 +156,8 @@ Exceptions are on for every organization that has the feature, and need no appro
 Select **Disable Exceptions for this organization** to prevent anyone from creating or requesting exceptions via the console, CLI, or API. Existing exceptions continue to apply until they're removed or expire. Requests already in the queue remain listed, but approving one doesn't create an exception while exceptions are off. Select **Enable Exceptions for this organization** to turn them back on. Enabling or disabling exceptions requires the `organization:update` permission.
 
 #### Require approval
+
+{{< pulumi-cloud "esc-change-requests" />}}
 
 Under **Approvals**, choose:
 
@@ -177,8 +179,6 @@ Changing the approval rule requires the `change_gate:create`, `change_gate:updat
 Switching from **Approval required** to **No approval** applies only to new requests. Requests already waiting still require approval.
 
 ### Request an exception
-
-<!-- TODO(edition): pulumi-cloud "policy-exceptions" callout goes on the line after this heading. -->
 
 To request an exception from the Pulumi Cloud console:
 
@@ -215,7 +215,7 @@ pulumi policy exception new aws-guard --stack prod --policy s3-no-public-read \
 
 ### Approve or close a request
 
-<!-- TODO(edition): pulumi-cloud "policy-exceptions" callout goes on the line after this heading; approvals need the "approvals" feature. -->
+{{< pulumi-cloud "esc-change-requests" />}}
 
 When approval is required, requests awaiting approval are listed on the **Approvals** page with the type **Policy exception** and the request type **New exception**. They also appear on the **Policy exceptions** card of each stack they name. While any are waiting, the **Applied exceptions** tab displays a notice with a **Go to Approvals** button.
 
@@ -230,8 +230,6 @@ The approval rule specifies who can approve. There's no separate permission to a
 
 ### Expiry
 
-<!-- TODO(edition): pulumi-cloud "policy-exceptions" callout goes on the line after this heading. -->
-
 An exception can have an expiry. It's optional: an exception without one remains in effect until someone removes it.
 
 - **Setting an expiry.** The requester sets it with the request: in the console, select **Expires** and enter the number of days, from 1 to 3650; in the CLI, pass `--expires-in` with days or hours, such as `30d` or `12h`.
@@ -240,8 +238,6 @@ An exception can have an expiry. It's optional: an exception without one remains
 - **When an exception expires.** It moves to the **Removed** status, with its expiry as the removal time and no member recorded as removing it. In the next preview or update, the violations it exempted are reported again, and mandatory ones block.
 
 ### Review and remove exceptions
-
-<!-- TODO(edition): pulumi-cloud "policy-exceptions" callout goes on the line after this heading. -->
 
 The **Applied exceptions** tab lists your organization's exceptions, including their status, policy pack, policies, number of resources, reason, creator, and expiry. It shows active exceptions by default; filter by status to see removed ones. Select an exception to view its stacks, who created it, the change request that approved it, and where it applied: for each policy and resource, when the exception last exempted a violation during a stack update. Only updates count, not previews.
 
@@ -257,8 +253,6 @@ Exceptions can't be edited. To change an exception, remove it and create a new o
 
 ### Audit trail
 
-<!-- TODO(edition): pulumi-cloud "policy-exceptions" callout goes on the line after this heading. -->
-
 Each exception records:
 
 - **Its reason**, in the requester’s words.
@@ -268,8 +262,6 @@ Each exception records:
 - **Where it applied:** each policy and resource where it last exempted a violation, and the related stack update.
 
 ### Permissions
-
-<!-- TODO(edition): pulumi-cloud "policy-exceptions" callout goes on the line after this heading. -->
 
 | Permission | Allows | Granted by default to |
 |:-----------|:-------|:----------------------|

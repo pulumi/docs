@@ -2,7 +2,6 @@
 title: "Policy exceptions: enforce every policy, document every exception"
 # TODO(launch-date): set the real publish date before undrafting.
 date: 2026-11-03
-draft: true
 meta_desc: "Make policies mandatory without blocking teams. Policy exceptions exempt specific resources with a reason, optional approval and expiry, and a record."
 feature_image: feature.png
 authors:
@@ -35,15 +34,15 @@ social:
 
         Policy exceptions, now in public preview in Pulumi Policies, add a third option. Here's how it works.
     linkedin: |
-        Plenty of policies that should be mandatory stay advisory. Turning one on blocks every stack with an old violation, and some violations are intentional: a bucket that hosts a static website has to be public.
+        Many policies that should be mandatory remain advisory. Turning one on blocks every stack with an old violation, and some violations are intentional: a bucket hosting a static website must be public.
 
-        In practice, that leaves workarounds that give up either enforcement or the record: a cloned policy group with one rule turned off, a policy relaxed for one deployment, or a decision in a chat thread that's hard to trace back to the resource.
+        In practice, that leaves workarounds that sacrifice either enforcement or the record: a cloned policy group with one rule disabled, a policy relaxed for one deployment, or a decision in a chat thread that's hard to trace back to the resource.
 
-        Policy exceptions, now in public preview in Pulumi Policies, let you enforce every policy and document every exception. The policy keeps blocking everything an exception doesn't cover, and each exception records who requested it, why, and which resources it covers.
+        Policy exceptions, now in public preview in Pulumi Policies, let you enforce every policy and document every exception. The policy continues to block everything not covered by an exception, and each exception records who requested it, why, and which resources it covers.
 
-        That changes how early you can make a policy mandatory. Here's how it works, and when to let teams create their own exceptions instead of requiring approval.
+        That changes how early you can make a policy mandatory. Here's how it works and when to let teams create their own exceptions instead of requiring approval.
     bluesky: |
-        A bucket that hosts a static website has to be public. A mandatory policy says it can't be. So the policy stays advisory, and prevents nothing.
+        A bucket hosting a static website must be public. A mandatory policy says it can't be. So the policy remains advisory and prevents nothing.
 
         Policy exceptions, now in public preview in Pulumi Policies: enforce every policy, document every exception. Here's how they work.
 ---
@@ -56,7 +55,9 @@ Policy exceptions, now in public preview in [Pulumi Policies](/docs/discovery-go
 
 Mandatory policies prevent misconfigurations. Advisory policies only show warnings that busy developers may miss. Mandatory policies stop `pulumi preview` or `pulumi up` before a public bucket or open security group reaches production.
 
-The hard part is turning it on. A new required policy applies to every stack, including resources created before it existed. Some violations are intentional: a bucket hosting a static website must be public, and a log bucket must allow the log delivery group. The policy is still correct; it needs to permit a few known exceptions.
+The gap widens as coding agents build more of your infrastructure. Agents make changes faster than people can review them, and advisory warnings in long previews are easy to miss. A mandatory policy forbids the misconfiguration entirely: the code must comply before any change is applied, whether a developer or an agent wrote it.
+
+The hard part is turning one on. A new required policy applies to every stack, including resources created before it existed. Some violations are intentional: a bucket hosting a static website must be public, and a log bucket must allow the log delivery group. The policy is still correct; it needs to permit a few known exceptions.
 
 Without a governed way to allow them, what happens in practice is a workaround, and each one gives up either enforcement or the record:
 
@@ -95,8 +96,6 @@ Each exception records its reason, who requested it, the change request that app
 
 ## How does it work for each team?
 
-<!-- TODO(edition): confirm edition wording -->
-
 <!-- TODO(decision): the pulumi policy exception commands must ship in a CLI release (pulumi/pulumi#25417) before undrafting. -->
 
 In Pulumi Cloud, exceptions belong to your organization and apply to the policy packs within your [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#preventative-policy-groups). When a preview or update starts, Pulumi Cloud sends the stack's active exceptions to the CLI, so no local configuration is required. Applying them needs Pulumi CLI v3.272.0 or later.
@@ -134,7 +133,7 @@ Yes! The Pulumi CLI applies exceptions from a local policy pack config file with
 
 ## Next steps
 
-Policy exceptions are in public preview, and applying exceptions from Pulumi Cloud requires Pulumi CLI v3.272.0 or later. Older versions will ignore the exceptions and report the violations as usual.
+Policy exceptions are in public preview on the Essentials, Pro, and Enterprise editions; requiring approval needs Pro or Enterprise. Applying exceptions from Pulumi Cloud requires Pulumi CLI v3.272.0 or later. Older versions will ignore the exceptions and report the violations as usual.
 
 - Read the [policy exceptions documentation](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) for matching rules, approvals, expiry, and permissions.
 - Plan a staged rollout with [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#adopting-policy-across-an-organization).
