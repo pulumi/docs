@@ -39,7 +39,7 @@ The complete code examples from this post are available on [GitHub](https://gith
 
 ## The Platform Engineering Layer Cake: A Model for IDPs
 
-To understand where golden paths fit into an [Internal Developer Platform (IDP)](/what-is/what-is-an-internal-developer-platform/), think in layers. This three-tier model structures your platform to deliver increasing levels of abstraction, reuse, and developer value, and it maps onto the [four factors of a Pulumi IDP](/docs/idp/guides/best-practices/four-factors/): templates, components, environments, and policies.
+To understand where golden paths fit into an [Internal Developer Platform (IDP)](/topics/platform-engineering/what-is-an-internal-developer-platform/), think in layers. This three-tier model structures your platform to deliver increasing levels of abstraction, reuse, and developer value, and it maps onto the [four factors of a Pulumi IDP](/docs/idp/guides/best-practices/four-factors/): templates, components, environments, and policies.
 
 ### Layer 1: Infrastructure layer
 
