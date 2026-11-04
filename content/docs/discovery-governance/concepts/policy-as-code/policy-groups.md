@@ -142,7 +142,7 @@ Because enforcement levels are set per policy pack, and per policy within a pack
 
 ### Adopting policy across an organization
 
-With [policy exceptions](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/), a policy can be mandatory before every existing violation is fixed: a team that hits a violation it can't fix yet requests an exception with a reason instead of being blocked. A rollout can therefore move to mandatory enforcement early:
+With [policy exceptions](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/), a policy can be mandatory before every existing violation is fixed: a team that hits a violation it can't fix yet requests an exception with a reason instead of being blocked. A rollout can move to mandatory enforcement early:
 
 1. **Measure first if you need to.** If you're unsure what a policy pack would flag, add it to an audit group that covers your cloud accounts and stacks. Nothing is blocked, and after the first scan you have an inventory of existing violations to share with teams before enforcing anything.
 

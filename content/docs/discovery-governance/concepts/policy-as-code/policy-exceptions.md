@@ -19,7 +19,7 @@ A policy exception exempts specific policy violations on designated resources. O
 - **A reason** that explains why the violations are exempted.
 - **Match entries**, each listing one or more policies and one or more [resource URNs](/docs/iac/concepts/resources/names/#urns). A violation is exempted when its policy and its resource URN both appear in the same entry.
 
-An exempted violation does not block the operation, even if the policy is mandatory. It is still reported and marked as exempted, along with the exception that allowed it.
+An exempted violation does not block the operation, even if the policy is mandatory. It's still reported and marked as exempted, along with the exception that allowed it.
 
 An exception does not alter a policy's enforcement level. The policy continues to apply to all resources not named in the exception, and all other policies still apply to the resources listed in the exception.
 
@@ -117,7 +117,7 @@ A few things to keep in mind:
 - In an unversioned file, an `exceptions` key is read as the configuration of a policy named `exceptions`, and no exceptions apply. Add `"version": 2` and move the configuration under `policies`.
 - CLI versions without exception support reject a version 2 file with an error such as `parsing "version": 2 is not a valid value; must be a string or object`.
 - Exceptions in a file passed to `pulumi policy enable --config` are ignored. To exempt violations of a policy pack your organization enforces, create the exception in Pulumi Cloud.
-- A local file has no approvals, expiration, or audit record. Review changes to it the same way you review the rest of your code.
+- A local file has no approvals, expiry, or audit record. Review changes to it the same way you review the rest of your code.
 
 To find the URN of a resource, run `pulumi stack --show-urns`.
 
@@ -193,7 +193,9 @@ To request an exception from the Pulumi Cloud console:
 
 You need write access to the stack to request an exception. When your organization requires approval, Pulumi Cloud opens a change request, and the exception is created once the request is approved. Otherwise, the exception is created immediately. Either way, it applies from the stack's next run.
 
-You can also create exceptions from the CLI with the `pulumi policy exception new` command.
+You can also create exceptions from the CLI with the `pulumi policy exception new` command, available in Pulumi CLI vX.Y.Z or later.
+
+<!-- TODO(decision): don't merge until pulumi/pulumi#25417 ships in a CLI release; replace vX.Y.Z with that version. -->
 
 {{< experimental-feature >}}
 The `pulumi policy exception` commands are listed in the CLI's help only when the `PULUMI_EXPERIMENTAL` environment variable is set to `true`.
@@ -230,7 +232,7 @@ The approval rule specifies who can approve. There's no separate permission to a
 
 <!-- TODO(edition): pulumi-cloud "policy-exceptions" callout goes on the line after this heading. -->
 
-An exception can have an expiration. It's optional: an exception without one remains in effect until someone removes it.
+An exception can have an expiry. It's optional: an exception without one remains in effect until someone removes it.
 
 - **Setting an expiry.** The requester sets it with the request: in the console, select **Expires** and enter the number of days, from 1 to 3650; in the CLI, pass `--expires-in` with days or hours, such as `30d` or `12h`.
 - **When the time starts.** An expiry counts from the moment the exception is created. When approval is required, the time starts when the request is approved, so the time a request waits for approval doesn't count.
@@ -281,7 +283,7 @@ Custom roles and the `Member (legacy)` role don't receive these permissions auto
 
 ## Exceptions in a policy rollout
 
-Exceptions let a policy become mandatory before every existing violation is fixed: teams create exceptions for violations they can't fix yet, either with or without approval, depending on how many exceptions the policy is expected to need and how sensitive it is. For the stages, see [Adopting policy across an organization](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#adopting-policy-across-an-organization).
+Exceptions let a policy become mandatory before every existing violation is fixed: teams create exceptions for violations they can't fix yet, either with or without approval, depending on how many exceptions the policy is expected to need and how sensitive the policy is. For the stages, see [Adopting policy across an organization](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#adopting-policy-across-an-organization).
 
 ## Next steps
 
