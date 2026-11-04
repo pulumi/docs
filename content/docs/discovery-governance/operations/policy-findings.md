@@ -93,6 +93,14 @@ For each issue, you can set:
 
 These fields can be edited directly from the Issues tab or from the individual issue detail view.
 
+### Findings exempted by exceptions
+
+A finding that a [policy exception](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) exempted in its latest update stays in the Issues tab, with the exception's ID in the **Exception** column and **Allowed by EXC-n** in the issue details. It keeps its status, and it still counts in the compliance scores.
+
+Setting a finding to Ignored only changes how the finding is tracked: when its policy is mandatory in a preventative policy group, the violation still blocks the next update. To accept a known violation, with a recorded reason, create an exception for it.
+
+<!-- TODO(console): the console still says "Allowed by"; update when it says "Exempted by" -->
+
 ### Issue details
 
 Selecting an issue from the table opens the issue detail view, which provides comprehensive context about the finding. The detail view displays:

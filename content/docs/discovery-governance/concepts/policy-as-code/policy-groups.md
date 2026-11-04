@@ -142,13 +142,13 @@ Because enforcement levels are set per policy pack, and per policy within a pack
 
 ### Adopting policy across an organization
 
-Rolling policy out in stages gives teams time to absorb each change and gives you a chance to find noisy rules before they block anyone:
+With [policy exceptions](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/), a policy can be mandatory before every existing violation is fixed: a team that hits a violation it can't fix yet requests an exception with a reason instead of being blocked. A rollout can therefore move to mandatory enforcement early:
 
-1. **Start with an audit policy group.** Add the packs you are considering to an audit group covering your cloud accounts and stacks. Nothing is blocked, and after the first scan you have a complete inventory of what would be flagged. Work through the highest-severity findings before enforcing anything.
+1. **Measure first if you need to.** If you're unsure what a policy pack would flag, add it to an audit group that covers your cloud accounts and stacks. Nothing is blocked, and after the first scan you have an inventory of existing violations to share with teams before enforcing anything.
 
-1. **Move to a preventative policy group with everything advisory.** Once the backlog is manageable, add the packs to a preventative group with every policy set to advisory. Developers begin seeing violations at deployment time, and you learn which rules are noisy or produce false positives without anyone being stopped.
+1. **Make policies mandatory within a preventive policy group.** Teams that encounter a violation they can't yet fix create an exception that records why, with an expiry for violations they plan to fix.
 
-1. **Make specific policies mandatory.** Promote policies to mandatory selectively, starting with the ones where a violation is genuinely unacceptable and the fix is well understood. Expand from there as teams build familiarity.
+1. **Choose how exceptions are granted.** With **No approval**, developers create their own exceptions and continue deploying. Every exception is still recorded and can be removed at any time. Its violations will be blocked again starting with the next update. This suits policies expected to need many exceptions. With **Approval required**, each exception waits for a reviewer, which suits sensitive policies or those expected to need few exceptions. You can switch between the two at any time.
 
 ## Next steps
 
