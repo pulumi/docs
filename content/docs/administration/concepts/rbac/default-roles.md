@@ -13,7 +13,7 @@ menu:
 
 Every Pulumi Cloud organization has a default role. Members follow it unless an admin assigns them another role, and so do new members who accept an invite that doesn't name a role. When an admin changes the default role, every member who follows it moves to the new role at once, and members with an assigned role keep theirs.
 
-## Built-in roles
+## Roles for the default role {#built-in-roles}
 
 Three built-in roles are designed to be the default role. Each one includes everything the role before it allows.
 
@@ -23,7 +23,7 @@ Three built-in roles are designed to be the default role. Each one includes ever
 | `Builder` | Everything Reader allows, plus create stacks, environments, cloud accounts, services, and Pulumi Neo tasks. Members manage what they create. |
 | `Maintainer` | Everything Builder allows, plus change every stack, environment, cloud account, and service, and work with deployments, integrations, and Neo automations. |
 
-Managing members, teams, and organization settings stays with the `Admin` role. To give someone permissions on specific stacks, environments, or cloud accounts beyond what their role allows, [grant them a permission set on those entities](/docs/administration/concepts/rbac/entities/#entity-access) or add them to a [team](/docs/administration/concepts/rbac/teams) that has those permissions.
+Every organization also has `Admin` and `Billing Manager`, which admins assign to individual members. They can't be the default role. See [built-in roles](/docs/administration/concepts/rbac/roles/#pulumi-defined-roles). Managing members, teams, and organization settings stays with the `Admin` role. To give someone permissions on specific stacks, environments, or cloud accounts beyond what their role allows, [grant them a permission set on those entities](/docs/administration/concepts/rbac/entities/#entity-access) or add them to a [team](/docs/administration/concepts/rbac/teams) that has those permissions.
 
 ## Choosing a default role
 
