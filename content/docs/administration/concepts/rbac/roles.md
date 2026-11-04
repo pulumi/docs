@@ -48,7 +48,7 @@ Pulumi Cloud provides several roles that you can use to quickly get started:
 | `Admin` | Full access to all organization resources and settings. Can manage members, roles, and organization-wide configurations. |
 | `Billing Manager` | Access to view and manage billing information. Cannot modify other organization settings or resources. |
 
-Reader, Builder, and Maintainer are designed to be the organization's [default role](/docs/administration/concepts/rbac/default-roles/), which members follow unless an admin assigns them another one. Some organizations also have a read-only `Member (legacy)` role; see [Member (legacy)](/docs/administration/concepts/rbac/default-roles/#member-legacy).
+Reader, Builder, and Maintainer are designed to be the organization's [default role](/docs/administration/concepts/rbac/default-roles/), which members follow unless an admin assigns them another one. Some organizations also have a `Member (legacy)` role that can't be edited; see [Member (legacy)](/docs/administration/concepts/rbac/default-roles/#member-legacy).
 
 ## Custom roles
 
