@@ -143,6 +143,7 @@ jobs:
           check_endpoint "/pulumi-for-startups/" "Pulumi for Startups"
           check_endpoint "/extend-trial/" "Extend trial"
           check_endpoint "/confirmation/workshop/" "Workshop confirmation"
+          check_endpoint "/subscribe/" "Newsletter subscribe"
 
           # /dev/tutorials/ and /dev/templates/ are proxied here from
           # pulumi/marketing-web (see infrastructure/index.ts); they are not
