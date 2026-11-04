@@ -564,7 +564,7 @@ author_staleness: { warn_days: 14, close_days: 21 }
 stale_prs:
   close_days: 30
   notice_days: 7
-  extended_label: long-running
+  extended_label: "review:long-running"
   extended_close_days: 90
 
 waive: { label: "review:waived", log_prefix: "pr-review/waives/" }
