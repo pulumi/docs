@@ -1,6 +1,6 @@
 // Consent-aware media (YouTube embeds).
 //
-// Under the OneTrust provider, layouts/partials/youtube-src.html renders a
+// layouts/partials/youtube-src.html renders a
 // YouTube iframe with its URL in data-pulumi-consent-src instead of src, so the
 // embed loads no YouTube resources, and sets no YouTube cookies, until the
 // visitor allows Targeting (C0004). The iframe stays blank until OneTrust
@@ -9,9 +9,6 @@
 // buttons to allow Targeting or open Cookie Settings. Once C0004 is granted the
 // iframe gets its real src, and any original srcdoc (the click-to-play
 // thumbnail some embeds use) is restored.
-//
-// Under the Segment provider the partial renders a normal src, so there is
-// nothing to promote and this module is a no-op.
 
 import { getActiveGroups, isOneTrustAvailable } from "./consent-manager/onetrust";
 
