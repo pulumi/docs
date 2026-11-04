@@ -1,0 +1,31 @@
+{{- /*
+  Gravity ad pixel — https://trygravity.com
+  Targeting (C0004) consent-gated, same as the OpenAI pixel and Floqer. The vendor
+  loader is unchanged; only the gate differs by consent provider (passed in as
+  .consentProvider):
+    - onetrust: loads only after the visitor allows C0004, via runWithPulumiConsent
+      (the shared gate from the OneTrust bridge; runs at most once per page).
+    - segment:  loads after the consent-managed Segment analytics is ready.
+  Fail-closed either way: if consent is never satisfied, the pixel never loads.
+  Deferred to window.load to avoid blocking first paint. Browser code carries only
+  the advertiser ID, never the CAPI key.
+*/ -}}
+<script>
+    window.addEventListener("load", function () {
+        function loadGravity() {
+            if (window.GravityPixelObject || window.gravity) return;
+            !function(w,d,t,u,n,a,m){w['GravityPixelObject']=n;w[n]=w[n]||function(){
+            (w[n].q=w[n].q||[]).push(arguments)},w[n].l=1*new Date();a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+            }(window,document,'script','https://code.trygravity.com/gr-pix.js','gravity');
+            window.gravity('init', 'f9505c8e-5d0b-4159-88b8-53bd2d5f2c8a');
+        }
+        {{- if eq .consentProvider "onetrust" }}
+        window.runWithPulumiConsent("C0004", loadGravity);
+        {{- else }}
+        if (window.analytics && typeof window.analytics.ready === "function") {
+            window.analytics.ready(loadGravity);
+        }
+        {{- end }}
+    });
+</script>

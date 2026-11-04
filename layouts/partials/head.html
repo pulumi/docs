@@ -635,6 +635,9 @@
             });
         </script>
 
+        <!-- Gravity ad pixel (deferred to window.load) — Targeting (C0004) consent-gated (see partials/gravity.html). -->
+        {{ partial "gravity.html" (dict "consentProvider" $consentProvider) }}
+
         <!-- Floqer (RB2B) visitor identification — Targeting (C0004) consent-gated (see partials/floqer.html). Page-scoped via `include_floqer` front matter. -->
         {{ if .Params.include_floqer }}
         {{ partial "floqer.html" (dict "page" . "consentProvider" $consentProvider) }}
