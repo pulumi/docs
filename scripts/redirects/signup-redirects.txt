@@ -1,1 +1,3 @@
 signup/index.html|https://app.pulumi.com/signup
+# KubeCon NA 2026 (Salt Lake City) booth QR code.
+kubecon-slc/index.html|https://app.pulumi.com/signup?utm_source=kubecon&utm_medium=qr&utm_campaign=fy2027q2_event_kubecon-salt-lake
