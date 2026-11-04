@@ -37,7 +37,7 @@
   {{ end }}
 {{ end }}
 {{ $webpage := dict
-  "@type" (cond $isAuthorTerm "ProfilePage" "WebPage")
+  "@type" (cond $isAuthorTerm "ProfilePage" (cond (eq .RelPermalink "/about/") "AboutPage" "WebPage"))
   "@id" (printf "%s#webpage" .Permalink)
   "url" .Permalink
   "name" $pageName
@@ -228,6 +228,13 @@
      keeps all of them instead of only the last collector's write surviving. */}}
 {{ if gt (len $hasParts) 0 }}
   {{ $webpage = merge $webpage (dict "hasPart" $hasParts) }}
+{{ end }}
+
+{{/* The /about/ page is the canonical "who is Pulumi" page, so it declares
+     itself an AboutPage (see @type above) whose subject is the site-wide
+     Organization node. */}}
+{{ if eq .RelPermalink "/about/" }}
+  {{ $webpage = merge $webpage (dict "about" (dict "@id" "https://www.pulumi.com/#organization")) }}
 {{ end }}
 
 {{/* Add WebPage to graph */}}
