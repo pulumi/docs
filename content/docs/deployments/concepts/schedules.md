@@ -61,7 +61,7 @@ curl \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/schedules
 ```
 
-Refer to the [Pulumi Deployments REST API documentation](/docs/deployments/deployments/api) for more details on how to use the REST API to manage Scheduled Deployments.
+Refer to the [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/) for more details on how to use the REST API to manage Scheduled Deployments.
 
 ### Pulumi Cloud provider
 
