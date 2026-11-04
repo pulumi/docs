@@ -1,6 +1,6 @@
 ---
 title: "Policy exceptions: enforce every policy, document every exception"
-# TODO(launch-date): set the real publish date before undrafting.
+# TODO(launch-date): set the real publish date before merging. draft is off only for the PR preview; the do-not-merge label holds it.
 date: 2026-11-03
 meta_desc: "Make policies mandatory without blocking teams. Policy exceptions exempt specific resources with a reason, optional approval and expiry, and a record."
 feature_image: feature.png
@@ -61,8 +61,9 @@ Without a governed way to allow them, configuring everything exactly right rarel
 
 - **Leaving the policy advisory or disabled.** Nothing is blocked, so nothing is prevented.
 - **Turning off the policy for a few stacks.** A copied policy group with one rule disabled exempts every resource in those stacks, not only the one that needs it, and the copies multiply.
+- **Excluding resources in the policy configuration.** This is more precise, but the exclusion lists spread across packs and policy groups and quickly become a maintenance burden.
 
-Either way, the reason a policy was skipped ends up in a chat thread, a ticket, or someone's memory, where it's hard to trace back to the resource.
+In each case, the reason a policy was skipped ends up in a chat thread, a ticket, or someone's memory, where it's hard to trace back to the resource.
 
 ## What changes with policy exceptions?
 
@@ -94,7 +95,7 @@ Each exception records its reason, who requested it, the change request that app
 
 ## How does it work for each team?
 
-<!-- TODO(decision): the pulumi policy exception commands must ship in a CLI release (pulumi/pulumi#25417) before undrafting. -->
+<!-- TODO(decision): the pulumi policy exception commands must ship in a CLI release (pulumi/pulumi#25417) before merging. -->
 
 In Pulumi Cloud, exceptions belong to your organization and apply to the policy packs within your [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#preventative-policy-groups). When a preview or update starts, Pulumi Cloud sends the stack's active exceptions to the CLI, so no local configuration is required. Applying them needs Pulumi CLI v3.272.0 or later.
 

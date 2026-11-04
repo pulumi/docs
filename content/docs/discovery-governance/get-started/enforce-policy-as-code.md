@@ -50,6 +50,8 @@ The **Policy configuration** page is the central hub for managing Pulumi Policie
 
 The page displays the **Policy Packs** and **Policy Groups** tabs, and an **Applied exceptions** tab for [policy exceptions](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/), available in {{< pulumi-cloud-editions "policy-enforcement" >}}.
 
+<!-- TODO(edition): policy-enforcement stands in until a policy-exceptions feature id syncs from marketing-web; swap it here too. -->
+
 ### Policy Packs
 
 The Policy Packs tab lists every policy pack available to your organization, with its publisher, provider, latest version, and the number of stacks and accounts it's applied to. This includes:
