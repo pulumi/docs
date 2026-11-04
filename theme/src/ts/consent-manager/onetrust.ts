@@ -12,8 +12,7 @@
 //
 //   2. destinationPreferencesFromGroups() — maps the active OneTrust categories
 //      onto the Segment destinations we already fetch, so the existing Segment
-//      loader (analytics.ts) can be driven from the OneTrust decision instead
-//      of the custom banner.
+//      loader (analytics.ts) can be driven from the OneTrust decision.
 //
 // The inline bootstrap in layouts/partials/head.html defines a minimal queueing
 // runWithPulumiConsent before this bundle loads, so an integration that

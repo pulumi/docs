@@ -3,19 +3,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
-    {{- $consentProvider := site.Params.consentProvider | default "segment" }}
-
     {{- /* Consent gate bootstrap (all environments). Defines
            window.runWithPulumiConsent before any integration (Segment, Common
            Room, OpenAI, Floqer, HubSpot, YouTube) can initialize, so
-           an early caller is captured rather than lost. Under "segment" the gate
-           runs the callback immediately (today's behavior); under "onetrust" it
-           queues until the consent-manager bundle's OneTrust bridge drains the
-           queue once OneTrust resolves the visitor's categories. See
+           an early caller is captured rather than lost. It queues until the
+           consent-manager bundle's OneTrust bridge drains the queue once
+           OneTrust resolves the visitor's categories. See
            theme/src/ts/consent-manager/onetrust.ts. */ -}}
     <script>
         (function () {
-            {{- if eq $consentProvider "onetrust" }}
             var queue = (window.__pulumiConsentQueue = window.__pulumiConsentQueue || []);
             window.runWithPulumiConsent = function (category, callback) {
                 queue.push({ category: category, callback: callback });
@@ -26,23 +22,17 @@
             window.OptanonWrapper = function () {
                 window.dispatchEvent(new Event("OneTrustGroupsUpdated"));
             };
-            {{- else }}
-            window.runWithPulumiConsent = function (category, callback) {
-                callback();
-            };
-            {{- end }}
         })();
     </script>
 
-    {{- if eq $consentProvider "onetrust" }}
     {{- if not site.Params.oneTrustDomainScript }}
-        {{- errorf "consentProvider is \"onetrust\" but params.oneTrustDomainScript is not set" }}
+        {{- errorf "params.oneTrustDomainScript is not set" }}
     {{- end }}
     <!-- OneTrust CMP (loaded before Segment and all optional integrations).
          Auto-Blocking stays off; consent is enforced by explicit checks in the
          site code via runWithPulumiConsent. The domain script id comes from
-         params.oneTrustDomainScript: config/production has the www.pulumi.com
-         id and config/preview the test id. Its scripts load without CORS and
+         params.oneTrustDomainScript: config/production has the pulumi.com id
+         and config/_default the test id. Its scripts load without CORS and
          its JSON with CORS, so each kind of connection gets a preconnect. -->
     <link rel="preconnect" href="https://cdn.cookielaw.org" />
     <link rel="preconnect" href="https://cdn.cookielaw.org" crossorigin />
@@ -52,7 +42,6 @@
         type="text/javascript"
         charset="UTF-8"
         data-domain-script="{{ site.Params.oneTrustDomainScript }}"></script>
-    {{- end }}
 
     <!-- GrowthBook / Segment keys -->
     <script>
@@ -521,21 +510,12 @@
         })();
     </script>
 
-    {{- /* Consent manager bundle. Two providers:
-           - onetrust: OneTrust owns the banner/decision; the bundle installs the
-             runWithPulumiConsent bridge and drives the Segment loader from the
-             OneTrust categories. Loaded in every environment the OneTrust
-             provider is selected in (today: preview / www.pulumi-test.io).
-           - segment: the custom consent manager renders the banner and gates
-             analytics. Production only \u2014 suppressed on local dev and PR
-             previews, exactly as before. */ -}}
-    {{- if eq $consentProvider "onetrust" }}
+    {{- /* Consent manager bundle: installs the runWithPulumiConsent bridge and
+           drives the Segment loader from the OneTrust categories. */ -}}
     <script>
         window.consentManagerConfig = {
-            provider: "onetrust",
             writeKey: segmentWriteKey,
-            cdnHost: "evs.analytics.pulumi.com",
-            container: "#segment-consent-manager"
+            cdnHost: "evs.analytics.pulumi.com"
         };
     </script>
 
@@ -547,46 +527,16 @@
             document.body.appendChild(s);
         });
     </script>
-    {{- else if eq hugo.Environment "production" }}
-    <!-- Segment Consent Manager (production only - the banner and its analytics
-         gating are suppressed on local dev and PR preview builds). -->
-    <script>
-        window.consentManagerConfig = {
-            provider: "segment",
-            writeKey: segmentWriteKey,
-            cdnHost: "evs.analytics.pulumi.com",
-            container: "#segment-consent-manager",
-            privacyPolicyUrl: "/privacy/",
-            bannerText: "We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you\u02BCre agreeing to the collection of data as described in our",
-            preferencesDialogTitle: "Website Data Collection Preferences",
-            preferencesDialogContent: "We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.",
-            cancelDialogTitle: "Are you sure you want to cancel?",
-            cancelDialogContent: "Your preferences have not been saved. By continuing to use our website, you are agreeing to our Website Data Collection Policy."
-        };
-    </script>
-
-    {{ $jsManifest := $.Site.Data.js_manifest }}
-    <script>
-        window.addEventListener('load', function() {
-            var s = document.createElement('script');
-            s.src = '/js/{{ index $jsManifest "consent-manager" }}';
-            document.body.appendChild(s);
-        });
-    </script>
-    {{- end }}
 
     {{- if eq hugo.Environment "production" }}
         <!-- Facebook Domain Verification -->
         <meta name="facebook-domain-verification" content="phlf6qes2bxa9ufzk8zt2es0qivg8j" />
     {{- end }}
 
-    {{- /* Directly-loaded optional integrations. Rendered in production and
-           wherever the OneTrust provider is selected (www.pulumi-test.io). The
-           vendor loaders are unchanged; only how they're gated differs:
-             - onetrust: gated on C0004 Targeting via runWithPulumiConsent.
-             - segment:  today's behavior (Common Room on load; OpenAI/Floqer
-               after window.analytics.ready). */ -}}
-    {{- if or (eq $consentProvider "onetrust") (eq hugo.Environment "production") }}
+    {{- /* Directly-loaded optional integrations, each gated on Targeting
+           (C0004) via runWithPulumiConsent. Production only: their account
+           ids are the production ones, and other builds have no separate ids. */ -}}
+    {{- if eq hugo.Environment "production" }}
         <!-- Common Room (deferred to window.load to avoid blocking first paint) -->
         <script>
             window.addEventListener('load', function() {
@@ -607,39 +557,27 @@
                     );
                     document.head.appendChild(script);
                 }
-                {{- if eq $consentProvider "onetrust" }}
                 window.runWithPulumiConsent("C0004", loadCommonRoom);
-                {{- else }}
-                loadCommonRoom();
-                {{- end }}
             });
         </script>
 
         <!-- OpenAI ad pixel (deferred to window.load to avoid blocking first paint) — Targeting (C0004)
-             consent-gated. Under Segment it loads after the consent-managed analytics is ready
-             (window.analytics.ready); under OneTrust it loads only after C0004 is granted. Fail-closed
-             either way: if consent is never satisfied, the pixel never loads. -->
+             consent-gated: it loads only after C0004 is granted, so if consent is never satisfied
+             the pixel never loads. -->
         <script>
             window.addEventListener('load', function() {
                 function loadOaiq() {
                     !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
                     oaiq("init",{pixelId:"7KRuATZtZE3j5BSAZErZAb",debug:false});
                 }
-                {{- if eq $consentProvider "onetrust" }}
                 window.runWithPulumiConsent("C0004", loadOaiq);
-                {{- else }}
-                if (window.analytics && typeof window.analytics.ready === "function") {
-                    window.analytics.ready(loadOaiq);
-                }
-                {{- end }}
             });
         </script>
 
         <!-- Floqer (RB2B) visitor identification — Targeting (C0004) consent-gated (see partials/floqer.html). Page-scoped via `include_floqer` front matter. -->
         {{ if .Params.include_floqer }}
-        {{ partial "floqer.html" (dict "page" . "consentProvider" $consentProvider) }}
+        {{ partial "floqer.html" . }}
         {{ end }}
-
     {{- end }}
 
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages.

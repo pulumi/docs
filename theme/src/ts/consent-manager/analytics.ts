@@ -20,48 +20,33 @@ export function fetchDestinations(cdnHost: string, writeKey: string): Promise<De
 export function conditionallyLoadAnalytics(
     writeKey: string,
     destinations: Destination[],
-    destinationPreferences: Record<string, boolean> | undefined,
-    isConsentRequired: boolean,
-    categoryPreferences?: Record<string, boolean | null>,
+    destinationPreferences: Record<string, boolean>,
 ): void {
     const analytics = window.analytics;
     if (!analytics) return;
 
-    if (destinationPreferences) {
-        const integrations: Record<string, boolean> = { All: false, "Segment.io": true };
-        let hasConsented = false;
+    const integrations: Record<string, boolean> = { All: false, "Segment.io": true };
+    let hasConsented = false;
 
-        for (const dest of destinations) {
-            const allowed = Boolean(destinationPreferences[dest.id]);
-            if (allowed) hasConsented = true;
-            integrations[dest.id] = allowed;
-        }
+    for (const dest of destinations) {
+        const allowed = Boolean(destinationPreferences[dest.id]);
+        if (allowed) hasConsented = true;
+        integrations[dest.id] = allowed;
+    }
 
-        if (hasConsented && !analytics.initialized) {
-            analytics.addSourceMiddleware((args) => {
-                args.payload.obj.context.consent = {
-                    defaultDestinationBehavior: "disable",
-                    categoryPreferences: categoryPreferences,
-                    destinationPreferences: destinationPreferences,
-                };
-                args.next(args.payload);
-            });
-            const load = () => analytics.load(writeKey, { integrations });
-            if ("requestIdleCallback" in window) {
-                requestIdleCallback(load);
-            } else {
-                load();
-            }
-        }
-    } else {
-        if (isConsentRequired) return;
-        if (!analytics.initialized) {
-            const load = () => analytics.load(writeKey);
-            if ("requestIdleCallback" in window) {
-                requestIdleCallback(load);
-            } else {
-                load();
-            }
+    if (hasConsented && !analytics.initialized) {
+        analytics.addSourceMiddleware((args) => {
+            args.payload.obj.context.consent = {
+                defaultDestinationBehavior: "disable",
+                destinationPreferences: destinationPreferences,
+            };
+            args.next(args.payload);
+        });
+        const load = () => analytics.load(writeKey, { integrations });
+        if ("requestIdleCallback" in window) {
+            requestIdleCallback(load);
+        } else {
+            load();
         }
     }
 }

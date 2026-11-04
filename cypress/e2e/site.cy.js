@@ -3,11 +3,10 @@
  *
  * - The vector.co pixel.js script throws "Cloud provider detected" in the
  *   GitHub Actions runner (but not locally), which would fail tests in CI.
- * - The OneTrust CMP is a cross-origin script that resolves consent only on its
- *   registered public domains; on an S3 origin, preview host, or localhost it
- *   throws an opaque "Script error." with no stack. The smoke tests run against
- *   the raw S3 origin, so this would otherwise fail every suite in a before
- *   each hook.
+ * - The OneTrust CMP is a cross-origin script, so any error it throws reaches
+ *   the page as an opaque "Script error." with no stack. The smoke tests run
+ *   against the raw S3 origin, so one would otherwise fail every suite in a
+ *   before each hook.
  *
  * We ignore those specific third-party cases while still letting genuine
  * same-origin application errors fail the tests.
