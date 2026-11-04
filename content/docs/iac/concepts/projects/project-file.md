@@ -265,14 +265,14 @@ This deprecated form is the string value of `config`, not the project-level conf
 ### Example project file with only required attributes
 
 ```yaml
-name: Example Pulumi project file with only required attributes
+name: minimal-project
 runtime: nodejs
 ```
 
 ### Example project file with all possible attributes
 
 ```yaml
-name: Example Pulumi project file with all possible attributes
+name: full-project
 runtime:
   name: yaml
   options:
