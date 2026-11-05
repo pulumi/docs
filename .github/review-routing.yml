@@ -340,8 +340,17 @@ overrides:
 #   - `approver`: the bot login whose approval counts (`github-actions[bot]`,
 #     `pulumi-bot`, ...). Overrides both `bots:` and the automatic
 #     `type == Bot` exclusion -- for this lane only.
-#   - `author`: the PR author the lane is for. Required: a bot approval is
-#     only as trustworthy as the process that opened the PR.
+#   - `author`: the PR author the lane is for. A bot approval is only as
+#     trustworthy as the process that opened the PR.
+#   - `authors`: instead of `author`, a class of author. The one value is
+#     `any-human`: an internal PR (head branch in this repo, never a fork)
+#     opened by a non-bot account with write access -- the same people whose
+#     own approval G3 counts. Never a bot, never a `bots:` login, never an
+#     external contributor. Exactly one of `author` / `authors` is required.
+#   - `subjects`: optional for `author`, REQUIRED for `authors`; a list of
+#     MATRIX subjects. The lane applies only when every changed path
+#     classifies into one of them -- one file outside the fence takes the
+#     whole PR off the lane, and then it needs a human like any other.
 #   - `label`: optional; when present the PR must also carry it. Use it
 #     whenever one author opens PRs through more than one process --
 #     pulumi-bot opens the generated-docs regens AND the content-review PRs,
@@ -364,13 +373,22 @@ overrides:
 # the PR number afterward (`workflow_dispatch` is the exception GitHub
 # allows), or approve with an App/PAT token instead.
 #
-# The two entries below are the two workflows that post bot approvals today.
-# Both lanes are also `not_governed` (below), which concludes success before
-# G3 is evaluated, so today these entries are the record of which approvals
+# The first two entries below are the two workflows that post bot approvals
+# today. Both lanes are also `not_governed` (below), which concludes success
+# before G3 is evaluated, so these entries are the record of which approvals
 # those lanes run on rather than load-bearing. They become load-bearing the
 # moment either lane is taken out of `not_governed` to get the other gates
 # (G1 review-ran, G4 staging) back -- and that is the shape a NEW automated
 # lane should take: governed, gated, and approved by its bot.
+#
+# The third entry is a different kind of lane: Eon (`eon-pulumi-agent[bot]`,
+# Pulumi's review agent) standing in for the human approver on docs and
+# example-program PRs that people wrote. Every other gate still applies --
+# G1 needs a current review, G2 needs every finding answered -- so Eon's
+# approval only ever replaces the "a person read the ⚠️ rows" step. What Eon
+# checks before approving is in the root `REVIEW.md`; it declines anything
+# outside the fence, and this entry makes sure the Sentinel agrees even if it
+# didn't.
 #
 # -----------------------------------------------------------------------------
 # CLAIMS OVERLAY
@@ -550,6 +568,16 @@ bot_approvers:
       flag. label-dependabot.yml approves them as pulumi-bot and arms
       auto-merge on the required build check; flagged bumps are never
       approved, so they still need a human.
+  - approver: "eon-pulumi-agent[bot]"
+    authors: any-human
+    subjects: [docs, programs]
+    why: >-
+      Eon approves docs and example-program PRs from the review pipeline's
+      reviewer's guide: it works each ⚠️ row against the diff and spot-checks
+      what the guide can't see (root REVIEW.md). Fact verification already
+      ran, G1/G2 still gate the review itself, and a docs page reverts with one
+      commit. Humans' PRs only, write access only, and never blog, website,
+      infra, frontend, or other paths.
 
 external_contributors: { skip_gates: [review-ran, findings-answered] }
 

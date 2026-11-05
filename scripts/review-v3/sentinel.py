@@ -721,6 +721,43 @@ def _is_external(pr_detail: dict) -> bool:
     return head_name != base_name
 
 
+def _author_is_internal_writer(gh, config, pr_detail: dict) -> bool:
+    """Is the PR author a human with write access, on an internal branch?
+
+    The test behind `bot_approvers[].authors: any-human` -- the lane where a
+    review bot's approval stands in for a human's on PRs a human wrote. Every
+    half fails CLOSED, unlike `_is_external`, which treats a missing head-repo
+    fact as internal because there "internal" is the stricter reading. Here it
+    is the looser one, so a payload that can't prove the branch lives in this
+    repo is not internal:
+
+    - the head repo must be present and equal the base repo (no forks, no
+      deleted forks, no missing fact);
+    - the author must not be a bot: GitHub's `type == Bot`, a `[bot]` login,
+      or a `bots:` entry (machine USERS like pulumi-bot, which the type test
+      can't see);
+    - the author must have write access or better, the same bar G3 applies to
+      a human approver. A failed lookup is a no, not an error: the lane
+      simply doesn't apply, and a human approval still clears G3.
+    """
+    user = pr_detail.get("user") or {}
+    login = user.get("login") or ""
+    if not login:
+        return False
+    if user.get("type") == "Bot" or login.endswith("[bot]") or login in set(config.bots or []):
+        return False
+    head_repo = (pr_detail.get("head") or {}).get("repo") or {}
+    base_repo = (pr_detail.get("base") or {}).get("repo") or {}
+    head_name = (head_repo.get("full_name") or "").lower()
+    base_name = (base_repo.get("full_name") or "").lower()
+    if not head_name or head_name != base_name:
+        return False
+    try:
+        return gh.get_repo_permission(login) in WRITE_PERMISSIONS
+    except SentinelDataError:
+        return False
+
+
 def _mechanical_and_claims(
     pr_detail: dict, files: list[dict], labels: set[str] | frozenset[str] = frozenset()
 ) -> tuple[bool, bool, list[str]]:
@@ -1477,13 +1514,23 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # type test cannot see.
     approvers: list[dict] = []
     bot_approvers: list[tuple[dict, str]] = []
+    pr_subjects = set(resolution.subjects.values())
+    human_author: list[bool] = []  # memo: at most one permission lookup per evaluation
+
+    def _author_is_human() -> bool:
+        if not human_author:
+            human_author.append(_author_is_internal_writer(gh, config, pr))
+        return human_author[0]
+
     for r in latest.values():
         if r.get("state") != "APPROVED":
             continue
         u = r.get("user") or {}
         login = u.get("login") or ""
         if u.get("type") == "Bot" or login in set(config.bots or []):
-            why = routing.bot_approver_reason(config, login, author, labels)
+            why = routing.bot_approver_reason(config, login, author, labels,
+                                              subjects=pr_subjects,
+                                              author_is_human=_author_is_human)
             if why:
                 bot_approvers.append((r, why))
             continue

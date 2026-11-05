@@ -31,6 +31,7 @@ import importlib.util
 import json
 import re
 import sys
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -85,8 +86,14 @@ WAIVE_KEYS = frozenset({"label", "log_prefix"})
 NOT_GOVERNED_KEYS = frozenset({"authors", "author_label_pairs"})
 AUTHOR_LABEL_PAIR_KEYS = frozenset({"author", "label"})
 APPROVAL_KEYS = frozenset({"scope", "admins_satisfy"})
-BOT_APPROVER_KEYS = frozenset({"approver", "author", "label", "why"})
-BOT_APPROVER_REQUIRED_KEYS = ("approver", "author", "why")
+BOT_APPROVER_KEYS = frozenset({"approver", "author", "authors", "label", "subjects", "why"})
+BOT_APPROVER_REQUIRED_KEYS = ("approver", "why")
+# Closed vocabulary for `bot_approvers[].authors`, the lane that names a
+# class of PR author instead of one login. `any-human`: an internal PR
+# (head repo is this repo) opened by a non-bot account with write access --
+# the same people whose own approval G3 counts under `approval.scope:
+# any-human`. It never includes a bot, a `bots:` login, or a fork PR.
+BOT_APPROVER_AUTHOR_SCOPES = frozenset({"any-human"})
 
 LINK_ONLY_KEYS = frozenset({"approval"})
 # Who can satisfy the approver gate (G3). `lane` is the per-subject rule the
@@ -563,7 +570,8 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
     if bot_approvers is None:
         bot_approvers = []
     if not isinstance(bot_approvers, list):
-        errors.append("bot_approvers must be a list of {approver, author, label?, why} mappings")
+        errors.append("bot_approvers must be a list of "
+                      "{approver, author | authors, label?, subjects?, why} mappings")
         bot_approvers = []
     else:
         for i, entry in enumerate(bot_approvers):
@@ -575,8 +583,39 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
             for key in BOT_APPROVER_REQUIRED_KEYS:
                 if not _is_nonempty_str(entry.get(key)):
                     errors.append(f"{where}.{key} must be a non-empty string")
+            # Exactly one way to say whose PRs the lane is for: one login
+            # (`author`) or a class of author (`authors`). Both would leave a
+            # reader guessing which one wins; neither is a lane for everyone.
+            has_author = "author" in entry
+            has_authors = "authors" in entry
+            if has_author == has_authors:
+                errors.append(f"{where}.author / {where}.authors: set exactly one -- "
+                              f"'author' (one login) or 'authors' (one of: "
+                              f"{', '.join(sorted(BOT_APPROVER_AUTHOR_SCOPES))})")
+            elif has_author and not _is_nonempty_str(entry.get("author")):
+                errors.append(f"{where}.author must be a non-empty string")
+            elif has_authors and not (isinstance(entry.get("authors"), str)
+                                      and entry["authors"] in BOT_APPROVER_AUTHOR_SCOPES):
+                errors.append(f"{where}.authors must be one of: "
+                              + ", ".join(sorted(BOT_APPROVER_AUTHOR_SCOPES)))
             if "label" in entry and not _is_nonempty_str(entry.get("label")):
                 errors.append(f"{where}.label must be a non-empty string when present")
+            if "subjects" in entry:
+                subj = entry.get("subjects")
+                if (not isinstance(subj, list) or not subj
+                        or not all(_is_nonempty_str(x) for x in subj)):
+                    errors.append(f"{where}.subjects must be a non-empty list of subjects when present")
+                else:
+                    unknown = sorted(set(subj) - SUBJECTS)
+                    if unknown:
+                        errors.append(f"{where}.subjects names unknown subject(s) "
+                                      f"{', '.join(map(repr, unknown))} "
+                                      f"(known: {', '.join(sorted(SUBJECTS))})")
+            # A class-of-author lane with no subject fence would let one bot
+            # approve every governed PR in the repo, infra included. Make the
+            # scope something a reader can see in the entry itself.
+            if has_authors and "subjects" not in entry:
+                errors.append(f"{where}.subjects is required when 'authors' is set")
 
     if errors:
         return None, errors, warnings
@@ -828,23 +867,54 @@ def admins_satisfy(config: Config) -> bool:
 
 
 def bot_approver_reason(
-    config: Config, approver: str, author: str, labels: set[str] | frozenset[str]
+    config: Config,
+    approver: str,
+    author: str,
+    labels: set[str] | frozenset[str],
+    subjects: set[str] | frozenset[str] | None = None,
+    author_is_human: Callable[[], bool] | None = None,
 ) -> str | None:
     """Why this bot's approval clears G3 on this PR, or None if it does not.
 
     An entry matches only when the approving login, the PR author, and (if
-    the entry names one) a label on the PR all line up. Nothing else about
-    the bot matters: a `bot_approvers` match overrides both the `bots:`
-    denylist and the automatic `type == Bot` exclusion, for that lane only.
+    the entry names them) a label on the PR and the PR's subjects all line
+    up. Nothing else about the bot matters: a `bot_approvers` match overrides
+    both the `bots:` denylist and the automatic `type == Bot` exclusion, for
+    that lane only.
+
+    `subjects` is the set of subjects the PR's changed paths resolved to
+    (`Resolution.subjects` values). An entry with `subjects:` matches only
+    when that set is non-empty and every member is listed: one file outside
+    the fence takes the whole PR off the lane. Unknown subjects (None) never
+    match a fenced entry.
+
+    `authors: any-human` asks `author_is_human()`, which the caller supplies
+    because only it can see the PR payload (fork, account type) and the repo
+    permission API. It is called only once every other half of the entry has
+    matched, so a PR off the lane costs no lookup; a missing callable fails
+    closed.
     """
     for entry in config.bot_approvers or []:
-        if entry.get("approver") != approver or entry.get("author") != author:
+        if entry.get("approver") != approver:
             continue
         label = entry.get("label")
         if label and label not in labels:
             continue
+        fence = entry.get("subjects")
+        if fence is not None and (not subjects or not set(subjects) <= set(fence)):
+            continue
         on = f" with label `{label}`" if label else ""
-        return f"`{approver}` is a listed bot approver for PRs by `{author}`{on}"
+        within = f" changing only {'/'.join(sorted(fence))} paths" if fence is not None else ""
+        if "authors" in entry:
+            if entry.get("authors") != "any-human" or author_is_human is None:
+                continue
+            if not author_is_human():
+                continue
+            return (f"`{approver}` is a listed bot approver for PRs by any human with "
+                    f"write access{within}{on}")
+        if entry.get("author") != author:
+            continue
+        return f"`{approver}` is a listed bot approver for PRs by `{author}`{within}{on}"
     return None
 
 
