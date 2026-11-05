@@ -43,8 +43,11 @@ const application = new aws.ec2.Instance('app-service', { /* ... */ }, {
 import pulumi
 import pulumi_aws as aws
 
-database = aws.rds.Instance('app-db', {})
-application = aws.ec2.Instance('app-service', {},
+database = aws.rds.Instance('app-db',
+    # ...
+)
+application = aws.ec2.Instance('app-service',
+    # ...
     opts=pulumi.ResourceOptions(replace_with=[database])
 )
 ```
