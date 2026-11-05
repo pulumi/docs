@@ -107,7 +107,7 @@ This mode requires only a Docker daemon on the host, which makes it the simplest
 
 ### Kubernetes
 
-With `deploy_target: kubernetes`, the agent uses the in-cluster Kubernetes API to launch a **runner Pod for each job**, so every job gets Pod-level isolation and is scheduled by Kubernetes across your cluster. In this mode the agent runs as a Kubernetes Deployment, and its configuration is supplied as environment variables on that Deployment or through a configuration file mounted into the agent Pod. The Kubernetes-specific [`PULUMI_AGENT_IMAGE_PULL_POLICY`](#kubernetes-managed-workflow-runners) controls the runner image pull policy.
+With `deploy_target: kubernetes`, the agent uses the in-cluster Kubernetes API to launch a **runner Pod for each job**, so every job gets Pod-level isolation and is scheduled by Kubernetes across your cluster. In this mode the agent runs as a Kubernetes Deployment, and its configuration is supplied as environment variables on that Deployment or through a configuration file mounted into the agent Pod. The Kubernetes-specific [`PULUMI_AGENT_IMAGE_PULL_POLICY`](#kubernetes-managed-runners) setting controls the pull policy of the agent image used by each runner Pod, not of your executor image. See [Executor image pull policy](#executor-image-pull-policy) for how to control the executor image.
 
 This mode fits environments that already run Kubernetes and want the cluster to handle scheduling and resource limits. It also enables ephemeral, per-job runners: set [`single_run: true`](#configuration-reference) so the agent exits after one job, and drive it with a Kubernetes `Job` or `CronJob` so a fresh agent starts for each job.
 
@@ -343,6 +343,16 @@ For Kubernetes-native installations, configuration for customer-managed runners 
 The following Kubernetes-specific configuration options are available:
 
 ```yaml
-# Kubernetes image pull policy https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy
+# Pull policy for the agent image used by the runner Pod's init container.
+# This does not set the pull policy of the executor image.
+# https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy
 PULUMI_AGENT_IMAGE_PULL_POLICY: IfNotPresent
 ```
+
+#### Executor image pull policy
+
+Each job runs in a worker Pod with two containers: the `copy-workflow-runner` init container, which runs the agent image, and the `pulumi-workflow` container, which runs the [executor image](/docs/deployments/concepts/settings/custom-executor-images/). `PULUMI_AGENT_IMAGE_PULL_POLICY` sets the pull policy of the init container only.
+
+The executor image's pull policy comes from `imagePullPolicy` on the `pulumi-workflow` container in the worker Pod template. If the template doesn't set one, Kubernetes applies its default. To keep an executor image on the node between deployments, set `imagePullPolicy: IfNotPresent` on that container. To force a fresh pull for every job, set `imagePullPolicy: Always`.
+
+For how to supply a worker Pod template to the agent, see [Pod Spec Configuration](https://github.com/pulumi/customer-managed-workflow-agent/blob/main/kubernetes/README.md#pod-spec-configuration) in the agent's Kubernetes README.
