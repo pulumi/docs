@@ -163,6 +163,9 @@ items:
 cta:
   contact:    { label: Contact us,    href: "/contact/", track: header-contact }
   signIn:    { label: Sign in,    href: "https://app.pulumi.com/signin", track: header-console }
+  # Home page primary CTA: the hero already carries Get started, so the header
+  # leads with Sign up straight to the console instead (MA-1173).
+  signUp:    { label: Sign up,    href: "https://app.pulumi.com/signup", track: header-signup }
   # label and href come from site.Params.cta.primary so all site-wide
   # "Get Started" CTAs can be changed in one place.
   getStarted: { track: header-signup }
