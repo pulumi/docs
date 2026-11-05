@@ -119,6 +119,18 @@ When a team token creates a stack, two grants are added:
 
 No other team gets access to the stack unless its own roles or the organization's default stack permission grant it.
 
+{{% notes type="warning" %}}
+Every team's service principal also shares the organization's creator grants.
+That gives each team token Stack Admin on every stack created with an organization token, and on every stack created with any team token before team tokens had their own service principals.
+The same applies to environments and cloud accounts created those ways.
+
+This is by design because team tokens used to authenticate as the organization, so the organization holds the creator grants for everything they created.
+Many pipelines rely on that access, and Pulumi Cloud kept it in place when team tokens moved to service principals so that existing automation would keep working.
+Those older grants don't record which team's token created the stack, so the access extends to every team token in the organization, not only the team that created it.
+
+To keep team tokens off a stack like this, delete the organization's automatic Stack Admin entry from the stack's **Access** tab, or transfer the stack's ownership to a team or break-glass user.
+{{% /notes %}}
+
 If the team is deleted, its service principal is deleted with it, along with the service principal's creator grants.
 The stack update history the service principal recorded is reassigned to the organization.
 
