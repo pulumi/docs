@@ -158,7 +158,7 @@ build-backend = "setuptools.build_meta"
 from .components import MyComponent
 ```
 
-Exporting the class from the package named after `name` in `pyproject.toml`, with `-` replaced by `_`, is all that's required. Pulumi auto-discovers it. The `[build-system]` table is required, and the plugin must not have a `__main__.py` file, which Pulumi would run instead.
+Exporting the class from the package named after `name` in `pyproject.toml`, with `-` replaced by `_`, is all that's required. Pulumi auto-discovers it. The `[build-system]` table is required, and the plugin's root directory must not have a `__main__.py` file, which Pulumi would run instead.
 
 {{% /choosable %}}
 
@@ -320,7 +320,7 @@ Your args types also appear in the generated SDK, so consumers can construct the
 
 {{% choosable language python %}}
 
-Export your `ComponentResource` subclasses from the package named after `name` in `pyproject.toml`, with `-` replaced by `_`. The `pyproject.toml` must include a `[build-system]` table, and the plugin must not have a `__main__.py` file. A minimum `my_package/__init__.py` is just:
+Export your `ComponentResource` subclasses from the package named after `name` in `pyproject.toml`, with `-` replaced by `_`. The `pyproject.toml` must include a `[build-system]` table, and the plugin's root directory must not have a `__main__.py` file. A minimum `my_package/__init__.py` contains:
 
 ```python
 from .components import StaticSite, Database
@@ -539,7 +539,7 @@ pulumi package add <repo_url>[/path/to/component]@<release-version>
 
 The only steps to enable this are pushing your package to a Git repo and tagging a release. Pulumi supports both GitHub and GitLab releases, and can also reference self-hosted Git servers — in that case omit the `<release-version>` portion.
 
-Pulumi generates the consumer's language-specific SDK automatically. For example, if the consuming program is Python, `pulumi package add` detects that, generates the Python SDK on-the-fly, adds the dependency to `requirements.txt`, and runs `pip install -r requirements.txt`. The output also prints the correct import statement:
+Pulumi generates the consumer's language-specific SDK automatically. For example, if the consuming program is Python and uses the default `pip` toolchain, `pulumi package add` detects that, generates the Python SDK on-the-fly, adds the dependency to `requirements.txt`, and runs `pip install -r requirements.txt`. The output also prints the correct import statement:
 
 ```plain
 $ pulumi package add https://github.com/my-org/staticpagecomponent@v0.1.0
