@@ -3,9 +3,13 @@
   <header> so the header's backdrop-filter does not create a new containing
   block for these fixed-position elements.
 
-  Parameter: the site.Data.header_nav object.
+  Parameters: `nav` (the site.Data.header_nav object) and `isHome` (whether the
+  current page is the home page, where the primary CTA is Sign up instead of
+  Get started per MA-1173).
 */ -}}
-{{- $nav := . -}}
+{{- $nav := .nav -}}
+{{- $home := .isHome -}}
+{{- $primary := cond $home $nav.cta.signUp (dict "label" site.Params.cta.primary.label "href" site.Params.cta.primary.href "track" $nav.cta.getStarted.track) -}}
 
 <div data-nav-sheet-overlay data-state="closed"
   class="fixed inset-0 z-50 bg-black/10 opacity-0 pointer-events-none transition-opacity duration-150
@@ -94,12 +98,12 @@
       class="btn btn-primary">
       Dashboard
     </a>
-    <a href="{{ site.Params.cta.primary.href }}"
+    <a href="{{ $primary.href }}"
       data-track="header-signup-mobile"
-      data-role="cta-get-started"
+      {{ if not $home }}data-role="cta-get-started"{{ end }}
       data-nav-loggedout
       class="btn btn-primary">
-      {{ site.Params.cta.primary.label }}
+      {{ $primary.label }}
     </a>
   </div>
 </aside>
