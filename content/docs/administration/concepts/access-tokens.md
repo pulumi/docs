@@ -109,8 +109,7 @@ It appears as the actor wherever a team token acts, including:
 * The stack's update history.
 * The `actor` claim of [OIDC tokens issued by Pulumi ESC](/docs/esc/guides/configuring-oidc/).
 
-Service principals aren't organization members.
-They don't appear in the organization's member list and don't count toward its seats.
+Service principals don't appear in the organization's member list and don't count toward its seats.
 
 When a team token creates a stack, two grants are added:
 
