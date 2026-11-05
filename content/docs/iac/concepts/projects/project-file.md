@@ -187,9 +187,9 @@ Schemas are only valid for project property keys. For setting the value of a pro
 
 | Name | Required | Description |
 | - | - | - |
-| `type` | optional | The type of this config property, either `string`, `boolean`, `integer`, `array`, or `object`. When omitted, the type is inferred from `default`. A property with neither `type` nor `default` accepts any type and must be set in every stack. |
+| `type` | optional | The type of this config property, either `string`, `boolean`, `integer`, `array`, or `object`. When omitted, the CLI doesn't check the value's type. A property with neither `type` nor `default` must be set in every stack. |
 | `description` | optional | A description for this config property. |
-| `secret` | optional | True if this config property should be a secure secret value. A secret property can't have a `default`. |
+| `secret` | optional | True if this config property should be a secure secret value. When `type` is also set, each stack must provide an encrypted value: a plaintext value fails validation, and so does falling back to `default`. |
 | `default` | optional | The default value for this config property, must match the given type. |
 | `items` | required if `type` is `array` | A nested structured declaration of the type of the items in the array. |
 
