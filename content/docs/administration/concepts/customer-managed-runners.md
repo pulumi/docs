@@ -353,6 +353,6 @@ PULUMI_AGENT_IMAGE_PULL_POLICY: IfNotPresent
 
 Each job runs in a worker Pod with two containers: the `copy-workflow-runner` init container, which runs the agent image, and the `pulumi-workflow` container, which runs the [executor image](/docs/deployments/concepts/settings/custom-executor-images/). `PULUMI_AGENT_IMAGE_PULL_POLICY` sets the pull policy of the init container only.
 
-The executor image's pull policy comes from `imagePullPolicy` on the `pulumi-workflow` container in the worker Pod template. If the template doesn't set one, Kubernetes applies its default. To keep an executor image on the node between deployments, set `imagePullPolicy: IfNotPresent` on that container. To force a fresh pull for every job, set `imagePullPolicy: Always`.
+The executor image's pull policy is controlled by `imagePullPolicy` on the `pulumi-workflow` container in the worker Pod template. To keep an executor image on the node between deployments, set `imagePullPolicy: IfNotPresent` on that container. To force a fresh pull for every job, set `imagePullPolicy: Always`.
 
 For how to supply a worker Pod template to the agent, see [Pod Spec Configuration](https://github.com/pulumi/customer-managed-workflow-agent/blob/main/kubernetes/README.md#pod-spec-configuration) in the agent's Kubernetes README.
