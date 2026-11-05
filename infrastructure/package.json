@@ -13,9 +13,9 @@
         "typescript": "^5.7.2"
     },
     "dependencies": {
-        "@pulumi/aws": "^7.52.1",
+        "@pulumi/aws": "^7.53.0",
         "@pulumi/pulumi": "^3.273.0",
-        "@pulumi/random": "^4.21.4",
+        "@pulumi/random": "^4.21.6",
         "url-pattern": "^1.0.3"
     }
 }
