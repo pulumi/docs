@@ -16,7 +16,7 @@ jobs:
         uses: actions/add-to-project@v2.0.0
         with:
           project-url: https://github.com/orgs/pulumi/projects/79
-          github-token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_GHA_MARKETING }}
+          github-token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
 env:
   ESC_ACTION_OIDC_AUTH: true
   ESC_ACTION_OIDC_ORGANIZATION: pulumi
