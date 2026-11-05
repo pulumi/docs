@@ -27,13 +27,13 @@ Pulumi offers three types of access tokens:
 
 1. **Personal tokens**, which carry the permissions of the individual user who created them. Personal tokens are available to all Pulumi Cloud users.
 1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are available in the Essentials, Pro, and Enterprise editions.
-1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens appear in audit logs attributed to the team. Team tokens are only available to Pro and Enterprise customers.
+1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens are attributed to the team's [service principal](#how-team-tokens-are-identified). Team tokens are only available to Pro and Enterprise customers.
 
 When using tokens, be mindful of the following security best practices:
 
 * Organization and team access tokens are machine tokens that are not connected to a user account, and therefore should only be used in scenarios like CI/CD pipelines, where the Pulumi actions are not being performed directly by a particular user.
 * Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture. Organization administrators can make expiries mandatory with an [access token expiry policy](#access-token-expiry-policy).
-* Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin organization tokens always have this capability. A stack created with a token carries an automatic [creator grant](/docs/administration/concepts/rbac/#creator-grants) of the Stack Admin permission set, including deletion. That grant is held by the machine identity the token authenticates as, not by the person who created the token, and it persists for as long as the stack exists. To keep a long-lived token from accumulating Stack Admin on every stack it creates, have the automation transfer stack ownership to a break-glass user or team, or delete the automatic entry from the stack's **Access** tab, once the stack exists. See [RBAC](/docs/administration/concepts/rbac/) for more on how org-wide settings and role scopes interact.
+* Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin organization tokens always have this capability. A stack created with a token carries an automatic [creator grant](/docs/administration/concepts/rbac/#creator-grants) of the Stack Admin permission set, including deletion. That grant is held by the identity the token authenticates as (the organization for an organization token, or the team's service principal for a team token), not by the person who created the token, and it persists for as long as the stack exists. To keep a long-lived token from accumulating Stack Admin on every stack it creates, have the automation transfer stack ownership to a break-glass user or team, or delete the automatic entry from the stack's **Access** tab, once the stack exists. See [RBAC](/docs/administration/concepts/rbac/) for more on how org-wide settings and role scopes interact.
 
 ## Personal access tokens
 
@@ -96,6 +96,31 @@ Team tokens are machine tokens scoped to the resources and permissions of a spec
 A team token's effective permissions are the union of all [roles assigned to that team](/docs/administration/concepts/rbac/teams/), evaluated at the time of each request. If the team's role assignments change — for example, the team is granted access to a new set of stacks — the token's capabilities update automatically without any token recreation. This makes team tokens a good fit for long-lived automation where access needs may evolve over time.
 
 As with organization tokens, team token activity is recorded in audit logs with the token's name, keeping actions traceable without exposing individual users.
+
+### How team tokens are identified
+
+Every team has a *service principal*: a machine identity that Pulumi Cloud creates for the team and that all of the team's tokens authenticate as.
+This is a Pulumi Cloud identity, unrelated to a Microsoft Entra ID service principal.
+
+The service principal is named `Service Principal for team <team-name>`, with the login `team-account:<team-id>`.
+It appears as the actor wherever a team token acts, including:
+
+* The `user` field of [audit log events](/docs/administration/reference/audit-log-formats/), alongside the token's name.
+* The stack's update history.
+* The `actor` claim of [OIDC tokens issued by Pulumi ESC](/docs/esc/guides/configuring-oidc/).
+
+Service principals aren't organization members.
+They don't appear in the organization's member list and don't count toward its seats.
+
+When a team token creates a stack, two grants are added:
+
+* The team's service principal receives the stack's [creator grant](/docs/administration/concepts/rbac/#creator-grants).
+* The team receives the Stack Admin permission set on the stack, so the team's members can manage it.
+
+No other team gets access to the stack unless its own roles or the organization's default stack permission grant it.
+
+If the team is deleted, its service principal is deleted with it, along with the service principal's creator grants.
+The stack update history the service principal recorded is reassigned to the organization.
 
 ### Who can manage team tokens
 
