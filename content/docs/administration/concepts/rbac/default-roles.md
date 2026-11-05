@@ -64,4 +64,4 @@ If something stops working, switch the default role back to `Member (legacy)` wh
 
 ### Pulumi Service provider {#pulumi-service-provider}
 
-If you manage members with the Pulumi Service provider, use version 1.7.0 or later. In versions 1.2 to 1.5, an `OrganizationMember` with `role: member` fails once your organization has moved off the `Member` role. Version 1.7.0 also accepts `reader`, `builder`, and `maintainer` as roles, and adds [`OrganizationDefaultRole`](/registry/packages/pulumiservice/api-docs/organizationdefaultrole/) to set the default role.
+If you manage members with the Pulumi Service provider, use [version 1.7.0](https://github.com/pulumi/pulumi-pulumiservice/releases/tag/v1.7.0) or later. In versions 1.2 to 1.5, an `OrganizationMember` with `role: member` fails once your organization has moved off the `Member` role. Version 1.7.0 also accepts `reader`, `builder`, and `maintainer` as roles, and adds [`OrganizationDefaultRole`](/registry/packages/pulumiservice/api-docs/organizationdefaultrole/) to set the default role.
