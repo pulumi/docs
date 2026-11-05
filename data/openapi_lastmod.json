@@ -101,6 +101,9 @@
       "hash": "932bb3f755d921509313d5d9a02c532eadb8bc5f5d76d340ca29057054adc1a5",
       "lastmod": "2026-10-31"
     },
+    "PolicyExceptions": {
+      "hash": "6f472764eb5117a3ead9729d56ed49b963d61844c318c203efc894813c9f43f8"
+    },
     "PolicyFindings": {
       "hash": "45db7a488d9edd980c0113eaadc10d41ed8f361fbcd17cb7ba305eed04e065e9"
     },
@@ -458,8 +461,8 @@
       "hash": "f135958c6085a3c72b0eb19aa06b553355a07bf4b8ee72a0f112ea1fd14e7430"
     },
     "AppAPICapabilityConfig": {
-      "hash": "98521677a9860c3544a0608ea9da5a1f7db0038df61815d1541016898f3e917d",
-      "lastmod": "2026-09-15"
+      "hash": "946ff00d4b745a3e66ab80b7bdcc28302a8eac24dbf945903d7c6211615d9b87",
+      "lastmod": "2026-11-05"
     },
     "AppAppendUpdateLogEntryRequest": {
       "hash": "8b1cc7cac27407ac0be64b7d6b21873cdcdf4c4595875be408ec26daa9098b9d"
@@ -1284,6 +1287,9 @@
     },
     "CreatePersonalAccessTokenRequest": {
       "hash": "8528136d76f8b7453f374495992b9d25502dd7ab35e2036620f4f96048c4e8b3"
+    },
+    "CreatePolicyExceptionRequest": {
+      "hash": "d936c14dfd2f39e610fe09d8d4172117353acb037bf0e3b2b3cd8f03ea740dbb"
     },
     "CreatePulumiTeamRequest": {
       "hash": "d67c7e4bc8138df95168bdf146bf62bc7aa02b402a10aacc540aac583181c242"
@@ -2204,6 +2210,9 @@
       "hash": "54d017e7f31c54b9392812a6f75ea12cc7d1f38e5b6dfe0f46522c14a60d4183",
       "lastmod": "2026-09-15"
     },
+    "ListPolicyExceptionsResponse": {
+      "hash": "38d940c84739e4373988c7c38ac014435186b2a3b5c79b202c7922d2a9d16d61"
+    },
     "ListPolicyGroupAccountsResponse": {
       "hash": "ae5532be0239215899f3ecf61d93b6895098077eaff916918771b34b53021d0a"
     },
@@ -2640,6 +2649,12 @@
       "hash": "07c900fde925edc466c7aa7b3cd9a047b0a75044dcf6301499961a89957b2a44",
       "lastmod": "2026-09-15"
     },
+    "PolicyException": {
+      "hash": "0c1f7d6177f0648bdbc75a7fe757a9dd2267e117f9526929dbea044c2e752908"
+    },
+    "PolicyExceptionMatch": {
+      "hash": "2f146a00ae1a72354de99edac17e45da8138c4b3fa55184fe2cc15adae5e5aca"
+    },
     "PolicyGroup": {
       "hash": "f64ab29b366a51f9d2d639b6412815b213ea15f6a88f53826e7746ccb452e67c",
       "lastmod": "2026-10-19"
@@ -2654,8 +2669,8 @@
       "hash": "93cdf5daff78ee7af80ac065f218c9819917d48c14aac8ca66ba1370141c5e73"
     },
     "PolicyIssue": {
-      "hash": "dd9da1e9a9b357a7767c02d7d68962a2637e4631ab586120b9b7e8437e4e3d04",
-      "lastmod": "2026-10-31"
+      "hash": "c80a327aaa5838bcc19b10109f29d9d936b506b6073fbae6fb126e2e01d0d494",
+      "lastmod": "2026-11-05"
     },
     "PolicyIssueFilterValue": {
       "hash": "f1740250bb07b40812815222d223832ffdf9fb47e8b3bc0ae81b76accfc2b7db",
