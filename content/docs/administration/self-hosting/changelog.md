@@ -24,6 +24,7 @@ pulumi_cloud_feature: self-hosting
 
 * Added the [Context API](/docs/discovery-governance/concepts/context-api/) to self-hosted installations with a configured [OpenSearch cluster](/docs/administration/self-hosting/components/search/#context-api). It is enabled unless your license key explicitly disables it.
 * Resource search now reindexes once on the first start after upgrading. This removes duplicate search results for stacks that haven't been updated since an earlier change to how resources are indexed.
+* Security: The API service no longer trusts eight compromised eMudhra intermediate certificates. The release updates the bundled CA certificates and builds with Go 1.27.3. Upgrade to stop trusting certificates issued under them. For background, see [Cloudflare's summary of the eMudhra compromise](https://blog.cloudflare.com/emudhra-certificate-compromise/).
 
 ### September
 
