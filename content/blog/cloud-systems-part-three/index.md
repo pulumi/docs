@@ -33,7 +33,7 @@ In the previous tutorial, we extended our personal website to use the Flask web 
 
 - [Pulumi account](https://app.pulumi.com/signup)
 
-- [Pulumi installed and configured for AWS](https://www.pulumi.com/docs/iac/get-started/aws/)
+- [Pulumi installed and configured for AWS](/docs/integrations/clouds/aws/)
 
 - [Docker](https://www.docker.com/products/docker-desktop)
 

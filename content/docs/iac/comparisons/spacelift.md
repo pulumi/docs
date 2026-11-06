@@ -155,7 +155,7 @@ No. The Pulumi CLI, SDKs, and providers are open source under [Apache 2.0](https
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/get-started/)
+- [Get started with Pulumi](/up/)
 - [Pulumi Deployments](/docs/deployments/)
 - [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)

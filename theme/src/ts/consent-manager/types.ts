@@ -1,28 +1,12 @@
 export interface ConsentManagerConfig {
     writeKey: string;
     cdnHost: string;
-    container: string;
-    privacyPolicyUrl: string;
-    bannerText: string;
-    preferencesDialogTitle: string;
-    preferencesDialogContent: string;
-    cancelDialogTitle: string;
-    cancelDialogContent: string;
-    // "segment" (default) or "onetrust". Set by layouts/partials/head.html from
-    // the consentProvider site param.
-    provider?: "segment" | "onetrust";
 }
 
 export interface Destination {
     id: string;
     name: string;
     category?: string;
-}
-
-export interface TrackingPreferences {
-    version: number;
-    destinations: Record<string, boolean>;
-    custom?: Record<string, boolean | null>;
 }
 
 declare global {

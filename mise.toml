@@ -8,5 +8,11 @@ vale = "3.14.1"
 # plugin on macOS (extracts the binary from Hugo's signed .pkg, which
 # aqua can't unpack). The plugin is third-party; if Mac install breaks,
 # `brew install hugo` is the fallback.
+#
+# This is the single source of truth for the Hugo version: CI installs it via
+# .github/actions/setup-hugo and `make ensure` checks against it, both through
+# scripts/hugo-version.sh. To upgrade, change both lines below (the macOS one
+# keeps its `extended_` prefix) and the Hugo feature in
+# .devcontainer/devcontainer.json; `make lint` fails if they disagree.
 hugo = { version = "0.157.0", os = ["linux"] }
 "asdf:NeoHsu/asdf-hugo" = { version = "extended_0.157.0", os = ["macos"] }

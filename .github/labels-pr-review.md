@@ -50,7 +50,7 @@ The six `review:*` state labels are **mutually exclusive**. Setting one removes 
 
 | Label | Color | Description |
 |---|---|---|
-| `long-running` | `c2e0c6` | This PR is meant to sit for a while. The stale-PR sweep (`stale-pr-sweep.yml`) closes it after 90 days without activity instead of 30. A longer grace period, not an exemption: nothing keeps a PR open forever. Applied by people (the sweep's close comment tells authors to reopen and add it); the sweep only reads it. The name and both windows live in the `stale_prs:` block of `.github/review-routing.yml`, so a rename is a one-line config change plus `gh label edit`. |
+| `review:long-running` | `bfdadc` | This PR is meant to sit for a while. The stale-PR sweep (`stale-pr-sweep.yml`) closes it after 90 days without activity instead of 30. A longer grace period, not an exemption: nothing keeps a PR open forever. Applied by people (the sweep's close comment tells authors to reopen and add it); the sweep only reads it. Not one of the mutually exclusive review state labels, so `set-review-label.sh` never touches it. The name and both windows live in the `stale_prs:` block of `.github/review-routing.yml`, so a rename is a one-line config change plus `gh label edit`. |
 
 ## Content-review class labels (set by the content-review workflow)
 
@@ -88,7 +88,7 @@ gh label create "review:error"           --color e11d21 --description "Workflow 
 gh label create "needs-author-response"  --color f7c6c7 --description "Review surfaced unverifiable claims; author owes a response"
 gh label create "review:waived"          --color d93f0b --description "Break-glass: a human waived the v3 merge gates; actor and reason are logged"
 gh label create "review:author-stalled"  --color fad8c7 --description "Waiting on the author 14+ days; closes at 21 days, one-click reopen (SLA sweep)"
-gh label create "long-running"           --color c2e0c6 --description "Meant to sit a while: the stale-PR sweep closes it after 90 days idle instead of 30"
+gh label create "review:long-running"    --color bfdadc --description "Meant to sit a while: the stale-PR sweep closes it after 90 days idle instead of 30"
 gh label create "content-review/deterministic" --color c5def5 --description "Content-review PR whose fixes are all deterministic-class (links, Vale, frontmatter)"
 gh label create "content-review/judgment"      --color bfd4f2 --description "Content-review PR containing judgment-class fixes (needs a human eye)"
 gh label create "content-review/glow-up"       --color d4c5f9 --description "Content glow-up PR (whole-article polish)"

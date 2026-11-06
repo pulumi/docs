@@ -97,11 +97,8 @@ jobs:
         run: |
           sed -i "s/\${VERSION}/${ESC_SDK_VERSION}/g" esc-sdk/sdk/typescript/package.json
           grep '"version"' esc-sdk/sdk/typescript/package.json
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.157.0'
-          extended: true
+      - name: Install Hugo (version pinned in mise.toml)
+        uses: ./docs/.github/actions/setup-hugo
       - name: Install node
         uses: actions/setup-node@v7
         with:

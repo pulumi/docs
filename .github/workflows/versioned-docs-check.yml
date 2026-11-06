@@ -15,10 +15,6 @@ name: Versioned docs program check
 # the same reason as support-form-tests.yml: that path needs AWS and Pulumi
 # credentials and degrades to a plain build without them, so it skips on fork
 # PRs. A dependency-free type check should run for everyone.
-#
-# Only `tsc --noEmit` runs here. The package's `lint` script is tslint, which
-# is deprecated and currently fails repo-wide on the main infrastructure/
-# program; wiring it up is a separate decision (also tracked on #21136).
 on:
   pull_request:
     paths:

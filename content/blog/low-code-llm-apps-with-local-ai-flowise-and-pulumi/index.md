@@ -325,6 +325,6 @@ As always, we welcome your feedback and contributions in
 the [Pulumi Community Slack](https://slack.pulumi.com/), [GitHub repository,](https://github.com/pulumi/pulumi)
 and [Pulumi Community Discussions](https://github.com/pulumi/pulumi/discussions).
 
-New to Pulumi? Signing up is easy and free. [Get started today](/docs/get-started/)!
+New to Pulumi? Signing up is easy and free. [Get started today](/up/)!
 
 Happy AI building!

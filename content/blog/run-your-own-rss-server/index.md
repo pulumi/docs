@@ -48,7 +48,7 @@ Let's get started!
 
 ## Setting Up
 
-We'll start by creating a new Pulumi project. (If you're completely new to Pulumi, it might be good to begin with our [Getting Started guide](/docs/get-started/), which walks you through installing Pulumi and configuring it for your cloud provider.) We'll use the built-in `aws-typescript` project template:
+We'll start by creating a new Pulumi project. (If you're completely new to Pulumi, it might be good to begin with our [Getting Started guide](/up/), which walks you through installing Pulumi and configuring it for your cloud provider.) We'll use the built-in `aws-typescript` project template:
 
 ```shell
 $ mkdir miniflux && cd miniflux
