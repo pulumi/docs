@@ -76,23 +76,15 @@ Platform Engineering Day is included with an all-access pass. If you have one, a
 
 ## Talks from our team
 
-**Panel: DevRel Unfiltered — What Developers Actually Build with Agents**
-
-Adam Gordon Bell · Monday, November 9, 2:30–3:00 PM MT · Distributed SQL Summit, Gallivan Center, 50 E 200 S
-
-A panel of developer advocates on what people are building with agents. Part of YugabyteDB's Distributed SQL Summit, a co-located event that needs its own registration.
-
-**I Built an AI Running Coach: A Personal kagent Agent in Production**
-
-Adam Gordon Bell · Tuesday, November 10, 2:50–3:20 PM MT · Hall DE, Level 1
-
-Adam rebuilt his AI running coach as a kagent agent on Kubernetes. He'll cover what worked, what broke, and what it takes to run a personal agent on a cluster.
-
-**Why Are You Still Wasting Whole GPUs? Hardware-Level Sharing, Scheduled with DRA**
-
-Engin Diri · Tuesday, November 10, 4:40–5:10 PM MT · 255 BC, Level 2
-
-Most GPU workloads don't need a whole GPU, but they usually get one. Engin covers hardware-level GPU sharing and how Dynamic Resource Allocation (DRA) lets Kubernetes schedule it.
+1. **Panel: DevRel Unfiltered — What Developers Actually Build with Agents**  
+   Adam Gordon Bell · Monday, November 9, 2:30–3:00 PM MT · Distributed SQL Summit, Gallivan Center, 50 E 200 S  
+   A panel of developer advocates on what people are building with agents. Part of YugabyteDB's Distributed SQL Summit, a co-located event that needs its own registration.
+1. **I Built an AI Running Coach: A Personal kagent Agent in Production**  
+   Adam Gordon Bell · Tuesday, November 10, 2:50–3:20 PM MT · Hall DE, Level 1  
+   Adam rebuilt his AI running coach as a kagent agent on Kubernetes. He'll cover what worked, what broke, and what it takes to run a personal agent on a cluster.
+1. **Why Are You Still Wasting Whole GPUs? Hardware-Level Sharing, Scheduled with DRA**  
+   Engin Diri · Tuesday, November 10, 4:40–5:10 PM MT · 255 BC, Level 2  
+   Most GPU workloads don't need a whole GPU, but they usually get one. Engin covers hardware-level GPU sharing and how Dynamic Resource Allocation (DRA) lets Kubernetes schedule it.
 
 Double-check rooms and times for the two KubeCon talks on the [official KubeCon schedule](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule-at-a-glance/).
 
