@@ -202,7 +202,7 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         if: steps.head.outputs.superseded != 'true'
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
 
       - name: Checkout repository
         if: steps.head.outputs.superseded != 'true'

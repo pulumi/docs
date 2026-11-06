@@ -355,7 +355,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: Download handoff
         continue-on-error: true
         uses: actions/download-artifact@v8
@@ -491,7 +491,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: Checkout master (trusted scripts)
         uses: actions/checkout@v7
         with:
