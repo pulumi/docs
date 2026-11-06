@@ -2,14 +2,12 @@
     "name": "www.pulumi.com",
     "license": "Apache-2.0",
     "scripts": {
-        "lint": "tslint --project tsconfig.json",
         "test-support-form": "tsc -p tsconfig.json && node ../scripts/check-test-suites-compiled.js support-form bin/support-form infrastructure/tsconfig.json && node --test bin/support-form/*.test.js",
         "test-pricing-api": "tsc -p tsconfig.json && node ../scripts/check-test-suites-compiled.js pricing-api bin/pricing-api infrastructure/tsconfig.json && node --test bin/pricing-api/*.test.js"
     },
     "devDependencies": {
         "@types/aws-lambda": "^8.10.164",
         "@types/node": "^25.9.9",
-        "tslint": "^6.1.3",
         "typescript": "^5.7.2"
     },
     "dependencies": {
