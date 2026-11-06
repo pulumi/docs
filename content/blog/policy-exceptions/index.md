@@ -1,7 +1,6 @@
 ---
 title: "Policy exceptions: enforce every policy, document every exception"
-# TODO(launch-date): set the real publish date before merging. draft is off only for the PR preview; the do-not-merge label holds it.
-date: 2026-11-03
+date: 2026-11-09
 meta_desc: "Make policies mandatory without blocking teams. Policy exceptions exempt specific resources with a reason, optional approval and expiry, and a record."
 feature_image: feature.png
 authors:
@@ -95,9 +94,7 @@ Each exception records its reason, who requested it, the change request that app
 
 ## How does it work for each team?
 
-<!-- TODO(decision): the pulumi policy exception commands must ship in a CLI release (pulumi/pulumi#25417) before merging. -->
-
-In Pulumi Cloud, exceptions belong to your organization and apply to the policy packs within your [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#preventative-policy-groups). When a preview or update starts, Pulumi Cloud sends the stack's active exceptions to the CLI, so no local configuration is required. Applying them needs Pulumi CLI v3.272.0 or later.
+In Pulumi Cloud, exceptions belong to your organization and apply to the policy packs within your [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#preventative-policy-groups). When a preview or update starts, Pulumi Cloud sends the stack's active exceptions to the CLI, so no local configuration is required. Applying them needs Pulumi CLI v3.274.1 or later.
 
 - **Developers** request an exception from the **Policy exceptions** card on the stack's **Overview** page or via the experimental `pulumi policy exception new` command. They select the findings from the stack's latest run, enter a reason, and optionally an expiry. The exception takes effect from the stack's next run, once it's approved if approval is required.
 - **Admins** decide whether exceptions require approval, and if so, who approves (organization admins, policy managers, or specific teams and users) and how many approvals a request requires. No one approves their own request unless you allow it.
@@ -132,7 +129,7 @@ Yes! The Pulumi CLI applies exceptions from a local policy pack config file with
 
 ## Next steps
 
-Policy exceptions are in public preview on the Essentials, Pro, and Enterprise editions; requiring approval needs Pro or Enterprise. Applying exceptions from Pulumi Cloud requires Pulumi CLI v3.272.0 or later. Older versions will ignore the exceptions and report the violations as usual.
+Policy exceptions are in public preview on the Essentials, Pro, and Enterprise editions; requiring approval needs Pro or Enterprise. Applying exceptions from Pulumi Cloud requires Pulumi CLI v3.274.1 or later. Older versions may not apply them, and report the violations as usual.
 
 - Read the [policy exceptions documentation](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) for matching rules, approvals, expiry, and permissions.
 - Plan a staged rollout with [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#adopting-policy-across-an-organization).

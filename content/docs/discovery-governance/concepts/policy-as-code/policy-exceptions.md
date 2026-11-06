@@ -125,9 +125,7 @@ To find the URN of a resource, run `pulumi stack --show-urns`.
 
 {{< pulumi-cloud "policy-enforcement" />}}
 
-<!-- TODO(edition): policy-enforcement (Essentials) stands in until a policy-exceptions feature id syncs from marketing-web; esc-change-requests stands in for approvals. Swap both. -->
-
-In Pulumi Cloud, exceptions belong to your organization. Pulumi Cloud sends the active exceptions for a stack's required policy packs to the CLI when `pulumi preview` or `pulumi up` starts, so they apply to [preventative policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#preventative-policy-groups) without local configuration. This requires Pulumi CLI v3.272.0 or later.
+In Pulumi Cloud, exceptions belong to your organization. Pulumi Cloud sends the active exceptions for a stack's required policy packs to the CLI when `pulumi preview` or `pulumi up` starts, so they apply to [preventative policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#preventative-policy-groups) without local configuration. This requires Pulumi CLI v3.274.1 or later.
 
 Each exception gets an ID such as `EXC-42` and names a policy pack that appears in at least one of your organization's policy groups. Its entries can reference resources across any number of stacks.
 
@@ -144,8 +142,6 @@ flowchart LR
 ```
 
 Exceptions are listed on the **Applied exceptions** tab of the **Policy configuration** page (under **Governance** > **Policy configuration**).
-
-<!-- TODO(screenshot): the Applied exceptions tab, with the status filter and the Configure Exceptions button. -->
 
 ### Configure exceptions for your organization
 
@@ -189,13 +185,9 @@ To request an exception from the Pulumi Cloud console:
 1. Optionally, select **Expires** and enter the number of days, from 1 to 3650. See [Expiry](#expiry).
 1. Select **Request exception**.
 
-<!-- TODO(screenshot): the Request policy exception panel on the stack Overview page. -->
-
 You need write access to the stack to request an exception. When your organization requires approval, Pulumi Cloud opens a change request, and the exception is created once the request is approved. Otherwise, the exception is created immediately. Either way, it applies from the stack's next run.
 
-You can also create exceptions from the CLI with the `pulumi policy exception new` command, available in Pulumi CLI vX.Y.Z or later.
-
-<!-- TODO(decision): don't merge until pulumi/pulumi#25417 ships in a CLI release; replace vX.Y.Z with that version. -->
+You can also create exceptions from the CLI with the [`pulumi policy exception new`](/docs/iac/cli/commands/pulumi_policy_exception_new/) command, available in Pulumi CLI v3.274.1 or later.
 
 {{< experimental-feature >}}
 The `pulumi policy exception` commands are listed in the CLI's help only when the `PULUMI_EXPERIMENTAL` environment variable is set to `true`.
@@ -211,7 +203,7 @@ pulumi policy exception new aws-guard --stack prod --policy s3-no-public-read \
 
 `--policy`, `--target`, and `--level` narrow the set of violations to choose from, and only mandatory violations are read unless `--level` specifies otherwise. `--expires-in` sets an expiry in days or hours, such as `30d` or `12h`. `--dry-run --output json` prints the violations and the exception the command would create, without creating it.
 
-<!-- TODO(decision): the pulumi policy exception commands aren't in a released CLI yet (pulumi/pulumi#25417). Recheck the flags against the release, and link to the generated CLI reference pages once they exist. -->
+For every command and flag, see the [`pulumi policy exception`](/docs/iac/cli/commands/pulumi_policy_exception/) reference.
 
 ### Approve or close a request
 
@@ -244,8 +236,6 @@ The **Applied exceptions** tab lists your organization's exceptions, including t
 From the CLI, `pulumi policy exception list` lists exceptions. Use `--status` to include removed ones, and `pulumi policy exception get <id>` shows one.
 
 Findings that an exception exempts show the exception's ID in the **Exception** column of [policy findings](/docs/discovery-governance/operations/policy-findings/), and **Allowed by EXC-n** in the finding's details and on the stack update page.
-
-<!-- TODO(console): the console still says "Allowed by"; update when it says "Exempted by" -->
 
 To remove an exception, open it and select **Remove exception**, or run `pulumi policy exception remove <id>`. In the next preview or update, the violations it exempted are reported again, and mandatory violations block the update. A removed exception remains in the list with the **Removed** status.
 
