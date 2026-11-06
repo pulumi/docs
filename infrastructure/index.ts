@@ -1246,7 +1246,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             customOriginConfig: {
                 // > If your Amazon S3 bucket is configured as a website endpoint, [like we have here] you must specify
                 // > HTTP Only. Amazon S3 doesn't support HTTPS connections in that configuration.
-                // tslint:disable-next-line: max-line-length
                 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginProtocolPolicy
                 originProtocolPolicy: "http-only",
                 httpPort: 80,

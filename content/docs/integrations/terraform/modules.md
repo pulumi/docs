@@ -123,7 +123,7 @@ runtime:
 packages:
   s3-bucket-aws:
     source: hcl
-    version: 0.18.4
+    version: 0.19.1
     parameters:
       - module
       - terraform-aws-modules/s3-bucket/aws
@@ -293,10 +293,6 @@ public class App {
 }
 ```
 
-{{% notes type="warning" %}}
-Deploying this example from Java currently fails with `Expected List but got 'java.lang.String'`. The generated SDK types the module's `s3_bucket_lifecycle_configuration_rules` output as a list, but the module returns an empty string when the bucket has no lifecycle rules. Until [pulumi-hcl#744](https://github.com/pulumi/pulumi-hcl/issues/744) is fixed, [load the module at runtime](#load-a-module-at-runtime) instead.
-{{% /notes %}}
-
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
@@ -327,7 +323,7 @@ outputs:
 packages:
   s3-bucket-aws:
     source: hcl
-    version: 0.18.4
+    version: 0.19.1
     parameters:
       - module
       - terraform-aws-modules/s3-bucket/aws
