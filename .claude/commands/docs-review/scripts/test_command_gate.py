@@ -218,12 +218,12 @@ def _load_apply_update():
     return mod
 
 
-def _quick(tmp_path, body, author_card=AUTHOR_CARD, brief_card=BRIEF_CARD):
-    env = dict(os.environ, BODY=body, AUTHOR="alice")
+def _quick(tmp_path, body, author_card=AUTHOR_CARD, brief_card=BRIEF_CARD, pr_author="alice"):
+    env = dict(os.environ, BODY=body, AUTHOR="alice", PR_AUTHOR=pr_author)
     upd, rep = tmp_path / "update.json", tmp_path / "reply.md"
     proc = subprocess.run(
         [sys.executable, str(SCRIPT), "quick", "--body-env", "BODY", "--author-env", "AUTHOR",
-         "--author-card", str(author_card), "--brief-card", str(brief_card),
+         "--pr-author-env", "PR_AUTHOR", "--author-card", str(author_card), "--brief-card", str(brief_card),
          "--update-out", str(upd), "--reply-out", str(rep)],
         capture_output=True, text=True, env=env)
     assert proc.returncode == 0, proc.stderr
@@ -288,7 +288,7 @@ def test_approve_replies_and_changes_nothing(tmp_path):
     out, update, reply = _quick(tmp_path, "/update-review Approve")
     assert out == {"mode": "reply", "applied": "", "reply": "true"}
     assert update is None
-    assert "doesn't approve a PR" in reply and "`/update-review accept F1`" in reply
+    assert "doesn't approve a PR" in reply and "`/update-review accept all`" in reply
     assert "open now: F1, F2, F3" in reply
     assert len(reply.strip().splitlines()) <= 3
     assert cg.commands_in(reply) == []
@@ -301,7 +301,7 @@ def test_approve_without_a_v3_card_still_answers(tmp_path):
 
 def test_everything_else_goes_to_the_model_untouched(tmp_path):
     for body in ("/update-review", "/update-review accept F1, F3", "/update-review F1: accepting as-is",
-                 "/update-review accept all", "/update-review lgtm", "/update-review approve F1",
+                 "/update-review accept F1 and F2", "/update-review lgtm", "/update-review approve F1",
                  "F1 is fine\n/update-review accept F1"):
         d = tmp_path / f"case{abs(hash(body))}"
         d.mkdir()
@@ -313,3 +313,15 @@ def test_everything_else_goes_to_the_model_untouched(tmp_path):
 def test_accept_without_a_v3_card_goes_to_the_model(tmp_path):
     out, update, _r = _quick(tmp_path, "/update-review accept F1", author_card=tmp_path / "none.md")
     assert out["mode"] == "model" and update is None
+
+
+def test_accept_all_end_to_end_records_every_open_finding_as_bulk(tmp_path):
+    out, upd, reply = _quick(tmp_path, "/update-review accept all shipping as-is")
+    assert out["mode"] == "accept" and out["applied"] == "F1 F2 F3", out
+    assert all(e["bulk"] is True and e["reason"] == "shipping as-is" for e in upd["findings"])
+    assert reply == ""
+
+
+def test_an_accept_from_someone_other_than_the_pr_author_goes_to_the_model(tmp_path):
+    out, upd, reply = _quick(tmp_path, "/update-review accept F1", pr_author="bob")
+    assert out["mode"] == "model" and upd is None and reply == ""

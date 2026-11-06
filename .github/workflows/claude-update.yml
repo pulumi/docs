@@ -450,13 +450,17 @@ jobs:
         env:
           BODY: ${{ github.event.comment.body || github.event.review.body }}
           AUTHOR: ${{ steps.check-access.outputs.author }}
+          # Accept is author-only; on an issue_comment the PR is the `issue`.
+          PR_AUTHOR: ${{ github.event.pull_request.user.login || github.event.issue.user.login }}
         run: |
           GATE=.review-tools/.claude/commands/docs-review/scripts/command-gate.py
           if ! grep -q '"quick"' "$GATE" 2>/dev/null; then
             echo "mode=model" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          python3 "$GATE" quick --body-env BODY --author-env AUTHOR \
+          PRA=()
+          if grep -q -- '--pr-author-env' "$GATE"; then PRA=(--pr-author-env PR_AUTHOR); fi
+          python3 "$GATE" quick --body-env BODY --author-env AUTHOR "${PRA[@]}" \
             --author-card .review-card-author.md --brief-card .review-card-brief.md \
             --update-out .review-update.json --reply-out .review-quick-reply.md \
             | tee -a "$GITHUB_OUTPUT"
