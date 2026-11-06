@@ -6,7 +6,7 @@ authors:
     - christian-nunciato
 ---
 
-Policy groups can now match stacks and cloud accounts by tag, instead of only by explicit assignment. Add a tag rule to a policy group, and any stack or account that carries a matching tag is covered automatically — including new ones created later, which pick up the right policies the moment they appear.
+Policy groups can now match stacks and cloud accounts by tag, instead of only by explicit assignment. Add a tag rule to a policy group, and any stack or account that carries a matching tag is covered automatically — including new ones created later, which pick up the right policies as soon as they join the group.
 
 This keeps policy coverage from drifting as your environment grows: tag your infrastructure the way you already do, and the policies follow.
 

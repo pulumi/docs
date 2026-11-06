@@ -10,7 +10,7 @@ You can now work with Pulumi ESC [change requests](/docs/esc/concepts/approvals/
 
 ```bash
 # List open change requests for an environment
-pulumi env change-request list myorg/myproject/myenv
+pulumi env change-request list --env myproject/myenv -o myorg
 
 # Review the proposed diff
 pulumi env change-request diff <id>
