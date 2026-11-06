@@ -1,5 +1,5 @@
 {
-  "applied": true,
+  "applied": false,
   "displayName": "",
   "name": "pulumi-best-practices-aws",
   "policies": [
@@ -2286,6 +2286,6 @@
       "severity": "medium"
     }
   ],
-  "version": 16,
-  "versionTag": "1.6.1"
+  "version": 17,
+  "versionTag": "1.6.2"
 }
