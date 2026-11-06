@@ -33,7 +33,7 @@ You drive the review with slash commands. Put the command at the start of a line
 | Command | Where | What it does |
 |---|---|---|
 | `/update-review [request]` | Any PR comment or review | Refreshes the review against the current head. The rest of the comment is the request: a fix you pushed, a dispute, an acceptance, or something to change first. See [After review](#after-review--three-paths-to-refresh). |
-| `/update-review accept F<n> [F<n>…]` | Any PR comment | Records each named open finding as accepted, in seconds, with no model run. The command must be the whole first line, exactly that shape (no synonyms); text below it is your reason. IDs that don't apply get a reply saying so; anything else goes to the model as an ordinary `/update-review`. |
+| `/update-review accept F<n> [F<n>…] [reason]`, `/update-review accept all [reason]` | A PR comment, by the PR's author | Records the named open findings (or every open one) as accepted, with no model run. The reason is optional and can follow on the lines below. Only this exact shape runs this way: a reason that names another finding ID, someone other than the author, or any other wording goes to the model as an ordinary `/update-review`. IDs that don't apply get a reply saying so. |
 | `/new-review [note]` | Any PR comment or review | Throws the review away and runs a fresh one from scratch. Wins over `/update-review` when a comment has both. See [the escape hatch](#power-user-escape-hatch-new-review). |
 | `/social-review` | A PR comment | Re-runs the social copy review of a blog post's `social:` front matter. |
 | `/oversized-ack` | Your **Approve** review's comment, on a `review:oversized` PR | Records that you reviewed the PR by hand (the Sentinel's G5 gate). |
