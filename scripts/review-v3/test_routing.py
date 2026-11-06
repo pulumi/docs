@@ -571,6 +571,84 @@ def test_bot_approvers_validation_fails_closed():
                                              "label": ""}])
 
 
+EON = "eon-pulumi-agent[bot]"
+_EON_ENTRY = {"approver": EON, "authors": "any-human", "subjects": ["docs", "programs"],
+              "why": "review agent stands in for the human approver on docs"}
+
+
+def test_bot_approvers_any_human_lane_needs_the_fence_and_a_human_author():
+    cfg = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG),
+                                "bot_approvers": [dict(_EON_ENTRY)]})[0]
+    assert cfg is not None
+    r = routing.bot_approver_reason
+    calls = []
+
+    def human(answer=True):
+        def f(scope):
+            calls.append(scope)
+            return answer
+        return f
+
+    # inside the fence, human author: ok, and the reason says why
+    why = r(cfg, EON, "a-writer", set(), {"docs"}, human())
+    assert why and "any human with write access" in why and "docs/programs" in why
+    assert r(cfg, EON, "a-writer", set(), {"docs", "programs"}, human())
+    assert r(cfg, EON, "a-writer", set(), {"programs"}, human())
+    # one path outside the fence takes the whole PR off the lane, and the
+    # author lookup never runs for it
+    calls.clear()
+    for subj in ({"docs", "blog"}, {"infra"}, {"frontend"}, {"other"}, {"website"}):
+        assert r(cfg, EON, "a-writer", set(), subj, human()) is None, subj
+    assert calls == []
+    # no subjects at all (nothing resolved) never matches a fenced entry
+    assert r(cfg, EON, "a-writer", set(), set(), human()) is None
+    assert r(cfg, EON, "a-writer", set(), None, human()) is None
+    # the author check is load-bearing, and missing it fails closed
+    assert r(cfg, EON, "pulumi-bot", set(), {"docs"}, human(False)) is None
+    assert r(cfg, EON, "a-writer", set(), {"docs"}, None) is None
+    # another bot gets nothing from Eon's entry
+    assert r(cfg, "github-actions[bot]", "a-writer", set(), {"docs"}, human()) is None
+    # the scope reaches the caller verbatim
+    calls.clear()
+    assert r(cfg, EON, "a-writer", set(), {"docs"}, human())
+    assert calls == ["any-human"]
+    # a class-of-author entry never approves the approver's own PR
+    calls.clear()
+    assert r(cfg, EON, EON, set(), {"docs"}, human()) is None
+    assert calls == []
+    # the single-author entries keep working with the new optional arguments
+    cfg2 = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "bot_approvers": [
+        {"approver": "pulumi-bot", "author": "dependabot[bot]", "why": "deps lane"},
+        {"approver": "x[bot]", "author": "y", "subjects": ["docs"], "why": "fenced pair"},
+    ]})[0]
+    assert r(cfg2, "pulumi-bot", "dependabot[bot]", set(), {"infra"})
+    assert r(cfg2, "x[bot]", "y", set(), {"docs"})
+    assert r(cfg2, "x[bot]", "y", set(), {"docs", "infra"}) is None
+
+
+def test_bot_approvers_any_human_validation_fails_closed():
+    def errs(entry):
+        cfg, e, _ = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG),
+                                          "bot_approvers": [entry]})
+        assert cfg is None, entry
+        return " ".join(e)
+    base = dict(_EON_ENTRY)
+    # exactly one of author / authors
+    assert "set exactly one" in errs({**base, "author": "someone"})
+    assert "set exactly one" in errs({k: v for k, v in base.items() if k != "authors"}
+                                     | {"subjects": ["docs"]})
+    # closed vocabulary for authors
+    assert "authors must be one of" in errs({**base, "authors": "anyone"})
+    assert "authors must be one of" in errs({**base, "authors": "any-bot"})
+    assert "authors must be one of" in errs({**base, "authors": ["any-human"]})
+    # a class-of-author lane must say what it covers
+    assert "subjects is required" in errs({k: v for k, v in base.items() if k != "subjects"})
+    # subjects is a non-empty list of known subjects
+    assert "subjects must be a non-empty list" in errs({**base, "subjects": []})
+    assert "subjects must be a non-empty list" in errs({**base, "subjects": "docs"})
+    assert "unknown subject(s) 'doc'" in errs({**base, "subjects": ["doc"]})
+
+
 def test_live_config_bot_approvers_are_exactly_the_auto_approve_lanes():
     """The live entries mirror the two workflows that post bot approvals
     today. If a workflow changes which identity approves, this is where the
@@ -583,6 +661,27 @@ def test_live_config_bot_approvers_are_exactly_the_auto_approve_lanes():
     assert routing.bot_approver_reason(live, "github-actions[bot]", "pulumi-bot", set()) is None
     assert routing.bot_approver_reason(live, "pulumi-bot", "pulumi-bot", set()) is None
     assert (live.approval or {}).get("scope") == "any-human"
+
+
+def test_live_config_eon_lane_is_humans_docs_and_programs_only():
+    """The Eon lane is the one class-of-author entry. Widening its fence is a
+    policy change; this is where it has to be said out loud."""
+    live = routing.load_config(routing.DEFAULT_CONFIG_PATH)
+    eon = [e for e in live.bot_approvers if e.get("approver") == EON]
+    assert len(eon) == 1
+    # Cam, 2026-11-06: bot PRs too, "so long as they're clean"
+    assert eon[0]["authors"] == "any-internal"
+    assert sorted(eon[0]["subjects"]) == ["docs", "programs"]
+    assert "label" not in eon[0]
+    # Eon stays on the denylist, so this entry is the only place it counts
+    assert EON in live.bots
+    asked = []
+    assert routing.bot_approver_reason(live, EON, "a-writer", set(), {"docs"},
+                                       lambda scope: asked.append(scope) or True)
+    assert asked == ["any-internal"]
+    assert routing.bot_approver_reason(live, EON, "a-writer", set(), {"blog"},
+                                       lambda scope: True) is None
+    assert [e for e in live.bot_approvers if "authors" in e] == eon
 
 
 def test_resolution_to_json_shape(config):

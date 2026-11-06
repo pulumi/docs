@@ -172,7 +172,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 |---|---|---|
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | push / `/update-review` / `/new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `/update-review …` phrasing |
-| G3 right-approver | an APPROVED latest review at head (or at a commit the head has only merged the base into or pushed no-op commits onto since, with the PR's own `+`/`-` lines unchanged — see Base-only merges) from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
+| G3 right-approver | an APPROVED latest review at head (or at a commit the head has only merged the base into or pushed no-op commits onto since, with the PR's own `+`/`-` lines unchanged — see Base-only merges) from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author, or `authors: any-human` / `any-internal` for an internal human with write access, plus (`any-internal`) a bot author whose review is clean, + optional label + optional subject fence) | who would qualify |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded; or, the same, at a commit the head has only merged the base into since (Base-only merges) | the deploy is dispatched automatically (`staging-deploy-auto.yml`); to retry, dispatch "Build and deploy testing" at the branch (never "Build and deploy", which is production). If the staging workflow is disabled, the row says so and names the fix, and a failed deploy or dispatch is quoted at the top of the row |
 | G5 oversized-ack | `review:oversized` PRs: a G3-qualifying approval at head whose comment has `/oversized-ack` at the start of a line | where the command goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
 
@@ -490,11 +490,20 @@ Both default to the strict reading.
 
 **Bots approve only on a named lane.** `bot_approvers:` lists each automated
 process whose bot approval clears G3: the approving login, the PR author,
-and optionally a label the PR must carry. A match overrides the `bots:`
-denylist and the `type == Bot` exclusion for that lane alone; everywhere
-else a bot approval never counts. The live entries are the two workflows
-that post bot approvals today (`auto-approve-for-auto-merge.yml` as
-`github-actions[bot]`, `label-dependabot.yml` as `pulumi-bot`).
+and optionally a label the PR must carry and the subjects every changed
+path must fall in. A match overrides the `bots:` denylist and the
+`type == Bot` exclusion for that lane alone; everywhere else a bot approval
+never counts. Two of the live entries are the workflows that post bot
+approvals today (`auto-approve-for-auto-merge.yml` as `github-actions[bot]`,
+`label-dependabot.yml` as `pulumi-bot`). The third names a class of author
+instead of one login: `authors: any-internal` with `subjects: [docs,
+programs]` lets Eon (`eon-pulumi-agent[bot]`) approve docs and
+example-program PRs on internal branches, following the root `REVIEW.md`.
+A human author needs write access; a bot author needs a clean review (an
+author card at head with every finding recorded `fixed` -- no refuted,
+deferred, or accepted rows). One path outside the fence, a fork, or Eon's
+own PR takes the PR off that lane. `authors: any-human` is the same lane
+without the bot half.
 
 That is a reversal, and the reason is worth keeping: the Sentinel is not the
 gate that decides mergeability. GitHub's required-review rule is, and it

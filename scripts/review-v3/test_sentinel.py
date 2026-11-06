@@ -215,7 +215,8 @@ class StubGh:
 BASE_REPO = "pulumi/docs"
 
 
-def pr_meta(labels=(), draft=False, author="someone", head_repo=BASE_REPO, branch="topic"):
+def pr_meta(labels=(), draft=False, author="someone", head_repo=BASE_REPO, branch="topic",
+            author_type="User"):
     """`head_repo` is the fork test: same as base = internal; another name
     or None (deleted fork) = external. Pass `head_repo=...` omitted from
     the dict via `_no_head_repo()` to model a payload without the fact.
@@ -226,7 +227,7 @@ def pr_meta(labels=(), draft=False, author="someone", head_repo=BASE_REPO, branc
                  "repo": None if head_repo is None else {"full_name": head_repo}},
         "base": {"repo": {"full_name": BASE_REPO}},
         "draft": draft,
-        "user": {"login": author},
+        "user": {"login": author, "type": author_type},
         "labels": [{"name": n} for n in labels],
     }
 
@@ -785,6 +786,194 @@ def test_g3_bot_approver_overrides_the_denylist_for_its_lane():
                 comments=[card], reviews=[approval("pulumi-bot", commit_id="b" * 40)])
     g3 = _gate(sentinel.evaluate(gh, cfg), "G3")
     assert g3.status == "red" and "approved an earlier commit" in g3.message
+
+
+EON = "eon-pulumi-agent[bot]"
+EON_CONFIG, _eon_errors, _ = routing.validate_raw({
+    **RAW_CONFIG,
+    "approval": {"scope": "any-human", "admins_satisfy": True},
+    "bot_approvers": [
+        *HUMAN_CONFIG.bot_approvers,
+        {"approver": EON, "authors": "any-human", "subjects": ["docs", "programs"],
+         "why": "review agent on docs"},
+    ],
+})
+assert EON_CONFIG is not None, _eon_errors
+
+
+def programs_file():
+    return {
+        "filename": "static/programs/aws-s3-bucket-typescript/index.ts",
+        "status": "modified",
+        "patch": "@@ -1,1 +1,1 @@\n-const b = 1;\n+const b = 2;",
+    }
+
+
+def _eon_gh(*, pr=None, files=None, reviews=None, permissions=None, **kw):
+    card = author_card([], state=_state_with([]))
+    return StubGh(pr=pr or pr_meta(author="a-writer"),
+                  files=files or [docs_file_substantive()], comments=[card],
+                  reviews=reviews if reviews is not None else [approval(EON, utype="Bot")],
+                  permissions={"a-writer": "write"} if permissions is None else permissions,
+                  **kw)
+
+
+def test_g3_eon_approves_a_humans_docs_pr():
+    gh = _eon_gh()
+    v = sentinel.evaluate(gh, EON_CONFIG)
+    g3 = _gate(v, "G3")
+    assert g3.status == "ok" and EON in g3.message, g3.message
+    assert "any human with write access" in g3.message
+    assert v.conclusion == "success", v.to_json()
+    # the one lookup is the AUTHOR's permission, not the bot's
+    assert gh.permission_calls == ["a-writer"]
+    # programs, and docs + programs together, are inside the fence too
+    for files in ([programs_file()], [docs_file_substantive(), programs_file()]):
+        assert _gate(sentinel.evaluate(_eon_gh(files=files), EON_CONFIG), "G3").status == "ok"
+
+
+def test_g3_eon_lane_stops_at_the_subject_fence():
+    """One file outside docs/programs and the PR needs a person."""
+    for extra in (frontend_file(), infra_data_file(), blog_date_bump_file()):
+        gh = _eon_gh(files=[docs_file_substantive(), extra])
+        g3 = _gate(sentinel.evaluate(gh, EON_CONFIG), "G3")
+        assert g3.status == "red", extra["filename"]
+        assert gh.permission_calls == []  # off the fence costs no lookup
+
+
+def test_g3_eon_lane_is_for_humans_with_write_access_only():
+    # bot authors: by type, by [bot] login, by the bots: denylist
+    for pr in (pr_meta(author="some-app", author_type="Bot"),
+               pr_meta(author="workprentice[bot]"),
+               pr_meta(author="pulumi-bot", branch="content-review/x")):
+        gh = _eon_gh(pr=pr, permissions={"some-app": "write", "workprentice[bot]": "write",
+                                         "pulumi-bot": "admin"})
+        assert _gate(sentinel.evaluate(gh, EON_CONFIG), "G3").status == "red", pr["user"]
+        assert gh.permission_calls == []
+    # a fork, a deleted fork, and a payload that can't prove the branch is ours
+    no_head = pr_meta(author="a-writer")
+    del no_head["head"]["repo"]
+    for pr in (pr_meta(author="a-writer", head_repo="someone/docs"),
+               pr_meta(author="a-writer", head_repo=None), no_head):
+        gh = _eon_gh(pr=pr)
+        assert _gate(sentinel.evaluate(gh, EON_CONFIG), "G3").status != "ok"
+        assert gh.permission_calls == []
+    # an author without write access, or whose lookup fails: no lane
+    for perm in ("read", "triage", "none"):
+        gh = _eon_gh(permissions={"a-writer": perm})
+        assert _gate(sentinel.evaluate(gh, EON_CONFIG), "G3").status == "red", perm
+    gh = _eon_gh(permissions={}, permission_error_users={"a-writer"})
+    assert _gate(sentinel.evaluate(gh, EON_CONFIG), "G3").status == "red"
+
+
+def test_g3_eon_approval_must_be_at_head_and_counts_nowhere_else():
+    gh = _eon_gh(reviews=[approval(EON, utype="Bot", commit_id="b" * 40)])
+    g3 = _gate(sentinel.evaluate(gh, EON_CONFIG), "G3")
+    assert g3.status == "red" and "approved an earlier commit" in g3.message
+    # without the entry, Eon is just a denylisted bot
+    gh = _eon_gh()
+    assert _gate(sentinel.evaluate(gh, HUMAN_CONFIG), "G3").status == "red"
+    assert gh.permission_calls == []
+
+
+def test_g3_eon_lane_does_not_wave_through_the_other_gates():
+    """Eon replaces the human approval and nothing else: an open finding
+    still holds G2 red."""
+    card = author_card([("F1", "must")], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(author="a-writer"), files=[docs_file_substantive()],
+                comments=[card], reviews=[approval(EON, utype="Bot")],
+                permissions={"a-writer": "write"})
+    v = sentinel.evaluate(gh, EON_CONFIG)
+    assert _gate(v, "G3").status == "ok"
+    assert _gate(v, "G2").status == "red"
+    assert v.conclusion != "success"
+
+
+EON_ANY_CONFIG = routing.validate_raw({
+    **RAW_CONFIG,
+    "approval": {"scope": "any-human", "admins_satisfy": True},
+    "bot_approvers": [
+        *HUMAN_CONFIG.bot_approvers,
+        {"approver": EON, "authors": "any-internal", "subjects": ["docs", "programs"],
+         "why": "review agent on docs, clean bot PRs too"},
+    ],
+})[0]
+assert EON_ANY_CONFIG is not None
+
+
+def _bot_pr_gh(card, *, pr=None, files=None, reviews=None):
+    """A pulumi-bot content-review PR (a branch the review lane does run on)."""
+    return StubGh(pr=pr or pr_meta(author="pulumi-bot", branch="content-review/glowup-x"),
+                  files=files or [docs_file_substantive()], comments=[card],
+                  reviews=reviews if reviews is not None else [approval(EON, utype="Bot")],
+                  permissions={"pulumi-bot": "admin", "a-writer": "write"})
+
+
+def _fixed_state(fids):
+    return _state_with(fids, disposition="fixed", note="")
+
+
+def test_g3_eon_any_internal_approves_a_clean_bot_pr():
+    # no findings at all
+    gh = _bot_pr_gh(author_card([], state=_state_with([])))
+    v = sentinel.evaluate(gh, EON_ANY_CONFIG)
+    g3 = _gate(v, "G3")
+    assert g3.status == "ok" and "a bot whose review is clean" in g3.message, g3.message
+    assert gh.permission_calls == []  # a bot author needs no permission lookup
+    # every finding fixed, including ones the card still shows
+    gh = _bot_pr_gh(author_card([("F1", "must"), ("F2", "answer")],
+                                state=_fixed_state(["F1", "F2"])))
+    assert _gate(sentinel.evaluate(gh, EON_ANY_CONFIG), "G3").status == "ok"
+    # App-identity authors and [bot] logins count as bots here too
+    for pr in (pr_meta(author="workprentice[bot]", author_type="Bot"),
+               pr_meta(author="some-app", author_type="Bot")):
+        gh = _bot_pr_gh(author_card([], state=_state_with([])), pr=pr)
+        assert _gate(sentinel.evaluate(gh, EON_ANY_CONFIG), "G3").status == "ok", pr["user"]
+    # and humans still qualify exactly as under any-human
+    gh = _eon_gh()
+    assert _gate(sentinel.evaluate(gh, EON_ANY_CONFIG), "G3").status == "ok"
+    assert gh.permission_calls == ["a-writer"]
+
+
+def test_g3_eon_any_internal_needs_a_clean_review_on_a_bot_pr():
+    """On a bot's PR only `fixed` resolves a finding: a refutation there is
+    the automation overruling its own review with nobody watching."""
+    for disposition in ("refuted", "deferred", "accepted", "not-applicable"):
+        card = author_card([("F1", "must")], state=_state_with(["F1"], disposition=disposition))
+        g3 = _gate(sentinel.evaluate(_bot_pr_gh(card), EON_ANY_CONFIG), "G3")
+        assert g3.status == "red", disposition
+    # a refuted row already moved off the card still counts against it
+    card = author_card([], state=_state_with(["F1"], disposition="refuted"))
+    assert _gate(sentinel.evaluate(_bot_pr_gh(card), EON_ANY_CONFIG), "G3").status == "red"
+    # an open row, a stale card, no card at all
+    card = author_card([("F1", "must")], state=_state_with([]))
+    assert _gate(sentinel.evaluate(_bot_pr_gh(card), EON_ANY_CONFIG), "G3").status == "red"
+    stale = author_card([], state=_state_with([]), head="b" * 40)
+    assert _gate(sentinel.evaluate(_bot_pr_gh(stale), EON_ANY_CONFIG), "G3").status == "red"
+    gh = StubGh(pr=pr_meta(author="pulumi-bot", branch="content-review/x"),
+                files=[docs_file_substantive()], comments=[],
+                reviews=[approval(EON, utype="Bot")])
+    assert _gate(sentinel.evaluate(gh, EON_ANY_CONFIG), "G3").status == "red"
+    # a forged card from another login is no card
+    forged = dict(author_card([], state=_state_with([])), user={"login": "pulumi-bot", "type": "User"})
+    assert _gate(sentinel.evaluate(_bot_pr_gh(forged), EON_ANY_CONFIG), "G3").status == "red"
+
+
+def test_g3_eon_any_internal_keeps_the_fence_the_fork_rule_and_no_self_approval():
+    clean = author_card([], state=_state_with([]))
+    # one file outside docs/programs
+    gh = _bot_pr_gh(clean, files=[docs_file_substantive(), frontend_file()])
+    assert _gate(sentinel.evaluate(gh, EON_ANY_CONFIG), "G3").status == "red"
+    # a bot PR from a fork
+    gh = _bot_pr_gh(clean, pr=pr_meta(author="some-app", author_type="Bot",
+                                      head_repo="someone/docs"))
+    assert _gate(sentinel.evaluate(gh, EON_ANY_CONFIG), "G3").status != "ok"
+    # Eon's own PR
+    gh = _bot_pr_gh(clean, pr=pr_meta(author=EON, author_type="Bot"))
+    assert _gate(sentinel.evaluate(gh, EON_ANY_CONFIG), "G3").status == "red"
+    # and under any-human, the same clean bot PR is still a person's job
+    gh = _bot_pr_gh(clean)
+    assert _gate(sentinel.evaluate(gh, EON_CONFIG), "G3").status == "red"
 
 
 def test_g3_membership_api_failure_action_required_not_red():

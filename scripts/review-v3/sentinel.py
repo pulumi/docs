@@ -721,6 +721,95 @@ def _is_external(pr_detail: dict) -> bool:
     return head_name != base_name
 
 
+def _is_internal_branch(pr_detail: dict) -> bool:
+    """Does the PR's head branch provably live in this repo?
+
+    The opposite default from `_is_external`, which treats a missing
+    head-repo fact as internal because there "internal" is the stricter
+    reading. For the class-of-author bot lanes it is the looser one, so a
+    payload that can't prove the branch lives here is not internal: no forks,
+    no deleted forks, no missing fact.
+    """
+    head_repo = (pr_detail.get("head") or {}).get("repo") or {}
+    base_repo = (pr_detail.get("base") or {}).get("repo") or {}
+    head_name = (head_repo.get("full_name") or "").lower()
+    base_name = (base_repo.get("full_name") or "").lower()
+    return bool(head_name) and head_name == base_name
+
+
+def _is_bot_author(config, pr_detail: dict) -> bool:
+    """GitHub's `type == Bot`, a `[bot]` login, or a `bots:` entry (machine
+    USERS like pulumi-bot, which the type test can't see)."""
+    user = pr_detail.get("user") or {}
+    login = user.get("login") or ""
+    return (user.get("type") == "Bot" or login.endswith("[bot]")
+            or login in set(config.bots or []))
+
+
+def _review_is_clean(author_card: dict | None, head_sha: str) -> bool:
+    """Is the review on this PR clean: current, and nothing left but fixes?
+
+    The bar a BOT-authored PR has to clear before a review bot's approval
+    can stand in for a human's (`authors: any-internal`). Stricter than G2,
+    which accepts any recorded answer: on a human's PR a refutation is a
+    person taking responsibility, but on a bot's PR it is the automation
+    overruling the review with nobody watching. So:
+
+    - there is a genuine author card (the `_find_comment` provenance rules)
+      and it reviewed the current head;
+    - its REVIEW_STATE parses;
+    - every 🚨/❓ row on it is numbered and recorded `fixed`;
+    - every disposition REVIEW_STATE holds, including rows already moved to
+      ✅ Resolved, is `fixed`.
+
+    A card with no findings at all is clean. No card is not.
+    """
+    if author_card is None:
+        return False
+    body = author_card.get("body") or ""
+    if not _body_matches_head(body, head_sha):
+        return False
+    try:
+        state = review_state.parse_state(body) or review_state.empty_state()
+    except ValueError:
+        return False
+    findings = state.get("findings") or {}
+    if any((f or {}).get("disposition") != "fixed" for f in findings.values()):
+        return False
+    for row in _card_rows(body, ("🚨", "❓"), include_unnumbered=True):
+        if row["id"] == "F?" or (findings.get(row["id"]) or {}).get("disposition") != "fixed":
+            return False
+    return True
+
+
+def _author_in_bot_lane_scope(
+    gh, config, pr_detail: dict, scope: str, author_card: dict | None, head_sha: str
+) -> bool:
+    """Does the PR author fall in a `bot_approvers[].authors` scope?
+
+    Every half fails CLOSED. Both scopes need an internal branch.
+
+    - `any-human`: not a bot, and write access or better (the bar G3 applies
+      to a human approver). A failed lookup is a no, not an error: the lane
+      simply doesn't apply, and a human approval still clears G3.
+    - `any-internal`: `any-human`, or a bot author whose review is clean
+      (`_review_is_clean`). A bot needs no permission lookup: its branch is
+      in this repo, which already took write access to push, and an App
+      identity has no collaborator permission to look up anyway.
+    """
+    login = (pr_detail.get("user") or {}).get("login") or ""
+    if not login or not _is_internal_branch(pr_detail):
+        return False
+    if _is_bot_author(config, pr_detail):
+        return scope == "any-internal" and _review_is_clean(author_card, head_sha)
+    if scope not in ("any-human", "any-internal"):
+        return False
+    try:
+        return gh.get_repo_permission(login) in WRITE_PERMISSIONS
+    except SentinelDataError:
+        return False
+
+
 def _mechanical_and_claims(
     pr_detail: dict, files: list[dict], labels: set[str] | frozenset[str] = frozenset()
 ) -> tuple[bool, bool, list[str]]:
@@ -1477,13 +1566,24 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # type test cannot see.
     approvers: list[dict] = []
     bot_approvers: list[tuple[dict, str]] = []
+    pr_subjects = set(resolution.subjects.values())
+    in_scope: dict[str, bool] = {}  # memo: at most one lookup per scope per evaluation
+
+    def _author_in_scope(scope: str) -> bool:
+        if scope not in in_scope:
+            in_scope[scope] = _author_in_bot_lane_scope(
+                gh, config, pr, scope, author_card, head_sha)
+        return in_scope[scope]
+
     for r in latest.values():
         if r.get("state") != "APPROVED":
             continue
         u = r.get("user") or {}
         login = u.get("login") or ""
         if u.get("type") == "Bot" or login in set(config.bots or []):
-            why = routing.bot_approver_reason(config, login, author, labels)
+            why = routing.bot_approver_reason(config, login, author, labels,
+                                              subjects=pr_subjects,
+                                              author_in_scope=_author_in_scope)
             if why:
                 bot_approvers.append((r, why))
             continue
