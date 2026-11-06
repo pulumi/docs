@@ -194,3 +194,122 @@ def test_pending_bad_since_is_a_usage_error():
         capture_output=True, text=True,
     ).returncode
     assert rc == 2
+
+
+# ---- quick: `/update-review accept F<n>` and `/update-review approve` -------
+#
+# pulumi/docs#22397: `/update-review Approve`, meant as a PR approval, went to
+# the model as free text. These two shapes are answered by code; the cards are
+# the update lane's own fixtures, and the patch runs through apply-update.py
+# exactly as the publish step runs it.
+
+import json as _json  # noqa: E402
+
+TESTDATA = HERE / "testdata"
+AUTHOR_CARD = TESTDATA / "v3-fixture-author.md.txt"
+BRIEF_CARD = TESTDATA / "v3-fixture-brief.md.txt"
+
+
+def _load_apply_update():
+    spec = importlib.util.spec_from_file_location("apply_update", HERE / "apply-update.py")
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules.setdefault("apply_update", mod)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _quick(tmp_path, body, author_card=AUTHOR_CARD, brief_card=BRIEF_CARD):
+    env = dict(os.environ, BODY=body, AUTHOR="alice")
+    upd, rep = tmp_path / "update.json", tmp_path / "reply.md"
+    proc = subprocess.run(
+        [sys.executable, str(SCRIPT), "quick", "--body-env", "BODY", "--author-env", "AUTHOR",
+         "--author-card", str(author_card), "--brief-card", str(brief_card),
+         "--update-out", str(upd), "--reply-out", str(rep)],
+        capture_output=True, text=True, env=env)
+    assert proc.returncode == 0, proc.stderr
+    out = dict(line.split("=", 1) for line in proc.stdout.splitlines() if "=" in line)
+    return (out, _json.loads(upd.read_text()) if upd.exists() else None,
+            rep.read_text() if rep.exists() else "")
+
+
+def test_the_live_card_reads_open_ids_from_the_author_card_only():
+    card = cg.read_card(str(AUTHOR_CARD), str(BRIEF_CARD))
+    assert card["open"] == ["F1", "F2", "F3"]
+    assert "F4" in card["known"] and "F4" not in card["open"], "a ⚠️ reviewer check is not the author's"
+
+
+def test_accept_records_accepted_by_the_commenter_through_apply_update(tmp_path):
+    out, update, reply = _quick(tmp_path, "/update-review accept F1 F3")
+    assert out == {"mode": "accept", "applied": "F1 F3", "reply": "false"}
+    assert reply == ""
+    au = _load_apply_update()
+    a_out, b_out, state, report = au.apply(
+        AUTHOR_CARD.read_text(), BRIEF_CARD.read_text(), update,
+        head_sha="c" * 40, actor="alice", auto=False, repo="pulumi/docs", pr=999,
+        now=datetime(2026, 11, 6, 12, 0, tzinfo=timezone.utc))
+    for fid in ("F1", "F3"):
+        rec = state["findings"][fid]
+        assert rec["disposition"] == "accepted" and rec["actor"] == "alice", rec
+        assert rec["sha"] == "c" * 12 and rec["updated_at"].startswith("2026-11-06T12:00")
+        assert rec["note"] == cg.ACCEPT_NO_REASON
+    assert "F2" not in state["findings"]
+    assert report["blocking"] == 1
+    assert "✋ **Accepted as-is by alice on 2026-11-06.**" in b_out
+
+
+def test_accept_reason_is_the_rest_of_the_comment(tmp_path):
+    _out, update, _r = _quick(tmp_path, "/update-review accept F3\n\nThe 40% figure is our own benchmark.")
+    assert update["findings"] == [{"id": "F3", "action": "accept",
+                                   "reason": "The 40% figure is our own benchmark."}]
+
+
+def test_accept_names_the_ids_that_did_not_apply_and_applies_the_rest(tmp_path):
+    out, update, reply = _quick(tmp_path, "/update-review accept F2 F4 F9")
+    assert out["mode"] == "accept" and out["applied"] == "F2" and out["reply"] == "true"
+    assert [e["id"] for e in update["findings"]] == ["F2"]
+    assert reply.startswith(cg.QUICK_REPLY_MARKER)
+    assert "F4 (already answered" in reply and "F9 (no such finding" in reply
+    assert len(reply.strip().splitlines()) <= 3
+
+
+def test_an_already_answered_finding_is_not_accepted_again(tmp_path):
+    au = _load_apply_update()
+    author = AUTHOR_CARD.read_text()
+    state = au.review_state.set_disposition(au.review_state.parse_state(author), "F1", "refuted",
+                                            actor="bob", note="sourced")
+    card = tmp_path / "author.md"
+    card.write_text(au.review_state.replace_block(author, state))
+    out, update, reply = _quick(tmp_path, "/update-review accept F1", author_card=card)
+    assert out["mode"] == "reply" and update is None
+    assert "F1 (already answered" in reply and "Open now: F2, F3." in reply
+
+
+def test_approve_replies_and_changes_nothing(tmp_path):
+    out, update, reply = _quick(tmp_path, "/update-review Approve")
+    assert out == {"mode": "reply", "applied": "", "reply": "true"}
+    assert update is None
+    assert "doesn't approve a PR" in reply and "`/update-review accept F1`" in reply
+    assert "open now: F1, F2, F3" in reply
+    assert len(reply.strip().splitlines()) <= 3
+    assert cg.commands_in(reply) == []
+
+
+def test_approve_without_a_v3_card_still_answers(tmp_path):
+    out, _u, reply = _quick(tmp_path, "/update-review approve.", author_card=tmp_path / "none.md")
+    assert out["mode"] == "reply" and "`/update-review accept F<n>`" in reply
+
+
+def test_everything_else_goes_to_the_model_untouched(tmp_path):
+    for body in ("/update-review", "/update-review accept F1, F3", "/update-review F1: accepting as-is",
+                 "/update-review accept all", "/update-review lgtm", "/update-review approve F1",
+                 "F1 is fine\n/update-review accept F1"):
+        d = tmp_path / f"case{abs(hash(body))}"
+        d.mkdir()
+        out, update, reply = _quick(d, body)
+        assert out["mode"] == "model", body
+        assert update is None and reply == "", body
+
+
+def test_accept_without_a_v3_card_goes_to_the_model(tmp_path):
+    out, update, _r = _quick(tmp_path, "/update-review accept F1", author_card=tmp_path / "none.md")
+    assert out["mode"] == "model" and update is None

@@ -1103,12 +1103,42 @@ jobs:
       # 🔍 Verification trail drifts from the artifact. safe_main() surfaces
       # failures *inside* the artifact (`errors: [...]`), so the `||` stub is
       # reserved for can't-even-start failures.
+      # Optional read-only token for a private implementing change (a docs PR
+      # citing a private pulumi/pulumi-service PR, which GITHUB_TOKEN 404s on
+      # and the review then can't check). Same-repo PRs only: this job runs
+      # scripts from the PR head, and a fork's head must never be handed a
+      # Pulumi credential. Only `keys` is exported, as a step output (never an
+      # env var), and only the verify step below reads it — as
+      # GH_TOKEN_IMPL_READ, which verify-claims.py uses for its own probe and
+      # gh_query calls against a repo the job's token 404s on, and nothing
+      # else. No other step, and not the main review model, sees it.
+      # continue-on-error: an unset secret, an ESC outage, or a trust policy
+      # that doesn't cover this job leaves the output empty, and the review
+      # runs exactly as it did without it.
+      - name: Fetch impl-read token (same-repo PRs only)
+        if: >-
+          steps.pr-context.outputs.skip_reason == '' &&
+          steps.pr-context.outputs.head_repo == github.repository
+        id: impl-read
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+        with:
+          keys: PULUMI_SERVICE_READ_TOKEN
+        env:
+          ESC_ACTION_OIDC_AUTH: true
+          ESC_ACTION_OIDC_ORGANIZATION: pulumi
+          ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+          ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+          ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+
       - name: Verify candidate claims → .verified-claims.json
         if: steps.pr-context.outputs.skip_reason == ''
         id: verify-claims
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Empty unless the step above ran and found the secret; see there.
+          GH_TOKEN_IMPL_READ: ${{ steps.impl-read.outputs.PULUMI_SERVICE_READ_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |

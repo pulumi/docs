@@ -755,17 +755,11 @@ def ownership(pr: dict, ctx: dict) -> dict:
     # on the Sentinel being the merge gate, which it is not.
     if link_only_diff(pr.get("files") or []):
         reasons.append("shape:link-only")
-        # The routing config decides who may approve a link sweep. With
-        # `link_only.approval: any-team` the Sentinel takes any review team,
-        # so the row is genuinely anyone's and the board says so. Where the
-        # lane still owns it, `link_fixes: mine` is the local override that
-        # takes it anyway.
-        if (config.link_only or {}).get("approval") == "any-team":
-            reasons.append("gate:any-team")
-            is_mine = True
-        elif cfg.link_fixes == "mine" and not is_mine:
-            is_mine = True
-            reasons.append("link-fixes:mine")
+        # A link sweep needs a careful reader, not a particular lane's one,
+        # and branch protection takes anyone's approval, so the row is
+        # anyone's.
+        reasons.append("gate:any-team")
+        is_mine = True
     approver = ctx.get("approver")
     author_self = bool(approver) and norm_login((pr.get("author") or {}).get("login")) == norm_login(approver)
     if author_self:
@@ -998,7 +992,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
                           "This branch conflicts with master and can't be updated from here; please merge master into it.")
     checks = pr.get("checks") or {}
     failing = list(checks.get("failing") or [])
-    real_failures = [f for f in failing if (f or "").strip().lower() != SENTINEL_CHECK]
+    real_failures = [f for f in failing if not act._is_sentinel({"name": f or ""})]
     gates = [g for g in ((pr.get("sentinel") or {}).get("gates") or []) if g.get("state") != "skip"]
     if gates:
         # The Sentinel concludes failure until an approval exists, so "failing"

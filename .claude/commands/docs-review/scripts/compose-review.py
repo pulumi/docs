@@ -1505,6 +1505,10 @@ def _stub_bullet(v: dict, todo: str) -> dict:
             stub["unverifiable_kind"] = "outage"
         else:
             stub["unverifiable_kind"] = "ordinary"
+        # What the verifier said stopped it, for split_private_source_checks:
+        # it is told to name an unreadable implementing change here when only
+        # that change could settle the claim.
+        stub["evidence_text"] = f"{v.get('evidence') or ''}\n{v.get('source') or ''}"
     return stub
 
 
@@ -2119,7 +2123,9 @@ def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]
 
     `unverifiable` → ❓ (only the author can source or soften their own claim —
     a turn-cap unverifiable still ends the same way: the author supplies the
-    source). Everything else the composer stubs at low confidence
+    source). compose_v3 then lifts out the one exception,
+    split_private_source_checks: unverifiable only because the implementing
+    change is private, which a reviewer settles and the author can't. Everything else the composer stubs at low confidence
     (framing-drift, weakly-verified) → ⚠️: there might be an issue, and that
     judgment belongs to the reviewer, not the author. The model may PROMOTE
     (⚠️ → ❓ → 🚨) with a stated reason, never demote — bucket-split-faithful
@@ -2158,6 +2164,72 @@ def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]
 GROUP_MIN_MEMBERS = 3
 GROUP_MEMBER_TRUNC = 80
 GROUP_FILE = "(multiple files)"
+
+
+def refs_named_in(text: str, refs: list[str]) -> list[str]:
+    """The refs in `refs` that `text` names, by the ref itself or by its
+    repository (`pulumi/<repo>`), case-insensitively, in `refs` order."""
+    low = (text or "").lower()
+    out: list[str] = []
+    for r in refs:
+        repo = _ref_repo(r)
+        if r.lower() in low or (repo and re.search(re.escape(repo) + r"(?![\w.-])", low)):
+            out.append(r)
+    return out
+
+
+def _ref_repo(ref: str) -> str:
+    m = re.search(r"\b(?:github\.com/)?(pulumi/[\w.-]+?)(?:#\d+|/|$)", ref, re.I)
+    return m.group(1).lower() if m else ""
+
+
+def split_private_source_checks(stubs: list[dict], unreadable_refs: list[str]
+                                ) -> tuple[list[dict], list[dict]]:
+    """(checks, kept): the ❓ stubs that are unverifiable ONLY because the
+    implementing change they rest on is private to this review's token.
+
+    The author can't do anything about that, and asking them blocked a
+    one-line changelog PR on a question it had no way to answer
+    (pulumi/docs#22397: one claim, the cited pulumi/pulumi-service PR 404ed,
+    the ❓ counted as undecided at Sentinel G2). A reviewer who can read the
+    private change can settle it, so these go to the brief's ⚠️ list as one
+    row naming the ref. Narrower than the ❓ group below: an `ordinary`
+    pass1 unverifiable whose own evidence or source names an unreadable ref
+    or its repository — the verifier is told to name it exactly when only
+    that change could settle the claim. Everything else keeps its ❓."""
+    if not unreadable_refs:
+        return [], list(stubs)
+    checks = [s for s in stubs
+              if s.get("unverifiable_kind") == "ordinary" and s.get("route") == "pass1"
+              and refs_named_in(s.get("evidence_text") or "", unreadable_refs)]
+    picked = {id(s) for s in checks}
+    return checks, [s for s in stubs if id(s) not in picked]
+
+
+def render_private_check(checks: list[dict], unreadable_refs: list[str]
+                         ) -> tuple[dict, str]:
+    """(stub, rendered body) for the ⚠️ row the private-source checks share.
+
+    One claim keeps its own Where and quote; several share a `—` Where and
+    list as `members` on the evidence page, so the brief stays one line
+    however many claims the private change explains."""
+    named = [r for r in unreadable_refs
+             if any(r in refs_named_in(s.get("evidence_text") or "", unreadable_refs) for s in checks)]
+    refs = named or list(unreadable_refs)
+    noun = "change" if len(refs) == 1 else "changes"
+    if len(checks) == 1:
+        s = checks[0]
+        text = s.get("text") or ""
+        excerpt = f"*{quote(trunc(text, AUTHOR_CELL_TRUNC))}* " if text else ""
+        body = (f"{excerpt}— rests on {_refs_phrase(refs)}, which this review can't read "
+                f"(private); check it against that {noun} before approving — verdict: unverifiable")
+        stub = dict(s)
+        return stub, body
+    body = (f"{len(checks)} claims about Pulumi's own behavior rest on {_refs_phrase(refs)}, which "
+            f"this review can't read (private); check them against that {noun} before approving "
+            "(each is listed on the evidence page) — verdict: unverifiable")
+    stub = {"file": GROUP_FILE, "ref": "", "text": body, "origin": "verdict:unverifiable"}
+    return stub, body
 
 
 def split_private_source_unverifiable(stubs: list[dict], unreadable_refs: list[str]
@@ -2682,6 +2754,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     lowconf_kept, preexisting_stubs = split_untouched_unverifiable(
         prep["lowconf_stubs"], prep["changed_lines"])
     author_answer_stubs, reviewer_check_stubs = split_v3_buckets(lowconf_kept)
+    private_checks, author_answer_stubs = split_private_source_checks(
+        author_answer_stubs, prep["impl_refs_unreadable"])
     group_members, author_answer_stubs = split_private_source_unverifiable(
         author_answer_stubs, prep["impl_refs_unreadable"])
 
@@ -2770,6 +2844,17 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         question_lines.append(render_finding_line(fid, _v3_adapt_todo(author_cell_bullet(s)), link_base=link_base, edit_base=edit_base))
 
     check_lines: list[str] = []
+    if private_checks:
+        pstub, pbody = render_private_check(private_checks, prep["impl_refs_unreadable"])
+        fid, rec = _assign(pstub, "reviewer-check", pbody)
+        rec["text"] = pbody
+        if len(private_checks) > 1:
+            rec["members"] = group_member_records(private_checks)
+            check_lines.append(render_finding_row(fid, body=pbody))
+        else:
+            check_lines.append(render_finding_row(
+                fid, ref=pstub.get("ref") or "", file=pstub.get("file") or "",
+                body=pbody, link_base=link_base))
     for s in reviewer_check_stubs:
         fid, _ = _assign(s, "reviewer-check", s["bullet"])
         check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base))

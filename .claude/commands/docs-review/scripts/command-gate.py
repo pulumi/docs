@@ -32,7 +32,8 @@ script is the precise second check the workflows run before spending
 anything: it removes fenced code blocks, inline code spans, and blockquoted
 lines, then looks for the command at the start of a line in what is left.
 
-Three entry points, all side-effect free apart from `legacy --out`:
+Four entry points, all side-effect free apart from the files `legacy --out`
+and `quick` write:
 
   check    — one body (from an env var, never argv): does it run
              `/<command>`? Prints `fire=<bool>` and `reason=<text>` in
@@ -45,6 +46,17 @@ Three entry points, all side-effect free apart from `legacy --out`:
   legacy   — does a body use a retired `@claude … #<command>` shape (and no
              live slash command)? Prints `reply=<bool>` and `command=<name>`,
              and writes the redirect reply to `--out`.
+  quick    — the two `/update-review` shapes the update lane answers without
+             a model (claude-update.yml, after its write-access check):
+               `/update-review accept F<n>[ F<n>…]` as the comment's first
+               line records each named open finding as `accepted` by the
+               commenter, through the lane's normal publish chain (it writes
+               the `.review-update.json` the model would have);
+               `/update-review approve` alone gets a one-line reply saying
+               that isn't how a PR is approved, and changes nothing.
+             Anything else, including a near miss, is `mode=model`: the
+             existing model path, unchanged. Prints `mode=model|accept|reply`,
+             `applied=<ids>`, and `reply=<bool>`.
 
 Exit status is 0 for every decision; only a usage error is non-zero, so a
 workflow step can't be knocked over by the input it is judging.
@@ -251,6 +263,188 @@ def render_redirect(body: str, command: str, author: str, docs_url: str) -> str:
     return "\n".join(lines) + FOOTER
 
 
+# ---- quick: the deterministic /update-review shapes ------------------------
+#
+# pulumi/docs#22397: an author typed `/update-review Approve` believing it
+# approved the PR. It reached the model as free text, which interpreted it
+# as an accept — about five minutes a round trip, and only because the model
+# guessed right. Two shapes are now answered by code, and only these two, in
+# exactly this form: anything looser is a sentence, and sentences stay the
+# model's to read. No synonyms (lgtm, ok, approve-as-accept): a word that
+# means "accept" to one author means "approve" to the next.
+
+QUICK_REPLY_MARKER = "<!-- REVIEW_QUICK_REPLY -->"
+_ACCEPT_LINE_RE = re.compile(
+    r"^[ \t]{0,3}/update-review[ \t]+accept((?:[ \t]+F\d+)+)[ \t]*$", re.I)
+_APPROVE_RE = re.compile(r"^/update-review[ \t]+approve[.!?]*$", re.I)
+ACCEPT_REASON_MAX = 300
+ACCEPT_NO_REASON = "No reason given."
+
+
+def parse_quick(body: str) -> tuple[str, list[str], str] | None:
+    """`("accept", ids, reason)`, `("approve", [], "")`, or None.
+
+    accept: the first non-blank line is exactly `/update-review accept`
+    followed by one or more `F<n>` ids (deduplicated, upper-cased, in order)
+    and nothing else. Whatever the comment says below that line is the
+    acceptance reason, recorded verbatim on one line.
+    approve: the whole comment is `/update-review approve`, optionally with
+    trailing punctuation."""
+    text = _normalize(body).strip()
+    if not text:
+        return None
+    if _APPROVE_RE.match(text):
+        return "approve", [], ""
+    first, _, rest = text.partition("\n")
+    m = _ACCEPT_LINE_RE.match(first)
+    if not m:
+        return None
+    ids: list[str] = []
+    for tok in m.group(1).split():
+        fid = tok.upper()
+        if fid not in ids:
+            ids.append(fid)
+    reason = " ".join(rest.split())
+    if len(reason) > ACCEPT_REASON_MAX:
+        reason = reason[:ACCEPT_REASON_MAX - 1].rstrip() + "…"
+    return "accept", ids, reason
+
+
+def _ids_phrase(ids: list[str]) -> str:
+    return ", ".join(ids)
+
+
+def plan_accept(ids: list[str], card: dict) -> tuple[list[str], list[tuple[str, str]]]:
+    """(applied, skipped) for an accept against the live card.
+
+    `card` is `{"open": [...], "answered": set, "known": set}`: `open` the
+    author-card 🚨/❓ ids with no REVIEW_STATE disposition, in card order;
+    `known` every id on either card (✅ Resolved included). An id not open is
+    skipped, with why: already answered (a disposition, ✅ Resolved, or
+    moved to the reviewer's ⚠️ list), or not on this review at all."""
+    applied: list[str] = []
+    skipped: list[tuple[str, str]] = []
+    for fid in ids:
+        if fid in card["open"]:
+            applied.append(fid)
+        elif fid in card["known"]:
+            skipped.append((fid, "already answered or not waiting on the author"))
+        else:
+            skipped.append((fid, "no such finding on this review"))
+    return applied, skipped
+
+
+def accept_update(applied: list[str], actor: str, reason: str) -> dict:
+    """The `.review-update.json` an accept writes: one `accept` per id, the
+    shape the v3 adjudication model writes, so apply-update.py records it
+    exactly as it would the model's (REVIEW_STATE `accepted`, actor = the
+    commenter, the row moved to the reviewer's ⚠️ list with a ✋ marker)."""
+    note = reason or ACCEPT_NO_REASON
+    return {
+        "schema": 1,
+        "case": "dispute",
+        "history_summary": (f"{actor or 'the author'} accepted {_ids_phrase(applied)} as-is "
+                            "(/update-review accept)")[:120],
+        "findings": [{"id": fid, "action": "accept", "reason": note} for fid in applied],
+    }
+
+
+def render_accept_reply(applied: list[str], skipped: list[tuple[str, str]],
+                        open_ids: list[str], author: str) -> str:
+    who = f"@{author} — " if author else ""
+    nope = "; ".join(f"{fid} ({why})" for fid, why in skipped)
+    if applied:
+        line = f"🤖 {who}accepted {_ids_phrase(applied)}. Didn't apply: {nope}."
+    else:
+        left = f" Open now: {_ids_phrase(open_ids)}." if open_ids else " Nothing is waiting on you."
+        line = f"🤖 {who}nothing recorded. Didn't apply: {nope}.{left}"
+    return f"{QUICK_REPLY_MARKER}\n{line}"
+
+
+def render_approve_reply(open_ids: list[str] | None, author: str) -> str:
+    who = f"@{author} — " if author else ""
+    lines = [
+        QUICK_REPLY_MARKER,
+        f"🤖 {who}`/update-review approve` doesn't approve a PR, so nothing ran. Approval is a "
+        "GitHub review (**Files changed → Review changes → Approve**) from someone other than "
+        "the PR's author.",
+    ]
+    if open_ids:
+        lines.append(f"To accept a finding as-is instead: `/update-review accept {open_ids[0]}` "
+                     f"(open now: {_ids_phrase(open_ids)}).")
+    elif open_ids is None:
+        lines.append("To accept a finding as-is instead: `/update-review accept F<n>`.")
+    else:
+        lines.append("Nothing on the review is waiting on the author.")
+    return "\n".join(lines)
+
+
+def read_card(author_path: str | None, brief_path: str | None) -> dict | None:
+    """The live v3 cards as `plan_accept` reads them, or None when there is
+    no v3 author card to read (a v2 review, no review, an unreadable card).
+
+    Parsing goes through the update lane's own walkers (apply-update.py and
+    review_state.py), imported here and only here: the gate job's sparse
+    checkout carries this file alone and never calls `quick`."""
+    if not author_path or not os.path.isfile(author_path):
+        return None
+    try:
+        import importlib.util
+        from pathlib import Path
+        here = Path(__file__).resolve().parent
+
+        def _load(name: str, path: Path):
+            spec = importlib.util.spec_from_file_location(name, path)
+            mod = importlib.util.module_from_spec(spec)
+            sys.modules.setdefault(name, mod)
+            spec.loader.exec_module(mod)
+            return mod
+
+        au = _load("apply_update", here / "apply-update.py")
+        author = Path(author_path).read_text(encoding="utf-8")
+        brief = (Path(brief_path).read_text(encoding="utf-8")
+                 if brief_path and os.path.isfile(brief_path) else "")
+        state = au.review_state.parse_state(author)
+        if state is None:
+            return None
+        rows = au._collect_rows(author, brief)
+        resolved = au._collect_resolved_rows(author)
+    except Exception as exc:  # noqa: BLE001 — any doubt goes to the model path
+        print(f"::warning::command gate: couldn't read the review cards ({exc}); "
+              "leaving the request to the model", file=sys.stderr)
+        return None
+    answered = set((state.get("findings") or {}).keys())
+    open_ids = sorted(
+        (fid for fid, r in rows.items()
+         if r["doc"] == "author" and r["bucket"] in ("outstanding", "author-answer")
+         and fid not in answered),
+        key=lambda f: int(f[1:]))
+    return {"open": open_ids, "answered": answered,
+            "known": set(rows) | set(resolved) | answered}
+
+
+def decide_quick(body: str, card: dict | None, actor: str) -> dict:
+    """Everything `quick` emits, as data: `mode`, `applied`, `update` (the
+    patch, accept only), and `reply` (text or "")."""
+    parsed = parse_quick(body)
+    if parsed is None:
+        return {"mode": "model", "applied": [], "update": None, "reply": ""}
+    kind, ids, reason = parsed
+    if kind == "approve":
+        return {"mode": "reply", "applied": [], "update": None,
+                "reply": render_approve_reply(card["open"] if card else None, actor)}
+    if card is None:
+        # No v3 card to record against (a v2 review, or none yet): the
+        # request goes to the model path as it always has.
+        return {"mode": "model", "applied": [], "update": None, "reply": ""}
+    applied, skipped = plan_accept(ids, card)
+    reply = render_accept_reply(applied, skipped, card["open"], actor) if skipped else ""
+    if not applied:
+        return {"mode": "reply", "applied": [], "update": None, "reply": reply}
+    return {"mode": "accept", "applied": applied,
+            "update": accept_update(applied, actor, reason), "reply": reply}
+
+
 def _parse_ts(value: str | None) -> datetime | None:
     if not value:
         return None
@@ -337,6 +531,24 @@ def _cmd_legacy(args: argparse.Namespace) -> int:
     with open(args.out, "w", encoding="utf-8") as fh:
         fh.write(render_redirect(body, command, author, args.docs_url or ""))
     _emit({"reply": True, "command": command})
+    return 0
+
+
+def _cmd_quick(args: argparse.Namespace) -> int:
+    body = os.environ.get(args.body_env, "")
+    actor = os.environ.get(args.author_env, "") if args.author_env else ""
+    # The card is read only for a body that parses: a model-path comment
+    # never pays for (or risks) the import.
+    card = read_card(args.author_card, args.brief_card) if parse_quick(body) else None
+    out = decide_quick(body, card, actor)
+    if out["update"] is not None:
+        with open(args.update_out, "w", encoding="utf-8") as fh:
+            json.dump(out["update"], fh, indent=2)
+            fh.write("\n")
+    if out["reply"]:
+        with open(args.reply_out, "w", encoding="utf-8") as fh:
+            fh.write(out["reply"] + "\n")
+    _emit({"mode": out["mode"], "applied": " ".join(out["applied"]), "reply": bool(out["reply"])})
     return 0
 
 
@@ -517,6 +729,38 @@ def _self_test() -> int:
                            U, since, N)[0])
     check("no items", not pending_explicit([], [inflight], U, since)[0])
 
+    # -- quick -------------------------------------------------------------
+    check("accept parses", parse_quick("/update-review accept F1 F3") == ("accept", ["F1", "F3"], ""))
+    check("accept verb is case-insensitive", parse_quick("/Update-Review ACCEPT f2")[1] == ["F2"])
+    check("accept ids dedupe", parse_quick("/update-review accept F2 F2 F1")[1] == ["F2", "F1"])
+    check("accept reason is the rest of the comment",
+          parse_quick("/update-review accept F1\n\nhouse style,\n on purpose")[2] == "house style, on purpose")
+    check("accept needs an id", parse_quick("/update-review accept") is None)
+    check("accept with commas is not the grammar", parse_quick("/update-review accept F1, F3") is None)
+    check("accept with prose on its line is not the grammar",
+          parse_quick("/update-review accept F1 because reasons") is None)
+    check("a synonym is not the grammar", parse_quick("/update-review lgtm F1") is None)
+    check("approve parses", parse_quick("/update-review Approve") == ("approve", [], ""))
+    check("approve takes trailing punctuation", parse_quick("/update-review approve!\r\n") is not None)
+    check("approve plus text is the model's", parse_quick("/update-review approve, F1 is fine") is None)
+    check("approve on a later line is the model's", parse_quick("thanks\n/update-review approve") is None)
+    check("a plain refresh is the model's", parse_quick("/update-review") is None)
+    card = {"open": ["F1", "F2"], "answered": {"F3"}, "known": {"F1", "F2", "F3", "F4"}}
+    q = decide_quick("/update-review accept F1 F3 F9", card, "alice")
+    check("accept applies the open ids", q["mode"] == "accept" and q["applied"] == ["F1"])
+    check("accept writes one accept per id",
+          [(e["id"], e["action"]) for e in q["update"]["findings"]] == [("F1", "accept")])
+    check("accept reply names what didn't apply", "F3 (already" in q["reply"] and "F9 (no such" in q["reply"])
+    check("a clean accept posts nothing", decide_quick("/update-review accept F2", card, "a")["reply"] == "")
+    none = decide_quick("/update-review accept F4", card, "alice")
+    check("nothing to apply is a reply, no publish", none["mode"] == "reply" and none["update"] is None)
+    check("accept without a v3 card is the model's", decide_quick("/update-review accept F1", None, "a")["mode"] == "model")
+    ap = decide_quick("/update-review approve", card, "alice")
+    check("approve is a reply naming the open ids", ap["mode"] == "reply" and "open now: F1, F2" in ap["reply"])
+    check("approve reply is three lines at most", len(ap["reply"].splitlines()) <= 3)
+    check("approve reply's commands can't fire", not commands_in(ap["reply"]))
+    check("accept reply's commands can't fire", not commands_in(q["reply"]))
+
     print("command-gate self-test:", "PASS" if failures == 0 else f"{failures} FAILED")
     return 1 if failures else 0
 
@@ -545,6 +789,14 @@ def main(argv: list[str] | None = None) -> int:
     leg.add_argument("--docs-url", default=None, help="link to the review-command reference")
     leg.add_argument("--out", required=True, help="file the redirect reply is written to")
 
+    qk = sub.add_parser("quick", help="answer `/update-review accept F<n>` / `approve` without a model")
+    qk.add_argument("--body-env", required=True, help="env var holding the body")
+    qk.add_argument("--author-env", default=None, help="env var holding the commenter's login")
+    qk.add_argument("--author-card", default=None, help="the live v3 author card (absent: no v3 review)")
+    qk.add_argument("--brief-card", default=None, help="the live v3 reviewer brief")
+    qk.add_argument("--update-out", required=True, help="where an accept writes .review-update.json")
+    qk.add_argument("--reply-out", required=True, help="where a reply's text is written")
+
     args = parser.parse_args(argv)
     if args.self_test:
         return _self_test()
@@ -554,6 +806,8 @@ def main(argv: list[str] | None = None) -> int:
         return _cmd_pending(args)
     if args.cmd == "legacy":
         return _cmd_legacy(args)
+    if args.cmd == "quick":
+        return _cmd_quick(args)
     parser.print_help()
     return 2
 

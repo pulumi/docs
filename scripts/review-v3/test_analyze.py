@@ -683,20 +683,13 @@ def test_link_only_diff_masks_links_and_nothing_else():
     assert not analyze.link_only_diff([])
 
 
-def test_link_only_blog_sweep_is_mine_by_default_and_routes_when_configured():
+def test_link_only_blog_sweep_is_mine():
     blog = dict(title="Fix stale links", labels=["review:no-blockers", "domain:blog"],
                 files=[_file("content/blog/p/index.md", [LINK_PLUS], [LINK_MINUS])])
-    lane = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "link_only": {"approval": "lane"}})[0]
     p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"])), 5)
     assert p["verdict"] == "stamp" and p["is_mine"] is True
-    # the routing config carries any-team, so the row is everyone's on its own
+    # branch protection takes anyone's approval, so the row is everyone's
     assert "shape:link-only" in p["reasons"] and "gate:any-team" in p["reasons"] and not any(r.startswith("route:") for r in p["reasons"])
-    # under the lane policy the local setting is what takes it, and dropping
-    # that setting routes it to the lane owner
-    p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"]), config=lane), 5)
-    assert p["verdict"] == "stamp" and "link-fixes:mine" in p["reasons"]
-    p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"], link_fixes="route"), config=lane), 5)
-    assert p["verdict"] == "route" and "shape:link-only" in p["reasons"] and "link-fixes:mine" not in p["reasons"]
     # a prose edit in the same sweep keeps the lane owner
     p = row(run([stampable(6, **{**blog, "files": [_file("content/blog/p/index.md", [LINK_PLUS, "new sentence"], [LINK_MINUS, "old sentence"])]})], cfg=cfg(me=["docs"])), 6)
     assert p["verdict"] == "route" and "shape:link-only" not in p["reasons"]
@@ -741,11 +734,6 @@ def test_a_link_only_sweep_is_any_approver_s_because_any_team_may_approve():
     assert "shape:link-only" in p["reasons"] and "gate:any-team" in p["reasons"]
     assert p["is_mine"] is True and "link-fixes:mine" not in p["reasons"]
     assert not any(r.startswith("route:") for r in p["reasons"])
-    # with the lane policy instead, it is the local link_fixes setting again
-    lane = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "link_only": {"approval": "lane"}})[0]
-    p = row(run([stampable(2, labels=["review:no-blockers", "domain:blog"], files=[sweep])],
-                cfg=cfg(me=["docs"]), config=lane), 2)
-    assert "gate:any-team" not in p["reasons"] and "link-fixes:mine" in p["reasons"]
 
 
 def test_a_mechanical_change_is_still_routed_to_its_lane():

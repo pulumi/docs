@@ -23,6 +23,14 @@ A commit status belongs to no suite, so nothing can supersede it:
     back out of it, and the run's job summary carries the full gate table
     the check-run's output used to.
 
+Beside it, one informational status per gate (`Sentinel / review`,
+`Sentinel / findings`, ...), so the merge box says which gate is red and
+what it wants without anyone scrolling back to the status comment. Only
+`Sentinel` is required; the gate statuses come from `gate_statuses` in the
+verdict JSON. A `Sentinel / …` status already at the head that this verdict
+doesn't name is turned green, so a gate that stopped applying can't keep an
+old red.
+
 Transition: GitHub requires BOTH a check and a status that share a required
 name, so a check-run published before the switch would keep gating its head
 with whatever it last said. Until the head moves, each verdict is mirrored
@@ -53,6 +61,27 @@ def status_payload(verdict: dict, run_url: str) -> dict:
         desc = desc[:DESCRIPTION_MAX - 1] + "…"
     return {"state": status_state(verdict.get("conclusion")), "context": CHECK_NAME,
             "description": desc, "target_url": run_url}
+
+
+GATE_PREFIX = f"{CHECK_NAME} / "
+
+
+def gate_payloads(verdict: dict, run_url: str, existing: list[dict] = ()) -> list[dict]:
+    """The per-gate statuses to post: the verdict's own, plus a green one for
+    any `Sentinel / …` context already at the head that it no longer names."""
+    out = []
+    for g in verdict.get("gate_statuses") or []:
+        out.append({"state": g.get("state") or "failure", "context": g["context"],
+                    "description": (g.get("description") or "")[:DESCRIPTION_MAX],
+                    "target_url": g.get("target_url") or run_url})
+    named = {g["context"] for g in out}
+    for st in existing:
+        ctx = st.get("context") or ""
+        if ctx.startswith(GATE_PREFIX) and ctx not in named:
+            out.append({"state": "success", "context": ctx,
+                        "description": "doesn't apply at this commit", "target_url": run_url})
+            named.add(ctx)
+    return out
 
 
 def legacy_check_runs(check_runs: list[dict]) -> list[dict]:
@@ -96,6 +125,19 @@ def main(argv: list[str] | None = None) -> int:
               "no verdict to publish. Re-run this job.")
         return 1
     payload = status_payload(verdict, a.run_url)
+    # Gate statuses first, so the required one is the last to change: a
+    # merge box that turns green with a red gate row under it would be
+    # confusing for the few seconds between the two writes.
+    try:
+        existing = _gh(["api", f"repos/{a.repo}/commits/{head}/statuses?per_page=100"]) or []
+    except Exception as exc:
+        print(f"::warning::Could not list existing statuses ({exc}); stale gate rows may linger.")
+        existing = []
+    for g in gate_payloads(verdict, a.run_url, existing):
+        try:
+            _gh(["api", "--method", "POST", f"repos/{a.repo}/statuses/{head}", "--input", "-"], g)
+        except Exception as exc:
+            print(f"::warning::Could not publish {g['context']} ({exc}); it is informational only.")
     _gh(["api", "--method", "POST", f"repos/{a.repo}/statuses/{head}", "--input", "-"], payload)
     print(f"published: Sentinel {payload['state']} — {payload['description']}")
 
@@ -143,6 +185,16 @@ def _self_test() -> int:
     assert mirror_payload(v("neutral", "Draft — not evaluated")) == {
         "status": "completed", "conclusion": "neutral",
         "output": {"title": "Draft — not evaluated", "summary": "s"}}
+    gv = {"gate_statuses": [{"context": "Sentinel / findings", "state": "failure",
+                             "description": "1 open finding", "target_url": "https://card"},
+                            {"context": "Sentinel / review", "state": "success",
+                             "description": "ok", "target_url": None}]}
+    gp = gate_payloads(gv, url, [{"context": "Sentinel / oversized"}, {"context": "Sentinel"},
+                                 {"context": "Sentinel / findings"}, {"context": "Update Changelog"}])
+    assert [g["context"] for g in gp] == ["Sentinel / findings", "Sentinel / review", "Sentinel / oversized"], gp
+    assert gp[0]["target_url"] == "https://card" and gp[1]["target_url"] == url
+    assert gp[2]["state"] == "success"
+    assert gate_payloads({}, url) == []
     print("all publish_verdict self-tests passed")
     return 0
 

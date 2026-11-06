@@ -1,20 +1,13 @@
 #!/usr/bin/env python3
 """The Sentinel — deterministic merge-gate evaluator for the v3 review workflow.
 
-One blocking commit status answers "is this PR mergeable?" from five gates:
+One blocking commit status answers "is this PR mergeable?" from four gates:
 
   G1 review-ran         a current review exists at head SHA (or none is
                         required: mechanical PRs, fork PRs, and the PRs
                         the review lane skips by policy — see below)
   G2 findings-answered  every 🚨/❓ finding on the author card carries a
                         REVIEW_STATE disposition (or is checked off)
-  G3 right-approver     an approver who can clear the lane: under
-                        `approval.scope: any-human`, any human with write
-                        access; under `any-team`, a member of any routing
-                        team; under `lane`, a member of every matrix-required
-                        team (or a repo admin when `approval.admins_satisfy`
-                        is on). A bot clears it only on an automated lane
-                        `bot_approvers` names (approver + author + label)
   G4 deploy-evidence    a change on `staging_evidence.paths` carries a green
                         staging/pulumi-test-io commit status at the current
                         head SHA, posted by a trusted writer. That list is
@@ -26,19 +19,23 @@ One blocking commit status answers "is this PR mergeable?" from five gates:
   G5 oversized-ack      review:oversized PRs replace G1/G2 with an explicit
                         `/oversized-ack` in the approving review body
 
+There is no G3 any more. It was the approver gate (who may approve, which
+teams, which bots), and it duplicated GitHub branch protection's
+required-review rule while disagreeing with it at the edges: it threw away
+an approval on every push, rebases included, and needed an org-scoped token
+to read team membership. Branch protection decides who can approve and
+merge now, Eon included. The numbers G4 and G5 are kept so status contexts,
+telemetry and old comments still line up.
+
 One config-driven shortcut sits around the gates
 (`.github/review-routing.yml`): `not_governed` lanes (Dependabot, the
 generated-docs regens) conclude success with no gates evaluated. Those are
 safe to exempt only because something else already posts a real approval and
 arms auto-merge for them — see that file's NOT GOVERNED section.
 
-There used to be a second one, the `auto_approve` clean-brief rule, which
-let a listed bot author pass G3 with no human approval at all. It was
-deleted: nothing consumed the `auto_approved` flag it set, and GitHub's
-required-review rule does not read this config, so the rule only ever made
-G3 report a pass the merge box disagreed with. `mechanical` lost the same
-power at the same time — it now skips the model review, never the approver.
-`review:prose-flagged` still demotes a mechanical PR to substantive.
+`mechanical` skips the model review, never the approval branch protection
+asks for. `review:prose-flagged` still demotes a mechanical PR to
+substantive.
 
 Everything here is a pure function of GitHub API state plus the base-ref
 routing config: NO model, NO AWS, and — because the workflow runs on
@@ -47,7 +44,7 @@ PR code, ever (test_sentinel.py asserts the workflow keeps that invariant).
 
 Conclusion mapping is where merge gates silently rot, so it is explicit:
 `success` only when every gate is ok; any red ⇒ `failure`; any gate that
-ERRORED (a team-membership lookup failed, the state block is corrupt) ⇒
+ERRORED (a permission lookup failed, the state block is corrupt) ⇒
 `action_required` — never `neutral`/`skipped`, which GitHub counts as
 PASSING for a required check. `neutral` is reserved for drafts and for
 report-only mode, where the real verdict rides inside the summary. Report-only
@@ -97,16 +94,17 @@ a clean trivial fix, sat red):
     the two together.
   - `review:oversized`, which G5 owns.
 
-Every one of them still needs G3's human approver: a skipped review moves
-the reading to the approver, it never removes it. A review card at any
+Every one of them still needs the approval branch protection asks for: a
+skipped review moves the reading to the approver, it never removes it. A review card at any
 head keeps a PR on the review track instead, because a stale card with an
 open finding must not pass on a skip label.
 
 I/O lives behind the `Gh` wrapper (subprocess `gh api`) so tests
-substitute a stub. Team-membership
-reads need an org-scoped token (the default GITHUB_TOKEN cannot read team
-membership): the workflow passes PULUMI_BOT_TOKEN as $GH_TOKEN_TEAM_READ,
-used for that one endpoint only.
+substitute a stub. Two reads need an org-scoped token (the default
+GITHUB_TOKEN can do neither): the waiver's team membership (`review:waived`)
+and, on an oversized PR, the acking approver's repo permission (G5). The
+workflow passes PULUMI_BOT_TOKEN as $GH_TOKEN_TEAM_READ, used for those
+endpoints only.
 """
 
 from __future__ import annotations
@@ -224,9 +222,10 @@ BREAK_GLASS = (
 )
 
 
-# G3's error rows. When the org-scoped token is what failed, the waive is
-# refused by the same lookup, so the one way through is an admin's merge.
-_G3_TOKEN_HINT = (
+# Error rows for the lookups that need the org-scoped token (G5's permission
+# read). When that token is what failed, the waive is refused by the same
+# lookup, so the one way through is an admin's merge.
+_TOKEN_HINT = (
     "If a re-run fails the same way, the org-scoped token (`PULUMI_BOT_TOKEN`, "
     "from ESC) is likely down; `review:waived` can't be verified without it "
     "either, so a repo admin merging past the check is the way through. "
@@ -235,10 +234,10 @@ _G3_TOKEN_HINT = (
 
 def _waive_can_clear(g: Gate) -> bool:
     """Whether recommending the waive for this gate would work. Every red
-    gate, and every error but G3's: G3 errors when the org-scoped token
+    gate, and every error but G5's: G5 errors when the org-scoped token
     can't read permissions, and the waive's own authorization reads them
     with the same token, so offering it there sends people in a circle."""
-    return g.status == "red" or (g.status == "error" and not g.name.startswith("G3"))
+    return g.status == "red" or (g.status == "error" and not g.name.startswith("G5"))
 
 
 # The merge box shows the status description and nothing else, so it has to
@@ -257,8 +256,6 @@ def _waiting_on(g: Gate, n_blocking: int) -> str:
     if gate == "G2":
         n = n_blocking or "open"
         return f"answers to {n} finding{'' if n_blocking == 1 else 's'} (/update-review)"
-    if gate == "G3":
-        return "an approval of the latest commit"
     if gate == "G4":
         return "a staging deploy"
     if gate == "G5":
@@ -266,7 +263,7 @@ def _waiting_on(g: Gate, n_blocking: int) -> str:
     return g.name
 
 
-_PLAIN_GATE = {"G1": "the review", "G2": "the review's answers", "G3": "the approval",
+_PLAIN_GATE = {"G1": "the review", "G2": "the review's answers",
                "G4": "the staging deploy", "G5": "the oversized ack"}
 
 
@@ -274,6 +271,60 @@ def _plain_join(items: list[str]) -> str:
     return " and ".join([", ".join(items[:-1]), items[-1]]) if len(items) > 1 else (items or [""])[0]
 
 CHECK_NAME = "Sentinel"
+
+# One commit status per gate, beside the required `Sentinel` status, so the
+# merge box itself says which gate is red and what it wants -- the status
+# comment is usually scrolled out of sight, and "Waiting on a and b" in one
+# description ran out of room. Only `Sentinel` is required by the ruleset;
+# these are informational. Statuses, not check-runs, for the reason
+# publish_verdict.py gives (a check-run can land in a superseded suite).
+GATE_CONTEXTS = {
+    "G1": "Sentinel / review",
+    "G2": "Sentinel / findings",
+    "G4": "Sentinel / staging",
+    "G5": "Sentinel / oversized",
+}
+STATUS_DESCRIPTION_MAX = 140
+
+
+def _findings_short(ids: list[str]) -> str:
+    shown = " ".join(ids[:4]) + (" …" if len(ids) > 4 else "")
+    noun = "finding" if len(ids) == 1 else "findings"
+    return f"{len(ids)} open {noun}: fix and push, or /update-review accept {shown}"
+
+
+def _clip(text: str, limit: int = STATUS_DESCRIPTION_MAX) -> str:
+    text = " ".join((text or "").replace("`", "").replace("**", "").split())
+    return text if len(text) <= limit else text[:limit - 1] + "…"
+
+
+def gate_statuses(verdict: "Verdict") -> list[dict]:
+    """The per-gate commit statuses for this verdict. `target_url` None means
+    "link the workflow run" (publish_verdict.py fills it in). Skipped gates
+    still get one, so a gate that stopped applying at this head turns green
+    instead of keeping an old red."""
+    out: list[dict] = []
+    preview = bool(verdict.would_be)
+    for g in verdict.gates:
+        gid = g.name.split()[0]
+        context = GATE_CONTEXTS.get(gid)
+        if not context:
+            continue
+        if verdict.waived:
+            state, desc = "success", f"waived: {g.message}" if g.status != "ok" else g.message
+        elif g.status == "red":
+            state, desc = "failure", g.short or "Waiting on " + _waiting_on(g, len(verdict.blocking_ids))
+        elif g.status == "error":
+            state, desc = "error", g.short or "couldn't check -- re-run the Sentinel"
+        elif g.status == "skip":
+            state, desc = "success", f"n/a: {g.message}"
+        else:
+            state, desc = "success", g.message
+        if preview and state != "success":
+            state, desc = "success", f"Preview, not enforced: {desc}"
+        out.append({"context": context, "state": state, "description": _clip(desc),
+                    "target_url": verdict.links.get(gid) or None})
+    return out
 
 
 RETRY_SLEEP_S = 3
@@ -401,8 +452,7 @@ class Gh:
     def get_repo_permission(self, user: str) -> str:
         """The user's effective permission on the repo: admin/write/read/none.
 
-        Used by G3 for `approval.scope: any-human` (write or better) and the
-        `approval.admins_satisfy` rule (admin). The endpoint
+        Used by G5 (the acking approver needs write or better). The endpoint
         wants push access, which the default GITHUB_TOKEN does not have."""
         return self._org_scoped_lookup(
             f"repos/{self.repo}/collaborators/{user}/permission", ".permission",
@@ -473,6 +523,10 @@ class Gate:
     name: str
     status: str  # ok | red | error | skip
     message: str
+    # The gate's own commit-status description, which the merge box shows
+    # and nothing else does (140 characters). Empty: derived from
+    # `_waiting_on` on red, from `message` otherwise. See `gate_statuses`.
+    short: str = ""
 
 
 @dataclass
@@ -508,6 +562,9 @@ class Verdict:
     # comment kept inviting the person who had just applied the label to
     # apply it.
     waive_note: str = ""
+    # Gate id -> where that gate's commit status links (the author card for
+    # G1/G2). A gate with no entry links the workflow run.
+    links: dict = field(default_factory=dict)
 
     def to_json(self) -> dict:
         return {
@@ -517,6 +574,7 @@ class Verdict:
             "head_sha": self.head_sha,
             "would_be": self.would_be,
             "gates": [{"gate": g.name, "status": g.status, "message": g.message} for g in self.gates],
+            "gate_statuses": gate_statuses(self),
             "blocking_ids": self.blocking_ids,
             "mechanical": self.mechanical,
             "governed": self.governed,
@@ -918,13 +976,14 @@ def _staging_evidence(gh: Gh, head_sha: str) -> str | None:
 # ---- Pushes that change nothing the gates looked at ----------------------
 #
 # A merge of the base, or a commit that changes nothing (the "kick CI" empty
-# commit), moves the head without changing what the PR does. G1 has carried
-# its review across a base merge since restamp-base-merge.py; G3 and G4 asked
-# for the exact head, so clicking "Update branch" on an approved PR reset
-# the approval and spent another ~10-minute staging deploy (#22506), and an
-# empty commit reset the review and the deploy (#22524). GitHub itself keeps
-# the approval: branch protection here doesn't dismiss stale reviews. These
-# helpers are the one test all three gates use; collect.py and
+# commit), moves the head without changing what the PR does. So does a
+# rebase onto a newer base: the commits are new, the PR's own `+`/`-` lines
+# are not. G1 carries its review across these (restamp-base-merge.py) and G4
+# its staging deploy, because asking for the exact head made clicking
+# "Update branch" spend another ~10-minute deploy (#22506), an empty commit
+# reset the review and the deploy (#22524), and a rebase to clear a
+# changelog conflict reset the review on a one-line PR (#22397). These
+# helpers are the one test both gates use; collect.py and
 # restamp-base-merge.py read them from here.
 
 
@@ -953,6 +1012,21 @@ def changes_nothing_since(commits: list[dict], sha: str) -> bool:
     if idx is None or idx == len(shas) - 1:
         return False
     return all(_changes_nothing(commits[i], commits[i - 1]) for i in range(idx + 1, len(commits)))
+
+
+def history_allows_carry(commits: list[dict], sha: str) -> bool:
+    """Whether the PR's history since `sha` could have left its changes
+    alone: `sha` is in the commit list and only merges or no-op commits
+    follow it, or `sha` is gone from the list entirely, which is what a
+    rebase or other force-push leaves. Either way `same_diff` still has to
+    agree before anything carries; this is only the cheap pre-filter. A
+    commit list that couldn't be read (empty) answers no."""
+    if not commits or not sha:
+        return False
+    shas = [c.get("sha") or "" for c in commits]
+    if not any(s and (s.startswith(sha) or sha.startswith(s)) for s in shas):
+        return True
+    return changes_nothing_since(commits, sha)
 
 
 def changed_lines(files: list[dict]) -> dict[str, list[str]]:
@@ -990,12 +1064,12 @@ def patchless_file_changed(files_then: list[dict], files_now: list[dict]) -> boo
     return False
 
 
-_CARRY_CLAUSE = ("since then only base merges or no-op commits, and the PR's own "
+_CARRY_CLAUSE = ("since then only base merges, rebases or no-op commits, and the PR's own "
                  "changes are identical")
 
 
 class _Carry:
-    """Answers "is the PR at `sha` the PR at head?" for G3 and G4, reading
+    """Answers "is the PR at `sha` the PR at head?" for G4, reading
     the commit list once and only when a gate would otherwise be red. Any
     read that fails answers no, which leaves the gate as strict as before."""
 
@@ -1036,7 +1110,7 @@ class _Carry:
     def _unchanged_since(self, sha: str) -> bool:
         if not sha or not self.base or sha == self.head:
             return False
-        if not changes_nothing_since(self.commits(), sha):
+        if not history_allows_carry(self.commits(), sha):
             return False
         try:
             files_then = self.gh.compare_files(self.base, sha)
@@ -1168,14 +1242,31 @@ def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool
 WRITE_PERMISSIONS = frozenset({"admin", "maintain", "write"})
 
 
-def _stale_clause(stale_approvers: list[dict], head_sha: str) -> str:
-    """The " X approved an earlier commit" tail on a red G3 — the difference
-    between "nobody approved" and "your approval predates the push"."""
-    if not stale_approvers:
-        return ""
-    who = ", ".join(sorted(
-        f"`{(r.get('user') or {}).get('login')}`" for r in stale_approvers))
-    return f" {who} approved an earlier commit; re-approve at `{head_sha[:9]}`."
+def _oversized_ack(gh: Gh, config: routing.Config, reviews: list[dict],
+                   head_sha: str, author: str) -> tuple[str, str]:
+    """(acking login, lookup error) for G5. The ack has to come from someone
+    whose approval branch protection would count: a human with write access,
+    approving this head, who isn't the author. Anyone with a GitHub account
+    can leave an APPROVED review on a public repo, so the permission read is
+    what keeps a bystander's ack from clearing the gate."""
+    latest: dict[str, dict] = {}
+    for r in reviews:
+        user = (r.get("user") or {}).get("login") or ""
+        if user and r.get("state") != "COMMENTED":
+            latest[user] = r
+    error = ""
+    for login, r in latest.items():
+        u = r.get("user") or {}
+        if (r.get("state") != "APPROVED" or r.get("commit_id") != head_sha or login == author
+                or u.get("type") == "Bot" or login in set(config.bots or [])
+                or not _has_oversized_ack(r.get("body") or "")):
+            continue
+        try:
+            if gh.get_repo_permission(login) in WRITE_PERMISSIONS:
+                return login, ""
+        except SentinelDataError as exc:
+            error = error or str(exc)
+    return "", error
 
 
 def _stamp_report_only(verdict: Verdict) -> Verdict:
@@ -1236,7 +1327,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
 
     mechanical, claims, mech_reasons = _mechanical_and_claims(pr, files, labels)
     paths = [f["filename"] for f in files]
-    resolution = routing.resolve_lanes(paths, mechanical, claims, config, link_only=link_only_diff(files))
+    resolution = routing.resolve_lanes(paths, mechanical, claims, config)
 
     # External-contributor lane = fork head repo. Fail closed: no head-repo
     # fact in the payload means the stricter (internal) gates apply.
@@ -1270,8 +1361,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     if not files:
         # GitHub hasn't computed the diff yet, or the branch nets to nothing.
         # First, because every lane below would otherwise wave it through:
-        # the review lane skips it (`empty-diff`), G3 has nothing to route,
-        # and on a fork PR G1/G2 skip too — a fully green Sentinel with nobody
+        # the review lane skips it (`empty-diff`), and on a fork PR G1/G2 skip too — a fully green Sentinel with nobody
         # involved, and on a transient empty read, over a real diff.
         gates.append(Gate(
             "G1 review-ran", "red",
@@ -1402,9 +1492,10 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 gates.append(Gate(
                     "G2 findings-answered", "red",
                     f"{len(undecided)} finding(s) undecided ({ids}) — fix and push, "
+                    f"accept them with `/update-review accept {' '.join(undecided)}`, "
                     f"or reply with your reasoning, e.g. "
-                    f"`/update-review F3 is wrong because <why>` or "
-                    f"`/update-review I know what I'm doing, mark everything resolved`.",
+                    f"`/update-review {undecided[0]} is wrong because <why>`.",
+                    short=_findings_short(undecided),
                 ))
             elif not _body_matches_head(body, head_sha):
                 # "Every finding answered" about a review of an older diff
@@ -1460,249 +1551,8 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     else:
         gates.append(Gate("G2 findings-answered", "skip", "no review present — see G1"))
 
-    # G3 right-approver ---------------------------------------------------
-    latest: dict[str, dict] = {}
-    for r in reviews:
-        user = (r.get("user") or {}).get("login") or ""
-        if user and r.get("state") != "COMMENTED":
-            # Oldest-first; keep the last stateful review per user. COMMENTED
-            # never voids an approval (matching GitHub's own latestReviews
-            # semantics); stale-on-push is the ruleset's dismissal job.
-            latest[user] = r
-    # Humans and bots part ways here. A bot approval counts only on the one
-    # lane `bot_approvers:` names for it (approver + PR author + label); any
-    # other bot approval is dropped before it can reach a lookup, as before.
-    # "Bot" is either test: GitHub's own `type == Bot`, or the `bots:`
-    # denylist, which exists for machine USERS like `pulumi-bot` that the
-    # type test cannot see.
-    approvers: list[dict] = []
-    bot_approvers: list[tuple[dict, str]] = []
-    for r in latest.values():
-        if r.get("state") != "APPROVED":
-            continue
-        u = r.get("user") or {}
-        login = u.get("login") or ""
-        if u.get("type") == "Bot" or login in set(config.bots or []):
-            why = routing.bot_approver_reason(config, login, author, labels)
-            if why:
-                bot_approvers.append((r, why))
-            continue
-        approvers.append(r)
-    # An approval is of a COMMIT, not of a PR. The old comment above said
-    # "stale-on-push is the ruleset's dismissal job" — but branch protection
-    # on master doesn't dismiss stale approvals, and nothing in `.github/`
-    # configures dismissal, so nothing was doing that job.
-    # Without this, the sequence is: get a clean one-line change approved,
-    # push the payload, let the review lane post a fresh card, and all five
-    # gates are green on an approval nobody re-gave.
-    #
-    # Keep the pre-push approvals to tell the author WHY the gate is red —
-    # "your approval predates the push" is a different message from "nobody
-    # has approved", and the second one is a lie to someone staring at a
-    # green checkmark on the PR.
-    # Strict equality, not `in (None, head_sha)`: GitHub always sends
-    # `commit_id` on a review, so an absent one is a malformed payload, and
-    # "count it as current" would be fail-open on the gate that guarantees a
-    # human. An approval we cannot place at this head does not clear G3.
-    # Bot approvals are held to the same rule: a lane bot that approved the
-    # previous commit has not approved this one.
-    stale_humans = [r for r in approvers if r.get("commit_id") != head_sha]
-    stale_approvers = stale_humans + [r for r, _ in bot_approvers if r.get("commit_id") != head_sha]
-    approvers = [r for r in approvers if r.get("commit_id") == head_sha]
-    bot_approvers = [(r, why) for r, why in bot_approvers if r.get("commit_id") == head_sha]
-    # Except a human approval of a commit the PR has since only merged the
-    # base into, or pushed nothing onto: that approved exactly this diff
-    # (see `_Carry`). Asked only when nobody approved the head itself, so the
-    # ordinary PR spends no reads on it. Bot lanes re-approve on their own.
+    # Shared by G4 (a deploy carries over a base-only head move) and G5.
     carry = _Carry(gh, pr, files)
-    carried: dict[str, str] = {}  # login -> the commit they approved
-    if not approvers and not bot_approvers:
-        for r in stale_humans:
-            if carry.unchanged_since(r.get("commit_id") or ""):
-                approvers.append(r)
-                carried[(r.get("user") or {}).get("login") or ""] = r.get("commit_id") or ""
-        stale_approvers = [r for r in stale_approvers if r not in approvers]
-    # The subset of `approvers` whose approval actually clears G3 — filled in
-    # below. G5 reads it so the oversized ack cannot come from a bystander.
-    # It has to hold EVERY approver who qualifies, not just the first one G3
-    # finds: G5 asks whether any of them carries `/oversized-ack`, and a
-    # first-match list made a plain Approve from one committer hide a later
-    # acking approval from another (pulumi/docs#22622 sat red on exactly
-    # that).
-    qualified_approvers: list[dict] = []
-
-    def _qualify(r: dict) -> None:
-        if not any(q is r for q in qualified_approvers):
-            qualified_approvers.append(r)
-
-    def _ack_settled() -> bool:
-        # Whether G3 may stop asking about further approvers: always on an
-        # ordinary PR (the first qualifier is all G3 needs), and on an
-        # oversized one only once a qualifier has supplied the ack G5 wants.
-        return not oversized or any(
-            _has_oversized_ack(q.get("body") or "") for q in qualified_approvers)
-    if not resolution.roles:
-        # A zero-file PR (a branch whose commits net to no diff, or one
-        # already merged into base) is the only way here. It used to report
-        # `ok`, which made G3 — the one gate that guarantees a human — pass
-        # with no human, and combined with a forged card that was a fully
-        # green Sentinel with nobody involved. There is nothing to review,
-        # so there is also nothing to approve: `skip` says that honestly
-        # without manufacturing a pass.
-        gates.append(Gate(
-            "G3 right-approver", "skip", "no changed paths to route",
-        ))
-    elif bot_approvers:
-        # A configured automated lane. Checked first because it costs no
-        # API calls, and because on these PRs it is the approval that exists.
-        why = bot_approvers[0][1]
-        qualified_approvers.extend(r for r, _ in bot_approvers)
-        gates.append(Gate("G3 right-approver", "ok", f"automated approval: {why}"))
-    elif resolution.any_human:
-        # `approval.scope: any-human`: any human who could merge this PR
-        # anyway. Write access is the bar because it is the one GitHub's
-        # required-review rule applies — an approval from a read-only
-        # account (anyone, on a public repo) does not count at the merge
-        # box, so it must not count here either. The matrix roles are still
-        # who triage requests and the SLA sweep chases.
-        errors: list[str] = []
-        for r in approvers:
-            login = (r.get("user") or {}).get("login") or ""
-            try:
-                perm = gh.get_repo_permission(login)
-            except SentinelDataError as exc:
-                errors.append(str(exc))
-                continue
-            if perm in WRITE_PERMISSIONS:
-                _qualify(r)
-                if _ack_settled():
-                    break
-        if qualified_approvers:
-            # No `@` — this message also renders in the pinned status
-            # comment, where a mention would ping the approver on every
-            # re-evaluation.
-            who = (qualified_approvers[0].get("user") or {}).get("login")
-            gates.append(Gate("G3 right-approver", "ok",
-                              f"approved by `{who}`, who has write access"))
-        elif errors:
-            # Only load-bearing failures land here: one approver's lookup
-            # erroring does not poison another approver who qualified.
-            gates.append(Gate(
-                "G3 right-approver", "error",
-                "Couldn't verify the approver's repo permission — re-run the "
-                "check. " + _G3_TOKEN_HINT + errors[0],
-            ))
-        else:
-            gates.append(Gate(
-                "G3 right-approver", "red",
-                "Needs an approval from anyone with write access to this repo "
-                "— no qualifying human approval at this head (bot approvals "
-                "count only on the automated lanes `bot_approvers` lists)."
-                + _stale_clause(stale_approvers, head_sha),
-            ))
-    else:
-        missing: list[str] = []
-        errors = []
-        # `resolution.any_team` means one team is enough instead of all of
-        # them — repo-wide under `approval.scope: any-team`, or for a
-        # link-only sweep under `link_only.approval: any-team`. The matrix
-        # roles stay on the record either way: they are still who triage
-        # requests and who the SLA sweep chases, and with `any-team` the
-        # request is the ONLY thing putting the right eyes on the PR — which
-        # is what makes `overrides:` (who gets asked) load-bearing rather
-        # than cosmetic.
-        all_teams = [config.teams[r] for r in sorted(config.teams)]
-        required = (all_teams if resolution.any_team
-                    else [config.teams.get(role, "") for role in sorted(resolution.roles)])
-        satisfied_any = False
-        for team_ref in required:
-            org, slug = _team_org_slug(team_ref)
-            satisfied = False
-            for r in approvers:
-                login = (r.get("user") or {}).get("login") or ""
-                try:
-                    if gh.get_team_membership(org, slug, login) == "active":
-                        satisfied = True
-                        _qualify(r)
-                        if _ack_settled():
-                            break
-                except SentinelDataError as exc:
-                    # Once the team is satisfied, further lookups only hunt
-                    # for G5's ack; a failure there must not unsettle G3.
-                    if not satisfied:
-                        errors.append(str(exc))
-            if satisfied:
-                satisfied_any = True
-                if resolution.any_team and _ack_settled():
-                    break  # one team clears it; no need to ask about the rest
-            elif not errors:
-                missing.append(team_ref)
-        if resolution.any_team:
-            # One team is enough; only an empty set is a miss.
-            missing = [] if satisfied_any else ["any review team"]
-        # A repo admin can merge past a red check anyway, so with
-        # `approval.admins_satisfy` the gate says so rather than reporting a
-        # block the repo does not impose on them. Consulted only when the
-        # team rule already came up short, so the ordinary PR costs no extra
-        # API calls.
-        admin_approver = ""
-        if missing and not errors and routing.admins_satisfy(config):
-            for r in approvers:
-                login = (r.get("user") or {}).get("login") or ""
-                try:
-                    if gh.get_repo_permission(login) == "admin":
-                        admin_approver = admin_approver or login
-                        _qualify(r)
-                        if _ack_settled():
-                            break
-                except SentinelDataError as exc:
-                    # Same rule as the team loop: once an admin has cleared
-                    # G3, further lookups only hunt for G5's ack.
-                    if not admin_approver:
-                        errors.append(str(exc))
-        # `errors and not satisfied_any`: a transient 5xx on ONE approver's
-        # membership lookup used to poison a verdict another approver had
-        # already settled — the gate reported `error`/action_required with a
-        # qualifying approval sitting right there. Only report the failure
-        # when it is actually load-bearing.
-        if errors and not satisfied_any:
-            gates.append(Gate(
-                "G3 right-approver", "error",
-                "Couldn't verify the approver's team membership or repo role — "
-                "re-run the check. " + _G3_TOKEN_HINT + errors[0],
-            ))
-        elif admin_approver:
-            gates.append(Gate(
-                "G3 right-approver", "ok",
-                # No `@` — this message also renders in the pinned status
-                # comment, where a mention would ping the approver on every
-                # re-evaluation.
-                f"approved by repository administrator `{admin_approver}`",
-            ))
-        elif missing:
-            names = ", ".join(f"**{m}**" for m in missing)
-            if resolution.any_team:
-                names += " (" + ", ".join(all_teams) + ")"
-            admin_clause = (" or a repository administrator"
-                            if routing.admins_satisfy(config) else "")
-            gates.append(Gate(
-                "G3 right-approver", "red",
-                f"Needs approval from a member of {names}{admin_clause} — no "
-                f"qualifying human approval at this head (bot approvals count "
-                f"only on the automated lanes `bot_approvers` lists)."
-                + _stale_clause(stale_approvers, head_sha),
-            ))
-        else:
-            gates.append(Gate(
-                "G3 right-approver", "ok",
-                "a routing-team member approved" if resolution.any_team
-                else "matrix-required approval present"))
-
-    g3 = next((g for g in gates if g.name.startswith("G3")), None)
-    if g3 and g3.status == "ok" and qualified_approvers:
-        via = carried.get((qualified_approvers[0].get("user") or {}).get("login") or "")
-        if via:
-            g3.message += f" (approved `{via[:9]}`; {_CARRY_CLAUSE})"
 
     # G4 infra-evidence ---------------------------------------------------
     if resolution.staging_evidence_required:
@@ -1736,37 +1586,32 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
 
     # G5 oversized-ack ----------------------------------------------------
     if oversized:
-        # `approvers` is already filtered to humans at this head. It is NOT
-        # filtered to the team that satisfied G3, so the ack must come from
-        # someone whose approval actually counts — `qualified_approvers` is
-        # populated by G3 above. Before this, anyone with read access could
-        # post an APPROVED review carrying the magic string while a genuine
-        # team member clicked plain Approve, and a self-applied
-        # `review:oversized` (nothing verifies the PR is oversized) had
-        # already skipped G1 and G2.
-        acked = any(_has_oversized_ack(r.get("body") or "")
-                    for r in qualified_approvers)
+        acked, ack_error = _oversized_ack(gh, config, reviews, head_sha, author)
         if acked:
             gates.append(Gate("G5 oversized-ack", "ok",
-                              f"the approver confirmed a hand review with `{OVERSIZED_ACK}`"))
+                              f"`{acked}` confirmed a hand review with `{OVERSIZED_ACK}`"))
+        elif ack_error:
+            gates.append(Gate(
+                "G5 oversized-ack", "error",
+                "Couldn't verify the acking approver's repo permission -- re-run the "
+                "check. " + _TOKEN_HINT + ack_error,
+                short="couldn't verify the approver -- re-run",
+            ))
         else:
-            # Say who, where, and what doesn't count. "Include it in the
-            # approval body" left readers guessing which box is the body, and
-            # the near misses (a PR comment, a line comment, an approval from
-            # before the last push) all look like they should work.
-            # The CLI form is spelled out because it can't drift the way
-            # GitHub's review-button labels do.
+            # Say who, where, and what doesn't count. The near misses (a PR
+            # comment, a line comment, an approval from before the last
+            # push) all look like they should work.
             number = pr.get("number") or "<number>"
             gates.append(Gate(
                 "G5 oversized-ack", "red",
-                "The automated review doesn't count on an oversized PR (that's why "
-                "G1 and G2 are skipped), so whoever approves it for G3 confirms they "
-                "reviewed it by hand: submit an **Approve** review on the latest commit "
-                f"with `{OVERSIZED_ACK}` at the start of a line in its comment, or run "
-                f"`gh pr review {number} --approve --body {OVERSIZED_ACK}`. Already "
-                "approved? Approve again with it, or edit your approval's comment to "
-                "add it. A PR comment, a line comment, or an approval of an earlier "
-                "commit doesn't count.",
+                "The automated review doesn't run on an oversized PR, so an approver "
+                "with write access confirms they reviewed it by hand: submit an **Approve** "
+                f"review on the latest commit with `{OVERSIZED_ACK}` at the start of a line "
+                f"in its comment, or run `gh pr review {number} --approve --body {OVERSIZED_ACK}`. "
+                "Already approved? Approve again with it, or edit your approval's comment to "
+                "add it. A PR comment, a line comment, or an approval of an earlier commit "
+                "doesn't count.",
+                short=f"an approval with {OVERSIZED_ACK}",
             ))
     else:
         gates.append(Gate("G5 oversized-ack", "skip", "not oversized"))
@@ -1787,10 +1632,9 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # What the order can NOT rescue is an outage of the org-scoped token
     # itself (GH_TOKEN_TEAM_READ unset or expired): `_waive_state` checks the
     # waiver's team membership with that token, so it refuses the waive in
-    # the same breath as G3 errors. That is fail-closed on purpose — a label
-    # anyone with triage could apply must not skip every gate unverified —
-    # and it leaves a repo admin's merge as the way through. G3's error text
-    # says so.
+    # the same breath. That is fail-closed on purpose — a label anyone with
+    # triage could apply must not skip every gate unverified — and it leaves
+    # a repo admin's merge as the way through.
     if waived:
         conclusion = "success"
         title = f"Waived by {waive_note}"
@@ -1840,7 +1684,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     if mechanical:
         parts.append(
             "_Classified mechanical under the tightened bar — no model review required. "
-            "A human approver is still required._"
+            "Branch protection still asks for an approval._"
         )
     if skip_note:
         parts.append(skip_note)
@@ -1848,10 +1692,12 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         parts.append(_strip_brief_for_summary(brief.get("body") or ""))
     summary = "\n\n".join(p for p in parts if p)
 
+    card_url = (author_card or {}).get("html_url") or ""
     verdict = Verdict(
         conclusion=conclusion, title=title, summary=summary,
         head_sha=head_sha, gates=gates, blocking_ids=blocking_ids,
         mechanical=mechanical, waived=waived, waive_note=waive_note,
+        links={"G1": card_url, "G2": card_url} if card_url else {},
     )
 
     if report_only:
@@ -1962,8 +1808,8 @@ def without_strip(body: str) -> str:
 # replacing it.
 #
 # It used to REPLACE it, and a green gate rendered as the bare words "Nothing
-# to do." That is how PR #21698 came to show a green G3 right-approver with
-# no approving review from anybody on the PR: the gate had passed under the
+# to do." That is how PR #21698 came to show a green approver gate with no
+# approving review from anybody on the PR: the gate had passed under the
 # since-deleted `auto_approve` clean-brief rule, and the one cell that could
 # have said so said "Nothing to do." instead. A merge gate that reports a
 # pass without its reason is indistinguishable from one that is broken, so
@@ -1975,6 +1821,7 @@ _GATE_BLURB = {
 }
 
 _STATUS_ICON = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
+_GATE_LABEL = {"G1": "Review", "G2": "Findings", "G4": "Staging deploy", "G5": "Oversized ack"}
 
 
 def render_status_comment(verdict: Verdict) -> str:
@@ -1998,8 +1845,8 @@ def render_status_comment(verdict: Verdict) -> str:
         # a gate row; half two alone reads as a PR that is blocked. Half one
         # says "safe to ignore for now", never "you can merge anyway" — the
         # gate surface is no place to coach someone past a red row. And
-        # neither half calls a red row the author's homework: G3 is an
-        # approval and G4 a deploy, so the rows are a sign-off checklist, and
+        # neither half calls a red row the author's homework: G4 is a deploy
+        # and G5 an approver's ack, so the rows are a sign-off checklist, and
         # only some of them are ever the author's to clear.
         lines += [
             "> [!WARNING]",
@@ -2052,37 +1899,32 @@ def render_status_comment(verdict: Verdict) -> str:
         if verdict.waive_note:
             # No `@`: this comment is re-rendered, and a mention pings.
             note = re.sub(r"@([\w-]+(?:\[bot\])?)", r"`\1`", verdict.waive_note)
-            retry = ("While that lookup fails, a re-applied waive fails the same way; see the "
-                     "G3 row." if "lookup failed" in note else
+            retry = ("While that lookup fails, a re-applied waive fails the same way, so a "
+                     "repo admin merging past the check is the way through." if "lookup failed" in note else
                      "To retry, a routing-team member removes the label and applies it again.")
             lines += [f"**`review:waived` is on this PR but was not honored:** {note}. {retry}", ""]
         # Tense matters here, and only here: in preview nothing is blocking
         # anything, so a headline reading "before this can merge" hands the
         # banner directly above it a contradiction to lose.
+        what = _plain_join([_waiting_on(g, len(verdict.blocking_ids)) for g in blocking
+                            if g.status == "red"]
+                           + [f"a re-run ({_PLAIN_GATE.get(g.name.split()[0], g.name)} couldn't be checked)"
+                              for g in blocking if g.status == "error"])
         lines += [
-            (f"**{len(blocking)} of {len(verdict.gates)} gates would block this "
-             f"merge once the Sentinel is enforced.**" if preview else
-             f"**{len(blocking)} of {len(verdict.gates)} gates need attention "
-             f"before this can merge.**"),
+            (f"**Once enforced, this would wait on {what}.**" if preview else
+             f"**Waiting on {what}.**"),
             "",
         ]
+        # Only the red rows, in full: that is the part someone has to act on.
+        # "Too much text" (#22397) was a five-row table where four rows said
+        # nothing needed doing.
+        for g in blocking:
+            lines.append(f"- {_STATUS_ICON[g.status]} **{_GATE_LABEL.get(g.name.split()[0], g.name)}:** "
+                         f"{' '.join(g.message.split())}")
+        lines.append("")
     else:
         lines += ["**All gates green — nothing would block this merge.**" if preview
                   else "**All gates green — nothing is blocking this merge.**", ""]
-
-    lines += ["| | Gate | What it needs |", "|---|---|---|"]
-    for g in verdict.gates:
-        if g.status in ("red", "error"):
-            need = g.message
-        else:
-            # "Nothing to do: matrix-required approval present." — the blurb
-            # answers the column, the gate's own message says why, and a
-            # reader can tell a satisfied gate from a mis-evaluated one.
-            need = f"{_GATE_BLURB[g.status]}: {g.message}."
-        # One cell, one line: a literal newline would break the row.
-        need = " ".join(need.split())
-        lines.append(f"| {_STATUS_ICON[g.status]} | **{g.name}** | {need} |")
-    lines.append("")
 
     if not verdict.waived and any(_waive_can_clear(g) for g in blocking):
         # Not BREAK_GLASS verbatim — that string is written to follow a gate
@@ -2094,6 +1936,22 @@ def render_status_comment(verdict: Verdict) -> str:
             "which is logged._",
             "",
         ]
+
+    lines += ["<details><summary>All gates</summary>", "",
+              "| | Gate | What it needs |", "|---|---|---|"]
+    for g in verdict.gates:
+        if g.status in ("red", "error"):
+            need = g.message
+        else:
+            # "Nothing to do: matrix-required approval present." — the blurb
+            # answers the column, the gate's own message says why, and a
+            # reader can tell a satisfied gate from a mis-evaluated one.
+            need = f"{_GATE_BLURB[g.status]}: {g.message}."
+        # One cell, one line: a literal newline would break the row.
+        need = " ".join(need.split())
+        lines.append(f"| {_STATUS_ICON[g.status]} | **{g.name}** | {need} |")
+    lines += ["", "</details>", ""]
+
     lines += [f"<sub>Evaluated at head `{verdict.head_sha[:9]}`.</sub>"]
     return _with_help_footer(lines)
 

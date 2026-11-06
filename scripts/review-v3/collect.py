@@ -310,11 +310,13 @@ def review_status(labels: set[str], surface: str, review_body: str, head_sha: st
 
 
 def only_merges_since(commits: list[dict], review_body: str) -> bool:
-    """True when the reviewed head (the card's CLAUDE_REVIEW_HEAD) is in the
-    PR's commit list and every later commit is a merge or changes nothing
-    (an empty "kick CI" commit: #22524's reset the review it sat on)."""
+    """True when the history since the reviewed head (the card's
+    CLAUDE_REVIEW_HEAD) could have left the PR's changes alone: only merges
+    or no-op commits after it (an empty "kick CI" commit: #22524's reset the
+    review it sat on), or a rebase that took it out of the commit list.
+    `same_diff` has to agree too; see `sentinel.history_allows_carry`."""
     m = sentinel.HEAD_MARKER_RE.search(review_body or "")
-    return bool(m) and sentinel.changes_nothing_since(commits, m.group(1))
+    return bool(m) and sentinel.history_allows_carry(commits, m.group(1))
 
 
 def reviewed_head(review_body: str) -> str | None:
@@ -322,7 +324,7 @@ def reviewed_head(review_body: str) -> str | None:
     return m.group(1) if m else None
 
 
-# Owned by sentinel.py, which G3 and G4 read them from too.
+# Owned by sentinel.py, which G4 reads them from too.
 changed_lines = sentinel.changed_lines
 same_diff = sentinel.same_diff
 
