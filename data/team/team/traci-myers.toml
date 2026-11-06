@@ -1,0 +1,10 @@
+id = "traci-myers"
+name = "Traci Myers"
+title = "Director of Event Marketing"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "traci-myers"
