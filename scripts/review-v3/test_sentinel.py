@@ -467,8 +467,18 @@ def test_substantive_no_review_g1_red():
     gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
     v = sentinel.evaluate(gh, CONFIG)
     assert v.conclusion == "failure"
-    assert _gate(v, "G1").status == "red"
-    assert "/update-review" in _gate(v, "G1").message
+    g1 = _gate(v, "G1")
+    assert g1.status == "red"
+    # The first review is usually still running: say so, don't hand out a command.
+    assert "hasn't posted yet" in g1.message and "/update-review" not in g1.message
+    assert v.title == "Waiting on the automated review", v.title
+    body = sentinel.render_status_comment(v)
+    assert "Break glass" not in body, "no break-glass for a review that's on its way"
+    # A stale card is different: the review won't rerun by itself.
+    stale = author_card([], state=_state_with([]), head="b" * 40)
+    g1s = _gate(sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                                         comments=[stale]), CONFIG), "G1")
+    assert "/update-review" in g1s.message
 
 
 def test_findings_undecided_g2_red_lists_ids():
@@ -1267,7 +1277,7 @@ def test_status_comment_upserts_then_stays_byte_identical():
     body = gh.posted[0]
     assert sentinel.STATUS_MARKER in body
     assert "G4 infra-evidence" in body
-    assert "/update-review <what changed>" in body, "a red gate carries its own remediation"
+    assert "/new-review" in body, "a red gate carries its own remediation"
     assert body.index("- 🔴 **Review:**") < body.index("<details>"), "red rows lead, the table folds"
 
     existing = [{"id": 7, "body": body, "user": {"login": sentinel.BOT_LOGIN}}]

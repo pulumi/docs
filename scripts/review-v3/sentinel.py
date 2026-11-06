@@ -252,6 +252,8 @@ def _waiting_on(g: Gate, n_blocking: int) -> str:
     if gate == "G1":
         if "changes no files" in g.message:
             return "a diff to review"
+        if "hasn't posted yet" in g.message:
+            return "the automated review"
         return f"a current review{cmd}"
     if gate == "G2":
         n = n_blocking or "open"
@@ -1433,6 +1435,17 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         ))
         skip_note = (f"_Automation PR: the review lane does not review `{skipped_bot}` PRs "
                      "from this branch, so the approving reviewer's review is the review._")
+    elif never_reviewed:
+        # The first review is usually still running: the Sentinel posts on
+        # open, minutes before the card. Telling the author to run a command
+        # here sent them after something that was about to happen anyway.
+        gates.append(Gate(
+            "G1 review-ran", "red",
+            "The automated review hasn't posted yet; it starts when the PR is marked "
+            "ready for review and usually takes 10-20 minutes. If nothing shows up, "
+            "comment `/new-review`.",
+            short="the automated review is running",
+        ))
     else:
         # Not "push to refresh": a push refreshes the review automatically
         # only when it touches lines a 🚨 finding flagged. On a clean review
@@ -1926,7 +1939,8 @@ def render_status_comment(verdict: Verdict) -> str:
         lines += ["**All gates green — nothing would block this merge.**" if preview
                   else "**All gates green — nothing is blocking this merge.**", ""]
 
-    if not verdict.waived and any(_waive_can_clear(g) for g in blocking):
+    if not verdict.waived and any(_waive_can_clear(g) and "hasn't posted yet" not in g.message
+                                  for g in blocking):
         # Not BREAK_GLASS verbatim — that string is written to follow a gate
         # message ("… — override: a member of …") and reads as a doubled
         # "override:" when it opens a sentence of its own.
