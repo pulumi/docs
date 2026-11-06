@@ -44,7 +44,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: checkout docs repo
         uses: actions/checkout@v7
       - name: set the pulumi version
@@ -103,7 +103,7 @@ jobs:
           echo "PULUMI_VERSION=${{ github.event.inputs.version || github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: Fetch secrets from ESC and install the Pulumi CLI
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
         with:
           version: ${{ env.PULUMI_VERSION }}
       - name: checkout docs repo
@@ -289,7 +289,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

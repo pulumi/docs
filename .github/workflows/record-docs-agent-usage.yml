@@ -125,7 +125,7 @@ jobs:
       - name: Fetch ESC secrets
         id: esc-secrets
         continue-on-error: true
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
 
       - name: Configure AWS Credentials
         continue-on-error: true

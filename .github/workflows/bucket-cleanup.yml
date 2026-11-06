@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v7

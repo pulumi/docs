@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: checkout docs repo
         uses: actions/checkout@v7
       - name: set the policy sdk version
@@ -68,7 +68,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: set the policy sdk version
         run: |
           echo "POLICY_SDK_VERSION=${{ github.event.inputs.version || github.event.client_payload.ref }}" >> $GITHUB_ENV
@@ -199,7 +199,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

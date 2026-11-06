@@ -497,7 +497,7 @@ jobs:
       # step below has the pinned vale binary on PATH. Cache speeds up
       # subsequent runs.
       - name: Install mise-managed tools
-        uses: jdx/mise-action@v4
+        uses: jdx/mise-action@v5
         with:
           cache: true
 
@@ -2572,7 +2572,7 @@ jobs:
         if: steps.current.outputs.superseded == 'false'
         id: esc-secrets
         continue-on-error: true
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
 
       - name: Configure AWS Credentials
         if: steps.current.outputs.superseded == 'false'
