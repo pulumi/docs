@@ -584,8 +584,8 @@ def test_bot_approvers_any_human_lane_needs_the_fence_and_a_human_author():
     calls = []
 
     def human(answer=True):
-        def f():
-            calls.append(1)
+        def f(scope):
+            calls.append(scope)
             return answer
         return f
 
@@ -608,6 +608,14 @@ def test_bot_approvers_any_human_lane_needs_the_fence_and_a_human_author():
     assert r(cfg, EON, "a-writer", set(), {"docs"}, None) is None
     # another bot gets nothing from Eon's entry
     assert r(cfg, "github-actions[bot]", "a-writer", set(), {"docs"}, human()) is None
+    # the scope reaches the caller verbatim
+    calls.clear()
+    assert r(cfg, EON, "a-writer", set(), {"docs"}, human())
+    assert calls == ["any-human"]
+    # a class-of-author entry never approves the approver's own PR
+    calls.clear()
+    assert r(cfg, EON, EON, set(), {"docs"}, human()) is None
+    assert calls == []
     # the single-author entries keep working with the new optional arguments
     cfg2 = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "bot_approvers": [
         {"approver": "pulumi-bot", "author": "dependabot[bot]", "why": "deps lane"},
@@ -631,6 +639,7 @@ def test_bot_approvers_any_human_validation_fails_closed():
                                      | {"subjects": ["docs"]})
     # closed vocabulary for authors
     assert "authors must be one of" in errs({**base, "authors": "anyone"})
+    assert "authors must be one of" in errs({**base, "authors": "any-bot"})
     assert "authors must be one of" in errs({**base, "authors": ["any-human"]})
     # a class-of-author lane must say what it covers
     assert "subjects is required" in errs({k: v for k, v in base.items() if k != "subjects"})
@@ -660,13 +669,18 @@ def test_live_config_eon_lane_is_humans_docs_and_programs_only():
     live = routing.load_config(routing.DEFAULT_CONFIG_PATH)
     eon = [e for e in live.bot_approvers if e.get("approver") == EON]
     assert len(eon) == 1
-    assert eon[0]["authors"] == "any-human"
+    # Cam, 2026-11-06: bot PRs too, "so long as they're clean"
+    assert eon[0]["authors"] == "any-internal"
     assert sorted(eon[0]["subjects"]) == ["docs", "programs"]
     assert "label" not in eon[0]
     # Eon stays on the denylist, so this entry is the only place it counts
     assert EON in live.bots
-    assert routing.bot_approver_reason(live, EON, "a-writer", set(), {"docs"}, lambda: True)
-    assert routing.bot_approver_reason(live, EON, "a-writer", set(), {"blog"}, lambda: True) is None
+    asked = []
+    assert routing.bot_approver_reason(live, EON, "a-writer", set(), {"docs"},
+                                       lambda scope: asked.append(scope) or True)
+    assert asked == ["any-internal"]
+    assert routing.bot_approver_reason(live, EON, "a-writer", set(), {"blog"},
+                                       lambda scope: True) is None
     assert [e for e in live.bot_approvers if "authors" in e] == eon
 
 

@@ -342,11 +342,17 @@ overrides:
 #     `type == Bot` exclusion -- for this lane only.
 #   - `author`: the PR author the lane is for. A bot approval is only as
 #     trustworthy as the process that opened the PR.
-#   - `authors`: instead of `author`, a class of author. The one value is
-#     `any-human`: an internal PR (head branch in this repo, never a fork)
-#     opened by a non-bot account with write access -- the same people whose
-#     own approval G3 counts. Never a bot, never a `bots:` login, never an
-#     external contributor. Exactly one of `author` / `authors` is required.
+#   - `authors`: instead of `author`, a class of author. Internal PRs only
+#     (head branch in this repo, never a fork), and never the approver's own
+#     PR. Exactly one of `author` / `authors` is required. Two values:
+#       - `any-human`: opened by a non-bot account with write access -- the
+#         same people whose own approval G3 counts.
+#       - `any-internal`: `any-human`, plus PRs opened by a bot (`type ==
+#         Bot`, a `[bot]` login, or `bots:`) whose review is CLEAN -- an
+#         author card at the current head and every finding it raised
+#         recorded `fixed`. On a bot's PR, a refuted, deferred, or accepted
+#         finding is the automation overruling its own review with nobody
+#         watching, so it takes the PR off the lane.
 #   - `subjects`: optional for `author`, REQUIRED for `authors`; a list of
 #     MATRIX subjects. The lane applies only when every changed path
 #     classifies into one of them -- one file outside the fence takes the
@@ -383,7 +389,8 @@ overrides:
 #
 # The third entry is a different kind of lane: Eon (`eon-pulumi-agent[bot]`,
 # Pulumi's review agent) standing in for the human approver on docs and
-# example-program PRs that people wrote. Every other gate still applies --
+# example-program PRs, whether a person wrote them or a bot did and the
+# review came back clean. Every other gate still applies --
 # G1 needs a current review, G2 needs every finding answered -- so Eon's
 # approval only ever replaces the "a person read the ⚠️ rows" step. What Eon
 # checks before approving is in the root `REVIEW.md`; it declines anything
@@ -569,15 +576,16 @@ bot_approvers:
       auto-merge on the required build check; flagged bumps are never
       approved, so they still need a human.
   - approver: "eon-pulumi-agent[bot]"
-    authors: any-human
+    authors: any-internal
     subjects: [docs, programs]
     why: >-
       Eon approves docs and example-program PRs from the review pipeline's
       reviewer's guide: it works each ⚠️ row against the diff and spot-checks
       what the guide can't see (root REVIEW.md). Fact verification already
       ran, G1/G2 still gate the review itself, and a docs page reverts with one
-      commit. Humans' PRs only, write access only, and never blog, website,
-      infra, frontend, or other paths.
+      commit. Internal branches only: humans with write access, or bots whose
+      review is clean (every finding fixed). Never blog, website, infra,
+      frontend, or other paths.
 
 external_contributors: { skip_gates: [review-ran, findings-answered] }
 

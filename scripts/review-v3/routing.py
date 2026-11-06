@@ -89,11 +89,19 @@ APPROVAL_KEYS = frozenset({"scope", "admins_satisfy"})
 BOT_APPROVER_KEYS = frozenset({"approver", "author", "authors", "label", "subjects", "why"})
 BOT_APPROVER_REQUIRED_KEYS = ("approver", "why")
 # Closed vocabulary for `bot_approvers[].authors`, the lane that names a
-# class of PR author instead of one login. `any-human`: an internal PR
-# (head repo is this repo) opened by a non-bot account with write access --
-# the same people whose own approval G3 counts under `approval.scope:
-# any-human`. It never includes a bot, a `bots:` login, or a fork PR.
-BOT_APPROVER_AUTHOR_SCOPES = frozenset({"any-human"})
+# class of PR author instead of one login. Both are internal PRs only (head
+# branch in this repo, never a fork), and never the approver's own PR.
+#
+#   - `any-human`: opened by a non-bot account with write access -- the same
+#     people whose own approval G3 counts under `approval.scope: any-human`.
+#   - `any-internal`: `any-human`, plus bot-authored PRs (`type == Bot`, a
+#     `[bot]` login, or a `bots:` entry) whose review is CLEAN: an author
+#     card at the current head, and every finding it ever raised fixed. A bot
+#     that refutes, defers, or accepts its own finding has not resolved it --
+#     nobody has -- so on a bot PR only `fixed` counts.
+#
+# The Sentinel decides which one an author satisfies; this module only asks.
+BOT_APPROVER_AUTHOR_SCOPES = frozenset({"any-human", "any-internal"})
 
 LINK_ONLY_KEYS = frozenset({"approval"})
 # Who can satisfy the approver gate (G3). `lane` is the per-subject rule the
@@ -872,7 +880,7 @@ def bot_approver_reason(
     author: str,
     labels: set[str] | frozenset[str],
     subjects: set[str] | frozenset[str] | None = None,
-    author_is_human: Callable[[], bool] | None = None,
+    author_in_scope: Callable[[str], bool] | None = None,
 ) -> str | None:
     """Why this bot's approval clears G3 on this PR, or None if it does not.
 
@@ -888,11 +896,12 @@ def bot_approver_reason(
     the fence takes the whole PR off the lane. Unknown subjects (None) never
     match a fenced entry.
 
-    `authors: any-human` asks `author_is_human()`, which the caller supplies
-    because only it can see the PR payload (fork, account type) and the repo
-    permission API. It is called only once every other half of the entry has
-    matched, so a PR off the lane costs no lookup; a missing callable fails
-    closed.
+    `authors: <scope>` asks `author_in_scope(scope)`, which the caller
+    supplies because only it can see the PR payload (fork, account type),
+    the repo permission API, and the review card. It is called only once
+    every other half of the entry has matched, so a PR off the lane costs no
+    lookup; a missing callable fails closed. A bot never approves its own PR
+    through a class-of-author entry.
     """
     for entry in config.bot_approvers or []:
         if entry.get("approver") != approver:
@@ -906,12 +915,14 @@ def bot_approver_reason(
         on = f" with label `{label}`" if label else ""
         within = f" changing only {'/'.join(sorted(fence))} paths" if fence is not None else ""
         if "authors" in entry:
-            if entry.get("authors") != "any-human" or author_is_human is None:
+            scope = entry.get("authors")
+            if scope not in BOT_APPROVER_AUTHOR_SCOPES or author_in_scope is None:
                 continue
-            if not author_is_human():
+            if author == approver or not author_in_scope(scope):
                 continue
-            return (f"`{approver}` is a listed bot approver for PRs by any human with "
-                    f"write access{within}{on}")
+            who = ("any human with write access" if scope == "any-human" else
+                   "any human with write access, or a bot whose review is clean")
+            return f"`{approver}` is a listed bot approver for PRs by {who}{within}{on}"
         if entry.get("author") != author:
             continue
         return f"`{approver}` is a listed bot approver for PRs by `{author}`{within}{on}"
