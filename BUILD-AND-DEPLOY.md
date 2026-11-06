@@ -3507,7 +3507,7 @@ git add package.json yarn.lock
 git commit -m "Update Node.js dependencies"
 ```
 
-**Automation:** Dependabot creates PRs for dependency updates weekly.
+**Automation:** Dependabot creates one PR for version updates monthly, plus security PRs as advisories land.
 
 #### Hugo Version Updates
 
@@ -3623,7 +3623,7 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 
 ### Dependabot configuration
 
-**Schedule:** Monthly version updates (09:00 UTC). Security updates ignore the schedule entirely — see below.
+**Schedule:** One monthly version-update PR (09:00 UTC) covering every ecosystem and directory below except `/static/programs`. Security updates ignore the schedule entirely — see below.
 
 **Ecosystems:**
 
@@ -3633,13 +3633,16 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 - devcontainers — `.devcontainer/devcontainer.json`
 - `/static/programs` — **security batching only**, across npm, gomod, pip, nuget, maven, and docker. These entries carry `open-pull-requests-limit: 0`, so they never produce version updates; they exist purely to collapse the security PRs GitHub opens against the 444 sample programs. `scripts/programs/upgrade.sh` owns version upgrades for those.
 
-**Grouping strategy:** every entry carries two groups — a catch-all for version updates, and a second catch-all with `applies-to: security-updates`.
+**Grouping strategy:** two layers.
 
-The second one matters more than the first. A `groups` entry without `applies-to` covers version updates *only*, so before it was added, security updates were completely ungrouped: one PR per affected package per manifest. That is how the repo saw 9 Dependabot PRs on 2026-07-23, 8 on 2026-08-03, and 11 on 2026-09-01, and why `js-yaml` alone produced 9 PRs between July and September.
+- **Version updates** go through a top-level `multi-ecosystem-groups` entry named `monthly`. Every site-build and tooling entry joins it with `multi-ecosystem-group: "monthly"` and `patterns: ["*"]`, so all six npm directories, GitHub Actions, pip, and devcontainers land in one PR. The group owns the schedule and the `commit-message` prefix; `commit-message` is group-only and is a configuration error on an entry.
+- **Security updates** are not part of the multi-ecosystem group, so every entry also keeps a catch-all group with `applies-to: security-updates`. That is the most grouping GitHub offers for them: one PR per entry per advisory day.
 
-**Expected volume:** roughly 9 grouped version-update PRs per month (one per configured ecosystem/directory), plus one security PR per ecosystem per advisory day.
+The security group matters more than it looks. A `groups` entry without `applies-to` covers version updates *only*, so before it was added, security updates were completely ungrouped: one PR per affected package per manifest. That is how the repo saw 9 Dependabot PRs on 2026-07-23, 8 on 2026-08-03, and 11 on 2026-09-01, and why `js-yaml` alone produced 9 PRs between July and September.
 
-**PR limits:** 1 PR per ecosystem for version updates. **This limit does not apply to security updates** — GitHub's documentation is explicit that security PRs "are not subject to this limit and do not count toward it." Neither `schedule` nor `open-pull-requests-limit` constrains them; only grouping does.
+**Expected volume:** one version-update PR per month, plus one security PR per affected entry per advisory day.
+
+**PR limits:** the multi-ecosystem group produces a single version-update PR, so the site-build entries carry no `open-pull-requests-limit`. **Limits never apply to security updates** — GitHub's documentation is explicit that security PRs "are not subject to this limit and do not count toward it." Neither `schedule` nor `open-pull-requests-limit` constrains them; only grouping does.
 
 **Major version updates:** Blocked for non-security updates via wildcard ignore rules. Note that `ignore` conditions apply to security updates too, so an advisory whose only fix is a major bump can be suppressed by these rules — see the caveat under Security patch handling.
 
@@ -3683,7 +3686,7 @@ One detail worth recording, because it is easy to assume otherwise: the GitHub O
 
 ### Monthly triage workflow
 
-Each month Dependabot generates one grouped version-update PR per configured ecosystem/directory, plus security patches as advisories land. With `DEPS_AUTO_MERGE` enabled, the small ones merge themselves; the larger grouped PRs — anything at five or more packages, and anything touching `@pulumi/aws`, `@pulumi/pulumi`, or a bundler — are held by a risk flag, and the list below applies to those. Since every entry uses a catch-all `patterns: ["*"]` group, expect a good share of the *monthly* PRs to be held; it is the off-schedule security PRs, which are usually one or two packages, that mostly merge unattended. With the variable unset, the policy is to **evaluate each PR and merge it as it comes in** — there is no risk tiering and no quarterly deferral.
+Each month Dependabot generates one combined version-update PR, plus security patches as advisories land. With `DEPS_AUTO_MERGE` enabled, the small ones merge themselves; the larger PRs — anything at five or more packages, and anything touching `@pulumi/aws`, `@pulumi/pulumi`, or a bundler — are held by a risk flag, and the list below applies to those. Expect the monthly PR to be held essentially every time, since it spans every manifest; it is the off-schedule security PRs, which are usually one or two packages, that mostly merge unattended. With the variable unset, the policy is to **evaluate each PR and merge it as it comes in** — there is no risk tiering and no quarterly deferral.
 
 For each PR:
 

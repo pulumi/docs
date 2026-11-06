@@ -1,37 +1,65 @@
 # Dependabot configuration for pulumi/docs.
 #
-# Two things about this file are easy to get wrong; both are called out again
-# at the point of use below.
+# Three things about this file are easy to get wrong; all are called out
+# again at the point of use below.
 #
-# 1. Security updates ignore most of what you configure here. They are not
+# 1. Version updates for the site build and tooling arrive as ONE pull request
+#    a month. Every entry in the first two sections joins the `monthly`
+#    multi-ecosystem group defined below, so npm (six directories), GitHub
+#    Actions, pip, and devcontainers all land in a single PR on the group's
+#    schedule. Entries in a multi-ecosystem group take their schedule from the
+#    group, must declare `patterns`, and may NOT set `commit-message` (it is
+#    group-only; setting it on an entry is a configuration error).
+#
+# 2. Security updates ignore most of what you configure here. They are not
 #    subject to `schedule`, they are not subject to `open-pull-requests-limit`,
-#    and they are NOT covered by a `groups` entry unless that entry carries
-#    `applies-to: security-updates` (groups default to version updates). Every
-#    entry below therefore has a second, security-specific group. Without it,
-#    one advisory day produces one PR per affected package per manifest --
-#    which is how this repo saw 9 PRs on 2026-07-23 and 11 on 2026-09-01.
+#    they are not part of a multi-ecosystem group, and they are NOT covered by
+#    a `groups` entry unless that entry carries `applies-to: security-updates`
+#    (groups default to version updates). Every entry below therefore keeps a
+#    security-specific group. Without it, one advisory day produces one PR per
+#    affected package per manifest -- which is how this repo saw 9 PRs on
+#    2026-07-23 and 11 on 2026-09-01. The best grouping available for them is
+#    one PR per entry per advisory day.
 #
-# 2. The /static/programs entries at the bottom exist ONLY to batch security
+# 3. The /static/programs entries at the bottom exist ONLY to batch security
 #    PRs for 444 sample programs. They must keep `open-pull-requests-limit: 0`
-#    and `applies-to: security-updates`. See the header above that block.
+#    and `applies-to: security-updates`, and must NOT join the multi-ecosystem
+#    group. See the header above that block.
 
 version: 2
+
+multi-ecosystem-groups:
+  # The one monthly version-update PR. Its schedule replaces the per-entry
+  # schedules, and its commit-message applies to the combined PR.
+  monthly:
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps"
+
 updates:
   # ===========================================================================
   # Site build
+  #
+  # Every entry here and under "CI and tooling" follows the same shape:
+  #   multi-ecosystem-group: "monthly"  <- version updates go in the one PR
+  #   patterns: ["*"]                   <- required by the multi-ecosystem group
+  #   groups.security                   <- security PRs, batched per entry
+  #   labels: ["dependencies"]          <- kept on the entry so security PRs,
+  #                                        which are outside the group, still
+  #                                        get it (labels are additive)
+  # No `schedule` (the group owns it) and no `commit-message` (group-only).
   # ===========================================================================
 
   # Root package.json
   - package-ecosystem: "npm"
     directory: "/"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 1
+    multi-ecosystem-group: "monthly"
+    patterns: ["*"]
     groups:
-      all-dependencies:
-        patterns: ["*"]
       security:
         applies-to: security-updates
         patterns: ["*"]
@@ -42,20 +70,13 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
     labels: ["dependencies"]
-    commit-message:
-      prefix: "deps"
 
   # Theme package.json
   - package-ecosystem: "npm"
     directory: "/theme"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 1
+    multi-ecosystem-group: "monthly"
+    patterns: ["*"]
     groups:
-      all-dependencies:
-        patterns: ["*"]
       security:
         applies-to: security-updates
         patterns: ["*"]
@@ -64,21 +85,14 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
     labels: ["dependencies"]
-    commit-message:
-      prefix: "deps(theme)"
 
   # Stencil package.json. Built indirectly: scripts/ensure.sh installs it and
   # theme/webpack.config.js shells out to its build.
   - package-ecosystem: "npm"
     directory: "/theme/stencil"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 1
+    multi-ecosystem-group: "monthly"
+    patterns: ["*"]
     groups:
-      all-dependencies:
-        patterns: ["*"]
       security:
         applies-to: security-updates
         patterns: ["*"]
@@ -86,20 +100,13 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
     labels: ["dependencies"]
-    commit-message:
-      prefix: "deps(stencil)"
 
   # Infrastructure package.json
   - package-ecosystem: "npm"
     directory: "/infrastructure"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 1
+    multi-ecosystem-group: "monthly"
+    patterns: ["*"]
     groups:
-      all-dependencies:
-        patterns: ["*"]
       security:
         applies-to: security-updates
         patterns: ["*"]
@@ -107,23 +114,14 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
     labels: ["dependencies"]
-    commit-message:
-      prefix: "deps(infra)"
 
   # Versioned-docs generator: a sibling Pulumi program to /infrastructure with
-  # its own package.json and yarn.lock. Previously unconfigured, so its
-  # security PRs arrived with Dependabot's default naming and no prefix
-  # (e.g. #20772, "Bump js-yaml ... in the npm_and_yarn group").
+  # its own package.json and yarn.lock.
   - package-ecosystem: "npm"
     directory: "/infrastructure/versioned-docs"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 1
+    multi-ecosystem-group: "monthly"
+    patterns: ["*"]
     groups:
-      all-dependencies:
-        patterns: ["*"]
       security:
         applies-to: security-updates
         patterns: ["*"]
@@ -131,20 +129,13 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
     labels: ["dependencies"]
-    commit-message:
-      prefix: "deps(versioned-docs)"
 
   # snippet-sweep. The repo's only package-lock.json; everything else is yarn.
   - package-ecosystem: "npm"
     directory: "/scripts/snippet-sweep"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 1
+    multi-ecosystem-group: "monthly"
+    patterns: ["*"]
     groups:
-      all-dependencies:
-        patterns: ["*"]
       security:
         applies-to: security-updates
         patterns: ["*"]
@@ -152,8 +143,6 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
     labels: ["dependencies"]
-    commit-message:
-      prefix: "deps(snippet-sweep)"
 
   # ===========================================================================
   # CI and tooling
@@ -161,28 +150,18 @@ updates:
 
   - package-ecosystem: "github-actions"
     directory: "/"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 1
+    multi-ecosystem-group: "monthly"
+    patterns: ["*"]
     groups:
-      all-actions:
-        patterns: ["*"]
       security:
         applies-to: security-updates
         patterns: ["*"]
     ignore:
       - dependency-name: "pulumi/action-install-pulumi-cli"
     labels: ["dependencies"]
-    commit-message:
-      prefix: "ci"
 
-  # Python. This entry previously pointed at /scripts, where there is no
-  # Python manifest of any kind -- it matched nothing and had never produced
-  # a PR. The real Pipfiles are the three below. The root /Pipfile is
-  # deliberately omitted: it declares no packages and exists only to pin
-  # python_version.
+  # Python. The root /Pipfile is deliberately omitted: it declares no packages
+  # and exists only to pin python_version.
   #
   # Only /tools/pydocgen is expected to produce updates today. It is the one
   # directory with real constraints (sphinx >=7.1,<7.2) and a Pipfile.lock.
@@ -195,14 +174,9 @@ updates:
       - "/scripts/python"
       - "/scripts/image-borders"
       - "/tools/pydocgen"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 1
+    multi-ecosystem-group: "monthly"
+    patterns: ["*"]
     groups:
-      all-pip-dependencies:
-        patterns: ["*"]
       security:
         applies-to: security-updates
         patterns: ["*"]
@@ -210,24 +184,14 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
     labels: ["dependencies"]
-    commit-message:
-      prefix: "deps(pip)"
 
   # Dev container base image and features. No security-advisory feed exists
-  # for this ecosystem, so there is nothing to group under applies-to.
+  # for this ecosystem, so there is no security group.
   - package-ecosystem: "devcontainers"
     directory: "/"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 1
-    groups:
-      all-devcontainer-features:
-        patterns: ["*"]
+    multi-ecosystem-group: "monthly"
+    patterns: ["*"]
     labels: ["dependencies"]
-    commit-message:
-      prefix: "deps(devcontainer)"
 
   # ===========================================================================
   # Example programs -- SECURITY BATCHING ONLY
