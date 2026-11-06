@@ -12,10 +12,21 @@ Approving asserts only what the guide says an approval asserts: that the ⚠️ 
 
 Decline without working the guide (COMMENT, one sentence naming which rule applies) when any of these holds:
 
-- **External contribution.** The PR's head repository is not `pulumi/docs` (a fork, or a deleted fork), or the author's `author_association` is not `MEMBER`, `OWNER`, or `COLLABORATOR`.
-- **Bot-authored.** The PR author's account type is `Bot`, the login ends in `[bot]`, or it is listed under `bots:` in `.github/review-routing.yml` (`pulumi-bot` is a machine *user*, so the type test alone misses it).
+- **External contribution.** The PR's head repository is not `pulumi/docs` (a fork, or a deleted fork), or a human author's `author_association` is not `MEMBER`, `OWNER`, or `COLLABORATOR`. (App identities often show `NONE` or `CONTRIBUTOR`; for a bot author the head repository is the test.)
+- **Your own PR.** Never approve a PR you opened.
 - **Out-of-scope paths.** Any changed file outside the `docs` and `programs` subjects. In scope means the path starts with `content/docs/`, `content/what-is/`, `static/programs/`, or `scripts/programs/`, or is one of the docs data files `classify_path()` maps to `domain:docs` in `.claude/commands/docs-review/scripts/triage-classify.py`. Everything else stays with a person: blog and customer stories, marketing and pricing pages, `layouts/`, `theme/`, `assets/`, `static/`, `infrastructure/`, `scripts/`, `.github/`, `Makefile`, the review pipelines, and anything unclassified. When you aren't sure how a path classifies, decline.
 - **Waived or oversized.** The PR carries `review:waived` or `review:oversized`. Both mean the normal gates were set aside, and that call stays human.
+
+## Bot-authored PRs: clean or nothing
+
+A PR is bot-authored when the author's account type is `Bot`, the login ends in `[bot]`, or it is listed under `bots:` in `.github/review-routing.yml` (`pulumi-bot` is a machine *user*, so the type test alone misses it). Nobody but you reads these before merge, so you may approve one only when its review is **clean**:
+
+- the author card is current at the head (same rule as below),
+- every finding the review ever raised is recorded `fixed` in `REVIEW_STATE`, including rows already moved to ✅ *Resolved*. A `refuted`, `deferred`, `accepted`, or `not-applicable` finding on a bot's PR is the automation overruling its own review with nobody watching; decline and say which F-row,
+- the guide has no 🛡️ held dispute, and
+- every ⚠️ row holds, exactly as for a person's PR.
+
+Everything else in this file applies to bot PRs too, the out-of-scope paths included. Once the Sentinel counts your approval, it enforces the same "every finding fixed" bar in code, so a bot PR that fails it stays red whatever you decide.
 
 ## Find the cards, and trust only the real ones
 
@@ -39,7 +50,7 @@ The card formats are specified in `.claude/commands/docs-review/references/outpu
 1. **Nothing open on the author card.** Every `F<n>` row under 🚨 *Fix or disagree* and ❓ *Questions for you* must have an entry in `REVIEW_STATE.findings`. Any row without one is open, and an open row means no approval. The guide's *Waiting on the author* table (between `AUTHOR_STATE_BEGIN` and `AUTHOR_STATE_END`) must be empty or absent too.
 2. **The Sentinel agrees.** In the status comment, every gate other than G3 must be green or skipped for a reason other than a missing review. G3 is red because nobody has approved yet; that's the gate your approval is for.
 3. **Each ⚠️ row holds.** For every row under ⚠️ *Check these before approving*, open the cited file and lines in the diff and decide whether the concern is real. A row holds when the text is right as written, or the concern doesn't apply to what the PR actually changed. A row fails when the concern is real and a reader would be misled or blocked by it. Plain advisory bullets in that section are notes, not rows; read them, but they don't block on their own. Held disputes (🛡️) parked there are rows: the author disagreed and the model held its ground, so judge who is right.
-4. **Disposition notes are sane.** For findings recorded as `refuted`, `deferred`, `accepted`, or `not-applicable`, skim the note. A note that doesn't engage with the finding ("fine", "ignore") on a 🚨 row is a reason to decline and say so.
+4. **Disposition notes are sane.** For findings recorded as `refuted`, `deferred`, `accepted`, or `not-applicable`, skim the note. A note that doesn't engage with the finding ("fine", "ignore") on a 🚨 row is a reason to decline and say so. (On a bot's PR, any such disposition is a decline; see above.)
 
 ## Spot-check what the guide can't see
 
@@ -59,7 +70,7 @@ Read the diff yourself for the things the pipeline doesn't own:
 
 ## How to decide
 
-**APPROVE** when none of the never-approve rules apply, both cards are current at the head, nothing is open, every ⚠️ row holds, and the spot-check found nothing. Open the rationale with the risk level, name which ⚠️ rows you checked, and end with "Automated assessment, not a human review." Example:
+**APPROVE** when none of the never-approve rules apply, a bot's PR is clean, both cards are current at the head, nothing is open, every ⚠️ row holds, and the spot-check found nothing. Open the rationale with the risk level, name which ⚠️ rows you checked, and end with "Automated assessment, not a human review." Example:
 
 `LOW risk: Docs-only change to content/docs/iac/concepts/stacks.md; author card current at head with F1-F2 answered, ⚠️ F3 (stack output example) holds against the diff, build green. Automated assessment, not a human review.`
 
