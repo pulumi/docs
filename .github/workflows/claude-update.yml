@@ -90,6 +90,9 @@ jobs:
     outputs:
       fire: ${{ steps.command-gate.outputs.fire }}
       reason: ${{ steps.command-gate.outputs.reason }}
+      # accept | approve | none: a command the worker answers by code gets a
+      # sparse checkout and no tool install (see "Checkout repository").
+      quick: ${{ steps.shape.outputs.quick }}
     steps:
       - name: Checkout command gate (default branch, sparse)
         if: github.event_name != 'workflow_dispatch'
@@ -115,6 +118,23 @@ jobs:
           python3 .command-gate/.claude/commands/docs-review/scripts/command-gate.py check \
             --command update-review --exclude new-review \
             --body-env BODY --title-env TITLE | tee -a "$GITHUB_OUTPUT"
+
+      - name: Quick-command shape
+        id: shape
+        if: github.event_name != 'workflow_dispatch' && steps.command-gate.outputs.fire == 'true'
+        continue-on-error: true
+        env:
+          BODY: ${{ github.event.comment.body || github.event.review.body }}
+          AUTHOR: ${{ github.event.comment.user.login || github.event.review.user.login }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login || github.event.issue.user.login }}
+        run: |
+          GATE=.command-gate/.claude/commands/docs-review/scripts/command-gate.py
+          if grep -q '"shape"' "$GATE"; then
+            python3 "$GATE" shape --body-env BODY --author-env AUTHOR --pr-author-env PR_AUTHOR \
+              | tee -a "$GITHUB_OUTPUT"
+          else
+            echo "quick=none" >> "$GITHUB_OUTPUT"
+          fi
 
   claude-update:
     needs: gate
@@ -205,17 +225,40 @@ jobs:
         uses: pulumi/esc-action@v3
 
       - name: Checkout repository
-        if: steps.head.outputs.superseded != 'true'
+        if: |
+          steps.head.outputs.superseded != 'true' &&
+          needs.gate.outputs.quick != 'accept' && needs.gate.outputs.quick != 'approve'
         uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           ref: ${{ steps.head.outputs.sha }}
           fetch-depth: 1
 
+      # A command the quick step answers by code (accept, approve) needs the
+      # review scripts and infrastructure/Pulumi.yaml (the bucket lookup),
+      # not the full worktree or the toolchain: ~21 s + ~7 s of a run that
+      # otherwise takes about a minute. If quick hands the request to the
+      # model after all, "Complete the checkout" below fills the rest in.
+      - name: Checkout repository (quick command, sparse)
+        if: |
+          steps.head.outputs.superseded != 'true' &&
+          (needs.gate.outputs.quick == 'accept' || needs.gate.outputs.quick == 'approve')
+        uses: actions/checkout@v7
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          ref: ${{ steps.head.outputs.sha }}
+          fetch-depth: 1
+          sparse-checkout: |
+            .claude/commands/docs-review
+            infrastructure
+            .github
+
       # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
       # step below has the pinned vale binary on PATH.
       - name: Install mise-managed tools
-        if: steps.head.outputs.superseded != 'true'
+        if: |
+          steps.head.outputs.superseded != 'true' &&
+          needs.gate.outputs.quick != 'accept' && needs.gate.outputs.quick != 'approve'
         uses: jdx/mise-action@v4
         with:
           cache: true
@@ -464,6 +507,25 @@ jobs:
             --author-card .review-card-author.md --brief-card .review-card-brief.md \
             --update-out .review-update.json --reply-out .review-quick-reply.md \
             | tee -a "$GITHUB_OUTPUT"
+
+      # The gate guessed "quick" from the text, but quick handed the request
+      # to the model (no v3 card, an id the live card doesn't have...): give
+      # the model the worktree and tools it would have had. In place, not a
+      # second actions/checkout, which would wipe the cards and .review-tools
+      # sitting untracked in the workspace.
+      - name: Complete the checkout (quick fell back to the model)
+        id: full-checkout
+        if: |
+          steps.head.outputs.superseded != 'true' &&
+          (needs.gate.outputs.quick == 'accept' || needs.gate.outputs.quick == 'approve') &&
+          steps.quick.outputs.mode != 'accept' && steps.quick.outputs.mode != 'reply'
+        run: git sparse-checkout disable
+
+      - name: Install mise-managed tools (quick fell back to the model)
+        if: steps.full-checkout.outcome == 'success'
+        uses: jdx/mise-action@v4
+        with:
+          cache: true
 
       # Flip the PR's state label to review:in-progress for the duration of
       # the refresh — mirrors claude-code-review.yml's early step on the

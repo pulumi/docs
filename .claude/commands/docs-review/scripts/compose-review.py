@@ -2487,7 +2487,19 @@ def orient_audience(body: str) -> tuple[bool, bool]:
     return ("<!-- CLAUDE_REVIEW_AUTOMATED_AUTHOR" in body, AUTOFIX_AUTHOR_MARKER in body)
 
 
-def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool = False) -> list[str]:
+_OPEN_ROW_RE = re.compile(r"^\| \*\*(F\d+)\*\* \|", re.M)
+
+
+def first_open_id(author_body: str) -> str:
+    """The first finding id in the card's open (🚨/❓) tables, or "F1". Rows
+    under "Resolved since last review" don't count."""
+    head = author_body.split("### ✅", 1)[0]
+    m = _OPEN_ROW_RE.search(head)
+    return m.group(1) if m else "F1"
+
+
+def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool = False,
+                         first_id: str = "F1") -> list[str]:
     """The callout under the author header. Owned here so the refresh lanes
     (build-evidence._fix_header) can swap it when the count crosses zero —
     a "nothing blocks merge" card must not open with "needs your answers
@@ -2497,7 +2509,12 @@ def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool
     because the full **How to answer** footer is collapsed (2026-09-25:
     authors lost the open items under a screenful of instructions). The
     callout is the part of the card everyone reads; the fold keeps the
-    worked examples one click away."""
+    worked examples one click away.
+
+    The author form leads with `/update-review accept`, which command-gate.py
+    answers in about a minute with no model run. The automated form keeps the
+    model-read shape: there the reader is a reviewer, and an accept from
+    anyone but the PR's author goes to the model anyway."""
     if automated and n_blocking:
         # Nobody on the author side will answer. Say who does: the reviewer
         # triage requested, after the glow-up autofix's pass where it runs.
@@ -2527,9 +2544,8 @@ def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool
             "> [!IMPORTANT]",
             "> **You = the PR author.** Answer every item below before this PR can merge.",
             ">",
-            "> **To answer:** push a fix, or reply "
-            "`/update-review F1: <what you fixed, why it's wrong, or \"accepting as-is — why\">`. "
-            "A reply without `/update-review` at the start of a line doesn't count. "
+            f"> **To answer:** push a fix, ship it as-is with `/update-review accept {first_id} <why>`, "
+            f"or dispute it with `/update-review {first_id}: <why it's wrong>`. "
             "Examples: **How to answer** at the bottom.",
         ]
     return [
@@ -2957,7 +2973,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     else:
         header_verb = AUTHOR_HEADER_NOTHING_BLOCKS
     marker = automated_marker(getattr(args, "head_branch", ""))
-    orient = render_author_orient(n_blocking, bool(marker), marker == AUTOFIX_AUTHOR_MARKER)
+    first_id = next((f["id"] for f in findings if f["bucket"] in ("outstanding", "author-answer")), "F1")
+    orient = render_author_orient(n_blocking, bool(marker), marker == AUTOFIX_AUTHOR_MARKER, first_id)
 
     def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
         if not rows:

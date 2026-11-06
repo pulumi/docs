@@ -189,7 +189,7 @@ says what's red without anyone scrolling back to the status comment. Only
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — branch protection still asks for an approval); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | push / `/update-review` / `/new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `/update-review …` phrasing |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded; or, the same, at a commit the head has only merged the base into since (Base-only merges) | the deploy is dispatched automatically (`staging-deploy-auto.yml`); to retry, dispatch "Build and deploy testing" at the branch (never "Build and deploy", which is production). If the staging workflow is disabled, the row says so and names the fix, and a failed deploy or dispatch is quoted at the top of the row |
-| G5 oversized-ack | `review:oversized` PRs: an approval at head from a non-bot human with write access (not the author) whose comment has `/oversized-ack` at the start of a line | where the command goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
+| G5 oversized-ack | `review:oversized` PRs: an approval at head from an owner, org member or collaborator (GitHub's `author_association`; not a bot or the author) whose comment has `/oversized-ack` at the start of a line | where the command goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
 
 **There is no G3.** It was the approver gate (which teams, which bots, a
 repo admin, approval at the exact head), and it duplicated GitHub branch
@@ -252,7 +252,7 @@ It fails closed at every step — unreadable actor, failed membership lookup,
 actor on no routing team — and an unauthorized waive is *refused out loud*
 in the status title, the status comment and the summary rather than silently
 ignored, so the same person doesn't try it twice. The membership lookup uses
-the org-scoped token G5 uses, so an outage of that token refuses the waive
+the org-scoped token, which the workflow fetches from ESC only for a PR carrying `review:waived`, so an outage of that token refuses the waive
 too; the status comment then names a repo admin's merge as the way through,
 and doesn't offer a waive that can't work. A waive over a red G4 says so in the summary: the deploy change
 hasn't been applied on staging, so the first production deploy is its first

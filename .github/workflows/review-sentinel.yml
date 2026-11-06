@@ -206,12 +206,29 @@ jobs:
               ;;
           esac
 
-      - name: Fetch secrets from ESC
-        # continue-on-error: sentinel.py treats a missing/failing team-read
-        # token as gate-3 ERROR ⇒ action_required — fail closed, never
-        # fail-open and never fail the whole evaluation (the other four
-        # gates still report). Also lets the fork battery run without ESC.
+      # The org-scoped token is read for one thing: authorizing a
+      # `review:waived` label (team membership). Every other run skips the
+      # ESC fetch (~5 s) and never holds the token. Labels come from the API,
+      # not the event, because workflow_run and dispatch events carry none.
+      # A failed read fetches the token anyway: the waive must not be refused
+      # because a label read hiccuped.
+      - name: Does this PR carry review:waived?
         if: steps.pr.outputs.pr != ''
+        id: waive
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if labels=$(gh api "repos/${{ github.repository }}/issues/${{ steps.pr.outputs.pr }}/labels" --jq '.[].name' 2>/dev/null); then
+            if grep -qx 'review:waived' <<<"$labels"; then echo "waived=true" >> "$GITHUB_OUTPUT"; else echo "waived=false" >> "$GITHUB_OUTPUT"; fi
+          else
+            echo "waived=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch secrets from ESC
+        # continue-on-error: without the token sentinel.py refuses the waive
+        # out loud (fail closed) and the gates still report. Also lets the
+        # fork battery run without ESC.
+        if: steps.pr.outputs.pr != '' && steps.waive.outputs.waived == 'true'
         id: esc-secrets
         continue-on-error: true
         uses: pulumi/esc-action@v3
@@ -242,14 +259,26 @@ jobs:
             .github
           sparse-checkout-cone-mode: true
 
-      - name: Set up Python
+      # The runner's own Python usually has PyYAML already; installing a
+      # Python and a package for one import cost ~5 s on every run.
+      - name: Check for PyYAML
         if: steps.pr.outputs.pr != ''
+        id: pyyaml
+        run: |
+          if python3 -c 'import sys, yaml; assert sys.version_info >= (3, 10)' 2>/dev/null; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.pr.outputs.pr != '' && steps.pyyaml.outputs.ok != 'true'
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Install evaluator deps
-        if: steps.pr.outputs.pr != ''
+        if: steps.pr.outputs.pr != '' && steps.pyyaml.outputs.ok != 'true'
         run: python3 -m pip install --quiet pyyaml
 
       - name: Evaluate

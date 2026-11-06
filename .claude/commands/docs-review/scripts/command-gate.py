@@ -579,6 +579,28 @@ def _cmd_legacy(args: argparse.Namespace) -> int:
     return 0
 
 
+def quick_shape(body: str, actor: str, pr_author: str) -> str:
+    """`accept`, `approve`, or `none`: what `quick` would do with this body,
+    judged from the text and the two logins alone (no card). The gate job
+    reads it to give a quick command a sparse checkout and no tool install;
+    the worker still decides, and falls back to the full setup when `quick`
+    hands the request to the model."""
+    parsed = parse_quick(body)
+    if parsed is None:
+        return "none"
+    if parsed[0] == "approve":
+        return "approve"
+    return "accept" if pr_author and actor.lower() == pr_author.lower() else "none"
+
+
+def _cmd_shape(args: argparse.Namespace) -> int:
+    body = os.environ.get(args.body_env, "")
+    actor = os.environ.get(args.author_env, "") if args.author_env else ""
+    pr_author = os.environ.get(args.pr_author_env, "") if args.pr_author_env else ""
+    _emit({"quick": quick_shape(body, actor, pr_author)})
+    return 0
+
+
 def _cmd_quick(args: argparse.Namespace) -> int:
     body = os.environ.get(args.body_env, "")
     actor = os.environ.get(args.author_env, "") if args.author_env else ""
@@ -835,6 +857,10 @@ def _self_test() -> int:
     check("approve reply's commands can't fire", not commands_in(ap["reply"]))
     check("accept reply's commands can't fire", not commands_in(q["reply"]))
 
+    check("shape: an author's accept is quick", quick_shape("/update-review accept F1", "a", "a") == "accept")
+    check("shape: someone else's accept is not", quick_shape("/update-review accept all", "b", "a") == "none")
+    check("shape: approve is quick for anyone", quick_shape("/update-review approve", "b", "a") == "approve")
+    check("shape: a sentence is not", quick_shape("/update-review F1: wrong because", "a", "a") == "none")
     print("command-gate self-test:", "PASS" if failures == 0 else f"{failures} FAILED")
     return 1 if failures else 0
 
@@ -873,6 +899,11 @@ def main(argv: list[str] | None = None) -> int:
     qk.add_argument("--update-out", required=True, help="where an accept writes .review-update.json")
     qk.add_argument("--reply-out", required=True, help="where a reply's text is written")
 
+    sh = sub.add_parser("shape", help="would `quick` answer this body? (accept/approve/none, no card read)")
+    sh.add_argument("--body-env", required=True, help="env var holding the body")
+    sh.add_argument("--author-env", default=None, help="env var holding the commenter's login")
+    sh.add_argument("--pr-author-env", default=None, help="env var holding the PR author's login")
+
     args = parser.parse_args(argv)
     if args.self_test:
         return _self_test()
@@ -884,6 +915,8 @@ def main(argv: list[str] | None = None) -> int:
         return _cmd_legacy(args)
     if args.cmd == "quick":
         return _cmd_quick(args)
+    if args.cmd == "shape":
+        return _cmd_shape(args)
     parser.print_help()
     return 2
 

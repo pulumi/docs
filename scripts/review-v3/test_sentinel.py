@@ -417,11 +417,12 @@ def brief_comment():
     }
 
 
-def approval(user, utype="User", body="", commit_id=None):
+def approval(user, utype="User", body="", commit_id=None, assoc="MEMBER"):
     """An APPROVED review. `commit_id` defaults to the PR head, as GitHub
-    always sends it — pass an older SHA to model a pre-push approval."""
+    always sends it — pass an older SHA to model a pre-push approval.
+    `assoc` is GitHub's `author_association` (NONE for a passer-by)."""
     return {"state": "APPROVED", "user": {"login": user, "type": utype},
-            "body": body, "commit_id": commit_id or HEAD}
+            "body": body, "commit_id": commit_id or HEAD, "author_association": assoc}
 
 
 def _state_with(fids, disposition="refuted", note="because"):
@@ -1011,23 +1012,28 @@ def test_a_waive_clears_an_error_and_g4():
     assert infra.title == "Waived by boss"
 
 
-def test_an_org_token_outage_refuses_the_waive_and_errors_g5():
-    """The waive's authorization reads the same org-scoped token G5 does, so
-    a full outage refuses both. Fail-closed on purpose; the comment says the
-    way through and doesn't recommend a waive that can't work."""
-    gh = StubGh(pr=pr_meta(labels=["review:waived", "review:oversized"]),
-                files=[docs_file_substantive()],
-                reviews=[approval("chris", body=sentinel.OVERSIZED_ACK)], label_events=_waive_events("chris"),
-                membership_error_users={"chris"}, permission_error_users={"chris"})
+def test_an_org_token_outage_refuses_the_waive_and_says_the_way_through():
+    """The waive's authorization reads the org-scoped token, so an outage
+    refuses it. Fail-closed on purpose; the comment names an admin's merge
+    and doesn't recommend a waive that can't work."""
+    gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
+                label_events=_waive_events("chris"), membership_error_users={"chris"})
     v = sentinel.evaluate(gh, CONFIG)
-    assert v.conclusion == "action_required" and not v.waived
-    assert v.title.startswith("review:waived refused · Couldn't check the oversized ack"), v.title
-    assert _gate(v, "G5").status == "error"
-    assert "repo admin merging past the check" in _gate(v, "G5").message
+    assert not v.waived and v.conclusion == "failure"
+    assert v.title.startswith("review:waived refused"), v.title
     body = sentinel.render_status_comment(v)
     assert "was not honored" in body and "@chris" not in body
     assert "a re-applied waive fails the same way" in body, "retrying can't help in an outage"
-    assert "Break glass" not in body
+    assert "repo admin merging past the check" in body
+
+
+def test_g5_needs_no_org_token():
+    """G5 reads GitHub's author_association, never a permission endpoint."""
+    gh = StubGh(pr=pr_meta(labels=["review:oversized"]), files=[docs_file_substantive()],
+                reviews=[approval("mkt", body=sentinel.OVERSIZED_ACK)],
+                permission_error_users={"mkt"})
+    assert _gate(sentinel.evaluate(gh, CONFIG), "G5").status == "ok"
+    assert gh.permission_calls == []
 
 
 def test_merge_box_title_says_what_the_merge_waits_on():
@@ -1159,7 +1165,7 @@ def test_g5_ack_ignores_bots_the_author_and_read_only_accounts():
     for reviews, perms in (([approval("writer", body=ack)], {"writer": "write"}),
                            ([approval("pulumi-bot", body=ack)], {"pulumi-bot": "admin"}),
                            ([approval("some-app[bot]", utype="Bot", body=ack)], {"some-app[bot]": "write"}),
-                           ([approval("rando", body=ack)], {"rando": "read"}),
+                           ([approval("rando", body=ack, assoc="CONTRIBUTOR")], {}),
                            ([approval("late", body=ack, commit_id="b" * 40)], {"late": "write"})):
         v = sentinel.evaluate(StubGh(**base, reviews=reviews, permissions=perms), CONFIG)
         assert _gate(v, "G5").status == "red", (reviews[0]["user"], _gate(v, "G5"))
@@ -1376,7 +1382,7 @@ def test_the_oversized_ack_must_come_from_a_qualifying_approver():
 
     bystander = sentinel.evaluate(StubGh(**dict(base, reviews=[
         approval("guild"),
-        approval("randomer", body=f"lgtm\n{sentinel.OVERSIZED_ACK}"),
+        approval("randomer", body=f"lgtm\n{sentinel.OVERSIZED_ACK}", assoc="NONE"),
     ])), CONFIG)
     assert _gate(bystander, "G5").status == "red"
 

@@ -100,11 +100,10 @@ head keeps a PR on the review track instead, because a stale card with an
 open finding must not pass on a skip label.
 
 I/O lives behind the `Gh` wrapper (subprocess `gh api`) so tests
-substitute a stub. Two reads need an org-scoped token (the default
-GITHUB_TOKEN can do neither): the waiver's team membership (`review:waived`)
-and, on an oversized PR, the acking approver's repo permission (G5). The
-workflow passes PULUMI_BOT_TOKEN as $GH_TOKEN_TEAM_READ, used for those
-endpoints only.
+substitute a stub. One read needs an org-scoped token (the default
+GITHUB_TOKEN can't read team membership): the waiver's team membership, on a
+PR carrying `review:waived`. The workflow fetches PULUMI_BOT_TOKEN from ESC
+only then and passes it as $GH_TOKEN_TEAM_READ, used for that endpoint only.
 """
 
 from __future__ import annotations
@@ -222,22 +221,12 @@ BREAK_GLASS = (
 )
 
 
-# Error rows for the lookups that need the org-scoped token (G5's permission
-# read). When that token is what failed, the waive is refused by the same
-# lookup, so the one way through is an admin's merge.
-_TOKEN_HINT = (
-    "If a re-run fails the same way, the org-scoped token (`PULUMI_BOT_TOKEN`, "
-    "from ESC) is likely down; `review:waived` can't be verified without it "
-    "either, so a repo admin merging past the check is the way through. "
-)
 
 
 def _waive_can_clear(g: Gate) -> bool:
-    """Whether recommending the waive for this gate would work. Every red
-    gate, and every error but G5's: G5 errors when the org-scoped token
-    can't read permissions, and the waive's own authorization reads them
-    with the same token, so offering it there sends people in a circle."""
-    return g.status == "red" or (g.status == "error" and not g.name.startswith("G5"))
+    """Whether recommending the waive for this gate would work: every red or
+    errored gate (no gate reads the org-scoped token the waive needs)."""
+    return g.status in ("red", "error")
 
 
 # The merge box shows the status description and nothing else, so it has to
@@ -450,15 +439,6 @@ class Gh:
         return self._org_scoped_lookup(
             f"orgs/{org}/teams/{team_slug}/memberships/{user}", ".state",
             f"team membership ({org}/{team_slug}/{user})")
-
-    def get_repo_permission(self, user: str) -> str:
-        """The user's effective permission on the repo: admin/write/read/none.
-
-        Used by G5 (the acking approver needs write or better). The endpoint
-        wants push access, which the default GITHUB_TOKEN does not have."""
-        return self._org_scoped_lookup(
-            f"repos/{self.repo}/collaborators/{user}/permission", ".permission",
-            f"repo permission ({self.repo}/{user})")
 
     def list_commits(self) -> list[dict]:
         out = self._run(["api", "--paginate", f"repos/{self.repo}/pulls/{self.pr}/commits"])
@@ -1237,38 +1217,32 @@ def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool
 # ---- Evaluation ---------------------------------------------------------
 
 
-# GitHub's effective-permission field (`.permission` on the collaborator
-# permission endpoint) folds `maintain` into `write` and `triage` into `read`;
-# `maintain` is listed anyway so a future API that stops folding it cannot
-# silently turn a maintainer's approval into a miss.
-WRITE_PERMISSIONS = frozenset({"admin", "maintain", "write"})
 
 
-def _oversized_ack(gh: Gh, config: routing.Config, reviews: list[dict],
-                   head_sha: str, author: str) -> tuple[str, str]:
-    """(acking login, lookup error) for G5. The ack has to come from someone
-    whose approval branch protection would count: a human with write access,
-    approving this head, who isn't the author. Anyone with a GitHub account
-    can leave an APPROVED review on a public repo, so the permission read is
-    what keeps a bystander's ack from clearing the gate."""
+# Who may supply G5's ack: GitHub's own `author_association` on the review.
+# Branch protection still needs a write-access approval to merge; this only
+# keeps a passer-by (anyone can review a public repo) from supplying the ack,
+# and it needs no API call or org token.
+ACK_ASSOCIATIONS = frozenset({"OWNER", "MEMBER", "COLLABORATOR"})
+
+
+def _oversized_ack(config: routing.Config, reviews: list[dict],
+                   head_sha: str, author: str) -> str:
+    """The login whose approval at this head carries `/oversized-ack`, or "".
+    Not the author, not a bot, and an owner, org member or collaborator."""
     latest: dict[str, dict] = {}
     for r in reviews:
         user = (r.get("user") or {}).get("login") or ""
         if user and r.get("state") != "COMMENTED":
             latest[user] = r
-    error = ""
     for login, r in latest.items():
         u = r.get("user") or {}
-        if (r.get("state") != "APPROVED" or r.get("commit_id") != head_sha or login == author
-                or u.get("type") == "Bot" or login in set(config.bots or [])
-                or not _has_oversized_ack(r.get("body") or "")):
-            continue
-        try:
-            if gh.get_repo_permission(login) in WRITE_PERMISSIONS:
-                return login, ""
-        except SentinelDataError as exc:
-            error = error or str(exc)
-    return "", error
+        if (r.get("state") == "APPROVED" and r.get("commit_id") == head_sha and login != author
+                and u.get("type") != "Bot" and login not in set(config.bots or [])
+                and (r.get("author_association") or "").upper() in ACK_ASSOCIATIONS
+                and _has_oversized_ack(r.get("body") or "")):
+            return login
+    return ""
 
 
 def _stamp_report_only(verdict: Verdict) -> Verdict:
@@ -1599,17 +1573,10 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
 
     # G5 oversized-ack ----------------------------------------------------
     if oversized:
-        acked, ack_error = _oversized_ack(gh, config, reviews, head_sha, author)
+        acked = _oversized_ack(config, reviews, head_sha, author)
         if acked:
             gates.append(Gate("G5 oversized-ack", "ok",
                               f"`{acked}` confirmed a hand review with `{OVERSIZED_ACK}`"))
-        elif ack_error:
-            gates.append(Gate(
-                "G5 oversized-ack", "error",
-                "Couldn't verify the acking approver's repo permission -- re-run the "
-                "check. " + _TOKEN_HINT + ack_error,
-                short="couldn't verify the approver -- re-run",
-            ))
         else:
             # Say who, where, and what doesn't count. The near misses (a PR
             # comment, a line comment, an approval from before the last
@@ -1617,8 +1584,8 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             number = pr.get("number") or "<number>"
             gates.append(Gate(
                 "G5 oversized-ack", "red",
-                "The automated review doesn't run on an oversized PR, so an approver "
-                "with write access confirms they reviewed it by hand: submit an **Approve** "
+                "The automated review doesn't run on an oversized PR, so a Pulumi "
+                "approver (org member or collaborator) confirms they reviewed it by hand: submit an **Approve** "
                 f"review on the latest commit with `{OVERSIZED_ACK}` at the start of a line "
                 f"in its comment, or run `gh pr review {number} --approve --body {OVERSIZED_ACK}`. "
                 "Already approved? Approve again with it, or edit your approval's comment to "
@@ -1754,8 +1721,10 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
         n = len(verdict.blocking_ids)
         details = f"Details: {_status_link(comments)}."
         if n:
-            line = (f"⛔ **{n} item(s) block merge** — fix and push, or reply "
-                    f"`/update-review <your reasoning>`. {details}")
+            first = verdict.blocking_ids[0] if verdict.blocking_ids else "F1"
+            line = (f"⛔ **{n} item(s) block merge** — fix and push, ship as-is with "
+                    f"`/update-review accept {first}`, or reply `/update-review {first}: <why>`. "
+                    f"{details}")
         else:
             # No finding blocks, so the card right under this line says "nothing
             # blocks merge" and has nothing to fix or answer. "⛔ merge is

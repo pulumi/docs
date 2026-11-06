@@ -43,6 +43,7 @@ import json
 import os
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor
 
 from publish_guard import CHECK_NAME
 
@@ -133,11 +134,19 @@ def main(argv: list[str] | None = None) -> int:
     except Exception as exc:
         print(f"::warning::Could not list existing statuses ({exc}); stale gate rows may linger.")
         existing = []
-    for g in gate_payloads(verdict, a.run_url, existing):
+    # In parallel: four sequential `gh api` calls were ~4 s of a ~30 s job.
+    def _post(g: dict) -> str | None:
         try:
             _gh(["api", "--method", "POST", f"repos/{a.repo}/statuses/{head}", "--input", "-"], g)
+            return None
         except Exception as exc:
-            print(f"::warning::Could not publish {g['context']} ({exc}); it is informational only.")
+            return f"::warning::Could not publish {g['context']} ({exc}); it is informational only."
+    gates = gate_payloads(verdict, a.run_url, existing)
+    if gates:
+        with ThreadPoolExecutor(max_workers=len(gates)) as pool:
+            for warning in pool.map(_post, gates):
+                if warning:
+                    print(warning)
     _gh(["api", "--method", "POST", f"repos/{a.repo}/statuses/{head}", "--input", "-"], payload)
     print(f"published: Sentinel {payload['state']} — {payload['description']}")
 
