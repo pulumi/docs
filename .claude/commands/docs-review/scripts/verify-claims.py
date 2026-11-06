@@ -1687,6 +1687,22 @@ def process_claim(api_key: str, claim: dict, fetched_by_url: dict[str, dict],
     try:
         rec = run_verifier(api_key, claim, route, evidence_pack, model, repo_root, dry_run,
                            impl_refs=impl_refs)
+        # A cited page that was fetched but doesn't address the claim (the
+        # Cloudflare post on pulumi/docs#22397 described the compromise, not
+        # what Pulumi's release does) says nothing about Pulumi's product.
+        # When the PR cites the change that ships it, check there once, so
+        # a private implementing change is named as the reason rather than
+        # leaving a bare "the page didn't say" for the author to answer.
+        if (route == "pass2" and impl_refs and rec.get("verdict") == "unverifiable"
+                and not rec.get("turn_cap_exhausted")):
+            rec2 = run_verifier(api_key, claim, "pass1", None, model, repo_root, dry_run,
+                                allow_escalate=False, impl_refs=impl_refs)
+            for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):
+                rec2["model_usage"][k] = rec2["model_usage"].get(k, 0) + rec["model_usage"].get(k, 0)
+            rec2["model_usage"]["turns"] = rec2["model_usage"].get("turns", 0) + rec["model_usage"].get("turns", 0)
+            rec2["evidence"] = (f"(the cited page didn't address it, so checked against the PR's "
+                                f"implementing change) {rec2['evidence']}")
+            return rec2, None
         return rec, None
     except Exception as e:  # noqa: BLE001
         # NOTE: the "verifier failed:" prefix (err) and "verify-claims.py errored
@@ -1812,7 +1828,9 @@ def main() -> int:
     impl_refs: list[str] = []
     impl_refs_unreadable: list[str] = []
     impl_refs_via_token: list[str] = []
-    if not args.dry_run and (n_by_route["pass1"] or n_by_route["pass3"]):
+    # pass2 too: a cited page that doesn't address the claim hops to pass1
+    # (`process_claim`), and that hop needs the refs.
+    if not args.dry_run and routed_claims:
         impl_refs = fetch_impl_refs(args.pr or "", args.repo or "")
         if impl_refs:
             print(f"verify-claims: linked impl refs from PR body: {', '.join(impl_refs)}", file=sys.stderr)
