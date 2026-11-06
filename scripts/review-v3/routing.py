@@ -1164,7 +1164,7 @@ def self_test() -> int:
     _, errs, _ = validate_raw(bad)
     check("warn_days >= close_days rejected", any("must be less than" in e for e in errs))
 
-    ok_stale = {"close_days": 30, "notice_days": 7, "extended_label": "long-running",
+    ok_stale = {"close_days": 30, "notice_days": 7, "extended_label": "review:long-running",
                 "extended_close_days": 90}
     good = copy.deepcopy(_CANNED_CONFIG)
     good["stale_prs"] = dict(ok_stale)

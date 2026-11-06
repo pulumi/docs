@@ -33,7 +33,7 @@ sweep_mod = _load("stale_pr_sweep_under_test", HERE / "stale-pr-sweep.py")
 import routing  # noqa: E402
 
 NOW = datetime(2026, 11, 2, 15, 17, tzinfo=timezone.utc)
-STALE = {"close_days": 30, "notice_days": 7, "extended_label": "long-running",
+STALE = {"close_days": 30, "notice_days": 7, "extended_label": "review:long-running",
          "extended_close_days": 90}
 
 RAW_CONFIG = copy.deepcopy(routing._CANNED_CONFIG)
@@ -227,22 +227,22 @@ def test_heads_up_from_a_human_does_not_count():
 
 
 def test_extended_label_buys_the_longer_window():
-    v = evaluate(pr(labels=["long-running"]), [commit(40)])
+    v = evaluate(pr(labels=["review:long-running"]), [commit(40)])
     assert v["type"] == "none" and v["extended"] and v["close_days"] == 90
     assert v["closes_in_days"] == 50
 
 
 def test_extended_label_is_a_grace_period_not_an_exemption():
-    v = evaluate(pr(labels=["long-running"]), [commit(84)])
+    v = evaluate(pr(labels=["review:long-running"]), [commit(84)])
     assert v["type"] == "warn" and v["close_days"] == 90
-    v = evaluate(pr(labels=["long-running"]), [commit(91), heads_up(8, close_days=90)])
+    v = evaluate(pr(labels=["review:long-running"]), [commit(91), heads_up(8, close_days=90)])
     assert v["type"] == "close"
 
 
 def test_label_added_after_heads_up_needs_a_new_heads_up_for_its_window():
     # Warned on the 30-day window, then labeled: no close at 30, and the 90-day
     # window gets its own heads-up.
-    labeled = pr(labels=["long-running"])
+    labeled = pr(labels=["review:long-running"])
     v = evaluate(labeled, [commit(31), heads_up(8, close_days=30)])
     assert v["type"] == "none"
     v = evaluate(labeled, [commit(85), heads_up(62, close_days=30)])
@@ -337,9 +337,9 @@ def test_comment_bodies_carry_parseable_markers():
 
 
 def test_base_window_copy_explains_the_label():
-    assert "`long-running`" in sweep_mod.close_body(30, False, 30, STALE)
+    assert "`review:long-running`" in sweep_mod.close_body(30, False, 30, STALE)
     assert "90 days" in sweep_mod.close_body(30, False, 30, STALE)
-    assert "`long-running`" in sweep_mod.warn_body(30, False, 23, 7, STALE)
+    assert "`review:long-running`" in sweep_mod.warn_body(30, False, 23, 7, STALE)
 
 
 def test_comment_copy_has_no_em_dashes():
@@ -353,7 +353,7 @@ def test_comment_copy_has_no_em_dashes():
 def test_shipped_policy_matches_the_agreed_numbers():
     real = routing.load_config(HERE.parents[1] / ".github" / "review-routing.yml")
     assert real.stale_prs == {"close_days": 30, "notice_days": 7,
-                              "extended_label": "long-running", "extended_close_days": 90}
+                              "extended_label": "review:long-running", "extended_close_days": 90}
 
 
 def test_step_summary_renders():

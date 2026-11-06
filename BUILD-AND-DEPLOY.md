@@ -1301,7 +1301,7 @@ flowchart TD
 | `claude-social-review.yml` | PRs touching `content/blog/*/index.md`; comments; `workflow_dispatch` | Reviews the social copy in blog frontmatter and posts a PASS/FAIL comment. Doesn't re-run when the copy is unchanged. |
 | `review-label-reconcile.yml` | Every 2 hours at :23 | Repairs `review:*` labels when a push fired no events (pushes with `GITHUB_TOKEN` or by the Copilot agent) and clears `review:in-progress` left by a run that died. |
 | `review-sla-sweep.yml` | Every 2 hours at :53, when `REVIEW_V3_SLA=1` | Reviewer-wait SLA escalations and author-staleness warnings and closes, per the `sla:` and `author_staleness:` blocks in `review-routing.yml`. |
-| `stale-pr-sweep.yml` | Daily at 14:41, when `STALE_PR_SWEEP=1` | Closes any open PR, drafts included, after 30 days without activity (90 with the `long-running` label), with a heads-up comment a week before, per the `stale_prs:` block in `review-routing.yml`. Runs as pulumi-bot so its closes fire `pr-closed.yml`. |
+| `stale-pr-sweep.yml` | Daily at 14:41, when `STALE_PR_SWEEP=1` | Closes any open PR, drafts included, after 30 days without activity (90 with the `review:long-running` label), with a heads-up comment a week before, per the `stale_prs:` block in `review-routing.yml`. Runs as pulumi-bot so its closes fire `pr-closed.yml`. |
 | `weekly-digest.yml` | Mondays 14:00 UTC | Posts two Slack messages to `#docs-ops`: the PR review queue and the issue backlog. |
 
 The workflows that run review commands or answer `@claude` all check that the commenter has write access. The [review commands](CONTRIBUTING.md#review-commands) are slash commands at the start of a line, judged by `command-gate.py`; `@claude` is only the general assistant. The `review:*` labels follow this state machine:
@@ -1499,7 +1499,7 @@ These repository variables turn automation on, off, or up and down without a cod
 | `REVIEW_V3_ROUTING` | Triage label-only pass on every push | Off; `'1'` on |
 | `REVIEW_V3_SENTINEL` | Sentinel check | Doesn't run, which holds every PR for non-admins because `master` requires the status; `'report'` is a neutral preview; `'1'` enforces |
 | `REVIEW_V3_SLA` | Reviewer SLA escalations and author-staleness closes | Off; `'1'` on |
-| `STALE_PR_SWEEP` | Heads-ups and closes for PRs with no activity in 30 days (90 with `long-running`) | Off; `'1'` on |
+| `STALE_PR_SWEEP` | Heads-ups and closes for PRs with no activity in 30 days (90 with `review:long-running`) | Off; `'1'` on |
 | `DEPS_AUTO_MERGE` | Dependabot auto-approve and auto-merge | Off; `'true'` on |
 
 Scheduled review lanes also run a `holiday-check` job and skip company holidays.
@@ -1563,7 +1563,7 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `review-sentinel.yml` | AI review | `pull_request_target`, reviews, after review lanes, manual | Merge gate check |
 | `review-label-reconcile.yml` | AI review | Every 2 h, manual | Repair `review:*` labels |
 | `review-sla-sweep.yml` | AI review | Every 2 h, manual | Review SLAs and stale PRs |
-| `stale-pr-sweep.yml` | AI review | Daily, manual | Close PRs with no activity in 30 days (90 with `long-running`) |
+| `stale-pr-sweep.yml` | AI review | Daily, manual | Close PRs with no activity in 30 days (90 with `review:long-running`) |
 | `weekly-digest.yml` | AI review | Mondays, manual | Slack digests |
 | `review-existing-content.yml` | Content upkeep | Weekdays, manual | Content review dispatcher |
 | `content-review-article.yml` | Content upkeep | Dispatched | Review one article |

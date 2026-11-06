@@ -1,12 +1,13 @@
 name: Stale PR sweep
 
-# Closes open PRs that haven't moved in 30 days (90 with the `long-running`
-# label), after a heads-up comment a week before. Every open PR is in scope:
-# drafts, bot PRs, and PRs the review never ran on. The policy lives in the
-# `stale_prs:` block of .github/review-routing.yml; scripts/review-v3/
-# stale-pr-sweep.py is the deterministic evaluator (no model, no PR code
-# checkout, no state of its own -- the heads-up comment's marker is the
-# state). See that script's docstring for what counts as movement.
+# Closes open PRs that haven't moved in 30 days (90 with the
+# `review:long-running` label), after a heads-up comment a week before. Every
+# open PR is in scope: drafts, bot PRs, and PRs the review never ran on. The
+# policy lives in the `stale_prs:` block of .github/review-routing.yml;
+# scripts/review-v3/stale-pr-sweep.py is the deterministic evaluator (no
+# model, no PR code checkout, no state of its own -- the heads-up comment's
+# marker is the state). See that script's docstring for what counts as
+# movement.
 #
 # This is the blunt backstop. review-sla-sweep.yml's author-staleness clock is
 # the targeted one (PRs waiting on answers to review findings); both can run.
