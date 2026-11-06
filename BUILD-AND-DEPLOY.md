@@ -1376,7 +1376,6 @@ flowchart TD
 - **check-search-urls.yml**: Manual only. Runs `make check_search_urls` to verify URLs in the Algolia index resolve.
 - **brand-style-sync.yml**: Mondays at 14:20 UTC; manual. Checks the offline Vale mirror (`styles/Pulumi/`) against the brand guide, per `styles/Pulumi/BRAND-SYNC.yaml`, and opens a PR only when it has drifted (a clean run opens nothing). `BRAND_SYNC_ENABLED='0'` turns it off. See `.claude/commands/brand-vale-sync/SKILL.md`.
 - **auto-label-issues.yml**: New and reopened issues. One Haiku call classifies the issue; if it's confident, it sets the issue Type and `area/*` labels and removes `needs-triage`. It never touches priority, impact, resolution, or PR-pipeline labels.
-- **add-to-project.yml**: Adds new and reopened issues to the Docs GitHub project.
 
 **Content-review worker privilege model (`content-review-article.yml`):** the per-article worker is split into two jobs with opposite privilege profiles, because the review model consumes artifacts derived from fetched external URLs (a prompt-injection surface):
 
@@ -1472,7 +1471,7 @@ Two workflows are gated on `github.repository != 'pulumi/docs'` and only do anyt
 
 The mirror carries every workflow file pulumi/docs has, so the repository gate above is the exception, not the rule. As of 2026-10-07 on docs-private:
 
-- **Disabled** (`disabled_manually` in the Actions API), 19 workflows: `add-to-project`, `bucket-cleanup`, `bucket-cleanup-testing`, `build-and-deploy`, `check-lighthouse`, `check-links`, `check-search-urls`, `esc-cli`, `esc-update-schemas`, `pr-closed`, `pulumi-cli`, `pulumi-cli-dev-version`, `schedule-social`, `scheduled-test`, `scheduled-upgrade-programs`, `testing-build-and-deploy`, `update-audit-log-events`, `update-openapi-lastmod`, `update-search-index`.
+- **Disabled** (`disabled_manually` in the Actions API), 18 workflows: `bucket-cleanup`, `bucket-cleanup-testing`, `build-and-deploy`, `check-lighthouse`, `check-links`, `check-search-urls`, `esc-cli`, `esc-update-schemas`, `pr-closed`, `pulumi-cli`, `pulumi-cli-dev-version`, `schedule-social`, `scheduled-test`, `scheduled-upgrade-programs`, `testing-build-and-deploy`, `update-audit-log-events`, `update-openapi-lastmod`, `update-search-index`.
 - **Active and doing work on a schedule:** `review-label-reconcile`, `blog-review-index`, `review-existing-content` (which dispatches `content-review-article`), `update-policy-packs`, and `warm-build-cache`. The content-review lane opens `pulumi-bot` "Content review: …" PRs against the mirror's `master` that never merge (for example docs-private #300, #302, #307, and #314).
 - **Active but skipped by their own gates:** `weekly-digest`, `brand-style-sync`, `stale-pr-sweep`, and `self-hosted-feature-parity` (gated to pulumi/docs), and `review-sla-sweep`, `staging-status`, and `content-review-glowup-autofix` (gated on `REVIEW_V3_SLA`, `REVIEW_V3_SENTINEL`, and `GLOWUP_AUTOFIX`, which aren't set there). Their runs fire and every job is skipped.
 
@@ -1573,7 +1572,6 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `check-search-urls.yml` | Content upkeep | Manual | Validate search index URLs |
 | `brand-style-sync.yml` | Content upkeep | Mondays, manual | Vale mirror drift check |
 | `auto-label-issues.yml` | Content upkeep | Issue opened | Issue Type and area labels |
-| `add-to-project.yml` | Content upkeep | Issue opened | Add issues to the Docs project |
 | `pulumi-cli.yml` | Generated docs | `repository_dispatch` | Release dispatcher |
 | `pulumi-cli-docs.yml` | Generated docs | Dispatched, manual | CLI reference |
 | `pulumi-sdk-typescript-docs.yml` | Generated docs | Dispatched, manual | TypeScript SDK reference |
