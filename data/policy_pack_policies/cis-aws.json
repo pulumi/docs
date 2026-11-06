@@ -1,5 +1,5 @@
 {
-  "applied": true,
+  "applied": false,
   "displayName": "",
   "name": "cis-aws",
   "policies": [
@@ -5371,6 +5371,6 @@
       "severity": "high"
     }
   ],
-  "version": 6,
-  "versionTag": "1.2.1"
+  "version": 7,
+  "versionTag": "1.2.2"
 }
