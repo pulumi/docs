@@ -1,0 +1,6 @@
+<div class="flex items-center justify-between gap-2">
+    <span class="font-overline-sm {{ if .current }}text-violet-primary{{ else }}text-gray-600{{ end }}">Part {{ .number }}</span>
+    {{ partial "badge.html" (dict "text" .status "variant" (cond .current "brand" "ghost") "size" "sm") }}
+</div>
+<p class="m-0 body-base font-semibold leading-snug text-service-black">{{ .page.Params.title }}</p>
+<p class="m-0 mt-auto body-sm text-gray-600">{{ .page.Params.sortable_date | time.Format "January 2, 2006" }}</p>

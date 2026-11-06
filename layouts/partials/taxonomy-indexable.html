@@ -15,6 +15,7 @@
         multi-part landing pages with unique, blog-only titles. Both the
         directory and each series term page are indexed (the directory was an
         indexed content page before it became a taxonomy list page).
+      - event track pages (/events/tracks/ and /events/tracks/*), for the same reason
       - blog author TERM pages (/blog/authors/*) with 3 or more posts — each
         page carries a real-name H1, ProfilePage + Person schema, and its own
         curated post list, so it's not a thin duplicate of the tag pages this
@@ -36,7 +37,7 @@
 {{- $indexable := true -}}
 {{- if .Data.Singular -}}
     {{- $indexable = false -}}
-    {{- if eq .Data.Singular "series" -}}
+    {{- if in (slice "series" "track") .Data.Singular -}}
         {{- $indexable = true -}}
     {{- else if and (eq .Kind "taxonomy") (eq .Data.Singular "author") -}}
         {{- $indexable = true -}}

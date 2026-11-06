@@ -119,6 +119,8 @@ taxonomies:
   # pages land at /blog/series/:slug/. See layouts/taxonomy/series.html and
   # data/blog_series.yml (single source of truth for series titles/desc).
   series: series
+  # Plural is "track" so a scalar `track:` works, as with series. See data/event_tracks.yml.
+  track: track
 
 permalinks:
   term:
@@ -126,6 +128,7 @@ permalinks:
     tags: /blog/tags/:slug/
     category: /blog/categories/:slug/
     series: /blog/series/:slug/
+    track: /events/tracks/:slug/
   # The taxonomy LIST pages (the directories rendered by
   # layouts/taxonomy/<singular>.terms.html). Without these they would sit at
   # Hugo's default /authors/, /tags/, /category/, and /series/,
@@ -136,6 +139,7 @@ permalinks:
     tags: /blog/tags/
     category: /blog/categories/
     series: /blog/series/
+    track: /events/tracks/
 
 # Built-in Related Content, used by layouts/partials/blog/related-posts.html to
 # top up a post's related list. Tags dominate; category and recency break ties.
