@@ -1,6 +1,6 @@
 ---
 title: "Pulumi at KubeCon NA 2026: attendee guide"
-date: 2026-11-05
+date: 2026-11-06
 draft: false
 meta_desc: "Where to find Pulumi at KubeCon NA 2026 in Salt Lake City: booth 200, talks from our team, Platform Engineering Day, and KubeNight Out."
 feature_image: feature.png
@@ -76,7 +76,7 @@ Platform Engineering Day is included with an all-access pass. If you have one, a
 
 ## Talks from our team
 
-**Panel: DevRel Unfiltered — What developers actually build with agents**
+**Panel: DevRel Unfiltered — What Developers Actually Build with Agents**
 
 Adam Gordon Bell · Monday, November 9, 2:30–3:00 PM MT · Distributed SQL Summit, Gallivan Center, 50 E 200 S
 
