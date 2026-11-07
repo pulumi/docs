@@ -1,7 +1,7 @@
 ---
 title: Documentation
 linktitle: Docs
-meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
+meta_desc: Pulumi documentation for infrastructure as code in TypeScript, Python, Go, C#, Java, and YAML, plus ESC secrets management, Insights, and the Neo AI agent.
 meta_image: /images/docs/opengraph-docs.png
 layout: main-home
 notitle: true
