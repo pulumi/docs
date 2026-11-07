@@ -325,3 +325,19 @@ def test_accept_all_end_to_end_records_every_open_finding_as_bulk(tmp_path):
 def test_an_accept_from_someone_other_than_the_pr_author_goes_to_the_model(tmp_path):
     out, upd, reply = _quick(tmp_path, "/update-review accept F1", pr_author="bob")
     assert out["mode"] == "model" and upd is None and reply == ""
+
+
+def test_check_cli_accepts_deploy_staging():
+    """`check --command` is a closed choice list, so a lane for a new command
+    needs its name added there; staging-deploy-command.yml calls exactly this."""
+    def run(body):
+        out = subprocess.run(
+            [sys.executable, str(SCRIPT), "check", "--command", "deploy-staging", "--body-env", "BODY"],
+            env=dict(os.environ, BODY=body), capture_output=True, text=True, check=True,
+        )
+        return out.stdout
+    assert "fire=true" in run("No staging deploy yet.\n/deploy-staging")
+    # The Sentinel's own G4 row quotes the command in a code span; a quote-reply
+    # of it must not start a deploy.
+    assert "fire=false" in run("Comment `/deploy-staging` on this PR to start one.")
+    assert "fire=false" in run("> /deploy-staging")

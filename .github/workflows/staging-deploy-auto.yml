@@ -4,10 +4,10 @@ name: Staging deploy (auto, infra PRs)
 #
 # G4 requires a successful pulumi-test.io deploy at the PR's current head.
 # This workflow makes that deploy the default for an infra PR, and it is the
-# only lane. A retry is a re-run of the failed "Build and deploy testing" run,
-# or `gh workflow run testing-build-and-deploy.yml --ref <branch>` by anyone
-# with write access (`/pr-review --act --deploy N` does the same); the
-# Sentinel accepts any successful run at the head either way.
+# automatic lane. A retry is a re-run of the failed "Build and deploy testing"
+# run, or a `/deploy-staging` comment on the PR (`staging-deploy-command.yml`),
+# which deploys the current head and never reaches production; the Sentinel
+# accepts any successful run at the head either way.
 #
 # Design notes:
 # - WHAT COUNTS AS INFRA is not re-implemented here. `route-pr.py` resolves
