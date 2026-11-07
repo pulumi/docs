@@ -20,7 +20,7 @@ aliases:
     - /blog/understanding-code-organization-stacks/
 ---
 
-This is the first in a series of blog posts that explores how a fictional company---Zephyr Archaeotech Emporium---uses Pulumi to manage their online retail store. This post explores a couple of common questions that users ask when working with Pulumi; specifically, where should I store my Pulumi code? And how do I support multiple environments with Pulumi? This post will provide some guidance and [infrastructure as code](/what-is/what-is-infrastructure-as-code/) best practices around these topics, using Zephyr and their online store as the use case.<!--more-->
+This is the first in a series of blog posts that explores how a fictional company---Zephyr Archaeotech Emporium---uses Pulumi to manage their online retail store. This post explores a couple of common questions that users ask when working with Pulumi; specifically, where should I store my Pulumi code? And how do I support multiple environments with Pulumi? This post will provide some guidance and [infrastructure as code](/topics/infrastructure-as-code/) best practices around these topics, using Zephyr and their online store as the use case.<!--more-->
 
 The ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application. However, it's important to note that these practices will emerge over the course of the series---not all immediately, and not all in the beginning. This is a deliberate decision to allow you to see how Zephyr's use of Pulumi evolves as the company grows and their online retail store application changes to accommodate their growth.
 
@@ -65,7 +65,7 @@ So which approach is best? That will depend on a number of different factors, ma
 * Who is responsible for maintaining the code? If the application code and the Pulumi code are managed by different teams, then using separate repositories may be the best approach.
 * What sort of access controls are needed? If the organization needs different access controls for the application code and the Pulumi code, then separate repositories are generally needed.
 * What is the relationship between the infrastructure resources managed by Pulumi and the applications? If the infrastructure is "shared," meaning it is used by multiple applications, then keeping the Pulumi code in a separate repository may be preferred. If the infrastructure is dedicated to a specific application, then keeping the application code and the Pulumi code together may be preferred.
-* What about CI/CD? If an organization will use a [CI/CD pipeline](/what-is/what-is-ci-cd/), that may affect how you organize your code. (This is something we'll delve into more deeply later in this series.)
+* What about CI/CD? If an organization will use a [CI/CD pipeline](/topics/platform-engineering/what-is-ci-cd/), that may affect how you organize your code. (This is something we'll delve into more deeply later in this series.)
 
 It's worth stressing that the answers to these questions may change over time as organizations grow and their applications evolve. Addressing that change and its effects on an organization's Pulumi projects and stacks is something we'll be discussing later in this series.
 

@@ -242,7 +242,7 @@ Related reading on Pulumi and Kubernetes:
 
 - [YAML, Terraform, or Pulumi: what's the smart choice for deployment automation with Kubernetes?](/blog/yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes/) — the manifest-authoring comparison this guide deliberately doesn't repeat
 - [How to Run AI Agents on Kubernetes with Pulumi](/blog/ai-agents-on-kubernetes/) — provisioning and governing infrastructure for agent workloads specifically
-- [Kubernetes infrastructure as code: tools and best practices](/what-is/infrastructure-as-code-for-kubernetes/) — a broader look at the IaC options for Kubernetes
+- [Kubernetes infrastructure as code: tools and best practices](/topics/infrastructure-as-code/infrastructure-as-code-for-kubernetes/) — a broader look at the IaC options for Kubernetes
 - [Unit testing Pulumi programs](/docs/iac/guides/testing/unit/) — the full mock API reference across languages
 - [crd2pulumi](/docs/integrations/clouds/kubernetes/crd2pulumi/) — generating typed SDKs from CustomResourceDefinitions
 - [Migrating to Pulumi from Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) and [from Kubernetes YAML and Helm](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/)

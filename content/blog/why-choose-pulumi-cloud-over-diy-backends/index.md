@@ -23,7 +23,7 @@ At Pulumi, we’re committed to open source&mdash;always have been; always will 
 
 That’s why we built [Pulumi Cloud](/product/)&mdash;to help you avoid building and maintaining these capabilities from scratch while ensuring you can automate, secure, and manage your infrastructure at scale. Pulumi Cloud provides enterprise capabilities that make it easier to build modern infrastructure platforms. Companies receive increasing value from Pulumi Cloud as their organization and their infrastructure platforms grow in size and complexity.
 
-As companies expand or [platform engineering](/what-is/what-is-platform-engineering/) mandates become more expansive, challenges arise around collaboration, security, governance, and scaling. Some questions that need answering include:
+As companies expand or [platform engineering](/topics/platform-engineering/) mandates become more expansive, challenges arise around collaboration, security, governance, and scaling. Some questions that need answering include:
 
 - How do teams collaborate?
 - How do you securely manage infrastructure state?
@@ -61,7 +61,7 @@ Another reason your organization is investing in an infrastructure platform is s
 
 For applications being built across the organization, securing sensitive information like database passwords, cloud credentials, and API keys is paramount. Secrets can inadvertently end up in insecurely stored state files, leading to potential breaches. Pulumi Cloud, however, encrypts all data in transit and at rest, utilizing hardware security module (HSM) based encryption. Read the [Pulumi Cloud Security Whitepaper](/security/pulumi-cloud-security-whitepaper) for more information.
 
-Pulumi Cloud further enhances security with Pulumi ESC, a centralized [secrets management](/what-is/what-is-secrets-management/) and orchestration service. This service pulls and syncs secrets from various stores like HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, and 1Password, making it easy to adopt dynamic, short-lived secrets on demand. Secrets can be accessed via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with TypeScript/JavaScript, Python, and Go SDKs. Pulumi ESC leverages the same identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used by Pulumi IaC, ensuring that secrets management complies with enterprise security policies.
+Pulumi Cloud further enhances security with Pulumi ESC, a centralized [secrets management](/topics/secrets-and-security/) and orchestration service. This service pulls and syncs secrets from various stores like HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, and 1Password, making it easy to adopt dynamic, short-lived secrets on demand. Secrets can be accessed via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with TypeScript/JavaScript, Python, and Go SDKs. Pulumi ESC leverages the same identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used by Pulumi IaC, ensuring that secrets management complies with enterprise security policies.
 
 ### Savings
 
@@ -87,7 +87,7 @@ Building your own enterprise backend also requires you to design and manage the 
 
 ### Customer support
 
-You will also be giving up 12x5 or 24x7 customer support, which helps ensure your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Pulumi also has an experienced group of Solutions Architects and Customer Success Architects that have experience scaling [infrastructure as code](/what-is/what-is-infrastructure-as-code/) and building modern infrastructure platforms.
+You will also be giving up 12x5 or 24x7 customer support, which helps ensure your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Pulumi also has an experienced group of Solutions Architects and Customer Success Architects that have experience scaling [infrastructure as code](/topics/infrastructure-as-code/) and building modern infrastructure platforms.
 
 ## Conclusion
 
