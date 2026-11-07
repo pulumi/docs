@@ -240,8 +240,9 @@ open / push, skipping when the head already has one. It calls
 `staging-deploy.sh`, and so does `staging-deploy-command.yml`, the
 `/deploy-staging` comment lane, so the two lanes can't drift on what they
 dispatch. The comment lane deploys the PR's current head for a commenter
-with write access when the head has no successful or running deploy, replies
-with the run link or the reason it didn't, and re-runs the Sentinel. Neither
+with write access when the head has no successful or running deploy, reacts
+👀 then 🚀 (the staging gate's status links the run) or 😕 with a one-line
+reason, and re-runs the Sentinel. Neither
 lane holds a concurrency group across PRs: the dispatched deploys aren't
 serialized, and when two overlap, the later head is the one the `staging`
 gate asks about.

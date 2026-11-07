@@ -128,3 +128,14 @@ def test_workflow_shape():
             assert "${{" not in run, f"{step.get('name')}: ${{{{ }}}} inside run:"
     assert "concurrency" not in jobs["gate"], "a declined comment must not displace a real one"
     assert jobs["deploy"]["concurrency"]["cancel-in-progress"] is False
+
+
+def test_a_started_deploy_posts_no_comment_and_a_refusal_does():
+    """The reply is for refusals: a started deploy is 🚀 on the command and the
+    staging gate's status links the run, so a comment would only repeat it."""
+    steps = {st.get("name"): st for st in yaml.safe_load(WORKFLOW.read_text())["jobs"]["deploy"]["steps"]}
+    assert "steps.dispatch.outputs.dispatched != 'true'" in steps["Reply"]["if"]
+    react = steps["React with the outcome"]
+    assert "rocket" in react["run"] and "confused" in react["run"]
+    gate = {st.get("name"): st for st in yaml.safe_load(WORKFLOW.read_text())["jobs"]["gate"]["steps"]}
+    assert "content=eyes" in gate["Acknowledge the command"]["run"]

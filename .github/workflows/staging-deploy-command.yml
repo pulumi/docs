@@ -190,8 +190,12 @@ jobs:
           # The Sentinel should quote the reason, so re-score it below too.
           echo "dispatched=error" >> "$GITHUB_OUTPUT"
 
+      # A comment only when it says something the reactions and statuses
+      # don't: a started deploy is 🚀 on the command plus the staging gate's
+      # status, whose Details link is the run, so it posts nothing; a refusal
+      # is 😕 plus one line saying why.
       - name: Reply
-        if: always() && steps.plan.outcome == 'success'
+        if: always() && steps.plan.outcome == 'success' && steps.dispatch.outputs.dispatched != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
