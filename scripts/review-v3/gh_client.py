@@ -66,6 +66,16 @@ class GhNotFound(GhError):
     """A clean 404 — data, not a failure, for callers that treat it that way."""
 
 
+def _gh_stderr_status(stderr: str) -> int | None:
+    """The HTTP status in a failed `gh api` call's stderr (`... (HTTP 403)`),
+    so callers that treat 403 as "can't tell" see one. A bare "Not Found"
+    with no status still reads 404."""
+    m = re.search(r"\(HTTP (\d{3})\)", stderr)
+    if m:
+        return int(m.group(1))
+    return 404 if "Not Found" in stderr else None
+
+
 # ---- login helpers ------------------------------------------------------
 
 
@@ -249,7 +259,7 @@ class GhClient:
             out = subprocess.run(args, text=True, capture_output=True, check=True, input=stdin).stdout
         except subprocess.CalledProcessError as exc:
             stderr = (exc.stderr or "").strip()
-            status = 404 if ("HTTP 404" in stderr or "Not Found" in stderr) else None
+            status = _gh_stderr_status(stderr)
             cls = GhNotFound if status == 404 else GhError
             raise cls(f"gh api {method} {path} failed: {stderr[:300]}", status) from exc
         return _concat_json_docs(out) if out.strip() else None
