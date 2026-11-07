@@ -45,7 +45,7 @@
 # BOTS
 # -----------------------------------------------------------------------------
 # `bots:` lists the machine accounts that open PRs here. The Sentinel reads it
-# to keep a bot's approval from carrying the `/oversized-ack` (G5), and the
+# to keep a bot's approval from carrying the `/oversized-ack` (the `oversized` gate), and the
 # review lanes' author whitelists mirror it. It no longer decides whose
 # approval counts for merging: branch protection does.
 #
@@ -89,10 +89,10 @@
 # bottom of this file (deleted; see git history for the autopsy).
 #
 # So `mechanical` no longer means "no human". It means exactly one thing
-# now: **G1 accepts the PR without a model review**, which is a real saving
+# now: **`review` accepts the PR without a model review**, which is a real saving
 # on a typo fix. The approver is unchanged by it, which is why both columns
 # name the same role for every subject today. The dimension stays because
-# G1 and the claims overlay both read it, and because a future lane may want
+# `review` and the claims overlay both read it, and because a future lane may want
 # to vary the approver by change type — but if you find yourself reaching
 # for `none` to make a lane quieter, the lever you want is `mechanical`
 # (skip the model) or `not_governed` (skip everything, for a closed set of
@@ -215,7 +215,7 @@ overrides:
 # STAGING EVIDENCE
 # -----------------------------------------------------------------------------
 # `staging_evidence.paths` is the closed list of paths that require a
-# demonstrated staging deploy (Sentinel gate G4) before the PR can merge. It
+# demonstrated staging deploy (Sentinel `staging` gate) before the PR can merge. It
 # is REQUIRED: deleting it is a validation error, not a silent "nothing needs
 # staging".
 #

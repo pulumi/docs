@@ -25,7 +25,7 @@ A commit status belongs to no suite, so nothing can supersede it:
 
 Beside it, one informational status per gate (`Sentinel / review`,
 `Sentinel / findings`, ...), so the merge box says which gate is red and
-what it wants without anyone scrolling back to the status comment. Only
+what it wants and links where to act on it. Only
 `Sentinel` is required; the gate statuses come from `gate_statuses` in the
 verdict JSON. A `Sentinel / …` status already at the head that this verdict
 doesn't name is turned green, so a gate that stopped applying can't keep an
@@ -67,20 +67,20 @@ def status_payload(verdict: dict, run_url: str) -> dict:
 GATE_PREFIX = f"{CHECK_NAME} / "
 
 
-def gate_payloads(verdict: dict, run_url: str, existing: list[dict] = ()) -> list[dict]:
+def gate_payloads(verdict: dict, fallback_url: str, existing: list[dict] = ()) -> list[dict]:
     """The per-gate statuses to post: the verdict's own, plus a green one for
     any `Sentinel / …` context already at the head that it no longer names."""
     out = []
     for g in verdict.get("gate_statuses") or []:
         out.append({"state": g.get("state") or "failure", "context": g["context"],
                     "description": (g.get("description") or "")[:DESCRIPTION_MAX],
-                    "target_url": g.get("target_url") or run_url})
+                    "target_url": g.get("target_url") or fallback_url})
     named = {g["context"] for g in out}
     for st in existing:
         ctx = st.get("context") or ""
         if ctx.startswith(GATE_PREFIX) and ctx not in named:
             out.append({"state": "success", "context": ctx,
-                        "description": "doesn't apply at this commit", "target_url": run_url})
+                        "description": "doesn't apply at this commit", "target_url": fallback_url})
             named.add(ctx)
     return out
 
@@ -141,7 +141,9 @@ def main(argv: list[str] | None = None) -> int:
             return None
         except Exception as exc:
             return f"::warning::Could not publish {g['context']} ({exc}); it is informational only."
-    gates = gate_payloads(verdict, a.run_url, existing)
+    # A gate status links where you act on it (sentinel.gate_statuses); the
+    # PR is the fallback, never this run's page.
+    gates = gate_payloads(verdict, f"https://github.com/{a.repo}/pull/{a.pr}", existing)
     if gates:
         with ThreadPoolExecutor(max_workers=len(gates)) as pool:
             for warning in pool.map(_post, gates):

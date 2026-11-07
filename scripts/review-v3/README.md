@@ -179,19 +179,23 @@ GitHub later supersedes and hides). Deterministic, no model, no AWS, and —
 because the workflow runs on `pull_request_target` — **never checks out or
 executes PR code** (test-enforced). Beside it, one informational status per
 gate (`Sentinel / review`, `Sentinel / findings`, `Sentinel / staging`,
-`Sentinel / oversized`) carries that gate's one-line state and links where
-it's answered (the author card for review and findings), so the merge box
-says what's red without anyone scrolling back to the status comment. Only
-`Sentinel` is required. Gates, each red message naming its fix:
+`Sentinel / oversized`) carries that gate's one-line state, and its
+"Details" link goes where you act: the author card for review and findings,
+the failed or running deploy for staging, the Files tab (where Approve is)
+for oversized, else the PR — never the Sentinel's own run page. Only
+`Sentinel` is required. There is no pinned status comment any more (it
+duplicated all of that and was the noisiest thing on a PR); every evaluation
+deletes any copy a PR still carries (`remove_status_comments`). Gates, each
+red message naming its fix:
 
 | Gate | Green when | Red says |
 |---|---|---|
-| G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — branch protection still asks for an approval); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | push / `/update-review` / `/new-review` |
-| G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `/update-review …` phrasing |
-| G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded; or, the same, at a commit the head has only merged the base into since (Base-only merges) | the deploy is dispatched automatically (`staging-deploy-auto.yml`); to retry, dispatch "Build and deploy testing" at the branch (never "Build and deploy", which is production). If the staging workflow is disabled, the row says so and names the fix, and a failed deploy or dispatch is quoted at the top of the row |
-| G5 oversized-ack | `review:oversized` PRs: an approval at head from an owner, org member or collaborator (GitHub's `author_association`; not a bot or the author) whose comment has `/oversized-ack` at the start of a line | where the command goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
+| review | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — branch protection still asks for an approval); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | push / `/update-review` / `/new-review` |
+| findings | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `/update-review …` phrasing |
+| staging | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded; or, the same, at a commit the head has only merged the base into since (Base-only merges) | never "dispatch a workflow" (#22524: the staging and production deploys are one click apart). Running: **pending**, linking the run. Failed: open the linked run and click **Re-run failed jobs**, which can only redeploy staging. Workflow disabled: ask in `#docs`. Never ran: comment `/deploy-staging`. A failed dispatch's reason is quoted first |
+| oversized | `review:oversized` PRs: an approval at head from an owner, org member or collaborator (GitHub's `author_association`; not a bot or the author) whose comment has `/oversized-ack` at the start of a line | where the command goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
 
-**There is no G3.** It was the approver gate (which teams, which bots, a
+**There is no approver gate.** G3, as it was numbered, was the approver gate (which teams, which bots, a
 repo admin, approval at the exact head), and it duplicated GitHub branch
 protection's required-review rule while disagreeing with it at the edges:
 it threw away an approval on every push, rebases included, and needed the
@@ -204,7 +208,7 @@ up. What that gives up, on purpose: branch protection here doesn't dismiss
 stale approvals, so an approval survives later pushes, and a bot's approval
 counts wherever GitHub counts it.
 
-**G4's two witnesses.** The commit status is a *report* of the deploy, not
+**the `staging` gate's two witnesses.** The commit status is a *report* of the deploy, not
 the deploy: it is a separate API call made after the run completes, so a
 cancelled runner, a lost token, or a dispatch whose `workflow_run` cascade
 never fired all leave a green deploy with no status. `_staging_evidence`
@@ -215,7 +219,7 @@ merge box with a link. A failed run-history read degrades to "no evidence"
 (red), not `action_required`: red is already the conservative answer, and
 escalating would misreport an API hiccup as a corrupt PR.
 
-**What G4 applies to.** `staging_evidence.paths` in
+**What `staging` applies to.** `staging_evidence.paths` in
 `.github/review-routing.yml` — a path list, NOT a subject. It used to be a
 `staging_evidence: required` cell on the matrix's `infra` row, which made the
 approver and the blast radius the same question and left "bend the path's
@@ -242,7 +246,7 @@ REVIEW_STATE, a team-membership lookup failure) concludes `action_required`
 checks.
 
 **`review:waived` is authorized, not just labelled.** A waive skips every
-gate, G4 included, so applying one has to be at least as privileged as approving
+gate, `staging` included, so applying one has to be at least as privileged as approving
 something: `_waive_state` reads the actor off the label event and honors the
 waive only when they are an **active member of any team in `teams:`** — any
 of them, not just the one the PR routes to. Scoping it to the required team
@@ -250,39 +254,17 @@ would make a waive exactly as hard to get as the approval it bypasses, which
 kills the case it most needs to cover (the required approver is the author).
 It fails closed at every step — unreadable actor, failed membership lookup,
 actor on no routing team — and an unauthorized waive is *refused out loud*
-in the status title, the status comment and the summary rather than silently
+in the status title and the run summary rather than silently
 ignored, so the same person doesn't try it twice. The membership lookup uses
 the org-scoped token, which the workflow fetches from ESC only for a PR carrying `review:waived`, so an outage of that token refuses the waive
-too; the status comment then names a repo admin's merge as the way through,
-and doesn't offer a waive that can't work. A waive over a red G4 says so in the summary: the deploy change
+too; the summary then names a repo admin's merge as the way through. A waive over a red `staging` says so in the summary: the deploy change
 hasn't been applied on staging, so the first production deploy is its first
 real run.
 
-**The pinned status comment.** `render_status_comment` / `update_status_comment`
-upsert one `<!-- SENTINEL_STATUS -->` comment per PR: a one-line "Waiting on …"
-headline, each red gate with its own remediation text, and the full gate
-table folded under "All gates" (a five-row table where four rows said
-nothing was needed was the "too much text" on #22397). The body is a pure
-function of the verdict — no timestamps, no run ids — so a re-evaluation that
-changes nothing produces a byte-identical body and the PATCH is skipped.
-"One" is enforced on every write, not assumed: overlapping runs both listing
-before either posts used to leave two copies (pulumi/docs#22251 and five
-others), so the upsert keeps the oldest bot copy, deletes the rest, and
-re-lists once after a first POST to catch the run it raced. The
-comment is maintained on **every** PR the Sentinel evaluates, in both modes,
-and every body ends with `STATUS_HELP_FOOTER`, which points readers at
-`#docs`; enforcing mode has no banner, so the footer is its only pointer to
-a person. In report-only mode the heading reads "(preview)" and a
-`[!WARNING]` banner says both halves: informational and safe to ignore today, enforced soon, when
-every row has to be green to merge. Neither half calls a red row the author's
-homework — G4 is a deploy and G5 an approver's ack. That banner is what makes a repo-wide dry run
-safe, and repo-wide is what makes it worth running — the `sentinel:preview`
-opt-in cohort (content-review, glow-up, link sweeps) was retired 2026-09-21
-because a surface only workflow-authored PRs carry tests the renderer and no
-reader. `--update-strip` stays enforcing-only: the ⛔ strip edits the author
+`--update-strip` stays enforcing-only: the ⛔ strip edits the author
 card, which is someone else's comment. External contributors (fork head repo — never the
 author's permission level, which is `none` for GitHub Apps like workprentice)
-skip G1/G2 per config — the approving reviewer's review is the review. The
+skip `review`/`findings` per config — the approving reviewer's review is the review. The
 same holds for the PRs the review lane skips by policy, as long as they never
 got a review: a `review:trivial` or `review:frontmatter-only` PR whose diff
 really has that shape (the Sentinel re-runs triage's `classify_pr` on the
@@ -305,11 +287,11 @@ surface itself is `REVIEW_V3_COMMENTS` (repo-wide; the per-PR `surface:v3`
 opt-in label and `REVIEW_V3_BOT_PRS` were retired 2026-09-14 once the
 variable had soaked). The
 check summary embeds the reviewer brief (merge-box delivery), and on red the
-sentinel PATCHes a strip into the author card, linking the status comment.
+sentinel PATCHes a strip into the author card.
 With blocking findings it reads "⛔ N item(s) block merge" and names the reply
 that answers them; with none, the card already says nothing blocks merge, so
-the strip reads "⏳ Merge is waiting on" the red gate (an approval or a deploy
-is nothing the author can fix or answer).
+the strip reads "⏳ Merge is waiting on" the red gate (a deploy or an ack is
+nothing the author can fix or answer), and points at the gate statuses.
 
 **SLA sweep** (`sla-sweep.py`, `review-sla-sweep.yml`, cron every 2 h): its own
 switch is `REVIEW_V3_SLA` — the job runs only while it is `'1'` (a manual
@@ -340,7 +322,7 @@ comment tells people to apply it. It runs as pulumi-bot so its closes fire
 `pr-closed.yml` (cleanup and the review-outcome record), which is also why
 its comment copy must never contain a review command or `@claude`.
 
-One lane makes G4's evidence, and a second records it.
+One lane makes the `staging` gate's evidence, and a second records it.
 `staging-deploy-auto.yml` dispatches a deploy for every same-repo PR on
 `staging_evidence.paths` (not every `domain:infra` PR — the two sets are
 deliberately different) on open/push, via `staging-deploy.sh`, which
@@ -350,11 +332,11 @@ testing" run, or a fresh dispatch of it at the head branch by anyone with
 write access (`gh workflow run testing-build-and-deploy.yml --ref <branch>`,
 or `/pr-review --act --deploy N`); every lane below treats it exactly like
 the automatic one. Nothing serializes deploys of the shared staging stack:
-when two overlap, the later head is the one G4 asks about.
+when two overlap, the later head is the one `staging` asks about.
 
 `staging-status.yml` writes the *terminal* status — one writer, a
 `workflow_run` listener on "Build and deploy testing" — and then pokes the
-Sentinel so G4 is re-scored against the finished deploy. It lives outside
+Sentinel so `staging` is re-scored against the finished deploy. It lives outside
 the dispatched run on purpose: a `workflow_dispatch` executes the workflow
 file from the ref it is dispatched at, so the in-run job this replaces
 silently did not exist for a PR branch cut before it merged (#21676). **The
@@ -374,14 +356,14 @@ commit list because the branch was rebased (`history_allows_carry`), AND the
 PR's `+`/`-` lines at the reviewed head equal the ones now (the same
 test `/pr-review` uses in `collect.py`). The test lives in `sentinel.py`
 (`history_allows_carry`, `same_diff`, `patchless_file_changed`), because the
-Sentinel applies it too: G4 carries a staging deploy from such a commit to
+Sentinel applies it too: `staging` carries a staging deploy from such a commit to
 the head. Before that, clicking "Update branch" spent a second staging
 deploy (#22506), an empty commit reset the review and the deploy (#22524),
 and a rebase to clear a changelog conflict reset the review on a one-line
 PR (#22397). Both reads happen only when the gate would otherwise
 be red, and any read that fails leaves it red. `staging-deploy-auto.yml`
 does not apply the carry, so it still dispatches a (redundant) deploy for
-such a push; G4 doesn't wait for it. It moves the card's head carriers —
+such a push; `staging` doesn't wait for it. It moves the card's head carriers —
 the marker and the sub line's `head commit` — and nothing else, so the
 composition stamp still orders it for the stale-publish guard. Callers:
 `claude-code-review.yml`'s `mark-stale` (instead of staling; then pokes the
@@ -393,7 +375,7 @@ backs off if a refresh published in the meantime; a change confined to the
 Sentinel's strip doesn't count (the Sentinel rewrites it on the same push),
 and the restamp is written onto the fresh body. `update_strip` likewise
 re-reads the card before its PATCH. Without both, the two writers raced on
-every base merge and the loser left G1 red until the 2-hourly reconcile
+every base merge and the loser left `review` red until the 2-hourly reconcile
 sweep (caught fork-testing #22555). Before it,
 #21673's master merge left a clean review at `review:stale` with nothing
 scheduled to clear it.
@@ -458,7 +440,7 @@ answer an ownership question. Add an override, with the `why` the schema
 requires.
 
 The same resolution has two consumers. The Sentinel resolves it itself from
-live API state to decide whether G4 applies. Triage resolves it through
+live API state to decide whether `staging` applies. Triage resolves it through
 `route-pr.py` and *requests* those teams as PR reviewers — each team once
 per PR, on open / ready **or on the push that first makes it required**.
 
@@ -490,7 +472,7 @@ Subjects (closed set, all seven required in the matrix): `docs`, `blog`,
 `website`, `programs` (docs-guild, the blog team, or marketing per the
 matrix), `infra` — exactly the build and deploy pipeline (`infrastructure/`,
 `.github/workflows/`, `scripts/`, Makefile, bundler config): tools approves
-(a staging run is a separate, path-keyed question — see G4 above) —
+(a staging run is a separate, path-keyed question — see `staging` above) —
 `frontend` — the rendering layer (`layouts/`, `theme/`, `assets/`,
 `static/`): reviewed under the infra criteria, approved
 by marketing, never a staging run — and `other`, the classifier's fallback
@@ -502,7 +484,7 @@ pricing matrix) classify with the content they serve; the map is
 
 **Every governed PR is routed.** `none` matrix cells are a config error, so
 `resolve_lanes` always returns at least one role and triage always has a
-team to request. `mechanical` skips the *model* review at G1 and nothing
+team to request. `mechanical` skips the *model* review at `review` and nothing
 else. Who may *approve* is branch protection's call, not this config's: the
 matrix picks who gets requested, who the SLA sweep chases, and who the brief
 names.

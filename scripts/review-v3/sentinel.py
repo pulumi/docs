@@ -1,31 +1,30 @@
 #!/usr/bin/env python3
 """The Sentinel — deterministic merge-gate evaluator for the v3 review workflow.
 
-One blocking commit status answers "is this PR mergeable?" from four gates:
+One blocking commit status answers "is this PR mergeable?" from four gates,
+each also published as its own informational status (`Sentinel / <gate>`):
 
-  G1 review-ran         a current review exists at head SHA (or none is
-                        required: mechanical PRs, fork PRs, and the PRs
-                        the review lane skips by policy — see below)
-  G2 findings-answered  every 🚨/❓ finding on the author card carries a
-                        REVIEW_STATE disposition (or is checked off)
-  G4 deploy-evidence    a change on `staging_evidence.paths` carries a green
-                        staging/pulumi-test-io commit status at the current
-                        head SHA, posted by a trusted writer. That list is
-                        narrow on purpose — only what can break `pulumi up`,
-                        since a PR's own build already runs the pipeline in
-                        preview mode. NOT the same set as `domain:infra`:
-                        the matrix answers who reviews, this answers what
-                        must be applied to be believed
-  G5 oversized-ack      review:oversized PRs replace G1/G2 with an explicit
-                        `/oversized-ack` in the approving review body
+  review     a current review exists at head SHA (or none is required:
+             mechanical PRs, fork PRs, and the PRs the review lane skips
+             by policy — see below)
+  findings   every 🚨/❓ finding on the author card carries a REVIEW_STATE
+             disposition (or is checked off)
+  staging    a change on `staging_evidence.paths` carries a successful
+             staging deploy at the current head. That list is narrow on
+             purpose — only what can break `pulumi up`, since a PR's own
+             build already runs the pipeline in preview mode. NOT the same
+             set as `domain:infra`: the matrix answers who reviews, this
+             answers what must be applied to be believed
+  oversized  review:oversized PRs replace review/findings with an explicit
+             `/oversized-ack` in an approving review
 
-There is no G3 any more. It was the approver gate (who may approve, which
-teams, which bots), and it duplicated GitHub branch protection's
-required-review rule while disagreeing with it at the edges: it threw away
-an approval on every push, rebases included, and needed an org-scoped token
-to read team membership. Branch protection decides who can approve and
-merge now, Eon included. The numbers G4 and G5 are kept so status contexts,
-telemetry and old comments still line up.
+The gates used to be numbered G1-G5. G3, the approver gate (who may approve,
+which teams, which bots), is gone: it duplicated GitHub branch protection's
+required-review rule while disagreeing with it at the edges, threw away an
+approval on every push, rebases included, and needed an org-scoped token for
+team reads. Branch protection decides who can approve and merge now, Eon
+included. The numbers went with it; old comments and logs say G1/G2/G4/G5
+for review/findings/staging/oversized.
 
 One config-driven shortcut sits around the gates
 (`.github/review-routing.yml`): `not_governed` lanes (Dependabot, the
@@ -50,7 +49,7 @@ PASSING for a required check. `neutral` is reserved for drafts and for
 report-only mode, where the real verdict rides inside the summary. Report-only
 is not a silent mode: the pinned status comment is maintained on every PR in
 both modes, leading with a preview banner that says the check blocks nothing
-yet and that it soon will (`render_status_comment`). Only the ⛔ author-card
+yet and that it soon will (the status descriptions start "Preview"). Only the ⛔ author-card
 strip stays enforcing-only — that one edits someone else's comment.
 
 `review:waived` is the break-glass: the check concludes success with a loud
@@ -168,7 +167,6 @@ STATUS_MARKER = "<!-- SENTINEL_STATUS -->"
 # Ends every status comment, in both modes and on gateless bodies too. The
 # preview banner used to be the only place that named a human channel, so
 # enforcing mode — the one where a red row actually blocks — had none.
-STATUS_HELP_FOOTER = "Need help, or think a gate got it wrong? Ask in `#docs` on Slack."
 # Every role comment the Sentinel reads — author card, reviewer brief,
 # legacy pages, its own status comment — must come from the bot that writes
 # them. See `_find_comment` for what a missing provenance check cost.
@@ -206,15 +204,8 @@ _OVERSIZED_ACK_RE = re.compile(r"^[ \t]{0,3}/oversized-ack(?![\w-])", re.M | re.
 
 def _has_oversized_ack(body: str) -> bool:
     return bool(_OVERSIZED_ACK_RE.search((body or "").replace("\r\n", "\n")))
-# The pinned status comment is maintained on EVERY PR the Sentinel evaluates,
-# report-only included — see `render_status_comment` for the preview banner
-# that carries the "this is not blocking you yet" disclaimer. There used to be
-# a `sentinel:preview` opt-in label here that made report-only mode write the
-# comment for a canary cohort only (the content-review, glow-up, and
-# link-sweep lanes labelled themselves). It was retired 2026-09-21: a dry run
-# nobody sees is a dry run that proves nothing, and the one cohort it did
-# cover had a workflow for an author. Anything still applying that label is
-# inert; nothing reads it.
+
+
 BREAK_GLASS = (
     "override: a member of a routing team (`.github/review-routing.yml` `teams:`) "
     "can apply `review:waived` (logged)"
@@ -236,26 +227,26 @@ def _waive_can_clear(g: Gate) -> bool:
 # phrase completes "Waiting on …"; the gate's row in the status comment says
 # who acts and how. Shared with the author-card strip so the two agree.
 def _waiting_on(g: Gate, n_blocking: int) -> str:
-    gate = g.name.split()[0]
+    gate = g.name
     cmd = next((f" ({c})" for c in ("/update-review", "/new-review") if c in g.message), "")
-    if gate == "G1":
+    if gate == "review":
         if "changes no files" in g.message:
             return "a diff to review"
         if "hasn't posted yet" in g.message:
             return "the automated review"
         return f"a current review{cmd}"
-    if gate == "G2":
+    if gate == "findings":
         n = n_blocking or "open"
         return f"answers to {n} finding{'' if n_blocking == 1 else 's'} (/update-review)"
-    if gate == "G4":
-        return "a staging deploy"
-    if gate == "G5":
+    if gate == "staging":
+        return "a staging deploy (running)" if g.status == "pending" else "a staging deploy"
+    if gate == "oversized":
         return f"{OVERSIZED_ACK} in an approval"
     return g.name
 
 
-_PLAIN_GATE = {"G1": "the review", "G2": "the review's answers",
-               "G4": "the staging deploy", "G5": "the oversized ack"}
+_PLAIN_GATE = {"review": "the review", "findings": "the review's answers",
+               "staging": "the staging deploy", "oversized": "the oversized ack"}
 
 
 def _plain_join(items: list[str]) -> str:
@@ -270,10 +261,10 @@ CHECK_NAME = "Sentinel"
 # these are informational. Statuses, not check-runs, for the reason
 # publish_verdict.py gives (a check-run can land in a superseded suite).
 GATE_CONTEXTS = {
-    "G1": "Sentinel / review",
-    "G2": "Sentinel / findings",
-    "G4": "Sentinel / staging",
-    "G5": "Sentinel / oversized",
+    "review": "Sentinel / review",
+    "findings": "Sentinel / findings",
+    "staging": "Sentinel / staging",
+    "oversized": "Sentinel / oversized",
 }
 STATUS_DESCRIPTION_MAX = 140
 
@@ -290,19 +281,22 @@ def _clip(text: str, limit: int = STATUS_DESCRIPTION_MAX) -> str:
 
 
 def gate_statuses(verdict: "Verdict") -> list[dict]:
-    """The per-gate commit statuses for this verdict. `target_url` None means
-    "link the workflow run" (publish_verdict.py fills it in). Skipped gates
+    """The per-gate commit statuses for this verdict. Each links where you act
+    on it (`Gate.url`, then the verdict's per-gate link, then the PR); None
+    only when the PR's URL is unknown, and publish_verdict.py fills in the PR. Skipped gates
     still get one, so a gate that stopped applying at this head turns green
     instead of keeping an old red."""
     out: list[dict] = []
     preview = bool(verdict.would_be)
     for g in verdict.gates:
-        gid = g.name.split()[0]
+        gid = g.name
         context = GATE_CONTEXTS.get(gid)
         if not context:
             continue
         if verdict.waived:
             state, desc = "success", f"waived: {g.message}" if g.status != "ok" else g.message
+        elif g.status == "pending":
+            state, desc = "pending", g.short or "Waiting on " + _waiting_on(g, len(verdict.blocking_ids))
         elif g.status == "red":
             state, desc = "failure", g.short or "Waiting on " + _waiting_on(g, len(verdict.blocking_ids))
         elif g.status == "error":
@@ -314,7 +308,7 @@ def gate_statuses(verdict: "Verdict") -> list[dict]:
         if preview and state != "success":
             state, desc = "success", f"Preview, not enforced: {desc}"
         out.append({"context": context, "state": state, "description": _clip(desc),
-                    "target_url": verdict.links.get(gid) or None})
+                    "target_url": g.url or verdict.links.get(gid) or verdict.links.get("pr") or None})
     return out
 
 
@@ -509,6 +503,9 @@ class Gate:
     # and nothing else does (140 characters). Empty: derived from
     # `_waiting_on` on red, from `message` otherwise. See `gate_statuses`.
     short: str = ""
+    # Where this gate's status "Details" link goes: where you act on it.
+    # Empty: the verdict's per-gate link, else the PR.
+    url: str = ""
 
 
 @dataclass
@@ -577,7 +574,7 @@ def _find_comments(comments: list[dict], marker: str) -> list[dict]:
     """Every bot-authored comment carrying `marker`, oldest first.
 
     More than one means overlapping writers each created their own copy;
-    `update_status_comment` is the one caller that needs to see them all.
+    `remove_status_comments` is the one caller that needs to see them all.
 
     PROVENANCE IS THE WHOLE POINT. This used to match the marker anywhere in
     any comment by anyone, and return the first hit. Comments come back
@@ -1112,7 +1109,7 @@ def _last_staging_failure(gh: Gh, head_sha: str) -> str:
     """
     try:
         statuses = gh.get_commit_statuses(head_sha)
-    except Exception:  # noqa: BLE001 — advice only; see _g4_red_message
+    except Exception:  # noqa: BLE001 — advice only; see _staging_gate
         return ""
     for s in statuses:  # newest first
         if s.get("context") != STAGING_STATUS_CONTEXT:
@@ -1127,52 +1124,78 @@ def _last_staging_failure(gh: Gh, head_sha: str) -> str:
     return ""
 
 
-def _g4_red_message(gh: Gh, pr: dict, head_sha: str) -> str:
-    """What to do about a red G4, specific to why it can't be green.
+_IN_FLIGHT = frozenset({"queued", "in_progress", "waiting", "requested", "pending"})
+_FAILED = frozenset({"failure", "cancelled", "timed_out", "startup_failure"})
 
-    The generic text promised "dispatched automatically — no action needed",
-    which was false for a day on #22524: the staging workflow had been
-    disabled, every automatic dispatch failed with a 422 the auto lane logs
-    only as a warning, and nobody could tell from here why the gate never
-    moved. So read the workflow's state and say so when it's off. A failed
-    read degrades to the generic text: this is advice, not the verdict.
+
+def _staging_gate(gh: Gh, pr: dict, head_sha: str) -> Gate:
+    """The staging gate when no deploy at this head has succeeded.
+
+    It never asks a person to dispatch a workflow: the "Build and deploy
+    testing" / "Build and deploy" names are one click apart in the Actions
+    sidebar, and on #22524 someone dispatched production at an unmerged
+    branch. The auto lane deploys on open and push, so the gate only says
+    which state it is in, and each state's link is where you act:
+
+      running   pending, linking the run
+      failed    red, linking the failed run: "Re-run failed jobs" there can
+                only redeploy staging
+      disabled  red: an admin turns the workflow back on; ask in #docs
+      never ran red: comment `/deploy-staging` (the dispatch failed, or the
+                PR predates the auto lane)
+
+    A failed read degrades to "never ran": the command is safe to repeat.
     """
-    branch = (pr.get("head") or {}).get("ref") or "<branch>"
-    # Author-controlled, and the row is one markdown table cell inside a
-    # code span: a backtick would end the span (and could carry an
-    # @mention out of it), a `|` would split the cell.
-    if "`" in branch or "|" in branch or "\n" in branch:
-        branch = "<branch>"
-    repo = ((pr.get("base") or {}).get("repo") or {}).get("full_name") or "pulumi/docs"
-    workflow_url = f"https://github.com/{repo}/actions/workflows/{STAGING_WORKFLOW_FILE}"
-    dispatch = f"`gh workflow run {STAGING_WORKFLOW_FILE} --ref {branch}`"
-    not_prod = (
-        f"Use [Build and deploy testing]({workflow_url}), never \"Build and deploy\" "
-        f"(`{PRODUCTION_WORKFLOW_FILE}`), which deploys production."
-    )
-    last = _last_staging_failure(gh, head_sha)
+    sha = head_sha[:9]
+    try:
+        runs = gh.get_workflow_runs(STAGING_WORKFLOW_FILE, head_sha)
+    except Exception:  # noqa: BLE001 — see docstring
+        runs = []
+    running = next((r for r in runs if (r.get("status") or "") in _IN_FLIGHT), None)
+    if running:
+        return Gate("staging", "pending",
+                    f"A staging deploy of `{sha}` is running ([run {running.get('id')}]"
+                    f"({running.get('html_url')})). When it finishes, `staging-status.yml` re-checks "
+                    "this gate within ~10 minutes; nothing to do meanwhile.",
+                    short=f"Staging deploy of {sha} is running", url=running.get("html_url") or "")
+    failed = next((r for r in runs if (r.get("conclusion") or "") in _FAILED), None)
+    if failed:
+        return Gate("staging", "red",
+                    f"The staging deploy of `{sha}` failed ([run {failed.get('id')}]"
+                    f"({failed.get('html_url')})). Open it and click **Re-run failed jobs**; "
+                    "a re-run can only redeploy staging.",
+                    short="Staging deploy failed: open it and click Re-run failed jobs",
+                    url=failed.get("html_url") or "")
     try:
         state = gh.get_workflow_state(STAGING_WORKFLOW_FILE)
     except Exception:  # noqa: BLE001 — see docstring
         state = ""
     if state and state != "active":
-        return last + (
-            f"This PR changes the deploy itself, and needs a successful staging deploy "
-            f"at `{head_sha[:9]}`, but **the staging workflow is disabled** "
-            f"([`{STAGING_WORKFLOW_FILE}`]({workflow_url}) is `{state}`), so no staging "
-            "deploy can run, automatic or manual. Someone usually disables it to keep a "
-            "branch build on pulumi-test.io, so check with them, then re-enable it "
-            f"(`gh workflow enable {STAGING_WORKFLOW_FILE}`) and dispatch it at this "
-            f"branch: {dispatch}. {not_prod}"
-        )
-    return last + (
-        f"This PR changes the deploy itself: no successful staging deploy at "
-        f"`{head_sha[:9]}`. One is dispatched automatically when such a PR opens or "
-        "pushes (`staging-deploy-auto.yml`), and a deploy that finishes is picked up "
-        "within ~10 minutes by `staging-status.yml`'s sweep, which re-runs this check. "
-        f"If it never ran or it failed, dispatch it at this branch: {dispatch}. "
-        f"{not_prod}"
-    )
+        return Gate("staging", "red",
+                    f"This PR changes the deploy itself, and staging deploys are turned off "
+                    f"(the staging workflow is `{state}`), so none can run. Ask in `#docs`; "
+                    "turning it back on needs a repo admin.",
+                    short="Staging deploys are turned off: ask in #docs")
+    why = _last_staging_failure(gh, head_sha)
+    return Gate("staging", "red",
+                why + f"This PR changes the deploy itself, and `{sha}` has no staging deploy "
+                "yet. Comment `/deploy-staging` on this PR to start one.",
+                short="No staging deploy yet: comment /deploy-staging")
+
+
+def _gate_links(pr: dict, card_url: str) -> dict:
+    """Where each gate's status links when the gate has no link of its own:
+    the author card for review and findings (that's where they're answered),
+    the Files tab for the oversized ack (that's where Approve is), and the
+    PR itself for the rest. Never the Sentinel's own run page, which is for
+    debugging the Sentinel."""
+    pr_url = pr.get("html_url") or ""
+    links = {"pr": pr_url}
+    if card_url:
+        links.update(review=card_url, findings=card_url)
+    if pr_url:
+        links["oversized"] = f"{pr_url}/files"
+    return links
 
 
 def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool, str]:
@@ -1250,8 +1273,8 @@ def _stamp_report_only(verdict: Verdict) -> Verdict:
 
     Report-only has three surfaces and they have to agree: the published
     status (`neutral`, which publish_verdict.py posts as a passing
-    `success`), its description in the merge box, and the pinned status
-    comment. `would_be` is
+    `success`), its description in the merge box, and the per-gate statuses
+    (`gate_statuses`). `would_be` is
     what every one of them reports, and the only place the true conclusion
     survives, so it is set before `conclusion` is overwritten.
     """
@@ -1340,25 +1363,25 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         # the review lane skips it (`empty-diff`), and on a fork PR G1/G2 skip too — a fully green Sentinel with nobody
         # involved, and on a transient empty read, over a real diff.
         gates.append(Gate(
-            "G1 review-ran", "red",
+            "review", "red",
             "This PR changes no files, so there is nothing to review. If the diff "
             "is still being computed, push again to re-evaluate.",
         ))
     elif oversized:
-        gates.append(Gate("G1 review-ran", "skip", "oversized — see G5"))
+        gates.append(Gate("review", "skip", "oversized — see the oversized gate"))
     elif "review-ran" in skip_gates:
         gates.append(Gate(
-            "G1 review-ran", "skip",
+            "review", "skip",
             "external contribution — auto-review does not run for external "
             "contributions; the approving reviewer's review is the review",
         ))
     elif mechanical:
-        gates.append(Gate("G1 review-ran", "ok", "mechanical change — no review required"))
+        gates.append(Gate("review", "ok", "mechanical change — no review required"))
     elif author_card and _body_matches_head(author_card.get("body") or "", head_sha):
-        gates.append(Gate("G1 review-ran", "ok", f"review current at `{head_sha[:9]}`"))
+        gates.append(Gate("review", "ok", f"review current at `{head_sha[:9]}`"))
     elif legacy and _body_matches_head(legacy.get("body") or "", head_sha):
         gates.append(Gate(
-            "G1 review-ran", "ok",
+            "review", "ok",
             "legacy (v2) review current at head (grandfathered)",
         ))
     elif skip_label and never_reviewed:
@@ -1368,14 +1391,14 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         shape = _shortcut_shape(pr, files)
         if shape is None:
             gates.append(Gate(
-                "G1 review-ran", "red",
+                "review", "red",
                 f"No current review for `{head_sha[:9]}` — the review lane skipped this "
                 f"PR as `{skip_label}`, but its diff is neither trivial nor "
                 "frontmatter-only, so it needs the review. Comment `/new-review` to run it.",
             ))
         elif PROSE_FLAGGED_LABEL in labels and triage_prose is None:
             gates.append(Gate(
-                "G1 review-ran", "red",
+                "review", "red",
                 f"No current review for `{head_sha[:9]}` — the review lane skipped this "
                 f"PR as `{skip_label}`, and triage flagged prose issues "
                 f"(`{PROSE_FLAGGED_LABEL}`) but its prose-check comment is missing, so "
@@ -1385,7 +1408,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             skip_standin = f"{shape} change"
             if triage_prose is not None:
                 gates.append(Gate(
-                    "G1 review-ran", "ok",
+                    "review", "ok",
                     f"{skip_standin} — the review lane skipped it (`{skip_label}`); triage's "
                     "prose check stands in for the review (advisory nits in the triage comment)",
                 ))
@@ -1393,7 +1416,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                              "in for the review; a human approver is still required._")
             else:
                 gates.append(Gate(
-                    "G1 review-ran", "ok",
+                    "review", "ok",
                     f"{skip_standin} — the review lane skipped it (`{skip_label}`) and "
                     "triage's prose check left no nits",
                 ))
@@ -1403,7 +1426,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         branch = (pr.get("head") or {}).get("ref") or ""
         skip_standin = f"`{skipped_bot}` automation PR"
         gates.append(Gate(
-            "G1 review-ran", "ok",
+            "review", "ok",
             f"the review lane does not review `{skipped_bot}` PRs from `{branch}`, so "
             "the approver's review is the review",
         ))
@@ -1414,7 +1437,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         # open, minutes before the card. Telling the author to run a command
         # here sent them after something that was about to happen anyway.
         gates.append(Gate(
-            "G1 review-ran", "red",
+            "review", "red",
             "The automated review hasn't posted yet; it starts when the PR is marked "
             "ready for review and usually takes 10-20 minutes. If nothing shows up, "
             "comment `/new-review`.",
@@ -1426,7 +1449,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         # (#21840) a push just marks it stale, so the advice sent authors
         # round a loop that never closed.
         gates.append(Gate(
-            "G1 review-ran", "red",
+            "review", "red",
             f"No current review for `{head_sha[:9]}` — comment "
             "`/update-review <what changed>` to refresh it, or "
             "`/new-review` for a fresh one.",
@@ -1434,18 +1457,18 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
 
     # G2 findings-answered ------------------------------------------------
     if oversized:
-        gates.append(Gate("G2 findings-answered", "skip", "oversized — see G5"))
+        gates.append(Gate("findings", "skip", "oversized — see the oversized gate"))
     elif "findings-answered" in skip_gates:
-        gates.append(Gate("G2 findings-answered", "skip", "external contribution"))
+        gates.append(Gate("findings", "skip", "external contribution"))
     elif mechanical:
-        gates.append(Gate("G2 findings-answered", "ok", "no review, no findings"))
+        gates.append(Gate("findings", "ok", "no review, no findings"))
     elif author_card:
         body = author_card.get("body") or ""
         try:
             state = review_state.parse_state(body) or review_state.empty_state()
         except ValueError:
             gates.append(Gate(
-                "G2 findings-answered", "error",
+                "findings", "error",
                 "The REVIEW_STATE block on the review comment is corrupt — "
                 "ask a maintainer to regenerate the review.",
             ))
@@ -1461,7 +1484,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 # as 'every finding answered' with a live blocking
                 # finding visible on screen.
                 gates.append(Gate(
-                    "G2 findings-answered", "error",
+                    "findings", "error",
                     f"{len(unnumbered)} blocking finding(s) still carry the "
                     "`F?` placeholder, so they have no id to answer — the "
                     "review did not finish numbering. Re-run it with "
@@ -1477,7 +1500,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             if undecided:
                 ids = ", ".join(undecided)
                 gates.append(Gate(
-                    "G2 findings-answered", "red",
+                    "findings", "red",
                     f"{len(undecided)} finding(s) undecided ({ids}) — fix and push, "
                     f"accept them with `/update-review accept {' '.join(undecided)}`, "
                     f"or reply with your reasoning, e.g. "
@@ -1494,11 +1517,11 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 m = HEAD_MARKER_RE.search(body)
                 at = f" at `{m.group(1)[:9]}`" if m else ""
                 gates.append(Gate(
-                    "G2 findings-answered", "skip",
-                    f"the review{at} is not current — see G1",
+                    "findings", "skip",
+                    f"the review{at} is not current — see the review gate",
                 ))
             else:
-                gates.append(Gate("G2 findings-answered", "ok", "every finding answered"))
+                gates.append(Gate("findings", "ok", "every finding answered"))
     elif legacy:
         outstanding = None
         missing = legacy.get("review_pages_missing") or []
@@ -1509,7 +1532,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             # rows live: counting zero here would pass the gate on a review
             # nobody has read.
             gates.append(Gate(
-                "G2 findings-answered", "error",
+                "findings", "error",
                 f"the legacy review is {legacy['review_pages']} comments and "
                 f"page(s) {', '.join(str(k) for k in missing)} could not be read — "
                 "re-run the review (`/new-review`) rather than merge over an unread one.",
@@ -1519,24 +1542,24 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 vp = _load("sentinel_validate_pinned", _DOCS_REVIEW_SCRIPTS / "validate-pinned.py")
                 outstanding = len(vp.extract_bucket_bullets(legacy.get("body") or "", "🚨 Outstanding"))
             except Exception as exc:  # noqa: BLE001
-                gates.append(Gate("G2 findings-answered", "error", f"legacy comment unparsable: {exc}"))
+                gates.append(Gate("findings", "error", f"legacy comment unparsable: {exc}"))
                 outstanding = None
         if outstanding is not None:
             if outstanding > 0:
                 gates.append(Gate(
-                    "G2 findings-answered", "red",
+                    "findings", "red",
                     f"{outstanding} 🚨 Outstanding finding(s) on the legacy review — "
                     "work them per CONTRIBUTING §Working the review to zero.",
                 ))
             elif not _body_matches_head(legacy.get("body") or "", head_sha):
-                gates.append(Gate("G2 findings-answered", "skip",
-                                  "the legacy review is not current — see G1"))
+                gates.append(Gate("findings", "skip",
+                                  "the legacy review is not current — see the review gate"))
             else:
-                gates.append(Gate("G2 findings-answered", "ok", "legacy review clean"))
+                gates.append(Gate("findings", "ok", "legacy review clean"))
     elif skip_standin:
-        gates.append(Gate("G2 findings-answered", "ok", f"{skip_standin} — no findings to answer"))
+        gates.append(Gate("findings", "ok", f"{skip_standin} — no findings to answer"))
     else:
-        gates.append(Gate("G2 findings-answered", "skip", "no review present — see G1"))
+        gates.append(Gate("findings", "skip", "no review present — see the review gate"))
 
     # Shared by G4 (a deploy carries over a base-only head move) and G5.
     carry = _Carry(gh, pr, files)
@@ -1557,9 +1580,9 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                     witness = f"{earlier}; {_CARRY_CLAUSE}"
                     break
         if witness:
-            gates.append(Gate("G4 infra-evidence", "ok", witness))
+            gates.append(Gate("staging", "ok", witness))
         else:
-            gates.append(Gate("G4 infra-evidence", "red", _g4_red_message(gh, pr, head_sha)))
+            gates.append(_staging_gate(gh, pr, head_sha))
     else:
         # NOT "no infra paths": `domain:infra` and
         # `staging_evidence.paths` are different questions now, and a PR can
@@ -1567,7 +1590,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         # without touching anything the deploy runs. Saying "no infra paths"
         # on such a PR would be false in the one cell a reader checks.
         gates.append(Gate(
-            "G4 infra-evidence", "skip",
+            "staging", "skip",
             "no changed path affects the deploy",
         ))
 
@@ -1575,7 +1598,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     if oversized:
         acked = _oversized_ack(config, reviews, head_sha, author)
         if acked:
-            gates.append(Gate("G5 oversized-ack", "ok",
+            gates.append(Gate("oversized", "ok",
                               f"`{acked}` confirmed a hand review with `{OVERSIZED_ACK}`"))
         else:
             # Say who, where, and what doesn't count. The near misses (a PR
@@ -1583,7 +1606,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             # push) all look like they should work.
             number = pr.get("number") or "<number>"
             gates.append(Gate(
-                "G5 oversized-ack", "red",
+                "oversized", "red",
                 "The automated review doesn't run on an oversized PR, so a Pulumi "
                 "approver (org member or collaborator) confirms they reviewed it by hand: submit an **Approve** "
                 f"review on the latest commit with `{OVERSIZED_ACK}` at the start of a line "
@@ -1594,13 +1617,13 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 short=f"an approval with {OVERSIZED_ACK}",
             ))
     else:
-        gates.append(Gate("G5 oversized-ack", "skip", "not oversized"))
+        gates.append(Gate("oversized", "skip", "not oversized"))
 
     # ---- Conclusion -----------------------------------------------------
     waived, waive_note = _waive_state(gh, config, labels)
     any_error = any(g.status == "error" for g in gates)
-    reds = [g for g in gates if g.status == "red"]
-    infra_red = any(g.name.startswith("G4") and g.status == "red" for g in gates)
+    reds = [g for g in gates if g.status in ("red", "pending")]
+    infra_red = any(g.name == "staging" and g.status == "red" for g in gates)
 
     # `waived` is tested BEFORE `any_error` on purpose. It used to be the
     # other way round, so a gate that errored (one approver's lookup hitting
@@ -1620,7 +1643,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         title = f"Waived by {waive_note}"
     elif any_error:
         conclusion = "action_required"
-        errs = [_PLAIN_GATE.get(g.name.split()[0], g.name) for g in gates if g.status == "error"]
+        errs = [_PLAIN_GATE.get(g.name, g.name) for g in gates if g.status == "error"]
         title = f"Couldn't check {_plain_join(errs)} — re-run the Sentinel check"
     elif reds:
         conclusion = "failure"
@@ -1637,21 +1660,24 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         parts.append(f"## ⚠️ WAIVED by @{waive_note}\n\nMerge gates bypassed via `review:waived` "
                      "(logged). The table below shows what the verdict would have been.")
         if infra_red:
-            parts.append("**G4 was red:** this change to the deploy has not been applied "
+            parts.append("**The staging gate was red:** this change to the deploy has not been applied "
                          "on staging, so the first production deploy after merge is its "
                          "first real run. Watch it.")
     elif waive_note:
         # The label is on the PR but didn't authorize. Say so loudly: a
         # refused waive that reads as "nothing happened" invites a second
         # one from the same person.
+        retry = ("While that lookup fails, a re-applied waive fails the same way, so a repo "
+                 "admin merging past the check is the way through." if "lookup failed" in waive_note
+                 else "To retry, a routing-team member removes the label and applies it again.")
         parts.append(
-            f"## ⚠️ `review:waived` NOT honored\n\n{waive_note}. The gates below stand."
+            f"## ⚠️ `review:waived` NOT honored\n\n{waive_note}. The gates below stand. {retry}"
         )
     # The gate table comes before the brief: the merge box's Details link
     # lands here, and on #22524 the table started two-thirds of the way down,
     # under a brief whose first line was "Check the ⚠️ items, then approve."
     table = ["| Gate | Status | Detail |", "|---|---|---|"]
-    icon = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
+    icon = {"ok": "✅", "red": "🔴", "pending": "🟡", "error": "🟠", "skip": "➖"}
     for g in gates:
         msg = g.message + (f" — {BREAK_GLASS}" if not waived and _waive_can_clear(g) else "")
         table.append(f"| {g.name} | {icon[g.status]} {g.status} | {msg} |")
@@ -1677,7 +1703,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         conclusion=conclusion, title=title, summary=summary,
         head_sha=head_sha, gates=gates, blocking_ids=blocking_ids,
         mechanical=mechanical, waived=waived, waive_note=waive_note,
-        links={"G1": card_url, "G2": card_url} if card_url else {},
+        links=_gate_links(pr, card_url),
     )
 
     if report_only:
@@ -1700,16 +1726,6 @@ def _waive_actor(gh: Gh) -> str:
 # ---- Status strip -------------------------------------------------------
 
 
-def _status_link(comments: list[dict]) -> str:
-    # The strip used to say "the Sentinel check below", but the status comment
-    # is usually ABOVE the card: the Sentinel posts it when the PR opens, and
-    # the review lands later. Link the copy `update_status_comment` keeps (the
-    # oldest). No copy yet means no link; the next evaluation adds it.
-    found = sorted(_find_comments(comments, STATUS_MARKER), key=lambda c: int(c.get("id") or 0))
-    url = found[0].get("html_url") if found else None
-    return f"[the Sentinel status]({url})" if url else "the Sentinel status comment"
-
-
 def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -> bool:
     """Patch the one-line ⛔ strip into the author card. Idempotent."""
     comments = comments if comments is not None else gh.list_issue_comments()
@@ -1719,27 +1735,25 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
     body = card.get("body") or ""
     if verdict.conclusion in ("failure", "action_required"):
         n = len(verdict.blocking_ids)
-        details = f"Details: {_status_link(comments)}."
         if n:
             first = verdict.blocking_ids[0] if verdict.blocking_ids else "F1"
             line = (f"⛔ **{n} item(s) block merge** — fix and push, ship as-is with "
-                    f"`/update-review accept {first}`, or reply `/update-review {first}: <why>`. "
-                    f"{details}")
+                    f"`/update-review accept {first}`, or reply `/update-review {first}: <why>`.")
         else:
             # No finding blocks, so the card right under this line says "nothing
             # blocks merge" and has nothing to fix or answer. "⛔ merge is
             # blocked — fix and push, or reply /update-review" contradicted it
             # and sent authors (workprentice included) after gates only an
             # approver or a deploy can clear. Say what the merge is waiting on;
-            # that gate's row in the status comment says who acts.
+            # that gate's status in the merge box says who acts.
             # In words, not gate ids: "waiting on G1 review-ran" told nobody
             # what to do.
             what = _plain_join(
-                [_waiting_on(g, n) for g in verdict.gates if g.status == "red"]
-                + [f"a re-run of the Sentinel check ({_PLAIN_GATE.get(g.name.split()[0], g.name)} "
+                [_waiting_on(g, n) for g in verdict.gates if g.status in ("red", "pending")]
+                + [f"a re-run of the Sentinel check ({_PLAIN_GATE.get(g.name, g.name)} "
                    "couldn't be checked)" for g in verdict.gates if g.status == "error"]
             ) or "the merge gate"
-            line = f"⏳ **Merge is waiting on {what}.** {details}"
+            line = f"⏳ **Merge is waiting on {what}.** Each gate's status in the merge box says how."
         strip = f"{STRIP_OPEN}\n{line}\n{STRIP_CLOSE}"
     else:
         if STRIP_OPEN not in body:
@@ -1784,216 +1798,27 @@ def without_strip(body: str) -> str:
 
 # ---- Pinned status comment ----------------------------------------------
 
-# How each quiet state opens its cell. A red gate speaks for itself — its own
-# message carries the remediation — so only the quiet states need a
-# phrasebook, and each one is completed by the gate's own message rather than
-# replacing it.
-#
-# It used to REPLACE it, and a green gate rendered as the bare words "Nothing
-# to do." That is how PR #21698 came to show a green approver gate with no
-# approving review from anybody on the PR: the gate had passed under the
-# since-deleted `auto_approve` clean-brief rule, and the one cell that could
-# have said so said "Nothing to do." instead. A merge gate that reports a
-# pass without its reason is indistinguishable from one that is broken, so
-# the reason ships with the verdict now.
-_GATE_BLURB = {
-    "ok": "Nothing to do",
-    "skip": "Doesn't apply to this PR",
-    "error": "Couldn't be evaluated — re-run the Sentinel check",
-}
+def remove_status_comments(gh: Gh, comments: list[dict] | None = None) -> int:
+    """Delete the Sentinel's old pinned status comments; returns how many.
 
-_STATUS_ICON = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
-_GATE_LABEL = {"G1": "Review", "G2": "Findings", "G4": "Staging deploy", "G5": "Oversized ack"}
-
-
-def render_status_comment(verdict: Verdict) -> str:
-    """The pinned 'where this PR stands' comment.
-
-    Deliberately free of timestamps and run ids: the body is a pure
-    function of the verdict, so a re-evaluation that changes nothing
-    produces a byte-identical body and `update_status_comment` skips the
-    PATCH. A comment that edits itself on every push is the notification
-    noise v3 exists to remove.
-    """
-    preview = bool(verdict.would_be)
-    heading = ("## Sentinel — merge gate status (preview)" if preview
-               else "## Sentinel — merge gate status")
-    lines = [STATUS_MARKER, heading, ""]
-
-    if preview:
-        # Both halves, in this order, and neither is optional: informational
-        # today, enforced soon. Half one alone teaches everyone to scroll past
-        # the comment, and enforcement day is then the first time anyone reads
-        # a gate row; half two alone reads as a PR that is blocked. Half one
-        # says "safe to ignore for now", never "you can merge anyway" — the
-        # gate surface is no place to coach someone past a red row. And
-        # neither half calls a red row the author's homework: G4 is a deploy
-        # and G5 an approver's ack, so the rows are a sign-off checklist, and
-        # only some of them are ever the author's to clear.
-        lines += [
-            "> [!WARNING]",
-            "> ## ⚠️ Preview mode — this check is NOT blocking your merge",
-            "> ",
-            f"> The Sentinel is in **preview (report-only) mode**: its status check passes "
-            f"whatever the gates below say, so nothing here gates this PR. The rows "
-            f"are informational and **safe to ignore for now**. It *would* have concluded "
-            f"`{verdict.would_be}`.",
-            "> ",
-        ]
-        # The enforcement half promises "every row below", so it only goes
-        # above a gate table. A gateless comment (not governed) has no rows
-        # to turn green, and nothing about it changes on enforcement day.
-        # Where to ask about a row is the footer's job, not the banner's.
-        if verdict.governed and verdict.gates:
-            lines += [
-                "> **This will be enforced in the near future.** Once it is, every row below "
-                "has to be green before this PR can merge. The rows are the sign-offs a merge "
-                "needs — some yours, some a reviewer's or a deploy's.",
-            ]
-        else:
-            lines += ["> **This will be enforced in the near future.**"]
-        lines += [""]
-
-    if not verdict.governed or not verdict.gates:
-        lines += [(verdict.base_summary or verdict.summary).split("\n\n")[0], ""]
-        return _with_help_footer(lines)
-
-    blocking = [g for g in verdict.gates if g.status in ("red", "error")]
-    # In preview mode `conclusion` is always `neutral` and the real answer
-    # lives in `would_be`, so read the effective one — otherwise a waived PR
-    # in preview falls through to the "N gates need attention" headline the
-    # waive branch exists to prevent.
-    effective = verdict.would_be or verdict.conclusion
-    if verdict.waived and effective == "success":
-        # Say what the status says. The rows below still show what the
-        # gates found — that is the audit trail a waive is supposed to leave
-        # — but the headline must not tell an author they are blocked when
-        # they are not, nor recommend the break-glass twice.
-        # "This PR can merge" over-promised: the waive clears the Sentinel,
-        # not GitHub's own required approving review (#22527 waited on one).
-        lines += [
-            f"**Waived by `{verdict.waive_note}` — the Sentinel passes.** `review:waived` "
-            "is honored and logged; the gates below are the record of what it bypassed. "
-            "GitHub's own required approval still applies.",
-            "",
-        ]
-    elif blocking:
-        if verdict.waive_note:
-            # No `@`: this comment is re-rendered, and a mention pings.
-            note = re.sub(r"@([\w-]+(?:\[bot\])?)", r"`\1`", verdict.waive_note)
-            retry = ("While that lookup fails, a re-applied waive fails the same way, so a "
-                     "repo admin merging past the check is the way through." if "lookup failed" in note else
-                     "To retry, a routing-team member removes the label and applies it again.")
-            lines += [f"**`review:waived` is on this PR but was not honored:** {note}. {retry}", ""]
-        # Tense matters here, and only here: in preview nothing is blocking
-        # anything, so a headline reading "before this can merge" hands the
-        # banner directly above it a contradiction to lose.
-        what = _plain_join([_waiting_on(g, len(verdict.blocking_ids)) for g in blocking
-                            if g.status == "red"]
-                           + [f"a re-run ({_PLAIN_GATE.get(g.name.split()[0], g.name)} couldn't be checked)"
-                              for g in blocking if g.status == "error"])
-        lines += [
-            (f"**Once enforced, this would wait on {what}.**" if preview else
-             f"**Waiting on {what}.**"),
-            "",
-        ]
-        # Only the red rows, in full: that is the part someone has to act on.
-        # "Too much text" (#22397) was a five-row table where four rows said
-        # nothing needed doing.
-        for g in blocking:
-            lines.append(f"- {_STATUS_ICON[g.status]} **{_GATE_LABEL.get(g.name.split()[0], g.name)}:** "
-                         f"{' '.join(g.message.split())}")
-        lines.append("")
-    else:
-        lines += ["**All gates green — nothing would block this merge.**" if preview
-                  else "**All gates green — nothing is blocking this merge.**", ""]
-
-    if not verdict.waived and any(_waive_can_clear(g) and "hasn't posted yet" not in g.message
-                                  for g in blocking):
-        # Not BREAK_GLASS verbatim — that string is written to follow a gate
-        # message ("… — override: a member of …") and reads as a doubled
-        # "override:" when it opens a sentence of its own.
-        lines += [
-            "_Break glass: a member of a routing team "
-            "(`.github/review-routing.yml` `teams:`) can apply `review:waived`, "
-            "which is logged._",
-            "",
-        ]
-
-    lines += ["<details><summary>All gates</summary>", "",
-              "| | Gate | What it needs |", "|---|---|---|"]
-    for g in verdict.gates:
-        if g.status in ("red", "error"):
-            need = g.message
-        else:
-            # "Nothing to do: matrix-required approval present." — the blurb
-            # answers the column, the gate's own message says why, and a
-            # reader can tell a satisfied gate from a mis-evaluated one.
-            need = f"{_GATE_BLURB[g.status]}: {g.message}."
-        # One cell, one line: a literal newline would break the row.
-        need = " ".join(need.split())
-        lines.append(f"| {_STATUS_ICON[g.status]} | **{g.name}** | {need} |")
-    lines += ["", "</details>", ""]
-
-    lines += [f"<sub>Evaluated at head `{verdict.head_sha[:9]}`.</sub>"]
-    return _with_help_footer(lines)
-
-
-def _with_help_footer(lines: list[str]) -> str:
-    # The blank line before `---` is load-bearing: directly under a paragraph
-    # it turns that paragraph into a setext heading instead of a rule.
-    body = "\n".join(lines).rstrip()
-    return f"{body}\n\n---\n\n{STATUS_HELP_FOOTER}\n"
-
-
-def update_status_comment(gh: Gh, verdict: Verdict,
-                          comments: list[dict] | None = None) -> bool:
-    """Upsert the pinned status comment. Idempotent; returns True on write.
-
-    There is ONE status comment per PR, and overlapping runs are normal (the
-    workflow has no concurrency group), so a plain list-then-POST upsert
-    races: two runs that both list before either posts each create one.
-    That is how 6 of the 100 newest PRs on 2026-10-12 (pulumi/docs#22251,
-    #22154, …) came to carry two, created in the same second by runs that
-    started together (open as draft then mark ready; a bot lane opening and
-    labelling at once). Only the oldest copy is ever patched again, so the
-    other one froze on its first verdict and contradicted the live one for
-    the life of the PR.
-
-    So every write converges instead: keep the oldest bot copy, delete the
-    rest, and after a first POST list once more, because the run we raced
-    may have posted too. Two runs that both see the pair delete the same
-    one (the loser's DELETE 404s, which is fine) and patch the same
-    survivor. A duplicate that slips past that re-read still goes on the
-    next evaluation, which also heals PRs that already have one.
-    """
+    There used to be one per PR, a gate table re-rendered on every
+    evaluation. It duplicated the per-gate statuses in the merge box and the
+    author card, and it was the noisiest thing on a PR (#22397: "too much
+    text"; a draft got one saying only that drafts aren't gated). Each gate's
+    status now says what it wants and links where you act, so the comment
+    is gone, and every evaluation removes any copy a PR still carries.
+    Only the bot's own comments: one quoting the marker is left alone."""
     comments = comments if comments is not None else gh.list_issue_comments()
-    body = render_status_comment(verdict)
-    existing = _find_comments(comments, STATUS_MARKER)
-    wrote = False
-    if not existing:
-        gh.post_issue_comment(body)
-        try:
-            existing = _find_comments(gh.list_issue_comments(), STATUS_MARKER)
-        except SentinelDataError:
-            return True  # posted; any duplicate goes on the next run
-        if len(existing) <= 1:
-            return True
-        wrote = True
-    existing = sorted(existing, key=lambda c: int(c.get("id") or 0))
-    keep, extras = existing[0], existing[1:]
-    for c in extras:
+    removed = 0
+    for c in _find_comments(comments, STATUS_MARKER):
         try:
             gh.delete_issue_comment(c["id"])
+            removed += 1
         except SentinelDataError as exc:
-            if "HTTP 404" not in str(exc):  # 404: the run we raced got it first
-                print(f"::warning::could not delete duplicate status comment "
-                      f"{c['id']}: {exc}", file=sys.stderr)
-        wrote = True
-    if (keep.get("body") or "").strip() != body.strip():
-        gh.patch_issue_comment(keep["id"], body)
-        wrote = True
-    return wrote
+            if "HTTP 404" not in str(exc):  # 404: an overlapping run got it first
+                print(f"::warning::could not delete status comment {c['id']}: {exc}",
+                      file=sys.stderr)
+    return removed
 
 
 # ---- CLI ----------------------------------------------------------------
@@ -2008,9 +1833,8 @@ def main() -> int:
     parser.add_argument("--update-strip", action="store_true")
     parser.add_argument(
         "--status-comment", action="store_true",
-        help="Maintain the pinned gate-status comment. Both modes do, on every "
-             "PR; in report-only mode the comment leads with a preview banner "
-             "saying it blocks nothing yet.",
+        help="Remove the retired pinned gate-status comment from the PR, if it "
+             "still carries one (see remove_status_comments).",
     )
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--self-test", action="store_true")
@@ -2055,7 +1879,7 @@ def main() -> int:
     # A's verdict, after which the guard correctly declined to publish the
     # status: a green check next to two comments saying the opposite, and
     # nothing rewrites them until an unrelated event, because
-    # `render_status_comment` is a pure function of the verdict.
+    # the comments are pure functions of the verdict.
     #
     # One re-read immediately before writing closes it. Cheap, and it is the
     # same question the guard asks, asked at the point that matters.
@@ -2085,19 +1909,14 @@ def main() -> int:
                     except SentinelDataError as exc:
                         print(f"::warning::could not update the author-card strip: {exc}",
                               file=sys.stderr)
-                # Every PR the Sentinel evaluates, in both modes. Report-only
-                # used to write only for a `sentinel:preview` cohort; the
-                # comment now carries its own preview banner instead, which
-                # is what makes showing it everywhere safe (and showing it
-                # everywhere is what makes the dry run worth running).
-                # Best-effort for the same reason as the strip: a locked
-                # comment or a secondary rate limit must not suppress the
-                # verdict.
-                try:
-                    update_status_comment(gh, verdict, comments=comments)
-                except SentinelDataError as exc:
-                    print(f"::warning::could not maintain the status comment: {exc}",
-                          file=sys.stderr)
+                # Best-effort for the same reason as the strip: a failed
+                # DELETE must not suppress the verdict.
+                if args.status_comment:
+                    try:
+                        remove_status_comments(gh, comments=comments)
+                    except SentinelDataError as exc:
+                        print(f"::warning::could not remove the old status comment: {exc}",
+                              file=sys.stderr)
     print(json.dumps(verdict.to_json(), indent=2))
     return 0
 

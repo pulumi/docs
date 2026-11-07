@@ -148,7 +148,7 @@ REASON_CODES = {
     "stances": "the brief lists editorial stances (blocks only with --strict-stances)",
     "mergeable": "GitHub mergeable_state when not clean/blocked",
     "checks": "check rollup when not green, the Sentinel left out (it is red until an approval exists, so it is not a CI failure)",
-    "sentinel": "<passing>/<applicable>: the Sentinel's merge gates at this head, from its status comment; skipped gates don't count",
+    "sentinel": "<passing>/<applicable>: the Sentinel's merge gates at this head, from its per-gate statuses; gates that don't apply don't count",
     "cluster": "member of a collision cluster: overlap (hunks intersect; position in the merge order), same-file (any order), or theirs",
     "directional": "adds links to an alias-only URL another open PR removes links from",
     "duplicate": "looks like a duplicate of another open PR",
@@ -995,9 +995,9 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     real_failures = [f for f in failing if not act._is_sentinel({"name": f or ""})]
     gates = [g for g in ((pr.get("sentinel") or {}).get("gates") or []) if g.get("state") != "skip"]
     if gates:
-        # The Sentinel concludes failure until an approval exists, so "failing"
-        # said nothing a row didn't already say. The count of gates that pass
-        # out of the ones that apply does, and the tooltip names the rest.
+        # "failing" said nothing a row didn't already say. The count of gates
+        # that pass out of the ones that apply does, and the tooltip names
+        # the rest.
         reasons.append(f"sentinel:{sum(g.get('state') == 'ok' for g in gates)}/{len(gates)}")
     # A red rollup with only the Sentinel in it is not a CI failure: act.py's
     # preflight leaves the Sentinel out and waits for it between the approval

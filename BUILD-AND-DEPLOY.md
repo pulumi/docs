@@ -1332,22 +1332,22 @@ stateDiagram-v2
 ```mermaid
 flowchart LR
   EV["`Push, label change, approval or dismissal, review lanes finishing, staging status`"] --> SE["`sentinel.py`"]
-  SE --> G1["`G1: review ran at head`"]
-  SE --> G2["`G2: every finding answered`"]
-  SE --> G4["`G4: staging deploy at head (infra PRs)`"]
-  SE --> G5["`G5: oversized PR acknowledged`"]
+  SE --> R["`review: review ran at head`"]
+  SE --> F["`findings: every finding answered`"]
+  SE --> S["`staging: staging deploy at head (infra PRs)`"]
+  SE --> O["`oversized: oversized PR acknowledged`"]
 ```
 
 - **Triggers:** `pull_request_target` (open, ready, push, reopen, label changes), `pull_request_review` (submitted, dismissed, and edits to approving reviews), `workflow_run` after either review lane, and `workflow_dispatch`.
 - **Rollout switch:** `REVIEW_V3_SENTINEL` unset means the job doesn't run; `'report'` always passes, with the would-be verdict in the status description; `'1'` enforces. Branch protection on `master` requires the Sentinel status for everyone but repo admins, so unset (or a disabled `review-sentinel.yml`) holds every PR: stand the gate down with `'report'`.
 - **Security invariant:** `pull_request_target` carries secrets and a write token even for fork PRs. The workflow is safe only because it never checks out or runs PR code, and `test_sentinel.py` enforces that. Don't add a head checkout.
 - **No concurrency group, on purpose:** a cancelled run shows as a failing check. Overlapping runs are cheap, and `scripts/review-v3/publish_guard.py` drops a verdict if the head moved or a newer run already published.
-- **Break-glass:** the `review:waived` label, which is logged and clears every gate, G4 included. Only a member of a team in `review-routing.yml`'s `teams:` can apply one that counts, and the Sentinel checks that with the org-scoped token, so an outage of that token refuses the waive. The workflow fetches that token only for a PR carrying `review:waived`; no gate reads it.
+- **Break-glass:** the `review:waived` label, which is logged and clears every gate, `staging` included. Only a member of a team in `review-routing.yml`'s `teams:` can apply one that counts, and the Sentinel checks that with the org-scoped token, so an outage of that token refuses the waive. The workflow fetches that token only for a PR carrying `review:waived`; no gate reads it.
 - **When the Sentinel never reports:** re-run it from **Actions › Sentinel › Run workflow** with the PR number. If it still can't conclude, a repo admin can merge past it; branch protection exempts admins.
 
-G4 needs a successful pulumi-test.io deploy at the PR's current head:
+`staging` needs a successful pulumi-test.io deploy at the PR's current head:
 
-- **staging-deploy-auto.yml** (pull request events): runs `route-pr.py` from the default branch. If it reports `staging_evidence_required`, it dispatches `testing-build-and-deploy.yml` at the PR's head branch. Same-repo PRs only. It never checks out PR code and never fails a PR. If the dispatch itself fails (for example, the testing workflow is disabled), it writes `staging/pulumi-test-io` = error with the reason, which shows in the merge box and on the Sentinel's G4 row. To retry, re-run the failed deploy or run `gh workflow run testing-build-and-deploy.yml --ref <branch>`.
+- **staging-deploy-auto.yml** (pull request events): runs `route-pr.py` from the default branch. If it reports `staging_evidence_required`, it dispatches `testing-build-and-deploy.yml` at the PR's head branch. Same-repo PRs only. It never checks out PR code and never fails a PR. If the dispatch itself fails (for example, the testing workflow is disabled), it writes `staging/pulumi-test-io` = error with the reason, which shows in the merge box and on the Sentinel's `staging` row. To retry, re-run the failed deploy or run `gh workflow run testing-build-and-deploy.yml --ref <branch>`.
 - **staging-status.yml** (every 10 minutes; `workflow_run` after the testing deploy; manual): writes the terminal `staging/pulumi-test-io` commit status and pokes the Sentinel. The schedule is the trigger that actually fires: runs dispatched with `GITHUB_TOKEN` never produce `workflow_run` events, so the listener almost never fires for staging deploys.
 
 ### Content upkeep automation
