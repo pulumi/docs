@@ -55,6 +55,8 @@ jobs:
     timeout-minutes: 5
     permissions:
       contents: read
+      pull-requests: write   # the 👀 reaction (a PR's conversation comments)
+      issues: write
     outputs:
       fire: ${{ steps.command-gate.outputs.fire }}
     steps:
@@ -74,6 +76,20 @@ jobs:
         run: |
           python3 .command-gate/.claude/commands/docs-review/scripts/command-gate.py check \
             --command deploy-staging --body-env BODY | tee -a "$GITHUB_OUTPUT"
+
+      # 👀 in a few seconds, so the commenter knows the command was heard;
+      # 🚀 or 😕 lands with the reply at the end of the deploy job. The
+      # other review commands (`/update-review`) already do the same.
+      - name: Acknowledge the command
+        if: steps.command-gate.outputs.fire == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          COMMENT_ID: ${{ github.event.comment.id }}
+        run: |
+          gh api "repos/$REPO/issues/comments/$COMMENT_ID/reactions" -f content=eyes > /dev/null \
+            || echo "::warning::could not react to the comment"
 
   deploy:
     needs: gate
@@ -189,6 +205,19 @@ jobs:
           fi
           gh api "repos/$REPO/issues/$PR/comments" -F body=@"$REPLY" > /dev/null \
             || echo "::warning::could not post the reply"
+
+      - name: React with the outcome
+        if: always() && steps.plan.outcome == 'success'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          COMMENT_ID: ${{ github.event.comment.id }}
+          DISPATCHED: ${{ steps.dispatch.outputs.dispatched }}
+        run: |
+          if [ "$DISPATCHED" = "true" ]; then CONTENT=rocket; else CONTENT=confused; fi
+          gh api "repos/$REPO/issues/comments/$COMMENT_ID/reactions" -f content="$CONTENT" > /dev/null \
+            || echo "::warning::could not react to the comment"
 
       # Re-score the gate so G4 shows the running deploy (or the dispatch
       # error) now, not on the next unrelated event. Pinned to the default
