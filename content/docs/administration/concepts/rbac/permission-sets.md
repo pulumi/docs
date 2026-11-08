@@ -34,24 +34,24 @@ Pulumi Cloud provides several default permission sets that you can use to quickl
 | Permission set | Description | Included Scopes |
 |------------|-------------|----------------|
 | `Stack Read` | Basic read-only access to stacks. Allows for running previews. | `stack:read`, `stack:export`, `stack:encrypt`, `stack:decrypt`, `stack_deployment:read`, `stack_deployment_settings:read`, `stack_access:read`, `stack_schedule:read` |
-| `Stack Write` | Ability to update stack configurations and run stack updates. | Stack Read, + `stack:import`, `stack:cancel_update`, `stack:write`, `stack_deployment_settings:write`, `stack_deployment_settings:encrypt`, `stack_deployment_cache:read`, `stack_tags:update`, `stack_schedule:update`, `stack_schedule:create`, `stack_schedule:pause`, `stack_schedule:resume`, `stack_schedule:delete`, `stack_deployment:create`, `stack_webhook:create`, `stack_webhook:update`, `stack_webhook:delete`, `stack_webhook:read` |
+| `Stack Write` | Ability to update stack configurations and run stack updates. | Stack Read, + `stack:import`, `stack:cancel_update`, `stack:write`, `stack_deployment_settings:write`, `stack_deployment_settings:encrypt`, `stack_tags:update`, `stack_schedule:update`, `stack_schedule:create`, `stack_schedule:pause`, `stack_schedule:resume`, `stack_schedule:delete`, `stack_deployment:create`, `stack_webhook:create`, `stack_webhook:update`, `stack_webhook:delete`, `stack_webhook:read`, `policy_results:update` |
 | `Stack Admin` | Grants full control over stack operations. | Stack Write, + `stack:delete`, `stack_access:update`, `stack:transfer`, `stack:rename` |
 
 ### Environment permission sets
 
 | Permission set | Description | Included Scopes |
 |------------|-------------|----------------|
-| `Environment Read` | Basic read-only access to environments. | `environment:read`, `environment:rotate_history`, `environment_version:read`, `environment_schedule:read`, `environment_tag:read` |
-| `Environment Open` | Ability to read the environment and access environment secrets. | Environment Read, + `environment:open`, `environment:clone`, `environment_version:open`, `environment_version:read` |
+| `Environment Read` | Basic read-only access to environments. | `environment:read`, `environment_settings:read`, `environment_access:read`, `environment:rotate_history`, `environment_version:read`, `environment_schedule:read`, `environment_tag:read` |
+| `Environment Open` | Ability to read the environment and access environment secrets. | Environment Read, + `environment:open`, `environment:clone`, `environment_version:open` |
 | `Environment Write` | Ability to modify environment settings. | Environment Open, + `environment:write`, `environment:rotate`, `environment_version:create`, `environment_version:update`, `environment_version:delete`, `environment_version:retract`, `environment_tag:create`, `environment_tag:update`, `environment_tag:delete`, `environment_schedule:create`, `environment_schedule:update`, `environment_schedule:pause`, `environment_schedule:resume`, `environment_schedule:delete`, `environment_webhook:read`, `environment_webhook:create`, `environment_webhook:update`, `environment_webhook:delete` |
-| `Environment Admin` | Full control over environment operations. | Environment Write, + `environment:delete` |
+| `Environment Admin` | Full control over environment operations. | Environment Write, + `environment:delete`, `environment_settings:update`, `environment_access:update`, `change_gate:create`, `change_gate:update`, `change_gate:delete` |
 
 ### Cloud account permission sets
 
 | Permission set | Description | Included Scopes |
 |------------|-------------|----------------|
 | `Account Read` | Basic read-only access to cloud accounts. | `insights_account:read`, `insights_account_scan:read`, `insights_account_access:read` |
-| `Account Write` | Ability to modify cloud accounts. | Account Read, + `insights_account:update`, `insights_account:scan`, `insights_account_scan:update`, `insights_account_scan:cancel`, `insights_account_scan:pause`, `insights_account_scan:resume` |
+| `Account Write` | Ability to modify cloud accounts. | Account Read, + `insights_account:update`, `insights_account:scan`, `insights_account_scan:update`, `insights_account_scan:cancel`, `insights_account_scan:pause`, `insights_account_scan:resume`, `policy_results:update`, `agent_pool:read` |
 | `Account Admin` | Full control over cloud accounts. | Account Write, + `insights_account:delete`, `insights_account_access:update` |
 
 ### Organization settings permission sets
@@ -60,8 +60,8 @@ These permission sets bundle organization-level (global) scopes. Rather than gra
 
 | Permission set | Description | Included Scopes |
 |------------|-------------|----------------|
-| `Read Only` | View-only organization access: usage, members, stacks, environments, teams, and cloud accounts; read deployments, integrations, services, templates, and resources. No create, update, or delete. | `ai_conversations:read`, `deployments:read`, `deployments:read_usage`, `environment:list_deleted`, `environment_tags:list`, `policy_groups:read`, `policy_pack:read`, `policy_results:read`, `integrations:read`, `org_member:read`, `organization_annotations:read`, `organization:read_usage`, `project_annotations:read`, `resources:dashboard`, `resources:search`, `saml:read`, `tags:read`, `team:read`, `templates:read`, `services:read` |
-| `Standard` | Member-level organization access: everything `Read Only` allows, plus creating environments and using deployments, integrations, services, and resources. Excludes billing and member or organization admin settings. (Creating stacks, teams, and cloud accounts is governed separately by the org-wide capability toggles, not this permission set.) | Read Only, + `ai_conversations:create`, `ai_conversations:update`, `environment:create`, `integrations:update`, `project_annotations:update`, `project:decrypt`, `project:encrypt`, `services:create`, `services:write`, `services:admin`, `insights_policy_evaluator:read`, `insights_policy_evaluator:delete`, `insights_policy_evaluator:ensure`, `insights_policy_evaluator:update`, `insights_policy_queue:read` |
+| `Read Only` | View-only organization access: usage, members, stacks, environments, teams, and cloud accounts; read deployments, integrations, services, templates, and resources. No create, update, or delete. | `deployments:read`, `deployments:read_usage`, `environment:list_deleted`, `environment_tags:list`, `policy_groups:read`, `policy_pack:read`, `policy_results:read`, `integrations:read`, `org_member:read`, `organization_annotations:read`, `organization:read_usage`, `policy_exceptions:read`, `project_annotations:read`, `resources:dashboard`, `resources:search`, `saml:read`, `tags:read`, `team:read`, `templates:read`, `services:read` |
+| `Standard` | Member-level organization access: everything `Read Only` allows, plus creating environments and using deployments, integrations, services, and resources. Excludes billing and member or organization admin settings. (Creating stacks, teams, and cloud accounts is governed separately by the org-wide capability toggles, not this permission set.) | Read Only, + `agent_automations:create`, `agent_automations:delete`, `agent_automations:read`, `agent_automations:update`, `agent_definitions:create`, `agent_task:create`, `environment:create`, `policy_exceptions:create`, `policy_results:update`, `integrations:update`, `project_annotations:update`, `project:decrypt`, `project:encrypt`, `services:create`, `services:write`, `services:admin`, `insights_policy_evaluator:read`, `insights_policy_evaluator:delete`, `insights_policy_evaluator:ensure`, `insights_policy_evaluator:update`, `insights_policy_queue:read` |
 | `Organization Settings Billing` | Billing access. | `deployments:read_usage`, `org_member:read`, `organization:billing`, `organization:read_usage`, `resources:dashboard`, `saml:read`, `team:read` |
 
 ## Custom permission sets
