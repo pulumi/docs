@@ -34,7 +34,7 @@ const additionalObjects = [
         ],
         "ancestors": [
             "Docs",
-            "Infrastructure as Code",
+            "Infrastructure as code",
             "Languages & SDKs",
             "TypeScript (Node.js)"
         ],
@@ -51,7 +51,7 @@ const additionalObjects = [
         ],
         "ancestors": [
             "Docs",
-            "Infrastructure as Code",
+            "Infrastructure as code",
             "Languages & SDKs",
             "Python"
         ],
@@ -69,7 +69,7 @@ const additionalObjects = [
         ],
         "ancestors": [
             "Docs",
-            "Infrastructure as Code",
+            "Infrastructure as code",
             "Languages & SDKs",
             "Go"
         ],
@@ -90,7 +90,7 @@ const additionalObjects = [
         ],
         "ancestors": [
             "Docs",
-            "Infrastructure as Code",
+            "Infrastructure as code",
             "Languages & SDKs",
             ".NET (C#, VB, F#)"
         ],

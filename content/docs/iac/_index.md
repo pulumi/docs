@@ -1,6 +1,6 @@
 ---
 title: Infrastructure as Code
-linktitle: Infrastructure as Code
+linktitle: Infrastructure as code
 docs_home: true
 notitle: true
 norightnav: true
