@@ -905,6 +905,11 @@ const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable
 // at all and fall back to CloudFront/S3 defaults, unlike every other page on the site.
 // Same value as DefaultCachePolicy, so docs pages get the same browser-caching
 // behavior as the rest of pulumi.com rather than an accidental gap.
+//
+// The /registry* behavior uses this policy too: the registry origin does the same
+// markdown negotiation but sends no Vary of its own (unlike marketing-web, whose
+// origin sends Vary: Accept for /dev/*), so without it shared caches and browsers
+// could serve one variant to clients that asked for the other.
 const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
@@ -1017,6 +1022,7 @@ if (config.registryStack) {
             pathPattern: "/registry*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: DocsResponseHeadersPolicy.id,
         },
         // Registry package logos (e.g. /fingerprinted/logos/pkg/aws.<hash>.svg)
         // are served from the registry origin with year-long immutable caching.
