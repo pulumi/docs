@@ -76,7 +76,7 @@ See the [`pulumi new` documentation](/docs/iac/cli/commands/pulumi_new/) for ful
 
 ### Program entrypoint
 
-By default, Pulumi runs your program from the `__main__.py` file (or a `setup.py` file) in the project directory. To point at a different module file, set the top-level `main` attribute in your `Pulumi.yaml`, and Pulumi passes it to `python`:
+By default, Pulumi runs your program from the `__main__.py` file in the project directory. To point at a different module file, set the top-level `main` attribute in your `Pulumi.yaml`, and Pulumi passes it to `python`:
 
 ```yaml
 name: my-project
@@ -155,7 +155,7 @@ When creating a new Python project with `pulumi new`, you are offered the choice
 
 {{% choosable pythontoolchain pip %}}
 
-When using `pip`, Pulumi creates a virtual environment and installs the required dependencies from `requirements.txt`. The `virtualenv` option is required for `pip` and controls the name of the virtual environment directory.
+When using `pip`, Pulumi creates a virtual environment and installs the required dependencies from `requirements.txt`. The `virtualenv` option controls the name of the virtual environment directory. Without it, Pulumi doesn't create a virtual environment, and `pulumi install` installs the dependencies into the Python interpreter on your `PATH`.
 
 ```yaml
 runtime:

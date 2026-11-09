@@ -1425,7 +1425,7 @@
       "authenticationFailure": false,
       "category": "organization",
       "deprecated": false,
-      "description": "A Pulumi site admin changed the expiration date of the organization's active retrial.",
+      "description": "Pulumi changed the expiration date of the organization's active retrial.",
       "displayName": "Retrial Expiration Updated",
       "event": "retrial-expiration-updated",
       "requiresOrgAdmin": true,
