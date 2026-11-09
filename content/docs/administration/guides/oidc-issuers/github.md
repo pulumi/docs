@@ -54,8 +54,10 @@ Organization tokens grant access on behalf of the entire Pulumi organization. Th
 
    <!-- markdownlint-disable no-bare-urls -->
    - **Aud**: `urn:pulumi:org:<org-name>`
-   - **Sub**: `repo:<organization>/<repo>:*`
+   - **Sub**: `repo:<owner>@<owner-id>/<repo>@<repo-id>:*`
    <!-- markdownlint-enable no-bare-urls -->
+
+   Repositories created on or after July 15, 2026 use GitHub's [immutable subject claim](https://docs.github.com/en/actions/reference/security/oidc#immutable-subject-claims) by default. To find the prefix for your repository, run `gh api repos/<owner>/<repo>/actions/oidc/customization/sub --jq .sub_claim_prefix`. Older repositories use `repo:<organization>/<repo>:*`.
 
    For more information about GitHub token claims, see the [official GitHub documentation](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect#understanding-the-oidc-token).
 1. Select **Save policies**.
@@ -115,7 +117,7 @@ Team tokens are scoped to a specific team within your Pulumi organization. They 
 
    <!-- markdownlint-disable no-bare-urls -->
    - **Aud**: `urn:pulumi:org:<org-name>`
-   - **Sub**: `repo:<organization>/<repo>:*`
+   - **Sub**: `repo:<owner>@<owner-id>/<repo>@<repo-id>:*`
    <!-- markdownlint-enable no-bare-urls -->
 
 1. Select **Save policies**.
@@ -175,7 +177,7 @@ Personal tokens are issued on behalf of a specific Pulumi user and carry that us
 
    <!-- markdownlint-disable no-bare-urls -->
    - **Aud**: `urn:pulumi:org:<org-name>`
-   - **Sub**: `repo:<organization>/<repo>:*`
+   - **Sub**: `repo:<owner>@<owner-id>/<repo>@<repo-id>:*`
    <!-- markdownlint-enable no-bare-urls -->
 
 1. Select **Save policies**.
