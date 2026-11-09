@@ -30,6 +30,10 @@ export const marketingWebPaths = [
     "/subscribe",
     "/subscribe/",
     "/subscribe.md",
+    "/agent-start",
+    "/agent-start/",
+    "/agent-start.md",
+    "/onboard.md",
     // marketing-web 301s /confirmation/ to / at its own CDN, as the Hugo page's redirect_to did.
     "/confirmation*",
     // Exact paths: /gads* would also take the /gads/ redirect and the retired gads pages' redirects off S3.

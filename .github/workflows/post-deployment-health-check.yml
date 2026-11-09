@@ -144,6 +144,8 @@ jobs:
           check_endpoint "/extend-trial/" "Extend trial"
           check_endpoint "/confirmation/workshop/" "Workshop confirmation"
           check_endpoint "/subscribe/" "Newsletter subscribe"
+          check_endpoint "/agent-start/" "Agent start"
+          check_endpoint "/onboard.md" "Agent onboarding prompt"
 
           # /dev/tutorials/ and /dev/templates/ are proxied here from
           # pulumi/marketing-web (see infrastructure/index.ts); they are not
