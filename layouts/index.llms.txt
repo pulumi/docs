@@ -116,7 +116,7 @@ This llms.txt covers www.pulumi.com, which includes:
 - [Customers](https://www.pulumi.com/customers.md): Companies running their infrastructure on Pulumi, and the case studies behind them
 - [Automation API](https://www.pulumi.com/automation/): Program-driven Pulumi for embedding infrastructure as code into applications and platforms
 - [Whitepapers](https://www.pulumi.com/whitepapers/): Long-form educational and technical content
-- [Community](https://www.pulumi.com/community.md): Slack, Discord, GitHub, and other community resources
+- [Community](https://www.pulumi.com/community.md): Slack, GitHub, events, and the Puluminaries
 - [Security](https://www.pulumi.com/security/): Security posture, compliance, and trust information
 - [Docs](https://www.pulumi.com/docs/index.md): Technical documentation (detailed sections below)
 
