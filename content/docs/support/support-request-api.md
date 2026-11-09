@@ -25,7 +25,7 @@ AI agents and scripts can open a ticket with the Pulumi support team by posting 
 
 ## Request
 
-Send a `POST` with `Content-Type: application/json` and exactly these six fields. Any other top-level key is rejected with a `422`.
+Send a `POST` with `Content-Type: application/json` and exactly these six fields. Any other top-level key except `leave_blank` is rejected with a `422`. The one exception is `leave_blank`, which is accepted and silently discarded; see the warning above.
 
 ```bash
 curl -X POST https://www.pulumi.com/api/support \
