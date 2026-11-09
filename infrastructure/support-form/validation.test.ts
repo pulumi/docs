@@ -618,7 +618,7 @@ test("enforces every length cap at its exact documented boundary", () => {
     }
 });
 
-test("pins the published limits, which /llms.txt documents to agents", () => {
+test("pins the published limits, which the support request API docs page documents to agents", () => {
     assert.deepStrictEqual(LIMITS, {
         email: 254,
         name: 200,
