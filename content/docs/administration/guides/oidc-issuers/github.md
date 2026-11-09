@@ -39,6 +39,19 @@ The registration steps are the same for all token types.
 1. Name the issuer and set the issuer URL to `https://token.actions.githubusercontent.com`.
 1. Submit the form.
 
+## Find your subject claim prefix
+
+GitHub uses one of two formats for the `sub` claim, depending on the repository. To get the prefix your repository uses, run:
+
+```bash
+gh api repos/<owner>/<repo>/actions/oidc/customization/sub --jq .sub_claim_prefix
+```
+
+The prefix has one of these formats:
+
+- `repo:<owner>@<owner-id>/<repo>@<repo-id>`: the [immutable subject claim](https://docs.github.com/en/actions/reference/security/oidc#immutable-subject-claims). Repositories created, renamed, or transferred after July 15, 2026 use this format by default.
+- `repo:<organization>/<repo>`: the previous format.
+
 ## Organization tokens
 
 {{< pulumi-cloud "org-team-access-tokens" />}}
@@ -54,10 +67,8 @@ Organization tokens grant access on behalf of the entire Pulumi organization. Th
 
    <!-- markdownlint-disable no-bare-urls -->
    - **Aud**: `urn:pulumi:org:<org-name>`
-   - **Sub**: `repo:<owner>@<owner-id>/<repo>@<repo-id>:*`
+   - **Sub**: `<sub-claim-prefix>:*`, where `<sub-claim-prefix>` is your repository's [subject claim prefix](#find-your-subject-claim-prefix)
    <!-- markdownlint-enable no-bare-urls -->
-
-   Repositories created on or after July 15, 2026 use GitHub's [immutable subject claim](https://docs.github.com/en/actions/reference/security/oidc#immutable-subject-claims) by default. To find the prefix for your repository, run `gh api repos/<owner>/<repo>/actions/oidc/customization/sub --jq .sub_claim_prefix`. Older repositories use `repo:<organization>/<repo>:*`.
 
    For more information about GitHub token claims, see the [official GitHub documentation](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect#understanding-the-oidc-token).
 1. Select **Save policies**.
@@ -117,7 +128,7 @@ Team tokens are scoped to a specific team within your Pulumi organization. They 
 
    <!-- markdownlint-disable no-bare-urls -->
    - **Aud**: `urn:pulumi:org:<org-name>`
-   - **Sub**: `repo:<owner>@<owner-id>/<repo>@<repo-id>:*`
+   - **Sub**: `<sub-claim-prefix>:*`, where `<sub-claim-prefix>` is your repository's [subject claim prefix](#find-your-subject-claim-prefix)
    <!-- markdownlint-enable no-bare-urls -->
 
 1. Select **Save policies**.
@@ -177,7 +188,7 @@ Personal tokens are issued on behalf of a specific Pulumi user and carry that us
 
    <!-- markdownlint-disable no-bare-urls -->
    - **Aud**: `urn:pulumi:org:<org-name>`
-   - **Sub**: `repo:<owner>@<owner-id>/<repo>@<repo-id>:*`
+   - **Sub**: `<sub-claim-prefix>:*`, where `<sub-claim-prefix>` is your repository's [subject claim prefix](#find-your-subject-claim-prefix)
    <!-- markdownlint-enable no-bare-urls -->
 
 1. Select **Save policies**.

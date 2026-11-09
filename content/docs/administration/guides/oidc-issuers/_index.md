@@ -73,7 +73,7 @@ Pulumi Cloud denies any token exchange that no allow policy matches, and a new O
 
 Each policy states the **Token type** it applies to (Organization, Team, Personal, or Deployment Runner) and, for team, personal, and deployment runner tokens, the team, user, or runner the token acts as. An allow policy issues that token. The token types available depend on your edition; see [Token types](/docs/administration/concepts/oidc-issuers/#token-types).
 
-We recommend verifying the token's audience and subject claims against the provider's security guidance. For example, a GitHub Actions policy commonly checks `aud` against `urn:pulumi:org:<org-name>` and `sub` against `repo:<owner>@<owner-id>/<repo>@<repo-id>:*`.
+We recommend verifying the token's audience and subject claims against the provider's security guidance. For example, a GitHub Actions policy commonly checks `aud` against `urn:pulumi:org:<org-name>` and `sub` against the repository's [subject claim prefix](/docs/administration/guides/oidc-issuers/github/#find-your-subject-claim-prefix) followed by `:*`.
 
 When an exchange request matches more than one policy, deny always takes precedence over allow. A deny policy only matches requests for its own token type, team, user, or runner. See [Authorization policies](/docs/administration/concepts/oidc-issuers/#authorization-policies).
 
