@@ -31,7 +31,7 @@ Note that creating, listing, or restoring stacks are organization-level operatio
 | `stack:delete` | Delete a stack and its associated resources. This permanently removes the stack from the organization.<br><br>**Granted by default permission set**: `Stack Admin` |
 | `stack:encrypt` | Encrypt stack data. This secures sensitive information within the stack.<br><br>**Granted by default permission set**: `Stack Read` |
 | `stack:export` | Export stack data and configurations. This allows creating backups or migrating stacks.<br><br>**Granted by default permission set**: `Stack Read` |
-| `stack:import` | Import resources into a stack. This allows bringing external resources under management.<br><br>**Granted by default permission set**: `Stack Write` |
+| `stack:import` | Replace a stack's state with an imported deployment, as `pulumi stack import` does. To bring existing cloud resources under management with `pulumi import`, use `stack:write`.<br><br>**Granted by default permission set**: `Stack Write` |
 | `stack:read` | View stack configurations and settings. This provides read-only access to stack details and parameters.<br><br>**Granted by default permission set**: `Stack Read` |
 | `stack:rename` | Change the name of a stack. This updates the stack's display name across the platform.<br><br>**Granted by default permission set**: `Stack Admin` |
 | `stack:transfer` | Transfer ownership of a stack to another organization or user. This is used for organizational restructuring or migration.<br><br>**Granted by default permission set**: `Stack Admin` |
