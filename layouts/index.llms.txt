@@ -9,23 +9,23 @@
 
 > Infrastructure as code in real programming languages. Define, deploy, and manage cloud infrastructure on AWS, Azure, Google Cloud, Kubernetes, and hundreds of providers using TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL.
 
-Pulumi is an open source infrastructure as code platform that lets you use familiar programming languages and tools to build, deploy, and manage cloud infrastructure. Pulumi Cloud provides state management, secrets, deployments, and governance for teams.
+Pulumi is an open-source infrastructure as code platform that lets you use familiar programming languages and tools to build, deploy, and manage cloud infrastructure. Pulumi Cloud provides state management, secrets, deployments, governance, an internal developer platform, and infrastructure AI for teams. Pulumi works with the coding agent you already use (Claude Code, Codex, Cursor, and others), and Pulumi Neo is its purpose-built infrastructure agent.
 
 ## For agents
 
 If you are an AI agent or programmatic consumer, start with these endpoints. Each has a copy-pasteable example.
 
-- **Pulumi Cloud REST API (via the CLI)** — call any [Pulumi Cloud REST API](https://www.pulumi.com/docs/reference/cloud-rest-api/) endpoint with [`pulumi api`](https://www.pulumi.com/docs/iac/cli/api/). The command emits a stable JSON error envelope and stable [exit codes](https://www.pulumi.com/docs/iac/cli/exit-codes/) for agent consumers, and `pulumi api list --output=json` returns the full endpoint catalog. Authentication reuses the existing Pulumi CLI credentials.
+- **Pulumi Cloud REST API (via the CLI)**: call any [Pulumi Cloud REST API](https://www.pulumi.com/docs/reference/cloud-rest-api/) endpoint with [`pulumi api`](https://www.pulumi.com/docs/iac/cli/api/) (experimental). The command emits a stable JSON error envelope and stable [exit codes](https://www.pulumi.com/docs/iac/cli/exit-codes/) for agent consumers, and `pulumi api list --output=json` returns the full endpoint catalog. Authentication reuses the existing Pulumi CLI credentials.
 
       pulumi api list --output=json
       pulumi api describe <path-or-operation-id> --output=json
       pulumi api /api/user
 
-- **Cloud registry API** — every published package, version-by-version. Public packages need no auth; set `Authorization: token $PULUMI_ACCESS_TOKEN` for private. Works without the CLI.
+- **Cloud registry API**: every published package, version-by-version. Public packages need no auth; set `Authorization: token $PULUMI_ACCESS_TOKEN` for private. Works without the CLI.
 
       # CLI (auto-fills lang/os from project runtime + host OS)
-      pulumi api ls | grep registry
-      pulumi api describe ListPackageVersions
+      pulumi api list --filter registry
+      pulumi api describe GetPackageVersion
       pulumi api /api/registry/packages/pulumi/pulumi/aws/versions/latest/readme
 
       # Direct HTTP (markdown variant via Accept header)
@@ -45,25 +45,25 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/docs/{typeToken}
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/examples
 
-  Common parameters: `?lang=typescript|python|go|csharp|java|yaml`, `?os=linux|macos|windows`, `?depth=summary|full` and `?q=<term>` on `nav`, `?limit=` (max 100) on `examples`. For prose: `--output=markdown` (CLI) or `Accept: text/markdown` (HTTP). Type tokens for `docs/{typeToken}` are URL-encoded — use `encodeURIComponent` (or equivalent), e.g. `random:index/RandomPassword` becomes `random%3Aindex%2FRandomPassword`. Discover them via `nav?depth=full`.
+  Common parameters: `?lang=typescript|python|go|csharp|java|yaml|hcl|all` (HTTP calls default to `go`; the CLI fills it from the project runtime), `?os=linux|macos|windows`, `?depth=summary|full` on `nav`, `?q=<term>` on `nav` and `examples`, `?limit=` on `examples` (default 20, values above 100 are clamped to 100). For prose: `--output=markdown` (CLI) or `Accept: text/markdown` (HTTP). The `versions` list is paginated with a `continuationToken` and is reachable over HTTP only, because it is not in the OpenAPI spec that `pulumi api` reads. `installation` returns `404` for packages that publish no installation configuration. Type tokens for `docs/{typeToken}` are URL-encoded: use `encodeURIComponent` (or equivalent), e.g. `random:index/randomPassword:RandomPassword` becomes `random%3Aindex%2FrandomPassword%3ARandomPassword`. Discover them via `nav?depth=full`.
 
-- **Full docs index (JSON)** — hierarchical sitemap of every documentation page with titles and nesting.
+- **Full docs index (JSON)**: hierarchical sitemap of every page in the docs navigation, with titles and nesting. CLI command reference pages not in the navigation are listed at [/docs/iac/cli/commands/](https://www.pulumi.com/docs/iac/cli/commands/).
 
       curl https://www.pulumi.com/docs/llm-sitemap.json
 
-- **Provider schemas** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. The cloud registry API's `versions/{version}` response includes a `schemaURL` field — follow it for the version-pinned schema. `pulumi package get-schema` accepts `<name>[@version]`, a plugin binary or folder path, or a local `.json` / `.yaml` schema file. The static URL is latest-only.
+- **Provider schemas**: full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. The cloud registry API's `versions/{version}` response includes a `schemaURL` field; follow it for the version-pinned schema. `pulumi package get-schema` accepts `<name>[@version]`, a plugin binary or folder path, or a local `.json` / `.yaml` schema file. The static URL is latest-only.
 
       # Versioned (via cloud registry API)
-      pulumi api /api/registry/packages/pulumi/pulumi/aws/versions/6.0.0 \
+      pulumi api /api/registry/packages/pulumi/pulumi/aws/versions/7.0.0 \
         | jq -r .schemaURL | xargs curl
 
       pulumi package get-schema aws
-      pulumi package get-schema aws@6.0.0
+      pulumi package get-schema aws@7.0.0
 
       # Latest only
       curl https://www.pulumi.com/registry/packages/aws/schema.json
 
-- **Markdown content (per page)** — every `/docs/` URL is available as clean markdown via two equivalent mechanisms. For the `.md` URL form, drop the trailing slash and append `.md` (e.g., `/docs/iac/concepts/resources/` → `/docs/iac/concepts/resources.md`). `/registry/` URLs support the same mechanisms (`/registry/packages/<name>.md`), but only for the latest version. Exception: `/registry/packages/<name>/api-docs/*` is not served as markdown — use the cloud registry API instead.
+- **Markdown content (per page)**: every `/docs/` URL is available as clean markdown via two equivalent mechanisms. For the `.md` URL form, drop the trailing slash and append `.md` (e.g., `/docs/iac/concepts/resources/` → `/docs/iac/concepts/resources.md`). The docs root is the exception: use `/docs/index.md`. `/registry/` URLs support the same mechanisms (`/registry/packages/<name>.md`), but only for the latest version. Exception: `/registry/packages/<name>/api-docs/*` is not served as markdown; use the cloud registry API instead.
 
       # Accept-header content negotiation
       curl -H "Accept: text/markdown" https://www.pulumi.com/docs/iac/concepts/resources/
@@ -74,10 +74,18 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
       curl https://www.pulumi.com/registry/packages/aws.md
       curl https://www.pulumi.com/registry.md
 
-- **Doing infrastructure work as an agent** — the Pulumi CLI is designed for agents: run any command with `npx pulumi`, perform one-shot resource operations with [`pulumi do`](https://www.pulumi.com/docs/iac/cli/direct-resource-operations/), and get an [ephemeral Pulumi Cloud account provisioned automatically](https://www.pulumi.com/docs/administration/concepts/agent-accounts/) on first use — no signup required. [Pulumi Agent Skills](https://www.pulumi.com/docs/ai/concepts/agent-skills/) provide proven Pulumi workflows, and the [Pulumi MCP server](https://www.pulumi.com/docs/ai/guides/set-up-mcp-server/) exposes stacks, resource search, and the Registry as MCP tools.
+- **Infrastructure graph (Context API)**: the [Context API](https://www.pulumi.com/docs/discovery-governance/concepts/context-api/) (public preview) queries one graph of IaC state, stack dependencies, and discovered cloud resources to answer dependency, ownership, and impact questions. Fetch the deployed schema as a Markdown primer an agent can work from, or as JSON. See the [query guide](https://www.pulumi.com/docs/discovery-governance/guides/context-api/).
 
-{{/* The support-request contract below mirrors infrastructure/support-form/validation.ts and handler.ts. Change one and change the other in the same PR. */}}
-- **Filing a support request** — open a ticket with the Pulumi support team without driving the [web form](https://www.pulumi.com/support/new/). No authentication and no cookies. Post exactly the six fields below: any unknown top-level key is rejected, so send this shape rather than scraping the HTML form for its inputs. In particular the rendered form carries a hidden `leave_blank` input, which is a spam trap — sending it discards the request behind a response indistinguishable from success, so never send a `leave_blank` key.
+      pulumi api GetGraphQuerySchema
+      pulumi api GetGraphQuerySchema --output=json
+
+- **Doing infrastructure work as an agent**: Pulumi works with [the coding agent you already use](https://www.pulumi.com/docs/ai/coding-agents/), and the [CLI is designed for agents](https://www.pulumi.com/docs/ai/concepts/cli-for-agents/): run any command with `npx pulumi`, perform one-shot resource operations with [`pulumi do`](https://www.pulumi.com/docs/iac/cli/direct-resource-operations/) (research preview), and get an [ephemeral Pulumi Cloud account provisioned automatically](https://www.pulumi.com/docs/administration/concepts/agent-accounts/) on first use, with no signup required. [Pulumi Agent Skills](https://www.pulumi.com/docs/ai/concepts/agent-skills/) provide proven Pulumi workflows, and the hosted [Pulumi MCP server](https://www.pulumi.com/docs/ai/guides/set-up-mcp-server/) at `https://mcp.ai.pulumi.com/mcp` exposes stacks, resource search, and the Registry as MCP tools. A coding agent can also [hand a task off to Pulumi Neo](https://www.pulumi.com/docs/ai/coding-agents/handoff/).
+
+      npx skills add pulumi/agent-skills/pulumi --skill '*'
+      claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp
+
+{{/* The support-request contract below mirrors infrastructure/support-form/validation.ts and handler.ts. Change one and change the other in the same PR. */ -}}
+- **Filing a support request**: open a ticket with the Pulumi support team without driving the [web form](https://www.pulumi.com/support/new/). No authentication and no cookies. Post exactly the six fields below: any unknown top-level key is rejected, so send this shape rather than scraping the HTML form for its inputs. In particular the rendered form carries a hidden `leave_blank` input, which is a spam trap: sending it discards the request behind a response indistinguishable from success, so never send a `leave_blank` key.
 
       curl -X POST https://www.pulumi.com/api/support \
         -H "Content-Type: application/json" \
@@ -90,19 +98,21 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
           "description": "What you expected, what actually happened, and any relevant code or CLI output."
         }'
 
-  `priority` is `Normal` or `Urgent`, matched case-insensitively. `organization` is the bare org name from `https://app.pulumi.com/<org>` — starting with a letter or number, then letters, numbers, hyphens and underscores, 40 characters or fewer; a pasted console URL is reduced to the org name for you. The other limits, so you can trim before sending rather than discovering them: `email` 254, `name` 200, `subject` 200, `description` 10–20000, and the whole body 256 KB (`413` past that). Control characters and bidirectional overrides are stripped from every field. Success returns `{"ok": true, "id": "...", "conversationId": "..."}`. A validation failure returns `422` with a `fields` object keyed by field name — or by `_form` when the problem is with the payload as a whole rather than one field, as with an unknown key — so each error maps back to its input without parsing prose. Other failures use `400`, `405`, `413` and `502`. A `403` means the request was blocked or rate limited: back off rather than retrying immediately. A body large enough to exceed the invocation limit is rejected by the platform before any of this applies, so a `413` is the one status that may arrive without the `ok`/`error` envelope. Replies come by email to the address you supply, so give one that a person reads.
+  `priority` is `Normal` or `Urgent`, matched case-insensitively. `organization` is the bare org name from `https://app.pulumi.com/<org>`. It starts with a letter or number, then letters, numbers, hyphens and underscores, 40 characters or fewer; a pasted console URL is reduced to the org name for you. The other limits, so you can trim before sending rather than discovering them: `email` 254, `name` 200, `subject` 200, `description` 10–20000, and the whole body 256 KB (`413` past that). Control characters and bidirectional overrides are stripped from every field. Success returns `{"ok": true, "id": "...", "conversationId": "..."}`. A validation failure returns `422` with a `fields` object keyed by field name (or by `_form` when the problem is with the payload as a whole rather than one field, as with an unknown key), so each error maps back to its input without parsing prose. Other failures use `400`, `405`, `413` and `502`. A `429` means the request was rate limited: back off rather than retrying immediately. A request the platform blocks outright comes back as a `404` HTML page. A `429`, that `404`, and a `413` for a body large enough to exceed the invocation limit can all arrive without the `ok`/`error` envelope, so check the status code before parsing the body. Replies come by email to the address you supply, so give one that a person reads.
 
 ## Site overview
 
 This llms.txt covers www.pulumi.com, which includes:
 
 - [Product](https://www.pulumi.com/product/): Pulumi Cloud platform overview and capabilities
-- [Pricing](https://www.pulumi.com/pricing/): Plans and pricing for Pulumi Cloud ({{ delimit $editionNames ", " }})
+- [Get started](https://www.pulumi.com/up/): Guided first project for any cloud and language
+- [Pricing](https://www.pulumi.com/pricing/): Pulumi Cloud editions and pricing ({{ delimit $editionNames ", " }})
 - [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for hundreds of cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
-- [Infrastructure AI](https://www.pulumi.com/docs/ai/): Investigate incidents and maintain infrastructure with [Pulumi Agents](https://www.pulumi.com/docs/ai/agents/), or write Pulumi code with [your coding agent](https://www.pulumi.com/docs/ai/coding-agents/)
+- [Infrastructure AI](https://www.pulumi.com/docs/ai/): Write Pulumi code with [your coding agent](https://www.pulumi.com/docs/ai/coding-agents/), or investigate incidents and maintain infrastructure with [Pulumi Agents](https://www.pulumi.com/docs/ai/agents/), including the pre-built [Pulumi Neo](https://www.pulumi.com/docs/ai/concepts/neo/) and your own [custom agents](https://www.pulumi.com/docs/ai/agents/custom/)
 - [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
+- [Releases](https://www.pulumi.com/releases/): Pulumi Cloud and CLI changelog, also available as [JSON](https://www.pulumi.com/releases/index.json) with edition availability per entry
 - [Dev Center](https://www.pulumi.com/dev/): Tutorials, templates, community examples, and a glossary. Has an index of its own at [/dev/llms.txt](https://www.pulumi.com/dev/llms.txt), and every detail page has a markdown twin at its URL plus `.md`
-- [Topics](https://www.pulumi.com/topics/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)
+- [Topics](https://www.pulumi.com/topics/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless). Has an index of its own at [/topics/llms.txt](https://www.pulumi.com/topics/llms.txt)
 - [Customers](https://www.pulumi.com/customers/): Companies running their infrastructure on Pulumi, and the case studies behind them
 - [Automation API](https://www.pulumi.com/automation/): Program-driven Pulumi for embedding infrastructure as code into applications and platforms
 - [Whitepapers](https://www.pulumi.com/whitepapers/): Long-form educational and technical content
@@ -111,15 +121,28 @@ This llms.txt covers www.pulumi.com, which includes:
 - [Docs](https://www.pulumi.com/docs/): Technical documentation (detailed sections below)
 
 ## Docs sections
+{{- /* Each docs menu has one top-level entry (the section landing page), and
+       the pages that matter hang off it as children. List the landing page
+       plus its first level. A pageless group (e.g. IaC "Guides" in
+       config/_default/menus.yml) has no URL, so list the section pages it
+       groups; leaf pages under a group (a single policy pack) are too
+       specific for this index. */ -}}
 {{- range site.Data.docs_menu_sections }}
+{{- $pages := slice }}
+{{- range index site.Menus .menu }}
+{{- $pages = $pages | append .Page }}
+{{- range .Children }}
+{{- if .Page }}
+{{- $pages = $pages | append .Page }}
+{{- else }}
+{{- range .Children }}{{ with .Page }}{{ if .IsSection }}{{ $pages = $pages | append . }}{{ end }}{{ end }}{{ end }}
+{{- end }}
+{{- end }}
+{{- end }}
 {{- $entries := slice }}
-{{- with index site.Menus .menu }}
-{{- range . }}
-{{- with .Page }}
-{{- if and (not .Params.llms_exclude) (ne .Title "") }}
+{{- range $pages }}
+{{- if and . (not .Params.llms_exclude) (ne .Title "") (not (in $entries .)) }}
 {{- $entries = $entries | append . }}
-{{- end }}
-{{- end }}
 {{- end }}
 {{- end }}
 {{- if $entries }}
@@ -135,10 +158,13 @@ This llms.txt covers www.pulumi.com, which includes:
 
 ### Recent blog posts
 
-{{- $blogPages := where $.Site.Pages "Section" "blog" }}
-{{- $recentBlogs := first 10 ($blogPages.ByDate.Reverse) }}
-{{- range $recentBlogs }}
-{{- if and (not .Params.llms_exclude) (ne .Title "") }}
-- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
+{{- /* Same exclusions as layouts/_default/sitemap.xml, applied before the cap so an excluded post doesn't shorten the list. */ -}}
+{{- $recentBlogs := slice }}
+{{- range (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+{{- if and (lt (len $recentBlogs) 10) (ne .Title "") (not (or .Params.llms_exclude .Params.redirect_to .Params.block_external_search_index .Params.canonical_url)) }}
+{{- $recentBlogs = $recentBlogs | append . }}
 {{- end }}
+{{- end }}
+{{- range $recentBlogs }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
 {{- end }}
