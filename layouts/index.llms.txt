@@ -47,7 +47,7 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
 
   Common parameters: `?lang=typescript|python|go|csharp|java|yaml|hcl|all` (HTTP calls default to `go`; the CLI fills it from the project runtime), `?os=linux|macos|windows`, `?depth=summary|full` on `nav`, `?q=<term>` on `nav` and `examples`, `?limit=` on `examples` (default 20, values above 100 are clamped to 100). For prose: `--output=markdown` (CLI) or `Accept: text/markdown` (HTTP). The `versions` list is paginated with a `continuationToken` and is reachable over HTTP only, because it is not in the OpenAPI spec that `pulumi api` reads. `installation` returns `404` for packages that publish no installation configuration. Type tokens for `docs/{typeToken}` are URL-encoded: use `encodeURIComponent` (or equivalent), e.g. `random:index/randomPassword:RandomPassword` becomes `random%3Aindex%2FrandomPassword%3ARandomPassword`. Discover them via `nav?depth=full`.
 
-- **Full docs index (JSON)**: hierarchical sitemap of every page in the docs navigation, with titles and nesting. CLI command reference pages not in the navigation are listed at [/docs/iac/cli/commands/](https://www.pulumi.com/docs/iac/cli/commands/).
+- **Full docs index (JSON)**: hierarchical sitemap of every page in the docs navigation, with titles and nesting. Pageless navigation headings appear as `"group": true` nodes with no `path`, and off-site links carry `"external": true` and a `url`. CLI command reference pages not in the navigation are listed at [/docs/iac/cli/commands/](https://www.pulumi.com/docs/iac/cli/commands/).
 
       curl https://www.pulumi.com/docs/llm-sitemap.json
 
