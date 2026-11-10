@@ -145,6 +145,12 @@ The reference pages under `content/docs/iac/concepts/resources/options/` show a 
 
 ---
 
+## RBAC scope reference
+
+The scope tables under `content/docs/administration/reference/rbac-scopes/` and the default permission set tables on `content/docs/administration/concepts/rbac/permission-sets.md` are generated: **don't edit them by hand.** `.github/workflows/update-rbac-scopes.yml` runs `scripts/fetch-rbac-scopes.sh` nightly, which fetches the scopes, built-in roles, and built-in permission sets from the Pulumi Cloud API into `data/rbac_scopes.json`. Descriptions come from the API. To change which section a scope lands in, edit `data/rbac_scope_sections.yaml`; to add a link or note, or override API text that's wrong, edit `data/rbac_scope_notes.yaml`. Each file's header comment documents it. Fix wrong API text in Pulumi Cloud too, so the override can go.
+
+---
+
 ## Pulumi Cloud availability markers
 
 Docs pages state which Pulumi Cloud edition a feature needs through a generated violet callout, not hand-written prose. A marker names a **feature**, never an edition — the edition the callout states is derived from that feature's availability in `data/pulumi_editions.yaml` (see "Edition data" below), so a feature that moves editions is a one-line edit that updates `/pricing/` and every marked page at once.

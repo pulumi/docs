@@ -1,0 +1,1873 @@
+{
+  "entities": [
+    {
+      "id": "stack",
+      "sections": [
+        {
+          "name": "Stacks",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Cancel stack update.",
+              "name": "stack:cancel_update"
+            },
+            {
+              "defaultPermissionSet": null,
+              "description": "Create stack.",
+              "name": "stack:create"
+            },
+            {
+              "defaultPermissionSet": "Stack Read",
+              "description": "Decrypt stack.",
+              "name": "stack:decrypt"
+            },
+            {
+              "defaultPermissionSet": "Stack Admin",
+              "description": "Delete stack.",
+              "name": "stack:delete"
+            },
+            {
+              "defaultPermissionSet": "Stack Read",
+              "description": "Encrypt stack.",
+              "name": "stack:encrypt"
+            },
+            {
+              "defaultPermissionSet": "Stack Read",
+              "description": "Export stack.",
+              "name": "stack:export"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Replace a stack's state with an imported deployment.",
+              "name": "stack:import"
+            },
+            {
+              "defaultPermissionSet": "Stack Read",
+              "description": "Read stack.",
+              "name": "stack:read"
+            },
+            {
+              "defaultPermissionSet": "Stack Admin",
+              "description": "Rename stack.",
+              "name": "stack:rename"
+            },
+            {
+              "defaultPermissionSet": "Stack Admin",
+              "description": "Transfer stack.",
+              "name": "stack:transfer"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Run updates, refreshes, and destroys on a stack, and change its configuration.",
+              "name": "stack:write"
+            },
+            {
+              "defaultPermissionSet": "Stack Read",
+              "description": "Read which teams can access a stack.",
+              "name": "stack_access:read"
+            },
+            {
+              "defaultPermissionSet": "Stack Admin",
+              "description": "Change which teams and users can access a stack, and reassign its owner.",
+              "name": "stack_access:update"
+            }
+          ]
+        },
+        {
+          "name": "Stack deployments",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Create deployment.",
+              "name": "stack_deployment:create"
+            },
+            {
+              "defaultPermissionSet": "Stack Read",
+              "description": "Read deployment.",
+              "name": "stack_deployment:read"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Encrypt deployment settings.",
+              "name": "stack_deployment_settings:encrypt"
+            },
+            {
+              "defaultPermissionSet": "Stack Read",
+              "description": "Read deployment settings.",
+              "name": "stack_deployment_settings:read"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Write deployment settings.",
+              "name": "stack_deployment_settings:write"
+            }
+          ]
+        },
+        {
+          "name": "Stack deployment schedules",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Create stack schedule.",
+              "name": "stack_schedule:create"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Delete stack schedule.",
+              "name": "stack_schedule:delete"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Pause stack schedule.",
+              "name": "stack_schedule:pause"
+            },
+            {
+              "defaultPermissionSet": "Stack Read",
+              "description": "Read stack schedule.",
+              "name": "stack_schedule:read"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Resume stack schedule.",
+              "name": "stack_schedule:resume"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Update stack schedule.",
+              "name": "stack_schedule:update"
+            }
+          ]
+        },
+        {
+          "name": "Stack tags",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Update stack tags.",
+              "name": "stack_tags:update"
+            }
+          ]
+        },
+        {
+          "name": "Stack webhooks",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Create stack webhook.",
+              "name": "stack_webhook:create"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Delete stack webhook.",
+              "name": "stack_webhook:delete"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Read stack webhook.",
+              "name": "stack_webhook:read"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Update stack webhook.",
+              "name": "stack_webhook:update"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "sections": [
+        {
+          "name": "Environments",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Environment Open",
+              "description": "Clone environment.",
+              "name": "environment:clone"
+            },
+            {
+              "defaultPermissionSet": "Environment Admin",
+              "description": "Delete environment.",
+              "name": "environment:delete"
+            },
+            {
+              "defaultPermissionSet": "Environment Open",
+              "description": "Open an environment, resolving its values and secrets.",
+              "name": "environment:open"
+            },
+            {
+              "defaultPermissionSet": "Environment Read",
+              "description": "Read environment.",
+              "name": "environment:read"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Write environment.",
+              "name": "environment:write"
+            },
+            {
+              "defaultPermissionSet": "Environment Read",
+              "description": "Read environment access.",
+              "name": "environment_access:read"
+            },
+            {
+              "defaultPermissionSet": "Environment Admin",
+              "description": "Update environment access.",
+              "name": "environment_access:update"
+            },
+            {
+              "defaultPermissionSet": "Environment Read",
+              "description": "Read environment settings.",
+              "name": "environment_settings:read"
+            },
+            {
+              "defaultPermissionSet": "Environment Admin",
+              "description": "Update environment settings.",
+              "name": "environment_settings:update"
+            }
+          ]
+        },
+        {
+          "name": "Environment secrets rotation",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Rotate secrets in an environment.",
+              "name": "environment:rotate"
+            },
+            {
+              "defaultPermissionSet": "Environment Read",
+              "description": "List an environment's secret rotation history.",
+              "name": "environment:rotate_history"
+            }
+          ]
+        },
+        {
+          "name": "Environment schedules",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Create environment schedule.",
+              "name": "environment_schedule:create"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Delete environment schedule.",
+              "name": "environment_schedule:delete"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Pause environment schedule.",
+              "name": "environment_schedule:pause"
+            },
+            {
+              "defaultPermissionSet": "Environment Read",
+              "description": "Read environment schedule.",
+              "name": "environment_schedule:read"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Resume environment schedule.",
+              "name": "environment_schedule:resume"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Update environment schedule.",
+              "name": "environment_schedule:update"
+            }
+          ]
+        },
+        {
+          "name": "Environment tags",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Add a tag to an environment.",
+              "name": "environment_tag:create"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Remove a tag from an environment.",
+              "name": "environment_tag:delete"
+            },
+            {
+              "defaultPermissionSet": "Environment Read",
+              "description": "Read an environment's tags.",
+              "name": "environment_tag:read"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Change the value of an environment tag.",
+              "name": "environment_tag:update"
+            }
+          ]
+        },
+        {
+          "name": "Environment versions",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Create version tag.",
+              "name": "environment_version:create"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Delete version tag.",
+              "name": "environment_version:delete"
+            },
+            {
+              "defaultPermissionSet": "Environment Open",
+              "description": "Open a version tag, resolving its values and secrets.",
+              "name": "environment_version:open"
+            },
+            {
+              "defaultPermissionSet": "Environment Read",
+              "description": "Read version tag.",
+              "name": "environment_version:read"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Retracts a specific version of the given environment.",
+              "name": "environment_version:retract"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Update version tag.",
+              "name": "environment_version:update"
+            }
+          ]
+        },
+        {
+          "name": "Environment webhooks",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Create environment webhook.",
+              "name": "environment_webhook:create"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Delete environment webhook.",
+              "name": "environment_webhook:delete"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Read environment webhook.",
+              "name": "environment_webhook:read"
+            },
+            {
+              "defaultPermissionSet": "Environment Write",
+              "description": "Update environment webhook.",
+              "name": "environment_webhook:update"
+            }
+          ]
+        },
+        {
+          "name": "Environment change requests (approvals)",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Environment Admin",
+              "description": "Create approval rules.",
+              "name": "change_gate:create"
+            },
+            {
+              "defaultPermissionSet": "Environment Admin",
+              "description": "Delete approval rules.",
+              "name": "change_gate:delete"
+            },
+            {
+              "defaultPermissionSet": "Environment Admin",
+              "description": "Update approval rules.",
+              "name": "change_gate:update"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "insights-account",
+      "sections": [
+        {
+          "name": "Cloud accounts",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Account Admin",
+              "description": "Delete Discovery account.",
+              "name": "insights_account:delete"
+            },
+            {
+              "defaultPermissionSet": "Account Read",
+              "description": "Read Discovery account.",
+              "name": "insights_account:read"
+            },
+            {
+              "defaultPermissionSet": "Account Write",
+              "description": "Update Discovery account.",
+              "name": "insights_account:update"
+            },
+            {
+              "defaultPermissionSet": "Account Read",
+              "description": "Read Discovery account access.",
+              "name": "insights_account_access:read"
+            },
+            {
+              "defaultPermissionSet": "Account Admin",
+              "description": "Update Discovery account access.",
+              "name": "insights_account_access:update"
+            }
+          ]
+        },
+        {
+          "name": "Cloud account scans",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Account Write",
+              "description": "Scan Discovery account.",
+              "name": "insights_account:scan"
+            },
+            {
+              "defaultPermissionSet": "Account Write",
+              "description": "Cancel Discovery account scan.",
+              "name": "insights_account_scan:cancel"
+            },
+            {
+              "defaultPermissionSet": "Account Write",
+              "description": "Pause Discovery account scan.",
+              "name": "insights_account_scan:pause"
+            },
+            {
+              "defaultPermissionSet": "Account Read",
+              "description": "Read Discovery account scan.",
+              "name": "insights_account_scan:read"
+            },
+            {
+              "defaultPermissionSet": "Account Write",
+              "description": "Resume Discovery account scan.",
+              "name": "insights_account_scan:resume"
+            },
+            {
+              "defaultPermissionSet": "Account Write",
+              "description": "Update Discovery account scan.",
+              "name": "insights_account_scan:update"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "global",
+      "sections": [
+        {
+          "name": "Agent pools",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create agent pool.",
+              "name": "agent_pool:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete agent pool.",
+              "name": "agent_pool:delete"
+            },
+            {
+              "defaultRoles": [
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Read agent pool.",
+              "name": "agent_pool:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update agent pool.",
+              "name": "agent_pool:update"
+            }
+          ]
+        },
+        {
+          "name": "Audit logs",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Export audit logs.",
+              "name": "audit_logs:export"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read audit logs.",
+              "name": "audit_logs:read"
+            }
+          ]
+        },
+        {
+          "name": "Change requests (approvals)",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create approval rules.",
+              "name": "change_gate:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete approval rules.",
+              "name": "change_gate:delete"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update approval rules.",
+              "name": "change_gate:update"
+            }
+          ]
+        },
+        {
+          "name": "Cloud accounts",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Create Discovery account.",
+              "name": "insights_account:create"
+            }
+          ]
+        },
+        {
+          "name": "Deployments",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Pause deployments.",
+              "name": "deployments:pause"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Read deployments.",
+              "name": "deployments:read"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
+              ],
+              "description": "Read deployment usage.",
+              "name": "deployments:read_usage"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Resume deployments.",
+              "name": "deployments:resume"
+            }
+          ]
+        },
+        {
+          "name": "Environments",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Create environment.",
+              "name": "environment:create"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "List deleted environments.",
+              "name": "environment:list_deleted"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Restore deleted environment.",
+              "name": "environment:restore_deleted"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "List tags across all environments.",
+              "name": "environment_tags:list"
+            }
+          ]
+        },
+        {
+          "name": "Membership",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create invites.",
+              "name": "invites:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read invites.",
+              "name": "invites:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Add organization member.",
+              "name": "org_member:add"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete organization member.",
+              "name": "org_member:delete"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
+              ],
+              "description": "Read organization member.",
+              "name": "org_member:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Set organization member admin.",
+              "name": "org_member:set_admin"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update organization member.",
+              "name": "org_member:update"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read which stacks, environments, and other entities a member can access.",
+              "name": "org_member_access:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read organization requests.",
+              "name": "org_requests:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update organization requests.",
+              "name": "org_requests:update"
+            },
+            {
+              "defaultRoles": [
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Create service principal.",
+              "name": "service_principal:create"
+            }
+          ]
+        },
+        {
+          "name": "Neo",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Create org-owned Neo automations.",
+              "name": "agent_automations:create"
+            },
+            {
+              "defaultRoles": [
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Delete org-owned Neo automations.",
+              "name": "agent_automations:delete"
+            },
+            {
+              "defaultRoles": [
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Read org-owned Neo automations.",
+              "name": "agent_automations:read"
+            },
+            {
+              "defaultRoles": [
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Update org-owned Neo automations.",
+              "name": "agent_automations:update"
+            },
+            {
+              "defaultRoles": [
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Create custom agents.",
+              "name": "agent_definitions:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete custom agents.",
+              "name": "agent_definitions:delete"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update custom agents.",
+              "name": "agent_definitions:update"
+            },
+            {
+              "defaultRoles": [
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Create Neo tasks.",
+              "name": "agent_task:create"
+            }
+          ]
+        },
+        {
+          "name": "OIDC",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read authentication policies.",
+              "name": "auth_policies:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update authentication policies.",
+              "name": "auth_policies:update"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create OIDC issuer.",
+              "name": "oidc_issuers:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete OIDC issuer.",
+              "name": "oidc_issuers:delete"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read OIDC issuers.",
+              "name": "oidc_issuers:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Regenerate OIDC issuer thumbprints.",
+              "name": "oidc_issuers:regenerate_thumbprints"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update OIDC issuers.",
+              "name": "oidc_issuers:update"
+            }
+          ]
+        },
+        {
+          "name": "Organization",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Read the organization's version control integrations and the repositories and branches they can access.",
+              "name": "integrations:read"
+            },
+            {
+              "defaultRoles": [
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Install the Pulumi app on a self-hosted version control instance.",
+              "name": "integrations:update"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read organization-level integration settings, such as Neo model providers.",
+              "name": "org_integrations:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Set up, change, and remove the organization's integrations, such as version control and Neo integrations.",
+              "name": "org_integrations:update"
+            },
+            {
+              "defaultRoles": [
+                "Admin",
+                "Billing Manager"
+              ],
+              "description": "Manage organization billing.",
+              "name": "organization:billing"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Change the organization's identity provider, such as GitHub, GitLab, Bitbucket, or SAML.",
+              "name": "organization:change_backend"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete organization.",
+              "name": "organization:delete"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
+              ],
+              "description": "Read organization usage.",
+              "name": "organization:read_usage"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Rename organization.",
+              "name": "organization:rename"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Transfer organization stacks.",
+              "name": "organization:transfer_stacks"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update organization.",
+              "name": "organization:update"
+            }
+          ]
+        },
+        {
+          "name": "Organization access tokens",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create organization access token.",
+              "name": "org_token:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete organization access token.",
+              "name": "org_token:delete"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read organization access token.",
+              "name": "org_token:read"
+            }
+          ]
+        },
+        {
+          "name": "Organization webhooks",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create organization webhook.",
+              "name": "organization_webhook:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete organization webhook.",
+              "name": "organization_webhook:delete"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read organization webhook.",
+              "name": "organization_webhook:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update organization webhook.",
+              "name": "organization_webhook:update"
+            }
+          ]
+        },
+        {
+          "name": "Policies",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Create or request policy exceptions.",
+              "name": "policy_exceptions:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Remove policy exceptions.",
+              "name": "policy_exceptions:delete"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Read policy exceptions.",
+              "name": "policy_exceptions:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create policy groups.",
+              "name": "policy_groups:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete policy groups.",
+              "name": "policy_groups:delete"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Read policy groups.",
+              "name": "policy_groups:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update policy groups.",
+              "name": "policy_groups:update"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create policy packs.",
+              "name": "policy_pack:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete policy packs.",
+              "name": "policy_pack:delete"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Read policy packs.",
+              "name": "policy_pack:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update policy packs.",
+              "name": "policy_pack:update"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Read policy results.",
+              "name": "policy_results:read"
+            },
+            {
+              "defaultRoles": [
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Update policy results.",
+              "name": "policy_results:update"
+            }
+          ]
+        },
+        {
+          "name": "Projects",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Decrypt project.",
+              "name": "project:decrypt"
+            },
+            {
+              "defaultRoles": [
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Encrypt project.",
+              "name": "project:encrypt"
+            }
+          ]
+        },
+        {
+          "name": "Resources",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
+              ],
+              "description": "View resources dashboard.",
+              "name": "resources:dashboard"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Index resources.",
+              "name": "resources:index"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Search resources.",
+              "name": "resources:search"
+            }
+          ]
+        },
+        {
+          "name": "Roles",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create role.",
+              "name": "role:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete role.",
+              "name": "role:delete"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read role.",
+              "name": "role:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update role.",
+              "name": "role:update"
+            }
+          ]
+        },
+        {
+          "name": "SAML",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
+              ],
+              "description": "Read SAML.",
+              "name": "saml:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update SAML.",
+              "name": "saml:update"
+            }
+          ]
+        },
+        {
+          "name": "SCIM",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete SCIM.",
+              "name": "scim:delete"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read SCIM.",
+              "name": "scim:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update SCIM.",
+              "name": "scim:update"
+            }
+          ]
+        },
+        {
+          "name": "Stacks",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Create stack.",
+              "name": "stack:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "List deleted stacks.",
+              "name": "stack:list_deleted"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Restore deleted stack.",
+              "name": "stack:restore_deleted"
+            }
+          ]
+        },
+        {
+          "name": "Tags",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "List the tags used across the organization's projects and stacks.",
+              "name": "tags:read"
+            }
+          ]
+        },
+        {
+          "name": "Teams",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create GitHub team.",
+              "name": "github_team:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create team.",
+              "name": "team:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create team access token.",
+              "name": "team:create_token"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete team.",
+              "name": "team:delete"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete team access token.",
+              "name": "team:delete_token"
+            },
+            {
+              "defaultRoles": [],
+              "description": "List teams.",
+              "name": "team:list"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "List team access tokens.",
+              "name": "team:list_tokens"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
+              ],
+              "description": "Read team.",
+              "name": "team:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update team.",
+              "name": "team:update"
+            }
+          ]
+        },
+        {
+          "name": "Templates",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Read templates.",
+              "name": "templates:read"
+            }
+          ]
+        },
+        {
+          "name": "Template sources",
+          "scopes": [
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Create template sources.",
+              "name": "templates_source:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Delete template sources.",
+              "name": "templates_source:delete"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Read template sources.",
+              "name": "templates_source:read"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Update template sources.",
+              "name": "templates_source:update"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissionSets": [
+    {
+      "added": null,
+      "description": "Read access to stacks, including deployment settings.",
+      "entity": "stack",
+      "id": "stack-read",
+      "inherits": null,
+      "name": "Stack Read",
+      "permissions": [
+        "stack:decrypt",
+        "stack:encrypt",
+        "stack:export",
+        "stack:read",
+        "stack_access:read",
+        "stack_annotations:read",
+        "stack_deployment:read",
+        "stack_deployment_settings:read",
+        "stack_schedule:read"
+      ]
+    },
+    {
+      "added": [
+        "policy_results:update",
+        "stack:cancel_update",
+        "stack:import",
+        "stack:write",
+        "stack_annotations:update",
+        "stack_deployment:create",
+        "stack_deployment_settings:encrypt",
+        "stack_deployment_settings:write",
+        "stack_schedule:create",
+        "stack_schedule:delete",
+        "stack_schedule:pause",
+        "stack_schedule:resume",
+        "stack_schedule:update",
+        "stack_tags:update",
+        "stack_webhook:create",
+        "stack_webhook:delete",
+        "stack_webhook:read",
+        "stack_webhook:update"
+      ],
+      "description": "Read/write access to stacks, including deployment settings.",
+      "entity": "stack",
+      "id": "stack-write",
+      "inherits": "Stack Read",
+      "name": "Stack Write",
+      "permissions": [
+        "policy_results:update",
+        "stack:cancel_update",
+        "stack:decrypt",
+        "stack:encrypt",
+        "stack:export",
+        "stack:import",
+        "stack:read",
+        "stack:write",
+        "stack_access:read",
+        "stack_annotations:read",
+        "stack_annotations:update",
+        "stack_deployment:create",
+        "stack_deployment:read",
+        "stack_deployment_settings:encrypt",
+        "stack_deployment_settings:read",
+        "stack_deployment_settings:write",
+        "stack_schedule:create",
+        "stack_schedule:delete",
+        "stack_schedule:pause",
+        "stack_schedule:read",
+        "stack_schedule:resume",
+        "stack_schedule:update",
+        "stack_tags:update",
+        "stack_webhook:create",
+        "stack_webhook:delete",
+        "stack_webhook:read",
+        "stack_webhook:update"
+      ]
+    },
+    {
+      "added": [
+        "stack:delete",
+        "stack:rename",
+        "stack:transfer",
+        "stack_access:update"
+      ],
+      "description": "Admin access to stacks, including deployment settings.",
+      "entity": "stack",
+      "id": "stack-admin",
+      "inherits": "Stack Write",
+      "name": "Stack Admin",
+      "permissions": [
+        "policy_results:update",
+        "stack:cancel_update",
+        "stack:decrypt",
+        "stack:delete",
+        "stack:encrypt",
+        "stack:export",
+        "stack:import",
+        "stack:read",
+        "stack:rename",
+        "stack:transfer",
+        "stack:write",
+        "stack_access:read",
+        "stack_access:update",
+        "stack_annotations:read",
+        "stack_annotations:update",
+        "stack_deployment:create",
+        "stack_deployment:read",
+        "stack_deployment_settings:encrypt",
+        "stack_deployment_settings:read",
+        "stack_deployment_settings:write",
+        "stack_schedule:create",
+        "stack_schedule:delete",
+        "stack_schedule:pause",
+        "stack_schedule:read",
+        "stack_schedule:resume",
+        "stack_schedule:update",
+        "stack_tags:update",
+        "stack_webhook:create",
+        "stack_webhook:delete",
+        "stack_webhook:read",
+        "stack_webhook:update"
+      ]
+    },
+    {
+      "added": null,
+      "description": "Read access to environments.",
+      "entity": "environment",
+      "id": "environment-read",
+      "inherits": null,
+      "name": "Environment Read",
+      "permissions": [
+        "environment:read",
+        "environment:rotate_history",
+        "environment_access:read",
+        "environment_schedule:read",
+        "environment_settings:read",
+        "environment_tag:read",
+        "environment_version:read"
+      ]
+    },
+    {
+      "added": [
+        "environment:clone",
+        "environment:open",
+        "environment_version:open"
+      ],
+      "description": "Read/open access to environments.",
+      "entity": "environment",
+      "id": "environment-open",
+      "inherits": "Environment Read",
+      "name": "Environment Open",
+      "permissions": [
+        "environment:clone",
+        "environment:open",
+        "environment:read",
+        "environment:rotate_history",
+        "environment_access:read",
+        "environment_schedule:read",
+        "environment_settings:read",
+        "environment_tag:read",
+        "environment_version:open",
+        "environment_version:read"
+      ]
+    },
+    {
+      "added": [
+        "environment:rotate",
+        "environment:write",
+        "environment_schedule:create",
+        "environment_schedule:delete",
+        "environment_schedule:pause",
+        "environment_schedule:resume",
+        "environment_schedule:update",
+        "environment_tag:create",
+        "environment_tag:delete",
+        "environment_tag:update",
+        "environment_version:create",
+        "environment_version:delete",
+        "environment_version:retract",
+        "environment_version:update",
+        "environment_webhook:create",
+        "environment_webhook:delete",
+        "environment_webhook:read",
+        "environment_webhook:update"
+      ],
+      "description": "Read/open/write access to environments.",
+      "entity": "environment",
+      "id": "environment-write",
+      "inherits": "Environment Open",
+      "name": "Environment Write",
+      "permissions": [
+        "environment:clone",
+        "environment:open",
+        "environment:read",
+        "environment:rotate",
+        "environment:rotate_history",
+        "environment:write",
+        "environment_access:read",
+        "environment_schedule:create",
+        "environment_schedule:delete",
+        "environment_schedule:pause",
+        "environment_schedule:read",
+        "environment_schedule:resume",
+        "environment_schedule:update",
+        "environment_settings:read",
+        "environment_tag:create",
+        "environment_tag:delete",
+        "environment_tag:read",
+        "environment_tag:update",
+        "environment_version:create",
+        "environment_version:delete",
+        "environment_version:open",
+        "environment_version:read",
+        "environment_version:retract",
+        "environment_version:update",
+        "environment_webhook:create",
+        "environment_webhook:delete",
+        "environment_webhook:read",
+        "environment_webhook:update"
+      ]
+    },
+    {
+      "added": [
+        "change_gate:create",
+        "change_gate:delete",
+        "change_gate:update",
+        "environment:delete",
+        "environment_access:update",
+        "environment_settings:update"
+      ],
+      "description": "Admin access to environments.",
+      "entity": "environment",
+      "id": "environment-admin",
+      "inherits": "Environment Write",
+      "name": "Environment Admin",
+      "permissions": [
+        "change_gate:create",
+        "change_gate:delete",
+        "change_gate:update",
+        "environment:clone",
+        "environment:delete",
+        "environment:open",
+        "environment:read",
+        "environment:rotate",
+        "environment:rotate_history",
+        "environment:write",
+        "environment_access:read",
+        "environment_access:update",
+        "environment_schedule:create",
+        "environment_schedule:delete",
+        "environment_schedule:pause",
+        "environment_schedule:read",
+        "environment_schedule:resume",
+        "environment_schedule:update",
+        "environment_settings:read",
+        "environment_settings:update",
+        "environment_tag:create",
+        "environment_tag:delete",
+        "environment_tag:read",
+        "environment_tag:update",
+        "environment_version:create",
+        "environment_version:delete",
+        "environment_version:open",
+        "environment_version:read",
+        "environment_version:retract",
+        "environment_version:update",
+        "environment_webhook:create",
+        "environment_webhook:delete",
+        "environment_webhook:read",
+        "environment_webhook:update"
+      ]
+    },
+    {
+      "added": null,
+      "description": "Read access to cloud accounts.",
+      "entity": "insights-account",
+      "id": "insights-account-read",
+      "inherits": null,
+      "name": "Account Read",
+      "permissions": [
+        "insights_account:read",
+        "insights_account_access:read",
+        "insights_account_scan:read"
+      ]
+    },
+    {
+      "added": [
+        "agent_pool:read",
+        "insights_account:scan",
+        "insights_account:update",
+        "insights_account:update_policy_results",
+        "insights_account_scan:cancel",
+        "insights_account_scan:pause",
+        "insights_account_scan:resume",
+        "insights_account_scan:update",
+        "policy_results:update"
+      ],
+      "description": "Read/write access to cloud accounts.",
+      "entity": "insights-account",
+      "id": "insights-account-write",
+      "inherits": "Account Read",
+      "name": "Account Write",
+      "permissions": [
+        "agent_pool:read",
+        "insights_account:read",
+        "insights_account:scan",
+        "insights_account:update",
+        "insights_account:update_policy_results",
+        "insights_account_access:read",
+        "insights_account_scan:cancel",
+        "insights_account_scan:pause",
+        "insights_account_scan:read",
+        "insights_account_scan:resume",
+        "insights_account_scan:update",
+        "policy_results:update"
+      ]
+    },
+    {
+      "added": [
+        "insights_account:delete",
+        "insights_account_access:update"
+      ],
+      "description": "Admin access to cloud accounts.",
+      "entity": "insights-account",
+      "id": "insights-account-admin",
+      "inherits": "Account Write",
+      "name": "Account Admin",
+      "permissions": [
+        "agent_pool:read",
+        "insights_account:delete",
+        "insights_account:read",
+        "insights_account:scan",
+        "insights_account:update",
+        "insights_account:update_policy_results",
+        "insights_account_access:read",
+        "insights_account_access:update",
+        "insights_account_scan:cancel",
+        "insights_account_scan:pause",
+        "insights_account_scan:read",
+        "insights_account_scan:resume",
+        "insights_account_scan:update",
+        "policy_results:update"
+      ]
+    },
+    {
+      "added": null,
+      "description": "View-only org access: usage, members, stacks, environments, teams, cloud accounts; read deployments, integrations, services, templates, and resources. No create/update/delete.",
+      "entity": "global",
+      "id": "org-settings-read-only",
+      "inherits": null,
+      "name": "Read Only",
+      "permissions": [
+        "deployments:read",
+        "deployments:read_usage",
+        "environment:list_deleted",
+        "environment_tags:list",
+        "integrations:read",
+        "org_member:read",
+        "organization:read_usage",
+        "organization_annotations:read",
+        "policy_exceptions:read",
+        "policy_groups:read",
+        "policy_pack:read",
+        "policy_results:read",
+        "project_annotations:read",
+        "resources:dashboard",
+        "resources:search",
+        "saml:read",
+        "services:read",
+        "tags:read",
+        "team:read",
+        "templates:read"
+      ]
+    },
+    {
+      "added": [
+        "agent_automations:create",
+        "agent_automations:delete",
+        "agent_automations:read",
+        "agent_automations:update",
+        "agent_definitions:create",
+        "agent_task:create",
+        "environment:create",
+        "insights_policy_evaluator:delete",
+        "insights_policy_evaluator:ensure",
+        "insights_policy_evaluator:read",
+        "insights_policy_evaluator:update",
+        "insights_policy_queue:read",
+        "integrations:update",
+        "policy_exceptions:create",
+        "policy_results:update",
+        "project:decrypt",
+        "project:encrypt",
+        "project_annotations:update",
+        "service_principal:create",
+        "services:admin",
+        "services:create",
+        "services:write"
+      ],
+      "description": "View org usage and members; list stacks, environments, teams, and cloud accounts; use deployments, integrations, services, and resources; create resources (stacks, environments, teams, cloud accounts). Excludes billing and member or org admin settings.",
+      "entity": "global",
+      "id": "org-settings-standard",
+      "inherits": "Read Only",
+      "name": "Standard",
+      "permissions": [
+        "agent_automations:create",
+        "agent_automations:delete",
+        "agent_automations:read",
+        "agent_automations:update",
+        "agent_definitions:create",
+        "agent_task:create",
+        "deployments:read",
+        "deployments:read_usage",
+        "environment:create",
+        "environment:list_deleted",
+        "environment_tags:list",
+        "insights_policy_evaluator:delete",
+        "insights_policy_evaluator:ensure",
+        "insights_policy_evaluator:read",
+        "insights_policy_evaluator:update",
+        "insights_policy_queue:read",
+        "integrations:read",
+        "integrations:update",
+        "org_member:read",
+        "organization:read_usage",
+        "organization_annotations:read",
+        "policy_exceptions:create",
+        "policy_exceptions:read",
+        "policy_groups:read",
+        "policy_pack:read",
+        "policy_results:read",
+        "policy_results:update",
+        "project:decrypt",
+        "project:encrypt",
+        "project_annotations:read",
+        "project_annotations:update",
+        "resources:dashboard",
+        "resources:search",
+        "saml:read",
+        "service_principal:create",
+        "services:admin",
+        "services:create",
+        "services:read",
+        "services:write",
+        "tags:read",
+        "team:read",
+        "templates:read"
+      ]
+    },
+    {
+      "added": null,
+      "description": "Billing access.",
+      "entity": "global",
+      "id": "org-settings-billing",
+      "inherits": null,
+      "name": "Organization Settings Billing",
+      "permissions": [
+        "deployments:read_usage",
+        "org_member:read",
+        "organization:billing",
+        "organization:read_usage",
+        "resources:dashboard",
+        "saml:read",
+        "team:read"
+      ]
+    }
+  ]
+}
