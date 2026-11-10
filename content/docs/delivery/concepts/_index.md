@@ -2,7 +2,7 @@
 title: Concepts
 title_tag: Pulumi Delivery concepts
 h1: How Pulumi Delivery works
-meta_desc: How Pulumi Delivery models a release pipeline as a Pulumi program, and how pipelines, runs, stages, actions, sources, and releases relate.
+meta_desc: How Pulumi Delivery models a release pipeline as a Pulumi program, and how pipelines, runs, stages, members, sources, and releases relate.
 menu:
   delivery:
     name: Concepts
@@ -40,14 +40,14 @@ A _stage_ is a phase of the pipeline, usually one environment. A stage waits for
 
 See [Stages and gates](/docs/delivery/concepts/stages-and-gates/).
 
-## Actions
+## Members
 
 An _action_ is a resource that does work in a stage:
 
 - `Stacks` updates one or more existing stacks.
 - `Job` runs a shell command.
 
-Delivery actions aren't related to GitHub Actions. See [Actions](/docs/delivery/concepts/actions/).
+`Artifact` is also a member. It publishes a value instead of doing work; see [Artifacts](#artifacts). For the other two, see [Members](/docs/delivery/concepts/members/).
 
 ## Artifacts
 
@@ -57,7 +57,7 @@ An _artifact_ is a named value that a stage publishes once a release reaches it,
 
 A _source_ is a repository and branch. A source locks its commit when the run first creates it, so every stage of a run works from the same code. The sources you declare together make up the _release_, which has a release number. Read it from `pipeline.releaseNumber`, and read a source's commit from `source.commit`. Both are unknown during registration and preview and known during a run.
 
-Declare every source at the top level of the program. A source created from an action's output after the first pass can't lock a commit, and the run fails.
+Declare every source at the top level of the program. A source created from a member's output after the first pass can't lock a commit, and the run fails.
 
 A _trigger_ on a source decides whether a change starts a run. See [Sources and triggers](/docs/delivery/concepts/sources-and-triggers/).
 

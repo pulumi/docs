@@ -21,7 +21,7 @@ Declare an `Artifact` in the stage whose release the value belongs to. The artif
 new delivery.Artifact("clusterEndpoint", { stage: prod, value: cluster.endpoint });
 ```
 
-The value can be anything, including a secret or a nested structure. It usually comes from an action's outputs, such as a `Stacks` entry's stack outputs or a job's outputs.
+The value can be anything, including a secret or a nested structure. It usually comes from a member's outputs, such as a `Stacks` entry's stack outputs or a job's outputs.
 
 An artifact is published once its stage admits the release and its value is known. Because it belongs to a stage, a downstream pipeline that reads the `prod` stage only ever sees values from releases that made it to `prod`.
 
@@ -45,7 +45,7 @@ Both pipelines must be in the same organization, and the downstream pipeline's [
 
 ## Secret artifacts
 
-If any artifact is secret, the whole `artifacts` map is secret. A `Stacks` entry's `config` rejects secret values, so pass a secret artifact to an action in `environment` instead.
+If any artifact is secret, the whole `artifacts` map is secret. A `Stacks` entry's `config` rejects secret values, so pass a secret artifact to a member in `environment` instead.
 
 ## Next steps
 

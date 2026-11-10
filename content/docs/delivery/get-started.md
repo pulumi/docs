@@ -169,7 +169,7 @@ git add -A && git commit -m "Add the delivery pipeline" && git push
 pulumi up
 ```
 
-`pulumi up` on the pipeline stack registers the pipeline. It finishes with exit code 10, which is expected: the stages and actions are waiting for a run. The last line tells you whether a run is starting:
+`pulumi up` on the pipeline stack registers the pipeline. It finishes with exit code 10, which is expected: the stages and members are waiting for a run. The last line tells you whether a run is starting:
 
 - "Registered. A run starts for commit abc1234 when this update finishes." You're done.
 - "No run starts because commit abc1234 is not the head of branch main." Push your commit, or pull the latest and register again.

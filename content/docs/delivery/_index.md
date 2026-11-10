@@ -26,7 +26,7 @@ sections:
   cards:
   - icon: lightbulb
     heading: Concepts
-    description: Pipeline programs, runs, stages, actions, artifacts, sources, and releases, and how they fit together.
+    description: Pipeline programs, runs, stages, members, artifacts, sources, and releases, and how they fit together.
     link: /docs/delivery/concepts/
   - icon: arrows-clockwise
     heading: Sources and triggers
@@ -37,9 +37,9 @@ sections:
     description: Order promotion between environments and hold a release for approval or a manual check.
     link: /docs/delivery/concepts/stages-and-gates/
   - icon: package
-    heading: Actions
+    heading: Members
     description: Update stacks and run commands inside a stage.
-    link: /docs/delivery/concepts/actions/
+    link: /docs/delivery/concepts/members/
   - icon: link
     heading: Artifacts
     description: Publish values from a stage for other pipelines to read and deploy against.

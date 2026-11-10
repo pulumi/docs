@@ -11,7 +11,7 @@ menu:
 aliases: []
 ---
 
-Delivery never retries an action on its own. When something goes wrong, a person decides what happens next, either from the run page in the Pulumi Cloud console or through the REST API.
+Delivery never retries a member on its own. When something goes wrong, a person decides what happens next, either from the run page in the Pulumi Cloud console or through the REST API.
 
 ## Retry a failed run
 
@@ -23,15 +23,15 @@ curl -X POST \
     https://api.pulumi.com/api/preview/stacks/acme/shop-delivery/main/delivery/runs/<run-number>/retry
 ```
 
-A retry reruns only the actions that failed. Actions that succeeded keep their results. Because a `Stacks` group is one unit, a retry reruns every entry in a group where one entry failed.
+A retry reruns only the members that failed. Members that succeeded keep their results. Because a `Stacks` group is one unit, a retry reruns every entry in a group where one entry failed.
 
 A retry uses the same commit, recorded values, and release as the original run. A fix you push afterward doesn't reach the retry, but a fix outside the repository, such as creating a missing stack, does.
 
-You can retry only a failed run. If a newer release has since deployed to the failed action's stage, a newer run is waiting for that stage, or the run stack is gone, [roll back](#operate-a-stage) instead.
+You can retry only a failed run. If a newer release has since deployed to the failed member's stage, a newer run is waiting for that stage, or the run stack is gone, [roll back](#operate-a-stage) instead.
 
 ## Cancel an active run
 
-You can cancel a run while a gate is waiting or an action is running:
+You can cancel a run while a gate is waiting or a member is running:
 
 ```bash
 curl -X POST \

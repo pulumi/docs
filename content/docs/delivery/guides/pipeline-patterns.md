@@ -15,7 +15,7 @@ The examples on this page assume the `delivery` import, a source named `repo`, a
 
 ## One stage per environment from a helper function
 
-When your environments differ by only a few values, write a function that adds one environment's actions to a stage, and call it for each stage:
+When your environments differ by only a few values, write a function that adds one environment's members to a stage, and call it for each stage:
 
 ```typescript
 function deploy(stage: delivery.Stage, name: string, region: string) {
@@ -47,7 +47,7 @@ Resource names must be unique, so build them from the environment name. The regi
 
 ## Smoke test after each deploy
 
-Put a `Job` in the same stage as the `Stacks` action it tests, so it can read that action's outputs. A job can't read outputs from an earlier stage. This script retries, because a new deployment can take a few seconds to answer:
+Put a `Job` in the same stage as the `Stacks` member it tests, so it can read that member's outputs. A job can't read outputs from an earlier stage. This script retries, because a new deployment can take a few seconds to answer:
 
 ```bash
 set -eu
