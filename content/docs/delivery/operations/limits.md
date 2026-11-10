@@ -15,12 +15,14 @@ aliases: []
 
 | Limit | Value |
 | --- | --- |
-| Steps in a pipeline | 200. Each `Stacks` entry counts as one. |
+| Actions in a pipeline | 200. Each `Stacks` entry counts as one. |
 | Passes in a run | 10,000, then the run fails. |
 | Time limit of a pass | 1 hour |
-| Time limit of a step | 2 hours. Set `timeout`, in seconds, on a `Stacks` entry to change it. |
+| Time limit of an action | 2 hours. Set `timeout`, in seconds, on a `Stacks` entry to change it. |
 | Job outputs | 1 MiB |
 | Run stack retention | Deleted 90 days after the run ends |
+
+<!-- TODO(launch): Confirm whether artifacts count toward the 200 actions limit. The package guide's limit was "members", which included artifacts. -->
 
 Each entry of a `Stacks` group uses one slot of your organization's concurrency limit. Registration warns you about a group with more entries than the limit, because it can block itself.
 
@@ -30,7 +32,7 @@ Each entry of a `Stacks` group uses one slot of your organization's concurrency 
 
 These behaviors affect how you design and operate a pipeline.
 
-### Runs and steps
+### Runs and actions
 
 - Delivery doesn't detect a cycle between stages. A run in a cycle waits until you cancel it.
 - A pipeline runs as one service principal for all of its stages. See [Permissions](/docs/delivery/operations/permissions/#the-identity-a-pipeline-runs-as).

@@ -11,7 +11,7 @@ menu:
 aliases: []
 ---
 
-Larger estates rarely fit in one pipeline. A platform team might own the cluster and network, while application teams each own a service that deploys onto it. Delivery connects these pipelines through artifacts and pipeline sources.
+Larger estates rarely fit in one pipeline. A platform team might own the cluster and network, while application teams each own a service that deploys onto it. Delivery connects these pipelines through [artifacts](/docs/delivery/concepts/artifacts/) and [pipeline sources](/docs/delivery/concepts/sources-and-triggers/#pipeline-sources).
 
 ## Upstream and downstream pipelines
 

@@ -11,7 +11,7 @@ menu:
 aliases: []
 ---
 
-Delivery never retries a step on its own. When something goes wrong, a person decides what happens next, either from the run page in the Pulumi Cloud console or through the REST API.
+Delivery never retries an action on its own. When something goes wrong, a person decides what happens next, either from the run page in the Pulumi Cloud console or through the REST API.
 
 ## Retry a failed run
 
@@ -23,15 +23,15 @@ curl -X POST \
     https://api.pulumi.com/api/preview/stacks/acme/shop-delivery/main/delivery/runs/<run-number>/retry
 ```
 
-A retry reruns only the steps that failed. Steps that succeeded keep their results. Because a `Stacks` group is one unit, a retry reruns every entry in a group where one entry failed.
+A retry reruns only the actions that failed. Actions that succeeded keep their results. Because a `Stacks` group is one unit, a retry reruns every entry in a group where one entry failed.
 
 A retry uses the same commit, recorded values, and release as the original run. A fix you push afterward doesn't reach the retry, but a fix outside the repository, such as creating a missing stack, does.
 
-You can retry only a failed run. If a newer release has since deployed to the failed step's stage, a newer run is waiting for that stage, or the run stack is gone, [roll back](#operate-a-stage) instead.
+You can retry only a failed run. If a newer release has since deployed to the failed action's stage, a newer run is waiting for that stage, or the run stack is gone, [roll back](#operate-a-stage) instead.
 
 ## Cancel an active run
 
-You can cancel a run while a gate is waiting or a step is running:
+You can cancel a run while a gate is waiting or an action is running:
 
 ```bash
 curl -X POST \
@@ -43,7 +43,7 @@ The run shows as canceled right away, but an update in progress can take a few m
 
 ## Operate a stage
 
-These actions each create a new run for one stage. That run reuses the release, recorded values, and outputs of an earlier run rather than reading the latest ones, and it skips the stage's gate.
+These operations each create a new run for one stage. That run reuses the release, recorded values, and outputs of an earlier run rather than reading the latest ones, and it skips the stage's gate.
 
 Roll back
 : Deploys an earlier release that previously reached the stage, then pauses the stage. Newer runs wait until you resume it.
@@ -59,6 +59,6 @@ Pause and resume
 
 Use the console, or the REST API routes under `/api/preview/stacks/<org>/<project>/<stack>/delivery/stages/<stage>/`.
 
-<!-- TODO(launch): Add the exact route for each stage action and a console screenshot of the stage menu. Confirm the definition-list syntax renders well on the docs theme; switch to a list if not. -->
+<!-- TODO(launch): Add the exact route for each stage operation and a console screenshot of the stage menu. Confirm the definition-list syntax renders well on the docs theme; switch to a list if not. -->
 
-These actions need a user token with write access to the pipeline stack. See [Permissions](/docs/delivery/operations/permissions/).
+These operations need a user token with write access to the pipeline stack. See [Permissions](/docs/delivery/operations/permissions/).
