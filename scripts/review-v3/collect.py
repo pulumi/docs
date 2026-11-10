@@ -310,11 +310,13 @@ def review_status(labels: set[str], surface: str, review_body: str, head_sha: st
 
 
 def only_merges_since(commits: list[dict], review_body: str) -> bool:
-    """True when the reviewed head (the card's CLAUDE_REVIEW_HEAD) is in the
-    PR's commit list and every later commit is a merge or changes nothing
-    (an empty "kick CI" commit: #22524's reset the review it sat on)."""
+    """True when the history since the reviewed head (the card's
+    CLAUDE_REVIEW_HEAD) could have left the PR's changes alone: only merges
+    or no-op commits after it (an empty "kick CI" commit: #22524's reset the
+    review it sat on), or a rebase that took it out of the commit list.
+    `same_diff` has to agree too; see `sentinel.history_allows_carry`."""
     m = sentinel.HEAD_MARKER_RE.search(review_body or "")
-    return bool(m) and sentinel.changes_nothing_since(commits, m.group(1))
+    return bool(m) and sentinel.history_allows_carry(commits, m.group(1))
 
 
 def reviewed_head(review_body: str) -> str | None:
@@ -322,7 +324,7 @@ def reviewed_head(review_body: str) -> str | None:
     return m.group(1) if m else None
 
 
-# Owned by sentinel.py, which G3 and G4 read them from too.
+# Owned by sentinel.py, which G4 reads them from too.
 changed_lines = sentinel.changed_lines
 same_diff = sentinel.same_diff
 
@@ -741,7 +743,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         "ai_suspect": {"flag": suspect, "reasons": reasons},
         "review": review,
         "triage_prose": (triage_c or {}).get("body"),
-        "sentinel": sentinel_gates(comments, head_sha),
+        "sentinel": sentinel_gates(statuses, head_sha),
         "unblock_conflict": unblock_conflict(comments, head_sha, _unblock_conflict_authors(approver)),
         "preview": preview_info(comments, files, repo_root),
         "cache_key": key,
@@ -769,27 +771,27 @@ def _unblock_conflict_authors(approver: str | None) -> set[str]:
 _UNBLOCK_CONFLICT_HEAD_RE = re.compile(r"the branch is exactly as it was at `([0-9a-f]{7,40})`")
 
 
-_SENTINEL_ROW_RE = re.compile(r"^\|\s*(✅|🔴|🟠|➖)\s*\|\s*\*\*(G\d+)\s+([\w-]+)\*\*\s*\|\s*(.*?)\s*\|\s*$")
-_SENTINEL_HEAD_RE = re.compile(r"Evaluated at head `([0-9a-f]+)`")
-_SENTINEL_ICON_STATE = {"✅": "ok", "🔴": "red", "🟠": "error", "➖": "skip"}
+_SENTINEL_GATE_PREFIX = "Sentinel / "
+_SENTINEL_STATE = {"success": "ok", "failure": "red", "pending": "pending", "error": "error"}
 
 
-def sentinel_gates(comments: list[dict], head_sha: str) -> dict | None:
-    """The Sentinel's gate table, from its pinned status comment, when that
-    comment was evaluated at this head. The commit status carries only a
-    count ("1 gate(s) red"); the comment carries which gate and why, which
-    is what the board's tooltip needs. None when there is no comment, or it
-    describes an older head."""
-    found = sentinel._find_comments(comments, sentinel.STATUS_MARKER)
-    if not found:
-        return None
-    body = (max(found, key=lambda c: int(c.get("id") or 0)).get("body") or "")
-    m = _SENTINEL_HEAD_RE.search(body)
-    if not m or not head_sha or not head_sha.startswith(m.group(1)):
-        return None
-    gates = [{"id": g.group(2), "name": g.group(3), "state": _SENTINEL_ICON_STATE[g.group(1)], "detail": g.group(4)}
-             for g in (_SENTINEL_ROW_RE.match(line) for line in body.splitlines()) if g]
-    return {"head": m.group(1), "gates": gates} if gates else None
+def sentinel_gates(statuses: list[dict], head_sha: str) -> dict | None:
+    """The Sentinel's gates, from its per-gate commit statuses at this head
+    (`Sentinel / review`, ...). They used to be parsed out of a pinned status
+    comment, which is retired. A green "n/a: ..." status is a gate that
+    doesn't apply. None when the head carries no gate statuses."""
+    gates, seen = [], set()
+    for s in statuses:  # newest first; keep the first per context
+        ctx = s.get("context") or ""
+        if not ctx.startswith(_SENTINEL_GATE_PREFIX) or ctx in seen:
+            continue
+        seen.add(ctx)
+        desc = s.get("description") or ""
+        state = _SENTINEL_STATE.get(s.get("state") or "", "error")
+        if state == "ok" and desc.startswith(("n/a:", "doesn't apply")):
+            state = "skip"
+        gates.append({"name": ctx[len(_SENTINEL_GATE_PREFIX):], "state": state, "detail": desc})
+    return {"head": head_sha, "gates": gates} if gates else None
 
 
 def unblock_conflict(comments: list[dict], head_sha: str, authors: set[str] | None = None) -> dict | None:

@@ -69,7 +69,9 @@ class FakeGh:
         return self.files_now
 
     def compare_files(self, base, sha):
-        assert (base, sha) == ("master", REVIEWED)
+        assert base == "master"
+        if self.files_then is None:
+            raise rb.GhError("No commit found for SHA")
         return self.files_then
 
     def get(self, path):
@@ -104,9 +106,29 @@ def test_a_conflict_resolution_that_edits_the_prs_lines_is_not_restamped():
     assert out["restamped"] is False and "conflict" in out["reason"] and not gh.patched
 
 
-def test_unknown_reviewed_head_or_legacy_review_fails_closed():
-    gh = FakeGh(card(head="9" * 40), [commit(REVIEWED), commit(HEAD, 2)], FILES, FILES)
-    assert rb.run(gh, 1)["restamped"] is False
+def test_a_rebase_with_the_same_diff_is_restamped():
+    """#22397: a rebase to clear a changelog conflict took the reviewed head
+    out of the commit list. The PR's own lines didn't change, so the review
+    still describes it."""
+    rebased = [commit("8" * 40), commit(HEAD)]
+    gh = FakeGh(card(), rebased, FILES, FILES_AFTER_MERGE)
+    out = rb.run(gh, 1)
+    assert out["restamped"] is True and "rebase" in out["reason"], out
+    assert f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->" in gh.patched[-1][1]
+
+
+def test_a_rebase_that_changed_the_diff_or_lost_the_old_head_fails_closed():
+    changed = [{"filename": "content/docs/x.md", "patch": "@@ -1,2 +1,2 @@\n-old\n+newer\n ctx"}]
+    rebased = [commit("8" * 40), commit(HEAD)]
+    assert rb.run(FakeGh(card(), rebased, FILES, changed), 1)["restamped"] is False
+    # GitHub no longer serves the pre-rebase commit: nothing to compare, no carry.
+    gone = FakeGh(card(), rebased, None, FILES)
+    assert rb.run(gone, 1)["restamped"] is False and not gone.patched
+    # An unreadable commit list says nothing about the history.
+    assert rb.run(FakeGh(card(), [], FILES, FILES), 1)["restamped"] is False
+
+
+def test_legacy_review_fails_closed():
     legacy = FakeGh("<!-- CLAUDE_REVIEW 1/1 -->\nv2\n", [commit(HEAD, 2)], FILES, FILES)
     assert rb.run(legacy, 1) == {"restamped": False, "reason": "no v3 author card", "head": HEAD}
 
