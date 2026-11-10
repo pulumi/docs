@@ -15,14 +15,12 @@ aliases: []
 
 | Limit | Value |
 | --- | --- |
-| Stack entries and jobs in a pipeline | 200. Each `Stacks` entry and each `Job` counts as one. |
+| Stack entries and jobs in a pipeline | 200. Each `Stacks` entry and each `Job` counts as one. Artifacts don't count. |
 | Passes in a run | 10,000, then the run fails. |
 | Time limit of a pass | 1 hour |
 | Time limit of a stack update or job | 2 hours. Set `timeout`, in seconds, on a `Stacks` entry to change it. |
 | Job outputs | 1 MiB |
 | Run stack retention | Deleted 90 days after the run ends |
-
-<!-- TODO(launch): Confirm with Florian whether artifacts count toward the 200 limit. The package guide counts "members". -->
 
 Each entry of a `Stacks` group uses one slot of your organization's concurrency limit. Registration warns you about a group with more entries than the limit, because it can block itself.
 
