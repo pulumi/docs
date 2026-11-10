@@ -15,7 +15,7 @@ A pipeline deploys on your behalf, so who can change it and who can move a relea
 
 ## The identity a pipeline runs as
 
-Each pipeline runs as a Pulumi Cloud service principal. Every member in every stage of the pipeline uses that one identity, so it's what decides which stacks and ESC environments a run can reach.
+Each pipeline runs as a Pulumi Cloud service principal. Every stack update and job in every stage of the pipeline uses that one identity, so it's what decides which stacks and ESC environments a run can reach.
 
 You can choose an existing service principal for the pipeline in the pipeline program. If you don't, Delivery creates one when you register the pipeline and gives it access to the pipeline's target stacks only. Before it does, Delivery checks that you have access to those stacks yourself, so registering a pipeline can't give it more access than you have. The same check applies when you choose an existing service principal: you need at least the permissions it has.
 

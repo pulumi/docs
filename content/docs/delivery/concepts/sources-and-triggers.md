@@ -11,7 +11,7 @@ menu:
 aliases: []
 ---
 
-A source tells Delivery where a release's code comes from. Every member checks out a source, and the commits of all the sources in a run make up its release. A trigger on a source decides whether a change to it starts a new run.
+A source tells Delivery where a release's code comes from. Every stack update and job checks out a source, and the commits of all the sources in a run make up its release. A trigger on a source decides whether a change to it starts a new run.
 
 ## Repository sources
 

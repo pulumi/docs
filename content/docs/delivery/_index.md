@@ -26,7 +26,7 @@ sections:
   cards:
   - icon: lightbulb
     heading: Concepts
-    description: Pipeline programs, runs, stages, members, artifacts, sources, and releases, and how they fit together.
+    description: Pipeline programs, runs, stages, stacks, jobs, artifacts, sources, and releases, and how they fit together.
     link: /docs/delivery/concepts/
   - icon: arrows-clockwise
     heading: Sources and triggers

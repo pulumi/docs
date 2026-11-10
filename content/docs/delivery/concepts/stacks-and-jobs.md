@@ -11,7 +11,7 @@ menu:
 aliases: []
 ---
 
-Stacks and jobs do the work inside a stage. A `Stacks` resource updates existing stacks, and a `Job` runs a command, such as a smoke test. Together, they're the stage's _members_.
+Stacks and jobs do the work inside a stage. A `Stacks` resource updates existing stacks, and a `Job` runs a command, such as a smoke test.
 
 Both name their `stage`, a `source` to check out, and a `directory` in that source. Delivery checks out the source at the run's locked commit before it updates a stack or runs a job.
 
