@@ -2,7 +2,7 @@
 title: Concepts
 title_tag: Pulumi Delivery concepts
 h1: How Pulumi Delivery works
-meta_desc: How Pulumi Delivery models a release pipeline as a Pulumi program, and how pipelines, runs, stages, members, sources, and releases relate.
+meta_desc: How Pulumi Delivery models a release pipeline as a Pulumi program, and how pipelines, runs, stages, stacks, jobs, artifacts, sources, and releases relate.
 menu:
   delivery:
     name: Concepts
@@ -52,13 +52,11 @@ A `Stacks` resource updates one or more existing stacks in a stage. Each entry r
 
 A `Job` runs a shell command in a stage, such as a smoke test against the stack the stage just updated. A job can publish outputs for other resources in the same stage to read. See [Jobs](/docs/delivery/concepts/stacks-and-jobs/#jobs).
 
-Stacks and jobs are the _members_ of a stage: the resources that do its work.
-
 ## Sources and releases
 
 A _source_ is a repository and branch. A source locks its commit when the run first creates it, so every stage of a run works from the same code. The sources you declare together make up the _release_, which has a release number. Read it from `pipeline.releaseNumber`, and read a source's commit from `source.commit`. Both are unknown during registration and preview and known during a run.
 
-Declare every source at the top level of the program. A source created from a member's output after the first pass can't lock a commit, and the run fails.
+Declare every source at the top level of the program. A source created from a stack update's or job's output after the first pass can't lock a commit, and the run fails.
 
 A _trigger_ on a source decides whether a change starts a run. See [Sources and triggers](/docs/delivery/concepts/sources-and-triggers/).
 
