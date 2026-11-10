@@ -57,13 +57,13 @@ Before you deploy, set up the following:
 
 ### Deployment steps
 
-See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted) file provided with the installer package for detailed deployment steps.
+For detailed deployment steps, see the README for your installer language: [TypeScript](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted/ts) or [Go](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted/go).
 
 ## ECS-hosted system management and maintenance
 
 ### Pulumi Cloud updates
 
-When deploying Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted) file to set the `imageTag` configuration property for the installer to use.
+When deploying Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the installer's README ([TypeScript](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted/ts) or [Go](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted/go)) to set the `imageTag` configuration property for the installer to use.
 
 When ready to update the Pulumi Cloud containers to use a different version, do the following:
 
@@ -73,7 +73,7 @@ When ready to update the Pulumi Cloud containers to use a different version, do 
 
 ### Database maintenance
 
-The installer configures the RDS backend database for replication and checkpointing. So no additional maintenance is needed by the customer.
+The installer configures the RDS (Aurora) database with automated backups, so no routine database maintenance is needed. Read replicas default to 0; set the `numberDbReplicas` configuration value in the installer if you need them.
 
 ### Blob storage maintenance
 
