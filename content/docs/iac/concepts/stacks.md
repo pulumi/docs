@@ -1332,7 +1332,7 @@ By default, `pulumi stack export` exports the latest deployment. To export the d
 $ pulumi stack export --version 12 --file stack-v12.json
 ```
 
-Importing an earlier deployment replaces the stack's state, not your cloud resources. After the import, run `pulumi refresh` so the state matches what actually exists in the cloud provider before you run `pulumi up`.
+Importing an earlier deployment replaces the stack's state, not your cloud resources. After the import, run `pulumi refresh` before you run `pulumi up`. Refresh updates the resources the imported state tracks to match the cloud provider. It doesn't add resources created after that version, so Pulumi no longer manages them. Use [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) to bring them back under management.
 
 ### Secrets in exported deployments
 
