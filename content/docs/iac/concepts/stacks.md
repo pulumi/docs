@@ -167,6 +167,61 @@ Your program code can distinguish between execution for `preview` and `update` o
 
 To update the currently selected stack, run `pulumi up`. If you saved a plan from a preview you can pass that in to constrain the update to only doing what was planned with `pulumi up --plan=plan.json`. The operation uses the latest [configuration values](/docs/iac/concepts/config/) for the active stack.
 
+## Promote Changes Between Stacks
+
+Most teams deploy the same program to several stacks, for example `dev`, `staging`, and `production`. Promoting a change simply means running the same update against each stack in order, and it's easy to script in CI:
+
+```bash
+for stack in dev staging production; do
+  pulumi stack select acmecorp/webserver/$stack
+  pulumi up --auto-approve --skip-preview
+done
+```
+
+Each stack reads its own [configuration](../config/), so differences like instance size or replica count stay in `Pulumi.<stack-name>.yaml` instead of in code. For a complete walkthrough of promotion pipelines, [click here](/docs/iac/concepts/stacks/promotion/).
+
+Downstream stacks often need values exported by the stack you just promoted. Read them with a [stack reference](#stackreferences). Stack references can only read outputs from stacks in the same project, so keep shared infrastructure and the services that consume it in one project.
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const network = new pulumi.StackReference(`acmecorp/network/${pulumi.getStack()}`);
+
+network.getOutput("subnetId").then(subnetId => {
+    new aws.ec2.Instance("web", {
+        ami: "ami-0c55b159cbfafe1f0",
+        instanceType: "t3.micro",
+        subnetId: subnetId,
+    });
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+network = pulumi.StackReference(f"acmecorp/network/{pulumi.get_stack()}")
+
+aws.ec2.Instance("web",
+    ami="ami-0c55b159cbfafe1f0",
+    instance_type="t3.micro",
+    vpc_id=network.require_output("vpcId"))
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+To find every resource a promotion touched across all of your stacks, use [Pulumi Insights resource search](/docs/discovery-governance/guides/search-resources/).
+
 ## View stack resources
 
 To view details of the currently selected stack, run `pulumi stack` with no arguments. This displays the metadata, resources and output properties associated with the stack.
@@ -1320,7 +1375,7 @@ There are scenarios when `pulumi destroy` may fail to delete resources as expect
 
 To delete a stack with no resources, run `pulumi stack rm`. Removing the stack removes all stack history from Pulumi Cloud and deletes the stack configuration file `Pulumi.<stack-name>.yaml`.
 
-To force the deletion of a stack that still contains resources---potentially orphaning them---use `pulumi stack rm --force`.
+To delete a stack that still contains resources, use `pulumi stack rm --force`. This also destroys the stack's cloud resources, so you don't need to run `pulumi destroy` first.
 
 {{% notes type="info" %}}
 If a stack is deleted by mistake, organization administrators can restore it from the Pulumi Cloud console for a limited time. See [Restoring deleted stacks](/docs/iac/operations/stack-management/restoring-deleted-stacks/).
