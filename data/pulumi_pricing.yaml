@@ -393,6 +393,16 @@ categories:
         available_from: enterprise
         hidden: true
 
+      - id: delivery
+        name: Pulumi Delivery
+        available_from: team
+        hidden: true
+
+      - id: delivery-approvals
+        name: Delivery approval gates
+        available_from: enterprise
+        hidden: true
+
       - id: webhooks
         name: Webhooks
         link: /docs/deployments/concepts/webhooks/

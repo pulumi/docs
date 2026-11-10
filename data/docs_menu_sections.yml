@@ -8,6 +8,8 @@
   label: Infrastructure AI
 - menu: deployments
   label: Deployments & Workflows
+- menu: delivery
+  label: Delivery
 - menu: esc
   label: Secrets & Configuration (ESC)
 - menu: insights
