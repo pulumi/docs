@@ -294,6 +294,14 @@ its own merits; its cell stays one line, and any changed action goes in
 `detail.fix`. Residual edits the author volunteered ("I'll attribute it
 inline") are theirs to make, not grounds to hold.
 
+**Undeclared-change questions** (`docs-review:references:output-format`
+§Undeclared changes) follow the same rule. Re-read the PR description
+(`gh pr view --json body`): a reply confirming the change was intended, or a
+description that now mentions it, is an answer → `concede`. A push that
+reverts the change → `resolve`. A new push that adds an undeclared change
+worth asking about may `add` a ❓ row like any other new problem in the
+pushed lines.
+
 ### What the deterministic side does
 
 `claude-update.yml`'s publish step re-fetches the LIVE author card (merging
