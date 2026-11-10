@@ -31,7 +31,7 @@ const services = new delivery.Stacks("services", {
 
 Create each target stack before the first run. A target must be an ordinary stack in the pipeline's organization; a pipeline stack or run stack can't be a target.
 
-Each entry can set `config`, a map of plain-string values that Delivery writes to the target stack before the update. `config` can't hold secrets, and registration rejects one that does. Keep secrets in the target stack's own config file or in an [ESC environment](/docs/delivery/guides/cloud-credentials/).
+Each entry can set `config`, a map of plain-string values that Delivery writes to the target stack before the update. `config` can't hold secrets, and registration rejects one that does. For secrets and cloud credentials, import a [Pulumi ESC environment](/docs/esc/) in the target stack's config file rather than storing the values there. ESC can issue short-lived credentials through OIDC and lets each stage's stacks use a different environment. See [Cloud credentials](/docs/delivery/guides/cloud-credentials/).
 
 The entries in one `Stacks` resource run together, and each can read the others' new outputs through stack references. The group is one unit for dependencies and retries: anything that uses one entry's output waits for the whole group, and retrying a failed entry reruns every entry. See [Stacks that deploy together](/docs/delivery/guides/pipeline-patterns/#stacks-that-deploy-together).
 
