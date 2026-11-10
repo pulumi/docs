@@ -11,7 +11,7 @@ menu:
 aliases: []
 ---
 
-An _artifact_ is a named value that a stage publishes once a release reaches it, such as a cluster endpoint, a database ID, or a container image tag. Other pipelines in your organization read it with a [`PipelineSource`](/docs/delivery/concepts/sources-and-triggers/#pipeline-sources). Artifacts are how one pipeline hands values to another without either one reaching into the other's stacks.
+An _artifact_ is part of a release: a named value that a stage publishes once the release reaches it, such as a cluster endpoint, a database ID, or a container image tag. Other pipelines in your organization read it with a [`PipelineSource`](/docs/delivery/concepts/sources-and-triggers/#pipeline-sources). Artifacts are how one pipeline hands values to another without either one reaching into the other's stacks.
 
 ## Publish an artifact
 

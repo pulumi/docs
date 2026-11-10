@@ -11,9 +11,9 @@ menu:
 aliases: []
 ---
 
-Members do the work inside a stage: `Stacks` updates existing stacks, and `Job` runs a command. Every member of those two kinds names its `stage`, a `source` to check out, and a `directory` in that source. Delivery checks out the source at the run's locked commit before the member runs.
+Members do the work inside a stage: `Stacks` updates existing stacks, and `Job` runs a command. Every member names its `stage`, a `source` to check out, and a `directory` in that source. Delivery checks out the source at the run's locked commit before the member runs.
 
-`Artifact` is also a member, but it publishes a value for other pipelines instead of doing work, so it has its own page. See [Artifacts](/docs/delivery/concepts/artifacts/).
+An `Artifact` isn't a member. It's part of a release: a value a stage publishes for other pipelines to read. See [Artifacts](/docs/delivery/concepts/artifacts/).
 
 ## Stacks
 

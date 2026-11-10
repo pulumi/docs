@@ -47,11 +47,11 @@ An _action_ is a resource that does work in a stage:
 - `Stacks` updates one or more existing stacks.
 - `Job` runs a shell command.
 
-`Artifact` is also a member. It publishes a value instead of doing work; see [Artifacts](#artifacts). For the other two, see [Members](/docs/delivery/concepts/members/).
+See [Members](/docs/delivery/concepts/members/).
 
 ## Artifacts
 
-An _artifact_ is a named value that a stage publishes once a release reaches it, such as a cluster endpoint or an image tag. Other pipelines read a stage's artifacts with a `PipelineSource`, which is how one pipeline hands values to the next. See [Artifacts](/docs/delivery/concepts/artifacts/).
+An _artifact_ is part of a release: a named value that a stage publishes once the release reaches it, such as a cluster endpoint or an image tag. Other pipelines read a stage's artifacts with a `PipelineSource`, which is how one pipeline hands values to the next. See [Artifacts](/docs/delivery/concepts/artifacts/).
 
 ## Sources and releases
 
