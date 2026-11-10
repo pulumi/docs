@@ -299,11 +299,11 @@ inline") are theirs to make, not grounds to hold.
 (`gh pr view --json body`): a reply confirming the change was intended, or a
 description that now mentions it, is an answer → `concede`. A push that
 reverts the change → `resolve`. A new push that adds an undeclared change
-worth asking about may `add` a ❓ row like any other new problem in the
-pushed lines. Leave the brief's `_(not in the PR description)_` marker in
-place when the ❓ is answered: it records what the description said when the
-bullet was written. Drop it only when you rewrite that bullet anyway, for
-example after a revert.
+worth asking about may `add` a ❓ row (`"bucket": "author-answer"`) like any
+other new problem in the pushed lines. This lane never edits the brief, so
+the `_(not in the PR description)_` marker stays as the full review wrote it:
+an answered ❓ leaves it in place as a record of what the description said,
+and a ❓ this lane adds has no marker until the next full review.
 
 ### What the deterministic side does
 
