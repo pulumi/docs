@@ -15,10 +15,10 @@ aliases: []
 
 | Limit | Value |
 | --- | --- |
-| Members in a pipeline | 200. Each `Stacks` entry counts as one. |
+| Steps in a pipeline | 200. Each `Stacks` entry counts as one. |
 | Passes in a run | 10,000, then the run fails. |
 | Time limit of a pass | 1 hour |
-| Time limit of a member | 2 hours. Set `timeout`, in seconds, on a `Stacks` entry to change it. |
+| Time limit of a step | 2 hours. Set `timeout`, in seconds, on a `Stacks` entry to change it. |
 | Job outputs | 1 MiB |
 | Run stack retention | Deleted 90 days after the run ends |
 

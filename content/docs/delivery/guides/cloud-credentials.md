@@ -1,6 +1,6 @@
 ---
 title_tag: Cloud credentials for Pulumi Delivery
-meta_desc: Give each stage of a Pulumi Delivery pipeline its own cloud credentials using Pulumi ESC environments with OIDC, or member environment variables.
+meta_desc: Give each stage of a Pulumi Delivery pipeline its own cloud credentials using Pulumi ESC environments with OIDC, or step environment variables.
 title: Cloud credentials
 h1: Cloud credentials for each stage
 menu:
@@ -11,7 +11,7 @@ menu:
 aliases: []
 ---
 
-Each `Stacks` update needs credentials for the cloud it deploys to, and you'll usually want different credentials for `dev` and `prod`. Delivery doesn't use a stack's [deployment settings](/docs/deployments/concepts/settings/) and doesn't do an OIDC exchange of its own, so the credentials come from the target stack or from the member.
+Each `Stacks` update needs credentials for the cloud it deploys to, and you'll usually want different credentials for `dev` and `prod`. Delivery doesn't use a stack's [deployment settings](/docs/deployments/concepts/settings/) and doesn't do an OIDC exchange of its own, so the credentials come from the target stack or from the step.
 
 ## Use an ESC environment on the target stack
 
@@ -30,7 +30,7 @@ A `Stacks` update runs with a short-lived token that has your organization's def
 
 ## Pass credentials in `environment`
 
-You can also pass credentials directly in a member's `environment`. A secret value stays secret:
+You can also pass credentials directly in a step's `environment`. A secret value stays secret:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";

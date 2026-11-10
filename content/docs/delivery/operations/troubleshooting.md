@@ -40,7 +40,7 @@ Open the run in the Pulumi Cloud console and look at the stage it's on:
 : Your organization's default deployment role can't open the target stack's ESC environment. Grant it access. See [Cloud credentials](/docs/delivery/guides/cloud-credentials/).
 
 A source fails to lock a commit
-: Every source must be declared at the top level of the pipeline program. A source created from a member's output after the first pass can't lock a commit.
+: Every source must be declared at the top level of the pipeline program. A source created from a step's output after the first pass can't lock a commit.
 
 A job fails
 : A non-zero exit code fails the job and its stage. Check the job's logs on the run page. For HTTP checks, use `curl -fsS` so an error status fails the command.
