@@ -12,14 +12,14 @@ public class WebserverStack : Stack
 {
     public WebserverStack()
     {
-        // Look up the most recent Amazon Linux 2 AMI.
+        // Look up the most recent Amazon Linux 2023 AMI.
         var ami = GetAmi.Invoke(new GetAmiInvokeArgs
         {
             Owners = { "amazon" },
             MostRecent = true,
             Filters =
             {
-                new GetAmiFilterInputArgs { Name = "name", Values = { "amzn2-ami-hvm-*-x86_64-gp2" } },
+                new GetAmiFilterInputArgs { Name = "name", Values = { "al2023-ami-2023.*-x86_64" } },
             },
         });
 

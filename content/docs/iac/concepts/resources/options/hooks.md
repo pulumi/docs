@@ -98,7 +98,7 @@ nohup python3 -m http.server 80 &`
   const ami = aws.ec2.getAmiOutput({
     filters: [{
       name: "name",
-      values: ["amzn2-ami-hvm-*"],
+      values: ["al2023-ami-2023.*-x86_64"],
     }],
     // Amazon owns this AMI so we'll use their owner ID.
     owners: ["137112412989"],
@@ -183,7 +183,7 @@ ami = ec2.get_ami_output(
     filters=[
         {
             "name": "name",
-            "values": ["amzn2-ami-hvm-*"],
+            "values": ["al2023-ami-2023.*-x86_64"],
         }
     ],
     # Amazon owns this AMI so we'll use their owner ID.
@@ -299,7 +299,7 @@ nohup python3 -m http.server 80 &`
 			Filters: []ec2.GetAmiFilter{
 				{
 					Name:   "name",
-					Values: []string{"amzn2-ami-hvm-*"},
+					Values: []string{"al2023-ami-2023.*-x86_64"},
 				},
 			},
 			// Amazon owns this AMI so we'll use their owner ID.
@@ -421,14 +421,14 @@ nohup python3 -m http.server 80 &";
         // Set up the resources needed to run the web server.
 
         var instanceType = "t2.micro";
-        var ami = GetAmi.Invoke(new GetAmiArgs
+        var ami = GetAmi.Invoke(new GetAmiInvokeArgs
         {
             Filters =
             {
-                new GetAmiFilterArgs
+                new GetAmiFilterInputArgs
                 {
                     Name = "name",
-                    Values = { "amzn2-ami-hvm-*" },
+                    Values = { "al2023-ami-2023.*-x86_64" },
                 },
             },
             Owners = { "137112412989" }, // Amazon owns this AMI so we'll use their owner ID.

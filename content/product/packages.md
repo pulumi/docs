@@ -26,7 +26,7 @@ details:
                 // Get the id for the latest Amazon Linux AMI
                 const ami = aws.ec2.getAmi({
                     filters: [
-                        { name: "name", values: ["amzn-ami-hvm-*-x86_64-ebs"] },
+                        { name: "name", values: ["al2023-ami-2023.*-x86_64"] },
                     ],
                     owners: ["137112412989"], // Amazon
                     mostRecent: true,
@@ -58,7 +58,7 @@ details:
 
                 ami = aws.ec2.get_ami(most_recent=True,
                                 owners=["137112412989"],
-                                filters=[aws.GetAmiFilterArgs(name="name", values=["amzn-ami-hvm-*"])])
+                                filters=[aws.GetAmiFilterArgs(name="name", values=["al2023-ami-2023.*-x86_64"])])
 
                 group = aws.ec2.SecurityGroup('web-secgrp',
                     description='Enable HTTP access',
@@ -109,7 +109,7 @@ details:
                                 Filters: []ec2.GetAmiFilter{
                                     {
                                         Name:   "name",
-                                        Values: []string{"amzn-ami-hvm-*-x86_64-ebs"},
+                                        Values: []string{"al2023-ami-2023.*-x86_64"},
                                     },
                                 },
                                 Owners:     []string{"137112412989"},
@@ -150,7 +150,7 @@ details:
                         {
                             MostRecent = true,
                             Owners = {"137112412989"},
-                            Filters = {new Pulumi.Aws.Ec2.Inputs.GetAmiFilterArgs {Name = "name", Values = {"amzn-ami-hvm-*"}}}
+                            Filters = {new Pulumi.Aws.Ec2.Inputs.GetAmiFilterArgs {Name = "name", Values = {"al2023-ami-2023.*-x86_64"}}}
                         }));
 
                         var group = new SecurityGroup("web-secgrp", new SecurityGroupArgs
@@ -214,7 +214,7 @@ details:
 
                     public static Exports stack(Context ctx) {
                         final var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
-                                .filters(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs")))
+                                .filters(new GetAmiFilter("name", List.of("al2023-ami-2023.*-x86_64")))
                                 .owners("137112412989")
                                 .mostRecent(true)
                                 .build()
@@ -269,7 +269,7 @@ details:
                         Arguments:
                             filters:
                               - name: name
-                                values: ["amzn-ami-hvm-*-x86_64-ebs"]
+                                values: ["al2023-ami-2023.*-x86_64"]
                             owners: ["137112412989"]
                             mostRecent: true
                         Return: id
