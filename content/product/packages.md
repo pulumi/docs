@@ -58,7 +58,7 @@ details:
 
                 ami = aws.ec2.get_ami(most_recent=True,
                                 owners=["137112412989"],
-                                filters=[aws.GetAmiFilterArgs(name="name", values=["al2023-ami-2023.*-x86_64"])])
+                                filters=[aws.ec2.GetAmiFilterArgs(name="name", values=["al2023-ami-2023.*-x86_64"])])
 
                 group = aws.ec2.SecurityGroup('web-secgrp',
                     description='Enable HTTP access',
