@@ -104,6 +104,9 @@
       # Subscription changes (`org-downgraded-to-free`, `org-upgraded-to-pro`),
       # the only organization events using the abbreviated `org-` spelling.
       - org-
+      # Assigning or removing a role for a user, service principal, or team
+      # (`principal-role-assigned`, `principal-role-removed`).
+      - principal-role-
 
 - id: teams
   name: Teams
