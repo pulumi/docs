@@ -300,7 +300,10 @@ inline") are theirs to make, not grounds to hold.
 description that now mentions it, is an answer → `concede`. A push that
 reverts the change → `resolve`. A new push that adds an undeclared change
 worth asking about may `add` a ❓ row like any other new problem in the
-pushed lines.
+pushed lines. Leave the brief's `_(not in the PR description)_` marker in
+place when the ❓ is answered: it records what the description said when the
+bullet was written. Drop it only when you rewrite that bullet anyway, for
+example after a revert.
 
 ### What the deterministic side does
 

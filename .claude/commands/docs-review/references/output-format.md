@@ -613,7 +613,8 @@ PR at all, and a revert answers both.
 not that one change is hiding. Raise a single ❓ row instead, Where `—`, that
 names them in one line ("Not in the PR description: the Delete a stack
 rewrite, the removed Import section, and the new `--yes` default. Update the
-description to cover them.").
+description to cover them."). The brief's bullets for those changes still each
+carry the marker.
 
 **A description that covers every change** gets no row and no bullet marker.
 Don't add a row saying so.
