@@ -25,7 +25,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 |-------|-------------|
 | `agent_pool:create` | Create a new agent pool (a [customer-managed runner](/docs/administration/concepts/customer-managed-runners/) pool). Agent pools run deployments, Discovery scans, and audit policy evaluations on runners you host in your own infrastructure.<br><br>**Granted by default roles**: `Admin` |
 | `agent_pool:delete` | Remove an existing agent pool and its associated resources. This permanently deletes the pool and its configuration.<br><br>**Granted by default roles**: `Admin` |
-| `agent_pool:read` | View agent pool configurations and status. This includes access to pool settings, agent status, and operational metrics.<br><br>**Granted by default roles**: `Admin` |
+| `agent_pool:read` | View agent pool configurations and status. This includes access to pool settings, agent status, and operational metrics.<br><br>**Granted by default roles**: `Builder`, `Maintainer`, `Admin` |
 | `agent_pool:update` | Modify agent pool settings and configurations. This allows updating pool parameters, scaling settings, and agent configurations.<br><br>**Granted by default roles**: `Admin` |
 
 ## Audit Logs
@@ -35,18 +35,18 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `audit_logs:export` | Export audit log data for compliance and analysis purposes. This enables downloading audit records in various formats.<br><br>**Granted by default roles**: `Admin` |
 | `audit_logs:read` | Access and view audit logs of organization activities. This provides visibility into system events and user actions.<br><br>**Granted by default roles**: `Admin` |
 
-## AI
-
-{{% notes type="info" %}}
-These scopes control access to the legacy Pulumi Copilot conversation API, currently used only by the Pulumi Copilot VS Code extension. For Pulumi's current AI capabilities, see [Pulumi Neo](/docs/ai/).
-{{% /notes %}}
+## Neo
 
 | Value | Description |
 |-------|-------------|
-| `ai_conversations:create` | Create a new Copilot conversation session. This allows users to start new conversations via the VS Code Copilot extension.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `ai_conversations:list_all` | View all Copilot conversations across the organization. This provides administrators with visibility into all AI assistant interactions.<br><br>**Granted by default roles**: `Admin` |
-| `ai_conversations:read` | Access and view the content of Copilot conversations. This allows users to read their own conversations and continue previous interactions.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `ai_conversations:update` | Modify and continue existing Copilot conversations. This enables users to update their conversations with new questions or context.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `agent_automations:create` | Create Neo automations owned by the organization.<br><br>**Granted by default roles**: `Maintainer`, `Admin` |
+| `agent_automations:delete` | Delete Neo automations owned by the organization.<br><br>**Granted by default roles**: `Maintainer`, `Admin` |
+| `agent_automations:read` | View Neo automations owned by the organization.<br><br>**Granted by default roles**: `Maintainer`, `Admin` |
+| `agent_automations:update` | Modify Neo automations owned by the organization.<br><br>**Granted by default roles**: `Maintainer`, `Admin` |
+| `agent_definitions:create` | Create custom agents for Neo.<br><br>**Granted by default roles**: `Maintainer`, `Admin` |
+| `agent_definitions:delete` | Delete custom agents for Neo.<br><br>**Granted by default roles**: `Admin` |
+| `agent_definitions:update` | Modify custom agents for Neo.<br><br>**Granted by default roles**: `Admin` |
+| `agent_task:create` | Create Neo tasks.<br><br>**Granted by default roles**: `Builder`, `Maintainer`, `Admin` |
 
 ## Change requests (approvals)
 
@@ -61,42 +61,42 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 | Value | Description |
 |-------|-------------|
 | `deployments:pause` | Temporarily halt all deployment operations across the organization. This is useful for maintenance or emergency situations.<br><br>**Granted by default roles**: `Admin` |
-| `deployments:read` | View deployment configurations and status across the organization. This provides visibility into all deployment activities.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `deployments:read_usage` | Access deployment usage metrics and statistics. This includes information about resource consumption and operational costs.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `deployments:read` | View deployment configurations and status across the organization. This provides visibility into all deployment activities.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
+| `deployments:read_usage` | Access deployment usage metrics and statistics. This includes information about resource consumption and operational costs.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin`, `Billing Manager` |
 | `deployments:resume` | Resume deployment operations after a pause. This restores normal deployment functionality across the organization.<br><br>**Granted by default roles**: `Admin` |
 
 ## Environments
 
 | Value | Description |
 |-------|-------------|
-| `environment:create` | Create a new environment for managing infrastructure configurations. Environments provide isolated spaces for different deployment stages.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `environment:list_deleted` | View a list of environments that have been recently deleted but are still recoverable.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `environment:create` | Create a new environment for managing infrastructure configurations. Environments provide isolated spaces for different deployment stages.<br><br>**Granted by default roles**: `Builder`, `Maintainer`, `Admin` |
+| `environment:list_deleted` | View a list of environments that have been recently deleted but are still recoverable.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
 | `environment:restore_deleted` | Recover a previously deleted environment. This restores the environment and its configurations to their previous state.<br><br>**Granted by default roles**: `Admin` |
-| `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission set**: `Environment Read` |
-| `environment_yaml:open` | Access and view environment configuration in YAML format. This provides a structured view of environment settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
 
 ## Cloud accounts
 
 | Value | Description |
 |-------|-------------|
-| `insights_account:create` | Create a new cloud account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `Admin` |
+| `insights_account:create` | Create a new cloud account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `Builder`, `Maintainer`, `Admin` |
 
 ## Pulumi Policies
 
 | Value | Description |
 |-------|-------------|
+| `policy_exceptions:create` | Create or request an exception to a policy.<br><br>**Granted by default roles**: `Builder`, `Maintainer`, `Admin` |
+| `policy_exceptions:delete` | Remove a policy exception.<br><br>**Granted by default roles**: `Admin` |
+| `policy_exceptions:read` | View policy exceptions.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
 | `policy_groups:create` | Create a new group of infrastructure as code policies. This allows organizing related policies for better management and enforcement.<br><br>**Granted by default roles**: `Admin` |
 | `policy_groups:delete` | Remove an existing group of infrastructure as code policies. This permanently deletes the policy group and its configurations.<br><br>**Granted by default roles**: `Admin` |
-| `policy_groups:read` | View infrastructure as code policy group configurations. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `policy_groups:read` | View infrastructure as code policy group configurations. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
 | `policy_groups:update` | Modify infrastructure as code policy group settings. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
 | `policy_pack:create` | Create a new infrastructure as code policy pack. This allows bundling related policies for deployment and enforcement.<br><br>**Granted by default roles**: `Admin` |
 | `policy_pack:delete` | Remove an existing infrastructure as code policy pack. This permanently deletes the policy pack and its configurations.<br><br>**Granted by default roles**: `Admin` |
-| `policy_pack:read` | View infrastructure as code policy pack contents. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Admin` |
+| `policy_pack:read` | View infrastructure as code policy pack contents. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
 | `policy_pack:update` | Modify an existing infrastructure as code policy pack. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
-| `policy_results:create` | Create policy evaluation results for a cloud account.<br><br>**Granted by default roles**: `Admin` |
-| `policy_results:read` | View results of infrastructure as code policy evaluations. This provides insights into policy compliance and violations.<br><br>**Granted by default roles**: `Admin` |
-| `policy_results:update` | Update policy evaluation results and compliance data.<br><br>**Granted by default roles**: `Admin` |
-| `policy_results:delete` | Delete policy evaluation results.<br><br>**Granted by default roles**: `Admin` |
+| `policy_results:read` | View results of infrastructure as code policy evaluations. This provides insights into policy compliance and violations.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
+| `policy_results:update` | Update policy evaluation results and compliance data.<br><br>**Granted by default roles**: `Maintainer`, `Admin` |
 
 ## Membership
 
@@ -104,13 +104,15 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 |-------|-------------|
 | `org_member:add` | Add a new member to the organization. This enables expanding the team with new users.<br><br>**Granted by default roles**: `Admin` |
 | `org_member:delete` | Remove a member from the organization. This revokes their access and permissions.<br><br>**Granted by default roles**: `Admin` |
-| `org_member:read` | View details about organization members. This includes access to user profiles and roles.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `org_member_access:read` | View the stacks, environments, and other entities an organization member can access.<br><br>**Granted by default roles**: `Admin` |
+| `org_member:read` | View details about organization members. This includes access to user profiles and roles.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin`, `Billing Manager` |
 | `org_member:set_admin` | Grant or revoke admin privileges for an organization member. This controls elevated access.<br><br>**Granted by default roles**: `Admin` |
 | `org_member:update` | Update organization member information and roles. This allows changing user details and permissions.<br><br>**Granted by default roles**: `Admin` |
 | `org_requests:read` | View all organization requests. This provides visibility into pending and processed requests.<br><br>**Granted by default roles**: `Admin` |
 | `org_requests:update` | Update or process organization requests. This allows approving or denying requests.<br><br>**Granted by default roles**: `Admin` |
 | `invites:create` | Send invitations to new users to join the organization. This enables onboarding of new team members.<br><br>**Granted by default roles**: `Admin` |
 | `invites:read` | View pending and sent invitations for organization membership. This provides visibility into user onboarding status.<br><br>**Granted by default roles**: `Admin` |
+| `service_principal:create` | Create a service principal.<br><br>**Granted by default roles**: `Builder`, `Maintainer`, `Admin` |
 
 ## OIDC
 
@@ -131,14 +133,14 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 | `organization:billing` | Manage billing settings and payment methods for the organization. This includes access to invoices and payment history.<br><br>**Granted by default roles**: `Admin`, `Billing Manager` |
 | `organization:change_backend` | Change the organization's [identity provider](/docs/administration/concepts/identity-providers/) — the GitHub organization, GitLab group, Bitbucket workspace, or SAML identity provider that governs who can be a member.<br><br>**Granted by default roles**: `Admin` |
 | `organization:delete` | Delete the organization and all its resources. This is a permanent and irreversible action.<br><br>**Granted by default roles**: `Admin` |
-| `organization:read_usage` | View usage statistics and metrics for the organization. This includes resource consumption and cost data.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `organization:read_usage` | View usage statistics and metrics for the organization. This includes resource consumption and cost data.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin`, `Billing Manager` |
 | `organization:rename` | Change the name of the organization. This updates the organization's display name across the platform.<br><br>**Granted by default roles**: `Admin` |
 | `organization:transfer_stacks` | Transfer ownership of stacks between organizations. This is used for organizational restructuring or migration.<br><br>**Granted by default roles**: `Admin` |
 | `organization:update` | Update organization settings and configurations. This allows changing metadata, policies, and preferences.<br><br>**Granted by default roles**: `Admin` |
 | `org_integrations:read` | View organization-level integration settings. This includes access to all configured integrations.<br><br>**Granted by default roles**: `Admin` |
 | `org_integrations:update` | Update organization-level integration settings. This allows modifying or removing integrations.<br><br>**Granted by default roles**: `Admin` |
-| `integrations:read` | View configuration settings on a per-resource level. This includes access to settings for third-party services and tools.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `integrations:update` | Manage integration settings on a per-resource level. This allows updating or reconfiguring third-party service connections.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `integrations:read` | View configuration settings on a per-resource level. This includes access to settings for third-party services and tools.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
+| `integrations:update` | Manage integration settings on a per-resource level. This allows updating or reconfiguring third-party service connections.<br><br>**Granted by default roles**: `Maintainer`, `Admin` |
 
 ## Organization Tokens
 
@@ -161,16 +163,16 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 
 | Value | Description |
 |-------|-------------|
-| `project:decrypt` | Allows decrypting sensitive project-level data and secrets.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `project:encrypt` | Allows encrypting sensitive project-level data and secrets.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `project:decrypt` | Allows decrypting sensitive project-level data and secrets.<br><br>**Granted by default roles**: `Maintainer`, `Admin` |
+| `project:encrypt` | Allows encrypting sensitive project-level data and secrets.<br><br>**Granted by default roles**: `Maintainer`, `Admin` |
 
 ## Resources
 
 | Value | Description |
 |-------|-------------|
-| `resources:dashboard` | Allows viewing the resources dashboard that provides an overview of all resources across the organization.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `resources:dashboard` | Allows viewing the resources dashboard that provides an overview of all resources across the organization.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin`, `Billing Manager` |
 | `resources:index` | Allows accessing the main resources index page and managing resource listings.<br><br>**Granted by default roles**: `Admin` |
-| `resources:search` | Allows searching and filtering through organization resources.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `resources:search` | Allows searching and filtering through organization resources.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
 
 ## Roles
 
@@ -185,7 +187,7 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 
 | Value | Description |
 |-------|-------------|
-| `saml:read` | Allows viewing SAML configuration and settings for the organization.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `saml:read` | Allows viewing SAML configuration and settings for the organization.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin`, `Billing Manager` |
 | `saml:update` | Allows configuring and updating SAML settings for the organization.<br><br>**Granted by default roles**: `Admin` |
 
 ## SCIM
@@ -200,16 +202,15 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 
 | Value | Description |
 |-------|-------------|
-| `stack:create` | Create a new stack for managing infrastructure resources. Stacks represent isolated units of deployment.<br><br>**Granted by default roles**: `Admin` |
+| `stack:create` | Create a new stack for managing infrastructure resources. Stacks represent isolated units of deployment.<br><br>**Granted by default roles**: `Builder`, `Maintainer`, `Admin` |
 | `stack:list_deleted` | View a list of stacks that have been recently deleted but are still recoverable.<br><br>**Granted by default roles**: `Admin` |
 | `stack:restore_deleted` | Recover a previously deleted stack. This restores the stack and its configurations to their previous state.<br><br>**Granted by default roles**: `Admin` |
-| `stack_access:read` | View information about the users and teams that have access to a stack.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Tags
 
 | Value | Description |
 |-------|-------------|
-| `tags:read` | Allows viewing tags and their associated resources across the organization.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `tags:read` | Allows viewing tags and their associated resources across the organization.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
 
 ## Teams
 
@@ -219,9 +220,9 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 | `team:create_token` | Allows generating new access tokens for team authentication.<br><br>**Granted by default roles**: `Admin` |
 | `team:delete` | Allows removing teams from the organization.<br><br>**Granted by default roles**: `Admin` |
 | `team:delete_token` | Allows revoking team access tokens.<br><br>**Granted by default roles**: `Admin` |
-| `team:list` | Allows viewing all teams in the organization.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `team:list` | Allows viewing all teams in the organization.<br><br>**Granted by default roles**: None |
 | `team:list_tokens` | Allows viewing all active access tokens for teams.<br><br>**Granted by default roles**: `Admin` |
-| `team:read` | Allows viewing team details and membership information.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `team:read` | Allows viewing team details and membership information.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin`, `Billing Manager` |
 | `team:update` | Allows modifying team settings and membership.<br><br>**Granted by default roles**: `Admin` |
 | `github_team:create` | Create a new team that syncs with GitHub. This enables integration between Pulumi and GitHub team structures.<br><br>**Granted by default roles**: `Admin` |
 
@@ -229,7 +230,7 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 
 | Value | Description |
 |-------|-------------|
-| `templates:read` | Allows viewing and using available templates for creating new projects and stacks.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `templates:read` | Allows viewing and using available templates for creating new projects and stacks.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
 
 ## Template Sources
 

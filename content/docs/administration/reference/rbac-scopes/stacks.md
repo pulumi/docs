@@ -26,21 +26,23 @@ Note that creating, listing, or restoring stacks are organization-level operatio
 | Value | Description |
 |-------|-------------|
 | `stack:cancel_update` | Cancel an ongoing stack update operation. This halts the current deployment or update process.<br><br>**Granted by default permission set**: `Stack Write` |
+| `stack:create` | Create a stack. This is the same scope as the organization-level `stack:create`, granted on a set of stacks.<br><br>**Granted by default permission set**: None |
 | `stack:decrypt` | Decrypt sensitive stack data. This allows viewing encrypted configuration values and secrets.<br><br>**Granted by default permission set**: `Stack Read` |
 | `stack:delete` | Delete a stack and its associated resources. This permanently removes the stack from the organization.<br><br>**Granted by default permission set**: `Stack Admin` |
 | `stack:encrypt` | Encrypt stack data. This secures sensitive information within the stack.<br><br>**Granted by default permission set**: `Stack Read` |
 | `stack:export` | Export stack data and configurations. This allows creating backups or migrating stacks.<br><br>**Granted by default permission set**: `Stack Read` |
-| `stack:import` | Import resources into a stack. This allows bringing external resources under management.<br><br>**Granted by default permission set**: `Stack Write` |
+| `stack:import` | Replace a stack's state with an imported deployment, as `pulumi stack import` does. To bring existing cloud resources under management with `pulumi import`, use `stack:write`.<br><br>**Granted by default permission set**: `Stack Write` |
 | `stack:read` | View stack configurations and settings. This provides read-only access to stack details and parameters.<br><br>**Granted by default permission set**: `Stack Read` |
 | `stack:rename` | Change the name of a stack. This updates the stack's display name across the platform.<br><br>**Granted by default permission set**: `Stack Admin` |
 | `stack:transfer` | Transfer ownership of a stack to another organization or user. This is used for organizational restructuring or migration.<br><br>**Granted by default permission set**: `Stack Admin` |
+| `stack_access:read` | View the teams and users that have access to a stack.<br><br>**Granted by default permission set**: `Stack Read` |
+| `stack_access:update` | Change which teams and users have access to a stack.<br><br>**Granted by default permission set**: `Stack Admin` |
 | `stack:write` | Modify stack configurations and settings. This allows updating stack parameters and resource definitions.<br><br>**Granted by default permission set**: `Stack Write` |
 
 ## Stack Deployments
 
 | Value | Description |
 |-------|-------------|
-| `stack_deployment_cache:read` | View the deployment cache for a stack. This includes access to cached deployment artifacts and data.<br><br>**Granted by default permission set**: `Stack Write` |
 | `stack_deployment:create` | Create a new deployment for a stack. This initiates the deployment process for infrastructure resources.<br><br>**Granted by default permission set**: `Stack Write` |
 | `stack_deployment:read` | View details of stack deployments. This includes access to deployment status and history.<br><br>**Granted by default permission set**: `Stack Read` |
 | `stack_deployment_settings:encrypt` | Encrypt deployment settings for a stack. This secures sensitive configuration data.<br><br>**Granted by default permission set**: `Stack Write` |

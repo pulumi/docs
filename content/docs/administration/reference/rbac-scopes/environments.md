@@ -27,8 +27,12 @@ Note that creating, listing, or restoring environments are organization-level op
 |-------|-------------|
 | `environment:clone` | Create a copy of an existing environment with all its configurations. This is useful for creating staging or testing environments.<br><br>**Granted by default permission set**: `Environment Open` |
 | `environment:delete` | Remove an environment and its associated resources. This permanently deletes the environment and its configurations.<br><br>**Granted by default permission set**: `Environment Admin` |
-| `environment:open` | Access and interact with an environment's resources. This includes the ability to view and modify environment configurations.<br><br>**Granted by default permission set**: `Environment Open` |
+| `environment:open` | Open an environment, which resolves its values, including decrypted secrets and dynamically generated credentials. Changing an environment's definition requires `environment:write`.<br><br>**Granted by default permission set**: `Environment Open` |
 | `environment:read` | View environment configurations and settings. This provides read-only access to environment details and parameters.<br><br>**Granted by default permission set**: `Environment Read` |
+| `environment_access:read` | View the teams and users that have access to an environment.<br><br>**Granted by default permission set**: `Environment Read` |
+| `environment_access:update` | Change which teams and users have access to an environment.<br><br>**Granted by default permission set**: `Environment Admin` |
+| `environment_settings:read` | View an environment's settings, such as deletion protection.<br><br>**Granted by default permission set**: `Environment Read` |
+| `environment_settings:update` | Change an environment's settings, such as deletion protection.<br><br>**Granted by default permission set**: `Environment Admin` |
 | `environment:write` | Modify environment configurations and settings. This allows updating environment parameters and resource definitions.<br><br>**Granted by default permission set**: `Environment Write` |
 
 ## Environment Secrets Rotation
@@ -64,8 +68,8 @@ Note that creating, listing, or restoring environments are organization-level op
 |-------|-------------|
 | `environment_version:create` | Create a new version of an environment. This allows tracking changes and maintaining environment history.<br><br>**Granted by default permission set**: `Environment Write` |
 | `environment_version:delete` | Remove a specific version of an environment. This permanently deletes the version and its configurations.<br><br>**Granted by default permission set**: `Environment Write` |
-| `environment_version:open` | Access and interact with a specific environment version. This includes viewing and using version-specific configurations.<br><br>**Granted by default permission set**: `Environment Open` |
-| `environment_version:read` | View details of a specific environment version. This provides access to version-specific configurations and metadata.<br><br>**Granted by default permission set**: `Environment Open` |
+| `environment_version:open` | Open a specific version of an environment, which resolves that version's values, including decrypted secrets.<br><br>**Granted by default permission set**: `Environment Open` |
+| `environment_version:read` | View details of a specific environment version. This provides access to version-specific configurations and metadata.<br><br>**Granted by default permission set**: `Environment Read` |
 | `environment_version:retract` | Mark a specific environment version as invalid or deprecated. This prevents its use while maintaining history.<br><br>**Granted by default permission set**: `Environment Write` |
 | `environment_version:update` | Modify an existing environment version. This allows updating version-specific configurations and metadata.<br><br>**Granted by default permission set**: `Environment Write` |
 
@@ -82,6 +86,6 @@ Note that creating, listing, or restoring environments are organization-level op
 
 | Value | Description |
 |-------|-------------|
-| `change_gate:create` | Create approval rules (change gates) for this environment. This requires approval before deployments or changes proceed.<br><br>**Granted by default permission set**: `Environment Write` |
-| `change_gate:update` | Modify approval rules for this environment.<br><br>**Granted by default permission set**: `Environment Write` |
-| `change_gate:delete` | Remove approval rules (change gates) for this environment.<br><br>**Granted by default permission set**: `Environment Write` |
+| `change_gate:create` | Create approval rules (change gates) for this environment. This requires approval before deployments or changes proceed.<br><br>**Granted by default permission set**: `Environment Admin` |
+| `change_gate:update` | Modify approval rules for this environment.<br><br>**Granted by default permission set**: `Environment Admin` |
+| `change_gate:delete` | Remove approval rules (change gates) for this environment.<br><br>**Granted by default permission set**: `Environment Admin` |
