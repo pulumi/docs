@@ -54,9 +54,9 @@ Policy exceptions in [Pulumi Policies](/docs/discovery-governance/concepts/polic
 
 An advisory policy only warns. A mandatory policy blocks `pulumi preview` or `pulumi up` before a public bucket or an open security group reaches production. That difference matters more as coding agents build more of your infrastructure: agents make changes faster than people can review them, and a warning gets lost in a long preview. A mandatory policy forbids the misconfiguration entirely, so the code must comply before any change is applied, whether a developer or an agent wrote it.
 
-The hard part is turning it on. The new required policy applies to every stack, including resources created before the policy existed. Some violations are intentional: a static website bucket needs to be public, and a log bucket needs to allow the log delivery group. The policy is still correct, but it needs a few known exceptions.
+Many users struggle with updating their policies from advisory to mandatory. The new required policy applies to every stack, including resources created before the policy existed. Some violations are intentional: a static website bucket needs to be public, and a log bucket needs to allow the log delivery group. The policy is still correct, but it needs a few known exceptions.
 
-Without a governed way to allow them, configuring everything exactly right rarely works out in practice, so we often see one of these situations:
+Without ways to handle edge cases, some users run into these situations:
 
 - **Leaving the policy advisory or disabled.** Nothing is blocked, so nothing is prevented.
 - **Turning off the policy for a few stacks.** A copied policy group with one rule disabled exempts every resource in those stacks, not only the one that needs it, and the copies multiply.
