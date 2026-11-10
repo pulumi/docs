@@ -49,13 +49,13 @@ Start new AWS projects from a pre-built template:
 
 Hands-on infrastructure as code guides for building on AWS with Pulumi.
 
-- [Pulumi CDK Adapter for AWS](/docs/iac/guides/clouds/aws/cdk/) — use AWS CDK constructs inside a Pulumi program.
-- [AWS Identity & Access Management (IAM)](/docs/iac/guides/clouds/aws/iam/) — model IAM roles, policies, and users in code.
+- [Pulumi CDK Adapter for AWS](/dev/tutorials/aws-cdk/) — use AWS CDK constructs inside a Pulumi program.
+- [AWS Identity & Access Management (IAM)](/dev/tutorials/aws-iam/) — model IAM roles, policies, and users in code.
 - [AWS Virtual Private Cloud (VPC)](/docs/iac/guides/clouds/aws/vpc/) — define VPCs, subnets, and routing.
-- [AWS Lambda & serverless events](/docs/iac/guides/clouds/aws/lambda/) — author Lambda functions and event sources in code.
-- [Amazon ECS](/docs/iac/guides/clouds/aws/ecs/) — run containers on Elastic Container Service.
+- [AWS Lambda & serverless events](/dev/tutorials/aws-lambda/) — author Lambda functions and event sources in code.
+- [Amazon ECS](/dev/tutorials/aws-ecs/) — run containers on Elastic Container Service.
 - [Amazon EKS](/docs/iac/guides/clouds/aws/eks/) — run workloads on Elastic Kubernetes Service.
-- [Amazon ECR](/docs/iac/guides/clouds/aws/ecr/) — build and publish images to Elastic Container Registry.
+- [Amazon ECR](/dev/tutorials/aws-ecr/) — build and publish images to Elastic Container Registry.
 - [Elastic Load Balancing](/docs/iac/guides/clouds/aws/elb/) — configure application and network load balancers.
 - [AWS API Gateway](/docs/iac/guides/clouds/aws/api-gateway/) — configure HTTP and REST APIs on API Gateway.
 - [AWS CodePipeline & CodeDeploy](/docs/iac/operations/continuous-delivery/aws-code-services/) — drive Pulumi stack updates from AWS developer tools.

@@ -16,7 +16,7 @@ aliases:
 - /docs/iac/concepts/miscellaneous/
 ---
 
-Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform. It uses existing programming languages---TypeScript, JavaScript, Python, Go, .NET, Java, and markup languages like YAML---and their native ecosystems to interact with cloud resources. A [downloadable CLI](/docs/install/), runtime, libraries, and a hosted service work together to deliver a robust platform for provisioning, updating, and managing cloud infrastructure.
+Pulumi is a modern [infrastructure as code](/topics/infrastructure-as-code/) platform. It uses existing programming languages---TypeScript, JavaScript, Python, Go, .NET, Java, and markup languages like YAML---and their native ecosystems to interact with cloud resources. A [downloadable CLI](/docs/install/), runtime, libraries, and a hosted service work together to deliver a robust platform for provisioning, updating, and managing cloud infrastructure.
 
 {{< notes >}}
 If this is your first time using Pulumi, you likely want to begin with [the get-started guide](/up/). It will walk you through an AWS, Azure, Google Cloud, or Kubernetes deployment from start to finish.
