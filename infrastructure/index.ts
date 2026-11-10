@@ -905,13 +905,24 @@ const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable
 // at all and fall back to CloudFront/S3 defaults, unlike every other page on the site.
 // Same value as DefaultCachePolicy, so docs pages get the same browser-caching
 // behavior as the rest of pulumi.com rather than an accidental gap.
+//
+// The /registry* behavior uses this policy too: the registry origin does the same
+// markdown negotiation but sends no Vary of its own (unlike marketing-web, whose
+// origin sends Vary: Accept for /dev/*), so without it shared caches and browsers
+// could serve one variant to clients that asked for the other.
+//
+// The Vary item uses override: true because the registry origin sends its own
+// Vary on some paths (Vary: Accept-Encoding on /registry/ when it compresses), and
+// with override: false CloudFront keeps the origin's value and never adds Accept.
+// The value names both headers so overriding never drops Accept-Encoding, which
+// both behaviors also vary on (they compress per Accept-Encoding).
 const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
         items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Vary",
-            value: "Accept",
-            override: false,
+            value: "Accept, Accept-Encoding",
+            override: true,
         }, {
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
@@ -1017,6 +1028,7 @@ if (config.registryStack) {
             pathPattern: "/registry*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: DocsResponseHeadersPolicy.id,
         },
         // Registry package logos (e.g. /fingerprinted/logos/pkg/aws.<hash>.svg)
         // are served from the registry origin with year-long immutable caching.

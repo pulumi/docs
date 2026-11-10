@@ -90,6 +90,9 @@ jobs:
     outputs:
       fire: ${{ steps.command-gate.outputs.fire }}
       reason: ${{ steps.command-gate.outputs.reason }}
+      # accept | approve | none: a command the worker answers by code gets a
+      # sparse checkout and no tool install (see "Checkout repository").
+      quick: ${{ steps.shape.outputs.quick }}
     steps:
       - name: Checkout command gate (default branch, sparse)
         if: github.event_name != 'workflow_dispatch'
@@ -115,6 +118,23 @@ jobs:
           python3 .command-gate/.claude/commands/docs-review/scripts/command-gate.py check \
             --command update-review --exclude new-review \
             --body-env BODY --title-env TITLE | tee -a "$GITHUB_OUTPUT"
+
+      - name: Quick-command shape
+        id: shape
+        if: github.event_name != 'workflow_dispatch' && steps.command-gate.outputs.fire == 'true'
+        continue-on-error: true
+        env:
+          BODY: ${{ github.event.comment.body || github.event.review.body }}
+          AUTHOR: ${{ github.event.comment.user.login || github.event.review.user.login }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login || github.event.issue.user.login }}
+        run: |
+          GATE=.command-gate/.claude/commands/docs-review/scripts/command-gate.py
+          if grep -q '"shape"' "$GATE"; then
+            python3 "$GATE" shape --body-env BODY --author-env AUTHOR --pr-author-env PR_AUTHOR \
+              | tee -a "$GITHUB_OUTPUT"
+          else
+            echo "quick=none" >> "$GITHUB_OUTPUT"
+          fi
 
   claude-update:
     needs: gate
@@ -205,17 +225,40 @@ jobs:
         uses: pulumi/esc-action@v3
 
       - name: Checkout repository
-        if: steps.head.outputs.superseded != 'true'
+        if: |
+          steps.head.outputs.superseded != 'true' &&
+          needs.gate.outputs.quick != 'accept' && needs.gate.outputs.quick != 'approve'
         uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           ref: ${{ steps.head.outputs.sha }}
           fetch-depth: 1
 
+      # A command the quick step answers by code (accept, approve) needs the
+      # review scripts and infrastructure/Pulumi.yaml (the bucket lookup),
+      # not the full worktree or the toolchain: ~21 s + ~7 s of a run that
+      # otherwise takes about a minute. If quick hands the request to the
+      # model after all, "Complete the checkout" below fills the rest in.
+      - name: Checkout repository (quick command, sparse)
+        if: |
+          steps.head.outputs.superseded != 'true' &&
+          (needs.gate.outputs.quick == 'accept' || needs.gate.outputs.quick == 'approve')
+        uses: actions/checkout@v7
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          ref: ${{ steps.head.outputs.sha }}
+          fetch-depth: 1
+          sparse-checkout: |
+            .claude/commands/docs-review
+            infrastructure
+            .github
+
       # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
       # step below has the pinned vale binary on PATH.
       - name: Install mise-managed tools
-        if: steps.head.outputs.superseded != 'true'
+        if: |
+          steps.head.outputs.superseded != 'true' &&
+          needs.gate.outputs.quick != 'accept' && needs.gate.outputs.quick != 'approve'
         uses: jdx/mise-action@v4
         with:
           cache: true
@@ -392,6 +435,98 @@ jobs:
             echo "retry_initial=$RETRY_INITIAL"
           } >> "$GITHUB_OUTPUT"
 
+      # The deterministic tooling runs from the DEFAULT branch, never the PR
+      # head this job checked out for the model (see the publish step's note
+      # on skew and trust). Checked out here, ahead of everything that reads
+      # it: the quick-command step below and the v3 publish chain.
+      - name: Checkout review tooling (default branch)
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.is_pr == 'true'
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          path: .review-tools
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            .github
+
+      # v3 model inputs: the two live cards on disk. Fetched here (not in the
+      # publish step) so the model reads the same cards the mention was about;
+      # the publish step re-fetches the author card fresh right before
+      # apply-update to merge whatever another run published while the model
+      # worked (a full review auto-fired beside this update, #21871).
+      - name: Fetch v3 review cards
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.surface == 'v3'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "repos/${{ github.repository }}/issues/comments/${{ steps.pr-context.outputs.author_cid }}" \
+            --jq .body > .review-card-author.md
+          gh api "repos/${{ github.repository }}/issues/comments/${{ steps.pr-context.outputs.brief_cid }}" \
+            --jq .body > .review-card-brief.md
+
+      # Two request shapes are answered by code, with no model call
+      # (command-gate.py `quick`; pulumi/docs#22397):
+      #   - `/update-review accept F<n>[ F<n>…]` as the first line: each named
+      #     open finding is recorded `accepted` by the commenter. This step
+      #     writes the `.review-update.json` the v3 model would have, and the
+      #     ordinary publish chain below applies it (fresh card re-fetch,
+      #     apply-update, validation, the stale-publish guard, the Sentinel
+      #     poke). IDs that don't apply get one short reply.
+      #   - `/update-review approve` on its own: a one-line reply that this
+      #     isn't how a PR is approved. Nothing else runs.
+      # Anything else is mode=model and the lane runs exactly as before. So
+      # is a failure here (continue-on-error leaves `mode` empty), and so is
+      # a default branch that predates `quick`.
+      - name: Answer quick commands (accept / approve)
+        id: quick
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.is_pr == 'true' &&
+          github.event_name != 'workflow_dispatch'
+        continue-on-error: true
+        env:
+          BODY: ${{ github.event.comment.body || github.event.review.body }}
+          AUTHOR: ${{ steps.check-access.outputs.author }}
+          # Accept is author-only; on an issue_comment the PR is the `issue`.
+          PR_AUTHOR: ${{ github.event.pull_request.user.login || github.event.issue.user.login }}
+        run: |
+          GATE=.review-tools/.claude/commands/docs-review/scripts/command-gate.py
+          if ! grep -q '"quick"' "$GATE" 2>/dev/null; then
+            echo "mode=model" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          PRA=()
+          if grep -q -- '--pr-author-env' "$GATE"; then PRA=(--pr-author-env PR_AUTHOR); fi
+          python3 "$GATE" quick --body-env BODY --author-env AUTHOR "${PRA[@]}" \
+            --author-card .review-card-author.md --brief-card .review-card-brief.md \
+            --update-out .review-update.json --reply-out .review-quick-reply.md \
+            | tee -a "$GITHUB_OUTPUT"
+
+      # The gate guessed "quick" from the text, but quick handed the request
+      # to the model (no v3 card, an id the live card doesn't have...): give
+      # the model the worktree and tools it would have had. In place, not a
+      # second actions/checkout, which would wipe the cards and .review-tools
+      # sitting untracked in the workspace.
+      - name: Complete the checkout (quick fell back to the model)
+        id: full-checkout
+        if: |
+          steps.head.outputs.superseded != 'true' &&
+          (needs.gate.outputs.quick == 'accept' || needs.gate.outputs.quick == 'approve') &&
+          steps.quick.outputs.mode != 'accept' && steps.quick.outputs.mode != 'reply'
+        run: git sparse-checkout disable
+
+      - name: Install mise-managed tools (quick fell back to the model)
+        if: steps.full-checkout.outcome == 'success'
+        uses: jdx/mise-action@v4
+        with:
+          cache: true
+
       # Flip the PR's state label to review:in-progress for the duration of
       # the refresh — mirrors claude-code-review.yml's early step on the
       # auto-fire / /new-review path. Without this, an /update-review comment
@@ -403,7 +538,8 @@ jobs:
       - name: Set review:in-progress label
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.is_pr == 'true'
+          steps.pr-context.outputs.is_pr == 'true' &&
+          steps.quick.outputs.mode != 'reply'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -459,7 +595,8 @@ jobs:
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
           steps.pr-context.outputs.is_pr == 'true' &&
-          steps.pr-context.outputs.retry_initial != 'true'
+          steps.pr-context.outputs.retry_initial != 'true' &&
+          steps.quick.outputs.mode != 'reply' && steps.quick.outputs.mode != 'accept'
         id: vale
         continue-on-error: true
         env:
@@ -518,7 +655,8 @@ jobs:
       - name: Post progress signal
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.is_pr == 'true'
+          steps.pr-context.outputs.is_pr == 'true' &&
+          steps.quick.outputs.mode != 'reply'
         id: progress
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -567,7 +705,8 @@ jobs:
         id: retry-initial
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.retry_initial == 'true'
+          steps.pr-context.outputs.retry_initial == 'true' &&
+          steps.quick.outputs.mode != 'reply'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -594,29 +733,13 @@ jobs:
             -f ack_target="${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}"
           echo "dispatched claude-code-review.yml for PR #$PR at ${{ steps.head.outputs.sha }}"
 
-      # v3 model inputs: the two live cards on disk. Fetched here (not in the
-      # publish step) so the model reads the same cards the mention was about;
-      # the publish step re-fetches the author card fresh right before
-      # apply-update to merge whatever another run published while the model
-      # worked (a full review auto-fired beside this update, #21871).
-      - name: Fetch v3 review cards
-        if: |
-          steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.surface == 'v3'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh api "repos/${{ github.repository }}/issues/comments/${{ steps.pr-context.outputs.author_cid }}" \
-            --jq .body > .review-card-author.md
-          gh api "repos/${{ github.repository }}/issues/comments/${{ steps.pr-context.outputs.brief_cid }}" \
-            --jq .body > .review-card-brief.md
-
       # ---- v2 lane (freehand self-publish; untouched behavior) ----
       - name: Run Claude Code
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
           steps.pr-context.outputs.surface != 'v3' &&
-          steps.pr-context.outputs.retry_initial != 'true'
+          steps.pr-context.outputs.retry_initial != 'true' &&
+          steps.quick.outputs.mode != 'reply' && steps.quick.outputs.mode != 'accept'
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
@@ -740,7 +863,8 @@ jobs:
       - name: Run Claude Code (v3 adjudication)
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.surface == 'v3'
+          steps.pr-context.outputs.surface == 'v3' &&
+          steps.quick.outputs.mode != 'reply' && steps.quick.outputs.mode != 'accept'
         id: claude-v3
         uses: anthropics/claude-code-action@v1
         with:
@@ -774,13 +898,23 @@ jobs:
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(gh pr:*),Bash(gh api:*),Bash(gh search:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(date:*),Bash(diff:*),Bash(curl:*)"
 
+      # A `.review-update.json` is ready to publish: the model wrote it, or
+      # the quick step did for an `/update-review accept F<n>`. Every v3
+      # publish step below gates on this one output.
+      - name: Adjudication ready
+        id: adjudicated
+        if: |
+          steps.claude-v3.outcome == 'success' ||
+          (steps.quick.outcome == 'success' && steps.quick.outputs.mode == 'accept')
+        run: echo "ready=true" >> "$GITHUB_OUTPUT"
+
       # Credentials for the v3 publish: obtained AFTER the model step, so the
       # model never runs with AWS credentials in scope. continue-on-error —
       # the publish degrades (no prior evidence, no S3 record, artifact only)
       # rather than failing the refresh.
       - name: Configure AWS credentials (v3 publish)
         id: aws-creds
-        if: steps.claude-v3.outcome == 'success'
+        if: steps.adjudicated.outputs.ready == 'true'
         continue-on-error: true
         uses: aws-actions/configure-aws-credentials@v6
         with:
@@ -788,12 +922,12 @@ jobs:
           role-session-name: claude-update-v3
           aws-region: us-west-2
       - name: Install Pulumi CLI
-        if: steps.claude-v3.outcome == 'success'
+        if: steps.adjudicated.outputs.ready == 'true'
         continue-on-error: true
         uses: pulumi/actions@v7
       - name: Resolve evidence buckets
         id: buckets
-        if: steps.claude-v3.outcome == 'success'
+        if: steps.adjudicated.outputs.ready == 'true'
         continue-on-error: true
         env:
           PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
@@ -821,25 +955,14 @@ jobs:
           exit 0
 
       # The deterministic publish chain runs from the DEFAULT branch, never the
-      # PR head this job checked out for the model. Two reasons. Skew: a PR
+      # PR head this job checked out for the model (the .review-tools
+      # checkout above). Two reasons. Skew: a PR
       # that changes the card grammar itself (#21908, run 36193992403) ran
       # its own half-finished validate-pinned.py against cards master's
       # composer wrote, and failed 4 rules that master's copy passes.
       # Trust: these scripts run with the bot token and, a step later, AWS
       # credentials; the PR under review must not supply them. Same rule as
       # review-sentinel.yml and the initial lane's publish job.
-      - name: Checkout review tooling (default branch)
-        if: steps.claude-v3.outcome == 'success'
-        uses: actions/checkout@v7
-        with:
-          ref: ${{ github.event.repository.default_branch }}
-          fetch-depth: 1
-          path: .review-tools
-          sparse-checkout: |
-            scripts/review-v3
-            .claude/commands/docs-review
-            .github
-
       # One step, one ordering, one failure surface: prior evidence → fresh
       # card re-fetch (merges whatever another run published during the
       # model's run) → apply-update → validate v21 → record evidence + page → upsert
@@ -847,7 +970,7 @@ jobs:
       # partial publish can never show a green label against a stale card).
       - name: Publish v3 refresh
         id: publish-v3
-        if: steps.claude-v3.outcome == 'success'
+        if: steps.adjudicated.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ steps.pr-context.outputs.pr_number }}
@@ -861,6 +984,8 @@ jobs:
         run: |
           set -euo pipefail
           test -s .review-update.json || { echo "model wrote no .review-update.json"; exit 1; }
+          # An accept's actor is the commenter (check-access's author), the
+          # same as a model-adjudicated one.
 
           # The model may have pushed fix commits for embedded asks, so the
           # SHA resolved at job start can be stale. Stamp the card with the
@@ -943,6 +1068,19 @@ jobs:
           bash .review-tools/.claude/commands/docs-review/scripts/pinned-comment.sh upsert \
             --pr "$PR" --repo "$REPO" --role author --body-file .review-card-author.out.md
 
+      # The quick step's reply: the approve explainer, or the IDs an accept
+      # couldn't apply. After the publish so an accept's reply lands after
+      # its card; always() so a failed publish doesn't swallow it.
+      - name: Post quick-command reply
+        if: always() && steps.quick.outputs.reply == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          test -s .review-quick-reply.md || exit 0
+          gh api "repos/${{ github.repository }}/issues/${{ steps.pr-context.outputs.pr_number }}/comments" \
+            -F body=@.review-quick-reply.md >/dev/null
+
       # One-click fixes for what blocks merge (reader feedback, 2026-09-25:
       # authors wanted applyable suggestions inline for the findings they
       # must act on, and the optional nags off the Files view). Derived
@@ -963,7 +1101,7 @@ jobs:
             --fixes-from-author-card .review-card-author.out.md
 
       - name: Upload evidence artifact (v3)
-        if: steps.claude-v3.outcome == 'success' && always()
+        if: steps.adjudicated.outputs.ready == 'true' && always()
         continue-on-error: true
         uses: actions/upload-artifact@v7
         with:
@@ -1256,7 +1394,9 @@ jobs:
           # never published is a failure, and a partial publish (brief
           # updated, author not) must land on review:error, not silence.
           if [ "${{ steps.pr-context.outputs.surface }}" = "v3" ]; then
-            if [ "${{ steps.claude-v3.outcome }}" = "success" ] \
+            # An `/update-review accept F<n>` published with no model step;
+            # its success is the publish's.
+            if [ "${{ steps.adjudicated.outputs.ready }}" = "true" ] \
                && [ "${{ steps.publish-v3.outcome }}" = "success" ]; then
               OUTCOME="success"
             elif [ "${{ steps.claude-v3.outcome }}" = "cancelled" ]; then
@@ -1358,8 +1498,11 @@ jobs:
           filter: blob:none
           sparse-checkout: scripts/review-telemetry
 
+      # A quick command (accept / approve) made no model call: no usage row.
       - name: Build usage rows
-        if: always() && steps.head.outputs.superseded != 'true'
+        if: |
+          always() && steps.head.outputs.superseded != 'true' &&
+          steps.quick.outputs.mode != 'reply' && steps.quick.outputs.mode != 'accept'
         continue-on-error: true
         env:
           HEAD_SHA: ${{ steps.head.outputs.sha }}

@@ -76,7 +76,7 @@ claude mcp add playwright npx @playwright/mcp@latest
 
 ## Why Pulumi is perfect for Ralph
 
-[Infrastructure as code](/what-is/what-is-infrastructure-as-code/) has something most application code does not: objective success criteria. Your Lambda either deploys or it does not. Your DynamoDB table either exists or it does not. Tests either pass or they fail.
+[Infrastructure as code](/topics/infrastructure-as-code/) has something most application code does not: objective success criteria. Your Lambda either deploys or it does not. Your DynamoDB table either exists or it does not. Tests either pass or they fail.
 
 This makes Pulumi an ideal candidate for autonomous AI development:
 

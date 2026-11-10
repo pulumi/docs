@@ -327,7 +327,7 @@ def test_comment_bodies_trigger_nothing():
     # match these as bare substrings (claude.yml, claude-update.yml, ...).
     for body in _all_bodies():
         for trigger in ("@claude", "/update-review", "/new-review", "/social-review",
-                        "#update-review", "#new-review", "/oversized-ack"):
+                        "#update-review", "#new-review", "/oversized-ack", "/deploy-staging"):
             assert trigger not in body, (trigger, body)
 
 

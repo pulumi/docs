@@ -99,6 +99,7 @@ _COMMAND_LANES = {
     "claude-update.yml": ("gate", "update-review"),
     "claude-new.yml": ("claude-new", "new-review"),
     "claude-social-review.yml": ("command", "social-review"),
+    "staging-deploy-command.yml": ("gate", "deploy-staging"),
 }
 
 

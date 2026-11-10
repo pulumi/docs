@@ -28,7 +28,7 @@ But as the AI tsunami whips up reams of code, what happens to it becomes just as
 
 <!--more-->
 
-New to the term? Start with [what agentic infrastructure is](/what-is/what-is-agentic-infrastructure/) and how it works.
+New to the term? Start with [what agentic infrastructure is](/topics/agentic-infrastructure/) and how it works.
 
 [See Pulumi Neo in action →](/product/neo/) Neo is the agent at the center of everything below: it previews changes, checks them against policy, and opens PRs for your review.
 
@@ -166,7 +166,7 @@ We've also invested in making Pulumi maximally legible to agents, because the be
 
 We're primarily focused on two pillars as we go forward:
 
-First, we are making [agentic infrastructure](/what-is/what-is-agentic-infrastructure/) a reality with increasingly autonomous workflows. The pace and scale of infrastructure in an AI era are beyond anything we've seen before, and we need to ensure infrastructure doesn't become the bottleneck to velocity. We will be shipping steady improvements that help agents score better on InfraBench as a measure of their abilities. This will begin with new building blocks and in-context improvements, but we're really excited that every improvement the frontier labs ship in general-purpose coding ability is automatically an improvement in agentic infrastructure on Pulumi, at zero cost to us or to our users. The result is that Pulumi-equipped agents will consistently and measurably outperform raw agents on real infrastructure work, and that gap will compound as the substrate and the models both improve.
+First, we are making [agentic infrastructure](/topics/agentic-infrastructure/) a reality with increasingly autonomous workflows. The pace and scale of infrastructure in an AI era are beyond anything we've seen before, and we need to ensure infrastructure doesn't become the bottleneck to velocity. We will be shipping steady improvements that help agents score better on InfraBench as a measure of their abilities. This will begin with new building blocks and in-context improvements, but we're really excited that every improvement the frontier labs ship in general-purpose coding ability is automatically an improvement in agentic infrastructure on Pulumi, at zero cost to us or to our users. The result is that Pulumi-equipped agents will consistently and measurably outperform raw agents on real infrastructure work, and that gap will compound as the substrate and the models both improve.
 
 Next, a world in which agents are provisioning, updating, monitoring, and managing all of our infrastructure changes the human/agent/infrastructure interface greatly. We need better change management, policy enforcement, and observability tools. Going from a single human doing a single infrastructure task at a time, to a single agent doing that task, to teams of agents doing lots of autonomous infrastructure tasks at once, will reveal new bottlenecks needed to fully govern your infrastructure. We have a lot of those facilities in Pulumi Cloud already but we will continue pushing here to improve them and ensure they scale up as fast as they need to. This is the layer that matters even as agents themselves get great at infrastructure. The smartest agent in the world still needs guardrails, audit trails, and policy enforcement to be trusted with production systems at scale, and that layer gets more valuable as agents get more capable, not less.
 

@@ -153,7 +153,7 @@ jobs:
   # executed had no such job — so the pending status never resolved.
   # `.github/workflows/staging-status.yml` owns the terminal status now: a
   # `workflow_run` listener always runs the default branch's copy and fires
-  # for runs on any branch, so branch age stops mattering. Sentinel gate G4
+  # for runs on any branch, so branch age stops mattering. the Sentinel's staging gate
   # reads either that status or this run.
   notify:
     if: (github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'pulumi-bot')) && failure()

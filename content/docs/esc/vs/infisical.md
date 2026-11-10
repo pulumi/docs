@@ -12,7 +12,7 @@ menu:
 aliases:
 ---
 
-Choosing the right [secrets management](/what-is/what-is-secrets-management/) tool is important, and we want you to have as much information as possible to make the choice that best suits your needs. We’ve created this document to help you understand how Pulumi ESC compares with Infisical.
+Choosing the right [secrets management](/topics/secrets-and-security/) tool is important, and we want you to have as much information as possible to make the choice that best suits your needs. We’ve created this document to help you understand how Pulumi ESC compares with Infisical.
 
 ## What is Infisical?
 

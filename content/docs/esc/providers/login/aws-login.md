@@ -21,7 +21,7 @@ The `aws-login` provider enables you to log in to your AWS account using OpenID 
 
 ### OIDC
 
-OIDC is the recommended way to log in to AWS. Pulumi Cloud exchanges a short-lived OIDC token for temporary AWS credentials by assuming an IAM role, so there are no long-lived keys to store or rotate, and nothing left over to [trigger an AWS CLI credential error](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/) down the line.
+OIDC is the recommended way to log in to AWS. Pulumi Cloud exchanges a short-lived OIDC token for temporary AWS credentials by assuming an IAM role, so there are no long-lived keys to store or rotate, and nothing left over to [trigger an AWS CLI credential error](/dev/tutorials/run-aws-sts-get-caller-identity-with-dynamic-credentials/) down the line.
 
 Before you use the `oidc` input, register Pulumi Cloud as an OIDC identity provider in your AWS account and create an IAM role whose trust policy allows it to assume the role. For the full setup, see [Configuring OpenID Connect for AWS](/docs/esc/guides/configuring-oidc/aws/).
 

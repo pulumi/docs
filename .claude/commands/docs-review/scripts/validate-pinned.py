@@ -3149,7 +3149,9 @@ def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
     may not vanish — it is either in a bucket, rewritten in place with a
     disposition label, or referenced elsewhere (✅ Resolved). Mirrors
     compose-review.split_v3_buckets: `unverifiable` → ❓, everything else
-    low-confidence → ⚠️."""
+    low-confidence → ⚠️ (and a private-source unverifiable, which
+    split_private_source_checks composes in ⚠️ — the base records that
+    bucket, so promote-only holds without a special case)."""
     base = ctx.evidence_base
     if base is None:
         return []

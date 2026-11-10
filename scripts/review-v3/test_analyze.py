@@ -683,20 +683,13 @@ def test_link_only_diff_masks_links_and_nothing_else():
     assert not analyze.link_only_diff([])
 
 
-def test_link_only_blog_sweep_is_mine_by_default_and_routes_when_configured():
+def test_link_only_blog_sweep_is_mine():
     blog = dict(title="Fix stale links", labels=["review:no-blockers", "domain:blog"],
                 files=[_file("content/blog/p/index.md", [LINK_PLUS], [LINK_MINUS])])
-    lane = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "link_only": {"approval": "lane"}})[0]
     p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"])), 5)
     assert p["verdict"] == "stamp" and p["is_mine"] is True
-    # the routing config carries any-team, so the row is everyone's on its own
+    # branch protection takes anyone's approval, so the row is everyone's
     assert "shape:link-only" in p["reasons"] and "gate:any-team" in p["reasons"] and not any(r.startswith("route:") for r in p["reasons"])
-    # under the lane policy the local setting is what takes it, and dropping
-    # that setting routes it to the lane owner
-    p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"]), config=lane), 5)
-    assert p["verdict"] == "stamp" and "link-fixes:mine" in p["reasons"]
-    p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"], link_fixes="route"), config=lane), 5)
-    assert p["verdict"] == "route" and "shape:link-only" in p["reasons"] and "link-fixes:mine" not in p["reasons"]
     # a prose edit in the same sweep keeps the lane owner
     p = row(run([stampable(6, **{**blog, "files": [_file("content/blog/p/index.md", [LINK_PLUS, "new sentence"], [LINK_MINUS, "old sentence"])]})], cfg=cfg(me=["docs"])), 6)
     assert p["verdict"] == "route" and "shape:link-only" not in p["reasons"]
@@ -741,11 +734,6 @@ def test_a_link_only_sweep_is_any_approver_s_because_any_team_may_approve():
     assert "shape:link-only" in p["reasons"] and "gate:any-team" in p["reasons"]
     assert p["is_mine"] is True and "link-fixes:mine" not in p["reasons"]
     assert not any(r.startswith("route:") for r in p["reasons"])
-    # with the lane policy instead, it is the local link_fixes setting again
-    lane = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "link_only": {"approval": "lane"}})[0]
-    p = row(run([stampable(2, labels=["review:no-blockers", "domain:blog"], files=[sweep])],
-                cfg=cfg(me=["docs"]), config=lane), 2)
-    assert "gate:any-team" not in p["reasons"] and "link-fixes:mine" in p["reasons"]
 
 
 def test_a_mechanical_change_is_still_routed_to_its_lane():
@@ -1027,34 +1015,26 @@ def test_a_red_sentinel_alone_is_not_red_ci():
     assert p["verdict"] == "blocked" and "checks:red:lint" in p["reasons"]
 
 
-SENTINEL_STATUS = """<!-- SENTINEL_STATUS -->
-## Sentinel — merge gate status
-
-| | Gate | What it needs |
-|---|---|---|
-| ✅ | **G1 review-ran** | Nothing to do: review current at `aaaabbbbc`. |
-| ✅ | **G2 findings-answered** | Nothing to do: no blocking findings. |
-| 🔴 | **G3 right-approver** | Needs an approval from `@pulumi/docs-guild`. |
-| ➖ | **G4 infra-evidence** | Doesn't apply to this PR: no changed path affects the deploy. |
-| ➖ | **G5 oversized-ack** | Doesn't apply to this PR: not oversized. |
-
-<sub>Evaluated at head `{head}`.</sub>
-"""
+def _gate_status(name, state, desc):
+    return {"context": f"Sentinel / {name}", "state": state, "description": desc}
 
 
 def test_the_sentinel_chip_counts_passing_gates_out_of_the_ones_that_apply():
+    """The board reads the per-gate statuses (the pinned status comment that
+    used to carry the gate table is retired)."""
     import render  # noqa: PLC0415
-    status = comment(SENTINEL_STATUS.replace("{head}", HEAD_V3[:9]), cid=99)
-    p = row(run([stampable(1, check_runs=_red("sentinel"),
-                           comments=[comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR), status])]), 1)
-    assert p["verdict"] == "stamp" and "sentinel:2/3" in p["reasons"], p["reasons"]
+    gates = [_gate_status("review", "success", "review current at aaaabbbbc"),
+             _gate_status("findings", "failure", "1 open finding: fix and push, or /update-review accept F1"),
+             _gate_status("staging", "success", "n/a: no changed path affects the deploy"),
+             _gate_status("oversized", "success", "n/a: not oversized")]
+    p = row(run([stampable(1, check_runs=_red("sentinel"), statuses=gates)]), 1)
+    assert "sentinel:1/2" in p["reasons"], p["reasons"]
     html = render.chips(p["reasons"], p)
-    assert "sentinel 2/3" in html and "failing" not in html
-    assert "✗ G3 right-approver: Needs an approval from @pulumi/docs-guild." in html
-    assert "G4" not in html  # a gate that doesn't apply stays out of the count and the tooltip
-    # a status comment from an older head says nothing about this one
-    stale = comment(SENTINEL_STATUS.replace("{head}", "0123456789"), cid=99)
-    p = row(run([stampable(1, comments=[comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR), stale])]), 1)
+    assert "sentinel 1/2" in html and "failing" not in html
+    assert "✗ findings: 1 open finding: fix and push, or /update-review accept F1" in html
+    assert "staging" not in html.split("sentinel 1/2", 1)[1].split("</span>", 1)[0]  # n/a stays out
+    # no gate statuses at this head: no chip
+    p = row(run([stampable(1)]), 1)
     assert not any(r.startswith("sentinel:") for r in p["reasons"]), p["reasons"]
 
 

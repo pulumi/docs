@@ -14,7 +14,7 @@ tags:
 category: engineering
 ---
 
-Pulumi enables engineers to employ the best practices of their field to [infrastructure as code](/what-is/what-is-infrastructure-as-code/). The
+Pulumi enables engineers to employ the best practices of their field to [infrastructure as code](/topics/infrastructure-as-code/). The
 `pulumi watch` command is an example of this, enabling rapid prototyping and a "hot reload" style
 developer experience for prototyping Pulumi programs. In this post you'll see what watch mode
 enables, the challenges encountered in maintaining the feature, and how we were able to use Rust to
