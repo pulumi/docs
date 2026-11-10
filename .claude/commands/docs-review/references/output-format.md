@@ -558,6 +558,15 @@ author's job — turn-cap unverifiables included); `framing-drift` and other
 low-confidence stubs → ⚠️ Check these (whether it is really an issue is the
 reviewer's judgment).
 
+**Private-source checks.** One exception to `unverifiable` → ❓: a pass1 claim
+whose verdict names an implementing change the review's token got a 404 on
+(`meta.impl_refs_unreadable`) is unverifiable only because that change is
+private, and the author can't fix that. The composer puts those claims on the
+brief's ⚠️ list as **one** composed row naming the private ref (one claim keeps
+its own Where; several share a `—` Where and list on the evidence page). Leave
+it as composed. Promote it only if you have independent evidence the claim is
+wrong.
+
 **Group questions.** When the PR's implementing change sits in a repository
 the review can't read, the composer asks about the product-behavior
 unverifiables it explains as **one** ❓: a row whose Where cell is `—` and

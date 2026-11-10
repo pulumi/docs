@@ -37,11 +37,11 @@ You can use scopes to build [custom permission sets](/docs/administration/concep
 
 ## Default role assignments
 
-Many scopes are automatically granted through [Pulumi-defined roles](/docs/administration/concepts/rbac/roles#pulumi-defined-roles) in Pulumi Cloud. For example:
+Many scopes are automatically granted through [built-in roles](/docs/administration/concepts/rbac/roles#pulumi-defined-roles) in Pulumi Cloud. For example:
 
-- Organization admins have access to all scopes.
-- Regular members have access to basic read and write scopes for common operations.
-- Billing managers have access to billing-related scopes only.
+- `Admin` has access to all scopes.
+- `Reader`, `Builder`, and `Maintainer` grant progressively broader access to stacks, environments, and cloud accounts. Members follow the organization's [default role](/docs/administration/concepts/rbac/default-roles/), which is one of these unless an admin chooses another.
+- `Billing Manager` has access to billing-related scopes only.
 
 ## Available scopes
 

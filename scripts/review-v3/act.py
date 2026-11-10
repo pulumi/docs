@@ -753,7 +753,10 @@ def preflight_head(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
 def _is_sentinel(run: dict) -> bool:
     """The Sentinel's job check-run, its commit status (`context`), or a
     check-run it published before it switched to a status."""
-    return (run.get("name") or run.get("context") or "").strip().lower() == SENTINEL_CHECK
+    # Its per-gate statuses (`Sentinel / findings`, ...) are informational
+    # rows the required `Sentinel` status already sums up.
+    name = (run.get("name") or run.get("context") or "").strip().lower()
+    return name == SENTINEL_CHECK or name.startswith(SENTINEL_CHECK + " / ")
 
 
 def _status_as_run(s: dict) -> dict:

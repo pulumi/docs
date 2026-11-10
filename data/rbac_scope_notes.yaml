@@ -43,6 +43,12 @@ scopes:
     # pulumi/pulumi-service#52195: the API text restates the scope name.
     "org_member_access:read":
       description: Read which stacks, environments, and other entities a member can access.
+    "policy_exceptions:create":
+      note: Also needs write access to every stack the exception names. Approvers are named by the approval rule, not by a permission.
+    "policy_exceptions:delete":
+      note: Also needs read access to every stack the exception names. A removed exception is kept for auditing.
+    "policy_exceptions:read":
+      note: Also needs read access to every stack the exception names.
 
 permission_sets:
   stack-read:

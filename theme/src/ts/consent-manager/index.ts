@@ -1,6 +1,6 @@
 import { ConsentManagerConfig, Destination } from "./types";
 import { fetchDestinations, conditionallyLoadAnalytics } from "./analytics";
-import { installOneTrustBridge, getActiveGroups, destinationPreferencesFromGroups, hasRevokedGroup } from "./onetrust";
+import { installOneTrustBridge, getActiveGroups, destinationPreferencesFromGroups, hasRevokedGroup, PERFORMANCE } from "./onetrust";
 
 // OneTrust owns the banner and the consent decision. We install the
 // runWithPulumiConsent bridge (for directly-loaded integrations) and drive the
@@ -34,14 +34,15 @@ async function init(cfg: ConsentManagerConfig) {
     }
 
     // Segment can only be loaded once per page, so the first decision that
-    // allows any destination wins. Destinations granted later on this page take
-    // effect from the next page view.
+    // allows Segment's own collection or any destination wins. Anything granted
+    // later on this page, Segment's collection included, takes effect from the
+    // next page view.
     let segmentLoaded = false;
     const loadSegment = () => {
         if (segmentLoaded) return;
-        const prefs = destinationPreferencesFromGroups(destinations, getActiveGroups());
-        conditionallyLoadAnalytics(cfg.writeKey, destinations, prefs);
-        segmentLoaded = Object.keys(prefs).some(id => prefs[id]);
+        const active = getActiveGroups();
+        const prefs = destinationPreferencesFromGroups(destinations, active);
+        segmentLoaded = conditionallyLoadAnalytics(cfg.writeKey, destinations, prefs, active.has(PERFORMANCE));
     };
 
     window.addEventListener("OneTrustGroupsUpdated", loadSegment);

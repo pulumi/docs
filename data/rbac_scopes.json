@@ -38,7 +38,7 @@
             },
             {
               "defaultPermissionSet": "Stack Write",
-              "description": "Import stack.",
+              "description": "Replace a stack's state with an imported deployment.",
               "name": "stack:import"
             },
             {
@@ -58,17 +58,17 @@
             },
             {
               "defaultPermissionSet": "Stack Write",
-              "description": "Write stack.",
+              "description": "Run updates, refreshes, and destroys on a stack, and change its configuration.",
               "name": "stack:write"
             },
             {
               "defaultPermissionSet": "Stack Read",
-              "description": "Read stack teams.",
+              "description": "Read which teams can access a stack.",
               "name": "stack_access:read"
             },
             {
               "defaultPermissionSet": "Stack Admin",
-              "description": "Update stack teams.",
+              "description": "Change which teams and users can access a stack, and reassign its owner.",
               "name": "stack_access:update"
             }
           ]
@@ -193,7 +193,7 @@
             },
             {
               "defaultPermissionSet": "Environment Open",
-              "description": "Open and decrypt environment.",
+              "description": "Open an environment, resolving its values and secrets.",
               "name": "environment:open"
             },
             {
@@ -233,12 +233,12 @@
           "scopes": [
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Rotates secrets in an environment.",
+              "description": "Rotate secrets in an environment.",
               "name": "environment:rotate"
             },
             {
               "defaultPermissionSet": "Environment Read",
-              "description": "List secret rotation history of an environment.",
+              "description": "List an environment's secret rotation history.",
               "name": "environment:rotate_history"
             }
           ]
@@ -248,32 +248,32 @@
           "scopes": [
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Creates a new environment schedule.",
+              "description": "Create environment schedule.",
               "name": "environment_schedule:create"
             },
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Deletes an environment schedule.",
+              "description": "Delete environment schedule.",
               "name": "environment_schedule:delete"
             },
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Pauses an environment schedule.",
+              "description": "Pause environment schedule.",
               "name": "environment_schedule:pause"
             },
             {
               "defaultPermissionSet": "Environment Read",
-              "description": "Reads an environment schedule.",
+              "description": "Read environment schedule.",
               "name": "environment_schedule:read"
             },
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Resumes an environment schedule.",
+              "description": "Resume environment schedule.",
               "name": "environment_schedule:resume"
             },
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Updates an environment schedule.",
+              "description": "Update environment schedule.",
               "name": "environment_schedule:update"
             }
           ]
@@ -283,22 +283,22 @@
           "scopes": [
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Adds a new tag to an environment.",
+              "description": "Add a tag to an environment.",
               "name": "environment_tag:create"
             },
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Removes a tag from an environment.",
+              "description": "Remove a tag from an environment.",
               "name": "environment_tag:delete"
             },
             {
               "defaultPermissionSet": "Environment Read",
-              "description": "Reads the value of an environments tag.",
+              "description": "Read an environment's tags.",
               "name": "environment_tag:read"
             },
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Modifies the value of an environments tag.",
+              "description": "Change the value of an environment tag.",
               "name": "environment_tag:update"
             }
           ]
@@ -308,22 +308,22 @@
           "scopes": [
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Creates a new version tag.",
+              "description": "Create version tag.",
               "name": "environment_version:create"
             },
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Deletes a version tag.",
+              "description": "Delete version tag.",
               "name": "environment_version:delete"
             },
             {
               "defaultPermissionSet": "Environment Open",
-              "description": "Open and decrypt a version tag.",
+              "description": "Open a version tag, resolving its values and secrets.",
               "name": "environment_version:open"
             },
             {
               "defaultPermissionSet": "Environment Read",
-              "description": "Reads a version tag.",
+              "description": "Read version tag.",
               "name": "environment_version:read"
             },
             {
@@ -333,7 +333,7 @@
             },
             {
               "defaultPermissionSet": "Environment Write",
-              "description": "Updates a version tag.",
+              "description": "Update version tag.",
               "name": "environment_version:update"
             }
           ]
@@ -393,27 +393,27 @@
           "scopes": [
             {
               "defaultPermissionSet": "Account Admin",
-              "description": "Delete cloud account.",
+              "description": "Delete Discovery account.",
               "name": "insights_account:delete"
             },
             {
               "defaultPermissionSet": "Account Read",
-              "description": "Read cloud account.",
+              "description": "Read Discovery account.",
               "name": "insights_account:read"
             },
             {
               "defaultPermissionSet": "Account Write",
-              "description": "Update cloud account.",
+              "description": "Update Discovery account.",
               "name": "insights_account:update"
             },
             {
               "defaultPermissionSet": "Account Read",
-              "description": "Read cloud account access.",
+              "description": "Read Discovery account access.",
               "name": "insights_account_access:read"
             },
             {
               "defaultPermissionSet": "Account Admin",
-              "description": "Update cloud account access.",
+              "description": "Update Discovery account access.",
               "name": "insights_account_access:update"
             }
           ]
@@ -423,32 +423,32 @@
           "scopes": [
             {
               "defaultPermissionSet": "Account Write",
-              "description": "Scan cloud account.",
+              "description": "Scan Discovery account.",
               "name": "insights_account:scan"
             },
             {
               "defaultPermissionSet": "Account Write",
-              "description": "Cancel cloud account scan.",
+              "description": "Cancel Discovery account scan.",
               "name": "insights_account_scan:cancel"
             },
             {
               "defaultPermissionSet": "Account Write",
-              "description": "Pause cloud account scan.",
+              "description": "Pause Discovery account scan.",
               "name": "insights_account_scan:pause"
             },
             {
               "defaultPermissionSet": "Account Read",
-              "description": "Read cloud account scan.",
+              "description": "Read Discovery account scan.",
               "name": "insights_account_scan:read"
             },
             {
               "defaultPermissionSet": "Account Write",
-              "description": "Resume cloud account scan.",
+              "description": "Resume Discovery account scan.",
               "name": "insights_account_scan:resume"
             },
             {
               "defaultPermissionSet": "Account Write",
-              "description": "Update cloud account scan.",
+              "description": "Update Discovery account scan.",
               "name": "insights_account_scan:update"
             }
           ]
@@ -547,7 +547,7 @@
                 "Maintainer",
                 "Admin"
               ],
-              "description": "Create cloud account.",
+              "description": "Create Discovery account.",
               "name": "insights_account:create"
             }
           ]
@@ -628,7 +628,7 @@
                 "Maintainer",
                 "Admin"
               ],
-              "description": "List the tags across all environments.",
+              "description": "List tags across all environments.",
               "name": "environment_tags:list"
             }
           ]
@@ -693,7 +693,7 @@
               "defaultRoles": [
                 "Admin"
               ],
-              "description": "Read organization member access.",
+              "description": "Read which stacks, environments, and other entities a member can access.",
               "name": "org_member_access:read"
             },
             {
@@ -761,21 +761,21 @@
                 "Maintainer",
                 "Admin"
               ],
-              "description": "Create Custom Agents.",
+              "description": "Create custom agents.",
               "name": "agent_definitions:create"
             },
             {
               "defaultRoles": [
                 "Admin"
               ],
-              "description": "Delete Custom Agents.",
+              "description": "Delete custom agents.",
               "name": "agent_definitions:delete"
             },
             {
               "defaultRoles": [
                 "Admin"
               ],
-              "description": "Update Custom Agents.",
+              "description": "Update custom agents.",
               "name": "agent_definitions:update"
             },
             {
@@ -853,7 +853,7 @@
                 "Maintainer",
                 "Admin"
               ],
-              "description": "Read integrations.",
+              "description": "Read the organization's version control integrations and the repositories and branches they can access.",
               "name": "integrations:read"
             },
             {
@@ -861,21 +861,21 @@
                 "Maintainer",
                 "Admin"
               ],
-              "description": "Update integrations.",
+              "description": "Install the Pulumi app on a self-hosted version control instance.",
               "name": "integrations:update"
             },
             {
               "defaultRoles": [
                 "Admin"
               ],
-              "description": "Read organization integrations.",
+              "description": "Read organization-level integration settings, such as Neo model providers.",
               "name": "org_integrations:read"
             },
             {
               "defaultRoles": [
                 "Admin"
               ],
-              "description": "Update organization integrations.",
+              "description": "Set up, change, and remove the organization's integrations, such as version control and Neo integrations.",
               "name": "org_integrations:update"
             },
             {
@@ -890,7 +890,7 @@
               "defaultRoles": [
                 "Admin"
               ],
-              "description": "Change organization backend.",
+              "description": "Change the organization's identity provider, such as GitHub, GitLab, Bitbucket, or SAML.",
               "name": "organization:change_backend"
             },
             {
@@ -998,6 +998,32 @@
           "scopes": [
             {
               "defaultRoles": [
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Create or request policy exceptions.",
+              "name": "policy_exceptions:create"
+            },
+            {
+              "defaultRoles": [
+                "Admin"
+              ],
+              "description": "Remove policy exceptions.",
+              "name": "policy_exceptions:delete"
+            },
+            {
+              "defaultRoles": [
+                "Reader",
+                "Builder",
+                "Maintainer",
+                "Admin"
+              ],
+              "description": "Read policy exceptions.",
+              "name": "policy_exceptions:read"
+            },
+            {
+              "defaultRoles": [
                 "Admin"
               ],
               "description": "Create policy groups.",
@@ -1031,14 +1057,14 @@
               "defaultRoles": [
                 "Admin"
               ],
-              "description": "Create policy pack.",
+              "description": "Create policy packs.",
               "name": "policy_pack:create"
             },
             {
               "defaultRoles": [
                 "Admin"
               ],
-              "description": "Delete policy pack.",
+              "description": "Delete policy packs.",
               "name": "policy_pack:delete"
             },
             {
@@ -1048,14 +1074,14 @@
                 "Maintainer",
                 "Admin"
               ],
-              "description": "Read policy pack.",
+              "description": "Read policy packs.",
               "name": "policy_pack:read"
             },
             {
               "defaultRoles": [
                 "Admin"
               ],
-              "description": "Update policy pack.",
+              "description": "Update policy packs.",
               "name": "policy_pack:update"
             },
             {
@@ -1252,7 +1278,7 @@
                 "Maintainer",
                 "Admin"
               ],
-              "description": "Read project tags.",
+              "description": "List the tags used across the organization's projects and stacks.",
               "name": "tags:read"
             }
           ]
