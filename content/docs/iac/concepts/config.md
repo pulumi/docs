@@ -105,6 +105,16 @@ Configuration values can only be **read** during program execution, not set. To 
 
 For potentially secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which return the config value as an `Output` that carries both the value and its secret-ness, so the value is encrypted whenever it's serialized (see [secrets](/docs/iac/concepts/secrets/) for more on managing secret values).
 
+For example, to build a database connection string from a secret password:
+
+```typescript
+const config = new pulumi.Config();
+const dbPassword = config.requireSecret("dbPassword");
+const connectionString = `postgres://admin:${dbPassword}@db.example.com:5432/app`;
+```
+
+Because `dbPassword` is a secret, `connectionString` is also treated as a secret and is encrypted in the stack's state.
+
 Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
@@ -764,7 +774,7 @@ Some configuration is the same for more than one stack in a project — `aws:reg
 You define project-level configuration in the project folder's `Pulumi.yaml` file, using any text editor.
 
 {{% notes type="info" %}}
-The `pulumi config set` command does not currently support project-level configuration. Enter the configuration values directly in the `Pulumi.yaml` file instead. Project-level configuration also supports plaintext values only. Support for [setting project-level config from the CLI](https://github.com/pulumi/pulumi/issues/12041), [project-level secrets](https://github.com/pulumi/pulumi/issues/11549), and other features is planned.
+The `pulumi config set` command does not currently support project-level configuration. Enter the configuration values directly in the `Pulumi.yaml` file instead. Project-level configuration supports both plaintext values and secrets; to add a secret, run `pulumi config set --secret` in any stack and copy the encrypted value into `Pulumi.yaml`. Support for [setting project-level config from the CLI](https://github.com/pulumi/pulumi/issues/12041) and other features is planned.
 {{% /notes %}}
 
 Project-level configuration supports both flat and structured configuration, in the same forms described in [Structured configuration](/docs/iac/concepts/config/#structured-configuration).
@@ -856,7 +866,7 @@ You can configure providers in three ways:
 
 Note the following:
 
-* Only the default provider reads configuration file settings. A provider object that you instantiate yourself does not read values from the stack configuration.
+* Both the default provider and any provider object you instantiate yourself read configuration file settings. Arguments you pass to an explicit provider's constructor override the matching stack configuration keys.
 * The precedence of configuration sources (configuration file, environment, and constructor arguments) can vary between providers. Refer to the provider's documentation for its specific rules.
 * Default providers can be turned off for some or all packages with the [`pulumi:disable-default-providers`](/docs/iac/concepts/config/#pulumidisable-default-providers) key, described below.
 
@@ -881,7 +891,7 @@ config:
 ### `pulumi:tags`
 
 A list of [stack tags](/docs/iac/concepts/stacks/#stack-tags) which are read by the Pulumi CLI and automatically applied on the stack at
-every `pulumi up` or `pulumi refresh` action.
+every `pulumi up` or `pulumi preview` action.
 
 ```yaml
 config:
@@ -890,7 +900,7 @@ config:
     team: Ops
 ```
 
-The Pulumi CLI only creates or updates tags listed in the config. If you remove a tag from the stack config, remove it from the stack in Pulumi Cloud manually as well.
+The Pulumi CLI keeps the stack's tags in sync with the config. If you remove a tag from the stack config, the CLI removes it from the stack in Pulumi Cloud on the next update.
 
 Stack tags applied by the Pulumi CLI are listed in the **Tags** section of the Overview tab:
 
@@ -912,4 +922,4 @@ config:
   # normal pulumi config
 ```
 
-When a key is set both by an imported environment and explicitly in your stack configuration, the explicit stack value takes precedence. See [Precedence](/docs/esc/concepts/outputs/#precedence-1) for the full rules.
+When a key is set both by an imported environment and explicitly in your stack configuration, the imported environment's value takes precedence. See [Precedence](/docs/esc/concepts/outputs/#precedence-1) for the full rules.
