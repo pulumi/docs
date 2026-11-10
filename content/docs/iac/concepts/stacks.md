@@ -1301,6 +1301,7 @@ A stack's deployment is the state Pulumi keeps for it: every resource the stack 
 ```bash
 $ pulumi stack export --file stack.json
 
+# Inspect or edit stack.json, then write it back to the stack:
 $ pulumi stack import --file stack.json
 ```
 
