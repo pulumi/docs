@@ -1316,7 +1316,7 @@ This is a powerful capability that subverts the usual way that Pulumi manages re
 
 ### Prefer targeted state commands
 
-Before you hand-edit an exported deployment, check whether a [`pulumi state`](/docs/iac/cli/commands/pulumi_state/) subcommand does what you need. These commands change one resource at a time and check that the result is valid, so they're less error-prone than editing the whole file:
+Before you hand-edit an exported deployment, check whether a [`pulumi state`](/docs/iac/cli/commands/pulumi_state/) subcommand does what you need. These commands edit specific parts of the state rather than the whole file, so they're less error-prone than hand-editing it:
 
 * [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/) clears the `protect` bit so a resource can be deleted.
 * [`pulumi state remove`](/docs/iac/cli/commands/pulumi_state_remove/) stops Pulumi from managing a resource without deleting it from the cloud provider.
