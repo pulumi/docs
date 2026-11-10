@@ -1,5 +1,5 @@
 import { Destination } from "./types";
-import { segmentIntegrations } from "./onetrust";
+import { segmentIntegrations, wantsSegment } from "./onetrust";
 
 export function fetchDestinations(cdnHost: string, writeKey: string): Promise<Destination[]> {
     return fetch(`https://${cdnHost}/v1/projects/${writeKey}/integrations`)
@@ -23,12 +23,12 @@ export function conditionallyLoadAnalytics(
     destinations: Destination[],
     destinationPreferences: Record<string, boolean>,
     performanceAllowed: boolean,
-): void {
+): boolean {
     const analytics = window.analytics;
-    if (!analytics) return;
+    if (!analytics) return false;
 
     const integrations = segmentIntegrations(destinations, destinationPreferences, performanceAllowed);
-    const hasConsented = destinations.some(dest => integrations[dest.id]);
+    const hasConsented = wantsSegment(integrations);
 
     if (hasConsented && !analytics.initialized) {
         analytics.addSourceMiddleware((args) => {
@@ -45,4 +45,5 @@ export function conditionallyLoadAnalytics(
             load();
         }
     }
+    return hasConsented;
 }

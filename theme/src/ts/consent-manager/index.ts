@@ -34,15 +34,15 @@ async function init(cfg: ConsentManagerConfig) {
     }
 
     // Segment can only be loaded once per page, so the first decision that
-    // allows any destination wins. Destinations granted later on this page take
-    // effect from the next page view.
+    // allows Segment's own collection or any destination wins. Anything granted
+    // later on this page, Segment's collection included, takes effect from the
+    // next page view.
     let segmentLoaded = false;
     const loadSegment = () => {
         if (segmentLoaded) return;
         const active = getActiveGroups();
         const prefs = destinationPreferencesFromGroups(destinations, active);
-        conditionallyLoadAnalytics(cfg.writeKey, destinations, prefs, active.has(PERFORMANCE));
-        segmentLoaded = Object.keys(prefs).some(id => prefs[id]);
+        segmentLoaded = conditionallyLoadAnalytics(cfg.writeKey, destinations, prefs, active.has(PERFORMANCE));
     };
 
     window.addEventListener("OneTrustGroupsUpdated", loadSegment);

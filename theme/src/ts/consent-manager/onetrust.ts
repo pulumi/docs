@@ -117,6 +117,12 @@ export function segmentIntegrations(destinations: MinimalDestination[], destinat
     return integrations;
 }
 
+// Whether analytics.load() should run at all: Segment's own collection or at
+// least one destination is allowed.
+export function wantsSegment(integrations: Record<string, boolean>): boolean {
+    return Object.values(integrations).some(Boolean);
+}
+
 interface QueueItem {
     category: ConsentCategory;
     callback: () => void;
