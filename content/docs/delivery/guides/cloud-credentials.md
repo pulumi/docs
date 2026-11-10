@@ -24,9 +24,9 @@ environment:
 
 Because each stage updates different stacks, each stage gets its own credentials: `Pulumi.dev.yaml` imports the sandbox environment and `Pulumi.prod.yaml` imports the production one.
 
-A `Stacks` update runs with a short-lived token that has your organization's default deployment role. That role must be allowed to open the environment. If it isn't, the update fails with "you do not have permission to open environment".
+A `Stacks` update runs as the pipeline's [service principal](/docs/delivery/operations/permissions/#the-identity-a-pipeline-runs-as), which must be allowed to open the environment. If it isn't, the update fails with "you do not have permission to open environment".
 
-<!-- TODO(launch): Link to the doc that explains how to view and change the default deployment role. Confirm the role name shown in the console. -->
+<!-- TODO(launch): Confirm with DLV-434 that the service principal created at registration gets access to the target stacks' ESC environments, or only to the stacks. If only the stacks, say how to grant environment access. -->
 
 ## Pass credentials in `environment`
 
@@ -59,7 +59,7 @@ Don't put credentials in a `Stacks` entry's `config`. Values there are plain str
 
 ## Next steps
 
-- Read about [permissions](/docs/delivery/operations/permissions/) for the Delivery identity of your organization.
+- Learn which [service principal a pipeline runs as](/docs/delivery/operations/permissions/#the-identity-a-pipeline-runs-as).
 - Set up [OIDC for Pulumi ESC](/docs/esc/guides/configuring-oidc/).
 
 <!-- TODO(launch): Consider a full AWS end-to-end example. -->

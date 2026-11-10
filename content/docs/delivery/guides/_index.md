@@ -15,5 +15,3 @@ These guides walk through common Pulumi Delivery tasks. Each one stands on its o
 - [Cloud credentials](/docs/delivery/guides/cloud-credentials/): Give each stage the cloud credentials it needs, using Pulumi ESC and OIDC.
 - [Pipeline patterns](/docs/delivery/guides/pipeline-patterns/): Build stages from a helper function, smoke-test each deploy, and update stacks that depend on each other.
 - [Connect pipelines](/docs/delivery/guides/multiple-pipelines/): Pass values from an upstream pipeline to a downstream one, and run several pipelines from one repository.
-
-<!-- TODO(launch): Add "- [Notifications](/docs/delivery/guides/notifications/): Find out when a run fails or a gate is waiting for you." once that page leaves draft. -->

@@ -45,7 +45,7 @@ new delivery.Stacks("app", {
 
 With `trigger: true`, every new release that reaches the upstream `prod` stage starts a run of the downstream pipeline.
 
-Both pipelines must be in the same organization, and your organization's Delivery identity needs read access to the upstream pipeline stack. Your own access isn't enough.
+Both pipelines must be in the same organization, and the downstream pipeline's service principal needs read access to the upstream pipeline stack. Your own access isn't enough.
 
 If any artifact is secret, the whole `artifacts` map is secret. Since `config` rejects secrets, pass a secret artifact in `environment` instead.
 

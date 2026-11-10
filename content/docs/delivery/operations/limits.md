@@ -50,6 +50,10 @@ These are the gaps in the public preview, and how to work around them where ther
 - The `http()` rule isn't available. Registration rejects a stage that uses it.
 - Delivery doesn't detect a cycle between stages. A run in a cycle waits until you cancel it.
 
+### Identity
+
+- A pipeline runs as one service principal for all of its stages. You can't give a stage its own identity yet. See [Permissions](/docs/delivery/operations/permissions/#the-identity-a-pipeline-runs-as).
+
 ### Pipeline stacks and run stacks
 
 - Passes don't run policy packs. Target stacks keep their own policy groups.

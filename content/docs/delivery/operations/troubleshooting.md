@@ -37,7 +37,7 @@ Open the run in the Pulumi Cloud console and look at the stage it's on:
 : Create the target stack with `pulumi stack init`, then [retry the run](/docs/delivery/operations/runs-and-stages/#retry-a-failed-run).
 
 "you do not have permission to open environment '\<org\>/\<project\>/\<env\>'"
-: Your organization's default deployment role can't open the target stack's ESC environment. Grant it access. See [Cloud credentials](/docs/delivery/guides/cloud-credentials/).
+: The pipeline's service principal can't open the target stack's ESC environment. Grant it access. See [Cloud credentials](/docs/delivery/guides/cloud-credentials/) and [Permissions](/docs/delivery/operations/permissions/#the-identity-a-pipeline-runs-as).
 
 A source fails to lock a commit
 : Every source must be declared at the top level of the pipeline program. A source created from a step's output after the first pass can't lock a commit.
