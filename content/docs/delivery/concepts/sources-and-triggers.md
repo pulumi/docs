@@ -63,7 +63,3 @@ On a `PipelineSource`, `trigger: true` starts a run whenever the named upstream 
 ## Other ways to start a run
 
 You can also start a run from **Run pipeline** in the Pulumi Cloud console, or through the REST API. See [Get started](/docs/delivery/get-started/#watch-the-run).
-
-During public preview, Delivery doesn't support time-based triggers, ESC triggers, or dispatch inputs.
-
-<!-- TODO(launch): Confirm with Engineering whether any of these land before 2026-11-18. -->

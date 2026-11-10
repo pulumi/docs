@@ -1,8 +1,8 @@
 ---
-title_tag: Pulumi Delivery limits and known limitations
-meta_desc: Size and time limits for Pulumi Delivery pipelines, and the features that aren't available during public preview.
-title: Limits and known limitations
-h1: Limits and known limitations
+title_tag: Pulumi Delivery limits
+meta_desc: Size and time limits for Pulumi Delivery pipelines, and behavior to plan around when you design and operate one.
+title: Limits
+h1: Limits
 menu:
   delivery:
     name: Limits
@@ -26,38 +26,20 @@ Each entry of a `Stacks` group uses one slot of your organization's concurrency 
 
 <!-- TODO(launch): Add concurrency limits by edition once pricing is final (DLV-453). Essentials is currently 5 concurrent stack updates. -->
 
-## Known limitations
+## Behavior to plan around
 
-These are the gaps in the public preview, and how to work around them where there's a workaround.
+These behaviors affect how you design and operate a pipeline.
 
-<!-- TODO(launch): Re-verify every item against the GA build on 2026-11-18. Drop what shipped. -->
+### Runs and steps
 
-### Runners and platforms
-
-- Delivery runs only on Pulumi-managed runners. Customer-managed runner pools and Windows aren't supported.
-- The Delivery provider has no Windows build, so you register pipelines from Linux or macOS.
-- Delivery doesn't work with a DIY backend or with self-hosted Pulumi Cloud.
-- `timeout` on a `Job` has no effect yet. A job stops after 2 hours.
-
-### Sources and triggers
-
-- Custom VCS sources and providers without webhooks aren't supported.
-- Delivery doesn't support time-based triggers, ESC triggers, or dispatch inputs.
-- The Pulumi CLI has no `pulumi delivery` command. Use the console or the REST API.
-
-### Gates
-
-- The `http()` rule isn't available. Registration rejects a stage that uses it.
+- A job stops after 2 hours. Set `timeout` on a `Stacks` entry to change its limit.
 - Delivery doesn't detect a cycle between stages. A run in a cycle waits until you cancel it.
-
-### Identity
-
-- A pipeline runs as one service principal for all of its stages. You can't give a stage its own identity yet. See [Permissions](/docs/delivery/operations/permissions/#the-identity-a-pipeline-runs-as).
+- A pipeline runs as one service principal for all of its stages. See [Permissions](/docs/delivery/operations/permissions/#the-identity-a-pipeline-runs-as).
 
 ### Pipeline stacks and run stacks
 
 - Passes don't run policy packs. Target stacks keep their own policy groups.
-- The pipeline stack's config comes from its config file in the repository, so commit it. Only the default Pulumi Cloud secrets provider is tested.
+- The pipeline stack's config comes from its config file in the repository, so commit it.
 - Delivery deletes a run stack without running a destroy. Any resource in the pipeline program that isn't a Delivery resource stays in your cloud without state. A waiting run keeps its stack.
 - You can't delete a pipeline stack while runs are in progress. Deleting a pipeline stack stops the pipeline and deletes its run stacks. After restoring the stack, run `pulumi up` on it to register the pipeline again.
 - You can't move a pipeline stack to another organization, or rename or move a run stack.

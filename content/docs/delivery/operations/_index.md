@@ -15,4 +15,4 @@ Once a pipeline is running, these pages cover what you'll do with it day to day.
 - [Runs and stages](/docs/delivery/operations/runs-and-stages/): Retry or cancel a run, and roll back, redeploy, promote, or pause a stage.
 - [Permissions](/docs/delivery/operations/permissions/): Who can dispatch runs, pass gates, and operate stages, and which service principal a pipeline runs as.
 - [Troubleshooting](/docs/delivery/operations/troubleshooting/): Find out why a run is stuck or failed.
-- [Limits and known limitations](/docs/delivery/operations/limits/): Size limits, time limits, and what isn't supported during public preview.
+- [Limits](/docs/delivery/operations/limits/): Size limits, time limits, and behavior to plan around.

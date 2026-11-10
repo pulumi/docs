@@ -86,7 +86,7 @@ new delivery.Job("smoke", {
 });
 ```
 
-During public preview, every step runs on Pulumi-managed runners. Omit `runtime` and don't use the `WorkflowsRuntime` resource yet.
+Steps run on Pulumi-managed runners. Leave `runtime` unset, and don't use the `WorkflowsRuntime` resource.
 
 ## Environment variables
 

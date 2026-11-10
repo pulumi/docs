@@ -90,12 +90,6 @@ const prod = new delivery.Stage("prod", {
 
 Every rule takes an optional `name`. Names must be unique within a gate, and `manual()` defaults to `manual`.
 
-### HTTP gates
-
-The SDK includes an `http()` rule that polls a URL until a JMESPath expression is true. It isn't available during public preview, and registration rejects a stage that uses it.
-
-<!-- TODO(launch): Confirm http() status at GA. If it's still unavailable, consider removing this section and listing it only under known limitations. -->
-
 ## Continue a gate from another system
 
 Any credential with write access to the pipeline stack can continue a manual gate. To do it from another system, such as a deployment hook:

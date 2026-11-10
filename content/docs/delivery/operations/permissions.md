@@ -21,7 +21,7 @@ You can choose an existing service principal for the pipeline in the pipeline pr
 
 To give a pipeline access to more stacks or environments, grant them to its service principal. You can see which service principal a pipeline uses on the pipeline's page in the Pulumi Cloud console.
 
-During public preview, a pipeline has one service principal for all its stages. You can't yet give a stage, such as `prod`, its own identity.
+A pipeline uses the same service principal for all of its stages.
 
 <!--
 TODO(launch): DLV-434 (Boris Schlosser) is still being finalized. Before 2026-11-18, confirm:
