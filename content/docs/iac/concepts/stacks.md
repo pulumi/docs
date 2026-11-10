@@ -1307,7 +1307,7 @@ $ pulumi stack import --file stack.json
 
 Common reasons to export a deployment include:
 
-* Taking a backup of the stack's state before you change it.
+* Taking a backup of the stack's state before you manually edit it.
 * Inspecting the raw state when a resource doesn't match what you expect.
 * Correcting state after manual changes in the cloud provider that Pulumi isn't aware of, or after an update that failed partway through.
 
