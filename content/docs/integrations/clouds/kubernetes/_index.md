@@ -17,7 +17,7 @@ aliases:
 
 Manage Kubernetes clusters, deploy application workloads, and drive in-cluster automation with Pulumi. This page links to every Pulumi capability for Kubernetes: Infrastructure as Code, the Pulumi Kubernetes Operator, and ESC integrations.
 
-To start from scratch, follow the [Kubernetes get-started guide](/docs/iac/get-started/kubernetes/).
+To start from scratch, follow the [get-started guide](/up/).
 
 ## Infrastructure as Code
 
@@ -67,7 +67,7 @@ Start new Kubernetes projects from a pre-built template:
 
 ## Policy packs
 
-[Pulumi Policies](/docs/insights/policy/) lets you enforce rules on infrastructure at preview and update time, rejecting stacks that violate security, cost, or compliance standards. [Pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) are maintained by Pulumi and cover common regulatory and best-practice frameworks.
+[Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) lets you enforce rules on infrastructure at preview and update time, rejecting stacks that violate security, cost, or compliance standards. [Pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) are maintained by Pulumi and cover common regulatory and best-practice frameworks.
 
 For Kubernetes:
 

@@ -1,45 +1,11 @@
 .customer-logo {
-    svg, img {
-        @apply w-full h-full object-contain;
-    }
-
-    &-black {
-        svg, img {
-            @apply w-full h-full object-contain;
-        }
-
-         path {
-            fill: black;
-        }
-    }
-
-    &-hoverable {
-        svg, img {
-            @apply w-full h-full object-contain;
-        }
-    }
-
-    &-hoverable:not(:hover) {
-         filter: grayscale(1);
-    }
+    width: calc(var(--logo-unit, 3rem) * var(--logo-aspect-root, 2) * var(--logo-scale, 1));
+    max-height: calc(var(--logo-cap, 2.75rem) * var(--logo-scale, 1));
+    @apply h-auto max-w-full object-contain;
 }
 
-.ro-hoverable {
-    .ro-gray {
-        @apply block;
-    }
-
-    .ro-color {
-        @apply hidden;
-    }
-
-    &:hover {
-        .ro-gray {
-            @apply hidden;
-        }
-
-        .ro-color {
-            @apply block;
-        }
+.customer-logo-hoverable {
+    &:not(:hover) {
+        filter: grayscale(1);
     }
 }

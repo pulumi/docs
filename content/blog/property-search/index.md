@@ -48,7 +48,7 @@ Including property names and values in your resource searches enables you to sea
 
 Pulumi Resource Search, including the ability to search on property data, is applicable across all cloud resources, whether they reside in AWS, Google Cloud, Azure, or any of Pulumi's 100+ cloud providers. Support for querying on property data is available in the [Enterprise and Business Critical editions](/pricing) of Pulumi Cloud.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pMEIX7LmXYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< youtube-iframe src="https://www.youtube.com/embed/pMEIX7LmXYo" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true" >}}
 
 ## Feature Overview
 
@@ -66,7 +66,7 @@ Before Property Search, using just Resource Search, you were able to find resour
 
 ### AI Assist & properties
 
-Pulumi [AI Assist](/docs/insights/discovery/search/#ai-assist) allows you to use natural language to search for resources. AI Assist works by converting natural language to a query in our search syntax. This becomes even more valuable with property search. Resources can have dozens of properties, and remembering exactly how to search for property values can be challenging, especially when they change depending on the provider. AI Assist is going to step in so that you don’t have to remember everything.
+Pulumi [AI Assist](/docs/discovery-governance/guides/search-resources/#ai-assist) allows you to use natural language to search for resources. AI Assist works by converting natural language to a query in our search syntax. This becomes even more valuable with property search. Resources can have dozens of properties, and remembering exactly how to search for property values can be challenging, especially when they change depending on the provider. AI Assist is going to step in so that you don’t have to remember everything.
 
 Here is a list of example natural language queries we have seen customers use and the AI Assist output:
 

@@ -27,7 +27,7 @@ Before Platybot, our #analytics Slack channel was a support queue. Every day, pe
 <figcaption><i>Our #analytics channel, before Platybot (dramatized).</i></figcaption>
 </figure>
 
-We didn't want to just throw an LLM at our [Snowflake](/case-studies/snowflake/) warehouse either. Without guardrails, large language models generate SQL that may work but silently gets the answer wrong. Different join logic, wrong filters, missing snapshot handling, incorrect summarization. We needed something that could answer reliably for most queries, otherwise we'd switch to fixing LLM SQL queries.
+We didn't want to just throw an LLM at our [Snowflake](/customers/snowflake/) warehouse either. Without guardrails, large language models generate SQL that may work but silently gets the answer wrong. Different join logic, wrong filters, missing snapshot handling, incorrect summarization. We needed something that could answer reliably for most queries, otherwise we'd switch to fixing LLM SQL queries.
 
 So we built Platybot (platypus + bot, named after our mascot), an AI-powered analytics assistant that any Pulumi employee can use to query our Data Warehouse in natural language. It's available as a Web App, a Slack bot, and a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server. The infrastructure is deployed with Pulumi IaC (Infrastructure as Code). But the most important thing we learned building it is that the AI was the easy part. The semantic layer is what makes it work.
 
@@ -255,8 +255,8 @@ Accuracy is harder to quantify, but the semantic layer gives us confidence. Beca
 If you're building something similar, here are the resources that helped us:
 
 - [Cube](https://cube.dev/) for building a semantic layer on top of your data warehouse
-- [Pulumi IaC getting started](/docs/get-started/) for deploying your infrastructure
+- [Pulumi IaC getting started](/up/) for deploying your infrastructure
 - [Pulumi Community Slack](https://slack.pulumi.com) for questions and conversation
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}
 -->

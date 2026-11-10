@@ -43,8 +43,8 @@ sections:
     title: From training clusters to billions of inference requests
     lead: How AI teams scale infrastructure from research to production
     description: Go from rapid research to production-scale training clusters without rebuilding your infrastructure. Pulumi gives you one programmable model for GPUs, Kubernetes, orchestration, and automation across AWS.
-    cta_primary_text: See how teams build AI at scale
-    cta_primary_link: /product/superintelligence-infrastructure/
+    cta_primary_text: Read why AI needs new infrastructure
+    cta_primary_link: /blog/the-superintelligence-flywheel/
     anchor: ai-infrastructure
 
   - type: section_header
@@ -68,7 +68,7 @@ sections:
 
   - type: feature_callout
     background: 2
-    title: Agentic AI with built-in governance
+    title: Agentic infrastructure with built-in governance
     description: Neo automates AWS operations while respecting your policies, compliance requirements, and approval workflows. From Lambda runtime updates to security remediation, Neo generates infrastructure changes as pull requests — giving your team full visibility and control before any changes reach production.
     cta_primary_text: Contact us to learn more
     cta_primary_link: /contact/
@@ -99,15 +99,15 @@ sections:
   - type: case_study_grid
     title: AWS customers building with Pulumi
     cards:
-      - slug: snowflake
+      - customer: snowflake
         title: From 1.5 weeks to 1-day deployments
         description: Snowflake uses Pulumi to allow their application and infrastructure teams to truly treat their infrastructure as software.
-      - slug: modivcare
+      - customer: modivcare
         title: 25% cost reductions
         description: Modivcare used Pulumi to transform fragmented acquisition-built infrastructure into a unified platform without service disruption, achieving up to 25% cost reductions and enabling developer self-service.
-      - slug: bmw
+      - customer: bmw
         title: Unified solution for all services
-        description: BMW used Pulumi to build a scalable and resilient hybrid cloud implementation that could handle more than eleven thousand developers.
+        description: BMW used Pulumi to build a scalable and resilient hybrid cloud implementation that manages more than 20,000 cloud resources with Python-based infrastructure code.
     anchor: customers
 
   - type: two_column

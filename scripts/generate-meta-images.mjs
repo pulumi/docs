@@ -10,14 +10,10 @@
 // partials/meta-image-url.html; a page-level `meta_image` overrides it.
 //
 // Templates (all from the Figma "Social assets — banners" file):
-//   - "title"      — centered title on the LIGHT brand field (what-is, migrate,
-//     partner, topics, and the case-studies index). Simple frame.
+//   - "title"      — centered title on the LIGHT brand field (migrate, partner,
+//     topics, whitepapers). Simple frame.
 //   - "info"       — 4-field DARK docs card (section badge, corner label, title,
-//     description) — docs only. Palette INFO_DARK; same layout as "tutorial".
-//   - "tutorial"   — the docs card in LIGHT (palette INFO_LIGHT). Used for the
-//     case-study industry cards (meta-images/industries.mjs).
-//   - "case-study" — LIGHT co-branded card: Pulumi + customer logo lockup with a
-//     right-aligned "CASE STUDY" badge and a large title (case-studies).
+//     description) — docs and blog term pages.
 //   - "events"     — per-size event / workshop card (see meta-images/events.mjs).
 //   - "blog"       — DARK blog-post card: the post's feature image bled off the
 //     right, faded into the field, with a "Blog" badge + title (meta-images/blog.mjs).
@@ -35,12 +31,11 @@ import { cpus } from "os"
 import matter from "gray-matter"
 import { createRequire } from "module"
 import {
-  REPO_ROOT, clean, once, intrinsicSize, loadFonts, titleFont,
+  REPO_ROOT, clean, once, loadFonts, titleFont,
 } from "./meta-images/lib.mjs"
 import { eventFieldsFromFrontmatter } from "./meta-images/events.mjs"
 import { renderPng, CANVAS_W, CANVAS_H } from "./meta-images/render.mjs"
 import { termPages } from "./meta-images/terms.mjs"
-import { industryPages } from "./meta-images/industries.mjs"
 
 const require = createRequire(import.meta.url)
 const yaml = require("js-yaml")
@@ -66,7 +61,10 @@ const OG_TEMPLATE_VERSION = "6"
 //   events r2: byline measured/fitted rather than -webkit-line-clamp'd (it used
 //     to be sliced mid-glyph), 3-line budget on square/portrait, names-only
 //     byline on square.
-const TEMPLATE_REVISION = { events: 2 }
+//   title r2: optional violet label pill between the logo and the title (the
+//     whitepapers section uses it); unlabelled title cards are unchanged.
+//   title r3: more clearance between the logo and the label pill.
+const TEMPLATE_REVISION = { events: 2, title: 3 }
 
 const SAMPLE = !!process.env.OG_SAMPLE // one card per sampleGroupBy group
 const ONLY = (process.env.OG_ONLY || "").split(",").map((s) => s.trim()).filter(Boolean)
@@ -84,11 +82,13 @@ const menuLabels = once(() => {
 
 // Shared shape for the plain centered-title sections (what-is + the small
 // marketing sections). They differ only in name and recursion.
-const titleSection = (name, recursive) => ({
+const titleSection = (name, recursive, label) => ({
   name,
   template: "title",
   recursive,
-  fields: (fm) => ({ title: clean(fm.title) }),
+  // `label` is the optional violet pill above the title, naming the kind of
+  // page. Omit it for sections whose title already says what the page is.
+  fields: (fm) => ({ title: clean(fm.title), label }),
   valid: (f) => !!f.title,
 })
 
@@ -96,24 +96,11 @@ const titleSection = (name, recursive) => ({
 // id is the content-relative path with .md and trailing /_index stripped, e.g.
 // "what-is/what-is-yaml" or "docs/iac/concepts/inputs-outputs".
 const SECTIONS = [
-  titleSection("what-is", false),
-  {
-    name: "case-studies",
-    // Section index → plain "Case Studies" title card; individual studies → the
-    // co-branded case-study card.
-    template: (fm, id) => (id === "case-studies" ? "title" : "case-study"),
-    recursive: false,
-    fields: (fm, id) =>
-      id === "case-studies"
-        ? { title: clean(fm.title) || "Case Studies" }
-        : { title: clean(fm.title), companyLogo: customerLogo(fm.customer_logo) },
-    // Individual studies need a resolvable customer logo; the root title card doesn't.
-    valid: (f, t) => !!f.title && (t === "title" || !!f.companyLogo),
-  },
   // Small marketing sections converted from off-brand meta images to light title cards.
   titleSection("migrate", true),
   titleSection("partner", true),
   titleSection("topics", true),
+  titleSection("whitepapers", false, "Whitepaper"),
   {
     name: "docs",
     template: "info",
@@ -146,8 +133,8 @@ const SECTIONS = [
     // Event / workshop cards (content/events/<slug>/index.md leaf bundles).
     // Individual events → the events card in two sizes (landscape OG meta image
     // + square second og:image). The /events/ index page → a plain title card,
-    // landscape only (same treatment as the case-studies index). The
-    // /event-meta-image skill produces enriched, committed overrides.
+    // landscape only. The /event-meta-image skill produces enriched, committed
+    // overrides.
     name: "events",
     template: (fm, id) => (id === "events" ? "title" : "events"),
     recursive: true,
@@ -159,10 +146,10 @@ const SECTIONS = [
     // OG_SAMPLE → one representative EVENT (both variants); exclude the index so
     // the sample exercises the events renderer, not the index title card.
     sampleGroupBy: (id) => (id === "events" ? null : "events"),
-    // External events do publish an on-site page, but it's never linked (the
-    // events list links straight to the external URL) and is meant to be
-    // noindexed — not worth a card; the default og image covers it.
-    skip: (fm) => fm.external === true,
+    // An off-page event (event_url) still publishes an on-site stub, but it's
+    // never linked (the list links straight out) and is noindexed/redirected —
+    // not worth a card; the default og image covers it.
+    skip: (fm) => Boolean(fm.event_url),
     fields: (fm, id) => (id === "events" ? { title: clean(fm.title) } : eventFieldsFromFrontmatter(fm, id)),
     valid: (f) => !!f.title,
   },
@@ -199,28 +186,6 @@ const SECTIONS = [
     valid: (f) => !!f.title,
   },
 ]
-
-// --- Customer logo (case-study co-brand) -------------------------------------
-// Resolve a frontmatter logo path ("/logos/customers/foo.svg") under static/ to
-// a data URI + display dims scaled into the header lockup. Returns null when the
-// asset is missing or an unsupported type, so the page is skipped (valid()).
-// Customer logos live under assets/fingerprinted/ (routed through Hugo's
-// fingerprinted-img partial on the case-study page); a few also sit in static/.
-const LOGO_ROOTS = [join(REPO_ROOT, "assets", "fingerprinted"), join(REPO_ROOT, "static")]
-function customerLogo(p, { maxH = 52, maxW = 260 } = {}) {
-  const rel = clean(p).replace(/^\//, "")
-  if (!rel) return null
-  const file = LOGO_ROOTS.map((r) => join(r, rel)).find((f) => existsSync(f))
-  if (!file) return null
-  const lower = rel.toLowerCase()
-  const mime = lower.endsWith(".svg") ? "image/svg+xml" : lower.endsWith(".png") ? "image/png" : null
-  if (!mime) return null
-  const buf = readFileSync(file)
-  const { w, h } = intrinsicSize(buf, lower)
-  let dw = (w / h) * maxH, dh = maxH
-  if (dw > maxW) { dw = maxW; dh = (h / w) * maxW }
-  return { uri: `data:${mime};base64,${buf.toString("base64")}`, w: Math.round(dw), h: Math.round(dh) }
-}
 
 // --- Page discovery ----------------------------------------------------------
 function walkMd(dir, recursive) {
@@ -294,12 +259,11 @@ function listPages() {
     for (const p of secPages) p.key = cacheKey(p)
     pages.push(...secPages)
   }
-  // Virtual "terms" section: blog category/tag term pages and case-study
-  // industry term pages have no backing file, so their page objects come from
-  // termPages()/industryPages() rather than a content walk. They flow through
+  // Virtual "terms" section: blog category/tag term pages have no backing file,
+  // so their page objects come from termPages() rather than a content walk. They flow through
   // the same mid/out/key/prune machinery as file-backed pages.
   if (!ONLY.length || ONLY.includes("terms")) {
-    for (const t of [...termPages(), ...industryPages()]) {
+    for (const t of termPages()) {
       const page = { id: t.id, mid: t.id, section: "terms", template: t.template, fields: t.fields, w: t.w, h: t.h, out: join(OUT_ROOT, `${t.id}.png`) }
       page.key = cacheKey(page)
       pages.push(page)

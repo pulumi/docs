@@ -3,6 +3,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
+    {{- /* Consent gate bootstrap (all environments). Defines
+           window.runWithPulumiConsent before any integration (Segment, Common
+           Room, OpenAI, Floqer, HubSpot, YouTube) can initialize, so
+           an early caller is captured rather than lost. It queues until the
+           consent-manager bundle's OneTrust bridge drains the queue once
+           OneTrust resolves the visitor's categories. See
+           theme/src/ts/consent-manager/onetrust.ts. */ -}}
+    <script>
+        (function () {
+            var queue = (window.__pulumiConsentQueue = window.__pulumiConsentQueue || []);
+            window.runWithPulumiConsent = function (category, callback) {
+                queue.push({ category: category, callback: callback });
+            };
+            // OneTrust requires this global to exist when its SDK loads, and
+            // invokes it after load and on every save. Re-dispatch as an event
+            // the bridge listens for; the bundle chains onto this handler.
+            window.OptanonWrapper = function () {
+                window.dispatchEvent(new Event("OneTrustGroupsUpdated"));
+            };
+        })();
+    </script>
+
+    {{- if not site.Params.oneTrustDomainScript }}
+        {{- errorf "params.oneTrustDomainScript is not set" }}
+    {{- end }}
+    <!-- OneTrust CMP (loaded before Segment and all optional integrations).
+         Auto-Blocking stays off; consent is enforced by explicit checks in the
+         site code via runWithPulumiConsent. The domain script id comes from
+         params.oneTrustDomainScript: config/production has the pulumi.com id
+         and config/_default the test id. Its scripts load without CORS and
+         its JSON with CORS, so each kind of connection gets a preconnect. -->
+    <link rel="preconnect" href="https://cdn.cookielaw.org" />
+    <link rel="preconnect" href="https://cdn.cookielaw.org" crossorigin />
+    <script
+        async
+        src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+        type="text/javascript"
+        charset="UTF-8"
+        data-domain-script="{{ site.Params.oneTrustDomainScript }}"></script>
+
     <!-- GrowthBook / Segment keys -->
     <script>
         {{- if eq hugo.Environment "production" }}
@@ -96,7 +136,10 @@
     <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
     <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
 
-    {{ if .Params.redirect_to }}
+    {{/* An event hosted elsewhere (event_url) redirects its generated stub there,
+         alongside the general-purpose redirect_to mechanism. */}}
+    {{ $redirectTarget := or .Params.redirect_to .Params.event_url }}
+    {{ if $redirectTarget }}
         {{ $delay := 0 }}
 
         {{/* https://developers.google.com/search/docs/advanced/crawling/301-redirects#metarefresh */}}
@@ -105,10 +148,12 @@
         {{ end }}
 
 
-        <meta http-equiv="refresh" content="{{ $delay }}; url={{ .Params.redirect_to }}" />
+        <meta http-equiv="refresh" content="{{ $delay }}; url={{ $redirectTarget }}" />
     {{ end }}
 
-    {{ if eq .Params.block_external_search_index true }}
+    {{/* An off-page event (event_url) is never indexable: the generated stub only
+         exists so the list and RSS have something to link out from. */}}
+    {{ if or (eq .Params.block_external_search_index true) .Params.event_url }}
         <meta name="robots" content="noindex" />
     {{ end }}
 
@@ -117,7 +162,7 @@
         Taxonomy pages (tags, authors, and the bare taxonomy lists) are
         noindexed because they cannibalise core pages that rank for the same
         terms; curated landing pages (blog categories, blog series,
-        case-study industries) are carved out. The full policy and its history live in
+        customer industries) are carved out. The full policy and its history live in
         partials/taxonomy-indexable.html, which the sitemap shares.
     -->
     {{ if not (partial "taxonomy-indexable.html" .) }}
@@ -155,7 +200,7 @@
         Optional second og:image: a square (1:1) card for surfaces that prefer
         it. Best-effort — most scrapers use the first og:image (the landscape
         card above), which also stays the twitter:image. Resolved by
-        partials/meta-image-square-url.html (events auto-generate one; any page
+        partials/meta-image-square-url.html (events and blog posts get one; any page
         can set meta_image_square).
     */ -}}
     {{ $squareImage := partial "meta-image-square-url.html" . }}
@@ -207,7 +252,13 @@
         {{ end }}
     {{ end }}
 
-    {{ if .Params.meta_title }}
+    {{/* Taxonomy term pages (blog category/tag/author/series) carry no
+        front-matter title/meta_title, so without this branch they fall
+        through to the site-wide default below. Source the same human display
+        name the <title> tag uses further down instead. */}}
+    {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
+        <meta property="og:title" content="{{ partial "blog/term-name.html" . }}" />
+    {{ else if .Params.meta_title }}
         <meta property="og:title" content="{{ .Params.meta_title }}" />
     {{ else if .Params.title }}
         <meta property="og:title" content="{{ .Params.title }}" />
@@ -221,10 +272,13 @@
     {{ else if and .IsHome .Site.Params.meta_desc }}
         <meta name="description" content="{{ .Site.Params.meta_desc }}" />
         <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
-    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series") .Data.Singular) }}
-        {{/* Blog taxonomy term pages (category, tag, series) have no .Summary;
-            source their description from the data files so they don't fall
-            through to an empty meta description. */}}
+    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "author") .Data.Singular) }}
+        {{/* Blog taxonomy term pages (category, tag, series, author) have no
+            .Summary; source their description from the data files so they don't fall through to an
+            empty meta description. Author term pages below the post-count
+            floor in taxonomy-indexable.html are noindexed anyway, so a
+            generic description here is harmless for them and correct for the
+            indexable ones. */}}
         {{ $desc := "" }}
         {{ if eq .Data.Singular "category" }}
             {{ range site.Data.blog_categories.categories }}
@@ -236,6 +290,10 @@
             {{ end }}{{ end }}
         {{ else if eq .Data.Singular "tag" }}
             {{ $desc = printf "Pulumi blog posts about %s." ($.Data.Term | humanize | lower) }}
+        {{ else if eq .Data.Singular "author" }}
+            {{ $authorName := .Data.Term | humanize }}
+            {{ with index site.Data.team.team .Data.Term }}{{ $authorName = .name }}{{ end }}
+            {{ $desc = printf "Pulumi blog posts by %s." $authorName }}
         {{ end }}
         {{ with $desc | chomp }}
             <meta name="description" content="{{ . }}" />
@@ -247,7 +305,13 @@
     {{ end }}
 
     {{ if .IsHome }}
-        <title>{{ .Site.Title }}</title>
+        {{- /* Home page: honour the front-matter title (title_tag, then .Title)
+             the same way every other page in this file does, falling back to
+             the site title only if the home page has neither. This keeps the
+             rendered <title> consistent with the WebPage schema name, which
+             already reads title_tag-then-.Title, and with og:title, which on
+             the home page resolves to the same front-matter title. */ -}}
+        <title>{{ or .Params.title_tag .Title .Site.Title }}</title>
     {{ else if .Title }}
         {{ $title := .Title }}
         {{- /* Blog taxonomy pages: use the display name (category name / series
@@ -257,19 +321,10 @@
              Blog" doesn't. $blogTerm drives the suffix branch. */ -}}
         {{ $blogTerm := false }}
         {{ $seriesTerm := false }}
-        {{ $industryTerm := false }}
         {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
             {{ $blogTerm = true }}
             {{ $title = partial "blog/term-name.html" . }}
             {{ if eq .Data.Singular "series" }}{{ $seriesTerm = true }}{{ end }}
-        {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
-            {{- /* Case-study industry term page: use the display name from the
-                 data-file source of truth instead of Hugo's slug-derived .Title
-                 ("Developer-Tools"), and suffix "| Case Studies" below. */ -}}
-            {{ $industryTerm = true }}
-            {{ range site.Data.case_study_industries.industries }}
-                {{ if eq .id $.Data.Term }}{{ $title = .name }}{{ end }}
-            {{ end }}
         {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "category") }}
             {{ $blogTerm = true }}
             {{ $title = "Categories" }}
@@ -322,10 +377,29 @@
             <title>{{ $title }} | Pulumi Docs</title>
         {{ else if eq .Type "registry" }}
             <title>{{ replace $title "/" "." }} | Pulumi Registry</title>
-        {{ else if $industryTerm }}
-            <title>{{ $title }} | Case Studies | Pulumi</title>
         {{ else }}
             <title>{{ $title }} | Pulumi</title>
+        {{ end }}
+
+        {{- /* /blog/page/N/ (N>1) gets a canonical further below in this file
+             pointing at /blog/ -- Hugo resolves .RelPermalink for a paginated
+             section to the section's base URL regardless of which /page/N/
+             is being rendered, so this isn't self-referential, but a canonical
+             is still only a hint Google can choose to ignore. Search Console
+             confirms it does for this specific series: pages 2, 3, 5, and 8
+             were independently indexed anyway despite the same canonical.
+             noindex,follow removes the ambiguity while still letting crawlers
+             follow links to the real posts linked from the page. Category
+             term pagination (the $blogTerm branch above) gets the identical
+             canonical-to-base-URL treatment and is deliberately left
+             untouched -- confirmed via GSC's "Alternate page with proper
+             canonical tag" coverage state, Google does honor it there, even
+             though nothing in the template treats the two series
+             differently. Tag/author term pagination is a separate case,
+             already blanket-noindexed outright by taxonomy-indexable.html,
+             which this branch does not touch. */ -}}
+        {{ if and (eq .Type "blog") .IsSection (gt $pageNum 1) }}
+            <meta name="robots" content="noindex,follow" />
         {{ end }}
     {{ else if not (or .Params.redirect_to .Params.private) }}
         <!--
@@ -436,20 +510,12 @@
         })();
     </script>
 
-    <!-- Segment Consent Manager (production only - the banner and its analytics
-         gating are suppressed on local dev and PR preview builds). -->
-    {{- if eq hugo.Environment "production" }}
+    {{- /* Consent manager bundle: installs the runWithPulumiConsent bridge and
+           drives the Segment loader from the OneTrust categories. */ -}}
     <script>
         window.consentManagerConfig = {
             writeKey: segmentWriteKey,
-            cdnHost: "evs.analytics.pulumi.com",
-            container: "#segment-consent-manager",
-            privacyPolicyUrl: "/privacy/",
-            bannerText: "We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you\u02BCre agreeing to the collection of data as described in our",
-            preferencesDialogTitle: "Website Data Collection Preferences",
-            preferencesDialogContent: "We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.",
-            cancelDialogTitle: "Are you sure you want to cancel?",
-            cancelDialogContent: "Your preferences have not been saved. By continuing to use our website, you are agreeing to our Website Data Collection Policy."
+            cdnHost: "evs.analytics.pulumi.com"
         };
     </script>
 
@@ -461,54 +527,57 @@
             document.body.appendChild(s);
         });
     </script>
-    {{- end }}
 
     {{- if eq hugo.Environment "production" }}
         <!-- Facebook Domain Verification -->
         <meta name="facebook-domain-verification" content="phlf6qes2bxa9ufzk8zt2es0qivg8j" />
+    {{- end }}
 
+    {{- /* Directly-loaded optional integrations, each gated on Targeting
+           (C0004) via runWithPulumiConsent. Production only: their account
+           ids are the production ones, and other builds have no separate ids. */ -}}
+    {{- if eq hugo.Environment "production" }}
         <!-- Common Room (deferred to window.load to avoid blocking first paint) -->
         <script>
             window.addEventListener('load', function() {
-                if (typeof window.signals !== 'undefined') return;
-                var script = document.createElement('script');
-                script.src = 'https://cdn.cr-relay.com/v1/site/a725b5ba-75f1-44dc-b250-11023fc10b9d/signals.js';
-                script.async = true;
-                window.signals = Object.assign(
-                    [],
-                    ['page', 'identify', 'form'].reduce(function (acc, method){
-                        acc[method] = function () {
-                        signals.push([method, arguments]);
-                        return signals;
-                        };
-                        return acc;
-                    }, {})
-                );
-                document.head.appendChild(script);
+                function loadCommonRoom() {
+                    if (typeof window.signals !== 'undefined') return;
+                    var script = document.createElement('script');
+                    script.src = 'https://cdn.cr-relay.com/v1/site/a725b5ba-75f1-44dc-b250-11023fc10b9d/signals.js';
+                    script.async = true;
+                    window.signals = Object.assign(
+                        [],
+                        ['page', 'identify', 'form'].reduce(function (acc, method){
+                            acc[method] = function () {
+                            signals.push([method, arguments]);
+                            return signals;
+                            };
+                            return acc;
+                        }, {})
+                    );
+                    document.head.appendChild(script);
+                }
+                window.runWithPulumiConsent("C0004", loadCommonRoom);
             });
         </script>
 
-        <!-- OpenAI ad pixel (deferred to window.load to avoid blocking first paint) — Marketing & Analytics
-             consent-gated: loads only after the consent-managed Segment analytics is ready
-             (window.analytics.ready), same as the Floqer integration below. Fail-closed: if
-             consent-managed analytics never loads, the pixel never loads. -->
+        <!-- OpenAI ad pixel (deferred to window.load to avoid blocking first paint) — Targeting (C0004)
+             consent-gated: it loads only after C0004 is granted, so if consent is never satisfied
+             the pixel never loads. -->
         <script>
             window.addEventListener('load', function() {
                 function loadOaiq() {
                     !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
                     oaiq("init",{pixelId:"7KRuATZtZE3j5BSAZErZAb",debug:false});
                 }
-                if (window.analytics && typeof window.analytics.ready === "function") {
-                    window.analytics.ready(loadOaiq);
-                }
+                window.runWithPulumiConsent("C0004", loadOaiq);
             });
         </script>
 
-        <!-- Floqer (RB2B) visitor identification — Marketing & Analytics consent-gated (see partials/floqer.html). Page-scoped via `include_floqer` front matter. -->
+        <!-- Floqer (RB2B) visitor identification — Targeting (C0004) consent-gated (see partials/floqer.html). Page-scoped via `include_floqer` front matter. -->
         {{ if .Params.include_floqer }}
         {{ partial "floqer.html" . }}
         {{ end }}
-
     {{- end }}
 
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages.

@@ -139,6 +139,9 @@ sync_args=(--no-progress --cache-control "$IMMUTABLE_CC")
 # Never upload generator build cruft to an immutable snapshot: Sphinx doctree pickles
 # (.doctrees/*.doctree, .buildinfo) are build state, not served pages.
 sync_args+=(--exclude '*.doctree' --exclude '*/.doctrees/*' --exclude '.doctrees/*' --exclude '.buildinfo')
+# A docset's sitemap.xml lists *live* URLs (Hugo's sitemap index points at the live copy),
+# so it doesn't belong in a noindex archive.
+sync_args+=(--exclude 'sitemap.xml' --exclude '*/sitemap.xml')
 [[ "$FORCE" == "true" ]] && sync_args+=(--delete)
 aws s3 sync "$WORKDIR/" "s3://${BUCKET}/${PREFIX}" "${sync_args[@]}"
 

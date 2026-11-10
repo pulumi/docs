@@ -31,6 +31,11 @@
       duration    per-session, or the event's
       form        per-session, or the event's
       presenters  per-session, or the event's
+      youtube_url per-session recording, or "". Lets a session that has run show
+                  its recording in place of its form while a later session is
+                  still taking registrations. Distinct from the event's top-level
+                  `youtube_url`, which flips the whole page to the on-demand layout
+                  once the event is wholly done.
       index       position after sorting, 0-based
 
     Returns an empty slice for a page under content/events/ with neither key —
@@ -61,6 +66,7 @@
             "duration" (.duration | default $page.Params.duration)
             "form" (.form | default $page.Params.form)
             "presenters" (.presenters | default $page.Params.presenters)
+            "youtube_url" (.youtube_url | default "")
         ) -}}
     {{- end -}}
     {{- $sessions = sort $sessions "unix" "asc" -}}
@@ -73,6 +79,7 @@
         "duration" $page.Params.duration
         "form" $page.Params.form
         "presenters" $page.Params.presenters
+        "youtube_url" ($page.Params.youtube_url | default "")
     ) -}}
 {{- end -}}
 

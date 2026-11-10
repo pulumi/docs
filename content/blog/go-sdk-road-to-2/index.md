@@ -64,13 +64,13 @@ Inputs, Outputs, and functions that operate over them ([All](/docs/iac/concepts/
 Although Pulumi for Go is in “preview” status until 2.0 is released, it supports all of the essential Pulumi programming model features (and the rest is on its way). Our goal is to gather feedback and over the next few weeks, and work hard to improve the Go experience across the board, including more examples and better documentation. To get started check out:
 
 - [GoDoc](https://godoc.org/github.com/pulumi/pulumi)
-- Getting started with Go and [AWS](/docs/iac/get-started/aws/), [Azure](/docs/iac/get-started/azure/), or [Google Cloud](/docs/iac/get-started/gcp/).
+- Getting started with Go and [AWS](/up/?cloud=aws), [Azure](/up/?cloud=azure), or [Google Cloud](/up/?cloud=gcp).
 - Author and deploy serverless functions in Go on [AWS Lambda](https://github.com/pulumi/examples/tree/master/aws-go-lambda) and [GCP Cloud Functions](https://github.com/pulumi/examples/tree/master/gcp-go-functions).
 - Build a serverless container-based application on [AWS ECS Fargate](https://github.com/pulumi/examples/tree/master/aws-go-fargate).
 - Deploy a web server on a virtual machine with [AWS](https://github.com/pulumi/examples/tree/master/aws-go-webserver) or [Azure](https://github.com/pulumi/examples/tree/master/classic-azure-go-webserver-component).
 - Deploy a Kubernetes cluster using [Azure Kubernetes Service](https://github.com/pulumi/examples/tree/master/azure-go-aks).
 
-To keep up with our progress, follow [Pulumi on Github](https://github.com/pulumi/pulumi/), and feel free to [open a new issue](https://github.com/pulumi/pulumi/issues/new) with ideas, feedback, and bugs. [Join the community in Slack](https://slack.pulumi.com/) to discuss your scenarios, and to get any needed assistance from the team and other end users.
+To keep up with our progress, follow [Pulumi on GitHub](https://github.com/pulumi/pulumi/), and feel free to [open a new issue](https://github.com/pulumi/pulumi/issues/new) with ideas, feedback, and bugs. [Join the community in Slack](https://slack.pulumi.com/) to discuss your scenarios, and to get any needed assistance from the team and other end users.
 
 ### Coming Soon
 

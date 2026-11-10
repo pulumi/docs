@@ -1,5 +1,5 @@
 ---
-title: Toward a Cloud Native Programming Model
+title: Toward a cloud native programming model
 description: Cloud innovation has delivered limitless capabilities that promise to transform all aspects of software development.
 meta_desc: Pulumi provides a cloud native programming model for containers, Lambdas, and infrastructure, to get code to the cloud faster than ever before.
 aliases:
@@ -15,7 +15,9 @@ sections:
 
 This radical democratization is thanks to containers, serverless (lambda) computing, and opinionated data and infrastructure services, leveling the playing field, lowering barriers to entry, and delivering the closest thing to an "operating system for the cloud" that we've ever seen.
 
->To a first approximation, all developers have become cloud developers.
+{{< pullquote variant="statement" >}}
+To a first approximation, all developers have become cloud developers.
+{{< /pullquote >}}
 
 However, cloud developers lack a consistent programming model to provide the productivity gains for application development harnessing these capabilities. Pulumi aims to provide that programming model.
 
@@ -32,6 +34,8 @@ The programming models, however -- the lingua franca developers use to express t
 To put this transition into perspective, until just recently "getting code to the cloud" meant "lift and shift": taking aging n-tier web apps, dusting them off with minimal changes, and rehosting them in the public cloud.  This may yield significant cost savings, allowing organizations to reduce or retire their own data center expenditures, while also improving agility.  For many organizations, much of the promise behind containers is to increase the scope of this approach.
 
 Because of the nature of lift and shift, however, the tools developers use to create and manage cloud software have progressed slowly.  One of the benefits of containers has been giving developers simpler tools and workflows to package up their code to deploy into the cloud.  But operating such programs at scale and in production -- and architecting these programs in a truly cloud native way -- is still the domain of cutting edge experts.  And containers, while a powerful abstraction, say nothing about serverless computing or opinionated cloud services.
+
+---
 
 ### A programming model for the cloud
 
@@ -53,9 +57,13 @@ Newer cloud architectures are already resulting in a dramatic shift from coarse-
 
 The key missing piece to taming this complexity is having lovable abstractions that allow for abstraction, reuse, and componentization.
 
-> Infrastructure must become programmable just like our code.
+{{< pullquote variant="statement" >}}
+Infrastructure must become programmable just like our code.
+{{< /pullquote >}}
 
 A true cloud programming platform will offer a clear path to finally realizing the DevOps vision that our industry has made so much progress towards in the past decade.   As with all software skills, practitioners will specialize in operational areas they know best and become industry influencers in their areas of expertise.  The tools, however, will allow them to share their best practices in a reusable form, the same way thought leaders in, for example, machine learning have shared frameworks they have built.  This allows us all to stand on the shoulders of giants, and to remove the hard divide between developers and operators that has discouraged collaboration, sharing of knowledge, and innovation.  A common lingua franca is within our grasp.
+
+---
 
 ### Spin up with Pulumi
 

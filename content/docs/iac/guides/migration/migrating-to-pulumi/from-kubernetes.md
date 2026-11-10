@@ -16,11 +16,11 @@ aliases:
 
 <img src="/logos/tech/k8s.svg" align="right" class="h-16 px-8 pb-4">
 
-Pulumi makes it easy to author your Kubernetes configuration in your choice of language, as well as reuse existing Kubernetes and Helm YAML configuration files. This enables you to write, rewrite, or reuse existing Kubernetes configuration, or even take a hybrid approach, while still standardizing on Pulumi for deployment orchestration. It's common, for example, to have Helm charts deployed in Pulumi alongside natively defined object configurations.
+Pulumi lets you author your Kubernetes configuration in your choice of language, as well as reuse existing Kubernetes and Helm YAML configuration files. This enables you to write, rewrite, or reuse existing Kubernetes configuration, or even take a hybrid approach, while still standardizing on Pulumi for deployment orchestration. It's common, for example, to have Helm charts deployed in Pulumi alongside natively defined object configurations.
 
 Pulumi also enables you to render the Kubernetes objects in your program into YAML which eases adoption in the opposite direction: you can use Pulumi to author your configuration, getting the benefits of general-purpose and familiar programming languages, while still being able to deploy the resulting YAML with existing toolchains like `kubectl` or your CI/CD vendor's Kubernetes support.
 
-> To learn more about Pulumi's Kubernetes support, see [the Kubernetes Overview](/registry/packages/kubernetes/) or jump straight in with [the Getting Started Guide](/docs/iac/get-started/kubernetes/).
+> To learn more about Pulumi's Kubernetes support, see [the Kubernetes Overview](/registry/packages/kubernetes/) or jump straight in with [the get-started guide](/up/?cloud=kubernetes).
 
 ## Deploying Kubernetes YAML
 
@@ -31,7 +31,7 @@ The Kubernetes package provides the `yaml` module which defines two resource typ
 
 By defining these resources in code, you can deploy off-the-shelf Kubernetes YAML files without needing to change them. Pulumi understands the full topology of resource objects inside those YAML files. The examples below show how to do both &mdash; first a single YAML file and then a group of them &mdash; using the standard [Kubernetes Guestbook Application](https://github.com/kubernetes/examples/tree/master/web/guestbook).
 
-### Deploying a Single Kubernetes YAML File
+### Deploying a single Kubernetes YAML file
 
 The `ConfigFile` resource type accepts a `file` parameter that indicates the path or URL to read the YAML configuration from. By default, the auto-generated resource names are prefixed with the name of the `ConfigFile`, however you can specify a `resourcePrefix` to use a different prefix. One or more `transforms` callbacks can be supplied via `ResourceOptions` to arbitrarily rewrite resource configurations on-the-fly before deploying them.
 
@@ -42,38 +42,33 @@ $ curl -L --remote-name \
     https://raw.githubusercontent.com/kubernetes/examples/master/web/guestbook/all-in-one/guestbook-all-in-one.yaml
 ```
 
-This Pulumi program uses `ConfigFile` to read that YAML file, provision the resources inside it, and export the resulting IP addresses:
+The guestbook's `redis-master` Deployment uses the `registry.k8s.io/redis:e2e` image, which has a Docker schema 1 manifest that containerd 2.1 and later can no longer pull. Switch it to the official `redis` image, as the comment in the file suggests:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+```bash
+$ sed -i.bak 's|registry.k8s.io/redis:e2e|redis|' guestbook-all-in-one.yaml
+```
+
+This Pulumi program uses `ConfigFile` to read that YAML file and provision the resources inside it:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
-// Create resources from standard Kubernetes guestbook YAML example.
 const guestbook = new k8s.yaml.v2.ConfigFile("guestbook", {
     file: "guestbook-all-in-one.yaml",
 });
-
-// Export the private cluster IP address of the frontend.
-const frontend = guestbook.getResource("v1/Service", "frontend");
-export const privateIp = frontend.spec.clusterIP;
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-import pulumi
 from pulumi_kubernetes.yaml.v2 import ConfigFile
 
-# Create resources from standard Kubernetes guestbook YAML example.
 guestbook = ConfigFile("guestbook", file="guestbook-all-in-one.yaml")
-
-# Export the private cluster IP address of the frontend.
-frontend = guestbook.get_resource("v1/Service", "frontend")
-pulumi.export("private_ip", frontend.spec["cluster_ip"])
 ```
 
 {{% /choosable %}}
@@ -83,23 +78,18 @@ pulumi.export("private_ip", frontend.spec["cluster_ip"])
 package main
 
 import (
-    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
     yamlv2 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/yaml/v2"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        guestbook, err := yamlv2.NewConfigFile(ctx, "guestbook", &yamlv2.ConfigFileArgs{
+        _, err := yamlv2.NewConfigFile(ctx, "guestbook", &yamlv2.ConfigFileArgs{
             File: pulumi.String("guestbook-all-in-one.yaml"),
         })
         if err != nil {
             return err
         }
-
-        // Export the private cluster IP address of the frontend.
-        frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
-        ctx.Export("privateIP", frontend.Spec.ClusterIP())
 
         return nil
     })
@@ -110,13 +100,10 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
-using Pulumi;
 using Pulumi.Kubernetes.Yaml.V2;
-using Pulumi.Kubernetes.Core.V1;
+using Pulumi.Kubernetes.Types.Inputs.Yaml.V2;
 
 class Program
 {
@@ -124,18 +111,10 @@ class Program
     {
         return Pulumi.Deployment.RunAsync(() =>
         {
-            // Create resources from standard Kubernetes guestbook YAML example.
             var guestbook = new ConfigFile("guestbook", new ConfigFileArgs
             {
                 File = "guestbook-all-in-one.yaml",
             });
-
-            // Export the private cluster IP address of the frontend.
-            var frontend = guestbook.GetResource<Service>("frontend");
-            return new Dictionary<string, object?>
-            {
-                { "privateIp", frontend.Apply(fe => fe.Spec.Apply(spec => spec.ClusterIP)) },
-            };
         });
     }
 }
@@ -145,6 +124,8 @@ class Program
 {{% choosable language java %}}
 
 ```java
+package myproject;
+
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.kubernetes.yaml.v2.ConfigFile;
@@ -156,7 +137,6 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        // Create resources from standard Kubernetes guestbook YAML example.
         var guestbook = new ConfigFile("guestbook",
             ConfigFileArgs.builder()
                 .file("guestbook-all-in-one.yaml")
@@ -178,35 +158,57 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "pulumi/kubernetes"
+      version = "4.23.0"
+    }
+  }
+}
+
+resource "kubernetes_yaml_v2_config_file" "guestbook" {
+  file = "guestbook-all-in-one.yaml"
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
-As we can see here, the `getResource` function lets us retrieve an internal resource by type and name, so that we can interact with its properties. These will be strongly typed based on the resource type. Be careful using this, of course, as it makes your code subject to the internal implementation details of the YAML configuration &mdash; however, it's often necessary to find the information you need, like the auto-assigned IP addresses.
-
-Running `pulumi up` will deploy the resources and then export the resulting frontend service's auto-assigned cluster IP address:
+Running `pulumi up` deploys the resources:
 
 ```bash
-Updating (dev)
+Updating (dev):
 
-     Type                                 Name                 Status
- +   pulumi:pulumi:Stack                  pulumi-k8s-test-dev  created
- +   └─ kubernetes:yaml:ConfigFile        guestbook            created
- +      ├─ kubernetes:core/v1:Service     redis-replica        created
- +      ├─ kubernetes:core/v1:Service     frontend             created
- +      ├─ kubernetes:core/v1:Service     redis-master         created
- +      ├─ kubernetes:apps/v1:Deployment  redis-master         created
- +      ├─ kubernetes:apps/v1:Deployment  frontend             created
- +      └─ kubernetes:apps/v1:Deployment  redis-replica        created
-
-Outputs:
-    privateIp: "10.110.181.172"
+     Type                                 Name                             Status
+ +   pulumi:pulumi:Stack                  pulumi-k8s-test-dev              created
+ +   └─ kubernetes:yaml/v2:ConfigFile     guestbook                        created
+ +      ├─ kubernetes:apps/v1:Deployment  guestbook:default/redis-replica  created
+ +      ├─ kubernetes:apps/v1:Deployment  guestbook:default/frontend       created
+ +      ├─ kubernetes:core/v1:Service     guestbook:default/redis-replica  created
+ +      ├─ kubernetes:core/v1:Service     guestbook:default/redis-master   created
+ +      ├─ kubernetes:core/v1:Service     guestbook:default/frontend       created
+ +      └─ kubernetes:apps/v1:Deployment  guestbook:default/redis-master   created
 
 Resources:
     + 8 created
 ```
 
-### Deploying Multiple Kubernetes YAML Files
+`ConfigFile` exposes the objects it creates through its `resources` output, but it doesn't provide a way to look up a single object by kind and name. To find a value that Kubernetes assigns at deploy time, like the frontend service's cluster IP address, query the cluster with `kubectl`:
 
-The `ConfigGroup` resource type is similar to `ConfigFile`. Instead of a single file, it accepts a `files` parameter that contains a list of file paths, file globs, and/or URLs from which to read the YAML configuration from. By default, the auto-generated resource names are prefixed with the name of the `ConfigGroup`, however you can specify a `resourcePrefix` to use a different prefix. One or more `transforms` callbacks can be supplied via `ResourceOptions` to arbitrarily rewrite resource configurations on-the-fly before deploying them.
+```bash
+$ kubectl get service frontend
+NAME       TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+frontend   NodePort   10.107.35.136   <none>        80:31533/TCP   10s
+```
+
+### Deploying multiple Kubernetes YAML files
+
+The `ConfigGroup` resource type works like `ConfigFile`. Instead of a single file, it accepts a `files` parameter that contains a list of file paths, file globs, and/or URLs from which to read the YAML configuration from. By default, the auto-generated resource names are prefixed with the name of the `ConfigGroup`, however you can specify a `resourcePrefix` to use a different prefix. One or more `transforms` callbacks can be supplied via `ResourceOptions` to arbitrarily rewrite resource configurations on-the-fly before deploying them.
 
 To deploy the Kubernetes Guestbook Application using a collection of YAML files, first create a `yaml` directory and download them into it:
 
@@ -218,9 +220,15 @@ $ curl -L --remote-name \
 $ popd
 ```
 
-This Pulumi program uses `ConfigGroup` to read these YAML files, provision the resources inside of them, and export the resulting IP addresses:
+As with the single file, switch the `redis-master` Deployment to the official `redis` image:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+```bash
+$ sed -i.bak 's|registry.k8s.io/redis:e2e|redis|' yaml/redis-master-deployment.yaml
+```
+
+This Pulumi program uses `ConfigGroup` to read these YAML files and provision the resources inside of them:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -228,29 +236,18 @@ This Pulumi program uses `ConfigGroup` to read these YAML files, provision the r
 import * as k8s from "@pulumi/kubernetes";
 import * as path from "path";
 
-// Create resources from standard Kubernetes guestbook YAML example.
 const guestbook = new k8s.yaml.v2.ConfigGroup("guestbook", {
     files: [ path.join("yaml", "*.yaml") ],
 });
-
-// Export the private cluster IP address of the frontend.
-const frontend = guestbook.getResource("v1/Service", "frontend");
-export const privateIp = frontend.spec.clusterIP;
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-import pulumi
 from pulumi_kubernetes.yaml.v2 import ConfigGroup
 
-# Create resources from standard Kubernetes guestbook YAML example.
 guestbook = ConfigGroup("guestbook", files=["yaml/*.yaml"])
-
-# Export the private cluster IP address of the frontend.
-frontend = guestbook.get_resource("v1/Service", "frontend")
-pulumi.export("private_ip", frontend.spec["cluster_ip"])
 ```
 
 {{% /choosable %}}
@@ -262,23 +259,18 @@ package main
 import (
     "path/filepath"
 
-    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
     yamlv2 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/yaml/v2"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        guestbook, err := yamlv2.NewConfigGroup(ctx, "guestbook", &yamlv2.ConfigGroupArgs{
+        _, err := yamlv2.NewConfigGroup(ctx, "guestbook", &yamlv2.ConfigGroupArgs{
             Files: pulumi.StringArray{pulumi.String(filepath.Join("yaml", "*.yaml"))},
         })
         if err != nil {
             return err
         }
-
-        // Export the private cluster IP address of the frontend.
-        frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
-        ctx.Export("privateIP", frontend.Spec.ClusterIP())
 
         return nil
     })
@@ -289,14 +281,11 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-using Pulumi;
 using Pulumi.Kubernetes.Yaml.V2;
-using Pulumi.Kubernetes.Core.V1;
+using Pulumi.Kubernetes.Types.Inputs.Yaml.V2;
 
 class Program
 {
@@ -304,18 +293,10 @@ class Program
     {
         return Pulumi.Deployment.RunAsync(() =>
         {
-            // Create resources from standard Kubernetes guestbook YAML example.
             var guestbook = new ConfigGroup("guestbook", new ConfigGroupArgs
             {
                 Files = { Path.Combine("yaml", "*.yaml") },
             });
-
-            // Export the private cluster IP address of the frontend.
-            var frontend = guestbook.GetResource<Service>("frontend");
-            return new Dictionary<string, object?>
-            {
-                { "privateIp", frontend.Apply(fe => fe.Spec.Apply(spec => spec.ClusterIP)) },
-            };
         });
     }
 }
@@ -325,6 +306,8 @@ class Program
 {{% choosable language java %}}
 
 ```java
+package myproject;
+
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.kubernetes.yaml.v2.ConfigGroup;
@@ -336,7 +319,6 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        // Create resources from standard Kubernetes guestbook YAML example.
         var guestbook = new ConfigGroup("guestbook",
             ConfigGroupArgs.builder()
                 .files("yaml/*.yaml")
@@ -359,52 +341,62 @@ resources:
 
 {{% /choosable %}}
 
-{{< /chooser >}}
+{{% choosable language hcl %}}
 
-Running `pulumi up` will deploy all of the resources in all of the YAML files and then export the resulting frontend service's auto-assigned cluster IP address:
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "pulumi/kubernetes"
+      version = "4.23.0"
+    }
+  }
+}
 
-```bash
-Updating (dev)
-
-     Type                                    Name                                    Status
- +   pulumi:pulumi:Stack                     pulumi-k8s-test-dev                     created
- +   └─ kubernetes:yaml:ConfigGroup          guestbook                               created
- +      ├─ kubernetes:yaml:ConfigFile        foo-test/redis-replica-service.yaml     created
- +      │  └─ kubernetes:core/v1:Service     redis-replica                           created
- +      ├─ kubernetes:yaml:ConfigFile        foo-test/frontend-deployment.yaml       created
- +      │  └─ kubernetes:apps/v1:Deployment  frontend                                created
- +      ├─ kubernetes:yaml:ConfigFile        foo-test/redis-master-deployment.yaml   created
- +      │  └─ kubernetes:apps/v1:Deployment  redis-master                            created
- +      ├─ kubernetes:yaml:ConfigFile        foo-test/frontend-service.yaml          created
- +      │  └─ kubernetes:core/v1:Service     frontend                                created
- +      ├─ kubernetes:yaml:ConfigFile        foo-test/redis-master-service.yaml      created
- +      │  └─ kubernetes:core/v1:Service     redis-master                            created
- +      └─ kubernetes:yaml:ConfigFile        foo-test/redis-replica-deployment.yaml  created
- +         └─ kubernetes:apps/v1:Deployment  redis-replica                           created
-
-Outputs:
-    privateIp: "10.108.151.100"
-
-Resources:
-    + 14 created
+resource "kubernetes_yaml_v2_config_group" "guestbook" {
+  files = ["yaml/*.yaml"]
+}
 ```
 
-## Deploying Helm Charts
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Running `pulumi up` deploys the resources in every YAML file:
+
+```bash
+Updating (dev):
+
+     Type                                 Name                             Status
+ +   pulumi:pulumi:Stack                  pulumi-k8s-test-dev              created
+ +   └─ kubernetes:yaml/v2:ConfigGroup    guestbook                        created
+ +      ├─ kubernetes:core/v1:Service     guestbook:default/redis-replica  created
+ +      ├─ kubernetes:apps/v1:Deployment  guestbook:default/redis-master   created
+ +      ├─ kubernetes:apps/v1:Deployment  guestbook:default/redis-replica  created
+ +      ├─ kubernetes:apps/v1:Deployment  guestbook:default/frontend       created
+ +      ├─ kubernetes:core/v1:Service     guestbook:default/frontend       created
+ +      └─ kubernetes:core/v1:Service     guestbook:default/redis-master   created
+
+Resources:
+    + 8 created
+```
+
+## Deploying Helm charts
 
 <img src="/logos/tech/helm.svg" align="right" class="h-32 px-8 pb-4">
 
-Pulumi supports two distinct means of using Helm Charts:
+Pulumi supports two distinct means of using Helm charts:
 
-1. [Emulating Helm Charts to render resource templates](#emulating-helm-charts-with-chart-resources)
-2. [Natively installing Helm Charts as Releases](#natively-installing-helm-charts-as-releases)
+1. [Emulating Helm charts to render resource templates](#emulating-helm-charts-with-chart-resources)
+1. [Natively installing Helm charts as Releases](#natively-installing-helm-charts-as-releases)
 
 We discuss and provide examples for each approach in this section.
 
-### Emulating Helm Charts With Chart Resources
+### Emulating Helm charts with Chart resources
 
 With the [Helm V3](/registry/packages/kubernetes/api-docs/helm/v3/chart/) chart resources, Pulumi renders the templates and applies them directly, much like with `ConfigFile` and `ConfigGroup` shown earlier, which means all provisioning happens client-side using your Kubernetes authentication setup without needing a server-side component.
 
-The `Release` resource type provides a number of options to control where to fetch the chart's contents from. This includes:
+The `Chart` resource type provides options to control where to fetch the chart's contents from. This includes:
 
 * `chart`: The required chart name (for instance, `"wordpress"`).
 * `repo`: (Optional) The helm repository to pull the chart from (e.g., `"stable"`).
@@ -413,11 +405,11 @@ The `Release` resource type provides a number of options to control where to fet
 * `values`: (Optional) A dictionary of named key/value values for Charts with parameters.
 * `fetchOpts`: (Optional) A bag of options to control the fetch behavior.
 
-In addition to those core options, you can specify `transformations` (similar to what is shown [configurations below](#configuration-transformations)), `resourcePrefix` to control naming, or `namespace` to place all resources inside a specific Kubernetes namespace. Please refer to the [API reference](/registry/packages/kubernetes/api-docs/helm/v3/chart/) documentation for more details.
+Beyond those core options, you can specify `transformations` (like the [configurations below](#configuration-transformations)), `resourcePrefix` to control naming, or `namespace` to place all resources inside a specific Kubernetes namespace. Please refer to the [API reference](/registry/packages/kubernetes/api-docs/helm/v3/chart/) documentation for more details.
 
-#### Provisioning a Helm Chart
+#### Provisioning a Helm chart
 
-To illustrate provisioning a Helm Chart using Pulumi, we will deploy the `wordpress` chart from `https://charts.bitnami.com/bitnami`. This will stand up a fully functional WordPress instance that uses MariaDB:
+To provision a Helm chart with Pulumi, deploy the `wordpress` chart from `https://charts.bitnami.com/bitnami`. This stands up a fully functional WordPress instance that uses MariaDB:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 
@@ -538,7 +530,7 @@ class Program
 
 {{< /chooser >}}
 
-Similar to `ConfigFile` and `ConfigGroup` resource types shown above, all provisioned resources are available via the `getResource` function.
+Unlike the `ConfigFile` and `ConfigGroup` resource types shown above, the Helm V3 `Chart` makes all provisioned resources available via the `getResource` function.
 
 After running `pulumi up`, we will see the resulting resources created, and the load balanced IP address will be printed:
 
@@ -577,7 +569,7 @@ $ curl http://$(pulumi stack output frontendIp)
 ...
 ```
 
-### Natively installing Helm Charts as Releases
+### Natively installing Helm charts as Releases
 
 The [Helm Release](/registry/packages/kubernetes/api-docs/helm/v3/release/) resource (GA as of [v3.15.0](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.15.0) of the Pulumi Kubernetes Provider) is another option for installing Charts. In this case, the Pulumi Kubernetes provider uses an embedded version of the Helm SDK to provide full-fidelity support for managing [`Helm Releases`](https://helm.sh/docs/glossary/#release).
 
@@ -596,7 +588,7 @@ Unlike `Chart` resource types, `Release` doesn't include references to the under
 
 #### Installing a Helm Release
 
-To illustrate provisioning a Helm Chart using the `Release` resource, we will deploy the same `wordpress` chart as we did earlier:
+To illustrate provisioning a Helm chart using the `Release` resource, we will deploy the same `wordpress` chart as we did earlier:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 
@@ -642,7 +634,7 @@ wordpress = Release(
 )
 
 srv = Service.get("wpdev-wordpress", Output.concat(wordpress.status.namespace, "/", wordpress.status.name, "-wordpress"))
-# Export the ingress IP for Wordpress frontend.
+# Export the ingress IP for WordPress frontend.
 pulumi.export("frontendIP", srv.status.load_balancer.ingress[0].ip)
 ```
 
@@ -670,7 +662,7 @@ func main() {
 			},
 		})
 
-        // Export the ingress IP for Wordpress frontend.
+        // Export the ingress IP for WordPress frontend.
 		frontendIp := pulumi.All(wordpress.Status.Namespace(), wordpress.Status.Name()).ApplyT(func(r interface{})(interface{}, error){
 			arr := r.([]interface{})
 			namespace := arr[0].(*string)
@@ -722,7 +714,7 @@ class MyStack : Stack
         var status = wordpress.Status;
         var service = Service.Get("wpdev-wordpress", Output.All(status).Apply(
             s => $"{s[0].Namespace}/{s[0].Name}-wordpress"));
-        // Export the ingress IP for Wordpress frontend.
+        // Export the ingress IP for WordPress frontend.
         this.FrontendIP = service.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip);
     }
 
@@ -776,7 +768,7 @@ To render YAML during a `pulumi up` rather than have Pulumi perform the deployme
 
 This example provisions a simple load-balanced NGINX service using a general purpose language but renders the output to YAML:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -819,7 +811,7 @@ from pulumi_kubernetes.apps.v1 import Deployment
 from pulumi_kubernetes.core.v1 import Service
 
 # Instantiate a Kubernetes Provider and specify the render directory.
-render_provider = Provider('k8s-yaml-rendered',
+render_provider = Provider('k8s-yaml-renderer',
     render_yaml_to_directory='yaml')
 
 # Create an NGINX Deployment and load-balanced Service that use it.
@@ -981,6 +973,64 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "pulumi/kubernetes"
+      version = "4.23.0"
+    }
+  }
+}
+
+# Instantiate a Kubernetes provider and specify the render directory.
+provider "kubernetes" {
+  alias                    = "k8s-yaml-renderer"
+  render_yaml_to_directory = "yaml"
+}
+
+locals {
+  labels = { app = "nginx" }
+}
+
+# Create an NGINX Deployment and load-balanced Service that use it.
+resource "kubernetes_apps_v1_deployment" "nginx-dep" {
+  provider = kubernetes.k8s-yaml-renderer
+
+  spec = {
+    selector = { match_labels = local.labels }
+    replicas = 1
+    template = {
+      metadata = { labels = local.labels }
+      spec = {
+        containers = [{
+          name  = "nginx"
+          image = "nginx"
+        }]
+      }
+    }
+  }
+}
+
+resource "kubernetes_core_v1_service" "nginx-svc" {
+  provider = kubernetes.k8s-yaml-renderer
+
+  metadata = { labels = local.labels }
+
+  spec = {
+    type     = "LoadBalancer"
+    ports    = [{ port = 80, target_port = 80, protocol = "TCP" }]
+    selector = local.labels
+  }
+}
+```
+
+Property names are snake_case in HCL and are translated to the provider's camelCase, so `match_labels` and `target_port` reach the API as `matchLabels` and `targetPort`.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 Next, just run `pulumi up`:
@@ -988,11 +1038,11 @@ Next, just run `pulumi up`:
 ```bash
 $ pulumi up
 Updating (dev):
-     Type                            Name               Status
- +   pulumi:pulumi:Stack             k8s-render-dev     created
- +   ├─ pulumi:providers:kubernetes  k8s-yaml-renderer  created
- +   ├─ kubernetes:core:Service      nginx-svc          created
- +   └─ kubernetes:apps:Deployment   nginx-dep          created
+     Type                              Name               Status
+ +   pulumi:pulumi:Stack               k8s-render-dev     created
+ +   ├─ pulumi:providers:kubernetes    k8s-yaml-renderer  created
+ +   ├─ kubernetes:core/v1:Service     nginx-svc          created
+ +   └─ kubernetes:apps/v1:Deployment  nginx-dep          created
 
 Resources:
     + 4 created
@@ -1025,18 +1075,19 @@ There are two important caveats to note about YAML rendering support:
 * The YAML-rendered resources are not created on a Kubernetes cluster, so information that is computed server-side will not be available in your program. For example, a Service will not have IP assignments, so attempting to export these values will not work as usual (i.e., the value will be undefined).
 * Any Secret values will appear in plaintext in the rendered manifests. This includes any values marked as secret in Pulumi. A warning will be printed for any secret values being rendered to YAML, but it is your responsibility to protect the rendered files.
 
-## Configuration Transformations
+## Configuration transformations
 
 Let's see how to assign our service a public IP address, starting with [the single `ConfigFile` example above](#deploying-a-single-kubernetes-yaml-file), using transforms.
 
-The Kubernetes Guestbook by default does not assign a load balancer for the frontend service. To fix this, we could edit the YAML file, of course, but let's see `transforms` in action. By supplying a `transforms` callback in the resource options, we can rewrite the object configuration on the fly and cause a load balancer to get created:
+The Kubernetes Guestbook by default does not assign a load balancer for the frontend service. To fix this, we could edit the YAML file, but let's see `transforms` in action instead. By supplying a `transforms` callback in the resource options, we can rewrite the object configuration on the fly and cause a load balancer to get created:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-...
+import * as k8s from "@pulumi/kubernetes";
+
 const guestbook = new k8s.yaml.v2.ConfigFile("guestbook", {
     file: "guestbook-all-in-one.yaml",
 }, {
@@ -1048,18 +1099,19 @@ const guestbook = new k8s.yaml.v2.ConfigFile("guestbook", {
                 props.spec = { ...props.spec, type: "LoadBalancer" };
                 return { props, opts: args.opts };
             }
+            return undefined;
         },
     ],
 });
-...
-export const publicIp = frontend.status.loadBalancer.ingress[0].ip;
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-...
+import pulumi
+from pulumi_kubernetes.yaml.v2 import ConfigFile
+
 def make_frontend_public(args):
     if (args.type_ == "kubernetes:core/v1:Service" and
             args.props.get("metadata", {}).get("name") == "frontend"):
@@ -1072,123 +1124,137 @@ def make_frontend_public(args):
 guestbook = ConfigFile("guestbook",
     file="guestbook-all-in-one.yaml",
     opts=pulumi.ResourceOptions(transforms=[make_frontend_public]))
-...
-pulumi.export("public_ip", frontend.status["load_balancer"]["ingress"][0]["ip"])
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-...
-guestbook, err := yamlv2.NewConfigFile(ctx, "guestbook", &yamlv2.ConfigFileArgs{
-    File: pulumi.String("guestbook-all-in-one.yaml"),
-}, pulumi.Transforms([]pulumi.ResourceTransform{
-    func(ctx context.Context, args *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
-        if args.Type == "kubernetes:core/v1:Service" {
-            props := args.Props.ObjectValue()
-            meta := props["metadata"].ObjectValue()
-            if name, ok := meta["name"]; ok && name.StringValue() == "frontend" {
-                spec := props["spec"].ObjectValue()
-                spec["type"] = resource.NewStringProperty("LoadBalancer")
-                props["spec"] = resource.NewObjectProperty(spec)
-                return &pulumi.ResourceTransformResult{
-                    Props: resource.NewObjectProperty(props),
-                    Opts:  args.Opts,
-                }
-            }
-        }
-        return nil
-    },
-}))
-if err != nil {
-    return err
-}
+package main
 
-// Export the private cluster IP address of the frontend.
-frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
-ctx.Export("privateIP", frontend.Spec.ClusterIP())
-ctx.Export("publicIP", frontend.Status.LoadBalancer().Ingress().Index(pulumi.Int(0)).Ip())
-...
+import (
+    "context"
+
+    yamlv2 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/yaml/v2"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        _, err := yamlv2.NewConfigFile(ctx, "guestbook", &yamlv2.ConfigFileArgs{
+            File: pulumi.String("guestbook-all-in-one.yaml"),
+        }, pulumi.Transforms([]pulumi.ResourceTransform{
+            func(_ context.Context, args *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
+                if args.Type == "kubernetes:core/v1:Service" {
+                    meta, _ := args.Props["metadata"].(pulumi.Map)
+                    spec, ok := args.Props["spec"].(pulumi.Map)
+                    if ok && meta["name"] == pulumi.String("frontend") {
+                        spec["type"] = pulumi.String("LoadBalancer")
+                        return &pulumi.ResourceTransformResult{
+                            Props: args.Props,
+                            Opts:  args.Opts,
+                        }
+                    }
+                }
+                return nil
+            },
+        }))
+        if err != nil {
+            return err
+        }
+
+        return nil
+    })
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-...
-var guestbook = new ConfigFile("guestbook", new ConfigFileArgs
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Threading.Tasks;
+
+using Pulumi;
+using Pulumi.Kubernetes.Yaml.V2;
+using Pulumi.Kubernetes.Types.Inputs.Yaml.V2;
+
+class Program
 {
-    File = "guestbook-all-in-one.yaml",
-}, new ComponentResourceOptions
-{
-    ResourceTransformations =
+    static Task<int> Main()
     {
-        (args) => {
-            if (args.Resource.GetResourceType() == "kubernetes:core/v1:Service") {
-                var props = args.Args as ImmutableDictionary<string, object>
-                    ?? ImmutableDictionary<string, object>.Empty;
-                var meta = props.GetValueOrDefault("metadata")
-                    as ImmutableDictionary<string, object>
-                    ?? ImmutableDictionary<string, object>.Empty;
-                if (meta.TryGetValue("name", out var name) && (string)name == "frontend") {
-                    var spec = props.GetValueOrDefault("spec")
-                        as ImmutableDictionary<string, object>
-                        ?? ImmutableDictionary<string, object>.Empty;
-                    props = props.SetItem("spec", spec.SetItem("type", "LoadBalancer"));
-                    return new ResourceTransformationResult(props, args.Options);
-                }
-            }
-            return null;
-        },
-    },
-});
-...
-return new Dictionary<string, object?>
-{
-    { "privateIp", frontend.Apply(fe => fe.Spec.Apply(spec => spec.ClusterIP)) },
-    { "publicIp", frontend.Apply(fe => fe.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip)) },
-};
-...
+        return Pulumi.Deployment.RunAsync(() =>
+        {
+            var guestbook = new ConfigFile("guestbook", new ConfigFileArgs
+            {
+                File = "guestbook-all-in-one.yaml",
+            }, new ComponentResourceOptions
+            {
+                ResourceTransforms =
+                {
+                    (args, _) =>
+                    {
+                        if (args.Type == "kubernetes:core/v1:Service"
+                            && args.Args.GetValueOrDefault("metadata") is ImmutableDictionary<string, object?> meta
+                            && meta.GetValueOrDefault("name") is "frontend"
+                            && args.Args.GetValueOrDefault("spec") is ImmutableDictionary<string, object?> spec)
+                        {
+                            var props = args.Args.SetItem("spec", spec.SetItem("type", "LoadBalancer"));
+                            return Task.FromResult<ResourceTransformResult?>(new ResourceTransformResult(props, args.Options));
+                        }
+                        return Task.FromResult<ResourceTransformResult?>(null);
+                    },
+                },
+            });
+        });
+    }
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language java %}}
 {{% notes type="info" %}}
-Transforms are not yet supported for this resource in Java.
+Transforms are not yet supported for the `ConfigFile` resource in Java.
 {{% /notes %}}
 {{% /choosable %}}
 {{% choosable language yaml %}}
 {{% notes type="info" %}}
-Transforms are not yet supported for this resource in Pulumi YAML.
+Transforms are not yet supported for the `ConfigFile` resource in Pulumi YAML.
 {{% /notes %}}
 {{% /choosable %}}
 
 {{< /chooser >}}
 
-After running `pulumi up`, we will see the `frontend` service replaced and that a `publicIp` is now assigned:
+After running `pulumi up`, we will see the `frontend` service updated to a load balancer:
 
 ```bash
 $ pulumi up
 Updating (dev):
-     Type                           Name          Status       Info
-     pulumi:pulumi:Stack            k8s-yaml-dev
-     └─ kubernetes:yaml:ConfigFile  guestbook
- +-     └─ kubernetes:core:Service  frontend      replaced     [diff: ~spec]
-
-Outputs:
-  ~ privateIp: "10.52.254.168" => "10.51.244.125"
-  + publicIp : "37.182.242.140"
+     Type                              Name                        Status   Info
+     pulumi:pulumi:Stack               pulumi-k8s-test-dev
+     └─ kubernetes:yaml/v2:ConfigFile  guestbook
+ ~      └─ kubernetes:core/v1:Service  guestbook:default/frontend  updated  [diff: ~spec]
 
 Resources:
-    +-1 replaced
+    ~ 1 updated
     7 unchanged
 ```
 
-Afterwards, we can `curl` the `publicIp` and see our Guestbook up and running:
+Once the load balancer is ready, `kubectl` shows its external IP address:
 
 ```bash
-$ curl http://$(pulumi stack output publicIp)
+$ kubectl get service frontend
+NAME       TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+frontend   LoadBalancer   10.107.35.136   127.0.0.1     80:31533/TCP   24s
+```
+
+On minikube, `minikube tunnel` assigns `127.0.0.1` as the external IP address. Some providers, like AWS, report a hostname instead of an IP address; on those clusters, replace `ip` with `hostname` in the `jsonpath` expression below.
+
+Afterwards, we can `curl` that address and see the Guestbook page:
+
+```bash
+$ curl http://$(kubectl get service frontend -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
 <html ng-app="redis">
   <head>
     <title>Guestbook</title>
@@ -1198,6 +1264,6 @@ $ curl http://$(pulumi stack output publicIp)
 
 Although this example shows the YAML `ConfigFile` resource, the same transform behavior is available with YAML `ConfigGroup` and Helm `Chart` resource types.
 
-## Provisioning Mixed Configurations
+## Provisioning mixed configurations
 
-It is possible to provision a combination of native Kubernetes objects, YAML files, Helm Charts, and other cloud resources all together, with dependencies between them. For an example of doing so, see [this blog post](/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/) which demonstrates provisioning an Azure Kubernetes cluster, MongoDB-flavored CosmosDB instance, a Kubernetes secret to store the connection information, and a Helm Chart that consumes this secret and connects to the CosmosDB database.
+You can provision a combination of native Kubernetes objects, YAML files, Helm charts, and other cloud resources all together, with dependencies between them. For an example of doing so, see [this blog post](/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/) which demonstrates provisioning an Azure Kubernetes cluster, MongoDB-flavored CosmosDB instance, a Kubernetes secret to store the connection information, and a Helm chart that consumes this secret and connects to the CosmosDB database.

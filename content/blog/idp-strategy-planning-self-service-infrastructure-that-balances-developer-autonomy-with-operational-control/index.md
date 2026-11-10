@@ -87,11 +87,11 @@ Here is a quick walkthrough of each layer and how Pulumi IDP constructs fit this
 **Layer 1: Infrastructure Layer** - This is your raw cloud resources: VMs, databases, networks, storage.
 These are the fundamental building blocks that exist in AWS, Azure, GCP, and other cloud providers.
 
-**Layer 2: Platform Layer** - This is where [Pulumi Components](https://www.pulumi.com/docs/iac/concepts/resources/components/) live.
+**Layer 2: Platform Layer** - This is where [Pulumi Components](/docs/iac/concepts/components/) live.
 Components take those raw infrastructure resources and package them into higher-level abstractions that encapsulate best practices, security policies, and organizational standards.
 For example, instead of manually configuring 15 different AWS resources to create a secure web application, you create a component that handles all that complexity and exposes just the configuration options that matter to your developers.
 
-**Layer 3: Developer Experience Layer** - This is where [Pulumi Templates](https://www.pulumi.com/templates/) and the [Private Registry](https://www.pulumi.com/docs/idp/get-started/private-registry/) come into play.
+**Layer 3: Developer Experience Layer** - This is where [Pulumi Templates](https://www.pulumi.com/templates/) and the [Private Registry](/docs/idp/concepts/private-registry/) come into play.
 Templates provide ready-to-deploy patterns that developers can customize, while the private registry makes everything discoverable and manageable at scale.
 
 In our workshop, we focused specifically on those top two layers because that's where the transformation happens. This is where you turn raw infrastructure into something developers can actually use productively without becoming infrastructure experts themselves.
@@ -167,13 +167,12 @@ While DevOps brought us incredible advances in how we ship and maintain software
 
 That's why platform teams have emerged.
 You exist to solve these challenges by building tools and workflows that enable your internal customers (the developers) to provision infrastructure and deploy software without getting blocked.
-But here's the thing I've learned from working with hundreds of platform teams: success isn't just about the tools you choose.
-It's about the strategy behind how you implement them.
+But here's the thing I've learned from working with hundreds of platform teams: success depends on the strategy behind how you implement your tools, more than on which tools you choose.
 
 ## 5 Core Components of a Successful Internal Developer Platform
 
 Through years of working with platform teams and analyzing what separates successful IDPs from those that struggle to gain adoption, we've identified five essential components that every platform strategy needs.
-These aren't theoretical concepts. They're battle-tested patterns that work across organizations of all sizes and industries.
+These are battle-tested patterns that work across organizations of all sizes and industries.
 
 ### 1. Abstractions
 
@@ -181,13 +180,12 @@ Let me be clear about something: abstractions aren't about dumbing down infrastr
 The abstraction is really where you're hiding the complexity of the underlying infrastructure from your end users, but you're doing it intentionally to provide appropriate interfaces for different personas in your organization.
 
 We've seen too many platform teams get this wrong by either over-abstracting (creating black boxes that developers can't customize) or under-abstracting (exposing too much complexity).
-The sweet spot is creating [component resources](https://www.pulumi.com/docs/iac/concepts/resources/components/) that encapsulate your infrastructure patterns and best practices into reusable building blocks that can be consumed across different programming languages and deployment scenarios, while still providing escape hatches when needed.
+The sweet spot is creating [component resources](/docs/iac/concepts/components/) that encapsulate your infrastructure patterns and best practices into reusable building blocks that can be consumed across different programming languages and deployment scenarios, while still providing escape hatches when needed.
 
 ### 2. Blueprints
 
 Blueprints are your templatized, well-architected patterns that developers can use to bootstrap their infrastructure.
-But here's what I want you to understand about blueprints: they're not just starting points that you throw over the wall to developers.
-They're carefully designed patterns that embody your organizational best practices and architectural decisions.
+But here's what I want you to understand about blueprints: they're carefully designed patterns that embody your organizational best practices and architectural decisions, not starting points you throw over the wall to developers.
 
 When we see successful platform teams, their templates serve as both accelerators and guardrails.
 They give developers a fast path to production-ready infrastructure while ensuring that everything they deploy follows your organization's standards.
@@ -203,8 +201,7 @@ You need:
 - **Low-code workflows** using tools like [Pulumi YAML](https://www.pulumi.com/docs/iac/languages-sdks/yaml/) for configuration-driven infrastructure (perfect for developers who understand infrastructure but don't want to write Go or TypeScript)
 - **Full-code workflows** for developers who need maximum flexibility and want to leverage the full power of general-purpose programming languages
 
-The key insight? These aren't three different platforms.
-They're three different interfaces to the same underlying components and templates.
+The key insight? These are three different interfaces to the same underlying components and templates.
 
 ### 4. Security guardrails
 
@@ -214,13 +211,13 @@ Too many platform teams create approval processes and manual checkpoints that co
 Guardrails are different.
 They start with the best practices and security built into the reusable abstractions. But even the most secure solutions need a safety net.
 This safety net is policy-as-code that runs automatically, preventing violations before deployment happens.
-When we work with customers on implementing [Pulumi CrossGuard](https://www.pulumi.com/crossguard/), we're not creating new friction. We're embedding security, compliance, and cost controls directly into the deployment process.
+When we work with customers on implementing [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/), we're embedding security, compliance, and cost controls directly into the deployment process.
 The developer gets immediate feedback, and you get the assurance that nothing goes to production without meeting your standards.
 
 ### 5. Self-service
 
 Everything we've talked about so far builds toward this moment: enabling developers to provision and manage infrastructure independently.
-But self-service isn't just about providing a UI. It's about carefully orchestrating all the other components to create experiences that are both powerful and intuitive.
+But self-service goes well beyond providing a UI. It requires carefully orchestrating all the other components to create experiences that are both powerful and intuitive.
 
 When we walked through the demo in our workshop, what you saw was the culmination of thoughtful platform design.
 Developers can discover available services, deploy infrastructure through whatever interface makes sense for them, and manage their resources over time, all without requiring tickets or manual intervention from platform teams.
@@ -249,7 +246,7 @@ You don't need to build three different platforms—you need to build one platfo
 ### Why a Private Registry Is Key to IDP Adoption
 
 Here's something we always tell platform teams: if you don't solve the discoverability problem, your beautiful components and templates will sit unused in Git repositories where no one can find them.
-That's why the private registry isn't just a nice-to-have. It's the foundation that makes everything else work.
+That's why the private registry is the foundation that makes everything else work.
 
 When you establish a private registry as your source of truth for components, templates, providers, and policies, you're solving two critical problems at once.
 First, discoverability: developers can actually find and explore what's available.
@@ -262,7 +259,7 @@ The workflow is beautifully simple: you publish standardized building blocks wit
 One pattern we see in every successful IDP implementation is that the platform reflects how the organization actually works.
 Your developers don't think in terms of individual stacks or resources. They think in terms of services, applications, and business functionality.
 
-That's why we built [Pulumi Services](https://www.pulumi.com/docs/idp/get-started/services/) - to let teams logically group stacks and ESC environments in ways that make sense to your organization.
+That's why we built [Pulumi Services](/docs/idp/concepts/services/) - to let teams logically group stacks and ESC environments in ways that make sense to your organization.
 Pulumi Services improve organization by helping your team model infrastructure in a way that's familiar - simplifying Day 2 operations by providing additional context like links to relevant dashboards, Slack channels and more.
 When something breaks at 2 AM, your on-call engineer needs to understand dependencies, track usage, and manage infrastructure in the context of the business services that are actually impacted.
 
@@ -279,7 +276,7 @@ They measure success by the business outcomes they're driving:
 The numbers speak for themselves.
 We've worked with customers like Snowflake who reduced deployment times from one and a half weeks to less than a day.
 Starburst Data cut their infrastructure deployments from two weeks to just three hours.
-These aren't vanity metrics. They're business transformations.
+Those are business transformations, not vanity metrics.
 
 ## IDP Strategy: 5 Key Steps to Build a Strong Foundation
 
@@ -303,9 +300,9 @@ If you're just starting your IDP journey, here's the roadmap we give to every pl
 ## The Future of IDPs and Platform Engineering
 
 Trends come and go, but platform engineering is here to stay.
-It's not just another tool or methodology. This is how modern organizations scale infrastructure to match the speed of innovation. The companies that win are the ones that treat their **Internal Developer Platform (IDP)** as a strategic foundation, not just a tool.
+This is how modern organizations scale infrastructure to match the speed of innovation. The companies that win are the ones that treat their **Internal Developer Platform (IDP)** as a strategic foundation.
 
-Your job isn’t just to manage infrastructure and choose the right tools - it's to enable developers to move faster while keeping governance, security, and costs under control. Get that balance right, and your platform becomes a force multiplier across your entire engineering department.
+Your job goes beyond managing infrastructure and choosing the right tools: it's to enable developers to move faster while keeping governance, security, and costs under control. Get that balance right, and your platform becomes a force multiplier across your entire engineering department.
 
 The fastest way to get there? Focus on these five essential components:
 

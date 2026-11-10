@@ -2,8 +2,9 @@ id = "tyler-mulligan"
 name = "Tyler Mulligan"
 status = "guest"
 role = "alumni-puluminary"
-title = "Senior DevOps Engineer"
+title = "Senior Engineer"
 company = "SANS Institute"
 
 [social]
 github = "catmeme"
+linkedin = "tylermulligan"

@@ -35,7 +35,7 @@ If you're loading data into Snowflake and want reusable, composable infrastructu
 
 The [companion template](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time) also includes S3 auto-ingest and batch loading patterns, which we'll cover in upcoming posts. We also use Pulumi ESC to handle authentication to both AWS and Snowflake using OpenID Connect.
 
-Our own [Josh Kodroff](/blog/author/josh-kodroff/) wrote an excellent [introduction to Snowpipe with Pulumi](https://medium.com/snowflake/lightning-fast-elt-for-python-devs-with-aws-snowpipe-and-pulumi-4eaf056dd097). This post builds on his work using the newest [Snowflake](https://www.pulumi.com/registry/packages/snowflake/) and [AWS](https://www.pulumi.com/registry/packages/aws/) provider APIs and the direct Firehose-to-Snowflake destination, which wasn't available when Josh wrote his post. Some resource names and grant patterns will also differ if you're comparing the two.
+Our own [Josh Kodroff](/blog/authors/josh-kodroff/) wrote an excellent [introduction to Snowpipe with Pulumi](https://medium.com/snowflake/lightning-fast-elt-for-python-devs-with-aws-snowpipe-and-pulumi-4eaf056dd097). This post builds on his work using the newest [Snowflake](https://www.pulumi.com/registry/packages/snowflake/) and [AWS](https://www.pulumi.com/registry/packages/aws/) provider APIs and the direct Firehose-to-Snowflake destination, which wasn't available when Josh wrote his post. Some resource names and grant patterns will also differ if you're comparing the two.
 
 ## Architecture overview
 
@@ -135,7 +135,7 @@ config:
 
 Depending on your preferences, you can split credentials into separate per-provider environments and compose them with [`imports`](/docs/esc/concepts/imports/) and reuse across stacks.
 
-To set up OIDC trust for each provider, see the [AWS OIDC guide](/docs/esc/guides/configuring-oidc/aws/) and the [Snowflake OIDC login guide](/docs/esc/integrations/dynamic-login-credentials/snowflake-login/). For GitHub authentication options (fine-grained PATs, classic PATs, or GitHub Apps), see the [`pulumi-github` provider docs](/registry/packages/github/#authentication).
+To set up OIDC trust for each provider, see the [AWS OIDC guide](/docs/esc/guides/configuring-oidc/aws/) and the [Snowflake OIDC login guide](/docs/esc/providers/login/snowflake-login/). For GitHub authentication options (fine-grained PATs, classic PATs, or GitHub Apps), see the [`pulumi-github` provider docs](/registry/packages/github/#authentication).
 
 ## Shared infrastructure
 
@@ -649,7 +649,7 @@ FROM LANDING_ZONE_WEBHOOKS.GITHUB.REPOSITORY_EVENTS_DIRECT
 ORDER BY ingested_at DESC;
 ```
 
-![Snowflake UI showing the data that streamed from Github directly into Snowflake using the Data Pipeline](select.png)
+![Snowflake UI showing the data that streamed from GitHub directly into Snowflake using the Data Pipeline](select.png)
 
 You should see rows with event types like `star`, `push`, or `issues`, real GitHub events flowing through the entire pipeline. The `METADATA` column includes Firehose metadata like `IngestionTime`, which you can use to track end-to-end latency.
 

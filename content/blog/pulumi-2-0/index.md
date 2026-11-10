@@ -17,7 +17,7 @@ Today we are excited to announce Pulumi 2.0, the next major stage in our journey
 <!--more-->
 
 <div class="header-hero-actions mt-8 mb-4 text-center">
-    <a class="btn btn-lg mr-2" href="/docs/get-started/">
+    <a class="btn btn-lg mr-2" href="/up/">
         Get Started
     </a>
     <a class="btn btn-lg btn-orange ml-2" href="/docs/">
@@ -51,9 +51,9 @@ After [shipping 1.0 last year](/blog/pulumi-1-0/), we've been hard at work helpi
 
 * **Architecture**. Customers are building their own platforms that use abstraction and packaging mechanisms, including our component model, to codify their own best practices. [New coexistence and migration options](/docs/iac/guides/migration/) help to build larger systems out of many component parts, including those you haven't been able to port to Pulumi yet.
 
-* **Policy**. [Our new policy as code framework, CrossGuard](/docs/insights/policy/), lets you define policies using familiar languages and then apply those policies at deployment-time. This prevents mistakes from ever getting out the door, including cost, security, and compliance. [Configurable policy packs](/docs/insights/policy/policy-packs/) let you write a single policy and apply it flexibly across your projects.
+* **Policy**. [Our new policy as code framework, CrossGuard](/docs/discovery-governance/concepts/policy-as-code/), lets you define policies using familiar languages and then apply those policies at deployment-time. This prevents mistakes from ever getting out the door, including cost, security, and compliance. [Configurable policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/) let you write a single policy and apply it flexibly across your projects.
 
-* **Testing**. Many customers are using a spectrum of techniques to [validate their infrastructure in new ways](/docs/iac/concepts/testing/). This includes [unit testing using familiar frameworks and new mocking capabilities](/docs/iac/guides/testing/unit/) through [integration testing for short- and long-lived environments](/docs/iac/guides/testing/integration/).
+* **Testing**. Many customers are using a spectrum of techniques to [validate their infrastructure in new ways](/docs/iac/guides/testing/). This includes [unit testing using familiar frameworks and new mocking capabilities](/docs/iac/guides/testing/unit/) through [integration testing for short- and long-lived environments](/docs/iac/guides/testing/integration/).
 
 ## Welcome to the Team, Pulumipus!
 
@@ -67,10 +67,10 @@ Expect The Pulumipus to pop up from time to time to help you out with your infra
 
 Today is an exciting day for us, our customers, and our community &mdash; your passionate support and feedback shaped this release, and we thank you.
 
-To learn more, join us for our launch event next Wednesday, or just [download Pulumi and give it a try](/docs/get-started/). If you're upgrading from Pulumi 1.0, [please see our migration guide](/docs/install/).
+To learn more, join us for our launch event next Wednesday, or just [download Pulumi and give it a try](/up/). If you're upgrading from Pulumi 1.0, [please see our migration guide](/docs/install/).
 
 <div class="header-hero-actions mt-8 mb-8 text-center">
-    <a class="btn btn-lg mr-2" href="/docs/get-started/">
+    <a class="btn btn-lg mr-2" href="/up/">
         Get Started
     </a>
     <a class="btn btn-lg btn-orange ml-2" href="/docs/">

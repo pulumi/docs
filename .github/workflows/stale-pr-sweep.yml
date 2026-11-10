@@ -1,0 +1,113 @@
+name: Stale PR sweep
+
+# Closes open PRs that haven't moved in 30 days (90 with the
+# `review:long-running` label), after a heads-up comment a week before. Every
+# open PR is in scope: drafts, bot PRs, and PRs the review never ran on. The
+# policy lives in the `stale_prs:` block of .github/review-routing.yml;
+# scripts/review-v3/stale-pr-sweep.py is the deterministic evaluator (no
+# model, no PR code checkout, no state of its own -- the heads-up comment's
+# marker is the state). See that script's docstring for what counts as
+# movement.
+#
+# This is the blunt backstop. review-sla-sweep.yml's author-staleness clock is
+# the targeted one (PRs waiting on answers to review findings); both can run.
+#
+# SINGLE SWITCH -- the STALE_PR_SWEEP repo variable:
+#   unset / anything but '1' -> the schedule skips the job entirely.
+#   '1' -> the schedule runs for real (heads-ups and closes).
+# workflow_dispatch always runs and honors its own `dry_run` input (default
+# true), so a manual run previews safely without flipping the switch. The
+# run's step summary lists every heads-up and close it made (or would have).
+# Explicit `== '1'` throughout, never `!= '0'`: see review-sla-sweep.yml's
+# header for why an unset variable makes `!= '0'` default to ON.
+#
+# Acts as pulumi-bot (PULUMI_BOT_TOKEN), not github-actions[bot], so a close
+# fires pr-closed.yml like any other close: preview-resource cleanup and the
+# review-outcome record. GITHUB_TOKEN is the fallback if ESC is unavailable;
+# the sweep still works, those two follow-ups just don't run for its closes.
+# Because pulumi-bot's comments DO trigger issue_comment workflows, the
+# comment copy must never contain a review command or @claude
+# (test_comment_bodies_trigger_nothing pins that).
+
+on:
+  schedule:
+    # Daily, US morning, off the :00/:30 rush.
+    - cron: '41 14 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Preview heads-ups and closes without posting or closing anything'
+        type: boolean
+        required: false
+        default: true
+
+permissions:
+  contents: read
+  pull-requests: write   # close (GITHUB_TOKEN fallback)
+  issues: write          # PR comments via the issues API (GITHUB_TOKEN fallback)
+  id-token: write        # ESC OIDC
+
+concurrency:
+  group: stale-pr-sweep
+  cancel-in-progress: false   # never cut off a sweep mid-close
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+
+jobs:
+  sweep:
+    name: Sweep open PRs for inactivity
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream
+    # sync but must not run it.
+    if: github.repository == 'pulumi/docs' && (vars.STALE_PR_SWEEP == '1' || github.event_name == 'workflow_dispatch')
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Checkout (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: python3 -m pip install --quiet pyyaml
+
+      # A manual dispatch honors its own dry_run input; a scheduled run only
+      # acts when the switch is '1' (redundant with the job `if:`, kept so a
+      # trigger added to `on:` later can't act without the switch).
+      - name: Resolve dry-run mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            DRY_RUN="${{ github.event.inputs.dry_run }}"
+          elif [ "${{ vars.STALE_PR_SWEEP }}" = "1" ]; then
+            DRY_RUN=false
+          else
+            DRY_RUN=true
+          fi
+          echo "dry_run=$DRY_RUN" >> "$GITHUB_OUTPUT"
+          echo "resolved dry_run=$DRY_RUN (event=${{ github.event_name }})"
+
+      - name: Run stale PR sweep
+        env:
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          ARGS=(--repo "${{ github.repository }}")
+          if [ "${{ steps.mode.outputs.dry_run }}" = "true" ]; then
+            ARGS+=(--dry-run)
+          fi
+          python3 scripts/review-v3/stale-pr-sweep.py "${ARGS[@]}"

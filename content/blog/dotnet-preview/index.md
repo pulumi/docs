@@ -9,7 +9,6 @@ authors:
 tags:
     - dotnet
 category: tutorials
-canonical_url: "https://www.pulumi.com/docs/iac/languages-sdks/dotnet/"
 ---
 
 > [!INFO]

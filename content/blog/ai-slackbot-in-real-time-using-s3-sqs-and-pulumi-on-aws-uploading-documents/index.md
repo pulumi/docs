@@ -17,6 +17,7 @@ category: tutorials
 series: ai-slack-bot
 meta_desc: "Uploading documents to your AI Slackbot in real-time using S3, SQS and Pulumi on AWS"
 date: 2024-06-03T17:21:02+01:00
+updated: 2026-10-02
 
 ---
 
@@ -233,7 +234,7 @@ Of course, this same methodology can be used on any of the events exposed by Sla
 
 ![arti-react.png](/blog/ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents/arti-react.png)
 
-To learn more about extending this bot, see [Slack Bolt's documentation](https://docs.slack.dev/tools/bolt-python/concepts/).
+To learn more about extending this bot, see [Slack Bolt's documentation](https://docs.slack.dev/tools/bolt-python/).
 
 ## Conclusion
 
@@ -245,6 +246,6 @@ Furthering our interactions with our application, we leveraged [Slack's Block Ki
 
 As always, we welcome your feedback and contributions in the [Pulumi Community Slack](https://slack.pulumi.com/), [GitHub repository,](https://github.com/pulumi/pulumi) and [Pulumi Community Discussions](https://github.com/pulumi/pulumi/discussions).
 
-New to Pulumi? Signing up is easy and free. [Get started today](/docs/get-started/)!
+New to Pulumi? Signing up is easy and free. [Get started today](/up/)!
 
 Happy AI building!

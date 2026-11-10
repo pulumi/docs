@@ -63,21 +63,30 @@ SURGICAL_CLASSES: set[str] = {
     "verified-claims-trail-faithful",
 }
 
-# Sonnet 5 for the splice model. Pre-v16 used Haiku 4.5 per call, which
+# Haiku 5.5 for the splice model. Pre-v16 used Haiku 4.5 per call, which
 # handled single-violation splices fine but lacked the reasoning headroom
-# for batched multi-fix prompts — Haiku tracking 30+ independent edit
-# targets in one rewrite started dropping fixes. Sonnet costs ~3× per token
-# but the per-rule batching (see build_batched_prompt) collapses N sequential
-# calls into 1 call per rule_id, keeping the review-level cost low with lower
-# fumble risk. (Sonnet 5 is near-Opus on this kind of structured editing; its
-# tokenizer runs ~30% heavier than Sonnet 4.6, which is why MAX_OUTPUT_TOKENS
-# below carries extra headroom for the verbatim full-body echo.)
-SPLICE_MODEL = "claude-sonnet-5"
+# for batched multi-fix prompts — Haiku 4.5 tracking 30+ independent edit
+# targets in one rewrite started dropping fixes — so the lane moved to
+# Sonnet, and the per-rule batching (see build_batched_prompt) collapses N
+# sequential calls into 1 call per rule_id. (The tokenizer runs ~30% heavier
+# than Sonnet 4.6's, which is why MAX_OUTPUT_TOKENS below carries extra
+# headroom for the verbatim full-body echo.)
+#
+# Haiku 5.5 at effort "medium" with adaptive thinking (2026-10-07 benchmark,
+# the same planted-violation bodies x 3 reps, up to 28 fixes batched in one
+# call; campaign 2026-10-07-haiku55-fitness in pulumi/docs-review-benchmarks):
+# 231/231 planted fixes and 18/18 achievable bodies byte-exact, identical to
+# Sonnet 5.5 low, at ~1/19th the cost per call and ~30% lower latency. It
+# thinks briefly (~1K tokens per call), which is what holds the batched edits:
+# with thinking disabled it echoed most bodies back unfixed (103/231). Low
+# effort missed 1 of 231.
+SPLICE_MODEL = "claude-haiku-5-5"
+SPLICE_EFFORT = "medium"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
-# 180s per call — Sonnet processes large prompts faster than Haiku but the
-# response (full body) is still ~12K output tokens; 180s gives a buffer
-# for the larger model + network jitter.
+# 180s per call — the response (full body) is ~12-17K output tokens
+# including thinking (benchmark p50 39s on Haiku 5.5); 180s leaves a buffer
+# for long bodies + network jitter.
 SPLICE_TIMEOUT_S = 180
 MAX_RETRIES = 3  # API-level retries on 429 / 5xx / transient network
 # Maximum response tokens. The whole review body is echoed back verbatim, so
@@ -86,11 +95,14 @@ MAX_RETRIES = 3  # API-level retries on 429 / 5xx / transient network
 # pushes the same body to ~15-16K. The 24K cap sized from that (~3.85 chars/
 # token) still truncated a trail-heavy body on pulumi/docs#20135: the 🔍 trail's
 # emoji/URL/citation density runs ~2.6 chars/token, so a ~70K-char body blew
-# past 24K and the amputated echo got posted. Cap is now 32K, and
+# past 24K and the amputated echo got posted. The cap went to 32K, and
 # extract_splice_output() rejects `stop_reason == "max_tokens"` outright so a
 # cap overrun defers to soft-floor (intact body) instead of publishing a
-# truncated one. Goes in the messages.create `max_tokens` field.
-MAX_OUTPUT_TOKENS = 32000
+# truncated one. Haiku 5.5's adaptive thinking (~1-4K tokens) shares this
+# budget with the echo, so the cap is now 40K; at Haiku 5.5's ~330 output
+# tokens/s that is still well inside SPLICE_TIMEOUT_S. Goes in the
+# messages.create `max_tokens` field.
+MAX_OUTPUT_TOKENS = 40000
 # Minimum acceptable output/input length ratio for the body echo. Surgical
 # splices edit lines in place (reword a parenthetical, move a bullet) — they
 # never remove more than a few lines — so an echo materially shorter than the
@@ -490,7 +502,7 @@ def extract_splice_output(payload: dict, input_body_len: int) -> str | None:
 
 
 def dispatch_splice(prompt: str, api_key: str, input_body_len: int) -> str | None:
-    """Run one splice call (Sonnet 5) via the Anthropic Messages API.
+    """Run one splice call (Haiku 5.5) via the Anthropic Messages API.
     Returns the edited body or None on error.
 
     Pre-v16 used the `claude` CLI as a subprocess, which silently failed in
@@ -500,20 +512,22 @@ def dispatch_splice(prompt: str, api_key: str, input_body_len: int) -> str | Non
     argument). Direct API calls surface errors as plain readable strings
     and use the same auth path verify-claims.py uses (proven to work in CI).
 
-    Splice model: Sonnet 5 (see SPLICE_MODEL note). Haiku 4.5 worked
+    Splice model: Haiku 5.5 (see SPLICE_MODEL note). Haiku 4.5 worked
     fine on single-violation prompts but lost fixes when ~30 independent
-    edits were batched into one call; Sonnet's reasoning headroom is
-    worth the ~4× per-token cost when per-rule batching collapses the
-    call count anyway.
+    edits were batched into one call; Haiku 5.5 with adaptive thinking
+    holds the batched edits.
     """
     body = {
         "model": SPLICE_MODEL,
         "max_tokens": MAX_OUTPUT_TOKENS,
-        # Sonnet 5 defaults adaptive thinking ON when `thinking` is omitted.
-        # This call echoes the full review body verbatim and needs every output
-        # token for that body, so disable thinking (no sampling params are set
-        # here, so there's nothing else to strip for the model swap).
-        "thinking": {"type": "disabled"},
+        # Adaptive thinking, not disabled: with thinking off Haiku 5.5 echoed
+        # most bodies back without applying the fix. Thinking tokens count
+        # against MAX_OUTPUT_TOKENS (benchmark max ~17K total on a ~30K-char
+        # body), and extract_splice_output() reads only `text` blocks, so the
+        # thinking block that precedes the echo is ignored. No temperature /
+        # top_p / top_k: Haiku 5.5 rejects non-default values.
+        "thinking": {"type": "adaptive"},
+        "output_config": {"effort": SPLICE_EFFORT},
         "system": SYSTEM_PROMPT,
         "messages": [{"role": "user", "content": prompt}],
     }
@@ -628,7 +642,7 @@ def main() -> int:
 
     # Group surgical violations by rule_id and run one batched splice per
     # rule. Schema v16: each rule_id's violations are homogeneous edits
-    # (same shape; different anchors), so one Sonnet call per rule handles
+    # (same shape; different anchors), so one model call per rule handles
     # them all in a single body rewrite. Wall-clock: ~30-60s × number-of-
     # distinct-rule-ids per review, vs the pre-v16 N sequential calls.
     by_rule: dict[str, list[dict]] = {}

@@ -80,9 +80,14 @@ def _file_lines(f: dict) -> str:
     lines = f.get("lines") or []
     if not lines:
         return file
-    if len(lines) == 1:
-        return f"{file}:{lines[0]}"
-    return f"{file}:{lines[0]}-{lines[1]}"
+    at = f"{file}:{lines[0]}" if len(lines) == 1 else f"{file}:{lines[0]}-{lines[1]}"
+    # build-evidence flags an anchor it could not place inside the PR's own
+    # changed lines. Say so here rather than showing a line number that reads
+    # as authoritative: it is also why a push onto it will not auto-refresh
+    # the card.
+    if f.get("anchor_ok") is False:
+        at += " ⚠︎ unverified"
+    return at
 
 
 def render_header(evidence: dict) -> str:
@@ -132,8 +137,26 @@ def render_trail(trail: list[dict]) -> str:
             extra.append(f'<div class="trail-evidence">{esc(t["evidence"])}</div>')
         if t.get("source"):
             extra.append(f'<div class="trail-source">source: {esc(t["source"])}</div>')
-        if t.get("route"):
-            extra.append(f'<span class="trail-route">{esc(t["route"])}</span>')
+        # The shape label and the note say different things (which way the
+        # claim drifted vs. what drifted), and either can arrive alone: the
+        # verifier backfills a note for every non-clean shape, but the schema
+        # doesn't require one. `none` is the absence of a framing check.
+        shape = t.get("framing") if t.get("framing") not in (None, "", "none") else ""
+        framing = " — ".join(x for x in (shape, t.get("framing_note") or "") if x)
+        if framing:
+            extra.append(f'<div class="trail-source">framing: {esc(framing)}</div>')
+        # One muted meta line: how the verifier handled the claim. Every part
+        # is optional — records written before the verifier metadata was
+        # carried have at most a route.
+        meta = [str(t[k]) for k in ("route", "type") if t.get(k)]
+        if t.get("confidence"):
+            meta.append(f"{t['confidence']} confidence")
+        if t.get("turn_cap_exhausted"):
+            meta.append("turn cap exhausted")
+        if t.get("source_discipline_gate"):
+            meta.append(f"gate: {t['source_discipline_gate']}")
+        if meta:
+            extra.append(f'<span class="trail-route">{esc(" · ".join(meta))}</span>')
         row_html.append(f"""
     <div class="trail-row" id="claim-{n}" data-verdict="{esc(verdict)}">
       <a class="anchor" href="#claim-{n}">#{n}</a>
@@ -158,6 +181,33 @@ def render_trail(trail: list[dict]) -> str:
 """
 
 
+def _finding_more(f: dict) -> str:
+    """The finding's text, its Do-this block, and a group's member claims.
+
+    The author card can only hold so much (pinned-comment.sh refuses a card
+    over 60,000 bytes, and build-evidence.fit_author_card sheds Do-this
+    blocks and a group's claim list to stay under it), and what it sheds is
+    promised to the reader here. So this page carries all of it whether or
+    not the card did."""
+    parts = []
+    if f.get("text"):
+        parts.append(f'<div class="finding-text">{esc(f["text"])}</div>')
+    if f.get("detail"):
+        parts.append('<details class="finding-detail"><summary>Do this</summary>'
+                     f'<div class="finding-detail-body">{esc(f["detail"])}</div></details>')
+    members = f.get("members") or []
+    if members:
+        items = []
+        for m in members:
+            loc = _file_lines(m)
+            items.append(f'<li><span class="trail-loc">{esc(loc)}</span> '
+                         f'<span class="trail-claim">{esc(m.get("claim"))}</span></li>')
+        noun = "claim" if len(members) == 1 else "claims"
+        parts.append(f'<details class="finding-members" open><summary>{len(members)} {noun} '
+                     f'asked about together</summary><ul>{"".join(items)}</ul></details>')
+    return "".join(parts)
+
+
 def render_findings(findings: list[dict]) -> str:
     if not findings:
         return '<section id="findings"><h2>Findings</h2><p class="empty">No findings.</p></section>'
@@ -168,13 +218,17 @@ def render_findings(findings: list[dict]) -> str:
         if disp.get("note"):
             disp_text += f" — {disp['note']}"
         rows.append(f"""
-    <tr>
+    <tr class="finding-row" id="finding-{esc(f.get('id'))}">
       <td>{esc(f.get('id'))}</td>
       <td>{esc(BUCKET_LABEL.get(f.get('bucket'), f.get('bucket')))}</td>
       <td>{esc(_file_lines(f))}</td>
       <td>{esc(f.get('status'))}</td>
       <td>{esc(disp_text)}</td>
     </tr>""")
+        more = _finding_more(f)
+        if more:
+            rows.append(f"""
+    <tr class="finding-more"><td></td><td colspan="4">{more}</td></tr>""")
     return f"""
 <section id="findings">
   <h2>Findings</h2>
@@ -328,6 +382,12 @@ h2 { font-size: 16px; margin: 0 0 12px; }
 table { border-collapse: collapse; width: 100%; min-width: 480px; }
 th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
 th { background: var(--surface); position: sticky; top: 0; }
+.finding-row:target, .finding-row:target + .finding-more { background: var(--surface); }
+.finding-more td { border-top: 0; padding-top: 0; }
+.finding-text { margin-bottom: 4px; }
+.finding-detail-body { white-space: pre-wrap; font-size: 13px; color: var(--muted); margin-top: 4px; }
+.finding-members ul { margin: 6px 0 0; padding-left: 18px; }
+.finding-members li { margin-bottom: 4px; }
 .ilog { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; }
 .ilog dt { color: var(--muted); font-size: 13px; }
 .ilog dd { margin: 0; }
@@ -505,6 +565,23 @@ def self_test() -> int:
     empty_trail = {**evidence, "trail": []}
     out3 = render_evidence_html(empty_trail)
     check("empty trail renders without error", "No trail entries." in out3)
+
+    # The fixture trail carries no verifier metadata, so `out` doubles as the
+    # legacy-record rendering: no meta line at all, not an empty one.
+    check("legacy trail row renders no meta line", '<span class="trail-route">' not in out)
+    meta_row = {**evidence["trail"][0], "route": "pass3", "type": "version <b>",
+                "confidence": "low", "framing": "shifted", "framing_note": "GA vs preview",
+                "turn_cap_exhausted": True, "source_discipline_gate": "generated-from-data"}
+    out4 = render_evidence_html({**evidence, "trail": [meta_row]})
+    check("trail meta line renders route, type, confidence, and coercion markers",
+          "pass3 · version &lt;b&gt; · low confidence · turn cap exhausted · gate: generated-from-data" in out4)
+    check("framing shape and note rendered", "framing: shifted — GA vs preview" in out4)
+    shape_only = {k: v for k, v in meta_row.items() if k != "framing_note"}
+    out5 = render_evidence_html({**evidence, "trail": [shape_only]})
+    check("framing shape renders without a note", "framing: shifted</div>" in out5)
+    clean = {**shape_only, "framing": "none"}
+    check("framing `none` renders nothing",
+          "framing: none" not in render_evidence_html({**evidence, "trail": [clean]}))
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)

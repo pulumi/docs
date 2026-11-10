@@ -18,6 +18,6 @@
     {{- partial "blog/badge.html" (dict
         "text" $name
         "variant" (cond $dark "dark" "outline")
-        "href" (cond $link (printf "/blog/category/%s/" $id) "")
+        "href" (cond $link (printf "/blog/categories/%s/" $id) "")
         "track" (printf "blog-category-%s" $id)) -}}
 {{- end -}}

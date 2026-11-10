@@ -9,7 +9,7 @@ tags:
     - secrets
 category: tutorials
 
-canonical_url: https://www.sanjaybhagia.com/2021/01/26/pulumi-secrets-management
+canonical_url: https://sanjaybhagia.com/blog/pulumi-secrets-management/
 ---
 
 Pulumi community member [Sanjay Bhagia](https://www.sanjaybhagia.com/) explores using Pulumi to manage secrets.

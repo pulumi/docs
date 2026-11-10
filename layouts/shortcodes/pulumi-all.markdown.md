@@ -1,9 +1,9 @@
 <!-- chooser: language -->
 <!-- option: javascript -->
-[`all`](/docs/reference/pkg/nodejs/pulumi/pulumi/#all)
+[`all`](/docs/reference/pkg/nodejs/pulumi/pulumi/functions/all.html)
 <!-- /option -->
 <!-- option: typescript -->
-[`all`](/docs/reference/pkg/nodejs/pulumi/pulumi/#all)
+[`all`](/docs/reference/pkg/nodejs/pulumi/pulumi/functions/all.html)
 <!-- /option -->
 <!-- option: python -->
 [`Output.all`](/docs/reference/pkg/python/pulumi/#pulumi.Output.all)

@@ -15,13 +15,69 @@ on:
     - cron: '43 12 * * *'
     # Afternoon rebuild for hour-granular dates — 4:23 PM Eastern
     - cron: '23 20 * * *'
-  workflow_dispatch: null
   # Allows manual triggering of the workflow
+  workflow_dispatch:
+    inputs:
+      allow_out_of_order_publish:
+        description: >-
+          Publish even if a newer deploy already published. This is the rollback
+          escape hatch for scripts/check-publish-ordering.js, which normally refuses
+          to move the live origin backwards. You do NOT need this to roll back by
+          reverting and pushing -- a revert is a new commit in a newer run, and
+          publishes normally. A new dispatch at an older ref also publishes normally,
+          since it is the newest run; check this only if another run may publish
+          while this one waits its turn.
+        type: boolean
+        default: false
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: read # This is required for actions/checkout
 jobs:
+  # Production deploys only code that's already on master. `workflow_dispatch`
+  # takes any branch, and the Actions sidebar lists this workflow right next to
+  # "Build and deploy testing" -- on pulumi/docs#22524 someone looking for the
+  # staging deploy dispatched this one at an unmerged PR branch, and it got as
+  # far as assuming the production deploy role before a manual cancel. A
+  # separate job, so a refused ref never enters the `production` environment.
+  # Refs whose commit is on master still pass: dispatching at an older ref is
+  # the documented "re-publish an older build" rollback.
+  #
+  # This only covers refs that carry it. `workflow_dispatch` runs the
+  # workflow file AT the dispatched ref, so a branch cut before this job
+  # existed (or one that edits it out) doesn't have it. Nothing else stops
+  # that today: the `production` environment has no deployment-branch rule,
+  # and it can't simply get a master-only one, because PR workflows
+  # (claude-code-review.yml and others) use the same environment for their
+  # secrets. A control that covers every ref needs its own environment for
+  # this job, or a branch condition on the deploy role's trust policy.
+  guard:
+    name: Refuse refs that aren't on master
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check that this commit is on master
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          REF: ${{ github.ref }}
+          SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if [ "$REF" = "refs/heads/master" ]; then
+            exit 0
+          fi
+          # base...head: "behind" or "identical" means $SHA is already in master.
+          STATUS=$(gh api "repos/$REPO/compare/master...$SHA" --jq .status)
+          case "$STATUS" in
+            identical|behind)
+              echo "$REF @ ${SHA:0:9} is on master -- OK to deploy" ;;
+            *)
+              echo "::error::Refusing to deploy $REF @ ${SHA:0:9} to production: that commit isn't on master (compare status: $STATUS). For a PR's staging deploy, run \"Build and deploy testing\" (testing-build-and-deploy.yml) instead."
+              exit 1 ;;
+          esac
+
   buildSite:
+    needs: guard
     env:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
@@ -58,10 +114,8 @@ jobs:
         with:
           go-version: 1.26.x
 
-      - uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.157.0'
-          extended: true
+      - name: Install Hugo (version pinned in mise.toml)
+        uses: ./.github/actions/setup-hugo
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v6
@@ -75,7 +129,9 @@ jobs:
         run: |
           S5CMD_VERSION="2.3.0"
           S5CMD_SHA256="de0fdbfa3aceae55e069ba81a0fc17b2026567637603734a387b2fca06c299b4"
-          curl -fsSL -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
           echo "${S5CMD_SHA256}  /tmp/s5cmd.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin s5cmd -f /tmp/s5cmd.tar.gz
           rm /tmp/s5cmd.tar.gz
@@ -84,7 +140,9 @@ jobs:
         run: |
           VALE_VERSION="3.14.1"
           VALE_SHA256="ff2b49ffaa9dcd246fd5008f03ff67746d2790b75bf4d3657e2fb9530fb96db3"
-          curl -fsSL -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
           echo "${VALE_SHA256}  /tmp/vale.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin vale -f /tmp/vale.tar.gz
           rm /tmp/vale.tar.gz
@@ -104,7 +162,7 @@ jobs:
             meta-images-
 
       # Derive the cache key from the Hugo installed above rather than a literal,
-      # so revving hugo-version updates the key on its own. Fails loudly on an
+      # so revving the mise.toml pin updates the key on its own. Fails loudly on an
       # unparseable version rather than silently collapsing every build into a
       # single unversioned namespace, which is the bug this exists to prevent.
       - name: Resolve Hugo version for the cache key
@@ -127,13 +185,13 @@ jobs:
         uses: actions/cache@v6
         with:
           path: resources
-          # Keyed on the Hugo resolved above, not a literal, so the four
+          # Keyed on the Hugo resolved above, not a literal, so the five
           # workflows that share this cache (pull-request.yml,
           # build-and-deploy.yml, testing-build-and-deploy.yml,
-          # pulumi-cli-docs.yml) stay in step through an upgrade without anyone
-          # remembering to bump them. Hugo does not put its version in its own
-          # cache entries, so without this an upgrade keeps serving images
-          # encoded by the previous version indefinitely.
+          # pulumi-cli-docs.yml, warm-build-cache.yml) stay in step through an
+          # upgrade without anyone remembering to bump them. Hugo does not put
+          # its version in its own cache entries, so without this an upgrade
+          # keeps serving images encoded by the previous version indefinitely.
           key: hugo-resources-${{ steps.hugo-version.outputs.version }}-${{ github.sha }}
           restore-keys: |
             hugo-resources-${{ steps.hugo-version.outputs.version }}-
@@ -157,6 +215,10 @@ jobs:
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  steps.esc-secrets.outputs.ALGOLIA_APP_ADMIN_KEY }}
           NODE_OPTIONS: "--max_old_space_size=8192"
+          # Empty for push and schedule; the string "true"/"false" for a dispatch.
+          # scripts/check-publish-ordering.js only treats recognizably affirmative
+          # values as on, so the unchecked box and the absent input both mean off.
+          ALLOW_OUT_OF_ORDER_PUBLISH: ${{ inputs.allow_out_of_order_publish }}
 
       # Duration guardrail: the July 2026 regression sat unnoticed for three
       # weeks because nothing watched build time. Warn in Slack when a

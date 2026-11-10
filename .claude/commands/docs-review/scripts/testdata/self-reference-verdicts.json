@@ -1,0 +1,102 @@
+{
+ "21720": [
+  {
+   "file": "content/docs/iac/concepts/providers/any-terraform-provider.md",
+   "claim": "The example Pulumi YAML pins the `terraform-provider` package's `random` provider to version 1.4.0.",
+   "verdict": "contradicted",
+   "line": 57,
+   "evidence": "framing: claim asserts random pinned to 1.4.0; published page shows random pinned to 3.7.1 (terraform-provider package version is 0.10.0); evidence: The live docs page for this exact file shows the pinned example uses version 3.7.1 for hashicorp/random (with terraform-provider package itself at 0.10.0), not 1.4.0: \"This pins the Terraform provider version in your Pulumi.yaml\u2026; source: https://www.pulumi.com/docs/iac/concepts/providers/any-terraform-provider/; intuition: Version number 1.4.0 doesn't match either the terraform-provider package version (0.10.0) or the hashicorp/random\u2026",
+   "source": "https://www.pulumi.com/docs/iac/concepts/providers/any-terraform-provider/",
+   "route": "pass3"
+  },
+  {
+   "file": "content/docs/iac/concepts/providers/any-terraform-provider.md",
+   "claim": "The example Pulumi YAML pins the `terraform-provider` package version to 1.4.0, described as 'Version of the terraform-provider package'.",
+   "verdict": "contradicted",
+   "line": 76,
+   "evidence": "framing: claim asserts version 1.4.0 as the pinned example version; source consistently shows 0.10.0 for the terraform-provider package version, with 3.7.1 being the\u2026; evidence: The live docs page for this exact file shows the example pins `terraform-provider` package version to 0.10.0, not 1.4.0: \"packages: random: source: terraform-provider version: 0.10.0 # Version of the terraform-provider package\u2026; source: https://www.pulumi.com/docs/iac/concepts/providers/any-terraform-provider/",
+   "source": "https://www.pulumi.com/docs/iac/concepts/providers/any-terraform-provider/",
+   "route": "pass3"
+  }
+ ],
+ "21552": [
+  {
+   "file": "content/docs/iac/languages-sdks/javascript/_index.md",
+   "claim": "For TypeScript, `tsconfig.json` must set `module` to `nodenext` and `target` to `ES2017` or later so that TypeScript emits native `await` in the compiled\u2026",
+   "verdict": "contradicted",
+   "line": 335,
+   "evidence": "framing: Source specifies target ES2022 or later for nodenext+top-level-await; claim substitutes ES2017, a weaker/incorrect minimum that TypeScript itself rejects for\u2026; evidence: The official Pulumi docs page states: \"To also enable top-level await, set target to ES2022 or later\" alongside \"Set the module and moduleResolution fields to nodenext\" \u2014 not ES2017 as the claim states.; source: https://www.pulumi.com/docs/iac/languages-sdks/javascript/; intuition: ES2017 is the general async/await native-emit threshold, but Pulumi's own docs and TypeScript's nodenext\u2026",
+   "source": "https://www.pulumi.com/docs/iac/languages-sdks/javascript/",
+   "route": "pass3"
+  }
+ ],
+ "21602": [
+  {
+   "file": "content/docs/iac/guides/clouds/aws/ecr.md",
+   "claim": "Container instances that pull an ECR image need IAM permissions to read from the registry, which must be granted explicitly, as described in the guide's 'IAM\u2026",
+   "verdict": "contradicted",
+   "line": 137,
+   "evidence": "framing: source: \"IAM permissions which are typically enabled by default\" vs claim: \"must be granted explicitly\" \u2014 same topic (container instance IAM permissions for\u2026; evidence: The current live Pulumi ECR guide states the opposite of the claim: \"The container instances require IAM permissions which are typically enabled by default.\" The claim asserts these permissions \"must be granted explicitly,\" but the cited\u2026; source: https://www.pulumi.com/docs/iac/guides/clouds/aws/ecr/",
+   "source": "https://www.pulumi.com/docs/iac/guides/clouds/aws/ecr/",
+   "route": "pass3"
+  }
+ ],
+ "21394": [
+  {
+   "file": "content/docs/iac/guides/building-extending/packages/schema.md",
+   "claim": "In the example schema's C# language metadata, the package reference `Pulumi.Aws` is pinned to version `7.*`.",
+   "verdict": "contradicted",
+   "line": 79,
+   "evidence": "framing: Claim asserts version 7.* but source shows 4.* for the same example schema field.; evidence: The live Pulumi docs page for this exact schema example shows the C# packageReferences pinning `\"Pulumi.Aws\": \"4.*\"`, not `7.*`: '\"Pulumi\": \"3.*\", \"Pulumi.Aws\": \"4.*\"' appears in the language.csharp section of the example schema.; source: https://www.pulumi.com/docs/iac/guides/building-extending/packages/schema/",
+   "source": "https://www.pulumi.com/docs/iac/guides/building-extending/packages/schema/",
+   "route": "pass3"
+  },
+  {
+   "file": "content/docs/iac/guides/building-extending/packages/schema.md",
+   "claim": "In the example schema's Node.js language metadata, the `typescript` devDependency is pinned to version `^5.0.0`.",
+   "verdict": "contradicted",
+   "line": 91,
+   "evidence": "framing: Claim asserts ^5.0.0; source (and identical archived pulumi-hugo copy) both show ^3.7.0.; evidence: The live Pulumi docs page for this exact file (content/docs/iac/guides/building-extending/packages/schema.md) shows the example schema's nodejs language metadata as: \"\\\"nodejs\\\": { \\\"dependencies\\\": { \\\"@pulumi/aws\\\": \\\"^4.5.1\\\" }\u2026; source: https://www.pulumi.com/docs/iac/guides/building-extending/packages/schema/",
+   "source": "https://www.pulumi.com/docs/iac/guides/building-extending/packages/schema/",
+   "route": "pass3"
+  }
+ ],
+ "21509": [
+  {
+   "file": "content/docs/administration/guides/oidc-issuers/_index.md",
+   "claim": "On the Pulumi Enterprise edition, the available OIDC token types are `personal`, `organization`, `team`, and `deployment-runner`.",
+   "verdict": "contradicted",
+   "line": 49,
+   "evidence": "framing: source ties 'deployment-runner' to Business Critical edition, not Enterprise; claim shifts the edition boundary; evidence: Pulumi's OIDC issuers doc states: \"The available OIDC token types vary by Pulumi edition: Individual: personal \u00b7 Team: personal, organization \u00b7 Enterprise: personal, organization, team \u00b7 Business Critical: personal, organization, team\u2026; source: https://www.pulumi.com/docs/administration/access-identity/oidc-issuers/",
+   "source": "https://www.pulumi.com/docs/administration/access-identity/oidc-issuers/",
+   "route": "pass3"
+  },
+  {
+   "file": "content/docs/iac/comparisons/terraform-cloud.md",
+   "claim": "Terraform modules published to the Terraform Registry or a private registry are resolvable only from Terraform and OpenTofu configurations.",
+   "verdict": "contradicted",
+   "line": 92,
+   "evidence": "evidence: Pulumi's own docs state that Terraform Registry modules are resolvable from Pulumi programs as well, not \"only\" from Terraform/OpenTofu: \"Pulumi can directly use existing Terraform modules from the Terraform Registry, private registries\u2026; source: https://www.pulumi.com/docs/iac/get-started/terraform/terraform-modules/ and https://www.pulumi.com/docs/iac/comparisons/terraform-cloud/; intuition: Claim's \"only\" qualifier contradicts the very page's own subsequent content (and Pulumi's core hcl-module feature)\u2026",
+   "source": "https://www.pulumi.com/docs/iac/get-started/terraform/terraform-modules/ and https://www.pulumi.com/docs/iac/comparisons/terraform-cloud/",
+   "route": "pass3"
+  },
+  {
+   "file": "content/docs/integrations/version-control/github-app.md",
+   "claim": "Mapping a single GitHub organization to multiple Pulumi organizations requires contacting [Pulumi support](/support/new/). This option is only available for\u2026",
+   "verdict": "contradicted",
+   "line": 59,
+   "evidence": "framing: shifted \u2014 source restricts to \"Enterprise and Business Critical customers\" vs. claim's \"Pro and Enterprise customers\"; evidence: The live Pulumi docs page states: \"Mapping a single GitHub organization to multiple Pulumi organizations requires contacting Pulumi support. This option is only available for Enterprise and Business Critical customers.\" The claim under\u2026; source: https://www.pulumi.com/docs/integrations/version-control/github-app/; intuition: Tier names \"Pro\" and \"Business Critical\" appear to be mismatched/outdated relative to current live docs, suggesting\u2026",
+   "source": "https://www.pulumi.com/docs/integrations/version-control/github-app/",
+   "route": "pass3"
+  },
+  {
+   "file": "data/pulumi_pricing.yaml",
+   "claim": "coverage: 12 hours/day, 7 days/week",
+   "verdict": "contradicted",
+   "line": 900,
+   "evidence": "framing: source: \"12x5\" (12 hrs/day, 5 days/week) vs claim: \"12 hours/day, 7 days/week\" \u2014 same 12-hour anchor but wrong day count; evidence: The pricing data actually reads \"Available, 12x5 / 24x7 support\" (per pulumi/docs#21239, quoting L834 of data/pulumi_pricing.yaml). \"12x5\" means 12 hours/day for 5 days/week, not 7 days/week as the claim states \u2014 the claim misconverts\u2026; source: https://github.com/pulumi/docs/issues/21239 and https://www.pulumi.com/pricing/; intuition: \"12x5\" is standard support-industry shorthand for 5 business days, not 7; converting it to \"7 days/week\" changes the\u2026",
+   "source": "https://github.com/pulumi/docs/issues/21239 and https://www.pulumi.com/pricing/",
+   "route": "pass3"
+  }
+ ]
+}

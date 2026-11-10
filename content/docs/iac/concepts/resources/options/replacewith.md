@@ -43,8 +43,11 @@ const application = new aws.ec2.Instance('app-service', { /* ... */ }, {
 import pulumi
 import pulumi_aws as aws
 
-database = aws.rds.Instance('app-db', {})
-application = aws.ec2.Instance('app-service', {},
+database = aws.rds.Instance('app-db',
+    # ...
+)
+application = aws.ec2.Instance('app-service',
+    # ...
     opts=pulumi.ResourceOptions(replace_with=[database])
 )
 ```
@@ -54,8 +57,8 @@ application = aws.ec2.Instance('app-service', {},
 
 ```go
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
-    "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/rds"
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/rds"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 

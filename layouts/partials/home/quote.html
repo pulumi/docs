@@ -1,13 +1,12 @@
-{{ if .quote.link }}
-    <a href={{ .quote.link }} class="container text-center mx-auto">
-        <p class="text-lg text-gray-700 italic">{{ .quote.text | markdownify }}</p>
-        <p class="text-base text-gray-600 font-semibold mt-2">{{ .quote.author }}</p>
-        <div class="h-16 mt-4">{{ partial "customer-logo.html" (dict "logo" .quote.logo) }}</div>
-    </a>
-{{ else }}
-    <div class="container text-center mx-auto">
-        <p class="text-lg text-gray-700 italic">{{ .quote.text | markdownify }}</p>
-        <p class="text-base text-gray-600 font-semibold mt-2">{{ .quote.author }}</p>
-        <div class="h-16 mt-4">{{ partial "customer-logo.html" (dict "logo" .quote.logo) }}</div>
-    </div>
-{{ end }}
+{{- /*
+  A centered customer quote with the customer's logo beneath it, linked at their
+  case study. Used by the /b/ landing-page variants (layouts/page/home-b.html).
+
+  Takes a dict with `quote`, whose keys are `text`, `author`, and `customer`
+  (an id from data/customers.yaml — it supplies the logo and the link target).
+*/ -}}
+<a href="{{ partial "customers/href.html" .quote.customer }}" class="container text-center mx-auto">
+    <p class="text-lg text-gray-700 italic">{{ .quote.text | markdownify }}</p>
+    <p class="text-base text-gray-600 font-semibold mt-2">{{ .quote.author }}</p>
+    <div class="h-16 mt-4">{{ partial "customer-logo.html" (dict "customer" .quote.customer) }}</div>
+</a>

@@ -55,7 +55,7 @@ Secondly, only the Release resource and the relevant Kubernetes resources read b
 
 ## How do I use it?
 
-If you aren't already familiar with using Pulumi with Kubernetes, head on over to [Pulumi's getting started guide for Kubernetes](/docs/iac/get-started/kubernetes/) first.
+If you aren't already familiar with using Pulumi with Kubernetes, head on over to [Pulumi's getting started guide for Kubernetes](/up/?cloud=kubernetes) first.
 
 1. In your chosen Kubernetes Pulumi project, make sure the referenced version of the Pulumi-Kubernetes SDK is at least `v3.7.0`.
 2. Helm Release support is configured to target the relevant cluster pointed to by the Kubernetes provider associated with it and no additional configuration is required by default. However, more advanced configuration options are supported, see the provider configuration [documentation](/registry/packages/kubernetes/api-docs/provider/#helmdriver_nodejs) for more details.
@@ -397,4 +397,4 @@ Note that both resources can co-exist safely in the same program.
 
 ## What's next?
 
-The new Helm Release resource is available in *preview* now. During the preview the resource may evolve rapidly and users are requested to not use it for critical infrastructure. We have already received valuable feedback to shape this resource and we look forward to hearing more from our users. Please reach out by filing or commenting on issues on [Github](https://github.com/pulumi/pulumi-kubernetes/issues) or asking questions on [Community Slack](https://slack.pulumi.com). Happy charting!
+The new Helm Release resource is available in *preview* now. During the preview the resource may evolve rapidly and users are requested to not use it for critical infrastructure. We have already received valuable feedback to shape this resource and we look forward to hearing more from our users. Please reach out by filing or commenting on issues on [GitHub](https://github.com/pulumi/pulumi-kubernetes/issues) or asking questions on [Community Slack](https://slack.pulumi.com). Happy charting!

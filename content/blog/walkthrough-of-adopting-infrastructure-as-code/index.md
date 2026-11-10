@@ -17,13 +17,13 @@ category: tutorials
 
 Following the first piece in this series, [Infrastructure as Code in Any Programming Language](/blog/infrastructure-as-code-in-any-programming-language/), this walkthrough will show what it takes to get up and running with infrastructure as code. Everything we show will be done with Pulumi’s [free and open source infrastructure as code SDK](/docs/install/). You can also sign up for [Pulumi Cloud](https://app.pulumi.com/signup). After discussing the basics of how to get going, we’ll then dive into some advanced use cases to show what you can do from there.
 
-## Migrating to Infrastructure as Code
+## Migrating to infrastructure as code
 
 When you pick an infrastructure as code tool, there is a major decision up front: Is this going to be net new infrastructure, or are you adopting existing infrastructure? In the latter case, maybe you clicked to experiment in the AWS console but are now ready to use infrastructure as code. Or maybe you started with Terraform and now want to migrate to Pulumi. In either case, there’s no getting around it. This is a trickier situation.
 
 In some cases, it’s better to just toss that infrastructure and start over from scratch. Or perhaps you can focus on succeeding first with a “new” part of the system and integrate with the existing infrastructure until you’re convinced it’s time to migrate. In many cases, however, that’s infeasible: Maybe you actually have a mission-critical service already that you need to bring under the management of [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/). The good news is that Pulumi offers [tools to migrate](/migrate/) from existing tools like Terraform, AWS CloudFormation/CDK, Azure Resource Manager (ARM), Kubernetes YAML and more, bringing existing infrastructure under the management of Pulumi without any disruption. The user guides in the [Migration Hub](/migrate/) walk through this process.
 
-## Getting Started with Infrastructure as Code
+## Getting started with infrastructure as code
 
 Let’s assume we are starting out with new infrastructure, even though most concepts are relevant even if you’re starting with a migration.
 
@@ -33,7 +33,7 @@ We usually start by provisioning a certain cloud architecture given our unique s
 
 The world of cloud infrastructure is a bit daunting. Pulumi supports over 100 clouds. AWS has over 200 services with over 1,000 individual resources and over 300,000 configurable properties across all of them. Pulumi is a multicloud tool, but “multicloud” does not mean “lowest common denominator.” Instead, Pulumi exposes all those individual clouds, resources and properties in their raw, unadulterated form. The benefit of this is that you have the entire capabilities of all of these clouds right at your fingertips. The downside is that to use them you need to understand these clouds and how to use them properly. As a result, you’ll probably quickly find that you want a starting point, rather than a blank page.
 
-[Pulumi Templates](/templates/) are a good way to get started. They represent over a dozen of the most common application and infrastructure architectures on the most popular clouds. They were built to be simple enough to be understandable at a glance but complete enough to be useful in practice. That includes containerized services, serverless applications, static websites, virtual machines and Kubernetes clusters across AWS, Azure, and Google Cloud, in addition to common Kubernetes workloads. Each template generates a fully working project that you can kick the tires with or even use as a starting point for your own customized architecture.
+[Pulumi Templates](/dev/templates/) are a good way to get started. They represent over a dozen of the most common application and infrastructure architectures on the most popular clouds. They were built to be simple enough to be understandable at a glance but complete enough to be useful in practice. That includes containerized services, serverless applications, static websites, virtual machines and Kubernetes clusters across AWS, Azure, and Google Cloud, in addition to common Kubernetes workloads. Each template generates a fully working project that you can kick the tires with or even use as a starting point for your own customized architecture.
 
 [Pulumi Examples](https://github.com/pulumi/examples) is an open source collection of over 300 fully working examples covering more clouds and more services. If you didn’t find a good starting point with the templates, there is a good chance you’ll find an approximation of your desired architecture here. If not, there are over 100,000 individual API examples in the [Pulumi Registry](/registry/), such as [this one, which demonstrates provisioning a new Snowflake database with replication](/registry/packages/snowflake/api-docs/database/#example-usage). Although these aren’t always as complete as examples and templates, they can also provide a great jumping-off point, in addition to serving as great reference material as you create additional code.
 
@@ -136,7 +136,7 @@ That’s not where configuration ends, however. Some of our configuration may en
 $ pulumi config set dbPassword --secret [redacted]
 ```
 
-Finally, Pulumi gives you tools to manage your projects and stacks according to your own requirements, similar to how git can be used for many different source control philosophies such as monorepos. For a description of the tradeoffs involved, see the [“Organizing Projects and Stacks” user guide](/docs/iac/guides/basics/organizing-projects-stacks/) or the [IaC Recommended Best Practices blog series](/blog/iac-recommended-practices-structuring-pulumi-projects/). For complex systems, we will likely want a separation of concerns between pieces of our infrastructure, which means it is possible for one stack to depend on another.
+Finally, Pulumi gives you tools to manage your projects and stacks according to your own requirements, similar to how git can be used for many different source control philosophies such as monorepos. For a description of the tradeoffs involved, see the [“Organizing Projects and Stacks” user guide](/docs/iac/guides/basics/organizing-projects-stacks/) or the [IaC Recommended Best Practices blog series](/blog/iac-best-practices-structuring-pulumi-projects/). For complex systems, we will likely want a separation of concerns between pieces of our infrastructure, which means it is possible for one stack to depend on another.
 
 For example, there could be a base networking and security layer, a data stack and a Kubernetes cluster that consume information from a lower-level layer but are provisioned separately, with applications above that depending on different assortments of all of the above.
 

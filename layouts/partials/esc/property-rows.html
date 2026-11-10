@@ -6,11 +6,12 @@
   inline. Outputs <li class="api-param"> elements inside a caller-provided
   <ul class="api-params">.
 
-  Input: dict with "properties", "required", "depth" (default 0), "maxDepth" (default 3).
+  Input: dict with "properties", "required", "rotateOnly", "depth" (default 0), "maxDepth" (default 3).
   Properties are rendered alphabetically — ESC schemas carry no explicit order.
 */}}
 {{ $properties := .properties | default dict }}
 {{ $required := .required | default slice }}
+{{ $rotateOnly := .rotateOnly | default slice }}
 {{ $depth := .depth | default 0 }}
 {{ $maxDepth := 3 }}
 {{ if isset . "maxDepth" }}{{ $maxDepth = .maxDepth }}{{ end }}
@@ -38,7 +39,7 @@
   {{ else if eq $prop.type "object" }}
     {{ if $prop.properties }}
       {{ $typeHTML = $prop.title | default "object" }}
-      {{ $nested = dict "properties" $prop.properties "required" ($prop.required | default slice) }}
+      {{ $nested = dict "properties" $prop.properties "required" ($prop.required | default slice) "rotateOnly" ($prop.rotateOnly | default slice) }}
     {{ else if isset $prop "additionalProperties" }}
       {{ $ap := $prop.additionalProperties }}
       {{ if eq (printf "%T" $ap) "bool" }}
@@ -67,6 +68,7 @@
       <code class="api-param-name">{{ $propName }}</code>
       <span class="api-param-badge api-param-type">{{ $typeHTML }}</span>
       <span class="api-param-badge api-param-required{{ if in $required $propName }} is-required{{ end }}">{{ if in $required $propName }}required{{ else }}optional{{ end }}</span>
+      {{ if in $rotateOnly $propName }}<span class="api-param-badge api-param-in">rotate-only</span>{{ end }}
     </div>
     {{ with $prop.description }}
       <div class="api-param-description">{{ . | markdownify }}</div>
@@ -83,6 +85,7 @@
     {{ partial "esc/property-rows.html" (dict
       "properties" $nested.properties
       "required" $nested.required
+      "rotateOnly" $nested.rotateOnly
       "depth" (add $depth 1)
       "maxDepth" $maxDepth
     ) }}

@@ -51,9 +51,18 @@ For each platform, show the verdict in the heading:
 
 For FAILs, include reasons as bullet points (the hard rule broken). No long analysis — the reasons plus the suggested copy are enough.
 
-After the per-platform reviews, if any platforms were repaired OR drafted, present the new copy under `### Suggested copy` with character counts.
+**When every platform is missing** (the post has no `social:` block, or all three are empty), don't render three `— missing` headings that each say the same thing. Write one line instead: `No social copy in the frontmatter yet — drafted copy for all three platforms is below.`
 
-If any platform's original copy passed without needing a repair, present advisory notes from the suggestions pass under `### Suggestions (advisory)`, grouped by platform. Only include platforms that ran the suggestions pass (i.e., not the repaired ones, not the missing ones). If all run platforms returned "no suggestions", omit this section entirely — do not write `### Suggestions (advisory)` followed by silence. Suggestions never change the PASS/FAIL verdict.
+After the per-platform reviews, if any platforms were repaired OR drafted, present the new copy under `### Suggested copy` with character counts, **collapsed**: put the copy inside `<details>` with the summary `<summary>Suggested copy for N platform(s) — click to expand</summary>`, then a blank line (GitHub needs it to render the blockquotes), then the copy, then `</details>`.
+
+If any platform's original copy passed without needing a repair, present advisory notes from the suggestions pass under `### Suggestions (advisory)`, grouped by platform, **collapsed** the same way (`<summary>N advisory note(s) — none of them block — click to expand</summary>`). Only include platforms that ran the suggestions pass (i.e., not the repaired ones, not the missing ones). If all run platforms returned "no suggestions", omit this section entirely — do not write `### Suggestions (advisory)` followed by silence. Suggestions never change the PASS/FAIL verdict.
+
+**In CI, open with one orienting line** directly under `## Social Media Review`, because authors who don't post to social media for work read this comment as a request they can't fulfil (reader feedback, 2026-08-28):
+
+```
+> [!NOTE]
+> Pulumi's accounts post this copy after the blog goes live — you don't need a social account of your own. Only a character-limit FAIL fails a check; everything else here is optional.
+```
 
 ## Example output: all PASS, no advisory
 
@@ -113,6 +122,9 @@ Bluesky: not provided.
 ```
 ## Social Media Review
 
+> [!NOTE]
+> Pulumi's accounts post this copy after the blog goes live — you don't need a social account of your own. Only a character-limit FAIL fails a check; everything else here is optional.
+
 ### content/blog/ai-coding-frameworks/index.md
 
 #### X — FAIL
@@ -130,6 +142,9 @@ No copy provided. Suggested copy drafted below.
 
 ### Suggested copy
 
+<details>
+<summary>Suggested copy for 2 platforms — click to expand</summary>
+
 **X** (249/255 chars) — clean tail trim; final sentence dropped, everything else identical:
 > AI coding agents fail in recognizable ways: context fades, tests get skipped, scope expands past what you asked for. Three community teams built frameworks for this, each taking a different approach.
 >
@@ -140,15 +155,20 @@ No copy provided. Suggested copy drafted below.
 >
 > Here's how they compared.
 
+</details>
+
 ---
 
 ### Suggestions (advisory)
 
-These are stylistic notes — they don't block the post.
+<details>
+<summary>2 advisory notes — none of them block — click to expand</summary>
 
 **LinkedIn**
 - "There is a pattern that teams building with AI coding agents tend to hit" is a generic opener — lead with the speedup or the bug the framework caught
 - Final paragraph reveals the article's conclusion ("which helps comes down to which problem keeps showing up") — withhold the mapping so the reader still has something to find out
+
+</details>
 
 ---
 

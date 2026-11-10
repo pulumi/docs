@@ -113,7 +113,7 @@ The flags work the same way across `up`, `preview`, `refresh`, and `destroy`, wi
 
 - **`pulumi preview`** is the safest way to experiment with targeting. It shows you what an `up` with the same flags would change, without applying anything. Preview a targeted update before running it.
 - **`pulumi refresh`** with `--target` updates the state of only the listed resources from the cloud provider. This is useful when you suspect drift in one resource and don't want to wait for a full-stack refresh.
-- **`pulumi destroy`** with `--target` requires `--target-dependents` whenever the targeted resource has dependents in the stack. Without it, destroy aborts rather than leave dangling references in state.
+- **`pulumi destroy`** is the strictest of the four, as described in [How targeting interacts with the dependency graph](#how-targeting-interacts-with-the-dependency-graph) above.
 
 ## Limitations and trade-offs
 
@@ -170,7 +170,7 @@ A configuration value is baked into a resource at creation time and an in-place 
 pulumi up --target-replace 'urn:pulumi:dev::my-project::aws:ec2/instance:Instance::web-server'
 ```
 
-## See also
+## Learn more
 
 - [`pulumi up`](/docs/iac/cli/commands/pulumi_up/), [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/), [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/), and [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy/) command references.
 - [Update plans](/docs/iac/operations/stack-management/update-plans/) for constraining an update to a pre-approved set of operations.

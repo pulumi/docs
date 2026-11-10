@@ -5,7 +5,6 @@ meta_desc: "Migrating from Terraform or another IaC tool? Learn how to adopt exi
 authors: ["luke-hoban"]
 tags: ["migration"]
 category: tutorials
-canonical_url: "https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/"
 ---
 
 {{% notes %}}
@@ -254,4 +253,4 @@ The result is that we have migrated our existing infrastructure into Pulumi and 
 
 With Pulumi, you can easily work with existing cloud infrastructure, either referencing the existing infrastructure as inputs to new cloud infrastructure defined in Pulumi, or adopting existing infrastructure under management with Pulumi.
 
-[Get started](/docs/get-started/) with Pulumi today!
+[Get started](/up/) with Pulumi today!

@@ -17,7 +17,7 @@ aliases:
     - /docs/esc/concepts/providers/secrets/pulumi-stacks/
 ---
 
-The `pulumi-stacks` provider enables you to import stack outputs from Pulumi into your environment. This includes stacks updated via the Pulumi CLI as well as stacks whose [Terraform state is stored in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/) — Terraform root module outputs are mapped to stack outputs and accessible here with no additional tokens or credentials required.
+The `pulumi-stacks` provider enables you to import stack outputs from Pulumi into your environment. This includes stacks updated via the Pulumi CLI as well as stacks whose [Terraform state is stored in Pulumi Cloud](/docs/integrations/terraform/state-backend/) — Terraform root module outputs are mapped to stack outputs and accessible here with no additional tokens or credentials required.
 
 ## Example
 
@@ -39,7 +39,7 @@ values:
 
 ### Terraform state stored in Pulumi Cloud
 
-When a stack's [Terraform state is stored in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/), the Terraform root module outputs are exposed as stack outputs (using their original snake_case names) and read here with no additional tokens or credentials. You can then map those outputs to either `pulumiConfig`, to consume them as inputs to a Pulumi program, or `environmentVariables`, to feed them back into a downstream Terraform run:
+When a stack's [Terraform state is stored in Pulumi Cloud](/docs/integrations/terraform/state-backend/), the Terraform root module outputs are exposed as stack outputs (using their original snake_case names) and read here with no additional tokens or credentials. You can then map those outputs to either `pulumiConfig`, to consume them as inputs to a Pulumi program, or `environmentVariables`, to feed them back into a downstream Terraform run:
 
 ```yaml
 values:

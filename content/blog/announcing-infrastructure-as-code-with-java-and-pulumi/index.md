@@ -109,13 +109,13 @@ Pulumi unlocks access to the entire JVM ecosystem&mdash;something that's easy to
 
 ## Join the community and get started
 
-The first preview of Pulumi for Java includes support for the entire breadth of services in AWS, Azure, Google Cloud, and more. Give Pulumi a try, visit the [Pulumi for Java docs](https://www.pulumi.com/docs/languages-sdks/java/).
+The first preview of Pulumi for Java includes support for the entire breadth of services in AWS, Azure, Google Cloud, and more. Give Pulumi a try, visit the [Pulumi for Java docs](/docs/iac/languages-sdks/java/).
 
 There you will find several instructions on installing and getting started with Pulumi for Java. The following resources provide additional useful information:
 
 - [Full example code](https://github.com/pulumi/examples/tree/master/gcp-java-gke-hello-world)
 
-- [Getting started with Pulumi](https://www.pulumi.com/docs/get-started/)
+- [Getting started with Pulumi](/up/)
 
 - [General Pulumi overview (concepts and architecture)](https://www.pulumi.com/docs/iac/concepts/)
 

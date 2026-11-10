@@ -122,7 +122,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Overrides the domain used when generating links to the Pulumi Cloud.
+            Overrides the domain used when generating links to Pulumi Cloud.
         </p>
         <pre><code class="text-xs">PULUMI_CONSOLE_DOMAIN="yourhost.domain.com"</code></pre>
     </dd>
@@ -180,7 +180,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            As of <a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0166-2018-11-28"><code>v0.12.2</code></a>,
+            As of <a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0122-2018-05-19"><code>v0.12.2</code></a>,
             the promise leak experience has been improved and shows a simple error message. Set this environment variable to
             get more verbose error messages when debugging promise leaks.
         </p>
@@ -533,6 +533,39 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_PACKAGE_TEMPLATE_BRANCH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the branch that <code>pulumi package new</code> checks out from the package template repository. Defaults to <code>main</code>, regardless of the repository's default branch.
+        </p>
+        <pre><code class="text-xs">PULUMI_PACKAGE_TEMPLATE_BRANCH="develop"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_PACKAGE_TEMPLATE_GIT_REPOSITORY
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the Git repository that <code>pulumi package new</code> fetches package templates from. Accepts a Git URL or a local repository path. Defaults to <code>https://github.com/pulumi/templates-packages.git</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_PACKAGE_TEMPLATE_GIT_REPOSITORY="https://github.com/acme/pulumi-package-templates.git"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_PACKAGE_TEMPLATE_PATH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the directory where <code>pulumi package new</code> caches package templates. Defaults to <code>~/.pulumi/templates-packages</code>, or <code>$PULUMI_HOME/templates-packages</code> if <span class="font-mono">PULUMI_HOME</span> is set.
+        </p>
+        <pre><code class="text-xs">PULUMI_PACKAGE_TEMPLATE_PATH="/tmp/pulumi/templates-packages"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_PARALLEL
         </span>
     </dt>
@@ -563,6 +596,39 @@ aliases:
             Specifies overrides for plugin-download URLs. The expected format is <code>regexp=URL</code>, and multiple pairs can be specified separated by commas.
         </p>
         <pre><code class="text-xs">PULUMI_PLUGIN_DOWNLOAD_URL_OVERRIDES="^https://foo=https://bar,^github://=https://buzz"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_POLICY_TEMPLATE_BRANCH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the branch that <code>pulumi policy new</code> checks out from the policy pack template repository. Defaults to <code>master</code>, regardless of the repository's default branch.
+        </p>
+        <pre><code class="text-xs">PULUMI_POLICY_TEMPLATE_BRANCH="main"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_POLICY_TEMPLATE_GIT_REPOSITORY
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the Git repository that <code>pulumi policy new</code> fetches policy pack templates from. Accepts a Git URL or a local repository path. Defaults to <code>https://github.com/pulumi/templates-policy.git</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_POLICY_TEMPLATE_GIT_REPOSITORY="https://github.com/acme/pulumi-policy-templates.git"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_POLICY_TEMPLATE_PATH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the directory where <code>pulumi policy new</code> caches policy pack templates. Defaults to <code>~/.pulumi/templates-policy</code>, or <code>$PULUMI_HOME/templates-policy</code> if <span class="font-mono">PULUMI_HOME</span> is set.
+        </p>
+        <pre><code class="text-xs">PULUMI_POLICY_TEMPLATE_PATH="/tmp/pulumi/templates-policy"</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -645,6 +711,39 @@ aliases:
             Suppresses showing the 'explainFailure' link to Neo in the CLI output, regardless of the Neo settings for the given Pulumi organization. The legacy name <span class="font-mono">PULUMI_SUPPRESS_COPILOT_LINK</span> is still accepted as an alias.
         </p>
         <pre><code class="text-xs">PULUMI_SUPPRESS_NEO_LINK=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_TEMPLATE_BRANCH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the branch that <code>pulumi new</code> checks out from the project template repository. Defaults to <code>master</code>, regardless of the repository's default branch.
+        </p>
+        <pre><code class="text-xs">PULUMI_TEMPLATE_BRANCH="main"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_TEMPLATE_GIT_REPOSITORY
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the Git repository that <code>pulumi new</code> fetches project templates from. Accepts a Git URL or a local repository path. Defaults to <code>https://github.com/pulumi/templates.git</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_TEMPLATE_GIT_REPOSITORY="https://github.com/acme/pulumi-templates.git"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_TEMPLATE_PATH
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the directory where <code>pulumi new</code> caches project templates. Defaults to <code>~/.pulumi/templates</code>, or <code>$PULUMI_HOME/templates</code> if <span class="font-mono">PULUMI_HOME</span> is set.
+        </p>
+        <pre><code class="text-xs">PULUMI_TEMPLATE_PATH="/tmp/pulumi/templates"</code></pre>
     </dd>
     <dt>
         <span class="font-mono">

@@ -1,0 +1,58 @@
+<!-- CLAUDE_REVIEW_BRIEF -->
+## Reviewer's guide v1 — not for the author
+
+> [!TIP]
+> **This is the reviewer's guide.** Work through the ⚠️ checklist below, then approve — **approving asserts only that the ⚠️ items looked right to you.** Machine-verified this run: links, shortcodes, page metadata, and every claim marked verified (receipts on the evidence page). Code samples are read, not compiled.
+>
+> _PR author: your to-do list is the other review comment, "Author action guide" — nothing on this card is yours._
+
+**Approval needed from:** @pulumi/docs-tools — any member's approval satisfies the merge gate.
+
+> [!NOTE]
+> **What this PR changes:**
+>
+> - Adds `scripts/redirects/README.md` — a new reference page for the hand-maintained 301 redirect files, with no code changes alongside it.
+> - Documents the `<source-key>|<destination>` line format and the blank-line / `#`-comment filter.
+> - Describes how the redirect files reach production: `make-s3-redirects.sh` → `make-s3-redirects.js` → an S3 `WebsiteRedirectLocation` object, run from `ci-push.sh` after the bucket sync.
+> - Contrasts hand-written rules with Hugo `aliases` and says which to reach for.
+> - Asserts a cross-repo ownership boundary: `registry/**` redirect keys are owned by pulumi/registry, not this repo.
+>
+> The wrongness that would hurt a reader here is a statement about the deploy pipeline that sends someone to the wrong repo, or that hides a side effect the file itself causes in production. Every claim was read against `make-s3-redirects.sh`, `make-s3-redirects.js`, `ci-push.sh`, and `sync-and-test-bucket.sh` in this repo, and the directory's existing rule files were inventoried for `registry/**` keys.
+>
+> **Review confidence:**
+>
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | mechanics | HIGH |  |
+> | facts | MEDIUM | Two statements about the *other* repo's files couldn't be confirmed from here — see the ⚠️ item below. The in-repo claims were all checked against the scripts named. |
+> | code correctness | HIGH |  |
+
+### ⚠️ Check these before approving
+
+| ID | Where | Finding |
+|---|---|---|
+| **F?** | `scripts/redirects/README.md` L47–52 | Two claims point at files in pulumi/registry — that it has its own `scripts/redirects/` directory applied by `scripts/ci/make-s3-redirects.sh`, and that the how-to-guide rules live in `how-to-guides-to-dev-redirects.txt`. Neither path is visible from this repo. If you have pulumi/registry handy, confirm both spellings; a wrong filename here sends the next person looking for a redirect to a path that doesn't exist. |
+
+#### Editorial stances introduced by this PR
+
+*Superlative, ranking, or comparative language the diff adds. No verdict — a page's own framing isn't fact-checkable — but confirm each is a stance the docs should take, and that no agent-written rewrite introduced it unasked.*
+
+_None — the extractor found no positioning or comparison language in this PR's added lines._
+
+### ✅ What you can rubber-stamp
+
+- **Facts:** no factual claims found in the changed lines.
+- **Mechanics:** no internal links added.
+- **Style:** 0 advisory suggestion(s) left with the author; never blocking.
+
+💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<sub>Review v1 · updated 2026-09-21T21:49:26Z · head commit 7b8d01c</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+**For the reviewer:** the ⚠️ items above are the minutes that matter — the receipts for everything machine-verified are on the evidence page. The author's open items live on their own card (the comment headed "Author action guide"); while any are open, a **Waiting on the author** list above tracks them, and merge stays blocked until they're answered. If something here seems off, comment on the PR — `@claude <your point> #update-review` re-adjudicates with your input.

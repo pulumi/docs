@@ -32,11 +32,11 @@ sections:
     description: |
       **Enterprise-grade AI for cloud automation.**
 
-      Pulumi's code-first platform already works great with the coding agents your team loves — Claude Code, Codex, Cursor, and more — and our [agent skills](/docs/ai/skills/) make them even better. Want the best infrastructure agent right out of the box? That's Neo: the industry's first AI agent built from the ground up to execute, govern, and optimize complex cloud automation at enterprise scale. Neo understands infrastructure dependencies, respects your policies, and works within your existing Pulumi governance.
+      Pulumi's code-first platform already works great with the coding agents your team loves — Claude Code, Codex, Cursor, and more — and our [agent skills](/docs/ai/concepts/agent-skills/) make them even better. Want the best infrastructure agent right out of the box? That's Neo: the industry's first AI agent built from the ground up to execute, govern, and optimize complex cloud automation at enterprise scale. Neo understands infrastructure dependencies, respects your policies, and works within your existing Pulumi governance.
     cards:
       - icon: code
         title: Faster provisioning
-        description: Automate complex multi-cloud deployments in minutes. Werner Enterprises reduced provisioning time from 3 days to 4 hours.
+        description: Automate complex multi-cloud deployments. Werner Enterprises reduced provisioning time from 3 days to 4 hours.
       - icon: shield-check
         title: Fewer policy violations
         description: Neo enforces your governance policies automatically. RBAC, compliance rules, and security standards built into every action.
@@ -57,8 +57,7 @@ sections:
       Our goal has always been to minimize the time it takes an engineer to go from an idea to an experiment in production. We're excited to see Pulumi pushing automation further.
     author: Jk Jensen
     title: Software Engineering Team Lead
-    company: Mysten Labs
-    logo: /logos/tech/mysten-labs.svg
+    customer: mysten-labs
     anchor: testimonial
 
   - type: section_header
@@ -83,10 +82,10 @@ sections:
         description: Every action is previewed, logged, and reversible, giving you complete visibility into what changed and when.
       - icon: chart-line
         title: Cost optimization
-        description: Instantly surface your least-used, most expensive resources and get actionable recommendations to reduce cloud spend.
+        description: Surface your least-used, most expensive resources and get actionable recommendations to reduce cloud spend.
       - icon: bug
         title: Debug & diagnose
-        description: Ask why a deployment failed or what's misconfigured. Neo investigates and explains in seconds.
+        description: Ask why a deployment failed or what's misconfigured. Neo investigates and explains what went wrong.
       - icon: check-circle
         title: Compliance checks
         description: Neo can scan for misconfigurations and policy violations across your infrastructure with a single question.
@@ -115,6 +114,6 @@ sections:
         cta_primary_text: See Neo in Action
         cta_primary_link: https://www.youtube.com/watch?v=9GB9M2l1OgY
         cta_text: Read the Docs
-        cta_link: /docs/ai/neo/
+        cta_link: /docs/ai/concepts/neo/
     anchor: get-started
 ---

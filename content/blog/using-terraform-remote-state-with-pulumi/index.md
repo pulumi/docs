@@ -21,7 +21,7 @@ deploying into a VPC owned and managed by a network operations team.
 
 Pulumi supports
 [this kind of workflow](/docs/iac/concepts/stacks/#stackreferences)
-natively using the [`StackReference`](/docs/reference/pkg/nodejs/pulumi/pulumi/#StackReference)
+natively using the [`StackReference`](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/StackReference.html)
 type from the Pulumi SDK. Integration with the most popular
 cloud-specific tools have been supported by Pulumi since the earliest
 days:
@@ -38,7 +38,7 @@ days:
 We recently added similar support for reading the outputs of a Terraform
 state file - both from local `.tfstate` files, and from all of the
 remote state backends supported by Terraform. This is exposed via the
-[`terraform.state.RemoteStateReference`](/docs/reference/pkg/nodejs/pulumi/terraform/modules/state.html#RemoteStateReference) type in the
+[`terraform.state.RemoteStateReference`](/docs/reference/pkg/nodejs/pulumi/terraform/classes/state.RemoteStateReference.html) type in the
 [`@pulumi/terraform`](https://www.npmjs.com/package/@pulumi/terraform)
 NPM package.
 <!--more-->
@@ -175,7 +175,7 @@ environments. Resources which were provisioned by CloudFormation, ARM or
 Terraform can remain in place, while still allowing those values to be
 dynamically consumed by a Pulumi program.
 
-Pulumi is free and open-source, and you can [get started today](/docs/get-started/).
+Pulumi is free and open-source, and you can [get started today](/up/).
 To learn more about migrating
 from Terraform to Pulumi, check out
 [Converting Full Terraform Programs to Pulumi](/blog/converting-full-terraform-programs-to-pulumi/)

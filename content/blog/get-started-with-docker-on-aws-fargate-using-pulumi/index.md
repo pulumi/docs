@@ -8,10 +8,10 @@ category: tutorials
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 
-> Update: Check out the [Learning Machine Case Study](/case-studies/learning-machine/) where provisioning went from 3 weeks to 1 hour with Pulumi and AWS.
+> Update: Check out the [Learning Machine Case Study](/customers/learning-machine/) where provisioning went from 3 weeks to 1 hour with Pulumi and AWS.
 >
 > *"The impact of serverless capabilities was also transformative for the Learning Machine business. Pulumi enabled a rapid shift to Amazon ECS, AWS Fargate and AWS Lambda — the net effect of which was a 67% reduction in AWS charges. This enabled the team to spend less time focused on maintaining existing infrastructure and more time deploying new applications on AWS and adding new customers.*
 >
@@ -254,4 +254,4 @@ but also Azure and GCP cloud providers, in addition to Kubernetes!
 Want to go deeper?
 
 - [Check out this example on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate)
-- [Get Started with your favorite cloud and scenario now](/docs/get-started/)
+- [Get Started with your favorite cloud and scenario now](/up/)

@@ -22,7 +22,7 @@ The `ignoreChanges` resource option specifies a list of properties that Pulumi w
 The `ignoreChanges` option only applies to resource inputs, not outputs.
 {{% /notes %}}
 
-In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/reference/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
+Besides top-level property names, you can also pass nested properties to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/reference/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
 
 {{% notes type="info" %}}
 For arrays with different lengths, only changes for elements that are in both arrays are ignored. If the new input array is longer, additional elements will be taken from the new array. If the new array is shorter, we only take that number of elements from the original array.
@@ -30,7 +30,7 @@ For arrays with different lengths, only changes for elements that are in both ar
 For example `ignoreChanges` on an old array `[1, 2]` and a new array `[a, b, c]` results in `[1, 2, c]`, and an old array `[1, 2, 3]` and a new array `[a, b]` results in `[1, 2]`.
 {{% /notes %}}
 
-## How ignoreChanges works
+## How `ignoreChanges` works
 
 After the resource is created, Pulumi relies on the last recorded state for every property named in `ignoreChanges`. During a preview or update, Pulumi:
 
@@ -44,7 +44,7 @@ Because Pulumi reuses the value stored in the state, an external system can safe
 When you skip `pulumi refresh` (or `pulumi up --refresh`) after `ignoreChanges` has been set, Pulumi keeps using the previous state value when it performs an update. This can lead to unintentional changes if the cloud state has been changed (either through intentional external management, or unintentional drift). Providers that require full object replacements—such as AWS load balancer listeners where the entire target group array is sent on every update—will receive the potentially stale values from the state and may reset the live configuration.
 {{% /notes %}}
 
-For instance, in this example, the resource’s prop property "new-value" will be set when Pulumi initially creates the resource, but from then on, any updates will ignore it:
+In this example, Pulumi sets the resource's `prop` property to `"new-value"` when it initially creates the resource, but from then on, any updates ignore it:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
@@ -146,9 +146,19 @@ Consider an AWS Application Load Balancer listener whose target group weights ar
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const frontEnd = new aws.lb.LoadBalancer("frontEnd", {});
-const frontEndBlue = new aws.lb.TargetGroup("frontEndBlue", {});
-const frontEndGreen = new aws.lb.TargetGroup("frontEndGreen", {});
+const frontEnd = new aws.lb.LoadBalancer("frontEnd", {
+    subnets: ["subnet-0a1b2c3d4e5f60718", "subnet-0f1e2d3c4b5a69788"],
+});
+const frontEndBlue = new aws.lb.TargetGroup("frontEndBlue", {
+    port: 80,
+    protocol: "HTTP",
+    vpcId: "vpc-0a1b2c3d4e5f60718",
+});
+const frontEndGreen = new aws.lb.TargetGroup("frontEndGreen", {
+    port: 80,
+    protocol: "HTTP",
+    vpcId: "vpc-0a1b2c3d4e5f60718",
+});
 const frontEndListener = new aws.lb.Listener("frontEndListener", {
     loadBalancerArn: frontEnd.arn,
     port: 443,
@@ -183,10 +193,11 @@ const frontEndListener = new aws.lb.Listener("frontEndListener", {
 ```python
 import pulumi
 import pulumi_aws as aws
+from pulumi import ResourceOptions
 
-front_end = aws.lb.LoadBalancer("frontEnd")
-front_end_blue = aws.lb.TargetGroup("frontEndBlue")
-front_end_green = aws.lb.TargetGroup("frontEndGreen")
+front_end = aws.lb.LoadBalancer("frontEnd", subnets=["subnet-0a1b2c3d4e5f60718", "subnet-0f1e2d3c4b5a69788"])
+front_end_blue = aws.lb.TargetGroup("frontEndBlue", port=80, protocol="HTTP", vpc_id="vpc-0a1b2c3d4e5f60718")
+front_end_green = aws.lb.TargetGroup("frontEndGreen", port=80, protocol="HTTP", vpc_id="vpc-0a1b2c3d4e5f60718")
 front_end_listener = aws.lb.Listener("frontEndListener",
     load_balancer_arn=front_end.arn,
     port=443,
@@ -226,15 +237,28 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		frontEnd, err := lb.NewLoadBalancer(ctx, "frontEnd", nil)
+		frontEnd, err := lb.NewLoadBalancer(ctx, "frontEnd", &lb.LoadBalancerArgs{
+			Subnets: pulumi.StringArray{
+				pulumi.String("subnet-0a1b2c3d4e5f60718"),
+				pulumi.String("subnet-0f1e2d3c4b5a69788"),
+			},
+		})
 		if err != nil {
 			return err
 		}
-		frontEndBlue, err := lb.NewTargetGroup(ctx, "frontEndBlue", nil)
+		frontEndBlue, err := lb.NewTargetGroup(ctx, "frontEndBlue", &lb.TargetGroupArgs{
+			Port:     pulumi.Int(80),
+			Protocol: pulumi.String("HTTP"),
+			VpcId:    pulumi.String("vpc-0a1b2c3d4e5f60718"),
+		})
 		if err != nil {
 			return err
 		}
-		frontEndGreen, err := lb.NewTargetGroup(ctx, "frontEndGreen", nil)
+		frontEndGreen, err := lb.NewTargetGroup(ctx, "frontEndGreen", &lb.TargetGroupArgs{
+			Port:     pulumi.Int(80),
+			Protocol: pulumi.String("HTTP"),
+			VpcId:    pulumi.String("vpc-0a1b2c3d4e5f60718"),
+		})
 		if err != nil {
 			return err
 		}
@@ -283,11 +307,24 @@ using Aws = Pulumi.Aws;
 
 return await Deployment.RunAsync(() =>
 {
-    var frontEnd = new Aws.LB.LoadBalancer("frontEnd");
+    var frontEnd = new Aws.LB.LoadBalancer("frontEnd", new()
+    {
+        Subnets = new[] { "subnet-0a1b2c3d4e5f60718", "subnet-0f1e2d3c4b5a69788" },
+    });
 
-    var frontEndBlue = new Aws.LB.TargetGroup("frontEndBlue");
+    var frontEndBlue = new Aws.LB.TargetGroup("frontEndBlue", new()
+    {
+        Port = 80,
+        Protocol = "HTTP",
+        VpcId = "vpc-0a1b2c3d4e5f60718",
+    });
 
-    var frontEndGreen = new Aws.LB.TargetGroup("frontEndGreen");
+    var frontEndGreen = new Aws.LB.TargetGroup("frontEndGreen", new()
+    {
+        Port = 80,
+        Protocol = "HTTP",
+        VpcId = "vpc-0a1b2c3d4e5f60718",
+    });
 
     var frontEndListener = new Aws.LB.Listener("frontEndListener", new()
     {
@@ -338,11 +375,15 @@ import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
 import com.pulumi.aws.lb.LoadBalancer;
+import com.pulumi.aws.lb.LoadBalancerArgs;
 import com.pulumi.aws.lb.TargetGroup;
+import com.pulumi.aws.lb.TargetGroupArgs;
 import com.pulumi.aws.lb.Listener;
 import com.pulumi.aws.lb.ListenerArgs;
 import com.pulumi.aws.lb.inputs.ListenerDefaultActionArgs;
 import com.pulumi.aws.lb.inputs.ListenerDefaultActionForwardArgs;
+import com.pulumi.aws.lb.inputs.ListenerDefaultActionForwardTargetGroupArgs;
+import com.pulumi.resources.CustomResourceOptions;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
@@ -356,11 +397,21 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var frontEnd = new LoadBalancer("frontEnd");
+        var frontEnd = new LoadBalancer("frontEnd", LoadBalancerArgs.builder()
+            .subnets("subnet-0a1b2c3d4e5f60718", "subnet-0f1e2d3c4b5a69788")
+            .build());
 
-        var frontEndBlue = new TargetGroup("frontEndBlue");
+        var frontEndBlue = new TargetGroup("frontEndBlue", TargetGroupArgs.builder()
+            .port(80)
+            .protocol("HTTP")
+            .vpcId("vpc-0a1b2c3d4e5f60718")
+            .build());
 
-        var frontEndGreen = new TargetGroup("frontEndGreen");
+        var frontEndGreen = new TargetGroup("frontEndGreen", TargetGroupArgs.builder()
+            .port(80)
+            .protocol("HTTP")
+            .vpcId("vpc-0a1b2c3d4e5f60718")
+            .build());
 
         var frontEndListener = new Listener("frontEndListener", ListenerArgs.builder()
             .loadBalancerArn(frontEnd.arn())
@@ -402,16 +453,24 @@ runtime: yaml
 resources:
   frontEnd:
     type: aws:lb:LoadBalancer
-    name: front_end
+    properties:
+      subnets:
+        - subnet-0a1b2c3d4e5f60718
+        - subnet-0f1e2d3c4b5a69788
   frontEndBlue:
     type: aws:lb:TargetGroup
-    name: front_end_blue
+    properties:
+      port: 80
+      protocol: HTTP
+      vpcId: vpc-0a1b2c3d4e5f60718
   frontEndGreen:
     type: aws:lb:TargetGroup
-    name: front_end_green
+    properties:
+      port: 80
+      protocol: HTTP
+      vpcId: vpc-0a1b2c3d4e5f60718
   frontEndListener:
     type: aws:lb:Listener
-    name: front_end
     properties:
       loadBalancerArn: ${frontEnd.arn}
       port: 443
@@ -436,11 +495,24 @@ resources:
 {{% choosable language hcl %}}
 
 ```hcl
-resource "aws_lb" "front_end" {}
+resource "aws_lb" "front_end" {
+  name    = "front-end"
+  subnets = ["subnet-0a1b2c3d4e5f60718", "subnet-0f1e2d3c4b5a69788"]
+}
 
-resource "aws_lb_target_group" "front_end_blue" {}
+resource "aws_lb_target_group" "front_end_blue" {
+  name     = "front-end-blue"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = "vpc-0a1b2c3d4e5f60718"
+}
 
-resource "aws_lb_target_group" "front_end_green" {}
+resource "aws_lb_target_group" "front_end_green" {
+  name     = "front-end-green"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = "vpc-0a1b2c3d4e5f60718"
+}
 
 resource "aws_lb_listener" "front_end_listener" {
   load_balancer_arn = aws_lb.front_end.arn
@@ -480,4 +552,4 @@ HCL `ignore_changes` entries are attribute paths with constant indices; wildcard
 
 {{< /chooser >}}
 
-After the initial deployment, an external process could change the weights (for example, to a 50/50 split). Before you next run `pulumi up` to add a third target group, run `pulumi refresh` so that the stack captures the live weights. Without the refresh, Pulumi retains the original `100` and `0` values in state and will resend them to the AWS API on the next update, resetting the weights you meant to preserve.
+After the initial deployment, an external process could change the weights (for example, to a 50/50 split). Before you next run `pulumi up` to add a third target group, run `pulumi refresh` so that the stack captures the live weights. Without the refresh, Pulumi retains the original `100` and `0` values in state and resends them to the AWS API on the next update, resetting the weights you meant to preserve.

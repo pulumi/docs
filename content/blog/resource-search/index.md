@@ -38,14 +38,14 @@ category: product
 # and please remove these comments before submitting for review.
 ---
 
-Last month we announced a new [Pulumi Cloud](/product/pulumi-cloud/) feature available for everyone: Resource Search. In the past month, Resource Search has been the fastest adopted feature since launching Pulumi Cloud, with thousands of users leveraging the feature to find resources across cloud environments, projects, stacks, teams, and users. Today we are announcing two new improvements to Resource Search: advanced filtering and Pulumi Teams support.
+Last month we announced a new [Pulumi Cloud](/product/) feature available for everyone: Resource Search. In the past month, Resource Search has been the fastest adopted feature since launching Pulumi Cloud, with thousands of users leveraging the feature to find resources across cloud environments, projects, stacks, teams, and users. Today we are announcing two new improvements to Resource Search: advanced filtering and Pulumi Teams support.
 
 <!--more-->
 ## Introduction to Resource Search
 
 Platform and developer teams are spinning up resources across many cloud accounts within multiple cloud providers. A common pain point we have heard from our customers is having a uniform view of resources across them, as every account (by design) is a walled garden. Often to answer key questions about their business, such as "which team has the largest cloud footprint", teams need to combine data across various clouds, cloud accounts, and SaaS tools. This prevents organizations from getting quick answers to operational questions and barriers to build aggregations to derive insights.
 
-[Pulumi Resource Search](/docs/insights/discovery/search/) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all of your AWS VPCs, or all of your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.
+[Pulumi Resource Search](/docs/discovery-governance/guides/search-resources/) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all of your AWS VPCs, or all of your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.
 
 When we undertook solving this pain point for our customers we partnered with multiple companies to inform the design. Without the dozens of organizations that participated in the Pulumi Resource Search private beta we would not have been able to release a feature with strong adoption in a short time frame. Today we are announcing two improvements to Resource Search as a result of this feedback: more advanced filtering options and Pulumi Teams support.
 
@@ -103,7 +103,7 @@ show azure and azure native security groups
 
 When navigating to the Resources page you will find your top 3 resource types, projects, stacks, teams and packages by resource count. We have extended this to show the top 10 when you click 'Show more'. This came as a direct byproduct of the feedback we have gotten from our customers that this feature added value upon first page load, and having more items would make it even more valuable.
 
-Customers who use [Pulumi Teams](/docs/pulumi-cloud/access-management/teams) for role based access control on Pulumi Cloud can now filter resources by team access. We have added a new advanced filter option for Teams, allowing you to see at a glance the teams in your organization with the most resources. You can query which teams have access to what resources, track resource usage by team by exporting your resource data and see in the search results table which teams have access to that resource.
+Customers who use [Pulumi Teams](/docs/administration/concepts/rbac/teams/) for role based access control on Pulumi Cloud can now filter resources by team access. We have added a new advanced filter option for Teams, allowing you to see at a glance the teams in your organization with the most resources. You can query which teams have access to what resources, track resource usage by team by exporting your resource data and see in the search results table which teams have access to that resource.
 
 ## Wrapping it up
 

@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 """entity_key.py — deterministic entity keying for extracted claims.
 
-Shared by `merge-claims.py` (stamps `entity_key` + `volatile` onto each merged
-claim) and `scripts/content-review/reverify-claims.py` (groups the persisted
-claims index by entity for nightly re-verification). One module so both sides
-derive identical keys.
+Used by `merge-claims.py`, which stamps `entity_key` + `volatile` onto each
+merged claim before the content-review worker persists it to the claims index.
 
 An entity key names the *subject* of a claim — the CLI flag, package, price,
 or API surface it asserts something about — normalized so two pages asserting
@@ -27,8 +25,8 @@ whose subject doesn't normalize to at least one significant token also gets
 None — a missing key is always safe (the claim just isn't re-verified from
 the index), a wrong key is not.
 
-`volatile` marks the claim types worth cheap nightly re-verification straight
-from the index — assertions whose truth drifts with the outside world even
+`volatile` marks the claim types worth re-verifying even when the page
+hasn't changed — assertions whose truth drifts with the outside world even
 when the page doesn't change: version pins, prices/rates/limits, and
 pricing/limit-flavored entity specs. A `numerical` claim whose subject is the
 page's own table, example, or tutorial output is excluded: see
@@ -49,8 +47,7 @@ import sys
 # temporal, cross-reference, url) are not keyed.
 KEYED_TYPES = {"version", "numerical", "api-surface", "entity-spec"}
 
-# Types whose truth drifts with the outside world; re-verified nightly from
-# the index. `entity-spec` is volatile only in its pricing/limit flavor —
+# Types whose truth drifts with the outside world. `entity-spec` is volatile only in its pricing/limit flavor —
 # "runners run in us-west-2" is stable, "feature Z is on the Enterprise plan"
 # is not.
 ALWAYS_VOLATILE_TYPES = {"version", "numerical"}
@@ -91,18 +88,17 @@ PRICING_LIMIT_RE = re.compile(
 # A `numerical` claim counting something the page itself produced — "the
 # example update creates 3 resources", "this tutorial takes 15 minutes", "the
 # preview output shows 2 changes". The figure is a property of the prose, not
-# of the world: it can only change when the page changes, so the nightly lane
-# can never find drift in it, and the verifier has nothing to check it against
-# except the page it came from (which is what makes those checks circular — see
-# reverify-claims.py's own-corpus demotion). Excluded from `volatile`; still
-# keyed, still indexed, still re-checked whenever the page is reviewed.
+# of the world: it can only change when the page changes, so there is no drift
+# to find in it, and the verifier has nothing to check it against except the
+# page it came from (which is what makes those checks circular). Excluded from
+# `volatile`; still keyed, still indexed, still re-checked whenever the page is
+# reviewed.
 #
 # PRICING_LIMIT_RE vetoes the exclusion, because the two overlap on the one
 # phrasing where this rule would otherwise do damage: "the example stack costs
 # $12/month" is self-describing in form but the figure is an outside-world
-# price that drifts on its own. Keeping a stray example count in the nightly
-# pool costs one verifier call and a demoted verdict; dropping a real price
-# means never checking it again.
+# price that drifts on its own. Marking a stray example count volatile costs
+# little; missing a real price costs more.
 #
 # The pattern matches transcript-shaped phrasings — the ones whose subject is
 # a sample the page printed. It deliberately does NOT match on a page-artifact
@@ -240,10 +236,8 @@ def derive(claim: dict) -> tuple[str | None, bool]:
 def is_volatile(claim: dict) -> bool:
     """Volatility of one claim record, re-derived from `type`/`text`.
 
-    Both inputs are persisted in the claims index, so `reverify-claims.py`
-    calls this to apply the current policy to snapshots that were stamped
-    under an older one — a narrowed rule takes effect on the whole index that
-    night rather than page by page as each is re-reviewed.
+    Both inputs are persisted in the claims index, so a consumer can apply the
+    current policy to snapshots that were stamped under an older one.
     """
     return derive(claim)[1]
 

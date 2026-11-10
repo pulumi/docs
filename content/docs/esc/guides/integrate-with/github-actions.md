@@ -50,7 +50,7 @@ Then include a `pulumi/auth-actions` step before any ESC action steps:
     requested-token-type: urn:pulumi:token-type:access_token:organization
 ```
 
-The `id-token: write` permission is required for GitHub Actions to issue OIDC tokens to your workflow. The `requested-token-type` value determines the scope of the resulting Pulumi token; see [token types](/docs/administration/guides/oidc-issuers/#token-types-by-edition) for details on which types are available for your Pulumi edition.
+The `id-token: write` permission is required for GitHub Actions to issue OIDC tokens to your workflow. The `requested-token-type` value determines the scope of the resulting Pulumi token; see [token types](/docs/administration/concepts/oidc-issuers/#token-types) for details on which types are available for your Pulumi edition.
 
 ### Access token
 

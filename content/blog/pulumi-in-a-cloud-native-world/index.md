@@ -105,7 +105,7 @@ are designed to address different capabilities of our internal developer platfor
 
 {{% notes type="info" %}}
 In modern cloud computing, the [hub-and-spoke architecture](https://open-cluster-management.io/docs/concepts/architecture/)
-pattern is widely used to manage multiple [Kubernetes](https://www.pulumi.com/docs/clouds/kubernetes/) clusters. In this pattern, a central
+pattern is widely used to manage multiple [Kubernetes](/docs/integrations/clouds/kubernetes/) clusters. In this pattern, a central
 control plane (hub) manages a set of clusters (spokes) that run applications and services. The hub provides a unified
 view of the entire infrastructure, enabling centralized management, monitoring, and security.
 {{% /notes %}}
@@ -228,7 +228,7 @@ and simplifying management.
 {{% /notes %}}
 
 We even take it a step further by using ESO to manage the secrets
-from [Pulumi ESC (Environments, Secrets, and  Configurations)](https://www.pulumi.com/product/esc/) with
+from [Pulumi ESC (Environments, Secrets, and  Configurations)](https://www.pulumi.com/product/secrets-management/) with
 the [Pulumi Provider](https://external-secrets.io/latest/provider/pulumi/) for ESO. This way, we use the Pulumi not only
 for the infrastructure but also for the secrets management reducing the number of tools we need to manage.
 
@@ -500,5 +500,5 @@ developer portal and provides a carefree experience of managing your infrastruct
 Continue to upskill and learn about platform engineering:
 
 * Read [Pulumi Patterns and Practices (P3): A Pulumi-based reference architecture for large-scale organizations](https://www.pulumi.com/blog/pulumi-patterns-and-practices/)
-* [Learn how to build Developer Portals with Pulumi](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/).
-* Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).
+* [Learn how to build Developer Portals with Pulumi](/docs/idp/concepts/).
+* Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/events/#upcoming).

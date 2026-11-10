@@ -14,16 +14,9 @@ unlisted: false
 # to fill out the form before viewing.
 gated: false
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: true
 block_external_search_index: true
 
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinar-production-ready-kubernetes-for-python-developers/
+event_url: https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinar-production-ready-kubernetes-for-python-developers/
 
 # The event type (workshop, webinar, talk).
 event_type: workshop

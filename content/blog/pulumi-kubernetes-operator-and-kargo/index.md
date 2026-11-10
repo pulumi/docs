@@ -1,5 +1,6 @@
 ---
 title: "Change Management with the Pulumi Kubernetes Operator and Kargo"
+title_tag: "Kargo and the Pulumi Kubernetes Operator"
 h1: "Change Management with the Pulumi Kubernetes Operator and Kargo"
 authors: 
   - "elisabeth-lichtie"
@@ -246,4 +247,4 @@ Combining the Pulumi Kubernetes Operator with Kargo gives you systematic control
 
 If you want to put this pattern into practice, you can see it live at [KubeCon Europe 2026 (Booth 784)](https://www.pulumi.com/kubecon/) or register for our upcoming [Zero to Production in Kubernetes](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) workshop.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

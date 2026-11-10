@@ -19,7 +19,7 @@ Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn 
 
 ## What is Pulumi Cloud?
 
-Infrastructure as Code tools like Pulumi require systems for coordinating deployments, which include concurrency control, state management, and security. For the purposes of this post, let's refer to these systems as IaC backends. There are several options for managing these backends: you can either handle them yourself, which we'll call DIY, or you can leverage [Pulumi Cloud](/product/pulumi-cloud/), available as a SaaS or self-hosted solution. With Pulumi Cloud, you gain access to a comprehensive infrastructure management platform designed to handle everything running in the cloud. This platform automates your IaC deployments, centralizes [secrets management](/what-is/what-is-secrets-management/) and orchestration to manage secrets sprawl effectively, and employs AI to oversee infrastructure assets and ensure compliance. On the other hand, with a DIY approach, you have the flexibility to build everything Pulumi Cloud offers or opt for a more minimalistic setup tailored to your organization's specific needs. Both options are well-supported by Pulumi, but there are distinct advantages to choosing Pulumi Cloud over the DIY method, which we'll explore further.
+Infrastructure as Code tools like Pulumi require systems for coordinating deployments, which include concurrency control, state management, and security. For the purposes of this post, let's refer to these systems as IaC backends. There are several options for managing these backends: you can either handle them yourself, which we'll call DIY, or you can leverage [Pulumi Cloud](/product/), available as a SaaS or self-hosted solution. With Pulumi Cloud, you gain access to a comprehensive infrastructure management platform designed to handle everything running in the cloud. This platform automates your IaC deployments, centralizes [secrets management](/what-is/what-is-secrets-management/) and orchestration to manage secrets sprawl effectively, and employs AI to oversee infrastructure assets and ensure compliance. On the other hand, with a DIY approach, you have the flexibility to build everything Pulumi Cloud offers or opt for a more minimalistic setup tailored to your organization's specific needs. Both options are well-supported by Pulumi, but there are distinct advantages to choosing Pulumi Cloud over the DIY method, which we'll explore further.
 
 ## Costs and Complexities of DIY Backends
 
@@ -34,7 +34,7 @@ Building and maintaining your own Infrastructure as Code backend involves a sign
 
 –— Paul Hemberger, Engineering Manager for Materialize’s cloud team
 
-[Learn more](/case-studies/materialize/)
+[Learn more](/customers/materialize/)
 {{% /notes %}}
 
 ### Operational Excellence
@@ -43,7 +43,7 @@ One of the primary functions of IaC backends is managing state. State management
 
 Pulumi Cloud offers total visibility into changes within your organization, allowing you to track who is deploying what, when, and where, down to the individual cloud infrastructure properties being changed and the source commits triggering them. If issues arise and you need to revert to a prior known state, Pulumi Cloud's transactional state checkpointing protocol ensures automatic recovery from failures, and failures are common with transient cloud and networking issues. In contrast, DIY backends require manual human intervention to recover and repair state files, a process that is time-consuming, extends outages, and carries significant risk. Pulumi Cloud also automatically backs up and replicates your state checkpoints, facilitating easy recovery for audits or rollbacks, potentially preventing outages or meeting audit standards.
 
-Managing your infrastructure with IaC demands considerable time and energy. Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering search, analytics, and AI-driven insights over your infrastructure. If you're using a DIY backend, you'll need to build your own search clusters and grep systems. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets. You can also have a conversation with [Pulumi Copilot](/product/copilot/) about your infrastructure in plain English and get
+Managing your infrastructure with IaC demands considerable time and energy. Pulumi Cloud provides [Pulumi Insights](/product/discovery-governance/), offering search, analytics, and AI-driven insights over your infrastructure. If you're using a DIY backend, you'll need to build your own search clusters and grep systems. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets. You can also have a conversation with [Pulumi Copilot](/product/neo/) about your infrastructure in plain English and get
 answers to operational questions that would take hours to piece together from other sources.
 
 ![Pulumi Copilot example prompt](copilot.png)
@@ -57,7 +57,7 @@ When you build and operate your own IaC backend, you'll need to dedicate one ful
 
 *"Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance. An equivalent deployment would take more lines of code while yielding IaC that is less reusable."*
 
-[Learn more](/case-studies/unity/)
+[Learn more](/customers/unity/)
 {{% /notes %}}
 
 ### Security and Compliance
@@ -73,7 +73,7 @@ Pulumi, as an Amazon Web Services Advanced Partner, undergoes a thorough review 
 Access control at the backend service layer is crucial for enforcing least privilege access. Pulumi Cloud integrates seamlessly with various identity providers like Azure ActiveDirectory, Okta, G Suite, or any SAML/SSO provider, offering deep support for role-based access control (RBAC) and SCIM for automatic synchronization and revocation of access based on identity provider groups. This fine-grained control over state access is a significant advantage over DIY backends, where all access control mechanisms would need to be built from scratch.
 Audit logs play a vital role in tracking user activity within an organization, recording what actions were taken, when, and by whom. Pulumi's audit logs are immutable, capturing the UNIX timestamp of events, the user who invoked the action, the event itself, and the source IP of the call. This level of auditing ensures that the activities of organization members are attributable, enhancing security and compliance.
 
-At the cloud asset layer, you and your team need to prevent infrastructure deployments that violate policies related to security, reliability, cost, or compliance. Pulumi Cloud, through [Pulumi CrossGuard](/crossguard/), provides out-of-the-box support for common security and compliance policies, ensuring PCIDSS, ISO27001, SOC2, and CIS compliance for cloud applications and infrastructure. Such organization-wide enforcement and specific policy support are not readily available with DIY backends.
+At the cloud asset layer, you and your team need to prevent infrastructure deployments that violate policies related to security, reliability, cost, or compliance. Pulumi Cloud, through [Pulumi CrossGuard](/product/discovery-governance/), provides out-of-the-box support for common security and compliance policies, ensuring PCIDSS, ISO27001, SOC2, and CIS compliance for cloud applications and infrastructure. Such organization-wide enforcement and specific policy support are not readily available with DIY backends.
 
 At the application layer, securing sensitive information like database passwords, cloud credentials, and API keys is paramount. Secrets can inadvertently end up in insecurely stored state files, leading to potential breaches, as highlighted by a [Sysdig article](https://sysdig.com/blog/cloud-breach-terraform-data-theft/) where an attacker exploited a manually managed state file to gain control over an entire AWS account. Pulumi Cloud, however, encrypts all data in transit and at rest, utilizing hardware security module (HSM) based encryption. It also avoids capturing cloud credentials, instead relying on client-side authentication, as detailed in the [Pulumi Cloud Security Whitepaper](/security/pulumi-cloud-security-whitepaper).
 
@@ -102,13 +102,13 @@ When you’re scaling your organization, you’ll need an IaC backend that makes
 In contrast, Pulumi Cloud offers standardized, well-documented capabilities and integrates seamlessly with identity systems, leading to efficient onboarding and increased productivity for new employees. Pulumi Cloud provides [12x5 or 24x7 support](/pricing/), ensuring your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Furthermore, Pulumi Cloud includes configurable RBAC (Enterprise edition and above), simplifying the onboarding and scaling of new users.
 
 {{% notes type="tip" %}}
-**BMW Group** used Pulumi to build a scalable and resilient hybrid cloud implementation that could handle more than eleven thousand developers.
+**BMW Group** used Pulumi to build a scalable and resilient hybrid cloud implementation that [manages more than 20,000 cloud resources](/customers/bmw/) with Python-based infrastructure code.
 
 *“When we started to use Terraform to deploy our first cloud services with AWS, it didn’t scale quickly enough for our needs. With Pulumi we’re really speeding up development. We can use any language instead of some special language like HCL and by automating policies, we have compliant and secure systems from the beginning.”*
 
 –— Jan-Peter Alten, DevOps Engineer
 
-[Learn more](/case-studies/bmw/)
+[Learn more](/customers/bmw/)
 {{% /notes %}}
 
 ## Conclusion

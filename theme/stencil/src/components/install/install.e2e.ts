@@ -27,7 +27,7 @@ describe("pulumi-install", () => {
             await page.setContent(`<pulumi-install os="windows"></pulumi-install>`);
 
             const element = await page.find("pulumi-install p span");
-            expect(element.textContent).toBe("choco install pulumi");
+            expect(element.textContent).toBe("winget install --exact --id Pulumi.Pulumi");
         });
     });
 

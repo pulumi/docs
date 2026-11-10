@@ -82,7 +82,7 @@ sections:
     description: Command-line interface for managing environments, secrets, and configuration.
   - icon: key
     heading: Login providers
-    description: Issue short-lived OIDC credentials for AWS, Azure, GCP, GitHub, and more.
+    description: Issue short-lived credentials for AWS, Azure, GCP, and GitHub, or mint an OIDC token any service can trust.
     link: /docs/esc/providers/login/
   - icon: lock-key
     heading: Secrets providers

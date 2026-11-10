@@ -14,11 +14,11 @@ aliases:
 
 Pulumi's SDKs include helper functions designed for the most common output manipulation tasks: constructing strings from output values and working with JSON. These helpers wrap [`apply`](/docs/iac/concepts/inputs-outputs/apply/), which transforms the value inside a single output, and [`all`](/docs/iac/concepts/inputs-outputs/all/), which combines several outputs into one, but expose a more concise interface that closely mirrors each language's native string and JSON facilities.
 
-Use a helper when you need to build a string from one or more outputs or serialize a data structure that contains outputs to JSON. Use `apply` or `all` directly when the transformation you need is more complex than a simple string or JSON operation.
+Use a helper when you need to build a string from one or more outputs or serialize a data structure that contains outputs to JSON. Use `apply` or `all` directly when the transformation you need goes beyond building a string or converting to and from JSON.
 
 ## String interpolation
 
-Pulumi's string interpolation helpers let you construct a string from one or more output values without calling `apply` or `all` explicitly. The helpers work for both a single output and multiple outputs, so they serve as a convenient shorthand regardless of how many values you are combining.
+Pulumi's string interpolation helpers let you construct a string from one or more output values without calling `apply` or `all` explicitly. The helpers work for both a single output and multiple outputs, so they serve as a shorthand regardless of how many values you are combining.
 
 {{< example-program path="aws-s3bucket-bucketobject-interpolate" >}}
 
@@ -95,7 +95,7 @@ Many cloud resources accept JSON strings as inputs — IAM policies, Lambda func
 
 If you need to produce a JSON string from a data structure that contains one or more output values, use one of the JSON stringify helpers. These helpers accept a mix of plain values and Pulumi outputs, serialize the entire structure to JSON, and return an `Output<string>` suitable for passing to another resource as an input.
 
-{{< example-program path="aws-s3-bucketpolicy-jsonstringify" languages="javascript,typescript,python,go,csharp" >}}
+{{< example-program path="aws-s3-bucketpolicy-jsonstringify" languages="typescript,python,go,csharp" >}}
 
 {{% choosable language typescript %}}
 
@@ -167,7 +167,7 @@ For more details, see the [Python SDK documentation](/docs/reference/pkg/python/
 
 {{% choosable language go %}}
 
-Go does not have a dedicated JSON parse helper. Use `ApplyT` with `json.Unmarshal` to parse a JSON string output into a Go struct or map.
+Go does not provide a dedicated JSON parse helper. Use `ApplyT` with `json.Unmarshal` to parse a JSON string output into a Go struct or map.
 
 For more details, see the [Go SDK documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi).
 

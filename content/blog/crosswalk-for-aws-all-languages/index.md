@@ -33,7 +33,7 @@ category: product
 ---
 
 {{% notes type="warning" %}}
-Portions of this blog post are out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Portions of this blog post are out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 
 Crosswalk for AWS is a collection of libraries that make it easy to work with AWS using Pulumi Infrastructure as Code.  The Crosswalk for AWS libraries are some of the most widely used higher-level components in the Pulumi ecosystem, with hundreds of organizations building their infrastructure on the simple abstractions over key AWS services like ECS, API Gateway, VPC, Load Balancing, CloudTrail, EC2, ECR, and more.
@@ -44,7 +44,7 @@ Crosswalk for AWS is the easiest way to get started with core compute and applic
 
 These libraries use automatic well-architected best practices to make common infrastructure as code tasks in AWS easier and more secure.
 
-Crosswalk for AWS is available to users in all Pulumi languages, [TypeScript](https://www.pulumi.com/docs/languages-sdks/javascript), [Python](https://www.pulumi.com/docs/languages-sdks/python), [.NET](https://www.pulumi.com/docs/languages-sdks/dotnet), [Go](https://www.pulumi.com/docs/languages-sdks/go), [Java](https://www.pulumi.com/docs/languages-sdks/java) and [YAML](https://www.pulumi.com/docs/languages-sdks/yaml). The AWSx package now joins the existing API Gateway and EKS packages in the Pulumi Registry, available in all Pulumi languages.
+Crosswalk for AWS is available to users in all Pulumi languages, [TypeScript](/docs/iac/languages-sdks/javascript/), [Python](/docs/iac/languages-sdks/python/), [.NET](/docs/iac/languages-sdks/dotnet/), [Go](/docs/iac/languages-sdks/go/), [Java](/docs/iac/languages-sdks/java/) and [YAML](/docs/iac/languages-sdks/yaml/). The AWSx package now joins the existing API Gateway and EKS packages in the Pulumi Registry, available in all Pulumi languages.
 
 ![Crosswalk for AWS diagram](arch.png)
 
@@ -851,7 +851,7 @@ export const vpcId = vpc.Id;
 
 ## What’s Next?
 
-Crosswalk for AWS is free and open source, and you can [get started](https://www.pulumi.com/docs/iac/clouds/aws/guides/) today.
+Crosswalk for AWS is free and open source, and you can [get started](/docs/iac/guides/clouds/aws/) today.
 
 For more on Crosswalk for AWS see:
 

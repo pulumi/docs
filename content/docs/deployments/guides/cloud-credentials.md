@@ -23,7 +23,7 @@ Pulumi recommends Pulumi ESC for most users. See [Choosing between Pulumi ESC En
 
 ## Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC
 
-Deployments OIDC predates Pulumi ESC and was originally the only way to use OIDC with Deployments, which is why it remains a common default. It's still a good fit for some scenarios — for example, [customer-managed agents](/docs/deployments/concepts/customer-managed-runners/) that can't reach Pulumi Cloud over the network to use ESC. For most users, though, Pulumi recommends using ESC Environments over Deployments OIDC for the following reasons:
+Deployments OIDC predates Pulumi ESC and was originally the only way to use OIDC with Deployments, which is why it remains a common default. It's still a good fit for some scenarios — for example, [customer-managed runners](/docs/administration/concepts/customer-managed-runners/) that can't reach Pulumi Cloud over the network to use ESC. For most users, though, Pulumi recommends using ESC Environments over Deployments OIDC for the following reasons:
 
 - Pulumi ESC Environments are more portable compared to Deployments OIDC: Ignoring any locally stored credentials, e.g., environment variables set in your command shell, you can have greater confidence that a Pulumi Deployments operation will succeed if it succeeds on your local machine.
 - Pulumi ESC Environments are more modular compared to Deployments OIDC: Deployments settings are applied on a per-stack basis, which means that the OIDC configuration must be repeated for every stack that is using Deployments OIDC. In comparison, Pulumi ESC Environments are centrally defined and may be imported into any number of Pulumi stacks.

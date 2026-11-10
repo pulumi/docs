@@ -2,8 +2,9 @@
 
 Scripts here implement the v3 review surface: S3-resident evidence, the two
 pinned comments (author card + reviewer brief), the Sentinel merge gate, lane
-routing, and the SLA sweep. Everything in this directory is deterministic —
-no model calls. Model output enters only as validated artifacts.
+routing, and the SLA and stale-PR sweeps. Everything in this directory is
+deterministic — no model calls. Model output enters only as validated
+artifacts.
 
 Covered by `make test-review-pipeline` (pytest + standalone `test_*.py`
 harnesses + `--self-test` flags), same contract as `scripts/content-review/`
@@ -23,7 +24,9 @@ One JSON object per (PR, head SHA), written by the credentialed record job in
   block; the PR is the disposition source of truth, S3 is the telemetry/audit
   mirror).
 - Other prefixes: `pr-review/waives/` (waive log), `pr-review/state/<pr>.json`
-  (SLA-sweep actions), `pr-review/runs/<date>/` (immutable run records).
+  (SLA-sweep actions), `pr-review/runs/<date>/` (immutable run records),
+  `pr-review/outcomes/<pr>.json` (finding outcomes at close; see
+  `scripts/review-telemetry/`).
 - Degradation contract (same as `scripts/content-review/record-review.py`):
   `PR_REVIEW_EVIDENCE_URI` unset ⇒ write local files + `::warning::`, never
   fail. The record job uploads the local copies as a workflow artifact either
@@ -46,8 +49,17 @@ page debt (records reach its unprivileged worker via `select-glowup.py
 increasing per PR, never reused (the counter's high-water mark travels in the
 evidence object). The update lane preserves existing IDs; new findings take
 the next index. IDs are the join key across the author comment's checklist,
-REVIEW_STATE, the evidence object, `/resolve`, and the Sentinel's red
-messages.
+REVIEW_STATE, the evidence object, `/update-review` comments, and the
+Sentinel's red messages.
+
+A re-review continues above the prior high-water mark, read from the live
+author card. `/new-review` clears that card first, so it reads the mark
+beforehand and passes it as the `prior_high_water` dispatch input, which the
+redispatch job forwards. If a forced run errors or times out before its card
+publishes, its failure notice carries `<!-- REVIEW_HIGH_WATER n -->`, and the
+next review takes the larger of the card and any such failure notice
+(`<!-- CLAUDE_PROGRESS -->` from `github-actions[bot]`; other bot comments can
+quote PR text) (`review_state.py high-water-marker`).
 
 ### Buckets
 
@@ -62,6 +74,62 @@ mismatches → `reviewer-check`. The model may promote
 (reviewer-check → author-answer → outstanding) with a stated reason, never
 demote.
 
+### Group questions (the new-feature carve-out)
+
+A PR that documents a feature alongside its implementing change cites that
+change in its body, and the verifier reads it. When the review's token can't
+read that repository, every claim about the new behavior comes back
+`unverifiable` for the same reason, and each used to become its own ❓ row and
+Do-this block (pulumi/docs#22200: 85 of them, an 80 KB author card). Now:
+
+- `verify-claims.py` probes each cited implementing ref's repository once and
+  records the ones that 404 in `meta.impl_refs_unreadable`. Only a 404 counts.
+- `compose-review.split_private_source_unverifiable` takes every `ordinary`
+  unverifiable (not turn-cap, source-discipline, or outage) whose final route
+  is pass1 (Pulumi's own product) and, when there are at least
+  `GROUP_MIN_MEMBERS` (3), asks about them as one ❓: one `F<n>`, a Where cell
+  of `—`, and a Do-this block the composer writes in full (Why, one Fix, and a
+  collapsed per-file claim list). pass2/pass3 unverifiables keep their own
+  rows, since a cited page or a public source can answer them.
+- The finding's evidence record carries `members` (`{file, lines?, claim}` per
+  claim). `build-evidence.refresh_facts_line` counts a group as its members, so
+  the brief's **Facts** bullet doesn't call them settled. The author answers
+  the group with one reply, and REVIEW_STATE holds one disposition for it.
+- The block is composer-owned. The base record's `detail` holds its text, and
+  `normalize-v3-draft.py` (rule 10) restores it before validation if the model
+  edits or deletes it. An update-lane `retext` rebuilds Why/Fix and keeps the
+  claim list.
+- The verifier knows too. `build_user_message` names the unreadable refs
+  instead of listing them to read, and `exec_gh_query` refuses a query against
+  their repositories without running `gh`. On #22200, 98 of 236 claims had
+  tried the private repo (4.3 turns each against 3.5 for other pass1 claims)
+  and accounted for 60% of the run's uncached input tokens.
+
+## The card size budget
+
+`pinned-comment.sh` refuses a card over 60,000 bytes and never splits a v3
+card. `build-evidence.fit_author_card` measures the finished card in both
+lanes (`build()` for the initial publish, `apply-update.py main()` for a
+refresh) and, while it is over `CARD_BUDGET` (58,000, which leaves headroom for
+the `%%EVIDENCE_URL%%` substitution), sheds in this order: ❓ row links, ✅
+Resolved row links, ❓ Do-this blocks (never a group's), 🚨 row links, a group's
+claim list (it becomes a pointer line), 🚨 Do-this blocks. Rows always stay.
+A shed block leaves an italic note under its table. `fit_brief_card` does the
+same for the brief's ⚠️ links.
+
+The publish job fits both cards once more (`build-evidence.py --fit`) before
+`pinned-comment.sh` sees them. `build()` runs from the PR head, so a branch cut
+before the budget landed hands over a card nothing measured (#22287's was
+110 KB). The publish job's copy comes from the default branch, and a card that
+already fits comes back untouched.
+
+Nothing is lost. `build()` mirrors every block into the evidence `detail`
+before fitting, and the evidence page renders each finding's text, detail, and
+members. When a refresh finds a fitted card (`was_fitted`),
+`restore_shed_blocks` rebuilds the missing blocks from that evidence, and the
+fit sheds again only what still doesn't fit. A card that shrinks gets its
+blocks back.
+
 ## The REVIEW_STATE block (disposition source of truth)
 
 Lives as an HTML comment in the bot-owned author comment:
@@ -73,48 +141,145 @@ Lives as an HTML comment in the bot-owned author comment:
 - Dispositions: `fixed | refuted | deferred | accepted | not-applicable`
   (note required for `deferred`/`accepted`/`not-applicable` — same closed set
   as `review-worklist.py`).
-- Writers: the update lane (`apply-update.py`) and the `/resolve` workflow —
-  both merge per finding-id, latest `updated_at` wins, never whole-block
-  overwrite. `bulk: true` marks `/resolve all …` answers (telemetry).
-- Readers: Sentinel gate 2 (uncredentialed, fork-safe), `review-worklist.py
-  --state-from-body`, the record job's mirror into `latest.json`.
+- Completeness: every finding that has left the 🚨/❓ tables carries an
+  entry — `resolve` → `fixed`, `hold` → `refuted`, `accept` → `accepted`,
+  `concede` → `not-applicable` (note `conceded: <reason>`). An id with no
+  entry is open. `concede` used to write nothing, so a card whose findings
+  were all conceded shipped `{}` under a note calling them open (#21790);
+  `apply-update.py` now backfills any ✅ row missing an entry on every
+  refresh, so older cards heal on their next update.
+- Writers: the full-review lane publishes the block with the card; only the
+  update lane (`apply-update.py`) records dispositions in it. Runs of the two
+  overlap routinely, so the update lane merges per finding-id (latest
+  `updated_at` wins, never a whole-block overwrite) against a card re-fetched
+  just before publish, and `pinned-comment.sh`'s stale-publish guard refuses
+  an older composition. `bulk: true` marks an accept-everything answer
+  (telemetry).
+- Readers: Sentinel gate 2 (uncredentialed, fork-safe), `review-worklist.py`
+  (`--body-file` / `--brief-file`), the record job's mirror into `latest.json`.
 - Sentinel accepts the block only from the bot-authored comment.
 
 ## The Sentinel
 
 `sentinel.py` + `.github/workflows/review-sentinel.yml` publish the one
-blocking check-run ("Sentinel"). Deterministic, no model, no AWS, and —
+blocking commit status ("Sentinel", via `publish_verdict.py` — a status,
+not a check-run, because an API-created check-run can land in a check suite
+GitHub later supersedes and hides). Deterministic, no model, no AWS, and —
 because the workflow runs on `pull_request_target` — **never checks out or
 executes PR code** (test-enforced). Gates, each red message naming its fix:
 
 | Gate | Green when | Red says |
 |---|---|---|
-| G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no review required); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
-| G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `@claude … #update-review` phrasing (the `/resolve` lane stays as agent-facing plumbing, never user-facing copy) |
-| G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of every matrix-required team | the team slug(s) needed |
-| G4 infra-evidence | commit status `staging/pulumi-test-io` green at the current head | "a tools-team member comments `/deploy-staging`" — **not waivable** |
-| G5 oversized-ack | `review:oversized` PRs: approval body contains `sentinel:oversized-ack` | explains the ack |
+| G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | push / `/update-review` / `/new-review` |
+| G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `/update-review …` phrasing |
+| G3 right-approver | an APPROVED latest review at head (or at a commit the head has only merged the base into or pushed no-op commits onto since, with the PR's own `+`/`-` lines unchanged — see Base-only merges) from a non-bot human who qualifies under `approval.scope`: anyone with write access under `any-human` (what we run), a member of any team in `teams:` under `any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, a repository administrator. A bot's approval counts only on an automated lane a `bot_approvers` entry names (approver + PR author + optional label) | who would qualify |
+| G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded; or, the same, at a commit the head has only merged the base into since (Base-only merges) | the deploy is dispatched automatically (`staging-deploy-auto.yml`); to retry, dispatch "Build and deploy testing" at the branch (never "Build and deploy", which is production). If the staging workflow is disabled, the row says so and names the fix, and a failed deploy or dispatch is quoted at the top of the row |
+| G5 oversized-ack | `review:oversized` PRs: a G3-qualifying approval at head whose comment has `/oversized-ack` at the start of a line | where the command goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
+
+**G4's two witnesses.** The commit status is a *report* of the deploy, not
+the deploy: it is a separate API call made after the run completes, so a
+cancelled runner, a lost token, or a dispatch whose `workflow_run` cascade
+never fired all leave a green deploy with no status. `_staging_evidence`
+therefore accepts either the status or a successful
+`testing-build-and-deploy.yml` run at the same head SHA — the run record *is*
+the deploy. The status is still written, because it is what shows in the
+merge box with a link. A failed run-history read degrades to "no evidence"
+(red), not `action_required`: red is already the conservative answer, and
+escalating would misreport an API hiccup as a corrupt PR.
+
+**What G4 applies to.** `staging_evidence.paths` in
+`.github/review-routing.yml` — a path list, NOT a subject. It used to be a
+`staging_evidence: required` cell on the matrix's `infra` row, which made the
+approver and the blast radius the same question and left "bend the path's
+domain" as the only way to narrow the gate. The list is what can break `pulumi up`:
+the Pulumi program, `run-pulumi.sh`, the `make ci_push` call chain into it,
+`await-in-progress.js`, and the two deploy workflows. Everything else came
+off on 2026-09-18, because a PR already runs the same pipeline in preview
+mode (`make ci_pull_request`) — a build script is exercised for real on the
+PR that changes it, and asking for a second ~9-minute deploy of the shared
+stack to re-prove it is theater. What preview genuinely cannot do is
+*apply*, and that gap is the whole gate. `routing.requires_staging_evidence()`
+answers it per path; the matcher is segment-aware (`*` never crosses `/`)
+because `fnmatch` would have made `scripts/*` match `scripts/redirects/`.
+
+Evidence supply is `staging-deploy-auto.yml`: every same-repo, non-draft PR
+that `route-pr.py` says needs staging evidence gets a deploy dispatched on
+open / push, skipping when the head already has one. It shares the
+`staging-stack` concurrency group with the comment lane and calls the same
+`staging-deploy.sh`, so the two lanes cannot drift on what they produce.
 
 Conclusions are explicit about the fails-open trap: any gate ERROR (corrupt
 REVIEW_STATE, a team-membership lookup failure) concludes `action_required`
 — never `neutral`/`skipped`, which GitHub counts as passing for required
-checks. `review:waived` ⇒ success with a banner naming the actor, except a
-red G4, which stands. External contributors (no push permission) skip G1/G2
-per config — the approving reviewer's review is the review. Rollout switch:
+checks.
+
+**`review:waived` is authorized, not just labelled.** A waive skips every
+gate, G4 included, so applying one has to be at least as privileged as approving
+something: `_waive_state` reads the actor off the label event and honors the
+waive only when they are an **active member of any team in `teams:`** — any
+of them, not just the one the PR routes to. Scoping it to the required team
+would make a waive exactly as hard to get as the approval it bypasses, which
+kills the case it most needs to cover (the required approver is the author).
+It fails closed at every step — unreadable actor, failed membership lookup,
+actor on no routing team — and an unauthorized waive is *refused out loud*
+in the status title, the status comment and the summary rather than silently
+ignored, so the same person doesn't try it twice. The membership lookup uses
+the org-scoped token G3 uses, so an outage of that token refuses the waive
+too; G3's error row then names a repo admin's merge as the way through, and
+the status comment doesn't offer a waive that can't work. A waive over a red G4 says so in the summary: the deploy change
+hasn't been applied on staging, so the first production deploy is its first
+real run.
+
+**The pinned status comment.** `render_status_comment` / `update_status_comment`
+upsert one `<!-- SENTINEL_STATUS -->` comment per PR: a row per gate with its
+state and, for a red one, the gate's own remediation text. The body is a pure
+function of the verdict — no timestamps, no run ids — so a re-evaluation that
+changes nothing produces a byte-identical body and the PATCH is skipped.
+"One" is enforced on every write, not assumed: overlapping runs both listing
+before either posts used to leave two copies (pulumi/docs#22251 and five
+others), so the upsert keeps the oldest bot copy, deletes the rest, and
+re-lists once after a first POST to catch the run it raced. The
+comment is maintained on **every** PR the Sentinel evaluates, in both modes,
+and every body ends with `STATUS_HELP_FOOTER`, which points readers at
+`#docs`; enforcing mode has no banner, so the footer is its only pointer to
+a person. In report-only mode the heading reads "(preview)" and a
+`[!WARNING]` banner says both halves: informational and safe to ignore today, enforced soon, when
+every row has to be green to merge. Neither half calls a red row the author's
+homework — G3 is an approval and G4 a deploy. That banner is what makes a repo-wide dry run
+safe, and repo-wide is what makes it worth running — the `sentinel:preview`
+opt-in cohort (content-review, glow-up, link sweeps) was retired 2026-09-21
+because a surface only workflow-authored PRs carry tests the renderer and no
+reader. `--update-strip` stays enforcing-only: the ⛔ strip edits the author
+card, which is someone else's comment. External contributors (fork head repo — never the
+author's permission level, which is `none` for GitHub Apps like workprentice)
+skip G1/G2 per config — the approving reviewer's review is the review. The
+same holds for the PRs the review lane skips by policy, as long as they never
+got a review: a `review:trivial` or `review:frontmatter-only` PR whose diff
+really has that shape (the Sentinel re-runs triage's `classify_pr` on the
+diff rather than trust a label anyone with triage access can apply), and a
+`pulumi-bot` or Dependabot PR on a branch the lane doesn't review (anything
+but `content-review/`, `fix/broken-links-`, `vale/brand-sync-`). Triage's
+`<!-- TRIAGE_PROSE -->` comment rides along as advisory nits; it is required
+only under `review:prose-flagged`, whose nits nobody can see without it. G3
+still needs the human approver in every case.
+
+Every label the evaluator reads must also appear in `review-sentinel.yml`'s label-event filter, or it only takes effect on the next unrelated event. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
-summary), `'1'` = enforcing. `/deploy-staging` follows the same switch. The
-surface itself is `REVIEW_V3_COMMENTS` (repo default) or the `surface:v3`
-label (one PR in or out, regardless of the variable). `REVIEW_V3_BOT_PRS`
-= `'1'` makes the content-review and glow-up lanes open their bot PRs
-already wearing the label — free v3 test traffic that no human author
-sees, once the lane rewiring has merged (before that the label only reaches
-the `/resolve` listener). Order of operations: run the `gh label create`
-line for `surface:v3` first, then flip the variable — otherwise every bot
-PR takes the unlabeled fallback with a `::warning::`. The
+summary), `'1'` = enforcing. Dark is not an off switch once branch protection requires
+the Sentinel status, as it does on `master` (for everyone but repo admins):
+no status holds every PR. Stand the gate down with `'report'`.
+`staging-deploy-auto.yml` follows the same switch. The
+surface itself is `REVIEW_V3_COMMENTS` (repo-wide; the per-PR `surface:v3`
+opt-in label and `REVIEW_V3_BOT_PRS` were retired 2026-09-14 once the
+variable had soaked). The
 check summary embeds the reviewer brief (merge-box delivery), and on red the
-sentinel PATCHes a ⛔ strip into the author card naming the exact commands.
+sentinel PATCHes a strip into the author card, linking the status comment.
+With blocking findings it reads "⛔ N item(s) block merge" and names the reply
+that answers them; with none, the card already says nothing blocks merge, so
+the strip reads "⏳ Merge is waiting on" the red gate (an approval or a deploy
+is nothing the author can fix or answer).
 
 **SLA sweep** (`sla-sweep.py`, `review-sla-sweep.yml`, cron every 2 h): its own
 switch is `REVIEW_V3_SLA` — the job runs only while it is `'1'` (a manual
@@ -126,16 +291,271 @@ records the weekly digest reduces). **Before flipping the switch, create the
 `review:author-stalled` label** (`.github/labels-pr-review.md` has the
 `gh label create` line) — the sweep applies it on the first author warn.
 
-`staging-deploy-pr.yml` makes G4's evidence: `/deploy-staging` (tools-team
-members only, same-repo branches only) dispatches the existing testing
-deploy at the PR head branch and records the outcome as the
-`staging/pulumi-test-io` commit status at the deployed SHA. Deploys queue on
-the shared staging stack; a superseded request gets a comment saying to
-re-run.
+**Stale PR sweep** (`stale-pr-sweep.py`, `stale-pr-sweep.yml`, daily): the
+blunt backstop under the SLA sweep. Every open PR (drafts, bot PRs, and PRs
+the review never ran on included) closes after `stale_prs.close_days` (30)
+without movement, or `extended_close_days` (90) while it wears
+`extended_label` (`review:long-running`). A heads-up comment lands
+`notice_days` (7) before, and a close always waits until that heads-up is
+that old, so the first run against a backlog only warns. Movement is any
+commit or force-push, or a comment, review, reopen, draft/ready toggle, or
+retitle by a human; bots (the routing config's `bots:`, `type: Bot`, `[bot]`
+logins), labels, and review requests never count. No state of its own: the
+heads-up comment carries `<!-- STALE_PR_SWEEP:warn close_days=N -->`, which
+is enough to answer "warned since it last moved, for this window" from the
+timeline alone. Its switch is `STALE_PR_SWEEP` (`'1'` on; a manual dispatch
+defaults to `dry_run` and writes the would-be actions to the step summary).
+**Before flipping it, create the `review:long-running` label** — the close
+comment tells people to apply it. It runs as pulumi-bot so its closes fire
+`pr-closed.yml` (cleanup and the review-outcome record), which is also why
+its comment copy must never contain a review command or `@claude`.
+
+One lane makes G4's evidence, and a second records it.
+`staging-deploy-auto.yml` dispatches a deploy for every same-repo PR on
+`staging_evidence.paths` (not every `domain:infra` PR — the two sets are
+deliberately different) on open/push, via `staging-deploy.sh`, which
+dispatches the existing testing deploy at the PR head branch and exits
+without writing any status. A retry is a re-run of that "Build and deploy
+testing" run, or a fresh dispatch of it at the head branch by anyone with
+write access (`gh workflow run testing-build-and-deploy.yml --ref <branch>`,
+or `/pr-review --act --deploy N`); every lane below treats it exactly like
+the automatic one. Nothing serializes deploys of the shared staging stack:
+when two overlap, the later head is the one G4 asks about.
+
+`staging-status.yml` writes the *terminal* status — one writer, a
+`workflow_run` listener on "Build and deploy testing" — and then pokes the
+Sentinel so G4 is re-scored against the finished deploy. It lives outside
+the dispatched run on purpose: a `workflow_dispatch` executes the workflow
+file from the ref it is dispatched at, so the in-run job this replaces
+silently did not exist for a PR branch cut before it merged (#21676). **The
+rule: anything that must work for a PR branch of any age belongs in a
+default-branch-triggered workflow** — `workflow_run`, `schedule`,
+`pull_request_target`, or a dispatch pinned to the default ref. Its
+`workflow_dispatch` entry (`run_id`, optional `pr_number`) backfills a
+status for a deploy that already finished.
+
+## Base-only merges
+
+`restamp-base-merge.py` carries a v3 review across a push that only merges
+the base: every commit after the card's `CLAUDE_REVIEW_HEAD` is a merge or
+changes nothing (an empty "kick CI" commit, same tree as its parent) AND the
+PR's `+`/`-` lines at the reviewed head equal the ones now (the same
+test `/pr-review` uses in `collect.py`). The test lives in `sentinel.py`
+(`changes_nothing_since`, `same_diff`, `patchless_file_changed`), because the
+Sentinel applies it too: G3 carries a human approval, and G4 a staging
+deploy, from such a commit to the head. Before that, clicking "Update
+branch" on an approved PR reset the approval GitHub still showed and spent
+a second staging deploy (#22506), and an empty commit reset the review and
+the deploy (#22524). Both reads happen only when the gate would otherwise
+be red, and any read that fails leaves it red. `staging-deploy-auto.yml`
+does not apply the carry, so it still dispatches a (redundant) deploy for
+such a push; G4 doesn't wait for it. It moves the card's head carriers —
+the marker and the sub line's `head commit` — and nothing else, so the
+composition stamp still orders it for the stale-publish guard. Callers:
+`claude-code-review.yml`'s `mark-stale` (instead of staling; then pokes the
+Sentinel) and `review-label-reconcile.yml` (before staling, and in its
+un-stale sweep; it re-dispatches the Sentinel after either repair). Any read
+it can't make answers "not base-only", and so does a large or binary file
+(no `patch`) whose blob changed. It re-reads the card just before writing and
+backs off if a refresh published in the meantime; a change confined to the
+Sentinel's strip doesn't count (the Sentinel rewrites it on the same push),
+and the restamp is written onto the fresh body. `update_strip` likewise
+re-reads the card before its PATCH. Without both, the two writers raced on
+every base merge and the loser left G1 red until the 2-hourly reconcile
+sweep (caught fork-testing #22555). Before it,
+#21673's master merge left a clean review at `review:stale` with nothing
+scheduled to clear it.
+
+**One-time cleanup.** `cleanup-review-leftovers.py --repo pulumi/docs`
+(dry run; `--apply` to write, `--extra-pr 2` to also sweep the stray
+Sentinel status comment the old `workflow_run` resolution posted on #2)
+lists what the pre-fix loop left on open PRs: `review:stale` on a review that
+is current (or current across a base merge), `Review errored` notices from
+before the live card was composed (its `updated` stamp, not the comment's
+edit time), and legacy v2 pages beside a v3 card. Meant to be run
+once by a maintainer, not scheduled.
+
+## Superseded handoffs
+
+The model job hands its validated review to the credentialed publish job as
+an artifact stamped with the SHA it checked out. `handoff_guard.py` compares
+that SHA with the live PR head at publish time and returns one of three
+actions; the workflow owns the side effects of each. `publish` is the normal
+path. `redispatch` (head moved) rests the label at `review:stale`, cleans up
+the spinner, check-run and any `/new-review` confirmation (a requested run's
+👀 on the request stays for the re-run to own), and hands off to
+the `redispatch` job, which waits for the head to be quiet for `SETTLE_S`
+and dispatches a fresh review at it with `supersede_depth` incremented.
+`rest` (head moved AND this run is already `MAX_DEPTH` re-dispatches deep)
+stops there and rewrites the spinner (or, for a requested run, clears the 👀
+and comments to the requester) to say how to refresh by hand. One full
+review per supersession, never per push: re-triggering on `synchronize` and
+letting `cancel-in-progress` sort it out would burn a partial model run for
+every push in a train. Before this guard learned to reset the label (#21642)
+a superseded publish exited 0 with `review:in-progress` still on the PR and
+nothing scheduled to replace it; `review-label-reconcile.yml` now also sweeps
+that orphan (in-progress for 30+ minutes with no live spinner comment and no
+bot 👀 on a request).
 
 ## Lane routing
 
 `.github/review-routing.yml` (repo root config, schema-versioned) maps
-subject × change type → required approver team. Subjects come from
+subject × change type → required approver team, with an ordered
+`overrides:` list consulted first, per path. Subjects come from
 `classify_path()` (shared with triage) applied to **live file lists**, never
 labels. `routing.py` fails closed on any config it cannot validate.
+
+**`classify_path()` says what a file IS; `overrides:` says who owns it.**
+Keeping those separate is the rule two misroutes bought on 2026-09-18.
+pulumi/docs#21723 fixed a Hugo bug blanking the Responses section of the
+Cloud REST API reference: `layouts/` is `domain:frontend`, which routes to
+marketing "who own how the site looks" — true of marketing chrome, false of
+the templates that render the API docs. pulumi/docs#21718 fixed a Get
+Started page: `content/docs/` is one subject with one owner, and Get Started
+is part of the marketing funnel. Both are the same shape — a subject whose
+path prefix spans more than one owner.
+
+#21723 is why the fix belongs at the ownership layer rather than in the
+classifier: its domain was *correct* (it is a template and wants the
+Hugo/dark-mode review criteria) and only its approver was wrong.
+Reclassifying it would have fixed the routing by breaking the review. An
+override moves the approver and leaves the subject, and therefore the
+criteria, alone — `resolve_lanes` records it in `overridden` (path → role)
+with the subject still in `subjects`. So: do not bend `classify_path` to
+answer an ownership question. Add an override, with the `why` the schema
+requires.
+
+The same resolution has two consumers. The Sentinel resolves it itself from
+live API state to decide what G3 requires. Triage resolves it through
+`route-pr.py` and *requests* those teams as PR reviewers — each team once
+per PR, on open / ready **or on the push that first makes it required**.
+
+The rule is "ask a team that has never been asked on this PR", and the
+distinction from "not currently requested" is load-bearing. Assignments stay
+sticky: a team that reviewed (GitHub drops it from `requested_teams` when it
+does) or that a human un-requested is never re-pinged, because a re-request
+on every push is the notification noise v3 exists to remove. The test is
+therefore the timeline's `review_requested` events, not the PR's current
+`requested_teams`.
+
+What that buys is the case the open/ready-only version missed. The Sentinel
+resolves from live paths on every evaluation, synchronize included, so a
+push that WIDENS the path set — a docs PR that grows a `layouts/` file —
+introduced a required approver nobody had been told about. Under enforcement
+that is an author blocked by a team that was never pinged, with nothing on
+the PR saying so. A first request for a newly-required team is not a
+re-request; it is the notification that was missing.
+Rollout switch: repo variable `REVIEW_V3_ROUTING` — `'1'` turns on both the
+reviewer request and triage's synchronize label-delta pass; unset (how it
+ships) means a push runs no triage pass and no team is ever requested, so
+the matrix is enforced at the merge box without anyone having been told.
+The request needs the **org-scoped** `PULUMI_BOT_TOKEN` (minted from ESC in
+`claude-triage.yml`): the `requested_reviewers` endpoint resolves `org/slug`
+against the org, which the repo-scoped `GITHUB_TOKEN` cannot do. Without it
+the step logs the teams it would have requested and routes nobody — it is an
+assist, never a gate.
+
+Subjects (closed set, all seven required in the matrix): `docs`, `blog`,
+`website`, `programs` (docs-guild, the blog team, or marketing per the
+matrix), `infra` — exactly the build and deploy pipeline (`infrastructure/`,
+`.github/workflows/`, `scripts/`, Makefile, bundler config): tools approves
+(a staging run is a separate, path-keyed question — see G4 above) —
+`frontend` — the rendering layer (`layouts/`, `theme/`, `assets/`,
+`static/`): reviewed under the infra criteria, approved
+by marketing, never a staging run — and `other`, the classifier's fallback
+(repo plumbing such as `.claude/`, `styles/`, generated `data/` files): tools
+approves, so an infra PR that also touches plumbing dedupes to one team.
+Content-serving `data/` files (docs nav, blog taxonomies, author bios, the
+pricing matrix) classify with the content they serve; the map is
+`CONTENT_DATA_EXACT` in `triage-classify.py`.
+
+**Every governed PR is routed and needs a human approval.** `none` matrix
+cells are a config error, so `resolve_lanes` always returns at least one
+required role, triage always has a team to request, and G3 always has an
+approver to wait for. `mechanical` skips the *model* review at G1 and
+nothing else.
+
+**Who is asked and who can clear it are different questions.** `approval:`
+in the same config decides the second one. Under `approval.scope: any-human`
+(what we run) any human with write access to the repo satisfies G3 whatever
+the matrix routed — the same set GitHub's required-review rule counts, read
+off the collaborator-permission endpoint, so a drive-by approval on this
+public repo does not count. The matrix still picks who gets requested, who
+the SLA sweep chases, and who the brief names. `any-team` (any member of a
+team in `teams:`) and `lane` (every matrix-required team) are the narrower
+settings. `approval.admins_satisfy` additionally lets a repository
+administrator's approval clear it under those, which concedes what a repo
+admin can already do at the merge box rather than granting anything new.
+Both default to the strict reading.
+
+**Bots approve only on a named lane.** `bot_approvers:` lists each automated
+process whose bot approval clears G3: the approving login, the PR author,
+and optionally a label the PR must carry. A match overrides the `bots:`
+denylist and the `type == Bot` exclusion for that lane alone; everywhere
+else a bot approval never counts. The live entries are the two workflows
+that post bot approvals today (`auto-approve-for-auto-merge.yml` as
+`github-actions[bot]`, `label-dependabot.yml` as `pulumi-bot`).
+
+That is a reversal, and the reason is worth keeping: the Sentinel is not the
+gate that decides mergeability. GitHub's required-review rule is, and it
+does not read `review-routing.yml`. So the two shortcuts that used to mean
+"no human" — a `none` cell and the `auto_approve` clean-brief rule — never
+removed the human. They removed the *reviewer request*, told the author
+nobody was needed, and left a PR that read green and could not merge until
+somebody stamped it by hand. Both are deleted; `auto_approve` is a hard
+config error now, and nothing ever consumed the `auto_approved` verdict
+field it set.
+
+One optional config block still shapes what the Sentinel governs:
+
+- `not_governed:` — the automated processes the Sentinel does not gate at
+  all (`authors:` matches the PR author alone, e.g. Dependabot;
+  `author_label_pairs:` needs both, e.g. pulumi-bot + `automation/merge` for
+  the generated-docs regens). The check concludes `success` titled "Not
+  governed" with no gates evaluated and `governed: false` in the verdict
+  JSON. What makes these safe is not that they are bots: it is that
+  `auto-approve-for-auto-merge.yml` posts a real approval for that exact
+  author+label pair and the generating workflow arms `gh pr merge --auto`,
+  so they satisfy the repo's required-review rule for real. pulumi-bot's
+  content-review, glow-up, and broken-link PRs carry no such label and are
+  governed, routed, and need a human — as are `workprentice[bot]`'s,
+  `github-copilot[bot]`'s, and `eon-pulumi-agent[bot]`'s.
+
+`review:prose-flagged` (triage's Haiku + Vale pass on a short-circuited PR)
+demotes a mechanical PR to substantive inside the Sentinel — the bar is pure
+diff shape and cannot see labels.
+The bar itself also refuses edition-feature rewrites Layer A cannot see:
+any change under `content/docs/support/faq/` or `content/what-is/`, and any
+added line naming an edition ("the Enterprise edition") or pairing
+"edition(s)" with a feature verb. Those reasons demote only; the marketing
+claims overlay still keys on the `pricing-sensitive` paths alone.
+
+## The /pr-review queue
+
+The maintainer skill `/pr-review` (`.claude/commands/pr-review/SKILL.md`) is
+a batch adjudication surface over every open PR. Its deterministic half lives
+here so it is covered by `make test-review-pipeline`; the model writes only
+the per-row judgment calls, as a JSON file the analyzer merges.
+
+| Script | Role |
+|---|---|
+| `gh_client.py` | GitHub adapter: `gh` subprocess, REST with `GITHUB_TOKEN`/`GH_TOKEN`, or a snapshot directory (`<dir>/GET/<endpoint>.json`; writes go to `writes.jsonl`). `search_author_q()` owns the `author:app/<slug>` rewrite for GitHub App authors. `record_dir=` mirrors live reads into the snapshot layout. |
+| `pr_review_config.py` | `~/.pr-review.yml` (`me:` lanes, `stamp_max_lines`, `stale_date_days`, `link_fixes`, and `board_url`, which the skill reads to republish one board); routing itself stays in `.github/review-routing.yml`. |
+| `collect.py` | Facts → `.pr-review-queue.json`: PR metadata, files + patches, `mergeable_state` (re-asked while `unknown`), check rollup, reviews, the parsed pinned review (`review-worklist.py`, both surfaces), `REVIEW_STATE`, triage prose, reviewed-head SHA, preview URL + per-page links, trust axes / risk tier / AI-suspect (ported from the retired pr-review shell scripts). A legacy (v2) review too long for one comment is split across several, each stamped `<!-- CLAUDE_REVIEW k/N -->`; `sentinel.legacy_pages` collects every page and `_find_legacy_comment` returns them joined in page order (via `review-worklist.join_pages`), so `review.pages` / `review.pages_missing` say how many there were and which GitHub did not return. Reading page 1 alone hid every finding on a split review, because the findings sections are the tail of the document. Cache under `/.pr-review-cache/<pr>/` per (head SHA, updated_at). |
+| `analyze.py` | One verdict per PR (`stamp` / `judge` / `route` / `blocked`), reason codes (`REASON_CODES`), row actions — every verdict carries one; cross-PR collision clusters (overlap vs same-file), directional link conflicts against the Hugo `aliases:` map (`frontmatter-validate.build_global_maps`), duplicates, stale blog dates, stale brief summaries. A PR whose requested reviewers are humans other than the approver (`GET /user`, or `--approver`) is `handed_off`: it keeps its verdict but the renderer folds it into a "Waiting on others" list, and collisions against it are advisory (`:theirs`). A PR the approver already sent back with nothing pushed since is `waiting_on_author` (`sent-back:<date>`) and folds into "Waiting on the author"; the approver's own PR is `author:self` (route only). `--judgments FILE` merges the model's judge output without lowering a verdict, except that judging every open 🚨 with a resolvable disposition and a note lifts a `blocked` row. A review that did not arrive whole — a missing page, or a card whose tally declares more findings than its sections parsed into (`counts_shortfall`) — is `blocked` with `review:unreadable:<why>` and a `--rerun` unblock, never `judge`, where `--force` would merge over findings nobody saw; a review that merely parsed into nothing with nothing to corroborate it gets the weaker `review:parse-confidence:low` stamp gate. Each cluster carries a recommendation (consolidate / chain / ignore / theirs), and `attach_cluster_actions` puts it on the row it belongs to as a decision: the chain (`--chain C1`, `covers: [next]`) on its lead, only where `only_collisions_hold()` — `gate_fails` records every stamp gate a row missed, and `--chain` approves the lead with `--force`, so a lead held by anything but the cross-PR gates gets no chain button; the consolidation on the newest sweep. `do_next` lists the same moves plus the send-back / close / route / stamp batches and a batch per mechanical unblock (`unblock` / `refresh` / `rerun` / `rerun-checks`), one command each; only `--terminal` prints it — the board has no batch strip. Two invariants hold over `do_next`: no entry names a row the board does not render (built from the same set `render_board` groups), and no entry offers an approval that needed a judgment call. A row a workflow opened (`author:generated`) that still carries open findings and whose branch `act.push_allowed` permits also gets a `handoffs` entry: `/address-review N`, an interactive run rather than an `act.py` fragment. |
+| `render.py` | Board HTML (published as an Artifact), one PR's detail page, or `--terminal`. Server-side rendered, one `esc()`, queue inlined as JSON, no network. Rows are grouped owner → domain and ordered by PR number inside a group. The board's buttons compose one `--act` command (approve buttons fold into a single `--stamp` list, reasons are scoped as `--reason "N=…"`, no fragment repeats); a `handoffs` button composes on a second line of its own (`/address-review N`) and never joins `--act`. There is no batch strip: every decision is a row button, and a chain button (`data-covers`) marks the next link "covered" while it is lit and goes out if a decision is picked there. A blocked row with no unblock says "no action available" and is tallied. `--terminal` carries the same facts — wrapped reasons, blockers, open findings, judgments, every action's fragment, the `do_next` batch commands, cluster members, both waiting lists. Fenced code blocks in a finding render as `<pre>`. |
+| `act.py` | Plan → preview → execute (plan schema 2: every comment, review body and suggestion is rendered into the step at plan time, and execute sends exactly that; identical fragments dedupe, two decisions on one PR are refused). Every write is preceded by a preflight that re-reads the PR (open, head unchanged); a failed one skips that step and the batch continues; `--dry-run` runs the preflights and lists the writes, sending none and never running git. `--stamp` (repeatable, `N:merge` / `N:no-merge` per PR; per-PR preflight immediately before each squash-merge — mergeable, checks green with the Sentinel polled separately after the approval, no changes-requested by anyone else, no unanswered 🚨 on a live re-read of the cards; humans approve-only without `--merge-humans`; `--approve-note` appends a sentence), `--request-changes` (a changes-requested review from the row's judgments), `--chain C1` (the first link through `--stamp`'s own path, the next link's unblock `requires` that merge), `--route`, `--unblock` and `--fix` (a temporary detached worktree, `push HEAD:<branch>`, merge commits only, never the person's checkout; `--fix` re-reads the raw review comments, skips outdated suggestions, applies bottom-up), `--close` (repeatable; `--superseded-by M` or `N:M`), `--reason "N=text"`, `--ask-fix` (one `/update-review fix <ids>` comment naming the row's open findings — the batched counterpart to the `/address-review` handoff; refused when nothing is open), `--refresh`, `--rerun`, `--rerun-checks`, `--render` (`screenshot.mjs`), `--deploy`. A conflicted `--unblock` posts the conflicted files on the PR under `<!-- PR_REVIEW_UNBLOCK_CONFLICT -->`, keyed to the head it tried, so the abort is on the record rather than only in stdout; `collect.unblock_conflict` reads it back while it still describes the head, and the row then carries `unblock:refused:conflict` instead of re-offering a merge that will stop on the same files. Attribution footer on every posted comment except the approval body. |
+| `relay.py` | The board's comment relay. Published with the `comments` capability, the board's **send to Claude**, **confirm & run**, **discard** and **refresh board** buttons post a relay comment to the watching Claude session; `parse()` is the closed grammar those comments are read against (`plan` + one `/pr-review --act` line, validated by `act.build_parser()` with the operator's flags — `--in`, `--plan-out`, `--execute`, `--backend`, `--snapshot-dir`, `--dry-run` — refused; `confirm`/`cancel` + a 16-hex plan digest; `refresh`). `plan_digest()` hashes the plan file's bytes; `act.py --execute PLAN --expect-digest D` runs a plan only while it still hashes to D and is under `MAX_AGE_S` old, and moves it to `*.executed.json` before the first write, so a second Confirm runs nothing. `render.py --pending-plan/--pending-preview/--relay-thread/--last-run` puts the preview and the last report on the board. |
+| `screenshot.mjs` | Playwright screenshot helper (`NODE_PATH=/opt/node22/lib/node_modules` on a web session). |
+
+Tests: `test_gh_client.py`, `test_collect.py`, `test_analyze.py`,
+`test_render.py`, `test_act.py`, `test_relay.py` (plus the jsdom harnesses `test_render_composer.js` and `test_render_relay.js`, run from `test_render.py`) — pytest, and each script's `--self-test`
+runs the matching file's `run_standalone()`. Fixtures come from
+`.claude/commands/docs-review/scripts/testdata/` (the v3 author/brief pair,
+the legacy monolith, the normalize-pr* triples) plus in-module PR specs
+expanded into a snapshot directory by `test_collect.make_snapshot()`, so
+every suite sees exactly the record `collect.py` writes.
+
+The queue never runs a local review refresh: a stale v3 review is a blocked
+row with a `--refresh` action (`/update-review …`), and `pinned-
+comment.sh upsert` is never called on a v3 PR.

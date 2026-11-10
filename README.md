@@ -74,7 +74,7 @@ That's the whole setup on every platform.
 
 If you don't use mise, **you're responsible for installing these tools yourself and having them on your `PATH`**. The Makefile and scripts will use whatever versions they find; `make ensure` warns when versions don't match the pinned ones but doesn't fail.
 
-* [Hugo](https://gohugo.io/installation/) 0.157.0 (extended)
+* [Hugo](https://gohugo.io/installation/), extended edition, at the version pinned in `mise.toml` (`./scripts/hugo-version.sh` prints it)
 * [Node.js](https://nodejs.org/en/download/package-manager) 24
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) 1.x
 * [Go](https://golang.org/) 1.26 (only needed for SDK doc builds and example-program tests)
@@ -179,8 +179,12 @@ We generate reference documentation in two surfaces — language-specific SDK do
 | Pulumi SDK — Java | `pulumi/pulumi-java` | [`pulumi-sdk-java-docs.yml`](.github/workflows/pulumi-sdk-java-docs.yml) | `static-prebuilt/docs/reference/pkg/jvm/` |
 | Pulumi Policy SDK — Python | `pulumi/pulumi-policy`* | [`pulumi-policy-sdk-python-docs.yml`](.github/workflows/pulumi-policy-sdk-python-docs.yml) | `static-prebuilt/docs/reference/pkg/python/pulumi_policy/` |
 | Pulumi ESC SDK — Python | `pulumi/esc-sdk`* | [`pulumi-esc-sdk-python-docs.yml`](.github/workflows/pulumi-esc-sdk-python-docs.yml) | `static-prebuilt/docs/reference/pkg/python/pulumi_esc_sdk/` |
+| Pulumi Cloud SDK — TypeScript | `pulumi/pulumi-cloud-sdk`* | [`pulumi-cloud-sdk-typescript-docs.yml`](.github/workflows/pulumi-cloud-sdk-typescript-docs.yml) | `static-prebuilt/docs/reference/pkg/nodejs/pulumi/cloud-sdk/` |
+| Pulumi Cloud SDK — Python | `pulumi/pulumi-cloud-sdk`* | [`pulumi-cloud-sdk-python-docs.yml`](.github/workflows/pulumi-cloud-sdk-python-docs.yml) | `static-prebuilt/docs/reference/pkg/python/pulumi_cloud_sdk/` |
+| Pulumi Cloud SDK — .NET | `pulumi/pulumi-cloud-sdk`* | [`pulumi-cloud-sdk-dotnet-docs.yml`](.github/workflows/pulumi-cloud-sdk-dotnet-docs.yml) | `static-prebuilt/docs/reference/pkg/dotnet/cloud-sdk/` |
+| Pulumi Cloud SDK — Java | `pulumi/pulumi-cloud-sdk`* | [`pulumi-cloud-sdk-java-docs.yml`](.github/workflows/pulumi-cloud-sdk-java-docs.yml) | `static-prebuilt/docs/reference/pkg/java/cloud-sdk/` |
 
-(\*) These two workflows are `workflow_dispatch`-only today; an upstream `repository_dispatch` from the source repo is a planned follow-up.
+(\*) These workflows are `workflow_dispatch`-only today; an upstream `repository_dispatch` from the source repo is a planned follow-up.
 
 (Go SDK docs aren't generated here — they're hosted at [pkg.go.dev](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi) directly from `pulumi/pulumi`.)
 
@@ -207,6 +211,9 @@ gh workflow run pulumi-sdk-java-docs.yml --repo pulumi/docs --ref master -f vers
 gh workflow run pulumi-policy-sdk-python-docs.yml --repo pulumi/docs --ref master -f version=<policy-version>
 gh workflow run pulumi-esc-sdk-python-docs.yml   --repo pulumi/docs --ref master -f version=<esc-sdk-version>
 
+# Pulumi Cloud SDK (typescript, python, dotnet, java), e.g. version=2026.10.9
+gh workflow run pulumi-cloud-sdk-python-docs.yml --repo pulumi/docs --ref master -f version=<cloud-sdk-version>
+
 # Pulumi CLI markdown
 gh workflow run pulumi-cli-docs.yml --repo pulumi/docs --ref master -f version=3.238.0
 ```
@@ -224,10 +231,11 @@ make update-repos   # Clone sibling pulumi/pulumi (etc.) repos — needed for th
 # TypeScript: pulumi package only
 NOBUILD=true PKGS=pulumi ./scripts/run_typedoc.sh
 
-# Python: pick one package per invocation. Valid PACKAGE values: pulumi, pulumi_policy, pulumi_esc_sdk.
+# Python: pick one package per invocation. Valid PACKAGE values: pulumi, pulumi_policy, pulumi_esc_sdk, pulumi_cloud_sdk.
 PACKAGE=pulumi          ./scripts/generate_python_docs.sh
 PACKAGE=pulumi_policy   ./scripts/generate_python_docs.sh
 PACKAGE=pulumi_esc_sdk  ./scripts/generate_python_docs.sh
+PACKAGE=pulumi_cloud_sdk ./scripts/generate_python_docs.sh
 
 # .NET (requires `dotnet` and the `docfx` global tool on PATH)
 dotnet tool install -g docfx    # one-time
@@ -235,6 +243,8 @@ dotnet tool install -g docfx    # one-time
 
 # Java (requires Java 17 + Gradle; see pulumi-sdk-java-docs.yml for details)
 JAVA_REPO=../pulumi-java ./scripts/gen_javadoc.sh
+# The Pulumi Cloud Java SDK uses the same script with JAVADOC_* overrides; see
+# the env block in pulumi-cloud-sdk-java-docs.yml.
 
 # Pulumi CLI markdown — uses the currently-installed `pulumi` binary, so install
 # the version you're documenting before running.
@@ -252,6 +262,10 @@ With `make serve-static` running, browse to <http://localhost:8080/docs>:
 
 * Choose **Languages & SDKs** → your language → scroll to the package you're interested in.
 * Choose **Pulumi CLI** → **Commands**.
+
+### Self-hosted feature parity docs
+
+`make generate-feature-parity` regenerates the [self-hosted feature parity page](content/docs/administration/self-hosting/feature-parity.md) from the feature definitions in the [pulumi-service](https://github.com/pulumi/pulumi-service) repository, which must be cloned as a sibling to this repo. See [`scripts/self-hosted-feature-parity/README.md`](scripts/self-hosted-feature-parity/README.md) for details.
 
 ### Checking in generated docs
 
@@ -312,7 +326,7 @@ Engage with our community to elevate your developer experience:
 
 Delve deeper into Pulumi with additional resources:
 
-* [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Deploy a simple application in AWS, Azure, Google Cloud, or Kubernetes using Pulumi.
+* [Get Started with Pulumi](https://www.pulumi.com/up/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Deploy a simple application in AWS, Azure, Google Cloud, or Kubernetes using Pulumi.
 * [Registry](https://www.pulumi.com/registry/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Search for packages and learn about the supported resources you need. Install the package directly into your project, browse the API documentation, and start building.
 * [Pulumi Blog](https://www.pulumi.com/blog/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Stay in the loop with our latest tech announcements, insightful articles, and updates.
 * [Try Pulumi Neo](https://www.pulumi.com/product/neo/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Use natural-language prompts to generate Pulumi infrastructure-as-code programs in any language.

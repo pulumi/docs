@@ -27,18 +27,12 @@ sections:
     text: Trusted by over 4,000 innovative companies
     anchor: customers
     logos:
-      - src: /logos/customers/deloitte.svg
-        alt: Deloitte
-      - src: /logos/customers/nvidia.png
-        alt: NVIDIA
-      - src: /logos/customers/bmw-shortened.svg
-        alt: BMW
-      - src: /logos/customers/webflow-wordmark.svg
-        alt: Webflow
-      - src: /logos/customers/snowflake-logo.svg
-        alt: Snowflake
-      - src: /logos/customers/mercedes-benz-shortened.svg
-        alt: Mercedes Benz
+      - customer: deloitte
+      - customer: nvidia
+      - customer: bmw
+      - customer: webflow
+      - customer: snowflake
+      - customer: mercedes-benz
 
   - type: features
     title: Do Kubernetes smarter
@@ -114,15 +108,14 @@ sections:
         description: |
           41% of AI developers are moving to cloud-native infrastructure. Teams need more control over GPU resources, model deployments, and inference workloads. Pulumi provides the foundation AI teams depend on.
         cta_text: Learn more about AI infrastructure
-        cta_link: /product/superintelligence-infrastructure/
+        cta_link: /blog/the-superintelligence-flywheel/
 
   - type: testimonial
     quote: |
       We manage over 20,000 resources across multiple clouds with Pulumi. It solved our Terraform
       coordination overhead and gave us the velocity we needed.
     author: Platform Engineering Team, BMW
-    company: BMW
-    logo: /logos/customers/bmw-shortened.svg
+    customer: bmw
     anchor: testimonial
 
   - type: location

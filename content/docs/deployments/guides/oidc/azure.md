@@ -28,7 +28,7 @@ This document outlines the steps required to configure Pulumi Deployments to use
 Configuring OIDC for Azure involves two sides:
 
 1. **Azure** — register a Microsoft Entra application with federated credentials that trust Pulumi Cloud, and grant its service principal access to your resources. You can do this in the [Azure portal](#using-the-azure-portal) or [programmatically](#using-infrastructure-as-code).
-1. **Pulumi Deployments** — enable the Azure OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that application. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/deployments/deployments/api/#patchsettings).
+1. **Pulumi Deployments** — enable the Azure OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that application. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/reference/cloud-rest-api/deployments/).
 
 ## Prerequisites
 
@@ -46,10 +46,10 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 In the navigation pane of the [Microsoft Entra console](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview):
 
-1. Select **App registrations** and then click **New registration**.
+1. Select **App registrations** and then select **New registration**.
 1. Provide a name for your application (ex: `pulumi-deployments-oidc-app`).
 1. In the **Supported account types** section, select **Accounts in this organizational directory only**.
-1. Click **Register**.
+1. Select **Register**.
 
 After the Microsoft Entra application has been created, take note of the following details:
 
@@ -65,7 +65,7 @@ Once you have created your new application registration, you will be redirected 
 
 1. Navigate to the **Certificates & secrets** pane.
 1. Select the **Federated credentials** tab.
-1. Click on the **Add credential** button. This will start the "Add a credential" wizard.
+1. Select the **Add credential** button. This will start the "Add a credential" wizard.
 1. In the wizard, select **Other Issuer** as the **Federated credential scenario**.
 1. Fill in the remaining form fields as follows:
     * **Issuer:** `https://api.pulumi.com/oidc`
@@ -88,13 +88,13 @@ To provide Pulumi services the ability to deploy, manage, and interact with Azur
 
 1. Navigate to the [Subscriptions](https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV1) page of the Azure portal.
 1. Select the subscription to create the service principal in.
-    * If you want to limit access to a specific resource group, go to the [Resource Groups](https://portal.azure.com/#view/HubsExtension/BrowseResourceGroups) page instead and select the desired resource group.
+    * If you want to limit access to a specific resource group, navigate to the [Resource Groups](https://portal.azure.com/#view/HubsExtension/BrowseResourceGroups) page instead and select the desired resource group.
 1. In the left navigation menu, select **Access control (IAM)**.
-1. Click **Add** > **Add role assignment** to be taken to the **Add role assignment** wizard.
-1. Under the **Job function roles** tab, select the desired role from the list, then click **Next**.
-1. Select **User, group, or service principal**, then click **Select members**
-1. Enter the name of the application you created in a previous step, select it from the list, then click **Select**.
-1. Click **Next** and then **Review + assign**.
+1. Select **Add** > **Add role assignment** to be taken to the **Add role assignment** wizard.
+1. Under the **Job function roles** tab, select the desired role from the list, then select **Next**.
+1. Select **User, group, or service principal**, then select **Select members**
+1. Enter the name of the application you created in a previous step, select it from the list, then select **Select**.
+1. Select **Next** and then **Review + assign**.
 
 ### Using infrastructure as code
 
@@ -126,7 +126,7 @@ const contributorRoleId = "b24988ac-6180-42a0-ab88-20f7382dd24c";
 const subscriptionScope = pulumi.interpolate`/subscriptions/${current.subscriptionId}`;
 
 new authorization.RoleAssignment("pulumi-deployments-contributor", {
-    principalId: servicePrincipal.id,
+    principalId: servicePrincipal.objectId,
     principalType: "ServicePrincipal",
     roleDefinitionId: pulumi.interpolate`${subscriptionScope}/providers/Microsoft.Authorization/roleDefinitions/${contributorRoleId}`,
     scope: subscriptionScope,
@@ -151,13 +151,13 @@ export const subscriptionId = current.subscriptionId;
 
 ## Configure Pulumi Deployments
 
-Azure OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/deployments/deployments/api/#patchsettings). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
+Azure OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/reference/cloud-rest-api/deployments/). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
 
 For new stacks, Pulumi recommends using [Pulumi ESC](/docs/esc/) instead, which supports [OIDC for Azure](/docs/esc/guides/configuring-oidc/azure/) alongside broader secrets and configuration management than Deployments OIDC alone provides. See [Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC](/docs/deployments/guides/cloud-credentials/#choosing-between-pulumi-esc-environments-and-pulumi-deployments-oidc) for guidance.
 
 ### Using infrastructure as code
 
-You can manage the same deployment settings in source control with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource (the OIDC configuration is set under `operationContext.oidc.azure`). Deployment settings can also be configured via the [REST API](/docs/deployments/deployments/api/#patchsettings).
+You can manage the same deployment settings in source control with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource (the OIDC configuration is set under `operationContext.oidc.azure`). Deployment settings can also be configured via the [REST API](/docs/reference/cloud-rest-api/deployments/).
 
 ```typescript
 import * as pulumiservice from "@pulumi/pulumiservice";

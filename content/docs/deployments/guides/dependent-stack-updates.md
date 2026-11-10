@@ -46,7 +46,7 @@ Manage the webhooks and deployment settings in a **separate stack** from the inf
 
 A [deployment webhook destination](/docs/deployments/concepts/webhooks/#deployment-webhooks) lets you pick one or more event types on a stack (for example, `update_succeeded`) and deliver the event to a destination — in this case, the Create Deployment API of another stack. In the example below, an update to the `network` stack triggers the `database` stack, and an update to the `database` stack triggers the `compute` stack.
 
-{{< chooser language "typescript,python,go,csharp,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -234,6 +234,54 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+`Pulumi.yaml`:
+
+```yaml
+name: auto-deploy-demo
+runtime: hcl
+description: A simple auto-deploy example
+```
+
+`main.tf`:
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source = "pulumi/pulumiservice"
+    }
+  }
+}
+
+resource "pulumiservice_webhook" "database_webhook" {
+  organization_name = "org"
+  project_name      = "network"
+  stack_name        = "prod"
+  format            = "pulumi_deployments"
+  payload_url       = "database/prod"
+  active            = true
+  display_name      = "deploy-database"
+  filters           = ["update_succeeded"]
+}
+
+resource "pulumiservice_webhook" "compute_webhook" {
+  organization_name = "org"
+  project_name      = "database"
+  stack_name        = "prod"
+  format            = "pulumi_deployments"
+  payload_url       = "compute/prod"
+  active            = true
+  display_name      = "deploy-compute"
+  filters           = ["update_succeeded"]
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ### Pulumi Auto Deploy
@@ -254,7 +302,7 @@ flowchart TD
     cluster --> app
 ```
 
-{{< chooser language "typescript,python,go,csharp,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -522,6 +570,74 @@ resources:
         - ${database.ref}
         - ${cluster.ref}
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+`Pulumi.yaml`:
+
+```yaml
+name: auto-deploy-demo
+runtime: hcl
+description: Layered infrastructure with automatic dependent-stack updates
+```
+
+`main.tf`:
+
+```hcl
+terraform {
+  required_providers {
+    auto-deploy = {
+      source = "pulumi/auto-deploy"
+    }
+  }
+}
+
+locals {
+  stack = "prod"
+}
+
+# Layered infrastructure in a single environment: network -> database, cluster -> app.
+# Updating a stack automatically updates every stack downstream of it via a webhook
+# that triggers Pulumi Deployments.
+
+# The application sits at the top of the graph and has no downstream stacks.
+resource "auto-deploy_auto_deployer" "app" {
+  organization    = pulumi.organization
+  project         = "app"
+  stack           = local.stack
+  downstream_refs = []
+}
+
+# The database and the cluster each feed the application.
+resource "auto-deploy_auto_deployer" "database" {
+  organization    = pulumi.organization
+  project         = "database"
+  stack           = local.stack
+  downstream_refs = [auto-deploy_auto_deployer.app.ref]
+}
+
+resource "auto-deploy_auto_deployer" "cluster" {
+  organization    = pulumi.organization
+  project         = "cluster"
+  stack           = local.stack
+  downstream_refs = [auto-deploy_auto_deployer.app.ref]
+}
+
+# The network underpins everything; updating it updates the database and the cluster.
+resource "auto-deploy_auto_deployer" "network" {
+  organization    = pulumi.organization
+  project         = "network"
+  stack           = local.stack
+  downstream_refs = [
+    auto-deploy_auto_deployer.database.ref,
+    auto-deploy_auto_deployer.cluster.ref,
+  ]
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block. The package name becomes the resource-type prefix, so the hyphen in `auto-deploy` carries through to both the `required_providers` key and the resource type.
 
 {{% /choosable %}}
 

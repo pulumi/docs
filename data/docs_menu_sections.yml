@@ -1,7 +1,5 @@
 - menu: install
   label: Download & Install
-- menu: get-started
-  label: Getting Started
 - menu: iac
   label: Infrastructure as Code
 - menu: ai
@@ -12,7 +10,7 @@
   label: Delivery
 - menu: esc
   label: Secrets & Configuration (ESC)
-- menu: insights
+- menu: discovery-governance
   label: Discovery & governance
 - menu: idp
   label: Internal Developer Platform

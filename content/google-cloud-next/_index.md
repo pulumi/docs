@@ -29,18 +29,12 @@ sections:
     text: Trusted by over 4,000 innovative companies
     anchor: customers
     logos:
-      - src: /logos/customers/snowflake-logo.svg
-        alt: Snowflake
-      - src: /logos/customers/bmw-shortened.svg
-        alt: BMW
-      - src: /logos/customers/mercedes-benz-shortened.svg
-        alt: Mercedes Benz
-      - src: /logos/customers/nvidia.png
-        alt: NVIDIA
-      - src: /logos/customers/webflow-wordmark.svg
-        alt: Webflow
-      - src: /logos/customers/deloitte.svg
-        alt: Deloitte
+      - customer: snowflake
+      - customer: bmw
+      - customer: mercedes-benz
+      - customer: nvidia
+      - customer: webflow
+      - customer: deloitte
 
   - type: features
     title: What you'll see at the booth
@@ -122,8 +116,7 @@ sections:
       When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked.
     author: Raman Hariharan
     title: former Head of Engineering, Cloud Platform
-    company: Snowflake
-    logo: /logos/customers/snowflake-logo.svg
+    customer: snowflake
     anchor: testimonial
 
   - type: location

@@ -81,15 +81,16 @@ def write_ledger(ledger: Path, path: str, **kw) -> None:
     (ledger / f"{slug}.json").write_text(json.dumps(entry, indent=2) + "\n")
 
 
-def write_findings(findings: Path, path: str) -> None:
+def write_findings(findings: Path, path: str, items: list[dict] | None = None) -> None:
     """A minimal structured findings record, keyed the way the selector looks
     it up (slug.json under the synced findings/ prefix)."""
     findings.mkdir(parents=True, exist_ok=True)
     slug = path.removeprefix("content/").removesuffix(".md").replace("/", "-")
+    items = items if items is not None else [{"id": "f1", "label": "x", "applied": False}]
     (findings / f"{slug}.json").write_text(json.dumps(
         {"schema_version": 1, "slug": slug, "path": path,
-         "counts": {"total": 1, "applied": 0, "deferred": 1},
-         "findings": [{"id": "f1", "label": "x", "applied": False}]}) + "\n")
+         "counts": {"total": len(items), "applied": 0, "deferred": len(items)},
+         "findings": items}) + "\n")
 
 
 def run_select(repo: Path, tiers: Path, ledger: Path, *extra: str) -> dict:
@@ -124,18 +125,6 @@ def main() -> int:
         check(art["slug"] == "docs-concepts-alpha", f"slug derived (got {art['slug']})")
         check(art["source_pr_number"] == 111, "prior PR pointer carried for the backlog")
         check(art["skipped_findings"] == 5, "banked count carried")
-        check(art["stale_claim_markers"] == [] and art["stale_claims"] == 0,
-              "marker fields present (empty) so record-review's rebuild can't drop them")
-
-        print("stale-claim markers ride the glow-up queue (carry-forward safety)")
-        led_m = tmp / "ledger-markers"
-        marker = {"entity_key": "version/x", "verdict": "contradicted",
-                  "unresolved_reviews": 1}
-        write_ledger(led_m, A, skipped_findings=3, stale_claims=[marker])
-        qm = run_select(repo, tiers, led_m, "--count", "1")
-        check(qm["articles"][0]["stale_claim_markers"] == [marker]
-              and qm["articles"][0]["stale_claims"] == 1,
-              "ledger markers carried in full on the glow-up article")
         q2 = run_select(repo, tiers, led, "--count", "1")
         check(q2["articles"][0]["path"] == A, "selection is deterministic")
 
@@ -147,6 +136,45 @@ def main() -> int:
         check(q["articles"][0]["path"] == B,
               f"clarity-flagged page tops the queue (got {q['articles'][0]['path']})")
         check(q["articles"][0]["clarity_flag"] is True, "clarity_flag carried")
+
+        print("an open readthrough blocker outranks a clarity flag and a bigger backlog")
+        # The fix lane banks every readthrough finding, so a page a reader
+        # cannot get through waits on this lane; it must not queue behind
+        # pages that merely carry more minor findings.
+        fdir_b = tmp / "findings-blocker"
+        led_b = tmp / "ledger-blocker"
+        write_ledger(led_b, A, skipped_findings=4)
+        write_ledger(led_b, B, skipped_findings=2, clarity_flag=True)
+        write_ledger(led_b, C, skipped_findings=1)
+        rt = {"id": "f1", "label": "Readthrough missing-step (L40)",
+              "category": "readthrough", "applied": False}
+        write_findings(fdir_b, A)
+        write_findings(fdir_b, B)
+        write_findings(fdir_b, C, [{**rt, "severity": "blocker"}])
+        q = run_select(repo, tiers, led_b, "--count", "3", "--findings-dir", str(fdir_b))
+        check([a["path"] for a in q["articles"]][0] == C,
+              f"blocker page tops the queue (got {[a['path'] for a in q['articles']]})")
+
+        write_findings(fdir_b, C, [{**rt, "severity": "blocker", "applied": True}])
+        q = run_select(repo, tiers, led_b, "--count", "3", "--findings-dir", str(fdir_b))
+        check([a["path"] for a in q["articles"]][-1] == C,
+              "an applied blocker earns no boost")
+        write_findings(fdir_b, C, [{**rt, "severity": "recommended"}])
+        q = run_select(repo, tiers, led_b, "--count", "3", "--findings-dir", str(fdir_b))
+        check([a["path"] for a in q["articles"]][-1] == C,
+              "a non-blocker readthrough finding earns no boost")
+        write_findings(fdir_b, C, [{**rt, "category": "claim", "severity": "blocker"}])
+        q = run_select(repo, tiers, led_b, "--count", "3", "--findings-dir", str(fdir_b))
+        check([a["path"] for a in q["articles"]][-1] == C,
+              "only readthrough findings carry the blocker boost")
+
+        print("an open blocker qualifies a page even when the ledger banked nothing")
+        led_b0 = tmp / "ledger-blocker-only"
+        write_ledger(led_b0, C, skipped_findings=0)
+        write_findings(fdir_b, C, [{**rt, "severity": "blocker"}])
+        q = run_select(repo, tiers, led_b0, "--count", "3", "--findings-dir", str(fdir_b))
+        check([a["path"] for a in q["articles"]] == [C],
+              f"blocker-only page selected (got {[a['path'] for a in q['articles']]})")
 
         print("exclusions: no banked signal, tier-0, stubs, cooldown")
         led3 = tmp / "ledger-excl"
@@ -299,6 +327,16 @@ def main() -> int:
                        "--findings-dir", str(fdir_seeded),
                        "--exclude-paths", f"{A},{B},{C}")
         check(q["repairs"] == [], "all excluded means no repair, not a fallback pick")
+
+        print("--exclude-paths keeps the glow-up pick itself off a fix-lane page")
+        # Until 2026-09-09 only the repair path honored the list: on 2026-09-08
+        # the fix lane and this lane both dispatched elb.md, and the glow-up
+        # worker's open-PR skip overwrote the fix review's ledger and findings
+        # records.
+        q = run_select(repo, tiers, led_rec, "--count", "10", "--exclude-paths", B)
+        check([a["path"] for a in q["articles"]] == [A, C],
+              f"the fix lane's page is skipped, not glowed up (got {[a['path'] for a in q['articles']]})")
+        check(q["repairs"] == [], "and is not routed to a repair either")
 
         print("an existing-but-EMPTY findings dir skips the check, same as an absent one")
         # The production shape, and the one the guard exists for: the

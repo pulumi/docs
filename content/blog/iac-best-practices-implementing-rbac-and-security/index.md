@@ -30,7 +30,7 @@ So far, you've read about how Zephyr started out with a single project and a sin
 
 You can review the reasons for this structure in the post on [best practices for structuring Pulumi projects](/blog/iac-best-practices-structuring-pulumi-projects/). One of the reasons listed in the third Zephyr blog post was security:
 
-> ...security is a factor that affects how projects and stacks should be structured. In Zephyr's case, the ability for one team to affect another team's resources was present when everything was a single project. With multiple projects, Zephyr can use stack permissions and role-based access control (RBAC) in [Pulumi Cloud](/product/pulumi-cloud/) to appropriately control _who_ can affect _what_.
+> ...security is a factor that affects how projects and stacks should be structured. In Zephyr's case, the ability for one team to affect another team's resources was present when everything was a single project. With multiple projects, Zephyr can use stack permissions and role-based access control (RBAC) in [Pulumi Cloud](/product/) to appropriately control _who_ can affect _what_.
 
 The last part of that quote---the part about being able to "appropriately control _who_ can affect _what_"---is another way of describing what's known as [the principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). If you're unfamiliar with this term, we recommend following the link and getting more information, because the principle of least privilege stands at the core of all the recommended practices you'll read in this post.
 
@@ -44,7 +44,7 @@ To understand how to secure your Pulumi projects and stacks in Pulumi Cloud, it 
 
 * _Organization:_ An organization represents a customer/company within Pulumi Cloud. Generally speaking, a single company like Zephyr is represented by a single organization.
 * _Member:_ Each member represents a user account that is part of an organization. In Zephyr's case, each Zephyr employee that needs to interact with Pulumi is a member of Zephyr's organization in Pulumi Cloud.
-* _Team:_ A team is a grouping of members, and is the primary component involved in assigning per-stack permissions in the [Pulumi Cloud RBAC model](/docs/pulumi-cloud/access-management/teams/). How you structure teams within your organization will depend on a great many different factors we'll explore in this post.
+* _Team:_ A team is a grouping of members, and is the primary component involved in assigning per-stack permissions in the [Pulumi Cloud RBAC model](/docs/administration/concepts/rbac/teams/). How you structure teams within your organization will depend on a great many different factors we'll explore in this post.
 * _Stack:_ A stack is a separate instance of the resources created by a Pulumi program within a project. Each stack has its own independent state and its own configuration values. With respect to RBAC, each stack is a separate entity to which one or more teams can be granted permission. In Zephyr's case, there is a long-lived production stack for each of the separate projects, and a persistent (or long-lived) test stack for each of the separate projects. There are also the per-developer stacks, which are typically short-lived.
 
 This diagram, also used in the post on [best practices for stack references](/blog/iac-best-practices-applying-stack-references/), shows the stacks and projects for Zephyr's online store:

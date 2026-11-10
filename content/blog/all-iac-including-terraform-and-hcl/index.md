@@ -17,7 +17,7 @@ We work with thousands of customers who prefer Pulumi due to our modern approach
 
 ## The TL;DR
 
-Pulumi Cloud now manages Terraform/OpenTofu with full visibility, governance, and agentic AI included. Pulumi IaC now speaks HCL alongside general purpose languages and YAML. And we'll cover your costs until your HashiCorp contract ends.
+Pulumi Cloud now manages Terraform/OpenTofu with full visibility, governance, and agentic infrastructure included. Pulumi IaC now speaks HCL alongside general purpose languages and YAML. And we'll cover your costs until your HashiCorp contract ends.
 
 ## Terraform/OpenTofu in Pulumi Cloud
 
@@ -53,7 +53,7 @@ Pulumi IaC supports using any Terraform provider. Many of them are available pre
 
 We have numerous migration tools. The first is Neo, our infrastructure engineering agent, who has Terraform-specific skills to migrate code and state. Neo leverages a number of building blocks that you can use directly instead. That includes [the `pulumi convert --from terraform` command](https://www.pulumi.com/blog/converting-full-terraform-programs-to-pulumi/) which understands how to convert Terraform/OpenTofu HCL or CDKTF code into a Pulumi language of your choosing, preserving code structure including migrating modules to Pulumi components. We also support directly importing resources from your cloud accounts directly, either at the CLI or visually in Pulumi Cloud. Read more about migration [here](https://www.pulumi.com/docs/iac/guides/migration/).
 
-You can [deploy Terraform modules](https://www.pulumi.com/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) straight off the shelf from your favorite Pulumi language. That works as well for any supported Pulumi language, including HCL, and it shows up as though the underlying module resources were managed natively in Pulumi. This ensures if your team has a collection of battle tested best practices encoded as Terraform modules, and either plan to keep some Terraform or even migrate eventually, you don’t need to migrate right away.
+You can [deploy Terraform modules](https://www.pulumi.com/docs/integrations/terraform/modules/) straight off the shelf from your favorite Pulumi language. That works as well for any supported Pulumi language, including HCL, and it shows up as though the underlying module resources were managed natively in Pulumi. This ensures if your team has a collection of battle tested best practices encoded as Terraform modules, and either plan to keep some Terraform or even migrate eventually, you don’t need to migrate right away.
 
 Finally, [you can reference Terraform state outputs](https://www.pulumi.com/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#referencing-terraform-state) from Pulumi programs and configurations. Using this you could, for example, keep your network defined in Terraform and define a layer of higher level infrastructure that consumes VPC and subnet IDs from that lower-layer network workspace. This can be useful if there’s short- or long-term coexistence between Terraform and Pulumi IaC programs, such as during an ongoing migration effort or in a hybrid team.
 
@@ -77,15 +77,15 @@ We’ve worked with thousands of companies over 8+ years to build what we view a
 
 For example:
 
-* [Snowflake](https://www.pulumi.com/case-studies/snowflake/) radically improved time to market on their path to IPO. “When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked.”
+* [Snowflake](https://www.pulumi.com/customers/snowflake/) radically improved time to market on their path to IPO. “When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked.”
 
-* [Lemonade](https://www.pulumi.com/case-studies/lemonade/) switched from Terraform to Pulumi so they could embed business logic into infrastructure, share and reuse logic, and scale their lean ops team to support a much larger group of developers. "We're not limited to one-size-fits-all configurations, but can actually implement environment-specific customizations for our infrastructure."
+* [Lemonade](https://www.pulumi.com/customers/lemonade/) switched from Terraform to Pulumi so they could embed business logic into infrastructure, share and reuse logic, and scale their lean ops team to support a much larger group of developers. "We're not limited to one-size-fits-all configurations, but can actually implement environment-specific customizations for our infrastructure."
 
-* [BMW](https://www.pulumi.com/case-studies/bmw/) was able to establish a center of infrastructure excellence that they call CodeCraft, standardizing all infrastructure delivery, and scaling to support 10,000+ developers.
+* [BMW](https://www.pulumi.com/customers/bmw/) was able to establish a center of infrastructure excellence that they call CodeCraft, standardizing all infrastructure delivery, and managing more than 20,000 cloud resources with Python-based infrastructure code.
 
-* [Supabase](https://www.pulumi.com/case-studies/supabase/) was able to scale to meet the heightened demands and pace of AI, saying that “the infrastructure team acts as groundkeepers of our Pulumi practices, not gatekeepers, but promoters for the entire org."
+* [Supabase](https://www.pulumi.com/customers/supabase/) was able to scale to meet the heightened demands and pace of AI, saying that “the infrastructure team acts as groundkeepers of our Pulumi practices, not gatekeepers, but promoters for the entire org."
 
-* [Wiz](https://www.pulumi.com/case-studies/wiz/) manages over 1 million resources, tens of thousands Kubernetes clusters, and hundreds of data centers, with over 100,000 daily updates.
+* [Wiz](https://www.pulumi.com/customers/wiz/) manages over 1 million resources, tens of thousands Kubernetes clusters, and hundreds of data centers, with over 100,000 daily updates.
 
 Here’s why:
 
@@ -107,7 +107,7 @@ To learn more about our product capabilities, visit these pages:
 * [Infrastructure as Code](https://www.pulumi.com/product/infrastructure-as-code/)
 * [Agentic Infrastructure Engineering with Neo](https://www.pulumi.com/product/neo/)
 * [Secrets & Configuration](https://www.pulumi.com/product/secrets-management/)
-* [Insights & Governance](https://www.pulumi.com/product/insights-governance/)
+* [Insights & Governance](https://www.pulumi.com/product/discovery-governance/)
 * [Internal Developer Platforms](https://www.pulumi.com/product/internal-developer-platforms/)
 
 ## Get Started Today

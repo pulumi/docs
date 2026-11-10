@@ -63,7 +63,7 @@ All infrastructure resources are described by one of two subclasses of the `Reso
 
 A resource’s desired state is declared by constructing an instance of the resource:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -108,6 +108,19 @@ resources:
     type: the:resource:Type
     properties: ...args
     options: ...options
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "the_resource_type" "res" {
+  # ...args
+
+  pulumi {
+    # ...options
+  }
+}
 ```
 
 {{% /choosable %}}

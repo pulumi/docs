@@ -438,6 +438,15 @@
     color: var(--color-violet-800);
 }
 
+/* A type badge sitting inside the Type: line keeps the badge's own color, so the
+   array[Foo] notation reads the same here as it does in the property rows. Without
+   this, .api-schema-label a above ties .api-param-badge a on specificity and wins on
+   source order, and the link renders in the docs link color instead. */
+.api-schema-label .api-param-badge a,
+.api-schema-label .api-param-badge a:hover {
+    color: inherit;
+}
+
 .api-request-body .api-schema-label {
     margin-top: 0;
 }
@@ -574,8 +583,20 @@ html[data-theme="dark"] body.section-docs .api-param-required.is-required {
     color: var(--color-red-300);
 }
 
+html[data-theme="dark"] body.section-docs .api-param-deprecated {
+    background: color-mix(in oklch, var(--color-yellow-300) 18%, transparent);
+    color: var(--color-yellow-300);
+}
+
 html[data-theme="dark"] body.section-docs .api-schema-label a:hover {
     color: var(--color-violet-200);
+}
+
+/* Dark counterpart to the light rule: the hover above outweighs it otherwise, and the
+   badge link would flip violet on hover while sitting blue the rest of the time. */
+html[data-theme="dark"] body.section-docs .api-schema-label .api-param-badge a,
+html[data-theme="dark"] body.section-docs .api-schema-label .api-param-badge a:hover {
+    color: inherit;
 }
 
 html[data-theme="dark"] body.section-docs .api-status-2xx {
@@ -626,4 +647,21 @@ html[data-theme="dark"] body.section-docs tr.property-depth-2 td {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--docs-fg-muted);
+}
+
+/* Package schema shortcode: a property the language's code generator still reads
+   but no longer acts on. Amber rather than the red of .is-required, since a
+   deprecated property is a warning, not a constraint. Inert on other pages. */
+.api-param-deprecated {
+    background: var(--color-yellow-100);
+    color: var(--color-yellow-800);
+}
+
+/* Package schema shortcode: one branch of a type the metaschema defines as a
+   choice between shapes. Indented so the branches read as belonging to the type
+   above them rather than as siblings of it. */
+.api-param-variant-group {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--docs-border);
 }

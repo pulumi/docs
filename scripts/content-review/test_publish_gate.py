@@ -169,14 +169,22 @@ def main() -> int:
         check(code == 0 and out.get("class") == "deterministic",
               f"expected class=deterministic, got {out}")
 
-        print("class: any claim/readthrough category -> judgment")
-        for cat in ("claim", "readthrough"):
-            mixed = det_applied + [{"category": cat, "file": ARTICLE,
-                                    "lines": [30, 31], "source": f"{cat}:x"}]
-            code, out, _ = run_gate(tmp, verdict=fixed_verdict(applied=mixed),
-                                    patch=small_patch)
-            check(code == 0 and out.get("class") == "judgment",
-                  f"expected class=judgment for {cat}, got {out}")
+        print("class: any claim category -> judgment")
+        mixed = det_applied + [{"category": "claim", "file": ARTICLE,
+                                "lines": [30, 31], "source": "claim:x"}]
+        code, out, _ = run_gate(tmp, verdict=fixed_verdict(applied=mixed),
+                                patch=small_patch)
+        check(code == 0 and out.get("class") == "judgment",
+              f"expected class=judgment for claim, got {out}")
+
+        print("banked: a fixed verdict applying a readthrough finding is a violation")
+        rt = det_applied + [{"category": "readthrough", "file": ARTICLE,
+                             "lines": [40, 44], "source": "readthrough:L40-44"}]
+        code, out, err = run_gate(tmp, verdict=fixed_verdict(applied=rt),
+                                  patch=small_patch)
+        check(code == 1, f"expected exit 1, got {code}")
+        check("banks those for the glow-up lane" in err, "expected a banked-category error")
+        check(out.get("publish") is None, f"expected no outputs on violation, got {out}")
 
         print("class: clarity_flag -> judgment even with deterministic categories")
         code, out, _ = run_gate(

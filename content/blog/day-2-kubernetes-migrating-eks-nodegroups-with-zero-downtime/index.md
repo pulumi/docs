@@ -6,7 +6,6 @@ category: tutorials
 meta_desc: "Learn how to migrate EKS node groups with zero downtime using Pulumi. Create, shift, and decommission worker nodes safely with code and kubectl."
 date: "2019-07-23"
 updated: 2025-03-26
-canonical_url: https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/eks-migrate-nodegroups/
 
 ---
 
@@ -150,7 +149,7 @@ load testing and decommissioning of the original node group.
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [get started today](/docs/get-started/). Pulumi is open source and free to
+infrastructure and Kubernetes through code, [get started today](/up/?cloud=kubernetes). Pulumi is open source and free to
 use.
 
 For further examples on how to use Pulumi to create Kubernetes

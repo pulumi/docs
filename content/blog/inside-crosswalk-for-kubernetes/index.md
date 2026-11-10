@@ -12,7 +12,6 @@ tags:
  - aws
  - google-cloud
 category: best-practices
-canonical_url: "https://www.pulumi.com/docs/iac/clouds/kubernetes/"
 ---
 
 > [!INFO]
@@ -76,7 +75,7 @@ After this step, you'll have a fully-functioning Kubernetes cluster. Before movi
 
 ![Kubernetes Cluster Services](crosswalk_for_kubernetes.svg)
 
-Cluster services are scoped at the [Kubernetes cluster](https://kubernetes.io/docs/concepts/cluster-administration/cluster-administration-overview/) level and typically shared between many applications deployed to the same cluster. Common cluster services are logging, monitoring, policy enforcement, container registries, and service meshes. The [guide](/docs/integrations/clouds/kubernetes/) provides an example of how to configure logging and monitoring, including how to set up Datadog to aggregate node and container metrics and events. Examples are also provided on how to configure native cloud provider logging solutions. Full examples are available for [AWS](https://github.com/pulumi/kubernetes-guides/tree/master/aws/04-cluster-services) and [Azure](https://github.com/pulumi/kubernetes-guides/tree/master/azure/04-cluster-services) on Github.
+Cluster services are scoped at the [Kubernetes cluster](https://kubernetes.io/docs/concepts/cluster-administration/cluster-administration-overview/) level and typically shared between many applications deployed to the same cluster. Common cluster services are logging, monitoring, policy enforcement, container registries, and service meshes. The [guide](/docs/integrations/clouds/kubernetes/) provides an example of how to configure logging and monitoring, including how to set up Datadog to aggregate node and container metrics and events. Examples are also provided on how to configure native cloud provider logging solutions. Full examples are available for [AWS](https://github.com/pulumi/kubernetes-guides/tree/master/aws/04-cluster-services) and [Azure](https://github.com/pulumi/kubernetes-guides/tree/master/azure/04-cluster-services) on GitHub.
 
 ### Application Services
 
@@ -132,7 +131,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 }, { provider: provider });
 ```
 
-There are many more [application examples](/docs/integrations/clouds/kubernetes/#overview) in the Guide. Complete [code examples](https://github.com/pulumi/kubernetes-guides) for building and deploying a container in a Kubernetes cluster are available on Github. Additional application examples for other [common application tasks](https://github.com/pulumi/kubernetes-guides/tree/master/apps) are also available on Github.
+There are many more [application examples](/docs/integrations/clouds/kubernetes/#overview) in the Guide. Complete [code examples](https://github.com/pulumi/kubernetes-guides) for building and deploying a container in a Kubernetes cluster are available on GitHub. Additional application examples for other [common application tasks](https://github.com/pulumi/kubernetes-guides/tree/master/apps) are also available on GitHub.
 
 Often teams will start with manual CLI-driven deployments, which is great for a fast initial development experience. Afterward, however, most teams will adopt CI/CD, so that deployments are triggered automatically by other events such as Git commits or Slack commands. This helps multiple team members collaborate on reviews and shared changes, ensure that practices such as testing are well-integrated into the workflow, and help promotions between multiple environments. [A series of guides](/docs/iac/operations/continuous-delivery/) walks through how to continuously deliver your Kubernetes applications using many popular CI/CD systems, such as GitLab, Codefresh, Azure DevOps Pipelines, and more.
 

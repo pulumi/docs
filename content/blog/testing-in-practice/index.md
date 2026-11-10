@@ -115,7 +115,7 @@ def test_security_group_rules():
     return pulumi.Output.all(infra.group.urn, infra.group.ingress).apply(check_security_group_rules)
 ```
 
-Because `web-secgrp` has port 22 open to all IP addresses, we can expect it to fail this test. You can find the complete example for the unit and property tests on [Pulumi's example Github repository](https://github.com/pulumi/examples/tree/master/testing-unit-py).
+Because `web-secgrp` has port 22 open to all IP addresses, we can expect it to fail this test. You can find the complete example for the unit and property tests on [Pulumi's example GitHub repository](https://github.com/pulumi/examples/tree/master/testing-unit-py).
 
 ## Integration testing
 
@@ -165,8 +165,8 @@ The `TestS3` class has a second `@classmethod` decorator for the tests; for exam
         self.assertEqual(created_response.key, self.FILE_NAME)
 ```
 
-When we run the test, it creates the stack and resource, runs the tests, and tears down the infrastructure. This process can be part of a CI/CD pipeline to run an automated integration test as part of the build process. The complete example for integration testing is available on [Github](https://github.com/pulumi/examples/tree/master/testing-integration-py).
+When we run the test, it creates the stack and resource, runs the tests, and tears down the infrastructure. This process can be part of a CI/CD pipeline to run an automated integration test as part of the build process. The complete example for integration testing is available on [GitHub](https://github.com/pulumi/examples/tree/master/testing-integration-py).
 
 ## Infrastructure testing strategy: final thoughts
 
-Although distributed infrastructure presents some unique challenges because of its asynchronous nature, we can perform efficient and automated testing. Whether it is unit and property testing that uses mocks and stubs or integration testing that requires deployed resources, infrastructure as code lets you use familiar testing frameworks and SDKs. Moreover, Pulumi's Automation API makes it simple to create stacks and spin up ephemeral infrastructure for integration testing. Learn more about [infrastructure testing](/blog/how-to-test-infrastructure-as-code/) with [Pulumi's Testing User Guide](/docs/iac/concepts/testing/) and get hands-on with our [testing examples](https://github.com/pulumi/examples/#testing).
+Although distributed infrastructure presents some unique challenges because of its asynchronous nature, we can perform efficient and automated testing. Whether it is unit and property testing that uses mocks and stubs or integration testing that requires deployed resources, infrastructure as code lets you use familiar testing frameworks and SDKs. Moreover, Pulumi's Automation API makes it simple to create stacks and spin up ephemeral infrastructure for integration testing. Learn more about [infrastructure testing](/blog/how-to-test-infrastructure-as-code/) with [Pulumi's Testing User Guide](/docs/iac/guides/testing/) and get hands-on with our [testing examples](https://github.com/pulumi/examples/#testing).

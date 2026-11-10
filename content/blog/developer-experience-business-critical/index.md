@@ -28,15 +28,15 @@ Intriguingly, engineering teams may perceive its value differently. Therefore, w
 
 ## In this DevEx article
 
-- [What is developer experience?](/blog/software-developer-experience-devex-devx-devops-culture/#what-is-developer=experience)
-- [Is developer experience important?](/blog/software-developer-experience-devex-devx-devops-culture/#is-developer-experience-important) (Spoiler alert: it's business-critical)
-- [The GitHub developer experience (DevEx) formula](/blog/software-developer-experience-devex-devx-devops-culture/#the-github-developer-experience-devex-formula)
-- [What does a great developer experience look like?](/blog/software-developer-experience-devex-devx-devops-culture/#what-does-a-great-developer-experience-look-like)
-- [How does DevEx intersect with DevOps?](/blog/software-developer-experience-devex-devx-devops-culture/#how-does-devex-intersect-with-devops)
-- [Organizational culture is a predictor of outcome success](/blog/software-developer-experience-devex-devx-devops-culture/#organizational-culture-is-a-predictor-of-outcome-success)
-- [How do you implement a great developer experience?](/blog/software-developer-experience-devex-devx-devops-culture/#how-do-you-implement-a-great-developer-experience)
-- [What DevEx is not](/blog/software-developer-experience-devex-devx-devops-culture/#what-devex-is-not)
-- [Frequently asked questions](/blog/software-developer-experience-devex-devx-devops-culture/#frequently-asked-questions)
+- [What is developer experience?](/blog/developer-experience-business-critical/#what-is-developer=experience)
+- [Is developer experience important?](/blog/developer-experience-business-critical/#is-developer-experience-important) (Spoiler alert: it's business-critical)
+- [The GitHub developer experience (DevEx) formula](/blog/developer-experience-business-critical/#the-github-developer-experience-devex-formula)
+- [What does a great developer experience look like?](/blog/developer-experience-business-critical/#what-does-a-great-developer-experience-look-like)
+- [How does DevEx intersect with DevOps?](/blog/developer-experience-business-critical/#how-does-devex-intersect-with-devops)
+- [Organizational culture is a predictor of outcome success](/blog/developer-experience-business-critical/#organizational-culture-is-a-predictor-of-outcome-success)
+- [How do you implement a great developer experience?](/blog/developer-experience-business-critical/#how-do-you-implement-a-great-developer-experience)
+- [What DevEx is not](/blog/developer-experience-business-critical/#what-devex-is-not)
+- [Frequently asked questions](/blog/developer-experience-business-critical/#frequently-asked-questions)
 
 ## What is developer experience?
 
@@ -164,8 +164,8 @@ You will need to understand how developers work, the developer workflow, what th
 
 - [**Internal developer portals (IDPs)**](https://www.pulumi.com/blog/building-developer-portals/): IDPs enable developers to quickly provision approved infrastructure, boosting productivity with pre-configured architectures, automated testing, and deployment adhering to organizational standards
 - **CI pipelines**: usually, pipelines can be made faster and more unified. If they have a microservice architecture, they are likely duplicating pipeline code for every service
-- [**Software development kits (SDKs)**](https://www.pulumi.com/docs/languages-sdks/): SDKs are integral components of a positive DevEx and provide developers with tools that facilitate crafting applications tailored to specific platforms or frameworks. Offering easy-to-access, well-designed, functional SDKs can make a meaningful difference in helping engineers quickly prototype ideas and refine their creations
-- [**Infrastructure as code (IaC)**](https://www.pulumi.com/docs/pulumi-cloud/): Developers like to write code, particularly in their preferred programming language, provision infrastructure, ensuring consistency and reproducibility
+- [**Software development kits (SDKs)**](/docs/iac/languages-sdks/): SDKs are integral components of a positive DevEx and provide developers with tools that facilitate crafting applications tailored to specific platforms or frameworks. Offering easy-to-access, well-designed, functional SDKs can make a meaningful difference in helping engineers quickly prototype ideas and refine their creations
+- [**Infrastructure as code (IaC)**](/docs/iac/): Developers like to write code, particularly in their preferred programming language, provision infrastructure, ensuring consistency and reproducibility
 - **Monitoring and observability**: Implement effective monitoring and observability tools (e.g., Prometheus, [New Relic](https://www.pulumi.com/resources/observability-as-code-with-new-relic/), Grafana) to gain insights into application performance and proactively address issues
 - **Collaborative documentation platforms**: Use collaborative documentation platforms to document code, processes, and best practices, ensuring knowledge sharing and reducing onboarding friction
 
@@ -187,7 +187,7 @@ You will need to understand how developers work, the developer workflow, what th
 - **Key performance indicators (KPIs)**: Define and track key metrics such as deployment frequency, lead time, and mean time to recovery to measure the effectiveness of the DevEx strategy
 - **Iterative optimization**: Continuously iterate and optimize DevEx based on performance metrics and user feedback
 
-[Implementing a Developer Experience](https://www.pulumi.com/blog/platform-engineering-pillars-4/) requires a holistic approach that blends cultural aspects with powerful DevOps and platform engineering tools. Watch Daniel Tao, Head of Engineering at [Atlassian](https://www.pulumi.com/case-studies/atlassian/), and Sven Peters, developer evangelist, discuss how to build a great developer experience through culture and an integrated approach to developer tools.
+[Implementing a Developer Experience](https://www.pulumi.com/blog/platform-engineering-pillars-4/) requires a holistic approach that blends cultural aspects with powerful DevOps and platform engineering tools. Watch Daniel Tao, Head of Engineering at [Atlassian](https://www.pulumi.com/customers/atlassian/), and Sven Peters, developer evangelist, discuss how to build a great developer experience through culture and an integrated approach to developer tools.
 
 {{< youtube "xriRD7ugX20?si=LurTGLx1KfgRGIQZ&t=192?rel=0" >}}
 

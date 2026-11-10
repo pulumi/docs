@@ -10,8 +10,9 @@ menu:
     identifier: delivery-concepts
     weight: 10
 aliases: []
-pulumi_cloud_feature: delivery
 ---
+
+<!-- TODO(launch): Add `pulumi_cloud_feature: delivery` to the front matter once pulumi/marketing-web adds a hidden `delivery` feature (min_edition: essentials) and its sync PR updates data/pulumi_editions.yaml. Then drop the hand-written edition sentence. -->
 
 <!-- TODO(launch): Product owner to confirm positioning paragraph against the final launch and messaging brief (MA-849). -->
 

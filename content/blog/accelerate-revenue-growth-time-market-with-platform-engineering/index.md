@@ -31,9 +31,9 @@ Good platform engineering is a method of handling all platform deployments, roll
 
 When DevOps, infrastructure and product delivery teams are working together in one seamless platform - using their favorite languages across all their stacks, they’re faster, happier, and more productive, which means faster development cycles and faster TTM. They deliver new features, new services and new products more quickly than competitors, and adjust and make needed changes faster, adapting to market changes and conditions more quickly.
 
-[Aptos Labs](https://www.pulumi.com/case-studies/aptos/) is a blockchain and Web3 technology leader that’s leveraged this approach very well. “Switching to Pulumi for our IaC needs helped us massively accelerate development velocity, while upgrading the security, compliance, and cost control policies,” said Christian Thielemann, Software Engineer.
+[Aptos Labs](https://www.pulumi.com/customers/aptos/) is a blockchain and Web3 technology leader that’s leveraged this approach very well. “Switching to Pulumi for our IaC needs helped us massively accelerate development velocity, while upgrading the security, compliance, and cost control policies,” said Christian Thielemann, Software Engineer.
 
-As more organizations recognize its business transformation value, platform engineering is becoming a strategic differentiator. For example [4IR](https://www.pulumi.com/case-studies/4ir/), a technology provider for manufacturing and IOT industries, said, “[platform engineering] has emerged as a key element in our strategy, creating tangible value for us by reducing infrastructure deployment time, up-skilling our team, and accelerating our time to market.”
+As more organizations recognize its business transformation value, platform engineering is becoming a strategic differentiator. For example [4IR](https://www.pulumi.com/customers/4ir/), a technology provider for manufacturing and IOT industries, said, “[platform engineering] has emerged as a key element in our strategy, creating tangible value for us by reducing infrastructure deployment time, up-skilling our team, and accelerating our time to market.”
 
 ## How Platform Engineering delivers business value
 
@@ -51,12 +51,12 @@ Effectively, platform engineering does the following things to deliver faster ti
 - Reduces cloud complexity and cost and inefficiency
 - Better adherence to policy and security
 
-Platform engineering results also vary widely by company due to multiple factors. While 75% of participants in a [recent Gartner survey](https://www.gartner.com/en/infrastructure-and-it-operations-leaders/topics/platform-engineering) said their organizations had adopted platform engineering, only 44% had formalized their approach. Plus, some solutions are more agile and flexible than others. "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time," said Matt Stephenson, Senior Principal Software Engineer at [Starburst Data](https://www.pulumi.com/case-studies/starburst/).
+Platform engineering results also vary widely by company due to multiple factors. While 75% of participants in a [recent Gartner survey](https://www.gartner.com/en/infrastructure-and-it-operations-leaders/topics/platform-engineering) said their organizations had adopted platform engineering, only 44% had formalized their approach. Plus, some solutions are more agile and flexible than others. "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time," said Matt Stephenson, Senior Principal Software Engineer at [Starburst Data](https://www.pulumi.com/customers/starburst/).
 
 To find out more about how platform engineering can help you, take a look at these case studies:
 
-- [Aptos Labs](https://www.pulumi.com/case-studies/aptos/) uses Pulumi to transform development, increasing velocity by up to 10x while improving security, compliance, and cost control.
-- [4IR](https://www.pulumi.com/case-studies/aptos/) uses Pulumi to reduce infrastructure deployment times, up-skill its team, and accelerate time to market.
-- [Starburst Data](https://www.pulumi.com/case-studies/starburst/) uses Pulumi to reduce infrastructure deployments from 2 weeks to just 3 hours.
+- [Aptos Labs](https://www.pulumi.com/customers/aptos/) uses Pulumi to transform development, increasing velocity by up to 10x while improving security, compliance, and cost control.
+- [4IR](https://www.pulumi.com/customers/aptos/) uses Pulumi to reduce infrastructure deployment times, up-skill its team, and accelerate time to market.
+- [Starburst Data](https://www.pulumi.com/customers/starburst/) uses Pulumi to reduce infrastructure deployments from 2 weeks to just 3 hours.
 
 If you are ready to talk to an expert about how platform engineering can help your organization, [click here](https://www.pulumi.com/contact/?form=sales).

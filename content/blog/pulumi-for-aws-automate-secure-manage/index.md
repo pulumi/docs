@@ -38,7 +38,7 @@ The fragmentation between development, infrastructure, and security teams only c
 
 ### Well-Architected AWS Best Practices as a Component
 
-One of the first innovations made for AWS was [Pulumi Crosswalk for AWS](/docs/iac/clouds/aws/guides/), a collection of libraries that automatically use well-architected best practices to make common infrastructure-as-code tasks in AWS easier and more secure. Released in 2019, Crosswalk for AWS supports “day one” tasks, such as creating your initial container-based workloads, using Amazon Elastic Container Service (ECS) – including Fargate or Kubernetes (EKS) – and creating serverless workloads using Amazon API Gateway and AWS Lambda. Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
+One of the first innovations made for AWS was [Pulumi Crosswalk for AWS](/docs/iac/guides/clouds/aws/), a collection of libraries that automatically use well-architected best practices to make common infrastructure-as-code tasks in AWS easier and more secure. Released in 2019, Crosswalk for AWS supports “day one” tasks, such as creating your initial container-based workloads, using Amazon Elastic Container Service (ECS) – including Fargate or Kubernetes (EKS) – and creating serverless workloads using Amazon API Gateway and AWS Lambda. Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
 
 Crosswalk for AWS also supports “day two and beyond” tasks, such as scaling your workload, securing and integrating it with your existing infrastructure, and going to production in multiple complex environments. This includes Amazon Virtual Private Cloud (VPC) for network isolation, AWS Auto Scaling for dynamic scaling, and AWS Identity and Access Management (IAM) for securing your infrastructure.
 
@@ -48,7 +48,7 @@ Earlier this month at KubeCon 2024, we launched the Pulumi Elastic Kubernetes Se
 
 ### AWS Policies as Code
 
-We released [Pulumi CrossGuard](/crossguard/) to enforce your organization's cloud governance — security, compliance, cost controls, and more. This enables Policy as Code within your organization so that you can define guardrails for your infrastructure, ensuring engineers are following best practices and putting security first. CrossGuard helps your organization prevent mistakes before they occur and respond rapidly to any incidents.
+We released [Pulumi CrossGuard](/product/discovery-governance/) to enforce your organization's cloud governance — security, compliance, cost controls, and more. This enables Policy as Code within your organization so that you can define guardrails for your infrastructure, ensuring engineers are following best practices and putting security first. CrossGuard helps your organization prevent mistakes before they occur and respond rapidly to any incidents.
 
 ### Building Controls Planes
 
@@ -58,7 +58,7 @@ Many AWS customers build [internal developer platforms](/product/internal-develo
 
 In 2022, Pulumi brought the ability to use AWS Cloud Development Kit (CDK) constructs from within a Pulumi deployment. For users already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering improved deployment speed and integration with the full set of features of the Pulumi Platform. Even better, you can also now combine AWS CDK and Pulumi resources in a single Pulumi infrastructure as code project - passing outputs from Pulumi resources into AWS CDK constructs, and outputs from AWS CDK constructs into Pulumi resources.
 
-AWS Cloud Development Kit (CDK) on Pulumi is now generally available. This powerful integration includes full support for CDK features like assets, custom resources, aspects, and context values/methods. It provides access to the full ecosystem of over 1,200 CDK Construct libraries, and it also supports all 180+ Pulumi providers, allowing for CDK applications to include resources outside of AWS.
+AWS Cloud Development Kit (CDK) on Pulumi is now generally available. This powerful integration includes full support for CDK features like assets, custom resources, aspects, and context values/methods. It provides access to the full ecosystem of over 1,200 CDK Construct libraries, and it also supports hundreds of Pulumi providers, allowing for CDK applications to include resources outside of AWS.
 
 [Read more about AWS CDK on Pulumi](/blog/aws-cdk-on-pulumi-1.0/)
 
@@ -78,9 +78,9 @@ Over the last few years, our customers have shared a clear message:  IaC alone i
 
 The complexities of modern cloud environments create significant challenges in making sense of the millions of resources and resource updates per month, across hundreds of clouds, regions, and accounts. Identifying cost saving opportunities is difficult amidst soaring cloud expenditures, and maintaining compliance and security is mission critical because errors can cause catastrophic damage.
 
-[Pulumi Insights](/product/pulumi-insights/) empowers organizations to tackle cloud complexity by delivering visibility, actionable insights, and AI-assisted optimization for their infrastructure. With Pulumi Insights, companies can scan and sync their entire AWS resource inventory – including resources not managed with Pulumi IaC – ensuring a complete picture of their cloud assets. This Account Discovery capability is [now in public preview](/blog/insights-cloud-account-discovery/).
+[Pulumi Insights](/product/discovery-governance/) empowers organizations to tackle cloud complexity by delivering visibility, actionable insights, and AI-assisted optimization for their infrastructure. With Pulumi Insights, companies can scan and sync their entire AWS resource inventory – including resources not managed with Pulumi IaC – ensuring a complete picture of their cloud assets. This Account Discovery capability is [now in public preview](/blog/insights-cloud-account-discovery/).
 
-Compliance checks can also be run against standards such as PCI DSS, ISO 27001, and CIS benchmarks, helping maintain regulatory compliance and mitigate risks. The AI-powered [Pulumi Copilot](/product/copilot/) provides an interactive assistant to gain visibility into a team's activity, discover cost saving opportunities, get compliant, and debug cloud failures. Pulumi Insights enables companies to discover, understand, manage, and improve their cloud infrastructure on their journey towards intelligent infrastructure management.
+Compliance checks can also be run against standards such as PCI DSS, ISO 27001, and CIS benchmarks, helping maintain regulatory compliance and mitigate risks. The AI-powered [Pulumi Copilot](/product/neo/) provides an interactive assistant to gain visibility into a team's activity, discover cost saving opportunities, get compliant, and debug cloud failures. Pulumi Insights enables companies to discover, understand, manage, and improve their cloud infrastructure on their journey towards intelligent infrastructure management.
 
 ### Pulumi ESC: Centralized Secrets Management
 

@@ -51,7 +51,7 @@ db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
 {{% choosable language csharp %}}
 
 ```csharp
-// The resource will be deleted before it's replacement is created
+// The resource will be deleted before its replacement is created
 var db = new Database("db", new DatabaseArgs(),
     new CustomResourceOptions { DeleteBeforeReplace = true });
 ```
@@ -60,7 +60,7 @@ var db = new Database("db", new DatabaseArgs(),
 {{% choosable language java %}}
 
 ```java
-// The resource will be deleted before it's replacement is created
+// The resource will be deleted before its replacement is created
 var db = new Database("db",
     DatabaseArgs.Empty,
     CustomResourceOptions.builder()
@@ -72,7 +72,7 @@ var db = new Database("db",
 {{% choosable language yaml %}}
 
 ```yaml
-# The resource will be deleted before it's replacement is created
+# The resource will be deleted before its replacement is created
 resources:
   db:
     type: Database
@@ -84,10 +84,11 @@ resources:
 {{% choosable language hcl %}}
 
 ```hcl
-# HCL follows Terraform's replacement semantics: resources are deleted
-# before their replacement is created by default. Set
-# create_before_destroy = true to opt into Pulumi's default
-# create-first behavior instead.
+# The HCL equivalent of deleteBeforeReplace: true is
+# create_before_destroy = false, shown explicitly here. HCL follows
+# Terraform's replacement semantics, where deleting before creating is
+# already the default; set create_before_destroy = true to opt into
+# Pulumi's default create-first behavior instead.
 resource "database" "db" {
   # ...
 

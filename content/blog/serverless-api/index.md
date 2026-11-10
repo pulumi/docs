@@ -360,7 +360,7 @@ The cool thing about using Pulumi and lambdas is that they make complex infrastr
 
 - Want to increase the Lambda memory? Change one number and run `pulumi up`.
 - You get [complete AWS Lambda and API Gateway management](/registry/packages/aws/) for your low-traffic REST APIs
-- And [Infrastructure testing capabilities](/docs/iac/concepts/testing/) mean you can validate your serverless configuration before deployment
+- And [Infrastructure testing capabilities](/docs/iac/guides/testing/) mean you can validate your serverless configuration before deployment
 
 You can find the full code in the [service status monitor repo](https://github.com/adamgordonbell/service-status-monitor) from my [Python devops article](https://www.pulumi.com/blog/python-for-devops/). A larger version with rolling updates is coming soon.
 
@@ -368,7 +368,7 @@ You can find the full code in the [service status monitor repo](https://github.c
 
 ### Alternative approaches
 
-There are other ways to run containers that scale to zero. [Google Cloud Run](https://www.pulumi.com/registry/packages/gcp/api-docs/cloudrun/service/) offers similar functionality on GCP, and [AWS App Runner](https://www.pulumi.com/blog/deploy-applications-with-aws-app-runner/) is another AWS service that can do this. Both have similar pricing models—very cheap for low-volume services. And [SST](https://www.pulumi.com/blog/from-cdk-pulumi-evolution-of-sst/) is a similar solution for getting TypeScript / JavaScript solutions into an AWS Lambda.
+There are other ways to run containers that scale to zero. [Google Cloud Run](https://www.pulumi.com/registry/packages/gcp/api-docs/cloudrun/service/) offers similar functionality on GCP, and [AWS App Runner](https://www.pulumi.com/blog/deploy-applications-with-aws-app-runner/) is another AWS service that can do this. Both have similar pricing models—very cheap for low-volume services. And [SST](https://www.pulumi.com/blog/aws-cdk-vs-pulumi-why-sst-switched/) is a similar solution for getting TypeScript / JavaScript solutions into an AWS Lambda.
 
 The beauty of the container approach used here is that switching between these services is straightforward. Since we're just running a standard container with a REST endpoint, there's nothing AWS-specific in our application code. If you need to move to a different platform later, you can take your container with you.
 
@@ -396,7 +396,7 @@ I'd love to hear about your experiences with monolithic serverless applications.
 
 ## Related reading
 
-- [Get started with Pulumi on AWS](/docs/iac/get-started/aws/): the official quickstart for the tooling used in this post.
+- [Get started with Pulumi on AWS](/up/?cloud=aws): the official quickstart for the tooling used in this post.
 - [AWS Lambda function reference](/registry/packages/aws/api-docs/lambda/function/): every property on the resource we used above.
 - [Code, deploy, and manage a serverless REST API on AWS with Pulumi](/blog/code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi/): the function-per-route alternative to the monolith pattern.
 - [Controlling AWS costs with Lambda and Pulumi](/blog/controlling-aws-costs-with-lambda-and-pulumi/): patterns for keeping your bill predictable as traffic grows.

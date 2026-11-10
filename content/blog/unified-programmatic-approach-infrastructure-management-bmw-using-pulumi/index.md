@@ -98,7 +98,7 @@ At this critical juncture, BMW discovered Pulumi. This modern IaC solution offer
 
 ## Embracing Pulumi: Streamlining Infrastructure Management
 
-[BMW's adoption of Pulumi](https://www.pulumi.com/case-studies/bmw/) was a strategic move that aimed to address the growing complexity of its software ecosystem. By transitioning from a patchwork of tools to a unified IaC solution, the company was able to streamline its infrastructure management and improve developer productivity.
+[BMW's adoption of Pulumi](https://www.pulumi.com/customers/bmw/) was a strategic move that aimed to address the growing complexity of its software ecosystem. By transitioning from a patchwork of tools to a unified IaC solution, the company was able to streamline its infrastructure management and improve developer productivity.
 
 ### Shared Modules: Promoting Reusability and Best Practices
 
@@ -110,14 +110,14 @@ BMW used Pydantic, a data validation library, to define schema-based configurati
 
 ### Transformation Features: Protecting Legacy Services
 
-- As part of their software factory, BMW also faced the challenge of integrating legacy services that did not natively support modern authentication and authorization mechanisms, such as [OpenID Connect (OIDC)](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/provider/).
-- To address this, BMW leveraged Pulumi's transformation features to seamlessly inject an [OAuth2](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/#exchanging-oidc-tokens) proxy into their deployments, providing a secure and consistent way to protect these services without requiring extensive modifications to the underlying applications.
+- As part of their software factory, BMW also faced the challenge of integrating legacy services that did not natively support modern authentication and authorization mechanisms, such as [OpenID Connect (OIDC)](/docs/deployments/guides/oidc/).
+- To address this, BMW leveraged Pulumi's transformation features to seamlessly inject an [OAuth2](/docs/administration/guides/oidc-issuers/#exchanging-oidc-tokens) proxy into their deployments, providing a secure and consistent way to protect these services without requiring extensive modifications to the underlying applications.
 - By encapsulating this functionality within a shared module, BMW was able to apply the OAuth2 proxy to multiple services, ensuring a consistent and secure access control layer across their software ecosystem.
 
 ### Policy Enforcement: Ensuring Compliance and Security
 
 One key benefit of [Pulumi's IaC approach](https://www.pulumi.com/product/infrastructure-as-code/) is the ability to define and enforce policies across the organization, ensuring that infrastructure deployments adhere to security and compliance standards.
-BMW has leveraged [Pulumi's policy-as-code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resources.
+BMW has leveraged [Pulumi's policy-as-code](/docs/discovery-governance/concepts/policy-as-code/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resources.
 
 - By integrating these policy checks into their deployment workflows, BMW has shifted security and compliance concerns to the left, addressing issues early in the development process and reducing the risk of costly post-deployment [remediations](https://www.pulumi.com/blog/remediation-policies/).
 
@@ -139,11 +139,11 @@ BMW's decision to leverage Pulumi's Python bindings has been a strategic advanta
 
 ### Streamlined Cloud Migration
 
-As BMW continues to expand its use of public cloud services, Pulumi has played a crucial role in simplifying the [migration process](https://www.pulumi.com/migrate/). By providing a consistent IaC approach across on-premises and cloud environments, Pulumi has enabled BMW to manage its infrastructure in a unified manner, reducing the complexity and overhead associated with [multi-cloud deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/).
+As BMW continues to expand its use of public cloud services, Pulumi has played a crucial role in simplifying the [migration process](https://www.pulumi.com/migrate/). By providing a consistent IaC approach across on-premises and cloud environments, Pulumi has enabled BMW to manage its infrastructure in a unified manner, reducing the complexity and overhead associated with [multi-cloud deployments](/docs/deployments/concepts/).
 
 ## The Future of BMW's Software Factory: Embracing the Cloud
 
-Looking ahead, BMW's Software Factory is poised to take the next step in its evolution, with plans to transition away from the self-hosted backend and embrace cloud-native services. This strategic move aims to further improve [developer productivity](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/) and reduce the internal effort required to maintain the underlying infrastructure.
+Looking ahead, BMW's Software Factory is poised to take the next step in its evolution, with plans to transition away from the self-hosted backend and embrace cloud-native services. This strategic move aims to further improve [developer productivity](https://www.pulumi.com/blog/developer-experience-business-critical/) and reduce the internal effort required to maintain the underlying infrastructure.
 
 By leveraging the expertise and reliability of cloud service providers, BMW can focus on delivering innovative software features to their customers while the cloud providers handle the operational aspects of running the necessary services.
 
@@ -158,5 +158,5 @@ As the automotive industry continues to evolve, with cars becoming increasingly 
 To learn more about Pulumi and how it can transform your software development and infrastructure management:
 
 - Get started with [Pulumi Tutorials](https://www.pulumi.com/tutorials/)
-- Attend an [upcoming workshop](https://www.pulumi.com/resources/#upcoming)
+- Attend an [upcoming workshop](https://www.pulumi.com/events/#upcoming)
 - Try out the [Pulumi Neo](https://www.pulumi.com/product/neo/) code assistant to accelerate your infrastructure as code journey

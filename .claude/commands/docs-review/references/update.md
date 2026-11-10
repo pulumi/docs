@@ -12,7 +12,7 @@ Shared primitive for "previous review + new commits/mention = updated review." E
 ## Inputs
 
 - `PR_NUMBER`
-- (Optional) `MENTION_BODY` -- the text of the `@claude` mention that triggered the run, when applicable
+- (Optional) `MENTION_BODY` -- the text of the `/update-review` comment that triggered the run, when applicable: the command token, then the request. "The mention" below means this comment.
 - (Optional) `MENTION_AUTHOR` -- the GitHub username who left the mention
 
 The skill loads everything else for itself:
@@ -77,7 +77,7 @@ When `gh pr view` reports `isDraft: true`, **prepend** the pinned-comment body w
 
 > *Reviewing a draft; findings may change as you iterate.*
 
-Explicit `@claude` mention on a draft is explicit consent to run, so the skill does not abort -- but the author should not be surprised that findings surface on still-evolving content. The note is removed automatically on the next re-entrant run once the PR is marked Ready for review.
+An explicit `/update-review` on a draft is explicit consent to run, so the skill does not abort -- but the author should not be surprised that findings surface on still-evolving content. The note is removed automatically on the next re-entrant run once the PR is marked Ready for review.
 
 ---
 
@@ -101,7 +101,7 @@ The author pushed commits that look like fixes for the previous 🚨 Outstanding
 2. **Sweep for unflagged duplicates of any phrase the previous finding quoted.** When a previous finding cited a specific quoted phrase or claim, search the current file for every occurrence of that phrase (or a near-paraphrase) — not just the locations the original finding called out. On Hugo posts, that means body + `meta_desc` + every `social:` sub-key. If an occurrence the original finding missed still matches the verified-false claim, raise it as a new 🚨 finding citing the missed location. Initial reviews can miss frontmatter duplicates; re-entrant is the safety net before merge.
 3. Extract any *new* findings introduced by the new commits. Apply the domain rules.
 4. Append a 📜 Review history line: `<timestamp> — re-reviewed after fix push (<commit count> new commits, <SHA>)`.
-5. Refresh the freshness header of the 1/M comment: the `Last updated <timestamp>` line AND the `<!-- CLAUDE_REVIEW_HEAD <sha> -->` sentinel on the next line, setting the sentinel to the PR head SHA this update reviewed. Label-independent consumers (`/pr-review` Step 2, the review-label-reconcile workflow) compare that sentinel against the live PR head to detect a stale review when a push never fired a `synchronize` event (Copilot-agent and `GITHUB_TOKEN` pushes don't) — a stale sentinel makes a fresh review look outdated, and a missing one downgrades those consumers to timestamp heuristics.
+5. Refresh the freshness header of the 1/M comment: the `Last updated <timestamp>` line AND the `<!-- CLAUDE_REVIEW_HEAD <sha> -->` sentinel on the next line, setting the sentinel to the PR head SHA this update reviewed. Label-independent consumers (`/pr-review`'s collector, `scripts/review-v3/collect.py`, and the review-label-reconcile workflow) compare that sentinel against the live PR head to detect a stale review when a push never fired a `synchronize` event (Copilot-agent and `GITHUB_TOKEN` pushes don't) — a stale sentinel makes a fresh review look outdated, and a missing one downgrades those consumers to timestamp heuristics.
 
 **Failure-mode example:**
 
@@ -112,7 +112,7 @@ The author pushed commits that look like fixes for the previous 🚨 Outstanding
 
 The bucket update is the communication. The reader sees fewer 🚨 items and more ✅ items; they do not need a prose recap.
 
-**When the "fix" is you implementing a suggested rewrite** (`@claude implement the suggested rewrite …`, or the author asking you to apply a finding's suggestion block): the rewrite was composed against the review's evidence, and that evidence includes the cross-sibling lane, which is a **mismatch detector, not ground truth**. Before pushing, re-check the result against the sibling pages the finding cited (the "per `<sibling>.md` L<a>–<b>" provenance in the suggestion) — read the cited lines, confirm each borrowed clause is true of *this* page's subject, and drop or reword any that isn't. PR #21293 applied a rewrite verbatim and inherited two clauses from `any-terraform-provider.md`, one of them wrong. A rewrite that cites no source for borrowed wording is not ready to implement; ask for the source first.
+**When the "fix" is you implementing a suggested rewrite** (`/update-review implement the suggested rewrite …`, or the author asking you to apply a finding's suggestion block): the rewrite was composed against the review's evidence, and that evidence includes the cross-sibling lane, which is a **mismatch detector, not ground truth**. Before pushing, re-check the result against the sibling pages the finding cited (the "per `<sibling>.md` L<a>–<b>" provenance in the suggestion) — read the cited lines, confirm each borrowed clause is true of *this* page's subject, and drop or reword any that isn't. PR #21293 applied a rewrite verbatim and inherited two clauses from `any-terraform-provider.md`, one of them wrong. A rewrite that cites no source for borrowed wording is not ready to implement; ask for the source first.
 
 ### Case 2 — dispute
 
@@ -159,9 +159,9 @@ The author or another reviewer pushed back on a previous finding *without* a fix
 
 ### Case 3 — re-verify
 
-A `@claude` mention with no specific request, or a generic "please re-review." Signals:
+An `/update-review` with no specific request, or a generic "please re-review." Signals:
 
-- Mention body is short and non-specific ("/claude refresh" / "@claude take another look").
+- Mention body is short and non-specific (a bare "/update-review" / "/update-review take another look").
 - New commits may or may not be present.
 
 **Action:**
@@ -172,7 +172,7 @@ A `@claude` mention with no specific request, or a generic "please re-review." S
 
 **Failure-mode example:**
 
-> Previous review had 3 outstanding findings (A, B, C). Author pushed no commits, no new mention beyond "@claude refresh."
+> Previous review had 3 outstanding findings (A, B, C). Author pushed no commits, no request beyond a bare "/update-review."
 >
 > ❌ *Do not:* list A, B, C again as a new narrative ("I re-reviewed the PR. The following findings remain: A, B, C."). They are already visible in the pinned comment. Repeating them is the noisiest possible output.
 > ✅ *Do:* append one 📜 Review history line ("<timestamp> — re-verified; 3 outstanding unchanged") and update the timestamp at the top of the 1/M comment (plus the `<!-- CLAUDE_REVIEW_HEAD -->` sentinel when the head moved). That is the full output. The bucket contents do not change.
@@ -242,6 +242,7 @@ If the author deletes the 1/M comment via the GitHub UI, the next re-entrant run
 ```json
 {"schema": 1, "case": "fix-response|dispute|re-verify|mixed",
  "history_summary": "one line for the evidence history (≤120 chars)",
+ "summary": "optional: a replacement for the card's italic one-sentence summary (≤300 chars)",
  "findings": [
    {"id": "F3", "action": "resolve", "annotation": "fixed in a1b2c3"},
    {"id": "F4", "action": "concede", "reason": "author is right about X"},
@@ -296,25 +297,25 @@ inline") are theirs to make, not grounds to hold.
 ### What the deterministic side does
 
 `claude-update.yml`'s publish step re-fetches the LIVE author card (merging
-any `/resolve` that landed while the model worked — newest `updated_at`
-wins), runs `apply-update.py` (validate patch → apply actions → merge
+per finding with whatever another run published while the model worked —
+newest `updated_at` wins), runs `apply-update.py` (validate patch → apply actions → merge
 REVIEW_STATE → refresh header count, `Last updated`, and the
 `CLAUDE_REVIEW_HEAD` marker). The `#### F<n> · Do this` detail blocks
 follow their rows automatically — apply-update strips them, re-inserts each
 under its finding's current section, and drops the block when its row
 resolves or concedes; the brief's "Waiting on the author" table is
-regenerated from the post-application findings + dispositions (a row a
-`/resolve` dispositioned stays put but leaves the blocking count on both
-cards — `build-evidence.refresh_counts`, which the /resolve lane calls too);
+regenerated from the post-application findings + dispositions, and the
+blocking count on both cards is recomputed (`build-evidence.refresh_counts`);
 the brief's **Facts** bullet is re-derived from the refreshed evidence
 (`refresh_facts_line`: totals fixed at compose time, open/⚠️/settled
 recounted); the ✅
 Resolved section is inserted on the first resolve (the composer omits it
-while empty); a 🔄 re-review banner stamped by the auto-refresh gate is
+while empty), its table folded into a `<details>` whose summary counts the
+rows (`compose-review.render_resolved_block`, shared by both paths); a 🔄 re-review banner stamped by the auto-refresh gate is
 cleared by the card rewrite (or, on the error path, explicitly); the
 brief's `#### Editorial stances` sub-list sits below the ⚠️ table's section
 span and comes through verbatim. It then
-validates both cards against schema v23,
+validates both cards against schema v24,
 records the evidence object (prior trail/investigation log/stances carried
 forward from S3; `"degraded": "prior-evidence-unavailable"` when it can't be
 fetched), re-renders the evidence page, and upserts brief-then-author. Any
@@ -332,6 +333,18 @@ disputes or raise findings.
 
 - The v3 refresh does not regenerate advisory style suggestions (the author
   card keeps its style block from the last full compose, and existing
-  one-click buttons stand). A full re-style pass is `@claude #new-review`.
+  one-click buttons stand). A full re-style pass is `/new-review`.
+- For the same reason a refresh can't add a `[nit]` (output-format §Nits):
+  `add` only creates finding rows. A mechanical nit you notice on a refresh is
+  **not** a `reviewer-check` row — that's the misroute the nit lane exists to
+  prevent, a fix only the author can make parked on the card addressed to the
+  reviewer. Leave it for the next full review.
 - `history_summary` is the only history the lane writes; the card has no 📜
   section — history lives on the evidence page.
+- `summary` is the only way to change the card's italic one-sentence summary.
+  Send it when the current sentence names open items, counts, or anything
+  "only you can confirm" that this refresh changes — a card headed "nothing
+  blocks merge" must not open by listing claims the author still has to
+  confirm (pulumi/docs#21871). The replacement describes the PR and what the
+  review checked, never the open-item state: the header and sections carry
+  that. Omit it when the existing sentence stays true.

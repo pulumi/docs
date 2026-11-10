@@ -8,7 +8,7 @@ category: tutorials
 ---
 
 {{% notes type="warning" %}}
-This post is outdated and contains references to a pre-release version of Pulumi Crosswalk (`@pulumi/awsx`). For updated AWSx documentation and examples, [see the AWS Guides](/docs/iac/clouds/aws/guides/).
+This post is outdated and contains references to a pre-release version of Pulumi Crosswalk (`@pulumi/awsx`). For updated AWSx documentation and examples, [see the AWS Guides](/docs/iac/guides/clouds/aws/).
 {{% /notes %}}
 
 In this blog post, we return to the PERN application we previously [migrated to Kubernetes](/blog/deploying-a-pern-stack-application-to-aws/) and replace the PostgreSQL database with MongoDB. Although it might seem like a difficult task initially, the straightforward design of Pulumi and Kubernetes allows us to easily transition the application form a PERN stack to a MERN one.
@@ -393,4 +393,4 @@ export const URL = clientsideListener.status.loadBalancer.ingress[0].hostname;
 
 In this example, we showed how to change a PERN stack-based application to use MERN, and demonstrated the ease with which a designer can swap out different components. The isolated nature of containerized applications allows for a great deal of modularity. It can significantly reduce the amount of time spent renovating previously written code to fit any added new components.
 
-The MERN application code is [on Github](https://github.com/pulumi/examples/tree/master/aws-ts-k8s-mern-voting-app).
+The MERN application code is [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-k8s-mern-voting-app).

@@ -8,7 +8,7 @@ menu:
     name: VS Code
     identifier: integrations-vs-code
     parent: integrations-home
-    weight: 3
+    weight: 4
 aliases:
   - /docs/esc/integrations/vs-code/
   - /docs/esc/development/vs-code-extension/

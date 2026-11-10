@@ -7,12 +7,11 @@ tags:
     - features
     - platform-engineering
     - policy-as-code
-    - crossguard
 category: product
 
 ---
 
-Pulumi’s policy as code engine, [CrossGuard](/crossguard), is already very flexible, and can enforce custom or predefined policies across a wide variety of use cases, including security, compliance, cost, and overall best practices. CrossGuard warns or issues errors should a deployment attempt to violate a policy. Last week we announced a new extension to CrossGuard called _remediation policies_. Remediation policies don’t just check for compliance, they go ahead and actually fix the problems in place. This ensures that every deployment across your entire team conforms, no questions asked, while also not needing to pester end users to remember all of the rules as they write their infrastructure as code, such as tagging resources a specific way. In this post, we will dig deeper into remediation policies and their use cases.
+Pulumi’s policy as code engine, [CrossGuard](/product/discovery-governance/), is already very flexible, and can enforce custom or predefined policies across a wide variety of use cases, including security, compliance, cost, and overall best practices. CrossGuard warns or issues errors should a deployment attempt to violate a policy. Last week we announced a new extension to CrossGuard called _remediation policies_. Remediation policies don’t just check for compliance, they go ahead and actually fix the problems in place. This ensures that every deployment across your entire team conforms, no questions asked, while also not needing to pester end users to remember all of the rules as they write their infrastructure as code, such as tagging resources a specific way. In this post, we will dig deeper into remediation policies and their use cases.
 
 <!--more-->
 
@@ -284,7 +283,7 @@ For instance, in some settings we may prefer to issue an error to the developer 
 
 In the above example, we hard-coded the set of tags we want to check for. For a simple policy for a very targeted use case, that may be ok. However, if we are writing a more general purpose policy, or one that needs to run across many organizations, this hard-coding can be unfortunate.
 
-[Policy configuration](/docs/insights/policy/policy-packs/), on the other hand, enables us to write rules that are parameterized. If we used policy configuration for this example, we could configure the set of tags to check for independent of the policy itself. This would mean that we could write a single tagging policy, once, and then enable/configure it many times. This is useful for enforcement in different organizations and also within the same organization if, say, if our production tags were different than development.
+[Policy configuration](/docs/discovery-governance/concepts/policy-as-code/policy-packs/), on the other hand, enables us to write rules that are parameterized. If we used policy configuration for this example, we could configure the set of tags to check for independent of the policy itself. This would mean that we could write a single tagging policy, once, and then enable/configure it many times. This is useful for enforcement in different organizations and also within the same organization if, say, if our production tags were different than development.
 
 Here’s a rewritten variant of that policy above which uses policy configuration:
 
@@ -447,6 +446,6 @@ Finally, Pulumi has always had [transformations](https://www.pulumi.com/docs/iac
 
 Remediation policies take Pulumi’s very powerful policy engine, CrossGuard, to the next level. Using them you can not just detect incompliant resources but actually fix them automatically.
 
-Everything described in this post, except for organizational enforcement, is available in the free Pulumi open source SDK. To get started, just run `pulumi policy new` in a directory to begin creating your new policy pack. Also, [check out the CrossGuard get started guide](https://www.pulumi.com/docs/insights/policy/policy-packs/authoring/), which walks through the entire process of creating a new policy pack from scratch and running it. You can [read more details about policies and remediations](https://www.pulumi.com/docs/insights/policy/policy-packs/authoring/#remediating-policy-violations) in the documentation.
+Everything described in this post, except for organizational enforcement, is available in the free Pulumi open source SDK. To get started, just run `pulumi policy new` in a directory to begin creating your new policy pack. Also, [check out the CrossGuard get started guide](https://www.pulumi.com/docs/discovery-governance/guides/write-a-policy-pack/), which walks through the entire process of creating a new policy pack from scratch and running it. You can [read more details about policies and remediations](https://www.pulumi.com/docs/discovery-governance/guides/write-a-policy-pack/#remediating-policy-violations) in the documentation.
 
 Check it out and let us know what you think!

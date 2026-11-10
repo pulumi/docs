@@ -69,7 +69,7 @@ Kubernetes continues to evolve, powering not only applications but entire AI and
 
 Kubernetes automation is entering a new era where infrastructure as code, policy enforcement, and AI-driven orchestration work together to manage cloud environments intelligently.
 
-Pulumi’s 2025 advancements, including [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pko-2-0-ga/), [new Kubernetes best practices playbooks](https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/playbooks/), [Pulumi Neo](https://www.pulumi.com/product/neo/) for AI assisted infrastructure management, and [Policy Automation](https://www.pulumi.com/docs/insights/policy/), set the foundation for a new era of Kubernetes automation that extends across every role involved in managing modern infrastructure.
+Pulumi’s 2025 advancements, including [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pko-2-0-ga/), [new Kubernetes best practices playbooks](/docs/integrations/clouds/kubernetes/), [Pulumi Neo](https://www.pulumi.com/product/neo/) for AI assisted infrastructure management, and [Policy Automation](https://www.pulumi.com/docs/discovery-governance/concepts/policy-as-code/), set the foundation for a new era of Kubernetes automation that extends across every role involved in managing modern infrastructure.
 
 <!--more-->
 
@@ -100,7 +100,7 @@ Pulumi addresses these challenges by introducing **general-purpose programming l
 
 {{< youtube "Q8WKLq-v_6k?rel=0" >}}
 
-Learn more: [Pulumi Kubernetes documentation](https://www.pulumi.com/docs/iac/clouds/kubernetes/)
+Learn more: [Pulumi Kubernetes documentation](/docs/integrations/clouds/kubernetes/)
 
 ## The 2026 Convergence of AI, Platforms, and Policy in Kubernetes
 
@@ -112,7 +112,7 @@ Pulumi’s platform provides a complete foundation for intelligent infrastructur
 
 - [**Pulumi Neo**](https://www.pulumi.com/product/neo/) adds AI-assisted infrastructure management that turns natural language into production-ready Kubernetes and cloud code.
 - [**Pulumi IDP**](https://www.pulumi.com/product/internal-developer-platforms/) enables engineering and platform teams to build self-service environments that abstract complexity for developers while maintaining consistency and control.
-- [**Pulumi Policies**](https://www.pulumi.com/product/insights-governance/) brings continuous compliance and policy enforcement directly into the delivery workflow.
+- [**Pulumi Policies**](https://www.pulumi.com/product/discovery-governance/) brings continuous compliance and policy enforcement directly into the delivery workflow.
 - [**Pulumi ESC**](https://www.pulumi.com/product/secrets-management/) secures credentials, API keys, and sensitive configurations across Kubernetes and cloud environments.
 
 Together, these capabilities form a unified automation and governance layer for Kubernetes and cloud native systems.
@@ -126,7 +126,7 @@ The next phase of Kubernetes management will be AI-driven, context-aware, and se
 Pulumi Neo can interpret natural-language requests such as “deploy a GPU-backed EKS cluster with three node groups,” generate infrastructure code that adheres to organizational policies, and continuously refine that code as environments change.
 
 - **AI-powered observability and decision-making.** According to the [CNCF Annual Survey](https://www.cncf.io/reports/cncf-annual-survey-2024/), 93% of organizations already use or plan to adopt AI-driven monitoring and predictive analysis for Kubernetes environments. The goal is to identify performance and reliability issues before they affect users. Pulumi Policies assists to get clean and stay clean, while Neo extends this capability by acting on those insights, transforming detected issues into actionable infrastructure updates that teams can validate or deploy.
-- **ML and GPU workloads on Kubernetes.** As organizations expand AI and ML pipelines across clusters, automation and cost efficiency become critical ([FinOps Foundation](https://www.finops.org/wg/scaling-kubernetes-for-ai-ml-workloads-with-finops/)). [Pulumi Insights](https://www.pulumi.com/docs/insights/discovery/get-started/) is an intelligent infrastructure management service that helps you discover, understand, manage, and improve your infrastructure. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
+- **ML and GPU workloads on Kubernetes.** As organizations expand AI and ML pipelines across clusters, automation and cost efficiency become critical ([FinOps Foundation](https://www.finops.org/wg/scaling-kubernetes-for-ai-ml-workloads-with-finops/)). [Pulumi Insights](https://www.pulumi.com/docs/discovery-governance/get-started/) is an intelligent infrastructure management service that helps you discover, understand, manage, and improve your infrastructure. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
 - **Unifying DevOps, SRE, and MLOps workflows.** The convergence of software and model delivery continues to accelerate ([TechRadar](https://www.techradar.com/pro/breaking-silos-unifying-devops-and-mlops-into-a-unified-software-supply-chain)). Pulumi’s code-based approach, combined with Neo’s agentic reasoning, creates a unified workflow for infrastructure, applications, and AI systems.
 
 Additional insights and demonstrations:
@@ -177,10 +177,10 @@ This hybrid approach enables modernization without disrupting existing CI/CD pip
 
 For teams preparing for the next phase of Kubernetes management in 2026:
 
-1. [Get Started with Kubernetes](https://www.pulumi.com/docs/iac/get-started/kubernetes/) to create your first Pulumi program.
+1. [Get Started with Kubernetes](/up/?cloud=kubernetes) to create your first Pulumi program.
 2. Add the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) to enable infrastructure deployments from within your clusters.
 3. Integrate GitOps workflows with Argo CD, Flux, or Jenkins X.
-4. [Apply policy guardrails](https://www.pulumi.com/docs/insights/policy/) to enforce security and compliance automatically.
+4. [Apply policy guardrails](https://www.pulumi.com/docs/discovery-governance/concepts/policy-as-code/) to enforce security and compliance automatically.
 5. Refactor infrastructure into [reusable components](https://www.pulumi.com/docs/iac/concepts/components/) for consistent, scalable operations.
 
 ## Agentic Workflows for Production-ready Kubernetes
@@ -201,4 +201,4 @@ Watch [*Agentic Workflows for Production-ready Kubernetes*](https://www.pulumi.c
 Kubernetes in 2026 and beyond is not just for platform engineers. It is for DevOps professionals, SREs, and cloud teams, big and small, responsible for maintaining infrastructure security, reliability, and performance.
 Pulumi unifies infrastructure as code, secrets management, policy governance, and AI automation into a single platform, enabling every team to adopt an intelligent, code-driven approach to Kubernetes that scales across workloads, clouds, and the AI-driven future.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

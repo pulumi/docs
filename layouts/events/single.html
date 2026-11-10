@@ -15,8 +15,21 @@
 
         {{/* Breadcrumb + header */}}
         <div class="flex flex-col gap-8">
+            {{/* On-demand once a recording exists; otherwise "Upcoming" only while the
+                 event is still ahead of us (per events/upcoming.html, shared with the
+                 list and homepage), else "Past" — a finished event with no recording
+                 must not keep advertising itself as upcoming. */}}
             {{ $second := dict "name" "Upcoming" "url" "/events/#upcoming" }}
-            {{ if .Params.youtube_url }}{{ $second = dict "name" "On-demand" "url" "/events/#on-demand" }}{{ end }}
+            {{ if .Params.youtube_url }}
+                {{ $second = dict "name" "On-demand" "url" "/events/#on-demand" }}
+            {{ else }}
+                {{ $page := . }}
+                {{ $isUpcoming := false }}
+                {{ range partialCached "events/upcoming.html" (now.Add (duration "hour" -24)) "upcoming-list" }}
+                    {{ if eq .data.RelPermalink $page.RelPermalink }}{{ $isUpcoming = true }}{{ end }}
+                {{ end }}
+                {{ if not $isUpcoming }}{{ $second = dict "name" "Past" "url" "/events/" }}{{ end }}
+            {{ end }}
             {{ partial "breadcrumb.html" (dict "crumbs" (slice
                 (dict "name" "Events and Workshops" "url" "/events/") $second)) }}
 

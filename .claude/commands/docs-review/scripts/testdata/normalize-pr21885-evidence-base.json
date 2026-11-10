@@ -1,0 +1,577 @@
+{
+  "schema_version": 1,
+  "repo": "pulumi/docs",
+  "pr": 21885,
+  "head_sha": "88784a306a07d54f9eb87f0ca835f92eb196ad4d",
+  "run_id": "36077081416",
+  "generated_at": "2026-09-25T00:22:34Z",
+  "high_water": 9,
+  "findings": [
+    {
+      "id": "F1",
+      "bucket": "outstanding",
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "text": "The `UnrecognizedClientException` error returns as an HTTP 403 status code with the message \"The security token included in the request is invalid.\"",
+      "origin": "verdict:contradicted",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        171,
+        173
+      ]
+    },
+    {
+      "id": "F2",
+      "bucket": "outstanding",
+      "file": "content/blog/esc-env-run-aws/index.md",
+      "text": "We'll walk you through everything you need to be able to run the `aws s3 ls` command",
+      "origin": "preflight:readthrough-missing-step",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        39,
+        43
+      ]
+    },
+    {
+      "id": "F3",
+      "bucket": "outstanding",
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "text": "bring software engineering discipline to environment management by providing version control with complete change history and rollback capabilities",
+      "origin": "preflight:readthrough-self-redundancy",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        369,
+        391
+      ]
+    },
+    {
+      "id": "F4",
+      "bucket": "author-answer",
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "text": "Pulumi ESC delivers enterprise-scale performance with low-latency secret retrieval.",
+      "origin": "verdict:unverifiable",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        91
+      ]
+    },
+    {
+      "id": "F5",
+      "bucket": "author-answer",
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "text": "Pulumi ESC provides high availability across multiple regions.",
+      "origin": "verdict:unverifiable",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        91
+      ]
+    },
+    {
+      "id": "F6",
+      "bucket": "author-answer",
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "text": "Pulumi ESC's architecture is designed to scale automatically with organizational growth.",
+      "origin": "verdict:unverifiable",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        91
+      ]
+    },
+    {
+      "id": "F7",
+      "bucket": "author-answer",
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "text": "Pulumi ESC can handle thousands of concurrent requests.",
+      "origin": "verdict:unverifiable",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        91
+      ]
+    },
+    {
+      "id": "F8",
+      "bucket": "reviewer-check",
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "text": "Pulumi ESC's dynamic credential approach eliminates entire categories of security risk by ensuring credentials expire automatically and can't be misused over\u2026",
+      "origin": "verdict:framing-drift",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        93
+      ]
+    },
+    {
+      "id": "F9",
+      "bucket": "reviewer-check",
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "text": "`UnrecognizedClientException` tends to surface on regional AWS service calls such as DynamoDB, KMS, Lambda, or SES.",
+      "origin": "verdict:verified",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        50,
+        52
+      ]
+    }
+  ],
+  "trail": [
+    {
+      "file": "content/blog/esc-env-run-aws/index.md",
+      "claim": "The 'Unable to locate credentials' error is one of several AWS CLI credential errors that stale or missing keys produce, as documented on the\u2026",
+      "verdict": "verified",
+      "line": 159,
+      "evidence": "framing: The blog's summary (\"stale or missing keys\") matches the page's wording (\"went stale, or were never configured correctly\"). The page's alias\u2026; evidence: The linked page exists and lists this error with the others: \"Most AWS CLI credential errors, such as `ExpiredToken`, `InvalidAccessKeyId`, `InvalidClientTokenId`, `SignatureDoesNotMatch`, and \\\"Unable to locate credentials,\\\" trace back\u2026; source: repo:content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md (L28, L54-56)",
+      "source": "repo:content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md (L28, L54-56)",
+      "route": "pass1",
+      "claim_id": "c1",
+      "type": "url",
+      "confidence": "high",
+      "framing": "exact-match",
+      "framing_note": "The blog's summary (\"stale or missing keys\") matches the page's wording (\"went stale, or were never configured correctly\"). The page's alias /what-is/resolve-unable-to-locate-credentials/ also points to it."
+    },
+    {
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "claim": "Pulumi ESC delivers enterprise-scale performance with low-latency secret retrieval.",
+      "verdict": "unverifiable",
+      "line": 91,
+      "evidence": "evidence: This is a marketing claim with no measurable content, and no Pulumi docs or product source was found giving ESC latency or scale figures. The same paragraph (L91) also says ESC offers \"high availability across multiple regions,\" handles\u2026; source: repo:content/blog/secrets-management-tools-guide/index.md L91 (context only; no independent source found); intuition: Performance/SLA-style claims (multi-region HA, thousands of concurrent requests, sub-second response) look\u2026",
+      "source": "repo:content/blog/secrets-management-tools-guide/index.md L91 (context only; no independent source found)",
+      "route": "pass1",
+      "claim_id": "c2",
+      "type": "feature",
+      "confidence": "low",
+      "framing": "none"
+    },
+    {
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "claim": "Pulumi ESC provides high availability across multiple regions.",
+      "verdict": "unverifiable",
+      "line": 91,
+      "evidence": "evidence: (escalated from pass1) The only search result that makes this claim is the live published copy of the blog post under review (\"high availability across multiple regions\"), and that page can't be used as evidence for itself. No\u2026; source: WebSearch ran query \"Pulumi ESC high availability multiple regions\"; the top results didn't address the claim except for the reviewed page itself (https://www.pulumi.com/blog/secrets-management-tools-guide/); intuition: This reads like generic marketing copy about infrastructure. Pulumi Cloud is widely understood to be hosted mainly in\u2026",
+      "source": "WebSearch ran query \"Pulumi ESC high availability multiple regions\"; the top results didn't address the claim except for the reviewed page itself (https://www.pulumi.com/blog/secrets-management-tools-guide/)",
+      "route": "pass3",
+      "claim_id": "c3",
+      "type": "feature",
+      "confidence": "low",
+      "framing": "none"
+    },
+    {
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "claim": "Pulumi ESC's architecture is designed to scale automatically with organizational growth.",
+      "verdict": "unverifiable",
+      "line": 91,
+      "evidence": "evidence: L91 reads: \"The architecture is designed to scale automatically with organizational growth while maintaining consistent sub-second response times.\" This is a vague marketing claim about how Pulumi Cloud's internals are built. No public\u2026; source: repo:content/blog/secrets-management-tools-guide/index.md L91 (context only; no independent source found); intuition: The same paragraph makes specific claims with no source: \"high availability across multiple regions\", \"thousands of\u2026",
+      "source": "repo:content/blog/secrets-management-tools-guide/index.md L91 (context only; no independent source found)",
+      "route": "pass1",
+      "claim_id": "c4",
+      "type": "feature",
+      "confidence": "low",
+      "framing": "none"
+    },
+    {
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "claim": "Pulumi ESC can handle thousands of concurrent requests.",
+      "verdict": "unverifiable",
+      "line": 91,
+      "evidence": "evidence: I couldn't find any Pulumi docs or pulumi/* source that gives an ESC concurrency or throughput figure. A search of pulumi/docs for \"concurrent requests\" together with esc found nothing. The line at L91 is uncited marketing copy, and the\u2026; source: gh search code --owner pulumi \"repo:pulumi/docs \\\"concurrent requests\\\" esc\" (no results); repo:content/blog/secrets-management-tools-guide/index.md L91; intuition: This reads like LLM-generated marketing filler: a vague \"thousands of concurrent requests\" with no benchmark or SLA\u2026",
+      "source": "gh search code --owner pulumi \"repo:pulumi/docs \\\"concurrent requests\\\" esc\" (no results); repo:content/blog/secrets-management-tools-guide/index.md L91",
+      "route": "pass1",
+      "claim_id": "c5",
+      "type": "numerical",
+      "confidence": "low",
+      "framing": "none"
+    },
+    {
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "claim": "Pulumi ESC's dynamic credential approach eliminates entire categories of security risk by ensuring credentials expire automatically and can't be misused over\u2026",
+      "verdict": "framing-drift",
+      "line": 93,
+      "evidence": "framing: overclaim \u2014 the claim turns 'issue short-lived credentials\u2026 prefer OIDC over static keys where supported' into 'ensuring credentials expire automatically'\u2026; evidence: The link target exists and backs the anchor fact: \"Login providers \u2014 Issue short-lived credentials for downstream services. Prefer OpenID Connect over static keys where supported.\" But the same page lists several providers as \"Log in to\u2026; source: repo:content/docs/esc/providers/_index.md; intuition: Absolute marketing wording ('eliminates entire categories', 'ensuring', 'can't be misused'), and static credentials\u2026",
+      "source": "repo:content/docs/esc/providers/_index.md",
+      "route": "pass1",
+      "claim_id": "c6",
+      "type": "url",
+      "confidence": "medium",
+      "framing": "overclaim-broader",
+      "framing_note": "overclaim \u2014 the claim turns 'issue short-lived credentials\u2026 prefer OIDC over static keys where supported' into 'ensuring credentials expire automatically' and 'eliminates entire categories of security risk'; static-credential modes are\u2026"
+    },
+    {
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "claim": "Pulumi ESC offers fine-grained access controls that ensure encryption keys are managed securely and in accordance with regulatory requirements.",
+      "verdict": "verified",
+      "line": 95,
+      "evidence": "evidence: ESC docs describe RBAC with per-environment permission scopes, plus customer managed keys: \"Only organization admins can manage CMKs\" and CMKs let you \"Control key access and auditing\" so key handling \"aligns with organizational or\u2026; source: repo:content/docs/esc/concepts/customer-managed-keys.md L17-42; repo:content/docs/esc/administration/_index.md; intuition: This is marketing language. ESC's RBAC controls access to environments, not keys, and key control comes from CMK (a\u2026",
+      "source": "repo:content/docs/esc/concepts/customer-managed-keys.md L17-42; repo:content/docs/esc/administration/_index.md",
+      "route": "pass1",
+      "claim_id": "c7",
+      "type": "feature",
+      "confidence": "medium",
+      "framing": "none"
+    },
+    {
+      "file": "content/docs/esc/providers/login/aws-login.md",
+      "claim": "Pulumi Cloud exchanges a short-lived OIDC token for temporary AWS credentials by assuming an IAM role when using the aws-login OIDC provider.",
+      "verdict": "verified",
+      "line": 24,
+      "evidence": "framing: The linked what-is page talks about short-lived credentials from OIDC but doesn't mention role assumption. The OIDC guide's trust policy\u2026; evidence: The ESC AWS OIDC setup guide says the IAM role's trust policy must allow Pulumi's OIDC provider (`\"Federated\": \"arn:aws:iam::123456789012:oidc-provider/api.pulumi.com/oidc\"`) to perform `\"Action\": \"sts:AssumeRoleWithWebIdentity\"`. That\u2026; source: repo:content/docs/esc/guides/configuring-oidc/aws.md (L69-85); repo:content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md (L30)",
+      "source": "repo:content/docs/esc/guides/configuring-oidc/aws.md (L69-85); repo:content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md (L30)",
+      "route": "pass1",
+      "claim_id": "c8",
+      "type": "url",
+      "confidence": "medium",
+      "framing": "entailed-narrower",
+      "framing_note": "The linked what-is page talks about short-lived credentials from OIDC but doesn't mention role assumption. The OIDC guide's trust policy (AssumeRoleWithWebIdentity) supplies that part. A gh code search of pulumi/* for the provider source\u2026"
+    },
+    {
+      "file": "content/docs/esc/providers/login/aws-login.md",
+      "claim": "The Pulumi AWS provider, the aws CLI, and the AWS SDKs all read the same standard AWS environment variables, so a single environmentVariables block covers\u2026",
+      "verdict": "verified",
+      "line": 26,
+      "evidence": "framing: The provider docs confirm the provider reads the standard AWS environment variables through the AWS SDK. That the CLI and SDKs read them too is inferred from\u2026; evidence: The pulumi-aws installation docs say the provider authenticates from `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN` and `AWS_REGION`, and that \"Pulumi uses the AWS SDK and the credentials in your environment\". The same\u2026; source: gh api repos/pulumi/pulumi-aws/contents/docs/installation-configuration.md",
+      "source": "gh api repos/pulumi/pulumi-aws/contents/docs/installation-configuration.md",
+      "route": "pass1",
+      "claim_id": "c9",
+      "type": "behavior",
+      "confidence": "medium",
+      "framing": "entailed-narrower",
+      "framing_note": "The provider docs confirm the provider reads the standard AWS environment variables through the AWS SDK. That the CLI and SDKs read them too is inferred from standard AWS behavior, not from this source."
+    },
+    {
+      "file": "content/docs/iac/get-started/aws/configure.md",
+      "claim": "Pulumi maintains a guide at /what-is/aws-cli-dynamic-credentials-with-pulumi-esc/ that explains AWS CLI credential errors such as ExpiredToken and\u2026",
+      "verdict": "verified",
+      "line": 55,
+      "evidence": "framing: Page title: \"Fix AWS CLI Credential Errors and Run AWS Commands with Pulumi ESC\"; covers ExpiredToken and InvalidAccessKeyId with causes and fixes.; evidence: The target page exists in the repo, and its sections explain what each error means and how to fix it: \"### ExpiredToken ... means the temporary credentials used for the call ... have passed their expiration time\", plus an FAQ entry \"How\u2026; source: repo:content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "source": "repo:content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "route": "pass1",
+      "claim_id": "c10",
+      "type": "url",
+      "confidence": "high",
+      "framing": "exact-match",
+      "framing_note": "Page title: \"Fix AWS CLI Credential Errors and Run AWS Commands with Pulumi ESC\"; covers ExpiredToken and InvalidAccessKeyId with causes and fixes."
+    },
+    {
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "claim": "AWS's UnrecognizedClientException error is accompanied by the message \"The security token included in the request is invalid\" and is returned as an HTTP 403\u2026",
+      "verdict": "verified",
+      "line": 50,
+      "evidence": "framing: The 403 status comes straight from the AWS docs. The message text matches what the service actually returns in the re:Post logs, not the docs' own\u2026; evidence: AWS's Common Errors page lists UnrecognizedClientException with \"HTTP status code: 403\". The runtime message shows up in AWS re:Post failure logs as \"StatusCode: 403 ... API error UnrecognizedClientException: The security token included\u2026; source: https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/common-errors.html; https://repost.aws/questions/QUCS_wX3iUQnqRFbB2cPbAVQ/ec2-imagebuilder-pipeline-failing-with-unrecognizedclientexception-the-security-token-included-in-the-request-is-invalid",
+      "source": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/common-errors.html; https://repost.aws/questions/QUCS_wX3iUQnqRFbB2cPbAVQ/ec2-imagebuilder-pipeline-failing-with-unrecognizedclientexception-the-security-token-included-in-the-request-is-invalid",
+      "route": "pass3",
+      "claim_id": "c11",
+      "type": "attribution",
+      "confidence": "medium",
+      "framing": "entailed-narrower",
+      "framing_note": "The 403 status comes straight from the AWS docs. The message text matches what the service actually returns in the re:Post logs, not the docs' own description of the error."
+    },
+    {
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "claim": "AWS documents the `UnrecognizedClientException` error the same way for both IAM and STS.",
+      "verdict": "verified",
+      "line": 50,
+      "evidence": "framing: The claim says both services document the error identically. AWS generates both pages from its shared common-errors template, but the IAM entry itself wasn't\u2026; evidence: The STS Common Error Types page includes the standard unrecognized-client entry: \"The X.509 certificate or AWS access key ID you provided doesn't exist in our records.\" The IAM Common Error Types page is built from the same shared\u2026; source: https://docs.aws.amazon.com/STS/latest/APIReference/CommonErrors.html ; https://docs.aws.amazon.com/IAM/latest/APIReference/CommonErrors.html",
+      "source": "https://docs.aws.amazon.com/STS/latest/APIReference/CommonErrors.html ; https://docs.aws.amazon.com/IAM/latest/APIReference/CommonErrors.html",
+      "route": "pass3",
+      "claim_id": "c12",
+      "type": "attribution",
+      "confidence": "medium",
+      "framing": "exact-match",
+      "framing_note": "The claim says both services document the error identically. AWS generates both pages from its shared common-errors template, but the IAM entry itself wasn't seen in this session."
+    },
+    {
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "claim": "AWS's UnrecognizedClientException error's wording overlaps heavily with AWS's InvalidClientTokenId error, such that the two should be treated as close\u2026",
+      "verdict": "verified",
+      "line": 50,
+      "evidence": "framing: The shared message text is confirmed. Saying they should be treated as \"close cousins\" is the author's own judgment, not something AWS states.; evidence: Both AWS error codes give the same message text. Examples: \"An error occurred (InvalidClientTokenId) when calling the [Operation] operation: The security token included in the request is invalid.\" and \"(UnrecognizedClientException) when\u2026; source: https://oneuptime.com/blog/post/2026-02-12-fix-the-security-token-included-in-the-request-is-invalid/view; https://repost.aws/knowledge-center/iam-credentials-token",
+      "source": "https://oneuptime.com/blog/post/2026-02-12-fix-the-security-token-included-in-the-request-is-invalid/view; https://repost.aws/knowledge-center/iam-credentials-token",
+      "route": "pass3",
+      "claim_id": "c13",
+      "type": "attribution",
+      "confidence": "medium",
+      "framing": "none",
+      "framing_note": "The shared message text is confirmed. Saying they should be treated as \"close cousins\" is the author's own judgment, not something AWS states."
+    },
+    {
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "claim": "An `UnrecognizedClientException` error means AWS could not match the access key ID, or X.509 certificate, signing the request to anything in its records.",
+      "verdict": "verified",
+      "line": 50,
+      "evidence": "framing: Claim paraphrases the AWS description 'does not exist in our records' as 'could not match ... to anything in its records'; same meaning.; evidence: (escalated from pass1) AWS docs give this cause for the unrecognized-client error: \"The X.509 certificate or AWS access key ID provided does not exist in our records.\" The claim restates this correctly. The snippets didn't show the\u2026; source: https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html; https://docs.aws.amazon.com/mpa/latest/APIReference/CommonErrors.html",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html; https://docs.aws.amazon.com/mpa/latest/APIReference/CommonErrors.html",
+      "route": "pass3",
+      "claim_id": "c14",
+      "type": "behavior",
+      "confidence": "medium",
+      "framing": "none",
+      "framing_note": "Claim paraphrases the AWS description 'does not exist in our records' as 'could not match ... to anything in its records'; same meaning."
+    },
+    {
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "claim": "`UnrecognizedClientException` tends to surface on regional AWS service calls such as DynamoDB, KMS, Lambda, or SES.",
+      "verdict": "verified",
+      "line": 50,
+      "evidence": "evidence: (escalated from pass1) Real-world reports show UnrecognizedClientException (\"The security token included in the request is invalid\") coming back from DynamoDB, Lambda, ECR and EKS calls. AWS's DynamoDB knowledge-center page ties this\u2026; source: WebSearch ran query \"UnrecognizedClientException security token included in the request is invalid DynamoDB KMS Lambda\"; https://github.com/aws/aws-sam-cli/issues/2143; https://repost.aws/knowledge-center/dynamodb-security-token-error; https://github.com/localstack/localstack/issues/948; intuition: What decides the error code is the service's API protocol, not whether the service is regional. JSON-protocol\u2026",
+      "source": "WebSearch ran query \"UnrecognizedClientException security token included in the request is invalid DynamoDB KMS Lambda\"; https://github.com/aws/aws-sam-cli/issues/2143; https://repost.aws/knowledge-center/dynamodb-security-token-error; https://github.com/localstack/localstack/issues/948",
+      "route": "pass3",
+      "claim_id": "c15",
+      "type": "feature",
+      "confidence": "low",
+      "framing": "none"
+    },
+    {
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "claim": "When encountering an UnrecognizedClientException error, it is worth double-checking that the request is reaching the intended AWS region and ruling out an\u2026",
+      "verdict": "verified",
+      "line": 52,
+      "evidence": "framing: This is general troubleshooting advice. The same source also says \"Most of the time, it's expired temporary credentials or a key that was rotated without\u2026; evidence: (escalated from pass1) Troubleshooting guides for UnrecognizedClientException name region mismatches, expired tokens, and rotated keys as causes. OneUptime (Feb 2026) says to resolve it \"by identifying expired tokens, misconfigured\u2026; source: https://oneuptime.com/blog/post/2026-02-12-fix-the-security-token-included-in-the-request-is-invalid/view; https://repost.aws/questions/QUJ_tReBmXQzOFot6PMuY5AA",
+      "source": "https://oneuptime.com/blog/post/2026-02-12-fix-the-security-token-included-in-the-request-is-invalid/view; https://repost.aws/questions/QUJ_tReBmXQzOFot6PMuY5AA",
+      "route": "pass3",
+      "claim_id": "c16",
+      "type": "behavior",
+      "confidence": "medium",
+      "framing": "none",
+      "framing_note": "This is general troubleshooting advice. The same source also says \"Most of the time, it's expired temporary credentials or a key that was rotated without updating the local configuration.\""
+    },
+    {
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "claim": "The `UnrecognizedClientException` error means AWS could not recognize the access key ID or certificate used to sign the request.",
+      "verdict": "verified",
+      "line": 171,
+      "evidence": "framing: The claim cites no source. AWS says \"doesn't exist in our records\" and the claim says \"could not recognize\"; the meaning is the same.; evidence: (escalated from pass1) AWS's Common Errors page gives this definition for UnrecognizedClientException: \"The X.509 certificate or AWS access key ID provided doesn't exist in our records.\" (HTTP 403). \"Could not recognize\" is a fair\u2026; source: https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/common-errors.html",
+      "source": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/common-errors.html",
+      "route": "pass3",
+      "claim_id": "c17",
+      "type": "behavior",
+      "confidence": "high",
+      "framing": "none",
+      "framing_note": "The claim cites no source. AWS says \"doesn't exist in our records\" and the claim says \"could not recognize\"; the meaning is the same."
+    },
+    {
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "claim": "The `UnrecognizedClientException` error returns as an HTTP 403 status code with the message \"The security token included in the request is invalid.\"",
+      "verdict": "contradicted",
+      "line": 171,
+      "evidence": "framing: The claim appears to mix up two things: the documented 403 for UnrecognizedClientException, and the message text that real responses actually return with a\u2026; evidence: (escalated from pass1) Sources disagree. AWS's Common Errors page lists UnrecognizedClientException as \"HTTP status code: 403\", but pairs it with a different message: \"The X.509 certificate or AWS access key ID provided doesn't exist in\u2026; source: https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/common-errors.html; https://repost.aws/questions/QU8bHL3CTGR5u0IdlcRGlyYQ/the-security-token-included-in-the-request-is-invalid; https://github.com/aws/karpenter-provider-aws/issues/5432; intuition: The status code probably depends on the service. Suggest softening to \"HTTP 400 or 403\" or dropping the specific code.",
+      "source": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/common-errors.html; https://repost.aws/questions/QU8bHL3CTGR5u0IdlcRGlyYQ/the-security-token-included-in-the-request-is-invalid; https://github.com/aws/karpenter-provider-aws/issues/5432",
+      "route": "pass3",
+      "claim_id": "c18",
+      "type": "behavior",
+      "confidence": "low",
+      "framing": "none",
+      "framing_note": "The claim appears to mix up two things: the documented 403 for UnrecognizedClientException, and the message text that real responses actually return with a 400 (JSON-protocol services such as DynamoDB, Direct Connect and Pricing). The\u2026"
+    },
+    {
+      "file": "content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md",
+      "claim": "The fix for the UnrecognizedClientException error is the same as for the other credential errors described in this document: generate a fresh, valid key or\u2026",
+      "verdict": "verified",
+      "line": 171,
+      "evidence": "framing: No independent source checks the claim's point that this fix matches the other errors in the same doc. That part is about how the page is organized, not a\u2026; evidence: (escalated from pass1) Troubleshooting sources say UnrecognizedClientException (\"The security token included in the request is invalid\") comes from expired, deleted, or mistyped credentials, or from a region mismatch. AWS re:Post points\u2026; source: https://oneuptime.com/blog/post/2026-02-12-fix-the-security-token-included-in-the-request-is-invalid/view ; https://repost.aws/questions/QU8bHL3CTGR5u0IdlcRGlyYQ/the-security-token-included-in-the-request-is-invalid",
+      "source": "https://oneuptime.com/blog/post/2026-02-12-fix-the-security-token-included-in-the-request-is-invalid/view ; https://repost.aws/questions/QU8bHL3CTGR5u0IdlcRGlyYQ/the-security-token-included-in-the-request-is-invalid",
+      "route": "pass3",
+      "claim_id": "c19",
+      "type": "behavior",
+      "confidence": "medium",
+      "framing": "none",
+      "framing_note": "No independent source checks the claim's point that this fix matches the other errors in the same doc. That part is about how the page is organized, not a technical fact. The technical advice (get fresh credentials, check the region)\u2026"
+    },
+    {
+      "file": "content/what-is/what-is-aws-secrets-manager.md",
+      "claim": "The guide at /what-is/aws-cli-dynamic-credentials-with-pulumi-esc/ covers the common failure modes for AWS CLI credentials that later expire or stop validating.",
+      "verdict": "verified",
+      "line": 26,
+      "evidence": "framing: The linked page's own content backs up the cross-link's description of it. The claim describes what a sibling page contains, not a technical fact that needs\u2026; evidence: The linked guide exists and has a section called \"Common AWS CLI credential errors and their cause\". That section covers ExpiredToken (\"temporary credentials... have passed their expiration time\"), InvalidAccessKeyId\u2026; source: repo:content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md L32-58",
+      "source": "repo:content/what-is/aws-cli-dynamic-credentials-with-pulumi-esc.md L32-58",
+      "route": "pass1",
+      "claim_id": "c20",
+      "type": "feature",
+      "confidence": "high",
+      "framing": "exact-match",
+      "framing_note": "The linked page's own content backs up the cross-link's description of it. The claim describes what a sibling page contains, not a technical fact that needs an outside source."
+    },
+    {
+      "file": "content/what-is/what-is-aws-secrets-manager.md",
+      "claim": "After installing the AWS CLI, running the `aws configure` command sets up your AWS credentials.",
+      "verdict": "verified",
+      "line": 26,
+      "evidence": "framing: The source says \"configure your AWS CLI with your IAM credentials for first time use\". The claim names the specific mechanism, `aws configure`, which is the\u2026; evidence: The cited AWS getting-started page says: \"After you have access to the AWS CLI, configure your AWS CLI with your IAM credentials for first time use.\" That supports configuring credentials after installing, but this page doesn't name the\u2026; source: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html",
+      "source": "https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html",
+      "route": "pass2",
+      "claim_id": "c21",
+      "type": "url",
+      "confidence": "medium",
+      "framing": "entailed-narrower",
+      "framing_note": "The source says \"configure your AWS CLI with your IAM credentials for first time use\". The claim names the specific mechanism, `aws configure`, which is the standard command but isn't stated on this page."
+    },
+    {
+      "file": "content/blog/esc-env-run-aws/index.md",
+      "claim": "We'll walk you through everything you need to be able to run the `aws s3 ls` command",
+      "verdict": "flagged",
+      "line": 39,
+      "evidence": "readthrough: missing-step",
+      "source": "readthrough pre-step",
+      "route": "preflight",
+      "claim_id": "readthrough-0",
+      "type": "readthrough-missing-step",
+      "confidence": "high"
+    },
+    {
+      "file": "content/blog/secrets-management-tools-guide/index.md",
+      "claim": "bring software engineering discipline to environment management by providing version control with complete change history and rollback capabilities",
+      "verdict": "flagged",
+      "line": 369,
+      "evidence": "readthrough: self-redundancy",
+      "source": "readthrough pre-step",
+      "route": "preflight",
+      "claim_id": "readthrough-1",
+      "type": "readthrough-self-redundancy",
+      "confidence": "high"
+    }
+  ],
+  "investigation_log": {
+    "cross-sibling-reads": "0 of 7 siblings",
+    "external-claim-verification": "15 of 21 claims verified (4 unverifiable, 1 contradicted, 1 framing-drift) \u00b7 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations \u00b7 routed: 0 inline, 10 Pass 1, 1 Pass 2 (verified 1, contradicted 0, unverifiable 0), 10 Pass 3 (verified 8, contradicted 1, unverifiable 1).",
+    "cited-claim-spot-checks": "1 of 1 cited claims fetched and compared",
+    "frontmatter-sweep": "ran on body + meta_desc",
+    "temporal-trigger-sweep": "ran (recency words present in diff; spot-check in-review)",
+    "code-execution": "not run (no `static/programs/` change)",
+    "code-examples-checks": "not run (no fenced code blocks in content files)",
+    "editorial-balance-pass": "ran (single-subject, N/A)"
+  },
+  "editorial_balance": {
+    "trigger": null,
+    "files": [
+      {
+        "sections": [
+          {
+            "heading": "Credentials Management in the Cloud",
+            "lines": 8
+          },
+          {
+            "heading": "Getting Started with pulumi env run",
+            "lines": 79
+          },
+          {
+            "heading": "The Power of pulumi env run",
+            "lines": 4
+          },
+          {
+            "heading": "Real-World Use Cases",
+            "lines": 11
+          },
+          {
+            "heading": "Conclusion",
+            "lines": 7
+          }
+        ],
+        "stats": {
+          "mean": 21.8,
+          "median": 8,
+          "std": 28.7
+        },
+        "outliers": [
+          {
+            "heading": "Getting Started with pulumi env run",
+            "lines": 79,
+            "ratio": 9.9
+          }
+        ],
+        "threshold_flags": [
+          {
+            "type": "section-depth-3x-median",
+            "heading": "Getting Started with pulumi env run",
+            "lines": 79,
+            "ratio": 9.9
+          }
+        ],
+        "file": "content/blog/esc-env-run-aws/index.md"
+      },
+      {
+        "sections": [
+          {
+            "heading": "Secrets Management Tools Overview",
+            "lines": 23
+          },
+          {
+            "heading": "The Evolution Beyond Simple Secret Storage",
+            "lines": 4
+          },
+          {
+            "heading": "Most Popular Secrets Management Tools",
+            "lines": 94
+          },
+          {
+            "heading": "Top Features to Look for in Secrets Management Tools",
+            "lines": 27
+          },
+          {
+            "heading": "Key Considerations for Choosing Secrets Management Tools",
+            "lines": 21
+          },
+          {
+            "heading": "The Future of Secrets Management: Orchestration and Configuration as Code",
+            "lines": 16
+          },
+          {
+            "heading": "Choosing the Right Path Forward",
+            "lines": 9
+          }
+        ],
+        "stats": {
+          "mean": 27.7,
+          "median": 21,
+          "std": 28.1
+        },
+        "outliers": [
+          {
+            "heading": "Most Popular Secrets Management Tools",
+            "lines": 94,
+            "ratio": 4.5
+          }
+        ],
+        "threshold_flags": [
+          {
+            "type": "section-depth-3x-median",
+            "heading": "Most Popular Secrets Management Tools",
+            "lines": 94,
+            "ratio": 4.5
+          }
+        ],
+        "file": "content/blog/secrets-management-tools-guide/index.md"
+      }
+    ]
+  },
+  "triaged": [],
+  "style_suggestions_count": 3,
+  "confidence": {
+    "mechanics": "TODO",
+    "facts": "TODO",
+    "coherence": "TODO",
+    "cross-sibling consistency": "TODO"
+  },
+  "summary": null,
+  "stances": [
+    {
+      "file": "content/docs/esc/providers/login/aws-login.md",
+      "text": "OIDC is the recommended way to log in to AWS. Pulumi Cloud exchanges a short-lived OIDC token for temporary AWS credentials by assuming an IAM role, so there\u2026",
+      "type": "positioning",
+      "line": 24,
+      "found_by": [
+        "regex"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "ts": "2026-09-25T00:22:34Z",
+      "summary": "initial review (pending publication)",
+      "sha": "88784a3"
+    }
+  ]
+}

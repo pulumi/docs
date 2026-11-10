@@ -1,11 +1,14 @@
 name: Pre-merge Review (update-review)
 
-# Re-entrant pinned-review refresh, dispatched by the explicit hashtag
-# `#update-review` on an `@claude` mention. Hashtag-driven routing means
-# this workflow only fires when the user explicitly asks for a review
-# refresh -- bare `@claude` mentions go to claude.yml (off-the-shelf tag
-# mode) and `@claude #new-review` goes to claude-new.yml (regenerate).
-# The compound-mention contract is documented inline in the prompt.
+# Re-entrant pinned-review refresh, run by the `/update-review` slash
+# command at the start of a line in a PR comment, inline review comment, or
+# review body. Text around the command is the request (a fix to make, a
+# dispute, an accept) and reaches the model verbatim; the contract is
+# documented inline in the prompt. `@claude` plays no part in routing:
+# a bare `@claude` goes to claude.yml (off-the-shelf tag mode),
+# `/new-review` goes to claude-new.yml (regenerate), and the retired
+# `@claude … #update-review` shape gets a how-to reply from
+# review-command-redirect.yml and runs nothing.
 #
 # A second entry point exists for the stale-review auto-refresh: the
 # auto-refresh job in claude-code-review.yml dispatches this workflow
@@ -14,6 +17,10 @@ name: Pre-merge Review (update-review)
 # range carried by a 🚨 Outstanding finding and the push is small. The run
 # then follows update.md Case 1 (fix-response) with a synthesized mention
 # body; there is no human mention author.
+#
+# Two jobs: `gate` decides whether the event is a real request (outside
+# the per-PR concurrency group, so a declined comment can't cancel a live
+# refresh), and `claude-update` does the work.
 
 on:
   issue_comment:
@@ -26,7 +33,7 @@ on:
     types: [submitted]
   # Dispatched by claude-code-review.yml's auto-refresh job (auto=true).
   # Humans with write access can also dispatch manually from the Actions
-  # UI as an alternative to commenting `@claude #update-review`.
+  # UI as an alternative to commenting `/update-review`.
   workflow_dispatch:
     inputs:
       pr_number:
@@ -45,26 +52,78 @@ on:
         default: false
 
 jobs:
-  claude-update:
+  # The command gate runs as its own job, OUTSIDE the per-PR concurrency
+  # group. The job-level `if:` below is a substring match, which is all a
+  # GitHub expression can do — it fires on a comment that merely *quotes*
+  # the command in backticks or a blockquote (#21535), including the
+  # review's own progress and card comments. When the gate lived inside
+  # the worker job, every such no-op run still entered the concurrency
+  # group and cancelled a real in-flight refresh (#21585: the review's
+  # own comment cancelled workprentice's update mid-Claude). Here a
+  # declined comment ends in this cheap job and never touches the worker.
+  # The script comes from the default branch, never the PR head, and reads
+  # the body from an env var, never argv. Dispatched runs skip it — there
+  # is no comment to judge — and fire unconditionally.
+  gate:
     # Trigger requires:
-    #   1. `@claude` mention.
-    #   2. `#update-review` hashtag.
-    #   3. NOT `#new-review` -- if both hashtags are present, the more
-    #      decisive #new-review wins (handled by claude-new.yml's filter;
-    #      this workflow excludes itself in that case).
-    #   4. Author is not claude[bot] itself -- the pinned-review footer
-    #      contains literal "@claude" instructions which would otherwise
-    #      re-trigger on every review post.
+    #   1. `/update-review` somewhere in the body (the command gate below
+    #      checks it starts a line outside code and quotes).
+    #   2. `/new-review` is NOT screened here. A substring test can't tell
+    #      a live command from a quoted one, so excluding it here dropped
+    #      any update request that merely quoted `/new-review`, while
+    #      claude-new.yml's gate declined the same comment as a quote --
+    #      and neither lane ran (#21909). The command-gate step below
+    #      applies `--exclude new-review` to the live text only: a live
+    #      /new-review still wins, a quoted one no longer suppresses.
+    #   3. Author is not claude[bot] itself -- the pinned-review footer
+    #      quotes the command, which would otherwise re-trigger on every
+    #      review post.
     if: |
       ((github.event_name == 'workflow_dispatch') ||
-       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
-       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
-       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && contains(github.event.review.body, '#update-review') && !contains(github.event.review.body, '#new-review') && github.event.review.user.login != 'claude[bot]') ||
-       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && (contains(github.event.issue.body, '#update-review') || contains(github.event.issue.title, '#update-review')) && !contains(github.event.issue.body, '#new-review') && !contains(github.event.issue.title, '#new-review') && github.event.issue.user.login != 'claude[bot]'))
+       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '/update-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '/update-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '/update-review') && github.event.review.user.login != 'claude[bot]') ||
+       (github.event_name == 'issues' && (contains(github.event.issue.body, '/update-review') || contains(github.event.issue.title, '/update-review')) && github.event.issue.user.login != 'claude[bot]'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      fire: ${{ steps.command-gate.outputs.fire }}
+      reason: ${{ steps.command-gate.outputs.reason }}
+    steps:
+      - name: Checkout command gate (default branch, sparse)
+        if: github.event_name != 'workflow_dispatch'
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          path: .command-gate
+          sparse-checkout: .claude/commands/docs-review/scripts/command-gate.py
+          sparse-checkout-cone-mode: false
+
+      - name: Command gate (a quoted command is not a request)
+        id: command-gate
+        env:
+          BODY: ${{ github.event.comment.body || github.event.review.body || github.event.issue.body }}
+          TITLE: ${{ github.event_name == 'issues' && github.event.issue.title || '' }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "fire=true" >> "$GITHUB_OUTPUT"
+            echo "reason=workflow_dispatch" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python3 .command-gate/.claude/commands/docs-review/scripts/command-gate.py check \
+            --command update-review --exclude new-review \
+            --body-env BODY --title-env TITLE | tee -a "$GITHUB_OUTPUT"
+
+  claude-update:
+    needs: gate
+    if: needs.gate.outputs.fire == 'true'
     # One update per PR at a time; a newer trigger (another push through the
-    # auto-refresh gate, or a fresh #update-review mention) cancels the
+    # auto-refresh gate, or a fresh /update-review comment) cancels the
     # in-flight run — the newest head wins. Also the once-per-push dedup for
-    # the auto path: stacked synchronize events collapse here.
+    # the auto path: stacked synchronize events collapse here. Only runs
+    # that passed the gate job enter this group.
     concurrency:
       group: claude-update-${{ github.event.inputs.pr_number || github.event.pull_request.number || github.event.issue.number }}
       cancel-in-progress: true
@@ -75,8 +134,13 @@ jobs:
       pull-requests: write
       issues: read
       id-token: write
-      actions: write # read CI results on PRs; dispatch review-sentinel.yml after a v3 publish
+      actions: write # read CI results on PRs; dispatch review-sentinel.yml after a publish, claude-code-review.yml for a fresh v3 review
     steps:
+      # started_at for the usage row; first so checkout time counts.
+      - name: Record job start
+        id: job-start
+        run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+
       # Resolve the PR head SHA before checkout so the working tree
       # reflects PR content, not the base branch. Without this, Vale
       # below runs against base prose and produces empty findings.
@@ -86,6 +150,7 @@ jobs:
       - name: Resolve PR head SHA
         id: head
         env:
+          INPUT_PR: ${{ github.event.inputs.pr_number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           case "${{ github.event_name }}" in
@@ -98,7 +163,7 @@ jobs:
               IS_PR="true"
               ;;
             workflow_dispatch)
-              PR="${{ github.event.inputs.pr_number }}"
+              PR="$INPUT_PR"
               IS_PR="true"
               ;;
             *)
@@ -127,10 +192,13 @@ jobs:
       # then go out as pulumi-bot rather than github-actions[bot],
       # which is what lets downstream workflows (build-and-deploy, social
       # review, etc.) fire on those commits.
-      # The three setup steps below skip on superseded dispatched runs
+      # The setup steps below skip on superseded dispatched runs
       # (steps.head sets superseded=true when the PR head moved past the
       # dispatcher's pinned SHA) — the run is a no-op, so don't pay for
-      # secrets, checkout, or toolchain install.
+      # secrets, checkout, or toolchain install. (A declined mention never
+      # reaches this job: the gate job above returns fire=false.) Every
+      # later step gates on check-access outputs, which stay empty when it
+      # skips.
       - name: Fetch secrets from ESC
         id: esc-secrets
         if: steps.head.outputs.superseded != 'true'
@@ -199,16 +267,17 @@ jobs:
           # refreshes on this repo are whitelisted by name instead.
           # `workprentice` is Joe Duffy's docs-automation identity (the Docs
           # Groundskeeper agent) and is trusted like an internal author: it
-          # opens PRs, addresses the pinned-review findings, and then mentions
-          # `@claude #update-review` to re-verify them — which is exactly what
-          # this workflow does. Without this, that mention hits the
+          # opens PRs, addresses the pinned-review findings, and then comments
+          # `/update-review` to re-verify them — which is exactly what
+          # this workflow does. Without this, that comment hits the
           # collaborator lookup, resolves to "none", and the refresh silently
           # no-ops. The author string differs by source: this workflow reads
           # the comment/review/issue `user.login` (`workprentice[bot]`) while
           # claude-code-review.yml reads `gh pr view` (`app/workprentice`), so
           # both forms are listed. Keep this list in sync with the matching
           # checks in claude-code-review.yml and claude-triage.yml.
-          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "app/github-copilot" \
+             || "$AUTHOR" == "eon-pulumi-agent[bot]" || "$AUTHOR" == "app/eon-pulumi-agent" \
              || "$AUTHOR" == "workprentice[bot]" || "$AUTHOR" == "app/workprentice" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "author=$AUTHOR" >> $GITHUB_OUTPUT
@@ -238,6 +307,7 @@ jobs:
         id: pr-context
         if: steps.check-access.outputs.has_write_access == 'true'
         env:
+          INPUT_PR: ${{ github.event.inputs.pr_number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Determine PR / issue number, whether it's a PR, and whether
@@ -262,7 +332,7 @@ jobs:
               IS_PR="false"
               ;;
             workflow_dispatch)
-              PR_NUMBER="${{ github.event.inputs.pr_number }}"
+              PR_NUMBER="$INPUT_PR"
               IS_PR="true"
               ;;
           esac
@@ -295,6 +365,23 @@ jobs:
             fi
           fi
 
+          # No review at all on a PR the v3 surface governs (repo variable
+          # or the per-PR label): the initial lane errored or never ran.
+          # The v2 freehand prompt's "produce an initial review" fallback
+          # would post a v2 monolith here — that is what happened on #21585
+          # when the author followed the review:error comment's advice to
+          # refresh the review. Instead this run dispatches the
+          # initial lane (force=true) and stops. A PR that already carries
+          # a legacy v2 review (HAS_PINNED without the two cards) keeps the
+          # v2 refresh path — grandfathered until it is regenerated.
+          RETRY_INITIAL="false"
+          if [ "$IS_PR" = "true" ] && [ -n "$PR_NUMBER" ] && [ "$HAS_PINNED" = "false" ]; then
+            if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ]; then
+              RETRY_INITIAL="true"
+              echo "No review on PR #$PR_NUMBER and the v3 surface is active — dispatching the initial lane instead of the v2 fallback"
+            fi
+          fi
+
           {
             echo "pr_number=$PR_NUMBER"
             echo "is_pr=$IS_PR"
@@ -302,11 +389,12 @@ jobs:
             echo "surface=$SURFACE"
             echo "author_cid=$AUTHOR_CID"
             echo "brief_cid=$BRIEF_CID"
+            echo "retry_initial=$RETRY_INITIAL"
           } >> "$GITHUB_OUTPUT"
 
       # Flip the PR's state label to review:in-progress for the duration of
       # the refresh — mirrors claude-code-review.yml's early step on the
-      # auto-fire / #new-review path. Without this, a #update-review mention
+      # auto-fire / /new-review path. Without this, an /update-review comment
       # leaves the PR's prior terminal label (outstanding-issues /
       # no-blockers) visible the entire 5-10 min the refresh takes — so the
       # author has no signal that a fresh review is in flight. The
@@ -370,7 +458,8 @@ jobs:
       - name: Run Vale on PR-changed prose
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.is_pr == 'true'
+          steps.pr-context.outputs.is_pr == 'true' &&
+          steps.pr-context.outputs.retry_initial != 'true'
         id: vale
         continue-on-error: true
         env:
@@ -417,12 +506,15 @@ jobs:
             --pr "$PR" --in .vale-raw.json --out .vale-findings.json \
             || echo '[]' > .vale-findings.json
 
-      # Post a transient <!-- CLAUDE_PROGRESS --> comment so the author
-      # sees something is happening while Sonnet works. The animated
-      # spinner GIF is the action's own tracking-comment image (CDN-
-      # stable). The post step below edits this comment to a done /
-      # errored state when the run completes; the spinner does not
-      # persist past terminal state. Skipped on issue mentions.
+      # In-flight signal. A requested refresh gets a 👀 on the comment that
+      # asked for it (ack-request.sh --start; the finalize step swaps it for
+      # 🚀 or clears it) — a transient "Working on it" comment notified every
+      # PR subscriber and was deleted minutes later. An auto-refresh posts
+      # nothing: the auto-refresh gate already stamped the card's 🔄 banner.
+      # Everything else (a review-body mention, a manual dispatch, a failed
+      # reaction) falls back to the spinner comment.
+      # `signal` gates the finalize step, so it's written on every path.
+      # Skipped on issue mentions.
       - name: Post progress signal
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
@@ -430,9 +522,25 @@ jobs:
         id: progress
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACK_TARGET: ${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
+          if [ "${{ steps.check-access.outputs.author }}" = "auto-refresh" ]; then
+            echo "signal=none" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # This job checks out the PR head, which can predate ack-request.sh
+          # (every branch cut before it landed), so run the default branch's
+          # copy — otherwise those PRs silently fall back to the spinner.
+          ACK="$RUNNER_TEMP/ack-request.sh"
+          gh api -H 'Accept: application/vnd.github.raw' \
+            "repos/$REPO/contents/.claude/commands/docs-review/scripts/ack-request.sh?ref=${{ github.event.repository.default_branch }}" \
+            > "$ACK" 2>/dev/null || : > "$ACK"
+          if [ -s "$ACK" ] && bash "$ACK" --start --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"; then
+            echo "signal=reaction" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           BODY=$(cat <<'EOF'
           <!-- CLAUDE_PROGRESS -->
           <img src="https://github.com/user-attachments/assets/5ac382c7-e004-429b-8e35-7feb3e8f9c6f" width="16"> Working on it — this can take several minutes.
@@ -440,12 +548,57 @@ jobs:
           )
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
             -f body="$BODY" --jq '.id' || echo "")
+          echo "signal=comment" >> "$GITHUB_OUTPUT"
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
+
+      # No review on a v3-governed PR: hand the whole job to the initial
+      # lane. Same dispatch shape as claude-new.yml — force=true bypasses the
+      # skip heuristics (an explicit request overrides them), a spinner
+      # comment (when this run fell back to one) travels as
+      # dispatcher_comment_id so the initial lane's finalize step deletes
+      # it, and mention_author + ack_target get the requester their 🚀 (or
+      # the "regenerated on @x's request" fallback comment; both empty for
+      # the auto-refresh path, which has no human to mention). A 👀 already
+      # on the request stays there: the initial lane re-adds it (a no-op)
+      # and owns clearing it. Everything after this step is gated off the
+      # retry path; the finalize step leaves the progress signal standing
+      # for the dispatched run to own.
+      - name: Retry the initial review (no v3 review on this PR yet)
+        id: retry-initial
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.retry_initial == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
+          AUTHOR="${{ steps.check-access.outputs.author }}"
+          MENTION_AUTHOR="$AUTHOR"
+          if [ "$AUTHOR" = "auto-refresh" ]; then
+            MENTION_AUTHOR=""
+          fi
+          if [ -n "$COMMENT_ID" ]; then
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 No v3 review on this PR yet — starting a fresh review. This can take several minutes.")
+            gh api -X PATCH "repos/$REPO/issues/comments/$COMMENT_ID" -f body="$BODY" >/dev/null || true
+          fi
+          gh workflow run claude-code-review.yml \
+            --repo "$REPO" \
+            -f pr_number="$PR" \
+            -f head_sha="${{ steps.head.outputs.sha }}" \
+            -f force=true \
+            -f dispatcher_comment_id="$COMMENT_ID" \
+            -f mention_author="$MENTION_AUTHOR" \
+            -f ack_target="${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}"
+          echo "dispatched claude-code-review.yml for PR #$PR at ${{ steps.head.outputs.sha }}"
 
       # v3 model inputs: the two live cards on disk. Fetched here (not in the
       # publish step) so the model reads the same cards the mention was about;
       # the publish step re-fetches the author card fresh right before
-      # apply-update to merge any /resolve that lands while the model works.
+      # apply-update to merge whatever another run published while the model
+      # worked (a full review auto-fired beside this update, #21871).
       - name: Fetch v3 review cards
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
@@ -462,7 +615,8 @@ jobs:
       - name: Run Claude Code
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.surface != 'v3'
+          steps.pr-context.outputs.surface != 'v3' &&
+          steps.pr-context.outputs.retry_initial != 'true'
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
@@ -473,12 +627,12 @@ jobs:
           # workflow with GITHUB_TOKEN, which makes the run's actor
           # github-actions[bot] (type=Bot) — rejected by
           # claude-code-action@v1 by default. Same allowance
-          # claude-code-review.yml makes for its bot-dispatched #new-review
+          # claude-code-review.yml makes for its bot-dispatched /new-review
           # path.
           #
-          # workprentice is also listed so that its own `@claude
-          # #update-review` mentions (issue_comment events whose actor is the
-          # bot) reach the action. Without it, those mentions clear this
+          # workprentice is also listed so that its own `/update-review`
+          # comments (issue_comment events whose actor is the
+          # bot) reach the action. Without it, those comments clear this
           # workflow's own check-access whitelist (the workprentice[bot]
           # branch above) and then get bounced by claude-code-action's
           # independent bot guard. The trust decision is already made for the
@@ -493,22 +647,22 @@ jobs:
           additional_permissions: |
             actions: read
 
-          # Single-path prompt: the hashtag did the routing work, so
-          # there's no in-prompt classification. The compound-mention
+          # Single-path prompt: the slash command did the routing work, so
+          # there's no in-prompt classification. The compound-request
           # contract handles fix-and-refresh and dispute-and-refresh
           # cases by addressing embedded asks inline before re-rendering
           # the pinned review.
           prompt: |
-            The user invoked you with `#update-review` on `${{ github.repository }}`. The hashtag means: refresh the pinned review.
+            The user invoked you with the `/update-review` command on `${{ github.repository }}`. The command means: refresh the pinned review.
 
             Context:
             - Pull request #${{ steps.pr-context.outputs.pr_number }}
             - Mention author: @${{ steps.check-access.outputs.author }}
             - Pinned Claude review: ${{ steps.pr-context.outputs.has_pinned == 'true' && 'EXISTS on this PR' || 'does not exist yet' }}
 
-            **Read the triggering mention text from `.claude-mention-body.txt` first.** It is the body of the comment, review, or issue that invoked you.
+            **Read the triggering request from `.claude-mention-body.txt` first.** It is the body of the comment, review, or issue that invoked you; the `/update-review` token is the command, and the text around it is the request.
 
-            The mention may also contain:
+            The request may also contain:
             - Code changes to make ("fix the typo and then update")
             - Questions about specific findings ("why did you flag X?")
             - Disputes ("this is intentional because Y")
@@ -529,7 +683,7 @@ jobs:
 
             **Inline-suggestion sidecar.** After you have published the refreshed review, Write `.style-suggestions.json` at the workspace root (a JSON array; write `[]` if none qualify) staging the ADVISORY style findings whose rewrite is a clear improvement. Schema per entry: `{"file": "<path>", "line": <n>, "original": "<exact text on that line>", "replacement": "<new text>", "category": "<category>", "note": "<≤10-word reason>"}`. A workflow step validates each entry against the diff and file content, posts them as one-click GitHub `suggestion` comments, and reconciles the pinned comment's ✏️ marks — you never post them yourself. Convert a finding ONLY when ALL hold: (a) the rewrite preserves meaning exactly — a hedge that is factually load-bearing ("usually completes in five minutes") is NOT a conversion candidate, deleting it would overpromise; (b) the fix is contained on the single flagged line; (c) you are confident the result reads better, not just shorter. Cap at 10. `original` must be the exact substring on that line in the checked-out file, or validation drops the entry. Do NOT remove the corresponding `[style]` bullet — the block stays the complete record. Blocker findings are never suggestions, and neither is anything sharing a LINE with one — a suggestion replaces the whole line, so it would re-commit the blocking text. **Stage the full qualifying set every run, not just the new ones:** the step deletes the previous run's suggestion comments before posting, so a finding you omit loses its button. **Write `[]` (not nothing) when the answer is none — this is load-bearing, not bookkeeping.** An explicit `[]` is authoritative and clears the previous run's buttons; an absent file means "unknown" and leaves them all standing, so a refresh where you simply forget the sidecar strands stale buttons on findings you no longer report. Writing the file is how you say which one you mean.
 
-            Advisory style findings are **not** tracked across reviews. Each `#update-review` run generates a fresh `.vale-findings.json` against the current PR head; render those findings each time, drop them silently when they disappear, do NOT move resolved advisory nits into ✅ Resolved. Blocker-tier `[style-blocker]` bullets ARE tracked like regular findings: when a fix-push resolves one, move it to ✅ Resolved. The diff-tracking rules in `update.md` (Case 1 fix-response: move resolved to ✅) apply to human-grade catches and `[style-blocker]` bullets, not advisory `[style]` bullets.
+            Advisory style findings are **not** tracked across reviews. Each `/update-review` run generates a fresh `.vale-findings.json` against the current PR head; render those findings each time, drop them silently when they disappear, do NOT move resolved advisory nits into ✅ Resolved. Blocker-tier `[style-blocker]` bullets ARE tracked like regular findings: when a fix-push resolves one, move it to ✅ Resolved. The diff-tracking rules in `update.md` (Case 1 fix-response: move resolved to ✅) apply to human-grade catches and `[style-blocker]` bullets, not advisory `[style]` bullets.
 
           # Model and effort are set from the 2026-08-10 campaign
           # (`2026-08-10-update-lane-model-config` in pulumi/docs-review-benchmarks),
@@ -544,6 +698,8 @@ jobs:
           # rate this lane fires. That premium is permanent: Sonnet 5's $2/$10
           # introductory rate was made its standing price on 2026-08-10, so the
           # crossover the first cut of this comment predicted never happens.
+          # Moved to opus-5-5 at the same effort on 2026-09-22
+          # (`2026-09-22-opus55-fitness`): spine intact, ~0.5x the cost per refresh.
           # It buys removing a failure that is unrecoverable (the pinned comment
           # is the only copy of the trail) and unvalidated on this lane.
           #
@@ -553,16 +709,17 @@ jobs:
           # dangles, because the prior pass is the comment it just overwrote. One
           # rep of three collapsed to 11 of 40 lines and held exactly 11 through
           # the next refresh. The loss is permanent — later updates merge from the
-          # prior comment — and invisible, because this workflow runs only
-          # `validate-pinned.py count-buckets`, never the validate → splice →
-          # validator-fix chain. Don't re-add it without wiring in full validation
-          # first; the composer lane in claude-code-review.yml is a different job
-          # shape and keeps its low effort.
+          # prior comment — and this workflow has no validate → splice →
+          # validator-fix chain to catch it before publish (the "Warn on
+          # structural damage" step below only flags it afterwards). Don't re-add
+          # it without wiring in full validation first; the composer lane in
+          # claude-code-review.yml is a different job shape and keeps its low
+          # effort.
           # The public Pulumi brand MCP server (voice/writing-style/terminology
           # source of truth) is wired via `claude_args --mcp-config`; its tools
           # are in --allowed-tools. No auth: the server is public.
           claude_args: |
-            --model claude-opus-5 --effort medium
+            --model claude-opus-5-5 --effort medium
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash ${{ github.workspace }}/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"
 
@@ -593,12 +750,12 @@ jobs:
           additional_permissions: |
             actions: read
           prompt: |
-            The user invoked you with `#update-review` on `${{ github.repository }}` PR #${{ steps.pr-context.outputs.pr_number }}. This PR carries a v3 review (author card + reviewer brief). Your job is to ADJUDICATE, not to render: you write exactly one file, `.review-update.json`, and deterministic tooling re-renders and publishes the cards from it. Do not post comments, do not edit the cards, do not call pinned-comment.sh.
+            The user invoked you with the `/update-review` command on `${{ github.repository }}` PR #${{ steps.pr-context.outputs.pr_number }}. This PR carries a v3 review (author card + reviewer brief). Your job is to ADJUDICATE, not to render: you write exactly one file, `.review-update.json`, and deterministic tooling re-renders and publishes the cards from it. Do not post comments, do not edit the cards, do not call pinned-comment.sh.
 
             Inputs on disk:
-            - `.review-card-author.md` — the author card (table rows `| **F<n>** | … |` under 🚨/❓ with a `#### F<n> · Do this` block each, REVIEW_STATE block)
+            - `.review-card-author.md` — the author card (table rows `| **F<n>** | … |` under 🚨/❓ with a `#### F<n> · Do this` block each, REVIEW_STATE block). A card over its size budget carries an italic note where its ❓ blocks were (they're on the evidence page, and the publish step restores them when there's room). A ❓ row whose Where is `—` is a group question: one answer covers every claim its block lists, so the mention answering it is one `concede` (or `accept`) for that one id.
             - `.review-card-brief.md` — the reviewer brief (⚠️ rows, "Waiting on the author" table)
-            - `.claude-mention-body.txt` — the triggering mention from @${{ steps.check-access.outputs.author }}; read it FIRST
+            - `.claude-mention-body.txt` — the triggering `/update-review` comment from @${{ steps.check-access.outputs.author }} (the command token, then the request); read it FIRST
             - `.vale-findings.json` — current style findings (context only on this lane)
 
             Follow `.claude/commands/docs-review/references/update.md` §The v3 surface for the full contract. In short — inspect the mention and the PR's new diff (`gh pr diff ${{ steps.pr-context.outputs.pr_number }}`), address any embedded asks (file edits → `gh pr checkout`, edit, push), then adjudicate each open finding into actions:
@@ -607,13 +764,13 @@ jobs:
             - `hold` (id, reason with evidence) — the author answered and you still disagree; the row moves to the reviewer's ⚠️ list for a human to weigh and STOPS blocking the author.
             - `accept` (id, reason[, bulk: true]) — the mention ACCEPTS the finding as-is ("accepting as-is — <reason>", or "accepting all open items" → one entry per open 🚨/❓ id with `bulk: true`); no adjudication, the reason is the author's; the row moves to the reviewer's ⚠️ list with a ✋ marker.
             - `promote` (id, to: author-answer|outstanding, reason) — upward only.
-            - `add` (bucket, file, lines, text) — a NEW problem in the pushed lines only.
+            - `add` (bucket: `outstanding` | `author-answer` | `reviewer-check`, file, lines, text) — a NEW problem in the pushed lines only.
             - `retext` (id, text[, detail: {why, fix[, keep]}]) — sharpen a finding that stays open on its own merits; the cell stays ONE line (claim quote + verdict), any new action goes in `detail.fix`.
-            Findings you have nothing to say about get no entry — they carry forward unchanged. Include `history_summary` (one line, ≤120 chars). The file's exact envelope — these four top-level keys, the list under `findings`, nothing else is accepted:
+            Findings you have nothing to say about get no entry — they carry forward unchanged. Include `history_summary` (one line, ≤120 chars). Read the author card's italic one-sentence summary under the header: if it names open items, counts, or anything "only you can confirm" that your actions change, include `summary` — a replacement sentence (≤300 chars) that describes the PR and what the review checked, with no open-item counts; omit `summary` when the existing sentence stays true. The file's exact envelope — these four top-level keys plus `summary` when you send one (omit the key otherwise; never write it empty), the list under `findings`, nothing else is accepted:
             {"schema": 1, "case": "fix-response|dispute|re-verify|mixed", "history_summary": "<one line>", "findings": [{"id": "F1", "action": "resolve", "annotation": "fixed in <sha7>"}, {"id": "F2", "action": "concede", "reason": "…"}]}
             Write the file and stop. Dispute adjudication defaults: domain-knowledge dispute from a write-access author → concede; verifiable claim → verify before holding, and hold only with evidence. An item the mention ANSWERS (a ❓'s source named, a 🚨 disputed) must end as `concede` or `hold` — never `retext` with the reply folded in; the author card promised the author their answer unblocks them.
           claude_args: |
-            --model claude-opus-5 --effort medium
+            --model claude-opus-5-5 --effort medium
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(gh pr:*),Bash(gh api:*),Bash(gh search:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(date:*),Bash(diff:*),Bash(curl:*)"
 
@@ -663,9 +820,29 @@ jobs:
           [ -z "$LEDGER" ] && echo "::warning::evidence bucket unresolved; publishing degraded (artifact only)"
           exit 0
 
+      # The deterministic publish chain runs from the DEFAULT branch, never the
+      # PR head this job checked out for the model. Two reasons. Skew: a PR
+      # that changes the card grammar itself (#21908, run 36193992403) ran
+      # its own half-finished validate-pinned.py against cards master's
+      # composer wrote, and failed 4 rules that master's copy passes.
+      # Trust: these scripts run with the bot token and, a step later, AWS
+      # credentials; the PR under review must not supply them. Same rule as
+      # review-sentinel.yml and the initial lane's publish job.
+      - name: Checkout review tooling (default branch)
+        if: steps.claude-v3.outcome == 'success'
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          path: .review-tools
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            .github
+
       # One step, one ordering, one failure surface: prior evidence → fresh
-      # card re-fetch (merges any /resolve that landed during the model's
-      # run) → apply-update → validate v21 → record evidence + page → upsert
+      # card re-fetch (merges whatever another run published during the
+      # model's run) → apply-update → validate v21 → record evidence + page → upsert
       # brief → upsert author (the label-driving card publishes LAST, so a
       # partial publish can never show a green label against a stale card).
       - name: Publish v3 refresh
@@ -714,7 +891,7 @@ jobs:
             EVIDENCE_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           fi
 
-          # Fresh card fetch — the /resolve race window closes here.
+          # Fresh card fetch — the race window with other review runs closes here.
           gh api "repos/$REPO/issues/comments/${{ steps.pr-context.outputs.author_cid }}" \
             --jq .body > .review-card-author.md
           gh api "repos/$REPO/issues/comments/${{ steps.pr-context.outputs.brief_cid }}" \
@@ -722,7 +899,12 @@ jobs:
 
           AUTO_FLAG=()
           [ "$IS_AUTO" = "true" ] && AUTO_FLAG=(--auto)
-          python3 .claude/commands/docs-review/scripts/apply-update.py \
+          # The PR's live file list, so the brief stops describing files a
+          # rework moved out (#21801). Empty on a failed read → no pruning.
+          gh api --paginate "repos/$REPO/pulls/$PR/files?per_page=100" \
+            --jq '.[] | .filename, (.previous_filename // empty)' \
+            > .pr-files.txt 2>/dev/null || : > .pr-files.txt
+          python3 .review-tools/.claude/commands/docs-review/scripts/apply-update.py \
             --author-card .review-card-author.md \
             --brief-card .review-card-brief.md \
             --update .review-update.json \
@@ -733,18 +915,18 @@ jobs:
             --brief-out .review-card-brief.out.md \
             --evidence-out .review-evidence.json \
             --head-repo "$HEAD_REPO" --head-branch "$HEAD_BRANCH" \
-            --evidence-url "$EVIDENCE_URL"
+            --evidence-url "$EVIDENCE_URL" --pr-files .pr-files.txt
 
-          python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+          python3 .review-tools/.claude/commands/docs-review/scripts/validate-pinned.py check \
             --body-file .review-card-author.out.md \
             --brief-file .review-card-brief.out.md \
             --pr "$PR" --repo "$REPO"
 
-          python3 scripts/review-v3/record-evidence.py \
+          python3 .review-tools/scripts/review-v3/record-evidence.py \
             --evidence .review-evidence.json --pr "$PR" --head-sha "$HEAD_SHA"
 
           if [ -n "${PAGES_BUCKET:-}" ]; then
-            python3 scripts/review-v3/render-evidence-html.py \
+            python3 .review-tools/scripts/review-v3/render-evidence-html.py \
               --evidence .review-evidence.json --output .review-evidence.html
             aws s3 cp .review-evidence.html "s3://$PAGES_BUCKET/$PR/$HEAD_SHA.html" \
               --content-type text/html --no-progress
@@ -756,10 +938,29 @@ jobs:
             fi
           fi
 
-          bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+          bash .review-tools/.claude/commands/docs-review/scripts/pinned-comment.sh upsert \
             --pr "$PR" --repo "$REPO" --role brief --body-file .review-card-brief.out.md
-          bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+          bash .review-tools/.claude/commands/docs-review/scripts/pinned-comment.sh upsert \
             --pr "$PR" --repo "$REPO" --role author --body-file .review-card-author.out.md
+
+      # One-click fixes for what blocks merge (reader feedback, 2026-09-25:
+      # authors wanted applyable suggestions inline for the findings they
+      # must act on, and the optional nags off the Files view). Derived
+      # deterministically from the card's 🚨 Do-this blocks — only a quoted
+      # line with exactly one single-line fenced replacement qualifies — and
+      # validated against the checked-out file and the PR diff. Own marker,
+      # so it never touches the style set; a fix that landed loses its
+      # comment without a new review event. Best-effort: never fails the run.
+      - name: Post one-click fixes for blocking findings (v3)
+        if: steps.publish-v3.outcome == 'success'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .review-tools/.claude/commands/docs-review/scripts/post-style-suggestions.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --fixes-from-author-card .review-card-author.out.md
 
       - name: Upload evidence artifact (v3)
         if: steps.claude-v3.outcome == 'success' && always()
@@ -782,8 +983,15 @@ jobs:
       # loudly-but-non-fatally: `continue-on-error` keeps the job green, but
       # a 403 (missing `actions: write`) must show as a red step, not be
       # swallowed — this exact poke sat silently 403ing behind `|| true`.
-      - name: Re-evaluate Sentinel (v3)
-        if: steps.publish-v3.outcome == 'success' && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+      # Either publish path moves the review head, and the Sentinel reads
+      # that head: re-evaluate after the v3 publish AND after a v2 (legacy)
+      # self-publish, or a grandfathered PR keeps a stale G1 verdict until
+      # some unrelated event fires (#21536 wore Friday's red for a weekend).
+      - name: Re-evaluate Sentinel
+        if: |
+          (steps.publish-v3.outcome == 'success' ||
+           (steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true')) &&
+          (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -811,15 +1019,26 @@ jobs:
       #
       # continue-on-error: suggestions are a convenience layer; a failure here
       # must never mark a successful review as errored.
+      #
+      # REVIEW_STYLE_INLINE gates advisory buttons exactly as in
+      # claude-code-review.yml Step D3: off, an explicit empty sidecar clears
+      # what an earlier run posted and strips the marks.
       - name: Post inline style suggestions
         if: steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true'
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STYLE_INLINE: ${{ vars.REVIEW_STYLE_INLINE }}
         run: |
+          SIDECAR=.style-suggestions.json
+          if [[ "$STYLE_INLINE" != "1" ]]; then
+            SIDECAR=.style-suggestions.off.json
+            echo '[]' > "$SIDECAR"
+          fi
           python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
             --pr "${{ steps.pr-context.outputs.pr_number }}" \
             --repo "${{ github.repository }}" \
+            --in "$SIDECAR" \
             --vale-findings .vale-findings.json \
             --annotate-pinned
 
@@ -900,35 +1119,138 @@ jobs:
           fi
           exit 0
 
-      # Runs on success or failure so the transient CLAUDE_PROGRESS
-      # comment always reaches a terminal state.
+      # Structural spot-check of the PUBLISHED body (pulumi/docs#20596). This lane
+      # has no validate -> splice -> validator-fix chain: the model upserts the
+      # body itself, so there is no pre-publish point a gate could hold. What it
+      # does have is the evidence-spine floor (pinned-comment.sh upsert ->
+      # splice-spine.py), which restores the 🔍 Verification trail, 📊 Editorial
+      # balance and investigation log when a re-render drops them. This step is
+      # the alarm for everything that floor doesn't cover -- or a floor that
+      # stood down or errored: it runs the validator's structural rules over the
+      # body as published and warns, naming each violation, when a mandatory H3
+      # is missing or out of order, the investigation-log block is gone or
+      # malformed, or the count table no longer matches the bullets. Those are
+      # the losses the 2026-07-30 regression battery saw publish silently.
+      #
+      # WARNING-ONLY, same reasoning as the provenance check above: the review
+      # has already published, so a red X here would only mark work the author
+      # can see is fine. The point is that a structurally broken refresh is no
+      # longer invisible.
+      - name: Warn on structural damage to the refreshed review
+        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set +e
+          if [ ! -s .pinned-body.md ]; then
+            gh api "repos/$REPO/issues/$PR/comments" --paginate \
+              --jq '.[] | select(.body | startswith("<!-- CLAUDE_REVIEW ")) | .body' \
+              > .pinned-body.md 2>/dev/null
+          fi
+          if [ ! -s .pinned-body.md ]; then
+            echo "structural check: no pinned review body found; nothing to check."
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+            --body-file .pinned-body.md \
+            --only-rule mandatory-h3-order \
+            --only-rule investigation-log \
+            --only-rule count-table \
+            --pr "$PR" --repo "$REPO" \
+            --output-json /tmp/structure.json \
+            --output-markdown /tmp/structure.md
+          rc=$?
+          if [ $rc -eq 1 ]; then
+            rules=$(jq -r '[.violations[]?.rule_id] | unique | join(", ")' /tmp/structure.json 2>/dev/null)
+            echo "::warning::The refreshed review published with structural violations (${rules:-see log}). A mandatory section or the investigation log may have been dropped, and later refreshes merge from this body. Re-render it with /new-review. Details below."
+            cat /tmp/structure.md
+          elif [ $rc -ne 0 ]; then
+            echo "structural check: validator exited $rc; skipping."
+          fi
+          exit 0
+
+      # Runs on success or failure so the progress signal (👀 on the
+      # request, or the fallback spinner comment) always reaches a terminal
+      # state, and the review-state label with it — so it runs whenever the
+      # progress step did, including an auto-refresh that posted nothing.
       #
       # Outcome handling:
-      # - success: DELETE the spinner comment, then post a fresh
-      #   `🤖 Review updated on @<author>'s request.` This is a *create*
-      #   (not an edit) so the embedded @-mention fires a GitHub
-      #   notification — that's the whole point of attribution. Editing
-      #   the existing comment to add a mention would not notify.
-      # - failure: same delete-and-repost, with `🤖 @<author> — review
+      # - success: clear the 👀 / delete the spinner, and put a 🚀 on the
+      #   comment that asked for the refresh (ack-request.sh). The card is
+      #   the record of what changed; a `🤖 Review updated on @<author>'s
+      #   request.` comment per refresh only buried it in timeline noise
+      #   (six on pulumi/docs#21871). A submitted review body can't take a
+      #   reaction, and a checkout without ack-request.sh (see the note
+      #   below on which `.claude/` this step sees) has no helper — both
+      #   fall back to the old comment. An auto-refresh has no requester, so success is
+      #   silent: the cleared 🔄 banner and the card's new stamp say it.
+      # - failure: clear the signal and post `🤖 @<author> — review
       #   errored. …` so the requester is notified that their request
       #   failed.
-      # - cancelled / skipped: delete the orphan comment (newer run owns
-      #   the surface). No replacement.
+      # - cancelled / skipped: clear the signal (newer run owns the
+      #   surface). No replacement.
       #
       # On success the review-state label transitions based on the
       # refreshed body's 🚨 Outstanding count: ≥1 → review:outstanding-issues,
       # else → review:no-blockers. On failure, set review:error if no review
       # was published; otherwise the existing terminal label is preserved.
+      #
+      # Which `.claude/` runs here: claude-code-action treats an
+      # issue_comment-triggered PR head as untrusted and restores `.claude/`
+      # (and CLAUDE.md, .mcp.json, …) from the DEFAULT branch before the model
+      # step, so every script this job calls afterwards — apply-update,
+      # validate-pinned, ack-request.sh — is the default branch's copy, not
+      # the PR's. Consequence: a PR that changes the card format cannot
+      # self-refresh through this lane before it merges (the default branch's
+      # validator rejects the new-format card it published; pulumi/docs#21908
+      # hit exactly this). Use `/new-review` there: the initial lane
+      # (workflow_run) keeps the PR's own scripts.
       - name: Finalize progress signal
-        if: always() && steps.progress.outputs.comment_id != ''
+        if: always() && steps.progress.outputs.signal != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROGRESS_FAILURE_JQ: '.[] | select(.user.login == "github-actions[bot]") | select(.body | startswith("<!-- CLAUDE_PROGRESS -->")) | select(.body | test("errored|timed out|Couldn.t start|superseded")) | .id'
+          # The API path of the comment that asked for this run, for the
+          # 👀 → 🚀 swap. Empty for events that can't take one.
+          ACK_TARGET: ${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           OUTCOME="${{ steps.claude.outcome }}"
           AUTHOR="${{ steps.check-access.outputs.author }}"
+          ACK=.claude/commands/docs-review/scripts/ack-request.sh
+          # Take down the in-flight signal: the spinner comment if this run
+          # fell back to one, and our 👀 on the request either way (a no-op
+          # when there is none).
+          clear_progress() {
+            if [ -n "$COMMENT_ID" ]; then
+              gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            fi
+            if [ -f "$ACK" ]; then
+              bash "$ACK" --clear --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
+            fi
+          }
+          # Retry path: the initial lane was dispatched and owns the progress
+          # comment (it deletes it as dispatcher_comment_id) and the labels.
+          # Only a failed dispatch is ours to report.
+          if [ "${{ steps.pr-context.outputs.retry_initial }}" = "true" ]; then
+            if [ "${{ steps.retry-initial.outcome }}" = "success" ]; then
+              echo "retry dispatched; the initial lane owns the progress signal"
+              exit 0
+            fi
+            clear_progress
+            if [ "$AUTHOR" = "auto-refresh" ]; then
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Couldn't start a fresh review (dispatch failed). Comment \`/new-review\` to retry.")
+            else
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — couldn't start a fresh review (dispatch failed). Comment \`/new-review\` to retry.")
+            fi
+            gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+            exit 0
+          fi
           # On the v3 surface the model step is claude-v3 and success further
           # requires the deterministic publish chain: an adjudication that
           # never published is a failure, and a partial publish (brief
@@ -947,21 +1269,33 @@ jobs:
           # GitHub user, so never render it as an @-mention (it would ping an
           # unrelated account of that name). Plain wording instead.
           if [ "$OUTCOME" = "success" ]; then
-            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
-            if [ "$AUTHOR" = "auto-refresh" ]; then
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review auto-refreshed — the latest push only touched lines with outstanding findings.")
-            else
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review updated on @${AUTHOR}'s request.")
+            if [ -n "$COMMENT_ID" ]; then
+              gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
             fi
-            gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+            # A fresh review answers every earlier run's failure notice
+            # (#21787 kept three "Review errored" comments under a good card).
+            gh api --paginate "repos/$REPO/issues/$PR/comments" \
+              --jq "$PROGRESS_FAILURE_JQ" 2>/dev/null \
+              | while read -r cid; do
+                  [ -n "$cid" ] && gh api -X DELETE "repos/$REPO/issues/comments/$cid" >/dev/null 2>&1 || true
+                done
+            if [ "$AUTHOR" != "auto-refresh" ]; then
+              MSG="🤖 Review updated on @${AUTHOR}'s request."
+              if [ -f "$ACK" ]; then
+                bash "$ACK" --pr "$PR" --repo "$REPO" --target "$ACK_TARGET" --message "$MSG"
+              else
+                BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
+                gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+              fi
+            fi
           elif [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
-            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            clear_progress
           else
-            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            clear_progress
             if [ "$AUTHOR" = "auto-refresh" ]; then
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Automatic review refresh errored; the review is still marked stale. Mention @claude #update-review to refresh it.")
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Automatic review refresh errored; the review is still marked stale. Comment \`/update-review\` to refresh it.")
             else
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — review errored. Mention @claude #update-review again to retry.")
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — review errored. Comment \`/update-review\` again to retry.")
             fi
             gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
           fi
@@ -1007,6 +1341,74 @@ jobs:
               fi
             fi
           fi
+
+      # ---- usage telemetry --------------------------------------------------
+      # The Opus step's usage (one row per model in its execution log), for
+      # the record-usage job below. Until this, the update lane's spend was
+      # visible only in its job log. always(): a failed or superseded refresh
+      # was billed too. Recorder from the DEFAULT branch, never the PR head.
+      - name: Checkout usage recorder (default branch)
+        if: always() && steps.head.outputs.superseded != 'true'
+        continue-on-error: true
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: .review-telemetry-tools
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: scripts/review-telemetry
+
+      - name: Build usage rows
+        if: always() && steps.head.outputs.superseded != 'true'
+        continue-on-error: true
+        env:
+          HEAD_SHA: ${{ steps.head.outputs.sha }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          [ -f .review-telemetry-tools/scripts/review-telemetry/record-usage.py ] \
+            || { echo "usage recorder not on the default branch yet; skipping"; exit 0; }
+          # Exactly one of the two model steps runs; name the row after it.
+          if [ "${{ steps.claude-v3.outcome }}" != "skipped" ] && [ -n "${{ steps.claude-v3.outcome }}" ]; then
+            STEP=update-v3; OUTCOME="${{ steps.claude-v3.outcome }}"
+          else
+            STEP=update-v2; OUTCOME="${{ steps.claude.outcome }}"
+          fi
+          # An `issues` event has no PR head; its row carries no PR.
+          PR_ARGS=()
+          [ -n "$HEAD_SHA" ] && [ -n "$PR" ] && PR_ARGS=(--pr "$PR" --head-sha "$HEAD_SHA")
+          # Effort mirrors the model steps' --effort above; change them together.
+          python3 .review-telemetry-tools/scripts/review-telemetry/record-usage.py \
+            "${PR_ARGS[@]}" \
+            --source "exec:$STEP:${{ runner.temp }}/claude-execution-output.json" \
+            --outcome "$STEP=$OUTCOME" \
+            --effort "$STEP=medium" \
+            --model "$STEP=claude-opus-5-5" \
+            --job-started-at "${{ steps.job-start.outputs.epoch }}"
+
+      - name: Upload usage rows
+        if: always() && steps.head.outputs.superseded != 'true'
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: docs-agent-usage-${{ github.job }}-attempt${{ github.run_attempt }}
+          path: .docs-agent-usage/
+          include-hidden-files: true
+          overwrite: true
+          retention-days: 30
+          if-no-files-found: ignore
+      # ---- end usage telemetry ----------------------------------------------
+
+  # Copies the update lane's usage rows to the ledger bucket's `usage/`
+  # prefix. always(): a failed or superseded refresh was still billed.
+  # See record-docs-agent-usage.yml.
+  record-usage:
+    needs: claude-update
+    if: always() && needs.claude-update.result != 'skipped'
+    uses: ./.github/workflows/record-docs-agent-usage.yml
+    permissions:
+      contents: read
+      actions: read
+      id-token: write
 
 env:
   ESC_ACTION_OIDC_AUTH: true

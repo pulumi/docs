@@ -70,9 +70,14 @@
             button {
                 @apply px-3 py-2 flex items-center whitespace-nowrap;
 
-                // The tab icon.
-                img {
-                    @apply mr-1.5 opacity-70;
+                // The tab icon (inline sprite SVG, tinted via currentColor).
+                .tab-icon {
+                    @apply mr-1.5 inline-flex items-center opacity-70;
+
+                    .ph-icon {
+                        width: 1rem;
+                        height: 1rem;
+                    }
                 }
 
                 // The tab label (e.g., "All results").
@@ -105,7 +110,7 @@
                 @apply text-gray-900 border-violet-600;
 
                 button {
-                    img {
+                    .tab-icon {
                         @apply opacity-100;
                     }
 
@@ -152,7 +157,7 @@
                         @apply border-orange-300;
                     }
 
-                    &.packages {
+                    &.registry {
                         @apply border-yellow-300;
                     }
                 }

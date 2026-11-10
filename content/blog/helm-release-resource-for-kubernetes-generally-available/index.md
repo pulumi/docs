@@ -62,7 +62,7 @@ Both the `Chart` and `Helm Release` resource are complimentary with their own pr
 
 ## How Do I Get Started?
 
-If you aren't already familiar with using Pulumi with Kubernetes, head on over to [Pulumi's getting started guide for Kubernetes](/docs/iac/get-started/kubernetes/) first.
+If you aren't already familiar with using Pulumi with Kubernetes, head on over to [Pulumi's getting started guide for Kubernetes](/up/?cloud=kubernetes) first.
 
 1. In your chosen Kubernetes Pulumi project, make sure the referenced version of the Pulumi-Kubernetes SDK is at least `v3.15.0`.
 2. Like other Kubernetes resources managed by Pulumi, the target cluster for Helm Release is configured with a [Provider](/registry/packages/kubernetes/api-docs/provider/). The default options work for typical cases, and we also provide [advanced configuration options](/registry/packages/kubernetes/api-docs/provider/#helmdriver_nodejs) for private registries, etc.
@@ -417,4 +417,4 @@ You can learn more about Helm Release from the following sources:
    * [C#](/registry/packages/kubernetes/how-to-guides/kubernetes-cs-helm-release-wordpress)
    * [Go](/registry/packages/kubernetes/how-to-guides/kubernetes-go-helm-release-wordpress/)
 
-If you have questions or run into issues, please don't hesitate to reach out by filing issues on [Github](https://github.com/pulumi/pulumi-kubernetes/issues) or asking questions on [Community Slack](https://slack.pulumi.com). Happy charting!
+If you have questions or run into issues, please don't hesitate to reach out by filing issues on [GitHub](https://github.com/pulumi/pulumi-kubernetes/issues) or asking questions on [Community Slack](https://slack.pulumi.com). Happy charting!

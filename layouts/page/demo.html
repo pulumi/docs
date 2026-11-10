@@ -14,15 +14,11 @@
                     </ul>
 
                     <div class="flex flex-wrap justify-center items-center mt-12 max-w-lg">
-                        {{ range $logo := .Params.customer_logos.logos }}
+                        {{ range $id := .Params.customer_logos.logos }}
                             <div class="w-1/4 p-3">
-                                {{ if $logo.link }}
-                                    <a href="{{ relref $pageContext $logo.link }}">
-                                        {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                                    </a>
-                                {{ else }}
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                                {{ end }}
+                                <a href="{{ partial "customers/href.html" $id }}">
+                                    {{ partial "customer-logo.html" (dict "customer" $id "hoverable" true) }}
+                                </a>
                             </div>
                         {{ end }}
                     </div>
@@ -31,7 +27,7 @@
                 <div class="p-6 flex items-center">
                     <div class="card mt-10 md:mt-0 p-12 mx-auto">
                         <h4>Request a demo</h4>
-                        <pulumi-hubspot-form form-id="{{ .Params.form.form_id }}"></pulumi-hubspot-form>
+                        <pulumi-hubspot-form form-id="{{ .Params.form.form_id }}" form-name="demo"></pulumi-hubspot-form>
                         <p class="body-sm text-gray-600 mt-4">Have a quick question instead? <a href="/contact/" class="underline">Contact us</a>.</p>
                     </div>
                 </div>

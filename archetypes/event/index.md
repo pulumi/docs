@@ -24,13 +24,12 @@ unlisted: false
 # Show a registration form. Requires form.hubspot_form_id.
 gated: false
 
-# Link to an external page instead of rendering the event page.
-# Set block_external_search_index to true when using this.
-external: false
-block_external_search_index: false
-
-# URL slug for internal events, or external URL when external: true.
-url_slug: "{{ .Name }}"
+# For an event hosted elsewhere, set event_url to where it lives: an
+# "https://..." URL for a third-party page (opened in a new tab) or a "/..."
+# path for another Pulumi page. The generated /events/{{ .Name }}/ stub then
+# redirects there and is never indexed; the list and RSS link out to it. Omit
+# it for a normal event that renders its own page here.
+# event_url:
 
 # The event type (workshop, webinar, talk).
 event_type: workshop
@@ -93,16 +92,31 @@ form:
 #     - label: EMEA
 #       sortable_date: 2026-10-14T10:00:00.000+02:00
 #
+# Once a session has run you can post its recording without waiting for the rest:
+# add `youtube_url:` to that session and the video replaces its register card
+# (the session tab reads "(recording)"). Later sessions keep their forms, and the
+# page stays on the upcoming layout until the whole event is done — at which point
+# you swap all of this for the single top-level `youtube_url` below.
+#
+#     - label: Americas
+#       sortable_date: 2026-09-16T09:00:00.000-07:00
+#       youtube_url: https://www.youtube.com/embed/VIDEO_ID   # this session's recording
+#       form:
+#           hubspot_form_id: ""
+#           salesforce_campaign_id: ""
+#
 # Two rules `make lint` enforces:
 #   - the top-level `sortable_date` above must equal the earliest session's date
 #     (it stays the event's own date for sorting, schema, and social cards)
 #   - the top-level `form:` above must be removed, so there's no question which
 #     form a session renders
 #
-# One rule it can't: DON'T set `youtube_url` until every session has run. A
-# recording turns the page into the on-demand layout, which has no session tabs
-# and no registration form — so posting the Americas recording while the EMEA
-# date is still weeks out takes the EMEA form off the page, drops the event out
-# of the upcoming list, and leaves any `{{< blog/card >}}` embed pointing at a
-# session tab that no longer exists. Hold the recording until the last session.
+# One rule it can't: DON'T set the top-level `youtube_url` until every session has
+# run. It turns the page into the on-demand layout, which has no session tabs and
+# no registration form — so posting the Americas recording there while the EMEA
+# date is still weeks out takes the EMEA form off the page, drops the event out of
+# the upcoming list, and leaves any `{{< blog/card >}}` embed pointing at a session
+# tab that no longer exists. To surface a finished session's recording early, use
+# the per-session `youtube_url` shown above instead; reserve the top-level key for
+# when the whole event is done.
 ---

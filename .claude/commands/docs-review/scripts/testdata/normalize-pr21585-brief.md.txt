@@ -1,0 +1,52 @@
+<!-- CLAUDE_REVIEW_BRIEF -->
+## Reviewer's guide v1 — not for the author
+
+> [!TIP]
+> **This is the reviewer's guide.** Work through the ⚠️ checklist below, then approve — **approving asserts only that the ⚠️ items looked right to you.** Machine-verified this run: links, shortcodes, page metadata, and every claim marked verified (receipts on the evidence page). Code samples are read, not compiled.
+>
+> _PR author: your to-do list is the other review comment, "Author action guide" — nothing on this card is yours._
+
+> [!NOTE]
+> **What this PR changes:**
+>
+> - The Cloud REST API schema content adapter now sets `sitemap_exclude` on every page it generates (~800 pages), removing them from `sitemap.xml`.
+> - A long comment above the `$params` dict records why the sitemap was trimmed instead of marking the pages `noindex`.
+>
+> Nothing here changes page content, so the wrongness that would matter is mechanical or strategic: a flag the sitemap template doesn't honor, or an SEO decision the team doesn't want. The review read the changed template, confirmed the flag's handling in the sitemap layout, and checked that no indexability directive was introduced.
+>
+> **Review confidence:**
+>
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | mechanics | HIGH |  |
+> | facts | HIGH | Template change only — no reader-facing factual claims added. |
+
+### ⚠️ Check these before approving
+
+| | ID | Where | Finding |
+|---|---|---|---|
+| **F?** | `content/docs/reference/cloud-rest-api/schema/_content.gotmpl` L120 | This drops roughly 800 URLs from `sitemap.xml` in one change — a site-wide search decision, not a page edit. The flag works as intended (the sitemap layout skips pages carrying it, and nothing here adds a `noindex`), so the only open question is whether the team wants this trade. Worth noting alongside it: our own contributor guide describes `sitemap_exclude` narrowly, as being for pages whose canonical URL is submitted in a *different* sitemap; this PR uses it for crawl-budget trimming instead. Confirm the stance, and decide whether that guidance should be widened to match. |
+
+#### Editorial stances introduced by this PR
+
+*Superlative, ranking, or comparative language the diff adds. No verdict — a page's own framing isn't fact-checkable — but confirm each is a stance the docs should take, and that no agent-written rewrite introduced it unasked.*
+
+_None — the extractor found no positioning or comparison language in this PR's added lines._
+
+### ✅ What you can rubber-stamp
+
+- **Facts:** no factual claims found in the changed lines.
+- **Mechanics:** no internal links added.
+- **Style:** 0 advisory suggestion(s) left with the author; never blocking.
+
+💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<sub>Review v1 · updated 2026-09-13T12:39:51Z · head commit ccb986a</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+**For the reviewer:** the ⚠️ items above are the minutes that matter — the receipts for everything machine-verified are on the evidence page. The author's open items live on their own card (the comment headed "Author action guide"); while any are open, a **Waiting on the author** list above tracks them, and merge stays blocked until they're answered. If something here seems off, comment on the PR — `@claude <your point> #update-review` re-adjudicates with your input.

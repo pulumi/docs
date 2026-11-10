@@ -63,6 +63,6 @@ To increase deployment concurrency, use the same token to set up multiple agents
 
 Customer-Managed Agents with Kubernetes support empower you to manage deployments according to your specific needs. Whether it’s for security, compliance, or operational efficiency, this feature provides the flexibility and control necessary for modern infrastructure management.
 
-For more details, check out our [documentation](/docs/deployments/concepts/customer-managed-runners/#kubernetes) or [contact our sales team](/contact) to get started with Customer-Managed Agents today.
+For more details, check out our [documentation](/docs/administration/concepts/customer-managed-runners/#kubernetes) or [contact our sales team](/contact) to get started with Customer-Managed Agents today.
 
 Feel free to reach out with feedback or questions. We’re here to support you every step of the way.

@@ -25,7 +25,7 @@ social:
 
 AI agents do a lot of their work through CLIs. They're easier to call than HTTP APIs and they produce predictable output. Over the last few months our own CLI traffic has shifted from mostly people typing commands to people and agents running commands together, often in the same session.
 
-Today we're shipping a release built for both. The [Pulumi CLI](/docs/iac/cli/) is reorganized around three ideas: the right command should be the one you can guess, anything you can do in [Pulumi Cloud](/product/pulumi-cloud/) should also be doable from the terminal, and what comes back should be just as readable to an agent as it is to a person.
+Today we're shipping a release built for both. The [Pulumi CLI](/docs/iac/cli/) is reorganized around three ideas: the right command should be the one you can guess, anything you can do in [Pulumi Cloud](/product/) should also be doable from the terminal, and what comes back should be just as readable to an agent as it is to a person.
 
 <!--more-->
 
@@ -35,7 +35,7 @@ The bar we set was that both developers and coding agents should be able to gues
 
 Branches in the tree are now singular nouns like `stack`, `env`, `org`, and `deployment`. Leaves are now verbs from a canonical vocabulary — `list`, `get`, `set`, `new`, `edit`, `remove` — and they mean the same thing wherever they're used. `edit` always means _modify an existing thing_. Wherever the old vocabulary differed, though, the old name still works: `ls`, `rm`, `update`, and `open` are all aliased to preserve backward compatibility.
 
-For the most part, product names have also been replaced with familiar nouns. Users (human or otherwise) don't think in product names; they think in terms of resources, stacks, environments. For example, take [Pulumi ESC](/esc/): the product may be named ESC (and for a while the command was too), but nobody thinks _I need to initialize a new ESC_ — they think _I need to create a new environment_. The command is therefore `pulumi env new`, with `esc init` preserved as an alias to avoid disrupting anyone's existing workflows.
+For the most part, product names have also been replaced with familiar nouns. Users (human or otherwise) don't think in product names; they think in terms of resources, stacks, environments. For example, take [Pulumi ESC](/product/secrets-management/): the product may be named ESC (and for a while the command was too), but nobody thinks _I need to initialize a new ESC_ — they think _I need to create a new environment_. The command is therefore `pulumi env new`, with `esc init` preserved as an alias to avoid disrupting anyone's existing workflows.
 
 ```bash
 $ pulumi env new my-project my-env
@@ -297,4 +297,4 @@ More on how it works, and what you can do with it, in the days ahead.
 
 A lot of what makes a developer tool worth using is in the details, and most of what's in [this release](/releases/agentic-infrastructure-era/) is exactly that, across the whole CLI, with humans and agents in mind.
 
-We'd love for you to [grab the latest release](/docs/get-started/download-install/) and give it a try. Tell us what's now easy, what's still hard, and what to fix next on [GitHub](https://github.com/pulumi/pulumi/issues) or in the [community Slack](https://slack.pulumi.com/). The fastest way the CLI gets better is feedback from the humans and agents who live in it.
+We'd love for you to [grab the latest release](/docs/install/) and give it a try. Tell us what's now easy, what's still hard, and what to fix next on [GitHub](https://github.com/pulumi/pulumi/issues) or in the [community Slack](https://slack.pulumi.com/). The fastest way the CLI gets better is feedback from the humans and agents who live in it.

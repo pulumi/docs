@@ -72,7 +72,7 @@ const client = esc.DefaultClient();
 {{% /choosable %}}
 {{< /chooser >}}
 
-This method will first look for the `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, it will fall back to CLI credentials that are present on your machine if you have logged in using the Pulumi CLI.
+This method sources credentials from the `PULUMI_ACCESS_TOKEN` and `PULUMI_BACKEND_URL` environment variables. As of `@pulumi/esc-sdk` v0.14.0, it no longer falls back to the Pulumi CLI login on disk, so you must set `PULUMI_ACCESS_TOKEN` or pass credentials explicitly.
 
 If the default behavior does not work for you, you can always manually initialize the client configuration and pass it into the client constructor:
 

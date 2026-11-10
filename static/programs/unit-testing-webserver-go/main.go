@@ -33,11 +33,26 @@ func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
 
 	const userData = `#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &`
 
+	// Look up the latest Amazon Linux 2 AMI.
+	ami, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+		Owners:     []string{"amazon"},
+		MostRecent: pulumi.BoolRef(true),
+		Filters: []ec2.GetAmiFilter{
+			{
+				Name:   "name",
+				Values: []string{"amzn2-ami-hvm-*-x86_64-gp2"},
+			},
+		},
+	})
+	if err != nil {
+		return nil, err
+	}
+
 	server, err := ec2.NewInstance(ctx, "web-server-www", &ec2.InstanceArgs{
 		InstanceType:   pulumi.String("t2.micro"),
 		SecurityGroups: pulumi.StringArray{group.Name}, // reference the group object above
-		Ami:            pulumi.String("ami-c55673a0"),  // AMI for us-east-2 (Ohio)
-		UserData:       pulumi.String(userData),        // start a simple web server
+		Ami:            pulumi.String(ami.Id),
+		UserData:       pulumi.String(userData), // start a simple web server
 	})
 	if err != nil {
 		return nil, err

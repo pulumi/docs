@@ -22,7 +22,7 @@ Time-to-live (TTL) Stacks enable the automated management of a stack's lifecycle
 A stack's time to live is measured from the stack's **creation** date, not its most recent update. Updating a stack does not reset its TTL.
 {{% /notes %}}
 
-## Setting a Time-to-Live on a Stack
+## Setting a Time-to-Live on a stack
 
 ### Pulumi Cloud UI
 
@@ -54,17 +54,17 @@ Below is an example of setting up Time-To-Live on a stack programmatically:
        -H "Content-Type: application/json" \
        -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
        --request POST \
-       --data '{"timestamp":"2024-12-31T23:59:59Z","deleteAfterDestroy":true}' \
+       --data '{"timestamp":"2030-12-31T23:59:59Z","deleteAfterDestroy":true}' \
        https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/ttl/schedules
 ```
 
 Refer to the [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/) for more details on how to use the REST API to manage Time-to-Live Stacks.
 
-### Pulumi Cloud Service provider
+### Pulumi Cloud provider
 
 The Pulumi Service Provider allows you to set up and manage Time-to-Live Stacks in source control.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -80,7 +80,7 @@ const ttlSchedule = new pulumiservice.TtlSchedule("ttlSchedule", {
   organization: organizationName,
   project: projectName,
   stack: stackName,
-  timestamp: "2024-01-01T00:00:00Z" // Specify the ISO date/time for destruction
+  timestamp: "2030-01-01T00:00:00Z" // Specify the ISO date/time for destruction
 });
 
 export const scheduleId = ttlSchedule.scheduleId;
@@ -104,7 +104,7 @@ ttl_schedule = pulumiservice.TtlSchedule("ttlSchedule",
     organization=organization_name,
     project=project_name,
     stack=stack_name,
-    timestamp="2024-01-01T00:00:00Z") # Specify the ISO date/time for destruction
+    timestamp="2030-01-01T00:00:00Z") # Specify the ISO date/time for destruction
 
 pulumi.export('scheduleId', ttl_schedule.schedule_id)
 ```
@@ -114,7 +114,6 @@ pulumi.export('scheduleId', ttl_schedule.schedule_id)
 {{% choosable language go %}}
 
 ```go
-
 package main
 
 import (
@@ -128,7 +127,7 @@ func main() {
             Organization: pulumi.String("my-org"),
             Project: pulumi.String("my-project"),
             Stack: pulumi.String("temp-stack"),
-            Timestamp: pulumi.String("2024-01-01T00:00:00Z"),  // Specify the ISO date/time for destruction
+            Timestamp: pulumi.String("2030-01-01T00:00:00Z"),  // Specify the ISO date/time for destruction
         })
         if err != nil {
             return err
@@ -145,6 +144,8 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Pulumi;
 using PulumiService = Pulumi.PulumiService;
 
@@ -156,12 +157,12 @@ class Program
             Organization = "my-org",
             Project = "my-project",
             Stack = "temp-stack",
-            Timestamp = "2024-01-01T00:00:00Z",  // Specify the ISO date/time for destruction
+            Timestamp = "2030-01-01T00:00:00Z",  // Specify the ISO date/time for destruction
         });
 
         return new Dictionary<string, object?>
         {
-            { "scheduleID", ttlSchedule.ScheduleId }
+            { "scheduleId", ttlSchedule.ScheduleId }
         };
     });
 }
@@ -188,10 +189,10 @@ public class App {
             .organization("my-org")
             .project("my-project")
             .stack("temp-stack")
-            .timestamp("2024-01-01T00:00:00Z") // Specify the ISO date/time for destruction
+            .timestamp("2030-01-01T00:00:00Z") // Specify the ISO date/time for destruction
             .build());
 
-        ctx.export("scheduleID", ttlSchedule.scheduleId());
+        ctx.export("scheduleId", ttlSchedule.scheduleId());
     }
 }
 
@@ -213,12 +214,50 @@ resources:
       organization: my-org
       project: my-project
       stack: temp-stack
-      timestamp: "2024-01-01T00:00:00Z" # Specify the ISO date/time for destruction
+      timestamp: "2030-01-01T00:00:00Z" # Specify the ISO date/time for destruction
 
 outputs:
   scheduleId: ${ttlSchedule.scheduleId}
 
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+`Pulumi.yaml`:
+
+```yaml
+name: ttl-schedule-setup
+runtime: hcl
+description: Setup of TTL for automatic resource destruction with Pulumi
+```
+
+`main.tf`:
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source = "pulumi/pulumiservice"
+    }
+  }
+}
+
+resource "pulumiservice_ttl_schedule" "ttl_schedule" {
+  organization = "my-org"
+  project      = "my-project"
+  stack        = "temp-stack"
+
+  timestamp = "2030-01-01T00:00:00Z" # Specify the ISO date/time for destruction
+}
+
+output "schedule_id" {
+  value = pulumiservice_ttl_schedule.ttl_schedule.schedule_id
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
 
 {{% /choosable %}}
 

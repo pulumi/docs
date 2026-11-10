@@ -44,6 +44,86 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
           PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
+
+  # What happened to the review's findings (fixed, conceded, ignored,
+  # disputed), recorded once the pinned cards are frozen. Lands beside the
+  # review's evidence objects in the content-review ledger bucket so the
+  # warehouse can join outcomes to verdicts and cost. Separate from cleanup:
+  # that job holds the testing account's role, and the ledger is production.
+  # Scripts come from the default branch, never the PR head. Telemetry only:
+  # a failure here never fails the close (record-outcome.py exits 0).
+  record-review-outcome:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    name: Record review outcome
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+      id-token: write
+    steps:
+      - name: Checkout review scripts (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts/review-telemetry
+            scripts/review-v3
+            .claude/commands/docs-review
+            infrastructure
+
+      - name: Fetch ESC secrets
+        id: esc-secrets
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Configure AWS Credentials
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: review-outcome
+          aws-region: us-west-2
+
+      - uses: pulumi/actions@v7
+        continue-on-error: true
+
+      - name: Record outcome
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          [ -f scripts/review-telemetry/record-outcome.py ] \
+            || { echo "outcome recorder not on the default branch yet; skipping"; exit 0; }
+          LEDGER=""
+          for i in 1 2 3; do
+            LEDGER=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
+              --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+            [ -n "$LEDGER" ] && break
+            [ "$i" -lt 3 ] && sleep $((i * 5))
+          done
+          if [ -n "$LEDGER" ]; then
+            export PR_REVIEW_OUTCOMES_URI="s3://$LEDGER/pr-review/outcomes"
+          fi
+          python3 scripts/review-telemetry/record-outcome.py --pr "$PR" --repo "${{ github.repository }}"
+
+      - name: Upload outcome record
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-outcome-pr${{ github.event.pull_request.number }}
+          path: .pr-review-outcomes/
+          include-hidden-files: true
+          overwrite: true
+          retention-days: 30
+          if-no-files-found: ignore
+
 env:
   ESC_ACTION_OIDC_AUTH: true
   ESC_ACTION_OIDC_ORGANIZATION: pulumi

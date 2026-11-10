@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud Organizations"
-meta_desc: Organizations are a space for you to collaborate on shared projects and stacks. Learn more about how Organizations work in the Pulumi Cloud.
+meta_desc: Organizations are a space for you to collaborate on shared projects and stacks. Learn more about how Organizations work in Pulumi Cloud.
 title: "Organizations"
 h1: Pulumi Cloud organizations
 menu:
@@ -33,12 +33,16 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
 | All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Stacks](/docs/iac/concepts/stacks/). |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
-| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/iac/operations/continuous-delivery/). |
+| Settings | Organization settings including subscription and payment information and history, billing managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/iac/operations/continuous-delivery/). |
 
 ## Creating an organization
 
-Creating an organization will start a free trial that has access to all features.
-At the end of the trial, you can choose the Team, Enterprise, or Business Critical edition.
+You create your first organization right after you sign up, and you choose then between a Free organization for a personal project and a free trial for working with your team. See [Accounts and organizations](/docs/administration/concepts/accounts/#accounts-and-organizations).
+
+Every organization you create after that starts a free trial that has access to all features.
+At the end of the trial, choose the edition that fits your needs. Free supports
+one user. Essentials, Pro, and Enterprise support multiple users.
+Note that you can own only one Free organization at a time.
 Learn more about what each one includes on the [pricing page](/pricing/).
 
 {{% notes type="info" %}}
@@ -83,11 +87,13 @@ To invite a new member:
 
 New member invitation links never expire and may only be used one time.
 
+A new member who joins through an invite follows the organization's [default role](/docs/administration/concepts/rbac/default-roles/), unless you assign another role when you send the invite.
+
 Pulumi organization administrators can monitor current organization members and pending invitations on the Members console page. For pending invitations, administrators can re-send email invitations, copy links for both email and link generated invitations, and revoke invitations. The invitation status column in the members table includes the date an invitation was sent, and will note if a potential member encountered an error while attempting to accept an invitation. In this case, a tooltip will share the exact error that was encountered.
 
 ## Switching between organizations
 
-The organization menu displays your individual organization and all of the organizations you belong to.
+The organization menu displays all the organizations you belong to.
 
 To switch to a different organization:
 
@@ -96,11 +102,21 @@ To switch to a different organization:
 
 ## Organization roles
 
-Every member of an organization has a role: the built-in Admin, Member, or Billing Manager, or a custom role. For what each one grants, see [Roles](/docs/administration/concepts/rbac/roles/#pulumi-defined-roles). For delegating billing access without admin rights, see [Billing Managers](/docs/administration/concepts/billing-managers/).
+Every member of an organization has a role: a built-in role such as Builder, Admin, or Billing Manager, or a custom role. Members follow the organization's [default role](/docs/administration/concepts/rbac/default-roles/) unless an admin assigns them another one. For each role's permissions, see [Roles](/docs/administration/concepts/rbac/roles/#pulumi-defined-roles). For delegating billing access without admin rights, see [Billing Managers](/docs/administration/concepts/billing-managers/).
+
+### Changing a member's role
+
+You must be an organization admin to change a member's role.
+
+1. Navigate to **Settings** > **Access management** and select the **Members** tab.
+1. In the member's **Role** column, choose the new role.
+1. Confirm the change.
+
+In editions without [custom roles](/docs/administration/concepts/rbac/roles/#custom-roles), the choices are Member, which makes the member follow the organization's default role, Admin, and Billing Manager.
 
 ## Updating billing information
 
-Organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
+Organization admins and billing managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
 
 To update billing information:
 
@@ -108,6 +124,10 @@ To update billing information:
 1. Under **Payment methods**, select **Update**.
 
 If you need to delegate billing-only access to a team member without granting full admin rights, see [Billing Managers](/docs/administration/concepts/billing-managers/).
+
+## Viewing and downloading invoices
+
+If your organization is on a self-serve edition, you can download your invoices from the bottom of your organization's billing page. To get there, select **Settings** > **Billing & usage** in the left navigation bar, or go directly to `https://app.pulumi.com/<org-name>/settings/billing-usage`. Pulumi also emails a receipt for each invoice to your organization's billing email address.
 
 ## Changing the company name on invoices
 
@@ -124,7 +144,7 @@ If you need a legal entity name on invoices that is different from your organiza
 
 ## Transferring stacks
 
-Stack admins can transfer stacks one at a time between their individual organization and a shared organization, or between shared organizations. Organization admins can transfer stacks in bulk.
+Stack admins can transfer stacks one at a time between organizations, including from a Free organization to one shared with other people. Organization admins can transfer stacks in bulk.
 
 Transferring a stack requires two permissions: the right to transfer the stack from its current owner, and the right to create stacks in the destination organization. Both are configured through your organization's access controls — see [Role-based access control](/docs/administration/concepts/rbac/) for details.
 
@@ -159,12 +179,14 @@ To restore a stack:
 
 Organization deletion is a permanent action and can only be performed by an organization admin.
 
+Before deleting an organization, make sure you have [transferred any stacks](#transferring-stacks) you want to keep to another organization. Deleting an organization does not delete any cloud resources its stacks provisioned — those keep running in your cloud provider account.
+
 To delete an organization:
 
-1. Navigate to **Settings**.
-1. Select **Delete organization**.
+1. Navigate to **Settings** > **Billing & usage** (`https://app.pulumi.com/<org-name>/settings/billing-usage`) and select **Cancel subscription**. Pulumi Cloud doesn't delete an organization while its subscription is active.
+1. Navigate to **Settings** > **General** (`https://app.pulumi.com/<org-name>/settings/general`) and select **Delete organization**.
 
-Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization.
+Replace `<org-name>` with your organization's name.
 
 For more information, see [How can I delete a Pulumi organization?](/docs/support/faq/pulumi-cloud/#how-can-i-delete-a-pulumi-organization)
 

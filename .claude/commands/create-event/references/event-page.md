@@ -8,12 +8,11 @@ The single source of truth for the schema is `archetypes/event/index.md` (its co
 
 | Field | Rule |
 |---|---|
-| `title` | ≤ 60 characters, sentence case. Hard limit from the marketing template; trim with the user rather than truncating silently. |
+| `title` | ≤ 60 characters, sentence case (the Linear issue keeps Notion's title case; the page doesn't). Hard limit from the tracking issue's **Session Title** field; trim with the user rather than truncating silently. |
 | `meta_desc` | 50–160 characters, one sentence — it's the card text on /events/ and the search snippet. |
 | `meta_image` / `meta_image_square` | Leave **blank** by default: the build auto-generates an on-brand card (landscape + square) from frontmatter. Set only when event-meta-image renders an enriched card into the bundle (`/events/<slug>/meta.png`, `/events/<slug>/meta-square.png`). |
 | `gated` | `true` renders the registration form (needs `form.hubspot_form_id`). Pulumi-hosted workshops/webinars default gated. |
-| `external` | `true` → `url_slug` becomes the external URL and `block_external_search_index: true` is required. No form. |
-| `url_slug` | Must equal the bundle directory name (internal events). |
+| `event_url` | For an event hosted elsewhere. An `https://…` URL (a third-party page, opened in a new tab) or a `/…` path (another Pulumi page). The generated `/events/<slug>/` stub redirects there and is never indexed; the list and RSS link out. Omit for a normal event that renders its own page here. No form. |
 | `event_type` | `workshop` \| `webinar` \| `talk`. Also the default card overline (uppercased). |
 | `sortable_date` | ISO 8601 with milliseconds and the offset valid **on that date** — see recipe. Sorts the list, dates schema.org, stamps the card. |
 | `youtube_url` | Leave empty until the event has run. Setting it flips the page to the on-demand layout (no form, out of "Upcoming"). Multi-session: only after the **last** session. |
@@ -42,7 +41,7 @@ Harvested from existing `content/events/*/index.md`; these drive the /events/ fi
 - `level` (exactly one): `Beginner` · `Intermediate` · `Advanced`
 - `topics`: Kubernetes · AI · Platform Engineering · DevOps · Docker · DevSecOps · Security · Secrets Management · Pulumi ESC · Automation · Infrastructure as Code · Pulumi Features · Developer Productivity · CI/CD
 - `clouds`: AWS · Azure · Google Cloud · Oracle
-- `languages`: TypeScript · Python · Golang · C# · Java · YAML
+- `languages`: TypeScript · Python · Golang · C# · Java · YAML · HCL
 
 Empty arrays are fine — most events set only `topics` and maybe one cloud. Before minting a new value, grep: `grep -rh "topics:" content/events/*/index.md | sort -u`.
 
@@ -60,13 +59,13 @@ presenters:
 
 ## Registration form IDs
 
-`form.hubspot_form_id` (UUID) and `form.salesforce_campaign_id` (`701…`, 18 chars) are **created by marketing after the tracking issue is filed** and typically arrive as a comment on that issue. Sequencing:
+`form.hubspot_form_id` (UUID) and `form.salesforce_campaign_id` (`701…`, 18 chars) are **created by marketing** while working the Linear tracking issue's "HubSpot form and Lists" and "SF campaign …" sub-issues. Sequencing:
 
-1. Issue filed → marketing builds the HubSpot form + SF campaign → posts IDs on the issue.
-2. Until then a gated page carries empty strings with a `# TODO: wire in from pulumi/marketing#<n>` comment, and the PR body flags it.
-3. When the IDs land, rerun `/create-event <issue-url>` — update mode wires them in.
+1. Tracking issue exists in Linear → marketing builds the HubSpot form + SF campaign → posts the IDs on a sub-issue, on the parent, or as a review suggestion on the docs PR.
+1. Until then a gated page carries empty strings with a `# TODO: wire in from <MA-n> (<linear-url>) once marketing creates the form and campaign.` comment, and the PR body flags it.
+1. When the IDs land, rerun `/create-event <MA-n or Linear URL>`; update mode wires them in. If they arrive as a PR suggestion instead, apply it in a commit (one lane per line — don't also click the suggestion button).
 
-Extraction regexes (scan issue comments): HubSpot `[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}` · Salesforce `\b701[A-Za-z0-9]{15}\b`.
+Where to look and the extraction regexes: `references/linear-issue.md` §Form IDs.
 
 ## Multi-session events (`sessions:`)
 
@@ -85,7 +84,7 @@ Fresh clones/worktrees may lack node deps. Best effort, in order: try `make lint
 1. Frontmatter parses: `python3 -c "import yaml; yaml.safe_load(open('content/events/<slug>/index.md').read().split('---')[1])"`
 2. `title` ≤ 60 chars; `meta_desc` 50–160 chars.
 3. `event_type` ∈ {workshop, webinar, talk}; `tags.level` ∈ {Beginner, Intermediate, Advanced}.
-4. `url_slug` == directory name (or external URL + `block_external_search_index: true`).
+4. Directory name matches the slug; `event_url`, when set, is an `https://…` URL or a `/…` path.
 5. `sortable_date` matches `\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}[+-]\d{2}:\d{2}` and the offset came from the recipe.
 6. Sessions rules above, when present.
 7. No trailing whitespace; file ends with a newline.

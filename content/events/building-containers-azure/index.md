@@ -15,17 +15,6 @@ unlisted: false
 # to fill out the form before viewing.
 gated: false
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: building-containers-azure
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
@@ -45,7 +34,7 @@ location: virtual
 description: |
     Let’s explore more about building up a containerized microservices architecture on Azure using infrastructure as code and cloud engineering principles. We’ll use Go to build up our new architecture, and we’ll explore more about stacks, inputs and outputs, secrets, and more.
 
-    If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/), [the Pulumi CLI](https://www.pulumi.com/docs/install/), [Go](https://www.pulumi.com/docs/languages-sdks/go/), and an Azure account (free tier is okay).
+    If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/), [the Pulumi CLI](https://www.pulumi.com/docs/install/), [Go](https://www.pulumi.com/docs/iac/languages-sdks/go/), and an Azure account (free tier is okay).
 
 # The event presenters
 presenters:

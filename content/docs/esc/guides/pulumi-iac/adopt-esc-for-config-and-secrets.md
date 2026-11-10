@@ -38,7 +38,7 @@ config:
 
 The program reads them with the standard [Configuration API](/docs/iac/concepts/config/):
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -98,6 +98,22 @@ config:
   dbConnectionString:
     type: string
     secret: true
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+Pulumi HCL reads each config key into the `variable` with the same name, minus the `myapp:` prefix, so these names stay camelCase to match the keys.
+
+```hcl
+variable "containerImage" {
+  type = string
+}
+
+variable "dbConnectionString" {
+  type      = string
+  sensitive = true
+}
 ```
 
 {{% /choosable %}}

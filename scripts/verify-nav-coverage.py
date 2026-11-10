@@ -21,8 +21,8 @@ HOW PAGES BECOME REACHABLE:
     - Overview link when parent has menu children
 
 ACTIVE MENUS (defined in layouts/partials/docs/menu.html):
-    get-started, iac, esc, deployments, insights, idp, ai, migration,
-    administration, reference, support
+    get-started, iac, esc, deployments, discovery-governance, idp, ai,
+    migration, administration, reference, support
 
 EXIT CODES:
     0 = All pages reachable, no issues
@@ -35,7 +35,7 @@ from pathlib import Path
 
 # Active menus defined in layouts/partials/docs/menu.html
 ACTIVE_MENUS = {
-    'get-started', 'iac', 'esc', 'deployments', 'insights',
+    'get-started', 'iac', 'esc', 'deployments', 'discovery-governance',
     'idp', 'ai', 'migration', 'administration', 'reference', 'support'
 }
 

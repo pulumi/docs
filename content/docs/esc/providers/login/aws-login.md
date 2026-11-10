@@ -15,13 +15,15 @@ aliases:
     - /docs/esc/concepts/providers/login/aws-login/
 ---
 
-The `aws-login` provider enables you to log in to your AWS account using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to access AWS resources or fetch secrets using the `aws-secrets` provider.
+The `aws-login` provider enables you to log in to your AWS account using OpenID Connect or by providing static credentials. The provider returns a set of credentials that you can use to access AWS resources or to fetch secrets with the `aws-secrets` provider.
 
 ## Examples
 
 ### OIDC
 
-OIDC is the recommended way to log in to AWS. Pulumi Cloud exchanges a short-lived OIDC token for temporary AWS credentials by assuming an IAM role, so there are no long-lived keys to store or rotate.
+OIDC is the recommended way to log in to AWS. Pulumi Cloud exchanges a short-lived OIDC token for temporary AWS credentials by assuming an IAM role, so there are no long-lived keys to store or rotate, and nothing left over to [trigger an AWS CLI credential error](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/) down the line.
+
+Before you use the `oidc` input, register Pulumi Cloud as an OIDC identity provider in your AWS account and create an IAM role whose trust policy allows it to assume the role. For the full setup, see [Configuring OpenID Connect for AWS](/docs/esc/guides/configuring-oidc/aws/).
 
 The `aws-login` provider's outputs can be consumed by the [Pulumi AWS provider](https://www.pulumi.com/registry/packages/aws/), the `aws` CLI, and the AWS SDKs. Because all three read the same standard AWS environment variables, a single `environmentVariables` block covers all three:
 
@@ -47,7 +49,7 @@ values:
 
 The `static` input lets you supply existing AWS credentials — an IAM user's access key, or temporary credentials from another source — instead of having ESC generate them through OIDC. Whichever method you use, `aws-login` normalizes the result into one uniform set of outputs (`accessKeyId`, `secretAccessKey`, `sessionToken`). Everything downstream — `environmentVariables`, the `aws-secrets` provider, and the `aws-parameter-store` provider — consumes those outputs the same way regardless of how you logged in. That means you can use static credentials for local development and OIDC for production, or migrate from one to the other, without changing a single consumer.
 
-Store the credentials as encrypted ESC secrets rather than committing them in plaintext. You can encrypt a value in place with `pulumi env set --secret <org>/<project>/<environment> aws.creds.secretAccessKey <value>`, or wrap a literal with the `fn::secret` function as shown below:
+Store the credentials as encrypted ESC secrets rather than committing them in plaintext. You can encrypt a value in place with `pulumi env set --secret <org>/<project>/<environment> aws.creds.secretAccessKey <value>`, or wrap a literal with the `fn::secret` function, as in the following example:
 
 ```yaml
 values:
@@ -70,9 +72,9 @@ Prefer OIDC wherever it is available. Static credentials are long-lived secrets 
 
 ### Scoping down a session
 
-You can narrow what an assumed session is allowed to do with two optional `oidc` inputs:
+Two optional `oidc` inputs let you restrict access further:
 
-- `subjectAttributes` customizes the OIDC token's subject (`sub`) claim — for example, to encode the specific environment or user into the claim so your IAM role's trust policy can restrict which environments may assume it. See [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim).
+- `subjectAttributes` customizes the OIDC token's subject (`sub`) claim, for example to encode the specific environment or user into the claim so your IAM role's trust policy can restrict which environments may assume it. See [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim).
 - `policyArns` attaches additional managed policies to the session. The effective permissions are the *intersection* of the role's permissions and these policies, so this is a convenient way to grant a session strictly less than the role allows.
 
 ```yaml
@@ -88,18 +90,6 @@ values:
           policyArns:
             - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
 ```
-
-## Schema reference
-
-{{< esc-schema-updated >}}
-
-### Inputs
-
-{{< esc-schema type="provider" name="aws-login" section="inputs" >}}
-
-### Outputs
-
-{{< esc-schema type="provider" name="aws-login" section="outputs" >}}
 
 ## Consuming the credentials
 
@@ -140,9 +130,9 @@ values:
 
 The same `login: ${aws.login}` pattern works for the [`aws-parameter-store`](/docs/esc/providers/secrets/aws-parameter-store/) provider. For the full set of options each provider accepts, see the [`aws-secrets`](/docs/esc/providers/secrets/aws-secrets/) and [`aws-parameter-store`](/docs/esc/providers/secrets/aws-parameter-store/) documentation.
 
-To validate your configuration, open the consuming environment with the `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/):
+To validate your configuration, open the consuming environment with the `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/).
 
-Make sure to replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and environment identifier respectively. You should see output similar to the following:
+Replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and environment identifier. You should see output like the following:
 
 ```json
 {
@@ -159,9 +149,23 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
 }
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="aws-login" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="aws-login" section="outputs" >}}
+
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/aws/) documentation.
+
+If you need a raw OIDC token to exchange with another service yourself, use [`fn::open::oidc`](/docs/esc/providers/login/oidc/) instead.
 
 ## Troubleshooting
 
@@ -179,9 +183,9 @@ Most `aws-login` failures come from the OIDC trust relationship between Pulumi C
 
 **Symptom:** the assume-role call is rejected even though the role exists and the OIDC provider is configured.
 
-**Cause:** the `aud` or `sub` claim Pulumi sends doesn't satisfy the trust policy's `StringEquals` / `StringLike` conditions — often a wrong organization name, or a `subjectAttributes` change that altered the subject format.
+**Cause:** the `aud` or `sub` claim Pulumi sends doesn't match the trust policy's `StringEquals` / `StringLike` conditions — often a wrong organization name, or a `subjectAttributes` change that altered the subject format.
 
-**Fix:** confirm the `aud` condition equals `aws:<your-pulumi-org>` (for the legacy `default` project, just `<your-pulumi-org>`), and that the `sub` condition matches your environment. If you customize the subject with `subjectAttributes`, update the `sub` condition to match — see [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim).
+**Fix:** confirm the `aud` condition equals `aws:<your-pulumi-org>` (for the legacy `default` project, `<your-pulumi-org>` with no prefix), and that the `sub` condition matches your environment. If you customize the subject with `subjectAttributes`, update the `sub` condition to match. See [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim).
 
 ### DurationSeconds exceeds the MaxSessionDuration set for this role
 

@@ -1,0 +1,17 @@
+{{/*
+    Inline attributed quote: small round headshot + name, then the words.
+    Looks up data/team/team/<id>.toml for name and headshot.
+
+    {{< say author="jim-dowling" >}}
+    Quote text (markdown ok).
+    {{< /say >}}
+*/}}
+{{ $id := .Get "author" }}
+{{ $p := index site.Data.team.team $id }}
+<div class="say flex items-start gap-3 my-6">
+    <img class="rounded-full w-10 h-10 object-cover flex-shrink-0 m-0 mt-1" src="/images/team/{{ $id }}.jpg" alt="{{ $p.name }}">
+    <div class="flex-1">
+        <div class="text-sm font-semibold text-gray-700 m-0 mb-1">{{ $p.name }}</div>
+        <div class="say-body m-0">{{ .Inner | markdownify }}</div>
+    </div>
+</div>

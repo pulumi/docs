@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.pulumi.cloud.sdk"},{"l":"com.pulumi.cloud.sdk.api"},{"l":"com.pulumi.cloud.sdk.model"}]

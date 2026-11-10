@@ -37,4 +37,4 @@ If you have a system-wide proxy server running on your machine, it may be miscon
 
 ## Cannot access a DIY backend
 
-If you're using a [DIY backend](/docs/iac/concepts/state-and-backends/#using-a-diy-backend) and see an error like `read ".pulumi\\meta.yaml": blob (key ".pulumi/meta.yaml") ... AccessDenied` when running `pulumi login` or other commands, the CLI reached your storage provider but couldn't authenticate or wasn't configured correctly. See [Error reading `.pulumi/meta.yaml`](/docs/iac/guides/basics/using-a-diy-backend/#error-reading-pulumimetayaml) for common causes and fixes.
+If you're using a [DIY backend](/docs/iac/concepts/state-and-backends/#using-a-diy-backend) and see an error like `read ".pulumi\\meta.yaml": blob (key ".pulumi/meta.yaml") ... AccessDenied` when running `pulumi login` or other commands, the CLI reached your storage provider but couldn't authenticate or wasn't configured correctly. See [Error reading `.pulumi/meta.yaml`](/docs/iac/operations/stack-management/using-a-diy-backend/#error-reading-pulumimetayaml) for common causes and fixes.

@@ -37,7 +37,7 @@ Ensure you have:
 - installed the [Pulumi CLI](/docs/install/)
 - installed [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/#install-wrangler/)
 - a valid and properly scoped [Cloudflare API token](https://developers.cloudflare.com/workers/wrangler/ci-cd/#api-token)
-- a Pulumi Cloud account. You can sign up for an [always-free, individual tier](https://app.pulumi.com/signup)
+- a Pulumi Cloud account. You can sign up for the [Free edition](https://app.pulumi.com/signup)
 
 {{< notes type="info" >}}
 **New to Pulumi ESC?** Complete the [Getting Started tutorial](https://www.pulumi.com/docs/esc/get-started/)
@@ -177,7 +177,7 @@ Using infrastructure as code (IaC) to manage Workers? See the next section to se
 
 ## Manage Cloudflare Worker Secrets in IaC
 
-Pulumi ESC works hand-in-hand with [Pulumi IaC](https://www.pulumi.com/docs/get-started/) to simplify configuration management.
+Pulumi ESC works hand-in-hand with [Pulumi IaC](/up/) to simplify configuration management.
 
 Learn how to:
 
@@ -190,7 +190,7 @@ Learn how to:
 In addition to the [prerequisites above](#prerequisites), ensure you have:
 
 - installed [Pulumi CLI](https://www.pulumi.com/docs/install/)
-- installed a [Pulumi-supported programming language](https://www.pulumi.com/docs/languages-sdks/)
+- installed a [Pulumi-supported programming language](https://www.pulumi.com/docs/iac/languages-sdks/)
 
 {{< notes type="info" >}}
 **New to Pulumi IaC?** Complete the [Getting Started tutorial](https://developers.cloudflare.com/pulumi/tutorial/hello-world/).

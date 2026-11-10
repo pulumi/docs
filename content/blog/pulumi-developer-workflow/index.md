@@ -2,7 +2,7 @@
 title: "The Pulumi 'Push to start' GitOps Experience"
 date: 2024-01-23T19:41:13Z
 draft: false
-meta_desc: "Of all the cloud tools and tricks, AI + Pulumi + Github is THE cloud developer story of 2024. It's your opportunity. Will you capture it or just let it slip?"
+meta_desc: "Of all the cloud tools and tricks, AI + Pulumi + GitHub is THE cloud developer story of 2024. It's your opportunity. Will you capture it or just let it slip?"
 authors:
     - kat-morgan
 tags:
@@ -41,7 +41,7 @@ This is a "bring your own [GitHub](https://github.com) login" event, so refresh 
 
 >
 > Hint:
-> all of the steps in this demo are ready to run yourself from the [Pulumi Devcontainer](https://github.com/pulumi/devcontainer) using just your web browser and a Github account. Even better, they are real activities that Pulumians use every day to orchestrate the cloud too!
+> all of the steps in this demo are ready to run yourself from the [Pulumi Devcontainer](https://github.com/pulumi/devcontainer) using just your web browser and a GitHub account. Even better, they are real activities that Pulumians use every day to orchestrate the cloud too!
 >
 
 ## New technology learning advice
@@ -63,7 +63,7 @@ How can we overcome the learning curve? Picking up and mastering a new tool can 
 
 Recognizing achievable goals can be tricky when you are learning something new. Always over-estimate the complexity of each step. If you overestimate how complicated a task might be, the biggest risk is accomplishing the goal faster than you think! Either way, the learning journey should be enjoyable and rewarding by following this rule.
 
-Helpful tools are more abundant than ever. I recommend Pulumi as one of the most helpful tools but that is my bias showing through. Consider how intuitive, durable, and well-integrated any tool selection you make will be. Today we're using multiple features and services of both the Pulumi and Pulumi Cloud offering, as well as demonstrating the benefits of a tightly integrated Git, Github, Devcontainers, and VSCode workflow to make light work of a traditionally considerably complicated achievement.
+Helpful tools are more abundant than ever. I recommend Pulumi as one of the most helpful tools but that is my bias showing through. Consider how intuitive, durable, and well-integrated any tool selection you make will be. Today we're using multiple features and services of both the Pulumi and Pulumi Cloud offering, as well as demonstrating the benefits of a tightly integrated Git, GitHub, Devcontainers, and VSCode workflow to make light work of a traditionally considerably complicated achievement.
 
 The resulting developer stack left me feeling like I would be successful automating anything. Be sure to share your experience with us in the [Pulumi Community Slack](https://join.slack.com/t/pulumi-community/shared_invite/zt-2amio1u4h-5Y35enT27Y0dk4N8ZYHbMg) or find us on [Twitter/X @PulumiCorp](https://twitter.com/PulumiCorp) too!
 
@@ -137,7 +137,7 @@ Next, let's review the tools we will depend on for developing and deploying our 
 | Kubectl                 | Kubernetes CLI                   |
 | Direnv                  | Automated Environment Variables  |
 | KinD                    | Local Kubernetes Infrastructure  |
-| Github CLI              | Github & Git Repository Binaries |
+| GitHub CLI              | GitHub & Git Repository Binaries |
 | curl, jq, act, awk, etc | Other useful tools               |
 
 ### Cloud-native ... cloud developer environment?
@@ -151,14 +151,14 @@ Alright, let's jump in and get started by launching a new [GitHub Codespaces].
   👇 Click this button to begin.👇
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://bit.ly/pulumi-devcontainer)
 
-If you prefer a more informed approach you can launch the same codespaces by navigating to the [Pulumi Devcontainer Repository](https://github.com/pulumi/devcontainer) or you can learn more about Codespaces at this [Github Codespaces Link](https://docs.github.com/en/codespaces/overview).
+If you prefer a more informed approach you can launch the same codespaces by navigating to the [Pulumi Devcontainer Repository](https://github.com/pulumi/devcontainer) or you can learn more about Codespaces at this [GitHub Codespaces Link](https://docs.github.com/en/codespaces/overview).
 
 Clicking the 'Open in GitHub Codespaces' button should take you directly into a new Codespaces session.
 
 [Pulumi Devcontainer]:https://github.com/pulumi/devcontainer
 
 > Note:
-> This demonstration is deeply integrated into the Web based Codespaces environment offered by Github. Alternatively, VSCode also supports running Devcontainers with Docker locally allowing you the benefit of [Pulumi Devcontainer](#pulumi-devcontainer) on your own hardware.
+> This demonstration is deeply integrated into the Web based Codespaces environment offered by GitHub. Alternatively, VSCode also supports running Devcontainers with Docker locally allowing you the benefit of [Pulumi Devcontainer](#pulumi-devcontainer) on your own hardware.
 >
 
 With a new codespaces session launched you should see the VSCode IDE in your browser. If you are not already familiar with VSCode, you can learn more about it in the [VSCode Docs](https://code.visualstudio.com/docs).
@@ -241,7 +241,7 @@ pulumi up -y
 
 Finally, it is day two. This is the beginning of a choose-your-own-adventure wonderland and the opportunities go almost as far as your imagination. This is where we commit our code and plan our next change requests and enhancements.
 
-We can commit this code to git. Build a Github Actions Workflow to automate the CI testing of our IaC with every git pr or commit. Once you have a production-ready IaC, you can add another to deploy to production clusters. If you run `make act` you will see how comfortable testing new GitHub actions workflows can be in the convenience of your new enhanced IDE workflow. You can see the dev container workflow running yourself right away by executing `make act` as a starting point.
+We can commit this code to git. Build a GitHub Actions Workflow to automate the CI testing of our IaC with every git pr or commit. Once you have a production-ready IaC, you can add another to deploy to production clusters. If you run `make act` you will see how comfortable testing new GitHub actions workflows can be in the convenience of your new enhanced IDE workflow. You can see the dev container workflow running yourself right away by executing `make act` as a starting point.
 
 To conclude, Pulumi is not a single tool. Pulumi is a complete cloud developer ecosystem. Tools, SDKs, and cloud services come together forming the most accelerated way to create your own cloud success legends.
 
@@ -272,10 +272,10 @@ Because no hero's journey is complete without a gruesome account of what came be
 
 ### Git Code Repository
 
-Now create a git code repository to version control this project infrastructure code in Github.
+Now create a git code repository to version control this project infrastructure code in GitHub.
 
 ```bash
-# Authenticate with Github before proceeding.
+# Authenticate with GitHub before proceeding.
 gh auth login --web --git-protocol https --scopes "repo,gist,read:packages,admin:org,delete_repo,codespace"
 
 # Create new Git Repository
@@ -286,10 +286,10 @@ gh repo create workshop --public \
 # Initialize the git repository
 git clone --recurse-submodules https://github.com/${GITHUB_USER}/workshop .
 
-# Configure `git` cli to use the `gh` cli for authentication with Github
+# Configure `git` cli to use the `gh` cli for authentication with GitHub
 gh auth setup-git
 
-# Configure the username and email associated with your Github account.
+# Configure the username and email associated with your GitHub account.
 git config --global user.email ${GIT_COMMITTER_EMAIL}
 git config --global user.name ${GITHUB_USER}
 
@@ -419,8 +419,8 @@ kind delete cluster --name kind
 gh repo delete ${GITHUB_USER}/workshop
 ```
 
-[Github Codespaces]:https://github.com/features/codespaces
-[Github's Codespaces Console]:https://github.com/codespaces
+[GitHub Codespaces]:https://github.com/features/codespaces
+[GitHub's Codespaces Console]:https://github.com/codespaces
 [Pulumi Devcontainer]:https://github.com/pulumi/devcontainer
 
 </details>

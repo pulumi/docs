@@ -153,7 +153,7 @@ go_function = cloudfunctions.Function(
 export("go_endpoint", go_function.https_trigger_url)
 ```
 
-The [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-serverless-raw) is available on Github.
+The [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-serverless-raw) is available on GitHub.
 
 ## Cold Starts
 
@@ -165,7 +165,7 @@ Despite the many advantages of serverless, one of the challenges of serverless i
 - Scheduled profile - warming is applied during peak use.
 - Autoscaling-based utilization - adds workers as service utilization increases.
 
-Deploying infrastructure with code lets you implement these [strategies](/blog/aws-lambda-provisioned-concurrency-no-cold-starts/) based on your application requirements. The code snippet below is an example of provisioned concurrency; a fully [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
+Deploying infrastructure with code lets you implement these [strategies](/blog/aws-lambda-provisioned-concurrency-no-cold-starts/) based on your application requirements. The code snippet below is an example of provisioned concurrency; a fully [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on GitHub.
 
 ```typescript
 // Read the config of whether to provision fixed concurrency for Lambda

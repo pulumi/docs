@@ -28,7 +28,7 @@
                                     <p class="mt-0 text-xs">{{ $item.name_title }}</p>
                                 </div>
                                 <div class="my-4 h-8">
-                                    {{ partial "customer-logo.html" (dict "logo" $item.company) }}
+                                    {{ partial "customer-logo.html" (dict "customer" $item.customer) }}
                                 </div>
                             </div>
                         </div>
@@ -129,9 +129,9 @@
                 <div class="md:w-1/3 p-4">
                     <div class="text-center p-6 h-full">
                         {{ partial "color-icon.html" (dict "icon" "buildings" "icon_color" "blue") }}
-                        <h5>Self-hosted Runners</h5>
+                        <h5>Customer-managed Runners</h5>
                         <p>
-                            Run agents on your own private infrastructure for more control over your Pulumi Deployments.
+                            Run deployments, Discovery scans, and audit policy evaluations on runners in your own private infrastructure.
                         </p>
                     </div>
                 </div>

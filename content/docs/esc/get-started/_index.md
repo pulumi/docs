@@ -43,8 +43,8 @@ curl -fsSL https://get.pulumi.com | sh
 
 {{% choosable os windows %}}
 
-```bat
-choco install pulumi
+```powershell
+winget install --exact --id Pulumi.Pulumi
 ```
 
 {{% /choosable %}}
@@ -126,7 +126,7 @@ You've created an environment, stored configuration and secrets, and retrieved t
 
 ## Add ESC to your Pulumi stack
 
-The most common way to use an ESC environment is to consume it from a Pulumi IaC stack, which centralizes configuration and secrets across all your stacks. This section assumes you already have a Pulumi IaC project with a stack, so that you have a `Pulumi.<stack-name>.yaml` stack configuration file to edit. If you don't, create one first by following a [Pulumi IaC get-started guide](/docs/get-started/).
+The most common way to use an ESC environment is to consume it from a Pulumi IaC stack, which centralizes configuration and secrets across all your stacks. This section assumes you already have a Pulumi IaC project with a stack, so that you have a `Pulumi.<stack-name>.yaml` stack configuration file to edit. If you don't, create one first by following the [Pulumi IaC get-started guide](/up/).
 
 {{< notes type="info" >}}
 **ESC requires the Pulumi Cloud backend.** Importing an ESC environment into a stack works only for Pulumi stacks that use Pulumi Cloud as their [state backend](/docs/iac/concepts/state-and-backends/). Stacks stored in DIY backends (such as S3, Azure Blob Storage, or the local filesystem) can't reference ESC environments.

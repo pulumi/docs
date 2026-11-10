@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "repo": "pulumi/docs",
+  "pr": 21782,
+  "head_sha": "49a63afe9075c80f228277429c9416de8b43ce55",
+  "run_id": "35659419927",
+  "generated_at": "2026-09-21T21:51:26Z",
+  "high_water": 0,
+  "findings": [],
+  "trail": [
+    {
+      "file": ".github/labels-pr-review.md",
+      "claim": "## Retired labels",
+      "verdict": "not-a-claim",
+      "line": 90,
+      "evidence": "evidence: \"## Retired labels\" is a section heading in the repo's own labels-tracking doc, introducing a table of retired label names with retirement dates and rationale that the doc's authors maintain themselves. It's a structural heading, not a\u2026; source: repo:.github/labels-pr-review.md (line 90)",
+      "source": "repo:.github/labels-pr-review.md (line 90)",
+      "route": "pass1",
+      "claim_id": "c1",
+      "type": "temporal",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": ".github/labels-pr-review.md",
+      "claim": "| Label | Retired | Why |",
+      "verdict": "not-a-claim",
+      "line": 92,
+      "evidence": "evidence: The text \"| Label | Retired | Why |\" is a markdown table header row defining column names, not an assertion of fact.; source: .github/labels-pr-review.md",
+      "source": ".github/labels-pr-review.md",
+      "route": "pass1",
+      "claim_id": "c2",
+      "type": "temporal",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": ".github/labels-pr-review.md",
+      "claim": "| `sentinel:preview` | 2026-09-21 | Opt-in preview of the Sentinel's pinned gate-status comment while the check is report-only. Retired when report-only went\u2026",
+      "verdict": "not-a-claim",
+      "line": 94,
+      "evidence": "evidence: (escalated from pass3) This is a line from the repo's own internal label documentation (`.github/labels-pr-review.md`), describing the retirement of a label used in the repo's own PR-review automation pipeline. It's a faithful\u2026; source: repo:.github/labels-pr-review.md (lines 90-101)",
+      "source": "repo:.github/labels-pr-review.md (lines 90-101)",
+      "route": "pass1",
+      "claim_id": "c3",
+      "type": "numerical",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": ".github/labels-pr-review.md",
+      "claim": "| `surface:v3` | 2026-09-14 | Per-PR opt-in to the v3 review comment surface, retired once the repo-wide `REVIEW_V3_COMMENTS` variable had soaked. |",
+      "verdict": "not-a-claim",
+      "line": 95,
+      "evidence": "evidence: This is a line from an internal PR-review labeling documentation file describing the repo's own label history/lifecycle (a per-PR opt-in label retired after a repo-wide variable soaked in) \u2014 a faithful description of the author's own\u2026; source: .github/labels-pr-review.md (reviewed file, self-description of internal tooling)",
+      "source": ".github/labels-pr-review.md (reviewed file, self-description of internal tooling)",
+      "route": "pass3",
+      "claim_id": "c4",
+      "type": "numerical",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": ".github/workflows/check-links.yml",
+      "claim": "# comment). Retired 2026-09-21: report-only now posts that comment on",
+      "verdict": "not-a-claim",
+      "line": 175,
+      "evidence": "evidence: This is a code comment in a GitHub Actions workflow file describing the PR author's own CI pipeline behavior (report-only mode posting a comment), not a falsifiable external assertion.; source: .github/workflows/check-links.yml L175",
+      "source": ".github/workflows/check-links.yml L175",
+      "route": "pass3",
+      "claim_id": "c5",
+      "type": "numerical",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": ".github/workflows/content-review-article.yml",
+      "claim": "# comment on a canary cohort only. Retired 2026-09-21: the comment",
+      "verdict": "not-a-claim",
+      "line": 1056,
+      "evidence": "evidence: This is a code comment/metadata line in a GitHub Actions workflow file, not a falsifiable factual assertion about a product, service, or capability. It describes internal workflow authoring notes, which is out of scope for fact-checking.; source: .github/workflows/content-review-article.yml (line 1056)",
+      "source": ".github/workflows/content-review-article.yml (line 1056)",
+      "route": "pass3",
+      "claim_id": "c6",
+      "type": "numerical",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": ".github/workflows/review-sentinel.yml",
+      "claim": "# (2026-09-21) \u2014 report-only now writes the comment on every PR \u2014 which",
+      "verdict": "not-a-claim",
+      "line": 114,
+      "evidence": "evidence: This is a code comment in a workflow file (.github/workflows/review-sentinel.yml) describing the PR author's own CI/CD pipeline change (report-only mode now writes comments on every PR), not a falsifiable third-party claim.; source: .github/workflows/review-sentinel.yml L114 (self-referential comment describing PR author's own pipeline change)",
+      "source": ".github/workflows/review-sentinel.yml L114 (self-referential comment describing PR author's own pipeline change)",
+      "route": "pass3",
+      "claim_id": "c7",
+      "type": "numerical",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": "CONTRIBUTING.md",
+      "claim": "- **The Sentinel check** is the one merge gate: review ran at your head SHA, every blocking finding answered, the right team approved (per\u2026",
+      "verdict": "not-a-claim",
+      "line": 35,
+      "evidence": "evidence: (escalated from pass3) CONTRIBUTING.md's description of the Sentinel merge gate matches the repo's own implementation in scripts/review-v3/sentinel.py, routing.py, and .github/workflows/review-sentinel.yml, all referencing\u2026; source: repo:CONTRIBUTING.md, repo:scripts/review-v3/sentinel.py, repo:.github/workflows/review-sentinel.yml",
+      "source": "repo:CONTRIBUTING.md, repo:scripts/review-v3/sentinel.py, repo:.github/workflows/review-sentinel.yml",
+      "route": "pass1",
+      "claim_id": "c8",
+      "type": "entity-spec",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": "scripts/review-v3/README.md",
+      "claim": "safe, and repo-wide is what makes it worth running \u2014 the `sentinel:preview`",
+      "verdict": "not-a-claim",
+      "line": 157,
+      "evidence": "evidence: This is a fragment of prose from the PR author's own README describing their tooling design (e.g. a `sentinel:preview` mode being \"safe\" and \"repo-wide\"), not a falsifiable third-party assertion checkable against an external source.; source: scripts/review-v3/README.md L157",
+      "source": "scripts/review-v3/README.md L157",
+      "route": "pass3",
+      "claim_id": "c9",
+      "type": "entity-spec",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": "scripts/review-v3/README.md",
+      "claim": "opt-in cohort (content-review, glow-up, link sweeps) was retired 2026-09-21",
+      "verdict": "not-a-claim",
+      "line": 158,
+      "evidence": "evidence: This is internal process documentation in scripts/review-v3/README.md describing the PR author's own review-pipeline design decisions (retiring the opt-in cohort mechanism for content-review/glow-up/link-sweep PRs), consistent with\u2026; source: https://github.com/pulumi/docs/pull/21610",
+      "source": "https://github.com/pulumi/docs/pull/21610",
+      "route": "pass3",
+      "claim_id": "c10",
+      "type": "numerical",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": "scripts/review-v3/sentinel.py",
+      "claim": "# link-sweep lanes labelled themselves). It was retired 2026-09-21: a dry run",
+      "verdict": "not-a-claim",
+      "line": 158,
+      "evidence": "evidence: This is a code comment fragment in a script file describing internal pipeline/tooling history (a lane being \"retired\"), not a falsifiable factual assertion suitable for external verification.; source: scripts/review-v3/sentinel.py:L158",
+      "source": "scripts/review-v3/sentinel.py:L158",
+      "route": "pass3",
+      "claim_id": "c11",
+      "type": "numerical",
+      "confidence": "high",
+      "framing": "none"
+    }
+  ],
+  "investigation_log": {
+    "cross-sibling-reads": "not run (not in a templated section)",
+    "external-claim-verification": "0 of 11 claims verified (0 unverifiable, 0 contradicted) \u00b7 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations \u00b7 routed: 0 inline, 4 Pass 1, 0 Pass 2, 7 Pass 3 (verified 0, contradicted 0, unverifiable 7).",
+    "cited-claim-spot-checks": "not run (no cited claims)",
+    "frontmatter-sweep": "not run (no frontmatter in diff)",
+    "temporal-trigger-sweep": "ran (recency words present in diff; spot-check in-review)",
+    "code-execution": "not run (no `static/programs/` change)",
+    "code-examples-checks": "ran (3 specialists: structural, existence, body-code-coverage); 0 findings",
+    "editorial-balance-pass": "not run (not under content/blog/)"
+  },
+  "editorial_balance": null,
+  "triaged": [],
+  "style_suggestions_count": 0,
+  "confidence": {
+    "mechanics": "TODO",
+    "facts": "TODO",
+    "code correctness": "TODO"
+  },
+  "summary": null,
+  "stances": [],
+  "history": [
+    {
+      "ts": "2026-09-21T21:51:26Z",
+      "summary": "initial review (pending publication)",
+      "sha": "49a63af"
+    }
+  ]
+}

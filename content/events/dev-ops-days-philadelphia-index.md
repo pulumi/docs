@@ -16,16 +16,9 @@ gated: false
 
 type: events
 
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
-external: true
 block_external_search_index: true
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
-url_slug: https://www.eventbrite.com/e/devopsdays-philadelphia-2025-september-30th-october-1st-2025-tickets-1549913154969
+event_url: https://www.eventbrite.com/e/devopsdays-philadelphia-2025-september-30th-october-1st-2025-tickets-1549913154969
 
 event_type: event # workshop | event
 

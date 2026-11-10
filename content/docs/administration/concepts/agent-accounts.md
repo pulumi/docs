@@ -7,14 +7,10 @@ menu:
     administration:
         name: Agent Accounts
         parent: administration-concepts
-        weight: 5
+        weight: 6
 aliases:
   - /docs/administration/organizations-teams/agent-accounts/
 ---
-
-{{% notes type="info" %}}
-Agent accounts are in **preview**. Behavior and limits may change based on feedback.
-{{% /notes %}}
 
 Agent accounts give AI agents a free ephemeral Pulumi Cloud account to work in, without requiring a human user to sign up first. When the Pulumi CLI detects it is running in an agent context and no Pulumi Cloud credentials are available, it creates an account automatically and continues. The human claims the account later to take permanent ownership.
 
@@ -79,7 +75,7 @@ In these cases, the CLI uses the existing credentials. If multiple agents run on
 ## See also
 
 - [Pulumi Cloud accounts](/docs/administration/concepts/accounts/)
-- [Pulumi Agent Skills](/docs/ai/skills/)
-- [Pulumi MCP server](/docs/ai/mcp-server/)
+- [Pulumi Agent Skills](/docs/ai/concepts/agent-skills/)
+- [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/)
 - [The agentic infrastructure era](/blog/the-agentic-infrastructure-era/) (blog post)
 - [Direct resource operations](/docs/iac/cli/direct-resource-operations/)

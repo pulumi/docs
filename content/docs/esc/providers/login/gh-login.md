@@ -33,9 +33,9 @@ defined by your GitHub App.
 This is different from installing the Pulumi GitHub App for Deployments and CI/CD integration, which should be installed according to the instructions in the [GitHub App documentation](/docs/integrations/version-control/github-app/#installation-and-configuration).
 {{% /notes %}}
 
-- To register an app on a personal account, visit: [https://github.com/settings/apps/new](https://github.com/settings/apps/new?contents=read&metadata=read&webhook_active=false&description=Enables%20access%20for%20a%20Pulumi%20ESC%20environment.&url=https://www.pulumi.com/product/esc/).
+- To register an app on a personal account, visit: [https://github.com/settings/apps/new](https://github.com/settings/apps/new?contents=read&metadata=read&webhook_active=false&description=Enables%20access%20for%20a%20Pulumi%20ESC%20environment.&url=https://www.pulumi.com/product/secrets-management/).
 
-- To register an app on an organization account, visit: [https://github.com/organizations/ORGANIZATION/settings/apps/new](https://github.com/organizations/ORGANIZATION/settings/apps/new?contents=read&metadata=read&webhook_active=false&description=Enables%20access%20for%20a%20Pulumi%20ESC%20environment.&url=https://www.pulumi.com/product/esc/).
+- To register an app on an organization account, visit: [https://github.com/organizations/ORGANIZATION/settings/apps/new](https://github.com/organizations/ORGANIZATION/settings/apps/new?contents=read&metadata=read&webhook_active=false&description=Enables%20access%20for%20a%20Pulumi%20ESC%20environment.&url=https://www.pulumi.com/product/secrets-management/).
 Replace ORGANIZATION with the name of the organization where you'd like to register the app.
 
 It is fine to deploy a separate GitHub app for each Pulumi environment, or to reuse an app across environments.
@@ -64,7 +64,7 @@ privateKey:
 
 ### Owner
 
-An installation access token is always scoped to a particular Github account, set by the environment as `owner`.
+An installation access token is always scoped to a particular GitHub account, set by the environment as `owner`.
 The `owner` property may refer to a personal account or an organization account. The owner or app manager of the account must first install
 the GitHub App that was registered earlier. For more information, see "[Installing your own GitHub App](https://docs.github.com/en/apps/using-github-apps/installing-your-own-github-app)"
 and "[Sharing your GitHub App](https://docs.github.com/en/apps/sharing-github-apps/sharing-your-github-app)".

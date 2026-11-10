@@ -12,7 +12,7 @@ tags:
 category: product
 ---
 
-We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from March and April. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/releases) and Pulumi Cloud features in the [new features blogs](/blog/tag/features).
+We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from March and April. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/releases) and Pulumi Cloud features in the [new features blogs](/blog/tags/features).
 
 <!--more-->
 
@@ -85,7 +85,7 @@ $ pulumi stack init dev-stack --teams devs
 
 ### Visual Indication of Retained Resources
 
-You can use the [`RetainOnDelete` resource option](https://www.pulumi.com/docs/intro/concepts/resources/options/retainondelete/) to let Pulumi retain the actual cloud resource while deleting it from your Pulumi stack. This option is useful, for instance, when you need to start managing the same resource from another stack or project.
+You can use the [`RetainOnDelete` resource option](/docs/iac/concepts/resources/options/retainondelete/) to let Pulumi retain the actual cloud resource while deleting it from your Pulumi stack. This option is useful, for instance, when you need to start managing the same resource from another stack or project.
 
 Now, the CLI will explicitly mark deleted or replaced resources as retained in the cloud. See the Plan column of the preview view:
 

@@ -1,5 +1,6 @@
 ---
 title: "10x Your Storage Performance with Amazon S3 Express One Zone and Pulumi"
+title_tag: "Amazon S3 Express One Zone with Pulumi"
 allow_long_title: True
 authors: ["joe-duffy"]
 tags: ["aws", "s3"]
@@ -274,4 +275,4 @@ In summary, here are the results:
 
 ## Conclusion
 
-In this post, we learned all about Amazon S3 Express One Zone, how to manage new buckets and their contents with infrastructure as code, and saw the awesome performance gains in action. To be up and running with Amazon S3 Express One Zone and infrastructure as code in minutes, go ahead and [get started with Pulumi for free today](/docs/get-started/). Happy cloud spelunking!
+In this post, we learned all about Amazon S3 Express One Zone, how to manage new buckets and their contents with infrastructure as code, and saw the awesome performance gains in action. To be up and running with Amazon S3 Express One Zone and infrastructure as code in minutes, go ahead and [get started with Pulumi for free today](/up/). Happy cloud spelunking!

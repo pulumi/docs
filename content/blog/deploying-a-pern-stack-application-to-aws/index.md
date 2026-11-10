@@ -8,10 +8,10 @@ category: tutorials
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 
-In this blog post, we will explore PERN stack applications and deploy one to AWS. *PERN* is an acronym for PostgreSQL, Express, React, and Node. A PERN stack application is a project that uses PostgreSQL, Express as an application framework, React as a user interface framework, and runs on Node. We will also use [Pulumi Crosswalk](/docs/iac/clouds/aws/guides/) to reduce the amount of code and provide a quick and straightforward path for deploying the application.
+In this blog post, we will explore PERN stack applications and deploy one to AWS. *PERN* is an acronym for PostgreSQL, Express, React, and Node. A PERN stack application is a project that uses PostgreSQL, Express as an application framework, React as a user interface framework, and runs on Node. We will also use [Pulumi Crosswalk](/docs/iac/guides/clouds/aws/) to reduce the amount of code and provide a quick and straightforward path for deploying the application.
 
 <!--more-->
 
@@ -348,4 +348,4 @@ In this example, I explained the basic principles behind PERN stack applications
 
 Next week, I'll demonstrate how to integrate applications with Kubernetes, and seamlessly deploy them to EKS using Pulumi.
 
-The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/master/aws-ts-pern-voting-app).
+The blog post's code can be [found on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-pern-voting-app).

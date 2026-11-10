@@ -21,7 +21,7 @@ aliases:
 
 Build, deploy, and manage Google Cloud infrastructure with Pulumi. This page links to every Pulumi capability for Google Cloud: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), cloud account scanning, and policy packs.
 
-To start from scratch, follow the [Google Cloud get-started guide](/docs/iac/get-started/gcp/).
+To start from scratch, follow the [get-started guide](/up/).
 
 ## Infrastructure as Code
 
@@ -58,15 +58,15 @@ ESC integrates directly with Google Cloud for short-lived credentials and secret
 - [Google Cloud OIDC login](/docs/esc/providers/login/gcp-login/) — generate short-lived Google Cloud credentials for Pulumi programs and workflows.
 - [Google Cloud Secret Manager](/docs/esc/providers/secrets/gcp-secrets/) — pull secrets from Secret Manager into ESC environments.
 
-## Insights
+## Discovery
 
-[Pulumi Insights](/docs/insights/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
+[Pulumi Discovery](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For Google Cloud, Insights connects projects to inventory existing resources, search across projects, and export data. See [Add a Google Cloud account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/insights/discovery/) for background.
+For Google Cloud, Discovery connects projects to inventory existing resources, search across projects, and export data. See [Add a Google Cloud account](/docs/discovery-governance/get-started/create-a-discovery-account/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/concepts/discovery/) for background.
 
 ## Policy packs
 
-[Pulumi Policies](/docs/insights/policy/) lets you enforce rules on infrastructure at preview and update time, rejecting stacks that violate security, cost, or compliance standards. [Pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) are maintained by Pulumi and cover common regulatory and best-practice frameworks.
+[Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) lets you enforce rules on infrastructure at preview and update time, rejecting stacks that violate security, cost, or compliance standards. [Pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) are maintained by Pulumi and cover common regulatory and best-practice frameworks.
 
 For Google Cloud:
 
@@ -76,6 +76,7 @@ For Google Cloud:
 - [PCI DSS for Google Cloud](/docs/reference/pre-built-policy-packs/pci-dss/google-cloud/)
 - [HITRUST CSF for Google Cloud](/docs/reference/pre-built-policy-packs/hitrust/google-cloud/)
 - [ISO/IEC 27001 for Google Cloud](/docs/reference/pre-built-policy-packs/iso-27001/google-cloud/)
+- [CMMC 2.0 for Google Cloud](/docs/reference/pre-built-policy-packs/cmmc/google-cloud/)
 - [CIS Kubernetes Benchmark on Google Cloud](/docs/reference/pre-built-policy-packs/cis-kubernetes/google-cloud/) — for GKE clusters.
 
 ## Migration

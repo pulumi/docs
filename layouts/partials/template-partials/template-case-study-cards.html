@@ -6,9 +6,9 @@
     be specified in pairs — they are grouped into a single column that matches the height of an
     adjacent full-height card.
 
-    Card data is pulled automatically from the matching case study .md file via its slug
-    (e.g. "snowflake" → content/case-studies/snowflake.md). The partial reads
-    customer_logo and quote_block from that file's frontmatter.
+    Card data comes from the customer's entry in data/customers.yaml: the logo, and the
+    link and quote from its `case_study:` block. A customer with no `case_study` is a
+    hard build failure.
 
     Schema:
     - title: Optional section heading
@@ -16,7 +16,7 @@
     - cta_text: Optional CTA link label
     - cta_link: Optional CTA link href
     - cards: Array of card objects. Each has:
-        - slug: Filename stem of the case study (e.g. "snowflake")
+        - customer: Customer id in data/customers.yaml (e.g. "snowflake")
         - size: "full" (logo + quote) or "half" (logo only). Half cards must come in pairs.
     - anchor: Optional anchor for section id
 */}}
@@ -28,23 +28,20 @@
 {{ $cards := .cards }}
 {{ $anchor := .anchor }}
 
-{{/* Build resolved card objects by looking up each slug in site pages */}}
 {{ $resolved := slice }}
 {{ range $cards }}
-    {{ $slug := .slug }}
-    {{ $size := .size | default "full" }}
-    {{ $page := site.GetPage (printf "/case-studies/%s" $slug) }}
-    {{ if $page }}
-        {{ $resolved = $resolved | append (dict
-            "slug"   $slug
-            "size"   $size
-            "link"   $page.RelPermalink
-            "logo"   $page.Params.customer_logo
-            "name"   $page.Params.customer_name
-            "quote"  $page.Params.quote_block.quote
-            "attrib" $page.Params.quote_block.quote_attrib
-        ) }}
+    {{ $customer := partial "customers/get.html" (dict "id" .customer "where" "template-case-study-cards.html") }}
+    {{ $study := $customer.case_study }}
+    {{ if not $study }}
+        {{ errorf "template-case-study-cards.html: customer %q has no case_study in data/customers.yaml." .customer }}
     {{ end }}
+    {{ $resolved = $resolved | append (dict
+        "size"     (.size | default "full")
+        "link"     $study.href
+        "customer" .customer
+        "quote"    $study.quote
+        "attrib"   $study.attribution
+    ) }}
 {{ end }}
 
 <section class="template-case-study-cards"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
@@ -101,22 +98,18 @@
                     <div class="flex flex-col gap-6 h-full">
                         {{ range .cards }}
                         <a href="{{ .link }}" class="case-study-card case-study-card--half">
-                            {{ if .logo }}
-                            <div class="flex items-center justify-center">
-                                {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
+                            <div class="case-study-card-logo flex items-center justify-center">
+                                {{ partial "customer-logo.html" (dict "customer" .customer) }}
                             </div>
-                            {{ end }}
                         </a>
                         {{ end }}
                     </div>
                     {{ else }}
                     {{ range .cards }}
                     <a href="{{ .link }}" class="case-study-card case-study-card--full h-full">
-                        {{ if .logo }}
-                        <div class="flex items-start mb-6">
-                            {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
+                        <div class="case-study-card-logo flex items-start mb-6">
+                            {{ partial "customer-logo.html" (dict "customer" .customer) }}
                         </div>
-                        {{ end }}
                         {{ if .quote }}
                         <blockquote class="font-semibold text-black border-0 mx-0 px-0 text-xl my-auto">
                             {{ .quote | markdownify }}
@@ -144,22 +137,18 @@
                     <div class="flex flex-col gap-6 h-full">
                         {{ range .cards }}
                         <a href="{{ .link }}" class="case-study-card case-study-card--half">
-                            {{ if .logo }}
-                            <div class="flex items-center justify-center">
-                                {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
+                            <div class="case-study-card-logo flex items-center justify-center">
+                                {{ partial "customer-logo.html" (dict "customer" .customer) }}
                             </div>
-                            {{ end }}
                         </a>
                         {{ end }}
                     </div>
                     {{ else }}
                     {{ range .cards }}
                     <a href="{{ .link }}" class="case-study-card case-study-card--full h-full">
-                        {{ if .logo }}
-                        <div class="flex items-start mb-6">
-                            {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
+                        <div class="case-study-card-logo flex items-start mb-6">
+                            {{ partial "customer-logo.html" (dict "customer" .customer) }}
                         </div>
-                        {{ end }}
                         {{ if .quote }}
                         <blockquote class="font-semibold text-black border-0 mx-0 px-0 text-xl my-auto">
                             {{ .quote | markdownify }}

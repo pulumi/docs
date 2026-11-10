@@ -32,7 +32,7 @@ The classic `docker.Image` resource has an equivalent pair: `imageName` (a plain
 
 The reason this distinction matters is `latest` — or any other mutable tag. A tag is just a pointer; pushing a new image with the same tag doesn't change the tag string itself, so nothing about the reference tells a downstream resource that the image changed. If an ECS task definition or a Kubernetes Deployment hard-codes `myapp:latest`, Pulumi sees no diff on that field between updates, and won't trigger a new deployment — you're relying on the orchestrator's own pull policy and restart behavior to eventually surface the new image, which is neither immediate nor guaranteed. Reference the image by digest instead, and every new build produces a genuinely different string. Pulumi's diff engine sees the change, and the task definition or Deployment update as part of the same `pulumi up`.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -340,6 +340,71 @@ public class App {
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    docker-build = {
+      source = "pulumi/docker-build"
+    }
+  }
+}
+
+resource "aws_ecr_repository" "app_repository" {
+  name = "app-repository"
+}
+
+data "aws_ecr_authorization_token" "auth" {
+  registry_id = aws_ecr_repository.app_repository.registry_id
+}
+
+resource "docker-build_image" "app_image" {
+  context = {
+    location = "./app"
+  }
+
+  dockerfile = {
+    location = "./app/Dockerfile"
+  }
+
+  push = true
+  tags = ["${aws_ecr_repository.app_repository.repository_url}:latest"]
+
+  registries {
+    address  = aws_ecr_repository.app_repository.repository_url
+    username = data.aws_ecr_authorization_token.auth.user_name
+    password = data.aws_ecr_authorization_token.auth.password
+  }
+}
+
+# The digest attribute is a stable sha256 digest, unlike the mutable "latest" tag above.
+resource "aws_ecs_task_definition" "app_task" {
+  family                   = "app"
+  requires_compatibilities = ["FARGATE"]
+  network_mode             = "awsvpc"
+  cpu                      = "256"
+  memory                   = "512"
+
+  container_definitions = jsonencode([{
+    name         = "app"
+    image        = "${aws_ecr_repository.app_repository.repository_url}@${docker-build_image.app_image.digest}"
+    essential    = true
+    portMappings = [{ containerPort = 8080 }]
+  }])
+}
+
+output "image_digest" {
+  value = docker-build_image.app_image.digest
+}
+```
+
+Two details are specific to consuming a native Pulumi package from HCL. The `source` has to carry the `pulumi/` prefix, or `docker-build` resolves to the OpenTofu registry instead. And the local name you give it in `required_providers` becomes the resource type's prefix, so keeping it as `docker-build` is what makes the type `docker-build_image`.
+
+Property shapes follow the schema: a single-object input such as `context` or `dockerfile` is assigned with `=`, while a list-of-objects input such as `registries` is written as a repeated block.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 The same principle applies to a Kubernetes `Deployment`: reference `image.digest` (or the equivalent `repoDigest` output on `docker.Image`) in the container spec's `image` field instead of a floating tag, and every `pulumi up` that produces a new image also produces a genuine spec change for Kubernetes to roll out.
@@ -350,7 +415,7 @@ The same principle applies to a Kubernetes `Deployment`: reference `image.digest
 
 Push the cache to a dedicated tag in the same repository you're already pushing images to. Most registries — including Google Artifact Registry and Docker Hub — accept this as just another manifest push; Amazon ECR needs the OCI-manifest options shown below (`imageManifest` and `ociMediaTypes`) because it doesn't accept BuildKit's default image-index cache manifest.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -627,6 +692,63 @@ public class App {
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    docker-build = {
+      source = "pulumi/docker-build"
+    }
+  }
+}
+
+resource "aws_ecr_repository" "app_repository" {
+  name = "app-repository"
+}
+
+data "aws_ecr_authorization_token" "auth" {
+  registry_id = aws_ecr_repository.app_repository.registry_id
+}
+
+resource "docker-build_image" "app_image" {
+  context = {
+    location = "./app"
+  }
+
+  push = true
+  tags = ["${aws_ecr_repository.app_repository.repository_url}:latest"]
+
+  registries {
+    address  = aws_ecr_repository.app_repository.repository_url
+    username = data.aws_ecr_authorization_token.auth.user_name
+    password = data.aws_ecr_authorization_token.auth.password
+  }
+
+  cache_from {
+    registry = {
+      ref = "${aws_ecr_repository.app_repository.repository_url}:cache"
+    }
+  }
+
+  cache_to {
+    registry = {
+      ref             = "${aws_ecr_repository.app_repository.repository_url}:cache"
+      image_manifest  = true
+      oci_media_types = true
+    }
+  }
+}
+
+output "image_ref" {
+  value = docker-build_image.app_image.ref
+}
+```
+
+`cacheFrom` and `cacheTo` are lists, so they are written as repeated blocks and named in HCL's `snake_case` — `cache_from` and `cache_to`, carrying `image_manifest` and `oci_media_types`.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 `imageManifest` and `ociMediaTypes` on the cache-to side aren't strictly required for every registry, but setting both is a safe default — some registries (Amazon ECR among them) reject the non-OCI cache manifest format that BuildKit produces without them.
@@ -717,7 +839,7 @@ Use `--mount=type=cache` to speed up repeated local or single-runner builds by s
 
 A build that also deploys couples two concerns that scale differently: builds happen on every commit, deploys happen on a release cadence, and a team often wants different approval gates for each. Splitting them into two Pulumi stacks — a build stack that owns the `docker-build.Image` resource and exports its digest, and a deploy stack that consumes that digest through a `StackReference` — keeps both concerns independently testable and independently promotable across environments.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -1084,6 +1206,82 @@ public class App {
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Build stack (acme/app-image/production)
+terraform {
+  required_providers {
+    docker-build = {
+      source = "pulumi/docker-build"
+    }
+  }
+}
+
+resource "aws_ecr_repository" "app_repository" {
+  name = "app-repository"
+}
+
+data "aws_ecr_authorization_token" "auth" {
+  registry_id = aws_ecr_repository.app_repository.registry_id
+}
+
+resource "docker-build_image" "app_image" {
+  context = {
+    location = "./app"
+  }
+
+  push = true
+  tags = ["${aws_ecr_repository.app_repository.repository_url}:latest"]
+
+  registries {
+    address  = aws_ecr_repository.app_repository.repository_url
+    username = data.aws_ecr_authorization_token.auth.user_name
+    password = data.aws_ecr_authorization_token.auth.password
+  }
+}
+
+output "repository_url" {
+  value = aws_ecr_repository.app_repository.repository_url
+}
+
+output "digest" {
+  value = docker-build_image.app_image.digest
+}
+```
+
+```hcl
+# Deploy stack (acme/app-deploy/production)
+resource "pulumi_stack_reference" "build" {
+  name = "acme/app-image/production"
+}
+
+locals {
+  repository_url = pulumi_stack_reference.build.outputs["repository_url"]
+  digest         = pulumi_stack_reference.build.outputs["digest"]
+  pinned_image   = "${local.repository_url}@${local.digest}"
+}
+
+resource "aws_ecs_task_definition" "app_task" {
+  family                   = "app"
+  requires_compatibilities = ["FARGATE"]
+  network_mode             = "awsvpc"
+  cpu                      = "256"
+  memory                   = "512"
+
+  container_definitions = jsonencode([{
+    name         = "app"
+    image        = local.pinned_image
+    essential    = true
+    portMappings = [{ containerPort = 8080 }]
+  }])
+}
+```
+
+The deploy stack reads the build stack's exports through the `pulumi_stack_reference` resource, whose `outputs` attribute is a map keyed by output name.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 This split only works cleanly when both stacks can reliably read and write state and each other's outputs regardless of which machine or CI runner is doing the reading — which is exactly what the [Pulumi Cloud state backend](/docs/iac/concepts/state-and-backends/) is built for. A self-managed backend (an S3 bucket or similar) can technically serve the same `StackReference` calls, but you take on the access control, availability, and durability of that storage yourself, on top of the infrastructure you actually set out to manage. Pulumi Cloud handles state locking, versioned state history, and encrypted output storage for you, and layers Pulumi ESC and Pulumi Deployments on top for exactly this build-stack/deploy-stack promotion workflow — it's the backend to default to for anything beyond a single-developer experiment.
@@ -1101,4 +1299,4 @@ That doesn't make `docker.Image` a poor choice for programs already built on it.
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) and [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/) — CI/CD workflow patterns this guide builds on.
 - [Stacks and stack references](/docs/iac/concepts/stacks/#stackreferences) — the mechanism behind the build/deploy split above.
 - [State and backends](/docs/iac/concepts/state-and-backends/) — why Pulumi Cloud is the recommended backend for multi-stack workflows like this one.
-- [AWS ECS](/docs/iac/guides/clouds/aws/ecs/) — deploying containerized applications to Amazon ECS with Pulumi.
+- [AWS ECS](/dev/tutorials/aws-ecs/) — deploying containerized applications to Amazon ECS with Pulumi.

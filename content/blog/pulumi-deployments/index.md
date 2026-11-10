@@ -48,7 +48,7 @@ Out of the box Pulumi Deployments offers your cloud engineering team a turn-key 
 
 ### `git push` to Deploy
 
-Using the Pulumi Github App (GitLab, Bitbucket, and others coming soon), `git push` to Deploy enables a rich git-based workflow for safely reviewing infrastructure changes and rolling them out across environments. Opening a Pull Request on GitHub will automatically trigger a `pulumi preview` and post the results back to the PR. You can also enforce successful previews as a [check](https://docs.github.com/en/rest/checks) that gates merging.
+Using the Pulumi GitHub App (GitLab, Bitbucket, and others coming soon), `git push` to Deploy enables a rich git-based workflow for safely reviewing infrastructure changes and rolling them out across environments. Opening a Pull Request on GitHub will automatically trigger a `pulumi preview` and post the results back to the PR. You can also enforce successful previews as a [check](https://docs.github.com/en/rest/checks) that gates merging.
 
 Once your PR is reviewed and merged, a Deployment runs automatically:
 

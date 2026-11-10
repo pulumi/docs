@@ -24,3 +24,7 @@ Procedures for setting up and running a Pulumi Cloud organization. Each guide is
 - [Audit logs](/docs/administration/guides/audit-logs/) — download your organization's audit log on demand, or stream it to AWS S3 or Microsoft Sentinel.
 - [Customer managed keys](/docs/administration/guides/customer-managed-keys/) — bring your own encryption key from an external key management system.
 - [Least privilege](/docs/administration/guides/least-privilege/) — apply least-privilege access across IaC, ESC, and CI/CD.
+
+## Compute
+
+- [Customer-managed runners](/docs/administration/guides/customer-managed-runners/) — set up, scale, and assign runner pools that run deployments, Discovery scans, and audit policy evaluations in your own infrastructure.

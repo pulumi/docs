@@ -33,13 +33,13 @@ category: product
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-The [Pulumi Service](/product/pulumi-service/) is the easiest way to use Pulumi’s open source, universal infrastructure as code SDK at scale and provides a fully managed experience. It handles infrastructure state and secrets, sets up SAML SSO, integrates with CI/CD pipelines, and enforces compliance rules.
+The [Pulumi Service](/product/) is the easiest way to use Pulumi’s open source, universal infrastructure as code SDK at scale and provides a fully managed experience. It handles infrastructure state and secrets, sets up SAML SSO, integrates with CI/CD pipelines, and enforces compliance rules.
 
 It’s been nearly four years since the Pulumi Service launched back in 2018. In these last four years, our customer base has grown significantly and as a result, the Service’s features and capabilities have grown with it.
 
 <!--more-->
 
-We’ve added features like [audit logs](/docs/administration/security-compliance/audit-logs/), [SAML SSO](/docs/administration/access-identity/saml/) and [SCIM](/docs/administration/access-identity/scim/), [Teams](/docs/pulumi-cloud/access-management/teams/), [Organization](/docs/administration/access-identity/access-tokens/) and [Team Access Tokens](/docs/administration/access-identity/access-tokens/), and much more! But throughout all these changes, the look and feel of the Service has largely stayed the same—until now! Today we’re excited to launch a set of improvements to the overall user experience of the Pulumi Service. These updates include:
+We’ve added features like [audit logs](/docs/administration/concepts/audit-logs/), [SAML SSO](/docs/administration/guides/saml/) and [SCIM](/docs/administration/guides/scim/), [Teams](/docs/administration/concepts/rbac/teams/), [Organization](/docs/administration/concepts/access-tokens/) and [Team Access Tokens](/docs/administration/concepts/access-tokens/), and much more! But throughout all these changes, the look and feel of the Service has largely stayed the same—until now! Today we’re excited to launch a set of improvements to the overall user experience of the Pulumi Service. These updates include:
 
 - Increased organizational insights on the Service Dashboard
 - Quick access to stacks with a new Stack Favorites feature

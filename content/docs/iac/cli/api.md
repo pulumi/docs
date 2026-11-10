@@ -21,7 +21,7 @@ The command is modeled after [`gh api`](https://cli.github.com/manual/gh_api): y
 `pulumi api` ships in three forms:
 
 * [`pulumi api <path-or-operation-id>`](/docs/iac/cli/commands/pulumi_api/) issues a single HTTP request against the named endpoint.
-* [`pulumi api list`](/docs/iac/cli/commands/pulumi_api_list/) (alias: `ls`) lists every endpoint exposed by the [Pulumi Cloud OpenAPI spec](/docs/reference/cloud-rest-api/). Output is a TTY-friendly table by default; pass `--output=json` to get a stable, scriptable envelope.
+* [`pulumi api list`](/docs/iac/cli/commands/pulumi_api_list/) (alias: `ls`) lists every endpoint exposed by the [Pulumi Cloud OpenAPI spec](/docs/reference/cloud-rest-api/). Output is a table in a terminal and a stable, scriptable JSON envelope when piped or redirected; pass `--output=table` or `--output=json` to choose explicitly.
 * [`pulumi api describe <path-or-operation-id>`](/docs/iac/cli/commands/pulumi_api_describe/) prints the parameters, request body, and response schemas for a single operation. Default output is a human-readable text render; pass `--output=markdown` for a piping-friendly markdown document or `--output=json` for the stable JSON envelope.
 
 ## Authentication
@@ -64,7 +64,7 @@ If a path template and a request body field share a parameter name, the first ma
 | `-H` / `--header` | Custom HTTP header `Key: Value` (repeatable). User headers win over the encoder's defaults (`Accept`, `Content-Type`); a user-supplied `Authorization` is dropped to keep the resolved CLI token in place. |
 | `--body` | Inline request body sent verbatim. Mutually exclusive with `--input`. |
 | `--input` | Read the request body from a file; `-` reads from stdin. |
-| `--paginate` | Follow continuation cursors and emit a single combined JSON envelope. Capped at 1000 pages; on truncation, network failure, or cancellation, the partial result is flushed so callers always have something to act on. |
+| `--all` | Follow continuation cursors and emit a single combined JSON envelope. Capped at 1000 pages; on truncation, network failure, or cancellation, the partial result is flushed so callers always have something to act on. |
 | `-i` / `--include` | Include the HTTP status line and response headers in the output. |
 | `--silent` | Suppress the response body on success. Errors are still printed. |
 | `--verbose` | Dump the resolved request and the full response to stderr. |
@@ -161,7 +161,7 @@ pulumi api /api/user --output=json | jq '.githubLogin'
 Walk every page of a paginated endpoint:
 
 ```bash
-pulumi api ListUserStacks --paginate | jq -r '.stacks[].stackName'
+pulumi api ListUserStacks --all | jq -r '.stacks[].stackName'
 ```
 
 ### Discovery and dry-run

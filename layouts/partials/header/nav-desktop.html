@@ -44,13 +44,33 @@
                   {{ with $section.heading }}
                     <span class="px-3 pt-2 font-mono text-xs uppercase tracking-wide text-gray-600">{{ . }}</span>
                   {{ end }}
-                  <ul class="grid gap-x-6 gap-y-0.5 {{ if eq $section.columns 2 }}grid-cols-2{{ else }}grid-cols-1{{ end }}">
-                    {{ range $sub := $section.items }}
-                      <li>
-                        {{ partial "header/nav-dropdown-item.html" (dict "item" $sub "variant" "desktop") }}
-                      </li>
-                    {{ end }}
-                  </ul>
+                  {{ $promos := where $section.items "promo" true }}
+                  {{ if $promos }}
+                    <div class="grid grid-cols-2 gap-x-6">
+                      <ul class="grid grid-cols-1 gap-y-0.5">
+                        {{ range $sub := where $section.items "promo" "!=" true }}
+                          <li>
+                            {{ partial "header/nav-dropdown-item.html" (dict "item" $sub "variant" "desktop") }}
+                          </li>
+                        {{ end }}
+                      </ul>
+                      <div class="flex flex-col gap-y-0.5">
+                        {{ range $sub := $promos }}
+                          <div class="flex-1">
+                            {{ partial "header/nav-dropdown-item.html" (dict "item" $sub "variant" "desktop") }}
+                          </div>
+                        {{ end }}
+                      </div>
+                    </div>
+                  {{ else }}
+                    <ul class="grid gap-x-6 gap-y-0.5 {{ if eq $section.columns 2 }}grid-cols-2{{ else }}grid-cols-1{{ end }}">
+                      {{ range $sub := $section.items }}
+                        <li>
+                          {{ partial "header/nav-dropdown-item.html" (dict "item" $sub "variant" "desktop") }}
+                        </li>
+                      {{ end }}
+                    </ul>
+                  {{ end }}
                 </div>
               {{ end }}
             </div>

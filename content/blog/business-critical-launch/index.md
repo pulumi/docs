@@ -8,6 +8,9 @@ allow_long_title: true
 # of this value to schedule posts for publishing later.
 date: 2022-03-02
 
+# updated is shown to readers as an "Updated <date>" line beside the publish date.
+updated: 2026-09-21
+
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
@@ -36,6 +39,10 @@ In the last 12 months, we have experienced 350% year-over-year growth of our ent
 
 <!--more-->
 
+{{% notes type="info" %}}
+**Update:** The 30-day self-hosted trial announced in this 2022 post is no longer offered. To evaluate the Self-Hosted Pulumi Cloud today, [request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial).
+{{% /notes %}}
+
 ## Pulumi Business Critical Edition
 
 The Pulumi Cloud Engineering Platform enables organizations to build, deploy, and manage modern cloud infrastructure and applications with infrastructure as code using popular  programming languages. With Pulumi, infrastructure and platform engineers can empower other developers in their organization to easily build modern cloud applications with self-service infrastructure or reusable infrastructure components. Full-stack developers or developers at companies without platform teams can quickly become proficient at building and deploying cloud infrastructure using Pulumi’s SDK and libraries, all backed by the ease and power of general-purpose programming languages.
@@ -50,10 +57,10 @@ Full details of our Pulumi Service editions can be found on [our pricing page](/
 
 The Pulumi Business Critical edition includes everything in the Pulumi Enterprise Edition, plus:
 
-- [Organization policies and enforcement](/docs/insights/policy/)
+- [Organization policies and enforcement](/docs/discovery-governance/concepts/policy-as-code/)
 - [Self-hosting available](/docs/administration/self-hosting/)
-- [Cross-domain identity (SCIM)](/docs/administration/access-identity/scim/)
-- [Automatic export of audit logs](/docs/administration/security-compliance/audit-logs/#automated-export)
+- [Cross-domain identity (SCIM)](/docs/administration/guides/scim/)
+- [Automatic export of audit logs](/docs/administration/concepts/audit-logs/#automated-export)
 - 24 x 7 support included
 - Premium training, onboarding and certain professional services
 
@@ -62,11 +69,11 @@ Policy as Code (CrossGuard), a Business Critical feature:
 
 ## Self-Hosted Pulumi Service
 
-We are also announcing today a 30 day trial for self-hosting the [Pulumi Service](/product/pulumi-service/). Self-Hosted Pulumi Service allows you to deploy and manage the Pulumi Service on your own infrastructure, either in the cloud or on-premises.  Self-hosting is an option for organizations that need to maintain complete control over hosting, network isolation, identity, and data ownership in order to satisfy segment-specific compliance requirements. It can take time to install and configure a self-hosted product in your desired deployment option, and we want to make sure there is enough time to assess the product. This is why we have launched a 30 day trial, instead of 14 day like the Pulumi Service. Sign up today for the 30 day trial on our [Self-Hosted Pulumi Service page](/product/self-hosted/).
+We are also announcing today a 30 day trial for self-hosting the [Pulumi Service](/product/). Self-Hosted Pulumi Service allows you to deploy and manage the Pulumi Service on your own infrastructure, either in the cloud or on-premises.  Self-hosting is an option for organizations that need to maintain complete control over hosting, network isolation, identity, and data ownership in order to satisfy segment-specific compliance requirements. It can take time to install and configure a self-hosted product in your desired deployment option, and we want to make sure there is enough time to assess the product. This is why we have launched a 30 day trial, instead of 14 day like the Pulumi Service. Sign up today for the 30 day trial on our [Self-Hosted Pulumi Service page](/product/self-hosted/).
 
 ![Self-Hosted Screenshot](self-hosted.png)
 
-The Self-Hosted Pulumi Service can be installed in any on-premises or cloud provider environment. It can also run in air-gapped environments without access to the Internet, including those with the most demanding compliance needs such as FedRAMP. In concert with the launch of the 30 day trial, we have made the [deployment reference architectures](https://github.com/pulumi/pulumi-self-hosted-installers) public. For assistance setting up your environment or if you don’t see your desired deployment option, [contact us](/contact/).  Full details on self-hosting the Pulumi Service can be found in our [Self-Hosted Pulumi Service documentation](/docs/administration/self-hosting/).
+The Self-Hosted Pulumi Service can be installed in any on-premises or cloud provider environment. It can also run in air-gapped environments without access to the Internet, including those with the most demanding compliance needs such as FedRAMP. In concert with the launch of the 30 day trial, we have made the [deployment reference architectures](https://github.com/pulumi/pulumi-self-hosted-installers) public. For help setting up your environment or if you don’t see your desired deployment option, [contact us](/contact/).  Full details on self-hosting the Pulumi Service can be found in our [Self-Hosted Pulumi Service documentation](/docs/administration/self-hosting/).
 
 ## Pulumi in the Amazon Web Services (AWS) Marketplace
 

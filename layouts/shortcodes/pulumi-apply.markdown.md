@@ -1,9 +1,9 @@
 <!-- chooser: language -->
 <!-- option: javascript -->
-[`apply`](/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance-apply)
+[`apply`](/docs/reference/pkg/nodejs/pulumi/pulumi/interfaces/OutputInstance.html#apply)
 <!-- /option -->
 <!-- option: typescript -->
-[`apply`](/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance-apply)
+[`apply`](/docs/reference/pkg/nodejs/pulumi/pulumi/interfaces/OutputInstance.html#apply)
 <!-- /option -->
 <!-- option: python -->
 [`apply`](/docs/reference/pkg/python/pulumi/#pulumi.Output.apply)

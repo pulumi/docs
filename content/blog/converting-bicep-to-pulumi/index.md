@@ -9,7 +9,7 @@ tags: ["community", "bicep", "azure", "convert"]
 category: engineering
 ---
 
-Bicep is a DSL developed by Microsoft to simplify the authoring of [ARM templates](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/) and deploy resources to Azure. Today I will be sharing with you a new Pulumi converter plugin that I have been working on that converts Bicep code to any of the supported Pulumi languages.
+Bicep is a DSL developed by Microsoft to simplify the authoring of [ARM templates](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/) and deploy resources to Azure. Today I will be sharing with you a new Pulumi converter plugin that I have been working on that converts Bicep code to any of the supported Pulumi languages.
 
 <!--more-->
 
@@ -351,7 +351,7 @@ The easiest way to make your converter plugin available to others is to publish 
 
 Converter plugins written in .NET are simple console applications that are compiled to native binaries for each target platform. To see how this is done, refer to this [createAndPublishArtifacts](https://github.com/Zaid-Ajaj/pulumi-converter-bicep/blob/master/build/Program.fs#L197) function written for the Bicep converter that does the heavy lifting of building the native binaries for each platform, putting them in an archive then publishing them to GitHub releases.
 
-> Note: when publishing native binaries for macOS, the Github Action executing the publishing process must be using a macOS runner so that the generated binary from `dotnet publish` gets _signed_ with a developer certificate. This is required for the binary to be executable on macOS.
+> Note: when publishing native binaries for macOS, the GitHub Action executing the publishing process must be using a macOS runner so that the generated binary from `dotnet publish` gets _signed_ with a developer certificate. This is required for the binary to be executable on macOS.
 
 ## Final thoughts
 

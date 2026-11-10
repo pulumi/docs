@@ -55,7 +55,7 @@ Once connected, you can use Google to sign in to your existing Pulumi Cloud acco
 
 Google sign-in lets you authenticate with Pulumi Cloud using your individual Google account. It does not enable Google as a single sign-on (SSO) identity provider for your Pulumi Cloud organization.
 
-If your team uses Google Workspace and needs centralized membership governance for Pulumi Cloud, configure [SAML SSO with Google Workspace](/docs/administration/access-identity/saml/gsuite/) instead. SAML SSO is available on Pulumi Enterprise and Business Critical editions.
+If your team uses Google Workspace and needs centralized membership governance for Pulumi Cloud, configure [SAML SSO with Google Workspace](/docs/administration/guides/saml/gsuite/) instead. SAML SSO is available on Pulumi Enterprise and Business Critical editions.
 
 ## Get started
 
@@ -64,6 +64,6 @@ Google sign-in is available now for all new and existing Pulumi Cloud users:
 * **New users**: [Sign up with Google](https://app.pulumi.com/signup) on the Pulumi Cloud sign-up page.
 * **Existing users**: [Connect your Google account](https://app.pulumi.com/account/settings) in your account settings.
 
-For more details, see the [Pulumi Cloud accounts documentation](/docs/administration/organizations-teams/accounts/).
+For more details, see the [Pulumi Cloud accounts documentation](/docs/administration/concepts/accounts/).
 
 We'd love to hear your feedback. Join the conversation in the [Pulumi Community Slack](https://slack.pulumi.com) or open an issue on [GitHub](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).

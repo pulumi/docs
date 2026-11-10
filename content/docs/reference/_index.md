@@ -23,7 +23,7 @@ sections:
     link: /docs/iac/cli/
 
 - type: button-cards
-  heading: Language SDKs
+  heading: Pulumi SDKs
   cards:
   - image: /logos/tech/typescript.svg
     heading: TypeScript (Node.js) ↗
@@ -92,6 +92,34 @@ sections:
     link: /docs/reference/pkg/dotnet/esc-sdk/pulumi.esc.sdk/pulumi.esc.sdk.html
 
 - type: button-cards
+  heading: Pulumi Cloud SDKs
+  cards:
+  - image: /logos/tech/typescript.svg
+    heading: TypeScript Cloud SDK ↗
+    description: API reference for calling the Pulumi Cloud REST API from Node.js with TypeScript or JavaScript.
+    link: /docs/reference/pkg/nodejs/pulumi/cloud-sdk/
+
+  - image: /logos/tech/python.svg
+    heading: Python Cloud SDK ↗
+    description: API reference for calling the Pulumi Cloud REST API from Python.
+    link: /docs/reference/pkg/python/pulumi_cloud_sdk/
+
+  - image: /logos/tech/go.svg
+    heading: Go Cloud SDK ↗
+    description: API reference for calling the Pulumi Cloud REST API from Go.
+    link: https://pkg.go.dev/github.com/pulumi/pulumi-cloud-sdk/go/apiclient
+
+  - image: /logos/tech/dotnet.svg
+    heading: .NET Cloud SDK ↗
+    description: API reference for calling the Pulumi Cloud REST API from .NET.
+    link: /docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.html
+
+  - image: /logos/tech/java.svg
+    heading: Java Cloud SDK ↗
+    description: API reference for calling the Pulumi Cloud REST API from Java.
+    link: /docs/reference/pkg/java/cloud-sdk/
+
+- type: button-cards
   heading: APIs & Configuration
   cards:
   - icon: plug
@@ -106,7 +134,7 @@ sections:
 
   - icon: link
     heading: Property Paths
-    description: Reference for property path syntax used in resource options, ESC, and Insights.
+    description: Reference for property path syntax used in resource options, ESC, and Discovery.
     link: /docs/reference/property-paths/
 
 - type: button-cards
@@ -114,7 +142,7 @@ sections:
   cards:
   - icon: package
     heading: Package Registry
-    description: Browse packages for AWS, Azure, Google Cloud, Kubernetes, and 120+ providers.
+    description: Browse packages for AWS, Azure, Google Cloud, Kubernetes, and hundreds of providers.
     link: /registry/
 
 - type: flat

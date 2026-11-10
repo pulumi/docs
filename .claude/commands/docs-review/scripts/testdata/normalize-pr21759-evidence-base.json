@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "repo": "pulumi/docs",
+  "pr": 21759,
+  "head_sha": "7b8d01c14bb82c63b37d7b6afab5457c7fe9b23a",
+  "run_id": "35659298304",
+  "generated_at": "2026-09-21T21:49:26Z",
+  "high_water": 0,
+  "findings": [],
+  "trail": [
+    {
+      "file": "scripts/redirects/README.md",
+      "claim": "- `<destination>` is either an absolute URL (`https://www.pulumi.com/...`) or a",
+      "verdict": "not-a-claim",
+      "line": 16,
+      "evidence": "evidence: This is documentation describing the redirect script's own configuration format (README explaining how `<destination>` values should be formatted), not a falsifiable external claim.; source: repo:scripts/redirects/README.md",
+      "source": "repo:scripts/redirects/README.md",
+      "route": "pass1",
+      "claim_id": "c1",
+      "type": "url",
+      "confidence": "high",
+      "framing": "none"
+    }
+  ],
+  "investigation_log": {
+    "cross-sibling-reads": "not run (not in a templated section)",
+    "external-claim-verification": "0 of 1 claims verified (0 unverifiable, 0 contradicted) \u00b7 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations \u00b7 routed: 0 inline, 1 Pass 1, 0 Pass 2, 0 Pass 3.",
+    "cited-claim-spot-checks": "not run (no cited claims)",
+    "frontmatter-sweep": "not run (no frontmatter in diff)",
+    "temporal-trigger-sweep": "ran (recency words present in diff; spot-check in-review)",
+    "code-execution": "not run (no `static/programs/` change)",
+    "code-examples-checks": "ran (3 specialists: structural, existence, body-code-coverage); 0 findings",
+    "editorial-balance-pass": "not run (not under content/blog/)"
+  },
+  "editorial_balance": null,
+  "triaged": [],
+  "style_suggestions_count": 0,
+  "confidence": {
+    "mechanics": "TODO",
+    "facts": "TODO",
+    "code correctness": "TODO"
+  },
+  "summary": null,
+  "stances": [],
+  "history": [
+    {
+      "ts": "2026-09-21T21:49:26Z",
+      "summary": "initial review (pending publication)",
+      "sha": "7b8d01c"
+    }
+  ]
+}

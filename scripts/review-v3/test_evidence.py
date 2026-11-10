@@ -345,6 +345,29 @@ class TestRenderEvidenceHtml:
         body = out.split('<script type="application/json"', 1)[0]
         assert "<img src=x onerror=alert(1)>" not in body
 
+    def test_finding_text_detail_and_members_render(self, valid_evidence):
+        # What the author card sheds to fit its budget (build-evidence
+        # fit_author_card) is promised on this page, so the page must show it.
+        valid_evidence["findings"] = [_finding(
+            id="F2", bucket="author-answer", file="(multiple files)",
+            text="2 claims about Pulumi's own behavior, unchecked",
+            detail="- **Why:** private source\n- **Fix:** answer once",
+            members=[{"file": "content/docs/a.md", "lines": [3], "claim": "<b>x</b> does y"},
+                     {"file": "content/docs/b.md", "claim": "z is w"}])]
+        out = render_evidence_html(valid_evidence)
+        body = out.split('<script type="application/json"', 1)[0]
+        assert 'id="finding-F2"' in body
+        assert "2 claims about Pulumi&#x27;s own behavior, unchecked" in body
+        assert "<summary>Do this</summary>" in body and "**Fix:** answer once" in body
+        assert "2 claims asked about together" in body
+        assert "content/docs/a.md:3" in body and "z is w" in body
+        assert "<b>x</b>" not in body and "&lt;b&gt;x&lt;/b&gt;" in body
+
+    def test_a_plain_finding_renders_no_members_list(self, valid_evidence):
+        valid_evidence["findings"] = [_finding()]
+        out = render_evidence_html(valid_evidence)
+        assert "asked about together" not in out and "<summary>Do this</summary>" not in out
+
     def test_history_summary_is_escaped(self, valid_evidence):
         valid_evidence["history"] = [
             {"ts": "2026-08-31T17:00:00Z", "summary": "<b>bold</b>", "sha": "a" * 7}

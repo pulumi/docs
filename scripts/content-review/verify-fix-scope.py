@@ -40,6 +40,9 @@ Allowed ranges per category (the SKILL's five, same order):
                    "local_repair", `line_range` ± 5, plus a move heuristic:
                    a pure insertion whose text mostly (≥80%) re-uses lines
                    deleted by an in-range hunk is a reorder, not new prose.
+                   The fix lane no longer applies readthrough findings and
+                   publish-gate.py rejects a verdict that does; the coverage
+                   stays so this gate still reports scope honestly.
 
 An artifact whose snapshot carries a non-empty `errors` list (the workflow's
 `|| stub` fallback) contributes no ranges — fixes in that category then read

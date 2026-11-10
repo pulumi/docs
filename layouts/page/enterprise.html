@@ -12,7 +12,7 @@
 
             <div class="rounded-xl shadow-2xl w-3/4 mx-auto" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
                 <iframe
-                    src="//www.youtube.com/embed/q9fDyASy-VA?si=6uHuXkxPlB8WvQnB?rel=0"
+                    {{ partial "youtube-src.html" (dict "url" "//www.youtube.com/embed/q9fDyASy-VA?si=6uHuXkxPlB8WvQnB?rel=0") }}
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
                     allowfullscreen=""
                     title="Pulumi for Enterprises"
@@ -34,7 +34,7 @@
                                     <p class="text-left mt-0 italic font-semibold text-black">{{ $item.quote | markdownify }}</p>
                                     <div class="flex flex-col flex-grow items-center justify-end pb-8">
                                         <div class="w-48 mx-auto">
-                                            {{ partial "customer-logo.html" (dict "logo" $item.company) }}
+                                            {{ partial "customer-logo.html" (dict "customer" $item.customer) }}
                                         </div>
                                     </div>
 

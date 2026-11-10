@@ -90,6 +90,7 @@ Located in `logos/`. SVG product/technology logos placed on top of white placeho
 | python.svg | Python | python, language |
 | redis.svg | Redis | redis, database, cache |
 | slack.svg | Slack | slack, messaging |
+| typesafe.svg | TypeSafe AI (mark) | typesafe, jev, ai, llm |
 | typescript.svg | TypeScript | typescript, javascript, language |
 | vercel.svg | Vercel | vercel, hosting, frontend |
 

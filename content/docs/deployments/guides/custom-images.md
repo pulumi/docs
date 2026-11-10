@@ -115,13 +115,16 @@ If you start from one of the `pulumi/*` base images, all of these are already tr
 
 #### Cold starts
 
-The default image is pre-cached on Pulumi-hosted workflow runners. Custom images are not. Every newly-provisioned runner pulls your image from its registry the first time it runs your deployment, which can add minutes to the "Preparing environment" phase.
+The default image is pre-cached on Pulumi-hosted workflow runners. Custom images are not. Pulumi-managed runners are single-use, so every deployment runs on a newly provisioned runner that pulls your image from its registry, which can add minutes to the "Preparing environment" phase. No image layers carry over from one deployment to the next on Pulumi-managed runners.
 
-To reduce cold-start time:
+To reduce cold-start time on Pulumi-managed runners:
 
-- Start from a small base (`pulumi-base` or a single-language variant)
-- Host the image close to the runner. Pulumi-hosted runners run in AWS `us-west-2`, so an image in a `us-west-2` ECR is faster than one on Docker Hub.
-- Pin a digest so the runner can rely on its layer cache between deployments instead of re-fetching by tag.
+- Start from a small base (`pulumi-base` or a single-language variant), because pull time scales with image size.
+- Host the image in a registry that supports [static credentials](#static-credentials-only) or needs none, such as a public image on [Amazon ECR Public](https://gallery.ecr.aws/), and prefer one with good network performance.
+- Pin the image to a digest or a specific version tag rather than a floating tag such as `latest`. Pinning doesn't speed up the pull, but it keeps the image your deployments run from changing unexpectedly.
+- Move rarely changing tools into the image and keep the remaining setup short, so you pay the pull cost once per deployment rather than also running long pre-run installs.
+
+On [customer-managed runners](/docs/administration/concepts/customer-managed-runners/), image layers can persist between deployments. Set `pull_image: false` on a Docker-based agent, or an image pull policy of `IfNotPresent` on Kubernetes, so the agent reuses a locally cached image instead of pulling it for every job. Pin a digest or version tag so the cached image is the one you expect.
 
 #### Static credentials only
 
@@ -129,12 +132,12 @@ If your image lives in a private registry, you must supply static username and p
 
 This rules out a **private Amazon ECR** registry, which has no long-lived credentials: its registry password is an authorization token from `aws ecr get-login-password` that expires after 12 hours, so a pasted token soon stops working and deployments can no longer pull the image. (A *public* image on [Amazon ECR Public](https://gallery.ecr.aws/) needs no credentials and works fine.)
 
-If your security model requires short-lived registry credentials — or you need to pull a private image from ECR — [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/) run in your own infrastructure and can use whatever pull mechanism you configure, including an IAM role.
+If your security model requires short-lived registry credentials — or you need to pull a private image from ECR — [Customer-managed runners](/docs/administration/concepts/customer-managed-runners/) run in your own infrastructure and can use whatever pull mechanism you configure, including an IAM role.
 
 ## See also
 
 - [Deployment settings](/docs/deployments/concepts/settings/): UI walkthrough for configuring the executor image on a stack
-- [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/): full control over the runner host, registry pulls, network access, and lifecycle
+- [Customer-managed runners](/docs/administration/concepts/customer-managed-runners/): full control over the runner host, registry pulls, network access, and lifecycle
 - [Pre-run commands](/docs/deployments/concepts/settings/pre-run-commands/): where pre-run installs run
 - [Pulumi Docker images](/docs/iac/operations/docker-images/): the full catalog of official images, variants, and release cadence
 - [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers): image source, variants, and contribution guide

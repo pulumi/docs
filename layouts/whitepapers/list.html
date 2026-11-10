@@ -2,45 +2,104 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
+<div class="font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-8 overflow-hidden">
 
     {{/* Hero */}}
-    <section class="template-hero template-hero--centered" id="hero">
-        <div class="flex flex-col items-center gap-12">
-            <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-                <h1 class="title mb-6">{{ .Title }}</h1>
-                {{ with .Params.description }}
-                <p class="description mb-10 max-w-2xl">{{ . | markdownify }}</p>
-                {{ end }}
-            </div>
-        </div>
+    <section id="hero" class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+        <h1 class="heading-1 text-black mb-6">{{ .Title }}</h1>
+        {{ with .Params.description }}
+        <p class="body-lg text-gray-primary mt-0 mb-10 max-w-2xl">{{ . | markdownify }}</p>
+        {{ end }}
     </section>
 
-    {{/* Whitepaper cards */}}
-    <section class="template-two-column">
-        <div class="flex flex-col lg:flex-row gap-8 items-stretch">
-            {{ range .Pages }}
-            <div class="template-card">
-                <div class="flex flex-col h-full w-full">
-                    <div class="flex flex-col gap-4 mb-8">
-                        <h3 class="card-title m-0"><a href="{{ .RelPermalink }}" class="text-black hover:text-black no-underline">{{ .Title }}</a></h3>
-                    </div>
+    {{- /* The cards share one shell built from the shared primitives: .card +
+           .card-hover, a link stretched over the whole card, and a "Read the…" cue
+           that only appears on hover/focus.
+
+           A whitepaper has no logo tile, so the title is visible rather than
+           sr-only, and it is plain text, not a link — which leaves the stretched
+           anchor as the card's only link.
+
+           `.Pages` is weight-ordered (the newest paper carries `weight: 1`), so the
+           first one leads full width and the rest fall into the grid below. */ -}}
+    {{ $featured := index .Pages 0 }}
+    {{ $rest := after 1 .Pages }}
+
+    {{ with $featured }}
+    {{/* Held here because `$` inside the nested `with` below is the list page,
+         not this paper. */}}
+    {{ $title := .Title }}
+    <section>
+        {{/* No padding on the card itself: the text column carries its own so the
+             cover field can run flush to the card's edges. `overflow-hidden` is
+             what clips the field's square corners to the card's radius. */}}
+        {{/* flex-col-reverse stacks the cover above the text on narrow viewports
+             while the DOM keeps the title first. */}}
+        <div class="card card-hover group relative flex flex-col-reverse overflow-hidden md:flex-row">
+            <div class="flex flex-1 flex-col justify-center p-8 md:p-10">
+                {{ with .Params.card_label }}
+                <p class="font-overline-sm text-gray-primary m-0 mb-4">{{ . }}</p>
+                {{ end }}
+                <h2 class="heading-2 m-0 mb-5">{{ .Title }}</h2>
+                <a href="{{ .RelPermalink }}" class="absolute inset-0" aria-label="{{ .Title }}"></a>
+                {{ with .Description }}
+                <div class="body-lg mb-6">
+                    {{ . | markdownify }}
+                </div>
+                {{ end }}
+                <div>
+                    <span class="btn btn-link btn-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100" aria-hidden="true">
+                        Read the whitepaper
+                        {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                    </span>
+                </div>
+            </div>
+            {{ with .Params.cover }}
+            {{/* The cover page sits on its own tinted field so a white document
+                 edge reads against the card. At md the field stretches to
+                 whatever height the text column needs and the art sizes off
+                 that, so the card stays as short as its content allows. */}}
+            <div class="whitepaper-cover aspect-[16/10] w-full shrink-0 md:aspect-auto md:w-1/2">
+                {{ partial "fingerprinted-img.html" (dict
+                    "src" .
+                    "alt" (printf "%s cover" $title)
+                    "maxWidth" 600) }}
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    {{ with $rest }}
+    <section>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {{ range . }}
+            <div class="card card-hover group relative flex flex-1 flex-col overflow-hidden">
+                <div class="flex flex-1 flex-col px-8 py-8">
+                    {{ with .Params.card_label }}
+                    <p class="font-overline-sm text-gray-primary m-0 mb-4">{{ . }}</p>
+                    {{ end }}
+                    <h3 class="heading-3 m-0 mb-5">{{ .Title }}</h3>
+                    <a href="{{ .RelPermalink }}" class="absolute inset-0" aria-label="{{ .Title }}"></a>
                     {{ with .Description }}
-                    <div class="card-description mb-6">
+                    {{/* No color class, matching the case-study card: it inherits
+                         main's text-service-black. */}}
+                    <div class="body-base mb-6">
                         {{ . | markdownify }}
                     </div>
                     {{ end }}
                     <div class="mt-auto">
-                        <a href="{{ .RelPermalink }}" class="btn btn-link btn-xl">
+                        <span class="btn btn-link btn-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100" aria-hidden="true">
                             Read the whitepaper
                             {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
-                        </a>
+                        </span>
                     </div>
                 </div>
             </div>
             {{ end }}
         </div>
     </section>
+    {{ end }}
 
 </div>
 {{ end }}

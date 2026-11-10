@@ -162,7 +162,7 @@ sections:
         description: |
           We've reviewed and refreshed all of our existing agent skills, and added a new über-skill designed
           to help agents decide how best to use Pulumi in different scenarios. It's handy for humans too.
-        link: /docs/ai/skills/
+        link: /docs/ai/concepts/agent-skills/
 
       - variant: text
         icon: brackets-curly

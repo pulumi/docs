@@ -1,0 +1,12 @@
+<svg role="img" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Dash0</title>
+  <rect width="128" height="128" fill="url(#paint0_linear_737_143)"/>
+  <path d="M27 37.3333C41.7276 37.3333 53.667 49.2727 53.667 64.0002C53.6668 78.7277 41.7275 90.6663 27 90.6663V37.3333ZM82 37.3333C96.7275 37.3333 108.666 49.2727 108.666 64.0002C108.666 78.7276 96.7274 90.6662 82 90.6663C67.2725 90.6663 55.3332 78.7277 55.333 64.0002C55.333 49.2727 67.2724 37.3333 82 37.3333Z" fill="white"/>
+  <defs>
+    <linearGradient id="paint0_linear_737_143" x1="0.643217" y1="68.4912" x2="115.4" y2="107.082" gradientUnits="userSpaceOnUse">
+      <stop offset="0.276887" stop-color="#F74B48"/>
+      <stop offset="0.747422" stop-color="#F9745D"/>
+      <stop offset="1" stop-color="#FCAD66"/>
+    </linearGradient>
+  </defs>
+</svg>

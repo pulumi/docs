@@ -90,14 +90,20 @@
 
 - id: organization
   name: Organization and members
-  description: Organization settings, invitations, membership, custom roles, service accounts, and trials.
+  description: Organization settings, invitations, membership, custom roles and role assignments, service accounts, and trials.
   match:
     prefixes:
       - custom-role-
+      # Granting or revoking a user's role on an entity
+      # (`entity-user-assignment-granted`, `entity-user-assignment-revoked`).
+      - entity-user-assignment-
       - member-
       - organization-
       - retrial-
       - service-
+      # Subscription changes (`org-downgraded-to-free`, `org-upgraded-to-pro`),
+      # the only organization events using the abbreviated `org-` spelling.
+      - org-
 
 - id: teams
   name: Teams
@@ -154,6 +160,13 @@
   description: Cloud accounts connected for resource discovery, and the scans run against them.
   match:
     prefixes:
+      # The Insights -> Discovery rename landed in the API as new event ids:
+      # `insights-account-*` became `cloud-account-*` and
+      # `insights-trial-billing-*` became `discovery-trial-billing-*`. The
+      # `insights-` prefix is kept so a catalog that still carries the old ids
+      # does not fail the nightly job; drop it once the API stops emitting them.
+      - cloud-account-
+      - discovery-
       - insights-
 
 - id: neo

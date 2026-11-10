@@ -38,12 +38,12 @@ The customer is required to provide and manage the following:
 
 ### Pulumi deploying Pulumi
 
-This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses the Pulumi CLI with a self-managed backend (e.g. an s3-compatible object store) from the Docker environment server to deploy the Service containers.
+This installer uses Pulumi to deploy Pulumi Cloud. In this case, one uses the Pulumi CLI with a DIY backend (e.g. an s3-compatible object store) from the Docker environment server to deploy the Service containers.
 
 To this end, you need to set up the following:
 
 * [Download and install the Pulumi CLI](/docs/install/) on the Docker server
-* [Login to S3-compatible backend](/docs/iac/concepts/state-and-backends/#logging-into-and-out-of-state-backends)
+* [Login to S3-compatible backend](/docs/iac/operations/stack-management/using-a-diy-backend/#aws-s3)
   * The assumption here is that you would use a bucket in the object store you are using for the self-hosted Pulumi Cloud. You can use a different state backend if you prefer.
   * It is NOT recommended to use the `local` backend option since you want to make sure this state file is backed up and secured.
 
@@ -55,7 +55,7 @@ See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/ma
 
 ### Pulumi Cloud Updates
 
-When deploying the Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker/README.md) file to set the `imageTag` configuration property for the installer to use.
+When deploying Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker/README.md) file to set the `imageTag` configuration property for the installer to use.
 
 When ready to update the Pulumi Cloud containers to use a different version, do the following:
 

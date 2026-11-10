@@ -1,0 +1,62 @@
+<!-- CLAUDE_REVIEW_BRIEF -->
+## Reviewer's guide v1 — not for the author
+
+> [!TIP]
+> **This is the reviewer's guide.** Work through the ⚠️ checklist below, then approve — **approving asserts only that the ⚠️ items looked right to you.** Machine-verified this run: links, shortcodes, page metadata, and every claim marked verified (receipts on the evidence page). Code samples are read, not compiled.
+>
+> _PR author: your to-do list is the other review comment, "Author action guide" — nothing on this card is yours._
+
+**Approval needed from:** @pulumi/docs-guild — any member's approval satisfies the merge gate.
+
+<!-- AUTHOR_STATE_BEGIN -->
+**Waiting on the author** — 1 item blocks merge from the author's own card; you don't need to police them, but check the final diff shows them answered before you approve:
+
+| ID | State | Claim |
+|---|---|---|
+| **F1** | 🚨 open | In the widget-service example, each provider method reads the `WIDGET_API_TOKEN` environment variable… |
+<!-- AUTHOR_STATE_END -->
+
+> [!NOTE]
+> **What this PR changes:**
+>
+> - The `read`-method limitation bullet now points readers at this page's own `read(id, props)` section for the workaround.
+> - That same bullet drops the `pulumi import` link, the `get` method link, and the pulumi/pulumi#16175 issue link.
+> - The widget-service example's intro sentence now tells readers it reuses the GitHub labels example's `create`/`delete` shape and that the credential source is the only new idea.
+>
+> A reader would be blocked if the new `#readid-props` anchor didn't resolve, or if the workaround it promises weren't actually there. The anchor and the section behind it were checked, both new sentences were fact-checked, and the page's metadata was swept.
+>
+> **Review confidence:**
+>
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | mechanics | HIGH | |
+> | facts | HIGH | |
+> | consistency with the other provider guides | LOW | Not yours to check — none of the four related provider pages were read this run, and this diff adds no cross-page assertions. |
+
+### ⚠️ Check these before approving
+
+_No findings to check — but the editorial stances below still need a human eye._
+
+#### Editorial stances introduced by this PR
+
+*Superlative, ranking, or comparative language the diff adds. No verdict — a page's own framing isn't fact-checkable — but confirm each is a stance the docs should take, and that no agent-written rewrite introduced it unasked.*
+
+- L310 `content/docs/iac/guides/building-extending/providers/dynamic-providers.md` — *"The following example manages a fictional widget service through its REST API at `https://api.example.com`. It reuses the same `create`/`delete` shape as the…"* — positioning (found by regex)
+
+### ✅ What you can rubber-stamp
+
+- **Facts:** 2 factual claims checked — 1 verified clean, 1 open on the author's card ("Waiting on the author" above).
+- **Mechanics:** frontmatter sweep ran; no internal links added.
+- **Style:** 0 advisory suggestion(s) left with the author; never blocking.
+
+💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<sub>Review v1 · updated 2026-09-18T14:25:12Z · head commit 2697424</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+**For the reviewer:** the ⚠️ items above are the minutes that matter — the receipts for everything machine-verified are on the evidence page. The author's open items live on their own card (the comment headed "Author action guide"); while any are open, a **Waiting on the author** list above tracks them, and merge stays blocked until they're answered. If something here seems off, comment on the PR — `@claude <your point> #update-review` re-adjudicates with your input.

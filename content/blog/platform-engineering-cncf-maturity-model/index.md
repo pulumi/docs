@@ -75,7 +75,7 @@ In this article, you'll learn more about [platform engineering](https://www.pulu
 
 According to CNCF, a platform in cloud-native computing is an integrated collection of capabilities designed to meet users' needs. It serves as a cross-cutting layer, ensuring a consistent experience integrating and managing services and capabilities for various applications and use cases. A good platform provides consistent user experiences through portals, project templates, and self-service APIs.
 
-[Atlassian](https://www.pulumi.com/case-studies/atlassian/) describes platform teams as creators of capabilities used by multiple product teams, reducing their overhead and cognitive load. Martin Fowler and Evan Bottcher define a digital platform as a foundation of self-service APIs, tools, services, and support arranged as an internal product. These platforms enable autonomous teams to deliver features faster with less coordination.
+[Atlassian](https://www.pulumi.com/customers/atlassian/) describes platform teams as creators of capabilities used by multiple product teams, reducing their overhead and cognitive load. Martin Fowler and Evan Bottcher define a digital platform as a foundation of self-service APIs, tools, services, and support arranged as an internal product. These platforms enable autonomous teams to deliver features faster with less coordination.
 
 The specific capabilities of a platform are tailored to the needs of its stakeholders and users. While platform teams provide these capabilities, they do not always implement them directly. Managed service providers or dedicated internal teams can maintain the underlying implementations, ensuring consistency across the organization. Platforms are tailored to an enterprise’s internal users and are particularly relevant for cloud-native architectures, separating supporting capabilities from application-specific logic.
 
@@ -88,7 +88,7 @@ A cloud-native platform is a strategic business initiative that enables organiza
 
 - **Vendor-neutrality**: A cloud-native platform should be open and agnostic, allowing organizations to leverage various technologies and services without being locked into a single vendor.
 **Scalability and flexibility**: The platform should be designed to accommodate the organization's growing and changing needs, with the ability to add or remove components as needed easily.
-- **[Developer-centricity](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: The platform should empower developers to be more productive by providing self-service capabilities, streamlined workflows, and a consistent developer experience.
+- **[Developer-centricity](https://www.pulumi.com/blog/developer-experience-business-critical/)**: The platform should empower developers to be more productive by providing self-service capabilities, streamlined workflows, and a consistent developer experience.
 - **[Operational efficiency](https://www.pulumi.com/blog/developer-portal-platform-teams/)**: The platform should simplify and automate the management and maintenance of the underlying infrastructure, allowing the organization to focus on delivering value to customers.
 - **Continuous improvement**: The platform should be designed with a mindset of continuous evolution, with regular updates and enhancements to address emerging needs and technologies.
 
@@ -129,7 +129,7 @@ If you're interested in learning more about platform engineering and getting inv
 
 - Register for the [Platform Engineering workshop series course](https://info.pulumi.com/platform-engineering-workshop-series).
 - Join the bi-weekly [CNCF Platform Working Group meetings](https://tag-app-delivery.cncf.io/wgs/platforms/#meetings) every other Tuesday at 5 PM Berlin time (11 AM ET).
-- Learn how to [build Developer Portals with Pulumi](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/). You can get off the ground faster with organization templates, a new project wizard, or leveraging the backstage plugin.
+- Learn how to [build Developer Portals with Pulumi](/docs/idp/concepts/). You can get off the ground faster with organization templates, a new project wizard, or leveraging the backstage plugin.
 
 ---
 

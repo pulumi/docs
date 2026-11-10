@@ -540,72 +540,10 @@ def main() -> int:
                   and not selector.eligible(pkg, "fix"),
                   "SDK API reference is a candidate for neither lane")
 
-    # --- stale-claim markers ride the queue, and escalation stops the boost ---
+    # --- reserved slot ---
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
         repo = make_repo(tmp)
-        tiers = tmp / "tiers.yaml"
-        tiers.write_text(REPO_TIERS.read_text() if REPO_TIERS.is_file() else "rules: []\n")
-
-        marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
-                  "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
-                  # Before TODAY's review: the review saw this marker and left it
-                  # unresolved, so it is real drift and must keep boosting. (A
-                  # marker dated AFTER the last completed review is the #20970
-                  # echo instead — see boost_suppressed_by_recent_fix.)
-                  "checked_at": "2026-06-10"}
-
-        led = tmp / "ledger-markers"
-        # STACKS is freshly reviewed, so absent a marker it never reaches the queue.
-        write_ledger(led, STACKS, TODAY, stale_claims=[marker])
-        q = run_select(repo, tiers, led)
-        entry = next((a for a in q["articles"] if a["path"] == STACKS), None)
-        check(entry is not None, "marked page is boosted into the queue")
-        if entry:
-            check(entry["stale_claims"] == 1, "count field preserved")
-            check([m["entity_key"] for m in entry.get("stale_claim_markers") or []]
-                  == ["version/pulumi-package"], "queue item carries the marker itself")
-            check((entry["stale_claim_markers"][0].get("evidence") or "")
-                  == "CHANGELOG says 3.163.0", "marker evidence reaches the worker")
-
-        # An escalated marker must still ride in the queue item and still be
-        # counted: record-review.py rebuilds the ledger entry from the queue,
-        # so a marker withheld here is a marker deleted from the ledger the
-        # next time this page is reviewed for any reason.
-        led_mixed = tmp / "ledger-mixed"
-        write_ledger(led_mixed, STACKS, TODAY, stale_claims=[
-            marker,
-            {**marker, "entity_key": "version/old-miss",
-             "unresolved_reviews": 2, "escalated": True},
-        ])
-        q_mixed = run_select(repo, tiers, led_mixed)
-        mixed = next((a for a in q_mixed["articles"] if a["path"] == STACKS), None)
-        check(mixed is not None, "page with one active marker is still boosted")
-        if mixed:
-            keys = [m["entity_key"] for m in mixed.get("stale_claim_markers") or []]
-            check("version/old-miss" in keys,
-                  "escalated marker still travels in the queue item (survives the round-trip)")
-            check(mixed["stale_claims"] == len(mixed["stale_claim_markers"]),
-                  "stale_claims count matches the marker list it describes")
-
-        led_esc = tmp / "ledger-escalated"
-        write_ledger(led_esc, STACKS, TODAY,
-                     stale_claims=[{**marker, "unresolved_reviews": 2, "escalated": True}])
-        q_esc = run_select(repo, tiers, led_esc)
-        esc = next((a for a in q_esc["articles"] if a["path"] == STACKS), None)
-        check(esc is None, "an escalated marker alone no longer boosts the page")
-
-        # ...and when such a page is reviewed anyway (staleness, --paths), the
-        # escalated marker must reach record-review.py rather than evaporating.
-        q_paths = run_select(repo, tiers, led_esc, "--paths", STACKS)
-        forced = q_paths["articles"][0]
-        check([m["entity_key"] for m in forced.get("stale_claim_markers") or []]
-              == ["version/pulumi-package"],
-              "escalated marker reaches a --paths review instead of being dropped")
-
-        # The block above swapped `tiers` for the repo's real strategic-tiers
-        # file; these cases need the fixture's own tree rules back (clidocs
-        # non-editable, generated tier 0), so they use their own copy.
         tiers_r = tmp / "tiers-reserve.yaml"
         tiers_r.write_text(TIERS)
 
@@ -666,42 +604,6 @@ def main() -> int:
         qrep = run_select(repo, tiers_r, led_res, "--count", "3", "--mode", "report")
         check(all("reserved" not in a for a in qrep["articles"]),
               "the report lane reserves nothing — its whole job is the cold half")
-
-        print("stale-claim boost cooldown (#20970's missing half)")
-        import importlib.util
-        from datetime import date as _date
-        _spec = importlib.util.spec_from_file_location("select_articles", SCRIPT)
-        sa = importlib.util.module_from_spec(_spec)
-        _spec.loader.exec_module(sa)
-        _t = _date(2026, 8, 19)
-        def _e(reviewed, checked, status="reviewed"):
-            e = {"status": status, "reviewed_at": reviewed}
-            if checked is not None:
-                e["stale_claims"] = [{"entity_key": "version/x", "checked_at": checked}]
-            return e
-        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "2026-08-19"), _t) is True,
-              "marker written AFTER a just-completed review is an echo: suppressed")
-        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "2026-08-17"), _t) is False,
-              "marker the review SAW and left unresolved is real drift: still boosts")
-        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-01", "2026-08-02"), _t) is False,
-              "past the cooldown, an echo has had time to be real: still boosts")
-        check(sa.boost_suppressed_by_recent_fix(
-                  _e("2026-08-18", "2026-08-19", status="incomplete"), _t) is False,
-              "an incomplete review fixed nothing, so it never suppresses")
-        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", None), _t) is False,
-              "no markers, nothing to suppress")
-        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "garbage"), _t) is False,
-              "an undated marker is not provably an echo, so it keeps its boost")
-        check(sa.boost_suppressed_by_recent_fix(_e("garbage", "2026-08-19"), _t) is False,
-              "an unparseable review date fails open (boosts), never suppresses silently")
-        _edge = str(_date.fromordinal(_t.toordinal() - sa.STALE_BOOST_COOLDOWN_DAYS))
-        check(sa.boost_suppressed_by_recent_fix(_e(_edge, "2026-08-19"), _t) is False,
-              "exactly COOLDOWN days old is outside the window")
-        check(sa.boost_suppressed_by_recent_fix(
-                  {"status": "reviewed", "reviewed_at": "2026-08-18",
-                   "stale_claims": [{"entity_key": "a", "checked_at": "2026-08-19"},
-                                    {"entity_key": "b", "checked_at": "2026-08-17"}]}, _t) is False,
-              "one pre-review marker is enough to keep the boost")
 
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0

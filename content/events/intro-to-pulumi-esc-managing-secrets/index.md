@@ -16,14 +16,6 @@ unlisted: false
 # to fill out the form before viewing.
 gated: true
 
-# External events will link to an external page instead of an event
-# landing/registration page.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page.
-url_slug: intro-to-pulumi-esc-managing-secrets
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
@@ -70,5 +62,4 @@ form:
     # HubSpot form id.
     hubspot_form_id: ccf592e3-c1da-4ba4-8639-0f42fb88e61d
     salesforce_campaign_id: 701PQ00000w5nqkYAA
-
 ---

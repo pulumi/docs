@@ -25,7 +25,7 @@ Continuing our work to bring [the best of modern Python to infrastructure as cod
 
 ## Why uv?
 
-Listen in on this discussion between [Adam Gordon Bell](/blog/author/adam-gordon-bell/) and [Julien Poissonnier](/blog/author/julien-poissonnier/) as they discuss Pulumi + uv and why uv is so fast!
+Listen in on this discussion between [Adam Gordon Bell](/blog/authors/adam-gordon-bell/) and [Julien Poissonnier](/blog/authors/julien-poissonnier/) as they discuss Pulumi + uv and why uv is so fast!
 {{< youtube "hxi7ZL9H0IU?rel=0" >}}
 
 uv brings several key advantages to your Python development workflow:

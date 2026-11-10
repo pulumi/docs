@@ -7,7 +7,6 @@ meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes 
 authors: ["mike-metral"]
 tags: [kubernetes, cloud-native]
 category: general
-canonical_url: "https://www.pulumi.com/docs/iac/clouds/kubernetes/"
 ---
 
 > [!INFO]
@@ -137,7 +136,7 @@ Another fun example is
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [click here to get started today](/docs/get-started/). Pulumi is open source and free to
+infrastructure and Kubernetes through code, [click here to get started today](/up/?cloud=kubernetes). Pulumi is open source and free to
 use.
 
 If you'd like to go deeper on certain topics, here are some additional

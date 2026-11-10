@@ -103,7 +103,7 @@ var approvalRule = new service.ApprovalRule("rule-test", {
 })
 ```
 
-You can find more examples for different languages at the [Pulumi Service Provider Github repository](https://github.com/pulumi/pulumi-pulumiservice/tree/main/examples).
+You can find more examples for different languages at the [Pulumi Service Provider GitHub repository](https://github.com/pulumi/pulumi-pulumiservice/tree/main/examples).
 
 ## Built for Collaboration and Compliance
 

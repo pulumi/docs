@@ -24,7 +24,7 @@ Selection algorithm (weighted fair queuing by staleness):
    reserved lane — staleness self-corrects starvation (the longer a page
    goes unreviewed the higher it climbs, so the whole corpus is swept):
 
-       score = importance * staleness + stale_claim_boost
+       score = importance * staleness
 
    importance = tier_w * (0.25 + 0.75*traffic_n) * gsc_m * feedback_m
               = tier_w * gsc_m * feedback_m     tier-only when no traffic
@@ -60,16 +60,6 @@ Selection algorithm (weighted fair queuing by staleness):
                 ancient never-reviewed page to the front. A human (non-bot)
                 edit fully resets the clock.
 
-   stale_claim_boost = STALE_CLAIM_BOOST when the page's ledger entry carries
-                a non-escalated stale-claim marker (written by the nightly
-                reverify-claims.py when a volatile claim the page asserts
-                re-verified contradicted; see active_markers); 0 otherwise.
-                Marked pages jump the queue; a marker retires when a review
-                resolves it (record-review.py `resolved_claims`), and one
-                unresolved through MARKER_ESCALATION_CAP reviews stops
-                boosting (escalated — a human's turn), so the boost is
-                bounded either way.
-
    Ties break on path ascending, so runs are reproducible.
 
 RESERVED SLOT (fix lane, count >= 2). Score alone never reaches the cold half
@@ -91,8 +81,8 @@ Two modes, over disjoint halves of the corpus (see `eligible`):
   file" were the same flag (tier 0) until pulumi/docs#20996, and selection is
   the only thing that ever writes a page's claim list — so 30% of
   `content/docs/` had never been fact-checked once. Contradictions found on
-  these pages route upstream (reverify-claims.py's `fix_route`), never to a
-  marker no PR here could ever retire.
+  these pages route upstream (report-claims-findings.py's `fix_route`), since
+  no PR here could fix them.
 
 Usage:
     select-articles.py --count 3 --out .content-review-queue.json
@@ -205,109 +195,6 @@ TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
 # purely a cold-page sweep with the scored queue dark.
 NEVER_REVIEWED_RESERVE = 1
 RESERVE_MIN_COUNT = 2
-
-# Additive boost for a page whose ledger entry carries a non-empty
-# `stale_claims` marker (a volatile claim it asserts re-verified contradicted
-# — see reverify-claims.py). Sized to outrank a top-importance page that has
-# gone unreviewed for a year (1.0 * 365), so a known-stale fact beats any
-# ordinary staleness — while an ancient never-reviewed page can still win, so
-# the sweep is never fully starved. A marker retires when the page's next
-# review resolves it (record-review.py), so the boost self-clears.
-STALE_CLAIM_BOOST = 400.0
-
-# A marker the last MARKER_ESCALATION_CAP reviews each saw and left unresolved
-# stops boosting. Carrying an unresolved marker forward is what keeps a missed
-# finding from evaporating (record-review.py), but an unboundedly boosted page
-# would be re-picked every sweep and starve the rest of the queue, which is the
-# same failure the marker was meant to cure. Past the cap the marker stays on
-# the ledger entry — visible, still reported, still blocking re-verification
-# churn — but it stops jumping the page to the front. That is the signal a
-# human needs to look at it.
-MARKER_ESCALATION_CAP = 2
-
-# A stale-claim marker does not boost while the page's last COMPLETED review is
-# newer than this. The claims index snapshots the PRE-fix page on purpose (the
-# model must not launder its own edits into the index), so the night after a
-# fix merges the marker is still there describing a value the merged PR already
-# corrected — and a +400 boost would drag the just-fixed page straight back to
-# the front of the queue. That echo bought one redundant full review per fix,
-# observed twice in the 2026-08-18 queue alone.
-#
-# reverify-claims.superseded_by_review() is the primary guard and stops the
-# re-check upstream of the marker; this is the second, independent one, on the
-# consumer side, for a marker that is already on the entry when a fix lands.
-# Both were specified in #20970; only the reverify half shipped.
-#
-# An INCOMPLETE review never suppresses — it did not fix anything, so the
-# marker is still live. A marker surviving past the cooldown is real drift and
-# boosts exactly as before.
-STALE_BOOST_COOLDOWN_DAYS = 5
-
-
-def all_markers(entry: dict | None) -> list[dict]:
-    """Every stale-claim marker on this ledger entry, escalated or not.
-
-    This is what rides in the queue item, and it is deliberately unfiltered.
-    record-review.py rebuilds the ledger entry from the queue and writes back
-    whatever markers survive the review, so a marker withheld here would be
-    dropped from the ledger the next time the page is reviewed for any reason
-    — and `already_marked()` in reverify-claims.py would then let the entity
-    back into the nightly pool, restarting the detect/boost/miss/clear cycle
-    this whole mechanism exists to break.
-    """
-    return [m for m in (entry or {}).get("stale_claims") or [] if isinstance(m, dict)]
-
-
-def _day(value) -> date | None:
-    try:
-        return datetime.strptime(str(value), "%Y-%m-%d").date()
-    except (TypeError, ValueError):
-        return None
-
-
-def boost_suppressed_by_recent_fix(entry: dict | None, today: date) -> bool:
-    """True when this page's markers are an ECHO of a fix that already landed.
-
-    See STALE_BOOST_COOLDOWN_DAYS. Three conditions, all required:
-
-    1. The last review COMPLETED (record-review.py's vocabulary: any status
-       but "incomplete"). An incomplete review fixed nothing.
-    2. It is inside the cooldown window.
-    3. EVERY marker on the entry was checked AFTER that review.
-
-    (3) is the one that makes this precise rather than a blunt mute. A marker
-    written after a completed review is the echo #20970 describes: the claims
-    index still holds the PRE-fix snapshot, so that night's re-check re-flags
-    a value the merged PR already corrected. A marker written BEFORE the
-    review is the opposite situation — the review saw it and left it — and
-    that is real, unresolved drift which must keep boosting (and escalates on
-    its own via MARKER_ESCALATION_CAP). Suppressing those would mute the
-    finding the whole mechanism exists to carry.
-    """
-    entry = entry or {}
-    if entry.get("status") == "incomplete":
-        return False
-    reviewed = _day(entry.get("reviewed_at"))
-    if reviewed is None or not (0 <= (today - reviewed).days < STALE_BOOST_COOLDOWN_DAYS):
-        return False
-    markers = all_markers(entry)
-    if not markers:
-        return False
-    # An undated marker is not provably an echo, so it keeps its boost.
-    checked = [_day(m.get("checked_at")) for m in markers]
-    return all(c is not None and c > reviewed for c in checked)
-
-
-def active_markers(entry: dict | None) -> list[dict]:
-    """The subset of markers that still earn the page a priority boost.
-
-    Escalated markers (see MARKER_ESCALATION_CAP) are excluded *from the
-    boost only*: repeated reviews have already failed to act on them, so
-    another jump to the front of the queue is not the remedy. They still
-    travel in the queue item and still persist on the ledger — see
-    all_markers().
-    """
-    return [m for m in all_markers(entry) if not m.get("escalated")]
 
 # Reader-signal boost tuning. Both multipliers floor at exactly 1.0 (see the
 # module docstring); the caps keep the maximum combined boost (~1.63x) well
@@ -679,16 +566,13 @@ def score_page(
     last_review: date | None,
     today: date,
     have_traffic: bool,
-    stale_claims: bool = False,
     gsc_m: float = 1.0,
     feedback_m: float = 1.0,
 ) -> float:
     staleness = max((today - last_review).days, 0) if last_review else 0
-    boost = STALE_CLAIM_BOOST if stale_claims else 0.0
     return round(
         importance(tier, visits, max_visits, median_visits, have_traffic, gsc_m, feedback_m)
-        * staleness
-        + boost,
+        * staleness,
         4,
     )
 
@@ -855,17 +739,6 @@ def main() -> int:
             "signals": signal_terms(path)[2],
             "last_reviewed": entry.get("reviewed_at"),
             "attempts": int(entry.get("attempts", 0)),
-            "stale_claims": len(all_markers(entry)),
-            # The markers themselves, not just how many there are. The nightly
-            # re-verification already did the expensive work — it identified the
-            # entity, reached an authoritative source, and wrote down the
-            # evidence — and the review skill is told to treat those as priority
-            # findings. Passing only the count meant the worker had to re-derive
-            # the finding from scratch and could silently miss it (pulumi/docs
-            # #20927: a page boosted for a contradicted version pin was reviewed,
-            # reported "0 contradicted" across 74 re-extracted claims, and merged
-            # a one-line unrelated repair while the flagged bug stayed on master).
-            "stale_claim_markers": all_markers(entry),
             "score": score,
             # Set only on a page that took the reserved slot rather than
             # winning on score, so a reader of the queue (or the PR's "Why this
@@ -942,9 +815,6 @@ def main() -> int:
                 effective_last_review(path, ledger.get(path), newest_non_bot, created),
                 today,
                 have_traffic,
-                stale_claims=(bool(active_markers(ledger.get(path)))
-                              and not boost_suppressed_by_recent_fix(
-                                  ledger.get(path), today)),
                 gsc_m=gsc_m,
                 feedback_m=fb_m,
             ),

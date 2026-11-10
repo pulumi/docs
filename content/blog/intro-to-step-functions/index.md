@@ -16,7 +16,7 @@ category: tutorials
 
 ## Getting Started with AWS Step Functions
 
-Let’s start with a hello world function in an AWS Lambda. You can start the [example from Github](https://github.com/pulumi/examples/tree/master/aws-py-stepfunctions) by selecting the `Deploy with Pulumi` button. A new project page is created automatically in the Pulumi Service, select `Create Project` to get started. Follow the steps to copy the project locally. As with any Python project, we recommend creating a virtual environment to store project-specific dependencies.
+Let’s start with a hello world function in an AWS Lambda. You can start the [example from GitHub](https://github.com/pulumi/examples/tree/master/aws-py-stepfunctions) by selecting the `Deploy with Pulumi` button. A new project page is created automatically in the Pulumi Service, select `Create Project` to get started. Follow the steps to copy the project locally. As with any Python project, we recommend creating a virtual environment to store project-specific dependencies.
 
 ```bash
 $ python3 -m venv venv

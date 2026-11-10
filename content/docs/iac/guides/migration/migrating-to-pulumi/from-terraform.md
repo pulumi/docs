@@ -12,15 +12,16 @@ aliases:
 - /docs/guides/adopting/from_terraform/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/
 - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/
+- /solutions/terraform-migration/
 ---
 
 If your infrastructure was provisioned with Terraform or the CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi. Not all of them involve converting code: you can put your Terraform state under Pulumi Cloud's management, or run your existing HCL on the Pulumi engine, without rewriting anything.
 
 **Adopt Pulumi without converting your code:**
 
-* **[Use Pulumi Cloud as your state backend](/docs/iac/get-started/terraform/terraform-state-backend/)** and keep running the Terraform or OpenTofu CLI, adding a standard `backend "remote"` block and nothing else.
+* **[Use Pulumi Cloud as your state backend](/docs/integrations/terraform/state-backend/)** and keep running the Terraform or OpenTofu CLI, adding a standard `backend "remote"` block and nothing else.
 * **[Keep writing HCL](/docs/iac/languages-sdks/hcl/)** with `runtime: hcl`, which runs your `.tf` files on the Pulumi engine.
-* **[Use Terraform modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/)** directly within your Pulumi programs.
+* **[Use Terraform modules](/docs/integrations/terraform/modules/)** directly within your Pulumi programs.
 * **Coexist** with resources provisioned by Terraform or CDKTF by referencing a `.tfstate` file.
 
 **Convert to a Pulumi program:**
@@ -36,9 +37,9 @@ Converting is not a prerequisite for getting value from Pulumi. Two options let 
 
 ### Pulumi Cloud as your Terraform state backend
 
-[Pulumi Cloud implements the Terraform remote backend API](/docs/iac/get-started/terraform/terraform-state-backend/), so pointing an existing project at it means adding a standard `backend "remote"` block. Your resource code and day-to-day workflow are unchanged, and the guide covers migrating state from HCP Terraform, Amazon S3, Azure Blob Storage, Google Cloud Storage, and local files.
+[Pulumi Cloud implements the Terraform remote backend API](/docs/integrations/terraform/state-backend/), so pointing an existing project at it means adding a standard `backend "remote"` block. Your resource code and day-to-day workflow are unchanged, and the guide covers migrating state from HCP Terraform, Amazon S3, Azure Blob Storage, Google Cloud Storage, and local files.
 
-Terraform state held in Pulumi Cloud gets encrypted storage, update history, state locking, RBAC, audit policies, and unified visibility in [Resource Search](/docs/insights/discovery/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so Pulumi stacks can consume them directly. Stacks created through the Terraform or OpenTofu CLI also [run their plans and applies on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/) by default.
+Terraform state held in Pulumi Cloud gets encrypted storage, update history, state locking, RBAC, audit policies, and unified visibility in [Resource Search](/docs/discovery-governance/guides/search-resources/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so Pulumi stacks can consume them directly. Stacks created through the Terraform or OpenTofu CLI also [run their plans and applies on Pulumi Cloud](/docs/integrations/terraform/remote-execution/) by default.
 
 ### Writing Pulumi programs in HCL
 
@@ -115,7 +116,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
 1. **Install the tool**:
 
-   The tool runs as a Pulumi plugin. Ensure you have the [Pulumi CLI](/docs/install/) installed.
+   The tool runs as a Pulumi plugin. Ensure you have the [Pulumi CLI](/docs/install/) installed, along with the [OpenTofu CLI](https://opentofu.org/docs/intro/install/) (`tofu`) on your `PATH`: the tool shells out to `tofu init` and `tofu refresh` to extract Terraform state read-only. It never runs a mutating command like `tofu apply`.
 
 1. **Set up your Pulumi project**:
 
@@ -190,15 +191,15 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
 Pulumi allows you to reference output values from existing Terraform state files, enabling you to build new infrastructure that depends on resources provisioned with Terraform. This capability is particularly useful for:
 
-* Organizations with existing Terraform infrastructure where the cost of migration isn't justified, including teams that keep running Terraform against [Pulumi Cloud as their state backend](/docs/iac/get-started/terraform/terraform-state-backend/)
+* Organizations with existing Terraform infrastructure where the cost of migration isn't justified, including teams that keep running Terraform against [Pulumi Cloud as their state backend](/docs/integrations/terraform/state-backend/)
 * Teams transitioning gradually from Terraform or CDKTF to Pulumi
 * Scenarios where some infrastructure must remain under management by Terraform due to organizational constraints
 * Accessing shared infrastructure (like VPCs, networks, or databases) managed by other teams
 
-You can use the [Terraform provider](/registry/packages/terraform) functions to reference output values from a Terraform state source:
+You can use the [Terraform provider](/registry/packages/terraform/) functions to reference output values from a Terraform state source:
 
-* For local state files, use [`terraform.state.getLocalReference`](/registry/packages/terraform/api-docs/state/getlocalreference)
-* For state files stored in a remote backend — HCP Terraform, Terraform Enterprise, or [Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/) — use [`terraform.state.getRemoteReference`](/registry/packages/terraform/api-docs/state/getremotereference/#terraform-state-getremotereference)
+* For local state files, use [`terraform.state.getLocalReference`](/registry/packages/terraform/api-docs/state/getlocalreference/)
+* For state files stored in a remote backend — HCP Terraform, Terraform Enterprise, or [Pulumi Cloud](/docs/integrations/terraform/state-backend/) — use [`terraform.state.getRemoteReference`](/registry/packages/terraform/api-docs/state/getremotereference/#terraform-state-getremotereference)
 
 The following code reads VPC and subnet IDs from a local `terraform.tfstate` file and provisions an EKS cluster that uses the read IDs:
 
@@ -282,7 +283,7 @@ pulumi import --from terraform ./terraform.tfstate
 
 Given a path to a valid `.tfstate` file and a target Pulumi stack, Pulumi will import the resources defined in that file into the stack and mark them [protected](/docs/iac/concepts/resources/options/protect/) to allow you to make follow-up changes to their source code safely. You can also import resources individually using the [`import`](https://www.pulumi.com/docs/iac/concepts/resources/options/import/) resource option.
 
-Two converters can read a state file, selected with `--from`, and the choice follows the same rule as it does for [`pulumi convert`](/docs/iac/get-started/terraform/convert-hcl/#automated-conversion-with-pulumi-convert):
+Two converters can read a state file, selected with `--from`, and the choice follows the same rule as it does for [`pulumi convert`](/docs/integrations/terraform/convert-hcl/#automated-conversion-with-pulumi-convert):
 
 * `--from terraform` reads the state file on its own, so it works from a Pulumi project in any language. Reach for it after converting your configuration to a general-purpose language, as above.
 * `--from hcl` parses the `.tf` files in the project directory alongside the state file. Reach for it when you are [running those `.tf` files under `runtime: hcl`](#keep-your-code-in-hcl).
@@ -326,20 +327,20 @@ This will generate a local SDK in your programming language that you can import 
 {{% choosable language typescript %}}
 
 ```typescript
-import * as vpc from "@pulumi/vpc";
+import * as vpc from "@pulumi/vpc-aws";
 
 // Create a VPC using the terraform-aws-modules/vpc module
 const myVpc = new vpc.Module("my-vpc", {
     name: "pulumi-vpc",
     cidr: "10.0.0.0/16",
     azs: ["us-west-2a", "us-west-2b", "us-west-2c"],
-    private_subnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
-    public_subnets: ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"],
-    enable_nat_gateway: true
+    privateSubnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
+    publicSubnets: ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"],
+    enableNatGateway: true
 });
 
 // Access outputs from the module
-export const vpcId = myVpc.vpc_id;
+export const vpcId = myVpc.vpcId;
 ```
 
 {{% /choosable %}}
@@ -347,7 +348,7 @@ export const vpcId = myVpc.vpc_id;
 
 ```python
 import pulumi
-import pulumi_vpc as vpc
+import pulumi_vpc_aws as vpc
 
 # Create a VPC using the terraform-aws-modules/vpc module
 my_vpc = vpc.Module("my-vpc",
@@ -371,7 +372,7 @@ package main
 
 import (
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-    vpc "github.com/pulumi/pulumi-vpc/sdk/go/vpc"
+    vpc "example.com/pulumi-vpc-aws/sdk/go/v5/vpcaws"
 )
 
 func main() {
@@ -413,7 +414,7 @@ func main() {
 
 ```csharp
 using Pulumi;
-using Vpc = Pulumi.Vpc;
+using Vpc = Pulumi.VpcAws;
 
 class MyStack : Stack
 {
@@ -449,4 +450,14 @@ This feature also works seamlessly with local Terraform modules:
 pulumi package add hcl module ./path/to/module
 ```
 
-For more information about using Terraform modules directly in Pulumi, see the [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) guide.
+For more information about using Terraform modules directly in Pulumi, see the [Use a Terraform Module in Pulumi](/docs/integrations/terraform/modules/) guide.
+
+## Getting help with your migration
+
+Most teams work through the options above on their own, but a few situations call for extra support:
+
+* **Large estates**, where thousands of resources or hundreds of stacks need a phased plan rather than a single conversion pass.
+* **Phased coexistence**, where Terraform and Pulumi manage the same infrastructure side by side for an extended period and the cutover needs sequencing.
+* **Module conversion at scale**, where a shared library of Terraform modules needs to become reusable Pulumi components across many teams.
+
+For any of these, [contact us](/contact/?form=sales) to talk through a migration plan, or ask in the [Pulumi community Slack](https://slack.pulumi.com/) if you'd rather start with other users who have made the same move.

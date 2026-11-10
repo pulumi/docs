@@ -1,0 +1,26 @@
+.customer-grid-clip {
+    @apply overflow-hidden;
+}
+
+.customer-logo-grid {
+    @apply -mb-px -mr-px grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6;
+}
+
+.customer-logo-grid-cell {
+    --logo-unit: 2.9rem;
+    --logo-cap: 2.5rem;
+    @apply flex min-h-24 items-center justify-center border-b border-r border-gray-200 px-4 py-6;
+
+    img {
+        @apply grayscale transition-[filter] duration-200;
+    }
+
+    &:hover img {
+        @apply grayscale-0;
+    }
+}
+
+.case-study-card-logo {
+    --logo-unit: 5.2rem;
+    --logo-cap: 3.25rem;
+}

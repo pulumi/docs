@@ -1,9 +1,9 @@
 <!-- chooser: language -->
 <!-- option: javascript -->
-[`Config.getSecret`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret)
+[`Config.getSecret`](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/Config.html#getsecret)
 <!-- /option -->
 <!-- option: typescript -->
-[`Config.getSecret`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret)
+[`Config.getSecret`](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/Config.html#getsecret)
 <!-- /option -->
 <!-- option: python -->
 [`Config.get_secret`](/docs/reference/pkg/python/pulumi/#pulumi.Config.get_secret)

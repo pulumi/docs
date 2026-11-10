@@ -14,7 +14,7 @@ meta_desc: "Learn about some of Pulumi's progress rounding out our .NET and Go S
 
 ## .NET
 
-[Our .NET SDK](/docs/iac/languages-sdks/dotnet/) has come a long way. We recently tidied up the API surface area to feel more familiar to .NET developers, added C# getting started guides for [AWS](/docs/iac/get-started/aws/?language=csharp), [Azure](/docs/iac/get-started/azure/?language=csharp), [GCP](/docs/iac/get-started/aws/?language=csharp), and [Kubernetes](/docs/iac/get-started/aws/?language=csharp), and added many new examples. We also closed the gap on core Pulumi features missing from the initial release, including [aliases](/docs/iac/concepts/resources/#aliases), [transformations](/docs/iac/concepts/resources/#transformations), [StackReference](/docs/iac/concepts/stacks/#stackreferences), and .NET versions of the [Kubernetes](https://github.com/pulumi/pulumi-kubernetes), [Docker](https://github.com/pulumi/pulumi-docker), and [Terraform remote state](https://github.com/pulumi/pulumi-terraform) packages.
+[Our .NET SDK](/docs/iac/languages-sdks/dotnet/) has come a long way. We recently tidied up the API surface area to feel more familiar to .NET developers, added C# getting started guides for [AWS](/up/?cloud=aws), [Azure](/up/?cloud=azure), [GCP](/up/?cloud=gcp), and [Kubernetes](/up/?cloud=kubernetes), and added many new examples. We also closed the gap on core Pulumi features missing from the initial release, including [aliases](/docs/iac/concepts/resources/#aliases), [transformations](/docs/iac/concepts/resources/#transformations), [StackReference](/docs/iac/concepts/stacks/#stackreferences), and .NET versions of the [Kubernetes](https://github.com/pulumi/pulumi-kubernetes), [Docker](https://github.com/pulumi/pulumi-docker), and [Terraform remote state](https://github.com/pulumi/pulumi-terraform) packages.
 
 The remaining areas to improve for the .NET SDK include making the API documentation available in C# (details are below in the "still to come" section), migrating to .NET Core 3.1, and enabling you to test your infrastructure using familiar C# tools more easily.
 
@@ -24,13 +24,13 @@ We completely overhauled [our Go SDK](/docs/iac/languages-sdks/go/) to be more i
 
 The major change in the Go SDK is that we previously used `map[string]interface{}` types in many places instead of properly-typed data structures. No more! Instead, you now get strong typing for all Go resource APIs across all providers, including AWS, Azure, GCP, and Kubernetes. The improvements here are huge, as you can see [in this before/after PR](https://github.com/pulumi/examples/commit/b88f385a8951f81fe41cb4f40eb940b074e9263b#diff-07803f7bc3bff97871e6e3eea7287cb8). Examples and documentation have been updated to this new style.
 
-[GoDocs are now here](/docs/reference/pkg?language=golang ) for all of our providers and we've also added Go versions to our getting started guides for [AWS](/docs/iac/get-started/aws/?language=golang), [Azure](/docs/iac/get-started/azure/?language=golang), and [GCP](/docs/iac/get-started/gcp/?language=golang), and have many more improvements on the way.
+[GoDocs are now here](/docs/reference/pkg?language=golang ) for all of our providers and we've also added Go versions to our getting started guides for [AWS](/up/?cloud=aws), [Azure](/up/?cloud=azure), and [GCP](/up/?cloud=gcp), and have many more improvements on the way.
 
 We've also added support for core Pulumi features, including [aliases](/docs/iac/concepts/resources/#aliases) and [transformations](/docs/iac/concepts/resources/#transformations). A few remain to flesh out like adding Go support for our Kubernetes, Docker, and Terraform remote state packages. The biggest change to come is retiring Dep in favor of Go modules everywhere.
 
 ## Policy as Code
 
-[CrossGuard, our Policy as Code framework](/docs/insights/policy/), is now ready to take for a serious test drive. CrossGuard lets you to write policies in real code and enforce them during updates. Policies can check for anything; however, common checks include security, compliance, cost management, and general and team best practices. You can write your policy packages or use off-the-shelf policy packs like our [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) package.
+[CrossGuard, our Policy as Code framework](/docs/discovery-governance/concepts/policy-as-code/), is now ready to take for a serious test drive. CrossGuard lets you to write policies in real code and enforce them during updates. Policies can check for anything; however, common checks include security, compliance, cost management, and general and team best practices. You can write your policy packages or use off-the-shelf policy packs like our [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) package.
 
 CrossGuard is open source and the functionality is behind [the new `pulumi policy` command](/docs/iac/cli/commands/pulumi_policy/), as well as [the new `--policy-pack` flag](/docs/iac/cli/commands/pulumi_up/#options) for the `preview` and `up` commands. You can use these features with any edition of Pulumi, without restriction, including the offline backends.
 
@@ -48,7 +48,7 @@ The remaining areas of focus between now and launch include:
 
 * Making reference policy packs available for AWS, Azure, GCP, and Kubernetes. These packs will be usable out-of-the-box with a collection of some of the most important configurable rules we've seen, in addition to being a starting point for creating your packs.
 
-[CrossGuard is ready to try today](/docs/insights/policy/get-started/), and [we've begun blogging about some example use cases](/blog/manage-infrastructure-with-pac) that you may find interesting.
+[CrossGuard is ready to try today](/docs/discovery-governance/get-started/enforce-policy-as-code/), and [we've begun blogging about some example use cases](/blog/manage-infrastructure-with-pac) that you may find interesting.
 
 ## Other Goodies
 
@@ -84,4 +84,4 @@ We've made some significant performance improvements and have others still in th
 
 A lot of good work has already landed in 2020 &mdash; and there is a lot more on its way, including a few surprises!
 
-We appreciate all the feedback you've given us that is helping to make sure our work in early 2020 is a major step function in overall features, quality, and capabilities. We're always looking for feedback so please let us know what you think. [Give Pulumi a try](/docs/get-started/) today, [drop into our Community Slack](https://slack.pulumi.com) to share your feedback, and make sure to [file any suggestions or improvements we can make on GitHub](https://github.com/pulumi/pulumi/issues/new).
+We appreciate all the feedback you've given us that is helping to make sure our work in early 2020 is a major step function in overall features, quality, and capabilities. We're always looking for feedback so please let us know what you think. [Give Pulumi a try](/up/) today, [drop into our Community Slack](https://slack.pulumi.com) to share your feedback, and make sure to [file any suggestions or improvements we can make on GitHub](https://github.com/pulumi/pulumi/issues/new).

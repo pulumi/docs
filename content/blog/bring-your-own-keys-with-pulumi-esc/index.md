@@ -3,7 +3,6 @@ title: "Bring Your Own Keys With Pulumi ESC"
 date: 2025-06-18T13:25:26-03:00
 draft: false
 meta_desc: "You can Bring Your Own Keys (BYOK) to encrypt secrets on Pulumi ESC."
-canonical_url: "https://www.pulumi.com/docs/pulumi-cloud/admin/customer-managed-keys/"
 authors:
     - pablo-terradillos
     - boris-schlosser
@@ -31,7 +30,7 @@ Setting it up takes just a few minutes:
 
 ## Available Today
 
-Customer-Managed Keys with support for AWS KMS are available today for all organizations on the **Pulumi Enterprise** or **Business Critical** plans. You can set it up by following the instructions [in the Pulumi Cloud documentation](https://www.pulumi.com/docs/pulumi-cloud/admin/customer-managed-keys).
+Customer-Managed Keys with support for AWS KMS are available today for all organizations on the **Pulumi Enterprise** or **Business Critical** plans. You can set it up by following the instructions [in the Pulumi Cloud documentation](/docs/administration/concepts/customer-managed-keys/).
 
 We expect to add support for more cloud providers in the future. Please vote on the following GitHub issues for your favorite to support prioritization:
 
@@ -44,6 +43,6 @@ We’re excited to see how Customer-Managed Keys help you and your organization 
 
 * Connect with us in the [Pulumi Community Slack](https://slack.pulumi.com)  
 * Open an issue on [GitHub](https://github.com/pulumi/pulumi)
-* Read the full documentation on [Customer-Managed Keys](https://www.pulumi.com/docs/pulumi-cloud/admin/customer-managed-keys)
+* Read the full documentation on [Customer-Managed Keys](/docs/administration/concepts/customer-managed-keys/)
 
 Try this today, [Get Started with Pulumi for free](https://pulumi.com/start)

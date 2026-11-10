@@ -28,14 +28,14 @@ This document outlines the steps required to configure Pulumi Deployments to use
 Configuring OIDC for Google Cloud involves two sides:
 
 1. **Google Cloud** — create a workload identity pool and OIDC provider that trust Pulumi Cloud, and a service account your deployments can impersonate. You can do this in the [Google Cloud console](#using-the-google-cloud-console) or [programmatically](#using-infrastructure-as-code).
-1. **Pulumi Deployments** — enable the Google Cloud OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that service account. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/deployments/deployments/api/#patchsettings).
+1. **Pulumi Deployments** — enable the Google Cloud OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that service account. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/reference/cloud-rest-api/deployments/).
 
 ## Prerequisites
 
 * You must create a [Google Cloud project with the required APIs enabled](https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers#configure)
 
 {{< notes type="warning" >}}
-Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the official [Google Cloud documentation](https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers).
+This guide provides step-by-step instructions based on the official provider documentation, which is subject to change. For the most current and precise information, always refer to the official [Google Cloud documentation](https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers).
 {{< /notes >}}
 
 ## Configure Google Cloud
@@ -46,13 +46,13 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 1. Navigate to the [Workload Identity Pools page](https://console.cloud.google.com/projectselector2/iam-admin/workload-identity-pools) in the Google Cloud console.
 1. Select your Google Cloud project.
-1. Click the **Create Pool** button.
-1. Provide a name and an optional description, then click **Continue**
+1. Select the **Create Pool** button.
+1. Provide a name and an optional description, then select **Continue**.
 1. In the **Add a provider to pool** dropdown, select **OpenID Connect (OIDC)**.
 1. Provide a name for the provider.
 1. In the **Issuer** field, enter `https://api.pulumi.com/oidc`.
-1. In the **Audiences** section, select the **Allowed audiences** radio button. Enter the name of your Pulumi organization. Then click **Continue**.
-1. In the **Configure provider attributes** section, provide the value of `assertion.sub` in the **OIDC 1** field. Then click **Save**.
+1. In the **Audiences** section, select the **Allowed audiences** radio button. Enter the name of your Pulumi organization. Then select **Continue**.
+1. In the **Configure provider attributes** section, provide the value of `assertion.sub` in the **OIDC 1** field. Then select **Save**.
 
 #### Configure a service account
 
@@ -62,27 +62,27 @@ Once you have created your workload identity pool and provider, you will be dire
 
 1. Navigate to the [Service Accounts](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts) page.
 1. Select your Google Cloud project.
-1. Click "Create Service Account".
-1. Enter a value for the **Service account name** field. Then click **Create And Continue**
-    * The **Service account ID** field will auto-populate based on this value.
-1. In the **Grant this service account access to project** section, select the role(s) that provides the relevant access to Pulumi Cloud. Then click **Continue**.
-1. Leave the values in the next section blank and click **Done**.
+1. Select **Create Service Account**.
+1. Enter a value for the **Service account name** field. Then select **Create And Continue**.
+    * The **Service account ID** field auto-populates based on this value.
+1. In the **Grant this service account access to project** section, select the roles that provide the relevant access to Pulumi Cloud. Then select **Continue**.
+1. Leave the values in the next section blank and select **Done**.
 
 ##### Grant access to the service account
 
-1. In your workload identity pool's details page, click the **Grant Access** button.
+1. In your workload identity pool's details page, select the **Grant Access** button.
 1. In the **Select service account** dropdown, select the desired service account to associate with the pool.
-1. Under the **Select principals** section, click the **Only identities matching the filter** radio button.
+1. Under the **Select principals** section, select the **Only identities matching the filter** radio button.
 1. In the **Attribute name** dropdown, select **Subject**.
-1. In the **Attribute value** field, provide a valid subject claim (see examples at the end of this section). Then click **Save**.
+1. In the **Attribute value** field, provide a valid subject claim (see examples at the end of this section). Then select **Save**.
 
 Make a note of the project number, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
 
 ##### Subject claim examples
 
-To enable valid operations on a specific stack, Google federated credentials require an exact match on the OIDC token subject claim. Unfortunately, the subject identifier does *not* currently allow wildcards. Therefore, you must create credentials for each permutation of the subject claim that is possible for the stack.
+Each grant in the previous steps uses the **Subject** attribute, so it matches exactly one OIDC token subject claim. To enable every valid operation on a specific stack, create a grant for each subject claim the stack can present.
 
-For example, to enable all of the valid operations on a stack named `dev` of the `core` project in the `contoso` organization, you would need to create credentials for each of the following subject identifiers:
+For example, to enable all the valid operations on a stack named `dev` of the `core` project in the `contoso` organization, you would need to create a grant for each of the following subject identifiers:
 
 * `pulumi:deploy:org:contoso:project:core:stack:dev:operation:preview:scope:write`
 * `pulumi:deploy:org:contoso:project:core:stack:dev:operation:update:scope:write`
@@ -133,8 +133,8 @@ new gcp.projects.IAMMember("pulumi-deployments-editor", {
     member: pulumi.interpolate`serviceAccount:${account.email}`,
 });
 
-// Google federated credentials require an exact subject match (no wildcards), so bind
-// one principal per operation to let it impersonate the service account.
+// Each principal:// binding matches exactly one subject, so bind one principal per
+// operation to let it impersonate the service account.
 for (const operation of ["preview", "update", "refresh", "destroy"]) {
     const subject = `pulumi:deploy:org:${org}:project:${project}:stack:${stack}:operation:${operation}:scope:write`;
     new gcp.serviceaccount.IAMMember(`wif-${operation}`, {
@@ -151,13 +151,13 @@ export const serviceAccountEmail = account.email;
 
 ## Configure Pulumi Deployments
 
-Google Cloud OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/deployments/deployments/api/#patchsettings). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
+Google Cloud OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/reference/cloud-rest-api/deployments/). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
 
 For new stacks, Pulumi recommends using [Pulumi ESC](/docs/esc/) instead, which supports [OIDC for Google Cloud](/docs/esc/guides/configuring-oidc/gcp/) alongside broader secrets and configuration management than Deployments OIDC alone provides. See [Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC](/docs/deployments/guides/cloud-credentials/#choosing-between-pulumi-esc-environments-and-pulumi-deployments-oidc) for guidance.
 
 ### Using infrastructure as code
 
-You can manage the same deployment settings in source control with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource (the OIDC configuration is set under `operationContext.oidc.gcp`). Deployment settings can also be configured via the [REST API](/docs/deployments/deployments/api/#patchsettings).
+With the `pulumiservice.DeploymentSettings` resource, set the OIDC configuration under `operationContext.oidc.gcp`:
 
 ```typescript
 import * as pulumiservice from "@pulumi/pulumiservice";

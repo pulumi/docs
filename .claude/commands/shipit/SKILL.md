@@ -111,7 +111,7 @@ See `shipit:references:commit-messages` for message format, prefix guidelines, a
 
 Present suggestions with `AskUserQuestion` (3 options + custom message).
 
-All messages include: `Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>`
+All messages include: `Co-Authored-By: Claude <noreply@anthropic.com>`
 
 ---
 
@@ -136,7 +136,7 @@ Add MCP server documentation for AI features
 
 Documents the new Model Context Protocol integration for Claude.
 
-Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+Co-Authored-By: Claude <noreply@anthropic.com>
 ─────────────────────────────────────────
 
 Commands that will run:
@@ -146,7 +146,7 @@ Commands that will run:
 
   Documents the new Model Context Protocol integration for Claude.
 
-  Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+  Co-Authored-By: Claude <noreply@anthropic.com>
   EOF
   )"
 ```
@@ -180,7 +180,7 @@ Commands that will run:
    git commit -m "$(cat <<'EOF'
    {commit message from Step 5}
 
-   Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+   Co-Authored-By: Claude <noreply@anthropic.com>
    EOF
    )"
    ```
@@ -346,8 +346,9 @@ Commands that will run:
 
 4. **Display the closing line**:
    ```
-   Next: the pre-merge review. I'll work every finding with you — blockers,
-   low-confidence, and style — until each one is fixed, refuted, or explicitly
+   Next: the pre-merge review. I'll work every finding with you — the
+   blocking ones, the questions it puts to you, and the advisory style and
+   reviewer-check items — until each one is fixed, refuted, or explicitly
    accepted. That's what "done" means on this repo.
    ```
 

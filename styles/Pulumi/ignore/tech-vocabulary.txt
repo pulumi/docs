@@ -29,6 +29,7 @@ Actionability
 addon
 addons
 Addy
+Aembit
 affordance
 Agentgateway
 agentic
@@ -66,6 +67,7 @@ Artifactory
 Astral's
 Async
 async
+asyncio
 Atlassian
 Audichron
 Audichrons
@@ -141,6 +143,7 @@ Civo
 cli
 CLI's
 Cloudformation
+Cloudsmith
 CNCF's
 codeblock
 Codefresh
@@ -314,6 +317,7 @@ Gloo
 goated
 goldrush
 goto
+Gradle
 Grafana
 grandboss
 greenfielders
@@ -437,6 +441,7 @@ livestream
 livestreams
 lockdown
 lockfile
+Logfire
 lookup's
 lookups
 loopback
@@ -654,6 +659,7 @@ serverlessly
 shareability
 Sharma
 Shilkov
+shortcodes
 Shoutouts
 signup
 Signup
@@ -700,6 +706,8 @@ subshell
 substring
 subteam
 subteams
+subtree
+subtrees
 Supabase
 supergraph
 superlinearly
@@ -707,6 +715,7 @@ superset
 swappable
 syntaxes
 syscalls
+systemd
 taggable
 tailnet
 Tailscale
@@ -823,6 +832,7 @@ Wiggum
 winget
 Winget
 Wireshark
+wordmarks
 Wordpress
 worktree
 Worktrees

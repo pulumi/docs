@@ -1,7 +1,7 @@
 ---
 title: "Why Choose Pulumi Over Terraform?"
 date: 2026-06-02
-lastmod: 2026-06-05
+updated: 2026-09-21
 meta_desc: "See why teams choose Pulumi over Terraform for modern infrastructure as code, with examples for refactoring, secrets, testing, and safer changes."
 feature_image: feature.png
 authors:
@@ -49,7 +49,7 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 | Environments | Workspaces or separate configurations | [Pulumi stacks](https://www.pulumi.com/docs/iac/concepts/stacks/) model environments with per-stack config, secrets, history, and outputs | Stack boundaries still need thoughtful design |
 | Code reuse | Modules and HCL composition patterns | Pulumi components and packages use normal language abstractions | Over-abstracted components can become hard to use |
 | Imports and migration | Import blocks, generated config, and state operations | [`pulumi import`](https://www.pulumi.com/docs/iac/guides/migration/import/) and migration tooling support gradual adoption | Imported code still needs review and cleanup |
-| Terraform state | S3, Azure Blob, or Terraform Cloud backends | [Pulumi Cloud can serve as a Terraform state backend](https://www.pulumi.com/docs/iac/get-started/terraform/terraform-state-backend/) with encrypted storage, locking, history, and RBAC, while you keep using the Terraform or OpenTofu CLI | State still needs a clean migration plan as resources move to Pulumi |
+| Terraform state | S3, Azure Blob, or Terraform Cloud backends | [Pulumi Cloud can serve as a Terraform state backend](https://www.pulumi.com/docs/integrations/terraform/state-backend/) with encrypted storage, locking, history, and RBAC, while you keep using the Terraform or OpenTofu CLI | State still needs a clean migration plan as resources move to Pulumi |
 | Provider wiring | Provider inheritance and aliases inside modules | Explicit [provider resources](https://www.pulumi.com/docs/iac/concepts/providers/) make multi-region and multi-account wiring visible in code review | Provider versions and bugs can still affect deployments |
 | Testing | Validation, plan review, and external test harnesses | Pulumi programs can use normal [unit and integration test frameworks](https://www.pulumi.com/docs/iac/guides/testing/) | Tests complement previews, they do not replace them |
 | Drift detection | Refresh and refresh-only plans, plus external scheduling | [`pulumi refresh`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_refresh/) reconciles state, and Pulumi Cloud adds [scheduled drift detection and remediation](https://www.pulumi.com/docs/deployments/concepts/drift/) on a configurable cadence | Detection still depends on provider behavior and a healthy state backend |
@@ -59,7 +59,7 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 
 Terraform modules are powerful, but larger HCL codebases can require teams to maintain separate conventions for composition, validation, and reuse. Pulumi lets infrastructure teams use the features of whichever [supported programming language](https://www.pulumi.com/docs/iac/languages-sdks/) they choose, such as classes, functions, types, loops, package managers, linters, and test frameworks.
 
-Teams with HCL muscle memory are not left out, either. Pulumi now [supports HCL natively](https://www.pulumi.com/docs/iac/languages-sdks/hcl/) as one of its languages, alongside Python, TypeScript, JavaScript, Go, .NET, Java, and YAML. Part of a team can keep authoring in HCL while the project still benefits from Pulumi components, testing, and the same engine and package workflows as every other language.
+Teams with HCL muscle memory are not left out, either. Pulumi now [supports HCL natively](https://www.pulumi.com/docs/iac/languages-sdks/hcl/) as one of its languages, alongside Python, TypeScript, JavaScript, Go, .NET, Java, and YAML. Pulumi HCL aims to run valid Terraform configurations [without changes](/docs/iac/languages-sdks/hcl/#terraform-compatibility), with a small number of documented differences, backed by the same state management, secrets handling, and deployment engine as every other Pulumi language.
 
 For example, a platform team can wrap a standard storage pattern in a `ComponentResource` and share it like any other TypeScript abstraction:
 
@@ -241,7 +241,7 @@ You also don't have to do it alone. Pulumi provides [self-serve conversion tools
 
 ## Manage Terraform state in Pulumi Cloud
 
-You don't have to rewrite anything to start getting value from Pulumi. Pulumi Cloud can serve as a Terraform state backend, letting you store and manage Terraform state alongside your Pulumi stacks. Your team can keep using the Terraform or OpenTofu CLI for day-to-day operations while gaining encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through Pulumi Insights — with agentic infrastructure coding through Neo on top.
+You don't have to rewrite anything to start getting value from Pulumi. Pulumi Cloud can serve as a Terraform state backend, letting you store and manage Terraform state alongside your Pulumi stacks. Your team can keep using the Terraform or OpenTofu CLI for day-to-day operations while gaining encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through Pulumi Insights — with [agentic infrastructure](/what-is/what-is-agentic-infrastructure/) coding through Neo on top.
 
 It uses Terraform's standard remote backend, so you point the CLI at Pulumi Cloud without changing your infrastructure code:
 
@@ -260,7 +260,7 @@ terraform {
 
 From there, Pulumi can also read outputs from that state, so a new Pulumi stack can consume Terraform-managed values such as VPC IDs and subnet IDs while you migrate one piece at a time. When you're ready to bring resources fully across, [`pulumi import --from terraform`](https://www.pulumi.com/docs/iac/guides/migration/import/) reads a `.tfstate` file and generates matching declarations, and `pulumi convert --from terraform` translates the surrounding configuration into your chosen language.
 
-[Storing Terraform state in Pulumi Cloud](https://www.pulumi.com/docs/iac/get-started/terraform/terraform-state-backend/) keeps both tools pointed at one system of record, which is what makes a gradual, low-risk migration practical.
+[Storing Terraform state in Pulumi Cloud](https://www.pulumi.com/docs/integrations/terraform/state-backend/) keeps both tools pointed at one system of record, which is what makes a gradual, low-risk migration practical.
 
 ## What Pulumi does not magically fix
 
@@ -280,4 +280,4 @@ Pulumi can also work with Terraform provider ecosystems, including long-tail pro
 
 If your team is evaluating infrastructure as code options, start with the workflow that creates the most leverage: write infrastructure in the language your team already uses, test shared components, protect critical resources, and migrate one stack at a time.
 
-To go deeper, [get started with Pulumi](/docs/get-started/) or read the [Terraform migration guide](https://www.pulumi.com/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
+To go deeper, [get started with Pulumi](/up/) or read the [Terraform migration guide](https://www.pulumi.com/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).

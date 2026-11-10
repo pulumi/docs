@@ -126,7 +126,7 @@ values:
 
 {{% notes type="info" %}}
 
-Don't know how to create a PAT? Check out the official Pulumi [documentation](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/).
+Don't know how to create a PAT? Check out the official Pulumi [documentation](/docs/administration/concepts/access-tokens/).
 
 {{% /notes %}}
 
@@ -400,4 +400,4 @@ You can find detailed information about all current available Pulumi ESC Kuberne
 
 Let us know what you think about the `Secret Store CSI Driver` and how you are managing secrets in your Kubernetes clusters. We would love to hear your feedback and experiences.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

@@ -24,7 +24,7 @@ Least privilege means giving every person, pipeline, and program only the access
 Over-broad cloud credentials can damage running infrastructure, and over-broad Pulumi Cloud access can expose secrets or delete stacks and their state. This guide works through both, across the three places where you make access decisions: your infrastructure code (IaC), your secrets and configuration (ESC), and your automation ([CI/CD](/docs/iac/operations/continuous-delivery/) and [Pulumi Deployments](/docs/deployments/concepts/), Pulumi Cloud's managed execution service).
 
 {{% notes type="info" %}}
-Pulumi Cloud's configurable RBAC features, including custom roles, permission sets, and team role assignments, are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
+Pulumi Cloud's configurable RBAC features, including custom roles, permission sets, and team role assignments, are only available in the Pulumi Pro or Enterprise editions. To learn more, see the [pricing page](/pricing/).
 {{% /notes %}}
 
 ## How a Pulumi program gets its privileges
@@ -64,11 +64,7 @@ Pulumi Cloud [RBAC](/docs/administration/concepts/rbac/) decides who can view an
 
 ### Start from conservative defaults
 
-Set your organization's default stack permission to None or Read, so people start with little and receive more only when they need it. The [roles documentation](/docs/administration/concepts/rbac/roles/#organization-wide-role-settings) covers where to configure this and how the built-in Member role interacts with custom roles.
-
-{{% notes type="info" %}}
-Organization-wide role settings are retained from Pulumi Cloud's pre-RBAC permission system for backward compatibility. For new, fine-grained access control, prefer custom roles and permission sets.
-{{% /notes %}}
+Set your organization's [default role](/docs/administration/concepts/rbac/default-roles/) to `Reader` or `Builder`, so people start with only read permissions, or permissions on what they create, and receive more through [teams](/docs/administration/concepts/rbac/teams/) when they need it.
 
 ### Grant access explicitly through permission sets and teams
 
@@ -143,7 +139,7 @@ If you run your own CI/CD, prefer OIDC token exchange over a stored Pulumi token
 - On [GitHub Actions](/docs/administration/guides/oidc-issuers/github/), the `pulumi/auth-actions` action performs the exchange and can request a team-scoped token, so the run acts within a single team's permissions.
 - On [GitLab CI](/docs/administration/guides/oidc-issuers/gitlab/), and any other platform that can mint an OIDC token, `pulumi login --oidc-token` performs the same exchange directly through the CLI.
 
-Scope these tokens as narrowly as the work allows. Team-scoped tokens, which confine a run to one team's permissions, require the Enterprise or Business Critical edition.
+Scope these tokens as narrowly as the work allows. Team-scoped tokens, which confine a run to one team's permissions, require the Pro or Enterprise edition.
 
 ### Long-lived access tokens
 
@@ -151,7 +147,7 @@ Where OIDC is not an option, you can fall back to a stored [Pulumi access token]
 
 ### Hand off ownership of stacks your automation creates
 
-Whichever credential a pipeline uses, creating a stack leaves a permanent mark on the identity that created it. The creator receives an automatic [creator grant](/docs/administration/concepts/rbac/#creator-grants) of Stack Admin on that stack, and because every grant in Pulumi Cloud is additive, no role, organization-wide setting, or tag-based rule takes it back. The grant belongs to the organization or team the token authenticates as, so it outlives the token itself, including a short-lived OIDC-issued one.
+Whichever credential a pipeline uses, creating a stack leaves a permanent mark on the identity that created it. The creator receives an automatic [creator grant](/docs/administration/concepts/rbac/#creator-grants) of Stack Admin on that stack, and because every grant in Pulumi Cloud is additive, no role, organization-wide setting, or tag-based rule takes it back. The grant belongs to the identity the token authenticates as (the organization for an organization token, or the team's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified) for a team token), so it outlives the token itself, including a short-lived OIDC-issued one. Deleting a team also removes its service principal's creator grants.
 
 Automation that creates stacks accumulates administrative access to every stack it has ever created, which is rarely what the pipeline's role implies. Keep that under control by making the hand-off part of the run: once the stack exists, transfer its ownership to a break-glass user or team, or delete the automatic Stack Admin entry from the stack's **Access** tab. Then the automation keeps only the access its role grants, and elevated standing access to the stack sits with the audited break-glass identity instead.
 

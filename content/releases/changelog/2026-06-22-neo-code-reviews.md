@@ -8,10 +8,10 @@ authors:
     - christian-nunciato
 ---
 
-As of today, [Pulumi Neo code reviews](/docs/ai/neo/code-reviews/) are available in public preview.
+As of today, [Pulumi Neo code reviews](/docs/ai/concepts/neo/code-reviews/) are available in public preview.
 
 Building on the [Pulumi GitHub app](/docs/integrations/version-control/github-app/), which already posts rich diffs as PR comments on pull requests, Neo code reviews help you understand not just what's changing, but also how those changes relate to, and potentially impact, the rest of your running infrastructure.
 
-![An example code review in a Github PR comment](/blog/neo-code-reviews/neo-code-review.png)
+![An example code review in a GitHub PR comment](/blog/neo-code-reviews/neo-code-review.png)
 
 [Check out the blog](/blog/neo-code-reviews/) to learn more.

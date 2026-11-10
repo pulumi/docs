@@ -13,7 +13,7 @@ Quick reference for generating meaningful commit messages that follow repository
 
 {optional longer description}
 
-Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+Co-Authored-By: Claude <noreply@anthropic.com>
 ```
 
 ## General Principles
@@ -84,7 +84,7 @@ Add comprehensive MCP server documentation
 Documents the new Model Context Protocol integration including
 server setup, API reference, and examples.
 
-Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+Co-Authored-By: Claude <noreply@anthropic.com>
 ```
 
 ## Issue References
@@ -122,5 +122,5 @@ Avoid:
 **Always include at the end:**
 
 ```
-Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+Co-Authored-By: Claude <noreply@anthropic.com>
 ```

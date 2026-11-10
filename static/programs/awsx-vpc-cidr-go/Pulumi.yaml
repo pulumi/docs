@@ -1,3 +1,0 @@
-name: awsx-vpc-cidr-go
-runtime: go
-description: An example that creates a new VPC and configuring a custom CIDR block.

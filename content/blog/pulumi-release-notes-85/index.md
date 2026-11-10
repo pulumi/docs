@@ -34,7 +34,7 @@ category: product
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from January and February. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi-aws-native/releases) and Pulumi Service features in the [new features blogs](/blog/tag/features).
+We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from January and February. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi-aws-native/releases) and Pulumi Service features in the [new features blogs](/blog/tags/features).
 
 <!--more-->
 
@@ -117,7 +117,7 @@ We shipped an improvement where Pulumi CLI will ignore .git, .hg, and .bzr files
 
 Pulumi comes with a wealth of packages but users can also create and use custom providers and components. By default, Pulumi expects the binaries to be hosted on GitHub. On top of that, the CLI now supports GitLab as a first-class source of package downloads.
 
-If your package binary is hosted on GitLab, you can now set its `pluginDownloadURL` property (see [Publish your package](/docs/iac/packages-and-automation/pulumi-packages/authoring/#publish-your-package)) to point to your GitLab project, e.g. to `gitlab://gitlab.com/43429536`.
+If your package binary is hosted on GitLab, you can now set its `pluginDownloadURL` property (see [Publish your package](/docs/iac/guides/building-extending/packages/publishing-packages/#publish-your-package)) to point to your GitLab project, e.g. to `gitlab://gitlab.com/43429536`.
 
 👉  Learn more in the [Support custom plugins from other sources issue](https://github.com/pulumi/pulumi/issues/9007).
 
@@ -254,4 +254,4 @@ The main benefits of using the OIDC integration for Pulumi Deployments are as fo
 
 ### If you haven’t yet tried out Pulumi Deployments
 
-You should now see a “Deploy” tab under Stack Settings in the [Pulumi Service console](https://app.pulumi.com/signin) and have access to the [Deployments REST API](https://www.pulumi.com/docs/reference/deployments-rest-api/). View [the documentation](https://www.pulumi.com/docs/pulumi-cloud/deployments/) for help getting started and join our [Slack](https://pulumi-community.slack.com/archives/C048NVDH6DV) (#pulumi-deployments channel) for questions and feedback.
+You should now see a “Deploy” tab under Stack Settings in the [Pulumi Service console](https://app.pulumi.com/signin) and have access to the [Deployments REST API](/docs/reference/cloud-rest-api/deployments/). View [the documentation](/docs/deployments/concepts/) for help getting started and join our [Slack](https://pulumi-community.slack.com/archives/C048NVDH6DV) (#pulumi-deployments channel) for questions and feedback.

@@ -75,6 +75,7 @@ REPOS=(
     "policy,index.ts,pulumi-policy,sdk/nodejs/policy"
     "pulumi,index.ts,pulumi/sdk/nodejs"
     "esc-sdk,index.ts,esc-sdk/sdk/typescript/esc"
+    "cloud-sdk,src/index.ts,pulumi-cloud-sdk/nodejs"
 )
 
 PIDS=()
@@ -103,5 +104,15 @@ do
     echo -e "Waiting on: $pid"
     wait $pid
 done
+
+# --- SEO/AEO head metadata post-pass --------------------------------------
+# TypeDoc's default theme is used as-is in this repo (no editable .hbs
+# templates to hook into), so the fix runs as a post-process over the
+# already-generated HTML instead of a template change.
+# Runs over the whole OUTDIR so it covers every package generated above.
+echo -e "\033[0;93mInjecting SEO head metadata (canonical, per-page description, JSON-LD)\033[0m"
+python3 "${SCRIPT_DIR}/typedoc_seo_postprocess.py" \
+    "${OUTDIR}" \
+    "https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi"
 
 echo "Done"

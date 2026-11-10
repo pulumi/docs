@@ -19,7 +19,7 @@ For high-volume stacks, Pulumi recommends enabling **Skip intermediate deploymen
 
 With **Skip intermediate deployments** enabled, whenever a deployment finishes Pulumi skips every queued deployment of the same type except the most recent one, so the stack jumps straight to the latest desired state instead of replaying every commit in between. Because the changes are cumulative, the end result is the same, and you save the deployment minutes and wall-clock time the skipped runs would have consumed.
 
-Enable it from your stack's deployment settings in the Pulumi Cloud UI, or set [`operationContext.options.skipIntermediateDeployments`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) to `true` on the `pulumiservice.DeploymentSettings` resource.
+Enable it from your stack's deployment settings in the Pulumi Cloud console, or set [`operationContext.options.skipIntermediateDeployments`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) to `true` on the `pulumiservice.DeploymentSettings` resource.
 
 Keep these trade-offs in mind:
 

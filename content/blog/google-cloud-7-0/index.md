@@ -14,7 +14,7 @@ category: product
 
 The latest major release of the Pulumi Google Cloud Classic Provider is available now! This [7.0 release](https://github.com/pulumi/pulumi-gcp/releases/tag/v7.0.0) contains the latest upstream changes to keep you up-to-date along with a highly requested bug fix, keeping your journey in managing Google Cloud resources fresh and smooth.
 
-The Pulumi Google Cloud Classic provider can be used to provision any of the cloud resources available in the upstream provider. It is part of the suite of [Pulumi official providers](https://www.pulumi.com/docs/intro/cloud-providers/), which means that it is officially maintained and supported by Pulumi. The provider is also open source and available on [GitHub](https://github.com/pulumi/pulumi-gcp) for you to contribute and grow.
+The Pulumi Google Cloud Classic provider can be used to provision any of the cloud resources available in the upstream provider. It is part of the suite of [Pulumi official providers](/registry/packages/), which means that it is officially maintained and supported by Pulumi. The provider is also open source and available on [GitHub](https://github.com/pulumi/pulumi-gcp) for you to contribute and grow.
 
 <!--more-->
 
@@ -24,7 +24,7 @@ Join Pulumi on Thursday, November 30, 2023 for a live workshop on [getting start
 
 If you are new to Pulumi and would like to get started with the Google Cloud provider, visit any of these pages to jump right in!
 
-- [Getting Started](https://www.pulumi.com/docs/iac/get-started/gcp/) - A guided walkthrough for creating your first project
+- [Getting Started](/up/) - A guided walkthrough for creating your first project
 - [Setup & Install](https://www.pulumi.com/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
 - [How-to guides](https://www.pulumi.com/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
 - [Templates](https://www.pulumi.com/templates/serverless-application/gcp/) - Use a quickstart template to create a new project

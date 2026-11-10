@@ -1,0 +1,2 @@
+# Was an alias on the Hugo pricing page, now served by pulumi/marketing-web.
+blog/tf-migration-offer/index.html|/pricing/

@@ -6,7 +6,7 @@
 {{ $spec := index site.Data "openapi-spec" }}
 {{ $lastmodData := site.Data.openapi_lastmod }}
 {{ if not $lastmodData }}
-    {{ warnf "openapi: data/openapi_lastmod.json not found — sitemap <lastmod> will be omitted for cloud-rest-api schema pages. Run 'node scripts/update-openapi-lastmod.js' to regenerate it." }}
+    {{ warnf "openapi: data/openapi_lastmod.json not found — dateModified will be omitted for cloud-rest-api schema pages (these pages are excluded from sitemap.xml, so there is no sitemap <lastmod> at stake). Run 'node scripts/update-openapi-lastmod.js' to regenerate it." }}
 {{ end }}
 {{ if not $spec }}
     {{ warnf "openapi: data/openapi-spec.json not found — run 'make ensure' to download the spec. Skipping schema page generation." }}
@@ -95,6 +95,35 @@
         {{ end }}
     {{ end }}
 
+    {{/* block_external_search_index: this adapter generates one page per
+         OpenAPI schema component (~800 pages), mostly internal API
+         sub-structures (request bodies, nested response fragments,
+         polymorphic variant types) with no independent search or on-site
+         search intent — they clutter Algolia results (scripts/search/page.js
+         treats item.block_external_search_index === true as a hard exclusion)
+         and Google search results alike, while adding no value there over
+         reaching the same content by browsing or a direct link. Setting this
+         marks the pages "noindex" (layouts/partials/head.html emits a bare
+         `<meta name="robots" content="noindex">`, which per the robots-meta
+         spec implies "follow" since nothing overrides it — so Google still
+         crawls these pages and follows their links) and drops them from both
+         sitemap.xml and the Algolia index, while leaving them reachable by
+         URL and via internal links, so the content stays accessible to users
+         and agents who navigate to it directly. Note sitemap.xml is also
+         what scripts/link-checker/check-links.js and scripts/detect-new-404s.js
+         crawl from, so these pages' own outbound links stop being checked
+         too; a canary page is kept in check-links.js's additionalRoutes to
+         still catch a template-wide breakage.
+
+         An earlier version of this adapter used sitemap_exclude instead
+         (sitemap trim only, no noindex or Algolia exclusion). Per
+         https://github.com/pulumi/docs/pull/21585#pullrequestreview-5202333155
+         (cnunciato), these pages also surface in on-site (Algolia) search
+         results, where they gum up results for queries nobody meant to
+         run against internal API sub-structures; the right trade is
+         "noindex, follow" (crawlable, linkable, excluded from Google,
+         Algolia, and sitemap.xml alike), matching how taxonomy pages are
+         already handled. */}}
     {{ $params := dict
         "h1" $name
         "title_tag" (printf "Pulumi Cloud REST API schema: %s" $name)
@@ -102,6 +131,7 @@
         "openapi_schema" true
         "schema_name" $name
         "notoc" true
+        "block_external_search_index" true
     }}
 
     {{/* lastmod: see the pre-built-policy-packs adapter for why
@@ -120,9 +150,10 @@
                  scripts/update-openapi-lastmod.js and this template have
                  drifted apart on which schema keys exist. Warn once per
                  name so either case shows up in build output instead of
-                 silently dropping <lastmod>/dateModified for the affected
-                 pages. */}}
-            {{ warnidf (printf "openapi-lastmod-schema-miss-%s" $name) "openapi: schema %q has no entry in data/openapi_lastmod.json (ledger has %d schemas) — this page will render without <lastmod>/dateModified. Either the schema is new since the last nightly ledger update, or scripts/update-openapi-lastmod.js's schema derivation has drifted from this template's." $name (len .schemas) }}
+                 silently dropping dateModified for the affected pages
+                 (these pages are excluded from sitemap.xml, so <lastmod> is
+                 not at stake here). */}}
+            {{ warnidf (printf "openapi-lastmod-schema-miss-%s" $name) "openapi: schema %q has no entry in data/openapi_lastmod.json (ledger has %d schemas) — this page will render without dateModified. Either the schema is new since the last nightly ledger update, or scripts/update-openapi-lastmod.js's schema derivation has drifted from this template's." $name (len .schemas) }}
         {{ end }}
         {{ with index .schemas $name }}
             {{ with .lastmod }}

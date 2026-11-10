@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Namespace Pulumi.Cloud.Sdk — Pulumi Cloud .NET API reference</title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Namespace Pulumi.Cloud.Sdk — Pulumi Cloud .NET API reference">
+    
+    
+    <meta name="description" content="API reference for Namespace Pulumi.Cloud.Sdk in the Pulumi Cloud .NET SDK.">
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Namespace Pulumi.Cloud.Sdk — Pulumi Cloud .NET API reference">
+    
+    
+      <meta property="og:url" content="https://www.pulumi.com/docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.html">
+      <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.html">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "APIReference",
+  "headline": "Namespace Pulumi.Cloud.Sdk \u2014 Pulumi Cloud .NET API reference",
+  "url": "https://www.pulumi.com/docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.html",
+  "programmingLanguage": ".NET",
+  "executableLibraryName": "Pulumi.Cloud.Sdk",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "name": "Pulumi Cloud",
+    "programmingLanguage": ".NET",
+    "codeRepository": "https://github.com/pulumi/pulumi-cloud-sdk"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pulumi Docs",
+    "url": "https://www.pulumi.com/docs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://www.pulumi.com/"
+  },
+  "assemblyVersion": "2026.10.9",
+  "description": "API reference for Namespace Pulumi.Cloud.Sdk in the Pulumi Cloud .NET SDK."
+}
+</script>
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Cloud.Sdk">
+
+  <h1 id="Pulumi_Cloud_Sdk" data-uid="Pulumi.Cloud.Sdk" class="text-break">Namespace Pulumi.Cloud.Sdk</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">
+Classes
+</h3>
+      <h4><a class="xref" href="pulumi.cloud.sdk.apiclient.html">ApiClient</a></h4>
+      <section><p>HTTP engine for the generated Pulumi Cloud SDK, built on
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>. Generated <code>*Api</code> methods build an
+<a class="xref" href="pulumi.cloud.sdk.apirequest.html">ApiRequest</a> and hand it to <a class="xref" href="pulumi.cloud.sdk.apiclient.html#Pulumi_Cloud_Sdk_ApiClient_Call__1_Pulumi_Cloud_Sdk_ApiRequest_">Call&lt;T&gt;(ApiRequest)</a>;
+this class substitutes path parameters, encodes the query string, applies
+authentication and headers, serializes the body, performs the request, and
+deserializes the 2xx response into the requested type. Non-2xx responses and
+transport/serialization failures surface as <a class="xref" href="pulumi.cloud.sdk.apiexception.html">ApiException</a>.</p>
+<p>The public API is synchronous, mirroring the Java SDK; requests are
+dispatched through the async <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> and awaited.</p>
+</section>
+      <h4><a class="xref" href="pulumi.cloud.sdk.apiclientconfiguration.html">ApiClientConfiguration</a></h4>
+      <section><p>Connection settings shared by every generated <code>*Api</code> class.</p>
+<p><a class="xref" href="pulumi.cloud.sdk.apiclientconfiguration.html#Pulumi_Cloud_Sdk_ApiClientConfiguration_Host">Host</a> is the API origin (no <code>/api</code> suffix — the
+generated resource paths already start with <code>/api/...</code>).
+<a class="xref" href="pulumi.cloud.sdk.apiclientconfiguration.html#Pulumi_Cloud_Sdk_ApiClientConfiguration_AccessToken">AccessToken</a> supplies the Pulumi access token sent as
+<code>Authorization: token &lt;token&gt;</code>; it is a delegate so a rotating
+token can be re-read per request. Return <code>null</code> for unauthenticated
+requests.</p>
+</section>
+      <h4><a class="xref" href="pulumi.cloud.sdk.apiexception.html">ApiException</a></h4>
+      <section><p>Thrown for a non-2xx HTTP response, a transport failure, or a
+serialization/deserialization error.</p>
+</section>
+      <h4><a class="xref" href="pulumi.cloud.sdk.apirequest.html">ApiRequest</a></h4>
+      <section><p>Mutable carrier populated fluently by a generated <code>*Api</code> method before
+it hands the request to <a class="xref" href="pulumi.cloud.sdk.apiclient.html">ApiClient</a>. Holds the HTTP verb, the
+templated resource path (<code>/api/.../{param}</code>), the categorized
+parameters, the request body, and the negotiated media types.</p>
+</section>
+      <h4><a class="xref" href="pulumi.cloud.sdk.json.html">Json</a></h4>
+      <section><p>Shared, pre-configured Newtonsoft.Json settings for the generated SDK.</p>
+<p><span class="xref">Newtonsoft.Json.NullValueHandling.Ignore</span> drops unset properties on
+serialization (matching the Python/TypeScript reference clients, which omit
+unset values on the wire). <code>DateParseHandling.None</code> leaves untyped
+JSON (<code>JToken</code> fields) exactly as received — typed
+<code>DateTimeOffset</code> properties are still parsed from ISO-8601 by their
+declared type. Polymorphic (discriminated-union) models resolve through the
+per-type <a class="xref" href="pulumi.cloud.sdk.polymorphicconverter.html">PolymorphicConverter</a> attached by the generator, not
+through Newtonsoft's <code>$type</code> metadata, which is therefore disabled.</p>
+</section>
+      <h4><a class="xref" href="pulumi.cloud.sdk.jsondiscriminatorattribute.html">JsonDiscriminatorAttribute</a></h4>
+      <section><p>Names the discriminator property of a discriminated-union hierarchy. Emitted
+by the generator on the ROOT of the hierarchy and inherited by every
+subtype — the C# analog of Jackson's
+<code>@JsonTypeInfo(property = &quot;…&quot;)</code>.</p>
+</section>
+      <h4><a class="xref" href="pulumi.cloud.sdk.jsonsubtypeattribute.html">JsonSubTypeAttribute</a></h4>
+      <section><p>Registers a candidate concrete subtype on a polymorphic base — the C# analog
+of a single <code>@JsonSubTypes.Type</code> entry. The generator emits one per
+concrete type in the base's subtree; the wire value for each comes from that
+type's <a class="xref" href="pulumi.cloud.sdk.jsonsubtypenameattribute.html">JsonSubTypeNameAttribute</a>.</p>
+</section>
+      <h4><a class="xref" href="pulumi.cloud.sdk.jsonsubtypenameattribute.html">JsonSubTypeNameAttribute</a></h4>
+      <section><p>The discriminator wire value for a concrete type — the C# analog of Jackson's
+<code>@JsonTypeName</code>. Read on deserialization to resolve the type and written
+on serialization to emit the discriminator.</p>
+</section>
+      <h4><a class="xref" href="pulumi.cloud.sdk.jsonsubtypeunknownattribute.html">JsonSubTypeUnknownAttribute</a></h4>
+      <section><p>Registers the synthetic fallback subtype for a polymorphic base marked
+<code>wildcardSubtype = true</code> in the IDL. Emitted by the generator on the
+root of the hierarchy. When the wire discriminator value does not match
+any registered <a class="xref" href="pulumi.cloud.sdk.jsonsubtypeattribute.html">JsonSubTypeAttribute</a>, <a class="xref" href="pulumi.cloud.sdk.polymorphicconverter.html">PolymorphicConverter</a>
+constructs this subtype instead of failing to deserialize.</p>
+</section>
+      <h4><a class="xref" href="pulumi.cloud.sdk.polymorphicconverter.html">PolymorphicConverter</a></h4>
+      <section><p>Newtonsoft converter that resolves a discriminated union by reading its
+discriminator property (at any position in the object) and mapping the value
+to the concrete type registered via <a class="xref" href="pulumi.cloud.sdk.jsonsubtypeattribute.html">JsonSubTypeAttribute</a> /
+<a class="xref" href="pulumi.cloud.sdk.jsonsubtypenameattribute.html">JsonSubTypeNameAttribute</a>. On write it emits the discriminator
+for the runtime type. It is attached to a hierarchy's root by the generator
+and inherited by every subtype.</p>
+<p>Recursion is broken with the canonical per-thread <code>CanRead</code> /
+<code>CanWrite</code> toggle: after resolving the concrete type, the converter
+suppresses itself for exactly the one nested (de)serialization of that type,
+so its own members are handled by the default contract while any polymorphic
+fields WITHIN it (including recursive references back to the same union) are
+still routed through the converter.</p>
+</section>
+      <h4><a class="xref" href="pulumi.cloud.sdk.responsewithheaders-2.html">ResponseWithHeaders&lt;R, H&gt;</a></h4>
+      <section><p>Pairs a deserialized response body with typed response headers, mirroring
+<code>apitype.ResponseWithHeaders[R, H]</code> (Go) / <code>ResponseWithHeaders&lt;R, H&gt;</code>
+(TypeScript) / <code>ResponseWithHeaders[R, H]</code> (Python). Returned by generated
+<code>*Api</code> methods for operations whose response declares response headers.
+Declared in the top-level <code>Pulumi.Cloud.Sdk</code> namespace (alongside
+<a class="xref" href="pulumi.cloud.sdk.apiclient.html">ApiClient</a>) so generated code in <code>Pulumi.Cloud.Sdk.Api</code> resolves
+it via enclosing-namespace lookup, the same way it already resolves
+<a class="xref" href="pulumi.cloud.sdk.apiclient.html">ApiClient</a> and <a class="xref" href="pulumi.cloud.sdk.apirequest.html">ApiRequest</a> with no extra <code>using</code>.</p>
+</section>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+      <h4><a class="xref" href="pulumi.cloud.sdk.ijsonwildcardsubtype.html">IJsonWildcardSubtype</a></h4>
+      <section><p>Implemented by a generated &quot;Unknown&quot; fallback subtype (wildcardSubtype = true
+in the IDL). Populated directly by <a class="xref" href="pulumi.cloud.sdk.polymorphicconverter.html">PolymorphicConverter</a> when no
+<a class="xref" href="pulumi.cloud.sdk.jsonsubtypeattribute.html">JsonSubTypeAttribute</a> / <a class="xref" href="pulumi.cloud.sdk.jsonsubtypenameattribute.html">JsonSubTypeNameAttribute</a>
+matches the wire discriminator value.</p>
+</section>
+
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+    <p class="sdk-version">Version 2026.10.9</p>
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2026, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

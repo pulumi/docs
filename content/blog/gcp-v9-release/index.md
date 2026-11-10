@@ -23,7 +23,7 @@ The provider is open source and available on GitHub so you can be part of the co
 
 Here are a few links to help you get started if you are new to Pulumi:
 
-- [Getting Started](https://www.pulumi.com/docs/iac/get-started/gcp/) - A guided walkthrough for creating your first project
+- [Getting Started](/up/) - A guided walkthrough for creating your first project
 - [Setup & Install](https://www.pulumi.com/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
 - [How-to guides](https://www.pulumi.com/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
 - [Templates](https://www.pulumi.com/templates/serverless-application/gcp/) - Use a quickstart template to create a new project
@@ -73,7 +73,7 @@ You can find the [migration guide on the Pulumi registry.](https://www.pulumi.co
 
 ### NEW! Use Pulumi Neo to assist with your upgrade
 
-You can use our new automation agent, [Neo](https://www.pulumi.com/docs/pulumi-cloud/neo/), to help you with your provider upgrade.
+You can use our new automation agent, [Neo](/docs/ai/concepts/neo/), to help you with your provider upgrade.
 In the Pulumi service, ask Neo to help you with your upgrade by providing the migration guide:
 
 ![migration-prompt.png](/blog/gcp-v9-release/migration-prompt.png)

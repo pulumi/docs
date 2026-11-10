@@ -10,8 +10,9 @@ menu:
     identifier: delivery-get-started
     weight: 5
 aliases: []
-pulumi_cloud_feature: delivery
 ---
+
+<!-- TODO(launch): Add `pulumi_cloud_feature: delivery` to the front matter once pulumi/marketing-web adds a hidden `delivery` feature (min_edition: essentials) and its sync PR updates data/pulumi_editions.yaml. Then drop the hand-written edition sentence. -->
 
 <!-- TODO(launch): Coordinate with MA-866 (Delivery quickstart). Validate every step against the GA build on 2026-11-18 and replace placeholder output with real console screenshots. -->
 
@@ -30,7 +31,7 @@ You'll need:
 - The Pulumi Cloud backend. Delivery doesn't work with a DIY backend or self-hosted Pulumi Cloud.
 - A [version control integration](/docs/integrations/version-control/) that can read the repository you'll deploy from. Delivery works with GitHub, GitLab, Bitbucket, and Azure DevOps.
 
-<!-- TODO(launch): Confirm edition availability with the final pricing decision (DLV-453) and with what data/pulumi_pricing.yaml renders in the callout. -->
+<!-- TODO(launch): Confirm edition availability with the final pricing decision (DLV-453) and with pulumi/marketing-web, which owns edition availability. -->
 
 ## Lay out the repository
 

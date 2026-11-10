@@ -14,7 +14,7 @@ aliases:
   - /docs/esc/concepts/providers/login/oidc-setup/gcp/
 ---
 
-This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Google Cloud. OIDC in Google Cloud uses [workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation) to allow access to resources. Access to the resources is authorized using attribute conditions that validate the contents of the OIDC token issued by the Pulumi Cloud.
+This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Google Cloud. OIDC in Google Cloud uses [workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation) to allow access to resources. Access to the resources is authorized using attribute conditions that validate the contents of the OIDC token issued by Pulumi Cloud.
 
 ## Prerequisites
 
@@ -23,6 +23,20 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 {{< notes type="warning" >}}
 Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the official [Google Cloud documentation](https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers).
 {{< /notes >}}
+
+## Automated setup with the Pulumi CLI
+
+{{< experimental-feature />}}
+
+If you would rather not walk through the Google Cloud console by hand, the [`pulumi env setup gcp`](/docs/iac/cli/commands/pulumi_env_setup_gcp/) command (Pulumi CLI v3.261.0 and later) creates the workload identity pool and provider, a service account, and the IAM bindings that let Pulumi Cloud impersonate it, then creates the ESC environment that uses it. It authenticates with Google Application Default Credentials, so run `gcloud auth application-default login` first if you have not already, then log in to Pulumi Cloud with `pulumi login` and run:
+
+```bash
+pulumi env setup gcp --policy roles/editor
+```
+
+Pass `--project-id` to target one or more specific GCP projects. Use `--policy roles/viewer` instead of `roles/editor` if the environment is only needed for [Discovery](/docs/discovery-governance/); `roles/editor` is required for [Deployments](/docs/deployments/). Add `--yes` to skip confirmation prompts once you are comfortable with what the command creates.
+
+Reach for the manual steps below instead when you already have a workload identity pool you want to reuse, when your project provisions IAM bindings through its own infrastructure as code, or when you need attribute conditions the command does not yet expose.
 
 ## Create a Workload Identity Pool and Provider
 

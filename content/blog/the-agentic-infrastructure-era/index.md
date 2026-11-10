@@ -2,7 +2,7 @@
 title: "The Agentic Infrastructure Era"
 date: 2026-05-19T03:00:00-07:00
 draft: false
-meta_desc: "Why infrastructure as code is the natural substrate for AI agents, and what we're shipping today to make agentic infrastructure even better."
+meta_desc: "Agentic infrastructure is cloud infrastructure that AI agents provision, govern, and operate through code. See what Pulumi is building to make it real."
 feature_image: feature.png
 authors:
     - joe-duffy
@@ -27,6 +27,8 @@ The first frontier agents excelled at was coding. The reason is evident: we have
 But as the AI tsunami whips up reams of code, what happens to it becomes just as critical. As an industry, we've moved beyond just coding to engineering, which includes documentation, tests, automation, and, yes, managing the very infrastructure our applications need to run. The deeper into production you go, however, the less good agents naturally are at helping. At Pulumi, we live and breathe infrastructure, and have seen this firsthand. But we've also been hard at work building the platform this new era runs on. In this post, I'll share our point of view, what we've built, what we're launching today, and why all infrastructure is about to be agentic.
 
 <!--more-->
+
+New to the term? Start with [what agentic infrastructure is](/what-is/what-is-agentic-infrastructure/) and how it works.
 
 [See Pulumi Neo in action →](/product/neo/) Neo is the agent at the center of everything below: it previews changes, checks them against policy, and opens PRs for your review.
 
@@ -116,7 +118,7 @@ The foundation of expressing infrastructure as code, combined with verifiable ch
 
 We know real code is the right substrate for agentic infrastructure – but we also know agents want to start with the smallest possible commitment and progressively level up. So we've designed the Pulumi experience as a progression: an agent should be able to sign up, run its first command, and grow into a full infrastructure as code workflow without ever hitting a wall or manual intervention. Here's what we're launching today to make that journey work end-to-end:
 
-**[Agent accounts](/docs/administration/organizations-teams/agent-accounts/).** Now agents can use free, ephemeral Pulumi Cloud accounts straight from Claude Code, Codex, OpenCode, Copilot, Cursor, and others. This lets an agent do anything a human could with the Pulumi product without a manual signup step, removing friction while letting agents benefit from robust infrastructure management. A human can claim that account at any time to make it permanent and to share with their team.
+**[Agent accounts](/docs/administration/concepts/agent-accounts/).** Now agents can use free, ephemeral Pulumi Cloud accounts straight from Claude Code, Codex, OpenCode, Copilot, Cursor, and others. This lets an agent do anything a human could with the Pulumi product without a manual signup step, removing friction while letting agents benefit from robust infrastructure management. A human can claim that account at any time to make it permanent and to share with their team.
 
 **[One-command execution](https://www.npmjs.com/package/pulumi).** Today an agent needs to know how to find, download, and install Pulumi, and manage subsequent versioning and upgrades. Anything that adds friction is discouraging to an agent. We now have an npm package that enables `npx pulumi <anything>`-style commands so agents can run any Pulumi command anywhere without needing to worry about installation or version pinning.
 
@@ -156,7 +158,7 @@ We've also invested in making Pulumi maximally legible to agents, because the be
 
 **[Agent-friendly CLI ergonomics](/blog/better-cli-interactions-for-agents-and-humans/).** We have added `--json` and structured errors across the CLI to help agents parse and react to outputs appropriately.
 
-**[New skills](/docs/ai/skills/).** We've done a pass over our skills and added a new uber-skill that describes how an agent should leverage the full suite of capabilities we now offer, from Level 0 (agent accounts), to Level 1 (`pulumi do`), to Level 2 (full IaC and `pulumi up`), to Level 3 (Pulumi Cloud governance and full autonomy with Neo), and beyond. It's handy for humans too.
+**[New skills](/docs/ai/concepts/agent-skills/).** We've done a pass over our skills and added a new uber-skill that describes how an agent should leverage the full suite of capabilities we now offer, from Level 0 (agent accounts), to Level 1 (`pulumi do`), to Level 2 (full IaC and `pulumi up`), to Level 3 (Pulumi Cloud governance and full autonomy with Neo), and beyond. It's handy for humans too.
 
 **InfraBench.** We have created a new benchmark to measure how well an agent performs on a wide array of representative infrastructure tasks. This is the infrastructure equivalent to SWE-bench and lets us measure stock agents, agents plus the new tools and skills, and Neo, and how they're improving over time. Although we are still hard at work on building out the comprehensive suite, and will keep it internally for now, we will begin publishing our progress against InfraBench as we continue tackling new problems and improving agent performance.
 

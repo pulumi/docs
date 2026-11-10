@@ -1,6 +1,7 @@
 ---
 title: "Terraform and Kubernetes: A Practical Guide for 2026"
 date: 2026-08-07
+updated: 2026-09-09
 draft: false
 meta_desc: "How teams manage Kubernetes infrastructure as code in 2026: what Terraform's Kubernetes provider does well, where it strains, and how Pulumi compares."
 authors:
@@ -57,6 +58,16 @@ Two limitations show up often enough in practice that HashiCorp documents them d
 - **Provider-credential ordering.** From the provider's own index documentation: "When using interpolation to pass credentials to the Kubernetes provider from other resources, these resources SHOULD NOT be created in the same Terraform module where Kubernetes provider resources are also used. This will lead to intermittent and unpredictable errors which are hard to debug and diagnose. The root issue lies with the order in which Terraform itself evaluates the provider blocks vs. actual resources." HashiCorp's prescribed fix, also verbatim: "The most reliable way to configure the Kubernetes provider is to ensure that the cluster itself and the Kubernetes provider resources can be managed with separate `apply` operations. Data-sources can be used to convey values between the two stages as needed."
 
 Both are solvable — split cluster provisioning and workload deployment into separate applies (or separate Terraform workspaces/modules), and pass values between them with data sources or remote state. It's a real pattern, and plenty of teams run it in production. It does mean two-stage pipelines and extra state plumbing wherever a cluster and its workloads are managed together.
+
+At a glance, here's how Terraform's Kubernetes provider and Pulumi differ on the points that matter most for cluster-plus-workload management:
+
+| | Terraform (`hashicorp/kubernetes`) | Pulumi |
+| --- | --- | --- |
+| Cluster and workloads in one run | Requires a two-stage apply or separate modules | Single program, single `pulumi up` |
+| Custom resources / CRDs | `kubernetes_manifest` needs live API access at plan time | Typed CRD support generated from cluster schema, no plan-time cluster requirement |
+| Provider-credential ordering | Documented pitfall; HashiCorp recommends separate applies | Ordinary language-level dependency, resolved by the runtime |
+| Testing | Native `.tftest.hcl` tests with `mock_provider` (GA since Terraform 1.7), in a separate test language | Standard test frameworks (pytest, Jest, Go testing, etc.) in the same suite as application code, plus `pulumi preview` |
+| Language | HCL only (community `kubectl` provider as a workaround for free-form YAML) | Python, TypeScript, Go, C#, Java, or YAML/HCL |
 
 ## What changes when Kubernetes infrastructure is written in a general-purpose language?
 

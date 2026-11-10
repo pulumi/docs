@@ -51,7 +51,9 @@ Continue a manual gate from the run page in the Pulumi Cloud console, or with th
 
 ### Approval gates
 
-{{< pulumi-cloud "delivery-approvals" />}}
+<!-- TODO(launch): Replace the next sentence with the pulumi-cloud shortcode for "delivery-approvals" once pulumi/marketing-web adds a hidden `delivery-approvals` feature (min_edition: pro). -->
+
+Approval gates are available in the Pro and Enterprise editions.
 
 `approval()` waits until enough eligible people approve. It takes `approvers`, a list of Pulumi usernames or team names, and `count`, the number of approvals required (one by default).
 

@@ -23,7 +23,7 @@ You might need to edit your state file in the following situations:
 
 - You want to move resources between stacks in the course of refactoring your Pulumi codebase(s)
 - You need to unprotect resources from deletion
-- A Pulumi command fails with an error indicating a corrupt state, for example if you see [an I/O error with the text `after mutation of snapshot`](/docs/iac/troubleshooting#post-step-event), which can occur in rare scenarios like a network partition during a state file update.
+- A Pulumi command fails with an error indicating a corrupt state, for example if you see [an I/O error with the text `after mutation of snapshot`](/docs/iac/operations/troubleshooting/#post-step-event), which can occur in rare scenarios like a network partition during a state file update.
 
 ## What to try before editing your state file
 
@@ -82,7 +82,7 @@ The `pulumi state` command can help with the following scenarios:
 
 - Inspecting a single resource's tracked state, including its inputs and outputs, with [`pulumi state get`](/docs/iac/cli/commands/pulumi_state_get/)
 - Automatically repairing your state file with [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair/)
-- Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_remove/)
+- Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_remove/) — see [Removing resources without deleting them](/docs/iac/operations/stack-management/removing-resources-without-deleting-them/) for a complete walkthrough, including dependent and protected resources
 - [Moving resources between stacks](/docs/iac/operations/stack-management/moving-resources-between-stacks/) with `pulumi state move`
 - Unprotecting resources from deletion with [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/)
 - Targeting resources for recreation with [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/)

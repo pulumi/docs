@@ -13,30 +13,30 @@ menu:
 
 When using Pulumi-managed workflow runners, you can speed up deployments with dependency caching.
 
-Dependency caching covers more than your language packages. A cache entry bundles three things a deployment would otherwise download every run: your language dependencies (including the Pulumi SDKs, which are cached as ordinary package-manager packages), the Pulumi [resource plugins](/docs/iac/concepts/plugins/) your program uses, and any [policy packs](/docs/insights/policy/policy-packs/). In practice the plugins are usually the largest and slowest to fetch, so caching them is where most of the time savings come from.
+Dependency caching covers more than your language packages. A cache entry bundles three things a deployment would otherwise download every run: your language dependencies (including the Pulumi SDKs, which are cached as ordinary package-manager packages), the Pulumi [resource plugins](/docs/iac/concepts/plugins/) your program uses, and any [policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/). In practice the plugins are usually the largest and slowest to fetch, so caching them is where most of the time savings come from.
 
 The mechanism is straightforward. On the first deployment, the runner detects these items — using your lock files for the language dependencies — archives them, and stores the archive in blob storage. On later deployments, the runner pulls that archive down and unpacks it, saving the time it would otherwise spend downloading everything again. When your dependencies change, the runner invalidates the old cache and creates a new one.
 
 {{% notes type="info" %}}
-Dependency caching is unavailable on stacks that use a [customer-managed runner pool](/docs/deployments/concepts/customer-managed-runners/#dependency-caching), because you already control the lifetime and contents of those runners.
+Dependency caching is unavailable on stacks that use a [customer-managed runner pool](/docs/administration/concepts/customer-managed-runners/#not-supported-on-customer-managed-runners), because you already control the lifetime and contents of those runners.
 {{% /notes %}}
 
 ## Enabling dependency caching
 
 Dependency caching is off by default. You can enable it per stack:
 
-- **Pulumi Cloud**: on the stack's **Settings** → **Deploy** page, turn on **Enable dependency caching**.
+- **Pulumi Cloud**: on the stack's **Settings** → **Deploy** page, turn on **Cache dependencies to speed up deployments**.
 - **Deployment settings**: set `cacheOptions.enable` to `true`.
 - **REST API**: set the same `cacheOptions.enable` field on the stack's [deployment settings](/docs/reference/cloud-rest-api/deployments/).
 
 Dependency caching is not available on stacks backed by Terraform state.
 
-Because caching is a per-stack setting but the cache itself is shared across the project, stacks in the same project can have it enabled and disabled independently:
+Both the setting and the cache entries are scoped to a single stack, so stacks in the same project can have caching enabled and disabled independently:
 
-- A stack with caching **disabled** runs no cache steps at all. It neither reads from nor writes to the project's cache, so it can't benefit from it and can't disturb it.
-- A stack with caching **enabled** reads and writes the shared project cache, keyed by the contents of its lock files.
-- Two caching-enabled stacks with identical lock files share the same cache entries and warm the cache for each other.
-- Disabling caching on a stack does not delete anything. [Clearing the cache](#clearing-the-cache) is a separate, project-wide action.
+- A stack with caching **disabled** runs no cache steps at all. It neither reads nor writes any cache entries.
+- A stack with caching **enabled** reads and writes its own cache entries, keyed by the contents of its lock files.
+- Identical lock files do not make one stack reuse another stack's cache. A new stack always starts cold, even when another stack in the same project deploys the same program with the same lock file, and it populates its own cache on its first deployment.
+- Disabling caching on a stack does not delete anything. [Clearing the cache](#clearing-the-cache) is a separate action that works at the project level.
 
 ## What gets cached
 
@@ -101,7 +101,7 @@ Both clear the cache for the **entire project**, not just the selected stack. Ev
 
 ## Limits and constraints
 
-- Caches are shared at the project level, so all stacks within a project can share the same cache. Caches are fully isolated and never shared between organizations.
+- Cache entries are scoped per stack. Stacks do not share entries with each other, even within the same project and with identical lock files, and caches are never shared between organizations.
 - Cache archives are limited to 5 GB compressed. A larger archive is skipped with a warning rather than failing the deployment.
 - **A cache failure never fails a deployment.** Every problem with caching is a warning and a skip, which is why an unexpectedly slow deployment is worth checking against the log lines above.
 - Cache keys are matched exactly. Unlike some CI systems, there is no partial or fallback key match, so any change to a lock file produces a completely cold cache.

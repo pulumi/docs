@@ -3,9 +3,8 @@
 
 Observability for §3.4 of the docs-review automation evaluation (pulumi/docs
 issue #20078): inputs to the content-review automation degrade gracefully —
-and, before this script, silently. Three signals are observed by the
-review-existing-content dispatcher, a fourth by the nightly claims-reverify
-workflow; all share one state object:
+and, before this script, silently. The review-existing-content dispatcher
+observes these signals, among others, into one state object:
 
   traffic         a missing docs-traffic snapshot flattens article selection to
                   tier-only scoring, quietly erasing intra-tier prioritization
@@ -15,12 +14,6 @@ workflow; all share one state object:
                   claim silently becomes "unverifiable"
   holiday-feed    the BambooHR ICS holiday gate fails open by design, so a feed
                   that has been 404ing (or serving garbage) for weeks is invisible
-  reverify        the nightly volatile-claims re-verification only Slacks when
-                  it finds STALE entities, so a dead or decaying lane (claims
-                  index gone, API key missing, most checks inconclusive because
-                  the verifier's gh/API plumbing broke — or because most
-                  verdicts were demoted for citing only our own docs) looks
-                  identical to a healthy quiet one
 
 Graceful degradation is the right behavior; this script adds the missing
 observability. The dispatcher runs it once per scheduled run with that run's
@@ -63,7 +56,6 @@ Usage:
         [--queue .content-review-queue.json] \
         [--console-status ok|degraded] \
         [--holiday-status ok|empty|fetch_failed|unconfigured] \
-        [--reverify-report .claims-reverify-report.json] \
         --alert-out .health-alert.txt \
         [--today YYYY-MM-DD] [--threshold-days N] [--realert-days N] \
         [--run-url URL]
@@ -92,26 +84,6 @@ REALERT_DAYS = 7
 # REALERT_DAYS still paces the nag weekly while the state persists.
 SIGNAL_THRESHOLDS = {"capped-pages": 0}
 
-# Smallest all-inconclusive night that counts as evidence the reverify lane is
-# finding nothing. Below it the run is a sample, not a verdict: on 2026-08-19
-# the rotation handed the lane a single entity (a contiguous-chunk remainder,
-# since fixed in reverify-claims.tonight_chunk), that entity came back demoted,
-# and 1-of-1 inconclusive degraded the signal for the whole lane. A short night
-# is now no observation at all, which leaves the prior state standing — the
-# same treatment a missing report already gets.
-MIN_INCONCLUSIVE_SAMPLE = 5
-
-# Share of a night's checks that may come back inconclusive before the lane
-# is degraded. Until 2026-09 this signal only fired at 100%: 19 inconclusive
-# of 20 read as "ok", and the night of 2026-09-03 — 10 of 20, nine of them
-# demoted for citing our own docs — logged `status: ok`. The signal could see
-# a dead lane and nothing short of one. With indexed-circular claims held out
-# of the rotation (reverify-claims.py) the expected inconclusive share is
-# about a quarter; three in four is a lane producing almost nothing and is
-# the level at which someone should look, whether the cause is plumbing
-# (errors, unverifiable) or routing (demotions — the detail says which).
-REVERIFY_INCONCLUSIVE_RATE = 0.75
-
 # How long a signal may go unobserved before silence itself is the finding.
 #
 # Every signal is reported BY a job. Nothing reports on a job that never ran,
@@ -121,17 +93,14 @@ REVERIFY_INCONCLUSIVE_RATE = 0.75
 # dark on their schedules for weeks with every signal green.
 #
 # So each signal declares the cadence it is observed at, and any run of
-# signal-health (from either workflow — they share the state object) can flag
-# a signal nobody has written to in too long. The reporting job does not have
+# signal-health can flag a signal nobody has written to in too long. The reporting job does not have
 # to be the one that notices.
 #
 # Windows are generous on purpose: a false "the lane is dead" is far more
 # corrosive than a day's delay, because it teaches people to ignore the alert.
-# reverify runs daily (3 days = two consecutive misses). The rest ride the
-# weekday dispatcher, where Fri -> Mon is already 3 days, so 6 covers a normal
-# long weekend plus a miss.
+# Every signal rides the weekday dispatcher, where Fri -> Mon is already 3
+# days, so 6 covers a normal long weekend plus a miss.
 SIGNAL_MAX_SILENCE_DAYS = {
-    "reverify": 3,
     "traffic": 6,
     "console-access": 6,
     "holiday-feed": 6,
@@ -139,6 +108,12 @@ SIGNAL_MAX_SILENCE_DAYS = {
     "ledger-write": 6,
 }
 DEFAULT_MAX_SILENCE_DAYS = 6
+
+# Signals whose observer has been removed. Their entries are dropped from
+# state on the next run: left in place, the silence pass would read the
+# retired lane as a dead one and page #docs-ops about it forever.
+#   reverify  the nightly claims-reverify lane, removed 2026-10
+RETIRED_SIGNALS = {"reverify"}
 
 # One line per signal: what broke, for how long, the consequence, and where to
 # look — the consequence is the point (see the module docstring).
@@ -160,14 +135,6 @@ CONSEQUENCES = {
         "holiday feed: degraded for {days} day(s) ({detail}) — the holiday gate "
         "is running blind (fails open: reviews will run on company holidays). "
         "Regenerate the BAMBOOHR_HOLIDAY_ICS_URL feed."
-    ),
-    "reverify": (
-        "nightly claims re-verify: mostly inconclusive checks for {days} day(s) "
-        "({detail}) — volatile-claim drift (version pins, prices, limits) is "
-        "going undetected. A demotion count above means the verifier is only "
-        "citing our own docs: that's its source routing, not the plumbing. "
-        "Otherwise check the claims-index S3 sync, ANTHROPIC_API_KEY, and the "
-        "verifier's gh lane on claims-reverify.yml."
     ),
     "ledger-write": (
         "ledger writes: {days} day(s) with dispatched pages missing their "
@@ -265,63 +232,6 @@ def observe_traffic(queue_path: Path | None) -> tuple[str, str] | None:
     return "degraded", "snapshot missing, empty, or matched zero pages"
 
 
-def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
-    """(status, detail) from the nightly re-verify report's meta block, or None.
-
-    reverify-claims.py stamps `meta.skipped` on its couldn't-run exits and
-    `meta.n_due` on every run, so a quiet night (nothing due) is distinguishable
-    from a dead lane. A missing/unreadable report is NOT evidence of
-    degradation (the job may not have run at all) — return None.
-
-    A night degrades when at least REVERIFY_INCONCLUSIVE_RATE of its checks
-    are inconclusive — all of them being the limiting case. Demotion (the
-    verifier only cited our own docs, so nothing it returned could be trusted
-    either way) counts: no drift was detected, which is the thing this signal
-    exists to notice. But the count is carried into the detail so the alert
-    points at the verifier's source routing rather than at S3 and API keys —
-    the remediation for a demoted night is nothing like the one for a dead
-    lane.
-
-    That inference needs a sample to stand on, so a mostly-inconclusive night
-    under MIN_INCONCLUSIVE_SAMPLE checks yields no observation rather than a
-    degraded one. `skipped` and `no_snapshots` are unaffected: a lane that
-    could not run says so directly and never depends on the sample size.
-    """
-    if report_path is None or not report_path.is_file():
-        return None
-    try:
-        meta = json.loads(report_path.read_text()).get("meta") or {}
-    except (OSError, json.JSONDecodeError) as e:
-        log(f"reverify report unreadable ({e}); no reverify observation")
-        return None
-    skipped = meta.get("skipped")
-    n_due = int(meta.get("n_due") or 0)
-    n_checked = int(meta.get("n_checked") or 0)
-    n_inconclusive = int(meta.get("n_inconclusive") or 0)
-    n_demoted = int(meta.get("n_demoted") or 0)
-    if skipped == "no_snapshots":
-        return "degraded", "claims index empty or unfetchable"
-    if skipped:
-        return "degraded", f"{n_due} entities due but run skipped ({skipped})"
-    if n_checked and n_inconclusive / n_checked >= REVERIFY_INCONCLUSIVE_RATE:
-        if n_checked < MIN_INCONCLUSIVE_SAMPLE:
-            log(f"{n_inconclusive} of {n_checked} check(s) inconclusive, but that is "
-                f"below the {MIN_INCONCLUSIVE_SAMPLE}-check floor for a lane-wide "
-                f"verdict; no reverify observation")
-            return None
-        if n_inconclusive == n_checked:
-            detail = f"all {n_checked} checks inconclusive"
-        else:
-            detail = (f"{n_inconclusive} of {n_checked} checks inconclusive "
-                      f"({n_inconclusive * 100 // n_checked}%)")
-        if n_demoted:
-            detail += f", {n_demoted} demoted for citing only our own docs"
-        return "degraded", detail
-    if n_checked:
-        return "ok", f"checked={n_checked} inconclusive={n_inconclusive}"
-    return "ok", "nothing due tonight"
-
-
 def observe_capped(queue_path: Path | None) -> tuple[str, str] | None:
     """(status, detail) from the queue's capped list, or None.
 
@@ -411,6 +321,8 @@ def apply(state: dict, observations: dict[str, tuple[str, str]], today: date,
           ) -> tuple[dict, str | None]:
     """Apply one run's observations; return (new state, alert text or None)."""
     signals = state.setdefault("signals", {})
+    for name in RETIRED_SIGNALS:
+        signals.pop(name, None)
     due: list[str] = []       # alert lines for newly-due signals
     context: list[str] = []   # still-degraded-but-already-alerted, for the message
 
@@ -524,9 +436,6 @@ def run(args) -> int:
     })
     if obs:
         observations["holiday-feed"] = obs
-    obs = observe_reverify(Path(args.reverify_report) if args.reverify_report else None)
-    if obs:
-        observations["reverify"] = obs
     obs = observe_ledger(Path(args.last_dispatch) if args.last_dispatch else None,
                          Path(args.ledger_dir) if args.ledger_dir else None)
     if obs:
@@ -556,8 +465,6 @@ def build_parser() -> argparse.ArgumentParser:
                    help="pulumi/pulumi-service probe result: ok|degraded")
     p.add_argument("--holiday-status",
                    help="holiday feed status: ok|empty|fetch_failed|unconfigured")
-    p.add_argument("--reverify-report",
-                   help="nightly re-verify report JSON (source of the reverify signal)")
     p.add_argument("--last-dispatch",
                    help="previous run's dispatch breadcrumb JSON (source of the ledger-write signal)")
     p.add_argument("--ledger-dir",
@@ -603,7 +510,7 @@ def self_test() -> int:
             print(f"ok: {name}")
 
     def run_once(d: Path, day: str, queue: dict | None = None, console: str | None = None,
-                 holiday: str | None = None, reverify: dict | None = None,
+                 holiday: str | None = None,
                  last_dispatch: dict | None = None, ledger_dir: Path | None = None,
                  ) -> tuple[dict, str | None]:
         """Drive run() through argparse the way the workflow would."""
@@ -620,10 +527,6 @@ def self_test() -> int:
             argv += ["--console-status", console]
         if holiday:
             argv += ["--holiday-status", holiday]
-        if reverify is not None:
-            rp = d / "reverify-report.json"
-            rp.write_text(json.dumps(reverify))
-            argv += ["--reverify-report", str(rp)]
         if last_dispatch is not None:
             lp = d / "last-dispatch.json"
             lp.write_text(json.dumps(last_dispatch))
@@ -733,107 +636,6 @@ def self_test() -> int:
         check("halted queue still observes traffic",
               st["signals"]["traffic"]["status"] == "degraded")
 
-    rv_ok = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
-                      "n_checked": 25, "n_stale": 1, "n_fresh": 22, "n_inconclusive": 2}}
-    rv_quiet = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 0,
-                         "n_checked": 0, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0}}
-    rv_dead = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
-                        "n_checked": 25, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 25}}
-    rv_demoted = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
-                           "n_checked": 25, "n_stale": 0, "n_fresh": 0,
-                           "n_inconclusive": 25, "n_demoted": 22}}
-    rv_nokey = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
-                         "n_checked": 0, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0,
-                         "skipped": "no_api_key"}}
-    rv_nosnaps = {"meta": {"n_snapshots": 0, "n_entities": 0, "n_due": 0,
-                           "n_checked": 0, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0,
-                           "skipped": "no_snapshots"}}
-    # The 2026-08-19 shape: a one-entity rotation chunk, demoted, which used to
-    # read as a lane-wide "no conclusive results".
-    rv_thin = {"meta": {"n_snapshots": 100, "n_entities": 54, "n_due": 1,
-                        "n_checked": 1, "n_stale": 0, "n_fresh": 0,
-                        "n_inconclusive": 1, "n_demoted": 1}}
-    # 19 of 25 (76%): a lane producing almost nothing. 12 of 25 (48%) is
-    # noisy but working — and is roughly what 2026-09-03 looked like.
-    rv_mostly = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
-                          "n_checked": 25, "n_stale": 0, "n_fresh": 6,
-                          "n_inconclusive": 19, "n_demoted": 4}}
-    rv_half = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 20,
-                        "n_checked": 20, "n_stale": 2, "n_fresh": 8,
-                        "n_inconclusive": 10, "n_demoted": 9}}
-
-    with tempfile.TemporaryDirectory() as tmp:
-        d = Path(tmp)
-
-        # 12. Reverify observations: conclusive results and quiet nights are ok.
-        st, alert = run_once(d, "2026-09-01", reverify=rv_ok)
-        check("reverify with conclusive results is ok",
-              st["signals"]["reverify"]["status"] == "ok")
-        st, alert = run_once(d, "2026-09-02", reverify=rv_quiet)
-        check("reverify quiet night (nothing due) is ok",
-              st["signals"]["reverify"]["status"] == "ok")
-
-        # A mostly-inconclusive night degrades on the rate, not only at 100%,
-        # and the detail carries the fraction; a noisy-but-working night is ok
-        # and clears it.
-        st, alert = run_once(d, "2026-09-02", reverify=rv_mostly)
-        check("mostly-inconclusive night degrades on the rate",
-              st["signals"]["reverify"]["status"] == "degraded"
-              and "19 of 25" in st["signals"]["reverify"]["detail"]
-              and "4 demoted" in st["signals"]["reverify"]["detail"])
-        st, alert = run_once(d, "2026-09-02", reverify=rv_half)
-        check("half-inconclusive night is ok and clears the degradation",
-              st["signals"]["reverify"]["status"] == "ok"
-              and st["signals"]["reverify"]["degraded_since"] is None)
-
-        # 13. All-inconclusive and couldn't-run reports degrade; alert names
-        # the consequence once due.
-        st, alert = run_once(d, "2026-09-03", reverify=rv_dead)
-        check("all-inconclusive reverify degrades",
-              st["signals"]["reverify"]["status"] == "degraded"
-              and st["signals"]["reverify"]["degraded_since"] == "2026-09-03")
-        st, alert = run_once(d, "2026-09-06", reverify=rv_nokey)
-        check("skipped run stays degraded with skip detail",
-              st["signals"]["reverify"]["status"] == "degraded"
-              and "no_api_key" in st["signals"]["reverify"]["detail"])
-
-        # A night too short to generalize from is not evidence either way:
-        # the prior state (degraded, from rv_nokey above) stands untouched
-        # rather than being re-asserted or cleared by a sample of one.
-        prior = dict(st["signals"]["reverify"])
-        st, alert = run_once(d, "2026-09-06", reverify=rv_thin)
-        check("a 1-check all-inconclusive night yields no observation",
-              st["signals"]["reverify"] == prior)
-
-        # An all-demoted night is still no drift detection, so it still
-        # degrades — but the detail has to name demotion, or the alert sends
-        # the on-call after S3 and API keys for a routing problem.
-        st, alert = run_once(d, "2026-09-07", reverify=rv_demoted)
-        check("all-demoted night still degrades",
-              st["signals"]["reverify"]["status"] == "degraded")
-        check("all-demoted detail names the cause",
-              "22 demoted" in st["signals"]["reverify"]["detail"])
-        st, alert = run_once(d, "2026-09-10", reverify=rv_dead)
-        check("reverify alert fires at threshold and names the consequence",
-              alert is not None and "volatile-claim drift" in alert)
-
-        # 14. Missing report leaves prior state untouched; empty claims index
-        # counts as degraded (mirrors the traffic snapshot semantics).
-        st, alert = run_once(d, "2026-09-11")
-        check("missing reverify report leaves prior state untouched",
-              st["signals"]["reverify"]["status"] == "degraded")
-        st, alert = run_once(d, "2026-09-12", reverify=rv_nosnaps)
-        check("empty claims index degrades with its own detail",
-              "claims index" in st["signals"]["reverify"]["detail"])
-        # --- silence detection: the failure nothing else can see -------------
-        # A lane that stops firing reports nothing, and "no observation" means
-        # "prior state stands" — so a dead lane sits at whatever it last said,
-        # usually ok. These pin that silence eventually becomes the finding.
-        st, alert = run_once(d, "2026-09-13", reverify=rv_ok)
-        check("reverify recovery clears the clocks",
-              st["signals"]["reverify"]["status"] == "ok"
-              and st["signals"]["reverify"]["degraded_since"] is None)
-
     # ---- ledger-write signal ----
     with tempfile.TemporaryDirectory() as tmp:
         d = Path(tmp)
@@ -905,39 +707,54 @@ def self_test() -> int:
 
     with tempfile.TemporaryDirectory() as tmp:
         d = Path(tmp)
-        st, _ = run_once(d, "2026-10-01", reverify=rv_ok)
+        # A lane that stops firing reports nothing, and "no observation"
+        # means "prior state stands" — so a dead lane sits at whatever it last
+        # said, usually ok. These pin that silence eventually becomes the
+        # finding. traffic's window is 6 days.
+        st, _ = run_once(d, "2026-10-01", queue=q_ok)
         check("an observation stamps last_seen",
-              st["signals"]["reverify"]["last_seen"] == "2026-10-01")
-        st, _ = run_once(d, "2026-10-03", console="ok")
+              st["signals"]["traffic"]["last_seen"] == "2026-10-01")
+        st, _ = run_once(d, "2026-10-05", console="ok")
         check("a lane quiet inside its window stays ok",
-              st["signals"]["reverify"]["status"] == "ok")
-        st, _ = run_once(d, "2026-10-06", console="ok")
+              st["signals"]["traffic"]["status"] == "ok")
+        st, _ = run_once(d, "2026-10-08", console="ok")
         check("a lane silent past its window degrades",
-              st["signals"]["reverify"]["status"] == "degraded"
-              and st["signals"]["reverify"].get("silent") is True)
+              st["signals"]["traffic"]["status"] == "degraded"
+              and st["signals"]["traffic"].get("silent") is True)
         check("the silent detail says nobody reported, not that the thing broke",
-              "no observation in" in st["signals"]["reverify"]["detail"])
+              "no observation in" in st["signals"]["traffic"]["detail"])
         st, alert = run_once(d, "2026-10-16", console="ok")
         check("a silent lane eventually alerts",
               alert is not None and "signal not reported" in alert)
         check("the silent alert names the gate bug that caused this before",
               alert is not None and "vars.X" in alert)
-        st, _ = run_once(d, "2026-10-17", reverify=rv_ok)
+        st, _ = run_once(d, "2026-10-17", queue=q_ok)
         check("a lane that reports again recovers",
-              st["signals"]["reverify"]["status"] == "ok"
-              and "silent" not in st["signals"]["reverify"])
+              st["signals"]["traffic"]["status"] == "ok"
+              and "silent" not in st["signals"]["traffic"])
 
     with tempfile.TemporaryDirectory() as tmp:
         d = Path(tmp)
         (d / "state.json").write_text(json.dumps({
             "version": 1, "updated": "2026-01-01",
-            "signals": {"reverify": {"status": "ok", "detail": "ok",
-                                     "last_ok": "2026-01-01",
-                                     "degraded_since": None, "last_alerted": None}}}))
+            "signals": {"traffic": {"status": "ok", "detail": "ok",
+                                    "last_ok": "2026-01-01",
+                                    "degraded_since": None, "last_alerted": None}}}))
         st, alert = run_once(d, "2026-10-01", console="ok")
         check("legacy state without last_seen starts the clock, never alarms",
-              st["signals"]["reverify"]["status"] == "ok"
-              and st["signals"]["reverify"]["last_seen"] == "2026-10-01")
+              st["signals"]["traffic"]["status"] == "ok"
+              and st["signals"]["traffic"]["last_seen"] == "2026-10-01")
+
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+        (d / "state.json").write_text(json.dumps({
+            "version": 1, "updated": "2026-10-01",
+            "signals": {"reverify": {"status": "ok", "detail": "ok",
+                                     "last_seen": "2026-10-01",
+                                     "degraded_since": None, "last_alerted": None}}}))
+        st, alert = run_once(d, "2026-10-20", console="ok")
+        check("a retired signal is dropped from state, never reported silent",
+              "reverify" not in st["signals"] and alert is None)
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)

@@ -1,11 +1,11 @@
 ---
-title_tag: "Provider Protocol Reference"
+title_tag: "Provider protocol reference"
 meta_desc: "Complete reference for the Pulumi provider gRPC protocol, including all RPC methods and their semantics."
 title: Provider Protocol Reference
-h1: Provider Protocol Reference
+h1: Provider protocol reference
 menu:
     iac:
-        name: Protocol Reference
+        name: Protocol reference
         parent: iac-guides-provider-implementers
         weight: 10
 ---
@@ -20,7 +20,7 @@ Pulumi providers are gRPC servers. When a Pulumi program runs, the engine starts
 
 ### How it works
 
-The Pulumi engine starts your provider as a subprocess and connects to it via gRPC. It then calls `Configure` with credentials and settings to initialize the provider. For each resource operation, the engine calls the appropriate method such as `Check`, `Diff`, or `Create`. Your provider executes the operation and returns results, while the engine manages state and orchestrates the overall deployment.
+The Pulumi engine starts your provider as a subprocess and connects to it via gRPC. It then calls `Configure` with credentials and settings to initialize the provider. For each resource operation, the engine calls the appropriate method such as `Check`, `Diff`, or `Create`. Your provider executes the operation and returns results, while the engine manages state and orchestrates the deployment.
 
 ## Essential methods
 
@@ -56,10 +56,10 @@ rpc Configure(ConfigureRequest) returns (ConfigureResponse)
 
 **Request fields:**
 
-- `variables` (map<string, string>): Environment variables
+- `variables` (map<string, string>): Deprecated map of provider input properties with compound values JSON-encoded; use `args` instead
 - `args` (Struct): Configuration values from the Pulumi program
-- `acceptSecrets` (bool): Whether the provider can accept secret values
-- `acceptResources` (bool): Whether the provider can accept resource references
+- `acceptSecrets` (bool): Whether the caller supports secret values
+- `acceptResources` (bool): Whether the caller supports strongly typed resource references
 
 **Response fields:**
 
@@ -68,7 +68,7 @@ rpc Configure(ConfigureRequest) returns (ConfigureResponse)
 - `acceptResources` (bool): Confirm resource reference capability
 - `acceptOutputs` (bool): Whether the provider can accept output values
 
-Store configuration values for use in subsequent resource operations. Most providers use this to set up API clients with the provided credentials.
+Store configuration values for use in later resource operations. Most providers use this to set up API clients with the provided credentials.
 
 ### Check
 
@@ -90,9 +90,9 @@ rpc Check(CheckRequest) returns (CheckResponse)
 - `inputs` (Struct): Validated/transformed inputs
 - `failures` (repeated CheckFailure): Validation errors
 
-Check is called before any create or update operation. Use it to validate that inputs are well-formed, set default values for optional properties, normalize inputs such as lowercasing strings, and return detailed error messages for invalid inputs.
+Check is called before any create or update operation. Use it to validate that inputs are well-formed, set default values for optional properties, normalize inputs such as converting strings to lowercase, and return detailed error messages for invalid inputs.
 
-Return the (potentially modified) inputs in the response. These become the inputs for subsequent `Diff`, `Create`, and `Update` calls.
+Return the (potentially modified) inputs in the response. These become the inputs for the `Diff`, `Create`, and `Update` calls that follow.
 
 ### Diff
 
@@ -143,7 +143,7 @@ rpc Create(CreateRequest) returns (CreateResponse)
 **Request fields:**
 
 - `urn` (string): The resource's URN
-- `type` (string): The resource type token (e.g., `myfiles:index:File`)
+- `type` (string): The resource type token (for example, `myfiles:index:File`)
 - `name` (string): The resource's logical name
 - `properties` (Struct): Input properties (from Check)
 - `timeout` (double): Operation timeout in seconds
@@ -154,7 +154,7 @@ rpc Create(CreateRequest) returns (CreateResponse)
 - `id` (string): The created resource's unique identifier
 - `properties` (Struct): Output properties (state)
 
-The `id` must uniquely identify the resource for subsequent Read, Update, and Delete calls. When `preview` is true, don't actually create anything—return expected outputs instead. Return all output properties, not just inputs, and handle errors gracefully with meaningful error messages.
+The `id` must uniquely identify the resource for later `Read`, `Update`, and `Delete` calls. When `preview` is true, don't actually create anything—return expected outputs instead. Return all output properties, not only inputs, and handle errors gracefully with meaningful error messages.
 
 ### Read
 
@@ -237,7 +237,7 @@ rpc GetPluginInfo(google.protobuf.Empty) returns (PluginInfo)
 
 **Response fields:**
 
-- `version` (string): Provider version (e.g., "1.2.3")
+- `version` (string): Provider version (for example, "1.2.3")
 
 ## Additional methods
 
@@ -296,7 +296,7 @@ Secret values are marked specially in the protocol. When `acceptSecrets` is true
 
 ### Resource references
 
-When `acceptResources` is true, you may receive references to other resources instead of their resolved values. This enables tracking dependencies.
+When `acceptResources` is true, you may receive references to other resources instead of their resolved values.
 
 ## Error handling
 
@@ -324,23 +324,22 @@ A minimal provider needs:
 1. [ ] `Update` modifying resources
 1. [ ] `Delete` removing resources
 
-## Example: Method call sequence
+## Example: method call sequence
 
 For a typical `pulumi up` creating a new resource:
 
 1. `GetPluginInfo` → Engine gets provider version
+1. `CheckConfig` → Validate provider configuration
 1. `Configure` → Provider receives credentials
-1. `GetSchema` → Engine gets resource definitions
 1. `Check` → Validate and default inputs
-1. `Diff` → Compute changes (none, since new)
 1. `Create` → Provision the resource
 
 For updating an existing resource:
 
 1. `Check` → Validate new inputs
 1. `Diff` → Compute what changed
-1. `Update` or `Delete`+`Create` → Apply changes
+1. `Update`, or `Create` then `Delete` to replace the resource (`Delete` first when `deleteBeforeReplace` is set) → Apply changes
 
 ## Next steps
 
-For language-specific implementation guides, see [Direct implementation in Python](/docs/iac/guides/building-extending/providers/implementers/python/) or [Direct implementation in TypeScript](/docs/iac/guides/building-extending/providers/implementers/typescript/). For schema details, see the [Schema reference](/docs/iac/guides/building-extending/packages/schema/). You can also [view the complete proto file](https://github.com/pulumi/pulumi/blob/master/proto/pulumi/provider.proto) on GitHub.
+For language-specific implementation guides, see [Direct implementation in Python](/docs/iac/guides/building-extending/providers/implementers/python/) or [Direct implementation in TypeScript](/docs/iac/guides/building-extending/providers/implementers/typescript/). For schema details, see the [Schema reference](/docs/iac/guides/building-extending/packages/schema/). You can also [view the complete `provider.proto` file](https://github.com/pulumi/pulumi/blob/master/proto/pulumi/provider.proto) on GitHub.

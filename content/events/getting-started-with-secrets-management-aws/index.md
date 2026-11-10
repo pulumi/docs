@@ -15,17 +15,6 @@ unlisted: false
 # to fill out the form before viewing.
 gated: false
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: getting-started-with-secrets-management-aws
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
@@ -43,7 +32,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    [Pulumi ESC](/product/esc) is a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments. Pulumi ESC is a new category of configuration-as-code product that enables teams to aggregate secrets and configurations from many sources, manage hierarchical collections of configurations and secrets (“environments”), and consume those configurations and secrets from a variety of different infrastructure and application services.
+    [Pulumi ESC](/product/secrets-management/) is a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments. Pulumi ESC is a new category of configuration-as-code product that enables teams to aggregate secrets and configurations from many sources, manage hierarchical collections of configurations and secrets (“environments”), and consume those configurations and secrets from a variety of different infrastructure and application services.
 
 learn:
     - Defining environments, which contain collections of secrets and configuration

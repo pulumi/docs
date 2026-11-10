@@ -35,7 +35,9 @@ Organization and team access tokens can dispatch runs and continue manual gates,
 
 ## Who can approve a gate
 
-{{< pulumi-cloud "delivery-approvals" />}}
+<!-- TODO(launch): Replace the next sentence with the pulumi-cloud shortcode for "delivery-approvals" once pulumi/marketing-web adds a hidden `delivery-approvals` feature (min_edition: pro). -->
+
+Approval gates are available in the Pro and Enterprise editions.
 
 An approval gate lists `approvers` by Pulumi username or team name. Anyone in that list can approve, including the person who started the run or pushed the commit. If the list is empty, anyone with update permission on the organization can approve.
 

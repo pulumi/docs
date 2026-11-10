@@ -3,22 +3,22 @@
 
 One of two redundant, deliberately differently-framed Sonnet passes over each
 changed `content/**/*.md` file. Each pass emits a JSON claim list against a
-forced tool schema; `merge-claims.py` unions Layer A (regex) + the two LLM
+strict tool schema; `merge-claims.py` unions Layer A (regex) + the two LLM
 passes into `.candidate-claims.json`, and the main review MUST verify every
 entry.
 
 Why a direct Anthropic API call (not `claude-code-action`):
   - extraction needs no agentic loop — it's "read input → produce structured
     output", one model call;
-  - a direct `/v1/messages` call gives us a forced tool-use JSON schema
-    (`tool_choice: {type:"tool", name:"extract_claims"}`, `strict`) plus an
-    explicit `thinking: {type: "disabled"}`, neither of which
-    `claude-code-action` exposes — and those are exactly the "format
-    consistency" levers this exercise is about. (Sonnet 5 turns adaptive
-    thinking on by default when `thinking` is omitted, and rejects non-default
-    sampling params such as `temperature`; we disable thinking to keep
-    extraction one deterministic forced-tool call and let the strict schema do
-    the constraining.)
+  - a direct `/v1/messages` call gives us a strict tool-use JSON schema
+    (`extract_claims`, `strict: true`) plus explicit control over thinking,
+    neither of which `claude-code-action` exposes — and those are exactly the
+    "format consistency" levers this exercise is about. (Sonnet 5.5 rejects
+    both `thinking: {type: "disabled"}` and a forced `tool_choice`
+    (`tool`/`any`) with a 400, so we ask for `thinking: {type:
+    "between_tools"}` — no thinking before the first tool call, which on this
+    one-call job means none at all — with `tool_choice: auto`, and retry once
+    if the model answers in prose instead of calling the tool.)
   - precedent: `claude-triage.yml` already calls `/v1/messages` via curl in
     this repo.
 
@@ -43,7 +43,7 @@ Output schema:
     {
       "schema_version": 1,
       "pass": "atomic" | "holistic",
-      "model": "claude-sonnet-5",
+      "model": "claude-sonnet-5-5",
       "claims": [
         {"file": "content/blog/foo.md",
          "line_range": "L42",            # or "L42-47"; references the numbered file body we sent
@@ -82,11 +82,20 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 SCHEMA_VERSION = 1
-DEFAULT_MODEL = "claude-sonnet-5"
+# Sonnet 5.5 with thinking off and effort unset (2026-09-28 benchmark, 15
+# fixtures x 3 reps, graded by an independent auditor; campaign
+# 2026-09-28-sonnet55-effort-sweep in pulumi/docs-review-benchmarks): same
+# high-importance recall as Sonnet 5 (95.2% vs 94.8%), 72/72 known defects
+# covered, ~6x fewer duplicate claims, ~16% cheaper and ~40% faster per call.
+# Low/medium effort lost 12-19 points of high-importance recall; xhigh turned
+# thinking on, cost 37% more, and bought nothing.
+DEFAULT_MODEL = "claude-sonnet-5-5"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
-MAX_TOKENS = 8192
-HTTP_TIMEOUT = 120  # seconds per API call
+# Sonnet 5.5 is more thorough than Sonnet 5 on long heightened-scrutiny files;
+# its largest benchmark response was ~8.5K output tokens, past the old 8192.
+MAX_TOKENS = 32000
+HTTP_TIMEOUT = 300  # seconds per API call (benchmark p95 24s, max 40s)
 MAX_RETRIES = 3
 MAX_CONCURRENCY = 4
 FILE_CAP = 20  # process at most this many content files per pass
@@ -531,6 +540,57 @@ def chunk_numbered_body(numbered: str) -> list[str]:
 # ---- Anthropic API ---------------------------------------------------------
 
 
+class TruncatedError(RuntimeError):
+    """The claim list outgrew MAX_TOKENS twice. Carries the usage the failed
+    attempts spent, so a split-and-retry still bills them."""
+
+    def __init__(self, msg: str, usage: dict | None = None):
+        super().__init__(msg)
+        self.usage = usage or {}
+
+
+# A dense page's claim list can outgrow MAX_TOKENS long before its body
+# reaches MAX_FILE_CHARS: the 770-line Pulumi YAML reference (30 KB)
+# truncated on both passes of every whole-page run in September 2026, so the
+# content-review lanes verified it on the regex floor alone. A truncated call
+# is retried as two halves of its numbered body, split at the H2 nearest the
+# middle, down to SPLIT_DEPTH levels (at most 1 + 2 + 4 = 7 calls for one body).
+SPLIT_DEPTH = 2
+_FENCE_RE = re.compile(r"(```\n)(.*?)(\n```)", re.S)
+
+
+def split_user_text(user_text: str) -> list[str] | None:
+    """Split a prompt's numbered-body fence into two prompts that keep the
+    preamble and the file's own line numbers. None when it can't split."""
+    m = _FENCE_RE.search(user_text)
+    if not m:
+        return None
+    lines = m.group(2).split("\n")
+    if len(lines) < 4:
+        return None
+    mid = len(lines) // 2
+
+    def body(ln: str) -> str:
+        # Whole-file bodies are "N\t<line>"; standard-scope hunks are
+        # "N\t+ <line>" / "N\t  <line>", so strip the diff marker too.
+        b = ln.split("\t", 1)[1] if "\t" in ln else ln
+        return b[2:] if b[:2] in ("+ ", "  ") else b
+
+    # Prefer an H2, then a hunk boundary, then the midpoint.
+    heads = [i for i, ln in enumerate(lines) if i and body(ln).startswith("## ")] or \
+            [i for i, ln in enumerate(lines) if i and ln.startswith("  @@ changed region")]
+    cut = min(heads, key=lambda i: abs(i - mid)) if heads else mid
+    if not 0 < cut < len(lines):
+        cut = mid
+    out = []
+    for n, part in enumerate((lines[:cut], lines[cut:]), 1):
+        note = (f"(Part {n} of 2 of this file's changed region. Line numbers are the file's own; "
+                "extract only from the lines shown.)\n")
+        out.append(user_text[:m.start()] + note + m.group(1) + "\n".join(part) + m.group(3)
+                   + user_text[m.end():])
+    return out
+
+
 def _post_messages(api_key: str, body: dict) -> dict:
     req = urllib.request.Request(
         ANTHROPIC_URL,
@@ -569,35 +629,60 @@ def _post_messages(api_key: str, body: dict) -> dict:
 
 
 def call_anthropic(api_key: str, system_body: str, mode_header: str, user_text: str, model: str) -> tuple[list[dict], dict]:
-    """One forced-tool call. Returns (claims, usage). Raises on hard failure."""
+    """One strict-tool call. Returns (claims, usage). Raises on hard failure."""
     body = {
         "model": model,
         "max_tokens": MAX_TOKENS,
-        # Sonnet 5 rejects non-default sampling params (temperature/top_p/top_k
-        # → 400) and defaults adaptive thinking ON when `thinking` is omitted.
-        # Extraction is a single forced-tool call, so we disable thinking to
-        # preserve the prior no-thinking behavior; the strict schema does the
-        # format constraining that `temperature: 0` used to reinforce.
-        "thinking": {"type": "disabled"},
+        # Sonnet 5.5 rejects `thinking: {type: "disabled"}` (400) and rejects
+        # non-default sampling params (temperature/top_p/top_k). `between_tools`
+        # skips thinking before the first tool call, and this job makes exactly
+        # one, so extraction stays a no-thinking call; the strict schema does
+        # the format constraining that `temperature: 0` used to reinforce.
+        # Effort is deliberately unset: lower effort cost recall.
+        "thinking": {"type": "between_tools"},
         "system": [
             {"type": "text", "text": system_body, "cache_control": {"type": "ephemeral"}},
             {"type": "text", "text": mode_header},
         ],
         "tools": [EXTRACT_CLAIMS_TOOL],
-        "tool_choice": {"type": "tool", "name": "extract_claims"},
+        # Sonnet 5.5 rejects a forced tool_choice (`tool`/`any`) with a 400;
+        # `auto` plus the retry below covers a prose-only answer.
+        "tool_choice": {"type": "auto"},
         "messages": [{"role": "user", "content": user_text}],
     }
-    resp = _post_messages(api_key, body)
-    usage = resp.get("usage", {}) or {}
+    usage: dict = {}
+    blocks: list[dict] = []
+    for attempt in range(2):
+        resp = _post_messages(api_key, body)
+        for k, v in (resp.get("usage", {}) or {}).items():
+            if isinstance(v, int):
+                usage[k] = usage.get(k, 0) + v
+        blocks = extract_claims_blocks(resp)
+        # A max_tokens stop mid-tool-call returns an empty tool input, and an
+        # `auto` tool_choice can answer in prose with no tool call at all;
+        # retry once rather than record "no claims".
+        if resp.get("stop_reason") == "max_tokens" or not blocks:
+            if attempt == 0:
+                continue
+        break
+    if resp.get("stop_reason") == "max_tokens":
+        raise TruncatedError(f"response truncated at max_tokens={MAX_TOKENS} (twice)", usage)
+    if not blocks:
+        raise RuntimeError(f"no extract_claims tool call in the response (twice; "
+                           f"stop_reason={resp.get('stop_reason')!r})")
+    # The model occasionally splits its answer across more than one
+    # extract_claims call; keep every call's claims, not just the first's.
     claims: list[dict] = []
-    for block in resp.get("content", []) or []:
-        if isinstance(block, dict) and block.get("type") == "tool_use" and block.get("name") == "extract_claims":
-            inp = block.get("input") or {}
-            raw_claims = inp.get("claims")
-            if isinstance(raw_claims, list):
-                claims = [c for c in raw_claims if isinstance(c, dict)]
-            break
+    for block in blocks:
+        raw_claims = (block.get("input") or {}).get("claims")
+        if isinstance(raw_claims, list):
+            claims.extend(c for c in raw_claims if isinstance(c, dict))
     return claims, usage
+
+
+def extract_claims_blocks(resp: dict) -> list[dict]:
+    return [b for b in resp.get("content", []) or []
+            if isinstance(b, dict) and b.get("type") == "tool_use" and b.get("name") == "extract_claims"]
 
 
 # ---- per-file processing ---------------------------------------------------
@@ -638,12 +723,22 @@ def process_file(api_key: str, repo_root: Path, patch: str, path: str, scrutiny:
                  "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}
     all_claims: list[dict] = []
     errors: list[str] = []
-    for body_text in bodies:
+    queue = [(b, 0) for b in bodies]
+    while queue:
+        body_text, depth = queue.pop(0)
         try:
             claims, usage = call_anthropic(api_key, system_body, mode_header, body_text, model)
             all_claims.extend(claims)
             for k in agg_usage:
                 agg_usage[k] += int(usage.get(k, 0) or 0)
+        except TruncatedError as e:
+            for k in agg_usage:
+                agg_usage[k] += int(e.usage.get(k, 0) or 0)
+            halves = split_user_text(body_text) if depth < SPLIT_DEPTH else None
+            if halves:
+                queue[:0] = [(h, depth + 1) for h in halves]
+            else:
+                errors.append(f"{path}: API call failed: TruncatedError: {e}")
         except Exception as e:  # noqa: BLE001
             errors.append(f"{path}: API call failed: {type(e).__name__}: {e}")
     # Stamp file + found_by; drop entries missing required fields.

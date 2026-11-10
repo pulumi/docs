@@ -87,7 +87,7 @@ This "Get Clean, Stay Clean" lifecycle transforms how teams work together:
 
 ## Governance That Accelerates You
 
-The age of AI-driven development demands AI-powered governance. With this new generation of Pulumi Policies, we are providing the essential infrastructure for platform engineering teams to not just survive, but thrive. You can finally build preventative guardrails that developers love, secure your cloud at scale, and transform governance from a blocker into a business accelerator. Learn more about [Pulumi Insights & Governance capabilities](https://www.pulumi.com/product/insights-governance/).
+The age of AI-driven development demands AI-powered governance. With this new generation of Pulumi Policies, we are providing the essential infrastructure for platform engineering teams to not just survive, but thrive. You can finally build preventative guardrails that developers love, secure your cloud at scale, and transform governance from a blocker into a business accelerator. Learn more about [Pulumi Insights & Governance capabilities](https://www.pulumi.com/product/discovery-governance/).
 
 This powerful new experience is available today. Navigate to the **Policies** and **Policy Findings** tab in Pulumi Cloud to explore your new governance capabilities and meet the future of platform engineering.
 
@@ -96,7 +96,7 @@ This powerful new experience is available today. Navigate to the **Policies** an
 **Ready to try these features?**
 
 * [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) and start a Neo task  
-* [Read the Get Started guide](/docs/insights/policy/get-started/) to set up and apply a policy group to stacks and clouds.
+* [Read the Get Started guide](/docs/discovery-governance/get-started/enforce-policy-as-code/) to set up and apply a policy group to stacks and clouds.
 * [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
 
-For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/insights/policy/).
+For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/discovery-governance/concepts/policy-as-code/).

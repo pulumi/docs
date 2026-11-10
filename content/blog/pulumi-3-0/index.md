@@ -29,7 +29,7 @@ Some of the most exciting new features in this release include:
 * **Improved Go and Python SDKs**: Updates to the core Go and Python SDKs make APIs simpler and more consistent, unlock more tooling support, and improve compile times - making it even easier to use all the benefits of your favorite programming language when building and managing cloud infrastructure.
 * **New Integrations and Features in the Pulumi Service**: Alongside Pulumi 3.0, users of the Pulumi Service also now have access to new dashboards for organization-level cloud infrastructure insights, a CI/CD Assistant for easy version control and CI/CD integration with just a few clicks, and new identity, access control, and auditing capabilities.
 
-👉 [Get started](/docs/get-started/) with Pulumi 3.0 today or check out the [Pulumi 3.0 migration guide](/docs/install/) to update your existing Pulumi projects to Pulumi 3.0.
+👉 [Get started](/up/) with Pulumi 3.0 today or check out the [Pulumi 3.0 migration guide](/docs/install/) to update your existing Pulumi projects to Pulumi 3.0.
 
 ## Pulumi Automation API
 
@@ -170,7 +170,7 @@ In addition to the Pulumi 3.0 open source release, we’re also making available
 
 Integrating Pulumi into CI/CD systems is a key step in realizing the full benefits of modern infrastructure as code, and we’ve worked to make this easier than ever. Since 2.0, we’ve added partner integrations with [Spinnaker](/docs/iac/operations/continuous-delivery/), [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/) and [CodeFresh](/docs/iac/operations/continuous-delivery/codefresh/) as well as a new [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/).  In addition, we’ve introduced a new [CI/CD Assistant](/docs/deployments/concepts/) to the service to help configure version control and CI/CD integration for your Pulumi projects with just a few clicks.
 
-For enterprise users, we’ve added several enhancements to SAML SSO and SCIM support.  Pulumi’s SSO support now works seamlessly with [Okta](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml/okta/) (as well as Google Identity, Azure Active Directory and more), users and groups can now be synced via [SCIM support](/docs/administration/access-identity/scim/) in your SAML provider, and new [Team Admin roles](/docs/pulumi-cloud/access-management/teams/) make team management simpler for large organizations.
+For enterprise users, we’ve added several enhancements to SAML SSO and SCIM support.  Pulumi’s SSO support now works seamlessly with [Okta](/docs/administration/guides/saml/okta/) (as well as Google Identity, Azure Active Directory and more), users and groups can now be synced via [SCIM support](/docs/administration/guides/scim/) in your SAML provider, and new [Team Admin roles](/docs/administration/concepts/rbac/teams/) make team management simpler for large organizations.
 
 Lastly, the Pulumi Service now offers a dashboard landing page which brings insights about your infrastructure front-and-center whether you are an individual user, or part of a large organization.
 
@@ -191,6 +191,6 @@ To learn more about each of the new areas - check out these blog posts with more
 * [Pulumi CI/CD Integration Assistant available for all plans](/blog/pulumiup-ci-cd-assistant-all-plans)
 * [Easily bring your team to Pulumi with SAML SSO and SCIM](/blog/pulumiup-bring-your-whole-team-to-pulumi/)
 
-You can [get started](/docs/get-started/) with Pulumi 3.0 today, or check out the [Pulumi 3.0 migration guide](/docs/install/) to update your existing Pulumi projects to Pulumi 3.0.
+You can [get started](/up/) with Pulumi 3.0 today, or check out the [Pulumi 3.0 migration guide](/docs/install/) to update your existing Pulumi projects to Pulumi 3.0.
 
 We can't wait to see what you build with Pulumi 3.0!

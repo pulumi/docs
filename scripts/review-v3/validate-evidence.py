@@ -90,13 +90,31 @@ STANCE_TYPES = {"positioning", "comparison"}
 FINDING_REQUIRED = {"id", "bucket", "file", "text", "origin", "status"}
 # `detail` is the author card's `#### F<n> · Do this` block body, mirrored
 # verbatim for the evidence page (persona-pass round, 2026-09-01).
-FINDING_OPTIONAL = {"lines", "disposition", "detail"}
+# `anchor_ok`/`anchor_note` are build-evidence's advisory verdict on the
+# finding's line reference: present, and False, only when the cited line falls
+# outside the PR's own changed lines for a file the PR touches. Advisory by
+# design -- a bad anchor breaks auto-refresh, not the review -- so nothing
+# here requires them or acts on them.
+# `members` is set only on a group finding (compose-review's new-feature
+# carve-out): the claims it asks about in one ❓, each {file, lines?, claim}.
+FINDING_OPTIONAL = {"lines", "disposition", "detail", "anchor_ok", "anchor_note", "members"}
+MEMBER_REQUIRED = {"file", "claim"}
+MEMBER_OPTIONAL = {"lines"}
 
 DISPOSITION_REQUIRED = {"disposition", "actor", "updated_at"}
 DISPOSITION_OPTIONAL = {"note", "sha", "bulk"}
 
 TRAIL_REQUIRED = {"file", "claim", "verdict"}
-TRAIL_OPTIONAL = {"line", "evidence", "source", "route"}
+# The second row is verifier metadata carried for post-mortems (why a claim
+# routed where it did, whether a verdict was coerced). Optional so objects
+# written before it was carried still validate.
+TRAIL_OPTIONAL = {
+    "line", "evidence", "source", "route",
+    "claim_id", "type", "confidence", "framing", "framing_note",
+    "turn_cap_exhausted", "source_discipline_gate",
+}
+CONFIDENCES = {"high", "medium", "low"}
+FRAMINGS = {"exact-match", "entailed-narrower", "overclaim-broader", "shifted", "none"}
 
 HISTORY_REQUIRED = {"ts", "summary", "sha"}
 
@@ -246,6 +264,34 @@ def validate_evidence(obj) -> list[str]:
             if not file_ok:
                 errors.append(f"{where}.file is required (non-empty) for bucket {bucket!r}")
 
+        if "anchor_ok" in f and f["anchor_ok"] is not False:
+            errors.append(f"{where}.anchor_ok is only ever False (omit it when the anchor is fine)")
+        if "anchor_note" in f and not _nonempty_str(f["anchor_note"]):
+            errors.append(f"{where}.anchor_note must be a non-empty string")
+        if f.get("anchor_ok") is False and not _nonempty_str(f.get("anchor_note")):
+            errors.append(f"{where}.anchor_note is required when anchor_ok is False")
+
+        if "members" in f:
+            members = f["members"]
+            if not (isinstance(members, list) and members):
+                errors.append(f"{where}.members must be a non-empty array")
+                members = []
+            for j, m in enumerate(members):
+                mwhere = f"{where}.members[{j}]"
+                if not isinstance(m, dict):
+                    errors.append(f"{mwhere} must be an object")
+                    continue
+                errors += _check_keys(m, MEMBER_REQUIRED, MEMBER_OPTIONAL, mwhere)
+                for key in ("file", "claim"):
+                    if key in m and not _nonempty_str(m[key]):
+                        errors.append(f"{mwhere}.{key} must be a non-empty string")
+                mlines = m.get("lines")
+                if mlines is not None and not (
+                        isinstance(mlines, list) and 1 <= len(mlines) <= 2
+                        and all(isinstance(n, int) and not isinstance(n, bool) and n >= 1
+                                for n in mlines)):
+                    errors.append(f"{mwhere}.lines must be [start] or [start, end] of positive integers")
+
         lines = f.get("lines")
         if lines is not None:
             if not (isinstance(lines, list) and 1 <= len(lines) <= 2
@@ -293,6 +339,21 @@ def validate_evidence(obj) -> list[str]:
         route = t.get("route")
         if route is not None and route not in ROUTES:
             errors.append(f"{where}.route {route!r} must be one of {', '.join(sorted(ROUTES))}")
+        for key in ("claim_id", "type", "source_discipline_gate"):
+            if key in t and not _nonempty_str(t[key]):
+                errors.append(f"{where}.{key} must be a non-empty string when present")
+        if "confidence" in t and t["confidence"] not in CONFIDENCES:
+            errors.append(
+                f"{where}.confidence {t['confidence']!r} must be one of {', '.join(sorted(CONFIDENCES))}"
+            )
+        if "framing" in t and t["framing"] not in FRAMINGS:
+            errors.append(
+                f"{where}.framing {t['framing']!r} must be one of {', '.join(sorted(FRAMINGS))}"
+            )
+        if "framing_note" in t and not isinstance(t["framing_note"], str):
+            errors.append(f"{where}.framing_note must be a string")
+        if "turn_cap_exhausted" in t and not isinstance(t["turn_cap_exhausted"], bool):
+            errors.append(f"{where}.turn_cap_exhausted must be a boolean")
 
     # ---- stances (optional) ----
     stances = obj.get("stances")
@@ -521,12 +582,72 @@ def self_test() -> int:
           any(".verdict" in e for e in validate_evidence({
               **good, "trail": [{**good["trail"][0], "verdict": "definitely-true"}]})))
 
+    trail_meta = {"claim_id": "c7", "type": "version", "confidence": "low",
+                  "framing": "shifted", "framing_note": "page says GA, source says preview",
+                  "turn_cap_exhausted": True, "source_discipline_gate": "generated-from-data"}
+    check("trail verifier metadata accepted",
+          validate_evidence({**good, "trail": [{**good["trail"][0], **trail_meta}]}) == [])
+
+    check("unknown trail confidence rejected",
+          any(".confidence" in e for e in validate_evidence({
+              **good, "trail": [{**good["trail"][0], "confidence": "certain"}]})))
+
+    check("non-boolean turn_cap_exhausted rejected",
+          any(".turn_cap_exhausted" in e for e in validate_evidence({
+              **good, "trail": [{**good["trail"][0], "turn_cap_exhausted": "yes"}]})))
+
+    check("unknown trail key still rejected",
+          any("model_usage" in e for e in validate_evidence({
+              **good, "trail": [{**good["trail"][0], "model_usage": {}}]})))
+
     check("empty history rejected",
           any("history must be non-empty" in e for e in validate_evidence({**good, "history": []})))
 
     check("history entry without sha rejected",
           any(".sha must be" in e for e in validate_evidence({
               **good, "history": [{"ts": good["history"][0]["ts"], "summary": "x", "sha": "zz"}]})))
+
+    def _with_finding(**extra):
+        f = {**good["findings"][0], **extra}
+        return {**good, "findings": [f] + good["findings"][1:]}
+
+    check("advisory anchor flag accepted",
+          validate_evidence(_with_finding(anchor_ok=False, anchor_note="L199 is outside …")) == [])
+
+    check("anchor_ok=True rejected (the flag only ever means 'bad')",
+          any("anchor_ok is only ever False" in e
+              for e in validate_evidence(_with_finding(anchor_ok=True))))
+
+    check("anchor_ok=False without a note rejected",
+          any("anchor_note is required" in e
+              for e in validate_evidence(_with_finding(anchor_ok=False))))
+
+    check("empty anchor_note rejected",
+          any("anchor_note must be" in e
+              for e in validate_evidence(_with_finding(anchor_ok=False, anchor_note="  "))))
+
+    group_members = [{"file": "content/docs/a.md", "lines": [3], "claim": "x does y"},
+                     {"file": "content/docs/b.md", "claim": "z is w"}]
+    check("group finding members accepted",
+          validate_evidence(_with_finding(members=group_members)) == [])
+
+    check("empty members rejected",
+          any("members must be a non-empty array" in e
+              for e in validate_evidence(_with_finding(members=[]))))
+
+    check("member without a claim rejected",
+          any(".members[0]" in e and "claim" in e
+              for e in validate_evidence(_with_finding(members=[{"file": "a.md"}]))))
+
+    check("member with bad lines rejected",
+          any(".members[0].lines" in e
+              for e in validate_evidence(_with_finding(
+                  members=[{"file": "a.md", "claim": "c", "lines": [0]}]))))
+
+    check("unknown member key rejected",
+          any(".members[0]" in e
+              for e in validate_evidence(_with_finding(
+                  members=[{"file": "a.md", "claim": "c", "verdict": "x"}]))))
 
     check("investigation_log with non-string value rejected",
           any("investigation_log" in e for e in validate_evidence({

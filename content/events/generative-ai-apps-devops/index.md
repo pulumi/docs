@@ -13,18 +13,11 @@ unlisted: true
 # to fill out the form before viewing.
 gated: false
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: true
 block_external_search_index: true
 
 # The event type (workshop, webinar, talk).
 event_type: talk
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: "https://info.pulumi.com/generative-ai-apps-devops"
+event_url: "https://info.pulumi.com/generative-ai-apps-devops"
 
 # The content of the hero section.
 # Webinar pages support multiple session via the 'multiple' property.

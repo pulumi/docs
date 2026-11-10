@@ -35,12 +35,12 @@ success.
 Check out [how to deploy the operator][deploy-op] to a Kubernetes cluster using any of Pulumi's supported
 languages, or through YAML manifests and `kubectl`.
 
-You can also [get started][get-started] with Pulumi and create a new [managed Kubernetes cluster](https://www.pulumi.com/docs/tutorials/kubernetes/#clusters) on [Amazon EKS][aws-eks], [Google GKE][gcp-gke], or [Azure AKS][azure-aks] if you don't have an existing cluster.
+You can also [get started][get-started] with Pulumi and create a new [managed Kubernetes cluster](/registry/packages/kubernetes/how-to-guides/#clusters) on [Amazon EKS][aws-eks], [Google GKE][gcp-gke], or [Azure AKS][azure-aks] if you don't have an existing cluster.
 
 [aws-eks]: https://aws.amazon.com/eks/
 [gcp-gke]: https://cloud.google.com/kubernetes-engine/
 [azure-aks]: https://azure.microsoft.com/en-us/services/kubernetes-service/
-[get-started]: https://www.pulumi.com/docs/iac/get-started/kubernetes/
+[get-started]: /up/
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
 [deploy-op]: https://github.com/pulumi/pulumi-kubernetes-operator#deploy-the-operator/
 
@@ -93,7 +93,7 @@ The `Stack` [CustomResourceDefinition (CRD)][k8s-crd] encapsulates an existing P
 infrastructure project in a Git repo, a specific commit SHA to deploy, and any
 additional settings to control the Pulumi update run.
 
-These settings include your [Pulumi API access token](/docs/pulumi-cloud/accounts#access-tokens), environment variables,
+These settings include your [Pulumi API access token](/docs/administration/concepts/accounts/#access-tokens), environment variables,
 config and secrets, and lifecycle controls for the update.
 
 ### Deploying an NGINX Stack on Kubernetes
@@ -657,13 +657,13 @@ containers, serverless, and Kubernetes across cloud providers and cloud native s
 Check out the [GitHub repo][pulumi-k8s-op] to experiment deploying the operator
 and some test Stacks.
 
-Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/iac/get-started/kubernetes/) if you're new.
+Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](/up/?cloud=kubernetes) if you're new.
 
 You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes-operator/). We love to hear from our users!
 
 You can explore more content by checking out [PulumiTV on YouTube](https://www.youtube.com/pulumitv/), work through
-Kubernetes [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
+Kubernetes [tutorials](/registry/packages/kubernetes/how-to-guides/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
 with users and the Pulumi team.
 
 [pulumi-k8s-op]: https://github.com/pulumi/pulumi-kubernetes-operator/

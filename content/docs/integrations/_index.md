@@ -18,15 +18,15 @@ sections:
   cards:
   - image: /logos/tech/aws.svg
     heading: AWS
-    description: Build and manage AWS infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Insights, and policy packs.
+    description: Build and manage AWS infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/aws/
   - image: /logos/tech/azure.svg
     heading: Azure
-    description: Build and manage Azure infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Insights, and policy packs.
+    description: Build and manage Azure infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/azure/
   - image: /logos/tech/gcp.svg
     heading: Google Cloud
-    description: Build and manage Google Cloud infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Insights, and policy packs.
+    description: Build and manage Google Cloud infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/gcp/
   - image: /logos/tech/kubernetes.svg
     heading: Kubernetes
@@ -48,6 +48,14 @@ sections:
     heading: Azure DevOps
     description: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and post PR summaries.
     link: /docs/integrations/version-control/azure-devops-integration/
+
+- type: button-cards
+  heading: Terraform & OpenTofu
+  cards:
+  - image: /logos/tech/terraform.svg
+    heading: Terraform & OpenTofu
+    description: Store Terraform state and run plans in Pulumi Cloud, use Terraform providers and modules in Pulumi programs, or convert HCL.
+    link: /docs/integrations/terraform/
 
 - type: button-cards
   heading: Developer tools

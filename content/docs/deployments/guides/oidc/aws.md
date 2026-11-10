@@ -28,7 +28,7 @@ This document outlines the steps required to configure Pulumi Deployments to use
 Configuring OIDC for AWS involves two sides:
 
 1. **AWS** — register Pulumi Cloud as an OIDC identity provider and create an IAM role that trusts it. You can do this in the [AWS console](#using-the-aws-console) or [programmatically](#using-infrastructure-as-code).
-1. **Pulumi Deployments** — enable the AWS OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that role. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/deployments/deployments/api/#patchsettings).
+1. **Pulumi Deployments** — enable the AWS OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that role. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/reference/cloud-rest-api/deployments/).
 
 ## Configure AWS
 
@@ -41,7 +41,7 @@ Deployments must authenticate against an OIDC provider in **each** AWS account i
 #### Create the identity provider
 
 1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
-1. In the **Provider type** section, click the radio button next to **OpenID Connect**.
+1. In the **Provider type** section, select the radio button next to **OpenID Connect**.
 1. For the **Provider URL**, provide the following URL: `https://api.pulumi.com/oidc`
 1. For the **Audience** field, enter the name of your Pulumi organization. Then select **Add provider**.
 
@@ -159,13 +159,13 @@ aws iam add-client-id-to-open-id-connect-provider \
 
 ## Configure Pulumi Deployments
 
-AWS OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/deployments/deployments/api/#patchsettings). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
+AWS OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/reference/cloud-rest-api/deployments/). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
 
 For new stacks, Pulumi recommends using [Pulumi ESC](/docs/esc/) instead, which supports [OIDC for AWS](/docs/esc/guides/configuring-oidc/aws/) alongside broader secrets and configuration management than Deployments OIDC alone provides. See [Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC](/docs/deployments/guides/cloud-credentials/#choosing-between-pulumi-esc-environments-and-pulumi-deployments-oidc) for guidance.
 
 ### Using infrastructure as code
 
-You can manage the same deployment settings in source control with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource (the OIDC configuration is set under `operationContext.oidc.aws`). Deployment settings can also be configured via the [REST API](/docs/deployments/deployments/api/#patchsettings).
+You can manage the same deployment settings in source control with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource (the OIDC configuration is set under `operationContext.oidc.aws`). Deployment settings can also be configured via the [REST API](/docs/reference/cloud-rest-api/deployments/).
 
 ```typescript
 import * as pulumiservice from "@pulumi/pulumiservice";

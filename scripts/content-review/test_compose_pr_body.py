@@ -45,6 +45,10 @@ VERIFIED = {
          "evidence": "verifier did not converge", "source": "(no source pointer)"},
         {"claim_id": "c2", "text": "TS signature", "verdict": "verified", "confidence": "high",
          "evidence": "matches", "source": "sdk/nodejs/cluster.ts"},
+        {"claim_id": "c6", "line_range": "L60", "text": "The example pins pulumi-aws v4",
+         "verdict": "unverifiable", "confidence": "low", "source_discipline_gate": "own-file-only",
+         "evidence": "[source-discipline gate: author question] pinned v4, latest is v7",
+         "source": "repo:content/docs/iac/concepts/functions/resource-methods.md"},
     ],
 }
 # One mechanical Vale (difficulty qualifier -> fix), one style (passive -> defer).
@@ -54,12 +58,13 @@ VALE = [
     {"file": "x.md", "line": 12, "rule": "Google.Passive", "category": "passive voice",
      "severity": "suggestion", "message": "consider active voice"},
 ]
-# One local_repair (-> fix), one reconception (-> defer).
+# One local_repair, one reconception: both defer (the fix lane banks readthrough).
 READTHROUGH = {
     "ran": True,
     "findings": [
         {"line_range": "L40", "failure_mode": "missing-step", "anchor_quote": "run pulumi up",
-         "fix_class": "local_repair", "proposed_fix": "add a login step before L40"},
+         "fix_class": "local_repair", "severity_hint": "blocker",
+         "proposed_fix": "add a login step before L40"},
         {"line_range": "L1-90", "failure_mode": "purpose-mismatch", "anchor_quote": "Configure access",
          "fix_class": "reconception", "proposed_fix": "split architecture half into its own page"},
     ],
@@ -86,14 +91,21 @@ check("provenance shows real visits", "384 monthly visits" in out)
 # High-confidence findings land as fix stubs.
 check("contradicted high-confidence claim -> fix row", "c3" in out.split("## Findings not applied")[0])
 check("mechanical Vale -> fix row", "difficulty qualifier" in out.split("## Findings not applied")[0])
-check("local_repair readthrough -> fix row", "missing-step" in out.split("## Findings not applied")[0])
+check("local_repair readthrough is NOT a fix row", "missing-step" not in out.split("## Findings not applied")[0])
 check("alias collision -> fix row", "alias collision" in out.split("## Findings not applied")[0])
 
 # Judgment-level findings land as deferral stubs.
 deferral_block = out.split("## Findings not applied")[1].split("## Screenshot")[0]
 check("unverifiable claim -> deferral", "c5" in deferral_block)
+check("gated unverifiable -> labelled as an author question, not a plain unverifiable",
+      "c6" in deferral_block and "no independent source; author question" in deferral_block)
 check("style Vale -> deferral", "passive voice" in deferral_block)
 check("reconception readthrough -> deferral", "purpose-mismatch" in deferral_block)
+check("local_repair readthrough -> deferral", "missing-step" in deferral_block)
+_rt = [f for f in c.collect(None, None, READTHROUGH, None)[0] if f["category"] == "readthrough"]
+check("readthrough findings are never fix candidates", _rt and not any(f["fix"] for f in _rt))
+check("readthrough severity_hint rides onto the finding",
+      [f["severity"] for f in _rt] == ["blocker", ""])
 check("legacy menu parent -> deferral", "menu parent" in deferral_block)
 
 # TODO markers for the model to fill; lint placeholder for the gate to stamp.
@@ -109,7 +121,7 @@ check("lint hint rides in an HTML comment", "<!--" in lint_line.split(c.LINT_PLA
 check("lint label is make-lint-only (no make build)", "make build`:" not in lint_line)
 
 # Verification inventory is deterministic.
-check("inventory counts verdicts", "3 verdict(s); 1 contradicted/mismatch, 1 unverifiable" in out)
+check("inventory counts verdicts", "4 verdict(s); 1 contradicted/mismatch, 2 unverifiable" in out)
 
 # Graceful degradation: all artifacts missing still yields a valid full draft.
 bare = c.compose(QUEUE, None, None, None, None)
@@ -371,8 +383,9 @@ labels = {f["label"] for f in c.collect(_load(RUN_A, ".verified-claims.json"), N
 check("#21291: fresh stub text starts with collect()'s label for the same verdict",
       all(any(st["text"].startswith(lab) for lab in labels) for st in backlog_a["reconciled"]["fresh_stubs"]))
 check("#21291: every stubbed id is accounted for by the accounting check on the draft",
-      c.glowup_body_accounting(body_a, backlog_a) == ["Backlog executed still carries a <TODO> marker",
-                                                     "Backlog declined still carries a <TODO> marker"])
+      c.glowup_body_accounting(body_a, backlog_a) == ["Backlog executed still carries a <TODO> marker"])
+check("composed Backlog declined carries no placeholder row for the model to forget",
+      "<TODO" not in _section(body_a, "Backlog declined"))
 
 # Case 2 — PR #21293 (run 33518035360, providers/_index.md): `pr20503-findings-5`
 # is a July readthrough "self-redundancy" finding the July agent declined as
@@ -460,6 +473,21 @@ check("accounting: a leftover <TODO> in either table is a violation",
       any("<TODO>" in v for v in c.glowup_body_accounting(good.replace("| done |", "| <TODO> |"), acct_backlog)))
 check("accounting: a body without the two sections is a violation",
       c.glowup_body_accounting("## Why this page\n", acct_backlog))
+# Membership is by row, not substring: a reason cell that cross-references
+# another row is not that row appearing twice (2026-09-09/10 false positives).
+xref = good.replace("| `pr1-findings-2` | #1 | no |",
+                    "| `pr1-findings-2` | #1 | same sentence as `pr1-findings-1`, executed there; see also `fresh-c7` |")
+check("accounting: a cross-reference in a reason cell is not a second row",
+      c.glowup_body_accounting(xref, acct_backlog) == [])
+xref2 = good.replace("| `pr1-findings-1` | #1 | done |",
+                     "| `pr1-findings-1` | #1 | done — the `pr1-findings-2` decline below explains the rest |")
+check("accounting: a cross-reference from executed to declined is not a duplicate either",
+      c.glowup_body_accounting(xref2, acct_backlog) == [])
+prose = good.replace("## Secondary sweep", "Also relevant: `fresh-c7` was the trigger.\n\n## Secondary sweep")
+check("accounting: an id mentioned in prose under a table is not a row",
+      c.glowup_body_accounting(prose, acct_backlog) == [])
+check("accounting: _table_row_ids reads the first cell only",
+      c._table_row_ids("| `a-1` — x, see `b-2` | #1 | y `c-3` |\n| --- |\ntext `d-4`\n| `e-5` | | |") == ["a-1", "e-5"])
 
 if failures:
     print(f"\n{len(failures)} failure(s)", file=sys.stderr)

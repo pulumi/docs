@@ -24,14 +24,14 @@ This document outlines the steps required to configure Pulumi Cloud to accept El
 This integration is most often used to authenticate workloads that run Pulumi operations from inside an EKS cluster, without storing long-lived Pulumi access tokens. Two common scenarios:
 
 - **[Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)** — Run Pulumi stacks as Kubernetes custom resources. The operator's workspace pods authenticate to Pulumi Cloud using the cluster's OIDC tokens instead of a static `PULUMI_ACCESS_TOKEN`.
-- **[Customer-managed deployment runners](/docs/deployments/concepts/customer-managed-runners/)** — Run Pulumi Deployments inside your own EKS cluster. The workflow runner fetches a Pulumi Pool token dynamically using its OIDC identity.
+- **[Customer-managed runners](/docs/administration/concepts/customer-managed-runners/)** — Run Pulumi Deployments inside your own EKS cluster. The workflow runner fetches a Pulumi Pool token dynamically using its OIDC identity.
 
 {{< notes type="info" >}}
-This guide walks through the Pulumi Cloud UI. You can also configure OIDC Issuers via the [REST API](/docs/reference/cloud-rest-api/oidc-issuers/) or the [`OidcIssuer`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/oidcissuer/) resource in the Pulumi Service provider.
+This guide walks through the Pulumi Cloud console. You can also configure OIDC Issuers via the [REST API](/docs/reference/cloud-rest-api/oidc-issuers/) or the [`OidcIssuer`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/oidcissuer/) resource in the Pulumi Service provider.
 {{< /notes >}}
 
 {{< notes type="info" >}}
-This guide demonstrates using `personal` tokens. Depending on your [Pulumi edition](/docs/administration/guides/oidc-issuers/#token-types-by-edition), you can also use `organization` or `team` tokens by adjusting the token type in the authorization policies and the `pulumi login` parameters.
+This guide demonstrates using `personal` tokens. Depending on your [Pulumi edition](/docs/administration/concepts/oidc-issuers/#token-types), you can also use `organization` or `team` tokens by adjusting the token type in the authorization policies and the `pulumi login` parameters.
 {{< /notes >}}
 
 ## Prerequisites
@@ -114,7 +114,7 @@ This guide provides step-by-step instructions based on the official provider doc
 
 1. Select the issuer name.
 1. Set **Decision** to **Allow**.
-1. Set **Token type** to **Personal**. See the [token types section](/docs/administration/guides/oidc-issuers/#token-types-by-edition) for other options.
+1. Set **Token type** to **Personal**. See the [token types section](/docs/administration/concepts/oidc-issuers/#token-types) for other options.
 1. The user login should default to your login. Change it if you want to use a different login.
 1. Add a new rule and configure it to verify the namespace and the service account name.
 1. Select **Save policies**.

@@ -35,7 +35,7 @@ jobs:
         node-version:
           - 24.x
         python-version:
-          - 3.9
+          - "3.12"
         dotnet-version:
           - 8.0.x
         java-version:
@@ -73,7 +73,7 @@ jobs:
           go-version: ${{ matrix.go-version }}
 
       - name: Install Java
-        uses: actions/setup-java@v6.0.0
+        uses: actions/setup-java@v6.0.1
         with:
           distribution: temurin
           java-version: ${{ matrix.java-version }}
@@ -83,11 +83,8 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
 
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: "0.157.0"
-          extended: true
+      - name: Install Hugo (version pinned in mise.toml)
+        uses: ./.github/actions/setup-hugo
 
       - name: Install Pulumi
         uses: pulumi/actions@v7

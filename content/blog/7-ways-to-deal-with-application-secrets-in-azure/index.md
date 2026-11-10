@@ -288,7 +288,7 @@ queue.AddMessage(new CloudQueueMessage("Hello"));
 
 Let's hope another quality-of-life improvement is on the way.
 
-## Role of Infrastructure as Code
+## Role of infrastructure as code
 
 While security practices may vary depending on application requirements, Pulumi plays an essential role in the appropriate setup of service configuration and environment:
 

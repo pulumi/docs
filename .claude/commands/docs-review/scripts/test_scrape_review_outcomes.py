@@ -400,7 +400,7 @@ def test_v3_undecided_everything_still_open():
 
 def test_v3_review_state_answered_fixed_refuted_accepted_bulk():
     body = v3_answered_author({
-        # F1 is a BULK fix (`/resolve all fixed`): bulk, but not an acceptance.
+        # F1 is a BULK fix: bulk, but not an acceptance.
         "F1": ("fixed", "", True),
         "F2": ("refuted", "style rule doesn't apply here", False),
         "F3": ("accepted", "shipping as-is", True),

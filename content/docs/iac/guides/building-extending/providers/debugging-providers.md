@@ -1,11 +1,11 @@
 ---
-title_tag: "How to Debug a Pulumi Provider"
+title_tag: "How to debug a Pulumi provider"
 meta_desc: "Learn the process for debugging Pulumi providers locally."
 title: Debugging Providers
-h1: Debugging Pulumi Providers
+h1: Debugging Pulumi providers
 menu:
     iac:
-        name: Debugging Providers
+        name: Debugging providers
         parent: iac-guides-providers
         weight: 40
 aliases:
@@ -25,7 +25,7 @@ When developing or troubleshooting Pulumi providers, you may need to debug the p
 
 ## Starting the provider in debug mode
 
-To set up a process to debug, you will need to start the provider in debug mode through your local IDE. Upon startup, the provider should output a port number to the console (e.g., `12345`), indicating that a debugger can attach. Here are two examples for GoLand and VS Code.
+To set up a process to debug, start the provider in debug mode through your local IDE. On startup, the provider should output a port number to the console (for example, `12345`), indicating that a debugger can attach. Here are two examples for GoLand and VS Code.
 
 ### Example for GoLand
 
@@ -67,7 +67,7 @@ With your IDE configured, set breakpoints within the provider code where you wis
 
 ## Running Pulumi with debug providers
 
-To attach the Pulumi CLI to your provider running in debug mode, use the `PULUMI_DEBUG_PROVIDERS` environment variable. Specify the provider and port number the debugger is listening on.
+To attach the Pulumi CLI to your provider running in debug mode, use the `PULUMI_DEBUG_PROVIDERS` environment variable. Specify the provider name and the port number the provider printed on startup.
 
 For example, to debug a deployment with the `azure-native` provider on port `12345`, you would run:
 
@@ -86,10 +86,10 @@ PULUMI_DEBUG_PROVIDERS="wavefront:53766" go test -v -tags=python
 
 ## Debugger attachment
 
-Once Pulumi runs or tests are initiated with the `PULUMI_DEBUG_PROVIDERS` environment variable set, your IDE should automatically attach to the specified port and pause execution at your set breakpoints.
+Once you start a Pulumi run or tests with the `PULUMI_DEBUG_PROVIDERS` environment variable set, the Pulumi CLI connects to the provider on the specified port, and your IDE's debugger pauses execution at your breakpoints.
 
 {{< notes type="warning" >}}
-**Terminating the Provider Process**: Be cautious when terminating the provider process as the Pulumi state can get out of sync with the actual cloud resources. When in doubt, `pulumi refresh` will address this.
+**Terminating the provider process**: Be cautious when terminating the provider process as the Pulumi state can get out of sync with the actual cloud resources. When in doubt, `pulumi refresh` will address this.
 {{< /notes >}}
 
 ## Debugging bridged providers
@@ -105,26 +105,15 @@ A bridged provider has two parts you might need to debug:
 
 Because tfgen is a build-time tool rather than a running provider process, you debug it by starting it under [dlv](https://github.com/go-delve/delve) `exec` and attaching, rather than with `PULUMI_DEBUG_PROVIDERS`.
 
-#### Install dlv
+#### Install Delve
 
 ```shell
 go install github.com/go-delve/delve/cmd/dlv@latest
 ```
 
-#### Run tfgen with dlv exec
+#### (Optional) Use a local pulumi-terraform-bridge
 
-First build the tfgen binary with `make tfgen_build_only`, then start it under dlv with `make debug_tfgen`:
-
-```shell
-make tfgen_build_only
-make debug_tfgen
-```
-
-#### Using local pulumi-terraform-bridge
-
-If you want to use a local `pulumi-terraform-bridge` you can use [go
-workspaces](https://go.dev/doc/tutorial/workspaces) to build the local provider
-along with the local `pulumi-terraform-bridge`.
+If you want to debug against a local `pulumi-terraform-bridge`, use [Go workspaces](https://go.dev/doc/tutorial/workspaces) to build the local provider along with the local `pulumi-terraform-bridge`. Skip this step if you only need to debug the provider's own code.
 
 For example, if you had the following directory structure:
 
@@ -136,18 +125,27 @@ pulumi-terraform-bridge   # github.com/pulumi/pulumi-terraform-bridge
 $ cd pulumi-my-provider
 ```
 
-Then you can run the following commands:
+Then run the following commands:
 
 ```shell
-$ go work init
-$ go work use -r ./provider
-$ go work use -r ../pulumi-terraform-bridge
+go work init
+go work use -r ./provider
+go work use -r ../pulumi-terraform-bridge
 ```
 
-Then you can re-build tfgen to use the local bridge.
+If you've already built tfgen, delete the existing binary before you continue. `make tfgen_build_only` only rebuilds when the provider's own sources change, so it won't pick up the workspace otherwise:
+
+```shell
+rm bin/pulumi-tfgen-<PROVIDER>
+```
+
+#### Run tfgen under Delve
+
+Build the tfgen binary with `make tfgen_build_only`, then start it under Delve with `make debug_tfgen`:
 
 ```shell
 make tfgen_build_only
+make debug_tfgen
 ```
 
 #### Attaching to the debugger in VS Code

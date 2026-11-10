@@ -111,7 +111,7 @@ One area that we want to draw your attention to is the **Select trusted entities
 
 ![An image of the IAM role trust policy](/blog/esc-env-run-aws/review-trust-policy.png)
 
-This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. This more detailed configuration is outside the scope of this blog post, but you can learn more about it by checking out the [relevant Pulumi documentation](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#configuring-the-iam-role-and-trust-policy).
+This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. This more detailed configuration is outside the scope of this blog post, but you can learn more about it by checking out the [relevant Pulumi documentation](/docs/esc/providers/login/aws-login/).
 
 After creating your role, make sure to make a note of your role’s ARN value as you will need it in the next step.
 
@@ -140,7 +140,7 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-The variables defined under the `environmentVariables` parameter above are the same environment variables that the AWS CLI uses if you were authenticating with something like the `aws configure` command.  What the above configuration is doing is dynamically generating the credentials and projecting those credential values into your local environment. From there, the AWS CLI picks up those environment variables and runs the designated command. You can find out more about this provider definition and how it works in the Pulumi ESC documentation for [the AWS provider](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#example) as well as the documentation for [projecting environment variables](https://www.pulumi.com/docs/pulumi-cloud/esc/environments/#projecting-environment-variables).
+The variables defined under the `environmentVariables` parameter above are the same environment variables that the AWS CLI uses if you were authenticating with something like the `aws configure` command.  What the above configuration is doing is dynamically generating the credentials and projecting those credential values into your local environment. From there, the AWS CLI picks up those environment variables and runs the designated command. You can find out more about this provider definition and how it works in the Pulumi ESC documentation for [the AWS provider](/docs/esc/providers/login/aws-login/#examples) as well as the documentation for [projecting environment variables](/docs/esc/concepts/environments/).
 
 Click **Save**.
 
@@ -156,7 +156,7 @@ $ aws s3 ls
 Unable to locate credentials. You can configure credentials by running "aws configure".
 ```
 
-Now run the command using `pulumi env run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+This is one of [several AWS CLI credential errors that stale or missing keys produce](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/). Now run the command using `pulumi env run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
 pulumi env run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls
@@ -195,7 +195,7 @@ This is one example from several dozen use cases possible via Pulumi ESC. Other 
 
 Pulumi ESC, and the `pulumi env run` command in particular, is designed to make your cloud journey smoother, more secure, and less daunting. So, the next time you find yourself drowning in a sea of cloud configurations, remember, with Pulumi ESC and a dash of code, you can say goodbye to manual configuration hassles and hello to efficient, secure, and scalable cloud development with Pulumi ESC.
 
-Want to learn more about Pulumi? Our [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/) hub is a great place to start.
+Want to learn more about Pulumi? Our [Get Started with Pulumi](/up/) hub is a great place to start.
 
 If you’re looking for an automated (and faster) way to configure OIDC with Pulumi, we’ve got you covered! Check out our [Examples repo](https://github.com/pulumi/examples) where we offer a wide variety of automations using Pulumi Infrastructure as Code (IaC). For OIDC configuration in particular, we have example automation for:
 

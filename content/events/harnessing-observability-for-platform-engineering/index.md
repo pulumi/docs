@@ -14,23 +14,11 @@ unlisted: false
 # to fill out the form before viewing.
 gated: true
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: harnessing-observability-for-platform-engineering
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
 # URL for embedding a URL for ungated events.
-youtube_url: 
-
+youtube_url: https://www.youtube.com/embed/iZwpq0WUxtg
 # Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2025-02-26T09:00:00-08:00
 
@@ -70,5 +58,4 @@ form:
     # HubSpot form id.
     hubspot_form_id: 5abe42c3-6a6c-47a1-a424-d09d2a5b2a90
     salesforce_campaign_id: 701PQ00000Q6SU5YAN
-
 ---

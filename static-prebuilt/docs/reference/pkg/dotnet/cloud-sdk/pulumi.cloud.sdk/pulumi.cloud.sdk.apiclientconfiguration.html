@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ApiClientConfiguration — Pulumi Cloud .NET API reference</title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ApiClientConfiguration — Pulumi Cloud .NET API reference">
+    
+    <meta name="description" content="Connection settings shared by every generated *Api class. is the API origin (no /api suffix — the generated resource paths already start with /api/...)…">
+    
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Class ApiClientConfiguration — Pulumi Cloud .NET API reference">
+    
+    <meta property="og:description" content="Connection settings shared by every generated *Api class. is the API origin (no /api suffix — the generated resource paths already start with /api/...)…">
+      <meta property="og:url" content="https://www.pulumi.com/docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.apiclientconfiguration.html">
+      <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.apiclientconfiguration.html">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "APIReference",
+  "headline": "Class ApiClientConfiguration \u2014 Pulumi Cloud .NET API reference",
+  "url": "https://www.pulumi.com/docs/reference/pkg/dotnet/cloud-sdk/pulumi.cloud.sdk/pulumi.cloud.sdk.apiclientconfiguration.html",
+  "programmingLanguage": ".NET",
+  "executableLibraryName": "Pulumi.Cloud.Sdk",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "name": "Pulumi Cloud",
+    "programmingLanguage": ".NET",
+    "codeRepository": "https://github.com/pulumi/pulumi-cloud-sdk"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pulumi Docs",
+    "url": "https://www.pulumi.com/docs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pulumi",
+    "url": "https://www.pulumi.com/"
+  },
+  "assemblyVersion": "2026.10.9",
+  "description": "Connection settings shared by every generated *Api class. is the API origin (no /api suffix \u2014 the generated resource paths already start with /api/...)\u2026"
+}
+</script>
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration">
+
+
+  <h1 id="Pulumi_Cloud_Sdk_ApiClientConfiguration" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration" class="text-break">Class ApiClientConfiguration</h1>
+  <div class="markdown level0 summary"><p>Connection settings shared by every generated <code>*Api</code> class.</p>
+<p><a class="xref" href="pulumi.cloud.sdk.apiclientconfiguration.html#Pulumi_Cloud_Sdk_ApiClientConfiguration_Host">Host</a> is the API origin (no <code>/api</code> suffix — the
+generated resource paths already start with <code>/api/...</code>).
+<a class="xref" href="pulumi.cloud.sdk.apiclientconfiguration.html#Pulumi_Cloud_Sdk_ApiClientConfiguration_AccessToken">AccessToken</a> supplies the Pulumi access token sent as
+<code>Authorization: token &lt;token&gt;</code>; it is a delegate so a rotating
+token can be re-read per request. Return <code>null</code> for unauthenticated
+requests.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ApiClientConfiguration</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <span class="xref">Pulumi</span>.<span class="xref">Cloud</span>.<a class="xref" href="pulumi.cloud.sdk.html">Sdk</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Cloud.Sdk.dll</h6>
+  <h5 id="Pulumi_Cloud_Sdk_ApiClientConfiguration_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ApiClientConfiguration</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/dotnet/ApiClientConfiguration.cs/#L21">View Source</a>
+  </span>
+  <a id="Pulumi_Cloud_Sdk_ApiClientConfiguration_AccessToken_" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.AccessToken*"></a>
+  <h4 id="Pulumi_Cloud_Sdk_ApiClientConfiguration_AccessToken" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.AccessToken">AccessToken</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Func&lt;string&gt; AccessToken { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/dotnet/ApiClientConfiguration.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_Cloud_Sdk_ApiClientConfiguration_Host_" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.Host*"></a>
+  <h4 id="Pulumi_Cloud_Sdk_ApiClientConfiguration_Host" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.Host">Host</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string Host { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/dotnet/ApiClientConfiguration.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Cloud_Sdk_ApiClientConfiguration_Source_" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.Source*"></a>
+  <h4 id="Pulumi_Cloud_Sdk_ApiClientConfiguration_Source" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.Source">Source</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string Source { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/dotnet/ApiClientConfiguration.cs/#L25">View Source</a>
+  </span>
+  <a id="Pulumi_Cloud_Sdk_ApiClientConfiguration_Timeout_" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.Timeout*"></a>
+  <h4 id="Pulumi_Cloud_Sdk_ApiClientConfiguration_Timeout" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.Timeout">Timeout</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public TimeSpan Timeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/dotnet/ApiClientConfiguration.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_Cloud_Sdk_ApiClientConfiguration_WithAccessToken_" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.WithAccessToken*"></a>
+  <h4 id="Pulumi_Cloud_Sdk_ApiClientConfiguration_WithAccessToken_System_Func_System_String__" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.WithAccessToken(System.Func{System.String})">WithAccessToken(Func&lt;string&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set a dynamic access-token supplier, re-read on every request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ApiClientConfiguration WithAccessToken(Func&lt;string&gt; token)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">token</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.cloud.sdk.apiclientconfiguration.html">ApiClientConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/dotnet/ApiClientConfiguration.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Cloud_Sdk_ApiClientConfiguration_WithAccessToken_" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.WithAccessToken*"></a>
+  <h4 id="Pulumi_Cloud_Sdk_ApiClientConfiguration_WithAccessToken_System_String_" data-uid="Pulumi.Cloud.Sdk.ApiClientConfiguration.WithAccessToken(System.String)">WithAccessToken(string)</h4>
+  <div class="markdown level1 summary"><p>Set a static access token (sent as <code>Authorization: token &lt;token&gt;</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ApiClientConfiguration WithAccessToken(string token)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">token</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.cloud.sdk.apiclientconfiguration.html">ApiClientConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+    <p class="sdk-version">Version 2026.10.9</p>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-cloud-sdk/blob/01021d82e193b27d8061a7a625c415846e5c6641/dotnet/ApiClientConfiguration.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2026, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

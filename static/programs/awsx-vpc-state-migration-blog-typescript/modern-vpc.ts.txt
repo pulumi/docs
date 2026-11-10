@@ -1,0 +1,19 @@
+const vpc = new awsx.ec2.Vpc("vpc", {
+    availabilityZoneNames: [availabilityZone],
+    cidrBlock: "10.0.0.0/16",
+    enableDnsHostnames: true,
+    enableDnsSupport: true,
+    instanceTenancy: "default",
+    natGateways: {
+        strategy: awsx.ec2.NatGatewayStrategy.None,
+    },
+    subnetStrategy: awsx.ec2.SubnetAllocationStrategy.Legacy,
+    subnetSpecs: [{
+        type: awsx.ec2.SubnetType.Isolated,
+        cidrMask: 24,
+    }],
+    tags: vpcTags,
+}, {
+    aliases: [{ type: "awsx:x:ec2:Vpc" }],
+    stateMigrations: [migrateClassicVpc],
+});

@@ -3,6 +3,7 @@ on:
   pull_request:
     branches:
       - master
+      - denny-hill
       - 'release/**'
 
 # Only the newest commit on a PR is worth building. Without this, pushing three
@@ -44,10 +45,8 @@ jobs:
             theme/yarn.lock
             theme/stencil/yarn.lock
 
-      - uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.157.0'
-          extended: true
+      - name: Install Hugo (version pinned in mise.toml)
+        uses: ./.github/actions/setup-hugo
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v6
@@ -61,7 +60,9 @@ jobs:
         run: |
           S5CMD_VERSION="2.3.0"
           S5CMD_SHA256="de0fdbfa3aceae55e069ba81a0fc17b2026567637603734a387b2fca06c299b4"
-          curl -fsSL -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
           echo "${S5CMD_SHA256}  /tmp/s5cmd.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin s5cmd -f /tmp/s5cmd.tar.gz
           rm /tmp/s5cmd.tar.gz
@@ -70,7 +71,9 @@ jobs:
         run: |
           VALE_VERSION="3.14.1"
           VALE_SHA256="ff2b49ffaa9dcd246fd5008f03ff67746d2790b75bf4d3657e2fb9530fb96db3"
-          curl -fsSL -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
           echo "${VALE_SHA256}  /tmp/vale.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin vale -f /tmp/vale.tar.gz
           rm /tmp/vale.tar.gz
@@ -90,7 +93,7 @@ jobs:
             meta-images-
 
       # Derive the cache key from the Hugo installed above rather than a literal,
-      # so revving hugo-version updates the key on its own. Fails loudly on an
+      # so revving the mise.toml pin updates the key on its own. Fails loudly on an
       # unparseable version rather than silently collapsing every build into a
       # single unversioned namespace, which is the bug this exists to prevent.
       - name: Resolve Hugo version for the cache key
@@ -113,13 +116,13 @@ jobs:
         uses: actions/cache@v6
         with:
           path: resources
-          # Keyed on the Hugo resolved above, not a literal, so the four
+          # Keyed on the Hugo resolved above, not a literal, so the five
           # workflows that share this cache (pull-request.yml,
           # build-and-deploy.yml, testing-build-and-deploy.yml,
-          # pulumi-cli-docs.yml) stay in step through an upgrade without anyone
-          # remembering to bump them. Hugo does not put its version in its own
-          # cache entries, so without this an upgrade keeps serving images
-          # encoded by the previous version indefinitely.
+          # pulumi-cli-docs.yml, warm-build-cache.yml) stay in step through an
+          # upgrade without anyone remembering to bump them. Hugo does not put
+          # its version in its own cache entries, so without this an upgrade
+          # keeps serving images encoded by the previous version indefinitely.
           key: hugo-resources-${{ steps.hugo-version.outputs.version }}-${{ github.sha }}
           restore-keys: |
             hugo-resources-${{ steps.hugo-version.outputs.version }}-

@@ -92,9 +92,9 @@ def main() -> int:
           f"(sampled {sample.get('sampled_at')})\n")
 
     ek = load("entity_key", REPO / ".claude/commands/docs-review/scripts/entity_key.py")
-    rv = load("reverify_claims", HERE / "reverify-claims.py")
+    rv = load("report_claims_findings", HERE / "report-claims-findings.py")
 
-    # --- volatility: the nightly lane's whole input ---------------------------
+    # --- volatility: the `volatile` flag the claims index records -------------
     print("volatility classifier")
     volatile = [c for c in claims if ek.is_volatile(c)]
     check(len(volatile) > 0, "some claims are volatile (a lane with no input is a dead lane)")

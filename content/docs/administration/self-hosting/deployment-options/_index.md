@@ -14,7 +14,7 @@ aliases:
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/
 pulumi_cloud_feature: self-hosting
 ---
-Pulumi offers a number of deployment options for self-hosting the Pulumi Cloud.
+Pulumi offers a number of deployment options for self-hosting Pulumi Cloud.
 
 * [Docker Compose](quickstart-docker-compose/)
 * [ECS](ecs-hosted/)

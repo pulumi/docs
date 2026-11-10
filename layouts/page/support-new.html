@@ -14,8 +14,10 @@
   That module owns the DOM contract via the data-support-form* attributes below,
   and mirrors the server's validation rules (infrastructure/support-form/validation.ts).
 
-  The priority option values are the API's closed enum — keep the front matter's
-  form.fields.priority.options in sync with PRIORITIES in validation.ts.
+  The priority option values are the API's closed enum, and are forwarded to
+  Intercom as the conversation's "Priority" attribute — keep the front matter's
+  form.fields.priority.options in sync with PRIORITIES in validation.ts and with
+  Intercom's list for that attribute.
 */}}
 
 {{ $overview := .Params.overview }}

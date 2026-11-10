@@ -15,26 +15,26 @@ menu:
     identifier: administration-concepts-rbac
 ---
 
-Role-Based Access Control (RBAC) in Pulumi Cloud controls who can access which resources in your organization and what actions they can take. You compose access from reusable building blocks — scopes, permission sets, and roles — and assign it to users, teams, and machine tokens. [Organization-wide role settings](/docs/administration/concepts/rbac/roles#organization-wide-role-settings) establish the baseline permissions that every member receives by default.
+Role-Based Access Control (RBAC) in Pulumi Cloud controls who can access which resources in your organization and what actions they can take. You compose access from reusable building blocks — scopes, permission sets, and roles — and assign it to users, teams, and machine tokens.
 
 {{% notes type="info" %}}
-Pulumi Cloud's configurable RBAC features — custom roles, custom permission sets, teams, and tag-based (ABAC) rules — are only available in the Pulumi Enterprise or Business Critical editions. The built-in roles (Admin, Member, and Billing Manager) and [organization-wide role settings](/docs/administration/concepts/rbac/roles#organization-wide-role-settings) are available in all editions, including Team. To learn more, see the [pricing page](/pricing/).
+Pulumi Cloud's configurable RBAC features — custom roles, custom permission sets, teams, and tag-based (ABAC) rules — are only available in the Pulumi Pro or Enterprise editions. The built-in roles (Reader, Builder, Maintainer, Admin, and Billing Manager) are available in all editions, including Essentials. To learn more, see the [pricing page](/pricing/).
 {{% /notes %}}
 
 This model lets you:
 
 - Define precise access levels for each type of resource.
 - Reuse permission sets and roles instead of configuring access one resource at a time.
-- Set organization-wide defaults that every member inherits through the built-in Member role.
+- Choose a [default role](/docs/administration/concepts/rbac/default-roles/) that every member gets unless you give them another one.
 - Enforce least-privilege access across the organization.
 
 ## Where roles apply
 
 Roles apply to these kinds of principals in Pulumi Cloud:
 
-- **Users**: Each organization member has exactly one organization role (Admin, Member, Billing Manager, or a custom role).
+- **Users**: Each organization member has exactly one organization role: the organization's default role, another built-in role, or a custom role. A member can also be [given a permission set directly](/docs/administration/concepts/rbac/entities/#entity-access) on specific stacks, environments, and cloud accounts.
 - **[Teams](/docs/administration/concepts/rbac/teams/)**: A team can be granted access two ways — through **roles** and through **entity access** granted directly on specific stacks, environments, and cloud accounts (outside of any role). Members of a team receive the union of the team's roles, its direct entity access grants, and their own user role.
-- **[Team tokens](/docs/administration/concepts/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team — they are not assigned a role directly — and they also inherit the organization's default Member permissions configured in [Organization-wide role settings](/docs/administration/concepts/rbac/roles#organization-wide-role-settings).
+- **[Team tokens](/docs/administration/concepts/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team, authenticating as the team's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified). A team token's permissions are the union of the roles assigned to its team.
 - **[Organization access tokens](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token)**: Machine tokens that are assigned exactly one role defining the token's permissions across the organization.
 
 ## How permissions accumulate for users
@@ -49,7 +49,7 @@ For example, a member who belongs to two teams accumulates the permissions of th
 
 ```mermaid
 flowchart LR
-    UR["User role<br/>(e.g. Member)"] --> EFF["Effective permissions<br/>(union of all grants)"]
+    UR["User role<br/>(e.g. Builder)"] --> EFF["Effective permissions<br/>(union of all grants)"]
     TA["Team A roles<br/>+ entity access"] --> EFF
     TB["Team B roles<br/>+ entity access"] --> EFF
     CG["Creator grants<br/>(Stack Admin on<br/>stacks they create)"] --> EFF
@@ -57,7 +57,7 @@ flowchart LR
 
 ### User role
 
-Every member of a Pulumi organization has a user role — a built-in role (Admin, Member, or Billing Manager) or a custom role. New members will receive the specified default role for the organization.
+Every member of a Pulumi organization has a user role: a built-in role such as Builder, Admin, or Billing Manager, or a custom role. Members follow the organization's [default role](/docs/administration/concepts/rbac/default-roles/) unless an admin assigns them another one.
 
 ### Team roles and entity access grants
 
@@ -65,7 +65,7 @@ Members who belong to teams inherit all roles assigned to those teams, plus thei
 
 ### Creator grants
 
-Whoever creates a stack is automatically granted the Stack Admin permission set on that stack, regardless of their organization role or team memberships. This applies to machine tokens as well as to people: a stack created with an [organization or team token](/docs/administration/concepts/access-tokens/) carries the same automatic grant, held by the machine identity the token authenticates as rather than by the person who created the token.
+Whoever creates a stack is automatically granted the Stack Admin permission set on that stack, regardless of their organization role or team memberships. This applies to machine tokens as well as to people: a stack created with an [organization or team token](/docs/administration/concepts/access-tokens/) carries the same automatic grant, held by the identity the token authenticates as rather than by the person who created the token. For an organization token that identity is the organization; for a team token, it's the team's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified), and the team itself also receives Stack Admin on the stack.
 
 Like every other grant, a creator grant is additive, so no role or organization-wide setting suppresses it. This matters most for automation: a long-lived machine token accumulates a creator grant on every stack it has ever created, so its standing access grows well beyond what its assigned role suggests. For automation that creates stacks, have the run remove the grant or transfer stack ownership to a break-glass user or team once the stack exists, so the token keeps only the access its role provides.
 

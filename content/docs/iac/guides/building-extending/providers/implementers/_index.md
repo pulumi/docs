@@ -36,7 +36,7 @@ You'll need gRPC bindings for your language (generated from `provider.proto`), a
 - [Python](/docs/iac/guides/building-extending/providers/implementers/python/) - Implement a provider in Python
 - [TypeScript](/docs/iac/guides/building-extending/providers/implementers/typescript/) - Implement a provider in TypeScript
 
-## Related resources
+## Learn more
 
 - [Provider architecture](/docs/iac/guides/building-extending/providers/provider-architecture/) - Understanding the layers
 - [Schema reference](/docs/iac/guides/building-extending/packages/schema/) - Complete schema documentation

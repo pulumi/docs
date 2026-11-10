@@ -103,7 +103,7 @@ function mount(options: { url?: string; draft?: any; extraPriorities?: string[];
     let fetchImpl = async (_url: string, _init: any) => ({
         ok: true,
         status: 200,
-        json: async () => ({ ok: true, id: "req-1", ticketId: "ticket-1" }),
+        json: async () => ({ ok: true, id: "req-1", conversationId: "conversation-1" }),
     });
 
     const g: any = globalThis;
@@ -200,6 +200,15 @@ test("prefills text inputs from the query string", () => {
     const h = mount({ url: `${PAGE_URL}?subject=CLI+crash&email=a%40b.co` });
     assert.strictEqual(h.control("subject").value, "CLI crash");
     assert.strictEqual(h.control("email").value, "a@b.co");
+});
+
+test("matches a query-string priority against the options case-insensitively", () => {
+    // The priority ids were lowercase before they were capitalized to match
+    // Intercom's list, so links already in the wild spell them the old way. The
+    // option's own value is what gets selected, not the string from the URL --
+    // assigning the URL's casing would silently blank the <select>.
+    const h = mount({ url: `${PAGE_URL}?priority=LOW`, extraPriorities: ["Low"] });
+    assert.strictEqual(h.control("priority").value, "Low");
 });
 
 test("ignores a query-string priority that is not a rendered option", () => {
@@ -585,7 +594,7 @@ test("files one ticket even if submit fires twice while in flight", async () => 
     });
     h.setFetch(async () => {
         await gate;
-        return { ok: true, status: 200, json: async () => ({ ok: true, id: "req-1", ticketId: "t-1" }) };
+        return { ok: true, status: 200, json: async () => ({ ok: true, id: "req-1", conversationId: "c-1" }) };
     });
 
     const form = h.doc.querySelector("[data-support-form]") as any;

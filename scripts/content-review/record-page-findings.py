@@ -36,11 +36,12 @@ Output (uploaded to the ledger bucket's `findings/` prefix, beside `ledger/`
 and `claims/`):
 
     {"schema_version": 2, "slug": ..., "path": ..., "reviewed_at": ...,
-     "commit": ..., "verdict": "fixed|clean|skipped|glowup",
+     "commit": ..., "verdict": "fixed|clean|glowup",
      "counts": {"total": N, "applied": N, "deferred": N, "superseded": N},
      "findings": [{"id": "f3", "label": ..., "source": ..., "detail": ...,
                    "category": ..., "line_range": ..., "fix_candidate": bool,
                    "applied": bool,
+                   "severity": "<readthrough severity_hint; absent otherwise>",
                    "finding": "<the label — what was found>",
                    "prior_disposition": {"status": "applied|deferred|superseded",
                                          "reason": "<the model's one-liner, if any>",
@@ -291,7 +292,7 @@ def mark_applied(findings: list[dict], verdict: dict | None) -> list[dict]:
         else:
             label = str(f.get("label") or "").strip().lower()
             hit = any(p and label and (p in label or label[:60] in p) for p in pointers)
-        out.append({
+        rec = {
             "id": f"f{i + 1}",
             "label": f.get("label", ""),
             "source": f.get("source", ""),
@@ -300,7 +301,10 @@ def mark_applied(findings: list[dict], verdict: dict | None) -> list[dict]:
             "line_range": f.get("line_range", ""),
             "fix_candidate": bool(f.get("fix")),
             "applied": hit,
-        })
+        }
+        if f.get("severity"):
+            rec["severity"] = f["severity"]
+        out.append(rec)
     return out
 
 
@@ -442,6 +446,8 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
             "fix_candidate": bool(f.get("fix")),
             "applied": i in applied_idx,
         }
+        if f.get("severity"):
+            rec["severity"] = f["severity"]
         bid = marked_by.get(i) or declined_by.get(i)
         if bid:
             rec["_backlog_id"] = bid
@@ -457,6 +463,16 @@ def build(queue: dict, verdict: dict | None, artifacts: dict,
         warn("queue has no article; nothing to record")
         return None
     art = articles[0]
+    if (verdict or {}).get("verdict") == "skipped":
+        # The workflow's open-PR pre-check: a previous run owns this page's
+        # PR, nothing was reviewed, no artifacts were computed, and the record
+        # built from that is an empty stub. One replaced elb.md's 12 KB
+        # fix-lane record on 2026-09-08 when the glow-up lane lost a same-day
+        # race to the fix lane. The previous record stands, as it does for an
+        # unknown glow-up disposition below.
+        log("verdict is skipped (a previous run owns this page's PR); leaving "
+            "the previous findings record standing")
+        return None
     cpb = _compose()
     findings, _errors = cpb.collect(
         artifacts.get("verified"), artifacts.get("vale"),
@@ -527,7 +543,8 @@ def self_test() -> int:
         {"label": "Vale wordiness (L200): 'all of' is too wordy.", "source": "vale",
          "category": "vale", "line_range": "L200", "fix": False},
         {"label": "Readthrough missing-step (L636-640)", "source": "readthrough pass",
-         "category": "readthrough", "line_range": "L636-640", "fix": True},
+         "category": "readthrough", "line_range": "L636-640", "fix": True,
+         "severity": "blocker"},
         {"label": "Frontmatter alias collision: `/docs/old-path/`",
          "source": "`.frontmatter-validation.json`", "category": "frontmatter",
          "line_range": "", "fix": True},
@@ -568,6 +585,9 @@ def self_test() -> int:
           applied({"category": "claim", "lines": "nope", "source": ""}) == [False] * 5)
     check("ids are stable and 1-based",
           [f["id"] for f in mark_applied(F, None)] == ["f1", "f2", "f3", "f4", "f5"])
+    check("readthrough severity survives onto the record; absent elsewhere",
+          mark_applied(F, None)[3].get("severity") == "blocker"
+          and "severity" not in mark_applied(F, None)[0])
     check("fix_candidate and location survive onto the record",
           mark_applied(F, None)[3]["line_range"] == "L636-640"
           and mark_applied(F, None)[3]["category"] == "readthrough")
@@ -619,6 +639,12 @@ def self_test() -> int:
     # function stopped making. Writing the all-False record that falls out of
     # that would re-bank the work the glow-up just did, so it takes the same
     # exit as a sentinel carrying no lists at all.
+    # The open-PR pre-check skip computes no artifacts; a record built from it
+    # is an empty stub that replaced elb.md's fix-lane record on 2026-09-08.
+    check("a skipped verdict writes nothing (the previous record stands)",
+          build({"articles": [{"slug": "docs-x", "path": "content/docs/x.md"}]},
+                {"verdict": "skipped", "reason": "open PR already exists"},
+                {}, Path(".")) is None)
     check("a missing backlog skips the write rather than guessing by position",
           mark_from_backlog(F, {"verdict": "glowup",
                                 "executed_ids": ["findings-f2"]}, None) is None)

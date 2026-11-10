@@ -1,5 +1,6 @@
 ---
 title: "Kubernetes Agent Sandbox: What It Is and How to Deploy It with Pulumi"
+title_tag: "Kubernetes Agent Sandbox: Deploy with Pulumi"
 date: 2026-07-21
 draft: false
 meta_desc: "Agent Sandbox gives AI agents kernel-isolated, disposable environments as Kubernetes resources. Here's what it is and how to deploy it on GKE with Pulumi."
@@ -217,7 +218,7 @@ Here's the finished result:
 
 Agent Sandbox makes a kernel-isolated, disposable agent environment a first-class Kubernetes object, and Pulumi is how you stand one up as one program instead of a runbook.
 
-The full program, everything in this post, deploy to teardown, is at [pulumi/examples/gcp-ts-agent-sandbox](https://github.com/pulumi/examples/tree/master/gcp-ts-agent-sandbox). Clone it, point it at a GCP project, and you have your own dedicated agent cluster in about twelve minutes. If you're new to Pulumi, [get started here](/docs/get-started/).
+The full program, everything in this post, deploy to teardown, is at [pulumi/examples/gcp-ts-agent-sandbox](https://github.com/pulumi/examples/tree/master/gcp-ts-agent-sandbox). Clone it, point it at a GCP project, and you have your own dedicated agent cluster in about twelve minutes. If you're new to Pulumi, [get started here](/up/).
 
 {{< github-card repo="pulumi/examples" >}}
 
