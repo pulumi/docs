@@ -1,7 +1,7 @@
 name: Staging deploy (/deploy-staging command)
 
 # `/deploy-staging`, at the start of a line in a PR comment, starts the
-# pulumi-test.io deploy of the PR's current head that Sentinel gate G4
+# pulumi-test.io deploy of the PR's current head that the Sentinel's staging gate
 # verifies. It's for when the auto lane (staging-deploy-auto.yml) produced
 # none: its dispatch failed, or the PR predates it. The gate used to tell
 # people to dispatch "Build and deploy testing" by hand, which sits one click
@@ -20,7 +20,7 @@ name: Staging deploy (/deploy-staging command)
 #   is write, maintain or admin, and only an open PR. The head SHA is read
 #   from the API at run time, never taken from the event.
 # - THE COMMAND GATE DECIDES, not the `if:`. The job-level `contains()` is a
-#   substring match, and the Sentinel's own G4 row quotes the command in a
+#   substring match, and the Sentinel's own staging status quotes the command in a
 #   code span; command-gate.py drops code, quotes and mid-line mentions. A
 #   declined comment ends in the cheap gate job, outside the concurrency
 #   group below.
@@ -37,7 +37,7 @@ name: Staging deploy (/deploy-staging command)
 #   serialize the deploys anyway.
 # - ONE REPLY, every time the gate fires: started (with the run link), or
 #   why not. A dispatch that fails also writes `staging/pulumi-test-io` =
-#   error, like the auto lane, so G4's row quotes the reason.
+#   error, like the auto lane, so the staging status quotes the reason.
 
 on:
   issue_comment:
@@ -223,7 +223,7 @@ jobs:
           gh api "repos/$REPO/issues/comments/$COMMENT_ID/reactions" -f content="$CONTENT" > /dev/null \
             || echo "::warning::could not react to the comment"
 
-      # Re-score the gate so G4 shows the running deploy (or the dispatch
+      # Re-score the gate so the staging gate shows the running deploy (or the dispatch
       # error) now, not on the next unrelated event. Pinned to the default
       # branch, like the auto lane's and staging-status.yml's pokes.
       - name: Re-evaluate Sentinel
