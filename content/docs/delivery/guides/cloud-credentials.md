@@ -11,7 +11,7 @@ menu:
 aliases: []
 ---
 
-Each `Stacks` update needs credentials for the cloud it deploys to, and you'll usually want different credentials for `dev` and `prod`. Delivery doesn't use a stack's [deployment settings](/docs/deployments/concepts/settings/) and doesn't do an OIDC exchange of its own, so the credentials come from the target stack or from the `Stacks` entry itself.
+Each `Stacks` update needs credentials for the cloud it deploys to, and you'll usually want different credentials for `dev` and `prod`. Delivery doesn't do an OIDC exchange on its own, so the credentials come from the target stack or from the `Stacks` entry itself.
 
 ## Use an ESC environment on the target stack
 
