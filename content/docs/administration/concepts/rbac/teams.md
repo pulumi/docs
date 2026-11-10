@@ -59,6 +59,12 @@ When your organization has custom roles enabled, teams can be assigned **roles**
 
 To manage role assignments for a team, navigate to the team's **Access** tab. The **Role assignments** section lists the roles currently assigned to the team; use **Add role** to assign an additional role.
 
+## Team access tokens
+
+A team can have [team access tokens](/docs/administration/concepts/access-tokens/#team-access-tokens) for automation that should act with the team's permissions.
+Those tokens authenticate as the team's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified), a machine identity separate from the team's human members.
+When a team token creates a stack, the team receives Stack Admin on it, so members of the team can manage it.
+
 ## GitHub-based Teams
 
 If your Pulumi organization is backed by GitHub, you can import your existing

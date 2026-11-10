@@ -112,12 +112,12 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: my-yaml-project
+name: my-project
 runtime: yaml
 resources:
-    mediaBucket:
+    media-bucket:
         type: aws:s3:Bucket
-    contentBucket:
+    content-bucket:
         type: aws:s3:Bucket
 ```
 
@@ -140,7 +140,7 @@ resource "aws_s3_bucket" "media_bucket" {}
 resource "aws_s3_bucket" "content_bucket" {}
 ```
 
-HCL convention is snake_case resource labels, and the label becomes the logical name, so this program's resources are `media_bucket` and `content_bucket` where this walkthrough says `media-bucket` and `content-bucket`. Because the unqualified `aws` provider is bridged from the OpenTofu registry, `pulumi up` also reports their type as `aws:index:S3Bucket` rather than `aws:s3/bucket:Bucket`.
+HCL convention is snake_case resource labels, and the label becomes the logical name, so this program's resources are `media_bucket` and `content_bucket` where this walkthrough says `media-bucket` and `content-bucket`. Because the unqualified `aws` provider is bridged from the OpenTofu registry, `pulumi up` also reports their type as `aws:index:S3Bucket` rather than `aws:s3:Bucket`. Their physical names also come from the provider, so they start with `terraform-` rather than the logical name.
 
 {{% /choosable %}}
 
@@ -156,7 +156,7 @@ Next, run `pulumi up`. Since this program is written in {{% pulumi-language %}},
 
 {{% choosable language hcl %}}
 
-Next, run `pulumi up`. Since this program is written in HCL, the Pulumi CLI launches the HCL language host and requests that it execute the program. The language host reads every `.tf` file in the project, builds a dependency graph from the references between blocks, and walks that graph, sending a _resource registration_ request to the deployment engine for each `resource` block. This is subtle, but important: _registering_ `aws_s3_bucket.media_bucket` _does not mean that the actual S3 bucket has been created in AWS_, it only means the language host has expressed that this bucket is part of the desired state of your infrastructure. Blocks that do not depend on one another are registered without waiting on each other, so the language host keeps working concurrently with the engine processing this request. (The language host and deployment engine used throughout this walkthrough are defined in detail under [Architecture](#architecture) below.)
+Next, run `pulumi install` to download the AWS provider, and then run `pulumi up`. Since this program is written in HCL, the Pulumi CLI launches the HCL language host and requests that it execute the program. The language host reads every `.tf` file in the project, builds a dependency graph from the references between blocks, and walks that graph, sending a _resource registration_ request to the deployment engine for each `resource` block. This is subtle, but important: _registering_ `aws_s3_bucket.media_bucket` _does not mean that the actual S3 bucket has been created in AWS_, it only means the language host has expressed that this bucket is part of the desired state of your infrastructure. Blocks that do not depend on one another are registered without waiting on each other, so the language host keeps working concurrently with the engine processing this request. (The language host and deployment engine used throughout this walkthrough are defined in detail under [Architecture](#architecture) below.)
 
 {{% /choosable %}}
 
@@ -171,8 +171,8 @@ Updating (mystack)
 
      Type                      Name                Status
  +   pulumi:pulumi:Stack       my-project-mystack  created (6s)
- +   ├─ aws:s3/bucket:Bucket   media-bucket        created (2s)
- +   └─ aws:s3/bucket:Bucket   content-bucket      created (2s)
+ +   ├─ aws:s3:Bucket          media-bucket        created (2s)
+ +   └─ aws:s3:Bucket          content-bucket      created (2s)
 
 Resources:
     + 3 created
@@ -220,7 +220,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		mediaBucket, err := s3.NewBucket(ctx, "mediaBucket", &s3.BucketArgs{
+		mediaBucket, err := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{
 			Tags: pulumi.StringMap{
 				"owner": pulumi.String("media-team"),
 			},
@@ -228,7 +228,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		contentBucket, err := s3.NewBucket(ctx, "contentBucket", nil)
+		contentBucket, err := s3.NewBucket(ctx, "content-bucket", nil)
 		if err != nil {
 			return err
 		}
@@ -273,7 +273,7 @@ import com.pulumi.aws.s3.BucketArgs;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var mediaBucket = new Bucket("mediaBucket", BucketArgs.builder()
+            var mediaBucket = new Bucket("media-bucket", BucketArgs.builder()
                 .tags(Map.of("owner", "media-team"))
                 .build());
             var contentBucket = new Bucket("content-bucket");
@@ -286,15 +286,15 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: my-yaml-project
+name: my-project
 runtime: yaml
 resources:
-  mediaBucket:
+  media-bucket:
     type: aws:s3:Bucket
     properties:
       tags:
         owner: media-team
-  contentBucket:
+  content-bucket:
     type: aws:s3:Bucket
 ```
 
@@ -358,7 +358,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		mediaBucket, err := s3.NewBucket(ctx, "mediaBucket", &s3.BucketArgs{
+		mediaBucket, err := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{
 			Tags: pulumi.StringMap{
 				"owner": pulumi.String("media-team"),
 			},
@@ -366,7 +366,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		appBucket, err := s3.NewBucket(ctx, "appBucket", nil)
+		appBucket, err := s3.NewBucket(ctx, "app-bucket", nil)
 		if err != nil {
 			return err
 		}
@@ -411,10 +411,10 @@ import com.pulumi.aws.s3.BucketArgs;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var mediaBucket = new Bucket("mediaBucket", BucketArgs.builder()
+            var mediaBucket = new Bucket("media-bucket", BucketArgs.builder()
                 .tags(Map.of("owner", "media-team"))
                 .build());
-            var appBucket = new Bucket("appBucket");
+            var appBucket = new Bucket("app-bucket");
         });
     }
 }
@@ -424,15 +424,15 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: my-yaml-project
+name: my-project
 runtime: yaml
 resources:
-  mediaBucket:
+  media-bucket:
     type: aws:s3:Bucket
     properties:
       tags:
         owner: media-team
-  appBucket:
+  app-bucket:
     type: aws:s3:Bucket
 ```
 
@@ -488,7 +488,7 @@ These operations appear in specific scenarios:
 | import | A resource is being imported into Pulumi management. |
 | import-replacement | An imported resource is replacing an existing resource. |
 
-The `refresh` operation only occurs when you explicitly run `pulumi refresh` or pass the `--refresh` flag to `pulumi up` or `pulumi preview`. Pulumi does not refresh state automatically before every operation. To learn more about when and why to refresh, see [Refreshing state](/docs/iac/concepts/state-and-backends/#refreshing-state).
+By default, Pulumi does not refresh state before an operation. The `refresh` operation occurs when you run `pulumi refresh`, pass the `--refresh` flag to `pulumi up`, `pulumi preview`, or `pulumi destroy`, or set [`refresh: always`](/docs/iac/concepts/projects/project-file/#options-options) under `options` in `Pulumi.yaml`. To learn more about when and why to refresh, see [Refreshing state](/docs/iac/concepts/state-and-backends/#refreshing-state).
 
 ### Understanding replacements
 
@@ -497,13 +497,13 @@ When a resource property changes in a way that cannot be updated in place, Pulum
 1. Creating the new resource with the updated configuration (create-replacement)
 1. Deleting the old resource after the new one is ready (delete-replaced)
 
-By default, Pulumi creates the replacement before deleting the original to minimize downtime. You can change this behavior with the [deleteBeforeReplace](/docs/iac/concepts/resources/options/deletebeforereplace/) option.
+By default, Pulumi creates the replacement before deleting the original to minimize downtime. You can change this behavior with the [deleteBeforeReplace](/docs/iac/concepts/resources/options/deletebeforereplace/) option. Pulumi HCL keeps Terraform's ordering instead: it deletes the old resource first unless you set `create_before_destroy = true` in a `lifecycle` block. The [AWS Cloud Control provider](/registry/packages/aws-native/) also deletes first for every replacement.
 
 ## Creation and deletion order
 
 Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources. If an [output](/docs/iac/concepts/inputs-outputs/) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations. This list can also be augmented by using the [dependsOn](/docs/iac/concepts/resources/options/dependson/) resource option.
 
-By default, if a resource must be replaced, Pulumi will attempt to create a new copy of the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace](/docs/iac/concepts/resources/options/deletebeforereplace/) option. If you have disabled [auto-naming](/docs/iac/concepts/resources/names/#autonaming) using configuration or by providing a specific name for a resource, it will be treated as if it was marked as `deleteBeforeReplace` automatically (otherwise the create operation for the new version would fail since the name is in use).
+By default, if a resource must be replaced, Pulumi attempts to create a new copy of the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace](/docs/iac/concepts/resources/options/deletebeforereplace/) option. If you [configure auto-naming](/docs/iac/concepts/resources/names/#autonaming-configuration) so that names have no random part, Pulumi automatically deletes the old resource first, since the create operation for the new version would otherwise fail with the name in use. Providing a specific name for a resource can cause the same failure. Many providers avoid it by applying `deleteBeforeReplace` automatically, but not all do, so set the option on any resource you name that may need to be replaced.
 
 ## Architecture
 
@@ -689,7 +689,7 @@ A resource provider is made up of two different pieces:
 1. A _resource plugin_ is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](/docs/iac/cli/commands/pulumi_plugin/) set of commands.
 2. An _SDK_ which provides bindings for each type of resource the provider can manage.
 
-Like the language runtime itself, the SDKs are available as regular packages. For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`](/docs/iac/cli/commands/pulumi_plugin_install/) behind the scenes to download the resource plugin from Pulumi.com. Pulumi HCL has no per-provider SDK package: `pulumi install` downloads the resource plugin for each provider your program uses and writes a descriptor file for it to `sdks/<provider>/hcl.sdk.json`.
+Like the language runtime itself, the SDKs are available as regular packages. For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  Adding one of these packages to your project doesn't download the resource plugin. `pulumi install` downloads it, and `pulumi preview` and `pulumi up` download it automatically if it's missing. Pulumi HCL has no per-provider SDK package: `pulumi install` downloads the resource plugin for each provider your program uses and writes a descriptor file for it to `sdks/<provider>/hcl.sdk.json`.
 
 ### Pulumi Cloud architecture
 

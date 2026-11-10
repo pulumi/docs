@@ -1,6 +1,6 @@
 {
   "choosable": "go",
-  "generated": "2026-11-04",
+  "generated": "2026-11-06",
   "label": "Go",
   "language": "go",
   "schemaKey": "go",
@@ -150,7 +150,7 @@
       "pkg/codegen/go/importer.go"
     ],
     "repo": "pulumi/pulumi",
-    "url": "https://github.com/pulumi/pulumi/tree/v3.274.0",
-    "version": "v3.274.0"
+    "url": "https://github.com/pulumi/pulumi/tree/v3.274.1",
+    "version": "v3.274.1"
   }
 }

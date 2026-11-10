@@ -772,7 +772,7 @@ Project-level configuration supports both flat and structured configuration, in 
 {{% notes type="warning" %}}
 **Important:** Stack-level and project-level YAML files use different syntax for structured configuration:
 
-* **Stack-level files** (`Pulumi.<stack-name>.yaml`): use the format `projectname:key:`, and nest structured values directly under the key.
+* **Stack-level files** (`Pulumi.<stack-name>.yaml`): nest structured values directly under the key. `pulumi config set` writes keys in the format `projectname:key:`, and a key without the prefix also resolves to the project's namespace.
 * **Project-level file** (`Pulumi.yaml`): use the format `key:` with no project name prefix, and nest structured values under a `value:` wrapper.
 
 Watch for this difference when you move configuration between the two files.
@@ -843,7 +843,7 @@ config:
 Stacks default to `BroomeLLC` for the `name` configuration item, and the Pulumi CLI reports an error if a stack configuration file sets `name` to a list or an object. The CLI reports an error in the same way if a stack's `subnets` property is not an array of strings.
 
 {{% notes type="info" %}}
-At this time, configuration specifications are not supported for structured configuration.
+Configuration specifications can declare that a value is an `object`, but not the properties inside it.
 {{% /notes %}}
 
 ## Provider configuration options

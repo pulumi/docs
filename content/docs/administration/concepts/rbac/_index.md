@@ -34,7 +34,7 @@ Roles apply to these kinds of principals in Pulumi Cloud:
 
 - **Users**: Each organization member has exactly one organization role: the organization's default role, another built-in role, or a custom role. A member can also be [given a permission set directly](/docs/administration/concepts/rbac/entities/#entity-access) on specific stacks, environments, and cloud accounts.
 - **[Teams](/docs/administration/concepts/rbac/teams/)**: A team can be granted access two ways — through **roles** and through **entity access** granted directly on specific stacks, environments, and cloud accounts (outside of any role). Members of a team receive the union of the team's roles, its direct entity access grants, and their own user role.
-- **[Team tokens](/docs/administration/concepts/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team.
+- **[Team tokens](/docs/administration/concepts/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team, authenticating as the team's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified). A team token's permissions are the union of the roles assigned to its team.
 - **[Organization access tokens](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token)**: Machine tokens that are assigned exactly one role defining the token's permissions across the organization.
 
 ## How permissions accumulate for users
@@ -65,7 +65,7 @@ Members who belong to teams inherit all roles assigned to those teams, plus thei
 
 ### Creator grants
 
-Whoever creates a stack is automatically granted the Stack Admin permission set on that stack, regardless of their organization role or team memberships. This applies to machine tokens as well as to people: a stack created with an [organization or team token](/docs/administration/concepts/access-tokens/) carries the same automatic grant, held by the machine identity the token authenticates as rather than by the person who created the token.
+Whoever creates a stack is automatically granted the Stack Admin permission set on that stack, regardless of their organization role or team memberships. This applies to machine tokens as well as to people: a stack created with an [organization or team token](/docs/administration/concepts/access-tokens/) carries the same automatic grant, held by the identity the token authenticates as rather than by the person who created the token. For an organization token that identity is the organization; for a team token, it's the team's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified), and the team itself also receives Stack Admin on the stack.
 
 Like every other grant, a creator grant is additive, so no role or organization-wide setting suppresses it. This matters most for automation: a long-lived machine token accumulates a creator grant on every stack it has ever created, so its standing access grows well beyond what its assigned role suggests. For automation that creates stacks, have the run remove the grant or transfer stack ownership to a break-glass user or team once the stack exists, so the token keeps only the access its role provides.
 
