@@ -1318,7 +1318,7 @@ There are scenarios when `pulumi destroy` may fail to delete resources as expect
 
 ## Delete a stack
 
-To delete a stack with no resources, run `pulumi stack rm`. Removing the stack removes all stack history from Pulumi Cloud and deletes the stack configuration file `Pulumi.<stack-name>.yaml`.
+To delete a stack with no resources, run `pulumi stack rm`. Removing the stack removes all stack history from Pulumi Cloud and deletes the stack configuration file `Pulumi.<stack-name>.yaml`. To keep the configuration file, pass `--preserve-config`.
 
 To force the deletion of a stack that still contains resources---potentially orphaning them---use `pulumi stack rm --force`.
 
