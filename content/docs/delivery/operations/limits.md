@@ -32,7 +32,6 @@ These behaviors affect how you design and operate a pipeline.
 
 ### Runs and steps
 
-- A job stops after 2 hours. Set `timeout` on a `Stacks` entry to change its limit.
 - Delivery doesn't detect a cycle between stages. A run in a cycle waits until you cancel it.
 - A pipeline runs as one service principal for all of its stages. See [Permissions](/docs/delivery/operations/permissions/#the-identity-a-pipeline-runs-as).
 
