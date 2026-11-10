@@ -1,8 +1,8 @@
 ---
-title: "Best AI Agents for Infrastructure Management in 2026"
-date: 2026-09-08
+title: "Best AI Agents for Infrastructure, DevOps, and SRE in 2026"
+date: 2026-11-10
 draft: false
-meta_desc: "A fair comparison of AI agents that plan, apply, and govern cloud infrastructure: Pulumi Neo, env zero, Spacelift, HashiCorp, Upbound, and more."
+meta_desc: "AI agents for DevOps, infrastructure, and SRE sorted into ChatOps, incident, change, and code agents, with a fair look at Pulumi Neo and its peers."
 feature_image: feature.png
 authors:
     - pulumi-content-team
@@ -15,7 +15,7 @@ tags:
 category: general
 faq_schema: true
 howto_schema: true
-itemlist_name: "AI Agents for Infrastructure Management"
+itemlist_name: "AI Agents for Infrastructure, DevOps, and SRE"
 itemlist:
     - name: "Pulumi Neo"
       url: "https://www.pulumi.com/product/neo/"
@@ -26,6 +26,10 @@ itemlist:
     - name: "Upbound and Crossplane control planes"
       url: "https://upbound.io/"
     - name: "Azure SRE Agent"
+    - name: "AWS DevOps Agent"
+    - name: "Datadog Bits Investigation"
+    - name: "HolmesGPT"
+    - name: "Botkube"
     - name: "Traversal"
     - name: "Cleric"
     - name: "Gemini Cloud Assist"
@@ -35,24 +39,24 @@ itemlist:
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        "AI agent for infrastructure" now means at least four different things: change agents, incident agents, hyperscaler assistants, and access layers.
+        "AI agents for DevOps" now covers at least five different jobs: ChatOps, incident response, IaC-native change, code generation, and access layers.
 
-        We split the category properly and built a 6-criterion rubric for evaluating any of them.
+        We sorted the field and built a 6-criterion rubric for evaluating any of them.
     linkedin: |
-        Every infrastructure vendor now has an "AI agent." Few of them do the same job.
+        Every DevOps and platform vendor now ships an "AI agent." Few of them do the same job.
 
-        Some plan and apply changes (Pulumi Neo, env zero's Agent CLI, Spacelift Intelligence). Some respond to incidents after something breaks (Azure SRE Agent, Traversal, Cleric). Some are hyperscaler assistants bolted onto a console. And some are access layers, not agents themselves, that let any agent you already use reach your infrastructure safely (HashiCorp's Terraform and Vault MCP servers).
+        Some live in chat and answer questions about your clusters (Botkube). Some investigate incidents after something breaks (AWS DevOps Agent, Datadog Bits Investigation, HolmesGPT, Azure SRE Agent). Some plan and apply infrastructure changes as reviewable code (Pulumi Neo, env zero's Agent CLI, Spacelift Intelligence). Some write code but never see your live state, and some are MCP access layers that let any agent reach your infrastructure safely.
 
-        Roundups that lump these together miss the question that actually matters: what does the agent operate on, does it preview before it acts, does policy run in the pipeline or just the prompt, and whose identity is it using?
+        The questions that decide a pilot are the same for all of them: what does the agent operate on, does it preview before it acts, does policy run in the pipeline or just the prompt, and whose identity is it using?
 
-        We built a 6-criterion rubric, sorted the current field into three real categories, and gave every vendor a fair, sourced treatment, including where each one is a better fit than Pulumi.
+        We sorted the current field into categories, built a 6-criterion rubric, and gave every vendor a fair, sourced treatment, including where each one is a better fit than Pulumi.
     bluesky: |
-        Every infra vendor has an "AI agent" this year, but they're not doing the same job.
+        "AI agents for DevOps" covers five different jobs now: ChatOps, incident response, IaC-native change, code generation, and access layers.
 
-        We split the category into change agents, incident agents, and access layers, and built a rubric for evaluating any of them.
+        We sorted the field and built a rubric for evaluating any of them.
 ---
 
-An AI agent for infrastructure management is software that uses an LLM to read your live cloud or Kubernetes state, propose or make changes, and act inside guardrails a human defines, rather than a chat assistant that only answers questions or a code generator that only writes files. In 2026 that category splits into three distinct jobs: agents that plan and apply changes, agents that respond to incidents, and access layers that let any agent reach your infrastructure safely. Confusing the three is why most comparisons in this space read the same and help nobody decide.
+An AI agent for DevOps and infrastructure is software that uses an LLM to read your live cloud, Kubernetes, or observability state, propose or take action, and work inside guardrails a human defines. In 2026 the category splits into five jobs: ChatOps agents that answer questions and run commands from chat, autonomous remediation agents (often called AI SRE agents) that investigate incidents, IaC-native agents that plan and apply infrastructure changes as reviewable code, code-generation agents that write the files, and access layers (MCP servers) that let any agent reach your systems. Knowing which job you are hiring for is what makes a comparison useful, and most roundups skip it.
 
 <!--more-->
 
@@ -69,13 +73,13 @@ An AI agent for infrastructure management is software that uses an LLM to read y
 | [Gemini Cloud Assist](#gemini-cloud-assist) | Hyperscaler assistant | Google Cloud resources and Terraform configs | Google Cloud shops wanting an assistant inside `gcloud` and the console |
 | [HashiCorp Terraform and Vault MCP servers](#hashicorp-terraform-and-vault-mcp-servers) | Access layer | Terraform Registry data and Vault secrets, exposed to any MCP client | Teams standardizing agent access to infrastructure context and secrets |
 
-## Defining an AI agent for infrastructure management
+## What is an AI agent for infrastructure?
 
 The defining trait is a loop: the agent reads real state (not just a prompt), proposes or takes an action, and that action is checked against policy and human judgment before or immediately after it lands. That loop is what separates an infrastructure agent from two adjacent categories it gets confused with constantly.
 
-A **general-purpose coding assistant** (GitHub Copilot, Cursor, Claude Code) can write infrastructure code, but it has no built-in connection to your live cloud state, your policy engine, or your approval workflow. It is a text generator that happens to be good at YAML and HCL.
+A **general-purpose coding assistant** (GitHub Copilot, Cursor, Claude Code) can write infrastructure code, but it has no built-in connection to your live cloud state, your policy engine, or your approval workflow. Without that connection it generates text, and it happens to be good at YAML and HCL.
 
-An **MCP server** (Model Context Protocol server) is not an agent at all. It is a data and action interface: a standardized way for any agent to query a system's context (a Terraform Registry, a Vault instance, a cloud provider) and, in some implementations, take bounded actions. MCP servers are what make agents useful against real infrastructure, but the server itself does no reasoning. HashiCorp's Terraform and Vault MCP servers and the Pulumi MCP server are access layers other agents plug into, covered below.
+An **MCP server** (Model Context Protocol server) works as a data and action interface: a standardized way for any agent to query a system's context (a Terraform Registry, a Vault instance, a cloud provider) and, in some implementations, take bounded actions. MCP servers are what make agents useful against real infrastructure, but the server itself does no reasoning. HashiCorp's Terraform and Vault MCP servers and the Pulumi MCP server are access layers other agents plug into, covered below.
 
 ## A rubric for evaluating an AI infrastructure agent
 
@@ -90,26 +94,37 @@ Six questions cut through vendor marketing faster than any feature list.
 | 5. Where the work lands | Does the change land as code you own and can diff, review, and roll back, or as state that lives only inside the tool? |
 | 6. Reach | How many clouds, IaC engines, and languages does it actually cover today, not on a roadmap? |
 
-Criterion 3 is worth dwelling on, because it is where most "AI governance" claims fall apart. As Pulumi has argued in its own writing on [agent sprawl](/blog/agent-sprawl-iac-platform-is-the-answer/), "an agent running through Pulumi hits those gates whether it 'wants' to or not, because the gates live in the pipeline and not in the prompt." A policy that only works if the agent chooses to respect it is not a policy, it is a suggestion.
+Criterion 3 is worth dwelling on, because it is where most "AI governance" claims fall apart. As Pulumi has argued in its own writing on [agent sprawl](/blog/agent-sprawl-iac-platform-is-the-answer/), "an agent running through Pulumi hits those gates whether it 'wants' to or not, because the gates live in the pipeline and not in the prompt." A policy that depends on the agent choosing to respect it works as a suggestion.
 
-## The three kinds of infrastructure agents
+## What kinds of AI agents exist for DevOps, infrastructure, and SRE?
 
-Most roundups treat "AI agent for infrastructure" as one category. It isn't, and conflating the three below is the fastest way to pick the wrong tool.
+There are five kinds, and each answers a different question. The hyperscaler assistants from Google Cloud and Microsoft usually fit inside the first two rows, embedded in a console or CLI.
 
-| Kind | Job | Trigger | Examples |
-|------|-----|---------|----------|
-| Change agents | Plan and apply infrastructure changes | A request, a schedule, or a detected drift | Pulumi Neo, env zero Agent CLI, Spacelift Intelligence, Upbound's Crossplane tooling |
-| Incident (AI-SRE) agents | Diagnose and help resolve production incidents | An alert or an outage | Azure SRE Agent, Traversal, Cleric |
-| Hyperscaler assistants | Answer questions and assist inside a cloud console or CLI | A user's question | Gemini Cloud Assist |
-| Access layers | Expose infrastructure context and actions to any agent | A tool call from an external agent | HashiCorp's Terraform and Vault MCP servers, Pulumi's MCP server |
+| Kind | Job | Trigger | Preview before action | Where the work lands | Examples |
+|------|-----|---------|-----------------------|----------------------|----------|
+| ChatOps agents | Answer questions and run bounded commands from Slack or Teams | A person's message or an alert in chat | Varies by tool | A chat thread | Botkube, Gemini Cloud Assist |
+| Autonomous remediation (AI SRE) agents | Investigate incidents, find root cause, suggest or take mitigation | An alert or an outage | Mostly diagnostic | Incident findings and tickets | AWS DevOps Agent, Datadog Bits Investigation, HolmesGPT, Azure SRE Agent, Traversal, Cleric |
+| IaC-native agents | Plan and apply infrastructure changes | A request, a schedule, or detected drift | Yes, a plan or preview | Code and a pull request | Pulumi Neo, env zero Agent CLI, Spacelift Intelligence, Upbound |
+| Code-generation agents | Write and edit infrastructure code | A developer's prompt | Only what you wire up yourself | Files in your editor or repo | Claude Code, GitHub Copilot, Cursor |
+| Access layers | Expose infrastructure context and actions to any agent | A tool call from an external agent | Plan-only modes in some servers | Whatever the calling agent proposes | HashiCorp Terraform and Vault MCP servers, Pulumi MCP server |
 
-## Agents that plan and apply infrastructure changes
+## Which AI agent fits DevOps, SRE, and platform engineering teams?
+
+Match the agent to the role's daily job:
+
+- **DevOps engineers** who own pipelines and environments get the most from IaC-native agents and code-generation agents, because the output is code they already review.
+- **SRE teams** carrying a pager get the most from autonomous remediation agents, which shorten the path from alert to root cause.
+- **Platform engineering teams** building an internal developer platform usually want an agent layer over their golden paths: policy gates, scoped identities, and reusable components that every agent, from any vendor, has to pass through. That favors IaC-native agents and access layers, since both plug into the controls a platform team already runs.
+
+## What makes an AI agent IaC-native?
 
 ### Pulumi Neo
 
 [Pulumi Neo](https://www.pulumi.com/docs/ai/neo/) is Pulumi's own infrastructure agent, powered by Anthropic's Claude models accessed via Amazon Bedrock. It reads your live stack state to answer questions, and when it proposes a change, [it hands that back as a pull request](https://www.pulumi.com/blog/pulumi-neo/) describing the problem, the resources affected, and a preview summary, rather than applying anything silently. Every proposal runs through `pulumi preview` first, surfacing policy violations and diffs before a human approves.
 
 Neo operates within the requesting user's own RBAC entitlements: "Neo never has more access than you do, only less," in Pulumi's words, which rules out the privilege-escalation risk that worries security teams about agentic tooling generally. It also [migrates existing Terraform, CDK, CloudFormation, and ARM resources](https://www.pulumi.com/blog/neo-migration/) into Pulumi incrementally, and runs scheduled work like provider-freshness checks and encryption or backup audits.
+
+An IaC-native agent works through your infrastructure as code, so every change arrives as a diff you can review, test, and roll back. Neo is Pulumi's version of that idea, and you can see the full capability set on the [Pulumi Neo product page](/product/neo/).
 
 Neo is included by default across Pulumi Cloud editions and metered by usage. Two capabilities are edition-gated: Slack integration requires the Team edition or higher, and scheduled tasks require the Enterprise edition or higher (see [Pulumi's pricing page](https://www.pulumi.com/pricing/) for current token rates and edition details). Neo's [code review feature](https://www.pulumi.com/blog/neo-code-reviews/) is free during its public preview.
 
@@ -147,9 +162,29 @@ The strength worth taking seriously here is that Upbound builds on [Crossplane](
 
 **Where it isn't the best fit:** teams without Kubernetes expertise will find the underlying model, Crossplane custom resources on the Kubernetes API, a steep prerequisite regardless of the AI layer on top.
 
-## Agents that respond to incidents
+## What do autonomous remediation (AI SRE) agents do?
 
-Change agents plan and apply infrastructure. A separate, growing category responds after something has already broken.
+Change agents plan and apply infrastructure. A separate, growing category responds after something has already broken: it reads alerts, logs, traces, and recent changes, forms hypotheses, and reports a likely root cause with suggested mitigation steps. Most of these agents are diagnostic first, so evaluate how much action they are allowed to take.
+
+### AWS DevOps Agent
+
+[AWS DevOps Agent](https://aws.amazon.com/devops-agent/) is Amazon's frontier agent for operations. AWS describes it as autonomously triaging incidents around the clock, providing root cause analysis and mitigation steps, and routing findings through Slack, ServiceNow, and PagerDuty. It also connects to Dynatrace, Datadog, New Relic, Splunk, GitHub, and GitLab, and AWS positions it across AWS, multicloud, and on-prem environments. AWS has since added release-management capabilities that assess code changes before production, which AWS lists as a preview.
+
+**Best for:** AWS-centered teams that want incident triage tied to the observability and ticketing tools they already run.
+
+### Datadog Bits Investigation
+
+Datadog's [Bits Investigation](https://docs.datadoghq.com/bits_ai/bits_ai_sre/) (launched as Bits AI SRE and since renamed) is described in Datadog's documentation as an autonomous agent that forms hypotheses, gathers telemetry, and uses data-based reasoning to help on-call engineers pinpoint root causes.
+
+**Best for:** teams already running Datadog for observability that want the investigation to start where the telemetry already lives.
+
+### HolmesGPT
+
+[HolmesGPT](https://github.com/HolmesGPT/holmesgpt) is an open source SRE agent that is a CNCF Sandbox project under the Apache 2.0 license. Its README states that it has read-only access by design and respects RBAC permissions, which makes it a low-risk first experiment for Kubernetes troubleshooting.
+
+**Best for:** platform teams that want an open source, read-only investigator they can inspect and self-host.
+
+
 
 ### Azure SRE Agent
 
@@ -163,7 +198,19 @@ Change agents plan and apply infrastructure. A separate, growing category respon
 
 **Best for:** cloud-agnostic, on-call-heavy teams evaluating a dedicated incident-response layer independent of any single cloud provider.
 
-## Hyperscaler assistants
+## What are ChatOps agents for AWS and Kubernetes?
+
+ChatOps agents live where the team already talks. They answer questions about a cluster or account in plain language, surface alerts with context, and in some products run bounded commands from the chat thread. The work stays in the conversation unless something else turns it into code.
+
+### Botkube
+
+[Botkube](https://botkube.io/) delivers Kubernetes alerts to chat platforms and adds an AI assistant that, per its site, uses your tools and documentation to find root causes, explain issues in natural language, and generate commands for complex problems. It is aimed at letting developers troubleshoot without CLI access or a ticket to the DevOps team.
+
+**Best for:** Kubernetes teams that want incident context and first-pass troubleshooting inside Slack or Teams.
+
+### Hyperscaler assistants
+
+Cloud providers embed similar assistants in their own consoles and CLIs, which makes them the lowest-friction option for single-cloud shops.
 
 ### Gemini Cloud Assist
 
@@ -183,7 +230,7 @@ Alongside it, HashiCorp added [native AI agent support in Vault](https://www.has
 
 **Best for:** organizations that already run Terraform and Vault and want to extend agent access to both without giving any agent standing, unscoped credentials.
 
-**Where it isn't the best fit:** if you're looking for an agent that plans and applies changes on its own initiative, this is infrastructure for other agents to build on, not a change agent itself.
+**Where it isn't the best fit:** if you're looking for an agent that plans and applies changes on its own initiative, the server supplies infrastructure for other agents to build on and leaves the change-making to them.
 
 ### General-purpose coding agents
 
@@ -200,11 +247,15 @@ Claude Code, Cursor, GitHub Copilot, and similar tools can write and edit infras
 | Azure SRE Agent | Azure telemetry and logs | N/A (diagnostic, not change) | N/A | Azure RBAC | Incident findings, not infrastructure changes |
 | Traversal / Cleric | Alerts, logs, traces | N/A (diagnostic, not change) | N/A | Vendor-managed integration | Incident findings, not infrastructure changes |
 | Gemini Cloud Assist | GCP resources, Terraform | Preview-stage feature | Unspecified as announced | Google Cloud IAM | Console and CLI guidance |
+| AWS DevOps Agent | Alerts, telemetry, code changes across AWS and other clouds | Diagnostic, with mitigation steps suggested | Not described by AWS | AWS integrations and roles | Findings and mitigation steps routed to Slack, ServiceNow, PagerDuty |
+| Datadog Bits Investigation | Datadog telemetry | Diagnostic | N/A | Datadog access controls | Investigation findings |
+| HolmesGPT | Kubernetes and observability data | Read-only by design | N/A | Respects RBAC | Root-cause answers in chat or CLI |
+| Botkube | Kubernetes clusters and chat | Suggests commands for review | Depends on configuration | Chat and cluster permissions | A chat thread |
 | Terraform / Vault MCP servers | Terraform Registry data, Vault secrets | Plan-only mode available | Existing Sentinel/OPA and Vault policy | Delegated, agent-scoped identities | Whatever the calling agent proposes |
 
 ## How to evaluate an infrastructure agent in two weeks
 
-1. **Name the job first.** Decide whether you need a change agent, an incident agent, or an access layer before looking at any vendor. Most disappointing pilots start from "we need an AI agent" instead of a specific job.
+1. **Name the job first.** Decide whether you need a ChatOps agent, an incident (AI SRE) agent, an IaC-native change agent, a code-generation agent, or an access layer before looking at any vendor. Most disappointing pilots start from "we need an AI agent" instead of a specific job.
 2. **Pick one real, low-stakes workflow.** A drift check, a routine provider upgrade, or a single Terraform module refresh works better than a broad, undefined mandate.
 3. **Confirm the identity model in writing.** Ask the vendor directly whether the agent inherits a user's own permissions or holds separate standing credentials, and get the answer from documentation, not a sales call.
 4. **Run it against a non-production environment first.** Watch what it proposes, not just whether it succeeds. A tool that proposes reasonable changes it can't yet execute safely is more trustworthy than one that executes anything without a preview step.
@@ -231,6 +282,18 @@ Adoption is accelerating faster than trust is catching up, which is exactly why 
 Read together, these numbers describe a category moving faster than most organizations' governance has caught up to, which is exactly the gap a preview step, a policy gate, and a scoped identity are built to close.
 
 ## Frequently asked questions
+
+### What are AI agents for DevOps?
+
+AI agents for DevOps are LLM-driven tools that read live infrastructure, pipeline, or observability state and then answer questions, investigate incidents, or propose changes inside guardrails a team defines. They fall into five groups: ChatOps agents, autonomous remediation agents, IaC-native change agents, code-generation agents, and MCP access layers.
+
+### What is an SRE AI agent?
+
+An SRE AI agent investigates production incidents by reading alerts, logs, traces, and recent changes, then reports a likely root cause and suggested mitigation. Examples include AWS DevOps Agent, Datadog Bits Investigation, HolmesGPT, Azure SRE Agent, Traversal, and Cleric. Most are diagnostic first, so check how much action each one may take.
+
+### What is a platform engineering AI agent?
+
+A platform engineering AI agent works through the controls a platform team already owns: templates, policy as code, scoped identities, and reusable components. It can create or change infrastructure on a developer's behalf while every action passes the same gates as a human's. IaC-native agents such as Pulumi Neo follow this model.
 
 ### Is an AI agent for infrastructure the same thing as an AI coding assistant?
 
