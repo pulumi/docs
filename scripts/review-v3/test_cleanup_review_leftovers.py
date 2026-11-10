@@ -89,6 +89,9 @@ def test_every_leftover_kind_is_planned():
 
 def test_stale_label_only_when_the_card_is_actually_current():
     gh = FakeGh([{"id": 3, "user": BOT, "body": card(head="e" * 40)}])
+    # The reviewed head is gone from the commit list (a rebase), and the diff
+    # it read differs from today's, so the card is genuinely stale.
+    gh.compare_files = lambda *_a: [{"filename": "x.md", "patch": "@@ -1 +1 @@\n+then"}]
     assert [a for a in cl.plan_pr(gh, 7) if a["kind"] == "stale-label"] == []
     gh = FakeGh([{"id": 3, "user": BOT, "body": card(open_row=True)}])
     (a,) = cl.plan_pr(gh, 7)

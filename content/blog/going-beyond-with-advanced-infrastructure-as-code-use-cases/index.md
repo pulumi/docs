@@ -15,7 +15,7 @@ category: best-practices
 
 *This is the third of a three-part series originally published on The New Stack. Read [Part 1](/blog/infrastructure-as-code-in-any-programming-language/) and [Part 2](/blog/walkthrough-of-adopting-infrastructure-as-code/).*
 
-Engineers who modernize their [infrastructure as code](/what-is/what-is-infrastructure-as-code/) with Pulumi get two classes of benefits:
+Engineers who modernize their [infrastructure as code](/topics/infrastructure-as-code/) with Pulumi get two classes of benefits:
 
 1. Infrastructure as Code to develop cloud infrastructure with code.
 2. Pulumi Cloud, which tames cloud infrastructure management at [scale](https://roadmap.sh/videos/scaling-the-unscalable).

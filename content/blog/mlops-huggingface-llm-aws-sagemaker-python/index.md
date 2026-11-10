@@ -29,8 +29,8 @@ category: tutorials
 [Pulumi Template]:/blog/how-to-create-and-share-a-pulumi-template
 [Pulumi Templates]:/blog/how-to-create-and-share-a-pulumi-template
 [Pulumi Python]:/docs/reference/pkg/python/pulumi/
-[Infrastructure as Code]:https://www.pulumi.com/what-is/what-is-infrastructure-as-code
-[IaC]:https://www.pulumi.com/what-is/what-is-infrastructure-as-code
+[Infrastructure as Code]:https://www.pulumi.com/topics/infrastructure-as-code/
+[IaC]:https://www.pulumi.com/topics/infrastructure-as-code/
 [IAM Roles]:/registry/packages/aws/api-docs/iam/role
 [Amazon SageMaker Model Endpoint]:/registry/packages/aws/api-docs/SageMaker/model
 [CloudWatch alarms]:/registry/packages/aws/api-docs/cloudwatch/metricalarm

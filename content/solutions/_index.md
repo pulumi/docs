@@ -112,7 +112,7 @@ personas:
               icon: code
               icon_color: violet
               description: |
-                Define [infrastructure as code](/what-is/what-is-infrastructure-as-code/) using
+                Define [infrastructure as code](/topics/infrastructure-as-code/) using
                 familiar languages and IDEs: JavaScript, TypeScript, Python, Go, .NET, Java, and YAML.
             - title: Cloud programming model
               icon: program

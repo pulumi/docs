@@ -98,8 +98,8 @@
       "lastmod": "2026-05-13"
     },
     "Organizations": {
-      "hash": "932bb3f755d921509313d5d9a02c532eadb8bc5f5d76d340ca29057054adc1a5",
-      "lastmod": "2026-10-31"
+      "hash": "79dbf93f751b1c5d9de6746f4923f29e6db10a6fa5199baceba0b7f8c8cbfa54",
+      "lastmod": "2026-11-10"
     },
     "PolicyExceptions": {
       "hash": "6f472764eb5117a3ead9729d56ed49b963d61844c318c203efc894813c9f43f8"
@@ -140,8 +140,8 @@
       "lastmod": "2026-11-04"
     },
     "Services": {
-      "hash": "cb4ff5915227992d241173863eaa91fc2b039819c86ef3fdb63228630667567d",
-      "lastmod": "2026-10-03"
+      "hash": "747d08eb5afb2170843b15cda16c5acec85a28f1055876b53bbd84b3755c3f1f",
+      "lastmod": "2026-11-10"
     },
     "StackConfig": {
       "hash": "1e0b0e5f9a0456ac2163ad91b42ef5f45e1cad5f1bae79d79bb032d034da5841",
@@ -196,8 +196,8 @@
       "lastmod": "2026-08-21"
     },
     "AccessToken": {
-      "hash": "4b905c66739c5fb01c6706024b3c8f1cea7d43601e8b71a21aedd9185683b587",
-      "lastmod": "2026-09-15"
+      "hash": "edec844aa663304e49235223dea7c0459e12c2432d45dd672c5d6195bee3ef4c",
+      "lastmod": "2026-11-10"
     },
     "AccessTokenRole": {
       "hash": "b95a2918bddd9da688a95ff95cc16003bfd24f25cbed37c53893b4274a48a4c8",
@@ -223,7 +223,8 @@
       "lastmod": "2026-11-04"
     },
     "AddServiceItem": {
-      "hash": "0feb46c9fd63b1b3cfd01a02572c8dbf393457bf42c52a541693e76fcb7b6b6f"
+      "hash": "7ac80e3fe4d63b3f7eb06375fcd3c080a8d483da0b73c4a242c083f14fa94703",
+      "lastmod": "2026-11-10"
     },
     "AddServiceItemsRequest": {
       "hash": "f4740aab4f45f82eb520cf19e961daa8d0c6e686ee442f6aa596398ef8bfccd3",
@@ -844,8 +845,8 @@
       "hash": "51d5cb48099a20d8cb48bba6834d4c283ec5e0a7046b2f43028eebdba4bb79c1"
     },
     "ApprovalRuleEligibilityInputPermission": {
-      "hash": "9675c3f56af3b6dab66ba734f6b7bb53f11625d5c4ff076c49b3e43e87581bc1",
-      "lastmod": "2026-11-03"
+      "hash": "2dd55f87f3ec67e7206e3664e01a27d14f37983f9a3e70e94ebd532dc2361de6",
+      "lastmod": "2026-11-10"
     },
     "ApprovalRuleEligibilityInputTeam": {
       "hash": "3a99b8c35c705ebc60692aa6a6350dad0986054db002df8a023cccbfc1a8f09f"
@@ -857,8 +858,8 @@
       "hash": "468c478a2ca53b58914f68518c366eacdd3018352ce2a14780575a0e50ea032c"
     },
     "ApprovalRuleEligibilityOutputPermission": {
-      "hash": "887340671d5f43c3aafa35b82b4a397652e1ee96e45b543c4631dcbf19d416cd",
-      "lastmod": "2026-11-03"
+      "hash": "61b91ebe67e26619488aedbc141a77e8c0f66aab76369e64e8700207bf38f5ac",
+      "lastmod": "2026-11-10"
     },
     "ApprovalRuleEligibilityOutputTeam": {
       "hash": "92d53d1a479fe3d756ea91d6c33c65cc651c80dcdef75cb394ea724e7d14c47d"
@@ -1310,8 +1311,8 @@
       "lastmod": "2026-09-15"
     },
     "CreateServiceRequest": {
-      "hash": "a63ed8fc37e8cac2b1ea09e0945bcd31c5cc5f4c813b79a9fd0593a7975a767f",
-      "lastmod": "2026-11-07"
+      "hash": "c7a93f8da96739c219717c4339e70dcf4f55d6c0cd60961a0bd8eaf0e410fb66",
+      "lastmod": "2026-11-10"
     },
     "CreateTeamAccessTokenRequest": {
       "hash": "a4b4ba86e8110b29602070147ad1eefae3d615aa22912c7bff3311d42ce564ed",
@@ -2443,8 +2444,8 @@
       "lastmod": "2026-10-29"
     },
     "OrganizationFeatures": {
-      "hash": "b073e42f59d74aa0ba278cd3febcfad88ffb64ea48f3a64c9551d37943b39a10",
-      "lastmod": "2026-11-04"
+      "hash": "aa740557627aa2fa689f33664f52a651b89e08fe1596d588095d58b987bd5631",
+      "lastmod": "2026-11-10"
     },
     "OrganizationMember": {
       "hash": "63580abab554fb9a2782c1471b6ebafc55c5d78f3cb323452095db640a968fef",
@@ -2518,8 +2519,8 @@
       "hash": "4dbf036c07c514c178419ce7739f5acf2758514705832b8b20951a43ab374f6a"
     },
     "PermissionDescriptorAllow": {
-      "hash": "e89004de2e14669ad64a1ec5ab5bf43e58c20a983f522e564ae7c40da6a54486",
-      "lastmod": "2026-11-03"
+      "hash": "0a8370d76a1f562c027208b3633bd3860648e51957c17af78de8609726d6aa1c",
+      "lastmod": "2026-11-10"
     },
     "PermissionDescriptorBase": {
       "hash": "80bc54161c9f512ae59133c60945934b5788ad5fae3be03eafd9fed2147dd7ee",
@@ -2751,8 +2752,8 @@
       "lastmod": "2026-09-15"
     },
     "RbacScope": {
-      "hash": "e3cb14fb9937f682d6ea6f9634379d30e6f865768b5dc59e692b715a95ecfdb4",
-      "lastmod": "2026-11-03"
+      "hash": "29eea143b65efe72d6cd060abea3ba3a90321673947c0de1000430780aec579e",
+      "lastmod": "2026-11-10"
     },
     "RbacScopeGroup": {
       "hash": "dd2e5e14bcfb4a196bffada47022efb60dc554e1c1c07ba6746e59ab2d3f9f92",
@@ -2919,20 +2920,20 @@
       "lastmod": "2026-09-15"
     },
     "ServiceItem": {
-      "hash": "7314e5e4016072c7300094e0386cdb84f21cbd93ebe4ea646080d9d2a9ab161f",
-      "lastmod": "2026-09-15"
+      "hash": "037b04a0abef8dd69f5d63d4d520b60ecfe513a2868dd1e99fddd06eaa265434",
+      "lastmod": "2026-11-10"
     },
     "ServiceItemUpdate": {
       "hash": "7cc9eb58e5cd0e6d4c72006e61aba17527b6e778e072244fff382206fad73f9d",
       "lastmod": "2026-09-15"
     },
     "ServiceMember": {
-      "hash": "9e56b19ae336d4d9052bb8106c3855db6feb40e2623fd6898897d5a9a978a736",
-      "lastmod": "2026-09-15"
+      "hash": "520e484b5faa2cbe78c5c744700f3db66ada85406bcdd2cfe53b8c0b7d9afec3",
+      "lastmod": "2026-11-10"
     },
     "ServiceProperty": {
-      "hash": "4e726e8eee0e1c0623edda24607d0cf6fc5609429dfbc5a8061d4b0bf04a41a8",
-      "lastmod": "2026-09-15"
+      "hash": "e3d3a29077de30b7b390904d5fe4d0261c668c886c5a99baab04bfe32749246b",
+      "lastmod": "2026-11-10"
     },
     "SetInsightAccountTagsRequest": {
       "hash": "70be3d4bdd295b65be78f73f0ffbf52c7e90f47a7e16f358ab8c4adf6f427f46"
@@ -3273,8 +3274,8 @@
       "lastmod": "2026-10-29"
     },
     "UpdateOrganizationMemberRequest": {
-      "hash": "3fc9e9b9b7b1b014ec0dd18de9a56864da23a78c1ebc892c2da4211c93cab65d",
-      "lastmod": "2026-11-04"
+      "hash": "2bea8b7e684aed764e03a7e8cfa37771e81ec80ec85c1ef7f7596b9c60f8bf9a",
+      "lastmod": "2026-11-10"
     },
     "UpdateOrganizationRequest": {
       "hash": "8f904b6aad33392463e00d37264200ce5c7acd23ceb72feca176d6fa75be979a",
@@ -3351,8 +3352,8 @@
       "lastmod": "2026-09-15"
     },
     "UserInfo": {
-      "hash": "6fe1d22684d8c60ead18459abb862abe3a84dd2c36e6670f79450e5d70920999",
-      "lastmod": "2026-09-15"
+      "hash": "e094244ee8575cc3e093bee637ef5953752f3eb8df2a86a5d0b0cada14abda22",
+      "lastmod": "2026-11-10"
     },
     "UserPermission": {
       "hash": "58b07d4b3fd79a48b83c4bae2cff70f5c22cf5886e49ea2ff8a81ff77a0324bb",
