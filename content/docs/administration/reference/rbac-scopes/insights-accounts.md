@@ -19,7 +19,7 @@ no_edit_this_page: true
 ---
 
 These are the [scopes](/docs/administration/concepts/rbac/scopes/) you can grant on specific [cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/) or sets of cloud accounts.
-Creating, listing, and restoring cloud accounts are organization-level operations, so their scopes are in [Organization settings](/docs/administration/reference/rbac-scopes/org-settings/).
+Creating a cloud account is an organization-level operation, so its scope is in [Organization settings](/docs/administration/reference/rbac-scopes/org-settings/).
 Each scope lists the smallest [default permission set](/docs/administration/concepts/rbac/permission-sets/#default-permission-sets) that grants it.
 
 {{< rbac-scopes-updated >}}
