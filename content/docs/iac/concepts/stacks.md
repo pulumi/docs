@@ -1296,17 +1296,51 @@ program.
 
 ## Import and export a stack deployment
 
-A stack can be exported to see the raw data associated with the stack. This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of. The modified stack can then be imported to set the current state of the stack to the new values.
-
-{{% notes type="warning" %}}
-This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments. Importing an incorrect stack specification could lead to the orphaning of cloud resources or the inability to make future updates to the stack. Use care when using the import and export capabilities.
-{{% /notes %}}
+A stack's deployment is the state Pulumi keeps for it: every resource the stack manages, with its inputs, outputs, and dependencies. You can export the deployment to a JSON file with [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export/) and write a deployment back to the stack with [`pulumi stack import`](/docs/iac/cli/commands/pulumi_stack_import/).
 
 ```bash
 $ pulumi stack export --file stack.json
 
 $ pulumi stack import --file stack.json
 ```
+
+Common reasons to export a deployment include:
+
+- Taking a backup of the stack's state before you change it.
+- Inspecting the raw state when a resource doesn't match what you expect.
+- Correcting state after manual changes in the cloud provider that Pulumi isn't aware of, or after an update that failed partway through.
+
+{{% notes type="warning" %}}
+This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments. Importing an incorrect stack specification could lead to the orphaning of cloud resources or the inability to make future updates to the stack. Use care when using the import and export capabilities.
+{{% /notes %}}
+
+### Prefer targeted state commands
+
+Before you hand-edit an exported deployment, check whether a [`pulumi state`](/docs/iac/cli/commands/pulumi_state/) subcommand does what you need. These commands change one resource at a time and check that the result is valid, so they're less error-prone than editing the whole file:
+
+- [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/) clears the `protect` bit so a resource can be deleted.
+- [`pulumi state remove`](/docs/iac/cli/commands/pulumi_state_remove/) stops Pulumi from managing a resource without deleting it from the cloud provider.
+- [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair/) sorts out-of-order resources and removes references to resources that no longer exist.
+
+For a step-by-step procedure, including when to fall back to a hand edit, see [Editing state files](/docs/iac/operations/stack-management/editing-state-files/).
+
+### Export an earlier version
+
+By default, `pulumi stack export` exports the latest deployment. To export the deployment as it was after an earlier update, pass that update's version number with `--version`:
+
+```bash
+$ pulumi stack export --version 12 --file stack-v12.json
+```
+
+Importing an earlier deployment replaces the stack's state, not your cloud resources. After the import, run `pulumi refresh` so the state matches what actually exists in the cloud provider before you run `pulumi up`.
+
+### Secrets in exported deployments
+
+Secret values stay encrypted in the exported file by default. Passing `--show-secrets` writes them in plaintext, so treat that file as sensitive and don't commit it to source control.
+
+### Import checks
+
+`pulumi stack import` checks the deployment for errors before it writes it to the stack, and stops if it finds any. The `--force` flag skips those checks. Avoid it unless you understand why the check failed, because importing an invalid deployment can leave the stack unable to update.
 
 ## Destroy a stack
 
