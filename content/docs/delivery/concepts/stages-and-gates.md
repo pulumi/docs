@@ -35,20 +35,6 @@ Delivery doesn't detect cycles between stages. A run in a cycle waits until you 
 
 A gate is a rule in a stage's `when` property. The release can't enter the stage until the rule passes.
 
-### Manual gates
-
-`manual()` waits until someone continues the gate. It's available on every edition that includes Delivery. Use `description` to tell that person what to check first:
-
-```typescript
-const prod = new delivery.Stage("prod", {
-    pipeline,
-    from: [staging],
-    when: delivery.manual({ description: "Check the staging dashboards first." }),
-});
-```
-
-Continue a manual gate from the run page in the Pulumi Cloud console, or with the REST API. See [Continue a gate from another system](#continue-a-gate-from-another-system).
-
 ### Approval gates
 
 <!-- TODO(launch): Replace the next sentence with the pulumi-cloud shortcode for "delivery-approvals" once pulumi/marketing-web adds a hidden `delivery-approvals` feature (min_edition: pro). -->
@@ -70,6 +56,20 @@ Anyone eligible can approve, including the person who started the run or pushed 
 An approval gate shows the approver a preview of the stack updates the stage will make. The preview can be partial, and "Not available" doesn't mean "no changes".
 
 Use `approval()` when specific people must sign off or you need more than one approval. Otherwise, `manual()` is enough.
+
+### Manual gates
+
+`manual()` waits until someone continues the gate. It's available on every edition that includes Delivery. Use `description` to tell that person what to check first:
+
+```typescript
+const prod = new delivery.Stage("prod", {
+    pipeline,
+    from: [staging],
+    when: delivery.manual({ description: "Check the staging dashboards first." }),
+});
+```
+
+Continue a manual gate from the run page in the Pulumi Cloud console, or with the REST API. See [Continue a gate from another system](#continue-a-gate-from-another-system).
 
 ### Combine rules
 
