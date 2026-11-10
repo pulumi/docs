@@ -1306,9 +1306,9 @@ $ pulumi stack import --file stack.json
 
 Common reasons to export a deployment include:
 
-- Taking a backup of the stack's state before you change it.
-- Inspecting the raw state when a resource doesn't match what you expect.
-- Correcting state after manual changes in the cloud provider that Pulumi isn't aware of, or after an update that failed partway through.
+* Taking a backup of the stack's state before you change it.
+* Inspecting the raw state when a resource doesn't match what you expect.
+* Correcting state after manual changes in the cloud provider that Pulumi isn't aware of, or after an update that failed partway through.
 
 {{% notes type="warning" %}}
 This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments. Importing an incorrect stack specification could lead to the orphaning of cloud resources or the inability to make future updates to the stack. Use care when using the import and export capabilities.
@@ -1318,9 +1318,9 @@ This is a powerful capability that subverts the usual way that Pulumi manages re
 
 Before you hand-edit an exported deployment, check whether a [`pulumi state`](/docs/iac/cli/commands/pulumi_state/) subcommand does what you need. These commands change one resource at a time and check that the result is valid, so they're less error-prone than editing the whole file:
 
-- [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/) clears the `protect` bit so a resource can be deleted.
-- [`pulumi state remove`](/docs/iac/cli/commands/pulumi_state_remove/) stops Pulumi from managing a resource without deleting it from the cloud provider.
-- [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair/) sorts out-of-order resources and removes references to resources that no longer exist.
+* [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/) clears the `protect` bit so a resource can be deleted.
+* [`pulumi state remove`](/docs/iac/cli/commands/pulumi_state_remove/) stops Pulumi from managing a resource without deleting it from the cloud provider.
+* [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair/) sorts out-of-order resources and removes references to resources that no longer exist.
 
 For a step-by-step procedure, including when to fall back to a hand edit, see [Editing state files](/docs/iac/operations/stack-management/editing-state-files/).
 
