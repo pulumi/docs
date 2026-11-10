@@ -49,10 +49,10 @@ _spec.loader.exec_module(restamp)
 STATE_LABELS = ("review:in-progress", "review:outstanding-issues", "review:no-blockers",
                 "review:stale", "review:error")
 LEGACY_WRITERS = sentinel.LEGACY_PAGE_WRITERS
-FAILURE_RE = re.compile(r"errored|timed out|Couldn.t start|superseded")
+FAILURE_RE = sentinel.PROGRESS_FAILURE_RE
 # `<sub>Review v2 · updated 2026-09-28T19:14:42Z · head commit daddce5</sub>`
 COMPOSED_RE = re.compile(r"<sub>(?:Review )?v\d+ · updated (\d{4}-\d\d-\d\dT[\d:]+Z)")
-PROGRESS_MARKER = "<!-- CLAUDE_PROGRESS -->"
+PROGRESS_MARKER = sentinel.PROGRESS_MARKER
 
 
 def terminal_label(author_body: str) -> str | None:

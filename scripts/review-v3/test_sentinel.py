@@ -475,6 +475,30 @@ def test_substantive_no_review_g1_red():
     assert v.title == "Waiting on the automated review", v.title
     st = {x["context"]: x for x in v.to_json()["gate_statuses"]}
     assert st["Sentinel / review"]["description"] == "the automated review is running"
+    def progress(body, at, login=sentinel.BOT_LOGIN):
+        return {"id": hash(body + at) & 0xFFFF, "user": {"login": login, "type": "Bot"},
+                "body": f"{sentinel.PROGRESS_MARKER}\n{body}", "created_at": at, "updated_at": at}
+
+    def review_gate(*comments):
+        v = sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                                     comments=list(comments)), CONFIG)
+        st = {x["context"]: x for x in v.to_json()["gate_statuses"]}
+        return _gate(v, "review"), v.title, st["Sentinel / review"]["description"]
+
+    errored = progress("🤖 Review errored. Flip to draft and back to ready…", "2026-11-05T20:19:06Z")
+    g, title, desc = review_gate(errored)
+    assert g.status == "red" and "/new-review" in g.message
+    assert desc == "the automated review errored: comment /new-review", desc
+    assert title == "Waiting on a current review (/new-review)", title
+    g, title, desc = review_gate(progress("🤖 Review timed out — this PR is larger…", "2026-11-05T20:19:06Z"))
+    assert desc == "the automated review timed out", desc
+    assert "a review by hand" in title, title
+    # A retry's fresh spinner is the run in flight, whatever failed before it.
+    _, _, desc = review_gate(errored, progress("⏳ Reviewing…", "2026-11-10T20:54:36Z"))
+    assert desc == "the automated review is running", desc
+    # Only the bot's notices count.
+    _, _, desc = review_gate(progress("🤖 Review errored.", "2026-11-10T20:00:00Z", login="someone"))
+    assert desc == "the automated review is running", desc
     # A stale card is different: the review won't rerun by itself.
     stale = author_card([], state=_state_with([]), head="b" * 40)
     g1s = _gate(sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_substantive()],

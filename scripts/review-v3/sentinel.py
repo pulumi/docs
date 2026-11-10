@@ -171,6 +171,10 @@ STATUS_MARKER = "<!-- SENTINEL_STATUS -->"
 # legacy pages, its own status comment — must come from the bot that writes
 # them. See `_find_comment` for what a missing provenance check cost.
 BOT_LOGIN = "github-actions[bot]"
+# The review lane's spinner, which its finalize step either deletes or
+# edits into a failure notice ("Review errored", "Review timed out", ...).
+PROGRESS_MARKER = "<!-- CLAUDE_PROGRESS -->"
+PROGRESS_FAILURE_RE = re.compile(r"errored|timed out|Couldn.t start|superseded")
 STAGING_STATUS_CONTEXT = "staging/pulumi-test-io"
 # Identities whose `staging/pulumi-test-io` status the Sentinel will take as
 # evidence. Anyone with push access can write a commit status, so an
@@ -234,6 +238,8 @@ def _waiting_on(g: Gate, n_blocking: int) -> str:
             return "a diff to review"
         if "hasn't posted yet" in g.message:
             return "the automated review"
+        if "timed out before it posted" in g.message:
+            return "a review by hand (the automated one timed out)"
         return f"a current review{cmd}"
     if gate == "findings":
         n = n_blocking or "open"
@@ -562,6 +568,25 @@ class Verdict:
 
 
 # ---- Helpers ------------------------------------------------------------
+
+
+def _review_failure(comments: list[dict]) -> str | None:
+    """"errored" or "timed out" when the review lane's latest attempt failed.
+
+    Only the newest progress comment counts: a retry posts a fresh spinner,
+    and that run is the one in flight. The `review:error` label can't answer
+    this, since a run that dies before finalize never sets it.
+    """
+    progress = [c for c in comments
+                if (c.get("user") or {}).get("login") == BOT_LOGIN
+                and (c.get("body") or "").startswith(PROGRESS_MARKER)]
+    if not progress:
+        return None
+    latest = max(progress, key=lambda c: c.get("updated_at") or c.get("created_at") or "")
+    m = PROGRESS_FAILURE_RE.search(latest.get("body") or "")
+    if not m or m.group(0) == "superseded":
+        return None
+    return "timed out" if m.group(0) == "timed out" else "errored"
 
 
 def _find_comment(comments: list[dict], marker: str) -> dict | None:
@@ -1347,6 +1372,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # for a PR that never got a review: a card or legacy comment at any head
     # keeps it on the review track.
     never_reviewed = author_card is None and legacy is None
+    review_failure = _review_failure(comments) if never_reviewed else None
     skip_label = next((lbl for lbl in (TRIVIAL_LABEL, FRONTMATTER_ONLY_LABEL) if lbl in labels), None)
     triage_prose = _find_comment(comments, TRIAGE_PROSE_MARKER) if skip_label else None
     skipped_bot = _review_lane_skipped_bot(pr)
@@ -1432,6 +1458,21 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         ))
         skip_note = (f"_Automation PR: the review lane does not review `{skipped_bot}` PRs "
                      "from this branch, so the approving reviewer's review is the review._")
+    elif review_failure == "timed out":
+        gates.append(Gate(
+            "review", "red",
+            "The automated review timed out before it posted: this PR is larger than "
+            "it can finish, and a retry will likely time out again. Split the PR, or "
+            "ask a maintainer to review it by hand and add `review:oversized`.",
+            short="the automated review timed out",
+        ))
+    elif review_failure == "errored":
+        gates.append(Gate(
+            "review", "red",
+            "The automated review errored before it posted. Comment `/new-review` "
+            "to retry.",
+            short="the automated review errored: comment /new-review",
+        ))
     elif never_reviewed:
         # The first review is usually still running: the Sentinel posts on
         # open, minutes before the card. Telling the author to run a command
