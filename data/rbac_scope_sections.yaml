@@ -1,0 +1,163 @@
+# Sections for the Pulumi Cloud RBAC scope reference
+# (content/docs/administration/reference/rbac-scopes/).
+#
+# The scope list itself is NOT maintained here. It is fetched nightly from
+# GET /api/orgs/{org}/roles/scopes by scripts/fetch-rbac-scopes.sh and written
+# to data/rbac_scopes.json. The API groups scopes by entity type and by group,
+# but its group names don't all suit the docs (some use retired product names,
+# and "SSO" mixes SAML and SCIM), so this file decides which H2 section of
+# which page each scope lands in.
+#
+# ---------------------------------------------------------------------------
+# STRUCTURE
+# ---------------------------------------------------------------------------
+#
+# entities:     one entry per API entity type, in the order the permission set
+#               tables render. Each one is a reference page.
+#   id:         the API's entity type key (`stack`, `environment`, ...).
+#   sections:   the H2 sections on that page. ORDER IS THE RENDER ORDER.
+#     name:     the heading text, in sentence case.
+#     match:    which scopes the section takes (see MATCHING).
+#
+# roles:        the built-in roles, by `defaultIdentifier`, in the order the
+#               "Granted by default roles" lines list them. The fetch fails if
+#               the API returns a built-in role that isn't listed here.
+#
+# permission_sets:
+#               the built-in permission sets, by `defaultIdentifier`, in render
+#               order. Each table lists a set as "<previous set>, + <additions>"
+#               when it contains the set listed before it. The fetch fails if
+#               the API returns a built-in set that isn't listed here.
+#
+# replacements: text substitutions applied to every description the API
+#               returns. They exist only because the API still says "Insights",
+#               a retired product name (pulumi/pulumi-service#52195). Delete
+#               them once the API stops returning it.
+#
+# ---------------------------------------------------------------------------
+# MATCHING
+# ---------------------------------------------------------------------------
+#
+# Within an entity, every scope is assigned to exactly one section:
+#
+#   match.scopes    exact scope names. Always win.
+#   match.prefixes  scope name prefixes. The longest matching prefix wins.
+#   match.groups    API group names. Used when no exact or prefix rule matches.
+#
+# A scope that matches no rule fails scripts/fetch-rbac-scopes.sh, which fails
+# the nightly workflow and posts to #docs-ops. Add a rule here and rerun. Don't
+# add a catch-all section: a scope filed under "Other" is undocumented in
+# practice.
+
+entities:
+  - id: stack
+    sections:
+      - name: Stacks
+        match: { groups: [Stacks] }
+      - name: Stack deployments
+        match: { groups: [Stack deployments] }
+      - name: Stack deployment schedules
+        match: { groups: [Stack deployment schedules] }
+      - name: Stack tags
+        match: { groups: [Stack tags] }
+      - name: Stack webhooks
+        match: { groups: [Stack webhooks] }
+
+  - id: environment
+    sections:
+      - name: Environments
+        match: { groups: [Environments] }
+      - name: Environment secrets rotation
+        match: { groups: [Environment secrets rotation] }
+      - name: Environment schedules
+        match: { groups: [Environment schedules] }
+      - name: Environment tags
+        match: { groups: [Environment tags] }
+      - name: Environment versions
+        match: { groups: [Environment versions] }
+      - name: Environment webhooks
+        match: { groups: [Environment webhooks] }
+      - name: Environment change requests (approvals)
+        match: { groups: [Approvals] }
+
+  - id: insights-account
+    sections:
+      - name: Cloud accounts
+        match: { groups: [Accounts] }
+      - name: Cloud account scans
+        match: { groups: [Scans] }
+
+  - id: global
+    sections:
+      - name: Agent pools
+        match: { groups: [Agent pools] }
+      - name: Audit logs
+        match: { groups: [Audit logs] }
+      - name: Change requests (approvals)
+        match: { groups: [Approvals] }
+      - name: Cloud accounts
+        match: { groups: [Insights account management] }
+      - name: Deployments
+        match: { groups: [Deployments] }
+      - name: Environments
+        match: { groups: [Environment management] }
+      - name: Membership
+        match: { groups: [Membership] }
+      - name: Neo
+        match: { groups: [Neo, Copilot] }
+      - name: OIDC
+        match: { groups: [OIDC] }
+      - name: Organization
+        match: { groups: [Organization], scopes: ["organization:transfer_stacks"] }
+      - name: Organization access tokens
+        match: { groups: [Organization access tokens] }
+      - name: Organization webhooks
+        match: { groups: [Organization webhooks] }
+      - name: Policies
+        match: { groups: [Insights policy management] }
+      - name: Projects
+        match: { prefixes: ["project:"] }
+      - name: Resources
+        match: { groups: [Search] }
+      - name: Roles
+        match: { groups: [Roles] }
+      - name: SAML
+        match: { prefixes: ["saml:"] }
+      - name: SCIM
+        match: { prefixes: ["scim:"] }
+      - name: Stacks
+        match: { groups: [Stack management] }
+      - name: Tags
+        match: { scopes: ["tags:read"] }
+      - name: Teams
+        match: { groups: [Teams] }
+      - name: Templates
+        match: { groups: [Templates] }
+      - name: Template sources
+        match: { prefixes: ["templates_source:"] }
+
+roles:
+  - reader
+  - builder
+  - maintainer
+  - admin
+  - billing-manager
+
+permission_sets:
+  - stack-read
+  - stack-write
+  - stack-admin
+  - environment-read
+  - environment-open
+  - environment-write
+  - environment-admin
+  - insights-account-read
+  - insights-account-write
+  - insights-account-admin
+  - org-settings-read-only
+  - org-settings-standard
+  - org-settings-billing
+
+replacements:
+  - { from: "Insights account", to: "cloud account" }
+  - { from: "Insights policy", to: "policy" }

@@ -1,0 +1,26 @@
+{{- /*
+  Renders every RBAC scope for one entity type, one H2 section per group.
+  Usage: {{< rbac-scopes "stack" >}} (or "environment", "insights-account", "global")
+
+  The data is generated, not edited by hand:
+
+    data/rbac_scopes.json          fetched nightly from the Pulumi Cloud API by
+                                   scripts/fetch-rbac-scopes.sh.
+    data/rbac_scope_sections.yaml  which section each scope belongs in.
+    data/rbac_scope_notes.yaml     hand-maintained notes and overrides.
+
+  Headings are real <h2 id="..."> elements built with `anchorize`, the same
+  as audit-log-events.html, so they appear in the "On this page" list. The
+  table goes through `markdownify` so render-table.html wraps it for narrow
+  screens. The wrapper gives every table on the page the same fixed column
+  widths, so sections don't each size to their own content; below `md` the
+  tables reflow into cards and the widths don't apply.
+*/ -}}
+{{- $id := .Get 0 -}}
+{{- $entity := partial "rbac/entity.html" $id -}}
+{{- range $entity.sections }}
+<h2 id="{{ anchorize .name }}">{{ .name }}</h2>
+<div class="md:[&_table]:w-full md:[&_table]:table-fixed md:[&_th:first-child]:w-2/5 [&_td:first-child_code]:break-words">
+{{ partial "rbac/scope-table.html" (dict "entity" $id "section" .) | markdownify }}
+</div>
+{{- end -}}
