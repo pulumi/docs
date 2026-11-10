@@ -77,7 +77,7 @@
 
 - id: access-tokens
   name: Access tokens
-  description: Creation and revocation of organization, team, and personal access tokens, including tokens issued through OIDC token exchange.
+  description: Creation and revocation of organization, team, personal, and service principal access tokens, including tokens issued through OIDC token exchange.
   match:
     prefixes:
       - organization-token-
@@ -87,6 +87,10 @@
       # A runner token, but an access token first: it is created by the same
       # OIDC exchange as the other `*-created-for-oidc-issuer` events.
       - deployment-runner-token-created-for-oidc-issuer
+      # Exact ids, not a prefix: "service" also names an IDP concept, so a
+      # prefix could pull unrelated future events into this category.
+      - service-principal-token-created
+      - service-principal-token-deleted
 
 - id: organization
   name: Organization and members
