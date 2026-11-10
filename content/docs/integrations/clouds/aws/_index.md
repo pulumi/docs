@@ -51,13 +51,13 @@ Hands-on infrastructure as code guides for building on AWS with Pulumi.
 
 - [Pulumi CDK Adapter for AWS](/dev/tutorials/aws-cdk/) — use AWS CDK constructs inside a Pulumi program.
 - [AWS Identity & Access Management (IAM)](/dev/tutorials/aws-iam/) — model IAM roles, policies, and users in code.
-- [AWS Virtual Private Cloud (VPC)](/docs/iac/guides/clouds/aws/vpc/) — define VPCs, subnets, and routing.
+- [AWS Virtual Private Cloud (VPC)](/dev/tutorials/aws-vpc/) — define VPCs, subnets, and routing.
 - [AWS Lambda & serverless events](/dev/tutorials/aws-lambda/) — author Lambda functions and event sources in code.
 - [Amazon ECS](/dev/tutorials/aws-ecs/) — run containers on Elastic Container Service.
-- [Amazon EKS](/docs/iac/guides/clouds/aws/eks/) — run workloads on Elastic Kubernetes Service.
+- [Amazon EKS](/dev/tutorials/aws-eks/) — run workloads on Elastic Kubernetes Service.
 - [Amazon ECR](/dev/tutorials/aws-ecr/) — build and publish images to Elastic Container Registry.
-- [Elastic Load Balancing](/docs/iac/guides/clouds/aws/elb/) — configure application and network load balancers.
-- [AWS API Gateway](/docs/iac/guides/clouds/aws/api-gateway/) — configure HTTP and REST APIs on API Gateway.
+- [Elastic Load Balancing](/dev/tutorials/aws-elb/) — configure application and network load balancers.
+- [AWS API Gateway](/dev/tutorials/aws-api-gateway/) — configure HTTP and REST APIs on API Gateway.
 - [AWS CodePipeline & CodeDeploy](/docs/iac/operations/continuous-delivery/aws-code-services/) — drive Pulumi stack updates from AWS developer tools.
 
 ## Secrets & configuration (ESC)
