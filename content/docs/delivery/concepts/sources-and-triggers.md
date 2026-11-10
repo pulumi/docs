@@ -30,7 +30,7 @@ A source locks its commit when the run first creates it. Every stage of the run 
 
 ## Pipeline sources
 
-A `PipelineSource` reads the release that a stage of another pipeline deployed. It's how a downstream pipeline picks up values, such as a cluster endpoint, that an upstream pipeline published as [artifacts](/docs/delivery/concepts/artifacts/). Both pipelines must be in the same organization, and a job can't check out a pipeline source.
+A `PipelineSource` reads the release that a stage of another pipeline deployed. It's how a downstream pipeline picks up values, such as a cluster endpoint, that an upstream pipeline published as [artifacts](/docs/delivery/concepts/stages-and-gates/#artifacts). Both pipelines must be in the same organization, and a job can't check out a pipeline source.
 
 ```typescript
 const platform = new delivery.PipelineSource("platform", {

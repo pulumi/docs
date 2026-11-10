@@ -1,6 +1,6 @@
 ---
 title_tag: Pulumi Delivery stages and gates
-meta_desc: Order promotion between environments with Pulumi Delivery stages, and hold a release at a gate until someone approves it or continues it.
+meta_desc: Order promotion between environments with Pulumi Delivery stages, hold a release at a gate until someone approves it, and publish artifacts from a stage.
 title: Stages and gates
 h1: Stages and gates
 menu:
@@ -11,7 +11,7 @@ menu:
 aliases: []
 ---
 
-Stages give a pipeline its shape. Each stage is usually one environment, and its `from` list says which stages a release must pass through first. A gate, set in `when`, holds the release at the entrance to a stage until a rule passes.
+Stages give a pipeline its shape. Each stage is usually one environment, and its `from` list says which stages a release must pass through first. A gate, set in `when`, holds the release at the entrance to a stage until a rule passes. Once a release reaches a stage, the stage can publish artifacts for other pipelines to read.
 
 ## Order stages with `from`
 
@@ -121,3 +121,41 @@ hookDetails: JSON.stringify({
 ```
 
 Don't write the run number into a Lambda function's environment variables. That changes the function on every run.
+
+## Artifacts
+
+An _artifact_ is part of a release: a named value that a stage publishes once the release reaches it, such as a cluster endpoint, a database ID, or a container image tag. Other pipelines in your organization read it with a [`PipelineSource`](/docs/delivery/concepts/sources-and-triggers/#pipeline-sources). Artifacts are how one pipeline hands values to another without either one reaching into the other's stacks.
+
+### Publish an artifact
+
+Declare an `Artifact` in the stage whose release the value belongs to. The artifact takes the name of the resource:
+
+```typescript
+new delivery.Artifact("clusterEndpoint", { stage: prod, value: cluster.endpoint });
+```
+
+The value can be anything, including a secret or a nested structure. It usually comes from the outputs of a stack update or a job in the same stage.
+
+An artifact is published once its stage admits the release and its value is known. Because it belongs to a stage, a downstream pipeline that reads the `prod` stage only ever sees values from releases that made it to `prod`.
+
+### Read artifacts from another pipeline
+
+A downstream pipeline reads the artifacts of one stage of an upstream pipeline through a `PipelineSource`:
+
+```typescript
+const platform = new delivery.PipelineSource("platform", {
+    pipeline: "platform-delivery/main",
+    stage: "prod",
+    trigger: true,
+});
+
+const clusterEndpoint = platform.artifacts["clusterEndpoint"];
+```
+
+The `artifacts` output is a map keyed by artifact name. It's unknown during registration and preview and known during a run. With `trigger: true`, every new release that reaches the upstream stage starts a run of the downstream pipeline, so the downstream pipeline always deploys against the latest values.
+
+Both pipelines must be in the same organization, and the downstream pipeline's [service principal](/docs/delivery/operations/permissions/#the-identity-a-pipeline-runs-as) needs read access to the upstream pipeline stack. For a full walkthrough, see [Connect pipelines](/docs/delivery/guides/multiple-pipelines/).
+
+### Secret artifacts
+
+If any artifact is secret, the whole `artifacts` map is secret. A `Stacks` entry's `config` rejects secret values, so pass a secret artifact to a stack update or job in `environment` instead.

@@ -40,19 +40,19 @@ A _stage_ is a phase of the pipeline, usually one environment. A stage waits for
 
 See [Stages and gates](/docs/delivery/concepts/stages-and-gates/).
 
+### Artifacts
+
+An _artifact_ is part of a release: a named value that a stage publishes once the release reaches it, such as a cluster endpoint or an image tag. Other pipelines read a stage's artifacts with a `PipelineSource`, which is how one pipeline hands values to the next. See [Artifacts](/docs/delivery/concepts/stages-and-gates/#artifacts).
+
 ## Stacks
 
-A `Stacks` resource updates one or more existing stacks in a stage. Each entry runs `pulumi up` on one target stack at the run's locked commit. The entries in one `Stacks` resource deploy together and can read each other's new outputs, so stacks that depend on each other belong in the same one. See [Stacks](/docs/delivery/concepts/members/#stacks).
+A `Stacks` resource updates one or more existing stacks in a stage. Each entry runs `pulumi up` on one target stack at the run's locked commit. The entries in one `Stacks` resource deploy together and can read each other's new outputs, so stacks that depend on each other belong in the same one. See [Stacks](/docs/delivery/concepts/stacks-and-jobs/#stacks).
 
 ## Jobs
 
-A `Job` runs a shell command in a stage, such as a smoke test against the stack the stage just updated. A job can publish outputs for other resources in the same stage to read. See [Jobs](/docs/delivery/concepts/members/#job).
+A `Job` runs a shell command in a stage, such as a smoke test against the stack the stage just updated. A job can publish outputs for other resources in the same stage to read. See [Jobs](/docs/delivery/concepts/stacks-and-jobs/#jobs).
 
 Stacks and jobs are the _members_ of a stage: the resources that do its work.
-
-## Artifacts
-
-An _artifact_ is part of a release: a named value that a stage publishes once the release reaches it, such as a cluster endpoint or an image tag. Other pipelines read a stage's artifacts with a `PipelineSource`, which is how one pipeline hands values to the next. See [Artifacts](/docs/delivery/concepts/artifacts/).
 
 ## Sources and releases
 
