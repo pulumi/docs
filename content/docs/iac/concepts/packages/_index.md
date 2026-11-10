@@ -1,6 +1,6 @@
 ---
 title_tag: Pulumi Packages
-meta_desc: Pulumi Packages enable you to write infrastructure abstractions once in TypeScript, .NET, Go, or Python and make them available for use in any Pulumi language.
+meta_desc: Pulumi Packages enable you to write infrastructure abstractions once and make them available for use in any Pulumi language.
 title: Pulumi packages
 h1: Pulumi packages
 menu:
@@ -28,10 +28,10 @@ Pulumi packages consist of two parts that allow them to be consumed in any Pulum
 
 ## Consuming packages
 
-There are two ways to add Pulumi packages to your program:
+You can add Pulumi packages to your program in two ways:
 
-- **Packages with published SDKs**: Use your language's standard package manager. Most packages in the [Pulumi Registry](/registry/) have published SDKs. Each package's Installation & Configuration page shows the specific command for your language ([example](/registry/packages/aws/installation-configuration/)).
-- **Local SDKs**: Use [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/), which generates an SDK locally and adds a reference to `Pulumi.yaml`. This is used for components, Terraform providers, and other packages without published SDKs.
+- **Packages with published SDKs**: Use your language's standard package manager. Each [Pulumi Registry](/registry/) package's Installation & Configuration page lists the package name for each language ([example](/registry/packages/aws/installation-configuration/)).
+- **Local SDKs**: Use [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/), which generates an SDK locally and adds a reference to `Pulumi.yaml`. This is used for components, Terraform providers, and other packages without published SDKs. For a Registry package that doesn't have published SDKs, the package's main page shows how to generate an SDK ([example](/registry/packages/honeycombio/#generate-provider)).
 
 ### Installing packages
 
@@ -55,8 +55,6 @@ pulumi package add terraform-provider hashicorp/random
 pulumi package add example.com/org/repo.git/path@version
 ```
 
-After adding a local SDK, run `pulumi install` to complete the installation.
-
 {{% notes type="info" %}}
 Running `pulumi package add` registers the package in your `Pulumi.yaml` file. You should commit this file to source control so that your teammates can run `pulumi install` to install the same packages after cloning the repository.
 {{% /notes %}}
@@ -67,11 +65,13 @@ Some common use cases for local SDKs include:
 1. Using the [Azure Native provider](/registry/packages/azure-native/) to [generate a local SDK for a specific version of the Azure API](/registry/packages/azure-native/version-guide/#accessing-any-api-version-via-local-packages).
 1. Consuming a Pulumi component published in [Pulumi IDP](/docs/idp/), or directly via a Git reference.
 
-In order to consume a Pulumi package, there may be additional runtime requirements. Runtime requirements differ by the language in which the package is written:
+### Runtime requirements
 
-- TypeScript packages require the NodeJS runtime.
+Consuming a Pulumi package may have additional runtime requirements, which differ by the language the package is written in:
+
+- TypeScript packages require the Node.js runtime.
 - Python packages require a Python interpreter.
-- Go packages do not require a runtime if they are compiled. If they are referenced via source (e.g. a Pulumi component published via Pulumi IDP), they require a compatible version of the Go language to be installed.
+- Go packages do not require a runtime if they are compiled. If they are referenced via source (for example, a Pulumi component published via Pulumi IDP), they require a compatible version of the Go language to be installed.
 - .NET packages do not require a runtime if they are compiled as runtime-included binaries, which is Pulumi's recommended approach. .NET packages compiled as runtime-dependent binaries require a runtime.
 - Java packages require a JVM runtime.
 - YAML packages do not have any specific runtime requirements.
@@ -86,7 +86,7 @@ How you upgrade a Pulumi package depends on whether the package has published SD
 
 ### Upgrading published SDK packages
 
-For packages with published SDKs (most packages in the [Pulumi Registry](/registry/)), use your language's standard package manager to upgrade:
+For packages with published SDKs, use your language's standard package manager to upgrade:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
@@ -140,13 +140,9 @@ To check which versions of local SDKs your project currently uses, inspect the `
 
 For more details, see [Updating local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/#updating-local-sdks).
 
-## The Pulumi Registry
-
-The Pulumi Registry contains a listing of popular Pulumi packages, and each package's Installation & Configuration page contains instructions on how to install the SDK for the provider ([example](/registry/packages/aws/installation-configuration/)). Most packages in the Pulumi Registry have published SDKs, including all of the packages for the major cloud providers. For packages that do not have published SDKs, the package's main page will show how to generate an SDK ([example](/registry/packages/honeycombio/#generate-provider)).
-
 ## Authoring packages
 
-There are two common cases for authoring packages, each covered in its own section below:
+Package authoring usually falls into one of two cases, each covered in its own section below:
 
 1. You are authoring a Pulumi component to be shared within your team, organization, or by anyone in the Pulumi community.
 1. You are authoring a Pulumi provider that allows your package's consumers to manage resources for a cloud or SaaS provider. (You might optionally publish this provider in the Pulumi Registry if you intend it for public consumption.)
@@ -156,9 +152,9 @@ There are two common cases for authoring packages, each covered in its own secti
 If you are authoring a Pulumi component to be shared within your team or organization, you will need to decide whether to use local SDKs or publish SDKs. **Most component authors will want consumers to use local SDKs** for the following reasons:
 
 - Publishing SDKs requires significant overhead: your CI/CD process will need to generate SDKs for all Pulumi languages (or at least all the languages your package consumers will use) and you will need package feeds to host those published SDKs.
-- If you are authoring **components only** (not custom resources), you can write them in any Pulumi language and distribute them as a [source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/). Pulumi introspects the package to generate a consumer-side SDK in any language, inferring the schema from your types automatically—you do **not** need the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) to do this. By default consumers generate a local SDK at `pulumi package add` time, but you can also [pre-publish SDKs](/docs/iac/guides/building-extending/packages/source-based-plugin/#pre-publishing-language-sdks) to language registries (npm, PyPI, etc.) from any authoring language. Pre-publishing adds CI/CD and package-feed overhead, so for components it's usually not worth the effort compared to using local SDKs.
+- If you are authoring **components only** (not custom resources), you can write them in TypeScript, Python, Go, .NET, or Java and distribute them as a [source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/). Pulumi introspects the package to generate a consumer-side SDK in any language, inferring the schema from your types automatically—you do **not** need the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) to do this. By default consumers generate a local SDK at `pulumi package add` time, but you can also [pre-publish SDKs](/docs/iac/guides/building-extending/packages/source-based-plugin/#pre-publishing-language-sdks) to language registries (npm, PyPI, etc.) from any authoring language. Pre-publishing adds CI/CD and package-feed overhead, so for components it's usually not worth the effort compared to using local SDKs.
 
-For an example of building and publishing a component with local SDKs, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/).
+For an example of building a component, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/).
 
 {{% notes type="info" %}}
 You can author a Pulumi package in any language, create a hand-authored schema, then generate and publish SDKs from that schema. However, this approach requires significant effort to manage at scale, as you'll need to maintain the schema manually and ensure it stays synchronized with your provider code.
@@ -167,7 +163,7 @@ You can author a Pulumi package in any language, create a hand-authored schema, 
 However, publishing SDKs—and, in some cases, compiling your component to a binary with the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/)—might work better when:
 
 - If the component is intended for internal use and your organization has security policies that restrict the ability of developers to install software on their devices (specifically, a required runtime for your package), writing your component in Go and publishing it as a binary with published SDKs hosted in an internal package feed will make it easier for consumers to use your package.
-- If you are intending to publish your component(s) in the Pulumi Registry for general public consumption, writing your component in Go and publishing it as a binary with SDKs in the standard public package feeds (i.e., npm, PyPI, etc.) gives consumers the smoothest experience, since they add your package like any other dependency. Published SDKs are preferred but not required: a consumer can always run `pulumi package add` to generate a local SDK from your package's schema, which is how many Terraform-bridged listings in the Registry are used today.
+- If you are intending to publish your component(s) in the Pulumi Registry for general public consumption, writing your component in Go and publishing it as a binary with SDKs in the standard public package feeds (such as npm and PyPI) gives consumers the smoothest experience, since they add your package like any other dependency. Published SDKs are preferred but not required: a consumer can always run `pulumi package add` to generate a local SDK from your package's schema.
 - Your team is comfortable writing and maintaining code in Go.
 - Your organization already has the package feeds necessary to host SDKs in all languages that might consume the component.
 
