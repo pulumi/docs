@@ -40,14 +40,15 @@ A _stage_ is a phase of the pipeline, usually one environment. A stage waits for
 
 See [Stages and gates](/docs/delivery/concepts/stages-and-gates/).
 
-## Members
+## Stacks
 
-An _action_ is a resource that does work in a stage:
+A `Stacks` resource updates one or more existing stacks in a stage. Each entry runs `pulumi up` on one target stack at the run's locked commit. The entries in one `Stacks` resource deploy together and can read each other's new outputs, so stacks that depend on each other belong in the same one. See [Stacks](/docs/delivery/concepts/members/#stacks).
 
-- `Stacks` updates one or more existing stacks.
-- `Job` runs a shell command.
+## Jobs
 
-See [Members](/docs/delivery/concepts/members/).
+A `Job` runs a shell command in a stage, such as a smoke test against the stack the stage just updated. A job can publish outputs for other resources in the same stage to read. See [Jobs](/docs/delivery/concepts/members/#job).
+
+Stacks and jobs are the _members_ of a stage: the resources that do its work.
 
 ## Artifacts
 
