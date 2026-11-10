@@ -85,6 +85,9 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 
 | Value | Description |
 |-------|-------------|
+| `policy_exceptions:create` | Create policy exceptions, or request them when approval is required. Also needs write access to every stack the exception names. Approvers are named by the approval rule, not by a permission.<br><br>**Granted by default roles**: `Builder`, `Maintainer`, `Admin` |
+| `policy_exceptions:delete` | Remove policy exceptions. Also needs read access to every stack the exception names. A removed exception is kept for auditing.<br><br>**Granted by default roles**: `Admin` |
+| `policy_exceptions:read` | View policy exceptions and requests. Also needs read access to every stack the exception names.<br><br>**Granted by default roles**: `Reader`, `Builder`, `Maintainer`, `Admin` |
 | `policy_groups:create` | Create a new group of infrastructure as code policies. This allows organizing related policies for better management and enforcement.<br><br>**Granted by default roles**: `Admin` |
 | `policy_groups:delete` | Remove an existing group of infrastructure as code policies. This permanently deletes the policy group and its configurations.<br><br>**Granted by default roles**: `Admin` |
 | `policy_groups:read` | View infrastructure as code policy group configurations. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Member`, `Admin` |

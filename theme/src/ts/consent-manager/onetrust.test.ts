@@ -13,7 +13,43 @@
 import * as assert from "assert";
 import { test } from "node:test";
 
-import { ConsentEngine, STRICTLY_NECESSARY, SEGMENT_DESTINATION_CATEGORIES, categoryForDestination, parseActiveGroups, destinationPreferencesFromGroups, hasRevokedGroup } from "./onetrust";
+import { ConsentEngine, STRICTLY_NECESSARY, PERFORMANCE, SEGMENT_DESTINATION_CATEGORIES, categoryForDestination, parseActiveGroups, destinationPreferencesFromGroups, hasRevokedGroup, segmentIntegrations, wantsSegment } from "./onetrust";
+
+const segmentTestDestinations = [
+    { id: "intercom", name: "Intercom Web (Actions)" },
+    { id: "ga4", name: "Google Analytics 4 Web" },
+];
+
+function integrationsFor(groups: string): Record<string, boolean> {
+    const active = parseActiveGroups(groups);
+    const prefs = destinationPreferencesFromGroups(segmentTestDestinations, active);
+    return segmentIntegrations(segmentTestDestinations, prefs, active.has(PERFORMANCE));
+}
+
+test("Functional without Performance loads Intercom but sends nothing to Segment", () => {
+    const integrations = integrationsFor(",C0001,C0003,");
+    assert.deepStrictEqual(integrations, { All: false, "Segment.io": false, intercom: true, ga4: false });
+});
+
+test("Performance enables Segment's own collection", () => {
+    const integrations = integrationsFor(",C0001,C0002,");
+    assert.deepStrictEqual(integrations, { All: false, "Segment.io": true, intercom: false, ga4: true });
+});
+
+test("Segment.io follows Performance itself, not any destination preference", () => {
+    const integrations = segmentIntegrations(segmentTestDestinations, { intercom: false, ga4: false }, true);
+    assert.deepStrictEqual(integrations, { All: false, "Segment.io": true, intercom: false, ga4: false });
+    assert.ok(wantsSegment(integrations));
+});
+
+test("Performance alone loads Segment even with no destinations", () => {
+    assert.ok(wantsSegment(segmentIntegrations([], {}, true)));
+    assert.ok(!wantsSegment(segmentIntegrations([], {}, false)));
+});
+
+test("Strictly Necessary alone loads nothing", () => {
+    assert.ok(!wantsSegment(integrationsFor(",C0001,")));
+});
 
 test("parseActiveGroups handles OneTrust's comma-wrapped string", () => {
     const groups = parseActiveGroups(",C0001,C0003,");
