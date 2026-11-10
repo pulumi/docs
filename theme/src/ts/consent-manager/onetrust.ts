@@ -28,6 +28,7 @@
 export type ConsentCategory = string;
 
 export const STRICTLY_NECESSARY: ConsentCategory = "C0001";
+export const PERFORMANCE: ConsentCategory = "C0002";
 
 // Segment destination name -> OneTrust category. Keyed by the destination
 // `name` Segment reports (see fetchDestinations in analytics.ts). Any Segment
@@ -101,6 +102,19 @@ export function destinationPreferencesFromGroups(destinations: MinimalDestinatio
         prefs[dest.id] = category ? active.has(category) : false;
     }
     return prefs;
+}
+
+// Build the integrations object for analytics.load(). "Segment.io" is Segment's
+// own collection API, which records every page() and track() call, so it needs
+// Performance consent. A visitor who allows only Functional still gets Intercom
+// (a device-mode destination), but nothing is sent to Segment itself: with
+// "Segment.io": false, analytics.js never registers its Segment API plugin.
+export function segmentIntegrations(destinations: MinimalDestination[], destinationPreferences: Record<string, boolean>, performanceAllowed: boolean): Record<string, boolean> {
+    const integrations: Record<string, boolean> = { All: false, "Segment.io": performanceAllowed };
+    for (const dest of destinations) {
+        integrations[dest.id] = Boolean(destinationPreferences[dest.id]);
+    }
+    return integrations;
 }
 
 interface QueueItem {

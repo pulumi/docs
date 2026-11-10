@@ -13,7 +13,33 @@
 import * as assert from "assert";
 import { test } from "node:test";
 
-import { ConsentEngine, STRICTLY_NECESSARY, SEGMENT_DESTINATION_CATEGORIES, categoryForDestination, parseActiveGroups, destinationPreferencesFromGroups, hasRevokedGroup } from "./onetrust";
+import { ConsentEngine, STRICTLY_NECESSARY, PERFORMANCE, SEGMENT_DESTINATION_CATEGORIES, categoryForDestination, parseActiveGroups, destinationPreferencesFromGroups, hasRevokedGroup, segmentIntegrations } from "./onetrust";
+
+const segmentTestDestinations = [
+    { id: "Intercom Web (Actions)", name: "Intercom Web (Actions)" },
+    { id: "Google Analytics 4 Web", name: "Google Analytics 4 Web" },
+];
+
+function integrationsFor(groups: string): Record<string, boolean> {
+    const active = parseActiveGroups(groups);
+    const prefs = destinationPreferencesFromGroups(segmentTestDestinations, active);
+    return segmentIntegrations(segmentTestDestinations, prefs, active.has(PERFORMANCE));
+}
+
+test("Functional without Performance loads Intercom but sends nothing to Segment", () => {
+    const integrations = integrationsFor(",C0001,C0003,");
+    assert.strictEqual(integrations["Segment.io"], false);
+    assert.strictEqual(integrations["Intercom Web (Actions)"], true);
+    assert.strictEqual(integrations["Google Analytics 4 Web"], false);
+    assert.strictEqual(integrations.All, false);
+});
+
+test("Performance enables Segment's own collection", () => {
+    const integrations = integrationsFor(",C0001,C0002,");
+    assert.strictEqual(integrations["Segment.io"], true);
+    assert.strictEqual(integrations["Intercom Web (Actions)"], false);
+    assert.strictEqual(integrations["Google Analytics 4 Web"], true);
+});
 
 test("parseActiveGroups handles OneTrust's comma-wrapped string", () => {
     const groups = parseActiveGroups(",C0001,C0003,");
