@@ -1123,13 +1123,13 @@ Pushes to an open PR rebuild the preview, mark the pinned review `review:stale`,
 flowchart TD
   EN["`make ensure: clean, deps, icon sprite, OpenAPI spec, theme assets`"] --> BS["`build-site.sh: meta images, Hugo production build, SDK version selectors, docs JSON, CSS purge`"]
   BS --> SY["`sync-and-test-bucket.sh update: new bucket for this run, s5cmd sync, Cypress smoke tests, metadata file`"]
-  SY --> SI["`generate-search-index.sh updates Algolia`"]
+  SY --> RD["`make-s3-redirects.sh: write 301 objects into the new bucket`"]
+  RD --> SI["`generate-search-index.sh updates Algolia`"]
   SI --> AW["`await-in-progress.js waits for earlier runs, up to 45 minutes`"]
   AW --> RP["`run-pulumi.sh update on www-production`"]
   RP --> OR{"`check-publish-ordering.js: has a newer run already published?`"}
   OR -->|yes| STOP["`Refuse to publish`"]
   OR -->|no| UP["`pulumi up points CloudFront at the new bucket; the site is live`"]
-  UP --> RD["`make-s3-redirects.sh`"]
 ```
 
 Key points:

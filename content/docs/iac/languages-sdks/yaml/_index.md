@@ -106,6 +106,24 @@ describes these concepts with examples available in all supported languages, inc
 To learn how the Pulumi Programming Model is implemented for Pulumi YAML, refer
 to the [Pulumi YAML Reference Guide](/docs/iac/languages-sdks/yaml/yaml-language-reference/).
 
+## Limitations compared with other languages
+
+Pulumi YAML is a declarative language, so it does not offer everything the general-purpose languages (TypeScript, Python, Go, C#, and Java) do. Consider the following before you choose it for a project.
+
+| Area | Pulumi YAML | What to do instead |
+|---|---|---|
+| Loops, conditionals, arithmetic, and comparisons | Not supported. | Generate the program with a [compiler](#compiler-support), or use a general-purpose language. |
+| User-defined functions | Not supported. Only the [built-in `fn::` functions](/docs/iac/languages-sdks/yaml/yaml-language-reference/#built-in-functions) are available. | Write the logic in a component in another language and use it from YAML. |
+| Calling methods on components | Not supported. | Use a component's inputs and outputs. |
+| A program split across files | Not supported. A program is a single `Pulumi.yaml` (or `Main.yaml`) file. | Move reusable parts into [components](/docs/iac/languages-sdks/yaml/yaml-component-reference/). |
+| [Resource hooks](/docs/iac/concepts/resources/options/hooks/) and [transforms](/docs/iac/concepts/resources/options/transforms/) | Not supported. | Use a general-purpose language. |
+| Authoring [policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/) | Not supported. Policy packs written in other languages still apply to YAML programs. | Write the policy pack in TypeScript or Python. |
+| Mocked unit tests, dynamic providers, and the Automation API | Not available. These are features of the language SDKs. | Use a general-purpose language. |
+
+Pulumi YAML can author components, which other Pulumi languages can consume. See the [component reference](/docs/iac/languages-sdks/yaml/yaml-component-reference/).
+
+If a YAML project outgrows these limits, [`pulumi convert`](/docs/iac/cli/commands/pulumi_convert/) translates it to another language.
+
 ## Compiler support
 
 Pulumi YAML includes native support for languages that compile to YAML/JSON via

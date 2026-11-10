@@ -162,7 +162,7 @@ The minimum permissions required for the rotation role are:
 | Rotation fails when creating a new access key | The IAM user may already have the maximum number of access keys AWS allows, none managed by ESC. | Delete an unused access key on the IAM user so the rotator can create a new one, or seed the existing keys via the `state` input. |
 | OIDC login fails when opening the environment | The trust policy or audience on the rotation role may be misconfigured. | Verify the OIDC trust relationship per [Configuring OIDC for AWS](/docs/esc/guides/configuring-oidc/aws/). |
 
-## Related
+## Learn more
 
 * [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
 * [aws-login](/docs/esc/providers/login/aws-login/) - Authenticate with AWS via OIDC or static credentials

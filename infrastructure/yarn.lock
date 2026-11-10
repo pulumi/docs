@@ -423,10 +423,10 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.1.tgz#eaee5900122c110a3dbcb728c0597014a2621774"
   integrity sha512-oOAWABowe8EAbMyWKM0tYDKi8Yaox52D+HWZhAIJqQXbqe0xI/GV7FhLWqlEKreMkfDjshR5FKgi3mnle0h6Eg==
 
-"@pulumi/aws@^7.52.1":
-  version "7.52.1"
-  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-7.52.1.tgz#f065577ecfd880c3778e4e2350a1447fa1cc9077"
-  integrity sha512-EkiZJacWBqwxq+LLeiDA131OWaoFGAnPKKx8aCpcn6lWKyYNqdZIgUhY8OrHefYtirWL5rnabDuPJ9YuluTPQQ==
+"@pulumi/aws@^7.53.0":
+  version "7.53.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-7.53.0.tgz#9006254f388d0f9a3a6efe149c159a1f09a3c395"
+  integrity sha512-qHijd0MQTZhGb3Z1WJzmrqfK8Vxz3WkyUkfTXm/7nWTmyWAdLgshyDwzbHxyGEsPbEVjLpgx+3mjPmY9HIGLrw==
   dependencies:
     "@pulumi/pulumi" "^3.142.0"
     mime "^2.0.0"
@@ -462,10 +462,10 @@
     source-map-support "^0.5.6"
     upath "^1.1.0"
 
-"@pulumi/random@^4.21.4":
-  version "4.21.4"
-  resolved "https://registry.yarnpkg.com/@pulumi/random/-/random-4.21.4.tgz#941ef63e366516be6b09ec325d6cf6083d750fbb"
-  integrity sha512-CKWWZDfIZxdIB8/Xax5IqqGQNyPEdT8TFwJwooK4saU6kU0ozdmrySZ9jt8U1thlYIQTaYitP9EeMBnPbVK+1g==
+"@pulumi/random@^4.21.6":
+  version "4.21.6"
+  resolved "https://registry.yarnpkg.com/@pulumi/random/-/random-4.21.6.tgz#1efd4f6cd731b437ff1539e228f96dee0b9ce651"
+  integrity sha512-HsWUATAcKxceBcvNzPIdkC7sXyWWiGZmd/y4eZKF5nSAwCgpOPReZ+LLFbkl2bvKGHc3nNX5vIM84YU2dpSD1Q==
   dependencies:
     "@pulumi/pulumi" "^3.142.0"
 

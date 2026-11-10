@@ -153,6 +153,11 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
 | `pluginDownloadURL` | string | PluginDownloadURL specifies a provider plugin download URL |
 | `replaceOnChanges` | string[] | ReplaceOnChanges specifies if changes to certain properties on a resource should force replacement instead of an in-place update. |
 | `retainOnDelete` | bool | RetainOnDelete causes a resource to be preserved in the cloud even when it is deleted from the Pulumi state. |
+| `replaceWith` | Expression[] | ReplaceWith makes this resource be replaced whenever any of the listed resources are replaced. |
+| `deletedWith` | Expression | DeletedWith skips deleting this resource when the referenced resource is deleted in the same operation. |
+| `hideDiffs` | string[] | HideDiffs lists properties whose diffs are hidden in CLI output. |
+| `replacementTrigger` | Expression | ReplacementTrigger replaces the resource whenever the value of the expression changes. |
+| `envVarMappings` | map[string]string | EnvVarMappings remaps environment variables to the keys a provider reads, for explicitly configured providers. |
 
 ### Resource getter
 

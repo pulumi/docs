@@ -124,7 +124,7 @@ To reduce cold-start time on Pulumi-managed runners:
 - Pin the image to a digest or a specific version tag rather than a floating tag such as `latest`. Pinning doesn't speed up the pull, but it keeps the image your deployments run from changing unexpectedly.
 - Move rarely changing tools into the image and keep the remaining setup short, so you pay the pull cost once per deployment rather than also running long pre-run installs.
 
-On [customer-managed runners](/docs/administration/concepts/customer-managed-runners/), image layers can persist between deployments. Set `pull_image: false` on a Docker-based agent, or an image pull policy of `IfNotPresent` on Kubernetes, so the agent reuses a locally cached image instead of pulling it for every job. Pin a digest or version tag so the cached image is the one you expect.
+On [customer-managed runners](/docs/administration/concepts/customer-managed-runners/), image layers can persist between deployments. Set `pull_image: false` on a Docker-based agent so it reuses a locally cached image instead of pulling it for every job. On the Kubernetes deploy target, set `imagePullPolicy: IfNotPresent` on the `pulumi-workflow` container in the worker Pod template. See [Executor image pull policy](/docs/administration/concepts/customer-managed-runners/#executor-image-pull-policy). Pin a digest or version tag so the cached image is the one you expect.
 
 #### Static credentials only
 
