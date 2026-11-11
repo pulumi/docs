@@ -82,6 +82,7 @@ When moving documentation, aliases handle redirects automatically. Update intern
 - **DO update** links in `/content/docs/` and `/content/product/`.
 - **`/content/blog/`** is historical — swap a broken link only for an equivalent replacement, and when the change is worth surfacing to readers stamp `updated: YYYY-MM-DD` (not `lastmod`); otherwise route around it with an alias/redirect. See "Dates: `updated` vs `lastmod`" below.
 - **Link style**: links within `/docs/` must use the full canonical path (e.g. `/docs/iac/concepts/stacks/`). Never use parent-directory references (`../stacks/`) — they break when files move.
+- **Docs link to docs**: never add a link from `content/docs/` to a marketing page (`/topics/`, the old `/what-is/` URLs, `/product/`, landing pages), and never add one for SEO or internal-link-building. Link the docs page that covers the concept instead. Rule and exceptions: `STYLE-GUIDE.md` §Docs link to docs.
 
 For find/sed implementation patterns, see `.claude/commands/move-doc/SKILL.md`.
 
