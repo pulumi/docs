@@ -93,7 +93,7 @@ Every action a user takes in Pulumi can be tracked via the [audit log](/docs/adm
 
 ### Developer Experience
 
-Probably the most compelling aspect of Pulumi is the developer experience. [Developers love Pulumi](https://www.pulumi.com/testimonials/), because they get to use their preferred tools. General purpose programming languages, visual IDEs, command-line tools, and products with an API-driven architecture are what developers want, and it's what Pulumi delivers in spades.
+Probably the most compelling aspect of Pulumi is the developer experience. [Developers love Pulumi](https://www.pulumi.com/love/), because they get to use their preferred tools. General purpose programming languages, visual IDEs, command-line tools, and products with an API-driven architecture are what developers want, and it's what Pulumi delivers in spades.
 
 With Pulumi templates and custom internal component resources in place, [developers can drive their own DevOps](https://www.pulumi.com/blog/developer-experience-business-critical/#how-does-devex-intersect-with-devops), provisioning their own infrastructure resources and managing their own deployments directly, reducing bottlenecks in platform teams. Product engineering teams can self-service with a stream-lined workflow that stays compliant with company policy by default. Deep in the code of their favorite programming languages, your developers will never even know they are following the company rules.
 
