@@ -39,5 +39,9 @@ export const marketingWebPaths = [
     // Exact paths: /gads* would also take the /gads/ redirect and the retired gads pages' redirects off S3.
     "/gads/infrastructure-as-code",
     "/gads/infrastructure-as-code/",
+    // The old /testimonials/ page; S3 301s it here (scripts/redirects/love-redirects.txt).
+    "/love",
+    "/love/",
+    "/love.md",
     "/sitemap-www-*",
 ];
