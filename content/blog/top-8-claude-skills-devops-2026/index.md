@@ -121,11 +121,14 @@ Kubernetes has hundreds of configuration options. Most deployments use a handful
 
 The [jeffallan/claude-skills](https://github.com/jeffallan/claude-skills) `kubernetes-specialist` skill focuses on configurations that production deployments actually need. Without it, ask Claude for a deployment and you get something that runs: the right image, the right ports, maybe a service. With the skill, the same request comes back with `runAsNonRoot: true` in the security context, resource requests and limits that reflect actual usage patterns, liveness and readiness probes with sensible intervals, and a pod disruption budget. These are the things that make the difference between "it works in staging" and "it survives a node failure in production." The skill also understands when RollingUpdate makes sense versus Recreate, which is the kind of judgment call that usually requires context a generic model does not have.
 
+| Skill | What it teaches Claude |
+|-------|------------------------|
+| `kubernetes-specialist` | Production cluster management, security hardening, and cloud-native architectures |
+
 The [wshobson/agents](https://github.com/wshobson/agents) repository fills in the gaps around Kubernetes with CI/CD, cost management, and deployment workflows:
 
 | Skill | What it teaches Claude |
 |-------|------------------------|
-| `kubernetes-specialist` | Production cluster management, security hardening, and cloud-native architectures |
 | `cost-optimization` | Cloud cost reduction across AWS, Azure, and GCP with right-sizing and reserved instances |
 | `github-actions-templates` | CI/CD workflows, Docker builds, Kubernetes deployments, security scanning, and matrix builds |
 | `gitops-workflow` | ArgoCD and Flux CD for automated Kubernetes deployments |
@@ -218,11 +221,11 @@ Then scan. Snyk's open source Agent Scan, previously published as `mcp-scan`, ch
 # Scan every skill Claude Code has installed for your user
 uvx snyk-agent-scan@latest ~/.claude/skills
 
-# Scan one skill before you install it
-uvx snyk-agent-scan@latest ~/path/to/my/SKILL.md
+# Scan a skill you cloned or downloaded, before it goes into .claude/skills/
+uvx snyk-agent-scan@latest ./downloaded-skill/SKILL.md
 ```
 
-Check the [Agent Scan README](https://github.com/snyk/agent-scan) before the first run, since it documents which parts of a scan contact external services and recommends running scans of untrusted content in a sandbox. Cisco's [skill-scanner](https://github.com/cisco-ai-defense/skill-scanner) combines static rules, behavioral dataflow analysis, and optional LLM-based review, and supports a pre-commit hook and CI exit codes, so a pull request that adds or changes a `SKILL.md` can fail before it merges. NVIDIA's [SkillSpector](https://github.com/NVIDIA/SkillSpector) is another option, and the OWASP Agentic Skills Top 10 has a [scanner integration guide](https://owasp.org/www-project-agentic-skills-top-10/skill-scanner-integration) with pre-commit examples. Scanners miss things, so use them to raise the cost of an attack and not as proof that a skill is safe.
+Check the [Agent Scan README](https://github.com/snyk/agent-scan) before the first run, since it warns that scanning MCP configurations can execute commands or make outbound network requests, and recommends running scans of untrusted or third-party configurations in a sandbox. Cisco's [skill-scanner](https://github.com/cisco-ai-defense/skill-scanner) combines static rules, behavioral dataflow analysis, and optional LLM-based review, and supports a pre-commit hook and CI exit codes, so a pull request that adds or changes a `SKILL.md` can fail before it merges. NVIDIA's [SkillSpector](https://github.com/NVIDIA/SkillSpector) is another option, and the OWASP Agentic Skills Top 10 has a [scanner integration guide](https://owasp.org/www-project-agentic-skills-top-10/skill-scanner-integration) with pre-commit examples. Scanners miss things, so use them to raise the cost of an attack and not as proof that a skill is safe.
 
 Finally, limit what a bad skill could do. Claude Code lets you restrict tools per skill with `allowed-tools` in the skill frontmatter, set `disable-model-invocation` on skills that should only run when you call them, deny risky commands through permission rules, and block tool calls with `PreToolUse` hooks. Simon Willison's [lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) is a useful test: an agent that combines access to private data, exposure to untrusted content, and a way to communicate externally can be made to leak. Keep at least one of the three out of the session. Credentials are the part you control most directly. [Short-lived OIDC credentials from Pulumi ESC](/blog/oidc-trust-relationships/) mean there is no long-lived cloud key sitting in your environment for a compromised skill to find.
 
