@@ -194,7 +194,7 @@ details:
                 package webserver;
 
                 import com.pulumi.Context;
-                                import com.pulumi.Pulumi;
+                import com.pulumi.Pulumi;
                 import com.pulumi.aws.ec2.Ec2Functions;
                 import com.pulumi.aws.ec2.Instance;
                 import com.pulumi.aws.ec2.InstanceArgs;
