@@ -24,7 +24,7 @@ aliases:
 - /docs/iac/comparisons/cloud-templates/
 ---
 
-Pulumi and [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) are both declarative infrastructure as code tools for AWS. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), plus YAML and [HCL](/docs/iac/languages-sdks/hcl/), and supports any cloud or SaaS provider through the [Pulumi Registry](/registry/); AWS CloudFormation uses JSON or YAML templates and provisions only AWS resources.
+Pulumi and [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) are both declarative [infrastructure as code](/topics/infrastructure-as-code/) tools for AWS. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), plus YAML and [HCL](/docs/iac/languages-sdks/hcl/), and supports any cloud or SaaS provider through the [Pulumi Registry](/registry/); AWS CloudFormation uses JSON or YAML templates and provisions only AWS resources.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of AWS CloudFormation.
 

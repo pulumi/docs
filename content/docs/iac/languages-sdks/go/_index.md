@@ -19,7 +19,7 @@ aliases:
     - /docs/languages-sdks/go/
 ---
 
-Pulumi supports writing your infrastructure as code in Go. Using a general-purpose language for infrastructure as code provides several key advantages:
+Pulumi supports writing your [infrastructure as code](/topics/infrastructure-as-code/) in Go. Using a general-purpose language for infrastructure as code provides several key advantages:
 
 - **Familiar syntax**: Write infrastructure code using the same language and patterns you already know
 - **Rich ecosystem**: Leverage the Go module ecosystem in your infrastructure code

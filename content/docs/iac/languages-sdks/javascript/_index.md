@@ -22,7 +22,7 @@ aliases:
     - /docs/languages-sdks/javascript/
 ---
 
-Pulumi supports writing your infrastructure as code using TypeScript and JavaScript on the Node.js or Bun runtimes. Using a general-purpose language for infrastructure as code provides several key advantages:
+Pulumi supports writing your [infrastructure as code](/topics/infrastructure-as-code/) using TypeScript and JavaScript on the Node.js or Bun runtimes. Using a general-purpose language for infrastructure as code provides several key advantages:
 
 - **Familiar syntax**: Write infrastructure code using the same languages and patterns you already know
 - **Rich ecosystem**: Use packages from the npm registry directly in your infrastructure code

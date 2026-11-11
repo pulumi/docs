@@ -19,7 +19,7 @@ aliases:
 As of December 2025, CDK for Terraform (CDKTF) has been [deprecated](/blog/cdktf-is-deprecated-whats-next-for-your-team/) and its [GitHub repository](https://github.com/hashicorp/terraform-cdk) has been archived. This page is preserved for teams evaluating migration paths.
 {{% /notes %}}
 
-Pulumi and CDK for Terraform (CDKTF, deprecated December 2025) are both infrastructure as code tools that let you author cloud resources in general-purpose programming languages. They differ in how programs are turned into provisioned infrastructure: Pulumi runs programs directly through its own deployment engine and supports any cloud or SaaS platform through the [Pulumi Registry](/registry/), while CDKTF transpiled programs into Terraform JSON for deployment by the Terraform CLI.
+Pulumi and CDK for Terraform (CDKTF, deprecated December 2025) are both [infrastructure as code](/topics/infrastructure-as-code/) tools that let you author cloud resources in general-purpose programming languages. They differ in how programs are turned into provisioned infrastructure: Pulumi runs programs directly through its own deployment engine and supports any cloud or SaaS platform through the [Pulumi Registry](/registry/), while CDKTF transpiled programs into Terraform JSON for deployment by the Terraform CLI.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for migrating from CDKTF to Pulumi.
 

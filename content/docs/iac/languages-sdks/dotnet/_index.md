@@ -18,7 +18,7 @@ aliases:
     - /docs/languages-sdks/dotnet/
 ---
 
-Pulumi supports writing your infrastructure as code in any .NET language, including C#, F#, and Visual Basic. Using a general-purpose language for infrastructure as code provides several key advantages:
+Pulumi supports writing your [infrastructure as code](/topics/infrastructure-as-code/) in any .NET language, including C#, F#, and Visual Basic. Using a general-purpose language for infrastructure as code provides several key advantages:
 
 - **Familiar syntax**: Write infrastructure code using the same language and patterns you already know
 - **Rich ecosystem**: Leverage the [NuGet](https://www.nuget.org/) package ecosystem in your infrastructure code

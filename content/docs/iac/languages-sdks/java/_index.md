@@ -20,7 +20,7 @@ aliases:
 
 <img src="/logos/tech/java.svg" alt="java" align="right" width="90" style="padding:8px; margin-top: -64px">
 
-Pulumi supports writing your infrastructure as code in Java running on the Java Virtual Machine (JVM). Using a general-purpose language for infrastructure as code provides several key advantages:
+Pulumi supports writing your [infrastructure as code](/topics/infrastructure-as-code/) in Java running on the Java Virtual Machine (JVM). Using a general-purpose language for infrastructure as code provides several key advantages:
 
 - **Familiar syntax**: Write infrastructure code using the same language and patterns you already know
 - **Rich ecosystem**: Leverage the vast Maven Central package ecosystem in your infrastructure code

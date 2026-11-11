@@ -19,7 +19,7 @@ aliases:
     - /docs/languages-sdks/python/
 ---
 
-Pulumi supports writing your infrastructure as code in Python. Using a general-purpose language for infrastructure as code provides several key advantages:
+Pulumi supports writing your [infrastructure as code](/topics/infrastructure-as-code/) in Python. Using a general-purpose language for infrastructure as code provides several key advantages:
 
 - **Familiar syntax**: Write infrastructure code using the same language and patterns you already know
 - **Rich ecosystem**: Use any package from [PyPI](https://pypi.org/) in your infrastructure code

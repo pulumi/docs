@@ -17,7 +17,7 @@ aliases:
     - /docs/migration/
 ---
 
-If you've fallen in love with Pulumi, it might not be obvious how to adopt it. For new projects, write your infrastructure as code using Pulumi from the start. But what if you already have infrastructure stood up? And perhaps even actively serving a critical business need? In these cases, you may wonder, is it even possible to adopt Pulumi, without downtime or a major disturbance to your existing infrastructure? The answer is **yes**!
+If you've fallen in love with Pulumi, it might not be obvious how to adopt it. For new projects, write your [infrastructure as code](/topics/infrastructure-as-code/) using Pulumi from the start. But what if you already have infrastructure stood up? And perhaps even actively serving a critical business need? In these cases, you may wonder, is it even possible to adopt Pulumi, without downtime or a major disturbance to your existing infrastructure? The answer is **yes**!
 
 This user guide offers a tour of tried-and-true tools and techniques that can be used to migrate any infrastructure to Pulumi, regardless of how that infrastructure was originally provisioned in the [cloud tooling ecosystem](/docs/iac/comparisons/). These techniques range from coexisting with this infrastructure &mdash; either temporarily or permanently &mdash; to adopting infrastructure and converting existing infrastructure as code projects.
 

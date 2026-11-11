@@ -24,7 +24,7 @@ aliases:
 - /docs/iac/comparisons/cdk-vs-terraform/
 ---
 
-Pulumi and [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) are both infrastructure as code tools that let you author cloud resources in general-purpose programming languages. They differ in how programs are turned into provisioned infrastructure: Pulumi runs programs directly through its own deployment engine and supports any cloud or SaaS platform through the [Pulumi Registry](/registry/), while AWS CDK transpiles programs into [AWS CloudFormation](/docs/iac/comparisons/cloudformation/) templates that the AWS CloudFormation service deploys, and supports AWS only.
+Pulumi and [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) are both [infrastructure as code](/topics/infrastructure-as-code/) tools that let you author cloud resources in general-purpose programming languages. They differ in how programs are turned into provisioned infrastructure: Pulumi runs programs directly through its own deployment engine and supports any cloud or SaaS platform through the [Pulumi Registry](/registry/), while AWS CDK transpiles programs into [AWS CloudFormation](/docs/iac/comparisons/cloudformation/) templates that the AWS CloudFormation service deploys, and supports AWS only.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of AWS CDK.
 

@@ -20,7 +20,7 @@ aliases:
     - /docs/iac/concepts/how-pulumi-works/
 ---
 
-This page describes how Pulumi Infrastructure as Code (IaC) turns a program into deployed cloud resources.
+This page describes how Pulumi [Infrastructure as Code (IaC)](/topics/infrastructure-as-code/) turns a program into deployed cloud resources.
 
 ## Running a Pulumi program
 

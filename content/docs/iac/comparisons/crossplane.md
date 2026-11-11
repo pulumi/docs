@@ -17,7 +17,7 @@ aliases:
 - /docs/iac/concepts/vs/crossplane/
 ---
 
-Pulumi and [Crossplane](https://www.crossplane.io/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms, but they take different architectural approaches. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), plus YAML and [HCL](/docs/iac/languages-sdks/hcl/), and runs through a CLI or an embeddable SDK. Crossplane extends Kubernetes into a control plane: infrastructure is defined as Kubernetes resources in YAML and reconciled continuously by controllers running inside a cluster.
+Pulumi and [Crossplane](https://www.crossplane.io/) are both declarative [infrastructure as code](/topics/infrastructure-as-code/) tools that provision resources across clouds and SaaS platforms, but they take different architectural approaches. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), plus YAML and [HCL](/docs/iac/languages-sdks/hcl/), and runs through a CLI or an embeddable SDK. Crossplane extends Kubernetes into a control plane: infrastructure is defined as Kubernetes resources in YAML and reconciled continuously by controllers running inside a cluster.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of Crossplane.
 
