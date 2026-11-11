@@ -82,7 +82,7 @@ details:
                     package main
 
                     import (
-                        "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+                        "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
                         "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
                     )
 
@@ -126,6 +126,9 @@ details:
                                 VpcSecurityGroupIds: pulumi.StringArray{group.ID()},
                                 Ami:                 pulumi.String(ami.Id),
                             })
+                            if err != nil {
+                                return err
+                            }
 
                             // Export the resulting server's IP address and DNS name.
                             ctx.Export("publicIp", srv.PublicIp)
@@ -191,15 +194,14 @@ details:
                 package webserver;
 
                 import com.pulumi.Context;
-                import com.pulumi.Exports;
-                import com.pulumi.Pulumi;
+                                import com.pulumi.Pulumi;
                 import com.pulumi.aws.ec2.Ec2Functions;
                 import com.pulumi.aws.ec2.Instance;
                 import com.pulumi.aws.ec2.InstanceArgs;
                 import com.pulumi.aws.ec2.SecurityGroup;
                 import com.pulumi.aws.ec2.SecurityGroupArgs;
                 import com.pulumi.aws.ec2.inputs.GetAmiArgs;
-                import com.pulumi.aws.ec2.inputs.GetAmiFilter;
+                import com.pulumi.aws.ec2.inputs.GetAmiFilterArgs;
                 import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
                 import com.pulumi.aws.ec2.outputs.GetAmiResult;
                 import com.pulumi.core.Output;
@@ -212,13 +214,16 @@ details:
                         Pulumi.run(App::stack);
                     }
 
-                    public static Exports stack(Context ctx) {
+                    public static void stack(Context ctx) {
                         final var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
-                                .filters(new GetAmiFilter("name", List.of("al2023-ami-2023.*-x86_64")))
+                                .filters(GetAmiFilterArgs.builder()
+                                        .name("name")
+                                        .values("al2023-ami-2023.*-x86_64")
+                                        .build())
                                 .owners("137112412989")
                                 .mostRecent(true)
                                 .build()
-                        ).thenApply(GetAmiResult::id);
+                        ).applyValue(GetAmiResult::id);
 
                         final var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()
                                 .ingress(SecurityGroupIngressArgs.builder()
@@ -241,15 +246,14 @@ details:
                         final var server = new Instance("web-server-www", InstanceArgs.builder()
                                 .tags(Map.of("Name", "web-server-www"))
                                 .instanceType(Output.ofRight(com.pulumi.aws.ec2.enums.InstanceType.T2_Micro))
-                                .vpcSecurityGroupIds(group.getId().applyValue(List::of))
-                                .ami(Output.of(ami))
+                                .vpcSecurityGroupIds(group.id().applyValue(List::of))
+                                .ami(ami)
                                 .userData(userData)
                                 .build()
                         );
 
                         ctx.export("publicIp", server.publicIp());
                         ctx.export("publicHostName", server.publicDns());
-                        return ctx.exports();
                     }
                 }
             - title: Pulumi.yaml
@@ -258,41 +262,41 @@ details:
                 name: webserver
                 runtime: yaml
                 description: Basic example of an AWS web server accessible over HTTP
-                configuration:
-                InstanceType:
-                    type: String
-                    default: t3.micro
+                config:
+                    InstanceType:
+                        type: string
+                        default: t3.micro
                 variables:
                     ec2ami:
-                        Fn::Invoke:
-                        Function: aws:getAmi
-                        Arguments:
-                            filters:
-                              - name: name
-                                values: ["al2023-ami-2023.*-x86_64"]
-                            owners: ["137112412989"]
-                            mostRecent: true
-                        Return: id
+                        fn::invoke:
+                            function: aws:ec2:getAmi
+                            arguments:
+                                filters:
+                                  - name: name
+                                    values: ["al2023-ami-2023.*-x86_64"]
+                                owners: ["137112412989"]
+                                mostRecent: true
+                            return: id
                 resources:
                     WebSecGrp:
                         type: aws:ec2:SecurityGroup
                         properties:
-                        ingress:
-                            - protocol: tcp
-                              fromPort: 80
-                              toPort: 80
-                              cidrBlocks: ["0.0.0.0/0"]
+                            ingress:
+                              - protocol: tcp
+                                fromPort: 80
+                                toPort: 80
+                                cidrBlocks: ["0.0.0.0/0"]
                     WebServer:
                         type: aws:ec2:Instance
                         properties:
-                        instanceType: ${InstanceType}
-                        ami: ${ec2ami}
-                        userData: |-
-                            #!/bin/bash
-                            echo 'Hello, World from ${WebSecGrp.arn}!' > index.html
-                            nohup python3 -m http.server 80 &
-                        vpcSecurityGroupIds:
-                            - ${WebSecGrp}
+                            instanceType: ${InstanceType}
+                            ami: ${ec2ami}
+                            userData: |-
+                                #!/bin/bash
+                                echo 'Hello, World from ${WebSecGrp.arn}!' > index.html
+                                nohup python3 -m http.server 80 &
+                            vpcSecurityGroupIds:
+                              - ${WebSecGrp}
                 outputs:
                     PublicIp: ${WebServer.publicIp}
                     PublicHostName: ${WebServer.publicDns}
