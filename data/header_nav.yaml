@@ -84,7 +84,7 @@ items:
             icon: users-three
             track: header-engineers-community
           - label: Engineers love Pulumi
-            href: /testimonials/
+            href: /love/
             description: Hear from engineers why they love us
             icon: heart
             track: header-engineers-testimonials

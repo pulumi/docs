@@ -107,7 +107,7 @@ Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi
 - **`/subscribe`**: the newsletter signup page, built from `apps/www/src/content/section-pages/subscribe.yaml`. It replaces the HubSpot page at `info.pulumi.com/newsletter-subscribe`, which HubSpot redirects here. The footer's newsletter signup in `data/footer.yml` is a separate HubSpot form.
 - **`/agent-start`, `/onboard.md`**: the coding-agent onboarding page, built from `apps/www/src/content/section-pages/agent-start.yaml`, and the prompt it tells agents to fetch, served from `apps/www/src/data/onboard.md`. Edit the onboarding prompt there.
 - **`/gads/infrastructure-as-code`**: the Google Ads landing page, built from `apps/www/src/content/section-pages/gads/infrastructure-as-code.yaml`. The other Google Ads pages are retired; `scripts/redirects/gads-redirects.txt` 301s them to `/`, and `content/gads/_index.md` keeps `/gads/` itself redirecting to `/`.
-- **`/testimonials`**: the "Engineers love Pulumi" quote wall, built from `apps/www/src/pages/testimonials/` with its quotes in `apps/www/src/data/testimonials/love.yaml`. The header nav, `/about/`, and a blog post link to it.
+- **`/love`**: the "Engineers love Pulumi" quote wall, built from `apps/www/src/pages/love/` with its quotes in `apps/www/src/data/testimonials/love.yaml`. `scripts/redirects/love-redirects.txt` 301s the old `/testimonials/` URL to it.
 
 When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list. marketing-web's sitemap at `/sitemap-www-index.xml` (listed in `layouts/robots.txt`) lists every page it builds that isn't noindex, so ship the proxy path in the same release as the page.
 
