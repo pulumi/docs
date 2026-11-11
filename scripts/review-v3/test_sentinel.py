@@ -1697,6 +1697,19 @@ def test_review_error_without_a_review_is_red_not_pending():
     assert "review:waived" in v.summary  # red rows offer the break-glass again
 
 
+def test_review_error_with_a_stale_card_asks_for_update_review():
+    """The errored branch is only for a PR that never got a review. A stale
+    card plus a lingering `review:error` (say, a failed /update-review) is a
+    stale review, and the fix is `/update-review`, not `/new-review`."""
+    stale = author_card([], state=_state_with([]), head="b" * 40)
+    gh = StubGh(pr=pr_meta(labels=["review:error"]), files=[docs_file_substantive()],
+                comments=[stale])
+    g1 = _gate(sentinel.evaluate(gh, CONFIG), "review")
+    assert g1.status == "red"
+    assert "/update-review" in g1.message, g1.message
+    assert "errored before it posted" not in g1.message, g1.message
+
+
 def test_red_plus_pending_concludes_failure_and_pending_alone_writes_the_strip():
     """Any red gate wins over a pending one; a pending-only verdict still
     tells the author what the merge is waiting on."""
@@ -1747,9 +1760,12 @@ def test_label_event_filter_covers_every_label_the_evaluator_reads():
     # own runs, and the Sentinel re-runs when those runs complete.
     for lane in ("Pre-merge Review (main)", "Pre-merge Review (update-review)"):
         assert f'"{lane}"' in wf.split("workflow_run:", 1)[1].split("workflow_dispatch:", 1)[0], lane
+    # Match the call that sets the label, not any mention of it: both lanes
+    # name it in plenty of comments.
     for lane_file in ("claude-code-review.yml", "claude-update.yml"):
         lane_wf = (REPO_ROOT / ".github" / "workflows" / lane_file).read_text()
-        assert sentinel.REVIEW_ERROR_LABEL in lane_wf, lane_file
+        code = "\n".join(l for l in lane_wf.splitlines() if not l.lstrip().startswith("#"))
+        assert re.search(rf"--label {re.escape(sentinel.REVIEW_ERROR_LABEL)}(?![\w:/-])", code), lane_file
     assert not missing, (
         "labels the evaluator reads that the workflow's label-event filter "
         f"drops (they only take effect on the next unrelated event): {missing}"
