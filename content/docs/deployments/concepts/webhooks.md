@@ -208,6 +208,8 @@ The following table describes the various event filters available and the contex
 | `policy_violation_mandatory`      | `policy_violation`          | Organization or Stack      | When a mandatory policy violation is detected.   |
 | `policy_violation_advisory`       | `policy_violation`          | Organization or Stack      | When an advisory policy violation is detected.   |
 
+Canceled and timed-out deployments are reported as failed and trigger `deployment_failed`, and a deployment that's [skipped](/docs/deployments/operations/deployment-status/) after 7 days in the queue doesn't trigger any event.
+
 And this table describes the various filter groups available to easily subscribe to all events within a group.
 
 | Group          | Event Kinds Included                                 |
@@ -358,6 +360,9 @@ Each webhook will contain an `organization` field, which is the organization nam
 	"status": "running"
 }
 ```
+
+A deployment payload's `status` is one of `queued`, `running`, `succeeded`, or `failed`.
+For how these map to the statuses the REST API reports, see [Deployment status](/docs/deployments/operations/deployment-status/#status-names-across-pulumi-cloud).
 
 ##### Drift detection
 
