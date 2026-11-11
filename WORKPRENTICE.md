@@ -10,6 +10,10 @@ Match the pages already under `content/docs/iac/comparisons/`: `h1: Pulumi vs. X
 
 Fixing or improving pages we already own: go ahead. Proposing a whole new category of content, however good the Search Console numbers look: open an issue and make the case first.
 
+## The docs aren't an SEO link farm
+
+Don't add links from `content/docs/` to `/topics/`, `/what-is/`, `/product/`, or any other marketing page, and don't retarget existing docs links at one. Not one per page, not "contextual," not to help a hub rank. That's the rule in `STYLE-GUIDE.md` §Docs link to docs, and it's not up for an SEO trade-off. If you want link equity for a `/topics/` page, that work lives in pulumi/marketing-web or the blog. The few `/topics/` links already in the docs are legacy, not precedent, so don't cite them.
+
 ## Refresh the review after you push a reviewer's change
 
 A push only refreshes the pinned review on its own when it fixes lines a 🚨 finding flagged. Anything else, including a change a human reviewer asked for, leaves the review stale and the Sentinel's G1 red. After such a push, comment `/update-review <one line on what changed>` (the command starts the comment; the old `@claude … #update-review` shape runs nothing). (Merging the base branch is the exception: an unchanged diff carries the review across automatically.)
