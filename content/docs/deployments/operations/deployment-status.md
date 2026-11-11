@@ -26,7 +26,7 @@ For the status of individual steps, and the definition of each field, see the [D
 | `running` | The deployment is executing. |
 | `succeeded` | The deployment completed successfully. |
 | `failed` | The deployment didn't complete successfully. This includes deployments that errored, timed out, or were canceled. |
-| `skipped` | The deployment never ran, because it stayed in the queue for longer than 7 days. |
+| `skipped` | The deployment never ran, either because it stayed in the queue for longer than 7 days, or because a newer deployment of the stack was queued while [skip intermediate deployments](/docs/deployments/concepts/settings/skip-intermediate-deployments/) was enabled. |
 
 `succeeded`, `failed`, and `skipped` are terminal: a deployment in one of them doesn't change status again.
 
@@ -44,7 +44,7 @@ stateDiagram-v2
     [*] --> not_started
     not_started --> accepted
     not_started --> failed: canceled
-    not_started --> skipped: 7 days in queue
+    not_started --> skipped: expired or superseded
     accepted --> running
     accepted --> failed
     running --> succeeded
@@ -55,7 +55,8 @@ stateDiagram-v2
     not_started: not-started
 ```
 
-The deployment queue, not the runner, sets `skipped`, when it removes a deployment that hasn't started within 7 days.
+The deployment queue, not the runner, sets `skipped`.
+It does so when it removes a deployment that hasn't started within 7 days, or when it drops a queued deployment in favor of a newer one because [skip intermediate deployments](/docs/deployments/concepts/settings/skip-intermediate-deployments/) is enabled.
 For the rules that govern how long a deployment waits, see [Deployment queue](/docs/deployments/operations/deployment-queue/).
 
 ## Status names across Pulumi Cloud
