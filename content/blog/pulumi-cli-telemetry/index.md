@@ -3,10 +3,7 @@ title: "Adding telemetry to the Pulumi CLI"
 date: 2026-11-13
 draft: false
 meta_desc: "Starting with v3.276.0, the Pulumi CLI collects anonymous usage telemetry. Here's what we collect, why, and how to opt out."
-# Leave blank — add a real hero image later with /blog-feature-image or a
-# designer-supplied one (1884x1256). Never commit a placeholder. Required
-# before publishing unless the post is `category: general` or `draft: true`.
-feature_image:
+feature_image: feature.png
 authors:
     - tatiana-cooke
 tags:
