@@ -464,17 +464,19 @@ def test_mechanical_pr_succeeds_once_the_lane_team_approves():
     assert v.conclusion == "success", v.to_json()
 
 
-def test_substantive_no_review_g1_red():
+def test_substantive_no_review_g1_pending():
     gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
     v = sentinel.evaluate(gh, CONFIG)
-    assert v.conclusion == "failure"
+    # Still blocks the merge (a pending required status), without a red X.
+    assert v.conclusion == "pending"
     g1 = _gate(v, "review")
-    assert g1.status == "red"
+    assert g1.status == "pending"
     # The first review is usually still running: say so, don't hand out a command.
     assert "hasn't posted yet" in g1.message and "/update-review" not in g1.message
     assert v.title == "Waiting on the automated review", v.title
     st = {x["context"]: x for x in v.to_json()["gate_statuses"]}
     assert st["Sentinel / review"]["description"] == "the automated review is running"
+    assert st["Sentinel / review"]["state"] == "pending"
     # A stale card is different: the review won't rerun by itself.
     stale = author_card([], state=_state_with([]), head="b" * 40)
     g1s = _gate(sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_substantive()],
@@ -567,7 +569,7 @@ def test_missing_head_repo_fact_is_internal():
     # Fail closed: no head.repo key at all ⇒ the stricter (internal) gates.
     gh = StubGh(pr=_no_head_repo(pr_meta(author="drive-by")), files=[docs_file_substantive()])
     v = sentinel.evaluate(gh, CONFIG)
-    assert _gate(v, "review").status == "red"
+    assert _gate(v, "review").status == "pending"
     assert _gate(v, "findings").status == "skip"  # "no review present — see G1", not the external skip
     assert "external" not in v.summary.lower()
 
@@ -751,11 +753,11 @@ def test_bot_authored_pr_the_review_lane_skips_passes_g1_not_g3():
     for branch in ("content-review/x", "fix/broken-links-2026-10-20", "vale/brand-sync-2026-10-12"):
         v = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot", branch=branch),
                                      files=[editions_sync_file()]), CONFIG)
-        assert _gate(v, "review").status == "red", branch
+        assert _gate(v, "review").status == "pending", branch
     # And the same branch from a human is reviewed like anything else.
     v = sentinel.evaluate(StubGh(pr=pr_meta(author="someone", branch="chore/sync-pulumi-editions"),
                                  files=[editions_sync_file()]), CONFIG)
-    assert _gate(v, "review").status == "red"
+    assert _gate(v, "review").status == "pending"
 
 
 def test_bot_skip_mirrors_the_review_lane():
@@ -861,7 +863,7 @@ def test_waive_from_a_non_team_member_is_refused_and_says_so():
     gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
                 label_events=_waive_events("randopasserby"))
     v = sentinel.evaluate(gh, CONFIG)
-    assert v.conclusion == "failure", v.to_json()
+    assert v.conclusion == "pending", v.to_json()
     assert "NOT honored" in v.summary
     assert "randopasserby" in v.summary
     assert "WAIVED by" not in v.summary
@@ -1018,7 +1020,7 @@ def test_an_org_token_outage_refuses_the_waive_and_says_the_way_through():
     gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
                 label_events=_waive_events("chris"), membership_error_users={"chris"})
     v = sentinel.evaluate(gh, CONFIG)
-    assert not v.waived and v.conclusion == "failure"
+    assert not v.waived and v.conclusion == "pending"
     assert v.title.startswith("review:waived refused"), v.title
     assert "NOT honored" in v.summary
     assert "a re-applied waive fails the same way" in v.summary, "retrying can't help in an outage"
@@ -1221,7 +1223,7 @@ def test_a_running_staging_deploy_is_a_pending_status_not_a_failure():
     st = {x["context"]: x for x in v.to_json()["gate_statuses"]}
     assert st["Sentinel / staging"]["state"] == "pending"
     assert st["Sentinel / staging"]["target_url"].endswith("/runs/9")
-    assert v.conclusion == "failure" and "a staging deploy (running)" in v.title
+    assert v.conclusion == "pending" and "a staging deploy (running)" in v.title
 
 
 def test_gate_details_links_go_where_you_act():
@@ -1499,8 +1501,8 @@ def test_report_only_wraps_neutral():
     gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
     v = sentinel.evaluate(gh, CONFIG, report_only=True)
     assert v.conclusion == "neutral"
-    assert v.would_be == "failure"
-    assert "`failure`" in v.summary, "the real verdict rides in the summary"
+    assert v.would_be == "pending"
+    assert "`pending`" in v.summary, "the real verdict rides in the summary"
 
 
 def test_draft_neutral():
@@ -1514,7 +1516,13 @@ def test_summary_embeds_brief_and_break_glass():
     v = sentinel.evaluate(gh, CONFIG)
     assert "Summary text." in v.summary
     assert "reviewer footer" not in v.summary
-    assert "review:waived" in v.summary  # break-glass note on red rows
+    # A review that's still running is pending: wait for it, no waive offered.
+    assert "review:waived" not in v.summary
+    stale = author_card([], state=_state_with([]), head="b" * 40)
+    red = sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                                   comments=[brief_comment(), stale]), CONFIG)
+    assert _gate(red, "review").status == "red"
+    assert "review:waived" in red.summary  # break-glass note on red rows
 
 
 def test_update_strip_insert_replace_clear():
@@ -1618,10 +1626,10 @@ def test_not_governed_regen_needs_author_and_label():
     v = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot", labels=["automation/merge"])), CONFIG)
     assert v.conclusion == "success" and v.governed is False
     # pulumi-bot WITHOUT the label is a content-review PR: governed, and with
-    # no review at head G1 goes red.
+    # no review at head G1 is pending.
     v2 = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot", branch="content-review/x"),
                                   files=[docs_file_substantive()]), CONFIG)
-    assert v2.governed is True and _gate(v2, "review").status == "red"
+    assert v2.governed is True and _gate(v2, "review").status == "pending"
     # A human wearing the label is still governed.
     v3 = sentinel.evaluate(StubGh(pr=pr_meta(author="someone", labels=["automation/merge"]),
                                   files=[docs_file_substantive()]), CONFIG)
@@ -1649,7 +1657,7 @@ def test_prose_flagged_still_demotes_mechanical():
     v2 = sentinel.evaluate(StubGh(pr=pr_meta(labels=["review:prose-flagged"]),
                                   files=[docs_file_mechanical()]), CONFIG)
     assert v2.mechanical is False
-    assert _gate(v2, "review").status == "red"
+    assert _gate(v2, "review").status == "pending"
     # Without the flag the same diff is mechanical (G1 only).
     v3 = sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_mechanical()]), CONFIG)
     assert v3.mechanical is True and v3.to_json()["mechanical"] is True
@@ -1673,6 +1681,39 @@ def test_workflow_has_no_concurrency_group_and_narrows_label_events():
     for label in ("review:waived", "review:oversized", "review:trivial",
                   "review:frontmatter-only", "review:prose-flagged"):
         assert f"github.event.label.name == '{label}'" in wf, label
+
+
+def test_review_error_without_a_review_is_red_not_pending():
+    """`review:error` with no review means the run died: nothing is in
+    flight, so don't say "the automated review is running"."""
+    gh = StubGh(pr=pr_meta(labels=["review:error"]), files=[docs_file_substantive()])
+    v = sentinel.evaluate(gh, CONFIG)
+    g1 = _gate(v, "review")
+    assert g1.status == "red" and "/new-review" in g1.message, g1.message
+    assert v.conclusion == "failure"
+    assert v.title == "Waiting on a current review (/new-review)", v.title
+    st = {x["context"]: x for x in v.to_json()["gate_statuses"]}
+    assert st["Sentinel / review"]["state"] == "failure"
+    assert "review:waived" in v.summary  # red rows offer the break-glass again
+
+
+def test_red_plus_pending_concludes_failure_and_pending_alone_writes_the_strip():
+    """Any red gate wins over a pending one; a pending-only verdict still
+    tells the author what the merge is waiting on."""
+    run = {"id": 9, "html_url": "https://github.com/pulumi/docs/actions/runs/9", "status": "queued"}
+    card = author_card([("F1", "must")])
+    both = sentinel.evaluate(StubGh(pr=pr_meta(), files=[infra_file()], workflow_runs=[run],
+                                    comments=[card]), CONFIG)
+    assert _gate(both, "staging").status == "pending" and _gate(both, "findings").status == "red"
+    assert both.conclusion == "failure", both.to_json()
+
+    clean = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[infra_file()], workflow_runs=[run], comments=[clean])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.conclusion == "pending", v.to_json()
+    assert sentinel.update_strip(gh, v, comments=[clean]) is True
+    strip = gh.patched[-1][1].split(sentinel.STRIP_OPEN)[1].split(sentinel.STRIP_CLOSE)[0]
+    assert "⏳ **Merge is waiting on a staging deploy (running).**" in strip, strip
 
 
 def test_label_event_filter_covers_every_label_the_evaluator_reads():
@@ -1702,6 +1743,13 @@ def test_label_event_filter_covers_every_label_the_evaluator_reads():
 
     missing = [l for l in sorted(read_by_evaluator)
                if f"github.event.label.name == '{l}'" not in wf]
+    # `review:error` is the exception: the review lanes set it inside their
+    # own runs, and the Sentinel re-runs when those runs complete.
+    for lane in ("Pre-merge Review (main)", "Pre-merge Review (update-review)"):
+        assert f'"{lane}"' in wf.split("workflow_run:", 1)[1].split("workflow_dispatch:", 1)[0], lane
+    for lane_file in ("claude-code-review.yml", "claude-update.yml"):
+        lane_wf = (REPO_ROOT / ".github" / "workflows" / lane_file).read_text()
+        assert sentinel.REVIEW_ERROR_LABEL in lane_wf, lane_file
     assert not missing, (
         "labels the evaluator reads that the workflow's label-event filter "
         f"drops (they only take effect on the next unrelated event): {missing}"
