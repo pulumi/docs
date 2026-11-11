@@ -99,6 +99,9 @@
       - entity-user-assignment-
       - member-
       - organization-
+      # Assigning or removing a role on a principal -- a user, team, or service
+      # account (`principal-role-assigned`, `principal-role-removed`).
+      - principal-role-
       - retrial-
       - service-
       # Subscription changes (`org-downgraded-to-free`, `org-upgraded-to-pro`),
