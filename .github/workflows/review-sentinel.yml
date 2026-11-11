@@ -224,7 +224,7 @@ jobs:
         if: steps.pr.outputs.pr != '' && steps.waive.outputs.waived == 'true'
         id: esc-secrets
         continue-on-error: true
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
 
       # Base repo default branch ONLY — see the SECURITY INVARIANT above.
       #

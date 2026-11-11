@@ -222,7 +222,7 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         if: steps.head.outputs.superseded != 'true'
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
 
       - name: Checkout repository
         if: |
@@ -259,7 +259,7 @@ jobs:
         if: |
           steps.head.outputs.superseded != 'true' &&
           needs.gate.outputs.quick != 'accept' && needs.gate.outputs.quick != 'approve'
-        uses: jdx/mise-action@v4
+        uses: jdx/mise-action@v5
         with:
           cache: true
 
@@ -523,7 +523,7 @@ jobs:
 
       - name: Install mise-managed tools (quick fell back to the model)
         if: steps.full-checkout.outcome == 'success'
-        uses: jdx/mise-action@v4
+        uses: jdx/mise-action@v5
         with:
           cache: true
 
