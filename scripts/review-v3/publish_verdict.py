@@ -16,8 +16,9 @@ A commit status belongs to no suite, so nothing can supersede it:
 
   * `state` from the conclusion: `neutral` (report-only, draft) passes as
     `success` — GitHub already counted a neutral check as passing —
-    `action_required` (couldn't evaluate) is `error`, and anything unknown
-    fails closed.
+    `pending` (only in-flight gates left) is `pending`, which a required
+    status treats as not-yet-passing, `action_required` (couldn't evaluate)
+    is `error`, and anything unknown fails closed.
   * `description` is the verdict title (140-char API limit).
   * `target_url` is this workflow run. publish_guard.py reads the run id
     back out of it, and the run's job summary carries the full gate table
@@ -49,7 +50,7 @@ from publish_guard import CHECK_NAME
 
 DESCRIPTION_MAX = 140
 STATE_FOR = {"success": "success", "neutral": "success",
-             "failure": "failure", "action_required": "error"}
+             "failure": "failure", "pending": "pending", "action_required": "error"}
 
 
 def status_state(conclusion: str | None) -> str:
@@ -93,7 +94,10 @@ def legacy_check_runs(check_runs: list[dict]) -> list[dict]:
 
 
 def mirror_payload(verdict: dict) -> dict:
-    return {"status": "completed", "conclusion": verdict.get("conclusion") or "failure",
+    # A completed check-run has no pending conclusion; the legacy mirror only
+    # has to keep blocking, so a pending verdict mirrors as a failure.
+    c = verdict.get("conclusion") or "failure"
+    return {"status": "completed", "conclusion": "failure" if c == "pending" else c,
             "output": {"title": verdict.get("title") or "", "summary": verdict.get("summary") or ""}}
 
 
@@ -184,6 +188,8 @@ def _self_test() -> int:
     assert status_payload(v("neutral", "Draft — not evaluated"), url)["state"] == "success"
     assert status_payload(v("failure", "2 gate(s) red"), url)["state"] == "failure"
     assert status_payload(v("action_required"), url)["state"] == "error"
+    assert status_payload(v("pending", "Waiting on the automated review"), url)["state"] == "pending"
+    assert mirror_payload(v("pending"))["conclusion"] == "failure"
     assert status_payload(v("cancelled"), url)["state"] == "failure"       # unknown fails closed
     assert status_payload(v(None), url)["state"] == "failure"
     long = status_payload(v("failure", "x" * 200), url)["description"]

@@ -1015,6 +1015,17 @@ def test_a_red_sentinel_alone_is_not_red_ci():
     assert p["verdict"] == "blocked" and "checks:red:lint" in p["reasons"]
 
 
+def test_a_pending_sentinel_alone_is_not_pending_ci():
+    # The Sentinel posts pending while the first review is still running.
+    pending = [{"context": "Sentinel", "state": "pending", "description": "Waiting on the automated review"},
+               _gate_status("review", "pending", "the automated review is running")]
+    p = row(run([stampable(1, statuses=pending)]), 1)
+    assert not any(r.startswith("checks:") for r in p["reasons"]), p["reasons"]
+    build = {"name": "build", "status": "in_progress", "conclusion": None}
+    p = row(run([stampable(1, statuses=pending, check_runs=[build])]), 1)
+    assert "checks:pending:build" in p["reasons"], p["reasons"]
+
+
 def _gate_status(name, state, desc):
     return {"context": f"Sentinel / {name}", "state": state, "description": desc}
 
