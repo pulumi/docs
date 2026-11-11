@@ -8,11 +8,11 @@ group = ec2.SecurityGroup('web-secgrp', ingress=[
 
 user_data = '#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &'
 
-# Look up the latest Amazon Linux 2 AMI.
+# Look up the latest Amazon Linux 2023 AMI.
 ami = ec2.get_ami_output(
     owners=["amazon"],
     most_recent=True,
-    filters=[{"name": "name", "values": ["amzn2-ami-hvm-*-x86_64-gp2"]}])
+    filters=[{"name": "name", "values": ["al2023-ami-2023.*-x86_64"]}])
 
 server = ec2.Instance('web-server-www',
     instance_type="t2.micro",
