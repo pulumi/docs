@@ -9,6 +9,11 @@ aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "KubeCon + CloudNativeCon North America 2026"
+  title: "Why Are You Still Wasting Whole GPUs? Hardware-Level Sharing, Scheduled with DRA"
+  url: "https://kubecon-cloudnativecon-north-america-2026.sessionize.com/session/1243199"
+  date: 2026-11-10T16:40:00.000-07:00
+  slides: "https://sessionize.com/download/nbafxeb~BGagURuA7x6e2FcHoCqyLK.pdf~why-are-you-still-wasting-whole-gpus_-hardware-level-sharing-scheduled-with-dra.pdf"
 - event: "KCD UK Edinburgh 2026"
   title: "Your AI Agent Needs More Than a Pod"
   url: "https://community2.cncf.io/events/details/cncf-kcd-uk-presents-kubernetes-community-days-uk-edinburgh-2026/cohost-kcd-uk/"
