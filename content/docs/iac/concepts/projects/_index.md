@@ -138,8 +138,10 @@ description: A precompiled Java Pulumi program.
 runtime:
   name: java
   options:
-    binary: target/my-project-1.0-SNAPSHOT-jar-with-dependencies.jar
+    binary: target/my-project-1.0-SNAPSHOT.jar
 ```
+
+To build this JAR, see [Pre-built JAR files](/docs/iac/languages-sdks/java/#pre-built-jar-files).
 
 {{% /choosable %}}
 
