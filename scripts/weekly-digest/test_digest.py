@@ -257,7 +257,7 @@ def test_sentinel_state_reads_the_status():
     assert digest.sentinel_state([], [st("error", "Couldn't evaluate — action required")]) == "blocked"
     assert digest.sentinel_state([], [st("success", "Preview — would be: success (not enforced yet)")]) == "ready"
     assert digest.sentinel_state([], [st("success", "Preview — would be: failure (not enforced yet)")]) == "blocked"
-    assert digest.sentinel_state([], [st("pending", "Waiting on the automated review")]) == "blocked"
+    assert digest.sentinel_state([], [st("pending", "x")]) == "none"
     assert digest.sentinel_state([], [{"context": "Update Changelog", "state": "success"}]) == "none"
     # across the switch: the newest of a check-run and a status wins
     old_run = {"name": "Sentinel", "status": "completed", "conclusion": "failure",

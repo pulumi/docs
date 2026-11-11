@@ -1683,6 +1683,39 @@ def test_workflow_has_no_concurrency_group_and_narrows_label_events():
         assert f"github.event.label.name == '{label}'" in wf, label
 
 
+def test_review_error_without_a_review_is_red_not_pending():
+    """`review:error` with no review means the run died: nothing is in
+    flight, so don't say "the automated review is running"."""
+    gh = StubGh(pr=pr_meta(labels=["review:error"]), files=[docs_file_substantive()])
+    v = sentinel.evaluate(gh, CONFIG)
+    g1 = _gate(v, "review")
+    assert g1.status == "red" and "/new-review" in g1.message, g1.message
+    assert v.conclusion == "failure"
+    assert v.title == "Waiting on a current review (/new-review)", v.title
+    st = {x["context"]: x for x in v.to_json()["gate_statuses"]}
+    assert st["Sentinel / review"]["state"] == "failure"
+    assert "review:waived" in v.summary  # red rows offer the break-glass again
+
+
+def test_red_plus_pending_concludes_failure_and_pending_alone_writes_the_strip():
+    """Any red gate wins over a pending one; a pending-only verdict still
+    tells the author what the merge is waiting on."""
+    run = {"id": 9, "html_url": "https://github.com/pulumi/docs/actions/runs/9", "status": "queued"}
+    card = author_card([("F1", "must")])
+    both = sentinel.evaluate(StubGh(pr=pr_meta(), files=[infra_file()], workflow_runs=[run],
+                                    comments=[card]), CONFIG)
+    assert _gate(both, "staging").status == "pending" and _gate(both, "findings").status == "red"
+    assert both.conclusion == "failure", both.to_json()
+
+    clean = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[infra_file()], workflow_runs=[run], comments=[clean])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.conclusion == "pending", v.to_json()
+    assert sentinel.update_strip(gh, v, comments=[clean]) is True
+    strip = gh.patched[-1][1].split(sentinel.STRIP_OPEN)[1].split(sentinel.STRIP_CLOSE)[0]
+    assert "⏳ **Merge is waiting on a staging deploy (running).**" in strip, strip
+
+
 def test_label_event_filter_covers_every_label_the_evaluator_reads():
     """Derived, not restated — a hardcoded list is how one went missing.
 
@@ -1710,6 +1743,13 @@ def test_label_event_filter_covers_every_label_the_evaluator_reads():
 
     missing = [l for l in sorted(read_by_evaluator)
                if f"github.event.label.name == '{l}'" not in wf]
+    # `review:error` is the exception: the review lanes set it inside their
+    # own runs, and the Sentinel re-runs when those runs complete.
+    for lane in ("Pre-merge Review (main)", "Pre-merge Review (update-review)"):
+        assert f'"{lane}"' in wf.split("workflow_run:", 1)[1].split("workflow_dispatch:", 1)[0], lane
+    for lane_file in ("claude-code-review.yml", "claude-update.yml"):
+        lane_wf = (REPO_ROOT / ".github" / "workflows" / lane_file).read_text()
+        assert sentinel.REVIEW_ERROR_LABEL in lane_wf, lane_file
     assert not missing, (
         "labels the evaluator reads that the workflow's label-event filter "
         f"drops (they only take effect on the next unrelated event): {missing}"

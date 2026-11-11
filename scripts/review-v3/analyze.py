@@ -1005,7 +1005,8 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     # between the approval and the merge, and the board agrees. (The Sentinel
     # posts pending while its only open gates are in flight, e.g. the first
     # review hasn't landed; the gates row above already says so.)
-    sentinel_only = checks.get("state") in ("red", "pending") and not real_failures and not real_pending
+    sentinel_only = ((checks.get("state") == "red" and not real_failures)
+                     or (checks.get("state") == "pending" and not real_pending))
     if checks.get("state") != "green" and not sentinel_only:
         gate_fail(f"checks:{checks.get('state')}:{','.join((real_failures or real_pending)[:3])}")
         if checks.get("state") == "red":

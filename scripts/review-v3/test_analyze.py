@@ -1026,6 +1026,16 @@ def test_a_pending_sentinel_alone_is_not_pending_ci():
     assert "checks:pending:build" in p["reasons"], p["reasons"]
 
 
+def test_a_red_sentinel_with_a_check_still_running_is_not_red_ci():
+    # The rollup is red only because of the Sentinel; a real check still in
+    # flight must not turn that into "CI is red ()" with empty actions.
+    build = {"name": "build", "status": "in_progress", "conclusion": None}
+    p = row(run([stampable(1, check_runs=_red("sentinel") + [build])]), 1)
+    assert not any(r.startswith("checks:") for r in p["reasons"]), p["reasons"]
+    assert "checks:red" not in p["blockers"]
+    assert "rerun-checks" not in [a["id"] for a in p["actions"]]
+
+
 def _gate_status(name, state, desc):
     return {"context": f"Sentinel / {name}", "state": state, "description": desc}
 

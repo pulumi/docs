@@ -561,8 +561,7 @@ def sentinel_state(check_runs, statuses=()):
     commit status (it published a check-run before 2026-10, and a PR open
     across the switch can carry both). In preview (report-only) mode it
     passes with the real verdict in its title or description ("Preview —
-    would be: success"); an enforcing run passes, fails, or stays pending
-    while a gate is in flight (a pending status blocks the merge too). The
+    would be: success"); an enforcing run passes or fails outright. The
     newest verdict wins, since each gate event re-posts it.
     """
     verdicts = [(r.get("completed_at") or "", r.get("conclusion") == "success",
@@ -570,7 +569,7 @@ def sentinel_state(check_runs, statuses=()):
                 for r in check_runs or [] if r.get("name") == SENTINEL_CHECK and r.get("status") == "completed"]
     verdicts += [(s.get("updated_at") or s.get("created_at") or "", s.get("state") == "success",
                   s.get("description") or "")
-                 for s in statuses or [] if s.get("context") == SENTINEL_CHECK]
+                 for s in statuses or [] if s.get("context") == SENTINEL_CHECK and s.get("state") != "pending"]
     if not verdicts:
         return "none"
     _, passed, title = max(verdicts, key=lambda v: v[0])

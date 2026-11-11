@@ -739,6 +739,12 @@ REVIEW_LANE_REVIEWED_BOT_BRANCHES = ("content-review/", "fix/broken-links-", "va
 # evaluator_reads` can derive the workflow's trigger list from the evaluator
 # instead of restating it.
 OVERSIZED_LABEL = "review:oversized"
+# Set by the review lanes (claude-code-review.yml, claude-update.yml) inside
+# their own runs, so it needs no label-event trigger: the Sentinel already
+# re-evaluates on those workflows' `workflow_run` completion, after the label
+# lands. `test_label_event_filter_covers_every_label_the_evaluator_reads`
+# checks that route instead.
+REVIEW_ERROR_LABEL = "review:error"
 TRIAGE_PROSE_MARKER = "<!-- TRIAGE_PROSE -->"
 
 
@@ -1436,6 +1442,14 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         ))
         skip_note = (f"_Automation PR: the review lane does not review `{skipped_bot}` PRs "
                      "from this branch, so the approving reviewer's review is the review._")
+    elif never_reviewed and REVIEW_ERROR_LABEL in labels:
+        # The first review died before it posted. Nothing is in flight, so
+        # this is red (and offers the waive), not "the review is running".
+        gates.append(Gate(
+            "review", "red",
+            "The automated review errored before it posted; comment `/new-review` to retry.",
+            short="the automated review errored (/new-review)",
+        ))
     elif never_reviewed:
         # The first review is usually still running: the Sentinel posts on
         # open, minutes before the card. Telling the author to run a command
