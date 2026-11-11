@@ -33,14 +33,14 @@ func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
 
 	const userData = `#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &`
 
-	// Look up the latest Amazon Linux 2 AMI.
+	// Look up the latest Amazon Linux 2023 AMI.
 	ami, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
 		Owners:     []string{"amazon"},
 		MostRecent: pulumi.BoolRef(true),
 		Filters: []ec2.GetAmiFilter{
 			{
 				Name:   "name",
-				Values: []string{"amzn2-ami-hvm-*-x86_64-gp2"},
+				Values: []string{"al2023-ami-2023.*-x86_64"},
 			},
 		},
 	})
