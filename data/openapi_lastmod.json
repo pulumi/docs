@@ -156,12 +156,12 @@
       "lastmod": "2026-08-15"
     },
     "StackUpdates": {
-      "hash": "b701cdf19fc54c3ee9f3f038c5c75ea5e60496448f3982a5d3ead8ac4ed5379e",
-      "lastmod": "2026-09-15"
+      "hash": "47be95b4d5106cb678e409cf026258aefa5d814e67df469ac5357375ccbbd871",
+      "lastmod": "2026-11-11"
     },
     "Stacks": {
-      "hash": "d9c1cefed33a9a596ff4dd08c31cced0ea2be9b0d369f9f38ad0a4a2da4cf095",
-      "lastmod": "2026-10-15"
+      "hash": "332282bc0d9ea8e3df1ae01b78305c516f9c74ef793aa4c4362af5d1cf08937c",
+      "lastmod": "2026-11-11"
     },
     "Users": {
       "hash": "363e44cc36585f276146e22aa3486886ab7c902adcb5591f334f226701bda588",
@@ -712,8 +712,8 @@
       "hash": "df70788edeecb6208d2f4d0919c11d836cb48e1a4005830123152a9427dfbad4"
     },
     "AppRenewUpdateLeaseRequest": {
-      "hash": "7c85eaeb51b8e243622b1ad186e590e15703c7b27cb881b9beaa95ae0b8d189b",
-      "lastmod": "2026-09-15"
+      "hash": "b5521720c12fc617791209faab048ae24a55fa145a6ed393930d56d037e8393a",
+      "lastmod": "2026-11-11"
     },
     "AppRenewUpdateLeaseResponse": {
       "hash": "740ba620ee8ce54441f329085b5bfb50594885f4a1bde47a017e55f3dfa16828"
@@ -771,7 +771,8 @@
       "hash": "d4cc612a73df8bfcd201c3d28d9ab3f0d6243a35c5ea73141ceceb1bd2af5220"
     },
     "AppStackRenameRequest": {
-      "hash": "be5f938faee7e15685521245909b9b8df904ceac899b71e0f1cc950abbe59811"
+      "hash": "3b30ea8aa93046be1ce736efbe455c82cfc57d20b68f3e72e751879ceef94daa",
+      "lastmod": "2026-11-11"
     },
     "AppStackSummary": {
       "hash": "10d937926a94881028369cd7817c371c1bf5460a008f91e74fb87b1400a28e4d",
@@ -1217,7 +1218,8 @@
       "hash": "9a324b7cdb60f771e2f3c8543f67bed6ba96d12ec905cd43459f9e5ed7768c35"
     },
     "CreateCoherenceWindowSubgroupRequest": {
-      "hash": "90dbcce5256b9278998ec10c26d7163bd9b7a24110fbbe97476668055ee1c018"
+      "hash": "0377039c319f0bbc0ea950da9c8a42d309adc1b7e101c23e5d7fe70732ad56e1",
+      "lastmod": "2026-11-11"
     },
     "CreateCoherenceWindowSubgroupResponse": {
       "hash": "ef07c9f0e3d5bf1897d4457b406d88abb29932a247780ff7b57fc18e5bb7e1d3"
@@ -1980,7 +1982,8 @@
       "lastmod": "2026-09-15"
     },
     "IncludeMapKeyTypes": {
-      "hash": "8db39a905873a8344e8df31fa258f486c6007d46fc0eb84fbb32fcab0faff1c3"
+      "hash": "fc75a5aa63b21271bc1b90641d017f100aaac3113ee721ac3cf80d66e7d88691",
+      "lastmod": "2026-11-11"
     },
     "InitiateOAuthRequest": {
       "hash": "3215824f8488f2afdf3ec0a73677414dbf94017bd314e07e2ab379e5e3648301"
@@ -3379,8 +3382,8 @@
       "lastmod": "2026-05-13"
     },
     "Webhook": {
-      "hash": "bf61497b82477d495acf65437bfb3ca75fef40c12e888749a97653b4c915d34d",
-      "lastmod": "2026-09-15"
+      "hash": "81b6ffc87ac715a072047c964e738886c666914e66b6811c409921a417ddf72f",
+      "lastmod": "2026-11-11"
     },
     "WebhookDelivery": {
       "hash": "90ab4dbb8b9ec8d070dd2ca355801d41e01adfdee491abadc06a76856b6e3819",
