@@ -52,7 +52,7 @@ Our telemetry is limited to a fixed set of events with enumerated values. We've 
 
 Every event carries two random identifiers: one for your installation, stored in `$PULUMI_HOME/telemetry.json`, and one for the individual command invocation. These let us tell "one person hit this error ten times" apart from "ten people hit it once". They aren't tied to your account, and we don't fingerprint your machine. Deleting `$PULUMI_HOME/telemetry.json` gives you a fresh installation ID.
 
-## What we don't collect
+## What we won't collect
 
 The telemetry pipeline never collects arbitrary data from its environment. Instead, the pipeline only submits values that conform to a published schema that consists of a set of booleans, numbers, and enumerations. This approach helps ensure that the CLI cannot send:
 
