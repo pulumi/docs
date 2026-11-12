@@ -75,7 +75,20 @@ The `jar-with-dependencies` JAR that the `java` template builds fails at startup
 </plugin>
 ```
 
-Then set `binary` to `target/<artifactId>-<version>.jar`. With Gradle, use the [Shadow plugin](https://gradleup.com/shadow/) and call `mergeServiceFiles()` in the `shadowJar` task.
+Then set `binary` to `target/<artifactId>-<version>.jar`.
+
+With Gradle, build the JAR with the [Shadow plugin](https://gradleup.com/shadow/) and configure its `shadowJar` task to merge service files:
+
+```groovy
+shadowJar {
+    mergeServiceFiles()
+    filesMatching('META-INF/services/**') {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    }
+}
+```
+
+In the `java-gradle` template, the JAR is at `app/build/libs/app-all.jar`.
 
 ### Languages
 
