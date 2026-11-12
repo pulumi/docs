@@ -45,7 +45,50 @@ Pulumi supports running Java programs with the following build tools:
 
 - **Apache Maven**: Fully supported (requires Maven 3.6.1 or later). This is the default for the `java` template.
 - **Gradle**: Fully supported. Use the `java-gradle` template to start a Gradle-based project.
-- **JAR files**: You can run a Pulumi program packaged as a pre-built JAR by setting the `binary` runtime option to the path of the JAR. See [`runtime` options](/docs/iac/concepts/projects/project-file/#runtime-options) for details.
+- **JAR files**: You can run a Pulumi program packaged as a pre-built JAR by setting the `binary` runtime option to the path of the JAR. See [Pre-built JAR files](#pre-built-jar-files) and [`runtime` options](/docs/iac/concepts/projects/project-file/#runtime-options) for details.
+
+### Pre-built JAR files
+
+The `jar-with-dependencies` JAR that the `java` template builds fails at startup with `UnsupportedAddressTypeException`. To build a JAR that works, replace the `maven-assembly-plugin` entry in `pom.xml` with `maven-shade-plugin`:
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>3.6.2</version>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals>
+                <goal>shade</goal>
+            </goals>
+            <configuration>
+                <transformers>
+                    <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                        <mainClass>${mainClass}</mainClass>
+                    </transformer>
+                </transformers>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+```
+
+Then set `binary` to `target/<artifactId>-<version>.jar`.
+
+With Gradle, build the JAR with the [Shadow plugin](https://gradleup.com/shadow/) and configure its `shadowJar` task to merge service files:
+
+```groovy
+shadowJar {
+    mergeServiceFiles()
+    filesMatching('META-INF/services/**') {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    }
+}
+```
+
+In the `java-gradle` template, the JAR is at `app/build/libs/app-all.jar`.
 
 ### Languages
 
