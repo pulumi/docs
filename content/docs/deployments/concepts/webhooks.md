@@ -188,14 +188,21 @@ The following table describes the various event filters available and the contex
 |-----------------------------------|-----------------------------|----------------------------|--------------------------------------------------|
 | `stack_created`                   | `stack`                     | Organization webhooks only | When a stack is created.                         |
 | `stack_deleted`                   | `stack`                     | Organization webhooks only | When a stack is deleted.                         |
+| `preview_started`                 | `stack_preview`             | Organization or Stack      | When a stack `preview` starts.                   |
 | `preview_succeeded`               | `stack_preview`             | Organization or Stack      | When a stack `preview` succeeds.                 |
 | `preview_failed`                  | `stack_preview`             | Organization or Stack      | When a stack `preview` fails.                    |
+| `update_started`                  | `stack_update`              | Organization or Stack      | When a stack `update` starts.                    |
 | `update_succeeded`                | `stack_update`              | Organization or Stack      | When a stack `update` succeeds.                  |
 | `update_failed`                   | `stack_update`              | Organization or Stack      | When a stack `update` fails.                     |
+| `destroy_started`                 | `stack_update`              | Organization or Stack      | When a stack `destroy` starts.                   |
 | `destroy_succeeded`               | `stack_update`              | Organization or Stack      | When a stack `destroy` succeeds.                 |
 | `destroy_failed`                  | `stack_update`              | Organization or Stack      | When a stack `destroy` fails.                    |
+| `refresh_started`                 | `stack_update`              | Organization or Stack      | When a stack `refresh` starts.                   |
 | `refresh_succeeded`               | `stack_update`              | Organization or Stack      | When a stack `refresh` succeeds.                 |
 | `refresh_failed`                  | `stack_update`              | Organization or Stack      | When a stack `refresh` fails.                    |
+| `import_started`                  | `stack_update`              | Organization or Stack      | When a stack import starts.                      |
+| `import_succeeded`                | `stack_update`              | Organization or Stack      | When a stack import succeeds.                    |
+| `import_failed`                   | `stack_update`              | Organization or Stack      | When a stack import fails.                       |
 | `deployment_queued`               | `deployment`                | Organization or Stack      | When a deployment is queued.                     |
 | `deployment_started`              | `deployment`                | Organization or Stack      | When a deployment starts running.                |
 | `deployment_succeeded`            | `deployment`                | Organization or Stack      | When a deployment succeeds.                      |
@@ -208,12 +215,16 @@ The following table describes the various event filters available and the contex
 | `policy_violation_mandatory`      | `policy_violation`          | Organization or Stack      | When a mandatory policy violation is detected.   |
 | `policy_violation_advisory`       | `policy_violation`          | Organization or Stack      | When an advisory policy violation is detected.   |
 
+The `*_started` filters fire when an operation begins, before any resources change. On Terraform stacks managed through Pulumi Cloud, the `update_*` filters also match state imports.
+
 And this table describes the various filter groups available to easily subscribe to all events within a group.
 
 | Group          | Event Kinds Included                                 |
 |----------------|------------------------------------------------------|
 | `stacks`       | `stack`, `stack_preview`, `stack_update`             |
 | `deployments`  | `deployment`, `drift_detection`, `drift_remediation` |
+
+Webhooks that don't specify any filters or groups receive all events for their webhook type, including the `*_started` events.
 
 ## Webhook Formats
 
@@ -305,6 +316,30 @@ Each webhook will contain an `organization` field, which is the organization nam
 		"update-replace": 2
 	},
     "isPreview": false
+}
+```
+
+When an operation starts (`*_started` filters), `result` is `in-progress` and `resourceChanges` is empty:
+
+```json
+{
+	"user": {
+		"name": "Morty Smith",
+		"githubLogin": "morty",
+		"avatarUrl": "https://crazy-adventures.net/morty.png"
+	},
+	"organization": {
+		"name": "Crazy Adventures",
+		"githubLogin": "crazy-adventures",
+		"avatarUrl": "https://crazy-adventures.net/logo.png"
+	},
+	"projectName": "website",
+	"stackName": "website-prod",
+	"updateUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/updates/43",
+	"kind": "update",
+	"result": "in-progress",
+	"resourceChanges": {},
+	"isPreview": false
 }
 ```
 
