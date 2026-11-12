@@ -2,7 +2,7 @@
 title: "Adding telemetry to the Pulumi CLI"
 date: 2026-11-13
 draft: false
-meta_desc: "Starting with v3.276.0, the Pulumi CLI collects anonymous usage telemetry. Here's what we collect, why, and how to opt out."
+meta_desc: "Starting with v3.276.0, the Pulumi CLI will collect anonymous usage telemetry. Here's what we'll collect, why, and how to opt out."
 feature_image: feature.png
 authors:
     - tatiana-cooke
@@ -25,7 +25,7 @@ social:
 
 We want to give our users the best possible experience as they build with our IaC platform. In the past year, we've been excited to hear about new usage patterns and even more ambitious projects our users want to take on by leveraging AI in combination with our SDKs and CLI. In order to understand where we may have gaps, we're going to be introducing thoughtful telemetry to the CLI. Users will have the option to opt out if they prefer not to share this telemetry.
 
-Starting with Pulumi CLI v3.276.0, the Pulumi CLI will collect anonymous usage data. This post explains more about why we're collecting this data, what data we'll collect, and how to turn it off with one command or environment variable.
+Starting with the next release (v3.276.0), the Pulumi CLI will collect anonymous usage data. This post explains more about why we're collecting this data, what data we'll collect, and how to turn it off with one command or environment variable.
 
 <!--more-->
 
