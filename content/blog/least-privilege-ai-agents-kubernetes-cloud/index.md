@@ -40,7 +40,7 @@ Least privilege for an AI agent means granting it only the access needed for the
 
 <!--more-->
 
-Most agents that operate infrastructure start life with an engineer's access. Someone exports a cloud profile or points a kubeconfig at the agent, and the agent can do whatever that engineer could. That is convenient for a demo. It is also the setup that turns one wrong tool call into an incident, and it is the combination of excessive functionality, excessive permissions, and excessive autonomy that [OWASP lists as the root cause of excessive agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) in LLM applications.
+It is easy to start an agent with an engineer's access: someone exports a cloud profile or points a kubeconfig at it, and the agent can do whatever that engineer could. That is convenient for a demo. It is also the setup that turns one wrong tool call into an incident. [OWASP names the root causes of excessive agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) in LLM applications as one or more of excessive functionality, excessive permissions, and excessive autonomy, and a borrowed engineer identity supplies all three at once.
 
 This post covers how to give agents that operate Kubernetes and cloud infrastructure, whether you use Pulumi Neo, a coding agent, or an MCP client, only the access each action needs. It focuses on the agent as an operator of your infrastructure. If you are hosting agents as workloads on a cluster, start with [how to run AI agents on Kubernetes with Pulumi](/blog/ai-agents-on-kubernetes/).
 
@@ -63,7 +63,7 @@ A privilege ladder is a list of the kinds of action an agent might take, ordered
 | 5. Apply to production | Runs the update on a production stack | Separate write role and ESC environment, short session | A deployer Role in production namespaces | Mandatory policy packs and human approval |
 | 6. Change access | Edits RBAC, IAM, or trust policies | Not held by the agent | Not held by the agent | Policy block plus a named human approver |
 
-Rungs 1 and 2 are where agents spend most of their time, and they never need write access. Rung 3 is the one that lets an agent propose a change without being able to make it. That is how Neo already works for infrastructure changes: it [changes your IaC through a pull request](/docs/ai/concepts/neo/) rather than editing state directly. The rest of this post builds the rungs out.
+Rungs 1 and 2 are where agents spend most of their time, and they never need write access. Rung 3 is the one that lets an agent propose a change without being able to make it. Neo can [propose changes to your IaC through a pull request](/docs/ai/concepts/neo/permissions/) instead of editing state directly. The rest of this post builds the rungs out.
 
 ## How do you give an agent short-lived cloud credentials?
 
