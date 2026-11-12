@@ -45,7 +45,7 @@ An account comes into existence in one of several ways:
 - **An organization invites them.** An organization admin [invites a member](/docs/administration/concepts/organizations/#inviting-members-to-an-organization) by email address or invite link. The invitee still completes signup themselves; the invitation grants membership once they do.
 - **A SAML identity provider provisions them.** When an organization is backed by SAML SSO, a user who signs in through the identity provider for the first time gets an account created for them. Your organization admin configures this, not you.
 - **SCIM provisions them.** An organization on the Enterprise edition can [sync users and groups from its identity provider](/docs/administration/guides/scim/). SCIM creates accounts ahead of first login and deactivates them when the user is removed upstream.
-- **An AI agent creates one.** The Pulumi CLI can provision an ephemeral [agent account](/docs/administration/concepts/agent-accounts/) when it detects it is running in an agent context with no credentials. A person claims it later to take ownership.
+- **An AI agent creates one.** The Pulumi CLI can provision an ephemeral [agent account](/docs/administration/concepts/agent-accounts/) when `PULUMI_ENABLE_AUTOMATIC_AGENT_SIGNUP=true` is set and it detects it is running in an agent context with no credentials. A person claims it later to take ownership.
 
 ## Account identity
 
