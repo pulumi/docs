@@ -27,6 +27,7 @@
       just the contents and the stretched link. For laying cards out *inside* a
       card (a release page's related events panel), where a card on a card reads
       as a box in a box.
+    - hideTrack: true drops the track line, for the track page, where it repeats.
 */}}
 
 {{ $data := .page }}
@@ -34,6 +35,7 @@
 {{ $title := $data.Params.title }}
 {{ $onDemand := $data.Params.youtube_url }}
 {{ $session := .session }}
+{{ $past := and (not $onDemand) (not (partial "events/is-current.html" (dict "page" $data))) }}
 
 {{ $datetime := $data.Params.sortable_date }}
 {{/* Conferences and the like ("event") are all-day or multi-day: the frontmatter
@@ -84,7 +86,10 @@
                     {{ with $label }}
                         {{ partial "badge.html" (dict "text" . "variant" "ghost") }}
                     {{ end }}
-                    {{ if not $onDemand }}
+                    {{ with and (not .hideTrack) (partial "events/track.html" (dict "page" $data)) }}{{ if ge .index 0 }}
+                        {{ partial "badge.html" (dict "text" (printf "%s · %d of %d" .track.title (add .index 1) (len .parts)) "variant" "brand") }}
+                    {{ end }}{{ end }}
+                    {{ if not (or $onDemand $past) }}
                         {{/* Populated client-side (see resources.ts): a build-time "in X days"
                              would go stale between builds and ignores the visitor's timezone. */}}
                         <span data-event-countdown data-event-date="{{ $datetime | time.Format "2006-01-02T15:04:05Z07:00" }}" hidden></span>
@@ -134,7 +139,7 @@
 
             <div class="flex items-end justify-between gap-3">
                 {{ partial "template-partials/event-card-tags.html" $data }}
-                {{ partial "template-partials/event-card-cta.html" (dict "onDemand" $onDemand) }}
+                {{ partial "template-partials/event-card-cta.html" (dict "onDemand" $onDemand "past" $past) }}
             </div>
         </div>
     </a>

@@ -4,9 +4,12 @@
 
     Parameters:
     - onDemand: truthy when the event has a recording (Watch); otherwise Register
+    - past: truthy when the event has run with no recording (View details)
 */}}
 {{ if .onDemand }}
     <span class="btn btn-ghost-primary btn-lg group-hover:bg-violet-50 shrink-0">{{ partial "icon.html" (dict "name" "play") }}Watch</span>
+{{ else if .past }}
+    <span class="btn btn-ghost btn-lg shrink-0">View details</span>
 {{ else }}
     <span class="btn btn-primary btn-lg group-hover:bg-violet-800 shrink-0">{{ partial "icon.html" (dict "name" "calendar-check") }}Register</span>
 {{ end }}

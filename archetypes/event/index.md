@@ -34,6 +34,12 @@ gated: false
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
+# Part of an ordered group of events? Set the track's slug from
+# data/event_tracks.yml. The card and page then read "<Track> · N of M"
+# (numbered by sortable_date), the page lists every part, and the track gets its
+# own page at /events/tracks/<slug>/.
+# track:
+
 # YouTube embed URL. When set, the event appears in "On-demand recordings".
 # When empty, it appears in "Upcoming events".
 youtube_url:

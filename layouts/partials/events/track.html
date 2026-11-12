@@ -1,0 +1,26 @@
+{{- /* Params: slug, or an event page. Returns false, or dict track/parts/index (index is -1 without a page). */ -}}
+{{- $result := false -}}
+{{- $page := .page -}}
+{{- $slug := .slug -}}
+{{- if and (not $slug) $page }}{{ $slug = $page.Params.track }}{{ end -}}
+{{- with $slug -}}
+    {{- $track := dict "slug" . "title" (. | humanize) -}}
+    {{- range site.Data.event_tracks.tracks }}{{ if eq .slug $slug }}{{ $track = . }}{{ end }}{{ end -}}
+
+    {{- $dated := slice -}}
+    {{- range where (where site.RegularPages "Section" "events") "Params.track" $slug -}}
+        {{- if and .Params.sortable_date (not .Params.unlisted) -}}
+            {{- $dated = $dated | append (dict "page" . "unix" (time.AsTime .Params.sortable_date).Unix) -}}
+        {{- end -}}
+    {{- end -}}
+
+    {{- $parts := slice -}}
+    {{- $index := -1 -}}
+    {{- range $i, $d := sort $dated "unix" -}}
+        {{- $parts = $parts | append $d.page -}}
+        {{- if and $page (eq $d.page.RelPermalink $page.RelPermalink) }}{{ $index = $i }}{{ end -}}
+    {{- end -}}
+
+    {{- $result = dict "track" $track "parts" $parts "index" $index -}}
+{{- end -}}
+{{- return $result -}}
