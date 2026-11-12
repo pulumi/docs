@@ -12,7 +12,7 @@ aliases:
   - /docs/administration/organizations-teams/agent-accounts/
 ---
 
-Agent accounts give AI agents a free ephemeral Pulumi Cloud account to work in, without requiring a human user to sign up first. When the Pulumi CLI detects it is running in an agent context and no Pulumi Cloud credentials are available, it creates an account automatically and continues. The human claims the account later to take permanent ownership.
+Agent accounts give AI agents a free ephemeral Pulumi Cloud account to work in, without requiring a human user to sign up first. When `PULUMI_ENABLE_AUTOMATIC_AGENT_SIGNUP=true` is set and the Pulumi CLI detects it is running in an agent context with no Pulumi Cloud credentials available, it creates an account automatically and continues. The human claims the account later to take permanent ownership.
 
 ## How it works
 
@@ -67,7 +67,7 @@ In these cases, the CLI uses the existing credentials. If multiple agents run on
 
 ## Limitations
 
-- **Agent context only.** The automatic provisioning only triggers when the CLI detects it is running under an AI agent. Humans still see the standard login prompt.
+- **Agent context only.** The automatic provisioning only triggers when `PULUMI_ENABLE_AUTOMATIC_AGENT_SIGNUP=true` is set and the CLI detects it is running under an AI agent. Humans still see the standard login prompt.
 - **Individual account.** An agent account supports one owner. If you have an existing organization with a paid Pulumi subscription, you can transfer the account to your organization after claiming. Otherwise, the agent account is specific to a single user.
 - **Write access for 3 days.** The agent account has write access for 72 hours from provisioning. You have 30 days total from provisioning to claim the account and restore full access.
 - **Claim link is the only recovery path.** If the claim link is lost, there is no recovery path.

@@ -62,7 +62,7 @@ Every Pulumi change has a [preview](/docs/iac/cli/commands/pulumi_preview/) that
 
 ## Zero-friction accounts
 
-An agent that runs the CLI still needs somewhere to store state. [Agent accounts](/docs/administration/concepts/agent-accounts/) remove that friction: when the CLI detects it is running in an agent context with no Pulumi Cloud credentials, it provisions a free ephemeral account automatically and keeps working, printing a claim link the user can redeem later. No human has to sign up first for the agent to get started.
+An agent that runs the CLI still needs somewhere to store state. [Agent accounts](/docs/administration/concepts/agent-accounts/) remove that friction: when `PULUMI_ENABLE_AUTOMATIC_AGENT_SIGNUP=true` is set and the CLI detects it is running in an agent context with no Pulumi Cloud credentials, it provisions a free ephemeral account automatically and keeps working, printing a claim link the user can redeem later. No human has to sign up first for the agent to get started.
 
 ## Next steps
 
