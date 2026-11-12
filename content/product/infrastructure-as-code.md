@@ -30,32 +30,32 @@ sections:
         title: "index.ts"
         code: |
           import * as aws from "@pulumi/aws";
-          import * as awsx from "@pulumi/awsx";
 
-          const vpc = new awsx.ec2.Vpc("vpc");
-          const azs = await aws.getAvailabilityZones({ state: "available" });
+          export = async () => {
+            const vpc = new aws.ec2.Vpc("vpc", { cidrBlock: "10.0.0.0/16" });
+            const azs = await aws.getAvailabilityZones({ state: "available" });
 
-          const subnets = azs.names.map((az, i) =>
-            new aws.ec2.Subnet(`subnet-${i}`, {
-              vpcId: vpc.vpcId,
-              cidrBlock: `10.0.${i}.0/24`,
-              availabilityZone: az,
-            })
-          );
+            const subnets = azs.names.map((az, i) =>
+              new aws.ec2.Subnet(`subnet-${i}`, {
+                vpcId: vpc.id,
+                cidrBlock: `10.0.${i}.0/24`,
+                availabilityZone: az,
+              })
+            );
+          };
 
       - language: python
         label: Python
         title: "__main__.py"
         code: |
           import pulumi_aws as aws
-          import pulumi_awsx as awsx
 
           azs = aws.get_availability_zones(state="available")
-          vpc = awsx.ec2.Vpc("vpc")
+          vpc = aws.ec2.Vpc("vpc", cidr_block="10.0.0.0/16")
 
           for i, az in enumerate(azs.names):
               aws.ec2.Subnet(f"subnet-{i}",
-                  vpc_id=vpc.vpc_id,
+                  vpc_id=vpc.id,
                   cidr_block=f"10.0.{i}.0/24",
                   availability_zone=az,
               )
@@ -69,20 +69,19 @@ sections:
           import (
               "fmt"
 
-              "github.com/pulumi/pulumi-aws/sdk/v6/go/aws"
-              "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
-              awsx "github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/ec2"
+              "github.com/pulumi/pulumi-aws/sdk/v7/go/aws"
+              "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
               "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
           )
 
           func main() {
               pulumi.Run(func(ctx *pulumi.Context) error {
-                  vpc, _ := awsx.NewVpc(ctx, "vpc", nil)
+                  vpc, _ := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{CidrBlock: pulumi.String("10.0.0.0/16")})
                   azs, _ := aws.GetAvailabilityZones(ctx, &aws.GetAvailabilityZonesArgs{State: pulumi.StringRef("available")}, nil)
 
                   for i, az := range azs.Names {
                       ec2.NewSubnet(ctx, fmt.Sprintf("subnet-%d", i), &ec2.SubnetArgs{
-                          VpcId:            vpc.VpcId,
+                          VpcId:            vpc.ID(),
                           CidrBlock:        pulumi.String(fmt.Sprintf("10.0.%d.0/24", i)),
                           AvailabilityZone: pulumi.String(az),
                       })
@@ -100,21 +99,19 @@ sections:
           using Pulumi.Aws;
           using Pulumi.Aws.Ec2;
 
-          return await Deployment.RunAsync(() =>
+          return await Deployment.RunAsync(async () =>
           {
-              var vpc = new Pulumi.Awsx.Ec2.Vpc("vpc");
-              var azs = GetAvailabilityZones.Invoke(new() { State = "available" });
+              var vpc = new Vpc("vpc", new() { CidrBlock = "10.0.0.0/16" });
+              var azs = await GetAvailabilityZones.InvokeAsync(new() { State = "available" });
 
-              var subnets = azs.Apply(result =>
-                  result.Names.Select((az, i) =>
-                      new Subnet($"subnet-{i}", new()
-                      {
-                          VpcId = vpc.VpcId,
-                          CidrBlock = $"10.0.{i}.0/24",
-                          AvailabilityZone = az,
-                      })
-                  ).ToList()
-              );
+              var subnets = azs.Names.Select((az, i) =>
+                  new Subnet($"subnet-{i}", new()
+                  {
+                      VpcId = vpc.Id,
+                      CidrBlock = $"10.0.{i}.0/24",
+                      AvailabilityZone = az,
+                  })
+              ).ToList();
           });
 
       - language: java
@@ -125,6 +122,7 @@ sections:
 
           import com.pulumi.Pulumi;
           import com.pulumi.aws.ec2.Vpc;
+          import com.pulumi.aws.ec2.VpcArgs;
           import com.pulumi.aws.ec2.Subnet;
           import com.pulumi.aws.ec2.SubnetArgs;
           import com.pulumi.aws.AwsFunctions;
@@ -133,7 +131,9 @@ sections:
           public class App {
               public static void main(String[] args) {
                   Pulumi.run(ctx -> {
-                      var vpc = new Vpc("vpc");
+                      var vpc = new Vpc("vpc", VpcArgs.builder()
+                          .cidrBlock("10.0.0.0/16")
+                          .build());
 
                       var azs = AwsFunctions.getAvailabilityZonesPlain(
                           GetAvailabilityZonesPlainArgs.builder()
@@ -162,13 +162,12 @@ sections:
               aws = {
                 source  = "pulumi/aws"
               }
-              awsx = {
-                source  = "pulumi/awsx"
-              }
             }
           }
 
-          resource "awsx_ec2_vpc" "vpc" {}
+          resource "aws_vpc" "vpc" {
+            cidr_block = "10.0.0.0/16"
+          }
 
           data "aws_availability_zones" "available" {
             state = "available"
@@ -176,7 +175,7 @@ sections:
 
           resource "aws_subnet" "subnet" {
             count             = length(data.aws_availability_zones.available.names)
-            vpc_id            = awsx_ec2_vpc.vpc.vpc_id
+            vpc_id            = aws_vpc.vpc.id
             cidr_block        = "10.0.${count.index}.0/24"
             availability_zone = data.aws_availability_zones.available.names[count.index]
           }
@@ -194,19 +193,21 @@ sections:
 
           resources:
             vpc:
-              type: awsx:ec2:Vpc
+              type: aws:ec2:Vpc
+              properties:
+                cidrBlock: 10.0.0.0/16
 
             subnet-0:
               type: aws:ec2:Subnet
               properties:
-                vpcId: ${vpc.vpcId}
+                vpcId: ${vpc.id}
                 cidrBlock: "10.0.0.0/24"
                 availabilityZone: ${azs.names[0]}
 
             subnet-1:
               type: aws:ec2:Subnet
               properties:
-                vpcId: ${vpc.vpcId}
+                vpcId: ${vpc.id}
                 cidrBlock: "10.0.1.0/24"
                 availabilityZone: ${azs.names[1]}
 
