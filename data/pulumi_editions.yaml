@@ -82,6 +82,10 @@ features:
     name: Gated deployments
     min_edition: pro
     hidden: true
+  - id: delivery-approvals
+    name: Delivery approval gates
+    min_edition: pro
+    hidden: true
   - id: webhooks
     name: Webhooks
     min_edition: essentials
