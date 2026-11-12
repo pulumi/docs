@@ -21,7 +21,7 @@ public class WebserverStack : Stack
             }
         });
 
-        var userData = "#!/bin/bash echo \"Hello, World!\" > index.html nohup python3 -m http.server 80 &";
+        var userData = "#!/bin/bash\necho \"Hello, World!\" > index.html\nnohup python3 -m http.server 80 &";
 
         // Look up the latest Amazon Linux 2023 AMI.
         var ami = GetAmi.Invoke(new GetAmiInvokeArgs
