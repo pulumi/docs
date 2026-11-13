@@ -27,6 +27,9 @@ on:
     - cron: "15 7 * * *"
 jobs:
   update-audit-log-events:
+    # Mirrors (pulumi/docs-private) inherit this file through the upstream sync
+    # but must not run it: the scheduled lane belongs to pulumi/docs alone.
+    if: github.repository == 'pulumi/docs'
     runs-on: ubuntu-latest
     outputs:
       has_changes: ${{ steps.commit.outputs.has_changes }}
