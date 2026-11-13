@@ -29,7 +29,9 @@ Beside the actions, an optional top-level `summary` replaces the author
 card's one-sentence italic summary. The composer's sentence is written once
 at v1; when it named open items it went stale the moment they resolved (a
 "nothing blocks merge" card still saying four claims "only you can
-confirm", pulumi/docs#21871).
+confirm", pulumi/docs#21871). It's capped at 300 chars and `history_summary`
+at 120; an overlong or multi-line one is folded and clipped with a
+::warning::, not rejected (pulumi/docs#22863).
 
 Disposition mapping (aligned with scrape-review-outcomes.py's v3
 classifier, which this must never contradict):
@@ -132,6 +134,7 @@ ADD_BUCKETS = ("outstanding", "author-answer", "reviewer-check")
 
 RESOLVED_HEADING = "### ✅ Resolved since last review"
 SUMMARY_MAX = 300
+HISTORY_SUMMARY_MAX = 120
 RESOLVED_PLACEHOLDER = "_No items resolved since the last review._"
 # Same placeholder strings the composer uses, so an emptied section reads
 # identically whether the initial lane or a refresh emptied it.
@@ -181,6 +184,36 @@ class UpdateError(Exception):
 _FINDINGS_ALIASES = ("actions", "entries", "updates", "patch")
 
 
+_SENTENCE_END_RE = re.compile(r"[.!?](?=\s)")
+
+
+def clip_one_line(text: str, limit: int) -> tuple[str, str]:
+    """Return (text folded to one line and fitted to `limit` chars, a note
+    saying what changed — "" when nothing did).
+
+    Whitespace runs (newlines included) collapse to one space. An overlong
+    result keeps its last whole sentence that fits, if that's at least half
+    the budget; otherwise it's cut at the last word boundary and ends in "…"
+    (counted in the limit). Never raises, never returns more than `limit`."""
+    folded = " ".join(text.split())
+    how = []
+    if folded != text.strip():
+        how.append("folded to one line")
+    if len(folded) > limit:
+        ends = [m.end() for m in _SENTENCE_END_RE.finditer(folded + " ") if m.end() <= limit]
+        if ends and ends[-1] >= limit // 2:
+            clipped = folded[:ends[-1]]
+        else:
+            cut = folded[:limit - 1]
+            space = cut.rfind(" ")
+            if space >= limit // 2:
+                cut = cut[:space]
+            clipped = cut.rstrip(" ,;:—-") + "…"
+        how.append(f"clipped {len(folded)} → {len(clipped)} chars (limit {limit})")
+        folded = clipped
+    return folded, ", ".join(how)
+
+
 def normalize_update(update: dict) -> tuple[dict, list[str]]:
     """Return (normalized copy, list of repairs). Never raises."""
     notes: list[str] = []
@@ -206,6 +239,18 @@ def normalize_update(update: dict) -> tuple[dict, list[str]]:
         if text is None or text == "" or (isinstance(text, str) and text.startswith("<") and text.endswith(">")):
             del u["summary"]
             notes.append("empty/placeholder `summary` dropped")
+    # Both summaries are one-liners with a documented length, and the model
+    # overshoots them: a 300+ char `summary` failed two /update-review runs
+    # in a row on pulumi/docs#22863 (runs 43065200879, 43073551781), and a
+    # retry writes much the same sentence, so the PR was stranded on
+    # review:error until a full /new-review. The adjudication was fine; the
+    # prose just ran long. Fold to one line and clip instead of failing.
+    for key, limit in (("summary", SUMMARY_MAX), ("history_summary", HISTORY_SUMMARY_MAX)):
+        if isinstance(u.get(key), str):
+            fixed, how = clip_one_line(u[key], limit)
+            if how:
+                u[key] = fixed
+                notes.append(f"`{key}` {how}")
     if isinstance(u.get("findings"), list):
         fixed = []
         for e in u["findings"]:
@@ -1101,7 +1146,10 @@ def assemble_evidence(
         if f.get("bucket") == "preexisting" and fid not in rows and fid not in resolved_ids:
             findings.append(f)
 
-    entry = {"ts": timestamp, "summary": update["history_summary"].strip(), "sha": head_sha[:12]}
+    # main() hands this the patch as the model wrote it, so fit the line here
+    # too; apply() already logged the repair.
+    history_line, _ = clip_one_line(str(update["history_summary"]), HISTORY_SUMMARY_MAX)
+    entry = {"ts": timestamp, "summary": history_line, "sha": head_sha[:12]}
     evidence = {
         "schema_version": 1,
         "repo": repo,

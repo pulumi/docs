@@ -33,6 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has_changes: ${{ steps.commit.outputs.has_changes }}
+      unmapped: ${{ steps.unmapped.outputs.events }}
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
@@ -47,6 +48,15 @@ jobs:
         run: ./scripts/fetch-audit-log-events.sh
         env:
           PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          UNMAPPED_EVENTS_FILE: ${{ runner.temp }}/unmapped-events.txt
+      - name: Report unmapped events
+        id: unmapped
+        if: failure()
+        run: |
+          file="${RUNNER_TEMP}/unmapped-events.txt"
+          if [[ -s "$file" ]]; then
+            echo "events=$(paste -sd, "$file" | sed 's/,/, /g')" >> "$GITHUB_OUTPUT"
+          fi
       - name: git status
         run: git status && git diff
       - name: Commit changes
@@ -111,7 +121,10 @@ jobs:
         env:
           SLACK_CHANNEL: docs-ops
           SLACK_COLOR: "#F54242"
-          SLACK_MESSAGE: "Audit log event update failure in pulumi/docs repo :meow_sad:"
+          SLACK_MESSAGE: >-
+            ${{ needs.update-audit-log-events.outputs.unmapped != ''
+              && format('Audit log events update failed: Pulumi Cloud returned event types that match no category: {0}. To fix it, add each one to the right category''s `match` block in `data/audit_log_event_categories.yaml` (a prefix, or an exact id; see the file''s header comment), merge that PR, and rerun the workflow. Run: {1}/{2}/actions/runs/{3}', needs.update-audit-log-events.outputs.unmapped, github.server_url, github.repository, github.run_id)
+              || format('Audit log events update failed in pulumi/docs :meow_sad: Run: {0}/{1}/actions/runs/{2}', github.server_url, github.repository, github.run_id) }}
           SLACK_USERNAME: docsbot
           SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
           SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png

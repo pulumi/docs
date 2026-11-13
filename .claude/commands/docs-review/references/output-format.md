@@ -586,6 +586,42 @@ fit_author_card`). Over it, ❓ rows lose their links, then ❓ Do-this blocks
 move to the evidence page with a note under the table, and so on. This runs
 after you. Write every block in full regardless.
 
+### Undeclared changes
+
+The criterion is `docs-review:references:shared-criteria` §PR description
+covers the diff. On v3 it renders in two places, both written by you:
+
+1. **The brief's "What this PR changes" list** — end the bullet for each
+   undeclared change you ask about with ` _(not in the PR description)_`.
+   That is the reviewer's cue to read that change as closely as the declared
+   ones. Leave every other bullet unmarked.
+1. **One ❓ row per undeclared change on the author card**, added as an `F?`
+   row (§The model's edit contract (v3) rule 5). Where = the changed lines.
+   The Finding cell names the change and asks one question:
+
+   ```text
+   | **F?** | `content/docs/iac/concepts/stacks.md` L1377-1378 | Not in the PR description: "Delete a stack" now says `pulumi stack rm --force` destroys the stack's resources. Was this change intended? If so, add it to the description; if not, revert it. |
+   ```
+
+A ❓ blocks merge until the author answers it: a reply (`/update-review F9:
+intended, description updated`), a revert, or `/update-review accept F9`. An
+undeclared change that also carries a 🚨 finding gets both rows: the 🚨 says
+the content is wrong, the ❓ asks whether the change was meant to be in this
+PR at all, and a revert answers both.
+
+**More than three undeclared changes** means the description is out of date,
+not that one change is hiding. Raise a single ❓ row instead, Where `—`, that
+names them in one line ("Not in the PR description: the Delete a stack
+rewrite, the removed Import section, and the new `--yes` default. Update the
+description to cover them."). The brief's bullets for those changes still each
+carry the marker.
+
+**A description that covers every change** gets no row and no bullet marker.
+Don't add a row saying so.
+
+v3 only: the v2 monolith has no author/reviewer split for the marker to land
+on.
+
 ### Nits: the author card's non-blocking lane
 
 ⚠️ Check these is addressed to the **reviewer**, and approving it asserts only

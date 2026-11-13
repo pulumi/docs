@@ -190,7 +190,7 @@ red message naming its fix:
 
 | Gate | Green when | Red says |
 |---|---|---|
-| review | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — branch protection still asks for an approval); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | push / `/update-review` / `/new-review` |
+| review | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — branch protection still asks for an approval); or a legacy v2 review current at head (grandfather note); or, on a PR that never got a review, a lane the review pipeline skips by policy: `review:trivial` / `review:frontmatter-only` with a diff that really has that shape, or a bot author's PR on a branch the lane doesn't review. Never green on a PR that changes no files | No review yet: **pending** (the first review is usually still running; if nothing posts, `/new-review`), or red with `/new-review` once `review:error` says that run died. A stale one: push / `/update-review` / `/new-review` |
 | findings | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `/update-review …` phrasing |
 | staging | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded; or, the same, at a commit the head has only merged the base into since (Base-only merges) | never "dispatch a workflow" (#22524: the staging and production deploys are one click apart). Running: **pending**, linking the run. Failed: open the linked run and click **Re-run failed jobs**, which can only redeploy staging. Workflow disabled: ask in `#docs`. Never ran: comment `/deploy-staging`. A failed dispatch's reason is quoted first |
 | oversized | `review:oversized` PRs: an approval at head from an owner, org member or collaborator (GitHub's `author_association`; not a bot or the author) whose comment has `/oversized-ack` at the start of a line | where the command goes (the approval's comment box), that approving again with it or editing the approval fixes one given without it, and what doesn't count (a PR comment, a line comment, an approval of an earlier commit) |
@@ -251,6 +251,11 @@ Conclusions are explicit about the fails-open trap: any gate ERROR (corrupt
 REVIEW_STATE, a team-membership lookup failure) concludes `action_required`
 — never `neutral`/`skipped`, which GitHub counts as passing for required
 checks.
+When the only gates still out are in flight (the first review hasn't
+posted, a staging deploy is running), the conclusion is `pending` and the
+`Sentinel` status posts as pending: a required status that's pending blocks
+the merge exactly as a failure does, without a red X for something nobody
+has to act on yet. Any red gate makes it `failure`.
 
 **`review:waived` is authorized, not just labelled.** A waive skips every
 gate, `staging` included, so applying one has to be at least as privileged as approving
@@ -293,11 +298,11 @@ no status holds every PR. Stand the gate down with `'report'`.
 surface itself is `REVIEW_V3_COMMENTS` (repo-wide; the per-PR `surface:v3`
 opt-in label and `REVIEW_V3_BOT_PRS` were retired 2026-09-14 once the
 variable had soaked). The
-check summary embeds the reviewer brief (merge-box delivery), and on red the
-sentinel PATCHes a strip into the author card.
+check summary embeds the reviewer brief (merge-box delivery), and on red or
+pending the sentinel PATCHes a strip into the author card.
 With blocking findings it reads "⛔ N item(s) block merge" and names the reply
 that answers them; with none, the card already says nothing blocks merge, so
-the strip reads "⏳ Merge is waiting on" the red gate (a deploy or an ack is
+the strip reads "⏳ Merge is waiting on" the red or pending gate (a deploy or an ack is
 nothing the author can fix or answer), and points at the gate statuses.
 
 **SLA sweep** (`sla-sweep.py`, `review-sla-sweep.yml`, cron every 2 h): its own

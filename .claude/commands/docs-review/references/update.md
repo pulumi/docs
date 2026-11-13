@@ -241,8 +241,8 @@ If the author deletes the 1/M comment via the GitHub UI, the next re-entrant run
 
 ```json
 {"schema": 1, "case": "fix-response|dispute|re-verify|mixed",
- "history_summary": "one line for the evidence history (≤120 chars)",
- "summary": "optional: a replacement for the card's italic one-sentence summary (≤300 chars)",
+ "history_summary": "one line for the evidence history (hard limit 120 chars)",
+ "summary": "optional: one sentence to replace the card's italic summary (hard limit 300 chars)",
  "findings": [
    {"id": "F3", "action": "resolve", "annotation": "fixed in a1b2c3"},
    {"id": "F4", "action": "concede", "reason": "author is right about X"},
@@ -293,6 +293,17 @@ already answered, and it was the first live failure of this lane (fork PR
 its own merits; its cell stays one line, and any changed action goes in
 `detail.fix`. Residual edits the author volunteered ("I'll attribute it
 inline") are theirs to make, not grounds to hold.
+
+**Undeclared-change questions** (`docs-review:references:output-format`
+§Undeclared changes) follow the same rule. Re-read the PR description
+(`gh pr view --json body`): a reply confirming the change was intended, or a
+description that now mentions it, is an answer → `concede`. A push that
+reverts the change → `resolve`. A new push that adds an undeclared change
+worth asking about may `add` a ❓ row (`"bucket": "author-answer"`) like any
+other new problem in the pushed lines. This lane never edits the brief, so
+the `_(not in the PR description)_` marker stays as the full review wrote it:
+an answered ❓ leaves it in place as a record of what the description said,
+and a ❓ this lane adds has no marker until the next full review.
 
 ### What the deterministic side does
 
@@ -348,3 +359,9 @@ disputes or raise findings.
   confirm (pulumi/docs#21871). The replacement describes the PR and what the
   review checked, never the open-item state: the header and sections carry
   that. Omit it when the existing sentence stays true.
+- Both summaries have **hard length limits**: `summary` is one sentence of at
+  most 300 characters, `history_summary` one line of at most 120. Count before
+  you write. `apply-update.py` folds line breaks and clips anything longer at a
+  sentence or word boundary (logged as a `::warning::`), so an overlong one
+  doesn't fail the refresh, but the card shows the clipped text, not yours.
+  Aim well under the limit: if it takes two sentences, it's too long.

@@ -59,7 +59,7 @@ values:
 #### Using `pulumi env run`
 
 ```console
-$ pulumi env run default/greet -- sh -c '${GREETING}, ${USER}!'
+$ pulumi env run default/greet -- sh -c 'echo "${GREETING}, ${USER}!"'
 Hello, user!
 ```
 
@@ -112,7 +112,7 @@ values:
 #### Using `pulumi env run`
 
 ```console
-$ pulumi env run default/greet -- sh -c 'echo ${GREETING} & cat ${GREETING}'
+$ pulumi env run default/greet -- sh -c 'echo ${GREETING}; cat ${GREETING}'
 /tmp/tmp.iBApHfcsJ1
 Hello, user!
 ```

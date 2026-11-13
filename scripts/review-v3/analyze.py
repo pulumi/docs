@@ -993,18 +993,22 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     checks = pr.get("checks") or {}
     failing = list(checks.get("failing") or [])
     real_failures = [f for f in failing if not act._is_sentinel({"name": f or ""})]
+    real_pending = [x for x in (checks.get("pending") or []) if not act._is_sentinel({"name": x or ""})]
     gates = [g for g in ((pr.get("sentinel") or {}).get("gates") or []) if g.get("state") != "skip"]
     if gates:
         # "failing" said nothing a row didn't already say. The count of gates
         # that pass out of the ones that apply does, and the tooltip names
         # the rest.
         reasons.append(f"sentinel:{sum(g.get('state') == 'ok' for g in gates)}/{len(gates)}")
-    # A red rollup with only the Sentinel in it is not a CI failure: act.py's
-    # preflight leaves the Sentinel out and waits for it between the approval
-    # and the merge, and the board agrees.
-    sentinel_only = checks.get("state") == "red" and not real_failures
+    # A red or pending rollup with only the Sentinel in it is not a CI
+    # failure: act.py's preflight leaves the Sentinel out and waits for it
+    # between the approval and the merge, and the board agrees. (The Sentinel
+    # posts pending while its only open gates are in flight, e.g. the first
+    # review hasn't landed; the gates row above already says so.)
+    sentinel_only = ((checks.get("state") == "red" and not real_failures)
+                     or (checks.get("state") == "pending" and not real_pending))
     if checks.get("state") != "green" and not sentinel_only:
-        gate_fail(f"checks:{checks.get('state')}:{','.join((real_failures or checks.get('pending') or [])[:3])}")
+        gate_fail(f"checks:{checks.get('state')}:{','.join((real_failures or real_pending)[:3])}")
         if checks.get("state") == "red":
             blocked.append("checks:red")
             named = ", ".join(real_failures[:3]) + (f" and {len(real_failures) - 3} more" if len(real_failures) > 3 else "")
