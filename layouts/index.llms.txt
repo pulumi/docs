@@ -13,92 +13,25 @@ Pulumi is an open-source infrastructure as code platform that lets you use famil
 
 ## For agents
 
-If you are an AI agent or programmatic consumer, start with these endpoints. Each has a copy-pasteable example.
+If you are an AI agent or programmatic consumer, start here. Each docs page linked below holds the full contract with copy-pasteable examples, and is also served as markdown.
 
-- **Pulumi Cloud REST API (via the CLI)**: call any [Pulumi Cloud REST API](https://www.pulumi.com/docs/reference/cloud-rest-api/) endpoint with [`pulumi api`](https://www.pulumi.com/docs/iac/cli/api/) (experimental). The command emits a stable JSON error envelope and stable [exit codes](https://www.pulumi.com/docs/iac/cli/exit-codes/) for agent consumers, and `pulumi api list --output=json` returns the full endpoint catalog. Authentication reuses the existing Pulumi CLI credentials.
-
-      pulumi api list --output=json
-      pulumi api describe <path-or-operation-id> --output=json
-      pulumi api /api/user
-
-- **Cloud registry API**: every published package, version-by-version. Public packages need no auth; set `Authorization: token $PULUMI_ACCESS_TOKEN` for private. Works without the CLI.
-
-      # CLI (auto-fills lang/os from project runtime + host OS)
-      pulumi api list --filter registry
-      pulumi api describe GetPackageVersion
-      pulumi api /api/registry/packages/pulumi/pulumi/aws/versions/latest/readme
-
-      # Direct HTTP (markdown variant via Accept header)
-      curl -H "Accept: text/markdown" \
-        https://api.pulumi.com/api/registry/packages/pulumi/pulumi/aws/versions/latest/readme
-      curl -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-        https://api.pulumi.com/api/registry/packages/<source>/<publisher>/<private-pkg>/versions/latest/installation
-
-  Endpoints (replace `{version}` with a pinned semver where possible, or `latest` for the most recent published version):
-
-      /api/registry/packages?search={query}
-      /api/registry/packages/{source}/{publisher}/{name}/versions
-      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}
-      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/readme
-      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/installation
-      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/nav
-      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/docs/{typeToken}
-      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/examples
-
-  Common parameters: `?lang=typescript|python|go|csharp|java|yaml|hcl|all` (HTTP calls default to `go`; the CLI fills it from the project runtime), `?os=linux|macos|windows`, `?depth=summary|full` on `nav`, `?q=<term>` on `nav` and `examples`, `?limit=` on `examples` (default 20, values above 100 are clamped to 100). For prose: `--output=markdown` (CLI) or `Accept: text/markdown` (HTTP). The `versions` list is paginated with a `continuationToken` and is reachable over HTTP only, because it is not in the OpenAPI spec that `pulumi api` reads. `installation` returns `404` for packages that publish no installation configuration. Type tokens for `docs/{typeToken}` are URL-encoded: use `encodeURIComponent` (or equivalent), e.g. `random:index/randomPassword:RandomPassword` becomes `random%3Aindex%2FrandomPassword%3ARandomPassword`. Discover them via `nav?depth=full`.
-
-- **Full docs index (JSON)**: hierarchical sitemap of every page in the docs navigation, with titles and nesting. Pageless navigation headings appear as `"group": true` nodes with no `path`, and off-site links carry `"external": true` and a `url`. CLI command reference pages not in the navigation are listed at [/docs/iac/cli/commands/](https://www.pulumi.com/docs/iac/cli/commands/).
-
-      curl https://www.pulumi.com/docs/llm-sitemap.json
-
-- **Provider schemas**: full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. The cloud registry API's `versions/{version}` response includes a `schemaURL` field; follow it for the version-pinned schema. `pulumi package get-schema` accepts `<name>[@version]`, a plugin binary or folder path, or a local `.json` / `.yaml` schema file. The static URL is latest-only.
-
-      # Versioned (via cloud registry API)
-      pulumi api /api/registry/packages/pulumi/pulumi/aws/versions/7.0.0 \
-        | jq -r .schemaURL | xargs curl
-
-      pulumi package get-schema aws
-      pulumi package get-schema aws@7.0.0
-
-      # Latest only
-      curl https://www.pulumi.com/registry/packages/aws/schema.json
-
-- **Markdown content (per page)**: every `/docs/` URL is available as clean markdown via two equivalent mechanisms. For the `.md` URL form, drop the trailing slash and append `.md` (e.g., `/docs/iac/concepts/resources/` → `/docs/iac/concepts/resources.md`). The docs root is the exception: use `/docs/index.md`. `/registry/` URLs support the same mechanisms (`/registry/packages/<name>.md`), but only for the latest version. Exception: `/registry/packages/<name>/api-docs/*` is not served as markdown; use the cloud registry API instead.
-
-      # Accept-header content negotiation
-      curl -H "Accept: text/markdown" https://www.pulumi.com/docs/iac/concepts/resources/
-      curl -H "Accept: text/markdown" https://www.pulumi.com/registry/packages/aws/
-
-      # .md URL suffix (header-free; same content, same cache entry)
-      curl https://www.pulumi.com/docs/iac/concepts/resources.md
-      curl https://www.pulumi.com/registry/packages/aws.md
-      curl https://www.pulumi.com/registry.md
-
-- **Infrastructure graph (Context API)**: the [Context API](https://www.pulumi.com/docs/discovery-governance/concepts/context-api/) (public preview) queries one graph of IaC state, stack dependencies, and discovered cloud resources to answer dependency, ownership, and impact questions. Fetch the deployed schema as a Markdown primer an agent can work from, or as JSON. See the [query guide](https://www.pulumi.com/docs/discovery-governance/guides/context-api/).
-
-      pulumi api GetGraphQuerySchema
-      pulumi api GetGraphQuerySchema --output=json
-
-- **Doing infrastructure work as an agent**: Pulumi works with [the coding agent you already use](https://www.pulumi.com/docs/ai/coding-agents/), and the [CLI is designed for agents](https://www.pulumi.com/docs/ai/concepts/cli-for-agents/): run any command with `npx pulumi`, perform one-shot resource operations with [`pulumi do`](https://www.pulumi.com/docs/iac/cli/direct-resource-operations/) (research preview), and get an [ephemeral Pulumi Cloud account provisioned automatically](https://www.pulumi.com/docs/administration/concepts/agent-accounts/) on first use, with no signup required. [Pulumi Agent Skills](https://www.pulumi.com/docs/ai/concepts/agent-skills/) provide proven Pulumi workflows, and the hosted [Pulumi MCP server](https://www.pulumi.com/docs/ai/guides/set-up-mcp-server/) at `https://mcp.ai.pulumi.com/mcp` exposes stacks, resource search, and the Registry as MCP tools. A coding agent can also [hand a task off to Pulumi Neo](https://www.pulumi.com/docs/ai/coding-agents/handoff/).
-
-      npx skills add pulumi/agent-skills/pulumi --skill '*'
-      claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp
-
-{{/* The support-request contract below mirrors infrastructure/support-form/validation.ts and handler.ts. Change one and change the other in the same PR. */ -}}
-- **Filing a support request**: open a ticket with the Pulumi support team without driving the [web form](https://www.pulumi.com/support/new/). No authentication and no cookies. Post exactly the six fields below: any unknown top-level key is rejected, so send this shape rather than scraping the HTML form for its inputs. In particular the rendered form carries a hidden `leave_blank` input, which is a spam trap: sending it discards the request behind a response indistinguishable from success, so never send a `leave_blank` key.
-
-      curl -X POST https://www.pulumi.com/api/support \
-        -H "Content-Type: application/json" \
-        -d '{
-          "email": "you@example.com",
-          "name": "Your Name",
-          "organization": "your-pulumi-org",
-          "priority": "Normal",
-          "subject": "Stack update stuck in progress",
-          "description": "What you expected, what actually happened, and any relevant code or CLI output."
-        }'
-
-  `priority` is `Normal` or `Urgent`, matched case-insensitively. `organization` is the bare org name from `https://app.pulumi.com/<org>`. It starts with a letter or number, then letters, numbers, hyphens and underscores, 40 characters or fewer; a pasted console URL is reduced to the org name for you. The other limits, so you can trim before sending rather than discovering them: `email` 254, `name` 200, `subject` 200, `description` 10–20000, and the whole body 256 KB (`413` past that). Control characters and bidirectional overrides are stripped from every field. Success returns `{"ok": true, "id": "...", "conversationId": "..."}`. A validation failure returns `422` with a `fields` object keyed by field name (or by `_form` when the problem is with the payload as a whole rather than one field, as with an unknown key), so each error maps back to its input without parsing prose. Other failures use `400`, `405`, `413` and `502`. A `429` means the request was rate limited: back off rather than retrying immediately. A request the platform blocks outright comes back as a `404` HTML page. A `429`, that `404`, and a `413` for a body large enough to exceed the invocation limit can all arrive without the `ok`/`error` envelope, so check the status code before parsing the body. Replies come by email to the address you supply, so give one that a person reads.
+- [Pulumi Cloud REST API via the CLI](https://www.pulumi.com/docs/iac/cli/api/): call any [Pulumi Cloud REST API](https://www.pulumi.com/docs/reference/cloud-rest-api/) endpoint with `pulumi api` (experimental), with a stable JSON error envelope and [exit codes](https://www.pulumi.com/docs/iac/cli/exit-codes/); `pulumi api list --output=json` returns the endpoint catalog
+- [Pulumi Cloud OpenAPI spec](https://api.pulumi.com/api/openapi/pulumi-spec.json): the OpenAPI document `pulumi api` reads, for clients that call the REST API directly
+- [Registry API for agents](https://www.pulumi.com/docs/reference/registry-api/): every published package, version by version (README, installation, nav, type docs, examples), with endpoints, parameters, and auth for private packages
+- [Provider schemas](https://www.pulumi.com/docs/reference/registry-api/#provider-schemas): the full Pulumi schema for any provider, version-pinned through the Registry API or via `pulumi package get-schema <name>[@version]`
+- [Markdown access](https://www.pulumi.com/docs/reference/registry-api/#markdown-access-to-docs-pages): every `/docs/` URL is served as markdown with `Accept: text/markdown` or a `.md` suffix (`/docs/iac/concepts/resources/` becomes `/docs/iac/concepts/resources.md`)
+- [Docs index (JSON)](https://www.pulumi.com/docs/llm-sitemap.json): hierarchical sitemap of every page in the docs navigation, with titles and nesting; pageless headings are `"group": true` nodes with no `path`, off-site links carry `"external": true` and a `url`, and CLI command pages are listed at [/docs/iac/cli/commands/](https://www.pulumi.com/docs/iac/cli/commands/)
+- [Context API](https://www.pulumi.com/docs/discovery-governance/concepts/context-api/): query one graph of IaC state, stack dependencies, and discovered cloud resources (public preview); fetch its schema with `pulumi api GetGraphQuerySchema`
+- [CLI for agents](https://www.pulumi.com/docs/ai/concepts/cli-for-agents/): run any command with `npx pulumi`, with [one-shot resource operations](https://www.pulumi.com/docs/iac/cli/direct-resource-operations/) via `pulumi do` and an [ephemeral Pulumi Cloud account](https://www.pulumi.com/docs/administration/concepts/agent-accounts/) provisioned on first use
+- [Coding agents](https://www.pulumi.com/docs/ai/coding-agents/): use Pulumi with the coding agent you already use (Claude Code, Codex, Cursor, and others)
+- [Pulumi Agent Skills](https://www.pulumi.com/docs/ai/concepts/agent-skills/): proven Pulumi workflows for agents; install with `npx skills add pulumi/agent-skills/pulumi --skill '*'`
+- [Agent Skills index](https://www.pulumi.com/.well-known/agent-skills/index.json): machine-readable list of the published Pulumi Agent Skills
+- [Pulumi MCP server](https://www.pulumi.com/docs/ai/guides/set-up-mcp-server/): hosted MCP server exposing stacks, resource search, and the Registry as tools
+- [MCP endpoint](https://mcp.ai.pulumi.com/mcp): the Streamable HTTP endpoint to add to an MCP client, e.g. `claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp`
+- [MCP server card](https://www.pulumi.com/.well-known/mcp/server-card.json): machine-readable description of the Pulumi MCP server
+- [API catalog](https://www.pulumi.com/.well-known/api-catalog): RFC 9727 linkset of Pulumi's public APIs
+- [Hand off to Pulumi Neo](https://www.pulumi.com/docs/ai/coding-agents/handoff/): delegate an infrastructure task from a coding agent to Pulumi Neo
+- [Support request API](https://www.pulumi.com/docs/support/support-request-api/): file a support ticket with one JSON POST to `https://www.pulumi.com/api/support`, no auth; never send a `leave_blank` key, it is a spam trap that silently discards the request
 
 ## Site overview
 
