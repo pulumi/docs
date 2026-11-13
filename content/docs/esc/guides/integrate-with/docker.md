@@ -125,15 +125,21 @@ values:
     username: <your-registry-username>
     password:
       fn::secret: <your-registry-password>
-    registry: null # Provide a registry URL if you are not using Docker Hub
+  environmentVariables:
+    DOCKER_USERNAME: ${docker.username}
+    DOCKER_PASSWORD: ${docker.password}
 ```
+
+Only values under `environmentVariables` are exported to the command that `pulumi env run` starts, so the environment projects the credentials as environment variables.
 
 ### Log in to a Docker registry
 
 Now, you can [log into a Docker registry](https://docs.docker.com/reference/cli/docker/login/) without needing to manage the credentials directly in your shell:
 
 ```bash
-$ pulumi env run <your-project-name>/<your-environment-name> -- sh -c 'echo ${docker.password} | docker login --username ${docker.username} --password-stdin ${docker.registry}'
+$ pulumi env run <your-project-name>/<your-environment-name> -- sh -c 'echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin'
 
 Login Succeeded
 ```
+
+This logs in to Docker Hub. To log in to another registry, append its URL to the `docker login` command.
