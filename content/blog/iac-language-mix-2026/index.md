@@ -68,7 +68,7 @@ Parsing rules:
 
 - **Pulumi:** read the runtime from `runtime: <name>` or from the nested form `runtime:` followed by `name: <name>`.
 - **AWS CDK:** `ts-node`, `tsx`, or a `.ts` file means TypeScript. `python` or `.py` means Python. `mvn`, `gradle`, or `java` means Java (checked after Python, so `javascript` is not misread). `dotnet` means C#. `go` means Go. `node` or `.js` means JavaScript. Anything else is "other".
-- **Pulumi `dotnet` and `yaml`:** reported as C# and YAML. Runtimes that are not one of the supported languages, such as `bun` or unrecognized values, fall under "other".
+- **Pulumi `dotnet` and `yaml`:** reported as C# and YAML. Unrecognized runtime values fall under "other", as does `bun`, which runs TypeScript or JavaScript but was not split by language in this study.
 - **CDKTF:** take the `language` value as written.
 
 ### How TypeScript and JavaScript were separated for Pulumi
@@ -149,7 +149,7 @@ That range moved between runs. An earlier run on October 31, 2026 returned a Clo
 
 ## Cross-checks from package registries
 
-Public download counts offer a second view. Over the 30 days ending November 12, 2026 for npm (and the most recent 30-day window on PyPI Stats, fetched on November 13), the totals were:
+Public download counts offer a second view. npm covers the 30 days ending November 12, 2026. PyPI Stats reports its most recent 30-day window as of our November 13 fetch, so the two windows can differ by a day or so. The totals were:
 
 | Package pair | npm downloads | PyPI downloads | npm to PyPI ratio |
 | --- | --- | --- | --- |
