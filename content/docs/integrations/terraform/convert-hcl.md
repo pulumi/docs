@@ -905,7 +905,7 @@ public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
             // Create configuration
-            var config = new com.pulumi.Config();
+            var config = ctx.config();
             var awsRegion = config.get("awsRegion").orElse("us-west-2");
             var instanceType = config.get("instanceType").orElse("t3.micro");
 
@@ -1005,15 +1005,15 @@ public class App {
                 .ami(amazonLinux.applyValue(ami -> ami.id()))
                 .instanceType(instanceType)
                 .subnetId(publicSubnet.id())
-                .vpcSecurityGroupIds(webSg.id())
-                .userData("""
-                    #!/bin/bash
-                    yum update -y
-                    yum install -y httpd
-                    systemctl start httpd
-                    systemctl enable httpd
-                    echo "<h1>Hello from Pulumi converted infrastructure!</h1>" > /var/www/html/index.html
-                    """)
+                .vpcSecurityGroupIds(webSg.id().applyValue(List::of))
+                .userData(String.join("\n",
+                    "#!/bin/bash",
+                    "yum update -y",
+                    "yum install -y httpd",
+                    "systemctl start httpd",
+                    "systemctl enable httpd",
+                    "echo \"<h1>Hello from Pulumi converted infrastructure!</h1>\" > /var/www/html/index.html",
+                    ""))
                 .tags(Map.of("Name", "web-server"))
                 .build(), providerOptions);
 

@@ -98,8 +98,8 @@
       "lastmod": "2026-05-13"
     },
     "Organizations": {
-      "hash": "79dbf93f751b1c5d9de6746f4923f29e6db10a6fa5199baceba0b7f8c8cbfa54",
-      "lastmod": "2026-11-10"
+      "hash": "67f863e0bdc1c6733edd85e9bbb8c6e5b2b9cabeb409f9cdf6a48d06ac6a4ed8",
+      "lastmod": "2026-11-13"
     },
     "PolicyExceptions": {
       "hash": "6f472764eb5117a3ead9729d56ed49b963d61844c318c203efc894813c9f43f8"
@@ -846,8 +846,8 @@
       "hash": "51d5cb48099a20d8cb48bba6834d4c283ec5e0a7046b2f43028eebdba4bb79c1"
     },
     "ApprovalRuleEligibilityInputPermission": {
-      "hash": "2dd55f87f3ec67e7206e3664e01a27d14f37983f9a3e70e94ebd532dc2361de6",
-      "lastmod": "2026-11-10"
+      "hash": "a7947e8c5647c48f86e0bac97d42bd4c3c68c96c1e92d2b5d03ca14885e65149",
+      "lastmod": "2026-11-13"
     },
     "ApprovalRuleEligibilityInputTeam": {
       "hash": "3a99b8c35c705ebc60692aa6a6350dad0986054db002df8a023cccbfc1a8f09f"
@@ -859,8 +859,8 @@
       "hash": "468c478a2ca53b58914f68518c366eacdd3018352ce2a14780575a0e50ea032c"
     },
     "ApprovalRuleEligibilityOutputPermission": {
-      "hash": "61b91ebe67e26619488aedbc141a77e8c0f66aab76369e64e8700207bf38f5ac",
-      "lastmod": "2026-11-10"
+      "hash": "33a14f128631073a0e96a33bb39393166969d95bfaa90e2b57f93f6220c7581e",
+      "lastmod": "2026-11-13"
     },
     "ApprovalRuleEligibilityOutputTeam": {
       "hash": "92d53d1a479fe3d756ea91d6c33c65cc651c80dcdef75cb394ea724e7d14c47d"
@@ -2522,8 +2522,8 @@
       "hash": "4dbf036c07c514c178419ce7739f5acf2758514705832b8b20951a43ab374f6a"
     },
     "PermissionDescriptorAllow": {
-      "hash": "0a8370d76a1f562c027208b3633bd3860648e51957c17af78de8609726d6aa1c",
-      "lastmod": "2026-11-10"
+      "hash": "6aa21dbe197dc6994880345991269b89358362451cb2f1515cb781d99901e420",
+      "lastmod": "2026-11-13"
     },
     "PermissionDescriptorBase": {
       "hash": "80bc54161c9f512ae59133c60945934b5788ad5fae3be03eafd9fed2147dd7ee",
@@ -2755,12 +2755,12 @@
       "lastmod": "2026-09-15"
     },
     "RbacScope": {
-      "hash": "29eea143b65efe72d6cd060abea3ba3a90321673947c0de1000430780aec579e",
-      "lastmod": "2026-11-10"
+      "hash": "43aac98cdb54cbe68195123581522ba9b3d78c1fc235ea5e7279b4cee5b1fe17",
+      "lastmod": "2026-11-13"
     },
     "RbacScopeGroup": {
-      "hash": "dd2e5e14bcfb4a196bffada47022efb60dc554e1c1c07ba6746e59ab2d3f9f92",
-      "lastmod": "2026-08-25"
+      "hash": "0ed7eed02a447a5d95d298b56eba8980eaf7b797c4005cc5d81e3496846963ee",
+      "lastmod": "2026-11-13"
     },
     "RbacScopeMetadata": {
       "hash": "72419e65d340ab7ba94edc2f1533367b8d92457e69bc112f668ee618dfcef256"

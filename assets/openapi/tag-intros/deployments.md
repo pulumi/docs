@@ -9,4 +9,7 @@ stacks, trigger deployments, view deployment status and logs, and manage
 deployment execution.
 
 See [Pulumi Deployments](/docs/deployments/concepts/) for conceptual
-documentation and getting-started guides.
+documentation and getting-started guides, and
+[Deployment status](/docs/deployments/operations/deployment-status/) for the
+statuses a deployment moves through and how they map to webhook payloads and
+the Pulumi Cloud console.

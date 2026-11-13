@@ -3093,7 +3093,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
             "(2) what specific kind of wrongness would block a reader's success, (3) which investigative passes ran>.",
             "> **What this PR changes:**\n"
             ">\n"
-            "> - <TODO: one bullet per meaningful change — subject + what changed, one line each; a reviewer scans this list, so no compound bullets>\n"
+            "> - <TODO: one bullet per meaningful change — subject + what changed, one line each; a reviewer scans this list, so no compound bullets; mark a change the PR description doesn't mention per ci.md §The v3 surface>\n"
             ">\n"
             "> <TODO: one sentence — what specific kind of wrongness would block a reader's success — then one sentence naming which investigative passes ran>.",
             1),
