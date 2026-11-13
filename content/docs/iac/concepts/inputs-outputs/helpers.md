@@ -167,7 +167,7 @@ For more details, see the [Python SDK documentation](/docs/reference/pkg/python/
 
 {{% choosable language go %}}
 
-Go does not provide a dedicated JSON parse helper. Use `ApplyT` with `json.Unmarshal` to parse a JSON string output into a Go struct or map.
+- **`pulumi.JSONUnmarshal()`** — Accepts a `pulumi.StringInput` containing JSON and returns a `pulumi.AnyOutput` of the deserialized value using Go's `encoding/json` package.
 
 For more details, see the [Go SDK documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi).
 
@@ -183,7 +183,7 @@ For more details, see the [.NET SDK documentation](/docs/reference/pkg/dotnet/pu
 
 {{% choosable language java %}}
 
-Java does not provide a dedicated JSON parse helper. Use `apply` with a JSON library such as Jackson or Gson to deserialize JSON string outputs into Java objects manually.
+- **`Output.parseJson()`** — Accepts an `Output<String>` containing JSON and returns an `Output<JsonElement>` of the parsed value using Gson.
 
 {{% /choosable %}}
 
