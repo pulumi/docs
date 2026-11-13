@@ -12,6 +12,11 @@
     overflow-wrap: anywhere;
 }
 
+.docs-main-content h2,
+.docs-main-content h3 {
+    scroll-margin-top: 60px;
+}
+
 /* All colors are Pulumi brand tokens. Structural grays use the semantic
    --docs-* tokens from _docs-theme.scss, which flip automatically in dark
    mode. Scale colors use the --color-* variables from _theme.scss — that
