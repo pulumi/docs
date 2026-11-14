@@ -2,6 +2,11 @@
 
 // Behavior order matters; invalidate-marketing-web-cache.yml reads this list from the stack output.
 export const marketingWebPaths = [
+    // The homepage. Exact paths: a wildcard here would also take every other
+    // top-level page this repo still serves off S3.
+    "/",
+    "/index.html",
+    "/index.md",
     "/dev*",
     // The Dev Center's root-relative CSS/JS/images; this repo serves its own from /css and /js.
     "/assets*",
