@@ -1,8 +1,9 @@
 ---
 title: "Best Policy as Code Tools in 2026"
 date: 2026-08-28
+updated: 2026-11-13
 draft: false
-meta_desc: "Compare the best policy as code tools in 2026: OPA, HashiCorp Sentinel, Kyverno, Checkov, and Pulumi Policies, chosen honestly by fit."
+meta_desc: "Compare the best policy as code tools in 2026: OPA, Sentinel, Kyverno, Checkov, Harness, and Pulumi Policies, chosen by fit."
 feature_image: feature.png
 authors:
     - pulumi-content-team
@@ -20,6 +21,7 @@ itemlist:
     - name: "HashiCorp Sentinel"
     - name: "Kyverno"
     - name: "Checkov"
+    - name: "Harness Policy as Code"
     - name: "Pulumi Policies"
     - name: "OPA Gatekeeper"
     - name: "Conftest"
@@ -64,7 +66,7 @@ A policy engine evaluates a proposed change against rules you write, and it can 
 
 | Tool category | Who writes the rules | When it runs | Can it block a deploy | What it is optimized for |
 | --- | --- | --- | --- | --- |
-| Policy engine (OPA, Sentinel, Kyverno, Pulumi Policies) | Your team, in code | Before or as part of the deployment | Yes, when set to a blocking enforcement level | Enforcing an organization's own rules on every change |
+| Policy engine (OPA, Sentinel, Kyverno, Harness, Pulumi Policies) | Your team, in code | Before or as part of the deployment | Yes, when set to a blocking enforcement level | Enforcing an organization's own rules on every change |
 | Scanner with a policy layer (Checkov) | Built-in rule library, extensible with your own YAML or Python checks | Usually in CI, against code, ahead of deployment | Only if wired into a CI gate that fails the build | Broad coverage of known misconfiguration patterns |
 | AI-assisted code security tools (gomboc.ai, CodeAnt AI) | Vendor's rule set, applied by an AI reviewer | In CI or as an assistant reviewing pull requests | Not at deploy time; some can gate a merge, and remediation is typically a PR for a human to approve | Finding and proposing fixes for security issues in code |
 | Cloud security platforms (CNAPPs) | Vendor's rule set | Continuously, against running cloud accounts | Generally not part of the deploy path; they alert and prioritize findings | Runtime visibility, posture management, and threat detection across an entire cloud estate |
@@ -95,6 +97,12 @@ Checkov started as a static analysis tool for infrastructure-as-code files, buil
 
 What earns Checkov a place in a policy-as-code roundup rather than a pure scanner roundup is that it also supports genuine custom policy authoring, in either YAML (for attribute and connection-state checks with AND/OR logic) or Python (for anything the YAML format cannot express). A team can write its own organization-specific rules the same way it would with a dedicated policy engine. Checkov's primary mode of use, though, remains its built-in rule library rather than custom authoring, and it does not run inside the deployment tool itself the way Sentinel or Pulumi Policies do; it depends on a CI gate to have any blocking authority. Teams that want broad, low-effort coverage of known misconfiguration patterns, with the option to add custom rules later, tend to reach for Checkov first.
 
+## Harness Policy as Code
+
+Harness Policy as Code is the policy layer built into the Harness delivery platform. According to the [Harness documentation](https://developer.harness.io/docs/platform/governance/policy-as-code/harness-governance-overview), it uses Open Policy Agent to store and enforce policies, which you write in Rego in the Harness policy editor. You group policies into policy sets and attach them to entities such as pipelines, templates, feature flags, and services, at account, organization, or project scope. A policy set can run when an entity is saved or when a pipeline runs, and it can warn or block depending on how you configure it.
+
+For infrastructure work, Harness Infrastructure as Code Management extends this to workspaces. Its [OPA policies can evaluate workspace configurations, Terraform plans, and Terraform state files](https://developer.harness.io/infrastructure-as-code-management/3.0/platform/policy-and-governance/opa-workspace), so a Rego rule can stop a plan that violates your standards before it is applied. The tradeoffs are scope and language. Policies govern what runs through Harness, so infrastructure changed outside it falls outside their reach, and teams without Rego experience face the same learning curve as with OPA. The Harness FAQ also notes that the platform pins an OPA library version and that SaaS policies cannot call functions such as `http.send`. Harness Policy as Code fits teams that already deliver software and manage Terraform or OpenTofu through Harness and want governance in the same place.
+
 ## Pulumi Policies
 
 Pulumi Policies let a team write policy rules in the same general-purpose languages they already use for infrastructure: TypeScript, JavaScript, and Python, alongside OPA and Rego for teams that want to reuse existing Rego rules. A policy pack is a project directory, scaffolded with `pulumi policy new`, and a team can start using one locally and for free with `pulumi preview --policy-pack <path>` against any backend, with no enterprise tier required to try it.
@@ -105,7 +113,7 @@ Pre-built policy packs cover common compliance frameworks including CIS benchmar
 
 ## Also worth knowing: Gatekeeper, Conftest, and Cloud Custodian
 
-A handful of other tools round out the category. OPA Gatekeeper packages OPA specifically as a Kubernetes admission controller, using constraint templates and custom resources rather than Kyverno's native YAML, for teams who prefer Rego but want Kubernetes-native packaging. Conftest, also built on OPA, is a command-line tool for testing structured configuration files, including YAML, JSON, and Terraform plan output, against Rego policies in a CI pipeline, ahead of the deploy step rather than at it. Cloud Custodian takes a different approach: YAML rules for governing existing cloud resources, such as tagging, retention, and cost controls, evaluated on a schedule against live accounts rather than at deployment time. It is a Cloud Native Computing Foundation incubating project. Each fills a specific gap the five tools above do not fully cover.
+A handful of other tools round out the category. OPA Gatekeeper packages OPA specifically as a Kubernetes admission controller, using constraint templates and custom resources rather than Kyverno's native YAML, for teams who prefer Rego but want Kubernetes-native packaging. Conftest, also built on OPA, is a command-line tool for testing structured configuration files, including YAML, JSON, and Terraform plan output, against Rego policies in a CI pipeline, ahead of the deploy step rather than at it. Cloud Custodian takes a different approach: YAML rules for governing existing cloud resources, such as tagging, retention, and cost controls, evaluated on a schedule against live accounts rather than at deployment time. It is a Cloud Native Computing Foundation incubating project. Each fills a specific gap the six tools above do not fully cover.
 
 ## How the policy as code tools compare
 
@@ -115,6 +123,7 @@ A handful of other tools round out the category. OPA Gatekeeper packages OPA spe
 | HashiCorp Sentinel | Sentinel language | HashiCorp products only | Inside HCP Terraform, Vault, Consul, Nomad Enterprise | Proprietary to HashiCorp | Teams already centered on HCP Terraform |
 | Kyverno | Kubernetes YAML (plus CEL) | Kubernetes only | Kubernetes admission controller, plus CLI | Apache 2.0, CNCF graduated | Teams whose policy needs are entirely in-cluster |
 | Checkov | YAML or Python for custom checks, plus a built-in library | IaC files across many formats | CI, against code | Apache 2.0 | Teams that want broad, ready-made misconfiguration coverage |
+| Harness Policy as Code | Rego (OPA) | Harness pipelines, templates, services, feature flags, and IaCM workspaces with Terraform or OpenTofu plans | Inside Harness, on save, on run, and during IaCM plan and apply | Proprietary platform built on open source OPA | Teams already delivering software through Harness |
 | Pulumi Policies | TypeScript, Python, or Rego | Pulumi-managed infrastructure and, via audit groups, connected cloud accounts | Pulumi preview and up, plus scheduled audits | Open source SDK; compliance framework packs such as CIS and NIST are Enterprise edition | Teams already building infrastructure with Pulumi |
 
 ## How to choose a policy as code tool
@@ -145,6 +154,10 @@ Often, yes. A team running Kubernetes, a CI pipeline, and infrastructure-as-code
 ### What is the difference between blocking a change and auditing existing resources?
 
 Blocking, sometimes called preventative or mandatory enforcement, evaluates a proposed change before it happens and stops it if it violates a rule. Auditing evaluates resources that already exist, whether they were created through the tool being audited or by some other means entirely, and reports violations without stopping anything. Audit-style checks are also the safer way to introduce a new policy: running it in report-only mode first shows how many existing resources it would affect before anyone sets it to block deployments outright.
+
+## Where CSPM fits next to policy as code
+
+Cloud security posture management (CSPM) tools such as Wiz, Microsoft Defender for Cloud, and AWS Security Hub CSPM scan running cloud accounts continuously and report what they find. They sit in the last row of the table above, and they are not policy engines for the deploy path. Their strength is visibility into everything that exists, including resources created by hand or by another tool. A policy engine's strength is deciding whether a proposed change may happen at all. The two answer different questions, and many teams run both. For a full comparison, including when you can wait to buy a CSPM, read [do you need CSPM if you enforce policy in your IaC](/blog/cspm-vs-policy-as-code/).
 
 ## Where to go next
 
