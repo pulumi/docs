@@ -43,7 +43,7 @@ The best infrastructure as code (IaC) tools in 2026 are Pulumi, Terraform, OpenT
 > **Want to try one of these tools today?** Pulumi is free to start and runs from your own machine in minutes. Pick the next step that matches where you are:
 >
 > - **Install the CLI:** [Download and install Pulumi](/docs/install/) on macOS, Windows, or Linux.
-> - **Deploy something real:** [Follow the get-started tutorial](/docs/iac/get-started/aws/) to create, preview, and deploy an AWS stack in the language you already use, or [choose another cloud](/docs/get-started/).
+> - **Deploy something real:** [Start the guided get-started flow](/up/?cloud=aws) to create, preview, and deploy an AWS stack in the language you already use, or [choose another cloud](/up/).
 > - **Already using Terraform?** [Compare Pulumi and Terraform](/docs/iac/comparisons/terraform/) side by side, including how existing HCL converts.
 > - **Want an AI agent on the team?** [See Pulumi Neo](/product/neo/), the infrastructure agent that proposes changes, runs previews, and opens pull requests.
 
@@ -501,7 +501,7 @@ Considerations:
 
 Organizations moving to programming-language-based IaC report deployment-time reductions ranging from roughly 70% to 99% — SANS at 70%, Unity at 80%, and Starburst at 99% (two weeks down to about three hours). These improvements typically occur when transitioning from manual processes or basic template systems to automated approaches with comprehensive testing, IDE integration, and code reusability. Results vary based on starting point, team expertise, infrastructure complexity, and specific use cases.
 
-> **Ready to get started?** [Experience Pulumi's programming language approach](/up/) and see how familiar languages can transform your infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support. Prefer a guided start? Run the [AWS get-started tutorial](/docs/iac/get-started/aws/) to deploy your first stack in the language you already use.
+> **Ready to get started?** [Experience Pulumi's programming language approach](/up/) and see how familiar languages can transform your infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.
 
 ### 2. Terraform
 
