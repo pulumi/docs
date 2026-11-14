@@ -24,6 +24,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx_rtd_theme',
     'seo_meta',
+    'per_symbol',
 ]
 
 source_suffix = '.rst'
@@ -47,3 +48,7 @@ seo_pypi_name = 'pulumi'
 
 autoclass_content = 'both'
 autosummary_generate = True
+
+# One page per public class/function (see _shared/per_symbol.py).
+per_symbol_modules = ['pulumi', 'pulumi.automation', 'pulumi.dynamic', 'pulumi.provider', 'pulumi.runtime']
+per_symbol_honor_all = True

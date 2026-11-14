@@ -2,34 +2,9 @@
 pulumi
 ******
 
-.. automodule:: pulumi
-    :members:
-    :imported-members:
+Python SDK reference for Pulumi infrastructure as code. Each class and function
+below has its own page with full signatures, parameters, and methods. The
+``pulumi.automation``, ``pulumi.dynamic``, ``pulumi.provider``, and
+``pulumi.runtime`` modules are listed after the top-level ``pulumi`` module.
 
-pulumi.automation
-=================
-
-.. automodule:: pulumi.automation
-    :members:
-    :imported-members:
-
-pulumi.dynamic
-==============
-
-.. automodule:: pulumi.dynamic
-    :members:
-    :imported-members:
-
-pulumi.provider
-===============
-
-.. automodule:: pulumi.provider
-    :members:
-    :imported-members:
-
-pulumi.runtime
-==============
-
-.. automodule:: pulumi.runtime
-    :members:
-    :imported-members:
+.. include:: api/overview.inc
