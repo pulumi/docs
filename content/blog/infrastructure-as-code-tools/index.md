@@ -40,11 +40,16 @@ The best infrastructure as code (IaC) tools in 2026 are Pulumi, Terraform, OpenT
 
 {{% hcl-note %}}
 
+> **Want to try one of these tools today?** Pulumi is free to start and runs from your own machine in minutes. Pick the next step that matches where you are:
+>
+> - **Install the CLI:** [Download and install Pulumi](/docs/install/) on macOS, Windows, or Linux.
+> - **Deploy something real:** [Start the guided get-started flow](/up/?cloud=aws) to create, preview, and deploy an AWS stack in the language you already use, or [choose another cloud](/up/).
+> - **Already using Terraform?** [Compare Pulumi and Terraform](/docs/iac/comparisons/terraform/) side by side, including how existing HCL converts.
+> - **Want an AI agent on the team?** [See Pulumi Neo](/product/neo/), the infrastructure agent that proposes changes, runs previews, and opens pull requests.
+
 As infrastructure complexity grows, teams increasingly seek approaches that provide the same developer productivity tools they use for application development. While template-based and domain-specific language approaches serve many use cases effectively, teams with complex requirements or programming backgrounds often find that general-purpose programming languages offer advantages in testing, abstraction, and collaboration.
 
 This comprehensive guide examines the most effective infrastructure as code tools available today, providing detailed analysis of core IaC platforms, complementary tools, and related technologies through the lens of software engineering best practices. Whether you're starting fresh with IaC or evaluating alternatives to overcome limitations in your current toolchain, we'll help you navigate this complex landscape and choose solutions that truly bring software engineering to infrastructure.
-
-Ready to try one of these approaches yourself? [Get started with Pulumi for free](/docs/install/) and provision your first resource in minutes, or [see Pulumi Neo in action](/product/neo/) to explore how an AI agent can manage infrastructure changes alongside your team.
 
 ## What is Infrastructure as Code?
 
