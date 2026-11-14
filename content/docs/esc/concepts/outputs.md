@@ -59,9 +59,13 @@ values:
 #### Using `pulumi env run`
 
 ```console
-$ pulumi env run default/greet -- sh -c 'echo "${GREETING}, ${USER}!"'
+$ pulumi env run default/greet -- sh -c 'echo "$GREETING, $USER!"'
 Hello, user!
 ```
+
+{{< notes type="info" >}}
+Write `$GREETING`, not `${GREETING}`, in the command. `pulumi env run` resolves braced references such as `${GREETING}` against the environment's own values before the shell runs, and `GREETING` is not one of them, so the shell would receive an empty string.
+{{< /notes >}}
 
 ### Precedence
 
@@ -112,7 +116,7 @@ values:
 #### Using `pulumi env run`
 
 ```console
-$ pulumi env run default/greet -- sh -c 'echo ${GREETING}; cat ${GREETING}'
+$ pulumi env run default/greet -- sh -c 'echo $GREETING; cat $GREETING'
 /tmp/tmp.iBApHfcsJ1
 Hello, user!
 ```
