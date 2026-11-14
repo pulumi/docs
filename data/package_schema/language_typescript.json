@@ -1,6 +1,6 @@
 {
   "choosable": "typescript",
-  "generated": "2026-11-06",
+  "generated": "2026-11-12",
   "label": "TypeScript",
   "language": "typescript",
   "schemaKey": "nodejs",
@@ -190,7 +190,7 @@
       "pkg/codegen/nodejs/importer.go"
     ],
     "repo": "pulumi/pulumi",
-    "url": "https://github.com/pulumi/pulumi/tree/v3.274.1",
-    "version": "v3.274.1"
+    "url": "https://github.com/pulumi/pulumi/tree/v3.276.0",
+    "version": "v3.276.0"
   }
 }

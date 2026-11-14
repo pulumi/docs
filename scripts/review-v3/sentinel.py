@@ -45,7 +45,11 @@ Conclusion mapping is where merge gates silently rot, so it is explicit:
 `success` only when every gate is ok; any red ⇒ `failure`; any gate that
 ERRORED (a permission lookup failed, the state block is corrupt) ⇒
 `action_required` — never `neutral`/`skipped`, which GitHub counts as
-PASSING for a required check. `neutral` is reserved for drafts and for
+PASSING for a required check. When every gate that isn't ok is only
+PENDING (the first review is still running, a staging deploy is in flight)
+the conclusion is `pending`, published as a pending commit status: it
+blocks the merge exactly as a failure does, without a red X for something
+nobody needs to act on yet. `neutral` is reserved for drafts and for
 report-only mode, where the real verdict rides inside the summary. Report-only
 is not a silent mode: the pinned status comment is maintained on every PR in
 both modes, leading with a preview banner that says the check blocks nothing
@@ -735,6 +739,12 @@ REVIEW_LANE_REVIEWED_BOT_BRANCHES = ("content-review/", "fix/broken-links-", "va
 # evaluator_reads` can derive the workflow's trigger list from the evaluator
 # instead of restating it.
 OVERSIZED_LABEL = "review:oversized"
+# Set by the review lanes (claude-code-review.yml, claude-update.yml) inside
+# their own runs, so it needs no label-event trigger: the Sentinel already
+# re-evaluates on those workflows' `workflow_run` completion, after the label
+# lands. `test_label_event_filter_covers_every_label_the_evaluator_reads`
+# checks that route instead.
+REVIEW_ERROR_LABEL = "review:error"
 TRIAGE_PROSE_MARKER = "<!-- TRIAGE_PROSE -->"
 
 
@@ -1432,12 +1442,22 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         ))
         skip_note = (f"_Automation PR: the review lane does not review `{skipped_bot}` PRs "
                      "from this branch, so the approving reviewer's review is the review._")
+    elif never_reviewed and REVIEW_ERROR_LABEL in labels:
+        # The first review died before it posted. Nothing is in flight, so
+        # this is red (and offers the waive), not "the review is running".
+        gates.append(Gate(
+            "review", "red",
+            "The automated review errored before it posted; comment `/new-review` to retry.",
+            short="the automated review errored (/new-review)",
+        ))
     elif never_reviewed:
         # The first review is usually still running: the Sentinel posts on
         # open, minutes before the card. Telling the author to run a command
         # here sent them after something that was about to happen anyway.
+        # Pending, not red: it blocks the merge all the same, and a red X
+        # read as "something broke" for the 10-20 minutes every PR spends here.
         gates.append(Gate(
-            "review", "red",
+            "review", "pending",
             "The automated review hasn't posted yet; it starts when the PR is marked "
             "ready for review and usually takes 10-20 minutes. If nothing shows up, "
             "comment `/new-review`.",
@@ -1623,6 +1643,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     waived, waive_note = _waive_state(gh, config, labels)
     any_error = any(g.status == "error" for g in gates)
     reds = [g for g in gates if g.status in ("red", "pending")]
+    hard_red = any(g.status == "red" for g in gates)
     infra_red = any(g.name == "staging" and g.status == "red" for g in gates)
 
     # `waived` is tested BEFORE `any_error` on purpose. It used to be the
@@ -1646,7 +1667,9 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         errs = [_PLAIN_GATE.get(g.name, g.name) for g in gates if g.status == "error"]
         title = f"Couldn't check {_plain_join(errs)} — re-run the Sentinel check"
     elif reds:
-        conclusion = "failure"
+        # Only pending gates left: in flight, nothing to fix. The status is
+        # pending, which still blocks the merge (publish_verdict.STATE_FOR).
+        conclusion = "failure" if hard_red else "pending"
         title = "Waiting on " + "; ".join(_waiting_on(g, len(blocking_ids)) for g in reds)
     else:
         conclusion = "success"
@@ -1733,7 +1756,7 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
     if card is None:
         return False
     body = card.get("body") or ""
-    if verdict.conclusion in ("failure", "action_required"):
+    if verdict.conclusion in ("failure", "pending", "action_required"):
         n = len(verdict.blocking_ids)
         if n:
             first = verdict.blocking_ids[0] if verdict.blocking_ids else "F1"
