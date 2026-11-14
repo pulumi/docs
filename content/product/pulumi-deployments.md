@@ -11,12 +11,6 @@ overview:
 
 quotes:
     items:
-        - customer: mighty
-          name: Aaron Gibralter
-          name_title: Head of Engineering at Mighty
-          quote: |
-            “Pulumi allows every engineer to build and update infrastructure instead of only our infrastructure team. With Pulumi Deployments, we could easily set up a standardized CI/CD infrastructure workflow for every engineer that immediately makes them productive.”
-
         - customer: oleria
           name: Jim Alkove
           name_title: CEO of Oleria

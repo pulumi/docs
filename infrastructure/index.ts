@@ -6,6 +6,8 @@ import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
+import { marketingWebPaths } from "./marketingWebPaths";
+import { PricingApi } from "./pricingApi";
 import { SupportFormApi } from "./supportForm";
 import { SupportRedirect } from "./supportRedirect";
 
@@ -84,6 +86,11 @@ const config = {
     // conversations. Requires the intercomApiKey stack config value — see
     // SupportFormApiArgs in supportForm.ts.
     enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
+
+    // enablePricingApi toggles the /api/pricing endpoint (see pricingApi.ts), which estimates a
+    // Pulumi Cloud monthly bill from usage for Intercom's Fin and other callers. Needs no secrets
+    // or other config; see pricing-api/README.md.
+    enablePricingApi: stackConfig.getBoolean("enablePricingApi") || false,
 
     // supportRedirectDomain is a retired hostname (e.g. support.pulumi.com) permanently redirected to the
     // support-request form at /support/new/ via a dedicated CloudFront distribution — see supportRedirect.ts.
@@ -845,6 +852,18 @@ const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-log
     },
 });
 
+// RFC 8288 Link header pointing agents at the RFC 9727 API catalog. Carried by
+// DefaultCachePolicy (the homepage, where agent-discovery scanners look, and other
+// top-level pages) and by DocsResponseHeadersPolicy, because agents mostly enter on
+// deep /docs/ URLs from search and never see the homepage. `Link` is multi-valued,
+// so override: false composes with any Link the origin sends. Not on the versioned
+// docs archive: those are frozen snapshots, not entry points to the live API catalog.
+const apiCatalogLinkHeaderItem = {
+    header: "Link",
+    value: "</.well-known/api-catalog>; rel=\"api-catalog\"",
+    override: false,
+};
+
 const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
@@ -852,14 +871,7 @@ const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cac
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
             override: true,
-        }, {
-            // RFC 8288 Link header pointing agents at the RFC 9727 API catalog.
-            // Rides the default behavior, so it's present on the homepage (where
-            // agent-discovery scanners look) and other top-level pages.
-            header: "Link",
-            value: "</.well-known/api-catalog>; rel=\"api-catalog\"",
-            override: false,
-        }],
+        }, apiCatalogLinkHeaderItem],
     },
 });
 
@@ -886,24 +898,36 @@ const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable
 });
 
 // Docs pages add Vary: Accept so downstream caches (browsers, proxies) know the
-// response may differ based on the Accept header (HTML vs markdown). This policy
+// response may differ based on the Accept header (HTML vs markdown), plus the same
+// api-catalog Link header as DefaultCachePolicy (see apiCatalogLinkHeaderItem). This policy
 // replaces DefaultCachePolicy on the /docs/* behavior (see below), so it must carry
 // its own Cache-Control item too — otherwise docs pages send no Cache-Control header
 // at all and fall back to CloudFront/S3 defaults, unlike every other page on the site.
 // Same value as DefaultCachePolicy, so docs pages get the same browser-caching
 // behavior as the rest of pulumi.com rather than an accidental gap.
+//
+// The /registry* behavior uses this policy too: the registry origin does the same
+// markdown negotiation but sends no Vary of its own (unlike marketing-web, whose
+// origin sends Vary: Accept for /dev/*), so without it shared caches and browsers
+// could serve one variant to clients that asked for the other.
+//
+// The Vary item uses override: true because the registry origin sends its own
+// Vary on some paths (Vary: Accept-Encoding on /registry/ when it compresses), and
+// with override: false CloudFront keeps the origin's value and never adds Accept.
+// The value names both headers so overriding never drops Accept-Encoding, which
+// both behaviors also vary on (they compress per Accept-Encoding).
 const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
         items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Vary",
-            value: "Accept",
-            override: false,
+            value: "Accept, Accept-Encoding",
+            override: true,
         }, {
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
             override: true,
-        }],
+        }, apiCatalogLinkHeaderItem],
     },
 });
 
@@ -918,7 +942,7 @@ const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPol
     },
 });
 
-// API responses (currently just /api/support*) must never be cached by browsers
+// API responses (/api/support* and /api/pricing*) must never be cached by browsers
 // or intermediaries. DefaultCachePolicy would stamp max-age=60 on them, so this
 // policy overrides Cache-Control to no-store while keeping the security headers.
 const ApiResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy("api-response-headers", {
@@ -1004,6 +1028,7 @@ if (config.registryStack) {
             pathPattern: "/registry*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: DocsResponseHeadersPolicy.id,
         },
         // Registry package logos (e.g. /fingerprinted/logos/pkg/aws.<hash>.svg)
         // are served from the registry origin with year-long immutable caching.
@@ -1042,47 +1067,7 @@ if (config.devStack) {
         }
     );
     devBehaviors.push(
-        {
-            ...baseCacheBehavior,
-            targetOriginId: marketingCDN,
-            pathPattern: "/dev*",
-            cachePolicyId: thirtyMinuteCachePolicy.id,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-        },
-        {
-            ...baseCacheBehavior,
-            targetOriginId: marketingCDN,
-            // The Dev Center (Astro) emits root-relative assets under /assets/*
-            // (CSS, JS, images), so those must reach the same origin as /dev or
-            // the pages render unstyled. pulumi/docs serves its own assets from
-            // /css and /js, so /assets is free to hand to marketing-web.
-            pathPattern: "/assets*",
-            cachePolicyId: thirtyMinuteCachePolicy.id,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-        },
-        // /community moved to marketing-web, except /community/team/*, which stays
-        // here (blog bylines link to it). Exact paths, never a "/community*" wildcard:
-        // that would also take /community/team/* and the
-        // /community/community-engineering/* redirect keys away from S3.
-        ...["/community", "/community/", "/community.md", "/community/puluminaries*"].map(
-            (pathPattern) => ({
-                ...baseCacheBehavior,
-                targetOriginId: marketingCDN,
-                pathPattern,
-                cachePolicyId: thirtyMinuteCachePolicy.id,
-                originRequestPolicyId: allViewerExceptHostHeaderId,
-            }),
-        ),
-        // Exact paths: /pricing* would also take the /pricing/open-source-free-tier/ redirect off S3.
-        ...["/pricing", "/pricing/", "/pricing.md"].map((pathPattern) => ({
-            ...baseCacheBehavior,
-            targetOriginId: marketingCDN,
-            pathPattern,
-            cachePolicyId: thirtyMinuteCachePolicy.id,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-        })),
-        // Exact paths: /up* would also take the /updateplans/ alias off S3.
-        ...["/up", "/up/", "/up/*"].map((pathPattern) => ({
+        ...marketingWebPaths.map((pathPattern) => ({
             ...baseCacheBehavior,
             targetOriginId: marketingCDN,
             pathPattern,
@@ -1197,6 +1182,54 @@ if (config.enableSupportForm) {
     });
 }
 
+// The pricing estimate endpoint (see pricingApi.ts). Additive and fully optional —
+// dev stacks and PR previews without enablePricingApi get no origin or behavior.
+// Requests through it get the WAF's per-IP rate limit (the link-checker exemption
+// excludes /api/), and the Lambda's reserved concurrency caps the rest.
+const pricingApiOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const pricingApiBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+let pricingApi: PricingApi | undefined;
+
+if (config.enablePricingApi) {
+    pricingApi = new PricingApi("pricing-api");
+
+    pricingApiOrigins.push(pricingApi.getOrigin());
+
+    // The estimate's inputs are query parameters on a GET, so every query string is
+    // forwarded. Headers are a whitelist, as for /api/support: content-type for POST
+    // bodies, plus the three CORS request headers the Function URL's own CORS config
+    // needs to answer browser preflights. Host is dropped by construction, which Lambda
+    // Function URL origins require. The x-origin-verify secret is unaffected — it is an
+    // origin customHeaders entry (see PricingApi.getOrigin), added regardless of this policy.
+    const pricingApiOriginRequestPolicy = new aws.cloudfront.OriginRequestPolicy("pricing-api-origin-request", {
+        comment: "/api/pricing: forwards query strings, the content type, and CORS request headers.",
+        cookiesConfig: { cookieBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "all" },
+        headersConfig: {
+            headerBehavior: "whitelist",
+            headers: {
+                items: ["content-type", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"],
+            },
+        },
+    });
+
+    pricingApiBehaviors.push({
+        ...baseCacheBehavior,
+        targetOriginId: "pricing-api",
+        pathPattern: "/api/pricing*",
+        // The API takes GET and POST, and CloudFront's only POST-capable set is all
+        // seven; the handler 405s the rest. Estimates are cheap and the rates can
+        // change hourly, so nothing is cached.
+        allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
+        cachedMethods: ["GET", "HEAD"],
+        cachePolicyId: noCacheKeyPolicy.id,
+        originRequestPolicyId: pricingApiOriginRequestPolicy.id,
+        responseHeadersPolicyId: ApiResponseHeadersPolicy.id,
+        lambdaFunctionAssociations: [],
+        functionAssociations: [],
+    });
+}
+
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
@@ -1225,7 +1258,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             customOriginConfig: {
                 // > If your Amazon S3 bucket is configured as a website endpoint, [like we have here] you must specify
                 // > HTTP Only. Amazon S3 doesn't support HTTPS connections in that configuration.
-                // tslint:disable-next-line: max-line-length
                 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginProtocolPolicy
                 originProtocolPolicy: "http-only",
                 httpPort: 80,
@@ -1252,6 +1284,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...answersOrigins,
         ...versionedDocsOrigins,
         ...supportFormOrigins,
+        ...pricingApiOrigins,
     ],
 
     // Default object to serve when no path is given.
@@ -1274,9 +1307,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     orderedCacheBehaviors: [
-        // The support-form API endpoint. /api/support* overlaps no other
-        // pattern; listed first because it's the only non-content behavior.
+        // The API endpoints. /api/support* and /api/pricing* overlap no other
+        // pattern; listed first because they're the only non-content behaviors.
         ...supportFormBehaviors,
+        ...pricingApiBehaviors,
 
         ...registryBehaviors,
         ...devBehaviors,
@@ -1643,9 +1677,11 @@ export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
 export const cloudFrontDistributionId = cdn.id;
+export { marketingWebPaths };
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
 export const wafWebAclArn = webAcl?.arn;
 export const supportFormFunctionName = supportForm?.getFunctionName();
+export const pricingApiFunctionName = pricingApi?.getFunctionName();
 export const supportRedirectDistributionDomain = supportRedirect?.getDistributionDomainName();
 export const readme = fs.readFileSync("./README.md").toString();

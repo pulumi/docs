@@ -167,6 +167,9 @@ features:
   - id: preventative-policies
     name: Preventative policies
     min_edition: pro
+  - id: custom-policy-groups
+    name: Custom policy groups
+    min_edition: pro
   - id: audit-policies
     name: Audit policies
     min_edition: essentials

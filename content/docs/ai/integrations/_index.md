@@ -5,12 +5,6 @@ h1: Neo Integrations
 meta_desc: Neo integrations connect the agent to MCP context sources, cloud CLIs, GitHub, and Slack.
 aliases:
 - /docs/ai/neo/integrations/
-menu:
-    ai:
-        name: Integrations
-        parent: ai-home
-        identifier: ai-integrations
-        weight: 28
 ---
 
 <script>
@@ -30,3 +24,5 @@ Neo on its own knows about your infrastructure footprint: your code, your stacks
 [MCP integrations](/docs/ai/integrations/external-mcp-servers/) and [CLI integrations](/docs/ai/integrations/cli-integrations/) handle the first part. MCP brings context in from issue trackers, observability platforms, runbook wikis, and on-call tools. CLI integrations cover what MCP doesn't reach, calling out to cloud-provider CLIs against credentials managed in [Pulumi ESC](/docs/esc/). [GitHub](/docs/ai/concepts/neo/code-reviews/) and [Slack](/docs/ai/integrations/slack/) handle the second: mention Neo from a PR thread or a Slack channel to start a task without switching to the Pulumi Cloud console.
 
 All integrations are configured at the organization level by an administrator. Once enabled, they're available to every Neo task in the organization.
+
+To configure AWS or Datadog access, follow [Connect AWS](/docs/ai/agents/integrations/aws/) or [Connect Datadog](/docs/ai/agents/integrations/datadog/).

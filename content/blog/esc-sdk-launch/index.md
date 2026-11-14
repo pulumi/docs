@@ -14,7 +14,7 @@ tags:
 category: product
 ---
 
-Managing secrets and application configurations effectively is crucial for building secure and maintainable software. However, developers often face challenges such as hardcoded credentials, configuration inconsistencies, and security risks. [Pulumi Environments Secrets and Configuration](/product/secrets-management/) (ESC) simplifies the management of sensitive data and configuration across your entire application lifecycle. Today, we're thrilled to introduce the official Pulumi ESC SDK in [TypeScript/JavaScript](/docs/esc/languages-sdks/javascript/), [Go](/docs/esc/development/languages-sdks/go/), and [Python](/docs/esc/development/languages-sdks/python/), making it even easier to integrate ESC directly into your applications.
+Managing secrets and application configurations effectively is crucial for building secure and maintainable software. However, developers often face challenges such as hardcoded credentials, configuration inconsistencies, and security risks. [Pulumi Environments Secrets and Configuration](/product/secrets-management/) (ESC) simplifies the management of sensitive data and configuration across your entire application lifecycle. Today, we're thrilled to introduce the official Pulumi ESC SDK in [TypeScript/JavaScript](/docs/esc/languages-sdks/javascript/), [Go](/docs/esc/languages-sdks/go/), and [Python](/docs/esc/languages-sdks/python/), making it even easier to integrate ESC directly into your applications.
 
 <!--more-->
 
@@ -224,4 +224,4 @@ Here are some real-world scenarios showcasing how you can leverage the Pulumi ES
 
 ## Get Started Today!
 
-The Pulumi ESC SDK is available now! To learn more and start simplifying your application secrets workflow, check out the [Pulumi ESC SDK](/docs/esc/development/languages-sdks/) Documentation. We're confident that this powerful new tool will streamline your development process, enhance your application security, and empower you to build innovative solutions with confidence. Join us on this journey towards a more secure and manageable future for application secrets and configurations!
+The Pulumi ESC SDK is available now! To learn more and start simplifying your application secrets workflow, check out the [Pulumi ESC SDK](/docs/esc/languages-sdks/) Documentation. We're confident that this powerful new tool will streamline your development process, enhance your application security, and empower you to build innovative solutions with confidence. Join us on this journey towards a more secure and manageable future for application secrets and configurations!

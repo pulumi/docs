@@ -123,7 +123,7 @@ runtime:
 packages:
   s3-bucket-aws:
     source: hcl
-    version: 0.18.4
+    version: 0.19.1
     parameters:
       - module
       - terraform-aws-modules/s3-bucket/aws
@@ -188,7 +188,7 @@ pulumi.export("bucket_id", bucket.s3_bucket_id)
 
 {{% choosable language go %}}
 
-Since this was a Go project, Pulumi generated a Go SDK for the module and added a `replace` directive for it to `go.mod`. Run `go mod tidy` to add the matching `require` entry. We can now use the Terraform module directly in our code:
+Since this was a Go project, Pulumi generated a Go SDK for the module and added a `replace` directive for it to `go.mod`. We can now use the Terraform module directly in our code:
 
 **Example:** `main.go`
 
@@ -218,6 +218,12 @@ func main() {
 		return nil
 	})
 }
+```
+
+Before you deploy, run `go mod tidy`. The `replace` directive doesn't add the `require` entry your import needs:
+
+```bash
+go mod tidy
 ```
 
 {{% /choosable %}}
@@ -287,10 +293,6 @@ public class App {
 }
 ```
 
-{{% notes type="warning" %}}
-Deploying this example from Java currently fails with `Expected List but got 'java.lang.String'`. The generated SDK types the module's `s3_bucket_lifecycle_configuration_rules` output as a list, but the module returns an empty string when the bucket has no lifecycle rules. Until [pulumi-hcl#744](https://github.com/pulumi/pulumi-hcl/issues/744) is fixed, [load the module at runtime](#load-a-module-at-runtime) instead.
-{{% /notes %}}
-
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
@@ -321,7 +323,7 @@ outputs:
 packages:
   s3-bucket-aws:
     source: hcl
-    version: 0.18.4
+    version: 0.19.1
     parameters:
       - module
       - terraform-aws-modules/s3-bucket/aws

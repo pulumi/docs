@@ -6,7 +6,7 @@ meta_desc: Use built-in Neo slash commands and create custom commands that captu
 menu:
     ai:
         name: Slash commands
-        parent: ai-concepts-neo
+        parent: ai-neo
         identifier: ai-slash-commands
         weight: 55
 ---

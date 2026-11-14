@@ -119,4 +119,4 @@ The buffet approach—powered by Pulumi's flexibility and Python's expressivenes
 
 If you're facing similar challenges with diverse project requirements, consider building a buffet instead of a prix fixe menu. Your teams will thank you for it.
 
-*Want to build your own infrastructure buffet? [Get started with Pulumi](https://www.pulumi.com/docs/get-started/) and join [our community Slack](https://slack.pulumi.com/) to connect with engineers solving similar challenges.*
+*Want to build your own infrastructure buffet? [Get started with Pulumi](/up/) and join [our community Slack](https://slack.pulumi.com/) to connect with engineers solving similar challenges.*

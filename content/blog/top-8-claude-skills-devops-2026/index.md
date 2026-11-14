@@ -266,4 +266,4 @@ The [Pulumi Agent Skills announcement](/blog/pulumi-agent-skills/) has more deta
 
 Give it one project. That is all it took for me.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

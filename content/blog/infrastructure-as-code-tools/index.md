@@ -6,7 +6,6 @@ updated: 2026-09-21
 draft: false
 meta_desc: "Compare 10 IaC tools for 2026 on pricing, licensing, release cadence, and AI-agent readiness: Pulumi, Terraform, OpenTofu, CDK, Bicep, and more."
 authors:
-    - asaf-ashirov
     - isaac-harris
 tags:
     - infrastructure-as-code
@@ -49,7 +48,7 @@ Ready to try one of these approaches yourself? [Get started with Pulumi for free
 
 ## What is Infrastructure as Code?
 
-[Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/) is an approach to automating the provisioning and management of infrastructure using software engineering principles, approaches, and tools. Rather than manually configuring servers, networks, and cloud resources through user interfaces or command-line tools, IaC enables you to define your entire infrastructure declaratively through code.
+[Infrastructure as Code (IaC)](/topics/infrastructure-as-code/) is an approach to automating the provisioning and management of infrastructure using software engineering principles, approaches, and tools. Rather than manually configuring servers, networks, and cloud resources through user interfaces or command-line tools, IaC enables you to define your entire infrastructure declaratively through code.
 
 This approach brings the same benefits that have revolutionized software development—version control, automated testing, code reviews, and CI/CD pipelines—to infrastructure management.
 
@@ -497,7 +496,7 @@ Considerations:
 
 Organizations moving to programming-language-based IaC report deployment-time reductions ranging from roughly 70% to 99% — SANS at 70%, Unity at 80%, and Starburst at 99% (two weeks down to about three hours). These improvements typically occur when transitioning from manual processes or basic template systems to automated approaches with comprehensive testing, IDE integration, and code reusability. Results vary based on starting point, team expertise, infrastructure complexity, and specific use cases.
 
-> **Ready to get started?** [Experience Pulumi's programming language approach](/docs/get-started/) and see how familiar languages can transform your infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.
+> **Ready to get started?** [Experience Pulumi's programming language approach](/up/) and see how familiar languages can transform your infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.
 
 ### 2. Terraform
 
@@ -1095,7 +1094,7 @@ nginx:
 License: Apache 2.0  
 Best For: Container-native infrastructure and application management
 
-While primarily a [container orchestration](/topics/containers/) platform, Kubernetes itself serves as an infrastructure as code tool through its declarative YAML manifests and API-driven resource management.
+While primarily a [container orchestration](/docs/integrations/clouds/kubernetes/) platform, Kubernetes itself serves as an infrastructure as code tool through its declarative YAML manifests and API-driven resource management.
 
 Key Features:
 
@@ -1405,7 +1404,7 @@ Absolutely! Many organizations use complementary tools for different aspects of 
 Pulumi + Configuration Management:
 
 - Pulumi + Ansible: Infrastructure provisioning + server configuration ([example](/blog/deploy-wordpress-aws-pulumi-ansible/))
-- Pulumi + Chef/Puppet: [Cloud resources](/docs/get-started/) + complex configuration management
+- Pulumi + Chef/Puppet: [Cloud resources](/up/) + complex configuration management
 
 Pulumi + Native Cloud Tools:
 
@@ -1507,7 +1506,7 @@ Template-based tools like Terraform and OpenTofu continue to serve teams effecti
 
 Evidence of Success Across Approaches:
 
-Organizations achieve significant improvements regardless of their chosen path—the key is selecting tools that align with team expertise and infrastructure requirements. Understanding [what DevOps is](/what-is/what-is-devops/) and [platform engineering concepts](/what-is/what-is-platform-engineering/) helps inform these decisions. Success stories span the entire ecosystem, from Terraform's widespread enterprise adoption to programming language approaches enabling dramatic productivity gains at companies like Unity, Snowflake, and Starburst.
+Organizations achieve significant improvements regardless of their chosen path—the key is selecting tools that align with team expertise and infrastructure requirements. Understanding [what DevOps is](/topics/platform-engineering/what-is-devops/) and [platform engineering concepts](/topics/platform-engineering/) helps inform these decisions. Success stories span the entire ecosystem, from Terraform's widespread enterprise adoption to programming language approaches enabling dramatic productivity gains at companies like Unity, Snowflake, and Starburst.
 
 Choosing Your Path:
 

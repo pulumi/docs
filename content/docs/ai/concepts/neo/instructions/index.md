@@ -6,7 +6,7 @@ meta_desc: Teach Pulumi Neo your organization's standards with custom instructio
 menu:
     ai:
         name: Instructions
-        parent: ai-concepts-neo
+        parent: ai-neo
         identifier: ai-instructions
         weight: 50
 ---

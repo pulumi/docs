@@ -31,7 +31,7 @@ The recommended workflow for developing and publishing components follows these 
 
 1. **Local Development**: Author your component using a [local development workflow](/docs/iac/guides/building-extending/components/build-a-component/)
 2. **Repository Setup**: Create a [GitHub repository](https://github.com/pulumi-labs/pulumi-component-lifecycle-example) with proper documentation
-3. **Testing Infrastructure**: Write [comprehensive unit and integration tests](/docs/iac/concepts/components/testing-components)
+3. **Testing Infrastructure**: Write [comprehensive unit and integration tests](/docs/iac/guides/building-extending/components/testing-components/)
 4. **Automated Testing**: Set up [GitHub Actions](https://github.com/pulumi-labs/pulumi-component-lifecycle-example/tree/main/.github/workflows/test.yml) for continuous testing
 5. **Versioned Releases**: Create semantic [versioned releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) on GitHub
 6. **Automated Publishing**: Automate the [release and publishing](https://github.com/pulumi-labs/pulumi-component-lifecycle-example/tree/main/.github/workflows/release.yml) process
@@ -258,7 +258,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Authenticate to Pulumi
-        uses: pulumi/auth-actions@v1
+        uses: pulumi/auth-actions@v2
         with:
           organization: ${{ env.PULUMI_ORG }}
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -269,7 +269,7 @@ jobs:
           aws-region: us-west-2
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Run Preview
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: preview
           work-dir: tests/integration
@@ -286,7 +286,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Go ✨
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v6
         with:
           go-version: '1.24'
       - name: Downloading dependencies 📦
@@ -342,7 +342,7 @@ jobs:
           fetch-depth: 0 # Ensures the build matches the git tag.
 
       - name: Authenticate to Pulumi
-        uses: pulumi/auth-actions@v1
+        uses: pulumi/auth-actions@v2
         with:
           organization: ${{ env.PULUMI_ORG }}
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -375,7 +375,7 @@ This workflow will be automatically triggered any time a tag is pushed. The easi
 Similarly to the testing workflow, we use a mix of Pulumi-specific GitHub Actions, as well as some off-the-shelf standard actions:
 
 - `actions/checkout@v4` - check out the code into the GitHub runner
-- `pulumi/auth-actions@v1` - authenticate with Pulumi Cloud
+- `pulumi/auth-actions@v2` - authenticate with Pulumi Cloud
 
 However, `pulumi/actions` doesn't support the `publish` subcommand, so we set that step up manually via a `run` step. Use the `PULUMI_ORG` variable to set the `--publisher` and the GitHub Actions-internal `github.repository` variable to get the name of the repository.
 
@@ -428,7 +428,7 @@ Once your automated publishing workflow is established, consider these enhanceme
 ## Learn More
 
 - [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/)
-- [Testing Components](/docs/iac/concepts/components/testing-components)
+- [Testing Components](/docs/iac/guides/building-extending/components/testing-components/)
 - [Private Registry](/docs/idp/concepts/private-registry)
 - [GitHub Actions for Pulumi](/docs/iac/operations/continuous-delivery/github-actions)
 - [Pulumi Deployments](/docs/deployments/concepts/)

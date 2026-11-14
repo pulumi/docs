@@ -10,10 +10,10 @@ aliases:
 - /docs/ai/neo/pull-requests/
 menu:
     ai:
-        name: Pull Requests
-        parent: ai-concepts-neo
+        name: Pull requests
+        parent: ai-neo
+        weight: 60
         identifier: ai-pull-requests
-        weight: 35
 ---
 
 Pull requests are the bridge between Neo's AI capabilities and your production infrastructure. Every change Neo proposes goes through a PR, ensuring:

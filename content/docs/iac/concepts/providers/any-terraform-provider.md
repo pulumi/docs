@@ -168,7 +168,7 @@ Pulumi HCL takes providers from a `required_providers` block rather than from `p
 pulumi package add terraform-provider honeycombio/honeycombio
 ```
 
-This downloads the provider and records it in your `Pulumi.yaml`. In every language except YAML, it also generates and links a typed SDK in your project. Pulumi HCL skips this step.
+This downloads the provider and records it in your `Pulumi.yaml`. In every language except YAML, it also generates a typed SDK in your project's `sdks` directory, and in TypeScript and Python it links the SDK for you. Go, .NET, and Java need one more step, shown in step 3. Pulumi HCL skips this step.
 
 ### Step 3: Use the provider in your code
 
@@ -213,7 +213,7 @@ pulumi.export("marker_id", marker.id)
 package main
 
 import (
-    "github.com/pulumi/pulumi-terraform-provider/sdks/go/honeycombio"
+    "github.com/pulumi/pulumi-terraform-provider/sdks/go/honeycombio/honeycombio"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -233,11 +233,18 @@ func main() {
 }
 ```
 
+Before you deploy, run `go mod tidy`. `pulumi package add` adds a `replace` directive for the SDK to `go.mod`, but not the `require` entry your import needs:
+
+```bash
+go mod tidy
+```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 using Pulumi.Honeycombio;
 
@@ -254,6 +261,12 @@ return await Deployment.RunAsync(() =>
         ["markerId"] = marker.Id
     };
 });
+```
+
+Before you deploy, add the `DefaultItemExcludes` line that `pulumi package add` prints to a `<PropertyGroup>` in your `.csproj`, so the SDK's source files aren't compiled into your program:
+
+```xml
+<DefaultItemExcludes>$(DefaultItemExcludes);sdks/**/*.cs</DefaultItemExcludes>
 ```
 
 {{% /choosable %}}
@@ -283,6 +296,8 @@ public class App {
     }
 }
 ```
+
+Before you deploy, follow the steps `pulumi package add` prints to link the SDK: copy its sources into your project's `src` directory and add its dependencies to your `pom.xml`.
 
 {{% /choosable %}}
 

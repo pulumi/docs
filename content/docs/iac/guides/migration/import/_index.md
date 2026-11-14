@@ -333,7 +333,7 @@ application_vpc = aws.ec2.Vpc("application-vpc",
         "Owner": "pulumi",
         "Project": "pulumi-k8s-aws-cluster",
     },
-    opts=ResourceOptions(protect=True))
+    opts=pulumi.ResourceOptions(protect=True))
 public_1 = aws.ec2.Subnet("public-1",
     assign_ipv6_address_on_creation=False,
     cidr_block="172.16.32.0/19",
@@ -346,7 +346,7 @@ public_1 = aws.ec2.Subnet("public-1",
         "type": "public",
     },
     vpc_id="vpc-0ad77710973388316",
-    opts=ResourceOptions(protect=True))
+    opts=pulumi.ResourceOptions(protect=True))
 private_1 = aws.ec2.Subnet("private-1",
     assign_ipv6_address_on_creation=False,
     cidr_block="172.16.160.0/19",
@@ -359,7 +359,7 @@ private_1 = aws.ec2.Subnet("private-1",
         "type": "private",
     },
     vpc_id="vpc-0ad77710973388316",
-    opts=ResourceOptions(protect=True))
+    opts=pulumi.ResourceOptions(protect=True))
 ```
 
 {{% /choosable %}}
@@ -369,7 +369,7 @@ private_1 = aws.ec2.Subnet("private-1",
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 

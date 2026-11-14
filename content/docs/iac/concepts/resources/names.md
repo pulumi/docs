@@ -248,7 +248,7 @@ role = iam.Role(
 
 ```go
 role, _ := iam.NewRole(ctx, "my-role", &iam.RoleArgs{
-    Name: fmt.Sprintf("my-role-%s-%s", ctx.Project(), ctx.Stack()),
+    Name: pulumi.Sprintf("my-role-%s-%s", ctx.Project(), ctx.Stack()),
 }, pulumi.DeleteBeforeReplace(true))
 ```
 

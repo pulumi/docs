@@ -30,15 +30,15 @@ public class App {
                     .build())
             .build());
 
-        var userData = "#!/bin/bash echo \"Hello, World!\" > index.html nohup python3 -m http.server 80 &";
+        var userData = "#!/bin/bash\necho \"Hello, World!\" > index.html\nnohup python3 -m http.server 80 &";
 
-        // Look up the latest Amazon Linux 2 AMI.
+        // Look up the latest Amazon Linux 2023 AMI.
         var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
             .owners("amazon")
             .mostRecent(true)
             .filters(GetAmiFilterArgs.builder()
                 .name("name")
-                .values("amzn2-ami-hvm-*-x86_64-gp2")
+                .values("al2023-ami-2023.*-x86_64")
                 .build())
             .build());
 

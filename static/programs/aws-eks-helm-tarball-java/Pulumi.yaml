@@ -1,3 +1,0 @@
-name: aws-eks-helm-tarball-java
-runtime: java
-description: An example that deploys a Helm chart from a tarball URL.

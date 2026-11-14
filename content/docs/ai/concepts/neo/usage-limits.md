@@ -9,14 +9,16 @@ aliases:
 menu:
     ai:
         name: Usage limits
-        parent: ai-concepts-neo
+        parent: ai-neo
+        weight: 110
         identifier: ai-usage-limits
-        weight: 70
 ---
 
 A Neo usage limit caps what your organization spends on [Neo](/docs/ai/) in a monthly billing period. When usage reaches the limit, Neo pauses until the next period resets. You set a limit for the whole organization, and optionally a separate limit for individual members.
 
 Requests served through [bring your own key (BYOK)](/docs/ai/concepts/neo/model-providers/) do not count toward these limits and can continue after a limit is reached. Set budgets and rate limits with your model provider to control BYOK spend.
+
+Neo usage limits cover Neo tokens only. An agent task can run its tools and commands on an Agent worker, a Pulumi-hosted machine. The worker's run time is now billed as [workflow minutes](/pricing/), which do not count toward Neo usage limits.
 
 ## Who can set limits
 

@@ -3,9 +3,9 @@
 
 
 <section class="content docs-home">
-    <div id="docs-home-banner" class="header bg-violet-50 dark:bg-violet-950 bg-right">
+    <div id="docs-home-banner" class="header{{ if .Params.wide_banner }} header-wide{{ end }} bg-violet-50 dark:bg-violet-950 bg-right">
         <h1><strong>{{ .Params.h1 }}</strong></h1>
-        <div class="w-full md:w-2/3">
+        <div class="w-full{{ if not .Params.wide_banner }} md:w-2/3{{ end }}">
             {{ .Params.description | safeHTML }}
         </div>
         {{ if $primary_link_button.link }}

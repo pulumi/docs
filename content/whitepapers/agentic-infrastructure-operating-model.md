@@ -255,7 +255,7 @@ And it holds at every scale.
   body: "**A top frontier lab** grew its infrastructure footprint **982% in twelve months** on code-defined infrastructure, accelerating training, inference, and experimentation. They move at the speed of science."
 {{< /customer-proof >}}
 
-Over 4,000 companies run on Pulumi, and the pattern extends well beyond AI-native companies. **BMW** enforces policy as code across **20,000 cloud resources and 11,000 developers**. Different scales, different teams, but it's code all the way down.
+Over 4,000 companies run on Pulumi, and the pattern extends well beyond AI-native companies. **BMW** enforces policy as code across **20,000 cloud resources**. Different scales, different teams, but it's code all the way down.
 
 ---
 

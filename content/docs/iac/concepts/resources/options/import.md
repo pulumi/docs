@@ -51,6 +51,7 @@ Python appends an underscore (`import_`) to avoid conflicting with the keyword.
 {{% /notes %}}
 
 ```python
+import pulumi
 import pulumi_aws as aws
 
 group = aws.ec2.SecurityGroup('web-sg',
@@ -59,13 +60,13 @@ group = aws.ec2.SecurityGroup('web-sg',
     ingress=[
         { 'protocol': 'tcp', 'from_port': 80, 'to_port': 80, 'cidr_blocks': ['0.0.0.0/0'] }
     ],
-    opts=ResourceOptions(import_='sg-04aeda9a214730248'))
+    opts=pulumi.ResourceOptions(import_='sg-04aeda9a214730248'))
 
 server = aws.ec2.Instance('web-server',
     ami='ami-6869aa05',
     instance_type='t2.micro',
     security_groups=[group.name],
-    opts=ResourceOptions(import_='i-06a1073de86f4adef'))
+    opts=pulumi.ResourceOptions(import_='i-06a1073de86f4adef'))
 ```
 
 {{% /choosable %}}
@@ -177,10 +178,10 @@ resources:
       name: web-sg-62a569b
       description: Enable HTTP access
       ingress:
-        protocol: tcp
-        fromPort: 80
-        toPort: 80
-        cidrBlocks: [ "0.0.0.0/0" ]
+        - protocol: tcp
+          fromPort: 80
+          toPort: 80
+          cidrBlocks: [ "0.0.0.0/0" ]
     options:
       import: sg-04aeda9a214730248
   server:

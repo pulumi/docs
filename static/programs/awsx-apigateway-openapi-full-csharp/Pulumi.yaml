@@ -1,3 +1,0 @@
-name: awsx-apigateway-openapi-full-csharp
-runtime: dotnet
-description: An example of configuring an API Gateway instance with an OpenAPI/Swagger JSON definition.

@@ -1,5 +1,5 @@
 ---
-title: "PulumiUP: Infrastructure as Code Conference | May 6, 2025"
+title: "PulumiUP 2025: Infrastructure as Code Conference Sessions"
 type: page
 layout: pulumi-up-2023
 meta_image: /images/pulumiup/post-2025-meta.png

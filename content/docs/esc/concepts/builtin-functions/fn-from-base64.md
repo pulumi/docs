@@ -2,7 +2,7 @@
 title: fn::fromBase64
 title_tag: fn::fromBase64
 h1: fn::fromBase64
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Use fn::fromBase64 in Pulumi ESC to decode a Base64-encoded string into its original value. Secret inputs stay secret. See syntax and examples."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-from-base64/
   - /docs/esc/reference/builtin-functions/fn-from-base64/

@@ -26,6 +26,10 @@ For first-party ESC integrations (the Pulumi Service Provider, Automation API, t
 - [Migrate from stack references to `pulumi-stacks`](/docs/esc/guides/pulumi-iac/migrate-from-stack-references/) — replace `StackReference` resources with the ESC `pulumi-stacks` provider.
 - [Sync secrets to external platforms](/docs/esc/guides/sync-secrets-to-external-platforms/) — push ESC secrets and config to AWS Secrets Manager, Azure Key Vault, GitHub, Vault, and more.
 
+## Use from application code
+
+- [Fetch secrets at runtime with the ESC SDK](/docs/esc/guides/fetch-secrets-at-runtime/) — read secrets and configuration from an environment inside a running application.
+
 ## Run commands
 
 - [Run commands with pulumi env run](/docs/esc/guides/running-commands/) — inject environment values into any command or script.

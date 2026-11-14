@@ -138,7 +138,7 @@ For more information, see [Deleting your account](/docs/administration/concepts/
 ### How do I get started for free?
 
 Sign up with the identity provider your organization uses, then
-[download the CLI](/docs/get-started/) and sign in when it prompts you. The
+[download the CLI](/docs/install/) and sign in when it prompts you. The
 Free edition costs nothing and needs no credit card. It covers one user,
 state management, Pulumi Deployments, basic Pulumi ESC, unlimited projects,
 stacks, and environments, and unlimited updates and history. It does not limit

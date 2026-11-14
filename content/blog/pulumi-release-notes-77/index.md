@@ -179,7 +179,7 @@ Learn more in the [Team Access Tokens blog post](/blog/team-access-tokens/) and 
 
 The new Billing Manager role gives the user permissions to access and edit only billing information, with no read or write permissions for stacks. This role is for when you need someone in your Organization to manage billing operations but you do not want them to have any permissions beyond that. Billing Managers can only be invited or added to the Organization by Organization Admins. Once added, the only information a Billing Manager will see is metrics about the Organization and the Billing and Usage page.
 
-Learn more about the permissions in the [Billing Manager blog post](/blog/billing-managers/) and the [Billing Manager documentation](/docs/administration/organizations-teams/billing-managers/).
+Learn more about the permissions in the [Billing Manager blog post](/blog/billing-managers/) and the [Billing Manager documentation](/docs/administration/concepts/billing-managers/).
 
 ### New Pulumi Service console
 

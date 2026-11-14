@@ -1,3 +1,0 @@
-name: awsx-vpc-security-groups-java
-runtime: java
-description: An example that creates a new VPC with a custom security group.

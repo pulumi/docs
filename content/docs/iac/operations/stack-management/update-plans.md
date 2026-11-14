@@ -2,7 +2,7 @@
 title_tag: "Update Plans | Pulumi Concepts"
 meta_desc: Learn about Pulumi update plans and how they can be used.
 title: Update plans
-h1: Update  plans
+h1: Update plans
 menu:
     iac:
         name: Update plans

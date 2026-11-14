@@ -35,14 +35,14 @@ name: Sentinel
 #   unset    → DARK. The job never runs, no check-run is posted, and the
 #              review lanes' "Re-evaluate Sentinel" pokes are skipped. This
 #              is the state the workflow file merges in (Phase 0/1): merging
-#              must change nothing a contributor can see.
+#              must change nothing a contributor can see. NOT an off switch
+#              once branch protection requires the Sentinel status, as it
+#              does on master: no status is a held PR for everyone but repo
+#              admins. Stand the gate down with 'report'.
 #   'report' → report-only (Phase 2). The status passes (`neutral` is
 #              posted as `success`) with the real verdict in its description
-#              ("Preview — would be: …"), and the pinned status comment is
-#              maintained on EVERY PR it
-#              evaluates, leading with a banner that says it blocks nothing
-#              yet and that it soon will. Report-only is a visible dry run on
-#              purpose: the surface only gets tested if the readers do.
+#              ("Preview — would be: …"), and each per-gate status passes
+#              with a description starting "Preview, not enforced:".
 #   '1'      → enforcing (Phase 4): real conclusions, made required by the
 #              ruleset.
 # Every comparison is written against a literal on purpose — `vars.X != '0'`
@@ -58,20 +58,16 @@ name: Sentinel
 # the evaluator never reads (triage's `domain:*` batch on open was most of
 # the burst), scripts/review-v3/publish_guard.py refuses to publish a
 # verdict when the PR head has moved or a newer run already published at
-# this head (every check-run carries `external_id = run id`), and
-# sentinel.py's `update_status_comment` collapses duplicate status comments
-# onto the oldest. That last one is the comment's guard, not the check's:
-# two runs that start together (open as draft then mark ready; a bot lane
-# opening and labelling at once) both find no comment and both post one,
-# and before the collapse the second copy froze on its first verdict
-# (pulumi/docs#22251). A guarded-out run concludes success with a
+# this head (every check-run carries `external_id = run id`), and the
+# only comment the job still writes (the author-card strip) is idempotent.
+# A guarded-out run concludes success with a
 # ::notice::, never cancelled.
 
 on:
   pull_request_target:
     types: [opened, ready_for_review, synchronize, reopened, labeled, unlabeled]
   pull_request_review:
-    # `edited` matters: G5 reads `/oversized-ack` out of the approving
+    # `edited` matters: `oversized` reads `/oversized-ack` out of the approving
     # review's BODY, so the natural human sequence — approve, see the red gate
     # explaining the command, edit the review to add it — fired no event
     # at all. The gate stayed red on a PR that satisfied it, and an oversized
@@ -97,7 +93,7 @@ permissions:
   # PR's head carries one.
   checks: write
   # `pull-requests: write`, not `issues: write`, is what lets this job write
-  # the pinned status comment and the ⛔ strip. Both go through
+  # the ⛔ strip and delete the retired status comment. Both go through
   # `POST/PATCH /repos/{o}/{r}/issues/{n}/comments`, and the endpoint's name
   # is a trap: on a PR number that endpoint is governed by the
   # **pull_requests** scope, not `issues`. The old block asked for
@@ -108,10 +104,11 @@ permissions:
   # because gh's own endpoint naming keeps inviting it back; it is not the
   # one doing the work.
   # The same scope also covers DELETE on those comments, which is how
-  # `update_status_comment` removes a duplicate status comment.
+  # `remove_status_comments` clears the retired pinned status comment.
   pull-requests: write
   issues: write
   contents: read
+  actions: read        # `staging`: staging deploy runs and the staging workflow's enabled state
   id-token: write      # ESC OIDC for the org-scoped team-membership token
 
 env:
@@ -202,12 +199,29 @@ jobs:
               ;;
           esac
 
-      - name: Fetch secrets from ESC
-        # continue-on-error: sentinel.py treats a missing/failing team-read
-        # token as gate-3 ERROR ⇒ action_required — fail closed, never
-        # fail-open and never fail the whole evaluation (the other four
-        # gates still report). Also lets the fork battery run without ESC.
+      # The org-scoped token is read for one thing: authorizing a
+      # `review:waived` label (team membership). Every other run skips the
+      # ESC fetch (~5 s) and never holds the token. Labels come from the API,
+      # not the event, because workflow_run and dispatch events carry none.
+      # A failed read fetches the token anyway: the waive must not be refused
+      # because a label read hiccuped.
+      - name: Does this PR carry review:waived?
         if: steps.pr.outputs.pr != ''
+        id: waive
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if labels=$(gh api "repos/${{ github.repository }}/issues/${{ steps.pr.outputs.pr }}/labels" --jq '.[].name' 2>/dev/null); then
+            if grep -qx 'review:waived' <<<"$labels"; then echo "waived=true" >> "$GITHUB_OUTPUT"; else echo "waived=false" >> "$GITHUB_OUTPUT"; fi
+          else
+            echo "waived=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch secrets from ESC
+        # continue-on-error: without the token sentinel.py refuses the waive
+        # out loud (fail closed) and the gates still report. Also lets the
+        # fork battery run without ESC.
+        if: steps.pr.outputs.pr != '' && steps.waive.outputs.waived == 'true'
         id: esc-secrets
         continue-on-error: true
         uses: pulumi/esc-action@v3
@@ -238,14 +252,26 @@ jobs:
             .github
           sparse-checkout-cone-mode: true
 
-      - name: Set up Python
+      # The runner's own Python usually has PyYAML already; installing a
+      # Python and a package for one import cost ~5 s on every run.
+      - name: Check for PyYAML
         if: steps.pr.outputs.pr != ''
+        id: pyyaml
+        run: |
+          if python3 -c 'import sys, yaml; assert sys.version_info >= (3, 10)' 2>/dev/null; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.pr.outputs.pr != '' && steps.pyyaml.outputs.ok != 'true'
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Install evaluator deps
-        if: steps.pr.outputs.pr != ''
+        if: steps.pr.outputs.pr != '' && steps.pyyaml.outputs.ok != 'true'
         run: python3 -m pip install --quiet pyyaml
 
       - name: Evaluate
@@ -253,22 +279,20 @@ jobs:
         id: verdict
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Org-scoped token for the two membership endpoints G3 reads —
-          # org team membership, and (for `approval.scope: any-human` and
-          # `approval.admins_satisfy`) the approver's effective repo
-          # permission, which wants push access.
+          # Org-scoped token for the two endpoints the default token can't
+          # read: the waiver's team membership (`review:waived`) and, on an
+          # oversized PR, the acking approver's effective repo permission
+          # (the `oversized` gate), which wants push access.
           # The default GITHUB_TOKEN can do neither. sentinel.py treats
           # lookup failures as action_required, never as "not a member", so
           # a missing/expired token degrades loud, not wrong.
           GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
         run: |
-          # --status-comment is passed unconditionally on purpose: the
-          # evaluator maintains the pinned comment in both modes, on every PR
-          # it evaluates. In report-only mode the comment leads with a
-          # preview banner ("not blocking your merge … will be enforced"),
-          # which is what makes a repo-wide dry run safe. --update-strip
-          # stays enforcing-only: that one edits the author card.
+          # --status-comment, in both modes: delete the retired pinned
+          # status comment from any PR that still carries one (the per-gate
+          # statuses replaced it). --update-strip stays enforcing-only:
+          # that one edits the author card.
           ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}"
                 --status-comment)
           if [ "$REPORT_ONLY" = "true" ]; then

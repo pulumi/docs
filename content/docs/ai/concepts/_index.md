@@ -8,7 +8,7 @@ menu:
         name: Concepts
         parent: ai-home
         identifier: ai-concepts
-        weight: 10
+        weight: 20
 ---
 
 These pages explain how AI agents work with Pulumi. To set something up, see [Guides](/docs/ai/guides/). To try it end to end, start with [Get started](/docs/ai/get-started/).

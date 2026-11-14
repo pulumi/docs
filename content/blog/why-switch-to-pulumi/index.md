@@ -1,7 +1,7 @@
 ---
 title: "Why Switch to Pulumi for Infrastructure as Code?"
 date: 2024-07-23T19:47:50-07:00
-updated: 2026-09-21
+updated: 2026-10-25
 meta_desc: "Pulumi: the top choice for infrastructure as code. Boost productivity, scale infinitely, and use Pulumi Neo to automate infrastructure management with AI."
 authors:
     - aaron-kao
@@ -277,7 +277,7 @@ abstraction you can manage stacks of AI infrastructure as code.
 ***Pulumi makes it trivial to take local AI development to production in
 the cloud.***
 
-[Read more >>](/solutions/ai/)
+[Read more >>](/blog/the-superintelligence-flywheel/)
 
 ### Why is Pulumi better than the alternatives?
 
@@ -428,7 +428,7 @@ Pulumi later.
 {{% notes type="info" %}}
 Have a particular ***Pulumi vs X***
 comparison that you need thoughts on? Feel free to join the [Pulumi Community
-Slack](http://pulumi) if you have quick technical
+Slack](https://slack.pulumi.com/) if you have quick technical
 questions, or talk to a [Solutions Architect](https://www.pulumi.com/contact/?form=tf-migration) if you need more detailed
 consultation about your specific architecture.
 {{% /notes %}}

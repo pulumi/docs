@@ -62,17 +62,36 @@
       {{/* Documentation pages get TechArticle schema */}}
       {{ $entity = partial "schema/collectors/article-entity.html" . }}
 
-    {{ else if eq .Section "product" }}
-      {{/* Product pages get SoftwareApplication schema */}}
-      {{ $entity = partial "schema/collectors/product-entity.html" . }}
-
-    {{ else if eq .Section "customers" }}
-      {{/* Case studies get Article schema; the section index gets CollectionPage + ItemList, same split as /what-is/ above. */}}
+    {{ else if eq .Type "whitepapers" }}
+      {{/* Whitepapers were falling through to a bare WebPage with no main
+           entity, so answer engines saw no headline, publisher, or link to
+           the PDF. Each whitepaper is a Report (schema.org Report is a
+           subtype of Article) built on the shared article entity, with the
+           downloadable PDF attached as a MediaObject and the cover image
+           as the primary image. No datePublished is emitted: the front
+           matter has no authored date and card_label ("Summer 2026") is a
+           season label, not a date. The /whitepapers/ index is a directory
+           of those reports, so it gets CollectionPage + ItemList. */}}
       {{ if .IsPage }}
-        {{ $entity = partial "schema/collectors/article-entity.html" . }}
+        {{ $entity = merge (partial "schema/collectors/article-entity.html" .) (dict "@type" "Report") }}
+        {{ with .Params.cover }}
+          {{ $cover := partial "schema/utils/absolutize-image.html" (dict "page" $ "imagePath" .) }}
+          {{ $entity = merge $entity (dict "image" (slice $cover)) }}
+        {{ end }}
+        {{ with .Params.pdf }}
+          {{ $entity = merge $entity (dict "encoding" (dict
+            "@type" "MediaObject"
+            "contentUrl" (absURL .)
+            "encodingFormat" "application/pdf"
+          )) }}
+        {{ end }}
       {{ else }}
         {{ $entity = partial "schema/collectors/collection-entity.html" . }}
       {{ end }}
+
+    {{ else if eq .Section "product" }}
+      {{/* Product pages get SoftwareApplication schema */}}
+      {{ $entity = partial "schema/collectors/product-entity.html" . }}
 
     {{ else if and (eq .Kind "term") (eq .Data.Singular "author") }}
       {{/* Author archive term pages (/blog/authors/{slug}/) get a Person (or

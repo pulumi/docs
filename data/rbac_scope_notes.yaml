@@ -1,0 +1,61 @@
+# Docs-only additions to the generated RBAC scope reference
+# (content/docs/administration/reference/rbac-scopes/) and the default
+# permission set tables (content/docs/administration/concepts/rbac/permission-sets.md).
+#
+# Descriptions come from the Pulumi Cloud API (see data/rbac_scope_sections.yaml
+# and scripts/fetch-rbac-scopes.sh). This file is hand-maintained and kept small:
+# add an entry only for something a reader needs that the API text can't carry.
+#
+#   note:         Markdown appended after the API description. Use it for links
+#                 and context, such as what a feature is called in the docs.
+#   description:  Markdown that REPLACES the API description. Use it only when
+#                 the API text is wrong or unclear, and fix the API too: every
+#                 override should cite the pulumi/pulumi-service issue that will
+#                 make it unnecessary, and be deleted once that ships.
+#
+# Scopes are keyed by API entity type, then scope name, because the same scope
+# can appear under two entity types with different meanings. Permission sets
+# are keyed by `defaultIdentifier`. The build fails on a key the API doesn't
+# return, so a renamed or removed scope can't leave a stale note behind.
+
+scopes:
+  stack:
+    "stack:create":
+      note: The same scope as the organization-level `stack:create`, granted on a set of stacks.
+    "stack:import":
+      note: This is the permission `pulumi stack import` needs, which replaces the stack's state.
+    # pulumi/pulumi-service#52195: the API says "stack teams", but the scope covers users too.
+    "stack_access:read":
+      description: Read which teams and users can access a stack.
+    "stack_access:update":
+      description: Change which teams and users can access a stack.
+
+  environment:
+    "environment:open":
+      note: Opening resolves the environment's values, including decrypted secrets and dynamically generated credentials. Changing its definition requires `environment:write`.
+
+  global:
+    "agent_pool:create":
+      note: Agent pools are [customer-managed runner](/docs/administration/concepts/customer-managed-runners/) pools, which run deployments, Discovery scans, and audit policy evaluations on infrastructure you host.
+    # pulumi/pulumi-service#52195: "Change organization backend" doesn't say what the backend is.
+    "organization:change_backend":
+      description: Change the organization's [identity provider](/docs/administration/concepts/identity-providers/), the GitHub organization, GitLab group, Bitbucket workspace, or SAML identity provider that governs who can be a member.
+    # pulumi/pulumi-service#52195: the API text restates the scope name.
+    "org_member_access:read":
+      description: Read which stacks, environments, and other entities a member can access.
+    "policy_exceptions:create":
+      note: Also needs write access to every stack the exception names. Approvers are named by the approval rule, not by a permission.
+    "policy_exceptions:delete":
+      note: Also needs read access to every stack the exception names. A removed exception is kept for auditing.
+    "policy_exceptions:read":
+      note: Also needs read access to every stack the exception names.
+
+permission_sets:
+  stack-read:
+    note: Enough to run previews.
+  # pulumi/pulumi-service#52195: the API says Standard can create stacks, teams,
+  # and cloud accounts, but it grants none of stack:create, team:create, or
+  # insights_account:create.
+  org-settings-standard:
+    description: Member-level organization access. Everything `Read Only` allows, plus creating environments and using deployments, integrations, services, and resources. Excludes billing and member or organization admin settings.
+    note: Whether members can create stacks, teams, and cloud accounts is governed by the organization-wide capability settings, not this permission set.

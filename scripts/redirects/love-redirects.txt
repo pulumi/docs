@@ -1,0 +1,2 @@
+# The Hugo /testimonials page moved to pulumi/marketing-web as /love.
+testimonials/index.html|/love/

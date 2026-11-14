@@ -21,7 +21,7 @@ Pulumi Insights 2.0 brings the power of Insights to all of your cloud infrastruc
 
 Today we are outlining our vision for Pulumi Insights 2.0, and the features that are part of Insights 2.0 will be released over the coming weeks and months. [Get started with Pulumi Insights 2.0](/docs/discovery-governance/get-started/).
 
-Since the initial launch of Pulumi Insights, customers have used these tools to gain valuable awareness into their IaC platform resources through the flexibility of [Resource Search](/blog/resource-search/) and the power of [Pulumi CrossGuard](/crossguard/). Insights 2.0 builds on this previous generation of tools to provide a range of new capabilities:
+Since the initial launch of Pulumi Insights, customers have used these tools to gain valuable awareness into their IaC platform resources through the flexibility of [Resource Search](/blog/resource-search/) and the power of [Pulumi CrossGuard](/product/discovery-governance/). Insights 2.0 builds on this previous generation of tools to provide a range of new capabilities:
 
 * Bring visibility to your entire infrastructure by enabling you to scan and import all of your resources
 * Add rich new visual explorers, structured graphs and dashboards for understanding and managing your entire infrastructure

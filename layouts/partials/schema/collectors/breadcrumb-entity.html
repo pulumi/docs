@@ -181,19 +181,9 @@
       "item" "https://www.pulumi.com/docs/install/"
     ) }}
 
-  {{/* Add Get Started if in the docs/get-started section */}}
-  {{ else if in .RelPermalink "/docs/get-started/" }}
-    {{ $position = add $position 1 }}
-    {{ $breadcrumbs = $breadcrumbs | append (dict
-      "@type" "ListItem"
-      "position" $position
-      "name" "Get Started"
-      "item" "https://www.pulumi.com/docs/get-started/"
-    ) }}
-
   {{/* End of main docs sections (IaC, Discovery, ESC, Pulumi Cloud, Administration,
        Deployments & Workflows, IDP, Integrations, Infrastructure AI, Reference,
-       Support & Troubleshooting, Install, Get Started) */}}
+       Support & Troubleshooting, Install) */}}
   {{ end }}
 
   {{/* Additional nesting for IaC Clouds section only - this is separate from the main section logic above */}}
@@ -266,39 +256,11 @@
     ) }}
   {{ end }}
 
-{{/* Case studies: mirror layouts/customers/single.html, which adds an
-     industry crumb (looked up from data/customers_industries.yaml) between
-     "Customers" and the page itself. */}}
-{{ else if eq .Section "customers" }}
-  {{ $position = add $position 1 }}
-  {{ $breadcrumbs = $breadcrumbs | append (dict
-    "@type" "ListItem"
-    "position" $position
-    "name" "Customers"
-    "item" "https://www.pulumi.com/customers/"
-  ) }}
-
-  {{ with .Params.industry }}
-    {{ $industry := . }}
-    {{ range site.Data.customers_industries.industries }}
-      {{ if eq .id $industry }}
-        {{ $position = add $position 1 }}
-        {{ $breadcrumbs = $breadcrumbs | append (dict
-          "@type" "ListItem"
-          "position" $position
-          "name" .name
-          "item" (printf "https://www.pulumi.com/customers/industry/%s/" $industry)
-        ) }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-
 {{/* Remaining sections that only need a single section-level crumb before the
      page itself. "migrate" and "partner" are intentionally excluded: both
      sections' index pages redirect elsewhere (/migrate/ -> /docs/iac/guides/migration/,
      /partner/ -> /registry/packages/) so a crumb pointing at them would point at
-     a redirect target rather than a real page. "gads" is excluded because those
-     pages are noindexed paid-landing pages. */}}
+     a redirect target rather than a real page. */}}
 {{ else if in (slice "releases" "whitepapers" "solutions" "community" "topics" "about" "security" "why-pulumi" "legal") .Section }}
   {{ $sectionNames := dict
     "releases" "Releases"
@@ -320,7 +282,7 @@
   ) }}
 {{ end }}
 
-{{/* A section's own index page (e.g. /docs/, /product/, /customers/, the new
+{{/* A section's own index page (e.g. /docs/, /product/, the new
      /events/, /security/, etc.) already gets a crumb pointing at itself from the
      logic above; appending a second "current page" crumb for that same page
      produces a duplicate node (e.g. "Home > Documentation > Documentation" on

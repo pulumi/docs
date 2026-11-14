@@ -110,11 +110,11 @@ Replace the placeholders:
 | `<stack>` | The Pulumi stack name | `prod` |
 
 {{% notes type="info" %}}
-If you are using a [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) instance, replace `tf.pulumi.com` with your instance's API URL in:
+If you are using a [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) instance, replace `tf.pulumi.com` with your instance's [`PULUMI_TFE_DOMAIN`](/docs/administration/self-hosting/components/api/#terraform-state-backend) hostname, not its API URL, in:
 
 - The backend configuration above
-- The `terraform login` or `tofu login` command (e.g., `terraform login your-pulumi-host.example.com`)
-- The `TF_TOKEN_*` variable name (e.g., `TF_TOKEN_your_pulumi_host_example_com`)
+- The `terraform login` or `tofu login` command (e.g., `terraform login tf.pulumi.example.com`)
+- The `TF_TOKEN_*` variable name (e.g., `TF_TOKEN_tf_pulumi_example_com`)
 {{% /notes %}}
 
 ### 3. Authenticate with Pulumi Cloud

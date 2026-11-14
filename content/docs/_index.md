@@ -1,7 +1,7 @@
 ---
 title: Documentation
 linktitle: Docs
-meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
+meta_desc: Pulumi docs for infrastructure as code in TypeScript, Python, Go, C#, Java, YAML, and HCL, plus ESC secrets management, Discovery, and the Neo AI agent.
 meta_image: /images/docs/opengraph-docs.png
 layout: main-home
 notitle: true
@@ -20,7 +20,7 @@ cascade:
 link_buttons:
   primary:
     label: Get Started
-    link: /docs/get-started/
+    link: /up/
 sections:
 - type: button-cards
   heading: Capabilities
@@ -31,7 +31,7 @@ sections:
     link: /docs/iac/
   - icon: pulumi-neo
     heading: Infrastructure AI
-    description: Bring your own coding agent or use Pulumi Neo, the purpose-built infrastructure agent.
+    description: Investigate incidents and maintain infrastructure with Pulumi Agents, or write Pulumi code with your coding agent.
     link: /docs/ai/
   - icon: rocket-launch
     heading: Deployments & Workflows

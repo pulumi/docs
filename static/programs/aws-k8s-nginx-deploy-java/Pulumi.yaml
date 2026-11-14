@@ -1,3 +1,0 @@
-name: aws-k8s-nginx-deploy-java
-runtime: java
-description: An example that deploys an NGINX service to Kubernetes.

@@ -12,9 +12,9 @@ aliases:
 menu:
     ai:
         name: Code reviews
-        parent: ai-concepts-neo
+        parent: ai-neo
+        weight: 70
         identifier: ai-code-reviews
-        weight: 40
 pulumi_cloud_feature: neo-code-reviews
 ---
 

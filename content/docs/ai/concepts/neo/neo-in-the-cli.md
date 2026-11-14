@@ -8,10 +8,10 @@ aliases:
 - /docs/ai/neo/pulumi-cli/
 menu:
     ai:
-        name: Neo in the CLI
-        parent: ai-concepts-neo
+        name: Use Neo in the CLI
         identifier: ai-pulumi-cli
-        weight: 25
+        parent: ai-neo
+        weight: 40
 ---
 
 `pulumi neo` is Neo in your terminal. Run the command from your project directory to start an interactive session. Prefer working in your IDE? Neo can also run [directly in your editor](/docs/ai/concepts/neo/neo-in-your-editor/).

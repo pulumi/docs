@@ -114,7 +114,7 @@ This same pattern lets you bake provider plugins into the image with `pulumi plu
 
 Images are scanned for vulnerabilities nightly. Pulumi remediates issues where it can, on a best-effort basis. Some vulnerabilities — for example, CVEs in upstream base images with no published fix — are outside Pulumi's direct control and persist until the upstream is patched.
 
-## See also
+## Learn more
 
 - [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers) — image source and contribution guide.
 - [Pulumi Deployments executor images](/docs/deployments/guides/custom-images/) — using and customizing the executor image for Pulumi Deployments.

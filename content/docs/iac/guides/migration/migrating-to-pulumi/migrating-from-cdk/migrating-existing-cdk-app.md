@@ -16,7 +16,7 @@ This guide walks through migrating an existing AWS CDK application to a Pulumi p
 
 ## Pulumi Neo (recommended)
 
-[Pulumi Neo](/docs/ai/neo/) is Pulumi's purpose-built infrastructure agent. For a CDK migration, it provides:
+[Pulumi Neo](/docs/ai/concepts/neo/) is Pulumi's purpose-built infrastructure agent. For a CDK migration, it provides:
 
 * **Automated conversion**: Neo converts your CDK code to Pulumi and generates import mappings automatically
 * **Safety verification**: Neo runs `pulumi preview` to prove no changes before you commit

@@ -70,7 +70,7 @@ You can create secret values programmatically in two ways:
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
-- Setting `configuration.${KEY}.secret: true` when reading a value from the config.
+- Setting `config.${KEY}.secret: true` when reading a value from the config.
 - Calling `fn::secret` to construct a secret from an existing value.
 
 {{% /choosable %}}
@@ -116,7 +116,7 @@ param = ssm.Parameter("a-secret-param",
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ssm"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
@@ -125,7 +125,7 @@ func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
         cfg := config.New(ctx, "")
         _, err := ssm.NewParameter(ctx, "a-secret-param", &ssm.ParameterArgs{
-            Type:  "SecureString",
+            Type:  pulumi.String("SecureString"),
             Value: cfg.RequireSecret("my-secret-value"),
         })
         if err != nil {
@@ -164,7 +164,7 @@ var param = new com.pulumi.aws.ssm.Parameter("a-secret-param",
 {{% choosable language yaml %}}
 
 ```yaml
-configuration:
+config:
   mySecretValue:
     secret: true
 
@@ -173,7 +173,7 @@ resources:
     type: aws:ssm:Parameter
     properties:
       type: SecureString
-      value: mySecretValue
+      value: ${mySecretValue}
 ```
 
 {{% /choosable %}}
@@ -509,18 +509,18 @@ Notice the keys used above have no namespaces, both in the CLI gestures and in t
 Secrets within structured config are also supported. Consider a list of endpoints, each having a `url` and `token` property. The `token` value could be stored as a secret:
 
 ```bash
-$ pulumi config set --path endpoints[0].url https://example.com
-$ pulumi config set --path --secret endpoints[0].token accesstokenvalue
+$ pulumi config set --path 'endpoints[0].url' https://example.com
+$ pulumi config set --path --secret 'endpoints[0].token' accesstokenvalue
 ```
 
-The above configuration would look like the following in your `Pulumi.<project-name>.yaml` file:
+The above configuration would look like the following in your `Pulumi.<stack-name>.yaml` file:
 
 ```yaml
 config:
   project-name:endpoints:
-    - token:
+    - url: https://example.com
+      token:
         secure: AAABALsgfFnV0KbGLybu5f+oTqUFmPl2l7oer5EACw15g7rE6GMYQqGgMoZ07QgT
-      url: https://example.com
 ```
 
 {{% notes type="warning" %}}
@@ -725,13 +725,13 @@ $ pulumi stack init my-stack \
     --secrets-provider="awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1"
 ```
 
-If you have previously configured the AWS CLI, the same credentials will be used to encrypt/decrypt secrets using the specified KMS key. For this reason, it is important to ensure that the credentials have the appropriate permissions to interact with the key accordingly. If needed, your AWS CLI credentials can be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
+If you have previously configured the AWS CLI, the same credentials will be used to encrypt/decrypt secrets using the specified KMS key. For this reason, it is important to ensure that the credentials have the appropriate permissions to interact with the key accordingly. If needed, your AWS CLI credentials can be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS SDK for Go v2 configuration documentation](https://docs.aws.amazon.com/sdk-for-go/v2/developer-guide/configure-gosdk.html).
 
-As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_PROFILE` environment variable, add `awssdk=v2` and `profile=` followed by the profile name to the query string.
+To use a named AWS profile, set the `AWS_PROFILE` environment variable, or add `profile=` followed by the profile name to the query string:
 
-1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=dev`.
-1. By alias: `awskms://alias/ExampleAlias?region=us-east-1&awssdk=v2&profile=qa`.
-1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=prod`.
+1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&profile=dev`.
+1. By alias: `awskms://alias/ExampleAlias?region=us-east-1&profile=qa`.
+1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1&profile=prod`.
 
 {{% notes type="info" %}}
 
@@ -739,7 +739,7 @@ As of Pulumi CLI v3.41.1, this secrets backend supports [encryption context](htt
 
 Encryption context can be used in [IAM policy conditions](https://docs.aws.amazon.com/kms/latest/developerguide/policy-conditions.html#conditions-kms-encryption-context) and it appears in CloudTrail logs.
 
-For example, take a look at `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=dev&context_project=myproject&context_environment=staging`.
+For example, take a look at `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&profile=dev&context_project=myproject&context_environment=staging`.
 
 The encryption context here is `{"project": "myproject", "environment": "staging"}`. Together with an appropriate IAM policy with conditions, one can grant some user permissions only to
 encrypt/decrypt secrets for `staging` environment of the `myproject` project.
@@ -809,8 +809,8 @@ When you run `pulumi config set --secret` to generate a new Pulumi secret, the P
 
 ```yaml
 config:
-  myStack:somePlainTextItem: somePlainText
-  myStack:someSecretItem:
+  myproject:somePlainTextItem: somePlainText
+  myproject:someSecretItem:
     secure: AAABAIIlW0ewSuZ1FJxw/+Rpw6BNqTUvGJ30O8WkpL2hB4aPyS7UU68=
 ```
 

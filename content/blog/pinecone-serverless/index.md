@@ -15,7 +15,7 @@ category: product
 
 ## Hello, Pulumi Pinecone Provider!  👋
 
-The [Pinecone](https://pinecone.io/) integration with [Pulumi](https://www.pulumi.com) offers a native way to manage Pinecone indexes, including the newly announced serverless indexes. Utilize any of Pulumi's [supported languages](/docs/iac/languages-sdks/) to effortlessly create, update, and remove your Pinecone indexes. This integration facilitates the application of [infrastructure as code](/what-is/what-is-infrastructure-as-code/) principles, helping you to work even more efficiently. Furthermore, this gives you the benefit of tapping into Pulumi's wide range of [providers](/product/), offering you a diverse and powerful set of tools to enhance your development work.
+The [Pinecone](https://pinecone.io/) integration with [Pulumi](https://www.pulumi.com) offers a native way to manage Pinecone indexes, including the newly announced serverless indexes. Utilize any of Pulumi's [supported languages](/docs/iac/languages-sdks/) to effortlessly create, update, and remove your Pinecone indexes. This integration facilitates the application of [infrastructure as code](/topics/infrastructure-as-code/) principles, helping you to work even more efficiently. Furthermore, this gives you the benefit of tapping into Pulumi's wide range of [providers](/product/), offering you a diverse and powerful set of tools to enhance your development work.
 
 ## What is Pinecone? 🧐
 
@@ -165,6 +165,6 @@ As shown in this blog post, the Pinecone Provider for Pulumi allows you to seaml
 
 As always, we welcome your feedback and contributions in the [Pulumi Community Slack](https://slack.pulumi.com/), [GitHub repository,](https://github.com/pulumi/pulumi) and [Pulumi Community Discussions](https://github.com/pulumi/pulumi/discussions).
 
-New to Pulumi? Signing up is easy and free. [Get started today](/docs/get-started/)!
+New to Pulumi? Signing up is easy and free. [Get started today](/up/)!
 
 Happy AI building!

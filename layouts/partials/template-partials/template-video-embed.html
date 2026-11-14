@@ -43,7 +43,7 @@
         {{ end }}
         <div class="w-full rounded-xl relative overflow-hidden aspect-video">
             <iframe
-                src="https://www.youtube.com/embed/{{ $youtubeId }}?rel=0"
+                {{ partial "youtube-src.html" (dict "url" (printf "https://www.youtube.com/embed/%s?rel=0" $youtubeId)) }}
                 class="absolute inset-0 w-full h-full border-0"
                 allowfullscreen=""
                 title="{{ $title }}"

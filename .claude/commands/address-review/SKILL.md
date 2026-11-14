@@ -170,6 +170,7 @@ There are two lanes, for agents and humans alike:
 |---|---|---|
 | **Push a fix** | `fixed`. A small fix-push (≤80 changed lines, every hunk within ±3 lines of a finding's `[L…]` anchor) trips `auto-refresh-gate.py`: the card shows a 🔄 banner within a minute and refreshes itself. Wait for it rather than double-posting. **Only the author card's 🚨 and ❓ findings anchor a refresh** — a hunk fixing a ⚠️ brief item or a ✏️ suggestion falls outside every anchor and declines the whole push, so a mixed fix-push needs the comment below. | free |
 | **`/update-review <reasoning>`** | Everything a push doesn't answer: a dispute, a fix the gate didn't catch, a question answered in prose, an acceptance or deferral (say which findings and why — a deferral names its issue). The model adjudicates: it concedes, holds, or records the acceptance. | a model run |
+| **`/update-review accept F<n> [F<n>…]`** | Acceptances only, and nothing else to say on that line: each named open 🚨/❓ is recorded `accepted` by the commenter, with no model run. Whatever the comment says below that first line is the recorded reason, so give one. IDs that don't apply get a one-line reply; anything that doesn't match the shape exactly takes the model lane above. `/update-review approve` does **not** approve a PR (approval is a GitHub review from someone other than the author); it only gets an explainer reply. | free |
 
 An acceptance or a held dispute stops blocking merge but moves the row to the reviewer brief's ⚠️ list with the reason attached, so the human approver weighs it. Tell the user that before they pick *Accept* or *Refute*.
 
@@ -200,14 +201,14 @@ python3 .claude/commands/docs-review/scripts/review-worklist.py --pr "$PR" \
 
 Report in one block: what was fixed (with the commit), what was refuted (and how the model adjudicated), what was deferred (with issue links), what was accepted (with reasons), and anything still open. Then say what's next.
 
-**`--require-clean` is the author's bar, not the merge gate.** Where the Sentinel runs, a PR is done when its check passes: findings answered (G2), the team named in `.github/review-routing.yml` has approved (G3), CI green, no conflict. Read the check rather than inferring:
+**`--require-clean` is the author's bar, not the merge gate.** Where the Sentinel runs, a PR is done when its check passes and branch protection is satisfied: findings answered (the `findings` gate), an approval from someone with write access, CI green, no conflict. Read the check rather than inferring:
 
 ```bash
 gh pr checks "$PR" | grep -i sentinel
 ```
 
 - **Clean and Sentinel green** — the PR is ready for a maintainer. Mention `/pr-review <PR>` for the adjudication pass.
-- **Clean but Sentinel red on G3** — nothing is yours. It's waiting on a human approver; say so once and stop. A push cannot add an approval and can dismiss the ones already given.
+- **Clean and Sentinel green, but no approval** — nothing is yours. It's waiting on a human approver; say so once and stop. A push cannot add an approval.
 - **Not clean** — name exactly what's left and offer to keep going. Don't call a PR ready while the exit code says otherwise.
 
 The Sentinel is behind `REVIEW_V3_SENTINEL` (unset = dark, `report` = report-only, `1` = enforcing). That's a repo variable, so which mode is live can't be read from the repo — read the check itself instead of trusting any sentence about the rollout, this one included. A passing check whose description starts `Preview — would be: …` is report-only mode, and `Draft — not evaluated` is a draft PR; in both the verdict rides along rather than gating. Any other `success` / `failure` means it's enforcing. (PRs from before 2026-10 can still carry the old Sentinel *check run*, which reports `neutral` for those two cases.) Report-only mode maintains the gate-status *comment* only on `sentinel:preview` PRs, so no comment doesn't mean no check. When there's no Sentinel check on the PR at all, `--require-clean` is the whole bar — say that rather than implying a gate that isn't running.
@@ -221,9 +222,9 @@ A PR still carrying the monolith works the same way with four differences:
 1. **Ids are synthetic** (`outstanding:L40-50`, `low:L12`, `pre-existing:L7`) and get re-invented on every refresh, so a stale local state file can mismatch. Re-run Step 3 after any refresh rather than trusting `--resume` across one.
 1. **There is no `REVIEW_STATE`.** Every non-`fixed` disposition still goes through `/update-review …`, and the local state file is the only ledger.
 1. **The bucket order is** 🚨 Outstanding → ⚠️ Low-confidence → ✏️ Style → 💡 Pre-existing. There is no ❓ bucket; ⚠️ here is low-confidence findings addressed to *you*, not reviewer checks.
-1. **The Sentinel scores it by counting 🚨 bullets** on the current head. A v2 PR with open blockers can only clear G2 by having them disappear from the comment — there is no disposition lane to answer them with. If the user wants to answer rather than fix, the honest move is `/new-review` to regenerate as cards; say so plainly, and note it costs a full review.
+1. **The Sentinel scores it by counting 🚨 bullets** on the current head. A v2 PR with open blockers can only clear `findings` by having them disappear from the comment — there is no disposition lane to answer them with. If the user wants to answer rather than fix, the honest move is `/new-review` to regenerate as cards; say so plainly, and note it costs a full review.
 
-Offer the migration when it buys something (open blockers the user wants to dispute, or a long-lived PR that will see several more rounds). Don't offer it on a PR with nothing outstanding — a green v2 review is grandfathered by G1 and merges fine.
+Offer the migration when it buys something (open blockers the user wants to dispute, or a long-lived PR that will see several more rounds). Don't offer it on a PR with nothing outstanding — a green v2 review is grandfathered by `review` and merges fine.
 
 ---
 

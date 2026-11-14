@@ -16,7 +16,7 @@ sections:
     description: |
       Pulumi empowers organizations to automate Kubernetes applications, clusters, and entire cloud environments through code, tame secrets sprawl through centralized secrets management, and manage cloud assets and compliance with the help of AI. Pulumi encourages infrastructure, platform, development, DevOps, and security teams to collaborate and accelerates time to market with greater control and minimized risk.
     cta_primary_text: Get started
-    cta_primary_link: /docs/iac/get-started/kubernetes/
+    cta_primary_link: /up/
     cta_secondary_text: Request a demo
     cta_secondary_link: /request-a-demo/
     video_youtube_id: 2P8JLgAc5QI
@@ -270,7 +270,7 @@ sections:
       - title: Get started with Pulumi and Kubernetes
         description: Spin up your first cluster in minutes. Follow our quickstart guide, or talk to our team about your specific needs.
         cta_primary_text: Get started
-        cta_primary_link: /docs/iac/get-started/kubernetes/
+        cta_primary_link: /up/
     anchor: get-started
     highlight_first_card: true
 ---

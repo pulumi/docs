@@ -21,7 +21,7 @@ aliases:
 
 Build, deploy, and manage Google Cloud infrastructure with Pulumi. This page links to every Pulumi capability for Google Cloud: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), cloud account scanning, and policy packs.
 
-To start from scratch, follow the [Google Cloud get-started guide](/docs/iac/get-started/gcp/).
+To start from scratch, follow the [get-started guide](/up/).
 
 ## Infrastructure as Code
 

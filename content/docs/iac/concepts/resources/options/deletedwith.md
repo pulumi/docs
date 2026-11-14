@@ -37,24 +37,33 @@ let dep = new k8s.apps.v1.Deployment("res2", {/*...*/}, { deletedWith: ns });
 {{% choosable language python %}}
 
 ```python
+import pulumi
 import pulumi_kubernetes as k8s
 
-ns = k8s.core.v1.Namespace("res1", {})
-dep = k8s.apps.v1.Deployment("res2", opts=ResourceOptions(deleted_with=ns))
+ns = k8s.core.v1.Namespace("res1")
+dep = k8s.apps.v1.Deployment("res2",
+    # ...
+    opts=pulumi.ResourceOptions(deleted_with=ns))
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-ns, err := v1.NewNamespace(ctx, "res1", nil)
+import (
+	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/apps/v1"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+ns, err := corev1.NewNamespace(ctx, "res1", nil)
 if err != nil {
-  return err
+	return err
 }
 
-dep, err := v1.NewDeployment(ctx, "res2", &v1.DeploymentArgs{/*...*/}, pulumi.DeletedWith(ns))
+_, err = appsv1.NewDeployment(ctx, "res2", &appsv1.DeploymentArgs{/*...*/}, pulumi.DeletedWith(ns))
 if err != nil {
-  return err
+	return err
 }
 ```
 
@@ -62,8 +71,12 @@ if err != nil {
 {{% choosable language csharp %}}
 
 ```csharp
-var ns = new Namespace("res1");
-var dep = new Deployment("res2", new DeploymentArgs(),
+using Pulumi;
+using Kubernetes = Pulumi.Kubernetes;
+
+var ns = new Kubernetes.Core.V1.Namespace("res1");
+var dep = new Kubernetes.Apps.V1.Deployment("res2",
+    new Kubernetes.Types.Inputs.Apps.V1.DeploymentArgs { /*...*/ },
     new CustomResourceOptions { DeletedWith = ns });
 ```
 
@@ -73,14 +86,6 @@ var dep = new Deployment("res2", new DeploymentArgs(),
 {{% notes type="info" %}}
 This resource option is not yet implemented for Java. You can follow up the [implementation status on GitHub](https://github.com/pulumi/pulumi-java/issues/944).
 {{% /notes %}}
-
-```java
-var ns = new Namespace("res1");
-var dep = new Deployment("res2", new DeploymentArgs(),
-   CustomResourceOptions.builder()
-        .deletedWith(ns)
-        .build());
-```
 
 {{% /choosable %}}
 {{% choosable language yaml %}}

@@ -3,6 +3,30 @@ title: State of Agentic Infrastructure 2026
 meta_desc: How 510 platform, DevOps, and product engineers use AI agents in infrastructure today, and where they expect things to go over the next six months.
 meta_image: /images/state-of-agentic-infrastructure/meta.png
 
+dataset:
+  name: State of Agentic Infrastructure 2026 Survey Results
+  description: Aggregated results from Pulumi's 2026 survey of 510 platform, DevOps, and product engineers on how they use AI agents in infrastructure work today. Covers respondent team, company size and industry, cloud providers, deployment cadence, policy and compliance practices, where AI agents are used in infrastructure workflows, whether agents change production, AI-driven monitoring, and expectations for the next six months.
+  keywords:
+    - agentic infrastructure
+    - AI agents
+    - infrastructure as code
+    - platform engineering
+    - DevOps
+    - survey
+  variable_measured:
+    - Team type
+    - Company size
+    - Industry
+    - Cloud providers in use
+    - Infrastructure deployment frequency
+    - Policy and compliance approach
+    - AI and agent use in infrastructure workflows
+    - Agent access to production infrastructure
+    - AI use in infrastructure monitoring
+    - Share of infrastructure code that is AI-generated
+    - Six-month outlook and sentiment
+  is_accessible_for_free: true
+
 hero:
   eyebrow: State of
   title: Agentic Infrastructure
