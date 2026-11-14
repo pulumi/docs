@@ -51,7 +51,7 @@ db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
 {{% choosable language csharp %}}
 
 ```csharp
-// The resource will be deleted before it's replacement is created
+// The resource will be deleted before its replacement is created
 var db = new Database("db", new DatabaseArgs(),
     new CustomResourceOptions { DeleteBeforeReplace = true });
 ```
@@ -60,7 +60,7 @@ var db = new Database("db", new DatabaseArgs(),
 {{% choosable language java %}}
 
 ```java
-// The resource will be deleted before it's replacement is created
+// The resource will be deleted before its replacement is created
 var db = new Database("db",
     DatabaseArgs.Empty,
     CustomResourceOptions.builder()
@@ -72,7 +72,7 @@ var db = new Database("db",
 {{% choosable language yaml %}}
 
 ```yaml
-# The resource will be deleted before it's replacement is created
+# The resource will be deleted before its replacement is created
 resources:
   db:
     type: Database

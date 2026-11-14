@@ -12,8 +12,7 @@
 //
 //   2. destinationPreferencesFromGroups() — maps the active OneTrust categories
 //      onto the Segment destinations we already fetch, so the existing Segment
-//      loader (analytics.ts) can be driven from the OneTrust decision instead
-//      of the custom banner.
+//      loader (analytics.ts) can be driven from the OneTrust decision.
 //
 // The inline bootstrap in layouts/partials/head.html defines a minimal queueing
 // runWithPulumiConsent before this bundle loads, so an integration that
@@ -29,6 +28,7 @@
 export type ConsentCategory = string;
 
 export const STRICTLY_NECESSARY: ConsentCategory = "C0001";
+export const PERFORMANCE: ConsentCategory = "C0002";
 
 // Segment destination name -> OneTrust category. Keyed by the destination
 // `name` Segment reports (see fetchDestinations in analytics.ts). Any Segment
@@ -102,6 +102,25 @@ export function destinationPreferencesFromGroups(destinations: MinimalDestinatio
         prefs[dest.id] = category ? active.has(category) : false;
     }
     return prefs;
+}
+
+// Build the integrations object for analytics.load(). "Segment.io" is Segment's
+// own collection API, which records every page() and track() call, so it needs
+// Performance consent. A visitor who allows only Functional still gets Intercom
+// (a device-mode destination), but nothing is sent to Segment itself: with
+// "Segment.io": false, analytics.js never registers its Segment API plugin.
+export function segmentIntegrations(destinations: MinimalDestination[], destinationPreferences: Record<string, boolean>, performanceAllowed: boolean): Record<string, boolean> {
+    const integrations: Record<string, boolean> = { All: false, "Segment.io": performanceAllowed };
+    for (const dest of destinations) {
+        integrations[dest.id] = Boolean(destinationPreferences[dest.id]);
+    }
+    return integrations;
+}
+
+// Whether analytics.load() should run at all: Segment's own collection or at
+// least one destination is allowed.
+export function wantsSegment(integrations: Record<string, boolean>): boolean {
+    return Object.values(integrations).some(Boolean);
 }
 
 interface QueueItem {

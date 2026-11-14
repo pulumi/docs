@@ -54,7 +54,7 @@ Below is an example of setting up Time-To-Live on a stack programmatically:
        -H "Content-Type: application/json" \
        -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
        --request POST \
-       --data '{"timestamp":"2024-12-31T23:59:59Z","deleteAfterDestroy":true}' \
+       --data '{"timestamp":"2030-12-31T23:59:59Z","deleteAfterDestroy":true}' \
        https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/ttl/schedules
 ```
 
@@ -80,7 +80,7 @@ const ttlSchedule = new pulumiservice.TtlSchedule("ttlSchedule", {
   organization: organizationName,
   project: projectName,
   stack: stackName,
-  timestamp: "2024-01-01T00:00:00Z" // Specify the ISO date/time for destruction
+  timestamp: "2030-01-01T00:00:00Z" // Specify the ISO date/time for destruction
 });
 
 export const scheduleId = ttlSchedule.scheduleId;
@@ -104,7 +104,7 @@ ttl_schedule = pulumiservice.TtlSchedule("ttlSchedule",
     organization=organization_name,
     project=project_name,
     stack=stack_name,
-    timestamp="2024-01-01T00:00:00Z") # Specify the ISO date/time for destruction
+    timestamp="2030-01-01T00:00:00Z") # Specify the ISO date/time for destruction
 
 pulumi.export('scheduleId', ttl_schedule.schedule_id)
 ```
@@ -114,7 +114,6 @@ pulumi.export('scheduleId', ttl_schedule.schedule_id)
 {{% choosable language go %}}
 
 ```go
-
 package main
 
 import (
@@ -128,7 +127,7 @@ func main() {
             Organization: pulumi.String("my-org"),
             Project: pulumi.String("my-project"),
             Stack: pulumi.String("temp-stack"),
-            Timestamp: pulumi.String("2024-01-01T00:00:00Z"),  // Specify the ISO date/time for destruction
+            Timestamp: pulumi.String("2030-01-01T00:00:00Z"),  // Specify the ISO date/time for destruction
         })
         if err != nil {
             return err
@@ -145,6 +144,8 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Pulumi;
 using PulumiService = Pulumi.PulumiService;
 
@@ -156,12 +157,12 @@ class Program
             Organization = "my-org",
             Project = "my-project",
             Stack = "temp-stack",
-            Timestamp = "2024-01-01T00:00:00Z",  // Specify the ISO date/time for destruction
+            Timestamp = "2030-01-01T00:00:00Z",  // Specify the ISO date/time for destruction
         });
 
         return new Dictionary<string, object?>
         {
-            { "scheduleID", ttlSchedule.ScheduleId }
+            { "scheduleId", ttlSchedule.ScheduleId }
         };
     });
 }
@@ -188,10 +189,10 @@ public class App {
             .organization("my-org")
             .project("my-project")
             .stack("temp-stack")
-            .timestamp("2024-01-01T00:00:00Z") // Specify the ISO date/time for destruction
+            .timestamp("2030-01-01T00:00:00Z") // Specify the ISO date/time for destruction
             .build());
 
-        ctx.export("scheduleID", ttlSchedule.scheduleId());
+        ctx.export("scheduleId", ttlSchedule.scheduleId());
     }
 }
 
@@ -213,7 +214,7 @@ resources:
       organization: my-org
       project: my-project
       stack: temp-stack
-      timestamp: "2024-01-01T00:00:00Z" # Specify the ISO date/time for destruction
+      timestamp: "2030-01-01T00:00:00Z" # Specify the ISO date/time for destruction
 
 outputs:
   scheduleId: ${ttlSchedule.scheduleId}
@@ -248,7 +249,7 @@ resource "pulumiservice_ttl_schedule" "ttl_schedule" {
   project      = "my-project"
   stack        = "temp-stack"
 
-  timestamp = "2024-01-01T00:00:00Z" # Specify the ISO date/time for destruction
+  timestamp = "2030-01-01T00:00:00Z" # Specify the ISO date/time for destruction
 }
 
 output "schedule_id" {

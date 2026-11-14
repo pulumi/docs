@@ -131,7 +131,7 @@ You can move as little or as much as you want. The smallest step changes no code
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/get-started/)
+- [Get started with Pulumi](/up/)
 - [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/)
 - [Pulumi Deployments](/docs/deployments/)
 - [Using Pulumi Cloud as a Terraform state backend](/docs/integrations/terraform/state-backend/)

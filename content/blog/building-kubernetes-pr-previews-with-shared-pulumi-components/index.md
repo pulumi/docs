@@ -33,7 +33,7 @@ resource_links:
       text: "Automate previews with Review Stacks"
       icon: git-pull-request
     - type: documentation
-      url: /docs/get-started/
+      url: /up/
       text: "Get started with Pulumi"
       icon: rocket-launch
 ---

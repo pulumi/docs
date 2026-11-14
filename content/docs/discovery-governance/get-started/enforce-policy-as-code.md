@@ -48,7 +48,7 @@ To follow this guide, ensure you have:
 
 The **Policy configuration** page is the central hub for managing Pulumi Policies. To get there, navigate to **Governance** > **Policy configuration** in the left navigation.
 
-The page displays two tabs: **Policy Packs** and **Policy Groups**.
+The page displays the **Policy Packs** and **Policy Groups** tabs, and an **Applied exceptions** tab for [policy exceptions](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/), available in {{< pulumi-cloud-editions "policy-enforcement" >}}.
 
 ### Policy Packs
 

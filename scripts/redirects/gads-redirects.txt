@@ -26,5 +26,9 @@ gads/terraform-migration/index.html|/
 gads/terragrunt/index.html|/
 gads/wiz/index.html|/
 gads/gads-template/index.html|/
+gads/terraform/index.html|/
+gads/backstage/index.html|/
+gads/crossplane/index.html|/
+gads/platform-teams/index.html|/
 azure-resource-manager/index.html|/docs/integrations/clouds/azure/
 azure-infrastructure/index.html|/docs/integrations/clouds/azure/

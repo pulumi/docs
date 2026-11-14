@@ -63,9 +63,9 @@ The term covers two distinct categories that share almost no vendors.
 
 **Infrastructure for AI** is the compute, storage, and orchestration that AI workloads run on. Training a large model is not a normal cloud workload: it wants thousands of GPUs talking to each other over fat, low-latency networks for weeks at a time. Inference is different again: lower latency, smarter batching, different hardware. General-purpose cloud was not designed for either case, which is why specialized GPU clouds and MLOps platforms exist.
 
-**AI-powered infrastructure management** is the inverse: AI tools that manage cloud infrastructure. They generate [infrastructure as code](/what-is/what-is-infrastructure-as-code/), run deployments, detect drift, and remediate policy violations. The pitch is that modern infrastructure (multi-cloud, containers, microservices, regulated workloads) has gotten too complex for humans to manage by hand and too varied for scripted automation to keep up with.
+**AI-powered infrastructure management** is the inverse: AI tools that manage cloud infrastructure. They generate [infrastructure as code](/topics/infrastructure-as-code/), run deployments, detect drift, and remediate policy violations. The pitch is that modern infrastructure (multi-cloud, containers, microservices, regulated workloads) has gotten too complex for humans to manage by hand and too varied for scripted automation to keep up with.
 
-Most organizations end up needing both: somewhere to run their ML workloads, and something to keep the rest of the cloud sane. For the full definition, including the control-plane layer that provisions and governs the rest of the stack, see [what is AI infrastructure](/what-is/what-is-ai-infrastructure/).
+Most organizations end up needing both: somewhere to run their ML workloads, and something to keep the rest of the cloud sane. For the full definition, including the control-plane layer that provisions and governs the rest of the stack, see [what is AI infrastructure](/topics/agentic-infrastructure/what-is-ai-infrastructure/).
 
 ## Part 1: Tools for building AI infrastructure
 
@@ -160,7 +160,7 @@ Execution used to be the dividing line between these tools; it no longer is. By 
 
 A few things that set it apart in practice:
 
-**Policy automation and compliance.** Neo is integrated with [Pulumi Insights and Governance](/product/insights-governance/), which ships pre-built policy packs for CIS benchmarks, HITRUST CSF, NIST SP 800-53, and PCI DSS. Detection and remediation run in the same loop: Neo finds a violation, generates a fix, and (subject to approvals) applies it. You can batch-remediate across stacks and accounts with prompts like "find and fix all unencrypted S3 buckets across our AWS accounts."
+**Policy automation and compliance.** Neo is integrated with [Pulumi Insights and Governance](/product/discovery-governance/), which ships pre-built policy packs for CIS benchmarks, HITRUST CSF, NIST SP 800-53, and PCI DSS. Detection and remediation run in the same loop: Neo finds a violation, generates a fix, and (subject to approvals) applies it. You can batch-remediate across stacks and accounts with prompts like "find and fix all unencrypted S3 buckets across our AWS accounts."
 
 **Works with infrastructure you didn't create with Pulumi.** Neo's governance applies to Pulumi-managed resources, Terraform state, CloudFormation stacks, and resources someone clicked together in the AWS console. That matters because the realistic adoption path is to point Neo at what you have, audit it, and gradually bring it under management, not to migrate everything first.
 

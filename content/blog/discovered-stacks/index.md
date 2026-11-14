@@ -58,7 +58,7 @@ When you're ready to migrate, the console is where you plan and build confidence
 
 Two things hold regardless of the path. Progress is *derived*: a resource shows as migrated when it actually exists in the target Pulumi stack, not when someone checks a box. And the quality gate is a **zero-diff `pulumi preview`** — the migration is done when the code demonstrably matches your cloud.
 
-Terraform stacks whose state you [store in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/) get the same treatment through a new **Migration** tab, with statuses derived from the Terraform state.
+Terraform stacks whose state you [store in Pulumi Cloud](/docs/integrations/terraform/state-backend/) get the same treatment through a new **Migration** tab, with statuses derived from the Terraform state.
 
 ## Try it
 

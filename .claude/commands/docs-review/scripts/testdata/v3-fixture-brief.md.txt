@@ -21,7 +21,7 @@
 > [!NOTE]
 > **What this PR changes:**
 >
-> - <TODO: one bullet per meaningful change — subject + what changed, one line each; a reviewer scans this list, so no compound bullets>
+> - <TODO: one bullet per meaningful change — subject + what changed, one line each; a reviewer scans this list, so no compound bullets; mark a change the PR description doesn't mention per ci.md §The v3 surface>
 >
 > <TODO: one sentence — what specific kind of wrongness would block a reader's success — then one sentence naming which investigative passes ran>.
 >

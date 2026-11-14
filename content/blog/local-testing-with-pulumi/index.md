@@ -12,7 +12,7 @@ tags:
 category: tutorials
 ---
 
-If you've been following along with our [IaC Recommended Practices series](https://www.pulumi.com/blog/iac-recommended-practices-code-organization-and-stacks/), then you're already familiar with Zephyr Archaeotech Emporium, the fictional company at the center of the series. Today, you'll get an inside look at how Zephyr starts using Pulumi for locally testing the application code for their online store and accelerating the inner dev loop for their development team.
+If you've been following along with our [IaC Recommended Practices series](https://www.pulumi.com/blog/iac-best-practices-understanding-code-organization-stacks/), then you're already familiar with Zephyr Archaeotech Emporium, the fictional company at the center of the series. Today, you'll get an inside look at how Zephyr starts using Pulumi for locally testing the application code for their online store and accelerating the inner dev loop for their development team.
 
 <!--more-->
 
@@ -32,9 +32,9 @@ In a conversation at Zephyr HQ between Bob and Alice one day, Bob commented, "I'
 
 "Oh, what's wrong with the current way it's handled? Is there something we can do better?"
 
-Alice paused. "Well, don't get me wrong, the way we use [per-developer stacks](/blog/iac-recommended-practices-developer-stacks-git-branches/) makes it super easy for me to deploy an entire copy of our environment. The problem is that...well, it takes a fair amount of time to create all the AWS stuff. Sometimes I just need something faster, just to test some quick changes to the code before deploying the app to my dev stack."
+Alice paused. "Well, don't get me wrong, the way we use [per-developer stacks](/blog/iac-best-practices-enabling-developer-stacks-git-branches/) makes it super easy for me to deploy an entire copy of our environment. The problem is that...well, it takes a fair amount of time to create all the AWS stuff. Sometimes I just need something faster, just to test some quick changes to the code before deploying the app to my dev stack."
 
-Bob nodded thoughtfully. "I see. You know, Pulumi has a Docker provider; in fact, they recently released [a new version of their Docker provider](/blog/build-images-50x-faster-docker-v4/)."
+Bob nodded thoughtfully. "I see. You know, Pulumi has a Docker provider; in fact, they recently released [a new version of their Docker provider](/blog/fast-docker-image-builds-with-pulumi/)."
 
 Alice's eyes lit up. "So, you mean I can automate my local Docker instance using Pulumi?"
 

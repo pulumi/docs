@@ -31,7 +31,7 @@ The recommended workflow for developing and publishing components follows these 
 
 1. **Local Development**: Author your component using a [local development workflow](/docs/iac/guides/building-extending/components/build-a-component/)
 2. **Repository Setup**: Create a [GitHub repository](https://github.com/pulumi-labs/pulumi-component-lifecycle-example) with proper documentation
-3. **Testing Infrastructure**: Write [comprehensive unit and integration tests](/docs/iac/concepts/components/testing-components)
+3. **Testing Infrastructure**: Write [comprehensive unit and integration tests](/docs/iac/guides/building-extending/components/testing-components/)
 4. **Automated Testing**: Set up [GitHub Actions](https://github.com/pulumi-labs/pulumi-component-lifecycle-example/tree/main/.github/workflows/test.yml) for continuous testing
 5. **Versioned Releases**: Create semantic [versioned releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) on GitHub
 6. **Automated Publishing**: Automate the [release and publishing](https://github.com/pulumi-labs/pulumi-component-lifecycle-example/tree/main/.github/workflows/release.yml) process
@@ -428,7 +428,7 @@ Once your automated publishing workflow is established, consider these enhanceme
 ## Learn More
 
 - [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/)
-- [Testing Components](/docs/iac/concepts/components/testing-components)
+- [Testing Components](/docs/iac/guides/building-extending/components/testing-components/)
 - [Private Registry](/docs/idp/concepts/private-registry)
 - [GitHub Actions for Pulumi](/docs/iac/operations/continuous-delivery/github-actions)
 - [Pulumi Deployments](/docs/deployments/concepts/)

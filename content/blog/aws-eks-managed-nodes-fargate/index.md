@@ -41,7 +41,7 @@ Running a Kubernetes cluster isn't easy, but EKS makes the task of doing so much
 
 It's great to have all of the building blocks at your fingertips, and the `@pulumi/aws` package [exposes these raw capabilities of EKS to you](/registry/packages/aws/api-docs/eks/cluster/). [We also created an EKS package](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/) to simplify common tasks, however, including creating the Kubernetes data plane, configuring VPC/CNI and subnet networking, and managing node groups. This package has been enlightened with the new features, and is what we'll use in our examples.
 
-Provisioning a new EKS cluster today is already as simple as a dozen lines of [infrastructure as code](/what-is/what-is-infrastructure-as-code/):
+Provisioning a new EKS cluster today is already as simple as a dozen lines of [infrastructure as code](/topics/infrastructure-as-code/):
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -346,6 +346,6 @@ In this article, we've seen the full range of EKS cluster management options:
 
 We're excited to offer support for this full range of options the same week of AWS re:Invent, including not just the building block support, but the simpler interface provided by [our open source EKS package](https://github.com/pulumi/pulumi-eks).
 
-To get started with Pulumi and kick the tires with EKS today, check out our [Getting Started guide](/docs/get-started/). There are both [AWS](/docs/iac/get-started/aws/) and [Kubernetes](/docs/iac/get-started/kubernetes/) versions available.
+To get started with Pulumi and kick the tires with EKS today, check out our [Getting Started guide](/up/). There are both [AWS](/up/?cloud=aws) and [Kubernetes](/up/?cloud=kubernetes) versions available.
 
 Happy Fargating!

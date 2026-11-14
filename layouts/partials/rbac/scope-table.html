@@ -1,0 +1,27 @@
+{{- /*
+  Returns one section of the RBAC scope reference as a Markdown table string.
+  Input: (dict "entity" <API entity type> "section" <section from data/rbac_scopes.json>)
+
+  Shared by layouts/shortcodes/rbac-scopes.html and its .markdown.md twin so
+  the HTML page and the .md output can't drift apart. Descriptions come from
+  the API; data/rbac_scope_notes.yaml can replace one or append a note.
+*/ -}}
+{{- $notes := index (site.Data.rbac_scope_notes.scopes | default dict) .entity | default dict -}}
+{{- $rows := slice -}}
+{{- range .section.scopes -}}
+  {{- $note := index $notes .name | default dict -}}
+  {{- $description := $note.description | default .description -}}
+  {{- with $note.note -}}{{- $description = printf "%s %s" $description . -}}{{- end -}}
+  {{- if isset . "defaultRoles" -}}
+    {{- $roles := slice -}}
+    {{- range .defaultRoles -}}{{- $roles = $roles | append (printf "`%s`" .) -}}{{- end -}}
+    {{- $description = printf "%s<br><br>**Granted by default roles**: %s" $description (cond (gt (len $roles) 0) (delimit $roles ", ") "None") -}}
+  {{- else -}}
+    {{- with .defaultPermissionSet -}}
+      {{- $description = printf "%s<br><br>**Granted by default permission set**: `%s`" $description . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- /* Rows are Markdown, so a literal pipe in API text would split the row. */ -}}
+  {{- $rows = $rows | append (printf "| `%s` | %s |" .name (replace $description "|" "\\|")) -}}
+{{- end -}}
+{{- return printf "| Scope | Description |\n|---|---|\n%s\n" (delimit $rows "\n") -}}

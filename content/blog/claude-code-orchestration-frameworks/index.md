@@ -47,7 +47,7 @@ Pulumi uses general-purpose programming languages to define infrastructure. Type
 
 AI coding agents are impressive for the first 30 minutes. Then things go sideways. The patterns are predictable enough that three separate teams independently built agent orchestration frameworks to fix them:
 
-**Context rot.** Every LLM has a context window. As that window fills up, earlier instructions fade. You start a session asking for an [S3 bucket](/docs/iac/clouds/aws/guides/) with AES-256 encryption, proper ACLs, and access logging. Two hours and 200K tokens later, the agent creates a new bucket with none of those requirements. The context window got crowded and your original instructions lost weight.
+**Context rot.** Every LLM has a context window. As that window fills up, earlier instructions fade. You start a session asking for an [S3 bucket](/docs/iac/guides/clouds/aws/) with AES-256 encryption, proper ACLs, and access logging. Two hours and 200K tokens later, the agent creates a new bucket with none of those requirements. The context window got crowded and your original instructions lost weight.
 
 **No test discipline.** Agents write code that looks plausible. Plausible code compiles. Plausible code even runs, for a while. But plausible code without tests is a liability. The agent adds a feature and quietly breaks two others because nothing verified the existing behavior was preserved.
 
@@ -229,4 +229,4 @@ If you want a managed experience that handles orchestration for you, [Pulumi Neo
 
 Pick one and give it a project. You will know within an hour whether it fixes your particular failure mode.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

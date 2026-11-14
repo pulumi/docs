@@ -69,7 +69,9 @@ class FakeGh:
         return self.files_now
 
     def compare_files(self, base, sha):
-        assert (base, sha) == ("master", REVIEWED)
+        assert base == "master"
+        if self.files_then is None:
+            raise rb.GhError("No commit found for SHA")
         return self.files_then
 
     def get(self, path):
@@ -104,9 +106,29 @@ def test_a_conflict_resolution_that_edits_the_prs_lines_is_not_restamped():
     assert out["restamped"] is False and "conflict" in out["reason"] and not gh.patched
 
 
-def test_unknown_reviewed_head_or_legacy_review_fails_closed():
-    gh = FakeGh(card(head="9" * 40), [commit(REVIEWED), commit(HEAD, 2)], FILES, FILES)
-    assert rb.run(gh, 1)["restamped"] is False
+def test_a_rebase_with_the_same_diff_is_restamped():
+    """#22397: a rebase to clear a changelog conflict took the reviewed head
+    out of the commit list. The PR's own lines didn't change, so the review
+    still describes it."""
+    rebased = [commit("8" * 40), commit(HEAD)]
+    gh = FakeGh(card(), rebased, FILES, FILES_AFTER_MERGE)
+    out = rb.run(gh, 1)
+    assert out["restamped"] is True and "rebase" in out["reason"], out
+    assert f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->" in gh.patched[-1][1]
+
+
+def test_a_rebase_that_changed_the_diff_or_lost_the_old_head_fails_closed():
+    changed = [{"filename": "content/docs/x.md", "patch": "@@ -1,2 +1,2 @@\n-old\n+newer\n ctx"}]
+    rebased = [commit("8" * 40), commit(HEAD)]
+    assert rb.run(FakeGh(card(), rebased, FILES, changed), 1)["restamped"] is False
+    # GitHub no longer serves the pre-rebase commit: nothing to compare, no carry.
+    gone = FakeGh(card(), rebased, None, FILES)
+    assert rb.run(gone, 1)["restamped"] is False and not gone.patched
+    # An unreadable commit list says nothing about the history.
+    assert rb.run(FakeGh(card(), [], FILES, FILES), 1)["restamped"] is False
+
+
+def test_legacy_review_fails_closed():
     legacy = FakeGh("<!-- CLAUDE_REVIEW 1/1 -->\nv2\n", [commit(HEAD, 2)], FILES, FILES)
     assert rb.run(legacy, 1) == {"restamped": False, "reason": "no v3 author card", "head": HEAD}
 
@@ -144,3 +166,36 @@ def test_a_patchless_file_must_keep_its_blob_to_count_as_unchanged():
     no_sha = FakeGh(card(), [commit(REVIEWED), commit(HEAD, 2)],
                     [{"filename": "static/big.json"}], [{"filename": "static/big.json"}])
     assert rb.run(no_sha, 1)["restamped"] is False, "no blob sha → fail closed"
+
+
+def _treed(sha, tree, parents=1, on="p"):
+    return {"sha": sha, "parents": [{"sha": on}] + [{"sha": "base"}] * (parents - 1),
+            "commit": {"tree": {"sha": tree}}}
+
+
+def test_an_empty_kick_commit_carries_the_review():
+    """#22524: an empty "kick CI" commit (same tree as its parent) reset a
+    clean review, and the PR went from one red gate to two."""
+    empty = [_treed(REVIEWED, "t1"), _treed(HEAD, "t1", on=REVIEWED)]
+    gh = FakeGh(card(), empty, FILES, FILES)
+    assert rb.run(gh, 1)["restamped"] is True
+    after_merge = [_treed(REVIEWED, "t1"), _treed(MERGE, "t2", 2), _treed(HEAD, "t2", on=MERGE)]
+    assert rb.run(FakeGh(card(), after_merge, FILES, FILES_AFTER_MERGE), 1)["restamped"] is True
+    changed = [_treed(REVIEWED, "t1"), _treed(HEAD, "t9", on=REVIEWED)]
+    assert rb.run(FakeGh(card(), changed, FILES, FILES), 1)["restamped"] is False
+    untreed = [_treed(REVIEWED, "t1"), commit(HEAD)]
+    assert rb.run(FakeGh(card(), untreed, FILES, FILES), 1)["restamped"] is False, "no tree → fail closed"
+
+
+def test_a_strip_written_mid_decision_does_not_stop_the_restamp():
+    """Fork test of #22555: the Sentinel rewrote the card's strip on the same
+    push, the restamp backed off, and G1 sat red until the 2-hourly sweep. A
+    change confined to the strip is the Sentinel's, not a review refresh."""
+    body = card().replace("nothing blocks merge\n",
+                          "nothing blocks merge\n\n<!-- SENTINEL_STRIP -->\n⏳ old\n<!-- /SENTINEL_STRIP -->\n")
+    gh = FakeGh(body, [commit(REVIEWED), commit(HEAD, 2)], FILES, FILES_AFTER_MERGE)
+    gh.body_at_write = body.replace("⏳ old", "⏳ new")
+    assert rb.run(gh, 1)["restamped"] is True
+    (_, written), = gh.patched
+    assert "⏳ new" in written, "the fresh strip survives"
+    assert f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->" in written

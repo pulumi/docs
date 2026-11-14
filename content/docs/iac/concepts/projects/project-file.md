@@ -33,7 +33,7 @@ For Pulumi programs specifically written in Pulumi YAML, the project file not on
 | `license` | optional | The license governing this project's usage (e.g. `Apache-2.0`, `MIT`). | None |
 | `config` | optional | Project level config (Added in v3.44). | [config options](#config-options) |
 | `packages` | optional | Additional packages to be used in the program (Added in v3.157.0). | [packages](#packages-options) |
-| `main` | optional | Path to the Pulumi program, relative to the location of `Pulumi.yaml`. The default is the current working directory. | None |
+| `main` | optional | Path to the Pulumi program, relative to the location of `Pulumi.yaml`. The default is the directory containing `Pulumi.yaml`. | None |
 | `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None |
 | `backend` | optional | [Backend](/docs/iac/concepts/state-and-backends/) of the project. | [backend options](#backend-options) |
 | `options` | optional | Additional project options. | [options options](#options-options) |
@@ -187,9 +187,9 @@ Schemas are only valid for project property keys. For setting the value of a pro
 
 | Name | Required | Description |
 | - | - | - |
-| `type` | optional | The type of this config property, either `string`, `boolean`, `integer`, `array`, or `object`. Either `type` or `default` is required; when omitted, the type is inferred from `default`. |
+| `type` | optional | The type of this config property, either `string`, `boolean`, `integer`, `array`, or `object`. When omitted, the CLI doesn't check the value's type. A property with neither `type` nor `default` must be set in every stack. |
 | `description` | optional | A description for this config property. |
-| `secret` | optional | True if this config property should be a secure secret value. |
+| `secret` | optional | True if this config property should be a secure secret value. When `type` is also set, each stack must provide an encrypted value: a plaintext value fails validation, and so does falling back to `default`. |
 | `default` | optional | The default value for this config property, must match the given type. |
 | `items` | required if `type` is `array` | A nested structured declaration of the type of the items in the array. |
 
@@ -213,7 +213,7 @@ Schemas are only valid for project property keys. For setting the value of a pro
 | `description` | optional | Description of the template. |
 | `quickstart` | optional | Text to display after the template is instantiated — for example, after `pulumi new` generates a new project. Use this field to surface follow-up instructions specific to the template, such as required environment variables, dependency installation steps, or links to getting-started guides. |
 | `important` | optional | Boolean indicating whether the template is important and should be listed by default. |
-| `config` | required | Config to request when using this template with `pulumi new`. |
+| `config` | optional | Config to request when using this template with `pulumi new`. |
 | `metadata` | optional | A map of user-defined tags to attach to the template. The Pulumi Cloud [New Project Wizard](/docs/idp/concepts/new-project-wizard/) recognizes a `cloud` key for filtering templates by target cloud — see [Organization templates](/docs/idp/concepts/organization-templates/#new-project-wizard-cloud-filter) for accepted values. This field is only supported by Pulumi CLI >= 3.95. |
 
 #### `config`
@@ -265,14 +265,14 @@ This deprecated form is the string value of `config`, not the project-level conf
 ### Example project file with only required attributes
 
 ```yaml
-name: Example Pulumi project file with only required attributes
+name: minimal-project
 runtime: nodejs
 ```
 
 ### Example project file with all possible attributes
 
 ```yaml
-name: Example Pulumi project file with all possible attributes
+name: full-project
 runtime:
   name: yaml
   options:

@@ -3,6 +3,11 @@
        sized from the header's visible bottom); everywhere else the nav is
        pinned. Same URL test the header used to branch the docs nav on. */ -}}
 {{- $docsChrome := hasPrefix .RelPermalink "/docs/" -}}
+{{- /* On the home page the primary CTA is Sign up (straight to the console)
+       instead of Get started, since the hero already carries Get started
+       (MA-1173). Sign in stays as the secondary CTA. */ -}}
+{{- $home := .IsHome -}}
+{{- $primary := cond $home $nav.cta.signUp (dict "label" site.Params.cta.primary.label "href" site.Params.cta.primary.href "track" $nav.cta.getStarted.track) -}}
 
 <header
   class="{{ if $docsChrome }}relative{{ else }}sticky top-0{{ end }} z-40 w-full border-b border-gray-200 bg-white"
@@ -42,12 +47,12 @@
          class="hidden nav-desktop:inline-flex btn btn-primary">
         Dashboard
       </a>
-      <a href="{{ site.Params.cta.primary.href }}"
-         {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
-         data-role="cta-get-started"
+      <a href="{{ $primary.href }}"
+         {{ with $primary.track }}data-track="{{ . }}"{{ end }}
+         {{ if not $home }}data-role="cta-get-started"{{ end }}
          data-nav-loggedout
          class="hidden nav-desktop:inline-flex btn btn-primary">
-        {{ site.Params.cta.primary.label }}
+        {{ $primary.label }}
       </a>
       <!-- Mobile: CTAs visible at sm+, hamburger always visible -->
       <div class="flex gap-2 nav-desktop:hidden">
@@ -73,12 +78,12 @@
              class="btn btn-primary">
             Dashboard
           </a>
-          <a href="{{ site.Params.cta.primary.href }}"
+          <a href="{{ $primary.href }}"
              data-track="header-signup-mobile"
-             data-role="cta-get-started"
+             {{ if not $home }}data-role="cta-get-started"{{ end }}
              data-nav-loggedout
              class="btn btn-primary">
-            {{ site.Params.cta.primary.label }}
+            {{ $primary.label }}
           </a>
         </div>
         {{ partial "header/nav-mobile-trigger.html" $nav }}
@@ -88,7 +93,7 @@
   </div>
 </header>
 
-{{ partial "header/nav-mobile-sheet.html" $nav }}
+{{ partial "header/nav-mobile-sheet.html" (dict "nav" $nav "isHome" $home) }}
 
 {{ partial "header/logo-brand-menu.html" . }}
 

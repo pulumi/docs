@@ -17,13 +17,13 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        // Look up the most recent Amazon Linux 2 AMI.
+        // Look up the most recent Amazon Linux 2023 AMI.
         var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
             .owners("amazon")
             .mostRecent(true)
             .filters(GetAmiFilterArgs.builder()
                 .name("name")
-                .values("amzn2-ami-hvm-*-x86_64-gp2")
+                .values("al2023-ami-2023.*-x86_64")
                 .build())
             .build());
 

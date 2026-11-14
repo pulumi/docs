@@ -69,7 +69,7 @@ res = MyResource("res",
 
 ```go
 res, _ := NewMyResource(ctx, "res",
-    &MyResourceArgs{Prop: "new-value"},
+    &MyResourceArgs{Prop: pulumi.String("new-value")},
     pulumi.IgnoreChanges([]string{"prop"}))
 ```
 
@@ -146,9 +146,19 @@ Consider an AWS Application Load Balancer listener whose target group weights ar
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const frontEnd = new aws.lb.LoadBalancer("frontEnd", {});
-const frontEndBlue = new aws.lb.TargetGroup("frontEndBlue", {});
-const frontEndGreen = new aws.lb.TargetGroup("frontEndGreen", {});
+const frontEnd = new aws.lb.LoadBalancer("frontEnd", {
+    subnets: ["subnet-0a1b2c3d4e5f60718", "subnet-0f1e2d3c4b5a69788"],
+});
+const frontEndBlue = new aws.lb.TargetGroup("frontEndBlue", {
+    port: 80,
+    protocol: "HTTP",
+    vpcId: "vpc-0a1b2c3d4e5f60718",
+});
+const frontEndGreen = new aws.lb.TargetGroup("frontEndGreen", {
+    port: 80,
+    protocol: "HTTP",
+    vpcId: "vpc-0a1b2c3d4e5f60718",
+});
 const frontEndListener = new aws.lb.Listener("frontEndListener", {
     loadBalancerArn: frontEnd.arn,
     port: 443,
@@ -183,10 +193,11 @@ const frontEndListener = new aws.lb.Listener("frontEndListener", {
 ```python
 import pulumi
 import pulumi_aws as aws
+from pulumi import ResourceOptions
 
-front_end = aws.lb.LoadBalancer("frontEnd")
-front_end_blue = aws.lb.TargetGroup("frontEndBlue")
-front_end_green = aws.lb.TargetGroup("frontEndGreen")
+front_end = aws.lb.LoadBalancer("frontEnd", subnets=["subnet-0a1b2c3d4e5f60718", "subnet-0f1e2d3c4b5a69788"])
+front_end_blue = aws.lb.TargetGroup("frontEndBlue", port=80, protocol="HTTP", vpc_id="vpc-0a1b2c3d4e5f60718")
+front_end_green = aws.lb.TargetGroup("frontEndGreen", port=80, protocol="HTTP", vpc_id="vpc-0a1b2c3d4e5f60718")
 front_end_listener = aws.lb.Listener("frontEndListener",
     load_balancer_arn=front_end.arn,
     port=443,
@@ -226,15 +237,28 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		frontEnd, err := lb.NewLoadBalancer(ctx, "frontEnd", nil)
+		frontEnd, err := lb.NewLoadBalancer(ctx, "frontEnd", &lb.LoadBalancerArgs{
+			Subnets: pulumi.StringArray{
+				pulumi.String("subnet-0a1b2c3d4e5f60718"),
+				pulumi.String("subnet-0f1e2d3c4b5a69788"),
+			},
+		})
 		if err != nil {
 			return err
 		}
-		frontEndBlue, err := lb.NewTargetGroup(ctx, "frontEndBlue", nil)
+		frontEndBlue, err := lb.NewTargetGroup(ctx, "frontEndBlue", &lb.TargetGroupArgs{
+			Port:     pulumi.Int(80),
+			Protocol: pulumi.String("HTTP"),
+			VpcId:    pulumi.String("vpc-0a1b2c3d4e5f60718"),
+		})
 		if err != nil {
 			return err
 		}
-		frontEndGreen, err := lb.NewTargetGroup(ctx, "frontEndGreen", nil)
+		frontEndGreen, err := lb.NewTargetGroup(ctx, "frontEndGreen", &lb.TargetGroupArgs{
+			Port:     pulumi.Int(80),
+			Protocol: pulumi.String("HTTP"),
+			VpcId:    pulumi.String("vpc-0a1b2c3d4e5f60718"),
+		})
 		if err != nil {
 			return err
 		}
@@ -283,11 +307,24 @@ using Aws = Pulumi.Aws;
 
 return await Deployment.RunAsync(() =>
 {
-    var frontEnd = new Aws.LB.LoadBalancer("frontEnd");
+    var frontEnd = new Aws.LB.LoadBalancer("frontEnd", new()
+    {
+        Subnets = new[] { "subnet-0a1b2c3d4e5f60718", "subnet-0f1e2d3c4b5a69788" },
+    });
 
-    var frontEndBlue = new Aws.LB.TargetGroup("frontEndBlue");
+    var frontEndBlue = new Aws.LB.TargetGroup("frontEndBlue", new()
+    {
+        Port = 80,
+        Protocol = "HTTP",
+        VpcId = "vpc-0a1b2c3d4e5f60718",
+    });
 
-    var frontEndGreen = new Aws.LB.TargetGroup("frontEndGreen");
+    var frontEndGreen = new Aws.LB.TargetGroup("frontEndGreen", new()
+    {
+        Port = 80,
+        Protocol = "HTTP",
+        VpcId = "vpc-0a1b2c3d4e5f60718",
+    });
 
     var frontEndListener = new Aws.LB.Listener("frontEndListener", new()
     {
@@ -338,11 +375,15 @@ import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
 import com.pulumi.aws.lb.LoadBalancer;
+import com.pulumi.aws.lb.LoadBalancerArgs;
 import com.pulumi.aws.lb.TargetGroup;
+import com.pulumi.aws.lb.TargetGroupArgs;
 import com.pulumi.aws.lb.Listener;
 import com.pulumi.aws.lb.ListenerArgs;
 import com.pulumi.aws.lb.inputs.ListenerDefaultActionArgs;
 import com.pulumi.aws.lb.inputs.ListenerDefaultActionForwardArgs;
+import com.pulumi.aws.lb.inputs.ListenerDefaultActionForwardTargetGroupArgs;
+import com.pulumi.resources.CustomResourceOptions;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
@@ -356,11 +397,21 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var frontEnd = new LoadBalancer("frontEnd");
+        var frontEnd = new LoadBalancer("frontEnd", LoadBalancerArgs.builder()
+            .subnets("subnet-0a1b2c3d4e5f60718", "subnet-0f1e2d3c4b5a69788")
+            .build());
 
-        var frontEndBlue = new TargetGroup("frontEndBlue");
+        var frontEndBlue = new TargetGroup("frontEndBlue", TargetGroupArgs.builder()
+            .port(80)
+            .protocol("HTTP")
+            .vpcId("vpc-0a1b2c3d4e5f60718")
+            .build());
 
-        var frontEndGreen = new TargetGroup("frontEndGreen");
+        var frontEndGreen = new TargetGroup("frontEndGreen", TargetGroupArgs.builder()
+            .port(80)
+            .protocol("HTTP")
+            .vpcId("vpc-0a1b2c3d4e5f60718")
+            .build());
 
         var frontEndListener = new Listener("frontEndListener", ListenerArgs.builder()
             .loadBalancerArn(frontEnd.arn())
@@ -402,16 +453,24 @@ runtime: yaml
 resources:
   frontEnd:
     type: aws:lb:LoadBalancer
-    name: front_end
+    properties:
+      subnets:
+        - subnet-0a1b2c3d4e5f60718
+        - subnet-0f1e2d3c4b5a69788
   frontEndBlue:
     type: aws:lb:TargetGroup
-    name: front_end_blue
+    properties:
+      port: 80
+      protocol: HTTP
+      vpcId: vpc-0a1b2c3d4e5f60718
   frontEndGreen:
     type: aws:lb:TargetGroup
-    name: front_end_green
+    properties:
+      port: 80
+      protocol: HTTP
+      vpcId: vpc-0a1b2c3d4e5f60718
   frontEndListener:
     type: aws:lb:Listener
-    name: front_end
     properties:
       loadBalancerArn: ${frontEnd.arn}
       port: 443
@@ -436,11 +495,24 @@ resources:
 {{% choosable language hcl %}}
 
 ```hcl
-resource "aws_lb" "front_end" {}
+resource "aws_lb" "front_end" {
+  name    = "front-end"
+  subnets = ["subnet-0a1b2c3d4e5f60718", "subnet-0f1e2d3c4b5a69788"]
+}
 
-resource "aws_lb_target_group" "front_end_blue" {}
+resource "aws_lb_target_group" "front_end_blue" {
+  name     = "front-end-blue"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = "vpc-0a1b2c3d4e5f60718"
+}
 
-resource "aws_lb_target_group" "front_end_green" {}
+resource "aws_lb_target_group" "front_end_green" {
+  name     = "front-end-green"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = "vpc-0a1b2c3d4e5f60718"
+}
 
 resource "aws_lb_listener" "front_end_listener" {
   load_balancer_arn = aws_lb.front_end.arn

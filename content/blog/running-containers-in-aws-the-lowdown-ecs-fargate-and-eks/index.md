@@ -9,7 +9,7 @@ meta_desc: "Use Pulumi's infrastructure-as-code approach to simplify working wit
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 {{% notes type="info" %}}
 An updated breakdown of when to prefer Fargate and when EC2 can be found in  [Fargate vs EC2](https://www.pulumi.com/blog/fargate-vs-ec2/)
@@ -224,7 +224,7 @@ and CloudWatch. It's possible to use any of these services without
 Pulumi, but there are [many benefits to Pulumi's infrastructure as code](/why-pulumi).
 
 In short, to get your containers up on AWS, in an easy yet
-production-ready way, [get started for free with Pulumi for AWS today](/docs/iac/get-started/aws/)!
+production-ready way, [get started for free with Pulumi for AWS today](/up/?cloud=aws)!
 
 After getting started, here are some additional resources to go deeper
 on specific topics:

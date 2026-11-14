@@ -960,4 +960,4 @@ The part worth carrying to the next service you deploy: not every layer has a pr
 
 To generate that map instead of writing it by hand, [Pulumi Neo](https://www.pulumi.com/product/neo/) can take a target architecture like this one and produce a first draft of the program. The agent side of this shift is covered in [How Building AI Agents Has Changed in 2026](/blog/how-building-ai-agents-has-changed/) and the platform side in [Agent Sprawl Is Here. Your IaC Platform Is the Answer.](/blog/agent-sprawl-iac-platform-is-the-answer/).
 
-If you run into issues or have questions, drop by the [Pulumi Community Slack](https://slack.pulumi.com/) or [GitHub Discussions](https://github.com/pulumi/pulumi/discussions). New to Pulumi? [Get started here](/docs/get-started/).
+If you run into issues or have questions, drop by the [Pulumi Community Slack](https://slack.pulumi.com/) or [GitHub Discussions](https://github.com/pulumi/pulumi/discussions). New to Pulumi? [Get started here](/up/).

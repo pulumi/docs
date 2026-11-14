@@ -2,7 +2,7 @@
 title: fn::toString
 title_tag: fn::toString
 h1: fn::toString
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Use fn::toString in Pulumi ESC to convert booleans, numbers, lists, and maps to their string form. Secret inputs stay secret. See encoding rules and examples."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-to-string/
   - /docs/esc/reference/builtin-functions/fn-to-string/

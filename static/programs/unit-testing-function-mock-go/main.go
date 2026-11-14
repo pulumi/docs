@@ -10,14 +10,14 @@ type infrastructure struct {
 }
 
 func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
-	// Look up the most recent Amazon Linux 2 AMI.
+	// Look up the most recent Amazon Linux 2023 AMI.
 	ami, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
 		Owners:     []string{"amazon"},
 		MostRecent: pulumi.BoolRef(true),
 		Filters: []ec2.GetAmiFilter{
 			{
 				Name:   "name",
-				Values: []string{"amzn2-ami-hvm-*-x86_64-gp2"},
+				Values: []string{"al2023-ami-2023.*-x86_64"},
 			},
 		},
 	})

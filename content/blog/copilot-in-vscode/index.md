@@ -52,7 +52,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. The Pulumi Copilot Chat extension for VS Code is deprecated — instead, run [Neo directly in your editor](/docs/ai/neo/editors/) via the Agent Client Protocol.
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. The Pulumi Copilot Chat extension for VS Code is deprecated — instead, run [Neo directly in your editor](/docs/ai/concepts/neo/neo-in-your-editor/) via the Agent Client Protocol.
 {{< /notes >}}
 
 Programming languages offer dozens of advantages for writing infrastructure as code (IaC). One of them is that Large Language Models are  effective at using general-purpose programming languages, thanks to the vast amount of high-quality training data available. Building on this advantage, we introduced Pulumi AI and Pulumi Copilot last year to enhance infrastructure-as-code development with generative AI capabilities. These tools have significantly streamlined infrastructure deployment for tens of thousands of developers.

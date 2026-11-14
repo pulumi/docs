@@ -156,7 +156,7 @@ $ aws s3 ls
 Unable to locate credentials. You can configure credentials by running "aws configure".
 ```
 
-This is one of [several AWS CLI credential errors that stale or missing keys produce](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/). Now run the command using `pulumi env run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+This is one of [several AWS CLI credential errors that stale or missing keys produce](/dev/tutorials/run-aws-sts-get-caller-identity-with-dynamic-credentials/). Now run the command using `pulumi env run` as shown below, making sure to replace `<your-pulumi-org-name>` and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
 pulumi env run <your-pulumi-org-name>/<your-environment-name> -i aws s3 ls
@@ -195,7 +195,7 @@ This is one example from several dozen use cases possible via Pulumi ESC. Other 
 
 Pulumi ESC, and the `pulumi env run` command in particular, is designed to make your cloud journey smoother, more secure, and less daunting. So, the next time you find yourself drowning in a sea of cloud configurations, remember, with Pulumi ESC and a dash of code, you can say goodbye to manual configuration hassles and hello to efficient, secure, and scalable cloud development with Pulumi ESC.
 
-Want to learn more about Pulumi? Our [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/) hub is a great place to start.
+Want to learn more about Pulumi? Our [Get Started with Pulumi](/up/) hub is a great place to start.
 
 If you’re looking for an automated (and faster) way to configure OIDC with Pulumi, we’ve got you covered! Check out our [Examples repo](https://github.com/pulumi/examples) where we offer a wide variety of automations using Pulumi Infrastructure as Code (IaC). For OIDC configuration in particular, we have example automation for:
 

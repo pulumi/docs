@@ -40,7 +40,7 @@ values:
 
 ### Differentiating callers by token
 
-For team and organization tokens, both `user.login` and `organization.login` resolve to the organization name, so neither one distinguishes a team token from an individual user. The `context.pulumi.token` properties are the way to tell those callers apart:
+For an organization token, both `user.login` and `organization.login` resolve to the organization name. For a team token, `user.login` is the login of the team's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified), in the form `team-account:<team-id>`, which identifies the team by ID rather than by name. The `context.pulumi.token` properties are the clearest way to tell those callers apart:
 
 ```yaml
 values:

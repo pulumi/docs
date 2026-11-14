@@ -47,7 +47,7 @@ This blog post summarizes a presentation by Dennis Sauvé at [PulumiUP 2023](/pu
 
 [Washington Trust Bank](https://www.watrust.com), the largest independently-owned full-service commercial bank in the Northwest, has served personal, private, commercial and wealth management clients throughout the region since 1902. It has assets exceeding $11 billion and currently has 42 branches and offices in Idaho, Oregon, and Washington.
 
-As an FDIC-governed financial institution, it is imperative for the bank to maintain secure, reliable, and compliant cloud resources to protect clients’ personal data. On the other hand, it also aimed to create more agile development teams as it modernized its software development and infrastructure. [Dennis Sauvé](https://github.com/dengsauve), the bank's first DevOps Engineer, recognized [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/) as the solution to these challenges.
+As an FDIC-governed financial institution, it is imperative for the bank to maintain secure, reliable, and compliant cloud resources to protect clients’ personal data. On the other hand, it also aimed to create more agile development teams as it modernized its software development and infrastructure. [Dennis Sauvé](https://github.com/dengsauve), the bank's first DevOps Engineer, recognized [infrastructure as code (IaC)](/topics/infrastructure-as-code/) as the solution to these challenges.
 
 Embracing an infrastructure as code approach would allow them to automate building and deploying their cloud infrastructure, eliminate infrastructure provisioning as a bottleneck, and empower developers to self-service infrastructure and increase productivity.
 
@@ -93,6 +93,6 @@ Pulumi also gave the bank total confidence in being able to rapidly recover its 
 
 The DevOps and development teams at Washington Trust Bank rely on Pulumi as a key tool in their cloud modernization, while maintaining high security and quality standards. Pulumi played a vital role in streamlining their cloud infrastructure management, enabling their developers to be more productive, and improving the security and reliability of its cloud infrastructure.
 
-[Sign up for a free account](https://app.pulumi.com/signup) to try deploying infrastructure on any cloud, or [register for an upcoming workshop](https://www.pulumi.com/resources/#upcoming) to learn more about how Pulumi can help you ship cloud infrastructure faster and more safely.
+[Sign up for a free account](https://app.pulumi.com/signup) to try deploying infrastructure on any cloud, or [register for an upcoming workshop](https://www.pulumi.com/events/#upcoming) to learn more about how Pulumi can help you ship cloud infrastructure faster and more safely.
 
 [Go to more case studies](/customers/)

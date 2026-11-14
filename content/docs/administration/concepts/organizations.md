@@ -87,6 +87,8 @@ To invite a new member:
 
 New member invitation links never expire and may only be used one time.
 
+A new member who joins through an invite follows the organization's [default role](/docs/administration/concepts/rbac/default-roles/), unless you assign another role when you send the invite.
+
 Pulumi organization administrators can monitor current organization members and pending invitations on the Members console page. For pending invitations, administrators can re-send email invitations, copy links for both email and link generated invitations, and revoke invitations. The invitation status column in the members table includes the date an invitation was sent, and will note if a potential member encountered an error while attempting to accept an invitation. In this case, a tooltip will share the exact error that was encountered.
 
 ## Switching between organizations
@@ -100,7 +102,17 @@ To switch to a different organization:
 
 ## Organization roles
 
-Every member of an organization has a role: the built-in Admin, Member, or Billing Manager, or a custom role. For what each one grants, see [Roles](/docs/administration/concepts/rbac/roles/#pulumi-defined-roles). For delegating billing access without admin rights, see [Billing Managers](/docs/administration/concepts/billing-managers/).
+Every member of an organization has a role: a built-in role such as Builder, Admin, or Billing Manager, or a custom role. Members follow the organization's [default role](/docs/administration/concepts/rbac/default-roles/) unless an admin assigns them another one. For each role's permissions, see [Roles](/docs/administration/concepts/rbac/roles/#pulumi-defined-roles). For delegating billing access without admin rights, see [Billing Managers](/docs/administration/concepts/billing-managers/).
+
+### Changing a member's role
+
+You must be an organization admin to change a member's role.
+
+1. Navigate to **Settings** > **Access management** and select the **Members** tab.
+1. In the member's **Role** column, choose the new role.
+1. Confirm the change.
+
+In editions without [custom roles](/docs/administration/concepts/rbac/roles/#custom-roles), the choices are Member, which makes the member follow the organization's default role, Admin, and Billing Manager.
 
 ## Updating billing information
 

@@ -77,7 +77,7 @@
 
 - id: access-tokens
   name: Access tokens
-  description: Creation and revocation of organization, team, and personal access tokens, including tokens issued through OIDC token exchange.
+  description: Creation and revocation of organization, team, personal, and service principal access tokens, including tokens issued through OIDC token exchange.
   match:
     prefixes:
       - organization-token-
@@ -87,6 +87,10 @@
       # A runner token, but an access token first: it is created by the same
       # OIDC exchange as the other `*-created-for-oidc-issuer` events.
       - deployment-runner-token-created-for-oidc-issuer
+      # Exact ids, not a prefix: "service" also names an IDP concept, so a
+      # prefix could pull unrelated future events into this category.
+      - service-principal-token-created
+      - service-principal-token-deleted
 
 - id: organization
   name: Organization and members
@@ -99,11 +103,17 @@
       - entity-user-assignment-
       - member-
       - organization-
+      # Assigning or removing a role on a principal -- a user, team, or service
+      # account (`principal-role-assigned`, `principal-role-removed`).
+      - principal-role-
       - retrial-
       - service-
       # Subscription changes (`org-downgraded-to-free`, `org-upgraded-to-pro`),
       # the only organization events using the abbreviated `org-` spelling.
       - org-
+      # Assigning or removing a role for a user, service principal, or team
+      # (`principal-role-assigned`, `principal-role-removed`).
+      - principal-role-
 
 - id: teams
   name: Teams

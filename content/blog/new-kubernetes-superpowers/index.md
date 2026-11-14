@@ -43,7 +43,7 @@ We’re excited to announce the new [pulumi-kubernetes-operator](https://github.
 
 ![Pulumi Kubernetes Operator](pulumi-kubernetes-operator.png)
 
-Creating a `Stack` is simple: provide the stack name, project repo, and a commit (support for branches coming soon!), and the operator starts driving toward the specified state. Stacks can be used directly, or as part of higher-level abstractions to manage your infrastructure and applications. [Pulumi Cloud](/docs/pulumi-cloud/) extends these capabilities by providing visibility into the updates, resources under management, and policy enforcement of your stacks.
+Creating a `Stack` is simple: provide the stack name, project repo, and a commit (support for branches coming soon!), and the operator starts driving toward the specified state. Stacks can be used directly, or as part of higher-level abstractions to manage your infrastructure and applications. [Pulumi Cloud](/docs/administration/) extends these capabilities by providing visibility into the updates, resources under management, and policy enforcement of your stacks.
 
 ```yaml
 apiVersion: pulumi.com/v1alpha1
@@ -321,7 +321,7 @@ Over the last few months, we've extended this support in two key ways. We added 
 
 We’re incredibly excited about today’s new features and the opportunity to deepen Pulumi’s support for Kubernetes and the Cloud Native ecosystem. The Pulumi Kubernetes Operator unlocks exciting new approaches to cloud native infrastructure delivery. The `kube2pulumi` tool makes it easier than ever to migrate from cumbersome YAML to expressive code. Strongly-typed CRDs bring the richness of Pulumi to the entire Cloud Native ecosystem of extensions to the Kubernetes platform. And OPA support in Pulumi policy-as-code brings cloud native policy authoring with OPA into the Pulumi Modern Infrastructure-as-Code world.
 
-It’s never been a more exciting time to get started with Pulumi and Kubernetes for your next modern cloud project.  Check out the new features or the Pulumi Kubernetes [Getting Started](/docs/iac/get-started/kubernetes/) today.
+It’s never been a more exciting time to get started with Pulumi and Kubernetes for your next modern cloud project.  Check out the new features or the Pulumi Kubernetes [Getting Started](/up/?cloud=kubernetes) today.
 
 You can learn more about each of the new capabilities in their corresponding project documentation:
 

@@ -34,7 +34,7 @@ category: product
 ---
 
 {{% notes type="warning" %}}
-Portions of this blog post are out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Portions of this blog post are out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 
 We introduced [Crosswalk for AWS](/docs/iac/guides/clouds/aws/) three years ago as a library of components on top of the core AWS platform to make it easier to get from zero to production on AWS, easier to adopt AWS best practices by default, and easier to evolve your AWS infrastructure as your application needs mature.  Since then, we’ve added many new capabilities, expanded the portfolio of libraries, and made these libraries [available to all Pulumi languages](https://www.pulumi.com/blog/crosswalk-for-aws-all-languages/).  We’ve also seen thousands of Pulumi customers, including more than 25% of all Pulumi AWS users, adopting one or more of the Crosswalk for AWS components to aid in delivering their AWS-based applications and services.
