@@ -1,0 +1,70 @@
+---
+title: Delivery
+linktitle: Delivery
+docs_home: true
+notitle: true
+norightnav: true
+menu:
+  delivery:
+    identifier: delivery-home
+    weight: 1
+meta_desc: Pulumi Delivery lets you write your release pipeline as a Pulumi program and promote each release through stages, stacks, jobs, and approval gates.
+h1: Pulumi Delivery
+description: <p>Write your release pipeline as a Pulumi program. Pulumi Cloud runs each release through your stages in order, updating stacks, running jobs, and waiting at the gates you define.</p>
+
+# TODO(launch): Point the primary button back at Get started once the guide is restored.
+link_buttons:
+  primary:
+    label: Concepts
+    link: /docs/delivery/concepts/
+  secondary:
+    label: Guides
+    link: /docs/delivery/guides/
+
+# TODO(launch): Get the card icons from marketing. The icons below are placeholders from the
+# existing docs icon set. Swap each one for the icon marketing picks for that concept.
+sections:
+- type: button-cards
+  heading: Learn Delivery
+  cards:
+  - icon: lightbulb
+    heading: Concepts
+    description: How pipelines, runs, stages, stacks, jobs, artifacts, sources, and releases fit together.
+    link: /docs/delivery/concepts/
+  - icon: arrows-clockwise
+    heading: Sources and triggers
+    description: Decide which repositories make up a release and which changes start a run.
+    link: /docs/delivery/concepts/sources-and-triggers/
+  - icon: lock-key
+    heading: Stages and gates
+    description: Order promotion between environments, hold a release for approval, and publish artifacts for other pipelines.
+    link: /docs/delivery/concepts/stages-and-gates/
+  - icon: package
+    heading: Stacks and jobs
+    description: Update stacks and run commands inside a stage.
+    link: /docs/delivery/concepts/stacks-and-jobs/
+
+- type: button-cards
+  heading: Build and operate pipelines
+  cards:
+  - icon: key
+    heading: Cloud credentials
+    description: Give each stage the cloud credentials it needs to deploy your stacks.
+    link: /docs/delivery/guides/cloud-credentials/
+  - icon: code-window
+    heading: Pipeline patterns
+    description: Per-environment helper functions and smoke tests after each deploy.
+    link: /docs/delivery/guides/pipeline-patterns/
+  - icon: arrows-clockwise
+    heading: Connecting pipelines
+    description: Pass values from an upstream pipeline to a downstream one.
+    link: /docs/delivery/guides/multiple-pipelines/
+  - icon: wrench
+    heading: Limits
+    description: Size and time limits for pipelines and runs.
+    link: /docs/delivery/limits/
+
+- type: flat
+  heading: Have questions?
+  description: <p>Pulumi Delivery is in public preview. For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a> or <a href="/support/">contact support</a>.</p>
+---
