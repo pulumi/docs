@@ -47,7 +47,6 @@
   },
   "devDependencies": {
     "@phosphor-icons/core": "^2.1.1",
-    "beasties": "^0.5.4",
     "chrome-launcher": "^1.2.0",
     "husky": "^9.1.7",
     "lighthouse": "^12.6.0",
