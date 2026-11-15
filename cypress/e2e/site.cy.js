@@ -25,13 +25,17 @@ Cypress.on('uncaught:exception', (err) => {
 
 describe("www.pulumi.com", () => {
 
-    describe("home page", () => {
+    describe("site header", () => {
 
         beforeEach(() => {
             // Force a desktop viewport so the new nav's desktop affordances render
             // (the nav-desktop breakpoint is 1200px).
             cy.viewport(1280, 800);
-            cy.visit("/");
+            // The home page now ships from marketing-web, so Hugo no longer builds
+            // "/". /blog/ keeps the same sticky, white header this suite checks --
+            // unlike /docs/*, whose header drops "sticky" for "relative" chrome
+            // (layouts/partials/header/nav.html's $docsChrome branch).
+            cy.visit("/blog/");
         });
 
         it("loads and applies CSS", () => {
