@@ -50,7 +50,7 @@ Three traits define the category:
 - **It runs continuously.** Scans repeat on a schedule or react to change events, so a setting changed by hand next week still gets caught.
 - **It reports.** The output is findings, scores, and prioritized issues. Someone then decides what to fix and where.
 
-Vendors package this differently. As of November 2026, [Wiz](https://www.wiz.io/solutions/cspm) describes agentless scanning mapped onto a security graph, with more than 2,800 cloud configuration rules and over 250 built-in frameworks such as PCI DSS and the CIS Benchmarks, plus attack path analysis. [Orca](https://orca.security/platform/cloud-security-posture-management-cspm/) describes its CSPM as detecting "misconfigurations and compliance risks across cloud environments," and [Palo Alto Networks Cortex Cloud](https://www.paloaltonetworks.com/cortex/cloud) describes unifying posture, identity, data, and AI security. In addition, the large clouds ship their own posture tooling, including Microsoft Defender for Cloud, AWS Security Hub CSPM, and [Google Security Command Center](https://docs.cloud.google.com/security-command-center/docs/security-command-center-overview).
+Vendors package this differently. As of November 2026, [Wiz](https://www.wiz.io/solutions/cspm) describes agentless scanning mapped onto a security graph, with more than 2,800 cloud configuration rules and over 250 built-in frameworks such as PCI DSS and the CIS Benchmarks, plus attack path analysis. [Orca](https://orca.security/platform/cloud-security-posture-management-cspm/) describes its CSPM as detecting "misconfigurations and compliance risks across cloud environments," and [Palo Alto Networks Cortex Cloud](https://www.paloaltonetworks.com/cortex/cloud) describes unifying data across scanners, software supply chains, cloud infrastructure, and runtime for application security, cloud security, and security operations teams. In addition, the large clouds ship their own posture tooling, including [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction), [AWS Security Hub CSPM](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html), and [Google Security Command Center](https://docs.cloud.google.com/security-command-center/docs/security-command-center-overview).
 
 Disclosure: Wiz is a Pulumi customer and uses Pulumi to run its own infrastructure. This post describes Wiz's products only from Wiz's public pages, and Wiz has not endorsed it.
 
@@ -60,7 +60,7 @@ Policy as code means writing your infrastructure rules as version-controlled cod
 
 With Pulumi Policies, [preventative policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) run during `pulumi preview` and `pulumi up`. A policy at the mandatory level stops the deployment when it fails. Policies can be written in TypeScript, JavaScript, Python, or OPA Rego, and they apply to any change that runs through Pulumi, whether an engineer, a CI job, or an AI coding agent authored it. For Terraform and OpenTofu, remote execution [evaluates the plan before apply](/docs/discovery-governance/concepts/policy-as-code/). The [policy as code tools roundup](/blog/best-policy-as-code-tools/) covers OPA, Sentinel, Kyverno, Checkov, Harness, and others if you work with a different engine.
 
-The key property is timing. A violation caught in a preview never becomes a live resource, an alert, or an incident.
+The key property is timing. A violation that a mandatory policy catches in a preview never becomes a live resource, an alert, or an incident.
 
 ## How do deploy-time policy and posture scanning compare?
 
@@ -91,7 +91,7 @@ If your estate includes any of these in meaningful numbers, deploy-time policy l
 CSPM reports on a misconfiguration after it exists. Even a fast finding means the resource ran in that state for some period, and someone has to chase the fix. IaC policy changes the sequence:
 
 - **It blocks before the resource exists.** A public storage bucket that fails a mandatory policy never gets created.
-- **It fixes at the source.** The failure shows up in the pull request or preview, next to the code that caused it. Pulumi can surface [policy violations as comments and checks](/docs/releases/changelog/) (added in September 2026) on GitHub, GitLab, Bitbucket, and Azure DevOps pull requests.
+- **It fixes at the source.** The failure shows up in the pull request or preview, next to the code that caused it. Pulumi can surface [policy violations as comments and checks](/releases/changelog/2026-09-14-policy-violations-in-pull-request-comments-and-checks/) (added in September 2026) on GitHub, GitLab, Bitbucket, and Azure DevOps pull requests.
 - **It gates agents.** When AI agents propose infrastructure changes, a mandatory policy applies the same standard to their changes as to anyone else's.
 - **It can remediate in flight.** The remediate enforcement level adjusts a resource's properties so the deployment proceeds compliant.
 
