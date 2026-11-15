@@ -18,7 +18,6 @@ module.exports = function (env, argv = {}) {
             "algolia": "./src/ts/algolia-entry.ts",
             "consent-manager": "./src/ts/consent-manager/index.ts",
             "header-nav": "./src/ts/header-nav.ts",
-            "hero-animation": "./src/ts/hero-animation.ts",
         },
         output: {
             filename: "[name].[contenthash:8].js",
