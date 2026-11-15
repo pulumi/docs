@@ -6,7 +6,13 @@
         {{ $ancestors = $ancestors | append $a.LinkTitle }}
     {{- end -}}
 
-    {{- if ne $page.File nil -}}
+    {{- /* The home page has no HTML output anymore (it ships from marketing-web),
+           so it has no content to index, and its .RelPermalink now resolves to
+           this very output format's own path ("/index.json", since Hugo falls
+           back to the first non-HTML outputs.home entry once HTML is dropped)
+           rather than "/" -- indexing it would self-reference this file and
+           crash scripts/search/page.js trying to read "index.json" as a page. */ -}}
+    {{- if and (ne $page.File nil) (not $page.IsHome) -}}
         {{- $date := "" -}}
         {{- if and (eq $page.Section "blog") (not $page.Date.IsZero) -}}
             {{- $date = $page.Date.Format "Jan 2, 2006" -}}
