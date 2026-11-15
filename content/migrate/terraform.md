@@ -17,7 +17,7 @@ sections:
     cta_primary_link: /docs/integrations/terraform/state-backend/
     cta_secondary_text: Compare Pulumi and Terraform
     cta_secondary_link: /docs/iac/comparisons/terraform/
-    image: /images/releases/august-2026/release-hero-right-light.svg
+    image: /images/migrate/terraform/release-hero-right-light.svg
     image_alt: HCL, Terraform state, and Terraform modules converging on the Pulumi mark
     image_max_width: 640px
     anchor: hero
@@ -52,7 +52,7 @@ sections:
       In return you get encrypted state, automatic locking, update history, role-based access control, and audit policies, plus a single view of Terraform-managed and Pulumi-managed resources together in [resource search](/docs/discovery-governance/guides/search-resources/).
     cta_text: Set up the backend
     cta_link: /docs/integrations/terraform/state-backend/
-    image: /images/releases/august-2026/release-terraform-backend.svg
+    image: /images/migrate/terraform/release-terraform-backend.svg
     image_alt: Three infrastructure stacks feeding into the Pulumi mark
     cards:
       - icon: terminal-window
@@ -83,7 +83,7 @@ sections:
       Once a module is published, Pulumi converts it into a typed component that any team can consume, whether they write Terraform, OpenTofu, TypeScript, Python, Go, .NET, Java, or YAML. One module, maintained once, serves every team.
     cta_text: Explore Terraform modules
     cta_link: /docs/integrations/terraform/module-registry/
-    image: /images/releases/august-2026/release-modules.svg
+    image: /images/migrate/terraform/release-modules.svg
     image_alt: A Terraform module imported into a Pulumi program
     cards:
       - icon: stack
@@ -109,7 +109,7 @@ sections:
       HCL programs reach the full Pulumi ecosystem: thousands of providers, Pulumi Cloud, ESC, policies, and Neo. Teams that prefer HCL can also publish components that colleagues consume from any other Pulumi language.
     cta_text: Read the HCL docs
     cta_link: /docs/iac/languages-sdks/hcl/
-    image: /images/releases/august-2026/release-hcl.svg
+    image: /images/migrate/terraform/release-hcl.svg
     image_alt: An HCL program running on the Pulumi engine
     cards:
       - icon: rocket-launch
