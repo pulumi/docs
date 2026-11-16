@@ -140,6 +140,8 @@ jobs:
           check_endpoint "/topics/" "Topics landing"
           check_endpoint "/customers/" "Customers landing"
           check_endpoint "/love/" "Wall of love"
+          check_endpoint "/releases/" "Releases landing"
+          check_endpoint "/releases/rss.xml" "Releases RSS feed"
           check_endpoint "/gads/infrastructure-as-code/" "Google Ads IaC landing"
           check_endpoint "/try/kubernetes/" "Google Ads Kubernetes landing"
           check_endpoint "/try/go-iac/" "Google Ads Go landing"

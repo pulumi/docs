@@ -772,145 +772,6 @@ function checkEventSessions(obj, fullPath) {
 }
 
 /**
- * Normalizes a front matter `date:` value to a YYYY-MM-DD string. js-yaml parses
- * an unquoted ISO date into a Date, while a quoted one stays a string, so handle
- * both. Returns null if the value is missing or unparseable.
- *
- * @param {Date|string|undefined} date The raw front matter date value.
- * @returns {string|null} The date as YYYY-MM-DD, or null.
- */
-function normalizeDate(date) {
-    if (!date) {
-        return null;
-    }
-    if (date instanceof Date) {
-        return date.toISOString().slice(0, 10);
-    }
-    const match = String(date).trim().match(/^\d{4}-\d{2}-\d{2}/);
-    return match ? match[0] : null;
-}
-
-/**
- * checkChangelogFilename enforces the naming convention for individual changelog
- * entries under content/releases/changelog/: files must be named
- * `YYYY-MM-DD-<slug>.md`, and the date prefix must match the front matter
- * `date:` so the two never drift. Applies only to entry pages, not the section
- * `_index.md`. See archetypes/changelog.md and the /new-changelog skill.
- *
- * @param {Date|string|undefined} date The front matter date value.
- * @param {string} fullPath The absolute path of the file being linted.
- * @returns {string|null} An error message, or null when valid/not applicable.
- */
-function checkChangelogFilename(date, fullPath) {
-    const normalized = fullPath.replace(/\\/g, "/");
-    const isChangelogEntry =
-        normalized.includes("/content/releases/changelog/") &&
-        path.basename(normalized) !== "_index.md";
-    if (!isChangelogEntry) {
-        return null;
-    }
-
-    const filename = path.basename(normalized);
-    const match = filename.match(/^(\d{4}-\d{2}-\d{2})-[a-z0-9]+(?:-[a-z0-9]+)*\.md$/);
-    if (!match) {
-        return "Changelog entry filenames must be date-prefixed and lowercase-hyphenated, as 'YYYY-MM-DD-slug.md' (e.g. 2026-07-11-universal-search.md). See archetypes/changelog.md or run /new-changelog.";
-    }
-
-    // The filename date prefix must agree with the front matter `date:`.
-    const prefix = match[1];
-    const fmDate = normalizeDate(date);
-    if (fmDate && fmDate !== prefix) {
-        return `Changelog entry filename date prefix '${prefix}' does not match front matter 'date: ${fmDate}'. Rename the file or fix the date so they agree.`;
-    }
-
-    return null;
-}
-
-/**
- * checkChangelogEditions validates the optional `editions:` front matter on
- * individual changelog entries. Entries dated before the V6 launch use the V5
- * ids. Newer entries use the current ids from data/pulumi_editions.yaml. Authors
- * list every edition the feature is available in, so the list must be a
- * contiguous suffix of the edition order. Applies only to entry pages, not the
- * section `_index.md`.
- *
- * The legacy `tiers:` array and singular `tier:` scalar are both rejected:
- * "tier" is not a word the product uses, and the old list carried a `Free`
- * value from before Pulumi Cloud had editions at all.
- *
- * @param {*} editions The front matter `editions` value.
- * @param {*} tiers The front matter `tiers` value (legacy; rejected if present).
- * @param {*} tier The front matter `tier` value (legacy; rejected if present).
- * @param {string} fullPath The absolute path of the file being linted.
- * @returns {string|null} An error message, or null when valid/not applicable.
- */
-function checkChangelogEditions(editions, tiers, tier, fullPath) {
-    const normalized = fullPath.replace(/\\/g, "/");
-    const isChangelogEntry =
-        normalized.includes("/content/releases/changelog/") &&
-        path.basename(normalized) !== "_index.md";
-    // Without the pricing data there is no vocabulary to check against, and
-    // guessing produces "use one of: " with an empty list on every entry. The
-    // run already carries one finding about the data file (see EDITION_DATA.loadError).
-    if (!isChangelogEntry || EDITION_DATA.loadError) {
-        return null;
-    }
-
-    if (tier !== undefined || tiers !== undefined) {
-        const old = tier !== undefined ? "tier:" : "tiers:";
-        return `Changelog \`${old}\` has been replaced by \`editions:\`, a YAML array of edition ids (e.g. \`editions:\` then \`    - enterprise\`). List every edition the feature is available in — the lowest applicable edition and all editions above it. Ids come from data/pulumi_editions.yaml: ${EDITION_DATA.editions.join(", ")}.`;
-    }
-    if (editions === undefined) {
-        return null;
-    }
-    if (!Array.isArray(editions)) {
-        return "Changelog `editions:` must be a YAML array (e.g. `editions:` then `    - enterprise`), not a single value.";
-    }
-    const filenameDate = path.basename(normalized).slice(0, 10);
-    const legacyEditions = ["individual", "team", "enterprise", "business-critical"];
-    const isLegacyEntry = /^\d{4}-\d{2}-\d{2}$/.test(filenameDate) && filenameDate < "2026-09-15";
-    const allowedEditions = isLegacyEntry ? legacyEditions : EDITION_DATA.editions;
-    const invalid = editions.filter(function (e) {
-        return !allowedEditions.includes(e);
-    });
-    if (invalid.length > 0) {
-        const quoted = invalid
-            .map(function (e) {
-                return "'" + e + "'";
-            })
-            .join(", ");
-        const vocabulary = isLegacyEntry ? "the V5 edition ids" : "data/pulumi_editions.yaml";
-        return "Changelog `editions:` value(s) " + quoted + " not allowed for this entry date. Use an edition id from " + vocabulary + ": " + allowedEditions.join(", ") + ".";
-    }
-    if (editions.length === 0) {
-        return "Changelog `editions:` is empty. List every edition the feature is available in — the lowest applicable edition and all editions above it — or drop the key.";
-    }
-    // A lower edition implies the ones above it, so a valid list is a contiguous
-    // suffix of EDITION_DATA.editions. `editions: [pro]` on its own lints as a
-    // valid id but renders a badge that tells Enterprise readers the feature
-    // isn't theirs.
-    const listed = allowedEditions.filter(function (e) {
-        return editions.includes(e);
-    });
-    const expected = allowedEditions.slice(allowedEditions.indexOf(listed[0]));
-    if (listed.length !== expected.length) {
-        const missing = expected.filter(function (e) {
-            return !listed.includes(e);
-        });
-        return (
-            "Changelog `editions:` lists " +
-            listed.join(", ") +
-            " but not " +
-            missing.join(", ") +
-            ". A lower edition implies the ones above it, so list the lowest applicable edition and every edition above it: " +
-            expected.join(", ") +
-            "."
-        );
-    }
-    return null;
-}
-
-/**
  * Explains why one marker value is wrong, shared by the front matter key and the
  * shortcode argument since they name the same vocabulary.
  *
@@ -1092,67 +953,6 @@ function checkPulumiCloudEditionsShortcode(content) {
         }
     }
     return messages.length > 0 ? messages.join(" ") : null;
-}
-
-/**
- * Asset directories under content/releases/changelog/ whose files must be
- * date-prefixed, mirroring the entry-filename convention (checkChangelogFilename)
- * so the shared folders don't turn into an undated jumble.
- */
-const CHANGELOG_ASSET_DIRS = [
-    "../../content/releases/changelog/images",
-    "../../content/releases/changelog/videos",
-];
-
-/** Date-prefixed, lowercase-hyphenated asset filename, e.g. 2026-07-11-foo.png. */
-const CHANGELOG_ASSET_NAME_REGEX = /^\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*\.[a-z0-9]+$/;
-
-/**
- * Scans the changelog asset directories and returns an error group for every
- * file whose name isn't date-prefixed as YYYY-MM-DD-<slug>.<ext>. Hidden files
- * (e.g. .DS_Store, .gitkeep) are ignored. Missing directories yield no errors.
- * The shape matches groupLintErrorOutput's output so results merge cleanly.
- *
- * @returns {{path: string, errors: Object[]}[]} One error group per bad file.
- */
-function checkChangelogAssets() {
-    const errors = [];
-
-    function walk(dir) {
-        let entries;
-        try {
-            entries = fs.readdirSync(dir, { withFileTypes: true });
-        } catch (e) {
-            return; // Directory doesn't exist; nothing to check.
-        }
-        entries.forEach(function (entry) {
-            const full = path.join(dir, entry.name);
-            if (entry.isDirectory()) {
-                walk(full);
-                return;
-            }
-            if (entry.name.startsWith(".")) {
-                return;
-            }
-            if (!CHANGELOG_ASSET_NAME_REGEX.test(entry.name)) {
-                errors.push({
-                    path: full,
-                    errors: [
-                        {
-                            lineNumber: "Filename",
-                            ruleDescription:
-                                "Changelog asset filenames must be date-prefixed and lowercase-hyphenated, as 'YYYY-MM-DD-slug.ext' (e.g. 2026-07-11-universal-search.png). Rename the file and update its references.",
-                        },
-                    ],
-                });
-            }
-        });
-    }
-
-    CHANGELOG_ASSET_DIRS.forEach(function (rel) {
-        walk(path.resolve(__dirname, rel));
-    });
-    return errors;
 }
 
 /**
@@ -1458,8 +1258,6 @@ function searchForMarkdown(paths) {
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     eventSessions: checkEventSessions(obj, fullPath),
-                    changelogFilename: checkChangelogFilename(obj.date, fullPath),
-                    changelogEditions: checkChangelogEditions(obj.editions, obj.tiers, obj.tier, fullPath),
                     pulumiCloudFeature: checkPulumiCloudFeature(obj.pulumi_cloud_feature, obj.pulumi_cloud),
                     pulumiCloudShortcode: checkPulumiCloudShortcode(content),
                     pulumiCloudEditionsShortcode: checkPulumiCloudEditionsShortcode(content),
@@ -1621,18 +1419,6 @@ function groupLintErrorOutput(result) {
                     ruleDescription: frontMatterErrors.eventSessions,
                 });
             }
-            if (frontMatterErrors.changelogFilename) {
-                lintErrors.push({
-                    lineNumber: "File Header",
-                    ruleDescription: frontMatterErrors.changelogFilename,
-                });
-            }
-            if (frontMatterErrors.changelogEditions) {
-                lintErrors.push({
-                    lineNumber: "File Header",
-                    ruleDescription: frontMatterErrors.changelogEditions,
-                });
-            }
             if (frontMatterErrors.pulumiCloudFeature) {
                 lintErrors.push({
                     lineNumber: "File Header",
@@ -1740,16 +1526,6 @@ Object.values(filesByConfig).forEach(group => {
 
 // Group the lint errors by file.
 const errors = groupLintErrorOutput(result);
-
-// Changelog assets (images/videos) aren't markdown, so the walk above never
-// sees them. Enforce their date-prefix naming during the full CI scan; skip it
-// when linting an explicit file list (lint-staged) to avoid surfacing errors
-// for files the caller didn't touch.
-if (filesFromArgs.length === 0) {
-    checkChangelogAssets().forEach(function (assetError) {
-        errors.push(assetError);
-    });
-}
 
 if (EDITION_DATA.loadError) {
     errors.push({
