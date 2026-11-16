@@ -50,7 +50,7 @@
     "name": "Pulumi",
     "url": "https://www.pulumi.com/"
   },
-  "assemblyVersion": "3.118.0",
+  "assemblyVersion": "3.119.0",
   "description": "API reference for Namespace Pulumi.Automation.Commands in Pulumi, the infrastructure-as-code platform's .NET SDK."
 }
 </script>
@@ -131,6 +131,15 @@ carries both the command's flags and its invocation configuration.</p>
       <h4><a class="xref" href="pulumi.automation.commands.pulumiaboutoptions.html">PulumiAboutOptions</a></h4>
       <section><p>Options for the <code>pulumi about</code> command.</p>
 </section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiapidescribeoptions.html">PulumiApiDescribeOptions</a></h4>
+      <section><p>Options for the <code>pulumi api describe</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiapilistoptions.html">PulumiApiListOptions</a></h4>
+      <section><p>Options for the <code>pulumi api list</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiapioptions.html">PulumiApiOptions</a></h4>
+      <section><p>Options for the <code>pulumi api</code> command.</p>
+</section>
       <h4><a class="xref" href="pulumi.automation.commands.pulumicanceloptions.html">PulumiCancelOptions</a></h4>
       <section><p>Options for the <code>pulumi cancel</code> command.</p>
 </section>
@@ -174,6 +183,42 @@ carries both the command's flags and its invocation configuration.</p>
 </section>
       <h4><a class="xref" href="pulumi.automation.commands.pulumiconvertoptions.html">PulumiConvertOptions</a></h4>
       <section><p>Options for the <code>pulumi convert</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumideploymentcanceloptions.html">PulumiDeploymentCancelOptions</a></h4>
+      <section><p>Options for the <code>pulumi deployment cancel</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumideploymentgetoptions.html">PulumiDeploymentGetOptions</a></h4>
+      <section><p>Options for the <code>pulumi deployment get</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumideploymentlistoptions.html">PulumiDeploymentListOptions</a></h4>
+      <section><p>Options for the <code>pulumi deployment list</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumideploymentlogoptions.html">PulumiDeploymentLogOptions</a></h4>
+      <section><p>Options for the <code>pulumi deployment log</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumideploymentoptions.html">PulumiDeploymentOptions</a></h4>
+      <section><p>Options for the <code>pulumi deployment</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumideploymentrunoptions.html">PulumiDeploymentRunOptions</a></h4>
+      <section><p>Options for the <code>pulumi deployment run</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumideploymentsettingsdestroyoptions.html">PulumiDeploymentSettingsDestroyOptions</a></h4>
+      <section><p>Options for the <code>pulumi deployment settings destroy</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumideploymentsettingseditoptions.html">PulumiDeploymentSettingsEditOptions</a></h4>
+      <section><p>Options for the <code>pulumi deployment settings edit</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumideploymentsettingsgetoptions.html">PulumiDeploymentSettingsGetOptions</a></h4>
+      <section><p>Options for the <code>pulumi deployment settings get</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumideploymentsettingsoptions.html">PulumiDeploymentSettingsOptions</a></h4>
+      <section><p>Options for the <code>pulumi deployment settings</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumidooptions.html">PulumiDoOptions</a></h4>
+      <section><p>Options for the <code>pulumi do</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumidoshowresourcesoptions.html">PulumiDoShowResourcesOptions</a></h4>
+      <section><p>Options for the <code>pulumi do show-resources</code> command.</p>
 </section>
       <h4><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestapplyoptions.html">PulumiEnvChangeRequestApplyOptions</a></h4>
       <section><p>Options for the <code>pulumi env change-request apply</code> command.</p>
@@ -358,6 +403,9 @@ carries both the command's flags and its invocation configuration.</p>
       <h4><a class="xref" href="pulumi.automation.commands.pulumiinstalloptions.html">PulumiInstallOptions</a></h4>
       <section><p>Options for the <code>pulumi install</code> command.</p>
 </section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiloginoptions.html">PulumiLoginOptions</a></h4>
+      <section><p>Options for the <code>pulumi login</code> command.</p>
+</section>
       <h4><a class="xref" href="pulumi.automation.commands.pulumilogsdecryptoptions.html">PulumiLogsDecryptOptions</a></h4>
       <section><p>Options for the <code>pulumi logs decrypt</code> command.</p>
 </section>
@@ -385,8 +433,38 @@ carries both the command's flags and its invocation configuration.</p>
       <h4><a class="xref" href="pulumi.automation.commands.pulumiorggetdefaultoptions.html">PulumiOrgGetDefaultOptions</a></h4>
       <section><p>Options for the <code>pulumi org get-default</code> command.</p>
 </section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiorgmembereditoptions.html">PulumiOrgMemberEditOptions</a></h4>
+      <section><p>Options for the <code>pulumi org member edit</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiorgmemberlistoptions.html">PulumiOrgMemberListOptions</a></h4>
+      <section><p>Options for the <code>pulumi org member list</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiorgmemberoptions.html">PulumiOrgMemberOptions</a></h4>
+      <section><p>Options for the <code>pulumi org member</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiorgmemberremoveoptions.html">PulumiOrgMemberRemoveOptions</a></h4>
+      <section><p>Options for the <code>pulumi org member remove</code> command.</p>
+</section>
       <h4><a class="xref" href="pulumi.automation.commands.pulumiorgoptions.html">PulumiOrgOptions</a></h4>
       <section><p>Options for the <code>pulumi org</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiorgroleassignoptions.html">PulumiOrgRoleAssignOptions</a></h4>
+      <section><p>Options for the <code>pulumi org role assign</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiorgroleeditoptions.html">PulumiOrgRoleEditOptions</a></h4>
+      <section><p>Options for the <code>pulumi org role edit</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiorgrolelistoptions.html">PulumiOrgRoleListOptions</a></h4>
+      <section><p>Options for the <code>pulumi org role list</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiorgrolenewoptions.html">PulumiOrgRoleNewOptions</a></h4>
+      <section><p>Options for the <code>pulumi org role new</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiorgroleoptions.html">PulumiOrgRoleOptions</a></h4>
+      <section><p>Options for the <code>pulumi org role</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiorgroleremoveoptions.html">PulumiOrgRoleRemoveOptions</a></h4>
+      <section><p>Options for the <code>pulumi org role remove</code> command.</p>
 </section>
       <h4><a class="xref" href="pulumi.automation.commands.pulumiorgsearchaioptions.html">PulumiOrgSearchAIOptions</a></h4>
       <section><p>Options for the <code>pulumi org search ai</code> command.</p>
@@ -403,8 +481,17 @@ carries both the command's flags and its invocation configuration.</p>
       <h4><a class="xref" href="pulumi.automation.commands.pulumiorgusageoptions.html">PulumiOrgUsageOptions</a></h4>
       <section><p>Options for the <code>pulumi org usage</code> command.</p>
 </section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiprojectlistoptions.html">PulumiProjectListOptions</a></h4>
+      <section><p>Options for the <code>pulumi project list</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumiprojectnewoptions.html">PulumiProjectNewOptions</a></h4>
+      <section><p>Options for the <code>pulumi project new</code> command.</p>
+</section>
       <h4><a class="xref" href="pulumi.automation.commands.pulumirefreshoptions.html">PulumiRefreshOptions</a></h4>
       <section><p>Options for the <code>pulumi refresh</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumischemacheckoptions.html">PulumiSchemaCheckOptions</a></h4>
+      <section><p>Options for the <code>pulumi schema check</code> command.</p>
 </section>
       <h4><a class="xref" href="pulumi.automation.commands.pulumistateeditoptions.html">PulumiStateEditOptions</a></h4>
       <section><p>Options for the <code>pulumi state edit</code> command.</p>
@@ -442,6 +529,12 @@ carries both the command's flags and its invocation configuration.</p>
       <h4><a class="xref" href="pulumi.automation.commands.pulumistateupgradeoptions.html">PulumiStateUpgradeOptions</a></h4>
       <section><p>Options for the <code>pulumi state upgrade</code> command.</p>
 </section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumitemplatelistoptions.html">PulumiTemplateListOptions</a></h4>
+      <section><p>Options for the <code>pulumi template list</code> command.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.commands.pulumitemplatepublishoptions.html">PulumiTemplatePublishOptions</a></h4>
+      <section><p>Options for the <code>pulumi template publish</code> command.</p>
+</section>
       <h4><a class="xref" href="pulumi.automation.commands.pulumiupoptions.html">PulumiUpOptions</a></h4>
       <section><p>Options for the <code>pulumi up</code> command.</p>
 </section>
@@ -457,7 +550,7 @@ carries both the command's flags and its invocation configuration.</p>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.118.0</p>
+    <p class="sdk-version">Version 3.119.0</p>
               <div class="contribution">
                 <ul class="nav">
                 </ul>
