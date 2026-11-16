@@ -89,6 +89,7 @@ Arguments specified here are passed to `node` when running the Pulumi program. F
 
 - For Go, cannot be specified with the `buildTarget` runtime option.
 - For .NET, if not specified, a .NET project in `$CWD` will be invoked with `dotnet run`.
+- For Java, see [Pre-built JAR files](/docs/iac/languages-sdks/java/#pre-built-jar-files) to build the JAR.
 
 #### About `virtualenv`
 
