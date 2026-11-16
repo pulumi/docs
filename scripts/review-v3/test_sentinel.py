@@ -1593,6 +1593,114 @@ def test_strip_lands_on_the_card_as_it_is_now_not_as_first_read():
     assert sentinel.STRIP_OPEN in written
 
 
+def _strip_of(body):
+    return body.split(sentinel.STRIP_OPEN)[1].split(sentinel.STRIP_CLOSE)[0]
+
+
+def test_staging_turned_off_says_so_on_both_cards():
+    """pulumi/docs#22959: the staging workflow was disabled, so nobody on the
+    PR could clear the staging gate. The author card read "nothing blocks
+    merge" over "⏳ Merge is waiting on a staging deploy", the brief read
+    "check the ⚠️ items, then approve", and the author took that as good to
+    go. Both cards now say the merge is held by something neither of them
+    can fix, why, and who can."""
+    card = author_card([], state=_state_with([]))
+    brief = brief_comment()
+    gh = StubGh(pr=pr_meta(), files=[infra_file()], workflow_state="disabled_manually",
+                comments=[card, brief])
+    v = sentinel.evaluate(gh, CONFIG)
+    staging = _gate(v, "staging")
+    assert staging.status == "red" and staging.stuck, staging
+    assert v.conclusion == "failure"
+
+    assert sentinel.update_strip(gh, v, comments=[card, brief]) is True
+    author = _strip_of(gh.patched[-1][1])
+    assert "🚧" in author and "Nothing on this card needs you" in author, author
+    assert "neither you nor your reviewer can fix" in author, author
+    assert "`disabled_manually`" in author and "review:waived" in author and "#docs" in author
+    assert "⏳" not in author, "the stuck gate is said once, not also as 'waiting'"
+
+    assert sentinel.update_brief_strip(gh, v, comments=[card, brief]) is True
+    cid, written = gh.patched[-1]
+    assert cid == brief["id"]
+    rev = _strip_of(written)
+    assert "Your approval won't unblock this merge" in rev, rev
+    assert "`disabled_manually`" in rev and "review:waived" in rev and "#docs" in rev
+    # Laid under the header, above the brief's "check, then approve" text.
+    assert written.index(sentinel.STRIP_OPEN) < written.index("Summary text.")
+    assert sentinel.update_brief_strip(gh, v, comments=[dict(brief, body=written)]) is False
+
+    # The check summary embeds the brief; the strip isn't repeated there.
+    assert "Your approval won't" not in sentinel._strip_brief_for_summary(written)
+
+    # Staging back on and deployed: the brief's strip clears.
+    gh.fresh_bodies = {brief["id"]: written}
+    ok = sentinel.Verdict(conclusion="success", title="", summary="", head_sha=HEAD)
+    assert sentinel.update_brief_strip(gh, ok, comments=[dict(brief, body=written)]) is True
+    assert "🚧" not in gh.patched[-1][1]
+
+
+def test_brief_strip_only_for_stuck_gates():
+    """The brief's reviewer has nothing to do about a finding the author
+    hasn't answered or a deploy that's running, so those stay off it."""
+    brief = brief_comment()
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[brief])
+    v = sentinel.Verdict(conclusion="failure", title="", summary="", head_sha=HEAD,
+                         blocking_ids=["F1"],
+                         gates=[sentinel.Gate("findings", "red", "1 open"),
+                                sentinel.Gate("staging", "pending", "running")])
+    assert sentinel.update_brief_strip(gh, v, comments=[brief]) is False
+    assert gh.patched == []
+
+
+def test_stuck_gate_beside_findings_keeps_both_lines():
+    card = author_card([("F1", "must")])
+    gh = StubGh(pr=pr_meta(), files=[infra_file()], comments=[card])
+    v = sentinel.Verdict(
+        conclusion="failure", title="", summary="", head_sha=HEAD, blocking_ids=["F1"],
+        gates=[sentinel.Gate("findings", "red", "1 open"),
+               sentinel.Gate("staging", "red", "off", stuck="Staging deploys are turned off")])
+    assert sentinel.update_strip(gh, v, comments=[card]) is True
+    strip = _strip_of(gh.patched[-1][1])
+    assert "⛔ **1 item(s) block merge**" in strip, strip
+    assert "🚧 **Merge is also blocked by something neither you nor your reviewer can fix.**" in strip
+    assert "Nothing on this card needs you" not in strip, "the card has a finding for them"
+
+
+def test_stuck_gate_beside_a_waiting_gate_names_both():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[infra_file()], comments=[card])
+    v = sentinel.Verdict(
+        conclusion="failure", title="", summary="", head_sha=HEAD,
+        gates=[sentinel.Gate("oversized", "red", "x"),
+               sentinel.Gate("staging", "red", "off", stuck="Staging deploys are turned off")])
+    sentinel.update_strip(gh, v, comments=[card])
+    strip = _strip_of(gh.patched[-1][1])
+    assert "🚧" in strip and "Staging deploys are turned off." in strip, strip
+    assert "⏳ **Merge is also waiting on /oversized-ack in an approval.**" in strip, strip
+    assert "staging deploy" not in strip.split("⏳")[1], "the stuck gate isn't repeated"
+
+
+def test_a_waive_clears_the_stuck_strips():
+    card = author_card([], state=_state_with([]))
+    brief = brief_comment()
+    gh = StubGh(pr=pr_meta(), files=[infra_file()], comments=[card, brief])
+    stuck = sentinel.Gate("staging", "red", "off", stuck="Staging deploys are turned off")
+    held = sentinel.Verdict(conclusion="failure", title="", summary="", head_sha=HEAD, gates=[stuck])
+    sentinel.update_strip(gh, held, comments=[card, brief])
+    sentinel.update_brief_strip(gh, held, comments=[card, brief])
+    card2 = dict(card, body=gh.patched[-2][1])
+    brief2 = dict(brief, body=gh.patched[-1][1])
+    assert "🚧" in card2["body"] and "🚧" in brief2["body"]
+    gh.fresh_bodies = {card["id"]: card2["body"], brief["id"]: brief2["body"]}
+    waived = sentinel.Verdict(conclusion="success", title="", summary="", head_sha=HEAD,
+                              gates=[stuck], waived=True)
+    assert sentinel.update_strip(gh, waived, comments=[card2, brief2]) is True
+    assert "🚧" not in gh.patched[-1][1]
+    assert sentinel.update_brief_strip(gh, waived, comments=[card2, brief2]) is True
+    assert "🚧" not in gh.patched[-1][1]
+
+
 def test_without_strip_ignores_only_the_strip():
     a = "## h\n\n<!-- SENTINEL_STRIP -->\n⏳ one\n<!-- /SENTINEL_STRIP -->\n\nbody"
     b = a.replace("⏳ one", "⏳ two")
