@@ -360,7 +360,7 @@ The cool thing about using Pulumi and lambdas is that they make complex infrastr
 
 - Want to increase the Lambda memory? Change one number and run `pulumi up`.
 - You get [complete AWS Lambda and API Gateway management](/registry/packages/aws/) for your low-traffic REST APIs
-- And [Infrastructure testing capabilities](/docs/iac/concepts/testing/) mean you can validate your serverless configuration before deployment
+- And [Infrastructure testing capabilities](/docs/iac/guides/testing/) mean you can validate your serverless configuration before deployment
 
 You can find the full code in the [service status monitor repo](https://github.com/adamgordonbell/service-status-monitor) from my [Python devops article](https://www.pulumi.com/blog/python-for-devops/). A larger version with rolling updates is coming soon.
 
@@ -396,7 +396,7 @@ I'd love to hear about your experiences with monolithic serverless applications.
 
 ## Related reading
 
-- [Get started with Pulumi on AWS](/docs/iac/get-started/aws/): the official quickstart for the tooling used in this post.
+- [Get started with Pulumi on AWS](/up/?cloud=aws): the official quickstart for the tooling used in this post.
 - [AWS Lambda function reference](/registry/packages/aws/api-docs/lambda/function/): every property on the resource we used above.
 - [Code, deploy, and manage a serverless REST API on AWS with Pulumi](/blog/code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi/): the function-per-route alternative to the monolith pattern.
 - [Controlling AWS costs with Lambda and Pulumi](/blog/controlling-aws-costs-with-lambda-and-pulumi/): patterns for keeping your bill predictable as traffic grows.

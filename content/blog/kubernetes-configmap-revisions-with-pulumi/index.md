@@ -338,4 +338,4 @@ where you need revision control for Kubernetes resources that don't natively sup
 
 Want to learn how to put these practices into action? Meet us at [KubeCon Europe 2026 (Booth 784)](https://www.pulumi.com/kubecon/) or register for our upcoming [Zero to Production in Kubernetes](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) workshop.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

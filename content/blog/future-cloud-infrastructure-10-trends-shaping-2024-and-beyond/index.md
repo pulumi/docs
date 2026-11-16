@@ -133,7 +133,7 @@ To support this shift, Pulumi's perspective on [Superintelligence Infrastructure
 
 As cloud environments expand and AI workloads demand highly dynamic infrastructure, Infrastructure as Code (IaC) is becoming the foundation for scaling reliably across all environments. Organizations are increasingly adopting IaC in general-purpose languages to unify development and infrastructure workflows, reduce configuration drift, and deliver cloud resources at speed.
 
-Modern [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/) is advancing far beyond simple provisioning:
+Modern [Infrastructure as Code](https://www.pulumi.com/topics/infrastructure-as-code/) is advancing far beyond simple provisioning:
 
 - **Standardizing multi-cloud and hybrid patterns** so teams can deploy consistently across AWS, Azure, Google Cloud, on-prem, and edge environments.
 - **Integrating seamlessly with cloud providers and third-party services**, including data platforms and messaging systems like CockroachDB, Confluent Cloud, and Kafka.
@@ -239,4 +239,4 @@ Taken together, these shifts point to a new model of cloud operations that is in
 
 Organizations that invest now in **modern IaC**, **unified governance**, **reusable components**, and **policy frameworks**, all core capabilities of the Pulumi Cloud platform, will be positioned to lead in an AI-first world. The gap between teams that modernize and those that do not will widen rapidly in 2027 and beyond.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "Try Pulumi for Free" "/up/" >}}

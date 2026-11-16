@@ -76,7 +76,7 @@ order, or jump to the one you need:
 
 ## Next steps
 
-Work through the guides above in order, or see [Get started](/docs/iac/get-started/aws/)
+Work through the guides above in order, or see [Get started](/up/)
 first if you haven't installed Pulumi or written your first program yet.
 
 ## Learn more

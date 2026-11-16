@@ -20,6 +20,11 @@ Traditional secret management leads to *secret sprawl*: the same secret is dupli
 
 You define the values to sync in an ESC environment, then run a Pulumi program on a schedule (or in response to a webhook) that reads those values and writes them into the target platform. ESC is the single source of truth; Pulumi IaC does the syncing.
 
+The pattern uses two Pulumi programs:
+
+- A *management program* that creates the sync environment, the target stack, and the Pulumi Deployments settings and schedule for that stack.
+- A *target program*, stored in your GitHub repository, that the target stack's deployments run. It reads the synced values and writes them to the external platform.
+
 ```mermaid
 flowchart LR
     A[Imported ESC environment] --> B["Sync ESC environment<br/>(sync block)"]
@@ -43,7 +48,7 @@ flowchart LR
 
 ## Define the secrets to sync
 
-Create an ESC environment that imports the environment holding your source values and declares a `sync` block describing what to push and where. In this example, the values are synced to AWS Secrets Manager:
+Save the following YAML as `syncEnv.yaml` next to the management program. That's the default `envPath`, and the management program in the next section creates the ESC environment from this file. The environment imports the environment holding your source values and declares a `sync` block describing what to push and where. In this example, the values are synced to AWS Secrets Manager:
 
 ```yaml
 imports:
@@ -81,7 +86,7 @@ const stackName = config.get("stackName") || "dev";
 // repository is the GitHub repository where the target stack is located (for deployment settings)
 const repository = config.require("repository");
 
-// how often you want to sync. Default is hourly
+// syncCronSchedule is how often to sync. The default is hourly
 const syncCronSchedule = config.get("syncCronSchedule") || "0 * * * *";
 
 // envPath is the path to the environment file that contains the secrets or configuration to be synced
@@ -137,7 +142,7 @@ const schedule = new service.DeploymentSchedule("update_schedule", {
 
 ## Create the external secret
 
-The target stack is a separate Pulumi program that reads the synced values and writes them to the external platform. Here, it creates an AWS Secrets Manager secret from the `sync.json` file produced by the pre-run commands above:
+The target program is the Pulumi program that the target stack's deployments run. It reads the synced values and writes them to the external platform. Here, it creates an AWS Secrets Manager secret from the `sync.json` file produced by the pre-run commands above:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -147,7 +152,7 @@ import * as fs from "fs";
 const config = new pulumi.Config();
 const name = config.require("secretName");
 
-// Read a json file from the local filesystem using node.js fs module
+// Read a JSON file from the local filesystem using the Node.js fs module
 const json = fs.readFileSync("sync.json", "utf8");
 
 const secret = new aws.secretsmanager.Secret(name, {
@@ -163,7 +168,20 @@ const secretVersion = new aws.secretsmanager.SecretVersion(`${name}-version`, {
 export const secretName = secret.name;
 ```
 
-Because the deployment runs on a schedule, the secret stays up to date in AWS Secrets Manager whenever the source values change in ESC.
+## Run the sync
+
+1. Commit the target program to your GitHub repository in the `sync/target` directory on the `main` branch. The `repoDir` and `branch` values in the deployment settings point there.
+1. In the management program's stack, set the required configuration:
+
+    ```bash
+    pulumi config set projectName <project-name>
+    pulumi config set repository <owner>/<repo>
+    ```
+
+    To override the defaults, also set `stackName`, `syncCronSchedule`, or `envPath`.
+1. Run `pulumi up` on the management program to create the environment, the target stack, its deployment settings, and the deployment schedule.
+
+The secret is refreshed on each scheduled run, so changes in ESC appear in AWS Secrets Manager by the next run.
 
 ## Sync on change with webhooks
 

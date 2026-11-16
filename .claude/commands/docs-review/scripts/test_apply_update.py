@@ -438,15 +438,112 @@ def test_summary_is_inserted_when_the_card_has_none():
 
 
 def test_summary_shape_is_validated():
-    for bad, needle in ((42, "non-empty"), ("two\nlines", "one line"), ("x" * 301, "≤300")):
+    """A non-string summary is still a contract violation; length and line
+    breaks are repaired upstream (see the clip tests below), but
+    validate_update keeps rejecting them as a backstop."""
+    up = _update([])
+    up["summary"] = 42
+    try:
+        au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    except au.UpdateError as exc:
+        assert "non-empty" in str(exc), exc
+    else:
+        raise AssertionError("a non-string summary must be rejected")
+    for bad, needle in (("two\nlines", "one line"), ("x" * 301, "≤300")):
         up = _update([])
         up["summary"] = bad
-        try:
-            au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
-        except au.UpdateError as exc:
-            assert needle in str(exc), exc
-        else:
-            raise AssertionError(f"summary {bad[:10]!r} must be rejected")
+        assert any(needle in p for p in au.validate_update(up, set())), bad[:10]
+
+
+# The summary pulumi/docs#22863's refresh died on, give or take: well-formed,
+# just long. 380 chars, three sentences.
+_LONG_SUMMARY = (
+    "Adds a guide for configuring OIDC trust between Pulumi Cloud and AWS, "
+    "including the IAM role, the trust policy, and the ESC environment that "
+    "consumes it. The review fact-checked 14 claims against the AWS and ESC "
+    "docs and ran the example program in all four languages. Both earlier "
+    "findings about the audience value and the session duration are now fixed "
+    "in the latest push."
+)
+
+
+def test_overlong_summary_is_clipped_and_the_refresh_publishes(capsys):
+    """pulumi/docs#22863 (runs 43065200879, 43073551781): an overlong
+    `summary` failed the whole publish with exit 2, and the retry wrote the
+    same sentence. Now the adjudication lands, the sentence is clipped at a
+    sentence boundary, and the repair is a ::warning::."""
+    assert len(_LONG_SUMMARY) > au.SUMMARY_MAX
+    up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 9f9f9f9"}])
+    up["summary"] = _LONG_SUMMARY
+    a_out, _, state, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert state["findings"]["F1"]["disposition"] == "fixed", "the adjudication still publishes"
+    line = next(ln for ln in a_out.splitlines() if ln.startswith("_Adds a guide"))
+    text = line.strip("_")
+    assert len(text) <= au.SUMMARY_MAX
+    assert text.endswith("all four languages."), "kept whole sentences, no mid-word cut"
+    assert "<TODO: one sentence" not in a_out, "the clipped summary replaced the old one"
+    err = capsys.readouterr().err
+    assert "::warning::apply-update repaired the patch envelope" in err
+    assert "`summary` clipped" in err
+
+
+def test_clip_falls_back_to_a_word_boundary_with_an_ellipsis():
+    run_on = "the review checked " + "this and that " * 40
+    out, how = au.clip_one_line(run_on, au.SUMMARY_MAX)
+    assert len(out) <= au.SUMMARY_MAX and out.endswith("…") and "clipped" in how
+    assert out[:-1].endswith(("this", "that")), "cut between words, not inside one"
+    blob = "x" * 400
+    out, _ = au.clip_one_line(blob, au.SUMMARY_MAX)
+    assert len(out) == au.SUMMARY_MAX and out.endswith("…"), "no spaces at all still fits"
+    assert au.clip_one_line("fits fine.", au.SUMMARY_MAX) == ("fits fine.", "")
+
+
+def test_multiline_summary_is_folded_onto_one_line(capsys):
+    up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 9f9f9f9"}])
+    up["summary"] = "Adds a component doc;\n  the review checked 12 claims."
+    a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert "_Adds a component doc; the review checked 12 claims._" in a_out
+    assert "`summary` folded to one line" in capsys.readouterr().err
+
+
+def test_history_summary_gets_the_same_treatment():
+    """Documented ≤120 and one line, like `summary` ≤300 — clipped the same
+    way, both on the normalized patch and in the evidence history main()
+    builds from the patch as written."""
+    long_hist = "Resolved F1 and F2 after the author's fix push; held F3 because the registry still lists the old default value for this field."
+    assert len(long_hist) > au.HISTORY_SUMMARY_MAX
+    norm, notes = au.normalize_update({"schema": 1, "case": "mixed", "findings": [],
+                                       "history_summary": long_hist + "\nsecond line"})
+    assert len(norm["history_summary"]) <= au.HISTORY_SUMMARY_MAX
+    assert "\n" not in norm["history_summary"]
+    assert any(n.startswith("`history_summary` folded to one line, clipped") for n in notes)
+    up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 9f9f9f9"}])
+    up["history_summary"] = long_hist
+    a_out, b_out, state, report = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    ev = au.assemble_evidence(None, a_out, b_out, state, up, repo="pulumi/docs", pr=999,
+                              head_sha=SHA, run_id="1", timestamp=report["timestamp"])
+    hist = ev["history"][-1]["summary"]
+    assert len(hist) <= au.HISTORY_SUMMARY_MAX and hist.endswith("…")
+    assert long_hist.startswith(hist[:-1]), "a prefix of what the model wrote, cut between words"
+
+
+def test_main_publishes_an_overlong_summary(tmp_path, monkeypatch, capsys):
+    """End to end through the CLI the workflow runs: exit 0, not 2."""
+    up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 9f9f9f9"}])
+    up["summary"] = _LONG_SUMMARY
+    paths = {n: tmp_path / n for n in ("a.md", "b.md", "u.json", "ao.md", "bo.md", "ev.json")}
+    paths["a.md"].write_text(AUTHOR)
+    paths["b.md"].write_text(BRIEF)
+    paths["u.json"].write_text(json.dumps(up))
+    monkeypatch.setattr(sys, "argv", [
+        "apply-update.py", "--author-card", str(paths["a.md"]), "--brief-card", str(paths["b.md"]),
+        "--update", str(paths["u.json"]), "--head-sha", SHA, "--repo", "pulumi/docs",
+        "--pr", "22863", "--run-id", "43073551781",
+        "--author-out", str(paths["ao.md"]), "--brief-out", str(paths["bo.md"]),
+        "--evidence-out", str(paths["ev.json"])])
+    assert au.main() == 0
+    assert "contract violation" not in capsys.readouterr().err
+    assert "_Adds a guide" in paths["ao.md"].read_text()
 
 
 def _all_answered():

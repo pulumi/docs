@@ -146,8 +146,8 @@ pulumi.export("order_function_arn", process_order_arn)
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/cloudformation"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/sqs"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/cloudformation"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/sqs"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -506,10 +506,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/apigatewayv2"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/dynamodb"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/lambda"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/apigatewayv2"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/dynamodb"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/lambda"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 

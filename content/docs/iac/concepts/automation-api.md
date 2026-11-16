@@ -129,17 +129,16 @@ console.log(result.generatedCode);
 
 ```python
 from pulumi import automation as auto
-from pulumi.automation import ImportResource
 
 stack = auto.create_or_select_stack(stack_name=stack_name, work_dir=work_dir)
 
 result = stack.import_resources(
     resources=[
-        ImportResource(
-            type="aws:s3/bucketV2:BucketV2",
-            name="my-bucket",
-            id="my-existing-bucket-name",
-        ),
+        {
+            "type": "aws:s3/bucketV2:BucketV2",
+            "name": "my-bucket",
+            "id": "my-existing-bucket-name",
+        },
     ],
     protect=False,
 )

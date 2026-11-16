@@ -18,6 +18,8 @@ A Neo usage limit caps what your organization spends on [Neo](/docs/ai/) in a mo
 
 Requests served through [bring your own key (BYOK)](/docs/ai/concepts/neo/model-providers/) do not count toward these limits and can continue after a limit is reached. Set budgets and rate limits with your model provider to control BYOK spend.
 
+Neo usage limits cover Neo tokens only. An agent task can run its tools and commands on an Agent worker, a Pulumi-hosted machine. The worker's run time is now billed as [workflow minutes](/pricing/), which do not count toward Neo usage limits.
+
 ## Who can set limits
 
 Members with the **Admin** or **Billing Manager** role can view and change Neo usage limits. Other members do not see the settings.

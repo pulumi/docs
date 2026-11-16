@@ -12,7 +12,7 @@ category: general
 
 Writing infrastructure policy in a high-level programming language helps automate and enforce best practices. When policies are written with code, you can apply software development practices such as testing, automated deployment, and version control. Cloud providers typically offer a GUI to create policies,  but creating policies is not easily repeatable, nor can you version policies. Moreover, policies must be tested against a live system, which means using an existing system or configuring and deploying an ephemeral version.
 
-While the benefits of writing [policies as code](/what-is/what-is-policy-as-code/) are evident for developers and operators, the organizational benefits are even more significant. Organizations can realize cost savings, improved compliance, efficient deployments, fine-grained control over infrastructure, and better use of cloud provider native resources. Let’s take a look at these benefits in-depth.
+While the benefits of writing [policies as code](/topics/secrets-and-security/what-is-policy-as-code/) are evident for developers and operators, the organizational benefits are even more significant. Organizations can realize cost savings, improved compliance, efficient deployments, fine-grained control over infrastructure, and better use of cloud provider native resources. Let’s take a look at these benefits in-depth.
 
 <!--more-->
 

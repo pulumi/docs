@@ -141,7 +141,7 @@ A general chatbot knows Docker Hub has rate limits. Neo could see the deployment
 
 One attendee, Martin, had been using Terraform for eight-plus years. His question, put directly: "I'm using TF for eight plus years. Why should I consider Pulumi? Where is the strength?... It seems unnecessary to TF for me. At least from what I'm seeing now."
 
-Fair question, and the honest answer is you don't have to abandon your modules. Pulumi has [first-class Terraform module support](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), so you can reference existing modules from a Pulumi program. Python ML teams can import infrastructure modules, and platform teams can wrap them in typed abstractions. The portfolio doesn't change. The programs that use it just get more capable.
+Fair question, and the honest answer is you don't have to abandon your modules. Pulumi has [first-class Terraform module support](/docs/integrations/terraform/modules/), so you can reference existing modules from a Pulumi program. Python ML teams can import infrastructure modules, and platform teams can wrap them in typed abstractions. The portfolio doesn't change. The programs that use it just get more capable.
 
 The sharper reason is about edges. HCL and Bicep are purpose-built DSLs, and when you hit what they can't express, there's no escape hatch inside the language. With a general-purpose language you can always drop to the SDK or shell out. The edges still exist. They're just further out, and that's the whole difference once a project gets past the basics.
 

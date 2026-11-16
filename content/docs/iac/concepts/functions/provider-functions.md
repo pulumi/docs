@@ -32,7 +32,7 @@ import * as aws from "@pulumi/aws";
     owners: ["amazon"],
     mostRecent: true,
     filters: [
-      { name: "name", values: ["amzn2-ami-hvm-*"] },
+      { name: "name", values: ["al2023-ami-2023.*-x86_64"] },
       { name: "architecture", values: ["x86_64"] }
     ]
   });
@@ -55,7 +55,7 @@ latest_ami = aws.ec2.get_ami(
     owners=["amazon"],
     most_recent=True,
     filters=[
-        {"name": "name", "values": ["amzn2-ami-hvm-*"]},
+        {"name": "name", "values": ["al2023-ami-2023.*-x86_64"]},
         {"name": "architecture", "values": ["x86_64"]}
     ]
 )
@@ -87,7 +87,7 @@ func main() {
    Filters: []ec2.GetAmiFilter{
     {
      Name:   "name",
-     Values: []string{"amzn2-ami-hvm-*"},
+     Values: []string{"al2023-ami-2023.*-x86_64"},
     },
     {
      Name:   "architecture",
@@ -131,7 +131,7 @@ return await Deployment.RunAsync(() =>
                   new Aws.Ec2.Inputs.GetAmiFilterInputArgs
                   {
                       Name = "name",
-                      Values = { "amzn2-ami-hvm-*" }
+                      Values = { "al2023-ami-2023.*-x86_64" }
                   },
                   new Aws.Ec2.Inputs.GetAmiFilterInputArgs
                   {
@@ -175,7 +175,7 @@ public class App {
                 .filters(
                         GetAmiFilterArgs.builder()
                                 .name("name")
-                                .values("amzn2-ami-hvm-*")
+                                .values("al2023-ami-2023.*-x86_64")
                                 .build(),
                         GetAmiFilterArgs.builder()
                                 .name("architecture")
@@ -206,7 +206,7 @@ variables:
       arguments:
         filters:
           - name: name
-            values: ["amzn2-ami-hvm-*"]
+            values: ["al2023-ami-2023.*-x86_64"]
           - name: architecture
             values: ["x86_64"]
         owners: ["amazon"]
@@ -372,7 +372,7 @@ import * as aws from "@pulumi/aws";
 // getAmiIds returns a Promise<GetAmiIdsResult>; await it to get a plain value.
 const candidates = await aws.ec2.getAmiIds({
     owners: ["amazon"],
-    filters: [{ name: "name", values: ["amzn2-ami-hvm-*-x86_64-gp3"] }],
+    filters: [{ name: "name", values: ["al2023-ami-2023.*-x86_64"] }],
 });
 
 // Because candidates.ids is a plain string[], we can branch on it freely.
@@ -395,7 +395,7 @@ import pulumi_aws as aws
 # get_ami_ids returns a plain GetAmiIdsResult.
 candidates = aws.ec2.get_ami_ids(
     owners=["amazon"],
-    filters=[aws.ec2.GetAmiIdsFilterArgs(name="name", values=["amzn2-ami-hvm-*-x86_64-gp3"])],
+    filters=[aws.ec2.GetAmiIdsFilterArgs(name="name", values=["al2023-ami-2023.*-x86_64"])],
 )
 
 # Because candidates.ids is a plain list, we can branch on it freely.
@@ -426,7 +426,7 @@ func main() {
 		candidates, err := ec2.GetAmiIds(ctx, &ec2.GetAmiIdsArgs{
 			Owners: []string{"amazon"},
 			Filters: []ec2.GetAmiIdsFilter{
-				{Name: "name", Values: []string{"amzn2-ami-hvm-*-x86_64-gp3"}},
+				{Name: "name", Values: []string{"al2023-ami-2023.*-x86_64"}},
 			},
 		}, nil)
 		if err != nil {
@@ -469,14 +469,14 @@ return await Deployment.RunAsync(async () =>
             new Aws.Ec2.Inputs.GetAmiIdsFilterArgs
             {
                 Name = "name",
-                Values = { "amzn2-ami-hvm-*-x86_64-gp3" },
+                Values = { "al2023-ami-2023.*-x86_64" },
             },
         },
     });
 
     // Because candidates.Ids is a plain ImmutableArray<string>, we can branch on it freely.
     // The instance is only added to the stack if a matching AMI was found.
-    if (candidates.Ids.Count > 0)
+    if (candidates.Ids.Length > 0)
     {
         _ = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
         {
@@ -513,7 +513,7 @@ public class App {
                 .owners("amazon")
                 .filters(GetAmiIdsFilter.builder()
                         .name("name")
-                        .values("amzn2-ami-hvm-*-x86_64-gp3")
+                        .values("al2023-ami-2023.*-x86_64")
                         .build())
                 .build()).join();
 

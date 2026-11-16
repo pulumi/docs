@@ -39,7 +39,7 @@ social:
         Here's what shipped today.
 ---
 
-At Pulumi, we are building the platform for [agentic infrastructure](/what-is/what-is-agentic-infrastructure/). Pulumi Cloud provides the guardrails and enterprise readiness needed to safely move fast in this new era. While we are seeing extraordinary adoption — over 40% of our users now manage infrastructure using AI agents — we know many organizations are at different phases in their AI journey and have to balance building for the future with maintaining their existing infrastructure as code (IaC) solutions like Terraform.
+At Pulumi, we are building the platform for [agentic infrastructure](/topics/agentic-infrastructure/). Pulumi Cloud provides the guardrails and enterprise readiness needed to safely move fast in this new era. While we are seeing extraordinary adoption — over 40% of our users now manage infrastructure using AI agents — we know many organizations are at different phases in their AI journey and have to balance building for the future with maintaining their existing infrastructure as code (IaC) solutions like Terraform.
 
 Today, [we are launching](/releases/terraform-state-backend-modules-hcl/) three ways that Pulumi lets you avoid trading off building for the future against building for today. You don't have to rip out Terraform to enter the agentic era. Pulumi Cloud brings agentic infrastructure to the IaC estate you already have.
 
@@ -51,7 +51,7 @@ Last December, our CEO [Joe Duffy laid out his vision](/blog/all-iac-including-t
 
 ### Pulumi Cloud as a Terraform backend
 
-We are excited to announce the general availability of [Pulumi Cloud as the backend to your Terraform state](/docs/iac/get-started/terraform/terraform-state-backend/), enabling organizations to seamlessly lift and shift their existing Terraform estates.
+We are excited to announce the general availability of [Pulumi Cloud as the backend to your Terraform state](/docs/integrations/terraform/state-backend/), enabling organizations to seamlessly lift and shift their existing Terraform estates.
 
 We recognize there is lots of infrastructure that works as is, and switching over to a new management paradigm may not always be possible. Pulumi Cloud support for the Terraform state backend lets organizations maintain their existing Terraform deployment patterns while also unlocking the power of Pulumi Cloud. The following common patterns for running Terraform are now supported:
 
@@ -61,19 +61,19 @@ We recognize there is lots of infrastructure that works as is, and switching ove
 With this release, stacks with Terraform state are first-class entities in Pulumi Cloud. They get access to all of the capabilities that organizations need to scale in this new AI-first era.
 
 - **[Manage access to your Terraform stacks at scale](/docs/administration/concepts/rbac/)** using tag-based access control, team role assignments, and user role assignments.
-- [**Take advantage of Neo code reviews**](/docs/ai/neo/code-reviews/). On every pull request, leverage what Pulumi Cloud knows about your running infrastructure and get clear feedback on whether it's safe to merge changes to your Terraform and OpenTofu projects.
+- [**Take advantage of Neo code reviews**](/docs/ai/concepts/neo/code-reviews/). On every pull request, leverage what Pulumi Cloud knows about your running infrastructure and get clear feedback on whether it's safe to merge changes to your Terraform and OpenTofu projects.
 - [**Run preventive policies**](/docs/discovery-governance/concepts/policy-as-code/) after a Terraform plan to block non-compliant resources before deployment.
 - **[Configure your Terraform deployments with Pulumi ESC](/docs/esc/)**, which is natively available to Pulumi Cloud-backed Terraform projects, to securely inject OIDC credentials at apply time and expose outputs to downstream stacks and services.
 
-Learn more in [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/).
+Learn more in [Using Pulumi Cloud as a Terraform state backend](/docs/integrations/terraform/state-backend/).
 
 ### Reuse your Terraform modules
 
-Pulumi programs, regardless of language, now support [importing Terraform modules](/docs/iac/get-started/terraform/terraform-modules/) natively. Organizations can leverage their existing reusable artifacts as is, without having to make a single change. This enables organizations to focus on new infrastructure projects and lets them build those projects in the language of their choice, regardless of what their existing IaC estate is.
+Pulumi programs, regardless of language, now support [importing Terraform modules](/docs/integrations/terraform/modules/) natively. Organizations can leverage their existing reusable artifacts as is, without having to make a single change. This enables organizations to focus on new infrastructure projects and lets them build those projects in the language of their choice, regardless of what their existing IaC estate is.
 
 In addition, Pulumi Cloud's private registry can now host Terraform modules alongside Pulumi packages. This enables you to consolidate all of your IaC building blocks in a single source of truth rather than managing disparate solutions and making sure your teams know where to look. Terraform modules hosted in Pulumi Cloud provide maximum interoperability and can be used in both Pulumi and Terraform programs.
 
-Learn more in [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/).
+Learn more in [Using Terraform modules in Pulumi](/docs/integrations/terraform/modules/).
 
 ### Build in HCL natively
 

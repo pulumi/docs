@@ -76,7 +76,7 @@ First, **Preview affected tokens** shows you the blast radius before you save: t
 
 ![The preview listing one machine token that would fail to authenticate under a 14-day policy, with a note that non-compliant personal tokens are rejected at request time.](/blog/access-token-expiry-policy/preview-affected-tokens.png)
 
-Second, rejections are designed to be self-explanatory. A blocked request fails with a `403 Forbidden` that names your organization and its policy maximum, so a member whose personal token no longer complies knows immediately what happened and what to do: generate a new token that meets the policy. Policy changes are also recorded in your organization's [audit logs](/docs/administration/security-compliance/audit-logs/).
+Second, rejections are designed to be self-explanatory. A blocked request fails with a `403 Forbidden` that names your organization and its policy maximum, so a member whose personal token no longer complies knows immediately what happened and what to do: generate a new token that meets the policy. Policy changes are also recorded in your organization's [audit logs](/docs/administration/concepts/audit-logs/).
 
 ![A pulumi up run rejected with a 403 error stating that the acme-corp organization enforces a max access token expiry of 14 days that the current token does not meet.](/blog/access-token-expiry-policy/policy-rejection-cli.png)
 

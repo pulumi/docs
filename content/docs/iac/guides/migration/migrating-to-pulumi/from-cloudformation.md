@@ -130,8 +130,8 @@ web = aws.ec2.Instance('web',
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudformation"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/cloudformation"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -333,7 +333,7 @@ pulumi.export('vpc_id', network.outputs["VpcId"])
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudformation"
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/cloudformation"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -369,7 +369,7 @@ func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
         network, err := cloudformation.NewStack(ctx, "network", &cloudformation.StackArgs{
             TemplateBody: pulumi.String(template),
-            Parameters: pulumi.Map{
+            Parameters: pulumi.StringMap{
                 "VPCCidr": pulumi.String("10.0.0.0/16"),
             },
         })
@@ -599,7 +599,7 @@ pulumi.export('vpc_id', vpc.id)
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -608,7 +608,7 @@ func main() {
         vpc, err := ec2.NewVpc(ctx, "myVpc",
             &ec2.VpcArgs{
                 CidrBlock: pulumi.String("10.0.0.0/16"),
-                Tags: pulumi.Map{
+                Tags: pulumi.StringMap{
                     "Name": pulumi.String("Primary_CF_VPC"),
                 },
             },

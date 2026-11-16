@@ -1,3 +1,0 @@
-name: awsx-apigateway-validation-types-java
-runtime: java
-description: An example of configuring request validators for an API Gateway instance.

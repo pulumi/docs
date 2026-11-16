@@ -50,7 +50,7 @@ There are quite a few [listicles](https://en.wikipedia.org/wiki/Listicle) out th
 
 Pulumi has a broad surface area of [products and features](https://www.pulumi.com/product/) that address these needs. Designed with integration in mind from the beginning, our tools orchestrate well, presenting a smooth and streamlined workflow for both operations teams and developer teams.
 
-We have an idea of how you can use all the Pulumi products together to deliver a comprehensive internal platform for security, infrastructure management, and deployments. Call it an [internal platform for developer platform engineers](https://www.pulumi.com/what-is/what-is-platform-engineering/) (IPfDPE), if you want. We call it the realization of a vision we've been working hard to build for many years.
+We have an idea of how you can use all the Pulumi products together to deliver a comprehensive internal platform for security, infrastructure management, and deployments. Call it an [internal platform for developer platform engineers](https://www.pulumi.com/topics/platform-engineering/) (IPfDPE), if you want. We call it the realization of a vision we've been working hard to build for many years.
 
 **Pulumi Patterns and Practices Platform (P3)** is a reference architecture that we will be describing, and providing code for, through this series of articles. We'll be diving deep into not just what you can do with our tools, but how to do it, and provide code for a reference implementation that you can use to jump start the process.
 
@@ -93,7 +93,7 @@ Every action a user takes in Pulumi can be tracked via the [audit log](/docs/adm
 
 ### Developer Experience
 
-Probably the most compelling aspect of Pulumi is the developer experience. [Developers love Pulumi](https://www.pulumi.com/testimonials/), because they get to use their preferred tools. General purpose programming languages, visual IDEs, command-line tools, and products with an API-driven architecture are what developers want, and it's what Pulumi delivers in spades.
+Probably the most compelling aspect of Pulumi is the developer experience. [Developers love Pulumi](https://www.pulumi.com/love/), because they get to use their preferred tools. General purpose programming languages, visual IDEs, command-line tools, and products with an API-driven architecture are what developers want, and it's what Pulumi delivers in spades.
 
 With Pulumi templates and custom internal component resources in place, [developers can drive their own DevOps](https://www.pulumi.com/blog/developer-experience-business-critical/#how-does-devex-intersect-with-devops), provisioning their own infrastructure resources and managing their own deployments directly, reducing bottlenecks in platform teams. Product engineering teams can self-service with a stream-lined workflow that stays compliant with company policy by default. Deep in the code of their favorite programming languages, your developers will never even know they are following the company rules.
 
@@ -105,7 +105,7 @@ So now that we've made a case for how Pulumi can be applied to meet the most pre
 
 Stay tuned for the following series of posts where we will use Pulumi to implement the P3 reference architecture for a fully-featured internal developer platform (IDP, or IPfDPE if you prefer). That said, you may already have invested in some popular in cloud-native tools like [Backstage](https://www.pulumi.com/blog/pulumi-in-a-cloud-native-world/#the-kebap-stack-reference-architecture) or [Kubernetes](https://www.pulumi.com/blog/kubernetes-4-0-even-more-kubernetes-native/). Pulumi plays well with others, and you will be delighted to see [how you can use Pulumi to cover the gaps](https://www.pulumi.com/blog/pulumi-in-a-cloud-native-world) in the [CNCF](https://www.cncf.io/) ecosystem.
 
-And if you are already ready to get your hands on Pulumi after this introduction, feel free to [create an account](https://www.pulumi.com/signup/) and follow some of our [Getting Started](https://www.pulumi.com/docs/get-started/) guides to see how easy simple use cases are and begin to imagine how that same developer experience will scale up to your entire organization.
+And if you are already ready to get your hands on Pulumi after this introduction, feel free to [create an account](https://www.pulumi.com/signup/) and follow some of our [Getting Started](/up/) guides to see how easy simple use cases are and begin to imagine how that same developer experience will scale up to your entire organization.
 
 To learn more, you can watch the following video which provides a high level overview of how Pulumi works:
 

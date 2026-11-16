@@ -13,7 +13,7 @@ menu:
 
 Every Pulumi Cloud organization has a default role. Members follow it unless an admin assigns them another role, and so do new members who accept an invite that doesn't name a role. When an admin changes the default role, every member who follows it moves to the new role at once, and members with an assigned role keep theirs.
 
-## Built-in roles
+## Roles for the default role {#built-in-roles}
 
 Three built-in roles are designed to be the default role. Each one includes everything the role before it allows.
 
@@ -23,7 +23,7 @@ Three built-in roles are designed to be the default role. Each one includes ever
 | `Builder` | Everything Reader allows, plus create stacks, environments, cloud accounts, services, and Pulumi Neo tasks. Members manage what they create. |
 | `Maintainer` | Everything Builder allows, plus change every stack, environment, cloud account, and service, and work with deployments, integrations, and Neo automations. |
 
-Managing members, teams, and organization settings stays with the `Admin` role. To give someone permissions on specific stacks, environments, or cloud accounts beyond what their role allows, [grant them a permission set on those entities](/docs/administration/concepts/rbac/entities/#entity-access) or add them to a [team](/docs/administration/concepts/rbac/teams) that has those permissions.
+Every organization also has `Admin` and `Billing Manager`, which admins assign to individual members. They can't be the default role. See [built-in roles](/docs/administration/concepts/rbac/roles/#pulumi-defined-roles). Managing members, teams, and organization settings stays with the `Admin` role. To give someone permissions on specific stacks, environments, or cloud accounts beyond what their role allows, [grant them a permission set on those entities](/docs/administration/concepts/rbac/entities/#entity-access) or add them to a [team](/docs/administration/concepts/rbac/teams) that has those permissions.
 
 ## Choosing a default role
 
@@ -61,3 +61,7 @@ You can't edit `Member (legacy)`. To move your organization to a built-in role, 
 1. Sign in as a member, or ask one, to check that day-to-day work still succeeds.
 
 If something stops working, switch the default role back to `Member (legacy)` while you sort out the missing permissions.
+
+### Pulumi Service provider {#pulumi-service-provider}
+
+If you manage members with the Pulumi Service provider, use [version 1.7.0](https://github.com/pulumi/pulumi-pulumiservice/releases/tag/v1.7.0) or later. In versions 1.2 to 1.5, an `OrganizationMember` with `role: member` fails once your organization has moved off the `Member` role. Version 1.7.0 also accepts `reader`, `builder`, and `maintainer` as roles, and adds [`OrganizationDefaultRole`](/registry/packages/pulumiservice/api-docs/organizationdefaultrole/) to set the default role.

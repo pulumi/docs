@@ -1,0 +1,53 @@
+name: Set up Hugo
+description: >
+  Installs the Hugo version pinned in mise.toml (read by scripts/hugo-version.sh,
+  the single source of truth) and fails unless the installed binary is that version.
+
+inputs:
+  extended:
+    description: Install the extended edition.
+    required: false
+    default: "true"
+
+outputs:
+  version:
+    description: The pinned Hugo version that was installed (X.Y.Z).
+    value: ${{ steps.pin.outputs.version }}
+
+runs:
+  using: composite
+  steps:
+    # Fails the job if the pin can't be read. peaceiris/actions-hugo installs the
+    # latest Hugo when given an empty version, so nothing empty may get past here.
+    - name: Read the pinned Hugo version
+      id: pin
+      shell: bash
+      env:
+        PIN_SCRIPT: ${{ github.action_path }}/../../../scripts/hugo-version.sh
+      run: |
+        ver="$("$PIN_SCRIPT")"
+        [ -n "$ver" ] || { echo "::error::scripts/hugo-version.sh returned an empty version" >&2; exit 1; }
+        echo "Pinned Hugo version: $ver"
+        echo "version=$ver" >> "$GITHUB_OUTPUT"
+
+    - name: Install Hugo
+      uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: ${{ steps.pin.outputs.version }}
+        extended: ${{ inputs.extended }}
+
+    # Belt and braces: whatever happened above, the job doesn't proceed on a
+    # Hugo other than the pinned one.
+    - name: Verify the installed Hugo
+      shell: bash
+      env:
+        WANT: ${{ steps.pin.outputs.version }}
+        EXTENDED: ${{ inputs.extended }}
+      run: |
+        hv="$(hugo version)"
+        echo "$hv"
+        got="$(printf '%s' "$hv" | sed -nE 's/^hugo v([0-9]+\.[0-9]+\.[0-9]+).*/\1/p')"
+        [ "$got" = "$WANT" ] || { echo "::error::installed Hugo is '${got:-unparseable}', pinned version is '$WANT'" >&2; exit 1; }
+        if [ "$EXTENDED" = "true" ]; then
+          case "$hv" in *+extended*) ;; *) echo "::error::expected the extended edition of Hugo" >&2; exit 1 ;; esac
+        fi

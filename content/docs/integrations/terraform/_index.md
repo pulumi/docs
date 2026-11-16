@@ -19,7 +19,7 @@ aliases:
 
 Pulumi works alongside your existing Terraform and OpenTofu investment. You don't have to migrate everything at once, or at all: Pulumi Cloud can manage your Terraform state and runs, Pulumi programs can use Terraform providers, modules, and state directly, and you can convert HCL to Pulumi when and where it makes sense.
 
-This page links to every Pulumi capability for Terraform and OpenTofu users. If you're new to Pulumi, start by [installing Pulumi](/docs/install/) and following a [get-started guide](/docs/get-started/) for your cloud.
+This page links to every Pulumi capability for Terraform and OpenTofu users. If you're new to Pulumi, start by [installing Pulumi](/docs/install/) and following the [get-started guide](/up/).
 
 ## Terraform and Pulumi side by side
 

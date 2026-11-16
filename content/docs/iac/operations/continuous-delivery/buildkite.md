@@ -30,7 +30,7 @@ Before you begin, make sure you have:
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A Buildkite account with a [cluster and agent](https://buildkite.com/docs/pipelines/getting-started).
 1. A Git repository connected to a Buildkite pipeline.
-1. A Pulumi program. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
+1. A Pulumi program. If you don't have one yet, follow the [get-started guide](/up/).
 
 ## Install and configure Pulumi
 

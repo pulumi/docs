@@ -241,7 +241,7 @@ You also don't have to do it alone. Pulumi provides [self-serve conversion tools
 
 ## Manage Terraform state in Pulumi Cloud
 
-You don't have to rewrite anything to start getting value from Pulumi. Pulumi Cloud can serve as a Terraform state backend, letting you store and manage Terraform state alongside your Pulumi stacks. Your team can keep using the Terraform or OpenTofu CLI for day-to-day operations while gaining encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through Pulumi Insights — with [agentic infrastructure](/what-is/what-is-agentic-infrastructure/) coding through Neo on top.
+You don't have to rewrite anything to start getting value from Pulumi. Pulumi Cloud can serve as a Terraform state backend, letting you store and manage Terraform state alongside your Pulumi stacks. Your team can keep using the Terraform or OpenTofu CLI for day-to-day operations while gaining encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through Pulumi Insights — with [agentic infrastructure](/topics/agentic-infrastructure/) coding through Neo on top.
 
 It uses Terraform's standard remote backend, so you point the CLI at Pulumi Cloud without changing your infrastructure code:
 
@@ -280,4 +280,4 @@ Pulumi can also work with Terraform provider ecosystems, including long-tail pro
 
 If your team is evaluating infrastructure as code options, start with the workflow that creates the most leverage: write infrastructure in the language your team already uses, test shared components, protect critical resources, and migrate one stack at a time.
 
-To go deeper, [get started with Pulumi](/docs/get-started/) or read the [Terraform migration guide](https://www.pulumi.com/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
+To go deeper, [get started with Pulumi](/up/) or read the [Terraform migration guide](https://www.pulumi.com/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).

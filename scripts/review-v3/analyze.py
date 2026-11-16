@@ -148,7 +148,7 @@ REASON_CODES = {
     "stances": "the brief lists editorial stances (blocks only with --strict-stances)",
     "mergeable": "GitHub mergeable_state when not clean/blocked",
     "checks": "check rollup when not green, the Sentinel left out (it is red until an approval exists, so it is not a CI failure)",
-    "sentinel": "<passing>/<applicable>: the Sentinel's merge gates at this head, from its status comment; skipped gates don't count",
+    "sentinel": "<passing>/<applicable>: the Sentinel's merge gates at this head, from its per-gate statuses; gates that don't apply don't count",
     "cluster": "member of a collision cluster: overlap (hunks intersect; position in the merge order), same-file (any order), or theirs",
     "directional": "adds links to an alias-only URL another open PR removes links from",
     "duplicate": "looks like a duplicate of another open PR",
@@ -755,17 +755,11 @@ def ownership(pr: dict, ctx: dict) -> dict:
     # on the Sentinel being the merge gate, which it is not.
     if link_only_diff(pr.get("files") or []):
         reasons.append("shape:link-only")
-        # The routing config decides who may approve a link sweep. With
-        # `link_only.approval: any-team` the Sentinel takes any review team,
-        # so the row is genuinely anyone's and the board says so. Where the
-        # lane still owns it, `link_fixes: mine` is the local override that
-        # takes it anyway.
-        if (config.link_only or {}).get("approval") == "any-team":
-            reasons.append("gate:any-team")
-            is_mine = True
-        elif cfg.link_fixes == "mine" and not is_mine:
-            is_mine = True
-            reasons.append("link-fixes:mine")
+        # A link sweep needs a careful reader, not a particular lane's one,
+        # and branch protection takes anyone's approval, so the row is
+        # anyone's.
+        reasons.append("gate:any-team")
+        is_mine = True
     approver = ctx.get("approver")
     author_self = bool(approver) and norm_login((pr.get("author") or {}).get("login")) == norm_login(approver)
     if author_self:
@@ -998,19 +992,23 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
                           "This branch conflicts with master and can't be updated from here; please merge master into it.")
     checks = pr.get("checks") or {}
     failing = list(checks.get("failing") or [])
-    real_failures = [f for f in failing if (f or "").strip().lower() != SENTINEL_CHECK]
+    real_failures = [f for f in failing if not act._is_sentinel({"name": f or ""})]
+    real_pending = [x for x in (checks.get("pending") or []) if not act._is_sentinel({"name": x or ""})]
     gates = [g for g in ((pr.get("sentinel") or {}).get("gates") or []) if g.get("state") != "skip"]
     if gates:
-        # The Sentinel concludes failure until an approval exists, so "failing"
-        # said nothing a row didn't already say. The count of gates that pass
-        # out of the ones that apply does, and the tooltip names the rest.
+        # "failing" said nothing a row didn't already say. The count of gates
+        # that pass out of the ones that apply does, and the tooltip names
+        # the rest.
         reasons.append(f"sentinel:{sum(g.get('state') == 'ok' for g in gates)}/{len(gates)}")
-    # A red rollup with only the Sentinel in it is not a CI failure: act.py's
-    # preflight leaves the Sentinel out and waits for it between the approval
-    # and the merge, and the board agrees.
-    sentinel_only = checks.get("state") == "red" and not real_failures
+    # A red or pending rollup with only the Sentinel in it is not a CI
+    # failure: act.py's preflight leaves the Sentinel out and waits for it
+    # between the approval and the merge, and the board agrees. (The Sentinel
+    # posts pending while its only open gates are in flight, e.g. the first
+    # review hasn't landed; the gates row above already says so.)
+    sentinel_only = ((checks.get("state") == "red" and not real_failures)
+                     or (checks.get("state") == "pending" and not real_pending))
     if checks.get("state") != "green" and not sentinel_only:
-        gate_fail(f"checks:{checks.get('state')}:{','.join((real_failures or checks.get('pending') or [])[:3])}")
+        gate_fail(f"checks:{checks.get('state')}:{','.join((real_failures or real_pending)[:3])}")
         if checks.get("state") == "red":
             blocked.append("checks:red")
             named = ", ".join(real_failures[:3]) + (f" and {len(real_failures) - 3} more" if len(real_failures) > 3 else "")

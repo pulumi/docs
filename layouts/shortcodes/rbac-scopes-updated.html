@@ -1,0 +1,11 @@
+{{/*
+  The "last updated" caption for the RBAC scope reference. The date lives in
+  data/rbac_scopes_updated.json and is stamped by the update-rbac-scopes
+  workflow only on runs where data/rbac_scopes.json changed, so it tracks real
+  changes rather than nightly no-op runs. Place once, under the page intro.
+*/}}
+{{ with (site.Data.rbac_scopes_updated).updated }}
+<p class="-mt-2 text-sm text-gray-500 dark:text-gray-400">
+  Generated from the Pulumi Cloud API. Last changed on {{ . }}.
+</p>
+{{ end }}

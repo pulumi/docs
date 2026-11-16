@@ -34,7 +34,7 @@ The simplest website you can build is a static site. That means no web server, j
 
 - [Pulumi account](https://app.pulumi.com/signup)
 
-- [Pulumi installed and configured for AWS](https://www.pulumi.com/docs/iac/get-started/aws/)
+- [Pulumi installed and configured for AWS](/docs/integrations/clouds/aws/)
 
 - Python3
 

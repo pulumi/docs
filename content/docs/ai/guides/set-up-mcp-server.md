@@ -197,4 +197,4 @@ The server exposes tools for Pulumi Cloud, Neo, the Pulumi Registry, and code ge
 - [Pulumi Neo](/docs/ai/concepts/neo/): Pulumi's infrastructure agent.
 - [Agent accounts](/docs/administration/concepts/agent-accounts/): Pulumi Cloud accounts that agents provision for themselves.
 - [Access tokens](/docs/administration/concepts/access-tokens/): personal, organization, and team tokens.
-- [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/)
+- [What is agentic infrastructure?](/topics/agentic-infrastructure/)

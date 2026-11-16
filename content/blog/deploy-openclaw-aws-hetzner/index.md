@@ -810,4 +810,4 @@ Deploying OpenClaw with infrastructure as code means you can reproduce your setu
 
 If you run into issues or have questions, drop by the [Pulumi Community Slack](https://slack.pulumi.com/) or [GitHub Discussions](https://github.com/pulumi/pulumi/discussions).
 
-New to Pulumi? [Get started here](/docs/get-started/).
+New to Pulumi? [Get started here](/up/).

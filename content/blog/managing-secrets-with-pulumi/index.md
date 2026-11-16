@@ -39,7 +39,7 @@ greater confidence.
 
 ## Why Secrets Management Matters in Cloud Infrastructure
 
-Like many [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
+Like many [infrastructure as code](/topics/infrastructure-as-code/)
 systems, Pulumi uses a state file to describe the current state of your infrastructure.
 When you run `pulumi up`, Pulumi takes your existing state file, runs your program to
 compute a new desired state and compares the two states. It makes

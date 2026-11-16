@@ -26,7 +26,7 @@ Today, we will deploy our first Cloud Run services with Pulumi. Then, we'll disc
 
 We'll start by deploying a pre-built container image provided by Google to a Cloud Run service.
 
-To follow along, create a new Pulumi project with the [Get Started with Google Cloud](https://www.pulumi.com/docs/iac/get-started/gcp/) guide.
+To follow along, create a new Pulumi project with the [Get Started with Google Cloud](/up/?cloud=gcp) guide.
 
 ### Enable Cloud Run for the project
 

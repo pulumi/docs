@@ -1,0 +1,9 @@
+{{- /*
+  Renders the built-in permission sets for one entity type as a table.
+  Usage: {{< rbac-permission-sets "stack" >}} (or "environment",
+  "insights-account", "global"). Data: see rbac-scopes.html.
+*/ -}}
+{{- /* Fixed column widths keep the four tables on the page the same shape. */ -}}
+<div class="md:[&_table]:w-full md:[&_table]:table-fixed md:[&_th:nth-child(1)]:w-1/5 md:[&_th:nth-child(2)]:w-2/5">
+{{ partial "rbac/permission-set-table.html" (.Get 0) | markdownify }}
+</div>

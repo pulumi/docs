@@ -302,7 +302,7 @@ real code, instead of YAML, and you've gotten a taste of the `pulumi up`
 deployment workflow, especially compared to `kubectl`.
 
 **Try it out now** by heading over to our
-[Getting Started page](/docs/get-started/).
+[Getting Started page](/up/).
 
 We are just getting started. In the coming weeks we will be sharing more
 around other deployment scenarios, including A/B traffic splitting,

@@ -804,37 +804,47 @@ def render_investigation_log(
     # Hugo/frontmatter/readthrough) are NOT fact-check claims; exclude them so
     # they don't inflate the "X of Y claims verified" counts (route_counts is
     # filtered to match, so I+P+F+S still sums to Y).
+    #
+    # No claims is rendered as the full canonical skeleton with zero counts, not
+    # as `not run (no claims in this diff)` (pulumi/docs#20596). The reviewer may
+    # legitimately add in-review claims, and then rewrites this bullet into the
+    # `X of Y claims verified` form -- at which point the dispatch- and
+    # routed-metadata rules apply to a line that had no segments to preserve, so
+    # it published with violations validator-fix can't reliably reconstruct.
+    # With the skeleton in place, an in-review addition increments counts that
+    # already exist. `0 of 0` is exempt from the metadata rules
+    # (validate-pinned.py `_external_claim_line`), so the zero form validates.
     fact_verdicts = [v for v in verdicts if v.get("route") != "preflight"]
-    if not fact_verdicts:
-        bullets.append("- **External claim verification:** not run (no claims in this diff)")
-    else:
-        y = len(fact_verdicts)
-        x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
-        n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
-        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
-        n_drift = sum(1 for v in fact_verdicts if v.get("verdict") in DRIFT_VERDICTS)
-        i_inline = route_counts.get("inline", 0)
-        p1 = route_counts.get("pass1", 0)
-        f2 = route_counts.get("pass2", 0)
-        s3 = route_counts.get("pass3", 0)
-        k_corr = route_counts.get("k_corr", 0)
-        seg = (
-            f"- **External claim verification:** {x} of {y} claims verified "
-            f"({n_unver} unverifiable, {n_contra} contradicted"
-            f"{f', {n_drift} framing-drift' if n_drift else ''}) · "
-            f"4 specialists (numerical, cross-reference, capability, framing); "
-            f"{k_corr} cross-specialist corroborations · "
-            f"routed: {i_inline} inline, {p1} Pass 1, {f2} Pass 2"
-        )
-        if f2 > 0:
-            v2, c2, u2 = route_counts.get("pass2_vcu", (0, 0, 0))
-            seg += f" (verified {v2}, contradicted {c2}, unverifiable {u2})"
-        seg += f", {s3} Pass 3"
-        if s3 > 0:
-            v3, c3, u3 = route_counts.get("pass3_vcu", (0, 0, 0))
-            seg += f" (verified {v3}, contradicted {c3}, unverifiable {u3})"
-        seg += "."
-        bullets.append(seg)
+    # With no claims, every count is zero by construction; don't trust a
+    # route_counts that was computed over detector-only verdicts.
+    claim_routes = route_counts if fact_verdicts else {}
+    y = len(fact_verdicts)
+    x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
+    n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
+    n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
+    n_drift = sum(1 for v in fact_verdicts if v.get("verdict") in DRIFT_VERDICTS)
+    i_inline = claim_routes.get("inline", 0)
+    p1 = claim_routes.get("pass1", 0)
+    f2 = claim_routes.get("pass2", 0)
+    s3 = claim_routes.get("pass3", 0)
+    k_corr = claim_routes.get("k_corr", 0)
+    seg = (
+        f"- **External claim verification:** {x} of {y} claims verified "
+        f"({n_unver} unverifiable, {n_contra} contradicted"
+        f"{f', {n_drift} framing-drift' if n_drift else ''}) · "
+        f"4 specialists (numerical, cross-reference, capability, framing); "
+        f"{k_corr} cross-specialist corroborations · "
+        f"routed: {i_inline} inline, {p1} Pass 1, {f2} Pass 2"
+    )
+    if f2 > 0:
+        v2, c2, u2 = claim_routes.get("pass2_vcu", (0, 0, 0))
+        seg += f" (verified {v2}, contradicted {c2}, unverifiable {u2})"
+    seg += f", {s3} Pass 3"
+    if s3 > 0:
+        v3, c3, u3 = claim_routes.get("pass3_vcu", (0, 0, 0))
+        seg += f" (verified {v3}, contradicted {c3}, unverifiable {u3})"
+    seg += "."
+    bullets.append(seg)
 
     # 3. Cited-claim spot-checks.
     n_cited = sum(1 for v in verdicts if v.get("route") == "pass2")
@@ -1495,6 +1505,10 @@ def _stub_bullet(v: dict, todo: str) -> dict:
             stub["unverifiable_kind"] = "outage"
         else:
             stub["unverifiable_kind"] = "ordinary"
+        # What the verifier said stopped it, for split_private_source_checks:
+        # it is told to name an unreadable implementing change here when only
+        # that change could settle the claim.
+        stub["evidence_text"] = f"{v.get('evidence') or ''}\n{v.get('source') or ''}"
     return stub
 
 
@@ -2109,7 +2123,9 @@ def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]
 
     `unverifiable` → ❓ (only the author can source or soften their own claim —
     a turn-cap unverifiable still ends the same way: the author supplies the
-    source). Everything else the composer stubs at low confidence
+    source). compose_v3 then lifts out the one exception,
+    split_private_source_checks: unverifiable only because the implementing
+    change is private, which a reviewer settles and the author can't. Everything else the composer stubs at low confidence
     (framing-drift, weakly-verified) → ⚠️: there might be an issue, and that
     judgment belongs to the reviewer, not the author. The model may PROMOTE
     (⚠️ → ❓ → 🚨) with a stated reason, never demote — bucket-split-faithful
@@ -2148,6 +2164,72 @@ def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]
 GROUP_MIN_MEMBERS = 3
 GROUP_MEMBER_TRUNC = 80
 GROUP_FILE = "(multiple files)"
+
+
+def refs_named_in(text: str, refs: list[str]) -> list[str]:
+    """The refs in `refs` that `text` names, by the ref itself or by its
+    repository (`pulumi/<repo>`), case-insensitively, in `refs` order."""
+    low = (text or "").lower()
+    out: list[str] = []
+    for r in refs:
+        repo = _ref_repo(r)
+        if r.lower() in low or (repo and re.search(re.escape(repo) + r"(?![\w.-])", low)):
+            out.append(r)
+    return out
+
+
+def _ref_repo(ref: str) -> str:
+    m = re.search(r"\b(?:github\.com/)?(pulumi/[\w.-]+?)(?:#\d+|/|$)", ref, re.I)
+    return m.group(1).lower() if m else ""
+
+
+def split_private_source_checks(stubs: list[dict], unreadable_refs: list[str]
+                                ) -> tuple[list[dict], list[dict]]:
+    """(checks, kept): the ❓ stubs that are unverifiable ONLY because the
+    implementing change they rest on is private to this review's token.
+
+    The author can't do anything about that, and asking them blocked a
+    one-line changelog PR on a question it had no way to answer
+    (pulumi/docs#22397: one claim, the cited pulumi/pulumi-service PR 404ed,
+    the ❓ counted as undecided at Sentinel G2). A reviewer who can read the
+    private change can settle it, so these go to the brief's ⚠️ list as one
+    row naming the ref. Narrower than the ❓ group below: an `ordinary`
+    pass1 unverifiable whose own evidence or source names an unreadable ref
+    or its repository — the verifier is told to name it exactly when only
+    that change could settle the claim. Everything else keeps its ❓."""
+    if not unreadable_refs:
+        return [], list(stubs)
+    checks = [s for s in stubs
+              if s.get("unverifiable_kind") == "ordinary" and s.get("route") == "pass1"
+              and refs_named_in(s.get("evidence_text") or "", unreadable_refs)]
+    picked = {id(s) for s in checks}
+    return checks, [s for s in stubs if id(s) not in picked]
+
+
+def render_private_check(checks: list[dict], unreadable_refs: list[str]
+                         ) -> tuple[dict, str]:
+    """(stub, rendered body) for the ⚠️ row the private-source checks share.
+
+    One claim keeps its own Where and quote; several share a `—` Where and
+    list as `members` on the evidence page, so the brief stays one line
+    however many claims the private change explains."""
+    named = [r for r in unreadable_refs
+             if any(r in refs_named_in(s.get("evidence_text") or "", unreadable_refs) for s in checks)]
+    refs = named or list(unreadable_refs)
+    noun = "change" if len(refs) == 1 else "changes"
+    if len(checks) == 1:
+        s = checks[0]
+        text = s.get("text") or ""
+        excerpt = f"*{quote(trunc(text, AUTHOR_CELL_TRUNC))}* " if text else ""
+        body = (f"{excerpt}— rests on {_refs_phrase(refs)}, which this review can't read "
+                f"(private); check it against that {noun} before approving — verdict: unverifiable")
+        stub = dict(s)
+        return stub, body
+    body = (f"{len(checks)} claims about Pulumi's own behavior rest on {_refs_phrase(refs)}, which "
+            f"this review can't read (private); check them against that {noun} before approving "
+            "(each is listed on the evidence page) — verdict: unverifiable")
+    stub = {"file": GROUP_FILE, "ref": "", "text": body, "origin": "verdict:unverifiable"}
+    return stub, body
 
 
 def split_private_source_unverifiable(stubs: list[dict], unreadable_refs: list[str]
@@ -2405,7 +2487,19 @@ def orient_audience(body: str) -> tuple[bool, bool]:
     return ("<!-- CLAUDE_REVIEW_AUTOMATED_AUTHOR" in body, AUTOFIX_AUTHOR_MARKER in body)
 
 
-def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool = False) -> list[str]:
+_OPEN_ROW_RE = re.compile(r"^\| \*\*(F\d+)\*\* \|", re.M)
+
+
+def first_open_id(author_body: str) -> str:
+    """The first finding id in the card's open (🚨/❓) tables, or "F1". Rows
+    under "Resolved since last review" don't count."""
+    head = author_body.split("### ✅", 1)[0]
+    m = _OPEN_ROW_RE.search(head)
+    return m.group(1) if m else "F1"
+
+
+def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool = False,
+                         first_id: str = "F1") -> list[str]:
     """The callout under the author header. Owned here so the refresh lanes
     (build-evidence._fix_header) can swap it when the count crosses zero —
     a "nothing blocks merge" card must not open with "needs your answers
@@ -2415,7 +2509,12 @@ def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool
     because the full **How to answer** footer is collapsed (2026-09-25:
     authors lost the open items under a screenful of instructions). The
     callout is the part of the card everyone reads; the fold keeps the
-    worked examples one click away."""
+    worked examples one click away.
+
+    The author form leads with `/update-review accept`, which command-gate.py
+    answers in about a minute with no model run. The automated form keeps the
+    model-read shape: there the reader is a reviewer, and an accept from
+    anyone but the PR's author goes to the model anyway."""
     if automated and n_blocking:
         # Nobody on the author side will answer. Say who does: the reviewer
         # triage requested, after the glow-up autofix's pass where it runs.
@@ -2445,9 +2544,8 @@ def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool
             "> [!IMPORTANT]",
             "> **You = the PR author.** Answer every item below before this PR can merge.",
             ">",
-            "> **To answer:** push a fix, or reply "
-            "`/update-review F1: <what you fixed, why it's wrong, or \"accepting as-is — why\">`. "
-            "A reply without `/update-review` at the start of a line doesn't count. "
+            f"> **To answer:** push a fix, ship it as-is with `/update-review accept {first_id} <why>`, "
+            f"or dispute it with `/update-review {first_id}: <why it's wrong>`. "
             "Examples: **How to answer** at the bottom.",
         ]
     return [
@@ -2672,6 +2770,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     lowconf_kept, preexisting_stubs = split_untouched_unverifiable(
         prep["lowconf_stubs"], prep["changed_lines"])
     author_answer_stubs, reviewer_check_stubs = split_v3_buckets(lowconf_kept)
+    private_checks, author_answer_stubs = split_private_source_checks(
+        author_answer_stubs, prep["impl_refs_unreadable"])
     group_members, author_answer_stubs = split_private_source_unverifiable(
         author_answer_stubs, prep["impl_refs_unreadable"])
 
@@ -2760,6 +2860,17 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         question_lines.append(render_finding_line(fid, _v3_adapt_todo(author_cell_bullet(s)), link_base=link_base, edit_base=edit_base))
 
     check_lines: list[str] = []
+    if private_checks:
+        pstub, pbody = render_private_check(private_checks, prep["impl_refs_unreadable"])
+        fid, rec = _assign(pstub, "reviewer-check", pbody)
+        rec["text"] = pbody
+        if len(private_checks) > 1:
+            rec["members"] = group_member_records(private_checks)
+            check_lines.append(render_finding_row(fid, body=pbody))
+        else:
+            check_lines.append(render_finding_row(
+                fid, ref=pstub.get("ref") or "", file=pstub.get("file") or "",
+                body=pbody, link_base=link_base))
     for s in reviewer_check_stubs:
         fid, _ = _assign(s, "reviewer-check", s["bullet"])
         check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base))
@@ -2862,7 +2973,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     else:
         header_verb = AUTHOR_HEADER_NOTHING_BLOCKS
     marker = automated_marker(getattr(args, "head_branch", ""))
-    orient = render_author_orient(n_blocking, bool(marker), marker == AUTOFIX_AUTHOR_MARKER)
+    first_id = next((f["id"] for f in findings if f["bucket"] in ("outstanding", "author-answer")), "F1")
+    orient = render_author_orient(n_blocking, bool(marker), marker == AUTOFIX_AUTHOR_MARKER, first_id)
 
     def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
         if not rows:
@@ -2981,7 +3093,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
             "(2) what specific kind of wrongness would block a reader's success, (3) which investigative passes ran>.",
             "> **What this PR changes:**\n"
             ">\n"
-            "> - <TODO: one bullet per meaningful change — subject + what changed, one line each; a reviewer scans this list, so no compound bullets>\n"
+            "> - <TODO: one bullet per meaningful change — subject + what changed, one line each; a reviewer scans this list, so no compound bullets; mark a change the PR description doesn't mention per ci.md §The v3 surface>\n"
             ">\n"
             "> <TODO: one sentence — what specific kind of wrongness would block a reader's success — then one sentence naming which investigative passes ran>.",
             1),

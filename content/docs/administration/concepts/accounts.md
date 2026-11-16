@@ -140,6 +140,8 @@ If you signed up with an email address, you can change your password:
 
 Your password must be between 10 and 160 characters, and it cannot be the same as your username or your email address.
 
+Changing your password, or resetting it from the sign-in page, signs you out everywhere. Pulumi Cloud ends your web console sessions, revokes your [personal access tokens](/docs/administration/concepts/access-tokens/#personal-access-tokens) (which signs out the Pulumi CLI) and the tokens of OAuth apps you've connected, and removes every registered [passkey](#signing-in-with-a-passkey). Afterward, sign back in, create new access tokens, and register your passkeys again.
+
 ### Setting up MFA
 
 If you signed up with an email address, you can protect your account with multi-factor authentication using time-based one-time passwords (TOTP). MFA enrollment requires confirming your password, so it is available only to accounts that have one — if you sign in exclusively through GitHub, GitLab, Google, Atlassian, or SAML SSO, enforce multi-factor authentication with that provider instead.
@@ -177,6 +179,8 @@ Pulumi Cloud names the passkey after the authenticator it recognizes, such as "W
 You can register as many passkeys as you want. One per device is common, as is one synced credential plus a hardware key as a backup.
 
 To use one, select the passkey option on the sign-in page. If your browser supports passkey autofill, the email field also offers your registered passkeys as suggestions.
+
+Changing or [resetting your password](#resetting-your-password) removes every passkey registered on your account, so register them again afterward.
 
 Registering a passkey does not disable any other way of signing in. Your password, if you have one, keeps working, so losing every registered passkey does not lock you out of your account.
 

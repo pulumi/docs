@@ -28,7 +28,7 @@ That’s why today we’re introducing the new and improved Pulumi ESC Web Edito
 
 <!--more-->
 
-Today, you can create and manage your Pulumi ESC configuration in multiple ways, such as using the CLI `set` and `edit` commands, or through our [VS Code extension](/docs/esc/development/vs-code-extension/). For many users, however, their first experience with ESC happens in the Pulumi Cloud Console.
+Today, you can create and manage your Pulumi ESC configuration in multiple ways, such as using the CLI `set` and `edit` commands, or through our [VS Code extension](/docs/integrations/vs-code/). For many users, however, their first experience with ESC happens in the Pulumi Cloud Console.
 
 Based on feedback from users of both our YAML Document view and Table view in the Console, we've been working hard to create a new and improved unified editor experience that makes ESC even easier to work with. One of the most notable improvements is a brand new **Inspect** tab that lets you easily edit secrets and gain deeper insights into your configuration. With this new UI, you can now freely switch between writing YAML and using rich UI elements to manipulate your environment—and the editor keeps everything in sync, with clear, in-context information about what you're doing and what's possible at every step.
 
@@ -45,7 +45,7 @@ The **Inspect** tab lets you view and edit your secret securely, automatically e
 
 ## Using providers and built-in functions
 
-ESC offers a large library of [providers](/docs/esc/integrations/) and [built-in functions](/docs/esc/environments/syntax/builtin-functions/) to use in your environment. The new editor makes discovering and using them effortless.
+ESC offers a large library of [providers](/docs/esc/integrations/) and [built-in functions](/docs/esc/concepts/builtin-functions/) to use in your environment. The new editor makes discovering and using them effortless.
 
 <div class="flex flex-col md:flex-row gap-4 my-4">
   <img src="providers.png" alt="Screenshot of adding providers" class="w-full" />

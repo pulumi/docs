@@ -1,6 +1,6 @@
 ---
 title_tag: "hooks | Resource Options"
-meta_desc: The hooks resource option provides a set of resource hooks linked to a resource.
+meta_desc: Use the hooks resource option to run custom logic before or after a resource is created, updated, or deleted, or when a resource operation fails.
 title: "hooks"
 h1: "Resource option: hooks"
 menu:
@@ -22,17 +22,15 @@ The `hooks` resource option provides a set of resource hooks linked to a resourc
 Resource hooks are supported in TypeScript/JavaScript, Python, Go, and C#/.NET. Java and YAML do not support resource hooks.
 {{% /notes %}}
 
-A hook attached to a component fires on the component's own create, update, and delete lifecycle events — not on those of its children. To run a hook for a child resource, attach it to that child directly.
+Each hook is a callback that the Pulumi engine invokes. Hooks that execute before an action are called **before hooks** and have names beginning with `before` or `Before` depending on the language. Hooks that execute after an action are called **after hooks** and have names beginning with `after` or `After` depending on the language. Pulumi supports the following hook types:
 
-Each hook is a callback that gets invoked by the Pulumi engine. Hooks that execute before an action are called **before hooks** and have names beginning with `before` or `Before` depending on the language. Hooks that execute after an action are called **after hooks** and have names beginning with `after` or `After` depending on the language. Pulumi currently supports the following hook types:
-
-* *Create hooks* are called before or after a resource is created. This may occur during the initial creation of a resource or when a resource requires replacement due to e.g. a change in an immutable property.
+* *Create hooks* are called before or after a resource is created. This may occur during the initial creation of a resource or when a resource requires replacement, for example because of a change to an immutable property.
 
 * *Update hooks* are called before or after a resource is updated in-place.
 
-* *Delete hooks* are called before or after a resource is deleted. This may occur during the deletion of a resource due to a `destroy` or that resource's removal from the program, or as part of a resource replacement due to e.g. a change in an immutable property.
+* *Delete hooks* are called before or after a resource is deleted. This may occur during the deletion of a resource due to a `destroy` or that resource's removal from the program, or as part of a resource replacement, for example because of a change to an immutable property.
 
-In addition to these before/after hooks, [error hooks](#error-hooks) run when a resource operation fails and can ask the engine to retry it.
+Alongside these before and after hooks, [error hooks](#error-hooks) run when a resource operation fails and can ask the engine to retry it.
 
 When a hook is executed as part of a resource operation, it receives the resource's [URN](/docs/iac/concepts/resources/names/#urns) and ID, as well as any relevant input and output properties. Hooks may return errors. If a before hook returns an error, the action it precedes is *not* executed and the Pulumi operation fails with that error. If an after hook returns an error, the underlying resource operation has already completed and is recorded in the state, but the deployment then fails. To opt out of this behavior and instead log a warning and continue, set the [`ignoreErrors`](#ignoring-hook-errors) option on the hook. The table below illustrates the combinations of inputs, outputs, and error behaviors for each hook type:
 
@@ -100,7 +98,7 @@ nohup python3 -m http.server 80 &`
   const ami = aws.ec2.getAmiOutput({
     filters: [{
       name: "name",
-      values: ["amzn2-ami-hvm-*"],
+      values: ["al2023-ami-2023.*-x86_64"],
     }],
     // Amazon owns this AMI so we'll use their owner ID.
     owners: ["137112412989"],
@@ -185,7 +183,7 @@ ami = ec2.get_ami_output(
     filters=[
         {
             "name": "name",
-            "values": ["amzn2-ami-hvm-*"],
+            "values": ["al2023-ami-2023.*-x86_64"],
         }
     ],
     # Amazon owns this AMI so we'll use their owner ID.
@@ -238,7 +236,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -301,7 +299,7 @@ nohup python3 -m http.server 80 &`
 			Filters: []ec2.GetAmiFilter{
 				{
 					Name:   "name",
-					Values: []string{"amzn2-ami-hvm-*"},
+					Values: []string{"al2023-ami-2023.*-x86_64"},
 				},
 			},
 			// Amazon owns this AMI so we'll use their owner ID.
@@ -423,14 +421,14 @@ nohup python3 -m http.server 80 &";
         // Set up the resources needed to run the web server.
 
         var instanceType = "t2.micro";
-        var ami = GetAmi.Invoke(new GetAmiArgs
+        var ami = GetAmi.Invoke(new GetAmiInvokeArgs
         {
             Filters =
             {
-                new GetAmiFilterArgs
+                new GetAmiFilterInputArgs
                 {
                     Name = "name",
-                    Values = { "amzn2-ami-hvm-*" },
+                    Values = { "al2023-ami-2023.*-x86_64" },
                 },
             },
             Owners = { "137112412989" }, // Amazon owns this AMI so we'll use their owner ID.
@@ -620,7 +618,7 @@ To keep applying other resources after a hook failure on a single update, you ca
 
 ## Deletions and delete hooks
 
-In order for delete hooks to run successfully, Pulumi must have access to any necessary hooks at the time of the deletion. The two bullets below are alternatives, not sequential steps — follow the one that matches how you are deleting the resources:
+For delete hooks to run successfully, Pulumi must have access to any necessary hooks at the time of the deletion. The two bullets below are alternatives, not sequential steps — follow the one that matches how you are deleting the resources:
 
 * **Deleting some resources with `pulumi up`.** When removing resources from your program, first remove *only* the resources you wish to delete, *leaving any delete hooks in place*. On the next `pulumi up`, Pulumi deletes the resources and runs any relevant delete hooks. Once this operation is complete, you can then remove the delete hooks from your program.
 
@@ -628,7 +626,7 @@ In order for delete hooks to run successfully, Pulumi must have access to any ne
 
 ## Error hooks
 
-Like the other resource hooks, which run before and after certain operations, you can also add hooks to run when operations fail. For example, to retry a failing resource registration, or to change the error-handling behavior based on the type of error encountered. The inputs and outputs received will depend on the operation that fails:
+Like the other resource hooks, which run before and after certain operations, you can also add hooks to run when operations fail. For example, you can use an error hook to retry a failing resource registration, or to change the error-handling behavior based on the error encountered. The inputs and outputs an error hook receives depend on the operation that fails:
 
 | Failed operation | Old inputs | New inputs | Old outputs |
 |------------------|------------|------------|-------------|
@@ -808,7 +806,3 @@ class ErrorHookStack : Stack
 {{% /choosable %}}
 
 {{< /chooser >}}
-
-{{% notes type="info" %}}
-An operation can be retried at most 100 times. After this, the engine reports the failure as a program failure, and the deployment fails as normal.
-{{% /notes %}}

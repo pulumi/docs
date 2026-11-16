@@ -41,7 +41,7 @@ category: product
 # for details, and please remove these comments before submitting for review.
 ---
 
-We are excited to introduce a powerful addition to Pulumi's authentication capabilities: OpenID Connect (OIDC) Trust Relationships. This feature makes it easy to integrate Pulumi securely into any ecosystem that supports OIDC. By incorporating [OIDC](/docs/pulumi-cloud/oidc/client/), Pulumi is not only extending its compatibility with a broader range of environments but also reinforcing its commitment to delivering top-tier, secure, and scalable solutions to developers and enterprises alike. Whether you are working within CI/CD pipelines or engaging directly with cloud services, this new feature ensures that your infrastructure management is more secure, efficient, and aligned with industry best practices.
+We are excited to introduce a powerful addition to Pulumi's authentication capabilities: OpenID Connect (OIDC) Trust Relationships. This feature makes it easy to integrate Pulumi securely into any ecosystem that supports OIDC. By incorporating [OIDC](/docs/administration/guides/oidc-issuers/), Pulumi is not only extending its compatibility with a broader range of environments but also reinforcing its commitment to delivering top-tier, secure, and scalable solutions to developers and enterprises alike. Whether you are working within CI/CD pipelines or engaging directly with cloud services, this new feature ensures that your infrastructure management is more secure, efficient, and aligned with industry best practices.
 
 <!--more-->
 
@@ -122,6 +122,6 @@ jobs:
 
 ## Next steps
 
-* [OIDC Trust Relationships overview](/docs/pulumi-cloud/oidc/client/)
-* [Configuring OIDC for GitHub](/docs/pulumi-cloud/oidc/client/github/)
-* [Configuring OpenID Connect for Google Kubernetes Engine](/docs/pulumi-cloud/oidc/client/kubernetes-gke/)
+* [OIDC Trust Relationships overview](/docs/administration/guides/oidc-issuers/)
+* [Configuring OIDC for GitHub](/docs/administration/guides/oidc-issuers/github/)
+* [Configuring OpenID Connect for Google Kubernetes Engine](/docs/administration/guides/oidc-issuers/kubernetes-gke/)

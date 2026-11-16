@@ -96,7 +96,7 @@ description: A minimal Pulumi program.
 
 {{< /chooser >}}
 
-Each language has its own conventions for locating the program's entrypoint. For TypeScript, the working directory should contain a `package.json` file that points to an entrypoint such as `index.ts`. For Python, the presence of a `__main__.py` or `setup.py` file defines the entrypoint. Go, .NET, and Java follow the conventions of their respective build tools. For HCL, the working directory should contain one or more `.tf` files.
+Each language has its own conventions for locating the program's entrypoint. For TypeScript, the working directory should contain a `package.json` file that points to an entrypoint such as `index.ts`. For Python, the entrypoint is a `__main__.py` file. Go, .NET, and Java follow the conventions of their respective build tools. For HCL, the working directory should contain one or more `.tf` files.
 
 The following are other examples of `Pulumi.yaml` files that define project configurations for other use cases.
 
