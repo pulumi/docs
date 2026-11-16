@@ -35,12 +35,19 @@
 
             <section class="template-event-single-header">
                 <h1 class="event-single-title">{{ .Params.title }}</h1>
-                <div>{{ partial "badge.html" (dict "text" .Params.event_type "variant" "outline") }}</div>
+                <div class="flex flex-wrap items-center gap-2">
+                    {{ partial "badge.html" (dict "text" .Params.event_type "variant" "outline") }}
+                    {{ with partial "events/track.html" (dict "page" .) }}{{ if ge .index 0 }}
+                        {{ partial "badge.html" (dict "text" (printf "%s · %d of %d" .track.title (add .index 1) (len .parts)) "variant" "brand" "href" (site.GetPage (printf "/track/%s" .track.slug)).RelPermalink) }}
+                    {{ end }}{{ end }}
+                </div>
             </section>
         </div>
 
         {{/* Main content area */}}
         {{ partial "events/type-content.html" . }}
+
+        {{ partial "events/track-parts.html" . }}
     </div>
 {{ end }}
 {{ end }}

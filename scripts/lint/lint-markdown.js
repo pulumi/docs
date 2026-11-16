@@ -611,6 +611,43 @@ function checkSeriesConsistency(series, tags, fullPath) {
     return null;
 }
 
+const EVENT_TRACK_SLUGS = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/event_tracks.yml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return new Set((doc.tracks || []).map(t => t.slug).filter(Boolean));
+    } catch (e) {
+        console.warn(`Warning: could not load event tracks: ${e.message}`);
+        return new Set();
+    }
+})();
+
+/**
+ * checkEventTrack validates the `track:` key. Any value mints a public
+ * /events/tracks/<value>/ page, so it must be a slug from data/event_tracks.yml,
+ * and the taxonomy is site-wide, so only event pages may set it.
+ *
+ * @param {*} track The `track` front matter value.
+ * @param {string} fullPath The absolute path of the file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkEventTrack(track, fullPath) {
+    if (track === undefined || track === null || track === "") {
+        return null;
+    }
+    const normalized = fullPath.replace(/\\/g, "/");
+    if (!normalized.includes("/content/events/")) {
+        return "Only event pages (content/events/) can set 'track:'. It groups events at /events/tracks/<slug>/.";
+    }
+    if (typeof track !== "string") {
+        return "Event 'track' must be a single slug, not a list. See data/event_tracks.yml.";
+    }
+    if (!EVENT_TRACK_SLUGS.has(track)) {
+        return `Event has 'track: ${track}', which isn't defined in data/event_tracks.yml. Fix the slug or add the track there.`;
+    }
+    return null;
+}
+
 /**
  * Approximates Hugo's `anchorize` well enough to detect two session labels that
  * would collide into the same anchor (and so the same DOM key): lowercase, spaces
@@ -1458,6 +1495,7 @@ function searchForMarkdown(paths) {
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     eventSessions: checkEventSessions(obj, fullPath),
+                    eventTrack: checkEventTrack(obj.track, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
                     changelogEditions: checkChangelogEditions(obj.editions, obj.tiers, obj.tier, fullPath),
                     pulumiCloudFeature: checkPulumiCloudFeature(obj.pulumi_cloud_feature, obj.pulumi_cloud),
@@ -1619,6 +1657,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.eventSessions,
+                });
+            }
+            if (frontMatterErrors.eventTrack) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.eventTrack,
                 });
             }
             if (frontMatterErrors.changelogFilename) {

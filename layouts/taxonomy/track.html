@@ -1,0 +1,35 @@
+{{ define "hero" }}
+{{ end }}
+
+{{ define "main" }}
+{{ with partial "events/track.html" (dict "slug" .Data.Term) }}
+    <div class="font-body container mx-auto mb-16 mt-16 px-8 flex flex-col gap-12 max-w-6xl">
+        <div class="flex flex-col gap-8">
+            {{ partial "breadcrumb.html" (dict "crumbs" (slice
+                (dict "name" "Events and Workshops" "url" "/events/")
+                (dict "name" "Tracks" "url" "/events/tracks/"))) }}
+
+            <section>
+                <h1 class="heading-xl m-0 mb-4 max-w-prose text-black">{{ .track.title }}</h1>
+                <div class="mb-6">{{ partial "badge.html" (dict "text" (printf "Track · %d %s" (len .parts) (cond (eq (len .parts) 1) "event" "events")) "variant" "brand") }}</div>
+                {{ with .track.description }}<p class="body-lg m-0 max-w-3xl text-gray-700">{{ . | markdownify }}</p>{{ end }}
+            </section>
+        </div>
+
+        <ol class="list-none pl-0 m-0 flex flex-col">
+            {{ $last := sub (len .parts) 1 }}
+            {{ range $i, $p := .parts }}
+                <li class="my-0 grid grid-cols-[2.5rem_1fr] gap-5 md:grid-cols-[3.5rem_1fr] md:gap-8">
+                    <div class="flex flex-col items-center">
+                        <span class="flex size-10 shrink-0 items-center justify-center rounded-full border-2 border-violet-primary bg-white font-mono text-base text-violet-primary md:size-14 md:text-xl" aria-label="Part {{ add $i 1 }}">{{ add $i 1 }}</span>
+                        {{ if lt $i $last }}<span class="my-2 w-px flex-1 bg-gray-200"></span>{{ end }}
+                    </div>
+                    <div class="{{ if lt $i $last }}pb-8{{ end }}">
+                        {{ partial "events/event-card.html" (dict "page" $p "pageContext" $ "hideTrack" true) }}
+                    </div>
+                </li>
+            {{ end }}
+        </ol>
+    </div>
+{{ end }}
+{{ end }}

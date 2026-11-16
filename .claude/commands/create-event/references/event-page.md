@@ -17,6 +17,7 @@ The single source of truth for the schema is `archetypes/event/index.md` (its co
 | `sortable_date` | ISO 8601 with milliseconds and the offset valid **on that date** — see recipe. Sorts the list, dates schema.org, stamps the card. |
 | `youtube_url` | Leave empty until the event has run. Setting it flips the page to the on-demand layout (no form, out of "Upcoming"). Multi-session: only after the **last** session. |
 | `featured` / `unlisted` | Default `false`. |
+| `track` | Optional. A slug from `data/event_tracks.yml` when the event is one part of an ordered group; parts are numbered by `sortable_date`. Add the track to the data file first if it's new. |
 
 ## Slug rules
 
@@ -87,7 +88,8 @@ Fresh clones/worktrees may lack node deps. Best effort, in order: try `make lint
 4. Directory name matches the slug; `event_url`, when set, is an `https://…` URL or a `/…` path.
 5. `sortable_date` matches `\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}[+-]\d{2}:\d{2}` and the offset came from the recipe.
 6. Sessions rules above, when present.
-7. No trailing whitespace; file ends with a newline.
+7. `track`, when set, is a single slug defined in `data/event_tracks.yml`.
+8. No trailing whitespace; file ends with a newline.
 
 Report which validator ran. A fallback pass is not a substitute: note that `make lint` must pass in CI.
 

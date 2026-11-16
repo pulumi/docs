@@ -20,6 +20,9 @@ gated: true
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
+# Track this event belongs to (see data/event_tracks.yml).
+track: unleash-your-agents
+
 # URL for embedding a URL for ungated events.
 youtube_url:
 

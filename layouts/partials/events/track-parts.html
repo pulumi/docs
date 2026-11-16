@@ -1,0 +1,44 @@
+{{- /* Every part of the event's track, numbered, with the current event highlighted. Params: the event page. */ -}}
+{{ $page := . }}
+{{ with partial "events/track.html" (dict "page" $page) }}
+{{ if ge .index 0 }}
+    {{ $current := .index }}
+    {{ $trackUrl := (site.GetPage (printf "/track/%s" .track.slug)).RelPermalink }}
+    {{ $gridClass := index (dict "2" "md:grid-cols-2" "3" "md:grid-cols-3") (string (len .parts)) | default "md:grid-cols-2 lg:grid-cols-4" }}
+    <section class="card bg-white p-8 md:p-10">
+        <div class="mb-6 flex flex-wrap items-end justify-between gap-4">
+            <div>
+                <p class="font-overline-sm m-0 mb-2 text-gray-600">{{ len .parts }}-part track</p>
+                <h2 class="heading-4 m-0 text-service-black">{{ .track.title }}</h2>
+            </div>
+            {{ with $trackUrl }}
+                <a href="{{ . }}" class="btn btn-ghost-primary">
+                    View
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
+            {{ end }}
+        </div>
+        <ol class="grid grid-cols-1 gap-4 {{ $gridClass }} list-none pl-0 m-0">
+            {{ range $i, $p := .parts }}
+                {{ $status := "Past" }}
+                {{ if $p.Params.youtube_url }}
+                    {{ $status = "On-demand" }}
+                {{ else if partial "events/is-current.html" (dict "page" $p) }}
+                    {{ $status = "Upcoming" }}
+                {{ end }}
+                <li class="my-0">
+                    {{ if eq $i $current }}
+                        <div aria-current="page" class="flex h-full flex-col gap-3 rounded-lg border-2 border-violet-primary bg-violet-50 p-5">
+                            {{ partial "events/track-part-body.html" (dict "page" $p "number" (add $i 1) "status" $status "current" true) }}
+                        </div>
+                    {{ else }}
+                        <a href="{{ $p.RelPermalink }}" class="card card-hover flex h-full flex-col gap-3 bg-white p-5 no-underline">
+                            {{ partial "events/track-part-body.html" (dict "page" $p "number" (add $i 1) "status" $status) }}
+                        </a>
+                    {{ end }}
+                </li>
+            {{ end }}
+        </ol>
+    </section>
+{{ end }}
+{{ end }}
