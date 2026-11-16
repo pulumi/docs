@@ -45,5 +45,9 @@ export const marketingWebPaths = [
     "/love",
     "/love/",
     "/love.md",
+    // Covers /releases/, /releases/changelog/**, both release pages, the
+    // RSS/JSON feeds, and the changelog entry images/videos. marketing-web
+    // 301s the old /releases/changelog/<slug>/ alias URLs at its own CDN.
+    "/releases*",
     "/sitemap-www-*",
 ];

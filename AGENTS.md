@@ -37,7 +37,7 @@ For all content files, Pulumi's **voice, tone, prose, product naming, and gramma
 
 Meta files like this one, `BUILD-AND-DEPLOY.md`, and agent instruction/skill files (e.g., `.claude/commands/*.md`) are exempt from formatting rules (heading case, trailing newlines, etc.).
 
-For all content files (docs, blogs, changelog entries, etc.):
+For all content files (docs, blogs, etc.):
 
 - **Markdown**: Must always end with a newline.
 - **Headings**: Sentence case at every level (H1 included), and sentence case for nav menu labels. See the brand guide's [writing style](https://brand.pulumi.com/voice/writing-style/) section. Hugo heading mechanics (one H1, FAQ `?` exception) live in `STYLE-GUIDE.md`.
@@ -110,6 +110,7 @@ Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi
 - **`/gads/infrastructure-as-code`**: the Google Ads landing page, built from `apps/www/src/content/section-pages/gads/infrastructure-as-code.yaml`. The other Google Ads pages are retired; `scripts/redirects/gads-redirects.txt` 301s them to `/`, and `content/gads/_index.md` keeps `/gads/` itself redirecting to `/`.
 - **`/try/kubernetes`, `/try/go-iac`, `/try/dotnet-iac`, `/try/python-iac`, `/try/typescript-iac`, `/try/java-iac`**: Google Ads landing pages, built from `apps/www/src/content/section-pages/try/`. All of `/try/*` is proxied, as one CloudFront behavior, so new `/try/` pages need no change here. Nothing in this repo serves `/try/`.
 - **`/love`**: the "Engineers love Pulumi" quote wall, built from `apps/www/src/pages/love/` with its quotes in `apps/www/src/data/testimonials/love.yaml`. `scripts/redirects/love-redirects.txt` 301s the old `/testimonials/` URL to it.
+- **`/releases`**: the releases list, the expanded changelog, every changelog entry, both release pages, and the RSS and JSON feeds, built from `apps/www/src/content/changelog/` and `apps/www/src/content/releases/`. See `apps/www/docs/releases.md` there. Every URL stays the same, so no redirects were needed for the move.
 
 When another page moves over, add its paths to `infrastructure/marketingWebPaths.ts` and a bullet to this list. marketing-web's sitemap at `/sitemap-www-index.xml` (listed in `layouts/robots.txt`) lists every page it builds that isn't noindex, so ship the proxy path in the same release as the page.
 
@@ -167,7 +168,7 @@ Docs pages state which Pulumi Cloud edition a feature needs through a generated 
 
 ### Edition data
 
-`data/pulumi_editions.yaml` is **generated — never hand-edit it.** pulumi/marketing-web owns what Pulumi sells (the editions, their prices and cards, and the per-feature availability matrix) in `apps/www/src/data/pricing/`, builds `/pricing/` from it, and opens a `chore/sync-pulumi-editions` PR here whenever the editions or availability change. Everything here that names an edition reads the generated copy: the docs availability markers above, `{{< pulumi-cloud-editions >}}`, the changelog `editions:` badges, `/releases/index.json`, and `/llms.txt`.
+`data/pulumi_editions.yaml` is **generated — never hand-edit it.** pulumi/marketing-web owns what Pulumi sells (the editions, their prices and cards, and the per-feature availability matrix) in `apps/www/src/data/pricing/`, builds `/pricing/` from it, and opens a `chore/sync-pulumi-editions` PR here whenever the editions or availability change. Everything here that names an edition reads the generated copy: the docs availability markers above, `{{< pulumi-cloud-editions >}}`, and `/llms.txt`.
 
 - **It carries only what docs need**: the ordered editions (`id`, `name`) and each feature's `id`, `name`, `min_edition`, and `hidden`. `min_edition` already accounts for `requires:`, so nothing in this repo expands availability.
 - **To add or rename a feature, move it to another edition, or set `requires:`/`hidden:`**, edit `features.yaml` in marketing-web; its header comment covers the vocabulary ("edition", never "plan"/"tier"/"subscription") and the availability rules. Merge the resulting sync PR here before a docs page that uses the new id, or `make lint` fails on the unknown id.
@@ -229,18 +230,6 @@ pulumi/marketing-web owns the customer registry and builds `/customers/` (see "P
 ## Events
 
 Event pages live at `content/events/<slug>/index.md` — a bundle whose content is entirely frontmatter; the schema's source of truth is `archetypes/event/index.md` (its comments are kept current). **Create a new event with the `/create-event` skill** (`.claude/commands/create-event/SKILL.md`): it collects details from the prompt, the Linear tracking issue, or an interactive wizard, scaffolds the bundle, generates social cards via `/event-meta-image`, opens the docs PR, and keeps the tracking issue current. Events are tracked in **Linear** (Marketing team, the quarter's `Workshops (Q<n> <yy>)` project), not in pulumi/marketing GitHub issues: each event is a parent issue, usually synced from the Notion workshop schedule, with its promotion checklist as sub-issues. The skill creates one from the blueprint (MA-1045) only when none exists. It supports `--dry-run` (writes PR/Linear previews instead of touching GitHub or Linear) and delegates execution to the `event-creator` subagent (`.claude/agents/event-creator.md`). HubSpot form and Salesforce campaign IDs come back from marketing on the Linear issue or as a review suggestion on the PR — never invent them; a gated page carries TODO placeholders until they land, then a rerun of `/create-event <MA-n>` wires them in.
-
----
-
-## Releases changelog entries
-
-Individual changelog items live in `content/releases/changelog/` — one markdown file per entry, listed by month on `/releases/` and rendered at `/releases/changelog/<slug>/` (`layouts/changelog/single.html`). Shared images/videos live in the `images/` and `videos/` subfolders and are referenced by absolute path (e.g. `/releases/changelog/images/2026-06-18-foo.png`), so entry renames don't affect them.
-
-- **Filenames must be `YYYY-MM-DD-<slug>.md`**, and the date prefix must match the frontmatter `date:`. `make lint` enforces both (`checkChangelogFilename` in `scripts/lint/lint-markdown.js`) — a mismatch or non-prefixed name is a hard build failure.
-- **Assets in `images/` and `videos/` must also be date-prefixed** as `YYYY-MM-DD-<slug>.<ext>` (use the referencing entry's date). `make lint` enforces this too (`checkChangelogAssets`). Rename the asset and update its reference together.
-- **Create a new entry with the `/new-changelog` skill** (or `hugo new --kind changelog content/releases/changelog/YYYY-MM-DD-<slug>.md`, which uses `archetypes/changelog.md`). The archetype derives `title` and `date` from the filename.
-- **Optional `editions:`** is a YAML array marking Pulumi Cloud edition availability, rendered as badge(s) beside the date. Values are edition **ids** from the closed set in `data/pulumi_editions.yaml` (`free`, `essentials`, `pro`, `enterprise`), enforced by `checkChangelogEditions` in `scripts/lint/lint-markdown.js`; the templates look the id up and render the display name, so write `enterprise`, not `Enterprise`. List **every** edition the feature is available in — since a lower edition implies the ones above it, that means the lowest applicable edition and all editions above it (e.g. a Pro feature lists both `pro` and `enterprise`). The legacy `tiers:` array and singular `tier:` scalar are hard build failures: "tier" isn't a word the product uses, and the old list predates editions entirely.
-- **Renaming an entry** (changing its slug) changes its URL, so add an `aliases:` entry pointing at the old `/releases/changelog/<old-slug>/` path — same SEO rule as moving any content file.
 
 ---
 
