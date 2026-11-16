@@ -272,7 +272,7 @@ pulumi new https://github.com/myorg/templates/tree/main/aws-typescript
 
 1. **Document configuration** - Write clear descriptions for each config value so users understand what they're providing.
 
-## See also
+## Learn more
 
 - [Project file reference](/docs/iac/concepts/projects/project-file/) - Full reference for `Pulumi.yaml` including all template options
 - [`pulumi new` command](/docs/iac/cli/commands/pulumi_new/) - CLI reference with all available flags
