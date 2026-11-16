@@ -173,6 +173,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiApiDescribeOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiapidescribeoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiApiDescribeOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiApiDescribeOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi api describe</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiApiListOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiapilistoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiApiListOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiApiListOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi api list</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiApiOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiapioptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiApiOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiApiOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi api</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiCancelOptions.yml",
       "output": {
         ".html": {
@@ -380,6 +422,174 @@
       "IsMRef": true,
       "Title": "Pulumi.Automation.Commands.PulumiConvertOptions",
       "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiConvertOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi convert</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentCancelOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumideploymentcanceloptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDeploymentCancelOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentCancelOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi deployment cancel</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentGetOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumideploymentgetoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDeploymentGetOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentGetOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi deployment get</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentListOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumideploymentlistoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDeploymentListOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentListOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi deployment list</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentLogOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumideploymentlogoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDeploymentLogOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentLogOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi deployment log</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumideploymentoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDeploymentOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi deployment</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentRunOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumideploymentrunoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDeploymentRunOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentRunOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi deployment run</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentSettingsDestroyOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumideploymentsettingsdestroyoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDeploymentSettingsDestroyOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentSettingsDestroyOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi deployment settings destroy</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentSettingsEditOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumideploymentsettingseditoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDeploymentSettingsEditOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentSettingsEditOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi deployment settings edit</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentSettingsGetOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumideploymentsettingsgetoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDeploymentSettingsGetOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentSettingsGetOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi deployment settings get</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentSettingsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumideploymentsettingsoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDeploymentSettingsOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDeploymentSettingsOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi deployment settings</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDoOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumidooptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDoOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDoOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi do</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDoShowResourcesOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumidoshowresourcesoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiDoShowResourcesOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiDoShowResourcesOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi do show-resources</code> command.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1237,6 +1447,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiLoginOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiloginoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiLoginOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiLoginOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi login</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiLogsDecryptOptions.yml",
       "output": {
         ".html": {
@@ -1363,6 +1587,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgMemberEditOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiorgmembereditoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiOrgMemberEditOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgMemberEditOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org member edit</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgMemberListOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiorgmemberlistoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiOrgMemberListOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgMemberListOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org member list</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgMemberOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiorgmemberoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiOrgMemberOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgMemberOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org member</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgMemberRemoveOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiorgmemberremoveoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiOrgMemberRemoveOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgMemberRemoveOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org member remove</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgOptions.yml",
       "output": {
         ".html": {
@@ -1374,6 +1654,90 @@
       "IsMRef": true,
       "Title": "Pulumi.Automation.Commands.PulumiOrgOptions",
       "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleAssignOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiorgroleassignoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiOrgRoleAssignOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleAssignOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org role assign</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleEditOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiorgroleeditoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiOrgRoleEditOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleEditOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org role edit</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleListOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiorgrolelistoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiOrgRoleListOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleListOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org role list</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleNewOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiorgrolenewoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiOrgRoleNewOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleNewOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org role new</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiorgroleoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiOrgRoleOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org role</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleRemoveOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiorgroleremoveoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiOrgRoleRemoveOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiOrgRoleRemoveOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi org role remove</code> command.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1447,6 +1811,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiProjectListOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiprojectlistoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiProjectListOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiProjectListOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi project list</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiProjectNewOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumiprojectnewoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiProjectNewOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiProjectNewOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi project new</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiRefreshOptions.yml",
       "output": {
         ".html": {
@@ -1458,6 +1850,20 @@
       "IsMRef": true,
       "Title": "Pulumi.Automation.Commands.PulumiRefreshOptions",
       "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiRefreshOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi refresh</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiSchemaCheckOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumischemacheckoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiSchemaCheckOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiSchemaCheckOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi schema check</code> command.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1626,6 +2032,34 @@
       "IsMRef": true,
       "Title": "Pulumi.Automation.Commands.PulumiStateUpgradeOptions",
       "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiStateUpgradeOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi state upgrade</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiTemplateListOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumitemplatelistoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiTemplateListOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiTemplateListOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi template list</code> command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiTemplatePublishOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumitemplatepublishoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiTemplatePublishOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiTemplatePublishOptions.yml\" sourcestartlinenumber=\"1\">Options for the <code>pulumi template publish</code> command.</p>\n"
     },
     {
       "type": "ManagedReference",
