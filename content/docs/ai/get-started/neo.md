@@ -9,10 +9,10 @@ aliases:
 - /docs/ai/neo/get-started/
 menu:
     ai:
-        name: Pulumi Neo
-        parent: ai-get-started
+        name: Use Neo
+        parent: ai-start
+        weight: 20
         identifier: ai-get-started-neo
-        weight: 10
 ---
 
 ## Enabling and Disabling Neo

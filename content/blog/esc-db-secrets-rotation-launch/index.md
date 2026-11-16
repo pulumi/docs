@@ -31,16 +31,16 @@ Relying on static database credentials introduces substantial risks, which autom
 * **Network Complexity & The DIY Burden:** Databases in private networks (like AWS VPCs) require secure access for rotation. We provide an open-source **Lambda connector** for AWS VPCs. While homegrown solutions can bridge the network gap, building and maintaining the *actual rotation logic* (state, error handling, two-secret strategy) is complex. Crucially, DIY approaches typically lack integrated revision history, centralized auditing, and unified management provided by platforms like Pulumi ESC, increasing operational overhead.
 * **Tooling, Ecosystem, and Cloud-Native Connectivity:** Despite cloud IAM authentication options, many standard tools (GUIs, BI, ETL), legacy apps, and even certain cloud-native configurations (multi-cloud, specific Kubernetes setups) still rely on username/password. Direct IAM integration isn't always feasible or practical, making automated rotation of traditional credentials essential for broad compatibility and security.
 
-Pulumi ESC addresses these challenges by automating the secrets rotation process, including connectivity options for databases in private AWS networks using our Lambda connector, and allows you to consume them in your applications through ESC's various developer-friendly methods including [ESC SDK](/docs/esc/development/languages-sdks/), [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/), [Kubernetes External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/), [CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/), etc.
+Pulumi ESC addresses these challenges by automating the secrets rotation process, including connectivity options for databases in private AWS networks using our Lambda connector, and allows you to consume them in your applications through ESC's various developer-friendly methods including [ESC SDK](/docs/esc/languages-sdks/), [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/), [Kubernetes External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/), [CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/), etc.
 
 ## Introducing ESC Rotated Secrets for Databases
 
-Pulumi ESC’s [Rotated Secrets](/docs/esc/integrations/rotated-secrets/) capability now extends to your critical databases, bringing automation and enhanced security to credential lifecycle management. We are adding support for the following databases and connectivity options:
+Pulumi ESC’s [Rotated Secrets](/docs/esc/providers/rotators/) capability now extends to your critical databases, bringing automation and enhanced security to credential lifecycle management. We are adding support for the following databases and connectivity options:
 
 | Database                                                         | Publicly Accessible | AWS VPCs               | Azure VNETs                                                                  | GCloud VPCs                                                                  |
 | :--------------------------------------------------------------- | :------------------: | :---------------------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
-| [**PostgreSQL**](/docs/esc/integrations/rotated-secrets/postgres/) | ✅                  | ✅ <small>(via Lambda)</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/521))</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/522))</small> |
-| [**MySQL**](/docs/esc/integrations/rotated-secrets/mysql/)       | ✅                  | ✅ <small>(via Lambda)</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/521))</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/522))</small> |
+| [**PostgreSQL**](/docs/esc/providers/rotators/postgres/) | ✅                  | ✅ <small>(via Lambda)</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/521))</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/522))</small> |
+| [**MySQL**](/docs/esc/providers/rotators/mysql/)       | ✅                  | ✅ <small>(via Lambda)</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/521))</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/522))</small> |
 
 Key benefits include:
 
@@ -53,12 +53,12 @@ Key benefits include:
 * **Configure Webhooks for Automation:** Trigger notifications, CI/CD pipelines (e.g., Pulumi Deployments to update application stacks), or custom workflows upon successful rotation, keeping dependent systems synchronized.
 
 {{% notes type="info" %}}
-The following setup guide provides a detailed walkthrough for rotating [**PostgreSQL**](/docs/esc/integrations/rotated-secrets/postgres/) credentials for an **AWS RDS instance hosted within a private VPC**, which requires the AWS Lambda-based connector. For publicly accessible databases (PostgreSQL or MySQL), you can use the simpler **Direct Connect** method documented on the respective integration pages. Please refer to the [**MySQL**](/docs/esc/integrations/rotated-secrets/mysql/) documentation page for specific instructions on MySQL rotation (both Direct Connect and Lambda Connector).
+The following setup guide provides a detailed walkthrough for rotating [**PostgreSQL**](/docs/esc/providers/rotators/postgres/) credentials for an **AWS RDS instance hosted within a private VPC**, which requires the AWS Lambda-based connector. For publicly accessible databases (PostgreSQL or MySQL), you can use the simpler **Direct Connect** method documented on the respective integration pages. Please refer to the [**MySQL**](/docs/esc/providers/rotators/mysql/) documentation page for specific instructions on MySQL rotation (both Direct Connect and Lambda Connector).
 {{% /notes %}}
 
 ## How to Set Up and Use Rotation for AWS RDS PostgreSQL running in VPC
 
-Setting up rotation for AWS RDS or Aurora PostgreSQL databases running inside an AWS VPC involves [creating the required users](/docs/esc/environments/rotation/db-user-setup/) within your database, deploying the AWS Lambda connector infrastructure via a Pulumi template, configuring ESC environments, and scheduling the rotation.
+Setting up rotation for AWS RDS or Aurora PostgreSQL databases running inside an AWS VPC involves [creating the required users](/docs/esc/operations/rotation/db-user-setup/) within your database, deploying the AWS Lambda connector infrastructure via a Pulumi template, configuring ESC environments, and scheduling the rotation.
 
 **Understanding the AWS Lambda Connector:** The open-source [ESC Lambda connector](https://github.com/pulumi/templates/tree/master/esc-connector-lambda-typescript) acts as a secure proxy for database credential rotation within your VPC. It enables Pulumi ESC to safely rotate database credentials without needing direct network access from ESC to your database and without exposing your database to external networks. This connector is currently required to rotate credentials for PostgreSQL or MySQL databases hosted within an AWS VPC. Note: The AWS Lambda Connector is only available to Enterprise and Business Critical customers.
 
@@ -91,7 +91,7 @@ Connect to the database as a superuser and run the following SQL commands:
 
 **Step 2: Bootstrap Rotation Infrastructure (Lambda Connector) and Create ESC Environments**
 
-To rotate credentials for PostgreSQL databases within AWS VPCs securely, you need to configure an [AWS Lambda function (the connector)](/docs/esc/environments/rotation/aws-lambda/) within your VPC and create the corresponding ESC environments.
+To rotate credentials for PostgreSQL databases within AWS VPCs securely, you need to configure an [AWS Lambda function (the connector)](/docs/esc/operations/rotation/aws-lambda/) within your VPC and create the corresponding ESC environments.
 
 If your PostgreSQL instance is running on AWS RDS, we recommend using our [Pulumi Template](https://github.com/pulumi/templates/tree/master/esc-connector-lambda-typescript) to simplify the process of creating the Lambda function, associated AWS IAM Roles, Security Groups, and the basic ESC environment structure. You can start it from the [Pulumi console](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/esc-connector-lambda-typescript) or by running the following command in your terminal:
 
@@ -191,4 +191,4 @@ Have a specific database or integration in mind? Upvote existing issues or open 
 
 Pulumi ESC's Automated Database Credential Rotation drastically simplifies a critical security task. By automating the rotation of **PostgreSQL** and **MySQL** credentials, ESC reduces operational overhead, minimizes the risk associated with static secrets, and helps you meet compliance requirements more easily. Whether your databases are publicly accessible (using Direct Connect) or in private AWS networks (using the Lambda connector), ESC provides a unified way to manage their lifecycle securely.
 
-We encourage you to explore the [Pulumi ESC documentation](/docs/esc/) and try out rotated database secrets for [PostgreSQL](/docs/esc/integrations/rotated-secrets/postgres/) and [MySQL](/docs/esc/integrations/rotated-secrets/mysql/). Your feedback is invaluable – please share your experiences and suggestions on our [GitHub repository](https://github.com/pulumi/esc). Secure your databases with automated rotation and build with confidence!
+We encourage you to explore the [Pulumi ESC documentation](/docs/esc/) and try out rotated database secrets for [PostgreSQL](/docs/esc/providers/rotators/postgres/) and [MySQL](/docs/esc/providers/rotators/mysql/). Your feedback is invaluable – please share your experiences and suggestions on our [GitHub repository](https://github.com/pulumi/esc). Secure your databases with automated rotation and build with confidence!

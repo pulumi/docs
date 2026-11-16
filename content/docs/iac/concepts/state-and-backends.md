@@ -61,7 +61,7 @@ This removes the credentials for the current backend from `~/.pulumi/credentials
 
 To change backends, run `pulumi logout` followed by `pulumi login`.
 
-The basic form of `login` uses Pulumi Cloud by default. If you wish to log in to a specific backend, pass the backend-specific URL as the sole argument:
+When you're logged out, the basic form of `login` uses Pulumi Cloud by default. When you're already logged in, it stays on the current backend. If you wish to log in to a specific backend, pass the backend-specific URL as the sole argument:
 
 ```sh
 $ pulumi login <backend-url>
@@ -97,7 +97,7 @@ Backend URL: https://app.pulumi.com/<your-username>
 
 {{< pulumi-cloud />}}
 
-Running `pulumi login` without any argument logs into the default Pulumi Cloud backend:
+When you're logged out, running `pulumi login` without any argument logs into the default Pulumi Cloud backend:
 
 ```sh
 $ pulumi login
@@ -138,9 +138,10 @@ Use [`pulumi stack migrate`](/docs/iac/cli/commands/pulumi_stack_migrate/) to mi
 
 Migration updates the target stack's local configuration. When source and target stack names match, the command updates `Pulumi.<stack>.yaml` and creates a `.bak.*` backup. When the target stack has a different name, the command replaces any existing `Pulumi.<target>.yaml`, including its ESC environment imports. Save a copy of that file before migrating if you need its current contents.
 
-For example, log in to Pulumi Cloud, then migrate `my-app-production` from a local backend:
+For example, log out of your local backend, log in to Pulumi Cloud, then migrate `my-app-production`:
 
 ```sh
+pulumi logout
 pulumi login
 pulumi stack migrate file://~ my-app-production
 ```
@@ -201,7 +202,7 @@ $ pulumi preview --refresh
 
 {{< pulumi-cloud "drift-detection" />}}
 
-For teams that want to detect and remediate [out-of-band changes](/what-is/what-is-infrastructure-drift/) on a schedule, Pulumi Cloud provides built-in [drift detection and remediation](/docs/deployments/concepts/drift/). With drift detection configured, Pulumi Cloud periodically runs `pulumi refresh` against your stacks and alerts you (or optionally remediates automatically) when the actual state of your infrastructure diverges from Pulumi's recorded state.
+For teams that want to detect and remediate [out-of-band changes](/topics/infrastructure-as-code/what-is-infrastructure-drift/) on a schedule, Pulumi Cloud provides built-in [drift detection and remediation](/docs/deployments/concepts/drift/). With drift detection configured, Pulumi Cloud periodically runs `pulumi refresh` against your stacks and alerts you (or optionally remediates automatically) when the actual state of your infrastructure diverges from Pulumi's recorded state.
 
 To learn more, see [Drift detection](/docs/deployments/concepts/drift/) for the Pulumi Cloud feature, and [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/) for the CLI-side workflow (remediation vs. adoption, GitOps continuous reconciliation, and false-positive reduction).
 

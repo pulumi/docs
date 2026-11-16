@@ -9,9 +9,9 @@ aliases:
 menu:
     ai:
         name: Settings
-        parent: ai-concepts-neo
+        parent: ai-neo
         identifier: ai-settings
-        weight: 65
+        weight: 90
 ---
 
 <script>

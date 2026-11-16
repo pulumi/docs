@@ -172,7 +172,7 @@ Note that argument classes must be *serializable* and use `pulumi.Input` types, 
 
 Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. This means certain types like union types and functions are not supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
-Python class properties are typically written in lowercase with words separated by underscores, known as [`snake_case`](https://en.wikipedia.org/wiki/Snake_case), however properties in the [Pulumi package schema](https://www.pulumi.com/docs/iac/using-pulumi/extending-pulumi/schema/) are usually written in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case), where capital letters are used to separate words. To follow these conventions, the inferred schema for a component will have translated property names. In our example `index_content` will become `indexContent` in the schema. When using a component, the property names will follow the conventions of that language, for example if we use our component from TypeScript, we would refer to `indexContent`, but if we use it from Python, we would use `index_content`.
+Python class properties are typically written in lowercase with words separated by underscores, known as [`snake_case`](https://en.wikipedia.org/wiki/Snake_case), however properties in the [Pulumi package schema](https://www.pulumi.com/docs/iac/guides/building-extending/packages/schema/) are usually written in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case), where capital letters are used to separate words. To follow these conventions, the inferred schema for a component will have translated property names. In our example `index_content` will become `indexContent` in the schema. When using a component, the property names will follow the conventions of that language, for example if we use our component from TypeScript, we would refer to `indexContent`, but if we use it from Python, we would use `index_content`.
 
 {{% /choosable %}}
 
@@ -183,7 +183,7 @@ Python class properties are typically written in lowercase with words separated 
 
 Note that argument struct fields must be *serializable* and use `pulumi.*Input` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
-Go struct fields are typically written in title case, with the first letter capitalized and capital letters used to separate words, however properties in the [Pulumi package schema](https://www.pulumi.com/docs/iac/using-pulumi/extending-pulumi/schema/) are usually written in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case), with the first letter in lowercase and capital letters used to separate words. To follow these conventions, the inferred schema for a component will have translated property names. In our example `IndexContent` will become `indexContent` in the schema. When using a component, the property names will follow the conventions of that language, for example if we use our component from TypeScript, we would refer to `indexContent`, but if we use it from Go, we would use `IndexContent`.
+Go struct fields are typically written in title case, with the first letter capitalized and capital letters used to separate words, however properties in the [Pulumi package schema](https://www.pulumi.com/docs/iac/guides/building-extending/packages/schema/) are usually written in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case), with the first letter in lowercase and capital letters used to separate words. To follow these conventions, the inferred schema for a component will have translated property names. In our example `IndexContent` will become `indexContent` in the schema. When using a component, the property names will follow the conventions of that language, for example if we use our component from TypeScript, we would refer to `indexContent`, but if we use it from Go, we would use `IndexContent`.
 
 {{% /choosable %}}
 
@@ -329,7 +329,7 @@ The constructor has a few standard arguments:
 - `args`: This is an instance of the argument class we defined earlier, containing the inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/resources/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our child resources later on.
 
-Since we're inheriting, we also need to call the base class constructor `super(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implementation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
+The constructor calls the base class constructor, `super(...)`. Its first parameter is the resource type name, in the format `<package-name>:<module>:<component-class-name>`, where the module is usually `index`. If you change the type name later, Pulumi deletes and recreates existing component instances unless you add an [alias](/docs/iac/concepts/resources/options/aliases/) for the old name. The constructor also passes its `name`, `args`, and `opts` values to `super(...)`.
 
 {{< notes type="warning" >}}
 Changing the resource type name after a component has been deployed will cause all existing resources of that type to be recreated. Change the type name with extreme caution.
@@ -394,7 +394,7 @@ The constructor has a few standard arguments:
 - `args`: This is an instance of the argument class we defined earlier, containing the inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/resources/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our child resources later on.
 
-Since we're inheriting, we also need to call the base class constructor `super().__init__`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implementation detail. Otherwise, we pass the `name` value into the base constructor, as well as the `opts` value, and an empty object for the `args` value.
+The constructor calls the base class constructor, `super().__init__`. Its first parameter is the resource type name, in the format `<package-name>:<module>:<component-class-name>`, where the module is usually `index`. If you change the type name later, Pulumi deletes and recreates existing component instances unless you add an [alias](/docs/iac/concepts/resources/options/aliases/) for the old name. The constructor also passes its `name` and `opts` values, and an empty object for `args`.
 
 {{< notes type="warning" >}}
 Changing the resource type name after a component has been deployed will cause all existing resources of that type to be recreated. Change the type name with extreme caution.
@@ -460,7 +460,7 @@ The factory function has a few standard arguments:
 - `args`: This is an instance of the argument struct we defined earlier, containing the inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/resources/options/) struct is part of the basic API for all Pulumi resources, and will be passed to the factory functions of our child resources later on.
 
-The next step is to register our new component instance with Pulumi via the `ctx` instance. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implementation detail. Otherwise, we pass the `name` value, our component instance, as well as the `opts` values.
+`NewStaticPage` then registers the component instance with Pulumi by calling `ctx.RegisterComponentResource`. Its first parameter is the resource type name, in the format `<package-name>:<module>:<component-class-name>`, where the module is usually `index`. If you change the type name later, Pulumi deletes and recreates existing component instances unless you add an [alias](/docs/iac/concepts/resources/options/aliases/) for the old name. The function also passes the `name` value, the component instance, and the `opts` values.
 
 {{< notes type="warning" >}}
 Changing the resource type name after a component has been deployed will cause all existing resources of that type to be recreated. Change the type name with extreme caution.
@@ -525,7 +525,7 @@ The constructor has a few standard arguments:
 - `args`: This is an instance of the argument class we defined earlier, containing the inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/resources/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our child resources later on.
 
-Since we're inheriting, we also need to call the base class constructor `base(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:<module>:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The module portion of this type name is always `index` and is a required implementation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
+The constructor calls the base class constructor, `base(...)`. Its first parameter is the resource type name, in the format `<package-name>:<module>:<component-class-name>`, where the module is usually `index`. If you change the type name later, Pulumi deletes and recreates existing component instances unless you add an [alias](/docs/iac/concepts/resources/options/aliases/) for the old name. The constructor also passes its `name`, `args`, and `opts` values to `base(...)`.
 
 {{< notes type="warning" >}}
 Changing the resource type name after a component has been deployed will cause all existing resources of that type to be recreated. Change the type name with extreme caution.
@@ -592,7 +592,7 @@ The constructor has a few standard arguments:
 - `args`: This is an instance of the argument class we defined earlier, containing the inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/resources/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our child resources later on.
 
-Since we're inheriting, we also need to call the base class constructor `super(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:<module>:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The module portion of this type name is always `index` and is a required implementation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
+The constructor calls the base class constructor, `super(...)`. Its first parameter is the resource type name, in the format `<package-name>:<module>:<component-class-name>`, where the module is usually `index`. If you change the type name later, Pulumi deletes and recreates existing component instances unless you add an [alias](/docs/iac/concepts/resources/options/aliases/) for the old name. The constructor also passes its `name` and `opts` values, and `null` for the arguments.
 
 {{< notes type="warning" >}}
 Changing the resource type name after a component has been deployed will cause all existing resources of that type to be recreated. Change the type name with extreme caution.
@@ -1025,7 +1025,7 @@ For the full schema, see the [YAML component reference](/docs/iac/languages-sdks
 
 Once your arguments are defined, write the component itself. The pattern differs by language: TypeScript, Python, .NET, and Java use a class with a constructor; Go uses a struct paired with a factory function (Go has no constructors); YAML uses a declarative definition (no class) under the [`components` key](/docs/iac/languages-sdks/yaml/yaml-component-reference/).
 
-In all cases, the component must register a unique type name with the engine. The type name takes the form `<package-name>:index:<component-class-name>` — the `index` portion is required. Type names are namespaced alongside non-component resources such as `aws:lambda:Function`.
+In all cases, the component must register a unique type name with the engine. The type name takes the form `<package-name>:<module>:<component-class-name>`, where the module is usually `index`. Type names are namespaced alongside non-component resources such as `aws:lambda:Function`.
 
 {{< notes type="warning" >}}
 Changing the type name after a component has been deployed will cause Pulumi to recreate every existing resource of that type. Settle on a name early.

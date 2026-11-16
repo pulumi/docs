@@ -1,0 +1,2 @@
+# Was an alias on the Hugo /pulumi-for-startups page, now served by pulumi/marketing-web.
+microsoft-for-startups/index.html|/pulumi-for-startups/

@@ -8,7 +8,9 @@ pinned-comment.sh's 60,000-byte budget on every retry.
 
 1. The new-feature carve-out: verify-claims.py records which implementing
    refs the review can't read, and compose-review.py asks about the pass1
-   unverifiables they explain in one grouped ❓.
+   unverifiables they explain in one grouped ❓. (A claim whose verdict
+   names the private change is a reviewer check instead — the last section,
+   from pulumi/docs#22397.)
 2. The card budget: build-evidence.fit_author_card (both lanes) sheds what the
    evidence page also carries until the card fits, and the update lane puts
    it back when there's room again.
@@ -50,8 +52,11 @@ def _verdict(n: int, *, route="pass1", verdict="unverifiable", file=PAGE, **extr
         "claim_id": f"c{n}", "file": file, "line_range": f"L{10 + n}",
         "text": f"The fn::open::oidc provider does thing number {n} for every organization that turns it on",
         "type": "behavior", "route": route, "verdict": verdict, "confidence": "low",
-        "evidence": "gh pr diff 49283 -R pulumi/pulumi-service (inaccessible)",
-        "source": "gh pr view 49283 -R pulumi/pulumi-service (inaccessible)",
+        # Deliberately not naming the unreadable change: a verdict that names
+        # it is a private-source reviewer check (see the tests further down),
+        # not a ❓, and these fixtures exercise the ❓ group.
+        "evidence": "no public source or default-branch code documents this behavior",
+        "source": "gh search code fn::open::oidc --owner pulumi (no match)",
     }
     v.update(extra)
     return v
@@ -179,6 +184,82 @@ def test_a_404_on_stdout_counts_too():
     gh_out = lambda cmd, **kw: subprocess.CompletedProcess(cmd, 1, "HTTP 404: Not Found", "")
     assert vc.probe_unreadable_refs([UNREADABLE], run=gh_out) == [UNREADABLE]
     assert vc.probe_unreadable_refs([UNREADABLE], run=gh) == [], "no 404 anywhere → unknown"
+
+
+# ---- verify-claims: the optional read-only token for private sources -------
+
+class _TokenGh:
+    """`gh api repos/<repo>`: 404 with the job's token for every repo in
+    `private`, readable with the impl-read token only for those in `grant`."""
+    def __init__(self, private: set[str], grant: set[str]):
+        self.private, self.grant = private, grant
+        self.calls: list[tuple[str, str]] = []
+
+    def __call__(self, cmd, **kw):
+        repo = cmd[2].removeprefix("repos/")
+        env = kw.get("env")
+        token = (env or {}).get("GH_TOKEN", "job")
+        self.calls.append((repo, token))
+        if repo in self.private and not (token == "impl-tok" and repo in self.grant):
+            return subprocess.CompletedProcess(cmd, 1, "", "gh: Not Found (HTTP 404)")
+        return subprocess.CompletedProcess(cmd, 0, "", "")
+
+
+IMPL_ENV = {"PATH": "/usr/bin", "GH_TOKEN": "job", "GITHUB_TOKEN": "job",
+            "GH_TOKEN_IMPL_READ": "impl-tok"}
+
+
+def test_impl_read_env_swaps_only_the_token():
+    env = vc.impl_read_env(IMPL_ENV)
+    assert env == {"PATH": "/usr/bin", "GH_TOKEN": "impl-tok"}
+    assert vc.impl_read_env({"GH_TOKEN": "job"}) is None
+    assert vc.impl_read_env({"GH_TOKEN_IMPL_READ": "  "}) is None
+
+
+def test_a_404_is_retried_with_the_impl_token_and_read_with_it():
+    gh = _TokenGh(private={"pulumi/pulumi-service", "pulumi/other-private"},
+                  grant={"pulumi/pulumi-service"})
+    refs = [UNREADABLE, "pulumi/other-private#1", "pulumi/pulumi#2"]
+    unreadable, via = vc.probe_impl_refs(refs, run=gh, impl_env=vc.impl_read_env(IMPL_ENV))
+    assert via == [UNREADABLE] and unreadable == ["pulumi/other-private#1"]
+    # The job's token first; the impl token only after a 404, never for a public repo.
+    assert ("pulumi/pulumi", "impl-tok") not in gh.calls
+    assert gh.calls.index(("pulumi/pulumi-service", "job")) < gh.calls.index(("pulumi/pulumi-service", "impl-tok"))
+
+
+def test_no_impl_token_probes_exactly_as_before():
+    gh = _TokenGh(private={"pulumi/pulumi-service"}, grant={"pulumi/pulumi-service"})
+    assert vc.probe_impl_refs([UNREADABLE], run=gh, impl_env=None) == ([UNREADABLE], [])
+    assert gh.calls == [("pulumi/pulumi-service", "job")]
+
+
+def test_gh_query_uses_the_impl_token_only_for_its_repos(monkeypatch):
+    monkeypatch.setenv("GH_TOKEN_IMPL_READ", "impl-tok")
+    vc.set_impl_read_repos([UNREADABLE])
+    seen = []
+    monkeypatch.setattr(vc.subprocess, "run", lambda cmd, **kw: (
+        seen.append((kw.get("env") or {}).get("GH_TOKEN", "job")),
+        subprocess.CompletedProcess(cmd, 0, "ok", ""))[1])
+    try:
+        assert vc.exec_gh_query({"args": ["pr", "diff", "49283", "-R", "pulumi/pulumi-service"]}) == "ok"
+        assert vc.exec_gh_query({"args": ["api", "repos/pulumi/pulumi/contents/x.go"]}) == "ok"
+        assert vc.exec_gh_query({"args": ["search", "code", "--owner", "pulumi", "openOIDC"]}) == "ok"
+    finally:
+        vc.set_impl_read_repos([])
+    assert seen == ["impl-tok", "job", "job"]
+
+
+def test_the_prompt_marks_a_private_ref_cite_dont_quote(monkeypatch):
+    vc.set_impl_read_repos([UNREADABLE])
+    try:
+        claim = {"file": PAGE, "line_range": "L10", "type": "behavior", "text": "x does y"}
+        msg = vc.build_user_message(claim, "pass1", None, impl_refs=[UNREADABLE, "pulumi/esc#12"])
+    finally:
+        vc.set_impl_read_repos([])
+    line = next(ln for ln in msg.splitlines() if ln.startswith(f"- {UNREADABLE}"))
+    assert "PRIVATE" in line and "never quote" in line
+    assert "PRIVATE" not in next(ln for ln in msg.splitlines() if ln.startswith("- pulumi/esc#12"))
+    assert "never quoted" in vc.VERIFY_SYSTEM
 
 
 # ---- verify-claims: don't spend Opus turns on what can't be read -----------
@@ -576,3 +657,65 @@ def test_a_retext_keeps_the_group_claim_list(tmp_path):
     collapsed = be._collapse_group_lists(a_card)
     start, end = be.collect_detail_blocks(collapsed)[0][gid]
     assert au._group_list_tail(collapsed.splitlines()[start:end]) == [be.group_pointer(5)]
+
+
+# ---- private source → reviewer check, not author question ------------------
+#
+# pulumi/docs#22397: a one-line changelog entry whose only claim rested on a
+# private pulumi/pulumi-service PR. The verifier named that PR as the reason
+# it couldn't check the claim, the composer asked the author about it as a
+# blocking ❓, and the Sentinel's G2 held the PR on a question the author had
+# no way to answer. A reviewer who can read the private change can.
+
+def _private(n: int, **extra) -> dict:
+    return _verdict(n, evidence=f"only {UNREADABLE} could settle this; it 404s to this review",
+                    source=f"gh pr view 49283 -R pulumi/pulumi-service (inaccessible)", **extra)
+
+
+def test_a_claim_only_the_private_change_can_settle_is_a_reviewer_check(tmp_path):
+    author, brief, base = _compose(tmp_path, [_private(1)], [UNREADABLE])
+    assert _row_ids(author, "author-answer") == [], "no ❓ for the author"
+    [f] = [f for f in base["findings"] if f["bucket"] != "preexisting"]
+    assert f["bucket"] == "reviewer-check" and "members" not in f, f
+    assert f["origin"] == "verdict:unverifiable" and f["file"] == PAGE and f["lines"] == [11]
+    row = next(ln for ln in brief.splitlines() if ln.startswith(f"| **{f['id']}** |"))
+    assert UNREADABLE in row and "can't read" in row and "<TODO" not in row, row
+    assert ve.validate_evidence(base) == [], ve.validate_evidence(base)
+    ev, a_out, b_out = _build(author, brief, base)
+    assert "nothing blocks merge" in a_out
+    assert "1 flagged in the ⚠️ list" in b_out
+    proc = _validate_card(a_out, b_out, tmp_path)
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+
+
+def test_several_private_source_claims_share_one_check_row(tmp_path):
+    vs = [_private(n) for n in range(1, 5)] + [_private(5, file=BLOG)]
+    vs.append(_verdict(6))                                         # names nothing: stays ❓
+    vs.append(_private(7, route="pass2"))                          # a cited page: stays ❓
+    vs.append(_private(8, turn_cap_exhausted=True))                # its own ask: stays ❓
+    author, brief, base = _compose(tmp_path, vs, [UNREADABLE])
+    checks = [f for f in base["findings"] if f["bucket"] == "reviewer-check"]
+    assert len(checks) == 1
+    [check] = checks
+    assert [m["lines"][0] for m in check["members"]] == [11, 12, 13, 14, 15]
+    assert check["file"] == cr.GROUP_FILE and check["text"].startswith("5 claims")
+    assert f"| **{check['id']}** | — | 5 claims" in brief
+    assert len(_row_ids(author, "author-answer")) == 3
+    ev, a_out, b_out = _build(author, brief, base)
+    assert "5 flagged in the ⚠️ list" in b_out, [ln for ln in b_out.splitlines() if "Facts" in ln]
+    proc = _validate_card(a_out, b_out, tmp_path)
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+
+
+def test_no_unreadable_ref_means_no_private_check(tmp_path):
+    author, _b, base = _compose(tmp_path, [_private(1)], [])
+    assert not [f for f in base["findings"] if f["bucket"] == "reviewer-check"]
+    assert len(_row_ids(author, "author-answer")) == 1
+
+
+def test_naming_a_readable_repo_is_not_naming_the_private_one():
+    refs = ["pulumi/pulumi-service#49283"]
+    assert cr.refs_named_in("read pulumi/pulumi-service#49283", refs) == refs
+    assert cr.refs_named_in("gh pr view 1 -R PULUMI/pulumi-service", refs) == refs
+    assert cr.refs_named_in("checked pulumi/pulumi-service-extras instead", refs) == []
+    assert cr.refs_named_in("checked pulumi/pulumi", refs) == []

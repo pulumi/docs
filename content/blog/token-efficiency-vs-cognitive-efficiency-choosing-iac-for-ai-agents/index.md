@@ -167,7 +167,7 @@ Our benchmark confirms this directly. Opus produced 2,720 tokens for Pulumi refa
 Training data distribution makes this structural. LLMs have far more TypeScript than HCL in their corpora. A model refactoring TypeScript draws on patterns from the entire open-source ecosystem. A model refactoring HCL modules has a much smaller pool. Since general-purpose languages dominate new code production, this gap will widen over time.
 
 {{< notes type="info" >}}
-Tooling can close the gap further. The [Pulumi MCP server](/docs/ai/mcp-server/) gives AI agents direct access to resource schemas at generation time. A tool like `get-resource` returns every property, type, and required field for a given cloud resource. The agent does not have to guess from what it memorized during training. It can look up the correct schema before writing a single line of code.
+Tooling can close the gap further. The [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) gives AI agents direct access to resource schemas at generation time. A tool like `get-resource` returns every property, type, and required field for a given cloud resource. The agent does not have to guess from what it memorized during training. It can look up the correct schema before writing a single line of code.
 
 This changes the workflow from "generate, fail, read error, retry" to "look up schema, generate correctly." Agent skills push this further by encoding working Pulumi idioms as structured prompts, so the model starts from a known-good baseline. Terraform has no equivalent to this MCP-based schema lookup. That difference matters more with every iteration.
 {{< /notes >}}
@@ -194,6 +194,6 @@ Pulumi covers the full iteration loop, from generation through repair to refacto
 
 ## Get started
 
-Ready to explore how AI agents work with Pulumi? Check out [Pulumi AI](/ai/) to see LLM-powered infrastructure generation in action, or get started with [Pulumi's documentation](/docs/get-started/).
+Ready to explore how AI agents work with Pulumi? Check out [Pulumi AI](/ai/) to see LLM-powered infrastructure generation in action, or [get started with Pulumi](/up/).
 
 Join the conversation in the [Pulumi Community Slack](https://slack.pulumi.com/) or [Pulumi Community Discussions](https://github.com/pulumi/pulumi/discussions).

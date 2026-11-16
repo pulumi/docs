@@ -88,7 +88,7 @@ In the Pulumi Cloud console, open the environment and click the **Rotate secrets
 
 You can create a schedule for automatic rotation of your secrets in the Pulumi Cloud console by navigating to the `Rotated secrets` tab of your environment, and clicking the `Create rotation schedule` button.
 
-The rotation schedule can be defined as a [cron expression](https://crontab.cronhub.io/).
+The rotation schedule can be defined as a [cron expression](https://crontab.cronhub.io/). Rotation schedules run in UTC unless the cron expression sets a time zone. See [Time zones](/docs/deployments/concepts/schedules/#time-zones).
 
 ### Rotation connectors
 

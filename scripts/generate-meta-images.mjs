@@ -10,14 +10,10 @@
 // partials/meta-image-url.html; a page-level `meta_image` overrides it.
 //
 // Templates (all from the Figma "Social assets — banners" file):
-//   - "title"      — centered title on the LIGHT brand field (what-is, migrate,
-//     partner, topics, and the customers index). Simple frame.
+//   - "title"      — centered title on the LIGHT brand field (migrate, partner,
+//     topics, whitepapers). Simple frame.
 //   - "info"       — 4-field DARK docs card (section badge, corner label, title,
-//     description) — docs only. Palette INFO_DARK; same layout as "tutorial".
-//   - "tutorial"   — the docs card in LIGHT (palette INFO_LIGHT). Used for the
-//     case-study industry cards (meta-images/industries.mjs).
-//   - "case-study" — LIGHT co-branded card: Pulumi + customer logo lockup with a
-//     right-aligned "CASE STUDY" badge and a large title (customers).
+//     description) — docs and blog term pages.
 //   - "events"     — per-size event / workshop card (see meta-images/events.mjs).
 //   - "blog"       — DARK blog-post card: the post's feature image bled off the
 //     right, faded into the field, with a "Blog" badge + title (meta-images/blog.mjs).
@@ -35,12 +31,11 @@ import { cpus } from "os"
 import matter from "gray-matter"
 import { createRequire } from "module"
 import {
-  REPO_ROOT, clean, once, intrinsicSize, loadFonts, titleFont,
+  REPO_ROOT, clean, once, loadFonts, titleFont,
 } from "./meta-images/lib.mjs"
 import { eventFieldsFromFrontmatter } from "./meta-images/events.mjs"
 import { renderPng, CANVAS_W, CANVAS_H } from "./meta-images/render.mjs"
 import { termPages } from "./meta-images/terms.mjs"
-import { industryPages } from "./meta-images/industries.mjs"
 
 const require = createRequire(import.meta.url)
 const yaml = require("js-yaml")
@@ -69,10 +64,7 @@ const OG_TEMPLATE_VERSION = "6"
 //   title r2: optional violet label pill between the logo and the title (the
 //     whitepapers section uses it); unlabelled title cards are unchanged.
 //   title r3: more clearance between the logo and the label pill.
-//   case-study r2: the co-brand logo comes from data/customers.yaml (the
-//     registry's light-background SVG) rather than each page's customer_logo
-//     path, so a few cards pick up a different variant of the same logo.
-const TEMPLATE_REVISION = { events: 2, title: 3, "case-study": 2 }
+const TEMPLATE_REVISION = { events: 2, title: 3 }
 
 const SAMPLE = !!process.env.OG_SAMPLE // one card per sampleGroupBy group
 const ONLY = (process.env.OG_ONLY || "").split(",").map((s) => s.trim()).filter(Boolean)
@@ -104,18 +96,6 @@ const titleSection = (name, recursive, label) => ({
 // id is the content-relative path with .md and trailing /_index stripped, e.g.
 // "what-is/what-is-yaml" or "docs/iac/concepts/inputs-outputs".
 const SECTIONS = [
-  titleSection("what-is", false),
-  {
-    name: "customers",
-    template: (fm, id) => (id === "customers" ? "title" : "case-study"),
-    recursive: false,
-    fields: (fm, id) =>
-      id === "customers"
-        ? { title: clean(fm.title) || "Customers" }
-        : { title: clean(fm.title), companyLogo: customerLogo(fm.customer) },
-    // Individual studies need a resolvable customer logo; the root title card doesn't.
-    valid: (f, t) => !!f.title && (t === "title" || !!f.companyLogo),
-  },
   // Small marketing sections converted from off-brand meta images to light title cards.
   titleSection("migrate", true),
   titleSection("partner", true),
@@ -153,8 +133,8 @@ const SECTIONS = [
     // Event / workshop cards (content/events/<slug>/index.md leaf bundles).
     // Individual events → the events card in two sizes (landscape OG meta image
     // + square second og:image). The /events/ index page → a plain title card,
-    // landscape only (same treatment as the customers index). The
-    // /event-meta-image skill produces enriched, committed overrides.
+    // landscape only. The /event-meta-image skill produces enriched, committed
+    // overrides.
     name: "events",
     template: (fm, id) => (id === "events" ? "title" : "events"),
     recursive: true,
@@ -206,23 +186,6 @@ const SECTIONS = [
     valid: (f) => !!f.title,
   },
 ]
-
-const LOGO_DIR = join(REPO_ROOT, "assets", "fingerprinted", "logos", "customers")
-function customerLogo(id, { maxH = 52, maxW = 260 } = {}) {
-  const slug = clean(id)
-  if (!slug) return null
-  const candidates = [[`${slug}.svg`, "image/svg+xml"], [`${slug}.png`, "image/png"]]
-  const hit = candidates.find(([name]) => existsSync(join(LOGO_DIR, name)))
-  if (!hit) return null
-  const [name, mime] = hit
-  const file = join(LOGO_DIR, name)
-  const lower = name.toLowerCase()
-  const buf = readFileSync(file)
-  const { w, h } = intrinsicSize(buf, lower)
-  let displayW = (w / h) * maxH, displayH = maxH
-  if (displayW > maxW) { displayW = maxW; displayH = (h / w) * maxW }
-  return { uri: `data:${mime};base64,${buf.toString("base64")}`, w: Math.round(displayW), h: Math.round(displayH) }
-}
 
 // --- Page discovery ----------------------------------------------------------
 function walkMd(dir, recursive) {
@@ -296,12 +259,11 @@ function listPages() {
     for (const p of secPages) p.key = cacheKey(p)
     pages.push(...secPages)
   }
-  // Virtual "terms" section: blog category/tag term pages and case-study
-  // industry term pages have no backing file, so their page objects come from
-  // termPages()/industryPages() rather than a content walk. They flow through
+  // Virtual "terms" section: blog category/tag term pages have no backing file,
+  // so their page objects come from termPages() rather than a content walk. They flow through
   // the same mid/out/key/prune machinery as file-backed pages.
   if (!ONLY.length || ONLY.includes("terms")) {
-    for (const t of [...termPages(), ...industryPages()]) {
+    for (const t of termPages()) {
       const page = { id: t.id, mid: t.id, section: "terms", template: t.template, fields: t.fields, w: t.w, h: t.h, out: join(OUT_ROOT, `${t.id}.png`) }
       page.key = cacheKey(page)
       pages.push(page)

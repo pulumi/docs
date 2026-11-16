@@ -149,6 +149,30 @@ def test_concat_json_docs_flattens_gh_paginate_output():
     assert gh_client._concat_json_docs("") is None
 
 
+def test_gh_stderr_status_reads_any_http_code():
+    assert gh_client._gh_stderr_status("gh: Not Found (HTTP 404)") == 404
+    assert gh_client._gh_stderr_status("gh: path is not available (HTTP 403)") == 403
+    assert gh_client._gh_stderr_status("gh: Not Found") == 404
+    assert gh_client._gh_stderr_status("network unreachable") is None
+
+
+def test_gh_backend_team_member_403_reads_unknown():
+    import subprocess  # noqa: PLC0415
+
+    def fake_run(args, **kw):
+        raise subprocess.CalledProcessError(
+            1, args, stderr="gh: This GitHub API path is not available: sessions are bound "
+            "to their configured repositories. (HTTP 403)")
+
+    saved = gh_client.subprocess.run
+    gh_client.subprocess.run = fake_run
+    try:
+        gh = GhClient("pulumi/docs", "gh")
+        assert gh.team_member("pulumi", "docs-blog-review", "someone") is None
+    finally:
+        gh_client.subprocess.run = saved
+
+
 def run_standalone() -> int:
     """The --self-test harness; test list bound at call time (test_sentinel.py)."""
     import inspect  # noqa: PLC0415

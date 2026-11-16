@@ -13,7 +13,7 @@ on bag? Or maybe you just like purple.
 
 Whatever the reason, the Pulumi team will be there all week at **Booth
 316, Startup Central, Aria Quad, **and we'd love to chat with you about
-[AWS and Pulumi](/docs/iac/clouds/aws/guides/).
+[AWS and Pulumi](/docs/iac/guides/clouds/aws/).
 
 Catch up with us on serverless functions, containers and
 [Kubernetes](/kubernetes/), managed services and

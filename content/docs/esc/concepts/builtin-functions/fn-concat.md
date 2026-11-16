@@ -2,7 +2,7 @@
 title: fn::concat
 title_tag: fn::concat
 h1: fn::concat
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "The fn::concat built-in function in Pulumi ESC concatenates two or more arrays into one list. See the declaration, parameters, and an example."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-concat/
   - /docs/esc/reference/builtin-functions/fn-concat/

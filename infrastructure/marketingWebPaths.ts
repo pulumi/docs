@@ -18,4 +18,30 @@ export const marketingWebPaths = [
     "/up",
     "/up/",
     "/up/*",
+    // Also takes /topics/containers/ off S3, so its old 301 to the Kubernetes docs no longer fires.
+    "/topics*",
+    // Hides every S3 object under /customers/, so marketing-web 301s the old case-study stubs and /customers/industry/{,blockchain/} itself.
+    "/customers*",
+    "/pulumi-for-startups",
+    "/pulumi-for-startups/",
+    "/pulumi-for-startups.md",
+    "/extend-trial",
+    "/extend-trial/",
+    "/subscribe",
+    "/subscribe/",
+    "/subscribe.md",
+    "/agent-start",
+    "/agent-start/",
+    "/agent-start.md",
+    "/onboard.md",
+    // marketing-web 301s /confirmation/ to / at its own CDN, as the Hugo page's redirect_to did.
+    "/confirmation*",
+    // Exact paths: /gads* would also take the /gads/ redirect and the retired gads pages' redirects off S3.
+    "/gads/infrastructure-as-code",
+    "/gads/infrastructure-as-code/",
+    // The old /testimonials/ page; S3 301s it here (scripts/redirects/love-redirects.txt).
+    "/love",
+    "/love/",
+    "/love.md",
+    "/sitemap-www-*",
 ];

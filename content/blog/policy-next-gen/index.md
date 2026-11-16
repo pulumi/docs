@@ -87,7 +87,7 @@ This "Get Clean, Stay Clean" lifecycle transforms how teams work together:
 
 ## Governance That Accelerates You
 
-The age of AI-driven development demands AI-powered governance. With this new generation of Pulumi Policies, we are providing the essential infrastructure for platform engineering teams to not just survive, but thrive. You can finally build preventative guardrails that developers love, secure your cloud at scale, and transform governance from a blocker into a business accelerator. Learn more about [Pulumi Insights & Governance capabilities](https://www.pulumi.com/product/insights-governance/).
+The age of AI-driven development demands AI-powered governance. With this new generation of Pulumi Policies, we are providing the essential infrastructure for platform engineering teams to not just survive, but thrive. You can finally build preventative guardrails that developers love, secure your cloud at scale, and transform governance from a blocker into a business accelerator. Learn more about [Pulumi Insights & Governance capabilities](https://www.pulumi.com/product/discovery-governance/).
 
 This powerful new experience is available today. Navigate to the **Policies** and **Policy Findings** tab in Pulumi Cloud to explore your new governance capabilities and meet the future of platform engineering.
 

@@ -146,5 +146,5 @@ In the early days of Oso, people were often surprised by how much we were able t
 If you're interested in exploring Pulumi further, here are several ways to get involved:
 
 * Discover how Pulumi Crosswalk for AWS simplifies "day one" tasks in our [AWS guide](/docs/iac/guides/clouds/aws/)
-* Register for one of our upcoming [workshops](https://www.pulumi.com/resources/#upcoming)
+* Register for one of our upcoming [workshops](https://www.pulumi.com/events/#upcoming)
 * But most importantly, [try Pulumi](https://app.pulumi.com/signup) today!

@@ -137,4 +137,4 @@ By understanding the human elements of change—the 10% rule, nemawashi, and vir
 
 I'm currently writing a blog series on Pulumi at [daninacan.com](https://daninacan.com). I also speak at conferences occasionally, so check out my speaking page if you're interested.
 
-*Ready to escape configuration chaos? Start small, focus on solving real problems, and [get started with Pulumi](https://www.pulumi.com/docs/get-started/) to leverage the full power of programming languages for infrastructure. Join [our community Slack](https://slack.pulumi.com/) to connect with engineers making the same transformation.*
+*Ready to escape configuration chaos? Start small, focus on solving real problems, and [get started with Pulumi](/up/) to leverage the full power of programming languages for infrastructure. Join [our community Slack](https://slack.pulumi.com/) to connect with engineers making the same transformation.*

@@ -86,7 +86,7 @@ server = aws.ec2.Instance('web-server',
 
 ```go
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -96,7 +96,7 @@ func main() {
         if err != nil {
             return err
         }
-        server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
+        _, err = ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
             Ami:            pulumi.String("ami-6869aa05"),
             InstanceType:   pulumi.String("t2.micro"),
             SecurityGroups: pulumi.StringArray{group.Name},

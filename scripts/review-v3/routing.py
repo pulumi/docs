@@ -70,38 +70,28 @@ MATRIX_CELL_KEYS = frozenset({"mechanical", "substantive"})
 
 TOP_LEVEL_KEYS = frozenset({
     "schema", "teams", "bots", "matrix", "overrides", "staging_evidence",
-    "claims_overlay", "approval", "external_contributors", "sla",
-    "author_staleness", "waive", "not_governed", "link_only", "bot_approvers",
+    "claims_overlay", "external_contributors", "sla",
+    "author_staleness", "waive", "not_governed", "stale_prs",
 })
+# Removed with the Sentinel's approver gate (G3): GitHub branch protection
+# decides whose approval counts, so these no longer mean anything. Named
+# here so a config that still carries one fails with a reason, not just
+# "unknown key".
+RETIRED_TOP_LEVEL_KEYS = {
+    "approval": "the approver gate (G3) is gone; branch protection decides who can approve",
+    "link_only": "link_only only widened the approver gate (G3), which is gone",
+    "bot_approvers": "the approver gate (G3) is gone; branch protection decides whose approval counts",
+}
 STAGING_EVIDENCE_KEYS = frozenset({"paths"})
 OVERRIDE_KEYS = frozenset({"paths", "role", "why"})
 CLAIMS_OVERLAY_KEYS = frozenset({"add"})
 EXTERNAL_CONTRIBUTORS_KEYS = frozenset({"skip_gates"})
 SLA_ENTRY_KEYS = frozenset({"business_days", "escalate_to"})
 AUTHOR_STALENESS_KEYS = frozenset({"warn_days", "close_days"})
+STALE_PRS_KEYS = frozenset({"close_days", "notice_days", "extended_label", "extended_close_days"})
 WAIVE_KEYS = frozenset({"label", "log_prefix"})
 NOT_GOVERNED_KEYS = frozenset({"authors", "author_label_pairs"})
 AUTHOR_LABEL_PAIR_KEYS = frozenset({"author", "label"})
-APPROVAL_KEYS = frozenset({"scope", "admins_satisfy"})
-BOT_APPROVER_KEYS = frozenset({"approver", "author", "label", "why"})
-BOT_APPROVER_REQUIRED_KEYS = ("approver", "author", "why")
-
-LINK_ONLY_KEYS = frozenset({"approval"})
-# Who can satisfy the approver gate (G3). `lane` is the per-subject rule the
-# matrix resolves; `any-team` says a member of any team in `teams:` satisfies
-# it, whatever the matrix routed; `any-human` says any human with write
-# access to the repo does -- the same set GitHub's own required-review rule
-# counts. Under every scope the matrix still decides who is REQUESTED.
-# One vocabulary for both `approval.scope` (every PR) and `link_only.approval`
-# (link-only diffs), because they answer the same question at two scopes; two
-# frozensets meant a third value could be accepted by one and rejected by the
-# other with nothing noticing.
-APPROVER_SCOPE = frozenset({"lane", "any-team", "any-human"})
-# Narrowest first. When `approval.scope` and `link_only.approval` both apply
-# to a PR, the wider one wins: each is a statement about who MAY clear the
-# gate, so neither can narrow the other.
-_SCOPE_WIDTH = {"lane": 0, "any-team": 1, "any-human": 2}
-
 # Closed vocabulary for external_contributors.skip_gates. Add a gate id here
 # when the Sentinel grows a new gate that a fork PR can legitimately skip.
 KNOWN_GATES = frozenset({"review-ran", "findings-answered"})
@@ -138,11 +128,9 @@ class Config:
     # Optional in the file (absent == empty): the automated processes the
     # Sentinel does not govern at all. See the yaml header for the semantics.
     not_governed: dict = field(default_factory=dict)
-    link_only: dict = field(default_factory=dict)
-    approval: dict = field(default_factory=dict)
-    # Optional (absent == empty): the bot identities whose approval clears G3
-    # on one automated lane each. See BOT APPROVERS in the yaml header.
-    bot_approvers: list = field(default_factory=list)
+    # Optional (absent == empty, and stale-pr-sweep.py refuses to run): the
+    # no-movement close policy for every open PR. See STALE PRS in the yaml.
+    stale_prs: dict = field(default_factory=dict)
     warnings: list[str] = field(default_factory=list)
 
 
@@ -155,15 +143,6 @@ class Resolution:
     # subject is still in `subjects`; only the approver changed.
     overridden: dict[str, str]
     reasons: list[str]
-    # True when any team in `teams:` satisfies the approver gate instead of
-    # the lane's own team — either repo-wide (`approval.scope: any-team`) or
-    # for this diff alone (`link_only.approval: any-team`).
-    any_team: bool = False
-    # True when any human with write access satisfies the approver gate,
-    # team or no team (`approval.scope: any-human`). Wider than `any_team`,
-    # which is left False when this is set: the gate never asks about teams.
-    any_human: bool = False
-
     def to_json(self) -> dict:
         return {
             "roles": sorted(self.roles),
@@ -171,8 +150,6 @@ class Resolution:
             "subjects": self.subjects,
             "overridden": self.overridden,
             "reasons": self.reasons,
-            "any_team": self.any_team,
-            "any_human": self.any_human,
         }
 
 
@@ -224,7 +201,8 @@ def _is_nonempty_str(v) -> bool:
 def _check_unknown_keys(d: dict, allowed: frozenset, where: str, errors: list[str]) -> None:
     for key in d:
         if key not in allowed:
-            errors.append(f"{where}: unknown key {key!r}")
+            retired = RETIRED_TOP_LEVEL_KEYS.get(key) if where == "top level" else None
+            errors.append(f"{where}: unknown key {key!r}" + (f" (removed: {retired})" if retired else ""))
 
 
 def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
@@ -452,6 +430,38 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                 f"close_days ({close_days})"
             )
 
+    # ---- stale_prs (optional) ---------------------------------------------
+    stale_prs = raw.get("stale_prs", {})
+    if stale_prs is None:
+        stale_prs = {}
+    if not isinstance(stale_prs, dict):
+        errors.append("stale_prs must be a mapping when present")
+        stale_prs = {}
+    elif stale_prs:
+        _check_unknown_keys(stale_prs, STALE_PRS_KEYS, "stale_prs", errors)
+        days = {}
+        for key in ("close_days", "notice_days", "extended_close_days"):
+            value = stale_prs.get(key)
+            if not isinstance(value, int) or isinstance(value, bool) or value <= 0:
+                errors.append(f"stale_prs.{key} must be a positive integer, got {value!r}")
+            else:
+                days[key] = value
+        if not _is_nonempty_str(stale_prs.get("extended_label")):
+            errors.append("stale_prs.extended_label must be a non-empty string")
+        if "close_days" in days and "notice_days" in days and days["notice_days"] >= days["close_days"]:
+            errors.append(
+                f"stale_prs.notice_days ({days['notice_days']}) must be less than "
+                f"close_days ({days['close_days']})"
+            )
+        if (
+            "close_days" in days and "extended_close_days" in days
+            and days["extended_close_days"] <= days["close_days"]
+        ):
+            errors.append(
+                f"stale_prs.extended_close_days ({days['extended_close_days']}) must be greater "
+                f"than close_days ({days['close_days']}) -- the label only ever buys more time"
+            )
+
     # ---- waive ----------------------------------------------------------
     waive = raw.get("waive")
     if not isinstance(waive, dict):
@@ -488,59 +498,6 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                     if not _is_nonempty_str(pair.get(key)):
                         errors.append(f"not_governed.author_label_pairs[{i}].{key} must be a non-empty string")
 
-    # ---- link_only (optional) ---------------------------------------------
-    link_only = raw.get("link_only", {})
-    if link_only is None:
-        link_only = {}
-    if not isinstance(link_only, dict):
-        errors.append("link_only must be a mapping with an 'approval' key")
-        link_only = {}
-    else:
-        _check_unknown_keys(link_only, LINK_ONLY_KEYS, "link_only", errors)
-        approval = link_only.get("approval", "lane")
-        if approval not in APPROVER_SCOPE:
-            errors.append("link_only.approval must be one of: " + ", ".join(sorted(APPROVER_SCOPE)))
-
-    # ---- approval (optional) ----------------------------------------------
-    # Absent means `{scope: lane, admins_satisfy: false}` — the strictest
-    # reading, so a config that predates this section keeps the old gate.
-    approval_cfg = raw.get("approval", {})
-    if approval_cfg is None:
-        approval_cfg = {}
-    if not isinstance(approval_cfg, dict):
-        errors.append("approval must be a mapping with optional 'scope' and 'admins_satisfy'")
-        approval_cfg = {}
-    else:
-        _check_unknown_keys(approval_cfg, APPROVAL_KEYS, "approval", errors)
-        if approval_cfg.get("scope", "lane") not in APPROVER_SCOPE:
-            errors.append("approval.scope must be one of: " + ", ".join(sorted(APPROVER_SCOPE)))
-        if not isinstance(approval_cfg.get("admins_satisfy", False), bool):
-            errors.append("approval.admins_satisfy must be true or false")
-
-    # ---- bot_approvers (optional) -----------------------------------------
-    # Each entry is one automated lane: this bot's approval clears G3 on a PR
-    # by this author (carrying this label, when one is given). `why` is
-    # required for the same reason it is on `overrides:` -- an exception
-    # nobody can explain is one nobody can safely delete.
-    bot_approvers = raw.get("bot_approvers", [])
-    if bot_approvers is None:
-        bot_approvers = []
-    if not isinstance(bot_approvers, list):
-        errors.append("bot_approvers must be a list of {approver, author, label?, why} mappings")
-        bot_approvers = []
-    else:
-        for i, entry in enumerate(bot_approvers):
-            where = f"bot_approvers[{i}]"
-            if not isinstance(entry, dict):
-                errors.append(f"{where} must be a mapping")
-                continue
-            _check_unknown_keys(entry, BOT_APPROVER_KEYS, where, errors)
-            for key in BOT_APPROVER_REQUIRED_KEYS:
-                if not _is_nonempty_str(entry.get(key)):
-                    errors.append(f"{where}.{key} must be a non-empty string")
-            if "label" in entry and not _is_nonempty_str(entry.get("label")):
-                errors.append(f"{where}.label must be a non-empty string when present")
-
     if errors:
         return None, errors, warnings
 
@@ -557,9 +514,7 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         author_staleness=author_staleness,
         waive=waive,
         not_governed=not_governed,
-        link_only=link_only,
-        approval=approval_cfg,
-        bot_approvers=bot_approvers,
+        stale_prs=stale_prs,
         warnings=warnings,
     )
     return config, errors, warnings
@@ -677,7 +632,7 @@ def requires_staging_evidence(config: Config, path: str) -> bool:
 
 
 def resolve_lanes(
-    changed_paths: list[str], mechanical: bool, claims: bool, config: Config, link_only: bool = False
+    changed_paths: list[str], mechanical: bool, claims: bool, config: Config
 ) -> Resolution:
     """Resolve the required roles and staging-evidence requirement for a PR.
 
@@ -746,68 +701,13 @@ def resolve_lanes(
         roles.add(overlay_role)
         reasons.append(f"claims overlay adds role:{overlay_role}")
 
-    # Two rules can widen who satisfies the approver gate; the roles stay on
-    # the record either way, because they are also what triage requests.
-    #
-    #   - `approval.scope: any-team` is repo-wide: the matrix names the
-    #     reviewer best placed to look, not the only one allowed to.
-    #   - `link_only.approval: any-team` is per-diff, for a sweep that
-    #     changes nothing but link targets — careful work, but not lane
-    #     knowledge. It still applies when the repo-wide scope is `lane`.
-    #
-    # `any-human` is the widest: any human with write access, no team asked.
-    # When both rules apply, the wider one wins.
-    repo_scope = (config.approval or {}).get("scope", "lane")
-    link_scope = (config.link_only or {}).get("approval", "lane") if link_only else "lane"
-    scope = max(repo_scope, link_scope, key=_SCOPE_WIDTH.__getitem__)
-    any_human = bool(roles) and scope == "any-human"
-    any_team = bool(roles) and scope == "any-team"
-    if any_human or any_team:
-        why = "approval.scope" if scope == repo_scope else "link-only diff"
-        who = ("any human with write access" if any_human
-               else "any team in teams:")
-        reasons.append(f"{why}: {scope}: {who} satisfies the approver gate")
-
     return Resolution(
         roles=roles,
         staging_evidence_required=staging_evidence_required,
         subjects=subjects,
         overridden=overridden,
         reasons=reasons,
-        any_team=any_team,
-        any_human=any_human,
     )
-
-
-def admins_satisfy(config: Config) -> bool:
-    """Does a repository administrator's approval satisfy the approver gate?
-
-    Off unless `approval.admins_satisfy: true` — an admin can already merge
-    past a red check, so this only lets the gate say so out loud instead of
-    reporting a block the repo does not actually impose on them.
-    """
-    return bool((config.approval or {}).get("admins_satisfy"))
-
-
-def bot_approver_reason(
-    config: Config, approver: str, author: str, labels: set[str] | frozenset[str]
-) -> str | None:
-    """Why this bot's approval clears G3 on this PR, or None if it does not.
-
-    An entry matches only when the approving login, the PR author, and (if
-    the entry names one) a label on the PR all line up. Nothing else about
-    the bot matters: a `bot_approvers` match overrides both the `bots:`
-    denylist and the automatic `type == Bot` exclusion, for that lane only.
-    """
-    for entry in config.bot_approvers or []:
-        if entry.get("approver") != approver or entry.get("author") != author:
-            continue
-        label = entry.get("label")
-        if label and label not in labels:
-            continue
-        on = f" with label `{label}`" if label else ""
-        return f"`{approver}` is a listed bot approver for PRs by `{author}`{on}"
-    return None
 
 
 def not_governed_reason(config: Config, author: str, labels: set[str] | frozenset[str]) -> str | None:
@@ -860,7 +760,6 @@ _CANNED_CONFIG = {
         "authors": ["dependabot[bot]"],
         "author_label_pairs": [{"author": "pulumi-bot", "label": "automation/merge"}],
     },
-    "link_only": {"approval": "any-team"},
 }
 
 
@@ -895,6 +794,8 @@ def self_test() -> int:
               all(cell[ct] != "none" for cell in real.matrix.values() for ct in CHANGE_TYPES))
         check("real config lists every PR-opening bot",
               {"pulumi-bot", "workprentice[bot]"} <= set(real.bots))
+        check("real config carries a stale_prs policy",
+              real.stale_prs.get("close_days", 0) > 0 and bool(real.stale_prs.get("extended_label")))
     except RoutingConfigError as e:
         check(f"real .github/review-routing.yml loads ({e.errors})", False)
 
@@ -1051,37 +952,13 @@ def self_test() -> int:
     cfg2, errs, _ = validate_raw(ok_cfg)
     check("not_governed is optional", errs == [] and cfg2.not_governed == {})
 
-    # ---- approval scope -------------------------------------------------
-    check("approval is optional and defaults to the lane rule",
-          config.approval == {} and admins_satisfy(config) is False
-          and resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False,
-                            config=config).any_team is False)
-    any_team_cfg, errs, _ = validate_raw({
-        **copy.deepcopy(_CANNED_CONFIG),
-        "approval": {"scope": "any-team", "admins_satisfy": True},
-    })
-    check("approval.scope: any-team validates", errs == [])
-    r = resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False, config=any_team_cfg)
-    check("approval.scope: any-team widens the gate but keeps the routed role",
-          r.any_team is True and r.roles == {"docs-guild"})
-    check("approval.admins_satisfy is readable", admins_satisfy(any_team_cfg) is True)
-    check("a zero-role PR is not 'any team'",
-          resolve_lanes([], mechanical=False, claims=False, config=any_team_cfg).any_team is False)
-
-    bad = copy.deepcopy(_CANNED_CONFIG)
-    bad["approval"] = {"scope": "whoever"}
-    _, errs, _ = validate_raw(bad)
-    check("approval.scope is validated", any("approval.scope" in e for e in errs))
-
-    bad = copy.deepcopy(_CANNED_CONFIG)
-    bad["approval"] = {"admins_satisfy": "yes"}
-    _, errs, _ = validate_raw(bad)
-    check("approval.admins_satisfy must be a bool", any("admins_satisfy" in e for e in errs))
-
-    bad = copy.deepcopy(_CANNED_CONFIG)
-    bad["approval"] = {"scope": "any-team", "admin": True}
-    _, errs, _ = validate_raw(bad)
-    check("an unknown approval key fails closed", any("unknown key 'admin'" in e for e in errs))
+    # ---- retired approver-gate keys -------------------------------------
+    for key in RETIRED_TOP_LEVEL_KEYS:
+        bad = copy.deepcopy(_CANNED_CONFIG)
+        bad[key] = {}
+        _, errs, _ = validate_raw(bad)
+        check(f"the retired {key} section fails closed with a reason",
+              any(f"unknown key {key!r} (removed:" in e for e in errs))
 
     # ---- validation failure modes ---------------------------------------
     bad = copy.deepcopy(_CANNED_CONFIG)
@@ -1123,6 +1000,26 @@ def self_test() -> int:
     bad["author_staleness"] = {"warn_days": 21, "close_days": 14}
     _, errs, _ = validate_raw(bad)
     check("warn_days >= close_days rejected", any("must be less than" in e for e in errs))
+
+    ok_stale = {"close_days": 30, "notice_days": 7, "extended_label": "review:long-running",
+                "extended_close_days": 90}
+    good = copy.deepcopy(_CANNED_CONFIG)
+    good["stale_prs"] = dict(ok_stale)
+    cfg, errs, _ = validate_raw(good)
+    check("valid stale_prs accepted", errs == [] and cfg.stale_prs["close_days"] == 30)
+    check("absent stale_prs is empty", config.stale_prs == {})
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["stale_prs"] = {**ok_stale, "extended_close_days": 30}
+    _, errs, _ = validate_raw(bad)
+    check("stale_prs extended window <= base window rejected",
+          any("extended_close_days" in e and "greater" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["stale_prs"] = {**ok_stale, "notice_days": 30}
+    _, errs, _ = validate_raw(bad)
+    check("stale_prs notice_days >= close_days rejected",
+          any("stale_prs.notice_days" in e for e in errs))
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)

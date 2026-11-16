@@ -10,7 +10,7 @@ updated: 2026-09-21
 
 ---
 
-Going from a containerized application to a service running in the cloud requires a few steps beyond an application's normal build-and-test cycle. Namely, it means building and publishing a container image in a registry and then consuming that image from your target environment, whether that's Kubernetes, Amazon ECS, or another container orchestrator. It's not enough to just write a `Dockerfile` &mdash; you will need to pick a container registry, decide whether that registry should be public or private, authenticate against it, and ideally automate deploying subsequent updates. [Infrastructure as code](/what-is/what-is-infrastructure-as-code/) to the rescue! In this article, we'll see how to build, publish, and consume a simple container image across any cloud, using just a few lines of code.
+Going from a containerized application to a service running in the cloud requires a few steps beyond an application's normal build-and-test cycle. Namely, it means building and publishing a container image in a registry and then consuming that image from your target environment, whether that's Kubernetes, Amazon ECS, or another container orchestrator. It's not enough to just write a `Dockerfile` &mdash; you will need to pick a container registry, decide whether that registry should be public or private, authenticate against it, and ideally automate deploying subsequent updates. [Infrastructure as code](/topics/infrastructure-as-code/) to the rescue! In this article, we'll see how to build, publish, and consume a simple container image across any cloud, using just a few lines of code.
 
 <!--more-->
 
@@ -2257,4 +2257,4 @@ All of these steps were manually run from a CLI; however, a natural next step is
 
 Although we've shown a very simple set of infrastructure resources, it would be natural to extend these examples by provisioning other ancillary services that your application needs, including databases, pub/sub topics, queues, metrics and dashboards, and more. Using an infrastructure as code approach to building, publishing, and consuming your container images means you can incrementally add on such infrastructure to the base code shown above and reference them from your containers easily with automatic dependency tracking.
 
-The [complete examples](https://github.com/pulumi/pulumi-docker/tree/master/examples/) in this article are available on GitHub. Pulumi is open source and free to get started with &mdash; [give it a try, and get up and running with infrastructure as code for your containers today](/docs/get-started/)!
+The [complete examples](https://github.com/pulumi/pulumi-docker/tree/master/examples/) in this article are available on GitHub. Pulumi is open source and free to get started with &mdash; [give it a try, and get up and running with infrastructure as code for your containers today](/up/)!

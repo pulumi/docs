@@ -1,0 +1,241 @@
+name: Staging deploy (/deploy-staging command)
+
+# `/deploy-staging`, at the start of a line in a PR comment, starts the
+# pulumi-test.io deploy of the PR's current head that the Sentinel's staging gate
+# verifies. It's for when the auto lane (staging-deploy-auto.yml) produced
+# none: its dispatch failed, or the PR predates it. The gate used to tell
+# people to dispatch "Build and deploy testing" by hand, which sits one click
+# from the PRODUCTION "Build and deploy" in the Actions sidebar; on
+# pulumi/docs#22524 someone dispatched production at an unmerged branch. A
+# comment can only ever reach staging.
+#
+# Design notes (the auto lane's header explains the shared ones at length):
+# - DEFAULT BRANCH ONLY. `issue_comment` always runs the default branch's
+#   copy of this file, and both checkouts below are pinned to it. No PR code
+#   is checked out or run: deploy-staging-command.py reads the PR as API data
+#   and staging-deploy.sh dispatches "Build and deploy testing" at the head
+#   branch, which does the build in the testing account as it does for master.
+# - WHO AND WHAT. Only a PR, only a same-repo head (fork code doesn't go to
+#   the shared stack from a comment), only a commenter whose repository role
+#   is write, maintain or admin, and only an open PR. The head SHA is read
+#   from the API at run time, never taken from the event.
+# - THE COMMAND GATE DECIDES, not the `if:`. The job-level `contains()` is a
+#   substring match, and the Sentinel's own staging status quotes the command in a
+#   code span; command-gate.py drops code, quotes and mid-line mentions. A
+#   declined comment ends in the cheap gate job, outside the concurrency
+#   group below.
+# - SKIP WHEN EVIDENCE EXISTS OR IS ON ITS WAY: a successful deploy of this
+#   head (the same two witnesses sentinel.py accepts) or one already running.
+#   A failed deploy IS retried; that's what the command is for.
+# - CAN ONLY REACH STAGING. staging-deploy.sh dispatches exactly
+#   testing-build-and-deploy.yml; the dispatch step re-checks that before it
+#   runs it, and test_deploy_staging_command.py pins it.
+# - CONCURRENCY IS PER PR, so two quick comments don't race past the
+#   "already running" check. There is no shared `staging-stack` group to
+#   join: the auto lane dropped it (a queued job GitHub cancels reads as a
+#   failing check), and a group around a dispatch-and-exit job wouldn't
+#   serialize the deploys anyway.
+# - ONE REPLY, every time the gate fires: started (with the run link), or
+#   why not. A dispatch that fails also writes `staging/pulumi-test-io` =
+#   error, like the auto lane, so the staging status quotes the reason.
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions: {}
+
+jobs:
+  gate:
+    if: >-
+      github.event.issue.pull_request
+      && contains(github.event.comment.body, '/deploy-staging')
+      && github.event.comment.user.type != 'Bot'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: write   # the 👀 reaction (a PR's conversation comments)
+      issues: write
+    outputs:
+      fire: ${{ steps.command-gate.outputs.fire }}
+    steps:
+      - name: Checkout command gate (default branch, sparse)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          path: .command-gate
+          sparse-checkout: .claude/commands/docs-review/scripts/command-gate.py
+          sparse-checkout-cone-mode: false
+
+      - name: Command gate (a quoted command is not a request)
+        id: command-gate
+        env:
+          BODY: ${{ github.event.comment.body }}
+        run: |
+          python3 .command-gate/.claude/commands/docs-review/scripts/command-gate.py check \
+            --command deploy-staging --body-env BODY | tee -a "$GITHUB_OUTPUT"
+
+      # 👀 in a few seconds, so the commenter knows the command was heard;
+      # 🚀 or 😕 lands with the reply at the end of the deploy job. The
+      # other review commands (`/update-review`) already do the same.
+      - name: Acknowledge the command
+        if: steps.command-gate.outputs.fire == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          COMMENT_ID: ${{ github.event.comment.id }}
+        run: |
+          gh api "repos/$REPO/issues/comments/$COMMENT_ID/reactions" -f content=eyes > /dev/null \
+            || echo "::warning::could not react to the comment"
+
+  deploy:
+    needs: gate
+    if: needs.gate.outputs.fire == 'true'
+    runs-on: ubuntu-latest
+    # Dispatch and exit: a minute of API calls, not a deploy.
+    timeout-minutes: 10
+    concurrency:
+      group: deploy-staging-command-${{ github.event.issue.number }}
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pull-requests: write   # the reply
+      issues: write          # the reply (PR conversation comments are issue comments)
+      statuses: write        # staging/pulumi-test-io = error on a failed dispatch
+      actions: write         # gh workflow run (staging deploy, Sentinel)
+    steps:
+      - name: Checkout base (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          sparse-checkout: scripts/review-v3
+          sparse-checkout-cone-mode: true
+
+      # Every comment- or PR-controlled value goes through `env:` and is read
+      # as "$VAR", never written as ${{ }} inside `run:`: GitHub substitutes
+      # those textually before bash parses the script.
+      - name: Decide
+        id: plan
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.issue.number }}
+          COMMENTER: ${{ github.event.comment.user.login }}
+        run: |
+          set -uo pipefail
+          python3 scripts/review-v3/deploy-staging-command.py plan \
+            --repo "$REPO" --pr "$PR" --commenter "$COMMENTER" \
+            --reply-out "$RUNNER_TEMP/reply.md" | tee -a "$GITHUB_OUTPUT"
+
+      - name: Dispatch the staging deploy
+        id: dispatch
+        if: steps.plan.outputs.action == 'deploy'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          COMMENTER: ${{ github.event.comment.user.login }}
+          HEAD_SHA: ${{ steps.plan.outputs.head_sha }}
+          HEAD_REF: ${{ steps.plan.outputs.head_ref }}
+          JOB_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -uo pipefail
+          CMD=scripts/review-v3/deploy-staging-command.py
+          REPLY="$RUNNER_TEMP/reply.md"
+          # Staging only, checked at the point of use: the one script this
+          # job runs must dispatch testing-build-and-deploy.yml and nothing
+          # else (never build-and-deploy.yml, the production deploy).
+          TARGETS=$(grep -oE 'gh workflow run [^ ]+' scripts/review-v3/staging-deploy.sh | sort -u)
+          if [ "$TARGETS" != "gh workflow run testing-build-and-deploy.yml" ]; then
+            echo "::error::staging-deploy.sh dispatches something other than testing-build-and-deploy.yml: $TARGETS"
+            python3 "$CMD" failed --repo "$REPO" --sha "$HEAD_SHA" --commenter "$COMMENTER" \
+              --detail "the deploy script failed a safety check" --job-url "$JOB_URL" --reply-out "$REPLY"
+            echo "dispatched=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          LOG=$(mktemp)
+          if scripts/review-v3/staging-deploy.sh \
+               --repo "$REPO" --head-sha "$HEAD_SHA" --head-ref "$HEAD_REF" 2>&1 | tee "$LOG"; then
+            RUN_URL=$(grep -oE "https://github.com/$REPO/actions/runs/[0-9]+" "$LOG" | tail -1 || true)
+            python3 "$CMD" started --repo "$REPO" --sha "$HEAD_SHA" --commenter "$COMMENTER" \
+              --run-url "$RUN_URL" --reply-out "$REPLY"
+            echo "dispatched=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # Dispatched, but the run didn't show up within 60 s: a deploy is
+          # running, so link the workflow's runs page instead.
+          if grep -q "could not locate the dispatched testing deploy run" "$LOG"; then
+            python3 "$CMD" started --repo "$REPO" --sha "$HEAD_SHA" --commenter "$COMMENTER" \
+              --reply-out "$REPLY"
+            echo "dispatched=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if grep -q "disabled workflow" "$LOG"; then
+            DESC="Not dispatched: testing-build-and-deploy.yml is disabled. Re-enable it, then re-run."
+            DETAIL="testing-build-and-deploy.yml is disabled; ask in #docs"
+          else
+            DESC="Staging deploy could not be dispatched. See details for the error."
+            DETAIL="the dispatch failed (see the job log)"
+          fi
+          echo "::error::$DESC"
+          python3 "$CMD" failed --repo "$REPO" --sha "$HEAD_SHA" --commenter "$COMMENTER" \
+            --detail "$DETAIL" --job-url "$JOB_URL" --reply-out "$REPLY"
+          gh api "repos/$REPO/statuses/$HEAD_SHA" \
+            -f state=error -f context=staging/pulumi-test-io \
+            -f description="$DESC" -f target_url="$JOB_URL" > /dev/null \
+            || echo "::warning::could not write the staging/pulumi-test-io status"
+          # The Sentinel should quote the reason, so re-score it below too.
+          echo "dispatched=error" >> "$GITHUB_OUTPUT"
+
+      # A comment only when it says something the reactions and statuses
+      # don't: a started deploy is 🚀 on the command plus the staging gate's
+      # status, whose Details link is the run, so it posts nothing; a refusal
+      # is 😕 plus one line saying why.
+      - name: Reply
+        if: always() && steps.plan.outcome == 'success' && steps.dispatch.outputs.dispatched != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.issue.number }}
+        run: |
+          set -uo pipefail
+          REPLY="$RUNNER_TEMP/reply.md"
+          if [ ! -s "$REPLY" ]; then
+            echo "::warning::no reply was rendered"
+            exit 0
+          fi
+          gh api "repos/$REPO/issues/$PR/comments" -F body=@"$REPLY" > /dev/null \
+            || echo "::warning::could not post the reply"
+
+      - name: React with the outcome
+        if: always() && steps.plan.outcome == 'success'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          COMMENT_ID: ${{ github.event.comment.id }}
+          DISPATCHED: ${{ steps.dispatch.outputs.dispatched }}
+        run: |
+          if [ "$DISPATCHED" = "true" ]; then CONTENT=rocket; else CONTENT=confused; fi
+          gh api "repos/$REPO/issues/comments/$COMMENT_ID/reactions" -f content="$CONTENT" > /dev/null \
+            || echo "::warning::could not react to the comment"
+
+      # Re-score the gate so the staging gate shows the running deploy (or the dispatch
+      # error) now, not on the next unrelated event. Pinned to the default
+      # branch, like the auto lane's and staging-status.yml's pokes.
+      - name: Re-evaluate Sentinel
+        if: >-
+          (steps.dispatch.outputs.dispatched == 'true' || steps.dispatch.outputs.dispatched == 'error')
+          && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.issue.number }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          gh workflow run review-sentinel.yml --repo "$REPO" \
+            --ref "$DEFAULT_BRANCH" -f pr_number="$PR"

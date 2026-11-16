@@ -11,7 +11,7 @@ tags:
 category: product
 ---
 
-Pulumi offers the most complete [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform for building, deploying, and managing modern cloud infrastructure and applications. When you use Pulumi, a vast library of cloud resources—from compute, storage, and other cloud infrastructure to databases to identity providers to monitoring systems—is at your fingertips. As the Pulumi community has grown, we’ve [heard from many of you](https://github.com/pulumi/pulumi/issues/3297) that we needed a central hub where you could find all of those resources. We’ve also heard from Pulumi partners that they wanted a great place to showcase their integrations with Pulumi so that their customers can more easily learn how to use Pulumi to deploy and manage their products.
+Pulumi offers the most complete [infrastructure as code](/topics/infrastructure-as-code/) platform for building, deploying, and managing modern cloud infrastructure and applications. When you use Pulumi, a vast library of cloud resources—from compute, storage, and other cloud infrastructure to databases to identity providers to monitoring systems—is at your fingertips. As the Pulumi community has grown, we’ve [heard from many of you](https://github.com/pulumi/pulumi/issues/3297) that we needed a central hub where you could find all of those resources. We’ve also heard from Pulumi partners that they wanted a great place to showcase their integrations with Pulumi so that their customers can more easily learn how to use Pulumi to deploy and manage their products.
 
 Today, we’re excited to launch [Pulumi Registry](/registry/), the one place to discover and share everything you can achieve using Pulumi. Pulumi Registry is a searchable collection of [Pulumi Packages](/product/packages/) published by Pulumi and our partners. With Pulumi Registry, you can easily find the package with the resources you need, install that package directly into your project, and start building. You can choose from Providers that give you full access to everything a cloud provider has to offer, or choose a Component that gets you started quickly with best practices and sensible defaults baked in. All Pulumi Packages are available in all Pulumi languages, so you can build your infrastructure using C#, Go, Python, and TypeScript/JavaScript. You’ll also find all of the documentation you need to succeed: from detailed API reference to how-to guides with source code for specific use cases.
 
@@ -53,7 +53,7 @@ If Pulumi Registry doesn’t yet have a native provider for your preferred cloud
 
 We also invite the entire Pulumi community to contribute new Providers to Pulumi Registry. You can enable your customers to manage your cloud service or cloud resources using Pulumi’s modern infrastructure-as-code by authoring a Native Provider, or by bridging an existing Terraform provider into the Pulumi ecosystem, and publishing it to the Pulumi Registry. We’ve also seen passionate customers and community members author Native Providers for cloud services with public, well-known APIs! Pulumi Registry will enable fully self-service publishing in 2022, but until then, we’re happy to work with you to publish your Provider.
 
-👉 [Build and publish a Pulumi Provider](/docs/iac/packages-and-automation/pulumi-packages/authoring/)
+👉 [Build and publish a Pulumi Provider](/docs/iac/guides/building-extending/packages/publishing-packages/)
 
 ## Pulumi Components: Prebuilt IaC for Faster Cloud Deployments
 
@@ -324,7 +324,7 @@ class MyStack : Stack
 
 Want to share your own best practices and cloud configurations with the Pulumi community? You can author a Pulumi Component and publish it to Pulumi Registry. We’ll have fully self-service publishing in 2022, but until then, we’re happy to work with you to publish your Component. You can get started using the link below.
 
-👉 [Build and publish a Pulumi Component](/docs/iac/packages-and-automation/pulumi-packages/authoring/)
+👉 [Build and publish a Pulumi Component](/docs/iac/guides/building-extending/packages/publishing-packages/)
 
 ## What's Next for Pulumi Registry?
 

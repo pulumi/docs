@@ -37,10 +37,15 @@
 const fs = require("fs");
 const path = require("path");
 
-const [srcArg, outArg, tsconfigArg] = process.argv.slice(2);
+// --recursive marks a caller whose runner discovers suites at any depth
+// (`node --test <dir>`), so a compiled suite in a subdirectory is reachable.
+// Without it, the single-level-glob assumption below still holds.
+const args = process.argv.slice(2);
+const recursive = args.includes("--recursive");
+const [srcArg, outArg, tsconfigArg] = args.filter((a) => a !== "--recursive");
 
 if (!srcArg || !outArg || !tsconfigArg) {
-    console.error("usage: check-test-suites-compiled.js <srcDir> <outDir> <tsconfigPath>");
+    console.error("usage: check-test-suites-compiled.js <srcDir> <outDir> <tsconfigPath> [--recursive]");
     process.exit(2);
 }
 
@@ -81,9 +86,10 @@ for (const rel of suites) {
         problems.push(`  - ${srcArg}/${rel} was not compiled — add it to "files" in ${tsconfigArg}`);
         continue;
     }
-    // The runners use a single-level glob, so a compiled suite in a
-    // subdirectory exists but never runs.
-    if (rel.includes(path.sep)) {
+    // A single-level-glob runner leaves a compiled suite in a subdirectory
+    // existing but never run. A --recursive runner (`node --test <dir>`) reaches
+    // any depth, so the restriction doesn't apply there.
+    if (!recursive && rel.includes(path.sep)) {
         problems.push(`  - ${srcArg}/${rel} is in a subdirectory, which the test glob does not reach`);
     }
 }

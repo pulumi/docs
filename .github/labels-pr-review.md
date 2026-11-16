@@ -38,13 +38,19 @@ Load-bearing — these gate workflow execution.
 | `review:stale` | `ededed` | New commits landed since the last Claude review; refresh on next ready-transition or `/update-review`. Also where a run rests when the head moved while it was reviewing: the publish guard refuses the stale handoff, sets this, and re-dispatches at the live head (at most twice in a row, then it waits for a mention). |
 | `review:error` | `e11d21` | Workflow failed before publishing a review. See the Actions logs. |
 | `needs-author-response` | `f7c6c7` | Review surfaced unverifiable claims; author needs to provide sources or fix. Applied by a maintainer from `/pr-review` (the route action's request-changes path). |
-| `review:waived` | `d93f0b` | **Break-glass.** A human deliberately waived the v3 merge gates (Sentinel concludes success, except infra staging evidence, which is never waivable). Actor and reason are logged to the waive ledger and the waive rate is tracked — apply it on purpose, in an incident, not to skip the answer loop. Applied by humans only; never by automation. |
+| `review:waived` | `d93f0b` | **Break-glass.** A human deliberately waived the v3 merge gates (Sentinel concludes success, infra staging evidence included). Actor and reason are logged to the waive ledger and the waive rate is tracked — apply it on purpose, in an incident, not to skip the answer loop. Applied by humans only; never by automation. |
 | `review:author-stalled` | `fad8c7` | The PR has been waiting on its author (unanswered findings or a standing changes-requested review) for 14+ days. Applied and cleared by the SLA sweep; the PR closes at 21 days if nothing changes, with one-click reopen. |
 | `automation/merge` | `ededed` | Marks a PR the Sentinel does not gate at all: with it, a `not_governed.author_label_pairs` match (today `pulumi-bot` + this label) concludes the check `success` with **no gates evaluated**. That is safe only because the generating workflow posts its own approval and arms auto-merge. Applied by those workflows, never by hand — putting it on a human PR turns the merge gate off. Predates this scheme, so it is not in the create-them-all block below. |
 
 The six `review:*` state labels are **mutually exclusive**. Setting one removes the others. `set-review-label.sh` (under `.claude/commands/docs-review/scripts/`) enforces this atomically and supports a `--clear` mode that strips any state label without adding a new one (used by claude-triage.yml's `if: always()` cleanup).
 
 > **Before merging a change that introduces a new label:** create it first. Triage applies its whole ADD set in a single `gh pr edit --add-label a,b,c` call, and `gh` rejects the entire call if any one name doesn't exist in the repo — the workflow's `|| true` then swallows it, so the other labels in that batch go missing too, silently.
+
+## PR lifecycle labels (applied by people)
+
+| Label | Color | Description |
+|---|---|---|
+| `review:long-running` | `bfdadc` | This PR is meant to sit for a while. The stale-PR sweep (`stale-pr-sweep.yml`) closes it after 90 days without activity instead of 30. A longer grace period, not an exemption: nothing keeps a PR open forever. Applied by people (the sweep's close comment tells authors to reopen and add it); the sweep only reads it. Not one of the mutually exclusive review state labels, so `set-review-label.sh` never touches it. The name and both windows live in the `stale_prs:` block of `.github/review-routing.yml`, so a rename is a one-line config change plus `gh label edit`. |
 
 ## Content-review class labels (set by the content-review workflow)
 
@@ -82,6 +88,7 @@ gh label create "review:error"           --color e11d21 --description "Workflow 
 gh label create "needs-author-response"  --color f7c6c7 --description "Review surfaced unverifiable claims; author owes a response"
 gh label create "review:waived"          --color d93f0b --description "Break-glass: a human waived the v3 merge gates; actor and reason are logged"
 gh label create "review:author-stalled"  --color fad8c7 --description "Waiting on the author 14+ days; closes at 21 days, one-click reopen (SLA sweep)"
+gh label create "review:long-running"    --color bfdadc --description "Meant to sit a while: the stale-PR sweep closes it after 90 days idle instead of 30"
 gh label create "content-review/deterministic" --color c5def5 --description "Content-review PR whose fixes are all deterministic-class (links, Vale, frontmatter)"
 gh label create "content-review/judgment"      --color bfd4f2 --description "Content-review PR containing judgment-class fixes (needs a human eye)"
 gh label create "content-review/glow-up"       --color d4c5f9 --description "Content glow-up PR (whole-article polish)"

@@ -1,19 +1,45 @@
+{{- /*
+    Walks a docs menu and returns the nodes of /docs/llm-sitemap.json.
+
+    Node shapes:
+      page     {title, path, children, selfLabel?, sections?}
+      link     {title, path}                    menu entry with an on-site URL
+      external {title, url, external: true}     menu entry pointing off-site
+      group    {title, group: true, children}   pageless menu heading; it has
+                                                no URL of its own, so no path
+
+    Every path is a page we serve: groups never get an invented path, and
+    menu entries that link to an #anchor on their parent's page are folded
+    into that parent as sections ({title, anchor}) instead of becoming nodes.
+*/ -}}
 {{- $result := slice -}}
 {{- range .menuEntries -}}
   {{- $menuItem := . -}}
   {{- with .Page -}}
     {{- if and (not .Params.llms_exclude) (ne .Title "") -}}
+      {{- $pagePath := .RelPermalink -}}
       {{- $children := slice -}}
+      {{- $sections := slice -}}
       {{- with $menuItem.Children -}}
-        {{- $children = partial "llm-sitemap-walk.json" (dict "menuEntries" .) -}}
+        {{- range partial "llm-sitemap-walk.json" (dict "menuEntries" .) -}}
+          {{- $parts := split (or .path "") "#" -}}
+          {{- if and (eq (len $parts) 2) (eq (index $parts 0) $pagePath) -}}
+            {{- $sections = $sections | append (dict "title" .title "anchor" (printf "#%s" (index $parts 1))) -}}
+          {{- else -}}
+            {{- $children = $children | append . -}}
+          {{- end -}}
+        {{- end -}}
       {{- end -}}
-      {{- $entry := dict "title" .Title "path" .RelPermalink "children" $children -}}
+      {{- $entry := dict "title" .Title "path" $pagePath "children" $children -}}
       {{- if $children -}}
         {{- $selfLabel := "Introduction" -}}
         {{- if .Params.docs_home -}}
           {{- $selfLabel = "Overview" -}}
         {{- end -}}
         {{- $entry = merge $entry (dict "selfLabel" $selfLabel) -}}
+      {{- end -}}
+      {{- with $sections -}}
+        {{- $entry = merge $entry (dict "sections" .) -}}
       {{- end -}}
       {{- $result = $result | append $entry -}}
     {{- end -}}
@@ -24,16 +50,13 @@
       {{- $children = partial "llm-sitemap-walk.json" (dict "menuEntries" .) -}}
     {{- end -}}
     {{- if $children -}}
-      {{- $path := "" -}}
-      {{- with index $children 0 -}}
-        {{- $childPath := .path -}}
-        {{- $trimmed := strings.TrimRight "/" $childPath -}}
-        {{- $path = printf "%s/" (path.Dir $trimmed) -}}
-      {{- end -}}
-      {{- $entry := dict "title" $menuItem.Name "path" $path "children" $children -}}
-      {{- $result = $result | append $entry -}}
+      {{- $result = $result | append (dict "title" $menuItem.Name "group" true "children" $children) -}}
     {{- else if $menuItem.URL -}}
-      {{- $result = $result | append (dict "title" $menuItem.Name "path" $menuItem.URL) -}}
+      {{- if or (hasPrefix $menuItem.URL "https://") (hasPrefix $menuItem.URL "http://") -}}
+        {{- $result = $result | append (dict "title" $menuItem.Name "url" $menuItem.URL "external" true) -}}
+      {{- else -}}
+        {{- $result = $result | append (dict "title" $menuItem.Name "path" $menuItem.URL) -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}

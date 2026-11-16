@@ -10,7 +10,7 @@ meta_desc: "This post shows how to use Node.js, the Mocha test framework, and th
 ---
 
 {{% notes type="warning" %}}
-Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/iac/concepts/testing/) for the updated overview and tutorials.
+Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/iac/guides/testing/) for the updated overview and tutorials.
 {{% /notes %}}
 
 Testing your infrastructure using familiar tools like Node.js's Mocha
@@ -454,7 +454,7 @@ And if we select it, we'll see the complete Mocha test output:
 
 ![Failed Deployment Details](/blog/unit-testing-infrastructure-in-nodejs-and-mocha/failed-deployment-details.png)
 
-We could even [use webhooks](/docs/pulumi-cloud/webhooks/) to
+We could even [use webhooks](/docs/deployments/concepts/webhooks/) to
 fire off a Slack alarm so that nobody misses the issue. This is often very helpful in
 unattended scenarios, like [continuous deployment](/docs/iac/operations/continuous-delivery/).
 
@@ -523,4 +523,4 @@ can be used to enforce a wide array of team standards, best practices, and secur
 guidelines. If you can express it in your favorite test framework, you can check it!
 
 Everything we've seen in this article is open source and free to use --
-[give Pulumi a try today](/docs/get-started/).
+[give Pulumi a try today](/up/).

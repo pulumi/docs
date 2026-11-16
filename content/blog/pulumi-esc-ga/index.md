@@ -24,7 +24,7 @@ This next-generation secrets management and orchestration service is built with 
 
 ## Challenges in Secrets Management
 
-In today's cloud-native world, secrets are the keys to the cloud estate, but managing them effectively is a growing challenge. Modern applications rely on a complex web of secrets, but traditional approaches to [secrets management](/what-is/what-is-secrets-management/) are struggling to keep pace. This complexity creates major challenges for security and engineering teams:
+In today's cloud-native world, secrets are the keys to the cloud estate, but managing them effectively is a growing challenge. Modern applications rely on a complex web of secrets, but traditional approaches to [secrets management](/topics/secrets-and-security/) are struggling to keep pace. This complexity creates major challenges for security and engineering teams:
 
 - **Secrets Sprawl**:  Secrets scattered across numerous systems and platforms make it nearly impossible to track their usage, enforce consistent security policies, and prevent unauthorized access, significantly increasing the likelihood of a breach.
 - **Long-Lived Credentials**: Storing long-lived credentials, especially locally, creates a significant security liability. If these credentials are compromised, they can grant attackers prolonged access to sensitive systems.
@@ -38,7 +38,7 @@ Pulumi ESC is the modern secret management platform designed to streamline and s
 ### Centralize and Simplify Secrets Management:
 
 - **Unify Your Secrets**: Say goodbye to secrets scattered across systems. Pulumi ESC lets you pull and synchronize secrets from any source—[HashiCorp Vault](/docs/esc/providers/secrets/vault-secrets/), [AWS Secrets Manager](/docs/esc/providers/secrets/aws-secrets/), [Azure Key Vault](/docs/esc/providers/secrets/azure-secrets/), [1Password](/docs/esc/providers/secrets/1password-secrets/), and more—and consume them securely from anywhere.
-- **Streamline Access and Control**: Access secrets seamlessly via [CLI](/docs/iac/cli/commands/pulumi_env/), [API](/docs/reference/cloud-rest-api/#environments), [Kubernetes operator](https://external-secrets.io/latest/provider/pulumi/), the intuitive Pulumi Cloud UI, or directly within your code using our TypeScript, Python, and Go [SDKs](/docs/esc/development/languages-sdks/). Robust [RBAC](/docs/administration/concepts/rbac/) ensures the right people have the right access at all times.
+- **Streamline Access and Control**: Access secrets seamlessly via [CLI](/docs/iac/cli/commands/pulumi_env/), [API](/docs/reference/cloud-rest-api/#environments), [Kubernetes operator](https://external-secrets.io/latest/provider/pulumi/), the intuitive Pulumi Cloud UI, or directly within your code using our TypeScript, Python, and Go [SDKs](/docs/esc/languages-sdks/). Robust [RBAC](/docs/administration/concepts/rbac/) ensures the right people have the right access at all times.
 - **Eliminate .env File Risks**: Stop sharing secrets through insecure channels. Pulumi ESC provides a secure and centralized way to manage and access secrets, eliminating the need for risky .env files.
 
 ![Pulumi ESC Integrations](esc-integrations.png)
@@ -94,7 +94,7 @@ Since the launch of Pulumi ESC in preview, over the last 11 months, we have laun
 - [**Table Editor**](/blog/esc-key-value-table-editor-launch/) to support users who prefer point-and-click UI-driven method to secrets management
 - [**Pulumi Stack reference provider**](/docs/esc/providers/iac/pulumi-stacks/) offering tighter integration with Pulumi IaC
 - [**Files**](/blog/esc-kubernetes-cluster-and-app/) support that allows getting Kubernetes credentials dynamically
-- [**Audit logs**](/docs/administration/security-compliance/audit-logs/) to monitor your environments
+- [**Audit logs**](/docs/administration/concepts/audit-logs/) to monitor your environments
 
 ## Pricing
 

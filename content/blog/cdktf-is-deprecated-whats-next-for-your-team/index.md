@@ -87,7 +87,7 @@ const bucket = new aws.s3.Bucket('my-bucket', {
 });
 ```
 
-You can also use [any Terraform provider](/docs/iac/get-started/terraform/terraform-providers/) with Pulumi, and you can even [reference Terraform modules directly](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#using-terraform-modules-directly) from within your Pulumi code.
+You can also use [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) with Pulumi, and you can even [reference Terraform modules directly](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#using-terraform-modules-directly) from within your Pulumi code.
 
 Pulumi is also different from CDKTF in several ways. One is that rather than transpile your source code to a format like JSON as CDKTF does (and then deploying it separately later), Pulumi uses its own declarative deployment engine that resolves the resource graph at runtime and provisions cloud resources directly, which is much faster and more flexible. You can learn more about the deployment model in [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/).
 

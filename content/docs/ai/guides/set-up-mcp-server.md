@@ -5,10 +5,9 @@ title: MCP server
 h1: Pulumi Model Context Protocol server
 menu:
     ai:
-        name: Set up the MCP server
+        name: Set up the Pulumi MCP server
         parent: ai-guides
-        identifier: ai-guides-mcp-server
-        weight: 10
+        weight: 30
 aliases:
 - /docs/iac/using-pulumi/mcp-server/
 - /docs/iac/guides/mcp-server.md
@@ -28,7 +27,7 @@ aliases:
 })();
 </script>
 
-The Pulumi [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server gives the AI agent you already use access to Pulumi. Through it, an agent can list your stacks, search your resources, check policy violations, look up resource schemas in the Pulumi Registry, and hand tasks to [Pulumi Neo](/docs/ai/concepts/neo/). For background on MCP in infrastructure work, see [MCP for infrastructure as code](/what-is/mcp-for-infrastructure-as-code/).
+The Pulumi [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server gives the AI agent you already use access to Pulumi. Through it, an agent can list your stacks, search your resources, check policy violations, look up resource schemas in the Pulumi Registry, and hand tasks to [Pulumi Neo](/docs/ai/concepts/neo/). For background on MCP in infrastructure work, see [MCP for infrastructure as code](/topics/agentic-infrastructure/mcp-for-infrastructure-as-code/).
 
 Pulumi hosts the server at `https://mcp.ai.pulumi.com/mcp`, so there is nothing to install or run locally.
 
@@ -198,4 +197,4 @@ The server exposes tools for Pulumi Cloud, Neo, the Pulumi Registry, and code ge
 - [Pulumi Neo](/docs/ai/concepts/neo/): Pulumi's infrastructure agent.
 - [Agent accounts](/docs/administration/concepts/agent-accounts/): Pulumi Cloud accounts that agents provision for themselves.
 - [Access tokens](/docs/administration/concepts/access-tokens/): personal, organization, and team tokens.
-- [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/)
+- [What is agentic infrastructure?](/topics/agentic-infrastructure/)

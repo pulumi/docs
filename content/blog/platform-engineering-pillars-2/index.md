@@ -54,7 +54,7 @@ Let’s explore how platform engineering teams can achieve this by version-contr
 * **No Clear File Structure:** Throwing all configs into a single file or folder obscures dependencies. Organize by environment, service, or module.
 * **Skipping Peer Reviews:** Infrastructure mistakes can be costly. A simple pull request process can catch errors before deployment.
 
-#### 💡 Tip: Read our list of [IaC Best Practices](/blog/iac-recommended-practices-code-organization-and-stacks/) 💡
+#### 💡 Tip: Read our list of [IaC Best Practices](/blog/iac-best-practices-understanding-code-organization-stacks/) 💡
 
 {{% /notes %}}
 
@@ -217,7 +217,7 @@ With reusable modules and service templates in place, and a deployment workflow 
 
 As you build out your platform engineering plan, consider how Pulumi might fit in. With Pulumi, you get:
 
-* [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/) in the language of your choice.
+* [Infrastructure as Code](https://www.pulumi.com/topics/infrastructure-as-code/) in the language of your choice.
 * [Component resources](/docs/iac/concepts/components/) for creating reusable infrastructure modules that encapsulate best practices.
 * [Pulumi Deployments](/docs/deployments/concepts/) for a fully managed infrastructure deployment solution.
 * And a [Platform in the box](/docs/deployments/concepts/) experience.

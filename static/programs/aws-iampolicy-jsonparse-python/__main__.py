@@ -33,9 +33,7 @@ def update_policy(policy):
 
 
 # Parse the string output.
-policy_with_no_statements = pulumi.Output.json_loads(json_iam_policy).apply(
-    lambda policy: update_policy
-)
+policy_with_no_statements = pulumi.Output.json_loads(json_iam_policy).apply(update_policy)
 
 # Export the modified policy.
 pulumi.export("policy", policy_with_no_statements)

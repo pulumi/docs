@@ -21,7 +21,7 @@ Pulumi provides different ways to capture logs for debugging and troubleshooting
 
 ## Automatic logging
 
-Starting with Pulumi v3.254.0, the CLI automatically records a log file for every operation and stores it under `$PULUMI_HOME/logs`.
+Starting with Pulumi v3.249.0, the CLI automatically records a log file for every operation and stores it under `$PULUMI_HOME/logs`.
 
 These log files are encrypted on disk using the stack's [secret manager](/docs/iac/concepts/secrets/), if they contain property values, as those can contain secrets. The final file consists of gzip-compressed chunks encrypted with AES256-GCM. By default, logs are rotated out after 7 days, or once the log directory reaches 500 MB, so they won't fill up your disk. You can change these limits with the `PULUMI_LOG_ROTATION_MAX_AGE_DAYS` and `PULUMI_LOG_ROTATION_MAX_TOTAL_MB` environment variables.
 

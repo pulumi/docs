@@ -143,7 +143,7 @@ As BMW continues to expand its use of public cloud services, Pulumi has played a
 
 ## The Future of BMW's Software Factory: Embracing the Cloud
 
-Looking ahead, BMW's Software Factory is poised to take the next step in its evolution, with plans to transition away from the self-hosted backend and embrace cloud-native services. This strategic move aims to further improve [developer productivity](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/) and reduce the internal effort required to maintain the underlying infrastructure.
+Looking ahead, BMW's Software Factory is poised to take the next step in its evolution, with plans to transition away from the self-hosted backend and embrace cloud-native services. This strategic move aims to further improve [developer productivity](https://www.pulumi.com/blog/developer-experience-business-critical/) and reduce the internal effort required to maintain the underlying infrastructure.
 
 By leveraging the expertise and reliability of cloud service providers, BMW can focus on delivering innovative software features to their customers while the cloud providers handle the operational aspects of running the necessary services.
 
@@ -158,5 +158,5 @@ As the automotive industry continues to evolve, with cars becoming increasingly 
 To learn more about Pulumi and how it can transform your software development and infrastructure management:
 
 - Get started with [Pulumi Tutorials](https://www.pulumi.com/tutorials/)
-- Attend an [upcoming workshop](https://www.pulumi.com/resources/#upcoming)
+- Attend an [upcoming workshop](https://www.pulumi.com/events/#upcoming)
 - Try out the [Pulumi Neo](https://www.pulumi.com/product/neo/) code assistant to accelerate your infrastructure as code journey

@@ -436,7 +436,7 @@ If you have existing cloud infrastructure you'd like to bring under management a
 
 ## Authoring components
 
-You author a component by extending the `ComponentResource` class. The guides below walk through building, packaging, and testing components:
+You author a component by extending the `ComponentResource` class, or, in Pulumi YAML, by writing a [YAML component](/docs/iac/languages-sdks/yaml/yaml-component-reference/). The guides below walk through building, packaging, and testing components:
 
 - [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/) — define the class, structure arguments, create child resources, register outputs, and configure provider inheritance.
 - [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) — compare the three distribution options and package a component for sharing.

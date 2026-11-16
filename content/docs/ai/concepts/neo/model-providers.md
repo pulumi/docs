@@ -6,9 +6,9 @@ meta_desc: Run Pulumi Neo with Anthropic's Claude models through your own Anthro
 menu:
     ai:
         name: Model providers (BYOK)
-        parent: ai-concepts-neo
+        parent: ai-neo
+        weight: 100
         identifier: ai-neo-model-providers
-        weight: 60
 aliases:
 - /docs/ai/neo/model-providers/
 ---
@@ -86,6 +86,8 @@ To remove a provider, select **Remove**, then **Confirm remove**. If you remove 
 ## Billing
 
 Your model provider bills you for requests served through BYOK. Pulumi does not charge Neo tokens for those requests. Other Pulumi usage, such as deployments that Neo starts, remains subject to your edition's pricing and contract.
+
+BYOK does not change how Agent workers are billed. When an agent task runs on an Agent worker, the worker's run time is now billed as [workflow minutes](/pricing/), with or without BYOK.
 
 ## Next steps
 

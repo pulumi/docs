@@ -1,17 +1,25 @@
 /**
  * Handle uncaught exceptions from third-party scripts.
- * 
- * The vector.co pixel.js script throws an uncaught exception when it detects a cloud provider environment.
- * This happens in the GitHub Actions runner but not locally, causing tests to fail in CI.
- * 
- * We catch and ignore this specific error while still allowing other legitimate errors to fail the tests.
+ *
+ * - The vector.co pixel.js script throws "Cloud provider detected" in the
+ *   GitHub Actions runner (but not locally), which would fail tests in CI.
+ * - The OneTrust CMP is a cross-origin script, so any error it throws reaches
+ *   the page as an opaque "Script error." with no stack. The smoke tests run
+ *   against the raw S3 origin, so one would otherwise fail every suite in a
+ *   before each hook.
+ *
+ * We ignore those specific third-party cases while still letting genuine
+ * same-origin application errors fail the tests.
  */
 Cypress.on('uncaught:exception', (err) => {
-    // Return false to prevent the error from failing the test
+    // Return false to prevent the error from failing the test.
     if (err.message.includes('Cloud provider detected')) {
         return false;
     }
-    // Return true for other errors to fail the test
+    if (err.message.includes('Script error')) {
+        return false;
+    }
+    // Return true for other errors to fail the test.
     return true;
 });
 
@@ -47,22 +55,22 @@ describe("www.pulumi.com", () => {
         });
     });
 
-    describe("getting started", () => {
+    describe("install", () => {
 
         beforeEach(() => {
-            cy.visit("/docs/iac/get-started/aws/begin");
+            cy.visit("/docs/install/");
         });
 
         describe("when an OS is selected", () => {
 
             beforeEach(() => {
-                cy.get(`pulumi-chooser[type="os"] li:last`).click();
+                cy.get(`pulumi-chooser[type="os"]`).first().find("li").last().click();
             });
 
             it("activates the selected OS", () => {
-                cy.get(`pulumi-choosable[type="os"][value="macos"] > div`)
+                cy.get(`pulumi-choosable[type="os"][values="macos"] > div`)
                     .should("not.have.class", "active");
-                cy.get(`pulumi-choosable[type="os"][value="linux"] > div`)
+                cy.get(`pulumi-choosable[type="os"][values="linux"] > div`)
                     .should("have.class", "active");
             });
         });

@@ -11,9 +11,9 @@ aliases:
 menu:
     ai:
         name: Tasks
-        parent: ai-concepts-neo
-        identifier: ai-tasks
+        parent: ai-neo
         weight: 10
+        identifier: ai-tasks
 ---
 
 Tasks are Neo's primary unit of work. Each task is a conversation where you describe what you want to accomplish, and Neo handles the infrastructure changes.

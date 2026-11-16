@@ -17,7 +17,7 @@ aliases:
 
 Manage Kubernetes clusters, deploy application workloads, and drive in-cluster automation with Pulumi. This page links to every Pulumi capability for Kubernetes: Infrastructure as Code, the Pulumi Kubernetes Operator, and ESC integrations.
 
-To start from scratch, follow the [Kubernetes get-started guide](/docs/iac/get-started/kubernetes/).
+To start from scratch, follow the [get-started guide](/up/).
 
 ## Infrastructure as Code
 

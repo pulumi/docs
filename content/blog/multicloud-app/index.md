@@ -201,7 +201,7 @@ This post covers provisioning and deploying across EKS, AKS, and GKE directly. I
 
 To get started with Kubernetes on Pulumi:
 
-- [Get started with Pulumi and Kubernetes](https://www.pulumi.com/docs/iac/get-started/kubernetes/)
+- [Get started with Pulumi and Kubernetes](/up/?cloud=kubernetes)
 - [Kubernetes provider reference](https://www.pulumi.com/registry/packages/kubernetes/)
 - [EKS package reference](https://www.pulumi.com/registry/packages/eks/)
 - [Manage secrets and configuration across clusters with Pulumi ESC](https://www.pulumi.com/docs/esc/)

@@ -58,7 +58,7 @@ Each event carries the following fields. Only `timestamp`, `sourceIP`, `event`, 
 | sourceIP | IP address of the client that triggered the event |
 | event | the audit event type identifier (for example, `stack-update-started`, `member-added`) |
 | description | human-readable description of the event |
-| user | the user who performed the action (display name, login, and avatar URL) |
+| user | the user who performed the action (display name, login, and avatar URL); for a [team token](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified), the team's service principal, with a login of the form `team-account:<team-id>` |
 | tokenID | ID of the access token used to authenticate, if applicable |
 | tokenName | name of the access token used to authenticate, if applicable |
 | reqOrgAdmin | whether the action required the organization ADMIN role |

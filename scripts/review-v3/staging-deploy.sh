@@ -3,7 +3,8 @@
 # run record (and the `staging/pulumi-test-io` status written from it) is
 # the evidence Sentinel gate G4 verifies.
 #
-# One caller: staging-deploy-auto.yml, for every infra PR on open/push,
+# Two callers: staging-deploy-command.yml (`/deploy-staging`), and
+# staging-deploy-auto.yml, for every infra PR on open/push,
 # unattended. It fires the deploy and gets out. Nobody is watching, so
 # holding a runner for 45 minutes buys nothing, and a job that lives that
 # long is a job that shows up cancelled on the PR when a newer push

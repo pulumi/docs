@@ -128,7 +128,7 @@ In this simple example, we'll use Automation API to create an S3 bucket and perf
 - delete the file
 - delete the stack with the bucket
 
-The following code sets up the Pulumi [stack](/docs/iac/concepts/) and S3 bucket with Automation API. It's interesting to note that the tests don't import the Pulumi AWS SDK and uses a combination of Python's built-in `unittest` framework and Amazon's [`boto3`](https://aws.amazon.com/sdk-for-python/) Python library. This illustrates the extensibility and flexibility of [infrastructure as code](/what-is/what-is-infrastructure-as-code/) by letting developers choose the tools and SDKs.
+The following code sets up the Pulumi [stack](/docs/iac/concepts/) and S3 bucket with Automation API. It's interesting to note that the tests don't import the Pulumi AWS SDK and uses a combination of Python's built-in `unittest` framework and Amazon's [`boto3`](https://aws.amazon.com/sdk-for-python/) Python library. This illustrates the extensibility and flexibility of [infrastructure as code](/topics/infrastructure-as-code/) by letting developers choose the tools and SDKs.
 
 ```python
 import os
@@ -169,4 +169,4 @@ When we run the test, it creates the stack and resource, runs the tests, and tea
 
 ## Infrastructure testing strategy: final thoughts
 
-Although distributed infrastructure presents some unique challenges because of its asynchronous nature, we can perform efficient and automated testing. Whether it is unit and property testing that uses mocks and stubs or integration testing that requires deployed resources, infrastructure as code lets you use familiar testing frameworks and SDKs. Moreover, Pulumi's Automation API makes it simple to create stacks and spin up ephemeral infrastructure for integration testing. Learn more about [infrastructure testing](/blog/how-to-test-infrastructure-as-code/) with [Pulumi's Testing User Guide](/docs/iac/concepts/testing/) and get hands-on with our [testing examples](https://github.com/pulumi/examples/#testing).
+Although distributed infrastructure presents some unique challenges because of its asynchronous nature, we can perform efficient and automated testing. Whether it is unit and property testing that uses mocks and stubs or integration testing that requires deployed resources, infrastructure as code lets you use familiar testing frameworks and SDKs. Moreover, Pulumi's Automation API makes it simple to create stacks and spin up ephemeral infrastructure for integration testing. Learn more about [infrastructure testing](/blog/how-to-test-infrastructure-as-code/) with [Pulumi's Testing User Guide](/docs/iac/guides/testing/) and get hands-on with our [testing examples](https://github.com/pulumi/examples/#testing).

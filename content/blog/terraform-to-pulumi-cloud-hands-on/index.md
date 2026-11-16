@@ -118,7 +118,7 @@ Successfully configured the backend "remote"! Terraform will automatically
 use this backend unless the backend configuration changes.
 ```
 
-Note that nothing about your deployed infrastructure has changed here; all we did was migrate your local state to Pulumi Cloud, and the process is identical whether you're moving from S3, Azure, Google Cloud, or HCP Terraform or Terraform Enterprise. See [Store Terraform state in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/) for details.
+Note that nothing about your deployed infrastructure has changed here; all we did was migrate your local state to Pulumi Cloud, and the process is identical whether you're moving from S3, Azure, Google Cloud, or HCP Terraform or Terraform Enterprise. See [Store Terraform state in Pulumi Cloud](/docs/integrations/terraform/state-backend/) for details.
 
 Now hop over to the Pulumi Cloud console, choose **Stacks**, and you'll see your new stack in the list, along with its first update:
 
@@ -204,13 +204,13 @@ When you do that, you'll see a new plan in the **Deployments** tab, and once tha
 
 Click **Confirm**, and you're off and running.
 
-And that's it! Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/concepts/rbac/), [Neo code reviews](/docs/ai/neo/code-reviews/), and [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) all available to them. [Audit policies](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) are runnable on any Terraform stack, and preventative policies can be used to block non-compliant changes before they happen.
+And that's it! Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/concepts/rbac/), [Neo code reviews](/docs/ai/concepts/neo/code-reviews/), and [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) all available to them. [Audit policies](/docs/integrations/terraform/state-backend/#audit-policies) are runnable on any Terraform stack, and preventative policies can be used to block non-compliant changes before they happen.
 
 Next up: modules.
 
 ## Publish a Terraform module
 
-If your team's been using Terraform for a while, chances are you've also written some Terraform modules, so you'll need somewhere to keep them as you move to Pulumi Cloud. In addition to its role as a Terraform state backend, Pulumi Cloud now includes a [private registry](/docs/idp/concepts/terraform-modules/) that can host your Terraform modules and make them available across your organization.
+If your team's been using Terraform for a while, chances are you've also written some Terraform modules, so you'll need somewhere to keep them as you move to Pulumi Cloud. In addition to its role as a Terraform state backend, Pulumi Cloud now includes a [private registry](/docs/integrations/terraform/module-registry/) that can host your Terraform modules and make them available across your organization.
 
 Module publishing requires an [Enterprise or Business Critical](https://www.pulumi.com/pricing/) plan, so you'll need an organization with one of those for this part — but you can easily [create one](https://app.pulumi.com) with a free trial if you don't have one already. In the Pulumi console, open the organization menu, choose **Create organization**, give it a name, and you're good to go.
 
@@ -444,7 +444,7 @@ Now you've seen it all come together: You can back your Terraform state with Pul
 A few next steps to keep the learning going:
 
 * Explore our [architecture templates](/dev/templates/) to bootstrap new HCL projects easily
-* Read up on [Terraform state](/docs/iac/get-started/terraform/terraform-state-backend/), [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/), and [Terraform modules](/docs/idp/concepts/terraform-modules/) in Pulumi Cloud
+* Read up on [Terraform state](/docs/integrations/terraform/state-backend/), [remote execution](/docs/integrations/terraform/remote-execution/), and [Terraform modules](/docs/integrations/terraform/module-registry/) in Pulumi Cloud
 * Dive into [Pulumi and HCL](/docs/iac/languages-sdks/hcl/)
 * Check out the [full set of features](/releases/terraform-state-backend-modules-hcl/) in this release
 

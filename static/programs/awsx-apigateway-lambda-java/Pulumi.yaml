@@ -1,3 +1,0 @@
-name: awsx-apigateway-lambda-java
-runtime: java
-description: An example that deploys an API Gateway REST API with a single endpoint backed by AWS Lambda.

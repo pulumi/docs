@@ -11,7 +11,7 @@ social:
     linkedin:
 ---
 
-One of Pulumi's foundational benefits is that it allows you to manage your [infrastructure as software](https://www.pulumi.com/what-is/what-is-infrastructure-as-software/) with rich programming languages, robust testing, and CI/CD patterns that you'd use with your application code. This post will cover applying another classic software development technique to your infrastructure: feature flagging. You can use feature flags to control change rollout, reduce the risk of new releases, and speed up the development of your infrastructure, the same way you do with your applications.
+One of Pulumi's foundational benefits is that it allows you to manage your [infrastructure as software](https://www.pulumi.com/topics/infrastructure-as-code/what-is-infrastructure-as-software/) with rich programming languages, robust testing, and CI/CD patterns that you'd use with your application code. This post will cover applying another classic software development technique to your infrastructure: feature flagging. You can use feature flags to control change rollout, reduce the risk of new releases, and speed up the development of your infrastructure, the same way you do with your applications.
 
 The examples in this post range from simply creating a flag and using it in a Lambda function to fully integrating with LaunchDarkly to build a comprehensive flagging system for your infrastructure.
 

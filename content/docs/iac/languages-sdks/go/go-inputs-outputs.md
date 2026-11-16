@@ -133,11 +133,12 @@ port := rawPortOutput.ApplyT(func(s string) (int, error) {
 If you need access to a `context.Context` for cancellation or deadline propagation, use `ApplyTWithContext`:
 
 ```go
-result := myOutput.ApplyTWithContext(ctx, func(ctx context.Context, v string) string {
-    // ctx is the Pulumi run context; it is cancelled if the run is cancelled.
+result := myOutput.ApplyTWithContext(ctx.Context(), func(ctx context.Context, v string) string {
     return strings.TrimSpace(v)
 }).(pulumi.StringOutput)
 ```
+
+The context that `ctx.Context()` returns is never cancelled and has no deadline. To limit how long the callback can run, pass a context derived with `context.WithTimeout` instead.
 
 {{% notes type="warning" %}}
 Avoid creating resources inside `ApplyT`. Resources created inside a transformation function are not visible to `pulumi preview` unless the output's value is already known, which makes previews unreliable. Pass the output directly to the resource's input arguments instead, and let Pulumi track the dependency automatically.

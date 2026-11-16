@@ -53,7 +53,7 @@ Pulumi IaC supports using any Terraform provider. Many of them are available pre
 
 We have numerous migration tools. The first is Neo, our infrastructure engineering agent, who has Terraform-specific skills to migrate code and state. Neo leverages a number of building blocks that you can use directly instead. That includes [the `pulumi convert --from terraform` command](https://www.pulumi.com/blog/converting-full-terraform-programs-to-pulumi/) which understands how to convert Terraform/OpenTofu HCL or CDKTF code into a Pulumi language of your choosing, preserving code structure including migrating modules to Pulumi components. We also support directly importing resources from your cloud accounts directly, either at the CLI or visually in Pulumi Cloud. Read more about migration [here](https://www.pulumi.com/docs/iac/guides/migration/).
 
-You can [deploy Terraform modules](https://www.pulumi.com/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) straight off the shelf from your favorite Pulumi language. That works as well for any supported Pulumi language, including HCL, and it shows up as though the underlying module resources were managed natively in Pulumi. This ensures if your team has a collection of battle tested best practices encoded as Terraform modules, and either plan to keep some Terraform or even migrate eventually, you don’t need to migrate right away.
+You can [deploy Terraform modules](https://www.pulumi.com/docs/integrations/terraform/modules/) straight off the shelf from your favorite Pulumi language. That works as well for any supported Pulumi language, including HCL, and it shows up as though the underlying module resources were managed natively in Pulumi. This ensures if your team has a collection of battle tested best practices encoded as Terraform modules, and either plan to keep some Terraform or even migrate eventually, you don’t need to migrate right away.
 
 Finally, [you can reference Terraform state outputs](https://www.pulumi.com/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#referencing-terraform-state) from Pulumi programs and configurations. Using this you could, for example, keep your network defined in Terraform and define a layer of higher level infrastructure that consumes VPC and subnet IDs from that lower-layer network workspace. This can be useful if there’s short- or long-term coexistence between Terraform and Pulumi IaC programs, such as during an ongoing migration effort or in a hybrid team.
 
@@ -107,7 +107,7 @@ To learn more about our product capabilities, visit these pages:
 * [Infrastructure as Code](https://www.pulumi.com/product/infrastructure-as-code/)
 * [Agentic Infrastructure Engineering with Neo](https://www.pulumi.com/product/neo/)
 * [Secrets & Configuration](https://www.pulumi.com/product/secrets-management/)
-* [Insights & Governance](https://www.pulumi.com/product/insights-governance/)
+* [Insights & Governance](https://www.pulumi.com/product/discovery-governance/)
 * [Internal Developer Platforms](https://www.pulumi.com/product/internal-developer-platforms/)
 
 ## Get Started Today

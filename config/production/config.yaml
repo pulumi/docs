@@ -1,2 +1,5 @@
 baseURL: https://www.pulumi.com/
 refLinksErrorLevel: WARNING
+
+params:
+    oneTrustDomainScript: 01a090cf-8fe9-7448-94a1-4b90a7c501d4

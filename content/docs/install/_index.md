@@ -5,7 +5,7 @@ title: "Download & Install Pulumi"
 h1: Download & Install Pulumi
 menu:
     install:
-        name: "Download & Install Pulumi"
+        name: "Download & install Pulumi"
         identifier: install-home
         weight: 1
 

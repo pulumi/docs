@@ -92,7 +92,7 @@ Three settings put chips on a row:
 
 `shape:link-only` is *not* one of them. It is a fact about the diff — every changed line is the same sentence with only a link rewritten — and it is true for everyone.
 
-A link sweep still needs a human: the Sentinel's mechanical bar counts any modified link as substantive, so somebody has to approve it. What it does not need is a *particular* lane's human. `link_only: { approval: any-team }` in `.github/review-routing.yml` says any team in the matrix satisfies the approver gate for one, because the question a link sweep raises — does the new target resolve, and does it still say what the sentence claims — is careful reading rather than lane knowledge. Those rows carry `gate:any-team` and are everyone's, with the merge gate agreeing. Set `approval: lane` and the ordinary per-subject rule returns, at which point `link_fixes: mine` is what pulls a sweep into your lane.
+A link sweep still needs a human: the Sentinel's mechanical bar counts any modified link as substantive, so somebody has to approve it. What it does not need is a *particular* lane's human: the question a link sweep raises — does the new target resolve, and does it still say what the sentence claims — is careful reading rather than lane knowledge, and branch protection takes anyone's approval. Those rows carry `gate:any-team` and are everyone's.
 
 ## Filter chips
 

@@ -16,10 +16,10 @@ aliases:
 - /docs/iac/concepts/miscellaneous/
 ---
 
-Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform. It uses existing programming languages---TypeScript, JavaScript, Python, Go, .NET, Java, and markup languages like YAML---and their native ecosystems to interact with cloud resources. A [downloadable CLI](/docs/install/), runtime, libraries, and a hosted service work together to deliver a robust platform for provisioning, updating, and managing cloud infrastructure.
+Pulumi is a modern [infrastructure as code](/topics/infrastructure-as-code/) platform. It uses existing programming languages---TypeScript, JavaScript, Python, Go, .NET, Java, and markup languages like YAML---and their native ecosystems to interact with cloud resources. A [downloadable CLI](/docs/install/), runtime, libraries, and a hosted service work together to deliver a robust platform for provisioning, updating, and managing cloud infrastructure.
 
 {{< notes >}}
-If this is your first time using Pulumi, you likely want to begin with [the Getting Started guide](/docs/get-started/) for your cloud of choice. It will walk you through an [AWS](/docs/iac/get-started/aws/), [Azure](/docs/iac/get-started/azure/), [Google Cloud](/docs/iac/get-started/gcp/), or [Kubernetes](/docs/iac/get-started/kubernetes/) deployment from start to finish.
+If this is your first time using Pulumi, you likely want to begin with [the get-started guide](/up/). It will walk you through an AWS, Azure, Google Cloud, or Kubernetes deployment from start to finish.
 {{< /notes >}}
 
 Pulumi is free and [open source](https://github.com/pulumi/pulumi). It optionally pairs with [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/), a managed backend that stores your state and adds access control, reusable configuration and secrets, policy enforcement, and drift detection for teams.

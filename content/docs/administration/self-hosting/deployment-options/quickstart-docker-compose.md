@@ -1,6 +1,6 @@
 ---
-title_tag: Quickstart Docker Compose | Self-Hosting Pulumi 
-meta_desc: Quickstart Docker compose installer for testing of the self-hosted Pulumi Cloud.
+title_tag: Quickstart Docker Compose | Self-Hosting Pulumi
+meta_desc: Quickstart Docker Compose installer for testing of the self-hosted Pulumi Cloud.
 title: Docker Compose
 h1: Pulumi Cloud self-hosted Docker Compose install
 menu:
@@ -16,11 +16,11 @@ aliases:
 pulumi_cloud_feature: self-hosting
 ---
 
-The Pulumi Cloud Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.
+The Pulumi Cloud Docker container images can be run using any OCI-compatible container orchestrator. We provide sample Docker Compose files in the [Quickstart Docker Compose Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/quickstart-docker-compose) that can help you get started with your self-evaluation quickly. The commands on this page use paths relative to that installer's `quickstart-docker-compose` directory.
 
-> **Note**: docker-compose is not required to run these containers. We recommend that you choose a container orchestrator with which your IT team has experience.
+> **Note**: Docker Compose is not required to run these containers. We recommend that you choose a container orchestrator with which your IT team has experience.
 
-In addition to the environment variables that each container exposes, the following can be set when using either of the quickstart solutions below. These are used by the `run-ee.sh` script provided to you as part of the self-evaluation package. If any of these variables are not set when you run `run-ee.sh`, the default values will be used.
+Besides the environment variables that each container exposes, you can set the following when using either of the quickstart options below. The `run-ee.sh` script provided to you as part of the self-evaluation package reads them, and uses the default value for any variable you don't set.
 
 `PULUMI_DATA_PATH`: The persistent path where the service should store the checkpoint objects. Default uses `${HOME}/pulumi-self-hosted-installers/data`.
 
@@ -28,37 +28,49 @@ In addition to the environment variables that each container exposes, the follow
 
 `PULUMI_LOCAL_DATABASE_PORT`: The database instance’s port. Default is `3306`.
 
-For example, `PULUMI_DATA_PATH=/my/persistent/dir LOCAL_DATABASE_NAME=my-db LOCAL_DATABASE_PORT=3306 ./scripts/run-ee.sh`.
+For example:
 
-Regardless of the quickstart option you choose below, `run-ee.sh` will be the way to start the necessary containers. There will be at most 3 containers (including the DB) for the system to be considered complete.
+```bash
+PULUMI_DATA_PATH=/my/persistent/dir PULUMI_LOCAL_DATABASE_HOST=my-db PULUMI_LOCAL_DATABASE_PORT=3306 ./scripts/run-ee.sh
+```
 
-## Quickstart Docker Compose Deployment Options
+Regardless of the quickstart option you choose below, `run-ee.sh` is the way to start the necessary containers.
+
+## Quickstart Docker Compose deployment options
 
 The [Quickstart Docker Compose Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/quickstart-docker-compose) is used to deploy a test system using Docker.
 
-### Option #1 - Using the all-in-one approach
+### Option 1: Use the all-in-one approach
 
-If you would like to use Pulumi’s all-in-one solution, you just need to run `run-ee.sh` like this: `run-ee.sh -f ./all-in-one/docker-compose.yml`. This will start all components using working defaults, including a DB container that is migrated using our DB scripts.
+To use Pulumi’s all-in-one solution, run `run-ee.sh` with the all-in-one Docker Compose file:
+
+```bash
+run-ee.sh -f ./all-in-one/docker-compose.yml
+```
+
+This starts all components using working defaults, including a DB container that is migrated using our DB scripts.
 
 {{% notes type="info" %}}
 Environment variables should be set in the `./all-in-one/docker-compose.yml` file.
 {{% /notes %}}
 
-### Option #2 - Provide your own Database
+### Option 2: Provide your own database
 
-The service is tested against a MySQL version 8.0 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-self-hosted-installers`.
+The service is tested against a MySQL version 8.0 instance. This option assumes that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-self-hosted-installers`. If your instance uses a different hostname or port, set `PULUMI_LOCAL_DATABASE_HOST` and `PULUMI_LOCAL_DATABASE_PORT` as described above.
 
 {{% notes type="info" %}}
 You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance.
 Your Pulumi sales contact should be able to provide you with this.
 {{% /notes %}}
 
-## Quickstart Docker Compose System Management and Maintenance
+Once the scripts are applied, run `run-ee.sh` without the `-f` flag. By default, it uses the `docker-compose.yml` file at the root of the `quickstart-docker-compose` directory, which is the bring-your-own-database configuration.
 
-Since the quickstart option is meant to be used for testing purposes, there is no real maintenance or management needed other than perhaps updating the service containers with the latest versions.
+## Quickstart Docker Compose system management and maintenance
 
-### Updating the Pulumi Cloud Containers
+Because the quickstart option is meant for testing, it needs no real maintenance or management other than perhaps updating the service containers to newer versions.
 
-For testing purposes, it is recommended to use the `latest` image tag in the docker compose file and re-run the `run-ee.sh` script when there are newer versions of the service image pushed to docker hub.
+### Update the Pulumi Cloud containers
 
-If you specified a specific image version in the docker compose file, then update the version tag and re-run the `run-ee.sh` script.
+The installer's all-in-one Docker Compose file pins each image to a digest (for example, `pulumi/service:latest@sha256:...`), so Docker uses the pinned image and ignores the `latest` tag. Re-running `run-ee.sh` on its own does not pull newer images from Docker Hub.
+
+To update the containers, update the image version in the Docker Compose file and re-run the `run-ee.sh` script.

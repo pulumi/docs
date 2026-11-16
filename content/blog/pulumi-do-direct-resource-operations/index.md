@@ -45,7 +45,7 @@ When you're managing production workloads, IaC is the proven solution. Code lets
 
 But when you (or your coding agent) need an ad-hoc Postgres database, the simplest path with IaC still takes several steps: make a directory, create a project, configure your credentials, write the code, preview, deploy. It works, but it's not always necessary for what should be a simple operation. `pulumi do` collapses all of those steps into one, using the same Pulumi providers, resource model, and ecosystem that powers the core Pulumi platform.
 
-Resource creation is also only part of the problem. As Joe laid out in [The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/), the real challenge for AI agents isn't with code or CLI commands, it's with everything else: getting a cloud account, resolving credentials, wiring configuration across multiple services. [Agent accounts](/docs/administration/organizations-teams/agent-accounts/), also [released this week](/releases/agentic-infrastructure-era/), simplify this by letting an agent provision its own ephemeral Pulumi Cloud account, and [Pulumi ESC](/docs/esc/) takes care of consolidating credentials across providers. Together, with `pulumi do`, agents can now go from zero to deployed infrastructure without requiring a human in the loop — and when that one-off resource needs to grow into a more permanent system, there's a clear graduation path back to full Pulumi IaC.
+Resource creation is also only part of the problem. As Joe laid out in [The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/), the real challenge for AI agents isn't with code or CLI commands, it's with everything else: getting a cloud account, resolving credentials, wiring configuration across multiple services. [Agent accounts](/docs/administration/concepts/agent-accounts/), also [released this week](/releases/agentic-infrastructure-era/), simplify this by letting an agent provision its own ephemeral Pulumi Cloud account, and [Pulumi ESC](/docs/esc/) takes care of consolidating credentials across providers. Together, with `pulumi do`, agents can now go from zero to deployed infrastructure without requiring a human in the loop — and when that one-off resource needs to grow into a more permanent system, there's a clear graduation path back to full Pulumi IaC.
 
 ## What it looks like
 
@@ -244,7 +244,7 @@ Here's what we're planning:
 
 1. **Eject to a full project.** When the time comes, generate a Pulumi project in your chosen language with all resources imported and dependency graphs intact.
 
-1. **Connect to Pulumi Cloud.** Layer on governance, compliance, team collaboration, and deployment automation through [Pulumi Cloud](/product/). Resources created via `pulumi do` can be governed by [Pulumi Insights](/product/insights-governance/) from day one, even before you opt into full IaC.
+1. **Connect to Pulumi Cloud.** Layer on governance, compliance, team collaboration, and deployment automation through [Pulumi Cloud](/product/). Resources created via `pulumi do` can be governed by [Pulumi Insights](/product/discovery-governance/) from day one, even before you opt into full IaC.
 
 This path works because `pulumi do` uses the same providers, resource types, and property schemas as every other `pulumi` operation. Provisioned cloud resources stay where they are as management capabilities are added as needed.
 

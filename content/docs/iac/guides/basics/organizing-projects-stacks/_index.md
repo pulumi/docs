@@ -289,8 +289,8 @@ public class App {
             var networking = new StackReference(
                 String.format("%s/networking/%s", org, ctx.stackName()));
 
-            var vpcId = networking.getOutput("vpcId");
-            var privateSubnetIds = networking.getOutput("privateSubnetIds");
+            var vpcId = networking.output("vpcId");
+            var privateSubnetIds = networking.output("privateSubnetIds");
 
             // Create cluster resources in the shared network...
         });

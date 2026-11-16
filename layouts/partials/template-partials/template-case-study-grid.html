@@ -1,10 +1,9 @@
 {{/*
     Template Case Study Grid Partial
 
-    Static 3-up grid of customer cards backed by case study frontmatter (no
-    carousel). Each card pulls the case study link and quote from
-    /customers/{slug}.md and the logo from data/customers.yaml via that
-    page's `customer:` key, with optional per-card overrides for the title,
+    Static 3-up grid of customer cards (no carousel). Each card pulls the logo
+    and the `case_study:` block (link, stat, quote) from the customer's entry in
+    data/customers.yaml, with optional per-card overrides for the title,
     description, and CTA text.
 
     Parameters:
@@ -12,14 +11,13 @@
     - description: Optional section description (markdown supported).
     - align: Optional "left" (default) or "center" for the title block.
     - cards: Array of card objects, each with:
-        - slug: Case study filename stem (required). Looks up
-                /customers/{slug}.md for the customer and the quote. A slug
-                with no case study is a hard build failure — fix the slug rather
-                than let a card silently disappear.
+        - customer: Customer id in data/customers.yaml (required). A customer
+                    with no `case_study` is a hard build failure — fix the id
+                    rather than let a card silently disappear.
         - title: Optional custom card heading. Overrides the default (which
-                 is the case study's quote_block.headline_stat + headline).
+                 is the case study's stat + stat_label).
         - description: Optional custom card body. Overrides the default
-                       (which is the case study's quote_block.quote).
+                       (which is the case study's quote).
         - use_quote: Optional bool. When true and no custom title/description
                      is given, render the full quote block (quote + attrib).
                      Default: false — uses headline_stat/headline summary.
@@ -48,23 +46,24 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {{ range $cards }}
-            {{ $page := site.GetPage (printf "/customers/%s" .slug) }}
-            {{ if not $page }}
-                {{ errorf "template-case-study-grid.html: no case study at /customers/%s/ (card %q)." .slug (.title | default .slug) }}
+            {{ $customer := partial "customers/get.html" (dict "id" .customer "where" "template-case-study-grid.html") }}
+            {{ $study := $customer.case_study }}
+            {{ if not $study }}
+                {{ errorf "template-case-study-grid.html: customer %q has no case_study in data/customers.yaml (card %q)." .customer (.title | default .customer) }}
             {{ end }}
-            {{ $link := default $page.RelPermalink .cta_link }}
+            {{ $link := default $study.href .cta_link }}
             {{ $ctaText := .cta_text | default "Read case study" }}
             {{ $cardTitle := .title }}
             {{ $cardDescription := .description }}
             {{ $useQuote := .use_quote | default false }}
-            {{ $quote := $page.Params.quote_block.quote }}
-            {{ $quoteAttrib := $page.Params.quote_block.quote_attrib }}
-            {{ $headlineStat := $page.Params.quote_block.headline_stat }}
-            {{ $headline := $page.Params.quote_block.headline }}
+            {{ $quote := $study.quote }}
+            {{ $quoteAttrib := $study.attribution }}
+            {{ $headlineStat := $study.stat }}
+            {{ $headline := $study.stat_label }}
 
             <div class="card flex flex-col p-8 gap-6 h-full">
                 <div class="case-study-card-logo flex items-start">
-                    {{ partial "customer-logo.html" (dict "customer" $page.Params.customer) }}
+                    {{ partial "customer-logo.html" (dict "customer" .customer) }}
                 </div>
 
                 <div class="flex flex-col gap-3 grow">

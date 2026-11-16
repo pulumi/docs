@@ -316,7 +316,7 @@ To place a "Program the Cloud" call-to-action card in the body of a post, use th
 Add a contextual title, body copy, and/or button to tailor the ask to the post's topic:
 
 ```plain
-{{< blog/cta-card title="Ship Kubernetes faster" label="Get started free" href="/docs/get-started/" >}}
+{{< blog/cta-card title="Ship Kubernetes faster" label="Get started free" href="/up/" >}}
 Manage your clusters with real code — loops, functions, and your IDE, not YAML templates.
 {{< /blog/cta-card >}}
 ```

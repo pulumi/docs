@@ -45,10 +45,8 @@ jobs:
             theme/yarn.lock
             theme/stencil/yarn.lock
 
-      - uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.157.0'
-          extended: true
+      - name: Install Hugo (version pinned in mise.toml)
+        uses: ./.github/actions/setup-hugo
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v6
@@ -95,7 +93,7 @@ jobs:
             meta-images-
 
       # Derive the cache key from the Hugo installed above rather than a literal,
-      # so revving hugo-version updates the key on its own. Fails loudly on an
+      # so revving the mise.toml pin updates the key on its own. Fails loudly on an
       # unparseable version rather than silently collapsing every build into a
       # single unversioned namespace, which is the bug this exists to prevent.
       - name: Resolve Hugo version for the cache key

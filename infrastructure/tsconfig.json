@@ -24,7 +24,16 @@
         "support-form/validation.ts",
         "support-form/handler.ts",
         "support-form/intercom.ts",
+        "pricingApi.ts",
+        "pricing-api/pricing.ts",
+        "pricing-api/livePricing.ts",
+        "pricing-api/liveRates.ts",
+        "pricing-api/handler.ts",
         "support-form/validation.test.ts",
-        "support-form/intercom.test.ts"
+        "support-form/intercom.test.ts",
+        "pricing-api/pricing.test.ts",
+        "pricing-api/livePricing.test.ts",
+        "pricing-api/liveRates.test.ts",
+        "pricing-api/handler.test.ts"
     ]
 }

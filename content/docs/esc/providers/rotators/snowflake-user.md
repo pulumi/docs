@@ -192,7 +192,7 @@ Perform a manual rotation on the environment to provision a new private key. If 
 | Rotation fails with a permissions error | The rotator role may not be able to alter the target user. | Confirm the rotator role can alter the target user, following the grants in [Configuring Snowflake for Key Rotation](#configuring-snowflake-for-key-rotation). |
 | Applications fail to authenticate after a rotation | Applications may still be using the rotated-out public key (`RSA_PUBLIC_KEY_2`). | Update applications to the `current` private key; the previous key remains valid as `RSA_PUBLIC_KEY_2` until the next rotation. |
 
-## Related
+## Learn more
 
 - [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
 - [snowflake-login](/docs/esc/providers/login/snowflake-login/) - Authenticate with Snowflake via OIDC

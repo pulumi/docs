@@ -308,7 +308,7 @@ CoreDNS is running at https://2F3303BF9E03F8D61099AAB5ED6F31A4.gr7.us-west-2.eks
 ## Deploy an application to the cluster
 
 Now, we want to deploy an application to our new EKS cluster. While we could have included this in the same stack as the
-cluster, it is generally better to follow the [separation of concerns principle](/blog/iac-recommended-practices-structuring-pulumi-projects), and manage applications separately from
+cluster, it is generally better to follow the [separation of concerns principle](/blog/iac-best-practices-structuring-pulumi-projects/), and manage applications separately from
 the underlying infrastructure. To achieve this goal, we create a new application stack with the following program:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}

@@ -103,19 +103,29 @@ export class HubspotForm {
         this.messageHandler = this.onMessage.bind(this);
         window.addEventListener("message", this.messageHandler);
 
-        // Lazy-load HubSpot script when the form scrolls into view.
-        this.observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                this.observer.disconnect();
-                const hubspotGlobal = window["hbspt"];
-                if (hubspotGlobal) {
-                    this.createForm(hubspotGlobal);
-                } else {
-                    this.loadHubSpotFormsScript();
+        // Lazy-load HubSpot script when the form scrolls into view. It loads
+        // without consent: without the HubSpot tracking code the forms library
+        // sets no tracking cookies, and the Segment and LinkedIn calls on
+        // submit still wait on their own categories.
+        this.observer = new IntersectionObserver(
+            entries => {
+                if (entries[0].isIntersecting) {
+                    this.observer.disconnect();
+                    this.load();
                 }
-            }
-        }, { rootMargin: "200px" });
+            },
+            { rootMargin: "200px" },
+        );
         this.observer.observe(this.el);
+    }
+
+    private load() {
+        const hubspotGlobal = window["hbspt"];
+        if (hubspotGlobal) {
+            this.createForm(hubspotGlobal);
+        } else {
+            this.loadHubSpotFormsScript();
+        }
     }
 
     disconnectedCallback() {
@@ -213,7 +223,8 @@ export class HubspotForm {
         const analytics = (window as any).analytics;
         const analyticsAvailable = analytics && analytics.track && typeof analytics.track === "function";
 
-        if (analyticsAvailable && emailAddress !== "") { // Don't track empty email addresses
+        if (analyticsAvailable && emailAddress !== "") {
+            // Don't track empty email addresses
             const submissionData = {
                 formId: this.formId,
                 email: emailAddress,
@@ -395,7 +406,7 @@ export class HubspotForm {
         return (
             <span class="inline-flex h-9 items-center justify-center text-gray-500" role="status" aria-label="Loading">
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-5 animate-spin" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
-                    <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-78.36,60.66-95.27a8,8,0,0,1,6.68,14.54C60.15,75.42,40,105.69,40,128a88,88,0,0,0,176,0c0-22.31-20.15-52.58-51.34-80.73a8,8,0,0,1,6.68-14.54C208.19,49.64,232,87,232,128Z"/>
+                    <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-78.36,60.66-95.27a8,8,0,0,1,6.68,14.54C60.15,75.42,40,105.69,40,128a88,88,0,0,0,176,0c0-22.31-20.15-52.58-51.34-80.73a8,8,0,0,1,6.68-14.54C208.19,49.64,232,87,232,128Z" />
                 </svg>
             </span>
         );
@@ -411,6 +422,10 @@ export class HubspotForm {
     }
 
     render() {
-        return <div id={this.hubspotFormTargetId}>{!this.didLoad && !this.isLoading ? this.renderFailedToLoadForm() : this.renderIsLoadingForm()}</div>;
+        return (
+            <div id={this.hubspotFormTargetId}>
+                {!this.didLoad && !this.isLoading ? this.renderFailedToLoadForm() : this.renderIsLoadingForm()}
+            </div>
+        );
     }
 }

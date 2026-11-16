@@ -21,13 +21,13 @@ Every 🚨 and ❓ item above needs one of these before merge:
 
    Either way your answer counts: the review marks the item resolved, or keeps it with a 🛡️ note for your human reviewer to weigh — it stops blocking merge in both cases.
 
-1. **Accept it as-is** — you own the PR; a one-line reason is a valid answer, and your reviewer sees it beside the finding:
+1. **Accept it as-is** — you own the PR; the reason is optional, and your reviewer sees it beside the finding. This one runs in about a minute, with no re-review:
 
    ```text
-   /update-review F2: accepting as-is — <your reason>
+   /update-review accept F2 <your reason>
    ```
 
-   To accept every open item at once: `/update-review accepting all open items — <reason>`.
+   To accept every open item at once: `/update-review accept all <your reason>`.
 
 `/update-review` has to start a line of your comment — it routes your reply to this review, and (besides pushing a fix) **it is the only reply that unblocks merge**. A bare `@claude` gets you ad-hoc help and leaves this card — and the merge block — untouched.
 

@@ -36,8 +36,12 @@ check_version() {
         echo "$details"
     fi
 }
+# The Hugo pin lives in mise.toml. A standalone assignment, so errexit stops the
+# script if scripts/hugo-version.sh can't read it (a failing substitution inside
+# a function argument would not, and an empty pin would match any version).
+hugo_version="$(./scripts/hugo-version.sh)"
 check_version "Node.js"  "node"  "node -v | sed 's/v\([0-9\.]*\).*$/\1/'"            "24"
-check_version "Hugo"     "hugo"  "hugo version | sed 's/hugo v\([0-9\.]*\).*$/\1/'"  "0.157.0"
+check_version "Hugo"     "hugo"  "hugo version | sed 's/hugo v\([0-9\.]*\).*$/\1/'"  "${hugo_version}"
 check_version "Yarn"     "yarn"  "yarn -v | sed 's/v\([0-9\.]*\).*$/\1/'"            "1.22"
 
 # Install the Node dependencies for the website and the infrastructure.

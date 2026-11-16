@@ -103,7 +103,7 @@ show azure and azure native security groups
 
 When navigating to the Resources page you will find your top 3 resource types, projects, stacks, teams and packages by resource count. We have extended this to show the top 10 when you click 'Show more'. This came as a direct byproduct of the feedback we have gotten from our customers that this feature added value upon first page load, and having more items would make it even more valuable.
 
-Customers who use [Pulumi Teams](/docs/pulumi-cloud/access-management/teams) for role based access control on Pulumi Cloud can now filter resources by team access. We have added a new advanced filter option for Teams, allowing you to see at a glance the teams in your organization with the most resources. You can query which teams have access to what resources, track resource usage by team by exporting your resource data and see in the search results table which teams have access to that resource.
+Customers who use [Pulumi Teams](/docs/administration/concepts/rbac/teams/) for role based access control on Pulumi Cloud can now filter resources by team access. We have added a new advanced filter option for Teams, allowing you to see at a glance the teams in your organization with the most resources. You can query which teams have access to what resources, track resource usage by team by exporting your resource data and see in the search results table which teams have access to that resource.
 
 ## Wrapping it up
 

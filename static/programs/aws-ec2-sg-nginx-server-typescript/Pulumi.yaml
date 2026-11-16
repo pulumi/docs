@@ -1,3 +1,0 @@
-name: aws-ec2-sg-nginx-server-typescript
-runtime: nodejs
-description: An examples that deploys a simple public facing Nginx server
