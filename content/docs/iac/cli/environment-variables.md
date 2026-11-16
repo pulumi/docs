@@ -353,6 +353,18 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_ENABLE_AUTOMATIC_AGENT_SIGNUP
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Set to <code>true</code> to automatically create an <a href="/docs/administration/concepts/agent-accounts/">agent account</a>
+            when an AI agent runs the CLI without Pulumi Cloud credentials.
+        </p>
+        <pre><code class="text-xs">PULUMI_ENABLE_AUTOMATIC_AGENT_SIGNUP=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_ENABLE_LEGACY_APPLY
         </span>
     </dt>
