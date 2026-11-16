@@ -15,9 +15,16 @@ only render: each scope's section (from SECTIONS_YAML), the built-in roles that
 grant each organization-level scope, the smallest built-in permission set that
 grants each entity-level scope, and how each built-in permission set extends
 the next smaller one.
+
+When the API returns something SECTIONS_YAML doesn't cover (a scope no section
+matches, or a built-in role, permission set, or entity type it doesn't list),
+the build fails. If FIX_NOTICE_FILE is set, it first writes one sentence per
+kind of gap there, saying what's missing and how to fix it, so the nightly
+workflow can post that to Slack.
 """
 
 import json
+import os
 import re
 import sys
 
@@ -79,33 +86,52 @@ def main(scopes_path, roles_path, sets_path, sections_path, output):
         # An empty or reshaped response would publish empty reference tables.
         fail("an API response was empty; refusing to overwrite %s" % output)
 
+    # Every gap is collected rather than failing on the first, so one failed
+    # run names everything the sections file needs.
+    problems = []
+
+    def order_key(order):
+        # Sorts anything the sections file doesn't list last, so the rest of
+        # the build can still run and report every gap at once.
+        return lambda item: (order.index(item["defaultIdentifier"])
+                             if item["defaultIdentifier"] in order else len(order))
+
     role_order = config["roles"]
     unknown = sorted(r["defaultIdentifier"] for r in roles
                      if r["defaultIdentifier"] not in role_order)
     if unknown:
-        fail("built-in role(s) %s are missing from `roles` in %s"
-             % (", ".join(unknown), sections_path))
-    roles.sort(key=lambda r: role_order.index(r["defaultIdentifier"]))
+        problems.append(
+            "Pulumi Cloud returned built-in roles that `roles` in %s doesn't list: %s. "
+            "Add each one there, in the order the docs should list roles."
+            % (sections_path, ", ".join(unknown)))
+    roles.sort(key=order_key(role_order))
     role_grants = [(r["name"], flatten(r["details"], r["name"])) for r in roles]
 
     entity_ids = [e["id"] for e in config["entities"]]
     unknown = sorted(set(catalog) - set(entity_ids))
     if unknown:
-        fail("entity type(s) %s are missing from `entities` in %s"
-             % (", ".join(unknown), sections_path))
+        problems.append(
+            "Pulumi Cloud returned RBAC entity types that `entities` in %s doesn't list: %s. "
+            "Add each one there with its sections, and add a reference page under "
+            "content/docs/administration/reference/rbac-scopes/ that renders it with "
+            "the rbac-scopes shortcode."
+            % (sections_path, ", ".join(unknown)))
 
     set_order = config["permission_sets"]
     unknown = sorted(s["defaultIdentifier"] for s in sets
                      if s["defaultIdentifier"] not in set_order)
     if unknown:
-        fail("built-in permission set(s) %s are missing from `permission_sets` in %s"
-             % (", ".join(unknown), sections_path))
+        problems.append(
+            "Pulumi Cloud returned built-in permission sets that `permission_sets` in %s "
+            "doesn't list: %s. Add each one there, smallest first within its entity type, "
+            "since each set renders as the one before it plus its additions."
+            % (sections_path, ", ".join(unknown)))
 
     permission_sets = []
     for entity in entity_ids:
         members = [(s, flatten(s["details"], s["name"])) for s in sets
                    if s.get("resourceType") == entity]
-        members.sort(key=lambda pair: set_order.index(pair[0]["defaultIdentifier"]))
+        members.sort(key=lambda pair: order_key(set_order)(pair[0]))
         previous = None
         for s, permissions in members:
             # Show a set as "<smaller set>, + <additions>" only when it really
@@ -178,8 +204,19 @@ def main(scopes_path, roles_path, sets_path, sections_path, output):
     if unmapped:
         # Deliberately fatal, like the audit log events job: a new scope must
         # be filed under a real section, not dropped or lumped into "Other".
-        fail("%d scope(s) match no section rule in %s:\n  %s"
-             % (len(unmapped), sections_path, "\n  ".join(sorted(unmapped))))
+        problems.append(
+            "Pulumi Cloud returned scopes that match no section: %s. Add each one to "
+            "the right section's `match` block in %s (an exact scope, a prefix, or an "
+            "API group; see the file's header comment)."
+            % (", ".join(sorted(unmapped)), sections_path))
+
+    if problems:
+        notice_file = os.environ.get("FIX_NOTICE_FILE")
+        if notice_file:
+            with open(notice_file, "w") as f:
+                f.write("\n".join(problems) + "\n")
+        fail("\n  ".join(["%s doesn't cover what the API returned:" % sections_path]
+                         + problems))
 
     for s in permission_sets:
         del s["_set"]
