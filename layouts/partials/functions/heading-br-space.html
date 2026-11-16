@@ -32,7 +32,7 @@
       CSS's end-of-line trimming rules, so on center-aligned headings its
       width was still counted in the line box and visibly shifted the text
       by roughly half a character. The span uses the repo's `sr-only`
-      utility (Tailwind v4 built-in, emitted for these marketing/gads
+      utility (Tailwind v4 built-in, emitted for these marketing
       layouts since their SCSS bundles `@import "tailwindcss"`), which has
       zero footprint in every layout (left, center, or right aligned)
       because it is taken out of flow entirely, while its text content is
@@ -52,7 +52,7 @@
 
     Applied at: template-hero (both left- and center-aligned variants),
     template-section-header-with-code, template-section-header-with-image,
-    gads-template overview, cloud-engineering benefits. Other heading
+    cloud-engineering benefits. Other heading
     templates -- template-feature-split.html ($heading), template-section-
     header.html ($title / $title_line_2), layouts/page/microsoft-build.html
     (display_title) -- do not route through this partial yet. No content

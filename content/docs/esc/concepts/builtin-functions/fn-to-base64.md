@@ -2,7 +2,7 @@
 title: fn::toBase64
 title_tag: fn::toBase64
 h1: fn::toBase64
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Use fn::toBase64 in Pulumi ESC to encode a string with standard Base64 encoding. Secret inputs yield a secret result. See syntax and examples."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-to-base64/
   - /docs/esc/reference/builtin-functions/fn-to-base64/

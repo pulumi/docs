@@ -2,7 +2,7 @@
 title: fn::fromJSON
 title_tag: fn::fromJSON
 h1: fn::fromJSON
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Use fn::fromJSON in Pulumi ESC to decode a JSON string into structured values inside an environment. Secret inputs stay secret. See syntax and examples."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-from-json/
   - /docs/esc/reference/builtin-functions/fn-from-json/

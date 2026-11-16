@@ -31,12 +31,12 @@ Dependency caching is off by default. You can enable it per stack:
 
 Dependency caching is not available on stacks backed by Terraform state.
 
-Because caching is a per-stack setting but the cache itself is shared across the project, stacks in the same project can have it enabled and disabled independently:
+Both the setting and the cache entries are scoped to a single stack, so stacks in the same project can have caching enabled and disabled independently:
 
-- A stack with caching **disabled** runs no cache steps at all. It neither reads from nor writes to the project's cache, so it can't benefit from it and can't disturb it.
-- A stack with caching **enabled** reads and writes the shared project cache, keyed by the contents of its lock files.
-- Two caching-enabled stacks with identical lock files share the same cache entries and warm the cache for each other.
-- Disabling caching on a stack does not delete anything. [Clearing the cache](#clearing-the-cache) is a separate, project-wide action.
+- A stack with caching **disabled** runs no cache steps at all. It neither reads nor writes any cache entries.
+- A stack with caching **enabled** reads and writes its own cache entries, keyed by the contents of its lock files.
+- Identical lock files do not make one stack reuse another stack's cache. A new stack always starts cold, even when another stack in the same project deploys the same program with the same lock file, and it populates its own cache on its first deployment.
+- Disabling caching on a stack does not delete anything. [Clearing the cache](#clearing-the-cache) is a separate action that works at the project level.
 
 ## What gets cached
 
@@ -101,7 +101,7 @@ Both clear the cache for the **entire project**, not just the selected stack. Ev
 
 ## Limits and constraints
 
-- Caches are shared at the project level, so all stacks within a project can share the same cache. Caches are fully isolated and never shared between organizations.
+- Cache entries are scoped per stack. Stacks do not share entries with each other, even within the same project and with identical lock files, and caches are never shared between organizations.
 - Cache archives are limited to 5 GB compressed. A larger archive is skipped with a warning rather than failing the deployment.
 - **A cache failure never fails a deployment.** Every problem with caching is a warning and a skip, which is why an unexpectedly slow deployment is worth checking against the log lines above.
 - Cache keys are matched exactly. Unlike some CI systems, there is no partial or fallback key match, so any change to a lock file produces a completely cold cache.

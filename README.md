@@ -74,7 +74,7 @@ That's the whole setup on every platform.
 
 If you don't use mise, **you're responsible for installing these tools yourself and having them on your `PATH`**. The Makefile and scripts will use whatever versions they find; `make ensure` warns when versions don't match the pinned ones but doesn't fail.
 
-* [Hugo](https://gohugo.io/installation/) 0.157.0 (extended)
+* [Hugo](https://gohugo.io/installation/), extended edition, at the version pinned in `mise.toml` (`./scripts/hugo-version.sh` prints it)
 * [Node.js](https://nodejs.org/en/download/package-manager) 24
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) 1.x
 * [Go](https://golang.org/) 1.26 (only needed for SDK doc builds and example-program tests)
@@ -326,7 +326,7 @@ Engage with our community to elevate your developer experience:
 
 Delve deeper into Pulumi with additional resources:
 
-* [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Deploy a simple application in AWS, Azure, Google Cloud, or Kubernetes using Pulumi.
+* [Get Started with Pulumi](https://www.pulumi.com/up/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Deploy a simple application in AWS, Azure, Google Cloud, or Kubernetes using Pulumi.
 * [Registry](https://www.pulumi.com/registry/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Search for packages and learn about the supported resources you need. Install the package directly into your project, browse the API documentation, and start building.
 * [Pulumi Blog](https://www.pulumi.com/blog/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Stay in the loop with our latest tech announcements, insightful articles, and updates.
 * [Try Pulumi Neo](https://www.pulumi.com/product/neo/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Use natural-language prompts to generate Pulumi infrastructure-as-code programs in any language.

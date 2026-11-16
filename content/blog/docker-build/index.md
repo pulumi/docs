@@ -33,7 +33,7 @@ The new provider exposes Docker's next-gen [buildx] interface, so now even your 
 
 ## A brief history
 
-Pulumi first introduced the [Docker provider] in 2018, and it has been widely adopted since. Over the years, Pulumi has invested in the Docker provider, notably [introducing version 4.0](/blog/build-images-50x-faster-docker-v4) last year and additional improvements like `build-on-preview` behavior.
+Pulumi first introduced the [Docker provider] in 2018, and it has been widely adopted since. Over the years, Pulumi has invested in the Docker provider, notably [introducing version 4.0](/blog/fast-docker-image-builds-with-pulumi/) last year and additional improvements like `build-on-preview` behavior.
 
 At the same time, the Docker build ecosystem has seen tremendous advancements in how images can be built and distributed. These changes were initially experimental, but they became official when BuildKit graduated to become the
 default builder in Docker version 23.

@@ -1,3 +1,0 @@
-name: gcp-providers-classic-go
-description: An example that uses the GCP Classic provider to create a Cloud Storage bucket and a Cloud Run service.
-runtime: go

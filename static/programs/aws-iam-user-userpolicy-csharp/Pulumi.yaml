@@ -1,3 +1,0 @@
-name: aws-iam-user-userpolicy-csharp
-runtime: dotnet
-description: An example that deploys an IAM user and user policy on AWS.

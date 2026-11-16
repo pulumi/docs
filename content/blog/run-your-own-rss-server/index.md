@@ -12,7 +12,7 @@ category: tutorials
 ---
 
 {{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
+Some of the code in this post is out of date. See the [AWS guides](/docs/iac/guides/clouds/aws/) for an updated overview and examples.
 {{% /notes %}}
 
 It's been a few years since [Google shut down Google Reader](https://googleblog.blogspot.com/2013/03/a-second-spring-of-cleaning.html), and while a number of nice commercial alternatives have sprung in its wake, none of them has ever been quite the right fit for me personally.
@@ -48,7 +48,7 @@ Let's get started!
 
 ## Setting Up
 
-We'll start by creating a new Pulumi project. (If you're completely new to Pulumi, it might be good to begin with our [Getting Started guide](/docs/get-started/), which walks you through installing Pulumi and configuring it for your cloud provider.) We'll use the built-in `aws-typescript` project template:
+We'll start by creating a new Pulumi project. (If you're completely new to Pulumi, it might be good to begin with our [Getting Started guide](/up/), which walks you through installing Pulumi and configuring it for your cloud provider.) We'll use the built-in `aws-typescript` project template:
 
 ```shell
 $ mkdir miniflux && cd miniflux

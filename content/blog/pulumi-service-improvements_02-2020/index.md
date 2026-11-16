@@ -26,7 +26,7 @@ We've added first-class support for stack tags in the Pulumi Service as well. Yo
 {{< figure alt="Updating stack tags within the Pulumi Service" src="./update-tags-in-console.png" class="md:max-w-lg" >}}
 
 Making it easier to create and edit tag data is just the beginning. We've started to add new search/filtering capabilities
-based on stack tags. For example, you can now use filters to rapidly add stacks to [Pulumi teams](/docs/pulumi-cloud/access-management/teams/).
+based on stack tags. For example, you can now use filters to rapidly add stacks to [Pulumi teams](/docs/administration/concepts/rbac/teams/).
 
 {{< figure alt="Filtering stacks by their tags" src="./filter-stacks-by-tag.png" class="md:max-w-lg" >}}
 
@@ -67,7 +67,7 @@ which now supports a `--version` flag to export older checkpoint files too.
 ## Reverse Stack Permissions View
 
 The Enterprise Edition supports [role-based access control](/docs/iac/concepts/stacks/#stack-permissions)
-using [teams](/docs/pulumi-cloud/access-management/teams/). But a common problem we've heard from people in large organizations
+using [teams](/docs/administration/concepts/rbac/teams/). But a common problem we've heard from people in large organizations
 is that it can be difficult to review exactly *_what_* access someone has to a stack and *_why_*.
 
 Fortunately, the Pulumi Service now has the ability for organization administrators to see all stacks a particular member has access to.

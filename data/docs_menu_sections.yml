@@ -1,19 +1,17 @@
 - menu: install
-  label: Download & Install
-- menu: get-started
-  label: Getting Started
+  label: Download & install
 - menu: iac
-  label: Infrastructure as Code
+  label: Infrastructure as code
 - menu: ai
   label: Infrastructure AI
 - menu: deployments
-  label: Deployments & Workflows
+  label: Deployments & workflows
 - menu: esc
-  label: Secrets & Configuration (ESC)
+  label: Secrets & configuration (ESC)
 - menu: discovery-governance
   label: Discovery & governance
 - menu: idp
-  label: Internal Developer Platform
+  label: Internal developer platform
 - menu: administration
   label: Administration
 - menu: integrations

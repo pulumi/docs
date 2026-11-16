@@ -60,9 +60,9 @@ var res2 = new MyResource("res2", new MyResourceArgs(),
 {{% choosable language java %}}
 
 ```java
-var res1 = new MyResource("res1", new MyResourceArgs());
+var res1 = new MyResource("res1", MyResourceArgs.Empty);
 var res2 = new MyResource("res2",
-    new MyResourceArgs(),
+    MyResourceArgs.Empty,
     CustomResourceOptions.builder()
         .dependsOn(res1)
         .build());

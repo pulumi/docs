@@ -31,7 +31,7 @@ Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allow or
 By default, all organization admins can create new teams.
 
 {{% notes type="info" %}}
-To allow all organization members to create teams, enable the **Allow organization members to create teams** toggle in [Organization-wide role settings](/docs/administration/concepts/rbac/roles#organization-wide-role-settings).
+To let other members create teams, give them a [custom role](/docs/administration/concepts/rbac/roles/#custom-roles) that includes the `team:create` scope.
 {{% /notes %}}
 
 To create a team:
@@ -58,6 +58,12 @@ When your organization has custom roles enabled, teams can be assigned **roles**
 - **Role-backed teams**: Create a team, assign it a custom role (e.g. with access only to certain stacks or [tag-based rules](/docs/administration/concepts/rbac/roles#tag-based-abac-rules)), then add members; those members gain the team's roles in addition to their own user role.
 
 To manage role assignments for a team, navigate to the team's **Access** tab. The **Role assignments** section lists the roles currently assigned to the team; use **Add role** to assign an additional role.
+
+## Team access tokens
+
+A team can have [team access tokens](/docs/administration/concepts/access-tokens/#team-access-tokens) for automation that should act with the team's permissions.
+Those tokens authenticate as the team's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified), a machine identity separate from the team's human members.
+When a team token creates a stack, the team receives Stack Admin on it, so members of the team can manage it.
 
 ## GitHub-based Teams
 
@@ -151,7 +157,7 @@ curl -s -X PATCH \
 
 The endpoint returns `204 No Content` on success. These operations require a Pulumi access token scoped to a user with team administration rights; organization admins always have this access. The `projectName` field refers to the ESC project in which the environment resides — this is the project specified when the environment was created (for example, `default` if no explicit project was given).
 
-## Related resources
+## Learn more
 
 - [Roles](/docs/administration/concepts/rbac/roles): Collections of permission sets applied to entities and combined with an organization access level. You can assign roles to a team so its members inherit them.
 - [Permission sets](/docs/administration/concepts/rbac/permission-sets): Reusable bundles of related scopes for a single entity type. You grant them on entities or use them to set a role's organization access level.

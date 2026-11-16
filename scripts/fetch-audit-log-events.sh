@@ -22,6 +22,10 @@
 #
 # Needs PyYAML. The workflow installs it; locally, either `pip install pyyaml`
 # or point PYTHON at an interpreter that already has it.
+#
+# If UNMAPPED_EVENTS_FILE is set and some events match no category, their ids
+# are written there, one per line, so the workflow can name them in its Slack
+# failure notice.
 
 set -euo pipefail
 
@@ -54,6 +58,7 @@ curl -sfL --retry 3 --retry-all-errors --connect-timeout 10 --max-time 60 \
 
 "$PYTHON" - "$WORKDIR/event-types.json" "$CATEGORIES" "$OUTPUT" <<'PY'
 import json
+import os
 import sys
 
 import yaml
@@ -108,6 +113,10 @@ for event in events:
     result.append(dict(event, category=cid))
 
 if unmapped:
+    unmapped_file = os.environ.get("UNMAPPED_EVENTS_FILE")
+    if unmapped_file:
+        with open(unmapped_file, "w") as f:
+            f.write("\n".join(sorted(unmapped)) + "\n")
     # Deliberately fatal. Filing a new event under a catch-all "Other" bucket
     # would ship it undocumented-in-practice and nobody would ever come back to
     # it; a failed nightly run posts to #docs-ops and gets a one-line fix.

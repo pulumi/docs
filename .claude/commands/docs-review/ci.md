@@ -48,7 +48,18 @@ summary, and the confidence levels, and never touch the HTML markers, the
 REVIEW_STATE block, the `%%EVIDENCE_URL%%` lines, the `<sub>vN …</sub>`
 version line, the Where-cell links, or the composer-owned count lines. Hard rules 1–7 apply unchanged, as do the style-suggestion sidecar
 rules (§Style suggestions in the workflow prompt) — the sidecar and ✏️
-annotations target the author card. If either draft opens with a
+annotations target the author card.
+
+**Compare the description with the diff.** When you write the brief's
+"What this PR changes" bullets, read the PR description (`gh pr view
+"$PR_NUMBER" --json body`) and check each change against it, per
+`references/shared-criteria.md` §PR description covers the diff. Each
+undeclared change worth asking about gets a ` _(not in the PR description)_`
+marker on its bullet and a ❓ `F?` row on the author card
+(`references/output-format.md` §Undeclared changes). A description that
+covers everything gets neither.
+
+If either draft opens with a
 `> [!CAUTION]` banner, stop and exit without editing — v3 has **no**
 manual-assembly fallback; the run must land on the error path.
 

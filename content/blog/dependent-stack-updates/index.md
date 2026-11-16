@@ -17,7 +17,7 @@ category: product
 
 As infrastructure projects grow in size and complexity, you need to decompose infrastructure into smaller stacks to limit the blast radius of errors, extract and reference common layers like networking, and limit access to sensitive components. This comes with a coordination cost as you now need to figure out how to detect and propagate changes to downstream stacks in your dependency graph. Today we’re announcing two features that can help you manage this complexity by automatically updating dependent stacks:
 
-- [Deployment Webhook Destinations](/docs/pulumi-cloud/webhooks/#deployment-webhooks) for triggering downstream stack updates automatically
+- [Deployment Webhook Destinations](/docs/deployments/concepts/webhooks/#deployment-webhooks) for triggering downstream stack updates automatically
 - [The Pulumi Auto Deploy Package](/registry/packages/auto-deploy) for easily expressing dependencies and configuring downstream updates via Deployment Webhooks.
 
 ```
@@ -629,7 +629,7 @@ Check out these resources to get started today:
 
 - [Check out the Pulumi Deployments documentation](/docs/deployments/concepts/) and learn about configuring [Deployment Settings](/docs/deployments/concepts/#deployment-settings) for your stacks.
 - Get started with the [Pulumi Auto Deploy Package](/registry/packages/auto-deploy).
-- Learn more about [Pulumi Cloud Webhooks](/docs/pulumi-cloud/webhooks/#deployment-webhooks).
+- Learn more about [Pulumi Cloud Webhooks](/docs/deployments/concepts/webhooks/#deployment-webhooks).
 - Join us in the [#pulumi-deployments community slack channel](https://slack.pulumi.com/).
 
 🚀🚀🚀 Happy building! 🚀🚀🚀

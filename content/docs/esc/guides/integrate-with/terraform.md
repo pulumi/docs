@@ -60,17 +60,17 @@ provider "aws" {
   region = var.region
 }
 
-data "aws_ami" "amazon_linux_2" {
+data "aws_ami" "amazon_linux_2023" {
   most_recent = true
   owners      = ["amazon"]
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm*"]
+    values = ["al2023-ami-2023.*-x86_64"]
   }
 }
 
 resource "aws_instance" "app_server" {
-  ami           = data.aws_ami.amazon_linux_2.id
+  ami           = data.aws_ami.amazon_linux_2023.id
   instance_type = var.instance_type
 
   tags = {
@@ -79,7 +79,7 @@ resource "aws_instance" "app_server" {
 }
 ```
 
-This sample code will create an EC2 instance running Amazon Linux 2. The instance's region and instance type are supplied by the user via [input variables](https://developer.hashicorp.com/terraform/language/values/variables).
+This sample code will create an EC2 instance running Amazon Linux 2023. The instance's region and instance type are supplied by the user via [input variables](https://developer.hashicorp.com/terraform/language/values/variables).
 
 Once you have created your `main.tf` file, run `terraform init` to install the necessary Terraform providers:
 

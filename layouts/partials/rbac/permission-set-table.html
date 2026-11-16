@@ -1,0 +1,25 @@
+{{- /*
+  Returns the built-in permission sets for one entity type as a Markdown table
+  string. Input: the API entity type (`stack`, `environment`,
+  `insights-account`, or `global`).
+
+  A set that contains the one listed before it is shown as
+  "<previous set>, + <additions>"; scripts/build-rbac-scopes.py works that out.
+*/ -}}
+{{- $entity := . -}}
+{{- $notes := site.Data.rbac_scope_notes.permission_sets | default dict -}}
+{{- $rows := slice -}}
+{{- range where site.Data.rbac_scopes.permissionSets "entity" $entity -}}
+  {{- $note := index $notes .id | default dict -}}
+  {{- $description := $note.description | default .description -}}
+  {{- with $note.note -}}{{- $description = printf "%s %s" $description . -}}{{- end -}}
+  {{- $scopes := slice -}}
+  {{- range (.added | default .permissions) -}}{{- $scopes = $scopes | append (printf "`%s`" .) -}}{{- end -}}
+  {{- $included := delimit $scopes ", " -}}
+  {{- with .inherits -}}{{- $included = printf "%s, + %s" . $included -}}{{- end -}}
+  {{- $rows = $rows | append (printf "| `%s` | %s | %s |" .name (replace $description "|" "\\|") $included) -}}
+{{- end -}}
+{{- if not $rows -}}
+  {{- errorf "rbac-permission-sets: no built-in permission sets for entity type %q in data/rbac_scopes.json" $entity -}}
+{{- end -}}
+{{- return printf "| Permission set | Description | Included scopes |\n|---|---|---|\n%s\n" (delimit $rows "\n") -}}

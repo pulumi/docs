@@ -34,7 +34,7 @@ social:
 ---
 
 In today's complex digital landscape, organizations are increasingly turning
-to [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) to optimize their
+to [platform engineering](https://www.pulumi.com/topics/platform-engineering/) to optimize their
 software delivery processes and maximize efficiency. The growing complexity of modern applications, coupled with the
 need for rapid, secure, and scalable deployments, has created a pressing demand for robust Internal Developer
 Platforms (IDPs).
@@ -501,4 +501,4 @@ Continue to upskill and learn about platform engineering:
 
 * Read [Pulumi Patterns and Practices (P3): A Pulumi-based reference architecture for large-scale organizations](https://www.pulumi.com/blog/pulumi-patterns-and-practices/)
 * [Learn how to build Developer Portals with Pulumi](/docs/idp/concepts/).
-* Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).
+* Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/events/#upcoming).

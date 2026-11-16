@@ -1,0 +1,25 @@
+{{- /*
+  Returns one entity type's entry from data/rbac_scopes.json, after checking
+  that every note in data/rbac_scope_notes.yaml for that entity names a scope
+  the API still returns. Input: the API entity type.
+*/ -}}
+{{- $id := . -}}
+{{- $entity := index (where site.Data.rbac_scopes.entities "id" $id) 0 -}}
+{{- if not $entity -}}
+  {{- errorf "rbac-scopes: entity type %q is not in data/rbac_scopes.json. Run scripts/fetch-rbac-scopes.sh." $id -}}
+{{- end -}}
+{{- $names := slice -}}
+{{- range $entity.sections -}}{{- range .scopes -}}{{- $names = $names | append .name -}}{{- end -}}{{- end -}}
+{{- range $key, $_ := index (site.Data.rbac_scope_notes.scopes | default dict) $id -}}
+  {{- if not (in $names $key) -}}
+    {{- errorf "rbac-scopes: data/rbac_scope_notes.yaml has a note for %s scope %q, which the API no longer returns" $id $key -}}
+  {{- end -}}
+{{- end -}}
+{{- $setIDs := slice -}}
+{{- range site.Data.rbac_scopes.permissionSets -}}{{- $setIDs = $setIDs | append .id -}}{{- end -}}
+{{- range $key, $_ := site.Data.rbac_scope_notes.permission_sets | default dict -}}
+  {{- if not (in $setIDs $key) -}}
+    {{- errorf "rbac-scopes: data/rbac_scope_notes.yaml has a note for permission set %q, which the API no longer returns" $key -}}
+  {{- end -}}
+{{- end -}}
+{{- return $entity -}}

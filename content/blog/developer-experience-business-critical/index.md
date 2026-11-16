@@ -28,15 +28,15 @@ Intriguingly, engineering teams may perceive its value differently. Therefore, w
 
 ## In this DevEx article
 
-- [What is developer experience?](/blog/software-developer-experience-devex-devx-devops-culture/#what-is-developer=experience)
-- [Is developer experience important?](/blog/software-developer-experience-devex-devx-devops-culture/#is-developer-experience-important) (Spoiler alert: it's business-critical)
-- [The GitHub developer experience (DevEx) formula](/blog/software-developer-experience-devex-devx-devops-culture/#the-github-developer-experience-devex-formula)
-- [What does a great developer experience look like?](/blog/software-developer-experience-devex-devx-devops-culture/#what-does-a-great-developer-experience-look-like)
-- [How does DevEx intersect with DevOps?](/blog/software-developer-experience-devex-devx-devops-culture/#how-does-devex-intersect-with-devops)
-- [Organizational culture is a predictor of outcome success](/blog/software-developer-experience-devex-devx-devops-culture/#organizational-culture-is-a-predictor-of-outcome-success)
-- [How do you implement a great developer experience?](/blog/software-developer-experience-devex-devx-devops-culture/#how-do-you-implement-a-great-developer-experience)
-- [What DevEx is not](/blog/software-developer-experience-devex-devx-devops-culture/#what-devex-is-not)
-- [Frequently asked questions](/blog/software-developer-experience-devex-devx-devops-culture/#frequently-asked-questions)
+- [What is developer experience?](/blog/developer-experience-business-critical/#what-is-developer=experience)
+- [Is developer experience important?](/blog/developer-experience-business-critical/#is-developer-experience-important) (Spoiler alert: it's business-critical)
+- [The GitHub developer experience (DevEx) formula](/blog/developer-experience-business-critical/#the-github-developer-experience-devex-formula)
+- [What does a great developer experience look like?](/blog/developer-experience-business-critical/#what-does-a-great-developer-experience-look-like)
+- [How does DevEx intersect with DevOps?](/blog/developer-experience-business-critical/#how-does-devex-intersect-with-devops)
+- [Organizational culture is a predictor of outcome success](/blog/developer-experience-business-critical/#organizational-culture-is-a-predictor-of-outcome-success)
+- [How do you implement a great developer experience?](/blog/developer-experience-business-critical/#how-do-you-implement-a-great-developer-experience)
+- [What DevEx is not](/blog/developer-experience-business-critical/#what-devex-is-not)
+- [Frequently asked questions](/blog/developer-experience-business-critical/#frequently-asked-questions)
 
 ## What is developer experience?
 
@@ -101,7 +101,7 @@ Engineering teams that have good developer experiences are more productive and e
 
 {{< figure alt="Survey by GitHub on a typical experience for developers. Credit: GitHub" src="/blog/developer-experience-business-critical/github-study-what-developers-spend-themost-time-on-daily.png" width=60%  caption="Survey by GitHub on a typical experience for developers. Credit: GitHub" >}}
 
-Without the proper tools, progress may slow down the development process and hinder developer productivity. It becomes crucial to implement appropriate measures to avoid disruptions that could impact everyone involved, including the developers themselves. Although not often mentioned, [DevOps](https://www.pulumi.com/what-is/what-is-devops/) and [Platform Engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) also aim to enhance the developer experience and achieve the associated benefits.
+Without the proper tools, progress may slow down the development process and hinder developer productivity. It becomes crucial to implement appropriate measures to avoid disruptions that could impact everyone involved, including the developers themselves. Although not often mentioned, [DevOps](https://www.pulumi.com/topics/platform-engineering/what-is-devops/) and [Platform Engineering](https://www.pulumi.com/topics/platform-engineering/) also aim to enhance the developer experience and achieve the associated benefits.
 
 ## How does DevEx intersect with DevOps?
 

@@ -77,13 +77,6 @@ export class HubspotForm {
     @State()
     didLoad: boolean = false;
 
-    // True while the form is waiting on Functional (C0003) consent before it can
-    // load. Shows a placeholder with a link into Cookie Settings. Under the
-    // Segment provider runWithPulumiConsent runs immediately, so this never
-    // sticks; under OneTrust it stays set until the visitor allows C0003.
-    @State()
-    awaitingConsent: boolean = false;
-
     @Element()
     el: HTMLElement;
 
@@ -110,13 +103,15 @@ export class HubspotForm {
         this.messageHandler = this.onMessage.bind(this);
         window.addEventListener("message", this.messageHandler);
 
-        // Lazy-load HubSpot script when the form scrolls into view, gated on
-        // Functional (C0003) consent.
+        // Lazy-load HubSpot script when the form scrolls into view. It loads
+        // without consent: without the HubSpot tracking code the forms library
+        // sets no tracking cookies, and the Segment and LinkedIn calls on
+        // submit still wait on their own categories.
         this.observer = new IntersectionObserver(
             entries => {
                 if (entries[0].isIntersecting) {
                     this.observer.disconnect();
-                    this.gateAndLoad();
+                    this.load();
                 }
             },
             { rootMargin: "200px" },
@@ -124,21 +119,13 @@ export class HubspotForm {
         this.observer.observe(this.el);
     }
 
-    // Load the HubSpot forms library once Functional (C0003) consent is granted.
-    // runWithPulumiConsent runs the loader immediately under Segment and only
-    // after C0003 under OneTrust; while it's withheld we show the placeholder.
-    private gateAndLoad() {
-        const start = () => {
-            this.awaitingConsent = false;
-            const hubspotGlobal = window["hbspt"];
-            if (hubspotGlobal) {
-                this.createForm(hubspotGlobal);
-            } else {
-                this.loadHubSpotFormsScript();
-            }
-        };
-        this.awaitingConsent = true;
-        (window as any).runWithPulumiConsent("C0003", start);
+    private load() {
+        const hubspotGlobal = window["hbspt"];
+        if (hubspotGlobal) {
+            this.createForm(hubspotGlobal);
+        } else {
+            this.loadHubSpotFormsScript();
+        }
     }
 
     disconnectedCallback() {
@@ -434,24 +421,10 @@ export class HubspotForm {
         );
     }
 
-    // Shown when the form is blocked awaiting Functional (C0003) consent. The
-    // link opens the site's Cookie Settings (the OneTrust preference center).
-    private renderConsentBlocked() {
-        return (
-            <p data-consent-blocked>
-                This form needs functional cookies to load.{" "}
-                <button type="button" class="underline" onClick={() => (window as any).consentManager?.openConsentManager?.()}>
-                    Open Cookie Settings
-                </button>{" "}
-                to enable it.
-            </p>
-        );
-    }
-
     render() {
         return (
             <div id={this.hubspotFormTargetId}>
-                {this.awaitingConsent ? this.renderConsentBlocked() : !this.didLoad && !this.isLoading ? this.renderFailedToLoadForm() : this.renderIsLoadingForm()}
+                {!this.didLoad && !this.isLoading ? this.renderFailedToLoadForm() : this.renderIsLoadingForm()}
             </div>
         );
     }

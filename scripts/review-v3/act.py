@@ -523,7 +523,7 @@ def _assign_reasons(steps: list[Step], by: dict, scoped: dict[int, str], bare: l
         wants[0].args["reason"] = bare[0]
     for s in steps:
         if s.kind == "close" and not s.args.get("superseded_by") and not s.args.get("reason"):
-            if can_revise(by[s.pr]):
+            if can_revise(by[s.pr]) and (by[s.pr].get("author") or {}).get("type") != "bot":
                 # Closing someone's PR without saying why is the one thing worse
                 # than sitting on it. A workflow-authored row writes its own.
                 raise ActError(f"--close {s.pr}: needs --superseded-by M, or --reason {s.pr}=\"…\" saying why it is closing")
@@ -753,7 +753,10 @@ def preflight_head(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
 def _is_sentinel(run: dict) -> bool:
     """The Sentinel's job check-run, its commit status (`context`), or a
     check-run it published before it switched to a status."""
-    return (run.get("name") or run.get("context") or "").strip().lower() == SENTINEL_CHECK
+    # Its per-gate statuses (`Sentinel / findings`, ...) are informational
+    # rows the required `Sentinel` status already sums up.
+    name = (run.get("name") or run.get("context") or "").strip().lower()
+    return name == SENTINEL_CHECK or name.startswith(SENTINEL_CHECK + " / ")
 
 
 def _status_as_run(s: dict) -> dict:
@@ -1319,11 +1322,15 @@ def can_revise(pr: dict) -> bool:
 
 
 def close_reason(pr: dict) -> str:
-    """The closing comment for a generated PR: the judgments that made the
+    """The closing comment for a bot-authored PR: the judgments that made the
     call, in the author-facing voice, and what happens next."""
     body = "\n".join(ask_lines(pr)).strip()
-    lead = "Closing this out: it was opened by a workflow run, so there is no author to pick up a review."
-    tail = "The lane re-queues the page on its next run; these notes are here for whoever picks it up."
+    if can_revise(pr):
+        lead = "Closing this out from the review queue."
+        tail = "Open a fresh PR if this is still needed; these notes are here for whoever picks it up."
+    else:
+        lead = "Closing this out: it was opened by a workflow run, so there is no author to pick up a review."
+        tail = "The lane re-queues the page on its next run; these notes are here for whoever picks it up."
     return "\n\n".join(x for x in (lead, body, tail) if x)
 
 

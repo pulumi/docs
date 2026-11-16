@@ -17,7 +17,7 @@ aliases:
 
 Build, deploy, and manage Azure infrastructure with Pulumi. This page links to every Pulumi capability for Azure: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), cloud account scanning, and policy packs.
 
-To start from scratch, follow the [Azure get-started guide](/docs/iac/get-started/azure/).
+To start from scratch, follow the [get-started guide](/up/).
 
 ## Infrastructure as Code
 

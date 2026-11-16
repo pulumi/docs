@@ -85,7 +85,7 @@ For those who prefer to automate and script their infrastructure tasks, drift de
 * Pause or resume a drift schedule
 * List all schedules (includes raw Pulumi operations and time-to-live schedules)
 
-Below is an example of setting up drift detection and remediation on a stack. See the [Pulumi Deployments REST API documentation](/docs/deployments/deployments/api) for more details on configuring drift detection and remediation programmatically.
+Below is an example of setting up drift detection and remediation on a stack. See the [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/) for more details on configuring drift detection and remediation programmatically.
 
 **Create a drift detection and remediation schedule:**
 
@@ -190,6 +190,8 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Pulumi;
 using PulumiService = Pulumi.PulumiService;
 

@@ -23,7 +23,7 @@ Because mocks don't do any real work, unit tests run fast. They're also determin
 
 ## Get started
 
-This guide builds a sample test suite against AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/iac/get-started/aws/) guide to set up a Pulumi program in the language of your choice.
+This guide builds a sample test suite against AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [get-started guide](/up/) to set up a Pulumi program in the language of your choice.
 
 Unit tests are supported in every general-purpose [Pulumi language runtime](/docs/iac/languages-sdks/).
 
@@ -1320,11 +1320,11 @@ export const group = new aws.ec2.SecurityGroup("web-secgrp", {
     ],
 });
 
-// Look up the latest Amazon Linux 2 AMI.
+// Look up the latest Amazon Linux 2023 AMI.
 const ami = aws.ec2.getAmiOutput({
     owners: ["amazon"],
     mostRecent: true,
-    filters: [{ name: "name", values: ["amzn2-ami-hvm-*-x86_64-gp2"] }],
+    filters: [{ name: "name", values: ["al2023-ami-2023.*-x86_64"] }],
 });
 
 export const server = new aws.ec2.Instance("web-server-www", {
@@ -1348,11 +1348,11 @@ group = ec2.SecurityGroup('web-secgrp', ingress=[
     { "protocol": "tcp", "from_port": 80, "to_port": 80, "cidr_blocks": ["0.0.0.0/0"] },
 ])
 
-# Look up the latest Amazon Linux 2 AMI.
+# Look up the latest Amazon Linux 2023 AMI.
 ami = ec2.get_ami_output(
     owners=["amazon"],
     most_recent=True,
-    filters=[{"name": "name", "values": ["amzn2-ami-hvm-*-x86_64-gp2"]}])
+    filters=[{"name": "name", "values": ["al2023-ami-2023.*-x86_64"]}])
 
 server = ec2.Instance("web-server-www",
     instance_type="t2.micro",
@@ -1394,14 +1394,14 @@ func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
 		return nil, err
 	}
 
-	// Look up the latest Amazon Linux 2 AMI.
+	// Look up the latest Amazon Linux 2023 AMI.
 	ami, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
 		Owners:     []string{"amazon"},
 		MostRecent: pulumi.BoolRef(true),
 		Filters: []ec2.GetAmiFilter{
 			{
 				Name:   "name",
-				Values: []string{"amzn2-ami-hvm-*-x86_64-gp2"},
+				Values: []string{"al2023-ami-2023.*-x86_64"},
 			},
 		},
 	})
@@ -1454,14 +1454,14 @@ public class WebserverStack : Stack
             }
         });
 
-        // Look up the latest Amazon Linux 2 AMI.
+        // Look up the latest Amazon Linux 2023 AMI.
         var ami = GetAmi.Invoke(new GetAmiInvokeArgs
         {
             Owners = { "amazon" },
             MostRecent = true,
             Filters =
             {
-                new GetAmiFilterInputArgs { Name = "name", Values = { "amzn2-ami-hvm-*-x86_64-gp2" } }
+                new GetAmiFilterInputArgs { Name = "name", Values = { "al2023-ami-2023.*-x86_64" } }
             }
         });
 
@@ -1511,13 +1511,13 @@ public class App {
                     .build())
             .build());
 
-        // Look up the latest Amazon Linux 2 AMI.
+        // Look up the latest Amazon Linux 2023 AMI.
         var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
             .owners("amazon")
             .mostRecent(true)
             .filters(GetAmiFilterArgs.builder()
                 .name("name")
-                .values("amzn2-ami-hvm-*-x86_64-gp2")
+                .values("al2023-ami-2023.*-x86_64")
                 .build())
             .build());
 

@@ -579,7 +579,7 @@ args =>
 }
 ```
 
-The new system is a dictionary where you have to know that the key is `"length"` and the value is an `Input<double>`:
+The new system is a dictionary where you have to know that the key is `"length"` and the value is a `double`:
 
 ```csharp
 (args, _) =>

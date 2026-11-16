@@ -110,7 +110,12 @@ Use the same policy function in a component:
 
 ```typescript
 // components/database.ts
-import { validateDatabaseInputs } from "../policies/database-validation";
+import * as aws from "@pulumi/aws";
+import { ComponentResource, ComponentResourceOptions } from "@pulumi/pulumi";
+import { DatabaseValidationArgs, validateDatabaseInputs } from "../policies/database-validation";
+
+// The component's arguments reuse the shape the validation function expects.
+export interface DatabaseArgs extends DatabaseValidationArgs {}
 
 export class Database extends ComponentResource {
   constructor(name: string, args: DatabaseArgs, opts?: ComponentResourceOptions) {

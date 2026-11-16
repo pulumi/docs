@@ -197,11 +197,8 @@ jobs:
             infrastructure/yarn.lock
             theme/yarn.lock
             theme/stencil/yarn.lock
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.157.0'
-          extended: true
+      - name: Install Hugo (version pinned in mise.toml)
+        uses: ./.github/actions/setup-hugo
       # Vale (and other mise-pinned tools) for the skill's whole-file
       # prose-lint pre-step.
       - name: Install mise-managed tools

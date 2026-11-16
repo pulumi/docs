@@ -28,7 +28,8 @@ one to `scripts/make-s3-redirects.js`, which sets each key's S3 object as a
 website-redirect (`WebsiteRedirectLocation`), producing a real HTTP 301 rather than a
 client-side meta-refresh. This runs as part of every production push
 (`scripts/ci-push.sh`), after `scripts/sync-and-test-bucket.sh` has already synced the
-built site to the bucket with `s5cmd sync --delete`. The `--delete` matters here: it means
+built site to the bucket with `s5cmd sync --delete` and before `run-pulumi.sh update` points
+CloudFront at that bucket, so every redirect already exists when the bucket goes live. The `--delete` matters here: it means
 nothing survives a deploy by accident. If a redirect is live on pulumi.com today, some
 `.txt` file in this directory (or the equivalent directory in another repo — see below)
 put it there on the most recent deploy. There is no such thing as an orphaned rule that

@@ -74,8 +74,8 @@ def base_digest(**over):
         "workflow_failures": {"total_runs": 100, "failing": [
             {"workflow": "Audit Logs", "runs": 4, "failures": 4, "streak": 4, "last_failure_url": "https://x/run/1"},
             {"workflow": "Deploy", "runs": 50, "failures": 2, "streak": 0, "last_failure_url": "https://x/run/2"}]},
-        "switches": digest.shape_switches({"REVIEW_V3_SLA": "", "BLOG_REVIEW_COUNT": "0",
-                                           "REVIEW_V3_SENTINEL": "1"}),
+        "switches": digest.shape_switches({"REVIEW_V3_SLA": "", "STALE_PR_SWEEP": "",
+                                           "BLOG_REVIEW_COUNT": "0", "REVIEW_V3_SENTINEL": "1"}),
         "sla": digest.shape_sla(sweep_record(), POLICY, "off"),
         "review_outcomes": {"available": True, "prs_scraped": 40, "prs_no_review_data": 5,
                             "outcomes": {"human": {"fixed": 30, "ignored_outstanding": 2,
@@ -98,10 +98,13 @@ def base_digest(**over):
 
 def test_switch_semantics_match_each_workflow():
     by = {s["var"]: s for s in digest.shape_switches({
-        "REVIEW_V3_SLA": "", "REVIEW_V3_SENTINEL": "report", "CONTENT_REVIEW_COUNT": "",
+        "REVIEW_V3_SLA": "", "STALE_PR_SWEEP": "1",
+        "REVIEW_V3_SENTINEL": "report", "CONTENT_REVIEW_COUNT": "",
         "GLOWUP_COUNT": "0", "BLOG_REVIEW_COUNT": "10",
         "BRAND_SYNC_ENABLED": ""})}
     assert by["REVIEW_V3_SLA"]["state"] == "off"            # == '1' switch: unset is off
+    assert by["STALE_PR_SWEEP"]["state"] == "on"            # == '1' switch, set
+    assert digest.shape_switches({"STALE_PR_SWEEP": ""})[1]["state"] == "off"
     assert by["REVIEW_V3_SENTINEL"]["state"] == "report"
     assert by["CONTENT_REVIEW_COUNT"]["state"] == "on"      # != '0' switch: unset is ON
     assert by["CONTENT_REVIEW_COUNT"]["value"] == "3"       # ...at the workflow's default count
@@ -376,7 +379,8 @@ def test_sla_unavailable_never_claims_within_sla():
 def test_switch_line_lists_only_whats_off():
     msg = render.render(base_digest(), None)
     line = next(line for line in msg.splitlines() if line.startswith("*Switches*"))
-    assert line.startswith("*Switches*: off: SLA sweep, blog review index; unknown: content review")
+    assert line.startswith("*Switches*: off: SLA sweep, stale PR sweep, blog review index; "
+                           "unknown: content review")
     assert "ledger" not in line
 
 

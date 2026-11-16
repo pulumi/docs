@@ -49,7 +49,7 @@ use_cases:
             Easily provision and maintain machine learning (ML) batch jobs and data processing pipelines. Pulumi provides an easy and automated way to deploy ML stacks
             for data scientists and developers.
 
-            [Learn more about AI and ML](/solutions/ai/)
+            [Learn more about AI and ML](/blog/the-superintelligence-flywheel/)
 
         - name: Migrate from an existing infrastructure tool
           description: |
@@ -86,7 +86,7 @@ architectures:
             - customer: learning-machine
 
         - name: Server-based
-          cta_link: /registry/packages/aws/how-to-guides/ec2-webserver
+          cta_link: /dev/tutorials/ec2-webserver/
           cta_text: Learn More
           description: |
             Define and manage cloud infrastructure using server-based architectures, such as compute and database instances.
@@ -112,7 +112,7 @@ personas:
               icon: code
               icon_color: violet
               description: |
-                Define [infrastructure as code](/what-is/what-is-infrastructure-as-code/) using
+                Define [infrastructure as code](/topics/infrastructure-as-code/) using
                 familiar languages and IDEs: JavaScript, TypeScript, Python, Go, .NET, Java, and YAML.
             - title: Cloud programming model
               icon: program

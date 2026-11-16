@@ -32,7 +32,7 @@ In order to use templates you will need to authorize Pulumi with your VCS provid
 Click the button and accept the required permissions if you would like to use templates.
 
 {{% notes type="info" %}}
-If you select "Use a template" and your Pulumi administrator has configured [custom templates](/docs/idp/concepts/templates) for your organization, you will be able to choose from your organization's custom templates in a later step.
+If you select "Use a template" and your Pulumi administrator has configured [custom templates](/docs/idp/concepts/organization-templates/) for your organization, you will be able to choose from your organization's custom templates in a later step.
 If you select "Use a template" but your organization doesn't have custom templates, you'll be able to choose one of Pulumi's public templates.
 {{% /notes %}}
 
@@ -52,7 +52,7 @@ This impacts the resulting `Pulumi.yaml` file and the name of `Pulumi.<stack>.ya
 
 ### Configuration
 
-This section allows you to provide values for any necessary configuration if you're using a [template](/docs/idp/concepts/templates) that declares required configuration keys.
+This section allows you to provide values for any necessary configuration if you're using a [template](/docs/idp/concepts/organization-templates/) that declares required configuration keys.
 
 This impacts the `config` stanza in `Pulumi.<stack>.yaml`.
 

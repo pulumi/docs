@@ -2,7 +2,7 @@
 title: fn::toYAML
 title_tag: fn::toYAML
 h1: fn::toYAML
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: "Use fn::toYAML in Pulumi ESC to encode a value as a YAML string for fields that only accept strings. Secret inputs stay secret. See syntax and examples."
 aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-to-yaml/
   - /docs/esc/reference/builtin-functions/fn-to-yaml/

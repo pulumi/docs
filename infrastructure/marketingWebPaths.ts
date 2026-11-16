@@ -27,7 +27,21 @@ export const marketingWebPaths = [
     "/pulumi-for-startups.md",
     "/extend-trial",
     "/extend-trial/",
+    "/subscribe",
+    "/subscribe/",
+    "/subscribe.md",
+    "/agent-start",
+    "/agent-start/",
+    "/agent-start.md",
+    "/onboard.md",
     // marketing-web 301s /confirmation/ to / at its own CDN, as the Hugo page's redirect_to did.
     "/confirmation*",
+    // Exact paths: /gads* would also take the /gads/ redirect and the retired gads pages' redirects off S3.
+    "/gads/infrastructure-as-code",
+    "/gads/infrastructure-as-code/",
+    // The old /testimonials/ page; S3 301s it here (scripts/redirects/love-redirects.txt).
+    "/love",
+    "/love/",
+    "/love.md",
     "/sitemap-www-*",
 ];

@@ -156,7 +156,7 @@ sections:
         description: |
           Deploy your first infrastructure with Pulumi. Choose your language, pick your cloud, ship your code.
         cta_primary_text: Start Free
-        cta_primary_link: https://app.pulumi.com/signup
+        cta_primary_link: /up/
         cta_text: Book a Demo
         cta_link: /request-a-demo/
       - title: Migrating to Pulumi?

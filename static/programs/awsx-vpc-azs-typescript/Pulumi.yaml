@@ -1,3 +1,0 @@
-name: awsx-vpc-azs-typescript
-runtime: nodejs
-description: An example that creates a new VPC and configuring availability zones.

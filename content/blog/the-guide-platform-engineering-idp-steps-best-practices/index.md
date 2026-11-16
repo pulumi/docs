@@ -168,7 +168,7 @@ As your platform matures, the ultimate goal is to empower your application teams
 When implementing self-service capabilities, keep the following platform engineering best practices in mind:
 
 - **Start small and iterate**: Don't try to boil the ocean. Begin with a few well-defined use cases, such as CI/CD pipelines or database provisioning, and gradually expand the self-service offerings as your platform team gains experience and confidence.
-- **[Focus on user experience](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: Ensure that the self-service interfaces, whether web-based or command-line, are intuitive and easy to use. Gather feedback from application teams and continuously refine the user experience.
+- **[Focus on user experience](https://www.pulumi.com/blog/developer-experience-business-critical/)**: Ensure that the self-service interfaces, whether web-based or command-line, are intuitive and easy to use. Gather feedback from application teams and continuously refine the user experience.
 - **Maintain stability and reliability**: Even with self-service, the platform team is responsible for ensuring the underlying infrastructure and services remain stable and reliable. Implement robust monitoring, alerting, and incident response processes to maintain platform health.
 - **Embrace a product mindset**: Treat the [platform as a product](https://www.pulumi.com/blog/platform-engineering-cncf-maturity-model/#platforms-as-products-driving-success), with the application teams as your customers. Continuously gather feedback, measure key performance indicators, and iterate on the platform's capabilities to meet evolving needs.
 
@@ -190,7 +190,7 @@ With the right approach and mindset, your platform engineering efforts will beco
 
 There are many definitions for platform engineering, one of which is designing, building, and maintaining internal platforms that streamline software delivery by providing reusable tools, services, and workflows for developers. It focuses on scalability, efficiency, and self-service capabilities for internal teams.
 
-For a more in-depth explanation of real-world use cases, see [What is platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/).
+For a more in-depth explanation of real-world use cases, see [What is platform engineering](https://www.pulumi.com/topics/platform-engineering/).
 
 ### Who are the Platform Customers?
 
@@ -212,7 +212,7 @@ A platform feature that allows development teams to provision, configure, and ma
 
 The process of managing and provisioning infrastructure through code, allowing infrastructure to be versioned, automated, and managed consistently across environments.
 
-For a more in-depth explanation, see the [What is infrastructure as code? page](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/).
+For a more in-depth explanation, see the [What is infrastructure as code? page](https://www.pulumi.com/topics/infrastructure-as-code/).
 
 ### What is Policy as Code (PaC)?
 
@@ -222,4 +222,4 @@ Policy as Code (PaC) defines security, compliance, and [operational policies](/d
 
 The overall experience developers have with using the platform, tools, and workflows provided by platform engineering. Optimizing DevEx ensures that developers can work more efficiently and effectively.
 
-For a more in-depth explanation, read [Beyond Productivity: Developer Experience is Business Critical.](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)
+For a more in-depth explanation, read [Beyond Productivity: Developer Experience is Business Critical.](https://www.pulumi.com/blog/developer-experience-business-critical/)

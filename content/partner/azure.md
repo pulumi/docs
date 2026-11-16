@@ -16,7 +16,7 @@ sections:
     description: |
       Pulumi brings Infrastructure as Code to Azure using familiar programming languages. Manage 100% of your Azure resources, including compute, containers, and serverless with C#, Python, Go, TypeScript, and more. Replace or interoperate with Azure Resource Manager (ARM) templates using Pulumi's modern SDKs.
     cta_primary_text: Get started
-    cta_primary_link: /docs/iac/get-started/azure/
+    cta_primary_link: /up/
     cta_secondary_text: Try Pulumi Cloud
     cta_secondary_link: https://app.pulumi.com/signup
     code_title: index.ts
@@ -167,7 +167,7 @@ sections:
     image: /images/partners/azure-insights.png
     image_alt: Azure dashboard
     cta_text: Get started
-    cta_link: /docs/iac/get-started/azure/
+    cta_link: /up/
     anchor: overview
 
   - type: section_header_with_image
@@ -187,7 +187,7 @@ sections:
     title: 100% API coverage
     description: The Pulumi Azure provider covers 100% of the resources available in Azure Resource Manager giving you the full power of Azure at your fingertips. Every property of each resource is always represented in the SDKs.
     cta_text: Get started
-    cta_link: /docs/iac/get-started/azure/
+    cta_link: /up/
     cards_cols: 3
     cards:
       - icon: cloud
@@ -216,7 +216,7 @@ sections:
     description: |
       Pulumi's Microsoft Azure Native provider is designed to stay up-to-date with additions and changes to Azure APIs. The `azure-native` SDK is generated automatically from the Azure API specifications published by Microsoft, which means you'll always have access to the latest Azure features and improvements.
     cta_text: Get started
-    cta_link: /docs/iac/get-started/azure/
+    cta_link: /up/
     cards_cols: 3
     cards:
       - icon: arrows-clockwise
@@ -248,7 +248,7 @@ sections:
       - title: Get started with Pulumi and Azure
         description: Deploy your first Azure project in minutes. Follow our quickstart guide, or talk to our team about your specific needs.
         cta_primary_text: Get started
-        cta_primary_link: /docs/iac/get-started/azure/
+        cta_primary_link: /up/
     anchor: get-started
     highlight_first_card: true
 ---

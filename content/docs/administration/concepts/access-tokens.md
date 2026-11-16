@@ -27,13 +27,13 @@ Pulumi offers three types of access tokens:
 
 1. **Personal tokens**, which carry the permissions of the individual user who created them. Personal tokens are available to all Pulumi Cloud users.
 1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are available in the Essentials, Pro, and Enterprise editions.
-1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens appear in audit logs attributed to the team. Team tokens are only available to Pro and Enterprise customers.
+1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens are attributed to the team's [service principal](#how-team-tokens-are-identified). Team tokens are only available to Pro and Enterprise customers.
 
 When using tokens, be mindful of the following security best practices:
 
 * Organization and team access tokens are machine tokens that are not connected to a user account, and therefore should only be used in scenarios like CI/CD pipelines, where the Pulumi actions are not being performed directly by a particular user.
 * Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture. Organization administrators can make expiries mandatory with an [access token expiry policy](#access-token-expiry-policy).
-* Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin organization tokens always have this capability. A stack created with a token carries an automatic [creator grant](/docs/administration/concepts/rbac/#creator-grants) of the Stack Admin permission set, including deletion. That grant is held by the machine identity the token authenticates as, not by the person who created the token, and it persists for as long as the stack exists. To keep a long-lived token from accumulating Stack Admin on every stack it creates, have the automation transfer stack ownership to a break-glass user or team, or delete the automatic entry from the stack's **Access** tab, once the stack exists. See [RBAC](/docs/administration/concepts/rbac/) for more on how org-wide settings and role scopes interact.
+* Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin organization tokens always have this capability. A stack created with a token carries an automatic [creator grant](/docs/administration/concepts/rbac/#creator-grants) of the Stack Admin permission set, including deletion. That grant is held by the identity the token authenticates as (the organization for an organization token, or the team's service principal for a team token), not by the person who created the token, and it persists for as long as the stack exists. To keep a long-lived token from accumulating Stack Admin on every stack it creates, have the automation transfer stack ownership to a break-glass user or team, or delete the automatic entry from the stack's **Access** tab, once the stack exists. See [RBAC](/docs/administration/concepts/rbac/) for more on how org-wide settings and role scopes interact.
 
 ## Personal access tokens
 
@@ -73,7 +73,7 @@ Unlike personal tokens, organization tokens are scoped to a single organization 
 
 ### What organization tokens can do
 
-An organization token can do anything its assigned [RBAC role](/docs/administration/concepts/rbac/roles/) permits. By assigning different roles, you can scope a token to exactly the operations your automation needs — for example, a token that can only read stack state, or one that can deploy updates to a specific set of stacks. If no role is assigned at creation time, the token receives the organization's default member role.
+An organization token can do anything its assigned [RBAC role](/docs/administration/concepts/rbac/roles/) permits. By assigning different roles, you can scope a token to exactly the operations your automation needs — for example, a token that can only read stack state, or one that can deploy updates to a specific set of stacks. If no role is assigned at creation time, the token gets the [permissions for tokens without a role](#organization-wide-role-settings).
 
 Actions taken by organization tokens appear in audit logs attributed to the organization rather than an individual user, with the token's unique name surfaced in every event.
 
@@ -95,17 +95,68 @@ Team tokens are machine tokens scoped to the resources and permissions of a spec
 
 A team token's effective permissions are the union of all [roles assigned to that team](/docs/administration/concepts/rbac/teams/), evaluated at the time of each request. If the team's role assignments change — for example, the team is granted access to a new set of stacks — the token's capabilities update automatically without any token recreation. This makes team tokens a good fit for long-lived automation where access needs may evolve over time.
 
-{{% notes type="info" %}}
-In addition to the team's role assignments, a team token also receives your organization's **default Member permissions** — the baseline access configured in [Organization-wide role settings](/docs/administration/concepts/rbac/roles/#organization-wide-role-settings). For example, if your organization's default stack access is set to **Read**, a team token can read every stack in the organization, not just the stacks the team has been granted. Keep this in mind when relying on a team token to scope automation to a single team's resources.
+As with organization tokens, team token activity is recorded in audit logs with the token's name, keeping actions traceable without exposing individual users.
+
+### How team tokens are identified
+
+Every team has a *service principal*: a machine identity that Pulumi Cloud creates for the team and that all of the team's tokens authenticate as.
+This is a Pulumi Cloud identity, unrelated to a Microsoft Entra ID service principal.
+
+The service principal is named `Service Principal for team <team-name>`, with the login `team-account:<team-id>`.
+It appears as the actor wherever a team token acts, including:
+
+* The `user` field of [audit log events](/docs/administration/reference/audit-log-formats/), alongside the token's name.
+* The stack's update history.
+* The `actor` claim of [OIDC tokens issued by Pulumi ESC](/docs/esc/guides/configuring-oidc/).
+
+Service principals don't appear in the organization's member list and don't count toward its seats.
+
+When a team token creates a stack, two grants are added:
+
+* The team's service principal receives the stack's [creator grant](/docs/administration/concepts/rbac/#creator-grants).
+* The team receives the Stack Admin permission set on the stack, so the team's members can manage it.
+
+No other team gets access to the stack unless its own roles or the organization's default stack permission grant it.
+
+{{% notes type="warning" %}}
+Every team's service principal also shares the organization's creator grants.
+That gives each team token Stack Admin on every stack created with an organization token, and on every stack created with any team token before team tokens had their own service principals.
+The same applies to environments and cloud accounts created those ways.
+
+This is by design because team tokens used to authenticate as the organization, so the organization holds the creator grants for everything they created.
+Many pipelines rely on that access, and Pulumi Cloud kept it in place when team tokens moved to service principals so that existing automation would keep working.
+Those older grants don't record which team's token created the stack, so the access extends to every team token in the organization, not only the team that created it.
+
+To keep team tokens off a stack like this, delete the organization's automatic Stack Admin entry from the stack's **Access** tab, or transfer the stack's ownership to a team or break-glass user.
 {{% /notes %}}
 
-As with organization tokens, team token activity is recorded in audit logs with the token's name, keeping actions traceable without exposing individual users.
+If the team is deleted, its service principal is deleted with it, along with the service principal's creator grants.
+The stack update history the service principal recorded is reassigned to the organization.
 
 ### Who can manage team tokens
 
 Organization admins and team admins can create and delete team tokens. Tokens are found under the team's page (**Teams** > select a team > **Access Tokens**) and are not owned by the admin who created them. Each token name must be unique across all organization and team tokens in the organization, including deleted tokens. Unlike organization tokens, team tokens can also be created by a machine token whose role grants enough permission.
 
 Deleting a token immediately revokes its access. The token name is permanently reserved after deletion to preserve audit log integrity.
+
+## Permissions for tokens without a role {#organization-wide-role-settings}
+
+These settings decide the permissions of organization access tokens without a role.
+
+| Setting | What it controls |
+|---------|------------------|
+| **Stack permissions** | Permissions on every stack in the organization: None, Read, or Write. Write includes updates but not deleting stacks. |
+| **Environment permissions** | Permissions on every environment: None, Read, Open, or Write. |
+| **Account permissions** | Permissions on every cloud account: None, Read, Write, or Admin. |
+| **Allow these tokens to create stacks and transfer stacks to this organization** | Creating stacks and transferring stacks in. |
+| **Allow these tokens to create accounts** | Creating cloud accounts. |
+| **Allow these tokens to create teams** | Creating teams. |
+| **Allow stack admins to transfer stacks to another organization** | Transferring stacks out, for anyone who administers a stack. |
+| **Allow stack admins to delete stacks** | Deleting stacks, for anyone who administers a stack. |
+
+Only organization admins can change these settings: navigate to **Settings** > **Access management**, select the **Access Tokens** tab, and choose **Change what these tokens can do**.
+
+To set a token's permissions more precisely, assign it a [role](/docs/administration/concepts/rbac/roles/) instead.
 
 ## Access token expiry policy
 
@@ -157,17 +208,13 @@ error: could not create stack: [403] The `acme-corp` organization enforces a max
 
 ## Legacy organization token types
 
-Before role assignment was available for organization tokens, organization tokens were created with one of two fixed permission levels:
-
-* **Standard organization tokens** had member-level permissions — they could perform read and write operations within the organization but could not manage members, modify organization settings, or perform other administrative actions. This is equivalent to assigning the built-in Member role to an organization token today.
-
-* **Admin organization tokens** had full administrator-level permissions — they could perform any operation an organization administrator can perform, except creating or deleting other organization tokens. This is equivalent to assigning the built-in Admin role to an organization token today.
+Before roles could be assigned to organization tokens, each token was either standard or admin. Both kinds keep working: an admin token has the `Admin` role's permissions, except creating or deleting organization tokens, and a standard token is a token without a role, so it gets the [permissions for tokens without a role](#organization-wide-role-settings).
 
 {{% notes type="warning" %}}
 Admin organization tokens have elevated permissions; please use them with caution.
 {{% /notes %}}
 
-Both token types continue to work. The admin/standard distinction maps directly onto the built-in Admin and Member roles in the current RBAC system. When creating new organization tokens, you can reproduce these permission levels by assigning the corresponding built-in role. For new automation, prefer assigning a [custom role](/docs/administration/concepts/rbac/roles/) instead — custom roles let you follow the principle of least privilege by granting only the scopes your automation actually needs.
+For new automation, assign a [role](/docs/administration/concepts/rbac/roles/), built-in or custom, that grants only the scopes your automation needs.
 
 ## OIDC issued tokens
 

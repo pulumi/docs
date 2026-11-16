@@ -59,7 +59,7 @@ social:
 
 The Platform Engineering & DevOps in-person series launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” in which he discussed Cloud-Native Platforms, The Platform Maturity Model, and approaching Platforms as Products.
 
-In this article, you'll learn more about [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) and how to get involved with the CNCF Platform Working Group. Make sure to check our [Pulumi User Groups (PUGs)](https://luma.com/pulumi) to find a meetup near you.
+In this article, you'll learn more about [platform engineering](https://www.pulumi.com/topics/platform-engineering/) and how to get involved with the CNCF Platform Working Group. Make sure to check our [Pulumi User Groups (PUGs)](https://luma.com/pulumi) to find a meetup near you.
 
 <!--more-->
 
@@ -88,7 +88,7 @@ A cloud-native platform is a strategic business initiative that enables organiza
 
 - **Vendor-neutrality**: A cloud-native platform should be open and agnostic, allowing organizations to leverage various technologies and services without being locked into a single vendor.
 **Scalability and flexibility**: The platform should be designed to accommodate the organization's growing and changing needs, with the ability to add or remove components as needed easily.
-- **[Developer-centricity](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: The platform should empower developers to be more productive by providing self-service capabilities, streamlined workflows, and a consistent developer experience.
+- **[Developer-centricity](https://www.pulumi.com/blog/developer-experience-business-critical/)**: The platform should empower developers to be more productive by providing self-service capabilities, streamlined workflows, and a consistent developer experience.
 - **[Operational efficiency](https://www.pulumi.com/blog/developer-portal-platform-teams/)**: The platform should simplify and automate the management and maintenance of the underlying infrastructure, allowing the organization to focus on delivering value to customers.
 - **Continuous improvement**: The platform should be designed with a mindset of continuous evolution, with regular updates and enhancements to address emerging needs and technologies.
 

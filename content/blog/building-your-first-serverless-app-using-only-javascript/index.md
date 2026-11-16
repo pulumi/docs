@@ -9,7 +9,7 @@ date: "2018-07-05"
 ---
 
 {{% notes type="warning" %}}
-This post is outdated. The `hello-aws-javascript` template and `@pulumi/cloud-aws` package used in this post are no longer maintained. We recommend using TypeScript for new Pulumi projects. See the [Get Started guide](/docs/get-started/) to build your first serverless app with TypeScript.
+This post is outdated. The `hello-aws-javascript` template and `@pulumi/cloud-aws` package used in this post are no longer maintained. We recommend using TypeScript for new Pulumi projects. See the [Get Started guide](/up/) to build your first serverless app with TypeScript.
 {{% /notes %}}
 
 In this tutorial, we'll use Pulumi to build a
@@ -78,7 +78,7 @@ This approach avoided significant amounts of configuration (YAML, or
 point-and-click). Pulumi also supports containers (including
 Kubernetes), managed services, infrastructure and everything else in
 between that you might need for building cloud applications.
-[Get started with Pulumi](/docs/get-started/).
+[Get started with Pulumi](/up/).
 
 ## Why JavaScript for serverless programming?
 
@@ -133,7 +133,7 @@ To learn more take a look at more tutorials and example code:
 - Our origin story: [Hello, Pulumi!](http://joeduffyblog.com/2018/06/18/hello-pulumi/)
 - Tutorial: [Deploying Containers with Pulumi](/blog/deploying-production-ready-containers-with-pulumi/)
 - Tutorial: [Build a video thumbnailer using AWS Lambda, Fargate, and S3 in JavaScript](/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/)
-- [Pulumi Quickstart](/docs/get-started/)
+- [Pulumi Quickstart](/up/)
 - [Pulumi Community Slack](https://slack.pulumi.com)
 - [Pulumi Examples on GitHub](https://github.com/pulumi/examples)
 - [Node.js and Pulumi](/docs/iac/languages-sdks/javascript/)

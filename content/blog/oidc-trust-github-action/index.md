@@ -28,7 +28,7 @@ category: product
 # for details, and please remove these comments before submitting for review.
 ---
 
-We're excited to announce a new GitHub Action that simplifies the integration of Pulumi's powerful [OpenID Connect](/docs/pulumi-cloud/oidc/client/) (OIDC) Trust feature into your [GitHub Actions](/docs/pulumi-cloud/oidc/client/github/) workflows. This action streamlines secure authentication with Pulumi Cloud, allowing you to leverage GitHub as an identity provider and eliminate the need for long-lived Pulumi access tokens.
+We're excited to announce a new GitHub Action that simplifies the integration of Pulumi's powerful [OpenID Connect](/docs/administration/guides/oidc-issuers/) (OIDC) Trust feature into your [GitHub Actions](/docs/administration/guides/oidc-issuers/github/) workflows. This action streamlines secure authentication with Pulumi Cloud, allowing you to leverage GitHub as an identity provider and eliminate the need for long-lived Pulumi access tokens.
 
 <!--more-->
 
@@ -77,4 +77,4 @@ For more information about the `pulumi/auth-actions@v1` Action, check the [Pulum
 
 The new GitHub Action for Pulumi OIDC Trust makes it easier than ever to incorporate secure, short-lived credential management into your GitHub Actions workflows. Embrace the power of OIDC, eliminate the "secret zero" problem, and streamline your Pulumi deployments with ease.
 
-Give the action a try in your next GitHub Actions workflow and let us know what you think! Check out our [documentation](/docs/pulumi-cloud/oidc/client/github/) for more details.
+Give the action a try in your next GitHub Actions workflow and let us know what you think! Check out our [documentation](/docs/administration/guides/oidc-issuers/github/) for more details.

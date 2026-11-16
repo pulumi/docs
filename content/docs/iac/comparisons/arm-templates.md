@@ -144,8 +144,7 @@ Pulumi has first-class drift detection: [`pulumi refresh`](/docs/iac/cli/command
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/get-started/)
-- [Get started with Pulumi and Azure](/docs/iac/get-started/azure/)
+- [Get started with Pulumi](/up/)
 - [Pulumi for Azure](/docs/integrations/clouds/azure/)
 - [Pulumi Azure Native provider](/registry/packages/azure-native/)
 - [Migrating from Azure Resource Manager to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/)

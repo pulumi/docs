@@ -57,6 +57,20 @@ The brand guide owns link *text* (descriptive, no "here"/"click here"). This sit
   - Incorrect: `[stacks](./stacks/)`, `![diagram](./diagram.png)`, `[stacks](../stacks/)`
 - When changing the URL of an existing page, add a redirect with a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
 
+### Docs link to docs
+
+Pages under `content/docs/` link to other docs pages, not to marketing pages. Don't add links from the docs to:
+
+- `/topics/...` explainers (and the old `/what-is/...` URLs, which redirect there)
+- `/product/...` pages
+- the homepage, `/enterprise/`, `/solutions/`, or other landing pages
+
+A reader in the docs is already past "what is infrastructure as code?" and wants the next technical step. Sending them to an explainer or a sales page from the middle of a docs paragraph pulls them out of the docs to a page written for someone else. If a concept needs a link, link the docs page that explains it (for example, `/docs/iac/concepts/` or `/docs/iac/guides/basics/how-pulumi-works/`). If no docs page covers it, that's a docs gap to fill, not a reason to borrow a marketing page.
+
+**SEO is not a reason to add a link to the docs.** Building internal links to a page we want to rank (a `/topics/` hub, a product page) is a job for the blog and the marketing site, not the docs. The same goes for retargeting an existing docs link at a marketing page.
+
+The exceptions are narrow: the [Dev Center](#linking-to-the-dev-center) (technical examples, not marketing), the `/pricing/` link that Pulumi Cloud availability callouts render for you, and `/customers/` in a comparison page's **Learn more** block (see [Neutral tone toward other products](#neutral-tone-toward-other-products)). A handful of older docs pages still link to `/topics/`; they're legacy, not precedent.
+
 ### Linking to the Dev Center
 
 The [Dev Center](/dev/) (tutorials, templates, examples, and a glossary) ships from a different repo, [pulumi/marketing-web](https://github.com/pulumi/marketing-web). Individual tutorials there can be renamed or retired without this repo finding out, so link to pages built to last rather than to single tutorials. Dev Center content is technical examples, not marketing, so linking to it from the docs is fine.
@@ -318,7 +332,7 @@ Write docs so that a user of the other product would call them fair:
 - **Keep table cells factual and parallel.** Each cell says what the product does, in the same register for both columns. No loaded qualifiers ("powerful," "requires significant management overhead," "a narrower training target") and no one-word judgments in place of a description.
 - **Give the other product real "choose when" reasons.** A "When to choose" section lists genuine reasons to pick the other product, and doesn't follow them with a rebuttal. Put Pulumi's interoperability facts (HCL support, state backends, module reuse) in the adoption section instead.
 - **No testimonials or sales proof.** Customer results, "proven at scale" sections, and vendor benchmarks don't belong in docs. Link to `/customers/` from a **Learn more** block if it's relevant.
-- **Link to docs, not marketing pages.** Point to `/docs/...` pages for Pulumi features, not `/product/...` pages.
+- **Link to docs, not marketing pages.** Point to `/docs/...` pages for Pulumi features, not `/product/...` or `/topics/...` pages. See [Docs link to docs](#docs-link-to-docs).
 - **Compare Pulumi to other products, never other products to each other.** Every comparison is Pulumi vs. something else. Don't write pages, sections, table columns, or sentences that weigh two non-Pulumi products against each other (for example, "CDK vs. Terraform," or a table with Pulumi, AWS CDK, and Terraform columns side by side). Adjudicating between other vendors' products isn't our place, and we can't keep those claims accurate. A category page such as TACOS can describe what the category's products have in common, but compares the category to Pulumi, not its members to one another.
 - **Front matter follows the same rules.** `title_tag`, `meta_desc`, and `h1` describe the comparison ("Pulumi vs. HCP Terraform") instead of selling it ("The best Terraform Cloud alternative").
 

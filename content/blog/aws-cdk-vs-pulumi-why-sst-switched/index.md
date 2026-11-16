@@ -133,7 +133,7 @@ As they worked through the transition to Pulumi, they realized the significant b
 
 ### Improved Visibility and Debugging
 
-One of Pulumi's most immediate and tangible benefits was the [improved visibility and debugging capabilities](https://www.pulumi.com/product/pulumi-insights/) it provided. With the infrastructure code being the same as the deployment code, they could easily trace issues back to the source and understand exactly what was happening during the deployment process.
+One of Pulumi's most immediate and tangible benefits was the [improved visibility and debugging capabilities](https://www.pulumi.com/product/discovery-governance/) it provided. With the infrastructure code being the same as the deployment code, they could easily trace issues back to the source and understand exactly what was happening during the deployment process.
 
 This starkly contrasted the CDK/CloudFormation approach, where the intermediary format (CloudFormation templates) often obscured the underlying logic and made it much more difficult to diagnose and resolve problems.
 
@@ -166,7 +166,7 @@ With Pulumi's foundation in place, they can now focus on further enhancing the d
 - **Deeper Integration with Application Frameworks**: By leveraging Pulumi's flexibility, they can create even tighter integrations between SST and the application frameworks and libraries that their users rely on, making managing infrastructure seamless alongside their application code.
 - **Expanded Provider Support**: the SST team will continue to add support for a wide range of cloud and on-premises providers, ensuring that their users can deploy and manage their infrastructure wherever it makes the most sense for their needs.
 - **Improved Deployment Workflows**: Building on Pulumi's extensibility, they can create [more advanced deployment workflows](/docs/deployments/concepts/) that address the specific needs of application developers, such as faster deployment times, better rollback capabilities, and more granular control over the deployment process.
-- **Enhanced Observability and Monitoring**: By treating the infrastructure code as a first-class program, they can provide their users with [better visibility](https://www.pulumi.com/product/pulumi-insights/) into the deployment process and more robust monitoring and observability capabilities, helping them to identify and resolve issues quickly.
+- **Enhanced Observability and Monitoring**: By treating the infrastructure code as a first-class program, they can provide their users with [better visibility](https://www.pulumi.com/product/discovery-governance/) into the deployment process and more robust monitoring and observability capabilities, helping them to identify and resolve issues quickly.
 
 Two years on, that bet has held: SST shipped its Pulumi-based engine as v3 in August 2024 and has kept building on it through its v4 releases, while the SST team's own attention has broadened to new projects like OpenCode, an open-source AI coding agent. The engine choice made in this migration is now load-bearing for every SST app that deploys with v3 or later.
 
@@ -176,7 +176,7 @@ If you're interested in exploring Pulumi further, here are several ways to get i
 
 - Discover how Pulumi Crosswalk for AWS simplifies “day one” tasks in our [AWS guide](/docs/iac/guides/clouds/aws/)
 - Watch our on-demand workshop [Getting Stated with Infrastructure as Code on AWS](https://www.pulumi.com/resources/getting-started-with-iac-pulumi-aws/)
-- Register for one of our upcoming [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming)
+- Register for one of our upcoming [Platform Engineering or DevOps workshops](https://www.pulumi.com/events/#upcoming)
 - But most importantly, [try Pulumi](https://app.pulumi.com/signup) today!
 
 ---

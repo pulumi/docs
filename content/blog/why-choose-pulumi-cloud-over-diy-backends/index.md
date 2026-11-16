@@ -23,7 +23,7 @@ At Pulumi, we’re committed to open source&mdash;always have been; always will 
 
 That’s why we built [Pulumi Cloud](/product/)&mdash;to help you avoid building and maintaining these capabilities from scratch while ensuring you can automate, secure, and manage your infrastructure at scale. Pulumi Cloud provides enterprise capabilities that make it easier to build modern infrastructure platforms. Companies receive increasing value from Pulumi Cloud as their organization and their infrastructure platforms grow in size and complexity.
 
-As companies expand or [platform engineering](/what-is/what-is-platform-engineering/) mandates become more expansive, challenges arise around collaboration, security, governance, and scaling. Some questions that need answering include:
+As companies expand or [platform engineering](/topics/platform-engineering/) mandates become more expansive, challenges arise around collaboration, security, governance, and scaling. Some questions that need answering include:
 
 - How do teams collaborate?
 - How do you securely manage infrastructure state?
@@ -47,7 +47,7 @@ There are speed benefits that customers typically experience across three areas:
 
 Pulumi Cloud streamlines the software delivery pipeline with [Pulumi Deployments](/product/pulumi-deployments/) and a wide range of 3rd party [CI/CD integrations](/docs/iac/operations/continuous-delivery/).
 
-Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering search, analytics, and AI-driven insights over your infrastructure. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets, reducing the operational time it takes to find needles in haystacks.
+Pulumi Cloud provides [Pulumi Insights](/product/discovery-governance/), offering search, analytics, and AI-driven insights over your infrastructure. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets, reducing the operational time it takes to find needles in haystacks.
 
 ### Scale
 
@@ -61,11 +61,11 @@ Another reason your organization is investing in an infrastructure platform is s
 
 For applications being built across the organization, securing sensitive information like database passwords, cloud credentials, and API keys is paramount. Secrets can inadvertently end up in insecurely stored state files, leading to potential breaches. Pulumi Cloud, however, encrypts all data in transit and at rest, utilizing hardware security module (HSM) based encryption. Read the [Pulumi Cloud Security Whitepaper](/security/pulumi-cloud-security-whitepaper) for more information.
 
-Pulumi Cloud further enhances security with Pulumi ESC, a centralized [secrets management](/what-is/what-is-secrets-management/) and orchestration service. This service pulls and syncs secrets from various stores like HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, and 1Password, making it easy to adopt dynamic, short-lived secrets on demand. Secrets can be accessed via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with TypeScript/JavaScript, Python, and Go SDKs. Pulumi ESC leverages the same identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used by Pulumi IaC, ensuring that secrets management complies with enterprise security policies.
+Pulumi Cloud further enhances security with Pulumi ESC, a centralized [secrets management](/topics/secrets-and-security/) and orchestration service. This service pulls and syncs secrets from various stores like HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, and 1Password, making it easy to adopt dynamic, short-lived secrets on demand. Secrets can be accessed via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with TypeScript/JavaScript, Python, and Go SDKs. Pulumi ESC leverages the same identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used by Pulumi IaC, ensuring that secrets management complies with enterprise security policies.
 
 ### Savings
 
-Building a platform and managing cloud infrastructure demands considerable time and energy. As discussed above, [Pulumi Insights](/product/pulumi-insights/) X-Rays your entire cloud footprint, so you can observe, plan, and drive changes across your infrastructure. With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, which can lead to substantial cost savings.
+Building a platform and managing cloud infrastructure demands considerable time and energy. As discussed above, [Pulumi Insights](/product/discovery-governance/) X-Rays your entire cloud footprint, so you can observe, plan, and drive changes across your infrastructure. With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, which can lead to substantial cost savings.
 
 You can also have a conversation with [Pulumi Copilot](/product/neo/) about your infrastructure in natural language and get answers to operational questions that would take hours to piece together from other sources.
 
@@ -87,7 +87,7 @@ Building your own enterprise backend also requires you to design and manage the 
 
 ### Customer support
 
-You will also be giving up 12x5 or 24x7 customer support, which helps ensure your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Pulumi also has an experienced group of Solutions Architects and Customer Success Architects that have experience scaling [infrastructure as code](/what-is/what-is-infrastructure-as-code/) and building modern infrastructure platforms.
+You will also be giving up 12x5 or 24x7 customer support, which helps ensure your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Pulumi also has an experienced group of Solutions Architects and Customer Success Architects that have experience scaling [infrastructure as code](/topics/infrastructure-as-code/) and building modern infrastructure platforms.
 
 ## Conclusion
 
