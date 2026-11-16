@@ -48,8 +48,14 @@ export const marketingWebPaths = [
     "/love",
     "/love/",
     "/love.md",
+    "/sitemap-www-*",
     // Hides every S3 object under /product/, so marketing-web 301s the old
     // product/waitlist and product/private-previews stubs itself.
+    //
+    // Appended after /sitemap-www-* (not alphabetically, between /love.md and
+    // /sitemap-www-*) on purpose: pulumi/docs#22948 inserts /releases* at
+    // that same gap, and this placement keeps the two PRs' diffs from
+    // touching the same lines, so neither needs a merge conflict resolved
+    // against the other regardless of merge order.
     "/product*",
-    "/sitemap-www-*",
 ];
