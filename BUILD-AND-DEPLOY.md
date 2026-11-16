@@ -838,7 +838,6 @@ Hugo processes 46+ content directories:
 
 - `/content/docs/` → Documentation
 - `/content/blog/` → Blog posts
-- `/content/product/` → `_index.md` only, kept for its `cascade`; every product page now moved to pulumi/marketing-web or retired (see the note below)
 
 > **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. The homepage (`/`), `/dev` (tutorials, templates, community examples, glossary), `/customers` (the customer board and case studies), and the `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, and `/gads/infrastructure-as-code` landing pages, the `/subscribe` newsletter page, the `/agent-start` page and its `/onboard.md` prompt, the `/love` quote wall (the old `/testimonials/` URL redirects there), and `/product` (the product overview and every remaining product page) are served the same way, from pulumi/marketing-web. The two product pages with no marketing-web equivalent, `/product/github-actions` and `/product/packages`, were retired outright: `scripts/redirects/product-pages-redirects.txt` 301s them to the docs guide and the registry that cover the same ground.
 
