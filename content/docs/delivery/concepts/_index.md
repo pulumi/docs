@@ -18,6 +18,8 @@ Because the pipeline is a Pulumi program, it's versioned and reviewed with your 
 
 {{% notes type="info" %}}
 Pulumi Delivery is in public preview. Behavior, the SDK, and the REST API routes under `/api/preview/` can change before general availability.
+
+Pipeline programs need Pulumi CLI v3.275.0 or later.
 {{% /notes %}}
 
 ## An example pipeline

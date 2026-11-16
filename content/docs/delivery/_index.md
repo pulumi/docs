@@ -53,7 +53,7 @@ sections:
     link: /docs/delivery/guides/cloud-credentials/
   - icon: code-window
     heading: Pipeline patterns
-    description: Per-environment helper functions and smoke tests after each deploy.
+    description: Per-environment helper functions, smoke tests after each deploy, and container image building.
     link: /docs/delivery/guides/pipeline-patterns/
   - icon: arrows-clockwise
     heading: Connecting pipelines
