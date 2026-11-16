@@ -1,4 +1,10 @@
 [[releases]]
+date = "19th May 2026"
+title = "Pulumi Closes the AI Deployment Gap with Agent-Native Infrastructure and Superintelligence Partnerships"
+summary = "Pulumi Closes the AI Deployment Gap with Agent-Native Infrastructure and Superintelligence Partnerships."
+url = "https://www.pulumi.com/releases/agentic-infrastructure-era/"
+
+[[releases]]
 date = "5th November 2025"
 title = "Pulumi Introduces AI-Powered Automatic Remediation for Infrastructure Policy Violations"
 summary = "Pulumi Introduces AI-Powered Automatic Remediation for Infrastructure Policy Violations."
@@ -209,6 +215,24 @@ summary = "Company funded by Madrona Venture Group and Tola Capital to help comp
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster"
 
 [[coverage]]
+date = "19th May 2026"
+title = "Pulumi bets infrastructure's next decade belongs to AI agents"
+img = "/logos/press/newstack.png"
+url = "https://thenewstack.io/pulumi-infrastructure-agent-era/"
+
+[[coverage]]
+date = "28th January 2026"
+title = "Pulumi's New Internal Developer Platform Accelerates Cloud Infrastructure Delivery"
+img = "/logos/press/newstack.png"
+url = "https://thenewstack.io/pulumis-new-internal-developer-platform-accelerates-cloud-infrastructure-delivery/"
+
+[[coverage]]
+date = "17th January 2026"
+title = "Pulumi Adds Native Support for Terraform and HCL"
+img = "/logos/press/infoq.png"
+url = "https://www.infoq.com/news/2026/01/pulumi-adds-terraform-hcl/"
+
+[[coverage]]
 date = "6th November 2025"
 title = "Pulumi's AI Agent Tackles Infrastructure Compliance Backlogs"
 img = "/logos/press/newstack.png"
@@ -243,6 +267,12 @@ date = "16th September 2025"
 title = "Pulumi Neo Accelerates Platform Engineering in the AI Era"
 img = "/logos/press/dbta.png"
 url = "https://www.dbta.com/Editorial/News-Flashes/Pulumi-Neo-Accelerates-Platform-Engineering-in-the-AI-Era-171523.aspx"
+
+[[coverage]]
+date = "26th March 2025"
+title = "Pulumi enhances cloud security with automated secrets rotation and new GitHub integration"
+img = "/logos/press/siliconangle.png"
+url = "https://siliconangle.com/2025/03/26/pulumi-enhances-cloud-security-automated-secrets-rotation-new-github-integration/"
 
 [[coverage]]
 date = "20 November 2024"
