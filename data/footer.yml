@@ -54,7 +54,7 @@ columns:
         href: /product/discovery-governance/
         track: footer-platform-insights
       - label: AI infrastructure agent
-        href: /product/neo/
+        href: /product/agents/
         track: footer-platform-neo
       - label: Internal developer platform
         href: /product/internal-developer-platforms/

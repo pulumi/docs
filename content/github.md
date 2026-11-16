@@ -1,6 +1,6 @@
 ---
 title: GH Actions Shortcut
 meta_desc: A shortcut and redirect to Pulumi's GitHub Actions page.
-redirect_to: /product/github-actions
+redirect_to: /docs/iac/operations/continuous-delivery/github-actions/
 comment: Shortcut to GH Actions page
 ---

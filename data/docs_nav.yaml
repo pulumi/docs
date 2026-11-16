@@ -19,7 +19,7 @@ items:
     track: header-registry
     showAt: lg
   - label: Pulumi Neo
-    href: /product/neo/
+    href: /product/agents/
     icon: custom/pulumi-neo
     track: header-ai
     showAt: lg

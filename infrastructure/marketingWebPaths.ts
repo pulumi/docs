@@ -48,5 +48,8 @@ export const marketingWebPaths = [
     "/love",
     "/love/",
     "/love.md",
+    // Hides every S3 object under /product/, so marketing-web 301s the old
+    // product/waitlist and product/private-previews stubs itself.
+    "/product*",
     "/sitemap-www-*",
 ];

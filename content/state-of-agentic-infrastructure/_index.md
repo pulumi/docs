@@ -340,7 +340,7 @@ cta:
     - title: Pulumi Neo
       icon: pulumi-neo
       desc: An AI agent that plans and executes infrastructure changes, and waits for your approval before touching production.
-      href: /product/neo/
+      href: /product/agents/
       cta: Explore Neo
     - title: Pulumi IaC
       icon: pulumi-iac

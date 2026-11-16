@@ -140,6 +140,7 @@ jobs:
           check_endpoint "/topics/" "Topics landing"
           check_endpoint "/customers/" "Customers landing"
           check_endpoint "/love/" "Wall of love"
+          check_endpoint "/product/" "Product landing"
           check_endpoint "/gads/infrastructure-as-code/" "Google Ads IaC landing"
           check_endpoint "/pulumi-for-startups/" "Pulumi for Startups"
           check_endpoint "/extend-trial/" "Extend trial"
@@ -299,6 +300,8 @@ jobs:
           check_redirect "/tutorials/" "/dev/tutorials/" "Tutorials redirect"
           check_redirect "/templates/" "/dev/templates/" "Templates redirect"
           check_redirect "/testimonials/" "/love/" "Testimonials redirect"
+          check_redirect "/ai" "/product/agents/" "AI redirect"
+          check_redirect "/deployments/" "/product/delivery/" "Deployments redirect"
 
           echo ""
           echo "=================================================="

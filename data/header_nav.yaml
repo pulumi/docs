@@ -28,7 +28,7 @@ items:
         columns: 2
         items:
           - label: AI infrastructure agent
-            href: /product/neo/
+            href: /product/agents/
             description: Meet Neo, our AI-powered infrastructure engineering agent
             icon: custom/pulumi-neo
             track: header-product-neo
