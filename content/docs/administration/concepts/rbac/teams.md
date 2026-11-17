@@ -39,6 +39,14 @@ To create a team:
 1. Navigate to **Settings** > **Access management** and select the **Teams** tab.
 1. Select **Create team**.
 
+## The Everyone team {#the-everyone-team}
+
+Every organization has a team named Everyone, in every edition. Its members are the organization's admins and members. Billing managers are not in it.
+
+You can [grant Everyone access](#team-entity-access-grants) like any other team, and add it as an approver in an [approval ruleset](/docs/esc/concepts/approvals/#configuring-a-ruleset).
+
+Membership of Everyone follows the organization, so you can't add or remove members. You also can't rename it, change its description, assign it roles or create team access tokens for it.
+
 ## Team Access Types
 
 Members of a team can be granted `Team admin` or `Team member` permissions. Team admins can add members to a
