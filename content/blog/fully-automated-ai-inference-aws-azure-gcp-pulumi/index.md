@@ -131,7 +131,7 @@ values:
     ARM_SUBSCRIPTION_ID: ${azure.login.subscriptionId}
     ARM_OIDC_TOKEN: ${azure.login.oidc.token}
     # Google Cloud: read by the Pulumi Google Cloud provider
-    GOOGLE_CLOUD_PROJECT: ${gcp.login.project}
+    GOOGLE_CLOUD_PROJECT: my-project # project ID, not the numeric project number that gcp-login outputs
     GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
 ```
 
