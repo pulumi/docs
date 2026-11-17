@@ -100,14 +100,14 @@ inventory_comments() {
         --jq ".[] | select((.body // \"\") != \"\" and .body != \"${REPLACEMENT}\") | \"\(.id)\t\(.user.login)\t\(.state)\"")
 }
 
-# Rows: id, workflow name, status, why it matched.
+# Rows: id, workflow name, status, why it matched, run title.
 inventory_runs() {
     local sha ev
     runs=()
     for sha in "${shas[@]}"; do
         while IFS= read -r line; do [[ -n "$line" ]] && runs+=("$line"); done < <(
             api --paginate "repos/${REPO}/actions/runs?head_sha=${sha}&per_page=100" \
-                --jq '.workflow_runs[] | "\(.id)\t\(.name)\t\(.status)\tcommit \(.head_sha[0:7])"')
+                --jq '.workflow_runs[] | "\(.id)\t\(.name)\t\(.status)\tcommit \(.head_sha[0:7])\t\(.display_title // "")"')
     done
     # After the scrub renames the PR, its new title is shared with every other scrubbed
     # PR, so only trust it for runs created after this scrub started.
@@ -123,7 +123,7 @@ inventory_runs() {
                 select((.display_title as $t | $titles | index($t))
                        or (.head_sha as $s | $shas | index($s))
                        or any(.pull_requests[]?; .number == $pr))
-                | "\(.id)\t\(.name)\t\(.status)\t\(.event)"')
+                | "\(.id)\t\(.name)\t\(.status)\t\(.event)\t\(.display_title // "")"')
         done
     done
     mapfile -t runs < <(printf '%s\n' "${runs[@]+"${runs[@]}"}" | dedupe)
@@ -202,8 +202,9 @@ if (( ${#issue_comments[@]} + ${#review_comments[@]} )); then
     printf '%s\n' "${issue_comments[@]}" "${review_comments[@]}" | awk -F'\t' 'NF {c[$2]++} END {for (a in c) printf "   %-30s %d\n", a, c[a]}'
 fi
 if (( ${#runs[@]} )); then
-    echo " Workflow runs (id, workflow, status, matched by):"
-    printf '%s\n' "${runs[@]}" | awk -F'\t' '{printf "   %s  %-38s %-12s %s\n", $1, $2, $3, $4}'
+    echo " Workflow runs (id, workflow, status, matched by, run title):"
+    echo " Check the titles: a run from another PR with the same title would match too."
+    printf '%s\n' "${runs[@]}" | awk -F'\t' '{printf "   %s  %-38s %-12s %-20s %s\n", $1, $2, $3, $4, $5}'
 fi
 if (( ${#deployments[@]} )); then
     echo " Deployments:"
@@ -311,6 +312,7 @@ fi
 # cleanup deletes the preview buckets), so let those finish before deleting them.
 unfinished=()
 for pass in $(seq 1 "$SWEEP_PASSES"); do
+    unfinished=()
     echo "8. Sweep ${pass}/${SWEEP_PASSES} (waiting ${SWEEP_DELAY}s)"
     sleep "$SWEEP_DELAY"
     inventory_comments
