@@ -507,3 +507,4 @@ The provider and the service enforce these rules:
 
 - Give each stage [cloud credentials](/docs/delivery/guides/cloud-credentials/).
 - See common setups in [Pipeline patterns](/docs/delivery/guides/pipeline-patterns/).
+- Run a custom agent in a stage with an [`Agent`](/docs/delivery/concepts/agents/).

@@ -132,7 +132,7 @@ Pulumi Delivery doesn't detect cycles between stages. A run in a cycle waits unt
 
 A gate is a rule on a stage that defines when a pipeline can progress. A release can't enter the stage until the rule passes.
 
-Pulumi Delivery supports two kinds of gates, _manual_ and _approval_, and you can combine them into one rule. Both are set in the stage's `when` property. Anyone with permission to approve the pipeline's runs can continue a manual gate. An approval gate names the people or teams who must approve and how many approvals it needs, shows them a preview of the changes, and lets them reject the release.
+Pulumi Delivery supports three kinds of gates, _manual_, _approval_, and _decision_, and you can combine them into one rule. All of them are set in the stage's `when` property. Anyone with permission to approve the pipeline's runs can continue a manual gate. An approval gate names the people or teams who must approve and how many approvals it needs, shows them a preview of the changes, and lets them reject the release. A decision gate has TypeSafe's Jev model evaluate that preview against questions you write, and rejects the release if the risk is higher than you allow.
 
 <!-- TODO(launch): Reconcile who can continue a manual gate: this paragraph says permission to approve runs, and the REST API section says write access to the pipeline stack. -->
 
@@ -357,9 +357,230 @@ resource "delivery_stage" "prod" {
 
 Before approving, an approver sees a preview of the stack updates the stage will make. The preview doesn't cover jobs, because they run arbitrary commands. It can also be incomplete: a stack whose preview shows "Not available" might still change when the stage runs.
 
+### Decision gates
+
+{{< pulumi-cloud "pulumi-agents" />}}
+
+A _decision gate_ evaluates whether a release can enter a stage based on the risk tolerance you define. It uses TypeSafe's Jev model to answer a set of yes-or-no questions about the stage's preview, and for each question, you set the highest risk you'll accept that the answer is yes. If any answer is riskier than you allow, the gate rejects the release and the run fails.
+
+A decision gate evaluates only the preview of the stack updates the stage will make, so the stage needs at least one `Stacks` resource. Jobs, artifacts, and agent responses aren't part of the preview. Delivery gives the preview to Jev automatically.
+
+For example, this gate stops a release if Jev thinks the `prod` stack updates delete a database:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const prod = new delivery.Stage("prod", {
+    pipeline,
+    from: [staging],
+    when: delivery.decision({
+        questions: {
+            dataLoss: {
+                instructions: "Does the preview delete or replace a database or storage bucket?",
+                maximumRisk: 0.05,
+            },
+        },
+    }),
+});
+
+new delivery.Stacks("prodServices", {
+    stage: prod,
+    stacks: {
+        api: { stack: "shop-api/prod", source: repo, directory: "api" },
+    },
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+prod = delivery.Stage(
+    "prod",
+    pipeline=pipeline,
+    from_=[staging],
+    when=delivery.RuleArgs(
+        kind="decision",
+        questions={
+            "dataLoss": delivery.DecisionQuestionArgs(
+                instructions="Does the preview delete or replace a database or storage bucket?",
+                maximum_risk=0.05,
+            ),
+        },
+    ),
+)
+
+delivery.Stacks(
+    "prodServices",
+    stage=prod,
+    stacks={
+        "api": {"stack": "shop-api/prod", "source": repo, "directory": "api"},
+    },
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+prod, err := delivery.NewStage(ctx, "prod", &delivery.StageArgs{
+	Pipeline: pipeline,
+	From:     delivery.StageArray{staging},
+	When: delivery.RuleArgs{
+		Kind: pulumi.String("decision"),
+		Questions: delivery.DecisionQuestionMap{
+			"dataLoss": delivery.DecisionQuestionArgs{
+				Instructions: pulumi.String("Does the preview delete or replace a database or storage bucket?"),
+				MaximumRisk:  pulumi.Float64(0.05),
+			},
+		},
+	},
+})
+if err != nil {
+	return err
+}
+
+_, err = delivery.NewStacks(ctx, "prodServices", &delivery.StacksArgs{
+	Stage: prod,
+	Stacks: delivery.StacksEntryMap{
+		"api": delivery.StacksEntryArgs{Stack: pulumi.String("shop-api/prod"), Source: repo, Directory: pulumi.String("api")},
+	},
+})
+if err != nil {
+	return err
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var prod = new Stage("prod", new StageArgs
+{
+    Pipeline = pipeline,
+    From = { staging },
+    When = new RuleArgs
+    {
+        Kind = "decision",
+        Questions =
+        {
+            ["dataLoss"] = new DecisionQuestionArgs
+            {
+                Instructions = "Does the preview delete or replace a database or storage bucket?",
+                MaximumRisk = 0.05,
+            },
+        },
+    },
+});
+
+new Stacks("prodServices", new StacksArgs
+{
+    Stage = prod,
+    Stacks =
+    {
+        ["api"] = new StacksEntryArgs { Stack = "shop-api/prod", Source = repo, Directory = "api" },
+    },
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var prod = new Stage("prod", StageArgs.builder()
+    .pipeline(pipeline)
+    .from(staging)
+    .when(RuleArgs.builder()
+        .kind("decision")
+        .questions(Map.of("dataLoss", DecisionQuestionArgs.builder()
+            .instructions("Does the preview delete or replace a database or storage bucket?")
+            .maximumRisk(0.05)
+            .build()))
+        .build())
+    .build());
+
+new Stacks("prodServices", StacksArgs.builder()
+    .stage(prod)
+    .stacks(Map.of(
+        "api", StacksEntryArgs.builder().stack("shop-api/prod").source(repo).directory("api").build()))
+    .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  prod:
+    type: delivery:Stage
+    properties:
+      pipeline: ${pipeline}
+      from:
+        - ${staging}
+      when:
+        kind: decision
+        questions:
+          dataLoss:
+            instructions: Does the preview delete or replace a database or storage bucket?
+            maximumRisk: 0.05
+  prodServices:
+    type: delivery:Stacks
+    properties:
+      stage: ${prod}
+      stacks:
+        api:
+          stack: shop-api/prod
+          source: ${repo}
+          directory: api
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "delivery_stage" "prod" {
+  pipeline = delivery_pipeline.pipeline
+  from     = [delivery_stage.staging]
+  when = {
+    kind = "decision"
+    questions = {
+      dataLoss = {
+        instructions = "Does the preview delete or replace a database or storage bucket?"
+        maximum_risk = 0.05
+      }
+    }
+  }
+}
+
+resource "delivery_stacks" "prodServices" {
+  stage = delivery_stage.prod
+  stacks = {
+    api = {
+      stack     = "shop-api/prod"
+      source    = delivery_git_hub_source.repo
+      directory = "api"
+    }
+  }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+For each question, Jev estimates the probability that the answer is yes. Delivery compares that estimate with the question's `maximumRisk`, a number from 0 to 1, and the gate passes only when every question is at or below its threshold.
+
+{{% notes type="warning" %}}
+If the stage's preview is larger than Jev's context window, the gate rejects the release and the run fails.
+{{% /notes %}}
+
+<!-- TODO(launch): Document recovery and diagnostics when the preview or the Jev evaluation is unavailable or fails. -->
+
 ### Combining rules
 
-You can also build composite rules that combine manual and approval gates. In the following example, the pipeline is paused until `<your-colleague>` approves _and_ someone continues the `dashboards` check:
+You can also build composite rules that combine manual, approval, and decision gates. In the following example, the pipeline is paused until `<your-colleague>` approves _and_ someone continues the `dashboards` check:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
@@ -755,4 +976,5 @@ If any artifact is secret, the whole `artifacts` map is secret. A `Stacks` entry
 ## Next steps
 
 - Configure the [stacks and jobs](/docs/delivery/concepts/stacks-and-jobs/) each stage runs.
+- Run a custom agent in a stage with an [`Agent`](/docs/delivery/concepts/agents/).
 - Pass artifacts between pipelines in [Connecting pipelines](/docs/delivery/guides/multiple-pipelines/).

@@ -37,12 +37,16 @@ sections:
     link: /docs/delivery/concepts/sources-and-triggers/
   - icon: lock-key
     heading: Stages and gates
-    description: Order promotion between environments, hold a release for approval, and publish artifacts for other pipelines.
+    description: Order promotion between environments, hold a release for approval or an AI decision, and publish artifacts for other pipelines.
     link: /docs/delivery/concepts/stages-and-gates/
   - icon: package
     heading: Stacks and jobs
     description: Update stacks and run commands inside a stage.
     link: /docs/delivery/concepts/stacks-and-jobs/
+  - icon: pulumi-neo
+    heading: Agents
+    description: Run a custom agent in a stage and use its structured response.
+    link: /docs/delivery/concepts/agents/
 
 - type: button-cards
   heading: Build and operate pipelines

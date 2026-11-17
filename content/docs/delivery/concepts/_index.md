@@ -423,6 +423,10 @@ A `Stacks` resource updates one or more existing stacks in a stage. Each entry r
 
 A `Job` runs a shell command in a stage, such as a test suite or a script. A job can publish outputs for resources in the same stage or a later stage to read. See [Jobs](/docs/delivery/concepts/stacks-and-jobs/#jobs).
 
+## Agents
+
+An `Agent` runs one of your [custom agents](/docs/ai/agents/custom/) in a stage and returns a structured response that later steps can use. Separately, a _decision gate_ uses TypeSafe's Jev model to evaluate a stage's stack preview and decide whether a release can enter the stage, based on the risk tolerance you define. See [Agents](/docs/delivery/concepts/agents/) and [Decision gates](/docs/delivery/concepts/stages-and-gates/#decision-gates).
+
 ## Runs
 
 A _run_ takes one release through the stages. Each run gets its own _run stack_ where Pulumi Cloud executes the pipeline program. A run moves forward in _passes_. A pass is one execution of the pipeline program on the run stack, and each pass makes as much progress as the stages and gates allow.
@@ -444,3 +448,4 @@ An _artifact_ is a named value that a stage publishes for a release once the rel
 - Read about [sources and triggers](/docs/delivery/concepts/sources-and-triggers/).
 - Order environments and add approvals with [stages and gates](/docs/delivery/concepts/stages-and-gates/).
 - Configure [stacks and jobs](/docs/delivery/concepts/stacks-and-jobs/).
+- Add an [agent](/docs/delivery/concepts/agents/) to a stage.
