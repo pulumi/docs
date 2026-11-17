@@ -39,7 +39,7 @@ The guides use the following packages:
 
 ## Tutorials and examples
 
-The [Dev Center](/dev/browse/cloud/aws/) has hands-on AWS tutorials, templates, and examples. Browse them by topic:
+The [Dev Center](/dev/cloud/aws/) has hands-on AWS tutorials, templates, and examples. Browse them by topic:
 
 - [Containers](/dev/browse/?cloud=aws&tag=containers): Amazon ECS, Amazon EKS, and Amazon ECR
 - [Serverless](/dev/browse/?cloud=aws&tag=serverless): AWS Lambda and Amazon API Gateway
