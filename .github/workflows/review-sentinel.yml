@@ -59,7 +59,8 @@ name: Sentinel
 # the burst), scripts/review-v3/publish_guard.py refuses to publish a
 # verdict when the PR head has moved or a newer run already published at
 # this head (every check-run carries `external_id = run id`), and the
-# only comment the job still writes (the author-card strip) is idempotent.
+# only comments the job still writes (the author-card and reviewer-brief
+# strips) are idempotent.
 # A guarded-out run concludes success with a
 # ::notice::, never cancelled.
 
@@ -292,7 +293,7 @@ jobs:
           # --status-comment, in both modes: delete the retired pinned
           # status comment from any PR that still carries one (the per-gate
           # statuses replaced it). --update-strip stays enforcing-only:
-          # that one edits the author card.
+          # that one edits the author card and the reviewer brief.
           ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}"
                 --status-comment)
           if [ "$REPORT_ONLY" = "true" ]; then

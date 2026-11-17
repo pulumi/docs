@@ -510,6 +510,14 @@ class Gate:
     # Where this gate's status "Details" link goes: where you act on it.
     # Empty: the verdict's per-gate link, else the PR.
     url: str = ""
+    # Set when nobody on the PR can clear the gate: not the author, not the
+    # reviewer, whatever they push or approve. A plain sentence saying what
+    # is wrong and who can fix it. The cards say so in their strips
+    # (`update_strip`, `update_brief_strip`); without it, a PR held by a
+    # disabled staging workflow (pulumi/docs#22959) showed its author
+    # "nothing blocks merge" and its reviewer "check the ⚠️ items, then
+    # approve", and both read that as good to go.
+    stuck: str = ""
 
 
 @dataclass
@@ -724,7 +732,9 @@ def _strip_brief_for_summary(body: str) -> str:
         if line.strip() in (BRIEF_MARKER,) or HEAD_MARKER_RE.match(line.strip()):
             continue
         lines.append(line)
-    return "\n".join(lines).strip()
+    # The brief's strip is the Sentinel's own note to the reviewer; the
+    # summary already leads with the gate table that says the same thing.
+    return _STRIP_RE.sub("", "\n".join(lines)).strip()
 
 
 PROSE_FLAGGED_LABEL = "review:prose-flagged"
@@ -1185,7 +1195,11 @@ def _staging_gate(gh: Gh, pr: dict, head_sha: str) -> Gate:
                     f"This PR changes the deploy itself, and staging deploys are turned off "
                     f"(the staging workflow is `{state}`), so none can run. Ask in `#docs`; "
                     "turning it back on needs a repo admin.",
-                    short="Staging deploys are turned off: ask in #docs")
+                    short="Staging deploys are turned off: ask in #docs",
+                    stuck=f"This PR changes the deploy, so it needs a staging deploy, and "
+                          f"staging deploys are turned off right now (the staging workflow is "
+                          f"`{state}`). A repo admin can turn them back on, or a member of a "
+                          f"routing team can waive the gate with `review:waived`")
     why = _last_staging_failure(gh, head_sha)
     return Gate("staging", "red",
                 why + f"This PR changes the deploy itself, and `{sha}` has no staging deploy "
@@ -1749,34 +1763,75 @@ def _waive_actor(gh: Gh) -> str:
 # ---- Status strip -------------------------------------------------------
 
 
-def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -> bool:
-    """Patch the one-line ⛔ strip into the author card. Idempotent."""
-    comments = comments if comments is not None else gh.list_issue_comments()
-    card = _find_comment(comments, AUTHOR_MARKER)
-    if card is None:
-        return False
+def _stuck_gates(verdict: Verdict) -> list[Gate]:
+    """The gates holding the merge that nobody on the PR can clear."""
+    if verdict.waived:
+        return []
+    return [g for g in verdict.gates if g.stuck and g.status in ("red", "pending", "error")]
+
+
+def _stuck_reasons(stuck: list[Gate]) -> str:
+    return " ".join(f"{g.stuck.rstrip('.')}." for g in stuck)
+
+
+def _author_strip_line(verdict: Verdict) -> str:
+    """The author card's strip text for a verdict, or "" when merge isn't held."""
+    if verdict.conclusion not in ("failure", "pending", "action_required"):
+        return ""
+    n = len(verdict.blocking_ids)
+    stuck = _stuck_gates(verdict)
+    lines: list[str] = []
+    if n:
+        first = verdict.blocking_ids[0] if verdict.blocking_ids else "F1"
+        lines.append(f"⛔ **{n} item(s) block merge** — fix and push, ship as-is with "
+                     f"`/update-review accept {first}`, or reply `/update-review {first}: <why>`.")
+    if stuck:
+        # Said outright, because the header above this line can read "nothing
+        # blocks merge" and a reviewer can approve, and neither clears this.
+        lead = ("Merge is also blocked by something neither you nor your reviewer can fix."
+                if n else
+                "Nothing on this card needs you, but merge is still blocked by something "
+                "neither you nor your reviewer can fix.")
+        lines.append(f"🚧 **{lead}** {_stuck_reasons(stuck)} Ask in `#docs`.")
+    if not n:
+        # No finding blocks, so the card right under this line says "nothing
+        # blocks merge" and has nothing to fix or answer. "⛔ merge is
+        # blocked — fix and push, or reply /update-review" contradicted it
+        # and sent authors (workprentice included) after gates only an
+        # approver or a deploy can clear. Say what the merge is waiting on;
+        # that gate's status in the merge box says who acts.
+        # In words, not gate ids: "waiting on G1 review-ran" told nobody
+        # what to do. Stuck gates are said above, not repeated here.
+        waiting = [g for g in verdict.gates if g not in stuck]
+        what = _plain_join(
+            [_waiting_on(g, n) for g in waiting if g.status in ("red", "pending")]
+            + [f"a re-run of the Sentinel check ({_PLAIN_GATE.get(g.name, g.name)} "
+               "couldn't be checked)" for g in waiting if g.status == "error"]
+        )
+        if what or not stuck:
+            lines.append(f"⏳ **Merge is {'also ' if stuck else ''}waiting on "
+                         f"{what or 'the merge gate'}.** Each gate's status in the merge box says how.")
+    return "\n".join(lines)
+
+
+def _brief_strip_line(verdict: Verdict) -> str:
+    """The reviewer brief's strip: only for what an approval can't clear.
+    The brief tells the reviewer to check the ⚠️ items and approve, and
+    everything else that holds a merge is the author's to answer (the author
+    card says so) or already on its way (a running deploy)."""
+    if verdict.conclusion not in ("failure", "pending", "action_required"):
+        return ""
+    stuck = _stuck_gates(verdict)
+    if not stuck:
+        return ""
+    return (f"🚧 **Your approval won't unblock this merge on its own.** {_stuck_reasons(stuck)} "
+            "No approval or push clears it; ask in `#docs`.")
+
+
+def _write_strip(gh: Gh, card: dict, line: str) -> bool:
+    """Lay `line` into the card's strip (an empty line clears it). Idempotent."""
     body = card.get("body") or ""
-    if verdict.conclusion in ("failure", "pending", "action_required"):
-        n = len(verdict.blocking_ids)
-        if n:
-            first = verdict.blocking_ids[0] if verdict.blocking_ids else "F1"
-            line = (f"⛔ **{n} item(s) block merge** — fix and push, ship as-is with "
-                    f"`/update-review accept {first}`, or reply `/update-review {first}: <why>`.")
-        else:
-            # No finding blocks, so the card right under this line says "nothing
-            # blocks merge" and has nothing to fix or answer. "⛔ merge is
-            # blocked — fix and push, or reply /update-review" contradicted it
-            # and sent authors (workprentice included) after gates only an
-            # approver or a deploy can clear. Say what the merge is waiting on;
-            # that gate's status in the merge box says who acts.
-            # In words, not gate ids: "waiting on G1 review-ran" told nobody
-            # what to do.
-            what = _plain_join(
-                [_waiting_on(g, n) for g in verdict.gates if g.status in ("red", "pending")]
-                + [f"a re-run of the Sentinel check ({_PLAIN_GATE.get(g.name, g.name)} "
-                   "couldn't be checked)" for g in verdict.gates if g.status == "error"]
-            ) or "the merge gate"
-            line = f"⏳ **Merge is waiting on {what}.** Each gate's status in the merge box says how."
+    if line:
         strip = f"{STRIP_OPEN}\n{line}\n{STRIP_CLOSE}"
     else:
         if STRIP_OPEN not in body:
@@ -1807,6 +1862,27 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
         gh.patch_issue_comment(card["id"], new_body)
         return True
     return False
+
+
+def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -> bool:
+    """Patch the Sentinel's strip into the author card. Idempotent."""
+    comments = comments if comments is not None else gh.list_issue_comments()
+    card = _find_comment(comments, AUTHOR_MARKER)
+    if card is None:
+        return False
+    return _write_strip(gh, card, _author_strip_line(verdict))
+
+
+def update_brief_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -> bool:
+    """Patch the strip into the reviewer brief: only when an approval can't
+    clear what holds the merge (`Gate.stuck`). Idempotent; clears itself. The
+    review lanes rewrite the brief without it, and the Sentinel's re-run on
+    their `workflow_run` puts it back."""
+    comments = comments if comments is not None else gh.list_issue_comments()
+    brief = _find_comment(comments, BRIEF_MARKER)
+    if brief is None:
+        return False
+    return _write_strip(gh, brief, _brief_strip_line(verdict))
 
 
 _STRIP_RE = re.compile(re.escape(STRIP_OPEN) + r".*?" + re.escape(STRIP_CLOSE), re.DOTALL)
@@ -1931,6 +2007,11 @@ def main() -> int:
                         update_strip(gh, verdict, comments=comments)
                     except SentinelDataError as exc:
                         print(f"::warning::could not update the author-card strip: {exc}",
+                              file=sys.stderr)
+                    try:
+                        update_brief_strip(gh, verdict, comments=comments)
+                    except SentinelDataError as exc:
+                        print(f"::warning::could not update the reviewer-brief strip: {exc}",
                               file=sys.stderr)
                 # Best-effort for the same reason as the strip: a failed
                 # DELETE must not suppress the verdict.
