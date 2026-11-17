@@ -104,21 +104,21 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
 
 This llms.txt covers www.pulumi.com, which includes:
 
-- [Product](https://www.pulumi.com/product/): Pulumi Cloud platform overview and capabilities
+- [Product](https://www.pulumi.com/product.md): Pulumi Cloud platform overview and capabilities
 - [Get started](https://www.pulumi.com/up/): Guided first project for any cloud and language
-- [Pricing](https://www.pulumi.com/pricing/): Pulumi Cloud editions and pricing ({{ delimit $editionNames ", " }})
-- [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for hundreds of cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
-- [Infrastructure AI](https://www.pulumi.com/docs/ai/): Write Pulumi code with [your coding agent](https://www.pulumi.com/docs/ai/coding-agents/), or investigate incidents and maintain infrastructure with [Pulumi Agents](https://www.pulumi.com/docs/ai/agents/), including the pre-built [Pulumi Neo](https://www.pulumi.com/docs/ai/concepts/neo/) and your own [custom agents](https://www.pulumi.com/docs/ai/agents/custom/)
+- [Pricing](https://www.pulumi.com/pricing.md): Pulumi Cloud editions and pricing ({{ delimit $editionNames ", " }})
+- [Pulumi Registry](https://www.pulumi.com/registry.md): Documentation for hundreds of cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
+- [Infrastructure AI](https://www.pulumi.com/docs/ai.md): Write Pulumi code with [your coding agent](https://www.pulumi.com/docs/ai/coding-agents.md), or investigate incidents and maintain infrastructure with [Pulumi Agents](https://www.pulumi.com/docs/ai/agents.md), including the pre-built [Pulumi Neo](https://www.pulumi.com/docs/ai/concepts/neo.md) and your own [custom agents](https://www.pulumi.com/docs/ai/agents/custom.md)
 - [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
 - [Releases](https://www.pulumi.com/releases/): Pulumi Cloud and CLI changelog, also available as [JSON](https://www.pulumi.com/releases/index.json) with edition availability per entry
-- [Dev Center](https://www.pulumi.com/dev/): Tutorials, templates, community examples, and a glossary. Has an index of its own at [/dev/llms.txt](https://www.pulumi.com/dev/llms.txt), and every detail page has a markdown twin at its URL plus `.md`
+- [Dev Center](https://www.pulumi.com/dev.md): Tutorials, templates, community examples, and a glossary. Has an index of its own at [/dev/llms.txt](https://www.pulumi.com/dev/llms.txt), and every detail page has a markdown twin at its URL plus `.md`
 - [Topics](https://www.pulumi.com/topics/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless). Has an index of its own at [/topics/llms.txt](https://www.pulumi.com/topics/llms.txt)
-- [Customers](https://www.pulumi.com/customers/): Companies running their infrastructure on Pulumi, and the case studies behind them
+- [Customers](https://www.pulumi.com/customers.md): Companies running their infrastructure on Pulumi, and the case studies behind them
 - [Automation API](https://www.pulumi.com/automation/): Program-driven Pulumi for embedding infrastructure as code into applications and platforms
 - [Whitepapers](https://www.pulumi.com/whitepapers/): Long-form educational and technical content
-- [Community](https://www.pulumi.com/community/): Slack, Discord, GitHub, and other community resources
+- [Community](https://www.pulumi.com/community.md): Slack, GitHub, events, and the Puluminaries
 - [Security](https://www.pulumi.com/security/): Security posture, compliance, and trust information
-- [Docs](https://www.pulumi.com/docs/): Technical documentation (detailed sections below)
+- [Docs](https://www.pulumi.com/docs/index.md): Technical documentation (detailed sections below)
 
 ## Docs sections
 {{- /* Each docs menu has one top-level entry (the section landing page), and
@@ -149,7 +149,9 @@ This llms.txt covers www.pulumi.com, which includes:
 
 ### {{ .label }}
 {{- range $entries }}
-- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
+{{- /* Link each page's markdown twin: drop the trailing slash and append .md. */ -}}
+{{- $md := printf "%s.md" (strings.TrimSuffix "/" .Permalink) }}
+- [{{ .Title }}]({{ $md }}): {{ .Params.meta_desc | default .Title | plainify }}
 {{- end }}
 {{- end }}
 {{- end }}
