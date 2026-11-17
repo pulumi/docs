@@ -32,6 +32,8 @@
 #
 # Requires: gh signed in as someone with write access to the repo (classic token
 # scope `repo`, SSO-authorized for the org), jq, and bash 4+.
+#
+# Tests: scripts/scrub-pr.test.sh runs this script against a stub gh.
 
 set -uo pipefail
 
