@@ -112,7 +112,9 @@ You must be an organization admin to change a member's role.
 1. In the member's **Role** column, choose the new role.
 1. Confirm the change.
 
-In editions without [custom roles](/docs/administration/concepts/rbac/roles/#custom-roles), the choices are Member, which makes the member follow the organization's default role, Admin, and Billing Manager.
+The first choice, **Default role**, makes the member follow the organization's [default role](/docs/administration/concepts/rbac/default-roles/) and move with it when it changes. Choosing a role by name gives the member that role even if the default role changes later.
+
+In editions without [custom roles](/docs/administration/concepts/rbac/roles/#custom-roles), there's no **Role** column. Use **Set as admin** or **Unset as admin** on the member's row; every other member follows the organization's default role.
 
 ## Updating billing information
 
@@ -145,6 +147,8 @@ If you need a legal entity name on invoices that is different from your organiza
 ## Transferring stacks
 
 Stack admins can transfer stacks one at a time between organizations, including from a Free organization to one shared with other people. Organization admins can transfer stacks in bulk.
+
+Transferring a stack removes all access the old organization granted on it: permission sets granted to members, teams, and service principals, the stack's place in custom roles, and its deployment settings' role or service principal. Its stack tokens are revoked. In the destination organization, the person who transferred the stack owns it, and the organization's admins and roles apply as usual. Transferring the stack back doesn't restore the old access.
 
 Transferring a stack requires two permissions: the right to transfer the stack from its current owner, and the right to create stacks in the destination organization. Both are configured through your organization's access controls — see [Role-based access control](/docs/administration/concepts/rbac/) for details.
 

@@ -64,7 +64,9 @@ Pulumi Cloud [RBAC](/docs/administration/concepts/rbac/) decides who can view an
 
 ### Start from conservative defaults
 
-Set your organization's [default role](/docs/administration/concepts/rbac/default-roles/) to `Reader` or `Builder`, so people start with only read permissions, or permissions on what they create, and receive more through [teams](/docs/administration/concepts/rbac/teams/) when they need it.
+Set your organization's [default role](/docs/administration/concepts/rbac/default-roles/) to `Reader` or `Builder`, so people start with only read permissions, or permissions on what they create, and receive more through [teams](/docs/administration/concepts/rbac/teams/) or [access on individual stacks](/docs/administration/concepts/rbac/entities/#entity-access) when they need it.
+
+Use the restricted [permission mode](/docs/administration/concepts/rbac/permission-modes/) so that deployments and team tokens get only the access they were explicitly given. New organizations start in it.
 
 ### Grant access explicitly through permission sets and teams
 
@@ -130,7 +132,7 @@ For production and other sensitive environments, keep execution off individual m
 
 [Pulumi Deployments](/docs/deployments/concepts/) is Pulumi Cloud's managed execution service. It runs your Pulumi operations on Pulumi-hosted or self-hosted compute in response to version control events, a schedule, or the REST API, rather than on a laptop.
 
-Its default posture is already conservative. A deployment triggered by a git push or pull request runs with an ephemeral stack token that has admin rights on that stack alone and nothing else. When a deployment needs more, grant it through [role assignment](/docs/deployments/operations/permissions/): assign the deployment a least-privilege organization role instead of a broad token, and its stack token inherits only that role's permissions. For cloud credentials, pair this with [Deployments OIDC](/docs/deployments/guides/oidc/) so the runner assumes a scoped cloud role rather than carrying stored keys.
+Run each stack's deployments as a [service principal](/docs/administration/concepts/rbac/service-principals/) that has no organization-wide role, Stack Write on the stack, and access to only the stack references and environments the program uses. Every run then has the same narrow permissions, whether a person, a git push, or a schedule starts it. See [deployment permissions](/docs/deployments/operations/permissions/). For cloud credentials, pair this with [Deployments OIDC](/docs/deployments/guides/oidc/) so the runner assumes a scoped cloud role rather than carrying stored keys.
 
 ### CI/CD with OIDC
 

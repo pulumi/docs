@@ -41,7 +41,7 @@ For Neo, see [permission and approval modes](/docs/ai/concepts/neo/permissions/#
 
 ## Give teammates access
 
-To start a task, a teammate needs `agent_task:create` and access to the agent. For an agent with an assigned role, the teammate must hold that role directly or through a team, or have `organization:update`. The default **Agent Read Only** role does not need to be assigned to teammates. See [Roles](/docs/administration/concepts/rbac/roles/) for role assignments.
+To start a task, a teammate needs `agent_task:create` and access to the agent. The teammate must hold the agent's role directly or through a team, hold every permission the role grants across the organization, or have `organization:update`. For example, a Maintainer can use Builder and Reader agents, and every member can use an agent on the default **Reader** role. See [Roles](/docs/administration/concepts/rbac/roles/) for role assignments.
 
 For tasks started directly, teammates with access to the agent can view and contribute to its tasks. For tasks started by an organization-owned automation, `agent_automations:read` grants viewing access, and `agent_automations:update` grants access to reply and approve actions. Holding the agent's role alone does not grant access to these automated tasks.
 
