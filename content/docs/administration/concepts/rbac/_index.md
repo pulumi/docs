@@ -15,10 +15,10 @@ menu:
     identifier: administration-concepts-rbac
 ---
 
-Role-Based Access Control (RBAC) in Pulumi Cloud controls who can access which resources in your organization and what actions they can take. You compose access from reusable building blocks — scopes, permission sets, and roles — and assign it to users, teams, and machine tokens.
+Role-Based Access Control (RBAC) in Pulumi Cloud controls who can access which resources in your organization and what actions they can take. You compose access from reusable building blocks — scopes, permission sets, and roles — and assign it to users, teams, service principals, and machine tokens.
 
 {{% notes type="info" %}}
-Pulumi Cloud's configurable RBAC features — custom roles, custom permission sets, teams, and tag-based (ABAC) rules — are only available in the Pulumi Pro or Enterprise editions. The built-in roles (Reader, Builder, Maintainer, Admin, and Billing Manager) are available in all editions, including Essentials. To learn more, see the [pricing page](/pricing/).
+Pulumi Cloud's configurable RBAC features — custom roles, custom permission sets, teams, and tag-based (ABAC) rules — are only available in the Pulumi Pro or Enterprise editions. The built-in roles (Reader, Builder, Maintainer, Admin, and Billing Manager) are available in all editions, including Essentials. [Access on individual stacks, environments, and cloud accounts](/docs/administration/concepts/rbac/entities/#entity-access) and [service principals](/docs/administration/concepts/rbac/service-principals/) are available in the Essentials, Pro, and Enterprise editions. To learn more, see the [pricing page](/pricing/).
 {{% /notes %}}
 
 This model lets you:
@@ -34,7 +34,8 @@ Roles apply to these kinds of principals in Pulumi Cloud:
 
 - **Users**: Each organization member has exactly one organization role: the organization's default role, another built-in role, or a custom role. A member can also be [given a permission set directly](/docs/administration/concepts/rbac/entities/#entity-access) on specific stacks, environments, and cloud accounts.
 - **[Teams](/docs/administration/concepts/rbac/teams/)**: A team can be granted access two ways — through **roles** and through **entity access** granted directly on specific stacks, environments, and cloud accounts (outside of any role). Members of a team receive the union of the team's roles, its direct entity access grants, and their own user role.
-- **[Team tokens](/docs/administration/concepts/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team, authenticating as the team's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified). A team token's permissions are the union of the roles assigned to its team.
+- **[Service principals](/docs/administration/concepts/rbac/service-principals/)**: Non-human identities for automation, such as a stack's deployments. A service principal holds its own roles and entity access and never follows the default role, so without a role it can reach only what it was explicitly granted.
+- **[Team tokens](/docs/administration/concepts/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team, authenticating as the team's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified). A team token's permissions are the union of the roles and entity access assigned to its team. In organizations on the permissive [permission mode](/docs/administration/concepts/rbac/permission-modes/), it also gets the organization-wide default permissions.
 - **[Organization access tokens](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token)**: Machine tokens that are assigned exactly one role defining the token's permissions across the organization.
 
 ## How permissions accumulate for users
@@ -45,11 +46,12 @@ Access in Pulumi Cloud is built up progressively. A user's effective permissions
 All grants are strictly **additive**: no rule can revoke access that another rule provides.
 {{% /notes %}}
 
-For example, a member who belongs to two teams accumulates the permissions of their own user role plus every role assigned to each of those teams, as well as any entity access those teams grant directly:
+For example, a member who belongs to two teams accumulates the permissions of their own user role and entity access, plus every role assigned to each of those teams, as well as any entity access those teams grant directly:
 
 ```mermaid
 flowchart LR
     UR["User role<br/>(e.g. Builder)"] --> EFF["Effective permissions<br/>(union of all grants)"]
+    UE["Entity access<br/>(e.g. Stack Write<br/>on one stack)"] --> EFF
     TA["Team A roles<br/>+ entity access"] --> EFF
     TB["Team B roles<br/>+ entity access"] --> EFF
     CG["Creator grants<br/>(Stack Admin on<br/>stacks they create)"] --> EFF
@@ -58,6 +60,10 @@ flowchart LR
 ### User role
 
 Every member of a Pulumi organization has a user role: a built-in role such as Builder, Admin, or Billing Manager, or a custom role. Members follow the organization's [default role](/docs/administration/concepts/rbac/default-roles/) unless an admin assigns them another one.
+
+### Entity access
+
+A member can be [given a permission set directly](/docs/administration/concepts/rbac/entities/#entity-access) on a single stack, environment, or cloud account. These grants add to the member's role and stay in place when the member's role, or the organization's default role, changes.
 
 ### Team roles and entity access grants
 
@@ -83,5 +89,7 @@ Pulumi Cloud's RBAC system is built on these core concepts:
 - [**Entities and organization-level access**](/docs/administration/concepts/rbac/entities): The Pulumi Cloud objects that permission sets are granted on — stacks, environments, and cloud accounts — plus the organization-level access that governs org-wide operations. (Pulumi uses "entity" rather than "resource" here to avoid confusion with cloud infrastructure resources.)
 - [**Roles**](/docs/administration/concepts/rbac/roles): Collections of permission sets applied to entities and assigned to principals. The access rules in a role that apply to entities may be applied to all entities of that type, explicitly selected entities, or they can be [tag-based (ABAC) rules](/docs/administration/concepts/rbac/roles#tag-based-abac-rules).
 - [**Teams**](/docs/administration/concepts/rbac/teams): Groups of users that can be assigned roles
+- [**Service principals**](/docs/administration/concepts/rbac/service-principals/): Non-human identities with their own roles and entity access, for deployments and other automation
+- [**Permission modes**](/docs/administration/concepts/rbac/permission-modes/): An organization-wide setting that decides whether deployments and team tokens get only the access they were explicitly given
 
 These constructs build on one another. Scopes are bundled into permission sets; a permission set applied to a set of entities forms an entity access rule; and a role combines one or more entity access rules with an organization access level. The completed role is then assigned to principals. See [Roles](/docs/administration/concepts/rbac/roles) for a diagram of how a role is composed.

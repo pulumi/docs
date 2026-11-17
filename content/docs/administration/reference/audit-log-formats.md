@@ -58,7 +58,7 @@ Each event carries the following fields. Only `timestamp`, `sourceIP`, `event`, 
 | sourceIP | IP address of the client that triggered the event |
 | event | the audit event type identifier (for example, `stack-update-started`, `member-added`) |
 | description | human-readable description of the event |
-| user | the user who performed the action (display name, login, and avatar URL); for a [team token](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified), the team's service principal, with a login of the form `team-account:<team-id>` |
+| user | the user who performed the action (display name, login, and avatar URL); for a [team token](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified), the team's service principal, with a login of the form `team-account:<team-id>`; for a [service principal](/docs/administration/concepts/rbac/service-principals/), its name, with a login of the form `service-principal:<id>` |
 | tokenID | ID of the access token used to authenticate, if applicable |
 | tokenName | name of the access token used to authenticate, if applicable |
 | reqOrgAdmin | whether the action required the organization ADMIN role |
@@ -66,6 +66,19 @@ Each event carries the following fields. Only `timestamp`, `sourceIP`, `event`, 
 | authFailure | whether this event represents a failed authentication attempt |
 | actorName | display name of the non-human actor (for example, a deploy token name) that triggered the event |
 | actorUrn | Pulumi URN of the non-human actor that triggered the event |
+
+### Access control events
+
+Changes to who can access what are recorded with these event types:
+
+| Event | Recorded when |
+|-------|---------------|
+| `entity-user-assignment-granted`, `entity-user-assignment-revoked` | A member or service principal is given, or loses, a permission set on a stack, environment, or cloud account |
+| `service-principal-created`, `service-principal-renamed`, `service-principal-deleted` | A service principal is created, renamed, or deleted |
+| `principal-role-assigned`, `principal-role-removed` | A role is assigned to, or removed from, a service principal |
+| `deployment-settings-service-principal-updated` | The service principal or team a stack's deployments run as changes |
+| `deployment-settings-deleted` | A stack's deployment settings are deleted |
+| `organization-permission-mode-updated` | The organization's [permission mode](/docs/administration/concepts/rbac/permission-modes/) changes |
 
 ## CSV format
 

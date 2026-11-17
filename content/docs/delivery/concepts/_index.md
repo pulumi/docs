@@ -411,6 +411,8 @@ Registering doesn't start a run. The command writes the pipeline's location in y
 
 Run `pulumi up` on the pipeline stack to start a run from your checked out branch. The pipeline program runs on your machine, and the stack updates and jobs run in Pulumi Cloud at the latest pushed commit of their sources. The command waits for the run to end and prints a link to it in the Pulumi Cloud console. A stack update or job that hasn't changed since your last `pulumi up` doesn't run again.
 
+Registering also decides what the pipeline runs as: by default a service principal that Delivery creates for it, or a service principal or team that the program names. See [Pipeline identity](/docs/delivery/concepts/identity/).
+
 ## Stages
 
 A _stage_ is a phase of the pipeline, for example an environment like `dev`. A stage runs once its upstream stages have succeeded and its _gate_, if it has one, has passed. A gate is a rule in the stage's `when` property, such as a required approval. See [Gates](/docs/delivery/concepts/stages-and-gates/#gates).
@@ -447,4 +449,4 @@ An _artifact_ is a named value that a stage publishes for a release once the rel
 - Read about [sources and triggers](/docs/delivery/concepts/sources-and-triggers/).
 - Order environments and add approvals with [stages and gates](/docs/delivery/concepts/stages-and-gates/).
 - Configure [stacks and jobs](/docs/delivery/concepts/stacks-and-jobs/).
-- Add an [agent](/docs/delivery/concepts/agents/) to a stage.
+- Decide what the pipeline runs as with [pipeline identity](/docs/delivery/concepts/identity/).

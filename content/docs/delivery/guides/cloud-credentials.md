@@ -230,9 +230,9 @@ environment:
 
 Because credentials come from each stack's config file, each stack can get its own: `Pulumi.dev.yaml` can import the sandbox environment, `Pulumi.prod.yaml` the production one, and so on.
 
-A `Stacks` update runs as the pipeline's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified), which must be allowed to open the environment. If it isn't, the update fails with "you do not have permission to open environment".
+A `Stacks` update runs as the [pipeline's identity](/docs/delivery/concepts/identity/), which must be allowed to open the environment. If it isn't, the update fails.
 
-When you register a pipeline, Delivery gives its service principal access to the target stacks, but not to the environments that the pipeline stack and the target stacks import. Give the principal permission to [open each of those environments](/docs/administration/reference/rbac-scopes/environments/) yourself. Your own access isn't enough.
+Delivery never grants access to environments. Whether the pipeline runs as the service principal Delivery generates for it, a service principal you manage, or a team, give that identity Environment Open on each environment that the pipeline stack and the target stacks import, from the environment's [access settings](/docs/administration/concepts/rbac/entities/#entity-access). Your own access isn't enough.
 
 ## Next steps
 

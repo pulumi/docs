@@ -341,7 +341,7 @@ resource "delivery_job" "smoke" {
 
 {{< /chooser >}}
 
-A job that exits with a non-zero code fails, and so does its stage. A job gets a short-lived `PULUMI_ACCESS_TOKEN` scoped to the pipeline stack, which it uses to upload its outputs.
+A job that exits with a non-zero code fails, and so does its stage. A job gets a temporary `PULUMI_ACCESS_TOKEN` that acts as the [pipeline's identity](/docs/delivery/concepts/identity/#credentials-in-stack-updates-and-jobs), which it uses to upload its outputs.
 
 ### Job outputs
 
@@ -479,7 +479,7 @@ resource "delivery_job" "smoke" {
 
 ## Environment variables
 
-Jobs and `Stacks` updates see the identity of the run as environment variables:
+Jobs and `Stacks` updates see which run they belong to as environment variables:
 
 | Variable | Value |
 | --- | --- |

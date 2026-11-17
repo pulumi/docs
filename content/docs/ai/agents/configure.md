@@ -64,7 +64,7 @@ Reference documents in the instructions by path or URL. The agent also needs acc
 
 Give the agent only the permissions it needs for its work. Apply this to its Pulumi Cloud role and every integration you connect, limiting both the resources it can access and the actions it can perform.
 
-If you leave **Role** at **Agent Read Only**, Pulumi creates or reuses that role when you save. You can instead select **Member** or a custom role, provided its permissions do not exceed your own. Check the role's grants rather than relying on its name. See [Permissions](/docs/ai/agents/permissions/) for access and approval controls.
+If you leave **Role** at **Reader**, the agent can read the organization's stacks, environments, and cloud accounts. You can instead select **Builder**, **Maintainer**, or a custom role, provided its permissions do not exceed your own. Check the role's grants rather than relying on its name. See [Permissions](/docs/ai/agents/permissions/) for access and approval controls.
 
 ## Choose how the agent starts
 

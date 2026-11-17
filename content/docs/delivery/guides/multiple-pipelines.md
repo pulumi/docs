@@ -617,7 +617,7 @@ resource "delivery_stacks" "app" {
 
 With `trigger: true` on the `PipelineSource`, the downstream pipeline starts a run whenever the upstream stage deploys a new release.
 
-Pipelines must belong to the same Pulumi organization, and the [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified) of each downstream pipeline must have read access to the upstream pipeline stack. This is because downstream runs read upstream artifacts as the downstream pipeline's service principal, not as the person who started the run. If the artifact is secret, pass it in `environment` instead of `config`.
+Pipelines must belong to the same Pulumi organization, and the [identity](/docs/delivery/concepts/identity/) of each downstream pipeline must have read access to the upstream pipeline stack. This is because downstream runs read upstream artifacts as the downstream pipeline's identity, not as the person who started the run. Registration grants this access to the service principal Delivery generates for a pipeline; a service principal you manage, or a team, needs Stack Read on the upstream pipeline stack granted to it. If the artifact is secret, pass it in `environment` instead of `config`.
 
 ## Patterns for monorepos
 
