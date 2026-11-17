@@ -3,9 +3,7 @@ title: "Least privilege by default: what's new in Pulumi Cloud RBAC"
 date: 2026-11-18
 draft: false
 meta_desc: "Pulumi Cloud adds built-in roles, sharing of a single stack, service principals for deployments, and a restricted mode that new organizations start in."
-# Leave blank until a real hero image exists: add one with /blog-feature-image
-# or a designer-supplied one (1884x1256). Required before publishing.
-feature_image:
+feature_image: feature.png
 authors:
     - boris-schlosser
     - fausto-nunez-alberro
