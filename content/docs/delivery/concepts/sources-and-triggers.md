@@ -23,6 +23,7 @@ Delivery has one source resource per version control provider. Each takes a `rep
 | `GitLabSource` | `group/subgroup/repo`, the full path |
 | `BitbucketSource` | `workspace/repo` |
 | `AzureDevOpsSource` | `org/project/repo` |
+| `EntireSource` | `project/repo` |
 
 Pulumi Cloud uses your organization's [version control integration](/docs/integrations/version-control/) to interact with your source code provider. You'll need to give that integration access to every repository you use in your pipelines, including the repository containing the pipeline program itself.
 
