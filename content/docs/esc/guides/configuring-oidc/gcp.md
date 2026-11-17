@@ -75,7 +75,7 @@ Once you have created your workload identity pool and provider, you will be dire
 4. In the **Attribute name** dropdown, select **Subject**.
 5. In the **Attribute value** field, provide a valid subject claim (see [Subject claim customization](#subject-claim-customization) below for how the subject is composed). Then click **Save**.
 
-Make a note of the project number, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
+Make a note of the project number, project ID, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
 
 ## Configure ESC for OIDC
 
@@ -99,12 +99,13 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
               providerId: <your-provider-id>
               serviceAccount: <your-service-account>
       environmentVariables:
-        GOOGLE_PROJECT: ${gcp.login.project}
+        GOOGLE_PROJECT: <your-project-id>
         GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
         CLOUDSDK_AUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
     ```
 
-6. Replace `<your-project-number>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
+6. Replace `<your-project-number>`, `<your-project-id>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
+    * `gcp-login` takes the numeric project number, but `GOOGLE_PROJECT` takes the project ID (e.g. `my-project-12345`), because some Google Cloud APIs, such as Artifact Registry, reject a project number.
 7. Click **Save**.
 
 You can validate that your configuration is working by running the following:
@@ -116,7 +117,7 @@ Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` wi
 ```bash
 {
   "environmentVariables": {
-    "GOOGLE_PROJECT": 111111111111
+    "GOOGLE_PROJECT": "my-project-12345",
     "CLOUDSDK_AUTH_ACCESS_TOKEN": "ya29...."
   },
   "gcp": {
