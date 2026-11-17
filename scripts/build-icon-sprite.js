@@ -38,6 +38,12 @@ const MANIFEST_PATH = path.join(ICONS_DIR, 'sprite-manifest.json');
 const PHOSPHOR_WEIGHTS = ['regular', 'bold', 'fill', 'duotone'];
 const CUSTOM_WEIGHTS = ['regular', 'bold', 'fill', 'duotone'];
 
+// Product icons that share a drawing, matching the aliases in
+// pulumi/marketing-web's packages/ui/src/components/icons/index.ts.
+const CUSTOM_ALIASES = {
+    'pulumi-agents': 'pulumi-neo',
+};
+
 // Directories whose contents define which icons are referenced.
 const SCAN_DIRS = [
     path.join(ROOT, 'layouts'),
@@ -145,9 +151,10 @@ function build() {
     const phosphorAvailable = new Set(
         listSvgs(path.join(PHOSPHOR_DIR, 'regular')).map(basenameNoExt),
     );
-    const customAvailable = new Set(
-        listSvgs(CUSTOM_DIR).map(basenameNoExt).map(stripWeightSuffix),
-    );
+    const customAvailable = new Set([
+        ...listSvgs(CUSTOM_DIR).map(basenameNoExt).map(stripWeightSuffix),
+        ...Object.keys(CUSTOM_ALIASES),
+    ]);
     const brandAvailable = new Set(
         listSvgs(BRAND_DIR).map(basenameNoExt),
     );
@@ -182,13 +189,14 @@ function build() {
     // Custom: 4 weights per icon, falling back to the base SVG when a
     // weight-specific file does not exist.
     for (const name of [...customWanted].sort()) {
-        const baseFile = path.join(CUSTOM_DIR, `${name}.svg`);
+        const source = CUSTOM_ALIASES[name] || name;
+        const baseFile = path.join(CUSTOM_DIR, `${source}.svg`);
         const baseExists = fs.existsSync(baseFile);
         const baseSvg = baseExists ? fs.readFileSync(baseFile, 'utf8') : null;
 
         for (const weight of CUSTOM_WEIGHTS) {
             const suffix = weight === 'regular' ? '' : `-${weight}`;
-            const file = path.join(CUSTOM_DIR, `${name}${suffix}.svg`);
+            const file = path.join(CUSTOM_DIR, `${source}${suffix}.svg`);
             let raw;
             if (fs.existsSync(file)) {
                 raw = fs.readFileSync(file, 'utf8');
