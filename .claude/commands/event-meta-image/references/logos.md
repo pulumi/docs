@@ -70,6 +70,7 @@ reads best.
 | digitalocean | `digitalocean.svg` | ✅ | used on committed event cards (2026-07 migration) |
 | duckbill-group | `duckbill-group.svg` | ✅ | used on committed event cards (2026-07 migration) |
 | elastic | `elastic.svg` | ✅ | official horizontal wordmark (cluster + "elastic") from elastic.co; class fills inlined |
+| entire | `entire.svg` | ✅ | official horizontal lockup (symbol + "Entire") from entire.io/brand, dark variant for light cards; aspect ~4:1 |
 | equinix | `equinix.svg` | ✅ | used on committed event cards (2026-07 migration) |
 | fauna | `fauna.svg` | ✅ | used on committed event cards (2026-07 migration) |
 | github (wordmark PNG) | `github.png` | ✅ | Invertocat + "GitHub", transparent PNG; supersedes the `github.svg` glyph on event cards |
