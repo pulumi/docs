@@ -23,6 +23,7 @@ this file, never by inventing a value inline.
 | `deprecated-product` | The post is about — or materially depends on — a Pulumi or third-party product/feature that has been renamed, deprecated, or retired (e.g. a walkthrough of a UI that no longer exists). |
 | `seo-thin` | The post has little durable value for a searcher: near-duplicate of another post that does the job better, contentless announcement of a long-past event, listicle bloat with no substance. Name the superseding URL when one exists. |
 | `ai-positioning` | The post violates the AGENTS.md "AI and agent positioning" rules: presents Neo as the only way to use AI with Pulumi, frames Neo as either-or against other coding agents, or disparages other agents. |
+| `hcl-positioning` | The post violates the AGENTS.md "HCL as a Pulumi language" rules: it predates Pulumi HCL and says Pulumi can't run HCL or treats HCL only as the alternative, with no `{{% hcl-note %}}`, or it runs HCL down as the thing Pulumi frees readers from. |
 | `frontmatter` | Taxonomy/frontmatter defects: missing or invalid `category`, tag near-duplicates against `data/blog_tags.yaml`, series slug misuse, missing `meta_desc`, broken author reference. |
 | `rendering` | The published page renders broken content: shortcode errors visible in output, missing images, malformed tables/code fences, a broken or buried `<!--more-->` break. |
 

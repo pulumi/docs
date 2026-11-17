@@ -143,6 +143,21 @@ Pulumi supports the full spectrum of AI agents, and content must never present N
 
 ---
 
+## HCL as a Pulumi language
+
+HCL is a first-class Pulumi language (the [August 2026 release](https://www.pulumi.com/releases/terraform-state-backend-modules-hcl/)), in the same tier as Python and TypeScript. Content must treat it that way, never as the competition Pulumi rescues you from and never as an afterthought. Reviews and the content-review and glow-up lanes look for the gaps below on every page they touch, so fix them when you write and flag them when you review.
+
+- **Name it correctly.** The language is _HCL_. Pulumi's implementation is _Pulumi HCL_ (the language plugin in pulumi/pulumi-hcl, `runtime: hcl`), documented at `/docs/iac/languages-sdks/hcl/`. Say _Terraform HCL_ only when you mean Terraform's own use of it.
+- **List HCL with the other languages.** When a page says which languages Pulumi programs can be written in, use `{{< pulumi-languages >}}` instead of typing the list. A list of languages without HCL, or a sentence that says Pulumi programs are written "in general-purpose languages" as if that were the whole set, is a finding.
+- **Show HCL where readers pick a language.** When a page has a language chooser or per-language get-started steps, and Pulumi HCL supports what the page shows, the page needs an `hcl` tab. Write it from the HCL docs and pulumi/pulumi-hcl, and test it the way the page's other examples are tested. When Pulumi HCL doesn't support the feature, leave the tab out rather than fake one. A missing tab is a finding even when you can't write it yet.
+- **Drop the "HCL is the enemy" framing.** Don't present HCL as a limitation Pulumi frees readers from ("unlike HCL, Pulumi uses real languages", "escape the DSL", "HCL's limitations"). General-purpose languages are still a real strength: say what they give the reader (loops, functions, tests, package ecosystems) without running HCL down, and don't imply that choosing Pulumi means leaving HCL.
+- **Keep HCL on the table for Terraform users.** In migration and Terraform-integration content, staying in HCL with Pulumi HCL is a first-class path alongside converting to another language with `pulumi convert` and using Pulumi Cloud as a Terraform state backend. Don't present conversion out of HCL as the only route.
+- **Comparison pages stay neutral.** Terraform the tool and HCL the language are different things. Follow `STYLE-GUIDE.md` §Neutral tone toward other products, and keep Pulumi's HCL facts in the adoption section.
+- **No ranking language.** Putting HCL alongside the other languages is the goal; calling it "the best" or "the recommended" language isn't, and the glow-up lane's superlative bound still applies.
+- **Blog posts are historical.** Don't rewrite an older post's stance on HCL. When a post predates Pulumi HCL and says Pulumi can't run HCL, or treats HCL only as the alternative, add `{{% hcl-note %}}` after the `<!--more-->` break. It tells readers Pulumi now supports HCL and links the docs. New posts follow the rules above.
+
+---
+
 ## Resource options
 
 The reference pages under `content/docs/iac/concepts/resources/options/` show a classification callout (custom resource / component resource / both, plus per-SDK enforcement) rendered by the `resource-option-scope` shortcode. The classification data — and the summary table on that section's `_index.md` — is generated from `data/resource_options.yaml`, which is the single source of truth. **When you add a new resource option, you must add an entry to `data/resource_options.yaml` and place the `{{< resource-option-scope "<name>" >}}` shortcode on the new page.** That file's header comment is the authoritative step-by-step checklist; the build fails if a page references an option missing from the data file.

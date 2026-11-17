@@ -97,7 +97,7 @@ Extract pre-existing issues from a touched file when any of:
 
 Not a top-level structural change: edits inside an existing H2, adding/removing H3s under an unchanged H2, code-block updates, wording tweaks.
 
-Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per `docs-review:references:output-format` (cap per output-format). Skip style nits (heading case, list numbering, product-name capitalization, banned-word substitutions) -- the linter (markdownlint, Prettier) and Vale own those.
+Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, deprecated terminology, within-file terminology inconsistencies, and the HCL gaps in `docs-review:references:shared-criteria` §HCL as a Pulumi language. These render in the 💡 bucket per `docs-review:references:output-format` (cap per output-format). Skip style nits (heading case, list numbering, product-name capitalization, banned-word substitutions) -- the linter (markdownlint, Prettier) and Vale own those.
 
 ## Do not flag
 
