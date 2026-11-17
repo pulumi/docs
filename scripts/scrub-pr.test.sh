@@ -8,7 +8,7 @@
 # a dry run or a wrong confirmation writes nothing, runs from other PRs survive, the
 # default branch is never deleted, and the sweeps catch what closing the PR sets off.
 #
-# Usage: scripts/scrub-pr.test.sh    (needs bash 4+ and jq)
+# Usage: scripts/scrub-pr.test.sh    (needs bash 4.4+ and jq)
 
 set -uo pipefail
 
@@ -25,7 +25,7 @@ if [[ "${1:-} ${2:-}" == "auth status" ]]; then exit 0; fi
 [[ "${1:-}" == "api" ]] || { echo "stub gh: unsupported: $*" >&2; exit 1; }
 shift
 
-method=GET jq_expr="" endpoint="" fields=()
+method="" jq_expr="" endpoint="" fields=()
 while (( $# )); do
     case "$1" in
         -H) shift 2 ;;
@@ -36,6 +36,8 @@ while (( $# )); do
         *) endpoint=$1; shift ;;
     esac
 done
+# Like real gh api: with -f/-F and no -X, the request is a POST.
+[[ -n "$method" ]] || { (( ${#fields[@]} )) && method=POST || method=GET; }
 echo "${method} ${endpoint}" >> "$STUB_CALLS"
 
 path=${endpoint%%\?*}
@@ -61,6 +63,9 @@ r="repos/${repo}"
 pr=$(q -r .pr.number)
 
 if [[ "$method" != "GET" ]]; then
+    if [[ "$(q --arg w "$method $path" '(.fail_writes // []) | index($w) != null')" == "true" ]]; then
+        echo '{"message":"Server Error"}'; exit 1
+    fi
     case "$method $path" in
         "PATCH $r/pulls/$pr")
             update --argjson f "$(field_json)" '.pr += $f | .issue_comments += .on_close.comments | .runs += .on_close.runs' ;;
@@ -90,7 +95,9 @@ case "$path" in
     "$r/issues/$pr/comments")   body=$(q .issue_comments) ;;
     "$r/pulls/$pr/comments")    body=$(q .review_comments) ;;
     "$r/pulls/$pr/reviews")     body=$(q .reviews) ;;
-    "$r/actions/runs/"*)        body=$(q --argjson id "${path##*/}" '.runs[] | select(.id == $id)') ;;
+    "$r/actions/runs/"*)        # a run someone waits on finishes by the next look
+        update --argjson id "${path##*/}" '.runs |= map(if .id == $id then .status = "completed" else . end)'
+        body=$(q --argjson id "${path##*/}" '.runs[] | select(.id == $id)') ;;
     "$r/actions/runs")
         body=$(q --arg sha "$(param head_sha)" --arg ev "$(param event)" --arg since "$(param created)" '
             {workflow_runs: [.runs[]
@@ -146,17 +153,23 @@ fixture() {
     {"id": 5, "name": "claude", "status": "completed", "event": "issue_comment", "head_sha": "mastertip",
      "display_title": "Leaky title", "created_at": "2025-12-31T09:00:00Z", "pull_requests": []},
     {"id": 6, "name": "review", "status": "completed", "event": "pull_request_review", "head_sha": "mastertip",
-     "display_title": "Unrelated", "created_at": "2026-01-01T10:04:00Z", "pull_requests": [{"number": 42}]}
+     "display_title": "Unrelated", "created_at": "2026-01-01T10:04:00Z", "pull_requests": [{"number": 42}]},
+    {"id": 9, "name": "claude", "status": "completed", "event": "issue_comment", "head_sha": "mastertip",
+     "display_title": "Closed, created in error", "created_at": "2026-01-01T10:06:00Z", "pull_requests": []}
   ],
   "deployments": [
     {"id": 901, "environment": "testing", "sha": "c0mmit1", "ref": "leak"},
     {"id": 902, "environment": "production", "sha": "other", "ref": "leak"},
-    {"id": 903, "environment": "production", "sha": "unrelated", "ref": "master"}
+    {"id": 903, "environment": "production", "sha": "unrelated", "ref": "master"},
+    {"id": 904, "environment": "testing", "sha": "m3rge", "ref": "refs/pull/42/merge"},
+    {"id": 905, "environment": "testing", "sha": "other", "ref": "refs/pull/42/head"}
   ],
   "branches": {"leak": {"protected": false}, "master": {"protected": true}},
   "on_close": {
     "comments": [{"id": 102, "user": {"login": "bot"}}],
-    "runs": [{"id": 7, "name": "pr-closed", "status": "completed", "event": "pull_request", "head_sha": "c0mmit2",
+    "runs": [{"id": 7, "name": "pr-closed", "status": "in_progress", "event": "pull_request", "head_sha": "c0mmit2",
+              "display_title": "Closed, created in error", "created_at": "2099-01-01T00:00:00Z", "pull_requests": []},
+             {"id": 8, "name": "claude", "status": "completed", "event": "issue_comment", "head_sha": "mastertip",
               "display_title": "Closed, created in error", "created_at": "2099-01-01T00:00:00Z", "pull_requests": []}]
   }
 }
@@ -194,7 +207,7 @@ expect_out "1. Cancel 1 in-progress workflow run(s)"
 expect_out "Delete 1 review comment(s) and 1 conversation comment(s)"
 expect_out "Replace the body of 1 review(s)"
 expect_out "5. Delete 4 workflow run(s)"
-expect_out "6. Delete 2 deployment(s)"
+expect_out "6. Delete 4 deployment(s)"
 expect_out "7. Delete branch leak"
 expect_out "Original leaky title"
 
@@ -222,11 +235,15 @@ expect_no_write "actions/runs/5"   # same title, but from before the PR opened
 expect_write "DELETE repos/acme/site/deployments/901"
 expect_write "DELETE repos/acme/site/deployments/902"
 expect_no_write "deployments/903"
+expect_write "DELETE repos/acme/site/deployments/904"   # the PR's test-merge commit
+expect_write "DELETE repos/acme/site/deployments/905"   # refs/pull/42/head
 expect_write "DELETE repos/acme/site/git/refs/heads/leak"
 # Closing the PR posted a comment and started a run; the sweeps must catch both.
 expect_write "DELETE repos/acme/site/issues/comments/102"
-expect_write "DELETE repos/acme/site/actions/runs/7"
-[[ "$(state '[.runs[].id] | sort | join(",")')" == "4,5" ]] || fail "runs left: $(state '[.runs[].id] | join(",")')"
+expect_write "DELETE repos/acme/site/actions/runs/7"   # still running at first, so the sweep waits
+expect_write "DELETE repos/acme/site/actions/runs/8"   # the new title, only trusted after the scrub started
+expect_no_write "actions/runs/9"   # another scrubbed PR's run with the same new title
+[[ "$(state '[.runs[].id] | sort | join(",")')" == "4,5,9" ]] || fail "runs left: $(state '[.runs[].id] | join(",")')"
 [[ -f "$WORK/scrub-pr-42-github-support.md" ]] || fail "no support request written"
 
 # --- the default branch is never deleted, even with --force-branch ---
@@ -234,6 +251,23 @@ run_case "default branch" '.pr.head.ref = "master" | .other_prs = []' $'42\n' 42
 expect_status 0
 expect_out "Keep branch master: it's the default branch"
 expect_no_write "git/refs/heads"
+expect_no_write "deployments/903"   # master's own deployment
+grep -q "903" <<<"$OUT" && fail "plan lists master's deployment 903"
+
+# --- a protected branch's deployments aren't matched by its name ---
+run_case "protected branch deployments" '.branches.leak.protected = true' $'42\n' 42
+expect_write "DELETE repos/acme/site/deployments/901"   # matched by commit
+expect_no_write "deployments/902"   # matched only by the protected branch's name
+
+# --- a merged PR's merge commit is on master, so it isn't matched ---
+run_case "merged PR" '.pr.merged = true | .pr.state = "closed" | .deployments += [{"id": 906, "environment": "production", "sha": "m3rge", "ref": "master"}]' '' 42 --dry-run
+grep -q "906" <<<"$OUT" && fail "plan lists the merge commit's deployment 906"
+
+# --- a failed write is reported and makes the exit status nonzero ---
+run_case "failed write" '.fail_writes = ["DELETE repos/acme/site/issues/comments/101"]' $'42\n' 42
+expect_status 1
+expect_out "FAIL  comment 101"
+expect_out "comment 101"
 
 # --- a branch another PR uses is kept unless forced ---
 shared='.other_prs += [{"number": 41, "owner": "acme", "ref": "leak"}]'

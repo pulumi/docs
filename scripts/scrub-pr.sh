@@ -31,11 +31,18 @@
 #   scripts/scrub-pr.sh <pr-number> [--repo owner/name] [--dry-run] [--force-branch]
 #
 # Requires: gh signed in as someone with write access to the repo (classic token
-# scope `repo`, SSO-authorized for the org), jq, and bash 4+.
+# scope `repo`, SSO-authorized for the org), jq, and bash 4.4+.
+#
+# Exits 1 if any step failed or a run was still in progress at the end.
 #
 # Tests: scripts/scrub-pr.test.sh runs this script against a stub gh.
 
 set -uo pipefail
+
+if (( BASH_VERSINFO[0] < 4 || (BASH_VERSINFO[0] == 4 && BASH_VERSINFO[1] < 4) )); then
+    echo "Needs bash 4.4 or later (this is ${BASH_VERSION})." >&2
+    exit 1
+fi
 
 REPO="pulumi/docs"
 DRY_RUN=0
@@ -64,6 +71,8 @@ gh auth status >/dev/null 2>&1 || { echo "gh is not signed in. Run: gh auth logi
 
 api() { gh api -H "Accept: application/vnd.github+json" "$@"; }
 dedupe() { awk -F'\t' 'NF && !seen[$1]++'; }
+# Branch names can contain &, #, and %, which gh api sends unencoded.
+ref_path() { jq -rn --arg r "$1" '$r | split("/") | map(@uri) | join("/")'; }
 
 echo "Inventorying ${REPO}#${PR}..."
 
@@ -75,7 +84,9 @@ author=$(jq -r .user.login <<<"$pr_json")
 head_ref=$(jq -r .head.ref <<<"$pr_json")
 head_repo=$(jq -r '.head.repo.full_name // ""' <<<"$pr_json")
 created_at=$(jq -r .created_at <<<"$pr_json")
-merge_sha=$(jq -r '.merge_commit_sha // ""' <<<"$pr_json")
+# A merged PR's merge commit is on the default branch, so its deployments aren't the PR's.
+merge_sha=""
+[[ "$merged" == "true" ]] || merge_sha=$(jq -r '.merge_commit_sha // ""' <<<"$pr_json")
 viewer=$(api user --jq .login)
 default_branch=$(api "repos/${REPO}" --jq .default_branch)
 
@@ -92,7 +103,26 @@ shas_json=$(printf '%s\n' "${shas[@]}" | jq -Rsc 'split("\n") | map(select(lengt
 
 other_prs=""
 if [[ "$head_repo" == "$REPO" ]]; then
-    other_prs=$(api "repos/${REPO}/pulls?state=all&head=${REPO%%/*}:${head_ref}&per_page=100" --jq "[.[] | select(.number != ${PR}) | .number] | join(\", \")")
+    other_prs=$(api -X GET "repos/${REPO}/pulls" -f state=all -f head="${REPO%%/*}:${head_ref}" -F per_page=100 \
+        --jq "[.[] | select(.number != ${PR}) | .number] | join(\", \")")
+fi
+
+branch_exists=0
+branch_protected=0
+branch_keep_reason=""
+if [[ "$head_repo" == "$REPO" ]]; then
+    [[ "$(api "repos/${REPO}/branches/$(ref_path "$head_ref")" --jq .protected 2>/dev/null)" == "true" ]] && branch_protected=1
+    if api "repos/${REPO}/git/ref/heads/$(ref_path "$head_ref")" >/dev/null 2>&1; then
+        branch_exists=1
+        if [[ "$head_ref" == "$default_branch" ]]; then
+            branch_keep_reason="it's the default branch"
+        elif (( branch_protected )); then
+            branch_keep_reason="it's protected"
+        elif [[ -n "$other_prs" ]]; then
+            branch_keep_reason="other PRs use it (${other_prs})"
+        fi
+        [[ "$head_ref" == "$default_branch" ]] || { (( FORCE_BRANCH )) && branch_keep_reason=""; }
+    fi
 fi
 
 inventory_comments() {
@@ -136,11 +166,15 @@ inventory_deployments() {
     for q in "${shas[@]}" ${merge_sha:+"$merge_sha"}; do queries+=("sha=${q}"); done
     queries+=("ref=refs/pull/${PR}/merge" "ref=refs/pull/${PR}/head")
     # Deployments made from a pull_request event can be recorded against the branch name.
-    [[ "$head_repo" == "$REPO" && -z "$other_prs" ]] && queries+=("ref=${head_ref}")
+    # Skip that lookup for the default branch and for protected or shared branches, whose
+    # deployments aren't only this PR's.
+    if [[ "$head_repo" == "$REPO" && -z "$other_prs" && "$head_ref" != "$default_branch" ]] && (( ! branch_protected )); then
+        queries+=("ref=${head_ref}")
+    fi
     deployments=()
     for q in "${queries[@]}"; do
-        while IFS= read -r line; do [[ -n "$line" ]] && deployments+=("$line"); done < <(
-            api "repos/${REPO}/deployments?${q}&per_page=100" --jq '.[] | "\(.id)\t\(.environment)"')
+        while IFS= read -r line; do [[ -n "$line" ]] && deployments+=("${line}"$'\t'"${q}"); done < <(
+            api -X GET "repos/${REPO}/deployments" -f "$q" -F per_page=100 --jq '.[] | "\(.id)\t\(.environment)"')
     done
     mapfile -t deployments < <(printf '%s\n' "${deployments[@]+"${deployments[@]}"}" | dedupe)
 }
@@ -149,20 +183,6 @@ scrub_started=""
 inventory_comments
 inventory_runs
 inventory_deployments
-
-branch_exists=0
-branch_keep_reason=""
-if [[ "$head_repo" == "$REPO" ]] && api "repos/${REPO}/git/ref/heads/${head_ref}" >/dev/null 2>&1; then
-    branch_exists=1
-    if [[ "$head_ref" == "$default_branch" ]]; then
-        branch_keep_reason="it's the default branch"
-    elif [[ "$(api "repos/${REPO}/branches/${head_ref}" --jq .protected 2>/dev/null)" == "true" ]]; then
-        branch_keep_reason="it's protected"
-    elif [[ -n "$other_prs" ]]; then
-        branch_keep_reason="other PRs use it (${other_prs})"
-    fi
-    [[ "$head_ref" == "$default_branch" ]] || { (( FORCE_BRANCH )) && branch_keep_reason=""; }
-fi
 
 if (( branch_exists )) && [[ -z "$branch_keep_reason" ]]; then
     branch_plan="Delete branch ${head_ref}"
@@ -209,8 +229,8 @@ if (( ${#runs[@]} )); then
     printf '%s\n' "${runs[@]}" | awk -F'\t' '{printf "   %s  %-38s %-12s %-20s %s\n", $1, $2, $3, $4, $5}'
 fi
 if (( ${#deployments[@]} )); then
-    echo " Deployments:"
-    printf '%s\n' "${deployments[@]}" | awk -F'\t' '{printf "   %s  %s\n", $1, $2}'
+    echo " Deployments (id, environment, matched by):"
+    printf '%s\n' "${deployments[@]}" | awk -F'\t' '{printf "   %s  %-12s %s\n", $1, $2, $3}'
 fi
 echo " Titles used to match comment-triggered runs:"
 jq -r '.[] | "   " + .' <<<"$titles_json"
@@ -305,7 +325,7 @@ delete_deployments
 
 echo "7. Head branch"
 if (( branch_exists )) && [[ -z "$branch_keep_reason" ]]; then
-    step "branch ${head_ref}" api -X DELETE "repos/${REPO}/git/refs/heads/${head_ref}"
+    step "branch ${head_ref}" api -X DELETE "repos/${REPO}/git/refs/heads/$(ref_path "$head_ref")"
 else
     echo "  skip  ${branch_plan}"
 fi
@@ -393,3 +413,5 @@ cat <<EOF
      preview buckets), Slack notifications, and issues or PRs linking here.
 ================================================================
 EOF
+
+(( ${#failures[@]} + ${#unfinished[@]} == 0 ))
