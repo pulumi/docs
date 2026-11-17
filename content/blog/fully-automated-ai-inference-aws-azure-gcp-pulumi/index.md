@@ -2,6 +2,7 @@
 title: "Fully Automated AI Inference on AWS, Azure, and Google Cloud with Pulumi"
 allow_long_title: true
 date: 2026-06-30
+updated: 2026-11-17
 draft: false
 meta_desc: "A zero-touch Ollama GPU inference server on AWS, Azure, or Google Cloud as one Pulumi program, with OIDC credentials from Pulumi ESC and no static keys."
 feature_image: feature.png
