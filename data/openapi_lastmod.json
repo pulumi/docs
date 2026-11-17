@@ -42,8 +42,8 @@
       "lastmod": "2026-09-25"
     },
     "AI Agents": {
-      "hash": "29886e8d0f5a8acde533b0941c19f71941e1bedec3aad2e7f697378461f01657",
-      "lastmod": "2026-10-31"
+      "hash": "15db67efefd7d12da741feb54b44090a65274c83edc27a521a5afe062ce53882",
+      "lastmod": "2026-11-17"
     },
     "AccessTokens": {
       "hash": "3d248213667328d14fbb682c9625f62c52eb6a309904965cc1ae1ec9f3994404",
@@ -74,8 +74,8 @@
       "lastmod": "2026-09-15"
     },
     "InsightsAccounts": {
-      "hash": "f9952d2fff9609ea2f973ab6c821d643baf9480ea940304f797888c5a657ec95",
-      "lastmod": "2026-09-15"
+      "hash": "1b692122f46e0366e36279a1da5e0a492fafe86fbcf686c9fd2916914161db9a",
+      "lastmod": "2026-11-17"
     },
     "Invites": {
       "hash": "9249557f7703ec26c429fa082e2071471661301ca6366ff683c585b31655b3e7",
@@ -250,7 +250,8 @@
       "hash": "16b5814d2ff03a70fcfe3d50870d5a34ff7361aee34947f243fb17680e83c0f1"
     },
     "AgentAutomationWebhookTrigger": {
-      "hash": "af5aa75a3c815eee328240caf18b2ce4c44dfd68ec14c0056e43f85dec5763ab"
+      "hash": "f2c6db3782d44d1c8e8608b40f3f472fca144588d1be0a01c86f3595a3c427da",
+      "lastmod": "2026-11-17"
     },
     "AgentBackendEvent": {
       "hash": "082182b98b2b55eca5467253a0e69ceef9aabbb9b2bb0a47963c5d7830dc1a5e"
@@ -913,7 +914,8 @@
       "lastmod": "2026-09-15"
     },
     "AwsKmsConfig": {
-      "hash": "579b4e00c4db2dbf51a216ad035609bd98b568adc49011cb864207026c34c38d"
+      "hash": "ef3d7844eb5470e35a3c25e6a06914839b5aff4e509c672c7fb37b495dc48615",
+      "lastmod": "2026-11-17"
     },
     "AzureDevOpsAccessResponse": {
       "hash": "de89638c0b706da91f80ce417387d8a6950025594f256b76e8379a818ee84c2f",
@@ -1202,7 +1204,8 @@
       "hash": "56c96e028ea51f4ff5d5cca9984089223219045d90b7767669a9c71065c674a5"
     },
     "CreateAgentAutomationWebhookTrigger": {
-      "hash": "46b942a07d02c268551829b01e982708e66578255b7af4afe8aa68d121774491"
+      "hash": "ee014cd034b0ce94fd5a0279bbc0e8cf472811a290f9d244d641f652a0623bdc",
+      "lastmod": "2026-11-17"
     },
     "CreateAgentDefinitionRequest": {
       "hash": "0e91d0a79ce11cea2eed80686d245c8055ff7c54b3e8764bafe88bb2e92d179c"
@@ -1390,6 +1393,12 @@
     "DeploymentRoleRequest": {
       "hash": "6f5a5162da4b451ebc8f4156d743f683fc27d62df5e8543c7b64222bc7b4cf1c",
       "lastmod": "2026-09-15"
+    },
+    "DeploymentRunsAs": {
+      "hash": "064d9e16e12950ded291f70aff23953c6d95d2f102b56d167257a16d007607d0"
+    },
+    "DeploymentServicePrincipalRequest": {
+      "hash": "050ec83065878ebba2cbcaac0897aa5fd936e2bf5d3b9ebc4b47d611ee304c9c"
     },
     "DeploymentSettings": {
       "hash": "4dfa59960b3f0abeccf2dac408acdfab9f9fca0cb45ce6dcdbaaf7b394f91b8a",
@@ -1644,8 +1653,8 @@
       "hash": "d3602fcc3959e640b637a4be3df093611afdcbe4a9b478c23016b57ad4ce8889"
     },
     "GetDeploymentResponse": {
-      "hash": "cfd0cf7612037e746bd1aa9c394b24a9f722e2dd33856c08f09815aff64d63f1",
-      "lastmod": "2026-09-29"
+      "hash": "3a4034bab0d1d17235b80d7bbee5523a25c735c325ae35cd7e288848f024bea9",
+      "lastmod": "2026-11-17"
     },
     "GetDiscoveredProjectResponse": {
       "hash": "0c4f2778d82149acad398bce85c539cfa21d4248f1cdc9b9a53de85fbec0ab4d",
@@ -2376,8 +2385,8 @@
       "hash": "af7c1b2c2905b74ac2e2bcbd8570dbbe49e205c30ef63ce5f27e9b5f0748e6d2"
     },
     "OperationContext": {
-      "hash": "d1a4fbfcafbfc20269cf511078ec774d5b3fd3497dd1fb9f5729e07d514e916f",
-      "lastmod": "2026-11-07"
+      "hash": "4d6cf8d27b1ac3d2268ff05a791f2aa40f78dc43d9d5e5670817f5bf6e2f54ed",
+      "lastmod": "2026-11-17"
     },
     "OperationContextAWSOIDCConfiguration": {
       "hash": "8ec44fbcb6b6e00e7f129bf0c863f15863cd2633e6f4b5852a7e54e149e9342e",
@@ -2419,8 +2428,8 @@
       "lastmod": "2026-09-15"
     },
     "OperationContextRequest": {
-      "hash": "c60df23ab4fe26d00c873253469f3b0db10ca13e3689c0e891d86c9a786152d7",
-      "lastmod": "2026-11-07"
+      "hash": "c75fe3847c4f53107b7d61f7719f63999ee8769c8f9ce192b29102cdaaa07f34",
+      "lastmod": "2026-11-17"
     },
     "OrgDeploymentsMetadataResponse": {
       "hash": "e7310aaa4e5cacfc17e694e0e0eb20896c2c4385c20a2c4c2af07f3c0b19041c",
@@ -2447,8 +2456,8 @@
       "lastmod": "2026-10-29"
     },
     "OrganizationFeatures": {
-      "hash": "aa740557627aa2fa689f33664f52a651b89e08fe1596d588095d58b987bd5631",
-      "lastmod": "2026-11-10"
+      "hash": "fc193d10ac5ad5b26713d1fb72817f2f205f381c8e7e89639ddee0bec6c00943",
+      "lastmod": "2026-11-17"
     },
     "OrganizationMember": {
       "hash": "63580abab554fb9a2782c1471b6ebafc55c5d78f3cb323452095db640a968fef",
