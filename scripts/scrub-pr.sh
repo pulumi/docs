@@ -71,13 +71,6 @@ for sha in "${shas[@]}"; do
 done
 mapfile -t runs < <(printf '%s\n' "${runs[@]+"${runs[@]}"}" | awk -F'\t' 'NF && !seen[$1]++')
 
-deployments=()
-for sha in "${shas[@]}"; do
-    while IFS= read -r line; do [[ -n "$line" ]] && deployments+=("$line"); done < <(
-        api "repos/${REPO}/deployments?sha=${sha}&per_page=100" --jq '.[] | "\(.id)\t\(.environment)"')
-done
-mapfile -t deployments < <(printf '%s\n' "${deployments[@]+"${deployments[@]}"}" | awk -F'\t' 'NF && !seen[$1]++')
-
 branch_exists=0
 if [[ "$head_repo" == "$REPO" ]] && api "repos/${REPO}/git/ref/heads/${head_ref}" >/dev/null 2>&1; then
     branch_exists=1
@@ -87,6 +80,19 @@ other_prs=""
 if [[ "$head_repo" == "$REPO" ]]; then
     other_prs=$(api "repos/${REPO}/pulls?state=all&head=${REPO%%/*}:${head_ref}&per_page=100" --jq "[.[] | select(.number != ${PR}) | .number] | join(\", \")")
 fi
+
+# Workflows on pull_request events deploy from the merge ref, so look there as well as at the PR's own commits.
+merge_sha=$(jq -r '.merge_commit_sha // ""' <<<"$pr_json")
+deploy_queries=()
+for sha in "${shas[@]}" ${merge_sha:+"$merge_sha"}; do deploy_queries+=("sha=${sha}"); done
+deploy_queries+=("ref=refs/pull/${PR}/merge" "ref=refs/pull/${PR}/head")
+[[ "$head_repo" == "$REPO" && -z "$other_prs" ]] && deploy_queries+=("ref=${head_ref}")
+deployments=()
+for q in "${deploy_queries[@]}"; do
+    while IFS= read -r line; do [[ -n "$line" ]] && deployments+=("$line"); done < <(
+        api "repos/${REPO}/deployments?${q}&per_page=100" --jq '.[] | "\(.id)\t\(.environment)"')
+done
+mapfile -t deployments < <(printf '%s\n' "${deployments[@]+"${deployments[@]}"}" | awk -F'\t' 'NF && !seen[$1]++')
 
 cat <<EOF
 
@@ -117,6 +123,10 @@ fi
 if (( ${#runs[@]} )); then
     echo " Workflow runs:"
     printf '%s\n' "${runs[@]}" | awk -F'\t' '{printf "   %s  %-40s %s @ %s\n", $1, $2, $3, $4}'
+fi
+if (( ${#deployments[@]} )); then
+    echo " Deployments:"
+    printf '%s\n' "${deployments[@]}" | awk -F'\t' '{printf "   %s  %s\n", $1, $2}'
 fi
 if [[ "$merged" == "true" ]]; then
     echo
