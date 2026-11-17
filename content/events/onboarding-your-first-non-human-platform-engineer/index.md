@@ -65,8 +65,7 @@ tags:
     clouds: ["AWS"]
 
 # Registration form (only rendered when gated: true).
-# TODO: wire in from MA-1262 (https://linear.app/pulumi/issue/MA-1262/date-tbd-pulumi-entire-joint-workshop-engin-entire-presenter-tbd) once marketing creates the form and campaign.
 form:
-    hubspot_form_id: ""
-    salesforce_campaign_id: ""
+    hubspot_form_id: "1289dc9b-b03e-410c-949a-035e26e3e82d"
+    salesforce_campaign_id: "701PQ000012Snc3YAC"
 ---
