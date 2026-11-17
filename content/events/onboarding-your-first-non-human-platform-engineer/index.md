@@ -55,7 +55,7 @@ presenters:
       photo: /images/team/engin-diri.jpg
     - name: Lizzie Siegle
       role: Staff Developer Advocate, Entire
-      photo: /events/onboarding-your-first-non-human-platform-engineer/lizzie-siegle.png
+      photo: /images/people/lizzie-siegle.jpg
 
 # Used for filtering on the event list page.
 tags:
