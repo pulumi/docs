@@ -40,7 +40,7 @@ Pulumi Webhooks may be created through any of the following methods:
 
 1. Manually, in the Pulumi Cloud console using the steps outlined in [Create an Organization Webhook in the Pulumi Cloud console](#create-an-organization-webhook-in-the-pulumi-cloud-console) or [Create an Environment Webhook in Pulumi Cloud in the Pulumi Cloud console](#create-an-environment-webhook-in-the-pulumi-cloud-console).
 1. Declaratively, as part of a [Pulumi IaC](/docs/iac/) program as shown in [Create a Webhook in a Pulumi IaC Program](#create-a-webhook-in-a-pulumi-iac-program)
-1. By invoking the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/webhooks/#create-webhook) directly.
+1. By invoking the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/webhooks/) directly.
 
 #### Create an Environment Webhook in the Pulumi Cloud console
 
