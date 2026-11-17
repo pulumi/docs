@@ -203,6 +203,8 @@ The following table describes the various event filters available and the contex
 | `environment_tag_deleted`           | `environment_tag`               | Organization or Environment| When an environment tag is deleted.              |
 | `environment_tag_updated`           | `environment_tag`               | Organization or Environment| When an environment tag is updated.              |
 | `imported_environment_changed`      | `imported_environment_changed`  | Organization or Environment| When an imported environment was changed.        |
+| `environment_rotation_succeeded`    | `environment_rotation`          | Organization or Environment| When a secret rotation on an environment succeeds.|
+| `environment_rotation_failed`       | `environment_rotation`          | Organization or Environment| When a secret rotation on an environment fails.  |
 
 There is also an `environments` filter group that lets you easily subscribe to all environment events.
 
