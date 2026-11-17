@@ -35,6 +35,7 @@ const ICON_MAP = {
     PulumiAgentMigrate: "pulumi-agent-migrate",
     PulumiAgentSecurity: "pulumi-agent-security",
     PulumiAgentUpgrade: "pulumi-agent-upgrade",
+    PulumiDelivery: "pulumi-delivery",
     PulumiInfrastructureCode: "pulumi-iac",
     PulumiInsightsGovernance: "pulumi-insights",
     PulumiInternalDeveloperPlatform: "pulumi-idp",
