@@ -12,14 +12,13 @@ meta_desc: Pulumi Delivery lets you write your release pipeline as a Pulumi prog
 h1: Pulumi Delivery
 description: <p>Write your release pipeline as a Pulumi program. Pulumi Cloud runs each release through your stages in order, updating stacks, running jobs, and waiting at the gates you define.</p>
 
-# TODO(launch): Point the primary button back at Get started once the guide is restored.
 link_buttons:
   primary:
+    label: Get started
+    link: /docs/delivery/get-started/
+  secondary:
     label: Concepts
     link: /docs/delivery/concepts/
-  secondary:
-    label: Guides
-    link: /docs/delivery/guides/
 
 # TODO(launch): Get the card icons from marketing. The icons below are placeholders from the
 # existing docs icon set. Swap each one for the icon marketing picks for that concept.

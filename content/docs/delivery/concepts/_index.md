@@ -441,10 +441,9 @@ A _trigger_ on a source controls whether a change starts a run. See [Sources and
 
 An _artifact_ is a named value that a stage publishes for a release once the release reaches it, such as a cluster endpoint or an image tag. Other pipelines read a stage's artifacts with a `PipelineSource`, which is how one pipeline hands values to the next. See [Artifacts](/docs/delivery/concepts/stages-and-gates/#artifacts).
 
-<!-- TODO(launch): Restore the Get started guide (removed for now) and link to it here. -->
-
 ## Next steps
 
+- Register and deploy your first pipeline with [Get started](/docs/delivery/get-started/).
 - Read about [sources and triggers](/docs/delivery/concepts/sources-and-triggers/).
 - Order environments and add approvals with [stages and gates](/docs/delivery/concepts/stages-and-gates/).
 - Configure [stacks and jobs](/docs/delivery/concepts/stacks-and-jobs/).

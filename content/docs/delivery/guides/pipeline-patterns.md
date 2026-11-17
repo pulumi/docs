@@ -11,9 +11,9 @@ menu:
 aliases: []
 ---
 
-<!-- TODO(launch): Once a Delivery `pulumi new` template is published, align these examples with the template's source and variable names. When Get started is restored, link it from this intro. -->
+<!-- TODO(launch): Once a Delivery `pulumi new` template is published, align these examples with the template's source and variable names. -->
 
-This page shows common patterns for building pipelines with Pulumi Delivery. The first example runs a `smoke.sh` script from the repository's `delivery` directory, shown in [Running smoke tests after deployment](#running-smoke-tests-after-deployment). The last section builds a container image once and deploys it to every stage.
+This page shows common patterns for building pipelines with Pulumi Delivery. If you haven't registered a pipeline yet, start with [Get started](/docs/delivery/get-started/). The first example runs a `smoke.sh` script from the repository's `delivery` directory, shown in [Running smoke tests after deployment](#running-smoke-tests-after-deployment). The last section builds a container image once and deploys it to every stage.
 
 ## Reducing duplication with helper functions
 
