@@ -41,9 +41,7 @@ const repo = new delivery.GitHubSource("repo", {
     trigger: { paths: ["app/**", "delivery/**"] },
 });
 
-const pipeline = new delivery.Pipeline("shop", {
-    program: { source: repo, directory: "delivery" },
-});
+const pipeline = new delivery.Pipeline("shop");
 
 const dev = new delivery.Stage("dev", { pipeline });
 new delivery.Stacks("dev", {
@@ -77,7 +75,7 @@ repo = delivery.GitHubSource(
     trigger={"paths": ["app/**", "delivery/**"]},
 )
 
-pipeline = delivery.Pipeline("shop", program={"source": repo, "directory": "delivery"})
+pipeline = delivery.Pipeline("shop")
 
 dev = delivery.Stage("dev", pipeline=pipeline)
 delivery.Stacks(
@@ -93,7 +91,9 @@ delivery.Job(
     command="npm ci && npm test",
 )
 
-prod = delivery.Stage("prod", pipeline=pipeline, from_=[dev], when=delivery.RuleArgs(kind="approval"))
+prod = delivery.Stage(
+    "prod", pipeline=pipeline, from_=[dev], when=delivery.RuleArgs(kind="approval")
+)
 delivery.Stacks(
     "prod",
     stage=prod,
@@ -125,9 +125,7 @@ func main() {
 			return err
 		}
 
-		pipeline, err := delivery.NewPipeline(ctx, "shop", &delivery.PipelineArgs{
-			Program: &delivery.ProgramSourceArgs{Source: repo, Directory: pulumi.String("delivery")},
-		})
+		pipeline, err := delivery.NewPipeline(ctx, "shop", nil)
 		if err != nil {
 			return err
 		}
@@ -191,10 +189,7 @@ return await Deployment.RunAsync(() =>
         Trigger = new SourceTriggerArgs { Paths = { "app/**", "delivery/**" } },
     });
 
-    var pipeline = new Pipeline("shop", new PipelineArgs
-    {
-        Program = new ProgramSourceArgs { Source = repo, Directory = "delivery" },
-    });
+    var pipeline = new Pipeline("shop");
 
     var dev = new Stage("dev", new StageArgs { Pipeline = pipeline });
     new Stacks("dev", new StacksArgs
@@ -244,9 +239,7 @@ public class App {
                 .trigger(SourceTriggerArgs.builder().paths("app/**", "delivery/**").build())
                 .build());
 
-            var pipeline = new Pipeline("shop", PipelineArgs.builder()
-                .program(ProgramSourceArgs.builder().source(repo).directory("delivery").build())
-                .build());
+            var pipeline = new Pipeline("shop");
 
             var dev = new Stage("dev", StageArgs.builder().pipeline(pipeline).build());
             new Stacks("dev", StacksArgs.builder()
@@ -293,10 +286,6 @@ resources:
           - delivery/**
   shop:
     type: delivery:Pipeline
-    properties:
-      program:
-        source: ${repo}
-        directory: delivery
 
   dev:
     type: delivery:Stage
@@ -358,12 +347,7 @@ resource "delivery_git_hub_source" "repo" {
   }
 }
 
-resource "delivery_pipeline" "shop" {
-  program = {
-    source    = delivery_git_hub_source.repo
-    directory = "delivery"
-  }
-}
+resource "delivery_pipeline" "shop" {}
 
 resource "delivery_stage" "dev" {
   pipeline = delivery_pipeline.shop
@@ -404,7 +388,7 @@ resource "delivery_stacks" "prod" {
 Each part of the program maps to a concept on this page:
 
 - The `GitHubSource` is a [source](#sources-and-releases). Its `trigger` starts a run when a commit to `main` changes `app/` or `delivery/`.
-- The `Pipeline` resource names where the [pipeline program](#pipeline-program) itself lives: the `delivery` directory of the same repository.
+- The `Pipeline` resource declares the pipeline. The pipeline stack's config says where the [pipeline program](#pipeline-program) itself lives: the `delivery` directory of the same repository.
 - The two `Stage` resources are the pipeline's [stages](#stages). `prod` lists `dev` in `from`, so a release reaches `prod` only after `dev` succeeds, and its `when` gate holds the release until someone approves it.
 - Each `Stacks` resource updates the [stacks](#stacks) for its stage, and the `Job` runs the app's tests in `dev`, as a [job](#jobs).
 
@@ -412,9 +396,17 @@ Each push that matches the trigger starts a [run](#runs), which takes the pushed
 
 ## Pipeline program
 
-<!-- TODO(launch): Registration is moving to a separate command (in progress). Update this section with that command and how registering differs from a run. -->
+The pipeline lives in a repository as a Pulumi project, and it declares exactly one `Pipeline` resource. Set `delivery:source` in the pipeline stack's config file to say where the program lives:
 
-The pipeline lives in a repository as a Pulumi project. It declares exactly one `Pipeline` resource, which names the source and directory of the program itself. You _register_ the pipeline by running `pulumi up` on its stack. After that, each run executes the program on its own run stack.
+```yaml
+config:
+  delivery:source:
+    url: https://github.com/acme/shop
+    branch: main
+    directory: delivery
+```
+
+You _register_ the pipeline by running `pulumi delivery register` on its stack. Registering stores the pipeline definition and doesn't start a run. After you register, a push to the branch in `delivery:source` updates the pipeline definition, and each run executes the program on its own run stack. A run never changes the pipeline definition.
 
 ## Stages
 

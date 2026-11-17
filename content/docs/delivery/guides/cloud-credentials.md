@@ -232,7 +232,7 @@ Because credentials come from each stack's config file, each stack can get its o
 
 A `Stacks` update runs as the pipeline's [service principal](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified), which must be allowed to open the environment. If it isn't, the update fails with "you do not have permission to open environment".
 
-<!-- TODO(launch): Confirm with DLV-434 that the service principal created at registration gets access to the target stacks' ESC environments, or only to the stacks. If only the stacks, say how to grant environment access. -->
+When you register a pipeline, Delivery gives its service principal access to the target stacks, but not to the environments that the pipeline stack and the target stacks import. Give the principal permission to [open each of those environments](/docs/administration/reference/rbac-scopes/environments/) yourself. Your own access isn't enough.
 
 ## Next steps
 

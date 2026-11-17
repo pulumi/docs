@@ -30,9 +30,7 @@ const repo = new delivery.GitHubSource("repo", {
     trigger: true,
 });
 
-const pipeline = new delivery.Pipeline("platform", {
-    program: { source: repo, directory: "delivery" },
-});
+const pipeline = new delivery.Pipeline("platform");
 
 const prod = new delivery.Stage("prod", { pipeline });
 
@@ -43,7 +41,7 @@ const cluster = new delivery.Stacks("cluster", {
 
 new delivery.Artifact("clusterEndpoint", {
     stage: prod,
-    value: cluster.outputs.apply(o => o["cluster"]["endpoint"]),
+    value: cluster.outputs.apply((o) => o["cluster"]["endpoint"]),
 });
 ```
 
@@ -53,16 +51,24 @@ new delivery.Artifact("clusterEndpoint", {
 ```python
 import pulumi_delivery as delivery
 
-repo = delivery.GitHubSource("repo", repository="acme/platform", branch="main", trigger=True)
+repo = delivery.GitHubSource(
+    "repo", repository="acme/platform", branch="main", trigger=True
+)
 
-pipeline = delivery.Pipeline("platform", program={"source": repo, "directory": "delivery"})
+pipeline = delivery.Pipeline("platform")
 
 prod = delivery.Stage("prod", pipeline=pipeline)
 
 cluster = delivery.Stacks(
     "cluster",
     stage=prod,
-    stacks={"cluster": {"stack": "platform-cluster/prod", "source": repo, "directory": "cluster"}},
+    stacks={
+        "cluster": {
+            "stack": "platform-cluster/prod",
+            "source": repo,
+            "directory": "cluster",
+        }
+    },
 )
 
 delivery.Artifact(
@@ -94,9 +100,7 @@ func main() {
 			return err
 		}
 
-		pipeline, err := delivery.NewPipeline(ctx, "platform", &delivery.PipelineArgs{
-			Program: &delivery.ProgramSourceArgs{Source: repo, Directory: pulumi.String("delivery")},
-		})
+		pipeline, err := delivery.NewPipeline(ctx, "platform", nil)
 		if err != nil {
 			return err
 		}
@@ -144,10 +148,7 @@ return await Deployment.RunAsync(() =>
         Trigger = true,
     });
 
-    var pipeline = new Pipeline("platform", new PipelineArgs
-    {
-        Program = new ProgramSourceArgs { Source = repo, Directory = "delivery" },
-    });
+    var pipeline = new Pipeline("platform");
 
     var prod = new Stage("prod", new StageArgs { Pipeline = pipeline });
 
@@ -185,9 +186,7 @@ public class App {
                 .trigger(true)
                 .build());
 
-            var pipeline = new Pipeline("platform", PipelineArgs.builder()
-                .program(ProgramSourceArgs.builder().source(repo).directory("delivery").build())
-                .build());
+            var pipeline = new Pipeline("platform");
 
             var prod = new Stage("prod", StageArgs.builder().pipeline(pipeline).build());
 
@@ -225,10 +224,6 @@ resources:
       trigger: true
   platform:
     type: delivery:Pipeline
-    properties:
-      program:
-        source: ${repo}
-        directory: delivery
 
   prod:
     type: delivery:Stage
@@ -268,12 +263,7 @@ resource "delivery_git_hub_source" "repo" {
   trigger    = true
 }
 
-resource "delivery_pipeline" "platform" {
-  program = {
-    source    = delivery_git_hub_source.repo
-    directory = "delivery"
-  }
-}
+resource "delivery_pipeline" "platform" {}
 
 resource "delivery_stage" "prod" {
   pipeline = delivery_pipeline.platform
@@ -311,9 +301,7 @@ const repo = new delivery.GitHubSource("repo", {
     trigger: { paths: ["app/**", "delivery/**"] },
 });
 
-const pipeline = new delivery.Pipeline("shop", {
-    program: { source: repo, directory: "delivery" },
-});
+const pipeline = new delivery.Pipeline("shop");
 
 const platform = new delivery.PipelineSource("platform", {
     pipeline: "platform-delivery/main",
@@ -330,7 +318,7 @@ new delivery.Stacks("app", {
             stack: "shop-app/dev",
             source: repo,
             directory: "app",
-            config: { clusterEndpoint: platform.artifacts.apply(a => String(a["clusterEndpoint"])) },
+            config: { clusterEndpoint: platform.artifacts.apply((a) => String(a["clusterEndpoint"])) },
         },
     },
 });
@@ -349,7 +337,7 @@ repo = delivery.GitHubSource(
     trigger={"paths": ["app/**", "delivery/**"]},
 )
 
-pipeline = delivery.Pipeline("shop", program={"source": repo, "directory": "delivery"})
+pipeline = delivery.Pipeline("shop")
 
 platform = delivery.PipelineSource(
     "platform",
@@ -368,7 +356,11 @@ delivery.Stacks(
             "stack": "shop-app/dev",
             "source": repo,
             "directory": "app",
-            "config": {"clusterEndpoint": platform.artifacts.apply(lambda a: str(a["clusterEndpoint"]))},
+            "config": {
+                "clusterEndpoint": platform.artifacts.apply(
+                    lambda a: str(a["clusterEndpoint"])
+                )
+            },
         },
     },
 )
@@ -398,9 +390,7 @@ func main() {
 			return err
 		}
 
-		pipeline, err := delivery.NewPipeline(ctx, "shop", &delivery.PipelineArgs{
-			Program: &delivery.ProgramSourceArgs{Source: repo, Directory: pulumi.String("delivery")},
-		})
+		pipeline, err := delivery.NewPipeline(ctx, "shop", nil)
 		if err != nil {
 			return err
 		}
@@ -454,10 +444,7 @@ return await Deployment.RunAsync(() =>
         Trigger = new SourceTriggerArgs { Paths = { "app/**", "delivery/**" } },
     });
 
-    var pipeline = new Pipeline("shop", new PipelineArgs
-    {
-        Program = new ProgramSourceArgs { Source = repo, Directory = "delivery" },
-    });
+    var pipeline = new Pipeline("shop");
 
     var platform = new PipelineSource("platform", new PipelineSourceArgs
     {
@@ -508,9 +495,7 @@ public class App {
                 .trigger(SourceTriggerArgs.builder().paths("app/**", "delivery/**").build())
                 .build());
 
-            var pipeline = new Pipeline("shop", PipelineArgs.builder()
-                .program(ProgramSourceArgs.builder().source(repo).directory("delivery").build())
-                .build());
+            var pipeline = new Pipeline("shop");
 
             var platform = new PipelineSource("platform", PipelineSourceArgs.builder()
                 .pipeline("platform-delivery/main")
@@ -555,10 +540,6 @@ resources:
           - delivery/**
   shop:
     type: delivery:Pipeline
-    properties:
-      program:
-        source: ${repo}
-        directory: delivery
   platform:
     type: delivery:PipelineSource
     properties:
@@ -603,12 +584,7 @@ resource "delivery_git_hub_source" "repo" {
   }
 }
 
-resource "delivery_pipeline" "shop" {
-  program = {
-    source    = delivery_git_hub_source.repo
-    directory = "delivery"
-  }
-}
+resource "delivery_pipeline" "shop" {}
 
 resource "delivery_pipeline_source" "platform" {
   pipeline = "platform-delivery/main"
@@ -645,7 +621,7 @@ Pipelines must belong to the same Pulumi organization, and the [service principa
 
 ## Patterns for monorepos
 
-It's also common to keep several pipelines in one repository. Give each pipeline its own program directory and stack, and set its source's `trigger` paths so it runs only when its own files change:
+It's also common to keep several pipelines in one repository. Give each pipeline its own program directory and stack, and set its source's `trigger` paths so it runs only when its own files change. Set `directory` in each pipeline stack's [`delivery:source`](/docs/delivery/concepts/#pipeline-program) config to that pipeline's program directory, such as `delivery/shop`:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
@@ -655,15 +631,13 @@ It's also common to keep several pipelines in one repository. Give each pipeline
 // delivery/shop/index.ts
 import * as delivery from "@pulumi/delivery";
 
-const repo = new delivery.GitHubSource("repo", {
+new delivery.GitHubSource("repo", {
     repository: "acme/monorepo",
     branch: "main",
     trigger: { paths: ["shop/**", "delivery/shop/**"] },
 });
 
-const pipeline = new delivery.Pipeline("shop", {
-    program: { source: repo, directory: "delivery/shop" },
-});
+new delivery.Pipeline("shop");
 ```
 
 {{% /choosable %}}
@@ -673,17 +647,14 @@ const pipeline = new delivery.Pipeline("shop", {
 # delivery/shop/__main__.py
 import pulumi_delivery as delivery
 
-repo = delivery.GitHubSource(
+delivery.GitHubSource(
     "repo",
     repository="acme/monorepo",
     branch="main",
     trigger={"paths": ["shop/**", "delivery/shop/**"]},
 )
 
-pipeline = delivery.Pipeline(
-    "shop",
-    program={"source": repo, "directory": "delivery/shop"},
-)
+delivery.Pipeline("shop")
 ```
 
 {{% /choosable %}}
@@ -700,7 +671,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		repo, err := delivery.NewGitHubSource(ctx, "repo", &delivery.GitHubSourceArgs{
+		_, err := delivery.NewGitHubSource(ctx, "repo", &delivery.GitHubSourceArgs{
 			Repository: pulumi.String("acme/monorepo"),
 			Branch:     pulumi.String("main"),
 			Trigger: delivery.SourceTriggerArgs{
@@ -711,9 +682,7 @@ func main() {
 			return err
 		}
 
-		_, err = delivery.NewPipeline(ctx, "shop", &delivery.PipelineArgs{
-			Program: &delivery.ProgramSourceArgs{Source: repo, Directory: pulumi.String("delivery/shop")},
-		})
+		_, err = delivery.NewPipeline(ctx, "shop", nil)
 		return err
 	})
 }
@@ -730,17 +699,14 @@ using Pulumi.Delivery.Delivery.Inputs;
 
 return await Deployment.RunAsync(() =>
 {
-    var repo = new GitHubSource("repo", new GitHubSourceArgs
+    new GitHubSource("repo", new GitHubSourceArgs
     {
         Repository = "acme/monorepo",
         Branch = "main",
         Trigger = new SourceTriggerArgs { Paths = { "shop/**", "delivery/shop/**" } },
     });
 
-    new Pipeline("shop", new PipelineArgs
-    {
-        Program = new ProgramSourceArgs { Source = repo, Directory = "delivery/shop" },
-    });
+    new Pipeline("shop");
 });
 ```
 
@@ -758,7 +724,7 @@ import com.pulumi.delivery.delivery.inputs.*;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var repo = new GitHubSource("repo", GitHubSourceArgs.builder()
+            new GitHubSource("repo", GitHubSourceArgs.builder()
                 .repository("acme/monorepo")
                 .branch("main")
                 .trigger(SourceTriggerArgs.builder()
@@ -766,12 +732,7 @@ public class App {
                     .build())
                 .build());
 
-            new Pipeline("shop", PipelineArgs.builder()
-                .program(ProgramSourceArgs.builder()
-                    .source(repo)
-                    .directory("delivery/shop")
-                    .build())
-                .build());
+            new Pipeline("shop");
         });
     }
 }
@@ -797,10 +758,6 @@ resources:
           - delivery/shop/**
   shop:
     type: delivery:Pipeline
-    properties:
-      program:
-        source: ${repo}
-        directory: delivery/shop
 ```
 
 {{% /choosable %}}
@@ -824,12 +781,7 @@ resource "delivery_git_hub_source" "repo" {
   }
 }
 
-resource "delivery_pipeline" "shop" {
-  program = {
-    source    = delivery_git_hub_source.repo
-    directory = "delivery/shop"
-  }
-}
+resource "delivery_pipeline" "shop" {}
 ```
 
 {{% /choosable %}}

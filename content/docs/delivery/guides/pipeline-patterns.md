@@ -32,9 +32,7 @@ const repo = new delivery.GitHubSource("repo", {
     trigger: { paths: ["app/**", "delivery/**"] },
 });
 
-const pipeline = new delivery.Pipeline("shop", {
-    program: { source: repo, directory: "delivery" },
-});
+const pipeline = new delivery.Pipeline("shop");
 
 function deploy(stage: delivery.Stage, name: string, region: string) {
     const app = new delivery.Stacks(name, {
@@ -49,7 +47,7 @@ function deploy(stage: delivery.Stage, name: string, region: string) {
         directory: "delivery",
         command: "sh smoke.sh",
         environment: {
-            ENDPOINT: app.outputs.apply(o => String(o["app"]["endpoint"])),
+            ENDPOINT: app.outputs.apply((o) => String(o["app"]["endpoint"])),
             EXPECTED_REGION: region,
         },
     });
@@ -82,9 +80,7 @@ repo = delivery.GitHubSource(
     trigger={"paths": ["app/**", "delivery/**"]},
 )
 
-pipeline = delivery.Pipeline(
-    "shop", program={"source": repo, "directory": "delivery"}
-)
+pipeline = delivery.Pipeline("shop")
 
 
 def deploy(stage: delivery.Stage, name: str, region: str):
@@ -157,13 +153,7 @@ func main() {
 			return err
 		}
 
-		pipeline, err := delivery.NewPipeline(ctx, "shop",
-			&delivery.PipelineArgs{
-				Program: &delivery.ProgramSourceArgs{
-					Source:    repo,
-					Directory: pulumi.String("delivery"),
-				},
-			})
+		pipeline, err := delivery.NewPipeline(ctx, "shop", nil)
 		if err != nil {
 			return err
 		}
@@ -252,14 +242,7 @@ return await Deployment.RunAsync(() =>
         Trigger = new SourceTriggerArgs { Paths = { "app/**", "delivery/**" } },
     });
 
-    var pipeline = new Pipeline("shop", new PipelineArgs
-    {
-        Program = new ProgramSourceArgs
-        {
-            Source = repo,
-            Directory = "delivery",
-        },
-    });
+    var pipeline = new Pipeline("shop");
 
     void Deploy(Stage stage, string name, string region)
     {
@@ -333,12 +316,7 @@ public class App {
                     .build())
                 .build());
 
-            var pipeline = new Pipeline("shop", PipelineArgs.builder()
-                .program(ProgramSourceArgs.builder()
-                    .source(repo)
-                    .directory("delivery")
-                    .build())
-                .build());
+            var pipeline = new Pipeline("shop");
 
             var dev = new Stage("dev", StageArgs.builder()
                 .pipeline(pipeline)
@@ -396,12 +374,7 @@ resource "delivery_git_hub_source" "repo" {
   }
 }
 
-resource "delivery_pipeline" "shop" {
-  program = {
-    source    = delivery_git_hub_source.repo
-    directory = "delivery"
-  }
-}
+resource "delivery_pipeline" "shop" {}
 
 resource "delivery_stage" "dev" {
   pipeline = delivery_pipeline.shop
@@ -805,9 +778,7 @@ const repo = new delivery.GitHubSource("repo", {
     },
 });
 
-const pipeline = new delivery.Pipeline("shop", {
-    program: { source: repo, directory: "delivery" },
-});
+const pipeline = new delivery.Pipeline("shop");
 
 const build = new delivery.Stage("build", { pipeline });
 const image = new delivery.Stacks("image", {
@@ -872,9 +843,7 @@ repo = delivery.GitHubSource(
     },
 )
 
-pipeline = delivery.Pipeline(
-    "shop", program={"source": repo, "directory": "delivery"}
-)
+pipeline = delivery.Pipeline("shop")
 
 build = delivery.Stage("build", pipeline=pipeline)
 image = delivery.Stacks(
@@ -961,13 +930,7 @@ func main() {
 			return err
 		}
 
-		pipeline, err := delivery.NewPipeline(ctx, "shop",
-			&delivery.PipelineArgs{
-				Program: &delivery.ProgramSourceArgs{
-					Source:    repo,
-					Directory: pulumi.String("delivery"),
-				},
-			})
+		pipeline, err := delivery.NewPipeline(ctx, "shop", nil)
 		if err != nil {
 			return err
 		}
@@ -1075,14 +1038,7 @@ return await Deployment.RunAsync(() =>
         },
     });
 
-    var pipeline = new Pipeline("shop", new PipelineArgs
-    {
-        Program = new ProgramSourceArgs
-        {
-            Source = repo,
-            Directory = "delivery",
-        },
-    });
+    var pipeline = new Pipeline("shop");
 
     var build = new Stage("build", new StageArgs { Pipeline = pipeline });
     var image = new Stacks("image", new StacksArgs
@@ -1173,12 +1129,7 @@ public class App {
                 ).build())
                 .build());
 
-            var pipeline = new Pipeline("shop", PipelineArgs.builder()
-                .program(ProgramSourceArgs.builder()
-                    .source(repo)
-                    .directory("delivery")
-                    .build())
-                .build());
+            var pipeline = new Pipeline("shop");
 
             var build = new Stage("build", StageArgs.builder()
                 .pipeline(pipeline)
@@ -1255,12 +1206,7 @@ resource "delivery_git_hub_source" "repo" {
   }
 }
 
-resource "delivery_pipeline" "shop" {
-  program = {
-    source    = delivery_git_hub_source.repo
-    directory = "delivery"
-  }
-}
+resource "delivery_pipeline" "shop" {}
 
 resource "delivery_stage" "build" {
   pipeline = delivery_pipeline.shop
