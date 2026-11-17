@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# scrub-pr.sh: remove everything GitHub lets a repo admin remove for one pull request.
+# scrub-pr.sh: remove everything GitHub lets someone with write access remove for one pull request.
 #
 # Use it when a PR leaked something it shouldn't have (unreleased product details,
 # credentials, customer data). It inventories the PR, prints the full plan, and does
@@ -22,7 +22,8 @@
 # Usage:
 #   scripts/scrub-pr.sh <pr-number> [--repo owner/name] [--dry-run]
 #
-# Requires: gh (signed in as someone with admin on the repo), jq.
+# Requires: gh signed in as someone with write access to the repo (classic token
+# scope `repo`, SSO-authorized for the org), jq, and bash 4+.
 
 set -uo pipefail
 
@@ -35,7 +36,7 @@ while [[ $# -gt 0 ]]; do
     case "$1" in
         --repo) REPO="$2"; shift 2 ;;
         --dry-run) DRY_RUN=1; shift ;;
-        -h|--help) sed -n '2,27p' "$0"; exit 0 ;;
+        -h|--help) sed -n '2,28p' "$0"; exit 0 ;;
         *) if [[ -z "$PR" && "$1" =~ ^[0-9]+$ ]]; then PR="$1"; shift; else echo "Unknown argument: $1" >&2; exit 2; fi ;;
     esac
 done
