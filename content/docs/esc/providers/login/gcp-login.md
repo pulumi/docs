@@ -21,7 +21,7 @@ The `gcp-login` provider enables you to log in to Google Cloud using OpenID Conn
 
 ### Using outputs with Pulumi IaC
 
-The [Pulumi Google Cloud provider](https://www.pulumi.com/registry/packages/gcp/) reads the project and OAuth access token from the environment:
+The [Pulumi Google Cloud provider](https://www.pulumi.com/registry/packages/gcp/) reads the project and OAuth access token from the environment. Set the project to the project ID rather than the `project` output of `gcp-login`, which is the numeric project number that some Google Cloud APIs, such as Artifact Registry, reject:
 
 ```yaml
 values:
@@ -34,14 +34,14 @@ values:
           providerId: pulumi-esc
           serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com
   environmentVariables:
-    # The Pulumi Google Cloud provider reads the project (as a numeric ID) and the access token
-    GOOGLE_CLOUD_PROJECT: ${gcp.login.project}
+    # The project ID (e.g. "my-project-12345"), not the numeric project number that gcp-login outputs
+    GOOGLE_CLOUD_PROJECT: my-project-12345
     GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
 ```
 
 ### Using outputs with the gcloud CLI
 
-The `gcloud` CLI reads the project ID (a string identifier, not the numeric project number used by the Pulumi provider) and the access token from its own `CLOUDSDK_*` environment variables, which differ from the ones the Pulumi provider uses:
+The `gcloud` CLI reads the project ID (a string identifier, not the numeric project number) and the access token from its own `CLOUDSDK_*` environment variables, which differ from the ones the Pulumi provider uses:
 
 ```yaml
 values:
@@ -54,7 +54,7 @@ values:
           providerId: pulumi-esc
           serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com
   environmentVariables:
-    # CLOUDSDK_CORE_PROJECT takes the project ID string (e.g. "my-project-12345"), not the numeric project number used by GOOGLE_CLOUD_PROJECT above
+    # CLOUDSDK_CORE_PROJECT takes the project ID string (e.g. "my-project-12345"), not the numeric project number
     # See: https://cloud.google.com/sdk/docs/properties#setting_properties_using_environment_variables
     CLOUDSDK_CORE_PROJECT: my-project-12345
     CLOUDSDK_AUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
