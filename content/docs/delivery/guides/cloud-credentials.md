@@ -180,6 +180,14 @@ resources:
 {{% choosable language hcl %}}
 
 ```hcl
+terraform {
+  required_providers {
+    delivery = {
+      source = "pulumi/delivery"
+    }
+  }
+}
+
 variable "awsAccessKeyId" {
   type = string
 }

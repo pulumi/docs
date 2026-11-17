@@ -254,6 +254,14 @@ resources:
 {{% choosable language hcl %}}
 
 ```hcl
+terraform {
+  required_providers {
+    delivery = {
+      source = "pulumi/delivery"
+    }
+  }
+}
+
 resource "delivery_git_hub_source" "repo" {
   repository = "acme/platform"
   branch     = "main"
@@ -579,6 +587,14 @@ resources:
 {{% choosable language hcl %}}
 
 ```hcl
+terraform {
+  required_providers {
+    delivery = {
+      source = "pulumi/delivery"
+    }
+  }
+}
+
 resource "delivery_git_hub_source" "repo" {
   repository = "acme/shop"
   branch     = "main"
@@ -792,6 +808,14 @@ resources:
 
 ```hcl
 # delivery/shop/main.tf
+terraform {
+  required_providers {
+    delivery = {
+      source = "pulumi/delivery"
+    }
+  }
+}
+
 resource "delivery_git_hub_source" "repo" {
   repository = "acme/monorepo"
   branch     = "main"
