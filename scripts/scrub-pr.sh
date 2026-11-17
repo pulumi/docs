@@ -36,7 +36,7 @@ while [[ $# -gt 0 ]]; do
     case "$1" in
         --repo) REPO="$2"; shift 2 ;;
         --dry-run) DRY_RUN=1; shift ;;
-        -h|--help) sed -n '2,28p' "$0"; exit 0 ;;
+        -h|--help) awk 'NR>1 && !/^#/ {exit} NR>1 {sub(/^# ?/, ""); print}' "$0"; exit 0 ;;
         *) if [[ -z "$PR" && "$1" =~ ^[0-9]+$ ]]; then PR="$1"; shift; else echo "Unknown argument: $1" >&2; exit 2; fi ;;
     esac
 done
