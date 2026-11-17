@@ -25,7 +25,6 @@ If you are an AI agent or programmatic consumer, start here. Each docs page link
 - [CLI for agents](https://www.pulumi.com/docs/ai/concepts/cli-for-agents/): run any command with `npx pulumi`, with an [ephemeral Pulumi Cloud account](https://www.pulumi.com/docs/administration/concepts/agent-accounts/) provisioned on first use when `PULUMI_ENABLE_AUTOMATIC_AGENT_SIGNUP=true` is set
 - [Coding agents](https://www.pulumi.com/docs/ai/coding-agents/): use Pulumi with the coding agent you already use (Claude Code, Codex, Cursor, and others)
 - [Pulumi Agent Skills](https://www.pulumi.com/docs/ai/concepts/agent-skills/): proven Pulumi workflows for agents; install with `npx skills add pulumi/agent-skills/pulumi --skill '*'`
-- [Agent Skills index](https://www.pulumi.com/.well-known/agent-skills/index.json): machine-readable list of the published Pulumi Agent Skills
 - [Pulumi MCP server](https://www.pulumi.com/docs/ai/guides/set-up-mcp-server/): hosted MCP server exposing stacks, resource search, and the Registry as tools
 - [MCP endpoint](https://mcp.ai.pulumi.com/mcp): the Streamable HTTP endpoint to add to an MCP client, e.g. `claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp`
 - [API catalog](https://www.pulumi.com/.well-known/api-catalog): RFC 9727 linkset of Pulumi's public APIs
