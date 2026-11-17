@@ -69,6 +69,7 @@ languages:
   - dotnet                # the .NET / C# family
   - java
   - yaml
+  - hcl
 
 ai:
   - ai
@@ -159,6 +160,5 @@ ecosystem:
   - terraform
   - cloudformation
   - aws-cdk
-  - hcl
   - github
   - gitlab
