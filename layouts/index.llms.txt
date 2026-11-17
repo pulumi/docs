@@ -28,7 +28,6 @@ If you are an AI agent or programmatic consumer, start here. Each docs page link
 - [Agent Skills index](https://www.pulumi.com/.well-known/agent-skills/index.json): machine-readable list of the published Pulumi Agent Skills
 - [Pulumi MCP server](https://www.pulumi.com/docs/ai/guides/set-up-mcp-server/): hosted MCP server exposing stacks, resource search, and the Registry as tools
 - [MCP endpoint](https://mcp.ai.pulumi.com/mcp): the Streamable HTTP endpoint to add to an MCP client, e.g. `claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp`
-- [MCP server card](https://www.pulumi.com/.well-known/mcp/server-card.json): machine-readable description of the Pulumi MCP server
 - [API catalog](https://www.pulumi.com/.well-known/api-catalog): RFC 9727 linkset of Pulumi's public APIs
 - [Hand off to Pulumi Neo](https://www.pulumi.com/docs/ai/coding-agents/handoff/): delegate an infrastructure task from a coding agent to Pulumi Neo
 - [Support request API](https://www.pulumi.com/docs/support/support-request-api/): file a support ticket with one JSON POST to `https://www.pulumi.com/api/support`, no auth; never send a `leave_blank` key, it is a spam trap that silently discards the request
