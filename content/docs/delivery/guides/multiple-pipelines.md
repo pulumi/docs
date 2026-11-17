@@ -621,7 +621,7 @@ Pipelines must belong to the same Pulumi organization, and the [service principa
 
 ## Patterns for monorepos
 
-It's also common to keep several pipelines in one repository. Give each pipeline its own program directory and stack, and set its source's `trigger` paths so it runs only when its own files change. Set `directory` in each pipeline stack's [`delivery:source`](/docs/delivery/concepts/#pipeline-program) config to that pipeline's program directory, such as `delivery/shop`:
+It's also common to keep several pipelines in one repository. Give each pipeline its own program directory and stack, and set its source's `trigger` paths so it runs only when its own files change.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 

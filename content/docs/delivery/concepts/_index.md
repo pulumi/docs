@@ -19,7 +19,7 @@ Because the pipeline is a Pulumi program, it's versioned and reviewed with your 
 {{% notes type="info" %}}
 Pulumi Delivery is in public preview. Behavior, the SDK, and the REST API routes under `/api/preview/` can change before general availability.
 
-Pipeline programs need Pulumi CLI v3.275.0 or later.
+Pulumi Delivery needs Pulumi CLI v3.277.0 or later.
 {{% /notes %}}
 
 ## An example pipeline
@@ -396,17 +396,20 @@ Each push that matches the trigger starts a [run](#runs), which takes the pushed
 
 ## Pipeline program
 
-The pipeline lives in a repository as a Pulumi project, and it declares exactly one `Pipeline` resource. Set `delivery:source` in the pipeline stack's config file to say where the program lives:
+The pipeline lives in a repository as a Pulumi project, and it declares exactly one `Pipeline` resource. You work with it in two ways:
 
-```yaml
-config:
-  delivery:source:
-    url: https://github.com/acme/shop
-    branch: main
-    directory: delivery
-```
+- **Register it** with `pulumi delivery register`. Pulumi Cloud stores the pipeline and listens for changes. One registered, its triggers start runs in Pulumi Cloud.
+- **Run it locally** with `pulumi up`. This is how you can iterate on your pipeline program from your local branch without needing to push your changes.
 
-You _register_ the pipeline by running `pulumi delivery register` on its stack. Registering stores the pipeline definition and doesn't start a run. After you register, a push to the branch in `delivery:source` updates the pipeline definition, and each run executes the program on its own run stack. A run never changes the pipeline definition.
+### Register the pipeline
+
+To register the pipeline, run `pulumi delivery register` in the pipeline's project directory.
+
+Registering doesn't start a run. The command writes the pipeline's location in your repository to the stack's `delivery:source` config. Commit the updated config file so that Pulumi Cloud can find the program. Once registered, a push to the repository's default branch updates the pipeline.
+
+### Run the pipeline locally
+
+Run `pulumi up` on the pipeline stack to start a run from your checked out branch. The pipeline program runs on your machine, and the stack updates and jobs run in Pulumi Cloud at the latest pushed commit of their sources. The command waits for the run to end and prints a link to it in the Pulumi Cloud console. A stack update or job that hasn't changed since your last `pulumi up` doesn't run again.
 
 ## Stages
 
