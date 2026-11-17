@@ -131,7 +131,7 @@ An HCL component package is distributed and published like a component authored 
 
 ## PulumiPlugin.yaml
 
-The `PulumiPlugin.yaml` file tells the Pulumi engine how to run the component provider. For HCL MLCs it specifies the `hcl` runtime and the package name:
+The `PulumiPlugin.yaml` file tells the Pulumi engine how to run the component provider. For HCL MLCs it specifies the `hcl` runtime and the plugin name:
 
 ```yaml
 name: my-networking
