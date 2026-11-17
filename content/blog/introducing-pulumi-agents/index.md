@@ -3,7 +3,7 @@ title: "Introducing Pulumi Agents"
 date: 2026-11-17
 draft: true
 meta_desc: "Pulumi Agents are your agentic infrastructure team, helping with incident investigation, planning, and proactive maintenance across your cloud infrastructure."
-feature_image:
+feature_image: feature.png
 authors:
     - peter-yoakum
 tags:
