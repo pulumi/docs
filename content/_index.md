@@ -1,5 +1,5 @@
 ---
-title: The infrastructure as code platform for the AI era – Pulumi
+title: Unleash agents on your infrastructure – Pulumi
 meta_desc: Pulumi is an open-source infrastructure as code platform that helps humans and agents build and manage cloud infrastructure with real programming languages.
 meta_image: /images/home/home-meta.png
 
