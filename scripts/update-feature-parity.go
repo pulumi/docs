@@ -48,15 +48,23 @@ type MarketingFeature struct {
 }
 
 type FeatureMetadata struct {
-	MarketingName  string   `json:"marketing_name"`
-	DefaultETA     string   `json:"default_eta"`
-	Notes          string   `json:"notes"`
-	Summary        string   `json:"summary,omitempty"`      // Internal description shown in the summary table
-	Status         string   `json:"status,omitempty"`       // Overrides the computed status (for example, "Y (needs config)")
-	DependsOn      []string `json:"depends_on,omitempty"`   // Extra dependencies not declared in features.go (for example, Neo sub-features)
-	FeatureKeys    []string `json:"feature_keys,omitempty"` // Optional: multiple feature flags mapping to one entry
-	IncludeInTable *bool    `json:"include_in_table"`       // Whether to show in summary table (default true)
-	Gate           string   `json:"gate,omitempty"`         // For hand-maintained rows with no flag: what controls the feature (for example, "none (configuration only)")
+	MarketingName  string         `json:"marketing_name"`
+	DefaultETA     string         `json:"default_eta"`
+	Notes          string         `json:"notes"`
+	Summary        string         `json:"summary,omitempty"`       // Internal description shown in the summary table
+	Status         string         `json:"status,omitempty"`        // Overrides the computed status (for example, "Y (needs config)")
+	DependsOn      []string       `json:"depends_on,omitempty"`    // Extra dependencies not declared in features.go (for example, Neo sub-features)
+	FeatureKeys    []string       `json:"feature_keys,omitempty"`  // Optional: multiple feature flags mapping to one entry
+	IncludeInTable *bool          `json:"include_in_table"`        // Whether to show in summary table (default true)
+	Gate           string         `json:"gate,omitempty"`          // For hand-maintained rows with no flag: what controls the feature (for example, "none (configuration only)")
+	IgnoreChecks   []IgnoredCheck `json:"ignore_checks,omitempty"` // Direct LaunchDarkly checks of this row's flags that don't decide its status
+}
+
+// IgnoredCheck names a file whose direct LaunchDarkly checks of a row's flags don't gate that row
+// on self-hosted, such as a check inside a feature that self-hosted doesn't run at all.
+type IgnoredCheck struct {
+	File   string `json:"file"`   // Path in pulumi-service, without a line number, which would drift
+	Reason string `json:"reason"` // Why the check doesn't apply; required
 }
 
 type FeatureConfig struct {
@@ -461,6 +469,10 @@ func generateRawContent(features map[string]*FeatureInfo) string {
 		var defaults, locations []string
 		seen := make(map[string]bool)
 		for _, c := range f.LaunchDarklyChecks {
+			if c.ignored {
+				locations = append(locations, c.location+" (ignored)")
+				continue
+			}
 			if !seen[c.defaultValue] {
 				seen[c.defaultValue] = true
 				defaults = append(defaults, c.defaultValue)
@@ -470,6 +482,8 @@ func generateRawContent(features map[string]*FeatureInfo) string {
 		status := "On"
 		if f.DirectLaunchDarklyOff {
 			status = "Off"
+		} else if len(defaults) == 0 {
+			status = "Ignored"
 		} else if !seen["true"] {
 			status = "Non-boolean"
 		}
@@ -506,21 +520,23 @@ func generateRawContent(features map[string]*FeatureInfo) string {
 
 var ldKeyDefinition = regexp.MustCompile(`(?m)^\s*(LDKey[A-Za-z0-9]+)\s+LDKey\s*=\s*"([^"]+)"`)
 
-// ldCheckMethods are the LaunchDarkly client methods that read a flag. Most default to false;
-// the rest take the default as their last argument.
+// ldCheckMethods are the methods that read a flag: the LaunchDarkly client's, and the wrappers on
+// organizations and elsewhere that pass the flag through to it. The value says whether the method
+// takes its default as the last argument; the rest default to false. Either way the flag comes
+// right before the default, or last, which holds however many arguments come ahead of it.
 var ldCheckMethods = map[string]bool{
-	"CheckFlagEnabledForOrgID":               true,
-	"CheckFlagEnabledForOrgIDByID":           true,
-	"CheckFlagEnabledForOrgSubscription":     true,
-	"DeprecatedCheckLaunchDarklyFlag":        true,
+	"CheckFlagEnabled":                       false,
+	"CheckFlagEnabledForNamedOrg":            false,
+	"CheckFlagEnabledForOrgID":               false,
+	"CheckFlagEnabledForOrgSubscription":     false,
+	"CheckFlagEnabledForSubscription":        false,
+	"CheckFlagEnabledGlobally":               false,
+	"DeprecatedCheckLaunchDarklyFlag":        false,
 	"DeprecatedCheckLaunchDarklyFlagByOrgID": true,
+	"FlagEnabled":                            false,
+	"GetFlagIntValue":                        true,
 	"GetFlagIntValueForOrg":                  true,
-	"GetFlagStringValueForOrgByID":           true,
-}
-
-var ldMethodsWithDefaultArg = map[string]bool{
-	"DeprecatedCheckLaunchDarklyFlagByOrgID": true,
-	"GetFlagIntValueForOrg":                  true,
+	"GetFlagStringValue":                     true,
 	"GetFlagStringValueForOrgByID":           true,
 }
 
@@ -538,6 +554,7 @@ var pkgFlagFuncs = map[string]bool{
 type ldCheck struct {
 	defaultValue string // What the offline client returns: "false", "true", or a non-boolean default
 	location     string // File and line of the check
+	ignored      bool   // Named by an ignore_checks entry, so it doesn't count toward the row's status
 }
 
 // addLaunchDarklyOnlyFeatures finds LaunchDarkly flags that pulumi-service checks directly in
@@ -546,17 +563,10 @@ type ldCheck struct {
 // Flags with no features.go entry are added as features; flags that a features.go entry
 // already uses mark that entry as off.
 func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*FeatureInfo) {
-	flagDir := filepath.Join(servicePath, "cmd/service/services/featureflag")
-	data, err := os.ReadFile(filepath.Join(flagDir, "launch_darkly.go"))
+	flagDir := filepath.Join(servicePath, "pkg/featureflags")
+	data, err := os.ReadFile(filepath.Join(flagDir, "flags.go"))
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error reading LaunchDarkly keys: %v\n", err)
-		os.Exit(1)
-	}
-	// pkg/featureflags defines a second set of keys, read with featureflags.Enabled and its variants
-	if pkgData, err := os.ReadFile(filepath.Join(servicePath, "pkg/featureflags/flags.go")); err == nil {
-		data = append(append(data, '\n'), pkgData...)
-	} else {
-		fmt.Fprintf(os.Stderr, "Error reading pkg/featureflags keys: %v\n", err)
 		os.Exit(1)
 	}
 	flagValues := make(map[string]string) // LDKey constant -> flag name
@@ -566,8 +576,8 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 		keysByValue[m[2]] = m[1]
 	}
 
-	// Service-wide helpers such as TFModulesRegistryEnabled() wrap getBool(key, context, default)
-	helpers := parseLaunchDarklyHelpers(filepath.Join(flagDir, "flags.go"))
+	// Service-wide helpers such as SkipGitHubAppCheck(ctx) wrap getBool(key, context, default, subject)
+	helpers := parseLaunchDarklyHelpers(filepath.Join(flagDir, "launch_darkly.go"))
 	if len(flagValues) == 0 || len(helpers) == 0 {
 		// A layout change upstream would otherwise silently drop every direct check
 		fmt.Fprintf(os.Stderr, "Error: found %d LaunchDarkly keys and %d helpers in %s; has the featureflag package moved?\n", len(flagValues), len(helpers), flagDir)
@@ -632,7 +642,7 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 				rel, _ := filepath.Rel(servicePath, pos.Filename)
 				location := fmt.Sprintf("%s:%d", rel, pos.Line)
 
-				if helper, ok := helpers[sel.Sel.Name]; ok && len(call.Args) == 0 {
+				if helper, ok := helpers[sel.Sel.Name]; ok && len(call.Args) == 1 {
 					checks[helper.key] = append(checks[helper.key], ldCheck{defaultValue: helper.defaultValue, location: location})
 					return true
 				}
@@ -644,15 +654,15 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 					}
 					return true
 				}
-				if !ldCheckMethods[sel.Sel.Name] {
+				hasDefault, ok := ldCheckMethods[sel.Sel.Name]
+				if !ok {
 					return true
 				}
-				// The flag is the second argument, or the third for CheckFlagEnabledForOrgSubscription
-				flagArg := 1
-				if sel.Sel.Name == "CheckFlagEnabledForOrgSubscription" {
-					flagArg = 2
+				flagArg := len(call.Args) - 1
+				if hasDefault {
+					flagArg--
 				}
-				if len(call.Args) <= flagArg {
+				if flagArg < 0 {
 					return true
 				}
 				key := flagKey(call.Args[flagArg])
@@ -660,7 +670,7 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 					return true
 				}
 				defaultValue := "false"
-				if ldMethodsWithDefaultArg[sel.Sel.Name] && len(call.Args) > 0 {
+				if hasDefault {
 					defaultValue = exprSource(call.Args[len(call.Args)-1])
 				}
 				checks[key] = append(checks[key], ldCheck{defaultValue: defaultValue, location: location})
@@ -673,6 +683,8 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 		fmt.Fprintf(os.Stderr, "Error: %d Go files in pulumi-service failed to parse, so their LaunchDarkly checks would be missed\n", parseFailures)
 		os.Exit(1)
 	}
+
+	ignoreChecks(checks, loadFeatureConfig())
 
 	// Flags already attached to a features.go entry
 	featureByFlag := make(map[string]*FeatureInfo)
@@ -690,7 +702,7 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 	for key, found := range checks {
 		off := false
 		for _, c := range found {
-			if c.defaultValue == "false" {
+			if c.defaultValue == "false" && !c.ignored {
 				off = true
 			}
 		}
@@ -716,12 +728,45 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 	}
 }
 
+// ignoreChecks marks the checks that ignore_checks entries name. An entry applies to its own key,
+// or to its feature_keys when it has them. An entry that matches no check is reported, because the
+// code it describes has moved or gone and the entry should be updated or removed.
+func ignoreChecks(checks map[string][]ldCheck, config *FeatureConfig) {
+	for name, metadata := range config.Features {
+		flags := metadata.FeatureKeys
+		if len(flags) == 0 {
+			flags = []string{name}
+		}
+		for _, ignore := range metadata.IgnoreChecks {
+			if ignore.File == "" || ignore.Reason == "" {
+				fmt.Fprintf(os.Stderr, "Error: ignore_checks entries on %s need both file and reason\n", name)
+				os.Exit(1)
+			}
+			matched := false
+			for _, flag := range flags {
+				for i, c := range checks[flag] {
+					if file, _, _ := strings.Cut(c.location, ":"); file == ignore.File {
+						checks[flag][i].ignored = true
+						matched = true
+					}
+				}
+			}
+			if !matched {
+				fmt.Fprintf(os.Stderr, "Warning: ignore_checks on %s names %s, but no check of its flags is there\n", name, ignore.File)
+			}
+		}
+	}
+}
+
 type ldHelper struct {
 	key          string
 	defaultValue string
 }
 
-// parseLaunchDarklyHelpers maps each no-argument helper in flags.go to the flag it reads and its default.
+// parseLaunchDarklyHelpers maps each helper that takes only a context to the flag it reads and its
+// default. The helpers are unexported methods that a generated model client exposes with the first
+// letter capitalized (tfModulesRegistryEnabled becomes TfModulesRegistryEnabled), so they're keyed
+// by that exported name.
 func parseLaunchDarklyHelpers(path string) map[string]ldHelper {
 	helpers := make(map[string]ldHelper)
 	file, err := parser.ParseFile(token.NewFileSet(), path, nil, 0)
@@ -730,17 +775,21 @@ func parseLaunchDarklyHelpers(path string) map[string]ldHelper {
 	}
 	for _, decl := range file.Decls {
 		fn, ok := decl.(*ast.FuncDecl)
-		if !ok || fn.Recv == nil || fn.Body == nil || fn.Type.Params.NumFields() != 0 {
+		if !ok || fn.Recv == nil || fn.Body == nil || fn.Type.Params.NumFields() != 1 {
 			continue
 		}
+		if param, ok := fn.Type.Params.List[0].Type.(*ast.SelectorExpr); !ok || param.Sel.Name != "Context" {
+			continue
+		}
+		name := strings.ToUpper(fn.Name.Name[:1]) + fn.Name.Name[1:]
 		ast.Inspect(fn.Body, func(n ast.Node) bool {
 			call, ok := n.(*ast.CallExpr)
 			if !ok {
 				return true
 			}
-			if sel, ok := call.Fun.(*ast.SelectorExpr); ok && strings.HasPrefix(sel.Sel.Name, "get") && len(call.Args) == 3 {
+			if sel, ok := call.Fun.(*ast.SelectorExpr); ok && strings.HasPrefix(sel.Sel.Name, "get") && len(call.Args) >= 3 {
 				if key, ok := call.Args[0].(*ast.Ident); ok && strings.HasPrefix(key.Name, "LDKey") {
-					helpers[fn.Name.Name] = ldHelper{key: key.Name, defaultValue: exprSource(call.Args[2])}
+					helpers[name] = ldHelper{key: key.Name, defaultValue: exprSource(call.Args[2])}
 				}
 			}
 			return true
