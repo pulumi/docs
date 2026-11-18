@@ -425,7 +425,7 @@ config:
     directory: delivery
 ```
 
-- `url` is the repository's clone URL, and it's required. Don't put credentials in it, because stack config is stored in plain text.
+- `url` is the repository's clone URL. It's required.
 - `branch` is the branch the pipeline tracks. Pulumi Cloud runs the pipeline program from this branch, and a push to it updates the pipeline. It defaults to the repository's default branch.
 - `directory` is the pipeline's project directory, relative to the repository root.
 
@@ -436,7 +436,7 @@ pulumi config set --path delivery:source.branch demo/lambda-web
 pulumi delivery register
 ```
 
-`delivery:source.branch` is separate from the `branch` on a [repository source](/docs/delivery/concepts/sources-and-triggers/#repository-sources). A source's `branch` is the code the pipeline deploys and the branch whose pushes trigger runs. `delivery:source.branch` is where the pipeline program itself comes from. If you register one pipeline per branch, set both on each, or every pipeline runs the program from the default branch.
+`delivery:source.branch` is different from the `branch` on a [repository source](/docs/delivery/concepts/sources-and-triggers/#repository-sources). A source's `branch` is the code the pipeline deploys and the branch whose pushes trigger runs. `delivery:source.branch` is where the pipeline program itself lives.
 
 To see which branch a registered pipeline tracks, open the pipeline in the Pulumi Cloud console and select **Settings** > **Program**.
 
