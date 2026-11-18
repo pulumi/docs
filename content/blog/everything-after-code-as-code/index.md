@@ -53,29 +53,27 @@ social:
 
 *Introducing Pulumi Delivery and Pulumi Agents: agentic code to production, and back again.*
 
-At Pulumi, we like code. A lot. And we aren't the only ones: agents like it too. This year, the share of infrastructure operations on Pulumi done by agents went from zero in January to over 40% in October. Agents are good at code, and on Pulumi, infrastructure is code.
-
-But writing code was never the whole job. Everything after the merge (provisioning, configuration, secrets, policy, delivery, and operating what you shipped) still runs on scripts, tickets, and people waiting on each other. That is now the bottleneck. Today we're launching two things to remove it: Pulumi Delivery, which puts your release process in code, and Pulumi Agents, which watch your running systems and send fixes back as code. I honestly can't remember a launch since Pulumi 1.0 that our customers and team have been this excited about. Let me tell you more.
+At Pulumi, we like code. A lot. And we aren't the only ones: agents like it too. This year, the share of infrastructure operations on Pulumi done by agents went from zero in January to over 40% in October. Anything expressed as code (infrastructure, policy, configuration) is something an agent can work on. Today we're extending that to everything after the merge with two launches: Pulumi Delivery, which lets you and your agents write delivery pipelines as code, and Pulumi Agents, customizable agents that watch your running systems and act when something goes wrong. Together, they take agentic code to production, and back again. I honestly can't remember a launch since Pulumi 1.0 that our customers and team have been this excited about.
 
 <!--more-->
 
 ![Bar chart of the share of Pulumi operations done by agents in 2026: 0% in January, 15% in April, 30% in July, 35% in September, and 40% in October.](agents-share-2026.png)
 
-## The bottleneck moved
+## What happens after the merge
 
-Coding agents changed how much software gets written, and the frontier labs felt it first. [Anthropic's monorepo](https://www.anthropic.com/research/redesigning-source-control) went from about 2,500 merges a day in May to over 30,000 by September. At OpenAI, where one engineer now has several changes ready for CI at once, [Git reliability at times fell below 90%](https://openai.com/index/scaling-git-at-openai/) under the load. Both rebuilt source control to keep up, and OpenAI expects more teams to hit the limits it did.
+Frontier labs have made huge advances in agentic coding, code review, and everything up to the merge. Claude Code, Codex, and friends now write and test a growing share of the code we ship, and the labs felt it first. [Anthropic's monorepo](https://www.anthropic.com/research/redesigning-source-control) went from about 2,500 merges a day in May to over 30,000 by September. At OpenAI, where one engineer now has several changes ready for CI at once, [Git reliability at times fell below 90%](https://openai.com/index/scaling-git-at-openai/) under the load. Both rebuilt source control to keep up. And then it all stops at the pull request. Everything after the merge (provisioning, configuration, secrets, policy, and delivery) still runs on scripts, tickets, and waiting. Today's SDLC was designed for human hands working at human speed, and it has become the bottleneck.
 
-They'll hit the ones after it, too. A merge isn't the finish line. Every one of those changes still has to reach production and be run there. Today that work lives in hodgepodges of scripts, pipeline YAML, console clicks, manual approvals, and homegrown systems, all built on the assumption that a human clicking and copy-pasting on the critical path was fine. Those systems aren't just unfriendly to agents. They're agent-hostile. And once code is live, operations still runs on pages, dashboards, and toil.
+We set out to answer a few questions. How does code get to production, and which gates does it pass through? Which of those gates need a human, and which can an agent handle? When something breaks in production, who responds, and how does the fix get back into the code? Pulumi Delivery and Pulumi Agents are our answers.
 
-The result: agents write code at machine speed, and then it waits.
+## Built on infrastructure as code
 
-## Why code is the answer
+These capabilities take the Pulumi platform beyond infrastructure, but they're built on what we've learned there. Since 2017, our open source infrastructure as code has let you express infrastructure in whatever language your team already knows, and today thousands of teams use Pulumi every month to turn the cloud into a competitive edge. [TypeSafe AI](https://typesafe.ai) bet on Pulumi to scale Jev, their decision model, to over a trillion tokens per day using the engineering practices they already had. Moderna, BMW, and Snowflake have built entire platforms on Pulumi to help their own teams ship faster.
 
-We've bet on code for infrastructure since 2017, in whatever language your team already knows, and that bet turned out to be as good for agents as it is for people. Models have learned from billions of lines of TypeScript, Python, HCL, and Go, and from almost nothing about cloud consoles and tickets, and every frontier lab benchmarks them relentlessly on code. When you put infrastructure in a language the model already knows, it becomes a coding problem, which agents are good at, and Pulumi carries out the resulting intent. [Research backs this up](https://arxiv.org/abs/2402.01030): across 17 models, agents succeeded up to 20% more often when they acted by writing code than by emitting JSON or text.
+That bet turned out to be as good for agents as it is for people. Models have learned from billions of lines of TypeScript, Python, HCL, and Go, and from almost nothing about cloud consoles and tickets, and every frontier lab benchmarks them relentlessly on code. When you put infrastructure in a language the model already knows, it becomes a coding problem, which agents are good at, and Pulumi carries out the resulting intent. [Research backs this up](https://arxiv.org/abs/2402.01030): across 17 models, agents succeeded up to 20% more often when they acted by writing code than by emitting JSON or text.
 
-Code also gives you something a console can't: a diff. Every change an agent makes on Pulumi produces a deterministic plan, which you and your policies check before anything changes. That's why agents can safely do 40% of the work today, and why we're [driving hard toward 100%](/blog/the-agentic-infrastructure-era/). We run this way ourselves: 85% of the changes to Pulumi's own core service are now written or reviewed by our engineering agents.
+We've watched this play out on our own platform, where the share of infrastructure operations done by agents climbed from 15% in April to 30% in July and over 40% in October. Agents are about to do the majority of infrastructure updates, and they can do so safely thanks to platform guardrails. IaC is itself a guardrail: every change is a code diff with a deterministic plan that you can review before anything happens. On top of that, agents get scoped credentials and secrets, and we continuously enforce policy across any cloud or compliance framework. We run this way ourselves: 85% of the changes to Pulumi's own core service are now written or reviewed by our engineering agents. We are [driving hard toward 100%](/blog/the-agentic-infrastructure-era/).
 
-This idea generalizes beyond infrastructure, so for everything after the merge, we made it code too.
+Working with customers, we've also seen where everything around IaC falls short. Delivery pipelines are still hodgepodges of scripts, manual configurations and approvals, YAML files, and homegrown systems. These approaches are agent-hostile, because we as an industry built them assuming humans clicking and copy-pasting on the critical path was okay. And once code is live, operations still runs on pages, dashboards, and manual toil.
 
 ## Pulumi Delivery: your release process, in code
 
@@ -83,7 +81,7 @@ Pulumi Delivery puts your entire release process in code: stages, promotion and 
 
 Because Delivery extends Pulumi's core model, pipelines share its type system, policy engine, stack and resource dependencies, secrets, and state. And it runs what you already have, including Pulumi, Terraform, OpenTofu, Ansible, and open-ended jobs. It works alongside the CI you already use for build and test, picking up at the merge.
 
-Here's an example that uses Jev, a decision model from our customer [TypeSafe AI](https://typesafe.ai), who scaled Jev to over a trillion tokens a day on Pulumi. Tell your agent to ship every merge through staging and into production, letting Jev decide when a human needs to approve, and watch it go:
+Tell your agent to ship every merge through staging and into production, letting Jev decide when a human needs to approve, and watch it go:
 
 ![Claude Code terminal with the prompt: create a delivery pipeline so anytime I merge to main, we ship to staging, smoke test, auto-promote to prod with canarying if Jev allows or get human approval otherwise, and then when green, auto-promote to prod-eu.](claude-code-delivery-prompt.png)
 
@@ -615,44 +613,31 @@ From there, Pulumi Cloud shows you where every release is, or was, at any given 
 
 Your app and its network ship together through one pipeline, whether a person or an agent wrote the change.
 
-[**Read the blog**: Introducing Pulumi Delivery &rarr;](/blog/introducing-pulumi-delivery/)
-
-[See Pulumi Delivery in action &rarr;](/product/delivery/)
-
 ## Pulumi Agents: from production back to code
 
-Delivery gets code to production. But what happens when alarms start firing?
+Delivery gets code to production. But what happens when alarms start firing? That's where Pulumi Agents comes in. Provision engineering and infrastructure agents that monitor your running systems, react to events from PagerDuty, Datadog, Sentry, and Honeycomb, or run on a schedule. Start with the agents Pulumi provides for incident investigation, drift, cost, upgrades, and security remediation, or define your own in code, with your own prompts, skills, integrations, and triggers. Bring any agent you like: Neo, our infrastructure agent, or Claude Code, Codex, and OpenCode, on Pulumi's models or your own keys.
 
-That's where Pulumi Agents comes in. Provision engineering and infrastructure agents that monitor your running systems, react to events from PagerDuty, Datadog, Sentry, and Honeycomb, or run on a schedule. Start with the agents Pulumi provides for incident investigation, drift, cost, upgrades, and security remediation, or define your own in code, with your own prompts, skills, integrations, and triggers. Bring any agent you like: Neo, our infrastructure agent, or Claude Code, Codex, and OpenCode, on Pulumi's models or your own keys.
+Every agent gets its own identity, a least-privilege role, and short-lived credentials from Pulumi ESC. Agents never change production directly. Any change an agent wants to make arrives as a pull request with a deterministic plan, checked against the same policies as your engineers' changes.
 
 Here, a Datadog memory alert on the checkout service dispatches an incident investigator, which traces the cause and opens a pull request to raise the task's memory, without deploying anything:
 
 ![Pulumi Agents incident investigator responding to a Datadog high-memory alert on the checkout service: it finds the service at 94% of its 512 MiB allocation and opens pull request #248 to raise the ECS task memory to 1,024 MiB.](agents-incident-investigator.png)
 
-[**Read the blog**: Introducing Pulumi Agents &rarr;](/blog/introducing-pulumi-agents/)
-
-[See Pulumi Agents in action &rarr;](/product/agents/)
-
 ## Closing the loop
 
-Put Delivery and Agents together, and you get the whole loop. Gates in your pipelines ask an agent, or a decision model like Jev, to score a deployment's risk. Low-risk changes promote themselves, region by region, with health checks at every stage. Risky ones wait for a person, who can approve right from Slack. Once in production, agents are dispatched by the signals your systems already emit, and their fixes come back through the pipeline, gated like every other change.
+Put Delivery and Agents together, and you get the whole loop. Gates in your pipelines can ask an agent, or a decision model like Jev, to score a deployment's risk. Low-risk changes promote themselves, region by region, with health checks at every stage. Risky ones wait for a person, who can approve right from Slack. Once in production, agents are dispatched by the signals your systems already emit, and their fixes come back through the pipeline, gated like every other change. Engineers and agents follow one path under one set of rules, and you set the autonomy slider wherever you're comfortable, from human in charge, to human in the loop, to full autonomy. No matter what, deterministic guardrails and audit trails are kept.
 
-## What we believe
+## One system, one graph
 
-Four principles shaped both products:
+All of this is built on the same platform as our core IaC, powered by one context graph, data model, and API across your applications and infrastructure. Pulumi knows which deploy changed which resources, what's running where, and what depends on what, so an agent investigating an alert starts with that context instead of guessing. And because it's one system, the same identity, RBAC, policies, and audit trail apply to the new products and the existing ones alike.
 
-- **Everything an agent touches is code.** If an agent can't read it, diff it, and have it reviewed, it shouldn't be changing it.
-- **Agents never change production directly.** Every change, from a person or an agent, arrives as a pull request with a deterministic plan, checked against the same policies.
-- **Agents get identities, not keys.** Each agent has its own least-privilege role and short-lived credentials from Pulumi ESC. Widening what it can do is a reviewed pull request.
-- **Autonomy is yours to set.** Put each gate anywhere from human in charge, to human in the loop, to full autonomy, and move it as trust grows. Wherever it sits, deterministic guardrails still check every change and the audit trail still records it.
+We think this is what the agentic SDLC looks like after the merge. Pulumi Delivery and Pulumi Agents are available today in public preview in every edition of Pulumi Cloud, including Free. For the full tour of each product, read the companion posts:
 
-Underneath it all is one context graph, data model, and API across your applications and infrastructure. Pulumi knows which deploy changed which resources, what's running where, and what depends on what, so an agent investigating an alert starts with that context instead of guessing. And because it's one system, the same identity, RBAC, policies, and audit trail apply to the new products and the existing ones alike.
+[**Read the blog**: Introducing Pulumi Delivery &rarr;](/blog/introducing-pulumi-delivery/)
 
-## The whole loop, in code
+[**Read the blog**: Introducing Pulumi Agents &rarr;](/blog/introducing-pulumi-agents/)
 
-Coding agents took over writing code this year. Starting today, everything after the merge can be code too. Pulumi Delivery and Pulumi Agents are in public preview in every edition of Pulumi Cloud, including Free.
-
-Expect both APIs to change as we learn from you, so tell us what's missing. You can get started with [Delivery](/docs/delivery/get-started/) or [Agents](/up/) now, and if we can help with agents at your company, please [get in touch](/contact/).
+You can get started with [Delivery](/docs/delivery/get-started/) or [Agents](/up/) now, or see them in action on the [Pulumi Delivery](/product/delivery/) and [Pulumi Agents](/product/agents/) product pages. If we can help with agents at your company, please [get in touch](/contact/).
 
 We're only just getting started, and we can't wait to hear what you think.
 
