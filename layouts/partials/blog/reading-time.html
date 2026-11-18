@@ -1,0 +1,3 @@
+{{- $hugoWordsPerMinute := 213 -}}
+{{- $words := partialCached "blog/prose-word-count.html" . .Path -}}
+{{- return int (math.Max 1 (math.Ceil (div (float $words) $hugoWordsPerMinute))) -}}

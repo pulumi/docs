@@ -19,6 +19,6 @@
     <time class="{{ $fg }} whitespace-nowrap" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
     {{- if .readingTime -}}
         <span class="text-gray-500" aria-hidden="true">•</span>
-        <span class="{{ $fg }} whitespace-nowrap">{{ $page.ReadingTime }} min read</span>
+        <span class="{{ $fg }} whitespace-nowrap">{{ partial "blog/reading-time.html" $page }} min read</span>
     {{- end -}}
 </div>
